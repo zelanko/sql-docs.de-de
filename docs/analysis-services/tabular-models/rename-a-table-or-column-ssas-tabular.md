@@ -1,5 +1,5 @@
 ---
-title: Umbenennen einer Tabelle oder Spalte | Microsoft Docs
+title: Umbenennen einer Analysis Services-Tabellenmodell-Tabelle oder Spalte | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0c8564b7a61a73937bc5f9a207c98fd77c7b1bb7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0e5c0173de2ea22e91c0a1f13517a9bcb7c58ed9
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040104"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072637"
 ---
 # <a name="rename-a-table-or-column"></a>Umbenennen einer Tabelle oder Spalte 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -44,14 +44,14 @@ ms.locfileid: "34040104"
   
 -   Steuerzeichen  
   
--   Die folgenden Zeichen (die nicht in den Namen der Analysis Services-Objekte zulässig sind):., ': / \\*|? & % $!:: Operator += () []{}<>  
+-   Die folgenden Zeichen (die nicht in den Namen der Analysis Services-Objekte zulässig sind):., ': / \\*|? & % $! += () []{}<>  
   
 -   Von Analysis Services reservierte Schlüsselwörter, einschließlich Funktionsnamen und Operatoren von Multidimensional Expressions (MDX) und Data Mining Extensions (DMX)  
   
 ## <a name="effect-of-renaming-on-existing-tables-columns-and-calculations"></a>Auswirkung des Umbenennungsvorgangs auf vorhandene Tabellen, Spalten und Berechnungen  
- Jedes Mal, wenn Sie den Namen einer Tabelle ändern, ändern Sie den Namen des zugrunde liegenden Tabellenobjekts, der möglicherweise mehrere Spalten oder Measures enthält. Alle Spalten in der Tabelle und alle Beziehungen, die verwenden die Tabelle, müssen aktualisiert werden, um den neuen Namen in ihren Definitionen zu verwenden. Dieses Update kann in den meisten Fällen automatisch durchgeführt werden.
+ Jedes Mal, wenn Sie den Namen einer Tabelle ändern, ändern Sie den Namen des zugrunde liegenden Tabellenobjekts, der möglicherweise mehrere Spalten oder Measures enthält. Alle Spalten, die in der Tabelle, und alle Beziehungen, die verwenden die Tabelle, müssen aktualisiert werden, um den neuen Namen in ihren Definitionen zu verwenden. Dieses Update wird in den meisten Fällen automatisch durchgeführt.
   
- Alle Berechnungen, die die umbenannte Tabelle oder Spalten in der umbenannten Tabelle verwenden, müssen ebenfalls aktualisiert werden, und die von diesen Berechnungen abgeleiteten Daten müssen aktualisiert und neu berechnet. Je nach Anzahl der betroffenen Tabellen und Berechnungen kann dies einige Zeit in Anspruch nehmen. Der beste Zeitpunkt zum Umbenennen von Tabellen ist daher entweder während des Importvorgangs oder bevor Sie komplexe Beziehungen und Berechnungen erstellen.  
+ Alle Berechnungen, die die umbenannte Tabelle verwenden, oder Spalten aus der umbenannten Tabelle verwenden, müssen ebenfalls aktualisiert werden, und die von diesen Berechnungen abgeleiteten Daten müssen aktualisiert und neu berechnet. Je nach Anzahl der betroffenen Tabellen und Berechnungen kann dies einige Zeit in Anspruch nehmen. Der beste Zeitpunkt zum Umbenennen von Tabellen ist daher entweder während des Importvorgangs oder bevor Sie komplexe Beziehungen und Berechnungen erstellen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Tabellen und Spalten](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   

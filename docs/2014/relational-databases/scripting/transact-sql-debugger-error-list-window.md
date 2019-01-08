@@ -7,8 +7,6 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.ErrorList
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -18,12 +16,12 @@ ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 08ba949c2cb835296c1442fcac4d5984a051bb30
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e8f120bfd20e2b912aaf5b045faa1e052ba4191
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216360"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328470"
 ---
 # <a name="error-list-window-management-studio"></a>Fenster 'Fehlerliste' (Management Studio)
   In der Fehlerliste [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **von** werden die vom IntelliSense-Code im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor generierten Syntax- und Semantikfehler angezeigt.  
@@ -90,5 +88,3 @@ ms.locfileid: "48216360"
   
  **Projekt**  
  Zeigt den Namen des Projekts an, in dem die angegebene Skriptdatei enthalten ist.  
-  
-  

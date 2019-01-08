@@ -1,5 +1,5 @@
 ---
-title: Datamining-Eigenschaften | Microsoft Docs
+title: Analysis Services-Datamining-Eigenschaften | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9a5825df52bf839e604545acf56fa9650053e4a6
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.openlocfilehash: bd1440e5ce0649d31f0ae6c0577c61e9e081a800
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35238800"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072027"
 ---
 # <a name="data-mining-properties"></a>Data Mining-Eigenschaften
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] werden die in den folgenden Tabellen aufgeführten Data Mining-Eigenschaften unterstützt. Weitere Informationen zu zusätzlichen Servereigenschaften und zum Festlegen dieser Eigenschaften finden Sie unter [Servereigenschaften in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
- **Gilt für:** Nur mehrdimensionaler Servermodus  
+ **Gilt für:** Nur mehrdimensionaler Servermodus.  
   
 ## <a name="non-specific-category"></a>Nicht spezifische Kategorie  
  **AllowSessionMiningModels**  

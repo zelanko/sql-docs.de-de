@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], object security
@@ -14,12 +13,12 @@ ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b2e4feb3f09b8012c17156e085e16dcf39df3088
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f5d485aec6d3056022ea55f1cb2bc8ee29a4e314
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183520"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822234"
 ---
 # <a name="database-object-security-master-data-services"></a>Sicherheit von Datenbankobjekten (Master Data Services)
   In der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank werden Daten in mehreren Datenbanktabellen gespeichert und in Sichten angezeigt. Daher können Informationen, die Sie in der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung gesichert haben, für Benutzern mit Zugriff auf die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank sichtbar sein.  
@@ -43,15 +42,15 @@ ms.locfileid: "48183520"
 -   [Konfigurieren von Systemeinstellungen](#SysSettings)  
   
 ##  <a name="Staging"></a> Bereitstellen von Daten  
- In der folgenden Tabelle hat jedes sicherungsfähige Element "Name" als Teil des Namens. Dies gibt den Namen der Stagingtabelle an, die angegeben wird, wenn eine Entität erstellt wird. Weitere Informationen finden Sie unter [Datenimport &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
+ In der folgenden Tabelle weist jedes sicherungsfähige Element „Name“ als Teil des Namens auf. Dies gibt den Namen der Stagingtabelle an, die angegeben wird, wenn eine Entität erstellt wird. Weitere Informationen finden Sie unter [Datenimport &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
 |Aktion|Sicherungsfähige Elemente|Berechtigungen|  
 |------------|----------------|-----------------|  
-|Laden Sie Blattelemente und ihre Attribute in die Stagingtabelle.|stg.name_Leaf|Erforderlich: INSERT<br /><br /> Optional: SELECT und UPDATE|  
+|Laden Sie Blattelemente und ihre Attribute in die Stagingtabelle.|stg.name_Leaf|Erforderlich: INSERT<br /><br /> Optional: Wählen Sie aus, und aktualisieren|  
 |Laden Sie die Daten aus der Blattstagingtabelle in die entsprechenden MDS-Datenbanktabellen.|stg.udp_name_Leaf|Führen Sie|  
-|Laden Sie konsolidierte Elemente und ihre Attribute in die Stagingtabelle.|stg.name_Consolidated|Erforderlich: INSERT<br /><br /> Optional: SELECT und UPDATE|  
+|Laden Sie konsolidierte Elemente und ihre Attribute in die Stagingtabelle.|stg.name_Consolidated|Erforderlich: INSERT<br /><br /> Optional: Wählen Sie aus, und aktualisieren|  
 |Laden Sie die Daten aus der konsolidierten Stagingtabelle in die entsprechenden MDS-Datenbanktabellen.|stg.udp_name_Consolidated|Führen Sie|  
-|Laden Sie die Beziehungen zwischen Blattelementen und konsolidierten Elementen in eine explizite Hierarchie in die Stagingtabelle.|stg.name_Relationship|Erforderlich: INSERT<br /><br /> Optional: SELECT und UPDATE|  
+|Laden Sie Blatt- und konsolidierten Elementen Beziehungen zueinander in einer expliziten Hierarchie in die Stagingtabelle ein.|stg.name_Relationship|Erforderlich: INSERT<br /><br /> Optional: Wählen Sie aus, und aktualisieren|  
 |Laden Sie die Daten aus der Beziehungsstagingtabelle in die entsprechenden MDS-Tabellen.|stg.udp_name_Relationship|Führen Sie|  
 |Zeigen Sie Fehler an, die aufgetreten sind, als Daten aus den Stagingtabellen in die MDS-Datenbanktabellen eingefügt wurden.|stg.udp_name_Relationship|SELECT|  
   

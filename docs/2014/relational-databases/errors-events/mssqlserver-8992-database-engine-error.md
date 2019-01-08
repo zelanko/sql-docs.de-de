@@ -12,12 +12,12 @@ ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 37bc819ab06a960887963b48be70c18e2ce8f656
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8ad75e136c4bef59f24b451b84f03e06d71a32ec
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131940"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362842"
 ---
 # <a name="mssqlserver8992"></a>MSSQLSERVER_8992
     
@@ -30,7 +30,7 @@ ms.locfileid: "48131940"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC3_CHECK_CATALOG|  
-|Meldungstext|Meldung ERROR zum Prüfen des Katalogs, Ebene LEVEL, Status STATE: MESSAGE.|  
+|Meldungstext|Überprüfung der Katalog Msg Fehler Ebene LEVEL, Status STATE: NACHRICHT.|  
   
 ## <a name="explanation"></a>Erklärung  
  DBCC CHECKCATALOG oder DBCC CHECKDB hat in den Systemmetadatentabellen eine Inkonsistenz für das angegebene Objekt festgestellt. Es handelt sich um eine Inkonsistenz zwischen der aufgezeichneten Objekt-ID und dem in der Fehlermeldung angegebenen Objekt.  
@@ -75,6 +75,6 @@ ms.locfileid: "48131940"
  Nehmen Sie keine manuellen Updates an den Systemtabellen vor. SQL Server unterstützt keine manuellen Änderungen an den Systemdatenbanken. Wenn Sie eine Systemtabelle in einer SQL Server-Datenbank aktualisieren, werden zwei Ereignisse (Ereignis-ID 17659 und Ereignis-ID 3859) protokolliert. Weitere Informationen finden Sie im KB-Artikel 2688307 "Beim Aktualisieren von Systemtabellen in einer SQL Server-Datenbank werden Ereignis-ID 17659 und Ereignis-ID 3859 protokolliert".  
   
 ## <a name="see-also"></a>Siehe auch  
- [Beim Aktualisieren von Systemtabellen in einer SQL Server-Datenbank werden Ereignis-ID 17659 und Ereignis-ID 3859 protokolliert](http://support.microsoft.com/kb/2688307/EN-US)  
+ [Beim Aktualisieren von Systemtabellen in einer SQL Server-Datenbank werden Ereignis-ID 17659 und Ereignis-ID 3859 protokolliert](https://support.microsoft.com/kb/2688307/EN-US)  
   
   

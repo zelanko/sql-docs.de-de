@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1
@@ -15,12 +14,12 @@ ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ac0637b19437c2570cbb87fb56b84641274d9d3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a4175429222306ac006122a3d36ee5ae97453ad
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174190"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793498"
 ---
 # <a name="configure-dialog-box"></a>Konfigurieren (Dialogfeld)
   Verwenden Sie das Dialogfeld **Konfigurieren** , um Parameter, Verbindungs-Manager und Umgebungsverweise für Pakete und Projekte zu konfigurieren.  
@@ -37,7 +36,7 @@ ms.locfileid: "48174190"
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung zum [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server her.  
   
-     Sie stellen eine Verbindung mit der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Instanz her, die die SSISDB-Datenbank hostet.  
+     Sie stellen eine Verbindung mit der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz her, die die SSISDB-Datenbank hostet.  
   
 2.  Erweitern Sie im Objekt-Explorer die Struktur, um den Knoten **Integration Services-Kataloge** anzuzeigen.  
   
@@ -80,7 +79,7 @@ ms.locfileid: "48174190"
 ##  <a name="references"></a> Festlegen der Optionen auf der Seite 'Verweise'  
  Verwenden Sie die Seite **Verweise** , um Umgebungsverweise hinzuzufügen und zu entfernen und um auf Umgebungseigenschaften zuzugreifen.  
   
- In einer Umgebung werden Laufzeitwerte für Pakete festgelegt, die in den auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitgestellten Projekten enthalten sind.  
+ In einer Umgebung werden Laufzeitwerte für Pakete festgelegt, die in den auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Server bereitgestellten Projekten enthalten sind.  
   
  **Umgebung**  
  Listet die Umgebung auf.  

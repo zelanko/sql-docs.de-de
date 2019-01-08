@@ -12,12 +12,12 @@ ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fe0eb799d7f3a78d46d38940805f203a91b7b6c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9df741090bf896019c6d1c4ede5215982497cb3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183270"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366992"
 ---
 # <a name="create-a-format-file-sql-server"></a>Erstellen einer Formatdatei (SQL Server)
   Beim Massenimportieren bzw. -exportieren von Daten in eine bzw. aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle können Sie eine Formatdatei für ein flexibles System für das Schreiben von Datendateien verwenden, bei denen nur geringfügige oder keine Bearbeitung erforderlich ist, um sie mit anderen Datenformaten oder für das Lesen von Datendateien aus anderen Softwareprogrammen kompatibel zu machen.  
@@ -163,20 +163,20 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
 |----------------|-----------------|  
 |**formatnul-f** *Formatdatei* **-x**|Gibt die XML-Formatdatei an.|  
 |**-c**|Gibt Zeichendaten an.|  
-|**-t** `,`|Gibt ein Komma (**,**) als Feldabschlusszeichen an.<br /><br /> Hinweis: Wenn von der Datendatei das standardmäßige Feldabschlusszeichen (`\t`) verwendet wird, ist der **-t** -Schalter nicht erforderlich.|  
+|**-t** `,`|Gibt ein Komma (**,**) als Feldabschlusszeichen an.<br /><br /> Hinweis: Wenn die Datendatei das standardmäßige Feldabschlusszeichen verwendet (`\t`), wird die **-t** Switch ist nicht erforderlich.|  
 |**-T**|Gibt an, dass das Hilfsprogramm **bcp** die Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe integrierter Sicherheit über eine vertrauenswürdige Verbindung herstellt. Wenn **-T** nicht angegeben wird, müssen Sie **-U** und **-P** angeben, um sich erfolgreich anzumelden.|  
   
  Geben Sie an der Windows-Eingabeaufforderung den folgenden `bcp` -Befehl ein:  
   
 ```  
-bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml –t, -T  
+bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml -t, -T  
 ```  
   
  Die generierte Formatdatei, `Department-c.xml`, enthält die folgenden XML-Elemente:  
   
 ```  
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>  
   <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
@@ -215,7 +215,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
   
 ```  
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="NativeFixed" LENGTH="2"/>  
   <FIELD ID="2" xsi:type="NCharPrefix" PREFIX_LENGTH="2" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
@@ -234,7 +234,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
  Informationen zur Syntax dieser Formatdatei finden Sie unter [Nicht-XML-Formatdateien &#40;SQL Server&#41;](xml-format-files-sql-server.md). Informationen zur Verwendung nativer Daten finden Sie unter [Verwenden des nativen Formats zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md).  
   
 ## <a name="mapping-data-fields-to-table-columns"></a>Zuordnen von Datenfeldern zu Tabellenspalten  
- In einer mit **bcp**erstellten Formatdatei werden alle Tabellenspalten in ihrer Reihenfolge beschrieben. Sie können die Formatdatei ändern, um Tabellenzeilen neu anzuordnen oder auszulassen. Auf diese Weise können Sie Formatdateien an Datendateien anpassen, deren Felder nicht direkt Tabellenspalten zugeordnet werden können. Weitere Informationen finden Sie in folgenden Themen:  
+ In einer mit **bcp**erstellten Formatdatei werden alle Tabellenspalten in ihrer Reihenfolge beschrieben. Sie können die Formatdatei ändern, um Tabellenzeilen neu anzuordnen oder auszulassen. Auf diese Weise können Sie Formatdateien an Datendateien anpassen, deren Felder nicht direkt Tabellenspalten zugeordnet werden können. Weitere Informationen finden Sie unter den folgenden Themen:  
   
 -   [Überspringen einer Tabellenspalte mithilfe einer Formatdatei &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)  
   

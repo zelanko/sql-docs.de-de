@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - custom objects [Integration Services]
@@ -14,12 +12,12 @@ ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7257973db070b0f06cc48d217f232be2f81efeb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 22b7d07752c6a9df5f0b100c0d16b78a86125f04
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159710"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362852"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Erstellen, Bereitstellen und Debuggen von benutzerdefinierten Objekten
   Nachdem Sie den Code für ein benutzerdefiniertes Objekt für [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] geschrieben haben, müssen Sie die Assembly erstellen, bereitstellen und in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer integrieren, um sie für die Nutzung in Paketen verfügbar zu machen, sie zu testen und zu debuggen.  
@@ -61,7 +59,7 @@ ms.locfileid: "48159710"
 ##  <a name="building"></a> Erstellen der Assembly  
  Nach der Signierung des Projekts müssen Sie das Projekt oder die Projektmappe erstellen bzw. neu erstellen, indem Sie die im **Build**-Menü von [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] verfügbaren Befehle verwenden. Die Lösung enthält möglicherweise ein separates Projekt für eine benutzerdefinierte Benutzeroberfläche, die ebenfalls mit einem starken Namen signiert sein muss und zur gleichen Zeit erstellt werden kann.  
   
- Der einfachste Weg, um die nächsten zwei Schritte (Bereitstellen der Assembly und Installieren im globalen Assemblycache) auszuführen, besteht darin, für diese Schritte als Postbuildereignis in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ein Skript zu erstellen. Buildereignisse stehen unter „Projekteigenschaften“ auf der Seite **Kompilieren** für ein [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Projekt und auf der Seite **Buildereignisse** für ein C#-Projekt zur Verfügung. Der vollständige Pfad ist für Eingabeaufforderungs-Hilfsprogramme wie **gacutil.exe** erforderlich. Pfade mit Leerzeichen und Makros wie $(TargetPath), mit denen Pfade mit Leerzeichen erweitert werden, müssen von Anführungszeichen umschlossen werden.  
+ Der einfachste Weg, um die nächsten zwei Schritte (Bereitstellen der Assembly und Installieren im globalen Assemblycache) auszuführen, besteht darin, ein Skript für diese Schritte als Postbuildereignis in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] zu erstellen. Buildereignisse stehen unter „Projekteigenschaften“ auf der Seite **Kompilieren** für ein [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Projekt und auf der Seite **Buildereignisse** für ein C#-Projekt zur Verfügung. Der vollständige Pfad ist für Eingabeaufforderungs-Hilfsprogramme wie **gacutil.exe** erforderlich. Pfade mit Leerzeichen und Makros wie $(TargetPath), mit denen Pfade mit Leerzeichen erweitert werden, müssen von Anführungszeichen umschlossen werden.  
   
  Nachfolgend finden Sie ein Beispiel einer Postbuildereignis-Befehlszeile für einen benutzerdefinierten Protokollanbieter:  
   
@@ -84,7 +82,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 |Benutzerdefiniertes Objekt|Bereitstellungsordner|  
 |-------------------|-----------------------|  
-|Task|Aufgaben|  
+|Aufgabe|Richtlinienübersicht|  
 |Ziel-Editor für Dimensionsverarbeitung|Verbindungen|  
 |Protokollanbieter|LogProviders|  
 |Datenflusskomponente|PipelineComponents|  
@@ -153,7 +151,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 3.  Kehren Sie zum angehaltenen Paket zurück, und setzen Sie den Vorgang über den Breakpoint hinaus fort, oder klicken Sie auf **OK**, um das Meldungsfeld, das vom Skripttask aufgerufen wird, zu verwenden, und setzen Sie die Paketausführung und den Debugvorgang fort.  
   
-![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Entwickeln benutzerdefinierter Objekte für Integration Services](developing-custom-objects-for-integration-services.md)   

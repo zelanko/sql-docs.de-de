@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.operator.general.f1
@@ -12,17 +12,17 @@ ms.assetid: c036d1c9-83d1-4a95-b67e-29d283b1a046
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 296fbe83670c09ce8693deac670346133db0d03d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8c394792f3d56614c4e3bc316e2b4a73dcd1e88b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065770"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810832"
 ---
 # <a name="operator-properties-and-new-operator-general-page"></a>Operatoreigenschaften und neuer Operator (Seite „Allgemein“)
   Mithilfe dieser Seite können Sie die allgemeinen Eigenschaften von Agentoperatoren in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzeigen und ändern.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name**  
  Ändern Sie den Namen des Operators.  
   

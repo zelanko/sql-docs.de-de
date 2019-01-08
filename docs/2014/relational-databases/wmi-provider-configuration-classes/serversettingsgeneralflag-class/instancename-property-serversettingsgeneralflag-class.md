@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - InstanceName Property (ServerSettingsGeneralFlag Class)
@@ -20,12 +18,12 @@ ms.assetid: b5da398c-9697-4f67-b4c8-3fdd56a404ec
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 69923418bec827dce1ab4cbbdda7645fd764280e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3fe78e6b1ed4513fff8d6ea6fafc15b8f90c43c2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121518"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362382"
 ---
 # <a name="instancename-property-serversettingsgeneralflag-class"></a>InstanceName-Eigenschaft (ServerSettingsGeneralFlag-Klasse)
   Ruft den Namen der Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ab.  
@@ -48,6 +46,6 @@ object
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -11,19 +11,19 @@ ms.assetid: 6a9fd19b-2367-4908-b638-363b1e929e1e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ab2ef4879ae4c29c43bfa07c0ccf314eae51ff39
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 65797fdf770196723a74510501d381fb608ad2ff
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100211"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369062"
 ---
 # <a name="overview-of-sql-server-servicing-installation"></a>Übersicht über die SQL Server-Wartungsinstallation
   Sie können ein Update auf eine beliebige vorhandene [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Komponente mit einem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Wartungsupdate anwenden. Wenn die Versionsebene einer vorhandenen Komponente von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] neuer ist als die Versionsebene des Updates, schließt das Setupprogramm diese Komponente vom Update aus. Weitere Informationen zur Anwendung eines Wartungsupdates aktualisieren, finden Sie unter [installieren Sie SQL Server 2014-Wartungsupdates](../../database-engine/install-windows/install-sql-server-servicing-updates.md).  
   
  Beim Installieren von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Updates gelten die folgenden Überlegungen:  
   
--   Alle Funktionen, die zu einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gehören, müssen gleichzeitig aktualisiert werden. Wenn Sie beispielsweise [!INCLUDE[ssDE](../../includes/ssde-md.md)] aktualisieren, müssen Sie auch die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Komponente und die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Komponente aktualisieren, sofern diese als Teil derselben Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert sind. Freigegebene Funktionen, wie Verwaltungstools, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] müssen stets mit dem aktuellen Update aktualisiert werden. Wenn eine Komponente oder Instanz in der Funktionsstruktur nicht ausgewählt ist, wird die Komponente oder Instanz nicht aktualisiert.  
+-   Alle Funktionen, die zu einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gehören, müssen gleichzeitig aktualisiert werden. Wenn Sie beispielsweise [!INCLUDE[ssDE](../../includes/ssde-md.md)]aktualisieren, müssen Sie auch die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Komponente und die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Komponente aktualisieren, sofern diese als Teil derselben Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installiert sind. Freigegebene Funktionen, wie Verwaltungstools, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] müssen stets mit dem aktuellen Update aktualisiert werden. Wenn eine Komponente oder Instanz in der Funktionsstruktur nicht ausgewählt ist, wird die Komponente oder Instanz nicht aktualisiert.  
   
 -   In der Standardeinstellung [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Update-Protokolldateien gespeichert werden, um %Program Files%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\LOG\\.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "50100211"
 ## <a name="requirements-and-known-issues"></a>Anforderungen und bekannte Probleme  
  Der empfohlene erforderliche Speicherplatz beträgt etwa das 2,5-fache der Paketgröße, um das Paket installieren, herunterladen und extrahieren zu können. Nach dem Installieren eines Service Packs können Sie das heruntergeladene Paket entfernen. Die temporären Dateien werden automatisch entfernt.  
   
- **Erfahren Sie mehr über bekannte Probleme:** Weitere Informationen zu den bekannten Problemen in der aktuellen Version entnehmen Sie bitte den entsprechenden Versionshinweisen unter: [Versionsanmerkungen für SQL Server](http://msdn.microsoft.com/f617a0af-92dd-47aa-82c3-f51b1346bcd8).  
+ **Überprüfen Sie die bekannten Probleme:** Weitere Informationen zu den bekannten Problemen in der aktuellen Version entnehmen Sie bitte den entsprechenden Versionshinweisen unter: [Versionsanmerkungen zu SQL Server](https://msdn.microsoft.com/f617a0af-92dd-47aa-82c3-f51b1346bcd8).  
   
 ## <a name="installation-overview"></a>Übersicht über die Installation  
  In diesem Abschnitt wird die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Installation für kumulierte Updates und Service Packs einschließlich der folgenden Themen beschrieben:  
@@ -57,7 +57,7 @@ ms.locfileid: "50100211"
     > [!IMPORTANT]  
     >  Wenn Sie Updates auf Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anwenden, die Teil einer Replikationstopologie sind, müssen Sie vor dem Anwenden der Updates die replizierten Datenbanken zusammen mit den Systemdatenbanken sichern.  
   
--   **Sichern der Datenbanken, der Konfigurationsdatei und des Repositorys von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]** – Vor dem Aktualisieren einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sollten Sie Folgendes sichern:  
+-   **Sichern Sie Ihre [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbanken, Konfigurationsdatei und des Repositorys** – vor dem Aktualisieren einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], sollten Sie Folgendes sichern:  
   
     -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbanken. Standardmäßig werden diese in C:\Program Files installiert\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12.\< InstanceID > \OLAP\Data\\. Für WOW-Installation ist der Standardpfad C:\ProgramFiles (x86) \ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12.\< InstanceID > \OLAP\Data\\.  
   
@@ -68,9 +68,9 @@ ms.locfileid: "50100211"
     > [!NOTE]  
     >  Ohne eine Sicherung der Datenbanken, der Konfigurationsdatei und des Repositorys von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ist es nicht möglich, eine aktualisierte Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] auf die vorherige Version zurückzusetzen.  
   
--   **Stellen Sie sicher, dass die Systemdatenbanken über ausreichend freien Speicherplatz verfügen** – Wenn die automatische vergrößerungsoption für die nicht ausgewählt ist die `master` und `msdb` von Systemdatenbanken und jede dieser Datenbanken müssen mindestens 500 KB freien Speicherplatz verfügen. Führen Sie die gespeicherte Systemprozedur `sp_spaceused` für die Datenbanken `master` und `msdb` aus, um zu überprüfen, ob die Datenbanken über genügend Speicherplatz verfügen. Falls der nicht zugeordnete Speicherplatz in einer der Datenbanken weniger als 500 KB beträgt, sollten Sie die Datenbank vergrößern.  
+-   **Stellen Sie sicher, dass die Systemdatenbanken über ausreichend freien Speicherplatz verfügen** : Wenn die automatische vergrößerungsoption für nicht aktiviert ist die `master` und `msdb` von Systemdatenbanken und jede dieser Datenbanken müssen mindestens 500 KB freien Speicherplatz verfügen. Führen Sie die gespeicherte Systemprozedur `sp_spaceused` für die Datenbanken `master` und `msdb` aus, um zu überprüfen, ob die Datenbanken über genügend Speicherplatz verfügen. Falls der nicht zugeordnete Speicherplatz in einer der Datenbanken weniger als 500 KB beträgt, sollten Sie die Datenbank vergrößern.  
   
--   **Beenden von Diensten und Anwendungen** – Um einen möglichen Neustart des Systems zu vermeiden, beenden Sie vor dem Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Updates alle Anwendungen und Dienste, über die Verbindungen mit zu aktualisierenden [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Instanzen hergestellt werden. Dazu gehören [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]und [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Weitere Informationen finden Sie unter [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+-   **Beenden von Diensten und Anwendungen** – um einen möglichen Neustart des Systems zu vermeiden, beenden Sie alle Anwendungen und Dienste, die Verbindungen mit Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die aktualisiert werden, vor der Installation von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Updates. Dazu gehören [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]und [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Weitere Informationen finden Sie unter [Starten, Beenden, Anhalten, Fortsetzen und Neustarten von SQL Server-Diensten](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
     > [!NOTE]  
     >  In einer Failoverclusterumgebung können Sie keine Dienste beenden. Weitere Informationen hierzu finden Sie weiter unten in diesem Thema im Abschnitt zur Failoverclusterinstallation.  
@@ -96,7 +96,7 @@ ms.locfileid: "50100211"
   
 -   PPP gibt die spezifische Plattform an.  
   
--   "LLL" steht für die Abkürzung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sprache, z. B. "ENU" im Fall von Englisch.  
+-   "LLL" steht für die Abkürzung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sprache, z. B. "ENU" im Fall von Englisch.  
   
  Informationen zum Anwenden von Updates auf Komponenten von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], die Teil eines Failoverclusters sind, finden Sie im Abschnitt zur Failoverclusterinstallation. Weitere Informationen über das Ausführen einer Updateinstallation im unbeaufsichtigten Modus finden Sie unter [Installieren von SQL Server 2014 über die Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
@@ -131,7 +131,7 @@ ms.locfileid: "50100211"
 ## <a name="restart-services-and-applications"></a>Neustarten von Diensten und Anwendungen  
  Nach Abschluss des Setups werden Sie möglicherweise aufgefordert, den Computer neu zu starten. Nach dem Neustart des Systems oder nach Abschluss des Setups ohne erforderlichen Neustart können Sie den Knoten **Dienste** in der Systemsteuerung verwenden, um die Dienste neu zu starten, die Sie vor dem Anwenden der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Updates beendet haben. Dazu gehören Dienste wie Distributed Transaction Coordinator und die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Search-Dienste oder entsprechende instanzenspezifische Dienste.  
   
- Starten Sie die Anwendungen erneut, die Sie vor dem Ausführen des Setups für das [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Update beendet haben. Es ist auch sinnvoll, sofort nach der erfolgreichen Installation eine weitere Sicherung der aktualisierten Datenbanken `master`, `msdb` und `model` zu erstellen.  
+ Starten Sie die Anwendungen erneut, die Sie vor dem Ausführen des Setups für das [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Update beendet haben. Es ist auch sinnvoll, sofort nach der erfolgreichen Installation eine weitere Sicherung der aktualisierten Datenbanken `master`, `msdb` und `model` zu erstellen.  
   
 ## <a name="uninstalling-updates-from-includesscurrentincludessscurrent-mdmd"></a>Deinstallieren von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Updates  
  Kumulative Updates für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder Service Packs können in der Systemsteuerung mithilfe der Option **Programme und Funktionen** deinstalliert werden. Um die Liste der installierten Updates anzuzeigen, öffnen Sie **Installierte Updates** , indem Sie auf die Schaltfläche **Start**, auf **Systemsteuerung**, **Programme**und dann unter **Programme und Funktionen**auf Installierte Updates anzeigen klicken. Die kumulativen Updates werden einzeln aufgelistet. Wenn jedoch ein Service Pack installiert wird, das höher als die kumulativen Updates ist, werden die Einträge der kumulativen Updates ausgeblendet und stehen nur zur Verfügung, wenn das Service Pack deinstalliert wird.  

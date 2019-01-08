@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, classifier function create
@@ -16,12 +15,12 @@ ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 16eb3ef5b20a2aa3d8ffc869d386e541b081752f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5118ebcb3da31b97859ca0b2b38e3ad552604990
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112820"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799665"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>Erstellen und Testen einer benutzerdefinierten Klassifizierungsfunktion
   In diesem Thema wird das Erstellen und Testen einer benutzerdefinierten Klassifizierungsfunktion (User-Defined Function, UDF) erläutert. Die Schritte umfassen das Ausführen von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Abfrage-Editor.  
@@ -116,7 +115,7 @@ ms.locfileid: "48112820"
     go  
     ```  
   
-4.  Erstellen Sie die Klassifizierungsfunktion, die Zeitfunktionen und -werte verwendet, die bezüglich der Zeiten in der Suchtabelle ausgewertet werden können. Informationen zum Verwenden von Nachschlagetabellen in einer Klassifizierungsfunktion finden Sie unter "Best Practices für die Verwendung von Nachschlagetabellen in Klassifizierungsfunktionen" in diesem Thema.  
+4.  Erstellen Sie die Klassifizierungsfunktion, die Zeitfunktionen und -werte verwendet, die bezüglich der Zeiten in der Suchtabelle ausgewertet werden können. Informationen zum Verwenden von Nachschlagetabellen in einer Klassifizierungsfunktion finden Sie in diesem Artikel unter „Best Practices für die Verwendung von Nachschlagetabellen in Klassifizierungsfunktionen“.  
   
     > [!NOTE]  
     >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] wurde ein erweiterter Satz von Datums- und Uhrzeitdatentypen und zugehörigen Funktionen eingeführt. Weitere Informationen finden Sie unter [Datums- und Uhrzeitdatentypen und zugehörige Funktionen &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql).  

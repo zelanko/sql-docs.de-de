@@ -19,12 +19,12 @@ ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c2bcf7cb620a97578b921ca09d565ff2ef2fe77a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b18efaacb7ab891402e84b851735870c4c47e883
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080963"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360512"
 ---
 # <a name="analysis-services"></a>Analysis Services
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ist eine analytische Online-Daten-Engine, die in Lösungen für Decision Support und Business Intelligence (BI) zur Anwendung kommt und analytische Daten für Geschäftsberichte und Clientanwendungen wie Excel, Reporting Services-Berichte und andere BI-Tools von Drittanbietern bereitstellt. Ein typischer Workflow für [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] beinhaltet die Erstellung eines OLAP- oder eines tabellarischen Datenmodells, die Bereitstellung des Modells als Datenbank in einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Instanz und die Bearbeitung der Datenbank, um Daten in diese zu laden, und dann Berechtigungen zum Datenzugriff zuzuweisen. Wenn dieser abgeschlossen ist, kann jede Anwendung, die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] als Datenquelle unterstützt, auf dieses Mehrzweckdatenmodell zugreifen.  
@@ -67,7 +67,7 @@ ms.locfileid: "48080963"
  [Analysis Services-Lernprogramme &#40;SSAS&#41;](analysis-services-tutorials-ssas.md)   
  [Installation für SQLServer 2014](../database-engine/install-windows/installation-for-sql-server.md)   
  [Entwicklerhandbuch für &#40;Analysis Services&#41;](analysis-services-developer-documentation.md)   
- [SQL Server-Ressourcencenter](http://go.microsoft.com/fwlink/?linkID=219676)   
- [SQLCat.com](http://go.microsoft.com/fwlink/?linkID=220963)  
+ [SQL Server-Ressourcencenter](https://go.microsoft.com/fwlink/?linkID=219676)   
+ [SQLCat.com](https://go.microsoft.com/fwlink/?linkID=220963)  
   
   

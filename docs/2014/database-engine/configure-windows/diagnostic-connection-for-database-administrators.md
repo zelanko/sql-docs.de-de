@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - server management [SQL Server], connections
@@ -21,12 +20,12 @@ ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9e379e8ebfded2175fe3c0c787c156bd131ef3e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f1a426f91af1f284cc0e60505dc2fcbfae9c4ad
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147556"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377562"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Diagnoseverbindung für Datenbankadministratoren
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt eine spezielle Diagnoseverbindung für Administratoren bereit, wenn Standardverbindungen zum Server nicht möglich sind. Mit dieser Diagnoseverbindung kann ein Administrator auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugreifen, um Diagnoseabfragen auszuführen und Probleme zu behandeln, auch wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf Anforderungen von Standardverbindungen nicht antwortet.  
@@ -37,7 +36,7 @@ ms.locfileid: "48147556"
   
 ||  
 |-|  
-|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
   
 ## <a name="connecting-with-dac"></a>Herstellen einer dedizierten Administratorverbindung  
  Standardmäßig ist die Verbindung nur von einem Client aus zulässig, der auf dem Server ausgeführt wird. Netzwerkverbindungen sind nur dann zulässig, wenn sie mithilfe der gespeicherten Prozedur „sp_configure“ mit der Option [remote admin connections](remote-admin-connections-server-configuration-option.md)konfiguriert wurden.  
@@ -55,7 +54,7 @@ ms.locfileid: "48147556"
   
 -   Die DAC versucht zunächst, eine Verbindung zu der Standarddatenbank herzustellen, die dem Anmeldenamen zugeordnet ist. Nach erfolgreichem Verbindungsaufbau können Sie eine Verbindung mit der master-Datenbank herstellen. Wenn die Standarddatenbank offline oder aus anderen Gründen nicht verfügbar ist, wird von der Verbindung der Fehler 4060 zurückgegeben. Die Verbindung kann jedoch hergestellt werden, wenn Sie die Standarddatenbank überschreiben und stattdessen mithilfe des folgenden Befehls eine Verbindung mit der master-Datenbank herstellen:  
   
-     **sqlcmd –A –d master**  
+     **sqlcmd -A -d master**  
   
      Es wird empfohlen, die dedizierte Administratorverbindung mit der master-Datenbank herzustellen, da diese sicher verfügbar ist, wenn die Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] gestartet ist.  
   
@@ -75,7 +74,7 @@ ms.locfileid: "48147556"
   
 -   Abfragen von Katalogsichten.  
   
--   Einfache DBCC-Befehle wie DBCC FREEPROCCACHE, DBCC FREESYSTEMCACHE, DBCC DROPCLEANBUFFERS`,` und DBCC SQLPERF. Führen Sie keine ressourcenintensiven Befehle wie **DBCC** CHECKDB, DBCC DBREINDEX oder DBCC SHRINKDATABASE aus.  
+-   Einfache DBCC-Befehle, wie z. B. DBCC FREEPROCCACHE, DBCC FREESYSTEMCACHE, DBCC DROPCLEANBUFFERS`,` und DBCC SQLPERF. Führen Sie keine ressourcenintensiven Befehle wie **DBCC** CHECKDB, DBCC DBREINDEX oder DBCC SHRINKDATABASE aus.  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL*\<spid>*-Befehl. Abhängig vom Status von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist der KILL-Befehl nicht immer erfolgreich; dann ist ein Neustart von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unumgänglich. Es folgen einige allgemeine Richtlinien:  
   
@@ -94,16 +93,16 @@ ms.locfileid: "48147556"
   
  Der DAC-Port wird dynamisch von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Start zugewiesen. Beim Herstellen der Verbindung mit der Standardinstanz vermeidet die DAC die Verwendung einer SSRP-Anforderung ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol) an den SQL Server-Browser-Dienst. Zunächst wird eine Verbindung über den TCP-Port 1434 hergestellt. Tritt dabei ein Fehler auf, wird ein SSRP-Aufruf ausgegeben, um den Port abzurufen. Falls der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser SSRP-Anforderungen nicht überwacht, gibt die Verbindungsanforderung einen Fehler zurück. Suchen Sie im Fehlerprotokoll nach der Portnummer, die von der DAC überwacht wird. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Annahme von Remoteverwaltungsverbindungen konfiguriert ist, muss die DAC wie folgt mit einer expliziten Portnummer initiiert werden:  
   
- **sqlcmd–Stcp:** *\<server>,\<port>*  
+ **Sqlcmd-Stcp:**  *\<Server >,\<Port >*  
   
  Im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll ist die Portnummer für die DAC aufgelistet, standardmäßig 1434. Ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausschließlich für die Annahme lokaler DAC konfiguriert, müssen Sie die Verbindung mithilfe des Loopbackadapters herstellen. Verwenden Sie dazu folgenden Befehl:  
   
- **Sqlcmd – S127.0.0.1**,`1434`  
+ **Sqlcmd-S127.0.0.1**,`1434`  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel bemerkt ein Administrator, dass der Server `URAN123` nicht reagiert, und möchte das Problem analysieren. Dazu aktiviert der Benutzer das Eingabeaufforderungs-Hilfsprogramm `sqlcmd` und stellt eine Verbindung mit dem Server `URAN123` her. Dabei gibt er den Schalter `-A` an, um die DAC anzuzeigen.  
   
- `sqlcmd -S URAN123 -U sa -P <xxx> –A`  
+ `sqlcmd -S URAN123 -U sa -P <xxx> -A`  
   
  Jetzt kann der Administrator Abfragen für eine Problemdiagnose ausführen und möglicherweise die nicht reagierenden Sitzungen beenden.  
   

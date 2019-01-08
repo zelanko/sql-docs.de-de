@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Designer [SQL Server], Criteria pane
@@ -18,15 +18,15 @@ ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: be9e057c6e746fa5d058c44a1261388888f69300
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1bbfd7e02b11a9f2a5cc0213c31b453eaa28e446
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078080"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797912"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>Kriterienbereich (Visual Database Tools)
-  Im Kriterienbereich können Sie Abfrageoptionen angeben, d. h. welche Datenspalten angezeigt oder wie die Ergebnisse sortiert werden und welche Zeilen ausgewählt werden sollen. Hierzu geben Sie die gewünschten Optionen in einem Datenblatt ähnlich einer Kalkulationstabelle ein. Im Kriterienbereich können Sie Folgendes angeben:  
+  Im Kriterienbereich können Sie Abfrageoptionen angeben, d.h. welche Datenspalten angezeigt oder wie die Ergebnisse sortiert werden und welche Zeilen ausgewählt werden sollen. Hierzu geben Sie die gewünschten Optionen in einem Datenblatt ähnlich einer Kalkulationstabelle ein. Im Kriterienbereich können Sie Folgendes angeben:  
   
 -   die anzuzeigenden Spalten sowie Aliase für Spaltennamen  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48078080"
   
  Wenn der Kriterienbereich nicht sichtbar ist, klicken Sie mit der rechten Maustaste auf den Designer, zeigen Sie auf **Bereich**, und klicken Sie dann auf **Kriterien**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 |**Column**|**Abfragetyp**|**Beschreibung**|  
 |----------------|--------------------|---------------------|  

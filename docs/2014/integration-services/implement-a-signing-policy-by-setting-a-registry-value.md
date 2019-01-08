@@ -13,12 +13,12 @@ ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2968561d90f1bc45f50f040d7d303b969cc3c3b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f8daa6582f18d9c5279e7539dd9c3740d90e36d2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103020"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353203"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>Implementieren einer Signaturrichtlinie durch Festlegen eines Registrierungswerts
   Sie können einen optionalen Registrierungswert zum Verwalten einer Organisationsrichtlinie verwenden, um signierte und nicht signierte Pakete zu laden. Wenn Sie diesen Registrierungswert verwenden, müssen Sie ihn auf jedem Computer erstellen, auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Pakete ausgeführt werden und auf dem Sie die Richtlinie durchsetzen möchten. Nachdem der Registrierungswert festgelegt wurde, überprüft oder verifiziert [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] die Signaturen vor dem Laden der Pakete.  
@@ -35,7 +35,7 @@ ms.locfileid: "48103020"
   
  In der folgenden Tabelle werden die gültigen Werte der DWORD-Daten und ihre verbundenen Richtlinien aufgelistet.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |0|Keine administrative Einschränkung.|  
 |1|Blockieren von ungültigen Signaturen.<br /><br /> Bei dieser Einstellung werden nicht signierte Pakete nicht blockiert.|  
@@ -43,7 +43,7 @@ ms.locfileid: "48103020"
 |3|Blockieren von ungültigen und nicht vertrauenswürdigen Signaturen und nicht signierten Paketen.<br /><br /> Bei dieser Einstellung werden auch selbst generierte Signaturen blockiert.|  
   
 > [!NOTE]  
->  Die empfohlene Einstellung für `BlockedSignatureStates` ist 3. Diese Einstellung bietet den besten Schutz vor nicht signierten Paketen oder Signaturen, die entweder ungültig oder nicht vertrauenswürdig sind. Die empfohlene Einstellung eignet sich jedoch möglicherweise nicht in allen Fällen. Weitere Informationen zum Signieren von Digital Assets finden Sie im Thema "[Introduction to Code Signing](http://go.microsoft.com/fwlink/?LinkId=51414)" (in Englisch) in der MSDN Library.  
+>  Die empfohlene Einstellung für `BlockedSignatureStates` ist 3. Diese Einstellung bietet den besten Schutz vor nicht signierten Paketen oder Signaturen, die entweder ungültig oder nicht vertrauenswürdig sind. Die empfohlene Einstellung eignet sich jedoch möglicherweise nicht in allen Fällen. Weitere Informationen zum Signieren von Digital Assets finden Sie im Thema "[Introduction to Code Signing](https://go.microsoft.com/fwlink/?LinkId=51414)" (in Englisch) in der MSDN Library.  
   
 ### <a name="to-implement-a-signing-policy-for-packages"></a>So implementieren Sie eine Signaturrichtlinie für ein Paket  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48103020"
   
 4.  Klicken Sie mit der rechten Maustaste auf **MSDTS**, zeigen Sie auf **Neu**, und klicken Sie anschließend auf **DWORD-Wert**.  
   
-5.  Aktualisieren Sie den Namen des neuen Werts zum `BlockedSignatureStates`.  
+5.  Aktualisieren Sie den Namen des neuen Werts auf `BlockedSignatureStates`.  
   
 6.  Mit der rechten Maustaste `BlockedSignatureStates` , und klicken Sie auf **ändern**.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48103020"
 9. Klicken Sie im Menü **Datei** auf **Beenden**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Sicherheit &#40;Integrationsdienste&#41;](security/security-overview-integration-services.md)   
+ [Sicherheitsübersicht &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
  [Identifizieren der Quelle von Paketen mit digitalen Signaturen](security/identify-the-source-of-packages-with-digital-signatures.md)  
   
   

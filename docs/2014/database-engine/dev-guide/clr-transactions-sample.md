@@ -12,12 +12,12 @@ ms.assetid: b09161af-6ac1-406c-9d62-e40be3b4cf8d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5dc70e7c8dba2668ee2ef8bf73dbe7dfb9f26175
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1f39555217bf847b6b8f29b8c4de0b5c349ee5e4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149860"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361372"
 ---
 # <a name="clr-transactions-sample"></a>Beispiel für CLR-Transaktionen
   Dieses Beispiel veranschaulicht das Steuern von Transaktionen mithilfe der im `System.Transactions`-Namespace vorhandenen verwalteten APIs. Dabei wird mithilfe der `System.Transactions.TransactionScope`-Klasse eine Transaktionsgrenze festgelegt, um sicherzustellen, dass keine Lagerbestandsdaten angepasst werden, solange kein genügend großer Lagerbestand zur Deckung der Anforderung vorhanden ist, und dass bei einem ausreichenden Lagerbestand der Transfer von Beständen zwischen den Standorten auf atomare Weise erfolgt. Zur Demonstration der automatischen Registrierung in einer verteilten Transaktion werden Bestandsänderungen in einer Überwachungsdatenbank protokolliert, die in einer eigenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert ist.  
@@ -25,9 +25,9 @@ ms.locfileid: "48149860"
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Zum Erstellen und Ausführen dieses Projekts muss die folgende Software installiert sein:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [Website](http://go.microsoft.com/fwlink/?LinkId=31046) mit der Dokumentation und den Beispielen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [Website](https://go.microsoft.com/fwlink/?LinkId=31046) mit der Dokumentation und den Beispielen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  
   
--   Die AdventureWorks-Datenbank, die auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer-[Website](http://go.microsoft.com/fwlink/?linkid=62796) zur Verfügung gestellt wird.  
+-   Die AdventureWorks-Datenbank, die auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer-[Website](https://go.microsoft.com/fwlink/?linkid=62796) zur Verfügung gestellt wird.  
   
 -   .NET Framework SDK 2.0 oder höher oder Microsoft Visual Studio 2005 oder höher. Das .NET Framework SDK ist kostenlos erhältlich.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48149860"
      `GO`  
   
     > [!NOTE]  
-    >  Um CLR zu aktivieren, benötigen Sie `ALTER SETTINGS` Serverberechtigung, die implizit Mitglieder erhalten die `sysadmin` und `serveradmin` festen Serverrollen.  
+    >  Um CLR zu aktivieren, benötigen Sie die `ALTER SETTINGS`-Serverberechtigung, die Mitglieder der festen Serverrollen `sysadmin` und `serveradmin` implizit erhalten.  
   
 -   Die AdventureWorks-Datenbank muss in der von Ihnen verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz installiert sein.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48149860"
   
 8.  Installieren Sie die Überwachungsdatenbank, indem Sie  
   
-    -   `Sqlcmd –S server_name [ \instance_name ] -E -I -i installDB.sql`  
+    -   `Sqlcmd -S server_name [ \instance_name ] -E -I -i installDB.sql`  
   
      sowie entsprechenden Werten der Instanz und des Servers aus.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48149860"
   
 12. Führen Sie das Skript mit dem folgenden Befehl aus:  
   
-    -   `Sqlcmd –S server_name [ \instance_name ] -E -I -i cleanup.sql`  
+    -   `Sqlcmd -S server_name [ \instance_name ] -E -I -i cleanup.sql`  
   
          sowie entsprechenden Werten der Instanz und des Servers aus.  
   

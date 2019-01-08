@@ -1,5 +1,5 @@
 ---
-title: Erstellen eines Modells in SQL Server mithilfe von Python mit Revoscalepy | Microsoft-Dokumentation
+title: Verwenden von Python mit Revoscalepy Erstellung ein Modells – SQL Server-Machine Learning
 description: Schreiben Sie Python-Skript mithilfe von Revoscalepy-Funktionen zum Erstellen von Data Science-Modelle, die in SQL Server remote ausführen.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f554badcba282bad7fb386daf8c4c0f4106804b4
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 18c5b801198946313e4f489902eb5f7c9ff0d7af
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100161"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596831"
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model-that-runs-remotely-on-sql-server"></a>Verwenden von Python mit Revoscalepy zum Erstellen eines Modells, das per Remotezugriff auf SQL Server ausgeführt wird
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -72,7 +72,7 @@ Der Code führt die folgenden Schritte aus:
 Alle Vorgänge werden mit einer Instanz von SQL Server als Compute Context ausgeführt.
 
 > [!NOTE]
-> Eine Demonstration dieses Beispiels über die Befehlszeile ausgeführt wird, finden Sie in diesem Video: [SQL Server 2017-Advanced Analytics mit Python](https://www.youtube.com/watch?v=FcoY795jTcc)
+> Eine Demonstration dieses Beispiels über die Befehlszeile ausgeführt wird finden Sie in diesem Video: [SQL Server 2017 Erweiterte Analysen mit Python](https://www.youtube.com/watch?v=FcoY795jTcc)
 
 ### <a name="sample-code"></a>Beispielcode
 
@@ -130,7 +130,7 @@ Eine Datenquelle unterscheidet sich von einem rechenkontext. Die *Datenquelle* d
 
     Diese Variablen zum Übergeben der [RxSqlServerData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxsqlserverdata) Konstruktor implementieren die **Datenquellenobjekt** mit dem Namen `data_source`.
 
-+ Sie erstellen eine **computekontext-Objekt** mithilfe der [RxInSqlServer](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxinsqlserverdata) Konstruktor. Die resultierende **computekontext-Objekt** heißt `sql_cc`.
++ Sie erstellen eine **computekontext-Objekt** mithilfe der [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver) Konstruktor. Die resultierende **computekontext-Objekt** heißt `sql_cc`.
 
     Dieses Beispiel verwendet die gleiche Verbindungszeichenfolge, mit dem Sie erneut in der Datenquelle, auf der Annahme, die die Daten auf dieselbe SQL Server-Instanz, die Sie als Compute Context verwenden möchten. 
     

@@ -1,20 +1,22 @@
 ---
-title: Wiederherstellen einer Datenbank in SQL Server-big Data-Cluster | Microsoft-Dokumentation
-description: In diesem Artikel veranschaulicht das Wiederherstellen eine Datenbank in der Masterinstanz von einer SQL Server-big Data-Cluster.
+title: Wiederherstellen einer Datenbank
+titleSuffix: SQL Server 2019 big data clusters
+description: In diesem Artikel zeigt, wie zum Wiederherstellen einer Datenbank in der Masterinstanz von einer SQL Server-2019 big Data-Cluster (Vorschau) wird.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/09/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: f3a15d63b38ac92a6dcdba7363d1fa5ccd05534b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.custom: seodec18
+ms.openlocfilehash: 854f31f6ac04e9767ff1fc12cfb04f5d28c2aa13
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700728"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030824"
 ---
-# <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>Wiederherstellen einer Datenbank in SQL Server big Data-Cluster master-Instanz
+# <a name="restore-a-database-into-the-sql-server-2019-big-data-cluster-master-instance"></a>Wiederherstellen einer Datenbank in der Masterinstanz von SQL Server-2019 big Data-cluster
 
 Dieser Artikel beschreibt, wie Sie eine vorhandene Datenbank auf der Masterinstanz von einer SQL Server-2019 big Data-Cluster (Vorschau) wiederherstellen. Die empfohlene Methode ist, verwenden Sie eine sicherungs-, Kopier-und Ansatz wiederherstellen.
 

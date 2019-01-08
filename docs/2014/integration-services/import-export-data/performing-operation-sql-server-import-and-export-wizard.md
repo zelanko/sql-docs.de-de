@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.performingoperation.f1
@@ -13,12 +12,12 @@ ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 954fcc8806a290ffc171bde9db4af883c30ec9a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a4e1bfd6fffcb9360f92b6b270718edc03da8bb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120100"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801712"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>Vorgang wird ausgeführt (SQL Server-Import/Export-Assistent)
   Auf der Seite **Vorgang wird ausgeführt** können Sie den Fortschritt und die Ergebnisse des Import- bzw. Exportvorgangs anzeigen und den Vorgang ggf. unterbrechen.  
@@ -27,7 +26,7 @@ ms.locfileid: "48120100"
   
  Mit dem SQL Server-Import/Export-Assistenten werden Daten aus einer Quelle in ein Ziel kopiert. Mit dem Assistenten können auch eine Zieldatenbank und Zieltabellen erstellt werden. Wenn Sie jedoch mehrere Datenbanken, Tabellen oder andere Datenbankobjekte kopieren müssen, verwenden Sie stattdessen den Assistenten zum Kopieren von Datenbanken. Weitere Informationen finden Sie unter [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Aktion**  
  Zeigt alle Aktionen an, die Teil des Vorgangs sind.  
   

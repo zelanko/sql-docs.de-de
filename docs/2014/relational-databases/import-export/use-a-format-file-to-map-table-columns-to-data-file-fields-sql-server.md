@@ -13,12 +13,12 @@ ms.assetid: e7ee4f7e-24c4-4eb7-84d2-41e57ccc1ef1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a35a70da1dac3d6dd2ff5e37f696654960883810
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26db59ba5dbfc6f7be8d827a86dabb1cdd845d03
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229020"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371532"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Verwenden einer Formatdatei zum Zuordnen von Tabellenspalten zu Datendateifeldern (SQL Server)
   Eine Datendatei kann Felder in einer anderen Reihenfolge als die der entsprechenden Spalten in der Tabelle aufweisen. In diesem Thema werden Nicht-XML-Formatdateien und XML-Formatdateien dargestellt, die zum Anpassen an eine Datendatei, deren Felder eine andere Reihenfolge als die Tabellenspalten aufweisen, geändert wurden. Die geänderte Formatdatei ordnet die Datenfelder den entsprechenden Tabellenspalten zu.  
@@ -100,7 +100,7 @@ GO
   
 ```  
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
@@ -122,7 +122,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 >  Informationen über die Syntax eines XML-Schemas und weitere Beispiele von XML-Formatdateien finden Sie unter [XML-Formatdateien &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
 ### <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird der BULK-Rowsetanbieter `OPENROWSET` verwendet, um mithilfe der XML-Formatdatei `myTestOrder-c.txt` einen Datenimport aus der Datendatei `myTestOrder` in die `myTestOrder.xml` -Beispieltabelle auszuführen. Die `INSERT… SELECT` -Anweisung gibt die Spaltenliste in der Auswahlliste an.  
+ Im folgenden Beispiel wird der BULK-Rowsetanbieter `OPENROWSET` verwendet, um mithilfe der XML-Formatdatei `myTestOrder-c.txt` einen Datenimport aus der Datendatei `myTestOrder` in die `myTestOrder.xml` -Beispieltabelle auszuführen. Die `INSERT... SELECT` -Anweisung gibt die Spaltenliste in der Auswahlliste an.  
   
  Führen Sie im Abfrage-Editor von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] folgenden Code aus:  
   

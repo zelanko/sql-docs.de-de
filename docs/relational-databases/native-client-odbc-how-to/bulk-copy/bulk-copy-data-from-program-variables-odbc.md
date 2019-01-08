@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e01f9a772b306616c8ac2ca3763a01f820e7854
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d8d0d377cff846bcabac999667718c5696089971
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661149"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53216049"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>Massenkopieren von Daten aus Programmvariablen (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "51661149"
   
     -   Name einer Datendatei, in die Fehlermeldungen zum Massenkopiervorgang ausgegeben werden sollen (geben Sie NULL an, wenn keine Meldungsdatei erstellt werden soll)  
   
-    -   Die Kopierrichtung: DB_IN von der Anwendung in die Sicht oder Tabelle bzw. DB_OUT von der Tabelle oder Sicht in die Anwendung  
+    -   Die Richtung der Kopie: DB_IN von der Anwendung an die Sicht oder Tabelle bzw. DB_OUT an die Anwendung aus der Tabelle oder Sicht.  
   
 5.  Rufen Sie [bcp_bind](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) für jede Spalte im Massenkopiervorgang auf, um die Spalte an eine Programmvariable zu binden.  
   
@@ -67,11 +67,11 @@ ms.locfileid: "51661149"
   
  In diesem Beispiel wird eine Verbindung mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Standardinstanz des Computers hergestellt. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Definition der ODBC-Datenquelle, um die Instanz im folgenden Format anzugeben: Server\benannteInstanz. Standardmäßig wird [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] in einer benannten Instanz installiert.  
   
- Führen Sie das erste Codelisting ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) aus, um im Beispiel verwendete Tabellen zu erstellen.  
+ Führen Sie das erste ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) aus, um die Tabellen erstellen, die im Beispiel verwendete code.  
   
  Kompilieren Sie das zweite Codelisting (C++) mit odbc32.lib und odbcbcp.lib. Wenn Sie das Beispiel mit MSBuild.exe erstellt haben, kopieren Sie zuerst Bcpfmt.fmt und Bcpodbc.bcp aus dem Projektverzeichnis in das Verzeichnis mit der EXE-Datei, und rufen Sie dann die EXE-Datei auf.  
   
- Führen Sie das dritte Codelisting ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) aus, um die im Beispiel verwendeten Tabellen zu löschen.  
+ Führen Sie das dritte ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) aus, um die Tabellen zu löschen, die im Beispiel verwendete code.  
   
 ```  
 // compile with: odbc32.lib odbcbcp.lib  

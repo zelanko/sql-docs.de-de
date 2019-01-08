@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [Visual Database Tools]
@@ -16,12 +16,12 @@ ms.assetid: 76b6fc0e-c324-4d66-b6ed-496fa25fea1e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e12595ddb5074ac780e997f2d0255e57c4470aa8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: afcc330c2b87573f766a7b0728662af9de841962
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165230"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807112"
 ---
 # <a name="types-of-queries-visual-database-tools"></a>Typen von Abfragen (Visual Database Tools)
   Der Abfrage- und Sicht-Designer verfügt über integrierte Funktionen für einige Abfragetypen: Auswählen, Ergebnisse einfügen, Werte einfügen, Aktualisieren, Löschen und Tabelle erstellen. Er unterstützt außerdem UNION, Volltextsuche und Abfragen mit CASE-Ausdrücken.  
@@ -51,7 +51,7 @@ ms.locfileid: "48165230"
  [Erstellen von Updateabfragen &#40;Visual Database Tools&#41;](create-update-queries-visual-database-tools.md)  
  Beschreibt, wie eine Abfrage erstellt wird, die eine Tabelle aktualisiert.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  [Abfrageeigenschaften &#40;Visual Database Tools&#41;](query-properties-visual-database-tools.md)  
  Beschreibt die Eigenschaften, die Ihnen beim Entwerfen von Abfragen zur Verfügung stehen.  
   

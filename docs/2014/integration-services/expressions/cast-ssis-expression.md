@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - CAST function
@@ -17,12 +16,12 @@ ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1a5316ed842e49e0c0077887dd6d980bf05d4b4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6068ef0fea56681048b8a31a9e87b6b01d4f8c96
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229670"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819322"
 ---
 # <a name="cast-ssis-expression"></a>CAST (SSIS-Ausdruck)
   Konvertiert einen Ausdruck explizit in einen anderen Datentyp. Der Umwandlungsoperator kann auch als Operator zum Abschneiden dienen.  
@@ -144,7 +143,7 @@ ms.locfileid: "48229670"
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Operatorrangfolge und Assoziativität](operator-precedence-and-associativity.md)   
+ [Operatorenrangfolge und -assoziativität](operator-precedence-and-associativity.md)   
  [Operatoren &#40;SSIS-Ausdruck&#41;](operators-ssis-expression.md)   
  [Integration Services-Ausdrücke &#40;SSIS&#41;](integration-services-ssis-expressions.md)   
  [Integration Services-Datentypen in Ausdrücken](integration-services-data-types-in-expressions.md)  

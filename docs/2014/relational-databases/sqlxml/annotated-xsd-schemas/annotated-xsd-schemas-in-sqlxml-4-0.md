@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - annotated XSD schemas
@@ -19,12 +17,12 @@ ms.assetid: eecd0d5f-d3dd-4d20-9586-19820410ad47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 69a3d624119c3193ee3525067780f0c4a91fd37e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85142b248fe8e734aeb1700d8eee353df1684d51
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093620"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810862"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>XSD-Schemas mit Anmerkungen in SQLXML 4.0
   Dieser Abschnitt enthält Informationen zum Verwenden von XSD-Schemas mit Anmerkungen in SQLXML 4.0. In früheren Versionen von SQLXML wurde eine ähnliche Funktionalität mit XDR-Schemas (XML-Data Reduced) bereitgestellt. Dieser Abschnitt enthält ebenfalls XDR-Informationen für ältere Anwendungen.  
@@ -48,9 +46,9 @@ ms.locfileid: "48093620"
 ## <a name="other-resources"></a>Weitere Ressourcen  
  Weitere Informationen zu XSD (XML Schema Definition Language), XPath (XML Path Language) und XSLT (Extensible Stylesheet Language Transformations) finden Sie auf den folgenden Websites:  
   
--   XML Schema Part 0: Primer, W3C Recommendation ()http://www.w3.org/TR/xmlschema-0/)  
+-   XML Schema Part 0: Einführung, W3C Recommendation ()http://www.w3.org/TR/xmlschema-0/)  
   
--   XML-Schemateil 1: Structures, W3C Recommendation (http://www.w3.org/TR/xmlschema-1/)  
+-   XML-Schema, Teil 1: Strukturen, W3C Recommendation ()http://www.w3.org/TR/xmlschema-1/)  
   
 -   XML-Schema Teil 2: Datatypes, W3C Recommendation ()http://www.w3.org/TR/xmlschema-2/)  
   

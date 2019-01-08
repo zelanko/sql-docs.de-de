@@ -11,21 +11,21 @@ ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 6d02f24574d6a49edcdbeca2ccfc6fea95893356
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ff83364a11c50ce5403b434052bdb28d53aaf2b3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224210"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377592"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Generieren von Datenfeeds aus Berichten (Berichts-Generator und SSRS)
-  Die [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Atom-Renderingerweiterung generiert ein Atom-dienstdokument, das die aus einem Bericht verfügbaren Datenfeeds aufgeführt sind, und die Datenfeeds aus den Daten Datenbereichen in einem Bericht. Mit dieser Erweiterung generieren Sie Atom-kompatible Datenfeeds, die von Anwendungen gelesen bzw. zwischen Anwendungen ausgetauscht werden können, die aus Berichten generierte Datenfeeds nutzen können. Sie können z. B. die Atom-Renderingerweiterung zum Generierten von Datenfeeds verwenden, die dann im [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Client verwendet werden können.  
+  Die [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Atom-Renderingerweiterung generiert ein Atom-Dienstdokument, in dem die aus einem Bericht und aus den Datenbereichen in einem Bericht verfügbaren Datenfeeds aufgeführt sind. Mit dieser Erweiterung generieren Sie Atom-kompatible Datenfeeds, die von Anwendungen gelesen bzw. zwischen Anwendungen ausgetauscht werden können, die aus Berichten generierte Datenfeeds nutzen können. Sie können z. B. die Atom-Renderingerweiterung zum Generierten von Datenfeeds verwenden, die dann im [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Client verwendet werden können.  
   
- Im Atom-Dienstdokument ist mindestens ein Datenfeed für jeden Datenbereich in einem Bericht aufgeführt. Je nach Typ des Datenbereichs und die Daten, die der Datenbereich angezeigt wird, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] kann mehrere Datenfeeds aus einem Datenbereich generieren. Eine Matrix oder ein Diagramm kann beispielsweise mehrere Datenfeeds bereitstellen. Wenn die Atom-Renderingerweiterung das Atom-Dienstdokument erstellt, wird für jeden Datenfeed ein eindeutiger Bezeichner erstellt. Sie verwenden den Bezeichner in der URL, um auf den Inhalt des Datenfeeds zuzugreifen.  
+ Im Atom-Dienstdokument ist mindestens ein Datenfeed für jeden Datenbereich in einem Bericht aufgeführt. Abhängig vom Typ des Datenbereichs und den darin angezeigten Daten könnte [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] mehrere Datenfeeds aus einem Datenbereich generieren. Eine Matrix oder ein Diagramm kann beispielsweise mehrere Datenfeeds bereitstellen. Wenn die Atom-Renderingerweiterung das Atom-Dienstdokument erstellt, wird für jeden Datenfeed ein eindeutiger Bezeichner erstellt. Sie verwenden den Bezeichner in der URL, um auf den Inhalt des Datenfeeds zuzugreifen.  
   
  Die Atom-Renderingerweiterung generiert Daten für einen Datenfeed auf ähnliche Weise, wie die CSV-(Comma-Separated Value-)Renderingerweiterung Daten in eine CSV-Datei rendert. Wie eine CSV-Datei entspricht ein Datenfeed einer vereinfachten Darstellung der Berichtsdaten. Beispiel: In einer Tabelle mit einer Zeilengruppe, in der die Verkäufe innerhalb einer Gruppe addiert werden, wird die Summe in jeder Datenzeile wiederholt, und es gibt keine separate Zeile, die nur die Summe enthält.  
   
- Atom-Dienstdokumente und -Datenfeeds können mit dem Berichts-Manager, Berichtsserver oder einer mit [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] integrierten SharePoint-Website generiert werden.  
+ Atom-Dienstdokumente und -Datenfeeds können mit dem Berichts-Manager, Berichtsserver oder einer mit [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]integrierten SharePoint-Website generiert werden.  
   
  Atom bezieht sich auf zwei verwandte Standards. Das Atom-Dienstdokument entspricht der RFC 5023 APP-(Atom Publishing Protocol-)Spezifikation und die Datenfeeds der RFC 4287 ASF-Protokollspezifikation für das Atom-Veröffentlichungsformat.  
   
@@ -57,21 +57,21 @@ ms.locfileid: "48224210"
   
  ![RS_Atom_PeerDynamicColumns](../media/rs-atom-peerdynamiccolumns.gif "RS_Atom_PeerDynamicColumns")  
   
- Das aus diesem Bericht generierte Atom-Dienstdokument enthält zwei Datenfeeds: einen für jede der dynamischen gleichrangigen Spalten "Territory" und "Year". Das folgende Diagramm veranschaulicht den Inhalt der einzelnen Datenfeeds.  
+ Aus diesem Bericht generierte Atom-dienstdokument enthält zwei Datenfeeds: einen für jede der dynamischen gleichrangigen Spalten: Gebiet und Jahr. Das folgende Diagramm veranschaulicht den Inhalt der einzelnen Datenfeeds.  
   
  ![RS_Atom_PeerDynamicDataFeeds](../media/rs-atom-peerdynamicdatafeeds.gif "RS_Atom_PeerDynamicDataFeeds")  
   
 
   
 ##  <a name="DataFeeds"></a> Datenfeeds  
- Bei einem Datenfeed handelt es sich um eine XML-Datei mit einem konsistenten Tabellenformat, das sich nie ändert, und veränderbaren Daten, die mit jeder Berichtsausführung variieren können. Die generierten von Datenfeeds [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] befinden sich im gleichen Format wie die von ADO.NET Data Services generierten.  
+ Bei einem Datenfeed handelt es sich um eine XML-Datei mit einem konsistenten Tabellenformat, das sich nie ändert, und veränderbaren Daten, die mit jeder Berichtsausführung variieren können. Die von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] generierten Datenfeeds verfügen über das gleiche Format wie die von ADO.NET Data Services generierten Feeds.  
   
  Ein Datenfeed enthält zwei Abschnitte: Header und Daten. Die Atom-Spezifikation definiert die Elemente in den beiden Abschnitten. Der Header enthält Informationen wie das für die Datenfeeds zu verwendende Zeichencodierungsschema.  
   
 ### <a name="header-section"></a>Headerabschnitt  
  Im folgenden XML-Code wird der Headerabschnitt eines Datenfeeds veranschaulicht.  
   
- `<?xml version="1.0" encoding="utf-8" standalone="yes"?><feed xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://www.w3.org/2005/Atom">`  
+ `<?xml version="1.0" encoding="utf-8" standalone="yes"?><feed xmlns:d="https://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="https://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://www.w3.org/2005/Atom">`  
   
  `<title type="text"></title>`  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48224210"
   
  ![RS_Atom_ProductSalesSummaryCircledValues](../media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
- Das folgende XML zeigt ein <`entry`>-Element aus diesem Bericht in einem Datenfeed. Beachten Sie, dass die <`entry`>-Element enthält, die Gesamtsummen der Verkäufe und Bestellungen der Gruppe sowie die Gesamtsummen der Verkäufe und Bestellungen aller Gruppen. Das <`entry`>-Element enthält alle Werte im Bericht.  
+ Der folgende XML-Code entspricht einem <`entry`>-Element aus diesem Bericht in einem Datenfeed. Beachten Sie, dass das <`entry`>-Element die Gesamtsummen der Verkäufe und Bestellungen der einzelnen Gruppe sowie die Gesamtsummen der Verkäufe und Bestellungen aller Gruppen enthält. Das <`entry`>-Element enthält alle Werte im Bericht.  
   
  `<entry><id>uuid:1795992c-a6f3-40ec-9243-fbfd0b1a5be3;id=166322</id><title type="text"></title><updated>2009-05-08T23:09:58Z</updated><author /><content type="application/xml"><m:properties>`  
   
@@ -115,7 +115,7 @@ ms.locfileid: "48224210"
   
  Die Datenzeilen für geschachtelte Datenbereiche sind in der Regel breit, insbesondere, wenn die geschachtelten Tabellen und die Matrizen Gruppen und Gesamtsummen beinhalten. Es ist u. U. hilfreich, den Bericht in einen Datenfeed zu exportieren und diesen anzuzeigen, um sicherzustellen, dass die generierten Daten Ihren Erwartungen entsprechen.  
   
- Wenn die Atom-Renderingerweiterung das Atom-Dienstdokument erstellt, wird für den Datenfeed ein eindeutiger Bezeichner erstellt. Sie verwenden den Bezeichner in der URL, um den Inhalt des Datenfeeds anzuzeigen. Oben gezeigte Beispiel Atom-dienstdokument enthält die URL http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1". In der URL ist der Bericht (Product Sales Summary), das Atom-Renderingformat (ATOM) und der Name des Datenfeeds (xAx0x1) angegeben.  
+ Wenn die Atom-Renderingerweiterung das Atom-Dienstdokument erstellt, wird für den Datenfeed ein eindeutiger Bezeichner erstellt. Sie verwenden den Bezeichner in der URL, um den Inhalt des Datenfeeds anzuzeigen. Oben gezeigte Beispiel Atom-dienstdokument enthält die URL <http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1>". In der URL ist der Bericht (Product Sales Summary), das Atom-Renderingformat (ATOM) und der Name des Datenfeeds (xAx0x1) angegeben.  
   
  Die Namen der Berichtselemente entsprechen den in der Berichtsdefinitionssprache (Report Definition Language, RDL) verwendeten Standardnamen, die häufig weder intuitiv noch einfach zu erinnern sind. Der Standardname der ersten in einen Bericht eingefügten Matrix lautet beispielsweise "Tablix 1". Die Datenfeeds verwenden diese Namen.  
   
@@ -194,7 +194,7 @@ ms.locfileid: "48224210"
 
   
 ## <a name="see-also"></a>Siehe auch  
- [Exportieren in eine CSV-Datei &#40;Berichts-Generator und SSRS&#41;](exporting-to-a-csv-file-report-builder-and-ssrs.md)   
+ [Exportieren als CSV-Datei &#40;Berichts-Generator und SSRS&#41;](exporting-to-a-csv-file-report-builder-and-ssrs.md)   
  [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](export-reports-report-builder-and-ssrs.md)  
   
   

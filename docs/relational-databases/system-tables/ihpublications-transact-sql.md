@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - IHpublications_TSQL
@@ -19,12 +18,12 @@ ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 175d43ed9cd6165ee8670d558a5488f239a39b0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 227762e4fbc71d58641aa5f67ec975df9df08360
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605168"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802782"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ ms.locfileid: "47605168"
 |**centralized_conflicts**|**bit**|Gibt an, ob Konfliktdatensätze auf dem Verleger gespeichert werden:<br /><br /> **0** = die Konfliktdatensätze gespeichert werden, auf dem Verleger und auf dem Abonnenten, die den Konflikt verursacht hat.<br /><br /> **1** = die Konfliktdatensätze auf dem Verleger gespeichert werden.<br /><br /> *Nicht unterstützt für nicht - SQL-Verleger.*|  
 |**conflict_retention**|**int**|Gibt die Konfliktaufbewahrungsdauer in Tagen an. *Nicht unterstützt für nicht - SQL-Verleger.*|  
 |**conflict_policy**|**int**|Gibt die Richtlinie zur Konfliktlösung an, die für die Option zur verzögerten Aktualisierung über eine Warteschlange verwendet wird. Dabei kann es sich um einen der folgenden Werte sein:<br /><br /> **1** = der Verleger gewinnt den Konflikt.<br /><br /> **2** = der Abonnent gewinnt den Konflikt.<br /><br /> **3** = Abonnement wird erneut initialisiert.<br /><br /> *Nicht unterstützt für nicht - SQL-Verleger.*|  
-|**queue_type**|**int**|Gibt an, welcher Wartenschlangentyp verwendet wird. Dabei kann es sich um einen der folgenden Werte sein:<br /><br /> **1** = Msmq; es wird [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing zum Speichern von Transaktionen.<br /><br /> **2** = Sql; es wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Speichern von Transaktionen.<br /><br /> Diese Spalte wird nicht verwendet, von nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herausgeber.<br /><br /> : Hinweis [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing wurde als veraltet markiert und wird nicht mehr unterstützt.<br /><br /> *Diese Spalte wird für nicht - SQL-Verleger nicht unterstützt.*|  
+|**queue_type**|**int**|Gibt an, welcher Wartenschlangentyp verwendet wird. Dabei kann es sich um einen der folgenden Werte sein:<br /><br /> **1** = Msmq; es wird [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing zum Speichern von Transaktionen.<br /><br /> **2** = Sql; es wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Speichern von Transaktionen.<br /><br /> Diese Spalte wird nicht verwendet, von nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herausgeber.<br /><br /> Hinweis: Die Verwendung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing wurde als veraltet markiert und wird nicht mehr unterstützt.<br /><br /> *Diese Spalte wird für nicht - SQL-Verleger nicht unterstützt.*|  
 |**ad_guidname**|**sysname**|Gibt an, ob die Veröffentlichung in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory veröffentlicht wird. Ein gültiger globally unique Identifier (GUID) gibt an, dass die Veröffentlichung, in veröffentlicht wird der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory und die GUID ist das entsprechende Active Directory-Veröffentlichungsobjekt **"objectGUID"**. Wenn dieser Wert NULL ist, wird die Veröffentlichung nicht in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory veröffentlicht. *Nicht unterstützt für nicht - SQL-Verleger.*|  
 |**backward_comp_level**|**int**|Datenbankkompatibilitätsgrad, der einen der folgenden Werte annehmen kann:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].<br /><br /> *Nicht unterstützt für nicht - SQL-Verleger.*|  
 |**description**|**nvarchar(255)**|Beschreibender Eintrag für die Veröffentlichung.|  

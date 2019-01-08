@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - maintenance plans [SQL Server], creating
@@ -13,12 +12,12 @@ ms.assetid: a945cb65-ba7a-42f4-bbd9-6ec675745523
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3a40eb53444fb71158e79a566f2f27f2482e0079
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de7ff72e7ce135ab477e3d254eeb26193c8bbc69
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208640"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801542"
 ---
 # <a name="create-a-maintenance-plan"></a>Erstellen eines Wartungsplans
   In diesem Thema wird beschrieben, wie Sie einen Einzelserver- oder Multiserverwartungsplan in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellen. Bei Verwendung von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]stehen Ihnen zwei Methoden zum Erstellen der Wartungspläne zur Verfügung: der Wartungsplanungs-Assistent und die Entwurfsoberfläche. Der Assistent eignet sich am besten für das Erstellen von grundlegenden Wartungsplänen; wenn Sie die Entwurfsoberfläche zum Erstellen eines Plans verwenden, können Sie erweiterten Workflow nutzen.  
@@ -29,7 +28,7 @@ ms.locfileid: "48208640"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Erstellen eines Wartungsplans mit**  
   
@@ -37,7 +36,7 @@ ms.locfileid: "48208640"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
  Wenn Sie einen Multiserver-Wartungsplan erstellen möchten, muss eine Multiserverumgebung mit einem Masterserver und mindestens einem Zielserver konfiguriert sein. Multiserver-Wartungspläne müssen auf dem Masterserver erstellt und verwaltet werden. Diese Pläne können auf Zielservern zwar angezeigt, jedoch nicht verwaltet werden.  
@@ -47,7 +46,7 @@ ms.locfileid: "48208640"
 ####  <a name="Permissions"></a> Berechtigungen  
  Sie müssen Mitglied der festen Serverrolle **sysadmin** sein, um Wartungspläne erstellen oder verwalten zu können.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-create-a-maintenance-plan-using-the-maintenance-plan-wizard"></a>So erstellen Sie einen Wartungsplan mithilfe des Wartungsplanungs-Assistenten  
   
@@ -73,7 +72,7 @@ ms.locfileid: "48208640"
   
 #### <a name="to-create-a-maintenance-plan"></a>So erstellen Sie einen Wartungsplan  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

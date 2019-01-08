@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingquery.f1
@@ -13,17 +12,17 @@ ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb642130a1027e11015c67c0241677a25638130e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 95ce2aa24b844c77406b5286eac31b75cdb6fd35
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143780"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771132"
 ---
 # <a name="data-mining-query"></a>Data Mining-Abfrage
   Im Entwurfsbereich befindet sich der Data Mining-Generator für Vorhersageabfragen, mit dem Sie Data Mining-Vorhersageabfragen erstellen können. Vorhersageabfragen können entweder auf der Grundlage von Eingabetabellen oder von SINGLETON-Vorhersageabfragen erstellt werden. Wechseln Sie zur Ergebnissicht, um die Abfrage auszuführen und die Ergebnisse anzuzeigen. Die Abfragesicht zeigt die vom Generator für Vorhersageabfragen erstellte DMX-Abfrage (Data Mining Extensions).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Schaltfläche Ansicht wechseln  
  Klicken Sie auf ein Symbol, um zwischen dem Entwurfs- und Abfragebereich zu wechseln. Standardmäßig ist der Entwurfsbereich geöffnet.  
   

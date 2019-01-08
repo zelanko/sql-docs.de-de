@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - CHANGE_TRACKING_CLEANUP_VERSION
@@ -34,12 +33,12 @@ ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: aef16266b62754884017528a9db6065ca824e4eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 257fdeadceb961fd9080956b3c6725c40e3c3c8e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190640"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351702"
 ---
 # <a name="track-data-changes-sql-server"></a>Nachverfolgen von Datenänderungen (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] stellt zwei Funktionen bereit, mit denen Änderungen in einer Datenbank nachverfolgt werden: [Change Data Capture](#Capture) und [Änderungsnachverfolgung](#Tracking). Mit diesen Funktionen können Anwendungen die DML-Änderungen (Einfüge-, Aktualisierungs- und Löschvorgänge) ermitteln, die an Benutzertabellen in einer Datenbank vorgenommen wurden. Change Data Capture und die Änderungsnachverfolgung können auf derselben Datenbank aktiviert werden, d. h., es sind keine zusätzlichen Überlegungen erforderlich. Für die Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Change Data capture und änderungsnachverfolgung, unterstützen, finden Sie unter [von den SQL Server 2014-Editionen unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -59,7 +58,7 @@ ms.locfileid: "48190640"
   
 -   Niedriger Aufwand für DML-Vorgänge. Bei der synchronen Änderungsnachverfolgung entsteht immer ein gewisser Aufwand. Allerdings kann dieser Aufwand durch Verwendung der Änderungsnachverfolgung minimiert werden. Der Aufwand ist dabei in vielen Fällen geringer als bei der Verwendung alternativer Lösungen, insbesondere solcher Lösungen, die die Verwendung von Triggern erfordern.  
   
--   Die Änderungsnachverfolgung basiert auf Transaktionen, für die ein Commit ausgeführt wurde. Die Reihenfolge der Änderungen wird durch den Commitzeitpunkt der Transaktion bestimmt. Auf diese Weise werden bei umfangreichen und überlappenden Transaktionen zuverlässige Ergebnisse erzielt. Benutzerdefinierte Lösungen, mit denen `timestamp` Werte müssen werden speziell für solche Szenarien entworfen.  
+-   Die Änderungsnachverfolgung basiert auf Transaktionen, für die ein Commit ausgeführt wurde. Die Reihenfolge der Änderungen wird durch den Commitzeitpunkt der Transaktion bestimmt. Auf diese Weise werden bei umfangreichen und überlappenden Transaktionen zuverlässige Ergebnisse erzielt. Benutzerdefinierte Lösungen, in denen `timestamp`-Werte verwendet werden, müssen speziell für solche Szenarien entworfen werden.  
   
 -   Standardtools sind verfügbar, die Sie zum Konfigurieren und Verwalten verwenden können. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] stellt Standard-DDL-Anweisungen, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], Katalogsichten und Sicherheitsberechtigungen bereit.  
   
@@ -69,11 +68,11 @@ ms.locfileid: "48190640"
 |Funktion|Change Data Capture|Änderungsnachverfolgung|  
 |-------------|-------------------------|---------------------|  
 |**Nachverfolgte Änderungen**|||  
-|DML-Änderungen|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|DML-Änderungen|Ja|Ja|  
 |**Nachverfolgte Informationen**|||  
-|Verlaufsdaten|Benutzerkontensteuerung|nein|  
-|Ob Spalte geändert wurde|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|DML-Typ|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|Verlaufsdaten|Ja|Nein|  
+|Ob Spalte geändert wurde|Ja|Ja|  
+|DML-Typ|Ja|Ja|  
   
 ##  <a name="Capture"></a> Change Data Capture  
  Change Data Capture stellt Änderungsverlaufsinformationen für Benutzertabellen bereit, indem sowohl die Tatsache, dass DML-Änderungen vorgenommen wurden, als auch die geänderten Daten erfasst werden. Die Änderungen werden über einen asynchronen Prozess durch Lesen des Transaktionsprotokolls erfasst, der keine großen Auswirkungen auf die Systemleistung hat.  
@@ -88,7 +87,7 @@ ms.locfileid: "48190640"
  **Konfiguration und Verwaltung**  
  Zum Aktivieren oder Deaktivieren von Change Data capture für eine Datenbank, den Aufrufer [sp_cdc_enable_db &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql) oder [Sys. sp_cdc_disable_db &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql)muss ein Mitglied der festen Serverrolle `sysadmin` Rolle. Aktivieren und Deaktivieren von Change Data Capture auf Tabellenebene muss der Aufrufer der [Sys. sp_cdc_enable_table &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql) und [sp_cdc_disable_table &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql) werden Sie entweder Mitglied der Sysadmin-Rolle oder ein Mitglied der Datenbank `database db_owner` Rolle.  
   
- Verwenden der gespeicherten Prozeduren zur Verwaltung von Change Data Capture-Aufträgen sind beschränkt auf Mitglieder des Servers `sysadmin` -Rolle und Mitglieder der `database db_owner` Rolle.  
+ Gespeicherte Prozeduren zur Verwaltung von Change Data Capture-Aufträgen können nur von Mitgliedern der Serverrolle `sysadmin` und der Rolle `database db_owner` verwendet werden.  
   
  **Änderungsenumeration und Metadatenabfragen**  
  Für den Zugriff auf die mit einer Änderungsinstanz verbundenen Änderungsdaten muss dem Benutzer die Zugriffsberechtigung für alle aufgezeichneten Spalten der zugeordneten Quelltabelle erteilt werden. Wenn bei Erstellung der Aufzeichnungsinstanz eine Gatingrolle angegeben wird, muss der Aufrufer außerdem Mitglied der angegebenen Gatingrolle sein. Andere allgemeine Change Data Capture-Funktionen für den Zugriff auf Metadaten stehen für alle Datenbankbenutzer mit der Rolle public zur Verfügung. Der Zugriff auf die zurückgegebenen Metadaten wird jedoch in der Regel auch hier durch die Zugriffsberechtigungen auf die zugrunde liegenden Quelltabellen und die Mitgliedschaft in definierten Gatingrollen beschränkt.  
@@ -101,11 +100,11 @@ ms.locfileid: "48190640"
   
 |Typ der Spalte|In Änderungstabellen aufgezeichnete Änderungen|Einschränkungen|  
 |--------------------|---------------------------------------|-----------------|  
-|Spalten mit geringer Dichte|Benutzerkontensteuerung|Bei Verwendung eines Spaltensatzes wird das Aufzeichnen von Änderungen nicht unterstützt.|  
-|Berechnete Spalten|nein|Änderungen an berechneten Spalten werden nicht nachverfolgt. Die Spalte wird in der Änderungstabelle mit dem entsprechenden Typ angezeigt, hat aber einen Wert von NULL.|  
-|XML|Benutzerkontensteuerung|Änderungen an einzelnen XML-Elementen werden nicht nachverfolgt.|  
-|timestamp|Benutzerkontensteuerung|Der Datentyp in der Änderungstabelle wird in Binärformat umgewandelt.|  
-|BLOB-Datentypen|Benutzerkontensteuerung|Das vorherige Image der BLOB-Spalte wird nur gespeichert, wenn die Spalte selbst geändert wird.|  
+|Spalten mit geringer Dichte|Ja|Bei Verwendung eines Spaltensatzes wird das Aufzeichnen von Änderungen nicht unterstützt.|  
+|Berechnete Spalten|Nein|Änderungen an berechneten Spalten werden nicht nachverfolgt. Die Spalte wird in der Änderungstabelle mit dem entsprechenden Typ angezeigt, hat aber einen Wert von NULL.|  
+|XML|Ja|Änderungen an einzelnen XML-Elementen werden nicht nachverfolgt.|  
+|timestamp|Ja|Der Datentyp in der Änderungstabelle wird in Binärformat umgewandelt.|  
+|BLOB-Datentypen|Ja|Das vorherige Image der BLOB-Spalte wird nur gespeichert, wenn die Spalte selbst geändert wird.|  
   
 ### <a name="change-data-capture-and-other-sql-server-features"></a>Change Data Capture und andere SQL Server-Funktionen  
  In diesem Abschnitt wird beschrieben, wie die folgenden Funktionen mit Change Data Capture interagieren:  
@@ -126,7 +125,7 @@ ms.locfileid: "48190640"
  Weitere Informationen zur Datenbankspiegelung finden Sie unter [ Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 #### <a name="transactional-replication"></a>Transaktionsreplikation  
- Change Data Capture und die Transaktionsreplikation können in einer Datenbank parallel vorhanden sein, allerdings wird die Auffüllung der Änderungstabellen anders behandelt, wenn beide Funktionen aktiviert sind. Change Data Capture und die Transaktionsreplikation verwenden immer dieselbe Prozedur, nämlich [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql), um die Änderungen aus dem Transaktionsprotokoll auszulesen. Wenn Change Data Capture allein aktiviert ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ruft der Agent-Auftrag `sp_replcmds`. Wenn für eine Datenbank beide Funktionen aktiviert sind, ruft der Protokolllese-Agent `sp_replcmds`. Dieser Agent füllt sowohl die Änderungstabellen als auch die Tabellen der Verteilungsdatenbank auf. Weitere Informationen finden Sie unter [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md).  
+ Change Data Capture und die Transaktionsreplikation können in einer Datenbank parallel vorhanden sein, allerdings wird die Auffüllung der Änderungstabellen anders behandelt, wenn beide Funktionen aktiviert sind. Change Data Capture und die Transaktionsreplikation verwenden immer dieselbe Prozedur, nämlich [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql), um die Änderungen aus dem Transaktionsprotokoll auszulesen. Wenn Change Data Capture allein aktiviert ist, ruft ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agentauftrag die Prozedur `sp_replcmds` auf. Wenn für eine Datenbank beide Funktionen aktiviert sind, ruft der Protokolllese-Agent `sp_replcmds`. Dieser Agent füllt sowohl die Änderungstabellen als auch die Tabellen der Verteilungsdatenbank auf. Weitere Informationen finden Sie unter [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md).  
   
  Angenommen, Change Data Capture ist für die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank aktiviert, und zwei Tabellen sind für die Erfassung aktiviert. Um die Änderungstabellen aufzufüllen, ruft der Aufzeichnungsauftrag `sp_replcmds` auf. Die Datenbank wird für die Transaktionsreplikation aktiviert, und eine Veröffentlichung wird erstellt. Anschließend wird der Protokolllese-Agent für die Datenbank erstellt, und der Erfassungsauftrag wird gelöscht. Der Protokolllese-Agent fährt fort, das Protokoll ab der letzten Protokollfolgenummer zu durchsuchen, für die ein Commit in die Änderungstabelle ausgeführt wurde. Auf diese Weise wird die Datenkonsistenz in den Änderungstabellen sichergestellt. Wenn die Transaktionsreplikation in dieser Datenbank deaktiviert wird, wird der Protokolllese-Agent entfernt und der Aufzeichnungsauftrag neu erstellt.  
   
@@ -140,7 +139,7 @@ ms.locfileid: "48190640"
   
 -   Wenn eine Datenbank auf einem anderen Server wiederhergestellt wird, wird Change Data Capture standardmäßig deaktiviert, und alle zugehörigen Metadaten werden gelöscht.  
   
-     Um Change Data Capture beizubehalten, verwenden Sie die `KEEP_CDC` option beim Wiederherstellen der Datenbank. Weitere Informationen zu dieser Option finden Sie unter [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql).  
+     Um Change Data Capture beizubehalten, verwenden Sie beim Wiederherstellen der Datenbank die Option `KEEP_CDC`. Weitere Informationen zu dieser Option finden Sie unter [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql).  
   
 -   Wenn eine Datenbank getrennt und an denselben Server oder einen anderen Server angefügt wird, bleibt Change Data Capture aktiviert.  
   
@@ -167,9 +166,9 @@ ms.locfileid: "48190640"
   
      Beschreibt die Änderungsnachverfolgung, bietet einen allgemeinen Überblick über die Funktion der Änderungsnachverfolgung und erläutert das Zusammenwirken der Änderungsnachverfolgung mit anderen [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Funktionen.  
   
--   [Microsoft Sync Framework Developer Center](http://go.microsoft.com/fwlink/?LinkId=108054)  
+-   [Microsoft Sync Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=108054)  
   
-     Stellt vollständige Dokumentation für [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] und [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]bereit. Das Kapitel „Vorgehensweise: Verwenden der SQL Server-Änderungsnachverfolgung“ in der Dokumentation zu [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]enthält genaue Informationen und Codebeispiele.  
+     Stellt vollständige Dokumentation für [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] und [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]bereit. In der Dokumentation für [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)], das Thema "Vorgehensweise: SQL Server die Änderungsnachverfolgung verwenden"enthält ausführliche Informationen und Codebeispiele.  
   
   
 ## <a name="related-tasks-required"></a>Verwandte Aufgaben (erforderlich)  

@@ -18,12 +18,12 @@ ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7752c1c1d5184ddb1beea26d7c35e29ea5769796
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf8e7552faf9567dab25ee3dc5b7b293034faef0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644328"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538755"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Zeit- und Datumsfunktionen (Visual FoxPro-ODBC-Treiber)
 In der folgende Tabelle werden die ODBC-Datum und die Funktionen von der Visual FoxPro-ODBC-Treiber unterstützt werden. Wenn die Visual FoxPro-Grammatik für die gleiche Funktion aus der ODBC-Syntax unterscheidet, wird der Visual FoxPro-Äquivalent aufgeführt.  
@@ -57,8 +57,8 @@ In der folgende Tabelle werden die ODBC-Datum und die Funktionen von der Visual 
  Der Treiber unterstützt auch die ODBC-Escapesequenz für Datums- und Zeitstempel. Die Escape-Klausel-Syntax lautet wie folgt aus:  
   
 ```  
---(*vendor(Microsoft),product(ODBC) d 'value' *)—  
---(*vendor(Microsoft),product(ODBC) ts ''value' *)—  
+--(*vendor(Microsoft),product(ODBC) d 'value' *)-  
+--(*vendor(Microsoft),product(ODBC) ts ''value' *)-  
 ```  
   
  In dieser Syntax **d** gibt an, dass *Wert* ein Datum in der *jjjj-mm-tt* Format und **ts** gibt an, dass *Wert*  ist ein Zeitstempel in der *jjjj-mm-tt hh: mm:*[.*f...*] Format. Die Kurzschreibweise der Syntax für Datums- und Zeitstempel lautet wie folgt aus:  

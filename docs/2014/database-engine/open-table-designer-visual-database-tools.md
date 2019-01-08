@@ -15,12 +15,12 @@ ms.assetid: 2a8c0a59-71c4-4280-824c-2dc17999532e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 788aead525e8a4d21728de60a2162aafb5d286cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3e0ceb2ef7e152829cbb6bd33cdcb3d0812a69bf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163290"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355652"
 ---
 # <a name="open-table-designer-visual-database-tools"></a>Öffnen des Tabellen-Designers (Visual Database Tools)
   Der Tabellen-Designer ist ein visuelles Tool, das das Entwerfen und Anzeigen von Datenbanktabellen ermöglicht, mit denen Sie eine Verbindung hergestellt haben. Mit dem Tabellen-Designer können Sie Tabellen, Spalten, Schlüssel, Indizes, Beziehungen und Einschränkungen erstellen, bearbeiten oder löschen.  
@@ -34,7 +34,7 @@ ms.locfileid: "48163290"
      Das Menü **Tabellen-Designer** wird dem Hauptmenü hinzugefügt, und die Designerbereiche werden geöffnet.  
   
 > [!NOTE]  
->  Wenn Sie mit einer SQL Azure-Datenbank verbunden werden, startet die neue Tabellenoption ein Vorlagenskript zum Erstellen einer Tabelle. Bearbeiten Sie die Parameter, und führen Sie dann das Skript aus, um eine neue Tabelle zu erstellen. Weitere Informationen finden Sie unter [SQL Azure-Übersicht](http://go.microsoft.com/fwlink/?LinkId=163948)(möglicherweise auf Englisch).  
+>  Wenn Sie mit einer SQL Azure-Datenbank verbunden werden, startet die neue Tabellenoption ein Vorlagenskript zum Erstellen einer Tabelle. Bearbeiten Sie die Parameter, und führen Sie dann das Skript aus, um eine neue Tabelle zu erstellen. Weitere Informationen finden Sie unter [SQL Azure-Übersicht](https://go.microsoft.com/fwlink/?LinkId=163948)(möglicherweise auf Englisch).  
   
 ### <a name="open-an-existing-table"></a>Öffnen einer vorhandenen Tabelle  
   

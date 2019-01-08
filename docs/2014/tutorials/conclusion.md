@@ -13,18 +13,18 @@ ms.assetid: b1e6fde6-c3a7-4b91-b176-fa465325dd21
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e4159972e7b72dde9a3ba47125ac9b8eae568c64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12a7bc2eae0f650a292f95ad637492e22e1be99e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210480"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355064"
 ---
-# <a name="conclusion"></a>Fazit
+# <a name="conclusion"></a>Schlussbemerkung
   In diesem Lernprogramm haben Sie gelernt, SQL Server Integration Services (SSIS), Master Data Services (MDS) und Data Quality Services (DQS) zusammen zu verwenden, um eine Enterprise Information Management (EIM)-Beispiellösung zu implementieren. Zunächst haben Sie mit dem Data Quality Client-Tool eine DQS-Wissensdatenbank mit Informationen zu Lieferanten zu erstellen. Dann haben Sie die Eingabelieferantendaten in einer Excel-Datei anhand der Wissensdatenbank bereinigt und die Lieferantendaten dann abgeglichen, indem Sie eine Abgleichsrichtlinie in der Wissensdatenbank verwendet haben, um Duplikate in den Daten zu identifizieren und zu entfernen. Anschließend haben Sie das MDS-Add-In für Excel verwendet, um die bereinigte und abgeglichene Lieferantenliste in MDS zu speichern. Zum Schluss haben Sie den gesamten Prozess vom Empfangen von Eingabedaten, Bereinigen und Abgleichen der Daten bis zum Speichern der Masterdaten in MDS automatisiert, indem Sie eine SSIS-Lösung erstellt haben.  
   
 ## <a name="for-more-information"></a>Weitere Informationen:    
   
- [Enterprise Informationsmanagement (EIM): Zusammenführen zu SSIS, DQS und MDS (Video)](http://go.microsoft.com/fwlink/?LinkId=258672)  
+ [Enterprise-Informationsmanagement (EIM): Zusammenführen von SSIS, DQS und MDS (Video)](https://go.microsoft.com/fwlink/?LinkId=258672)  
   
   

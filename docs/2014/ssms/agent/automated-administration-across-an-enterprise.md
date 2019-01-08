@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - enterprise automatic administration [SQL Server]
@@ -20,12 +20,12 @@ ms.assetid: 44d8365b-42bd-4955-b5b2-74a8a9f4a75f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f4e14eabe3d94f4497d6c4e622ff62e0ef8258b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b3be16ea856b5d632ba5a0285bad2c4d2d93709c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181902"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210179"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Automatisierte Verwaltung in einem Unternehmen
   Das Automatisieren der Verwaltung über mehrere Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hinweg wird *Multiserververwaltung* genannt. Verwenden Sie die Multiserveradministration für folgende Aufgaben:  
@@ -64,7 +64,7 @@ ms.locfileid: "48181902"
  Enthält Informationen dazu, wie sich die Verwendung von Windows-Konten ohne Administratorberechtigungen oder des Kontos LocalSystem für den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Dienst auf Multiserverumgebungen auswirken kann.  
   
  [Festlegen von Verschlüsselungsoptionen auf Zielservern](set-encryption-options-on-target-servers.md)  
- Enthält Informationen zum Festlegen des[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Registrierungsunterschlüssels „MsxEncryptChannelOptions“ auf Zielservern.  
+ Enthält Informationen zum Festlegen des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent-Registrierungsunterschlüssels MsxEncryptChannelOptions auf Zielservern.  
   
  [Verwalten von Aufträgen über ein gesamtes Unternehmen](manage-jobs-across-an-enterprise.md)  
  Enthält Informationen zum Überprüfen des Auftragsstatus, Ändern der Zielserver für Aufträge, Synchronisieren von Zielserveruhren, Abrufen des aktuellen Auftragsstatus von Masterservern.  

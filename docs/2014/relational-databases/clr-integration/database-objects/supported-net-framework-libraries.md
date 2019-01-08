@@ -13,18 +13,18 @@ ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 60e530c4d15b3c17412a7125d73cb5cc9e01d4cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2518404830577839bce3e84c4eac9b76c850cd3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228132"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367932"
 ---
 # <a name="supported-net-framework-libraries"></a>Unterstützte .NET Framework-Bibliotheken
   Mit in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gehosteter CLR (Common Language Runtime) können Sie gespeicherte Prozeduren, Trigger, benutzerdefinierte Funktionen, benutzerdefinierte Typen (User-Defined Types, UDT) und benutzerdefinierte Aggregate in verwaltetem Code erstellen. Mit den in den Bibliotheken der .NET Framework-Klasse verfügbaren Funktionen haben Sie Zugriff auf vorgefertigte Klassen, die Funktionen u. a. zur Zeichenfolgenbearbeitung, für erweiterte mathematische Vorgänge, den Dateizugriff und die Kryptografie bereitstellen. Auf diese Klassen können Sie von jeder verwalteten gespeicherten Prozedur, jedem benutzerdefinierten Typ, jedem Trigger, jeder benutzerdefinierten Funktion oder jedem benutzerdefinierten Aggregat aus zugreifen.  
   
 > [!NOTE]  
->  Wenn Sie warten oder Aktualisieren der nicht unterstützte Assemblys im globalen Assemblycache (GAC), Ihre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Wenn eine Assembly vorhanden, in ist einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR-Integration. Wenn Sie im GAC Assemblys warten oder aktualisieren, die auch in der Datenbank registriert sind, müssen Sie auch die Kopie der Assembly in den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbanken mit der `ALTER ASSEMBLY`-Anweisung warten oder aktualisieren. Dies gilt auch für nicht unterstützte .NET Framework-Assemblys. Weitere Informationen finden Sie unter [Knowledge Base-Artikel 949080](http://support.microsoft.com/kb/949080).  
+>  Wenn Sie warten oder Aktualisieren der nicht unterstützte Assemblys im globalen Assemblycache (GAC), Ihre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Wenn eine Assembly vorhanden, in ist einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR-Integration. Wenn Sie im GAC Assemblys warten oder aktualisieren, die auch in der Datenbank registriert sind, müssen Sie auch die Kopie der Assembly in den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbanken mit der `ALTER ASSEMBLY`-Anweisung warten oder aktualisieren. Dies gilt auch für nicht unterstützte .NET Framework-Assemblys. Weitere Informationen finden Sie unter [Knowledge Base-Artikel 949080](https://support.microsoft.com/kb/949080).  
   
 ## <a name="supported-libraries"></a>Unterstützte Bibliotheken  
  Beginnend mit [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] enthält eine Liste der unterstützten .NET Framework-Bibliotheken, die getestet wurden, um sicherzustellen, dass sie Zuverlässigkeit und Sicherheit für die Interaktion mit den Qualitätsstandards [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] lädt sie direkt aus dem globalen Assemblycache (GAC).  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 65153a66-3aee-4429-99b7-0816ac23c285
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b458e0707f36bde18f6128ae302c7e5826fb5680
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4fef2df598d96b33def41f27345f88226fd4c6b5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078590"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52821924"
 ---
 # <a name="databasetoconnect-element-dta"></a>DatabaseToConnect-Element (DTA)
   Gibt die erste Datenbank an, mit der der Datenbankoptimierungsratgeber beim Optimieren einer Arbeitsauslastung eine Verbindung herstellt.  
@@ -40,7 +39,7 @@ ms.locfileid: "48078590"
 |--------------------|-----------------|  
 |**Datentyp und -länge**|`string`, unbegrenzte Länge.|  
 |**Standardwert**|Keine.|  
-|**Vorkommen**|Optional. Können Sie einmal für jede `TuningOptions` Element.|  
+|**Vorkommen**|Dies ist optional. Einmalige Verwendung pro `TuningOptions`-Element möglich.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
@@ -50,7 +49,7 @@ ms.locfileid: "48078590"
 |**Untergeordnete Elemente**|None|  
   
 ## <a name="remarks"></a>Hinweise  
- Verwendung `DatabaseToConnect` den Namen der ersten Datenbank angeben möchten, Database Engine Tuning Advisor Verbindung beim Starten der optimierungssitzung. Sie können mithilfe dieses Elements nur eine Datenbank angeben. Wenn mehrere Datenbanknamen angegeben werden, gibt der Datenbankoptimierungsratgeber einen Fehler zurück.  
+ Mit `DatabaseToConnect` können Sie den Namen der ersten Datenbank angeben, mit der der Datenbankoptimierungsratgeber beim Starten der Optimierungssitzung eine Verbindung herstellen soll. Sie können mithilfe dieses Elements nur eine Datenbank angeben. Wenn mehrere Datenbanknamen angegeben werden, gibt der Datenbankoptimierungsratgeber einen Fehler zurück.  
   
 ## <a name="example"></a>Beispiel  
  Ein Beispiel für die Verwendung finden Sie unter [Beispiel für eine XML-Eingabedatei mit Inlinearbeitsauslastung &#40;DTA&#41;](xml-input-file-sample-with-inline-workload-dta.md).  

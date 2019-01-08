@@ -1,5 +1,5 @@
 ---
-title: Netzwerkeigenschaften | Microsoft-Dokumentation
+title: Analysis Services-Netzwerkeigenschaften | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a7fdeb553473c3a7ef560cce914e0c3e5612f287
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3b9bb77c5139b299a25fbd75bc30a58790ee0c30
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991602"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072357"
 ---
 # <a name="network-properties"></a>Netzwerkeigenschaften
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt die in den folgenden Tabellen aufgeführten Servereigenschaften. Weitere Informationen zu zusätzlichen Servereigenschaften und zum Festlegen dieser Eigenschaften finden Sie unter [Servereigenschaften in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
- **Gilt für:** mehrdimensionalen und Tabellenservermodus  
+ **Gilt für:** Mehrdimensionaler und tabellarischer Servermodus  
   
 ## <a name="general"></a>Allgemein  
  **ListenOnlyOnLocalConnections**  
@@ -31,7 +31,7 @@ ms.locfileid: "37991602"
  **IPV4Support**  
  Eine ganze 32-Bit-Zahl mit Vorzeichen, die die Unterstützung für das IPv4-Protokoll definiert. Diese Eigenschaft hat einen der in der folgenden Tabelle aufgeführten Werte:  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |*0*|IPv4 ist deaktiviert; Clients können keine Verbindung herstellen.|  
 |*1*|(Standard) IPv4 ist erforderlich; Server startet nicht, wenn eine Überwachung von IPv4 nicht möglich ist.|  
@@ -40,7 +40,7 @@ ms.locfileid: "37991602"
  **IPV6Support**  
  Eine ganze 32-Bit-Zahl mit Vorzeichen, die die Unterstützung für das IPv6-Protokoll definiert. Diese Eigenschaft hat einen der in der folgenden Tabelle aufgeführten Werte:  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |*0*|IPv6 ist deaktiviert; Clients können keine Verbindung herstellen.|  
 |*1*|(Standard) IPv6 ist erforderlich; Server startet nicht, wenn eine Überwachung von IPv6 nicht möglich ist.|  

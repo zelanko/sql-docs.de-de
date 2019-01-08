@@ -11,19 +11,19 @@ ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: dc6adc856477cbfb9b870c921676f1bd3470450c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2b8979b945e6f7149f14ba11d8703221adab3a5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095370"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350022"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>Anzeigen und Durchsuchen von Berichten im einheitlichen Modus mithilfe von SharePoint-Webparts (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden verschiedene Webparts bereitgestellt, die mit bestimmten Versionen eines Berichtsservers und in bestimmten Bereitstellungsmodi verwendet werden können.  
   
--   **Einheitlicher Modus:** Wenn Sie von einem Berichtsserver, der im einheitlichen Modus ausgeführt wird, auf Berichtsserverinhalte auf einer SharePoint-Website zugreifen möchten, verwenden Sie die in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]enthaltenen SharePoint 2.0-Webparts. Anweisungen zur Installation und Verwendung der 2.0-Webparts finden Sie in diesem Thema.  
+-   **Einheitlicher Modus :** Wenn Sie von einem Berichtsserver, der im einheitlichen Modus ausgeführt wird, auf Berichtsserverinhalte auf einer SharePoint-Website zugreifen möchten, verwenden Sie die in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthaltenen SharePoint 2.0-Webparts. Anweisungen zur Installation und Verwendung der 2.0-Webparts finden Sie in diesem Thema.  
   
--   **SharePoint-Modus:** Wenn Sie auf einen Berichtsserver zugreifen möchten, der im SharePoint-Modus ausgeführt wird, verwenden Sie die Webparts, die vom [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte installiert werden. Weitere Informationen zu dem Add-In finden Sie unter [Verfügbarkeit des Reporting Services-Add-Ins für SharePoint-Produkte](../install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+-   **SharePoint-Modus:** Wenn Sie auf einen Berichtsserver zugreifen möchten, der im SharePoint-Modus ausgeführt wird, verwenden Sie die Webparts, die vom [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Add-In für SharePoint-Produkte installiert werden. Weitere Informationen zu dem Add-In finden Sie unter [Verfügbarkeit des Reporting Services-Add-Ins für SharePoint-Produkte](../install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
 -   > [!NOTE]  
     >  Das Berichts-Viewer-Webpart für den einheitlichen Modus („SPViewer.dwp“) unterscheidet sich von dem Webpart („ReportViewer.dwp“), das vom [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte installiert wird. Die Webparts haben andere Schemas und Implementierungen, aber beide können in der gleichen SharePoint-Farm installiert sein. Optisch können Sie die beiden Webparts anhand des folgenden Merkmals unterscheiden: Das mit dem Add-In installierte Report Viewer-Webpart weist auf der Symbolleiste das Menü **Aktionen** auf.  
@@ -97,7 +97,7 @@ ms.locfileid: "48095370"
   
     > rswebparts.cab    00000000-0000-0000-0000-000000000000     True  
   
-     Weitere Informationen zum Verwenden von PowerShell finden Sie unter [Install-SPWebPartPack (http://technet.microsoft.com/library/ff607840.aspx)](http://technet.microsoft.com/library/ff607840.aspx) (Installieren des Install-SPWebPartPacks).  
+     Weitere Informationen zum Verwenden von PowerShell finden Sie unter [Install-SPWebPartPack (https://technet.microsoft.com/library/ff607840.aspx)](https://technet.microsoft.com/library/ff607840.aspx) (Installieren des Install-SPWebPartPacks).  
   
 #### <a name="install-web-parts-using-stsadmexe"></a>Installieren von Webparts mit STSADM.exe  
   
@@ -113,7 +113,7 @@ ms.locfileid: "48095370"
     STSADM.EXE -o addwppack -filename "C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Reporting Services\SharePoint\RSWebParts.cab" -globalinstall  
     ```  
   
-4.  Die Meldung "Der Vorgang wurde erfolgreich abgeschlossen" sollte angezeigt werden.  
+4.  Die Meldung „Operation completed successfully“ (Der Vorgang wurde erfolgreich abgeschlossen) sollte angezeigt werden.  
   
      Durch Angeben von `-globalinstall` werden die Webparts dem globalen Assemblycache (Global Assembly Cache, GAC) hinzugefügt. Dieser Schritt ist notwendig, wenn Sie eine Verbindung mit den Webparts herstellen möchten.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "48095370"
   
 7.  Geben Sie unter **Report Manager URL**eine URL zu einer Berichts-Manager-Instanz ein, die mit dem Berichtsserver im einheitlichen Modus verbunden ist, auf den Sie zugreifen möchten. In der Standardeinstellung weist die Berichts-Manager-URL die folgende Syntax auf: **http://\<Servername>/reports**.  
   
-8.  Geben Sie unter **Berichtspfad**einen Schrägstrich an, gefolgt vom Ordnerpfad und dem Berichtsnamen. Der Servername oder das virtuelle Berichts-Manager-Verzeichnis dürfen **nicht** angegeben werden. Wenn Sie z.B. den Bericht „Company Sales“ im Ordner „Adventure Works“ öffnen möchten, geben Sie **/Adventure Works/Company Sales**an. Im Folgenden wird ein weiteres Beispiel gezeigt, in dem sich der Bericht „Produkte“ im Stammordner **/Products**des Berichtsservers befindet.  
+8.  Geben Sie unter **Berichtspfad**einen Schrägstrich an, gefolgt vom Ordnerpfad und dem Berichtsnamen. Der Servername oder das virtuelle Berichts-Manager-Verzeichnis dürfen **nicht** angegeben werden. Wenn Sie z.B. den Bericht „Company Sales“ im Ordner „Adventure Works“ öffnen möchten, geben Sie **/Adventure Works/Company Sales**an. Im Folgenden wird ein weiteres Beispiel gezeigt, in dem sich der Bericht „Produkte“ im Stammordner **/Products** des Berichtsservers befindet.  
   
 9. Klicken Sie auf **OK**.  
   
@@ -168,6 +168,6 @@ ms.locfileid: "48095370"
 ## <a name="see-also"></a>Siehe auch  
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md)   
  [Reporting Services-Berichtsserver &#40;SharePoint-Modus&#41;](../reporting-services-report-server-sharepoint-mode.md)   
- [Reporting Services-Berichtsserver (einheitlicher Modus)](../report-server/reporting-services-report-server-native-mode.md)  
+ [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../report-server/reporting-services-report-server-native-mode.md)  
   
   

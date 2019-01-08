@@ -12,12 +12,12 @@ ms.assetid: cf0eb3b4-8b72-49fc-a845-95edc360cf93
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc6a5254afc715a950f2d3c63d02bfca7a1890ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f04184e968b60a58c4adfa067d516b58b0a43292
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076580"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352636"
 ---
 # <a name="fetch-and-update-rowsets-odbc"></a>Abfragen und Aktualisieren von Rowsets (ODBC)
     
@@ -25,23 +25,23 @@ ms.locfileid: "48076580"
   
 1.  Rufen Sie optional [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) mit SQL_ROW_ARRAY_SIZE so ändern Sie die Anzahl der Zeilen (R) im Rowset.  
   
-2.  Rufen Sie [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) oder [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) um ein Rowset abzurufen.  
+2.  Rufen Sie [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) oder [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) auf, um ein Rowset abzurufen.  
   
 3.  Bei der Verwendung von gebundenen Spalten verwenden Sie die Datenwerte und Datenlängen, die nun in den Puffern mit gebundenen Spalten für das Rowset verfügbar sind.  
   
-     Bei der Verwendung von ungebundenen Spalten rufen Sie für jede Zeile [SQLSetPos](http://go.microsoft.com/fwlink/?LinkId=58407) mit SQL_POSITION auf, um die Cursorposition festzulegen. Gehen Sie anschließend bei jeder ungebundenen Spalte wie folgt vor:  
+     Bei der Verwendung von ungebundenen Spalten rufen Sie für jede Zeile [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407) mit SQL_POSITION auf, um die Cursorposition festzulegen. Gehen Sie anschließend bei jeder ungebundenen Spalte wie folgt vor:  
   
-    -   Rufen Sie [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) einmal oder mehrmals zum Abrufen der Daten für ungebundene Spalten nach der letzten Spalte des Rowsets gebundenen. Aufrufe von [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) sollte in der Reihenfolge zunehmender spaltenzahlfolge sein.  
+    -   Rufen Sie [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) einmal oder mehrere Male auf, um die Daten für ungebundene Spalten nach der letzten gebundenen Spalte des Rowsets abzurufen. [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) muss in zunehmender Spaltenzahlfolge aufgerufen werden.  
   
     -   Rufen Sie [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) mehrere Male auf, um Daten aus einer text- oder image-Spalte abzurufen.  
   
 4.  Richten Sie alle Data-at-Execution-text- oder Data-at-Execution-image-Spalten ein.  
   
-5.  Rufen Sie [SQLSetPos](http://go.microsoft.com/fwlink/?LinkId=58407) oder [SQLBulkOperations](http://go.microsoft.com/fwlink/?LinkId=58398) auf, um die Cursorposition festzulegen und Zeilen im Rowset zu aktualisieren, zu löschen oder hinzuzufügen.  
+5.  Rufen Sie [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407) oder [SQLBulkOperations](https://go.microsoft.com/fwlink/?LinkId=58398) auf, um die Cursorposition festzulegen und Zeilen im Rowset zu aktualisieren, zu löschen oder hinzuzufügen.  
   
      Data-at-Execution-text- oder Data-at-Execution-image-Spalten, die zum Aktualisieren oder Hinzufügen verwendet werden, müssen verarbeitet werden.  
   
-6.  Führen Sie wahlweise eine positionierte Update- oder DELETE-Anweisung, dabei den Cursornamen angeben (verfügbar über [SQLGetCursorName](../../native-client-odbc-api/sqlgetcursorname.md)) und ein anderes Anweisungshandle für dieselbe Verbindung verwenden.  
+6.  Sie können eine positionierte UPDATE- oder DELETE-Anweisung ausführen und dabei den Cursornamen angeben (über [SQLGetCursorName](../../native-client-odbc-api/sqlgetcursorname.md)abrufbar) und für dieselbe Verbindung ein anderes Anweisungshandle verwenden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von Cursorn Gewusst-wie-Themen &#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)  

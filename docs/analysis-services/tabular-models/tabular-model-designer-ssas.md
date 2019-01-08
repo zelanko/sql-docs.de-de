@@ -1,5 +1,5 @@
 ---
-title: Designer für tabellarische Modelle in SQL Server Data Tools | Microsoft Docs
+title: Analysis Services-Tabellenmodell-Designer in SQL Server Data Tools | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 98c836650ef00b283718ddf22834f7e4d4a56e0f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8be4f1f78b444933cc1ad7f4ec4fb71b28bfae1b
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044844"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072567"
 ---
 # <a name="tabular-model-designer"></a>Designer für tabellarische Modelle
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Der Designer für tabellarische Modelle ist Bestandteil von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]und in Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]integriert. Der Designer bietet zusätzliche Projekttypvorlagen speziell für die Entwicklung von Projektmappen für professionelle tabellarische Modelle.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] wird als kostenloser Webdownload installiert. Weitere Informationen finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md).    
+Der Designer für tabellarische Modelle ist Bestandteil von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]und in Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]integriert. Der Designer bietet zusätzliche Projekttypvorlagen speziell für die Entwicklung von Projektmappen für professionelle tabellarische Modelle.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] wird als kostenloser Webdownload installiert. Weitere Informationen finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md) .    
   
 ##  <a name="bkmk_benefits"></a> Vorteile  
  Wenn Sie [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]installieren, werden den verfügbaren Projekttypen neue Projektvorlagen zum Erstellen tabellarischer Modelle hinzugefügt. Nachdem ein neues Projekt für tabellarische Modelle auf der Grundlage einer der Vorlagen erstellt wurde, können Sie mit der Erstellung von Modellen beginnen. Dazu verwenden Sie die Designer-Tools und Assistenten für tabellarische Modelle.  
@@ -42,10 +42,10 @@ Der Designer für tabellarische Modelle ist Bestandteil von [!INCLUDE[ssBIDevStu
 ##  <a name="bkmk_wind_men"></a> Fenster und Menüs  
  Die [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] -Erstellungsumgebung für tabellarische Modelle schließt Folgendes ein:  
   
-### <a name="designer-window"></a>Designerfenster  
+### <a name="designer-window"></a>Designer-Fenster  
  Das Designerfenster dient zur Erstellung tabellarischer Modelle, indem das Modell in einer visuellen Darstellung abgebildet wird. Wenn Sie die Datei Model.bim öffnen, wird das Modell im Designerfenster geöffnet. Zum Erstellen eines Modells im Designerfenster stehen zwei unterschiedliche Ansichtsmodi zur Verfügung:  
   
- **Datensicht**  
+ **Data Source view**  
  In der Datensicht werden Tabellen in einem tabellarischen Rasterformat angezeigt. Außerdem können Sie Measures mit dem Measureraster definieren, das für jede Tabelle ausschließlich in der Datensicht angezeigt werden kann.  
   
  **Diagrammansicht**  
@@ -54,7 +54,7 @@ Der Designer für tabellarische Modelle ist Bestandteil von [!INCLUDE[ssBIDevStu
  Die meisten Modellerstellungsaufgaben können in einer beliebigen Ansicht ausgeführt werden.  
   
 ### <a name="view-code-window"></a>Codefenster anzeigen  
- Sie können den Code hinter einer „Model.bim“-Datei anzeigen, indem Sie mit der rechten Maustaste auf die Datei klicken und im Projektmappen-Explorer **Code anzeigen** auswählen. Für tabellarische Modelle mit Kompatibilitätsgrad 1200 oder höher wird die Modelldefinition im JSON-Format angegeben.  
+ Sie können den Code hinter einer „Model.bim“-Datei anzeigen, indem Sie mit der rechten Maustaste auf die Datei klicken und im Projektmappen-Explorer **Code anzeigen** auswählen. Für tabellarische Modelle mit Kompatibilitätsgrad 1200 und höher wird die Modelldefinition im JSON-Format ausgedrückt.  
   
  Beachten Sie, dass Sie eine Vollversion von Visual Studio benötigen, die den JSON-Editor bereitstellt. Sie können die [kostenlose Visual Studio Community Edition](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx) herunterladen und installieren, wenn Sie die zusätzlichen Funktionen der kommerziellen Editionen nicht benötigen.  
   
@@ -66,13 +66,13 @@ Der Designer für tabellarische Modelle ist Bestandteil von [!INCLUDE[ssBIDevStu
  Klicken Sie zum Anzeigen des Projektmappen-Explorers auf das Menü **Ansicht** und anschließend auf **Projektmappen-Explorer**.  
 
 ### <a name="tabular-model-explorer"></a>Tabellenmodell-Explorer
-  Erste in der August 2016-Version (14.0.60812.0) von [SQL Server Data Tools](https://msdn.microsoft.com/mt186501), tabellarische Modell-Explorer können Sie die Metadatenobjekte in tabellarischen Modellen zu navigieren.
+  Erste in der Version von August 2016 (14.0.60812.0) verfügbaren [SQL Server Data Tools](https://msdn.microsoft.com/mt186501), tabellarischer Modell-Explorer können Sie die Metadatenobjekte in tabellarischen Modellen zu navigieren.
 
  Klicken Sie zum Anzeigen des Tabellenmodell-Explorers auf **Ansicht** > **Weitere Fenster**, und klicken Sie dann auf **Tabellenmodell-Explorer**.
    
   ![Tabellenmodell-Explorer](../../analysis-services/tabular-models/media/tabular-model-explorer.png) 
   
- Tabellarische Modell-Explorer organisiert Metadatenobjekte in einer Baumstruktur, die das Schema eines tabellarischen Modells sehr ähnlich. Datenquellen, Perspektiven, Beziehungen, Rollen, Tabellen und Übersetzungen entsprechen Schemaobjekten der obersten Ebene. Es gibt einige Ausnahmen, insbesondere die KPIs und Measures, die technisch gesehen keine Objekte der obersten Ebene, sondern untergeordnete Objekte verschiedener Tabellen im Modell sind. Wenn Container der obersten Ebene für alle KPIs und Measures konsolidiert wurden, gestaltet sich die Arbeit mit diesen Objekten jedoch einfacher, insbesondere, wenn Ihr Modell eine sehr große Anzahl von Tabellen umfasst. Measures werden auch unter ihren entsprechenden übergeordneten Tabellen aufgelistet, somit erhalten Sie eine deutliche Übersicht über die tatsächlichen Beziehungen zwischen über- und untergeordneten Elementen. Wenn Sie ein Measure im Container auf oberster Ebene auswählen, wird dasselbe Measure auch in der untergeordneten Auflistung unter seiner Tabelle ausgewählt (und umgekehrt).  
+ Tabellenmodell-Explorer organisiert Metadatenobjekte in einer Struktur, die das Schema eines tabellarischen Modells sehr ähnlich. Datenquellen, Perspektiven, Beziehungen, Rollen, Tabellen und Übersetzungen entsprechen Schemaobjekten der obersten Ebene. Es gibt einige Ausnahmen, insbesondere die KPIs und Measures, die technisch gesehen werden Objekte der obersten Ebene, sondern untergeordnete Objekte verschiedener Tabellen im Modell nicht vorhanden. Wenn Container der obersten Ebene für alle KPIs und Measures konsolidiert wurden, gestaltet sich die Arbeit mit diesen Objekten jedoch einfacher, insbesondere, wenn Ihr Modell eine sehr große Anzahl von Tabellen umfasst. Measures werden auch unter ihren entsprechenden übergeordneten Tabellen aufgelistet, somit erhalten Sie eine deutliche Übersicht über die tatsächlichen Beziehungen zwischen über- und untergeordneten Elementen. Wenn Sie ein Measure im Container auf oberster Ebene auswählen, wird dasselbe Measure auch in der untergeordneten Auflistung unter seiner Tabelle ausgewählt (und umgekehrt).  
  
  Objektknoten im Tabellenmodell-Explorer sind mit den entsprechenden Menüoptionen verknüpft, die in Visual Studio bisher in den Menüs für Modell, Tabelle und Spalte verborgen waren. Sie können mit der rechten Maustaste auf ein Objekt klicken, um Optionen für den Objekttyp anzuzeigen. Es besitzen noch nicht alle Objektknotentypen ein Kontextmenü, aber in künftigen Versionen werden zusätzliche Optionen und Verbesserungen hinzugefügt. 
 
@@ -85,7 +85,7 @@ Der Designer für tabellarische Modelle ist Bestandteil von [!INCLUDE[ssBIDevStu
   
 -   Tabelle  
   
--   Column  
+-   Spalte  
   
 -   Measure  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.objectdependencies.f1
@@ -12,12 +12,12 @@ ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 188b3400308c540050793787ced03d69e79ca50c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7f0cf758123331dae9f3a3132bdc81880b7ce6a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090190"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823264"
 ---
 # <a name="object-dependencies"></a>Objektabhängigkeiten
   Bestimmte Datenbankobjekte sind von anderen Datenbankobjekten abhängig. Sichten und gespeicherte Prozeduren sind beispielsweise vom Vorhandensein von Tabellen abhängig, die die von der Sicht oder der Prozedur zurückgegebenen Daten enthalten. Auf der Seite „Allgemein“ des Dialogfelds **Objektabhängigkeiten** für das aktuelle Objekt sind sowohl die Datenbankobjekte aufgeführt, die für die ordnungsgemäße Funktion des Objekts vorhanden sein müssen, als auch die Objekte, die vom ausgewählten Objekt abhängig sind. Ein Objekt, das in seiner im Systemkatalog gespeicherten Definition auf ein anderes Objekt verweist, wird als *verweisende Entität*bezeichnet. Ein Objekt, auf das von einem anderen Objekt verwiesen wird, wird als *Entität, auf die verwiesen wird*bezeichnet.  
@@ -27,10 +27,10 @@ ms.locfileid: "48090190"
  Mithilfe dieses Dialogfelds können Sie sich einen Überblick über die Abhängigkeiten verschaffen, bevor Sie das ausgewählte Objekt ändern oder löschen.  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
- **Objekte, abhängig***\<ausgewähltes Objekt >*   
+ **Objekte, abhängig***\<ausgewähltes Objekt >*  
  Durch Klicken auf diese Schaltfläche wird eine Liste der Objekte angezeigt, deren Abhängigkeiten nachverfolgt werden und die vom ausgewählten Objekt abhängig sind.  
   
- **Objekte, von denen***\<ausgewähltes Objekt >***abhängt**   
+ **Objekte, von denen***\<ausgewähltes Objekt >***abhängt**  
  Durch Klicken auf diese Schaltfläche wird eine Liste der Objekte angezeigt, deren Abhängigkeiten nachverfolgt werden und von denen das ausgewählte Objekt abhängig ist.  
   
  **Abhängigkeiten**  

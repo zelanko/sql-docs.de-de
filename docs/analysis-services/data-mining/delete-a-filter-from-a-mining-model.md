@@ -1,5 +1,5 @@
 ---
-title: Löschen eines Filters aus einem Miningmodell | Microsoft Docs
+title: Löschen eines Filters aus einem Miningmodell | Microsoft-Dokumentation
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fb3897d851c398b9703bf9514fc36cf30922727d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 66293cf1be2ced3106e2966a930639c12330a660
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014397"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545663"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>Löschen eines Filters aus einem Miningmodell
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "34014397"
   
 3.  Wählen Sie das Modell aus, und klicken Sie mit der rechten Maustaste, um das Kontextmenü zu öffnen.  
   
-     – Oder –  
+     -oder-  
   
      Wählen Sie das Modell aus. Wählen Sie im Menü **Miningmodell** die Option **Modellfilter festlegen**aus.  
   
@@ -57,8 +57,8 @@ ms.locfileid: "34014397"
 3.  Drücken Sie die Rücktaste oder die Taste ENTF.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Drillthrough zu Falldaten aus einem Miningmodell](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)   
- [Miningmodelltasks und Anweisungen Mining](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [Filter für Miningmodelle & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [Ausführen von Drillthroughs für Falldaten aus einem Miningmodell](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)   
+ [Miningmodelltasks und Anweisungen](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Filter für Miningmodelle &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzylookuptrans.f1
@@ -31,18 +30,18 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 53385dd40fa0b180fcc6994832faf5feffcdd8f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a09abfe2d5370e9564dd3d081346c022cb2ca0d7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106396"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361962"
 ---
 # <a name="fuzzy-lookup-transformation"></a>Transformation für Fuzzysuche
   Die Transformation für Fuzzysuche führt Aufgaben zum Datencleanup durch, wie das Standardisieren von Daten, das Korrigieren von Daten und das Bereitstellen fehlender Werte.  
   
 > [!NOTE]  
->  Ausführliche Informationen über die Transformationen für Fuzzysuche wie Leistungs- und Speicherbeschränkungen finden Sie im Whitepaper [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604)(Fuzzysuche und Fuzzygruppierung in SQL Server Integration Services 2005).  
+>  Ausführliche Informationen über die Transformationen für Fuzzysuche wie Leistungs- und Speicherbeschränkungen finden Sie im Whitepaper [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)(Fuzzysuche und Fuzzygruppierung in SQL Server Integration Services 2005).  
   
  Die Transformation für Fuzzysuche weicht in ihrer Verwendung der Fuzzyübereinstimmung von der Transformation für Suche ab. Die Transformation für Suche verwendet einen Gleichheitsjoin zum Suchen von übereinstimmenden Datensätzen in der Verweistabelle. Sie gibt Datensätze mit mindestens einem übereinstimmendem Datensatz Datensätze ohne übereinstimmende Datensätze zurück. Im Gegensatz dazu verwendet die Transformation für Fuzzysuche die Fuzzyübereinstimmung, um mindestens eine nahe Übereinstimmung in der Verweistabelle zurückzugeben.  
   
@@ -120,18 +119,18 @@ ms.locfileid: "48106396"
 ## <a name="temporary-tables-and-indexes"></a>Temporäre Tabellen und Indizes  
  Zur Laufzeit erstellt die Transformation für Fuzzysuche temporäre Objekte, z. B. Tabellen und Indizes, in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank, mit der die Transformation eine Verbindung herstellt. Die Größe dieser temporären Tabellen und Indizes ist proportional zur Anzahl der Zeilen und Token in der Verweistabelle und zur Anzahl der Token, die von der Transformation für Fuzzysuche erstellt werden; deshalb können sie möglicherweise einen großen Teil des Speicherplatzes belegen. Die Transformation fragt auch diese temporären Tabellen ab. Deshalb sollten Sie in Erwägung ziehen, die Transformation für Fuzzysuche eine Verbindung mit einer Nichtproduktionsinstanz einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank herstellen zu lassen, insbesondere wenn auf dem Produktionsserver nur eingeschränkt Speicherplatz verfügbar ist.  
   
- Die Leistung dieser Transformation kann verbessert werden, wenn sich die dabei verwendeten Tabellen und Indizes auf dem lokalen Computer befinden. Wenn sich die Verweistabelle, die von der Transformation für Fuzzysuche verwendet wird, auf dem Produktionsserver befindet, sollten Sie die Tabelle auf einen Nichtproduktionsserver kopieren und die Transformation für Fuzzysuche für den Zugriff auf die Kopie konfigurieren. So können Sie verhindern, dass die Suchabfragen Ressourcen auf dem Produktionsserver verbrauchen. Wenn die Transformation für Fuzzysuche den Übereinstimmungsindex verwaltet, d.h., wenn MatchIndexOption auf **GenerateAndMaintainNewIndex**festgelegt ist, sperrt die Transformation eventuell überdies die Verweistabelle für die Dauer des Datencleanupvorgangs und verhindert, dass andere Benutzer und Anwendungen auf die Tabelle zugreifen.  
+ Die Leistung dieser Transformation kann verbessert werden, wenn sich die dabei verwendeten Tabellen und Indizes auf dem lokalen Computer befinden. Wenn sich die Verweistabelle, die von der Transformation für Fuzzysuche verwendet wird, auf dem Produktionsserver befindet, sollten Sie die Tabelle auf einen Nichtproduktionsserver kopieren und die Transformation für Fuzzysuche für den Zugriff auf die Kopie konfigurieren. So können Sie verhindern, dass die Suchabfragen Ressourcen auf dem Produktionsserver verbrauchen. Wenn die Transformation für Fuzzysuche den Übereinstimmungsindex verwaltet, d.h., wenn MatchIndexOption auf **GenerateAndMaintainNewIndex** festgelegt ist, sperrt die Transformation eventuell überdies die Verweistabelle für die Dauer des Datencleanupvorgangs und verhindert, dass andere Benutzer und Anwendungen auf die Tabelle zugreifen.  
   
 ## <a name="configuring-the-fuzzy-lookup-transformation"></a>Konfigurieren der Transformation für Fuzzysuche  
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Transformations-Editor für Fuzzysuche** festlegen können:  
   
--   [Transformations-Editor für Fuzzysuche &#40;verweisen auf die Registerkarte "Tabelle"&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
+-   [Transformations-Editor für Fuzzysuche &#40;Registerkarte „Verweistabelle“&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
   
--   [Transformations-Editor für Fuzzysuche &#40;Registerkarte "Spalten"&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
+-   [Transformations-Editor für Fuzzysuche &#40;Registerkarte Spalten&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
   
--   [Transformations-Editor für Fuzzysuche &#40;Registerkarte "Erweitert"&#41;](../../fuzzy-lookup-transformation-editor-advanced-tab.md)  
+-   [Transformations-Editor für Fuzzysuche &#40;Registerkarte Erweitert&#41;](../../fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   

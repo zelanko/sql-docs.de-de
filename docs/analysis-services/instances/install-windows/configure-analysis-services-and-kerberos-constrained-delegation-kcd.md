@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren von Analysis Services und eingeschränkte Kerberos-Delegierung (KCD) | Microsoft Docs
+title: Konfigurieren von Analysis Services und eingeschränkte Kerberos-Delegierung (KCD) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: be9fde53d440ff82a34fafce3230cdfbf85f2897
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: cc8c2ee84c8210adc3a52d81deff5edf6d3f542f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019247"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811152"
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>Konfigurieren von Analysis Services und der eingeschränkten Kerberos-Delegierung
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -25,15 +25,15 @@ ms.locfileid: "34019247"
   
  In den Abschnitten in diesem Thema werden gängige Szenarien mit [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] und [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] überprüft, bei denen die KCD erforderlich ist. Außerdem finden Sie ein Beispiel einer Serverbereitstellung samt einer allgemeinen Übersicht über alle Elemente, die Sie installieren und konfigurieren müssen. Im Abschnitt [Weitere Informationen und Community-Inhalte](#bkmk_moreinfo) finden Sie Links zu detaillierten Informationen zu den beteiligten Technologien, wie z.B. Domänencontroller und KCD.  
   
-## <a name="scenario-1-workbook-as-data-source-wds"></a>Szenario 1: Arbeitsmappe als Datenquelle  
- ![finden Sie unter 1](../../../analysis-services/instances/install-windows/media/ssas-callout1.png "finden Sie unter 1") Office Online Server öffnet eine Excel-Arbeitsmappe und ![finden Sie unter 2](../../../analysis-services/instances/install-windows/media/ssas-callout2.png "finden Sie unter 2") erkennt eine Datenverbindung mit einer anderen Arbeitsmappe. Office Online Server sendet eine Anforderung an die [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Redirectordienst ![finden Sie unter 3](../../../analysis-services/instances/install-windows/media/ssas-callout3.png "finden Sie unter 3") zum Öffnen der zweiten Arbeitsmappe und die Daten ![finden Sie in 4](../../../analysis-services/instances/install-windows/media/ssas-callout4.png "finden Sie in 4 ").  
+## <a name="scenario-1-workbook-as-data-source-wds"></a>Szenario 1: Die Arbeitsmappe als Datenquelle (WDS).  
+ ![finden Sie unter 1](../../../analysis-services/instances/install-windows/media/ssas-callout1.png "finden Sie unter 1") Office Online Server öffnet eine Excel-Arbeitsmappe und ![finden Sie unter 2](../../../analysis-services/instances/install-windows/media/ssas-callout2.png "finden Sie unter 2") erkennt eine Datenverbindung mit einer anderen Arbeitsmappe. Office Online Server sendet eine Anforderung an die [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Redirectordienst ![finden Sie unter 3](../../../analysis-services/instances/install-windows/media/ssas-callout3.png "finden Sie unter 3") zum Öffnen der zweiten Arbeitsmappe und die Daten ![finden Sie unter 4](../../../analysis-services/instances/install-windows/media/ssas-callout4.png "finden Sie unter 4 ").  
   
  In diesem Szenario müssen Anmeldeinformationen des Benutzers von Office Online Server an den SharePoint [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Redirectordienst in SharePoint delegiert werden.  
   
  ![die Arbeitsmappe als Datenquelle](../../../analysis-services/instances/install-windows/media/ssas-kcd-wtih-wds.png "Arbeitsmappe als Datenquelle")  
   
-## <a name="scenario-2-an-analysis-services-tabular-model-links-to-an-excel-workbook"></a>Szenario 2: Tabellarisches Analysis Services-Modell mit Verbindung mit Excel-Arbeitsmappe  
- Ein tabellarisches Analysis Services-Modell ![finden Sie unter 1](../../../analysis-services/instances/install-windows/media/ssas-callout1.png "finden Sie unter 1") Links zu einer Excel-Arbeitsmappe, die ein Power Pivot-Modell enthält. Wenn [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in diesem Szenario das tabellarische Modell lädt, erkennt [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] die Verbindung mit der Arbeitsmappe. Bei Verarbeitung des Modells sendet [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] eine Abfrageanforderung an SharePoint, um die Arbeitsmappe zu laden. In diesem Szenario müssen Clientanmeldeinformationen **nicht** von Analysis Services an SharePoint delegiert werden. Eine Clientanwendung kann jedoch die Datenquelleninformationen in einer Out-of-Line-Bindung überschreiben. Wenn die Out-of-Line-Bindungsanforderung angibt, dass die Identität des aktuellen Benutzers angenommen werden soll, müssen die Anmeldeinformationen des Benutzers delegiert werden, wofür die KCD zwischen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] und SharePoint konfiguriert werden muss.  
+## <a name="scenario-2-an-analysis-services-tabular-model-links-to-an-excel-workbook"></a>Szenario 2: Eine tabellarische Analysis Services-Modell mit Verbindung mit einer Excel-Arbeitsmappe  
+ Eine Analysis Services-Tabellenmodells ![finden Sie unter 1](../../../analysis-services/instances/install-windows/media/ssas-callout1.png "finden Sie unter 1") Links zu einer Excel-Arbeitsmappe ein Power Pivot-Modell enthält. Wenn [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in diesem Szenario das tabellarische Modell lädt, erkennt [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] die Verbindung mit der Arbeitsmappe. Bei Verarbeitung des Modells sendet [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] eine Abfrageanforderung an SharePoint, um die Arbeitsmappe zu laden. In diesem Szenario müssen Clientanmeldeinformationen **nicht** von Analysis Services an SharePoint delegiert werden. Eine Clientanwendung kann jedoch die Datenquelleninformationen in einer Out-of-Line-Bindung überschreiben. Wenn die Out-of-Line-Bindungsanforderung angibt, dass die Identität des aktuellen Benutzers angenommen werden soll, müssen die Anmeldeinformationen des Benutzers delegiert werden, wofür die KCD zwischen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] und SharePoint konfiguriert werden muss.  
   
  ![office online server](../../../analysis-services/instances/install-windows/media/ssas-kcd-wtih-oos.png "office online server")  
   
@@ -59,7 +59,7 @@ ms.locfileid: "34019247"
   
 -   **Feature:** .NET Framework 3.5-Funktionen /.NET Framework 3.5  
   
--   **Feature:** Remoteserver-Verwaltungstools/Rollenverwaltungstools  
+-   **Feature:** Remoteserver-Verwaltungstools / Rollenverwaltungstools  
   
 -   Konfigurieren Sie Active Directory so, dass eine neue Gesamtstruktur erstellt wird und die Computer der Domäne beitreten. Bevor Sie versuchen, weitere Computer der privaten Domäne hinzuzufügen, müssen Sie das DNS der Clientcomputer mit der IP-Adresse des Domänencontrollers konfigurieren. Führen Sie auf dem Domänencontroller `ipconfig /all` aus, um die IPv4- und IPv6-Adressen für den nächsten Schritt abzurufen.  
   
@@ -92,15 +92,15 @@ ms.locfileid: "34019247"
 ### <a name="2016-sql-server-database-engine-and-analysis-services-in-power-pivot-mode"></a>SQL Server 2016-Datenbank-Engine und Analysis Services im Power Pivot-Modus  
  Es folgt eine Übersicht der auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Computer zu installierenden Elemente.  
   
- ![Hinweis](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Hinweis") In der [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Setup-Assistenten [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in Power Pivot-Modus als Teil des Feature Selection Workflows installiert ist.  
+ ![Beachten Sie](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Hinweis") In die [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Setup-Assistenten [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in Power Pivot-Modus als Teil des Workflows der Feature-Selection installiert ist.  
   
 1.  Führen Sie den Setup-Assistenten von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aus, und klicken Sie auf der Seite zur Auswahl von Funktionen auf die Datenbank-Engine ( [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]) und die Verwaltungstools. Bei einem späteren Setup können Sie für den Setup-Assistenten den [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Modus für [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]angeben.  
   
-2.  Konfigurieren Sie für die Instanzkonfiguration eine benannte Instanz von „POWERPIVOT“.  
+2.  Konfigurieren Sie für die Instanzkonfiguration eine benannte Instanz von "POWERPIVOT" ein.  
   
 3.  Konfigurieren Sie auf der Seite „Analysis Services-Konfiguration“ den Analysis Services-Server für den **Power Pivot** -Modus, und fügen Sie den **Computernamen** von Office Online Server zur Liste der Analysis Services-Serveradministratoren hinzu. Weitere Informationen finden Sie unter [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
-4.  Beachten Sie, dass der Objekttyp „Computer“ nicht standardmäßig in der Suche enthalten ist. Klicken Sie auf ![klicken Sie auf die Objekte zum Hinzufügen von Konto "Computer"](../../../analysis-services/instances/install-windows/media/ss-objects-button.png "klicken Sie auf die Objekte zum Hinzufügen von Konto \"Computer\"") zum Hinzufügen der Computer-Objekts.  
+4.  Beachten Sie in der Standardeinstellung, die der Objekttyp "Computer" in der Suche nicht enthalten ist. Klicken Sie auf ![klicken Sie auf die Objekte zum Hinzufügen des Computerkontos](../../../analysis-services/instances/install-windows/media/ss-objects-button.png "klicken Sie auf die Objekte zum Hinzufügen des Computerkontos") zum Hinzufügen des Computer-Objekts.  
   
      ![Hinzufügen von Computerkonten als Administratoren von Ssas](../../../analysis-services/instances/media/ssas-in-ssms-computerobjects.png "Hinzufügen von Computerkonten als Administratoren von Ssas")  
   
@@ -131,7 +131,7 @@ ms.locfileid: "34019247"
   
 7.  **Konfigurieren Sie Einstellungen für die eingeschränkte Delegierung** für das Analysis Services-Dienstkonto für jede externe Datenquelle, die Sie aktualisieren, z.B. SQL Server oder Excel-Dateien. Für das Analysis Services-Dienstkonto sollte Folgendes festgelegt sein.  
   
-     **Hinweis:** Wenn die Registerkarte „Delegierung“ in Active Directory-Benutzer und-Computer nicht für das Konto angezeigt wird, liegt das daran, dass für dieses Konto kein SPN vorhanden ist.  Sie können einen gefälschten SPN wie z.B. `my/spn`hinzufügen, damit sie angezeigt wird.  
+     **Hinweis**: Wenn Sie die Registerkarte "Delegierung" für das Konto in Active Directory-Benutzer und -Computer nicht angezeigt werden, ist es, da für dieses Konto kein SPN vorhanden ist.  Sie können einen gefälschten SPN wie z.B. `my/spn`hinzufügen, damit sie angezeigt wird.  
   
      **Benutzer bei Delegierungen angegebener Dienste vertrauen** und **Beliebiges Authentifizierungsprotokoll verwenden**.  
   
@@ -149,11 +149,11 @@ ms.locfileid: "34019247"
   
     1.  Öffnen Sie auf dem Office Online Server ein PowerShell-Fenster mit Administratorrechten, und führen Sie den folgenden Befehl aus:  
   
-    2.  `New-OfficeWebAppsExcelBIServer –ServerId <AS instance name>`  
+    2.  `New-OfficeWebAppsExcelBIServer -ServerId <AS instance name>`  
   
-    3.  Beispiel: `New-OfficeWebAppsExcelBIServer –ServerId "MTGQLSERVER-13\POWERPIVOT"`  
+    3.  Beispiel: `New-OfficeWebAppsExcelBIServer -ServerId "MTGQLSERVER-13\POWERPIVOT"`  
   
-3.  **Konfigurieren Sie Active Directory so** , dass das Office Online Server-Computerkonto die Identität von Benutzern für das SharePoint-Dienstkonto annehmen kann. Legen Sie daher die Delegierungseigenschaft für den Prinzipal, der den Anwendungspool für SharePoint-Webdienste ausführt, auf den Office Online Server fest. Die PowerShell-Befehle in diesem Abschnitt erfordern die Active Directory PowerShell-Objekte.  
+3.  **Konfigurieren Sie Active Directory so** , dass das Office Online Server-Computerkonto die Identität von Benutzern für das SharePoint-Dienstkonto annehmen kann. Legen Sie also delegierungseigenschaft für den Dienstprinzipal der Anwendungspool für SharePoint-Webdienste auf dem Office Online Server ausgeführt: Die PowerShell-Befehle in diesem Abschnitt erfordern die Active Directory (AD)-PowerShell-Objekte.  
   
     1.  Abrufen der Active Directory-Identität von Office Online Server  
   
@@ -161,7 +161,7 @@ ms.locfileid: "34019247"
         $computer1 = Get-ADComputer -Identity [ComputerName]  
         ```  
   
-         Bestimmen Sie diesen Prinzipalnamen, indem Sie im Task-Manager unter „Details > Benutzername von W3wp.exe“ nachsehen. Beispiel: SvcSharePoint  
+         Bestimmen Sie diesen Prinzipalnamen, indem Sie im Task-Manager unter „Details > Benutzername von W3wp.exe“ nachsehen. Z. B. "SvcSharePoint"  
   
         ```  
         Set-ADUser svcSharePoint -PrincipalsAllowedToDelegateToAccount $computer1  
@@ -171,12 +171,12 @@ ms.locfileid: "34019247"
     2.  So überprüfen Sie, ob die Eigenschaft ordnungsgemäß festgelegt wurde  
   
     3.  ```  
-        Get-ADUser svcSharePoint –Properties PrincipalsAllowedToDelegateToAccount  
+        Get-ADUser svcSharePoint -Properties PrincipalsAllowedToDelegateToAccount  
         ```  
   
 4.  **Konfigurieren Sie die Einstellungen für die eingeschränkte Delegierung** für das Office Online Server-Konto für die Analysis Services-Power Pivot-Instanz. Dies sollte das Computerkonto sein, unter dem Office Online Server ausgeführt wird. Für das Office Online Server-Dienstkonto sollte Folgendes festgelegt sein.  
   
-     **Hinweis:** Wenn die Registerkarte „Delegierung“ in Active Directory-Benutzer und-Computer nicht für das Konto angezeigt wird, liegt das daran, dass für dieses Konto kein SPN vorhanden ist.  Sie können einen gefälschten SPN wie z.B. `my/spn`hinzufügen, damit sie angezeigt wird.  
+     **Hinweis**: Wenn Sie die Registerkarte "Delegierung" für das Konto in Active Directory-Benutzer und -Computer nicht angezeigt werden, ist es, da für dieses Konto kein SPN vorhanden ist.  Sie können einen gefälschten SPN wie z.B. `my/spn`hinzufügen, damit sie angezeigt wird.  
   
      **Benutzer bei Delegierungen angegebener Dienste vertrauen** und **Beliebiges Authentifizierungsprotokoll verwenden**.  
   
@@ -195,11 +195,11 @@ ms.locfileid: "34019247"
   
 2.  Führen Sie die SharePoint-Installation aus, und wählen Sie die Setuprolle **Einzelne Serverfarm** .  
   
-3.  Führen Sie das Power Pivot für SharePoint-Add-In (spPowerPivot16.msi) aus. Weitere Informationen finden Sie unter [installieren oder Deinstallieren des PowerPivot für SharePoint-Add-in (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)  
+3.  Führen Sie das Power Pivot für SharePoint-Add-In (spPowerPivot16.msi) aus. Weitere Informationen finden Sie unter [installieren oder Deinstallieren des Power Pivot für SharePoint-Add-in (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)  
   
 4.  Führen Sie den Power Pivot-Konfigurations-Assistenten aus. Weitere Informationen finden Sie unter [PowerPivot-Konfigurationstools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   
-5.  Verbinden Sie SharePoint mit Office Online Server.    ?? Configure_xlwac_on_SPO.ps1?  
+5. Verbinden Sie SharePoint mit dem Office Online Server an. (Configure_xlwac_on_SPO.ps1)
   
 6.  Konfigurieren Sie SharePoint-Authentifizierungsanbieter für Kerberos. **Dies ist für Szenario 1 erforderlich**. Weitere Informationen finden Sie unter [Planen der Kerberos-Authentifizierung in SharePoint 2013](https://technet.microsoft.com/library/ee806870.aspx).  
   

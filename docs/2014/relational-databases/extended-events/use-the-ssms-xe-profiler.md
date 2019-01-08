@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server], system health session
@@ -16,12 +15,12 @@ ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: e42fca332cf488d9a88494bb3e0eb11eca413965
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6ea2e46b38919ae72ea70440523d75517e6efa92
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151250"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804142"
 ---
 # <a name="use-the-systemhealth-session"></a>Verwenden der system_health-Sitzung
   Bei der system_health-Sitzung handelt es sich um eine standardmäßig in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]enthaltene Sitzung für erweiterte Ereignisse. Diese Sitzung wird automatisch beim Start von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] gestartet und ohne merkliche Auswirkungen auf die Leistung ausgeführt. In der Sitzung werden Systemdaten erfasst, mit deren Hilfe Sie Leistungsprobleme in [!INCLUDE[ssDE](../../includes/ssde-md.md)]beheben können. Daher empfiehlt es sich, die Sitzung nicht zu beenden oder zu löschen.  
@@ -66,7 +65,7 @@ ON (xe.address = xet.event_session_address)
 WHERE xe.name = 'system_health'  
 ```  
   
- Um die Sitzungsdaten aus der Ereignisdatei anzuzeigen, verwenden Sie die in Management Studio verfügbare Benutzeroberfläche für erweiterte Ereignisse. Finden Sie unter [View Event Session Data](../../database-engine/view-event-session-data.md) für Weitere Informationen.  
+ Um die Sitzungsdaten aus der Ereignisdatei anzuzeigen, verwenden Sie die in Management Studio verfügbare Benutzeroberfläche für erweiterte Ereignisse. Weitere Informationen finden Sie unter [View Event Session Data](../../database-engine/view-event-session-data.md) .  
   
 ## <a name="restoring-the-systemhealth-session"></a>Wiederherstellen der system_health-Sitzung  
  Wenn Sie die system_health-Sitzung gelöscht haben, können Sie diese wiederherstellen, indem Sie die Datei **u_tables.sql** im Abfrage-Editor ausführen. Diese Datei befindet sich im folgenden Ordner, wobei C: dem Laufwerk entspricht, auf dem Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Programmdateien installiert haben:  

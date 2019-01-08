@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_articlefilter_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 4c3fee32-a43f-4757-a029-30aef4696afb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 98bafb6441b29bef41f7a2fffefac38a8ce9048a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0869cfb6914766e2ab43e138831e2992aa6977b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633418"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209199"
 ---
 # <a name="sparticlefilter-transact-sql"></a>sp_articlefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,19 +44,19 @@ sp_articlefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **"**_Veröffentlichung_**"**  
  Der Name der Veröffentlichung, die den Artikel enthält. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@article=**] **"***Artikel***"**  
+ [  **@article=**] **"**_Artikel_**"**  
  Der Name des Artikels. *Artikel* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@filter_name=**] **"***Filter_name***"**  
+ [  **@filter_name=**] **"**_Filter_name_**"**  
  Der Name der gespeicherten Filterprozedur aus erstellt werden die *Filter_name*. *Filter_name* ist **nvarchar(386)**, hat den Standardwert NULL. Sie müssen einen eindeutigen Namen für den Artikelfilter angeben.  
   
- [  **@filter_clause=**] **"***Filter_clause***"**  
+ [  **@filter_clause=**] **"**_Filter_clause_**"**  
  Eine Einschränkungsklausel (WHERE), die einen horizontalen Filter definiert. Wenn Sie die Einschränkungsklausel eingeben, lassen Sie das Schlüsselwort, in dem. *Filter_clause* ist **Ntext**, hat den Standardwert NULL.  
   
- [  **@force_invalidate_snapshot =** ] *Force_invalidate_snapshot*  
+ [ **@force_invalidate_snapshot =** ] *Force_invalidate_snapshot*  
  Bestätigt, dass durch die von dieser gespeicherten Prozedur ausgeführte Aktion möglicherweise eine vorhandene Momentaufnahme ungültig wird. *Force_invalidate_snapshot* ist eine **Bit**, hat den Standardwert **0**.  
   
  **0** gibt an, dass Änderungen am Artikel bewirken nicht, die Momentaufnahme ungültig wird. Wenn die gespeicherte Prozedur erkennt, dass die Änderungen eine neue Momentaufnahme erfordern, tritt ein Fehler auf und es werden keine Änderungen vorgenommen.  
@@ -71,8 +70,8 @@ sp_articlefilter [ @publication = ] 'publication'
   
  **1** gibt an, dass Änderungen am Artikel bewirkt, dass vorhandene Abonnements erneut initialisiert werden, und erteilt die Berechtigung für die Initialisierung des Abonnements erfolgen.  
   
- [  **@publisher=** ] **"***Verleger***"**  
- Gibt einen nicht-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
+ [  **@publisher=** ] **"**_Verleger_**"**  
+ Gibt einen nicht- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  *Publisher* sollte nicht verwendet werden, mit einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger.  

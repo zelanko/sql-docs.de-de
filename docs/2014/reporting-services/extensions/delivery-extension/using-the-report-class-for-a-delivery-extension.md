@@ -15,12 +15,12 @@ ms.assetid: 1145ac63-eafd-452a-82af-16f85b1676dd
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 693c0c18b4ffb2f3ab5209c0133588997c11d539
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23aaec0ff8130ec246bb99ea63ef16dc7a5b106b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159570"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361752"
 ---
 # <a name="using-the-report-class-for-a-delivery-extension"></a>Verwenden der Report-Klasse für eine Übermittlungserweiterung
   Die <xref:Microsoft.ReportingServices.Interfaces.Report>-Klasse stellt einen Bericht in der Berichtsserver-Datenbank dar. Jedes Abonnement wird einem bestimmten Bericht zugeordnet. Der Bericht ist in der Benachrichtigung enthalten. Die Übermittlungserweiterung kann das <xref:Microsoft.ReportingServices.Interfaces.Report>-Objekt verwenden, das Bestandteil der Benachrichtigung zum Rendern des Berichts ist. Das <xref:Microsoft.ReportingServices.Interfaces.Report>-Objekt enthält auch berichtsspezifische Eigenschaften, wie die URL zum Bericht auf dem Server und den Namen des Berichts. Diese Eigenschaften können alle als Teil des Übermittlungsanbieters verwendet werden.  
@@ -29,7 +29,7 @@ ms.locfileid: "48159570"
   
  Das <xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile>-Objekt, das den Berichtsdatenstrom enthält, kann als Teil einer Übermittlung enthalten sein.  
   
- Ein Beispiel zur Verwendungsweise der <xref:Microsoft.ReportingServices.Interfaces.Report>-Klasse finden Sie unter [SQL Server Reporting Services-Produktbeispiele](http://go.microsoft.com/fwlink/?LinkId=177889)  
+ Ein Beispiel zur Verwendungsweise der <xref:Microsoft.ReportingServices.Interfaces.Report>-Klasse finden Sie unter [SQL Server Reporting Services-Produktbeispiele](https://go.microsoft.com/fwlink/?LinkId=177889)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Implementieren von Übermittlungserweiterungen](implementing-a-delivery-extension.md)   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Database Tools [SQL Server], international data
@@ -22,12 +22,12 @@ ms.assetid: 4b51c56f-f902-4e72-b919-e36127369b63
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 258a3bb5ea5cc113dcb27215444fcaa064651ef2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 673ad13ff5688fb17eaa4b975644256f072a3aef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146350"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52809502"
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>Verwenden des Abfrage- und Sicht-Designers bei internationalen Daten (Visual Database Tools)
   Sie können den [Abfrage- und Sicht-Designer](visual-database-tools.md) mit Daten in jeder Sprache und mit jeder Version des Betriebssystems Windows verwenden. In den folgenden Richtlinien werden die Unterschiede erläutert und Informationen zur Datenverwaltung in internationalen Anwendungen bereitgestellt.  

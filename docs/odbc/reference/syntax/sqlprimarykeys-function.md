@@ -20,16 +20,16 @@ ms.assetid: 3f809b09-3c1b-415e-80c5-a603e8e25d5b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6e041c4152a2f2b02a57164dbe43d62ae54d09d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37d6bdb61e23c3a48b54aa7d0e6488122486ffe5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619708"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205264"
 ---
 # <a name="sqlprimarykeys-function"></a>SQLPrimaryKeys-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC-1.0-Standards-Compliance: ODBC  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: ODBC  
   
  **Zusammenfassung**  
  **SQLPrimaryKeys** gibt den Namen der Spalten, aus denen der primäre für eine Tabelle Schlüssel. Der Treiber gibt zurück, die Informationen als Resultset. Diese Funktion unterstützt nicht die Primärschlüssel aus mehreren Tabellen in einem einzigen Aufruf zurückgeben.  

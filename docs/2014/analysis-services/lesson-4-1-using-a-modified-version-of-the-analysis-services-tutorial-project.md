@@ -11,12 +11,12 @@ ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 70b4a8bedc86023c9eaf1304e61573c4840a62bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 763b1170ad0201c737e06e19c3dac8d58c6712ee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194710"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368882"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Verwenden einer geänderten Version des Analysis Services Tutorial-Projekts
   Die verbleibenden Lektionen in diesem Lernprogramm basieren auf einer erweiterten Version des [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Projekts, das Sie in den ersten drei Lektionen abgeschlossen haben. Zusätzliche Tabellen und benannte Berechnungen wurden der **Adventure Works DW 2012** -Datenquellensicht hinzugefügt, zusätzliche Dimensionen wurden dem Projekt hinzugefügt, und diese neuen Dimensionen wurden dem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube hinzugefügt. Außerdem wurde eine zweite Measuregruppe, die Measures aus einer zweiten Faktentabelle enthält, hinzugefügt. Mithilfe dieses erweiterten Projekts können Sie lernen, wie Sie Ihrer Business Intelligence-Anwendung Funktionalität hinzufügen können, ohne dass Sie bereits durchgeführte Lernschritte wiederholen müssen.  
@@ -25,7 +25,7 @@ ms.locfileid: "48194710"
   
 ## <a name="downloading-and-extracting-the-project-file"></a>Herunterladen und Extrahieren der Projektdatei  
   
-1.  [Klicken Sie hier](http://go.microsoft.com/fwlink/?LinkID=221866) , um die Downloadseite mit Beispielprojekten für dieses Lernprogramm aufzurufen. Die Lernprogrammprojekte sind im Download **Analysis Services Tutorial SQL Server 2012** enthalten.  
+1.  [Klicken Sie hier](https://go.microsoft.com/fwlink/?LinkID=221866) , um die Downloadseite mit Beispielprojekten für dieses Lernprogramm aufzurufen. Die Lernprogrammprojekte sind im Download **Analysis Services Tutorial SQL Server 2012** enthalten.  
   
 2.  Klicken Sie auf **Analysis Services Tutorial SQL Server 2012** , um das Paket herunterzuladen, in dem die Projekte für dieses Lernprogramm enthalten sind.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48194710"
   
 ## <a name="loading-and-processing-the-enhanced-project"></a>Laden und Verarbeiten des erweiterten Projekts  
   
-1.  Klicken Sie in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]im Menü **Datei** auf **Projektmappe schließen** , um nicht benötigte Dateien zu schließen.  
+1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf die **Datei** Menü klicken Sie auf **Projektmappe schließen** , Dateien zu schließen, nicht verwendet.  
   
 2.  Zeigen Sie im Menü **Datei** auf **Öffnen**, und klicken Sie anschließend auf **Projekt/Projektmappe**.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48194710"
   
 -   **Geography**  
   
--   **Customer**  
+-   **Kunde**  
   
 -   **Datum**  
   
@@ -115,7 +115,7 @@ ms.locfileid: "48194710"
  Der **Analysis Services Tutorial** -Cube enthält jetzt zwei Measuregruppen – die ursprüngliche Measuregruppe basierend auf der **InternetSales** -Tabelle und eine zweite Measuregruppe basierend auf der **ResellerSales** -Tabelle in der **Adventure Works DW 2012** -Datenquellensicht.  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Definieren der Eigenschaften des übergeordneten Attributs in einer Hierarchie aus über- und untergeordneten Elementen](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md) 
+ [Definieren der Eigenschaften des übergeordneten Attributs in einer Über-/Unterordnungshierarchie](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md) 
   
 ## <a name="see-also"></a>Siehe auch  
  [Bereitstellen eines Analysis Services-Projekts](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  

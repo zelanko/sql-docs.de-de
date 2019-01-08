@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Compact, connection manager
@@ -15,12 +14,12 @@ ms.assetid: ba627d4d-41f4-49fc-a921-f534cde67770
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4fd067d6f01c168861a42895c36024cb4c0a9aa5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec47718114d100863db8126a520d5aea74912d87
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082790"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818362"
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>SQL Server Compact Edition-Verbindungs-Manager
   Mit einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact-Verbindungs-Manager kann ein Paket eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact-Datenbank herstellen. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact-Ziel, das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält, lädt mithilfe dieses Verbindungs-Managers Daten in eine Tabelle einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact-Datenbank.  
@@ -31,7 +30,7 @@ ms.locfileid: "48082790"
 ## <a name="configuration-the-sql-server-compact-edition-connection-manager"></a>Konfiguration des SQL Server Compact Edition-Verbindungs-Managers  
  Beim Hinzufügen einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact-Verbindungs-Manager einem Paket [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] einen Verbindungs-Manager, die aufgelöst wird erstellt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact-Verbindung zur Laufzeit des Verbindungs-Manager-Eigenschaften festlegt, und fügt den Verbindungs-Manager die `Connections` -Sammlung im Paket.  
   
- Die `ConnectionManagerType` Eigenschaft des Verbindungs-Managers nastaven NA hodnotu `SQLMOBILE`.  
+ Die `ConnectionManagerType`-Eigenschaft des Verbindungs-Managers ist auf `SQLMOBILE` festgelegt.  
   
  Es gibt folgende Möglichkeiten, um den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact-Verbindungs-Manager zu konfigurieren:  
   
@@ -47,10 +46,10 @@ ms.locfileid: "48082790"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Für SQLServer Compact Edition-Verbindungs-Manager-Editor &#40;Seite "Verbindung"&#41;](../sql-server-compact-edition-connection-manager-editor-connection-page.md)  
+-   [Verbindungs-Manager-Editor für SQL Server Compact Edition &#40;Seite „Verbindung“&#41;](../sql-server-compact-edition-connection-manager-editor-connection-page.md)  
   
--   [Für SQLServer Compact Edition-Verbindungs-Manager-Editor &#40;Seite "alle"&#41;](../sql-server-compact-edition-connection-manager-editor-all-page.md)  
+-   [Verbindungs-Manager-Editor für SQL Server Compact Edition &#40;Seite „Alle“&#41;](../sql-server-compact-edition-connection-manager-editor-all-page.md)  
   
- Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und [Programmgesteuertes Hinzufügen von Verbindungen](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Weitere Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und [Programmgesteuertes Hinzufügen von Verbindungen](../building-packages-programmatically/adding-connections-programmatically.md)festgelegt.  
   
   

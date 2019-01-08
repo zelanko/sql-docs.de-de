@@ -1,20 +1,22 @@
 ---
-title: 'Gewusst wie: Erfassen von Daten in einen Pool des SQL Server-Daten mit Spark-Aufträge | Microsoft-Dokumentation'
+title: Erfassen von Daten mit Spark-Aufträgen
+titleSuffix: SQL Server 2019 big data clusters
 description: In diesem Tutorial wird veranschaulicht, wie Daten in den Datenpool mit einer SQL Server-2019 big Data-Cluster (Vorschau) mit dem Spark-Aufträgen in Azure Data Studio erfasst wird.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: 186de5e63663b9c5485cd0385ded816cafbc7c3d
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: d1780ae630231cd96e9424f4f541d921b1496e7d
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221476"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432363"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Tutorial: Erfassen von Daten in einen Pool des SQL Server-Daten mit Spark-Aufträgen
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Lernprogramm: Erfassen von Daten in einen Pool des SQL Server-Daten mit Spark-Aufträgen
 
 Dieses Tutorial veranschaulicht, wie Spark-Aufträgen zum Laden von Daten in die [Datenpool](concept-data-pool.md) von einer SQL Server-2019 big Data-Cluster (Vorschau). 
 
@@ -30,17 +32,17 @@ In diesem Tutorial erfahren Sie, wie Sie:
 
 ## <a id="prereqs"></a> Erforderliche Komponenten
 
-* [Bereitstellen einen big Data-Cluster in Kubernetes](deployment-guidance.md).
-* [Installieren Sie Studio für Azure Data und die Erweiterung für SQL Server-2019](deploy-big-data-tools.md).
-* [Laden Sie Beispieldaten in den Cluster](#sampledata).
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [Big Data-tools](deploy-big-data-tools.md)
+   - **"kubectl"**
+   - **Azure Data Studio**
+   - **SQL Server-2019-Erweiterung**
+- [Laden Sie Beispieldaten in Ihre big Data-cluster](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>Erstellen Sie eine externe Tabelle, in dem Datenpool
 
 Die folgenden Schritte Erstellen einer externen Tabelle, in dem Datenpool mit dem Namen **Web_clickstreams_spark_results**. Diese Tabelle kann dann als einen Speicherort für die sammelerfassung von Daten in die big Data-Cluster verwendet werden.
 
-1. Verbinden Sie in Azure Data Studio mit der SQL Server-Masterinstanz von Ihrer big Data-Cluster. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit der SQL Server-Masterinstanz](deploy-big-data-tools.md#master).
+1. Verbinden Sie in Azure Data Studio mit der SQL Server-Masterinstanz von Ihrer big Data-Cluster. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit der SQL Server-Masterinstanz](connect-to-big-data-cluster.md#master).
 
 1. Doppelklicken Sie auf die Verbindung in der **Server** Fenster im Server-Dashboard für die master-SQL Server-Instanz angezeigt wird. Wählen Sie **neue Abfrage**.
 
@@ -61,13 +63,13 @@ Die folgenden Schritte Erstellen einer externen Tabelle, in dem Datenpool mit de
       );
    ```
   
-1. In CTP 2.1 an die Erstellung des Pools Daten ist asynchron, aber es gibt keine Möglichkeit, um zu bestimmen, wenn er noch abgeschlossen ist. Warten Sie zwei Minuten lang, um sicherzustellen, dass die Datenpool erstellt wird, bevor Sie fortfahren.
+1. In der CTP-Version 2.2 die Erstellung des Pools Daten ist asynchron, aber es gibt keine Möglichkeit, um zu bestimmen, wenn er noch abgeschlossen ist. Warten Sie zwei Minuten lang, um sicherzustellen, dass die Datenpool erstellt wird, bevor Sie fortfahren.
 
 ## <a name="start-a-spark-streaming-job"></a>Starten eines Streamingauftrags
 
 Der nächste Schritt ist die Erstellung ein Streamingauftrags, die Web-Clickstream-Daten aus dem Speicherpool (HDFS) lädt in der externen Tabelle, die Sie in den Datenpool erstellt haben.
 
-1. Verbinden Sie in Azure Data Studio mit dem HDFS/Spark-Gateway von Ihrer big Data-Cluster. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit dem HDFS/Spark-Gateway](deploy-big-data-tools.md#hdfs).
+1. In Azure Data Studio, eine Verbindung mit der **HDFS/Spark-Gateway** von Ihrer big Data-Cluster. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit dem HDFS/Spark-Gateway](connect-to-big-data-cluster.md#hdfs).
 
 1. Doppelklicken Sie auf das HDFS/Spark-Gateway-Verbindung in der **Server** Fenster. Wählen Sie dann **neue Spark-Auftrag**.
 
@@ -81,10 +83,12 @@ Der nächste Schritt ist die Erstellung ein Streamingauftrags, die Web-Clickstre
    /jar/mssql-spark-lib-assembly-1.0.jar
    ```
 
+1. In der **Hauptklasse** Feld `FileStreaming`.
+
 1. In der **Argumente** Geben Sie den folgenden Text, der das Kennwort an, in der SQL Server-Masterinstanz angeben der `<your_password>` Platzhalter. 
 
    ```text
-   mssql-master-pool-0.service-master-pool 1433 sa <your_password> sales web_clickstreams_spark_results hdfs:///clickstream_data csv false
+   --server mssql-master-pool-0.service-master-pool --port 1433 --user sa --password <your_password> --database sales --table web_clickstreams_spark_results --source_dir hdfs:///clickstream_data --input_format csv --enable_checkpoint false --timeout 380000
    ```
 
    Die folgende Tabelle beschreibt jedes Argument:
@@ -100,6 +104,7 @@ Der nächste Schritt ist die Erstellung ein Streamingauftrags, die Web-Clickstre
    | Quellverzeichnis für das streaming | Dies muss ein vollständiger URI an, wie z. B. "Hdfs: / / / Clickstream_data" |
    | Eingabeformat | Dies kann "Csv", "Parquet" oder "Json" sein. |
    | Aktivieren der Prüfpunkt | true oder false |
+   | timeout | Zeit für die auftragsausführung für in Millisekunden vor dem Beenden |
 
 1. Drücken Sie **senden** auf den Auftrag zu übermitteln.
 
@@ -113,7 +118,7 @@ Die folgenden Schritte zeigen, dass im Spark-streaming-Auftrag die Daten aus HDF
 
    ![Spark-Auftragsverlauf](media/tutorial-data-pool-ingest-spark/spark-task-history.png)
 
-1. Zurück in das SQL Server-Masterinstanz Abfragefenster, das Sie zu Beginn dieses Tutorials geöffnet...
+1. Gibt zurück, in der SQL Server-Masterinstanz Abfragefenster, das Sie am Anfang dieses Tutorials geöffnet.
 
 1. Führen Sie die folgende Abfrage aus, um die erfassten Daten zu überprüfen.
 

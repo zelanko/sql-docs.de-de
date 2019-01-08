@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Master Data Services], reversing
@@ -13,12 +12,12 @@ ms.assetid: 6f7c3f07-0f64-4283-8c9c-93facd00a046
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 572a0fbe10594226a755a4f7ecb59c2e52ef6c82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24e1c1fea5404d984f05391624fd244960c0eec3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140672"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822994"
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>Umkehren einer Transaktion (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie eine Transaktion umkehren, wenn eine Aktion rückgängig gemacht werden muss. Beispiele für Transaktionen sind Attributwertänderungen, Hierarchieverschiebungen oder Elementlöschungen.  
@@ -27,7 +26,7 @@ ms.locfileid: "48140672"
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Versionsverwaltung** zuzugreifen.  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md)zuzugreifen.  
   
 ### <a name="to-reverse-a-transaction"></a>So kehren Sie eine Transaktion um  
   
@@ -47,6 +46,6 @@ ms.locfileid: "48140672"
   
 ## <a name="see-also"></a>Siehe auch  
  [Transaktionen &#40;Master Data Services&#41;](../../2014/master-data-services/transactions-master-data-services.md)   
- [Reaktivieren eines Elements oder einer Auflistung &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
+ [Reaktivieren eines Elements oder einer Sammlung &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
   
   

@@ -20,12 +20,12 @@ ms.assetid: 0d87fcac-30a0-4303-ad8f-a5b53f4b428d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 631dcb0f76346de88a2a48e8dfb00060626d58f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0ad4a98689db00c6dcb484e7a04bb973d2e1761
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813578"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206259"
 ---
 # <a name="sqldatasourcetodriver-function"></a>SQLDataSourceToDriver-Funktion
 **SQLDataSourceToDriver** Supportstranslations für ODBC-Treiber. Diese Funktion wird nicht von ODBC-fähigen Anwendungen aufgerufen werden; Anwendungen fordern Übersetzung über **SQLSetConnectAttr**. Die zugeordneten Treibers Untersuchen der *ConnectionHandle* im angegebenen **SQLSetConnectAttr** Ruft die angegebene DLL um Übersetzungen für den Treiber alle Datenflüsse aus der Datenquelle auszuführen. Eine Standard-Konvertierungs-DLL kann in der ODBC-Initialisierungsdatei angegeben werden.  
@@ -52,7 +52,7 @@ BOOL SQLDataSourceToDriver(
  [Eingabe] Der Wert.  
   
  *fSqlType*  
- [Eingabe] Der SQL-Datentyp. Dieses Argument weist den Treiber konvertieren *RgbValueIn* in ein Format, die von der Anwendung akzeptabel. Eine Liste der gültigen SQL-Datentypen, finden Sie unter den [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md) Abschnitt in Anhang D:-Datentypen.  
+ [Eingabe] Der SQL-Datentyp. Dieses Argument weist den Treiber konvertieren *RgbValueIn* in ein Format, die von der Anwendung akzeptabel. Eine Liste der gültigen SQL-Datentypen, finden Sie unter den [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md) Abschnitt in Anhang D: Datentypen.  
   
  *rgbValueIn*  
  [Eingabe] Zu übersetzender Wert.  

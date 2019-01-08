@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 71eda98f-01a4-4fff-8246-be3133782523
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a01af53372a8be1fce6ffa2e4ee8d4cddce8d057
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 98844917c047e2e52018e9ed8b050f708617ae2f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135340"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799102"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>Überprüfen von Daten (MDS-Add-In für Excel)
   Beim Veröffentlichen von Daten werden in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]zwei Arten von Überprüfungen ausgeführt:  
@@ -39,7 +38,7 @@ ms.locfileid: "48135340"
 |------------|-----------------|  
 |Fehler|Für einen oder mehrere Werte in der Zeile ist bei der Überprüfung auf Grundlage der Geschäftsregeln, die von einem MDS-Administrator definiert wurden, ein Fehler aufgetreten.|  
 |Nicht überprüft|Werte in der Zeile wurden noch nicht auf Grundlage der Geschäftsregeln überprüft.|  
-|Success|Alle Werte in der Zeile haben die Überprüfung auf Grundlage der Geschäftsregeln bestanden.|  
+|Erfolgreich|Alle Werte in der Zeile haben die Überprüfung auf Grundlage der Geschäftsregeln bestanden.|  
   
 ## <a name="input-statuses"></a>Eingabestatus  
  Beim Veröffentlichen von Daten werden in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]sind die folgenden Eingabestatus möglich.  
@@ -55,7 +54,7 @@ ms.locfileid: "48135340"
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Bestimmen Sie, welche Werte die definierten Geschäftsregeln nicht bestehen.|[Anwenden von Geschäftsregeln &#40;MDS-Add-in für Excel&#41;](apply-business-rules-mds-add-in-for-excel.md)|  
+|Bestimmen Sie, welche Werte die definierten Geschäftsregeln nicht bestehen.|[Anwenden von Geschäftsregeln &#40;MDS-Add-In für Excel&#41;](apply-business-rules-mds-add-in-for-excel.md)|  
 |Zeigen Sie als Unterstützung beim Korrigieren von Überprüfungsfehlern alle Transaktionen an, die für ein Element ausgeführt wurden.|[Anzeigen aller Anmerkungen oder Transaktionen für ein Element &#40;MDS-Add-In für Excel&#41;](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  

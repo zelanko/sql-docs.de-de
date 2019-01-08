@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - Sql12.swb.sqlimail.newaccount.f1
@@ -40,19 +39,19 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2a1e6aa62858c85da20f13295cfb2dce0ee302ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 72f7ee857946267ca1c8732976cb31d30767bfed
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217620"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371182"
 ---
 # <a name="configure-database-mail"></a>Konfigurieren des Datenbank-E-Mail-Features
   Dieses Thema beschreibt die Aktivierung und Konfiguration von Datenbank-E-Mails mithilfe des Assistenten zum Konfigurieren von Datenbank-E-Mails sowie die Erstellung eines Datenbank-E-Mail-Konfigurationsskripts anhand von Vorlagen.  
   
 
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
  Verwenden Sie die Option **DatabaseMail XPs** , um Datenbank-E-Mail auf diesem Server zu aktivieren. Weitere Informationen finden Sie im Referenzthema [Database Mail XPs (Serverkonfigurationsoption)](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) .  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
@@ -91,7 +90,7 @@ ms.locfileid: "48217620"
  Geben Sie auf der Seite **Konfigurationsaufgabe auswählen** die Aufgabe an, die Sie bei jeder Verwendung des Assistenten ausführen. Wenn Sie Ihre Entscheidung vor dem Beenden des Assistenten ändern, können Sie mithilfe der Schaltfläche **Zurück** zu dieser Seite zurückkehren und eine andere Aufgabe auswählen.  
   
 > [!NOTE]  
->  Wenn die Datenbank-E-Mail nicht aktiviert wurde, wird folgende Meldung angezeigt: **Die Datenbank-E-Mail-Funktion ist nicht verfügbar.  Möchten Sie dieses Feature aktivieren?** Die Auswahl von **Ja**entspricht der Aktivierung von Datenbank-E-Mails mit der [Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) -Option der gespeicherten Systemprozedur **sp_configure** .  
+>  Wenn die Datenbank-e-Mails nicht aktiviert wurde, erhalten Sie die Nachricht: **Die Datenbank-Mail-Funktion ist nicht verfügbar.  Möchten Sie dieses Feature aktivieren?** Die Auswahl von **Ja**entspricht der Aktivierung von Datenbank-E-Mails mit der [Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) -Option der gespeicherten Systemprozedur **sp_configure** .  
   
  **Datenbank-E-Mail durch Ausführen der folgenden Aufgaben einrichten**  
  Führt alle Aufgaben durch, die zum ersten Einrichten der Datenbank-E-Mails erforderlich sind. Diese Option umfasst alle anderen drei Optionen.  
@@ -374,7 +373,7 @@ ms.locfileid: "48217620"
  Gibt an, wie lange (in Sekunden) der externe E-Mail-Prozess mindestens aktiv bleibt. Der Prozess bleibt aktiv, solange sich E-Mails in der Datenbank-E-Mail-Warteschlange befinden. Dieser Parameter gibt die Zeitdauer an, für die der Prozess aktiv bleibt, wenn keine Nachrichten zum Verarbeiten vorhanden sind.  
   
  **Protokolliergrad**  
- Gibt an, welche Nachrichten im Datenbank-E-Mail-Protokoll aufgezeichnet werden. Folgende Werte sind möglich:  
+ Gibt an, welche Nachrichten im Datenbank-E-Mail-Protokoll aufgezeichnet werden. Dabei sind folgende Werte möglich:  
   
 -   Normal - Nur Fehler werden protokolliert.  
   
@@ -415,7 +414,7 @@ ms.locfileid: "48217620"
  Die **mailitem_id** der Test-E-Mail.  
   
  **Problembehandlung**  
- Klicken Sie, um die Onlinedokumentation für das Thema [Problembehandlung bei Datenbank-E-Mail](http://msdn.microsoft.com/library/ms188663.aspx)zu öffnen.  
+ Klicken Sie, um die Onlinedokumentation für das Thema [Problembehandlung bei Datenbank-E-Mail](https://msdn.microsoft.com/library/ms188663.aspx)zu öffnen.  
   
 
   

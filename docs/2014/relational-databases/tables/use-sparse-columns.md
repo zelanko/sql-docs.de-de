@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - sparse columns, described
@@ -15,12 +14,12 @@ ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 975cd41f544f38a5ded070396fce5df644e6048c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107206"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798932"
 ---
 # <a name="use-sparse-columns"></a>Verwenden von Spalten mit geringer Dichte
   Spalten mit geringer Dichte sind gewöhnliche Spalten, die einen optimierten Speicher für NULL-Werte haben. Spalten mit geringer Dichte reduzieren die Speicherplatzanforderungen von NULL-Werten auf Kosten eines erhöhten Aufwands, um Werte ungleich NULL abzurufen. Verwenden Sie Sparsespalten, wenn dadurch mindestens 20 Prozent bis 40 Prozent Speicherplatz eingespart werden. Spalten mit geringer Dichte und Spaltensätze werden mit der [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) -Anweisung oder der [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) -Anweisung definiert.  
@@ -33,7 +32,7 @@ ms.locfileid: "48107206"
   
 -   Gefilterte Indizes  
   
-     Da Sparsespalten viele Zeilen mit NULL-Werten haben, sind sie besonders für gefilterte Indizes geeignet. Ein gefilterter Index für eine Sparsespalte kann nur die Zeilen indizieren, die Werte enthalten. Dadurch wird ein kleinerer und effizienterer Index erstellt. Weitere Informationen finden Sie unter [Create Filtered Indexes](../indexes/indexes.md).  
+     Da Sparsespalten viele Zeilen mit NULL-Werten haben, sind sie besonders für gefilterte Indizes geeignet. Ein gefilterter Index für eine Sparsespalte kann nur die Zeilen indizieren, die Werte enthalten. Dadurch wird ein kleinerer und effizienterer Index erstellt. Weitere Informationen finden Sie unter [erstellen gefilterter Indizes](../indexes/indexes.md).  
   
  Mithilfe von Spalten mit geringer Dichte und von gefilterten Indizes können Anwendungen wie [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]große Mengen an benutzerdefinierten Eigenschaften mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]speichern und darauf zugreifen.  
   
@@ -44,7 +43,7 @@ ms.locfileid: "48107206"
   
 -   Katalogsichten für eine Tabelle, die Sparsespalten aufweist, entsprechen denen einer typischen Tabelle. Diese sys.columns-Katalogsicht enthält eine Zeile für jede Spalte in der Tabelle und einen Spaltensatz, wenn einer definiert wurde.  
   
--   Spalten mit geringer Dichte sind eine Eigenschaft der Speicherebene und keine Eigenschaft der logischen Tabelle. Daher wird eine SELECT…INTO-Anweisung nicht über die Eigenschaft der Sparsespalte in eine neue Tabelle kopiert.  
+-   Spalten mit geringer Dichte sind eine Eigenschaft der Speicherebene und keine Eigenschaft der logischen Tabelle. Daher wird eine SELECT...INTO-Anweisung nicht über die Eigenschaft der Sparsespalte in eine neue Tabelle kopiert.  
   
 -   Die COLUMNS_UPDATED-Funktion gibt einen `varbinary`-Wert zurück, mit dem alle Spalten, die während einer DML-Aktion aktualisiert wurden, gekennzeichnet werden. Die Bits, die von der COLUMNS_UPDATED-Funktion zurückgegeben werden, lauten folgendermaßen:  
   
@@ -86,7 +85,7 @@ ms.locfileid: "48107206"
 |`uniqueidentifier`|16|20|43%|  
 |`date`|3|7|69%|  
   
- **Datentypen präzisionsabhängiger Länge**  
+ **Datentypen mit von der Genauigkeit abhängiger Länge**  
   
 |Datentyp|Bytes ohne geringe Dichte|Bytes mit geringer Dichte|NULL-Prozentwert|  
 |---------------|---------------------|------------------|---------------------|  
@@ -100,7 +99,7 @@ ms.locfileid: "48107206"
 |`decimal/numeric(38,s)`|17|21|42%|  
 |`vardecimal(p,s)`|Verwenden Sie den `decimal`-Typ als konservative Schätzung.|||  
   
- **Datentypen datenabhängiger Länge**  
+ **Datentypen mit von den Daten abhängiger Länge**  
   
 |Datentyp|Bytes ohne geringe Dichte|Bytes mit geringer Dichte|NULL-Prozentwert|  
 |---------------|---------------------|------------------|---------------------|  
@@ -116,12 +115,12 @@ ms.locfileid: "48107206"
 ## <a name="in-memory-overhead-required-for-updates-to-sparse-columns"></a>Mehr Verarbeitungsaufwand im Arbeitsspeicher bei Aktualisierung von Spalten mit geringer Dichte  
  Beachten Sie beim Entwerfen von Tabellen mit Sparsespalten, dass beim Aktualisieren von Zeilen für jede Sparsespalte in der Tabelle, die nicht NULL ist, 2 zusätzliche Bytes Verarbeitungsaufwand entstehen. Aufgrund dieses zusätzlichen Speicherbedarfs kann bei Aktualisierungen Fehler 576 auftreten, wenn die Gesamtzeilengröße, einschließlich dieser Vergrößerung im Arbeitsspeicher, 8019 überschreitet und keine Spalten aus der Zeile geschoben werden können.  
   
- Angenommen, eine Tabelle enthält 600 Sparsespalten des Typs bigint. Wenn davon 571 Spalten nicht NULL sind, beträgt die Gesamtgröße auf dem Datenträger 571 * 12 = 6852 Bytes. Nachdem die zusätzliche Zeilengröße und der Header für Sparsespalten hinzugefügt wurden, erhöht sich dies auf etwa 6895 Bytes. Für die Seite sind immer noch etwa 1124 Bytes auf dem Datenträger verfügbar. Dadurch kann der Eindruck entstehen, dass zusätzliche Spalten erfolgreich aktualisiert werden können. Während der Aktualisierung entsteht im Arbeitsspeicher ein zusätzlicher Verarbeitungsaufwand von 2\*(Anzahl der Sparsespalten, die nicht NULL sind). In diesem Beispiel erhöht der zusätzliche Verarbeitungsaufwand – 2 \* 571 = 1.142 Bytes – die Zeilengröße auf dem Datenträger auf etwa 8.037 Bytes. Diese Größe überschreitet die maximal zulässige Größe von 8019 Bytes. Da alle Spalten Datentypen fester Länge aufweisen, können sie nicht von der Zeile geschoben werden. Als Ergebnis tritt beim Aktualisieren der Fehler 576 auf.  
+ Angenommen, eine Tabelle enthält 600 Sparsespalten des Typs bigint. Wenn davon 571 Spalten nicht NULL sind, beträgt die Gesamtgröße auf dem Datenträger 571 * 12 = 6852 Bytes. Nachdem die zusätzliche Zeilengröße und der Header für Sparsespalten hinzugefügt wurden, erhöht sich dies auf etwa 6895 Bytes. Für die Seite sind immer noch etwa 1124 Bytes auf dem Datenträger verfügbar. Dadurch kann der Eindruck entstehen, dass zusätzliche Spalten erfolgreich aktualisiert werden können. Während der Aktualisierung entsteht im Arbeitsspeicher ein zusätzlicher Verarbeitungsaufwand von 2\*(Anzahl der Sparsespalten, die nicht NULL sind). In diesem Beispiel erhöht der zusätzliche Verarbeitungsaufwand (2 \* 571 = 1.142 Bytes) die Zeilengröße auf dem Datenträger auf etwa 8.037 Bytes. Diese Größe überschreitet die maximal zulässige Größe von 8019 Bytes. Da alle Spalten Datentypen fester Länge aufweisen, können sie nicht von der Zeile geschoben werden. Als Ergebnis tritt beim Aktualisieren der Fehler 576 auf.  
   
 ## <a name="restrictions-for-using-sparse-columns"></a>Einschränkungen für die Verwendung von Spalten mit geringer Dichte  
  Spalten mit geringer Dichte können jeden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp annehmen und verhalten sich mit den folgenden Einschränkungen wie andere Spalten:  
   
--   Eine Sparsespalte muss auf NULL festlegbar sein und darf nicht über die ROWGUIDCOL-Eigenschaft oder die IDENTITY-Eigenschaft verfügen. Eine sparsespalte darf nicht sein, der die folgenden Datentypen: `text`, `ntext`, `image`, `timestamp`, den benutzerdefinierten Datentyp `geometry`, oder `geography`; über das FILESTREAM-Attribut verfügen.  
+-   Eine Sparsespalte muss auf NULL festlegbar sein und darf nicht über die ROWGUIDCOL-Eigenschaft oder die IDENTITY-Eigenschaft verfügen. Eine Sparsespalte darf nicht die folgenden Datentypen annehmen: `text`, `ntext`, `image`, `timestamp`, benutzerdefinierter Datentyp, `geometry` oder `geography`; sie darf auch nicht über das FILESTREAM-Attribut verfügen.  
   
 -   Eine Sparsespalte kann keinen Standardwert haben.  
   

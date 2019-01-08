@@ -1,7 +1,8 @@
 ---
-title: Aktivieren oder Deaktivieren der Sammlung von Verwendungsdaten und Absturzberichte für Azure Data Studio | Microsoft-Dokumentation
+title: Aktivieren Sie oder deaktivieren Sie die Sammlung von Verwendungsdaten und berichterstellung von Abstürzen
+titleSuffix: Azure Data Studio
 description: In diesem Artikel wird erläutert, wie Sie steuern, wenn die nutzungs- und Absturzberichten Berichtsdaten gesammelt und an Microsoft gesendet.
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b0a5adf802ab07e05f1041b1385044e2d580db32
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 1f9dd29edf2474ab8db0e3dc7ad7dc2ff78016d1
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356481"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030104"
 ---
 # <a name="enable-or-disable-usage-data-collection-for-includename-sosincludesname-sos-shortmd"></a>Aktivieren Sie oder deaktivieren Sie der Sammlung von Verwendungsdaten für [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -43,5 +44,5 @@ So deaktivieren Sie die berichterstellung von Abstürzen von **Datei** > **Vorei
 
 **Wichtiger Hinweis**: Diese Option erfordert einen Neustart des [!INCLUDE[name-sos](../includes/name-sos-short.md)] wirksam werden.
 
-## <a name="additional-resources"></a>Weitere Ressourcen
+## <a name="additional-resources"></a>Zusätzliche Ressourcen
 - [Arbeitsbereich und benutzereinstellungen](settings.md)

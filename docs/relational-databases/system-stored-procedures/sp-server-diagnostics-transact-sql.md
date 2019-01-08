@@ -18,19 +18,19 @@ ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d8266418969de6249f0e2313ad7368a8054576c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a15e965cef7109d42383d1a4dc4750c5dfef7374
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644694"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213769"
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 Erfasst Diagnosedaten und Zustandsinformationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um potenzielle Fehler zu erkennen. Die Prozedur im Wiederholungsmodus ausgeführt und sendet regelmäßig Ergebnisse. Sie kann über eine reguläre oder eine DAC-Verbindung aufgerufen werden.  
   
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,29 +64,29 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |**component_type**|**sysname**|Gibt an, ob die Zeile Informationen für enthält die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzebene Komponente, oder für eine Always On-verfügbarkeitsgruppe:<br /><br /> Instanz<br /><br /> AlwaysOn: AvailabilityGroup|  
 |**Komponentenname**|**sysname**|Gibt den Namen der Komponente oder den Namen der Verfügbarkeitsgruppe an:<br /><br /> System<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> -Ereignisse<br /><br /> *\<Name der verfügbarkeitsgruppe >*|  
 |**state**|**int**|Gibt den Integritätsstatus der Komponente an:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
-|**state_desc**|**sysname**|Beschreibt die Zustandsspalte. Folgende Beschreibungen entsprechen den Werten in der Statusspalte:<br /><br /> 0: unbekannt<br /><br /> 1: Bereinigen<br /><br /> 2: Warnung<br /><br /> 3: Fehler|  
+|**state_desc**|**sysname**|Beschreibt die Zustandsspalte. Folgende Beschreibungen entsprechen den Werten in der Statusspalte:<br /><br /> 0: Unknown<br /><br /> 1: Bereinigen<br /><br /> 2: Warnung<br /><br /> 3: Fehler|  
 |**data**|**Varchar (Max.)**|Gibt Daten an, die für die Komponente spezifisch sind.|  
   
  Im Folgenden finden Sie die Beschreibungen der fünf Komponenten:  
   
--   **System**: erfasst Daten von einer Systemperspektive Spinlocks, verarbeitungsbedingungen, offenbar keine Tasks, Seitenfehlern und CPU-Auslastung. Diese Informationen ergeben eine allgemeine Empfehlung zum Integritätsstatus.  
+-   **System**: Erfasst Daten von einer Systemperspektive Spinlocks, verarbeitungsbedingungen, offenbar keine Tasks, Seitenfehlern und CPU-Auslastung. Diese Informationen ergeben eine allgemeine Empfehlung zum Integritätsstatus.  
   
--   **Ressource**: erfasst Daten aus ressourcenperspektive physischen und virtuellen Arbeitsspeichers, Pufferpools, Seiten, Cache und anderen Arbeitsspeicherobjekten. Diese Informationen erzeugt eine allgemeine Empfehlung zum Integritätsstatus.  
+-   **Ressource**:  Sammelt Daten aus ressourcenperspektive auf physischen und virtuellen Arbeitsspeichers, Pufferpools, Seiten, Cache und anderen Arbeitsspeicherobjekten. Diese Informationen erzeugt eine allgemeine Empfehlung zum Integritätsstatus.  
   
--   **Query_processing**: sammelt Daten aus einer Perspektive zur abfrageverarbeitung für die Arbeitsthreads, Tasks, Typen, CPU-intensiven Sitzungen und blockierenden Tasks zu warten. Diese Informationen erzeugt eine allgemeine Empfehlung zum Integritätsstatus.  
+-   **Query_processing**: Sammelt Daten hinsichtlich der Verarbeitung von Abfragen auf die Anzahl der Arbeitsthreads, Tasks, Wartetypen, CPU-intensiven Sitzungen und blockierenden Tasks an. Diese Informationen erzeugt eine allgemeine Empfehlung zum Integritätsstatus.  
   
--   **Io_subsystem**: erfasst Daten zu EA. Zusätzlich zu den Diagnosedaten erzeugt diese Komponente nur für ein EA-Subsystem einen komplett fehlerfreien oder einen Warnzustand.  
+-   **Io_subsystem**: Erfasst Daten zu EA. Zusätzlich zu den Diagnosedaten erzeugt diese Komponente nur für ein EA-Subsystem einen komplett fehlerfreien oder einen Warnzustand.  
   
--   **Ereignisse**: sammelt Daten und Oberflächen, die über die gespeicherte Prozedur auf die Fehler und Ereignisse von Interesse, die aufgezeichnet werden, indem Sie den Server, einschließlich Details zu ringpufferausnahmen, ringpufferereignisse zum speicherbroker, ungenügender Arbeitsspeicher, Zeitplanungsmodul-Überwachung Pufferpool, Spinlocks, Sicherheit und Konnektivität. Ereignisse zeigen als Status immer 0 an.  
+-   **Ereignisse**: Sammelt Daten und Oberflächen, die über die gespeicherte Prozedur, auf die Fehler und Ereignisse von Interesse, die von dem Server, einschließlich Details zu ringpufferausnahmen, speicherbroker, ungenügender Arbeitsspeicher, Zeitplanungsmodul-Überwachung, Pufferpool, Spinlocks Ring Buffer Ereignisse aufgezeichnet wurden, Sicherheit und Konnektivität. Ereignisse zeigen als Status immer 0 an.  
   
--   **\<Name der verfügbarkeitsgruppe >**: erfasst Daten für die angegebene verfügbarkeitsgruppe (wenn Component_type = "immer auf: AvailabilityGroup").  
+-   **\<Name der verfügbarkeitsgruppe >**: Sammelt Daten für die angegebene verfügbarkeitsgruppe (wenn Component_type = "immer auf: AvailabilityGroup").  
   
 ## <a name="remarks"></a>Hinweise  
 Die Komponenten system, resource und query_processing werden zur Fehlererkennung aus Fehlerperspektive genutzt, während die Komponenten io_subsystem und events nur zu Diagnosezwecken genutzt werden.  
   
 In der folgenden Tabelle sind die Komponenten den jeweils zugeordneten Integritätszuständen zugeordnet.  
   
-|Components|Clean (1)|Warning (2)|Error (3)|Unknowns (0)|  
+|Komponenten|Clean (1)|Warning (2)|Error (3)|Unknowns (0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |System|x|x|x||  
 |resource|x|x|x||  

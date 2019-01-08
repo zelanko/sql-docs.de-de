@@ -18,12 +18,12 @@ ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ce9e002b3a01b3cb6e13de5176bd0826870796f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0f1add0f2d249922f00fc1b16d5da12bb903faf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070924"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524991"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>Zuordnen von Abfrageparametern zu Variablen in einem Task SQL ausführen
   In diesem Thema wird beschrieben, wie Sie eine parametrisierte SQL-Anweisung im Task 'SQL ausführen' verwenden und wie Sie Zuordnungen zwischen Variablen und den Parametern der SQL-Anweisung erstellen.  
@@ -84,8 +84,8 @@ ms.locfileid: "48070924"
     |---------------------|--------------------|  
     |ADO|Param1, Param2, …|  
     |ADO.NET und SQLMOBILE|@\<Parametername>|  
-    |ODBC|1, 2, 3, …|  
-    |EXCEL und OLE DB|0, 1, 2, 3, …|  
+    |ODBC|1, 2, 3, ...|  
+    |EXCEL und OLE DB|0, 1, 2, 3, ...|  
   
 10. Wählen Sie in der Liste **Variablenname** eine Variable aus. Weitere Informationen finden Sie unter [Hinzufügen, Löschen, Ändern des Bereichs von benutzerdefinierten Variablen in einem Paket](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md).  
   
@@ -106,6 +106,6 @@ ms.locfileid: "48070924"
 ## <a name="see-also"></a>Siehe auch  
  [SQL ausführen (Task)](control-flow/execute-sql-task.md)   
  [Parameter und Rückgabecodes dem Task "SQL ausführen"](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
- [Integrationsdienste &#40;SSIS&#41; Variablen](integration-services-ssis-variables.md)  
+ [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md)  
   
   

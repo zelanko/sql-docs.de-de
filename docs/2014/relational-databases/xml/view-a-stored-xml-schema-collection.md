@@ -18,15 +18,15 @@ ms.assetid: e38031af-22df-4cd9-a14e-e316b822f91b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 708aed70836bfc5fdccb9dd8ba3afc2545e093f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e43af2841de0f2e5a00bf4e7871f71092e6bc87
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089320"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373782"
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>Anzeigen einer gespeicherten XML-Schemaauflistung
-  Nach dem Importieren einer XML-Schemaauflistung mithilfe von [CREATE XML SCHEMA COLLECTION](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)werden die Schemakomponenten in den Metadaten gespeichert. Mit der systeminternen Funktion [xml_schema_namespace](/sql/t-sql/xml/xml-schema-namespace)können Sie die XML-Schemaauflistung rekonstruieren. Diese Funktion gibt ein `xml` Datentypinstanz.  
+  Nach dem Importieren einer XML-Schemaauflistung mithilfe von [CREATE XML SCHEMA COLLECTION](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)werden die Schemakomponenten in den Metadaten gespeichert. Mit der systeminternen Funktion [xml_schema_namespace](/sql/t-sql/xml/xml-schema-namespace)können Sie die XML-Schemaauflistung rekonstruieren. Diese Funktion gibt eine Instanz vom Datentyp `xml` zurück.  
   
  So ruft beispielsweise die folgende Abfrage eine XML-Schemaauflistung (`ProductDescriptionSchemaCollection`) aus dem relationalen Schema 'production' der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank ab.  
   
@@ -35,7 +35,7 @@ SELECT xml_schema_namespace(N'Production',N'ProductDescriptionSchemaCollection')
 GO  
 ```  
   
- Wenn nur ein Schema aus der XML-schemaauflistung angezeigt werden sollen, können Sie angeben, dass XQuery-Abfrage für die `xml` geben Ergebnis, das von zurückgegebene `xml_schema_namespace`.  
+ Wenn nur ein Schema der XML-Schemaauflistung angezeigt werden soll, können Sie eine XQuery-Abfrage für das Ergebnis vom Typ `xml` angeben, das von `xml_schema_namespace` zurückgegeben wird.  
   
 ```  
 SELECT xml_schema_namespace(N'RelationalSchemaName',N'XmlSchemaCollectionName').query('  
@@ -48,7 +48,7 @@ GO
   
 ```  
 SELECT xml_schema_namespace(N'Production',N'ProductDescriptionSchemaCollection').query('  
-/xs:schema[@targetNamespace="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"]  
+/xs:schema[@targetNamespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"]  
 ')  
 GO  
 ```  
@@ -56,7 +56,7 @@ GO
  Sie können auch den optionalen Zielnamespace als dritten Parameter an die `xml_schema_namespace` -Funktion übergeben, um ein bestimmtes Schema aus der Auflistung abzurufen, wie es in der folgenden Abfrage gezeigt wird:  
   
 ```  
-SELECT xml_schema_namespace(N'Production',N'ProductDescriptionSchemaCollection', N'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain')  
+SELECT xml_schema_namespace(N'Production',N'ProductDescriptionSchemaCollection', N'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain')  
 GO  
 ```  
   

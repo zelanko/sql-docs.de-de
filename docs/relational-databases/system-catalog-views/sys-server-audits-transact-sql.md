@@ -20,17 +20,17 @@ ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c89ec6b6054f6a681550fa3fb12aa925476bc0c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cf8e911f8b8e871cf7389bf40d6a84bc455bffa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742674"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506362"
 ---
 # <a name="sysserveraudits-transact-sql"></a>sys.server_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Enthält eine Zeile für jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Überwachung in einer Serverinstanz. Weitere Informationen finden Sie unter [SQL Server Audit &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Enthält eine Zeile für jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Überwachung in einer Serverinstanz. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
@@ -42,9 +42,9 @@ ms.locfileid: "47742674"
 |**principal_id**|**int**|Die ID des Besitzers der Überwachung gemäß Registrierung beim Server.|  
 |**type**|**char(2)**|Überwachungstyp:<br /><br /> SL – NT-Sicherheitsereignisprotokoll<br /><br /> AL – NT-Anwendungsereignisprotokoll<br /><br /> FL – Datei auf Dateisystem|  
 |**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> APPLICATION LOG<br /><br /> FILE|  
-|**ON_FAILURE**|**tinyint**|Bei einem Fehler schreiben Sie folgendermaßen einen Aktionseintrag:<br /><br /> 0 – Weiter<br /><br /> 1 – Serverinstanz herunterfahren<br /><br /> 2 – Fehler bei Vorgang|  
+|**ON_FAILURE**|**tinyint**|Bei einem Fehler schreiben Sie folgendermaßen einen Aktionseintrag:<br /><br /> 0 - fortsetzen<br /><br /> 1 - Shutdown-Server-Instanz<br /><br /> 2 – Fehler bei Vorgang|  
 |**on_failure_desc**|**nvarchar(60)**|Bei einem Fehler schreiben Sie folgendermaßen einen Aktionseintrag:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
-|**is_state_enabled**|**tinyint**|0 – Deaktiviert<br /><br /> 1 – Aktiviert|  
+|**is_state_enabled**|**tinyint**|0 – deaktiviert<br /><br /> 1 – Aktiviert|  
 |**QUEUE_DELAY**|**int**|Maximale Wartezeit in Millisekunden, bevor auf den Datenträger geschrieben wird. Wenn 0, garantiert die Überwachung einen Schreibvorgang, bevor ein Ereignis fortgesetzt werden kann.|  
 |**Prädikat**|**nvarchar(3000)**|Der Prädikatausdruck, der auf das Ereignis angewendet wird.|  
   

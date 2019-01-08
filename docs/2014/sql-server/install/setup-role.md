@@ -11,19 +11,19 @@ ms.assetid: c7e9db15-89f2-4d4d-8860-1e64c5821c4d
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 77a3e61d36ce9661a9b01095c868c7d54de81f0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33cc1b337666e1d628ae285a7df0ba43cc4fe140
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130560"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352845"
 ---
 # <a name="setup-role"></a>Setuprolle
   Geben Sie auf dieser Seite an, ob einzelne Funktionen über die Seite Funktionsauswahl ausgewählt werden sollen oder ob die Installation unter Verwendung einer Setuprolle ausgeführt werden soll.  
   
  Eine `setup role` ist eine unveränderliche Auswahl aller Funktionen und freigegebenen Komponenten, die zur Implementierung einer vordefinierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfiguration erforderlich sind.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Funktionsinstallation**  
  Verwenden Sie diese Option, um einzelne Funktionen und freigegebene Komponenten auszuwählen. Die Instanzfunktionen beinhalten Datenbank-Engine-Dienste, Analysis Services (einheitlicher Modus) und Reporting Services.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "48130560"
   
  Optional können Sie der Installation eine relationale Datenbank-Engine-Instanz hinzufügen, wenn Sie diese benötigen, um Datenbanken in einer SharePoint-Farm zu hosten. Wenn die Farm bereits konfiguriert ist, können Sie diese Option überspringen.  
   
- Nach Beenden des Setups müssen Sie die Software mit einem der folgenden Ansätze konfigurieren: PowerPivot-Konfigurationstool, PowerShell-Cmdlets oder SharePoint 2010-Zentraladministration. Im Gegensatz zu vorherigen Versionen werden beim Setup keine Konfigurationsaufgaben für eine PowerPivot-Installation mehr ausgeführt.  
+ Nachdem Setup abgeschlossen ist, müssen Sie die Software mit einem der folgenden Ansätze konfigurieren: PowerPivot-Konfigurationstool, PowerShell-Cmdlets oder SharePoint 2010 Central Administration. Im Gegensatz zu vorherigen Versionen werden beim Setup keine Konfigurationsaufgaben für eine PowerPivot-Installation mehr ausgeführt.  
   
  Eine rollenbasierte Installation enthält keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerPivot für Excel-Clientanwendung. Die Clientanwendung wird getrennt installiert.  
   
@@ -44,8 +44,8 @@ ms.locfileid: "48130560"
  Sofern das Betriebssystem nicht als Domänencontroller fungiert, verwenden die Datenbank-Engine, Reporting Services und Integration Services standardmäßig das Konto NT-AUTORITÄT\NETZWERKDIENST, und das Startprogramm für den SQL-Volltextfilterdaemon verwendet das Konto NT-AUTORITÄT\LOKALER DIENST.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Installieren von PowerPivot für SharePoint](http://go.microsoft.com/fwlink/?LinkId=206906)   
- [Hardware- und Softwareanforderungen (PowerPivot für SharePoint](http://go.microsoft.com/fwlink/?LinkId=216823)   
+ [Installieren von PowerPivot für SharePoint](https://go.microsoft.com/fwlink/?LinkId=206906)   
+ [Hardware- und Softwareanforderungen (PowerPivot für SharePoint](https://go.microsoft.com/fwlink/?LinkId=216823)   
  [Featureauswahl](../../../2014/sql-server/install/feature-selection.md)  
   
   

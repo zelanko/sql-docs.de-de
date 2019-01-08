@@ -9,12 +9,12 @@ ms.date: 12/07/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.custom: seodec18
-ms.openlocfilehash: c760bd4c149a63de0335c6d6651036bba56533a0
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
+ms.openlocfilehash: f5ddd80eaf29db657c42eec5c84c8485e8b0d8b6
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246759"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531155"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Schnellstart: Bereitstellen von SQL Server-big Data-Cluster in Azure Kubernetes Service (AKS)
 
@@ -56,7 +56,6 @@ Beachten Sie bevor Sie fortfahren die folgenden wichtigen Richtlinien:
 - In der [Befehlsfenster](https://docs.microsoft.com/visualstudio/ide/reference/command-window), Anführungszeichen sind in den Umgebungsvariablen enthalten. Wenn Sie Anführungszeichen verwenden, um ein Kennwort zu umschließen, sind die Anführungszeichen im Kennwort enthalten.
 - In bash bleibt sind die Anführungszeichen in der Variablen nicht enthalten. Unseren Beispielen verwenden Sie doppelte Anführungszeichen `"`.
 - Sie können das Kennwort Umgebungsvariablen festlegen, um einen beliebigen Namen, aber stellen Sie sicher, dass sie ausreichend komplex sind und verwenden Sie nicht die `!`, `&`, oder `'` Zeichen.
-- Ändern Sie bei der Version CTP 2.2 nicht die Standardports.
 - Die `sa` Konto ist ein Systemadministrator für die Master für SQL Server-Instanz, die während des Setups erstellt wird. Nach dem Erstellen Ihres SQL Server-Containers wird die von Ihnen festgelegte `MSSQL_SA_PASSWORD` Umgebungsvariable sichtbar, wenn Sie sie in dem Container ausführen`echo $MSSQL_SA_PASSWORD`. Aus Sicherheitsgründen ändern Ihre `sa` Kennwort gemäß der dokumentierten bewährten Methoden [hier](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
 
 Die folgenden Umgebungsvariablen zu initialisieren.  Sie sind für die Bereitstellung von big Data-Cluster erforderlich:

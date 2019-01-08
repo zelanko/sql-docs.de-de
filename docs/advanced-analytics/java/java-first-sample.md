@@ -1,6 +1,6 @@
 ---
-title: Java-spracherweiterung in SQL Server-2019 | Microsoft-Dokumentation
-description: Führen Sie Java-Code, mit der Java-Sprache-Erweiterung von SQL Server 2019.
+title: Java-Beispiel und Tutorials für SQL Server-2019 – SQL Server Machine Learning Services
+description: Führen Sie Java-Beispielcode für SQL Server-2019 zu Schritten für SQL Server-Daten mit der Erweiterung der Java-Sprache vertraut zu machen.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/24/2018
@@ -9,12 +9,12 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bf6fec32e28342e355b3393bb531ad1833d8af6b
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 32c0792882020612c40a0c41b1c54aaeb51da91c
+ms.sourcegitcommit: 15b780aa5abe3f42cd70b6edf7d5a645e990b618
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715316"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54069055"
 ---
 # <a name="sql-server-java-sample-walkthrough"></a>Exemplarische Vorgehensweise zum SQL Server-Java
 
@@ -226,7 +226,7 @@ Die gesamte Struktur muss über Berechtigungen verfügen, die vom Stamm bis zum 
    + Klicken Sie auf **Objekttypen** , und stellen Sie sicher, dass *integrierte Sicherheitsprinzipien* und *Gruppen* ausgewählt sind.
    + Klicken Sie auf **Speicherorte** den Namen des lokalen Computers am oberen Rand der Liste auswählen.
 5. Geben Sie **SQLRUserGroup**, überprüfen Sie den Namen ein, und klicken Sie dann auf OK, um die Gruppe hinzuzufügen.
-6. Geben Sie **alle Application Pakete**, überprüfen Sie den Namen, und klicken Sie dann auf OK, um Sie hinzuzufügen. Wenn der Name nicht behoben wird, rufen Sie die Speicherorte Schritt. Die SID ist lokal auf Ihrem Computer.
+6. Geben Sie **alle ANWENDUNGSPAKETE**, überprüfen Sie den Namen, und klicken Sie dann auf OK, um Sie hinzuzufügen. Wenn der Name nicht behoben wird, rufen Sie die Speicherorte Schritt. Die SID ist lokal auf Ihrem Computer.
 
 Stellen Sie sicher, dass beide Sicherheitsidentitäten "Lese-und Ausführungsberechtigungen" auf den Ordner und Unterordner von "Pkg" verfügen.
 

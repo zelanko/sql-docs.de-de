@@ -10,12 +10,12 @@ ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3769df724031fb72511c92dca8494a3eb893b6a6
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 5113730b1920fb1cd6ecf305e03614e3de894a8e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018975"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366852"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>Installieren von SQL Server mit SMB-Dateifreigabe als Speicheroption
   Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] können Systemdatenbanken (Master, Model, MSDB und TempDB) sowie [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Benutzerdatenbanken mit dem SMB (Server Message Block)-Dateiserver als Speicheroption installiert werden. Dies gilt sowohl für eigenständige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - als auch für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusterinstallationen (FCI).  
@@ -32,7 +32,7 @@ ms.locfileid: "51018975"
   
 -   \\\Servername\Freigabename  
   
- Weitere Informationen zu Universal Naming Convention, finden Sie unter [UNC](http://go.microsoft.com/fwlink/?LinkId=245534) (http://go.microsoft.com/fwlink/?LinkId=245534).  
+ Weitere Informationen zu Universal Naming Convention, finden Sie unter [UNC](https://go.microsoft.com/fwlink/?LinkId=245534) (https://go.microsoft.com/fwlink/?LinkId=245534).  
   
  Der UNC-Loopbackpfad (ein UNC-Pfad, dessen Servername "localhost" oder "127.0.0.1" lautet bzw. dem Namen des lokalen Computers entspricht) wird nicht unterstützt. Darüber hinaus wird ein Sonderfall, bei dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Dateiservercluster verwendet, der auf demselben Knoten gehostet wird, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, ebenfalls nicht unterstützt. Um diese Situation zu vermeiden, wird empfohlen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - und Dateiservercluster auf getrennten Windows-Clustern zu erstellen.  
   
@@ -63,9 +63,9 @@ ms.locfileid: "51018975"
   
 ### <a name="installation-options"></a>Installationsoptionen  
   
--   Legen Sie den Parameter „Datenstammverzeichnis“ in der Setup-Benutzeroberfläche auf der Seite „Datenbank-Engine-Konfiguration“ auf der Registerkarte „Datenverzeichnisse“ auf „\\\fileserver1\share1\“ fest.  
+-   Legen Sie den Parameter „Datenstammverzeichnis“ in der Setup-Benutzeroberfläche auf der Seite „Datenbank-Engine-Konfiguration“ auf der Registerkarte „Datenverzeichnisse“ auf „\\\fileserver1\share1\"“ fest.  
   
--   Geben Sie „/INSTALLSQLDATADIR“ bei der Installation über die Eingabeaufforderung als „\\\fileserver1\share1\“ an.  
+-   Geben Sie „/INSTALLSQLDATADIR“ bei der Installation über die Eingabeaufforderung als „\\\fileserver1\share1\"“ an.  
   
      Die folgende Beispielsyntax zeigt, wie Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe der SMB-Dateifreigabeoption auf einem eigenständigen Server installieren:  
   
@@ -87,13 +87,13 @@ ms.locfileid: "51018975"
 |Betriebssystem|SMB2-Protokollversion|Vorteile für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |----------------------|---------------------------|-------------------------------------------|  
 |[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP 2|2.0|Verbesserte Leistung gegenüber SMB-Vorgängerversionen.<br /><br /> Dauerhaftigkeit zur einfacheren Wiederherstellung nach vorübergehenden Netzwerkstörungen.|  
-|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP 1, einschließlich Server Core|2.1|Unterstützung eines höheren MTU-Werts, der für umfangreiche Datenübertragungen wie SQL-Sicherungs- und -Wiederherstellungsvorgänge vorteilhaft ist. Diese Funktion muss vom Benutzer aktiviert werden. Ausführliche Informationen zum Aktivieren dieser Funktion finden Sie unter [Neues in SMB](http://go.microsoft.com/fwlink/?LinkID=237319) (http://go.microsoft.com/fwlink/?LinkID=237319)).<br /><br /> Signifikante Leistungsverbesserungen besonders für SQL-OLTP-Arbeitsauslastungen. Diese Leistungsverbesserungen erfordern die Anwendung eines Hotfixes. Weitere Informationen zum Hotfix finden Sie [hier](http://go.microsoft.com/fwlink/?LinkId=237320) (http://go.microsoft.com/fwlink/?LinkId=237320)).|  
-|[!INCLUDE[win8srv](../../includes/win8srv-md.md)], einschließlich Server Core|3.0|Unterstützung für transparentes Failover von Dateifreigaben – ohne Ausfallzeiten und Administratoreingriffe seitens SQL-DBA oder Dateiserveradministratoren in Dateiserver-Clusterkonfigurationen.<br /><br /> Unterstützung für die E/A über mehrere Netzwerkschnittstellen gleichzeitig sowie Toleranz für Netzwerkschnittstellenfehler.<br /><br /> Unterstützung für Netzwerkschnittstellen mit RDMA-Funktionen.<br /><br /> Weitere Informationen zu diesen Features sowie zu Server Message Block finden Sie in der [Übersicht zu Server Message Block](http://go.microsoft.com/fwlink/?LinkId=253174) (http://go.microsoft.com/fwlink/?LinkId=253174)).<br /><br /> Unterstützung für Dateiserver mit horizontaler Skalierung mit kontinuierlicher Verfügbarkeit.|  
-|[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2, einschließlich Server Core|3.2|Unterstützung für transparentes Failover von Dateifreigaben – ohne Ausfallzeiten und Administratoreingriffe seitens SQL-DBA oder Dateiserveradministratoren in Dateiserver-Clusterkonfigurationen.<br /><br /> Unterstützung für E/A über mehrere Netzwerkschnittstellen gleichzeitig sowie Toleranz für Netzwerkschnittstellenfehler, unter Verwendung von SMB Multichannel.<br /><br /> Unterstützung für Netzwerkschnittstellen mit RDMA-Funktionen, unter Verwendung von SMB Direct.<br /><br /> Weitere Informationen zu diesen Features sowie zu Server Message Block finden Sie in der [Übersicht zu Server Message Block](http://go.microsoft.com/fwlink/?LinkId=253174) (http://go.microsoft.com/fwlink/?LinkId=253174)).<br /><br /> Unterstützung für Dateiserver mit horizontaler Skalierung mit kontinuierlicher Verfügbarkeit.<br /><br /> Optimiert für kleine wahlfreie Lese-/Schreib-E/A-Vorgänge, wie sie für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -OLTP üblich sind.<br /><br /> Maximale Übertragungseinheit (Maximum Transmission Unit, MTU) ist standardmäßig aktiviert; hierdurch wird bei umfassenden sequenziellen Übertragungen wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Warehouse- und Datenbanksicherungen und -wiederherstellungen die Leistung wesentlich verbessert.|  
+|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP 1, einschließlich Server Core|2.1|Unterstützung eines höheren MTU-Werts, der für umfangreiche Datenübertragungen wie SQL-Sicherungs- und -Wiederherstellungsvorgänge vorteilhaft ist. Diese Funktion muss vom Benutzer aktiviert werden. Ausführliche Informationen zum Aktivieren dieser Funktion finden Sie unter [What's New in SMB (Neues in SMB)](https://go.microsoft.com/fwlink/?LinkID=237319) (https://go.microsoft.com/fwlink/?LinkID=237319).<br /><br /> Signifikante Leistungsverbesserungen besonders für SQL-OLTP-Arbeitsauslastungen. Diese Leistungsverbesserungen erfordern die Anwendung eines Hotfixes. Weitere Informationen zum Hotfix finden Sie [hier](https://go.microsoft.com/fwlink/?LinkId=237320) (https://go.microsoft.com/fwlink/?LinkId=237320)).|  
+|[!INCLUDE[win8srv](../../includes/win8srv-md.md)], einschließlich Server Core|3.0|Unterstützung für transparentes Failover von Dateifreigaben – ohne Ausfallzeiten und Administratoreingriffe seitens SQL-DBA oder Dateiserveradministratoren in Dateiserver-Clusterkonfigurationen.<br /><br /> Unterstützung für die E/A über mehrere Netzwerkschnittstellen gleichzeitig sowie Toleranz für Netzwerkschnittstellenfehler.<br /><br /> Unterstützung für Netzwerkschnittstellen mit RDMA-Funktionen.<br /><br /> Weitere Informationen zu diesen Features sowie zu Server Message Block finden Sie in der [Übersicht zu Server Message Block](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174)).<br /><br /> Unterstützung für Dateiserver mit horizontaler Skalierung mit kontinuierlicher Verfügbarkeit.|  
+|[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2, einschließlich Server Core|3.2|Unterstützung für transparentes Failover von Dateifreigaben – ohne Ausfallzeiten und Administratoreingriffe seitens SQL-DBA oder Dateiserveradministratoren in Dateiserver-Clusterkonfigurationen.<br /><br /> Unterstützung für E/A über mehrere Netzwerkschnittstellen gleichzeitig sowie Toleranz für Netzwerkschnittstellenfehler, unter Verwendung von SMB Multichannel.<br /><br /> Unterstützung für Netzwerkschnittstellen mit RDMA-Funktionen, unter Verwendung von SMB Direct.<br /><br /> Weitere Informationen zu diesen Features sowie zu Server Message Block finden Sie in der [Übersicht zu Server Message Block](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174)).<br /><br /> Unterstützung für Dateiserver mit horizontaler Skalierung mit kontinuierlicher Verfügbarkeit.<br /><br /> Optimiert für kleine wahlfreie Lese-/Schreib-E/A-Vorgänge, wie sie für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -OLTP üblich sind.<br /><br /> Maximale Übertragungseinheit (Maximum Transmission Unit, MTU) ist standardmäßig aktiviert; hierdurch wird bei umfassenden sequenziellen Übertragungen wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Warehouse- und Datenbanksicherungen und -wiederherstellungen die Leistung wesentlich verbessert.|  
   
-## <a name="security-considerations"></a>Sicherheitsüberlegungen  
+## <a name="security-considerations"></a>Überlegungen zur Sicherheit  
   
--   Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonto und das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienstkonto sollten über FULL CONTROL-Freigabeberechtigungen und NTFS-Berechtigungen für die SMB-Freigabeordner verfügen. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonto kann ein Domänen- oder Systemkonto sein, wenn ein SMB-Dateiserver verwendet wird. Weitere Informationen zu Freigabe- und NTFS-Berechtigungen finden Sie unter [Freigabe- und NTFS-Berechtigungen auf einem Dateiserver](http://go.microsoft.com/fwlink/?LinkId=245535) (http://go.microsoft.com/fwlink/?LinkId=245535)).  
+-   Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonto und das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienstkonto sollten über FULL CONTROL-Freigabeberechtigungen und NTFS-Berechtigungen für die SMB-Freigabeordner verfügen. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonto kann ein Domänen- oder Systemkonto sein, wenn ein SMB-Dateiserver verwendet wird. Weitere Informationen zu Freigabe- und NTFS-Berechtigungen finden Sie unter [Freigabe- und NTFS-Berechtigungen auf einem Dateiserver](https://go.microsoft.com/fwlink/?LinkId=245535) (https://go.microsoft.com/fwlink/?LinkId=245535)).  
   
     > [!NOTE]  
     >  Die FULL CONTROL-Freigabeberechtigungen und die NTFS-Berechtigungen in den SMB-Freigabeordnern sollten wie folgt beschränkt werden: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Dienstkonto und Windows-Benutzer mit admin-Serverrollen.  
@@ -110,15 +110,15 @@ ms.locfileid: "51018975"
   
 ## <a name="known-issues"></a>Bekannte Probleme  
   
--   Nachdem Sie eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbank getrennt haben, die sich auf einem dem Netzwerk zugeordneten Speichermedium befindet, könnte ein Problem mit der Datenbankberechtigung auftreten, wenn Sie versuchen, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank erneut anzufügen. Das Problem wird in [diesem KB-Artikel](http://go.microsoft.com/fwlink/?LinkId=237321) (http://go.microsoft.com/fwlink/?LinkId=237321)) näher erläutert. Wie Sie dieses Problem umgehen, erfahren Sie im KB-Artikel im Abschnitt **Weitere Informationen** .  
+-   Nachdem Sie eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbank getrennt haben, die sich auf einem dem Netzwerk zugeordneten Speichermedium befindet, könnte ein Problem mit der Datenbankberechtigung auftreten, wenn Sie versuchen, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank erneut anzufügen. Das Problem wird in [diesem KB-Artikel](https://go.microsoft.com/fwlink/?LinkId=237321) (https://go.microsoft.com/fwlink/?LinkId=237321)) näher erläutert. Wie Sie dieses Problem umgehen, erfahren Sie im KB-Artikel im Abschnitt **Weitere Informationen** .  
   
 -   Einige Drittanbieter, wie NetApp-Geräte unterstützen nicht alle SQL Server-API-Aufrufe. Mit diesen erhalten Sie möglicherweise:   
-    2015-06-04 13:14:19.97 spid9s Fehler: 17053, schwere: 16, Status: 1.  
-    2015-06-04-13:14:19.97 spid9s DoDevIoCtlOut() GetOverlappedResult(): Betriebssystemfehler 1 (falsche Funktion.).  
+    2015-06-04-13:14:19.97 spid9s Fehler: 17053, Schweregrad: 16, Status: 1.  
+    2015-06-04 13:14:19.97 spid9s DoDevIoCtlOut() GetOverlappedResult(): Betriebssystemfehler 1 (falsche Funktion.).  
   
      Für NTFS ist der Fehler harmlos,  aber für ReFS kann er zu bedeutenden Leistungseinbußen führen.  
   
--   Wenn die SMB-Dateifreigabe als Speicheroption für eine gruppierte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet wird, kann das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failovercluster-Diagnoseprotokoll standardmäßig nicht in die Dateifreigabe geschrieben werden, da die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ressourcen-DLL keine Lese-/Schreibberechtigung für die Dateifreigabe hat. Führen Sie eine der folgenden Aktionen aus, um diesen Fehler zu beheben:  
+-   Wenn die SMB-Dateifreigabe als Speicheroption für eine gruppierte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet wird, kann das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failovercluster-Diagnoseprotokoll standardmäßig nicht in die Dateifreigabe geschrieben werden, da die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressourcen-DLL keine Lese-/Schreibberechtigung für die Dateifreigabe hat. Führen Sie eine der folgenden Aktionen aus, um diesen Fehler zu beheben:  
   
     1.  Erteilen Sie allen Computerobjekten im Cluster Lese-/Schreibberechtigungen für die Dateifreigabe.  
   

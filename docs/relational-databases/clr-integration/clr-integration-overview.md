@@ -18,12 +18,12 @@ ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1231fc3c3f18711357ccf84daf06fb4821fa27a2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 96f64be7d380f2243945fb0b9a6c67244d7571cb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664930"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208909"
 ---
 # <a name="clr-integration---overview"></a>CLR-Integration: Übersicht
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "51664930"
  In verwaltetem Code wird Codezugriffssicherheit (Code Access Sicherheit, CAS) verwendet, um zu verhindern, dass Assemblys bestimmte Vorgänge ausführen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet CAS, um die Absicherung von verwaltetem Code zu unterstützen und eine Gefährdung des Betriebssystems oder des Datenbankservers zu verhindern.  
   
 ## <a name="advantages-of-clr-integration"></a>Vorteile der CLR-Integration  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] ist ausdrücklich für direkten Datenzugriff und die direkte Datenbearbeitung in der Datenbank vorgesehen. Während [!INCLUDE[tsql](../../includes/tsql-md.md)] für den Datenzugriff und die Datenverwaltung ideal geeignet ist, handelt es sich dabei nicht um eine vollständige Programmiersprache. Beispielsweise unterstützt [!INCLUDE[tsql](../../includes/tsql-md.md)] keine Arrays, Auflistungen, For-Each-Schleifen, Bit-Verschiebungen oder Klassen. Bestimmte dieser Konstrukte können in [!INCLUDE[tsql](../../includes/tsql-md.md)] simuliert werden; verwalteter Code verfügt über eine integrierte Unterstützung dieser Konstrukte. Je nach Szenario können diese Funktionen einen zwingenden Grund darstellen, bestimmte Datenbankfunktionalitäten in verwaltetem Code zu implementieren.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] ist ausdrücklich für direkten Datenzugriff und die direkte Datenbearbeitung in der Datenbank vorgesehen. Während [!INCLUDE[tsql](../../includes/tsql-md.md)] für den Datenzugriff und die Datenverwaltung ideal geeignet ist, handelt es sich dabei nicht um eine vollständige Programmiersprache. Beispielsweise unterstützt [!INCLUDE[tsql](../../includes/tsql-md.md)] keine Arrays, Auflistungen, For-Each-Schleifen, Bit-Verschiebungen oder Klassen. Bestimmte dieser Konstrukte können in [!INCLUDE[tsql](../../includes/tsql-md.md)]simuliert werden; verwalteter Code verfügt über eine integrierte Unterstützung dieser Konstrukte. Je nach Szenario können diese Funktionen einen zwingenden Grund darstellen, bestimmte Datenbankfunktionalitäten in verwaltetem Code zu implementieren.  
   
  Microsoft Visual Basic .NET und Microsoft Visual C# bieten objektorientierte Funktionen wie z. B. Kapselung, Vererbung und Polymorphie. Damit verbundener Code kann jetzt leicht in Klassen und Namespaces organisiert werden. Wenn Sie mit großen Datenmengen an Servercode arbeiten, können Sie auf diese Weise Ihren Code leichter organisieren und instand halten.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "51664930"
   
  Die CLR-Integration bietet das Potenzial zu verbesserter Leistung. Weitere Informationen finden Sie unter [Performance of CLR Integration](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
  
->  [!WARNING]
+> [!WARNING]
 >  CLR verwendet die Codezugriffssicherheit (Code Access Security, CAS) im .NET Framework, die nicht länger als Sicherheitsbegrenzung unterstützt wird. Eine CLR-Assembly, die mit `PERMISSION_SET = SAFE` erstellt wurde, kann womöglich auf externe Systemressourcen zugreifen, nicht verwalteten Code aufrufen und sysadmin-Privilegien erwerben. Ab [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] wird eine `sp_configure`-Option mit der Bezeichnung `clr strict security` eingeführt, um die Sicherheit von CLR-Assemblys zu erhöhen. `clr strict security` ist standardmäßig aktiviert und behandelt `SAFE`- und `EXTERNAL_ACCESS`-Assemblys so, als wären Sie als `UNSAFE` gekennzeichnet. Die Option `clr strict security` kann für die Abwärtskompatibilität deaktiviert werden, es wird jedoch nicht empfohlen. Microsoft empfiehlt, dass alle Assemblys durch ein Zertifikat oder einen asymmetrischen Schlüssel mit einem entsprechenden Anmeldenamen signiert werden, dem `UNSAFE ASSEMBLY`-Berechtigung für die Masterdatenbank gewährt wurde. Weitere Informationen finden Sie unter [CLR Strict Security](../../database-engine/configure-windows/clr-strict-security.md). 
   
 ## <a name="choosing-between-transact-sql-and-managed-code"></a>Transact-SQL oder verwalteter Code?  

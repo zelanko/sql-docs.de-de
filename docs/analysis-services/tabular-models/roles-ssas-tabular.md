@@ -1,5 +1,5 @@
 ---
-title: Rollen | Microsoft-Dokumentation
+title: Analysis Services tabular model-Rollen | Microsoft-Dokumentation
 ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2f33d46750085f06f890a101382d7949a85048b9
-ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
+ms.openlocfilehash: bbbf4f080696d41360e7fd654ef4b6878df268a6
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45975689"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072167"
 ---
 # <a name="roles"></a>Rollen
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -63,14 +63,14 @@ ms.locfileid: "45975689"
   
  Zeilenfilter können nur für Rollen mit Leseberechtigung sowie mit Lese- und Verarbeitungsberechtigung definiert werden. Wenn ein Zeilenfilter nicht für eine bestimmte Tabelle definiert ist, sind Mitglieder einer Rolle, die über die Leseberechtigung bzw. die Lese- und Verarbeitungsberechtigung verfügt, standardmäßig in der Lage, alle Zeilen in der Tabelle abzufragen, es sei denn, ein Kreuzfilter von einer anderen Tabelle ist aktiv.  
   
- Sobald ein Zeilenfilter für eine bestimmte Tabelle definiert wurde, werden die Zeilen, die von Mitgliedern dieser spezifischen Rolle abgefragt werden können, durch eine DAX-Formel definiert, die den Wert TRUE oder FALSE ergeben muss. Nicht in die DAX-Formel eingeschlossene Zeilen können nicht abgefragt werden. Beispielsweise können Mitglieder der Rolle „Sales“ in der Tabelle „Customers“ mit dem Zeilenfilterausdruck *=Customers [Country] = USA*ausschließlich Kunden in den USA anzeigen.  
+ Sobald ein Zeilenfilter für eine bestimmte Tabelle definiert wurde, werden die Zeilen, die von Mitgliedern dieser spezifischen Rolle abgefragt werden können, durch eine DAX-Formel definiert, die den Wert TRUE oder FALSE ergeben muss. Nicht in die DAX-Formel eingeschlossene Zeilen können nicht abgefragt werden. Z. B. für Mitglieder der Rolle "Sales", die Tabelle "Customers" mit dem zeilenfilterausdruck *= Customers [Country] = "USA"*, Mitglieder der Rolle "Sales", zeilenfilterausdruck ausschließlich Kunden in den USA anzeigen.  
   
  Zeilenfilter gelten für die angegebenen sowie für verknüpfte Zeilen. Wenn eine Tabelle über mehrere Beziehungen verfügt, wird die Sicherheit für die aktive Beziehung mithilfe von Filtern gewährleistet. Für Zeilenfilter und Zeilenfilter, die für verknüpfte Tabellen definiert wurden, wird eine Schnittmenge gebildet. Beispiel:  
   
 |Tabelle|DAX-Ausdruck|  
 |-----------|--------------------|  
-|Region|=Region[Country]="USA"|  
-|ProductCategory|=ProductCategory[Name]="Bicycles"|  
+|Region|= Region [Country] = "USA"|  
+|ProductCategory|= "ProductCategory" [Name] = "Fahrräder"|  
 |Transaktionen|=Transactions[Year]=2008|  
   
  Im Endeffekt ergeben diese Berechtigungen für die Transactions-Tabelle, dass Mitglieder berechtigt sind, Datenzeilen für Kunden in den USA, die Produktkategorie Bicycles und das Jahr 2008 abzufragen. Benutzer wären nicht in der Lage, Transaktionen außerhalb der USA, Transaktionen, die keine Fahrräder beinhalten, oder Transaktionen in einem anderen Jahr als 2008 abzufragen, es sei denn, sie sind Mitglied einer anderen Rolle, die diese Berechtigungen gewährt.  
@@ -117,7 +117,7 @@ ms.locfileid: "45975689"
 |7|Vertrieb und Marketing|  
   
 ##  <a name="bkmk_testroles"></a> Testing roles  
- Beim Erstellen eines Modellprojekts können Sie die Funktion "In Excel analysieren" verwenden, um die Wirksamkeit der definierten Rollen zu testen. Wenn Sie im Menü **Modell** im Modell-Designer auf **In Excel analysieren**klicken, bevor Excel geöffnet wird, wird das Dialogfeld **Anmeldeinformationen und Perspektive auswählen** angezeigt. In diesem Dialogfeld können Sie den aktuellen Benutzernamen, einen anderen Benutzernamen, eine Rolle und eine Perspektive angeben, um darüber eine Verbindung mit dem Arbeitsbereichsmodell als Datenquelle herzustellen. Weitere Informationen finden Sie unter [in Excel analysieren](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
+ Beim Erstellen eines Modellprojekts können Sie die Funktion "In Excel analysieren" verwenden, um die Wirksamkeit der definierten Rollen zu testen. Wenn Sie im Menü **Modell** im Modell-Designer auf **In Excel analysieren**klicken, bevor Excel geöffnet wird, wird das Dialogfeld **Anmeldeinformationen und Perspektive auswählen** angezeigt. In diesem Dialogfeld können Sie den aktuellen Benutzernamen, einen anderen Benutzernamen, eine Rolle und eine Perspektive angeben, um darüber eine Verbindung mit dem Arbeitsbereichsmodell als Datenquelle herzustellen. Weitere Informationen finden Sie unter [In Excel analysieren](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)installiert sein.  
   
 ##  <a name="bkmk_rt"></a> Related tasks  
   

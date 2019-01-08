@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - removing primary keys
@@ -15,12 +14,12 @@ ms.assetid: c472e465-7bdd-4d74-8fc9-e47fca007ccb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74aff2b9f4085e3267bcf7c76462e04af4793d44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 690b52fceb74269501880565bab65b020206fa61
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221220"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814532"
 ---
 # <a name="delete-primary-keys"></a>Löschen von Primärschlüsseln
   Sie können einen Primärschlüssel mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [!INCLUDE[tsql](../../includes/tsql-md.md)]löschen (DROP). Wenn der Primärschlüssel gelöscht wird, wird auch der zugehörige Index gelöscht.  
@@ -29,7 +28,7 @@ ms.locfileid: "48221220"
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So löschen Sie einen Primärschlüssel mit:**  
   
@@ -37,14 +36,14 @@ ms.locfileid: "48221220"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Security"></a> Sicherheit  
   
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Tabelle.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-delete-a-primary-key-constraint-using-object-explorer"></a>So löschen Sie eine PRIMARY KEY-Einschränkung mit Objekt-Explorer  
   
@@ -63,7 +62,7 @@ ms.locfileid: "48221220"
     > [!NOTE]  
     >  Schließen Sie die Tabelle, ohne die Änderungen zu speichern, um diese Aktion rückgängig zu machen. Das Löschen eines Primärschlüssels lässt sich nicht rückgängig machen, ohne dass auch alle anderen Änderungen an der Tabelle aufgehoben werden.  
   
-3.  Klicken Sie im Menü **Datei** auf **Speichern** > *Tabellenname*.  
+3.  Klicken Sie im Menü **Datei** auf **Speichern**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   

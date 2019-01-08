@@ -1,22 +1,21 @@
 ---
-title: 'Schritt 9: Testen des Tutorialpakets aus Lektion 1 | Microsoft-Dokumentation'
+title: 'Schritt 9: Testen des Lektion 1-Tutorialpakets | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ba98c694b99eb1ab81836a5d1f23a5cd4ea0d545
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 069f9ca26aa59c8edb8b97f1acbdf336a61b7d9b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197000"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793982"
 ---
 # <a name="step-9-testing-the-lesson-1-tutorial-package"></a>Schritt 9: Testen des Lektion 1-Lernprogrammpakets
   In dieser Lektion haben Sie die folgenden Aufgaben ausgeführt:  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - ProtocolOrder Property (ClientNetworkProtocol Class)
@@ -20,15 +18,15 @@ ms.assetid: aa09b8ab-37db-4406-8973-acf503855fd2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: de7284c4023f7e658c37794d670356fd5b9c4025
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0a0043e5a894e3f3f1b778a6f42fe6e3bacbbc78
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152460"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353469"
 ---
 # <a name="protocolorder-property-clientnetworkprotocol-class"></a>ProtocolOrder-Eigenschaft (ClientNetworkProtocol-Klasse)
-  Ruft die fortlaufende Nummer des derzeitig referenzierten Client-Netzwerkprotokoll gemäß der [SetOrderValue-Methode (ClientNetworkProtocol Class)](clientnetworkprotocol-class.md) Methode.  
+  Ruft die fortlaufende Nummer des Netzwerkprotokolls ab, auf das aktuell verwiesen wird. Dies erfolgt gemäß der [SetOrderValue-Methode (ClientNetworkProtocol Class)](clientnetworkprotocol-class.md) -Methode.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,12 +41,12 @@ object
  A [ClientNetworkProtocol-Klassenobjekt](clientnetworkprotocol-class.md) , das das vom [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Client verwendete Netzwerkprotokoll darstellt.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
- Ein `uint32` Wert, der die fortlaufende Nummer des derzeitig referenzierten clientnetzwerkprotokolls angibt, mit der `OrderValue` Methode. Wenn das Clientnetzwerkprotokoll deaktiviert ist, ist dieser Wert Null.  
+ Ein `uint32`-Wert, der die fortlaufende Nummer des derzeitig referenzierten Clientnetzwerkprotokolls angibt, das durch die `OrderValue`-Methode festgelegt ist. Wenn das Clientnetzwerkprotokoll deaktiviert ist, ist dieser Wert Null.  
   
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurieren von Clientprotokollen](http://technet.microsoft.com/library/ms181035.aspx)   
- [Konfigurieren von Clientnetzwerkprotokollen und Netzwerkbibliotheken](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Konfigurieren von Clientprotokollen](https://technet.microsoft.com/library/ms181035.aspx)   
+ [Konfigurieren von Clientnetzwerkprotokollen und Netzwerkbibliotheken](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

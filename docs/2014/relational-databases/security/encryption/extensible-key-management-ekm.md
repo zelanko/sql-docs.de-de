@@ -14,12 +14,12 @@ ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: a13deff4d15d38286c943ce080faf6bf7ce1ca55
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 42ec76542ffdf382c10c48cd107765d312ed1781
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111240"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375782"
 ---
 # <a name="extensible-key-management-ekm"></a>Erweiterbare Schlüsselverwaltung (Extensible Key Management, EKM)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt Funktionen zur Datenverschlüsselung zusammen mit der *erweiterbaren Schlüsselverwaltung* (Extensible Key Management, EKM) bereit. Dabei wird der Anbieter *Microsoft Cryptographic API* (MSCAPI) zur Verschlüsselung und Schlüsselgenerierung verwendet. Verschlüsselungsschlüssel für die Daten- und Schlüsselverschlüsselung werden in temporären Schlüsselcontainern erstellt und müssen vom Anbieter exportiert werden, bevor sie in der Datenbank gespeichert werden. Dieser Ansatz ermöglicht eine Schlüsselverwaltung mit einer Verschlüsselungsschlüsselhierarchie und Schlüsselsicherung durch [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -32,7 +32,7 @@ ms.locfileid: "48111240"
   
  Durch die erweiterbare Schlüsselverwaltung in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] können EKM-/HSM-Drittanbieter ihre Module bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]registrieren. Nach der Registrierung können [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Benutzer die auf den EKM-Modulen gespeicherten Verschlüsselungsschlüssel verwenden. Auf diese Weise kann [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die von diesen Modulen unterstützten erweiterten Verschlüsselungsfunktionen wie die Massenverschlüsselung und -entschlüsselung und Schlüsselverwaltungsfunktionen wie die Schlüsselablaufzeit und die Schlüsselrotation nutzen.  
   
- Beim Ausführen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in einer Azure-VM können von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Schlüssel verwendet werden, die im [Azure-Schlüsseltresor](http://go.microsoft.com/fwlink/?LinkId=521401)gespeichert sind. Weitere Informationen finden Sie im Thema [Erweiterbare Schlüsselverwaltung mit Azure Key Vault &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md).  
+ Beim Ausführen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in einer Azure-VM können von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Schlüssel verwendet werden, die im [Azure-Schlüsseltresor](https://go.microsoft.com/fwlink/?LinkId=521401)gespeichert sind. Weitere Informationen finden Sie im Thema [Erweiterbare Schlüsselverwaltung mit Azure Key Vault &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md).  
   
 ## <a name="ekm-configuration"></a>EKM-Konfiguration  
  Die erweiterbare Schlüsselverwaltung wird nicht in jeder Edition von [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den Editionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]unterstützt werden, finden Sie unter [Features Supported by the Editions of SQL Server 2014](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -87,7 +87,7 @@ GO
  EKM-Module können mehrere Arten der Authentifizierung unterstützen. Jeder Anbieter macht nur eine Art der Authentifizierung für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]verfügbar. Wenn das Modul zum Beispiel die Standardauthentifizierung oder andere Authentifizierungstypen unterstützt, wird nur eine der beiden Arten bereitgestellt.  
   
 #### <a name="ekm-device-specific-basic-authentication-using-usernamepassword"></a>EKM-gerätespezifische Standardauthentifizierung mit einer Benutzername-/Kennwortkombination  
- Bei den EKM-Modulen, die die Standardauthentifizierung mit einem *Benutzername/Kennwort*-Paar unterstützen, stellt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eine transparente Authentifizierung über Anmeldeinformationen bereit. Weitere Informationen über Anmeldenamen finden Sie unter [Anmeldeinformationen &amp;#40;Datenbank-Engine&amp;#41;](../authentication-access/credentials-database-engine.md).  
+ Bei den EKM-Modulen, die die Standardauthentifizierung mit einem *Benutzername/Kennwort*-Paar unterstützen, stellt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eine transparente Authentifizierung über Anmeldeinformationen bereit. Weitere Informationen über Anmeldenamen finden Sie unter [Anmeldeinformationen &#40;Datenbank-Engine&#41;](../authentication-access/credentials-database-engine.md).  
   
  Sie können für einen EKM-Anbieter einen Identitätsnachweis (Anmeldeinformationen) erstellen und diesen einem Anmeldenamen (sowohl für Windows- als auch für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Konten) zuordnen, sodass der Zugriff auf ein EKM-Modul über eine einzelne Anmeldung möglich ist. Das *Identify* -Feld im Identitätsnachweis enthält den Benutzernamen und das *secret* -Feld ein Kennwort für die Verbindung mit einem EKM-Modul.  
   
@@ -101,12 +101,12 @@ GO
 ### <a name="encryption-and-decryption-by-an-ekm-device"></a>Verschlüsselung und Entschlüsselung durch ein EKM-Gerät  
  Sie können die folgenden Funktionen verwenden, um Daten mithilfe von symmetrischen und asymmetrischen Schlüsseln zu verschlüsseln und zu entschlüsseln:  
   
-|Funktion|Verweis|  
+|Funktion|Referenz|  
 |-------------------------|---------------|  
 |Verschlüsselung mit symmetrischen Schlüsseln|[CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)|  
 |Verschlüsselung mit asymmetrischen Schlüsseln|[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|  
-|EncryptByKey(key_guid, 'Klartext', …)|[ENCRYPTBYKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbykey-transact-sql)|  
-|DecryptByKey(ciphertext, …)|[DECRYPTBYKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbykey-transact-sql)|  
+|EncryptByKey(key_guid, 'cleartext', ...)|[ENCRYPTBYKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbykey-transact-sql)|  
+|DecryptByKey(ciphertext, ...)|[DECRYPTBYKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbykey-transact-sql)|  
 |EncryptByAsmKey(key_guid, 'Klartext')|[ENCRYPTBYASYMKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbyasymkey-transact-sql)|  
 |DecryptByAsmKey(ciphertext)|[DECRYPTBYASYMKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbyasymkey-transact-sql)|  
   
@@ -125,7 +125,7 @@ OPEN SYMMETRIC KEY Key1
 DECRYPTION BY EKM_AKey1  
 ```  
   
- Weitere Informationen zu Datenbank- und Serverschlüsseln in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] finden Sie unter [Verschlüsselungsschlüssel für SQL Server und Datenbank &amp;#40;Datenbank-Engine&amp;#41;](sql-server-and-database-encryption-keys-database-engine.md).  
+ Weitere Informationen zu Datenbank- und Serverschlüsseln in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] finden Sie unter [Verschlüsselungsschlüssel für SQL Server und Datenbank &#40;Datenbank-Engine&#41;](sql-server-and-database-encryption-keys-database-engine.md).  
   
 > [!NOTE]  
 >  EKM-Schlüssel können nicht mit anderen EKM-Schlüsseln verschlüsselt werden.  

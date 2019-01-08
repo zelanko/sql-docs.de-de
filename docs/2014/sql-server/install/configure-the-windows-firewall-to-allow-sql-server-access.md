@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows Firewall ports
@@ -24,12 +23,12 @@ ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7b254c1e7d814af64117343d98d3275e5ac66d64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d0e1d1528d9ba2f85867aa09b7314f4030dfcd9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128990"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357651"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
   Durch Firewallsysteme kann der nicht autorisierte Zugriff auf Computerressourcen verhindert werden. Wenn eine Firewall aktiviert, aber nicht richtig konfiguriert ist, können Versuche der Verbindungsherstellung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] blockiert werden.  
@@ -37,7 +36,7 @@ ms.locfileid: "48128990"
  Um über eine Firewall auf eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugreifen zu können, müssen Sie die Firewall auf dem Computer mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entsprechend konfigurieren. Die Firewall ist eine Komponente von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Sie können auch eine Firewall von einem anderen Unternehmen installieren. In diesem Thema wird erläutert, wie die Windows-Firewall konfiguriert wird. Die Grundprinzipien gelten jedoch auch für andere Firewallprogramme.  
   
 > [!NOTE]  
->  Dieses Thema bietet einen Überblick über die Firewallkonfiguration und fasst Informationen zusammen, die für einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Administrator interessant sind. Weitere Informationen zur Firewall sowie autorisierende Informationen für diese finden Sie in der Dokumentation der Firewall, z. B. in [Windows-Firewall mit erweiterter Sicherheit und IPsec](http://go.microsoft.com/fwlink/?LinkID=116904).  
+>  Dieses Thema bietet einen Überblick über die Firewallkonfiguration und fasst Informationen zusammen, die für einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Administrator interessant sind. Weitere Informationen zur Firewall sowie autorisierende Informationen für diese finden Sie in der Dokumentation der Firewall, z. B. in [Windows-Firewall mit erweiterter Sicherheit und IPsec](https://go.microsoft.com/fwlink/?LinkID=116904).  
   
  Benutzer, die mit dem Element **Windows-Firewall** in der Systemsteuerung und mit dem MMC-Snap-In (Microsoft Management Console) „Windows Firewall mit erweiterter Sicherheit“ vertraut sind und wissen, welche Firewalleinstellungen sie konfigurieren möchten, können direkt zu den Themen in der folgenden Liste wechseln:  
   
@@ -60,11 +59,11 @@ ms.locfileid: "48128990"
   
  Das Festlegen einer Firewallstrategie ist komplexer als die bloße Entscheidung, ob ein bestimmter Port geöffnet oder geschlossen werden sollte. Beim Entwickeln einer Firewallstrategie für Ihr Unternehmen sollten Sie sicherstellen, dass Sie alle Regeln und Konfigurationsoptionen berücksichtigen, die Ihnen zur Verfügung stehen. In diesem Thema werden nicht alle möglichen Firewalloptionen behandelt. Es wird empfohlen, die folgenden Dokumente zu beachten:  
   
- [Erste Schritte mit der Windows-Firewall mit erweiterter Sicherheit](http://go.microsoft.com/fwlink/?LinkId=116080)  
+ [Erste Schritte mit der Windows-Firewall mit erweiterter Sicherheit](https://go.microsoft.com/fwlink/?LinkId=116080)  
   
- [Windows Firewall with Advanced Security Design Guide](http://go.microsoft.com/fwlink/?LinkId=116904)  
+ [Windows Firewall with Advanced Security Design Guide](https://go.microsoft.com/fwlink/?LinkId=116904)  
   
- [Introduction to Server and Domain Isolation](http://go.microsoft.com/fwlink/?LinkId=116081)  
+ [Introduction to Server and Domain Isolation](https://go.microsoft.com/fwlink/?LinkId=116081)  
   
 ##  <a name="BKMK_default"></a> Standardeinstellungen der Firewall  
  Der erste Schritt bei der Planung der Firewallkonfiguration ist die Bestimmung des aktuellen Status der Firewall Ihres Betriebssystems. Wenn das Betriebssystem aus einer vorherigen Version aktualisiert wurde, wurden die früheren Firewalleinstellungen möglicherweise beibehalten. Außerdem kann es sein, dass die Firewalleinstellungen von einem anderen Administrator oder von einer Gruppenrichtlinie in Ihrer Domäne geändert wurden.  
@@ -80,7 +79,7 @@ ms.locfileid: "48128990"
      Das Element **Windows-Firewall** kann in der Systemsteuerung geöffnet werden.  
   
     > [!IMPORTANT]  
-    >  Änderungen, die in der Systemsteuerung am Element **Windows-Firewall** vorgenommenen werden, wirken sich nur auf das aktuelle Profil aus. Für mobile Geräte, wie z. B. einen Laptop, sollte das Element **Windows-Firewall** in der Systemsteuerung nicht verwendet werden, da sich das Profil ändern kann, wenn es in einer anderen Konfiguration angeschlossen wird. Dann ist das zuvor konfigurierte Profil nicht wirksam. Weitere Informationen zu Profilen finden Sie unter [Erste Schritte mit der Windows-Firewall mit erweiterter Sicherheit](http://go.microsoft.com/fwlink/?LinkId=116080).  
+    >  Änderungen, die in der Systemsteuerung am Element **Windows-Firewall** vorgenommenen werden, wirken sich nur auf das aktuelle Profil aus. Für mobile Geräte, wie z. B. einen Laptop, sollte das Element **Windows-Firewall** in der Systemsteuerung nicht verwendet werden, da sich das Profil ändern kann, wenn es in einer anderen Konfiguration angeschlossen wird. Dann ist das zuvor konfigurierte Profil nicht wirksam. Weitere Informationen zu Profilen finden Sie unter [Erste Schritte mit der Windows-Firewall mit erweiterter Sicherheit](https://go.microsoft.com/fwlink/?LinkId=116080).  
   
      Das Element **Windows-Firewall** in der Systemsteuerung ermöglicht Ihnen die Konfiguration grundlegender Optionen. Dabei handelt es sich z. B. um:  
   
@@ -120,11 +119,11 @@ ms.locfileid: "48128990"
   
      Weitere Informationen zu **netsh**finden Sie unter den folgenden Links:  
   
-    -   [Verwenden des Tools "Netsh.exe" und Befehlszeilenoptionen](http://support.microsoft.com/kb/242468)  
+    -   [Verwenden des Tools "Netsh.exe" und Befehlszeilenoptionen](https://support.microsoft.com/kb/242468)  
   
-    -   [Die Verwendung des “netsh advfirewall firewall”-Kontexts anstelle des “netsh firewall”-Kontexts, um das Verhalten der Windows-Firewall in Windows Server 2008 und Windows Vista zu kontrollieren](http://support.microsoft.com/kb/947709)  
+    -   [How to use the "netsh advfirewall firewall" context instead of the "netsh firewall" context to control Windows Firewall behavior in Windows Server 2008 and in Windows Vista (verwenden des Kontexts „netsh advfirewall firewall“ anstelle des Kontexts „netsh firewall“ zum Kontrollieren des Firewall-Verhaltens unter Windows Server 2008 und Windows Vista)](https://support.microsoft.com/kb/947709)  
   
-    -   [Der "netsh firewall"-Befehl in Verbindung mit dem Parameter "profile=all" konfiguriert nicht das öffentliche Profil auf einem Windows Vista-Computer](http://support.microsoft.com/kb/947213)  
+    -   [Der "netsh firewall"-Befehl in Verbindung mit dem Parameter "profile=all" konfiguriert nicht das öffentliche Profil auf einem Windows Vista-Computer](https://support.microsoft.com/kb/947213)  
   
 ## <a name="ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>Von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Die folgenden Tabellen können Sie dabei unterstützen, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendeten Ports zu identifizieren.  
@@ -142,7 +141,7 @@ ms.locfileid: "48128990"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, die über einen HTTP-Endpunkt ausgeführt wird.|Kann angegeben werden, wenn ein HTTP-Endpunkt erstellt wird. Als Standard wird TCP-Port 80 für den CLEAR_PORT-Datenverkehr und 443 für den SSL_PORT-Datenverkehr verwendet.|Wird für eine HTTP-Verbindung über eine URL verwendet|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Standardinstanz, die über einen HTTPS-Endpunkt ausgeführt wird.|TCP-Port 443|Wird für eine HTTPS-Verbindung über eine URL verwendet. HTTPS ist eine HTTP-Verbindung, die SSL (Secure Sockets Layer) verwendet.|  
 |[!INCLUDE[ssSB](../../includes/sssb-md.md)]|TCP-Port 4022. Führen Sie die folgende Abfrage aus, um den verwendeten Port zu überprüfen:<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)]ist kein Standardport festgelegt, jedoch ist dies die herkömmliche, in Beispielen der Onlinedokumentation verwendete Konfiguration.|  
-|Datenbankspiegelung|Vom Administrator ausgewählter Port. Führen Sie die folgende Abfrage aus, um den Port zu bestimmen:<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|Für die Datenbankspiegelung ist kein Standardport festgelegt, in Beispielen der Onlinedokumentation wird jedoch TCP-Port 7022 verwendet. Es ist sehr wichtig, eine Unterbrechung eines bereits verwendeten Spiegelungsendpunkts zu vermeiden, insbesondere im Modus für hohe Sicherheit mit automatischem Failover. Die Firewallkonfiguration muss eine Unterbrechung des Quorums vermeiden. Weitere Informationen finden Sie unter [Angeben einer Servernetzwerkadresse &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)verwendet.|  
+|Datenbankspiegelung|Vom Administrator ausgewählter Port. Führen Sie die folgende Abfrage aus, um den Port zu bestimmen:<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|Für die Datenbankspiegelung ist kein Standardport festgelegt, in Beispielen der Onlinedokumentation wird jedoch TCP-Port 7022 verwendet. Es ist sehr wichtig, eine Unterbrechung eines bereits verwendeten Spiegelungsendpunkts zu vermeiden, insbesondere im Modus für hohe Sicherheit mit automatischem Failover. Die Firewallkonfiguration muss eine Unterbrechung des Quorums vermeiden. Weitere Informationen finden Sie unter [Angeben einer Servernetzwerkadresse &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)verwendet.|  
 |Replikation|Für Replikationsverbindungen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden die typischen regulären [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Ports (TCP-Port 1433 für die Standardinstanz usw.) verwendet.<br /><br /> Die Websynchronisierung und der FTP-/UNC-Zugriff für die Replikationsmomentaufnahme erfordern das Öffnen zusätzlicher Ports auf der Firewall. Zur Übertragung der Anfangsdaten und des Schemas zwischen unterschiedlichen Standorten kann für die Replikation FTP (TCP-Port 21), die Synchronisierung über HTTP (TCP-Port 80) oder die Dateifreigabe verwendet werden. Die Dateifreigabe verwendet die UDP-Ports 137 und 138 und den TCP-Port 139, wenn NetBIOS verwendet wird. Für die Dateifreigabe wird der TCP-Port 445 verwendet.|Bei der Synchronisierung über HTTP wird für die Replikation der IIS-Endpunkt (Ports, die dafür konfigurierbar sind, standardmäßig aber Port 80) verwendet, aber der IIS-Prozess stellt eine Verbindung mit Back-End- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über die Standardports (1433 für die Standardinstanz) her.<br /><br /> Bei der Websynchronisierung mittels FTP findet die FTP-Übertragung zwischen IIS und dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verleger und nicht zwischen Abonnent und IIS statt.|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger|TCP-Port 135<br /><br /> Siehe [Spezielle Überlegungen zu Port 135](#BKMK_port_135)<br /><br /> Die [IPsec](#BKMK_IPsec) -Ausnahme ist möglicherweise auch erforderlich.|Bei Verwendung von [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]müssen Sie außerdem auf dem [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] -Hostcomputer **Devenv.exe** zur Ausnahmeliste hinzufügen und den TCP-Port 135 öffnen.<br /><br /> Bei Verwendung von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]müssen Sie außerdem auf dem [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] -Hostcomputer **ssms.exe** zur Ausnahmeliste hinzufügen und TCP-Port 135 öffnen. Weitere Informationen finden Sie unter [konfigurieren Sie den Transact-SQL-Debugger](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).|  
   
@@ -164,7 +163,7 @@ ms.locfileid: "48128990"
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
- Weitere Informationen über Endpunkte finden Sie unter [Konfigurieren der Datenbank-Engine zum Überwachen mehrerer TCP-Ports](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) und [Endpunkte-Katalogsichten &amp;#40;Transact-SQL&amp;#41;](/sql/relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql).  
+ Weitere Informationen über Endpunkte finden Sie unter [Konfigurieren der Datenbank-Engine zum Überwachen mehrerer TCP-Ports](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) und [Endpunkte-Katalogsichten &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql).  
   
 ###  <a name="BKMK_ssas"></a> Von Analysis Services verwendete Ports  
  In der folgenden Tabelle werden die häufig von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]verwendeten Ports aufgeführt.  
@@ -173,8 +172,8 @@ ms.locfileid: "48128990"
 |-------------|----------|--------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|TCP-Port 2383 für die Standardinstanz|Der Standardport für die Standardinstanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browserdienst|TCP-Port 2382, nur für eine benannte Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] notwendig|Clientverbindungsanforderungen für eine benannte Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , in denen keine Portnummer angegeben ist, werden an Port 2382 weitergeleitet, dem Port, auf dem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser lauscht. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser leitet dann die Anforderung an den Port um, der von der benannten Instanz verwendet wird.|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zur Verwendung durch IIS/HTTP konfiguriert<br /><br /> (Der PivotTable®-Dienst verwendet HTTP oder HTTPS.)|TCP-Port 80|Wird für eine HTTP-Verbindung über eine URL verwendet|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zur Verwendung durch IIS/HTTPS konfiguriert<br /><br /> (Der PivotTable®-Dienst verwendet HTTP oder HTTPS.)|TCP-Port 443|Wird für eine HTTPS-Verbindung über eine URL verwendet. HTTPS ist eine HTTP-Verbindung, die SSL (Secure Sockets Layer) verwendet.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zur Verwendung durch IIS/HTTP konfiguriert<br /><br /> (Der PivotTable?? -Dienst verwendet das HTTP- oder HTTPS)|TCP-Port 80|Wird für eine HTTP-Verbindung über eine URL verwendet|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zur Verwendung durch IIS/HTTPS konfiguriert<br /><br /> (Der PivotTable?? -Dienst verwendet das HTTP- oder HTTPS)|TCP-Port 443|Wird für eine HTTPS-Verbindung über eine URL verwendet. HTTPS ist eine HTTP-Verbindung, die SSL (Secure Sockets Layer) verwendet.|  
   
  Wenn Benutzer über IIS und das Internet auf [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zugreifen, müssen Sie den Port öffnen, den IIS überwacht, und diesen Port in der Clientverbindungszeichenfolge angeben. In diesem Fall müssen keine Ports für den direkten Zugriff auf [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]geöffnet sein. Der Standardport 2389 und Port 2382 sollten gemeinsam mit allen anderen Ports eingeschränkt werden, die nicht benötigt werden.  
   
@@ -206,24 +205,24 @@ ms.locfileid: "48128990"
 |--------------|----------|--------------|  
 |Windows-Verwaltungsinstrumentation<br /><br /> Weitere Informationen zu WMI finden Sie unter [WMI Provider for Configuration Management Concepts](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md).|WMI wird als Teil eines Hosts für gemeinsame Dienste ausgeführt, wobei Ports über DCOM zugewiesen werden. WMI verwendet möglicherweise den TCP-Port 135.<br /><br /> Siehe [Spezielle Überlegungen zu Port 135](#BKMK_port_135)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager verwendet WMI zum Auflisten und Verwalten von Diensten. Es wird empfohlen, die vorkonfigurierte Regelgruppe **Windows-Verwaltungsinstrumentation (WMI)** zu verwenden. Weitere Informationen finden Sie im Abschnitt [Interaktion mit anderen Firewallregeln](#BKMK_other_rules) weiter unten.|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC)|TCP-Port 135<br /><br /> Siehe [Spezielle Überlegungen zu Port 135](#BKMK_port_135)|Wenn Ihre Anwendung verteilte Transaktionen verwendet, müssen Sie die Firewall möglicherweise so konfigurieren, dass MS DTC-Datenverkehr ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator) zwischen separaten MS DTC-Instanzen sowie zwischen MS DTC und Ressourcen-Managern wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]übermittelt werden kann. Es wird empfohlen, die vorkonfigurierte Regelgruppe **Distributed Transaction Coordinator** zu verwenden.<br /><br /> Bei Konfiguration eines einzelnen freigegebenen MS-DTCs für den gesamten Cluster in einer separaten Gruppe sollten Sie sqlservr.exe der Firewall als Ausnahme hinzufügen.|  
-|Die Schaltfläche zum Durchsuchen in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] verwendet UDP, um eine Verbindung mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browserdienst herzustellen. Weitere Informationen finden Sie unter [SQL Server-Browserdienst &amp;#40;Datenbank-Engine und SSAS&amp;#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md).|UDP-Port 1434|UDP ist ein verbindungsloses Protokoll.<br /><br /> Die Firewall verfügt über eine Einstellung mit dem Namen [UnicastResponsesToMulticastBroadcastDisabled Property of the INetFwProfile Interface](http://go.microsoft.com/fwlink/?LinkId=118371) , die das Verhalten der Firewall in Hinblick auf Unicast-Antworten auf eine Broadcast- (oder Multicast-) UDP-Anforderung steuert.  Es sind zwei Verhaltensweisen möglich:<br /><br /> Wenn die Einstellung TRUE ist, werden überhaupt keine Unicastantworten auf einen Broadcast zugelassen. Das Auflisten der Dienste schlägt fehl.<br /><br /> Wenn die Einstellung FALSE (Standard) ist, werden Unicastantworten 3 Sekunden lang zugelassen. Die Zeitdauer ist nicht konfigurierbar. In einem überlasteten Netzwerk oder einem Netzwerk mit häufiger Latenz oder bei stark ausgelasteten Servern wird bei den Versuchen, Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufzulisten, möglicherweise eine Teilliste zurückgegeben, die die Benutzer irreführen kann.|  
+|Die Schaltfläche zum Durchsuchen in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] verwendet UDP, um eine Verbindung mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browserdienst herzustellen. Weitere Informationen finden Sie unter [SQL Server-Browserdienst &#40;Datenbank-Engine und SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md).|UDP-Port 1434|UDP ist ein verbindungsloses Protokoll.<br /><br /> Die Firewall verfügt über eine Einstellung mit dem Namen [UnicastResponsesToMulticastBroadcastDisabled Property of the INetFwProfile Interface](https://go.microsoft.com/fwlink/?LinkId=118371) , die das Verhalten der Firewall in Hinblick auf Unicast-Antworten auf eine Broadcast- (oder Multicast-) UDP-Anforderung steuert.  Es sind zwei Verhaltensweisen möglich:<br /><br /> Wenn die Einstellung TRUE ist, werden überhaupt keine Unicastantworten auf einen Broadcast zugelassen. Das Auflisten der Dienste schlägt fehl.<br /><br /> Wenn die Einstellung FALSE (Standard) ist, werden Unicastantworten 3 Sekunden lang zugelassen. Die Zeitdauer ist nicht konfigurierbar. In einem überlasteten Netzwerk oder einem Netzwerk mit häufiger Latenz oder bei stark ausgelasteten Servern wird bei den Versuchen, Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufzulisten, möglicherweise eine Teilliste zurückgegeben, die die Benutzer irreführen kann.|  
 |IPsec-Datenverkehr|UDP-Port 500 und UDP-Port 4500|Wenn die Domänenrichtlinie eine Netzwerkkommunikation über IPSec erfordert, müssen Sie auch den UDP-Port 4500 und den UDP-Port 500 der Ausnahmeliste hinzufügen. IPsec ist eine Option, die den **Assistenten für neue eingehende Regel** im Windows-Firewall-Snap-In verwendet. Weitere Informationen finden Sie unter [Verwenden des Snap-Ins „Windows-Firewall mit erweiterter Sicherheit“](#BKMK_WF_msc) weiter unten in diesem Thema.|  
-|Verwenden der Windows-Authentifizierung mit vertrauenswürdigen Domänen|Firewalls müssen konfiguriert werden, um Authentifizierungsanforderungen zuzulassen.|Weitere Informationen finden Sie unter [Konfigurieren einer Firewall für Domänen und Vertrauensstellungen](http://support.microsoft.com/kb/179442/).|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Windows-Clusterunterstützung|Die Clusterunterstützung erfordert zusätzliche Ports, die keine direkte Beziehung zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aufweisen.|Weitere Informationen finden Sie unter [Enable a network for cluster use](http://go.microsoft.com/fwlink/?LinkId=118372).|  
-|In der HTTP-Server-API (HTTP.SYS) reservierte URL-Namespaces|Wahrscheinlich TCP-Port 80, kann jedoch für andere Ports konfiguriert werden. Allgemeine Informationen finden Sie unter [Configuring HTTP and HTTPS](http://go.microsoft.com/fwlink/?LinkId=118373).|Spezifische Informationen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Reservieren eines HTTP.SYS-Endpunkts mittels „HttpCfg.exe“ finden Sie unter [Informationen zu URL-Reservierungen und -Registrierungen &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).|  
+|Verwenden der Windows-Authentifizierung mit vertrauenswürdigen Domänen|Firewalls müssen konfiguriert werden, um Authentifizierungsanforderungen zuzulassen.|Weitere Informationen finden Sie unter [Konfigurieren einer Firewall für Domänen und Vertrauensstellungen](https://support.microsoft.com/kb/179442/).|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Windows-Clusterunterstützung|Die Clusterunterstützung erfordert zusätzliche Ports, die keine direkte Beziehung zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aufweisen.|Weitere Informationen finden Sie unter [Enable a network for cluster use](https://go.microsoft.com/fwlink/?LinkId=118372).|  
+|In der HTTP-Server-API (HTTP.SYS) reservierte URL-Namespaces|Wahrscheinlich TCP-Port 80, kann jedoch für andere Ports konfiguriert werden. Allgemeine Informationen finden Sie unter [Configuring HTTP and HTTPS](https://go.microsoft.com/fwlink/?LinkId=118373).|Spezifische Informationen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Reservieren eines HTTP.SYS-Endpunkts mittels „HttpCfg.exe“ finden Sie unter [Informationen zu URL-Reservierungen und -Registrierungen &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).|  
   
 ##  <a name="BKMK_port_135"></a> Spezielle Überlegungen zu Port 135  
  Wenn Sie RPC mit TCP/IP oder mit UDP/IP als Transportprotokoll verwenden, werden eingehende Ports den Systemdiensten häufig dynamisch nach Bedarf zugewiesen; hierbei werden TCP/IP- und UDP/IP-Ports verwendet, die größer als Port 1024 sind. Diese werden informell häufig als „zufällige RPC-Ports“ bezeichnet. In solchen Fällen sind die RPC-Clients auf die Information der RPC-Endpunktzuordnung angewiesen, welche dynamischen Ports dem Server zugeordnet wurden. Für einige RPC-basierte Dienste können Sie einen bestimmten Port konfigurieren, statt RPC einen Port dynamisch zuweisen zu lassen. Außerdem können Sie den Bereich der Ports, die von RPC dynamisch zugewiesen werden, unabhängig vom Dienst verkleinern. Da Port 135 für zahlreiche Dienste verwendet wird, wird dieser häufig von böswilligen Benutzern angegriffen. Wenn Sie Port 135 öffnen, erwägen Sie, den Gültigkeitsbereich der Firewallregel einzuschränken.  
   
  Weitere Informationen zu Port 135 finden Sie in den folgenden Ressourcen:  
   
--   [Dienste und Netzwerkportanforderungen für das Windows Server-System](http://support.microsoft.com/kb/832017)  
+-   [Dienste und Netzwerkportanforderungen für das Windows Server-System](https://support.microsoft.com/kb/832017)  
   
--   [Beheben von Fehlern bei der RPC-Endpunktzuordnung](http://support.microsoft.com/kb/839880)  
+-   [Beheben von Fehlern bei der RPC-Endpunktzuordnung](https://support.microsoft.com/kb/839880)  
   
--   [Remoteprozeduraufruf (RPC)](http://go.microsoft.com/fwlink/?LinkId=118375)  
+-   [Remoteprozeduraufruf (RPC)](https://go.microsoft.com/fwlink/?LinkId=118375)  
   
--   [Konfigurieren der dynamischen RPC-Portzuweisung für Firewall-Einsatz](http://support.microsoft.com/kb/154596/)  
+-   [Konfigurieren der dynamischen RPC-Portzuweisung für Firewall-Einsatz](https://support.microsoft.com/kb/154596/)  
   
 ##  <a name="BKMK_other_rules"></a> Interaktion mit anderen Firewallregeln  
  Die Windows-Firewall verwendet Regeln und Regelgruppen, um ihre Konfiguration festzulegen. Jede Regel oder Regelgruppe ist normalerweise mit einem bestimmten Programm oder Dienst verknüpft, und dieses Programm oder dieser Dienst kann diese Regel ohne Ihr Wissen ändern oder löschen. Beispielsweise sind die Regelgruppen **WWW-Dienste (HTTP)** und **Sichere WWW-Dienste (HTTPS)** mit IIS verknüpft. Die Aktivierung dieser Regeln öffnet die Ports 80 und 443, und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen, die auf den Ports 80 und 443 beruhen, werden ausgeführt, wenn diese Regeln aktiviert sind. Administratoren, die IIS konfigurieren, können diese Regeln jedoch ändern oder deaktivieren. Deshalb sollten Sie, wenn Sie Port 80 oder Port 443 für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwenden, Ihre eigene Regel oder Regelgruppe erstellen, die Ihre gewünschte Portkonfiguration unabhängig von den anderen IIS-Regeln beibehält.  
@@ -231,7 +230,7 @@ ms.locfileid: "48128990"
  Das MMC-Snap-In „Windows-Firewall mit erweiterter Sicherheit“ erlaubt jeden Datenverkehr, der mit einer entsprechenden Zulassungsregel übereinstimmt. Wenn also zwei Regeln vorhanden sind, die beide für Port 80 gelten (mit unterschiedlichen Parametern), wird derjenige Datenverkehr zugelassen, der mit einer der beiden Regeln übereinstimmt. Wenn eine Regel den Datenverkehr über Port 80 von einem lokalen Subnetz und eine Regel den Datenverkehr von einer beliebigen Adresse erlaubt, wird letztendlich der gesamte Datenverkehr über Port 80 unabhängig von der Quelle zugelassen. Um den Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]effektiv zu verwalten, sollten Administratoren alle auf dem Server aktivierten Firewallregeln in regelmäßigen Abständen überprüfen.  
   
 ##  <a name="BKMK_profiles"></a> Übersicht über Firewallprofile  
- Firewallprofile werden unter [Erste Schritte mit der Windows-Firewall mit erweiterter Sicherheit](http://go.microsoft.com/fwlink/?LinkId=116080) im Abschnitt **NLA-Hostfirewall (Network Location Awareness)** behandelt. Zusammenfassend gilt: Die Betriebssysteme identifizieren und "erinnern" alle Netzwerke, mit denen sie eine Verbindung herstellen, in Bezug auf die Konnektivität, Verbindungen und Kategorie.  
+ Firewallprofile werden unter [Erste Schritte mit der Windows-Firewall mit erweiterter Sicherheit](https://go.microsoft.com/fwlink/?LinkId=116080) im Abschnitt **NLA-Hostfirewall (Network Location Awareness)** behandelt. Zusammenfassend gilt: Die Betriebssysteme identifizieren und "erinnern" alle Netzwerke, mit denen sie eine Verbindung herstellen, in Bezug auf die Konnektivität, Verbindungen und Kategorie.  
   
  In Windows-Firewall mit erweiterter Sicherheit gibt es drei Netzwerkstandorttypen:  
   
@@ -317,13 +316,13 @@ ms.locfileid: "48128990"
   
     1.  Öffnen Sie das Eingabeaufforderungsfenster.  
   
-    2.  Geben Sie an der Eingabeaufforderung den Befehl `netstat -n -a`.  
+    2.  Geben Sie an der Eingabeaufforderung `netstat -n -a` ein.  
   
          Mit dem **-n** -Schalter wird **netstat** angewiesen, die Adressen und Portnummern der aktiven TCP-Verbindungen numerisch anzuzeigen. Mit dem **-a** -Schalter wird **netstat** angewiesen, die vom Computer überwachten TCP- und UDP-Ports anzuzeigen.  
   
--   Mit dem **PortQry** -Hilfsprogramm kann der Status der TCP/IP-Ports als überwacht, nicht überwacht oder gefiltert gemeldet werden. (Der gefilterte Status bedeutet, dass der Port überwacht oder nicht überwacht wird. Dieser Status gibt an, dass das Hilfsprogramm keine Antwort vom Port empfangen hat.) Das Hilfsprogramm **PortQry** steht im [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=28590) zum Herunterladen zur Verfügung.  
+-   Mit dem **PortQry** -Hilfsprogramm kann der Status der TCP/IP-Ports als überwacht, nicht überwacht oder gefiltert gemeldet werden. (Der gefilterte Status bedeutet, dass der Port überwacht oder nicht überwacht wird. Dieser Status gibt an, dass das Hilfsprogramm keine Antwort vom Port empfangen hat.) Das Hilfsprogramm **PortQry** steht im [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=28590) zum Herunterladen zur Verfügung.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Dienste und Netzwerkportanforderungen für das Windows Server-System](http://support.microsoft.com/kb/832017)  
+ [Dienste und Netzwerkportanforderungen für das Windows Server-System](https://support.microsoft.com/kb/832017)  
   
   

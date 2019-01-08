@@ -11,12 +11,12 @@ ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: bdc0c39d8b475ed90eba778ad46981c5ff4a2875
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80287951be04d9d8381db0f05810e103c8bedfb8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166640"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356635"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>Integrierte globale Werte und Benutzerverweise (Berichts-Generator und SSRS)
   Die integrierte Feldauflistung, die sowohl die `Globals`-Auflistung als auch die `User`-Auflistung umfasst, stellt globale Werte dar, die von Reporting Services beim Verarbeiten eines Berichts bereitgestellt werden. Die `Globals`-Auflistung enthält Werte wie den Namen des Berichts, die Startzeit der Berichtsverarbeitung und die aktuellen Seitenzahlen für den Berichtskopf oder -fuß. Die `User`-Auflistung stellt die Benutzer-ID und Spracheinstellungen bereit. Diese Werte können in Ausdrücken verwendet werden, um Ergebnisse in einem Bericht zu filtern.  
@@ -25,7 +25,7 @@ ms.locfileid: "48166640"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-globals-collection"></a>Verwenden der Globals-Auflistung  
- Die `Globals` Auflistung enthält die globalen Variablen für den Bericht. Auf der Entwurfsoberfläche werden diese Variablen mit einem & (kaufmännisches Und-Zeichen) als Präfix angezeigt, z.B. `[&ReportName]`. Die folgende Tabelle beschreibt die Elemente von der `Globals` Auflistung.  
+ Die `Globals`-Auflistung enthält die globalen Variablen für den Bericht. Auf der Entwurfsoberfläche werden diese Variablen mit einem & (kaufmännisches Und-Zeichen) als Präfix angezeigt, z.B. `[&ReportName]`. In der folgenden Tabelle sind die Elemente der `Globals`-Auflistung beschrieben.  
   
 |**Member**|**Typ**|**Beschreibung**|  
 |----------------|--------------|---------------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "48166640"
 |OverallTotalPages|`Integer`|Die Gesamtanzahl der Seiten für den gesamten Bericht. ResetPageNumber hat keine Auswirkungen auf diesen Wert.<br /><br /> OverallTotalPages kann nur in einem Ausdruck in einem Seitenkopf oder Seitenfuß verwendet werden.|  
 |RenderFormat|`RenderFormat`|Informationen zur aktuellen Renderinganforderung.<br /><br /> Weitere Informationen finden Sie unter "RenderFormat" im nächsten Abschnitt.|  
   
- Mitglieder der `Globals` -Auflistung geben eine Variante zurück. Wenn Sie ein Element dieser Auflistung in einem Ausdruck verwenden möchten, der einen bestimmten Datentyp erfordert, müssen Sie die Variable zunächst umwandeln. Zum Konvertieren der Ausführungszeitvariante in ein Datumsformat können Sie beispielsweise `=CDate(Globals!ExecutionTime)`verwenden. Weitere Informationen finden Sie unter [-Datentypen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](expressions-report-builder-and-ssrs.md).  
+ Elemente der `Globals`-Auflistung geben eine Variante zurück. Wenn Sie ein Element dieser Auflistung in einem Ausdruck verwenden möchten, der einen bestimmten Datentyp erfordert, müssen Sie die Variable zunächst umwandeln. Zum Konvertieren der Ausführungszeitvariante in ein Datumsformat können Sie beispielsweise `=CDate(Globals!ExecutionTime)`verwenden. Weitere Informationen finden Sie unter [Datentypen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
 ### <a name="renderformat"></a>RenderFormat  
  In der folgenden Tabelle werden die Elemente von `RenderFormat` beschrieben.  
@@ -69,19 +69,19 @@ ms.locfileid: "48166640"
      `=IIF(Globals!RenderFormat.Name = "EXCELOPENXML" OR Globals!RenderFormat.Name = "EXCEL", false, true)`  
   
 ## <a name="using-the-user-collection"></a>Verwenden der User-Auflistung  
- Die `User` -Auflistung enthält Daten über den Benutzer, die der Bericht ausgeführt wird. Mit dieser Auflistung können Sie die in einem Bericht angezeigten Daten filtern, sodass z. B. nur die Daten des aktuellen Benutzers angezeigt werden, oder beispielsweise die Benutzer-ID in einem Berichtstitel anzeigen. Auf der Entwurfsoberfläche werden diese Variablen mit einem & (kaufmännisches Und-Zeichen) als Präfix angezeigt, z.B. `[&UserID]`.  
+ Die `User`-Auflistung enthält Daten zu dem Benutzer, der den Bericht ausführt. Mit dieser Auflistung können Sie die in einem Bericht angezeigten Daten filtern, sodass z. B. nur die Daten des aktuellen Benutzers angezeigt werden, oder beispielsweise die Benutzer-ID in einem Berichtstitel anzeigen. Auf der Entwurfsoberfläche werden diese Variablen mit einem & (kaufmännisches Und-Zeichen) als Präfix angezeigt, z.B. `[&UserID]`.  
   
- Die folgende Tabelle beschreibt die Elemente von der `User` Auflistung.  
+ In der folgenden Tabelle sind die Elemente der `User`-Auflistung beschrieben.  
   
 |**Member**|**Typ**|**Beschreibung**|  
 |----------------|--------------|---------------------|  
-|`Language`|`String`|Die Sprache des Benutzers, der den Bericht ausführt. Beispiel: `en-US`.|  
+|`Language`|`String`|Die Sprache des Benutzers, der den Bericht ausführt. Beispiel: `en-US`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.|  
 |`UserID`|`String`|Die Benutzer-ID des Benutzers, der den Bericht ausführt. Wenn Sie die Windows-Authentifizierung verwenden, stellt dieser Wert das Domänenkonto des aktuellen Benutzers dar. Der Wert wird von der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Sicherheitserweiterung bestimmt, für die die Windows-Authentifizierung oder die benutzerdefinierte Authentifizierung verwendet werden kann.|  
   
- Weitere Informationen zur Unterstützung mehrerer Sprachen in einem Bericht finden Sie unter „Überlegungen zu Lösungsentwürfen für mehrsprachige oder globale Bereitstellungen“ in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dokumentation in der [SQL Server-Onlinedokumentation](http://go.microsoft.com/fwlink/?LinkId=120955).  
+ Weitere Informationen zur Unterstützung mehrerer Sprachen in einem Bericht finden Sie unter „Überlegungen zu Lösungsentwürfen für mehrsprachige oder globale Bereitstellungen“ in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dokumentation in der [SQL Server-Onlinedokumentation](https://go.microsoft.com/fwlink/?LinkId=120955).  
   
 ### <a name="using-locale-settings"></a>Verwenden von Gebietsschemaeinstellungen  
- Sie können Ausdrücke verwenden, um auf die Gebietsschemaeinstellungen auf einem Clientcomputer zu verweisen. Mithilfe des `User.Language`-Werts können Sie bestimmen, wie ein Bericht für den Benutzer angezeigt wird. Beispielsweise können Sie einen Bericht erstellen, in dem je nach Gebietsschemawert ein unterschiedlicher Abfrageausdruck verwendet wird. Die Abfrage kann z. B. so geändert werden, dass abhängig von der zurückgegebenen Sprache lokalisierte Informationen aus unterschiedlichen Spalten abgerufen werden. Sie können auch in den Spracheinstellungen des Berichts oder Berichtselements einen Ausdruck verwenden, der auf dieser Variablen basiert.  
+ Sie können Ausdrücke verwenden, um auf die Gebietsschemaeinstellungen auf einem Clientcomputer zu verweisen. Mithilfe des `User.Language`-Wertes können Sie bestimmen, wie ein Bericht für den Benutzer angezeigt wird. Beispielsweise können Sie einen Bericht erstellen, in dem je nach Gebietsschemawert ein unterschiedlicher Abfrageausdruck verwendet wird. Die Abfrage kann z. B. so geändert werden, dass abhängig von der zurückgegebenen Sprache lokalisierte Informationen aus unterschiedlichen Spalten abgerufen werden. Sie können auch in den Spracheinstellungen des Berichts oder Berichtselements einen Ausdruck verwenden, der auf dieser Variablen basiert.  
   
 > [!NOTE]  
 >  Wenn Sie die Spracheinstellungen eines Berichts ändern, müssen Sie darauf achten, dass dies keine Probleme bei der Anzeige verursacht. Durch das Ändern der Gebietsschemaeinstellung des Berichts kann beispielsweise das Datumsformat im Bericht geändert werden, gleichzeitig ändert sich jedoch möglicherweise auch das Währungsformat. Falls kein Konvertierungsprozess für die Währung installiert ist, wird möglicherweise das falsche Währungssymbol im Bericht angezeigt. Sie können dies vermeiden, indem Sie die Sprachinformationen für die einzelnen Elemente festlegen, die Sie ändern möchten, oder indem Sie das Element mit den Währungsdaten auf eine bestimmte Sprache festlegen.  
@@ -91,7 +91,7 @@ ms.locfileid: "48166640"
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Dialogfeld „Ausdruck“ (Berichts-Generator)](../expression-dialog-box-report-builder.md)   
+ [Ausdruck &#40;Dialogfeld, Berichts-Generator&#41;](../expression-dialog-box-report-builder.md)   
  [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](expressions-report-builder-and-ssrs.md)   
  [Formatieren von Zahlen und Datumsangaben &#40;Berichts-Generator und SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  

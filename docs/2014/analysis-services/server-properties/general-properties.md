@@ -39,23 +39,23 @@ ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2ad086a7d6ee677fc54241f45d1dbe81e5c4c2d5
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: b854692aa00d953ebd8de783104869b784115277
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905760"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369142"
 ---
 # <a name="general-properties"></a>Allgemeine Eigenschaften
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt die in den folgenden Tabellen aufgeführten Servereigenschaften. In diesem Thema werden die Servereigenschaften in der Datei msmdsrv.ini dokumentiert, die nicht in einem bestimmten Abschnitt wie Sicherheit, Netzwerk oder ThreadPool behandelt werden. Weitere Informationen zu zusätzlichen Servereigenschaften und zum Festlegen dieser Eigenschaften finden Sie unter [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Gilt für:** Mehrdimensionaler und tabellarischer Servermodus, sofern nichts anderes angegeben ist  
+ **Gilt für:** Mehrdimensionaler und tabellarischer Servermodus, sofern nicht anders angegeben  
   
 ## <a name="non-specific-category"></a>Nicht spezifische Kategorie  
  `AdminTimeout`  
  Eine ganze 32-Bit-Zahl mit Vorzeichen, die den Administratortimeoutwert in Sekunden definiert. Hierbei handelt es sich um eine erweiterte Eigenschaft, die nicht ohne die Unterstützung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.  
   
- Der Standardwert für diese Eigenschaft ist Null (0), d. h. es findet kein Timeout statt.  
+ Der Standardwert für diese Eigenschaft ist Null (0), d. h. es findet kein Timeout statt.  
   
  `AllowedBrowsingFolders`  
  Eine Zeichenfolgeneigenschaft, die in einer getrennten Liste die Ordner angibt, die durchsucht werden können, wenn Dateien in Analysis Services-Dialogfeldern gespeichert, geöffnet und gesucht werden. Das Analysis Services-Dienstkonto muss Lese- und Schreibberechtigungen für alle Ordner haben, die Sie der Liste hinzufügen.  
@@ -69,10 +69,10 @@ ms.locfileid: "48905760"
  `CommitTimeout`  
  Eine Ganzzahleigenschaft, die angibt, wie lange der Server wartet (in Millisekunden), um eine Schreibsperre für den Commit einer Transaktion abzurufen. Eine Wartezeit ist oftmals erforderlich, da der Server darauf warten muss, dass andere Sperren freigegeben werden, bevor eine Schreibsperre verwendet werden kann, die einen Commit für die Transaktion ausführt.  
   
- Der Standardwert für diese Eigenschaft ist 0 (null), d. h., der Server wartet unbegrenzt. Weitere Informationen zu sperrenbezogenen Eigenschaften finden Sie im [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539)(SQL Server 2008 R2 Analysis Services-Vorgangshandbuch).  
+ Der Standardwert für diese Eigenschaft ist 0 (null), d. h., der Server wartet unbegrenzt. Weitere Informationen zu sperrenbezogenen Eigenschaften finden Sie im [SQL Server 2008 R2 Analysis Services Operations Guide](https://go.microsoft.com/fwlink/?LinkID=225539)(SQL Server 2008 R2 Analysis Services-Vorgangshandbuch).  
   
  `CoordinatorBuildMaxThreads`  
- Eine ganze 32-Bit-Zahl mit Vorzeichen, die die maximale Anzahl von Threads zum Erstellen von Partitionsindizes definiert. Durch Erhöhen dieses Werts kann die Partitionsindizierung auf Kosten der Speicherauslastung beschleunigt werden. Weitere Informationen zu dieser Eigenschaft finden Sie im [SQL Server 2008 R2 Analysis Services-Vorgangshandbuch](http://go.microsoft.com/fwlink/?LinkID=225539).  
+ Eine ganze 32-Bit-Zahl mit Vorzeichen, die die maximale Anzahl von Threads zum Erstellen von Partitionsindizes definiert. Durch Erhöhen dieses Werts kann die Partitionsindizierung auf Kosten der Speicherauslastung beschleunigt werden. Weitere Informationen zu dieser Eigenschaft finden Sie im [SQL Server 2008 R2 Analysis Services-Vorgangshandbuch](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
  `CoordinatorCancelCount`  
  Eine ganze 32-Bit-Zahl mit Vorzeichen, die definiert, wie häufig der Server überprüfen soll, ob ein Cancel-Ereignis aufgetreten ist (basierend auf der Anzahl interner Iterationen). Verringern Sie diese Zahl, um häufiger, jedoch zu Lasten der allgemeinen Leistung, eine Überprüfung auf Cancel-Ereignisse durchzuführen.  
@@ -84,7 +84,7 @@ ms.locfileid: "48905760"
   
  `CoordinatorExecutionMode` wird im tabellarischen Servermodus ignoriert.  
   
- Der Standardwert für diese Eigenschaft ist -4. Dies bedeutet, der Server ist auf 4 parallele Vorgänge pro Prozessor eingeschränkt. Weitere Informationen zu dieser Eigenschaft finden Sie im [SQL Server 2008 R2 Analysis Services-Vorgangshandbuch](http://go.microsoft.com/fwlink/?LinkID=225539).  
+ Der Standardwert für diese Eigenschaft ist -4. Dies bedeutet, der Server ist auf 4 parallele Vorgänge pro Prozessor eingeschränkt. Weitere Informationen zu dieser Eigenschaft finden Sie im [SQL Server 2008 R2 Analysis Services-Vorgangshandbuch](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
  `CoordinatorQueryMaxThreads`  
  Eine ganze 32-Bit-Zahl mit Vorzeichen, die die maximale Anzahl von Threads pro Partitionssegment während der Abfrageauflösung definiert. Je kleiner die Anzahl von gleichzeitigen Benutzern ist, umso höher kann dieser Wert sein, jedoch auf Kosten des Arbeitsspeichers. Umgekehrt muss bei einer großen Anzahl von gleichzeitigen Benutzern der Wert möglicherweise reduziert werden.  
@@ -96,11 +96,11 @@ ms.locfileid: "48905760"
  Eine Zeichenfolge, die den Namen des Verzeichnisses zum Speichern von Daten identifiziert.  
   
  `DeploymentMode`  
- Bestimmt den operativen Kontext einer Analysis Services-Serverinstanz. Diese Eigenschaft wird in Dialogfeldern, Meldungen und Dokumentation als "Servermodus" bezeichnet. Diese Eigenschaft wird basierend auf dem Servermodus, den Sie beim Installieren von Analysis Services ausgewählt haben, von SQL Server-Setup konfiguriert. Diese Eigenschaft sollte nur intern berücksichtigt und immer der vom Setup angegebene Wert verwendet werden.  
+ Bestimmt den operativen Kontext einer Analysis Services-Serverinstanz. Diese Eigenschaft wird als "Servermodus" in den Dialogfeldern, Meldungen und Dokumentation bezeichnet. Diese Eigenschaft wird basierend auf dem Servermodus, den Sie beim Installieren von Analysis Services ausgewählt haben, von SQL Server-Setup konfiguriert. Diese Eigenschaft sollte nur intern berücksichtigt und immer der vom Setup angegebene Wert verwendet werden.  
   
  Für diese Eigenschaften gibt es u. a. folgende gültige Werte:  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |0|Dies ist der Standardwert. Der mehrdimensionale Modus wird angegeben. Er dient zur Verwaltung von mehrdimensionalen Datenbanken, die MOLAP, HOLAP und ROLAP-Speicher sowie Data Mining-Modelle verwenden.|  
 |1|Gibt Analysis Services-Instanzen an, die als Teil einer PowerPivot für SharePoint-Bereitstellung installiert waren. Ändern Sie die Bereitstellungsmoduseigenschaft der Analysis Services-Instanz nicht, die Teil einer PowerPivot für SharePoint-Installation ist. Wenn Sie den Modus ändern, werden PowerPivot-Daten nicht mehr auf dem Server ausgeführt.|  
@@ -117,7 +117,7 @@ ms.locfileid: "48905760"
  Der Standardwert für diese Eigenschaft ist 3.600 (Sekunden).  
   
  `ExternalConnectionTimeout`  
- Eine Ganzzahleigenschaft, die den Timeoutwert (in Sekunden) für das Erstellen von Verbindungen mit externen Servern definiert, einschließlich relationaler Datenquellen und externer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Server. Diese Eigenschaft wird ignoriert, wenn ein Verbindungstimeout für die Verbindungszeichenfolge angegeben wird.  
+ Eine Ganzzahleigenschaft, die den Timeoutwert (in Sekunden) für das Erstellen von Verbindungen mit externen Servern definiert, einschließlich relationaler Datenquellen und externer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server. Diese Eigenschaft wird ignoriert, wenn ein Verbindungstimeout für die Verbindungszeichenfolge angegeben wird.  
   
  Der Standardwert für diese Eigenschaft ist 60 Sekunden.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "48905760"
 > [!NOTE]  
 >  Abfragen und Prozesse, die von diesem Ereignis abgebrochen wurden, geben die folgende Fehlermeldung aus: „`Server: The operation has been cancelled`“.  
   
- Weitere Informationen zu dieser Eigenschaft finden Sie im [SQL Server 2008 R2 Analysis Services-Vorgangshandbuch](http://go.microsoft.com/fwlink/?LinkID=225539).  
+ Weitere Informationen zu dieser Eigenschaft finden Sie im [SQL Server 2008 R2 Analysis Services-Vorgangshandbuch](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
 > [!IMPORTANT]  
 >  `ForceCommitTimeout` gilt für Cubeverarbeitungsbefehle und Rückschreibevorgänge.  
@@ -137,7 +137,7 @@ ms.locfileid: "48905760"
  `IdleConnectionTimeout`  
  Eine Ganzzahleigenschaft, die ein Timeout für inaktive Verbindungen angibt (in Sekunden).  
   
- Der Standardwert für diese Eigenschaft ist Null (0), d. h. bei Verbindungen im Leerlauf erfolgt kein Timeout.  
+ Der Standardwert für diese Eigenschaft ist Null (0), d. h. bei Verbindungen im Leerlauf erfolgt kein Timeout.  
   
  `IdleOrphanSessionTimeout`  
  Eine Ganzzahleigenschaft, die definiert, wie lange verwaiste Sitzungen im Arbeitsspeicher des Servers beibehalten werden (Dauer in Sekunden). Eine verwaiste Sitzung ist eine Sitzung, die keine zugeordnete Verbindung besitzt. Der Standardwert ist 120 Sekunden.  

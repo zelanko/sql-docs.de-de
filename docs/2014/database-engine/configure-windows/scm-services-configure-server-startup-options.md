@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [SQL Server], startup options
@@ -17,15 +16,15 @@ ms.assetid: 7a94643c-6460-4baf-bb31-0cb99eaf970d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 07fc15bf088cf48e0a1b9a30cd68d5c10254d345
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 91a48d4acd771c19617bac26c1393f30334768e8
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072105"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639488"
 ---
 # <a name="configure-server-startup-options-sql-server-configuration-manager"></a>Konfigurieren von Serverstartoptionen (SQL Server-Konfigurations-Manager)
-  In diesem Thema wird beschrieben, wie Sie Startoptionen zu konfigurieren, die jedes Mal verwendet werden, die [!INCLUDE[ssDE](../../includes/ssde-md.md)] startet im [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Konfigurations-Manager. Weitere Informationen finden Sie unter [Startoptionen für den Datenbank-Engine-Dienst](database-engine-service-startup-options.md).  
+  In diesem Thema wird beschrieben, wie Sie Startoptionen, die bei jedem Starten von [!INCLUDE[ssDE](../../includes/ssde-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verwendet werden, mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Managers konfigurieren. Weitere Informationen finden Sie unter [Startoptionen für den Datenbank-Engine-Dienst](database-engine-service-startup-options.md).  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   

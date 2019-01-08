@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Subscribers [SQL Server replication], data validation
@@ -17,12 +16,12 @@ ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 64250d763a4b271fd6a2ebd48ec61dba3c2c2acd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8829bb1a585c61bfa1a8ad0a088d23e8573bace
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055790"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816882"
 ---
 # <a name="validate-data-at-the-subscriber"></a>Überprüfen der Daten am Abonnenten
   In diesem Thema wird beschrieben, wie Daten beim Abonnenten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) überprüft werden.  
@@ -53,7 +52,7 @@ ms.locfileid: "48055790"
   
      [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -61,7 +60,7 @@ ms.locfileid: "48055790"
   
 -   In den Überprüfungsergebnissen wird angezeigt, ob die Überprüfung erfolgreich war oder fehlgeschlagen ist, es wird jedoch nicht angegeben, in welchen Zeilen die Überprüfung beim Auftreten eines Fehlers fehlgeschlagen ist. Verwenden Sie das Hilfsprogramm [tablediff Utility](../../tools/tablediff-utility.md), um die Daten auf dem Verleger und auf dem Abonnenten zu vergleichen. Informationen zum Verwenden dieses Hilfsprogramms finden Sie unter [Überprüfen replizierter Tabellen auf Unterschiede &#40;Replikationsprogrammierung&#41;](administration/compare-replicated-tables-for-differences-replication-programming.md).  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-validate-data-for-subscriptions-to-a-transactional-publication-management-studio"></a>So überprüfen Sie Daten für Abonnements einer Transaktionsveröffentlichung (Management Studio)  
   
@@ -313,9 +312,9 @@ ms.locfileid: "48055790"
   
 2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransPublication> -Klasse. Legen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> -Eigenschaft und die <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> -Eigenschaft für die Veröffentlichung fest. Legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die restlichen Objekteigenschaften abzurufen. Wenn diese Methode zurückgibt `false`, entweder die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die restlichen Objekteigenschaften abzurufen. Wenn diese Methode `false` zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
   
-4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.TransPublication.ValidatePublication%2A> -Methode auf. Übergeben Sie die folgenden Werte:  
+4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.TransPublication.ValidatePublication%2A>-Methode auf. Übergeben Sie die folgenden Werte:  
   
     -   <xref:Microsoft.SqlServer.Replication.ValidationOption>  
   
@@ -333,9 +332,9 @@ ms.locfileid: "48055790"
   
 2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePublication> -Klasse. Legen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> -Eigenschaft und die <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> -Eigenschaft für die Veröffentlichung fest. Legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die restlichen Objekteigenschaften abzurufen. Wenn diese Methode zurückgibt `false`, entweder die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die restlichen Objekteigenschaften abzurufen. Wenn diese Methode `false` zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
   
-4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.MergePublication.ValidatePublication%2A> -Methode auf. Übergeben Sie die gewünschte <xref:Microsoft.SqlServer.Replication.ValidationOption>.  
+4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.MergePublication.ValidatePublication%2A>-Methode auf. Übergeben Sie die gewünschte <xref:Microsoft.SqlServer.Replication.ValidationOption>.  
   
 5.  Führen Sie für jedes Abonnement den Merge-Agent aus, um die Überprüfung zu starten, oder warten Sie die nächste geplante Ausführung des Agents ab. Weitere Informationen finden Sie unter [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) und [Synchronize a Push Subscription](synchronize-a-push-subscription.md). Das Ergebnis der Überprüfung wird in den Agentverlauf geschrieben. Diesen können Sie mithilfe des Replikationsmonitors anzeigen. Weitere Informationen finden Sie unter [Monitoring Replication](monitoring-replication.md).  
   
@@ -345,9 +344,9 @@ ms.locfileid: "48055790"
   
 2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePublication> -Klasse. Legen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> -Eigenschaft und die <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> -Eigenschaft für die Veröffentlichung fest. Legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die restlichen Objekteigenschaften abzurufen. Wenn diese Methode zurückgibt `false`, entweder die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die restlichen Objekteigenschaften abzurufen. Wenn diese Methode `false` zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
   
-4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.MergePublication.ValidateSubscription%2A> -Methode auf. Übergeben Sie den Namen des Abonnenten und der Abonnementdatenbank, der bzw. die überprüft wird, und die gewünschte <xref:Microsoft.SqlServer.Replication.ValidationOption>.  
+4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.MergePublication.ValidateSubscription%2A>-Methode auf. Übergeben Sie den Namen des Abonnenten und der Abonnementdatenbank, der bzw. die überprüft wird, und die gewünschte <xref:Microsoft.SqlServer.Replication.ValidationOption>.  
   
 5.  Führen Sie für das Abonnement den Merge-Agent aus, um die Überprüfung zu starten, oder warten Sie die nächste geplante Ausführung des Agents ab. Weitere Informationen finden Sie unter [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) und [Synchronize a Push Subscription](synchronize-a-push-subscription.md). Das Ergebnis der Überprüfung wird in den Agentverlauf geschrieben. Diesen können Sie mithilfe des Replikationsmonitors anzeigen. Weitere Informationen finden Sie unter [Monitoring Replication](monitoring-replication.md).  
   

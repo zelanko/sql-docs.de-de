@@ -20,16 +20,16 @@ ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 98fb29265c17970fbcef0f21778d7a9130e52771
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ac3d24b1213096be20658fb48dbfe9a6d39df8f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644518"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206969"
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC-1.0-Standards-Compliance: ISO-92  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO-92  
   
  **Zusammenfassung**  
  **SQLGetFunctions** gibt Informationen dazu, ob ein Treiber eine bestimmte ODBC-Funktion unterstützt wird. Diese Funktion wird im Treiber-Manager implementiert werden. Sie können auch in den Treibern implementiert werden. Wenn ein Treiber implementiert **SQLGetFunctions**, der Treiber-Manager ruft die Funktion im Treiber. Andernfalls führt er die Funktion selbst.  
@@ -83,7 +83,7 @@ SQLRETURN SQLGetFunctions(
 ## <a name="comments"></a>Kommentare  
  **SQLGetFunctions** zurückgibt, die immer **SQLGetFunctions**, **SQLDataSources**, und **SQLDrivers** werden unterstützt. Es liegt daran, dass diese Funktionen im Treiber-Manager implementiert werden. Der Treiber-Manager ordnet eine ANSI-Funktion mit der entsprechenden Unicode-Funktion, wenn Unicode-Funktion vorhanden ist und eine Unicode-Funktion die entsprechende ANSI-Funktion zugeordnet werden, wird Wenn die ANSI-Funktion vorhanden ist. Informationen zur Verwendung von Anwendungen **SQLGetFunctions**, finden Sie unter [Schnittstelle Übereinstimmungsebenen](../../../odbc/reference/develop-app/interface-conformance-levels.md).  
   
- Im folgenden finden eine Liste der gültigen Werte für *FunctionId* für Funktionen, die die ISO-92-Ebene – die Einhaltung von Standards entsprechen:  
+ Im folgenden finden eine Liste der gültigen Werte für *FunctionId* für Funktionen, die die ISO-92-Standards-Compliance-Ebene entsprechen:  
   
 |FunctionId Wert|FunctionId Wert|  
 |----------|----------|  
@@ -109,14 +109,14 @@ SQLRETURN SQLGetFunctions(
 |SQL_API_SQLGETCURSORNAME|SQL_API_SQLSETSTMTATTR|  
 |SQL_API_SQLGETDATA| |  
   
- Im folgenden finden eine Liste der gültigen Werte für *FunctionId* für Funktionen, die Open Group-Ebene – die Einhaltung von Standards entsprechen:  
+ Im folgenden finden eine Liste der gültigen Werte für *FunctionId* für Funktionen, die auf die Ebene der öffnen Sie die Einhaltung von Standards entsprechen:  
   
 |FunctionId Wert|FunctionId Wert|  
 |-|-|  
 |SQL_API_SQLCOLUMNS|SQL_API_SQLSTATISTICS|  
 |SQL_API_SQLSPECIALCOLUMNS|SQL_API_SQLTABLES|  
   
- Im folgenden finden eine Liste der gültigen Werte für *FunctionId* für Funktionen, die ODBC-Ebene – die Einhaltung von Standards entsprechen.  
+ Im folgenden finden eine Liste der gültigen Werte für *FunctionId* für Funktionen, die auf die Ebene der ODBC-Einhaltung von Standards entsprechen.  
   
 |FunctionId Wert|FunctionId Wert|  
 |-|-|  
@@ -142,7 +142,7 @@ SQLRETURN SQLGetFunctions(
 ## <a name="sqlfuncexists-macro"></a>SQL_FUNC_EXISTS-Makro  
  Die SQL_FUNC_EXISTS (*SupportedPtr*, *FunctionID*) Makro wird verwendet, um zu bestimmen, Unterstützung für ODBC 3.*.x* oder früheren Funktionen nach **SQLGetFunctions**  aufgerufen wurde mit einem *FunctionId* SQL_API_ODBC3_ALL_FUNCTIONS Argument. Ruft die Anwendung SQL_FUNC_EXISTS mit der *SupportedPtr* Argument festgelegt wird, um die *SupportedPtr* übergebenen *SQLGetFunctions*, und mit der  *FunctionID* Argument festgelegt wird, um die **#define** für die Funktion. SQL_FUNC_EXISTS gibt andernfalls den SQL_TRUE, wenn die Funktion unterstützt wird und SQL_FALSE.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Bei der Arbeit mit einer ODBC 2.*.x* -Treiber verwenden, die ODBC 3.*.x* -Treiber-Manager gibt SQL_TRUE für **SQLAllocHandle** und **SQLFreeHandle**da **SQLAllocHandle** zugeordnet **SQLAllocEnv**, **SQLAllocConnect**, oder **SQLAllocStmt**, und Da **SQLFreeHandle** zugeordnet **SQLFreeEnv**, **SQLFreeConnect**, oder **SQLFreeStmt**. **SQLAllocHandle** oder **SQLFreeHandle** mit einem *HandleType* SQL_HANDLE_DESC Argument wird nicht unterstützt, allerdings, obwohl SQL_TRUE für die Funktionen, die zurückgegeben werden, da gibt es keine ODBC 2.*.x* Funktion, die in diesem Fall zuzuordnen.  
   
 ## <a name="code-example"></a>Codebeispiel  

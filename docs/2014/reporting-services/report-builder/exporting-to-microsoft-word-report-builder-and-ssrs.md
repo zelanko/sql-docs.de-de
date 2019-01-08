@@ -11,17 +11,17 @@ ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 0e040fe0b31f9cead8843987199164e45767db82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dc149e8d8af6b2b5f08d849f3fda261849ff9d8f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224700"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361092"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportieren nach Microsoft Word (Berichts-Generator und SSRS)
-  Word-Renderingerweiterung rendert Berichte im systemeigenen Format von [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. Das Format ist Office Open XML.  
+  Die Word-Renderingerweiterung rendert Berichte im systemeigenen Format von [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. Das Format ist Office Open XML.  
   
- Der Word-Renderer ist kompatibel mit [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 sowie [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, wenn das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Compatibility Pack für Word, Excel und PowerPoint installiert ist. Weitere Informationen zum Compatibility Pack finden Sie unter [Microsoft Office Compatibility Pack für Word, Excel und PowerPoint](http://go.microsoft.com/fwlink/?LinkID=205622).  
+ Der Word-Renderer ist kompatibel mit [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 sowie [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, wenn das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Compatibility Pack für Word, Excel und PowerPoint installiert ist. Weitere Informationen zum Compatibility Pack finden Sie unter [Microsoft Office Compatibility Pack für Word, Excel und PowerPoint](https://go.microsoft.com/fwlink/?LinkID=205622).  
   
  Der Inhaltstyp von Dateien, die von diesem Renderer generiert werden, ist **application/vnd.openxmlformats-officedocument.wordprocessingml.document** , und die Dateierweiterung der Dateien lautet ".docx".  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48224700"
 |Berichtselementeigenschaften|Description|  
 |-------------------------------|-----------------|  
 |Berichtstitel (Berichtstitel)|Titel|  
-|Autor des Berichts|Autor|  
+|Autor des Berichts|Author|  
 |Berichtsbeschreibung|Kommentare|  
   
 ##  <a name="ReportHeadersFooters"></a> Seitenkopfzeilen und -fußzeilen  
@@ -79,7 +79,7 @@ ms.locfileid: "48224700"
   
 -   **Komplexer Ausdruck:**  Ausdruck ist `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   **Ausdruck mit Textausführungen:** Text **Average Sales**und Ausdruck  `=Avg(Fields!YTDPurchase.Value, "Sales)`und Text **Page Number**und Ausdruck `=Globals!PageNumber`  
+-   **Ausdruck mit Textausführungen:** Text, **Average Sales**, und Ausdruck `=Avg(Fields!YTDPurchase.Value, "Sales)`, und der Text **Seitenzahl**, und Ausdruck `=Globals!PageNumber`  
   
  Um dieses Problem zu umgehen, verwenden Sie mehrere Textausführungen statt eines komplexen Ausdrucks, wenn Sie Ausdrücke in Fuß- und Kopfzeilen verwenden. Die folgenden beiden Ausdrücke sind äquivalent. Der Erste ist ein komplexer Ausdruck, der Zweite verwendet Textausführungen. Der Word-Renderer analysiert nur den zweiten Ausdruck erfolgreich.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "48224700"
 -   Wenn Text nach Word exportiert wird, kann der Text mit Schriftdekorationen bei einigen Schriftarten zu unerwarteten oder fehlenden Symbolen im gerenderten Bericht führen.  
   
 ##  <a name="WordBenefits"></a> Vorteile der Verwendung des Word-Renderers  
- Zusätzlich zu Funktionen, die in neu sind [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 für exportierte Berichte *.docx-Dateien exportierte Berichte sind tendenziell kleiner. Die mit dem Word-Renderer exportierten Berichte sind normalerweise deutlich kleiner als die gleichen Berichte, die mit dem Word 2003-Renderer exportiert werden.  
+ Der Word-Renderer ermöglicht nicht nur den Zugriff auf die neuen Funktionen, die in [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 für exportierte Berichte verfügbar sind, sondern stellt mit dem DOCX-Format meistens auch kleinere Dateien zur Verfügung. Die mit dem Word-Renderer exportierten Berichte sind normalerweise deutlich kleiner als die gleichen Berichte, die mit dem Word 2003-Renderer exportiert werden.  
   
 ## <a name="backward-compatibility-of-exported-reports"></a>Abwärtskompatibilität exportierter Berichte  
  Sie können einen Word-Kompatibilitätsmodus auswählen und die Kompatibilitätsoptionen festlegen. Der Word-Renderer erstellt Dokumente, für die der Kompatibilitätsmodus aktiviert ist. Wenn die Dokumente mit deaktiviertem Kompatibilitätsmodus erneut gespeichert werden, kann sich dies auf das Dokumentlayout auswirken.  
@@ -152,11 +152,11 @@ ms.locfileid: "48224700"
  Wenn Sie den Kompatibilitätsmodus deaktivieren und einen Bericht erneut speichern, kann sich das Berichtslayout auf unerwartete Weise ändern.  
   
 ##  <a name="AvailabilityWord"></a> Verfügbarkeit des Word 2003-Renderers  
- In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], der standardmäßige Word-Renderer ist die Version, die im systemeigenen Format von rendert [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. Dies ist die **Word** -Option, die in den Menüs **Exportieren** in Berichts-Manager und SharePoint aufgeführt ist. Die frühere, nur mit [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 kompatible Version heißt jetzt Word 2003 und ist in Menüs aufgeführt, die diesen Namen verwenden. Die Menüoption **Word 2003** ist standardmäßig nicht sichtbar, ein Administrator kann sie jedoch sichtbar machen, indem er die RSReportServer-Konfigurationsdatei aktualisiert. Um Berichte aus [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] mit dem Word 2003-Renderer zu exportieren, aktualisieren Sie die RSReportDesigner-Konfigurationsdatei. Aber auch wenn der Word 2003-Renderer sichtbar gemacht wird, steht er nicht in allen Szenarien zur Verfügung. Da sich die RSReportServer-Konfigurationsdatei auf dem Berichtsserver befindet, müssen die Tools oder Produkten, aus denen Sie Berichte exportieren, mit einem Berichtsserver verbunden sein, um die Konfigurationsdatei zu lesen. Wenn Sie Tools oder Produkte im getrennten oder lokalen Modus verwenden, hat das Sichtbarmachen des Word 2003-Renderers keine Auswirkungen. Die Menüoption **Word 2003** ist weiterhin nicht verfügbar. Wenn Sie den Word 2003-Renderer in der RSReportDesigner-Konfigurationsdatei sichtbar machen, ist die Menüoption **Word 2003** in der [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] -Berichtsvorschau immer verfügbar.  
+ In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] entspricht der standardmäßige Word-Renderer der Version, die auf das systemeigene Format von [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 rendert. Dies ist die **Word** -Option, die in den Menüs **Exportieren** in Berichts-Manager und SharePoint aufgeführt ist. Die frühere, nur mit [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 kompatible Version heißt jetzt Word 2003 und ist in Menüs aufgeführt, die diesen Namen verwenden. Die Menüoption **Word 2003** ist standardmäßig nicht sichtbar, ein Administrator kann sie jedoch sichtbar machen, indem er die RSReportServer-Konfigurationsdatei aktualisiert. Um Berichte aus [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] mit dem Word 2003-Renderer zu exportieren, aktualisieren Sie die RSReportDesigner-Konfigurationsdatei. Aber auch wenn der Word 2003-Renderer sichtbar gemacht wird, steht er nicht in allen Szenarien zur Verfügung. Da sich die RSReportServer-Konfigurationsdatei auf dem Berichtsserver befindet, müssen die Tools oder Produkten, aus denen Sie Berichte exportieren, mit einem Berichtsserver verbunden sein, um die Konfigurationsdatei zu lesen. Wenn Sie Tools oder Produkte im getrennten oder lokalen Modus verwenden, hat das Sichtbarmachen des Word 2003-Renderers keine Auswirkungen. Die Menüoption **Word 2003** ist weiterhin nicht verfügbar. Wenn Sie den Word 2003-Renderer in der RSReportDesigner-Konfigurationsdatei sichtbar machen, ist die Menüoption **Word 2003** in der [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] -Berichtsvorschau immer verfügbar.  
   
  Die Menüoption **Word 2003** ist in den folgenden Szenarien nie sichtbar:  
   
--   Berichts-Generator im getrennten Modus, und Sie zeigen einen Bericht im Berichts-Generator in der Vorschau an. Dieser Fehler tritt in sowohl die [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] und der eigenständigen Version des Berichts-Generators.  
+-   Berichts-Generator im getrennten Modus, und Sie zeigen einen Bericht im Berichts-Generator in der Vorschau an. Dieser Fall tritt in der [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] -Version und der eigenständigen Version des Berichts-Generators auf.  
   
 -   Berichts-Viewer-Webpart im lokalen Modus, und die SharePoint-Farm ist nicht in einen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver integriert. Weitere Informationen zum lokalen Modus finden Sie unter [Berichte im lokalen Modus im Vergleich zu Berichten im verbundenen Modus im Berichts-Viewer (Reporting Services im SharePoint-Modus)](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
   
@@ -168,7 +168,7 @@ ms.locfileid: "48224700"
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , und Sie zeigen Berichte in der Vorschau an.  
   
--   Berichts-Generator, der mit einem Berichtsserver verbunden ist. Dies liegt möglicherweise ein [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] oder eigenständige Version von Berichts-Generator.  
+-   Berichts-Generator, der mit einem Berichtsserver verbunden ist. Dies kann eine [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] -Version oder eigenständige Version von Berichts-Generator sein.  
   
 -   Das Berichts-Viewer-Webpart im Remotemodus.  
   
@@ -178,7 +178,7 @@ ms.locfileid: "48224700"
   
  `<Extension Name="WORD" Type="Microsoft.ReportingServices.Rendering.WordRenderer.WordDocumentRenderer,Microsoft.ReportingServices.WordRendering" Visible="false"/>`  
   
- Die WORDOPENXML-Erweiterung definiert den Word-Renderer für [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. Die WORD-Erweiterung definiert die [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003-Version. `Visible = “false”` gibt an, dass der Word 2003-Renderer ausgeblendet wird. Weitere Informationen finden Sie unter [RSReportServer-Konfigurationsdatei](../report-server/rsreportserver-config-configuration-file.md) und [RSReportDesigner-Konfigurationsdatei](../report-server/rsreportdesigner-configuration-file.md).  
+ Die WORDOPENXML-Erweiterung definiert den Word-Renderer für [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. Die WORD-Erweiterung definiert die [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003-Version. `Visible = "false"` gibt an, dass der Word 2003-Renderer ausgeblendet wird. Weitere Informationen finden Sie unter [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md) und [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md).  
   
 ##  <a name="Differences"></a> Unterschiede zwischen dem Word und Word 2003-Renderer  
  Es gibt keinen visuellen Unterschied zwischen Berichten, die mit dem Word- bzw. Word 2003-Renderer gerendert werden. Möglicherweise fallen Ihnen jedoch kleinere Unterschiede zwischen dem Word- und dem Word 2003-Format auf.  
@@ -188,7 +188,7 @@ ms.locfileid: "48224700"
   
 ## <a name="see-also"></a>Siehe auch  
  [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Renderingverhalten (Berichts-Generator und SSRS)](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Renderingverhalten &#40;Berichts-Generator und SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendern von Berichtselementen (Berichts-Generator und SSRS)](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  

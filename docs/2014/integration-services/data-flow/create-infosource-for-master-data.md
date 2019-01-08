@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd05395098a6ce9a4dd23dc2f8dc886fe7273ece
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 0b9460ee16c73d5bf61fdfab1f67a796d5b033c1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085068"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793553"
 ---
 # <a name="create-infosource-for-master-data"></a>InfoSource für Masterdaten erstellen
   Verwenden Sie das Dialogfeld **InfoSource für Masterdaten erstellen** , um eine neue InfoSource für Masterdaten im SAP NetWeaver BW-System zu erstellen.  
@@ -38,7 +37,7 @@ ms.locfileid: "49085068"
   
 5.  Wählen Sie im Dialogfeld **InfoSource erstellen** die Option **Masterdaten**aus, und klicken Sie dann auf **OK**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **InfoObject-Name**  
  Geben Sie den Namen des InfoObject ein, auf dem die neue InfoSource basieren soll.  
   
@@ -48,7 +47,7 @@ ms.locfileid: "49085068"
  Nachdem Sie ein InfoObject ausgewählt haben, wird das Textfeld **InfoObject-Name** mit dem Namen des ausgewählten InfoObject aufgefüllt.  
   
  **Neu**  
- Erstellen Sie ein neues InfoObject. Diese Option öffnet der **neues InfoObject erstellen** Dialogfeld, in dem Sie das neue InfoObject erstellen können. Weitere Informationen zu diesem Dialogfeld finden Sie unter [Create New InfoObject](create-new-infoobject.md).  
+ Erstellen Sie ein neues InfoObject. Mit dieser Option wird das Dialogfeld **Neues InfoObject erstellen** geöffnet, in dem Sie das neue InfoObject erstellen können. Weitere Informationen zu diesem Dialogfeld finden Sie unter [Create New InfoObject](create-new-infoobject.md).  
   
  Nachdem Sie ein InfoObject erstellt haben, wird das Textfeld **InfoObject-Name** mit dem Namen des neuen InfoObject aufgefüllt.  
   

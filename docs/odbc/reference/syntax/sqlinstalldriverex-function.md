@@ -20,16 +20,16 @@ ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4b6bae692efdb1d89642eea52e499b0fb2800377
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 0ec40b97f8953f114081292ac82069fd4a81692a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169327"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208635"
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC 3.0  
+ Eingeführt in Version: ODBC 3.0  
   
  **Zusammenfassung**  
  **SQLInstallDriverEx** Fügt Informationen über den Treiber auf den Eintrag "Odbcinst.ini" in den Systeminformationen und erhöht die Fahrers *UsageCount* um 1. Jedoch, wenn eine Version der Treiber ist bereits vorhanden, aber die *UsageCount* Wert für der Treiber nicht vorhanden ist, die neue *UsageCount* Wert auf 2 festgelegt ist.  
@@ -71,9 +71,9 @@ BOOL SQLInstallDriverEx(
  *Häufigsten*  
  [Eingabe] Typ der Anforderung. Die *häufigsten* Argument muss einen der folgenden Werte enthalten:  
   
- ODBC_INSTALL_INQUIRY: Informationen Sie über ein, die ein Treiber installiert werden können.  
+ ODBC_INSTALL_INQUIRY: Erkundigen Sie sich, ein Treiber installiert werden können.  
   
- ODBC_INSTALL_COMPLETE: Führen Sie die Anforderung zur Installation.  
+ ODBC_INSTALL_COMPLETE: Die Installationsanforderung zu beenden.  
   
  *lpdwUsageCount*  
  [Ausgabe] Die Verwendungsanzahl des Treibers nach dieser Funktion aufgerufen wurde.  

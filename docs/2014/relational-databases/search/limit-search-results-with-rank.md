@@ -18,15 +18,15 @@ ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 66714f9f401c8a5061b1cff2d316555d5e9a71bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 914a1f0eb36ad0da4076f487d1771a8dfd23bfb1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093340"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807252"
 ---
 # <a name="limit-search-results-with-rank"></a>Einschränken von Suchergebnissen mit RANK
-  Die Funktionen [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) und [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) geben eine Spalte mit dem Namen RANK zurück, die Ordinalwerte zwischen 0 und 1000 (Rangwerte) enthält. Diese Werte werden verwendet, um die Rangfolge der zurückgegebenen Zeilen gemäß ihrer Übereinstimmung mit den Auswahlkriterien festzulegen. Die Rangwerte geben lediglich eine relative Relevanzreihenfolge der Zeilen im Resultset an, wobei ein niedrigerer Wert eine niedrigere Relevanz anzeigt. Die tatsächlichen Werte sind nicht von Bedeutung und unterscheiden sich i. d. R. bei jeder Ausführung der Abfrage.  
+  Die Funktionen [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) und [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) geben eine Spalte mit dem Namen RANK zurück, die Ordinalwerte zwischen 0 und 1000 (Rangwerte) enthält. Diese Werte werden verwendet, um die Rangfolge der zurückgegebenen Zeilen gemäß ihrer Übereinstimmung mit den Auswahlkriterien festzulegen. Die Rangwerte geben lediglich eine relative Relevanzreihenfolge der Zeilen im Resultset an, wobei ein niedrigerer Wert eine niedrigere Relevanz anzeigt. Die tatsächlichen Werte sind nicht von Bedeutung und unterscheiden sich i. d. R. bei jeder Ausführung der Abfrage.  
   
 > [!NOTE]  
 >  Die CONTAINS- und FREETEXT-Prädikate geben keine Rangwerte zurück.  
@@ -37,8 +37,8 @@ ms.locfileid: "48093340"
   
 ##  <a name="examples"></a> Beispiele zur Verwendung von RANK zum Einschränken der Suchergebnisse  
   
-### <a name="example-a-searching-for-only-the-top-three-matches"></a>Beispiel A: Suchen nach ausschließlich den obersten drei Übereinstimmungen  
- Im folgenden Beispiel werden mit CONTAINSTABLE nur die obersten drei Übereinstimmungen zurückgegeben.  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>Beispiel A: Nur die obersten drei Übereinstimmungen werden gesucht  
+ Im folgenden Beispiel werden mit CONTAINSTABLE nur die obersten drei Übereinstimmungen zurückgegeben.  
   
 ```  
 USE AdventureWorks2012  
@@ -68,7 +68,7 @@ RANK        Address                          City
 ```  
   
   
-### <a name="example-b-searching-for-the-top-ten-matches"></a>Beispiel B: Suchen nach ausschließlich den obersten zehn Übereinstimmungen  
+### <a name="example-b-searching-for-the-top-ten-matches"></a>Beispiel B: Suchen nach den obersten zehn Übereinstimmungen  
  Im folgenden Beispiel wird CONTAINSTABLE verwendet, um die Beschreibung der ersten 5 Produkte zurückzugeben, bei denen die `Description` -Spalte das Wort "aluminium" in der Nähe des Worts "light" oder "lightweight" enthält.  
   
 ```  
@@ -135,7 +135,7 @@ GO
  Das größte in einem Volltextkatalog gespeicherte Vorkommen für eine bestimmte Eigenschaft in einer Zeile.  
   
  MaxQueryRank  
- Der maximale Rang, 1000, der von der Volltext-Engine zurückgegeben wird.  
+ Der maximale Rang, 1000, der von der Volltextsuch-Engine zurückgegeben wird.  
   
   
 ### <a name="rank-computation-issues"></a>Gesichtspunkte bei der Rangberechnung  
@@ -143,7 +143,7 @@ GO
   
  Statistiken wie `IndexRowCount` können stark variieren. Hat z. B. ein Katalog 2 Milliarden Zeilen im Masterindex, wird ein einzelnes neues Dokument in einen im Arbeitsspeicher befindlichen Zwischenindex indiziert, und die Ränge für das Dokument, die auf der Anzahl der Dokumente im Index im Arbeitsspeicher basieren, können im Vergleich zu den Rängen für Dokumente aus dem Masterindex verfälscht sein. Daher wird empfohlen, dass die Indizes nach jeder Auffüllung, durch die viele Zeilen indiziert oder neu indiziert werden, in einen Masterindex zusammengeführt werden, mithilfe der ALTER FULLTEXT CATALOG ... REORGANIZE [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung. Entsprechend bestimmten Parametern, wie Anzahl und Größe der Zwischenindizes, werden die Indizes auch automatisch von der Volltextsuch-Engine zusammengeführt.  
   
- `MaxOccurrence`-Werte werden in den Bereich 1 bis 32 normalisiert. Das heißt, dass z. B. ein 50 Wörter langes Dokument genau so behandelt wird wie ein 100 Wörter langes. Die zur Normalisierung verwendete Tabelle ist unten aufgeführt. Da die Dokumentlängen im Bereich zwischen den benachbarten Tabellenwerten 32 und 128 liegen, werden sie behandelt, als hätten sie dieselbe Länge, nämlich 128 (32 < `docLength` <= 128).  
+ `MaxOccurrence`-Werte werden in den Bereich 1 bis 32 normalisiert. Das heißt, dass z. B. ein 50 Wörter langes Dokument genau so behandelt wird wie ein 100 Wörter langes. Die zur Normalisierung verwendete Tabelle ist unten aufgeführt. Da die Dokumentlängen im Bereich zwischen den benachbarten Tabellenwerten 32 und 128 liegen, werden sie behandelt, als hätten sie dieselbe Länge, nämlich 128 (32 < `docLength` <= 128).  
   
 ```  
 { 16, 32, 128, 256, 512, 725, 1024, 1450, 2048, 2896, 4096, 5792, 8192, 11585,   
@@ -176,9 +176,9 @@ Rank = min( MaxQueryRank, HitCount * 16 * StatisticalWeight / MaxOccurrence )
 ```  
 ContainsRank = same formula used for CONTAINSTABLE ranking of a single term (above).  
 Weight = the weight specified in the query for each term. Default weight is 1.  
-WeightedSum = Σ[key=1 to n] ContainsRankKey * WeightKey  
-Rank =  ( MaxQueryRank * WeightedSum ) / ( ( Σ[key=1 to n] ContainsRankKey^2 )   
-      + ( Σ[key=1 to n] WeightKey^2 ) - ( WeightedSum ) )  
+WeightedSum = ??[key=1 to n] ContainsRankKey * WeightKey  
+Rank =  ( MaxQueryRank * WeightedSum ) / ( ( ??[key=1 to n] ContainsRankKey^2 )   
+      + ( ??[key=1 to n] WeightKey^2 ) - ( WeightedSum ) )  
   
 ```  
   
@@ -187,14 +187,14 @@ Rank =  ( MaxQueryRank * WeightedSum ) / ( ( Σ[key=1 to n] ContainsRankKey^2 )
  Die Rangfolgenberechnung für[FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) basiert auf der OKAPI BM25-Rangfolgenformel. Bei FREETEXTTABLE-Abfragen werden der Abfrage durch Wortformengenerierung Flexionsformen der ursprünglichen Abfragewörter hinzugefügt; diese Wörter werden als separate Wörter ohne besondere Beziehung zu den Wörtern behandelt, aus denen sie generiert wurden. Aus der Thesaurus-Funktion generierte Synonyme werden als separate, gleich gewichtete Begriffe behandelt. Jedes Wort in der Abfrage wird bei der Rangberechnung einbezogen.  
   
 ```  
-Rank = Σ[Terms in Query] w ( ( ( k1 + 1 ) tf ) / ( K + tf ) ) * ( ( k3 + 1 ) qtf / ( k3 + qtf ) ) )  
+Rank = ??[Terms in Query] w ( ( ( k1 + 1 ) tf ) / ( K + tf ) ) * ( ( k3 + 1 ) qtf / ( k3 + qtf ) ) )  
 Where:   
 w is the Robertson-Sparck Jones weight.   
 In simplified form, w is defined as:   
-w = log10 ( ( ( r + 0.5 ) * ( N – R + r + 0.5 ) ) / ( ( R – r + 0.5 ) * ( n – r + 0.5 ) )  
+w = log10 ( ( ( r + 0.5 ) * ( N - R + r + 0.5 ) ) / ( ( R - r + 0.5 ) * ( n - r + 0.5 ) )  
 N is the number of indexed rows for the property being queried.   
 n is the number of rows containing the word.   
-K is ( k1 * ( ( 1 – b ) + ( b * dl / avdl ) ) ).   
+K is ( k1 * ( ( 1 - b ) + ( b * dl / avdl ) ) ).   
 dl is the property length, in word occurrences.   
 avdl is the average length of the property being queried, in word occurrences.   
 k1, b, and k3 are the constants 1.2, 0.75, and 8.0, respectively.   

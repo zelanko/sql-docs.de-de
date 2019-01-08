@@ -12,12 +12,12 @@ ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dff42f1cf2a028b4bfa6f7c770c7a244f4c18c3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7063448da86c97a7e3ff88899a9488915a055c71
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111992"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545601"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>Vermeiden von Konflikten mit Datenbankvorgängen in FILESTREAM-Anwendungen
   Bei Anwendungen, die SqlOpenFilestream() zum Öffnen von Win32-Dateihandles zum Lesen oder Schreiben von FILESTREAM-BLOB-Daten verwenden, können Konfliktfehler mit [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen auftreten, die in einer gemeinsamen Transaktion verwaltet werden. Dies gilt auch für [!INCLUDE[tsql](../../includes/tsql-md.md)] - oder MARS-Abfragen, bei denen das Beenden der Ausführung viel Zeit in Anspruch nimmt. Anwendungen müssen sorgfältig entworfen werden, wenn diese Art von Konflikten vermieden werden soll.  
@@ -27,7 +27,7 @@ ms.locfileid: "48111992"
 |Transact-SQL-Anweisungen|Geöffnet zum Lesen|Geöffnet zum Schreiben|  
 |------------------------------|---------------------|----------------------|  
 |DDL-Anweisungen, die mit Datenbankmetadaten arbeiten, z. B. CREATE TABLE, CREATE INDEX, DROP TABLE und ALTER TABLE.|Zulässig|Werden blockiert und schlagen mit einem Timeout fehl.|  
-|DML-Anweisungen, die mit den Daten arbeiten, die in der Datenbank gespeichert sind, z. B. UPDATE, DELETE und INSERT.|Zulässig|Verweigert|  
+|DML-Anweisungen, die mit den Daten arbeiten, die in der Datenbank gespeichert sind, z. B. UPDATE, DELETE und INSERT.|Zulässig|Verweigert|  
 |SELECT|Zulässig|Zulässig|  
 |COMMIT TRANSACTION|Verweigert*|Verweigert*|  
 |SAVE TRANSACTION|Verweigert*|Verweigert*|  
@@ -46,13 +46,13 @@ dstHandle =  OpenSqlFilestream(dstFilePath, Write, 0,
     transactionToken, cbTransactionToken, 0);  
   
 //Write some date to the FILESTREAM BLOB.  
-WriteFile(dstHandle, updateData, …);  
+WriteFile(dstHandle, updateData, ...);  
   
 //DDL statements will be denied.  
 //DML statements will be denied.  
 //SELECT statements will be allowed. The FILESTREAM BLOB is  
 //returned without the modifications that are made by  
-//WriteFile(dstHandle, updateData, …).  
+//WriteFile(dstHandle, updateData, ...).  
 CloseHandle(dstHandle);  
   
 //DDL statements will be allowed.  
@@ -141,7 +141,7 @@ HANDLE srcHandle =  OpenSqlFilestream(srcFilePath,
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Zugreifen auf FILESTREAM-Daten mit OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md)   
+ [ZUgreifen auf FILESTREAM-Daten mit OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md)   
  [Verwenden von Multiple Active Result Sets &#40;MARS&#41;](../native-client/features/using-multiple-active-result-sets-mars.md)  
   
   

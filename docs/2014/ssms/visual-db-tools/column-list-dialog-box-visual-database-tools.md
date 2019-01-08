@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.columnlist
@@ -12,21 +12,21 @@ ms.assetid: 9ebd08b6-fa93-4581-bb6c-96b51d2c895c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2018bbfba6d7282c6e9ab27d9d2923bf69e59048
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7a6853d721a1504c3b44e733a2f2fbc6f37608be
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053120"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815772"
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>Spaltenliste (Dialogfeld) (Visual Database Tools)
   Beim Schreiben von Abfragen kann es hilfreich sein, eine Liste der Spalten anzuzeigen, die in den ausgewählten Tabellenwertobjekten verfügbar sind.  
   
- Klicken Sie zum Anzeigen dieses Dialogfelds im Menü **Abfrage-Designer** im Diagramm mit der rechten Maustaste auf die Kopfzeile eines Tabellenwertobjekts, und klicken Sie dann auf **Eigenschaften**. Klicken Sie im Fenster **Eigenschaften** auf das Feld **Spaltenliste** . Klicken Sie dann rechts neben dem Feld auf die Auslassungspunkte **(...)** .  
+ Klicken Sie zum Anzeigen dieses Dialogfelds im Menü **Abfrage-Designer** im Diagramm mit der rechten Maustaste auf die Kopfzeile eines Tabellenwertobjekts, und klicken Sie dann auf **Eigenschaften**. Klicken Sie im Fenster **Eigenschaften** auf das Feld **Spaltenliste** . Klicken Sie dann rechts neben dem Feld auf die Auslassungspunkte **(...)**.  
   
  Das Dialogfeld stellt eine Liste der Spalten im ausgewählten Tabellenwertobjekt sowie grundlegende Eigenschaften (z. B. Datentypen und Zulässigkeit von NULL-Werten) bereit.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name**  
  Zeigt den Namen der Spalten im ausgewählten Tabellenwertobjekt an.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.selectsourcetablesandviews.f1
@@ -13,12 +12,12 @@ ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2f99b94c133ba2a8bfd8bbe6d7b78bd455061409
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 074fb9aff14a2d173658c0a8ed8e31740e957a37
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050132"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760312"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Quelltabellen und -sichten auswählen (SQL Server-Import/Export-Assistent)
   Verwenden der **auswählen von Quelltabellen und-Sichten** Seite Geben Sie an, die Tabellen und Sichten aus der Datenquelle an das Ziel kopiert werden.  
@@ -30,7 +29,7 @@ ms.locfileid: "48050132"
   
  Mit dem SQL Server-Import/Export-Assistenten werden Daten aus einer Quelle in ein Ziel kopiert. Mit dem Assistenten können auch eine Zieldatenbank und Zieltabellen erstellt werden. Wenn Sie jedoch mehrere Datenbanken, Tabellen oder andere Datenbankobjekte kopieren müssen, verwenden Sie stattdessen den Assistenten zum Kopieren von Datenbanken. Weitere Informationen finden Sie unter [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 ### <a name="tables-and-views-list"></a>Liste 'Tabellen und Sichten'  
  **Quelle**  
@@ -40,7 +39,7 @@ ms.locfileid: "48050132"
  Wählen Sie aus der Liste für jede Quelltabelle eine Zieltabelle aus.  
   
 > [!NOTE]  
->  Wenn Sie zu diesem Zeitpunkt den Assistenten zum Erstellen einer Zieltabelle in anhalten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oder ein anderes Tool, auf die neue Tabelle ist nicht sofort sichtbar, in der Liste verfügbarer Zieltabellen. Um die Liste der Zieltabellen zu aktualisieren, zwei Seiten zurück auf die **wählen Sie ein Ziel** Seite, wählen Sie die Zieldatenbank erneut aus, und dann wieder zur der **auswählen von Quelltabellen und-Sichten**.  
+>  Wenn Sie zu diesem Zeitpunkt den Assistenten anhalten, um eine Zieltabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oder eines anderen Tools zu erstellen, ist die neue Tabelle in der Liste verfügbarer Zieltabellen nicht sofort sichtbar. Um die Liste der Zieltabellen zu aktualisieren, zwei Seiten zurück auf die **wählen Sie ein Ziel** Seite, wählen Sie die Zieldatenbank erneut aus, und dann wieder zur der **auswählen von Quelltabellen und-Sichten**.  
   
 ### <a name="other-options"></a>Weitere Optionen  
  **Zuordnungen bearbeiten**  

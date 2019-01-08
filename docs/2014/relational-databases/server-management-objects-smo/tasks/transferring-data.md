@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 10/20/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -17,19 +15,19 @@ ms.assetid: eea255c3-8251-40f0-973b-fe4ef6cb5261
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e3fa6ee3b25169e2dafe6ed7ad8380169dfe91d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 49754be9b412f9cf6e7d660402527aed954a09fa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164740"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377672"
 ---
 # <a name="transferring-data"></a>Übertragen von Daten
   Die <xref:Microsoft.SqlServer.Management.Smo.Transfer>-Klasse ist eine Hilfsprogrammklasse, die Tools zur Übertragung von Objekten und Daten bereitstellt.  
   
  Objekte im Datenbankschema werden übertragen, indem auf dem Zielserver ein generiertes Skript ausgeführt wird. <xref:Microsoft.SqlServer.Management.Smo.Table>-Daten werden mit einem dynamisch erstellten DTS-Paket übertragen.  
   
- Das <xref:Microsoft.SqlServer.Management.Smo.Transfer>-Objekt enthält die gesamte Funktionalität der <xref:Microsoft.SqlServer.Management.Smo.Transfer>-Objekte in DMO sowie zusätzliche [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Funktionalität. In SMO in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], <xref:Microsoft.SqlServer.Management.Smo.Transfer> -Objekt verwendet die ["SqlBulkCopy"](http://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy\(v=VS.90\).aspx) API zum Übertragen von Daten. Zudem befinden sich die für die Durchführung von Datenübertragungen verwendeten Methoden und Eigenschaften im <xref:Microsoft.SqlServer.Management.Smo.Transfer>-Objekt statt im <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekt. Das Verschieben von Funktionalität aus den Instanzenklassen in die Hilfsprogrammklassen entspricht einem weniger umfangreichen Objektmodell, da der Code für spezifische Aufgaben nur dann geladen wird, wenn er benötigt wird.  
+ Das <xref:Microsoft.SqlServer.Management.Smo.Transfer>-Objekt enthält die gesamte Funktionalität der <xref:Microsoft.SqlServer.Management.Smo.Transfer>-Objekte in DMO sowie zusätzliche [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Funktionalität. In SMO in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], <xref:Microsoft.SqlServer.Management.Smo.Transfer> -Objekt verwendet die ["SqlBulkCopy"](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy\(v=VS.90\).aspx) API zum Übertragen von Daten. Zudem befinden sich die für die Durchführung von Datenübertragungen verwendeten Methoden und Eigenschaften im <xref:Microsoft.SqlServer.Management.Smo.Transfer>-Objekt statt im <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekt. Das Verschieben von Funktionalität aus den Instanzenklassen in die Hilfsprogrammklassen entspricht einem weniger umfangreichen Objektmodell, da der Code für spezifische Aufgaben nur dann geladen wird, wenn er benötigt wird.  
   
  Das <xref:Microsoft.SqlServer.Management.Smo.Transfer>-Objekt unterstützt keine Datenübertragungen in eine Zieldatenbank, deren <xref:Microsoft.SqlServer.Management.Smo.Database.CompatibilityLevel%2A> geringer als die Version der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz ist.  
   

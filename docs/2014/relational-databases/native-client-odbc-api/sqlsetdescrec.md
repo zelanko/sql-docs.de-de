@@ -12,12 +12,12 @@ ms.assetid: 203d02a2-aa09-462b-a489-a2cdd6f6023b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20adc991d3d9c497b4bab1f7c665f941bd98e7fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d323b1b92ba02e55064d2f86c62ee36a4a38d904
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088580"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365802"
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
   SQLSetDescRec-Funktion, die spezifisch für ist in diesem Thema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -27,7 +27,7 @@ ms.locfileid: "48088580"
   
  In der folgenden Tabelle wird die Zuordnung zwischen Parametern und Deskriptorfeldern beschrieben.  
   
-|Parameter|Zugehöriges Attribut für Parametertypen, die keine Tabellenwertparameter sind, einschließlich Tabellenwertparameter-Spalten.|Verknüpftes Attribut für Tabellenwertparameter|  
+|Parameter|Verknüpftes Attribut für nicht-Tabellenwertparameter-Typen, einschließlich Tabellenwertparameter-Spalten|Verknüpftes Attribut für Tabellenwertparameter|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
 |*Typ*|SQL_DESC_TYPE|SQL_SS_TABLE|  
 |*SubType*|Wird ignoriert.|Für Datensätze des Typs SQL_DATETIME oder SQL_INTERVAL wird es auf SQL_DESC_DATETIME_INTERVAL_CODE festgelegt.|  
@@ -58,7 +58,7 @@ ms.locfileid: "48088580"
  `SQLSetDescRec` unterstützt große benutzerdefinierte CLR-Typen (UDTs). Weitere Informationen finden Sie unter [Large CLR User-Defined Typen &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQLSetDescRec](http://go.microsoft.com/fwlink/?LinkId=80704)   
+ [SQLSetDescRec](https://go.microsoft.com/fwlink/?LinkId=80704)   
  [ODBC-API-Implementierungsdetails](odbc-api-implementation-details.md)  
   
   

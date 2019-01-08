@@ -1,5 +1,5 @@
 ---
-title: Die grundlegende MDX-Abfrage (MDX) | Microsoft Docs
+title: Die grundlegende MDX-Abfrage (Multidimensional Expressions) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7f3a1610f19bc99ce063d815f74906f10ddc2c7f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 61975b6b24cda25454d10eb1eeb5b452cad0f1ba
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026607"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529210"
 ---
-# <a name="mdx-query---the-basic-query"></a>MDX-Abfrage - die grundlegende Abfrage
+# <a name="mdx-query---the-basic-query"></a>MDX-Abfrage – grundlegende Abfrage
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  Die grundlegende MDX-Abfrage (Multidimensional Expressions) besteht aus der SELECT-Anweisung. Dies ist die am häufigsten verwendete Abfrage in MDX. Wenn Sie wissen, wie in einer SELECT-Anweisung von MDX ein Resultset angegeben wird, wie die Syntax der SELECT-Anweisung lautet und wie eine einfache Abfrage mit der SELECT-Anweisung erstellt wird, verfügen Sie über das Basiswissen zum Abfragen mehrdimensionaler Daten mit MDX.  
+  Die grundlegende MDX (Multidimensional Expressions)-Abfrage ist die SELECT-Anweisung die am häufigsten verwendete Abfrage in MDX. Wenn Sie wissen, wie in einer SELECT-Anweisung von MDX ein Resultset angegeben wird, wie die Syntax der SELECT-Anweisung lautet und wie eine einfache Abfrage mit der SELECT-Anweisung erstellt wird, verfügen Sie über das Basiswissen zum Abfragen mehrdimensionaler Daten mit MDX.  
   
 ## <a name="specifying-a-result-set"></a>Angeben eines Resultsets  
  Die SELECT-Anweisung in MDX gibt ein Resultset an, das aus einer Teilmenge mehrdimensionaler Daten besteht, die aus einem Cube zurückgegeben wurde. Zum Angeben eines Resultsets muss die MDX-Abfrage die folgenden Informationen enthalten:  
@@ -35,7 +35,7 @@ ms.locfileid: "34026607"
   
 -   Eine SELECT-Klausel, die die Abfrage-Achsen einer SELECT-Anweisung von MDX bestimmt. Weitere Informationen zur Erstellung von Abfrageachsen in einer SELECT-Klausel finden Sie unter [Angeben des Inhalts einer Abfrageachse &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md).  
   
--   Eine FROM-Klausel, mit der festgelegt wird, welcher Cube abgefragt wird. Weitere Informationen zur FROM-Klausel in der SELECT-Anweisung von MDX finden Sie unter [SELECT Statement &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md).  
+-   Eine FROM-Klausel, mit der festgelegt wird, welcher Cube abgefragt wird. Weitere Informationen zur FROM-Klausel in der SELECT-Anweisung von MDX finden Sie unter [SELECT-Anweisung &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md).  
   
 -   Eine optionale WHERE-Klausel, mit der festgelegt wird, welche Elemente oder Tupeln auf der Slicer-Achse verwendet werden sollen, um die zurückgegebenen Daten einzuschränken. Weitere Informationen zur Erstellung einer Abfrageachse in einer WHERE-Klausel finden Sie unter [Angeben des Inhalts einer Slicerachse &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md).  
   
@@ -54,7 +54,7 @@ FROM <SELECT subcube clause>
 [ <SELECT cell property list clause> ]  
 ```  
   
- Die SELECT-Anweisung von MDX unterstützt optionale Syntax, wie z. B. das WITH-Schlüsselwort und die Erstellung von berechneten Elementen mithilfe von MDX-Funktionen, um die Elemente in eine Achse oder Slicer-Achse einzuschließen. Außerdem bietet sie die Möglichkeit, die Werte bestimmter Zelleneigenschaften im Rahmen der Abfrage zurückzugeben. Weitere Informationen zur SELECT-Anweisung von MDX finden Sie unter [SELECT Statement &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md).  
+ Die SELECT-Anweisung von MDX unterstützt optionale Syntax, wie z. B. das WITH-Schlüsselwort und die Erstellung von berechneten Elementen mithilfe von MDX-Funktionen, um die Elemente in eine Achse oder Slicer-Achse einzuschließen. Außerdem bietet sie die Möglichkeit, die Werte bestimmter Zelleneigenschaften im Rahmen der Abfrage zurückzugeben. Weitere Informationen zur SELECT-Anweisung von MDX finden Sie unter [SELECT-Anweisung &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md).  
   
 ### <a name="comparing-the-syntax-of-the-mdx-select-statement-to-sql"></a>Vergleich der Syntax der SELECT-Anweisung von MDX mit SQL  
  Das Syntaxformat der SELECT-Anweisung von MDX gleicht dem Format der SQL-Syntax. Es gibt jedoch einige deutliche Unterschiede:  
@@ -103,7 +103,7 @@ WHERE ( [Sales Territory].[Southwest] )
  Ausführlichere Beispiele finden Sie unter [Angeben des Inhalts einer Abfrageachse &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)und [Angeben des Inhalts einer Slicerachse &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Schlüsselkonzepte in MDX & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [SELECT-Anweisung & #40; MDX & #41;](../../../mdx/mdx-data-manipulation-select.md)  
+ [Schlüsselkonzepte in MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [SELECT-Anweisung &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)  
   
   

@@ -10,12 +10,12 @@ ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 92f0094262f2f53dfcdc51fcbd77b08fa079d3be
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 6dda82b297b04f21fe1b4d2b7255c65b5b8a4aef
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032847"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366232"
 ---
 # <a name="manage-dqs-databases"></a>Manage DQS Databases
   Dieser Abschnitt enthält Informationen zu Datenbankverwaltungsaktionen, z. B. zum Sichern/Wiederherstellen oder Trennen/Anfügen, die für DQS-Datenbanken ausgeführt werden können.  
@@ -38,8 +38,8 @@ ms.locfileid: "51032847"
   
 -   Das Standardwiederherstellungsmodell der DQS-Datenbanken ist auf **Einfach**festgelegt. Im einfachen Wiederherstellungsmodell findet eine minimale Protokollierung der Transaktionen statt. Die Protokollkürzung erfolgt automatisch nach Ende der Transaktion, um Speicherplatz im Transaktionsprotokoll (LDF-Datei) freizugeben. Ausführliche Informationen zum einfachen Wiederherstellungsmodell finden Sie unter [Vollständige Datenbanksicherungen &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md).  
   
-> [!IMPORTANT]  
->  -   Die Protokollkürzung im einfachen Wiederherstellungsmodell kann sich verzögern, wenn die Protokolleinträge über eine längere Zeit aktiv bleiben (z. B. bei einer langen und zeitintensiven Transaktion). Dies kann dann dazu führen, dass das Transaktionsprotokoll schnell an Größe zunimmt. Außerdem wird die Größe der physischen Protokolldatei (LDF-Datei) bei der Protokollkürzung nicht verringert. Um die Größe einer physischen Protokolldatei zu verringern, müssen Sie die Protokolldatei verkleinern. Informationen zum Beheben von Problemen bei Transaktionsprotokollen finden Sie unter [Das Transaktionsprotokoll &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) oder im Microsoft Support-Artikel unter [http://go.microsoft.com/fwlink/?LinkId=237446](http://go.microsoft.com/fwlink/?LinkId=237446).  
+> [!IMPORTANT]
+>  -   Die Protokollkürzung im einfachen Wiederherstellungsmodell kann sich verzögern, wenn die Protokolleinträge über eine längere Zeit aktiv bleiben (z. B. bei einer langen und zeitintensiven Transaktion). Dies kann dann dazu führen, dass das Transaktionsprotokoll schnell an Größe zunimmt. Außerdem wird die Größe der physischen Protokolldatei (LDF-Datei) bei der Protokollkürzung nicht verringert. Um die Größe einer physischen Protokolldatei zu verringern, müssen Sie die Protokolldatei verkleinern. Informationen zum Beheben von Problemen bei Transaktionsprotokollen finden Sie unter [Das Transaktionsprotokoll &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) oder im Microsoft Support-Artikel unter [https://go.microsoft.com/fwlink/?LinkId=237446](https://go.microsoft.com/fwlink/?LinkId=237446).  
 > -   Sie müssen regelmäßig eine vollständige oder differenzielle Sicherung der DQS-Datenbanken ausführen und das Transaktionsprotokoll sichern, um eine Zeitpunktwiederherstellung der Daten auszuführen. Weitere Informationen finden Sie unter [Vollständige Datenbanksicherungen &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md) und [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   
 ##  <a name="DetachAttach"></a> Trennen/Anfügen der DQS-Datenbanken  

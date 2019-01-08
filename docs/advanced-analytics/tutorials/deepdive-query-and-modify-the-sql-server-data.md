@@ -1,70 +1,66 @@
 ---
-title: Abfragen und ändern Sie die SQL Server-Daten (SQL und R tieferer) | Microsoft-Dokumentation
+title: Fragen Sie ab und ändern Sie die SQL Server-Daten mithilfe von RevoScaleR - SQL Server-Machine Learning
+description: Exemplarische Vorgehensweise im Lernprogramm zum Abfragen und Ändern von Daten mit der Sprache R auf SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/27/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 57fff9b8ddfd6507876bd6eb174a127d70d0b916
-ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
+ms.openlocfilehash: 191dd7237307d33d3cdaca5872fee9a09d27f321
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45975649"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645409"
 ---
-# <a name="query-and-modify-the-sql-server-data-sql-and-r-deep-dive"></a>Fragen Sie ab und ändern Sie die SQL Server-Daten (SQL und R tieferer)
+# <a name="query-and-modify-the-sql-server-data-sql-server-and-revoscaler-tutorial"></a>Fragen Sie ab und ändern Sie die SQL Server-Daten (SQL Server und die RevoScaleR-Lernprogramm)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dieser Artikel ist Teil des Tutorials zur Verwendung von Data Science Deep Dive [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
+Diese Lektion ist Teil der [RevoScaleR Tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zur Verwendung von [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
 
-Nachdem Sie die Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geladen haben, können Sie die Datenquellen, die Sie als Argumente für R-Funktionen in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]erstellt haben, nun dazu verwenden, um grundlegende Informationen zu Variablen abzurufen und Übersichten und Histogramme zu generieren.
+In der vorherigen Lektion haben Sie die Daten geladen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In diesem Schritt können Sie untersuchen und Bearbeiten von Daten mit **RevoScaleR**:
 
-In diesem Schritt verwenden erneut Sie die Datenquellen, um einige schnelle Analysen, und klicken Sie dann die Daten zu verbessern.
+> [!div class="checklist"]
+> * Grundlegende Informationen zu den Variablen zurück
+> * Erstellen Sie aus Rohdaten kategorische Daten
 
-## <a name="query-the-data"></a>Abfragen der Daten
+Kategorische Daten oder *faktorvariablen*, eignen sich für explorative datenvisualisierungen. Sie können sie als Eingaben für Histogramme erhalten einen Überblick darüber, welche Variablendaten aussieht.
 
-Rufen Sie zunächst eine Liste der Spalten und ihrer Datentypen ab.
+## <a name="query-for-columns-and-types"></a>Abfragen von Spalten und Typen
 
-1.  Verwenden Sie die Funktion [RxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) , und geben Sie die Datenquelle, die Sie analysieren möchten.
+Verwenden Sie eine R-IDE oder RGui.exe, um R-Skript ausführen. 
 
-    Sie können auch verwenden, abhängig von Ihrer Version von RevoScaleR, [RxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames). 
+Rufen Sie zunächst eine Liste der Spalten und ihrer Datentypen ab. Sie können mithilfe der Funktion [RxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) , und geben Sie die Datenquelle, die Sie analysieren möchten. Abhängig von Ihrer Version von **RevoScaleR**, außerdem können Sie [RxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames). 
   
-    ```R
-    rxGetVarInfo(data = sqlFraudDS)
-    ```
+```R
+rxGetVarInfo(data = sqlFraudDS)
+```
 
-    **Ergebnisse**
-    
-    *Var 1: custID, Type: integer*
-    
-    *Var 2: gender, Type: integer*
-    
-    *Var 3: state, Type: integer*
-    
-    *Var 4: cardholder, Type: integer*
-    
-    *Var 5: balance, Type: integer*
-    
-    *Var 6: numTrans, Type: integer*
-    
-    *Var 7: numIntlTrans, Type: integer*
-    
-    *Var 8: creditLine, Type: integer*
-    
-    *Var 9: fraudRisk, Type: integer*
+**Ergebnisse**
 
+```R
+Var 1: custID, Type: integer
+Var 2: gender, Type: integer
+Var 3: state, Type: integer
+Var 4: cardholder, Type: integer
+Var 5: balance, Type: integer
+Var 6: numTrans, Type: integer
+Var 7: numIntlTrans, Type: integer
+Var 8: creditLine, Type: integer
+Var 9: fraudRisk, Type: integer
+```
 
-## <a name="modify-metadata"></a>Ändern von Metadaten
+## <a name="create-categorical-data"></a>Erstellen Sie kategorische Daten
 
-Alle Variablen werden als Integer gespeichert, aber einige Variablen darstellen, aus kategorische Daten sollten namens *faktorvariablen* in r Z. B. die Spalte *Zustand* Zahlen, die als Bezeichner verwendet werden, für die 50 US-Bundesstaaten sowie das District Of Columbia enthält.  Um das Verständnis der Daten zu erleichtern, ersetzen Sie die Zahlen durch eine Liste der Abkürzungen der US-Bundesstaaten.
+Alle Variablen werden als Integer gespeichert, aber einige Variablen darstellen, aus kategorische Daten sollten namens *faktorvariablen* in r Z. B. die Spalte *Zustand* Zahlen, die als Bezeichner verwendet werden, für die 50 US-Bundesstaaten sowie das District Of Columbia enthält. Um das Verständnis der Daten zu erleichtern, ersetzen Sie die Zahlen durch eine Liste der Abkürzungen der US-Bundesstaaten.
 
 In diesem Schritt erstellen einen Zeichenfolgenvektor, die die Abkürzungen enthält, und ordnen Sie dann diese kategorischen Werte den ursprünglichen integerbezeichnern. Verwenden Sie die neue Variable in der *ColInfo* Argument auf, um anzugeben, dass diese Spalte als Faktor behandelt werden. Wenn Sie die Daten analysieren, oder verschieben Sie es, die Abkürzungen verwendet werden, und die Spalte wird als Faktor behandelt.
 
-Wenn die Spalte vor der Verwendung als Faktor zu Abkürzungen zugeordnet wird, verbessert dies auch die Leistung. Weitere Informationen finden Sie unter [R und Data-Optimierung](..\r\r-and-data-optimization-r-services.md).
+Wenn die Spalte vor der Verwendung als Faktor zu Abkürzungen zugeordnet wird, verbessert dies auch die Leistung. Weitere Informationen finden Sie unter [R und Data-Optimierung](../r/r-and-data-optimization-r-services.md).
 
-1. Beginnen Sie folgendermaßen, indem Sie eine R-Variable, *stateAbb*, erstellen und den Zeichenfolgenvektor definieren, der ihr zugeordnet werden soll:
+1. Erstellen eine R-Variable, zunächst *StateAbb*, und den Zeichenfolgenvektor Definieren von Zeichenfolgen, die wie folgt hinzufügen.
   
     ```R
     stateAbb <- c("AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC",
@@ -99,7 +95,7 @@ Wenn die Spalte vor der Verwendung als Faktor zu Abkürzungen zugeordnet wird, v
     )
     ```
   
-3. Um die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquelle zu erstellen, die die aktualisierten Daten verwendet, rufen Sie die Funktion **RxSqlServerData** wie zuvor auf, fügen Sie jedoch das Argument *colInfo* hinzu.
+3. Zum Erstellen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquelle, die aktualisierten Daten Aufruf verwendet, die **RxSqlServerData** wie zuvor funktionieren, aber fügen die *ColInfo* Argument.
   
     ```R
     sqlFraudDS <- RxSqlServerData(connectionString = sqlConnString,
@@ -118,30 +114,21 @@ Wenn die Spalte vor der Verwendung als Faktor zu Abkürzungen zugeordnet wird, v
 
     **Ergebnisse**
     
-    *Var 1: custID, Type: integer*
-    
-    *Var 2: Geschlecht 2 Faktorebenen: Männlich "female"*
-    
-    *Var 3: Status 51 Faktorebenen: AK AL AR-AZ-Zertifizierungsstelle... VT WA WI WV WY*
-    
-    *Var 4: Karteninhabern 2 Faktorebenen: Prinzipal sekundäre Datenbank*
-    
-    *Var 5: balance, Type: integer*
-    
-    *Var 6: numTrans, Type: integer*
-    
-    *Var 7: numIntlTrans, Type: integer*
-    
-    *Var 8: creditLine, Type: integer*
-    
-    *Var 9: fraudRisk, Type: integer*
+    ```R
+    Var 1: custID, Type: integer
+    Var 2: gender  2 factor levels: Male Female
+    Var 3: state   51 factor levels: AK AL AR AZ CA ... VT WA WI WV WY
+    Var 4: cardholder  2 factor levels: Principal Secondary
+    Var 5: balance, Type: integer
+    Var 6: numTrans, Type: integer
+    Var 7: numIntlTrans, Type: integer
+    Var 8: creditLine, Type: integer
+    Var 9: fraudRisk, Type: integer
+    ```
 
-Die drei von Ihnen angegebenen Variablen (_gender_, _state_und _cardholder_) werden nun wie Faktoren verarbeitet.
+Die drei von Ihnen angegebenen Variablen (*gender*, *state*und *cardholder*) werden nun wie Faktoren verarbeitet.
 
-## <a name="next-step"></a>Nächster Schritt
+## <a name="next-steps"></a>Nächste Schritte
 
-[Definieren und Verwenden von Rechenkontexten](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)
-
-## <a name="previous-step"></a>Vorherigen Schritt
-
-[Erstellen von SQL Server-Datenobjekten mithilfe von RxSqlServerData](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
+> [!div class="nextstepaction"]
+> [Definieren und Verwenden von Rechenkontexten](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)

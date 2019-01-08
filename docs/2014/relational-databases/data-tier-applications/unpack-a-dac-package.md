@@ -15,19 +15,19 @@ ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74caa8d0ef17bf0b9401662969ce34c8d78cc112
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14e699be884ff24136b8bae1a744593be86c42ca
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125480"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798732"
 ---
 # <a name="unpack-a-dac-package"></a>Entpacken eines DAC-Pakets
   Verwenden Sie das Dialogfeld Datenebenenanwendung entpacken, um die Skripts und die Dateien aus einem Datenebenenanwendungs-Paket (DAC) zu entzippen. Die Skripts und Dateien werden in einem Ordner abgelegt, in dem sie überprüft werden können, bevor das Paket für die Bereitstellung der DAC in einem Produktionssystem verwendet wird. Der Inhalt einer DAC kann auch mit dem Inhalt eines anderen Pakets verglichen werden, das in einen anderen Ordner entpackt wurde.  
   
 1.  **Vorbereitungen:**  [Sicherheit](#Security)  
   
-2.  **So entpacken Sie eine DAC mit:**  [Datenebenenanwendung entpacken](#UnpackDACDial), [Untersuchen des Inhalts eines DAC-Pakets](#ExamDACPack)  
+2.  **So entpacken Sie eine DAC mit:**  [Dialogfeld "Data-Tier-Anwendung" Entpacken](#UnpackDACDial), [Untersuchen des Inhalts eines DAC-Pakets](#ExamDACPack)  
   
 ##  <a name="Security"></a> Sicherheit  
  Das Bereitstellen eines DAC-Pakets aus unbekannten oder nicht vertrauenswürdigen Quellen wird nicht empfohlen. Solche DACs können schädlichen Code enthalten, der möglicherweise unbeabsichtigten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code ausführt oder Fehler verursacht, indem er das Schema ändert. Bevor Sie eine DAC aus einer unbekannten oder nicht vertrauenswürdigen Quelle verwenden, sollten Sie sie auf einer isolierten [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Testinstanz bereitstellen, die DAC entpacken und den Code, z. B. gespeicherte Prozeduren oder anderen benutzerdefinierten Code, untersuchen.  

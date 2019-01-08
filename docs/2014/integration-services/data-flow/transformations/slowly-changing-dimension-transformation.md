@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.slowlychangingdimtrans.f1
@@ -18,12 +17,12 @@ ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c417f01f7256863902f4e446bcb04c0732be832c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2fae586ee68a75127d5085b57f5f200498967d1d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056190"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352133"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>Transformation für langsam veränderliche Dimensionen
   Die Transformation für langsam veränderliche Dimensionen koordiniert das Aktualisieren und Einfügen von Datensätzen in Data Warehouse-Dimensionstabellen. Beispielsweise können Sie mit dieser Transformation die Transformationsausgaben konfigurieren, die Datensätze in der DimProduct-Tabelle der [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] -Datenbank mit Daten aus der Production.Products-Tabelle in der AdventureWorks-OLTP-Datenbank aktualisieren und ersetzen.  
@@ -47,7 +46,7 @@ ms.locfileid: "48056190"
   
 -   Veränderliches Attribut überschreibt vorhandene Datensätze. Diese Art von Änderung ist mit einer Änderung vom Typ 1 identisch. Die Transformation für langsam veränderliche Dimensionen leitet diese Zeilen an die Ausgabe **Ausgabe: Updates von veränderlichen Attributen**weiter.  
   
--   Verlaufsattribut erstellt neue Datensätze, statt vorhandene Datensätze zu aktualisieren. Als einzige Änderung in einem vorhandenen Datensatz ist das Update einer Spalte zulässig, die angibt, ob der Datensatz aktuell oder abgelaufen ist. Diese Art von Änderung ist mit einer Änderung vom Typ 2 identisch. Die Transformation für langsam veränderliche Dimensionen leitet diese Zeilen an zwei Ausgaben weiter: **Ausgabe der Einfügevorgänge im Verlaufsattribut** und **Neue Ausgabe**.  
+-   Verlaufsattribut erstellt neue Datensätze, statt vorhandene Datensätze zu aktualisieren. Als einzige Änderung in einem vorhandenen Datensatz ist das Update einer Spalte zulässig, die angibt, ob der Datensatz aktuell oder abgelaufen ist. Diese Art von Änderung ist mit einer Änderung vom Typ 2 identisch. Die Transformation für langsam veränderliche Dimensionen leitet diese Zeilen an zwei Ausgaben weiter: **Ausgabe der Einfügevorgänge im Verlaufsattribut** und **neue Ausgabe**.  
   
 -   Festes Attribut gibt an, dass der Spaltenwert nicht geändert werden darf. Die Transformation für langsam veränderliche Dimensionen erkennt Änderungen und kann die Zeilen mit Änderungen an die Ausgabe **Ausgabe des festen Attributs**weiterleiten.  
   
@@ -69,7 +68,7 @@ ms.locfileid: "48056190"
 |------------|-----------------|----------------------------|  
 |**Ausgabe: Updates von veränderlichen Attributen**|Der Datensatz in der Nachschlagetabelle wird aktualisiert. Diese Ausgabe wird für veränderliche Attributzeilen verwendet.|Eine Transformation für OLE DB-Befehl aktualisiert den Datensatz mithilfe einer UPDATE-Anweisung.|  
 |**Ausgabe des festen Attributs**|Die Werte in Zeilen, die nicht geändert werden dürfen, stimmen nicht mit Werten in der Nachschlagetabelle überein. Diese Ausgabe wird für feste Attributzeilen verwendet.|Es wird kein Standarddatenfluss erstellt. Falls für die Transformation konfiguriert ist, dass sie fortgesetzt wird, wenn Änderungen an Spalten fester Attribute gefunden werden, sollten Sie einen Datenfluss zum Aufzeichnen dieser Zeilen erstellen.|  
-|**Ausgabe der Einfügevorgänge im Verlaufsattribut**|Die Nachschlagetabelle enthält mindestens eine übereinstimmende Zeile. Die als "aktuell" markierte Zeile muss jetzt als "abgelaufen" markiert werden. Diese Ausgabe wird für Verlaufsattributzeilen verwendet.|Transformationen für abgeleitete Spalten erstellen Spalten für die Indikatoren abgelaufener Zeilen und aktueller Zeilen. Eine OLE DB-Befehlstransformation aktualisiert den Datensatz, der jetzt als "abgelaufen" markiert werden muss. Die Zeile mit den neuen Spaltenwerten wird an die neue Ausgabe geleitet, wo die Zeile eingefügt und als "aktuell" markiert wird.|  
+|**Ausgabe der Einfügevorgänge im Verlaufsattribut**|Die Nachschlagetabelle enthält mindestens eine übereinstimmende Zeile. Die als „current“ (aktuell) markierte Zeile muss jetzt als „expired“ (abgelaufen) markiert werden. Diese Ausgabe wird für Verlaufsattributzeilen verwendet.|Transformationen für abgeleitete Spalten erstellen Spalten für die Indikatoren abgelaufener Zeilen und aktueller Zeilen. Eine OLE DB-Befehlstransformation aktualisiert den Datensatz, der jetzt als "abgelaufen" markiert werden muss. Die Zeile mit den neuen Spaltenwerten wird an die neue Ausgabe geleitet, wo die Zeile eingefügt und als "aktuell" markiert wird.|  
 |**Ausgabe der Updates abgeleiteter Elemente**|Zeilen für abgeleitete Dimensionselemente werden eingefügt. Diese Ausgabe wird für abgeleitete Elementzeilen verwendet.|Eine Transformation für OLE DB-Befehl aktualisiert den Datensatz mithilfe einer UPDATE-Anweisung von SQL.|  
 |**Neue Ausgabe**|Die Nachschlagetabelle enthält keine übereinstimmenden Zeilen. Die Zeile wird der Dimensionstabelle hinzugefügt. Diese Ausgabe wird für neue Zeilen und Änderungen an Verlaufsattributzeilen verwendet.|Eine Transformation für abgeleitete Spalten legt den Indikator für die aktuelle Zeile fest, und ein OLE DB-Ziel fügt die Zeile ein.|  
 |**Nicht geänderte Ausgabe**|Die Werte in der Nachschlagetabelle stimmen mit den Zeilenwerten überein. Diese Ausgabe wird für nicht geänderte Zeilen verwendet.|Es wird kein Standarddatenfluss erstellt, weil die Transformation für langsam veränderliche Dimensionen keine Schritte ausführt. Wenn Sie diese Zeilen aufzeichnen möchten, sollten Sie einen Datenfluss für diese Ausgabe erstellen.|  
@@ -94,7 +93,7 @@ ms.locfileid: "48056190"
   
 -   [Benutzerdefinierte Eigenschaften von Transformationen](transformation-custom-properties.md)  
   
- Informationen zum Festlegen von Eigenschaften finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](../set-the-properties-of-a-data-flow-component.md).  
+ Informationen zum Festlegen der Eigenschaften finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](../set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="configuring-the-slowly-changing-dimension-transformation-outputs"></a>Konfigurieren der Ausgaben der Transformation für langsam veränderliche Dimensionen  
  Das Koordinieren der Updates und der Einfügungen von Datensätzen in Dimensionstabellen kann eine komplexe Aufgabe sein, insbesondere wenn Änderungen vom Typ 1 und Typ 2 verwendet werden. [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer stellt zwei Möglichkeiten bereit, um die Unterstützung langsam veränderlicher Dimensionen zu konfigurieren:  
@@ -108,6 +107,6 @@ ms.locfileid: "48056190"
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   Blogeintrag, [Optimizing the Slowly Changing Dimension Wizard](http://go.microsoft.com/fwlink/?LinkId=199481)(Optimieren des Assistenten für langsam veränderliche Dimensionen), auf blogs.msdn.com.  
+-   Blogeintrag, [Optimizing the Slowly Changing Dimension Wizard](https://go.microsoft.com/fwlink/?LinkId=199481)(Optimieren des Assistenten für langsam veränderliche Dimensionen), auf blogs.msdn.com.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Bidirektionale kreuzfilter in tabellarischen Modellen | Microsoft-Dokumentation
+title: Bidirektionale kreuzfilter in tabellarischen Modellen von Analysis Services | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 89c3aee1bb762a5725e3242c88284d07abdb8de7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: eee2e859abf5b7924cb072c4653ac3e83e7b7824
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38033308"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072307"
 ---
 # <a name="bi-directional-cross-filters-in-tabular-models"></a>Bidirektionale kreuzfilter in tabellarischen Modellen
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -24,11 +24,11 @@ ms.locfileid: "38033308"
   
  ![SSAS-BIDI-1-Filteroption](../../analysis-services/tabular-models/media/ssas-bidi-1-filteroption.PNG "SSAS-BIDI-1-Filteroption")  
   
- Es gibt zwei Arten von kreuzfilterung: unidirektionalen und bidirektionalen filtern. Unidirektional ist die herkömmliche n:1-Filterrichtung zwischen Fakten- und Dimensionstabellen in der jeweiligen Beziehung. Bidirektional heißt ein Kreuzfilter, der ermöglicht, dass der Filterkontext einer Beziehung als Filterkontext einer anderen Tabellenbeziehung verwendet wird, wobei beide Beziehungen eine Tabelle gemeinsam haben.  
+ Es gibt zwei Arten von kreuzfilterung: Unidirektionale und bidirektionale Filterung. Unidirektional ist die herkömmliche n:1-Filterrichtung zwischen Fakten- und Dimensionstabellen in der jeweiligen Beziehung. Bidirektional heißt ein Kreuzfilter, der ermöglicht, dass der Filterkontext einer Beziehung als Filterkontext einer anderen Tabellenbeziehung verwendet wird, wobei beide Beziehungen eine Tabelle gemeinsam haben.  
   
  Wenn **DimDate** und **DimProduct** mit Fremdschlüsselbeziehungen zu **FactOnlineSales**gegeben sind, entspricht ein bidirektionaler Kreuzfilter der gleichzeitigen Verwendung von **FactOnlineSales-to-DimDate** plus **FactOnlineSales-to-DimProduct** .  
   
- Bidirektionale Kreuzfilter können eine einfache Lösung für das Entwurfsproblem von m:n-Abfragen sein, vor dem Tabellen- und Power Pivot-Entwickler bislang standen. Wenn Sie die DAX-Umgehung für m:n-Beziehungen in Tabellen- oder PowerPivot-Modellen verwendet haben, können Sie versuchen, einen bidirektionalen Filter anzuwenden, um festzustellen, ob er die erwarteten Ergebnisse liefert.  
+ Bidirektionale Kreuzfilter können eine einfache Lösung für das Entwurfsproblem von m:n-Abfragen sein, vor dem Tabellen- und Power Pivot-Entwickler bislang standen. Wenn Sie die DAX-Umgehung für m: n Beziehungen in Tabellen- oder Power Pivot-Modelle verwendet haben, können Sie versuchen, um festzustellen, ob es die erwarteten Ergebnisse liefert einen bidirektionalen Filter anzuwenden.  
   
  Wenn Sie einen bidirektionalen Kreuzfilter erstellen, bedenken Sie die folgenden Punkte:  
   
@@ -74,7 +74,7 @@ ms.locfileid: "38033308"
   
  Solange Measures aus der Faktentabelle abgerufen werden und der Filterkontext bei der Faktentabelle endet, werden die Aggregationen für dieses Modell ordnungsgemäß gefiltert. Doch was geschieht, wenn Sie Measures woanders erstellen möchten, z. B. eine diskrete Anzahl in der Produkt- oder Kundentabelle oder einen Durchschnittsrabatt in der Tabelle mit den Werbeaktionen, und dafür sorgen, dass ein vorhandener Filterkontext auf dieses Measure erweitert wird.  
   
- Versuchen Sie es, indem Sie eine diskrete Anzahl aus **DimProducts** der PivotTable hinzufügen. Beachten Sie die sich wiederholenden Werte für **Count Products**. Auf den ersten Blick sieht es so aus, als fehle eine Tabellenbeziehung. Doch in unserem Modell können wir erkennen, dass alle Beziehungen vollständig definiert und aktiv sind. In diesem Fall treten die sich wiederholenden Werte auf, da es für die Zeilen in der Produkttabelle keinen Datumsfilter gibt.  
+ Versuchen Sie es, indem Sie eine diskrete Anzahl aus hinzufügen **DimProducts** der PivotTable. Beachten Sie die sich wiederholenden Werte für **Count Products**. Auf den ersten Blick sieht es so aus, als fehle eine Tabellenbeziehung. Doch in unserem Modell können wir erkennen, dass alle Beziehungen vollständig definiert und aktiv sind. In diesem Fall treten die sich wiederholenden Werte auf, da es für die Zeilen in der Produkttabelle keinen Datumsfilter gibt.  
   
  ![SSAS-Bidi-5-Prodcount-Nofilter](../../analysis-services/tabular-models/media/ssas-bidi-5-prodcount-nofilter.png "Ssas-Bidi-5-Prodcount-Nofilter")  
   
@@ -83,7 +83,7 @@ ms.locfileid: "38033308"
  ![SSAS-Bidi-6-Prodcount-Withfilter](../../analysis-services/tabular-models/media/ssas-bidi-6-prodcount-withfilter.png "Ssas-Bidi-6-Prodcount-Withfilter")  
   
 ## <a name="learn-step-by-step"></a>Erfahren Sie Schritt für Schritt  
- Sie können bidirektionale Kreuzfilter durch schrittweises Durchlaufen dieser exemplarischen Vorgehensweise ausprobieren. Um folgen zu können, benötigen Sie Folgendes:  
+ Sie können bidirektionale Kreuzfilter durch schrittweises Durchlaufen dieser exemplarischen Vorgehensweise ausprobieren. Um folgen zu können, benötigen Sie:  
   
 -   SQL Server 2016 Analysis Services-Instanz im tabellarischen Modus mit aktueller CTP-Version  
   
@@ -147,7 +147,7 @@ ms.locfileid: "38033308"
  ![SSAS-Bidi-3-Defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "Ssas-Bidi-3-Defaultrelationships")  
   
 ### <a name="create-measures"></a>Erstellen von Measures  
- Sie benötigen eine Aggregation zum Summieren von Umsatzbeträgen anhand verschiedener Facets von Dimensionsdaten. In **DimProduct** können Sie ein Measure erstellen, das Produkte zählt. Dieses können Sie anschließend in einer Analyse der Produktvermarktung nutzen, die zeigt, wie viele Produkte für ein bestimmtes Jahr, eine bestimmte Region oder einen Kundentyp am Umsatz beteiligt waren.  
+ Sie benötigen eine Aggregation in Summieren von Umsatzbeträgen anhand verschiedener Facets von Dimensionsdaten. In **DimProduct** können Sie ein Measure erstellen, das Produkte zählt. Dieses können Sie anschließend in einer Analyse der Produktvermarktung nutzen, die zeigt, wie viele Produkte für ein bestimmtes Jahr, eine bestimmte Region oder einen Kundentyp am Umsatz beteiligt waren.  
   
 1.  Klicken Sie auf **Modell** > **Modellansicht** > **Diagrammansicht**.  
   
@@ -173,7 +173,7 @@ ms.locfileid: "38033308"
   
 4.  Wählen Sie **Datum** > **Kalenderjahr**aus.  
   
- Beachten Sie, dass die Umsätze wie erwartet nach Jahr und Hersteller unterteilt werden. Der Grund hierfür ist, dass der Standardfilterkontext zwischen **FactOnlineSales**, **DimProduct**und **DimDate** für Measures auf der n-Seite der Beziehung ordnungsgemäß funktioniert.  
+ Beachten Sie, dass die Umsätze wie erwartet nach Jahr und Hersteller unterteilt werden. Dies ist, dass der standardfilterkontext zwischen **FactOnlineSales**, **DimProduct**, und **DimDate** für Measures auf der n-Seite der Beziehung ordnungsgemäß funktioniert.  
   
  Gleichzeitig können Sie erkennen, dass für die Produktanzahl nicht derselbe Filterkontext wie für den Umsatz verwendet wird. Während die Produktanzahlen ordnungsgemäß anhand des Herstellers gefiltert werden (sowohl die Hersteller- als auch die Produktanzahlen befinden sich in derselben Tabelle), wird der Datumsfilter nicht an die Produktanzahl weitergegeben.  
   
@@ -192,14 +192,14 @@ ms.locfileid: "38033308"
  Nun sollte erkennbar sein, dass sowohl Produktzahlen als auch Umsätze anhand des gleichen Filterkontexts gefiltert werden, der nicht nur Hersteller aus **DimProducts** , sondern auch das Kalenderjahr aus **DimDate**enthält.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Ob und wie ein Kreuzfilter sinnvoll ist, kann ein ausgiebiges Ausprobieren erfordern, um festzustellen, ob ein solcher Filter in Ihrem Szenario funktioniert. Mitunter werden Sie feststellen, dass die integrierten Verhalten nicht ausreichend sind, sodass Sie auf DAX-Berechnungen zurückgreifen müssen, um die Aufgabe zu erledigen. Im Abschnitt **Siehe auch** finden Sie einige Links zu weiteren Ressourcen zu diesem Thema.  
+ Ob und wie ein Kreuzfilter sinnvoll ist, kann ein ausgiebiges Ausprobieren erfordern, um festzustellen, ob ein solcher Filter in Ihrem Szenario funktioniert. In einigen Fällen werden Sie feststellen, dass die integrierten Verhalten nicht ausreichend sind, und auf zur Erledigung der Aufgabe eine DAX-Berechnungen zurückgreifen müssen. In der **Siehe auch** Abschnitt finden Sie einige Links zu weiteren Ressourcen zu diesem Thema.  
   
- Aus praktischer Sicht kann die Kreuzfilterung Formen der Datenuntersuchung ermöglichen, die normalerweise nur mit einer m:n-Konstruktion möglich ist. Vor diesem Hintergrund ist anzumerken, dass die bidirektionale Kreuzfilterung kein m:n-Konstrukt ist.  Eine tatsächliche m:n-Tabellenkonfiguration wird im Designer für tabellarische Modelle in dieser Version weiterhin nicht unterstützt.  
+ Aus praktischer Sicht kann die Kreuzfilterung Formen der Datenuntersuchung ermöglichen, die normalerweise nur mit einer m:n-Konstruktion möglich ist. Andererseits ist es wichtig zu erkennen, bidirektionale kreuzfilterung ist keiner m: n Konstrukt.  Eine tatsächliche m:n-Tabellenkonfiguration wird im Designer für tabellarische Modelle in dieser Version weiterhin nicht unterstützt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen und Verwalten von Beziehungen in Power BI Desktop](https://support.powerbi.com/knowledgebase/articles/464155-create-and-manage-relationships-in-power-bi-desktop)   
  [Ein praktisches Beispiel Behandlung einfache m-zur Beziehungen in Power Pivot und tabellarischen Modellen](http://social.technet.microsoft.com/wiki/contents/articles/22202.a-practical-example-of-how-to-handle-simple-many-to-many-relationships-in-power-pivotssas-tabular-models.aspx)   
- [Auflösen von m: n Beziehungen mithilfe der DAX-kreuztabellenfilterung](http://blog.gbrueckl.at/2012/05/resolving-many-to-many-relationships-leveraging-dax-cross-table-filtering/)   
- [M: n-Revolution (SQLBI-Blog)](http://www.sqlbi.com/articles/many2many/)  
+ [Auflösen von m:n-Beziehungen mithilfe der DAX-Kreuztabellenfilterung](http://blog.gbrueckl.at/2012/05/resolving-many-to-many-relationships-leveraging-dax-cross-table-filtering/)   
+ [m:n-Revolution (SQLBI-Blog)](http://www.sqlbi.com/articles/many2many/)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4543c518d1fbc845793e994682df7df1bccc26dc
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 739723a42580c404d0529a6d84d907cf665f8270
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145221"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368512"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>Für Analysis Services-Verbindungen verwendete Datenanbieter
   Analysis Services stellt drei Datenanbieter für den Server- und Datenzugriff bereit. Alle Anwendungen, die eine Verbindung mit Analysis Services herstellen, verwenden dazu einen dieser Anbieter. Die beiden Anbieter ADOMD.NET und AMO (Analysis Services Management Objects) sind verwaltete Datenanbieter. Der Analysis Services OLE DB-Anbieter (MSOLAP DLL) ist ein systemeigener Datenanbieter.  
@@ -44,7 +44,7 @@ ms.locfileid: "50145221"
   
  Die Hauptbuildnummer der ersten Version von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ist 12.0.2000.9.  
   
- Weitere Informationen darüber, wie Sie Versions- und Buildinformationen abrufen, finden Sie unter [Ermitteln der Version und Edition von SQL Server und seinen Komponenten](http://support.microsoft.com/kb/321185).  
+ Weitere Informationen darüber, wie Sie Versions- und Buildinformationen abrufen, finden Sie unter [Ermitteln der Version und Edition von SQL Server und seinen Komponenten](https://support.microsoft.com/kb/321185).  
   
 ##  <a name="bkmk_LibUpdate"></a> Ermitteln der Version von Analysis Services-Datenanbietern  
  Datenanbieter werden mit Analysis Services sowie von Clientanwendungen installiert, die routinemäßig Verbindungen mit Analysis Services-Datenbanken herstellen, z. B. Excel.  
@@ -74,7 +74,7 @@ ms.locfileid: "50145221"
   
 #### <a name="find-the-data-providers-on-the-download-site"></a>Suchen der Datenanbieter auf der Downloadwebsite  
   
-1.  Wechseln Sie zum [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?LinkID=296473).  
+1.  Wechseln Sie zum [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkID=296473).  
   
 2.  Erweitern Sie **Installationsanweisungen**.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "50145221"
   
  Die mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]gelieferte Version des Analysis Services OLE DB-Anbieters lautet MSOLAP130.dll. Einige der letzten Vorgängerversionen waren MSOLAP10.dll (für SQL Server 2008 und 2008 R2) und MSOLAP90.dll (für SQL Server 2005).  
   
- OLE DB-Anbieter werden häufig in Verbindungszeichenfolgen angegeben. Eine Analysis Services-Verbindungszeichenfolge wird eine andere Benennung auf den OLE DB-Anbieter verwiesen: MSOLAP. \<Version > .dll  
+ OLE DB-Anbieter werden häufig in Verbindungszeichenfolgen angegeben. Eine Analysis Services-Verbindungszeichenfolge wird eine andere Benennung auf OLE DB-Anbieter verwiesen: MSOLAP. \<Version > .dll  
   
  MSOLAP.5.dll ist der aktuelle Analysis Services OLE DB-Anbieter, der mit Excel 2013 installiert wird. Auf Arbeitsstationen mit älteren Excel-Versionen sind häufig frühere Versionen wie MSOLAP.4.dll oder MSOLAP.3.dll zu finden. Einige Analysis Services-Funktionen, wie das PowerPivot-Add-In, erfordern bestimmte Versionen des OLE DB-Anbieters. Weitere Informationen finden Sie unter [Verbindungszeichenfolgen-Eigenschaften &#40;Analysis Services&#41;](connection-string-properties-analysis-services.md).  
   

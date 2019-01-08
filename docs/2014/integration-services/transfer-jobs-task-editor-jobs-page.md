@@ -15,12 +15,12 @@ ms.assetid: e72b1dc7-8cda-4ee6-abb5-d438370f04df
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1b9a41fb224d5042c1cc826785ead32376727444
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a2e926047d5423d31307dc344bca5717ca7a77dd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105580"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535530"
 ---
 # <a name="transfer-jobs-task-editor-jobs-page"></a>Editor für den Task Aufträge übertragen (Seite Aufträge)
   Auf der Seite **Aufträge** des Dialogfelds **Editor für den Task "Aufträge übertragen"** können Sie die Eigenschaften für das Kopieren von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agentaufträgen von einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in eine andere angeben. Weitere Informationen zum Task Aufträge übertragen finden Sie unter [Transfer Jobs Task](control-flow/transfer-jobs-task.md).  
@@ -28,7 +28,7 @@ ms.locfileid: "48105580"
 > [!NOTE]  
 >  Um auf dem Quellserver auf Aufträge zuzugreifen, müssen Benutzer auf dem Server Mitglied mindestens einer festen Serverrolle **SQLAgentUserRole** sein. Um auf dem Zielserver Aufträge erfolgreich zu erstellen, muss der Benutzer Mitglied der festen Datenbankrolle **sysadmin** oder einer der festen Datenbankrollen des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agents sein. Weitere Informationen zu den festen Datenbankrollen des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agents und zu deren Berechtigungen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **SourceConnection**  
  Wählen Sie in der Liste einen SMO-Verbindungs-Manager aus, oder klicken Sie auf **\<Neue Verbindung...>**, um eine neue Verbindung mit dem Quellserver herzustellen.  
   
@@ -40,13 +40,13 @@ ms.locfileid: "48105580"
   
  Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**Wahr**|Kopiert alle Aufträge.|  
 |**False**|Kopiert nur angegebene Aufträge.|  
   
  **JobsList**  
- Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)** , um die zu kopierenden Aufträge auszuwählen. Es muss mindestens ein Auftrag ausgewählt werden.  
+ Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**, um die zu kopierenden Aufträge auszuwählen. Es muss mindestens ein Auftrag ausgewählt werden.  
   
 > [!NOTE]  
 >  Geben Sie vor der Auswahl der zu kopierenden Aufträge **SourceConnection** an.  
@@ -58,7 +58,7 @@ ms.locfileid: "48105580"
   
  Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**FailTask**|Der Task schlägt fehl, wenn auf dem Zielserver bereits Aufträge mit demselben Namen vorhanden sind.|  
 |**Overwrite**|Der Task überschreibt auf dem Zielserver Aufträge mit demselben Namen.|  
@@ -69,13 +69,13 @@ ms.locfileid: "48105580"
   
  Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**Wahr**|Aktiviert Jobs auf dem Zielserver.|  
 |**False**|Deaktiviert Jobs auf dem Zielserver.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services-Tasks](control-flow/integration-services-tasks.md)   
  [Editor für den Task „Aufträge übertragen“ &#40;Seite „Allgemein“&#41;](general-page-of-integration-services-designers-options.md)   
  [Seite Ausdrücke](expressions/expressions-page.md)   

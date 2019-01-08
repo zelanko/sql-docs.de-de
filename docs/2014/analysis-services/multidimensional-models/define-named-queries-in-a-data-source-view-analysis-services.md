@@ -15,12 +15,12 @@ ms.assetid: f09ba8aa-950e-4c0d-961e-970de13200be
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a01d130cc37faa29e2aebe8612fc5e02fef10c78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 965022adeeee40ca7f8fd45a722b22fa6aa64931
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099620"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350612"
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>Definieren von benannten Abfragen in einer Datenquellensicht (Analysis Services)
   Bei einer benannten Abfrage handelt es sich um einen SQL-Ausdruck, der als Tabelle dargestellt wird. In einer benannten Abfrage können Sie einen SQL-Ausdruck angeben, um Zeilen und Spalten auszuwählen, die aus mindestens einer Tabelle in mindestens einer Datenquelle zurückgegeben wurden. Eine benannte Abfrage verhält sich wie alle anderen Tabellen in einer Datenquellensicht (Data Source View, DSV) mit Zeilen und Beziehungen. Der einzige Unterschied besteht darin, dass eine benannte Abfrage auf einem Ausdruck basiert.  
@@ -36,7 +36,7 @@ ms.locfileid: "48099620"
   
  Tabelle und Spalten, auf die in der SQL-Abfrage verwiesen wird, sollten nicht qualifiziert oder nur durch den Tabellennamen qualifiziert sein. Wenn Sie z. B. auf die SaleAmount-Spalte in einer Tabelle verweisen möchten, ist `SaleAmount` oder `Sales.SaleAmount` gültig, aber `dbo.Sales.SaleAmount` generiert einen Fehler.  
   
- **Hinweis** Wenn eine benannte Abfrage definiert wird, mit der eine [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] - oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0-Datenquelle abgefragt wird, treten für eine benannte Abfrage, die eine korrelierte Unterabfrage und eine GROUP BY-Klausel enthält, Fehler auf. Weitere Informationen finden Sie unter [Interner Fehler für SELECT-Anweisung mit korrelierter Unterabfrage und GROUP BY](http://support.microsoft.com/kb/274729) in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
+ **Hinweis** Wenn eine benannte Abfrage definiert wird, mit der eine [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] - oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0-Datenquelle abgefragt wird, treten für eine benannte Abfrage, die eine korrelierte Unterabfrage und eine GROUP BY-Klausel enthält, Fehler auf. Weitere Informationen finden Sie unter [Interner Fehler für SELECT-Anweisung mit korrelierter Unterabfrage und GROUP BY](https://support.microsoft.com/kb/274729) in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
   
 ## <a name="add-or-edit-a-named-query"></a>Hinzufügen oder Bearbeiten einer benannten Abfrage  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], design considerations and limitations
@@ -13,12 +12,12 @@ ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: db5225c9432f0ea86a90b299e9ff1ede70147e8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f9d7183d6e94f5808434090dd8fc998b946ed0f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191470"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810892"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Überlegungen zum Entwurf und Einschränkungen für Oracle-Verleger
   Das Veröffentlichen aus Oracle-Datenbanken erfolgt nahezu auf die gleiche Weise wie das Veröffentlichen aus [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbanken. Beachten Sie jedoch die folgenden Punkte und Einschränkungen:  
@@ -60,7 +59,7 @@ ms.locfileid: "48191470"
   
 -   Geschachtelte Tabellen  
   
--   Sichten  
+-   Ansichten  
   
 -   Pakete, Paketkörper, Prozeduren und Trigger  
   
@@ -104,7 +103,7 @@ ms.locfileid: "48191470"
   
  Berücksichtigen Sie außerdem die folgenden Punkte:  
   
--   Oracle und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verarbeiten NULL-Werte unterschiedlich: Oracle lässt mehrere Zeilen mit NULL-Werten für Spalten zu, bei denen NULL-Werte zulässig sind und die in UNIQUE-Einschränkungen oder -Indizes eingeschlossen sind. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erzwingt die Eindeutigkeit, indem nur eine einzige Zeile mit einem NULL-Wert für die gleiche Spalte zulässig ist. UNIQUE-Einschränkungen oder -Indizes, die NULL zulassen, können nicht veröffentlicht werden. Anderenfalls würde eine Einschränkungsverletzung auf dem Abonnenten eintreten, wenn die veröffentlichte Tabelle für eine der im Index oder der Einschränkung enthaltenen Spalten mehrere Zeilen mit NULL-Werten enthält.  
+-   Oracle und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anders Behandeln von NULL: Oracle lässt mehrere Zeilen mit NULL-Werte für Spalten, die NULL zulassen und in unique-Einschränkungen oder Indizes enthalten sind. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erzwingt die Eindeutigkeit, indem nur eine einzige Zeile mit einem NULL-Wert für die gleiche Spalte zulässig ist. UNIQUE-Einschränkungen oder -Indizes, die NULL zulassen, können nicht veröffentlicht werden. Anderenfalls würde eine Einschränkungsverletzung auf dem Abonnenten eintreten, wenn die veröffentlichte Tabelle für eine der im Index oder der Einschränkung enthaltenen Spalten mehrere Zeilen mit NULL-Werten enthält.  
   
 -   Beim Testen der Eindeutigkeit ignoriert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nachfolgende Leerzeichen in einem Feld, nicht jedoch Oracle.  
   

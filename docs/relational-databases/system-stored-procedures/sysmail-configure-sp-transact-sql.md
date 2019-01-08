@@ -18,12 +18,12 @@ ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e44edb404d21e3be482bf83cf6db37a522cfa36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: abe47df497b61d35c66bfebfb3ba5a75fad0e183
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594829"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588554"
 ---
 # <a name="sysmailconfiguresp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [**@parameter_name** =] **"***Parameter_name***"**  
+ [**@parameter_name** =] **"**_Parameter_name_**"**  
  Der Name des Parameters, der geändert werden soll  
   
- [**@parameter_value** =] **"***Parameter_value***"**  
+ [**@parameter_value** =] **"**_Parameter_value_**"**  
  Der neue Wert des Parameters  
   
- [**@description** = ] **'***description***'**  
+ [**@description** =] **"**_Beschreibung_**"**  
  Eine Beschreibung des Parameters  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

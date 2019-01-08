@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - CmdExec jobs
@@ -12,12 +12,12 @@ ms.assetid: b48da5b4-6fe7-4eb7-bade-dc7d697c6d5c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d0cd2c3e396b8dd77a9a2fb1cf29f20b6a477ee7
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 896a3d19345805d5468f3ec238ae5e75be34daba
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119700"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822254"
 ---
 # <a name="create-a-cmdexec-job-step"></a>Create a CmdExec Job Step
   In diesem Thema wird beschrieben, wie Sie einen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftragsschritt in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , der ein ausführbares Programm oder einen Betriebssystembefehl verwendet, mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] oder SQL Server Management Objects erstellen und definieren können.  
@@ -26,7 +26,7 @@ ms.locfileid: "49119700"
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So erstellen Sie einen CmdExec-Auftragsschritt mit**  
   
@@ -42,9 +42,9 @@ ms.locfileid: "49119700"
  Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** CmdExec-Auftragsschritte erstellen. Diese Aufträge werden im Kontext des Kontos des SQL Server-Agent-Dienstes ausgeführt, außer der **sysadmin** -Benutzer erstellt ein Proxykonto. Benutzer, die keine Mitglieder der **sysadmin** -Rolle sind, können CmdExec-Auftragsschritte erstellen, wenn sie Zugriff auf ein CmdExec-Proxykonto haben.  
   
 ####  <a name="Permissions"></a> Berechtigungen  
- Ausführliche Informationen finden Sie unter [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMS"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-create-a-cmdexec-job-step"></a>So erstellen Sie einen CmdExec-Auftragsschritt  
   
@@ -70,7 +70,7 @@ ms.locfileid: "49119700"
   
 #### <a name="to-create-a-cmdexec-job-step"></a>So erstellen Sie einen CmdExec-Auftragsschritt  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

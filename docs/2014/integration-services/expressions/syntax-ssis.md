@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], syntax
@@ -14,12 +13,12 @@ ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4c1b1be45aff03e3e4e0c0358c3b3eb9903e718d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 809ce46e388dcc96a407e70cf5eb33c4e5afa44f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189300"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351006"
 ---
 # <a name="syntax-ssis"></a>Syntax (SSIS)
   Die Ausdruckssyntax von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ähnelt der von den Sprachen C und C# verwendeten Syntax. Ausdrücke schließen Elemente ein, wie z. B. Bezeichner (Spalten und Variablen), Literale, Operatoren und Funktionen. Dieses Thema enthält eine Zusammenfassung der speziellen Anforderungen der Ausdrucksauswertungssyntax für die verschiedenen Ausdruckselemente.  
@@ -27,7 +26,7 @@ ms.locfileid: "48189300"
 > [!NOTE]  
 >  In vorherigen Versionen von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]galt eine maximale Zeichenlänge von 4000 Zeichen für das Auswertungsergebnis eines Ausdrucks, wenn das Ergebnis vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentyp DT_WSTR oder DT_STR war. Diese Begrenzung wurde aufgehoben.  
   
- Beispielausdrücke, in denen bestimmte Operatoren und Funktionen verwendet werden, finden Sie in den Themen zu den einzelnen Operatoren und Funktionen unter [Operatoren &#40;SSIS-Ausdruck&#41;](operators-ssis-expression.md) und [Funktionen &#40;SSIS-Ausdruck&#41;](functions-ssis-expression.md).  
+ Beispielausdrücke, in denen bestimmte Operatoren und Funktionen verwenden, finden Sie im Thema zu den einzelnen Operatoren und Funktionen in den Themen: [Operatoren &#40;SSIS-Ausdruck&#41; ](operators-ssis-expression.md) und [Funktionen &#40;SSIS-Ausdruck&#41;](functions-ssis-expression.md).  
   
  Beispielausdrücke, in denen mehrere Operatoren und Funktionen sowie Bezeichner und Literale verwendet werden, finden Sie unter [Beispiele für erweiterte SQL Server Integration Services-Ausdrücke](examples-of-advanced-integration-services-expressions.md).  
   
@@ -81,8 +80,8 @@ ms.locfileid: "48189300"
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   Technischer Artikel, [SSIS Expression Cheat Sheet](http://go.microsoft.com/fwlink/?LinkId=217683), auf pragmaticworks.com  
+-   Technischer Artikel, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=217683), auf pragmaticworks.com  
   
--   Technischer Artikel, [SSIS Expression Examples](http://go.microsoft.com/fwlink/?LinkId=220761), auf social.technet.microsoft.com  
+-   Technischer Artikel, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), auf social.technet.microsoft.com  
   
   

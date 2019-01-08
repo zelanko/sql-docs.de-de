@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_browsereplcmds_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e3884ba1d35a488319ee9ba32e584450b300eda
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5356ebc173e435595315badf9a3c2abe224d186b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670478"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802382"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +45,19 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@xact_seqno_start =**] **"***Xact_seqno_start***"**  
+ [  **@xact_seqno_start =**] **"**_Xact_seqno_start_**"**  
  Gibt die niedrigste genaue Sequenznummer an, die zurückgegeben werden soll. *Xact_seqno_start* ist **nchar(22)**, hat den Standardwert 0 x 00000000000000000000.  
   
- [  **@xact_seqno_end =**] **"***Xact_seqno_end***"**  
+ [  **@xact_seqno_end =**] **"**_Xact_seqno_end_**"**  
  Gibt die höchste genaue Sequenznummer an, die zurückgegeben werden soll. *Xact_seqno_end* ist **nchar(22)**, hat den Standardwert 0xffffffffffffffffffff.  
   
- [  **@originator_id =**] **"***Originator_id***"**  
+ [  **@originator_id =**] **"**_Originator_id_**"**  
  Gibt an, ob Befehle mit dem angegebenen *Originator_id* zurückgegeben werden. *Originator_id* ist **Int**, hat den Standardwert NULL.  
   
- [  **@publisher_database_id =**] **"***Publisher_database_id***"**  
+ [  **@publisher_database_id =**] **"**_Publisher_database_id_**"**  
  Gibt an, ob Befehle mit dem angegebenen *Publisher_database_id* zurückgegeben werden. *Publisher_database_id* ist **Int**, hat den Standardwert NULL.  
   
- [  **@article_id =**] **"***Article_id***"**  
+ [  **@article_id =**] **"**_Article_id_**"**  
  Gibt an, ob Befehle mit dem angegebenen *Article_id* zurückgegeben werden. *Article_id* ist **Int**, hat den Standardwert NULL.  
   
  [  **@command_id =**] *Command_id*  

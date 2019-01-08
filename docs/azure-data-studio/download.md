@@ -1,7 +1,8 @@
 ---
-title: Herunterladen und Installieren von Azure Data Studio | Microsoft-Dokumentation
+title: Zur Installation herunterladen können Sie
+titleSuffix: Azure Data Studio
 description: Herunterladen und installieren Sie Azure Data Studio für Windows, MacOS oder Linux
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 11/06/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f177b7756a1afc7d28f4f3bd85ac46c1f7563cbe
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 7ab531acaf5b8246da6603807760d716ab7ffb74
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217808"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030654"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Herunterladen und Installieren von Azure Data Studio
 
@@ -160,7 +161,7 @@ Um die neuesten Updates zu überprüfen, klicken Sie auf das Zahnradsymbol unten
 
 ## <a name="supported-sql-offerings"></a>Unterstützte SQL-Angebote
 
-* Diese Version von Azure Data Studio funktioniert mit allen [unterstützten Versionen von SQL Server 2014 - [!INCLUDE [sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) und bietet Unterstützung für die Arbeit mit den neuesten cloudfeatures in Azure SQL-Datenbank und Azure SQL Data Warehouse. Azure Data Studio bietet auch vorschauunterstützung für verwaltete Azure SQL-Instanz.
+* Diese Version von Azure Data Studio funktioniert mit allen [unterstützten Versionen von SQL Server 2014 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] ](https://support.microsoft.com/lifecycle?C2=1044) und bietet Unterstützung für die Arbeit mit den neuesten cloudfeatures in Azure SQL-Datenbank und Azure SQL Data Warehouse. Azure Data Studio bietet auch vorschauunterstützung für verwaltete Azure SQL-Instanz.
 
 ## <a name="move-user-settings"></a>Verschieben von benutzereinstellungen
 

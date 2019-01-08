@@ -21,17 +21,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 028c3a2fe26d448373fcb9c4a00d2916a1bb34e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fece91698147ef11496855985f27ea81f84f62a5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726758"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537947"
 ---
 # <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>Räumliche Daten - dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Führt die Indizes und Einschränkungen, die als Ergebnis der Änderung des Kompatibilitätsgrads in deaktiviert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Indizes und Einschränkungen, die persistierte berechnete Spalten enthalten, deren Ausdrücke räumliche UDTs verwenden, werden nach einem Upgrade oder einer Änderung des Kompatibilitätsgrads deaktiviert. Bestimmen Sie die Auswirkungen einer Änderung des Kompatibilitätsgrads mithilfe dieser dynamischen Verwaltungsfunktion.  
+  Führt die Indizes und die Einschränkungen auf, die in Folge der Änderung des Kompatibilitätsgrads in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]deaktiviert werden. Indizes und Einschränkungen, die persistierte berechnete Spalten enthalten, deren Ausdrücke räumliche UDTs verwenden, werden nach einem Upgrade oder einer Änderung des Kompatibilitätsgrads deaktiviert. Bestimmen Sie die Auswirkungen einer Änderung des Kompatibilitätsgrads mithilfe dieser dynamischen Verwaltungsfunktion.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 ##  <a name="Arguments"></a> Argumente  
  *compatibility_level*  
- **Int** , die den Kompatibilitätsgrad angibt, die Sie festlegen möchten.  
+ **int** -Wert, der den Kompatibilitätsgrad angibt, den Sie festlegen möchten.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
@@ -77,13 +77,13 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 -   **Geografie:: STMPointFromText**  
   
--   **Geography:: STMLineFromText**  
+-   **Geografie:: STMLineFromText**  
   
 -   **Geografie:: STMPolyFromText**  
   
--   **Geography:: STGeomCollFromText**  
+-   **Geografie:: STGeomCollFromText**  
   
--   **Geography:: STGeomFromWKB**  
+-   **Geografie:: STGeomFromWKB**  
   
 -   **Geografie:: STLineFromWKB**  
   
@@ -91,7 +91,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 -   **Geografie:: STMPointFromWKB**  
   
--   **Geography:: STMLineFromWKB**  
+-   **Geografie:: STMLineFromWKB**  
   
 -   **Geografie:: STMPolyFromWKB**  
   
@@ -107,18 +107,18 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 -   **Geografie:: BufferWithTolerance**  
   
--   **Geography:: Parse**  
+-   **Geografie:: Analysieren**  
   
--   **Geografie:: reduzieren**  
+-   **Geografie:: Reduzieren**  
   
 ### <a name="behavior-of-the-disabled-objects"></a>Verhalten der deaktivierten Objekte  
  **Indizes**  
   
- Wenn der gruppierte Index deaktiviert ist, oder wenn ein nicht gruppierter Index erzwungen wird, wird der folgende Fehler ausgelöst: "der Abfrageprozessor kann keinen Plan erzeugen, da der Index ' %. \*ls für die Tabelle oder Sicht ' %. \*ls deaktiviert ist. " Um diese Objekte erneut zu aktivieren, erstellen Sie die Indizes nach dem Upgrade durch Aufruf **ALTER INDEX ON... Erstellen Sie neu**.  
+ Wenn der gruppierte Index deaktiviert ist oder ein nicht gruppierter Index erzwungen wird, wird der folgende Fehler ausgelöst: "Der Abfrageprozessor kann keinen Plan erzeugen, da der Index ' %. \*ls für die Tabelle oder Sicht ' %. \*ls deaktiviert ist. " Um diese Objekte erneut zu aktivieren, erstellen Sie die Indizes nach dem Upgrade durch Aufruf **ALTER INDEX ON... REBUILD** ändern.  
   
  **Heaps**  
   
- Wenn eine Tabelle mit einem deaktivierten Heap verwendet wird, wird der folgende Fehler ausgelöst. Um diese Objekte erneut zu aktivieren, erstellen Sie nach dem Upgrade durch Aufruf **ALTER INDEX alle ON... Erstellen Sie neu**.  
+ Wenn eine Tabelle mit einem deaktivierten Heap verwendet wird, wird der folgende Fehler ausgelöst. Um diese Objekte erneut zu aktivieren, erstellen Sie nach dem Upgrade durch Aufruf **ALTER INDEX alle ON... REBUILD** ändern.  
   
 ```  
 // ErrorNumber: 8674  
@@ -135,13 +135,13 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  **CHECK-Einschränkungen und Fremdschlüssel**  
   
- Deaktivierte CHECK-Einschränkungen und Fremdschlüssel lösen keinen Fehler aus. Die Einschränkungen werden jedoch nicht erzwungen, wenn Zeilen geändert werden. Um diese Objekte erneut zu aktivieren, überprüfen Sie die Einschränkungen nach der Aktualisierung durch Aufrufen von **ALTER TABLE... CHECK-Einschränkung**.  
+ Deaktivierte CHECK-Einschränkungen und Fremdschlüssel lösen keinen Fehler aus. Die Einschränkungen werden jedoch nicht erzwungen, wenn Zeilen geändert werden. Um diese Objekte erneut zu aktivieren, überprüfen Sie die Einschränkungen nach der Aktualisierung durch Aufrufen von **ALTER TABLE... CHECK-EINSCHRÄNKUNG**.  
   
  **Persistente berechnete Spalten**  
   
  Da eine Deaktivierung einzelner Spalten nicht möglich ist, wird die gesamte Tabelle deaktiviert, indem der gruppierte Index oder der Heap deaktiviert wird.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW DATABASE STATE-Berechtigung.  

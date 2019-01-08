@@ -23,12 +23,12 @@ ms.assetid: b838f970-d11a-4239-b164-8d11f4581d83
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 275503157f0bfbc004463f3bc567cfbef4a3fc41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2a600f727de4aa4e23de1ccbf2b668bba4ae0ff
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117048"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370142"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>Konfigurieren eines Berichtsservers für die E-Mail-Übermittlung (SSRS-Konfigurations-Manager)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält eine Erweiterung zur E-Mail-Übermittlung, damit Sie Berichte per E-Mail verteilen können. Je nachdem, wie Sie das Abonnieren von E-Mails definieren, kann eine E-Mail-Übermittlung aus einer Nachricht, einem Link, einem Anhang oder einem eingebetteten Bericht bestehen. Die Erweiterung der E-Mail-Übermittlung arbeitet mit Ihrer vorhandenen E-Mail-Server-Technologie. Der E-Mail-Server muss ein SMTP-Server oder eine Weiterleitung sein. Der Berichtsserver stellt über CDO-Bibliotheken (Collaboration Data Objects, cdosys.dll), die das Betriebssystem stellt, eine Verbindung zu einem SMTP-Server her.  
@@ -43,7 +43,7 @@ ms.locfileid: "48117048"
   
 ##  <a name="bkmk_configuration_requirements"></a> Konfigurationsanforderungen  
   
--   Die E-Mail-Übermittlung des Berichtsservers wird über Collaboration Data Objects (CDO) implementiert und erfordert einen SMTP-Remoteserver oder einen lokalen SMTP-Server (Simple Mail Transfer Protocol) bzw. eine SMTP-Weiterleitung. SMTP wird nicht von allen Windows-Betriebssystemen unterstützt. Wenn Sie die Itanium-basierte Edition von Windows Server 2008 verwenden, wird SMTP nicht unterstützt. Weitere Informationen zu den Konfigurationsoptionen von CDO finden Sie unter [Configuration CoClass](http://go.microsoft.com/fwlink/?LinkId=98237) auf MSDN.  
+-   Die E-Mail-Übermittlung des Berichtsservers wird über Collaboration Data Objects (CDO) implementiert und erfordert einen SMTP-Remoteserver oder einen lokalen SMTP-Server (Simple Mail Transfer Protocol) bzw. eine SMTP-Weiterleitung. SMTP wird nicht von allen Windows-Betriebssystemen unterstützt. Wenn Sie die Itanium-basierte Edition von Windows Server 2008 verwenden, wird SMTP nicht unterstützt. Weitere Informationen zu den Konfigurationsoptionen von CDO finden Sie unter [Configuration CoClass](https://go.microsoft.com/fwlink/?LinkId=98237) auf MSDN.  
   
 -   Das Berichtsserver-Dienstkonto muss auf dem SMTP-Server berechtigt sein, E-Mails zu senden.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48117048"
 
   
 ##  <a name="bkmk_example_config_file"></a> Beispiel-e-Mail Berichtsserverkonfiguration  
- Das folgende Beispiel veranschaulicht die Einstellungen für einen SMTP-Remoteserver in der Datei RSreportserver.config. Informationen zu einstellungsbeschreibungen und gültigen Werten finden Sie unter [RSReportServer-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Onlinedokumentation oder in der CDO-Produktdokumentation.  
+ Das folgende Beispiel veranschaulicht die Einstellungen für einen SMTP-Remoteserver in der Datei RSreportserver.config. Informationen zu Ein derstellungsbeschreibungen und gültigen Werten fin derden Sie unter [RSReportServer Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Onlin dere or the CDO product documentation.  
   
 ```  
 <RSEmailDPConfiguration>  
@@ -106,7 +106,7 @@ ms.locfileid: "48117048"
   
 
   
-##  <a name="bkmk_setting_TO_field"></a> Konfigurationsoptionen für die Einstellung der auf: Feld in einer Nachricht  
+##  <a name="bkmk_setting_TO_field"></a> Konfigurationsoptionen für die Einstellung der auf: Felds in einer Nachricht  
  Benutzerdefinierte Abonnements, die gemäß den durch den Task **Einzelne Abonnements verwalten** erteilten Berechtigungen erstellt werden, enthalten einen vorher festgelegten Benutzernamen, der auf dem Domänenbenutzerkonto basiert. Wenn der Benutzer das Abonnement erstellt, wird der Empfängername im **An:** -Feld mit dem Domänenbenutzerkonto der Person ausgefüllt, die das Abonnement erstellt.  
   
  Bei Verwendung eines SMTP-Servers bzw. einer Weiterleitung, der bzw. die E-Mail-Konten verwendet, die mit dem Domänenbenutzerkonto nicht übereinstimmen, erzeugt die Berichtsübermittlung einen Fehler, wenn der SMTP-Server den Bericht an diesen Benutzer übermitteln will.  
@@ -115,9 +115,9 @@ ms.locfileid: "48117048"
   
 1.  Öffnen Sie RSReportServer.config mit einem Text-Editor.  
   
-2.  Legen Sie `SendEmailToUserAlias` zu `False`.  
+2.  Legen Sie `SendEmailToUserAlias` auf `False` fest.  
   
-3.  Legen Sie `DefaultHostName` zum Domain Name System (DNS)-Namen oder IP-Adresse des SMTP-Servers bzw. der Weiterleitung.  
+3.  Legen Sie `DefaultHostName` auf den DNS-Namen (Domain Name System) oder die IP-Adresse des SMTP-Servers bzw. der Weiterleitung fest.  
   
 4.  Speichern Sie die Datei.  
   
@@ -126,11 +126,11 @@ ms.locfileid: "48117048"
 ##  <a name="bkmk_options_remote_SMTP"></a> Konfigurationsoptionen für den SMTP-Remotedienst  
  Die Verbindung zwischen dem Berichtsserver und einem SMTP-Server oder einer SMTP-Weiterleitung wird durch die folgenden Konfigurationseinstellungen bestimmt:  
   
--   `SendUsing` Gibt eine Methode zum Senden von Nachrichten. Sie können zwischen einem SMTP-Netzwerkdienst und einem lokalen SMTP-Dienstabholverzeichnis wählen. Um einen SMTP-Remotedienst zu verwenden, muss dieser Wert in der Datei RSReportServer.config auf **2** eingestellt werden.  
+-   `SendUsing` gibt eine Methode für das Senden von Nachrichten an. Sie können zwischen einem SMTP-Netzwerkdienst und einem lokalen SMTP-Dienstabholverzeichnis wählen. Um einen SMTP-Remotedienst zu verwenden, muss dieser Wert in der Datei RSReportServer.config auf **2** eingestellt werden.  
   
--   `SMTPServer` Gibt den SMTP-Remoteserver oder die Weiterleitung. Dieser Wert ist erforderlich, wenn Sie einen SMTP-Remoteserver oder eine SMTP-Weiterleitung verwenden.  
+-   `SMTPServer` gibt den SMTP-Remoteserver bzw. die SMTP-Weiterleitung an. Dieser Wert ist erforderlich, wenn Sie einen SMTP-Remoteserver oder eine SMTP-Weiterleitung verwenden.  
   
--   `From` Legt den Wert, der in der **aus:** -Zeile einer E-mail. Dieser Wert ist erforderlich, wenn Sie einen SMTP-Remoteserver oder eine SMTP-Weiterleitung verwenden.  
+-   `From` legt den Wert fest, der in der **Von:** -Zeile einer E-Mail angezeigt wird. Dieser Wert ist erforderlich, wenn Sie einen SMTP-Remoteserver oder eine SMTP-Weiterleitung verwenden.  
   
  Andere Werte, die für den SMTP-Remotedienst verwendet werden, sind folgende (diese Werte müssen Sie nur angeben, wenn Sie die Standardwerte überschreiben möchten).  
   
@@ -154,7 +154,7 @@ ms.locfileid: "48117048"
     > [!NOTE]  
     >  Achten Sie darauf, dass Sie nicht festlegen `SMTPServer` Wenn Sie einen lokalen SMTP-Server verwenden.  
   
--   `From` Legt den Wert, der in der **aus:** -Zeile einer E-mail. Dieser Wert ist erforderlich.  
+-   `From` legt den Wert fest, der in der **Von:** -Zeile einer E-Mail angezeigt wird. Dieser Wert ist erforderlich.  
   
  
   
@@ -178,19 +178,19 @@ ms.locfileid: "48117048"
   
 2.  Öffnen Sie die Datei RSReportServer.config in einem Text-Editor.  
   
-3.  Überprüfen Sie, ob <`UrlRoot`> auf URL-Adresse des Berichtsservers festgelegt ist. Dieser Wert wird beim Konfigurieren des Berichtsservers festgelegt und sollte bereits ausgefüllt sein. Geben Sie andernfalls die URL-Adresse des Berichtsservers ein.  
+3.  Überprüfen Sie, ob <`UrlRoot`> auf die URL-Adresse des Berichtsservers festgelegt ist. Dieser Wert wird beim Konfigurieren des Berichtsservers festgelegt und sollte bereits ausgefüllt sein. Geben Sie andernfalls die URL-Adresse des Berichtsservers ein.  
   
-4.  Suchen Sie im Abschnitt Delivery nach <`ReportServerEmail`>.  
+4.  Suchen Sie im Abschnitt „Delivery“ nach <`ReportServerEmail`>.  
   
-5.  Geben Sie in <`SMTPServer`> den Namen des SMTP-Servers ein. Bei diesem Wert kann es sich um eine IP-Adresse, den UNC-Namen eines Computers im Firmenintranet oder um einen vollqualifizierten Domänennamen handeln.  
+5.  Geben Sie in <`SMTPServer`> den Namen des SMTP-Servers an. Bei diesem Wert kann es sich um eine IP-Adresse, den UNC-Namen eines Computers im Firmenintranet oder um einen vollqualifizierten Domänennamen handeln.  
   
 6.  Überprüfen Sie, ob <`SendUsing`> auf 2 festgelegt ist. Bei einem anderen Wert ist der Berichtsserver nicht für die Verwendung eines Remote-SMTP-Diensts konfiguriert.  
   
-7.  In <`From`>, geben Sie den Namen eines Kontos mit der Berechtigung zum Senden von E-mail vom SMTP-Server.  
+7.  Geben Sie in <`From`> den Namen eines Kontos ein, das über die Berechtigung zum Senden von E-Mail vom SMTP-Server verfügt.  
   
 8.  Speichern Sie die Datei.  
   
-     Die neuen Einstellungen werden automatisch vom Berichtsserver verwendet, Sie müssen den Dienst nicht neu starten. Sie können weitere SMTP-Einstellungen angeben, um die Verwendung des SMTP-Servers für die Berichtsserver-E-Mail-Übermittlung weiter zu konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers für die e-Mail-Übermittlung](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) und [RSReportServer-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
+     Die neuen Einstellungen werden automatisch vom Berichtsserver verwendet, Sie müssen den Dienst nicht neu starten. Sie können weitere SMTP-Einstellungen angeben, um die Verwendung des SMTP-Servers für die Berichtsserver-E-Mail-Übermittlung weiter zu konfigurieren. Weitere Informationen fin derden Sie unter [Configurin derg a Report Server for E-Mail Delivery](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) und [RSReportServer Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Onlin dere.  
   
 
   

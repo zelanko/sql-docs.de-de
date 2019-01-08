@@ -18,12 +18,12 @@ ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04746f7694e4f3bef2a946398f0bc9d1e1808a3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d96a4c72996ab34b03706cc71f6b406344164685
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739328"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591624"
 ---
 # <a name="sysmailhelpprincipalprofilesp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
  [ **@principal_id=** ] *principal_id*  
  Die ID des Datenbankbenutzers oder der Rolle in der **Msdb** -Datenbank für die Zuordnung, die aufgelistet. *principal_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es kann entweder *principal_id* oder *principal_name* angegeben werden.  
   
- [ **@principal_name=** ] **'***principal_name***'**  
+ [  **@principal_name=** ] **"**_Principal_name_**"**  
  Der Name des Datenbankbenutzers oder der Rolle in der **Msdb** -Datenbank für die Zuordnung, die aufgelistet. *principal_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es kann entweder *principal_id* oder *principal_name* angegeben werden.  
   
  [ **@profile_id=** ] *profile_id*  
  Die ID des Profils für die Zuordnung, die aufgelistet werden soll. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL. Entweder *Profile_id* oder *Profile_name* kann angegeben werden.  
   
- [  **@profile_name=** ] **"***Profile_name***"**  
+ [  **@profile_name=** ] **"**_Profile_name_**"**  
  Der Name des Profils für die Zuordnung, die aufgelistet werden soll. *profile_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Entweder *Profile_id* oder *Profile_name* kann angegeben werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

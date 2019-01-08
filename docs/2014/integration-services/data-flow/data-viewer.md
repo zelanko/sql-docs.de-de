@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataviewer.f1
@@ -15,17 +14,17 @@ ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e4744860e9a220771374863be2bfd4138b2f553f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d310dfc5add8771ae0369da46eb42095f2f36a17
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156850"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790492"
 ---
 # <a name="data-viewer"></a>Daten-Viewer
   Wenn ein Pfad zu einem Daten-Viewer konfiguriert ist, zeigt dieser Daten-Viewer die Daten pufferweise an, während sie zwischen zwei Datenflusskomponenten fließen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Grüner Pfeil**  
  Klicken Sie auf den Pfeil, um die Daten des nächsten Puffers anzuzeigen. Wenn die Daten in einem einzigen Puffer verschoben werden können, ist diese Option nicht verfügbar.  
   

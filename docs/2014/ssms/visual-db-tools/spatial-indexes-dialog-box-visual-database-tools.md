@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.spatialindexes
@@ -12,19 +12,19 @@ ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ef93973a6be743a6c79b2ba46c2f05d2af6bae5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b347715a601be779b864500a6bc28655141ceeeb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113360"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773472"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Dialogfeld 'Räumliche Indizes' (Visual Database Tools)
   Verwenden Sie das Dialogfeld **Räumliche Indizes** , um Indizes für Spalten des Datentyps **geometry** oder **geography** (*räumliche Spalten*) zu erstellen, denn diese können nicht mithilfe des Dialogfelds **Index/Schlüssel** indiziert werden. Jede räumliche Spalte kann mehr als einen räumlichen Index aufweisen, jedoch müssen sie einzeln erstellt werden.  
   
  Weitere Informationen über die Einschränkungen bei der Erstellung von räumlichen Indizes finden Sie unter [Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Ausgewählter räumlicher Index**  
  Listet vorhandene räumliche Indizes auf. Wählen Sie einen Index aus, um dessen Eigenschaften anzuzeigen. Wenn die Liste leer ist, wurden bisher keine räumlichen Indizes für die Tabelle definiert.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "48113360"
  Zeigt den Namen des räumlichen Indexes an. Wenn ein neuer Index erstellt wird, erhält dieser einen Standardnamen, der auf der Tabelle im aktiven Fenster des Tabellen-Designers basiert. Sie können den Namen jederzeit ändern.  
   
  **Beschreibung**  
- Beschreibt den Index. Klicken Sie zum Erstellen einer detailliertere Beschreibung auf **Beschreibung** , und klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten (**…**) rechts neben dem Eigenschaftenfeld. Dadurch wird ein größerer Bereich verfügbar, in den Sie Text eingeben können.  
+ Beschreibt den Index. Klicken Sie zum Erstellen einer detaillierteren Beschreibung auf **Beschreibung**, und klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten (**…**) rechts neben dem Eigenschaftenfeld. Dadurch wird ein größerer Bereich verfügbar, in den Sie Text eingeben können.  
   
  **Kategorie Tabellen-Designer**  
  Wenn die Kategorie erweitert ist, werden Informationen zu den Eigenschaften dieses räumlichen Indexes angezeigt.  
@@ -109,7 +109,7 @@ ms.locfileid: "48113360"
  **Seitensperren sind zulässig**  
  Gibt an, ob Sperren auf Seitenebene für diesen Index zugelassen sind. Das Zulassen oder Untersagen von Sperren auf Seitenebene wirkt sich auf die Datenbankleistung aus.  
   
- **Neu berechnen****Statistiken**   
+ **Neu berechnen****Statistiken**  
  Gibt an, ob beim Erstellen des Index neue Statistiken berechnet werden sollen. Durch erneutes Berechnen von Statistiken wird die Erstellung der Indizes verlangsamt, die Abfrageleistung wird jedoch meist verbessert.  
   
  **Zeilensperren sind zulässig**  

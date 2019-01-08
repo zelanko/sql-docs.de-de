@@ -22,12 +22,12 @@ ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 52acf8b0d2ebe628deeac19f994f53d25861452c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 48fafd92104745ac438c212847e9b2976e84db6d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170300"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352692"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Sichern und Wiederherstellen von Analysis Services-Datenbanken
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verfügt über Sicherungs- und Wiederherstellungsfunktionen, weshalb Sie für eine Datenbank und ihre Objekte einen Zustand wiederherstellen können, der zu einem bestimmten Zeitpunkt gültig war. Die Sicherung und Wiederherstellung ist auch eine zulässige Methode zum Migrieren von Datenbanken zu aktualisierten Servern, zum Verschieben von Datenbanken zwischen Servern oder zum Bereitstellen einer Datenbank auf einem Produktionsserver. Zur Datenwiederherstellung sollten Sie, falls Sie noch nicht über einen Sicherungsplan verfügen und Ihre Daten wertvoll sind, so schnell wie möglich einen solchen Plan entwerfen und implementieren.  
@@ -36,7 +36,7 @@ ms.locfileid: "48170300"
   
  Eine vollständige Sicherung einschließlich der Quelldaten erfordert das Sichern der Datenbank, die Detaildaten enthält. Insbesondere, wenn Sie ROLAP- oder DirectQuery-Datenbankspeicher verwenden, werden Detaildaten in einer externen relationalen SQL Server-Datenbank gespeichert, die sich von der Analysis Services-Datenbank unterscheidet. Wenn alle Objekte demgegenüber tabellarisch oder mehrdimensional sind, schließt die Analysis Services-Sicherung sowohl die Metadaten als auch die Quelldaten ein.  
   
- Ein eindeutiger Vorzug der automatischen Sicherung besteht darin, dass die Datenmomentaufnahme stets so aktuell ist wie durch die automatisch gesteuerte Sicherungshäufigkeit vorgegeben. Automatische Planer stellen sicher, dass das Sichern nicht vergessen wird. Auch das Wiederherstellen einer Datenbank kann automatisiert werden. Dies ist gleichzeitig eine gute Möglichkeit zum Replizieren der Daten, doch achten Sie stets darauf, die Verschlüsselungsschlüsseldatei auf der Instanz, die die replizierten Daten erhält, ebenfalls zu sichern. Die Synchronisierungsfunktion ist für die Replizierung von Datenbanken von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bestimmt, doch sie erfasst nur veraltete Daten. Alle der hier genannten Funktionen können über die Benutzerschnittstelle implementiert werden, und zwar über XML/A-Befehle oder programmgesteuert über AMO. Weitere Informationen zu Sicherungsstrategien finden Sie unter [Backup Strategies with SQL Server 2005 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81888)(Sicherungsstrategien mit SQL Server 2005 Analysis Services).  
+ Ein eindeutiger Vorzug der automatischen Sicherung besteht darin, dass die Datenmomentaufnahme stets so aktuell ist wie durch die automatisch gesteuerte Sicherungshäufigkeit vorgegeben. Automatische Planer stellen sicher, dass das Sichern nicht vergessen wird. Auch das Wiederherstellen einer Datenbank kann automatisiert werden. Dies ist gleichzeitig eine gute Möglichkeit zum Replizieren der Daten, doch achten Sie stets darauf, die Verschlüsselungsschlüsseldatei auf der Instanz, die die replizierten Daten erhält, ebenfalls zu sichern. Die Synchronisierungsfunktion ist für die Replizierung von Datenbanken von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bestimmt, doch sie erfasst nur veraltete Daten. Alle der hier genannten Funktionen können über die Benutzerschnittstelle implementiert werden, und zwar über XML/A-Befehle oder programmgesteuert über AMO. Weitere Informationen zu Sicherungsstrategien finden Sie unter [Backup Strategies with SQL Server 2005 Analysis Services](https://go.microsoft.com/fwlink/?LinkId=81888)(Sicherungsstrategien mit SQL Server 2005 Analysis Services).  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48170300"
  Informationen zum Wiederherstellen einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank finden Sie unter [Wiederherstellungsoptionen](restore-options.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sichern, wiederherstellen und Synchronisieren von Datenbanken &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)   
+ [Sichern, Wiederherstellen und Synchronisieren von Datenbanken &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)   
  [Analysis Services-PowerShell](../analysis-services-powershell.md)  
   
   

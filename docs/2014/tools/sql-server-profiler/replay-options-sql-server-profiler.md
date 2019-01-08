@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], replaying
@@ -16,12 +15,12 @@ ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d4c2bbf0d59cce86debc955d8cf4cefade5ddb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e91a501a899a6ba2b18790ac2da6e7c45b270b07
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150120"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52809973"
 ---
 # <a name="replay-options-sql-server-profiler"></a>Wiedergabeoptionen (SQL Server Profiler)
   Vor der Wiedergabe einer aufgezeichneten Ablaufverfolgung mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]können Sie im Dialogfeld **Wiedergabekonfiguration** Wiedergabeoptionen festlegen. Um dieses Dialogfeld zu starten, öffnen Sie die Datei oder Tabelle für die Ablaufverfolgungswiedergabe in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], und klicken Sie im Menü **Wiedergeben** auf **Starten**. Informationen zu den Berechtigungen, die zum Wiedergeben einer Ablaufverfolgung erforderlich sind, finden Sie unter [Permissions Required to Run SQL Server Profiler](sql-server-profiler.md).  
@@ -80,7 +79,7 @@ ms.locfileid: "48150120"
   
 ## <a name="see-also"></a>Siehe auch  
  [Wiedergeben von Ablaufverfolgungen](replay-traces.md)   
- [Anforderungen für die Wiedergabe](replay-requirements.md)   
+ [Replay Requirements](replay-requirements.md)   
  [Überlegungen zum Wiedergeben von Ablaufverfolgungen &#40;SQL Server Profiler&#41;](considerations-for-replaying-traces-sql-server-profiler.md)  
   
   

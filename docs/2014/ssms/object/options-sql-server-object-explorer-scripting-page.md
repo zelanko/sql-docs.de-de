@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.ObjectExplorerScripting
@@ -13,12 +13,12 @@ ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5dcd423d58bbc344d11a7a3c35e27e7406f90664
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 81e4bafbd596894a8cecbeb707a5d8be698c1f3b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080675"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764402"
 ---
 # <a name="options-sql-server-object-explorer-scripting-page"></a>Optionen (SQLServer-Objekt-Explorer-Scripting-Seite)
   Auf dieser Seite können Sie Skripterstellungsoptionen festlegen, die auf die folgenden Befehle in Objektkontextmenüs im **Objekt-Explorer**angewendet werden:  
@@ -34,7 +34,7 @@ ms.locfileid: "48080675"
 ## <a name="remarks"></a>Hinweise  
  Die **bearbeiten** und **ändern** Befehle können Ergebnisse erzeugen, die von unterscheiden die **Skript \<Object > als** -Befehl für die gleiche optionseinstellung. Die Befehle **Bearbeiten** und **Ändern** sind für das Ändern von Objekten in der aktuellen Datenbank während einer Abfrage-Editor-Sitzung vorgesehen. Die **Skript \<Object > als** Befehl dient zum Generieren eines Skripts, sodass er später zum Erstellen von Objekten verwendet werden kann.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Geben Sie Skriptoptionen an, indem Sie eine Auswahl aus den verfügbaren Einstellungen in der Liste rechts neben den einzelnen Optionen treffen.  
   
 ### <a name="general-scripting-options"></a>Allgemeine Skripterstellungsoptionen  

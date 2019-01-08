@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - data warehouse [SQL Server]
@@ -15,12 +14,12 @@ ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 81efd94cf4b625a5f0584b3769d236c14b4ca3e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 366a09bce079023f59f38682b51a7a5858671fcc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214840"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816292"
 ---
 # <a name="databases"></a>Datenbanken
   Eine Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] besteht aus einer Auflistung von Tabellen, in der eine bestimmte Menge strukturierter Daten gespeichert ist. Eine Tabelle enthält eine Auflistung von Zeilen, auch als Datensätze oder Tupel bezeichnet, sowie Spalten, auch als Attribute bezeichnet. Jede Spalte in der Tabelle dient zum Speichern eines bestimmten Informationstyps, z. B. Datumsangaben, Namen, Geldbeträge und Zahlen.  
@@ -42,7 +41,7 @@ ms.locfileid: "48214840"
 |||  
 |-|-|  
 |[Systemdatenbanken](system-databases.md)|[Löschen von Daten- oder Protokolldateien aus einer Datenbank](delete-data-or-log-files-from-a-database.md)|  
-|[Contained Databases](contained-databases.md)|[Anzeigen von Informationen zum Daten- und Protokollspeicherplatz einer Datenbank](display-data-and-log-space-information-for-a-database.md)|  
+|[Eigenständige Datenbanken](contained-databases.md)|[Anzeigen von Informationen zum Daten- und Protokollspeicherplatz einer Datenbank](display-data-and-log-space-information-for-a-database.md)|  
 |[SQL Server-Datendateien in Microsoft Azure](sql-server-data-files-in-microsoft-azure.md)|[Erhöhen der Größe einer Datenbank](increase-the-size-of-a-database.md)|  
 |[Datenbankdateien und Dateigruppen](database-files-and-filegroups.md)|[Umbenennen einer Datenbank](rename-a-database.md)|  
 |[Datenbankstatus](database-states.md)|[Festlegen des Einzelbenutzermodus für eine Datenbank](set-a-database-to-single-user-mode.md)|  

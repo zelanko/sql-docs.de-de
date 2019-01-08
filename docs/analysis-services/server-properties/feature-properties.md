@@ -1,5 +1,5 @@
 ---
-title: Funktionseigenschaften | Microsoft-Dokumentation
+title: Analysis Services Featureeigenschaften | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,25 +9,25 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8ee5a58d5c04cbfbb1f47f0d073ba6614490970c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2ae8636ce7f7dc25a99fde8ade52ca58c7786395
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38033318"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072341"
 ---
-# <a name="feature-properties"></a>Funktionseigenschaften
+# <a name="feature-properties"></a>Featureeigenschaften
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
 
   Funktionseigenschaften beziehen sich auf Produktfunktionen. Die meisten sind erweiterte Eigenschaften sowie Eigenschaften zum Steuern der Verbindungen zwischen Serverinstanzen.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt die in der folgenden Tabelle aufgeführten Servereigenschaften. Weitere Informationen zu zusätzlichen Servereigenschaften und zum Festlegen dieser Eigenschaften finden Sie unter [Servereigenschaften in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
- **Gilt für:** Nur mehrdimensionaler Servermodus  
+ **Gilt für:** Nur mehrdimensionaler Servermodus.  
   
 ## <a name="properties"></a>Eigenschaften  
   
-|Eigenschaft|Default|Description|  
+|Eigenschaft|Standard|Description|  
 |--------------|-------------|-----------------|  
 |**ManagedCodeEnabled**|1|Eine boolesche Eigenschaft, die anzeigt, ob CLR-gespeicherte Prozeduren aktiviert sind.|  
 |**LinkInsideInstanceEnabled**|1|Eine boolesche Eigenschaft, die anzeigt, ob innerhalb derselben Serverinstanz ein verknüpftes Objekt erstellt werden kann.|  

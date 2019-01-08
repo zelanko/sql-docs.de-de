@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - SetOrderValue Method (ClientNetworkProtocol Class)
@@ -20,12 +18,12 @@ ms.assetid: 15f693fd-37f6-41d9-9dab-d2c93db19895
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 603a3e22a3fee14dc3e03ccb2afae7e731547e21
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b06773049204b126a37e21ce8c070f11666f19df
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113752"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373122"
 ---
 # <a name="setordervalue-method-clientnetworkprotocol-class"></a>SetOrderValue-Methode (ClientNetworkProtocol-Klasse)
   Wählt das Protokoll mit dem angegebenen Reihenfolgenwert aus der Clientprotokollliste aus.  
@@ -49,14 +47,14 @@ OrderValue
   
 |Parameter|Description|  
 |---------------|-----------------|  
-|*OrderValue*|Ein u`int32` -Wert, der den Reihenfolgenwert festlegt.|  
+|*OrderValue*|Ein u`int32`-Wert, der den Reihenfolgenwert festlegt.|  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
- Ein `uint32` -Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert 1, wenn die Anforderung nicht unterstützt wird, wurde, und jede andere Zahl gibt einen Fehler an.  
+ Ein `uint32`-Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert wurde. Der Wert beträgt 1, wenn die Anforderung nicht unterstützt wird; jede andere Zahl gibt einen Fehler an.  
   
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Siehe auch  
- [Eigenschaften der Clientprotokolle (Registerkarte Reihenfolge)](http://technet.microsoft.com/library/ms187884.aspx)  
+ [Eigenschaften der Clientprotokolle (Registerkarte Reihenfolge)](https://technet.microsoft.com/library/ms187884.aspx)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, connections
@@ -21,12 +20,12 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7497a48d8bfd4c7af0174a51869211a266800150
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33757a58353f962bf82a57a16039f92d64a8686d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186230"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356197"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services-Verbindungen (SSIS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete verwenden Verbindungen zum Ausführen verschiedener Tasks und zum Implementieren von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Funktionen.  
@@ -52,7 +51,7 @@ ms.locfileid: "48186230"
  Um diese Verbindungen herzustellen, verwendet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Verbindungs-Manager. Dies wird im nächsten Abschnitt beschrieben.  
   
 ## <a name="connection-managers"></a>Verbindungs-Manager  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwendet den Verbindungs-Manager als logische Darstellung einer Verbindung. Zur Entwurfszeit legen Sie die Eigenschaften eines Verbindungs-Managers fest, um die physische Verbindung zu beschreiben, die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] beim Ausführen des Pakets erstellt. Ein Verbindungs-Manager enthält beispielsweise die `ConnectionString` Eigenschaft, die Sie, zur Entwurfszeit; zur Laufzeit festlegen eine physische Verbindung wird erstellt mit dem Wert in den Verbindungszeichenfolgen-Eigenschaft.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwendet den Verbindungs-Manager als logische Darstellung einer Verbindung. Zur Entwurfszeit legen Sie die Eigenschaften eines Verbindungs-Managers fest, um die physische Verbindung zu beschreiben, die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] beim Ausführen des Pakets erstellt. Beispielsweise enthält ein Verbindungs-Manager die `ConnectionString`-Eigenschaft, die Sie zur Entwurfszeit festlegen. Zur Laufzeit wird mithilfe des Werts in der ConnectionString-Eigenschaft eine physische Verbindung erstellt.  
   
  Ein Paket kann mehrere Instanzen eines Verbindungs-Manager-Typs verwenden, und Sie können die Eigenschaften für jede Instanz festlegen. Zur Laufzeit erstellt jede Instanz eines Verbindungs-Manager-Typs eine Verbindung mit verschiedenen Attributen.  
   
@@ -97,9 +96,9 @@ ms.locfileid: "48186230"
   
 |Typ|Description|Thema|  
 |----------|-----------------|-----------|  
-|ORACLE|Stellt eine Verbindung her mit einer Oracle \<Versionsinfo > Server.|Der Oracle-Verbindungs-Manager ist die Verbindungs-Manager-Komponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connectors für Oracle von Attunity. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connector für Oracle von Attunity enthält auch eine Quelle und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=251526).|  
-|SAPBI|Stellt eine Verbindung mit einem System mit SAP NetWeaver BI, Version 7 her.|Der SAP BI-Verbindungs-Manager ist die Verbindungs-Manager-Komponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connectors für SAP BI. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connector für SAP BI enthält auch eine Quelle und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft SQL Server 2008 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=262016).|  
-|TERADATA|Stellt eine Verbindung her mit einem Teradata \<Versionsinfo > Server.|Der Teradata-Verbindungs-Manager ist die Verbindungs-Manager-Komponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connectors für Teradata von Attunity. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connector für Teradata von Attunity enthält auch eine Quelle und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=251526).|  
+|ORACLE|Stellt eine Verbindung her mit einer Oracle \<Versionsinfo > Server.|Der Oracle-Verbindungs-Manager ist die Verbindungs-Manager-Komponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connectors für Oracle von Attunity. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connector für Oracle von Attunity enthält auch eine Quelle und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
+|SAPBI|Stellt eine Verbindung mit einem System mit SAP NetWeaver BI, Version 7 her.|Der SAP BI-Verbindungs-Manager ist die Verbindungs-Manager-Komponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connectors für SAP BI. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connector für SAP BI enthält auch eine Quelle und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft SQL Server 2008 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=262016).|  
+|TERADATA|Stellt eine Verbindung her mit einem Teradata \<Versionsinfo > Server.|Der Teradata-Verbindungs-Manager ist die Verbindungs-Manager-Komponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connectors für Teradata von Attunity. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connector für Teradata von Attunity enthält auch eine Quelle und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
   
 ### <a name="custom-connection-managers"></a>Benutzerdefinierte Verbindungs-Manager  
  Sie können auch benutzerdefinierte Verbindungs-Manager schreiben. Weitere Informationen finden Sie unter [Developing a Custom Connection Manager](../extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md).  
@@ -111,14 +110,14 @@ ms.locfileid: "48186230"
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   Video, [Nutzen der Vorteile von Microsoft Attunity Connector für Oracle zur Erweiterung der Paketleistung](http://technet.microsoft.com/sqlserver/gg598963.aspx), auf technet.microsoft.com  
+-   Video, [Nutzen der Vorteile von Microsoft Attunity Connector für Oracle zur Erweiterung der Paketleistung](https://technet.microsoft.com/sqlserver/gg598963.aspx), auf technet.microsoft.com  
   
--   Wiki-Artikel, [SSIS-Konnektivität](http://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity), auf social.technet.microsoft.com  
+-   Wiki-Artikel, [SSIS-Konnektivität](https://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity), auf social.technet.microsoft.com  
   
--   Blogeintrag [Verbinden mit MySQL von SSIS](http://go.microsoft.com/fwlink/?LinkId=217669)auf blogs.msdn.com.  
+-   Blogeintrag [Verbinden mit MySQL von SSIS](https://go.microsoft.com/fwlink/?LinkId=217669)auf blogs.msdn.com.  
   
--   Technischer Artikel zum [Extrahieren und Laden von SharePoint-Daten in SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkId=247826)auf msdn.microsoft.com.  
+-   Technischer Artikel zum [Extrahieren und Laden von SharePoint-Daten in SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=247826)auf msdn.microsoft.com.  
   
--   Technischer Artikel [You get "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" error message when using Oracle connection manager in SSIS (Sie erhalten die Fehlermeldung "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" bei der Verwendung eines Oracle-Verbindungs-Managers in SSIS)](http://go.microsoft.com/fwlink/?LinkId=233696)auf support.microsoft.com.  
+-   Technischer Artikel [You get "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" error message when using Oracle connection manager in SSIS (Sie erhalten die Fehlermeldung "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" bei der Verwendung eines Oracle-Verbindungs-Managers in SSIS)](https://go.microsoft.com/fwlink/?LinkId=233696) auf support.microsoft.com.  
   
   

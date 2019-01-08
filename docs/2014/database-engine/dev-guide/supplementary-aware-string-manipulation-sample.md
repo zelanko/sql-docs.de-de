@@ -12,12 +12,12 @@ ms.assetid: 343a1cd6-94e9-4200-9d17-11cef0d73f73
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 96171211f08ae5348dfb183dc20abaaa66b3fb6d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 820e418e9de194c038ca8b9fcd0dbed2db18bab7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182488"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364292"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>Beispiel für Zeichenfolgendarstellung mit ergänzenden Zeichen
   Dieses Beispiel für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] veranschaulicht Zeichenfolgenbearbeitungen mit ergänzenden Zeichen. Dieses Beispiel zeigt die Implementierung von fünf Transact-SQL-Zeichenfolgenfunktionen, die dieselben Bearbeitungsfunktionen für Zeichenfolgen bereitstellen wie die integrierten Funktionen, jedoch zusätzliche Funktionen für ergänzende Zeichen bieten, um sowohl Unicode- als auch Sonderzeichenfolgen bearbeiten zu können. Die fünf Funktionen sind lens(), `lefts(), rights(), subs()` und `replace_s()` entsprechen sich in die integrierten Funktionen `LEN(), LEFT(), RIGHT(), SUBSTRING()` und `REPLACE()` Zeichenfolgenfunktionen.  
@@ -25,9 +25,9 @@ ms.locfileid: "48182488"
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Zum Erstellen und Ausführen dieses Projekts muss die folgende Software installiert sein:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [Website](http://go.microsoft.com/fwlink/?LinkId=31046) mit der Dokumentation und den Beispielen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [Website](https://go.microsoft.com/fwlink/?LinkId=31046) mit der Dokumentation und den Beispielen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  
   
--   Die AdventureWorks-Datenbank, die auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer-[Website](http://go.microsoft.com/fwlink/?linkid=62796) zur Verfügung gestellt wird.  
+-   Die AdventureWorks-Datenbank, die auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer-[Website](https://go.microsoft.com/fwlink/?linkid=62796) zur Verfügung gestellt wird.  
   
 -   .NET Framework SDK 2.0 oder höher oder Microsoft Visual Studio 2005 oder höher. Das .NET Framework SDK ist kostenlos erhältlich.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48182488"
      `GO`  
   
     > [!NOTE]  
-    >  Um CLR zu aktivieren, benötigen Sie `ALTER SETTINGS` Serverberechtigung, die implizit Mitglieder erhalten die `sysadmin` und `serveradmin` festen Serverrollen.  
+    >  Um CLR zu aktivieren, benötigen Sie die `ALTER SETTINGS`-Serverberechtigung, die Mitglieder der festen Serverrollen `sysadmin` und `serveradmin` implizit erhalten.  
   
 -   Die AdventureWorks-Datenbank muss in der von Ihnen verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz installiert sein.  
   

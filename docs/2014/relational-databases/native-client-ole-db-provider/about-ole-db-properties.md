@@ -15,12 +15,12 @@ ms.assetid: 0b36a61e-b542-400d-a3d2-e6f643caf2c6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d02a551826912f69755e50c7dde039482595b54a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e7c010beaf3aefa4f73314d8576a066dca6a167
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123600"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366202"
 ---
 # <a name="about-ole-db-properties"></a>Informationen zu OLE DB-Eigenschaften
   Consumer legen Eigenschaftswerte fest, um ein bestimmtes Objektverhalten anzufordern. Zum Beispiel verwenden Consumer Eigenschaften, um die Schnittstellen anzugeben, die von einem Rowset verfügbar gemacht werden sollen. Consumer rufen die Eigenschaftswerte ab, um die Fähigkeiten eines Objekts zu ermitteln, beispielsweise eines Rowsets, einer Sitzung oder eines Datenquellenobjekts.  
@@ -47,6 +47,6 @@ ms.locfileid: "48123600"
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen einer SQL Server Native Client OLE DB-Anbieteranwendung](creating-a-sql-server-native-client-ole-db-provider-application.md)   
- [Eigenschaften (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=112207)  
+ [Eigenschaften (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=112207)  
   
   

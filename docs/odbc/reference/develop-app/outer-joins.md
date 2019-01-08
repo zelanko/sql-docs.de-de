@@ -14,17 +14,17 @@ ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cd35a8bd0e2a9280d16614a3979dc2af05487e42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35f1ce877d6ed8a390bb6425a4d7f33a5d6947d2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619608"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513991"
 ---
 # <a name="outer-joins"></a>Äußere Verknüpfungen
 ODBC unterstützt die SQL-92 linke, Rechte und vollständige äußere Join-Syntax. Die Escapesequenz für äußere Joins lautet  
   
- **{ABl.** *outer-Joins ***}**  
+ **{ABl.** _äußere Join_**}**  
   
  wo *äußere Join* ist  
   

@@ -11,12 +11,12 @@ ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bff9e3f913ee432988bd7a666673e8f27bc4d04e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ffd00cde83f99f1147a85b06e93e3816fb6e376
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069640"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354516"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>Konfigurieren der Speicherplatzverwendung (PowerPivot für SharePoint)
   Eine PowerPivot für SharePoint-Bereitstellung verwendet den verfügbaren Speicherplatz auf einem Hostcomputer, um PowerPivot-Datenbanken zum schnelleren Neuladen zwischenzuspeichern. Jede in den Arbeitsspeicher geladene PowerPivot-Datenbank wird zuerst auf Datenträger zwischengespeichert, damit sie später für neue Anforderungen schnell erneut geladen werden kann. PowerPivot für SharePoint nutzt standardmäßig den gesamten verfügbaren Speicherplatz zum Zwischenspeichern der zugehörigen Datenbanken. Sie können dieses Verhalten jedoch ändern, indem Sie Eigenschaften festlegen, durch die der verwendete Speicherplatz eingeschränkt wird.  
@@ -47,15 +47,15 @@ ms.locfileid: "48069640"
   
  Da PowerPivot-Daten unter Umständen in jede Analysis Services-Instanz in einer Farm geladen werden, könnten die gleichen Daten auch auf mehreren Computern in der Farm zwischengespeichert werden. Dabei hat die Leistung Vorrang gegenüber der Speicherplatzauslastung, allerdings haben Benutzer schneller Zugriff auf Daten, wenn diese bereits auf dem Datenträger verfügbar sind.  
   
- Um den Speicherplatzverbrauch sofort zu reduzieren, können Sie den Dienst beenden und eine PowerPivot-Datenbank aus dem Sicherungsordner löschen. Das manuelle Löschen von Dateien ist ein temporäre Maßnahme, da bei der nächsten Abfrage der PowerPivot-Daten wieder eine neuere Kopie der Datenbank zwischengespeichert wird. Dauerhafte Lösungen sind z. B. das Beschränken des vom Cache verwendeten Speicherplatzes.  
+ Um den Speicherplatzverbrauch sofort zu reduzieren, können Sie den Dienst beenden und eine PowerPivot-Datenbank aus dem Sicherungsordner löschen. Das manuelle Löschen von Dateien ist ein temporäre Maßnahme, da bei der nächsten Abfrage der PowerPivot-Daten wieder eine neuere Kopie der Datenbank zwischengespeichert wird. Dauerhafte Lösungen sind z. B. das Beschränken des vom Cache verwendeten Speicherplatzes.  
   
  Auf Systemebene können Sie E-Mail-Warnungen erstellen, die Sie benachrichtigen, wenn der Speicherplatz gering ist. Microsoft System Center enthält eine E-Mail-Benachrichtigungsfunktion. Sie können Warnungen auch mithilfe des Ressourcen-Managers für Dateiserver, des Taskplaners oder PowerShell-Skripts einrichten. Unter den folgenden Links erhalten Sie nützliche Informationen zum Einrichten von Benachrichtigungen zu niedrigem Speicherplatz:  
   
--   [Neues im Ressourcen-Manager](http://technet.microsoft.com/library/hh831746.aspx) (http://technet.microsoft.com/library/hh831746.aspx).  
+-   [Neues im Ressourcen-Manager](https://technet.microsoft.com/library/hh831746.aspx) (https://technet.microsoft.com/library/hh831746.aspx).  
   
--   [Schrittweise Anleitung für Resource Manager für Dateiserver für Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=204875) (http://go.microsoft.com/fwlink/?LinkID=204875).  
+-   [Schrittweise Anleitung für Resource Manager für Dateiserver für Windows Server 2008 R2](https://go.microsoft.com/fwlink/?LinkID=204875) (https://go.microsoft.com/fwlink/?LinkID=204875).  
   
--   [Festlegen von unzureichendem Speicherplatz Warnungen unter Windows Server 2008](http://go.microsoft.com/fwlink/?LinkID=204870) ( http://go.microsoft.com/fwlink/?LinkID=204870).  
+-   [Festlegen von unzureichendem Speicherplatz Warnungen unter Windows Server 2008](https://go.microsoft.com/fwlink/?LinkID=204870) ( https://go.microsoft.com/fwlink/?LinkID=204870).  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>So schränken Sie den zum Speichern von zwischengespeicherten Dateien verwendeten Speicherplatz ein  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48069640"
   
 3.  Legen Sie unter „Datenträgerverwendung“ einen Wert für **Speicherplatz insgesamt** fest (in Gigabyte), um eine Obergrenze für den zum Zwischenspeichern verwendeten Speicherplatz festzulegen. Der Standardwert beträgt 0, d. h. Analysis Services kann den gesamten verfügbaren Speicherplatz verwenden.  
   
-4.  Geben Sie unter „Datenträgerverwendung“ für die Einstellung **Delete cached databases in last ‘n’ hours** (In den letzten „n“ Stunden zwischengespeicherte Datenbanken löschen) Kriterien für die letzte Verwendung an, um den Cache bei Erreichen des maximalen Speicherplatzes zu leeren.  
+4.  In der Datenträgerverwendung in der **Löschen von zwischengespeicherten Datenbanken in den letzten "n" Stunden** festlegen, geben Sie zuletzt verwendeten Kriterien zum Leeren des Caches aus, wenn Speicherplatz die maximale Grenze erreicht ist.  
   
      Der Standardwert sind 4 Stunden, d. h. alle Datenbanken, die für 4 Stunden oder mehr inaktiv waren, werden aus dem Dateisystem gelöscht. Datenbanken, die inaktiv, aber weiterhin im Arbeitsspeicher vorhanden sind, werden entladen und dann aus dem Dateisystem gelöscht.  
   

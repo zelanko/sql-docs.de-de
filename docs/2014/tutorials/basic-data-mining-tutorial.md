@@ -15,20 +15,20 @@ ms.assetid: 6602edb6-d160-43fb-83c8-9df5dddfeb9c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: db5b4fcded48a711fc1c8e8c8ffdebdd36562282
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12581756e6ffa7d77ba7dc3339c3f38c96962d4e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150300"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372906"
 ---
 # <a name="basic-data-mining-tutorial"></a>Lernprogramm zu Data Mining-Grundlagen
-  Willkommen bei der [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Basic Datamining-Lernprogramm. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Stellt eine integrierte Umgebung für Datamining-Modelle erstellen und Vorhersagen bereit. In diesem Lernprogramm führen Sie ein Szenario für eine zielgerichtete Mailingkampagne aus, indem Sie Computerlernverfahren verwenden, um das Kaufverhalten von Kunden zu analysieren und vorherzusagen. Im Lernprogramm wird die Verwendung von drei der wichtigsten Data Mining-Algorithmen veranschaulicht: Clustering, Entscheidungsstrukturen und Naive Bayes. Außerdem erfahren Sie, wie Ergebnisse mit den Miningmodell-Viewern analysiert und zum Erstellen von Vorhersagen und genauigkeitsdiagramme mit den Datamining-Tools, die in enthaltenen [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Das fiktive Unternehmen [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], wird für alle Beispiele verwendet.  
+  Willkommen beim [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Lernprogramm zu Data Mining-Grundlagen. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Stellt eine integrierte Umgebung für Datamining-Modelle erstellen und Vorhersagen bereit. In diesem Lernprogramm führen Sie ein Szenario für eine zielgerichtete Mailingkampagne aus, indem Sie Computerlernverfahren verwenden, um das Kaufverhalten von Kunden zu analysieren und vorherzusagen. Im Lernprogramm wird die Verwendung von drei der wichtigsten Data Mining-Algorithmen veranschaulicht: Clustering, Entscheidungsstrukturen und Naive Bayes. Sie erfahren außerdem, wie Ergebnisse mit den Miningmodell-Viewern analysiert und Vorhersagen und Genauigkeitsdiagramme mit den in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]enthaltenen Data Mining-Tools erstellt werden. In allen Beispielen wird das fiktive Unternehmen [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]verwendet.  
   
  Wenn Sie mit den Datamining-Tools vertraut sind, es wird empfohlen, dass Sie auch Abschließen der [Data Mining-Lernprogramm für fortgeschrittene &#40;Analysis Services – Data Mining&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md). In den Lektionen wird die Verwendung von Vorhersagen, Warenkorbanalysen, Zeitreihen, Zuordnungsmodellen, geschachtelten Tabellen und Sequence Clustering veranschaulicht.  
   
 ## <a name="tutorial-scenario"></a>Lernprogrammszenario  
- In diesem Lernprogramm sind Sie Mitarbeiter von [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] , der beauftragt wurde, mehr über die Kunden des Unternehmens anhand Ihrer bisherigen Käufe, und klicken Sie dann mithilfe dieser historischen Daten um vorhersagen zu treffen, die verwendet werden, können im Marketing. Das Unternehmen hat noch nie zuvor Data Mining ausgeführt. Daher müssen Sie eigens für das Data Mining eine neue Datenbank anlegen und mehrere Data Mining-Modelle einrichten.  
+ In diesem Lernprogramm sind Sie Mitarbeiter von [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] , der beauftragt wurde, anhand ihrer bisherigen Käufe mehr über die Kunden des Unternehmens zu erfahren und mithilfe dieser historischen Daten Vorhersagen zu treffen, die für das Marketing verwendet werden können. Das Unternehmen hat noch nie zuvor Data Mining ausgeführt. Daher müssen Sie eigens für das Data Mining eine neue Datenbank anlegen und mehrere Data Mining-Modelle einrichten.  
   
 ## <a name="what-you-will-learn"></a>Lernziele  
  In diesem Lernprogramm erfahren Sie, wie Sie verschiedene Typen von Computerlernmethoden entwickeln und verwenden. Sie lernen außerdem, wie Sie eine Kopie eines Miningmodells erstellen und einen Filter auf die Eingabedaten anwenden, um unterschiedliche Ergebnisse zu erhalten. Anschließend können Sie die Ergebnisse beider Modelle mit einem Prognosegütediagramm vergleichen. Zum Schluss rufen Sie mit der Drillthroughfunktion weitere Daten aus der zugrunde liegenden Miningstruktur ab.  
@@ -44,7 +44,7 @@ ms.locfileid: "48150300"
  Dieses Lernprogramm ist in die folgenden Lektionen aufgeteilt:  
   
  [Lektion 1: Vorbereiten der Analysis Services-Datenbank &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial.md)  
- In dieser Lektion erfahren Sie, wie zum Erstellen eines neuen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Datenbank, eine Datenquelle und Datenquellensicht hinzufügen und Vorbereiten der neue Datenbank mit dem Datamining verwendet werden.  
+ In dieser Lektion lernen Sie, wie Sie eine neue [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank anlegen, eine Datenquelle und Datenquellensicht hinzufügen und die neue Datenbank für die Verwendung von Data Mining vorbereiten.  
   
  [Lektion 2: Erstellen einer Targeted Mailing-Struktur &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
  In dieser Lektion erfahren Sie, wie Sie eine Miningmodellstruktur anlegen, die in einem Targeted Mailing-Szenario verwendet werden kann.  
@@ -56,7 +56,7 @@ ms.locfileid: "48150300"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes-Verfahren  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes  
   
  [Lektion 4: Untersuchen der Targeted Mailing-Modelle &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
  In dieser Lektion lernen Sie, die Ergebnisse der einzelnen Modelle mit Viewern zu untersuchen und zu interpretieren.  
@@ -74,16 +74,16 @@ ms.locfileid: "48150300"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] im mehrdimensionalen Modus  
   
--   Die [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]-Datenbank.  
+-   Die [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] -Datenbank.  
   
- Aus Sicherheitsgründen werden die Beispieldatenbanken standardmäßig nicht zusammen mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] installiert. So installieren Sie die offiziellen Beispieldatenbanken für [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], besuchen Sie die [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417) Seite und wählen Sie [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+ Aus Sicherheitsgründen werden die Beispieldatenbanken standardmäßig nicht zusammen mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]installiert. Um die offiziellen Beispieldatenbanken für [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]zu installieren, rufen Sie die Seite [Microsoft SQL-Beispieldatenbanken](https://go.microsoft.com/fwlink/?LinkId=88417) auf und wählen Sie [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]aus.  
   
 > [!NOTE]  
 >  Wenn Sie ein Lernprogramm durcharbeiten, Sie finden es vielleicht einfacher zwischen den einzelnen Schritten hin und her verschoben wird, wenn Sie beim Hinzufügen der **nächsten Thema** und **Vorheriges Thema** in der Symbolleiste der Dokumentanzeige die Schaltflächen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Lösungen](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
- [Miningmodelltasks und Anweisungen Mining](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [Erstellen und Abfragen von Datamining-Modellen mit DMX: Lernprogramme &#40;Analysis Services – Datamining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+ [Data Mining-Projektmappen](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
+ [Miningmodelltasks und Anweisungen](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Das Erstellen und Abfragen von Datamining-Modellen mit DMX: Lernprogramme &#40;Analysis Services – Datamining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
   

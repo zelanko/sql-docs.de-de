@@ -1,5 +1,5 @@
 ---
-title: Überwachen von R-Services mithilfe benutzerdefinierter Berichte in Management Studio | Microsoft Docs
+title: Überwachung von R Services mithilfe von benutzerdefinierten Berichten in Management Studio – SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,27 +7,27 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0e444612a5acd0726bdd6fb743e43813d6b0caf7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 48c0912794f1aac0712a529f4cf8dde10735c9d8
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31201962"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432603"
 ---
-# <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Überwachen von Machine Learning Services mithilfe benutzerdefinierter Berichte in Management Studio
+# <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Überwachung von Machine Learning Services mithilfe von benutzerdefinierten Berichten in Management Studio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Zum Verwalten von für Machine learning verwendeten Instanz zu vereinfachen, wurde das Produktteam hat eine Reihe von benutzerdefinierten Beispielberichten bereitgestellt, die Sie für SQL Server Management Studio hinzufügen können. In diesen Berichten können Sie Details wie z. B. anzeigen:
+Zum Verwalten der Instanz für Machine learning verwendeten zu erleichtern, hat das Produktteam eine Anzahl von benutzerdefinierten Beispielberichten bereitgestellt, die Sie für SQL Server Management Studio hinzufügen können. In diesen Berichten können Sie Details wie z. B. anzeigen:
 
 - Aktive R oder Python-Sitzungen
 - Konfigurationseinstellungen für die Instanz
 - Ausführungsstatistiken für Machine Learning-Aufträge
-- Erweiterte Ereignisse für R Services
-- R oder Python-Pakete, die auf die aktuelle Instanz installiert
+- Erweiterte Ereignisse bei R Services
+- R oder Python-Pakete, die für die aktuelle Instanz installiert
 
 In diesem Artikel wird erläutert, wie zum Installieren und verwenden die benutzerdefinierten Berichte, die speziell für Computer Leaerning bereitgestellt wird. 
 
-Eine allgemeine Einführung in die Berichte in Management Studio finden Sie unter [benutzerdefinierte Berichte in Management Studio](../../ssms/object/custom-reports-in-management-studio.md).
+Eine allgemeine Einführung in Berichte in Management Studio, finden Sie unter [benutzerdefinierte Berichte in Management Studio](../../ssms/object/custom-reports-in-management-studio.md).
 
 ## <a name="how-to-install-the-reports"></a>So führen Sie die Installation von Berichten durch
 
@@ -42,12 +42,12 @@ So verwenden Sie die Berichte:
 
 ### <a name="step-1-download-the-reports"></a>Schritt 1: Herunterladen der Berichte
 
-1. Öffnen Sie die GitHub-Repository, enthält [SQL Server Product Samples](https://github.com/Microsoft/sql-server-samples), und zum Herunterladen von Beispielberichten. 
+1. Öffnen Sie das GitHub-Repository, enthält [SQL Server-Produktbeispiele](https://github.com/Microsoft/sql-server-samples), und Laden Sie die Beispielberichte. 
 
     + [Benutzerdefinierte Berichte von SSMS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports)
 
     > [!NOTE]
-    > Die Berichte können mit SQL Server 2017 Machiine Learning Services oder SQL Server 2016-R-Services verwendet werden.
+    > Die Berichte können mit SQL Server 2017 Machiine Learning Services oder SQL Server 2016 R Services verwendet werden.
 
 2. Sie können sich auch in GitHub anmelden, und eine lokale Verzweigung der Beispiele erstellen, um die Beispiele herunterzuladen. 
 
@@ -72,41 +72,41 @@ So verwenden Sie die Berichte:
 > [!IMPORTANT]
 > Diese Berichte können bei manchen Remotedesktopsitzungen oder auf manchen Computern nicht verwendet werden, z.B. auf Computern mit Anzeigegeräten mit hohem DPI-Wert oder einer höheren Auflösung als 1080p. Es gibt einen Fehler im Berichtanzeige-Steuerelement in SSMS, der den Bericht abstürzen lässt.
 
-## <a name="report-list"></a>Berichtliste
+## <a name="report-list"></a>Berichtsliste
 
-Der Product Samples-Repository in GitHub enthält zurzeit die folgenden Berichte:
+Klicken Sie im GitHub-Repository für Produktbeispiele enthält derzeit die folgenden Berichte:
 
 + **R Services - Active Sessions**
 
-  Verwenden Sie diesen Bericht, um die Benutzer anzuzeigen, die aktuell ausgeführten Machine learning-Aufträge und SQL Server-Instanz verbunden sind. 
+  Verwenden Sie diesen Bericht, um die Benutzer anzuzeigen, die derzeit mit der SQL Server-Instanz und den ausgeführten Machine learning-Aufträgen verbunden sind. 
   
 + **R Services - Configuration**
 
-  Verwenden Sie diesen Bericht, um die Konfiguration des externen Skriptlaufzeit und zugehöriger Dienste anzuzeigen. Dieser Bericht gibt an, ob ein Neustart erforderlich ist, und sucht nach erforderlichen Netzwerkprotokollen. 
+  Verwenden Sie diesen Bericht, um die Konfiguration für die externen Skript-Laufzeit und die zugehörigen Dienste anzuzeigen. Dieser Bericht gibt an, ob ein Neustart erforderlich ist, und sucht nach erforderlichen Netzwerkprotokollen. 
   
-  Implizite Authentifizierung ist erforderlich für Machine Learning-Aufgaben, die in SQL Server als computekontext ausgeführt. Um zu überprüfen, dass die implizite Authentifizierung konfiguriert ist, überprüft der Bericht an, ob eine Datenbank-Anmeldung für die Gruppe SQLRUserGroup vorhanden ist.
+  Implizite Authentifizierung ist erforderlich für Machine Learning-Aufgaben, die in SQL Server als computekontext ausgeführt. Um sicherzustellen, dass die implizite Authentifizierung konfiguriert ist, überprüft der Bericht an, ob eine datenbankanmeldung für der Gruppe "SQLRUserGroup" vorhanden ist.
 
  + **R Services - Configure Instance** 
 
-   Dieser Bericht ist vorgesehen, helfen Ihnen beim Machine Learning zu konfigurieren. Sie können diesen Bericht zum Beheben von Konfigurationsfehlern in den vorangehenden Bericht gefunden auch ausführen.
+   Dieser Bericht dient zum Machine Learning konfigurieren. Sie können auch auf diesem Bericht können Sie die Korrektur von Konfigurationsfehlern finden Sie in dem vorhergehenden Bericht ausführen.
  
 + **R Services - Execution Statistics**
 
-  Mithilfe dieses Berichts Ausführungsstatistiken für Machine Learning-Aufträge anzeigen. Sie können z.B. die Gesamtzahl der R-Skripts, die ausgeführt wurden, die Anzahl der parallelen Ausführungen und die am häufigsten verwendeten RevoScaleR-Funktionen anzeigen lassen. Klicken Sie auf **SQL-Skript anzeigen** den vollständigen T-SQL-Code hinter diesen Bericht abgerufen.
+  Verwenden Sie diesen Bericht, um Ausführungsstatistiken für Machine Learning-Aufträge anzuzeigen. Sie können z.B. die Gesamtzahl der R-Skripts, die ausgeführt wurden, die Anzahl der parallelen Ausführungen und die am häufigsten verwendeten RevoScaleR-Funktionen anzeigen lassen. Klicken Sie auf **SQL-Skript anzeigen** um die vollständige T-SQL-Code hinter diesem Bericht zu erhalten.
 
   Der Bericht überwacht derzeit nur die Statistiken für Funktionen aus dem RevoScaleR-Paket.
 
 + **R Services - Extended Events**
 
-  Verwenden Sie diesen Bericht, um eine Liste der erweiterten Ereignisse anzuzeigen, die für die Überwachung von Aufgaben im Zusammenhang mit externen Skript Laufzeiten verfügbar sind. Klicken Sie auf **SQL-Skript anzeigen** den vollständigen T-SQL-Code hinter diesen Bericht abgerufen.
+  Verwenden Sie diesen Bericht, um eine Liste der erweiterten Ereignisse anzuzeigen, für die Überwachung von Aufgaben im Zusammenhang mit dem externen Skript-Laufzeiten verfügbar sind. Klicken Sie auf **SQL-Skript anzeigen** um die vollständige T-SQL-Code hinter diesem Bericht zu erhalten.
 
 + **R Services - Packages**
 
-  Verwenden Sie diesen Bericht zum Anzeigen einer Liste der R oder Python-Pakete, die auf SQL Server-Instanz installiert.
+  Verwenden Sie diesen Bericht zum Anzeigen einer Liste der R oder Python-Pakete auf SQL Server-Instanz installiert.
 
 + **R Services - Resource Usage**
 
-  Mithilfe dieses Berichts Verbrauch von CPU, Arbeitsspeicher und e/a-Ressourcen durch Ausführen des externen Skripts anzuzeigen. Sie können auch die Einstellung für den Speicher von externen Ressourcenpools anzeigen.
+  Mithilfe dieses Berichts Verbrauch von CPU, Arbeitsspeicher und e/a-Ressourcen nach Ausführung des externen Skripts anzuzeigen. Sie können auch die Einstellung für den Speicher von externen Ressourcenpools anzeigen.
 
 ## <a name="see-also"></a>Siehe auch
 

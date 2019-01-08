@@ -13,15 +13,15 @@ ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e29e919d48c484788715512a9daaafef5bbde9b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194140"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377492"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur zu In-Memory OLTP portiert werden soll
-  Der Transaktionsleistungssammler in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] hilft Ihnen zu bewerten, ob In-Memory OLTP die Leistung der Datenbankanwendung verbessern kann. Der Transaktionsleistungsanalysebericht gibt außerdem an, wie viel Arbeit notwendig ist, um In-Memory OLTP in Ihrer Anwendung zu aktivieren. Nachdem Sie eine datenträgerbasierte Tabelle identifiziert haben, die Sie zur Verwendung von In-Memory-OLTP portieren, können Sie die Tabellenmigration mit dem [Ratgeber für die Speicheroptimierung](memory-optimization-advisor.md)vereinfachen. In ähnlicher Weise unterstützt Sie der [Ratgeber für native Kompilierung](native-compilation-advisor.md) bei der Portierung einer gespeicherten Prozedur in eine nativ kompilierte gespeicherte Prozedur.  
+  Der transaktionsleistungssammler in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] hilft Ihnen zu bewerten, ob In-Memory OLTP die Leistung Ihrer datenbankanwendung verbessern kann. Der Transaktionsleistungsanalysebericht gibt außerdem an, wie viel Arbeit notwendig ist, um In-Memory OLTP in Ihrer Anwendung zu aktivieren. Nachdem Sie eine datenträgerbasierte Tabelle identifiziert haben, die Sie zur Verwendung von In-Memory-OLTP portieren, können Sie die Tabellenmigration mit dem [Ratgeber für die Speicheroptimierung](memory-optimization-advisor.md)vereinfachen. In ähnlicher Weise unterstützt Sie der [Ratgeber für native Kompilierung](native-compilation-advisor.md) bei der Portierung einer gespeicherten Prozedur in eine nativ kompilierte gespeicherte Prozedur.  
   
  In diesem Thema wird Folgendes erläutert:  
   
@@ -31,7 +31,7 @@ ms.locfileid: "48194140"
   
 -   Generieren von Transaktionsleistungsanalyseberichten, um leistungskritische Tabellen und gespeicherte Prozeduren zu identifizieren  
   
- Weitere Informationen zu Migrationsmethoden finden Sie unter [In-Memory-OLTP − Allgemeine Arbeitsauslastungsmuster und Überlegungen zur Migration](http://msdn.microsoft.com/library/dn673538.aspx).  
+ Weitere Informationen zu Migrationsmethoden finden Sie unter [In-Memory OLTP - Common Workload Patterns and Migration Considerations (In-Memory-OLTP: Allgemeine Workloadmuster und Überlegungen zur Migration)](https://msdn.microsoft.com/library/dn673538.aspx).  
   
  Der Transaktionsleistungssammler und die Transaktionsleistungsanalyseberichte helfen Ihnen, die folgenden Aufgaben auszuführen:  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48194140"
     > [!IMPORTANT]  
     >  Die Leistung eines Datenbanksystems hängt von verschiedenen Faktoren ab, die jedoch nicht alle durch den Transaktionsleistungssammler beobachtet und gemessen werden können. Daher gewährleistet der Transaktionsleistungsanalysebericht nicht, dass die tatsächlichen Leistungssteigerungen den ggf. getroffenen Vorhersagen entsprechen.  
   
- Der transaktionsleistungssammler und die Möglichkeit, einen transaktionsleistungsanalysebericht zu generieren sind installiert, wenn Sie auswählen **Verwaltungstools – Basic** oder **Verwaltungstools – erweitert** Bei der Installation [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+ Der transaktionsleistungssammler und die Möglichkeit, einen transaktionsleistungsanalysebericht zu generieren sind installiert, wenn Sie auswählen **Management Tools – Basic** oder **Verwaltungstools – erweitert** Bei der Installation [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 ## <a name="best-practices"></a>Bewährte Methoden  
  Der empfohlene Workflow wird im folgenden Flussdiagramm veranschaulicht. Die gelben Knoten stellen optionale Prozeduren dar:  
@@ -83,7 +83,7 @@ ms.locfileid: "48194140"
 ### <a name="configure-management-data-warehouse"></a>Konfigurieren des Verwaltungs-Data Warehouse  
  Das Verwaltungs-Data Warehouse muss für den Transaktionsleistungssammler konfiguriert sein.  
   
- Die Version der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz, auf der Sie Daten sammeln (das Profil erstellen), sollte die gleiche Version oder eine niedrigere Version aufweisen als der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], auf dem das Verwaltungs-Data Warehouse konfiguriert ist.  
+ Die Version der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz, auf der Sie Daten sammeln (Profil), sollte die gleiche Version oder eine höhere Version aufweisen als der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], auf dem Verwaltungs-Data Warehouse konfiguriert ist.  
   
 1.  Erweitern Sie im Objekt-Explorer den Knoten **Verwaltung**.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "48194140"
   
 5.  Wählen Sie eine andere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz und eine Verwaltungs-Data Warehouse-Datenbank auf dieser Instanz aus.  
   
-     Die Version der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz, auf der Sie Daten sammeln (das Profil erstellen), sollte die gleiche Version oder eine niedrigere Version aufweisen als der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], auf dem das Verwaltungs-Data Warehouse konfiguriert ist.  
+     Die Version der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz, auf der Sie Daten sammeln (Profil), sollte die gleiche Version oder eine höhere Version aufweisen als der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], auf dem Verwaltungs-Data Warehouse konfiguriert ist.  
   
 6.  Im Feld mit der Bezeichnung **wählen Sie die Sammlungssätze, die Sie aktivieren möchten**Option **Transaktionsleistungs-Sammlungssätze**.  
   
@@ -186,13 +186,13 @@ ms.locfileid: "48194140"
   
 -   Abschnitt zur Konfliktstatistik  
   
-     Dieser Abschnitt enthält eine Tabelle mit den Konflikten für die Datenbanktabelle. Weitere Informationen zu datenbanklatches und-Sperren finden Sie unter [Sperrenarchitektur](http://msdn.microsoft.com/library/aa224738\(v=sql.80\).aspx). Es gibt folgende Spalten:  
+     Dieser Abschnitt enthält eine Tabelle mit den Konflikten für die Datenbanktabelle. Weitere Informationen zu datenbanklatches und-Sperren finden Sie unter [Sperrenarchitektur](https://msdn.microsoft.com/library/aa224738\(v=sql.80\).aspx). Es gibt folgende Spalten:  
   
     -   Prozent der Gesamtwartevorgänge. Der Prozentsatz der Latch- und Sperrenwartevorgänge für diese Datenbanktabelle im Verhältnis zur Aktivität für die Datenbank. Je höher der Prozentsatz, desto stärker wird die Tabelle im Vergleich zu anderen Tabellen in der Datenbank verwendet.  
   
-    -   Latchstatistik. In diesen Spalten wird die Anzahl der Latchwartevorgänge bei Abfragen, die diese Tabelle betreffen, aufgeführt. Weitere Informationen zu Latches finden Sie unter [Latching](http://msdn.microsoft.com/library/aa224727\(v=SQL.80\).aspx). Je höher diese Zahl ist, desto mehr Latchkonflikte treten für die Tabelle auf.  
+    -   Latchstatistik. In diesen Spalten wird die Anzahl der Latchwartevorgänge bei Abfragen, die diese Tabelle betreffen, aufgeführt. Weitere Informationen zu Latches finden Sie unter [Latching](https://msdn.microsoft.com/library/aa224727\(v=SQL.80\).aspx). Je höher diese Zahl ist, desto mehr Latchkonflikte treten für die Tabelle auf.  
   
-    -   Sperrenstatistik. In dieser Gruppe von Spalten wird die Anzahl der Sperrenerhalt- und -wartevorgänge für Seiten bei Abfragen, die diese Tabelle betreffen, aufgeführt. Weitere Informationen zu Sperren finden Sie unter [Grundlegendes zu Sperren in SQL Server](http://msdn.microsoft.com/library/aa213039\(v=SQL.80\).aspx). Je höher die Anzahl der Wartevorgänge ist, desto mehr Sperrenkonflikte treten für die Tabelle auf.  
+    -   Sperrenstatistik. In dieser Gruppe von Spalten wird die Anzahl der Sperrenerhalt- und -wartevorgänge für Seiten bei Abfragen, die diese Tabelle betreffen, aufgeführt. Weitere Informationen zu Sperren finden Sie unter [Grundlegendes zu Sperren in SQL Server](https://msdn.microsoft.com/library/aa213039\(v=SQL.80\).aspx). Je höher die Anzahl der Wartevorgänge ist, desto mehr Sperrenkonflikte treten für die Tabelle auf.  
   
 -   Abschnitt zu Migrationsproblemen  
   

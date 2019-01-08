@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - explicit hierarchies, about explicit hierarchies
@@ -15,12 +14,12 @@ ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 41a2e720490e67158847152e1cdf1d8f37ee3cae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 90153c2ed0524a486fe7014890e7e1a30d987d84
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062472"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52809272"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>Explizite Hierarchien (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]werden in expliziten Hierarchien Elemente aus einer einzelnen Entität auf eine von Ihnen angegebene Weise organisiert. Die Struktur kann unregelmäßig sein, und im Gegensatz zu abgeleiteten Hierarchien beruhen explizite Hierarchien nicht auf domänenbasierten Attributbeziehungen.  
@@ -70,7 +69,7 @@ ms.locfileid: "48062472"
 |Kann unregelmäßig sein|Enthält immer eine konsistente Anzahl an Ebenen|  
   
 ## <a name="explicit-hierarchy-example"></a>Beispiel einer expliziten Hierarchie  
- Im folgenden Beispiel enthält die Product-Entität die folgenden Blattelemente: BK-M101 {Berg-100}, BK-M201 {Mountain-200}, BK-M301 {Berg-300}, BK-R150 {Straße-150}, BK-R450 {Straße-450} und BK-R650 {Straße-650}.  
+ Im folgenden Beispiel enthält die Product-Entität die folgenden Blattelemente: BK-M101 {Mountain-100}, BK-M201 {Mountain-200}, BK-M301 {Mountain-300}, BK-R150 {Road-150}, BK-R450 {Road-450} und BK-R650 {Straße-650}.  
   
  Um diese Blattelemente an bestimmten Konsolidierungspunkten zusammenzufassen, können Sie konsolidierte Elemente in der Product-Entität erstellen. Fügen Sie die konsolidierten Elemente auf den Ebenen der Hierarchiestruktur ein, auf denen Sie die Blattelemente zusammenfassen möchten. Es gibt keine Einschränkung hinsichtlich der Einfügung konsolidierter Elemente. Jedes Element (Blattelement oder konsolidiertes Element) darf jedoch nur einmal verwendet werden.  
   

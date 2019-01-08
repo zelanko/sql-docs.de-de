@@ -13,12 +13,12 @@ ms.assetid: a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a366f9ff19099ba640a02aecfe00a944e0fa6299
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1e5c4c996a7dea9da3eccb24da2b6021a13d2590
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681268"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400203"
 ---
 # <a name="migrating-mysql-data-into-sql-server---azure-sql-db-mysqltosql"></a>Migrieren von MySQL-Daten in SQLServer – Azure SQL-Datenbank (MySQLToSQL))
 Nachdem Sie die konvertierten Objekte mit erfolgreich synchronisiert haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure, können Sie Daten aus MySQL migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure.  
@@ -92,10 +92,10 @@ Migration Nachrichten sicher, dass im Ausgabebereich angezeigt wird. Aus der **A
   
     -   Zum Ausführen von **Server Side Datenmigration**, wählen die **Servermodul für die Migration von Seite Daten** option die **Projekteinstellungen** Dialogfeld.  
   
-4.  Mit der rechten Maustaste **Schemas** in MySQL-Metadaten-Explorer, und klicken Sie dann auf **Migrieren von Daten**. Sie können auch Daten für einzelne Objekte oder Kategorien von Objekten migrieren: mit der rechten Maustaste das Objekt oder der entsprechenden übergeordneten Ordner. Wählen Sie die **Migrieren von Daten** Option.  
+4.  Mit der rechten Maustaste **Schemas** in MySQL-Metadaten-Explorer, und klicken Sie dann auf **Migrieren von Daten**. Sie können auch Daten für einzelne Objekte oder Kategorien von Objekten migrieren: Mit der rechten Maustaste das Objekt oder der übergeordnete Ordner; Wählen Sie die **Migrieren von Daten** Option.  
   
     > [!NOTE]  
-    > Wenn der SSMA für MySQL-Erweiterungspaket für die Instanz von SQL Server nicht installiert ist und **Servermodul für die Migration von Seite Daten** ausgewählt ist, wird beim Migrieren Ihrer Daten in die Zieldatenbank aus, der folgende Fehler aufgetreten ist: "SSMA Data Migration-Komponenten auf SQL Server nicht gefunden, serverseitige Datenmigration ist nicht möglich. Überprüfen Sie, ob die Erweiterung Pack ordnungsgemäß installiert ist ". Klicken Sie auf **Abbrechen** um die Datenmigration zu beenden.  
+    > Wenn der SSMA für MySQL-Erweiterungspaket für die Instanz von SQL Server nicht installiert ist und **Servermodul für die Migration von Seite Daten** ausgewählt ist, wird beim Migrieren Ihrer Daten in die Zieldatenbank aus, der folgende Fehler aufgetreten ist: "Datenmigration SSMA-Komponenten auf SQL Server nicht gefunden, serverseitige Datenmigration ist nicht möglich. Überprüfen Sie, ob die Erweiterung Pack ordnungsgemäß installiert ist ". Klicken Sie auf **Abbrechen** um die Datenmigration zu beenden.  
   
 5.  In der **Herstellen einer Verbindung mit MySQL** Dialogfeld Geben Sie Anmeldeinformationen für die Verbindung, und klicken Sie dann auf **Connect**. Weitere Informationen zum Herstellen einer Verbindung mit MySQL finden Sie unter [Herstellen einer Verbindung mit MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
   

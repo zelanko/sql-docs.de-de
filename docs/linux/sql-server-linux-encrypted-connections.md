@@ -12,12 +12,12 @@ ms.technology: linux
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 46795611f8bb3554491dbdd400d383a59a540b5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9506c8c27e17f59c95a1cfeff5cd3885d1657b79
+ms.sourcegitcommit: 753364d8ac569c9f363d2eb6b1b8214948d2ed8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766590"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52826085"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Verschlüsseln von Verbindungen zu SQLServer unter Linux
 
@@ -56,8 +56,8 @@ TLS wird zum Verschlüsseln von Verbindungen von einer Clientanwendung verwendet
 
         systemctl stop mssql-server 
         cat /var/opt/mssql/mssql.conf 
-        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssqlfqdn.pem 
-        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssqlfqdn.key 
+        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
+        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
         sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
         sudo /opt/mssql/bin/mssql-conf set network.forceencryption 0 
 
@@ -68,7 +68,7 @@ TLS wird zum Verschlüsseln von Verbindungen von einer Clientanwendung verwendet
         - **Ubuntu**: Copy-Zertifikats in den ```/usr/share/ca-certificates/``` CRT-Erweiterung umbenennen Dpkg-Reconfigure ZS-Zertifikate verwenden, um es als System-CA-Zertifikat zu aktivieren. 
         - **RHEL**: Copy-Zertifikats in den ```/etc/pki/ca-trust/source/anchors/``` verwenden ```update-ca-trust``` als System-CA-Zertifikat aktivieren.
         - **SUSE**: Copy-Zertifikats in den ```/usr/share/pki/trust/anchors/``` verwenden ```update-ca-certificates``` als System-CA-Zertifikat aktivieren.
-        - **Windows**: importieren die PEM-Datei als ein Zertifikat unter dem aktuellen Benutzer -> Vertrauenswürdige Stammzertifizierungsstellen-Zertifikate >.
+        - **Windows**:  Importieren Sie die PEM-Datei als ein Zertifikat unter dem aktuellen Benutzer -> Vertrauenswürdige Stammzertifizierungsstellen-Zertifikate >
         - **macOS**: 
            - Kopieren Sie das Zertifikat zu ```/usr/local/etc/openssl/certs```
            - Führen Sie den folgenden Befehl aus, um den Hashwert zu erhalten: ```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
@@ -106,8 +106,8 @@ TLS wird zum Verschlüsseln von Verbindungen von einer Clientanwendung verwendet
 
         systemctl stop mssql-server 
         cat /var/opt/mssql/mssql.conf 
-        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssqlfqdn.pem 
-        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssqlfqdn.key 
+        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
+        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
         sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
         sudo /opt/mssql/bin/mssql-conf set network.forceencryption 1 
         

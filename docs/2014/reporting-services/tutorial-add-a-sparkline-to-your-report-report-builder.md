@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Lernprogramm: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 542720be68e6fabd2cb16e25928d73efa4f41d66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dcadf726623b71daa0f9bf3e699c6bd8ac3ab122
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091480"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376672"
 ---
-# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator)
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Lernprogramm: Lernprogramm: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator)
   In diesem Lernprogramm erstellen Sie auf Grundlage der Beispielumsatzdaten einen einfachen Tabellenbericht und fügen anschließend einer Zelle in der Tabelle ein Sparklinediagramm hinzu.  
   
- Eine erweiterte Version des Berichts, den Sie in diesem Lernprogramm erstellen, ist als [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Berichts-Generator-Beispielbericht verfügbar. Weitere Informationen zum Herunterladen dieses Beispielberichts und anderer finden Sie unter [Beispielberichte für Berichts-Generator](http://go.microsoft.com/fwlink/?LinkId=184851). Die folgende Abbildung zeigt den Beispielbericht, der dem Bericht ähnelt, den Sie erstellen.  
+ Eine erweiterte Version des Berichts, den Sie in diesem Lernprogramm erstellen, ist als [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Berichts-Generator-Beispielbericht verfügbar. Weitere Informationen zum Herunterladen dieses Beispielberichts und anderer finden Sie unter [Beispielberichte für Berichts-Generator](https://go.microsoft.com/fwlink/?LinkId=184851). Die folgende Abbildung zeigt den Beispielbericht, der dem Bericht ähnelt, den Sie erstellen.  
   
  ![Rs_SparklineMatrixTutorial](../../2014/tutorials/media/rs-sparklinematrixtutorial.gif "Rs_SparklineMatrixTutorial")  
   
- Das Video [Vorgehensweise: Erstellen einer Sparkline in einer Tabelle (Berichts-Generator-Video)](http://technet.microsoft.com/bi/ff871942.aspx) wird veranschaulicht, wie einen ähnlichen Bericht mit Sparklines erstellt.  
+ Das Video [Vorgehensweise: Erstellen einer Sparkline in einer Tabelle (Video zu Berichts-Generator)](https://technet.microsoft.com/bi/ff871942.aspx) wird veranschaulicht, wie einen ähnlichen Bericht mit Sparklines erstellt.  
   
 ##  <a name="BackToTop"></a> Lernziele  
  In diesem Lernprogramm lernen Sie Folgendes:  
@@ -49,7 +49,7 @@ ms.locfileid: "48091480"
   
  9. [Speichern des Berichts](#Save)  
   
- Geschätzte Zeit zum Bearbeiten dieses Lernprogramms: 30 Minuten  
+ Ungefähre Dauer dieses Lernprogramms: 30 Minuten  
   
 ## <a name="requirements"></a>Anforderungen  
  Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).  
@@ -183,7 +183,7 @@ ms.locfileid: "48091480"
   
 14. Die Tabelle wird der Entwurfsoberfläche hinzugefügt. Die Tabelle enthält drei Spalten und drei Zeilen.  
   
-     Betrachten Sie den Gruppierungsbereich. Wenn der Gruppierungsbereich nicht angezeigt wird, klicken Sie im Menü **Ansicht** auf **Gruppierung**. Im Zeilengruppenbereich wird eine Zeilengruppe angezeigt: **Product**. Im Spaltengruppenbereich wird eine Spaltengruppe angezeigt: **SalesDate**. Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden.  
+     Betrachten Sie den Gruppierungsbereich. Wenn der Gruppierungsbereich nicht angezeigt wird, klicken Sie im Menü **Ansicht** auf **Gruppierung**. Im Zeilengruppenbereich wird eine Zeilengruppe angezeigt: **Produkt**. Im Spaltengruppenbereich wird eine Spaltengruppe angezeigt: **"Salesdate"**. Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden.  
   
 15. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
@@ -213,12 +213,12 @@ ms.locfileid: "48091480"
   
      In jeder Zeile der Tabelle sind Sparklinediagramme enthalten, die jedoch nicht korrekt sind. Die Balken in den Diagrammen weisen nicht die gleiche Breite auf. In der zweiten Datenzeile befinden sich nur vier Balken, weshalb die Balken breiter als in der ersten Zeile sind, die sechs Balken enthält. Werte für die einzelnen Produkte können nicht pro Tag verglichen werden. Sie müssen die gleiche Breite aufweisen.  
   
-     Für jede Zeile entspricht die maximale Balkenlänge der jeweiligen Höhe der Zeile. Dies ist ebenfalls irreführend, da die größten Werte für jede Zeile nicht identisch sind: Der größte Wert für Budget Movie-Maker beträgt 10.400 €, doch der größte Wert für Slim Digital 26.576 € – mehr als das Doppelte. Dennoch sind die größten Balken in diesen zwei Zeilen etwa gleich hoch. Auch das muss an die anderen Sparklines angepasst werden.  
+     Für jede Zeile entspricht die maximale Balkenlänge der jeweiligen Höhe der Zeile. Dies ist ebenfalls irreführend, da die größten Werte für jede Zeile nicht identisch sind: der größte Wert für Budget Movie-Maker ist USD 10.400, aber der größte Wert für Slim Digital beträgt USD 26.576 – mehr als doppelt so groß ist. Dennoch sind die größten Balken in diesen zwei Zeilen etwa gleich hoch. Auch das muss an die anderen Sparklines angepasst werden.  
   
      ![Rs_SprklineMtrxUnaligndBars](../../2014/tutorials/media/rs-sprklinemtrxunaligndbars.gif "Rs_SprklineMtrxUnaligndBars")  
   
 ##  <a name="AlignSparklines"></a> 4. Vertikales und horizontales Ausrichten der Sparklines  
- Das Lesen der Sparklines ist schwierig, wenn nicht bei allen der gleiche Maßstab verwendet wird. Sowohl die horizontale als auch die vertikale Achse muss mit dem Rest übereinstimmen.  
+ Die Sparklines sind schwierig zu lesen, wenn sie alle der gleiche Maßstab verwendet nicht. Sowohl die horizontale als auch die vertikale Achse muss mit dem Rest übereinstimmen.  
   
 #### <a name="to-set-alignment-for-the-sparklines-in-the-table"></a>So legen Sie die Ausrichtung für die Sparklines in der Tabelle fest  
   

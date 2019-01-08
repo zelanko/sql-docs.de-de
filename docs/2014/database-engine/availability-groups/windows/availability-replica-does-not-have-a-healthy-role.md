@@ -14,12 +14,12 @@ ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e84b37c0e2d8436a8b113103d3459d12b4ac7784
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c5d487965237395da68bbc8ba3134c8d372f90db
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193540"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359363"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role"></a>Verfügbarkeitsreplikat hat keine fehlerfreie Rolle
     
@@ -36,12 +36,12 @@ ms.locfileid: "48193540"
  Diese Richtlinie überprüft den Status der Verfügbarkeitsreplikatrolle. Die Richtlinie befindet sich in einem fehlerhaften Zustand, wenn die Rolle des Verfügbarkeitsreplikats weder primär noch sekundär ist. Die Richtlinie befindet sich andernfalls in einem ordnungsgemäßen Zustand.  
   
 > [!NOTE]  
->  Für diese Version von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]finden Sie Informationen zu möglichen Ursachen und Lösungen im TechNet Wiki unter [Verfügbarkeitsreplikat hat keine fehlerfreie Rolle](http://go.microsoft.com/fwlink/p/?LinkId=220856) .  
+>  Für diese Version von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]finden Sie Informationen zu möglichen Ursachen und Lösungen im TechNet Wiki unter [Verfügbarkeitsreplikat hat keine fehlerfreie Rolle](https://go.microsoft.com/fwlink/p/?LinkId=220856) .  
   
 ## <a name="possible-causes"></a>Mögliche Ursachen  
  Die Rolle dieses Verfügbarkeitsreplikats ist fehlerhaft. Das Replikat hat nicht entweder die primäre oder sekundäre Rolle inne.  
   
-## <a name="possible-solution-informationstilltocome"></a>Mögliche Lösung: Informationen_werden_noch_bereitgestellt  
+## <a name="possible-solution-informationstilltocome"></a>Mögliche Lösung: Information_still_to_come  
   
 ## <a name="see-also"></a>Siehe auch  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](overview-of-always-on-availability-groups-sql-server.md)   

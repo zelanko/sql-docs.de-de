@@ -20,17 +20,17 @@ ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 975c396eb3c0bfa7414e3af4249338d2790754b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1f1b4d74d7ad7f34254a5c56c6dafc5fd2fb829
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157040"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350495"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Planen der Unterstützung für Reporting Services und Power View-Browser (Reporting Services 2014)
-  In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], verwenden Sie einen Webbrowser zum Anzeigen von Berichten und Berichts-Manager ausführen. Nicht alle Berichtsfunktionen werden von allen Browsern unterstützt. Dieses Thema behandelt die Unterstützung und die Anforderungen für Verwaltungsfunktionen des Berichts-Managers, die Anzeige von Berichten und die ReportViewer-Steuerelemente in Visual Studio. In diesem Thema werden auch die für die unterstützten Browser verfügbaren Funktionen sowie Authentifizierungs- und Skriptanforderungen zusammengefasst.  
+  Verwenden Sie in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] einen Webbrowser zum Anzeigen von Berichten und zum Ausführen des Berichts-Managers. Nicht alle Berichtsfunktionen werden von allen Browsern unterstützt. Dieses Thema behandelt die Unterstützung und die Anforderungen für Verwaltungsfunktionen des Berichts-Managers, die Anzeige von Berichten und die ReportViewer-Steuerelemente in Visual Studio. In diesem Thema werden auch die für die unterstützten Browser verfügbaren Funktionen sowie Authentifizierungs- und Skriptanforderungen zusammengefasst.  
   
- **[!INCLUDE[applies](../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im SharePoint-Modus | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im einheitlichen Modus  
+ **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im SharePoint-Modus | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im einheitlichen Modus  
   
  **In diesem Thema:**  
   
@@ -45,23 +45,23 @@ ms.locfileid: "48157040"
 -   [Browserunterstützung für ReportViewer-Webserversteuerelemente in Visual Studio](#bkmk_controls)  
   
 ##  <a name="bkmk_powerview"></a> Power View-Browserszenarien  
- Die Liste der unterstützten Browsern und Browserversionen, die [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] unterstützt, hängt von dem Dokument geöffnet wird. Excel 2013-Arbeitsmappen und**RDLX**-Dateien verwenden unterschiedliche Komponenten.  
+ Welche Browser und Browserversionen [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] unterstützt, hängt vom Typ des geöffneten Dokuments ab. Excel 2013-Arbeitsmappen und "**.rdlx**"-Dateien verwenden unterschiedliche Komponenten.  
   
 |Dokumenttyp|Umgebung|Browserunterstützung|  
 |-------------------|-----------------|---------------------|  
-|Power View-Bericht (.RDLX)|**SharePoint-Server:** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] auf [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] den integrierten SharePoint-Modus und der Power View-Webanwendung.|Siehe [Power View auf dem SharePoint-Server und im integrierten SharePoint-Modus von Reporting Services](#bkmk_powerview_on_SSRS).|  
-|Excel 2013-Arbeitsmappe mit Power View-Blättern|**SharePoint-Server:** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] in Excel Services.<br /><br /> **SharePoint Online (Office 365):** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] für Excel WebApp.|Siehe [Power View in Excel Services oder Excel Web App auf SharePoint Online](#bkmk_powerview_on_ExcelServices).|  
+|Power View-Bericht (.RDLX)|**SharePoint-Server:** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] im integrierten SharePoint-Modus von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] und die Power View-Webanwendung.|Siehe [Power View auf dem SharePoint-Server und im integrierten SharePoint-Modus von Reporting Services](#bkmk_powerview_on_SSRS).|  
+|Excel 2013-Arbeitsmappe mit Power View-Blättern|**SharePoint-Server:** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] in Excel Services.<br /><br /> **Online SharePoint (Office 365):** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] für Excel Web App.|Siehe [Power View in Excel Services oder Excel Web App auf SharePoint Online](#bkmk_powerview_on_ExcelServices).|  
   
 ###  <a name="bkmk_powerview_on_SSRS"></a> Power View in SharePoint Server und SharePoint integrierten Modus von Reporting Services  
- In der folgenden Tabelle werden die Browserversionen für [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] zusammengefasst, die unterstützt werden, wenn ein Benutzer einen Power View-Bericht (.RDLX) auf einer SharePoint-Farm öffnet, auf der eine [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Dienstanwendung und das [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Add-In für SharePoint installiert und konfiguriert ist.  
+ In der folgenden Tabelle werden die Browserversionen für [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] zusammengefasst, die unterstützt werden, wenn ein Benutzer einen Power View-Bericht (.RDLX) auf einer SharePoint-Farm öffnet, auf der eine [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienstanwendung und das [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Add-In für SharePoint installiert und konfiguriert ist.  
   
 -   Die Tabelle gilt für SharePoint 2010 und SharePoint 2013.  
   
--   Weitere Informationen zur SharePoint 2013-Browserunterstützung finden Sie unter [Planen der Browserunterstützung in SharePoint 2013](http://technet.microsoft.com//library/cc263526\(office.15\).aspx) (http://technet.microsoft.com/library/cc263526(office.15).aspx).  
+-   Weitere Informationen zur SharePoint 2013-Browserunterstützung finden Sie unter [Planen der Browserunterstützung in SharePoint 2013](https://technet.microsoft.com//library/cc263526\(office.15\).aspx) (https://technet.microsoft.com/library/cc263526(office.15).aspx).  
   
--   Weitere Informationen zur SharePoint 2010-Browserunterstützung finden Sie unter [Planen der Browserunterstützung (SharePoint Server 2010)](http://technet.microsoft.com/library/cc263526\(office.14\).aspx) (http://technet.microsoft.com/library/cc263526(office.14).aspx).  
+-   Weitere Informationen zur SharePoint 2010-Browserunterstützung finden Sie unter [Planen der Browserunterstützung (SharePoint Server 2010)](https://technet.microsoft.com/library/cc263526\(office.14\).aspx) (https://technet.microsoft.com/library/cc263526(office.14).aspx).  
   
-|**Browser**|**Windows 8 und 8.1**|**Windows 7**|**Windows Server 2012 und 2012 R2**|**Windows Server 2008 R2**|**WindowsServer 2008**|**Mac OS X 10.6 – 10.9**|  
+|**Browser**|**Windows 8 und 8.1**|**Windows 7**|**Windows Server 2012 und 2012 R2**|**Windows Server 2008 R2**|**WindowsServer 2008**|**Mac OS X 10.6-10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 (für den Desktop)**|32-Bit, 64-Bit|32-Bit, 64-Bit|32-Bit, 64-Bit|32-Bit, 64-Bit|Nicht unterstützt|Nicht unterstützt|  
 |**Internet Explorer 10 (für den Desktop)**|32-Bit, 64-Bit|32-Bit, 64-Bit|32-Bit, 64-Bit|32-Bit, 64-Bit|Nicht unterstützt|Nicht unterstützt|  
@@ -77,11 +77,11 @@ ms.locfileid: "48157040"
  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] unterstützt nicht die Funktion InPrivate-Browsen in [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 8 und Internet Explorer 9. Weitere Informationen zum InPrivate-Browsen finden Sie unter [Was ist InPrivate-Browsen?](http://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing) (http://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing).  
   
 ###  <a name="bkmk_powerview_on_ExcelServices"></a> Power View in Excel Services oder Excel Web App auf SharePoint Online  
- Die folgende Tabelle enthält die Versionen der unterstützten Browser für [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] Wenn ein Benutzer öffnet eine Excel 2013-Arbeitsmappe mit Power View-Blättern auf einem SharePoint-Server, auf denen Excel Services ausgeführt wird:  
+ In der folgenden Tabelle werden die Browserversionen für [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] zusammengefasst, die unterstützt werden, wenn ein Benutzer eine Excel 2013-Arbeitsmappe mit Power View-Blättern auf einem SharePoint Server öffnet, auf dem Excel Services ausgeführt wird:  
   
--   Weitere Informationen zur SharePoint 2013-Browserunterstützung finden Sie unter [Planen der Browserunterstützung in SharePoint 2013](http://technet.microsoft.com/library/cc263526\(office.15\).aspx) (http://technet.microsoft.com/library/cc263526(office.15).aspx).  
+-   Weitere Informationen zur SharePoint 2013-Browserunterstützung finden Sie unter [Planen der Browserunterstützung in SharePoint 2013](https://technet.microsoft.com/library/cc263526\(office.15\).aspx) (https://technet.microsoft.com/library/cc263526(office.15).aspx).  
   
-|**Browser**|**Windows 8 und 8.1**|**Windows 7**|**Windows Server 2012 und 2012 R2**|**Windows Server 2008 R2**|**WindowsServer 2008**|**Mac OS X 10.6 – 10.9**|  
+|**Browser**|**Windows 8 und 8.1**|**Windows 7**|**Windows Server 2012 und 2012 R2**|**Windows Server 2008 R2**|**WindowsServer 2008**|**Mac OS X 10.6-10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 (für den Desktop)**|32-Bit, 64-Bit|32-Bit, 64-Bit|32-Bit, 64-Bit|32-Bit, 64-Bit|Nicht unterstützt|Nicht unterstützt|  
 |**Internet Explorer 10 (für den Desktop)**|32-Bit, 64-Bit|32-Bit, 64-Bit|32-Bit, 64-Bit|32-Bit, 64-Bit|Nicht unterstützt|Nicht unterstützt|  
@@ -94,19 +94,19 @@ ms.locfileid: "48157040"
  **(\*)** Chrome wird die Unterstützung der Netscape-Plug-Ins API (NPAPI) von Silverlight verwendete eingestellt. Power View ist von Silverlight abhängig.  Weitere Informationen finden Sie unter [Countdown für NPAPI](http://blog.chromium.org/2014/11/the-final-countdown-for-npapi.html).  
   
 ##  <a name="bkmk_reportmanager"></a> Browseranforderungen für Berichts-Manager (einheitlicher Modus)  
- Folgendes ist die aktuelle Liste der unterstützten Browser Sie zum ausführen können der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im einheitlichen Modus Berichts-Manager zum Verwalten von Berichten und dem Berichtsserver her.  
+ Im Folgenden finden Sie die die aktuelle Liste der unterstützten Browser, mit denen Sie den [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichts-Manager im einheitlichen Modus ausführen können, um Berichte und den Berichtsserver zu verwalten.  
   
 |-Browser|  
 |-------------|  
 |Internet Explorer 7 oder höher, und Skripts müssen aktiviert sein.|  
-|Mozilla Firefox (neueste öffentlich freigegebene Version)|  
+|Mozilla FireFox (neueste öffentlich freigegebene Version)|  
 |Apple Safari (neueste öffentlich freigegebene Version)|  
 |Google Chrome (neueste öffentlich freigegebene Version)|  
   
 ##  <a name="bkmk_reportviewer"></a> Browseranforderungen zum Anzeigen von Berichten  
- Im Folgenden finden Sie die aktuelle Liste der Browser und Funktionen, die mit dem Berichts-Viewer unterstützt werden. Der Berichts-Viewer unterstützt die Anzeige von Berichten vom [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Berichts-Manager und SharePoint-Bibliotheken.  
+ Im Folgenden finden Sie die aktuelle Liste der Browser und Funktionen, die mit dem Berichts-Viewer unterstützt werden. Der Berichts-Viewer unterstützt die Anzeige von Berichten vom [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichts-Manager und von den SharePoint-Bibliotheken.  
   
-|**Browser**|**Windows 8 und 8.1**|**Windows 7**|**Windows Server 2012 und 2012 R2**|**Windows Server 2008 R2**|**WindowsServer 2008**|**Mac OS X 10.6 – 10.9**|**iOS 6-7 für iPad**|  
+|**Browser**|**Windows 8 und 8.1**|**Windows 7**|**Windows Server 2012 und 2012 R2**|**Windows Server 2008 R2**|**WindowsServer 2008**|**Mac OS X 10.6-10.9**|**iOS 6-7 für iPad**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|----------------------------|  
 |**Internet Explorer 11 (für den Desktop)**|32-Bit, 64-Bit|32-Bit, 64-Bit|32-Bit, 64-Bit|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|  
 |**Internet Explorer 10 (für den Desktop)**|32-Bit, 64-Bit|32-Bit, 64-Bit|32-Bit, 64-Bit|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|  
@@ -117,7 +117,7 @@ ms.locfileid: "48157040"
 |**Apple Safari (neueste öffentlich freigegebene Version)**|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|32-Bit, 64-Bit|Unterstützt mit eingeschränkten Funktionen <sup>(1)</sup>|  
 |**Google Chrome (neueste öffentlich freigegebene Version)**|32-Bit|32-Bit|32-Bit|32-Bit|32-Bit|Nicht unterstützt|Nicht unterstützt|  
   
- **<sup>(1) </sup>**  Die folgenden Funktionen werden unterstützt:  
+ **<sup>(1)</sup>**  Die folgenden Funktionen werden unterstützt:  
   
 -   Exportieren in das PDF- und TIFF-Format.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48157040"
   
 -   Weitere Informationen finden Sie unter [anzeigen Reporting Services-Berichten auf Microsoft Surface-Geräten und Apple iOS-Geräten](../../2014/reporting-services/view-reporting-services-reports-surface-ios-devices.md).  
   
- **Hinweis** Wenn Sie von einem Macintosh-Computer auf einen Berichtsserver zugreifen, empfiehlt sich die Verwendung von Safari. Bei Verwendung ein SharePoint-Produkts, die in integrierten [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], finden Sie unter [Planen der Browserunterstützung (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkId=183583).  
+ **Hinweis** Wenn Sie von einem Macintosh-Computer auf einen Berichtsserver zugreifen, empfiehlt sich die Verwendung von Safari. Informationen bei Verwendung eines SharePoint-Produkts, das in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]integriert ist, finden Sie unter [Browserunterstützung (Windows SharePoint Services)](https://go.microsoft.com/fwlink/?LinkId=183583).  
   
 ### <a name="url-access-for-viewing-reports"></a>URL-Zugriff zum Anzeigen von Berichten  
  Um Berichte nicht im Berichts-Manager, sondern direkt anzuzeigen, stellen Sie über den URL-Zugriff eine Verbindung mit dem Bericht und Berichts-Viewer her. Der URL-Zugriff unterstützt verschiedene Browser.  
@@ -169,15 +169,15 @@ ms.locfileid: "48157040"
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
-|**Browser**|**Windows 8** und **Windows 8.1**|**Windows 7**|**Windows Server 2012** und **2012 R2**|**Windows Server 2008** und **2008 R2**|**WindowsServer 2003**|**Mac OS X 10.6 – 10.9**|**Hinweise**|  
-|**Internet Explorer 11 (für den desktop**|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|Internet Explorer unterstützt sämtliche ReportViewer-Funktionen.|  
-|**Internet Explorer 10 (für den Desktop)**|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|Internet Explorer unterstützt sämtliche ReportViewer-Funktionen.|  
-|**InternetExplorer 9**|Nicht unterstützt|Benutzerkontensteuerung|Nicht unterstützt|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Internet Explorer unterstützt sämtliche ReportViewer-Funktionen.|  
-|**InternetExplorer 8.0**|Nicht unterstützt|Benutzerkontensteuerung|Nicht unterstützt|Benutzerkontensteuerung|Ja<sup>1</sup>|Nicht unterstützt|Internet Explorer unterstützt sämtliche ReportViewer-Funktionen. <sup>1</sup>|  
-|**InternetExplorer 7.0**|Nicht unterstützt|Benutzerkontensteuerung|Nicht unterstützt|Benutzerkontensteuerung|Ja<sup>1</sup>|Nicht unterstützt|Internet Explorer unterstützt sämtliche ReportViewer-Funktionen. <sup>1</sup>|  
-|**Firefox (neueste öffentlich freigegebene Version)**|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Nicht unterstützt|Drucken und Zoomen werden nicht unterstützt.|  
-|**Safari (neueste öffentlich freigegebene Version)**|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|Benutzerkontensteuerung|Drucken und Zoomen werden nicht unterstützt.<br /><br /> Das Kalender-Steuerelement zur Auswahl von Datumsangaben in einem parametrisierten Bericht ist in diesem Browser deaktiviert. Benutzer müssen die gewünschten Datumsangaben manuell im Eingabeaufforderungsbereich für Parameter eingeben.|  
-|**Chrome (neueste öffentlich freigegebene Version)**|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Nicht unterstützt|Drucken und Zoomen werden nicht unterstützt.|  
+|**Browser**|**Windows 8** und **Windows 8.1**|**Windows 7**|**Windows Server 2012** und **2012 R2**|**Windows Server 2008** und **2008 R2**|**WindowsServer 2003**|**Mac OS X 10.6-10.9**|**Hinweise**|  
+|**Internet Explorer 11 (für den desktop**|Ja|Ja|Ja|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|Internet Explorer unterstützt sämtliche ReportViewer-Funktionen.|  
+|**Internet Explorer 10 (für den Desktop)**|Ja|Ja|Ja|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|Internet Explorer unterstützt sämtliche ReportViewer-Funktionen.|  
+|**InternetExplorer 9**|Nicht unterstützt|Ja|Nicht unterstützt|Ja|Ja|Ja|Internet Explorer unterstützt sämtliche ReportViewer-Funktionen.|  
+|**InternetExplorer 8.0**|Nicht unterstützt|Ja|Nicht unterstützt|Ja|Ja<sup>1</sup>|Nicht unterstützt|Internet Explorer unterstützt sämtliche ReportViewer-Funktionen. <sup>1</sup>|  
+|**InternetExplorer 7.0**|Nicht unterstützt|Ja|Nicht unterstützt|Ja|Ja<sup>1</sup>|Nicht unterstützt|Internet Explorer unterstützt sämtliche ReportViewer-Funktionen. <sup>1</sup>|  
+|**Firefox (neueste öffentlich freigegebene Version)**|Ja|Ja|Ja|Ja|Ja|Nicht unterstützt|Drucken und Zoomen werden nicht unterstützt.|  
+|**Safari (neueste öffentlich freigegebene Version)**|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|Ja|Drucken und Zoomen werden nicht unterstützt.<br /><br /> Das Kalender-Steuerelement zur Auswahl von Datumsangaben in einem parametrisierten Bericht ist in diesem Browser deaktiviert. Benutzer müssen die gewünschten Datumsangaben manuell im Eingabeaufforderungsbereich für Parameter eingeben.|  
+|**Chrome (neueste öffentlich freigegebene Version)**|Ja|Ja|Ja|Ja|Ja|Nicht unterstützt|Drucken und Zoomen werden nicht unterstützt.|  
   
  <sup>1</sup>im Standardmodus, Internet Explorer 7.0 und 8.0 werden nicht angezeigt Schräge Zeilen in Berichten. Wenn Sie schräge Zeilen in den Berichten verwenden, legen Sie für die ASP.NET-Seite fest, dass sie im Internet Explorer im Quirksmodus ausgeführt wird. Suchen Sie dazu die \<! DOCTYPE >-Tag auf der ASP.NET-Seite. Oder suchen Sie bei Verwendung einer Masterseite das Tag in der MASTER-Datei. Dieses Tag sieht folgendermaßen aus:  
   
@@ -191,9 +191,9 @@ ms.locfileid: "48157040"
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">  
 ```  
   
- Weitere Informationen zu Kompatibilitätsmodi in Internet Explorer finden Sie unter [Definieren der Dokumentkompatibilität](http://go.microsoft.com/fwlink/?LinkId=180380) (http://go.microsoft.com/fwlink/?LinkId=180380).  
+ Weitere Informationen zu Kompatibilitätsmodi in Internet Explorer finden Sie unter [Definieren der Dokumentkompatibilität](https://go.microsoft.com/fwlink/?LinkId=180380) (https://go.microsoft.com/fwlink/?LinkId=180380).  
   
- Weitere Informationen zum Verwenden der ReportViewer-Steuerelemente finden Sie unter [Bereitstellen von Berichten und ReportViewer-Steuerelemente](http://msdn.microsoft.com/library/ms251723.aspx) (http://msdn.microsoft.com/library/ms251723.aspx).  
+ Weitere Informationen zum Verwenden der ReportViewer-Steuerelemente finden Sie unter [Bereitstellen von Berichten und ReportViewer-Steuerelemente](https://msdn.microsoft.com/library/ms251723.aspx) (https://msdn.microsoft.com/library/ms251723.aspx).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Reporting Services-Tools](tools/reporting-services-tools.md)   

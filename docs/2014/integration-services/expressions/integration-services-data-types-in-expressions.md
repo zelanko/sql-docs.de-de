@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], data types
@@ -14,12 +13,12 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9195d5fad08c8e6539419ba33eb64a840a4688d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80110c29ec1c576684c4ccd67bc0c3408e6250b3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194879"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363343"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Integration Services-Datentypen in Ausdrücken
   Die Ausdrucksauswertung verwendet [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Datentypen. Wenn Daten erstmals an einen Datenfluss in einem [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Paket weitergegeben werden, konvertiert die Datenfluss-Engine alle Spaltendaten in einen [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Datentyp, und die von einem Ausdruck verwendeten Spaltendaten weisen bereits einen [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Datentyp auf. Ausdrücke, die in den Transformationen für bedingtes Teilen und für abgeleitete Spalten verwendet werden, können auf Spalten verweisen, weil sie Teil eines Datenflusses mit Spaltendaten sind.  
@@ -33,7 +32,7 @@ ms.locfileid: "48194879"
  Darüber hinaus können Ausdrücke numerische und boolesche Literale sowie Zeichenfolgenliterale einschließen. Weitere Informationen zum Konvertieren von numerischen Literalen in numerische [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Datentypen finden Sie unter [Literale &#40;SSIS&#41;](numeric-string-and-boolean-literals.md).  
   
 ## <a name="implicit-data-conversion"></a>Implizite Datenkonvertierung  
- Bei einer impliziten Datentypkonvertierung konvertiert die Ausdrucksauswertung die Daten automatisch in einen anderen Datentyp. Z. B. wenn ein `smallint` im Vergleich zu einer `int`, `smallint` wird implizit in konvertiert `int` , bevor der Vergleich ausgeführt wird.  
+ Bei einer impliziten Datentypkonvertierung konvertiert die Ausdrucksauswertung die Daten automatisch in einen anderen Datentyp. Beispielsweise wird beim Vergleich eines `smallint`-Datentyps mit einem `int`-Datentyp der `smallint`-Datentyp implizit in `int` konvertiert, bevor der Vergleich ausgeführt wird.  
   
  Wenn die Argumente und Operanden nicht kompatible Datentypen aufweisen, kann die Ausdrucksauswertung keine implizite Datenkonvertierung ausführen. Zudem kann die Ausdrucksauswertung einen Wert nicht implizit in einen booleschen Wert konvertieren. Stattdessen müssen die Argumente und Operanden explizit mit dem Umwandlungsoperator konvertiert werden. Weitere Informationen finden Sie unter [Umwandlung &#40;SSIS-Ausdruck&#41;](cast-ssis-expression.md).  
   
@@ -48,23 +47,23 @@ ms.locfileid: "48194879"
 > [!NOTE]  
 >  Boolesche Werte sind keine Zahlen, sondern logische Werte. Obwohl einige Umgebungen boolesche Werte als Zahlenwerte darstellen, werden Sie nicht als Zahlen gespeichert. Je nach Programmiersprache werden boolesche Werte als unterschiedliche Zahlenwerte dargestellt. Dies gilt auch für .NET Framework-Methoden.  
 >   
->  Beispielsweise konvertieren die Konvertierungsfunktionen von Visual Basic den Wert `True` in den Zahlenwert -1. Die `System.Convert.ToInt32`-Methode von .NET Framework konvertiert den Wert `True` jedoch in den Zahlenwert +1. Die [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Ausdruckssprache konvertiert `True` -1.  
+>  Beispielsweise konvertieren die Konvertierungsfunktionen von Visual Basic den Wert `True` in den Zahlenwert -1. Die `System.Convert.ToInt32`-Methode von .NET Framework konvertiert den Wert `True` jedoch in den Zahlenwert +1. In der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Ausdruckssprache wird der Wert `True` in den Zahlenwert -1 konvertiert.  
 >   
 >  Um Fehler oder unerwartete Ergebnisse zu vermeiden, sollten Sie keinen Code erstellen, der von bestimmten numerischen Werten für `True` und `False` abhängig ist. Nach Möglichkeit sollten bei booleschen Variablen nur die für sie vorgesehenen logischen Werte verwendet werden.  
   
- Weitere Informationen finden Sie in folgenden Themen:  
+ Weitere Informationen finden Sie unter den folgenden Themen:  
   
 -   [== &#40;Gleich&#41; &#40;SSIS-Ausdruck&#41;](equal-ssis-expression.md)  
   
 -   [\!= &#40;Ungleich&#41; &#40;SSIS-Ausdruck&#41;](unequal-ssis-expression.md)  
   
--   [&#62;&#40;Größer als&#41; &#40;SSIS-Ausdruck&#41;](greater-than-ssis-expression.md)  
+-   [&#62; &#40;Größer als&#41; &#40;SSIS-Ausdruck&#41;](greater-than-ssis-expression.md)  
   
--   [&#60;&#40;Kleiner als&#41; &#40;SSIS-Ausdruck&#41;](less-than-ssis-expression.md)  
+-   [&#60; &#40;Kleiner als&#41; &#40;SSIS-Ausdruck&#41;](less-than-ssis-expression.md)  
   
--   [&#62;= &#40;Größer als oder gleich&#41; &#40;SSIS-Ausdruck&#41;](greater-than-or-equal-to-ssis-expression.md)  
+-   [&#62;= &#40;Größer oder gleich&#41; &#40;SSIS-Ausdruck&#41;](greater-than-or-equal-to-ssis-expression.md)  
   
--   [&#60;= &#40;Kleiner als oder gleich&#41; &#40;SSIS-Ausdruck&#41;](less-than-or-equal-to-ssis-expression.md)  
+-   [&#60;= &#40;Kleiner oder gleich&#41; &#40;SSIS-Ausdruck&#41;](less-than-or-equal-to-ssis-expression.md)  
   
  Eine Funktion mit einem einzelnen Argument gibt ein Ergebnis mit dem Datentyp des Arguments zurück, wobei folgende Ausnahmen gelten:  
   
@@ -93,7 +92,7 @@ ms.locfileid: "48194879"
   
 -   Argumente, die an mathematische Funktionen übergeben werden, müssen zu einem numerischen Datentyp ausgewertet werden. Je nach Funktion oder Operation kann ein bestimmter numerischer Datentyp erforderlich sein. Beispielsweise erfordert die HEX-Funktion eine ganze Zahl mit oder ohne Vorzeichen.  
   
--   Argumente, die an Zeichenfolgenfunktionen übergeben werden, müssen zu einem Zeichendatentyp ausgewertet werden: DT_STR oder DT_WSTR. Beispiel: UPPER("flower"). Manche Zeichenfolgenfunktionen, wie z. B. SUBSTRING, erfordern zusätzliche ganzzahlige Argumente für die Startposition und die Länge der Zeichenfolge.  
+-   Argumente, die an Zeichenfolgenfunktionen übergeben müssen zu einem Zeichendatentyp ausgewertet: DT_STR oder DT_WSTR. Beispiel: UPPER("flower"). Manche Zeichenfolgenfunktionen, wie z. B. SUBSTRING, erfordern zusätzliche ganzzahlige Argumente für die Startposition und die Länge der Zeichenfolge.  
   
 -   Argumente, die an Datums- und Zeitfunktionen übergeben werden, müssen zu einem gültigen Datum ausgewertet werden. Beispielsweise DAY(GETDATE()). Manche Funktionen, wie z. B. DATEADD, erfordern ein zusätzliches ganzzahliges Argument für die Anzahl von Tagen, die von der Funktion zu einem Datum addiert werden.  
   
@@ -106,8 +105,8 @@ ms.locfileid: "48194879"
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   Technischer Artikel, [SSIS Expression Cheat Sheet](http://go.microsoft.com/fwlink/?LinkId=217683), auf pragmaticworks.com  
+-   Technischer Artikel, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=217683), auf pragmaticworks.com  
   
--   Technischer Artikel, [SSIS Expression Examples](http://go.microsoft.com/fwlink/?LinkId=220761), auf social.technet.microsoft.com  
+-   Technischer Artikel, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), auf social.technet.microsoft.com  
   
   

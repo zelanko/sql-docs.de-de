@@ -1,21 +1,22 @@
 ---
-title: Konfigurieren Sie die RHEL-Cluster für SQL Server-Verfügbarkeitsgruppe | Microsoft-Dokumentation
-description: ''
+title: Konfigurieren Sie die RHEL-Cluster für SQL Server-Verfügbarkeitsgruppe
+titleSuffix: SQL Server
+description: Lernen Sie verfügbarkeitsclustern für die Gruppe, bei der Red Hat Enterprise Linux (RHEL) ausgeführt wird.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 06/14/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: ec5ed0ce61c1b1f48ecc148326b9a1906ff95122
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: HT
+ms.openlocfilehash: c498a9ef5422f82671000d6c0e82756df85947cb
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670819"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160598"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Konfigurieren Sie die RHEL-Cluster für SQL Server-Verfügbarkeitsgruppe
 
@@ -88,7 +89,7 @@ Jeder Knoten im Cluster muss ein entsprechendes Abonnement für RHEL und hoher V
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
    ```
 
-Weitere Informationen finden Sie unter [Pacemaker – die Open-Source-Cluster mit hoher Verfügbarkeit](https://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/). 
+Weitere Informationen finden Sie unter [Pacemaker - der Open-Source-Cluster mit hoher Verfügbarkeit](https://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/). 
 
 Nachdem Sie das Abonnement konfiguriert haben, führen Sie die folgenden Schritte aus, um Pacemaker zu konfigurieren:
 
@@ -112,7 +113,7 @@ Informationen zu STONITH und Umgrenzung finden Sie unter den folgenden Artikeln:
 
 * [Pacemaker-Cluster von Grund auf neu](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
 * [Umgrenzung und STONITH](https://clusterlabs.org/doc/crm_fencing.html)
-* [Red Hat Hochverfügbarkeit-Add-On mit Pacemaker: für das Umgrenzen der](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
+* [Hohe Verfügbarkeit ein Add-On mit Pacemaker unter Red Hat: Für das umgrenzen der](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
 
 Da die Ebene des Knotens für das umgrenzen der Konfiguration in Ihrer Umgebung stark abhängig ist, deaktivieren Sie ihn für dieses Tutorial (sie kann später konfiguriert werden). Das folgende Skript wird die Ebene Umgrenzung Knoten deaktiviert:
 

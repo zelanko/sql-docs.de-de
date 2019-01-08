@@ -16,12 +16,12 @@ ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df78a4890658ec83a62eeccbce23d891d5afc56d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74d4ceb4532ee09004f035958860833aef488aaa
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812103"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206207"
 ---
 # <a name="interface-conformance-levels"></a>Ebenen der Schnittstellenübereinstimmung
 Der Zweck der Lastenausgleich ist auf die Anwendung zu informieren, welche Features, aus dem Treiber verfügbar sind. Eine leveling-Schema anhand von Funktionen erreichen dieses Ziels nicht ausreichend. In ODBC 3. *x*, Treiber klassifiziert sind, basierend auf den Features, die sie besitzen. Unterstützung der Funktions, kann die Unterstützung der Funktion enthalten; Er kann auch die Unterstützung von einem Beschreibungsfeld, ein Anweisungsattribut, einen Wert "Y" für ein zurückgegebenes Informationstyp enthalten **SQLGetInfo**und so weiter.  
@@ -34,9 +34,9 @@ Der Zweck der Lastenausgleich ist auf die Anwendung zu informieren, welche Featu
   
  Treiber können-Funktionen jenseits der Ebene zu implementieren, zu dem er die vollständige Übereinstimmung mit Standards vorgibt. Anwendungen ermitteln Sie alle zusätzlichen Funktionen durch Aufrufen von **SQLGetFunctions** (um zu ermitteln, welche ODBC-Funktionen vorhanden sind) und **SQLGetInfo** (zum Abfragen von verschiedenen anderen ODBC-Funktionen).  
   
- Es gibt drei Konformitätsgrad des ODBC-Schnittstelle: Core, Level 1 und Ebene 2.  
+ Es gibt drei Konformitätsgrad des ODBC-Schnittstelle: Core, Ebene 1 und Ebene 2.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Diese Ebenen der schnittstellenübereinstimmung haben unterschiedliche Anforderungen an als der ODBC-API-Ebenen der schnittstellenübereinstimmung mit dem gleichen Namen in ODBC 2.*.x*. Insbesondere alle Funktionen, die durch ODBC 2. impliziert *.x* -API-Übereinstimmung mit Standards Level 1 sind jetzt Bestandteil der Konformitätsgrad des Core-Schnittstelle. Daher können viele ODBC-Treiber-Kernebenen-schnittstellenübereinstimmung melden.  
   
  Dieser Abschnitt enthält die folgenden Themen.  

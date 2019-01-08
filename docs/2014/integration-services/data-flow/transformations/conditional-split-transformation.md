@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.conditionalsplittrans.f1
@@ -16,12 +15,12 @@ ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b6cfae604393fa2fec1c8d3a22edf2c0379581b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6d5c075898bc503a58c6b90641788d01e9b97d0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073577"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814912"
 ---
 # <a name="conditional-split-transformation"></a>Transformation für bedingtes Teilen
   Die Transformation für bedingtes Teilen kann Datenzeilen je nach Dateninhalt an andere Ausgaben routen. Die Implementierung der Transformation für bedingtes Teilen ist mit einer CASE-Entscheidungsstruktur in einer Programmiersprache zu vergleichen. Diese Transformation wertet Ausdrücke aus und leitet dann basierend auf den Ergebnissen die Datenzeilen an die angegebene Ausgabe weiter. Diese Transformation stellt außerdem eine Standardausgabe bereit, damit eine Zeile, die mit keinem Ausdruck übereinstimmt, an die Standardausgabe weitergeleitet wird.  
@@ -45,9 +44,9 @@ ms.locfileid: "48073577"
   
  `SUBSTRING(FirstName,1,1) == "B"`  
   
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] schließt Funktionen und Operatoren ein, mit denen Sie die Ausdrücke erstellen können, die Eingabedaten auswerten und Ausgabedaten weiterleiten. Weitere Informationen finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](../../expressions/integration-services-ssis-expressions.md).  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] schließt Funktionen und Operatoren ein, mit denen Sie die Ausdrücke erstellen können, die Eingabedaten auswerten und Ausgabedaten weiterleiten. Weitere Informationen finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](../../expressions/integration-services-ssis-expressions.md)ausgewertet wird.  
   
- Die Transformation für bedingtes Teilen schließt die `FriendlyExpression` benutzerdefinierte Eigenschaft. Diese Eigenschaft kann beim Laden des Pakets mithilfe eines Eigenschaftsausdrucks aktualisiert werden. Weitere Informationen finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](../../expressions/use-property-expressions-in-packages.md) und [Benutzerdefinierte Eigenschaften von Transformationen](transformation-custom-properties.md).  
+ Die Transformation für bedingtes Teilen schließt die benutzerdefinierte Eigenschaft `FriendlyExpression` ein. Diese Eigenschaft kann beim Laden des Pakets mithilfe eines Eigenschaftsausdrucks aktualisiert werden. Weitere Informationen finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](../../expressions/use-property-expressions-in-packages.md) und [Benutzerdefinierte Eigenschaften von Transformationen](transformation-custom-properties.md).  
   
  Diese Transformation weist eine Eingabe, mindestens eine Ausgabe und eine Fehlerausgabe auf.  
   

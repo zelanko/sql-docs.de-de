@@ -1,5 +1,5 @@
 ---
-title: Sortieren von Attributelementen basierend auf einem sekundären Attribut | Microsoft Docs
+title: Sortieren von Attributelementen basierend auf einem sekundären Attribut | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 720920da4dbd935bca493e3a2e76ab9a683fff21
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 010e416115e793c46f8744c7724dc164ca01ec87
+ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019347"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52951692"
 ---
 # <a name="lesson-4-5---sorting-attribute-members-based-on-a-secondary-attribute"></a>Lektion 4-5: Sortieren von Attributelementen basierend auf einem sekundären Attribut
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ In Lektion 3 haben Sie das Sortieren von Attributelementen basierend auf ihrem N
   
 Attributbeziehungen definieren die Beziehungen oder Abhängigkeiten zwischen Attributen. In einer Dimension, die auf einer einzelnen relationalen Tabelle basiert, sind typischerweise alle Attribute durch das Schlüsselattribut miteinander verknüpft. Der Grund hierfür ist, dass alle Attribute für eine Dimension Informationen zu den Elementen bereitstellen, die über das Schlüsselattribut der Dimension mit den Fakten in der Faktentabelle für jede verbundene Measuregruppe verknüpft sind. In einer Dimension, die auf mehreren Tabellen basiert, sind Elemente typischerweise basierend auf dem Joinschlüssel zwischen den Tabellen verknüpft. Verknüpfte Attribute können verwendet werden, um eine Sortierreihenfolge anzugeben, wenn dies durch die zugrunde liegenden Daten unterstützt wird. Sie können z. B. ein neues Attribut erstellen, das die Sortierlogik für ein verknüpftes Attribut bereitstellt.  
   
-Mithilfe des Dimensions-Designers können Sie zusätzliche Beziehungen zwischen Attributen definieren oder die Standardbeziehungen ändern, um die Leistung zu verbessern. Die wesentliche Einschränkung beim Erstellen einer Attributbeziehung liegt darin, sicherzustellen, dass das Attribut, auf das verwiesen wird, nicht mehr als einen Wert für jeweils ein Element in dem Attribut aufweist, mit dem es verknüpft ist. Wenn Sie eine Beziehung zwischen zwei Attributen definieren, können Sie die Beziehung fest oder flexibel definieren, basierend darauf, ob sich die Beziehungen zwischen Elementen mit der Zeit ändern. Ein Angestellter kann beispielsweise in eine andere Verkaufsregion ziehen, aber eine Stadt zieht nicht in ein anderes Land bzw. in eine andere Region. Wenn eine Beziehung als fest definiert ist, werden Attributaggregationen nicht jedes Mal neu berechnet, wenn die Dimension inkrementell verarbeitet wird. Allerdings muss die Dimension vollständig verarbeitet werden, wenn sich die Beziehung zwischen Elementen ändert. Weitere Informationen finden Sie unter [Attributbeziehungen](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Definieren von Attributbeziehungen](../analysis-services/multidimensional-models/attribute-relationships-define.md), [Konfigurieren von Attributbeziehungseigenschaften](../analysis-services/multidimensional-models/attribute-relationships-configure-attribute-properties.md)und [Angeben von Attributbeziehungen zwischen Attributen in einer benutzerdefinierten Hierarchie](../analysis-services/4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md).  
+Mithilfe des Dimensions-Designers können Sie zusätzliche Beziehungen zwischen Attributen definieren oder die Standardbeziehungen ändern, um die Leistung zu verbessern. Die wesentliche Einschränkung beim Erstellen einer Attributbeziehung liegt darin, sicherzustellen, dass das Attribut, auf das verwiesen wird, nicht mehr als einen Wert für jeweils ein Element in dem Attribut aufweist, mit dem es verknüpft ist. Wenn Sie eine Beziehung zwischen zwei Attributen definieren, können Sie die Beziehung fest oder flexibel definieren, basierend darauf, ob sich die Beziehungen zwischen Elementen mit der Zeit ändern. Ein Angestellter kann beispielsweise in eine andere Verkaufsregion ziehen, aber eine Stadt zieht nicht in ein anderes Land bzw. in eine andere Region. Wenn eine Beziehung als fest definiert ist, werden Attributaggregationen nicht jedes Mal neu berechnet, wenn die Dimension inkrementell verarbeitet wird. Allerdings muss die Dimension vollständig verarbeitet werden, wenn sich die Beziehung zwischen Elementen ändert. Weitere Informationen finden Sie unter [Attributbeziehungen](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Definieren von Attributbeziehungen](../analysis-services/multidimensional-models/attribute-relationships-define.md), [Konfigurieren von Attributbeziehungseigenschaften](../analysis-services/multidimensional-models/attribute-relationships-configure-attribute-properties.md)und [Angeben von Attributbeziehungen zwischen Attributen in einer benutzerdefinierten Hierarchie](../analysis-services/lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md).  
   
 In den Aufgaben in diesem Thema definieren Sie ein neues Attribut in der **Date** -Dimension basierend auf einer vorhandenen Spalte in der zugrunde liegenden Dimensionstabelle. Sie verwenden dieses neue Attribut zum chronologischen statt alphabetischen Sortieren von Kalendermonatselementen. Sie definieren auch ein neues Attribut in der **Customer** -Dimension basierend auf der benannten Berechnung, die Sie zum Sortieren der **Commute Distance** -Attributelemente verwenden werden. In den Aufgaben des nächsten Themas lernen Sie, Attributbeziehungen zum Verbessern der Abfrageleistung zu verwenden.  
   
@@ -69,7 +69,7 @@ In den Aufgaben in diesem Thema definieren Sie ein neues Attribut in der **Date*
   
     Beachten Sie, dass die Monate jetzt in chronologischer Ordnung sortiert sind, wie im folgenden Bild zu sehen.  
   
-    ![Geändert von Benutzerhierarchie in chronologischer Reihenfolge](../analysis-services/media/l4-memberproperties-3.gif "geändert Benutzerhierarchie in chronologischer Reihenfolge")  
+    ![Geändert von Benutzerhierarchie in chronologischer Reihenfolge](../analysis-services/media/l4-memberproperties-3.gif "Benutzerhierarchie in chronologischer Reihenfolge geändert")  
   
 ## <a name="defining-attribute-relationships-and-sort-order-in-the-customer-dimension"></a>Definieren von Attributbeziehungen und der Sortierreihenfolge in der Customer-Dimension  
   
@@ -117,8 +117,8 @@ In den Aufgaben in diesem Thema definieren Sie ein neues Attribut in der **Date*
   
     ![Neu sortiert Commute Distance-Attributhierarchie](../analysis-services/media/l4-memberproperties-5.gif "Re-sorted Commute Distance-Attributhierarchie")  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
-[Angeben von Attributbeziehungen zwischen Attributen in einer benutzerdefinierten Hierarchie](../analysis-services/4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+[Angeben von Attributbeziehungen zwischen Attributen in einer benutzerdefinierten Hierarchie](../analysis-services/lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
   
   
   

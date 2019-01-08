@@ -18,12 +18,12 @@ ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bc9bb9b663841641c88d61ffce0073de658b334d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9ccc2399f159e3f51753424aa0273d81f428b876
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220941"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811162"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Verwenden der Tabellen inserted und deleted
   DML-Triggeranweisungen verwenden zwei besondere Tabellen: die inserted-Tabelle und die deleted-Tabelle. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt und verwendet diese Tabellen automatisch. Sie können diese temporären, speicherresidenten Tabellen verwenden, um die Auswirkungen bestimmter Datenänderungen zu testen und Bedingungen für DML-Triggeraktionen festzulegen. Das direkte Ändern der Daten in den Tabellen bzw. das Ausführen von Data Definition Language-(DDL-)Vorgängen für die Tabellen, beispielsweise CREATE INDEX, ist nicht möglich.  
@@ -70,7 +70,7 @@ ms.locfileid: "48220941"
   
 -   INSERT-Anweisungen müssen Werte für alle NOT NULL-Spalten angeben, die keine DEFAULT-Einschränkungen aufweisen.  
   
--   Für alle Spalten außer Identitätspalte, eine oder `timestamp` -Spalten sind Werte sind optional, für jede Spalte, die NULL-Werte zulässt, oder alle NOT NULL-Spalte, die eine DEFAULT-Definition verfügt.  
+-   Außer in berechneten Spalten, Identitätsspalten oder `timestamp`-Spalten sind Werte für alle Spalten, die NULL-Werte zulassen, oder für alle NOT NULL-Spalten optional, die eine DEFAULT-Definition aufweisen.  
   
  Wenn eine INSERT-, UPDATE- oder DELETE-Anweisung auf eine Sicht verweist, die einen INSTEAD OF-Trigger aufweist, ruft [!INCLUDE[ssDE](../../includes/ssde-md.md)] den Trigger auf, anstatt direkte Aktionen für Tabellen auszuführen. Der Trigger muss anhand der in den inserted- und deleted-Tabellen dargestellten Informationen Anweisungen erstellen, die zum Implementieren der angeforderten Aktion in den Basistabellen erforderlich sind, selbst wenn das Format der für die Sicht erstellten Informationen in den inserted- und deleted-Tabellen nicht mit dem Format der Daten in den Basistabellen identisch ist.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [SQL Server], creating
@@ -15,12 +14,12 @@ ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 88367f2c01be6ba0cf6edaf2760d3f1e8f2c9482
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7f527d9767a6e821d0d4d5527fcad70e37f16e3c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073226"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799112"
 ---
 # <a name="create-a-database"></a>Erstellen einer Datenbank
   In diesem Thema wird beschrieben, wie eine Datenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellt wird.  
@@ -35,7 +34,7 @@ ms.locfileid: "48073226"
   
      [Empfehlungen](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So erstellen Sie eine Datenbank mit:**  
   
@@ -43,7 +42,7 @@ ms.locfileid: "48073226"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -66,7 +65,7 @@ ms.locfileid: "48073226"
   
  Zur Steuerung der Datenträgernutzung einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wird die Berechtigung zum Erstellen von Datenbanken in der Regel auf einige wenige Anmeldekonten beschränkt.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-create-a-database"></a>So erstellen Sie eine Datenbank  
   
@@ -83,7 +82,7 @@ ms.locfileid: "48073226"
     > [!NOTE]  
     >  Die Option **Volltextindizierung verwenden** ist immer aktiviert und wird ausgegraut angezeigt, da ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]alle Benutzerdatenbanken volltextfähig sind.  
   
-6.  Zum Ändern der Standardwerte der Primärdaten- und Transaktionsprotokolldateien klicken Sie im Bereich **Datenbankdateien** auf die entsprechende Zelle und geben den neuen Wert ein. Weitere Informationen finden Sie unter [Hinzufügen von Daten- oder Protokolldateien zu einer Datenbank](add-data-or-log-files-to-a-database.md).  
+6.  Zum Ändern der Standardwerte der Primärdaten- und Transaktionsprotokolldateien klicken Sie im Bereich **Datenbankdateien** auf die entsprechende Zelle und geben den neuen Wert ein. Weitere Informationen finden Sie unter [Hinzufügen von Daten oder Protokolldateien mit einer Datenbank](add-data-or-log-files-to-a-database.md).  
   
 7.  Zum Ändern der Sortierung der Datenbank klicken Sie auf die Seite **Optionen** , und wählen dann eine Sortierung aus der Liste aus.  
   
@@ -136,6 +135,6 @@ GO
  [Datenbankdateien und Dateigruppen](database-files-and-filegroups.md)   
  [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [Hinzufügen von Daten- oder Protokolldateien zu einer Datenbank](add-data-or-log-files-to-a-database.md)  
+ [Add Data or Log Files to a Database](add-data-or-log-files-to-a-database.md)  
   
   

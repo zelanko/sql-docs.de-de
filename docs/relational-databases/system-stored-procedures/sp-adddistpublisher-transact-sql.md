@@ -5,8 +5,7 @@ ms.date: 06/15/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_adddistpublisher
@@ -17,12 +16,12 @@ ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b8233a5ba3d4610e43dc2c9fb47ba9107ffad268
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 171618db612b77de63feb2a7e53b248a6ac847b0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716988"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206569"
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -56,9 +55,9 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
  Ist der Name der Verteilungsdatenbank. *Distributor_db* ist **Sysname**, hat keinen Standardwert. Dieser Parameter wird von Replikations-Agents zum Herstellen einer Verbindung zum Verleger verwendet.  
   
  [  **@security_mode=**] *Security_mode*  
- Der implementierte Sicherheitsmodus. Dieser Parameter wird nur von Replikations-Agents verwendet, um eine Verbindung mit dem Verleger für Abonnements mit verzögertem Update oder mit einem Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger herzustellen. *Security_mode* ist **Int**, und kann einen der folgenden Werte sein.  
+ Der implementierte Sicherheitsmodus. Dieser Parameter wird nur von Replikations-Agents verwendet, für die Verbindung mit dem Verleger für Abonnements mit verzögertem Aktualisieren oder mit einer nicht - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Security_mode* ist **Int**, und kann einen der folgenden Werte sein.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**0**|Replikations-Agents auf dem Verteiler verwenden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung zum Herstellen einer Verbindung mit dem Verleger.|  
 |**1** (Standard)|Replikations-Agents auf dem Verteiler verwenden die Windows-Authentifizierung beim Herstellen einer Verbindung zum Verleger.|  
@@ -91,7 +90,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
  [  **@thirdparty_flag =**] *Thirdparty_flag*  
  Gibt an, ob der Verleger ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger ist. *Thirdparty_flag* ist **Bit**, und kann einen der folgenden Werte.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**0** (Standardwert)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
 |**1**|Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
@@ -99,7 +98,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
  [ **@publisher_type**=] **"***Publisher_type***"**  
  Gibt den Verlegertyp an, wann der Verleger kein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger ist. *Publisher_type* ist vom Datentyp Sysname und kann einen der folgenden Werte sein.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**<br /><br /> (Standard)|Gibt einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger an.|  
 |**ORACLE**|Gibt einen standardmäßigen Oracle-Verleger an.|  

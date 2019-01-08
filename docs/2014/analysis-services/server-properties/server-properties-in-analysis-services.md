@@ -19,15 +19,15 @@ ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c531faf5576c8d213026d7d200313b5f59464b3e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0a2f99dc4ba728fb97eac0ced00624fc8c8831e6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201854"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369732"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>Konfigurieren von Servereigenschaften in Analysis Services
-  Ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Administrator kann die standardmäßigen Serverkonfigurationseigenschaften für eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanz ändern. Jede Instanz verfügt über eigene Konfigurationseigenschaften, die unabhängig von anderen Instanzen auf demselben Server festgelegt werden können.  
+  Ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Administrator kann die standardmäßigen Serverkonfigurationseigenschaften für eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz ändern. Jede Instanz verfügt über eigene Konfigurationseigenschaften, die unabhängig von anderen Instanzen auf demselben Server festgelegt werden können.  
   
  Zum Festlegen der Servereigenschaften können Sie SQL Server Management Studio verwenden oder die Datei msmdsrv.ini einer bestimmten Instanz bearbeiten.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48201854"
  Die Eigenschaftenseiten in SQL Server Management Studio enthalten eine Teilmenge der verfügbaren Eigenschaften. Es werden nur die Eigenschaften angezeigt, die mit größerer Wahrscheinlichkeit geändert werden. Den vollständigen Eigenschaftensatz finden Sie in der Datei msmdsrv.ini.  
   
 > [!NOTE]  
->  In diesem Thema werden die Bereitstellungskonfigurationseigenschaften in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] nicht dokumentiert. Weitere Informationen zur Bereitstellungskonfiguration finden Sie unter [angeben der Konfigurationseinstellungen für die Lösungsbereitstellung](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).  
+>  In diesem Thema werden die Bereitstellungskonfigurationseigenschaften in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]nicht dokumentiert. Weitere Informationen zur Bereitstellungskonfiguration finden Sie unter [angeben der Konfigurationseinstellungen für die Lösungsbereitstellung](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).  
   
 #### <a name="view-or-set-configuration-properties-in-management-studio"></a>Anzeigen oder Festlegen von Konfigurationseigenschaften in Management Studio  
   
@@ -51,11 +51,11 @@ ms.locfileid: "48201854"
   
 2.  Aktivieren Sie zum Anzeigen weiterer Eigenschaften unten auf der Seite das Kontrollkästchen **Erweiterte (alle) Eigenschaften anzeigen** .  
   
-     Das Ändern von Servereigenschaften wird nur für Server im tabellarischen Modus und mehrdimensionalen Modus unterstützt. Wenn Sie [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installiert haben, verwenden Sie immer die Standardwerte, es sei Sie denn, Sie werden von einem Techniker des Microsoft-Produktsupports aufgefordert, andere Werte festzulegen.  
+     Das Ändern von Servereigenschaften wird nur für Server im tabellarischen Modus und mehrdimensionalen Modus unterstützt. Wenn Sie [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]installiert haben, verwenden Sie immer die Standardwerte, es sei Sie denn, Sie werden von einem Techniker des Microsoft-Produktsupports aufgefordert, andere Werte festzulegen.  
   
-     Anweisungen zum Behandeln von Funktions- oder Leistungsproblemen mithilfe von Servereigenschaften finden Sie im [SQL Server 2008 R2 Analysis Services-Vorgangshandbuch](http://go.microsoft.com/fwlink/?LinkID=225539).  
+     Anweisungen zum Behandeln von Funktions- oder Leistungsproblemen mithilfe von Servereigenschaften finden Sie im [SQL Server 2008 R2 Analysis Services-Vorgangshandbuch](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
-     Informationen zu Servereigenschaften (die in den letzten Versionen größtenteils unverändert geblieben sind) finden Sie auch im Microsoft-Whitepaper [SQL Server 2005 Analysis Services (SSAS) Server Properties](http://go.microsoft.com/fwlink/?LinkID=199102)(SQL Server 2005 Analysis Services-Servereigenschaften (SSAS)).  
+     Informationen zu Servereigenschaften (die in den letzten Versionen größtenteils unverändert geblieben sind) finden Sie auch im Microsoft-Whitepaper [SQL Server 2005 Analysis Services (SSAS) Server Properties](https://go.microsoft.com/fwlink/?LinkID=199102)(SQL Server 2005 Analysis Services-Servereigenschaften (SSAS)).  
   
     > [!NOTE]  
     >  Einige Eigenschaften können nur in der Datei msmdsrv.ini festgelegt werden. Wenn die gewünschte Eigenschaft auch nach dem Einblenden der erweiterten Eigenschaften nicht angezeigt wird, müssen Sie ggf. die Datei msmdsrv.ini direkt bearbeiten.  
@@ -76,7 +76,7 @@ ms.locfileid: "48201854"
 ##  <a name="bkmk_ref"></a> Referenz zu Servereigenschaften  
  Die Konfigurationseigenschaften von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] spielen bei der Optimierung des Systems eine wichtige Rolle. Wenn Sie z. B. das Verhalten des Abfrageprotokolls an Ihre Anforderungen anpassen möchten, können Sie entsprechende Eigenschaften festlegen.  
   
- Die folgenden Themen erläutern die verschiedenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Konfigurationseigenschaften:  
+ In den folgenden Themen werden die verschiedenen Konfigurationseigenschaften von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erläutert:  
   
 |Thema|Description|  
 |-----------|-----------------|  

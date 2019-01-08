@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 406b6b6602cb39fc7d4c979d68421e8122220442
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a808c1ece5e7fdecceadd22f881040466c38a9e9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653594"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210487"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>Senden von Daten an eine FILESTREAM-Spalte mithilfe von IRowsetFastUpload (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47653594"
   
  Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
- Der Server muss ein Verzeichnis mit dem Namen C:\DBFsa aufweisen; dort erstellt das Beispiel die Datenbank. Die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] muss Schreibzugriff auf diesen Speicherort haben (melden Sie sich z. B. als lokales Systemkonto an).  
+ Der Server muss ein Verzeichnis mit dem Namen C:\DBFsa aufweisen; dort erstellt das Beispiel die Datenbank. Die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] muss Schreibzugriff auf diesen Speicherort haben (melden Sie sich z. B. als lokales Systemkonto an).  
   
  Kopieren Sie das erste Codelisting, und fügen Sie es in eine Datei mit dem Namen ISSHelper.h ein.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "47653594"
   
  Wenn Sie dieses Beispiel ausführen, müssen Sie den Namen eines Servers oder Server\Instanzname sowie einen Wert zwischen 4 MB (0x400001) und 4 GB (0xFFFFFFFF) übergeben, der die Menge der zu schreibenden Daten angibt.  
   
- Das vierte Codelisting ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) löscht die in diesem Beispiel erstellte Datenbank.  
+ Der vierte ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) Codelisting löscht die Datenbank, die von diesem Beispiel erstellten.  
   
 ```  
 // ISSHelper.h: interface for the CISSHelper class.  

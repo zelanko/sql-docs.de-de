@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - data collector [SQL Server], management data warehouse
@@ -14,12 +14,12 @@ ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 26f75c135fdc0dcbcc5534a019ff6658d7c9e88e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26af58e208527d155b5ddf3506be4509627c1f7e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089310"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778452"
 ---
 # <a name="management-data-warehouse"></a>Verwaltungs-Data Warehouse
   Das Verwaltungs-Data Warehouse ist eine relationale Datenbank, die alle Daten enthält, die von einem Server gesammelt werden, der das Datensammlungsziel ist. Diese Daten werden dazu verwendet, die Berichte für die Systemdaten-Sammlungssätze zu generieren. Sie können auch für benutzerdefinierte Berichte verwendet werden.  

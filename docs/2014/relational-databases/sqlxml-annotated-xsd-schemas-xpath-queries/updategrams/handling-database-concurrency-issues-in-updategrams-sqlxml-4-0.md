@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - <before> block
@@ -22,12 +20,12 @@ ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d92e86b5e548d5a828a9d20c00c69dd600f1c632
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 639071b9526c70477fd081bd94d61380a79beb2d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127500"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797012"
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>Behandlungsdatenbankparallelität gibt in Updategrams (SQLXML 4.0) heraus
   Wie andere Datenbankupdatemechanismen müssen Updategrams gleichzeitige Updates von Daten in einer Mehrbenutzerumgebung verarbeiten können. Updategrams verwenden die Steuerung durch vollständige Parallelität, bei der ausgewählte Felddaten als Momentaufnahmen verglichen werden, um sicherzustellen, dass die zu aktualisierenden Daten seit ihrem letzten Abruf aus der Datenbank nicht von einer anderen Benutzeranwendung geändert wurden. Updategrams schließen diese momentaufnahmewerte in den  **\<vor >** -Block der Updategrams. Vor dem Aktualisieren der Datenbank, überprüft das Updategram die Werte, die im angegebenen die  **\<vor >** Block für den aktuellen Werten in der Datenbank, um sicherzustellen, dass das Update gültig ist.  

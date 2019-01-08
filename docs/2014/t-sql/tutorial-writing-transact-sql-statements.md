@@ -1,10 +1,10 @@
 ---
-title: 'Tutorial: Schreiben von Transact-SQL-Anweisungen | Microsoft-Dokumentation'
+title: 'Lernprogramm: Schreiben von Transact-SQL-Anweisungen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: t-sql
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL statements, tutorials
@@ -14,12 +14,12 @@ ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 9add0b2c75b00a5cf10a1da28c8dd9e30560f716
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67e09713fdec72313bde6ba81e1cc169467fda0c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061467"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807582"
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>Lernprogramm: Schreiben von Transact-SQL-Anweisungen
   Willkommen beim Lernprogramm zum Schreiben von [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen. Dieses Lernprogramm richtet sich an Benutzer, die noch keine Erfahrung mit dem Schreiben von SQL-Anweisungen haben. Neuen Benutzern wird der Einstieg erleichtert, indem einige einfache Anweisungen zum Erstellen von Tabellen und Einfügen von Daten behandelt werden. In diesem Lernprogramm wird [!INCLUDE[tsql](../includes/tsql-md.md)]- die Implementierung des SQL-Standards durch [!INCLUDE[msCoName](../includes/msconame-md.md)] - verwendet. Dieses Lernprogramm ist als kurze Einführung in die [!INCLUDE[tsql](../includes/tsql-md.md)] -Sprache und nicht als Ersatz für eine [!INCLUDE[tsql](../includes/tsql-md.md)] -Schulung gedacht. Die Anweisungen in diesem Lernprogramm wurden absichtlich einfach gestaltet und geben nicht die Komplexität einer typischen Produktionsdatenbank wieder.  
@@ -35,13 +35,13 @@ ms.locfileid: "48061467"
   
  Dieses Lernprogramm ist in drei Lektionen aufgeteilt:  
   
- [Lesson 1: Creating Database Objects (Lektion 1: Erstellen von Datenbankobjekten)](lesson-1-creating-database-objects.md)  
+ [Lektion 1: Erstellen von Datenbankobjekten](lesson-1-creating-database-objects.md)  
  In dieser Lektion erstellen Sie eine Datenbank und eine Tabelle in der Datenbank, fügen Daten in die Tabelle ein und aktualisieren und lesen die Daten.  
   
- [Lesson 2: Configuring Permissions on Database Objects (Lektion 2: Konfigurieren von Berechtigungen für Datenbankobjekte)](lesson-2-configuring-permissions-on-database-objects.md)  
+ [Lektion 2: Konfigurieren von Berechtigungen für Datenbankobjekte](lesson-2-configuring-permissions-on-database-objects.md)  
  In dieser Lektion erstellen Sie einen Anmeldenamen und einen Benutzer. Sie erstellen auch eine Sicht und eine gespeicherte Prozedur und erteilen dann dem Benutzer eine Berechtigung für die gespeicherte Prozedur.  
   
- [Lesson 3: Deleting Database Objects (Lektion 3: Löschen von Datenbankobjekten)](lesson-3-1-deleting-database-objects.md)  
+ [Lektion 3: Löschen von Datenbankobjekten](lesson-3-1-deleting-database-objects.md)  
  In dieser Lektion entfernen Sie den Zugriff auf Daten, löschen Daten aus einer Tabelle und löschen die Tabelle und anschließend die Datenbank.  
   
 ## <a name="requirements"></a>Anforderungen  

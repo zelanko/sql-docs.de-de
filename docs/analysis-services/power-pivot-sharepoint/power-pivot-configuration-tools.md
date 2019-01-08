@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ab3e6eb8839b87f1145501cd0b30895bf181ec60
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: e2d15054f3d6ebbcd25627df42aab5b9248db1f6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984472"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207499"
 ---
 # <a name="power-pivot-configuration-tools"></a>PowerPivot-Konfigurationstools
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "38984472"
   
 -   Sie müssen Serveradministrator für die Analysis Services-Instanz sein (nur SharePoint 2010).  
   
--   Sie müssen db_owner für die Konfigurationsdatenbank der Farm sein.  
+-   Sie müssen Db_owner für die Konfigurationsdatenbank der Farm sein.  
   
 -   Für die Verwendung der Konfigurationstools bestehen keine TCP/IP-Portanforderungen. Deshalb besteht keine Notwendigkeit, die Firewall in Anpassung an die Konfigurationstools zu konfigurieren. Vom Konfigurationstool wird vorausgesetzt, dass die Webanwendungen und freigegebenen Dienste als Teil der SharePoint-Plattform verfügbar sind. Möglicherweise müssen Sie die Firewall für den [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server konfigurieren. Weitere Informationen finden Sie unter [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
@@ -54,7 +54,7 @@ ms.locfileid: "38984472"
 |Name|Unterstützte SharePoint-Versionen|Konfigurationsdetails|  
 |----------|-------------------------------------|----------------------------|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Konfiguration von Power Pivot für SharePoint 2013|SharePoint 2013|[Konfigurieren oder Reparieren von Power Pivot für SharePoint 2013 &#40;Power Pivot-Konfigurationstool&#41;](../../analysis-services/power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)|  
-|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Konfigurationstool|SharePoint 2010 mit SharePoint 2010|[Konfigurieren oder Reparieren von PowerPivot für SharePoint 2010 (PowerPivot-Konfigurationstool)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)|  
+|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Konfigurationstool|SharePoint 2010 mit SharePoint 2010|[Konfigurieren oder Reparieren von Power Pivot für SharePoint 2010 (Power Pivot-Konfigurationstool)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)|  
   
 ###  <a name="bkmk_sum_differences_betweentools"></a> Unterschiede zwischen den beiden Konfigurationstools  
  Die beiden Versionen des Konfigurationstools sind ähnlich, unterscheiden sich jedoch hinsichtlich der ausgeführten Konfigurationsschritte. Die Unterschiede resultieren aus den Änderungen zwischen SharePoint 2010 und SharePoint 2013 sowie den Architekturunterschieden zwischen der SQL Server 2012 SP1-Version von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint und den Vorgängerversionen von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint.  
@@ -83,9 +83,9 @@ ms.locfileid: "38984472"
   
 -   [PowerShell-Referenz für PowerPivot für SharePoint](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
   
-> [!NOTE]  
+> [!NOTE]
 >  Das Tool konfiguriert nicht Reporting Services. Wenn Sie der SharePoint-Umgebung Reporting Services hinzufügen, müssen Sie Reporting Services separat installieren und konfigurieren. Weitere Informationen finden Sie unter den folgenden Links:  
->   
+> 
 >  -   [Installieren des ersten Berichtsservers im SharePoint-Modus](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md)  
 > -   [Installieren des SharePoint-Modus von Reporting Services für SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c).  
   
@@ -103,7 +103,7 @@ ms.locfileid: "38984472"
   
      ![zwei powerpivot-konfigurationstools](../../analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif "two powerpivot configuration tools")  
   
-     **Hinweis:** Die Tools sind nur verfügbar, wenn [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] auf dem lokalen Server installiert ist.  
+     **Hinweis**: Die Tools sind nur verfügbar, wenn [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] auf dem lokalen Server installiert ist.  
   
 2.  Beim Start überprüfen die Konfigurationstools den Status der Installation und stellen Aufgaben bereit, die für die jeweilige Installation gelten.  
   

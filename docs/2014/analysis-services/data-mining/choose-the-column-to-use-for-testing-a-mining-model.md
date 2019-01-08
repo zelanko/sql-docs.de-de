@@ -15,25 +15,25 @@ ms.assetid: c6a8f23a-da21-4f31-9521-99460d624649
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8f8fcbac925be2910cba7110b96cc33b80a4092e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 340080271318073983b29abebeab85122993b489
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120830"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540253"
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>Auswählen der zum Testen eines Miningmodells zu verwendenden Spalte
   Bevor Sie die Genauigkeit eines Miningmodells messen können, müssen Sie sich entscheiden, welches Ergebnis Sie bewerten möchten. Bei den meisten Data Mining-Modellen müssen Sie mindestens eine Spalte auswählen, die als vorhersagbares Attribut verwendet werden soll, wenn Sie das Modell erstellen. Wenn Sie die Genauigkeit des Modells testen, müssen Sie daher im Allgemeinen dieses Attribut zum Testen auswählen.  
   
  In der folgenden Liste werden einige weitere Überlegungen zum Auswählen des vorhersagbaren Attributs, das in Tests verwendet werden soll, beschrieben:  
   
--   Einige Data Mining-Modelle können mehrere Attribute vorhersagen – beispielsweise neuronale Netzwerke, die die Beziehungen zwischen vielen Attributen untersuchen können.  
+-   Einige Typen von Datamining-Modelle können mehrere Attribute wie z. B. neuronale Netzwerke Vorhersagen, die die Beziehungen zwischen vielen Attributen untersuchen können.  
   
--   Andere Typen von Miningmodellen – beispielsweise Clustermodelle – verfügen nicht immer über ein vorhersagbares Attribut. Clustermodelle können nicht getestet werden, außer wenn sie über ein vorhersagbares Attribut verfügen.  
+-   Andere Arten von Mining-Modellen wie z. B. clustering-Modelle – führen Sie verfügen nicht unbedingt ein vorhersagbares Attribut. Clustermodelle können nicht getestet werden, außer wenn sie über ein vorhersagbares Attribut verfügen.  
   
 -   Sie müssen als Ergebnis ein kontinuierliches vorhersagbares Attribut auswählen, um ein Punktdiagramm zu erstellen oder die Genauigkeit eines Regressionsmodells zu messen. In diesem Fall können Sie keinen Zielwert angeben. Wenn Sie etwas anderes als ein Punktdiagramm erstellen, muss die zugrunde liegende Miningstrukturspalte auch einen Inhaltstyp von **Diskret** oder **Diskretisiert**haben.  
   
--   Wenn Sie ein diskretes Attribut als vorhersagbares Ergebnis auswählen, können Sie auch einen Zielwert angeben, oder Sie können das Feld **Wert vorhersagen** leer lassen. Wenn Sie **Wert vorhersagen**einschließen, wird vom Diagramm nur die Effektivität des Modells bei der Vorhersage des Zielwerts gemessen. Wenn Sie kein Zielergebnis angeben, wird das Modell in Bezug auf seine Genauigkeit gemessen, alle Ergebnisse vorherzusagen.  
+-   Wenn Sie ein diskretes Attribut als vorhersagbares Ergebnis auswählen, können Sie auch einen Zielwert angeben, oder Sie können das Feld **Wert vorhersagen** leer lassen. Wenn Sie enthalten eine **Wert Vorhersagen**, vom Diagramm nur die Effektivität des Modells zur Vorhersage des Zielwerts gemessen. Wenn Sie kein Zielergebnis angeben, wird das Modell in Bezug auf seine Genauigkeit gemessen, alle Ergebnisse vorherzusagen.  
   
 -   Wenn Sie mehrere Modelle einschließen und sie in einem einzelnen Genauigkeitsdiagramm vergleichen möchten, müssen alle Modelle die gleiche vorhersagbare Spalte verwenden.  
   

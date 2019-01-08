@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.configdistwizard.subscribers.f1
@@ -15,17 +14,17 @@ ms.assetid: 32aa0347-64e4-4aa4-ac57-6bd3e5d52070
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b48e20c2dd1838ae01447c12d8f65a8929b9d5c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e35b5020eef6b7a884a0490d882c82e2775c8952
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075500"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805782"
 ---
 # <a name="subscriber-properties"></a>Abonnenteneigenschaften
   Das Dialogfeld **Abonnenteneigenschaften** enthält Informationen, die für Abonnenten wichtig sind, auf denen Versionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ausgeführt werden.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Agentverbindung mit dem Abonnenten**  
  Der Kontext, in dem der Verteilungs-Agent und der Merge-Agent die Verbindung vom Verteiler zum Abonnenten herstellen. Dieser gilt nur für Versionen vor [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
@@ -42,6 +41,6 @@ ms.locfileid: "48075500"
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](view-and-modify-distributor-and-publisher-properties.md)   
  [Eigenschaftenreferenz &#40;Replikation&#41;](properties-reference-replication.md)   
- [Subscribe to Publications](subscribe-to-publications.md)  
+ [Abonnieren von Veröffentlichungen](subscribe-to-publications.md)  
   
   

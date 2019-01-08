@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cachetrans.f1
@@ -15,12 +14,12 @@ ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 453680c3659b187ea8cbc242e855796494427593
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec77c14fee07cc393a19f22405678f601613ad94
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088290"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767202"
 ---
 # <a name="cache-transform"></a>Cachetransformation
   Die Transformation für Cachetransformation generiert ein Verweisdataset für die Transformation für Suche, indem Daten aus einer verbundenen Datenquelle im Datenfluss in einen Cacheverbindungs-Manager geschrieben werden. Die Transformation für Suche führt Suchvorgänge aus, indem Daten in Eingabespalten aus einer verbundenen Datenquelle mit Spalten in der Verweisdatenbank verknüpft werden.  
@@ -57,7 +56,7 @@ ms.locfileid: "48088290"
  Weitere Informationen zum Festlegen der Eigenschaften finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](../set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Integration Services-Transformationen](integration-services-transformations.md)   
+ [SQL Server Integration Services-Transformationen](integration-services-transformations.md)   
  [Datenfluss](../data-flow.md)  
   
   

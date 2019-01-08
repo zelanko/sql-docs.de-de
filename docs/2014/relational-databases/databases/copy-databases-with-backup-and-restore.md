@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], back up and restore
@@ -19,12 +18,12 @@ ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b51404c994bd4a5029bc9e2d592db020747492fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a35156a465e521ceea60fa090142836da6a4c1a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057190"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787832"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Kopieren von Datenbanken durch Sichern und Wiederherstellen
   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]können Sie eine neue Datenbank erstellen, indem Sie die Sicherung einer Benutzerdatenbank wiederherstellen, die mithilfe von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder einer höheren Version erstellt wurde. Sicherungen der **master**-, **model** - und **msdb** -Datenbank, die mit einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt wurden, können von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]nicht wiederhergestellt werden. Außerdem können [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Sicherungen nicht mit einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wiederhergestellt werden.  
@@ -33,7 +32,7 @@ ms.locfileid: "48057190"
 >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verwendet im Vergleich zu früheren Versionen einen anderen Standardpfad. Daher muss zur Wiederherstellung von Sicherungen einer Datenbank, die im Standardverzeichnis früherer Versionen erstellt wurden, die MOVE-Option verwendet werden. Informationen zum neuen Standardpfad finden Sie unter [Dateispeicherorte für Standard- und benannte Instanzen von SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). Weitere Informationen zum Verschieben von Datenbankdateien finden Sie weiter unten in diesem Thema unter "Verschieben der Datenbankdateien".  
   
 ## <a name="general-steps-for-using-backup-and-restore-to-copy-a-database"></a>Allgemeine Schritte zum Verwenden der Sicherung und Wiederherstellung zum Kopieren einer Datenbank  
- Wenn Sie durch Sichern und Wiederherstellen eine Datenbank in eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kopieren, kann es sich beim Quell- und Zielcomputer um eine beliebige Plattform handeln, auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.  
+ Wenn Sie durch Sichern und Wiederherstellen eine Datenbank in eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]kopieren, kann es sich beim Quell- und Zielcomputer um eine beliebige Plattform handeln, auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.  
   
  Dies sind die allgemeinen Schritte:  
   
@@ -60,7 +59,7 @@ ms.locfileid: "48057190"
   
     -   Wenn die vorhandene Datei nicht überschrieben werden kann, würde ein Wiederherstellungsfehler auftreten.  
   
- Um Fehler und unbeabsichtigte Folgen, vor dem Wiederherstellungsvorgang, zu vermeiden können Sie anhand der [Backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) Verlaufstabelle die Datenbank und-Protokolldateien in der Sicherung finden Sie wiederherstellen möchten.  
+ Um Fehler und unbeabsichtigte Folgen, vor dem Wiederherstellungsvorgang, zu vermeiden, können Sie anhand der [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) -Verlaufstabelle die Datenbank und die Protokolldateien in der Sicherung ermitteln, die Sie wiederherstellen möchten.  
   
 ## <a name="moving-the-database-files"></a>Verschieben der Datenbankdateien  
  Wenn die Dateien in der Datenbanksicherung aus den oben genannten Gründen nicht auf dem Zielcomputer wiederhergestellt werden können, ist es notwendig, die Dateien während des Wiederherstellens an einen neuen Standort zu verschieben. Zum Beispiel:  

@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c187ed1ede04f8ed140ddbb73d251af304745cf2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b2a01f7c8ffa3616deb0c7f1ebcec1ea94e65dd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705710"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535190"
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "47705710"
   
  Ordnen Sie die dynamischen Verwaltungssichten Sys. dm_exec_connections, Sys. dm_exec_sessions und Sys. dm_exec_requests der [sys.sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) -Systemtabelle.  
   
-> **Hinweis:** aus rufe [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_exec_sessions**.  
+> **HINWEIS:** Aufrufen von [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_exec_sessions**.  
   
 |Spaltenname|Datentyp|Beschreibung und versionsspezifische Informationen|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Identifiziert die einer aktiven primären Verbindung zugeordnete Sitzung. Lässt keine NULL-Werte zu.|  
 |login_time|**datetime**|Uhrzeit, zu der die Sitzung eingerichtet wurde. Lässt keine NULL-Werte zu.|  
-|host_name|**nvarchar(128)**|Name der für eine Sitzung spezifischen Clientarbeitsstation. Der Wert ist für interne Sitzungen NULL. Lässt NULL-Werte zu.<br /><br /> **Sicherheitshinweis:** die Clientanwendung stellt den Namen der Arbeitsstation und kann fehlerhafte Daten angeben. Verwenden Sie HOST_NAME nicht als Sicherheitsfunktion.|  
+|host_name|**nvarchar(128)**|Name der für eine Sitzung spezifischen Clientarbeitsstation. Der Wert ist für interne Sitzungen NULL. Lässt NULL-Werte zu.<br /><br /> **Sicherheitshinweis:** Die Clientanwendung stellt den Namen der Arbeitsstation bereit, und sie kann fehlerhafte Daten angeben. Verwenden Sie HOST_NAME nicht als Sicherheitsfunktion.|  
 |program_name|**nvarchar(128)**|Name des Clientprogramms, mit dem die Sitzung initiiert wurde. Der Wert ist für interne Sitzungen NULL. Lässt NULL-Werte zu.|  
 |host_process_id|**int**|Prozess-ID des Clientprogramms, mit dem die Sitzung initiiert wurde. Der Wert ist für interne Sitzungen NULL. Lässt NULL-Werte zu.|  
 |client_version|**int**|Die vom Client für die Verbindung mit dem Server verwendete TDS-Protokollversion der Schnittstelle. Der Wert ist für interne Sitzungen NULL. Lässt NULL-Werte zu.|  
@@ -64,7 +64,7 @@ ms.locfileid: "47705710"
 |logical_reads|**bigint**|Anzahl von logischen Lesevorgängen in der Sitzung. Lässt keine NULL-Werte zu.|  
 |is_user_process|**bit**|0, wenn es sich um eine Systemsitzung handelt. Andernfalls ist der Wert 1. Lässt keine NULL-Werte zu.|  
 |text_size|**int**|TEXTSIZE-Einstellung für die Sitzung. Lässt keine NULL-Werte zu.|  
-|Sprache|**nvarchar(128)**|LANGUAGE-Einstellung für die Sitzung. Lässt NULL-Werte zu.|  
+|language|**nvarchar(128)**|LANGUAGE-Einstellung für die Sitzung. Lässt NULL-Werte zu.|  
 |date_format|**nvarchar(3)**|DATEFORMAT-Einstellung für die Sitzung. Lässt NULL-Werte zu.|  
 |date_first|**smallint**|DATEFIRST-Einstellung für die Sitzung. Lässt keine NULL-Werte zu.|  
 |quoted_identifier|**bit**|QUOTED_IDENTIFIER-Einstellung für die Sitzung. Lässt keine NULL-Werte zu.|  

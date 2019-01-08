@@ -11,19 +11,19 @@ ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01f03e9e8149fe0d3b1b9599ff0ec94613efcba4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 011ca5ed5066113a467082e0fe05c6d0f831f25b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169230"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363462"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>Konfigurieren von Berichterstellungseigenschaften für Power View-Berichte
   In dieser ergänzenden Lektion legen Sie Berichterstellungseigenschaften für das Projekt Adventure Works Internet Sales Model fest. Berichterstellungseigenschaften erleichtern Endbenutzern das Auswählen und Anzeigen von Modelldaten in Power View. Zusätzlich legen Sie Eigenschaften fest, um bestimmte Spalten und Tabellen auszublenden und neue Daten zur Verwendung in Diagrammen zu erstellen.  
   
  Nach Abschluss dieser Lektion und der erneuten Bereitstellung des Modells für eine in SharePoint und [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] integrierte [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Instanz können Sie eine Datenquelle erstellen, Informationen zu Datenverbindungen angeben, Power View starten und Berichte anhand des Modells entwerfen.  
   
- In dieser Lektion wird nicht beschrieben, wie Power View-Berichte erstellt und verwendet werden. Diese Lektion bietet Entwicklern tabellarischer Modelle eine Einführung in die Eigenschaften und Einstellungen, mit denen die Darstellung der Modelldaten in Power View beeinflusst wird. Weitere Informationen zum Erstellen von Power View-Berichten finden Sie unter [Tutorial: Erstellen eines Beispielberichts in Power View](http://go.microsoft.com/fwlink/?LinkId=221204).  
+ In dieser Lektion wird nicht beschrieben, wie Power View-Berichte erstellt und verwendet werden. Diese Lektion bietet Entwicklern tabellarischer Modelle eine Einführung in die Eigenschaften und Einstellungen, mit denen die Darstellung der Modelldaten in Power View beeinflusst wird. Weitere Informationen zum Erstellen von Power View-Berichten finden Sie unter [Lernprogramm: Erstellen ein Beispielberichts in Power View](https://go.microsoft.com/fwlink/?LinkId=221204).  
   
  Geschätzte Zeit zum Bearbeiten dieser Lektion: **30 Minuten**  
   
@@ -41,17 +41,17 @@ ms.locfileid: "48169230"
 ## <a name="model-properties-that-affect-reporting"></a>Modelleigenschaften, die sich auf die Berichterstellung auswirken  
  Beim Erstellen eines tabellarischen Modells können bestimmte Eigenschaften für einzelne Spalten und Tabellen festgelegt werden, um die Berichterstellung in Power View für den Endbenutzer zu verbessern. Darüber hinaus können Sie zusätzliche Modelldaten erstellen, um die Datenvisualisierung und weitere Funktionen zu unterstützen, die für den Berichterstellungsclient spezifisch sind. Im Folgenden sind einige Änderungen aufgeführt, die Sie am Beispiel Adventure Works Internet Sales Model vornehmen:  
   
--   **Neue Daten hinzufügen** – Durch das Hinzufügen neuer Daten in einer berechneten Spalte mithilfe einer DAX-Formel werden Datumsinformationen in einem Format erstellt, das in Diagrammen einfacher darzustellen ist.  
+-   **Hinzufügen von neuen Daten** -Hinzufügen von neuen Daten in einer berechneten Spalte mithilfe einer DAX-Formel werden Datumsinformationen in einem Format, das zum Anzeigen in Diagrammen einfacher wird erstellt.  
   
 -   **Tabellen und Spalten ausblenden, die für den Endbenutzer nicht von Nutzen sind** – Die Eigenschaft **Ausgeblendet** steuert, ob Tabellen und Tabellenspalten im Berichterstellungsclient angezeigt werden. Elemente mit dieser Eigenschaft werden zwar ausgeblendet, bleiben jedoch Teil des Modells und sind weiterhin für Abfragen und Berechnungen verfügbar.  
   
--   **One-Click-Tabellen aktivieren** – Wenn ein Endbenutzer auf eine Tabelle in der Feldliste klickt, wird standardmäßig keine Aktion ausgeführt. Um dieses Verhalten zu ändern, legen Sie für jede Spalte, die Sie in die Tabelle aufnehmen möchten, einen Standardfeldsatz fest, damit die Tabelle dem Bericht hinzugefügt wird, wenn darauf geklickt wird. Diese Eigenschaft wird für die Tabellenspalten festgelegt, die Endbenutzer am wahrscheinlichsten verwenden möchten.  
+-   **Aktivieren Sie ein-Klick Tabellen** -standardmäßig keine Aktion ausgeführt wird, wenn ein Endbenutzer eine Tabelle in der Feldliste klickt. Um dieses Verhalten zu ändern, legen Sie für jede Spalte, die Sie in die Tabelle aufnehmen möchten, einen Standardfeldsatz fest, damit die Tabelle dem Bericht hinzugefügt wird, wenn darauf geklickt wird. Diese Eigenschaft wird für die Tabellenspalten festgelegt, die Endbenutzer am wahrscheinlichsten verwenden möchten.  
   
 -   **Gruppierungen festlegen, falls erforderlich** – Die Eigenschaft **Eindeutige Zeilen beibehalten** bestimmt, ob die Werte in der Spalte nach Werten in einem anderen Feld gruppiert werden sollen, z.B. einem Bezeichnerfeld. Für Spalten, die doppelte Werte aufweisen (z.B. wenn die Spalte „Kundenname“ mehrere Kunden mit dem Namen „John Smith“ enthält), sollte unbedingt eine Gruppierung ( **Eindeutige Zeilen beibehalten** ) nach dem Feld Zeilenbezeichner ausgeführt werden, damit Endbenutzern die richtigen Ergebnisse zur Verfügung gestellt werden können.  
   
 -   **Datentypen und Datenformate festlegen** – Power View wendet standardmäßig Regeln auf Grundlage des Spaltendatentyps an, um zu bestimmen, ob das Feld als Measure verwendet werden kann. Da auch jede Datenvisualisierung in Power View über Regeln verfügt, die bestimmen, wo Measures und Nicht-Measures platziert werden können, ist es wichtig, den Datentyp im Modell festzulegen oder den Standardwert zu überschreiben, um das für den Endbenutzer gewünschte Verhalten zu erzielen.  
   
--   **Eigenschaft „Nach Spalte sortieren“ festlegen** – Die Eigenschaft **Nach Spalte sortieren** gibt an, ob die Werte in der Spalte nach Werten in einem anderen Feld sortiert werden sollen. Beispiel: In der Spalte Month Calendar, die den Monatsnamen enthält, soll eine Sortierung nach der Spalte Month Number ausgeführt werden.  
+-   **Legen Sie nach Spalte sortieren** -Eigenschaft: die **nach Sortierspalte** Eigenschaft gibt an, ob die Werte in der Spalte nach Werten in einem anderen Feld sortiert werden sollen. Beispiel: In der Spalte Month Calendar, die den Monatsnamen enthält, soll eine Sortierung nach der Spalte Month Number ausgeführt werden.  
   
 ## <a name="hide-tables-from-client-tools"></a>Ausblenden von Tabellen aus Clienttools  
  Da bereits eine berechnete Spalte Product Category und eine berechnete Spalte Product Subcategory in der Tabelle Product vorhanden sind, ist es nicht notwendig, dass die Tabellen Product Category und Product Subcategory für Clientanwendungen sichtbar sind.  
@@ -137,7 +137,7 @@ ms.locfileid: "48169230"
 7.  Wiederholen Sie diese Schritte für die Tabelle **Product** , wobei Sie die Spalte **Product Id** als Zeilenbezeichner und die Spalte **Product Name** im Listenfeld **Eindeutige Zeilen beibehalten** auswählen. Wählen Sie für **Standardbeschriftung** **Product Alternate Id**aus.  
   
 ## <a name="reporting-properties-for-columns"></a>Berichterstellungseigenschaften für Spalten  
- Für Spalten können eine Reihe grundlegender Spalteneigenschaften und bestimmte Berichterstellungseigenschaften festgelegt werden, mit deren Hilfe sich die Berichterstellung anhand von Modellen verbessern lässt. Es ist u. U. nicht erforderlich, dass Benutzer jede Spalte in jeder Tabelle sehen können. Genauso wie Sie zuvor die Tabellen Product Category und Product Subcategory ausgeblendet haben, können Sie mithilfe der Spalteneigenschaft Ausgeblendet bestimmte Spalten aus einer Tabelle ausblenden, die ansonsten angezeigt wird. Auch andere Eigenschaften, wie Datenformat und Nach Spalte sortieren, können die Darstellung von Spaltendaten in Berichten beeinflussen. Jetzt legen Sie einige Eigenschaften für bestimmten Spalten fest. Für andere Spalten ist keine Aktion erforderlich, daher werden sie unten nicht dargestellt.  
+ Für Spalten können eine Reihe grundlegender Spalteneigenschaften und bestimmte Berichterstellungseigenschaften festgelegt werden, mit deren Hilfe sich die Berichterstellung anhand von Modellen verbessern lässt. Es ist u. U. nicht erforderlich, dass Benutzer jede Spalte in jeder Tabelle sehen können. Ebenso, wie Sie die Tabellen Product Category und Product Subcategory zuvor, mithilfe der Spalteneigenschaft Hidden-Eigenschaft einer Spalte, können Sie bestimmte Spalten aus einer Tabelle ausblenden, die ansonsten angezeigt wird. Auch andere Eigenschaften, wie Datenformat und Nach Spalte sortieren, können die Darstellung von Spaltendaten in Berichten beeinflussen. Jetzt legen Sie einige Eigenschaften für bestimmten Spalten fest. Für andere Spalten ist keine Aktion erforderlich, daher werden sie unten nicht dargestellt.  
   
  Sie legen hier nur einige von zahlreichen Spalteneigenschaften fest. Ausführlichere Informationen zu Berichterstellungseigenschaften für Spalten finden Sie unter [Spalteneigenschaften &#40;SSAS – tabellarisch&#41;](tabular-models/properties-ssas-tabular.md) in der SQL Server-Onlinedokumentation.  
   
@@ -151,19 +151,19 @@ ms.locfileid: "48169230"
   
 4.  Wiederholen Sie diese Schritte, und legen Sie die folgenden Spalten- und Berichterstellungseigenschaften für alle angegebenen Tabellen fest. Verwenden Sie für alle anderen Eigenschaften die Standardeinstellungen.  
   
-     **Customer**  
+     **Kunde**  
   
-    |Spalte|Eigenschaft|value|  
+    |Spalte|Eigenschaft|Wert|  
     |------------|--------------|-----------|  
     |Geography Id|Ausgeblendet|Wahr|  
     |Birth Date|Datenformat|Short Date|  
   
-     **Date**  
+     **Datum**  
   
     > [!NOTE]  
-    >  Da die Tabelle Date mithilfe der Einstellung Als Datumstabelle markieren in "Lektion 7: Markieren als Datumstabelle" als Datumstabelle für das Modell ausgewählt wurde und die Spalte Date in der Tabelle Date als Spalte ausgewählt wurde, die als eindeutiger Bezeichner fungieren soll, wird die Eigenschaft Zeilenbezeichner für die Spalte Date automatisch auf True festgelegt und kann nicht geändert werden. Bei Verwendung von Zeitintelligenzfunktionen in DAX-Formeln müssen Sie eine Datumstabelle angeben. In diesem Modell haben Sie unter Verwendung von Zeitintelligenzfunktionen eine Reihe von Measures zur Berechnung von Umsatzdaten für verschiedene Zeiträume, z. B. das vorherige und aktuelle Quartal, sowie zur Verwendung in KPIs erstellt. Weitere Informationen zum Angeben einer Datumstabelle finden Sie unter [Angeben von „Als Datumstabelle markieren“ zur Verwendung mit Zeitintelligenz &#40;SSAS – tabellarisch&#41;](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) in der SQL Server-Onlinedokumentation.  
+    >  Da die Tabelle „Date“ mithilfe der Einstellung „Als Datumstabelle markieren“ in „Lektion 7: Markieren als Datumstabelle“ als Datumstabelle für das Modell ausgewählt wurde und die Spalte „Date“ in der Tabelle „Date“ als Spalte ausgewählt wurde, die als eindeutiger Bezeichner fungieren soll, wird die Eigenschaft „Zeilenbezeichner“ für die Spalte „Date“ automatisch auf „True“ festgelegt und kann nicht geändert werden. Bei Verwendung von Zeitintelligenzfunktionen in DAX-Formeln müssen Sie eine Datumstabelle angeben. In diesem Modell haben Sie unter Verwendung von Zeitintelligenzfunktionen eine Reihe von Measures zur Berechnung von Umsatzdaten für verschiedene Zeiträume, z. B. das vorherige und aktuelle Quartal, sowie zur Verwendung in KPIs erstellt. Weitere Informationen zum Angeben einer Datumstabelle finden Sie unter [Angeben von „Als Datumstabelle markieren“ zur Verwendung mit Zeitintelligenz &#40;SSAS – tabellarisch&#41;](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) in der SQL Server-Onlinedokumentation.  
   
-    |Spalte|Eigenschaft|value|  
+    |Spalte|Eigenschaft|Wert|  
     |------------|--------------|-----------|  
     |date|Datenformat|Short Date|  
     |Day Number of Week|Ausgeblendet|Wahr|  
@@ -180,14 +180,14 @@ ms.locfileid: "48169230"
   
      **Geography**  
   
-    |Spalte|Eigenschaft|value|  
+    |Spalte|Eigenschaft|Wert|  
     |------------|--------------|-----------|  
     |Geography Id|Ausgeblendet|Wahr|  
     |Sales Territory Id|Ausgeblendet|Wahr|  
   
      **Product**  
   
-    |Spalte|Eigenschaft|value|  
+    |Spalte|Eigenschaft|Wert|  
     |------------|--------------|-----------|  
     |Product Id|Ausgeblendet|Wahr|  
     |Product Alternate Id|Standardbeschriftung|Wahr|  
@@ -196,9 +196,9 @@ ms.locfileid: "48169230"
     |Product End Date|Datenformat|Short Date|  
     |Large Photo|Ausgeblendet|Wahr|  
   
-     **Internet Sales**  
+     **Internetumsätze**  
   
-    |Spalte|Eigenschaft|value|  
+    |Spalte|Eigenschaft|Wert|  
     |------------|--------------|-----------|  
     |Product Id|Ausgeblendet|Wahr|  
     |Customer Id|Ausgeblendet|Wahr|  
@@ -211,7 +211,7 @@ ms.locfileid: "48169230"
     |Ship Date|Datentyp|Short Date|  
   
 ## <a name="redeploy-the-adventure-works-internet-sales-tabular-model"></a>Erneutes Bereitstellen des tabellarischen Modells "Adventure Works Internet Sales"  
- Da Sie das Modell geändert haben, müssen Sie es erneut bereitstellen. Sie wiederholen im Wesentlichen die in [Lektion 14: Bereitstellen](lesson-13-deploy.md) ausgeführten Aufgaben.  
+ Da Sie das Modell geändert haben, müssen Sie es erneut bereitstellen. Sie wiederholen im Wesentlichen die Aufgaben, die in [Lektion 14: Bereitstellen von](lesson-13-deploy.md).  
   
 #### <a name="to-redeploy-the-adventure-works-internet-sales-tabular-model"></a>So stellen Sie das tabellarische Modell "Adventure Works Internet Sales" erneut bereit  
   
@@ -222,6 +222,6 @@ ms.locfileid: "48169230"
 ## <a name="next-steps"></a>Nächste Schritte  
  Jetzt können Sie Daten aus dem Modell mithilfe von Power View visuell darstellen. Vergewissern Sie sich, dass das Analysis Services-Konto und Reporting Services-Konto auf der SharePoint-Website über Leseberechtigungen für die Analysis Services-Instanz verfügen, in der Sie das Modell bereitgestellt haben.  
   
- Informationen zum Erstellen einer Reporting Services-Berichtsdatenquelle, die auf das Modell verweist, finden Sie unter [Tabellenmodell-Verbindungstyp (SSRS)](http://msdn.microsoft.com/library/hh270317%28v=SQL.110%29.aspx).  
+ Informationen zum Erstellen einer Reporting Services-Berichtsdatenquelle, die auf das Modell verweist, finden Sie unter [Tabellenmodell-Verbindungstyp (SSRS)](https://msdn.microsoft.com/library/hh270317%28v=SQL.110%29.aspx).  
   
   

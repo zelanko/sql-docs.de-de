@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], permissions
@@ -17,12 +16,12 @@ ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: acb8ea24effbb07d5ecad1f7efec491acb6fb55d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2f0bac42ce0fb2ae814b48cd21e0cffb84128b1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103252"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812102"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Blattberechtigungen (Master Data Services)
   Blattberechtigungen gelten für die Attributwerte aller Blattelemente einer Entität.  

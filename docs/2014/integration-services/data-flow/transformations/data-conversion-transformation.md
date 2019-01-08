@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataconversiontrans.f1
@@ -17,12 +16,12 @@ ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 29a88369b1764a9cd4d11cc476affbebca79dabb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 344b9a24e78960b9eb9f4fece56924b2eb941c0f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073490"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358592"
 ---
 # <a name="data-conversion-transformation"></a>Transformation für Datenkonvertierung
   Die Transformation für Datenkonvertierung konvertiert die Daten in einer Eingabespalte in einen anderen Datentyp und kopiert sie dann in eine neue Ausgabespalte. Beispielsweise kann ein Paket Daten aus mehreren Quellen extrahieren und anschließend mithilfe dieser Transformation Spalten in den für den Zieldatenspeicher erforderlichen Datentyp konvertieren. Für eine einzelne Eingabespalte können mehrere Konvertierungen ausgeführt werden.  
@@ -49,10 +48,10 @@ ms.locfileid: "48073490"
  Eigenschaften können Sie mit dem [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen. Weitere Informationen zum Verwenden der Transformation für Datenkonvertierung im SSIS-Designer finden Sie unter [Konvertieren von Daten in einen anderen Datentyp mithilfe der Transformation für Datenkonvertierung](data-conversion-transformation.md) und [Transformations-Editor für Datenkonvertierung](../../data-conversion-transformation-editor.md). Weitere Informationen zum programmgesteuerten Festlegen der Eigenschaften dieser Transformation finden Sie unter [Allgemeine Eigenschaften](../../common-properties.md) und [Benutzerdefinierte Eigenschaften von Transformationen](transformation-custom-properties.md).  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- Blogeintrag, [Performance Comparison between Data Type Conversion Techniques in SSIS 2008](http://go.microsoft.com/fwlink/?LinkId=220823), auf blogs.msdn.com.  
+ Blogeintrag, [Leistungsvergleich zwischen Datentypkonvertierungstechniken in SSIS 2008](https://go.microsoft.com/fwlink/?LinkId=220823), auf blogs.msdn.com.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Die schnelle Analyse](../../fast-parse.md)   
+ [Schnelle Analyse](../../fast-parse.md)   
  [Datenfluss](../data-flow.md)   
  [SQL Server Integration Services-Transformationen](integration-services-transformations.md)  
   

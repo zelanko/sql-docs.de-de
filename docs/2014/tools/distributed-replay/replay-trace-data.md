@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e8897a78bc28aa549eb51f53b56e983e7cdec81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: efb54bb64481dc29c50976cb58df813bad411f9c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134630"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819352"
 ---
 # <a name="replay-trace-data"></a>Wiedergeben von Ablaufverfolgungsdaten
   Wenn Sie die Eingabedaten der Ablaufverfolgung vorbereitet haben, können Sie eine verteilte Wiedergabe mit der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay-Funktion starten. Weitere Informationen finden Sie unter [Vorbereiten der Eingabedaten für die Ablaufverfolgung](prepare-the-input-trace-data.md).  
@@ -31,7 +31,7 @@ ms.locfileid: "48134630"
   
 ### <a name="to-replay-the-trace"></a>So geben Sie die Ablaufverfolgung wieder  
   
-1.  **(Optional) Ändern Sie die Konfigurationseinstellungen für die Wiedergabe:** Wenn Sie die Konfigurationseinstellungen für die Wiedergabe ändern möchten, z.B. den Sequenzierungsmodus und verschiedene Skalierungswerte, müssen Sie das `<ReplayOptions>` -Element der XML-basierten Wiedergabekonfigurationsdatei `DReplay.exe.replay.config`ändern. Sie können auch das `<OutputOptions>` -Element ändern, um die Ausgabeeinstellungen anzugeben, z. B. ob die Zeilenanzahl aufgezeichnet werden soll. Wenn Sie die Wiedergabekonfigurationsdatei ändern, empfiehlt es sich, statt des Originals eine Kopie zu ändern. Zum Ändern der Einstellungen führen Sie folgende Schritte aus:  
+1.  **(Optional) Ändern der Konfigurationseinstellungen für die Wiedergabe**: Ggf. so ändern Sie die Replay-Konfigurationseinstellungen, z. B. den sequenzierungsmodus und verschiedene Skalierungswerte, müssen Sie ändern die `<ReplayOptions>` Element des XML-basierten wiedergabekonfigurationsdatei `DReplay.exe.replay.config`. Sie können auch das `<OutputOptions>` -Element ändern, um die Ausgabeeinstellungen anzugeben, z. B. ob die Zeilenanzahl aufgezeichnet werden soll. Wenn Sie die Wiedergabekonfigurationsdatei ändern, empfiehlt es sich, statt des Originals eine Kopie zu ändern. Zum Ändern der Einstellungen führen Sie folgende Schritte aus:  
   
     1.  Erstellen Sie eine Kopie der Standardkonfigurationsdatei für die Wiedergabe, `DReplay.exe.replay.config`, und benennen Sie die neue Datei um. Die Standardkonfigurationsdatei für die Wiedergabe befindet sich im Installationsordner des Verwaltungstools.  
   
@@ -41,9 +41,9 @@ ms.locfileid: "48134630"
   
      Weitere Informationen zur Konfigurationsdatei für die Wiedergabe finden Sie unter [Konfigurieren von Distributed Replay](configure-distributed-replay.md).  
   
-2.  **Initiieren Sie die Ereigniswiedergabephase:** Zum Starten der verteilten Wiedergabe müssen Sie das Verwaltungstool mit der Option **Wiedergabe** ausführen. Weitere Informationen finden Sie unter [Option Wiedergabe &#40;Verwaltungstool Distributed Replay&#41;](replay-option-distributed-replay-administration-tool.md).  
+2.  **Initiieren der ereigniswiedergabephase**: Zum Starten der verteilten Wiedergabe müssen Sie das Verwaltungstool mit Ausführen der **wiedergeben** Option. Weitere Informationen finden Sie unter [Option Wiedergabe &#40;Verwaltungstool Distributed Replay&#41;](replay-option-distributed-replay-administration-tool.md).  
   
-    1.  Öffnen Sie die Windows-Eingabeaufforderungs-Hilfsprogramm (`CMD.exe`), und navigieren Sie zum Speicherort Installation des Distributed Replay-Verwaltungstools (`DReplay.exe`).  
+    1.  Öffnen Sie das Windows-Befehlszeilenprogramm (`CMD.exe`), und navigieren Sie zum Installationspfad des Verwaltungstools "Distributed Replay" (`DReplay.exe`).  
   
     2.  (Optional) Wenn der Controllerdienst und das Verwaltungstool auf unterschiedlichen Computern ausgeführt werden, geben Sie über den *controller* -Parameter **-m**den entsprechenden Controller an.  
   

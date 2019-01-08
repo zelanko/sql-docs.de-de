@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Master Data Services], file and folder
@@ -16,12 +15,12 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 06cec1895333e305739476d6c2eca731544fcd3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 594ceb3c21dec321afb7b08a2a54e90571ec8f5f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204130"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802852"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>Ordner- und Dateiberechtigungen (Master Data Services)
   Bei der Installation von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]werden Ordner und Dateien im Dateisystem in dem Installationspfad installiert, der für freigegebenen Funktionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] festgelegt wurde. Wenn Sie den Standardinstallationspfad für verwenden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] freigegebenen Funktionen, die den Installationspfad für [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ist *Laufwerk*: \Programme\Microsoft SQL Server\120\Master Data Services. Sie können den Installationspfad für freigegebene Funktionen ändern; achten Sie dabei jedoch auf Berechtigungen, die vom übergeordneten Ordner geerbt werden, und auf explizit für [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]festgelegte Berechtigungen.  

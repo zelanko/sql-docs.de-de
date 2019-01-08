@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - indexes [SMO]
@@ -14,23 +12,23 @@ ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4a335f0c62c4dcaa0ab69eac80488703c9372c3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e2bf2f470c7605f5535f66d19531e6a8e34cd39
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136880"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814112"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>Erstellen, Ändern und Löschen von Indizes
-  In der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects-Hierarchie (SMO) werden Indizes durch das <xref:Microsoft.SqlServer.Management.Smo.Index>-Objekt dargestellt. Die indizierten Spalten werden durch eine Auflistung von dargestellt <xref:Microsoft.SqlServer.Management.Smo.IndexedColumn> -Objekten dargestellt, die von der <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A> Eigenschaft.  
+  In der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects-Hierarchie (SMO) werden Indizes durch das <xref:Microsoft.SqlServer.Management.Smo.Index>-Objekt dargestellt. Die indizierten Spalten werden durch eine Auflistung von <xref:Microsoft.SqlServer.Management.Smo.IndexedColumn>-Objekten dargestellt, die von der <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A>-Eigenschaft dargestellt werden.  
   
- Sie können einen Index für eine XML-Spalte erstellen, durch Angabe der <xref:Microsoft.SqlServer.Management.Smo.Index.IsXmlIndex%2A> Eigenschaft der <xref:Microsoft.SqlServer.Management.Smo.Index> Objekt.  
+ Sie können einen Index für eine XML-Spalte erstellen, indem Sie die <xref:Microsoft.SqlServer.Management.Smo.Index.IsXmlIndex%2A>-Eigenschaft des <xref:Microsoft.SqlServer.Management.Smo.Index>-Objekts angeben.  
   
 ## <a name="examples"></a>Beispiele  
  Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [erstellen Sie eine Visual Basic-SMO-Projekts in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oder [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-basic"></a>Erstellen eines nicht gruppierten, zusammengesetzten Indexes in Visual Basic  
- Dieses Codebeispiel zeigt, wie ein zusammengesetzter, nicht gruppierter Index erstellt wird. Fügen Sie dem Index für einen zusammengesetzten Index mehr als eine Spalte hinzu. Legen Sie die <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> Eigenschaft `False` für einen nicht gruppierten Index.  
+ Dieses Codebeispiel zeigt, wie ein zusammengesetzter, nicht gruppierter Index erstellt wird. Fügen Sie dem Index für einen zusammengesetzten Index mehr als eine Spalte hinzu. Legen Sie die <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>-Eigenschaft für einen nicht gruppierten Index auf `False` fest.  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -87,7 +85,7 @@ End Class
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-c"></a>Erstellen eines nicht gruppierten, zusammengesetzten Index in Visual C#  
- Dieses Codebeispiel zeigt, wie ein zusammengesetzter, nicht gruppierter Index erstellt wird. Fügen Sie dem Index für einen zusammengesetzten Index mehr als eine Spalte hinzu. Legen Sie die <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> Eigenschaft `False` für einen nicht gruppierten Index.  
+ Dieses Codebeispiel zeigt, wie ein zusammengesetzter, nicht gruppierter Index erstellt wird. Fügen Sie dem Index für einen zusammengesetzten Index mehr als eine Spalte hinzu. Legen Sie die <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>-Eigenschaft für einen nicht gruppierten Index auf `False` fest.  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -145,7 +143,7 @@ public class A {
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-powershell"></a>Erstellen eines nicht gruppierten, zusammengesetzten Index in PowerShell  
- Dieses Codebeispiel zeigt, wie ein zusammengesetzter, nicht gruppierter Index erstellt wird. Fügen Sie dem Index für einen zusammengesetzten Index mehr als eine Spalte hinzu. Legen Sie die <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> Eigenschaft `False` für einen nicht gruppierten Index.  
+ Dieses Codebeispiel zeigt, wie ein zusammengesetzter, nicht gruppierter Index erstellt wird. Fügen Sie dem Index für einen zusammengesetzten Index mehr als eine Spalte hinzu. Legen Sie die <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>-Eigenschaft für einen nicht gruppierten Index auf `False` fest.  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and to the  
@@ -186,7 +184,7 @@ $idx.Drop();
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-basic"></a>Erstellen eines XML-Index in Visual Basic  
- Dieses Codebeispiel zeigt, wie ein XML-Index für einen XML-Datentyp erstellt wird. Der XML-Datentyp ist eine XML-schemaauflistung, die mit dem Namen MySampleCollection, die in erstellt wurde [Using XML Schemas](using-xml-schemas.md). XML-Indizes weisen einige Einschränkungen auf. Eine dieser Einschränkungen ist, dass der Index auf einer Tabelle erstellt werden muss, die bereits über einen gruppierten Primärschlüssel verfügt.  
+ Dieses Codebeispiel zeigt, wie ein XML-Index für einen XML-Datentyp erstellt wird. Der XML-Datentyp ist eine XML-Schemaauflistung mit dem Namen MySampleCollection, die in [Using XML Schemas](using-xml-schemas.md)erstellt wird. XML-Indizes weisen einige Einschränkungen auf. Eine dieser Einschränkungen ist, dass der Index auf einer Tabelle erstellt werden muss, die bereits über einen gruppierten Primärschlüssel verfügt.  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -249,7 +247,7 @@ End Class
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-c"></a>Erstellen eines XML-Index in Visual C#  
- Dieses Codebeispiel zeigt, wie ein XML-Index für einen XML-Datentyp erstellt wird. Der XML-Datentyp ist eine XML-schemaauflistung, die mit dem Namen MySampleCollection, die in erstellt wurde [Using XML Schemas](using-xml-schemas.md). XML-Indizes weisen einige Einschränkungen auf. Eine dieser Einschränkungen ist, dass der Index auf einer Tabelle erstellt werden muss, die bereits über einen gruppierten Primärschlüssel verfügt.  
+ Dieses Codebeispiel zeigt, wie ein XML-Index für einen XML-Datentyp erstellt wird. Der XML-Datentyp ist eine XML-Schemaauflistung mit dem Namen MySampleCollection, die in [Using XML Schemas](using-xml-schemas.md)erstellt wird. XML-Indizes weisen einige Einschränkungen auf. Eine dieser Einschränkungen ist, dass der Index auf einer Tabelle erstellt werden muss, die bereits über einen gruppierten Primärschlüssel verfügt.  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -312,7 +310,7 @@ public class A {
 ```  
   
 ## <a name="creating-an-xml-index-in-powershell"></a>Erstellen eines XML-Index in PowerShell  
- Dieses Codebeispiel zeigt, wie ein XML-Index für einen XML-Datentyp erstellt wird. Der XML-Datentyp ist eine XML-schemaauflistung, die mit dem Namen MySampleCollection, die in erstellt wurde [Using XML Schemas](using-xml-schemas.md). XML-Indizes weisen einige Einschränkungen auf. Eine dieser Einschränkungen ist, dass der Index auf einer Tabelle erstellt werden muss, die bereits über einen gruppierten Primärschlüssel verfügt.  
+ Dieses Codebeispiel zeigt, wie ein XML-Index für einen XML-Datentyp erstellt wird. Der XML-Datentyp ist eine XML-Schemaauflistung mit dem Namen MySampleCollection, die in [Using XML Schemas](using-xml-schemas.md)erstellt wird. XML-Indizes weisen einige Einschränkungen auf. Eine dieser Einschränkungen ist, dass der Index auf einer Tabelle erstellt werden muss, die bereits über einen gruppierten Primärschlüssel verfügt.  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and get a reference to adventureworks2012  

@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c762c5ebb679460686dbf38958d097de687b1052
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c4a21f9ccbf1dd8bcb7918c67b98aa51a0956d41
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673529"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590954"
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "51673529"
 |**event_type**|**Nvarchar(64)**|Der Typ des Ereignisses.<br /><br /> Finden Sie unter [Ereignistypen](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) eine Liste von möglichen Werten.|  
 |**event_subtype**|**int**|Der Untertyp des eintretenden Ereignisses.<br /><br /> Finden Sie unter [Ereignistypen](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) eine Liste von möglichen Werten.|  
 |**event_subtype_desc**|**Nvarchar(64)**|Die Beschreibung des Ereignisuntertyps.<br /><br /> Finden Sie unter [Ereignistypen](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) eine Liste von möglichen Werten.|  
-|**severity**|**int**|Der Schweregrad des Fehlers. Folgende Werte sind möglich:<br /><br /> 0 = Information<br />1 = Warning<br />2 = Fehler|  
+|**severity**|**int**|Der Schweregrad des Fehlers. Dabei sind folgende Werte möglich:<br /><br /> 0 = Information<br />1 = Warning<br />2 = Fehler|  
 |**event_count**|**int**|Die Anzahl der Versuche, die dieses Ereignis aufgetreten ist für die angegebene Datenbank innerhalb des angegebenen Zeitintervalls (**Start_time** und **End_time**).|  
 |**description**|**nvarchar(max)**|Detaillierte Beschreibung des Ereignisses.<br /><br /> Finden Sie unter [Ereignistypen](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) eine Liste von möglichen Werten.|  
 |**additional_data**|**XML**|*Hinweis: Dieser Wert ist immer NULL für Azure SQL-Datenbank V12. Finden Sie unter [Beispiele](#Deadlock) im Abschnitt zum Abrufen von Deadlockereignisse für V12.*<br /><br /> Für **Deadlock** Ereignisse, diese Spalte enthält das deadlockdiagramm. Bei anderen Ereignistypen enthält diese Spalte NULL. |  
@@ -101,7 +101,7 @@ ms.locfileid: "51673529"
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   
 ### <a name="interval-starttime-and-endtime"></a>start_time und end_time des Intervalls  
- Ein Ereignis wird in ein aggregationsintervall eingefügt, wenn das Ereignis tritt auf, *auf* oder *nach *** Start_time** und *vor *** End_time** für dieses Intervall. Beispielsweise würde ein Ereignis, das genau zum Zeitpunkt `2012-10-30 19:25:00.0000000` eintritt, nur im zweiten unten gezeigten Intervall aufgenommen werden:  
+ Ein Ereignis wird in ein aggregationsintervall eingefügt, wenn das Ereignis tritt auf, *auf* oder _nach_**Start_time** und _vor_  **End_time** für dieses Intervall. Beispielsweise würde ein Ereignis, das genau zum Zeitpunkt `2012-10-30 19:25:00.0000000` eintritt, nur im zweiten unten gezeigten Intervall aufgenommen werden:  
   
 ```  
 start_time                    end_time  
