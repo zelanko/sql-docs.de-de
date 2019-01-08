@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- replication
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - developer's guide [SQL Server replication]
@@ -16,12 +14,12 @@ ms.assetid: 7ee134ae-1cab-4a35-8017-8ac6d8fc64b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce2054924f26ab5b8d94814c3ad716b00f425064
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 499edc588b4253b3ae37c2be0bcde1cbbd79dea6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212520"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777822"
 ---
 # <a name="developer39s-guide-replication"></a>Entwickler&#39;Benutzerhandbuch (Replikation)
   Durch die Fähigkeit, eine Replikationstopologie programmgesteuert zu konfigurieren, zu warten und zu überwachen, können Sie häufig anfallende Replikationstasks vereinfachen und die Benutzerfreundlichkeit Ihrer replikationsbasierten Anwendungen verbessern. Durch die Programmierung der Replikation können den Endbenutzern benutzerdefinierte Replikationsfunktionen bereitgestellt werden, ohne dass diese mit gespeicherten Replikationsprozeduren und ausführbaren Dateien von Replikations-Agents vertraut sein müssen oder die von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] implementierte Replikationsbenutzeroberfläche verwenden müssen.  
@@ -57,7 +55,7 @@ ms.locfileid: "48212520"
  [Ausführbare Konzepte für die Programmierung von Replikations-Agents](replication-agent-executables-concepts.md)  
  Beschreibt die Verwendung von ausführbaren Dateien von Replikations-Agents.  
   
- [Entwicklerhandbuch: Themen zur Vorgehensweise &#40;Replikation&#41;](../developer-s-guide-how-to-topics-replication.md)  
+ [Entwicklerhandbuch: Gewusst-wie-Themen &#40;Replikation&#41;](../developer-s-guide-how-to-topics-replication.md)  
  Stellt eine Liste von Themen zur Vorgehensweise bereit, die mit der Replikation in Zusammenhang stehen.  
   
   

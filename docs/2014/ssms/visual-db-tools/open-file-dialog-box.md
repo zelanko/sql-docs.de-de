@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.openfile
-- vs.openproject
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f197c90dc20c3c3cff031e58af2e1cac19bcb706
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57e89016641469cbb3215429ff0f2b9053f758c9
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070855"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328600"
 ---
 # <a name="open-file-dialog-box"></a>Datei öffnen (Dialogfeld)
   Verwenden Sie das Dialogfeld **Datei öffnen** , um eine vorhandene Datei von einem Datenträger zu öffnen. Außerdem können Sie dieses Dialogfeld dazu verwenden, eine bereits geöffnete Datei mit unterschiedlichen Sprachcodierungsoptionen zu öffnen.  
@@ -68,7 +67,7 @@ ms.locfileid: "48070855"
  **Neuer Ordner**  
  Zeigt das Dialogfeld **Neuer Ordner** an. Verwenden Sie diese Option, um unterhalb des Ordners, der im Dropdown-Listenfeld **Suchen in** ausgewählt wurde, einen untergeordneten Ordner zu erstellen.  
   
-## <a name="views"></a>Sichten  
+## <a name="views"></a>Ansichten  
  Stellt Optionen bereit, mit denen der Inhalt des im Dropdown-Listenfeld **Sichten** ausgewählten Elements angeordnet und angezeigt werden kann.  
   
  **Miniaturansicht**  
@@ -97,5 +96,3 @@ ms.locfileid: "48070855"
   
  **Netzlaufwerk verbinden**  
  Öffnet das Dialogfeld **Netzlaufwerk verbinden** .  
-  
-  

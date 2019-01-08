@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f5a5b305bcf41cdf3f306c3fb15f0f123fd471e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b66a0c9efc94d648eba2f4d4f8cff779def413fe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164500"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788162"
 ---
 # <a name="overview-smo"></a>Übersicht (SMO)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) werden die Objekte für die programmgesteuerte Verwaltung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie können SMO verwenden, um benutzerdefinierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verwaltungsanwendungen zu erstellen. Wenngleich [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine leistungsstarke und umfassende Anwendung zur Verwaltung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist, sind Sie in manchen Fällen mit einer SMO-Anwendung möglicherweise besser beraten.  
@@ -44,11 +42,11 @@ ms.locfileid: "48164500"
   
  SMO stellt auch viele Funktionen und Komponenten, die in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] eingeführt wurden, als neue Objekte oder Eigenschaften dar. Zu diesen neuen Funktionen und Komponenten gehören:  
   
--   Tabellen- und Indexpartitionierung zur Speicherung der Daten über ein Partitionsschema. Weitere Informationen finden Sie unter [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md).  
+-   Tabellen- und Indexpartitionierung zur Speicherung der Daten über ein Partitionsschema. Weitere Informationen finden Sie unter [partitionierte Tabellen und Indizes](../partitions/partitioned-tables-and-indexes.md).  
   
 -   HTTP-Endpunkte zur Verwaltung von SOAP-Anforderungen. Weitere Informationen finden Sie unter [Endpunkte implementieren](tasks/implementing-endpoints.md).  
   
--   Momentaufnahmeisolation und Versionsverwaltung auf Zeilenebene für erhöhte Parallelität. Weitere Informationen finden Sie unter [arbeiten mit Momentaufnahmeisolation](../native-client/features/working-with-snapshot-isolation.md).  
+-   Momentaufnahmeisolation und Versionsverwaltung auf Zeilenebene für erhöhte Parallelität. Weitere Informationen finden Sie unter [Arbeiten mit der Momentaufnahmeisolation](../native-client/features/working-with-snapshot-isolation.md).  
   
 -   XML-Schemaauflistung, XML-Indizes und XML-Datentyp zur Überprüfung und Speicherung von XML-Daten. Weitere Informationen finden Sie unter [XML-Schemaauflistungen &#40;SQL Server&#41; ](../xml/xml-schema-collections-sql-server.md) und [Using XML Schemas](tasks/using-xml-schemas.md).  
   
@@ -68,14 +66,14 @@ ms.locfileid: "48164500"
   
 -   DDL-Trigger für zusätzliche Funktionalität beim Auftreten von DDL-Ereignissen. Weitere Informationen finden Sie unter [DDL Triggers](../triggers/ddl-triggers.md).  
   
- Der SMO-Namespace lautet <xref:Microsoft.SqlServer.Management.Smo>. SMO wird als implementiert eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Assembly. Dies bedeutet, dass die common Language Runtime die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Version 2.0 muss installiert sein, bevor Sie die SMO-Objekte verwenden. Die SMO-Assemblys werden standardmäßig mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-SDK-Option im globalen Assemblycache (GAC) installiert. Die Assemblys befinden sich in [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]. Weitere Informationen finden Sie unter den [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Dokumentation.  
+ Der SMO-Namespace lautet <xref:Microsoft.SqlServer.Management.Smo>. SMO wird als [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Assembly implementiert. Das bedeutet, dass die CLR (Common Language Runtime) von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], Version 2.0, installiert werden muss, bevor die SMO-Objekte verwendet werden. Die SMO-Assemblys werden standardmäßig mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-SDK-Option im globalen Assemblycache (GAC) installiert. Die Assemblys befinden sich in [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]. Weitere Informationen finden Sie unter den [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Dokumentation.  
   
 ## <a name="smo-classes"></a>SMO-Klassen  
  SMO-Klassen umfassen zwei Kategorien: Instanzklassen und Hilfsprogrammklassen.  
   
  **Instanzklassen**  
   
- Die Instanzklassen stellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekte dar, z. B. Server, Datenbanken, Tabellen, Trigger und gespeicherte Prozeduren. Um eine Verbindung zur Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herzustellen und den Aufzeichnungsmodus für an die Instanz gesendete Befehle zu steuern, wird die Klasse <xref:Microsoft.SqlServer.Management.Common.ServerConnection> verwendet.  
+ Die Instanzklassen stellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekte dar, z.&nbsp;B. Server, Datenbanken, Tabellen, Trigger und gespeicherte Prozeduren. Um eine Verbindung zur Instanz von <xref:Microsoft.SqlServer.Management.Common.ServerConnection> herzustellen und den Aufzeichnungsmodus für an die Instanz gesendete Befehle zu steuern, wird die Klasse [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet.  
   
  Die SMO-Instanzobjekte bilden eine Hierarchie, die die Hierarchie eines Datenbankservers darstellt. Ganz oben sind die Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], gefolgt von den Datenbanken, gefolgt von den Tabellen, Spalten, Triggern usw. Ist eine 1:n-Beziehung zwischen den über- und untergeordneten Elementen logisch, etwa im Fall einer Tabelle mit mehreren Spalten, wird das untergeordnete Element durch eine Objektauflistung dargestellt. Andernfalls wird das untergeordnete Element nur durch ein Objekt dargestellt.  
   
@@ -136,7 +134,7 @@ ms.locfileid: "48164500"
 /Server/Database[@Name='Adventureworks2012']  
 ```  
   
- Der URN eines Objekts kann abgerufen werden, indem auf seine URN-Eigenschaft verwiesen wird. Das <legacyBold>Scripter</legacyBold>-Objekt verwendet ebenfalls URNs als Parameter, die Objektreferenzen an die Methode des `Scripter`-Objekts übergeben. Darüber hinaus kann ein URN angegeben werden, für die **GetSmoObject** Methode der `Server` Objekt. Damit wird eine Instanz des SMO-Objekts erstellt.  
+ Der URN eines Objekts kann abgerufen werden, indem auf seine URN-Eigenschaft verwiesen wird. Das Scripter`Scripter`-Objekt verwendet ebenfalls URNs als Parameter, die Objektreferenzen an die Methode des -Objekts übergeben. Darüber hinaus kann ein URN angegeben werden, für die **GetSmoObject** Methode der `Server` Objekt. Damit wird eine Instanz des SMO-Objekts erstellt.  
   
 ## <a name="new-sql-server-features-represented-in-smo"></a>Neue SQL&nbsp;Server-Features in SMO  
  **Tabellen- und Indexpartitionierung**  

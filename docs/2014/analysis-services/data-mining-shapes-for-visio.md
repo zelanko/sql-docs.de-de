@@ -16,27 +16,27 @@ ms.assetid: 11a821d9-1c0a-442e-b735-92208ce479dc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3dab107fb57ab2e6d0abaa97bd76a1ce8082b726
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92630f90d7b18ad668dcffc02feeb65990cf3c84
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055230"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512632"
 ---
 # <a name="data-mining-shapes-for-visio"></a>Data Mining-Shapes für Visio
   Die Data Mining-Shapes für Visio stellen Vorlagen bereit, die für die Darstellung von Data Mining-Modellen angepasst wurden. Mithilfe dieser Vorlagen können Sie eine Verbindung mit einem erstellten Modell herstellen und interaktive Präsentationen erstellen, um die Ergebnisse des Data Minings zu veranschaulichen.  
   
- Die Vorlagen bieten zahlreiche Vorteile gegenüber statischen Diagrammen und Bildschirmaufnahmen. Sie interagieren mit den zugrunde liegenden Data Mining-Modellen, die in einer Instanz von Analysis Services gespeichert sind, und ermöglichen es Ihnen, die Darstellung der Muster im Miningmodell anzupassen. Sie können ein Strukturmodell reduzieren oder erweitern, nach Datenknoten oder Attributen filtern und die Modelstatistiken, z. B. Wahrscheinlichkeiten und Koeffizienten, anzeigen.  
+ Die Vorlagen bieten zahlreiche Vorteile gegenüber statischen Diagrammen und Bildschirmaufnahmen – sie interagieren mit der zugrunde liegenden Datamining-Modelle, die auf einer Instanz von Analysis Services gespeichert sind, und lassen Sie die Darstellung anpassen, dass die Muster im Miningmodell angezeigt werden. Sie können ein Strukturmodell reduzieren oder erweitern, nach Datenknoten oder Attributen filtern und die Modelstatistiken, z. B. Wahrscheinlichkeiten und Koeffizienten, anzeigen.  
   
  ![DM](media/dm-stencil.gif "DM")  
   
  Die Visio-Vorlagen umfassen folgende Assistenten:  
   
--   **Abhängigkeitsnetzwerkdiagramm:** mit diesem Assistenten können Sie um Diagramme für Entscheidungsstrukturen und neuronale Netzwerke zu erstellen.  
+-   **Abhängigkeitsnetzwerk-Diagramm:** Verwenden Sie diesen Assistenten, um Diagramme für Entscheidungsstrukturen und neuronale Netzwerke zu erstellen.  
   
--   **Entscheidungsstrukturdiagramm:** mit diesem Assistenten können Sie Diagramme erstellen, in denen die Entscheidungspunkte und Formeln, die entscheidungsstrukturmodellen zugeordnet. Dieses Diagramm kann auch für Regressionsmodelle verwendet werden.  
+-   **Entscheidungsstrukturdiagramm:** Verwenden Sie diesen Assistenten zum Erstellen von Diagrammen, die zeigen, die Entscheidungspunkte und Formeln, die entscheidungsstrukturmodellen zugeordnet. Dieses Diagramm kann auch für Regressionsmodelle verwendet werden.  
   
--   **Clusterdiagramm:** verwenden Sie diesen Assistenten, um farbige Diagramme für Segmentierungsmodelle zu erstellen. Sie können zwischen Sichten, wie Attributunterscheidung, Clusterprofilen und Abhängigkeiten, wechseln und die Darstellung von Clustern anpassen.  
+-   **Clusterdiagramm:** Verwenden Sie diesen Assistenten, um farbige Diagramme für Segmentierungsmodelle zu erstellen. Sie können zwischen Sichten, wie Attributunterscheidung, Clusterprofilen und Abhängigkeiten, wechseln und die Darstellung von Clustern anpassen.  
   
 ## <a name="installation"></a>Installation  
  Bei der Installation von Data Mining-Vorlagen für Visio werden standardmäßig die folgenden Dateien werden installiert \<Laufwerk > \Programme\Microsoft SQL Server 2012 DM-Add-Ins (oder \<Laufwerk > \ oder Programme (x86) \Microsoft SQL Server 2012 DM Add-Ins):  

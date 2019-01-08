@@ -19,12 +19,12 @@ ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0ebd18967f892d0f40e5d5b0e3b15e1196935af8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3cbc3a76c1f6e5c67297f44c312fe0497666a9b8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141840"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505642"
 ---
 # <a name="rsexe-utility-ssrs"></a>Hilfsprogramm 'RS.exe' (SSRS)
   Das Dienstprogramm rs.exe verarbeitet Skripts, die von Ihnen in einer Eingabedatei bereitgestellt werden. Verwenden Sie dieses Hilfsprogramm, um die Berichtsserverbereitstellung und Verwaltungsaufgaben zu automatisieren.  
@@ -75,7 +75,7 @@ ms.locfileid: "48141840"
  (Optional) Gibt ein Benutzerkonto an, das für die Herstellung einer Verbindung mit dem Berichtsserver verwendet wird. Wenn `-u` und `-p` nicht angegeben werden, wird das aktuelle Windows-Benutzerkonto verwendet.  
   
  `-p` *Das Kennwort*  
- (Erforderlich, wenn `-u` angegeben ist) gibt das Kennwort für die Verwendung mit der `-u` Argument. Bei diesem Wert wird die Groß-/Kleinschreibung beachtet.  
+ (Erforderlich, wenn `-u` angegeben ist.) Gibt das Kennwort an, das mit dem `-u`-Argument verwendet wird. Bei diesem Wert wird die Groß-/Kleinschreibung beachtet.  
   
  `-e`  
  (Optional) Gibt den SOAP-Endpunkt für die Ausführung des Skripts an. Folgende Werte sind gültig:  
@@ -88,16 +88,16 @@ ms.locfileid: "48141840"
   
 -   Exec2005  
   
- Wird kein Wert angegeben, wird der Endpunkt Mgmt2005 verwendet. Weitere Informationen zu den SOAP-Endpunkten, finden Sie unter [Report Server Web Service Endpoints](../report-server-web-service/methods/report-server-web-service-endpoints.md).  
+ Wird kein Wert angegeben, wird der Endpunkt Mgmt2005 verwendet. Weitere Informationen zu den SOAP-Endpunkten finden Sie unter [Report Server Web Service Endpoints](../report-server-web-service/methods/report-server-web-service-endpoints.md).  
   
  `-l` *Timeout*  
  (Optional) Gibt die Anzahl von Sekunden an, die verstreichen, ehe sich für die Verbindung mit dem Server ein Timeout ergibt. Der Standardwert ist 60 Sekunden. Wenn Sie keinen Timeoutwert angeben, wird der Standardwert verwendet. Ein Wert von `0` gibt an, dass sich für die Verbindung kein Timeout ergibt.  
   
  **-b**  
- (Optional) Gibt an, dass die Befehle in der Skriptdatei als Batch ausgeführt werden. Falls ein Befehl fehlschlägt, wird ein Rollback für den Batch ausgeführt. Einige Befehle können nicht als Batch ausgeführt werden. Diese Befehle werden wie gewohnt ausgeführt. Nur Ausnahmen, die ausgegeben werden und nicht innerhalb des Skripts behandelt werden, führen zu einem Rollback. Wenn das Skript eine Ausnahme behandelt und normalerweise von zurückgegeben `Main`, wird für den Batch ein Commit ausgeführt. Wenn Sie diesen Parameter nicht angeben, werden die Befehle ausgeführt, ohne dass ein Batch erstellt wird. Weitere Informationen finden Sie unter [Batching Methods](../report-server-web-service-net-framework-soap-headers/batching-methods.md).  
+ (Optional) Gibt an, dass die Befehle in der Skriptdatei als Batch ausgeführt werden. Falls ein Befehl fehlschlägt, wird ein Rollback für den Batch ausgeführt. Einige Befehle können nicht als Batch ausgeführt werden. Diese Befehle werden wie gewohnt ausgeführt. Nur Ausnahmen, die ausgegeben werden und nicht innerhalb des Skripts behandelt werden, führen zu einem Rollback. Wenn das Skript eine Ausnahme behandelt und normalerweise von `Main` zurückgegeben wird, wird ein Commit für den Batch ausgeführt. Wenn Sie diesen Parameter nicht angeben, werden die Befehle ausgeführt, ohne dass ein Batch erstellt wird. Weitere Informationen finden Sie unter [Batching Methods](../report-server-web-service-net-framework-soap-headers/batching-methods.md).  
   
  `-v` *GlobalVar*  
- (Optional) Gibt globale Variablen an, die in dem Skript verwendet werden. Wenn das Skript globale Variablen verwendet, müssen Sie dieses Argument angeben. Der angegebene Wert muss für die in der RSS-Datei definierten globalen Variablen gültig sein. Sie müssen eine globale Variable für jedes **-v** -Argument angeben.  
+ (Optional) Gibt globale Variablen an, die in dem Skript verwendet werden. Wenn das Skript globale Variablen verwendet, müssen Sie dieses Argument angeben. Der angegebene Wert muss für die in der RSS-Datei definierten globalen Variablen gültig sein. Sie müssen eine globale Variable für jedes **-v**-Argument angeben.  
   
  Das Argument `-v` wird in der Befehlszeile angegeben und verwendet, um zur Laufzeit einen Wert für eine globale Variable festzulegen, die in Ihrem Skript definiert ist. Wenn Ihr Skript beispielsweise eine Variable namens *parentFolder*, enthält, können Sie in der Befehlszeile einen Namen für diesen Ordner angeben:  
   
@@ -117,7 +117,7 @@ ms.locfileid: "48141840"
  Das folgende Beispiel zeigt, wie die Skriptdatei angegeben wird, die das [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET-Skript und die auszuführenden Webdienstmethoden enthält.  
   
 ```  
-rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver  
+rs -i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver  
 ```  
   
  Ein ausführliches Beispiel finden Sie unter [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
@@ -125,7 +125,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
  Weitere Beispiele finden Sie unter [Ausführen einer Reporting Services-Skriptdatei](run-a-reporting-services-script-file.md)  
   
 ## <a name="remarks"></a>Hinweise  
- Sie können Skripts so definieren, dass sie Systemeigenschaften festlegen, Berichte veröffentlichen usw. Die Skripts, die Sie erstellen, können jede Methode der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -API einschließen. Weitere Informationen zu den Methoden und Eigenschaften, die Ihnen zur Verfügung, finden Sie unter [Report Server Web Service](../report-server-web-service/report-server-web-service.md).  
+ Sie können Skripts so definieren, dass sie Systemeigenschaften festlegen, Berichte veröffentlichen usw. Die Skripts, die Sie erstellen, können jede Methode der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -API einschließen. Weitere Informationen zu den verfügbaren Methoden und Eigenschaften finden Sie unter [Report Server Web Service](../report-server-web-service/report-server-web-service.md).  
   
  Das Skript muss in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET-Code geschrieben und in einer Unicode- oder UTF-8-Textdatei mit der Dateinamenerweiterung „.rss“ gespeichert sein. Das Hilfsprogramm **rs** kann nicht zum Debuggen von Skripts verwendet werden. Führen Sie zum Debuggen eines Skripts den Code in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]aus.  
   
@@ -135,7 +135,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
 ## <a name="see-also"></a>Siehe auch  
  [Ausführen einer Reporting Services-Skriptdatei](run-a-reporting-services-script-file.md)   
  [Skripts für Bereitstellungs- und Verwaltungsaufgaben](script-deployment-and-administrative-tasks.md)   
- [Skript mit dem Hilfsprogramm rs.exe und dem Webdienst](script-with-the-rs-exe-utility-and-the-web-service.md)   
- [Eingabeaufforderung-Hilfsprogramme für Berichtsserver &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)  
+ [Skripterstellung mit dem Hilfsprogramm rs.exe und dem Webdienst](script-with-the-rs-exe-utility-and-the-web-service.md)   
+ [Eingabeaufforderungs-Hilfsprogramme für Berichtsserver &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)  
   
   

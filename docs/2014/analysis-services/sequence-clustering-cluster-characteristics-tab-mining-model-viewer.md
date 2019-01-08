@@ -13,21 +13,21 @@ ms.assetid: 3a9e8a0c-7d03-47cc-8625-e68d73a8c947
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2119013c1c735c9b35a3790fedbf1ac114e9964a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 156bd83662b9b6fa42eb99e8e5810bb4fc71d51a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196859"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414848"
 ---
 # <a name="sequence-clustering-cluster-characteristics-tab-mining-model-viewer"></a>Registerkarte "Sequenzcluster/Clustermerkmale" (Miningmodell-Viewer)
   Die Registerkarte **Clustermerkmale** im **Microsoft Sequence Cluster-Viewer** stellt eine detaillierte Liste der Eigenschaften bereit, die einen Sequenzcluster definieren. Diese Eigenschaften können einfache Attribut/Wert-Paare, aber auch Übergänge zwischen Status einschließen.  
   
  Mit dieser Sicht eines Sequenzclustermodells können Sie einen Drilldown in den Clusterinhalt ausführen und die Sequenzen anzeigen, die für einen Cluster repräsentativ sind.  
   
- **Weitere Informationen:** [Microsoft Sequence Clustering-Algorithmus](data-mining/microsoft-sequence-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Sequenzcluster-Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Weitere Informationen finden Sie unter** [Microsoft Sequence Clustering-Algorithmus](data-mining/microsoft-sequence-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Sequenzcluster-Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
@@ -45,15 +45,15 @@ ms.locfileid: "48196859"
   
  In einem Sequenzclustermodell auf Grundlage einer Warenkorbanalyse könnte ein Cluster z. B. als oberstes Merkmal einen Kunden aufweisen, der das Verkaufselement auswählt und dann die Transaktion beendet, ohne etwas anderes zu kaufen. In einem Sequenzclustermodell, mit dem Serverfehler analysiert werden sollen, könnten die primären Eigenschaften eines Clusters eine Reihe von häufig vorkommenden Fehlerereignissen sein.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**Variable**|Diese Spalte gibt an, ob das Merkmal ein Wert ist oder ein Übergang.<br /><br /> Wenn das Merkmal ein Wert ist die **Variable** Spalte enthält den Attributnamen an.<br /><br /> Wenn das Merkmal einen Statusübergang darstellt. die **Variable** Spalte enthält den Text "Übergänge".|  
 |**Werte**|Der Wert dieser Spalte hängt davon, ob das Merkmal ein einfaches Attribut / Wert-Paar ist, oder ein Statusübergang, der eine allgemeine Sequenz von Elementen oder Ereignissen darstellt.<br /><br /> Wenn das Merkmal ein Wert ist die **Wert** Spalte enthält den Status.<br /><br /> Wenn das Merkmal einen Statusübergang darstellt. die **Wert** Spalte enthält die Beschreibung des statusübergangs.|  
 |**Wahrscheinlichkeit**|In dieser Spalte wird ein Balken angezeigt, der die relative Wahrscheinlichkeit angibt, dass dieses Merkmal (entweder ein einfaches Attribut/Wert-Paar oder eine Kombination von Status) Element des aktuellen Clusters ist.<br /><br /> Sie können mit der Maus auf den Balken zeigen, um den Frequenzwert für das Merkmal anzuzeigen.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Algorithmen &#40;Analysis Services – Datamining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Miningmodell-Viewer &#40;Datamining-Modell-Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Miningmodell-Viewer &#40;Data Mining-Modelldesigner&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Data Mining-Modell-Viewer](data-mining/data-mining-model-viewers.md)  
   
   

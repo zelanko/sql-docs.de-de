@@ -15,12 +15,12 @@ ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 525e3d131e5bb2e53d35faa73f1c4c579c59cbd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fd2aad1cf57852c2b78db1128a972c0490a52a85
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091450"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416491"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Übersicht über logische Architektur (Analysis Services – Mehrdimensionale Daten)
   Analysis Services wird in einem Serverbereitstellungsmodus ausgeführt, durch den die von den unterschiedlichen Analysis Services-Modelltypen verwendete Arbeitsspeicherarchitektur und Laufzeitumgebung bestimmt wird. Der Servermodus wird während der Installation bestimmt. **Mehrdimensionaler und Data Mining-Modus** unterstützt herkömmliches OLAP und Datamining. **Im tabellarischen Modus** unterstützt tabellarische Modelle. **Integrierten SharePoint-Modus** bezieht sich auf einer Instanz von Analysis Services, die als PowerPivot für SharePoint – wird verwendet, die für das Laden und Abfragen von Excel- oder PowerPivot-Datenmodellen innerhalb einer Arbeitsmappe installiert wurde.  
@@ -48,7 +48,7 @@ ms.locfileid: "48091450"
  Jedes Datenbankobjekt enthält mindestens ein Cubeobjekt. Ein Cube wird durch seine Measures und Dimensionen definiert. Die Measures und Dimensionen in einem Cube werden aus Tabellen und Sichten der Datenquellensicht abgeleitet, auf der der Cube basiert bzw. die von den Measure- und Dimensionsdefinitionen generiert wird.  
   
 ## <a name="object-inheritance"></a>Objektvererbung  
- Das ASSL-Objektmodell enthält zahlreiche wiederkehrende Elementgruppen. Beispielsweise definiert die Elementgruppe "`Dimensions` enthalten `Hierarchies`" die Dimensionshierarchie eines Elements. Sowohl `Cubes` als auch `MeasureGroups` enthalten die Elementgruppe "`Dimensions` enthalten `Hierarchies`".  
+ Das ASSL-Objektmodell enthält zahlreiche wiederkehrende Elementgruppen. Z. B. die Elementgruppe "`Dimensions` enthalten `Hierarchies`," die Dimensionshierarchie eines Elements definiert. Sowohl `Cubes` als auch `MeasureGroups` enthalten die Elementgruppe "`Dimensions` enthalten `Hierarchies`".  
   
  Wenn dies nicht ausdrücklich überschrieben wird, erbt ein Element die Details dieser wiederkehrenden Elementgruppe von der höheren Ebene. Beispielsweise sind die `Translations` für eine `CubeDimension` die gleichen wie die `Translations` für sein Vorgängerelement `Cube`.  
   

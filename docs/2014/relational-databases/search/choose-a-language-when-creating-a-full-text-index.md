@@ -19,12 +19,12 @@ ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 70afd9ea708a82e45ba10e90022224c6ffdc088a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d272b3ea7efa7800c30518aa2ffb7b43bf7fccb7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229506"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514666"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Auswählen einer Sprache beim Erstellen eines Volltextindex
   Wenn Sie einen Volltextindex erstellen, müssen Sie für die indizierte Spalte eine Spaltensprache angeben. Die [Wörtertrennung und Wortstammerkennung](configure-and-manage-word-breakers-and-stemmers-for-search.md) der angegebenen Sprache wird von Volltextabfragen für die Spalte verwendet. Bei der Wahl der Spaltensprache für die Erstellung eines Volltextindex sind mehrere Dinge zu bedenken. Diese beziehen sich darauf, wie der Text von der Volltext-Engine in Token zerlegt und anschließend indiziert wird.  
@@ -47,7 +47,7 @@ ms.locfileid: "48229506"
   
      Tests haben gezeigt, dass die neuen Wörtertrennungen in anspruchsvollen Abfrageumgebungen stabil arbeiten.  
   
--   Security  
+-   Sicherheit  
   
      Die neuen wörtertrennungen sind standardmäßig aktiviert, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aufgrund von sicherheitsverbesserungen der linguistischen Komponenten. Es ist sehr zu empfehlen, dass Sie signierte externe Komponenten wie Wörtertrennungen und Filter verwenden, um die Gesamtsicherheit und Stabilität von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zu verbessern. Sie können Volltext wie folgt konfigurieren, um zu überprüfen, ob diese Komponenten signiert sind:  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48229506"
   
      Die Wörtertrennungen wurden neu ausgearbeitet, und Tests haben gezeigt, dass die neuen Wörtertrennungen eine bessere semantische Qualität als ihre Vorgänger aufweisen. Auf diese Weise wird die Genauigkeit von Rückrufen erhöht.  
   
--   Coverage für eine Vielzahl von Sprachen, wörtertrennungen sind in enthalten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] der und in der Standardeinstellung aktiviert.  
+-   Für eine Vielzahl von Sprachen ist die Wörtertrennung standardmäßig in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enthalten und aktiviert.  
   
  Eine Liste der Sprachen, für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] umfasst eine wörtertrennung und wortstammerkennung, finden Sie unter [Sys. fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48229506"
  Beim Erstellen eines Volltextindex müssen Sie für jede Spalte einen gültigen Sprachennamen angeben. Wenn ein Sprachenname gültig ist, von der Katalogsicht [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql) jedoch nicht zurückgegeben wird, greift die Volltextsuche, falls vorhanden, auf einen ähnlichen Sprachennamen der jeweiligen Sprachengruppe zurück. Andernfalls verwendet die Volltextsuche die neutrale Wörtertrennung. Dieses Verhalten kann sich ggf. auf die Genauigkeit der Rückrufe auswirken. Es ist daher sehr zu empfehlen, dass Sie beim Erstellen eines Volltextindex für jede Spalte einen gültigen und verfügbaren Sprachennamen angeben.  
   
 > [!NOTE]  
->  Die LCID wird für alle Datentypen verwendet, die für die Volltextindizierung geeignet sind (z. B. `char` oder `nchar`). Wenn Sie die Sortierreihenfolge der haben eine `char`, `varchar`, oder `text` Spalte vom Typ in eine andere Sprache als die von der LCID, LCID festgelegt Sprache wird während der Volltext-Volltextindizierung und-Abfrage dieser Spalten trotzdem verwendet.  
+>  Die LCID wird für alle Datentypen verwendet, die für die Volltextindizierung geeignet sind (z.&nbsp;B. `char` oder `nchar`). Auch wenn die Sortierreihenfolge einer Spalte vom Typ `char`, `varchar` oder `text` auf eine andere Sprache als die von der LCID vorgegebenen festgelegt ist, wird die LCID während der Volltextindizierung und -abfrage dieser Spalten trotzdem verwendet.  
   
 
   
@@ -96,7 +96,7 @@ ms.locfileid: "48229506"
   
 -   Nur-Text-Inhalt  
   
-     Wenn Ihr Inhalt nur-Text ist, können Sie diese zum Konvertieren der `xml` -Datentyp und Hinzufügen von Sprachtags, die die Dokument oder einen Dokumentabschnitt jeweils die entsprechende Sprache angeben. Dazu müssen Sie vor der Volltextindizierung jedoch die Sprache kennen.  
+     Wenn Sie Nur-Text-Inhalte verwenden, können Sie diese in den Datentyp `xml` konvertieren und Sprachtags hinzufügen, die für ein Dokument oder einen Dokumentabschnitt jeweils die entsprechende Sprache angeben. Dazu müssen Sie vor der Volltextindizierung jedoch die Sprache kennen.  
   
 
   
@@ -106,9 +106,9 @@ ms.locfileid: "48229506"
 
   
 ##  <a name="type"></a> Auswirkung des Spaltentyps auf Volltextsuche  
- Ein weiterer Aspekt bei der Wahl der Sprache ist die Art und Weise, wie die Daten dargestellt werden. Für Daten, die nicht in gespeichert ist `varbinary(max)` Spalte, die keine spezielle Filterung wird ausgeführt. Stattdessen durchläuft der Text die Worteinheitenerkennungs-Komponente i. A. unverändert.  
+ Ein weiterer Aspekt bei der Wahl der Sprache ist die Art und Weise, wie die Daten dargestellt werden. Für Daten, die nicht in `varbinary(max)`-Spalten gespeichert sind, erfolgt keine spezielle Filterung. Stattdessen durchläuft der Text die Worteinheitenerkennungs-Komponente i. A. unverändert.  
   
- Die Wörtertrennung ist außerdem hauptsächlich für die Verarbeitung von geschriebenem Text konzipiert. Für Text mit speziellen Auszeichnungen (wie z. B. HTML) wird möglicherweise keine große linguistische Genauigkeit bei der Indizierung und Suche erreicht. In diesem Fall haben Sie zwei Möglichkeiten. Die bevorzugte Methode besteht darin, die Textdaten in einer `varbinary(max)`-Spalte zu speichern und den Dokumenttyp anzugeben, sodass die Daten gefiltert werden können. Ist dies nicht machbar, können Sie u.&nbsp;U. die neutrale Wörtertrennung verwenden und ggf. den Füllwortlisten Markupdaten (wie "br" in HTML) hinzufügen.  
+ Die Wörtertrennung ist außerdem hauptsächlich für die Verarbeitung von geschriebenem Text konzipiert. Für Text mit speziellen Auszeichnungen (wie z. B. HTML) wird möglicherweise keine große linguistische Genauigkeit bei der Indizierung und Suche erreicht. In diesem Fall Sie zwei Optionen: die bevorzugte Methode besteht darin, den Text im Datenspeicher `varbinary(max)` Spalte und den Dokumenttyp anzugeben, damit die Daten gefiltert werden können. Ist dies nicht machbar, können Sie u.&nbsp;U. die neutrale Wörtertrennung verwenden und ggf. den Füllwortlisten Markupdaten (wie "br" in HTML) hinzufügen.  
   
 > [!NOTE]  
 >  Eine sprachbasierte Wortstammerkennung ist nicht möglich, wenn Sie die neutrale Sprache angeben.  

@@ -14,12 +14,12 @@ ms.assetid: ccad6262-01e1-447a-bd2b-c105154c80ce
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 22da46c214f42e5e561e51895f98b59d490eb389
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a1f175de4b205b6af98ea9bcc29e7679711b0943
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671299"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405485"
 ---
 # <a name="generating-reports-oracletosql"></a>Generieren von Berichten (OracleToSQL)
 Die Berichte bestimmte Aktivitäten, die mithilfe der Befehle ausgeführt werden in der SSMA-Konsole auf Objektebene-Struktur generiert.  
@@ -90,7 +90,7 @@ Verwenden Sie das folgende Verfahren zum Generieren von Berichten:
 ### <a name="synchronize-target"></a>Synchronisieren von Ziel:  
 Der Befehl **synchronisieren-Ziel** hat **Bericht-Fehler-to** -Parameter, der den Speicherort der Fehlerbericht für den Synchronisierungsvorgang angibt. Klicken Sie dann eine Datei namens **TargetSynchronizationReport&lt;n&gt;. XML** wird erstellt, an der angegebenen Position, in denen **&lt;n&gt;** ist die Anzahl von eindeutigen Dateinamen, die mit einer Ziffer bei jeder Ausführung desselben Befehls inkrementiert.  
   
-**Hinweis:** , wenn der Ordnerpfad angegeben wird, und klicken Sie dann 'Bericht-Fehler-to'-Parameter ein optionales Attribut für "zu synchronisieren: das Ziel des Befehls wird".  
+**Hinweis**: Wenn der Ordnerpfad angegeben ist, wird 'Bericht-Fehler-to'-Parameter ein optionales Attribut für "zu synchronisieren: das Ziel des Befehls".  
   
 ```  
 <!-- Example: Synchronize target entire Database with all attributes-->  
@@ -103,9 +103,9 @@ Der Befehl **synchronisieren-Ziel** hat **Bericht-Fehler-to** -Parameter, der de
   
    report-errors-to="<file-name/folder-name>"/>  
 ```  
-**Objektname:** gibt an, die Objekte, die für die Synchronisierung (zudem können zu individuellen-Objektnamen oder einen Gruppennamen für das Objekt) in Betracht gezogen.  
+**Objektname:** Gibt an, die Objekte, die für die Synchronisierung (es kann auch zu individuellen-Objektnamen oder einen Gruppennamen für das Objekt haben) in Betracht gezogen.  
   
-**Bei Fehler:** gibt an, ob die Synchronisierungsfehler als Warnungen oder Fehler angegeben. Verfügbare Optionen für in-Fehler:  
+**Fehler:** Gibt an, ob die Synchronisierungsfehler als Warnungen oder Fehler angegeben. Verfügbare Optionen für in-Fehler:  
   
 -   Bericht insgesamt als Warnung  
   
@@ -116,7 +116,7 @@ Der Befehl **synchronisieren-Ziel** hat **Bericht-Fehler-to** -Parameter, der de
 ### <a name="refresh-from-database"></a>Aktualisieren von Datenbank:  
 Der Befehl **Aktualisierung-in-Database** hat **Bericht-Fehler-to** -Parameter, der den Speicherort der Fehlerbericht für den Aktualisierungsvorgang angibt. Klicken Sie dann eine Datei namens **SourceDBRefreshReport&lt;n&gt;. XML** wird erstellt, an der angegebenen Position, in denen **&lt;n&gt;** ist die Anzahl von eindeutigen Dateinamen, die mit einer Ziffer bei jeder Ausführung desselben Befehls inkrementiert.  
   
-**Hinweis:** , wenn der Ordnerpfad angegeben wird, und klicken Sie dann 'Bericht-Fehler-to'-Parameter ein optionales Attribut für "zu synchronisieren: das Ziel des Befehls wird".  
+**Hinweis**: Wenn der Ordnerpfad angegeben ist, wird 'Bericht-Fehler-to'-Parameter ein optionales Attribut für "zu synchronisieren: das Ziel des Befehls".  
   
 ```  
 <!-- Example: Refresh entire Schema (with all attributes)-->  
@@ -131,9 +131,9 @@ Der Befehl **Aktualisierung-in-Database** hat **Bericht-Fehler-to** -Parameter, 
   
    report-errors-to="<file-name/folder-name>"/>  
 ```  
-**Objektname:** gibt an, die Objekte, die bei der Aktualisierung (zudem können zu individuellen-Objektnamen oder einen Gruppennamen für das Objekt) berücksichtigt.  
+**Objektname:** Gibt an, die Objekte, die für aktualisieren (es kann auch zu individuellen-Objektnamen oder einen Gruppennamen für das Objekt haben) in Betracht gezogen.  
   
-**Bei Fehler:** gibt an, ob die datenaktualisierung Fehler als Warnungen oder Fehler angegeben. Verfügbare Optionen für in-Fehler:  
+**Fehler:** Gibt an, ob die datenaktualisierung Fehler als Warnungen oder Fehler angegeben. Verfügbare Optionen für in-Fehler:  
   
 -   Bericht insgesamt als Warnung  
   

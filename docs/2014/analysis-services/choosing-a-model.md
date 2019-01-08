@@ -17,17 +17,17 @@ ms.assetid: 444bbf9c-cec8-460e-881d-38784fb146fa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4cbde25ffc504e2e2c41bcf6b46cde9d464daa7d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d91e282ebfe0299fd6015530e8af1b6d10e6547
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113290"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400513"
 ---
 # <a name="choosing-a-model"></a>Auswählen eines Modells
-  **Mining-Algorithmus:** dem Datamining *Algorithmus* ist der Mechanismus, der Muster aus Daten erstellt. Der Algorithmus definiert, wie Daten gezählt werden, wie Beziehungen abgeleitet werden und wie Muster gespeichert werden. Die Auswahl eines Algorithmus richtet sich teilweise nach der Art der zu analysierenden Daten. Beispielsweise unterstützten einige Algorithmen nur fortlaufende Nummern, während andere am besten mit einer begrenzten Anzahl unterschiedlicher Werte eingesetzt werden.  
+  **Mining-Algorithmus:** Die Datamining *Algorithmus* ist der Mechanismus, der Muster aus Daten erstellt. Der Algorithmus definiert, wie Daten gezählt werden, wie Beziehungen abgeleitet werden und wie Muster gespeichert werden. Die Auswahl eines Algorithmus richtet sich teilweise nach der Art der zu analysierenden Daten. Beispielsweise unterstützten einige Algorithmen nur fortlaufende Nummern, während andere am besten mit einer begrenzten Anzahl unterschiedlicher Werte eingesetzt werden.  
   
- **Miningmodell:** das Ergebnis der Datenanalyse durch einen Algorithmus wird gespeichert, einem *Miningmodell*. Ein Miningmodell stellt eine Sammlung von Regeln, Statistiken und Mustern dar. Die *Inhalt* des Miningmodells hängt von der Algorithmus Sie verwendet, um die Daten zu verarbeiten, jedoch können Folgendes beinhalten:  
+ **Miningmodell:** Das Ergebnis der Datenanalyse durch einen Algorithmus wird gespeichert, einem *Miningmodell*. Ein Miningmodell stellt eine Sammlung von Regeln, Statistiken und Mustern dar. Die *Inhalt* des Miningmodells hängt von der Algorithmus Sie verwendet, um die Daten zu verarbeiten, jedoch können Folgendes beinhalten:  
   
 -   If-then-Regeln, die beschreiben, wie Produkte bei einer Transaktion gruppiert werden.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48113290"
   
 -   *Knoten* in einem Netzwerk verbunden *Kanten*. Die Knoten stellen Elemente oder Elementgruppen dar. Die Kanten werden gemäß der Stärke der Beziehungen zwischen Knoten bewertet.  
   
- **Mithilfe des Modells:** , nachdem Sie ein Modell erstellt haben, Sie die bereitgestellten Viewern untersuchen können oder Sie können eine Abfrage für das Modell erstellen. Abfragen können für folgende Aufgaben verwendet werden:  
+ **Verwenden das Modell:** Nachdem Sie ein Modell erstellt haben, können Sie die bereitgestellten Viewern untersuchen, oder Sie können eine Abfrage für das Modell erstellen. Abfragen können für folgende Aufgaben verwendet werden:  
   
 -   Vorhersagen künftiger Werte.  
   

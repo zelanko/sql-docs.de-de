@@ -10,12 +10,12 @@ ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ff31e00ecb56138239a1d6d87de276754e84a5e6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d509ad58491bca379e3ab86e07aee63e8a5d3946
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657862"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520668"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Konvertieren von DB2-Schemas (DB2ToSQL)
 Nachdem Sie eine Verbindung mit DB2 hergestellt haben, verbunden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und das Projekt festlegen und Optionen für die Zuordnung von Daten, können Sie die DB2-Datenbankobjekte zu konvertieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankobjekten.  
@@ -33,20 +33,20 @@ Die folgende Tabelle zeigt, welche DB2 Objekte konvertiert werden, und das resul
   
 |DB2-Objekte|Resultierende SQL Server-Objekte|  
 |-----------|----------------------------|  
-|Datentypen|**SSMA wird jeder Typ, mit Ausnahme der unten aufgeführten Folgendes:**<br /><br />CLOB: Einige native Funktionen für die Arbeit mit diesem Typ werden nicht unterstützt (z. B. CLOB_EMPTY())<br /><br />BLOB: Einige native Funktionen für die Arbeit mit diesem Typ werden nicht unterstützt (z. B. BLOB_EMPTY())<br /><br />DBLOB: Einige native Funktionen für die Arbeit mit diesem Typ werden nicht unterstützt (z. B. DBLOB_EMPTY())|  
-|Benutzerdefinierte Typen|**SSMA ordnet die folgenden benutzerdefinierten:**<br /><br />Gesonderter Typ<br /><br />Strukturierten Typ<br /><br />Datentypen für die SQL-PL – Hinweis: unsichere Cursortyp werden nicht unterstützt.|  
+|Datentypen|**SSMA wird jeder Typ, mit Ausnahme der unten aufgeführten Folgendes:**<br /><br />CLOB: Einige systemeigenen Funktionen für die Arbeit mit diesem Typ werden nicht unterstützt (z. B. CLOB_EMPTY())<br /><br />BLOB: Einige systemeigenen Funktionen für die Arbeit mit diesem Typ werden nicht unterstützt (z. B. BLOB_EMPTY())<br /><br />DBLOB: Einige systemeigenen Funktionen für die Arbeit mit diesem Typ werden nicht unterstützt (z. B. DBLOB_EMPTY())|  
+|Benutzerdefinierte Typen|**SSMA ordnet die folgenden benutzerdefinierten:**<br /><br />Gesonderter Typ<br /><br />Strukturierten Typ<br /><br />SQL-PL-Datentypen – Hinweis: Schwache Cursortyp werden nicht unterstützt.|  
 |Spezielle Register|**SSMA wird nur registriert, die unten aufgeführten:**<br /><br />AKTUELLER ZEITSTEMPEL<br /><br />AKTUELLES DATUM<br /><br />AKTUELLE ZEIT<br /><br />AKTUELLE ZEITZONE<br /><br />AKTUELLER BENUTZER<br /><br />SESSION_USER und Benutzer<br /><br />SYSTEM_USER<br /><br />AKTUELLE CLIENT_APPLNAME<br /><br />AKTUELLE CLIENT_WRKSTNNAME<br /><br />AKTUELLE SPERRUNGSTIMEOUT<br /><br />AKTUELLES SCHEMA<br /><br />AKTUELLER SERVER<br /><br />AKTUELLE ISOLATION<br /><br />Andere spezielle registriert werden nicht auf SQLServer semantic zugeordnet.|  
 |CREATE TABLE|**SSMA wird CREATE TABLE, mit den folgenden Ausnahmen:**<br /><br />Mehrdimensionale clustering (MDC) Tabellen<br /><br />Bereich gruppierte Tabellen (RCT)<br /><br />Partitionierte Tabellen<br /><br />Getrennte Tabelle<br /><br />DATA CAPTURE-Klausel<br /><br />Option IMPLICITLY AUSGEBLENDET<br /><br />VOLATILE-option|  
 |CREATE VIEW|SSMA ordnet CREATE VIEW mit "Mit lokalen CHECK OPTION" jedoch andere Optionen sind nicht auf SQL Server-Semantik zugeordnet|  
 |CREATE INDEX|**SSMA wird die CREATE INDEX mit den folgenden Ausnahmen:**<br /><br />XML-Index<br /><br />Option BUSINESS_TIME ohne ÜBERSCHNEIDUNGEN<br /><br />PARTITIONIERTE-Klausel<br /><br />Spezifikation nur die option<br /><br />Mithilfe der erweitern-option<br /><br />MINPCTUSED-option<br /><br />SEITENTEILUNG-option|  
 |Trigger|**SSMA wird der folgende Triggersemantik:**<br /><br />Nach dem / EACH ROW-Trigger<br /><br />Nach dem /FOR löst jeder Anweisung<br /><br />VOR / EACH Zeile und anstelle von / EACH ROW-Trigger|  
 |Sequenzen|Zugeordnet sind.|  
-|SELECT-Anweisung|**Wählen Sie SSMA-Zuordnungen mit den folgenden Ausnahmen:**<br /><br />Daten-Change-Tabelle-Reference-Klausel – teilweise zugeordnet ist, aber die endgültigen Tabellen wird nicht unterstützt<br /><br />Tabellenverweis Klausel – teilweise zugeordnet, aber nur-Tabelle-Reference, outer Table-Verweis, Analyze_table-Ausdruck, Auflistung abgeleitete Tabelle, Xmltable-Ausdruck nicht SQL Server-Semantik zugeordnet sind<br /><br />Punkt-zu-Spezifikation-Klausel – nicht zugeordnet.<br /><br />Weiterhin-Handler-Klausel – nicht zugeordnet.<br /><br />Typisierte-Abhängigkeitsklausel – nicht zugeordnet.<br /><br />Gleichzeitiger Zugriff-Auflösung-Klausel – nicht zugeordnet.|  
+|SELECT-Anweisung|**Wählen Sie SSMA-Zuordnungen mit den folgenden Ausnahmen:**<br /><br />Daten-Change-Tabelle-Reference-Klausel – teilweise zugeordnet, aber die endgültigen Tabellen wird nicht unterstützt<br /><br />Tabelle-Reference-Klausel – teilweise zugeordnet, aber nur-Tabelle-Reference, outer Table-Verweis, Analyze_table-Ausdruck, Auflistung abgeleitete Tabelle, Xmltable-Ausdruck nicht SQL Server-Semantik zugeordnet sind<br /><br />Punkt-zu-Spezifikation-Klausel - nicht zugeordnet.<br /><br />Weiterhin-Handler-Klausel - nicht zugeordnet.<br /><br />Typisierte-Abhängigkeitsklausel - nicht zugeordnet.<br /><br />Gleichzeitiger Zugriff-Auflösung-Klausel - nicht zugeordnet.|  
 |VALUES-Anweisung|Zugeordnet ist.|  
 |INSERT-Anweisung|Zugeordnet ist.|  
-|UPDATE-Anweisung|S**SMA ordnet UPDATE mit den folgenden Ausnahmen:**<br /><br />Tabellenverweis Klausel – nur Tabelle-Verweis ist nicht auf SQL Server-Semantik zugeordnet.<br /><br />Punkt-Klausel ist nicht zugeordnet.|  
-|MERGE-Anweisung|**SSMA ordnet MERGE mit den folgenden Ausnahmen:**<br /><br />Einzelne und mehrere Vorkommen of Each-Klausel: SQL Server-Semantik für die einzelnen Klauseln beschränkt Vorkommen zugeordnet ist<br /><br />SIGNAL-Klausel – entspricht keinem SQL Server-Semantik<br /><br />Gemischte UPDATE und Klauseln löschen – entspricht keinem SQL Server-Semantik<br /><br />Punkt-Klausel – entspricht keinem SQL Server-Semantik|  
-|DELETE-Anweisung|**SSMA-Zuordnungen löschen mit den folgenden Ausnahmen:**<br /><br />Tabellenverweis Klausel – nur Tabelle-Verweis ist nicht auf SQL Server-Semantik zugeordnet.<br /><br />Punkt-Klausel entspricht keinem SQL Server-Semantik|  
+|UPDATE-Anweisung|S**SMA ordnet UPDATE mit den folgenden Ausnahmen:**<br /><br />Tabellenverweis Klausel - nur-Tabelle-Verweis ist nicht auf SQL Server-Semantik zugeordnet.<br /><br />Punkt-Klausel – ist nicht zugeordnet.|  
+|MERGE-Anweisung|**SSMA ordnet MERGE mit den folgenden Ausnahmen:**<br /><br />Einzelne und mehrere Vorkommen of Each-Klausel: SQL Server-Semantik für die einzelnen Klauseln beschränkt Vorkommen zugeordnet ist<br /><br />SIGNAL-Klausel – entspricht keinem SQL Server-Semantik<br /><br />Gemischte Update- und DELETE-Klauseln - Semantik von SQL Server nicht zugeordnet<br /><br />Punkt-Klausel - entspricht keinem SQL Server-Semantik|  
+|DELETE-Anweisung|**SSMA-Zuordnungen löschen mit den folgenden Ausnahmen:**<br /><br />Tabellenverweis Klausel - nur-Tabelle-Verweis ist nicht auf SQL Server-Semantik zugeordnet.<br /><br />Punkt-Klausel – entspricht keinem SQL Server-Semantik|  
 |Isolationsstufe und Sperrentyp|Zugeordnet ist.|  
 |Prozeduren (SQL)|Zugeordnet sind.|  
 |Prozeduren (extern)|Manuelles Update erforderlich.|  
@@ -65,10 +65,10 @@ Die folgende Tabelle zeigt, welche DB2 Objekte konvertiert werden, und das resul
 |RETURN-Anweisung|Zugeordnet ist.|  
 |SIGNAL-Anweisung|Bedingungen werden nicht unterstützt. Nachrichten können optional sein.|  
 |WHILE-Anweisung|Zugeordnet ist.|  
-|GET-Diagnose-Anweisung|**SSMA ordnet Diagnose zu erhalten, mit den folgenden Ausnahmen:**<br /><br />ROW_COUNT – zugeordnet ist.<br /><br />DB2_RETURN_STATUS – zugeordnet ist.<br /><br />MESSAGE_TEXT – zugeordnet ist.<br /><br />DB2_SQL_NESTING_LEVEL - entspricht keinem SQL Server-Semantik<br /><br />DB2_TOKEN_STRING - entspricht keinem SQL Server-Semantik|  
-|Cursor|**SSMA ordnet Cursor mit den folgenden Ausnahmen:**<br /><br />ALLOCATE-CURSOR-Anweisung – entspricht keinem SQL Server-Semantik<br /><br />Zuordnen von LOCATORS Statement - entspricht keinem SQL Server-Semantik<br /><br />DECLARE CURSOR-Anweisung - Returnability-Klausel ist nicht auf SQL Server-Semantik zugeordnet.<br /><br />FETCH-Anweisung: partielle datenzuordnung. Variablen, die als Ziel werden nur unterstützt. SQLDA-Deskriptor ist nicht auf SQL Server-Semantik zugeordnet.|  
+|GET-Diagnose-Anweisung|**SSMA ordnet Diagnose zu erhalten, mit den folgenden Ausnahmen:**<br /><br />Die ROW_COUNT - zugeordnet ist.<br /><br />DB2_RETURN_STATUS – zugeordnet ist.<br /><br />MESSAGE_TEXT – zugeordnet ist.<br /><br />DB2_SQL_NESTING_LEVEL - entspricht keinem SQL Server-Semantik<br /><br />DB2_TOKEN_STRING - entspricht keinem SQL Server-Semantik|  
+|Cursor|**SSMA ordnet Cursor mit den folgenden Ausnahmen:**<br /><br />ALLOCATE-CURSOR-Anweisung – entspricht keinem SQL Server-Semantik<br /><br />Zuordnen von LOCATORS Statement - entspricht keinem SQL Server-Semantik<br /><br />DECLARE CURSOR-Anweisung - Returnability-Klausel ist nicht auf SQL Server-Semantik zugeordnet.<br /><br />FETCH-Anweisung - partielle datenzuordnung. Variablen, die als Ziel werden nur unterstützt. SQLDA-Deskriptor ist nicht auf SQL Server-Semantik zugeordnet.|  
 |Variablen|Zugeordnet sind.|  
-|Ausnahmen, Handler und Bedingungen|**SSMA wird "Behandlung von Ausnahmen" mit den folgenden Ausnahmen:**<br /><br />Handler zu beenden: zugeordnet sind.<br /><br />Handler rückgängig zu machen – zugeordnet sind.<br /><br />Handler weiterhin – sind nicht zugeordnet.<br /><br />Bedingungen - ist es nicht SQL Server-Semantik zugeordnet.|  
+|Ausnahmen, Handler und Bedingungen|**SSMA wird "Behandlung von Ausnahmen" mit den folgenden Ausnahmen:**<br /><br />Handler zu beenden: zugeordnet sind.<br /><br />Handler rückgängig zu machen – zugeordnet sind.<br /><br />Handler - fortsetzen, werden nicht zugeordnet.<br /><br />Bedingungen - ist es nicht SQL Server-Semantik zugeordnet.|  
 |Dynamische SQL-Anweisungen|Nicht zugeordnet.|  
 |Aliase|Zugeordnet sind.|  
 |Spitznamen|Partielle datenzuordnung. Manuelle Verarbeitung ist für die zugrunde liegende Objekt erforderlich|  

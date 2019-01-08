@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: eeed58e54510748969b1111e09c3791a9320d23c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de2cd6746b23ebec2b51e124ba7b5d2e22fb91e4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732772"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520862"
 ---
 # <a name="syspdwnodescolumnstoredictionaries-transact-sql"></a>Sys.pdw_nodes_column_store_dictionaries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47732772"
 |**column_id**|**int**|ID der columnstore-Spalte.|  
 |**dictionary_id**|**int**|ID des Wörterbuchs.|  
 |**version**|**int**|Version des Wörterbuchformats.|  
-|**type**|**int**|Wörterbuchtyp:<br /><br /> 1-Hash Wörterbuch mit **Int** Werte<br /><br /> 2 - Nicht verwendet<br /><br /> 3 – Hashwörterbuch, das Zeichenfolgenwerte enthält<br /><br /> 4 – hashwörterbuch Wörterbuch mit **"float"** Werte|  
+|**type**|**int**|Wörterbuchtyp:<br /><br /> 1 - Hash Wörterbuch mit **Int** Werte<br /><br /> 2 – nicht verwendet.<br /><br /> 3 – hashwörterbuch, das Zeichenfolgenwerte enthält<br /><br /> 4 - Hash Wörterbuch mit **"float"** Werte|  
 |**last_id**|**int**|Die letzte Daten-ID im Wörterbuch.|  
 |**entry_count**|**bigint**|Die Anzahl von Einträgen im Wörterbuch.|  
 |**on_disc_size**|**bigint**|Größe des Wörterbuchs in Byte.|  

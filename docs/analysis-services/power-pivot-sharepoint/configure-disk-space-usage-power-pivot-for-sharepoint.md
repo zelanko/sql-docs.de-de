@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren der Speicherplatzverwendung (PowerPivot für SharePoint) | Microsoft Docs
+title: Konfigurieren der Speicherplatzverwendung (PowerPivot für SharePoint) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 24d96feb0e57bf0b1c62532cca63ddf07f96f21c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6fa6090a675326db06491d54b82a6844363ee3e9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024747"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409197"
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>Konfigurieren der Speicherplatzverwendung (Power Pivot für SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -50,11 +50,11 @@ ms.locfileid: "34024747"
   
  Auf Systemebene können Sie E-Mail-Warnungen erstellen, die Sie benachrichtigen, wenn der Speicherplatz gering ist. Microsoft System Center enthält eine E-Mail-Benachrichtigungsfunktion. Sie können Warnungen auch mithilfe des Ressourcen-Managers für Dateiserver, des Taskplaners oder PowerShell-Skripts einrichten. Unter den folgenden Links erhalten Sie nützliche Informationen zum Einrichten von Benachrichtigungen zu niedrigem Speicherplatz:  
   
--   [Neues in File Server Resource Manager](http://technet.microsoft.com/library/hh831746.aspx) (http://technet.microsoft.com/library/hh831746.aspx).  
+-   [Neues im Ressourcen-Manager](http://technet.microsoft.com/library/hh831746.aspx) (http://technet.microsoft.com/library/hh831746.aspx).  
   
--   [File Server Resource Manager schrittweise Anleitung für Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=204875) (http://go.microsoft.com/fwlink/?LinkID=204875).  
+-   [Schrittweise Anleitung für Resource Manager für Dateiserver für Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=204875) (http://go.microsoft.com/fwlink/?LinkID=204875).  
   
--   [Festlegen von wenig Speicherplatz Warnungen unter Windows Server 2008](http://go.microsoft.com/fwlink/?LinkID=204870) ( http://go.microsoft.com/fwlink/?LinkID=204870).  
+-   [Festlegen von unzureichendem Speicherplatz Warnungen unter Windows Server 2008](http://go.microsoft.com/fwlink/?LinkID=204870) ( http://go.microsoft.com/fwlink/?LinkID=204870).  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>So schränken Sie den zum Speichern von zwischengespeicherten Dateien verwendeten Speicherplatz ein  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34024747"
   
 3.  Legen Sie unter „Datenträgerverwendung“ einen Wert für **Speicherplatz insgesamt** fest (in Gigabyte), um eine Obergrenze für den zum Zwischenspeichern verwendeten Speicherplatz festzulegen. Der Standardwert beträgt 0, d. h. Analysis Services kann den gesamten verfügbaren Speicherplatz verwenden.  
   
-4.  Geben Sie unter „Datenträgerverwendung“ für die Einstellung **Delete cached databases in last ‘n’ hours** (In den letzten „n“ Stunden zwischengespeicherte Datenbanken löschen) Kriterien für die letzte Verwendung an, um den Cache bei Erreichen des maximalen Speicherplatzes zu leeren.  
+4.  In der Datenträgerverwendung in der **Löschen von zwischengespeicherten Datenbanken in den letzten "n" Stunden** festlegen, geben Sie zuletzt verwendeten Kriterien zum Leeren des Caches aus, wenn Speicherplatz die maximale Grenze erreicht ist.  
   
      Der Standardwert sind 4 Stunden, d. h. alle Datenbanken, die für 4 Stunden oder mehr inaktiv waren, werden aus dem Dateisystem gelöscht. Datenbanken, die inaktiv, aber weiterhin im Arbeitsspeicher vorhanden sind, werden entladen und dann aus dem Dateisystem gelöscht.  
   

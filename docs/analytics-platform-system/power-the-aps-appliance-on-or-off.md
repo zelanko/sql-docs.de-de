@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: a8be7ec364a257752576fa150434a67a92c28d9c
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 994b0f94448b7fb7901734b2ae737e26be23900f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909510"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527862"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Schalten Sie das Gerät aktiviert oder deaktiviert für Analytics Platform System
 In diesem Thema wird beschrieben, wie mit ein- und Ausschalten der Analytics-Plattform Systemappliance, Parallel Data Warehouse ausgeführt wird. Verwenden Sie in diesem Thema eine Analytics Platform System Appliance bewegt wird und wie auf einer Appliance nach einem schwerwiegenden Stromausfall.  
@@ -39,15 +39,15 @@ Vor dem Ausschalten auf der Appliances, sollten Sie alle Aktivitäten auf dem Ge
 > [!WARNING]  
 > Alle Schritte müssen ausgeführt werden, in der exakten Reihenfolge aufgeführt, und jeder Schritt muss abschließen, bevor der nächste Schritt ausgeführt wird, sofern nicht anders angegeben. Ausführen der Schritte außerhalb der Reihenfolge oder ohne zu warten, für die einzelnen Schritte zum Abschließen kann zu Fehlern führen, wenn das Gerät zu einem späteren Zeitpunkt eingeschaltet ist.  
   
-1.  Verbinden mit dem Steuerungsknoten mit PDW (***PDW_region *-CTL01** ), und melden Sie sich mit dem Analytics Platform System Appliance-Domänenadministratorkonto.  
+1.  Verbinden mit dem Steuerungsknoten mit PDW (**_PDW_region_-CTL01** ), und melden Sie sich mit dem Analytics Platform System Appliance-Domänenadministratorkonto.  
   
 2.  Führen Sie `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe` zum Öffnen der **Configuration Manager**.  
   
 3.  In der Configuration Manager unter der **Parallel Data Warehouse-Topologie** Menü klicken Sie auf die **Dienststatus** Registerkarte, und klicken Sie auf **Region beenden** PDW-Dienste zu beenden.   
   
-4.  Herstellen einer Verbindung mit ***Appliance_domain *-HST01** und melden Sie sich mit dem Domänenadministratorkonto für die Appliance.  
+4.  Herstellen einer Verbindung mit  **_Appliance_domain_-HST01** und melden Sie sich mit dem Domänenadministratorkonto für die Appliance.  
   
-5.  Mithilfe der **Failovercluster-Manager** Herstellen einer Verbindung mit dem ***Appliance_domain *-WFOHST01** als Clusterressource konfigurieren, wenn nicht automatisch verbunden, und klicken Sie dann im Navigationsbereich auf **Rollen**. In der **Rollen** Bereich:  
+5.  Mithilfe der **Failovercluster-Manager** Herstellen einer Verbindung mit der  **_Appliance_domain_-WFOHST01** als Clusterressource konfigurieren, wenn nicht automatisch verbunden, und klicken Sie dann im Navigationsbereich auf **Rollen**. In der **Rollen** Bereich:  
   
     1.  Per Mehrfachauswahl ausgewählten alle virtuellen Computer. Mit der rechten Maustaste sie aus, und wählen **Herunterfahren**.  
   
@@ -55,9 +55,9 @@ Vor dem Ausschalten auf der Appliances, sollten Sie alle Aktivitäten auf dem Ge
   
 6.  Schließen der **Failovercluster-Manager** Anwendung.  
   
-7. Beenden Sie alle Server außer ***Appliance_domain *-HST01**.  
+7. Beenden Sie alle Server außer  **_Appliance_domain_-HST01**.  
   
-8. Beenden Sie die ***Appliance_domain *-HST01** Server.  
+8. Beenden Sie die  **_Appliance_domain_-HST01** Server.  
   
 9. Beenden Sie die Stromverteilereinheiten (PDUs).  
   
@@ -70,25 +70,25 @@ Vor dem Ausschalten auf der Appliances, sollten Sie alle Aktivitäten auf dem Ge
   
 1.  Schalten Sie die Stromverteilereinheiten (PDUS), und warten Sie die Schalter für den automatischen start.  
   
-2.  Einschalten der ***Appliance_domain *-HST01** Server.  
+2.  Einschalten der  **_Appliance_domain_-HST01** Server.  
   
-3.  Melden Sie sich bei ***Appliance_domain *-HST01** als Domänenadministrator Appliance.  
+3.  Melden Sie sich bei  **_Appliance_domain_-HST01** als Domänenadministrator Appliance.  
   
-4.  Starten Sie den **Hyper-V-Manager** Programm (**virtmgmt.msc**) und Herstellen einer Verbindung mit ***Appliance_domain *-HST01** ist standardmäßig nicht verbunden.  
+4.  Starten Sie den **Hyper-V-Manager** Programm (**virtmgmt.msc**) und Herstellen einer Verbindung mit  **_Appliance_domain_-HST01** ist standardmäßig nicht verbunden.  
   
-    1.  Wenn Sie anhand des Namens verbinden können, da die ***PDW_region *-AD01** wird nicht ausgeführt wird, versuchen Sie es mithilfe der IP-Adresse.  
+    1.  Wenn Sie anhand des Namens verbinden können, da die  **_PDW_region_-AD01** wird nicht ausgeführt wird, versuchen Sie es mithilfe der IP-Adresse.  
   
-    2.  In der **VMs** Bereich Suchen ***PDW_region *-AD01** und vergewissern Sie sich, dass er ausgeführt wird. Wenn dies nicht der Fall ist, starten Sie diesen virtuellen Computer aus, und warten Sie, bis er vollständig gestartet wird.  
+    2.  In der **VMs** Bereich Suchen  **_PDW_region_-AD01** und vergewissern Sie sich, dass er ausgeführt wird. Wenn dies nicht der Fall ist, starten Sie diesen virtuellen Computer aus, und warten Sie, bis er vollständig gestartet wird.  
   
 5.  Schalten Sie die übrigen Server in der Appliance.  
   
 6.  Während auf **HST01** aus als der Appliance-Domänenadministrator angemeldet **Hyper-V-Manager**:  
   
-    1.  Herstellen einer Verbindung mit ***Appliance_domain *-HST02**.  
+    1.  Herstellen einer Verbindung mit  **_Appliance_domain_-HST02**.  
   
-    2.  In der **VMs** Bereich Suchen ***PDW_region *-AD02** und vergewissern Sie sich, dass er ausgeführt wird.  Wenn dies nicht der Fall ist, starten Sie diesen virtuellen Computer aus, und warten Sie, bis er vollständig gestartet wird.  
+    2.  In der **VMs** Bereich Suchen  **_PDW_region_-AD02** und vergewissern Sie sich, dass er ausgeführt wird.  Wenn dies nicht der Fall ist, starten Sie diesen virtuellen Computer aus, und warten Sie, bis er vollständig gestartet wird.  
   
-7.  Mit der **Failovercluster-Manager** Herstellen einer Verbindung mit der ***Appliance_domain *-WFOHST01** Clustern, wenn nicht automatisch verbunden, und klicken Sie dann in der **Navigation** Bereich, klicken Sie auf **Rollen**. In der **Rollen** Bereich:  
+7.  Mithilfe der **Failovercluster-Manager** Herstellen einer Verbindung mit der  **_Appliance_domain_-WFOHST01** Clustern, wenn nicht automatisch verbunden, und klicken Sie dann in der  **Navigation** Bereich, klicken Sie auf **Rollen**. In der **Rollen** Bereich:  
   
     1.  Mehrfachauswahl aller virtuellen Maschinen, die mit der rechten Maustaste sie, und klicken Sie dann auf **starten**.  
   
@@ -98,7 +98,7 @@ Vor dem Ausschalten auf der Appliances, sollten Sie alle Aktivitäten auf dem Ge
   
 8. Trennen von **HST01** Falls gewünscht.  
   
-9. Herstellen einer Verbindung mit ***PDW_region *-CTL01** mithilfe der Appliance-Domänenadministratorkonto.  
+9. Herstellen einer Verbindung mit  **_PDW_region_-CTL01** mithilfe der Appliance-Domänenadministratorkonto.  
   
 10. Führen Sie `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe` zum Starten der **Configuration Manager**.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - results [SQL Server], cursors
@@ -19,12 +18,12 @@ ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 10e6590da7d5efdb704a3f4005c278e2add41a5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8123179285b94377fff758121f535175705f29af
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134070"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774262"
 ---
 # <a name="cursors"></a>Cursor
   Vorgänge in einer relationalen Datenbank beziehen sich immer auf eine vollständige Gruppe von Zeilen. Beispielsweise besteht der Zeilensatz, der von einer SELECT-Anweisung zurückgegeben wird, aus allen Zeilen, die die Bedingungen der WHERE-Klausel der Anweisung erfüllen. Diese vollständige Gruppe von Zeilen, die von der Anweisung zurückgegeben wird, wird als Resultset bezeichnet. Anwendungen, vor allem interaktive Onlineanwendungen, sind nicht immer effektiv, wenn das gesamte Resultset als eine Einheit bearbeitet wird. Diese Anwendungen benötigen einen Mechanismus, um jeweils eine Zeile oder einen kleinen Zeilenblock zu bearbeiten. Cursor sind eine Erweiterung zu Resultsets und stellen diesen Mechanismus bereit.  
@@ -62,7 +61,7 @@ ms.locfileid: "48134070"
   
  Obwohl die Datenbank-API-Cursormodelle einen Vorwärtscursor als unterschiedlichen Cursortyp betrachten, gilt dies nicht für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] betrachtet sowohl die Vorwärts- als auch Bildlauffunktion als Optionen, die für statische, keysetgesteuerte und dynamische Cursor übernommen werden können. [!INCLUDE[tsql](../includes/tsql-md.md)] -Cursor unterstützen statische Vorwärtscursor sowie keysetgesteuerte und dynamische Cursor. Die Datenbank-API-Cursormodelle gehen davon aus, dass statische, keysetgesteuerte und dynamische Cursor immer bildlauffähig sind. Wenn das Cursorattribut oder die Cursoreigenschaft einer Datenbank-API auf FORWARD_ONLY festgelegt ist, wird dies von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] als dynamischer Vorwärtscursor implementiert.  
   
- STATIC-Cursor  
+ Statisch  
  Das vollständige Resultset eines statischen Cursors wird in **tempdb** erstellt, wenn der Cursor geöffnet wird. Ein statischer Cursor zeigt das Resultset immer so an, wie es zur Verfügung stand, als der Cursor geöffnet wurde. Statische Cursor erkennen wenige oder keine Änderungen, beanspruchen beim Durchführen eines Bildlaufs jedoch relativ wenig Ressourcen.  
   
  Der Cursor spiegelt jedoch keinerlei Änderungen wider, die in der Datenbank ausgeführt wurden und die sich entweder auf die Mitgliedschaft des Resultsets oder auf Änderungen an den Werten in den Spalten der Zeilen beziehen, aus denen das Resultset besteht. Ein statischer Cursor zeigt neue Zeilen, die nach dem Öffnen des Cursors in die Datenbank eingefügt wurden, nicht an, selbst wenn sie die Suchbedingungen der SELECT-Anweisung des Cursors erfüllen. Wenn Zeilen, aus denen sich das Resultset zusammensetzt, von anderen Benutzern aktualisiert werden, werden die neuen Datenwerte im statischen Cursor nicht angezeigt. Der statische Cursor zeigt Zeilen an, die nach dem Öffnen des Cursors aus der Datenbank entfernt wurden. Die Operationen UPDATE, INSERT oder DELETE werden in einem statischen Cursor nicht widergespiegelt (es sei denn, der Cursor wird geschlossen und wieder geöffnet). Selbst Änderungen, die mithilfe derselben Verbindung, die den Cursor öffnete, durchgeführt wurden, sind nicht enthalten.  

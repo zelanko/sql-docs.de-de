@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data [SQL Server]
@@ -16,12 +15,12 @@ ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 881a32bbb21eeeef0e09eaedb98897f90a1c0d27
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eaafa011f1b99ea90afce2902c877d0a25b9e6e3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215670"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811112"
 ---
 # <a name="work-with-change-data-sql-server"></a>Arbeiten mit Änderungsdaten (SQL Server)
   Änderungsdaten werden über Tabellenwertfunktionen (Table Valued Function, TVF) für Change Data Capture-Consumer verfügbar gemacht. Für alle Abfragen dieser Funktionen sind zwei Parameter erforderlich, um den Bereich der Protokollfolgenummern (Log Sequence Number, LSN) zu definieren, die bei der Entwicklung des zurückgegebenen Resultsets ausgewählt werden können. Sowohl der untere als auch der obere LSN-Wert, die das Intervall begrenzen, werden in das Intervall eingeschlossen.  
@@ -37,7 +36,7 @@ ms.locfileid: "48215670"
   
  `An insufficient number of arguments were supplied for the procedure or function cdc.fn_cdc_get_all_changes_ ...`  
   
- Entsprechende Fehler zurückgegeben, die für eine `net changes` Abfrage lautet wie folgt:  
+ Für eine `net changes`-Abfrage wird der folgende entsprechende Fehler zurückgegeben:  
   
  `Msg 313, Level 16, State 3, Line 1`  
   
@@ -73,7 +72,7 @@ ms.locfileid: "48215670"
     > [!NOTE]  
     >  Diese Option wird nur unterstützt, wenn für die Quelltabelle ein Primärschlüssel definiert ist oder wenn der Parameter @index_name zur Identifizierung eines eindeutigen Indexes verwendet wurde.  
   
-     Die **netchanges** -Funktion gibt eine Änderung pro geänderte Quelltabellenzeile zurück. Wenn im angegebenen Intervall mehrere Änderungen für die Zeile aufgezeichnet wurden, geben die Spaltenwerte den endgültigen Inhalt der Zeile wieder. Zur korrekten Ermittlung des Vorgangs, der für das Update der Zielumgebung erforderlich ist, muss die TVF sowohl den Anfangsvorgang als auch den Endvorgang für die Zeile berücksichtigen. Wird die Zeilenfilteroption 'all' angegeben, umfassen die von der `net changes`-Abfrage zurückgegebenen Vorgänge entweder Einfüge-, Lösch- oder Aktualisierungsvorgänge (neue Werte). Diese Option gibt die Updatemaske immer als NULL zurück, da mit der Berechnung einer aggregierten Maske ein gewisser Aufwand verbunden ist. Wenn Sie eine aggregierte Maske benötigen, die alle Änderungen einer Zeile wiedergibt, verwenden Sie die Option 'all with mask'. Wenn für die Downstreamverarbeitung die Unterscheidung zwischen Einfüge- und Updatevorgängen nicht erforderlich ist, verwenden Sie die Option 'all with merge'. In diesem Fall ist der Vorgangswert auf zwei Werte festgelegt: 1 für einen Löschvorgang und 5 für einen Vorgang, der ein Einfüge- oder ein Updatevorgang sein kann. Diese Option vermeidet den zusätzlichen Aufwand, der notwendig ist, um zu ermitteln, ob der abgeleitete Vorgang ein Einfüge- oder ein Updatevorgang sein sollte. Die Leistung der Abfrage kann steigen, wenn diese Unterscheidung nicht notwendig ist.  
+     Die **netchanges** -Funktion gibt eine Änderung pro geänderte Quelltabellenzeile zurück. Wenn im angegebenen Intervall mehrere Änderungen für die Zeile aufgezeichnet wurden, geben die Spaltenwerte den endgültigen Inhalt der Zeile wieder. Zur korrekten Ermittlung des Vorgangs, der für das Update der Zielumgebung erforderlich ist, muss die TVF sowohl den Anfangsvorgang als auch den Endvorgang für die Zeile berücksichtigen. Wird die Zeilenfilteroption 'all' angegeben, umfassen die von der `net changes`-Abfrage zurückgegebenen Vorgänge entweder Einfüge-, Lösch- oder Aktualisierungsvorgänge (neue Werte). Diese Option gibt die Updatemaske immer als NULL zurück, da mit der Berechnung einer aggregierten Maske ein gewisser Aufwand verbunden ist. Wenn Sie eine aggregierte Maske benötigen, die alle Änderungen einer Zeile wiedergibt, verwenden Sie die Option 'all with mask'. Wenn für die Downstreamverarbeitung die Unterscheidung zwischen Einfüge- und Updatevorgängen nicht erforderlich ist, verwenden Sie die Option 'all with merge'. In diesem Fall wird der Wert nur für zwei Werte annehmen: 1 für löschen oder 5 für einen Vorgang, der entweder ein Einfügevorgang oder ein Update handeln. Diese Option vermeidet den zusätzlichen Aufwand, der notwendig ist, um zu ermitteln, ob der abgeleitete Vorgang ein Einfüge- oder ein Updatevorgang sein sollte. Die Leistung der Abfrage kann steigen, wenn diese Unterscheidung nicht notwendig ist.  
   
  Die von einer Abfragefunktion zurückgegebene Updatemaske ist eine kompakte Darstellung aller mit einer Zeile der Änderungsdaten verbundenen Spaltenänderungen. In der Regel werden diese Informationen nur für eine kleine Teilmenge der aufgezeichneten Spalten benötigt. Es stehen Funktionen zur Verfügung, die helfen, Informationen aus der Maske in einer Form zu extrahieren, die direkt von Anwendungen verwendet werden kann. Die Funktion [sys.fn_cdc_get_column_ordinal](/sql/relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql) gibt die Ordnungsposition einer benannten Spalte für eine gegebene Aufzeichnungsinstanz zurück, während die Funktion [sys.fn_cdc_is_bit_set](/sql/relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql) die Parität des Bits in der angegebenen Maske zurückgibt, basierend auf der Ordnungsposition, die im Funktionsaufruf übergeben wurde. Zusammen ermöglichen diese Funktionen, Informationen effizient aus der Updatemaske zu extrahieren und sie mit der Anforderung von Änderungsdaten zurückzugeben. Die Verwendung dieser Funktionen wird in der Vorlage "Enumerate Net Changes Using All With Mask" veranschaulicht.  
   
@@ -113,7 +112,7 @@ ms.locfileid: "48215670"
   
  Der Name der Wrapperfunktion für die Abfrage aller Änderungen ist "fn_all_changes_", gefolgt vom Namen der Aufzeichnungsinstanz. Das Präfix, das für die Wrapperfunktion für Nettoänderungen verwendet wird, lautet "fn_net_changes_". Beide Funktionen erwarten wie die zugehörigen Change Data Capture-TVFs drei Argumente. Das Abfrageintervall für die Wrapper wird jedoch durch zwei datetime-Werte anstelle zweier LSN-Werte festgelegt. Der @row_filter_option-Parameter für beide Funktionssätze ist identisch.  
   
- Die generierten Wrapperfunktionen unterstützen die folgende Konvention zum systematischen Durchlaufen der Change Data Capture-Zeitachse: Es wird davon ausgegangen, dass der @end_time-Parameter des vorhergehenden Intervalls als @start_time-Parameter des nachfolgenden Intervalls verwendet wird. Die Wrapperfunktion übernimmt die Zuordnung der datetime-Werte zu den LSN-Werten und stellt sicher, dass keine Daten verloren gehen oder wiederholt werden, sofern diese Konvention eingehalten wird.  
+ Die generierten Wrapperfunktionen unterstützen die folgende Konvention zum systematischen Durchlaufen der Change Data Capture-Zeitachse: Es wird davon ausgegangen, die die @end_time Parameter des vorhergehenden Intervalls als verwendet werden die @start_time Parameter des nachfolgenden Intervalls. Die Wrapperfunktion übernimmt die Zuordnung der datetime-Werte zu den LSN-Werten und stellt sicher, dass keine Daten verloren gehen oder wiederholt werden, sofern diese Konvention eingehalten wird.  
   
  Beim Generieren der Wrapper kann angegeben werden, ob die Wrapper im angegebenen Abfragefenster eine geschlossene oder eine offene obere Grenze unterstützen sollen. Das heißt, der Aufrufer kann festlegen, ob Einträge mit einer Commitzeit in das Intervall aufgenommen werden sollen, die der oberen Grenze des Extrahierungsintervalls entspricht. Standardmäßig wird die Obergrenze aufgenommen.  
   

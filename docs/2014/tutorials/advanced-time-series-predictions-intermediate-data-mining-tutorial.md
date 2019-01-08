@@ -11,12 +11,12 @@ ms.assetid: b614ebdb-07ca-44af-a0ff-893364bd4b71
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f575a51d34bfaa6b8a4ca1a6200cf60f9d89a870
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6a45d0bf0878b472e4979c00a5a38e8b01974a22
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122740"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544327"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>Erweiterte Zeitreihenvorhersagen (Data Mining-Lernprogramm für Fortgeschrittene)
   Bei der Untersuchung des Prognosemodells wurde gezeigt, dass die Verkäufe in den meisten Regionen einem ähnlichen Muster folgen. Einige Regionen und Modelle wie das Modell M200 im Pazifischen Raum weisen jedoch deutlich abweichende Trends auf. Dies ist wenig überraschend, da bekanntermaßen häufig regionale Unterschiede auftreten und durch zahlreiche Faktoren verursacht werden können, einschließlich Marketingaktionen, fehlerhafter Berichterstellung sowie politischer Faktoren.  
@@ -44,7 +44,7 @@ ms.locfileid: "48122740"
 ##  <a name="bkmk_newExtendData"></a> Erstellen der neuen erweiterten Umsatzdaten  
  Um die Umsatzdaten zu aktualisieren, müssen Sie die letzten Umsatzzahlen abrufen. Die Daten aus der Pazifikregion sind von besonderem Interesse, da dort eine regionale Werbeaktion durchgeführt wurde, um neue Niederlassungen einzuführen und ihre Produkte bekannt zu machen.  
   
- In diesem Szenario gehen wir davon aus, dass die Daten aus einer Excel-Arbeitsmappe importiert wurden, die neue Daten für einige Regionen über nur drei Monate enthält. Sie erstellen mit einem Transact-SQL-Skript eine Tabelle für die Daten und definieren dann eine Datenquellensicht, die für Vorhersage verwendet werden soll.  
+ In diesem Szenario gehen wir davon aus, dass die Daten aus einer Excel-Arbeitsmappe importiert wurden, die nur drei Monaten mit neuen Daten für einige Regionen enthält. Sie erstellen eine Tabelle für die Daten mithilfe von Transact-SQL-Skript, und definieren Sie dann eine Datenquellensicht für Vorhersagen verwenden.  
   
 #### <a name="create-the-table-with-new-sales-data"></a>Erstellen der Tabelle mit neuen Umsatzdaten  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48122740"
   
      **Datenquelle**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **Tabellen und Sichten auswählen**: Wählen Sie in der Tabelle, die Sie soeben erstellt haben, handelt es sich bei NewSalesData.  
+     **Tabellen und Sichten auswählen**: Wählen Sie die Tabelle, die Sie gerade erstellt haben, NewSalesData.  
   
 3.  Klicken Sie auf **Fertig stellen**.  
   
@@ -122,9 +122,9 @@ ms.locfileid: "48122740"
   
 2.  Klicken Sie auf der Begrüßungsseite des Assistenten auf **Weiter**.  
   
-3.  Auf der **Auswählen einer Datenquelle** Seite [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)], und klicken Sie dann auf **Weiter**.  
+3.  Wählen Sie auf der Seite **Datenquelle auswählen** [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]aus und klicken Sie dann auf **Weiter**.  
   
-4.  Fügen Sie auf der Seite **Tabellen und Sichten auswählen**keine Tabellen hinzu – klicken Sie nur auf **Weiter**+.  
+4.  Auf der Seite **Tabellen und Sichten auswählen**, fügen Sie keine Tabellen – eine einfache klicken **Weiter**.  
   
 5.  Auf der Seite **Abschließen des Assistenten**, geben Sie den Namen `AllRegions`, und klicken Sie dann auf **Fertig stellen**.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "48122740"
   
      **Datenquelle**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **Tabellen und Sichten auswählen**: keine Auswahl  
+     **Tabellen und Sichten auswählen**: Aktivieren Sie keine Tabellen  
   
      **Name**: `T1000 Pacific Region`  
   
@@ -187,7 +187,7 @@ ms.locfileid: "48122740"
   
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Time Series-Algorithmus](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [Technische Referenz für Microsoft Time Series-Algorithmus](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
+ [Technische Referenz für den Microsoft Time Series-Algorithmus](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [Datenquellsichten in mehrdimensionalen Modellen](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

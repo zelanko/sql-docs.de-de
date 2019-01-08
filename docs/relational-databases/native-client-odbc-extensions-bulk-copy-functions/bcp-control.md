@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c15063ef190c3858007e7d64bc0e4d7ebf0d5b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3df6609af185d09c01641de495ae23687a083e07
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761754"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210459"
 ---
 # <a name="bcpcontrol"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,7 +72,7 @@ RETCODE bcp_control (
  BCPFILE_RAW: Daten in der Datei befinden sich auf der Codepage von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  BCPFILEFMT  
- Die Versionsnummer des Datendateiformats. Dies kann 80 sein ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]), oder 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). Der Standardwert ist 120. Dies ist beim Exportieren und Importieren von Daten in Formate nützlich, die in früheren Versionen des Servers unterstützt wurden. Beispielsweise zum Importieren von Daten, die aus einer Textspalte abgerufen wurde eine [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Server in einer **varchar(max)** -Spalte in eine [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher, sollten Sie 80 angeben. Auf ähnliche Weise bei Angabe 80 beim Exportieren von Daten aus einer **varchar(max)** Spalte gespeichert wie in den Spalten in gespeichert werden die [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] formatieren, und importieren Sie in einer Textspalte eine [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Server.  
+ Die Versionsnummer des Datendateiformats. Dies kann 80 sein ( [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ( [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]), oder 120 ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). Der Standardwert ist 120. Dies ist beim Exportieren und Importieren von Daten in Formate nützlich, die in früheren Versionen des Servers unterstützt wurden. Beispielsweise zum Importieren von Daten, die aus einer Textspalte abgerufen wurde eine [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Server in einer **varchar(max)** -Spalte in eine [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher, sollten Sie 80 angeben. Auf ähnliche Weise bei Angabe 80 beim Exportieren von Daten aus einer **varchar(max)** Spalte gespeichert wie in den Spalten in gespeichert werden die [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] formatieren, und importieren Sie in einer Textspalte eine [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Server.  
   
  BCPFIRST  
  Dies ist die erste Datenzeile der zu kopierenden Datei oder Tabelle. Der Standard ist 1; ein Wert kleiner als 1 setzt diese Option auf den Standardwert zurück.  
@@ -117,7 +117,7 @@ RETCODE bcp_control (
  BCPODBC  
  Wenn "true" gibt an, dass **"DateTime"** und **Smalldatetime** ODBC-Zeitstempel Escape-Sequenz-Präfix und Suffix im Zeichenformat gespeicherten Werte verwenden. Die BCPODBC-Option gilt nur für DB_OUT verwendet werden.  
   
- Bei "FALSE" eine **"DateTime"** Wert, der 1. Januar 1997 darstellt, wird in der Zeichenfolge konvertiert: 1997-01-01 00:00:00.000. Wenn "true" werden die gleichen **"DateTime"** -Wert wie folgt dargestellt: {ts ' 1997-01-01 00:00:00.000'}.  
+ Bei "FALSE" eine **"DateTime"** Wert, der 1. Januar 1997 darstellt, auf die Zeichenfolge konvertiert wird: 1997-01-01 00:00:00.000. Wenn "true" werden die gleichen **"DateTime"** -Wert wie folgt dargestellt: {ts ' 1997-01-01 00:00:00.000'}.  
   
  BCPROWCOUNT  
  Gibt die Anzahl von Zeilen zurück, auf die sich der aktuelle (oder letzte) BCP-Vorgang auswirkt.  

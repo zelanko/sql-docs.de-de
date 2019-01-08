@@ -13,15 +13,15 @@ ms.assetid: 6f89a720-fce5-4f60-bef3-a159bbc9f25c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a94030fdf0f4ef42e0253022913f06f109e4dc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 55739fd6cf7b6c395c2e7a66c3d80fad22607a83
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107440"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394193"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>Aufgabe 1: Definieren einer Abgleichsrichtlinie
-  In dieser Aufgabe erstellen Sie eine Abgleichsrichtlinie mit einer Regel. Die Regel weist eine erforderliche Komponente: **Supplier ID**, was bedeutet, dass die Lieferanten-IDs vor der Verwendung der anderen Domänen in der Regel übereinstimmen müssen. Die Regel verwendet zwei andere Domänen: **Lieferantenname** mit **Ähnlichkeit** Wert festgelegt wird, um **70 %** und **Contact Email** mit  **Ähnlichkeit** Wert festgelegt wird, um **30 %**.  
+  In dieser Aufgabe erstellen Sie eine Abgleichsrichtlinie mit einer Regel. Die Regel weist eine erforderliche Komponente auf: **Lieferanten-ID**, was bedeutet, dass die Lieferanten-IDs vor der Verwendung der anderen Domänen in der Regel übereinstimmen müssen. Die Regel verwendet zwei andere Domänen: **Lieferantenname** mit **Ähnlichkeit** Wert festgelegt wird, um **70 %** und **Contact Email** mit **Ähnlichkeit** Wert festgelegt wird, um **30 %**.  
   
 1.  Auf der Hauptseite des **DQS-Client**, klicken Sie auf **nach rechts weisenden Pfeil** neben **Lieferanten** Knowledge base an, und wählen **Abgleichsrichtlinie**.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48107440"
   
 10. Klicken Sie auf **neues Domänenelement hinzufügen** auf der Symbolleiste erneut.  
   
-11. Wählen Sie **Lieferantenname** Domäne, wählen **ähnlich** für **Ähnlichkeit**, und geben **70** für die **Gewichtung**.  Hier geben Sie an, dass Lieferantennamen nicht übereinstimmen müssen, aber ähnlich sein können, damit die Datensätze als Übereinstimmung gelten. Die Gewichtung gibt den Beitrag dieses Feldergebnisses zur Gesamttreffergenauigkeit zwischen zwei Datensätzen an.  
+11. Wählen Sie **Lieferantenname** Domäne, wählen **ähnlich** für **Ähnlichkeit**, und geben **70** für die **Gewichtung**.  Hier geben Sie an, dass Lieferantennamen nicht übereinstimmen müssen, aber ähnlich sein können, damit die Datensätze als Übereinstimmung gelten. Die Gewichtung gibt den Beitrag an, für die Formatierung dieses Feldergebnisses zur gesamttreffergenauigkeit zwischen.  
   
 12. Wiederholen Sie die vorherigen beiden Schritte hinzufügen **Contact Email** Domäne mit **30** für die **Gewichtung**.  
   

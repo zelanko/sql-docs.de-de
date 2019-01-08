@@ -14,12 +14,12 @@ ms.assetid: 4db6462f-93c7-443f-8ff7-39474dc7029e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9288c6a4f01cff6c3c4a19ff79a1d49775035cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e5ee759c4a23ab2891597fd3a5c884ce7332ea4e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179430"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400473"
 ---
 # <a name="associate-wizard-data-mining-client-for-excel"></a>Zuordnungs-Assistent (Data Mining-Client für Excel)
   ![Zuordnungs-Assistenten im Data Mining-Menüband](media/dmc-associate.gif "Zuordnungs-Assistent im Data Mining-Menüband")  
@@ -62,7 +62,7 @@ ms.locfileid: "48179430"
   
     -   Wenn Sie die Wahrscheinlichkeit einer Regel verringern, verringern Sie die Anforderungen, die eine Kombination erreichen muss, um im Kontext des gesamten Datasets als signifikant angesehen zu werden.  
   
-     **Tipp:** es ist eine gute Idee, die mehrere Miningmodelle mit anderen Kombinationen von Unterstützung und Wahrscheinlichkeit erstellen. Zum Nachverfolgen von welche Einstellungen Sie für jedes Modell verwendet haben, können Sie die **Dokumentmodell** Assistenten im Data Mining-Client für Excel, und Verwenden der **detailliert** Berichtsoption. Weitere Informationen finden Sie unter [Miningmodelle dokumentieren &#40;Data Mining-Add-ins für Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md).  
+     **Tipp:** Es ist eine gute Idee, die mehrere Miningmodelle mit anderen Kombinationen von Unterstützung und Wahrscheinlichkeit erstellen. Zum Nachverfolgen von welche Einstellungen Sie für jedes Modell verwendet haben, können Sie die **Dokumentmodell** Assistenten im Data Mining-Client für Excel, und Verwenden der **detailliert** Berichtsoption. Weitere Informationen finden Sie unter [Miningmodelle dokumentieren &#40;Data Mining-Add-ins für Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md).  
   
 6.  Klicken Sie optional auf **Parameter** die Algorithmusparameter ändern und das Verhalten des Miningmodells anzupassen.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48179430"
   
          Ein Drillthrough ist zum Beispiel nützlich, wenn Sie auf ein bestimmtes Itemset klicken und die Quelldaten anzeigen möchten.  
   
-    -   **Temporäres Modell**. Wählen Sie diese Option aus, wenn das Modell nicht auf dem Server gespeichert werden soll. Temporäre Modelle werden beim Schließen von Excel gelöscht.  
+    -   **Temporäres Modell**. Wählen Sie diese Option, wenn Sie nicht, dass das Modell auf dem Server gespeichert möchten. Temporäre Modelle werden beim Schließen von Excel gelöscht.  
   
 9. Der Assistent analysiert alle möglichen Kombinationen und erstellt einen Bericht, der die Itemsets und Regeln enthält.  
   

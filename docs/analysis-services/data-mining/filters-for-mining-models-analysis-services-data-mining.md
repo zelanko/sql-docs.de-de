@@ -1,5 +1,5 @@
 ---
-title: Filter für Miningmodelle (Analysis Services – Datamining) | Microsoft Docs
+title: Filter für Miningmodelle (Analysis Services – Datamining) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4c678773a77b9411eb1a51dbeb85b5eeb5f08b43
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 81592abc0224b2898b64d834857d23484750b326
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016757"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410667"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filter für Miningmodelle (Analysis Services – Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34016757"
   
  Die folgenden realistischen Szenarien sind einige Beispiele, in denen diese Funktion hilfreich sein kann:  
   
--   Das Erstellen von separaten Modellen für diskrete Werte wie z. B. Geschlecht, Regionen usw. Ein Bekleidungsgeschäft könnte beispielsweise demografische Kundendaten verwenden, um unterschiedliche Modelle nach Geschlecht zu erstellen, auch wenn die Verkaufsdaten aus einer einzigen Datenquelle für alle Kunden stammen.  
+-   Das Erstellen von separaten Modellen für diskrete Werte wie z. B. Geschlecht, Regionen usw. Ein Bekleidungsgeschäft könnte beispielsweise demografische Kundendaten verwenden, um unterschiedliche Modelle nach Geschlecht zu erstellen, auch wenn die Verkaufsdaten aus einer einzigen Datenquelle für alle Kunden stammen.  
   
 -   Man könnte mit Modellen experimentieren, indem man unterschiedliche Gruppierungen der gleichen Daten erstellt, beispielsweise die Altersgruppen 20-30, 20-40 oder 20-25.  
   
@@ -54,14 +54,14 @@ ms.locfileid: "34016757"
 ### <a name="creating-filters-on-nested-tables"></a>Erstellen von Filtern für geschachtelte Tabellen  
  Wenn die Datenquellensicht geschachtelte Tabellen enthält, können Sie das zweite Filterdialogfeld verwenden, um Bedingungen für die Zeilen in den geschachtelten Tabellen zu erstellen.  
   
- Wenn sich beispielsweise Ihre Falltabelle auf Kunden bezieht und die geschachtelte Tabelle die Produkte zeigt, die der Kunde gekauft hat, können Sie einen Filter für Kunden erstellen, die bestimmte Artikel gekauft haben, indem Sie im Filter der geschachtelten Tabelle die folgende Syntax verwenden: `[ProductName]=’Water Bottle’ OR ProductName=’Water Bottle Cage'`.  
+ Wenn sich beispielsweise Ihre Falltabelle auf Kunden bezieht und die geschachtelte Tabelle die Produkte zeigt, die der Kunde gekauft hat, können Sie einen Filter für Kunden erstellen, die bestimmte Artikel gekauft haben, indem Sie im Filter der geschachtelten Tabelle die folgende Syntax verwenden: `[ProductName]='Water Bottle' OR ProductName='Water Bottle Cage'`.  
   
- Sie können auch auf das Vorhandensein eines bestimmten Werts in der geschachtelten Tabelle filtern, indem Sie die Schlüsselwörter **EXISTS** oder **NOT EXISTS** und eine Unterabfrage verwenden. Auf diese Weise können Sie Bedingungen wie `EXISTS (SELECT * FROM Products WHERE ProductName=’Water Bottle’)`erstellen. Die `EXISTS SELECT(<subquery>)` gibt **TRUE** zurück, wenn die geschachtelte Tabelle mindestens eine Zeile enthält, die den Wert `Water Bottle`enthält.  
+ Sie können auch auf das Vorhandensein eines bestimmten Werts in der geschachtelten Tabelle filtern, indem Sie die Schlüsselwörter **EXISTS** oder **NOT EXISTS** und eine Unterabfrage verwenden. Auf diese Weise können Sie Bedingungen wie `EXISTS (SELECT * FROM Products WHERE ProductName='Water Bottle')`erstellen. Die `EXISTS SELECT(<subquery>)` gibt **TRUE** zurück, wenn die geschachtelte Tabelle mindestens eine Zeile enthält, die den Wert `Water Bottle`enthält.  
   
- Sie können Bedingungen für die Falltabelle mit Bedingungen für die geschachtelte Tabelle kombinieren. Beispielsweise fügt die folgende Syntax eine Bedingung für die Falltabelle ein (`Age > 30` ), eine Unterabfrage für die geschachtelte Tabelle (`EXISTS (SELECT * FROM Products)`) und mehrere Bedingungen für die geschachtelte Tabelle (`WHERE ProductName=’Milk’  AND Quantity>2`) ).  
+ Sie können Bedingungen für die Falltabelle mit Bedingungen für die geschachtelte Tabelle kombinieren. Beispielsweise fügt die folgende Syntax eine Bedingung für die Falltabelle ein (`Age > 30` ), eine Unterabfrage für die geschachtelte Tabelle (`EXISTS (SELECT * FROM Products)`) und mehrere Bedingungen für die geschachtelte Tabelle (`WHERE ProductName='Milk'  AND Quantity>2`) ).  
   
 ```  
-(Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’  AND Quantity>2) )  
+(Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk'  AND Quantity>2) )  
 ```  
   
  Wenn Sie den Filter fertig gestellt haben, wird der Filtertext von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ausgewertet, in einen DMX-Ausdruck übersetzt und mit dem Modell gespeichert.  
@@ -93,7 +93,7 @@ ms.locfileid: "34016757"
 ### <a name="how-can-i-save-a-filter"></a>Wie kann ich einen Filter speichern?  
  Der Filterausdruck wird als Skript gespeichert, das zusammen mit dem zugehörigen Miningmodell oder der verschachtelten Tabelle gespeichert wird. Wenn Sie den Filtertext löschen, kann dieser nur durch die manuelle Neuerstellung des Filterausdrucks wiederhergestellt werden. Wenn Sie komplexe Filterausdrücke erstellen, sollten Sie daher eine Sicherungskopie des Filtertexts erstellen.  
   
-### <a name="why-cant-i-see-any-effects-from-the-filter"></a>Warum sehe ich keine Auswirkungen des Filters?  
+### <a name="why-cant-i-see-any-effects-from-the-filter"></a>Warum sehe ich Auswirkungen des Filters kann nicht an?  
  Immer wenn Sie einen Filterausdruck ändern oder hinzufügen, müssen Sie die Struktur und das Modell neu verarbeiten, bevor Sie die Auswirkungen des Filters sehen können.  
   
 ### <a name="why-do-i-see-filtered-attributes-in-prediction-query-results"></a>Warum sehe ich gefilterte Attribute in den Ergebnissen von Vorhersageabfragen?  
@@ -116,6 +116,6 @@ ms.locfileid: "34016757"
   
 ## <a name="see-also"></a>Siehe auch  
  [Modellfiltersyntax und Beispiele &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Tests und Überprüfung & #40; Datamining & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Tests und Überprüfung &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

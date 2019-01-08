@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], shortcuts
@@ -21,12 +20,12 @@ ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20fe82c5ca0060d5a373f90fe72b8f4468240af8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 56c21fd7676e7ee20df37607752aa8076bd42096
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085840"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794732"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Tastenkombinationen für SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] bietet Benutzern zwei Tastaturschemas. Standardmäßig wird das [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Schema mit auf [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 basierenden Tastenkombinationen verwendet. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] bietet auch ein dem Standardschema von [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] ähnliches Tastaturschema. Um das Tastaturschema zu ändern oder weitere Tastenkombinationen hinzuzufügen, klicken Sie im Menü **Extras** auf **Optionen**. Wählen Sie das gewünschte Tastaturschema unter **Umgebung**auf der Seite **Tastatur** aus.  
@@ -235,7 +234,7 @@ ms.locfileid: "48085840"
 |------------|-----------------------------|---------------------------------|  
 |Einfügen einer neuen Zeile|EINGABE oder UMSCHALT+EINGABE|EINGABE oder UMSCHALT+EINGABE|  
 |Auslagern der Zeichen auf eine Seite des Cursors (gilt nicht für den SQL-Editor)|STRG+T|STRG+T|  
-|Löschen eines Zeichens rechts vom Cursor|Delete|Delete|  
+|Löschen eines Zeichens rechts vom Cursor|DELETE|DELETE|  
 |Löschen eines Zeichens links vom Cursor|RÜCKTASTE<br /><br /> oder<br /><br /> UMSCHALT+<br /><br /> RÜCKTASTE|RÜCKTASTE<br /><br /> oder<br /><br /> UMSCHALT+<br /><br /> RÜCKTASTE|  
 |Löschen des Leerzeichens in der Auswahl oder Löschen des Leerzeichens, das an den Cursor angrenzt, wenn keine Auswahl getroffen wurde|STRG+K, C|Keine Entsprechung|  
 |Einfügen der für den Editor konfigurierten Anzahl von Leerzeichen|TAB|TAB|  

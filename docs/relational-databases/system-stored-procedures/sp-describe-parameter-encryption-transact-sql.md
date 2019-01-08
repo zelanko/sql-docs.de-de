@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87a5be3dc726b86b1710dd45416404cf3899f4c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 243207c6175f5604e7cc887bd7c67085e2d86291
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595698"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507642"
 ---
 # <a name="spdescribeparameterencryption-transact-sql"></a>"sp_describe_parameter_encryption" (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ sp_describe_parameter_encryption
 |**parameter_ordinal**|**int**|Die ID der Zeile im Resultset.|  
 |**parameter_name**|**sysname**|Name eines der die angegebenen Parameter die  *\@Params* Argument.|  
 |**column_encryption_algorithm**|**tinyint**|Code, der angibt, der des Verschlüsselungsalgorithmus für die Spalte, die den Parameter konfiguriert entspricht. Die derzeit unterstützten Werte sind: 2 für **AEAD_AES_256_CBC_HMAC_SHA_256**.|  
-|**column_encryption_type**|**tinyint**|Code, der angibt, des Verschlüsselungstyp für die Spalte, die den Parameter konfiguriert entspricht. Die unterstützten Werte sind:<br /><br /> 0 – nur-Text (die Spalte ist nicht verschlüsselt)<br /><br /> 1 – die zufällige Verschlüsselung<br /><br /> 2 – die deterministische Verschlüsselung.|  
+|**column_encryption_type**|**tinyint**|Code, der angibt, des Verschlüsselungstyp für die Spalte, die den Parameter konfiguriert entspricht. Die unterstützten Werte sind:<br /><br /> 0 - nur-Text (die Spalte ist nicht verschlüsselt)<br /><br /> 1: nach dem Zufallsprinzip<br /><br /> 2 – die deterministische Verschlüsselung.|  
 |**column_encryption_key_ordinal**|**int**|Code, der Zeile in der das erste Ergebnis festgelegt. Die Zeile, auf die verwiesen werden, des spaltenverschlüsselungsschlüssels, die für die Spalte konfiguriert, die der Parameter entspricht.|  
 |**column_encryption_normalization_rule_version**|**tinyint**|Versionsnummer des-Algorithmus, den Typ Normalisierung.|  
   

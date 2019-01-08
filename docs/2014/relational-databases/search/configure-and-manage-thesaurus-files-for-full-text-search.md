@@ -14,22 +14,22 @@ ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3a6d6197cb525ba4ad395da590ea113bdd0a1f0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5089aaa229f77c6f0012f4ceae0d5d1b17a9c11a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220340"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792262"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Volltextabfragen können nach Synonymen der vom Benutzer angegebenen Begriffe ein Thesaurus. Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Thesaurus* definiert eine Gruppe von Synonymen für eine bestimmte Sprache. Systemadministratoren können zwei Formen von Synonymen definieren: Erweiterungssätze und Ersetzungssätze. Indem Sie einen Thesaurus entwickeln, der genau auf Ihre Volltextdaten abgestimmt ist, können Sie den Bereich der Volltextabfragen für diese Daten effektiv erweitern. Thesaurusvergleich erfolgt für alle [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) und [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) Abfragen sowie für alle [CONTAINS](/sql/t-sql/queries/contains-transact-sql) und [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) Abfragen, Geben Sie die FORMSOF THESAURUS-Klausel.  
+  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann bei Volltextabfragen ein Thesaurus verwendet werden, um nach Synonymen der vom Benutzer angegebenen Begriffe zu suchen. Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Thesaurus* definiert Synonyme für eine bestimmte Sprache. Systemadministratoren können zwei Formen von Synonymen definieren: Erweiterungssätze und Ersetzungssätze. Indem Sie einen Thesaurus entwickeln, der genau auf Ihre Volltextdaten abgestimmt ist, können Sie den Bereich der Volltextabfragen für diese Daten effektiv erweitern. Der Thesaurusvergleich erfolgt für alle [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) - und [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) -Abfragen sowie für alle [CONTAINS](/sql/t-sql/queries/contains-transact-sql) - und [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) -Abfragen, in denen die FORMSOF THESAURUS-Klausel angegeben ist.  
   
 ##  <a name="tasks"></a> Grundlegende Aufgaben zum Einrichten einer Thesaurusdatei  
  Bevor bei Volltextsuchabfragen auf der Serverinstanz nach Synonymen in einer bestimmten Sprache gesucht werden kann, müssen Sie Thesauruszuordnungen (Synonyme) für diese Sprache definieren. Jeder Thesaurus muss manuell konfiguriert werden, um Folgendes zu definieren:  
   
 -   Einstellung für diakritische Zeichen  
   
-     Bei einem Thesaurus werden bei allen Suchmustern diakritische Zeichen, beispielsweise Tilde (**~**), Akut-Akzentzeichen (**´**) oder Umlaut (**¨**), entweder berücksichtigt oder nicht berücksichtigt (d.h., es erfolgt eine *Unterscheidung nach Akzent* , oder es erfolgt *keine Unterscheidung nach Akzent*). Angenommen, Sie haben in einer Volltextsuchabfrage angegeben, dass das Suchmuster "café" durch ein anderes Muster ersetzt werden soll. Wenn im Thesaurus nicht nach Akzent unterschieden wird, ersetzt die Volltextsuche die Muster "café" und "cafe". Wenn im Thesaurus nach Akzent unterschieden wird, ersetzt die Volltextsuche nur das Muster "café". Standardmäßig wird bei einem Thesaurus nicht nach Akzent unterschieden.  
+     Bei einem Thesaurus, werden alle Suchmuster Zeichen entweder berücksichtigt oder diakritische wie z. B. eine Tilde (**~**), Akut Akzentzeichen (**??** ), oder Umlaut (**??** ) (d. h. *Akzent* oder *keine Unterscheidung nach Akzent*). Nehmen wir beispielsweise an, dass Sie das Muster "Caf??" angeben von anderen Mustern in einer Volltextabfrage ersetzt werden. Volltext-Suchdienst ersetzt das Muster "Caf??" bei der Thesaurus nach Akzent unterschieden wird, und "Cafe". Ist der Thesaurus Akzente, ersetzt die Volltextsuche nur die Muster "Caf??". Standardmäßig wird bei einem Thesaurus nicht nach Akzent unterschieden.  
   
 -   Erweiterungssatz  
   
@@ -107,13 +107,13 @@ ms.locfileid: "48220340"
   
   
 ##  <a name="structure"></a> Grundlegendes zur Struktur einer Thesaurusdatei  
- Jede Thesaurusdatei definiert einen XML-Container, dessen ID `Microsoft Search Thesaurus`lautet, sowie einen Kommentar, `<!--` … `-->`, der einen Beispielthesaurus enthält. Der Thesaurus wird definiert, einem \<Thesaurus >-Element, enthält Beispiele für die untergeordneten Elemente, die definieren, die Einstellung für diakritische Zeichen, erweiterungssätze und ersetzungssätze wie folgt:  
+ Jede Thesaurusdatei definiert einen XML-Container, dessen ID `Microsoft Search Thesaurus` lautet, sowie einen Kommentar, `<!--` … `-->`, der einen Beispielthesaurus enthält. Der Thesaurus wird definiert, einem \<Thesaurus >-Element, enthält Beispiele für die untergeordneten Elemente, die definieren, die Einstellung für diakritische Zeichen, erweiterungssätze und ersetzungssätze wie folgt:  
   
 -   XML-Struktur der Einstellung für diakritische Zeichen  
   
      Die Einstellung eines Thesaurus für diakritische Zeichen wird in einem einzelnen <diacritics_sensitive>-Element angegeben. Dieses Element enthält einen ganzzahligen Wert, der die Unterscheidung nach Akzent folgendermaßen steuert:  
   
-    |Einstellung für diakritische Zeichen|value|XML|  
+    |Einstellung für diakritische Zeichen|Wert|XML|  
     |------------------------|-----------|---------|  
     |keine Unterscheidung nach Akzent|0|`<diacritics_sensitive>0</diacritics_sensitive>`|  
     |Unterscheidung nach Akzent|1|`<diacritics_sensitive>1</diacritics_sensitive>`|  

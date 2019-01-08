@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 01/04/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], about
@@ -14,15 +14,15 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7f22f0ea25b141cf7ee5a3130153837dcf4a1132
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072890"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807012"
 ---
 # <a name="the-transaction-log-sql-server"></a>Das Transaktionsprotokoll [SQL Server]
-  Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank verfügt über ein Transaktionsprotokoll, in dem alle Transaktionen sowie die Datenbankänderungen erfasst werden, die von den einzelnen Transaktionen vorgenommen werden. Um das Überlaufen des Transaktionsprotokolls zu verhindern, muss es in regelmäßigen Abständen gekürzt werden. Einige Faktoren können die Protokollkürzung jedoch verzögern, sodass die Überwachung der Protokollgröße wichtig ist. Einige Vorgänge lassen sich minimal protokollieren, um deren Auswirkung auf die Größe des Transaktionsprotokolls zu reduzieren.  
+  Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank verfügt über ein Transaktionsprotokoll, in dem alle Transaktionen sowie die Datenbankänderungen aufgezeichnet werden, die von den einzelnen Transaktionen vorgenommen werden. Um das Überlaufen des Transaktionsprotokolls zu verhindern, muss es in regelmäßigen Abständen gekürzt werden. Einige Faktoren können die Protokollkürzung jedoch verzögern, sodass die Überwachung der Protokollgröße wichtig ist. Einige Vorgänge lassen sich minimal protokollieren, um deren Auswirkung auf die Größe des Transaktionsprotokolls zu reduzieren.  
   
  Das Transaktionsprotokoll ist eine wichtige Komponente der Datenbank und wird im Falle eines Systemfehlers ggf. benötigt, um einen konsistenten Status der Datenbank wiederherzustellen. Das Transaktionsprotokoll sollte nur dann gelöscht oder verschoben werden, wenn die Auswirkungen dieses Vorgangs vollständig bekannt sind.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "48072890"
   
  **In diesem Thema:**  
   
--   [Vorteile:-Vorgänge, die durch das Transaktionsprotokoll unterstützt](#Benefits)  
+-   [Vorteile: Vorgänge, die durch das Transaktionsprotokoll unterstützt](#Benefits)  
   
 -   [Kürzung des Transaktionsprotokolls](#Truncation)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48072890"
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="Benefits"></a> Vorteile:-Vorgänge, die durch das Transaktionsprotokoll unterstützt  
+##  <a name="Benefits"></a> Vorteile: Vom Transaktionsprotokoll unterstützte Operationen  
  Das Transaktionsprotokoll unterstützt die folgenden Vorgänge:  
   
 -   Wiederherstellen einzelner Transaktionen.  
@@ -66,7 +66,7 @@ ms.locfileid: "48072890"
  Weitere Informationen finden Sie unter [Faktoren, die die Protokollkürzung verzögern können](#FactorsThatDelayTruncation)weiter unten in diesem Thema.  
   
 > [!NOTE]  
->  Die Protokollkürzung verringert nicht die Größe einer physischen Protokolldatei. Sie müssen zum Reduzieren der physischen Größe einer physischen Protokolldatei die Protokolldatei verkleinern. Informationen zum Verkleinern der Größe der physischen Protokolldatei finden Sie unter [Manage the Size of the Transaction Log File](manage-the-size-of-the-transaction-log-file.md).  
+>  Die Protokollkürzung verringert nicht die Größe einer physischen Protokolldatei. Sie müssen zum Reduzieren der physischen Größe einer physischen Protokolldatei die Protokolldatei verkleinern. Informationen zum Verkleinern der Größe der physischen Protokolldatei finden Sie unter [Verwalten der Größe der Transaktionsprotokolldatei](manage-the-size-of-the-transaction-log-file.md).  
   
 ##  <a name="FactorsThatDelayTruncation"></a> Faktoren, die die Protokollkürzung verzögern können  
  Bleiben Protokolldatensätze lange aktiv, verzögert sich die Transaktionsprotokollkürzung. Dabei kann sich das Transaktionsprotokoll potenziell auffüllen.  
@@ -79,7 +79,7 @@ ms.locfileid: "48072890"
 |log_reuse_wait value|log_reuse_wait_desc value|Description|  
 |----------------------------|----------------------------------|-----------------|  
 |0|NOTHING|Derzeit ist mindestens eine wiederverwendbare virtuelle Protokolldatei vorhanden.|  
-|1|CHECKPOINT|Seit der letzten Protokollkürzung ist kein Prüfpunkt aufgetreten, oder der Kopf des Protokolls wurde noch nicht über eine virtuelle Protokolldatei hinaus verschoben. (Alle Wiederherstellungsmodelle)<br /><br /> Dies ist ein häufiger Grund für das verzögerte Kürzen von Protokollen. Weitere Informationen finden Sie unter [Datenbankprüfpunkte &#40;SQL Server&#41;](database-checkpoints-sql-server.md).|  
+|1|CHECKPOINT|Seit der letzten Protokollkürzung ist kein Prüfpunkt aufgetreten, oder der Kopf des Protokolls wurde noch nicht über eine virtuelle Protokolldatei hinaus verschoben. (Alle Wiederherstellungsmodelle)<br /><br /> Dies ist ein häufiger Grund für das verzögerte Kürzen von Protokollen. Weitere Informationen finden Sie unter [Database Checkpoints &#40;SQL Server&#41;](database-checkpoints-sql-server.md).|  
 |2|LOG_BACKUP|Eine Protokollsicherung ist erforderlich, bevor das Transaktionsprotokoll gekürzt werden kann. (nur vollständiges bzw. massenprotokolliertes Wiederherstellungsmodell)<br /><br /> Bei Abschluss der nächsten Protokollsicherung wird möglicherweise ein Teil des Protokollspeicherplatzes zur Wiederverwendung freigegeben.|  
 |3|ACTIVE_BACKUP_OR_RESTORE|Es findet gerade eine Datensicherung oder eine Wiederherstellung statt (alle Wiederherstellungsmodelle).<br /><br /> Verhindert eine Datensicherung die Protokollkürzung, kann das unmittelbare Problem u. U. durch Abbrechen des Sicherungsvorgangs behoben werden.|  
 |4|ACTIVE_TRANSACTION|Eine Transaktion ist aktiv (alle Wiederherstellungsmodelle).<br /><br /> Möglicherweise ist beim Starten der Protokollsicherung eine Transaktion mit langer Ausführungszeit vorhanden. In diesem Fall ist zum Freigeben von Speicherplatz möglicherweise eine weitere Protokollsicherung erforderlich. Beachten Sie, dass eine lang andauernde Transaktionen verhindern die protokollkürzung unter allen Wiederherstellungsmodellen, einschließlich des einfachen Wiederherstellungsmodells, unter dem im Allgemeinen das Transaktionsprotokoll an jedem automatischen Prüfpunkt gekürzt wird.<br /><br /> Eine Transaktion wird verzögert. Eine *verzögerte Transaktion* ist tatsächlich eine aktive Transaktion, deren Rollback aufgrund einer nicht verfügbaren Ressource blockiert ist. Weitere Informationen zu den Ursachen für verzögerte Transaktionen und zum Auflösen ihres verzögerten Zustands finden Sie unter [Verzögerte Transaktionen &#40;SQL Server&#41;](../backup-restore/deferred-transactions-sql-server.md). <br /><br />Lang andauernde Transaktionen können auch das Transaktionsprotokoll von „tempdb“ füllen. „tempdb“ wird implizit von Benutzertransaktionen für interne Objekte wie z.B. Arbeitstabellen zum Sortieren, Arbeitsdateien für Hashverfahren, Cursorarbeitstabellen und Zeilenversionsverwaltung verwendet. Auch wenn die Benutzertransaktion enthält nur Lesen von Daten (SELECT-Abfragen), möglicherweise interne Objekte erstellt und unter Benutzertransaktionen verwendet werden. Anschließend kann das tempdb-Transaktionsprotokoll gefüllt werden.|  
@@ -88,12 +88,12 @@ ms.locfileid: "48072890"
 |7|DATABASE_SNAPSHOT_CREATION|Eine Datenbank-Momentaufnahme wird erstellt. (Alle Wiederherstellungsmodelle)<br /><br /> Dies ist ein häufiger, im Allgemeinen jedoch nur kurz andauernder Grund für ein verzögertes Kürzen eines Protokolls.|  
 |8|LOG_SCAN|Ein Protokollscan wird ausgelöst. (Alle Wiederherstellungsmodelle)<br /><br /> Dies ist ein häufiger, im Allgemeinen jedoch nur kurz andauernder Grund für ein verzögertes Kürzen eines Protokolls.|  
 |9|AVAILABILITY_REPLICA|Ein sekundäres Replikat einer Verfügbarkeitsgruppe wendet Transaktionsprotokoll-Datensätze dieser Datenbank auf eine zugehörige sekundäre Datenbank an. (vollständiges Wiederherstellungsmodell)<br /><br /> Weitere Informationen finden Sie unter [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
-|10|—|Nur interne Verwendung|  
-|11|—|Nur interne Verwendung|  
-|12|—|Nur interne Verwendung|  
-|13|OLDEST_PAGE|Ist eine Datenbank zur Verwendung von indirekten Prüfpunkten konfiguriert, ist die älteste Seite in der Datenbank u. U. älter als die Prüfpunkt-LSN. In diesem Fall kann die älteste Seite die Protokollkürzung verzögern. (Alle Wiederherstellungsmodelle)<br /><br /> Weitere Informationen zu indirekten Prüfpunkten finden Sie unter [Database Checkpoints &#40;SQL Server&#41;](database-checkpoints-sql-server.md).|  
+|10|-|Nur interne Verwendung|  
+|11|-|Nur interne Verwendung|  
+|12|-|Nur interne Verwendung|  
+|13|OLDEST_PAGE|Ist eine Datenbank zur Verwendung von indirekten Prüfpunkten konfiguriert, ist die älteste Seite in der Datenbank u. U. älter als die Prüfpunkt-LSN. In diesem Fall kann die älteste Seite die Protokollkürzung verzögern. (Alle Wiederherstellungsmodelle)<br /><br /> Weitere Informationen zu indirekten Prüfpunkten finden Sie unter [Database Checkpoints &#40;SQL Server&#41;](database-checkpoints-sql-server.md).|  
 |14|OTHER_TRANSIENT|Dieser Wert wird derzeit nicht verwendet.|  
-|16|XTP_CHECKPOINT|Wenn eine Datenbank eine Speicheroptimierte Dateigruppe aufweist, das Transaktionsprotokoll möglicherweise nicht abgeschnitten werden, bis die automatische [!INCLUDE[hek_2](../../includes/hek-2-md.md)] Prüfpunkt wird (die bei jeder 512 MB anwachsen des Protokolls der Fall.) ausgelöst.<br /><br /> Hinweis: Um Transaktionsprotokolls, bevor die Größe von 512 MB abzuschneiden, lösen Sie den Checkpoint-Befehl für die fragliche Datenbank manuell.|  
+|16|XTP_CHECKPOINT|Wenn eine Datenbank eine speicheroptimierte Dateigruppe aufweist, wird das Transaktionsprotokoll möglicherweise nicht vor der Auslösung des automatischen [!INCLUDE[hek_2](../../includes/hek-2-md.md)] -Prüfpunkts gekürzt (was immer nach Anwachsen des Protokolls um 512 MB erfolgt).<br /><br /> Hinweis: Um das Transaktionsprotokoll vor Erreichen der 512 MB-Größe zu kürzen, lösen Sie den Befehl „Checkpoint“ für die fragliche Datenbank manuell aus.|  
   
 ##  <a name="MinimallyLogged"></a> Vorgänge, die minimal protokolliert werden können  
  Bei der*minimalen Protokollierung* werden nur die Informationen protokolliert, die zum Wiederherstellen der Transaktion ohne Unterstützung der Zeitpunktwiederherstellung erforderlich sind. In diesem Thema werden die Vorgänge aufgeführt, die unter dem massenprotokollierten Wiederherstellungsmodell minimal protokolliert werden (sowie unter dem einfachen Wiederherstellungsmodell, es sei denn, es wird eine Sicherung ausgeführt).  
@@ -135,7 +135,7 @@ ms.locfileid: "48072890"
     -   Neuerstellungen neuer Heaps mit DROP INDEX (falls zutreffend).  
   
         > [!NOTE]  
-        >  Aufhebungen von indexseitenzuordnungen während einer [DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql) -Vorgangs werden immer vollständig protokolliert.  
+        >  Aufhebungen von Indexseitenzuordnungen während eines [DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql) -Vorgangs werden immer vollständig protokolliert.  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
  `Managing the transaction log`  

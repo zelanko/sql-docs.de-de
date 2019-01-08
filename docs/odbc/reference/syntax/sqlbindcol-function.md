@@ -20,16 +20,16 @@ ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5092ae588c69c28fcfa243101b57f97da75e8681
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab434e90f1b92911bfdfb9f66da67244e26ef776
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755318"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515952"
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC-1.0-Standards-Compliance: ISO-92  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO-92  
   
  **Zusammenfassung**  
  **SQLBindCol** Anwendung von Datenpuffern für Spalten im Resultset bindet.  
@@ -52,10 +52,10 @@ SQLRETURN SQLBindCol(
  [Eingabe] Anweisungshandle.  
   
  *ColumnNumber*  
- [Eingabe] Anzahl des Ergebnisses legen Spalte binden. Spalten werden in der wachsenden Reihenfolge der Spalten, die beginnend ab 0 (null), in denen die Lesezeichenspalte ist die Spalte 0 nummeriert. Wenn das Lesezeichen nicht verwendet werden –, also das SQL_ATTR_USE_BOOKMARKS-Anweisungsattribut auf SQL_UB_OFF festgelegt ist, klicken Sie dann Spaltennummern beginnen bei 1.  
+ [Eingabe] Anzahl des Ergebnisses legen Spalte binden. Spalten werden in der wachsenden Reihenfolge der Spalten, die beginnend ab 0 (null), in denen die Lesezeichenspalte ist die Spalte 0 nummeriert. Wenn das Lesezeichen nicht verwendet werden – d. h. das SQL_ATTR_USE_BOOKMARKS-Anweisungsattribut auf SQL_UB_OFF - festgelegt ist dann beginnen Spaltennummern bei 1.  
   
  *TargetType*  
- [Eingabe] Der Bezeichner für die C-Datentyp, der die \* *TargetValuePtr* Puffer. Wenn sie ist Abrufen von Daten aus der Datenquelle mit **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations**, oder **SQLSetPos**, Treiber konvertiert die Daten in diesen Typ; Wenn er Daten sendet, an die Datenquelle mit **SQLBulkOperations** oder **SQLSetPos**, konvertiert der Treiber die Daten von diesem Typ. Eine Liste der gültigen C-Datentypen und Typ-IDs, finden Sie unter den [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) Abschnitt in Anhang D:-Datentypen.  
+ [Eingabe] Der Bezeichner für die C-Datentyp, der die \* *TargetValuePtr* Puffer. Wenn sie ist Abrufen von Daten aus der Datenquelle mit **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations**, oder **SQLSetPos**, Treiber konvertiert die Daten in diesen Typ; Wenn er Daten sendet, an die Datenquelle mit **SQLBulkOperations** oder **SQLSetPos**, konvertiert der Treiber die Daten von diesem Typ. Eine Liste der gültigen C-Datentypen und Typ-IDs, finden Sie unter den [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) Abschnitt in Anhang D: Datentypen.  
   
  Wenn die *TargetType* Argument ist ein Intervall Datentyp für die standardmäßige Intervall führende Genauigkeit (2) und die standardmäßige Intervall Sekunden Genauigkeit (6), wie in den Feldern SQL_DESC_DATETIME_INTERVAL_PRECISION und SQL_DESC_PRECISION des festgelegt die ARD sind verwendet bzw. für die Daten. Wenn die *TargetType* Argument SQL_C_NUMERIC, die standardmäßige Genauigkeit von (treiberdefinierten) und Standard skalieren (0), wie in die Felder der ARD SQL_DESC_PRECISION und SQL_DESC_SCALE festgelegt, für die Daten verwendet werden. Wenn alle Standardwerte für die Genauigkeit oder Dezimalstellenanzahl nicht geeignet ist, die Anwendung sollte explizit festlegen der entsprechenden Deskriptorfeld durch einen Aufruf von **SQLSetDescField** oder **SQLSetDescRec**.  
   
@@ -126,7 +126,7 @@ SQLRETURN SQLBindCol(
 |HY013|Fehler bei arbeitsspeicherverwaltung|Der Funktionsaufruf kann nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
 |HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|(DM) der Wert für das Argument angegebene *Pufferlänge* war kleiner als 0.<br /><br /> (DM) der Treiber wurde eine ODBC-2. *x* -Treiber die *ColumnNumber* -Argument wurde auf 0 und dem Wert des Arguments festgelegt *Pufferlänge* war nicht gleich 4.|  
 |HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Trennen Sie nur aus, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum angehaltenen Zustand, [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYC00|Optionales Feature nicht implementiert.|Die Treiber oder die Datenquelle unterstützt nicht die Konvertierung angegeben wird, durch die Kombination der *TargetType* Argument und der Treiber-spezifische SQL-Datentyp der entsprechenden Spalte.<br /><br /> Das Argument *ColumnNumber* wurde 0 und der Treiber die Lesezeichen nicht unterstützt.<br /><br /> Der Treiber unterstützt nur ODBC 2. *x* und das Argument *TargetType* war eines der folgenden:<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> und keines der Intervalldatentypen C im [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) in Anhang D:-Datentypen.<br /><br /> Der Treiber unterstützt nur die ODBC-Versionen vor, und das Argument zum Preis von 3,50 *TargetType* SQL_C_GUID wurde.|  
+|HYC00|Optionales Feature nicht implementiert.|Die Treiber oder die Datenquelle unterstützt nicht die Konvertierung angegeben wird, durch die Kombination der *TargetType* Argument und der Treiber-spezifische SQL-Datentyp der entsprechenden Spalte.<br /><br /> Das Argument *ColumnNumber* wurde 0 und der Treiber die Lesezeichen nicht unterstützt.<br /><br /> Der Treiber unterstützt nur ODBC 2. *x* und das Argument *TargetType* war eines der folgenden:<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> und keines der Intervalldatentypen C im [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) in Anhang D: Datentypen.<br /><br /> Der Treiber unterstützt nur die ODBC-Versionen vor, und das Argument zum Preis von 3,50 *TargetType* SQL_C_GUID wurde.|  
 |HYT01|Das Verbindungstimeout ist abgelaufen|Das Verbindungstimeout ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Das Verbindungstimeout festgelegt ist, über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
 |IM001|Diese Funktion wird vom Treiber nicht unterstützt werden.|(DM) der Treiber zugeordnet der *StatementHandle* die Funktion nicht unterstützt.|  
   
@@ -144,7 +144,7 @@ SQLRETURN SQLBindCol(
 ## <a name="binding-columns"></a>Binden von Spalten  
  Um eine Spalte binden, eine Anwendung ruft **SQLBindCol** und übergibt die Spaltennummer, Typ, Adresse und Länge eines Datenpuffers mit und die Adresse des ein Längen-/Indikatorpuffer. Informationen, wie diese Adressen verwendet werden finden Sie unter "Pufferadressen," weiter unten in diesem Abschnitt. Weitere Informationen zum Binden von Spalten finden Sie unter [mithilfe von SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md).  
   
- Die Verwendung dieser Puffer wird verzögert, d. h. die Anwendung gebunden, die sie in **SQLBindCol** aber der Treiber greift sie auf die von anderen Funktionen – nämlich **SQLBulkOperations**, **SQLFetch**,  **SQLFetchScroll**, oder **SQLSetPos**. Es ist Aufgabe der Anwendung, um sicherzustellen, dass der angegebene Zeiger im **SQLBindCol** bleiben gültig, solange die Bindung gültig ist. Wenn die Anwendung diese Zeiger ungültig werden kann – z. B. gibt einen Puffer frei, und klicken Sie dann eine Funktion, die erwartet, dass sie gültig ist, die Folgen sind nicht definiert. Weitere Informationen finden Sie unter [verzögerte Puffer](../../../odbc/reference/develop-app/deferred-buffers.md).  
+ Die Verwendung dieser Puffer wird verzögert, d. h. die Anwendung gebunden, die sie in **SQLBindCol** , aber der Treiber greift auf diese in Funktionen verwendet werden – d. h. **SQLBulkOperations**, **SQLFetch**,  **SQLFetchScroll**, oder **SQLSetPos**. Es ist Aufgabe der Anwendung, um sicherzustellen, dass der angegebene Zeiger im **SQLBindCol** bleiben gültig, solange die Bindung gültig ist. Wenn die Anwendung diese Zeiger ungültig werden kann: z. B. Es gibt einen Puffer - frei, und ruft dann eine Funktion, die erwartet, dass sie gültig ist, sind die folgen nicht definiert. Weitere Informationen finden Sie unter [verzögerte Puffer](../../../odbc/reference/develop-app/deferred-buffers.md).  
   
  Die Bindung bleibt wirksam, bis er durch eine neue Bindung ersetzt, die Spalte aufgehoben wird oder die Anweisung wird freigegeben.  
   
@@ -232,7 +232,7 @@ SQLRETURN SQLBindCol(
 ## <a name="buffer-addresses"></a>Pufferadressen  
  Die *Puffern Adresse* ist die tatsächliche Adresse des Puffers Daten oder Längenindikator /. Der Treiber berechnet die Pufferadresse nur vor dem Schreiben in den Puffern (z. B. während der Zeit abgerufen werden). Er wird berechnet aus der folgenden Formel, die die im angegebenen Adressen verwendet den *TargetValuePtr* und *StrLen_or_IndPtr* Argumente, den Offset für die Bindung und die Nummer der Zeile:  
   
- *Adresse gebunden* + *Bindung Offset* + ((*Zeilennummer* – 1) X *Elementgröße*)  
+ *Adresse gebunden* + *Bindung Offset* + ((*Zeilennummer* - 1) X *Elementgröße*)  
   
  auf der Formel die Variablen definiert werden, wie in der folgenden Tabelle beschrieben.  
   

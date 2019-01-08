@@ -16,28 +16,28 @@ ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c6ccf5a83cd53b953a9b43c252e90a6e13f1e3f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db2065bd599b1aca1542318bfab0d0ce57e2a938
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635868"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542601"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 Gibt den Typ des ADO-Laufzeitfehler.  
   
  Die Fehlernummer in drei Formen werden aufgeführt:  
   
--   Positive Dezimalzahl, die mit niedriger zwei Bytes der vollständigen Zahl im Dezimalformat. Diese Zahl wird in der standardmäßigen Visual Basic-Nachricht Fehlerdialogfeld angezeigt. Beispiel: Laufzeitfehler "3707".  
+-   Positive Decimal: die niedrigen zwei Bytes der vollständigen Zahl im Dezimalformat. Diese Zahl wird in der standardmäßigen Visual Basic-Nachricht Fehlerdialogfeld angezeigt. Beispiel: Laufzeitfehler "3707".  
   
--   Negative Dezimalzahl, die decimal Übersetzung der vollständigen Fehlernummer.  
+-   Negative dezimale Decimal: die Übersetzung der vollständigen Fehlernummer.  
   
--   Hexadezimale: die hexadezimale Darstellung des vollständigen Fehlernummer. Der Windows-Funktionscode ist die vierte Ziffer. Ist der Einrichtungscode für ADO-Fehlernummern *ein*. Zum Beispiel: 0 x 800***ein***0E7B.  
+-   Hexadezimal: die hexadezimale Darstellung des vollständigen Fehlernummer. Der Windows-Funktionscode ist die vierte Ziffer. Ist der Einrichtungscode für ADO-Fehlernummern *ein*. Zum Beispiel: 0 x 800***ein***0E7B.  
   
 > [!NOTE]
 >  OLE DB-Fehler können der ADO-Anwendung übergeben werden. Diese können in der Regel identifiziert werden, von einem Windows-Funktionscode von *4*. Z. B. 0 x 800***4***.  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adErrBoundToCommand**|3707 -2146824581 0x800A0E7B|Kann nicht geändert werden die **ActiveConnection** Eigenschaft eine **Recordset** Objekt mit einem **Befehl** Objekt als Quelle.|  
 |**adErrCannotComplete**|3732 -2146824556 0x800A0E94|Server kann den Vorgang nicht abschließen.|  

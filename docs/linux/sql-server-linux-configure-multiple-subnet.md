@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 0952390e21d174d4d10e99f53904de4d11be6230
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 595add5d077136c4093776fae8e3a2f7ab04bb26
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637470"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396173"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Konfigurieren von mehreren Subnetzen AlwaysOn-Verfügbarkeitsgruppen und Failoverclusterinstanzen
 
@@ -24,7 +24,7 @@ Wenn eine Always On Availability Group (-Verfügbarkeitsgruppen) oder ein Failov
 
 ## <a name="vlan-based-solution"></a>VLAN-basierte Lösung
  
-**Erforderliche**: für ein VLAN-basierte Lösung, jeder Server teilnehmen AG und FCI benötigt zwei Netzwerkkarten (NICs) für eine ordnungsgemäße Verfügbarkeit (zwei Ports NIC wäre eine einzelne Fehlerquelle auf einem physischen Server), damit sie IP-Adressen zugewiesen werden kann die native Subnetz als auch auf das VLAN. Dies erfolgt zusätzlich zu anderen netzwerkanforderungen, wie z. B. iSCSI, die auch ein eigenen Netzwerk benötigt.
+**Erforderliche**: Für eine VLAN-basierte Lösung benötigt jeder Server, die Teil einer Verfügbarkeitsgruppe oder FCI zwei Netzwerkkarten (NICs) für eine ordnungsgemäße Verfügbarkeit (zwei Ports NIC wäre eine einzelne Fehlerquelle auf einem physischen Server), damit dieser IP-Adressen auf einem systemeigenen Subnetz als auch zugewiesen werden kann Klicken Sie auf das VLAN. Dies erfolgt zusätzlich zu anderen netzwerkanforderungen, wie z. B. iSCSI, die auch ein eigenen Netzwerk benötigt.
 
 Die Erstellung der IP-Adresse für die Verfügbarkeitsgruppe oder FCI wird auf das VLAN ausgeführt. Im folgenden Beispiel hat das VLAN ein Subnetz mit 192.168.3. *x*, sodass die IP-Adresse für die Verfügbarkeitsgruppe oder FCI erstellt 192.168.3.104 ist. Keine weiteren Aktionen erforderlich konfiguriert werden, da eine einzelne IP-Adresse, die die Verfügbarkeitsgruppe oder FCI zugewiesen ist.
 

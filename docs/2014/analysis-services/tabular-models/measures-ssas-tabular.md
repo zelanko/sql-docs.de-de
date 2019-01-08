@@ -11,12 +11,12 @@ ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4a92df5ff3826ea7febe4bcf0910125f38c30a2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7ebda5596422d8dd8964c9da1e042f266d3e23db
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121570"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407307"
 ---
 # <a name="measures-ssas-tabular"></a>Measures (SSAS – tabellarisch)
   In tabellarischen Modellen ist ein Measure eine Berechnung, die mit einer DAX-Formel für die Verwendung in einem Berichtserstellungsclient erstellt wird. Measures werden auf Grundlage von Feldern, Filtern oder eines Slicers ausgewertet, die der Benutzer in der Clientanwendung zur Berichtserstellung auswählt.  
@@ -63,13 +63,13 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |**Grand Total**|**$4,691,673,731.53**|  
   
 ##  <a name="bkmk_def_mg"></a> Definieren von Measures mit dem Measureraster  
- Measures werden zur Entwurfszeit mithilfe des Measurerasters im Modell-Designer erstellt. Jede Tabelle verfügt über ein Measureraster. Standardmäßig wird das Measureraster unter jeder Tabelle im Modell-Designer angezeigt. Sie können auch festlegen, das Measureraster für eine bestimmte Tabelle nicht anzuzeigen. Klicken Sie auf das Menü **Tabelle** und dann auf **Measureraster anzeigen**, um die Anzeige des Measurerasters für eine Tabelle einzuschalten.  
+ Measures werden zur Entwurfszeit mithilfe des Measurerasters im Modell-Designer erstellt. Jede Tabelle verfügt über ein Measureraster. Standardmäßig wird das Measureraster unter jeder Tabelle im Modell-Designer angezeigt. Sie können auch festlegen, das Measureraster für eine bestimmte Tabelle nicht anzuzeigen. Um die Anzeige des measurerasters für eine Tabelle zu wechseln, klicken Sie auf die **Tabelle** , und klicken Sie dann auf **Measureraster anzeigen**.  
   
  Im Measureraster können Sie wie folgt Measures erstellen:  
   
 -   Klicken Sie auf eine leere Zelle im Measureraster, und geben Sie dann in der Bearbeitungsleiste eine DAX-Formel ein. Wenn Sie die Formelerstellung mit EINGABE abschließen, wird das Measure in der Zelle des Measurerasters angezeigt.  
   
--   Erstellen Sie ein Measure mithilfe einer Standardaggregationsfunktion, indem Sie auf eine Spalte, auf der Symbolleiste auf die Schaltfläche AutoSumme (∑) und dann auf eine Standardaggregationsfunktion klicken. Standardaggregationen: Summe, Mittelwert, Anzahl, DistinctCount, Max, Min. Measures, die mithilfe der Schaltfläche AutoSumme erstellt wurden, werden im Measureraster immer direkt unterhalb der Spalte angezeigt.  
+-   Erstellen Sie ein Measure mithilfe einer Standardaggregationsfunktion, indem Sie auf eine Spalte, auf der Symbolleiste auf die Schaltfläche AutoSumme (∑) und dann auf eine Standardaggregationsfunktion klicken. Standardaggregationen sind: Summe, Mittelwert, Anzahl, DistinctCount, Max, Min. Measures, die mithilfe der Schaltfläche AutoSumme erstellt wurden, werden im Measureraster immer direkt unterhalb der Spalte angezeigt.  
   
  Bei Verwendung von AutoSumme wird der Name des Measures standardmäßig durch den Namen der zugeordneten Spalte definiert, auf den ein Doppelpunkt und dann die Formel folgt. Der Name kann auf der Bearbeitungsleiste oder in der Einstellung der Eigenschaft **Measurename** im Eigenschaftenfenster geändert werden. Wenn Sie ein Measure mithilfe einer benutzerdefinierten Formel erstellen, können Sie einen Namen in der Bearbeitungsleiste eingeben, auf den ein Doppelpunkt und dann die Formel folgt. Alternativ können Sie einen Namen in der Einstellung der Eigenschaft **Measurename** im Eigenschaftenfenster eingeben.  
   
@@ -78,7 +78,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 > [!TIP]  
 >  Sie können Measures aus mehreren Tabellen in einer Tabelle gruppieren, indem Sie eine leere Tabelle erstellen, in die Sie entweder Measures verschieben oder in der Sie neue Measures erstellen. Wenn Sie auf Spalten in anderen Tabellen verweisen, sollten Sie bedenken, dass Sie die Tabellennamen möglicherweise in DAX-Formeln aufnehmen müssen.  
   
- Wenn für das Modell Perspektiven definiert wurden, werden in diese Perspektiven nicht automatisch Measures eingefügt. Sie müssen einer Perspektive Measures manuell mithilfe des Dialogfelds Perspektiven hinzufügen. Weitere Informationen finden Sie unter [Perspectives &#40;SSAS Tabular&#41;](perspectives-ssas-tabular.md).  
+ Wenn für das Modell Perspektiven definiert wurden, werden in diese Perspektiven nicht automatisch Measures eingefügt. Sie müssen einer Perspektive Measures manuell mithilfe des Dialogfelds Perspektiven hinzufügen. Weitere Informationen finden Sie unter [Perspektiven &#40;SSAS – tabellarisch&#41;](perspectives-ssas-tabular.md).  
   
 ##  <a name="bkmk_properties"></a> Eigenschaften von Measures  
  Jedes Measure verfügt über Eigenschaften, durch die es definiert wird. Measureeigenschaften können zusammen mit den Eigenschaften der zugeordneten Spalte im Eigenschaftenfenster bearbeitet werden. Measures verfügen über die folgenden Eigenschaften:  
@@ -93,7 +93,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 ##  <a name="bkmk_KPI"></a> Verwenden eines Measures in einem KPI  
  Ein KPI (Key Performance Indicator) wird durch einen *Basiswert* definiert, der wiederum durch ein Measure festgelegt wird, und mit einem *Zielwert* verglichen, der ebenfalls durch ein Measure oder durch einen absoluten Wert definiert wird. Ein KPI umfasst außerdem den *Status*. Damit wird berechnet, wo der Basiswert zwischen den Schwellenwerten für den Zielwert ausgewertet wird. Das Ergebnis wird in einem grafischen Format angezeigt. KPIs werden oft von Geschäftsleuten verwendet, um Trends in wichtigen Geschäftsmetriken aufzudecken.  
   
- Jedes Measure kann als Basismeasure eines KPIs verwendet werden. Klicken Sie mit der rechten Maustaste auf ein Measure und anschließend auf **KPI erstellen**, um einen KPI im Measureraster zu erstellen. Das Dialogfeld Key Performance Indicator wird dort angezeigt, wo Sie anschließend einen Zielwert (definiert durch ein Measure oder einen absoluten Wert) angeben und Statusschwellenwerte und einen Grafiktyp definieren können. Weitere Informationen finden Sie unter [KPIs &#40;SSAS – tabellarisch&#41;](kpis-ssas-tabular.md).  
+ Jedes Measure kann als Basismeasure eines KPIs verwendet werden. Klicken Sie mit der rechten Maustaste auf ein Measure und anschließend auf **KPI erstellen**, um einen KPI im Measureraster zu erstellen. Das Dialogfeld Key Performance Indicator wird dort angezeigt, wo Sie anschließend einen Zielwert (definiert durch ein Measure oder einen absoluten Wert) angeben und Statusschwellenwerte und einen Grafiktyp definieren können. Weitere Informationen finden Sie unter [KPIs &#40;SSAS – tabellarisch&#41;](kpis-ssas-tabular.md), um die Anzeige des Measurerasters für eine Tabelle einzuschalten.  
   
 ##  <a name="bkmk_rel_tasks"></a> Verwandte Aufgaben  
   

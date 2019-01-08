@@ -11,12 +11,12 @@ ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 629494b298f9eacee0b7217522698897be401e04
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 866b32abbc7f7e754b11fd286dd0c35eeeb92165
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669891"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400694"
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>Verwenden von SQL Server-Features und Funktionen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "51669891"
 |SQL Server- Funktion|Verwendung in "wideworldimporters"|
 |-----------------------------|---------------------|
 |Temporale Tabellen|Es gibt zahlreiche temporale Tabellen enthält, einschließlich aller Suche Stil Verweistabellen und Hauptentitäten wie z. B. StockItems, Kunden und Lieferanten. Verwendung von temporalen Tabellen ermöglicht, um bequem Nachverfolgen der Verlauf dieser Entitäten.|
-|AJAX-Aufrufe für JSON|Die Anwendung verwendet häufig AJAX-Aufrufe an diese Tabellen Abfragen: Personen, Kunden, Lieferanten und StockItems. Der Aufruf zurück, JSON-Nutzlasten (d. h. ist die zurückgegebenen Daten als JSON-Daten formatiert). Anzuzeigen, z. B. die gespeicherte Prozedur `Website.SearchForCustomers`.|
+|AJAX-Aufrufe für JSON|Die Anwendung verwendet häufig AJAX-Aufrufe, um diese Tabellen Abfragen: Personen, Kunden, Lieferanten und StockItems. Der Aufruf zurück, JSON-Nutzlasten (d. h. ist die zurückgegebenen Daten als JSON-Daten formatiert). Anzuzeigen, z. B. die gespeicherte Prozedur `Website.SearchForCustomers`.|
 |JSON-Eigenschaft/Wert-Sammlungen|Eine Reihe von Tabellen muss die Spalten, die JSON-Daten mit relationalen Daten in der Tabelle zu erweitern. Z. B. `Application.SystemParameters` verfügt über eine Spalte für Anwendungseinstellungen und `Application.People` verfügt über eine Spalte zum Aufzeichnen von benutzereinstellungen. Diese Tabellen verwenden ein `nvarchar(max)` Spalte, um die JSON-Daten, zusammen mit einer CHECK-Einschränkung, die mit der integrierten Funktion aufzeichnen `ISJSON` um sicherzustellen, dass die Spalte Werte sind gültige JSON.|
 |Sicherheit auf Zeilenebene (RLS)|Zeilenebene (Row Level Security, RLS) wird verwendet, um den Zugriff auf die Customers-Tabelle, basierend auf der Rollenmitgliedschaft zu beschränken. Jedes Vertriebsgebiet verfügt über eine Rolle und einen Benutzer. Um dies in Aktion zu sehen, verwenden Sie das entsprechende Skript in der Beispiel-script.zip, gehört der der [Version des Beispiels](https://go.microsoft.com/fwlink/?LinkID=800630).|
 |Operative Echtzeitanalyse|(Vollständige Version der Datenbank) Die Core-Transaktionstabellen `Sales.InvoiceLines` und `Sales.OrderLines` beide haben einen nicht gruppierten Columnstore-Index, um effiziente Ausführung von Analyseabfragen in der Transaktionsdatenbank mit minimalen Auswirkungen auf die betriebsworkload zu unterstützen. Ausführen von Transaktionen und Analysen in der gleichen Datenbank wird auch als bezeichnet [(Hybrid Transactional/Analytical Processing, HTAP)](https://wikipedia.org/wiki/Hybrid_Transactional/Analytical_Processing_(HTAP)). Um dies in Aktion zu sehen, verwenden Sie das entsprechende Skript in der Beispiel-script.zip, gehört der der [Version des Beispiels](https://go.microsoft.com/fwlink/?LinkID=800630).|

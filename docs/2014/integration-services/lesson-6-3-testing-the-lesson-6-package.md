@@ -1,24 +1,23 @@
 ---
-title: 'Schritt 3: Testen des Pakets aus Lektion 6 | Microsoft-Dokumentation'
+title: 'Schritt 3: Testen des Pakets aus Lektion 6 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ddacdc7ede5d65132912783464250ff5f0db6bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 027cea0f06d9a673c7c5216c548e907b6326544d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122030"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767455"
 ---
-# <a name="step-3-testing-the-lesson-6-package"></a>Schritt 3: Testen des Pakets aus Lektion 6
+# <a name="step-3-testing-the-lesson-6-package"></a>Schritt 3: Testen des Pakets aus Lektion 6
   Zur Laufzeit erhält Ihr Paket den Wert für die Eigenschaft "Verzeichnis" vom VarFolderName-Parameter.  
   
  Um zu überprüfen, ob vom Paket die Directory-Eigenschaft während der Laufzeit auf den neuen Wert aktualisiert wird, führen Sie das Paket einfach aus. Weil nur drei Beispieldatendateien in das neue Verzeichnis kopiert werden, wird der Datenfluss nur drei Mal ausgeführt, statt durch 14 Dateien im ursprünglichen Ordner zu iterieren.  
@@ -32,7 +31,7 @@ ms.locfileid: "48122030"
   
  **Datenfluss**  
   
- ![Datenfluss](../../2014/tutorials/media/task3lesson6data.jpg "-Datenfluss")  
+ ![Datenfluss](../../2014/tutorials/media/task3lesson6data.jpg "Datenfluss")  
   
 ### <a name="to-test-the-lesson-6-tutorial-package"></a>So testen Sie das Lektion 6-Lernprogrammpaket  
   

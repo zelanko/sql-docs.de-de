@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.mergejointrans.f1
@@ -19,12 +18,12 @@ ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0620aec0c710e513115455388276c72cc4371e9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e1a581536bb4f2a07dbbdf3d6ca187ac4a6f5250
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171041"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767182"
 ---
 # <a name="merge-join-transformation"></a>Merge Join Transformation
   Die Transformation für Zusammenführungjoins stellt eine Ausgabe bereit, die durch Verknüpfen von zwei sortierten Datasets mithilfe einer FULL JOIN-, LEFT JOIN- oder INNER JOIN-Anweisung generiert wird. Beispielsweise können Sie mit einer LEFT JOIN-Anweisung eine Tabelle, die Produktinformationen einschließt, mit einer Tabelle verknüpfen, die das Land bzw. die Region auflistet, in der ein Produkt hergestellt wurde. Das Ergebnis ist eine Tabelle, in der alle Produkte und deren Ursprungsland/-region aufgelistet sind.  
@@ -49,23 +48,23 @@ ms.locfileid: "48171041"
  Für die Transformation für Zusammenführungsjoin müssen die verknüpften Spalten übereinstimmende Metadaten aufweisen. Beispielsweise kann eine Spalte mit einem numerischen Datentyp nicht mit einer Spalte mit einem Zeichendatentyp verknüpft werden. Wenn die Daten einen Zeichenfolgen-Datentyp aufweisen, muss die Länge der Spalte in der zweiten Eingabe kleiner oder gleich der Länge der Spalte in der ersten Eingabe sein, mit der diese zusammengeführt wird.  
   
 ## <a name="buffer-throttling"></a>Pufferdrosselung  
- Sie müssen nicht mehr so konfigurieren Sie den Wert des der `MaxBuffersPerInput` Eigenschaft da Microsoft Änderungen, die das Risiko zu reduzieren vorgenommen hat, dass die Transformation für Zusammenführungsjoin übermäßig Arbeitsspeicher verbraucht. Dieses Problem trat in einigen Fällen auf, wenn durch die Eingaben des Zusammenführungsjoins unregelmäßige Daten erzeugt wurden.  
+ Der Wert der `MaxBuffersPerInput`-Eigenschaft muss nicht mehr konfiguriert werden, da Microsoft Änderungen vorgenommen hat, die das Risiko einer übermäßigen Arbeitsspeicherbelegung bei der Transformation für Zusammenführungsjoins reduzieren. Dieses Problem trat in einigen Fällen auf, wenn durch die Eingaben des Zusammenführungsjoins unregelmäßige Daten erzeugt wurden.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Eigenschaften können Sie mit dem [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zum Festlegen von Eigenschaften für diese Transformation anzuzeigen:  
   
--   [Erweitern eines Datasets mithilfe der Transformation für Zusammenführungsjoin](merge-join-transformation.md)  
+-   [Erweitern eines Datasets mithilfe der Transformation für Zusammenführungsjoins](merge-join-transformation.md)  
   
 -   [Festlegen der Eigenschaften einer Datenflusskomponente](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin](sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Transformations-Editor für zusammenführungsjoin](../../merge-join-transformation-editor.md)   
- [Transformation für zusammenführen](merge-transformation.md)   
- [Union All-Transformation](union-all-transformation.md)   
+ [Transformations-Editor für Zusammenführungsjoin](../../merge-join-transformation-editor.md)   
+ [Transformation für Zusammenführen](merge-transformation.md)   
+ [Transformation für UNION ALL](union-all-transformation.md)   
  [SQL Server Integration Services-Transformationen](integration-services-transformations.md)  
   
   

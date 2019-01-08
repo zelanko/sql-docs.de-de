@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f85c297c7ae8786d5cd387a2f25a81f507425dda
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 2a39742fa8e97e198d54baf73d91534d69a6ee36
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148015"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516672"
 ---
 # <a name="drillthrough-queries-data-mining"></a>Drillthroughabfragen (Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "50148015"
   
 -   Drillthrough zu den **Fällen im Modell**  
   
-     Drillthroughs zu Modellfällen werden ausgeführt, wenn Sie bei einem bestimmten Muster im Modell beginnen – z. B. bei einem Cluster oder einer Verzweigung einer Entscheidungsstruktur – und Details zu den einzelnen Fällen anzeigen möchten.  
+     Drillthrough zu modellfällen wird verwendet, wenn Sie von einem bestimmten Muster im Modell – etwa als einen Cluster oder eine Verzweigung einer Entscheidungsstruktur wechseln möchten – und Details zu den einzelnen Fällen anzeigen.  
   
 -   Drillthrough zu den **Fällen in der Struktur**  
   
@@ -87,7 +87,7 @@ ms.locfileid: "50148015"
 ##  <a name="bkmk_Tasks"></a> Verwandte Aufgaben  
  Verwenden Sie die folgenden Links, um in bestimmten Szenarien mit Drillthroughs zu arbeiten.  
   
-|Task|Link|  
+|Aufgabe|Link|  
 |----------|----------|  
 |Schritte zur Verwendung von Drillthroughs im Data Mining-Designer|[Ausführen von Drillthroughs für Falldaten aus einem Miningmodell](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
 |So ändern Sie ein vorhandenes Miningmodell, um Drillthroughs zu ermöglichen|[Aktivieren von Drillthrough für ein Miningmodell](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)|  

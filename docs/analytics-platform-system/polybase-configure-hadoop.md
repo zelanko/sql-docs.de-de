@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b0a49925ec0d0592adfd131e0ab994e5e8356f95
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: 94c8d399f7b6ba36b48b4c5aa7f35bbd67ce6909
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236936"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527814"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Konfigurieren von PolyBase für den Zugriff auf externe Daten in Hadoop
 
@@ -27,7 +27,7 @@ PolyBase unterstützt zwei Hadoop-Anbieter: Hortonworks Data Platform (HDP) und 
  - Hortonworks HDP 2.1 – 2.6 unter Linux
  - Hortonworks HDP 2.1 – 2.3 unter Windows Server  
  - Cloudera CDH 4.3 unter Linux  
- - Cloudera CDH 5.1 bis 5.5, 5.9 bis 5.13 unter Linux
+ - Cloudera CDH 5.1 – 5.5, 5.9 bis 5.13 unter Linux
 
 ### <a name="configure-hadoop-connectivity"></a>Konfigurieren der Hadoop-Konnektivität
 

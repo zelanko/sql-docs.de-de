@@ -15,12 +15,12 @@ ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7c39bb3499302ef1b60744a4332c665506c7fd21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 828608b5c00cdcf0ed625a302359bb5c271381b4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809038"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538530"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Beschränkungen des Programmiermodells für die CLR-Integration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "47809038"
  Zur Laufzeit wird die Codeassembly auf die folgenden Bedingungen überprüft. Wird eine dieser Bedingungen erkannt, darf der verwaltete Code nicht ausgeführt werden und es wird eine Ausnahme ausgelöst.  
   
 ### <a name="unsafe"></a>UNSAFE  
- Das Laden einer Assembly, entweder explizit durch Aufrufen der **System.Reflection.Assembly.Load()** -Methode aus einem Bytearray oder implizit durch die Verwendung von **Reflection.Emit** Namespace – ist nicht zulässig.  
+ Laden einer Assembly entweder explizit durch Aufrufen der **System.Reflection.Assembly.Load()** -Methode aus einem Bytearray oder implizit durch die Verwendung von **Reflection.Emit** Namespace-ist nicht zulässig.  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  Alle **UNSAFE** Bedingungen werden überprüft.  

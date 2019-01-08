@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sequence number object, overview
@@ -17,12 +16,12 @@ ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d0446aaf5508ad0d2655245f441d4da81a6c79c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a942136314702d5fe87c1997f20dcb19a74df13d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106860"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753382"
 ---
 # <a name="sequence-numbers"></a>Sequenznummern
   Als Sequenz wird ein benutzerdefiniertes schemagebundenes Objekt bezeichnet, das eine Sequenz numerischer Werte anhand der Spezifikation generiert, mit der die Sequenz erstellt wurde. Die Sequenz von numerischen Werten wird in aufsteigender oder absteigender Reihenfolge in einem definierten Intervall generiert, und je nach Anforderung wird ein Zyklus (Wiederholungen) ausgeführt. Sequenzen werden anders als Identitätsspalten keinen Tabellen zugeordnet. Eine Anwendung verweist auf ein Sequenzobjekt, um den nächsten Wert zu empfangen. Die Beziehung zwischen Sequenzen und Tabellen wird von der Anwendung gesteuert. Benutzeranwendungen können auf ein Sequenzobjekt verweisen und die Werteschlüssel in mehreren Zeilen und Tabellen koordinieren.  
@@ -31,7 +30,7 @@ ms.locfileid: "48106860"
   
  Im Unterschied zu Identitätsspaltenwerten, die beim Einfügen von Zeilen generiert werden, kann eine Anwendung durch Aufrufen der [NEXT VALUE FOR](/sql/t-sql/functions/next-value-for-transact-sql) -Funktion die nächste Sequenznummer abrufen, bevor die Zeile eingefügt wird. Die Sequenznummer wird beim Aufruf von NEXT VALUE FOR zugeordnet, selbst wenn die Nummer nie in eine Tabelle eingefügt wird. Die NEXT VALUE FOR-Funktion kann als Standardwert für eine Spalte in einer Tabellendefinition verwendet werden. Mit [sp_sequence_get_range](/sql/relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql) können Sie einen Bereich von mehreren Sequenznummern gleichzeitig abrufen.  
   
- Eine Sequenz kann als beliebiger ganzzahliger Datentyp definiert werden. Wenn der Datentyp nicht angegeben wird, eine Sequenz standardmäßig auf `bigint`.  
+ Eine Sequenz kann als beliebiger ganzzahliger Datentyp definiert werden. Wenn kein Datentyp nicht angegeben ist, wird eine Sequenz standardmäßig auf `bigint` festgelegt.  
   
 ## <a name="using-sequences"></a>Verwenden von Sequenzen  
  Verwenden Sie in den folgenden Szenarios Sequenzen anstelle der Identitätsspalten:  
@@ -53,7 +52,7 @@ ms.locfileid: "48106860"
   
  Die Eindeutigkeit von Sequenzwerten wird nicht automatisch erzwungen. Sequenzwerte sind so konzipiert, dass sie wiederverwendet werden können. Wenn Sequenzwerte in einer Tabelle eindeutig sein müssen, erstellen Sie für die Spalte einen eindeutigen Index. Wenn Sequenzwerte in einer Tabelle für eine ganze Gruppe von Tabellen eindeutig sein müssen, erstellen Sie Trigger, mit denen verhindert wird, dass durch Updateanweisungen oder Sequenznummerzyklen Duplikate erzeugt werden.  
   
- Das Sequenzobjekt generiert Nummern entsprechend seiner Definition, es steuert jedoch nicht die Verwendung dieser Nummern. In eine Tabelle eingefügte Sequenznummern können Lücken aufweisen, wenn ein Rollback für eine Transaktion ausgeführt wird, wenn ein Sequenzobjekt von mehreren Tabellen gemeinsam verwendet wird oder wenn Sequenznummern zugeordnet sind, ohne dass sie in Tabellen verwendet werden. Bei Erstellung mit der CACHE-Option können die Sequenznummern im Cache durch unerwartetes Herunterfahren, z. B. bei einem Stromausfall, verloren gehen.  
+ Das Sequenzobjekt generiert Nummern entsprechend seiner Definition, es steuert jedoch nicht die Verwendung dieser Nummern. In eine Tabelle eingefügte Sequenznummern können Lücken aufweisen, wenn ein Rollback für eine Transaktion ausgeführt wird, wenn ein Sequenzobjekt von mehreren Tabellen gemeinsam verwendet wird oder wenn Sequenznummern zugeordnet sind, ohne dass sie in Tabellen verwendet werden. Bei Erstellung mit der CACHE-Option können die Sequenznummern im Cache durch unerwartetes Herunterfahren, z. B. bei einem Stromausfall, verloren gehen.  
   
  Wenn mehrere Instanzen der `NEXT VALUE FOR`-Funktion denselben Sequenz-Generator in einer einzelnen [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisung angeben, geben all diese Instanzen den gleichen Wert für eine bestimmte Zeile zurück, die von dieser [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisung verarbeitet wurde. Dieses Verhalten ist mit dem ANSI-Standard konsistent.  
   

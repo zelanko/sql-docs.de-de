@@ -13,12 +13,12 @@ ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1451ddc8ec43b1960ed6073fb836b05e8384bb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62d13bdc9d1a0fc030dc33bf982f6561b454c4ea
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683009"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213499"
 ---
 # <a name="create-table---sql-command"></a>CREATE TABLE (SQL-Befehl)
 Erstellt eine Tabelle mit den angegebenen Feldern.  
@@ -111,12 +111,12 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
 ```  
   
  PRIMÄRSCHLÜSSEL *eExpression2* TAG *TagName2*  
- Gibt an, einen primären Index zu erstellen. *eExpression2* gibt jede Feld oder eine Kombination der Felder in der Tabelle. TAG *TagName2 s*gibt den Namen für den primären Index-Tag, das erstellt wird. Tag-Namen des Index können bis zu 10 Zeichen enthalten.  
+ Gibt an, einen primären Index zu erstellen. *eExpression2* gibt jede Feld oder eine Kombination der Felder in der Tabelle. TAG *TagName2* gibt den Namen für den primären Index-Tag, das erstellt wird. Tag-Namen des Index können bis zu 10 Zeichen enthalten.  
   
  Da eine Tabelle nur ein primären Index verfügen kann, können nicht Sie diese Klausel einschließen, wenn Sie bereits einen primären Index für ein Feld erstellt haben. Visual FoxPro generiert einen Fehler auf, wenn Sie mehr als eine PRIMARY KEY-Klausel im Artikel CREATE TABLE.  
   
  EINDEUTIGE *eExpression3*TAG *TagName3*  
- Erstellt einen Index Kandidat. *eExpression3* gibt jede Feld oder eine Kombination der Felder in der Tabelle. Wenn Sie einen primären Index mit einem der PRIMARY KEY-Optionen erstellt haben, können nicht Sie allerdings das Feld enthalten, das für den primären Index angegeben wurde. TAG *TagName3 s*gibt einen Tag-Namen für das Tag der Candidate-Index, der erstellt wird. Tag-Namen des Index können bis zu 10 Zeichen enthalten.  
+ Erstellt einen Index Kandidat. *eExpression3* gibt jede Feld oder eine Kombination der Felder in der Tabelle. Wenn Sie einen primären Index mit einem der PRIMARY KEY-Optionen erstellt haben, können nicht Sie allerdings das Feld enthalten, das für den primären Index angegeben wurde. TAG *TagName3* gibt einen Tagnamen für die Candidate-Indexname, der erstellt wird. Tag-Namen des Index können bis zu 10 Zeichen enthalten.  
   
  Eine Tabelle kann mehrere Kandidaten Indizes aufweisen.  
   

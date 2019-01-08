@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
@@ -13,12 +12,12 @@ ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41c79a6390c89c01a5ff7e5c7fe949cbebff6c6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d22be3bc8d99edd5d8b799e4121e2a591977b255
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097570"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767223"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Optionen für die Anforderung für Spaltenmusterprofil (Datenprofilerstellungs-Task)
   Verwenden Sie den Bereich **Anforderungseigenschaften** der Seite **Profilanforderungen** , um die Optionen für die im Anforderungsbereich ausgewählte **Anforderung für Spaltenmusterprofil** festzulegen. Ein Spaltenmusterprofil meldet einen Satz von regulären Ausdrücken, die den angegebenen Prozentsatz der Werte in einer Zeichenfolgenspalte abdecken. Mit diesem Profil können Sie Probleme in Ihren Daten, wie z. B. ungültige Zeichenfolgen, ermitteln und reguläre Ausdrücke vorschlagen, die in Zukunft zum Überprüfen neuer Werte verwendet werden können. Beispiel: Ein Musterprofil einer Spalte mit US-Postleitzahlen kann die regulären Ausdrücke \d{5}-\d{4}, \d{5} und \d{9} erstellen. Wenn Sie andere reguläre Ausdrücke erhalten, enthalten Ihre Daten wahrscheinlich ungültige oder falsch formatierte Werte.  
@@ -40,7 +39,7 @@ ms.locfileid: "48097570"
  Alle Trennzeichen werden im Rahmen des Prozesses zur Tokenerstellung in ein Leerzeichen normalisiert, während Symbole beibehalten werden.  
   
 ## <a name="understanding-the-use-of-the-tag-table"></a>Grundlegendes zur Verwendung der Tagtabelle  
- Sie können zusammengehörige Token optional mit einem Tag gruppieren. Dazu speichern Sie Tags und die zugehörigen Ausdrücke in einer speziellen Tabelle, die Sie in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank erstellen. Die Tagtabelle muss zwei Zeichenfolgenspalten aufweisen, eine mit der Bezeichnung "Tag" und eine weitere mit der Bezeichnung "Begriff". Diese Spalten von Typ sein `char`, `nchar`, `varchar`, oder `nvarchar`, aber nicht `text` oder `ntext`. Sie können mehrere Tags und die entsprechenden Ausdrücke in einer einzelnen Tabelle kombinieren. Eine Anforderung für Spaltenmusterprofil kann nur eine Tagtabelle verwenden. Sie können einen separaten [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager verwenden, um eine Verbindung zur Tagtabelle herzustellen. Daher kann sich die Tagtabelle in einer anderen Datenbank oder auf einem anderen Server befinden als die Quelldaten.  
+ Sie können zusammengehörige Token optional mit einem Tag gruppieren. Dazu speichern Sie Tags und die zugehörigen Ausdrücke in einer speziellen Tabelle, die Sie in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank erstellen. Die Tagtabelle muss zwei Zeichenfolgenspalten aufweisen, eine mit der Bezeichnung "Tag" und eine weitere mit der Bezeichnung "Begriff". Diese Spalten können vom Typ `char`, `nchar`, `varchar` oder `nvarchar` sein, jedoch nicht `text` oder `ntext`. Sie können mehrere Tags und die entsprechenden Ausdrücke in einer einzelnen Tabelle kombinieren. Eine Anforderung für Spaltenmusterprofil kann nur eine Tagtabelle verwenden. Sie können einen separaten [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager verwenden, um eine Verbindung zur Tagtabelle herzustellen. Daher kann sich die Tagtabelle in einer anderen Datenbank oder auf einem anderen Server befinden als die Quelldaten.  
   
  Sie können z. B. die Werte "Ost", "West", "Nord" und "Süd", die in Straßennamen angezeigt werden können, mit dem Tag "Richtung" gruppieren. Die folgende Tabelle ist ein Beispiel für eine Tagtabelle.  
   
@@ -113,7 +112,7 @@ ms.locfileid: "48097570"
  **RequestID**  
  Geben Sie einen beschreibenden Namen ein, um diese Profilanforderung zu kennzeichnen. In der Regel müssen Sie den automatisch generierten Wert nicht ändern.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **MaxNumberOfPatterns**  
  Geben Sie die maximale Anzahl von Mustern an, die das Profil berechnen soll. Der Standardwert dieser Option ist 10. Der Maximalwert ist 100.  
   
@@ -144,7 +143,7 @@ ms.locfileid: "48097570"
  Weitere Informationen finden Sie unter "Grundlegendes zur Verwendung der Tagtabelle" in diesem Thema.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Der Datenprofilerstellungs-Task-Editor &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Editor für den Datenprofilerstellungs-Task &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)   
  [Schnellprofilformular für eine einzelne Tabelle &#40;Datenprofilerstellungs-Task&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

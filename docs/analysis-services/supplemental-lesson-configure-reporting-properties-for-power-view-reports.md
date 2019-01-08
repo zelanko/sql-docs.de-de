@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 27698f0431a11b73c1ebacd532769269458f1225
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e9122ab6f783e6b845c1a961c133d66e58e933e7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38033429"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544284"
 ---
 # <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>Ergänzende Lektion: Konfigurieren von Berichterstellungseigenschaften für Power View-Berichte
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -33,17 +33,17 @@ Zum Ausführen dieser ergänzenden Lektion benötigen Sie zusätzlich Folgendes:
 ## <a name="model-properties-that-affect-reporting"></a>Modelleigenschaften, die sich auf die Berichterstellung auswirken  
 Beim Erstellen eines tabellarischen Modells können bestimmte Eigenschaften für einzelne Spalten und Tabellen festgelegt werden, um die Berichterstellung in Power View für den Endbenutzer zu verbessern. Darüber hinaus können Sie zusätzliche Modelldaten erstellen, um die Datenvisualisierung und weitere Funktionen zu unterstützen, die für den Berichterstellungsclient spezifisch sind. Im Folgenden sind einige Änderungen aufgeführt, die Sie am Beispiel Adventure Works Internet Sales Model vornehmen:  
   
--   **Neue Daten hinzufügen** – Durch das Hinzufügen neuer Daten in einer berechneten Spalte mithilfe einer DAX-Formel werden Datumsinformationen in einem Format erstellt, das in Diagrammen einfacher darzustellen ist.  
+-   **Hinzufügen von neuen Daten** -Hinzufügen von neuen Daten in einer berechneten Spalte mithilfe einer DAX-Formel werden Datumsinformationen in einem Format, das zum Anzeigen in Diagrammen einfacher wird erstellt.  
   
 -   **Tabellen und Spalten ausblenden, die für den Endbenutzer nicht von Nutzen sind** – Die Eigenschaft **Ausgeblendet** steuert, ob Tabellen und Tabellenspalten im Berichterstellungsclient angezeigt werden. Elemente mit dieser Eigenschaft werden zwar ausgeblendet, bleiben jedoch Teil des Modells und sind weiterhin für Abfragen und Berechnungen verfügbar.  
   
--   **One-Click-Tabellen aktivieren** – Wenn ein Endbenutzer auf eine Tabelle in der Feldliste klickt, wird standardmäßig keine Aktion ausgeführt. Um dieses Verhalten zu ändern, legen Sie für jede Spalte, die Sie in die Tabelle aufnehmen möchten, einen Standardfeldsatz fest, damit die Tabelle dem Bericht hinzugefügt wird, wenn darauf geklickt wird. Diese Eigenschaft wird für die Tabellenspalten festgelegt, die Endbenutzer am wahrscheinlichsten verwenden möchten.  
+-   **Aktivieren Sie ein-Klick Tabellen** -standardmäßig keine Aktion ausgeführt wird, wenn ein Endbenutzer eine Tabelle in der Feldliste klickt. Um dieses Verhalten zu ändern, legen Sie für jede Spalte, die Sie in die Tabelle aufnehmen möchten, einen Standardfeldsatz fest, damit die Tabelle dem Bericht hinzugefügt wird, wenn darauf geklickt wird. Diese Eigenschaft wird für die Tabellenspalten festgelegt, die Endbenutzer am wahrscheinlichsten verwenden möchten.  
   
 -   **Gruppierungen festlegen, falls erforderlich** – Die Eigenschaft **Eindeutige Zeilen beibehalten** bestimmt, ob die Werte in der Spalte nach Werten in einem anderen Feld gruppiert werden sollen, z.B. einem Bezeichnerfeld. Für Spalten, die doppelte Werte aufweisen (z.B. wenn die Spalte „Kundenname“ mehrere Kunden mit dem Namen „John Smith“ enthält), sollte unbedingt eine Gruppierung ( **Eindeutige Zeilen beibehalten** ) nach dem Feld Zeilenbezeichner ausgeführt werden, damit Endbenutzern die richtigen Ergebnisse zur Verfügung gestellt werden können.  
   
 -   **Datentypen und Datenformate festlegen** – Power View wendet standardmäßig Regeln auf Grundlage des Spaltendatentyps an, um zu bestimmen, ob das Feld als Measure verwendet werden kann. Da auch jede Datenvisualisierung in Power View über Regeln verfügt, die bestimmen, wo Measures und Nicht-Measures platziert werden können, ist es wichtig, den Datentyp im Modell festzulegen oder den Standardwert zu überschreiben, um das für den Endbenutzer gewünschte Verhalten zu erzielen.  
   
--   **Eigenschaft „Nach Spalte sortieren“ festlegen** – Die Eigenschaft **Nach Spalte sortieren** gibt an, ob die Werte in der Spalte nach Werten in einem anderen Feld sortiert werden sollen. Beispiel: In der Spalte Month Calendar, die den Monatsnamen enthält, soll eine Sortierung nach der Spalte Month Number ausgeführt werden.  
+-   **Legen Sie nach Spalte sortieren** -Eigenschaft: die **nach Sortierspalte** Eigenschaft gibt an, ob die Werte in der Spalte nach Werten in einem anderen Feld sortiert werden sollen. Beispiel: In der Spalte Month Calendar, die den Monatsnamen enthält, soll eine Sortierung nach der Spalte Month Number ausgeführt werden.  
   
 ## <a name="hide-tables-from-client-tools"></a>Ausblenden von Tabellen aus Clienttools  
 Da bereits eine berechnete Spalte Product Category und eine berechnete Spalte Product Subcategory in der Tabelle Product vorhanden sind, ist es nicht notwendig, dass die Tabellen Product Category und Product Subcategory für Clientanwendungen sichtbar sind.  
@@ -129,7 +129,7 @@ Ausführliche Informationen zu tabellenverhaltenseigenschaften finden Sie unter 
 7.  Wiederholen Sie diese Schritte für die Tabelle **Product** , wobei Sie die Spalte **Product Id** als Zeilenbezeichner und die Spalte **Product Name** im Listenfeld **Eindeutige Zeilen beibehalten** auswählen. Wählen Sie für **Standardbeschriftung** **Product Alternate Id**aus.  
   
 ## <a name="reporting-properties-for-columns"></a>Berichterstellungseigenschaften für Spalten  
-Für Spalten können eine Reihe grundlegender Spalteneigenschaften und bestimmte Berichterstellungseigenschaften festgelegt werden, mit deren Hilfe sich die Berichterstellung anhand von Modellen verbessern lässt. Es ist u. U. nicht erforderlich, dass Benutzer jede Spalte in jeder Tabelle sehen können. Genauso wie Sie zuvor die Tabellen Product Category und Product Subcategory ausgeblendet haben, können Sie mithilfe der Spalteneigenschaft Ausgeblendet bestimmte Spalten aus einer Tabelle ausblenden, die ansonsten angezeigt wird. Auch andere Eigenschaften, wie Datenformat und Nach Spalte sortieren, können die Darstellung von Spaltendaten in Berichten beeinflussen. Jetzt legen Sie einige Eigenschaften für bestimmten Spalten fest. Für andere Spalten ist keine Aktion erforderlich, daher werden sie unten nicht dargestellt.  
+Für Spalten können eine Reihe grundlegender Spalteneigenschaften und bestimmte Berichterstellungseigenschaften festgelegt werden, mit deren Hilfe sich die Berichterstellung anhand von Modellen verbessern lässt. Es ist u. U. nicht erforderlich, dass Benutzer jede Spalte in jeder Tabelle sehen können. Ebenso, wie Sie die Tabellen Product Category und Product Subcategory zuvor, mithilfe der Spalteneigenschaft Hidden-Eigenschaft einer Spalte, können Sie bestimmte Spalten aus einer Tabelle ausblenden, die ansonsten angezeigt wird. Auch andere Eigenschaften, wie Datenformat und Nach Spalte sortieren, können die Darstellung von Spaltendaten in Berichten beeinflussen. Jetzt legen Sie einige Eigenschaften für bestimmten Spalten fest. Für andere Spalten ist keine Aktion erforderlich, daher werden sie unten nicht dargestellt.  
   
 Sie legen hier nur einige von zahlreichen Spalteneigenschaften fest. Ausführlichere Informationen zu berichterstellungseigenschaften finden Sie unter [Spalteneigenschaften](../analysis-services/tabular-models/column-properties-ssas-tabular.md) in SQL Server-Onlinedokumentation.  
   
@@ -143,21 +143,21 @@ Sie legen hier nur einige von zahlreichen Spalteneigenschaften fest. Ausführlic
   
 4.  Wiederholen Sie diese Schritte, und legen Sie die folgenden Spalten- und Berichterstellungseigenschaften für alle angegebenen Tabellen fest. Verwenden Sie für alle anderen Eigenschaften die Standardeinstellungen.  
   
-    Hinweis: Stellen Sicher, dass **Datentyp** in allen Datumsspalten **Datum**entspricht.  
+    Hinweis: Für alle Datumsspalten, stellen Sie sicher, dass **Datentyp** ist **Datum**.  
   
-    **Customer**  
+    **Kunde**  
   
-    |Spalte|Eigenschaft|value|  
+    |Spalte|Eigenschaft|Wert|  
     |----------|------------|---------|  
     |Geography Id|Ausgeblendet|Wahr|  
     |Birth Date|Datenformat|Short Date|  
   
-    **Date**  
+    **Datum**  
   
     > [!NOTE]  
-    > Da die Tabelle Date mithilfe der Einstellung Als Datumstabelle markieren in "Lektion 7: Markieren als Datumstabelle" als Datumstabelle für das Modell ausgewählt wurde und die Spalte Date in der Tabelle Date als Spalte ausgewählt wurde, die als eindeutiger Bezeichner fungieren soll, wird die Eigenschaft Zeilenbezeichner für die Spalte Date automatisch auf True festgelegt und kann nicht geändert werden. Bei Verwendung von Zeitintelligenzfunktionen in DAX-Formeln müssen Sie eine Datumstabelle angeben. In diesem Modell haben Sie unter Verwendung von Zeitintelligenzfunktionen eine Reihe von Measures zur Berechnung von Umsatzdaten für verschiedene Zeiträume, z. B. das vorherige und aktuelle Quartal, sowie zur Verwendung in KPIs erstellt. Weitere Informationen zum Angeben einer Datumstabelle finden Sie unter [geben markieren als Datumstabelle für die Verwendung mit Zeitintelligenz](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) in SQL Server-Onlinedokumentation.  
+    > Da die Tabelle „Date“ mithilfe der Einstellung „Als Datumstabelle markieren“ in „Lektion 7: Markieren als Datumstabelle“ als Datumstabelle für das Modell ausgewählt wurde und die Spalte „Date“ in der Tabelle „Date“ als Spalte ausgewählt wurde, die als eindeutiger Bezeichner fungieren soll, wird die Eigenschaft „Zeilenbezeichner“ für die Spalte „Date“ automatisch auf „True“ festgelegt und kann nicht geändert werden. Bei Verwendung von Zeitintelligenzfunktionen in DAX-Formeln müssen Sie eine Datumstabelle angeben. In diesem Modell haben Sie unter Verwendung von Zeitintelligenzfunktionen eine Reihe von Measures zur Berechnung von Umsatzdaten für verschiedene Zeiträume, z. B. das vorherige und aktuelle Quartal, sowie zur Verwendung in KPIs erstellt. Weitere Informationen zum Angeben einer Datumstabelle finden Sie unter [geben markieren als Datumstabelle für die Verwendung mit Zeitintelligenz](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) in SQL Server-Onlinedokumentation.  
   
-    |Spalte|Eigenschaft|value|  
+    |Spalte|Eigenschaft|Wert|  
     |----------|------------|---------|  
     |date|Datenformat|Short Date|  
     |Day Number of Week|Ausgeblendet|Wahr|  
@@ -174,14 +174,14 @@ Sie legen hier nur einige von zahlreichen Spalteneigenschaften fest. Ausführlic
   
     **Geography**  
   
-    |Spalte|Eigenschaft|value|  
+    |Spalte|Eigenschaft|Wert|  
     |----------|------------|---------|  
     |Geography Id|Ausgeblendet|Wahr|  
     |Sales Territory Id|Ausgeblendet|Wahr|  
   
     **Product**  
   
-    |Spalte|Eigenschaft|value|  
+    |Spalte|Eigenschaft|Wert|  
     |----------|------------|---------|  
     |Product Id|Ausgeblendet|Wahr|  
     |Product Alternate Id|Standardbeschriftung|Wahr|  
@@ -191,7 +191,7 @@ Sie legen hier nur einige von zahlreichen Spalteneigenschaften fest. Ausführlic
   
     **Internet Sales**  
   
-    |Spalte|Eigenschaft|value|  
+    |Spalte|Eigenschaft|Wert|  
     |----------|------------|---------|  
     |Product Id|Ausgeblendet|Wahr|  
     |Customer Id|Ausgeblendet|Wahr|  

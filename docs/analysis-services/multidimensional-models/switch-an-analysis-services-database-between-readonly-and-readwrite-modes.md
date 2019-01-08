@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c6ede109d13c21686400c0f9ce99c22f1118eda9
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: e1ae8fc032a1f728372e9b4e764281ea8df8ddaa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147915"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525876"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Umschalten einer Analysis Services-Datenbank zwischen schreibgeschütztem Modus und Lese-/Schreibmodus
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,13 +34,13 @@ ms.locfileid: "50147915"
   
      Beachten Sie den Speicherort. Ein leerer Datenbankspeicherort weist darauf hin, dass sich der Datenbankordner im Datenordner des Servers befindet.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Datenbank, und wählen Sie **Trennen…** aus.  
+2.  Mit der rechten Maustaste in der Datenbank, und wählen Sie **trennen...**  
   
 3.  Weisen Sie der Datenbank, die getrennt werden soll, ein Kennwort zu, und klicken Sie anschließend auf **OK** , um den Befehl zum Trennen auszuführen.  
   
-4.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf den Ordner **Datenbanken** , und wählen Sie **Anfügen...** aus.  
+4.  Klicken Sie im Objekt-Explorer mit der Maustaste der **Datenbanken** Ordner, und wählen **anfügen...**  
   
-5.  Geben Sie im Textfeld **Ordner** den ursprünglichen Speicherort des Datenbankordners ein. Alternativ können Sie über die Schaltfläche zum Durchsuchen (**…**) nach dem Datenbankordner suchen.  
+5.  Geben Sie im Textfeld **Ordner** den ursprünglichen Speicherort des Datenbankordners ein. Alternativ können Sie die Schaltfläche zum Durchsuchen (**...** ) nach dem Datenbankordner suchen.  
   
 6.  Wählen Sie den Lese-/Schreibmodus für die Datenbank aus.  
   
@@ -93,7 +93,7 @@ private void SwitchReadWrite(Server server, string dbName, ReadWriteMode dbReadW
   
      Beachten Sie den Speicherort. Ein leerer Datenbankspeicherort weist darauf hin, dass sich der Datenbankordner im Datenordner des Servers befindet.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Datenbank, und wählen Sie **Trennen…** aus.  
+2.  Mit der rechten Maustaste in der Datenbank, und wählen Sie **trennen...**  
   
 3.  Öffnen Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]eine neue XMLA-Registerkarte.  
   

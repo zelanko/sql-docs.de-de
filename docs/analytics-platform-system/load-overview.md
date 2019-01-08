@@ -1,6 +1,6 @@
 ---
-title: Laden von Daten in Parallel Data Warehouse | Microsoft Docs
-description: Laden oder Einfügen von Daten in SQL Server Parallel Data Warehouse (PDW) mit Integration Services, Bcp (Hilfsprogramm), Dwloader oder die SQL-INSERT-Anweisung.
+title: Laden von Daten in Parallel Data Warehouse | Microsoft-Dokumentation
+description: Laden oder Einfügen von Daten in SQL Server Parallel Data Warehouse (PDW) mit Integration Services "," Hilfsprogramm "Bcp" "," Dwloader "oder" SQL INSERT-Anweisung.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,47 +9,47 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3fed89686683616164132cf0322e3709eab78f32
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: f4551f77b1348ece34dc87dc8abeb91e27290d00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539080"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502142"
 ---
 # <a name="loading-data-into-parallel-data-warehouse"></a>Laden von Daten in Parallel Data Warehouse
-Laden oder Einfügen von Daten in SQL Server Parallel Data Warehouse (PDW) mit Integration Services, [Bcp (Hilfsprogramm)](../tools/bcp-utility.md), **Dwloader** Command-Line-Ladeprogramm oder die SQL-INSERT-Anweisung.  
+Laden oder Einfügen von Daten in SQL Server Parallel Data Warehouse (PDW) mit Integration Services, [Hilfsprogramm "Bcp"](../tools/bcp-utility.md), **Dwloader** Command-Line-Loader oder die SQL-INSERT-Anweisung.  
 
-## <a name="loading-environment"></a>Laden die Umgebung  
-Um Daten zu laden, benötigen Sie eine oder mehrere beim Laden von Servern. Können Sie eigene vorhandene ETL oder auf anderen Servern, oder Sie können neue Server erwerben. Weitere Informationen finden Sie unter [erwerben und Konfigurieren eines Servers geladen](acquire-and-configure-loading-server.md). Diese Anweisungen beinhalten eine [laden Server Kapazität Planungsarbeitsblatt](loading-server-capacity-planning-worksheet.md) helfen Ihnen beim Planen der richtigen Lösung für das Laden.  
+## <a name="loading-environment"></a>Umgebung wird geladen  
+Um Daten zu laden, benötigen Sie eine oder mehrere beim Laden von Servern. Können Sie Ihre eigenen vorhandenen ETL- oder anderen Servern, oder Sie können neue Server erwerben. Weitere Informationen finden Sie unter [abrufen und Konfigurieren eines Servers geladen](acquire-and-configure-loading-server.md). Diese Anweisungen beinhalten eine [Laden von Server-Kapazität Planungsarbeitsblatt](loading-server-capacity-planning-worksheet.md) helfen Ihnen beim Planen der richtigen Lösung für das Laden.  
   
-## <a name="load-with-dwloader"></a>Laden Sie mit dwloader  
+## <a name="load-with-dwloader"></a>Laden mit dwloader  
 Mithilfe der [Dwloader Command-Line-Ladeprogramm](dwloader.md) ist die schnellste Möglichkeit zum Laden von Daten in PDW.  
   
 ![Prozess des Ladens](media/loading-process.png "Prozess des Ladens")  
   
-Dwloader lädt Daten direkt an den Compute-Knoten, ohne die Daten über den Knoten "Zugriffssteuerung" übergeben. Zum Laden der Daten kommuniziert mit dem Steuerungsknoten zum Abrufen der Kontaktinformationen für die Serverknoten zuerst Dwloader. Dwloader richtet einen Kommunikationskanal mit jeder Serverknoten, und sendet dann 256KB-Segmenten der Daten für die Serverknoten in einer Weise Round-Robin-Prinzip.  
+Dwloader lädt die Daten direkt an den Compute-Knoten ohne Weiterleitung der Daten durch den Steuerelementknoten aus. Zum Laden von Daten kommuniziert die Dwloader zunächst mit den Steuerelementknoten aus, um Kontaktinformationen für den Compute-Knoten zu erhalten. Dwloader richtet einen Kommunikationskanal mit jeder Compute-Knoten und sendet dann die 256-KB-Segmenten der Daten, auf den Computeknoten, auf eine Roundrobin-Weise.  
   
-Auf jedem Knoten Compute Daten Bewegung Service (DMS) empfängt und verarbeitet die Datenabschnitte. Verarbeitung der Daten enthält jede Zeile in systemeigenen SQL Server-Format zu konvertieren und Errechnen des Hashs Verteilung, um die Compute-Knoten zu bestimmen, zu dem jede Zeile gehört.  
+Auf jedem Computeknoten (Data Movement Service, DMS) empfängt und verarbeitet die Datenblöcke. Verarbeitung der Daten enthält jede Zeile in der systemeigenen SQL Server-Format konvertieren und Errechnen des Hashs Verteilung, um den Compute-Knoten zu ermitteln, zu dem jede Zeile gehört.  
   
-Nach der Verarbeitung der Zeilen verwendet DMS eine zufälligen Verschiebung, die um jede Zeile in den richtigen Compute-Knoten und die Instanz von SQL Server zu übertragen. Wie SQL Server die Zeilen empfängt, als batches werden gemäß der **– b** batchgrößenparameter setzen Dwloader und Bulk lädt dann den Batch.  
+Nach der Verarbeitung von Zeilen, verwendet DMS eine Verschiebung mit Vermischung, um jede Zeile in den richtigen Compute-Knoten und die Instanz von SQL Server zu übertragen. Wie SQL Server die Zeilen empfängt, als batches werden gemäß der **-b** batchgrößenparameter Dwloader setzen und Bulk lädt dann den Batch.  
 
-## <a name="load-with-prepared-statements"></a>Laden Sie mit vorbereiteten Anweisungen
+## <a name="load-with-prepared-statements"></a>Laden mit vorbereiteten Anweisungen
 
-Vorbereitete Anweisungen können Sie um Daten in verteilten und replizierte Tabellen zu laden. Wenn die Eingabedaten nicht den Zieldatentyp übereinstimmt, wird eine implizite Konvertierung durchgeführt. Die impliziten Konvertierungen von vorbereiteten Anweisungen PDW unterstützt sind eine Teilmenge von Konvertierungen, die von SQL Server unterstützt. D. h. nur eine Teilmenge der Konvertierungen werden unterstützt, aber die unterstützten Konvertierungen entsprechen implizite Konvertierungen von SQL Server. Unabhängig davon, ob die Zieltabelle geladen werden als verteilte oder aus der replizierten Tabelle definiert ist werden implizite Konvertierungen angewendet (falls erforderlich) für alle Spalten, die in der Zieltabelle vorhanden sind. 
+Vorbereitete Anweisungen können zum Laden von Daten in verteilten und replizierten Tabellen. Wenn die Eingabedaten nicht den Zieldatentyp übereinstimmt, wird eine implizite Konvertierung ausgeführt. Die impliziten Konvertierungen von vorbereiteten Anweisungen PDW unterstützt sind eine Teilmenge von Konvertierungen, die von SQL Server unterstützt. D. h. nur eine Teilmenge der Konvertierungen werden unterstützt, aber die unterstützten Konvertierungen entsprechen der implizite Konvertierungen von SQL Server. Unabhängig davon, ob die Zieltabelle geladen werden als verteilte oder replizierte Tabelle definiert ist sind implizite Konvertierungen (falls erforderlich) auf alle Spalten angewendet, die in der Zieltabelle vorhanden sind. 
 
 <!-- MISSING LINK
 For more information, see [Prepared statements](prepared-statements.md).
 -->
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
-|Task|Description|  
+|Aufgabe|Description|  
 |--------|---------------|  
-|Erstellen der staging-Datenbank.|[Erstellen der Stagingdatenbank](staging-database.md)|  
+|Erstellen Sie die staging-Datenbank.|[Erstellen der Stagingdatenbank](staging-database.md)|  
 |Laden Sie mit Integrationsservices.|[Laden mit Integration Services](load-with-ssis.md)|  
-|Verstehen Sie typkonvertierungen für Dwloader.|[Regeln für das Konvertieren von Datentypen für dwloader](dwloader-data-type-conversion-rules.md)|  
-|Laden Sie Daten mit Dwloader.|[Dwloader Command-Line-Ladeprogramm](dwloader.md)|  
-|Verstehen Sie typkonvertierungen für das Einfügen.|[Laden von Daten mit SSIS](load-with-insert.md)|  
+|Erfahren Sie, die typkonvertierungen für Dwloader.|[Regeln für das Konvertieren von Datentypen für dwloader](dwloader-data-type-conversion-rules.md)|  
+|Laden von Daten mit Dwloader.|[Dwloader Command-Line-Ladeprogramm](dwloader.md)|  
+|Erfahren Sie, die typkonvertierungen für das Einfügen.|[Laden von Daten mit SSIS](load-with-insert.md)|  
  
 <!-- MISSING LINKS
 ## See Also  

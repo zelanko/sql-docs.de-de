@@ -13,12 +13,12 @@ ms.assetid: 45c6453a-bbe2-4ca5-836e-c7ef11cfcb65
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 49df3dcaf89d98d42da0a89ea7de0b8114093913
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 233e8f36f103d1a5adac6937d47e1040dfe6395d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166380"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523467"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI-Formular-Editor (Registerkarte 'KPIs', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich des **Formular-Editors für KPIs** auf der Registerkarte **KPIs** des Cube-Designers können Sie den ausgewählten Key Performance Indicator (KPI) erstellen oder ändern.  
@@ -26,7 +26,7 @@ ms.locfileid: "48166380"
 > [!NOTE]  
 >  Der Bereich wird nur in der Formularansicht angezeigt.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name**  
  Geben Sie den Namen des KPIs ein.  
   
@@ -61,10 +61,10 @@ ms.locfileid: "48166380"
   
  Ziehen Sie ausgewählte Elemente aus dem Bereich **Berechnungstools** auf diese Option, um die MDX-Syntax für das ausgewählte Element einzuschließen.  
   
- Es wird empfohlen, dass dieser Ausdruck eine Dezimalzahl zwischen –1 und 1 zurückgibt. Eine niedrigere Zahl stellt eine negative Situation dar, während eine höhere Zahl eine positive Situation darstellt.  
+ Es wird empfohlen, dass dieser Ausdruck eine Dezimalzahl zwischen-1 und 1 zurückgibt. Eine niedrigere Zahl stellt eine negative Situation dar, während eine höhere Zahl eine positive Situation darstellt.  
   
 > [!NOTE]  
->  Werte unter –1 und über 1 sind möglich, können aber möglicherweise von Clientanwendungen von Drittanbietern nicht ordnungsgemäß interpretiert werden.  
+>  Werte unter – 1 und größer als 1 ist möglich, aber möglicherweise nicht ordnungsgemäß interpretiert werden von Clientanwendungen von Drittanbietern.  
   
  **Trend**  
  Erweitern Sie diese Option, um die Optionen **Trendgrafik** und **Trendausdruck** anzuzeigen.  
@@ -80,10 +80,10 @@ ms.locfileid: "48166380"
   
  Ziehen Sie ausgewählte Elemente aus dem Bereich **Berechnungstools** auf diese Option, um die MDX-Syntax für das ausgewählte Element einzuschließen.  
   
- Der Trendausdruck kann auf beliebigen zeitbasierten Kriterien basieren, die in einem gegebenen Geschäftskontext einen Sinn ergeben. Es wird empfohlen, dass dieser Ausdruck eine Dezimalzahl zwischen –1 und 1 zurückgibt. Eine niedrigere Zahl stellt im Zeitverlauf einen negativen Trend dar, eine höhere Zahl stellt im Zeitverlauf einen positiven Trend dar.  
+ Der Trendausdruck kann auf beliebigen zeitbasierten Kriterien basieren, die in einem gegebenen Geschäftskontext einen Sinn ergeben. Es wird empfohlen, dass dieser Ausdruck eine Dezimalzahl zwischen-1 und 1 zurückgibt. Eine niedrigere Zahl stellt im Zeitverlauf einen negativen Trend dar, eine höhere Zahl stellt im Zeitverlauf einen positiven Trend dar.  
   
 > [!NOTE]  
->  Werte unter –1 und über 1 sind möglich, können aber möglicherweise von Clientanwendungen von Drittanbietern nicht ordnungsgemäß interpretiert werden.  
+>  Werte unter – 1 und größer als 1 ist möglich, aber möglicherweise nicht ordnungsgemäß interpretiert werden von Clientanwendungen von Drittanbietern.  
   
  **Weitere Eigenschaften**  
  Erweitern Sie diese Option, um die Optionen **Anzeigeordner**, **Übergeordneter KPI**, **Aktuelles Zeitelement**, **Gewichtung** **und Beschreibung** anzuzeigen.  

@@ -14,19 +14,19 @@ ms.assetid: 16c9376b-5fbb-4495-a429-06a2493849c9
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 9388ade07b8593ec06289141df0f013351f3f7f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: abe169a69cd8c247ba74a24b8e80c3202fa2d5f5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217940"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511312"
 ---
 # <a name="full-text-search-upgrade-options"></a>Upgradeoptionen für die Volltextsuche
-  Verwenden Sie im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installations-Assistenten die Seite mit den Upgradeoptionen für die Volltextsuche, um die Upgradeoption für die Volltextsuche auszuwählen, die Sie für die zu aktualisierenden Datenbanken verwenden möchten.  
+  Verwenden Sie im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installations-Assistenten die Seite mit den Upgradeoptionen für die Volltextsuche, um die Upgradeoption für die Volltextsuche auszuwählen, die Sie für die zu aktualisierenden Datenbanken verwenden möchten.  
   
- In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] befindet sich jeder Volltextindex in einem Volltextkatalog, der einer Dateigruppe angehört, über einen physischen Pfad verfügt und als Datenbankdatei behandelt wird. Jetzt ist ein Volltextkatalog ein logisches Konzept – ein virtuelles Objekt –, das eine Gruppe von Volltextindizes bezeichnet. Deshalb wird ein neuer Volltextkatalog nicht als Datenbankdatei mit einem physischen Pfad behandelt. Wenn jedoch ein Volltextkatalog aktualisiert wird, der Datendateien enthält, wird auf demselben Datenträger jeweils eine neue Dateigruppe erstellt. Auf diese Weise wird nach dem Upgrade das alte Datenträger-E/A-Verhalten beibehalten. Jeder Volltextindex aus diesem Katalog wird in die neue Dateigruppe eingefügt, wenn der Stammpfad vorhanden ist. Falls der alte Volltextkatalogpfad ungültig ist, wird beim Upgrade der Volltextindex in derselben Dateigruppe als Basistabelle &ndash; bzw. bei einer partitionierten Tabelle in der primären Dateigruppe &ndash; beibehalten.  
+ In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] befindet sich jeder Volltextindex in einem Volltextkatalog, der einer Dateigruppe angehört, über einen physischen Pfad verfügt und als Datenbankdatei behandelt wird. Jetzt ist ein Volltextkatalog ein logisches Konzept – ein virtuelles Objekt –, die auf eine Gruppe von Volltextindizes verweist. Deshalb wird ein neuer Volltextkatalog nicht als Datenbankdatei mit einem physischen Pfad behandelt. Wenn jedoch ein Volltextkatalog aktualisiert wird, der Datendateien enthält, wird auf demselben Datenträger jeweils eine neue Dateigruppe erstellt. Auf diese Weise wird nach dem Upgrade das alte Datenträger-E/A-Verhalten beibehalten. Jeder Volltextindex aus diesem Katalog wird in die neue Dateigruppe eingefügt, wenn der Stammpfad vorhanden ist. Falls der alte Volltextkatalogpfad ungültig ist, wird beim Upgrade der Volltextindex in derselben Dateigruppe als Basistabelle &ndash; bzw. bei einer partitionierten Tabelle in der primären Dateigruppe &ndash; beibehalten.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Wenn Sie auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisieren, wählen Sie eine der folgenden Upgradeoptionen für die Volltextsuche aus.  
   
  **Importieren**  

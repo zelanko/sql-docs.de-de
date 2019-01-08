@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], queries
@@ -13,12 +13,12 @@ ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c30244128ea15d010c9fe179b06424434325574d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6cd83135da7e5c9f4dac9e41ff562551d14ab20
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160000"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768542"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Erstellen von Abfragen mit anderen Quellen als einer Tabelle (Visual Database Tools)
   Wenn Sie eine Abrufabfrage erstellen, geben Sie die aufzunehmenden Spalten und Zeilen sowie den Ort an, von dem der Abfrageprozessor die Ausgangsdaten abrufen kann. Üblicherweise handelt es sich bei diesen Ausgangsdaten um eine Tabelle oder mehrere verknüpfte Tabellen. Die zugrunde liegenden Daten können jedoch auch aus anderen Quellen stammen. Dies können Sichten, Abfragen, Synonyme oder benutzerdefinierte Funktionen sein, die eine Tabelle zurückgeben.  
@@ -57,7 +57,7 @@ FROM sales
  Weitere Informationen zum Hinzufügen einer Sicht zu einer Abfrage finden Sie unter [Hinzufügen von Tabellen zu Abfragen &#40;Visual Database Tools&#41;](visual-database-tools.md).  
   
 ## <a name="using-a-query-in-place-of-a-table"></a>Verwenden einer Abfrage anstelle einer Tabelle  
- Sie können Zeilen aus einer Abfrage auswählen. Nehmen Sie z. B. an, dass Sie bereits eine Abfrage erstellt haben, die die Titel und IDs für Bücher zurückgibt, für die ein Mitautor angegeben ist, also alle Bücher mit mehreren Autoren. Die SQL-Anweisung könnte folgendermaßen aussehen:  
+ Sie können Zeilen aus einer Abfrage auswählen. Nehmen Sie z.B. an, dass Sie bereits eine Abfrage erstellt haben, die die Titel und IDs für Bücher zurückgibt, für die ein Mitautor angegeben ist, also alle Bücher mit mehreren Autoren. Die SQL-Anweisung könnte folgendermaßen aussehen:  
   
 ```  
 SELECT   
@@ -136,7 +136,7 @@ FROM
 ## <a name="using-a-user-defined-function-in-place-of-a-table"></a>Verwenden einer benutzerdefinierten Funktion anstelle einer Tabelle  
  In SQL Server 2000 oder höher können Sie eine benutzerdefinierte Funktion erstellen, die eine Tabelle zurückgibt. Solche Funktionen eignen sich zum Ausführen komplexer oder prozeduraler Logiken.  
   
- Angenommen die Tabelle der Mitarbeiter enthält eine zusätzliche Spalte employee.manager_emp_id und eine Fremdschlüsselbeziehung liegt zwischen manager_emp_id und employee.emp_id vor. Innerhalb jeder Zeile der Tabelle der Mitarbeiter gibt die Spalte manager_emp_id den Vorgesetzten des Mitarbeiters an. Genauer gesagt wird die emp_id des Vorgesetzten des Mitarbeiters angezeigt. Sie können eine benutzerdefinierte Funktion erstellen, die eine Tabelle mit jeweils einer Zeile für jeden Mitarbeiter zurückgibt, der innerhalb der Organisationshierarchie unter einem Manager mit der angegebenen Tätigkeitsstufe arbeitet. Die Funktion trägt die Bezeichnung fn_GetWholeTeam und ist so formuliert, dass eine Eingabevariable übergeben werden kann: die emp_id des Managers, dessen Team Sie abrufen möchten.  
+ Angenommen die Tabelle der Mitarbeiter enthält eine zusätzliche Spalte employee.manager_emp_id und eine Fremdschlüsselbeziehung liegt zwischen manager_emp_id und employee.emp_id vor. Innerhalb jeder Zeile der Tabelle der Mitarbeiter gibt die Spalte manager_emp_id den Vorgesetzten des Mitarbeiters an. Genauer gesagt wird die emp_id des Vorgesetzten des Mitarbeiters angezeigt. Sie können eine benutzerdefinierte Funktion erstellen, die eine Tabelle mit jeweils einer Zeile für jeden Mitarbeiter zurückgibt, der innerhalb der Organisationshierarchie unter einem Manager mit der angegebenen Tätigkeitsstufe arbeitet. Die Funktion trägt die Bezeichnung „fn_GetWholeTeam“ und ist so formuliert, dass eine Eingabevariable übergeben werden kann: die emp_id des Managers, dessen Team Sie abrufen möchten.  
   
  Sie können eine Abfrage erstellen, die die Funktion fn_GetWholeTeam als Datenquelle verwendet. Hierfür kann folgende SQL-Anweisung formuliert werden:  
   

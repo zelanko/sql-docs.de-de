@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 8ae26ec3-c5d5-4c4f-a810-2951a7454439
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 297441a73dcf2ff6f6e0e1808f863c7641edfa30
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0076abb28b486627d12c177d7f301b274239225c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190570"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784452"
 ---
 # <a name="building-a-model-mds-add-in-for-excel"></a>Erstellen eines Modells (MDS-Add-In für Excel)
   In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]können Administratoren eine Teilmenge der Administratorfunktionen ausführen, die in der [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung verfügbar sind.  
@@ -41,7 +40,7 @@ ms.locfileid: "48190570"
 |Erstellen von Geschäftsregeln|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung oder Webdienst|[Erstellen und Veröffentlichen einer Geschäftsregel &#40;Master Data Services&#41;](../create-and-publish-a-business-rule-master-data-services.md)|  
 |Erstellen von Abonnementsichten|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung oder Webdienst|[Erstellen einer Abonnementsicht &#40;Master Data Services&#41;](../create-a-subscription-view-to-export-data-master-data-services.md)|  
 |Erstellen von Hierarchien|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung oder Webdienst|[Erstellen einer abgeleiteten Hierarchie &#40;Master Data Services&#41;](../create-a-derived-hierarchy-master-data-services.md)<br /><br /> [Erstellen einer expliziten Hierarchie &#40;Master Data Services&#41;](../create-an-explicit-hierarchy-master-data-services.md)|  
-|Erstellen von Auflistungen|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung oder Webdienst|[Erstellen Sie eine Sammlung &#40;Master Data Services&#41;](../create-a-collection-master-data-services.md)|  
+|Erstellen von Auflistungen|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung oder Webdienst|[Erstellen einer Sammlung &#40;Master Data Services&#41;](../create-a-collection-master-data-services.md)|  
 |Erstellen von Versionen von Daten|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung oder Webdienst|[Sperren einer Version &#40;Master Data Services&#41;](../lock-a-version-master-data-services.md)|  
 |Bereitstellen von Modellen|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung, Webdienst oder MDSModelDeploy-Tool|[Erstellen eines Modellbereitstellungspakets mit MDSModelDeploy](../create-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
   

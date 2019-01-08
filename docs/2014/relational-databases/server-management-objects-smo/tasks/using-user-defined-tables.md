@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - user-defined tables [SQL Server]
@@ -14,12 +12,12 @@ ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c2728200068787d69c6eaa225e0195170625cac4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04bc89c22ab2c49b047ed00b20b37f8abecf97c7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194170"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758282"
 ---
 # <a name="using-user-defined-tables"></a>Verwenden von benutzerdefinierten Tabellen
   Benutzerdefinierte Tabellen stellen Tabelleninformationen dar. Sie werden als Parameter verwendet, wenn Sie Tabellendaten in gespeicherte Prozeduren oder benutzerdefinierte Funktionen übergeben. Benutzerdefinierte Tabellen können nicht verwendet werden, um Spalten in einer Datenbanktabelle darzustellen.  
@@ -28,15 +26,15 @@ ms.locfileid: "48194170"
   
  Wenn Sie eine neue benutzerdefinierte Tabelle mithilfe des <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>-Objekts definieren, müssen Sie Spalten und einen Primärschlüssel basierend auf einer der Spalten bereitstellen.  
   
- Benutzerdefinierte Tabellentypen können nicht geändert werden, nachdem sie erstellt wurden. Die <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> unterstützt nicht die Alter-Methode. Benutzerdefinierte Tabellentypen können über CHECK-Einschränkungen verfügen. Allerdings lösen einige CHECK-Vorgänge Ausnahmen aus, da der Typ nicht änderbar ist.  
+ Benutzerdefinierte Tabellentypen können nicht geändert werden, nachdem sie erstellt wurden. <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> unterstützt nicht die Alter-Methode. Benutzerdefinierte Tabellentypen können über CHECK-Einschränkungen verfügen. Allerdings lösen einige CHECK-Vorgänge Ausnahmen aus, da der Typ nicht änderbar ist.  
   
- Die <xref:Microsoft.SqlServer.Management.Smo.DataType> Klasse wird verwendet, um den Datentyp anzugeben, die Spalten und Parametern zugeordnet ist. Verwenden Sie diesen Typ, um den benutzerdefinierten Tabellentyp als Parameter für benutzerdefinierte Funktionen und gespeicherte Prozeduren festzulegen.  
+ Die <xref:Microsoft.SqlServer.Management.Smo.DataType>-Klasse wird verwendet, um den Datentyp anzugeben, der Spalten und Parametern zugeordnet wird. Verwenden Sie diesen Typ, um den benutzerdefinierten Tabellentyp als Parameter für benutzerdefinierte Funktionen und gespeicherte Prozeduren festzulegen.  
   
 ## <a name="examples"></a>Beispiele  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
   
 ## <a name="creating-a-user-defined-table-in-visual-basic"></a>Erstellen einer benutzerdefinierten Tabelle in Visual Basic  
- In diesem Beispiel müssen Sie eine Imports-Anweisung für die Klassenbibliothek enthalten, enthält die `StringCollection` Typ.  
+ Für dieses Beispiel müssen Sie eine Imports-Anweisung für die Klassenbibliothek einbinden, die den `StringCollection`-Typ enthält.  
   
  `Imports System.Collections.Specialized`  
   
@@ -100,7 +98,7 @@ ms.locfileid: "48194170"
 ```  
   
 ## <a name="creating-a-user-defined-table-in-visual-c"></a>Erstellen einer benutzerdefinierten Tabelle in Visual C#  
- In diesem Beispiel müssen Sie eine Imports-Anweisung für die Klassenbibliothek enthalten, enthält die `StringCollection` Typ.  
+ Für dieses Beispiel müssen Sie eine Imports-Anweisung für die Klassenbibliothek einbinden, die den `StringCollection`-Typ enthält.  
   
  `using System.Collections.Specialized;`  
   
@@ -170,7 +168,7 @@ ms.locfileid: "48194170"
 ```  
   
 ## <a name="creating-a-user-defined-table-in-powershell"></a>Erstellen einer benutzerdefinierten Tabelle in PowerShell  
- In diesem Beispiel müssen Sie eine Imports-Anweisung für die Klassenbibliothek enthalten, enthält die `StringCollection` Typ.  
+ Für dieses Beispiel müssen Sie eine Imports-Anweisung für die Klassenbibliothek einbinden, die den `StringCollection`-Typ enthält.  
   
  `using System.Collections.Specialized;`  
   

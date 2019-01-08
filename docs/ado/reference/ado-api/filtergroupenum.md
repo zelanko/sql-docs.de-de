@@ -16,17 +16,17 @@ ms.assetid: b22e725e-84bd-4286-a070-290c278c3783
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c200e1ed569db288d92a6322cba2adc5c00f7c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89cab313736a8d5acf2f7796ea79fb5649f85ab2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649818"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525875"
 ---
 # <a name="filtergroupenum"></a>FilterGroupEnum
 Gibt die Gruppe von Datensätzen, die von gefiltert werden eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adFilterAffectedRecords**|2|Filter für die Anzeige von nur Datensätze, die von der letzten betroffen [löschen](../../../ado/reference/ado-api/delete-method-ado-recordset.md), [Resync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), oder [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) aufrufen.|  
 |**adFilterConflictingRecords**|5|Die Filter zum Anzeigen der Datensätze, die Fehler bei der letzten Batchaktualisierung.|  

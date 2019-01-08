@@ -19,17 +19,17 @@ ms.assetid: eb73bd77-2e7e-4498-a266-4d7c990a0d56
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 98be3b4a7e4db30f394a2834364ecab9a20ef182
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8df4339ae30b9058e5a5864c37807c6b02e4fdd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706428"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532123"
 ---
 # <a name="interval-data-type-precision"></a>Genauigkeit des Datentyps „Intervall“
 Genauigkeit für eine Interval-Datentypen enthält, mit einfacher Genauigkeit, Intervall Präzision und Genauigkeit für anführenden Intervallwert.  
   
- Ein Intervall der führende Feld handelt es sich um ein Vorzeichen versehene Zahl. Die maximale Anzahl von Ziffern für das Feld "führende" richtet sich nach einer Menge namens *Genauigkeit für anführenden Intervallwert* die ist Teil der Deklaration. Z. B. die Deklaration: Intervall HOUR(5) auf MINUTE hat eine Genauigkeit von 5; für anführenden Intervallwert dem Stundenfeld dauert Werte aus –99999 und 99999 angegeben. Die Genauigkeit für anführenden Intervallwert, die im Feld SQL_DESC_DATETIME_INTERVAL_PRECISION anwendungsparameterdeskriptor-Datensatz enthalten ist.  
+ Ein Intervall der führende Feld handelt es sich um ein Vorzeichen versehene Zahl. Die maximale Anzahl von Ziffern für das Feld "führende" richtet sich nach einer Menge namens *Genauigkeit für anführenden Intervallwert* die ist Teil der Deklaration. Beispielsweise ist die Deklaration: Verfügt über ein Intervall führende Genauigkeit von 5, Intervall HOUR(5) auf MINUTE; dem Stundenfeld dauert Werte aus-99999 und 99999 angegeben. Die Genauigkeit für anführenden Intervallwert, die im Feld SQL_DESC_DATETIME_INTERVAL_PRECISION anwendungsparameterdeskriptor-Datensatz enthalten ist.  
   
  Die Liste der Felder, die Daten Intervalltyp aus besteht heißt *Intervall-Genauigkeit*. Es ist kein numerischer Wert, wie der Begriff "Precision" impliziert. Beispielsweise ist die Intervall-Genauigkeit des Datentyps INTERVAL DAY TO ZWEITENS die Liste Tag, Stunde, MINUTE, Sekunde. Es gibt keine Deskriptorfeld, die diesen Wert enthält; die Genauigkeit Intervall kann immer durch den Datentyp Interval ermittelt werden.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0ecfed53ebcecf38bbd46a6d3b15d1a8a8c741fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 30e46515fda5bf03a96e9f1168b470f635698d07
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156020"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769512"
 ---
 # <a name="eventstring-element-dta"></a>EventString-Element (DTA)
   Gibt eine auf einem [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript basierende Arbeitsauslastung direkt in der XML-Eingabedatei an.  
@@ -38,9 +37,9 @@ ms.locfileid: "48156020"
   
 ## <a name="element-attributes"></a>Elementattribute  
   
-|attribute|Description|  
+|Attribut|Description|  
 |---------------|-----------------|  
-|`Weight`|Optional. Gibt den Gewichtungsfaktor der Abfrage (ein Faktor für die Wichtigkeit) für das angegebene Ereignis an. Verwenden einer `float` -Datentyp geben Sie die Gewichtung an. Beispiel: `Weight`="100,01". Der Mindestwert für `Weight` ist "0".|  
+|`Weight`|Dies ist optional. Gibt den Gewichtungsfaktor der Abfrage (ein Faktor für die Wichtigkeit) für das angegebene Ereignis an. Sie können die Gewichtung mit einem `float`-Datentyp angeben. Beispiel: `Weight`="100,01". Der Mindestwert für `Weight` ist "0".|  
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
@@ -48,7 +47,7 @@ ms.locfileid: "48156020"
 |--------------------|-----------------|  
 |**Datentyp und -länge**|`string`, Länge ist unbegrenzt.|  
 |**Standardwert**|Keine.|  
-|**Vorkommen**|Einmalig erforderlich, wenn kein anderer Arbeitsauslastungstyp angegeben ist. Müssen Sie angeben einer `EventString`, ein `File`, oder ein `Database` untergeordnete Element für die `Workload` übergeordneten, jedoch nur ein Typ kann verwendet werden. Angenommen, Sie geben Sie eine arbeitsauslastung mit der `EventString` -Element, dann kann nicht auch angeben, eine arbeitsauslastung mit der `File` Element in der gleichen XML-Eingabedatei.|  
+|**Vorkommen**|Einmalig erforderlich, wenn kein anderer Arbeitsauslastungstyp angegeben ist. Sie müssen ein untergeordnetes `EventString`-, `File`- oder `Database`-Element für das übergeordnete `Workload`-Element angeben. Es kann jedoch nur ein Typ verwendet werden. Wenn Sie beispielsweise eine Arbeitsauslastung mit dem `EventString`-Element angeben, können Sie in dieser XML-Eingabedatei keine Arbeitsauslastung mit dem `File`-Element angeben.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   

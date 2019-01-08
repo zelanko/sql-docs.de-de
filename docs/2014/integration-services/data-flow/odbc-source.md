@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.f1
@@ -13,12 +12,12 @@ ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2238676493cce8a732055dea853e7368fe817865
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b928b54236929238c404597f4ba1eeeddb427ccc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054360"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790642"
 ---
 # <a name="odbc-source"></a>ODBC-Quelle
   Die ODBC-Quelle extrahiert Daten mithilfe einer Datenbanktabelle, Sicht oder SQL-Anweisung aus einer Datenbank mit ODBC-Unterstützung.  
@@ -38,7 +37,7 @@ ms.locfileid: "48054360"
 ## <a name="error-handling"></a>Fehlerbehandlung  
  Die ODBC-Quelle verfügt über eine Fehlerausgabe. Die Komponentenfehlerausgabe enthält die folgenden Ausgabespalten:  
   
--   **Fehlercode**: Ruft die Zahl ab, die dem aktuellen Fehler entspricht. Eine Liste der Fehler finden Sie in der Dokumentation zur Datenbank mit ODBC-Unterstützung. Eine Liste der SSIS-Fehlercodes finden Sie in der SSIS-Fehler- und Meldungsreferenz.  
+-   **Fehlercode**: Die Anzahl, die dem aktuellen Fehler entspricht. Eine Liste der Fehler finden Sie in der Dokumentation zur Datenbank mit ODBC-Unterstützung. Eine Liste der SSIS-Fehlercodes finden Sie in der SSIS-Fehler- und Meldungsreferenz.  
   
 -   **Fehlerspalte**: Die Quellspalte, die den Fehler verursacht (für Konvertierungsfehler).  
   
@@ -52,9 +51,9 @@ ms.locfileid: "48054360"
 ## <a name="extract-options"></a>Extrahierungsoptionen  
  Die ODBC-Quelle arbeitet entweder im Modus **Batch** oder **Zeile für Zeile** . Der verwendete Modus wird mithilfe der **FetchMethod** -Eigenschaft bestimmt. Die Modi werden in der folgenden Liste beschrieben:  
   
--   **Batch**: Die Komponente versucht, basierend auf den erkannten Funktionen des ODBC-Anbieters die effizienteste Abrufmethode zu verwenden. Für die meisten modernen ODBC-Anbieter ist dies SQLFetchScroll mit Arraybindung (wobei die Arraygröße von der **BatchSize** -Eigenschaft bestimmt wird). Wenn Sie **Batch** auswählen und der Anbieter diese Methode nicht unterstützt, wechselt das ODBC-Ziel automatisch zum Modus **Zeile für Zeile** .  
+-   **Batch**: Die Komponente versucht, die effizienteste Abrufmethode basierend auf den erkannten Funktionen des ODBC-Anbieters zu verwenden. Für die meisten modernen ODBC-Anbieter ist dies SQLFetchScroll mit Arraybindung (wobei die Arraygröße von der **BatchSize** -Eigenschaft bestimmt wird). Wenn Sie **Batch** auswählen und der Anbieter diese Methode nicht unterstützt, wechselt das ODBC-Ziel automatisch zum Modus **Zeile für Zeile** .  
   
--   **Zeile für Zeile**: Die Komponente ruft die Zeilen mithilfe von SQLFetch einzeln ab.  
+-   **Zeile für Zeile**: Die Komponente mithilfe von SQLFetch einzeln die Zeilen ab.  
   
  Weitere Informationen zur **FetchMethod** -Eigenschaft finden Sie unter [ODBC Source Custom Properties](odbc-source-custom-properties.md).  
   
@@ -71,11 +70,11 @@ ms.locfileid: "48054360"
   
  Weitere Informationen finden Sie in einem der folgenden Themen:  
   
--   [Quellen-Editor für ODBC &#40;Seite Verbindungs-Manager&#41;](../odbc-source-editor-connection-manager-page.md)  
+-   [Quellen-Editor für ODBC &#40;Seite „Verbindungs-Manager“&#41;](../odbc-source-editor-connection-manager-page.md)  
   
--   [Quellen-Editor für ODBC &#40;Seite "Spalten"&#41;](../odbc-source-editor-columns-page.md)  
+-   [Quellen-Editor für ODBC &#40;Seite „Spalten“&#41;](../odbc-source-editor-columns-page.md)  
   
--   [Quellen-Editor für ODBC &#40;Seite "Fehlerausgabe"&#41;](../odbc-source-editor-error-output-page.md)  
+-   [Quellen-Editor für ODBC &#40;Seite „Fehlerausgabe“&#41;](../odbc-source-editor-error-output-page.md)  
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können.  
   
@@ -87,14 +86,14 @@ ms.locfileid: "48054360"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Quellen-Editor für ODBC &#40;Seite "Fehlerausgabe"&#41;](../odbc-source-editor-error-output-page.md)  
+-   [Quellen-Editor für ODBC &#40;Seite „Fehlerausgabe“&#41;](../odbc-source-editor-error-output-page.md)  
   
--   [Quellen-Editor für ODBC &#40;Seite "Spalten"&#41;](../odbc-source-editor-columns-page.md)  
+-   [Quellen-Editor für ODBC &#40;Seite „Spalten“&#41;](../odbc-source-editor-columns-page.md)  
   
--   [Quellen-Editor für ODBC &#40;Seite Verbindungs-Manager&#41;](../odbc-source-editor-connection-manager-page.md)  
+-   [Quellen-Editor für ODBC &#40;Seite „Verbindungs-Manager“&#41;](../odbc-source-editor-connection-manager-page.md)  
   
 -   [Extrahieren von Daten mithilfe der ODBC-Quelle](odbc-source.md)  
   
--   [Benutzerdefinierte Eigenschaften der ODBC-Quelle](odbc-source-custom-properties.md)  
+-   [ODBC Source Custom Properties](odbc-source-custom-properties.md)  
   
   

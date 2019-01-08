@@ -11,19 +11,19 @@ ms.assetid: 9095212c-9068-4dd8-85ce-17a467adeabb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 21a1f76992e902f8b9b3c5ba18efad3f16734300
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e6b1995ad715ea529da548f06e0643be076abe96
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110030"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518902"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>Prüfen des Callcentermodells (Data Mining-Lernprogramm für Fortgeschrittene)
   Nachdem Sie nun das explorative Modell erstellt haben, können Sie es verwenden, um die Daten genauer zu untersuchen. Verwenden Sie dazu die folgenden Tools, die in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] bereitgestellt werden.  
   
--   [Microsoft-Viewer für neuronale Netzwerke](#bkmk_NNviewer) **:** dieses Viewers finden Sie in der **Miningmodell-Viewer** Data Mining-Designer auf der Registerkarte und soll helfen, Ihnen das Experimentieren mit Interaktionen in den Daten.  
+-   [Microsoft-Viewer für neuronale Netzwerke](#bkmk_NNviewer) **:** Dieser Viewer steht in der **Miningmodell-Viewer** Data Mining-Designer auf der Registerkarte und soll helfen, Ihnen das Experimentieren mit Interaktionen in den Daten.  
   
--   [Microsoft Generic Content Tree Viewer](#bkmk_genviewer) **:** dieser Standardviewer stellt ausführliche Details zu den Mustern und Statistiken vom Algorithmus beim Generieren des Modells ermittelt wurden.  
+-   [Microsoft Generic Content Tree-Viewer](#bkmk_genviewer) **:** Dieser Standardviewer stellt ausführliche Details zu den Mustern und Statistiken, die vom Algorithmus erkannt werden, wenn es sich um das Modell generiert.  
   
 ##  <a name="bkmk_NNviewer"></a> Microsoft-Viewer für neuronale Netzwerke  
  Der Viewer verfügt über drei Bereiche – **Eingabe**, **Ausgabe**, und **Variablen**.  
@@ -76,7 +76,7 @@ ms.locfileid: "48110030"
   
 2.  Für **Wert**Option **Uhr**.  
   
-     Die **Variablen** Bereich Updates und zeigt die Auswirkungen auf das Modell, die Schicht **Uhr**. Alle anderen Benutzerauswahlen bleiben unverändert. Es werden nach wie vor die niedrigste und die höchste Dienstqualität verglichen.  
+     Die **Variablen** Bereich Updates und zeigt die Auswirkungen auf das Modell, die Schicht **Uhr**. Alle anderen Benutzerauswahlen bleiben unverändert, – Sie weiterhin die niedrigste und höchste Dienstqualität vergleichen.  
   
 3.  Für **Wert**Option **"pm1"**.  
   
@@ -94,11 +94,11 @@ ms.locfileid: "48110030"
 ### <a name="interpreting-the-statistics-provided-in-the-viewer"></a>Interpretieren der im Viewer bereitgestellten Statistiken  
  Längere Wartezeiten sind ein wesentlicher Vorhersagefaktor für eine hohe Abbruchrate und bedeuten eine schlechte Dienstqualität. Diese Schlussfolgerung scheint zunächst offensichtlich. Das Miningmodell stellt Ihnen jedoch einige zusätzliche statistische Daten bereit, mit denen Sie diese Trends umfassender interpretieren können.  
   
--   **Bewertung**: Wert, der die Bedeutung dieser Variablen für die Unterscheidung zwischen Ergebnisse angibt. Je höher das Ergebnis, desto stärker wirkt sich die Variable auf das Ergebnis aus.  
+-   **Bewertung**: Der Wert, der die Bedeutung dieser Variablen für die Unterscheidung zwischen Ergebnisse angibt. Je höher das Ergebnis, desto stärker wirkt sich die Variable auf das Ergebnis aus.  
   
--   **Wahrscheinlichkeit von Wert 1**: Prozentsatz, der die Wahrscheinlichkeit dieses Werts für dieses Ergebnis darstellt.  
+-   **Wahrscheinlichkeit von Wert 1**: Der Prozentsatz, der die Wahrscheinlichkeit dieses Werts für dieses Ergebnis darstellt.  
   
--   **Wahrscheinlichkeit von Wert 2**: Prozentsatz, der die Wahrscheinlichkeit dieses Werts für dieses Ergebnis darstellt.  
+-   **Wahrscheinlichkeit von Wert 2**: Der Prozentsatz, der die Wahrscheinlichkeit dieses Werts für dieses Ergebnis darstellt.  
   
 -   **Lift für Wert 1** und **Lift für Wert 2**: Ergebnisse, die die Auswirkungen der Verwendung dieser bestimmten Variablen für die Vorhersage der Wert 1 und 2 angeben darstellt. Je höher das Ergebnis, desto besser sind die Ergebnisse, die mit dieser Variablen ermittelt werden können.  
   
@@ -108,10 +108,10 @@ ms.locfileid: "48110030"
   
  Wenn Sie jedoch die Liste der Faktoren genauer überprüfen, finden Sie einige andere Faktoren, die weniger deutliche Auswirkungen haben und schwieriger zu interpretieren sind. Zum Beispiel scheint die Schicht die Dienstqualität zu beeinflussen, aber das Liftergebnis und die relativen Wahrscheinlichkeiten geben an, dass die Schicht kein Hauptfaktor ist.  
   
-|attribute|value|Begünstigt \< 0,07|Begünstigt >= 0,12|  
+|Attribut|Wert|Begünstigt \< 0,07|Begünstigt >= 0,12|  
 |---------------|-----------|--------------------|----------------------|  
-|Average Time Per Issue|89.087-120.000||Ergebnis: 100<br /><br /> Wahrscheinlichkeit, dass Value1: 4,45 %<br /><br /> Wahrscheinlichkeit von Wert 2: 51.94 %<br /><br /> Lift für Value1: 0.19<br /><br /> Lift für Wert2: 1,94|  
-|Average Time Per Issue|44.000-70.597|Ergebnis: 92,35<br /><br /> Wahrscheinlichkeit von Wert 1: 60,06 %<br /><br /> Wahrscheinlichkeit von Wert 2: 8,30 %<br /><br /> Lift für Wert 1: 2,61<br /><br /> Lift für Wert 2: 0,31||  
+|Average Time Per Issue|89.087-120.000||Testergebnis:  100<br /><br /> Wahrscheinlichkeit, dass Value1: 4,45 %<br /><br /> Die Wahrscheinlichkeit von Wert 2: 51.94 %<br /><br /> Lift für Value1: 0.19<br /><br /> Lift für Wert2: 1,94|  
+|Average Time Per Issue|44.000-70.597|Testergebnis: 92,35<br /><br /> Wahrscheinlichkeit, dass Value1: 60,06 %<br /><br /> Die Wahrscheinlichkeit von Wert 2: 8,30 %<br /><br /> Lift für Value1: 2,61<br /><br /> Lift für Wert2: 0,31||  
   
  [Zurück zum Anfang](#bkmk_NNviewer)  
   
@@ -152,9 +152,9 @@ WHERE NODE_NAME = '10000000000000000'
  [Hinzufügen eines logistischen Regressionsmodells zur Call-Center-Struktur &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/add-logistic-regression-model-to-call-center-intermediate-data-mining.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Mingingmodellinhalt von neuronalen Netzwerkmodellen &#40;Analysis Services – Datamining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Abfragebeispiele für neuronale Netzwerke](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)   
- [Technische Referenz zu Microsoft Neural Network-Algorithmus](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
+ [Miningmodellinhalt von neuronalen Netzwerkmodellen &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Abfragebeispiele für neuronale Netzwerkmodelle](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)   
+ [Technische Referenz für den Microsoft Neural Network-Algorithmus](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [Ändern der Diskretisierung von Spalten in einem Miningmodell](../../2014/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)  
   
   

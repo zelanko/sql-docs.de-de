@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, what's new
@@ -14,12 +13,12 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7427402df49625c04ab7d1c38dd6bcfe3298e0ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 804e528aed70a6612f35391bd4ad96ebfd03df3a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048540"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792012"
 ---
 # <a name="what39s-new-integration-services"></a>Was&#39;s neue (Integrationsservices)
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] wurde gegenüber der Vorgängerversion nicht geändert.  
@@ -29,9 +28,9 @@ ms.locfileid: "48048540"
  Weitere Informationen zu Änderungen in Bezug auf [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence, finden Sie unter [Neuigkeiten in Analysis Services und Business Intelligence](../analysis-services/what-s-new-in-analysis-services.md).  
   
 ##  <a name="ValidateXML"></a> Umfangreiche Ausgabe der XML-Validierung im XML-Task  
- Überprüfen Sie die XML-Dokumente und erhalten Sie umfangreiche Fehlerausgabe durch die Aktivierung der `ValidationDetails` Eigenschaft von der XML-Task. Bevor Sie die `ValidationDetails` Eigenschaft wurde zur Verfügung, die XML-Validierung durch den XML-Task nur "true" oder "false" hat ein Ergebnis zurückgegeben, ohne Informationen zu Fehlern oder wo diese auftraten. Nun, wenn Sie festlegen, `ValidationDetails` auf "true", die Ausgabe-Datei enthält ausführliche Informationen zu jedem Fehler, einschließlich der Zeilennummer und der Position. Sie können diese Informationen verwenden, um Fehler in XML-Dokumenten zu verstehen, zu finden und zu beheben. Weitere Informationen finden Sie unter [Validate XML with the XML Task](control-flow/xml-task.md).  
+ Validieren Sie XML-Dokumente und erhalten Sie eine umfangreiche Fehlerausgabe durch die Aktivierung der Eigenschaft `ValidationDetails` des XML-Tasks. Bevor die Eigenschaft `ValidationDetails` verfügbar war, gab die XML-Validierung durch den XML-Task nur „true“ oder „false“ als Ergebnis zurück, ohne Informationen zu Fehlern oder wo diese auftraten. Wenn Sie jetzt die Eigenschaft `ValidationDetails` auf „true“ festlegen, enthält die Ausgabedatei ausführliche Informationen zu jedem Fehler, einschließlich der Zeilennummer und der Position. Sie können diese Informationen verwenden, um Fehler in XML-Dokumenten zu verstehen, zu finden und zu beheben. Weitere Informationen finden Sie unter [Validate XML with the XML Task](control-flow/xml-task.md).  
   
- [!INCLUDE[ssIS](../includes/ssis-md.md)] eingeführt, die `ValidationDetails` -Eigenschaft in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 2. Diese neue Eigenschaft wurde zu diesem Zeitpunkt nicht angekündigt oder dokumentiert. Die `ValidationDetails` Eigenschaft ist auch verfügbar im [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] und in SQL Server 2016.  
+ [!INCLUDE[ssIS](../includes/ssis-md.md)] führte die Eigenschaft `ValidationDetails` im [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 2 ein. Diese neue Eigenschaft wurde zu diesem Zeitpunkt nicht angekündigt oder dokumentiert. Die Eigenschaft `ValidationDetails` ist auch in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] und in SQL Server 2016 verfügbar.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Von den SQL Server 2014-Editionen unterstützte Funktionen](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  

@@ -11,12 +11,12 @@ ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9970c8c086c14dcc49f741e47c48f76f9b9c6f96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb982848854eef74363250c291b9f5676abec2f6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189130"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507864"
 ---
 # <a name="defining-named-sets"></a>Definieren von benannten Mengen
   Eine benannte Menge ist ein MDX-Ausdruck (Multidimensional Expressions), der eine Menge von Dimensionselementen zurückgibt. Sie können benannte Mengen definieren und im Rahmen der Cubedefinition speichern. Sie können auch benannte Mengen in Clientanwendungen erstellen. Benannte Mengen können durch Kombinieren von Cubedaten, arithmetischen Operatoren, Zahlen und Funktionen erstellt werden. Benannte Mengen können von Benutzern in MDX-Abfragen in Clientanwendungen sowie zum Definieren von Mengen in Teilcubes verwendet werden. Ein Teilcube bezeichnet eine Auflistung von Mengen mit Kreuzprodukten, die den Cuberaum auf den definierten Teilbereich für nachfolgende Anweisungen beschränkt. Die Definition eines eingeschränkten Cuberaums stellt ein grundlegendes Konzept der MDX-Skripterstellung dar.  
@@ -68,7 +68,7 @@ ms.locfileid: "48189130"
     Exists([Reseller].[Reseller Name].[Reseller Name].Members)  
     ```  
   
-     Nachdem Sie nun die erste Menge für den Exists-Mengenausdruck definiert haben, können Sie die zweite Menge hinzufügen – die Menge von Elementen der Reseller-Dimension mit den meisten Mitarbeitern.  
+     Nun, da Sie definiert haben die erste Menge für den Exists-Mengenausdruck, können Sie die zweite Gruppe der Gruppe von Elementen der Reseller-Dimension hinzufügen, die die größte Anzahl der Mitarbeiter enthält.  
   
 7.  Auf der **Metadaten** Registerkarte die **Berechnungstools** Bereich, erweitern Sie **Number of Employees** erweitern Sie in der Reseller-Dimension, `Members`, und erweitern Sie dann die **Aller Wiederverkäufer**.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "48189130"
      ![Filterbereich mit zwei benannte legt](../../2014/tutorials/media/l6-named-set-05.gif "Filterbereich mit zwei benannte legt diese fest")  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Lektion 7: Definieren von KPIs &#40;Key Performance Indicator&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+ [Lektion 7: Definieren Key Performance Indicators &#40;KPIs&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Berechnungen](multidimensional-models-olap-logical-cube-objects/calculations.md)   

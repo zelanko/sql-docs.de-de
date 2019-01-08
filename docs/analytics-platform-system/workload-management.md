@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e602cacff0c8f92b2a7748f4113a5a2ec2f34947
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 2281262c086f4d8dcab27debc8bb735ea5e8e1ba
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100380"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419881"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Verwaltung von arbeitsauslastungen in Analytics Platform System
 
@@ -131,7 +131,7 @@ SQL-Anweisungen und über Ressourcenklassen gesteuerte Vorgänge:
   
 -   UPDATE  
   
--   Delete  
+-   DELETE  
   
 -   RESTORE DATABASE beim Wiederherstellen in einer Appliance mit mehr Computeknoten.  
   

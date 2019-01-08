@@ -10,12 +10,12 @@ ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 402416503f927f74dcb711ac3bffb3c901f10e79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1dbbb57527fc2d362837e0340f35a241d764b75
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737818"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408317"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>Executing the SSMA Console ausführen (AccessToSQL)
 Microsoft bietet Ihnen eine Reihe zuverlässiger Skriptbefehle für die Datei "und"-Befehlszeilenoptionen zum Ausführen und Steuern von SSMA-Aktivitäten. Die folgenden Abschnitte enthalten Informationen identisch.  
@@ -25,7 +25,7 @@ Die Projekt-Befehle verarbeiten, erstellen Projekte öffnen, speichern und Beend
   
 **Befehl**  
   
-Neues-Projekt erstellen: erstellt ein neues SSMA-Projekt.  
+Neues-Projekt erstellen: Erstellt ein neues SSMA-Projekt an.  
   
 **Skript**  
   
@@ -62,7 +62,7 @@ Neues-Projekt erstellen: erstellt ein neues SSMA-Projekt.
   
   overwrite-if-exists="<true/false>"  
   
-  project-type=”<sql-server-2008 | sql-server-2005 | sql-server-2012 | sql-server-2014 | sql-azure>”  
+  project-type="<sql-server-2008 | sql-server-2005 | sql-server-2012 | sql-server-2014 | sql-azure>"  
   
 />  
 ```  
@@ -91,11 +91,11 @@ Open-Projekt: Öffnet ein vorhandenes Projekt.
   
 />  
 ```  
-**Hinweis:** SSMA für Access-Konsole-Anwendung unterstützt die Abwärtskompatibilität zu gewährleisten. Sie werden können zum Öffnen von Projekten, die mit früheren Version von SSMA erstellt.  
+**Hinweis**: SSMA für Access-Konsole-Anwendung unterstützt die Abwärtskompatibilität zu gewährleisten. Sie werden können zum Öffnen von Projekten, die mit früheren Version von SSMA erstellt.  
   
 **Befehl**  
   
-Projekt speichern: speichert das Migrationsprojekt.  
+Save-Projekt: Speichert das Migrationsprojekt.  
   
 **Skript**  
   
@@ -149,7 +149,7 @@ Server-Definition wird aus dem Namensattribut für jede Verbindung im Server-Abs
 ```  
 **Befehl**  
   
-Load-Access-Datenbank: zum Laden von Access-Datenbankdateien verwendet  
+Load-Access-Datenbank: Zum Laden von Access-Datenbankdateien verwendet  
   
 **Skript**  
   
@@ -325,7 +325,7 @@ oder
 ## <a name="migration-script-file-commands"></a>Skript-Datei-Migrationsbefehle  
 Die migrationsbefehle Schema der Zieldatenbank, die dem Quellschema zu konvertieren und Migrieren von Daten auf dem Zielserver.  
   
-Die Ausgabe der Standard-Konsole, die Einstellung für die migrationsbefehle ist 'Full' Ausgabebericht mit keine ausführliche berichterstellung: nur Zusammenfassung am Stammknoten Source-Objekt-Struktur.  
+Die Ausgabe der Standard-Konsole, die Einstellung für die migrationsbefehle ist 'Full' Ausgabebericht mit keine ausführliche berichterstellung: Nur Zusammenfassung am Stammknoten Source-Objekt-Struktur.  
   
 **Befehl**  
   
@@ -452,7 +452,7 @@ oder
 ```  
 **Befehl**  
   
-Tabellen verknüpfen: mit diesem Befehl verknüpft die Quelltabelle (Zugriff) mit der Zieltabelle.  
+Link-Tabellen: Mit diesem Befehl verknüpft die Quelltabelle (Zugriff) mit der Zieltabelle.  
   
 **Skript**  
   
@@ -508,7 +508,7 @@ Der Befehl Vorbereiten der Migration initiiert schemazuordnung zwischen den Quel
   
 **Befehl**  
   
-Map-Schema: schemazuordnung der Quelldatenbank mit dem Zielschema.  
+Map-Schema: Schemazuordnung der Quelldatenbank mit dem Zielschema.  
   
 **Skript**  
   
@@ -527,7 +527,7 @@ Map-Schema: schemazuordnung der Quelldatenbank mit dem Zielschema.
 ## <a name="manageability-commands"></a>Verwaltbarkeit-Befehle  
 Die Verwaltbarkeit Befehle helfen, die Ziel-Datenbankobjekte mit der Quelldatenbank zu synchronisieren.  
   
-Die Ausgabe der Standard-Konsole, die Einstellung für die migrationsbefehle ist 'Full' Ausgabebericht mit keine ausführliche berichterstellung: nur Zusammenfassung am Stammknoten Source-Objekt-Struktur.  
+Die Ausgabe der Standard-Konsole, die Einstellung für die migrationsbefehle ist 'Full' Ausgabebericht mit keine ausführliche berichterstellung: Nur Zusammenfassung am Stammknoten Source-Objekt-Struktur.  
   
 **Befehl**  
   

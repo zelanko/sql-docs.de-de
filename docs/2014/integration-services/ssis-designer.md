@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services, SSIS Designer
@@ -18,12 +17,12 @@ ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18f8ee2b794488a098e68ff54803b624c8fa4455
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c056a6a1ebf5958b980c21e3d36d6bc1291f8869
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144720"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792857"
 ---
 # <a name="ssis-designer"></a>SSIS-Designer
   [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer ist ein grafisches Tool, mit dem Sie [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Pakete erstellen und verwalten können. [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer ist in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] im Rahmen eines [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekts verfügbar.  
@@ -51,7 +50,7 @@ ms.locfileid: "48144720"
 ## <a name="undo-and-redo"></a>Rückgängig machen und Wiederholen  
  Sie können bis zu 20 Aktionen im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer rückgängig machen und wiederholen. Bei Paketen ist Rückgängig/Wiederholen auf den Registerkarten **Ablaufsteuerung**, **Datenfluss**, **Ereignishandler**und **Parameter** sowie im Fenster **Variablen** verfügbar. Bei Projekten ist Rückgängig/Wiederholen im Fenster **Projektparameter** verfügbar.  
   
- An der neuen **SSIS-Toolbox**können Sie keine Rückgängig/Wiederholen-Änderungen vornehmen.  
+ In der neuen **SSIS-Toolbox** können Sie keine Änderungen rückgängig machen oder wiederholen.  
   
  Wenn Sie Änderungen an einer Komponente vornehmen, für die der Komponenten-Editor verwendet wird, können Sie Änderungen gruppenweise statt einzeln rückgängig machen und wiederholen. Die Gruppe von Änderungen wird in der Dropdownliste zum Rückgängigmachen und Wiederholen als einzelne Aktion angezeigt.  
   

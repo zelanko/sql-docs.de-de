@@ -21,19 +21,19 @@ ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: acf3974a9406e974f6d294584cb732c12b0718e7
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 7fc0aab989eb46b64ef6b9919f999ba13c4ef74f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815636"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527193"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Extrahieren einer DAC aus einer Datenbank
   Verwenden Sie entweder den **Assistenten zum Extrahieren von Datenebenenanwendungen** oder ein Windows PowerShell-Skript, um ein Datenebenenanwendungs-Paket (DAC) aus einer vorhandenen SQL Server-Datenbank zu extrahieren. Bei der Extraktion wird eine DAC-Paketdatei erstellt, die Definitionen der Datenbankobjekte und ihrer verwandten Elemente auf Instanzebene enthält. Eine DAC-Paketdatei enthält z. B. die Datenbanktabellen, gespeicherten Prozeduren, Sichten und Benutzer zusammen mit den Anmeldenamen, die den Datenbankbenutzern zugeordnet sind.  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **Vorbereitungen:**  [Begrenzungen und Einschränkungen](#LimitationsRestrictions), [Berechtigungen](#Permissions)  
   
--   **Extrahieren einer DAC mit:**  [dem Assistenten zum Extrahieren von Datenebenenanwendungen](#UsingDACExtractWizard), [PowerShell](#ExtractDACPowerShell)  
+-   **Extrahieren eine DAC mit:**  [Der Assistent zum Extrahieren von datenebenenanwendungen](#UsingDACExtractWizard), [PowerShell](#ExtractDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
  Sie können DAC aus Datenbanken extrahieren, die sich auf Instanzen von [!INCLUDE[ssSDS](../../includes/sssds-md.md)]oder [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 (SP4) oder höher befinden. Wenn der Extrahierungsprozess für eine Datenbank ausgeführt wird, die über eine DAC bereitgestellt wurde, werden nur die Definitionen der Objekte in der Datenbank extrahiert. Der Prozess verweist nicht auf die DAC in registriert `msdb` (**master** in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). Der Extrahierungsprozess registriert die DAC-Definition nicht in der aktuellen Instanz der Datenbank-Engine. Weitere Informationen zum Registrieren einer DAC finden Sie unter [Register a Database As a DAC](register-a-database-as-a-dac.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "43815636"
   
 2.  Erweitern Sie den Knoten **Datenbanken** .  
   
-3.  Klicken die mit der rechten Maustaste auf den Knoten für die Datenbank, aus der die DAC extrahiert werden soll, zeigen Sie auf **Tasks**, und wählen Sie dann **Datenebenenanwendung extrahieren**aus.  
+3.  Klicken Sie mit der rechten Maustaste auf den Knoten für die Datenbank, aus der die DAC extrahiert werden soll, zeigen Sie auf **Tasks**, und wählen Sie dann **Datenebenenanwendung extrahieren...** aus.  
   
 4.  Bearbeiten Sie die Dialogfenster des Assistenten:  
   

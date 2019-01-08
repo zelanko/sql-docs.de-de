@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0b2a6266f1a789c5475ac6551a2f52f1d0bd393f
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 7158c0c441c11f87c4cc4989ca66061318a60df4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099931"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419701"
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>PowerPivot-Management-Dashboard und Verwendungsdaten
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "50099931"
 |Infrastruktur - Serverintegrität|Zeigt Trends zur CPU-Verwendung, Arbeitsspeichernutzung sowie zu Abfrageantwortzeiten im zeitlichen Verlauf an, damit Sie beurteilen können, ob die maximale Kapazität der Systemressourcen bald erreicht ist oder ob diese unterausgelastet sind.|  
 |Aktionen|Enthält Links zu anderen Seiten in der Zentraladministration, darunter die aktuelle Dienstanwendung, eine Liste der Dienstanwendungen sowie die Verwendungsprotokollierung.|  
 |Arbeitsmappenaktivität - Diagramm|Enthält Angaben zur Häufigkeit des Datenzugriffs. Hier können Sie erfahren, wie viele Verbindungen mit [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Datenquellen täglich oder wöchentlich hergestellt werden.|  
-|Arbeitsmappenaktivität - Liste|Enthält Angaben zur Häufigkeit des Datenzugriffs. Hier können Sie erfahren, wie viele Verbindungen mit [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]-Datenquellen täglich oder wöchentlich hergestellt werden.|  
+|Arbeitsmappenaktivität - Liste|Enthält Angaben zur Häufigkeit des Datenzugriffs. Hier können Sie erfahren, wie viele Verbindungen mit [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Datenquellen täglich oder wöchentlich hergestellt werden.|  
 |Datenaktualisierung - Letzte Aktivität|Enthält Angaben zum Status von Datenaktualisierungsaufträgen, einschließlich fehlgeschlagener Aufträge. Dieser Bericht enthält eine zusammengesetzte Ansicht der Datenaktualisierungsvorgänge auf Anwendungsebene. Administratoren sehen auf einen Blick die Anzahl von Datenaktualisierungsaufträgen, die für die gesamte [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Dienstanwendung definiert wurden.|  
 |Datenaktualisierung - Letzte Fehler|Listet die [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Arbeitsmappen auf, deren Datenaktualisierung nicht erfolgreich abgeschlossen wurde.|  
 |Berichte|Enthält Links zu Berichten, die Sie in Excel öffnen können.|  
@@ -70,7 +70,7 @@ ms.locfileid: "50099931"
   
 -   [Konfigurieren der Sammlung von Verwendungsdaten für &#40;PowerPivot für SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
- Achten Sie beim Sammeln von Daten zum PowerPivot-Serversystem darauf, dass für jede PowerPivot-Dienstanwendung Ereignismeldungen, Datenaktualisierungsverläufe und sonstige Verwendungsverläufe aktiviert sind. Die während des normalen Serverbetriebs gesammelten Server- und Verwendungsdaten bilden die Quelldaten, die in das interne Datenmodell übertragen werden. **Hinweis:** Wenn Sie Ereignismeldungen oder Verwendungsverläufe deaktivieren, enthalten die zusammengesetzten Berichte unvollständige oder fehlerhafte Angaben.  
+ Achten Sie beim Sammeln von Daten zum PowerPivot-Serversystem darauf, dass für jede PowerPivot-Dienstanwendung Ereignismeldungen, Datenaktualisierungsverläufe und sonstige Verwendungsverläufe aktiviert sind. Die während des normalen Serverbetriebs gesammelten Server- und Verwendungsdaten bilden die Quelldaten, die in das interne Datenmodell übertragen werden. **Hinweis**: Wenn Sie Ereignismeldungen oder Verwendungsverläufe deaktivieren, enthalten die zusammengesetzten Berichte unvollständige oder fehlerhafte Angaben.  
   
 ##  <a name="edit"></a> Bearbeiten eines PowerPivot-Dashboards  
  Wenn Sie erfahren in der Dashboardentwicklung oder -anpassung sind, können Sie das Dashboard bearbeiten, um neue Webparts aufzunehmen. Sie können auch die Webparteigenschaften bearbeiten, die im Dashboard enthalten sind.  
@@ -81,7 +81,7 @@ ms.locfileid: "50099931"
  Um Ihnen den Einstieg in die benutzerdefinierte Berichterstellung zu erleichtern, bietet das [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Management-Dashboard eine ODC-Datei (Office Data Connection), über die eine Verbindung mit der Quellarbeitsmappe hergestellt werden kann. Beispielsweise können Sie die ODC-Datei in Excel verwenden, um zusätzliche Berichte zu erstellen.  
   
 > [!NOTE]  
->  Bearbeiten Sie die Datei, um bei der Verwendung der ODC-Datei in Excel den folgenden Fehler zu vermeiden: "Fehler bei der Initialisierung der Datenquelle". Die automatisch generierte ODC-Datei enthält einen Parameter, der vom MSOLAP-OLE DB-Anbieter nicht unterstützt wird. Die folgenden Anweisungen stellen eine Problemumgehung zum Entfernen der Parameter bereit.  
+>  Bearbeiten Sie die Datei, um beim Verwenden der ODC-Datei in Excel folgenden Fehler zu vermeiden: "Fehler bei der Initialisierung der Datenquelle". Die automatisch generierte ODC-Datei enthält einen Parameter, der vom MSOLAP-OLE DB-Anbieter nicht unterstützt wird. Die folgenden Anweisungen stellen eine Problemumgehung zum Entfernen der Parameter bereit.  
   
  Sie müssen ein Farm- oder Dienstadministrator sein, um Berichte zu erstellen, die auf der [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Arbeitsmappe der Zentraladministration basieren.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "50099931"
   
     7.  Geben Sie einen Namen für die Verbindung ein, und klicken Sie dann auf **Weiter**.  
   
-    8.  Klicken Sie im Bereich zum Angeben einer MDX-Abfrage auf **Entwerfen** , um den MDX-Abfrage-Designer zu öffnen und die Daten zusammenzustellen, mit denen Sie arbeiten möchten. **Wenn die Fehlermeldung** "Der Edit Mode-Eigenschaftsname weist das falsche Format auf" angezeigt wird, überprüfen Sie, ob die ODC-Datei ordnungsgemäß bearbeitet wurde.  
+    8.  Klicken Sie im MDX-Abfrage geben Sie auf **Entwurf** zum Öffnen des MDX-Abfrage-Designers, um die Daten zusammenzustellen, denen Sie zusammenarbeiten möchten **, wenn Sie die Fehlermeldung finden Sie unter** überprüfen Sie, ob "den Namen der Bearbeitungsmodus-Eigenschaft ist nicht richtig formatiert." Sie bearbeiten die. ODC-Datei.  
   
     9. Klicken Sie auf **OK** und dann auf **Fertig stellen**.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.f1
@@ -13,12 +12,12 @@ ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b28d456d299c0f408ec2c9f4a284156dadfe9491
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd6980bd66e4aeca0672fd4c8c1bffb95e09b9ae
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079140"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770962"
 ---
 # <a name="odbc-destination"></a>ODBC-Ziel
   Das ODBC-Ziel führt für die Daten einen Massenladevorgang in Datenbanktabellen mit ODBC-Unterstützung durch. Das ODBC-Ziel verwendet einen ODBC-Verbindungs-Manager, um eine Verbindung mit der Datenquelle herzustellen.  
@@ -30,14 +29,14 @@ ms.locfileid: "48079140"
 ##  <a name="BKMK_odbcdestination_loadoptions"></a> Ladeoptionen  
  Das ODBC-Ziel kann eines von zwei Zugriffslademodulen verwenden. Sie legen den Modus im [Quellen-Editor für ODBC &#40;Seite „Verbindungs-Manager“&#41;](../odbc-source-editor-connection-manager-page.md) fest. Die beiden Modi sind:  
   
--   **Batch**: In diesem Modus versucht das ODBC-Ziel, basierend auf den erkannten Funktionen des ODBC-Anbieters die effizienteste Einfügemethode zu verwenden. Für die meisten modernen ODBC-Anbieter umfasst dies das Vorbereiten einer INSERT-Anweisung mit Parametern und das anschließende Verwenden einer Arrayparameterbindung pro Zeile (wobei die Arraygröße über die **BatchSize** -Eigenschaft gesteuert wird). Wenn Sie **Batch** auswählen und der Anbieter diese Methode nicht unterstützt, wechselt das ODBC-Ziel automatisch zum Modus **Zeile für Zeile** .  
+-   **Batch**: In diesem Modus versucht das ODBC-Ziel die effizienteste Einfügemethode basierend auf den erkannten Funktionen des ODBC-Anbieters verwenden. Für die meisten modernen ODBC-Anbieter umfasst dies das Vorbereiten einer INSERT-Anweisung mit Parametern und das anschließende Verwenden einer Arrayparameterbindung pro Zeile (wobei die Arraygröße über die **BatchSize** -Eigenschaft gesteuert wird). Wenn Sie **Batch** auswählen und der Anbieter diese Methode nicht unterstützt, wechselt das ODBC-Ziel automatisch zum Modus **Zeile für Zeile** .  
   
--   **Zeile für Zeile**: In diesem Modus bereitet das ODBC-Ziel eine INSERT-Anweisung mit Parametern vor und verwendet **SQL Execute** , um Zeilen einzeln einzufügen.  
+-   **Zeile für Zeile**: In diesem Modus bereitet das ODBC-Ziel eine INSERT-Anweisung mit Parametern und verwendet **SQL Execute** zu Zeilen einzeln einzufügen.  
   
 ## <a name="error-handling"></a>Fehlerbehandlung  
  Das ODBC-Ziel verfügt über eine Fehlerausgabe. Die Komponentenfehlerausgabe enthält die folgenden Ausgabespalten:  
   
--   **Fehlercode**: Ruft die Zahl ab, die dem aktuellen Fehler entspricht. Eine Liste der Fehler finden Sie in der Dokumentation zur Quelldatenbank. Eine Liste der SSIS-Fehlercodes finden Sie in der SSIS-Fehler- und Meldungsreferenz.  
+-   **Fehlercode**: Die Anzahl, die dem aktuellen Fehler entspricht. Eine Liste der Fehler finden Sie in der Dokumentation zur Quelldatenbank. Eine Liste der SSIS-Fehlercodes finden Sie in der SSIS-Fehler- und Meldungsreferenz.  
   
 -   **Fehlerspalte**: Die Quellspalte, die den Fehler verursacht (für Konvertierungsfehler).  
   
@@ -60,11 +59,11 @@ ms.locfileid: "48079140"
   
  Weitere Informationen finden Sie in einem der folgenden Themen:  
   
--   [Ziel-Editor für ODBC &#40;Seite Verbindungs-Manager&#41;](../odbc-destination-editor-connection-manager-page.md)  
+-   [Ziel-Editor für ODBC &#40;Verbindungs-Manager-Seite&#41;](../odbc-destination-editor-connection-manager-page.md)  
   
--   [Ziel-Editor für ODBC &#40;Seite "Zuordnungen"&#41;](../odbc-destination-editor-mappings-page.md)  
+-   [Ziel-Editor für ODBC &#40;Seite Zuordnungen&#41;](../odbc-destination-editor-mappings-page.md)  
   
--   [Ziel-Editor für ODBC &#40;Seite "Fehlerausgabe"&#41;](../odbc-destination-editor-error-output-page.md)  
+-   [Ziel-Editor für ODBC &#40;Seite „Fehlerausgabe“&#41;](../odbc-destination-editor-error-output-page.md)  
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können.  
   
@@ -76,14 +75,14 @@ ms.locfileid: "48079140"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Ziel-Editor für ODBC &#40;Seite "Fehlerausgabe"&#41;](../odbc-destination-editor-error-output-page.md)  
+-   [Ziel-Editor für ODBC &#40;Seite „Fehlerausgabe“&#41;](../odbc-destination-editor-error-output-page.md)  
   
--   [Ziel-Editor für ODBC &#40;Seite "Zuordnungen"&#41;](../odbc-destination-editor-mappings-page.md)  
+-   [Ziel-Editor für ODBC &#40;Seite Zuordnungen&#41;](../odbc-destination-editor-mappings-page.md)  
   
--   [Ziel-Editor für ODBC &#40;Seite Verbindungs-Manager&#41;](../odbc-destination-editor-connection-manager-page.md)  
+-   [Ziel-Editor für ODBC &#40;Verbindungs-Manager-Seite&#41;](../odbc-destination-editor-connection-manager-page.md)  
   
 -   [Laden von Daten mithilfe des ODBC-Ziels](odbc-destination.md)  
   
--   [Benutzerdefinierte Eigenschaften von ODBC-Zielen](odbc-destination-custom-properties.md)  
+-   [ODBC Destination Custom Properties](odbc-destination-custom-properties.md)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3200f4c83511f176c4d23af34f398a76047fe9a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ca0a5094e40f13aef4b4f87d5642e51e7a9b765
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701084"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523444"
 ---
 # <a name="asynchronous-execution-polling-method"></a>Asynchrone Ausführung (Abrufmethode)
 Vor der ODBC 3.8 und der Windows 7-SDK waren asynchrone Vorgänge nur auf Anweisung Funktionen zulässig. Weitere Informationen finden Sie unter den **Anweisung-Vorgänge asynchron ausführen**weiter unten in diesem Thema.  
@@ -135,9 +135,9 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
 }  
 ```  
   
- Wenn eine Anwendung, eine Funktion aufruft, um festzustellen, ob er immer noch asynchron ausgeführt wird, müssen sie das ursprüngliche Anweisungshandle verwenden. Dies ist, da die asynchrone Ausführung auf einer Basis pro Anweisung nachverfolgt wird. Gültige Werte für die anderen Argumente muss von die Anwendung auch angeben – die ursprünglichen Argumente erfolgt, um nach fehlerüberprüfung im Treiber-Manager zu erhalten. Nachdem der Treiber das Anweisungshandle überprüft und feststellt, dass die Anweisung asynchron ausgeführt wird, ignoriert sie jedoch alle anderen Argumente an.  
+ Wenn eine Anwendung, eine Funktion aufruft, um festzustellen, ob er immer noch asynchron ausgeführt wird, müssen sie das ursprüngliche Anweisungshandle verwenden. Dies ist, da die asynchrone Ausführung auf einer Basis pro Anweisung nachverfolgt wird. Die Anwendung muss auch gültige Werte für die anderen Argumente angeben: die ursprünglichen Argumente erfolgt – rufen Sie nach fehlerüberprüfung im Treiber-Manager. Nachdem der Treiber das Anweisungshandle überprüft und feststellt, dass die Anweisung asynchron ausgeführt wird, ignoriert sie jedoch alle anderen Argumente an.  
   
- Während eine Funktion asynchron ausgeführt wird – d. h., nachdem sie SQL_STILL_EXECUTING zurückgegeben wurde und bevor gibt einen anderen Code – die Anwendung durch den Aufruf abzubrechen **SQLCancel** oder **SQLCancelHandle** mit dem gleichen Anweisungshandle. Dies ist nicht garantiert, zum Abbrechen der Ausführung. Z. B. die Funktion möglicherweise bereits abgeschlossen haben. Darüber hinaus der Code zurückgegebenes **SQLCancel** oder **SQLCancelHandle** gibt nur an, ob der Versuch, kündigen die Funktion erfolgreich war, nicht nur, ob es sich tatsächlich um die Funktion abgebrochen. Um zu bestimmen, ob die Funktion abgebrochen wurde, ruft die Anwendung die Funktion erneut aus. Wenn die Funktion abgebrochen wurde, gibt SQL_ERROR zurück, und SQLSTATE HY008 (der Vorgang wurde abgebrochen). Wenn die Funktion nicht abgebrochen wurde, wird eine andere Code, z. B. SQL_STILL_EXECUTING, SQL_SUCCESS oder SQL_ERROR mit einem anderen SQLSTATE zurückgegeben.  
+ Während eine Funktion asynchron - ausgeführt wird, also nachdem es SQL_STILL_EXECUTING zurückgegeben hat, und vor der Rückgabe eines anderen Codes - Anwendung kann Abbrechen durch Aufrufen von **SQLCancel** oder **SQLCancelHandle** mit dem gleichen Anweisungshandle. Dies ist nicht garantiert, zum Abbrechen der Ausführung. Z. B. die Funktion möglicherweise bereits abgeschlossen haben. Darüber hinaus der Code zurückgegebenes **SQLCancel** oder **SQLCancelHandle** gibt nur an, ob der Versuch, kündigen die Funktion erfolgreich war, nicht nur, ob es sich tatsächlich um die Funktion abgebrochen. Um zu bestimmen, ob die Funktion abgebrochen wurde, ruft die Anwendung die Funktion erneut aus. Wenn die Funktion abgebrochen wurde, gibt SQL_ERROR zurück, und SQLSTATE HY008 (der Vorgang wurde abgebrochen). Wenn die Funktion nicht abgebrochen wurde, wird eine andere Code, z. B. SQL_STILL_EXECUTING, SQL_SUCCESS oder SQL_ERROR mit einem anderen SQLSTATE zurückgegeben.  
   
  Deaktivieren Sie asynchrone Ausführung einer bestimmten Anweisung aus, wenn der Treiber auf Anweisungsebene asynchronen Verarbeitung können die Anwendung ruft unterstützt **SQLSetStmtAttr** mit der SQL_ATTR_ASYNC_ENABLE Attribut, und legt es auf SQL_ ASYNC_ENABLE_OFF. Wenn der Treiber auf Verbindungsebene, die asynchrone Verarbeitung unterstützt, die Anwendung ruft **SQLSetConnectAttr** um SQL_ATTR_ASYNC_ENABLE auf SQL_ASYNC_ENABLE_OFF, festzulegen, die deaktiviert die asynchrone Ausführung aller Anweisungen auf der die Verbindung.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'SQLServer Managed Backup für Windows Azure: Interoperabilität und Koexistenz | Microsoft-Dokumentation'
+title: 'SQL Server Managed Backup für Windows Azure: Interoperabilität und Koexistenz | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.assetid: 78fb78ed-653f-45fe-a02a-a66519bfee1b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c825ca99e120dce81cb4a18dc65413c1f5d03c4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4d883d54a1ad933d4e248f292d9b6a222915a00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184240"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509134"
 ---
 # <a name="sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence"></a>SQL Server Managed Backup für Windows Azure: Interoperabilität und Koexistenz
-  In diesem Thema wird [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Interoperabilität und -Koexistenz mit mehreren Funktionen in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] beschrieben. Zu diesen Funktionen gehören: AlwaysOn-Verfügbarkeitsgruppen, Datenbankspiegelung, Wartungspläne für Sicherungen, Protokollversand, Ad-hoc-Sicherungen, Datenbank trennen und Datenbank löschen.  
+  In diesem Thema wird [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Interoperabilität und -Koexistenz mit mehreren Funktionen in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] beschrieben. Zu diesen Funktionen gehören folgende: AlwaysOn-Verfügbarkeitsgruppen, Datenbankspiegelung, Wartungspläne für Sicherungen, Protokollversand, Ad-hoc-Sicherungen, Datenbank trennen und Datenbank löschen.  
   
 ### <a name="alwayson-availability-groups"></a>AlwaysOn-Verfügbarkeitsgruppen  
- AlwaysOn-Verfügbarkeitsgruppen, die ausschließlich als Windows Azure-Lösung konfiguriert sind, werden in [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] unterstützt. Lokale oder gemischte Konfigurationen für AlwaysOn-Verfügbarkeitsgruppen werden nicht unterstützt. Weitere Informationen und Überlegungen finden Sie unter [zum Einrichten von SQL Server Managed Backup für Windows Azure-Verfügbarkeitsgruppen](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)  
+ AlwaysOn-Verfügbarkeitsgruppen, die als reine Azure-Lösung unterstützt Windows konfiguriert sind [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Lokale oder gemischte Konfigurationen für AlwaysOn-Verfügbarkeitsgruppen werden nicht unterstützt. Weitere Informationen und Überlegungen finden Sie unter [zum Einrichten von SQL Server Managed Backup für Windows Azure-Verfügbarkeitsgruppen](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)  
   
 ### <a name="database-mirroring"></a>Datenbankspiegelung  
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] wird nur für die Prinzipaldatenbank unterstützt. Wenn sowohl die Prinzipaldatenbank als auch der Spiegel für die Verwendung von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] konfiguriert wurden, wird die gespiegelte Datenbank übersprungen und nicht gesichert. Bei einem Failover startet [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] allerdings den Sicherungsprozess, sobald der Spiegel den Rollenwechsel abgeschlossen hat und online ist. In diesem Fall werden die Sicherungen in einem neuen Container gespeichert. Wenn die Spiegeldatenbank nicht konfiguriert wird, um [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] im Falle eines Failovers zu verwenden, werden keine Sicherungen vorgenommen. Es wird empfohlen, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] auf dem Prinzipalserver und dem Spiegelserver zu konfigurieren, sodass Sicherungen im Falle eines Failovers fortgesetzt werden.  
@@ -55,7 +55,7 @@ ms.locfileid: "48184240"
   
  **Data Protection Manager (DPM)-basierte Sicherungen:** Microsoft Data Protection Manager können Sie vollständige und inkrementelle Sicherungen. Die inkrementellen Sicherungen sind Protokollsicherungen, die nach der Erstellung einer T-Protokollsicherung Protokollkürzungen vornehmen. Daher wird die Konfiguration von DPM und [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für dieselbe Datenbank nicht unterstützt.  
   
- **Tools von Drittanbietern oder Skripts:** alle Drittanbietertools oder Skripts, die protokollsicherungen ausführen, zu protokollkürzungen ist inkompatibel mit [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], und wird nicht unterstützt.  
+ **Tools von Drittanbietern oder Skripts:** Alle von Drittanbietern oder Skripts, die protokollsicherungen ausführen, zu protokollkürzungen ist inkompatibel mit [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], und wird nicht unterstützt.  
   
  Wenn man [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für eine Datenbankinstanz aktiviert, und Sie einer ad-hoc-Sicherung können Sie verwenden möchten die [smart_admin.sp_backup_on_demand &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql) gespeicherte Prozedur aus, wie weiter oben beschrieben. Abschnitt. Wenn Sie Sicherungen außerdem regelmäßig außerhalb von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] planen oder ausführen müssen, können Sie Kopiesicherungen verwenden.  Weitere Informationen finden Sie unter [Kopiesicherungen &#40;SQL Server&#41;](../relational-databases/backup-restore/copy-only-backups-sql-server.md).  
   

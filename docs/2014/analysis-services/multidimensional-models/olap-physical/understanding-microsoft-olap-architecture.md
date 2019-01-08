@@ -14,12 +14,12 @@ ms.assetid: a2eaaee8-7b06-48af-ba44-e21a3678c4c4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0d168b898368aa2219fdf47faa1fed52152797b4
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: b3d257560caebf2d52ee3cb01875302584f598b5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145045"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502053"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Grundlegendes zur Microsoft OLAP-Architektur
   Diese Themen erläutern die Funktionsweise der mehrdimensionalen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Datenbanken und helfen bei der Planung der Implementierung von mehrdimensionalen Datenbanken in Ihrer Business Intelligence-Lösung.  
@@ -31,14 +31,14 @@ ms.locfileid: "50145045"
   
  [Cubeobjekte &#40;Analysis Services – mehrdimensionale Daten&#41;](../../multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)  
   
- [Weitere Informationen…](../olap-logical/understanding-microsoft-olap-logical-architecture.md)  
+ [Weitere Informationen...](../olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
  ![Kleines Dateiordnersymbol](../../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **physische Architektur**  
  [OLAP-Engine-Serverkomponenten](olap-engine-server-components.md)  
   
  [Lokale Cubes &#40;Analysis Services – mehrdimensionale Daten&#41;](local-cubes-analysis-services-multidimensional-data.md)  
   
- [Weitere Informationen…](understanding-microsoft-olap-physical-architecture.md)  
+ [Weitere Informationen...](understanding-microsoft-olap-physical-architecture.md)  
   
  ![Kleines Dateiordnersymbol](../../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Programmierarchitektur**  
  [Entwickeln mit Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  

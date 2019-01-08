@@ -12,12 +12,12 @@ ms.assetid: 7b15a5e6-fd41-47ce-ba87-54f72acea4bb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c03a181ee815af7b84a5019719c1ff7b532a0198
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7a73f2469c38d611b95e3446e80755687f40346e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169257"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507041"
 ---
 # <a name="mssqlserver17128"></a>MSSQLSERVER_17128
     
@@ -30,12 +30,12 @@ ms.locfileid: "48169257"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|INIT_NOBUFSPACE|  
-|Meldungstext|initdata: Nicht genügend Arbeitsspeicher für Kernelpuffer.|  
+|Meldungstext|Initdata: Kein Arbeitsspeicher für Kernelpuffer.|  
   
 ## <a name="explanation"></a>Erklärung  
  Die ursprünglichen Speicherbelegungen oder -reservierungen des Pufferpools sind fehlgeschlagen, und SQL Server wird beendet.  
   
 ## <a name="user-action"></a>Benutzeraktion  
- Wird normalerweise durch das Starten von SQL Server auf einem Computer mit extrem geringer Kapazität (unter den minimalen Systemanforderungen) verursacht.  
+ Wird normalerweise durch das Starten von SQL Server auf einem Computer mit extrem geringer Kapazität (viel geringer als die minimalen Systemanforderungen) verursacht.  
   
   

@@ -15,12 +15,12 @@ ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57f0713c6da777a7c338a3be888a43e72e287342
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4685d209d768bd3ff41c1c7367ef6cb6dcd45bcf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806728"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515102"
 ---
 # <a name="odbc-driver-for-oracle"></a>ODBC-Treiber für Oracle
 > [!IMPORTANT]  
@@ -34,7 +34,7 @@ ms.locfileid: "47806728"
   
  ![ODBC-Treiber für Oracle-app&#47;Treiberarchitektur](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
   
- Der ODBC-Treiber für Oracle ist mit API-Standards Level 1 und SQL-Standards Level Core. Es unterstützt auch einige Funktionen in Übereinstimmung mit Standards Ebene 2 und die meisten der Grammatik in der Core und SQL erweitert Übereinstimmungsebenen. Der Treiber ist ODBC 2.5-kompatibel und unterstützt 32-Bit-Systeme. Oracle 7.3 x wird vollständig; unterstützt 8 bietet eine eingeschränkte Unterstützung. Der ODBC-Treiber für Oracle unterstützt keine der neuen Datentypen von 8 – Unicode-Datentypen, BLOBs, CLOBs, und so weiter, noch werden neue relationale Objektmodell für Oracle unterstützt. Weitere Informationen zu unterstützten Datentypen finden Sie unter [Supported Data Types](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md) in diesem Handbuch.  
+ Der ODBC-Treiber für Oracle ist mit API-Standards Level 1 und SQL-Standards Level Core. Es unterstützt auch einige Funktionen in Übereinstimmung mit Standards Ebene 2 und die meisten der Grammatik in der Core und SQL erweitert Übereinstimmungsebenen. Der Treiber ist ODBC 2.5-kompatibel und unterstützt 32-Bit-Systeme. Oracle 7.3 x wird vollständig; unterstützt 8 bietet eine eingeschränkte Unterstützung. Der ODBC-Treiber für Oracle unterstützt keine der neuen Datentypen "8" - Unicode-Datentypen, BLOBs, CLOBs und So weiter – und unterstützt sie neue relationale Objektmodell von Oracle. Weitere Informationen zu unterstützten Datentypen finden Sie unter [Supported Data Types](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md) in diesem Handbuch.  
   
  Um die Oracle-Daten zugreifen zu können, sind die folgenden Komponenten erforderlich:  
   

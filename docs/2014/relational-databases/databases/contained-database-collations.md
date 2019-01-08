@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database, collations
@@ -13,12 +12,12 @@ ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6b0772ac03110b21912671b7e7651a1b0ede2903
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 8bb735093eb7b2e41e1822facca6c03ace45a911
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055990"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789702"
 ---
 # <a name="contained-database-collations"></a>Enthaltene Datenbanksortierungen
   Auf die Sortierreihenfolge und die Gleichheitssemantik von Textdaten wirken sich verschiedene Eigenschaften aus, u. a. die Berücksichtigung der Groß- und Kleinschreibung, die Berücksichtigung von Akzenten sowie die verwendete Basissprache. Diese Eigenschaften werden für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durch die ausgewählte Sortierung der Daten ausgedrückt. Eine ausführliche Erläuterung zu Sortierungen finden Sie unter [Sortierung und Unicode-Unterstützung](../collations/collation-and-unicode-support.md).  
@@ -28,7 +27,7 @@ ms.locfileid: "48055990"
  In diesem Thema wird das Wesen der Änderung erläutert. Zudem werden einige Bereiche beschrieben, in denen sie möglicherweise Probleme verursacht.  
   
 ## <a name="non-contained-databases"></a>Abhängige Datenbanken  
- Alle Datenbanken weisen eine Standardsortierung auf, die beim Erstellen oder Ändern einer Datenbank festgelegt werden kann. Diese Sortierung wird für sämtliche Metadaten in der Datenbank sowie als Standard für alle Zeichenfolgenspalten in der Datenbank verwendet. Benutzer können eine andere Sortierung für jede einzelne Spalte auswählen, mit der `COLLATE` Klausel.  
+ Alle Datenbanken weisen eine Standardsortierung auf, die beim Erstellen oder Ändern einer Datenbank festgelegt werden kann. Diese Sortierung wird für sämtliche Metadaten in der Datenbank sowie als Standard für alle Zeichenfolgenspalten in der Datenbank verwendet. Benutzer können mit der `COLLATE`-Klausel für jede einzelne Spalte eine andere Sortierung auswählen.  
   
 ### <a name="example-1"></a>Beispiel 1  
  Wenn Sie z. B. in Beijing (Peking) arbeiten, kann eine chinesische Sortierung verwendet werden:  
@@ -107,12 +106,12 @@ JOIN #T2
 CREATE FUNCTION f(@x INT) RETURNS INT  
 AS BEGIN   
       DECLARE @I INT = 1  
-      DECLARE @İ INT = 2  
+      DECLARE @?? INT = 2  
       RETURN @x * @i  
 END;  
 ```  
   
- Dies ist eine relativ spezielle Funktion. In einer Sortierung mit Berücksichtigung der Groß-/Kleinschreibung kann für das @i in der Rückgabeklausel keine Bindung an @I oder @İ hergestellt werden. Bei der Sortierung „Latin1_General“ ohne Berücksichtigung der Groß-/Kleinschreibung wird @i an @I gebunden, und die Funktion gibt 1 zurück. Bei der Sortierung „Turkish“ ohne Berücksichtigung der Groß-/Kleinschreibung wird jedoch @i an @İ gebunden, und die Funktion gibt 2 zurück. Dies kann erhebliche Beschädigungen in einer Datenbank verursachen, bei der zwischen Instanzen mit unterschiedlichen Sortierungen gewechselt wird.  
+ Dies ist eine relativ spezielle Funktion. In einem Groß-und Kleinschreibung unterschieden die @i in der return-Klausel kann nicht gebunden werden, entweder @I oder @??. Bei der Sortierung „Latin1_General“ ohne Berücksichtigung der Groß-/Kleinschreibung wird @i an @I gebunden, und die Funktion gibt 1 zurück. Aber in einer Groß-/Kleinschreibung Türkisch Sortierung @i bindet an @??, und die Funktion gibt 2 zurück. Dies kann erhebliche Beschädigungen in einer Datenbank verursachen, bei der zwischen Instanzen mit unterschiedlichen Sortierungen gewechselt wird.  
   
 ## <a name="contained-databases"></a>Eigenständige Datenbanken  
  Da eines der Entwurfsziele bei eigenständigen Datenbanken darin besteht, diese in sich abgeschlossen einzurichten, muss die Abhängigkeit von Instanzen und `tempdb`-Sortierungen abgetrennt werden. Hierzu wurde für eigenständige Datenbanken das Konzept der Katalogsortierung eingeführt. Die Katalogsortierung wird für Systemmetadaten und vorübergehende Objekte verwendet. Einzelheiten hierzu finden Sie weiter unten.  
@@ -121,7 +120,7 @@ END;
   
  Die Datenbanksortierung wird beibehalten, sie wird jedoch nur für Benutzerdaten als Standardsortierung verwendet. In der Standardeinstellung die Sortierung der Datenbank entspricht der Sortierung der Model-Datenbank, kann jedoch geändert werden vom Benutzer über eine `CREATE` oder `ALTER DATABASE` -Befehl genauso wie mit einer nicht enthaltenen Datenbanken.  
   
- Das neue Schlüsselwort `CATALOG_DEFAULT` ist in der `COLLATE`-Klausel verfügbar. Diese wird als Verknüpfung zur aktuellen Sortierung der Metadaten in enthaltenen und nicht enthaltenen Datenbanken verwendet. D. h. in einer nicht enthaltenen Datenbank `CATALOG_DEFAULT` wird die aktuelle datenbanksortierung zurück, da Metadaten in der datenbanksortierung sortiert werden. In einer enthaltenen Datenbank können sich diese zwei Werte unterscheiden, da der Benutzer die Datenbanksortierung ändern kann, sodass sie von der Katalogsortierung abweicht.  
+ Das neue Schlüsselwort `CATALOG_DEFAULT` ist in der `COLLATE`-Klausel verfügbar. Diese wird als Verknüpfung zur aktuellen Sortierung der Metadaten in enthaltenen und nicht enthaltenen Datenbanken verwendet. Das heißt, in einer nicht enthaltenen Datenbank gibt `CATALOG_DEFAULT` die aktuelle Datenbanksortierung zurück, da Metadaten in der Datenbanksortierung sortiert werden. In einer enthaltenen Datenbank können sich diese zwei Werte unterscheiden, da der Benutzer die Datenbanksortierung ändern kann, sodass sie von der Katalogsortierung abweicht.  
   
  Das Verhalten verschiedener Objekte in nicht enthaltenen und enthaltenen Datenbanken wird in dieser Tabelle zusammengefasst:  
   
@@ -152,11 +151,11 @@ JOIN #T2
  Dies funktioniert, da sowohl `T1_txt` als auch `T2_txt` in der Datenbanksortierung der enthaltenen Datenbank sortiert werden.  
   
 ## <a name="crossing-between-contained-and-uncontained-contexts"></a>Wechseln zwischen einem enthaltenen und einem nicht enthaltenen Kontext  
- Solange sich eine Sitzung auf eine enthaltene Datenbank beschränkt, darf die Datenbank nicht verlassen werden, mit der eine Verbindung besteht. In diesem Fall ist das Verhalten sehr einfach. Wenn jedoch in einer Sitzung zwischen einem enthaltenen und einem nicht enthaltenen Kontext gewechselt wird, ist das Verhalten komplexer, da die beiden Regelsätze überbrückt werden müssen. Dies kann in einer teilweise enthaltenen Datenbank geschehen, da ein Benutzer möglicherweise `USE` in eine andere Datenbank. In diesem Fall werden die Unterschiede zwischen den Sortierungsregeln gemäß dem folgenden Prinzip behandelt.  
+ Solange sich eine Sitzung auf eine enthaltene Datenbank beschränkt, darf die Datenbank nicht verlassen werden, mit der eine Verbindung besteht. In diesem Fall ist das Verhalten sehr einfach. Wenn jedoch in einer Sitzung zwischen einem enthaltenen und einem nicht enthaltenen Kontext gewechselt wird, ist das Verhalten komplexer, da die beiden Regelsätze überbrückt werden müssen. Dies kann in einer teilweise enthaltenen Datenbank der Fall sein, da ein Benutzer mit `USE` auf eine andere Datenbank zugreifen kann. In diesem Fall werden die Unterschiede zwischen den Sortierungsregeln gemäß dem folgenden Prinzip behandelt.  
   
 -   Das Sortierungsverhalten für einen Batch wird von der Datenbank bestimmt, in der der Batch beginnt.  
   
- Beachten Sie, dass diese Entscheidung getroffen wird, bevor Befehle auch der anfängliche ausgegeben werden, `USE`. Beginnt ein Batch in einer eigenständigen Datenbank, jedoch mit dem ersten Befehl wird ein `USE` zu einer nicht enthaltenen Datenbank, wird das Sortierungsverhalten weiterhin für den Batch verwendet werden. Angesichts dessen kann beispielsweise ein Verweis auf eine Variable mehrere mögliche Ergebnisse haben:  
+ Beachten Sie, dass diese Entscheidung getroffen wird, bevor Befehle ausgegeben werden (auch der anfängliche `USE`-Befehl). Das heißt, wenn ein Batch in einer eigenständigen Datenbank beginnt, der erste Befehl jedoch ein `USE`-Befehl für eine abhängige Datenbank ist, wird dennoch das Sortierungsverhalten der eigenständigen Datenbank für den Batch verwendet. Angesichts dessen kann beispielsweise ein Verweis auf eine Variable mehrere mögliche Ergebnisse haben:  
   
 -   Durch den Verweis kann genau eine Übereinstimmung gefunden werden. In diesem Fall funktioniert der Verweis ohne Fehler.  
   
@@ -164,7 +163,7 @@ JOIN #T2
   
 -   Durch den Verweis können mehrere Übereinstimmungen gefunden werden, die sich ursprünglich voneinander unterschieden haben. Auch hierdurch wird ein Fehler ausgelöst.  
   
- Dies wird im Folgenden anhand einiger Beispiele veranschaulicht. Dabei wird angenommen, dass eine teilweise eigenständige Datenbank mit dem Namen `MyCDB` vorhanden ist, deren Datenbanksortierung auf die Standardsortierung **Latin1_General_100_CI_AS_WS_KS_SC**festgelegt ist. Es wird davon ausgegangen, dass die instanzsortierung `Latin1_General_100_CS_AS_WS_KS_SC`. Die beiden Sortierungen unterscheiden sich nur hinsichtlich der Berücksichtigung der Groß- und Kleinschreibung.  
+ Dies wird im Folgenden anhand einiger Beispiele veranschaulicht. Dabei wird angenommen, dass eine teilweise eigenständige Datenbank mit dem Namen `MyCDB` vorhanden ist, deren Datenbanksortierung auf die Standardsortierung **Latin1_General_100_CI_AS_WS_KS_SC**festgelegt ist. Es wird angenommen, dass die Instanzsortierung `Latin1_General_100_CS_AS_WS_KS_SC` ist. Die beiden Sortierungen unterscheiden sich nur hinsichtlich der Berücksichtigung der Groß- und Kleinschreibung.  
   
 ### <a name="example-1"></a>Beispiel 1  
  Im folgenden Beispiel wird der Fall veranschaulicht, bei dem durch den Verweis genau eine Übereinstimmung gefunden wird.  
@@ -276,10 +275,10 @@ GO
   
  Der Verweis auf den Namen '#a' der temporären Tabelle ist mehrdeutig und kann nicht aufgelöst werden. Verwenden Sie entweder '#a' oder '#A'.  
   
-## <a name="conclusion"></a>Fazit  
+## <a name="conclusion"></a>Schlussbemerkung  
  Das Sortierungsverhalten enthaltener Datenbanken unterscheidet sich leicht von dem nicht enthaltener Datenbanken. Dieses Verhalten ist im Allgemeinen vorteilhaft und trägt zu Unabhängigkeit von Instanzen sowie Einfachheit bei. Für einige Benutzer können Probleme auftreten, insbesondere dann, wenn in einer Sitzung sowohl auf enthaltene als auch auf nicht enthaltene Datenbanken zugegriffen wird.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Contained Databases](contained-databases.md)  
+ [Eigenständige Datenbanken](contained-databases.md)  
   
   

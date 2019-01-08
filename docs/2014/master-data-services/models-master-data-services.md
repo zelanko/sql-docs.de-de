@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], about models
@@ -14,12 +13,12 @@ ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2e4abc0b318af1ad13856d4ab6f1ca13e011d76a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed3a5bc74211fea8a397622d79cf6dd4d9a26df0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088800"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784619"
 ---
 # <a name="models-master-data-services"></a>Modelle (Master Data Services)
   Modelle stellen die höchste Ebene der Datenorganisation in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]dar. Ein Modell definiert die Struktur der Daten in der Masterdaten-Verwaltungslösung. Ein Modell enthält die folgenden Objekte:  

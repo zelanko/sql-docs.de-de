@@ -15,19 +15,19 @@ ms.assetid: 93529c88-f540-47f2-a10a-12c87318ed6f
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: adc1283b3917bd82478ee4ed2e537926e73aa7e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7eec6368855b52088d5ed5ff253ec6020286aadf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056690"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515148"
 ---
 # <a name="web-service-task-editor-input-page"></a>Editor für den Task 'Webdienst' (Seite Eingabe)
   Mithilfe der Seite **Eingabe** des Dialogfelds **Editor für den Task 'Webdienst'** können Sie den Webdienst, die Webmethode sowie die Werte angeben, die der Webmethode als Eingabe zur Verfügung gestellt werden sollen. Die Werte können entweder durch Eingeben von Zeichenfolgen direkt in die Wert-Spalte oder durch Auswählen von Variablen in der Wert-Spalte bereitgestellt werden.  
   
  Weitere Informationen zu diesem Task finden Sie unter [Webdienst (Task)](control-flow/web-service-task.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Dienst**  
  Wählen Sie aus der Liste einen Webdienst aus, der zum Ausführen der Webmethode verwendet werden soll.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "48056690"
  Wählen Sie für den auszuführenden Task eine Webmethode aus der Liste aus.  
   
  **WebMethodDocumentation**  
- Geben Sie eine Beschreibung der Webmethode ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(…)** , und geben Sie anschließend im Dialogfeld **Dokumentation der Webmethode** die Beschreibung ein.  
+ Geben Sie eine Beschreibung der Webmethode ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(…)**, und geben Sie anschließend in das Dialogfeld **Dokumentation der Webmethode** die Beschreibung ein.  
   
  **Name**  
  Führt die Namen der Eingaben in die Webmethode in einer Liste auf.  
@@ -53,9 +53,9 @@ ms.locfileid: "48056690"
  Wenn die Kontrollkästchen für die Variablen aktiviert sind, wählen Sie die Variablen in der Liste aus, um die Eingaben bereitzustellen. Andernfalls geben Sie die Werte ein, die in den Eingaben verwendet werden sollen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor für den Task Webdienst &#40;Seite "Allgemein"&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor für den Task Webdienst &#40;Seite ausgeben&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
+ [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor für den Task „Webdienst“ &#40;Seite „Allgemein“&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor für den Task „Webdienst“ &#40;Seite „Ausgabe“&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [Seite Ausdrücke](expressions/expressions-page.md)  
   
   

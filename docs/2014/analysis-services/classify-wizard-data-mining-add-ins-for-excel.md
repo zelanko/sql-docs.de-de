@@ -14,12 +14,12 @@ ms.assetid: 409c5076-c4c3-4f09-8f30-d3297df45f13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ae0e86016d21e33507544747a44e5fc48b273ae2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9109f47ba1173c115234f9040445fb110e3f0e3c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094120"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419681"
 ---
 # <a name="classify-wizard-data-mining-add-ins-for-excel"></a>Assistent zum Klassifizieren (Data Mining-Add-Ins für Excel)
   ![Assistenten zum Klassifizieren im Data Mining-Menüband](media/dmc-classify.gif "klassifizieren-Assistenten im Data Mining-Menüband")  
@@ -34,7 +34,7 @@ ms.locfileid: "48094120"
   
 2.  In der **Quelldaten auswählen** Seite, und wählen Sie die zu analysierenden Daten.  
   
-     Dieser Assistent unterstützt verschiedene Daten: Excel-Tabellen, Excel-Bereiche und externe Datenquellen. Externe Daten können Sie entweder zu Excel hinzufügen, oder Sie wählen in einer Analysis Services-Datenquelle eine Gruppe von Tabellen oder Sichten aus. Sie können auch Tabellen hinzufügen und Spalten ändern, um Ad-hoc-Datenquellen zu erstellen.  
+     Dieser Assistent unterstützt mehrere Arten von Daten: Excel-Tabellen, Excel-Bereiche und externe Datenquellen. Externe Daten können Sie entweder zu Excel hinzufügen, oder Sie wählen in einer Analysis Services-Datenquelle eine Gruppe von Tabellen oder Sichten aus. Sie können auch Tabellen hinzufügen und Spalten ändern, um Ad-hoc-Datenquellen zu erstellen.  
   
 3.  Auf der **Klassifizierung** Seite, und wählen Sie die Spalte, die Sie klassifizieren möchten.  
   

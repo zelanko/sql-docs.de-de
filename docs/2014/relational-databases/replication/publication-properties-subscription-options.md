@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.subscriptionoptions.f1
@@ -13,12 +12,12 @@ ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2c36b2de74fd93c36da61e186a1bb3a6a56382d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c630646aa81ebaeccf49f729299394419b7099a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080520"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753852"
 ---
 # <a name="publication-properties-subscription-options"></a>Veröffentlichungseigenschaften, Abonnementoptionen
   Auf der Seite **Abonnementoptionen** des Dialogfelds **Veröffentlichungseigenschaften** können Sie die mit den Abonnements verknüpften Veröffentlichungsebeneneigenschaften anzeigen und festlegen. Die Eigenschaften sind in folgenden Kategorien angeordnet:  
@@ -107,7 +106,7 @@ ms.locfileid: "48080520"
   
 ### <a name="filtering"></a>Filterung  
  **Parametrisierte Filter zulassen**  
- Wählen Sie die Option aus, um zuzulassen, dass parametrisierte Filter durch eine Veröffentlichung verwendet werden. Diese Option ist immer schreibgeschützt. Weitere Informationen zu parametrisierten Zeilenfiltern finden Sie unter [Parametrisierte Zeilenfilter](merge/parameterized-filters-parameterized-row-filters.md).  
+ Wählen Sie die Option aus, um zuzulassen, dass parametrisierte Filter durch eine Veröffentlichung verwendet werden. Diese Option ist immer schreibgeschützt. Weitere Informationen finden Sie unter [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Abonnenten überprüfen**  
  Bestimmt, welche Funktionen verwendet werden sollen, um zu überprüfen, ob ein Abonnent über die richtige Partition der Daten verfügt. Bei mehreren Werten werden Kommas als Trennzeichen verwendet. Weitere Informationen finden Sie unter [Überprüfen von Partitionsinformationen für einen Mergeabonnenten](validate-partition-information-for-a-merge-subscriber.md).  

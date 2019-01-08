@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, properties
@@ -20,12 +19,12 @@ ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 568773a255c6a1d264544ef540d88fa6afa0d277
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 28d082c78aeaff76d314d90351851f745a3cddd8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163250"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786702"
 ---
 # <a name="view-package-objects"></a>Anzeigen von Paketobjekten
   Im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer stellt die Registerkarte **Paket-Explorer** eine Explorer-Sicht des Pakets bereit. Diese Sicht gibt die Containerhierarchie der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Architektur wieder. Der Paketcontainer befindet sich ganz oben in der Hierarchie, und Sie erweitern das Paket, um die Verbindungen, ausführbaren Dateien, Ereignishandler, Protokollanbieter, Rangfolgeneinschränkungen und Variablen im Paket anzuzeigen.  
@@ -46,9 +45,9 @@ ms.locfileid: "48163250"
   
 ## <a name="see-also"></a>Siehe auch  
  [Integration Services-Tasks](control-flow/integration-services-tasks.md)   
- [Integration Services-Container](control-flow/integration-services-containers.md)   
+ [SQL Server Integration Services-Container](control-flow/integration-services-containers.md)   
  [Rangfolgeneinschränkungen](control-flow/precedence-constraints.md)   
- [Integrationsdienste &#40;SSIS&#41; Variablen](integration-services-ssis-variables.md)   
+ [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md)   
  [Integration Services-Ereignishandler &#40;SSIS&#41;](integration-services-ssis-event-handlers.md)   
  [Integration Services-Protokollierung &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
   

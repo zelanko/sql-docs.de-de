@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.cdw.transfermethod.f1
@@ -26,15 +25,15 @@ ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2d47f2e7ce32ef77ec7188efbc7c09d053cf8208
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e72b960db0fd5b733119cafeca98f124eaa15f38
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108690"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759112"
 ---
 # <a name="use-the-copy-database-wizard"></a>Verwenden des Assistenten zum Kopieren von Datenbanken
-  Mit dem Assistenten zum Kopieren von Datenbanken können Sie Datenbanken und zugehörige Objekte von einem Server auf einen anderen ohne Serverausfallzeiten verschieben oder kopieren. Sie können auch Datenbanken von einer früheren aktualisieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Mit diesem Assistenten können Sie folgende Aktionen ausführen:  
+  Mit dem Assistenten zum Kopieren von Datenbanken können Sie Datenbanken und zugehörige Objekte von einem Server auf einen anderen ohne Serverausfallzeiten verschieben oder kopieren. Sie können auch Datenbanken von einer früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Version zu [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisieren. Mit diesem Assistenten können Sie folgende Aktionen ausführen:  
   
 -   Einen Quell- und Zielserver auswählen.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "48108690"
   
      [Empfehlungen](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Verwenden des Assistenten zum Kopieren einer Datenbank an:**  
   
@@ -68,9 +67,9 @@ ms.locfileid: "48108690"
   
 -   **Nachverfolgung, nach dem Upgrade:**  
   
-     [Nach dem Upgrade von SQL Server-Datenbank](#FollowUp)  
+     [Nach dem Aktualisieren einer SQL Server-Datenbank](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -108,21 +107,21 @@ ms.locfileid: "48108690"
   
 ##  <a name="Copy_Move"></a> Kopieren, verschieben oder Aktualisieren von Datenbanken  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]im Objekt-Explorer, erweitern Sie **Datenbanken**mit der rechten Maustaste auf eine Datenbank, zeigen Sie auf **Aufgaben**, und klicken Sie dann auf **Datenbankkopie**.  
+1.  Erweitern Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]im Objekt-Explorer **Datenbanken**, klicken Sie mit der rechten Maustaste auf eine Datenbank, zeigen Sie auf **Tasks**, und klicken Sie dann auf **Datenbank kopieren**.  
   
 2.  Geben Sie auf der Seite **Quellserver auswählen** den Server an, auf dem sich die zu verschiebende oder zu kopierende Datenbank befindet, und geben Sie die Anmeldeinformationen ein. Nach der Auswahl der Authentifizierungsmethode und der Eingabe der Anmeldeinformationen, klicken Sie auf **Weiter** , um die Verbindung zum Quellserver herzustellen. Diese Verbindung bleibt während der ganzen Sitzung bestehen.  
   
      **Quellserver**  
-     Wählen Sie den Namen des Servers bzw. der Serverinstanz aus, auf dem bzw. der sich die zu verschiebenden oder zu kopierenden Datenbanken befinden. Sie können auch auf die Schaltfläche zum Durchsuchen klicken (**...**), um nach dem gewünschten Server zu suchen. Der Server muss mindestens [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sein.  
+     Wählen Sie den Namen des Servers bzw. der Serverinstanz aus, auf dem bzw. der sich die zu verschiebenden oder zu kopierenden Datenbanken befinden. Sie können auch auf die Schaltfläche zum Durchsuchen klicken (**...**), um nach dem gewünschten Server zu suchen. Der Server muss mindestens [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]sein.  
   
      **Windows-Authentifizierung verwenden**  
      Ermöglicht den Benutzern eine Verbindung über ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Benutzerkonto.  
   
      **SQL Server-Authentifizierung verwenden**  
-     Ermöglichen Sie Benutzern die Verbindung durch die Bereitstellung einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung von Benutzername und Kennwort.  
+     Ermöglicht den Benutzern, mithilfe eines Benutzernamens und eines Kennworts für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung eine Verbindung aufzubauen.  
   
      **Benutzername**  
-     Geben Sie den Benutzernamen für die Verbindung ein. Diese Option ist nur verfügbar, wenn Sie ausgewählt haben, für die verbindungsherstellung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung.  
+     Geben Sie den Benutzernamen für die Verbindung ein. Diese Option ist nur verfügbar, wenn Sie zum Verbinden die Authentifizierung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgewählt haben.  
   
      **Kennwort**  
      Geben Sie das Kennwort für die Anmeldung ein. Diese Option ist nur verfügbar, wenn Sie zum Verbinden die Authentifizierung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgewählt haben.  
@@ -142,13 +141,13 @@ ms.locfileid: "48108690"
      Ermöglicht den Benutzern eine Verbindung über ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Benutzerkonto.  
   
      **SQL Server-Authentifizierung verwenden**  
-     Ermöglichen Sie Benutzern die Verbindung durch die Bereitstellung einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung von Benutzername und Kennwort.  
+     Ermöglicht den Benutzern, mithilfe eines Benutzernamens und eines Kennworts für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung eine Verbindung aufzubauen.  
   
      **Benutzername**  
-     Geben Sie den Benutzernamen für die Verbindung ein. Diese Option ist nur verfügbar, wenn Sie ausgewählt haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung.  
+     Geben Sie den Benutzernamen für die Verbindung ein. Diese Option ist nur verfügbar, wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung ausgewählt haben.  
   
      **Kennwort**  
-     Geben Sie das Kennwort für die Anmeldung ein. Diese Option ist nur verfügbar, wenn Sie ausgewählt haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung.  
+     Geben Sie das Kennwort für die Anmeldung ein. Diese Option ist nur verfügbar, wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung ausgewählt haben.  
   
      **Weiter**  
      Stellen Sie eine Verbindung zum Server her, und überprüfen Sie den Benutzer. Mit diesem Prozess wird überprüft, ob der Benutzer über die oben aufgeführten Berechtigungen für den ausgewählten Computern verfügt.  
@@ -216,7 +215,7 @@ ms.locfileid: "48108690"
      Schließt Volltextkataloge aus der Quelldatenbank ein.  
   
      **SSIS-Paket**  
-     Schließt in der Quelldatenbank definierte [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Pakete ein.  
+     Schließt in der Quelldatenbank definierte [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Pakete ein.  
   
      **Beschreibung**  
      Eine Beschreibung des -Objekts.  
@@ -229,20 +228,20 @@ ms.locfileid: "48108690"
      **Speicherort des Ordners**  
      Geben Sie den Speicherort der Quelldatenbankdateien im Dateisystem an.  
   
-     Beispiel: C:\Programme\Microsoft SQL Server\MSSQL110.MSSQLSERVER\MSSQL\DATA  
+     Zum Beispiel: C:\Program Files\Microsoft SQL Server\MSSQL110. MSSQLSERVER\MSSQL\DATA  
   
      **Dateifreigabe auf dem Quellserver**  
      Geben Sie den Speicherort der Quelldatenbankdateien als Pfad einer Dateifreigabe an.  
   
      Zum Beispiel: "\\\\*Server_name*\c$\Programme\Microsoft SQL Server\MSSQL110. MSSQLSERVER\MSSQL\Data  
   
-9. Des Assistenten zum Kopieren von Datenbanken erstellt ein [!INCLUDE[ssIS](../../includes/ssis-md.md)] Paket Übertragung die Datenbank aus der **konfigurieren Sie das Paket** Seite, können Sie das Paket bei Bedarf anpassen.  
+9. Der Assistent zum Kopieren von Datenbanken erstellt ein [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paket, um die Datenbank von der Seite **Paket konfigurieren** zu übertragen. Sie können das Paket bei Bedarf anpassen.  
   
      **Paketspeicherort**  
-     Zeigt an, wo die [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paket geschrieben wird.  
+     Zeigt an, wo das [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paket geschrieben wird.  
   
      **Paketname**  
-     Geben Sie einen Namen für die [!INCLUDE[ssIS](../../includes/ssis-md.md)] Paket.  
+     Geben Sie einen Namen für das [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paket ein.  
   
      **Protokollierungsoptionen**  
      Wählen Sie aus, ob die Protokollierungsinformationen im Windows-Ereignisprotokoll oder in einer Textdatei gespeichert werden sollen.  
@@ -250,7 +249,7 @@ ms.locfileid: "48108690"
      **Fehlerprotokollpfad**  
      Stellen Sie einen Pfad für den Speicherort der Protokolldatei bereit. Diese Option ist nur bei ausgewählter Option zum Protokollieren der Textdatei verfügbar.  
   
-10. Geben Sie auf der Seite **Zeitplan für Paket** an, wann der Verschiebe- oder Kopiervorgang beginnen soll. Wenn Sie kein Systemadministrator angemeldet sind, müssen Sie angeben einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxy Konto mit Zugriff auf die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS)-paketausführungs-Subsystem.  
+10. Geben Sie auf der Seite **Zeitplan für Paket** an, wann der Verschiebe- oder Kopiervorgang beginnen soll. Wenn Sie kein Systemadministrator sind, müssen Sie ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxykonto angeben, das Zugriff auf das Subsystem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS)-Paketausführung hat.  
   
      **Run immediately**  
      Starten Sie den Verschiebe- bzw. Kopiervorgang, nachdem Sie auf **Weiter**geklickt haben.  
@@ -264,7 +263,7 @@ ms.locfileid: "48108690"
      **Integration Services-Proxykonto**  
      Wählen Sie ein verfügbares Proxykonto aus. Wenn Sie die Übertragung planen möchten, muss für den Benutzer mindestens ein Proxykonto verfügbar sein, das mit der Berechtigung für das Subsystem **SQL Server Integration Services-Paketausführung** konfiguriert ist.  
   
-     Erstellen Sie ein Proxykonto für [!INCLUDE[ssIS](../../includes/ssis-md.md)] paketausführung im Objekt-Explorer, erweitern Sie **SQL Server-Agent**, erweitern Sie **Proxys**, mit der rechten Maustaste **SSIS-Paketausführung**, und klicken Sie dann auf **neuer Proxy**.  
+     Wenn Sie ein Proxykonto für die [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketausführung erstellen möchten, erweitern Sie im **Objekt-Explorer**den **SQL Server-Agent**, erweitern Sie **Proxys**, klicken Sie mit der rechten Maustaste auf **SSIS-Paketausführung**, und klicken Sie dann auf Neuer Proxy.  
   
      Mitglieder der festen Serverrolle **sysadmin** können das **SQL Server-Agent-Dienstkonto**auswählen, das über die erforderlichen Berechtigungen verfügt.  
   
@@ -279,7 +278,7 @@ ms.locfileid: "48108690"
      **MessageBox**  
      Stellt alle von jedem Schritt zurückgegebenen Meldungen bereit.  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Aktualisieren einer SQL Server-Datenbank  
+##  <a name="FollowUp"></a> Zur Nachverfolgung: Nach dem Aktualisieren einer SQL Server-Datenbank  
  Nachdem Sie mithilfe des Assistenten zum Kopieren von Datenbanken eine Datenbank von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisiert haben, ist die Datenbank sofort verfügbar und wird automatisch aktualisiert. Wenn die Datenbank Volltextindizes aufweist, werden diese beim Upgrade entweder importiert, zurückgesetzt oder neu erstellt, je nach der Einstellung der Servereigenschaft **Volltextupgrade-Option** . Wenn die Upgradeoption auf **Importieren** oder **Neu erstellen**festgelegt ist, sind die Volltextindizes während des Upgrades nicht verfügbar. Je nach Menge der indizierten Daten kann der Importvorgang mehrere Stunden dauern; die Neuerstellung sogar bis zu zehnmal länger. Wenn die Upgradeoption auf **Importieren**festgelegt und kein Volltextkatalog verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt. Informationen zum Anzeigen oder Ändern der Einstellung der Eigenschaft **Volltextupgrade-Option** finden Sie unter [Verwalten und Überwachen der Volltextsuche auf einer Serverinstanz](../search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
  War der Kompatibilitätsgrad einer Benutzerdatenbank vor dem Upgrade 100 oder höher, wird er nach dem Upgrade beibehalten. War der Kompatibilitätsgrad der aktualisierten Datenbank auf 90 festgelegt, wird er auf 100 erhöht, was dem niedrigsten unterstützten Kompatibilitätsgrad in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] entspricht. Weitere Informationen finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  

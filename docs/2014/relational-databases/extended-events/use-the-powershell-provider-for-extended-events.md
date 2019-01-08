@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], xevent
@@ -15,17 +14,17 @@ ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f500b1805d4af2e7b13ad74b439fff72d667060f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e0a7393a3b0547d37c5f69f4e75915f8706acf12
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185080"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752842"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>Verwenden des PowerShell-Anbieters für erweiterte Ereignisse
   Erweiterte Ereignisse von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Sie mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -PowerShell-Anbieters verwalten. Der Unterordner XEvent ist auf dem SQLSERVER-Laufwerk verfügbar. Auf diesen Ordner können Sie mit einer der folgenden Methoden zugreifen:  
   
--   Geben Sie an einer Eingabeaufforderung den Befehl `sqlps`, und drücken Sie dann die EINGABETASTE. Typ `cd xevent`, und drücken Sie dann die EINGABETASTE. Von dort aus können Sie die **cd** und `dir` Befehle (oder **Set-Location** und **Get-Childitem** Cmdlets) zum Servernamen und Instanznamen wechseln.  
+-   Geben Sie an der Eingabeaufforderung `sqlps` ein, und drücken Sie dann die EINGABETASTE. Geben Sie `cd xevent` ein, und drücken Sie dann die EINGABETASTE. Von dort aus können Sie die **cd** und `dir` Befehle (oder **Set-Location** und **Get-Childitem** Cmdlets) zum Servernamen und Instanznamen wechseln.  
   
 -   Erweitern Sie im Objekt-Explorer den Instanznamen, erweitern Sie **Verwaltung**, klicken Sie mit der rechten Maustaste auf **Erweiterte Ereignisse**, und klicken Sie anschließend auf **PowerShell starten**. Damit wird PowerShell unter dem folgenden Pfad gestartet:  
   
@@ -49,7 +48,7 @@ ms.locfileid: "48185080"
   
 -   Die Skripts müssen mit der Erweiterung .ps1 gespeichert werden.  
   
--   In der PowerShell-Ausführungsrichtlinie muss das auszuführende Skript zugelassen sein. Verwenden Sie das Cmdlet **Set-Executionpolicy** , um die Ausführungsrichtlinie festzulegen. (Weitere Informationen benötigen, geben `get-help set-executionpolicy -detailed`, und drücken Sie dann die EINGABETASTE.)  
+-   In der PowerShell-Ausführungsrichtlinie muss das auszuführende Skript zugelassen sein. Verwenden Sie das Cmdlet **Set-Executionpolicy** , um die Ausführungsrichtlinie festzulegen. (Weitere Informationen erhalten Sie durch Eingabe von `get-help set-executionpolicy -detailed` und Drücken der EINGABETASTE.)  
   
  Mit dem folgenden Skript erstellen Sie die neue Sitzung "TestSession".  
   
@@ -107,7 +106,7 @@ $event.SetPredicate($predicate)
 $session.Create()  
 ```  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
  Zum Erstellen, Ändern oder Löschen einer Sitzung für erweiterte Ereignisse müssen Sie über die ALTER ANY EVENT SESSION-Berechtigung verfügen.  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 80d4ff4e6eae3d3e2d997bb4f851326a9caace73
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 6e990d8b3320eafccc3da574476fa66cdf52d8d5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643998"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544106"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>Identifizieren Sie die richtige Azure SQL-Datenbank-SKU für Ihre lokale Datenbank
 
@@ -54,11 +54,11 @@ Sie müssen diese Aufgabe einzeln für jede Datenbank ausführen. Auf einem Comp
     ![PowerShell-Datei, die im Ordner "DMA" angezeigt](../dma/media/dma-sku-recommend-data-collection-file.png)
 
 2. Führen Sie das PowerShell-Skript mit den folgenden Argumenten:
-    - **ComputerName**: der Name des Computers, der die Datenbanken hostet.
+    - **ComputerName**: Der Name des Computers, auf dem Ihre Datenbanken gehostet werden soll.
     - **OutputFilePath**: Pfad der Ausgabedatei um die erfassten Leistungsindikatoren zu speichern.
-    - **CollectionTimeInSeconds**: die Zeitspanne, in dem Sie Leistungsindikatordaten sammeln möchten.
+    - **CollectionTimeInSeconds**: Die Zeitspanne, in dem Sie Leistungsindikatordaten sammeln möchten.
       Erfassen von Leistungsindikatoren für mindestens 40 Minuten, um eine sinnvolle Empfehlung zu erhalten. Je länger die Dauer der Erfassung, desto genauer sind die empfohlen werden.
-    - **DbConnectionString**: die Verbindungszeichenfolge, die auf die master-Datenbank gehostet wird, auf dem Computer, von dem Sie Leistungsindikatordaten sammeln.
+    - **DbConnectionString**: Die Verbindungszeichenfolge, die auf die master-Datenbank gehostet wird, auf dem Computer, von dem Sie Leistungsindikatordaten erfassen.
      
     Hier ist ein Beispielaufruf aus:
 
@@ -79,29 +79,29 @@ Verwenden Sie die Leistung Leistungsindikatoren-Ausgabedatei aus dem vorherigen 
 Führen Sie die dmacmd.exe mit den folgenden Argumenten:
 
 - **/ Action = SkuRecommendation**: Geben Sie dieses Argument zum Ausführen von SKU-Bewertungen.
-- **/ SkuRecommendationInputDataFilePath**: der Pfad zur Leistungsindikatordatei erfasst, im vorherigen Abschnitt.
-- **/ SkuRecommendationTsvOutputResultsFilePath**: der Pfad zu die Ausgeben von Ergebnissen im TSV-Format zu schreiben.
-- **/ SkuRecommendationJsonOutputResultsFilePath**: der Pfad zu die Ausgabeergebnisse im JSON-Format zu schreiben.
-- **/ SkuRecommendationHtmlResultsFilePath**: Pfad, in den Ausgabeergebnissen im HTML-Format geschrieben.
+- **/ SkuRecommendationInputDataFilePath**: Der Pfad zur Leistungsindikatordatei erfasst, im vorherigen Abschnitt.
+- **/ SkuRecommendationTsvOutputResultsFilePath**: Der Pfad zu die Ausgeben von Ergebnissen im TSV-Format zu schreiben.
+- **/ SkuRecommendationJsonOutputResultsFilePath**: Der Pfad zu die Ausgabeergebnisse im JSON-Format zu schreiben.
+- **/ SkuRecommendationHtmlResultsFilePath**: Pfad zu die Ausgeben von Ergebnissen im HTML-Format zu schreiben.
 
 Darüber hinaus müssen Sie eines der folgenden Argumente auswählen:
 - Zu verhindern, dass Price-Aktualisierung
-    - **/ SkuRecommendationPreventPriceRefresh**: verhindert, dass die Preis-Aktualisierung auftreten. Verwenden Sie, wenn im offline-Modus ausgeführt wird.
+    - **/ SkuRecommendationPreventPriceRefresh**: Verhindert, dass die Preis-Aktualisierung auftreten. Verwenden Sie, wenn im offline-Modus ausgeführt wird.
 - Die aktuellen Preisen zu erhalten 
-    - **/ SkuRecommendationCurrencyCode**: die Währung, in dem Preise angezeigt werden (z.B.) "US").
-    - **/ SkuRecommendationOfferName**: das Angebot benennen (z.B.) "MS-AZR - 0003P"). Weitere Informationen finden Sie unter den [Microsoft Azure-Angebotsdetails](https://azure.microsoft.com/support/legal/offer-details/) Seite.
+    - **/ SkuRecommendationCurrencyCode**: Die Währung, in dem Preise angezeigt werden (z.B.) "US").
+    - **/ SkuRecommendationOfferName**: Das Angebot benennen (z.B.) "MS-AZR - 0003P"). Weitere Informationen finden Sie unter den [Microsoft Azure-Angebotsdetails](https://azure.microsoft.com/support/legal/offer-details/) Seite.
     - **/ SkuRecommendationRegionName**: Benennen Sie die Region (z.B.) "USA, Westen").
-    - **/ SkuRecommendationSubscriptionId**: die Abonnement-ID.
-    - **/ AzureAuthenticationTenantId**: die Authentication-Mandant.
-    - **/ AzureAuthenticationClientId**: die Client-ID der AAD-app für die Authentifizierung verwendet.
+    - **/ SkuRecommendationSubscriptionId**: Die Abonnement-ID.
+    - **/ AzureAuthenticationTenantId**: Die Authentication-Mandant.
+    - **/ AzureAuthenticationClientId**: Die Client-ID der AAD-app für die Authentifizierung verwendet werden soll.
     - Eine der folgenden Authentifizierungsoptionen:
         - Interaktiv
-            - **AzureAuthenticationInteractiveAuthentication**: auf "true" für ein Popupfenster Authentifizierung festgelegt ist.
+            - **AzureAuthenticationInteractiveAuthentication**: Auf "true" für ein Popupfenster Authentifizierung festgelegt ist.
         - Zertifikatbasiert
             - **AzureAuthenticationCertificateStoreLocation**: Legen Sie auf den Speicherort des Zertifikatspeichers (z.B.) "CurrentUser").
             - **AzureAuthenticationCertificateThumbprint**: Legen Sie auf den Fingerabdruck des Zertifikats.
         - Token-basierte
-            - **AzureAuthenticationToken**: auf das Zertifikatstoken festlegen.
+            - **AzureAuthenticationToken**: Legen Sie auf das Zertifikatstoken.
 
 Hier sind einige Beispiel-Aufrufe:
 
@@ -135,7 +135,7 @@ Die TSV-Ausgabedatei enthält die Spalten in der folgenden Abbildung gezeigt:
 
 Folgt eine Beschreibung der einzelnen Spalten.
 
-- **DatabaseName** – der Name der Datenbank.
+- **DatabaseName** -der Name der Datenbank.
 - **"Metricname"** –, und zwar unabhängig davon, ob eine Metrik ausgeführt wurde.
 - **MetricType** -Tarif von Azure SQL-Datenbank empfohlen.
 - **MetricValue** -SKU für Azure SQL-Datenbank empfohlen.
@@ -153,10 +153,10 @@ Mit nur wenigen Klicks können Sie die Empfehlungen aus dem vorherigen Schritt z
 
 1. Öffnen Sie die HTML-Datei, und geben Sie die folgende Informationen:
     - **Abonnement-ID** – die Abonnement-ID des Azure-Abonnements, die Sie Datenbanken bereitstellen möchten.
-    - **Region** – die Region, in dem Datenbanken bereitstellen. Stellen Sie sicher, dass Ihr Abonnement die Eintrag Region unterstützt.
+    - **Region** : die Region, in dem Datenbanken bereitstellen. Stellen Sie sicher, dass Ihr Abonnement die Eintrag Region unterstützt.
     - **Ressourcengruppe** : die Ressourcengruppe, zu dem Sie die Datenbanken bereitstellen möchten. Geben Sie eine Ressourcengruppe, die vorhanden ist.
     - **Servername** – Azure SQL-Datenbank-Server an, die Datenbanken, die bereitgestellt werden sollen. Wenn Sie einen Servernamen, der nicht vorhanden ist eingeben, wird sie erstellt.
-    - **Admin Username\Password** – den Server-Administratorbenutzernamen und das Kennwort.
+    - **Admin Username\Password** -Server Admin-Benutzername und Kennwort.
 
 2. Empfehlungen für jede Datenbank, und ändern Sie den Tarif, compute-Ebene und die maximale Datengröße je nach Bedarf. Achten Sie darauf, dass Sie alle Datenbanken deaktivieren, die nicht derzeit bereitgestellt werden sollen.
 

@@ -20,12 +20,12 @@ ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 856da25d126c93a370c7d028106df75124f5ec72
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 157baeb7e5bd8fb53b2435f55e3e71c098632002
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094280"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518052"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Logistic Regression-Algorithmus
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression-Algorithmus ist eine Variation des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus, bei dem der *HIDDEN_NODE_RATIO* -Parameter auf 0 festgelegt ist. Bei dieser Einstellung wird ein neuronales Netzwerkmodell erstellt, in dem keine verborgene Ebene enthalten ist; daher ist diese Einstellung ein Äquivalent für die logistische Regression.  
@@ -47,25 +47,25 @@ ms.locfileid: "48094280"
 ### <a name="scoring-inputs"></a>Bewerten von Eingaben  
  *Bewertung* bezeichnet im Kontext eines neuronalen Netzwerkmodells oder eines logistischen Regressionsmodells den Prozess der Konvertierung der in den Daten vorhandenen Werte in einen Satz von Werten, die die gleiche Skala verwenden und daher miteinander verglichen werden können. Angenommen, die Eingaben für Income bewegen sich zwischen 0 und 100.000, während die Eingaben für [Number of Children] zwischen 0 und 5 liegen. Mit diesem Konvertierungsprozess können Sie die Wichtigkeit der einzelnen Eingaben unabhängig von der Unterschiedlichkeit der Werte *bewerten*oder vergleichen.  
   
- Für jeden Status, der im Trainingssatz angezeigt wird, generiert das Modell eine Eingabe. Für diskrete oder diskretisierte Eingaben wird eine zusätzliche Eingabe erstellt, um den Status Missing darzustellen, wenn der Status Missing mindestens einmal im Trainingssatz erscheint. Für kontinuierliche Eingaben werden höchstens zwei Eingabeknoten erstellt: ein Knoten für fehlende Werte, sofern in den Trainingsdaten vorhanden, und ein Knoten für alle vorhandenen Werte oder Werte ungleich NULL. Jede Eingabe wird zu einem numerischen Format mit der Z-Ergebnis-normalisierungsmethode, (x – μ) skaliert / StdDev.  
+ Für jeden Status, der im Trainingssatz angezeigt wird, generiert das Modell eine Eingabe. Für diskrete oder diskretisierte Eingaben wird eine zusätzliche Eingabe erstellt, um den Status Missing darzustellen, wenn der Status Missing mindestens einmal im Trainingssatz erscheint. Für kontinuierliche Eingaben werden höchstens zwei Eingabeknoten erstellt: ein Knoten für fehlende Werte, sofern in den Trainingsdaten vorhanden, und ein Knoten für alle vorhandenen Werte oder Werte ungleich NULL. Jede Eingabe wird zu einem numerischen Format mit der Z-Ergebnis-normalisierungsmethode, (x - μ) skaliert / StdDev.  
   
  Während der z-Ergebnis-Normalisierung werden die mittlere (µ) und die Standardabweichung über den gesamten Trainingssatz abgerufen.  
   
  **Kontinuierliche Werte**  
   
- Wert ist vorhanden: (X – μ) / σ / / X ist der tatsächlich codierte Wert)  
+ Wert ist vorhanden:   (X-μ) σ / / / X ist der tatsächlich codierte Wert)  
   
  Wert fehlt: – μ σ / / / negatives Mu geteilt durch Sigma)  
   
  **Diskrete Werte**  
   
- Μ = p – (die vorherige Wahrscheinlichkeit eines Status)  
+ Μ = p - (die vorherige Wahrscheinlichkeit eines Status)  
   
  StdDev = sqrt(p(1-p))  
   
- Wert ist vorhanden: (1 – μ) / σ / / (eins minus Mu) geteilt durch Sigma)  
+ Wert ist vorhanden:     (1-μ)/σ / / (eins minus Mu) geteilt durch Sigma)  
   
- Wert ist abwesend: (– μ) / σ / / negatives Mu geteilt durch Sigma)  
+ Wert ist abwesend: (-μ) / σ / / negatives Mu geteilt durch Sigma)  
   
 ### <a name="understanding-logistic-regression-coefficients"></a>Grundlegendes zu logistischen Regressionskoeffizienten  
  In der statistischen Literatur sind verschiedene Methoden zur Durchführung einer logistischen Regression vorhanden. Ein wichtiger Bestandteil aller Methoden besteht darin, die Güte des Modells zu bewerten. Eine Vielzahl von statistischen Daten zur Prüfung der Modellgüte sind vorgeschlagen worden, darunter Quotenverhältnisse (Odds Ratios) und Kovariaten-Muster. Eine Beschreibung, wie die Güte eines Modells gemessen wird, würde den Rahmen dieses Themas sprengen. Sie können jedoch den Wert der Koeffizienten im Modell abrufen und sie zur Entwicklung eigener Gütekennzahlen verwenden.  
@@ -83,7 +83,7 @@ FROM <model name>.CONTENT
 WHERE NODE_TYPE = 23  
 ```  
   
- Für jeden Ausgabewert gibt diese Abfrage die Koeffizienten und eine ID zurück, die zurück auf den verknüpften Eingabeknoten verweisen. Die Abfrage gibt außerdem eine Zeile zurück, die den Wert der Ausgabe und das konstante Glied enthält. Jede Eingabe X hat einen eigenen Koeffizienten (Ci). Die geschachtelte Tabelle enthält außerdem einen „freien“ Koeffizienten (Co), der gemäß der folgenden Formel berechnet wird:  
+ Für jeden Ausgabewert gibt diese Abfrage die Koeffizienten und eine ID zurück, die zurück auf den verknüpften Eingabeknoten verweisen. Die Abfrage gibt außerdem eine Zeile zurück, die den Wert der Ausgabe und das konstante Glied enthält. Jede Eingabe X hat einen eigenen Koeffizienten (Ci), aber die geschachtelte Tabelle enthält auch einen "freien" Koeffizienten (Co), die gemäß der folgenden Formel berechnet:  
   
  F(X) = X1 * C1 + X2\*C2 +... + Xn\*Cn + X0  
   
@@ -138,7 +138,7 @@ WHERE NODE_TYPE = 23
  Gilt für die Miningstrukturspalten.  
   
  MODEL_EXISTENCE_ONLY  
- Bedeutet, dass die Spalte zwei mögliche Statuswerte haben behandelt: `Missing` und `Existing`. Ein NULL-Wert ist ein fehlender Wert.  
+ Dies bedeutet, dass die Spalte zwei mögliche Statuswerte haben kann: `Missing` und `Existing`. Ein NULL-Wert ist ein fehlender Wert.  
   
  Gilt für die Miningmodellspalte.  
   
@@ -155,8 +155,8 @@ WHERE NODE_TYPE = 23
   
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Logistic Regression-Algorithmus](microsoft-logistic-regression-algorithm.md)   
- [Lineares Regressionsmodell-Abfragebeispiele](linear-regression-model-query-examples.md)   
- [Mingingmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-logistic-regression-models.md)   
+ [Beispiele für lineare Regressionsmodellabfrage](linear-regression-model-query-examples.md)   
+ [Miningmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-logistic-regression-models.md)   
  [Microsoft Neural Network-Algorithmus](microsoft-neural-network-algorithm.md)  
   
   

@@ -12,12 +12,12 @@ ms.assetid: c359c25c-db2a-4a20-afa9-62d87a62df72
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: fc4d537901d0352725260fadf1cb4446cb764419
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 939342a85ed657faa645c593018cbf39042031c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731118"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505228"
 ---
 # <a name="using-test-repositories-sybasetosql"></a>Verwenden von Testrepositorys (SybaseToSQL)
 Der SSMA-testen-Repository speichert SSMA Tester Testfälle und die Testergebnisse für die spätere Verwendung. Die Repository-Daten in SQL Server-Tabellen gespeichert sind **TestCaseRepository** und **RunTestCaseResultRepository** im Schema **Ssma_sybase_utilities** von **Ssmatesterdb_syb** Datenbank.  
@@ -29,17 +29,17 @@ Die folgenden Schaltflächen sind auf das Repository der Testfälle Dialogfeld v
 -   Klicken Sie auf die **schließen** Schaltfläche, um das Repository von Test Cases-Dialogfeld zu schließen.  
   
 ## <a name="test-cases-repository"></a>Testfälle-Repository  
-Sie können das Repository von Testfällen anzeigen, indem Sie auf **Testfälle...** von der **Tester** Menü. SSMA zeigt dann die **Repository Testfälle** Dialogfenster mit einer Liste von gespeicherten Testfälle auf die **Testfälle** Seite.  
+Sie können das Repository von Testfällen anzeigen, indem Sie auf **Testfälle...**  aus der **Tester** Menü. SSMA zeigt dann die **Repository Testfälle** Dialogfenster mit einer Liste von gespeicherten Testfälle auf die **Testfälle** Seite.  
   
 Das Raster zeigt die folgende Informationen zu jedem Testfall muss:  
   
 -   Name: Der Name des Testfalls.  
   
--   Erstellt: Der Testfall Erstellungsdatum.  
+-   Erstellt: Das Erstellungsdatum des Testfalls.  
   
--   Geänderte: Den Testfall Datum der letzten Änderung.  
+-   Geändert: Das Datum der letzten Änderung des Testfalls.  
   
--   Beschreibung: Die Testfall-Beschreibungen  
+-   Beschreibung: Die Testfall-Beschreibungen.  
   
 Die folgenden Schaltflächen sind auf der Seite "Testfälle" verfügbar:  
   
@@ -52,19 +52,19 @@ Die folgenden Schaltflächen sind auf der Seite "Testfälle" verfügbar:
 -   Klicken Sie auf die **ausführen** die Schaltfläche, um die [Ausführen von Testfällen &#40;SybaseToSQL&#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md) Dialogfeld, und führen Sie den ausgewählten Test.  
   
 ## <a name="test-results-repository"></a>Ergebnisrepository  
-Sehen Sie auf das Ergebnisrepository der **Testergebnisse** auf der Seite die **Repository Testfälle** Fenster. Öffnen Sie sie durch Klicken auf **Testergebnisse...** von der **Tester** Menü.  
+Sehen Sie auf das Ergebnisrepository der **Testergebnisse** auf der Seite die **Repository Testfälle** Fenster. Öffnen Sie sie durch Klicken auf **Testergebnisse...**  aus der **Tester** Menü.  
   
 Sie können zwei Filter auf **Testergebnisse** Seite:  
   
--   Den Namen des Testfalls ein Filter: ermöglicht die Auswahl der Testergebnisse anhand des Namens des Testfalls. Dieser Filter die **alle Testfall** Wert ermöglicht das Anzeigen von Testergebnissen für alle Testfälle.  
+-   Der Name des Testfalls-Filter: Ermöglicht die Auswahl der Testergebnisse anhand des Namens des Testfalls. Dieser Filter die **alle Testfall** Wert ermöglicht das Anzeigen von Testergebnissen für alle Testfälle.  
   
--   Der Testfall Ausführungsdatum Filter: Filter die Testergebnisse nach dem Datum speichern. Dieser Filter die **alle Zeitraum** Wert ermöglicht das Anzeigen von Testergebnissen für jedes Datum speichern.  
+-   Der Testfall Ausführungsdatum-Filter: Filter-Testergebnisse nach dem Datum speichern. Dieser Filter die **alle Zeitraum** Wert ermöglicht das Anzeigen von Testergebnissen für jedes Datum speichern.  
   
 Die folgende Informationen zu Testergebnissen wird im Raster angezeigt.  
   
 -   Name: Name des Testfalls.  
   
--   Schritte: Testen Sie Groß-/Kleinschreibung Datum ausgeführt wird.  
+-   Gestartet: Datum der Testfall wird ausgeführt.  
   
 -   Ergebnis: Eine kurze Zusammenfassung der Ausführung des Tests (diese Zelle die QuickInfo zeigt eine vollständige Zusammenfassung der Ausführung des Tests).  
   

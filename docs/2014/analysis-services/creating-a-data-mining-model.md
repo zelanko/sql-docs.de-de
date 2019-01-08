@@ -20,12 +20,12 @@ ms.assetid: 804b7db3-1f6a-4f73-a81d-bbe02520d7c6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0375d2254a742149215d5e3328510d598f0fea3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d7efc9df277f609bf53ffb49f2253a937f45a4b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134791"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394463"
 ---
 # <a name="creating-a-data-mining-model"></a>Erstellen eines Data Mining-Modells
   Die datenmodellierung wird der Schritt des Datamining, in dem Sie Muster und Trends erstellen durch Anwenden von *Algorithmen* an Daten. Später können Sie anhand dieser Muster Analysen ausführen oder Vorhersagen treffen.  
@@ -72,7 +72,7 @@ ms.locfileid: "48134791"
  [Cluster-Assistent &#40;Data Mining-Add-ins für Excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md).  
   
 ## <a name="detect-categories-analyze"></a>Kategorien erkennen (Analysieren)  
- Die **Kategorien erkennen** Tool können Sie ein Dataset hinzufügen und das clustering anwenden, um Gruppierungen von Daten zu bestimmen. Es empfiehlt sich zum Ermitteln von Ähnlichkeiten sowie zum Erstellen von Gruppen, die weiter analysiert werden können.  
+ Die **Kategorien erkennen** Tool können Sie ein Dataset hinzufügen und das clustering anwenden, um Gruppierungen von Daten zu bestimmen. Es ist nützlich zum Ermitteln von ähnlichkeiten sowie zum Erstellen von Gruppen, weiter zu analysieren.  
   
  Die **Kategorien erkennen** Tool verwendet den Microsoft Clustering-Algorithmus.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48134791"
   
  [Zielsucheszenario &#40;Tabellenanalysetools für Excel&#41;](goal-seek-scenario-table-analysis-tools-for-excel.md)  
   
-## <a name="scenario-what-if-scenario-analyze"></a>Szenario: Was-wäre-wenn-Szenario (Analysieren)  
+## <a name="scenario-what-if-scenario-analyze"></a>Szenario: Was-Wenn-Szenario (Analysieren)  
  Die **Datenquellenwerte Analysis** tool ergänzt die **Zielsuche** Tool. Bei diesem Tool geben Sie den Wert ein, der geändert werden soll. Das Modell trifft eine Vorhersage, ob die betreffende Änderung zum Erreichen des gewünschten Ergebnisses ausreichend ist. Sie können beispielsweise das Modell anweisen abzuleiten, ob durch den Einsatz eines zusätzlichen Callcenter-Mitarbeiters die Kundenzufriedenheit um einen Punkt steigt.  
   
  Die **What-If** Tool verwendet den Microsoft Logistic Regression-Algorithmus.  

@@ -12,12 +12,12 @@ ms.assetid: 6077b7e8-cb3e-4480-a5de-bb602cf9d69a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 12ea22b773613fc274af29de1a28ba214a10cce4
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 574614976a9d24f6c9cedbfede2fd5a150211416
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148429"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525786"
 ---
 # <a name="understanding-the-tabular-object-model"></a>Grundlegendes zum tabellarischen Objektmodell
   Ein tabellarisches Modell ist eine logische Darstellung von Tabellen, Beziehungen, Hierarchien, Perspektiven, Measures und der Schlüsselleistung. In diesem Abschnitt wird die interne Implementierung mithilfe von AMO eingeführt. Finden Sie unter [Entwickeln mit Analysis Management Objects &#40;AMO&#41; ](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo) , wenn Sie AMO bisher nicht verwendet haben.  
@@ -57,7 +57,7 @@ ms.locfileid: "50148429"
   
  Finden Sie unter [Hierarchiedarstellung &#40;tabellarische&#41; ](tables-hierarchy-representation.md) eine ausführliche Erläuterung zum Erstellen und Bearbeiten der hierarchiedarstellung.  
   
-### <a name="key-performance-indicator-kpi--representation"></a>Key Performance Indicator (KPI)-Darstellung  
+### <a name="key-performance-indicator--kpi--representation"></a>Key Performance Indicator - KPI-Darstellung  
  Ein KPI misst die Leistung eines Werts, der durch ein Basismeasure definiert wird, anhand eines Zielwerts. Im Hinblick auf AMO-Objekte verfügt eine KPI-Darstellung über eine 1:n-Zuordnungsbeziehung. Ein KPI wird durch die Verwendung der folgenden AMO-Objekte dargestellt: <xref:Microsoft.AnalysisServices.MdxScript.Commands%2A> und <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A> sind die erforderlichen Hauptobjekte.  Beachten Sie, dass dies nicht bedeutet, dass beim Modellieren alle in den zuvor erwähnten AMO-Objekten enthaltenen Objekte verwendet werden können.  
   
 > [!NOTE]  

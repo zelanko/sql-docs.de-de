@@ -20,16 +20,16 @@ ms.assetid: ef233d9a-6ed5-4986-9d42-5e0b1a79fb6e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 169088bbd99de070bfff81ffd83f01fc0e4d44a7
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 83253faf14d1ccabaa39aabb52d7d1265e13e728
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120167"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207689"
 ---
 # <a name="sqlcolumnprivileges-function"></a>SQLColumnPrivileges-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC-1.0-Standards-Compliance: ODBC  
+ Eingeführt in Version: ODBC-1.0-Standards-Compliance: ODBC  
   
  **Zusammenfassung**  
  **SQLColumnPrivileges** gibt eine Liste von Spalten und den zugeordneten Berechtigungen für die angegebene Tabelle zurück. Der Treiber gibt zurück, die Informationen, die als Resultset für das angegebene *StatementHandle*.  
@@ -143,7 +143,7 @@ SQLRETURN SQLColumnPrivileges(
 |COLUMN_NAME (ODBC 1.0)|4|Varchar, die nicht NULL|Name der Spalte. Der Treiber gibt eine leere Zeichenfolge für eine Spalte, die nicht über einen Namen verfügt.|  
 |DER BERECHTIGENDE (ODBC 1.0)|5|Varchar|Name des Benutzers, der die Berechtigung gewährt werden soll; NULL, wenn Sie mit der Datenquelle nicht anwendbar.<br /><br /> Für alle Zeilen in denen der Wert in der Spalte für die Empfänger der Besitzer des Objekts ist, werden die GRANTOR-Spalte "_SYSTEM".|  
 |EMPFÄNGER (ODBC 1.0)|6|Varchar, die nicht NULL|Der Name des Benutzers, dem die Berechtigung erteilt wurde.|  
-|BERECHTIGUNGEN (ODBC 1.0)|7|Varchar, die nicht NULL|Gibt die Berechtigung für die Spalte an. Kann einen der folgenden sein (oder andere durch die Daten unterstützt Datenquelle implementierungsdefinierte):<br /><br /> Wählen Sie aus: Der Empfänger ist zum Abrufen von Daten für die Spalte zulässig.<br /><br /> INSERT: Der Empfänger ist zulässig, Daten für die Spalte in neue Zeilen bereitstellen, die in der zugeordneten Tabelle eingefügt werden.<br /><br /> UPDATE: Der Empfänger ist zum Aktualisieren von Daten in der Spalte zulässig.<br /><br /> Verweise: Der Empfänger ist zum Verweisen auf die Spalte in einer Einschränkung zulässig (z. B. einen eindeutigen, referenzielle, oder eine Tabelle, die check-Einschränkung).|  
+|BERECHTIGUNGEN (ODBC 1.0)|7|Varchar, die nicht NULL|Gibt die Berechtigung für die Spalte an. Kann einen der folgenden sein (oder andere durch die Daten unterstützt Datenquelle implementierungsdefinierte):<br /><br /> WÄHLEN SIE AUS: Der Empfänger ist zum Abrufen von Daten für die Spalte zulässig.<br /><br /> FÜGEN SIE EIN: Der Empfänger ist zulässig, Daten für die Spalte in neue Zeilen bereitstellen, die in der zugeordneten Tabelle eingefügt werden.<br /><br /> UPDATE: Der Empfänger ist zum Aktualisieren von Daten in der Spalte zulässig.<br /><br /> VERWEISE: Der Empfänger ist zum Verweisen auf die Spalte in einer Einschränkung zulässig (z. B. einen eindeutigen, referenzielle, oder eine Tabelle, die check-Einschränkung).|  
 |IS_GRANTABLE (ODBC 1.0)|8|Varchar|Gibt an, ob der Empfänger berechtigt ist, auf die Berechtigung, anderen Benutzern zu gewähren. "YES", "Nein" oder "NULL", wenn unbekannt oder nicht anwendbar ist, mit der Datenquelle.<br /><br /> Eine Berechtigung ist entweder Berechtigung gewährt werden kann oder nicht die Berechtigung gewährt werden kann, aber nicht beides. Das Resultset zurückgegebenes **SQLColumnPrivileges** enthält niemals zwei Zeilen, die für die alle Spalten außer der IS_GRANTABLE-Spalte den gleichen Wert enthalten.|  
   
 ## <a name="code-example"></a>Codebeispiel  

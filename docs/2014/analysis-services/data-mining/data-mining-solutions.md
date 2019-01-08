@@ -14,12 +14,12 @@ ms.assetid: 84f6548d-ebb0-4e10-9b29-66253fa0a04a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8d37ee863bbc14bbaa3c73a2c5781e080e81ee63
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50e6eeb4c2f2a8ba5b1ce6430111586e6e3b8207
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161770"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516553"
 ---
 # <a name="data-mining-solutions"></a>Data Mining-Projektmappen
   Eine Data Mining-Projektmappe ist eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projektmappe, die ein oder mehrere Data Mining-Projekte enthält.  
@@ -35,7 +35,7 @@ ms.locfileid: "48161770"
  [Anleitungen für Projektmappen](#bkmk_Walkthru)  
   
 ##  <a name="bkmk_RelMD"></a> Vergleich der relationalen und mehrdimensionalen Projektmappen  
- Eine Data Mining-Projektmappe kann entweder auf mehrdimensionalen Daten basieren – das heißt, ein vorhandener Cube – oder auf rein relationalen Daten, z. B. die Tabellen und Sichten in einem Data Warehouse, oder auf Textdateien, Excel-Arbeitsmappen oder anderen externen Datenquellen.  
+ Datamining-Lösungen möglich basierend entweder auf mehrdimensionalen Daten-, also einem vorhandenen Cube – oder auf rein relationalen Daten, z. B. die Tabellen und Sichten in einem Datawarehouse oder Textdateien, Excel-Arbeitsmappen oder externe Daten aus anderen Quellen.  
   
 -   Sie können Data Mining-Objekte innerhalb einer vorhandenen mehrdimensionalen Datenbankprojektmappe erstellen.  
   
@@ -70,22 +70,22 @@ ms.locfileid: "48161770"
   
  [Verwandte Projekte für Data Mining-Lösungen](data-mining-solutions.md)  
   
- [Bereitstellen von Data Mining-Lösungen](deployment-of-data-mining-solutions.md)  
+ [Bereitstellen von Data Mining-Projektmappen](deployment-of-data-mining-solutions.md)  
   
 ## <a name="related-tasks-and-topics"></a>Verwandte Aufgaben und Themen  
  Nachdem Sie eine grundlegende Data Mining-Projektmappe erstellt haben, einschließlich Datenquellen und einer Miningstruktur, können Sie auf der Projektmappe aufbauen, indem Sie neue Modelle hinzufügen, Modelle testen und vergleichen, Vorhersagen erstellen und mit Teilmengen der Daten experimentieren.  
   
  Weitere Informationen finden Sie unter den folgenden Links:  
   
-|Aufgaben|Thema|  
+|Richtlinienübersicht|Thema|  
 |-----------|------------|  
-|Testen Sie die Modelle, die Sie erstellen, überprüfen Sie die Qualität der Trainingsdaten, und erstellen Sie Diagramme, die die Genauigkeit von Data Mining-Modellen darstellen.|[Tests und Überprüfung &#40;Datamining&#41;](testing-and-validation-data-mining.md)|  
+|Testen Sie die Modelle, die Sie erstellen, überprüfen Sie die Qualität der Trainingsdaten, und erstellen Sie Diagramme, die die Genauigkeit von Data Mining-Modellen darstellen.|[Tests und Überprüfung &#40;Data Mining&#41;](testing-and-validation-data-mining.md)|  
 |Trainieren Sie das Modell, indem Sie die Struktur und verwandte Modelle mit Daten auffüllen. Aktualisieren und erweitern Sie Modelle mit neuen Daten.|[Verarbeiten von Data Mining-Objekten](processing-data-mining-objects.md)|  
 |Passen Sie durch das Anwenden von Filtern auf die Trainingsdaten, Auswählen eines anderen Algorithmus oder Festlegen von erweiterten Algorithmusparametern ein Miningmodell an.|[Anpassen von Miningmodellen und -strukturen](customize-mining-models-and-structure.md)|  
-|Passen Sie ein Miningmodell durch Anwenden von Filtern auf die Daten an, die beim Trainieren des Modus verwendet werden.|[Hinzufügen von Miningmodellen zu einer Struktur &#40;Analysis Services – Datamining&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|Passen Sie ein Miningmodell durch Anwenden von Filtern auf die Daten an, die beim Trainieren des Modus verwendet werden.|[Hinzufügen von Miningmodellen zu einer Struktur &#40;Analysis Services - Data Mining&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |Aktualisieren und verwalten Sie Data Mining-Projektmappen.|Link TBD|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Lernprogramme &#40;Analysis Services&#41;](../data-mining-tutorials-analysis-services.md)  
+ [Data Mining-Tutorials &#40;Analysis Services&#41;](../data-mining-tutorials-analysis-services.md)  
   
   

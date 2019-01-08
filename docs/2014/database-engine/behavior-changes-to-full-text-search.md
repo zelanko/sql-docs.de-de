@@ -14,12 +14,12 @@ ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: b269c4c3decfa2a4d7523666841e7cb04b441b3f
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 0d3bf42ec031415d16ea45bc8241c85c6d937c35
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461015"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508868"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>Verhaltensänderungen der Volltextsuche
   In diesem Thema werden Verhaltensänderungen der Volltextsuche beschrieben. Ein verändertes Programmverhalten wirkt sich darauf aus, wie Funktionen in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] im Vergleich zu früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]funktionieren oder zusammenwirken.  
@@ -68,7 +68,7 @@ ms.locfileid: "49461015"
   
 |**Begriff**|**Ergebnisse mit der vorherigen wörtertrennung und wortstammerkennung**|**Ergebnisse mit neuen wörtertrennung und wortstammerkennung**|  
 |--------------|--------------------------------------------------------|---------------------------------------------------|  
-|jěˊÿqℭžl<br /><br /> *(wobei die Begriffe keine gültigen englischen Zeichen sind)*|‘jěˊÿｑℭžl’|je yq zl|  
+|jěˊÿqℭžl<br /><br /> *(wobei die Begriffe keine gültigen englischen Zeichen sind)*|"Jěˊÿqℭžl"|je yq zl|  
 |Tabelle|Tabelle<br /><br /> -Tabelle|Tabelle|  
 |Katze-|cat<br /><br /> Katze-|cat|  
 |v-z *(wobei v und z Füllwörter sind)*|*(keine Ergebnisse)*|v-z|  
@@ -79,7 +79,7 @@ ms.locfileid: "49461015"
 ## <a name="behavior-changes-in-full-text-search-in-sql-server-2008"></a>Verhaltensänderungen in der Volltextsuche in SQL Server 2008  
  In [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] und späteren Versionen ist die Volltext-Engine als Datenbankdienst in die relationale Datenbank integriert. Sie ist darin als Teil der Infrastruktur der Engine für Serverabfragen und Speicherung vorhanden. Die neue Architektur der Volltextsuche erfüllt folgende Zwecke:  
   
--   Integrierte Speicherung und Verwaltung: Die Volltextsuche ist jetzt direkt in die inhärenten Speicher- und Verwaltungsfunktionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] integriert, und der MSFTESQL-Dienst ist nicht mehr vorhanden.  
+-   Integrierte Speicher- und Management-Volltextsuche ist jetzt direkt in die inhärenten Speicher- und Verwaltungsfunktionen von integriert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], und der MSFTESQL-Dienst nicht mehr vorhanden.  
   
     -   Volltextindizes werden in den Datenbankdateigruppen gespeichert, anstatt im Dateisystem. Administratorvorgänge in einer Datenbank, z. B. das Erstellen einer Sicherung, wirken sich automatisch auf die entsprechenden Volltextindizes aus.  
   
@@ -88,9 +88,9 @@ ms.locfileid: "49461015"
         > [!NOTE]  
         >  DDL-Anweisungen für [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)], die angeben, dass die Volltextkataloge ordnungsgemäß funktionieren.  
   
--   Integrierte Abfrageverarbeitung: Der neue Abfrageprozessor für die Volltextsuche ist Teil der Datenbank-Engine und ist vollständig in den SQL Server-Abfrageprozessor integriert. Dies bedeutet, dass der Abfrageoptimierer die Prädikate der Volltextabfrage erkennt und automatisch so effizient wie möglich ausführt.  
+-   Sprachintegrierte Abfrage Verarbeitung der neuen Volltext-Suchdienst Abfrageprozessor ist Teil der Datenbank-Engine und ist vollständig in der SQL Server-Abfrageprozessor integriert. Dies bedeutet, dass der Abfrageoptimierer die Prädikate der Volltextabfrage erkennt und automatisch so effizient wie möglich ausführt.  
   
--   Verbesserte Verwaltung und Problembehandlung: Mit den Tools der integrierten Volltextsuche können Sie Suchstrukturen analysieren, z. B. den Volltextindex, die Ausgabe einer Wörtertrennung, die Stoppwortkonfiguration usw.  
+-   Verbesserte Verwaltung und Problembehandlung für integrierte Volltextsuche verfügt über Tools zur Analyse von Search-Datenstrukturen, z. B. den Volltextindex, der die Ausgabe einer gegebenen wörtertrennung, die stoppwortkonfiguration usw. zu vereinfachen.  
   
 -   Füllwörter und Füllwortdateien sind durch Stoppwörter und Stoplisten ersetzt worden. Eine Stoppliste ist ein Datenbankobjekt, das für Stoppwörter Verwaltbarkeitstasks bereitstellt und die Integrität zwischen verschiedenen Serverinstanzen und -umgebungen verbessert. Weitere Informationen finden sie unter [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   

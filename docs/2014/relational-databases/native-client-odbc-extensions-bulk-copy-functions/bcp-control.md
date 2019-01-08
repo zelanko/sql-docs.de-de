@@ -18,12 +18,12 @@ ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e20a7ebdffc8972a1c3d1449fd65d2560a1d71b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 323ea04d32501f04156ffa81452fad5e5cf86664
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145240"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753082"
 ---
 # <a name="bcpcontrol"></a>bcp_control
   Ändert die Standardeinstellungen für verschiedene Steuerelementparameter für einen Massenkopiervorgang zwischen einer Datei und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -68,7 +68,7 @@ iValue
  BCPFILECP  
  *iValue* enthält die Nummer der Codepage für die Datendatei. Sie können die Nummer der Codepage angeben, z. B. 1252 oder 850 bzw. einen der folgenden Werte  
   
- BCPFILE_ACP: Daten in der Datei befinden sich auf der Microsoft Windows® Codepage des Clients.  
+ BCPFILE_ACP: Daten in der Datei befinden sich in der Microsoft Windows? die Codepage des Clients.  
   
  BCPFILE_OEMCP: Daten in der Datei befinden sich auf der OEM-Codepage des Clients (Standard).  
   
@@ -120,7 +120,7 @@ iValue
  BCPODBC  
  Wenn "true" gibt an, dass **"DateTime"** und **Smalldatetime** ODBC-Zeitstempel Escape-Sequenz-Präfix und Suffix im Zeichenformat gespeicherten Werte verwenden. Die BCPODBC-Option gilt nur für BCP_OUT.  
   
- Bei "FALSE" eine **"DateTime"** Wert, der 1. Januar 1997 darstellt, wird in der Zeichenfolge konvertiert: 1997-01-01 00:00:00.000. Wenn "true" werden die gleichen **"DateTime"** -Wert wie folgt dargestellt: {ts ' 1997-01-01 00:00:00.000'}.  
+ Bei "FALSE" eine **"DateTime"** Wert, der 1. Januar 1997 darstellt, auf die Zeichenfolge konvertiert wird: 1997-01-01 00:00:00.000. Wenn "true" werden die gleichen **"DateTime"** -Wert wie folgt dargestellt: {ts ' 1997-01-01 00:00:00.000'}.  
   
  BCPROWCOUNT  
  Gibt die Anzahl von Zeilen zurück, auf die sich der aktuelle (oder letzte) BCP-Vorgang auswirkt.  

@@ -11,12 +11,12 @@ ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 825bc3d35a0080933c73853a05bf1a6dd9ed3df8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9a2172bdefebdbfd327d8d253e32cd63c254d8e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069712"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419872"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>PowerPivot-Management-Dashboard und Verwendungsdaten
   Das PowerPivot-Management-Dashboard ist eine Sammlung vordefinierter Berichte und Webparts in der SharePoint-Zentraladministration, die Sie bei der Verwaltung einer SQL Server PowerPivot für SharePoint-Bereitstellung unterstützen. Das Management-Dashboard bietet Informationen zum Serverstatus, zur Arbeitsmappenaktivität sowie zur Datenaktualisierung. Das Dashboard nutzt Daten aus der Sammlung von Verwendungsdaten in SharePoint.  
@@ -82,7 +82,7 @@ ms.locfileid: "48069712"
   
 -   [Konfigurieren der Sammlung von Verwendungsdaten für &#40;PowerPivot für SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
- Achten Sie beim Sammeln von Daten zum PowerPivot-Serversystem darauf, dass für jede PowerPivot-Dienstanwendung Ereignismeldungen, Datenaktualisierungsverläufe und sonstige Verwendungsverläufe aktiviert sind. Die während des normalen Serverbetriebs gesammelten Server- und Verwendungsdaten bilden die Quelldaten, die in das interne Datenmodell übertragen werden. **Hinweis:** Wenn Sie Ereignismeldungen oder Verwendungsverläufe deaktivieren, enthalten die zusammengesetzten Berichte unvollständige oder fehlerhafte Angaben.  
+ Achten Sie beim Sammeln von Daten zum PowerPivot-Serversystem darauf, dass für jede PowerPivot-Dienstanwendung Ereignismeldungen, Datenaktualisierungsverläufe und sonstige Verwendungsverläufe aktiviert sind. Die während des normalen Serverbetriebs gesammelten Server- und Verwendungsdaten bilden die Quelldaten, die in das interne Datenmodell übertragen werden. **Hinweis**: Wenn Sie Ereignismeldungen oder Verwendungsverläufe deaktivieren, enthalten die zusammengesetzten Berichte unvollständige oder fehlerhafte Angaben.  
   
 ##  <a name="edit"></a> Bearbeiten eines PowerPivot-Dashboards  
  Wenn Sie erfahren in der Dashboardentwicklung oder -anpassung sind, können Sie das Dashboard bearbeiten, um neue Webparts aufzunehmen. Sie können auch die Webparteigenschaften bearbeiten, die im Dashboard enthalten sind.  
@@ -93,7 +93,7 @@ ms.locfileid: "48069712"
  Um Ihnen den Einstieg in die benutzerdefinierte Berichterstellung zu erleichtern, bietet das PowerPivot-Management-Dashboard eine ODC (Office Data Connection)-Datei, über die eine Verbindung mit der Quellarbeitsmappe hergestellt werden kann. Beispielsweise können Sie die ODC-Datei in Excel verwenden, um zusätzliche Berichte zu erstellen.  
   
 > [!NOTE]  
->  Bearbeiten Sie die Datei, um bei der Verwendung der ODC-Datei in Excel den folgenden Fehler zu vermeiden: "Fehler bei der Initialisierung der Datenquelle". Die automatisch generierte ODC-Datei enthält einen Parameter, der vom MSOLAP-OLE DB-Anbieter nicht unterstützt wird. Die folgenden Anweisungen stellen eine Problemumgehung zum Entfernen der Parameter bereit.  
+>  Bearbeiten Sie die Datei, um beim Verwenden der ODC-Datei in Excel folgenden Fehler zu vermeiden: "Fehler bei der Initialisierung der Datenquelle". Die automatisch generierte ODC-Datei enthält einen Parameter, der vom MSOLAP-OLE DB-Anbieter nicht unterstützt wird. Die folgenden Anweisungen stellen eine Problemumgehung zum Entfernen der Parameter bereit.  
   
  Sie müssen ein Farm- oder Dienstadministrator sein, um Berichte zu erstellen, die auf der PowerPivot-Arbeitsmappe der Zentraladministration basieren.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48069712"
   
     7.  Geben Sie einen Namen für die Verbindung ein, und klicken Sie dann auf **Weiter**.  
   
-    8.  Klicken Sie im Bereich zum Angeben einer MDX-Abfrage auf **Entwerfen** , um den MDX-Abfrage-Designer zu öffnen und die Daten zusammenzustellen, mit denen Sie arbeiten möchten. **Wenn die Fehlermeldung** "Der Edit Mode-Eigenschaftsname weist das falsche Format auf" angezeigt wird, überprüfen Sie, ob die ODC-Datei ordnungsgemäß bearbeitet wurde.  
+    8.  Klicken Sie im MDX-Abfrage geben Sie auf **Entwurf** zum Öffnen des MDX-Abfrage-Designers, um die Daten zusammenzustellen, denen Sie zusammenarbeiten möchten **, wenn Sie die Fehlermeldung finden Sie unter** überprüfen Sie, ob "den Namen der Bearbeitungsmodus-Eigenschaft ist nicht richtig formatiert." Sie bearbeiten die. ODC-Datei.  
   
     9. Klicken Sie auf **OK** und dann auf **Fertig stellen**.  
   

@@ -1,5 +1,5 @@
 ---
-title: Anwenden von Filtern zum Modellieren von Testdaten | Microsoft Docs
+title: Anwenden von Filtern zum Modellieren von Testdaten | Microsoft-Dokumentation
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 03eb6a8b8a459f0d5d0769d1f7af16f06b81f560
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d9254d42d61fdf6bf087d83d0ced4ff1761dd077
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020037"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539953"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Anwenden von Filtern zum Modellieren von Testdaten
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34020037"
   
  Um zu bestimmen, ob ein Modell einen vordefinierten Filter enthält, der sich auf die Ergebnisse auswirken könnte, können Sie nach der **Filter** -Eigenschaft im **Eigenschaftenbereich** suchen, oder Sie können das Modell abfragen, indem Sie die Data Mining-Schemarowsets verwenden. Zum Beispiel wird bei der folgenden Abfrage der Filtertext für das angegebene Modell zurückgegeben:  
   
- `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model’`  
+ `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model'`  
   
 > [!WARNING]  
 >  Wenn Sie den Filter aus einem vorhandenen Miningmodell entfernen oder die Filterbedingungen ändern möchten, müssen Sie das Miningmodell erneut verarbeiten.  
@@ -57,7 +57,7 @@ ms.locfileid: "34020037"
   
 3.  Wählen Sie auf der Registerkarte **Eingabeauswahl** unter **Dataset auswählen, das für das Genauigkeitsdiagramm verwendet werden soll**die Option **Anderes Dataset verwenden**.  
   
-4.  Klicken Sie auf die Durchsuchen-Schaltfläche **(...)** , um ein Dialogfeld zu öffnen, und wählen Sie das externe Dataset aus.  
+4.  Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**  ein Dialogfeld geöffnet, und wählen das externe DataSet.  
   
 5.  Wählen Sie die Falltabelle aus, und fügen Sie ggf. eine geschachtelte Tabelle hinzu. Ordnen Sie Spalten im Modell nach Bedarf Spalten im externen Dataset zu. Schließen Sie das Dialogfeld **Spaltenzuordnung angeben** , um die Quelltabellendefinition zu speichern.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "34020037"
   
 9. Klicken Sie auf das Textfeld **Und/Oder** , und wählen Sie einen logischen Operator aus, um zu definieren, wie mehrere Bedingungen kombiniert werden.  
   
-10. Optional können Sie auf die Schaltfläche zum Durchsuchen **(…)** rechts neben dem Textfeld **Wert** klicken, um das Dialogfeld **Filter** zu öffnen und Bedingungen für die geschachtelte Tabelle oder die einzelnen Spalten der Falltabelle festzulegen.  
+10. Klicken Sie optional auf die Schaltfläche zum Durchsuchen **(...)**  am rechten Rand der **Wert** Textfeld zum Öffnen der **Filter** Dialogfeld und legen Sie Bedingungen für die geschachtelte Tabelle oder für die einzelnen Tabellenspalten für Groß-/Kleinschreibung.  
   
 11. Überprüfen Sie, dass die fertig gestellten Filterbedingungen richtig sind, indem Sie den Text im Bereich **Ausdruck** anzeigen.  
   
@@ -88,6 +88,6 @@ ms.locfileid: "34020037"
 ## <a name="see-also"></a>Siehe auch  
  [Auswählen und Zuordnen von Modelltestdaten](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
  [Verwenden von geschachtelten Tabellendaten als Eingabe für ein Genauigkeitsdiagramm](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
- [Wählen Sie eine Genauigkeit Diagrammtyp und einen Satz Diagrammoptionen](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
+ [Auswählen eines Genauigkeitsdiagrammtyps Festlegen von Diagrammoptionen](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7bcb96b2bd0710af94b944d2f8e3417d9cfbcee6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad7331fbbfed123da5d7121d83558ba4bbabc912
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720707"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527253"
 ---
 # <a name="parameter-ado---wfc-syntax"></a>Parameter (ADO/WFC-Syntax)
 ## <a name="package-commswfcdata"></a>Paket com.ms.wfc.data  
@@ -70,9 +70,9 @@ public AdoProperties getProperties()
   
  ADO/WFC-implementiert die **Wert** Eigenschaft mit dem die **"GetValue"** Methode, die ein VARIANT-Objekt zurückgibt und die **SetValue** Methode, die einen Variant-Wert als Argument akzeptiert. Varianten werden möglichst effizient in bestimmten Sprachen wie z. B. Microsoft Visual Basic.  
   
- Zusätzlich zu den **Wert** Eigenschaft ADO/WFC-bietet *Accessor* Methoden, mit denen Java-Datentypen zu erhalten, und legen Sie den Inhalt der **Parameter** Objekte. Die meisten dieser Methoden haben Namen im Format **erhalten *** DataType* oder **festgelegt *** DataType*.  
+ Zusätzlich zu den **Wert** Eigenschaft ADO/WFC-bietet *Accessor* Methoden, mit denen Java-Datentypen zu erhalten, und legen Sie den Inhalt der **Parameter** Objekte. Die meisten dieser Methoden haben Namen im Format **erhalten**_DataType_ oder **festgelegt**_DataType_.  
   
- Es gibt eine wichtige Ausnahme: Gibt es keine **GetNull** Eigenschaft; stattdessen wird ein **IsNull** -Eigenschaft, die gibt einen booleschen Wert, der angibt, ob das Feld null ist.  
+ Es ist eine wichtige Ausnahme: Gibt es keine **GetNull** Eigenschaft; stattdessen wird eine **IsNull** -Eigenschaft, die gibt einen booleschen Wert, der angibt, ob das Feld null ist.  
   
 ```  
 public boolean getBoolean()  

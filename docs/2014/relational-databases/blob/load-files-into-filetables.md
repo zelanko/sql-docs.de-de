@@ -14,12 +14,12 @@ ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b70ca6937526c739edf0d0dd0f8d08c2c914b236
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 560fab599098d1f9e5fae76d42c274ad9a5fb144
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053260"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507798"
 ---
 # <a name="load-files-into-filetables"></a>Laden von Dateien in FileTables
   Beschreibt, wie Dateien in FileTables geladen und migriert werden.  
@@ -30,9 +30,9 @@ ms.locfileid: "48053260"
 |Aktueller Speicherort von Dateien|Optionen für die Migration|  
 |-------------------------------|---------------------------|  
 |Dateien sind derzeit im Dateisystem gespeichert.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat keine Informationen über die Dateien.|Da eine FileTable im Windows-Dateisystem als Ordner angezeigt wird, können Sie Dateien mithilfe einer der verfügbaren Methoden zum Verschieben oder Kopieren von Dateien ganz einfach in eine neue FileTable laden. Zu diesen Methoden gehören Windows-Explorer, Befehlszeilenoptionen, einschließlich xcopy und robocopy, sowie benutzerdefinierte Skripts oder Anwendungen.<br /><br /> Sie können einen vorhandenen Ordner nicht in eine FileTable konvertieren.|  
-|Dateien sind derzeit im Dateisystem gespeichert.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält eine Tabelle von Metadaten, die Zeiger auf die Dateien enthält.|Der erste Schritt besteht darin, die Dateien mithilfe einer der oben erwähnten Methoden zu verschieben oder zu kopieren.<br /><br /> Der zweite Schritt besteht darin, die vorhandene Tabelle von Metadaten so zu aktualisieren, dass diese auf den neuen Speicherort der Dateien zeigt.<br /><br /> Weitere Informationen finden Sie unter [Beispiel: Migrieren von Dateien aus dem Dateisystem in eine FileTable](#HowToMigrateFiles) .|  
+|Dateien sind derzeit im Dateisystem gespeichert.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält eine Tabelle von Metadaten, die Zeiger auf die Dateien enthält.|Der erste Schritt besteht darin, die Dateien mithilfe einer der oben erwähnten Methoden zu verschieben oder zu kopieren.<br /><br /> Der zweite Schritt besteht darin, die vorhandene Tabelle von Metadaten so zu aktualisieren, dass diese auf den neuen Speicherort der Dateien zeigt.<br /><br /> Weitere Informationen finden Sie unter [Beispiel: Migrieren von Dateien aus dem Dateisystem in eine FileTable](#HowToMigrateFiles) in diesem Thema.|  
   
-###  <a name="HowToLoadNew"></a> Vorgehensweise: Laden von Dateien in eine FileTable  
+###  <a name="HowToLoadNew"></a> So wird es gemacht: Laden von Dateien in einer FileTable  
  Zu den Methoden, über die Sie Dateien in eine FileTable laden können, gehören die folgenden:  
   
 -   Drag & Drop von Dateien aus den Quellordnern in den neuen FileTable-Ordner in Windows-Explorer.  
@@ -44,15 +44,15 @@ ms.locfileid: "48053260"
 ###  <a name="HowToMigrateFiles"></a> Beispiel: Migrieren von Dateien aus dem Dateisystem in eine FileTable  
  In diesem Szenario werden die Dateien im Dateisystem gespeichert, und Sie verfügen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über eine Tabelle mit Metadaten, die Zeiger auf die Dateien enthält. Sie möchten die Dateien in eine FileTable verschieben und den ursprünglichen UNC-Pfad für jede Datei in den Metadaten durch den FileTable-UNC-Pfad ersetzen. Die Funktion [GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql) hilft Ihnen, dieses Ziel zu erreichen.  
   
- In diesem Beispiel wird vorausgesetzt, dass es eine Datenbanktabelle, `PhotoMetadata`, die Daten zu Fotos enthält. Diese Tabelle enthält eine Spalte `UNCPath` des Typs `varchar`(512) den tatsächlichen UNC-Pfad zu einer JPG-Datei enthält.  
+ In diesem Beispiel wird vorausgesetzt, dass es eine Datenbanktabelle, `PhotoMetadata`, die Daten zu Fotos enthält. Diese Tabelle hat eine Spalte `UNCPath` des Typs `varchar`(512), der den tatsächlichen UNC-Pfad zu einer JPG-Datei enthält.  
   
  Um die Bilddateien aus dem Dateisystem in eine FileTable zu migrieren, müssen Sie wie folgt vorgehen:  
   
-1.  Erstellen Sie eine neue FileTable, in der sich die Dateien befinden. In diesem Beispiel verwendet den Namen der Tabelle `dbo.PhotoTable`, aber nicht den Code zum Erstellen der Tabelle angezeigt wird.  
+1.  Erstellen Sie eine neue FileTable, in der sich die Dateien befinden. In diesem Beispiel wird der Tabellenname `dbo.PhotoTable` verwendet; es wird jedoch nicht der Code zum Erstellen der Tabelle aufgeführt.  
   
 2.  Verwenden Sie xcopy oder ein ähnliches Tool, um die JPG-Dateien mit ihrer Verzeichnisstruktur in das Stammverzeichnis der FileTable zu kopieren.  
   
-3.  Korrigieren Sie die Metadaten in die `PhotoMetadata` Tabelle, indem Sie Code ähnlich dem folgenden:  
+3.  Korrigieren Sie die Metadaten in der Tabelle `PhotoMetadata` mithilfe von Code, der folgendermaßen aussieht:  
   
 ```tsql  
 --  Add a path locator column to the PhotoMetadata table.  
@@ -87,7 +87,7 @@ UPDATE PhotoMetadata
   
     -   BULK INSERT mit CHECK_CONSTRAINTS-Klausel.  
   
-    -   INSERT INTO … SELECT * FROM OPENROWSET(BULK …) ohne IGNORE_CONSTRAINTS-Klausel.  
+    -   INSERT INTO ... SELECT * FROM OPENROWSET(BULK ...) ohne IGNORE_CONSTRAINTS-Klausel.  
   
 -   Massenladevorgänge, die keine Einschränkungen erzwingen, führen zu Fehlern, es sei denn, die für FileTable vom System definierten Einschränkungen wurden deaktiviert. Zu dieser Kategorie gehören die folgenden Vorgänge:  
   
@@ -95,9 +95,9 @@ UPDATE PhotoMetadata
   
     -   BULK INSERT ohne CHECK_CONSTRAINTS-Klausel.  
   
-    -   INSERT INTO … SELECT * FROM OPENROWSET(BULK …) mit IGNORE_CONSTRAINTS-Klausel.  
+    -   INSERT INTO ... SELECT * FROM OPENROWSET(BULK ...) mit IGNORE_CONSTRAINTS-Klausel.  
   
-###  <a name="HowToBulkLoad"></a> Vorgehensweise: Massenladen von Dateien in eine FileTable  
+###  <a name="HowToBulkLoad"></a> So wird es gemacht: BULK Laden von Dateien in einer FileTable  
  Sie können verschiedene Methoden zum Massenladen von Dateien in eine FileTable verwenden:  
   
 -   **bcp**  
@@ -112,7 +112,7 @@ UPDATE PhotoMetadata
   
     -   Deaktivieren Sie den FileTable-Namespace, und führen Sie den Aufruf ohne die **CHECK_CONSTRAINTS** -Klausel aus. Aktivieren Sie dann den FileTable-Namespace erneut.  
   
--   **INSERT INTO … SELECT \* FROM OPENROWSET(BULK …)**  
+-   **INSERT INTO ... SELECT \* FROM OPENROWSET(BULK...)**.  
   
     -   Aufruf mit der **IGNORE_CONSTRAINTS** -Klausel.  
   
@@ -120,7 +120,7 @@ UPDATE PhotoMetadata
   
  Informationen zum Deaktivieren der FileTable-Einschränkungen finden Sie unter [Verwalten von FileTables](manage-filetables.md).  
   
-###  <a name="disabling"></a> Vorgehensweise: Deaktivieren von FileTable-Einschränkungen zum Massenladen  
+###  <a name="disabling"></a> So wird es gemacht: Deaktivieren von FileTable-Einschränkungen zum Massenladen  
  Um Dateien in einem Massenvorgang in eine FileTable zu laden und dabei den Aufwand zu vermeiden, die systemdefinierten Einschränkungen zu erzwingen, können Sie die Einschränkungen vorübergehend deaktivieren. Weitere Informationen finden Sie unter [Verwalten von FileTables](manage-filetables.md).  
   
 ## <a name="see-also"></a>Siehe auch  

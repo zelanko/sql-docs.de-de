@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSdatatype_mappings
@@ -19,12 +18,12 @@ ms.assetid: 13cdabb3-6e07-4e8d-ae80-4235022ccc7f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 00df6d73813fea7efebb3fa4db3c5e65187f2109
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5af1233e81c996e98287a637e01ad1d249671303
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636698"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785092"
 ---
 # <a name="msdatatypemappings-transact-sql"></a>MSdatatype_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47636698"
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**dbms_name**|**nvarchar(128)**|Ist der Name des DBMS. Im folgenden sind die möglichen Werte und deren Beschreibungen.<br /><br /> **MSSQLSERVER**: das Ziel ist eine SQL Server-Datenbank.<br />**ORACLE**: das Ziel ist eine Oracle-Datenbank.<br />**DB2**: das Ziel ist eine IBM DB2-Datenbank.<br />**SYBASE**: das Ziel ist eine Sybase-Datenbank.|  
+|**dbms_name**|**nvarchar(128)**|Ist der Name des DBMS. Im folgenden sind die möglichen Werte und deren Beschreibungen.<br /><br /> **MSSQLSERVER**: Das Ziel ist eine SQL Server-Datenbank.<br />**ORACLE**: Das Ziel ist eine Oracle-Datenbank.<br />**DB2**: Das Ziel ist eine IBM DB2-Datenbank.<br />**SYBASE**: Das Ziel ist eine Sybase-Datenbank.|  
 |**sql_type**|**nvarchar(128)**|Ist der SQL Server-Datentyp.|  
 |**dest_type**|**nvarchar(128)**|Ist der Name des nicht - SQL Server-Datentyps.|  
 |**dest_prec**|**bigint**|Ist die Genauigkeit des Datentyps nicht - SQL-Server an.|  

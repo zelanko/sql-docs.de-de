@@ -21,12 +21,12 @@ ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 528f05021626fe22543f8ddcd3ed06215d618b42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1dec3a2821e2b92d431680b49e37a7b9819887b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177477"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505553"
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>Importieren von Massendaten mithilfe von BULK INSERT oder OPENROWSET(BULK...) (SQL Server)
   In diesem Thema erhalten Sie einen Überblick über die Verwendung der [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT-Anweisung und der INSERT...SELECT * FROM OPENROWSET(BULK...)-Anweisung, mit denen ein Massenimport von Daten aus einer Datendatei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle ermöglicht wird. In diesem Thema werden zudem Sicherheitsaspekte beim Verwenden von BULK INSERT und OPENROWSET(BULK…) beschrieben, und mithilfe dieser Methoden wird ein Massenimport aus einer Remotedatenquelle ausgeführt.  
@@ -64,14 +64,14 @@ ms.locfileid: "48177477"
   
 -   [Verwenden einer Formatdatei zum Zuordnen von Tabellenspalten zu Datendateifeldern &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="openrowsetbulk-function"></a>OPENROWSET(BULK…)-Funktion  
- Auf den OPENROWSET-Massenrowsetanbieter wird durch Aufrufen der OPENROWSET-Funktion und Angeben der BULK-Option zugegriffen. Mithilfe der OPENROWSET(BULK…)-Funktion können Sie auf Remotedaten zugreifen, indem Sie über einen OLE DB-Anbieter eine Verbindung mit einer Remotedatenquelle (z. B. einer Datendatei) herstellen.  
+## <a name="openrowsetbulk-function"></a>OPENROWSET(BULK…) Funktion  
+ Auf den OPENROWSET-Massenrowsetanbieter wird durch Aufrufen der OPENROWSET-Funktion und Angeben der BULK-Option zugegriffen. Mithilfe der OPENROWSET(BULK…)-Funktion können Sie auf Remotedaten zugreifen, indem Sie über einen OLE DB-Anbieter eine Verbindung mit einer Remotedatenquelle (z. B. einer Datendatei) herstellen.  
   
  Für den Massenimport von Daten wird OPENROWSET(BULK…) aus der SELECT…FROM-Klausel einer INSERT-Anweisung aufgerufen. Die grundlegende Syntax für den Massenimport von Daten lautet:  
   
  INSERT ... SELECT * FROM OPENROWSET(BULK...)  
   
- Wenn OPENROWSET(BULK...) in einer INSERT-Anweisung verwendet wird, werden damit auch Tabellenhinweise unterstützt. Zusätzlich zu den regulären Tabellenhinweisen, z. B. TABLOCK, sind für die BULK-Klausel die folgenden speziellen Tabellenhinweise möglich: IGNORE_CONSTRAINTS (ignoriert nur die CHECK-Einschränkungen), IGNORE_TRIGGERS, KEEPDEFAULTS und KEEPIDENTITY. Weitere Informationen finden Sie unter [Tabellenhinweise &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table).  
+ Wenn OPENROWSET(BULK...) in einer INSERT-Anweisung verwendet wird, werden damit auch Tabellenhinweise unterstützt. Zusätzlich zu den regulären Tabellenhinweisen, z. B. TABLOCK kann die BULK-Klausel die folgenden spezialisierten Tabellenhinweise akzeptieren: IGNORE_CONSTRAINTS (ignoriert nur die CHECK-Einschränkungen), IGNORE_TRIGGERS, KEEPDEFAULTS und KEEPIDENTITY. Weitere Informationen finden Sie unter [Tabellenhinweise &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table).  
   
  Informationen zu den zusätzlichen Verwendungsmöglichkeiten der Option BULK finden Sie unter [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   

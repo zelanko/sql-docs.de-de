@@ -12,12 +12,12 @@ ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ff7549e5a892f6048d6f737382f489dd0bf2ab2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26bcf31c2d4e0d188e93587dd9bdec1a9ff382e0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131612"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533982"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Bindung und Datenübertragung von Tabellenwertparametern und Spaltenwerten
   Tabellenwertparameter müssen ebenso wie andere Parameter gebunden werden, bevor sie an den Server übergeben werden. Die Anwendung bindet Tabellenwertparameter die gleiche Weise wie andere Parameter: mit SQLBindParameter oder entsprechende Aufrufe SQLSetDescField oder SQLSetDescRec. Tabellenwertparameter haben den Serverdatentyp SQL_SS_TABLE. Der C-Typ kann entweder als SQL_C_DEFAULT oder SQL_C_BINARY angegeben werden.  
@@ -26,11 +26,11 @@ ms.locfileid: "48131612"
   
  Gesamten Tabellenwertparameter-Spalten können mit dem Attribut SQL_CA_SS_COL_HAS_DEFAULT_VALUE Standardwerte zugewiesen werden. Einzelne Tabellenwertparameter-Spaltenwerte, allerdings können keine Standardwerte zugewiesen werden von SQL_DEFAULT_PARAM in *StrLen_or_IndPtr* mit SQLBindParameter. Tabellenwertparameter als Ganzes können nicht auf einen Standardwert festgelegt werden, von SQL_DEFAULT_PARAM in *StrLen_or_IndPtr* mit SQLBindParameter. Wenn diese Regeln nicht befolgt werden, gibt SQLExecute oder SQLExecDirect SQL_ERROR zurück. Generiert ein Diagnosedatensatz mit SQLSTATE = 07S01 und der Meldung "Ungültige Verwendung des Standardparameters für den Parameter \<p >", wobei \<p > die Ordnungszahl des Tabellenwertparameters in der abfrageanweisung.  
   
- Nachdem die Anwendung den Tabellenwertparameter gebunden hat, muss sie jede einzelne Tabellenwertparameter-Spalte binden. Zu diesem Zweck ruft die Anwendung zuerst SQLSetStmtAttr auf, um SQL_SOPT_SS_PARAM_FOCUS auf die Ordnungszahl für einen Tabellenwertparameter festgelegt. Und dann die Anwendung die Spalten des Table-valued Parameters durch Aufrufe der folgenden Routinen bindet: SQLBindParameter, SQLSetDescField und SQLSetDescRec. Wenn SQL_SOPT_SS_PARAM_FOCUS auf 0 stellt das übliche Verhalten von SQLBindParameter, SQLSetDescField und SQLSetDescRec auf regulären Parameter von der obersten Ebene.  
+ Nachdem die Anwendung den Tabellenwertparameter gebunden hat, muss sie jede einzelne Tabellenwertparameter-Spalte binden. Zu diesem Zweck ruft die Anwendung zuerst SQLSetStmtAttr auf, um SQL_SOPT_SS_PARAM_FOCUS auf die Ordnungszahl für einen Tabellenwertparameter festgelegt. Die Anwendung bindet dann die Spalten des Table-valued Parameters, durch Aufrufe der folgenden Routinen: SQLBindParameter SQLSetDescRec und SQLSetDescField. Wenn SQL_SOPT_SS_PARAM_FOCUS auf 0 stellt das übliche Verhalten von SQLBindParameter, SQLSetDescField und SQLSetDescRec auf regulären Parameter von der obersten Ebene.  
   
  Für den Tabellenwertparameter an sich werden keine Daten gesendet oder empfangen, die Daten werden für die einzelnen Spalten, aus denen er sich zusammensetzt, gesendet und empfangen. Da der Tabellenwertparameter eine Pseudospalte ist, werden die Parameter für SQLBindParameter verwendet, um auf andere Attribute als andere Datentypen wie folgt zu verweisen:  
   
-|Parameter|Verknüpftes Attribut für Parametertypen, die keine Tabellenwertparameter sind, einschließlich Spalten|Verknüpftes Attribut für Tabellenwertparameter|  
+|Parameter|Verknüpftes Attribut für nicht-Tabellenwertparameter-Typen, einschließlich Spalten|Verknüpftes Attribut für Tabellenwertparameter|  
 |---------------|--------------------------------------------------------------------------------|----------------------------------------------------|  
 |*InputOutputType*|SQL_DESC_PARAMETER_TYPE in IPD<br /><br /> Für Tabellenwertparameter-Spalten muss diese Angabe der Angabe für den Tabellenwertparameter selbst entsprechen.|SQL_DESC_PARAMETER_TYPE in IPD<br /><br /> Hier muss SQL_PARAM_INPUT angegeben werden.|  
 |*ValueType*|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE in APD|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE in APD<br /><br /> Hier muss SQL_C_DEFAULT oder SQL_C_BINARY angegeben werden.|  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5088f627aee3b9e570b4b4c43e46a42853165193
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3247bf2ca459f013131b21a25278bcc6e5d10b9a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148432"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544557"
 ---
 # <a name="move-an-analysis-services-database"></a>Verschieben einer Analysis Services Datenbank
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "50148432"
   
 1.  Suchen Sie im linken oder rechten Bereich von SSMS nach der zu verschiebenden Datenbank.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Datenbank, und wählen Sie **Trennen**aus.  
+2.  Mit der rechten Maustaste auf die Datenbank, und wählen **trennen...**  
   
 3.  Weisen Sie der Datenbank, die getrennt werden soll, ein Kennwort zu, und klicken Sie dann auf **OK** , um den Befehl zum Trennen auszuführen.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "50148432"
   
 5.  Suchen Sie im linken oder rechten Bereich von SSMS nach dem Ordner **Datenbanken** .  
   
-6.  Klicken Sie mit der rechten Maustaste auf den Ordner **Datenbanken** , und wählen Sie **Anfügen**aus.  
+6.  Mit der rechten Maustaste auf die **Datenbanken** Ordner, und wählen **anfügen...**  
   
-7.  Geben Sie im Textfeld **Ordner** den neuen Speicherort des Datenbankordners ein. Sie können auch über die Schaltfläche zum Durchsuchen (**…**) nach dem Datenbankordner suchen.  
+7.  Geben Sie im Textfeld **Ordner** den neuen Speicherort des Datenbankordners ein. Alternativ können Sie die Schaltfläche zum Durchsuchen (**...** ) nach dem Datenbankordner suchen.  
   
 8.  Wählen Sie den **Lese-/Schreibmodus** für die Datenbank aus.  
   

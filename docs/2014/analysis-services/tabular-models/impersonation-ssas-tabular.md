@@ -11,12 +11,12 @@ ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b8f3cf856b7b4dbf77d4a426fcf35d969ce1a990
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: cb44454c12dec173e586fd2a94d0147dfde01eef
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145595"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391863"
 ---
 # <a name="impersonation-ssas-tabular"></a>Identitätswechsel (SSAS – tabellarisch)
   Dieses Thema vermittelt Autoren von tabellarischen Modellen Grundlegendes zur Verwendung von Anmeldedaten durch Analysis Services beim Herstellen einer Verbindung mit einer Datenquelle zum Importieren und Verarbeiten (Aktualisieren) von Daten.  
@@ -38,7 +38,7 @@ ms.locfileid: "50145595"
   
  Die für den Identitätswechsel verwendeten Anmeldeinformationen unterscheiden sich von den Anmeldeinformationen des gerade angemeldeten Benutzers. Die Anmeldeinformationen des angemeldeten Benutzers werden für bestimmte clientseitige Vorgänge beim Erstellen eines Modells verwendet.  
   
- Sie sollten damit vertraut sein, wie die Identitätswechselinformationen angegeben und gesichert werden, und den Unterschied zwischen einem Kontext, in dem die Anmeldeinformationen des zurzeit angemeldeten Benutzers verwendet werden, und einem Kontext, in dem andere Anmeldeinformationen verwendet werden, kennen.  
+ Es ist wichtig zu verstehen, wie Identitätswechsel-Anmeldeinformationen angegeben und gesichert werden als auch den Unterschied zwischen den Kontexten, in dem sowohl die aktuelle auf Anmeldeinformationen des Benutzers angemeldet und andere Anmeldeinformationen verwendet werden.  
   
  **Grundlegendes zu serverseitigen Anmeldeinformationen**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "50145595"
   
  Auf ähnliche Weise können Sie für bereits erstellte Modelle das Dialogfeld **Tabelleneigenschaften bearbeiten** verwenden, um in eine Tabelle importierte Daten anzuzeigen und zu filtern. Diese Vorschau- und Filterfunktionen werden genauso verwendet wie die Funktion **Vorschau und Filter** auf der Seite **Tabellen und Sichten auswählen** des Tabellenimport-Assistenten.  
   
- Bei der Funktion **Vorschau und Filter** sowie den Dialogfeldern **Tabelleneigenschaften** und **Partitions-Manager** handelt es sich um prozessinterne *clientseitige* Vorgänge. Dies bedeutet, dass diese Vorgänge anders durchgeführt werden als die serverseitigen Vorgänge, bei denen die Datenquelle verbunden und Daten aus der Datenquelle abgerufen werden. Die Anmeldeinformationen, die zum Anzeigen einer Vorschau und Filtern der Daten verwendet werden, sind die Anmeldeinformationen des Benutzers, der zu dem Zeitpunkt angemeldet ist. Bei clientseitigen Vorgängen werden immer die Windows-Anmeldeinformationen des aktuellen Benutzers verwendet, um eine Verbindung mit der Datenquelle herzustellen.  
+ Bei der Funktion **Vorschau und Filter** sowie den Dialogfeldern **Tabelleneigenschaften** und **Partitions-Manager** handelt es sich um prozessinterne *clientseitige* Vorgänge. Dies bedeutet, dass diese Vorgänge anders durchgeführt werden als die serverseitigen Vorgänge, bei denen die Datenquelle verbunden und Daten aus der Datenquelle abgerufen werden. Die Anmeldeinformationen, die zum Anzeigen einer Vorschau und Filtern der Daten verwendet werden, sind die Anmeldeinformationen des Benutzers, der zu dem Zeitpunkt angemeldet ist. Clientseitige Vorgänge verwenden immer die Windows-Anmeldeinformationen des aktuellen Benutzers eine Verbindung mit der Datenquelle herstellen.  
   
  Die unterschiedliche Verwendung der Anmeldeinformationen bei serverseitigen und clientseitigen Vorgängen kann dazu führen, dass die Daten, die der Benutzer bei Verwendung der Funktion **Vorschau und Filter** oder des Dialogfelds **Tabelleneigenschaften** (clientseitige Vorgänge) sieht, nicht mit den Daten übereinstimmen, die während eines Imports oder einer Verarbeitung abgerufen werden (serverseitige Vorgänge). Wenn die Anmeldeinformationen des gerade angemeldeten Benutzers und die angegebenen Identitätswechselinformationen unterschiedlich sind, können sich die mit der Funktion **Vorschau und Filter** oder dem Dialogfeld **Tabelleneigenschaften** angezeigten und die während eines Imports oder einer Verarbeitung abgerufenen Daten abhängig davon, welche Anmeldeinformationen die Datenquelle erfordert, unterscheiden.  
   

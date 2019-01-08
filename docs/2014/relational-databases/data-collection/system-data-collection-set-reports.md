@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - data collector [SQL Server], server activity
@@ -20,12 +20,12 @@ ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 691de067aca3b97dab69b0b1f28784305cd39c0f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 36aa1bbfd37642e66b232a1b532ff114397841d8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062172"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788434"
 ---
 # <a name="system-data-collection-set-reports"></a>Berichte der Systemdaten-Sammlungssätze
   Der Datensammler stellt einen Verlaufsbericht für jeden der Systemdaten-Sammlungssätze bereit. Jeder der folgenden Berichte verwendet Daten, die im Verwaltungs-Data Warehouse gespeichert werden:  
@@ -41,7 +41,7 @@ ms.locfileid: "48062172"
 ##  <a name="Disk"></a> Bericht über die Zusammenfassung der Datenträgerverwendung  
  Der Bericht über die Zusammenfassung der Datenträgerverwendung enthält Daten über die Speicherplatzverwendung aller Datenbanken in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die in den Berichten bereitgestellten Daten werden unter Verwendung des Sammlungssatzes für die Datenträgerverwendung ermittelt, der den generischen T-SQL-Abfragensammlertyp verwendet.  
   
- Sie können auf den Bericht über die Zusammenfassung der Datenträgerverwendung vom Objekt-Explorer aus zugreifen. Erweitern Sie den Ordner **Verwaltung** , klicken Sie mit der rechten Maustaste auf **Datensammlung**, zeigen Sie auf **Berichte**und anschließend auf **Verwaltungs-Data Warehouse**, und klicken Sie auf **Zusammenfassung der Datenträgerverwendung**, um den Bericht anzuzeigen. Weitere Informationen finden Sie unter [Anzeigen eines Sammlungssatzberichts &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md).  
+ Sie können auf den Bericht über die Zusammenfassung der Datenträgerverwendung vom Objekt-Explorer aus zugreifen. Erweitern Sie den Ordner **Verwaltung** , klicken Sie mit der rechten Maustaste auf **Datensammlung**, zeigen Sie auf **Berichte**und anschließend auf **Verwaltungs-Data Warehouse**, und klicken Sie auf **Zusammenfassung der Datenträgerverwendung**, um den Bericht anzuzeigen. Weitere Informationen finden Sie unter [View a Collection Set Report &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md).  
   
 ### <a name="disk-usage-collection-set-report"></a>Bericht über den Sammlungssatz für Datenträgerverwendung  
  Der Bericht über den Sammlungssatz für Datenträgerverwendung enthält eine Übersicht über den Speicherplatz, der für alle Datenbanken in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet wird, sowie die Vergrößerungstrends der Daten- und Protokolldateien für die einzelnen Datenbanken.  
@@ -62,7 +62,7 @@ ms.locfileid: "48062172"
 |--------------|----------------|  
 |Index|Der verwendete Speicherplatz für Indexseiten|  
 |Nicht zugeordnet|Der für die Datenbank verfügbare Speicherplatz, der jedoch noch keinem Objekt zugeordnet wurde|  
-|data|Der von Datenseiten verwendete Speicherplatz|  
+|Daten|Der von Datenseiten verwendete Speicherplatz|  
 |Nicht verwendet|Der Speicherplatz, der mindestens einem Objekt zugeordnet, jedoch noch nicht verwendet wurde|  
   
  Die Speicherplatzverwendung für die Transaktionsprotokolldatei ist als verwendeter und nicht verwendeter Speicherplatz kategorisiert.  
@@ -81,21 +81,21 @@ ms.locfileid: "48062172"
   
  **Zeitachsensteuerelement und Navigationsschaltflächen**  
   
- Verwenden Sie das Zeitachsensteuerelement und die Navigationsschaltflächen, um durch die Zeitachse zu navigieren oder einen Datumsbereich auszuwählen. Über die Pfeilschaltflächen können Sie nach links bzw. nach rechts blättern und sich so rückwärts bzw. vorwärts durch die Zeitachse bewegen. In der Standardeinstellung navigieren Sie mit den Pfeilschaltflächen in 4-Stunden-Schritten durch die Zeitachse. Mit den Lupenschaltflächen können Sie diesen Zeitschritt auf einen der folgenden Werte vergrößern oder verkleinern: 15 Minuten, 1 Stunde, 4 Stunden, 12 Stunden oder 24 Stunden. Der aktuell ausgewählte Zeitbereich wird durch den hervorgehobenen Teil der Zeitachse dargestellt und im Text unter der Zeitachse angezeigt. Diese Werte, sowie die Daten im Bericht, werden immer aktualisiert, wenn Sie auf die Zeitachse klicken oder die Navigationsschaltflächen verwenden.  
+ Verwenden Sie das Zeitachsensteuerelement und die Navigationsschaltflächen, um durch die Zeitachse zu navigieren oder einen Datumsbereich auszuwählen. Über die Pfeilschaltflächen können Sie nach links bzw. nach rechts blättern und sich so rückwärts bzw. vorwärts durch die Zeitachse bewegen. In der Standardeinstellung navigieren Sie mit den Pfeilschaltflächen in 4-Stunden-Schritten durch die Zeitachse. Mit den lupenschaltflächen, können Sie erweitern oder verkleinern diesen Zeitschritt auf einen der folgenden Werte: 15 Minuten, 1 Stunde, 4 Stunden, 12 Stunden oder 24 Stunden. Der aktuell ausgewählte Zeitbereich wird durch den hervorgehobenen Teil der Zeitachse dargestellt und im Text unter der Zeitachse angezeigt. Diese Werte, sowie die Daten im Bericht, werden immer aktualisiert, wenn Sie auf die Zeitachse klicken oder die Navigationsschaltflächen verwenden.  
   
  **Schaltfläche "Kalender"**  
   
  Verwenden Sie die Schaltfläche Kalender, um das Startdatum, die Startzeit und die Dauer der Daten anzugeben, über die ein Bericht erstellt werden soll.  
   
 #### <a name="query-statistics-history-report"></a>Bericht "Abfragestatistik - Verlauf"  
- Im Diagramm Erste Abfragen nach CPU gesamt werden die relativen Aufwendungen für jede Abfrage für den ausgewählten Zeitbereich auf der Basis der CPU-Gesamtnutzung dargestellt. Zum Anzeigen einer anderen Sicht der relativen Aufwendungen für jede Abfrage klicken Sie auf einen der Links unter dem Diagramm: **Dauer**, **E/A gesamt**, **Physische Lesevorgänge**oder **Logische Schreibvorgänge**.  
+ Im Diagramm Erste Abfragen nach CPU gesamt werden die relativen Aufwendungen für jede Abfrage für den ausgewählten Zeitbereich auf der Basis der CPU-Gesamtnutzung dargestellt. Um eine andere Ansicht der relativen aufwendungen für jede anzuzeigen, klicken Sie auf eine der folgenden Hyperlinks unterhalb des Diagramms: **Dauer**, **e/a gesamt**, **physische Lesevorgänge**, oder **logische Schreibvorgänge**.  
   
  In der Tabelle unter dem Diagramm werden weitere Abfragedaten bereitgestellt. Sie enthält den Text für jede grafisch dargestellte Abfrage zusammen mit ausführlichen statistischen Informationen. Beachten Sie, dass die Diagrammbalken aktive Links sind, ebenso wie die einzelnen Abfragen in der Tabelle. Durch Klicken auf einen aktiven Link wird der Unterbericht Abfragedetails für die Abfrage geöffnet.  
   
 #### <a name="query-details-subreport"></a>Unterbericht "Abfragedetails"  
  Der Unterbericht Abfragedetails enthält den gesamten Abfragetext. Der Link **Abfragetext bearbeiten** wird neben der Abfrage angezeigt. Sie können auf diesen Link klicken, um die Abfrage im Abfrage-Editor zu öffnen. In der Tabelle unter der Abfrage wird die Abfrageausführungsstatistik angezeigt, z. B. die durchschnittliche Dauer pro Abfrageausführung.  
   
- Ein Diagramm von Abfrageplänen und die durchschnittliche Dauer pro Ausführung werden angezeigt. Sie können eine andere Ansicht der relativen Kosten für jeden Abfrageplan abrufen, indem Sie auf einen der folgenden Hyperlinks unterhalb des Diagramms klicken: **Dauer**, **Physische Lesevorgänge**oder **Logische Schreibvorgänge**. Die Diagrammlinie ist aktiv, und Sie können auf jeden Punkt klicken, um den Unterbericht Abfrageplandetails zu öffnen.  
+ Ein Diagramm von Abfrageplänen und die durchschnittliche Dauer pro Ausführung werden angezeigt. Um eine andere Ansicht der relativen Plankosten anzuzeigen, klicken Sie auf einen der folgenden Hyperlinks, die unter dem Diagramm angezeigt werden: **Dauer**, **physische Lesevorgänge**, oder **logische Schreibvorgänge**. Die Diagrammlinie ist aktiv, und Sie können auf jeden Punkt klicken, um den Unterbericht Abfrageplandetails zu öffnen.  
   
  In der Tabelle unter dem Diagramm werden die ersten zehn Abfragepläne auf Grundlage der CPU-Verwendung pro Ausführung angezeigt. Jede Nummer in der Spalte **Plan #** ist ein aktiver Link, auf den Sie klicken können, um den Unterbericht „Abfrageplandetails“ zu öffnen.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "48062172"
   
  **Zeitachsensteuerelement und Navigationsschaltflächen**  
   
- Verwenden Sie das Zeitachsensteuerelement und die Navigationsschaltflächen, um durch die Zeitachse zu navigieren oder einen Datumsbereich auszuwählen. Über die Pfeilschaltflächen können Sie nach links bzw. nach rechts blättern und sich so rückwärts bzw. vorwärts durch die Zeitachse bewegen. In der Standardeinstellung navigieren Sie mit den Pfeilschaltflächen in 4-Stunden-Schritten durch die Zeitachse. Mit den Lupenschaltflächen können Sie diesen Zeitschritt auf einen der folgenden Werte vergrößern oder verkleinern: 15 Minuten, 1 Stunde, 4 Stunden, 12 Stunden oder 24 Stunden. Der aktuell ausgewählte Zeitbereich wird durch den hervorgehobenen Teil der Zeitachse dargestellt und im Text unter der Zeitachse angezeigt. Diese Werte, sowie die Daten im Bericht, werden immer aktualisiert, wenn Sie auf die Zeitachse klicken oder die Navigationsschaltflächen verwenden.  
+ Verwenden Sie das Zeitachsensteuerelement und die Navigationsschaltflächen, um durch die Zeitachse zu navigieren oder einen Datumsbereich auszuwählen. Über die Pfeilschaltflächen können Sie nach links bzw. nach rechts blättern und sich so rückwärts bzw. vorwärts durch die Zeitachse bewegen. In der Standardeinstellung navigieren Sie mit den Pfeilschaltflächen in 4-Stunden-Schritten durch die Zeitachse. Mit den lupenschaltflächen, können Sie erweitern oder verkleinern diesen Zeitschritt auf einen der folgenden Werte: 15 Minuten, 1 Stunde, 4 Stunden, 12 Stunden oder 24 Stunden. Der aktuell ausgewählte Zeitbereich wird durch den hervorgehobenen Teil der Zeitachse dargestellt und im Text unter der Zeitachse angezeigt. Diese Werte, sowie die Daten im Bericht, werden immer aktualisiert, wenn Sie auf die Zeitachse klicken oder die Navigationsschaltflächen verwenden.  
   
  **Schaltfläche "Kalender"**  
   
@@ -129,7 +129,7 @@ ms.locfileid: "48062172"
 |Speicherauslastung|Diese Unterberichte werden aufgerufen, indem Sie auf einen beliebigen Punkt auf den Diagrammlinien für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder das System im Diagramm Speicherauslastung klicken.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /> Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Bericht Speicherauslastung enthält Diagramme für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozessspeichernutzung, für Arbeitsspeicher-Leistungsindikatoren, für die interne Arbeitsspeichernutzung nach Typ und eine Tabelle mit Daten zur durchschnittlichen Arbeitsspeichernutzung nach Komponententyp.<br /><br /> System<br /> Der Bericht Systemspeicherverwendung enthält Diagramme für die Speicherauslastung, Zwischenspeicher- und Seiten-Trefferquoten und eine Tabelle mit Informationen über das Workingset und die privaten Bytes für jeden Prozess.|  
 |Datenträger-E/A-Nutzung|Diese Unterberichte werden aufgerufen, indem Sie auf einen beliebigen Punkt auf den Diagrammlinien für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder das System im Diagramm Datenträger-E/A-Verwendung klicken.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /> Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Bericht Datenträger-E/A-Verwendung enthält Diagramme für die Antwortzeit und die Übertragungsrate des Datenträgers. Eine zusätzliche Tabelle bietet Statistiken virtueller Dateien anhand von Datenträger, Datenbank und Datei.<br /><br /> System<br /> Der Bericht Systemdatenträgerverwendung enthält Diagramme für die Antwortzeit des Datenträgers, die durchschnittliche Warteschlangenlänge des Datenträgers, die Übertragungsrate des Datenträgers und eine Tabelle mit Informationen über Schreib- und Lesezugriffe für jeden Prozess.|  
 |Netzwerkauslastung|Es sind keine weiteren Berichte verfügbar.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Wartevorgänge|Das Diagramm für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Wartevorgänge zeigt Wartevorgänge in den Threads, die ausgeführt wurden, nach Kategorie an. Sie können auf einen ausführlichen Bericht zugreifen, indem Sie auf ein beliebiges Segment im Diagramm klicken. Neben der grafischen Darstellung von Statistikdaten zu den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Wartevorgängen während eines engeren Zeitrahmens liefert dieser Bericht Informationen über Wartevorgangskategorien im Tabellenformat. Für jede Kategorie, z. B. CPU und deren Unterkategorien, zeigt die Tabelle die Anzahl der Wartevorgänge, die Wartezeit und den Prozentsatz der Gesamtwartezeit an.|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Wartevorgänge|Das Diagramm für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Wartevorgänge zeigt Wartevorgänge in den Threads, die ausgeführt wurden, nach Kategorie an. Sie können auf einen ausführlichen Bericht zugreifen, indem Sie auf ein beliebiges Segment im Diagramm klicken. Neben der grafischen Darstellung von Statistikdaten zu den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Wartevorgängen während eines engeren Zeitrahmens liefert dieser Bericht Informationen über Wartevorgangskategorien im Tabellenformat. Für jede Kategorie, z. B. CPU und deren Unterkategorien, zeigt die Tabelle die Anzahl der Wartevorgänge, die Wartezeit und den Prozentsatz der Gesamtwartezeit an.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Aktivität|Verschiedene Aspekte der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Aktivität sind über das Diagramm zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Aktivität abrufbar. Sie können folgende Berichte durch Klicken auf einen Punkt auf der Diagrammlinie SQL-Kompilierungen/Sekunde abrufen:<br /><br /> Verbindungen und Sitzungen<br /><br /> Anforderungen<br /><br /> Plancache-Trefferquote<br /><br /> tempdb-Eigenschaften|  
   
 ## <a name="see-also"></a>Siehe auch  

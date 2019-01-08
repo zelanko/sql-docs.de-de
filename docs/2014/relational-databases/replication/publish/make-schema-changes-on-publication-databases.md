@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], schema changes
@@ -18,12 +17,12 @@ ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cd2ea10d145e52150d3a34a8f1b668152922ddb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203030"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815432"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken
   Die Replikation unterstützt eine breite Palette von Schemaänderungen an veröffentlichten Objekten. Wenn Sie eine der folgenden Schemaänderungen am entsprechenden veröffentlichten Objekt auf einem [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verleger vornehmen, wird diese Änderung standardmäßig an alle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten weitergegeben:  
@@ -58,7 +57,7 @@ ms.locfileid: "48203030"
   
 -   Schemaänderungen unterliegen den Einschränkungen von [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Beispielsweise können Sie mit ALTER TABLE keine Primärschlüsselspalten ändern.  
   
--   Datentypzuordnung wird nur für die Anfangsmomentaufnahme ausgeführt. Schemaänderungen werden nicht vorherigen Versionen von Datentypen zugeordnet. Z. B. wenn die Anweisung `ALTER TABLE ADD datetime2 column` werden in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], der Datentyp wird nicht in übersetzt `nvarchar` für [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Abonnenten. In einigen Fällen werden Schemaänderungen auf dem Verleger blockiert.  
+-   Datentypzuordnung wird nur für die Anfangsmomentaufnahme ausgeführt. Schemaänderungen werden nicht vorherigen Versionen von Datentypen zugeordnet. Beispiel: Wenn die `ALTER TABLE ADD datetime2 column`-Anweisung in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] verwendet wird, wird der Datentyp nicht für [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]-Abonnenten in `nvarchar` umgewandelt. In einigen Fällen werden Schemaänderungen auf dem Verleger blockiert.  
   
 -   Wenn für eine Veröffentlichung die Weitergabe von Schemaänderungen festgelegt ist, werden die Schemaänderungen unabhängig davon weitergegeben, wie die verbundene Schemaoption für einen Artikel in der Veröffentlichung festgelegt ist. Beispiel: Sie entscheiden sich, FOREIGN KEY-Einschränkungen für einen Tabellenartikel nicht zu replizieren, geben dann jedoch einen ALTER TABLE-Befehl aus, mit dem der Tabelle auf dem Verleger ein Fremdschlüssel hinzugefügt wird. In diesem Fall wird der Fremdschlüssel der Tabelle auf dem Abonnenten hinzugefügt. Um das zu verhindern, deaktivieren Sie die Weitergabe von Schemaänderungen, bevor Sie den ALTER TABLE-Befehl ausgeben.  
   
@@ -92,7 +91,7 @@ ms.locfileid: "48203030"
   
 -   Verwenden Sie [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) oder das Dialogfeld **Veröffentlichungseigenschaften – \<Veröffentlichung>**, um eine vorhandene Spalte in eine vorhandene Veröffentlichung einzuschließen.  
   
-     Weitere Informationen finden Sie unter [Define and Modify a Column Filter](define-and-modify-a-column-filter.md). Dies erfordert, dass Sie Abonnements erneut initialisieren.  
+     Weitere Informationen finden Sie unter [Definieren und Ändern eines Spaltenfilters](define-and-modify-a-column-filter.md). Dies erfordert, dass Sie Abonnements erneut initialisieren.  
   
 -   Das Hinzufügen einer Identitätsspalte zu einer veröffentlichten Tabelle wird nicht unterstützt, da ein solcher Vorgang zu Nichtkonvergenz führen kann, wenn die Spalte auf den Abonnenten repliziert wird. Die Werte in der Identitätsspalte auf dem Verleger richten sich nach der Ordnung, in der die Zeilen für die betreffende Tabelle physisch gespeichert sind. Es ist möglich, dass die Zeilen auf dem Abonnenten anders gespeichert sind, sodass der Wert für die Identitätsspalte für dieselben Zeilen unterschiedlich sein kann.  
   
@@ -102,7 +101,7 @@ ms.locfileid: "48203030"
   
 -   Verwenden Sie [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) oder das Dialogfeld **Veröffentlichungseigenschaften – \<Veröffentlichung>**, um eine Spalte aus einer vorhandenen Veröffentlichung zu löschen, die Spalte jedoch in der Tabelle auf dem Verleger beizubehalten.  
   
-     Weitere Informationen finden Sie unter [Define and Modify a Column Filter](define-and-modify-a-column-filter.md). Dies erfordert, dass Sie eine neue Momentaufnahme generieren.  
+     Weitere Informationen finden Sie unter [Definieren und Ändern eines Spaltenfilters](define-and-modify-a-column-filter.md). Dies erfordert, dass Sie eine neue Momentaufnahme generieren.  
   
 -   Die zu löschende Spalte darf nicht in den Filterklauseln eines Artikels einer Veröffentlichung in der Datenbank verwendet werden.  
   

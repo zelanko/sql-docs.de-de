@@ -20,16 +20,16 @@ ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 59199461d6a0d827cad043f0b6bdbe35d425815f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa1b2afec38116bef3ae90d75607d21c9a92cd80
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855918"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204559"
 ---
 # <a name="sqlendtran-function"></a>SQLEndTran-Funktion
 **Übereinstimmung mit Standards**  
- Version eingeführt: ODBC 3.0 Standardkompatibilität: ISO-92  
+ Eingeführt in Version: ODBC 3.0 Standardkompatibilität: ISO-92  
   
  **Zusammenfassung**  
  **SQLEndTran** fordert eine Commit- oder Rollback für alle aktiven Vorgänge für alle Anweisungen, die mit einer Verbindung verknüpft sind. **SQLEndTran** können auch anfordern, dass ein Commit oder Rollback-Vorgang ausgeführt werden, für alle Verbindungen, die einer Umgebung zugewiesen sind.  
@@ -132,7 +132,7 @@ SQLRETURN SQLEndTran(
   
 -   Der Treiber nicht die folgenden Meldungen zurück zum bestätigen, dass die Transaktion nicht abgeschlossen wurde:  
   
-    -   25S03: Transaktion ein Rollback  
+    -   25S03: Transaktion wird ein Rollback ausgeführt.  
   
     -   40001: Serialisierungsfehler  
   

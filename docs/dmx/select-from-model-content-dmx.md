@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e00a7f272362a103e94d8cac686201ce79c06322
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3498e841b70ca7a19d9353d277221a88b9cbf86f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040348"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512253"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM &lt;Modell&gt;. INHALT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
   
 ## <a name="arguments"></a>Argumente  
  *n*  
- Optional. Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
+ Dies ist optional. Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
   
  *Liste mit Ausdrücken*  
  Eine durch Trennzeichen getrennte Liste mit Spalten, die aus dem Schemarowset des Inhalts abgeleitet wurden.  
@@ -41,13 +41,13 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  Ein Modellbezeichner.  
   
  *Bedingungsausdruck*  
- Optional. Eine Bedingung, die die Werte einschränkt, die für die Spaltenliste zurückgegeben werden.  
+ Dies ist optional. Eine Bedingung, die die Werte einschränkt, die für die Spaltenliste zurückgegeben werden.  
   
  *expression*  
- Optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
+ Dies ist optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **SELECT FROM**  *\<Modell > ***. Inhalt**-Anweisung gibt Inhalt, der für jeden Algorithmus spezifischen zurück. Angenommen, Sie möchten die Beschreibungen aller Regeln eines Modells für Zuordnungsregeln in einer benutzerdefinierten Anwendung verwenden. Sie können eine **SELECT FROM \<Modell >. Inhalt** Anweisung zum Zurückgeben von Werten in der NODE_RULE-Spalte des Modells.  
+ Die **SELECT FROM**  _\<Modell >_**. Inhalt** -Anweisung gibt Inhalt, der für jeden Algorithmus spezifischen zurück. Angenommen, Sie möchten die Beschreibungen aller Regeln eines Modells für Zuordnungsregeln in einer benutzerdefinierten Anwendung verwenden. Sie können eine **SELECT FROM \<Modell >. Inhalt** Anweisung zum Zurückgeben von Werten in der NODE_RULE-Spalte des Modells.  
   
  In der folgenden Tabelle sind die im Miningmodellinhalt enthaltenen Spalten aufgeführt.  
   
@@ -62,7 +62,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 |ATTRIBUTE_NAME|Der Name des Attributs, das dem Knoten entspricht.|  
 |NODE_NAME|Der Name des Knotens.|  
 |NODE_UNIQUE_NAME|Der eindeutige Name des Knotens innerhalb des Modells.|  
-|NODE_TYPE|Eine ganze Zahl, die den Typ des Knotens darstellt. zugreifen.|  
+|NODE_TYPE|Eine ganze Zahl, die den Typ des Knotens darstellt. .|  
 |NODE_GUID|Der GUID (Globally Unique Identifier) des Knotens. NULL, wenn es keinen GUID gibt.|  
 |NODE_CAPTION|Eine Bezeichnung oder Beschriftung, die dem Knoten zugeordnet ist. Wird hauptsächlich für Anzeigezwecke verwendet. Ist keine Beschriftung vorhanden, wird NODE_NAME zurückgegeben.|  
 |CHILDREN_CARDINALITY|Die Anzahl der untergeordneten Elemente des Knotens.|  
@@ -102,7 +102,7 @@ WHERE ISDESCENDANT('0')
   
  Erwartete Ergebnisse:  
   
- Da das Modell ein Entscheidungsstrukturmodell ist, enthalten die nachfolgenden Elemente des übergeordneten Knotens des Modells einen einzelnen Knoten für Randstatistik, einen Knoten, der das vorhersagbare Attribut darstellt, und mehrere Knoten, die Eingabeattribute und Werte enthalten. Weitere Informationen finden Sie unter [Mining Model Content for Decision Tree Models &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
+ Da das Modell ein Entscheidungsstrukturmodell ist, enthalten die nachfolgenden Elemente des übergeordneten Knotens des Modells einen einzelnen Knoten für Randstatistik, einen Knoten, der das vorhersagbare Attribut darstellt, und mehrere Knoten, die Eingabeattribute und Werte enthalten. Weitere Informationen finden Sie unter [Miningmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Data Mining&#41;](../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
   
 ## <a name="using-the-flattened-keyword"></a>Verwenden des FLATTENED-Schlüsselworts  
  Der Miningmodellinhalt enthält in geschachtelten Tabellenspalten häufig interessante Informationen über das Modell. Mithilfe des FLATTENED-Schlüsselworts können Sie Daten aus geschachtelten Tabellen abrufen, ohne einen Anbieter zu benötigen, der hierarchische Rowsets unterstützt.  
@@ -137,7 +137,7 @@ WHERE NODE_TYPE = 26
   
  Beispielergebnisse:  
   
-|MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
+|MODEL_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
 |-----------------|-----------------------|------------------------|---------------|  
 |TM_NaiveBayes|Bike Buyer|Missing|0|  
 |TM_NaiveBayes|Bike Buyer|0|6556|  

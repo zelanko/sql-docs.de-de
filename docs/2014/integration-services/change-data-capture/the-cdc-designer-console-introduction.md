@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a46478b31feb3a15a260ae2cd1598ae18f605c2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8df088a088a68d91668978bef5761cc2b5b543f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107750"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779892"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>Einführung in die CDC Designer Console
   In diesem Abschnitt werden die Installationsverfahren für den Change Data Capture Designer für Oracle von Attunity beschrieben.  
@@ -38,13 +37,13 @@ ms.locfileid: "48107750"
 ## <a name="database-prerequisites"></a>Erforderliche Komponenten für die Datenbank  
  Bei der Verwendung des Change Data Capture Designer für Oracle von Attunity arbeiten Sie mit einer Oracle-Datenbank. Der Change Data Capture Designer für Oracle von Attunity unterstützt die folgenden Versionen:  
   
- **Oracle-Datenbank**  
+ **Oracle Database**  
   
--   Oracle-Datenbank 10g Version 2: 10.2.0.1 bis 10.2.0.5 (Patchset ab April 2010)  
+-   Oracle Database 10g Version 2: 10.2.0.1 bis 10.2.0.5 (Patchset ab April 2010)  
   
--   Oracle-Datenbank 11g Version 1: 11.1.0.6 bis 11.1.0.7 (Patchset ab September 2008)  
+-   Oracle Database 11g Release 1: 11.1.0.6 bis 11.1.0.7 (Patchset ab September 2008)  
   
--   Oracle-Datenbank 11g Version 2: 11.2.0.1 bis 11.2.0.3 (Patchset ab September 2011)  
+-   Oracle Database 11g Version 2: 11.2.0.1 bis 11.2.0.3 (Patchset ab September 2011)  
   
  **SQL Server-Datenbank**  
   
@@ -57,7 +56,7 @@ ms.locfileid: "48107750"
   
 -   Oracle 11.x-Client  
   
- **Beachten Sie**: Sie müssen die 32-Bit oder 64-Bit-Version dieser Software je nach Version der installierten Oracle CDC Designer Console verwenden.  
+ **Hinweis**: Sie müssen die 32-Bit oder 64-Bit-Version dieser Software je nach Version der installierten Oracle CDC Designer Console verwenden.  
   
  Die Oracle CDC Designer Console verwendet für die Kommunikation mit der Oracle-Quelldatenbank den Oracle ODBC-Anbieter.  
   

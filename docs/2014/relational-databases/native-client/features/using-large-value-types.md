@@ -17,12 +17,12 @@ ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c9553eb4a9993186e3864a9ae0014ce702b7a8f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5416684273d74a5f40ff6219eaab95323de6a0d8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136190"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414597"
 ---
 # <a name="using-large-value-types"></a>Verwenden von Datentypen mit umfangreichen Werten
   Vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] war für Datentypen mit umfangreichen Werten eine besondere Behandlung erforderlich. Datentypen mit hohen Werten überschreiten eine maximale Zeilengröße von 8 KB. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] eingeführt, eine **max** Spezifizierer für **Varchar**, **Nvarchar** und **Varbinary** von Datentypen für die Speicherung von Werten mit einer Größe von 2 ermöglichen ^ 31-1 Bytes. Spalten der Tabelle und [!INCLUDE[tsql](../../../includes/tsql-md.md)] Variablen können angeben, **varchar(max)**, **nvarchar(max)** oder **'varbinary(max)'** -Datentypen.  
