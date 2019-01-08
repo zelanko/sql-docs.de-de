@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 5cd9a87a-af4b-45f3-8c18-f7fd7e7d3064
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 341c267b686a56a37390e0ee774df0aa20e73fd8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9b23e8d7f68cca0722691863a2c5c8d5e095c33c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049820"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782892"
 ---
 # <a name="database-element-for-server-dta"></a>Database-Element für Server (DTA)
   Gibt die Datenbank an, die Sie auf einem bestimmten Server optimieren möchten.  
@@ -40,14 +39,14 @@ ms.locfileid: "48049820"
 |--------------------|-----------------|  
 |Datentyp und -länge|Keine.|  
 |Standardwert|Keine.|  
-|Vorkommen|Erforderlich einmal oder mehrmals pro `Server` Element.|  
+|Vorkommen|Einmal oder mehrfach pro `Server`-Element erforderlich.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Elemente|  
 |------------------|--------------|  
 |Übergeordnetes Element|[Server-Element &#40;DTA&#41;](server-element-dta.md)|  
-|Untergeordnete Elemente|[Namen von Element für Datenbank &#40;DTA&#41;](name-element-for-database-dta.md)<br /><br /> [Schema-Element für Datenbank &#40;DTA&#41;](schema-element-for-database-dta.md)|  
+|Untergeordnete Elemente|[Name-Element für Datenbank &#40;DTA&#41;](name-element-for-database-dta.md)<br /><br /> [Schema-Element für Datenbank &#40;DTA&#41;](schema-element-for-database-dta.md)|  
   
 ## <a name="remarks"></a>Hinweise  
  Dieses Element hat den Namen **DatabaseDetailsTypecomplexType** im XML-Schema des Datenbankoptimierungsratgebers. Dieses `Database`-Element ist nicht mit dem identisch, dessen übergeordnetes Stammelement das `Configuration`-Element ist. Weitere Informationen finden Sie unter [Database-Element für Konfiguration &#40;DTA&#41;](database-element-for-configuration-dta.md).  

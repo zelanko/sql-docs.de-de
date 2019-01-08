@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - comparing string data
@@ -17,12 +16,12 @@ ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 950456557177ed0e794aae92df14536ee524e36b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14a9cd4f9d37798aaabaf65ea2f2afe79c207e6e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100950"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359542"
 ---
 # <a name="comparing-string-data"></a>Vergleichen von Zeichenfolgendaten
   Zeichenfolgendaten sind ein wichtiger Bestandteil vieler Transformationen, die von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]ausgeführt werden, und Zeichenfolgenvergleiche werden auch bei der Auswertung von Ausdrücken in Variablen und Eigenschaftsausdrücken verwendet. Beispielsweise vergleicht die Transformation zum Sortieren Werte in einem Dataset, um Daten in auf- und absteigender Reihenfolge zu sortieren.  
@@ -34,7 +33,7 @@ ms.locfileid: "48100950"
   
 -   Die Transformation für bedingtes Teilen kann Zeichenfolgenvergleiche in Ausdrücken verwenden, um zu bestimmen, welche Ausgabe an die Datenzeile gesendet werden soll. Weitere Informationen finden Sie unter [Conditional Split Transformation](transformations/conditional-split-transformation.md).  
   
--   Die Transformation für abgeleitete Spalten kann Zeichenfolgenausdrücke in Ausdrücken verwenden, um neue Spaltenwerte zu generieren. Weitere Informationen finden Sie unter [Transformation für abgeleitete Spalten](transformations/derived-column-transformation.md).  
+-   Die Transformation für abgeleitete Spalten kann Zeichenfolgenausdrücke in Ausdrücken verwenden, um neue Spaltenwerte zu generieren. Weitere Informationen finden Sie unter [Derived Column Transformation](transformations/derived-column-transformation.md).  
   
  Variablen, Variablenzuordnungen und Rangfolgeneinschränkungen verwenden ebenfalls Ausdrücke, die Zeichenfolgenausdrücke einschließen können. Weitere Informationen zu Ausdrücken finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md).  
   
@@ -64,7 +63,7 @@ ms.locfileid: "48100950"
  Sie können auch ein Gebietsschema für einen Verbindungs-Manager für Flatfiles und einen Verbindungs-Manager für mehrere Flatfiles angeben.  
   
 ## <a name="setting-comparison-options"></a>Festlegen von Vergleichsoptionen  
- Das Gebietsschema stellt die grundlegenden Regeln zum Vergleichen von Zeichenfolgendaten bereit. Beispielsweise gibt das Gebietsschema die Sortierposition jedes Buchstabens im Alphabet an. Diese Regeln sind jedoch möglicherweise für die Vergleiche mancher Transformationen nicht ausreichend. Deshalb unterstützt [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] erweiterte Vergleichsoptionen, die über die Vergleichsregeln eines Gebietsschemas hinausgehen. Diese Vergleichsoptionen werden auf Spaltenebene festgelegt. Beispielsweise können Sie mit einer der Vergleichsoptionen Zeichen ohne Zwischenraum ignorieren. Dadurch werden diakritische Zeichen wie z. B. Akzente ignoriert, sodass "a" und "á" für Vergleichszwecke identisch sind.  
+ Das Gebietsschema stellt die grundlegenden Regeln zum Vergleichen von Zeichenfolgendaten bereit. Beispielsweise gibt das Gebietsschema die Sortierposition jedes Buchstabens im Alphabet an. Diese Regeln sind jedoch möglicherweise für die Vergleiche mancher Transformationen nicht ausreichend. Deshalb unterstützt [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] erweiterte Vergleichsoptionen, die über die Vergleichsregeln eines Gebietsschemas hinausgehen. Diese Vergleichsoptionen werden auf Spaltenebene festgelegt. Beispielsweise können Sie mit einer der Vergleichsoptionen Zeichen ohne Zwischenraum ignorieren. Diese Option aus, wie z. B. die Unterscheidung für diakritische Zeichen ignorieren, die "a" und "å" identisch ist wird zu Vergleichszwecken.  
   
  In der folgenden Tabelle werden die Vergleichsoptionen und eine Sortiermethode beschrieben.  
   
@@ -83,7 +82,7 @@ ms.locfileid: "48100950"
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server Integration Services-Datentypen](integration-services-data-types.md)   
- [Die schnelle Analyse](../fast-parse.md)   
+ [Schnelle Analyse](../fast-parse.md)   
  [Standardanalyse](../standard-parse.md)  
   
   

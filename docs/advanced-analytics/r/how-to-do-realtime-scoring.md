@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Generieren von Vorhersagen und Vorhersagen mithilfe von Machine Learning-Modelle in SQL Server | Microsoft-Dokumentation'
+title: Generieren von Vorhersagen und Vorhersagen mithilfe von Machine Learning-Modelle – SQL Server Machine Learning Services
 description: Verwenden Sie RxPredict oder Sp_rxPredict für echtzeitbewertung oder VORHERSAGEN für T-SQL für native Bewertung für Vorhersagen und Vorhersagen in R und Pythin in SQL Server-Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8d1ff524a0f033c4e47d7fe7f4e366cb00f2f7b5
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 576a8b161c87270b0dcc40494cf0121a7b644fc4
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712472"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432503"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Gewusst wie: Generieren von Vorhersagen und Vorhersagen mithilfe von Machine Learning-Modelle in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +36,7 @@ Das Modell muss mit der eine unterstützte Funktion erstellt und dann serialisie
 
 Die Bedeutung der CLR und C++-Erweiterungen ist die Nähe zu den Datenbank-Engine. Die systemeigene Sprache von der Datenbank-Engine ist C++, das bedeutet, Erweiterungen geschrieben in C++ mit weniger Abhängigkeiten führen dass. Im Gegensatz dazu Sie .NET Core CLR-Erweiterungen abhängig. 
 
-Wie zu erwarten, wird die Unterstützung für durch diese Umgebungen zur Laufzeit beeinträchtigt. Führen Sie systemeigenen Datenbank-Engine-Erweiterungen überall in die relationale Datenbank wird unterstützt: Windows, Linux-Azure. CLR-Erweiterungen mit der .NET Core-Anforderung ist derzeit nur Windows.
+Wie zu erwarten, wird die Unterstützung für durch diese Umgebungen zur Laufzeit beeinträchtigt. Führen Sie systemeigenen Datenbank-Engine-Erweiterungen an jeder Stelle, die relationale Datenbank unterstützt wird: Windows, Linux-Azure. CLR-Erweiterungen mit der .NET Core-Anforderung ist derzeit nur Windows.
 
 ## <a name="scoring-overview"></a>Übersicht über die Bewertung
 
@@ -99,7 +99,7 @@ Serialisieren ein Modell auf ein binäres Format ist nützlich, aber nicht erfor
 Bei Verwendung der [eigenständiger Server](r-server-standalone.md) oder [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), Sie haben andere Optionen als gespeicherte Prozeduren und T-SQL-Funktionen zum schnellen Generieren von Vorhersagen. Dem eigenständigen Server und dem Machine Learning Server unterstützen das Konzept einer *Webdienst* für die codebereitstellung. Können Sie eine R bündeln oder Python von vortrainierten Modell als Webdienst, zur Laufzeit zum Auswerten von neuen Dateneingaben aufgerufen wird. Weitere Informationen dazu finden Sie in diesen Artikeln:
 
 + [Was sind Webdienste im Machine Learning Server?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
-+ [Was ist die operationalisierung?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-operationalize-deploy-consume)
++ [Was ist die operationalisierung?](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)
 + [Bereitstellen eines Python-Modells als Webdienst mit Azure ml-Modell-Management-sdk](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
 + [Veröffentlichen Sie ein R-Code-Block oder ein Modell in Echtzeit als neuen Webdienst](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
 + [Mrsdeploy-Paket für R](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)

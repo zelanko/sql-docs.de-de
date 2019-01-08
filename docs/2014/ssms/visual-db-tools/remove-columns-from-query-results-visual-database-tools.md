@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - columns [SQL Server], deleting
@@ -17,12 +17,12 @@ ms.assetid: a7de7a87-4249-49bd-863d-dc0b40a49e78
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 01671a809854ce7f023779dca28e198a02ce5926
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 77be473f189d8574ebde74215569e700e80725b4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115740"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800452"
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>Entfernen von Spalten aus Abfrageergebnissen (Visual Database Tools)
   Wenn Sie in einer Auswahlabfrage eine Spalte verwenden, die Sie im Resultset nicht anzeigen lassen bzw. der Auswahlliste der Abfrage nicht hinzufügen möchten, können Sie diese aus der Ausgabe entfernen. Die aus den Abfrageergebnissen entfernte Spalte können Sie zum Festlegen von Suchbedingungen oder für Sortierzwecke weiter verwenden.  

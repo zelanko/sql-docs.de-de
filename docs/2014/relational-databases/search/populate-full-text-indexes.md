@@ -24,12 +24,12 @@ ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8c6bc03334003438fdefbe7feac1e321d9a2e9bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c8e9ea6b068f39e9e1e63bb5e9831f977619367f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137490"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545349"
 ---
 # <a name="populate-full-text-indexes"></a>Auffüllen von Volltextindizes
   Das Erstellen und Verwalten eines Volltextindexes umfasst das Auffüllen des Indexes mithilfe eines Prozesses, der als *Auffüllung* (oder auch als *Crawl*) bezeichnet wird.  
@@ -45,12 +45,12 @@ ms.locfileid: "48137490"
 
   
 ### <a name="change-tracking-based-population"></a>Auffüllung mithilfe von Änderungsnachverfolgung  
- Optional können Sie die Änderungsnachverfolgung verwenden, um nach seiner ursprünglichen vollständigen Auffüllung einen Volltextindex beizubehalten. Die Änderungsnachverfolgung bedeutet einen geringen zusätzlichen Leistungsaufwand, da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Tabelle verwaltet, in der Änderungen der Basistabelle seit der letzten Auffüllung verfolgt werden. Wenn die änderungsnachverfolgung verwendet wird, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterhält eine Aufzeichnung der Zeilen in der Basistabelle oder indizierten Sicht, die durch Updates, löschungen, geändert wurden oder einfügen. Datenänderungen durch WRITETEXT und UPDATETEXT werden im Volltextindex nicht wiedergegeben und bei der Änderungsnachverfolgung nicht ausgewählt.  
+ Optional können Sie die Änderungsnachverfolgung verwenden, um nach seiner ursprünglichen vollständigen Auffüllung einen Volltextindex beizubehalten. Die Änderungsnachverfolgung bedeutet einen geringen zusätzlichen Leistungsaufwand, da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Tabelle verwaltet, in der Änderungen der Basistabelle seit der letzten Auffüllung verfolgt werden. Beim Verwenden der Änderungsnachverfolgung registriert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Zeilen in der Basistabelle oder indizierten Sicht, die durch Updates, Löschungen oder Einfügungen geändert wurden. Datenänderungen durch WRITETEXT und UPDATETEXT werden im Volltextindex nicht wiedergegeben und bei der Änderungsnachverfolgung nicht ausgewählt.  
   
 > [!NOTE]  
->  Für Tabellen mit einem `timestamp` Spalte können Sie inkrementelle Auffüllungen verwenden.  
+>  Für Tabellen, die eine `timestamp`-Spalte enthalten, können Sie inkrementelle Auffüllungen verwenden.  
   
- Wenn die änderungsnachverfolgung aktiviert ist, während der indexerstellung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den neuen Volltextindex vollständig aufgefüllt, sofort nach der Erstellung. Danach werden Änderungen nachverfolgt und an den Volltextindex weitergegeben. Es gibt zwei Typen der Änderungsnachverfolgung, automatisch (Option CHANGE_TRACKING AUTO) und manuell (Option CHANGE_TRACKING MANUAL). Die automatische Änderungsnachverfolgung ist das Standardverhalten.  
+ Wenn die Änderungsnachverfolgung während der Indexerstellung aktiviert ist, führt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die vollständige Auffüllung des neuen Volltextindexes unmittelbar nach dessen Erstellung aus. Danach werden Änderungen nachverfolgt und an den Volltextindex weitergegeben. Es gibt zwei Typen der Änderungsnachverfolgung, automatisch (Option CHANGE_TRACKING AUTO) und manuell (Option CHANGE_TRACKING MANUAL). Die automatische Änderungsnachverfolgung ist das Standardverhalten.  
   
  Der Typ der Änderungsnachverfolgung bestimmt, wie der Volltextindex aufgefüllt wird, wie im Folgenden dargestellt:  
   
@@ -60,40 +60,40 @@ ms.locfileid: "48137490"
   
      **Nachverfolgen von Änderungen mit automatischer Auffüllung einrichten**  
   
-    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) … WITH CHANGE_TRACKING AUTO  
+    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) ... WITH CHANGE_TRACKING AUTO  
   
-    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) … SET CHANGE_TRACKING AUTO  
+    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ... SET CHANGE_TRACKING AUTO  
   
      Weitere Informationen finden Sie unter Beispiel "E. Änderung eines Volltextindexes zur Verwendung der automatischen Änderungsnachverfolgung" weiter unten in diesem Thema.  
   
 -   Manuelle Auffüllung  
   
-     Wenn Sie CHANGE_TRACKING MANUAL angeben, verwendet die Volltext-Engine die manuelle Auffüllung für den Volltextindex. Nachdem die ursprüngliche vollständige Auffüllung abgeschlossen wurde, werden Änderungen nachverfolgt, wenn Daten in der Basistabelle geändert werden. Sie werden jedoch nicht an den Volltextindex weitergegeben, bis Sie eine ALTER FULLTEXT INDEX … START UPDATE POPULATION -Anweisung anwenden. Sie können den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent verwenden, um die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung in regelmäßigen Abständen aufzurufen.  
+     Wenn Sie CHANGE_TRACKING MANUAL angeben, verwendet die Volltext-Engine die manuelle Auffüllung für den Volltextindex. Nachdem die ursprüngliche vollständige Auffüllung abgeschlossen wurde, werden Änderungen nachverfolgt, wenn Daten in der Basistabelle geändert werden. Sie werden jedoch nicht an den Volltextindex weitergegeben, bis Sie eine ALTER FULLTEXT INDEX ... START UPDATE POPULATION -Anweisung anwenden. Sie können den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent verwenden, um die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung in regelmäßigen Abständen aufzurufen.  
   
      **So beginnen Sie die Änderungsnachverfolgung mit manueller Auffüllung**  
   
-    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) … WITH CHANGE_TRACKING MANUAL  
+    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) ... WITH CHANGE_TRACKING MANUAL  
   
-    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) … SET CHANGE_TRACKING MANUAL  
+    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ... SET CHANGE_TRACKING MANUAL  
   
      Weitere Informationen finden Sie unter den Beispielen "C. Erstellen eines Volltextindexes mit manueller Änderungsnachverfolgung" und "D. Ausführung einer manuellen Auffüllung" weiter unten in diesem Thema.  
   
  **Deaktivieren der änderungsnachverfolgung**  
   
--   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) … WITH CHANGE_TRACKING OFF  
+-   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) ... WITH CHANGE_TRACKING OFF  
   
--   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) … SET CHANGE_TRACKING OFF  
+-   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ... SET CHANGE_TRACKING OFF  
   
 
   
 ### <a name="incremental-timestamp-based-population"></a>Inkrementelle, auf Timestamps basierende Auffüllung  
  Eine inkrementelle Auffüllung ist ein alternativer Mechanismus zum manuellen Auffüllen eines Volltextindexes. Sie können eine inkrementelle Auffüllung für einen Volltextindex ausführen, für den CHANGE_TRACKING auf den Wert MANUAL oder OFF festgelegt ist. Wenn es sich bei der ersten Auffüllung eines Volltextindexes um eine inkrementelle Auffüllung handelt, werden alle Zeilen indiziert. Damit entspricht die Auffüllung einer vollständigen Auffüllung.  
   
- Die Anforderung für eine inkrementelle Auffüllung ist, dass die indizierte Tabelle eine Spalte mit dem `timestamp` -Datentyp. Ist keine `timestamp`-Spalte vorhanden, kann die inkrementelle Auffüllung nicht ausgeführt werden. Eine Anforderung für eine inkrementelle Auffüllung für eine Tabelle ohne einen `timestamp` -Spalte führt zu einer vollständigen Auffüllung. Anforderungen für eine inkrementelle Auffüllung werden als vollständige Auffüllung implementiert, wenn sich Metadaten, die sich auf den Volltextindex für die Tabelle auswirken, seit der letzten Auffüllung geändert haben. Dies umfasst Metadatenänderungen durch Spalten-, Index- oder Volltextindexdefinitionen.  
+ Voraussetzung für die inkrementelle Auffüllung ist, dass die indizierte Tabelle eine Spalte vom `timestamp`-Datentyp aufweist. Ist keine `timestamp`-Spalte vorhanden, kann die inkrementelle Auffüllung nicht ausgeführt werden. Eine Anforderung für eine inkrementelle Auffüllung für eine Tabelle ohne `timestamp`-Spalte führt zu einer vollständigen Auffüllung. Anforderungen für eine inkrementelle Auffüllung werden als vollständige Auffüllung implementiert, wenn sich Metadaten, die sich auf den Volltextindex für die Tabelle auswirken, seit der letzten Auffüllung geändert haben. Dies umfasst Metadatenänderungen durch Spalten-, Index- oder Volltextindexdefinitionen.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet die `timestamp`-Spalte, um Zeilen zu identifizieren, die sich seit der letzten Auffüllung geändert haben. Bei der inkrementellen Auffüllung wird der Volltextindex bezüglich der Zeilen aktualisiert, die seit der letzten Auffüllung oder während des letzten Auffüllungsvorgangs hinzugefügt, gelöscht oder geändert wurden. Wenn in einer Tabelle sehr viele Einfügungen stattfinden, ist die inkrementelle Auffüllung ggf. effizienter als die manuelle Auffüllung.  
   
- Am Ende einer Auffüllung wird von der Volltext-Engine ein neuer `timestamp`-Wert aufgezeichnet. Dieser Wert entspricht dem größten `timestamp` -Wert, der SQL Gatherer aufgetreten ist. Der Wert wird verwendet, wenn eine nachfolgende inkrementelle Auffüllung gestartet wird.  
+ Am Ende einer Auffüllung wird von der Volltext-Engine ein neuer `timestamp`-Wert aufgezeichnet. Dieser Wert entspricht dem größten in SQL Gatherer aufgetretenen `timestamp`-Wert. Der Wert wird verwendet, wenn eine nachfolgende inkrementelle Auffüllung gestartet wird.  
   
  Um eine inkrementelle Auffüllung auszuführen, führen Sie eine ALTER FULLTEXT INDEX-Anweisung mit der Klausel START INCREMENTAL POPULATION aus.  
   
@@ -184,7 +184,7 @@ GO
      Verwenden Sie diese Seite, um Zeitpläne für einen SQL Server-Agent-Auftrag zu erstellen oder zu verwalten, der eine inkrementelle Tabellenauffüllung für die Basistabelle oder indizierte Sicht eines Volltextindex beginnt.  
   
     > [!IMPORTANT]  
-    >  Wenn die Basistabelle oder Sicht nicht über eine Spalte enthält die `timestamp` -Datentyp, eine vollständige Auffüllung wird ausgeführt.  
+    >  Wenn die Basistabelle oder Sicht keine Spalte für den Datentyp `timestamp` enthält, wird eine vollständige Auffüllung ausgeführt.  
   
      Folgende Optionen stehen zur Verfügung:  
   

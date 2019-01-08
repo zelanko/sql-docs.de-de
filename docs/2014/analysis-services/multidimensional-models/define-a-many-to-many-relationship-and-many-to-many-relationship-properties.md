@@ -13,12 +13,12 @@ ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2c521e524e6e205989e2bff96928af4da9c24bb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93f00a9544512c3c5efb63667d715c57bcf62de9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091874"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354011"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Definieren einer m:n-Beziehung und deren Eigenschaften
   In diesem Thema werden m:n-Dimensionen in Analysis Services erläutert. Zusätzlich wird beschrieben, in welchen Fällen sie verwendet und wie sie erstellt werden.  
@@ -61,7 +61,7 @@ ms.locfileid: "48091874"
   
  Zur Veranschaulichung der Schritte, die zum Erstellen einer m:n-Beziehung erforderlich sind, wird in diesem Verfahren eine der m:n-Beziehungen im Adventure Works-Beispielcube erneut erstellt. Wenn Sie die Quelldaten (d. h. das Data Warehouse-Beispiel für AdventureWorks) auf der Instanz einer relationalen Datenbank-Engine installiert haben, können Sie diesen Schritten folgen.  
   
-#### <a name="step-1-verify-dsv-relationships"></a>Schritt 1: Überprüfen der DSV-Beziehungen  
+#### <a name="step-1-verify-dsv-relationships"></a>Schritt 1: Überprüfen Sie die DSV-Beziehungen  
   
 1.  Erstellen Sie in SQL Server Data Tools in einem mehrdimensionalen Projekt eine Datenquelle für das relationale Data Warehouse Adventure Works DW 2012, das auf einer SQL Server-Datenbank-Engine-Instanz gehostet wird.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "48091874"
   
 11. Geben Sie dem Cube einen Namen, und klicken Sie auf **Fertig stellen**.  
   
-#### <a name="step-3-define-many-to-many-relationship"></a>Schritt 3: Definieren einer m:n-Beziehung  
+#### <a name="step-3-define-many-to-many-relationship"></a>Schritt 3: Definieren der m: N Beziehung  
   
 1.  Klicken Sie im Cube-Designer auf die Registerkarte Dimensionsverwendung. Beachten Sie, dass zwischen **Dim Sales Reason** und **Fact Internet Sales**bereits eine m:n-Beziehung besteht. Wie Sie wissen, kennzeichnet das folgende Symbol eine m:n-Beziehung.  
   
@@ -175,20 +175,20 @@ ms.locfileid: "48091874"
   
 3.  Achten Sie darauf, ein Modell bereitzustellen und erneut eine Verbindung herzustellen, nachdem Sie es geändert haben. Verwenden Sie in Excel die Schaltfläche Aktualisieren im PivotTable-Menüband Analysieren.  
   
-4.  Es sollten keine verknüpften Measuregruppen in mehreren m:n-Beziehungen verwendet werden, insbesondere wenn sich diese Beziehungen in verschiedenen Cubes befinden. Andernfalls können mehrdeutige Aggregationen entstehen. Weitere Informationen finden Sie unter [Falsche Mengen für verknüpfte Measures in Cubes mit m:n-Beziehungen](http://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx).  
+4.  Es sollten keine verknüpften Measuregruppen in mehreren m:n-Beziehungen verwendet werden, insbesondere wenn sich diese Beziehungen in verschiedenen Cubes befinden. Andernfalls können mehrdeutige Aggregationen entstehen. Weitere Informationen finden Sie unter [Falsche Mengen für verknüpfte Measures in Cubes mit m:n-Beziehungen](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx).  
   
 ##  <a name="bkmk_Learn"></a> Learn more  
  Über die folgenden Links erhalten Sie zusätzliche Informationen, mit denen Sie Ihr Wissen vertiefen können.  
   
- [Wie definiere ich eine m: n Dimension in Analysis Services](http://go.microsoft.com/fwlink/?LinkId=324759)  
+ [Wie definiere ich eine m: n Dimension in Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324759)  
   
- [Die m:n-Revolution 2.0](http://go.microsoft.com/fwlink/?LinkId=324760)  
+ [Die m:n-Revolution 2.0](https://go.microsoft.com/fwlink/?LinkId=324760)  
   
- [Lernprogramm: Beispiel einer m:n-Dimension für SQL Server Analysis Services](http://go.microsoft.com/fwlink/?LinkId=324761)  
+ [Tutorial: Beispiel für die m: n Dimension für SQL Server Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324761)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Dimensionsbeziehungen](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Installieren von Beispieldaten und-Projekten für das Analysis Services-Lernprogramm zur mehrdimensionalen Modellierung](../install-sample-data-and-projects.md)   
+ [Installieren von Beispieldaten und -projekten für das Analysis Services-Lernprogramm zur mehrdimensionalen Modellierung](../install-sample-data-and-projects.md)   
  [Bereitstellen von Analysis Services-Projekten &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)   
  [Perspektiven in mehrdimensionalen Modellen](perspectives-in-multidimensional-models.md)  
   

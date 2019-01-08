@@ -11,12 +11,12 @@ ms.assetid: 9d8233bb-117e-4563-9302-8a5a8ad1fae2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 06e8e220f5ab51a3dbc2ca4248023918879956d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cba5f339987c42c79c3d982d64d37879a7c3e2d6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101346"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402575"
 ---
 # <a name="processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial"></a>Verarbeiten von Modellen in der Targeted Mailing-Struktur (Lernprogramm zu Data Mining-Grundlagen)
   Bevor Sie die erstellten Miningmodelle durchsuchen und verwenden können, müssen Sie das [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Projekt bereitstellen und die Miningstruktur und die Miningmodelle verarbeiten.  
@@ -47,7 +47,7 @@ ms.locfileid: "48101346"
 4.  Geben Sie `12` für **HoldoutSeed**.  
   
 ## <a name="deploying-and-processing-the-models"></a>Bereitstellen und Verarbeiten der Modelle  
- Im Data Mining-Designer können Sie je nach Umfang der am Modell oder den zugrunde liegenden Daten vorgenommenen Änderungen entscheiden, welche Objekte verarbeitet werden sollen:  
+ Im Data Mining-Designer können Sie entscheiden, welche Objekte, abhängig vom Umfang der Änderungen zu verarbeiten, die Sie Ihr Modell oder die zugrunde liegenden Daten vorgenommen haben:  
   
  Bei dieser Aufgabe verarbeiten Sie die Struktur und alle Modelle gleichzeitig, weil die Daten und Modelle neu sind.  
   
@@ -72,6 +72,6 @@ ms.locfileid: "48101346"
  [Lektion 4: Untersuchen der Targeted Mailing-Modelle &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Anforderungen und Überlegungen zur Verarbeitung &#40;Datamining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Anforderungen und Überlegungen zur Verarbeitung &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   
