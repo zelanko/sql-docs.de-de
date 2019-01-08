@@ -14,12 +14,12 @@ ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a145b7ae7194720c8366f0c647a511e086fe4a2d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ad890736cf0536c5f4f776d2bd4949e195dd26d6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412637"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205419"
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase-Erweiterungsgruppen
 
@@ -46,7 +46,7 @@ Beim Abfragen von externen SQL Server-, Oracle- oder Teradata-Instanzen profitie
 Beispiel: Angenommen, Sie verfügen über eine externe SQL Server-Tabelle mit 12 Partitionen für jeden Monat und einer PolyBase-Erweiterungsgruppe mit 3 Knoten. Jeder Knoten verwendet 4 PolyBase-Leser, um jede der 12 Partitionen zu verarbeiten. Dies wird in der folgenden Abbildung veranschaulicht. 
 
 > [!NOTE]
- Dieser Vorgang darf nicht mit der horizontalen Leseskalierung über Hadoop verwechselt werden. 
+>  Dieser Vorgang darf nicht mit der horizontalen Leseskalierung über Hadoop verwechselt werden. 
 
 ![PolyBase-Erweiterungsgruppen](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "PolyBase-Erweiterungsgruppen")
   

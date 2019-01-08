@@ -21,12 +21,12 @@ ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 708b8c242098251211e3f0dc17df003669b68991
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1c6683da3464e094db8e85eca71baa45e3c2d031
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696638"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201870"
 ---
 # <a name="network-protocols-and-network-libraries"></a>Netzwerkprotokolle und Netzwerkbibliotheken
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "51696638"
 ## <a name="server-message-block-protocol"></a>SMB (Server Message-Block)-Protokoll  
  Bei Servern im Umkreisnetzwerk sollten alle nicht benötigten Protokolle deaktiviert sein, einschließlich des SMB (Server Message Block). Webserver und DNS-Server (Domain Name System) benötigen SMB nicht. Dieses Protokoll sollte deaktiviert sein, um der Gefahr der Benutzerenumeration vorzubeugen.  
   
-> [!WARNING]  
+> [!WARNING]
 >  Durch das Deaktivieren von Server Message Block wird der Zugriff auf die Remotedateifreigabe durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder durch den Windows-Clusterdienst blockiert. Deaktivieren Sie SMB nicht, wenn Sie einen der folgenden Schritte ausführen möchten:  
->   
+> 
 >  -   Verwenden des Mehrheitsquorummodus für Windows-Clusterknoten und Dateifreigaben  
 > -   Angeben einer SMB-Dateifreigabe als Datenverzeichnis während der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation  
 > -   Erstellen einer Datenbankdatei auf einer SMB-Dateifreigabe  
@@ -81,13 +81,13 @@ ms.locfileid: "51696638"
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] Default TCP  
   
- Weitere Informationen über Endpunkte finden Sie unter [Konfigurieren der Datenbank-Engine zum Überwachen mehrerer TCP-Ports](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) und [Endpunkte-Katalogsichten &amp;#40;Transact-SQL&amp;#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md).  
+ Weitere Informationen über Endpunkte finden Sie unter [Konfigurieren der Datenbank-Engine zum Überwachen mehrerer TCP-Ports](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) und [Endpunkte-Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md).  
   
  Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Netzwerkkonfigurationen finden Sie in den folgenden Artikeln der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation:  
   
 -   [Server-Netzwerkkonfiguration](../../database-engine/configure-windows/server-network-configuration.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Oberflächenkonfiguration](../../relational-databases/security/surface-area-configuration.md)   
  [Überlegungen zur Sicherheit bei SQL Server-Installationen](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
  [Planen einer SQL Server-Installation](../../sql-server/install/planning-a-sql-server-installation.md)  

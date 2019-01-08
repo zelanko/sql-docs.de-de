@@ -13,16 +13,16 @@ helpviewer_keywords:
 - joins [SQL Server], about joins
 - join hints [SQL Server]
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e5ec85544df283c5f3e7ab37ddbafa3a25b22ec9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9f218c3ff39e16ec656f9bbca24400920d99b76
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830418"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377012"
 ---
 # <a name="joins-sql-server"></a>Joins (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -231,7 +231,7 @@ NULL        three  NULL        NULL
 
 In den Ergebnissen ist ein NULL-Wert in den Daten nicht ohne Weiteres von einem NULL-Wert zu unterscheiden, der einen fehlgeschlagenen Join darstellt. Wenn NULL-Werte in den zu verknüpfenden Daten enthalten sind, empfiehlt es sich, sie durch einen normalen Join aus den Ergebnissen auszuschließen.    
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Referenz zu logischen und physischen Showplanoperatoren](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     
 [Vergleichsoperatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)    
 [Datentypkonvertierung &#40;Datenbank-Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   

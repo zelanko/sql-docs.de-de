@@ -35,7 +35,7 @@ Da Verfügbarkeitsgruppen nur Schutz auf Datenbankebene bereitstellen, nicht auf
 
 Eine Verfügbarkeitsgruppe besitzt eine weitere Komponente, die als Listener bezeichnet wird. Durch diesen können Anwendungen und Benutzer eine Verbindung herstellen, ohne zu wissen, welche Instanz von SQL Server das primäre Replikat hostet. Jede Verfügbarkeitsgruppe muss ihren eigenen Listener besitzen. Während die Implementierungen des Listeners sich geringfügig zwischen Windows Server und Linux unterscheiden, sind die bereitgestellte Funktionalität und die Verwendung identisch. Die untenstehende Abbildung zeigt eine Windows Server-basierte Verfügbarkeitsgruppe, die ein Windows Server-Failovercluster (WSFC) verwendet. Ein zugrunde liegender Cluster auf OS-Ebene ist für die Verfügbarkeit auf Linux oder Windows Server erforderlich. Dieses Beispiel zeigt eine einfache Konfiguration für zwei Server oder Knoten, bei der ein WSFC den zugrunde liegenden Cluster darstellt. 
 
-![Einfache Verfügbarkeitsgruppe][SimpleAG]
+![Einfache Verfügbarkeitsgruppe](media/sql-server-ha-story/image1.png)
  
 Bei Replikaten besitzen die Standard Edition und die Enterprise Edition unterschiedliche Höchstwerte. Eine Verfügbarkeitsgruppe in der Standard Edition, die als Basis-Verfügbarkeitsgruppe bezeichnet wird, unterstützt zwei Replikate (ein primäres und ein sekundäres) mit nur einer einzigen Datenbank in der Verfügbarkeitsgruppe. In der Enterprise Edition können nicht nur mehrere Datenbanken für eine einzige Verfügbarkeitsgruppe konfiguriert werden, sondern es können auch bis zu neun Replikate (ein primäres, acht sekundäre) vorhanden sein. Die Enterprise Edition bietet weitere optionale Vorteile, z.B. lesbare sekundäre Replikate, das Erstellen von Sicherungen aus einem sekundären Replikat usw.
 
@@ -81,13 +81,13 @@ Für diejenigen, die nur eine zusätzliche schreibgeschützte Kopie einer Datenb
 
 Der folgende Screenshot zeigt die Unterstützung für die verschiedenen Arten von Clustertypen in SSMS. Sie müssen Version 17.1 oder höher ausführen. Der folgende Screenshot stammt aus Version 17.2.
 
-![SSMS AG-Optionen][SSMSAGOptions]
+![SSMS AG-Optionen](media/sql-server-ha-story/image2.png)
  
 ##### <a name="requiredsynchronizedsecondariestocommit"></a>REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT
 
 In SQL Server 2016 wurde die Unterstützung für die Anzahl von synchronen Replikaten in der Enterprise Edition von zwei auf drei erhöht. Wenn jedoch ein sekundäres Replikat synchronisiert wurde und bei einem anderen ein Problem auftrat, konnte das Verhalten nicht gesteuert werden, um dem primären Replikat mitzuteilen, entweder auf das sich falsch verhaltende Replikat zu warten oder fortzufahren. Dadurch erhält das primäre Replikat ab einem bestimmten Punkt weiterhin Schreibdatenverkehr, obwohl das sekundäre Replikat sich nicht in einem synchronisierten Zustand befindet. Dies bedeutet, dass es zu Datenverlust auf dem sekundären Replikat kommt.
 In SQL Server 2017 gibt es nun eine Option, um das Verhalten zu steuern, das auftritt, wenn es synchronisierte Replikate namens REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT gibt. Diese Optionen funktionieren folgendermaßen:
-* Es gibt drei mögliche Werte: 0, 1 und 2.
+* Es gibt drei mögliche Werte: 0, 1 und 2
 * Der Wert entspricht der Anzahl von sekundären Replikaten, die synchronisiert werden müssen, und hat Auswirkungen auf den Datenverlust, die Verfügbarkeit von Verfügbarkeitsgruppen und auf Failover.
 * Für WSFCs und den Clustertyp „Keiner“ ist der Standardwert 0 und kann manuell auf 1 oder 2 festgelegt werden.
 * Für den Clustertyp „Extern“ wird dies standardmäßig durch den Clustermechanismus festgelegt und kann manuell überschrieben werden. Bei drei synchronen Replikaten ist der Standardwert 1.
@@ -111,11 +111,11 @@ Eine andere Erweiterung für die DTC-Unterstützung für Verfügbarkeitsgruppen 
 #### <a name="always-on-failover-cluster-instances"></a>Always On-Failoverclusterinstanzen
 Gruppierte Installationen sind eine Funktion von SQL Server seit Version 6.5. FCIs sind eine bewährte Methode zum Gewährleisten der Verfügbarkeit für die gesamte Installation von SQL Server, die als Instanz bezeichnet wird. Das bedeutet, dass alle Elemente in der Instanz, einschließlich Datenbanken, SQL Server-Agent-Aufträge, Verbindungsserver auf einen anderen Server verschoben werden, wenn auf dem zugrunde liegenden Server ein Problem auftritt. Alle FCIs erfordern freigegebenen Speicher, auch wenn dieser über ein Netzwerk bereitgestellt wird. Die Ressourcen der FCIs können jeweils nur von einem Knoten gleichzeitig ausgeführt und besessen werden. In der folgenden Abbildung besitzt der erste Knoten des Clusters die FCI. Das bedeutet, dass dieser auch die freigegebenen Speicherressourcen besitzt, die ihm zugewiesen sind. Dies ist durch die durchgezogene Linie zum Speicher gekennzeichnet.
 
-![Failoverclusterinstanz][BasicFCI]
+![Failoverclusterinstanz](media/sql-server-ha-story/image3.png)
  
 Wie in der folgenden Abbildung dargestellt ändert sich der Besitzer nach einem Failover.
 
-![Nach einem Failover][PostFailoverFCI]
+![Nach einem Failover](media/sql-server-ha-story/image4.png)
  
 Mit einer FCI gibt es keinen Datenverlust, aber der zugrunde liegende freigegebene Speicher ist eine einzelne Fehlerquelle, da eine Kopie der Daten vorhanden ist. FCIs werden häufig mit anderen Verfügbarkeitsmethoden kombiniert, z.B. Verfügbarkeitsgruppen und Protokollversand, damit redundante Kopien der Datenbank verfügbar sind. Die zusätzlich bereitgestellte Methode sollte einen anderen physischen Speicher als die FCI verwenden. Wenn die FCI ein Failover auf einen anderen Knoten ausführt, hält diese im Gegensatz zu einem Server, der ein- und ausgeschaltet wird, auf einem Knoten an und fährt auf einem anderen fort. Eine FCI durchläuft den normalen Wiederherstellungsprozess. Das bedeutet, dass alle Transaktionen ein Rollforward ausgeführt wird, die einen benötigen, und für alle unvollständigen Transaktionen wird ein Rollback ausgeführt. Daher ist eine Datenbank von einem Datenpunkt aus bis zum Zeitpunkt des Fehlers oder des manuellen Failovers konsistent und es kommt nicht zu Datenverlust. Datenbank sind erst verfügbar, wenn die Wiederherstellung abgeschlossen ist. Die Wiederherstellungszeit hängt also von mehreren Faktoren ab und ist im Allgemeinen länger als das Ausführen eines Failovers für eine Verfügbarkeitsgruppe dauert. Der Nachteil besteht darin, dass beim Ausführen eines Failovers für eine Verfügbarkeitsgruppe zusätzliche Aufgaben erforderlich sein können, damit die Datenbank verwendet werden kann, z.B. das Aktivieren von SQL Server-Agent-Aufträgen.
 
@@ -132,7 +132,7 @@ Wenn die Ziele für den Wiederherstellungspunkt und die Wiederherstellungszeit f
 > [!IMPORTANT] 
 > Unter Linux sind SQL Server-Agent-Aufträge nicht als Teil der Installation von SQL Server enthalten. Stattdessen sind diese im Paket „package mssql-server-Agent jobs“ verfügbar, das ebenfalls für das Verwenden des Protokollversands installiert werden muss.
 
-![Protokollversand][LogShipping]
+![Protokollversand](media/sql-server-ha-story/image5.png)
  
 Der größte Vorteil der Verwendung des Protokollversands in gewissem Umfang ist der, dass menschliche Fehler erfasst werden. Die Anwendung der Transaktionsprotokolle kann verzögert werden. Wenn jemand also z.B. ein Update ohne eine WHERE-Klausel ausführt, verfügt die Standbyinstanz dadurch nicht über die Änderung, sodass Sie zu dieser wechseln können, während Sie das primäre System reparieren. Während der Protokollversand einfach zu konfigurieren ist, ist das Wechseln von der primären zur betriebsbereiten Standbyinstanz, auch als Rollenänderung bezeichnet, immer ein manueller Vorgang. Eine Rollenänderung wird über Transact-SQL initiiert, und alle Objekte, die nicht im Transaktionsprotokoll erfasst sind, müssen wie bei Verfügbarkeitsgruppen manuell synchronisiert werden. Der Protokollversand muss pro Datenbank konfiguriert werden, während einzelne Verfügbarkeitsgruppen mehrere Datenbanken enthalten können. Im Gegensatz zu Verfügbarkeitsgruppen oder FCIs verfügt der Protokollversand nicht über Abstraktionen für eine Rollenänderung. Anwendungen müssen damit umgehen können. Techniken wie ein DNS-Alias (CNAME) können eingesetzt werden, es gibt jedoch Vor- und Nachteile, z.B. die Zeit, die ein DNS nach dem Wechsel zum Aktualisieren benötigt.
 
@@ -144,17 +144,17 @@ Wenn Ihr primärer Verfügbarkeitsstandort einer Katastrophe wie einem Erdbeben 
 
 Einer der Vorteile von Verfügbarkeitsgruppen ist, dass Hohe Verfügbarkeit und Notfallwiederherstellung mithilfe einer einzigen Funktion konfiguriert werden können. Ohne die Anforderung, dass die Hochverfügbarkeit des freigegebenen Speichers sichergestellt werden muss, ist es deutlich einfacher, lokale Replikate für die Hochverfügbarkeit in einem Rechenzentrum und Remotereplikate mit jeweils separatem Speicher für die Notfallwiederherstellung in anderen Rechenzentren zu besitzen. Das Vorhandensein von zusätzlichen Kopien der Datenbank ist der Nachteil der Gewährleistung von Redundanz. Nachfolgend finden Sie ein Beispiel für eine Verfügbarkeitsgruppe, die mehrere Rechenzentren umfasst. Ein primäres Replikat ist dafür verantwortlich, alle sekundären Replikate zu synchronisieren.
 
-![Verfügbarkeitsgruppe][AG]
+![Verfügbarkeitsgruppe](media/sql-server-ha-story/image6.png)
  
 Außerhalb einer Verfügbarkeitsgruppe mit dem Clustertyp „Keiner“ erfordert eine Verfügbarkeitsgruppe, dass alle Replikate Teil desselben zugrunde liegenden Clusters (WSFC oder Pacemaker) sind. Das bedeutet, dass WSFC in der obigen Abbildung gestreckt wird, um in zwei verschiedenen Rechenzentren zu arbeiten, wodurch die Komplexität unabhängig von der Plattform (Windows Server oder Linux) erhöht wird. Das Strecken von Clustern über Entfernungen erhöht die Komplexität. In SQL Server 2016 wurde eingeführt, dass eine verteilte Verfügbarkeitsgruppe es einer Verfügbarkeitsgruppe ermöglichen kann, Verfügbarkeitsgruppen zu umfassen, die auf verschiedenen Clustern konfiguriert wurden. Dies entkoppelt die Anforderung, dass alle Knoten im selben Cluster enthalten sein müssen. Dadurch wird das Konfigurieren der Notfallwiederherstellung wesentlich einfacher. Weitere Informationen zu verteilten Verfügbarkeitsgruppen finden Sie unter [Verteilte Verfügbarkeitsgruppen](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/distributed-availability-groups).
 
-![Verteilte Verfügbarkeitsgruppen][DAG]
+![Verteilte Verfügbarkeitsgruppen](media/sql-server-ha-story/image11.png)
  
 ### <a name="always-on-failover-cluster-instances"></a>Always On-Failoverclusterinstanzen
 
 FCIs können für die Notfallwiederherstellung verwendet werden. Wie bei einer normalen Verfügbarkeitsgruppe muss der zugrunde liegende Clustermechanismus auf alle Standorte erweitert werden. Dadurch wird die Komplexität erhöht. Zusätzlich muss für FCIs der freigegebene Speicher berücksichtigt werden. Dieselben Datenträger müssen für die primären und sekundären Standorte verfügbar sein. Eine externe Methode ist erforderlich, z.B. die Funktionalität, die vom Speicheranbieter auf Hardwareebene oder durch das Verwenden von Speicherreplikaten unter Windows Server bereitgestellt wird, um sicherzustellen, dass die von der FCI verwendeten Datenträger an anderer Stelle vorhanden sind. 
 
-![Always On-FCI][AlwaysOnFCI]
+![Always On-FCI](media/sql-server-ha-story/image8.png)
  
 ### <a name="log-shipping"></a>Protokollversand
 Der Protokollversand ist eine der ältesten Methoden für die Bereitstellung der Notfallwiederherstellung für SQL Server-Datenbanken. Der Protokollversand wird häufig zusammen mit Verfügbarkeitsgruppen und FCIs verwendet, um eine kosteneffektive und einfachere Notfallwiederherstellung bereitzustellen, wenn andere Optionen wegen der Umgebung, der administrativen Fähigkeiten oder des Budgets zu anspruchsvoll sind. Ähnlich wie bei der Hochverfügbarkeit für den Protokollverstand wird bei vielen Umgebungen das Laden eines Transaktionsprotokolls verzögert, um menschliche Fehler zu erfassen.
@@ -174,7 +174,7 @@ Wenn es das Ziel ist, zu neuen Servern zu migrieren, ohne die Konfiguration zu �
 
 Verteilte Verfügbarkeitsgruppen stellen eine weitere Methode zum Migrieren zu einer neuen Konfiguration oder zum Aktualisieren von SQL Server dar. Da eine verteilte Verfügbarkeitsgruppe verschiedene zugrunde liegende Verfügbarkeitsgruppen auf verschiedenen Architekturen unterstützt, können Sie z.B. von SQL Server 2016 unter Windows Server 2012 R2 auf SQL Server 2017 unter Windows Server 2016 wechseln. 
 
-![Verteilte Verfügbarkeitsgruppen][image10]
+![Verteilte Verfügbarkeitsgruppen](media/sql-server-ha-story/image10.png)
 
 Schließlich können Verfügbarkeitsgruppen mit dem Clustertyp „Keiner“ auch für Migrationen und Upgrades verwendet werden. Sie können Clustertypen in einer typischen Konfiguration von Verfügbarkeitsgruppen nicht mischen und anpassen, darum müssen alle Replikate den Typ „Keiner“ aufweisen. Eine verteilte Verfügbarkeitsgruppe kann verwendet werden, um Verfügbarkeitsgruppen zu umfassen, die mit verschiedenen Clustertypen konfiguriert wurden. Diese Methode wird auf den verschiedenen Betriebssystemplattformen unterstützt.
 
@@ -218,7 +218,7 @@ Bevor die plattformübergreifenden Szenarios und die für die Interoperabilität
 
 Verteilte Verfügbarkeitsgruppen wurden dafür entwickelt, mehrere Konfigurationen für Verfügbarkeitsgruppen zu umfassen, unabhängig davon, ob die zwei zugrunde liegenden Cluster der Verfügbarkeitsgruppen zwei verschiedene WSFCs oder Linux-Verteilungen sind oder ob einer sich auf einem WSFC und der andere auf Linux befindet. Eine verteilte Verfügbarkeitsgruppe ist die primäre Methode für plattformübergreifende Lösungen. Eine verteilte Verfügbarkeitsgruppe ist außerdem die primäre Lösung für Migrationen, z.B. für das Konvertieren von einer Windows Server-basierten SQL Server-Infrastruktur zu einer Linux-basierten, wenn Ihr Unternehmen dies durchführen möchte. Wie bereits erwähnt minimieren Verfügbarkeitsgruppen, insbesondere verteilte Verfügbarkeitsgruppen, die Zeit, die eine Anwendung nicht für die Verwendung verfügbar ist. Im Folgenden wird ein Beispiel für eine verteilte Verfügbarkeitsgruppe dargestellt, die einen WSFC und Pacemaker umfasst.
 
-![Verteilte Verfügbarkeitsgruppen][BasicDAG]
+![Verteilte Verfügbarkeitsgruppen](media/sql-server-ha-story/image9.png)
  
 Wenn eine Verfügbarkeitsgruppe mit dem Clustertyp „Keiner“ konfiguriert ist, kann diese Windows Server und Linux umfassen sowie mehrere Linux-Verteilungen. Da es sich dabei nicht um eine echte Konfiguration für die Hochverfügbarkeit handelt, sollte diese nicht für unternehmenskritische Bereitstellungen verwendet werden, sondern für schreibgeschützte Szenarios sowie für Migrations- und Upgradeszenarios.
 
@@ -230,12 +230,12 @@ Da der Protokollversand nur auf Sicherung und Wiederherstellung basiert, gibt es
 
 Seit sekundäre Replikate in SQL Server 2012 eingeführt wurden, können diese für schreibgeschützte Abfragen verwendet werden. Es gibt zwei Möglichkeiten, wie dies mit einer Verfügbarkeitsgruppe erzielt werden kann: Indem direkter Zugriff auf das sekundäre Replikat gewährt wird oder indem das [schreibgeschützte Routing konfiguriert wird](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server), wofür die Verwendung eines Listeners erforderlich ist.  In SQL Server 2016 wurde die Möglichkeit eingeführt, einen Lastenausgleich für schreibgeschützte Verbindungen über den Listener vorzunehmen, indem ein Roundrobin-Algorithmus verwendet wird. Dadurch können schreibgeschützte Anforderungen über alle lesbaren Replikate verteilt werden. 
 
-> [!NOTE] 
-Lesbare sekundäre Replikate sind eine Funktion, die nur in der Enterprise Edition enthalten ist. Jede Instanz, die ein lesbares Replikat hostet, erfordert eine SQL Server-Lizenz.
+> [!NOTE]
+> Lesbare sekundäre Replikate sind eine Funktion, die nur in der Enterprise Edition enthalten ist. Jede Instanz, die ein lesbares Replikat hostet, erfordert eine SQL Server-Lizenz.
 
 Die Skalierung von lesbaren Kopien einer Datenbank über Verfügbarkeitsgruppen wurde erstmals mit den verteilten Verfügbarkeitsgruppen in SQL Server 2016 eingeführt. Dadurch können Unternehmen schreibgeschützte Kopien der Datenbank nicht nur lokal besitzen, sondern auch regional und global mit minimalem Konfigurationsaufwand. Außerdem werden durch lokal ausgeführte Abfragen der Netzwerkdatenverkehr und die Latenz reduziert. Jedes primäre Replikat einer Verfügbarkeitsgruppe kann für zwei andere Verfügbarkeitsgruppen ein Seeding ausführen, selbst wenn es sich nicht um eine vollständige Lese-/Schreibkopie handelt. Somit kann jede verteilte Verfügbarkeitsgruppe bis zu 27 lesbare Kopien einer Datei unterstützen. 
 
-![Verteilte Verfügbarkeitsgruppen][DAG]
+![Verteilte Verfügbarkeitsgruppen](media/sql-server-ha-story/image11.png)
 
 Ab SQL Server 2017 ist es möglich, eine schreibgeschützte Lösung mit Verfügbarkeitsgruppen mit dem Clustertyp „Keiner“ nahezu in Echtzeit zu erstellen. Wenn es das Ziel ist, Verfügbarkeitsgruppen für lesbare sekundäre Replikate und nicht für die Verfügbarkeit zu verwenden, wird dadurch die Komplexität der Verwendung eines WSFC oder von Pacemaker entfernt, außerdem erhalten die lesbaren Replikate die Vorteile einer Verfügbarkeitsgruppe in einer einfacheren Bereitstellungsmethode. 
 

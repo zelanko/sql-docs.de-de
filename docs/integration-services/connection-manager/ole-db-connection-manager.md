@@ -18,20 +18,20 @@ ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0ac4984fca803cbcf5d18fa4b34fdd8629dfe8c9
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: bbc07306f0079adbe90f22eb25a73f750258ebd4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640018"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210096"
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB-Verbindungs-Manager
   Durch einen OLE DB-Verbindungs-Manager kann ein Paket mithilfe eines OLE DB-Anbieters eine Verbindung mit einer Datenquelle herstellen. Beispielsweise kann ein OLE DB-Verbindungs-Manager, der eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellt, den [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwenden.    
     
-> [!NOTE]    
+> [!NOTE]
 >  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11.0 OLEDB-Anbieter unterstützt die neuen Schlüsselwörter für Verbindungszeichenfolgen (MultiSubnetFailover=True) für Multisubnetz-Failoverclustering nicht. Weitere Informationen finden Sie in den [Versionsanmerkungen zu SQL Server](https://go.microsoft.com/fwlink/?LinkId=247824) und im Blogbeitrag zu [Always On-Multisubnetz-Failover und SSIS](https://www.mattmasson.com/2012/03/alwayson-multi-subnet-failover-and-ssis/)unter www.mattmasson.com.    
-    
-> [!NOTE]    
+> 
+> [!NOTE]
 >  Wenn es sich bei der Datenquelle um [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 2007 handelt, erfordert die Datenquelle einen anderen Datenanbieter als frühere Versionen von Excel oder Access. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einer Excel-Arbeitsmappe](../../integration-services/connection-manager/connect-to-an-excel-workbook.md) und [Herstellen einer Verbindung mit einer Access-Datenbank](../../integration-services/connection-manager/connect-to-an-access-database.md).    
     
  Mehrere Tasks und Datenflusskomponenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwenden einen OLE DB-Verbindungs-Manager. Beispielsweise extrahieren und laden die OLE DB-Quelle und das OLE DB-Ziel mit diesem Verbindungs-Manager Daten. Und der Task SQL ausführen kann damit eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank herstellen, um Abfragen auszuführen.    
@@ -74,7 +74,7 @@ ms.locfileid: "51640018"
   
  Weitere Informationen zum OLE DB-Verbindungs-Manager finden Sie unter [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Datenverbindungen**  
  Wählen Sie aus der Liste eine vorhandene OLE DB-Datenverbindung aus.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "51640018"
  **Delete**  
  Wählen Sie eine Datenverbindung aus, und löschen Sie sie mithilfe der Schaltfläche **Löschen** .  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter    
+## <a name="see-also"></a>Weitere Informationen    
  [OLE DB-Quelle](../../integration-services/data-flow/ole-db-source.md)     
  [OLE DB-Ziel](../../integration-services/data-flow/ole-db-destination.md)     
  [SQL ausführen (Task)](../../integration-services/control-flow/execute-sql-task.md)     

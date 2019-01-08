@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Stretch Database, enabling table
 - enabling table for Stretch Database
 ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2101d73b7e76cbc842277980b22c239dc826233c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4fdb8995798b408e0418e2170631f3b331acff0
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824218"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596691"
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Aktivieren von Stretch Database für eine Tabelle
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47824218"
   
  **Berechtigungen**. Um Stretch Database für eine Datenbank oder eine Tabelle zu aktivieren, benötigen Sie "db_owner"-Berechtigungen. Um Stretch Database für eine Tabelle zu aktivieren, benötigen Sie außerdem ALTER-Berechtigungen für die Tabelle.  
 
- >   [!NOTE]
+ > [!NOTE]
  > Wenn Sie Stretch Database später deaktivieren, sollten Sie daran denken, dass durch die Deaktivierung von Stretch Database für eine Tabelle oder Datenbank das Remoteobjekt nicht gelöscht wird. Wenn Sie die Remotetabelle oder Remotedatenbank löschen möchten, müssen Sie sie mithilfe des Azure-Verwaltungsportals löschen. Die Remoteobjekte erzeugen weiterhin Azure-Kosten, bis Sie die Objekte manuell löschen.
  
 ##  <a name="EnableWizardTable"></a> Verwenden des Assistenten zum Aktivieren von Stretch Database für eine Tabelle  
@@ -65,13 +65,13 @@ ms.locfileid: "47824218"
 ##  <a name="EnableTSQLTable"></a> Verwenden von Transact-SQL zum Aktivieren von Stretch Database für eine Tabelle  
  Sie können Stretch Database mithilfe von Transact-SQL für eine vorhandene Tabelle aktivieren oder damit eine neue, für Stretch Database aktivierte Tabelle erstellen.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  Verwenden Sie die folgenden Optionen, wenn Sie CREATE TABLE oder ALTER TABLE ausführen, um Stretch Database für eine Tabelle zu aktivieren.  
   
 -   Verwenden Sie optional die `FILTER_PREDICATE = <function>` -Klausel, um eine Funktion zum Auswählen der zu migrierenden Zeilen anzugeben, wenn die Tabelle sowohl heiße als auch kalte Daten enthält. Das Prädikat muss eine Inline-Tabellenwertfunktion aufrufen. Weitere Informationen hierzu finden Sie unter [Auswählen zu migrierender Zeilen mithilfe einer Filterfunktion](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Wenn Sie keine Filterfunktion angeben, wird die gesamte Tabelle migriert.  
   
     > [!IMPORTANT]  
-    >  Wenn Sie eine schwache Filterfunktion angeben, wird die Datenmigration ebenfalls unzureichend ausgeführt. Stretch Database wendet die Filterfunktion mithilfe des CROSS APPLY-Operators auf die Tabelle an.  
+    > Wenn Sie eine schwache Filterfunktion angeben, wird die Datenmigration ebenfalls unzureichend ausgeführt. Stretch Database wendet die Filterfunktion mithilfe des CROSS APPLY-Operators auf die Tabelle an.  
   
 -   Geben Sie `MIGRATION_STATE = OUTBOUND` an, um sofort mit der Datenmigration zu beginnen, oder  `MIGRATION_STATE = PAUSED` , um den Beginn der Datenmigration zu verschieben.  
   
@@ -131,7 +131,7 @@ GO
   
  Weitere Informationen hierzu finden Sie unter [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
   

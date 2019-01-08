@@ -6,8 +6,6 @@ ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
-f1_keywords:
-- vs.output
 helpviewer_keywords:
 - Output Window [Transact-SQL]
 - Output Window [SQL Server Management Studio]
@@ -16,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 07720dbcb560c9f6cb7b4e2afb4d2daa2b752e35
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 5037e30631b98020bb793f76c3dcda98bc575fc4
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643419"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328680"
 ---
 # <a name="transact-sql-debugger---output-window"></a>Transact-SQL Debugger – Ausgabefenster
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,14 +29,12 @@ ms.locfileid: "51643419"
   
 -   Klicken Sie im Menü **Ansicht** auf **Weitere Fenster**, und klicken Sie dann auf **Ausgabe**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Liste der Ausgabebereiche**  
  Zeigt eine Liste der Ausgabebereiche an, die angezeigt werden können. Es können mehrere Informationsbereiche verfügbar sein, je nachdem, welche Tools das Fenster **Ausgabe** nutzen, um Informationen an den Benutzer zu übermitteln.  
   
  **Ausgabebereich**  
  Zeigt die Ausgabe für den in der **Liste der Ausgabebereiche**ausgewählten Bereich an.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Transact-SQL-Debugger](../../relational-databases/scripting/transact-sql-debugger.md)  
-  
-  

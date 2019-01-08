@@ -16,15 +16,15 @@ helpviewer_keywords:
 - performance [SQL Server], monitoring tools
 - server performance [SQL Server], tools
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 90380da3b0cd76154dc8ab60e5efeadd9bf9de1e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 91a1c007add2810588f7b41499c046336d5bc322
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528490"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371482"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>Tools für die Leistungsüberwachung und -optimierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,12 +57,12 @@ ms.locfileid: "52528490"
   
 |Ereignis oder Aktivität|Erweiterte Ereignisse|SQL Server Profiler|Distributed Replay|Systemmonitor|Aktivitätsmonitor|Transact-SQL|Fehlerprotokolle|  
 |-----------------------|-----------------------|-------------------------|------------------------|--------------------|----------------------|-------------------|----------------|  
-|Trendanalyse|Benutzerkontensteuerung|Benutzerkontensteuerung||Benutzerkontensteuerung||||  
+|Trendanalyse|Ja|Ja||Ja||||  
 |Wiedergeben aufgezeichneter Ereignisse||Ja (von einem einzelnen Computer)|Ja (von mehreren Computern)|||||  
-|Ad-hoc-Überwachung|Ja<sup>1</sup>|Benutzerkontensteuerung|||Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|Generieren von Warnungen||||Benutzerkontensteuerung||||  
-|Grafische Schnittstelle|Benutzerkontensteuerung|Benutzerkontensteuerung||Benutzerkontensteuerung|Benutzerkontensteuerung||Benutzerkontensteuerung|  
-|Verwendung im Rahmen von benutzerdefinierten Anwendungen|Benutzerkontensteuerung|Ja<sup>2</sup>||||Benutzerkontensteuerung||  
+|Ad-hoc-Überwachung|Ja<sup>1</sup>|Ja|||Ja|Ja|Ja|  
+|Generieren von Warnungen||||Ja||||  
+|Grafische Schnittstelle|Ja|Ja||Ja|Ja||Ja|  
+|Verwendung im Rahmen von benutzerdefinierten Anwendungen|Ja|Ja<sup>2</sup>||||Ja||  
   
  <sup>1</sup> Verwenden von [SQL Server Management Studio XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)    
  <sup>2</sup> Verwenden von gespeicherten [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]-Systemprozeduren  

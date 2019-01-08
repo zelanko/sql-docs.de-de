@@ -20,12 +20,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 82b71c24dc5aed407a50cfd4758ac13357eb29c2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3da927ec00fe6402a9c7612beae90453e30c4e26
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673289"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210399"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "51673289"
 ## <a name="adding-articles"></a>Hinzufügen von Artikeln  
  Hinzufügen eines Artikels beinhaltet Folgendes: Hinzufügen des Artikels zur Veröffentlichung; Erstellen einer neuen Momentaufnahme für die Veröffentlichung und Synchronisieren des Abonnements zum Zuweisen des Schemas und der Daten für den neuen Artikel.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Wenn Sie einer Mergeveröffentlichung einen Artikel hinzufügen und ein vorhandener Artikel von diesem neuen Artikel abhängt, müssen Sie mithilfe des **@processing_order** -Parameters von [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) und [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)eine Verarbeitungsreihenfolge für die beiden Artikel angeben. Angenommen, Sie veröffentlichen eine Tabelle, aber Sie veröffentlichen keine Funktion, die auf die Tabelle verweist. Wenn Sie die Funktion nicht veröffentlichen, kann die Tabelle nicht auf dem Abonnenten erstellt werden. Wenn Sie die Funktion einer Veröffentlichung hinzufügen, geben Sie einen Wert von **1** für den **@processing_order** -Parameter von **sp_addmergearticle**an, und geben Sie einen Wert von **2** für den **@processing_order** -Parameter von **sp_changemergearticle**an. Geben Sie dann den Tabellennamen für den **@article**. Durch diese Verarbeitungsreihenfolge wird sichergestellt, dass Sie die Funktion auf dem Abonnenten vor der Tabelle erstellen, die davon abhängt. Sie können unterschiedliche Nummern für die einzelnen Artikel verwenden, dabei muss jedoch die Nummer für die Funktion kleiner als die Nummer der Tabelle sein.  
   
 1.  Zum Hinzufügen einzelner oder mehrerer Artikel stehen die folgenden Methoden zur Verfügung:  
@@ -86,7 +86,7 @@ ms.locfileid: "51673289"
  > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)]Service Pack 2** oder höher und **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] Service Pack 1** oder höher unterstützen das Löschen einer Tabelle mit dem **DROP TABLE**-DLL-Befehl für Artikel, die an einer Transaktionsreplikation beteiligt sind. Wenn eine DROP TABLE-DDL durch die Publikation(en) unterstützt wird, löscht der DROP TABLE-Vorgang die Tabelle aus der Veröffentlichung und der Datenbank. Der Protokollleseagent wird einen Bereinigungsbefehl für die Verteilungsdatenbank für die gelöschte Tabelle posten und die Bereinigung der Metadaten des Verlegers durchführen. Wenn der Protokollleser noch nicht alle Protokolleinträge verarbeitet hat, die auf die gelöschte Tabelle verweisen, wird er neue Befehle ignorieren, die der gelöschten Tabelle zugeordnet sind. Bereits verarbeitete Datensätze werden an die Verteilungsdatenbank übermittelt. Sie können auf die Abonnentendatenbank angewendet werden, wenn der Verteilungs-Agent sie verarbeitet, bevor der Protokollleser veraltete (gelöschte) Artikel bereinigt. Die **Standard**-Einstellung für alle Veröffentlichungen für Transaktionsreplikationen unterstützt keine DROP TABLE-DLL. [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) enthält weitere detaillierte Informationen zu dieser Verbesserung.
 
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Veröffentlichen von Daten und Datenbankobjekten](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Erneutes Initialisieren von Abonnements](../../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)  

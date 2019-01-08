@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42db9954a071865124d443be32203fc284dfe699
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 079a54bdbf107ec9f83e1078fedba1be84374c5b
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838958"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589134"
 ---
 # <a name="specify-parameters"></a>Angeben von Parametern
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -169,7 +169,7 @@ GO
  Führen Sie `usp_GetList` aus, um eine Liste der [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] -Produkte (Bikes) zurückzugeben, die weniger als 700 $ kosten. Die OUTPUT-Parameter **\@cost** und **\@compareprices** werden mit Sprachkonstrukten zur Ablaufsteuerung verwendet, um eine Meldung im Fenster **Meldungen** zurückzugeben.  
   
 > [!NOTE]  
->  Die OUTPUT-Variable muss sowohl beim Erstellen der Prozedur als auch beim Verwenden der Variable definiert werden. Parametername und Variablenname brauchen nicht übereinzustimmen. Jedoch müssen der Datentyp und die Parameterpositionierung übereinstimmen, es sei denn **\@listprice=** *variable* wird verwendet.  
+>  Die OUTPUT-Variable muss sowohl beim Erstellen der Prozedur als auch beim Verwenden der Variable definiert werden. Parametername und Variablenname brauchen nicht übereinzustimmen. Jedoch müssen der Datentyp und die Parameterpositionierung übereinstimmen, es sei denn **\@listprice=** _variable_ wird verwendet.  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  
@@ -204,7 +204,7 @@ Road-750 Black, 52                                 539.99
 These items can be purchased for less than $700.00.  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   
   

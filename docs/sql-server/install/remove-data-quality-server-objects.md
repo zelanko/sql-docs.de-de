@@ -10,19 +10,19 @@ ms.assetid: 1b7c6dbb-b40e-4822-9caa-608e1056af8e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 16a9770c05ecbc81b0fc5696f83285127ca7d8a1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e286f90ddbe008346f70654ca4d9daa24dccb739
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528380"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215526"
 ---
 # <a name="remove-data-quality-server-objects"></a>Entfernen von Data Quality Server-Objekten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   Durch Deinstallieren von [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] von einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]oder durch das vollständige Entfernen einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] aufweist, werden einige [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] -Objekte nicht gelöscht, einschließlich der DQS-Datenbanken. Dies bedeutet, dass Sie die DQS-Daten nicht verlieren, wenn Sie [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] mithilfe des SQL Server-Setups deinstallieren. Sie müssen diese [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] -Objekte manuell löschen, nachdem der Deinstallationsvorgang abgeschlossen wurde.  
   
-> [!NOTE]  
+> [!NOTE]
 >  -   Erwägen Sie vor dem Deinstallieren von [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)], all Ihre vorhandenen Wissensdatenbanken zu sichern, indem Sie die DQSB-Datei exportieren und sie später zum Importieren aller Wissensdatenbanken in eine neue [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] -Installation verwenden. Das Exportieren und Importieren sämtlicher DQS-Wissensdatenbanken ist nur möglich, indem "DQSInstaller.exe" mit den entsprechenden Befehlszeilenparametern mithilfe der der Eingabeaufforderung ausgeführt wird. Weitere Informationen finden Sie unter [Export und Importieren von DQS-Wissensdatenbanken mit DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md).  
 > -   Erwägen Sie vor dem Löschen der DQS-Datenbanken, die Datenbanken zu sichern, wenn Sie sie beibehalten möchten und später zum Wiederherstellen der Daten verwenden möchten. Weitere Informationen hierzu finden Sie unter [Verwalten von DQS-Datenbanken](../../data-quality-services/manage-dqs-databases.md).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "52528380"
 ## <a name="uninstall-sql-server-instance-containing-data-quality-server"></a>Deinstallieren der SQL Server-Instanz, die Data Quality Server enthält  
  Wenn Sie eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz mit [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]vollständig deinstallieren, müssen Sie die Datenbanken DQS_MAIN, DQS_PROJECTS und DQS_STAGING_DATA manuell vom Computer löschen, nachdem die Deinstallation abgeschlossen wurde. Bei einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Standardinstallation sind die Dateien der Datenbanken DQS_MAIN, DQS_PROJECTS und DQS_STAGING_DATA unter „C:\Programme\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA“ verfügbar.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Vorgehensweise: Deinstallieren einer vorhandenen SQL Server-Instanz &#40;Setup&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)   
  [Deinstallieren von SQL Server 2016](../../sql-server/install/uninstall-sql-server.md)  
   
