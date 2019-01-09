@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server], packages
@@ -14,12 +13,12 @@ ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 95fd92b13584ec31d7a7a70a7e63caf7baf4a393
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141300"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767412"
 ---
 # <a name="sql-server-extended-events-packages"></a>Pakete für erweiterte Ereignisse von SQL Server
   Ein Paket ist ein Container für Objekte für erweiterte Ereignisse von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Es gibt drei Arten von Paketen für erweiterte Ereignisse, dazu zählen die folgenden:  
@@ -80,7 +79,7 @@ ms.locfileid: "48141300"
 |Admin|Admin-Ereignisse sind hauptsächlich für Endbenutzer, Administratoren und Supportmitarbeiter vorgesehen. Die Ereignisse, die in den Admin-Kanälen gefunden werden, weisen auf ein Problem mit einer wohldefinierten Lösung hin, zu dessen Behebung ein Administrator Maßnahmen ergreifen kann. Ein Beispiel für ein Admin-Ereignis ist, wenn beim Herstellen einer Verbindung mit einem Drucker ein Fehler auftritt. Diese Ereignisse sind entweder umfassend beschrieben oder weisen eine Meldung mit Hinweisen zur Behebung des Fehlers auf.|  
 |Operational|Operational-Ereignisse werden zum Analysieren und Diagnostizieren eines Problems oder eines Vorkommens verwendet. Mit ihnen können basierend auf dem Problem oder dem Vorkommen Tools oder Tasks ausgelöst werden. Ein Beispiel für ein solches Ereignis ist, wenn ein Drucker einem System hinzugefügt oder daraus entfernt wird.|  
 |Analytic|Analytic-Ereignisse werden in großem Umfang veröffentlicht. Sie beschreiben Programmvorgänge und werden in der Regel in Leistungsuntersuchungen verwendet.|  
-|Debuggen|Debug-Ereignisse werden ausschließlich von Entwicklern zum Diagnostizieren eines Problems verwendet, das Debuggen erforderlich macht.<br /><br /> Hinweis: Ereignisse im Debug-Kanal geben interne, implementierungsspezifische Statusdaten zurück. Die Schemas und Daten, die die von den Ereignissen zurückgegeben werden, werden in künftigen Versionen von SQL Server möglicherweise geändert oder werden ungültig. Daher werden Ereignisse im Debug-Kanal in künftigen Versionen von SQL Server unter Umständen ohne vorherigen Hinweis geändert oder entfernt.|  
+|Debuggen|Debug-Ereignisse werden ausschließlich von Entwicklern zum Diagnostizieren eines Problems verwendet, das Debuggen erforderlich macht.<br /><br /> Hinweis: Bei Ereignissen im Debug-Kanal werden interne implementierungsbezogene Statusdaten zurückgegeben. Die Schemas und Daten, die die von den Ereignissen zurückgegeben werden, werden in künftigen Versionen von SQL Server möglicherweise geändert oder werden ungültig. Daher werden Ereignisse im Debug-Kanal in künftigen Versionen von SQL Server unter Umständen ohne vorherigen Hinweis geändert oder entfernt.|  
   
  **Schlüsselwort**  
   
@@ -216,7 +215,7 @@ where name = 'lock_mode'
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server Extended Events Sessions](sql-server-extended-events-sessions.md)   
-  [Engine für erweiterte Ereignisse von SQL Server](sql-server-extended-events-engine.md)   
+   [Engine für erweiterte Ereignisse von SQL Server](sql-server-extended-events-engine.md)   
  [SQL Server Extended Events Targets](../../database-engine/sql-server-extended-events-targets.md)  
   
   

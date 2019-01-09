@@ -18,12 +18,12 @@ ms.assetid: 083a1ef5-580a-4979-9cf3-50f4549a080a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cd212f45e02ddce4c64a8b4a7d664ddaedf8090a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c5bb124af74d1fa009a61237edb54a9c8baec74
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666828"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591544"
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>Deklarieren die Anwendung&#39;s ODBC-Version
 Bevor eine Anwendung eine Verbindung zuordnet, muss er umgebungsattributs SQL_ATTR_ODBC_VERSION festgelegt. Dieses Attribut gibt an, dass die Anwendung die ODBC 2. folgt. *x* oder ODBC-3. *X* Spezifikation, wenn Sie die folgenden Elemente verwenden:  
@@ -43,7 +43,7 @@ Bevor eine Anwendung eine Verbindung zuordnet, muss er umgebungsattributs SQL_AT
     |SQL_C_TIME|SQL_C_TYPE_TIME|  
     |SQL_C_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|  
   
--   *CatalogName***-Argument in SQLTables**.   In ODBC 2. *x*, die Platzhalterzeichen ("%" und "_") in der *CatalogName* Argument buchstäblich behandelt werden. In ODBC 3. *x*, werden sie als Platzhalterzeichen behandelt. Daher eine Anwendung, die die ODBC 2. folgt. *x* Spezifikation kann diese nicht als verwenden Platzhalter Zeichen und nicht mit Escapezeichen versehen werden, wenn diese als Literale zu verwenden. Eine Anwendung, die die ODBC 3. folgt. *x* Spezifikation kann diese als Platzhalterzeichen verwenden oder mit Escapezeichen versehen und sie als Literale. Weitere Informationen finden Sie unter [Argumente in Katalogfunktionen](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
+-   _CatalogName_  **-Argument in SQLTables**. In ODBC 2. *x*, die Platzhalterzeichen ("%" und "_") in der *CatalogName* Argument buchstäblich behandelt werden. In ODBC 3. *x*, werden sie als Platzhalterzeichen behandelt. Daher eine Anwendung, die die ODBC 2. folgt. *x* Spezifikation kann diese nicht als verwenden Platzhalter Zeichen und nicht mit Escapezeichen versehen werden, wenn diese als Literale zu verwenden. Eine Anwendung, die die ODBC 3. folgt. *x* Spezifikation kann diese als Platzhalterzeichen verwenden oder mit Escapezeichen versehen und sie als Literale. Weitere Informationen finden Sie unter [Argumente in Katalogfunktionen](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
   
  Die ODBC 3.*.x* Treiber-Manager und ODBC 3.*.x* Treiber prüfen die Version des ODBC-Spezifikation, die eine Anwendung geschrieben, und entsprechend reagieren. Beispielsweise, wenn die Anwendung die ODBC 2. folgt. *x* -Spezifikation und ruft **SQLExecute** vor dem Aufruf **SQLPrepare**, die ODBC 3.*.x* -Treiber-Manager gibt SQLSTATE S1010 (zurück. Fehler bei Funktionssequenz). Wenn die Anwendung die ODBC 3. folgt *.x* -Spezifikation der Treiber-Manager gibt einen SQLSTATE HY010 (Sequenzfehler funktionieren). Weitere Informationen finden Sie unter [Abwärtskompatibilität und zur Einhaltung von Standards](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  
   

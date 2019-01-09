@@ -1,6 +1,6 @@
 ---
-title: Neuerungen in Analytics Platform System – ein horizontaler Datawarehouse
-description: Neuigkeiten in Microsoft® Analytics Platform System, die beim horizontalen hochskalieren auf lokale Anwendung, die MPP SQL Server Parallel Data Warehouse hostet.
+title: Neuerungen in Analytics Platform System - ein horizontaler Datawarehouse
+description: Neuigkeiten in Microsoft Analytics Platform System, die beim horizontalen hochskalieren auf lokale Anwendung, die MPP SQL Server Parallel Data Warehouse hostet.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,25 +9,41 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5ffad259ca0de75ad2eb4b7fc6f51614f1c4dea9
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5467362b32733e6ef10036bf9b45d38fe3150a1e
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700358"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626354"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Neuerungen in Analytics Platform System, das ein horizontales MPP Datawarehouse
-Finden Sie unter Neues in den neuesten Appliance Updates für Microsoft® Analytics Platform System (APS). APS ist es sich um eine horizontale Skalierung auf lokale Anwendung, die MPP SQL Server Parallel Data Warehouse hostet. 
+Finden Sie unter Neues in den neuesten Appliance Updates für Microsoft Analytics Platform System (APS). APS ist es sich um eine horizontale Skalierung auf lokale Anwendung, die MPP SQL Server Parallel Data Warehouse hostet. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.3"></a>
+## <a name="aps-cu73"></a>APS-CU7.3
+Datum der Veröffentlichung: Dezember 2018
+
+### <a name="common-subexpression-elimination"></a>Gemeinsame Teilausdrücke entfernen
+APS-CU7.3 verbessert die abfrageleistung mit gängiger Unterausdrücke in SQL-Abfrageoptimierer. Die Verbesserung der verbessert die Abfragen auf zwei Arten. Der erste Vorteil ist die Möglichkeit, erkennen und zu eliminieren, z. B. Ausdrücken können SQL-Kompilierungszeit zu reduzieren. Der zweite, wichtigere-Vorteil ist, dass Verschiebevorgänge für Abfragedaten für diesen redundanten Teilausdrücken daher Ausführungszeit behoben wurden, für Abfragen wird schneller. Ausführliche Erläuterung dieser Funktion finden Sie [hier](common-sub-expression-elimination.md).
+
+### <a name="aps-informatica-connector-for-informatica-1020-published"></a>APS Informatica-Connector für Informatica 10.2.0 veröffentlicht
+Wir haben eine neue Version der Informatica-Connectors für APS veröffentlicht, die mit Informatica Version 10.2.0 funktioniert. Die neuen Connectors können heruntergeladen werden [Downloadwebsite](https://www.microsoft.com/download/details.aspx?id=57472).
+
+#### <a name="supported-versions"></a>Unterstützte Versionen
+| APS-Version | Informatica PowerCenter | Treiber |
+|:---|:---|:---|
+| APS 2016 | 9.6.1 | SQL Server Native Client 11.x |
+| APS 2016 und höher | 10.2.0 | SQL Server Native Client 11.x |
+
 <a name="h2-aps-cu7.2"></a>
 ## <a name="aps-cu72"></a>APS CU7.2
 Datum der Veröffentlichung: Oktober 2018
 
 ### <a name="support-for-tls-12"></a>Unterstützung für TLS 1.2
-APS-CU7.2 unterstützt TLS 1.2. Client-Computer auf Zugriffspunkten und APS knotenübergreifende Kommunikation jetzt festgelegt werden kann, nur über TLS 1.2 zu kommunizieren. Tools wie SSDT, SSIS und Dwloader installiert, die auf Clientcomputern, die festgelegt werden, für die Kommunikation nur über TLS 1.2 können jetzt mit APS mit TLS 1.2 herstellen. Standardmäßig wird APS alle Versionen der TLS (1.0, 1.1 und 1.2) für die Abwärtskompatibilität unterstützt. Wenn Sie Ihre APS-Appliance festlegen möchten Stictly verwenden TLS 1.2, dazu können Sie registrierungseinstellungen ändern. 
+APS-CU7.2 unterstützt TLS 1.2. Client-Computer auf Zugriffspunkten und APS knotenübergreifende Kommunikation jetzt festgelegt werden kann, nur über TLS 1.2 zu kommunizieren. Tools wie SSDT, SSIS und Dwloader installiert, die auf Clientcomputern, die festgelegt werden, für die Kommunikation nur über TLS 1.2 können jetzt mit APS mit TLS 1.2 herstellen. Standardmäßig wird APS alle Versionen der TLS (1.0, 1.1 und 1.2) für die Abwärtskompatibilität unterstützt. Wenn Sie Ihre APS-Appliance, auf die Verwendung von TLS 1.2 streng festlegen möchten, können Sie dafür durch Ändern der registrierungseinstellungen. 
 
-Finden Sie unter [Konfigurieren von TLS 1.2 auf APS](configure-tls12-aps.md) für Weitere Informationen.
+Weitere Informationen finden Sie unter [Konfigurieren von TLS 1.2 auf APS](configure-tls12-aps.md).
 
 ### <a name="hadoop-encryption-zone-support-for-polybase"></a>Verschlüsselungszone Hadoop für PolyBase unterstützen
 PolyBase kann nun mit Hadoop Verschlüsselung Zonen kommunizieren. Finden Sie unter APS-konfigurationsänderungen, die erforderlich sind [Hadoop-Sicherheit konfigurieren](polybase-configure-hadoop-security.md#encryptionzone).
@@ -101,9 +117,9 @@ APS 2016 ist eine Voraussetzung für die ein Upgrade auf AU7 durchführen. Im fo
 APS-AU7 erstellt und Statistics wird standardmäßig automatisch aktualisiert. Um statistikeinstellungen für zu aktualisieren, können Administratoren ein neues Feature-Switch-Menüelement in der [Configuration Manager](appliance-configuration.md#CMTasks). Die [featureschalter](appliance-feature-switch.md) steuert die Auto-create, automatische Aktualisierung und Verhalten der asynchronen Aktualisieren von Statistiken. Sie können auch die Einstellungen der Treiberstatistik mit aktualisieren die [ALTER DATABASE (Parallel Data Warehouse)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) Anweisung.
 
 ### <a name="t-sql"></a>T-SQL
-Wählen Sie @var wird jetzt unterstützt. Weitere Informationen finden Sie unter [auf lokale Variablen] (/ sql/t-sql/language-elements/select-local-variable-transact-sql) 
+Wählen Sie @var wird jetzt unterstützt. Weitere Informationen finden Sie unter [wählen Sie die lokale Variable](/sql/t-sql/language-elements/select-local-variable-transact-sql) 
 
-Abfragehinweise HASH "und" ORDER GROUP werden jetzt unterstützt. Weitere Informationen finden Sie unter [Hints(Transact-SQL) - Abfrage] (/ Sql/t-Sql/Abfragen/Hinweise-transact-Sql-Abfrage)
+Abfragehinweise HASH "und" ORDER GROUP werden jetzt unterstützt. Weitere Informationen finden Sie unter [Hints(Transact-SQL) - Abfrage ](/sql/t-sql/queries/hints-transact-sql-query)
 
 ### <a name="feature-switch"></a>Feature-Switch
 APS-AU7 führt Feature-Switch in [Configuration Manager](launch-the-configuration-manager.md). AutoStatsEnabled und DmsProcessStopMessageTimeoutInSeconds werden nun konfigurierbare Optionen, die von Administratoren geändert werden können.

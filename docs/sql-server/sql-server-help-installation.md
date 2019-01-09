@@ -10,12 +10,12 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e05a241d81d4a051bd11dc8ce8b80858627afec0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 00db3d0ca027a0f188831281bb2c844b5bc8462d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514530"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202449"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Offlinehilfe und Help Viewer für SQL Server
 
@@ -207,7 +207,7 @@ Wenn Sie F1 drücken oder in einem Dialogfeld in SSMS oder Visual Studio auf **H
 1. Zeigen Sie im Menü „Hilfe“ auf **Hilfeeinstellungen festlegen**, und wählen Sie entweder **In Browser starten** oder **In Help Viewer starten** aus. 
 2. Drücken Sie F1, oder klicken Sie in den Dialogfeldern auf **Hilfe** oder **?**, falls verfügbar, um Themen der kontextbezogenen Onlinehilfe in der ausgewählten Umgebung anzuzeigen.
 
->  [!NOTE]
+> [!NOTE]
 >  Die F1-Hilfe funktioniert nur, wenn Sie online sind. Es sind keine Offlinequellen für F1-Hilfe verfügbar. 
 
 ## <a name="systems-without-internet-access"></a>Systeme ohne Internetzugang

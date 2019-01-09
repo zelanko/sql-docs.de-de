@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a2e30dcf1875b09630516be9d9deb3248a95481e
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: e54aa6bb53e6ce9f34e6647927f29b7aadb97180
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146167"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206879"
 ---
 # <a name="mdx-member-properties---intrinsic-member-properties"></a>MDX – Elementeigenschaften: systeminternen Elementeigenschaften
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -26,13 +26,13 @@ ms.locfileid: "50146167"
   
  Eine Einführung dazu, wie Sie Dimensionselementeigenschaften verwenden und anzeigen, finden Sie unter [Anzeigen von SSAS-Elementeigenschaften innerhalb eines MDX-Abfragefensters in SSMS](http://go.microsoft.com/fwlink/?LinkId=317362).  
   
-> [!NOTE]  
+> [!NOTE]
 >  Als Anbieter, der Kompatibilität mit dem OLAP-Abschnitt der OLE DB-Spezifikation vom März 1999 (2.6) gewährleistet, unterstützt [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] die systeminternen Elementeigenschaften, die in diesem Thema aufgeführt sind.  
->   
+> 
 >  Andere Anbieter als [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] unterstützen möglicherweise weitere systeminterne Elementeigenschaften. Weitere Informationen zu den systeminternen Elementeigenschaften, die von anderen Anbietern unterstützt werden, finden Sie in der Dokumentation des jeweiligen Anbieters.  
   
 ## <a name="types-of-member-properties"></a>Arten von Elementeigenschaften  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] unterstützt zwei Arten von systeminternen Elementeigenschaften:  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] unterstützt zwei Arten von systeminternen Elementeigenschaften:  
   
  Kontextabhängige Elementeigenschaften  
  Diese Elementeigenschaften müssen im Kontext einer bestimmten Hierarchie oder Ebene verwendet werden und stellen Werte für jedes Element der angegebenen Dimension oder Ebene bereit.  
@@ -61,7 +61,7 @@ ms.locfileid: "50146167"
 |--------------|-----------------|  
 |**ID**|Die intern verwaltete ID für das Element.|  
 |**Key**|Der Wert des Elementschlüssels im ursprünglichen Datentyp. MEMBER_KEY wird für Abwärtskompatibilität verwendet.  MEMBER_KEY hat für nicht zusammengesetzte Schlüssel denselben Wert wie KEY0, und die MEMBER_KEY-Eigenschaft ist für zusammengesetzte Schlüssel NULL.|  
-|**KEYx**|Der Schlüssel des Elements, wobei x die nullbasierte Ordnungszahl des Schlüssels ist. KEY0 ist für zusammengesetzte und nicht zusammengesetzte Schlüssel verfügbar, wird jedoch hauptsächlich für zusammengesetzte Schlüssel verwendet.<br /><br /> Bei diesem Schlüsseltyp bilden KEY0, KEY1, KEY2 usw. gemeinsam den zusammengesetzten Schlüssel. Die einzelnen Schlüssel können in einer Abfrage unabhängig voneinander verwendet werden, um den betreffenden Teil des zusammengesetzten Schlüssels zurückzugeben. Beispielsweise wird durch Angabe von KEY0 der erste Teil des zusammengesetzten Schlüssels zurückgegeben und durch Angabe von KEY1 der nächste Teil usw.<br /><br /> Wenn der Schlüssel nicht zusammengesetzt ist, dann ist KEY0 gleich **Key**.<br /><br /> Beachten Sie, dass **KEYx** im Kontext sowie ohne Kontext verwendet werden kann. Aus diesem Grund wird der Schlüssel in beiden Listen angezeigt.<br /><br /> Ein Beispiel zur Verwendung dieser Elementeigenschaft finden Sie unter [Ein einfacher MDX-Trick: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364).|  
+|**KEYx**|Der Schlüssel des Elements, wobei x die nullbasierte Ordnungszahl des Schlüssels ist. KEY0 ist für zusammengesetzte und nicht zusammengesetzte Schlüssel verfügbar, wird jedoch hauptsächlich für zusammengesetzte Schlüssel verwendet.<br /><br /> Bei diesem Schlüsseltyp bilden KEY0, KEY1, KEY2 usw. gemeinsam den zusammengesetzten Schlüssel. Die einzelnen Schlüssel können in einer Abfrage unabhängig voneinander verwendet werden, um den betreffenden Teil des zusammengesetzten Schlüssels zurückzugeben. Beispielsweise wird durch Angabe von KEY0 der erste Teil des zusammengesetzten Schlüssels zurückgegeben und durch Angabe von KEY1 der nächste Teil usw.<br /><br /> Wenn der Schlüssel nicht zusammengesetzt ist, dann ist KEY0 gleich **Key**.<br /><br /> Beachten Sie, dass **KEYx** im Kontext sowie ohne Kontext verwendet werden kann. Aus diesem Grund wird der Schlüssel in beiden Listen angezeigt.<br /><br /> Ein Beispiel zur Verwendung dieser Elementeigenschaft finden Sie unter [ein einfacher MDX-Trick: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364).|  
 |**Name**|Der Name des Elements.|  
   
 ### <a name="properties-syntax-for-context-sensitive-properties"></a>PROPERTIES-Syntax für kontextabhängige Eigenschaften  
@@ -98,7 +98,7 @@ ms.locfileid: "50146167"
 |**HIERARCHY_UNIQUE_NAME**|Der eindeutige Name der Hierarchie. Wenn das Element zu mehreren Hierarchien gehört, gibt es eine Zeile für jede Hierarchie, zu der das Element gehört. Für Anbieter, die eindeutige Namen durch eine Einschränkung generieren, ist jede Komponente dieses Namens begrenzt.|  
 |**IS_DATAMEMBER**|Ein boolescher Wert, der angibt, ob das Element ein Datenelement ist.|  
 |**IS_PLACEHOLDERMEMBER**|Ein boolescher Wert, der angibt, ob das Element ein Platzhalter ist.|  
-|**KEYx**|Der Schlüssel des Elements, wobei x die nullbasierte Ordnungszahl des Schlüssels ist. KEY0 ist für zusammengesetzte und nicht zusammengesetzte Schlüssel verfügbar.<br /><br /> Wenn der Schlüssel nicht zusammengesetzt ist, dann ist KEY0 gleich **Key**.<br /><br /> Bei diesem Schlüsseltyp bilden KEY0, KEY1, KEY2 usw. gemeinsam den zusammengesetzten Schlüssel. Sie können auf jeden einzelnen Schlüssel in einer Abfrage verweisen, um diesen Teil des zusammengesetzten Schlüssels zurückzugeben. Beispielsweise wird durch Angabe von KEY0 der erste Teil des zusammengesetzten Schlüssels zurückgegeben und durch Angabe von KEY1 der nächste Teil usw.<br /><br /> Beachten Sie, dass **KEYx** im Kontext sowie ohne Kontext verwendet werden kann. Aus diesem Grund wird der Schlüssel in beiden Listen angezeigt.<br /><br /> Ein Beispiel zur Verwendung dieser Elementeigenschaft finden Sie unter [Ein einfacher MDX-Trick: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364).|  
+|**KEYx**|Der Schlüssel des Elements, wobei x die nullbasierte Ordnungszahl des Schlüssels ist. KEY0 ist für zusammengesetzte und nicht zusammengesetzte Schlüssel verfügbar.<br /><br /> Wenn der Schlüssel nicht zusammengesetzt ist, dann ist KEY0 gleich **Key**.<br /><br /> Bei diesem Schlüsseltyp bilden KEY0, KEY1, KEY2 usw. gemeinsam den zusammengesetzten Schlüssel. Sie können auf jeden einzelnen Schlüssel in einer Abfrage verweisen, um diesen Teil des zusammengesetzten Schlüssels zurückzugeben. Beispielsweise wird durch Angabe von KEY0 der erste Teil des zusammengesetzten Schlüssels zurückgegeben und durch Angabe von KEY1 der nächste Teil usw.<br /><br /> Beachten Sie, dass **KEYx** im Kontext sowie ohne Kontext verwendet werden kann. Aus diesem Grund wird der Schlüssel in beiden Listen angezeigt.<br /><br /> Ein Beispiel zur Verwendung dieser Elementeigenschaft finden Sie unter [ein einfacher MDX-Trick: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364).|  
 |**LCID** *x*|Die Übersetzung der Elementbeschriftung in den hexadezimalen Wert der Gebietsschema-ID, wobei *x* der dezimale Wert der Gebietsschema-ID ist (z.B. LCID1009 als Englisch-Kanada). Dies ist nur verfügbar, wenn die Beschriftungsspalte der Übersetzung an die Datenquelle gebunden ist.|  
 |**LEVEL_NUMBER**|Der Abstand des Elements vom Stamm der Hierarchie. Die Stammebene entspricht null.|  
 |**LEVEL_UNIQUE_NAME**|Der eindeutige Name der Ebene, zu der das Element gehört. Für Anbieter, die eindeutige Namen durch eine Einschränkung generieren, ist jede Komponente dieses Namens begrenzt.|  
@@ -131,7 +131,7 @@ ms.locfileid: "50146167"
 ### <a name="example"></a>Beispiel  
  Die folgenden Beispiele zeigen MDX-Abfragen, die systeminterne Eigenschaften zurückgeben.  
   
- **Beispiel 1: Verwenden kontextabhängiger systeminterner Eigenschaften in Abfragen**  
+ **Beispiel 1: Verwenden Sie kontextabhängiger systeminterner Eigenschaften in der Abfrage**  
   
  Im folgenden Beispiel werden die übergeordnete ID, der Schlüssel und der Name jeder Produktkategorie zurückgegeben. Beachten Sie, dass die Eigenschaften als Measures verfügbar gemacht werden. Auf diese Weise können Sie die Eigenschaften bei Ausführen der Abfrage in einem Cellset anzeigen, anstatt das Dialogfeld Elementeigenschaften in SSMS zu öffnen. Sie können eine mit der folgenden Abfrage vergleichbare Abfrage ausführen, um Elementmetadaten aus einem bereits bereitgestellten Cube abzurufen.  
   

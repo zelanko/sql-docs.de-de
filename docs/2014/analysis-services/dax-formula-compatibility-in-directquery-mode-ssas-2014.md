@@ -12,17 +12,17 @@ ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 61018db803a8459f10fc6cb0bf49c89dd9c685ed
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 8061cf30107a5bdfff6d8af53e70affb93ff9469
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100321"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372662"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DAX-Formelkompatibilität im DirectQuery-Modus (SSAS 2014)
 Die Programmiersprache Data Analysis Expression (DAX) dienen zum Erstellen von Measures und andere benutzerdefinierten Formeln für die Verwendung in Analysis Services-tabellenmodellen, [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Datenmodellen in Excel-Arbeitsmappen und Datenmodellen für Power BI Desktop. In den meisten Punkten, die Modelle, die Sie in diesen Umgebungen erstellen, identisch sind und können Sie die gleichen Measures, Beziehungen und KPIs usw. Wenn Sie ein tabellarisches Analysis Services-Modell erstellen und es im DirectQuery-Modus bereitstellen, gibt es jedoch einige Einschränkungen für die Formeln, die Sie verwenden können. Dieses Thema bietet einen Überblick über diese Unterschiede, listet die Funktionen, die nicht in SQL Server 2014 Analysis Services-Tabulars-Modell mit Kompatibilitätsgrad 1100 oder 1103 und im DirectQuery-Modus unterstützt werden und listet die Funktionen, die unterstützt werden aber möglicherweise andere Ergebnisse zurückgeben.  
   
-In diesem Thema verwenden wir den Begriff *im Arbeitsspeicher gespeicherten Modells* zum Verweisen auf tabellarische Modelle die vollständig werden im Arbeitsspeicher zwischengespeicherte Daten auf einer im tabellarischen Modus ausgeführten Analysis Services-Server gehostet. Wir verwenden *DirectQuery-Modelle* für tabellarische Modelle zu verweisen, die im DirectQuery-Modus bereitgestellt und/oder erstellt wurden. Weitere Informationen zum DirectQuery-Modus finden Sie unter [DirectQuery-Modus (SSAS – tabellarisch)](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5).  
+In diesem Thema verwenden wir den Begriff *im Arbeitsspeicher gespeicherten Modells* zum Verweisen auf tabellarische Modelle die vollständig werden im Arbeitsspeicher zwischengespeicherte Daten auf einer im tabellarischen Modus ausgeführten Analysis Services-Server gehostet. Wir verwenden *DirectQuery-Modelle* für tabellarische Modelle zu verweisen, die im DirectQuery-Modus bereitgestellt und/oder erstellt wurden. Weitere Informationen zum DirectQuery-Modus finden Sie unter [DirectQuery-Modus (SSAS – tabellarisch)](https://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5).  
   
   
 ## <a name="bkmk_SemanticDifferences"></a>Unterschiede zwischen dem speicherinternen und DirectQuery-Modus  
@@ -51,16 +51,16 @@ Die folgenden Vergleiche geben immer einen Fehler zurück, wenn sie in einer Ber
 Im Allgemeinen toleriert die DAX-Programmiersprache mehr Datentypkonflikte in speicherinternen Modellen und versucht bis zu zweimal, eine implizite Umwandlung von Werten durchzuführen (wie in diesem Abschnitt beschrieben). An einen relationalen Datenspeicher im DirectQuery-Modus gesendete Formeln werden jedoch strenger ausgewertet, wobei die Regeln der relationalen Engine berücksichtigt werden und mit höherer Wahrscheinlichkeit ein Fehlschlag auftritt.  
   
 **Vergleiche von Zeichenfolgen und Zahlen**  
-BEISPIEL: `“2” < 3`  
+BEISPIEL: `"2" < 3`  
   
 Die Formel vergleicht eine Textzeichenfolge mit einer Zahl. Der Ausdruck ist sowohl bei Modellen im DirectQuery-Modus als auch bei speicherinternen Modellen **true** .  
   
 Bei einem speicherinternen Modell lautet das Ergebnis **true** , da Zahlen als Zeichenfolgen implizit in einen numerischen Datentyp für Vergleiche mit anderen Zahlen umgewandelt werden. SQL wandelt auch Textzahlen implizit in Zahlen für den Vergleich mit numerischen Datentypen um.  
   
-Beachten Sie, dass dies eine Änderung des Verhaltens von der ersten Version von [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]darstellt, die **false**zurückgeben würde, da der Text „2“ stets im Vergleich zu einer Zahl als größer betrachtet wird.  
+Beachten Sie, dass dies eine Änderung im Verhalten von der ersten Version von stellt [!INCLUDE[ssGemini](../includes/ssgemini-md.md)], die zurückgeben würde **"false"**, da der Text "2" immer größer als eine beliebige Anzahl berücksichtigt werden sollen.  
   
 **Vergleich von Text mit booleschen Werten**  
-BEISPIEL: `“VERDADERO” = TRUE`  
+BEISPIEL: `"VERDADERO" = TRUE`  
   
 Dieser Ausdruck vergleicht eine Textzeichenfolge mit einem booleschen Wert. Im Allgemeinen führt der Vergleich von einem Zeichenfolgenwert mit einem booleschen Wert bei DirectQuery-Modellen bzw. speicherinternen Modellen zu einem Fehler. Diese Regel gilt jedoch nicht, wenn die Zeichenfolge das Wort **true** oder **false**enthält. Wenn die Zeichenfolge Werte des Typs „true“ oder „false“ enthält, erfolgt eine Umwandlung in einen booleschen Wert. Daraufhin wird der Vergleich ausgeführt und ein logisches Ergebnis zurückgegeben.  
   
@@ -80,7 +80,7 @@ Es gibt in der DAX-Programmiersprache keine Umwandlungsfunktion als solche, aber
 -   Boolesche Werte werden stets als logische Werte in Vergleichen sowie bei Verwendung mit EXACT, AND, OR, &amp;&amp;oder || betrachtet.  
   
 **Umwandeln einer Zeichenfolge in einen booleschen Wert**  
-Bei speicherinternen Modellen sowie DirectQuery-Modellen sind Umwandlungen in boolesche Werte nur bei folgenden Zeichenfolgen zulässig: **""** (leere Zeichenfolge), **true**, **false**. Dabei wird eine leere Zeichenfolge in einen FALSE-Wert umgewandelt.  
+Im speicherinternen und DirectQuery-Modelle, Umwandlungen in boolesche Werte nur bei folgenden Zeichenfolgen zulässig sind: **""** (leere Zeichenfolge), **"true"**, **"false"**; Wenn eine leere Zeichenfolge Umwandlungen in Wert "false".  
   
 Umwandlungen anderer Zeichenfolgen in den booleschen Datentyp führen zu einem Fehler.  
   
@@ -92,10 +92,10 @@ Informationen zu den Regeln für Umwandlungen von Zeichenfolgen in **"DateTime"*
 Modelle, die den speicherinternen Datenspeicher verwenden, unterstützen weniger Textformate für Datumsangaben als die entsprechenden von SQL Server unterstützten Zeichenfolgenformate. Die DAX-Programmiersprache unterstützt jedoch benutzerdefinierte Datums- und Uhrzeitformate.  
   
 **Umwandeln von Zeichenfolgen in andere nicht-boolesche Werte**  
-Bei der Umwandlung von Zeichenfolgen in nicht-boolesche Werte verhält sich der DirectQuery-Modus auf die gleiche Weise wie SQL Server. Weitere Informationen finden Sie unter [CAST und CONVERT (Transact-SQL)](http://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8).  
+Bei der Umwandlung von Zeichenfolgen in nicht-boolesche Werte verhält sich der DirectQuery-Modus auf die gleiche Weise wie SQL Server. Weitere Informationen finden Sie unter [CAST und CONVERT (Transact-SQL)](https://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8).  
   
 **Umwandlung von Zahlen in Zeichenfolgen nicht zulässig**  
-BEISPIEL: `CONCATENATE(102,”,345”)`  
+BEISPIEL: `CONCATENATE(102,",345")`  
   
 Die Umwandlung von Zahlen in Zeichenfolgen ist bei SQL Server nicht zulässig.  
   
@@ -104,7 +104,7 @@ Diese Formel gibt einen Fehler in Tabellenmodellen und im DirectQuery-Modus zur�
 **Keine Unterstützung für Umwandlungen mit zwei Versuchen in DirectQuery**  
 Bei speicherinternen Modellen erfolgt oftmals ein zweiter Umwandlungsversuch, wenn der erste fehlgeschlagen ist. Dies geschieht nicht im DirectQuery-Modus.  
   
-BEISPIEL: `TODAY() + “13:14:15”`  
+BEISPIEL: `TODAY() + "13:14:15"`  
   
 In diesem Ausdruck weist der erste Parameter den Typ **datetime** und der zweite Parameter den Typ **string**auf. Die Umwandlungen werden jedoch im Fall der Kombination der Operanden unterschiedlich gehandhabt. DAX führt eine implizite Umwandlung von **string** in **double**aus. Bei speicherinternen Modellen versucht die Formel-Engine, eine direkte Umwandlung in **double** vorzunehmen. Missling dieser Vorgang, wird versucht, die Zeichenfolge in **datetime** umzuwandeln.  
   
@@ -129,7 +129,7 @@ In Transact-SQL geben Vorgänge, die zu einem numerischen Überlauf führen, ein
 Die gleiche Formel gibt allerdings bei Verwendung in einem speicherinternen Modell eine ganze Zahl mit einer Länge von acht Byte zurück. Das liegt daran, dass die Formel-Engine keine Überprüfungen für numerische Überläufe ausführt.  
   
 **LOG-Funktionen mit Leerzeichen geben andere Ergebnisse zurück.**  
-SQL Server behandelt NULL-Werte und Leerzeichen anders als die xVelocity-Engine. Daher gibt die folgende Formel einen Fehler im DirectQuery-Modus zurück, während sie beim speicherinternen Modell den Unendlichkeitswert (–inf) zurückgibt.  
+SQL Server behandelt NULL-Werte und Leerzeichen anders als die xVelocity-Engine. Die folgende Formel gibt daher einen Fehler zurück, in der DirectQuery-Modus, aber Unendlichkeitswert (– INF-Datei) in-Memory-Modus.  
   
 `EXAMPLE: LOG(blank())`  
   
@@ -167,7 +167,7 @@ Da die zulässigen Datumsbereiche für Excel und SQL Server unterschiedlich sind
   
 -   Frühestes Datum: 1. März 1990  
   
--   Letztes Datum: 31. Dezember 9999  
+-   Spätestes Datum: 31. Dezember 9999  
   
 Wenn in Formeln verwendete Datumsangaben außerhalb dieses Bereichs liegen, führt entweder die Formel zu einem Fehler, oder die Ergebnisse stimmen nicht überein.  
   
@@ -226,7 +226,7 @@ Im DirectQuery-Modus muss der Wert innerhalb des folgenden Bereichs liegen, wenn
   
 -   Minimum: -922337203685477,5808  
   
--   Maximum: 922337203685477,5807  
+-   Maximum: 922337203685477.5807  
   
 **Kombinieren von Währungs- und REAL-Datentypen**  
 BEISPIEL: `Currency sample 1`  
@@ -259,18 +259,18 @@ Im Allgemeinen funktioniert jede Zeichenfolgenbearbeitung, die Spalten mit feste
 Darüber hinaus unterstützen einige Textfunktionen in SQL Server zusätzliche Argumente, die nicht in Excel bereitgestellt werden. Wenn die Formel das fehlende Argument erfordert, können andere Ergebnisse oder Fehler im speicherinternen Modell zurückgegeben werden.  
   
 **Vorgänge, die ein Zeichen mit LEFT, RIGHT usw. zurückgeben, geben möglicherweise das richtige Zeichen zurück – allerdings in einer anderen Schreibweise. Alternativ werden keine Ergebnisse zurückgegeben.**  
-BEISPIEL: `LEFT([“text”], 2)`  
+BEISPIEL: `LEFT(["text"], 2)`  
   
 Im DirectQuery-Modus entspricht die Schreibweise des Zeichens, das zurückgegeben wird, stets dem Buchstaben, der in der Datenbank gespeichert wird. Das xVelocity-Engine verwendet jedoch aus Leistungsgründen einen anderen Algorithmus für die Komprimierung und Indizierung von Werten.  
   
 Standardmäßig wird die Latin1_General-Sortierung verwendet (ohne Berücksichtigung der Groß-/Kleinschreibung und mit Unterscheidung von Akzenten). Sind mehrere Instanzen einer Textzeichenfolge in Kleinbuchstaben, Großbuchstaben oder mit gemischter Schreibweise vorhanden, werden folglich alle Instanzen als gleiche Zeichenfolge betrachtet, und nur die erste Instanz der Zeichenfolge wird im Index gespeichert. Sämtliche Textfunktionen, die bei gespeicherten Zeichenfolgen ausgeführt werden, rufen den angegebenen Teil des indizierten Formulars ab. Daher gibt die Beispielformel den gleichen Wert für die gesamte Spalte zurück und verwendet dabei die erste Instanz als Eingabe.  
   
-[Zeichenfolgenspeicher und -sortierung in tabellarischen Modellen](http://msdn.microsoft.com/8516f0ad-32ee-4688-a304-e705143642ca)  
+[Zeichenfolgenspeicher und -sortierung in tabellarischen Modellen](https://msdn.microsoft.com/8516f0ad-32ee-4688-a304-e705143642ca)  
   
 Dieses Verhalten gilt auch für andere Textfunktionen, einschließlich RIGHT, MID usw.  
   
 **Zeichenfolgenlänge wirkt sich auf Ergebnisse aus**  
-BEISPIEL: `SEARCH(“within string”, “sample target  text”, 1, 1)`  
+BEISPIEL: `SEARCH("within string", "sample target  text", 1, 1)`  
   
 Wenn Sie mit der SEARCH-Funktion nach einer Zeichenfolge suchen und die Zielzeichenfolge länger ist als die WITHIN-Zeichenfolge, löst der DirectQuery-Modus einen Fehler aus.  
   
@@ -283,21 +283,21 @@ Wenn die Ersatzzeichenfolge länger ist als die Originalzeichenfolge, gibt die F
 Bei speicherinternen Modellen entspricht das Verhalten der Formel dem von Excel. Dabei werden die Quellzeichenfolge und Ersatzzeichenfolge verkettet, wodurch CACalifornia zurückgegeben wird.  
   
 **TRIM (implizit) in der Mitte von Zeichenfolgen**  
-BEISPIEL: `TRIM(“ A sample sentence with leading white space”)`  
+BEISPIEL: `TRIM(" A sample sentence with leading white space")`  
   
 Der DirectQuery-Modus übersetzt die DAX-TRIM-Funktion in die SQL-Anweisung `LTRIM(RTRIM(<column>))`. Folglich werden nur führende und nachfolgende Leerstellen entfernt.  
   
 Im Gegensatz dazu entfernt die gleiche Formel in einem speicherinternen Modell Leerzeichen innerhalb der Zeichenfolge – gemäß dem Verhalten von Excel.  
   
 **RTRIM (implizit) mit Verwendung der LEN-Funktion**  
-BEISPIEL: `LEN(‘string_column’)`  
+BEISPIEL: `LEN('string_column')`  
   
 Wie bei SQL Server entfernt auch der DirectQuery-Modus Leerstellen am Ende der Zeichenfolgenspalten automatisch (Ausführung der impliziten RTRIM-Funktion). Daher können Formeln, die die LEN-Funktion verwenden, andere Werte zurückgeben, wenn die Zeichenfolge nachfolgende Leerzeichen aufweist.  
   
 **Der speicherinterne Modus unterstützt zusätzliche Parameter für SUBSTITUTE.**  
-BEISPIEL: `SUBSTITUTE([Title],”Doctor”,”Dr.”)`  
+BEISPIEL: `SUBSTITUTE([Title],"Doctor","Dr.")`  
   
-BEISPIEL: `SUBSTITUTE([Title],”Doctor”,”Dr.”, 2)`  
+BEISPIEL: `SUBSTITUTE([Title],"Doctor","Dr.", 2)`  
   
 Im DirectQuery-Modus können Sie nur die Version dieser Funktion verwenden, die über drei (3) Parameter verfügt: ein Verweis auf eine Spalte, der alte Text und der neue Text. Wenn Sie die zweite Formel verwenden, wird ein Fehler ausgelöst.  
   
@@ -453,7 +453,7 @@ SAMEPERIODLASTYEAR
   
 PARALLELPERIOD  
   
-**Zeitintelligenzfunktionen: Bilanzen**  
+**Zeitintelligenzfunktionen: Führt einen Lastenausgleich**  
   
 OPENINGBALANCEMONTH  
   
@@ -467,7 +467,7 @@ CLOSINGBALANCEQUARTER
   
 CLOSINGBALANCEYEAR  
   
-**Zeitintelligenzfunktionen: vorherige und kommende Zeiträume**  
+**Zeitintelligenzfunktionen: Vorherige und kommende Zeiträume**  
   
 PREVIOUSDAY  
   
@@ -506,6 +506,6 @@ LASTDATE
 DATEADD  
   
 ## <a name="see-also"></a>Siehe auch  
-[DirectQuery-Modus (SSAS – tabellarisch)](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+[DirectQuery-Modus (SSAS – tabellarisch)](https://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 

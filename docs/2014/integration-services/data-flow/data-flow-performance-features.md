@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Aggregate transformation [Integration Services]
@@ -24,12 +23,12 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4a97e86b66efee24757f7f09f04e7016a93417c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5fb7bfa7d068d8ea83fab4c98e6e8f733af7985a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049510"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361472"
 ---
 # <a name="data-flow-performance-features"></a>Funktionen für die Datenflussleistung
   Dieses Thema bietet Vorschläge, wie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete entworfen werden müssen, damit allgemeine Leistungsprobleme vermieden werden. Dieses Thema enthält zudem Informationen zu Funktionen und Tools, die Sie verwenden können, um Leistungsprobleme von Paketen zu beheben.  
@@ -73,15 +72,15 @@ ms.locfileid: "48049510"
  Erhöhen Sie die Puffergröße nicht bis zu dem Punkt, an dem die Auslagerung auf den Datenträger beginnt. Die Auslagerung auf den Datenträger beeinträchtigt die Leistung mehr als eine nicht optimierte Puffergröße. Überwachen Sie den Leistungsindikator „Gespoolte Puffer“ im Leistungs-Snap-In der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Management Console (MMC), um zu bestimmen, ob eine Auslagerung auftritt.  
   
 ### <a name="configure-the-package-for-parallel-execution"></a>Konfigurieren des Pakets zur parallelen Ausführung  
- Die parallele Ausführung verbessert die Leistung auf Computern, die über mehrere physische oder logische Prozessoren verfügen. Um die parallele Ausführung verschiedener Tasks im Paket unterstützen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwendet zwei Eigenschaften: `MaxConcurrentExecutables` und `EngineThreads`.  
+ Die parallele Ausführung verbessert die Leistung auf Computern, die über mehrere physische oder logische Prozessoren verfügen. Um die parallele Ausführung verschiedener Tasks im Paket zu unterstützen, verwendet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] zwei Eigenschaften: `MaxConcurrentExecutables` und `EngineThreads`.  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>Die MaxConcurrentExecutables-Eigenschaft  
- Die `MaxConcurrentExecutables` Eigenschaft ist eine Eigenschaft des Pakets selbst. Diese Eigenschaft definiert, wie viele Tasks gleichzeitig ausgeführt werden können. Der Standardwert ist -1, das bedeutet die Anzahl der physischen oder logischen Prozessoren plus 2.  
+ Die `MaxConcurrentExecutables`-Eigenschaft ist eine Eigenschaft des Pakets selbst. Diese Eigenschaft definiert, wie viele Tasks gleichzeitig ausgeführt werden können. Der Standardwert ist -1, das bedeutet die Anzahl der physischen oder logischen Prozessoren plus 2.  
   
- Stellen Sie sich ein Beispielpaket mit drei Datenflusstasks vor, um zu verstehen, wie diese Eigenschaft funktioniert. Setzen Sie `MaxConcurrentExecutables` , 3, können alle drei Datenflusstasks gleichzeitig ausgeführt. Stellen Sie sich jedoch vor, dass jeder Datenflusstask über 10 Quelle-zu-Ziel-Ausführungsstrukturen verfügt. Wenn Sie `MaxConcurrentExecutables` auf 3 festlegen, wird nicht sichergestellt, dass die Ausführungsstrukturen innerhalb jedes Datenflusstasks parallel ausgeführt werden.  
+ Stellen Sie sich ein Beispielpaket mit drei Datenflusstasks vor, um zu verstehen, wie diese Eigenschaft funktioniert. Wenn Sie `MaxConcurrentExecutables` auf 3 festlegen, können alle drei Datenflusstasks gleichzeitig ausgeführt werden. Stellen Sie sich jedoch vor, dass jeder Datenflusstask über 10 Quelle-zu-Ziel-Ausführungsstrukturen verfügt. Wenn Sie `MaxConcurrentExecutables` auf 3 festlegen, wird nicht sichergestellt, dass die Ausführungsstrukturen innerhalb jedes Datenflusstasks parallel ausgeführt werden.  
   
 #### <a name="the-enginethreads-property"></a>Die EngineThreads-Eigenschaft  
- Die `EngineThreads`-Eigenschaft ist eine Eigenschaft, die jeder Datenflusstask besitzt. Diese Eigenschaft definiert, wie viele Threads die Datenfluss-Engine erstellen und parallel ausführen kann. Die `EngineThreads` Eigenschaft gilt für die Quellthreads, dass die Datenfluss-Engine für Quellen und der Arbeitsthreads, die die Engine für Transformationen und Ziele erstellt wird. Durch das Festlegen von `EngineThreads` auf 10 kann die Engine bis zu zehn Quellthreads und bis zu zehn Arbeitsthreads erstellen.  
+ Die `EngineThreads`-Eigenschaft ist eine Eigenschaft, die jeder Datenflusstask besitzt. Diese Eigenschaft definiert, wie viele Threads die Datenfluss-Engine erstellen und parallel ausführen kann. Die `EngineThreads`-Eigenschaft ist gleichermaßen für die Quellthreads, die die Datenfluss-Engine für Quellen erstellt, und für die Arbeitsthreads, die die Engine für Transformationen und Ziele erstellt, anwendbar. Durch das Festlegen von `EngineThreads` auf 10 kann die Engine bis zu zehn Quellthreads und bis zu zehn Arbeitsthreads erstellen.  
   
  Stellen Sie sich das Beispielpaket mit drei Datenflusstasks vor, um zu verstehen, wie diese Eigenschaft funktioniert. Jeder Datenflusstask enthält zehn Quelle-zu-Ziel-Ausführungsstrukturen. Wenn Sie die EngineThreads-Eigenschaft in jedem Datenflusstask auf 10 festlegen, können alle 30 Ausführungsstrukturen gleichzeitig ausgeführt werden.  
   
@@ -100,14 +99,14 @@ ms.locfileid: "48049510"
  Wenn Sie eine Abfrage erstellen möchten, können Sie die Abfrage eingeben oder den Abfrage-Generator verwenden.  
   
 > [!NOTE]  
->  Wenn Sie ein Paket in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ausführen, werden auf der Registerkarte Status des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers Warnungen aufgelistet. Diese Warnungen umfassen die Identifizierung jeglicher Datenspalten, die dem Datenfluss von einer Quelle zur Verfügung gestellt werden, jedoch dann nicht von Downstream-Datenflusskomponenten verwendet werden. Sie können die `RunInOptimizedMode` Eigenschaft, um diese Spalten automatisch zu entfernen.  
+>  Wenn Sie ein Paket in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ausführen, werden auf der Registerkarte Status des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers Warnungen aufgelistet. Diese Warnungen umfassen die Identifizierung jeglicher Datenspalten, die dem Datenfluss von einer Quelle zur Verfügung gestellt werden, jedoch dann nicht von Downstream-Datenflusskomponenten verwendet werden. Sie können die `RunInOptimizedMode`-Eigenschaft verwenden, um diese Spalten automatisch zu entfernen.  
   
 #### <a name="avoid-unnecessary-sorting"></a>Vermeiden unnötiger Sortierungen  
  Die Sortierung ist generell ein langsamer Vorgang. Durch Vermeiden unnötiger Sortierungen kann die Leistung des Paketdatenflusses verbessert werden.  
   
  Manchmal sind die Quelldaten bereits sortiert, bevor sie von einer Downstreamkomponente verwendet werden. Eine solche Vorsortierung kann auftreten, wenn die SELECT-Abfrage eine ORDER BY-Klausel verwendet hat oder wenn die Daten in sortierter Reihenfolge in die Quelle eingefügt wurden. Für solche vorsortierten Quelldaten können Sie einen Hinweis angeben, dass die Daten sortiert sind, und so die Verwendung einer Transformation zum Sortieren vermeiden, die anderenfalls zum Erfüllen der Sortieranforderungen von bestimmten Downstream-Transformationen erforderlich wäre. (Beispielsweise erfordern die Transformationen für Zusammenführen und Zusammenführungsjoin sortierte Eingaben.) Wenn Sie einen Hinweis geben möchten, dass die Daten sortiert sind, müssen Sie die folgenden Aufgaben ausführen:  
   
--   Legen Sie die `IsSorted` Eigenschaft für die Ausgabe einer upstreamdatenfluss-Komponente auf `True`.  
+-   Legen Sie die `IsSorted`-Eigenschaft auf der Ausgabe einer Upstreamdatenfluss-Komponente auf `True` fest.  
   
 -   Geben Sie die Sortierschlüsselspalten an, in denen die Daten sortiert werden.  
   
@@ -131,20 +130,20 @@ ms.locfileid: "48049510"
  Wenn Sie in einem Datenfluss mehrere Aggregationen erstellen müssen, sollten Sie diese mit einer einzigen Transformation für das Aggregieren erstellen, anstatt mehrere Transformationen zu verwenden. Durch diesen Ansatz wird die Leistung verbessert, wenn eine Aggregation eine Untergruppe einer anderen Aggregation ist, da die Transformation den internen Speicher optimieren kann und die Eingangsdaten nur einmal durchsuchen muss. Wenn eine Aggregation z. B. eine GROUP BY-Klausel und eine AVG-Aggregation verwendet, kann die Leistung dadurch verbessert werden, dass sie in eine Transformation kombiniert werden. Das Ausführen mehrerer Aggregationen innerhalb einer Transformation für das Aggregieren serialisiert jedoch die Aggregationsvorgänge und verbessert daher möglicherweise nicht die Leistung, wenn mehrere Aggregationen unabhängig voneinander berechnet werden müssen.  
   
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>Transformationen für Fuzzysuche und Fuzzygruppierung  
- Informationen zur Leistungsoptimierung der Transformationen für die Fuzzysuche und Fuzzygruppierung finden Sie im Whitepaper [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604)(in Englisch).  
+ Informationen zur Leistungsoptimierung der Transformationen für die Fuzzysuche und Fuzzygruppierung finden Sie im Whitepaper [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)(in Englisch).  
   
 #### <a name="lookup-transformation"></a>Transformation für Suche  
  Minimieren Sie die Größe der Verweisdaten im Speicher, indem Sie eine SELECT-Anweisung eingeben, die nur die von Ihnen benötigten Spalten durchsucht. Diese Option bietet eine bessere Leistung als die Auswahl einer gesamten Tabelle oder Sicht, wodurch eine große Menge an unnötigen Daten zurückgegeben wird.  
   
-#### <a name="merge-join-transformation"></a>Transformation für Zusammenführungsjoin  
- Sie müssen nicht mehr so konfigurieren Sie den Wert des der `MaxBuffersPerInput` Eigenschaft da Microsoft Änderungen, die das Risiko zu reduzieren vorgenommen hat, dass die Transformation für Zusammenführungsjoin übermäßig Arbeitsspeicher verbraucht. Dieses Problem trat in einigen Fällen auf, wenn durch die Eingaben des Zusammenführungsjoins unregelmäßige Daten erzeugt wurden.  
+#### <a name="merge-join-transformation"></a>Merge Join Transformation  
+ Der Wert der `MaxBuffersPerInput`-Eigenschaft muss nicht mehr konfiguriert werden, da Microsoft Änderungen vorgenommen hat, die das Risiko einer übermäßigen Arbeitsspeicherbelegung bei der Transformation für Zusammenführungsjoins reduzieren. Dieses Problem trat in einigen Fällen auf, wenn durch die Eingaben des Zusammenführungsjoins unregelmäßige Daten erzeugt wurden.  
   
 #### <a name="slowly-changing-dimension-transformation"></a>Transformation für langsam veränderliche Dimensionen  
  Der Assistent für langsam veränderliche Dimensionen und die Transformation für langsam veränderliche Dimensionen sind universell einsetzbare Tools, die die Anforderungen der meisten Benutzer erfüllen. Der vom Assistenten generierte Datenfluss ist jedoch nicht leistungsoptimiert.  
   
  In der Regel sind die langsamsten Komponenten in der Transformation für langsam veränderliche Dimensionen die Transformationen für OLE DB-Befehl, die UPDATEs für jeweils eine Zeile ausführen. Daher ist die effizienteste Methode zur Verbesserung der Leistung der Transformation für langsam veränderliche Dimensionen das Ersetzen der Transformationen für OLE DB-Befehl. Sie können diese Transformationen durch Zielkomponenten ersetzen, die alle zu aktualisierenden Zeilen in eine Stagingtabelle speichern. Sie können dann einen Task "SQL ausführen" hinzufügen, der für alle Zeilen gleichzeitig ein einzelnes setbasiertes Transact-SQL-UPDATE ausführt.  
   
- Fortgeschrittene Benutzer können für die Verarbeitung von langsam veränderlichen Dimensionen einen benutzerdefinierten Datenfluss entwerfen, der für große Dimensionen optimiert ist. Eine Erläuterung und ein Beispiel dieses Ansatzes finden Sie im Abschnitt "Unique dimension scenario" im Whitepaper [Project REAL: Business Intelligence ETL Design Practices](http://go.microsoft.com/fwlink/?LinkId=96602)(in Englisch).  
+ Fortgeschrittene Benutzer können für die Verarbeitung von langsam veränderlichen Dimensionen einen benutzerdefinierten Datenfluss entwerfen, der für große Dimensionen optimiert ist. Eine Erläuterung und ein Beispiel dieses Ansatzes finden Sie im Abschnitt "Unique Dimension Scenario" im Whitepaper, [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602).  
   
 ### <a name="destinations"></a>Ziele  
  Wenn Sie die Leistung von Zielen erhöhen möchten, sollten Sie ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ziel verwenden und die Leistung des Ziels testen.  
@@ -167,35 +166,35 @@ ms.locfileid: "48049510"
 ## <a name="related-content"></a>Verwandte Inhalte  
  **Artikel und Blogbeiträge**  
   
--   Technischer Artikel [SQL Server 2005 Integration Services: Eine Leistungsstrategie](http://go.microsoft.com/fwlink/?LinkId=98899)auf technet.microsoft.com  
+-   Technischer Artikel [SQL Server 2005 Integration Services: Eine Leistungsstrategie](https://go.microsoft.com/fwlink/?LinkId=98899), auf technet.microsoft.com  
   
--   Technischer Artikel [Integration Services: Leistungsoptimierungstechniken](http://go.microsoft.com/fwlink/?LinkId=98900)auf technet.microsoft.com  
+-   Technischer Artikel [Integration Services: Leistungsoptimierungstechniken](https://go.microsoft.com/fwlink/?LinkId=98900), auf technet.microsoft.com  
   
 -   Technischer Artikel [Erhöhen des Durchsatzes von Pipelines durch Aufteilen synchroner Transformationen in mehrere Tasks](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)auf sqlcat.com  
   
--   Technischer Artikel [The Data Loading Performance Guide (Leistungsleitfaden für das Laden von Daten)](http://go.microsoft.com/fwlink/?LinkId=220816)auf msdn.microsoft.com  
+-   Technischer Artikel [The Data Loading Performance Guide (Leistungsleitfaden für das Laden von Daten)](https://go.microsoft.com/fwlink/?LinkId=220816)auf msdn.microsoft.com  
   
--   Technischer Artikel mit [Empfehlungen zum schnellen Laden großer Datenmengen (1 TB in 30 Minuten)](http://go.microsoft.com/fwlink/?LinkId=220817)auf msdn.microsoft.com  
+-   Technischer Artikel mit [Empfehlungen zum schnellen Laden großer Datenmengen (1 TB in 30 Minuten)](https://go.microsoft.com/fwlink/?LinkId=220817)auf msdn.microsoft.com  
   
--   Technischer Artikel mit den [Top 10-Empfehlungen für SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkId=220818)auf sqlcat.com  
+-   Technischer Artikel mit den [Top 10-Empfehlungen für SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=220818)auf sqlcat.com  
   
--   Technischer Artikel und Beispiel zum [ausgeglichenen Datenverteiler für SSIS](http://go.microsoft.com/fwlink/?LinkId=220822)auf sqlcat.com  
+-   Technischer Artikel und Beispiel, [The "Balanced Data Distributor" for SSIS (Ausgeglichene Datenverteilung für SSIS)](https://go.microsoft.com/fwlink/?LinkId=220822) auf sqlcat.com  
   
--   Blogbeitrag [Beheben von Leistungsproblemen bei SSIS-Paketen](http://go.microsoft.com/fwlink/?LinkId=238156)auf blogs.msdn.com  
+-   Blogbeitrag [Beheben von Leistungsproblemen bei SSIS-Paketen](https://go.microsoft.com/fwlink/?LinkId=238156)auf blogs.msdn.com  
   
  **Videos**  
   
--   Videoserie zum [Entwerfen und Optimieren der Leistung von SSIS-Paketen im Unternehmen (SQL-Videoserie)](http://go.microsoft.com/fwlink/?LinkId=400878)  
+-   Videoserie zum [Entwerfen und Optimieren der Leistung von SSIS-Paketen im Unternehmen (SQL-Videoserie)](https://go.microsoft.com/fwlink/?LinkId=400878)  
   
--   Video [Tuning Your SSIS Package Data Flow in the Enterprise (SQL Server Video)](http://technet.microsoft.com/sqlserver/ff686901.aspx)(Optimieren des SSIS-Paketdatenflusses im Unternehmen) auf technet.microsoft.com  
+-   Video [Tuning Your SSIS Package Data Flow in the Enterprise (SQL Server Video)](https://technet.microsoft.com/sqlserver/ff686901.aspx)(Optimieren des SSIS-Paketdatenflusses im Unternehmen) auf technet.microsoft.com  
   
--   Video [Understanding SSIS Data Flow Buffers (SQL Server Video)](http://technet.microsoft.com/sqlserver/ff686905.aspx)(Grundlegendes zu SSIS-Datenflusspuffern) auf technet.microsoft.com  
+-   Video [Understanding SSIS Data Flow Buffers (SQL Server Video)](https://technet.microsoft.com/sqlserver/ff686905.aspx)(Grundlegendes zu SSIS-Datenflusspuffern) auf technet.microsoft.com  
   
--   Video [Leistungsentwurfsmuster zu Microsoft SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409)auf channel9.msdn.com  
+-   Video [Leistungsentwurfsmuster zu Microsoft SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409)auf channel9.msdn.com  
   
--   Präsentation zur [Nutzung der Verbesserungen am SQL Server 2008 SSIS-Datenfluss-Engine bei Microsoft IT](http://go.microsoft.com/fwlink/?LinkId=217660)auf sqlcat.com  
+-   Präsentation zur [Nutzung der Verbesserungen am SQL Server 2008 SSIS-Datenfluss-Engine bei Microsoft IT](https://go.microsoft.com/fwlink/?LinkId=217660)auf sqlcat.com  
   
--   Video [Ausgeglichener Datenverteiler](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)auf technet.microsoft.com  
+-   Video [Ausgeglichener Datenverteiler](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)auf technet.microsoft.com  
   
 ## <a name="see-also"></a>Siehe auch  
  [Tools zur Problembehandlung für die Paketentwicklung](../troubleshooting/troubleshooting-tools-for-package-development.md)   

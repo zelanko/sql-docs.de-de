@@ -1,6 +1,6 @@
 ---
-title: Installieren von SQL Server-Machine learning-R und Python-Komponenten ohne Internetzugang | Microsoft-Dokumentation
-description: Offline oder getrennt Machine Learning-R und Python-Setup für SQL Server-Instanz isoliert.
+title: Installieren von R-Sprache und Python-Komponenten ohne Internetzugang – SQL Server-Machine Learning
+description: Offline oder getrennt Machine Learning-R und Python-Setup auf isolierte Instanz von SQL Server hinter einer Netzwerkfirewall.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/01/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 24369c69df30e2723ce0c2098f2050ed0e5d7b20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01f871b6f6a96c053daca13060cac1223415eb20
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150546"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596991"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Installieren von SQL Server-Machine learning-R und Python auf Computern ohne Internetzugang
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,7 +55,7 @@ Microsoft Python-Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwl
 
 ## <a name="sql-server-2016-offline-install"></a>SQL Server 2016-offline-Installation
 
-SQL Server 2016-in-Database-Analyse ist R ausschließlich mit nur zwei CAB-Dateien für die Produktpakete und die Microsoft-Distribution von Open-Source-R bzw. Starten, indem Sie eine dieser Versionen installieren: RTM, SP 1, SP 2 ausgeführt wird. Sobald eine Basisinstallation vorhanden ist, können die kumulativen Updates als Nächstes angewendet werden.
+SQL Server 2016-in-Database-Analyse ist R ausschließlich mit nur zwei CAB-Dateien für die Produktpakete und die Microsoft-Distribution von Open-Source-R bzw. Starten Sie eine dieser Versionen installieren: RTM SP 1, SP 2. Sobald eine Basisinstallation vorhanden ist, können die kumulativen Updates als Nächstes angewendet werden.
 
 Laden Sie auf einem Computer, die über einen Internetzugang verfügen die CAB-Dateien von Setup verwendet werden, um die datenbankinternen Analysen auf SQL Server 2016 zu installieren. 
 
@@ -121,9 +121,22 @@ Es wird empfohlen, dass Sie das neueste kumulative Update für die Datenbank-Eng
 
 6. Führen Sie das Setup aus. Akzeptieren Sie die Lizenzbedingungen, und überprüfen Sie auf der Seite Funktionsauswahl, die Sie die Funktionen, die für die kumulativen Updates angewendet werden. Jede Funktion, die für die aktuelle Instanz, einschließlich Machine Learning-Features installiert sind, sollte angezeigt werden.
 
-  ![](media/cumulative-update-feature-selection.png)
+  ![Wählen Sie die Features aus der Funktionsstruktur](media/cumulative-update-feature-selection.png "Funktionsliste")
 
 5. Weiterhin über den Assistenten, akzeptieren die Lizenzbedingungen für die Verteilung von R und Python. Während der Installation werden Sie aufgefordert, den Speicherort des Ordners mit den aktualisierten CAB-Dateien auszuwählen.
+
+## <a name="set-environment-variables"></a>Festlegen von Umgebungsvariablen
+
+Sie sollten für die R-Funktionsintegration nur Festlegen der **MKL_CBWR** -Umgebungsvariable so fest, [sicherstellen von konsistenten Ausgabe](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) von Intel Math Kernel Library (MKL) Berechnungen.
+
+1. Klicken Sie in der Systemsteuerung auf **System und Sicherheit** > **System** > **Erweiterte Systemeinstellungen**  >   **Umgebungsvariablen**.
+
+2. Erstellen Sie eine neue Variable für Benutzer- oder Systemkonto. 
+
+  + Set-Variablennamen, um `MKL_CBWR`
+  + Legen Sie den Wert den Variablen auf `AUTO`
+
+Dieser Schritt erfordert einen Neustart des Servers. Wenn Sie sind im Begriff, die Ausführung des Skripts zu aktivieren, können Sie beim Neustart halten deaktiviert, bis alle Aufgaben Konfiguration erfolgt.
 
 ## <a name="post-install-configuration"></a>Konfiguration nach der Installation
 
