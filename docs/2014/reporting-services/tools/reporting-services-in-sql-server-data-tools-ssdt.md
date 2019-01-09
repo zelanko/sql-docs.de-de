@@ -13,12 +13,12 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: fe561dcba4a0cff5b58ef7810b27f30b1c95e228
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
-ms.translationtype: MT
+ms.openlocfilehash: 5fafd1a86686b7609a8b6e0241c05cc858f2dc41
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906300"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409697"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services in SQL Server-Datentools (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] ist eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] -Umgebung mit spezifischen Erweiterungen auf Business Intelligence-Lösungen. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] ist in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] enthalten.  
@@ -49,7 +49,7 @@ ms.locfileid: "48906300"
  ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#bkmk_Top)  
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Fenster und Bereiche des Berichts-Designers  
- Berichts-Designer werden zwei Ansichten unterstützt: **Entwurf** zum Definieren der Berichtsdaten und Berichtslayout und **Vorschau** zum Anzeigen einer gerenderten Ansicht des Berichts. In jeder Ansicht können Sie mehrere Fenster anzeigen, die Sie beim Entwerfen unterstützen. Außerdem können Sie einen gerenderten Bericht anzeigen.  
+ Im Berichts-Designer werden zwei Ansichten unterstützt: **Entwurf** zum Definieren der Berichtsdaten und Berichtslayout und **Vorschau** zum Anzeigen einer gerenderten Ansicht des Berichts. In jeder Ansicht können Sie mehrere Fenster anzeigen, die Sie beim Entwerfen unterstützen. Außerdem können Sie einen gerenderten Bericht anzeigen.  
   
 ###  <a name="bkmk_ReportDataPane"></a> Berichtsdatenbereich  
  im Berichtsdatenbereich werden integrierte Felder, Datenquellen, Datasets, Feldauflistungen, Berichtsparameter und Bilder angezeigt.  
@@ -188,7 +188,7 @@ ms.locfileid: "48906300"
   
 -   **Berichtseigenschaften** Wählen Sie diese Option aus, um das Dialogfeld **Berichtseigenschaften** zu öffnen. In diesem Dialogfeld können Sie die allgemeinen Berichtseigenschaften, wie den Namen des Autors und den Rasterabstand zuweisen, und Sie können Eigenschaften für das Berichtslayout, wie die Anzahl der Spalten und die Seitengröße angeben. Sie können darüber hinaus benutzerdefinierten Code, Verweise auf Assemblys und Klassen sowie die Namen der Datenausgabeelemente, Datentransformationen und Datenschemas einschließen.  
   
--   **Sicht** Schalten Sie hiermit zwischen den zwei Berichts-Designer-Registerkarten um: Entwurf und Vorschau.  
+-   **Ansicht** Wechseln zwischen den zwei Berichts-Designer-Registerkarten: Entwurf und Vorschau.  
   
 -   **Seitenkopf** Hiermit können Sie dem Bericht einen Seitenkopf hinzufügen oder den Seitenkopf löschen. Wenn Sie einen Seitenkopf löschen, werden alle Elemente im Seitenkopf gelöscht.  
   

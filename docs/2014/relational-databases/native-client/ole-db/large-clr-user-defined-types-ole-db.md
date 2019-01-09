@@ -12,12 +12,12 @@ ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92569bd943801a5a8c45947a7fdee65192b398ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1aea946703b9ebe06c32fcc25044a3b68326625e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152756"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398133"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Große benutzerdefinierte CLR-Typen (OLE DB)
   In diesem Abschnitt werden Änderungen an OLE DB in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client erläutert, durch die große benutzerdefinierte Common Language Runtime-Typen (CLR-UDTs) unterstützt werden.  
@@ -29,7 +29,7 @@ ms.locfileid: "48152756"
   
  In der folgenden Tabelle wird die Datentypzuordnung in Parametern und Rowsets dargestellt:  
   
-|SQL Server-Datentyp|OLE DB-Datentyp|Speicherlayout|value|  
+|SQL Server-Datentyp|OLE DB-Datentyp|Speicherlayout|Wert|  
 |--------------------------|----------------------|-------------------|-----------|  
 |CLR-UDT|DBTYPE_UDT|BYTE[](Bytearray)\)|132 (oledb.h)|  
   
@@ -118,13 +118,13 @@ ms.locfileid: "48152756"
 |Binding-Datentyp|UDT zu Server|Nicht-UDT zu Server|UDT von Server|Nicht-UDT von Server|  
 |----------------------|-------------------|------------------------|---------------------|--------------------------|  
 |DBTYPE_UDT|Unterstützt (5)|Fehler (1)|Unterstützt (5)|Fehler (4)|  
-|DBTYPE_BYTES|Unterstützt (5)|–|Unterstützt (5)|–|  
-|DBTYPE_WSTR|Unterstützt (2), (5)|–|Unterstützt (3), (5), (6)|–|  
-|DBTYPE_BSTR|Unterstützt (2), (5)|–|Unterstützt (3), (5)|–|  
-|DBTYPE_STR|Unterstützt (2), (5)|–|Unterstützt (3), (5)|–|  
-|DBTYPE_IUNKNOWN|Unterstützt (6)|–|Unterstützt (6)|–|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Unterstützt (5)|–|Unterstützt (3), (5)|–|  
-|DBTYPE_VARIANT (VT_BSTR)|Unterstützt (2), (5)|–|–|–|  
+|DBTYPE_BYTES|Unterstützt (5)|Nicht zutreffend|Unterstützt (5)|Nicht zutreffend|  
+|DBTYPE_WSTR|Unterstützt (2), (5)|Nicht zutreffend|Unterstützt (3), (5), (6)|Nicht zutreffend|  
+|DBTYPE_BSTR|Unterstützt (2), (5)|Nicht zutreffend|Unterstützt (3), (5)|Nicht zutreffend|  
+|DBTYPE_STR|Unterstützt (2), (5)|Nicht zutreffend|Unterstützt (3), (5)|Nicht zutreffend|  
+|DBTYPE_IUNKNOWN|Unterstützt (6)|Nicht zutreffend|Unterstützt (6)|Nicht zutreffend|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Unterstützt (5)|Nicht zutreffend|Unterstützt (3), (5)|Nicht zutreffend|  
+|DBTYPE_VARIANT (VT_BSTR)|Unterstützt (2), (5)|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|  
   
 ### <a name="key-to-symbols"></a>Aufschlüsselung der Symbole  
   

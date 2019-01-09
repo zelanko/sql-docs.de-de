@@ -1,5 +1,5 @@
 ---
-title: Neuronale Netzwerkmodellabfragen | Microsoft Docs
+title: Abfragebeispiele für neuronale Netzwerke | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 66f7979dbcf2b547e8f24476f057616c2cd7d3cd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3a9829df9c616e49bca6802512f405c676d498e6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018627"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516567"
 ---
 # <a name="neural-network-model-query-examples"></a>Neuronale Beispiele für Netzwerkmodellabfragen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,10 +39,10 @@ ms.locfileid: "34018627"
 ## <a name="finding-information-about-a-neural-network-model"></a>Suchen nach Informationen über ein neuronales Netzwerkmodell  
  Alle Miningmodelle machen den vom Algorithmus erfassten Inhalt nach einem standardisierten Schema verfügbar. Dieses Schema wird als Miningmodell-Schemarowset bezeichnet. Diese Information bietet Details über das Modell und umfasst grundlegende Metadaten, bei der Analyse ermittelte Strukturen und für die Verarbeitung verwendete Parameter. Abfragen für den Modellinhalt können Sie mithilfe von DMX-Anweisungen (Data Mining-Erweiterungen) erstellen.  
   
-###  <a name="bkmk_Query1"></a> Beispielabfrage 1: Abrufen von Modellmetadaten mit DMX  
+###  <a name="bkmk_Query1"></a> Beispielabfrage 1: Abrufen von Modellmetadaten mithilfe von DMX  
  Die folgende Abfrage gibt einige grundlegende Metadaten über ein Modell zurück, das mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus erstellt wurde. In einem neuronalen Netzwerkmodell enthält der übergeordnete Knoten des Modells nur den Namen des Modells, den Namen der Datenbank, in der das Modell gespeichert ist, und die Anzahl der untergeordneten Knoten. Der Knoten für Randstatistik (NODE_TYPE = 24) stellt sowohl diese grundlegenden Metadaten als auch einige abgeleitete statistische Daten über die in dem Modell verwendeten Eingabespalten zur Verfügung.  
   
- Die folgende Beispielabfrage basiert auf dem Miningmodell mit dem Namen ,das Sie im [Data Mining-Lernprogramm für Fortgeschrittene](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b) `Call Center Default NN`erstellen. Das Modell verwendet Daten von einem Callcenter, um mögliche Korrelationen zwischen Personalbesetzung, Anzahl der Anrufe, Bestellungen und Problemen zu untersuchen. Mit der DMX-Anweisung werden Daten vom Knoten für Randstatistik des neuronalen Netzwerkmodells abgerufen. Die Abfrage umfasst das FLATTENED-Schlüsselwort, da die statistischen Eingabeattributwerte, die von Interesse sind, in einer geschachtelten Tabelle, NODE_DISTRIBUTION, gespeichert sind. Wenn der Abfrageanbieter hierarchische Rowsets unterstützt, muss das FLATTENED-Schlüsselwort nicht verwendet werden.  
+ Die folgende Beispielabfrage basiert auf dem Miningmodell mit dem Namen [](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b), das Sie im Data Mining-Lernprogramm für Fortgeschrittene `Call Center Default NN`erstellen. Das Modell verwendet Daten von einem Callcenter, um mögliche Korrelationen zwischen Personalbesetzung, Anzahl der Anrufe, Bestellungen und Problemen zu untersuchen. Mit der DMX-Anweisung werden Daten vom Knoten für Randstatistik des neuronalen Netzwerkmodells abgerufen. Die Abfrage umfasst das FLATTENED-Schlüsselwort, da die statistischen Eingabeattributwerte, die von Interesse sind, in einer geschachtelten Tabelle, NODE_DISTRIBUTION, gespeichert sind. Wenn der Abfrageanbieter hierarchische Rowsets unterstützt, muss das FLATTENED-Schlüsselwort nicht verwendet werden.  
   
 ```  
 SELECT FLATTENED MODEL_CATALOG, MODEL_NAME,   
@@ -59,9 +59,9 @@ WHERE NODE_TYPE = 24
   
  Beispielergebnisse:  
   
-|MODEL_CATALOG|MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
+|MODEL_CATALOG|MODEL_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |--------------------|-----------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
-|Adventure Works DW Multidimensional 2012|Call Center NN|Average Time Per Issue|Nicht vorhanden|0|0|1|  
+|Adventure Works DW Multidimensional 2012|Call Center NN|Average Time Per Issue|Missing|0|0|1|  
 |Adventure Works DW Multidimensional 2012|Call Center NN|Average Time Per Issue|< 64.7094100096|11|0.407407407|5|  
   
  Eine Definition der Bedeutung der Spalten im Schemarowset im Kontext eines neuronalen Netzwerkmodells finden Sie unter [Miningmodellinhalt von neuronalen Netzwerkmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)erstellen.  
@@ -151,7 +151,7 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
   
  Beispielergebnisse:  
   
-|NODE_UNIQUE_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.VALUETYPE|  
+|NODE_UNIQUE_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.VALUETYPE|  
 |------------------------|-----------------------|------------------------|-----------------|  
 |70000000200000000|6000000000000000a|-0.178616518|7|  
 |70000000200000000|6000000000000000b|-0.267561918|7|  
@@ -174,7 +174,7 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
 ## <a name="using-a-neural-network-model-to-make-predictions"></a>Verwenden eines neuronalen Netzwerkmodells zum Erstellen von Vorhersagen  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus unterstützt sowohl Klassifikation als auch Regression. Sie können Vorhersagefunktionen mit diesen Modellen verwenden, um neue Daten zur Verfügung zu stellen und entweder SINGLETON- oder Batchvorhersagen zu erstellen.  
   
-###  <a name="bkmk_Query5"></a> Beispielabfrage 5: Erstellen einer SINGLETON-Vorhersage  
+###  <a name="bkmk_Query5"></a> Beispielabfrage 5: Erstellen einer Singleton-Vorhersage  
  Die einfachste Methode, eine Vorhersageabfrage in einem neuronalen Netzwerkmodell zu erstellen, stellt der Generator für Vorhersageabfragen dar. Dieser ist auf der Registerkarte **Miningvorhersage** des Data Mining Designer sowohl in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] als auch in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]verfügbar. Sie können das Modell im [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Viewer für neuronale Netzwerke durchsuchen, um Attribute von Interesse zu filtern und Trends anzuzeigen. Anschließend können Sie auf die Registerkarte **Miningvorhersage** wechseln, um eine Abfrage zu erstellen und neue Werte für diese Trends vorherzusagen.  
   
  Sie können beispielsweise das Callcentermodell durchsuchen, um Korrelationen zwischen der Anzahl der Bestellungen und anderen Attributen anzuzeigen. Zu diesem Zweck öffnen Sie das Modell im Viewer, und für **Eingabe**Option  **\<alle >**.  Wählen Sie anschließend für **Ausgabe**die Option **Anzahl der Bestellungen**aus. Wählen Sie für **Wert 1**den Bereich aus, der die meisten Bestellungen repräsentiert, und für **Wert 2**den Bereich, der die wenigsten Bestellungen darstellt. Sie können dann auf einen Blick alle Attribute sehen, die das Modell mit der Anzahl der Bestellungen korreliert.  
@@ -192,9 +192,9 @@ NATURAL PREDICTION JOIN
   
  Beispielergebnisse:  
   
-|Predicted Orders|Wahrscheinlichkeit|  
+|Predicted Orders|Probability|  
 |----------------------|-----------------|  
-|364|0.9532…|  
+|364|0.9532...|  
   
  Die vorhergesagte Absatzmenge ist größer als der aktuelle Absatzbereich für Dienstag, und die Wahrscheinlichkeit für die Vorhersage ist sehr hoch. Sie können jedoch auch mehrere Vorhersagen erstellen, indem Sie einen Batchprozess verwenden, um verschiedene Hypothesen für das Modell zu testen.  
   
@@ -207,20 +207,20 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |Vorhersagefunktion|Verwendung|  
-|[IsDescendant & #40; DMX & #41;](../../dmx/isdescendant-dmx.md)|Bestimmt, ob ein Knoten ein untergeordnetes Element eines anderen Knotens im Diagramm für neuronale Netzwerke ist.|  
-|[PredictAdjustedProbability & #40; DMX & #41;](../../dmx/predictadjustedprobability-dmx.md)|Gibt die gewichtete Wahrscheinlichkeit zurück.|  
-|["PredictHistogram" & #40; DMX & #41;](../../dmx/predicthistogram-dmx.md)|Gibt eine Tabelle mit Werten zurück, die sich auf den aktuellen vorhergesagten Wert beziehen.|  
+|[IsDescendant &#40;DMX&#41;](../../dmx/isdescendant-dmx.md)|Bestimmt, ob ein Knoten ein untergeordnetes Element eines anderen Knotens im Diagramm für neuronale Netzwerke ist.|  
+|[PredictAdjustedProbability &#40;DMX&#41;](../../dmx/predictadjustedprobability-dmx.md)|Gibt die gewichtete Wahrscheinlichkeit zurück.|  
+|[PredictHistogram &#40;DMX&#41;](../../dmx/predicthistogram-dmx.md)|Gibt eine Tabelle mit Werten zurück, die sich auf den aktuellen vorhergesagten Wert beziehen.|  
 |[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|Gibt die Varianz für den vorhergesagten Wert zurück.|  
-|[PredictProbability & #40; DMX & #41;](../../dmx/predictprobability-dmx.md)|Gibt die Wahrscheinlichkeit für den vorhergesagten Wert zurück.|  
-|[PredictStdev & #40; DMX & #41;](../../dmx/predictstdev-dmx.md)|Gibt die Standardabweichung für den vorhergesagten Wert zurück.|  
-|[PredictSupport & #40; DMX & #41;](../../dmx/predictsupport-dmx.md)|Für neuronale Netzwerk- und logistische Regressionsmodelle wird ein einzelner Wert zurückgegeben, der die Größe des Trainingssatzes für das gesamte Modell darstellt.|  
+|[PredictProbability &#40;DMX&#41;](../../dmx/predictprobability-dmx.md)|Gibt die Wahrscheinlichkeit für den vorhergesagten Wert zurück.|  
+|[PredictStdev &#40;DMX&#41;](../../dmx/predictstdev-dmx.md)|Gibt die Standardabweichung für den vorhergesagten Wert zurück.|  
+|[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|Für neuronale Netzwerk- und logistische Regressionsmodelle wird ein einzelner Wert zurückgegeben, der die Größe des Trainingssatzes für das gesamte Modell darstellt.|  
   
  Eine Liste der Funktionen, die allen [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Algorithmen gemeinsam sind, finden Sie in der [Algorithmusreferenz (Analysis Services – Data Mining)](https://technet.microsoft.com/library/bb895228\(v=sql.105\).aspx). Die Syntax einzelner Funktionen finden Sie unter [Data Mining-Erweiterungen &#40;DMX&#41; – Funktionsreferenz](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Microsoft Neural Network-Algorithmus](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
- [Technische Referenz zu Microsoft Neural Network-Algorithmus](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
- [Miningmodellinhalt, neuronale Netzwerkmodelle & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Lektion 5: Erstellen von neuronalen Netzwerk und logistischen Regressionsmodellen & #40; Datamining-Lernprogramm für fortgeschrittene & #41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
+ [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Technische Referenz für den Microsoft Neural Network-Algorithmus](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
+ [Miningmodellinhalt von neuronalen Netzwerkmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Lektion 5: Erstellen von neuronalen Netzwerk- und logistischen Regressionsmodellen &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
   
   

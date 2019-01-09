@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - process nodes [SQL Server Profiler]
@@ -20,19 +19,19 @@ ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb04d2fd2b0587863d59d90a4fff7f949c108ec7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca1882faa9c61536d1ef025058322f141beedafd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176580"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780682"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>Analysieren von Deadlocks mit SQL Server Profiler
   Verwenden Sie [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , um die Ursache für einen Deadlock zu identifizieren. Ein Deadlock tritt dann auf, wenn eine zyklische Abhängigkeit zwischen mindestens zwei Threads oder Prozessen für eine beliebige Gruppe von Ressourcen in SQL Server besteht. Mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]können Sie eine Ablaufverfolgung erstellen, die Deadlockereignisse zu Analysezwecken aufzeichnet, wiedergibt und anzeigt.  
   
  Um eine Ablaufverfolgung für Deadlockereignisse auszuführen, fügen Sie die **Deadlock graph** -Ereignisklasse zu einer Ablaufverfolgung hinzu. Diese Ereignisklasse füllt die **TextData** -Datenspalte in der Ablaufverfolgung mit XML-Daten zum Prozess sowie zu vom Deadlock betroffenen Objekten auf. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] kann das XML-Dokument in eine Deadlock-XML-Datei (.xdl) extrahieren, die Sie später in SQL Server Management Studio anzeigen können. Sie können [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] so konfigurieren, dass **Deadlock graph** -Ereignisse entweder in eine einzelne Datei mit allen **Deadlock graph** -Ereignissen oder in separate Dateien extrahiert werden. Das Extrahieren kann auf eine der folgenden Arten ausgeführt werden:  
   
--   Beim Konfigurieren der Ablaufverfolgung über die Registerkarte **Ereignisextraktionseinstellungen** . Beachten Sie, dass diese Registerkarte erst angezeigt wird, wenn Sie das **Deadlock graph** -Ereignis auf der Registerkarte **Ereignisauswahl** ausgewählt haben.  
+-   Beim Konfigurieren der Ablaufverfolgung über die Registerkarte **Ereignisextraktionseinstellungen** . Beachten Sie, dass diese Registerkarte erst angezeigt wird, wenn Sie das Deadlock graph -Ereignis auf der Registerkarte **Ereignisauswahl** ausgewählt haben.  
   
 -   Mithilfe der Option **SQL Server-Ereignisse extrahieren** im Menü **Datei**  
   
@@ -48,7 +47,7 @@ ms.locfileid: "48176580"
  Ein Datenbankobjekt, beispielsweise eine Tabelle, ein Index oder eine Zeile  
   
  Rahmen  
- Die Beziehung zwischen einen Prozess und einer Ressource. Ein `request` -Rahmen tritt auf, wenn ein Prozess für eine Ressource wartet. Ein `owner` -Rahmen tritt auf, wenn eine Ressource für einen Prozess wartet. Die Rahmenbeschreibung enthält den Sperrmodus. Beispiel: **Modus: X**.  
+ Die Beziehung zwischen einen Prozess und einer Ressource. Ein `request`-Rahmen tritt auf, wenn ein Prozess auf eine Ressource wartet. Ein `owner`-Rahmen tritt auf, wenn eine Ressource auf einen Prozess wartet. Die Rahmenbeschreibung enthält den Sperrmodus. Z. B. **Modus: X**.  
   
 ## <a name="deadlock-process-node"></a>Deadlock-Prozessknoten  
  In einem Wartediagramm enthält der Prozessknoten Informationen zum Prozess. In der folgenden Tabelle werden die Komponenten eines Prozesses erläutert.  
@@ -63,7 +62,7 @@ ms.locfileid: "48176580"
 |Besitzer-ID|Transaktions-ID für die Prozesse, die Transaktionen verwenden und sich aufgrund einer Sperre gegenwärtig im Wartezustand befinden|  
 |Transaktionsdeskriptor|Zeiger auf den Transaktionsdeskriptor, der den Transaktionszustand beschreibt|  
 |Eingabepuffer|Eingabepuffer des aktuellen Prozesses. Er definiert den Ereignistyp und die ausgeführte Anweisung. Zulässige Werte:<br /><br /> **Sprache**<br /><br /> **RPC**<br /><br /> **Keine**|  
-|-Anweisung.|Der Anweisungstyp. Folgende Werte sind möglich:<br /><br /> **NOP**<br /><br /> **SELECT**<br /><br /> **UPDATE**<br /><br /> **INSERT**<br /><br /> **DELETE**<br /><br /> **Unknown**|  
+|-Anweisung.|Der Anweisungstyp. Dabei sind folgende Werte möglich:<br /><br /> **NOP**<br /><br /> **SELECT**<br /><br /> **UPDATE**<br /><br /> **INSERT**<br /><br /> **DELETE**<br /><br /> **Unknown**|  
   
 ## <a name="deadlock-resource-node"></a>Deadlock-Ressourcenknoten  
  Bei einem Deadlock warten zwei Prozesse auf eine Ressource, die vom jeweils anderen Prozess beansprucht wird. In einem Deadlockdiagramm werden die Ressourcen als Ressourcenknoten angezeigt.  

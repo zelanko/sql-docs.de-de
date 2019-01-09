@@ -15,12 +15,12 @@ ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2ed0ba22087a12f08e7a951a89a7ca989bb6487f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7627a52322563a03881d138f6d3244d97cb8ca29
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110592"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372552"
 ---
 # <a name="neural-network-model-query-examples"></a>Neuronale Beispiele für Netzwerkmodellabfragen
   Beim Schreiben einer Abfrage für ein Data Mining-Modell können Sie eine Inhaltsabfrage erstellen, die Details über die bei der Analyse ermittelten Muster liefert. Alternativ dazu können Sie auch eine Vorhersageabfrage erstellen, die Vorhersagen für neue Daten anhand der im Modell befindlichen Muster vornimmt. Eine Inhaltsabfrage für ein neuronales Netzwerkmodell ruft beispielsweise Modellmetadaten wie die Anzahl der verborgenen Ebenen ab. Alternativ schlägt eine Vorhersageabfrage Klassifikationen basierend auf einer Eingabe vor und stellt wahlweise Wahrscheinlichkeiten für jede Klassifikation zur Verfügung.  
@@ -44,7 +44,7 @@ ms.locfileid: "48110592"
 ## <a name="finding-information-about-a-neural-network-model"></a>Suchen nach Informationen über ein neuronales Netzwerkmodell  
  Alle Miningmodelle machen den vom Algorithmus erfassten Inhalt nach einem standardisierten Schema verfügbar. Dieses Schema wird als Miningmodell-Schemarowset bezeichnet. Diese Information bietet Details über das Modell und umfasst grundlegende Metadaten, bei der Analyse ermittelte Strukturen und für die Verarbeitung verwendete Parameter. Abfragen für den Modellinhalt können Sie mithilfe von DMX-Anweisungen (Data Mining-Erweiterungen) erstellen.  
   
-###  <a name="bkmk_Query1"></a> Beispielabfrage 1: Abrufen von Modellmetadaten mit DMX  
+###  <a name="bkmk_Query1"></a> Beispielabfrage 1: Abrufen von Modellmetadaten mithilfe von DMX  
  Die folgende Abfrage gibt einige grundlegende Metadaten über ein Modell zurück, das mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus erstellt wurde. In einem neuronalen Netzwerkmodell enthält der übergeordnete Knoten des Modells nur den Namen des Modells, den Namen der Datenbank, in der das Modell gespeichert ist, und die Anzahl der untergeordneten Knoten. Der Knoten für Randstatistik (NODE_TYPE = 24) stellt sowohl diese grundlegenden Metadaten als auch einige abgeleitete statistische Daten über die in dem Modell verwendeten Eingabespalten zur Verfügung.  
   
  Die folgende Beispielabfrage basiert auf dem Miningmodell mit dem Namen [](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md), das Sie im Data Mining-Lernprogramm für Fortgeschrittene `Call Center Default NN`erstellen. Das Modell verwendet Daten von einem Callcenter, um mögliche Korrelationen zwischen Personalbesetzung, Anzahl der Anrufe, Bestellungen und Problemen zu untersuchen. Mit der DMX-Anweisung werden Daten vom Knoten für Randstatistik des neuronalen Netzwerkmodells abgerufen. Die Abfrage umfasst das FLATTENED-Schlüsselwort, da die statistischen Eingabeattributwerte, die von Interesse sind, in einer geschachtelten Tabelle, NODE_DISTRIBUTION, gespeichert sind. Wenn der Abfrageanbieter hierarchische Rowsets unterstützt, muss das FLATTENED-Schlüsselwort nicht verwendet werden.  
@@ -64,12 +64,12 @@ WHERE NODE_TYPE = 24
   
  Beispielergebnisse:  
   
-|MODEL_CATALOG|MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
+|MODEL_CATALOG|MODEL_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |--------------------|-----------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
 |Adventure Works DW Multidimensional 2012|Call Center NN|Average Time Per Issue|Missing|0|0|1|  
 |Adventure Works DW Multidimensional 2012|Call Center NN|Average Time Per Issue|< 64.7094100096|11|0.407407407|5|  
   
- Eine Definition der Bedeutung der Spalten im Schemarowset im Kontext eines neuronalen Netzwerkmodells finden Sie unter [Mingingmodellinhalt von neuronalen Netzwerkmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
+ Eine Definition der Bedeutung der Spalten im Schemarowset im Kontext eines neuronalen Netzwerkmodells finden Sie unter [Miningmodellinhalt von neuronalen Netzwerkmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)erstellen.  
   
 ###  <a name="bkmk_Query2"></a> Beispielabfrage 2: Abrufen von weiteren Modellmetadaten aus dem Schemarowset  
  Durch Abfragen des Data Mining-Schemarowsets erhalten Sie dieselben Informationen wie bei einer DMX-Inhaltsabfrage. Das Schemarowset stellt jedoch weitere Spalten bereit. Die folgende Beispielabfrage gibt das jeweilige Datum zurück, an dem das Modell erstellt, geändert und zuletzt verarbeitet wurde. Die Abfrage gibt außerdem die vorhersagbaren Spalten zurück, die nicht einfach im Modellinhalt verfügbar sind, sowie die Parameter, die zum Erstellen des Modells verwendet wurden. Diese Informationen können zum Dokumentieren des Modells nützlich sein.  
@@ -174,12 +174,12 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
   
  Diese Ergebnisse zeigen, dass an den Knoten mit der ID 70000000200000000 sechs verschiedene Koeffizienten (VALUETYPE = 7) übergeben wurden. Die Werte der Koeffizienten sind in der ATTRIBUTE_VALUE-Spalte enthalten. Mit der Knoten-ID in der ATTRIBUTE_NAME-Spalte können Sie genau bestimmen, für welches Eingabeattribut der Koeffizient bestimmt ist. Die Knoten-ID 6000000000000000a verweist beispielsweise auf das Eingabeattribut und den Wert `Day of Week = 'Tue.'` . Mit der Knoten-ID können Sie eine Abfrage erstellen, oder Sie können den Knoten mit dem [Microsoft Generic Content Tree Viewer](../microsoft-generic-content-tree-viewer-data-mining.md)durchsuchen.  
   
- Entsprechend können Sie bei Abfrage der NODE_DISTRIBUTION-Tabelle der Knoten in der Ausgabeebene (NODE_TYPE = 23) die Koeffizienten für jeden Ausgabewert sehen. In der Ausgabeebene verweisen die Zeiger jedoch zurück auf die Knoten der verborgenen Ebene. Weitere Informationen finden Sie unter [Mingingmodellinhalt von neuronalen Netzwerkmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
+ Entsprechend können Sie bei Abfrage der NODE_DISTRIBUTION-Tabelle der Knoten in der Ausgabeebene (NODE_TYPE = 23) die Koeffizienten für jeden Ausgabewert sehen. In der Ausgabeebene verweisen die Zeiger jedoch zurück auf die Knoten der verborgenen Ebene. Weitere Informationen finden Sie unter [Miningmodellinhalt von neuronalen Netzwerkmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)erstellen.  
   
 ## <a name="using-a-neural-network-model-to-make-predictions"></a>Verwenden eines neuronalen Netzwerkmodells zum Erstellen von Vorhersagen  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus unterstützt sowohl Klassifikation als auch Regression. Sie können Vorhersagefunktionen mit diesen Modellen verwenden, um neue Daten zur Verfügung zu stellen und entweder SINGLETON- oder Batchvorhersagen zu erstellen.  
   
-###  <a name="bkmk_Query5"></a> Beispielabfrage 5: Erstellen einer SINGLETON-Vorhersage  
+###  <a name="bkmk_Query5"></a> Beispielabfrage 5: Erstellen einer Singleton-Vorhersage  
  Die einfachste Methode, eine Vorhersageabfrage in einem neuronalen Netzwerkmodell zu erstellen, stellt der Generator für Vorhersageabfragen dar. Dieser ist auf der Registerkarte **Miningvorhersage** des Data Mining Designer sowohl in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] als auch in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]verfügbar. Sie können das Modell im [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Viewer für neuronale Netzwerke durchsuchen, um Attribute von Interesse zu filtern und Trends anzuzeigen. Anschließend können Sie auf die Registerkarte **Miningvorhersage** wechseln, um eine Abfrage zu erstellen und neue Werte für diese Trends vorherzusagen.  
   
  Sie können beispielsweise das Callcentermodell durchsuchen, um Korrelationen zwischen der Anzahl der Bestellungen und anderen Attributen anzuzeigen. Zu diesem Zweck öffnen Sie das Modell im Viewer, und für **Eingabe**Option  **\<alle >**.  Wählen Sie anschließend für **Ausgabe**die Option **Anzahl der Bestellungen**aus. Wählen Sie für **Wert 1**den Bereich aus, der die meisten Bestellungen repräsentiert, und für **Wert 2**den Bereich, der die wenigsten Bestellungen darstellt. Sie können dann auf einen Blick alle Attribute sehen, die das Modell mit der Anzahl der Bestellungen korreliert.  
@@ -197,14 +197,14 @@ NATURAL PREDICTION JOIN
   
  Beispielergebnisse:  
   
-|Predicted Orders|Wahrscheinlichkeit|  
+|Predicted Orders|Probability|  
 |----------------------|-----------------|  
-|364|0.9532…|  
+|364|0.9532...|  
   
  Die vorhergesagte Absatzmenge ist größer als der aktuelle Absatzbereich für Dienstag, und die Wahrscheinlichkeit für die Vorhersage ist sehr hoch. Sie können jedoch auch mehrere Vorhersagen erstellen, indem Sie einen Batchprozess verwenden, um verschiedene Hypothesen für das Modell zu testen.  
   
 > [!NOTE]  
->  Die Data Mining Add-Ins für Excel 2007 stellen einen Logistic Regression-Assistenten bereit, mit dem komplexe Fragen einfach beantwortet werden können, beispielsweise wie viele Operatoren auf Ebene 2 benötigt werden, um die Dienstqualität für die Zielebene einer bestimmten Schicht zu verbessern. Die Data Mining-Add-Ins können kostenlos heruntergeladen werden und enthalten Assistenten, die auf dem neuronalen Netzwerk und/oder den Logistic Regression-Algorithmen basieren. Weitere Informationen finden Sie unter [Data Mining-Add-Ins für Office 2007](http://go.microsoft.com/fwlink/?LinkID=117790) .  
+>  Die Data Mining Add-Ins für Excel 2007 stellen einen Logistic Regression-Assistenten bereit, mit dem komplexe Fragen einfach beantwortet werden können, beispielsweise wie viele Operatoren auf Ebene 2 benötigt werden, um die Dienstqualität für die Zielebene einer bestimmten Schicht zu verbessern. Die Data Mining-Add-Ins können kostenlos heruntergeladen werden und enthalten Assistenten, die auf dem neuronalen Netzwerk und/oder den Logistic Regression-Algorithmen basieren. Weitere Informationen finden Sie unter [Data Mining-Add-Ins für Office 2007](https://go.microsoft.com/fwlink/?LinkID=117790) .  
   
 ## <a name="list-of-prediction-functions"></a>Liste der Vorhersagefunktionen  
  Alle Algorithmen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] unterstützen einen gemeinsamen Funktionssatz. Es gibt keine für den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus spezifischen Vorhersagefunktionen. Der Algorithmus unterstützt jedoch die Funktionen, die in der folgenden Tabelle aufgeführt sind.  
@@ -223,9 +223,9 @@ NATURAL PREDICTION JOIN
  Die Syntax einzelner Funktionen finden Sie unter [Data Mining-Erweiterungen &#40;DMX&#41; – Funktionsreferenz](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Microsoft Neural Network-Algorithmus](microsoft-neural-network-algorithm.md)   
- [Technische Referenz zu Microsoft Neural Network-Algorithmus](microsoft-neural-network-algorithm-technical-reference.md)   
- [Mingingmodellinhalt von neuronalen Netzwerkmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)   
+ [Technische Referenz für den Microsoft Neural Network-Algorithmus](microsoft-neural-network-algorithm-technical-reference.md)   
+ [Miningmodellinhalt von neuronalen Netzwerkmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Lektion 5: Erstellen von neuronalen Netzwerk- und logistischen Regressionsmodellen &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
   
