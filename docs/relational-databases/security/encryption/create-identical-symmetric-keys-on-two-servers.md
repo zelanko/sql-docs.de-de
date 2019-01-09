@@ -1,7 +1,7 @@
 ---
 title: Erstellen identischer symmetrischer Schlüssel auf zwei Servern | Microsoft Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,51 +13,41 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 525c9fc853a3ba4696e4e9aac5df6ac2776fc943
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2f8de3783e7d169e1458170d10db61ad9ac680a
+ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844598"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53997562"
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>Erstellen identischer symmetrischer Schlüssel auf zwei Servern
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  In diesem Thema wird beschrieben, wie identische symmetrische Schlüssel in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[tsql](../../../includes/tsql-md.md)]auf zwei verschiedenen Servern erstellt werden. Zum Entschlüsseln von verschlüsseltem Text benötigen Sie den Schlüssel, der beim Verschlüsseln verwendet wurde. Wenn eine Datenbank sowohl Verschlüsselungen als auch Entschlüsselungen enthält, ist der Schlüssel in der Datenbank gespeichert, und er ist entsprechend den Berechtigungen sowohl für die Verschlüsselung als auch für die Entschlüsselung verfügbar. Wenn sich Verschlüsselung und Entschlüsselung jedoch in separaten Datenbanken oder auf separaten Servern vorkommt, kann der in einer Datenbank gespeicherte Schlüssel nicht für die zweite Datenbank verwendet werden.  
+  In diesem Thema wird beschrieben, wie identische symmetrische Schlüssel in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[tsql](../../../includes/tsql-md.md)]auf zwei verschiedenen Servern erstellt werden. Zum Entschlüsseln von verschlüsseltem Text benötigen Sie den Schlüssel, der beim Verschlüsseln verwendet wurde. Wenn eine Datenbank sowohl Verschlüsselungen als auch Entschlüsselungen enthält, ist der Schlüssel in der Datenbank gespeichert, und er ist entsprechend den Berechtigungen sowohl für die Verschlüsselung als auch für die Entschlüsselung verfügbar. Wenn sich Verschlüsselung und Entschlüsselung jedoch in separaten Datenbanken oder auf separaten Servern befinden, kann der in einer Datenbank gespeicherte Schlüssel nicht für die zweite Datenbank verwendet werden.
   
- **In diesem Thema**  
+## <a name="before-you-begin"></a>Vorbereitungen  
   
--   **Vorbereitungen:**  
+### <a name="limitations-and-restrictions"></a>Einschränkungen  
   
-     [Einschränkungen](#Restrictions)  
+- Beim Erstellen eines symmetrischen Schlüssels muss der symmetrische Schlüssel mithilfe mindestens eines der folgenden Elemente verschlüsselt werden: Zertifikat, Kennwort, symmetrischer Schlüssel, asymmetrischer Schlüssel oder PROVIDER. Der Schlüssel kann mehrere Verschlüsselungen jedes Typs aufweisen. Ein einzelner symmetrischer Schlüssel kann demnach mit mehreren Zertifikaten, Kennwörtern, symmetrischen Schlüsseln und asymmetrischen Schlüsseln gleichzeitig verschlüsselt sein.  
   
-     [Security](#Security)  
+- Wenn ein symmetrischer Schlüssel mit einem Kennwort anstatt mit einem öffentlichen Schlüssel des Datenbank-Hauptschlüssels verschlüsselt ist, wird der TRIPLE_DES-Verschlüsselungsalgorithmus verwendet. Daher werden Schlüssel, die mit einem starken Verschlüsselungsalgorithmus wie z. B. AES erstellt werden, selbst mit einem schwächeren Algorithmus verschlüsselt.  
   
--   [So erstellen Sie identische symmetrische Schlüssel auf zwei unterschiedlichen Servern mit Transact-SQL](#TsqlProcedure)  
+## <a name="security"></a>Security  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
-  
-###  <a name="Restrictions"></a> Einschränkungen  
-  
--   Beim Erstellen eines symmetrischen Schlüssels muss der symmetrische Schlüssel mithilfe mindestens eines der folgenden Elemente verschlüsselt werden: Zertifikat, Kennwort, symmetrischer Schlüssel, asymmetrischer Schlüssel oder PROVIDER. Der Schlüssel kann mehrere Verschlüsselungen jedes Typs aufweisen. Ein einzelner symmetrischer Schlüssel kann demnach mit mehreren Zertifikaten, Kennwörtern, symmetrischen Schlüsseln und asymmetrischen Schlüsseln gleichzeitig verschlüsselt sein.  
-  
--   Wenn ein symmetrischer Schlüssel mit einem Kennwort anstatt mit einem öffentlichen Schlüssel des Datenbank-Hauptschlüssels verschlüsselt ist, wird der TRIPLE_DES-Verschlüsselungsalgorithmus verwendet. Daher werden Schlüssel, die mit einem starken Verschlüsselungsalgorithmus wie z. B. AES erstellt werden, selbst mit einem schwächeren Algorithmus verschlüsselt.  
-  
-###  <a name="Security"></a> Sicherheit  
-  
-####  <a name="Permissions"></a> Berechtigungen  
+### <a name="permissions"></a>Berechtigungen  
  Erfordert die ALTER ANY SYMMETRIC KEY-Berechtigung in der Datenbank. Falls die AUTHORIZATION-Klausel angegeben ist, ist die IMPERSONATE-Berechtigung für den Datenbankbenutzer oder die ALTER-Berechtigung für die Anwendungsrolle erforderlich. Falls die Verschlüsselung mit einem Zertifikat oder asymmetrischen Schlüssel erfolgt, ist die VIEW DEFINITION-Berechtigung für das Zertifikat oder den asymmetrischen Schlüssel erforderlich. Nur Windows-Anmeldungen, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldungen und Anwendungsrollen können symmetrische Schlüssel besitzen. Gruppen und Rollen können keine symmetrischen Schlüssel besitzen.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+## <a name="using-transact-sql"></a>Verwenden von Transact-SQL  
   
-#### <a name="to-create-identical-symmetric-keys-on-two-different-servers"></a>So erstellen Sie identische symmetrische Schlüssel auf zwei verschiedenen Servern  
+### <a name="to-create-identical-symmetric-keys-on-two-different-servers"></a>So erstellen Sie identische symmetrische Schlüssel auf zwei verschiedenen Servern  
   
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1. Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
-2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
+2. Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
-3.  Erstellen Sie einen Schlüssel, indem Sie die folgenden CREATE MASTER KEY-, CREATE CERTIFICATE- und CREATE SYMMETRIC KEY-Anweisungen ausführen.  
+3. Erstellen Sie einen Schlüssel, indem Sie die folgenden CREATE MASTER KEY-, CREATE CERTIFICATE- und CREATE SYMMETRIC KEY-Anweisungen ausführen.  
   
-    ```  
+    ```sql
     CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'My p@55w0Rd';  
     GO  
     CREATE CERTIFICATE [cert_keyProtection] WITH SUBJECT = 'Key Protection';  
@@ -70,11 +60,11 @@ ms.locfileid: "47844598"
     GO  
     ```  
   
-4.  Stellen Sie eine Verbindung mit einer separaten Serverinstanz her, öffnen Sie ein anderes Abfragefenster, und führen Sie die oben erwähnten SQL-Anweisungen aus, um den gleichen Schlüssel auf dem zweiten Server zu erstellen.  
+4. Stellen Sie eine Verbindung mit einer separaten Serverinstanz her, öffnen Sie ein anderes Abfragefenster, und führen Sie die oben erwähnten SQL-Anweisungen aus, um den gleichen Schlüssel auf dem zweiten Server zu erstellen.  
   
-5.  Testen Sie die Schlüssel, indem Sie zunächst die OPEN SYMMETRIC KEY-Anweisung und die SELECT-Anweisung unten auf dem ersten Server ausführen.  
+5. Testen Sie die Schlüssel, indem Sie zunächst die OPEN SYMMETRIC KEY-Anweisung und die SELECT-Anweisung unten auf dem ersten Server ausführen.  
   
-    ```  
+    ```sql
     OPEN SYMMETRIC KEY [key_DataShare]   
         DECRYPTION BY CERTIFICATE cert_keyProtection;  
     GO  
@@ -83,9 +73,9 @@ ms.locfileid: "47844598"
     -- For example, the output might look like this: 0x2152F8DA8A500A9EDC2FAE26D15C302DA70D25563DAE7D5D1102E3056CE9EF95CA3E7289F7F4D0523ED0376B155FE9C3  
     ```  
   
-6.  Fügen Sie auf dem zweiten Server das Ergebnis der vorherigen SELECT-Anweisung als Wert für `@blob` in den folgenden Code ein, und führen Sie den folgenden Code aus, um zu überprüfen, ob der verschlüsselte Text mit dem doppelten Schlüssel entschlüsselt werden kann.  
+6. Fügen Sie auf dem zweiten Server das Ergebnis der vorherigen SELECT-Anweisung als Wert für `@blob` in den folgenden Code ein, und führen Sie den folgenden Code aus, um zu überprüfen, ob der verschlüsselte Text mit dem doppelten Schlüssel entschlüsselt werden kann.  
   
-    ```  
+    ```sql
     OPEN SYMMETRIC KEY [key_DataShare]   
         DECRYPTION BY CERTIFICATE cert_keyProtection;  
     GO  
@@ -94,9 +84,9 @@ ms.locfileid: "47844598"
     GO  
     ```  
   
-7.  Schließen Sie den symmetrischen Schlüssel auf beiden Servern.  
+7. Schließen Sie den symmetrischen Schlüssel auf beiden Servern.  
   
-    ```  
+    ```sql
     CLOSE SYMMETRIC KEY [key_DataShare];  
     GO  
     ```  
@@ -114,5 +104,3 @@ ms.locfileid: "47844598"
 -   [DECRYPTBYKEY &#40;Transact-SQL&#41;](../../../t-sql/functions/decryptbykey-transact-sql.md)  
   
 -   [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-symmetric-key-transact-sql.md)  
-  
-  

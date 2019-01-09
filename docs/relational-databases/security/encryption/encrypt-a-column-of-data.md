@@ -1,7 +1,7 @@
 ---
 title: Verschlüsseln einer Datenspalte | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/22/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -17,61 +17,52 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f104edbe976f516fac1d7439a454054d05ef7e30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f8238abce193ea7582c278d0c843f5f1b695fc8
+ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650368"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53997542"
 ---
 # <a name="encrypt-a-column-of-data"></a>Verschlüsseln einer Datenspalte
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   In diesem Artikel wird beschrieben, wie Sie eine Datenspalte mithilfe der symmetrischen Verschlüsselung in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[tsql](../../../includes/tsql-md.md)]verschlüsseln können. Dies wird manchmal als Verschlüsselung auf Spaltenebene oder Verschlüsselung auf Zellenebene bezeichnet.  
+
+## <a name="security"></a>Security  
   
- **In diesem Artikel**  
-  
--   **Vorbereitungen:**  
-  
-     [Security](#Security)  
-  
--   [So verschlüsseln Sie eine Datenspalte mithilfe von Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
-  
-###  <a name="Security"></a> Sicherheit  
-  
-####  <a name="Permissions"></a> Berechtigungen  
+### <a name="permissions"></a>Berechtigungen  
  Die folgenden Berechtigungen sind notwendig, um die Schritte unten auszuführen:  
   
--   CONTROL-Berechtigung für die Datenbank.  
+- CONTROL-Berechtigung für die Datenbank.  
   
--   CREATE CERTIFICATE-Berechtigung für die Datenbank. Nur Windows-Anmeldenamen, SQL Server-Anmeldenamen und Anwendungsrollen können eigene Zertifikate besitzen. Gruppen und Rollen können keine Zertifikate besitzen.  
+- CREATE CERTIFICATE-Berechtigung für die Datenbank. Nur Windows-Anmeldenamen, SQL Server-Anmeldenamen und Anwendungsrollen können eigene Zertifikate besitzen. Gruppen und Rollen können keine Zertifikate besitzen.  
   
--   ALTER-Berechtigung für die Tabelle.  
+- ALTER-Berechtigung für die Tabelle.  
   
--   Einige Berechtigungen für den Schlüssel und die VIEW DEFINITION-Berechtigung dürfen nicht verweigert worden sein.  
+- Einige Berechtigungen für den Schlüssel und die VIEW DEFINITION-Berechtigung dürfen nicht verweigert worden sein.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+## <a name="using-transact-sql"></a>Verwenden von Transact-SQL  
 
-Um die folgenden Beispiele verwenden zu können, müssen Sie über einen Datenbankhauptschlüssel verfügen. Wenn Ihre Datenbank noch nicht über einen Datenbank-Hauptschlüssel verfügt, führen Sie die folgende Anweisung aus, und geben Sie dabei Ihr Kennwort an, um einen solchen Schlüssel zu erstellen:   
-```  
+Um die folgenden Beispiele verwenden zu können, müssen Sie über einen Datenbankhauptschlüssel verfügen. Wenn Ihre Datenbank noch nicht über einen Datenbank-Hauptschlüssel verfügt, führen Sie die folgende Anweisung aus, und geben Sie dabei Ihr Kennwort an, um einen solchen Schlüssel zu erstellen:
+
+```sql  
 CREATE MASTER KEY ENCRYPTION BY   
 PASSWORD = '<some strong password>';  
 ```  
+
 Erstellen Sie immer eine Sicherung Ihres Datenbankhauptschlüssels. Weitere Informationen zum Erstellen von Datenbank-Hauptschlüsseln finden Sie unter [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md).
 
-#### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>So verschlüsseln Sie Datenspalten mithilfe der symmetrischen Verschlüsselung unter Einbeziehung eines Authentifikators  
+### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>So verschlüsseln Sie Datenspalten mithilfe der symmetrischen Verschlüsselung unter Einbeziehung eines Authentifikators  
   
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1. Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
-2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
+2. Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
-3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
+3. Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
   
-    ```  
+    ```sql
     USE AdventureWorks2012;  
-    
     GO  
   
     CREATE CERTIFICATE Sales09  
@@ -120,15 +111,15 @@ Erstellen Sie immer eine Sicherung Ihres Datenbankhauptschlüssels. Weitere Info
     GO  
     ```  
   
-#### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>So verschlüsseln Sie eine Datenspalte mithilfe einer einfachen symmetrischen Verschlüsselung  
+### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>So verschlüsseln Sie eine Datenspalte mithilfe einer einfachen symmetrischen Verschlüsselung  
   
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1. Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
-2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
+2. Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
-3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
+3. Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
   
-    ```  
+    ```sql
     USE AdventureWorks2012;  
     GO  
   
@@ -185,5 +176,3 @@ Erstellen Sie immer eine Sicherung Ihres Datenbankhauptschlüssels. Weitere Info
 -   [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md)  
   
 -   [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-symmetric-key-transact-sql.md)  
-  
-  

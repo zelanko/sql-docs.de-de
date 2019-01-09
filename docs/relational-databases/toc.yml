@@ -15,7 +15,7 @@ items:
       href: ../relational-databases/collations/collation-and-unicode-support.md
     - name: Datenbanken +
       href: ../relational-databases/databases/databases.md
-    - name: Diagramme +
+    - name: SQL Graph +
       href: ../relational-databases/graphs/sql-graph-overview.md
     - name: Hierarchische Daten
       href: hierarchical-data-sql-server.md
@@ -108,6 +108,8 @@ items:
     items:
     - name: Verwalten
       items:
+      - name: SQL Server-Hilfsprogramm +
+        href: ../relational-databases/manage/sql-server-utility-features-and-tasks.md
       - name: Verwalten mehrerer Server mithilfe von zentralen Verwaltungsservern
         href: administer-multiple-servers-using-central-management-servers.md
       - name: Konfigurations-Manager
@@ -122,6 +124,8 @@ items:
         href: ../relational-databases/maintenance-plans/maintenance-plans.md
       - name: Richtlinienbasierte Verwaltung +
         href: ../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md
+      - name: Transaktionsprotokollverwaltung +
+        href: ../relational-databases/logs/log-file-viewer.md
     - name: Monitor
       items:
       - name: Datensammlung +
@@ -210,9 +214,9 @@ items:
     href: ../relational-databases/system-tables/system-tables-transact-sql.md
   - name: Systemsichten +
     href: ../relational-databases/system-views/replication-views-transact-sql.md
-ms.openlocfilehash: 63116a51771db804d7e0a30dac73f24934c29c51
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.openlocfilehash: 38de54db48c48ee439c3ff737f93dad8974cd228
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439752"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328880"

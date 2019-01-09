@@ -1,7 +1,7 @@
 ---
 title: Sichern eines Datenbank-Hauptschlüssels | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -12,59 +12,49 @@ ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: f74c7c94ee414597ddc9f72cd9a1a7d4d099bd91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 337646527cfaabfb3b803f37088f398cfd63808e
+ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757888"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53997512"
 ---
 # <a name="back-up-a-database-master-key"></a>Sichern eines Datenbank-Hauptschlüssels
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Thema wird beschrieben, wie der Datenbank-Hauptschlüssel in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[tsql](../../../includes/tsql-md.md)]gesichert wird. Der Datenbank-Hauptschlüssel wird zur Verschlüsselung anderer Schlüssel und Zertifikate in einer Datenbank verwendet. Wenn dieser Schlüssel beschädigt oder gelöscht wird, können die anderen Schlüssel möglicherweise von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nicht entschlüsselt werden, und die damit verschlüsselten Daten gehen verloren. Aus diesem Grund sollten Sie den Datenbank-Hauptschlüssel sichern und diese Sicherung an einem sicheren Ort außerhalb Ihrer Geschäftsräume aufbewahren.  
   
- **In diesem Thema**  
+## <a name="before-you-begin"></a>Vorbereitungen  
   
--   **Vorbereitungen:**  
+### <a name="limitations-and-restrictions"></a>Einschränkungen  
   
-     [Einschränkungen](#Restrictions)  
+- Der Hauptschlüssel muss geöffnet und entschlüsselt sein, bevor er gesichert wird. Wenn er mit dem Diensthauptschlüssel verschlüsselt ist, muss der Hauptschlüssel nicht explizit geöffnet werden. Falls der Hauptschlüssel jedoch nur mit einem Kennwort verschlüsselt ist, muss er explizit geöffnet werden.  
   
-     [Security](#Security)  
+- Es wird empfohlen, dass Sie sofort nach der Erstellung eine Sicherung des Hauptschlüssels anlegen und diese an einem sicheren Ort außerhalb Ihrer Geschäftsräume aufbewahren.  
   
--   [So sichern Sie den Datenbank-Hauptschlüssel mithilfe von Transact-SQL](#Procedure)  
+## <a name="security"></a>Security  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+### <a name="permissions"></a>Berechtigungen
+Erfordert die CONTROL-Berechtigung für die Datenbank.  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+## <a name="using-sql-server-management-studio-with-transact-sql"></a>Verwenden von SQL Server Management Studio mit Transact-SQL  
   
--   Der Hauptschlüssel muss geöffnet und entschlüsselt sein, bevor er gesichert wird. Wenn er mit dem Diensthauptschlüssel verschlüsselt ist, muss der Hauptschlüssel nicht explizit geöffnet werden. Falls der Hauptschlüssel jedoch nur mit einem Kennwort verschlüsselt ist, muss er explizit geöffnet werden.  
+### <a name="to-back-up-the-database-master-key"></a>So sichern Sie den Datenbank-Hauptschlüssel  
   
--   Es wird empfohlen, dass Sie sofort nach der Erstellung eine Sicherung des Hauptschlüssels anlegen und diese an einem sicheren Ort außerhalb Ihrer Geschäftsräume aufbewahren.  
+1. Stellen Sie in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]eine Verbindung mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz her, die den zu sichernden Datenbank-Hauptschlüssel enthält.  
   
-###  <a name="Security"></a> Sicherheit  
+2. Geben Sie ein Kennwort an, mit dem der Datenbank-Hauptschlüssel auf dem Sicherungsmedium verschlüsselt wird. Dieses Kennwort unterliegt Komplexitätsüberprüfungen.  
   
-####  <a name="Permissions"></a> Berechtigungen  
- Erfordert die CONTROL-Berechtigung für die Datenbank.  
+3. Verwenden Sie ein Wechselsicherungsmedium, auf dem eine Kopie des gesicherten Schlüssels gespeichert wird.  
   
-##  <a name="Procedure"></a> Verwenden von SQL Server Management Studio mit Transact-SQL  
+4. Ermitteln Sie ein NTFS-Verzeichnis, in dem die Sicherung des Schlüssels erstellt werden soll. In diesem Verzeichnis erstellen Sie die im nächsten Schritt beschriebene Datei. Das Verzeichnis sollte durch stark einschränkende Zugriffssteuerungslisten (Access Control Lists, ACLs) geschützt sein.  
   
-#### <a name="to-back-up-the-database-master-key"></a>So sichern Sie den Datenbank-Hauptschlüssel  
+5. Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
-1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]eine Verbindung mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz her, die den zu sichernden Datenbank-Hauptschlüssel enthält.  
+6. Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
-2.  Geben Sie ein Kennwort an, mit dem der Datenbank-Hauptschlüssel auf dem Sicherungsmedium verschlüsselt wird. Dieses Kennwort unterliegt Komplexitätsüberprüfungen.  
+7. Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
   
-3.  Verwenden Sie ein Wechselsicherungsmedium, auf dem eine Kopie des gesicherten Schlüssels gespeichert wird.  
-  
-4.  Ermitteln Sie ein NTFS-Verzeichnis, in dem die Sicherung des Schlüssels erstellt werden soll. In diesem Verzeichnis erstellen Sie die im nächsten Schritt beschriebene Datei. Das Verzeichnis sollte durch stark einschränkende Zugriffssteuerungslisten (Access Control Lists, ACLs) geschützt sein.  
-  
-5.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
-  
-6.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
-  
-7.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
-  
-    ```  
+    ```sql
     -- Creates a backup of the "AdventureWorks2012" master key. Because this master key is not encrypted by the service master key, a password must be specified when it is opened.  
     USE AdventureWorks2012;   
     GO  
@@ -76,12 +66,10 @@ ms.locfileid: "47757888"
     ```  
   
     > [!NOTE]  
-    >  Der Dateipfad zum Schlüssel und das Kennwort (sofern es vorhanden ist) des Schlüssels unterscheiden sich von den obigen Informationen. Stellen Sie sicher, dass beide für den Server und die Schlüsseleinrichtung spezifisch sind.  
+    > Der Dateipfad zum Schlüssel und das Kennwort (sofern es vorhanden ist) des Schlüssels unterscheiden sich von den obigen Informationen. Stellen Sie sicher, dass beide für den Server und die Schlüsseleinrichtung spezifisch sind.  
   
-8.  Kopieren Sie die Datei auf das Sicherungsmedium, und überprüfen Sie die Kopie.  
+8. Kopieren Sie die Datei auf das Sicherungsmedium, und überprüfen Sie die Kopie.  
   
 9. Verwahren Sie die Sicherung an einem sicheren Ort außerhalb der Geschäftsräume.  
   
  Weitere Informationen finden Sie unter [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-master-key-transact-sql.md) und [BACKUP MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-master-key-transact-sql.md).  
-  
-  

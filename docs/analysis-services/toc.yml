@@ -162,7 +162,7 @@ items:
       - name: 'Lektion 4–5: Sortieren von Attributelementen basierend auf einem sekundären Attribut'
         href: lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md
       - name: 'Lektion 4–6: Angeben von Attributbeziehungen zwischen Attributen in einer benutzerdefinierten Hierarchie'
-        href: 4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md
+        href: lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md
       - name: 'Lektion 4–7: Definieren der UnknownMember- und NullProcessing-Eigenschaften'
         href: lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md
     - name: 'Lektion 5: Definieren von Beziehungen zwischen Dimensionen und Measuregruppen'
@@ -489,8 +489,6 @@ items:
           href: ./multidimensional-models/set-data-source-properties-ssas-multidimensional.md
         - name: Festlegen von Identitätswechseloptionen für eine Datenquellenverbindung
           href: ./multidimensional-models/set-impersonation-options-ssas-multidimensional.md
-        - name: Mehrdimensionale Modellprogrammierung
-          href: ./multidimensional-models/multidimensional-model-programming.md
       - name: Datenquellensichten
         href: ./multidimensional-models/data-source-views-in-multidimensional-models.md
         items:
@@ -707,7 +705,7 @@ items:
           href: ./multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md
       - name: KPIs (Key Performance Indicators)
         href: ./multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md
-      - name: Aktionen
+      - name: Übersicht über Aktionen
         href: ./multidimensional-models/actions-in-multidimensional-models.md
         items:
         - name: Aktionen
@@ -1308,7 +1306,7 @@ items:
     - name: Fehler- und Ereignisreferenz (Power Pivot für SharePoint)
       href: ./power-pivot-sharepoint/errors-and-events-reference-power-pivot-for-sharepoint.md
       items:
-      - name: 'Während des Herstellens einer Verbindung mit der externen Datenquelle ist ein Fehler aufgetreten. Die folgenden Verbindungen wurden nicht aktualisiert: PowerPivot-Daten'
+      - name: 'Während des Herstellens einer Verbindung mit der externen Datenquelle ist ein Fehler aufgetreten. Die folgenden Verbindungen wurden nicht aktualisiert: Power Pivot-Daten'
         href: ./power-pivot-sharepoint/an-error-occurred-during-an-attempt-to-establish-a-connection.md
       - name: Die Datei oder Assembly „Microsoft.Data.Services“ konnte nicht geladen werden
         href: ./power-pivot-sharepoint/could-not-load-file-or-assembly-microsoft-data-services.md
@@ -1316,7 +1314,7 @@ items:
         href: ./power-pivot-sharepoint/could-not-load-microsoft-analysisservices-sharepoint-integration.md
       - name: Der Datenverbindungspfad in der Arbeitsmappe verweist auf eine Datei auf dem lokalen Laufwerk oder entspricht einem ungültigen URI.
         href: ./power-pivot-sharepoint/the-data-connection-path-is-invalid.md
-      - name: 'Die Datenverbindung verwendet die Windows-Authentifizierung, und Benutzeranmeldeinformationen konnten nicht delegiert werden. Die folgenden Verbindungen wurden nicht aktualisiert: PowerPivot-Daten'
+      - name: 'Die Datenverbindung verwendet die Windows-Authentifizierung, und Benutzeranmeldeinformationen konnten nicht delegiert werden. Die folgenden Verbindungen wurden nicht aktualisiert: Power Pivot-Daten'
         href: ./power-pivot-sharepoint/the-data-connection-user-could-not-be-delegated.md
       - name: 'Die folgenden Funktionen werden von Excel Services nicht unterstützt und möglicherweise nur teilweise oder überhaupt nicht angezeigt: Kommentare, Formen oder andere Objekte'
         href: ./power-pivot-sharepoint/comments-shapes-other-objects-not-supported-by-excel-services.md
@@ -1357,6 +1355,7 @@ items:
       - name: Sicherheitseigenschaften
         href: ./server-properties/security-properties.md
       - name: Threadpooleigenschaften
+        href: ./server-properties/thread-pool-properties.md
     - name: Überwachen von Analysis Services
       items:
       - name: Überwachungstools
@@ -1418,8 +1417,6 @@ items:
         href: https://docs.microsoft.com/bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo
       - name: Analysis Management Objects (AMO)
         href: https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction
-      - name: Schemarowsets
-        href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
     - name: 'Tabellarischer Modus: 1103 und niedriger'
       items:
       - name: Programmieren von tabellarischen Modellen für Kompatibilitätsgrad 1103 und niedriger
@@ -1430,8 +1427,6 @@ items:
         href: ./multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
       - name: IMDEmbeddedData-Schnittstelle
         href: ./tabular-model-programming-compatibility-levels-1050-1103/imdembeddeddata-interface.md
-      - name: Schemarowsets
-        href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
       - name: Darstellung
         items:
         - name: Verbindungsdarstellung (tabellarisch)
@@ -1463,11 +1458,9 @@ items:
     - name: Mehrdimensionale Modellprogrammierung
       href: ./multidimensional-models/multidimensional-model-programming.md
     - name: Analysis Management Objects (AMO)
-      href: https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction
+      href: https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo
     - name: ASSL (Analysis Services Scripting Language)
       href: ./multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
-    - name: Schemarowsets
-      href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
     - name: XML for Analysis (XMLA)
       href: https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference
     - name: ADOMD.NET
@@ -1530,9 +1523,9 @@ items:
     href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
   - name: Ablaufverfolgungsereignisse
     href: https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events
-ms.openlocfilehash: feee35408dd9439862dce7ca043184bf2d9fd05f
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: ee7868cfee9c8f087ffd43959ccfa7f30b643b7e
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302913"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53786001"
