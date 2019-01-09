@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - backups [SQL Server replication], snapshot replication
@@ -21,12 +20,12 @@ ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 43f5005c9b03772e8e8e23c3b3e06ea912683362
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: 43be13027d1460ec407239140cd4306be76a445e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229990"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823515"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Strategien zum Sichern und Wiederherstellen einer Momentaufnahme- und Transaktionsreplikation
   Drei Bereiche sind beim Entwickeln einer Sicherungs- und Wiederherstellungsstrategie für die Momentaufnahme- und Transaktionsreplikation zu berücksichtigen:  
@@ -72,7 +71,7 @@ ms.locfileid: "48229990"
   
  **So legen Sie die Option sync with backup fest**  
   
--   [!INCLUDE[tsql](../../../includes/tsql-md.md)] Replikationsprogrammierung: [Aktivieren Sie koordinierte Sicherungen für die Transaktionsreplikation &#40;Replikationsprogrammierung mit Transact-SQL&#41;](enable-coordinated-backups-for-transactional-replication.md)  
+-   Replikationsprogrammierung mit [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Aktivieren koordinierter Sicherungen für die Transaktionsreplikation &#40;Replikationsprogrammierung mit Transact-SQL&#41;](enable-coordinated-backups-for-transactional-replication.md)  
   
 ## <a name="restoring-databases-involved-in-replication"></a>Wiederherstellen der an der Replikation beteiligten Datenbanken  
  Wenn aktuelle Sicherungen verfügbar sind und die entsprechenden Schritte befolgt werden, können Sie alle Datenbanken einer Replikationstopologie wiederherstellen. Die Wiederherstellungsschritte für die Veröffentlichungsdatenbank hängen vom Typ der verwendeten Replikation und den verwendeten Optionen ab. Die Wiederherstellungsschritte für alle anderen Datenbanken sind jedoch vom Typ und den Optionen unabhängig.  
@@ -149,7 +148,7 @@ ms.locfileid: "48229990"
   
          Weitere Informationen zum Angeben, dass der Abonnement bereits über die Daten verfügt, finden Sie unter [Initialize a Subscription Manually](../initialize-a-subscription-manually.md).  
   
-#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>Veröffentlichungsdatenbank: Transaktionsreplikation mit Updateabonnements  
+#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>Veröffentlichungsdatenbank: Transaktionsreplikation mit aktualisierbaren Abonnements  
   
 1.  Stellen Sie die aktuellste Sicherung der Veröffentlichungsdatenbank wieder her. Fahren Sie mit Schritt 2 fort.  
   
@@ -322,7 +321,7 @@ ms.locfileid: "48229990"
   
 2.  Stellen Sie die aktuellste Sicherung der Abonnementdatenbank wieder her. Fahren Sie mit Schritt 3 fort.  
   
-3.  Wenn die Abonnementdatenbank nur Pushabonnements enthält, fahren Sie mit Schritt 4 fort. Enthält die Abonnementdatenbank auch Pullabonnements, stellen Sie die folgenden Fragen: Sind die Abonnementinformationen aktuell? Sind in der Datenbank alle Tabellen und Optionen eingeschlossen, die beim Auftreten des Fehlers festgelegt waren? Wenn ja, fahren Sie mit Schritt 4 fort. Wenn nein, initialisieren Sie das Abonnement erneut. Die Wiederherstellung ist abgeschlossen.  
+3.  Wenn die Abonnementdatenbank nur Pushabonnements enthält, fahren Sie mit Schritt 4 fort. Wenn die Abonnementdatenbank auch Pullabonnements enthält, stellen Sie die folgenden Fragen: Ist die Abonnementinformationen aktuell? Sind in der Datenbank alle Tabellen und Optionen eingeschlossen, die beim Auftreten des Fehlers festgelegt waren? Wenn ja, fahren Sie mit Schritt 4 fort. Wenn nein, initialisieren Sie das Abonnement erneut. Die Wiederherstellung ist abgeschlossen.  
   
 4.  Führen Sie den Verteilungs-Agent aus, um den Abonnenten zu synchronisieren. Die Wiederherstellung ist abgeschlossen.  
   
@@ -351,7 +350,7 @@ ms.locfileid: "48229990"
  [Sichern und Wiederherstellen von replizierten Datenbanken](back-up-and-restore-replicated-databases.md)   
  [Verteilung konfigurieren](../configure-distribution.md)   
  [Veröffentlichen von Daten und Datenbankobjekten](../publish/publish-data-and-database-objects.md)   
- [Subscribe to Publications](../subscribe-to-publications.md)   
+ [Abonnieren von Veröffentlichungen](../subscribe-to-publications.md)   
  [Initialize a Subscription](../initialize-a-subscription.md)   
  [Synchronisieren von Daten](../synchronize-data.md)  
   

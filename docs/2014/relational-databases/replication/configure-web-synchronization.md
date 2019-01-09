@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 01/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - SQL10.REP.CONFIGWEBSYNCWIZARD.SUBTYPE.F1
@@ -24,12 +23,12 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 49f3c4a66c38b339c87b79a30d42bf643f03d730
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112746"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782842"
 ---
 # <a name="configure-web-synchronization"></a>Websynchronisierung konfigurieren
   Die Websynchronisierungsoption für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Mergereplikation ermöglicht die Datenreplikation mithilfe des HTTPS-Protokolls über das Internet. Um die Websynchronisierung zu verwenden, müssen Sie zuerst die folgenden Konfigurationsaktionen ausführen:  
@@ -125,7 +124,7 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
 -   Wenn Sie große Datenmengen replizieren, müssen Sie ggf. die Batchgröße des Merge-Agents anpassen.  
   
- Die Batchgröße für die Mergereplikation wird in *Generierungen*gemessen, bei denen es sich um Auflistungen von Änderungen pro Artikel handelt. Die Anzahl von Generierungen in einem Batch wird angegeben, mit dem –`DownloadGenerationsPerBatch` "und" –`UploadGenerationsPerBatch` Parameter des Merge-Agents. Weitere Informationen finden Sie unter [Replication Merge Agent](agents/replication-merge-agent.md).  
+ Die Batchgröße für die Mergereplikation wird in *Generierungen*gemessen, bei denen es sich um Auflistungen von Änderungen pro Artikel handelt. Die Anzahl von Generierungen in einem Batch wird angegeben, mit der`DownloadGenerationsPerBatch` "und" -`UploadGenerationsPerBatch` Parameter des Merge-Agents. Weitere Informationen finden Sie unter [Replication Merge Agent](agents/replication-merge-agent.md).  
   
  Geben Sie für große Datenmengen eine kleine Zahl für die einzelnen Batchverarbeitungsparameter an. Es wird empfohlen, mit dem Wert 10 zu beginnen und dann je nach Anwendungsanforderungen und -leistung diesen Wert zu optimieren. Normalerweise werden diese Parameter in einem Agentprofil angegeben. Weitere Informationen zu Profilen finden Sie unter [Replication Agent Profiles](agents/replication-agent-profiles.md).  
   

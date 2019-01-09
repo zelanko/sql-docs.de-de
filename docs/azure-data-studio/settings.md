@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio-Benutzer und Arbeitsbereichseinstellungen | Microsoft-Dokumentation
-description: 'Vorgehensweise: Ändern von Azure Data Studio-Benutzer und Arbeitsbereichseinstellungen.'
-ms.custom: tools|sos
+title: Benutzer und -Arbeitsbereichseinstellungen
+titleSuffix: Azure Data Studio
+description: Vorgehensweise zum Studio für Azure Data anpassen, indem Sie Benutzer und Arbeitsbereichseinstellungen ändern.
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 34eea8db6295903ccdd99d7d73b143fb6fed02ec
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 6bf09159c8b7384a835a06bfafe744ea2f90f0c2
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355951"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030504"
 ---
-# <a name="user-and-workspace-settings"></a>Benutzer und -Arbeitsbereichseinstellungen
+# <a name="modify-user-and-workspace-settings"></a>Benutzer und Arbeitsbereichseinstellungen ändern
 
 Es ist leicht zu konfigurierender [!INCLUDE[name-sos](../includes/name-sos-short.md)] an Ihre vorstellungen über die Einstellungen an. Fast jeder Teil [!INCLUDE[name-sos](../includes/name-sos-short.md)]des Editor-Benutzeroberfläche und Verhalten verfügt über Optionen können Sie ändern.
 
@@ -30,7 +31,7 @@ Es ist leicht zu konfigurierender [!INCLUDE[name-sos](../includes/name-sos-short
 
 Der Menübefehl **Datei** > **Voreinstellungen** > **Einstellungen** (**Code**  >  **Voreinstellungen** > **Einstellungen** auf Mac) stellt den Einstiegspunkt zum Konfigurieren von Einstellungen für Benutzer und -Arbeitsbereich bereit. Sie werden eine Liste mit den Standardeinstellungen bereitgestellt. Kopieren Sie jede Einstellung, die Sie in den entsprechenden ändern möchten `settings.json` Datei. Die Registerkarten auf der rechten Seite können Sie schnell zwischen den Einstellungen für Benutzer und -Arbeitsbereich zu wechseln.
 
-Sie können auch die Einstellungen für Benutzer und -Arbeitsbereich aus öffnen die **Befehlspalette** (**STRG + UMSCHALT + P**) mit **Voreinstellungen: Öffnen von Benutzereinstellungen** und  **Einstellungen: Öffnen des Arbeitsbereichseinstellungen** oder verwenden Sie die Tastenkombination (**STRG +,**).
+Sie können auch die Einstellungen für Benutzer und -Arbeitsbereich aus öffnen die **Befehlspalette** (**STRG + UMSCHALT + P**) mit **Einstellungen: Öffnen Sie die Benutzereinstellungen** und **Einstellungen: Öffnen Sie die Einstellungen für Systemarbeitsbereich** oder verwenden Sie die Tastenkombination (**STRG +,**).
 
 Das folgende Beispiel deaktiviert die Zeilennummern im Editor und Codezeilen automatisch eingezogen werden konfiguriert.
 
@@ -38,7 +39,7 @@ Das folgende Beispiel deaktiviert die Zeilennummern im Editor und Codezeilen aut
 
 Änderungen an den Einstellungen werden neu geladen, indem [!INCLUDE[name-sos](../includes/name-sos-short.md)] nach geänderten `settings.json` -Datei wird gespeichert.
 
->**Hinweis:** arbeitsbereichseinstellungen eignen sich für die Freigabe von projektspezifische Einstellungen innerhalb eines Teams.
+>**Hinweis**: Arbeitsbereichseinstellungen eignen sich für die Freigabe von projektspezifische Einstellungen innerhalb eines Teams.
 
 ## <a name="settings-file-locations"></a>Von Dateispeicherorten
 
