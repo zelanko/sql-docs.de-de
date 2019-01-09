@@ -21,15 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - wizards [SQL Server Management Studio] See Manage Partition Wizard
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 61cf0d2acb9dbe2e2f5a9ec68be92cecf16ce22b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0bcc98052bf076515ff3d961fee24e6550830118
+ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731678"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414165"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>Assistent zum Verwalten von Partitionen (F1-Hilfe)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ ms.locfileid: "47731678"
 ##  <a name="NewJob"></a> Neuer Auftragszeitplan (Seite)  
  Verwenden Sie die Seite **Neuer Auftragszeitplan** , um die Eigenschaften des Zeitplans anzuzeigen und zu ändern.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  Wählen Sie den Typ des gewünschten Zeitplans für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag aus.  
   
  **Name**  
@@ -269,7 +269,7 @@ ms.locfileid: "47731678"
 ##  <a name="Progress"></a> Status (Seite)  
  Auf der Seite **Status** können Sie Statusinformationen zu den Aktionen im **Assistenten zum Verwalten von Partitionen**anzeigen. Je nach den im Assistenten ausgewählten Optionen enthält die Seite **Status** eine oder mehrere Aktionen. Im oberen Feld werden der Gesamtstatus des Assistenten und die Anzahl der empfangenen Status-, Fehler- und Warnmeldungen angezeigt.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Details**  
  Stellt für jede vom Assistenten ausgeführte Aktion Informationen zur Aktion, zum Status und zu den zurückgegebenen Meldungen bereit.  
   
@@ -304,7 +304,7 @@ ms.locfileid: "47731678"
   
  ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In diesem Abschnitt](#Top)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   

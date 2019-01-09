@@ -5,19 +5,18 @@ ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 601334f4d767f0e632f5641512b9855a75ddd282
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd7ac0496532ca0cd034d34fa44d922700c045a8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696308"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782182"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Datenbankupgrade-Assistent (Konfigurations-Manager für Master Data Services)
 
@@ -39,7 +38,7 @@ ms.locfileid: "47696308"
 ## <a name="progress-and-finish"></a>Status und Fertig stellen  
  Zeigt den Status des Upgradevorgangs an. Wenn die Datenbank aktualisiert wurde, klicken Sie auf den Link zur Protokolldatei, um ausführliche Informationen zum Upgrade anzuzeigen, oder aber auf **Fertig stellen** , um den Datenbank-Assistenten zu schließen und zur Seite **Datenbanken** zurückzukehren. Die aktualisierte Datenbank ist ausgewählt, und Sie können ihre Systemeinstellungen anzeigen und ändern.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenbankkonfiguration &#40;Seite im Konfigurations-Manager für Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 [Master Data Services – Installation und Konfiguration](../master-data-services/master-data-services-installation-and-configuration.md)  
  [Aktualisieren von Master Data Services](../database-engine/install-windows/upgrade-master-data-services.md)  

@@ -5,7 +5,7 @@ ms.date: 05/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 07fe67c8d52f69f018acb68f64782be4af0c6c00
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9fcb107c5ae7a22fa2705fda0580e0284940f694
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523341"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380691"
 ---
 # <a name="sql-server-deprecated-features-object"></a>'SQL Server:Als veraltet markierte Funktionen'-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ In der folgenden Tabelle wird das SQL Server-Leistungsobjekt **Als veraltet mark
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|Verweise auf die veraltete Funktionsys.numbered_procedure_parameters wurden gefunden. Darf nicht verwendet werden. Tritt einmal pro Kompilierung auf.|  
 |numbered_procedures|Verweise auf die veraltete Funktionsys.numbered_procedures wurden gefunden. Darf nicht verwendet werden. Tritt einmal pro Kompilierung auf.|  
-|Veraltete RAISEERROR-Syntax|Die veraltete RAISERROR-Syntax (Format: RAISERROR integer string) wurde gefunden. Schreiben Sie Anweisung unter Verwendung der aktuellen RAISERROR-Syntax um. Tritt einmal pro Kompilierung auf.|  
+|Veraltete RAISEERROR-Syntax|Die veraltete RAISERROR-Syntax (Format: RAISERROR Integer String) wurde gefunden. Schreiben Sie Anweisung unter Verwendung der aktuellen RAISERROR-Syntax um. Tritt einmal pro Kompilierung auf.|  
 |OLEDB für Ad-hoc-Verbindungen|SQLOLEDB wird nicht als Anbieter unterstützt. Verwenden Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client für Ad-hoc-Verbindungen.|  
 |PERMISSIONS|Verweise auf die systeminterne PERMISSIONS-Funktion wurden gefunden. Fragen Sie stattdessen sys.fn_my_permissions ab. Tritt einmal pro Abfrage auf.|  
 |ProcNums|Die veraltete ProcNums-Syntax wurde gefunden. Schreiben Sie die Anweisungen um, um die Verweise zu entfernen. Tritt einmal pro Kompilierung auf.|  
@@ -279,7 +279,7 @@ In der folgenden Tabelle wird das SQL Server-Leistungsobjekt **Als veraltet mark
 |xp_loginconfig|Die Prozedur xp_loginconfig wurde gefunden. Verwenden Sie stattdessen das IsIntegratedSecurityOnly-Argument von SERVERPROPERTY. Tritt einmal pro Abfrage auf.|  
 |xp_revokelogin|Die Prozedur xp_revokelogin wurde gefunden. Verwenden Sie stattdessen ALTER LOGIN DISABLE oder DROP LOGIN. Tritt einmal pro Kompilierung auf.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Als veraltet markierte Funktionen der Datenbank-Engine in SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [Als veraltet markierte Funktionen der Volltextsuche in SQL Server 2016](../../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)   
  [Deprecation Announcement-Ereignisklasse](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   

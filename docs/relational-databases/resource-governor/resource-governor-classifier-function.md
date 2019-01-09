@@ -12,15 +12,15 @@ helpviewer_keywords:
 - classifier function [SQL Server]
 - classifier function [SQL Server], overview
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: b5375adcf3ca5be203ba31aa29633702ca7e38ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 517a07d539c8ca4d775f270cf16fdeee1967361c
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699438"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380571"
 ---
 # <a name="resource-governor-classifier-function"></a>Resource Governor Classifier Function
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "47699438"
   
 -   Falls keine benutzerdefinierte Klassifizierungsfunktion ausgewiesen wurde, werden alle Sitzungen der Standardgruppe zugeordnet.  
   
--   Die von der Klassifizierungsfunktion zurückgegebene Arbeitsauslastungsgruppe liegt außerhalb des Bereichs der Schemabindungseinschränkung. So können Sie z. B. keine Tabelle löschen, aber Sie können eine Arbeitsauslastungsgruppe löschen.  
+-   Die von der Klassifizierungsfunktion zurückgegebene Arbeitsauslastungsgruppe liegt außerhalb des Bereichs der Schemabindungseinschränkung. So können Sie z. B. keine Tabelle löschen, aber Sie können eine Arbeitsauslastungsgruppe löschen.  
   
 > [!IMPORTANT]  
 >  Es wird empfohlen, die dedizierte Administratorverbindung (Dedicated Administrator Connection, DAC) auf dem Server zu aktivieren. Die DAC unterliegt nicht der Klassifizierung der Ressourcenkontrolle und kann daher zum Überwachen einer Klassifizierungsfunktion und für die entsprechende Problembehandlung verwendet werden. Weitere Informationen finden Sie unter [Diagnoseverbindung für Datenbankadministratoren](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). Wenn keine DAC für die Problembehandlung verfügbar ist, können Sie alternativ das System im Einzelbenutzermodus neu starten. Der Einzelbenutzermodus unterliegt zwar nicht der Klassifizierung, allerdings haben Sie in diesem Modus nicht die Möglichkeit, die Klassifizierung der Ressourcenkontrolle während der Ausführung zu diagnostizieren.  
@@ -86,7 +86,7 @@ ms.locfileid: "47699438"
 |----------------------|-----------|  
 |Beschreibt, wie benutzerdefinierte Klassifizierungsfunktionen erstellt und getestet werden.|[Erstellen und Testen einer benutzerdefinierten Klassifizierungsfunktion](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Aktivieren der Ressourcenkontrolle](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Ressourcenpool für die Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

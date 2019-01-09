@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6df05fc03563c88a10a7c56b71536e41068ffb05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af0251b5a493eb757b16dfb01b08304751eaa4dc
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845478"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589524"
 ---
 # <a name="duplicate-tables"></a>Duplizieren von Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47845478"
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So duplizieren Sie eine Tabelle mit:**  
   
@@ -44,14 +44,14 @@ ms.locfileid: "47845478"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Security"></a> Sicherheit  
   
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die CREATE TABLE-Berechtigung in der Zieldatenbank.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-duplicate-a-table"></a>So duplizieren Sie eine Tabelle  
   
@@ -67,7 +67,7 @@ ms.locfileid: "47845478"
   
 6.  Klicken Sie im Menü **Bearbeiten** auf **Einfügen**.  
   
-7.  Klicken Sie im Menü **Datei** auf **Speichern** > *Tabellenname*.  
+7.  Klicken Sie im Menü **Datei** auf **Speichern**_table name_.  
   
 8.  Geben Sie im Dialogfeld **Namen auswählen** einen Namen für die neue Tabelle ein, und klicken Sie auf **OK**.  
   

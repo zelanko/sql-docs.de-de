@@ -14,12 +14,12 @@ ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e5da3ebf716c227e2724d7ca2676405aa34b7241
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 51f7f52e3237d6fbbf5bd6b9224d1434a129e3e5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663289"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202201"
 ---
 # <a name="create-clr-functions"></a>Erstellen von CLR-Funktionen
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -34,10 +34,10 @@ ms.locfileid: "51663289"
   
 -   Erstellen der Funktion, die auf die registrierte Assembly verweist, mithilfe der [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) -Anweisung.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Bei der Bereitstellung eines SQL Server-Projekts in [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] wird eine Assembly in der Datenbank registriert, die für das Projekt angegeben wurde. Bei der Bereitstellung des Projekts werden auch CLR-Funktionen in der Datenbank für alle Methoden erstellt, die mit dem **SqlFunction** -Attribut versehen sind. Weitere Informationen finden Sie unter [Deploying CLR Database Objects](../../relational-databases/clr-integration/deploying-clr-database-objects.md).  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  Die Funktion zum Ausführen von CLR-Code ist in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] standardmäßig deaktiviert. Sie können Datenbankobjekte, die auf verwaltete Codemodule verweisen, erstellen, ändern oder löschen; diese Verweise werden jedoch nur dann in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt, wenn die Option [clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) mithilfe von [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)aktiviert wird.  
   
 ## <a name="accessing-external-resources"></a>Zugreifen auf externe Ressourcen  
@@ -58,7 +58,7 @@ ms.locfileid: "51663289"
 ## <a name="accessing-native-code"></a>Zugreifen auf systemeigenen Code  
  CLR-Funktionen können für den Zugriff auf nativen (nicht verwalteten) Code verwendet werden, z.B. in C oder C++ geschriebenen Code. Dazu wird PInvoke vom verwalteten Code aus ausgeführt (Einzelheiten finden Sie unter [Aufrufen nativer Funktionen aus verwaltetem Code](https://go.microsoft.com/fwlink/?LinkID=181929) ). Dies kann die Wiederverwendung von Legacycode als CLR-UDFs oder das Programmieren leistungskritischer UDFs in systemeigenem Code ermöglichen. Die Verwendung einer UNSAFE-Assembly wird in diesem Fall vorausgesetzt. Warnhinweise zur Verwendung von UNSAFE-Assemblys finden Sie unter [CLR Integration Code Access Security](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) .  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen benutzerdefinierter Funktionen &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
  [Erstellen benutzerdefinierter Aggregate](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)   
  [Ausführen von benutzerdefinierten Funktionen](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)   

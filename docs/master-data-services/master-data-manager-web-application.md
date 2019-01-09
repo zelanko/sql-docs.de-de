@@ -5,19 +5,18 @@ ms.date: 12/20/2016
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2fec17446829d39deae233c205360d768aec313c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fff6e1ab9f6394c34c60356fdd4f5eb76ab89c6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682458"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212379"
 ---
 # <a name="master-data-manager-web-application"></a>Master Data Manager-Webanwendung [Master Data Services]
 
@@ -25,12 +24,12 @@ ms.locfileid: "47682458"
 
   Die [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung wird hauptsächlich von Administratoren verwendet, um administrative Tasks auszuführen. Nur Administratoren können z. B. Modelle, Geschäftsregeln oder Versionen von Daten erstellen. Weitere Informationen zu Administratoren finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] funktioniert nur in Internet Explorer 9 (IE) oder höher. Internet Explorer 8 und frühere Versionen, Microsoft Edge und Chrome werden nicht unterstützt.  
-
+> 
 > **Sie können keine MDS-Website erstellen?**
->>Lesen Sie diesen Microsoft Support-Artikel für Anweisungen zum Lösen dieses Problems.
-[Können Sie keine MDS-Website über ein Konto mit geringen Rechten in SQL Server 2016 erstellen?](https://aka.ms/mdssupport) 
+> >Lesen Sie diesen Microsoft Support-Artikel für Anweisungen zum Lösen dieses Problems.
+> [Können Sie keine MDS-Website über ein Konto mit geringen Rechten in SQL Server 2016 erstellen?](https://aka.ms/mdssupport) 
   
  Der Funktionsbereich "Explorer" der Webanwendung ist der einzige von Administratoren nicht verwendete Bereich. "Explorer" ist für Benutzer gedacht, die häufig Masterdaten aktualisieren. Diese Benutzer verfügen über die Berechtigung für die Daten, die zum Erledigen ihrer Arbeit erforderlich sind.  
   

@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fbd32c13badb86db8dae7156b14ca3f93f97d76c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f6949ff07fccb7de14a597b754e7f2beeaa9bfe8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710648"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206289"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Automatisierte Verwaltung in einem Unternehmen
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47710648"
 > [!IMPORTANT]  
 > In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Das Automatisieren der Verwaltung über mehrere Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hinweg wird *Multiserververwaltung* genannt. Verwenden Sie die Multiserveradministration für folgende Aufgaben:  
+Das Automatisieren der Verwaltung über mehrere Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hinweg wird *Multiserververwaltung*genannt. Verwenden Sie die Multiserveradministration für folgende Aufgaben:  
   
 -   Verwalten von zwei oder mehr Servern.  
   
@@ -68,7 +68,7 @@ Enthält Informationen zum Erstellen und Verwalten von Master- und Zielservern.
 Enthält Informationen dazu, wie sich die Verwendung von Windows-Konten ohne Administratorberechtigungen oder des Kontos LocalSystem für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst auf Multiserverumgebungen auswirken kann.  
   
 [Festlegen von Verschlüsselungsoptionen auf Zielservern](../../ssms/agent/set-encryption-options-on-target-servers.md)  
-Enthält Informationen zum Festlegen des[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Registrierungsunterschlüssels „MsxEncryptChannelOptions“ auf Zielservern.  
+Enthält Informationen zum Festlegen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Registrierungsunterschlüssels MsxEncryptChannelOptions auf Zielservern.  
   
 [Verwalten von Aufträgen über ein gesamtes Unternehmen](../../ssms/agent/manage-jobs-across-an-enterprise.md)  
 Enthält Informationen zum Überprüfen des Auftragsstatus, Ändern der Zielserver für Aufträge, Synchronisieren von Zielserveruhren, Abrufen des aktuellen Auftragsstatus von Masterservern.  
@@ -85,7 +85,7 @@ Enthält Informationen zur Weiterleitung von Ereignissen von den Zielservern auf
 [Optimieren der automatischen Verwaltung in einem Unternehmen](../../ssms/agent/tune-automated-administration-across-an-enterprise.md)  
 Enthält Informationen dazu, wie die automatisierte Verwaltung in einer Multiserverumgebung die Selbstoptimierungsfunktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nutzt.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Themen zur Abwärtskompatibilität zum Installieren der SQL Server-Datenbank-Engine](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
 [Registrieren von Servern](../register-servers/register-servers.md)  
 [sp_add_targetservergroup](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)  

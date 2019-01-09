@@ -7,18 +7,16 @@ ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.lookin
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e8d7fac329ef0c12566c2479459749dd74a5934
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a799ff3a36ebf3c2381bdaf17c697f190ebf2fe
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835658"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328630"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Suchordner auswählen (Dialogfeld in Visual Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,7 +24,7 @@ Ermöglicht es Ihnen, eigene benannte Sätze mit Suchordnern zusammenzustellen, 
   
 Fügen Sie der Liste **Ausgewählte Ordner** Ordner hinzu, geben Sie im Feld **Ordnersatz** einen Namen für diesen Ordner ein, und klicken Sie auf **Übernehmen** , um ihn zu speichern. Dieser benutzerdefinierte Suchbereich kann danach anhand des Namens aus den Dropdownlisten **Suchen in** in den Fenstern **Suchen in Dateien** und **Ersetzen in Dateien**ausgewählt werden. Wenn Sie einen benutzerdefinierten Ordnersatz aus den Listen **Suchen in** entfernen möchten, wählen Sie seinen Namen im Feld **Ordnersatz** aus, und klicken Sie auf **Löschen**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
 Mithilfe der folgenden Steuerelemente können Sie eigene Sätze mit Suchordnern zusammenstellen, speichern und überarbeiten.  
   
 **Ordnersatz**  
@@ -58,4 +56,3 @@ Führt die hinzugefügten Ordner aus der **Ordnerliste**auf. Diese Ordner werden
   
 **Übernehmen**  
 Speichert den Satz mit Suchordnern, die in der Liste **Ausgewählte Ordner** aufgeführt sind, als einen benannten Ordnersatz. Dieser Ordnersatz kann dann im Feld **Suchen in** aller Registerkarten im Fenster **Suchen und Ersetzen** ausgewählt werden. Schließt das Dialogfeld Suchordner auswählen.  
-  

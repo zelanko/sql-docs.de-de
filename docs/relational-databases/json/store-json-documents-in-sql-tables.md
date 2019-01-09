@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: ef9d3882a00792606daa357508677b1af6fbe570
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cd100639007c12acca5aab8c8271239cec42cdda
+ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502784"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52886725"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>Speichern von JSON-Dokumenten in SQL Server oder SQL-Datenbank
 SQL Server und Azure SQL-Datenbank verfügen über native JSON-Funktionen, mit denen Sie JSON-Dokumente durch die standardmäßige SQL-Sprache analysieren können. Jetzt können Sie JSON-Dokumente in SQL Server oder SQL-Datenbank speichern und JSON-Daten wie in einer NoSQL-Datenbank abfragen. Dieser Artikel beschreibt die Optionen zum Speichern von JSON-Dokumenten in SQL Server oder SQL-Datenbank.
@@ -160,10 +160,6 @@ Durch native JSON-Funktionen in SQL Server und SQL-Datenbank können JSON-Dokume
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>Weitere Informationen zu JSON in SQL Server und Azure SQL-Datenbank  
   
-### <a name="microsoft-blog-posts"></a>Microsoft-Blogbeiträge  
-  
-Spezielle Lösungen, Anwendungsfälle und Empfehlungen finden Sie in den [Blogbeiträgen über die integrierte JSON-Unterstützung](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL-Server und in Azure SQL-Datenbank.  
-
 ### <a name="microsoft-videos"></a>Microsoft-Videos
 
 Eine visuelle Einführung in die JSON-Unterstützung, die in SQL Server und Azure SQL-Datenbank integriert ist, finden Sie in den folgenden Videos:

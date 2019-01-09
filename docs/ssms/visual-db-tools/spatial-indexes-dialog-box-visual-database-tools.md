@@ -13,12 +13,12 @@ ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb31f067ceb052a165cd6e3830e778d6af15e875
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9e5b9b4d25c7fd6f0384c3390e09c4b427228ebb
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509361"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589614"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Dialogfeld 'Räumliche Indizes' (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,7 +26,7 @@ Verwenden Sie das Dialogfeld **Räumliche Indizes** , um Indizes für Spalten de
   
 Weitere Informationen über die Einschränkungen bei der Erstellung von räumlichen Indizes finden Sie unter [Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
 **Ausgewählter räumlicher Index**  
 Listet vorhandene räumliche Indizes auf. Wählen Sie einen Index aus, um dessen Eigenschaften anzuzeigen. Wenn die Liste leer ist, wurden bisher keine räumlichen Indizes für die Tabelle definiert.  
   
@@ -111,12 +111,12 @@ Stellt Seiten in diesem Index mit dem in **Füllfaktor**angegebenen Prozentsatz 
 **Seitensperren sind zulässig**  
 Gibt an, ob Sperren auf Seitenebene für diesen Index zugelassen sind. Das Zulassen oder Untersagen von Sperren auf Seitenebene wirkt sich auf die Datenbankleistung aus.  
   
-**Statistiken** **neu berechnen**  
+**Statistiken neu berechnen**  
 Gibt an, ob beim Erstellen des Index neue Statistiken berechnet werden sollen. Durch erneutes Berechnen von Statistiken wird die Erstellung der Indizes verlangsamt, die Abfrageleistung wird jedoch meist verbessert.  
   
 **Zeilensperren sind zulässig**  
 Gibt an, ob das Sperren auf Zeilenebene für diesen Index zugelassen ist. Das Zulassen oder Untersagen von Sperren auf Zeilenebene wirkt sich auf die Datenbankleistung aus.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md)  
   

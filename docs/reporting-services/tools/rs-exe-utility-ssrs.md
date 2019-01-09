@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6e2231b51551972536d9ea534f53d5a0a2cbbfc7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e923092cbd81bcee6bee7c76f956bae2ede45c35
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543963"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52983981"
 ---
 # <a name="rsexe-utility-ssrs"></a>Hilfsprogramm 'RS.exe' (SSRS)
   Das Dienstprogramm rs.exe verarbeitet Skripts, die von Ihnen in einer Eingabedatei bereitgestellt werden. Verwenden Sie dieses Hilfsprogramm, um die Berichtsserverbereitstellung und Verwaltungsaufgaben zu automatisieren.  
@@ -56,7 +56,7 @@ rs {-?}
  (Erforderlich) Gibt die auszuführende RSS-Datei an. Dieser Wert kann einen relativen oder einen vollqualifizierten Pfad zur RSS-Datei enthalten.  
   
  **-s** *Server-URL*  
- (Erforderlich) Gibt den Namen des Webservers und den Namen des virtuellen Verzeichnisses auf dem Berichtsserver an, in dem die Datei ausgeführt werden soll. Ein Beispiel für eine Berichtsserver-URL ist `https://examplewebserver/reportserver`. Das Präfix „https://“ zu Beginn des Servernamens ist optional. Wenn Sie kein Präfix angeben, verwendet der Berichtsserver-Skripthost zunächst https:// und dann http://, falls https:// nicht verfügbar ist.  
+ (Erforderlich) Gibt den Namen des Webservers und den Namen des virtuellen Verzeichnisses auf dem Berichtsserver an, in dem die Datei ausgeführt werden soll. Ein Beispiel für eine Berichtsserver-URL ist `https://examplewebserver/reportserver`. Das Präfix http:// oder https:// zu Beginn des Servernamens ist optional. Wenn Sie kein Präfix angeben, verwendet der Berichtsserver-Skripthost zunächst https:// und dann http://, falls https:// nicht verfügbar ist.  
   
  **-u** [*Domäne*\\]*Benutzername*  
  (Optional) Gibt ein Benutzerkonto an, das für die Herstellung einer Verbindung mit dem Berichtsserver verwendet wird. Wenn **-u** und **-p** nicht angegeben werden, wird das aktuelle Windows-Benutzerkonto verwendet.  
@@ -119,7 +119,7 @@ rs -i c:\scriptfiles\script_copycontent.rss -s https://localhost/reportserver
 > [!TIP]  
 >  Ein ausführliches Beispiel finden Sie unter [Reporting Services-Beispielskript „rs.exe“ zum Migrieren von Inhalten zwischen Berichtsservern](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 - [Ausführen einer Reporting Services-Skriptdatei](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
 - [Skripts für Bereitstellungs- und Verwaltungsaufgaben](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
 - [Skripterstellung mit dem Hilfsprogramm rs.exe und dem Webdienst](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   

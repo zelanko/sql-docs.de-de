@@ -21,12 +21,12 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ed6454a6bce8f9f0942e5427910c2942bfa838e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 316becea16562fda0e1ba05623f09018367254af
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788498"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589294"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,9 +77,9 @@ ms.locfileid: "47788498"
   
 ##  <a name="ConfigureServerConnections"></a> Konfigurieren des Servers zum Erzwingen von verschlüsselten Verbindungen  
   
-1.  Erweitern Sie im **SQL Server Configuration Manager** den Eintrag **SQL Server-Netzwerkkonfiguration**, klicken Sie mit der rechten Maustaste auf **Protokolle für** *\<Serverinstanz>*, und wählen Sie dann **Eigenschaften**.  
+1.  Erweitern Sie im **SQL Server Configuration Manager** den Eintrag **SQL Server-Netzwerkkonfiguration**, klicken Sie mit der rechten Maustaste auf **Protokolle für** _\<Serverinstanz>_, und wählen Sie dann **Eigenschaften**.  
   
-2.  Wählen Sie im Dialogfeld **Eigenschaften** von **Protokolle für** *\<Instanzname>* auf der Registerkarte **Zertifikat** das gewünschte Zertifikat aus der Dropdownliste für das Feld **Zertifikat** aus, und klicken Sie dann auf **OK**.  
+2.  Wählen Sie im Dialogfeld **Eigenschaften** von **Protokolle für** _\<Instanzname>_ auf der Registerkarte **Zertifikat** das gewünschte Zertifikat aus der Dropdownliste für das Feld **Zertifikat** aus, und klicken Sie dann auf **OK**.  
   
 3.  Aktivieren Sie auf der Registerkarte **Flags** im Feld **ForceEncryption** die Option **Ja**, und klicken Sie dann auf **OK** , um das Dialogfeld zu schließen.  
   
@@ -115,7 +115,7 @@ Ab [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 unterstützen 
   
 3.  Klicken Sie auf der Registerkarte **Verbindungseigenschaften** auf **Verbindung verschlüsseln**.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [TLS 1.2-Unterstützung für Microsoft SQL Server](https://support.microsoft.com/kb/3135244)  
 

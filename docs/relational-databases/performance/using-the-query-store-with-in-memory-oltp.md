@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, in-memory
 ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 91439c93e0c21ca447bb0ca585904ddf41d885c9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 85f7fabd34ae1898d52f02e65ee8f962a2fcc740
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541082"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368362"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>Verwenden des Abfragespeichers mit In-Memory-OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -135,7 +135,7 @@ JOIN sys.query_store_runtime_stats_interval AS rsi
 WHERE q.object_id = OBJECT_ID('dbo.OrderInsert');  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Erstellen einer speicheroptimierten Tabelle und einer nativ kompilierten gespeicherten Prozedur](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)   
  [Bewährte Methoden für den Abfragespeicher](../../relational-databases/performance/best-practice-with-the-query-store.md)   

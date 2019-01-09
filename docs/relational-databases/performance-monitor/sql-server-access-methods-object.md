@@ -5,21 +5,21 @@ ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Access Methods object
 - SQLServer:Access Methods
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 2c13a43c28409d84bd9572767bdd92a4b6e0314d
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: b838dd65d4442161f70f7f658a485ec0bfd644b0
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52159018"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380641"
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server, Zugriffsmethoden-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "52159018"
 |**Basis für Arbeitstabellen aus Cache**|Nur zur internen Verwendung.|  
 |**Quote der Arbeitstabellen aus Cache**|Prozentsatz der erstellten Arbeitstabellen, bei denen die ersten zwei Seiten der Arbeitstabelle nicht zugeordnet wurden, sondern im Arbeitstabellencache verfügbar waren. (Wenn eine Arbeitstabelle gelöscht wird, kann die Zuordnung von zwei Seiten beibehalten werden, die an den Arbeitstabellencache zurückgegeben werden. Hierdurch wird die Leistung erhöht.)|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

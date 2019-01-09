@@ -15,12 +15,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0ed641edd4ff8b979f7e753c9e83b38654082e61
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0d99aac35afb4d5e4cc9fc4c56c497a95641300e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660559"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210809"
 ---
 # <a name="configure-publishing-and-distribution"></a>Konfigurieren der Veröffentlichung und der Verteilung
 [!INCLUDE[appliesto-ss-asdbmi-asdbmi-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51660559"
 ###  <a name="Security"></a> Sicherheit 
 Weitere Informationen finden Sie unter [Sichere Bereitstellung &#40;Replikation&#41;](../../relational-databases/replication/security/secure-deployment-replication.md).
 
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio 
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio 
 Sie konfigurieren die Verteilung mit dem Assistenten für neue Veröffentlichung oder mit dem Verteilungskonfigurations-Assistenten. Rufen Sie nach der Konfiguration des Verteilers das Dialogfeld **Verteilereigenschaften - \<Distributor>** auf, und ändern Sie die Eigenschaften. Verwenden Sie den Verteilungskonfigurations-Assistenten, wenn Sie einen Verteiler so konfigurieren möchten, dass die Mitglieder der festen Datenbankrollen `db_owner` Veröffentlichungen erstellen können, oder wenn Sie einen Remoteverteiler konfigurieren möchten, bei dem es sich nicht um einen Verleger handelt.
 
 #### <a name="to-configure-distribution"></a>So konfigurieren Sie die Verteilung 
@@ -130,7 +130,7 @@ Im folgenden Beispiel wird veranschaulicht, wie die Veröffentlichung und die Ve
 
 4. Legen Sie die <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> -Eigenschaft auf den Datenbanknamen fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus dem Schritt 1 fest.
 
-5. Installieren Sie den Verteiler, indem Sie die <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A>-Methode aufrufen. Geben Sie ein sicheres Kennwort (das vom Verteiler für den Verbindungsaufbau mit dem Remoteverteiler verwendet wird) und das <xref:Microsoft.SqlServer.Replication.DistributionDatabase> -Objekt aus Schritt 3 an. Weitere Informationen finden Sie unter [Schützen des Verteilers](../../relational-databases/replication/security/secure-the-distributor.md).
+5. Installieren Sie den Verteiler, indem Sie die <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> -Methode aufrufen. Geben Sie ein sicheres Kennwort (das vom Verteiler für den Verbindungsaufbau mit dem Remoteverteiler verwendet wird) und das <xref:Microsoft.SqlServer.Replication.DistributionDatabase> -Objekt aus Schritt 3 an. Weitere Informationen finden Sie unter [Schützen des Verteilers](../../relational-databases/replication/security/secure-the-distributor.md).
 
    > `IMPORTANT!!` Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Sicherheitsanmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmeldeinformationen speichern müssen, verwenden Sie die [Kryptografiedienste](https://go.microsoft.com/fwlink/?LinkId=34733) von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.
 
@@ -156,8 +156,8 @@ Im folgenden Beispiel wird veranschaulicht, wie die Veröffentlichung und die Ve
 
 11. Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> -Methode auf. Übergeben Sie den Namen des Remoteverteilers und das Kennwort des Remoteverteilers, der in Schritt 5 angegeben wurde.
 
->[!IMPORTANT]
-Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmeldeinformationen speichern müssen, verwenden Sie die [Kryptografiedienste](https://go.microsoft.com/fwlink/?LinkId=34733) von Windows .NET Framework.
+> [!IMPORTANT]
+> Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmeldeinformationen speichern müssen, verwenden Sie die [Kryptografiedienste](https://go.microsoft.com/fwlink/?LinkId=34733) von Windows .NET Framework.
 
 ###  <a name="PShellExample"></a> Beispiel (RMO) 
 Sie können die Veröffentlichung und Verteilung mithilfe von Replikationsverwaltungsobjekten (ROM) programmgesteuert konfigurieren.
@@ -166,7 +166,7 @@ Sie können die Veröffentlichung und Verteilung mithilfe von Replikationsverwal
 
 [!code-vb[HowTo#rmo_vb_AddDistPub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_adddistpub)] 
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter 
+## <a name="see-also"></a>Weitere Informationen 
 [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)  
 [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
 [Verteilung konfigurieren](../../relational-databases/replication/configure-distribution.md)  
