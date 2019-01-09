@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 414c9650a1ae933e6e472ab09a26e6d26ae503fd
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: 98e06e3199d4ce8750a4a5956aec6d97c141b33b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49947407"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214256"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Konfigurieren von PolyBase für den Zugriff auf externe Daten in SQL Server
 
@@ -33,13 +33,13 @@ Laden Sie zuerst den ODBC-Treiber aus der Datenquelle herunter, mit der Sie eine
 
 ![PolyBase-Erweiterungsgruppen](../../relational-databases/polybase/media/polybase-odbc-admin.png) 
 
-  > **WICHTIG!**
-  >
-  > Um die Abfrageleistung zu verbessern, stellen Sie sicher, dass für den Treiber Verbindungspooling aktiviert ist. Dies erfolgt über „ODBC Data Source Administrator“ (ODBC-Datenquellenadministrator).
-
+> **WICHTIG!**
+> 
+> Um die Abfrageleistung zu verbessern, stellen Sie sicher, dass für den Treiber Verbindungspooling aktiviert ist. Dies erfolgt über „ODBC Data Source Administrator“ (ODBC-Datenquellenadministrator).
+> 
 > **Hinweis**
 > 
->Der Treibername (eingekreistes Beispiel oben) muss beim Erstellen der externen Datenquelle angegeben werden (Schritt 3 unten).
+> Der Treibername (eingekreistes Beispiel oben) muss beim Erstellen der externen Datenquelle angegeben werden (Schritt 3 unten).
 
 ## <a name="create-an-external-table"></a>Erstellen einer externen Tabelle
 
