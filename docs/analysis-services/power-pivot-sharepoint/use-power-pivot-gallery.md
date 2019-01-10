@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a2eb7bfae0c4fcbc82995c120ef588fdfd4710af
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: HT
+ms.openlocfilehash: 03752c2f1d7259f29f634473efdfe570c55b89ee
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980583"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405395"
 ---
 # <a name="use-power-pivot-gallery"></a>Verwenden des Power Pivot-Katalogs
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,9 +46,9 @@ ms.locfileid: "38980583"
   
 > [!NOTE]  
 >  Für den Power Pivot-Katalog ist Microsoft Silverlight erforderlich.  Silverlight wird vom Microsoft Edge-Browser nicht unterstützt.   
-> Um die Bibliotheksinhalte in Edge anzuzeigen, klicken Sie auf die Registerkarte **Bibliothek** im Power Pivot-Katalog, und ändern Sie dann die Ansicht der Dokumentbibliothek in **Alle Dokumente**.    
+> Um die Bibliotheksinhalte in Microsoft Edge anzuzeigen, klicken Sie auf die Registerkarte **Bibliothek** im Power Pivot-Katalog, und ändern Sie dann die Ansicht der Dokumentbibliothek in **Alle Dokumente**.    
 > Um die Standardansicht zu ändern, klicken Sie auf die Registerkarte **Bibliothek** und dann auf „Ansicht ändern“. Klicken Sie auf „Zur Standardansicht machen“, und klicken Sie dann auf „OK“, um die Standardansicht zu speichern.  
->  Weitere Informationen zu den von Microsoft Edge unterstützten Features finden Sie im Windows-Blog, [A break from the past, part 2: Saying goodbye to ActiveX, VBScript...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+>  Weitere Informationen zu den von Edge unterstützten, finden Sie in der Windows-Blog, [eine Unterbrechung aus der Vergangenheit, Teil 2: Sagen Goodbye to ActiveX, VBScript...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
  Eine vollständige Liste der Voraussetzungen, finden Sie unter [Erstellen und Anpassen des PowerPivot-Katalogs](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md).  
   
@@ -68,13 +68,13 @@ ms.locfileid: "38980583"
   
 1.  Speichern Sie die Datei.  
   
-2.  1.  **Excel 2010:** Klicken Sie im Menü „Datei“ auf **Speichern und senden**.  
+2.  1.  **Excel 2010:** Klicken Sie im Menü Datei auf **speichern & senden**.  
   
     2.  Klicken Sie auf **Auf SharePoint speichern**.  
   
     3.  Klicken Sie auf **Veröffentlichungsoptionen** , wenn Sie Optionen für Excel Services verwenden möchten, um einzelne Blätter oder Parameter auszuwählen, die Sie veröffentlichen möchten. Auf der Registerkarte Parameter in den Optionen für Excel Services können Sie z. B. auswählen, welche Slicer in der veröffentlichten Arbeitsmappe angezeigt werden.  
   
-    1.  **Excel 2013:**  Klicken Sie im Menü Datei auf **Speichern**.  
+    1.  **Excel 2013:**  Klicken Sie im Menü Datei auf **speichern**.  
   
     2.  Klicken Sie auf **Optionen für die Browseransicht**, wenn Sie Optionen für Excel Services verwenden möchten, um einzelne Blätter oder Parameter auszuwählen, die veröffentlicht werden sollen. Auf der Registerkarte Parameter in den Optionen für Excel Services können Sie z. B. auswählen, welche Slicer in der veröffentlichten Arbeitsmappe angezeigt werden.  
   
@@ -153,16 +153,16 @@ ms.locfileid: "38980583"
 ### <a name="document-type-is-not-supported"></a>Dokumenttyp wird nicht unterstützt  
  Der Inhaltstyp **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalogdokument** wird nicht unterstützt. Wenn Sie den Inhaltstyp **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalogdokument** für eine Dokumentbibliothek aktivieren und versuchen, ein neues Dokument dieses Typs zu erstellen, wird eine Fehlermeldung ähnlich der folgenden angezeigt:  
   
--   "Neues Dokument" erfordert eine Anwendung oder einen Webbrowser, die bzw. der mit Microsoft SharePoint Foundation kompatibel ist. Um der Dokumentbibliothek ein Dokument hinzuzufügen, klicken Sie auf die Schaltfläche Dokument hochladen.  
+-   "Neues Dokument" erfordert eine Microsoft Sharepoint Foundation-kompatiblen Anwendung oder einen Webbrowser. Um diese Dokumentbibliothek ein Dokument hinzuzufügen, klicken Sie auf die Schaltfläche Dokument hochladen.  
   
--   "Die Internetadresse 'http://[Servername]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx' ist ungültig.""Microsoft Excel kann auf die Datei 'http://[Servername]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx' nicht zugreifen." Dies kann mehrere Gründe haben:  
+-   "Die Internetadresse ' http://[Servername]/Testsite/PowerPivot / TestSite/Gallery/ReportGallery/Forms/Template.xlsx ' ist ungültig." " Microsoft Excel die Datei kann nicht zugegriffen werden kann ' http://[Servername]/Testsite/PowerPivot / TestSite/Gallery/ReportGallery/Forms/Template.xlsx ". Dies kann mehrere Gründe haben:  
   
  Der Inhaltstyp **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalogdokument** wird Dokumentbibliotheken nicht automatisch hinzugefügt. Dieses Problem tritt nur dann auf, wenn Sie den nicht unterstützten Inhaltstyp manuell aktivieren.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen eines vertrauenswürdigen Speicherorts für PowerPivot-Websites in der Zentraladministration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [Löschen des PowerPivot-Katalogs](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)   
- [Erstellen und Anpassen von Power Pivot-Katalog](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
+ [Löschen eines Power Pivot-Katalogs](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)   
+ [Erstellen und Anpassen des PowerPivot-Katalogs](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
  [Planen einer Datenaktualisierung (PowerPivot für SharePoint)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)  
   
   

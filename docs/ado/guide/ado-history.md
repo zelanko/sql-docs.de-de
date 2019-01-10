@@ -15,7 +15,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e00a1ff652e3f1463d37e2cd5457965968b4ba4c
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47709558"
@@ -32,10 +32,10 @@ In diesem Thema werden die neuen Funktionen, die von den einzelnen Releases des 
  *Festplatte Zugriff ist nicht außerhalb einer vertrauenswürdigen Zone zulässig.*
 In der domänenübergreifende Skripterstellung im Zusammenhang mit nicht vertrauenswürdigen Websites, die folgenden Vorgänge sind deaktiviert: **Stream.SaveToFile**, **Stream.LoadFromFile**, **Recordset.Save**, und **Recordset.Open**, zusammen mit den **AdCmdFile** Kennzeichen oder mit der Microsoft OLE DB-Persistenz-Anbieter (MSPersist).
 
- **Recordset.Open** *,***Recordset.Save** *,***Stream.SaveToFile** *, und* **Stream.LoadFromFile***für nur physische Dateien verwendet werden.* 
+ **Recordset.Open** *,* **Recordset.Save** *,* **Stream.SaveToFile** *, und* **Stream.LoadFromFile** *für nur physische Dateien verwendet werden.*
 Diese Methoden überprüfen nun, dass Dateihandles auf nur physische Dateien verweisen.
 
- **Recordset.ActiveCommand***gibt einen Fehler beim Aufrufen aus einer HTML-/ ASP-Seite zurück.* 
+ **Recordset.ActiveCommand** *gibt einen Fehler beim Aufrufen aus einer HTML-/ ASP-Seite zurück.*
 Dies verhindert, dass die **Befehl** Objekt firmenhardware missbräuchlich verwendet werden.
 
  *Die Anzahl der***Recordsets***zurückgegeben wird, indem Sie eine geschachtelte***Form***Befehl verfügt über eine Obergrenze.* 
