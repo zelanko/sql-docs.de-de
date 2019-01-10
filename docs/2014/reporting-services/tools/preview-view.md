@@ -15,20 +15,20 @@ ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 89bea23ea4add737dbd9edf9a02d147abb35adbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ac2aa3d352de78fae6c3d9613bef2df390e46fa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206770"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354032"
 ---
 # <a name="preview-view"></a>Vorschauansicht
   Verwenden Sie die Ansicht **Vorschau** , um den gerenderten Bericht anzuzeigen. Wenn ein Bericht in der Vorschau angezeigt wird, führt der Berichts-Designer den Bericht lokal aus und zeigt ihn in der Vorschauansicht an. Der Bericht wird im Vorschaumodus vollständig verarbeitet. Wenn der Bericht eine komplexe Abfrage oder eine große Datenmenge enthält, kann das Generieren der Vorschau beim erstmaligen Anzeigen mehrere Minuten in Anspruch nehmen. Bei späteren Änderungen, die sich nur auf das Format des Berichts auswirken, wird die Vorschau mit zwischengespeicherten Daten generiert.  
   
 > [!IMPORTANT]  
->  Wenn [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] wird ausgeführt, als RemoteApp, können nicht Berichten angezeigt werden **Vorschau** anzeigen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. RemoteApp-Programme sind Programme, auf die remote über Remotedesktop-Dienste zugegriffen wird. Weitere Informationen finden Sie unter [schrittweisen Anleitung für TS RemoteApp](http://technet.microsoft.com/library/cc730673\(WS.10\).aspx).  
+>  Wenn [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] als RemoteApp ausgeführt wird, können Berichte in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] nicht in der **Vorschau** angezeigt werden. RemoteApp-Programme sind Programme, auf die remote über Remotedesktop-Dienste zugegriffen wird. Weitere Informationen finden Sie unter [schrittweisen Anleitung für TS RemoteApp](https://technet.microsoft.com/library/cc730673\(WS.10\).aspx).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Mithilfe der Symbolleiste können Sie Vorschaufunktionen verwalten.  
   
  **Anzeigen oder Ausblenden der Dokumentstruktur**  

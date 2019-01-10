@@ -13,12 +13,12 @@ ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d7fe5ffc867063d745a01ed12024acc536f8f634
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: cb12dbcee56debfd88b4706ad69ac3ac2d04113a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188080"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398813"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Angeben des Füllfaktors für einen Index
   In diesem Thema wird beschrieben, was ein Füllfaktor ist und wie ein Füllfaktorwert in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] für einen Index mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]angegeben wird.  
@@ -36,7 +36,7 @@ ms.locfileid: "48188080"
   
      [Leistungsaspekte](#Performance)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So geben Sie einen Füllfaktor für einen Index an mit:**  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48188080"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Performance"></a> Leistungsaspekte  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48188080"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht. Der Benutzer muss ein Mitglied der festen Serverrolle **sysadmin** bzw. der festen Datenbankrollen **db_ddladmin** und **db_owner** sein.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-specify-a-fill-factor-by-using-table-designer"></a>So geben Sie einen Füllfaktor mit dem Tabellen-Designer an  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48188080"
   
 2.  Klicken Sie auf das Pluszeichen, um den Ordner **Tabellen** zu erweitern.  
   
-3.  Klicken Sie mit der rechten Maustaste auf die Tabelle, für die Sie den Füllfaktor eines Indexes angeben möchten, und wählen Sie die Option **Entwurf**.  
+3.  Klicken Sie mit der rechten Maustaste auf die Tabelle, für die Sie den Füllfaktor eines Indexes angeben möchten, und wählen Sie die Option **Entwurf** aus.  
   
 4.  Klicken Sie im Menü **Tabellen-Designer** auf **Indizes/Schlüssel**.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "48188080"
   
 #### <a name="to-specify-a-fill-factor-in-an-existing-index"></a>So geben Sie einen Füllfaktor für einen vorhandenen Index an  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

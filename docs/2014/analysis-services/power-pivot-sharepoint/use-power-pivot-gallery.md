@@ -11,18 +11,18 @@ ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 85fbcf7fdf8a15f9705c9b27ba838b41911f31db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 91cc8740dfaeddcf489f3274b6766cdb803b1321
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113590"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416931"
 ---
 # <a name="use-powerpivot-gallery"></a>Verwenden des PowerPivot-Katalogs
   Der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Katalog ist eine zweckgebundene SharePoint-Dokumentbibliothek, die umfangreiche Vorschau- und Dokumentverwaltungsmöglichkeiten für veröffentlichte Excel-Arbeitsmappen und Reporting Services-Berichte bereitstellt, die PowerPivot-Daten enthalten.  
   
 > [!NOTE]  
->  Abhängig davon wie Ihr Server konfiguriert ist, werden unter Umständen für bestimmte Dokumente Warnungen oder Fehlermeldungen im Vorschaubereich angezeigt. Meldungen werden möglicherweise angezeigt, wenn für eine Excel-Arbeitsmappe festgelegt wurde, dass sie bei jedem Öffnen automatisch aktualisiert wird. Warnmeldungen zur Datenaktualisierung werden als Vorschaubild angezeigt, wenn Excel Services so konfiguriert ist, dass Fehlermeldungen als Warnung bei Datenaktualisierungen angezeigt werden. Farm- oder Dienstadministratoren können Konfigurationseinstellungen ändern, damit eine Vorschau des tatsächlichen Arbeitsblatts angezeigt wird. Weitere Informationen finden Sie unter [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
+>  Abhängig davon wie Ihr Server konfiguriert ist, werden unter Umständen für bestimmte Dokumente Warnungen oder Fehlermeldungen im Vorschaubereich angezeigt. Meldungen werden möglicherweise angezeigt, wenn für eine Excel-Arbeitsmappe festgelegt wurde, dass sie bei jedem Öffnen automatisch aktualisiert wird. Warnmeldungen zur Datenaktualisierung werden als Vorschaubild angezeigt, wenn Excel Services so konfiguriert ist, dass Fehlermeldungen als Warnung bei Datenaktualisierungen angezeigt werden. Farm- oder Dienstadministratoren können Konfigurationseinstellungen ändern, damit eine Vorschau des tatsächlichen Arbeitsblatts angezeigt wird. Weitere Informationen finden Sie unter [Erstellen eines vertrauenswürdigen Speicherorts für PowerPivot-Websites in der Zentraladministration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
 ##  <a name="bkmk_top"></a> In diesem Thema  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48113590"
 >  Für den Power Pivot-Katalog ist Microsoft Silverlight erforderlich.  Silverlight wird vom Microsoft Edge-Browser nicht unterstützt.   
 > Um die Bibliotheksinhalte in Microsoft Edge anzuzeigen, klicken Sie auf die Registerkarte **Bibliothek** im Power Pivot-Katalog, und ändern Sie dann die Ansicht der Dokumentbibliothek in **Alle Dokumente**.    
 > Um die Standardansicht zu ändern, klicken Sie auf die Registerkarte **Bibliothek** und dann auf „Ansicht ändern“. Klicken Sie auf „Zur Standardansicht machen“, und klicken Sie dann auf „OK“, um die Standardansicht zu speichern.  
->  Weitere Informationen zu den von Microsoft Edge unterstützten Features finden Sie im Windows-Blog, [A break from the past, part 2: Saying goodbye to ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+>  Weitere Informationen zu den von Edge unterstützten, finden Sie in der Windows-Blog, [eine Unterbrechung aus der Vergangenheit, Teil 2: Sagen Goodbye to ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
  Eine vollständige Liste der erforderlichen Komponenten, finden Sie unter [erstellen und Anpassen von PowerPivot-Katalog](create-and-customize-power-pivot-gallery.md).  
   
@@ -70,13 +70,13 @@ ms.locfileid: "48113590"
   
 1.  Speichern Sie die Datei.  
   
-2.  1.  **Excel 2010:** Klicken Sie im Menü „Datei“ auf **Speichern und senden**.  
+2.  1.  **Excel 2010:** Klicken Sie im Menü Datei auf **speichern & senden**.  
   
     2.  Klicken Sie auf **Auf SharePoint speichern**.  
   
     3.  Klicken Sie auf **Veröffentlichungsoptionen** , wenn Sie Optionen für Excel Services verwenden möchten, um einzelne Blätter oder Parameter auszuwählen, die Sie veröffentlichen möchten. Auf der Registerkarte Parameter in den Optionen für Excel Services können Sie z. B. auswählen, welche Slicer in der veröffentlichten Arbeitsmappe angezeigt werden.  
   
-    1.  **Excel 2013:**  Klicken Sie im Menü Datei auf **Speichern**.  
+    1.  **Excel 2013:**  Klicken Sie im Menü Datei auf **speichern**.  
   
     2.  Klicken Sie auf **Optionen für die Browseransicht**, wenn Sie Optionen für Excel Services verwenden möchten, um einzelne Blätter oder Parameter auszuwählen, die veröffentlicht werden sollen. Auf der Registerkarte Parameter in den Optionen für Excel Services können Sie z. B. auswählen, welche Slicer in der veröffentlichten Arbeitsmappe angezeigt werden.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "48113590"
  Das Erstellen eines neuen Berichts auf Grundlage einer vorhandenen PowerPivot-Arbeitsmappe in der Bibliothek erfordert, dass Reporting Services für die Websites, die den PowerPivot-Katalog enthalten, für die SharePoint-Integration konfiguriert ist. Wenn Sie die Option zum Erstellen eines Berichts-Generator-Berichts aktivieren, wird der Berichts-Generator vom Berichtsserver heruntergeladen und bei der ersten Verwendung auf der lokalen Arbeitsstation installiert. Eine Platzhalterberichtdatei wird für den neuen Bericht erstellt und im PowerPivot-Katalog gespeichert. Verbindungsinformationen für die PowerPivot-Arbeitsmappe werden für Sie als neue Datenquelle im Bericht erstellt. Als nächsten Schritt können Sie die Datasets und das Berichtslayout im Entwurfsarbeitsbereich erstellen. Wie Sie den Bericht mithilfe des Berichts-Generators zusammenstellen, können Sie Ihre Änderungen und das Endergebnis im Berichtsdokument im Katalog speichern. Um spätere Datentrennungen zu vermeiden, stellen Sie sicher, dass der Bericht und die Arbeitsmappendateien sich in der gleichen Bibliothek befinden.  
   
 #### <a name="open-new-excel-workbook"></a>Öffnen einer neuen Excel-Arbeitsmappe  
- Um eine neue Excel-Arbeitsmappe aus einer vorhandenen Arbeitsmappe zu erstellen, müssen Excel und [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] bereits auf dem lokalen Computer installiert sein. Bei Auswahl der Option „Neue Excel-Arbeitsmappe öffnen“ wird eine leere Arbeitsmappendatei (.xlsx) geöffnet, und [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten werden im Hintergrund als verbundene Datenquelle geladen. Nur die Daten aus dem PowerPivot-Fenster in der ursprünglichen Arbeitsmappe werden in der neuen Arbeitsmappe verwendet. PivotTables oder PivotCharts aus der ursprünglichen Arbeitsmappe sind nicht enthalten. Die neue Arbeitsmappe wird mit Daten in der ursprünglichen Arbeitsmappe verknüpft. Die Daten werden nicht in die neue Arbeitsmappe selbst kopiert.  
+ Um eine neue Excel-Arbeitsmappe aus einer vorhandenen Arbeitsmappe zu erstellen, müssen Excel und [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] bereits auf dem lokalen Computer installiert sein. Bei Auswahl der Option Neue Excel-Arbeitsmappe öffnen wird eine leere Arbeitsmappendatei (.xlsx) geöffnet, und [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten werden im Hintergrund als verbundene Datenquelle geladen. Nur die Daten aus dem PowerPivot-Fenster in der ursprünglichen Arbeitsmappe werden in der neuen Arbeitsmappe verwendet. PivotTables oder PivotCharts aus der ursprünglichen Arbeitsmappe sind nicht enthalten. Die neue Arbeitsmappe wird mit Daten in der ursprünglichen Arbeitsmappe verknüpft. Die Daten werden nicht in die neue Arbeitsmappe selbst kopiert.  
   
 ##  <a name="view"></a> Öffnen einer Arbeitsmappe oder eines Berichts im Ganzseitenmodus  
  Klicken Sie auf ein sichtbares Miniaturbild des in der Vorschau angezeigten Dokuments, um es unabhängig von der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalogvorschau im Modus Ganze Seite zu öffnen. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen werden in einem Browser geöffnet. Reporting Services-Berichte werden im ReportViewer-Webpart geöffnet, das Teil der Reporting Services-Bereitstellung auf einem SharePoint-Server ist.  
@@ -155,9 +155,9 @@ ms.locfileid: "48113590"
 ### <a name="document-type-is-not-supported"></a>Dokumenttyp wird nicht unterstützt  
  Das Inhaltstyp **PowerPivot-Katalogdokument** wird nicht unterstützt. Wenn Sie den Inhaltstyp **PowerPivot-Katalogdokument** für eine Dokumentbibliothek aktivieren und versuchen, ein neues Dokument dieses Typs zu erstellen, wird eine Fehlermeldung ähnlich der folgenden angezeigt:  
   
--   "Neues Dokument" erfordert eine Anwendung oder einen Webbrowser, die bzw. der mit Microsoft SharePoint Foundation kompatibel ist. Um der Dokumentbibliothek ein Dokument hinzuzufügen, klicken Sie auf die Schaltfläche Dokument hochladen.  
+-   "Neues Dokument" erfordert eine Microsoft Sharepoint Foundation-kompatiblen Anwendung oder einen Webbrowser. Um diese Dokumentbibliothek ein Dokument hinzuzufügen, klicken Sie auf die Schaltfläche Dokument hochladen.  
   
--   "Die Internetadresse 'http://[Servername]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx' ist ungültig.""Microsoft Excel kann auf die Datei 'http://[Servername]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx' nicht zugreifen." Dies kann mehrere Gründe haben:  
+-   "Die Internetadresse ' http://[Servername]/Testsite/PowerPivot / TestSite/Gallery/ReportGallery/Forms/Template.xlsx ' ist ungültig." " Microsoft Excel die Datei kann nicht zugegriffen werden kann ' http://[Servername]/Testsite/PowerPivot / TestSite/Gallery/ReportGallery/Forms/Template.xlsx ". Dies kann mehrere Gründe haben:  
   
  Der Inhaltstyp **PowerPivot-Katalogdokument** wird Dokumentbibliotheken nicht automatisch hinzugefügt. Dieses Problem tritt erst dann auf, wenn Sie den nicht unterstützten Inhaltstyp manuell aktivieren.  
   

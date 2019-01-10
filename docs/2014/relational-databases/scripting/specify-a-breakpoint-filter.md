@@ -7,20 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.breakpt.contraints
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint filter
 ms.assetid: 7bf1dddd-7b0b-4c47-8a7b-28a5569b4fa5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09fd45e648833f2d46c258a1806e8c424634b514
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e35da51b4af9e653fd6cdbad77704676941c49b3
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219570"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328710"
 ---
 # <a name="specify-a-breakpoint-filter"></a>Angeben eines Breakpointfilters
   Bei Verwendung eines Breakpointfilters wird ein Breakpoint nur auf angegebene Computer, Betriebssystemprozesse und Threads angewendet. Breakpointfilter werden meist beim Debuggen paralleler Anwendungen verwendet.  
@@ -40,9 +38,9 @@ ms.locfileid: "48219570"
   
     -   `MachineName` gibt den Computer an, auf dem die Instanz der Datenbank-Engine ausgeführt wird.  
   
-    -   `ProcessID`, und `ProcessName` sind das Betriebssystem zu der Datenbank-Engine-Instanz ausgeführt wird.  
+    -   `ProcessID` und `ProcessName` geben den Betriebssystemprozess an, von dem die Instanz der Datenbank-Engine ausgeführt wird.  
   
-    -   `ThreadID` und `ThreadName` der Betriebssystemthread ausgeführt wird die [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch, Prozedur oder Funktion in der Instanz der Datenbank-Engine.  
+    -   `ThreadID` und `ThreadName` geben den Betriebssystemthread an, unter dem der Batch, die Prozedur oder die Funktion von [!INCLUDE[tsql](../../includes/tsql-md.md)] in der Instanz der Datenbank-Engine ausgeführt wird.  
   
 3.  Klicken Sie auf **OK** , um die Änderungen zu implementieren, oder auf **Abbrechen** , um den Vorgang zu beenden, ohne die Änderungen zu übernehmen.  
   
@@ -50,5 +48,3 @@ ms.locfileid: "48219570"
  [Angeben einer Breakpointbedingung](specify-a-breakpoint-condition.md)   
  [Angeben einer Trefferanzahl](specify-a-hit-count.md)   
  [Angeben einer Breakpointaktion](specify-a-breakpoint-action.md)  
-  
-  
