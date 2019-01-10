@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/05/2018
+ms.date: 12/07/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -19,22 +19,20 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8c6b8ea4467ddc09a08d21a337b1b5c8c44f34e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bd47fd06404dad6e6896d377e95de677a08c5ae3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538791"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205160"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
 
-Lädt R-Pakete vom angegebenen Bytedatenstrom oder Dateipfad in eine Datenbank hoch.
+Lädt R-Paketdateien vom angegebenen Bytedatenstrom oder Dateipfad in eine Datenbank hoch. Diese Anweisung dient als generischer Mechanismus, mithilfe dessen der Datenbankadministrator Artefakte hochladen kann, die von Runtimes neuer externer Sprachen (momentan nur R) und Betriebssystemplattformen benötigt werden, die von [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] unterstützt werden. 
 
-Diese Anweisung dient als generischer Mechanismus, mithilfe dessen der Datenbankadministrator Artefakte hochladen kann, die von Runtimes neuer externer Sprachen (R, Python, Java usw.) und Betriebssystemplattformen benötigt werden, die von [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] unterstützt werden. 
-
-Derzeit werden nur die R-Sprache und die Windows-Plattform unterstützt. Die Unterstützung für Python und Linux ist für ein späteres Release eingeplant.
+In SQL Server 2017 und höher werden nur die R-Sprache und die Windows-Plattform unterstützt. Die Unterstützung für Python und Linux ist für ein späteres Release eingeplant.
 
 ## <a name="syntax"></a>Syntax
 
@@ -94,7 +92,7 @@ Diese Option ist hilfreich, wenn Sie eine Bibliothek erstellen oder eine bestehe
 
 Gibt die Plattform für den Inhalt der Bibliothek an. Der Standardwert ist die Hostplattform, auf der SQL Server ausgeführt wird. Aus diesem Grund muss der Benutzer den Wert nicht angeben. Dies ist in Fällen erforderlich, in denen mehrere Plattformen unterstützt werden oder in denen der Benutzer eine andere Plattform angeben muss. 
 
-Bei SQL Server 2017 ist Windows die einzig unterstützte Plattform.
+Windows ist derzeit die einzige unterstützte Plattform.
 
 ## <a name="remarks"></a>Remarks
 
