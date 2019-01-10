@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a857b51bf884a1bec30e28935591946da43ef390
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bfdce1925bc4c73894e1ff1a9bb0d69f6da94501
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072940"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756612"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Überwachen der Leistung mit dem Abfragespeicher
-  Der Abfragespeicher bietet über DBAs Einblick in die Auswahl und die Leistung des Abfrageplans. Er vereinfacht das Beheben von Leistungsproblemen, indem er das schnelle Auffinden von Leistungsabweichungen durch Änderungen an Abfrageplänen ermöglicht. Das Feature erfasst automatisch einen Verlauf der Abfrage-, Plan- und Laufzeitstatistiken und bewahrt diese zur Überprüfung auf. Es unterteilt die Daten nach Zeitfenstern und ermöglicht es Ihnen so, Verwendungsmuster für Datenbanken zu erkennen und zu verstehen, wann Abfrageplanänderungen auf dem Server aufgetreten sind. Der Abfragespeicher kann konfiguriert werden, mithilfe der [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) Option.  
+  Der Abfragespeicher bietet über DBAs Einblick in die Auswahl und die Leistung des Abfrageplans. Er vereinfacht das Beheben von Leistungsproblemen, indem er das schnelle Auffinden von Leistungsabweichungen durch Änderungen an Abfrageplänen ermöglicht. Das Feature erfasst automatisch einen Verlauf der Abfrage-, Plan- und Laufzeitstatistiken und bewahrt diese zur Überprüfung auf. Es unterteilt die Daten nach Zeitfenstern und ermöglicht es Ihnen so, Verwendungsmuster für Datenbanken zu erkennen und zu verstehen, wann Abfrageplanänderungen auf dem Server aufgetreten sind. Der Abfragespeicher kann mit der Option [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) konfiguriert werden.  
   
 ||  
 |-|  
-|**Gilt für**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([herunterladen](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+|**Gilt für**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Herunterladen](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
 > [!IMPORTANT]  
 >  Dies ist zurzeit eine Vorschaufunktion. Für die Verwendung des Abfragespeichers müssen Sie bestätigen und sich damit einverstanden erklären, dass diese Implementierung des Abfragespeichers den Vorschaubedingungen in Ihrem Lizenzvertrag (z. B. Enterprise Agreement, Microsoft Azure Agreement oder Microsoft Online-Abonnementvertrag) und ggf. den [Zusätzlichen Nutzungsbestimmungen für Microsoft Azure-Vorschauen](http://azure.microsoft.com/en-us/support/legal/preview-supplemental-terms/)unterliegt.  
@@ -33,7 +32,7 @@ ms.locfileid: "48072940"
   
 #### <a name="by-using-the-query-store-page-in-management-studio"></a>Mithilfe der Seite „Abfragespeicher“ in Management Studio  
   
-1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf eine Datenbank, und klicken Sie dann auf **Eigenschaften**. (Erfordert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2016-Version des [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].)  
+1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf eine Datenbank, und klicken Sie dann auf **Eigenschaften**. (Erfordert die Version [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2016 von [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].)  
   
 2.  Wählen Sie im Dialogfeld **Datenbankeigenschaften** die Seite **Abfragespeicher** aus.  
   
@@ -41,7 +40,7 @@ ms.locfileid: "48072940"
   
 #### <a name="by-using-transact-sql-statements"></a>Mithilfe von Transact-SQL-Anweisungen  
   
-1.  Verwenden der `ALTER DATABASE` Anweisung, um den Abfragespeicher aktivieren. Zum Beispiel:  
+1.  Mit der `ALTER DATABASE`-Anweisung können Sie den Abfragespeicher aktivieren. Zum Beispiel:  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
@@ -71,7 +70,7 @@ ms.locfileid: "48072940"
   
 -   Analysieren der Verwendungsmuster einer Ressource (CPU, E/A und Arbeitsspeicher) für eine bestimmte Datenbank  
   
- Der Abfragespeicher enthält zwei Speicher: einen **Planspeicher** zum Speichern der Informationen zum Ausführungsplan und einen **Speicher für Laufzeitstatistiken** zum Speichern von Ausführungsstatistikinformationen. Die Anzahl der eindeutigen Pläne, die gespeichert werden können, für die von eine Abfrage im planspeicher beschränkt ist. die `max_plans_per_query` Konfigurationsoption. Zum Verbessern der Leistung werden diese Informationen asynchron in zwei Speicher geschrieben. Um die Speicherverwendung zu minimieren, werden die statistischen Daten zur Laufzeitausführung im Speicher für Laufzeitstatistiken über ein festes Zeitintervall aggregiert. Die Informationen in diesen Speichern können durch Abfragen der Katalogsichten für den Abfragespeicher angezeigt werden.  
+ Der Abfragespeicher enthält zwei Speicher: einen **Planspeicher** zum Speichern der Informationen zum Ausführungsplan und einen **Speicher für Laufzeitstatistiken** zum Speichern von Ausführungsstatistikinformationen. Die Anzahl der eindeutigen Pläne, die für eine Abfrage gespeichert werden können, wird durch die Konfigurationsoption `max_plans_per_query` begrenzt. Zum Verbessern der Leistung werden diese Informationen asynchron in zwei Speicher geschrieben. Um die Speicherverwendung zu minimieren, werden die statistischen Daten zur Laufzeitausführung im Speicher für Laufzeitstatistiken über ein festes Zeitintervall aggregiert. Die Informationen in diesen Speichern können durch Abfragen der Katalogsichten für den Abfragespeicher angezeigt werden.  
   
  Die folgende Abfrage gibt Informationen über Abfragen und Pläne im Abfragespeicher zurück.  
   
@@ -91,7 +90,7 @@ JOIN sys.query_store_query_text AS Txt
   
  ![QueryStore](../../database-engine/media/querystore.PNG "QueryStore")  
   
- Auswahl **Regressed Queries**, öffnet der **Regressed Queries** Bereich [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]. Im Bereich „Regressed Queries“ werden die Abfragen und Pläne im Abfragespeicher angezeigt. Über die Dropdownfelder oben können Sie Abfragen anhand verschiedener Kriterien auswählen. Wählen Sie einen Plan aus, um die grafische Darstellung des Abfrageplans anzuzeigen. Über verschiedene Schaltflächen können Sie die Quellabfrage anzeigen, einen Abfrageplan erzwingen und die Erzwingung wieder aufheben und die Ansicht aktualisieren.  
+ Durch Auswahl von **Regressed Queries**wird der Bereich **Regressed Queries** in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]geöffnet. Im Bereich „Regressed Queries“ werden die Abfragen und Pläne im Abfragespeicher angezeigt. Über die Dropdownfelder oben können Sie Abfragen anhand verschiedener Kriterien auswählen. Wählen Sie einen Plan aus, um die grafische Darstellung des Abfrageplans anzuzeigen. Über verschiedene Schaltflächen können Sie die Quellabfrage anzeigen, einen Abfrageplan erzwingen und die Erzwingung wieder aufheben und die Ansicht aktualisieren.  
   
  ![RegressedQueries](../../database-engine/media/regressedqueries.PNG "RegressedQueries")  
   
@@ -115,14 +114,14 @@ JOIN sys.query_store_query_text AS Txt
  INTERVAL_LENGTH_MINUTES  
  Bestimmt das Zeitintervall, mit dem statistische Daten zur Laufzeitausführung im Abfragespeicher aggregiert werden. Um die Speicherverwendung zu optimieren, werden die statistischen Daten zur Laufzeitausführung im Speicher für Laufzeitstatistiken über ein festes Zeitintervall aggregiert. Dieses feste Zeitintervall wird mit dem INTERVAL_LENGTH_MINUTES-Argument konfiguriert.  
   
- Abfrage der `sys.database_query_store_options` Ansicht, um die aktuellen Optionen des Abfragespeichers zu ermitteln.  
+ Sie können die Sicht `sys.database_query_store_options` abfragen, um die aktuellen Optionen des Abfragespeichers zu ermitteln.  
   
  Weitere Informationen zum Festlegen der Optionen mit [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen finden Sie unter [Optionsverwaltung](#OptionMgmt).  
   
  
   
 ##  <a name="Related"></a> Zugehörige Sichten, Funktionen und Prozeduren  
- Die Query Store angezeigt und verwaltet werden können [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] oder mithilfe der folgenden Sichten und Prozeduren.  
+ Der Abfragespeicher kann in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] oder über die folgenden Sichten und Prozeduren angezeigt und verwaltet werden.  
   
 -   [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql)  
   
@@ -206,9 +205,9 @@ ALTER DATABASE <database_name>
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);  
 ```  
   
- Beachten Sie, dass keine beliebige Werte zulässig sind, stattdessen müssen Sie einen der folgenden Werte verwenden: 1, 5, 10, 15, 30 oder 60.  
+ Beachten Sie, dass beliebige Werte nicht zulässig sind: Sie die folgenden befolgen: 1, 5, 10, 15, 30 und 60.  
   
- Neuer Wert für das Intervall ist offen gelegten `sys.database_query_store_options` anzeigen.  
+ Der neue Wert für das Intervall wird in der Sicht `sys.database_query_store_options` angezeigt.  
   
  Mit der folgenden Anweisung können Sie den Speicher erweitern, wenn der Abfragespeicher voll ist.  
   
@@ -276,11 +275,11 @@ DEALLOCATE adhoc_queries_cursor;
   
  Sie können eine eigene Prozedur mit abweichender Logik für das Bereinigen der Daten, die für Sie nicht mehr wichtig sind, definieren.  
   
- Im Beispiel oben wird der `sp_query_store_remove_query` erweiterte gespeicherte Prozedur für das Entfernen unnötiger Daten. Sie können auch zwei andere Prozeduren verwenden.  
+ Im Beispiel oben wird die erweiterte gespeicherte Prozedur `sp_query_store_remove_query` verwendet, um nicht benötigte Daten zu entfernen. Sie können auch zwei andere Prozeduren verwenden.  
   
--   `sp_query_store_reset_exec_stats` – Löscht die Laufzeitstatistiken für einen angegebenen Plan.  
+-   `sp_query_store_reset_exec_stats` -Löscht die Laufzeitstatistiken für einen angegebenen Plan.  
   
--   `sp_query_store_remove_plan` – Entfernt einen einzelnen Plan.  
+-   `sp_query_store_remove_plan` -Entfernt einen einzelnen Plan.  
   
 
   
@@ -500,7 +499,7 @@ OPTION (MERGE JOIN);
 
   
 ###  <a name="Stability"></a> Erhalten einer stabilen Abfrageleistung  
- Für Abfragen, die ausgeführt wird, werden mehrere Male Sie möglicherweise feststellen, dass [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet verschiedene Pläne, die unterschiedliche Ressourcenverwendung und Dauer geführt haben. Mit dem Abfragespeicher können Sie sehr einfach erkennen, wenn die Abfrageleistung abfällt, und den optimalen Plan innerhalb des gewünschten Zeitraums bestimmen. Anschließend können Sie diesen optimalen Plan für zukünftige Abfrageausführungen erzwingen.  
+ Für mehrfach ausgeführte Abfragen werden Sie möglicherweise feststellen, dass [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verschiedene Pläne verwendet hat, die eine unterschiedliche Ressourcenverwendung und Dauer nach sich ziehen. Mit dem Abfragespeicher können Sie sehr einfach erkennen, wenn die Abfrageleistung abfällt, und den optimalen Plan innerhalb des gewünschten Zeitraums bestimmen. Anschließend können Sie diesen optimalen Plan für zukünftige Abfrageausführungen erzwingen.  
   
  Sie können auch abweichende Abfrageleistungen für eine Abfrage mit Parametern ermitteln (entweder automatisch oder manuell parametrisiert). Sie können unter den verschiedenen Plänen den Plan identifizieren, der schnell und ausreichend geeignet für alle oder die meisten Parameterwerte ist, und diesen dann erzwingen. So erhalten Sie eine vorhersagbare Leistung für eine größere Anzahl von Benutzerszenarios.  
   
@@ -510,9 +509,9 @@ OPTION (MERGE JOIN);
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;  
 ```  
   
- Bei Verwendung `sp_query_store_force_plan` Sie können nur Pläne erzwingen, die vom Query Store als einen Plan für diese Abfrage aufgezeichnet wurden. Es stehen für eine Abfrage also nur Pläne zur Verfügung, die bereits zum Ausführen der Abfrage verwendet wurden, während der Abfragespeicher aktiv war.  
+ Durch die Verwendung von `sp_query_store_force_plan` können Sie ausschließlich solche Pläne erzwingen, die vom Abfragespeicher als Plan für diese Abfrage aufgezeichnet wurden. Es stehen für eine Abfrage also nur Pläne zur Verfügung, die bereits zum Ausführen der Abfrage verwendet wurden, während der Abfragespeicher aktiv war.  
   
- **Aufheben der Erzwingung eines Plans für eine Abfrage.** Auf der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Abfrageoptimierer, um den optimalen Abfrageplan zu berechnen, verwenden Sie `sp_query_store_unforce_plan` auf das Erzwingen des, die für die Abfrage ausgewählt wurden.  
+ **Aufheben der Erzwingung eines Plans für eine Abfrage.** Wenn Sie wieder den Abfrageoptimierer von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwenden möchten, um den optimalen Abfrageplan zu berechnen, heben Sie mit `sp_query_store_unforce_plan` das Erzwingen des für die Abfrage ausgewählten Plans auf.  
   
 ```  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
