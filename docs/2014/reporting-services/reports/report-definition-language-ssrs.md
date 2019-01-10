@@ -20,12 +20,12 @@ ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8e84a24256dfdfe493a96786ca08cb640a8975b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f21bfe746f409b40b2535da231da4dd2725f4f7a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065600"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367013"
 ---
 # <a name="report-definition-language-ssrs"></a>Berichtsdefinitionssprache (Report Definition Language, RDL) (SSRS)
   Bei der Berichtsdefinitionssprache (RDL) handelt es sich um eine XML-Darstellung einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsdefinition. In einer Berichtsdefinition sind Informationen zum Datenabruf und Datenlayout für einen Bericht enthalten. RDL besteht aus XML-Elementen, die der für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]entwickelten XML-Grammatik entsprechen. Sie können eigene benutzerdefinierte Funktionen zur Steuerung von Werten, Formaten und Formatierungen von Berichtselementen hinzufügen, indem Sie in Berichtsdefinitionsdateien auf Code-Assemblys zugreifen.  
@@ -39,12 +39,12 @@ ms.locfileid: "48065600"
 -   ein erweiterbares und offenes Schema, das zusätzliche Namespaces und benutzerdefinierte Elemente unterstützt  
   
 ##  <a name="bkmk_RDL_Specifications"></a> RDL-Spezifikationen  
- Informationen zum Herunterladen von Spezifikation für bestimmte Schemaversionen finden Sie im [Thema zum Angeben der Berichtsdefinitionssprache](http://go.microsoft.com/fwlink/?linkid=116865).  
+ Informationen zum Herunterladen von Spezifikation für bestimmte Schemaversionen finden Sie im [Thema zum Angeben der Berichtsdefinitionssprache](https://go.microsoft.com/fwlink/?linkid=116865).  
   
 ##  <a name="bkmk_RDL_XML_Schema_Definition"></a> RDL-XML-Schemadefinition  
  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -RDL-Datei (Report Definition Language, Berichtsdefinitionssprache) wird mithilfe einer XSD-Datei (XML Schema Definition) überprüft. Das Schema definiert die Regeln dafür, wo RDL-Elemente in einer RDL-Datei auftreten können. Ein Element schließt seinen Datentyp und seine Kardinalität ein, also die Anzahl der erlaubten Vorkommen. Ein Element kann einfach oder komplex sein. Ein einfaches Element besitzt keine untergeordneten Elemente oder Attribute. Ein komplexes Element verfügt über untergeordnete Elemente und (optional) Attribute.  
   
- Das Schema enthält beispielsweise das RDL-Element `ReportParameters`, ist der komplexe Typ `ReportParametersType`. Gemäß der Konvention ist ein komplexer Typ für ein Element der Name des Elements gefolgt von dem Wort `Type`. Ein `ReportParameters` Element enthalten die `Report` -Element (einem komplexen Typ), und dürfen `ReportParameter` Elemente. Ein `ReportParameterType` ist ein einfacher Typ, bei dem es sich nur um einen der folgenden Werte handeln kann: `Boolean`, `DateTime`, `Integer`, `Float` oder `String`. Weitere Informationen zu XML-Schema-Datentypen finden Sie unter [XML Schema Part 2: Datatypes Second Edition](http://go.microsoft.com/fwlink/?linkid=4871).  
+ Das Schema enthält beispielsweise das RDL-Element `ReportParameters`, das den komplexen Typ `ReportParametersType` aufweist. Gemäß der Konvention ist ein komplexer Typ für ein Element der Name des Elements gefolgt von dem Wort `Type`. Ein `ReportParameters`-Element kann im `Report`-Element (einem komplexen Typ) enthalten sein und kann `ReportParameter`-Elemente enthalten. Ein `ReportParameterType` ist ein einfacher Typ, bei dem es sich nur um einen der folgenden Werte handeln kann: `Boolean`, `DateTime`, `Integer`, `Float` oder `String`. Weitere Informationen zu XML-Schema-Datentypen finden Sie unter [XML Schema Part 2: Datatypes Second Edition](https://go.microsoft.com/fwlink/?linkid=4871).  
   
  Die RDL-XSD steht in der Datei "ReportDefinition.xsd" zur Verfügung, die sich im Ordner "Extras" auf der Produkt-CD-ROM befindet. Sie ist auch auf dem Berichtsserver über die folgende URL verfügbar: http://servername/reportserver/reportdefinition.xsd.  
   
@@ -63,15 +63,15 @@ ms.locfileid: "48065600"
 |Typ|Description|  
 |----------|-----------------|  
 |`Binary`|Eine Eigenschaft mit einem Base-64-codierten Binärwert.|  
-|`Boolean`|Eine Eigenschaft, die den Wert `true` oder `false` für ein Objekt annehmen kann. Sofern nicht anders angegeben, wird der Wert von einer ausgelassenen optionales Boolean-Objekt ist `False`.|  
-|`Date`|Eine Eigenschaft mit einem vollständigen date- oder datetime-Wert, der im ISO8601-Datumsformat angegeben ist: JJJJ-MM-TT[THH:MM[:SS[.S]]]|  
+|`Boolean`|Eine Eigenschaft, die den Wert `true` oder `false` für ein Objekt annehmen kann. Sofern nichts anderes angegeben ist, hat ein nicht angegebenes, optionales Boolean-Objekt den Wert `False`.|  
+|`Date`|Eine Eigenschaft mit einem voll angegebenen Date- oder Datetime-Wert, im ISO8601-Datumsformat angegeben: YYYY-MM-DD[THH:MM[:SS[.S]]].|  
 |`Enum`|Eine Eigenschaft mit einem Zeichenfolgen-Textwert, der einem Wert aus einer Liste mit angegebenen Werten entsprechen muss|  
 |`Float`|Eine Eigenschaft mit einem Gleitkommawert. Als optionales Dezimaltrennzeichen wird ein Punkt (.) verwendet.|  
 |`Integer`|Eine Eigenschaft mit einem ganzzahligen (int32) Wert|  
 |`Language`|Eine Eigenschaft mit einem Textwert, der einen Sprach- und Kulturcode enthält, z. B. "en-us" für Englisch (USA). Der Wert muss entweder eine bestimmte Sprache oder eine neutrale Sprache angeben, für die eine Standardsprache in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]definiert ist.|  
 |`Name`|Eine Eigenschaft mit einem Zeichenfolgen-Textwert Namen müssen innerhalb des Namespaces des Elements eindeutig sein. Ist der Namespace nicht angegeben, entspricht er dem innersten enthaltenden Objekt, das über einen Namen verfügt.|  
 |`NormalizedString`|Eine Eigenschaft mit einem Zeichenfolgen-Textwert, der normalisiert wurde|  
-|`Size`|Ein Größenelement muss eine Zahl (mit einem Punkt als optionalem Dezimaltrennzeichen) enthalten. Auf die Zahl muss ein Kennzeichner für eine CSS-Längeneinheit folgen, beispielsweise cm, mm, in, pt oder pc. Ein Leerzeichen zwischen der Zahl und dem Kennzeichner ist optional. Weitere Informationen über Größenkennzeichner finden Sie in [CSS Length Units Reference](http://go.microsoft.com/fwlink/?LinkId=9257).<br /><br /> In RDL, der maximale Wert für `Size` 160 Zoll. Die minimale Größe beträgt 0 Zoll.|  
+|`Size`|Ein Größenelement muss eine Zahl (mit einem Punkt als optionalem Dezimaltrennzeichen) enthalten. Auf die Zahl muss ein Kennzeichner für eine CSS-Längeneinheit folgen, beispielsweise cm, mm, in, pt oder pc. Ein Leerzeichen zwischen der Zahl und dem Kennzeichner ist optional. Weitere Informationen über Größenkennzeichner finden Sie in [CSS Length Units Reference](https://go.microsoft.com/fwlink/?LinkId=9257).<br /><br /> In RDL beträgt der maximale Wert für `Size` 160 Zoll. Die minimale Größe beträgt 0 Zoll.|  
 |`String`|Eine Eigenschaft mit einem Zeichenfolgen-Textwert|  
 |`UnsignedInt`|Eine Eigenschaft mit einem ganzzahligen Wert (uint32) ohne Vorzeichen|  
 |`Variant`|Eine Eigenschaft mit einem beliebigen einfachen XML-Typ.|  
@@ -90,6 +90,6 @@ ms.locfileid: "48065600"
 ## <a name="see-also"></a>Siehe auch  
  [Suchen der Berichtsdefinitions-Schemaversion &#40;SSRS&#41;](find-the-report-definition-schema-version-ssrs.md)   
  [Verwenden benutzerdefinierter Assemblys mit Berichten](../custom-assemblies/using-custom-assemblies-with-reports.md)   
- [Custom Report Items (Benutzerdefinierte Berichtselemente)](../custom-report-items/custom-report-items.md)  
+ [Benutzerdefinierte Berichtselemente](../custom-report-items/custom-report-items.md)  
   
   
