@@ -56,11 +56,7 @@ ms.locfileid: "51350074"
   
 ## <a name="previous-versions"></a>Vorgängerversionen  
   
--   [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md)  
-  
--   [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2012](discontinued-database-engine-functionality-in-sql-server-2016.md)  
-  
--   [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2008](discontinued-database-engine-functionality-in-sql-server-2016.md)  
+-   [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in früheren Versionen von SQL Server (2014 - 2008)](https://docs.microsoft.com/de-de/sql/getting-started/discontinued-sql-server-features-in-sql-server-2014?view=sql-server-2014)  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Als veraltet markierte Funktionen der Datenbank-Engine in SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
