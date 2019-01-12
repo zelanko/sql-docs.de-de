@@ -16,12 +16,12 @@ ms.assetid: aafda520-9e2a-4e1e-b936-1b165f1684e8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20b6109b5622fb78366ab24886b991185c8dbc76
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: edb7ea682ebef5d99cee7a248681be80fc433312
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777812"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100455"
 ---
 # <a name="ssms-utility"></a>Ssms-Hilfsprogramm
   Mit dem **Ssms**-Hilfsprogramm wird [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]geöffnet. Bei entsprechender Angabe stellt **Ssms** zudem eine Verbindung mit einem Server her und öffnet Abfragen, Skripts, Dateien, Projekte und Lösungen.  
@@ -51,16 +51,16 @@ ms.locfileid: "52777812"
  *solutionfile*  
  Gibt eine zu öffnende Lösung an. Der Parameter muss den vollständigen Pfad zur Lösungsdatei enthalten.  
   
- [**-S** *servername*]  
+ [**-S** _servername_]  
  Servername  
   
- [**-d** *databasename*]  
+ [**-d** _databasename_]  
  Datenbankname  
   
- [**-U** *username*]  
+ [**-U** _username_]  
  Benutzername, wenn die Verbindung mithilfe der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung hergestellt wird.  
   
- [**-P** *password*]  
+ [**-P** _password_]  
  Kennwort, wenn die Verbindung mithilfe der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung hergestellt wird.  
   
  [**-E**]  
@@ -69,7 +69,7 @@ ms.locfileid: "52777812"
  [**-nosplash**]  
  Verhindert, dass [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] beim Öffnen den Begrüßungsbildschirm anzeigt. Verwenden Sie diese Option, wenn Sie eine Verbindung zum Computer mit [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] herstellen und hierfür Terminaldienste über eine Verbindung mit begrenzter Bandbreite einsetzen. Bei diesem Argument wird die Groß- und Kleinschreibung nicht beachtet. Es kann vor oder nach anderen Argumenten angegeben werden.  
   
- [**-log***[filename]?*]  
+ [**-log**_[filename]?_]  
  Protokolliert die [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Aktivität zur Problembehandlung in der angegebenen Datei.  
   
  [**-?**]  

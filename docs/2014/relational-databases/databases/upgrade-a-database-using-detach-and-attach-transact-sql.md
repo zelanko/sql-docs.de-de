@@ -17,12 +17,12 @@ ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 39e9db45723d32fd78eef35c5600d05b54999e61
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 290454026cc87819bf9ffcf73329bb562e3dc5a4
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749214"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100875"
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>Aktualisieren einer Datenbank durch Trennen und Anfügen (Transact-SQL)
   In diesem Thema wird beschrieben, wie Sie Trenn- und Anfügevorgänge verwenden, um eine Datenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]zu aktualisieren. Nach dem Anfügen an [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ist die Datenbank sofort verfügbar und wird automatisch aktualisiert.  
@@ -88,7 +88,7 @@ ms.locfileid: "52749214"
     > [!IMPORTANT]  
     >  Platzieren Sie Datenbank und Transaktionsprotokoll bei einer Produktionsdatenbank auf separaten Datenträgern.  
   
-     Um Dateien im Netzwerk auf einen Datenträger auf einem Remotecomputer zu kopieren, verwenden Sie den UNC-Namen (Universal Naming Convention) des Remotespeicherorts. Ein UNC-Name weist das Format **\\\\***Servername***\\***Freigabename***\\***Pfad***\\***Dateiname* auf. Wie beim Schreiben von Dateien auf die lokale Festplatte müssen die entsprechenden Berechtigungen für das Lesen oder Schreiben einer Datei auf dem Remotedatenträger dem von der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz verwendeten Benutzerkonto erteilt werden.  
+     Um Dateien im Netzwerk auf einen Datenträger auf einem Remotecomputer zu kopieren, verwenden Sie den UNC-Namen (Universal Naming Convention) des Remotespeicherorts. Ein UNC-Name hat das Format **\\\\**_Servername_**\\**_Sharename_**\\**_Path_**\\**_Filename_. Wie beim Schreiben von Dateien auf die lokale Festplatte müssen die entsprechenden Berechtigungen für das Lesen oder Schreiben einer Datei auf dem Remotedatenträger dem von der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz verwendeten Benutzerkonto erteilt werden.  
   
 3.  Führen Sie die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung aus, um die verschobene Datenbank und optional das zugehörige Protokoll anzufügen:  
   

@@ -20,12 +20,12 @@ ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 36aa1bbfd37642e66b232a1b532ff114397841d8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 39bd24414e2382557a22469da502bad91abe20b7
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788434"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100495"
 ---
 # <a name="system-data-collection-set-reports"></a>Berichte der Systemdaten-Sammlungssätze
   Der Datensammler stellt einen Verlaufsbericht für jeden der Systemdaten-Sammlungssätze bereit. Jeder der folgenden Berichte verwendet Daten, die im Verwaltungs-Data Warehouse gespeichert werden:  
@@ -56,7 +56,7 @@ ms.locfileid: "52788434"
  In der Tabelle unter dem Diagramm sind Datensammlungszeiten und zugehörige Nutzungsdaten aufgeführt.  
   
 #### <a name="disk-usage-for-database-databasename-subreport"></a>Unterbericht "Datenträgerverwendung für Datenbank: <Datenbankname>"  
- Der Unterbericht **Datenträgerverwendung für Datenbank:***<Datenbankname>* wird angezeigt, wenn Sie in der Zusammenfassungstabelle des Berichts zum Sammlungssatz für die Datenträgerverwendung auf einen Datenbanknamen klicken. Dieser Bericht liefert eine numerische und grafische Aufschlüsselung der Speicherplatzverwendung durch die Daten- und Transaktionsprotokolldateien der Datenbank. Die Speicherplatzverwendung für Datendateien wird als Prozentsatz angegeben, kategorisiert nach dem prozentualen Anteil, der den Indexseiten, dem nicht zugeordneten Speicherplatz, den Datenseiten und dem nicht verwendeten Speicherplatz zugeordnet ist. Diese Kategorien sind folgendermaßen definiert:  
+ Der Unterbericht **Datenträgerverwendung für Datenbank:**_<Datenbankname>_ wird angezeigt, wenn Sie auf einen Datenbanknamen in der Zusammenfassungstabelle des Berichts über den Sammlungssatz für Datenträgerverwendung klicken. Dieser Bericht liefert eine numerische und grafische Aufschlüsselung der Speicherplatzverwendung durch die Daten- und Transaktionsprotokolldateien der Datenbank. Die Speicherplatzverwendung für Datendateien wird als Prozentsatz angegeben, kategorisiert nach dem prozentualen Anteil, der den Indexseiten, dem nicht zugeordneten Speicherplatz, den Datenseiten und dem nicht verwendeten Speicherplatz zugeordnet ist. Diese Kategorien sind folgendermaßen definiert:  
   
 |Kategorie|Definition|  
 |--------------|----------------|  

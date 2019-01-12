@@ -12,12 +12,12 @@ ms.assetid: 022a244c-c2e7-4467-b9a2-c7a27859be22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fbd3260e8d32811c405623dbdcc94dd34b0b8711
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c819fc7fb3b1cc73b67362a0eabd82ad33946fbc
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753262"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100296"
 ---
 # <a name="view-the-properties-of-a-policy-based-management-facet"></a>Anzeigen der Eigenschaften eines Facets der richtlinienbasierten Verwaltung
   In diesem Thema wird beschrieben, wie Sie die Eigenschaften eines Facets der richtlinienbasierten Verwaltung i mithilfe von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]anzeigen.  
@@ -51,7 +51,7 @@ ms.locfileid: "52753262"
   
 4.  Klicken Sie auf das Pluszeichen, um den Ordner **Facets** zu erweitern.  
   
-5.  Klicken Sie mit der rechten Maustaste auf das Facet, dessen Eigenschaften Sie anzeigen möchten, und wählen Sie **Eigenschaften**aus. Weitere Informationen über die verfügbaren Optionen im Dialogfeld **Facet-Eigenschaften – ***Facet-Name* finden Sie unter [Dialogfeld „Facet-Eigenschaften“, Seite „Allgemein“](../../integration-services/general-page-of-integration-services-designers-options.md), [Dialogfeld „Facet-Eigenschaften“, Seite „Abhängige Richtlinien“](facet-properties-dialog-box-dependent-policies-page.md) und [Dialogfeld „Facet-Eigenschaften“, Seite „Abhängige Bedingungen“](facet-properties-dialog-box-dependent-conditions-page.md).  
+5.  Klicken Sie mit der rechten Maustaste auf das Facet, dessen Eigenschaften Sie anzeigen möchten, und wählen Sie **Eigenschaften**aus. Weitere Informationen zu den verfügbaren Optionen in der **Facet-Eigenschaften –**_Facet_name_ im Dialogfeld finden Sie unter [Dialogfeld "Facet-Eigenschaften", Seite "Allgemein"](../../integration-services/general-page-of-integration-services-designers-options.md), [ Dialogfeld "Facet-Eigenschaften", Seite ' abhängige Richtlinien '](facet-properties-dialog-box-dependent-policies-page.md), und [Dialogfeld "Facet-Eigenschaften", "abhängige Seite Bedingungen](facet-properties-dialog-box-dependent-conditions-page.md).  
   
 6.  Wenn Sie fertig sind, klicken Sie auf **Schließen**.  
   

@@ -18,12 +18,12 @@ ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 73f3fcdb485d4fdfbb06392414086d25f405a77f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ea37fdca56c222cbebbdcb00956938a92fe2c203
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505454"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100555"
 ---
 # <a name="view-user-defined-functions"></a>Anzeigen benutzerdefinierter Funktionen
   Sie können Informationen zur Definition oder zu den Eigenschaften einer benutzerdefinierten Funktion in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]abrufen. Manchmal ist es erforderlich, die Definition einer Funktion anzuzeigen, um zu verstehen, wie die Daten der Funktion aus den Quelltabellen abgeleitet werden, oder um die durch die Funktion definierten Daten anzuzeigen.  
@@ -68,7 +68,7 @@ ms.locfileid: "52505454"
   
 4.  Klicken Sie mit der rechten Maustaste auf die Funktion, deren Eigenschaften Sie anzeigen möchten, und wählen Sie **Eigenschaften**aus.  
   
-     Die folgenden Eigenschaften werden im Dialogfeld **Funktionseigenschaften >** *Funktionsname* angezeigt.  
+     Die folgenden Eigenschaften werden im Dialogfeld **Funktionseigenschaften >** _Funktionsname_ angezeigt.  
   
      **Datenbank**  
      Name der Datenbank, die diese Funktion enthält.  
@@ -113,7 +113,7 @@ ms.locfileid: "52505454"
   
 #### <a name="to-get-the-definition-and-properties-of-a-function"></a>So rufen Sie die Definition und die Eigenschaften einer Funktion ab  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "52505454"
   
 #### <a name="to-get-the-dependencies-of-a-function"></a>So rufen Sie die Abhängigkeiten einer Funktion ab  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

@@ -13,12 +13,12 @@ ms.assetid: 4b97c0b4-03ff-4cfb-9c3f-3b33290b7a2c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 872b0ffa2cc08c90430ec703cea984ad7d274339
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7c9a628f912f382f3ee8a87276aa34d0e54e37ba
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527984"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100815"
 ---
 # <a name="update-statistics"></a>Statistikaktualisierung
   Sie können Abfrageoptimierungsstatistiken für eine Tabelle oder indizierte Sicht in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]aktualisieren. Standardmäßig nimmt der Abfrageoptimierer erforderliche Updates der Statistiken automatisch vor, um den Abfrageplan zu verbessern. In einigen Fällen können Sie die Abfrageleistung mit UPDATE STATISTICS oder der gespeicherten Prozedur `sp_updatestats` verbessern, um Statistiken häufiger zu aktualisieren, als von der Standardeinstellung vorgegeben.  
@@ -58,7 +58,7 @@ ms.locfileid: "52527984"
   
 5.  Klicken Sie mit der rechten Maustaste auf das Statistikobjekt, das Sie aktualisieren möchten, und wählen Sie **Eigenschaften**.  
   
-6.  In der **Statistikeigenschaften – *** Statistics_name* wählen Sie im Dialogfeld die **Aktualisieren von Statistiken für diese Spalten** Kontrollkästchen, und klicken Sie dann auf **OK**.  
+6.  In der **Statistikeigenschaften –**_Statistics_name_ wählen Sie im Dialogfeld die **Aktualisieren von Statistiken für diese Spalten** Kontrollkästchen, und klicken Sie dann auf **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   

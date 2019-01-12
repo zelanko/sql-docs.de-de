@@ -15,12 +15,12 @@ ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 343ba03f20d059763f4b1122aac80e0af80fc2ae
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8db42e567b80ca282b89d9be29fffff3e643ea7a
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415637"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54099965"
 ---
 # <a name="view-statistics-properties"></a>Anzeigen von Statistikeigenschaften
   Sie können die aktuelle Abfrageoptimierungsstatistik für eine Tabelle oder eine indizierte Sicht in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]anzeigen. Statistikobjekte enthalten einen Header mit Metadaten über die Statistik, ein Histogramm mit der Verteilung der Werte in der ersten Schlüsselspalte des Statistikobjekts sowie einen Dichtevektor zum Messen der Korrelation zwischen Spalten. Weitere Informationen zu Histogrammen und Dichtevektoren finden Sie unter [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql).  
@@ -58,9 +58,9 @@ ms.locfileid: "52415637"
   
 5.  Klicken Sie mit der rechten Maustaste auf das Statistikobjekt, dessen Eigenschaften Sie anzeigen möchten, und wählen Sie **Eigenschaften**aus.  
   
-6.  Wählen Sie im Dialogfeld **Statistikeigenschaften –** *statistics_name* im Bereich **Seite auswählen** die Option **Details**aus.  
+6.  Wählen Sie im Dialogfeld **Statistikeigenschaften –** _statistics_name_ im Bereich **Seite auswählen** die Option **Details**aus.  
   
-     Die folgenden Eigenschaften werden im Dialogfeld **Statistikeigenschaften –**  **statistics_name** *statistics_name* angezeigt.  
+     Die folgenden Eigenschaften werden im Dialogfeld **Statistikeigenschaften –**  **statistics_name** _statistics_name_ angezeigt.  
   
      **Tabellenname**  
      Zeigt den Namen der Tabelle an, die von den Statistiken beschrieben wird.  
@@ -137,7 +137,7 @@ ms.locfileid: "52415637"
   
 #### <a name="to-view-statistics-properties"></a>So zeigen Sie Statistikeigenschaften an  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

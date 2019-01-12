@@ -15,12 +15,12 @@ ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: dd4af22b25a32ec5137391ca2dd31d39c9fa1cae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f197eef6369281001359969bf1d92bd0390bedc8
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214690"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100655"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Angeben einer Servernetzwerkadresse (Datenbankspiegelung)
   Beim Einrichten einer Datenbank-Spiegelungssitzung ist für jede Serverinstanz eine Server-Netzwerkadresse erforderlich. Die Server-Netzwerkadresse der Serverinstanz muss die Instanz eindeutig identifizieren, indem sie eine Systemadresse und die Nummer des Ports angibt, den die Instanz überwacht.  
@@ -32,7 +32,7 @@ ms.locfileid: "48214690"
 ##  <a name="Syntax"></a> Syntax für eine Server-Netzwerkadresse  
  Die Syntax für eine Server-Netzwerkadresse lautet:  
   
- TCP**://***\<Systemadresse>***:***\<Port>*  
+ TCP<strong>://</strong>*\<Systemadresse>*<strong>:<strong>*\<Port>* 
   
  Dabei gilt:  
   
@@ -40,15 +40,15 @@ ms.locfileid: "48214690"
   
     -   Befinden sich die Systeme in derselben Domäne, können Sie den Namen des Computersystems verwenden, z. B. `SYSTEM46`.  
   
-    -   Wenn Sie eine IP-Adresse verwenden möchten, muss diese in Ihrer Umgebung eindeutig sein. Wir empfehlen die Verwendung einer IP-Adresse nur, wenn diese statisch ist. Die IP-Adresse kann im IPv4-Format (IP Version 4) oder im IPv6-Format (IP Version) vorliegen. Eine IPv6-Adresse muss in eckige Klammern gesetzt werden, z.B. **[***<IPv6-Adresse>***]**.  
+    -   Wenn Sie eine IP-Adresse verwenden möchten, muss diese in Ihrer Umgebung eindeutig sein. Wir empfehlen die Verwendung einer IP-Adresse nur, wenn diese statisch ist. Die IP-Adresse kann im IPv4-Format (IP Version 4) oder im IPv6-Format (IP Version) vorliegen. Eine IPv6-Adresse muss in eckige Klammern gesetzt werden, z.B. **[**_<IPv6-Adresse>_**]**.  
   
          Um die IP-Adresse eines Systems zu ermitteln, geben Sie an der Windows-Eingabeaufforderung den Befehl **ipconfig** ein.  
   
     -   Der vollqualifizierte Domänenname funktioniert auf alle Fälle. Hierbei handelt es sich um eine lokal definierte Adresszeichenfolge, die an unterschiedlichen Stellen unterschiedliche Formen annimmt. Häufig, jedoch nicht immer, ist ein vollqualifizierter Domänenname ein zusammengesetzter Name, der den Computernamen und eine Reihe von Domänensegmenten enthält, die durch Punkte voneinander getrennt sind, z. B.:  
   
-         *Computername* **.** *Domänensegment*[...**.***Domänensegment*]  
+         _Computername_ **.** _Domänensegment_[...**.**_Domänensegment_]  
   
-         Dabei steht *Computername* für den Netzwerknamen des Computers, auf dem die Serverinstanz ausgeführt wird, und *Domänensegment*[...**.***Domänensegment*] für die übrigen Domäneninformationen des Servers. Beispiel: `localinfo.corp.Adventure-Works.com`.  
+         Dabei steht *Computername*für den Netzwerknamen des Computers, auf dem die Serverinstanz ausgeführt wird, und *Domänensegment*[...**.**_Domänensegment_] für die übrigen Domäneninformationen des Servers. Beispiel: `localinfo.corp.Adventure-Works.com`.  
   
          Inhalt und Anzahl von Domänenelementen werden innerhalb des Unternehmens oder der Organisation bestimmt. Wenn Sie den vollqualifizierten Domänennamen des Servers nicht kennen, wenden Sie sich an den Systemadministrator.  
   
@@ -108,7 +108,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  Wenn Sie den vollqualifizierten Domänennamen bilden möchten, verketten Sie die Werte von *<host_name>* bzw. *<Primary_Dns_Suffix>* wie folgt:  
   
- *&lt;host_name&gt;* **.** *<Primary_Dns_Suffix>*  
+ _&lt;host_name&gt;_ **.** _<Primary_Dns_Suffix>_  
   
  Beispielsweise entspricht die IP-Konfiguration  
   

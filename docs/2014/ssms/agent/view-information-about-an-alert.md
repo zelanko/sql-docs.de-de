@@ -16,12 +16,12 @@ ms.assetid: a0e3a8c4-e3c2-42a5-b2f8-aa06061d3fa6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 693c36cf0c23004f0538595ac75e1aa5d5039a33
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c5567abc0893bd183c2468f82278a014e2005113
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768472"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100235"
 ---
 # <a name="view-information-about-an-alert"></a>View Information About an Alert
   In diesem Thema wird beschrieben, wie Sie Infodermationen in Bezug auf [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Warnungen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]anzeigen können.  
@@ -57,7 +57,7 @@ ms.locfileid: "52768472"
   
 4.  Klicken Sie mit der rechten Maustaste auf die Warnung mit den von Ihnen gewünschten Informationen, die Sie anzeigen möchten, und wählen Sie **Eigenschaften**aus.  
   
-     Weitere Informationen zu den im Dialogfeld *Warnungsname***Warnungseigenschaften** enthaltenen verfügbaren Optionen finden Sie unter:  
+     Weitere Informationen zu den im Dialogfeld _Eigenschaften von Warnung_**Warnungsname** enthaltenen verfügbaren Optionen finden Sie unter:  
   
     -   [Warnung-Eigenschaften – neue Warnung &#40;Seite "Allgemein"&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   

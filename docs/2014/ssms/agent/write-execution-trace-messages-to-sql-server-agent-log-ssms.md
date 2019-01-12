@@ -16,12 +16,12 @@ ms.assetid: 90e3731e-6fae-43db-833e-9accecdd1c03
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57117e531714e93000fef6beefefffc2ef210c80
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fd21f4b08bf53d4715f2b99eefed523f3853c033
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823174"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100685"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Write Execution Trace Messages to the SQL Server Agent Error Log (SQL Server Management Studio)
   In diesem Thema wird die Vorgehensweise zum Konfigurieren des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents zum Einschließen von Meldungen zur Ablaufverfolgung in das Fehlerprotokoll in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]beschrieben.  
@@ -66,7 +66,7 @@ ms.locfileid: "52823174"
   
 2.  Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent** , und wählen Sie **Eigenschaften**aus.  
   
-3.  In der **SQL Server-Agent-Eigenschaften-*** Servername* Dialogfeld **Fehlerprotokoll** auf der **Allgemein** Seite der **Ablaufverfolgung einschließen Nachrichten** Kontrollkästchen.  
+3.  In der **SQL Server-Agent-Eigenschaften –**_Server_name_ Dialogfeld **Fehlerprotokoll** auf die **allgemeine** Seite, wählen Sie die **Meldungen zur Ablaufverfolgung einschließen** Kontrollkästchen.  
   
 4.  Klicken Sie auf **OK**.  
   

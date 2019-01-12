@@ -12,12 +12,12 @@ ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 50067da1853795279216b16f7c12119bc03f38c6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3ca62d8d45ab5a116ab657646abf2393c69e73c4
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789092"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100365"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Angeben von berechneten Spalten in einer Tabelle
   Eine berechnete Spalte ist eine virtuelle Spalte, die nicht physisch in der Tabelle gespeichert ist, es sei denn, die Spalte wurde (mit PERSISTED) als persistente Spalte markiert. Der Ausdruck für eine berechnete Spalte kann aus Daten anderer Spalten einen Wert für die Spalte berechnen, der er zuwiesen ist. Sie können mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] einen Ausdruck für eine berechnete Spalte in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] angeben.  
@@ -66,7 +66,7 @@ ms.locfileid: "52789092"
   
 5.  Geben Sie an, ob die Daten persistent gespeichert werden sollen, indem Sie im Dropdownfeld für die untergeordnete Eigenschaft **IsPersisted** die Option **Ja** oder **Nein** wählen.  
   
-6.  Klicken Sie im Menü **Datei** auf **Speichern** > *Tabellenname*.  
+6.  Klicken Sie im Menü **Datei** auf **Speichern**_table name_.  
   
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>So fügen Sie einer vorhandenen Spalte die Definition einer berechneten Spalte hinzu  
   

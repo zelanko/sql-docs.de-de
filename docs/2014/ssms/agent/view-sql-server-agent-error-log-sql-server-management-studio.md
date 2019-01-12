@@ -16,12 +16,12 @@ ms.assetid: de920425-fa44-469f-b83d-49e3f97e97f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 798d9f09bcfa2c9f73b0b70b795ebb53cfb97a79
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3835f83efff9e720f7f8631d527b9547e3b4239a
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823064"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100775"
 ---
 # <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
   In diesem Thema wird das Anzeigen des  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Fehlerprotokolls in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]beschrieben.  
@@ -70,7 +70,7 @@ ms.locfileid: "52823064"
   
 4.  Klicken Sie mit der rechten Maustaste auf das Fehlerprotokoll, das Sie anzeigen möchten, und wählen Sie **Agentprotokoll anzeigen**aus.  
   
-     Die folgenden Optionen sind im Dialogfeld **Protokolldatei-Viewer >***Servername* verfügbar:  
+     Die folgenden Optionen stehen in der **Protokolldatei-Viewer -**_Server_name_ Dialogfeld:  
   
      **Protokoll laden**  
      Öffnen Sie ein Dialogfeld, in dem Sie eine zu ladende Protokolldatei angeben können.  

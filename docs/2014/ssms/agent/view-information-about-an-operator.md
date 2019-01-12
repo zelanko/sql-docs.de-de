@@ -17,12 +17,12 @@ ms.assetid: 92c82cdf-f704-444e-9539-82aea7fe6fb7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 361511051bec6cc33f3062c0c4da13fe8a39329b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9d1cab01b6fc496de90975966bfcf29b70e041fa
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751052"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100325"
 ---
 # <a name="view-information-about-an-operator"></a>View Information About an Operator
   In diesem Thema wird beschrieben, wie Sie Infodermationen über einen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentoperatoder in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]anzeigen können.  
@@ -66,7 +66,7 @@ ms.locfileid: "52751052"
   
 4.  Klicken Sie mit der rechten Maustaste auf den Operator, den Sie anzeigen möchten, und wählen Sie **Eigenschaften**aus.  
   
-     Weitere Informationen zu den verfügbaren Optionen im Dialogfeld *Operatorname***Eigenschaften** finden Sie unter:  
+     Weitere Informationen zu den verfügbaren Optionen im Dialogfeld _Operatorname_**Eigenschaften** finden Sie unter:  
   
     -   [Operatoreigenschaften "und" New-Operator &#40;Seite "Allgemein"&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   

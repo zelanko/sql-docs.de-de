@@ -17,12 +17,12 @@ ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 997855d160108abe530affdd2b28e464076fbbb7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 263df9986df0297c8bf1afdb35d70841835cef4d
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077010"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100635"
 ---
 # <a name="using-catalog-functions"></a>Verwenden von Katalogfunktionen
   Alle Datenbanken verfügen über eine Struktur, die die in der Datenbank gespeicherten Daten enthält. Eine Definition dieser Struktur ist zusammen mit anderen Informationen, wie beispielsweise Berechtigungen, in einem Katalog gespeichert, der als Satz Systemtabellen implementiert und auch als Datenwörterbuch bezeichnet wird.  
@@ -43,7 +43,7 @@ ms.locfileid: "48077010"
   
      Gibt eine Liste der in einem Verbindungsserver enthaltenen Kataloge zurück.  
   
- Sobald Sie einen Verbindungsservernamen und einen Katalognamen verfügen die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt das Abrufen von Informationen aus dem Katalog mithilfe eines zweiteiligen Namens des *Linked_server_name ***.*** Katalog* für *CatalogName* auf die folgenden ODBC-Katalogfunktionen:  
+ Sobald Sie einen Verbindungsservernamen und einen Katalognamen verfügen die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt das Abrufen von Informationen aus dem Katalog mithilfe eines zweiteiligen Namens des _Linked_server_name_**.** _Katalog_ für *CatalogName* auf die folgenden ODBC-Katalogfunktionen:  
   
 -   **SQLColumnPrivileges**  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48077010"
   
 -   **SQLTables**  
   
- Der zweiteilige *Linked_server_name ***.*** Katalog* wird ebenfalls unterstützt *FKCatalogName* und *PKCatalogName* auf [SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md).  
+ Der zweiteilige _Linked_server_name_**.** _Katalog_ wird ebenfalls unterstützt *FKCatalogName* und *PKCatalogName* auf [SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md).  
   
  Zur Verwendung von SQLLinkedServers und SQLLinkedCatalogs sind die folgenden Dateien erforderlich:  
   

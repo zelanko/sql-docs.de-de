@@ -14,12 +14,12 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c1093297892ea2e03cb9583a1e5c40a1c2a85b19
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 35d4720a8fe8b8c1b404a97e27b36896f36dd5f7
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781263"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100795"
 ---
 # <a name="view-resource-governor-properties"></a>Anzeigen der Eigenschaften der Ressourcenkontrolle
   Auf der Seite Eigenschaften der Ressourcenkontrolle in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]können Sie Ressourcenkontrollentitäten erstellen oder konfigurieren, z. B. Ressourcenpools und Arbeitsauslastungsgruppen.  
@@ -73,7 +73,7 @@ ms.locfileid: "52781263"
  Aktivieren oder deaktivieren Sie die Ressourcenkontrolle, indem Sie das Kontrollkästchen aktivieren oder deaktivieren.  
   
  **Ressourcenpools**  
- Erstellen oder ändern Sie die Konfiguration von Ressourcenpools mithilfe des vorhandenen Rasters. Dieses Raster wird mit Informationen für die vordefinierten internen Pools und Standardpools ausgefüllt. Wählen Sie einen Pool aus, mit dem Sie arbeiten möchten, indem Sie auf die erste Spalte in der Zeile für den Pool klicken. Klicken Sie zur Erstellung eines neuen Ressourcenpools auf die Zeile, der ein Sternchen (**\***) vorangestellt ist.  
+ Erstellen oder ändern Sie die Konfiguration von Ressourcenpools mithilfe des vorhandenen Rasters. Dieses Raster wird mit Informationen für die vordefinierten internen Pools und Standardpools ausgefüllt. Wählen Sie einen Pool aus, mit dem Sie arbeiten möchten, indem Sie auf die erste Spalte in der Zeile für den Pool klicken. Um einen neuen Ressourcenpool erstellen, klicken Sie auf die Zeile, der ein Sternchen vorangestellt ist (**&#42;**).  
   
  **Name**  
  Geben Sie den Namen des Ressourcenpools an.  
@@ -93,7 +93,7 @@ ms.locfileid: "52781263"
  Weitere Informationen finden Sie unter [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql).  
   
  **Arbeitsauslastungsgruppen für Ressourcenpool**  
- Erstellen oder ändern Sie die Konfiguration von Arbeitsauslastungsgruppen mithilfe des vorhandenen Rasters. Dieses Raster wird mit Informationen für die vordefinierten internen Gruppen und Standardgruppen ausgefüllt. Wählen Sie eine Gruppe aus, mit der Sie arbeiten möchten, indem Sie auf die erste Spalte in der Zeile für den Pool klicken. Klicken Sie zur Erstellung einer neuen Arbeitsauslastungsgruppe auf die Zeile, der ein Sternchen (**\***) vorangestellt ist.  
+ Erstellen oder ändern Sie die Konfiguration von Arbeitsauslastungsgruppen mithilfe des vorhandenen Rasters. Dieses Raster wird mit Informationen für die vordefinierten internen Gruppen und Standardgruppen ausgefüllt. Wählen Sie eine Gruppe aus, mit der Sie arbeiten möchten, indem Sie auf die erste Spalte in der Zeile für den Pool klicken. Klicken Sie zum Erstellen einer neuen Arbeitsauslastungsgruppe auf die Zeile, der ein Sternchen vorangestellt ist (**&#42;**).  
   
  **Name**  
  Geben Sie den Namen der Arbeitsauslastungsgruppe an.  

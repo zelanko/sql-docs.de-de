@@ -14,12 +14,12 @@ ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26412fd6727049019b289fd0245e4ebf7f826dc1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 30c50d1f6efc44c17eac76e0e03432c2461da296
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375532"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100617"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
   Das Dienststartkonto des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents definiert das Windows-Konto, unter dem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ausgeführt wird, sowie die zugehörigen Netzwerkberechtigungen. In diesem Thema wird beschrieben, wie Sie das Dienstkonto für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]festlegen.  
@@ -71,9 +71,9 @@ ms.locfileid: "53375532"
   
 5.  Wählen Sie im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager im Konsolenbereich **SQL Server-Dienste**aus.  
   
-6.  Klicken Sie im Detailbereich mit der rechten Maustaste auf **SQL Server-Agent***(Servername)*, wobei *Servername* der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Instanz ist, für die Sie das Dienststartkonto ändern möchten. Klicken Sie anschließend auf **Eigenschaften**.  
+6.  Klicken Sie im Detailbereich mit der rechten Maustaste auf **SQL Server-Agent**_(Servername)_, wobei *Servername* der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Instanz ist, für die Sie das Dienststartkonto ändern möchten. Wählen Sie anschließend **Eigenschaften**aus.  
   
-7.  Wählen Sie im Dialogfeld **SQL Server-Agent***(Servername)* **Eigenschaften** auf der Registerkarte **Anmelden** eine der folgenden Optionen unter **Anmelden als** aus:  
+7.  Wählen Sie im Dialogfeld **SQL Server-Agent**_(Servername)_ **Eigenschaften** auf der Registerkarte **Anmelden** eine der folgenden Optionen unter **Anmelden als**aus:  
   
     -   **Integriertes Konto**: Wählen Sie diese Option aus, wenn die Aufträge nur Ressourcen vom lokalen Server benötigen. Informationen zum Auswählen eines integrierten Kontotyps finden Sie unter [Auswählen eines Kontos für den SQL Server-Agent-Dienst](https://msdn.microsoft.com/library/ms191543.aspx).  
   

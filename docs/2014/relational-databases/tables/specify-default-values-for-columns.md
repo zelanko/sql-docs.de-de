@@ -13,12 +13,12 @@ ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14bc2f8445f61cb8cbafb94770c646df4d6a48bb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8a02385a6cd12b85be1661c738488c000f810510
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748492"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100665"
 ---
 # <a name="specify-default-values-for-columns"></a>Angeben von Standardwerten für Spalten
   Sie können einen Standardwert angeben, der mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in die Spalte in [!INCLUDE[tsql](../../includes/tsql-md.md)]eingegeben wird. Wenn kein Standardwert zugewiesen ist und Benutzer die Spalte leer lassen, wird wie folgt verfahren:  
@@ -71,7 +71,7 @@ ms.locfileid: "52748492"
     > [!NOTE]  
     >  Um einen numerischen Standardwert einzugeben, geben Sie die Zahl ein. Geben Sie bei einem Objekt oder einer Funktion den entsprechenden Namen ein. Geben Sie für einen alphanumerischen Standardwert den Wert in einfachen Anführungszeichen ein.  
   
-4.  Klicken Sie im Menü **Datei** auf **Speichern** > *Tabellenname*.  
+4.  Klicken Sie im Menü **Datei** auf **Speichern**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   

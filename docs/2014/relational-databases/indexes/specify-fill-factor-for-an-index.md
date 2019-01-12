@@ -13,12 +13,12 @@ ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cb12dbcee56debfd88b4706ad69ac3ac2d04113a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: d4fe48814f8d707b0feeacf7a9a84c79df0ffe71
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398813"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100715"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Angeben des Füllfaktors für einen Index
   In diesem Thema wird beschrieben, was ein Füllfaktor ist und wie ein Füllfaktorwert in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] für einen Index mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]angegeben wird.  
@@ -79,7 +79,7 @@ ms.locfileid: "52398813"
   
 7.  Klicken Sie auf **Schließen**.  
   
-8.  Klicken Sie im Menü **Datei** auf **Speichern***Tabellenname*.  
+8.  Klicken Sie im Menü **Datei** auf **Speichern**_table_name_.  
   
 #### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>So geben Sie einen Füllfaktor in einem Index mit dem Objekt-Explorer an  
   
@@ -122,7 +122,7 @@ ms.locfileid: "52398813"
   
 #### <a name="another-way-to-specify-a-fill-factor-in-an-index"></a>Alternative Möglichkeit zum Angeben eines Füllfaktors in einem Index  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

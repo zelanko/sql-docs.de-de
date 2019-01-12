@@ -12,12 +12,12 @@ ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b347715a601be779b864500a6bc28655141ceeeb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 00c5e0017b8d81eaea6960f016e40dbc381e69e8
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773472"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100535"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Dialogfeld 'Räumliche Indizes' (Visual Database Tools)
   Verwenden Sie das Dialogfeld **Räumliche Indizes** , um Indizes für Spalten des Datentyps **geometry** oder **geography** (*räumliche Spalten*) zu erstellen, denn diese können nicht mithilfe des Dialogfelds **Index/Schlüssel** indiziert werden. Jede räumliche Spalte kann mehr als einen räumlichen Index aufweisen, jedoch müssen sie einzeln erstellt werden.  
@@ -109,7 +109,7 @@ ms.locfileid: "52773472"
  **Seitensperren sind zulässig**  
  Gibt an, ob Sperren auf Seitenebene für diesen Index zugelassen sind. Das Zulassen oder Untersagen von Sperren auf Seitenebene wirkt sich auf die Datenbankleistung aus.  
   
- **Neu berechnen****Statistiken**  
+ **Statistiken neu berechnen**  
  Gibt an, ob beim Erstellen des Index neue Statistiken berechnet werden sollen. Durch erneutes Berechnen von Statistiken wird die Erstellung der Indizes verlangsamt, die Abfrageleistung wird jedoch meist verbessert.  
   
  **Zeilensperren sind zulässig**  

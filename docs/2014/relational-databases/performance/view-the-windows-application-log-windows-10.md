@@ -19,12 +19,12 @@ ms.assetid: 168a6c6e-12df-46a9-9904-55d63ca8fe14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 72b47b9dada82f66ec0cb97b1f9a4dec8aebdbdf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b18643f97a328dfee94bc5bfe125d6eddeae4efe
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748212"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54099955"
 ---
 # <a name="view-the-windows-application-log-windows"></a>Anzeigen des Anwendungsprotokolls von Windows (Windows)
   Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Verwendung des Windows-Anwendungsprotokolls konfiguriert ist, werden bei jeder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sitzung neue Ereignisse in das Protokoll geschrieben. Im Gegensatz zum Fehlerprotokoll von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird beim Starten einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz nicht jedes Mal ein neues Anwendungsprotokoll erstellt.  
@@ -35,7 +35,7 @@ ms.locfileid: "52748212"
   
 2.  Klicken Sie in der Ereignisanzeige auf **Anwendung**.  
   
-3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ereignisse werden in der Spalte **Source** durch den Eintrag **MSSQLSERVER** identifiziert (benannte Instanzen werden durch **MSSQL$***<Instanzname>* identifiziert). Die Ereignisse des SQL Server-Agents werden durch den Eintrag SQLSERVERAGENT identifiziert (bei benannten Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Ereignisse durch **SQLAgent$**\<*Instanzname*> identifiziert). Die Ereignisse des Microsoft Search-Dienstes werden durch den Eintrag **Microsoft Search**identifiziert.  
+3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ereignisse werden in der **Source**-Spalte durch den Eintrag **MSSQLSERVER** identifiziert (benannte Instanzen werden durch **MSSQL$**_<Instanzname>_ identifiziert). Die Ereignisse des SQL Server-Agents werden durch den Eintrag SQLSERVERAGENT identifiziert (bei benannten Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Ereignisse durch **SQLAgent$**\<*Instanzname*> identifiziert). Die Ereignisse des Microsoft Search-Dienstes werden durch den Eintrag **Microsoft Search**identifiziert.  
   
 4.  Klicken Sie mit der rechten Maustaste auf **Ereignisanzeige**, klicken Sie anschließend auf **Verbindung mit anderem Computer herstellen** , und nehmen Sie im Dialogfeld **Computer auswählen**die entsprechenden Einstellungen vor, um das Protokoll eines anderen Computers anzuzeigen.  
   

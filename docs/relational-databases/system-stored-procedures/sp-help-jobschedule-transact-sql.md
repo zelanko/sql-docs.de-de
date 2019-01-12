@@ -18,12 +18,12 @@ ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a327b07384ce2c12e64612b19c611c57dbbf18b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36e00cf0e5d39722fee1c60fc86f0e6f81fd7e43
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850368"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100355"
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  [ **@job_id=** ] *job_id*  
  Die Auftrags-ID *Job_id*ist **Uniqueidentifier**, hat den Standardwert NULL.  
   
- [  **@job_name=** ] **"***Job_name***"**  
+ [  **@job_name=** ] **"**_Job_name_**"**  
  Der Name des Auftrags. *Job_name*ist **Sysname**, hat den Standardwert NULL.  
   
-> **Hinweis:** entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
+> **HINWEIS:** Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
- [  **@schedule_name=** ] **"***Schedule_name***"**  
+ [  **@schedule_name=** ] **"**_Schedule_name_**"**  
  Der Name des Zeitplanelements für den Auftrag. *Schedule_name*ist **Sysname**, hat den Standardwert NULL.  
   
  [  **@schedule_id=** ] *Schedule_id*  
@@ -88,7 +88,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**schedule_uid**|**uniqueidentifier**|Bezeichner für den Zeitplan.|  
 |**job_count**|**int**|Die Anzahl der zurückgegebenen Aufträge.|  
   
-> **Hinweis:****Sp_help_jobschedule** gibt Werte aus der **dbo.sysjobschedules** und **dbo.sysschedules** -Systemtabellen in **Msdb** .   **Sysjobschedules** wird alle 20 Minuten aktualisiert. Dies kann Auswirkungen auf die Werte haben, die von dieser gespeicherten Prozedur zurückgegeben werden.  
+> **Hinweis: Sp_help_jobschedule** gibt Werte aus der **dbo.sysjobschedules** und **dbo.sysschedules** -Systemtabellen in **Msdb**. **Sysjobschedules** wird alle 20 Minuten aktualisiert. Dies kann Auswirkungen auf die Werte haben, die von dieser gespeicherten Prozedur zurückgegeben werden.  
   
 ## <a name="remarks"></a>Hinweise  
  Die Parameter der **Sp_help_jobschedule** können nur in bestimmten Kombinationen verwendet werden. Wenn *Schedule_id* angegeben ist, weder *Job_id* noch *Job_name* kann angegeben werden. Andernfalls die *Job_id* oder *Job_name* Parameter können verwendet werden, mit *Schedule_name*.  

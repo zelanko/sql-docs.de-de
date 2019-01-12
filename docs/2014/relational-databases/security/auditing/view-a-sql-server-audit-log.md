@@ -14,12 +14,12 @@ ms.assetid: e8feaca0-7852-422b-895a-319b965d8d9b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f8e32b949e6c2868f5478215154df70cdd0e53e9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fa30824e32faae5feee1612305c1ca292d44e8e4
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519192"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100165"
 ---
 # <a name="view-a-sql-server-audit-log"></a>Anzeigen eines SQL Server-Überwachungsprotokolls
   In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]ein SQL Server-Überwachungsprotokoll anzeigen können.  
@@ -49,7 +49,7 @@ ms.locfileid: "52519192"
   
 2.  Erweitern Sie den Ordner **Überwachungen** .  
   
-3.  Klicken Sie mit der rechten Maustaste auf das Überwachungsprotokoll, das Sie anzeigen möchten, und klicken Sie auf **Überwachungsprotokolle anzeigen**. Daraufhin wird die **Protokolldatei-Viewer-*** Server_name* Dialogfeld. Weitere Informationen finden Sie unter [Log File Viewer F1 Help](../../logs/log-file-viewer-f1-help.md).  
+3.  Klicken Sie mit der rechten Maustaste auf das Überwachungsprotokoll, das Sie anzeigen möchten, und klicken Sie auf **Überwachungsprotokolle anzeigen**. Daraufhin wird die **Protokolldatei-Viewer -**_Server_name_ Dialogfeld. Weitere Informationen finden Sie unter [Log File Viewer F1 Help](../../logs/log-file-viewer-f1-help.md).  
   
 4.  Wenn Sie fertig sind, klicken Sie auf **Schließen**.  
   

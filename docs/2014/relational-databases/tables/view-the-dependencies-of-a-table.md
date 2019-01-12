@@ -15,12 +15,12 @@ ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 111a0664a61a586558dd4792525c7adf2d68646d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f5f30232a4f6d382af6e3a21f022b86cdf1a4fd4
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772302"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100745"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>Anzeigen der Abhängigkeiten einer Tabelle
   Sie können die Abhängigkeiten einer Tabelle in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] anzeigen.  
@@ -52,7 +52,7 @@ ms.locfileid: "52772302"
   
 2.  Klicken Sie mit der rechten Maustaste auf eine Tabelle, und klicken Sie dann auf **Abhängigkeiten anzeigen**.  
   
-3.  Im Dialogfeld **Objektabhängigkeiten**_\<Objektname >_ wählen Sie entweder **Objekte, abhängig von** *\<Objektname>*, oder **Objekte, von denen**_\<Objektname >_**abhängt**.  
+3.  Im Dialogfeld **Objektabhängigkeiten**_\<Objektname >_ wählen Sie entweder **Objekte, abhängig von** _\<Objektname>_, oder **Objekte, von denen**_\<Objektname >_**abhängt**.  
   
 4.  Wählen Sie im Raster **Abhängigkeiten** ein Objekt aus. Der Objekttyp (z.B. „Trigger“ oder „Gespeicherte Prozedur“) wird im Feld **Typ** angezeigt.  
   

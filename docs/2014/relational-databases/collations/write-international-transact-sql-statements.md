@@ -18,12 +18,12 @@ ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d092939ca68c0d556b33c2f74b6cd4925061716
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 64dc9129373a57de2924b2983e14266a67d4915e
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778342"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100315"
 ---
 # <a name="write-international-transact-sql-statements"></a>Schreiben internationaler Transact-SQL-Anweisungen
   Datenbanken und Datenbankanwendungen, die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen verwenden, können leichter von einer Sprache in eine andere übertragen werden bzw. unterstützen mehrere Sprachen, wenn die folgenden Richtlinien eingehalten werden:  
@@ -36,11 +36,11 @@ ms.locfileid: "52778342"
   
     -   ADO-, OLE DB- und ODBC-Anwendungen sollten folgende ODBC-Timestamps und folgende ESCAPE-Klauseln für Datum und Zeit verwenden:  
   
-         **{ ts'** yyyy**-***mm***-***dd**hh ***:*** mm ***:*** ss *[**.***fff*] **'}** Beispiel: **{ ts'** 1998**-** 09**-** 24 10 **:** 02 **:** 20 **' }**  
+         **{ts'** JJJJ**-**_mm_**-**_Ddhh_**:**  _mm_**:**_ss_[**.** _fff_] **'}** wie z. B.: **{ts'** 1998**-** 09**-** 24 10 **:** 02 **:** 20 **'}**  
   
-         **{ d'** *yyyy* **-** *mm* **-** *dd* **'}** Beispiel: **{ d'** 1998**-** 09**-** 24 **'}**  
+         **{ d'** _yyyy_ **-** _mm_ **-** _dd_ **'}** Beispiel: **{ d'** 1998**-** 09**-** 24 **'}**  
   
-         **{ t'** *hh* **:** *mm* **:** *ss* **'}** Beispiel: **{ t'** 10:02:20 **'}**  
+         **{ t'** _hh_ **:** _mm_ **:** _ss_ **'}** such as: **{ t'** 10:02:20 **'}**  
   
     -   Anwendungen, die andere APIs verwenden, oder [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts, gespeicherte Prozedure und Trigger sollten unstrukturierte Zeichenfolgen verwenden. Zum Beispiel *yyyymmdd* für 19980924.  
   
