@@ -16,12 +16,12 @@ ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1f38ef40a1e64544d077f30031fe128070cef2fd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 031fc14eba8cdea8cdbff41d18d6e6ab6bc42a68
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819202"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133850"
 ---
 # <a name="spchangedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +40,10 @@ sp_changedistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@database=**] **"***Datenbank***"**  
+ [  **@database=**] **"**_Datenbank_**"**  
  Ist der Name der Verteilungsdatenbank. *Datenbank* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@property=**] **"***Eigenschaft***"**  
+ [  **@property=**] **"**_Eigenschaft_**"**  
  Die Eigenschaft, die für die angegebene Datenbank geändert werden soll. *Eigenschaft* ist **Sysname**, und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
@@ -53,7 +53,7 @@ sp_changedistributiondb [ @database= ] 'database'
 |**min_distretention**|Minimale Beibehaltungsdauer für die Verteilung.|  
 |NULL (Standard)|Alle verfügbaren *Eigenschaft* Werte ausgegeben werden.|  
   
- [  **@value=**] **"***Wert***"**  
+ [  **@value=**] **"**_Wert_**"**  
  Ist der neue Wert für die angegebene Eigenschaft. *Wert* ist **nvarchar(255)**, hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

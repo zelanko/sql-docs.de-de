@@ -12,12 +12,12 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 151a7e847d50a84c34eb07f55e5bd4d8e20dcc4d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c5a78fc65ee96439c6b6a4d7726e9a40522e5be4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775792"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132785"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Erstellen eines Wartungsplans (Entwurfsoberfläche für Wartungspläne)
   In diesem Thema wird beschrieben, wie für einen einzelnen Server oder mehrere Server mithilfe der Entwurfsoberfläche für Wartungspläne in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ein Wartungsplan erstellt wird. Der **Wartungsplanungs-Assistent** eignet sich am besten für das Erstellen von grundlegenden Wartungsplänen. Wenn Sie die Entwurfsoberfläche zum Erstellen eines Plans verwenden, können Sie einen erweiterten Workflow nutzen.  
@@ -55,7 +55,7 @@ ms.locfileid: "52775792"
   
 3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Wartungspläne** , und klicken Sie anschließend auf **Neuer Wartungsplan**.  
   
-4.  Geben Sie im Dialogfeld **Neuer Wartungsplan** im Feld **Name** einen Namen für den Plan ein, und klicken Sie auf **OK**. Die Toolbox und die *maintenance_plan_name* **[Entwurf]** -Oberfläche mit dem **Unterplan_1** im Hauptraster wird angezeigt.  
+4.  Geben Sie im Dialogfeld **Neuer Wartungsplan** im Feld **Name** einen Namen für den Plan ein, und klicken Sie auf **OK**. Die Toolbox und die _maintenance_plan_name_ **[Entwurf]** -Oberfläche mit dem **Unterplan_1** im Hauptraster wird angezeigt.  
   
      Die folgenden Optionen sind in der Kopfzeile des Entwurfsbereichs verfügbar.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "52775792"
   
         1.  Wenn Sie **Textdateibericht generieren**auswählen, können Sie entweder **Neue Datei erstellen** oder **An Datei anfügen**auswählen.  
   
-        2.  Geben Sie je nach Ihrer Auswahl den Namen und vollständigen Pfad der neuen Datei oder der anzufügenden Datei ein, indem Sie die Informationen im Feld **Ordner** bzw. **Dateiname** angeben. Klicken Sie alternativ auf die Auslassungspunkte auf **(...)**  und wählen Sie den Pfad zum Ordner oder Datei aus den **Ordner suchen – *** Server_name* oder **Datenbankdateien suchen – *** Server_name* Dialogfelder.  
+        2.  Geben Sie je nach Ihrer Auswahl den Namen und vollständigen Pfad der neuen Datei oder der anzufügenden Datei ein, indem Sie die Informationen im Feld **Ordner** bzw. **Dateiname** angeben. Klicken Sie alternativ auf die Auslassungspunkte auf **(...)**  und wählen Sie den Pfad zum Ordner oder Datei von der **Ordner suchen –**_Server_name_ oder **Datenbankdateien suchen –**_Servername_  Dialogfelder.  
   
         3.  Wenn Sie in der Liste **Agentoperator**die Option **Bericht an einen E-Mail-Empfänger senden** auswählen, können Sie den Empfänger des per E-Mail gesendeten Berichts angeben.  
   
@@ -230,7 +230,7 @@ ms.locfileid: "52775792"
   
 12. Wenn Sie die Ergebnisse im Protokolldatei-Viewer anzeigen möchten, klicken Sie im **Objekt-Explorer**mit der rechten Maustaste entweder auf den Ordner **Wartungspläne** oder auf einen bestimmten Wartungsplan, und klicken Sie dann auf **Verlauf anzeigen**.  
   
-     Die folgenden Optionen stehen auf der **Protokolldatei-Viewer-*** Server_name* Dialogfeld.  
+     Die folgenden Optionen befinden sich die **Protokolldatei-Viewer -**_Server_name_ Dialogfeld.  
   
      **Protokoll laden**  
      Öffnen Sie ein Dialogfeld, in dem Sie eine zu ladende Protokolldatei angeben können.  

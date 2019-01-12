@@ -5,18 +5,17 @@ description: Informationen Sie zum Konfigurieren der eine SQL Server immer auf A
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 02/14/2018
+ms.date: 01/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.assetid: ''
-ms.openlocfilehash: 014ff123618c04f91c0e2c2a39d5ef8e5690a386
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 60cdef13ec46ab1f859d17f724863f67939e6b6f
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203869"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206496"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Konfigurieren Sie eine SQL Server-Verfügbarkeitsgruppe für schreibgeschützte horizontale Skalierung unter Linux
 
@@ -24,8 +23,8 @@ ms.locfileid: "53203869"
 
 Sie können eine SQL Server immer auf Availability Group (AG) für schreibgeschützte arbeitsauslastungen unter Linux konfigurieren. Für Verfügbarkeitsgruppen gibt es zwei Architekturtypen. Eine Architektur für hochverfügbarkeit verwendet einen Cluster-Manager, um verbesserte Geschäftskontinuität zu ermöglichen. Diese Architektur kann auch schreibgeschützte Replikate enthalten. Um die Architektur für hohe Verfügbarkeit zu erstellen, finden Sie unter [Konfigurieren von SQL Server AlwaysOn-Verfügbarkeitsgruppe für hochverfügbarkeit bei Linux](sql-server-linux-availability-group-configure-ha.md). Die andere Architektur unterstützt nur Workloads zur Leseskalierung. In diesem Artikel wird erläutert, wie eine Verfügbarkeitsgruppe ohne Cluster-Manager für Workloads zur Leseskalierung erstellt wird. Diese Architektur bietet nur Leseskalierung. Sie bietet keine Hochverfügbarkeit.
 
->[!NOTE]
->Eine Verfügbarkeitsgruppe mit `CLUSTER_TYPE = NONE` kann Replikate enthalten, die auf verschiedenen Betriebssystemplattformen gehostet werden. Sie kann keine Unterstützung für Hochverfügbarkeit bieten. 
+> [!NOTE]
+> Eine Verfügbarkeitsgruppe mit `CLUSTER_TYPE = NONE` kann Replikate enthalten, die auf verschiedenen Betriebssystemplattformen gehostet werden. Sie kann keine Unterstützung für Hochverfügbarkeit bieten. 
 
 [!INCLUDE [Create prerequisites](../includes/ss-linux-cluster-availability-group-create-prereq.md)]
 
@@ -84,7 +83,6 @@ Es gibt zwei Möglichkeiten für die Verbindung mit schreibgeschützten sekundä
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-* [Konfigurieren verteilter Verfügbarkeitsgruppen](..\database-engine\availability-groups\windows\distributed-availability-groups-always-on-availability-groups.md)
-* [Weitere Informationen zu Verfügbarkeitsgruppen](..\database-engine\availability-groups\windows\overview-of-always-on-availability-groups-sql-server.md)
+* [Konfigurieren verteilter Verfügbarkeitsgruppen](../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)
+* [Weitere Informationen zu Verfügbarkeitsgruppen](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 * [Ausführen eines erzwungenen manuellen Failovers](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)
-

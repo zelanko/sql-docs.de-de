@@ -18,12 +18,12 @@ ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3b9390b198ddcb9a54691a7f33b8f52d520356d8
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 232b071c11d4a2a0bb2e42b6f9787d07f99e21e2
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292422"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226587"
 ---
 # <a name="xquery-and-static-typing"></a>XQuery und statische Typisierung
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "51292422"
   
  Wenn eine implizite Konvertierung notwendig ist, stellt eine anschließende Überprüfung des statischen Typs sicher, dass an eine Operation nur Werte des zugelassenen Typs mit der richtigen Kardinalität übergeben werden. Für "String" + 1 erkennt, dass der statische Typ von "String" **xs: String**. Da dies nicht für einen zulässigen Typ ist der **+** Vorgang ein Typfehler ausgelöst wird.  
   
- Wenn das Ergebnis eines beliebigen Ausdrucks E1 zu einem beliebigen Ausdruck E2 addiert wird (E1 + E2), bestimmt die Inferenz des statischen Typs zuerst die statischen Typen von E1 und E2 und prüft diese dann gegen die für den Vorgang zulässigen statischen Typen. Angenommen, der statische Typ von E1 entweder als eine **xs: String** oder **xs: Integer**, Überprüfung des statischen Typs einen Typfehler, auch wenn einige Werte zur möglicherweise zur Laufzeit ganze Zahlen sein. Die gleiche wäre der Fall, wenn der statische von E1 Typ **xs: Integer\***. Da die **+** Vorgang akzeptiert nur genau einen Ganzzahlwert und E1 kann 0 (null) zurückgeben, oder mehr als 1, Überprüfung des statischen Typs ein Fehler ausgelöst.  
+ Wenn das Ergebnis eines beliebigen Ausdrucks E1 zu einem beliebigen Ausdruck E2 addiert wird (E1 + E2), bestimmt die Inferenz des statischen Typs zuerst die statischen Typen von E1 und E2 und prüft diese dann gegen die für den Vorgang zulässigen statischen Typen. Angenommen, der statische Typ von E1 entweder als eine **xs: String** oder **xs: Integer**, Überprüfung des statischen Typs einen Typfehler, auch wenn einige Werte zur möglicherweise zur Laufzeit ganze Zahlen sein. Die gleiche wäre der Fall, wenn der statische von E1 Typ **xs: Integer&#42;**. Da die **+** Vorgang akzeptiert nur genau einen Ganzzahlwert und E1 kann 0 (null) zurückgeben, oder mehr als 1, Überprüfung des statischen Typs ein Fehler ausgelöst.  
   
  Wie zuvor erwähnt, ermittelt die Typinferenz häufig einen Typ, der breiter angelegt ist, als dies dem Benutzer hinsichtlich des zu übergebenden Datentyps bekannt ist. In diesen Fällen muss der Benutzer die Abfrage neu schreiben. Die folgenden: Einige typische Fälle  
   

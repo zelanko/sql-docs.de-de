@@ -13,17 +13,17 @@ ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0e02a217579e70a3b7461037750a919efec14458
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 24b62c2b5cd449b6e7201d413b315e48fbd570f6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515467"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132575"
 ---
 # <a name="scalar-function-calls"></a>Aufrufe von Skalarfunktionen
 Skalarfunktionen geben einen Wert für jede Zeile zurück. Z. B. die Skalarfunktion absoluten Wert eine numerische Spalte als Argument akzeptiert und gibt den absoluten Wert der einzelnen Werte in der Spalte zurück. Die-Escapesequenz zum Aufrufen einer Skalarfunktion ist.  
   
- **{fn** *-Skalarfunktion* **}**  
+ **{fn** _-Skalarfunktion_ **}**  
   
  wo *-Skalarfunktion* ist eine der Funktionen in [Anhang E: Skalare Funktionen](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md). Weitere Informationen zu den Escapesequenz Skalarfunktion, finden Sie unter [skalare Funktionsescapesequenz](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md) in Anhang C: SQL-Grammatik.  
   
@@ -43,7 +43,7 @@ SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) - 1)} FROM Customers
   
  Für eine optimale Interoperabilität sollten Anwendungen verwenden die **konvertieren** skalare Funktion, um sicherzustellen, dass die Ausgabe eine skalare Funktion mit den erforderlichen Typ ist. Die **konvertieren** Funktion konvertiert die Daten von einem SQL-Datentyp, in der angegebenen SQL-Datentyp. Die Syntax der **konvertieren** -Funktion ist  
   
- **KONVERTIEREN (** *Value_exp* **,** _Data_type_**)**  
+ **KONVERTIEREN (** _Value_exp_ **,** _Data_type_**)**  
   
  in denen *Value_exp* ist, einen Spaltennamen an, das Ergebnis von einem anderen skalaren Funktion oder ein Literalwert, und *Data_type* ist ein Schlüsselwort, das entspricht der **#define** Name, mit dem ein SQL-Datentyp Bezeichner gemäß [Anhang D: Datentypen](../../../odbc/reference/appendixes/appendix-d-data-types.md). Beispielsweise die folgende SQL-Anweisung verwendet die **konvertieren** Funktion, um sicherzustellen, dass die Ausgabe der **CURDATE** -Funktion ist ein Datum ist, anstatt ein Zeitstempel oder Zeichen-Daten:  
   

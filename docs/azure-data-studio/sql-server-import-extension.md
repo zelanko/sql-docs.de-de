@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 8248404353674f8139a26cfc75f37363557136b9
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: acca24570cf1c5052d92378b0dd5aa44d978aab6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030744"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131420"
 ---
 # <a name="sql-server-import-extension-preview"></a>SQL Server-Import-Erweiterung (Vorschau)
 
@@ -55,7 +55,7 @@ Weitere Informationen zu den SSMS-Version dieser Funktion finden Sie [in diesem 
     ![Öffnen der tabellenimport-Assistenten](media/sql-server-import-extension/import-wizard-modify-columns.png)
 3. Diese Seite bietet einen Überblick über die Aktionen, die ausgewählt werden. Sie können auch sehen, ob die Tabelle erfolgreich eingefügt. 
 
-    Können Sie entweder auf **fertig,** **zurück** Wenn Sie Änderungen vornehmen müssen oder **neue Importdatei** um schnell eine andere Datei zu importieren.
+    Können Sie entweder auf **Fertig "," Previous** Wenn Sie Änderungen vornehmen müssen oder **neue Importdatei** um schnell eine andere Datei zu importieren.
     ![Öffnen der tabellenimport-Assistenten](media/sql-server-import-extension/import-wizard-summary.png)
 1. Überprüfen Sie, ob die Tabelle erfolgreich importiert, durch Ihre Zieldatenbank zu aktualisieren oder durch Ausführen einer SELECT-Abfrage auf den Namen der Tabelle.
 

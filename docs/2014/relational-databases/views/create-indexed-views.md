@@ -17,19 +17,19 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 056675637b181340dc27e7f09698a0ac439dfb6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164600"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131810"
 ---
 # <a name="create-indexed-views"></a>Erstellen von indizierten Sichten
   In diesem Thema wird beschrieben, wie eine indizierte Sicht in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellt wird. Der erste Index, der für eine Sicht erstellt wird, muss ein eindeutiger gruppierter Index sein. Nachdem der eindeutige gruppierte Index erstellt wurde, können Sie weitere nicht gruppierte Indizes erstellen. Das Erstellen eines eindeutigen gruppierten Indexes für eine Sicht verbessert die Abfrageleistung, da die Sicht wie eine Tabelle mit einem gruppierten Index in der Datenbank gespeichert wird. Der Abfrageoptimierer kann indizierte Sichten verwenden, um die Abfrageausführung zu beschleunigen. Es ist nicht erforderlich, dass in der Abfrage auf die jeweilige Sicht verwiesen wird, damit der Optimierer diese Sicht als Ersatz berücksichtigt.  
   
   
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
  Die folgenden Schritte sind zum Erstellen einer indizierten Sicht erforderlich und wichtig für eine erfolgreiche Implementierung der indizierten Sicht:  
   
 1.  Stellen Sie sicher, dass die SET-Optionen für alle vorhandenen Tabellen korrekt sind, auf die in der Sicht verwiesen wird.  
@@ -55,7 +55,7 @@ ms.locfileid: "48164600"
   
 -   Die indizierte Sicht wird vom Abfrageoptimierer verwendet, um den Abfrageplan zu erstellen.  
   
-    |SET-Optionen|Erforderlicher Wert|Standardserverwert|Default<br /><br /> OLE DB- und ODBC-Wert|Default<br /><br /> DB-Library-Wert|  
+    |SET-Optionen|Erforderlicher Wert|Standardserverwert|Standard<br /><br /> OLE DB- und ODBC-Wert|Standard<br /><br /> DB-Library-Wert|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -86,11 +86,11 @@ ms.locfileid: "48164600"
   
 -   Wenn Sie den Index erstellen, muss die Option IGNORE_DUP_KEY auf OFF (Standardeinstellung) festgelegt sein.  
   
--   Auf Tabellen muss in der Sichtdefinition mit dem zweiteiligen Namen *Schema ***.*** Tabellenname* verwiesen werden.  
+-   Auf Tabellen muss in der Sichtdefinition mit dem zweiteiligen Namen _Schema_**.**_Tabellenname_ verwiesen werden.  
   
 -   Benutzerdefinierte Funktionen, auf die in der Sicht verwiesen wird, müssen mit der Option WITH SCHEMABINDING erstellt werden.  
   
--   Auf benutzerdefinierte Funktionen, auf die in der Sicht verwiesen wird, muss mit dem zweiteiligen Namen *Schema ***.*** Funktion* verwiesen werden.  
+-   Auf benutzerdefinierte Funktionen, auf die in der Sicht verwiesen wird, muss mit dem zweiteiligen Namen _Schema_**.**_Funktion_verwiesen werden.  
   
 -   Die Datenzugriffseigenschaft einer benutzerdefinierten Funktion muss NO SQL lauten, und die Eigenschaft für den externen Zugriff muss NO lauten.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "48164600"
 -   Wenn die Sichtdefinition eine GROUP BY-Klausel enthält, kann der Schlüssel des eindeutigen gruppierten Index nur auf die Spalten verweisen, die in der GROUP BY-Klausel angegeben sind.  
   
 ###  <a name="Recommendations"></a> Empfehlungen  
- Wenn Sie in indizierten Sichten auf `datetime`- und `smalldatetime`-Zeichenfolgenliterale verweisen, wird empfohlen, das Literal mithilfe eines deterministischen Datenformats explizit in den gewünschten Datentyp zu konvertieren. Eine Liste der deterministischen Datenformatstile finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql). Ausdrücke, die implizierte von Zeichenfolgen in Konvertierung `datetime` oder `smalldatetime` als nicht deterministisch angesehen werden. Der Grund hierfür ist, dass die Ergebnisse von den LANGUAGE- und DATEFORMAT-Einstellungen der Serversitzung abhängen. Die Ergebnisse des Ausdrucks `CONVERT (datetime, '30 listopad 1996', 113)` hängen beispielsweise von der LANGUAGE-Einstellung ab, da die Zeichenfolge '`listopad`' für verschiedene Monate in verschiedenen Sprachen steht. In ähnlicher Weise interpretiert `DATEADD(mm,3,'2000-12-01')`in dem Ausdruck [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Zeichenfolge `'2000-12-01'` basierend auf der DATEFORMAT-Einstellung.  
+ Wenn Sie in indizierten Sichten auf `datetime`- und `smalldatetime`-Zeichenfolgenliterale verweisen, wird empfohlen, das Literal mithilfe eines deterministischen Datenformats explizit in den gewünschten Datentyp zu konvertieren. Eine Liste der deterministischen Datenformatstile finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql). Ausdrücke, die eine implizite Konvertierung von Zeichenfolgen in `datetime` oder `smalldatetime` umfassen, werden als nicht deterministisch angesehen. Der Grund hierfür ist, dass die Ergebnisse von den LANGUAGE- und DATEFORMAT-Einstellungen der Serversitzung abhängen. Die Ergebnisse des Ausdrucks `CONVERT (datetime, '30 listopad 1996', 113)` hängen beispielsweise von der LANGUAGE-Einstellung ab, da die Zeichenfolge '`listopad`' für verschiedene Monate in verschiedenen Sprachen steht. In ähnlicher Weise interpretiert `DATEADD(mm,3,'2000-12-01')`in dem Ausdruck [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Zeichenfolge `'2000-12-01'` basierend auf der DATEFORMAT-Einstellung.  
   
  Die implizierte Konvertierung von Nicht-Unicode-Zeichendaten zwischen Sortierungen wird auch als nicht deterministisch angesehen.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "48164600"
   
 #### <a name="to-create-an-indexed-view"></a>So erstellen Sie eine indizierte Sicht  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

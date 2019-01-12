@@ -16,12 +16,12 @@ ms.assetid: 71e563fc-f5d7-4c2e-a42f-f0695a831f32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ff1ea78afa77211504e6a0b17c8931183dead73
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8225039ece914c461af34f5344350227d6a39cdc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798352"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132430"
 ---
 # <a name="delete-unique-constraints"></a>Löschen von Unique-Einschränkungen
   Sie können mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine UNIQUE-Einschränkung in [!INCLUDE[tsql](../../includes/tsql-md.md)]löschen. Wenn eine Unique-Einschränkung gelöscht wird, werden die Forderung nach Eindeutigkeit für die Werte, die in die Spalte oder Spaltenkombination im Einschränkungsausdruck eingegeben werden, und der zugehörige eindeutige index entfernt.  
@@ -65,7 +65,7 @@ ms.locfileid: "52798352"
   
 4.  Klicken Sie auf **Löschen**.  
   
-5.  Klicken Sie im Menü **Datei** auf **Speichern** > *Tabellenname*.  
+5.  Klicken Sie im Menü **Datei** auf **Speichern** > _Tabellenname_.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   

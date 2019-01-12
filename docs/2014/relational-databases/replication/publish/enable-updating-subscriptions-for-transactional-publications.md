@@ -14,12 +14,12 @@ ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e2998ac4c51ea4ea7b289e4ef769acf0f3991f53
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 963fe86b0d5939c82bffb9c07d5adacbadadba89
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784892"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135950"
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>Aktivieren des Aktualisierens von Abonnements für Transaktionsveröffentlichungen
   In diesem Thema wird beschrieben, wie das Aktualisieren von Abonnements für Transaktionsveröffentlichungen in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]aktiviert wird.  
@@ -37,7 +37,7 @@ ms.locfileid: "52784892"
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
  Aktivieren Sie aktualisierbare Abonnements für Transaktionsveröffentlichungen auf der Seite **Veröffentlichungstyp** des Assistenten für neue Veröffentlichung. Weitere Informationen zum Zugreifen auf diesen Assistenten finden Sie unter [Erstellen einer Veröffentlichung](create-a-publication.md). Nach der Erstellung einer Veröffentlichung ist das Aktivieren von aktualisierbaren Abonnements nicht mehr möglich.  
   
- Um aktualisierbare Abonnements verwenden zu können, müssen auch im Assistenten für neue Abonnements Optionen konfiguriert werden. Weitere Informationen finden Sie unter [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md).  
+ Um aktualisierbare Abonnements verwenden zu können, müssen auch im Assistenten für neue Abonnements Optionen konfiguriert werden. Weitere Informationen finden Sie unter [Create an Updatable Subscription to a Transactional Publication](../publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 #### <a name="to-enable-updating-subscriptions"></a>So aktivieren Sie aktualisierbare Abonnements  
   
@@ -67,7 +67,7 @@ ms.locfileid: "52784892"
   
 4.  Fügen Sie der Veröffentlichung Artikel hinzu. Weitere Informationen finden Sie unter [Definieren eines Artikels](define-an-article.md).  
   
-5.  Erstellen Sie auf dem Abonnenten ein Abonnement mit Update für diese Veröffentlichung. Weitere Informationen finden Sie unter [Erstellen eines aktualisierbaren Abonnements für eine Transaktionsveröffentlichung](../create-updatable-subscription-transactional-publication-transact-sql.md).  
+5.  Erstellen Sie auf dem Abonnenten ein Abonnement mit Update für diese Veröffentlichung. Weitere Informationen finden Sie unter [Erstellen eines aktualisierbaren Abonnements für eine Transaktionsveröffentlichung](../publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 #### <a name="to-create-a-publication-that-supports-queued-updating-subscriptions"></a>So erstellen Sie eine Veröffentlichung, die Abonnements mit verzögertem Update über eine Warteschlange unterstützt  
   
@@ -93,7 +93,7 @@ ms.locfileid: "52784892"
   
 5.  Fügen Sie der Veröffentlichung Artikel hinzu. Weitere Informationen finden Sie unter [Definieren eines Artikels](define-an-article.md).  
   
-6.  Erstellen Sie auf dem Abonnenten ein Abonnement mit Update für diese Veröffentlichung. Weitere Informationen finden Sie unter [Erstellen eines aktualisierbaren Abonnements für eine Transaktionsveröffentlichung](../create-updatable-subscription-transactional-publication-transact-sql.md).  
+6.  Erstellen Sie auf dem Abonnenten ein Abonnement mit Update für diese Veröffentlichung. Weitere Informationen finden Sie unter [Erstellen eines aktualisierbaren Abonnements für eine Transaktionsveröffentlichung](../publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 #### <a name="to-change-the-conflict-policy-for-a-publication-that-allows-queued-updating-subscriptions"></a>So ändern Sie die Konfliktrichtlinie für eine Veröffentlichung, die Abonnements mit verzögertem Update über eine Warteschlange zulässt  
   
@@ -105,11 +105,11 @@ ms.locfileid: "52784892"
  [!code-sql[HowTo#sp_createtranupdatingpub](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpubupdate.sql#sp_createtranupdatingpub)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Festlegen der Konfliktlösungsoptionen für verzögerte Updates über eine Warteschlange &#40;SQL Server Management Studio&#41;](../publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)   
- [Veröffentlichungstypen der Transaktionsreplikation](../transactional/publication-types-for-transactional-replication.md)   
+ [Festlegen der Konfliktlösungsoptionen für verzögerte Updates über eine Warteschlange &#40;SQL Server Management Studio&#41;](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
+ [Veröffentlichungstypen der Transaktionsreplikation](../transactional/transactional-replication.md)   
  [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
  [erstellen einer Veröffentlichung](create-a-publication.md)   
- [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md)   
+ [Create an Updatable Subscription to a Transactional Publication](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Verwenden von „sqlcmd“ mit Skriptvariablen](../../scripting/sqlcmd-use-with-scripting-variables.md)  
   

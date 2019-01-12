@@ -10,14 +10,14 @@ ms.assetid: a605417c-4ba7-4f3f-baa9-14166f97c478
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4f81433cdf995e421e50f4f0bd0e0c66e40272f2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 00deba3bb21a36f478fc2994f621cbe8fe9396c2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755572"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131380"
 ---
 # <a name="nsltservice-namegt-properties-advanced-tab"></a>Eigenschaften von NS$&lt;Dienstname&gt; (Registerkarte „Erweitert“)
-  [!INCLUDE[ssNS](../../includes/ssns-md.md)] ist als Dienst im Namensformat **NS$***<user_configured name>* implementiert. Wenn Eigenschaften vom Benutzer definiert wurden, werden sie mit den entsprechenden Werten auf dieser Registerkarte angezeigt. Auf dieser Registerkarte werden möglicherweise keine Eigenschaften aufgeführt.  
+  [!INCLUDE[ssNS](../../includes/ssns-md.md)] wird implementiert, als Dienst mit dem Namen im Format **NS$**_< benutzerkonfigurierter Name >_. Wenn Eigenschaften vom Benutzer definiert wurden, werden sie mit den entsprechenden Werten auf dieser Registerkarte angezeigt. Auf dieser Registerkarte werden möglicherweise keine Eigenschaften aufgeführt.  
   
   

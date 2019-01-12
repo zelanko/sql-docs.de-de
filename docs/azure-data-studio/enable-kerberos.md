@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
-ms.openlocfilehash: b73e144dd362691ea93b3312f6dc10ce542f1c43
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 02e5e0ba4bd7300d71d95d5e3572ce4e09ac3bd4
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030214"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143325"
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>Herstellen einer mit [!INCLUDE[name-sos](../includes/name-sos-short.md)] zu Ihrem SQL Server mithilfe der Windows-Authentifizierung – Kerberos 
 
@@ -27,7 +27,7 @@ Um die integrierte Authentifizierung (Windows-Authentifizierung) unter MacOS ode
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
 - Zugriff auf ein Windows-Domäne eingebundenen Computer zum Abfragen von Ihrem Kerberos-Domänencontroller.
-- SQL Server sollte für die Kerberos-Authentifizierung können konfiguriert werden. Für den Clienttreiber auf Unix ausgeführt wird wird nur der integrierten Authentifizierung unterstützt mithilfe von Kerberos. Weitere Informationen zum Einrichten von Sql Server für die Authentifizierung mit Kerberos finden Sie [hier](https://support.microsoft.com/en-us/help/319723/how-to-use-kerberos-authentication-in-sql-server). Es sollte Dienstprinzipalnamen für jede Instanz von Sql Server, die Sie herstellen möchten. Finden Sie Informationen über das Format von SQL Server-SPNs [hier](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
+- SQL Server sollte für die Kerberos-Authentifizierung können konfiguriert werden. Für den Clienttreiber auf Unix ausgeführt wird wird nur der integrierten Authentifizierung unterstützt mithilfe von Kerberos. Weitere Informationen zum Einrichten von Sql Server für die Authentifizierung mit Kerberos finden Sie [hier](https://support.microsoft.com/help/319723/how-to-use-kerberos-authentication-in-sql-server). Es sollte Dienstprinzipalnamen für jede Instanz von Sql Server, die Sie herstellen möchten. Finden Sie Informationen über das Format von SQL Server-SPNs [hier](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
 
 
 ## <a name="checking-if-sql-server-has-kerberos-setup"></a>Überprüft, ob Sql Server auf Kerberos-Einrichtung ist

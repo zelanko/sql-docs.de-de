@@ -20,12 +20,12 @@ ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3eba894a08df8a491df428cd5f34b4c9850ffae0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 905a0a4189a97b6cd8ef3cc461f805adf0afd727
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205919"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131500"
 ---
 # <a name="parameterized-row-filters"></a>Parameterized Row Filters
   Mit parametrisierten Zeilenfiltern können verschiedene Datenpartitionen an verschiedene Abonnenten gesendet werden, ohne dass hierfür mehrere Veröffentlichungen erstellt werden müssen (parametrisierte Filter wurden in früheren Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]als dynamische Filter bezeichnet). Der Begriff Partition bezeichnet nichts weiter als eine Teilmenge der Zeilen in einer Tabelle. Abhängig von den Einstellungen für den parametrisierten Zeilenfilter, die im Zuge der Erstellung des Filters festgelegt werden, kann jede Zeile in einer veröffentlichten Tabelle entweder nur zu einer Partition (nicht überlappende Partitionen) oder aber zu mehreren Partitionen (überlappende Partitionen) gehören.  

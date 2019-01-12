@@ -16,12 +16,12 @@ ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cda4e884608c10e75ab4c33a89fcf23a1919fc0d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b06d348358a141771816230179ca7deae4e4353a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202045"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132860"
 ---
 # <a name="sparticleview-transact-sql"></a>sp_articleview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +47,16 @@ sp_articleview [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **"**_Veröffentlichung_**"**  
  Der Name der Veröffentlichung, die den Artikel enthält. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@article=**] **"***Artikel***"**  
+ [  **@article=**] **"**_Artikel_**"**  
  Der Name des Artikels. *Artikel* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@view_name=**] **"***View_name***"**  
+ [  **@view_name=**] **"**_View_name_**"**  
  Der Name der Sicht, die den veröffentlichten Artikel definiert. *View_name* ist **nvarchar(386)**, hat den Standardwert NULL.  
   
- [  **@filter_clause=**] **"***Filter_clause***"**  
+ [  **@filter_clause=**] **"**_Filter_clause_**"**  
  Eine Einschränkungsklausel (WHERE), die einen horizontalen Filter definiert. Wenn Sie die Einschränkungsklausel eingeben, lassen Sie das Schlüsselwort WHERE weg. *Filter_clause* ist **Ntext**, hat den Standardwert NULL.  
   
  [  **@change_active =** ] *Change_active*  
@@ -69,14 +69,14 @@ sp_articleview [ @publication = ] 'publication'
   
  **1** gibt an, dass Änderungen am Artikel kann dazu führen, dass die Momentaufnahme ungültig wird, und wenn es sind Abonnements vorhanden, die eine neue Momentaufnahme erfordern würden Berechtigung erteilt, die vorhandene Momentaufnahme als veraltet zu markieren und eine neue Momentaufnahme zu generieren.  
   
- [  **@force_reinit_subscription =]** *Force_reinit_subscription*  
+ [  **@force_reinit_subscription =]** _Force_reinit_subscription_  
  Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion die erneute Initialisierung vorhandener Abonnements erfordern kann. *Force_reinit_subscription* ist eine **Bit** hat den Standardwert **0**.  
   
  **0** gibt an, dass Änderungen am Artikel bewirken nicht, das Abonnement erneut initialisiert werden. Wenn die gespeicherte Prozedur erkennt, dass die Änderung die erneute Initialisierung von Abonnements erfordert, wird ein Fehler auftritt und keine Änderungen vorgenommen werden.  
   
  **1** gibt an, dass Änderungen am Artikel bewirkt, dass vorhandene Abonnements erneut initialisiert werden, und erteilt die Berechtigung für die Initialisierung des Abonnements erfolgen.  
   
- [ **@publisher**=] **"***Verleger***"**  
+ [ **@publisher**=] **"**_Verleger_**"**  
  Gibt einen nicht- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  

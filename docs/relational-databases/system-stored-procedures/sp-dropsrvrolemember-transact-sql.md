@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7be99181-d221-49d0-9cb2-c930d8c044a0
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2f08fa101e2a53696e58f15413ec08c301a9e890
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9eca631440e92f946513429ddb43d3212a109984
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596944"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131940"
 ---
 # <a name="spdropsrvrolemember-transact-sql"></a>sp_dropsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @loginame **=** ] **"***Anmeldung***"**  
+ [ @loginame **=** ] **"**_Anmeldung_**"**  
  Der Name einer Anmeldung, die aus der festen Serverrolle entfernt werden soll. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. *Anmeldung* muss vorhanden sein.  
   
- [ @rolename **=** ] **"***Rolle***"**  
+ [ @rolename **=** ] **"**_Rolle_**"**  
  Der Name einer Serverrolle. *role* ist vom Datentyp **sysname**und hat den Standardwert NULL. *Rolle* muss einer der folgenden Werte sein:  
   
 -   sysadmin  

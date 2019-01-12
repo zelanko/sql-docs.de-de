@@ -15,12 +15,12 @@ ms.assetid: 50d8456b-e6a1-4b25-bc7e-56946ed654a7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2cce9b961c2830b670bb862dee88284a18ed7eb6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c33c5adeb748f3a714112faf7410684413cf0cd5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363302"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134680"
 ---
 # <a name="performing-bulk-copy-operations"></a>Durchführen von Massenkopiervorgängen
   Die Massenkopierfunktion von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt die Übertragung großer Datenmengen in bzw. aus einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Tabelle oder Sicht. Daten können auch mithilfe einer SELECT-Anweisung aus einer Tabelle oder Sicht übertragen werden. Die Daten können zwischen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und einer Betriebssystemdatendatei verschoben werden, z. B. eine ASCII-Datei. Datendateien können verschiedene Formate aufweisen. Das Format wird in einer Formatdatei definiert. Optional können die Daten in Programmvariablen geladen und mithilfe von Massenkopierfunktionen und -methoden in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] übertragen werden.  
@@ -95,7 +95,7 @@ ms.locfileid: "53363302"
   
 -   **ISupportErrorInfo**  
   
- Die anbieterspezifischen Eigenschaften SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS und SSPROP_FASTLOADKEEPIDENTITY steuern die Verhalten des Massenkopierrowsets eines [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieters. Die Eigenschaften angegeben werden, der *RgProperties* Mitglied einer * RgPropertySets ***IOpenRowset**Parameter-Element.  
+ Die anbieterspezifischen Eigenschaften SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS und SSPROP_FASTLOADKEEPIDENTITY steuern die Verhalten des Massenkopierrowsets eines [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieters. Die Eigenschaften angegeben werden, der *RgProperties* Mitglied einer _RgPropertySets_**IOpenRowset**Parameter-Element.  
   
 |Eigenschafts-ID|Description|  
 |-----------------|-----------------|  

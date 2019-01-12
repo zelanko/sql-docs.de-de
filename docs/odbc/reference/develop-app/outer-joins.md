@@ -14,12 +14,12 @@ ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35f1ce877d6ed8a390bb6425a4d7f33a5d6947d2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 827dd531eda338f4fd297a4420ed144d46a613ff
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513991"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135710"
 ---
 # <a name="outer-joins"></a>Äußere Verknüpfungen
 ODBC unterstützt die SQL-92 linke, Rechte und vollständige äußere Join-Syntax. Die Escapesequenz für äußere Joins lautet  
@@ -28,7 +28,7 @@ ODBC unterstützt die SQL-92 linke, Rechte und vollständige äußere Join-Synta
   
  wo *äußere Join* ist  
   
- *Tabellenverweis* {**Links &#124; rechts &#124; vollständige} INKLUSIONSVERKNÜPFUNGS** {*Tabellenverweis* &#124; *äußere Join*} **ON**  *Bedingung*  
+ *Tabellenverweis* {**Links &#124; rechts &#124; vollständige} INKLUSIONSVERKNÜPFUNGS** {*Tabellenverweis* &#124; *äußere Join*} **ON**  _Bedingung_  
   
  *Tabellenverweis* gibt an, einen Tabellennamen ein, und *Suchbedingung* gibt an, die Join-Bedingung zwischen der *Tabellenverweise*.  
   

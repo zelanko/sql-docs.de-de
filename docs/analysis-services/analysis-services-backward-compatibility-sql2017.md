@@ -1,6 +1,6 @@
 ---
 title: Abwärtskompatibilität der SQL Server 2017 Analysis Services | Microsoft-Dokumentation
-ms.date: 05/08/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 29fb46b02e887ceebde293383fda99cbd3ed42be
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 411fa78bada76c79d4a869d68c94abf752b8466a
+ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072427"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185076"
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Analysis Services-Abwärtskompatibilität (SQL 2017)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "53072427"
 In diesem Artikel werden Änderungen an der Verfügbarkeit von Features und verhaltensänderungen zwischen der aktuellen Version und der vorherigen Version beschrieben.
 
 ## <a name="deprecated-features"></a>Veraltete Features
-Ein *veraltete Funktion* werden in einer zukünftigen Version wird aus dem Produkt eingestellt, aber ist immer noch unterstützt und in der aktuellen Version aus, um Abwärtskompatibilität enthalten. Es wird empfohlen, dass Sie dieses als veraltet markierte Funktionen in neue und vorhandene Projekte auf um Kompatibilität mit zukünftigen Versionen zu gewährleisten.
+Ein *veraltete Funktion* werden in einer zukünftigen Version wird aus dem Produkt eingestellt, aber ist immer noch unterstützt und in der aktuellen Version aus, um Abwärtskompatibilität enthalten. Es wird empfohlen, dass Sie dieses als veraltet markierte Funktionen in neue und vorhandene Projekte auf um Kompatibilität mit zukünftigen Versionen zu gewährleisten. Dokumentation ist nicht für die als veraltet markierte Funktionen aktualisiert.
 
 Die folgenden Features sind in dieser Version als veraltet markiert:
   

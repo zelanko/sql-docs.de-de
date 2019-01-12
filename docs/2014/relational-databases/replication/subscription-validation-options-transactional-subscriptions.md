@@ -14,12 +14,12 @@ ms.assetid: fd66ad1f-df01-4240-9e89-8f41bff12c1e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4538774295e7456d46922a71db91527604d71fb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a82e13202209121897a5e5878a141c8d53800a47
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761652"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135840"
 ---
 # <a name="subscription-validation-options-transactional-subscriptions"></a>Optionen für die Abonnementüberprüfung (Transaktionsabonnements)
   Mithilfe des Dialogfelds **Optionen für die Abonnementüberprüfung** können Sie angeben, ob zur Überprüfung nur die Zeilenanzahl oder die Zeilenanzahl und eine binäre Prüfsumme verwendet werden soll.  
@@ -36,6 +36,6 @@ ms.locfileid: "52761652"
   
 ## <a name="see-also"></a>Siehe auch  
  [Überprüfen der Daten am Abonnenten](validate-data-at-the-subscriber.md)   
- [Überprüfen von replizierten Daten](validate-replicated-data.md)  
+ [Überprüfen von replizierten Daten](validate-data-at-the-subscriber.md)  
   
   

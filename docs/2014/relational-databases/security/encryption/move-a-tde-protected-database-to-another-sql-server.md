@@ -13,12 +13,12 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 9be3645ec0846970cc7bcaaff237c4864bfe1216
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 42027a48803cd5269d5ab2d69452352bdbe62bc5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544639"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135000"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Verschieben einer TDE-geschützten Datenbank auf einen anderen SQL-Server
   In diesem Thema wird die Vorgehensweise zum Schutz einer Datenbank anhand von Transparent Data Encryption (TDE) und das Verschieben der Datenbank in eine andere Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)] beschrieben. Die TDE führt die E/A-Verschlüsselung und -Entschlüsselung der Daten und der Protokolldateien in Echtzeit durch. Die Verschlüsselung verwendet einen Verschlüsselungsschlüssel für die Datenbank (Database Encryption Key, DEK), der in der Datenbankstartseite gespeichert wird, damit er während der Wiederherstellung verfügbar ist. Der DEK ist ein symmetrischer Schlüssel, der durch ein in der `master`-Datenbank des Servers gespeichertes Zertifikat gesichert wird, oder ein asymmetrischer Schlüssel, der von einem EKM-Modul geschützt wird.  
@@ -191,7 +191,7 @@ ms.locfileid: "52544639"
   
     -   Wenn eine Datenbank an einer Replikation beteiligt ist, hat der **Status** den Wert **Nicht bereit** , und unter **Meldung** wird **Die Datenbank wurde repliziert**angezeigt.  
   
-    -   Wenn eine Datenbank mindestens eine aktive Verbindung aufweist. die **Status** ist **nicht bereit** und **Nachricht** angezeigt, *< Number_of_active_connections > *** aktive Verbindung(en)** - zum Beispiel: **1 aktive Verbindung(en)**. Bevor Sie die Datenbank trennen können, müssen Sie durch Auswählen der Option **Verbindungen löschen**alle aktiven Verbindungen trennen.  
+    -   Wenn eine Datenbank mindestens eine aktive Verbindung aufweist. die **Status** ist **nicht bereit** und **Nachricht** angezeigt, _< Number_of_active_connections >_**Aktive Verbindung(en)** - zum Beispiel: **1 aktive Verbindung(en)**. Bevor Sie die Datenbank trennen können, müssen Sie durch Auswählen der Option **Verbindungen löschen**alle aktiven Verbindungen trennen.  
   
      Weitere Informationen zu einer Meldung erhalten Sie, indem Sie auf den Linktext klicken, um den Aktivitätsmonitor zu öffnen.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "52544639"
   
 8.  Klicken Sie im Dialogfeld **Datenbanken anfügen** unter **Anzufügende Datenbanken**auf **Hinzufügen**.  
   
-9. In der **Datenbankdateien suchen – *** Server_name* wählen Sie im Dialogfeld die Datenbankdatei mit dem neuen Server angefügt, und klicken Sie auf **OK**.  
+9. In der **Datenbankdateien suchen –**_Server_name_ wählen Sie im Dialogfeld die Datenbankdatei mit dem neuen Server angefügt, und klicken Sie auf **OK**.  
   
      Die folgenden Optionen sind im Dialogfeld **Datenbanken anfügen** verfügbar.  
   
@@ -252,7 +252,7 @@ ms.locfileid: "52544639"
      **Entfernen**  
      Entfernt die ausgewählte Datei aus dem Raster **Anzufügende Datenbank** .  
   
-     **"** *<database_name>* **" Datenbankdetails für**  
+     **"** _<database_name>_ **" Datenbankdetails für**  
      Zeigt die Namen der anzufügenden Dateien an. Klicken Sie zum Überprüfen oder Ändern des Pfadnamens einer Datei auf die Schaltfläche **Durchsuchen** (**…**).  
   
     > [!NOTE]  

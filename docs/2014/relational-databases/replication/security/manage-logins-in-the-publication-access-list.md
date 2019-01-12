@@ -16,12 +16,12 @@ ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2ffc40d39df10e83e4f5c68f891b0d7f44223524
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 966b8a03d10bb8e87950e19e3e099954e8aaad8f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784722"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132230"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>Verwalten von Anmeldungen in der Veröffentlichungszugriffsliste
   In diesem Thema wird beschrieben, wie Anmeldungen in der Veröffentlichungszugriffsliste in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]verwaltet werden. Der Zugriff auf eine Veröffentlichung wird von der Veröffentlichungszugriffsliste (Publication Access List, PAL) gesteuert. Anmeldungen und Gruppen können hinzugefügt und aus PAL entfernt werden.  
@@ -72,7 +72,7 @@ ms.locfileid: "52784722"
   
 ## <a name="see-also"></a>Siehe auch  
  [Sicherheitsmodell des Replikations-Agents](replication-agent-security-model.md)   
- [Sichern einer Replikationstopologie](secure-a-replication-topology.md)   
+ [Sichern einer Replikationstopologie](view-and-modify-replication-security-settings.md)   
  [Sichern des Verlegers](secure-the-publisher.md)  
   
   

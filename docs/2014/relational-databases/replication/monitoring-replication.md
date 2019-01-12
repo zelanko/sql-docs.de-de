@@ -1,11 +1,10 @@
 ---
-title: Überwachen (Replikation) | Microsoft-Dokumentation
+title: Übersicht über den Replikationsmonitor | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], about monitoring replication
@@ -19,23 +18,23 @@ ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 34d88a90890ac047913e1973b37a2a40e831dd01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e2b3441d98bc9226abce3a49fd28820df6ec99ab
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111040"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134300"
 ---
 # <a name="monitoring-replication"></a>Überwachen (Replikation)
   Die Überwachung einer Replikationstopologie ist ein wichtiger Aspekt bei der Bereitstellung der Replikation. Da die Replikationsaktivität verteilt ist, ist es außerordentlich wichtig, die Aktivität und den Status auf allen an der Replikation beteiligten Computern nachzuverfolgen. Zum Überwachen der Replikation stehen die folgenden Tools zur Verfügung:  
   
 -   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] Replication Monitor  
   
-     Der Replikationsmonitor ist das wichtigste Tool für die Überwachung der Replikation. Es bietet eine verlegerfokussierte Sicht auf die gesamte Replikationsaktivität. Weitere Informationen finden Sie unter [Überwachen der Replikation](monitor/monitoring-replication-overview.md).  
+     Der Replikationsmonitor ist das wichtigste Tool für die Überwachung der Replikation. Es bietet eine verlegerfokussierte Sicht auf die gesamte Replikationsaktivität. Weitere Informationen finden Sie unter [Überwachen der Leistung mit dem Replikationsmonitor](monitor/monitor-performance-with-replication-monitor.md).  
   
 -   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssManStudioFull-md.md)]  
   
-     [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] bietet Zugriff auf den Replikationsmonitor. Darüber hinaus können Sie sich hier den aktuellen Status und die letzte Meldung anzeigen lassen, die vom Protokolllese-Agent, Momentaufnahme-Agent, Merge-Agent bzw. Verteilungs-Agent protokolliert wurde. Außerdem können Sie hier auch alle diese Agents starten und beenden. Weitere Informationen finden Sie unter [Monitor Replication Agents](agents/replication-agents.md).  
+     [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] bietet Zugriff auf den Replikationsmonitor. Außerdem können Sie den aktuellen Status und die letzte Meldung protokolliert werden, indem Sie die folgenden Agents anzeigen und ermöglicht es, Sie starten und beenden jeden Agent: Protokolllese-Agent, Momentaufnahme-Agent, Merge-Agents und Verteilungs-Agent. Weitere Informationen finden Sie unter [Monitor Replication Agents](monitor/monitor-replication-agents.md).  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] und Replikationsverwaltungsobjekte (RMO)  
   
@@ -50,8 +49,8 @@ ms.locfileid: "48111040"
      Mit dem Systemmonitor kann die Leistung überwacht werden. Er stellt eine Reihe von Zählern für die Replikation bereit. Weitere Informationen finden Sie unter [Monitoring Replication with System Monitor](monitor/monitoring-replication-with-system-monitor.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwaltung &#40;Replikation&#41;](administration/administration-replication.md)   
+ [Replikationsverwaltung – häufig gestellte Fragen](administration/frequently-asked-questions-for-replication-administrators.md)   
  [Best Practices for Replication Administration](administration/best-practices-for-replication-administration.md)   
- [Überwachen der Replikation](monitor/monitoring-replication-overview.md)  
+
   
   

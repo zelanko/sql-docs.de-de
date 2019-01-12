@@ -33,12 +33,12 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 27eb70cb687553b11fefae423a7544609836c5c8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: fc6b593694feda96032cb0af45d9b3bdb4cc2a8a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357025"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132613"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2014
   In diesem Thema werden die [!INCLUDE[ssDE](../includes/ssde-md.md)] -Funktionen beschrieben, die in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]nicht mehr verfügbar sind.  
@@ -75,7 +75,7 @@ ms.locfileid: "53357025"
 |Systemtabellen|sys.database_principal_aliases|Verwenden Sie anstelle von Aliasen Rollen.|  
 |Transact-SQL|`RAISERROR` im Format `RAISERROR integer 'string'` wird eingestellt.|Schreiben Sie die Anweisung unter Verwendung der aktuellen **RAISERROR(…)**  Syntax.|  
 |Transact-SQL-Syntax|`COMPUTE / COMPUTE BY`|Verwendung von `ROLLUP`|  
-|Transact-SQL-Syntax|Verwenden von **\* =** und **=\***|Verwenden Sie die ANSI-Joinsyntax. Weitere Informationen finden Sie unter [FROM (Transact-SQL).](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
+|Transact-SQL-Syntax|Verwenden von **\* =** und **=&#42;**|Verwenden Sie die ANSI-Joinsyntax. Weitere Informationen finden Sie unter [FROM (Transact-SQL).](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
 |XEvents|Databases_data_file_size_changed, databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|Database_file_size_change-Ereignis, Database_file_size_change ersetzt<br /><br /> database_file_size_change-Ereignis<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
   
  **Zusätzliche XEvent-Änderungen**  

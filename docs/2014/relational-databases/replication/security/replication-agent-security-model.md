@@ -20,15 +20,15 @@ ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f34b5accc278a55946546c149c00bffd3a02a693
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4b919289d49901f64b26db0aa2d4b71eeb0e132a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811993"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133570"
 ---
 # <a name="replication-agent-security-model"></a>Sicherheitsmodell des Replikations-Agents
-  Das Sicherheitsmodell des Replikations-Agent für eine präzisere Kontrolle über die Konten, unter denen Replikations-Agents ausgeführt werden soll, und knüpfen Sie Kontakte, können: Ein anderes Konto kann für jeden Agent angegeben werden. Weitere Informationen zur Vorgehensweise beim Angeben von Konten finden Sie unter [Verwalten von Anmeldenamen und Kennwörtern bei der Replikation](manage-logins-and-passwords-in-replication.md).  
+  Das Sicherheitsmodell des Replikations-Agent für eine präzisere Kontrolle über die Konten, unter denen Replikations-Agents ausgeführt werden soll, und knüpfen Sie Kontakte, können: Ein anderes Konto kann für jeden Agent angegeben werden. Weitere Informationen zur Vorgehensweise beim Angeben von Konten finden Sie unter [Verwalten von Anmeldenamen und Kennwörtern bei der Replikation](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication).  
   
 > [!IMPORTANT]  
 >  Wenn ein Mitglied der festen Serverrolle **sysadmin** die Replikation konfiguriert, kann es die Replikations-Agents so konfigurieren, dass sie die Identität des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agentkontos annehmen. Dies geschieht, indem für den Replikations-Agent kein Anmeldename oder Kennwort angegeben wird. Dieser Ansatz ist jedoch nicht empfehlenswert. Sie sollten besser als bewährte Methode in Bezug auf die Sicherheit für jeden Agent ein Konto mit den im Abschnitt zu den für Agents erforderlichen Berechtigungen beschriebenen minimalen Privilegien angeben.  
@@ -92,7 +92,7 @@ ms.locfileid: "52811993"
   
 ## <a name="see-also"></a>Siehe auch  
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Sicherheit und Schutz &#40;Replikation&#41;](security-and-protection-replication.md)   
+ [Sicherheit von SQL Server-Replikation](view-and-modify-replication-security-settings.md)   
  [Sichern des Momentaufnahmeordners](secure-the-snapshot-folder.md)  
   
   

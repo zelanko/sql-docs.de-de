@@ -22,12 +22,12 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c9ff712cb5915493f1ff285421bfe3edc8d7981f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b765248e43dc66b9e1c038df27ca9a8b6135706d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374762"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131590"
 ---
 # <a name="create-a-login"></a>Erstellen eines Anmeldenamens
   In diesem Thema wird beschrieben, wie eine Anmeldung in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]erstellt wird. Ein Anmeldename ist die Identität von Personen oder Prozessen, die eine Verbindung zu einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]herstellen.  
@@ -146,7 +146,7 @@ ms.locfileid: "53374762"
  Die Seite **Benutzerzuordnung** listet alle möglichen Datenbanken und die Mitgliedschaften in der Datenbankrolle auf jenen Datenbanken auf, die für die Anmeldung übernommen werden können. Die ausgewählten Datenbanken bestimmen die Rollenmitgliedschaften, die für die Anmeldung verfügbar sind. Die folgenden Optionen sind auf dieser Seite verfügbar:  
   
  **Benutzer, die dieser Anmeldung zugeordnet sind**  
- Wählt die Datenbanken aus, auf die von dieser Anmeldung zugegriffen werden kann. Wenn Sie eine Datenbank auswählen, werden die gültigen Datenbankrollen im Bereich **Mitgliedschaft in Datenbankrolle für:** *Datenbankname* angezeigt.  
+ Wählt die Datenbanken aus, auf die von dieser Anmeldung zugegriffen werden kann. Wenn Sie eine Datenbank auswählen, werden die gültigen Datenbankrollen im Bereich **Mitgliedschaft in Datenbankrolle für:** _Datenbankname_ angezeigt.  
   
  **Karte**  
  Ermöglicht der Anmeldung den Zugriff auf die nachfolgend aufgeführten Datenbanken.  
@@ -160,10 +160,10 @@ ms.locfileid: "53374762"
  **Standardschema**  
  Gibt das Standardschema des Benutzers an. Wenn ein Benutzer zum ersten Mal erstellt wird, wird als Standardschema **dbo**verwendet. Es kann auch ein Standardschema angegeben werden, das noch nicht vorhanden ist. Für Benutzer, die einer Windows-Gruppe, einem Zertifikat oder einem asymmetrischen Schlüssel zugeordnet sind, kann kein Standardschema angegeben werden.  
   
- **Gastkonto aktiviert für:**  *Datenbankname*  
+ **Guest account enabled for:**  _database_name_  
  Ein Nur-Lese-Attribut, das angibt, ob das Gastkonto für die ausgewählte Datenbank aktiviert ist. Verwenden Sie die Seite **Status** des Dialogfelds **Anmeldungseigenschaften** des Gastkontos, um das Gastkonto zu aktivieren oder zu deaktivieren.  
   
- **Mitgliedschaft in Datenbankrolle für:**  *Datenbankname*  
+ **Database role membership for:**  _database_name_  
  Wählen Sie die Rollen für den Benutzer in der angegebenen Datenbank aus. Alle Benutzer sind Mitglieder der **public** -Rolle in allen Datenbanken und können nicht entfernt werden. Weitere Informationen zu Datenbankrollen finden Sie unter [Rollen auf Datenbankebene](database-level-roles.md).  
   
 ### <a name="securables"></a>Sicherungsfähige Elemente  
@@ -176,10 +176,10 @@ ms.locfileid: "53374762"
   
 1.  Klicken Sie auf **Suchen**.  
   
-2.  In der **Objekte hinzufügen** (Dialogfeld), wählen Sie eine der folgenden Optionen: **Bestimmte Objekte...** , **Alle Objekte des Typs...** , oder **Server *** Server_name*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  In der **Objekte hinzufügen** (Dialogfeld), wählen Sie eine der folgenden Optionen: **Bestimmte Objekte...** , **Alle Objekte des Typs...** , oder **Server**_Server_name_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
-    >  Auswählen von **Server *** Server_name* wird automatisch das obere Raster mit allen sicherungsfähigen Objekten Servers.  
+    >  Wenn Sie die Option **Der Server**_Servername_ auswählen, wird das obere Raster automatisch mit allen sicherungsfähigen Objekten des Servers gefüllt.  
   
 3.  Bei Auswahl der Option **Bestimmte Objekte...**:  
   
@@ -243,7 +243,7 @@ ms.locfileid: "53374762"
   
 #### <a name="to-create-a-login-using-windows-authentication"></a>So erstellen Sie eine Anmeldung mit Windows-Authentifizierung  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -259,7 +259,7 @@ ms.locfileid: "53374762"
   
 #### <a name="to-create-a-login-using-sql-server-authentication"></a>So erstellen Sie eine Anmeldung mit SQL Server-Authentifizierung  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

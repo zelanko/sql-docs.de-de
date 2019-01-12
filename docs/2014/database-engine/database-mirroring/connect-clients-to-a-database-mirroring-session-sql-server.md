@@ -15,12 +15,12 @@ ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7d4a8d29e27fae9b54a6060ec1be8f6c5a4163a8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507266"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132540"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Verbinden von Clients mit einer Datenbank-Spiegelungssitzung (SQL Server)
   Zum Herstellen einer Verbindung mit einer Datenbank-Spiegelungssitzung kann ein Client entweder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client oder .NET Framework-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwenden. Wenn sie für eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbank konfiguriert sind, unterstützen beide Datenzugriffsanbieter die Datenbankspiegelung. Informationen zu Programmierüberlegungen in Bezug auf das Verwenden einer gespiegelten Datenbank finden Sie unter [Verwenden der Datenbankspiegelung](../../relational-databases/native-client/features/using-database-mirroring.md). Zusätzlich muss die aktuelle Prinzipalserverinstanz verfügbar sein, und der Anmeldename des Clients muss auf der Serverinstanz erstellt worden sein. Weitere Informationen finden Sie unter [Problembehandlung bei verwaisten Benutzern &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Sofern eine Zeugenserverinstanz vorhanden ist, werden Clientverbindungen mit einer Datenbank-Spiegelungssitzung ohne Beteiligung dieser Instanz hergestellt.  
@@ -85,7 +85,7 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Server-Attribut  
  Die Verbindungszeichenfolge muss ein `Server`-Attribut enthalten, das den Namen des ersten Partners bereitstellt, der die aktuelle Prinzipalserverinstanz identifizieren sollte.  
   
- Die einfachste Art, die Serverinstanz zu identifizieren, besteht darin, ihren Namen *<Servername>*[**\\***<SQL_Server_Instanzname>*] anzugeben. Zum Beispiel:  
+ Die einfachste Art, die Serverinstanz zu identifizieren, besteht darin, ihren Namen (*<Servername>*[**\\**_<SQL_Server_Instanzname>_]) anzugeben. Beispiel:  
   
  `Server=Partner_A;`  
   
@@ -129,7 +129,7 @@ Server=123.34.45.56,4724;
 |ODBC-Treiber|`Failover_Partner`|  
 |ActiveX-Datenobjekte (ADO)|`Failover Partner`|  
   
- Die einfachste Art, die Serverinstanz zu identifizieren, ist über ihren Systemnamen, *<Servername>*[**\\***<SQL_Server_Instanzname>*].  
+ Die einfachste Art, die Serverinstanz zu identifizieren, ist über ihren Systemnamen, *<Servername>*[**\\**_<SQL_Server_Instanzname>_].  
   
  Alternativ können die IP-Adresse und die Portnummer im `Failover Partner`-Attribut bereitgestellt werden. Wenn der Anfangsverbindungsversuch während der ersten Verbindung mit der Datenbank fehlschlägt, wird beim Versuch, eine Verbindung mit dem Failoverpartner herzustellen, auf das Zurückgreifen auf DNS und SQL Server-Browser verzichtet. Wenn eine Verbindung hergestellt wurde, wird der Failoverpartnername durch den Failoverpartnernamen überschrieben; bei einem Failover benötigen die umgeleiteten Verbindung somit DNS- und SQL Server-Browser.  
   
@@ -166,7 +166,7 @@ Server=123.34.45.56,4724;
   
  Die Wiederholungszeit wird mit der folgenden Formel berechnet:  
   
- *Wiederholungszeit* **=** *Vorhergehende Wiederholungszeit* **+(** 0,08 **\****Anmeldungstimeout***)**  
+ _Wiederholungszeit_ **=** _vorhergehende Wiederholungszeit_ **+ (** 0,08 **&#42;**  _LoginTimeout_**)**  
   
  Hierbei gilt für *Vorhergehende Wiederholungszeit* ein Anfangswert von 0.  
   
@@ -174,10 +174,10 @@ Server=123.34.45.56,4724;
   
 |Round|Berechnung der*Wiederholungszeit* |Wiederholungszeit pro Versuch|  
 |-----------|-----------------------------|----------------------------|  
-|1|0 **+(** 0.08 **\*** 15 **)**|1,2 Sekunden|  
-|2|1.2 **+(** 0.08 **\*** 15 **)**|2,4 Sekunden|  
-|3|2.4 **+(** 0.08 **\*** 15 **)**|3,6 Sekunden|  
-|4|3.6 **+(** 0.08 **\*** 15 **)**|4,8 Sekunden|  
+|1|0 **+ (** 0,08 **&#42;** 15 **)**|1,2 Sekunden|  
+|2|1.2 **+ (** 0,08 **&#42;** 15 **)**|2,4 Sekunden|  
+|3|2.4 **+ (** 0,08 **&#42;** 15 **)**|3,6 Sekunden|  
+|4|3.6 **+ (** 0,08 **&#42;** 15 **)**|4,8 Sekunden|   
   
  In der folgenden Abbildung werden diese Wiederholungszeiten für aufeinander folgende Wiederholungsversuche, für die jeweils ein Timeout erfolgt, veranschaulicht.  
   

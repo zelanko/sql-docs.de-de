@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 732d0bc450c23413fb31c7336e93dbf3dc785bec
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7602e03864a736c6011142fd56c3e6129efcb718
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662779"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143270"
 ---
 # <a name="sysdmxedatabasesessions-azure-sql-database"></a>sys.dm_xe_database_sessions (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "51662779"
  Erfordert die VIEW DATABASE STATE-Berechtigung.  
   
 ### <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
-Ab 2015-07-13 ist "dm_xe_objects" mit einer der folgenden XEvents-DMVs, die keine "_database" im Namen enthalten. Keine Tippfehler oder Fehler in der folgenden Tabelle rechten Spalte. Der Name ist in Microsoft SQL Server und Azure SQL-Datenbank identisch. GeneMi.  
+Ab 2015-07-13 ist "dm_xe_objects" mit einer der folgenden XEvents-DMVs, die keine "_database" im Namen enthalten. Keine Tippfehler oder Fehler in der folgenden Tabelle rechten Spalte. Der Name ist in Microsoft SQL Server und Azure SQL-Datenbank identisch.  
   
 |Von|Aktion|Beziehung|  
 |--------|------|----------------|  

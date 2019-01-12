@@ -23,12 +23,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb5b2558a6dca79d4794b5d12c8e63fd6f002312
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 21756cadbfb924e95edd261942f018fb6aef6a4c
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527513"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226517"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>Sys.DM\_Db\_Optimierung\_Empfehlungen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -62,6 +62,7 @@ ms.locfileid: "52527513"
  Informationen, die vom `sys.dm_db_tuning_recommendations` wird aktualisiert, wenn die Datenbank-Engine identifiziert potenzielle Regression der abfrageleistung und wird nicht beibehalten. Empfehlungen werden nur bis zum beibehalten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet wird. Datenbankadministratoren sollten regelmäßig Sicherungskopien von der optimierungsempfehlung, wenn sie es nach dem wiederverwenden des Servers beibehalten möchten. 
 
  `currentValue` im Feld der `state` Spalte kann die folgenden Werte aufweisen:
+ 
  | Status | Description |
  |--------|-------------|
  | `Active` | Es wird empfohlen, active und noch nicht angewendet. Benutzer profitieren von Empfehlungsskript und manuell ausführen. |
@@ -88,27 +89,95 @@ JSON-Dokuments in `state` Spalte enthält den Grund an, die beschreibt, warum di
 
  Statistik in der Spalte "Details" zeigt nicht an Plan Laufzeitstatistiken (z. B. aktuelle CPU-Zeit). Die Details zur Empfehlung sind zum Zeitpunkt der Erkennung von Regression und beschrieben, warum [!INCLUDE[ssde_md](../../includes/ssde_md.md)] Leistungsverlust identifiziert. Verwendung `regressedPlanId` und `recommendedPlanId` Abfrage [Query Store Katalogsichten](../../relational-databases/performance/how-query-store-collects-data.md) genaue Laufzeitstatistiken für Plan gefunden.
 
-## <a name="using-tuning-recommendations-information"></a>Verwenden die Optimierung Empfehlungsinformationen  
-Sie können die folgende Abfrage zum Abrufen der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript, das das Problem zu beheben, wird:  
+## <a name="examples-of-using-tuning-recommendations-information"></a>Beispiele für die Verwendung der Optimierung Empfehlungsinformationen  
+
+### <a name="example-1"></a>Beispiel 1
+Im folgenden werden die generierten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript, das einen geeigneter Plan für eine bestimmte Abfrage erzwingt:  
  
 ```sql
 SELECT name, reason, score,
-        JSON_VALUE(details, '$.implementationDetails.script') as script,
-        details.* 
+    JSON_VALUE(details, '$.implementationDetails.script') AS script,
+    details.* 
 FROM sys.dm_db_tuning_recommendations
-    CROSS APPLY OPENJSON(details, '$.planForceDetails')
-                WITH (  query_id int '$.queryId',
-                        regressed_plan_id int '$.regressedPlanId',
-                        last_good_plan_id int '$.recommendedPlanId') as details
-WHERE JSON_VALUE(state, '$.currentValue') = 'Active'
+CROSS APPLY OPENJSON(details, '$.planForceDetails')
+    WITH (  [query_id] int '$.queryId',
+            regressed_plan_id int '$.regressedPlanId',
+            last_good_plan_id int '$.recommendedPlanId') AS details
+WHERE JSON_VALUE(state, '$.currentValue') = 'Active';
 ```
-  
- Weitere Informationen zu JSON-Funktionen, die Abfrage Werte in der Empfehlung Ansicht verwendet werden können, finden Sie unter [JSON-Unterstützung](../../relational-databases/json/index.md) in [!INCLUDE[ssde_md](../../includes/ssde_md.md)].
+### <a name="example-2"></a>Beispiel 2
+Im folgenden werden die generierten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript, das einen geeigneter Plan für jede Abfrage und zusätzliche Informationen zu den geschätzten Gewinn erzwingt:
+
+```sql
+SELECT reason, score,
+      script = JSON_VALUE(details, '$.implementationDetails.script'),
+      planForceDetails.*,
+      estimated_gain = (regressedPlanExecutionCount + recommendedPlanExecutionCount)
+                  *(regressedPlanCpuTimeAverage - recommendedPlanCpuTimeAverage)/1000000,
+      error_prone = IIF(regressedPlanErrorCount > recommendedPlanErrorCount, 'YES','NO')
+FROM sys.dm_db_tuning_recommendations
+CROSS APPLY OPENJSON (Details, '$.planForceDetails')
+    WITH (  [query_id] int '$.queryId',
+            regressedPlanId int '$.regressedPlanId',
+            recommendedPlanId int '$.recommendedPlanId',
+            regressedPlanErrorCount int,
+            recommendedPlanErrorCount int,
+            regressedPlanExecutionCount int,
+            regressedPlanCpuTimeAverage float,
+            recommendedPlanExecutionCount int,
+            recommendedPlanCpuTimeAverage float
+          ) AS planForceDetails;
+```
+
+### <a name="example-3"></a>Beispiel 3
+Im folgenden werden die generierten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript, das erzwingt, dass ein geeigneter Plan für jede Abfrage und zusätzliche Informationen, die den Abfragetext enthält, und die Abfragepläne in Query Store gespeichert:
+
+```sql
+WITH cte_db_tuning_recommendations
+AS (SELECT reason,
+        score,
+        query_id,
+        regressedPlanId,
+        recommendedPlanId,
+        current_state = JSON_VALUE(state, '$.currentValue'),
+        current_state_reason = JSON_VALUE(state, '$.reason'),
+        script = JSON_VALUE(details, '$.implementationDetails.script'),
+        estimated_gain = (regressedPlanExecutionCount + recommendedPlanExecutionCount)
+                * (regressedPlanCpuTimeAverage - recommendedPlanCpuTimeAverage)/1000000,
+        error_prone = IIF(regressedPlanErrorCount > recommendedPlanErrorCount, 'YES','NO')
+    FROM sys.dm_db_tuning_recommendations
+    CROSS APPLY OPENJSON(Details, '$.planForceDetails')
+    WITH ([query_id] int '$.queryId',
+        regressedPlanId int '$.regressedPlanId',
+        recommendedPlanId int '$.recommendedPlanId',
+        regressedPlanErrorCount int,    
+        recommendedPlanErrorCount int,
+        regressedPlanExecutionCount int,
+        regressedPlanCpuTimeAverage float,
+        recommendedPlanExecutionCount int,
+        recommendedPlanCpuTimeAverage float
+        )
+    )
+SELECT qsq.query_id,
+    qsqt.query_sql_text,
+    dtr.*,
+    CAST(rp.query_plan AS XML) AS RegressedPlan,
+    CAST(sp.query_plan AS XML) AS SuggestedPlan
+FROM cte_db_tuning_recommendations AS dtr
+INNER JOIN sys.query_store_plan AS rp ON rp.query_id = dtr.query_id
+    AND rp.plan_id = dtr.regressedPlanId
+INNER JOIN sys.query_store_plan AS sp ON sp.query_id = dtr.query_id
+    AND sp.plan_id = dtr.recommendedPlanId
+INNER JOIN sys.query_store_query AS qsq ON qsq.query_id = rp.query_id
+INNER JOIN sys.query_store_query_text AS qsqt ON qsqt.query_text_id = qsq.query_text_id;
+```
+
+Weitere Informationen zu JSON-Funktionen, die Abfrage Werte in der Empfehlung Ansicht verwendet werden können, finden Sie unter [JSON-Unterstützung](../../relational-databases/json/index.md) in [!INCLUDE[ssde_md](../../includes/ssde_md.md)].
   
 ## <a name="permissions"></a>Berechtigungen  
 
-Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank.   
+Erfordert `VIEW SERVER STATE` -Berechtigung für [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].   
+Erfordert die `VIEW DATABASE STATE` über die Berechtigung für die Datenbank in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 
 ## <a name="see-also"></a>Siehe auch  
  [Die automatische Optimierung](../../relational-databases/automatic-tuning/automatic-tuning.md)   

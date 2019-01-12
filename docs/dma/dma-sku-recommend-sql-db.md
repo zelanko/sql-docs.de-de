@@ -2,7 +2,7 @@
 title: Identifizieren Sie die richtige Azure SQL-Datenbank-SKU für Ihre lokale Datenbank (Data Migration Assistant) | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie Data Migration Assistant mit um der rechten Seite Azure SQL-Datenbank-SKU für Ihre lokale Datenbank zu identifizieren.
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 6e990d8b3320eafccc3da574476fa66cdf52d8d5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 002a9fc587d742c235aedb0f773864296bdf645b
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544106"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226497"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>Identifizieren Sie die richtige Azure SQL-Datenbank-SKU für Ihre lokale Datenbank
 
@@ -30,9 +30,6 @@ Dieser Artikel konzentriert sich hauptsächlich auf DMA Azure SQL-Datenbank-SKU-
 
 > [!NOTE] 
 > Diese Funktion ist derzeit nur über die Befehlszeilenschnittstelle (CLI) verfügbar. Unterstützung für dieses Feature über die DMA-Benutzeroberfläche wird in einer zukünftigen Version hinzugefügt werden.
-
-> [!IMPORTANT]
-> Die SKU-Empfehlungen für Azure SQL-Datenbank sind derzeit für Migrationen von SQL Server 2016 oder höher verfügbar.
 
 Die folgenden Anweisungen können Sie ermitteln, die Azure SQL-Datenbank-SKU-Empfehlungen und zugeordneten Datenbanken in Azure mithilfe von Data Migration Assistant bereitstellen.
 
@@ -66,7 +63,7 @@ Sie müssen diese Aufgabe einzeln für jede Datenbank ausführen. Auf einem Comp
     .\SkuRecommendationDataCollectionScript.ps1
      -ComputerName Foobar1
      -OutputFilePath D:\counters2.csv
-     -CollectionTimeInSeconds 10
+     -CollectionTimeInSeconds 2400
      -DbConnectionString "Server=localhost;Initial Catalog=master;Integrated Security=SSPI;"
     ```
     

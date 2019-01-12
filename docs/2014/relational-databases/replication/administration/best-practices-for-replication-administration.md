@@ -13,12 +13,12 @@ ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cd6f263e816d74f1fe3f09902c7e806709dd6993
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fb7a972d865f7afe1295c5dbdf5ad3ce0c886556
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823306"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134735"
 ---
 # <a name="best-practices-for-replication-administration"></a>Bewährte Methoden für die Replikationsverwaltung
   Nachdem Sie die Replikation konfiguriert haben, müssen Sie sich mit der Verwaltung einer Replikationstopologie vertraut machen. Dieses Thema enthält grundlegende Hinweise zur Best Pa in verschiedenen Bereichen sowie Links zu weiteren Informationen zu jedem Bereich. Abgesehen vom Befolgen der bewährten Methoden in diesem Thema, sollten Sie das Thema mit den häufig gestellten Fragen, die sich häufig gestellte Fragen und Probleme hinweisen lesen: [Häufig gestellte Fragen für Replikationsadministratoren](frequently-asked-questions-for-replication-administrators.md).  
@@ -121,7 +121,7 @@ ms.locfileid: "52823306"
 ## <a name="validate-data-periodically"></a>Regelmäßige Überprüfung der Daten  
  Eine Datenüberprüfung ist bei der Replikation zwar nicht erforderlich, es wird jedoch empfohlen, die Überprüfung regelmäßig für die Transaktions- und die Mergereplikation auszuführen. Mit der Überprüfung stellen Sie sicher, dass die Daten auf dem Abonnenten mit denen auf dem Verleger übereinstimmen. Eine erfolgreiche Überprüfung bedeutet, dass zu diesem Zeitpunkt alle Änderungen vom Verleger auf den Abonnenten repliziert wurden (und vom Abonnenten auf den Verleger, wenn Updates auf dem Abonnenten unterstützt werden) und dass die beiden Datenbanken synchron sind.  
   
- Es wird empfohlen, die Überprüfung in Übereinstimmung mit dem Sicherungszeitplan der Veröffentlichungsdatenbank auszuführen. Wenn beispielsweise einmal wöchentlich eine vollständige Sicherung der Veröffentlichungsdatenbank erfolgt, könnte die Überprüfung einmal wöchentlich nach Abschluss der Sicherung ausgeführt werden. Weitere Informationen finden Sie unter [Überprüfen von replizierten Daten](../validate-replicated-data.md).  
+ Es wird empfohlen, die Überprüfung in Übereinstimmung mit dem Sicherungszeitplan der Veröffentlichungsdatenbank auszuführen. Wenn beispielsweise einmal wöchentlich eine vollständige Sicherung der Veröffentlichungsdatenbank erfolgt, könnte die Überprüfung einmal wöchentlich nach Abschluss der Sicherung ausgeführt werden. Weitere Informationen finden Sie unter [Überprüfen von replizierten Daten](../validate-data-at-the-subscriber.md).  
   
 ## <a name="use-agent-profiles-to-change-agent-parameters-if-necessary"></a>Verwenden von Agentprofilen zum Ändern von Agentparameter bei Bedarf  
  Agentprofile stellen eine praktische Methode zum Festlegen von Parametern des Replikations-Agents dar. Parameter können auch in der Befehlszeile des Agents angegeben werden. Es ist jedoch in der Regel besser, ein vordefiniertes Agentprofil zu verwenden oder ein neues Profil zu erstellen, wenn Sie den Wert eines Parameters ändern müssen. Wenn Sie z. B. die Mergereplikation verwenden und ein Abonnent von einer Breitbandverbindung auf eine DFÜ-Verbindung wechselt, sollten Sie das **slow link** -Profil für den Merge-Agent verwenden. Dieses Profil verwendet eine Reihe von Parametern, die sich für langsame Datenverbindungen besser eigenen. Weitere Informationen finden Sie unter [Replication Agent Profiles](../agents/replication-agent-profiles.md).  
@@ -148,6 +148,6 @@ ms.locfileid: "52823306"
  Weitere Informationen finden Sie unter [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](../publish/make-schema-changes-on-publication-databases.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwaltung &#40;Replikation&#41;](administration-replication.md)  
+ [Replikationsverwaltung – häufig gestellte Fragen](frequently-asked-questions-for-replication-administrators.md)  
   
   

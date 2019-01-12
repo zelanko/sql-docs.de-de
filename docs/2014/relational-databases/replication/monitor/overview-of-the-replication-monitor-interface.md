@@ -13,12 +13,12 @@ ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b03c94ccfd50dc1c031c7e25f548e61ab1de1ac5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 48299e2cf318071624c8a7649c52dd9b2f932a77
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815722"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134580"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Übersicht über die Benutzeroberfläche des Replikationsmonitors
   Der Replikationsmonitor in[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bietet eine Sicht aller Replikationsaktivitäten, bei der der Verleger oder der Verteiler im Vordergrund steht, in einem Format mit zwei Bereichen an. Im linken Bereich fügen Sie dem Monitor einen Verleger hinzu, und im rechten Bereich zeigt der Monitor die Informationen zum Verleger, dessen Veröffentlichungen, Abonnements für diese Veröffentlichungen und die verschiedenen Replikations-Agents an. Neben der Darstellung der Informationen zur Replikationstopologie ermöglicht der Replikationsmonitor die Ausführung zahlreicher Aufgaben, wie beispielsweise des Startens und Anhaltens von Agents und des Überprüfens von Daten.  
@@ -104,7 +104,7 @@ ms.locfileid: "52815722"
   
      Diese Registerkarte zeigt ausführliche Informationen zu den Agents und Aufträgen an, die von allen Replikationstypen verwendet werden. Über diese Registerkarte können Sie zudem alle Agents und Aufträge starten und beenden.  
   
- Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für einen Verleger &#40;Replikationsmonitor&#41;](view-information-and-perform-tasks-for-a-publisher-replication-monitor.md).  
+ Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikationsmonitors](view-information-and-perform-tasks-replication-monitor.md).  
   
  Der Replikationsmonitor enthält zudem ein Kontextmenü für den Verlegerknoten. Klicken Sie im linken Bereich mit der rechten Maustaste auf einen Verleger, um Folgendes auszuführen:  
   
@@ -177,7 +177,7 @@ ms.locfileid: "52815722"
   
          In den verfügbaren Fehlermeldungen werden detaillierte Informationen dazu angegeben, warum ein Agent nicht ausgeführt wird. Sie bilden einen Ausgangspunkt für die Behebung von Problemen in Agents, die einer Veröffentlichung zugeordnet sind.  
   
- Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für eine Veröffentlichung &#40;Replikationsmonitor&#41;](view-information-and-perform-tasks-for-a-publication-replication-monitor.md) und [Anzeigen von Informationen und Ausführen von Aufgaben für die Agents, die mit einer Veröffentlichung verknüpft sind &#40;Replikationsmonitor&#41;](view-information-and-perform-tasks-for-publication-agents.md).  
+ Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikationsmonitors](view-information-and-perform-tasks-replication-monitor.md).  
   
  Der Replikationsmonitor enthält zudem ein Kontextmenü für den Veröffentlichungsknoten. Klicken Sie im linken Bereich mit der rechten Maustaste auf eine Veröffentlichung, um Folgendes auszuführen:  
   
@@ -216,7 +216,7 @@ ms.locfileid: "52815722"
   
          Diese Registerkarte zeigt detaillierte Statistiken für jeden während der Synchronisierung verarbeiteten Artikel an, einschließlich der aufgewendeten Zeit in jeder Verarbeitungsphase (Hochladen von Änderungen, Herunterladen von Änderungen usw.) Dadurch kann genau festgestellt werden, welche Tabellen zu einer Verlangsamung führen. Darüber hinaus bieten diese Statistiken eine optimale Plattform, Leistungsprobleme bei Mergeabonnements zu beheben.  
   
- Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für ein Abonnement &#40;Replikationsmonitor&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md) und [Anzeigen von Informationen und Ausführen von Aufgaben für die Agents, die einem Abonnement zugeordnet sind &#40;Replikationsmonitor&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
+ Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikationsmonitors](view-information-and-perform-tasks-replication-monitor.md).
   
 ## <a name="viewing-information-and-performing-tasks-related-to-agent-profiles"></a>Anzeigen von Informationen und Ausführen von Aufgaben, die sich auf Agentprofile beziehen  
  Der Replikationsmonitor enthält mehrere Dialogfelder zum Verwalten von Agentprofilen. Bei Agentprofilen handelt es sich um Parametersätze für einen Agent, mit denen das Verhalten des Agents festgelegt wird. Weitere Informationen finden Sie unter [Replication Agent Profiles](../agents/replication-agent-profiles.md). Die Dialogfelder lauten wie folgt:  

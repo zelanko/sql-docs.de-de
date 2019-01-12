@@ -3,7 +3,7 @@ title: Anmerkungen zu dieser Version und das Änderungsprotokoll
 titleSuffix: Azure Data Studio
 description: Versionshinweise zu Azure Data Studio
 ms.custom: seodec18
-ms.date: 11/06/2018
+ms.date: 01/10/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,16 +11,34 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 22542b42aff4b6d2d37e4a7342395d154d16dc95
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 63cf17e26ce554b901a3c9cc6db1fcb18162140d
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030344"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143660"
 ---
 # <a name="azure-data-studio-latest-release-notes-and-changelog"></a>Azure Data Studio neuesten Anmerkungen zu dieser Version und das Änderungsprotokoll
 
-**[Laden Sie die November-Version herunter!](download.md)**
+**[Laden Sie die Januar-Version herunter!](download.md)**
+
+
+## <a name="january-2019-january-release"></a>Januar 2019 (Januar-Version)
+
+Veröffentlichungsdatum: 09 Januar 2019  
+Version: 1.3.8
+
+- Einen neuen Benutzer Installer für Windows wird hinzugefügt. Im Gegensatz zu den vorhandenen System-Webinstaller erfordert das Installationsprogramm für neue Benutzer keine Administratorrechte. Dies ermöglicht auch ein einfacher Upgradeverhalten für nicht-Administratoren.
+- Unterstützung für Azure Active Directory-Authentifizierung.
+- Hiermit kündigen wir Idera SQL DM Performance Insights (Vorschau).
+- Datenebenen-Anwendungs-Assistent-Unterstützung in SQL Server-Import-Erweiterung.
+- Aktualisieren Sie auf die [2019-Vorschau von SQL Server-Erweiterung](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+- Verbesserungen für SQL Server Profiler.
+- Führt das Streaming für große Abfragen (Vorschau).
+- Community Extensions: Sp_executesql to Sql und die neue Datenbank.
+- Aufgelöst [Fehler und Probleme](https://github.com/Microsoft/azuredatastudio/milestone/19?closed=1).
+
+Ausführliche Informationen finden Sie unter den [Änderungsprotokoll](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), und [Versionen](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## <a name="november-2018-november-release"></a>November 2018 (Version November)
 
@@ -35,6 +53,7 @@ Version: 1.2.4
 - Upgrade SQL Tools-Diensts zur.NET Core-2.2-Preview 3 (für "Eventual" AAD-Unterstützung)
 
 ### <a name="bug-fixes"></a>Fehlerbehebungen
+
 - Beheben Sie [Problem #2933](https://github.com/Microsoft/azuredatastudio/issues/2933): Die Verbindung wurde getrennt, zur Azure SQL-Datenbank
 - Beheben Sie [Problem #2914](https://github.com/Microsoft/azuredatastudio/issues/2914): "Ungültige Argument" Ausnahme erweiterbare OE-Datenbank-Knoten
 - Beheben Sie [Problem #2935](https://github.com/Microsoft/azuredatastudio/pull/2935): Mehrzeilige Nachrichten richtig angezeigt, in den Abfrageergebnissen
@@ -44,8 +63,6 @@ Version: 1.2.4
 - Beheben Sie [Problem #3047](https://github.com/Microsoft/azuredatastudio/pull/3047): Fügen Sie eine Befehlszeilenschnittstelle für die Verbindung mit einer SQL Server
 - Beheben Sie [Problem #3031](https://github.com/Microsoft/azuredatastudio/pull/3031): Abfrage-Plan-Design-Unterstützung hinzufügen
 - ...
-
-Ausführliche Informationen finden Sie unter den [Änderungsprotokoll](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), und [Versionen](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## <a name="october-2018-october-release"></a>Oktober 2018 (Oktober-Version)
 
@@ -146,7 +163,7 @@ Die *öffentliche Vorschau für August* Fehlerbehebungen, Produkt Stabilisierung
 - Beheben Sie [Problem #2129](https://github.com/Microsoft/azuredatastudio/pull/2129): Speichern Sie beim Wechseln von Registerkarten bearbeiten Daten Bildlaufposition.
 - Beheben Sie [Problem #2152](https://github.com/Microsoft/azuredatastudio/issues/2152): Ergebnisse Zeile des Datenblatts Indikator 0 (null) basiert.
 
-## <a name="known-issues"></a>Bekannte Probleme
+### <a name="known-issues"></a>Bekannte Probleme
 
 - [Problem #2371](https://github.com/Microsoft/azuredatastudio/issues/2371) speichern als erste Zeile der Daten nur speichert Excel
 - [Problem #2150](https://github.com/Microsoft/azuredatastudio/issues/2150): Es konnte keine Verbindung auf Ubuntu 16.04, um SQL-Code in einem container

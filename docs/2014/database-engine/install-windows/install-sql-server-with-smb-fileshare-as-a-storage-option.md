@@ -10,12 +10,12 @@ ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5113730b1920fb1cd6ecf305e03614e3de894a8e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 3242f463e24322921b16a513c1b3a6905965b390
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366852"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136050"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>Installieren von SQL Server mit SMB-Dateifreigabe als Speicheroption
   Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] können Systemdatenbanken (Master, Model, MSDB und TempDB) sowie [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Benutzerdatenbanken mit dem SMB (Server Message Block)-Dateiserver als Speicheroption installiert werden. Dies gilt sowohl für eigenständige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - als auch für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusterinstallationen (FCI).  
@@ -98,11 +98,11 @@ ms.locfileid: "53366852"
     > [!NOTE]  
     >  Die FULL CONTROL-Freigabeberechtigungen und die NTFS-Berechtigungen in den SMB-Freigabeordnern sollten wie folgt beschränkt werden: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Dienstkonto und Windows-Benutzer mit admin-Serverrollen.  
   
-     Es wird empfohlen, das Domänenkonto als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienstkonto zu verwenden. Wenn das Systemkonto als Dienstkonto verwendet wird, gewähren der Berechtigungen für das Computerkonto im Format: * < Domänenname >***\\***< Computername > ***$**.  
+     Es wird empfohlen, das Domänenkonto als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienstkonto zu verwenden. Wenn das Systemkonto als Dienstkonto verwendet wird, gewähren Sie die Berechtigungen für das Computerkonto im folgenden Format: _<Domänenname>_**\\**_<Computername>_**$**.  
   
     > [!NOTE]  
     >  -   Beim [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup ist es erforderlich, das Domänenkonto als Dienstkonto anzugeben, wenn die SMB-Dateifreigabe als Speicheroption festgelegt wird. Bei der SMB-Dateifreigabe kann das Systemkonto erst nach der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation als Dienstkonto angegeben werden.  
-    > -   Virtuelle Konten können nicht gegenüber einem Remotestandort authentifiziert werden. Alle virtuellen Konten verwenden die Berechtigung des Computerkontos. Geben Sie das Computerkonto im Format *<Domänenname>***\\***<Computername>***$** an.  
+    > -   Virtuelle Konten können nicht gegenüber einem Remotestandort authentifiziert werden. Alle virtuellen Konten verwenden die Berechtigung des Computerkontos. Geben Sie das Computerkonto im Format _<Domänenname>_**\\**_<Computername>_**$** an.  
   
 -   Das für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installation verwendete Konto sollte über FULL CONTROL-Berechtigungen für den als Datenverzeichnis verwendeten SMB-Dateifreigabeorder oder andere beim Cluster-Setup verwendete Datenordner (Benutzerdatenbankverzeichnis, Benutzerdatenbank-Protokollverzeichnis, TempDB-Verzeichnis, TempDB-Protokollverzeichnis, Sicherungsverzeichnis) verfügen.  
   

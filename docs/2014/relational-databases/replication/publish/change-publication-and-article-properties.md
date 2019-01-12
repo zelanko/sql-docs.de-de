@@ -16,12 +16,12 @@ ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f9f106af7d3464ca1b0f2047fd86e2670389d821
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 207f934a9fba6e60bf1903544b12c88b4924dc23
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822594"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135810"
 ---
 # <a name="change-publication-and-article-properties"></a>Ändern von Veröffentlichungs- und Artikeleigenschaften
   Nach dem Erstellen einer Veröffentlichung können die meisten Veröffentlichungs- und Artikeleigenschaften geändert werden. Bei Änderungen bestimmter Eigenschaften muss jedoch die Momentaufnahme erneut generiert und/oder die Abonnements müssen erneut initialisiert werden. Dieses Thema enthält Informationen zu allen Eigenschaften, bei deren Änderung eine oder beide der genannten Aktionen erforderlich werden.  
@@ -93,7 +93,7 @@ ms.locfileid: "52822594"
 |Ändern des Besitzers der Zieltabelle|**sp_changemergearticle**|**destination_owner**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwaltung &#40;Replikation&#41;](../administration/administration-replication.md)   
+ [Replikationsverwaltung – häufig gestellte Fragen](../administration/frequently-asked-questions-for-replication-administrators.md)   
  [Erstellen und Anwenden der Momentaufnahme](../create-and-apply-the-snapshot.md)   
  [Erneutes Initialisieren von Abonnements](../reinitialize-subscriptions.md)   
  [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)   

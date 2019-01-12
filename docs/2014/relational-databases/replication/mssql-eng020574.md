@@ -12,12 +12,12 @@ ms.assetid: 4e98f8de-287c-4090-81ee-dc8f80dfa6a1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc44785fa96b5bc9af8e871605f8304d13bc481d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4788e7696b9bb986ab5a16fb2fea618d0b996cc9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753282"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133590"
 ---
 # <a name="mssqleng020574"></a>MSSQL_ENG020574
     
@@ -33,7 +33,7 @@ ms.locfileid: "52753282"
 |Meldungstext|Fehler bei der Datenüberprüfung für das Abonnement des Abonnenten '%s' für den '%s'-Artikel in der '%s'-Veröffentlichung.|  
   
 ## <a name="explanation"></a>Erklärung  
- Die Daten des Abonnenten wurden gegen die Daten des Verlegers abgeglichen, und es wurde keine Übereinstimmung der Daten festgestellt. Daher konnte die Überprüfung nicht erfolgreich abgeschlossen werden. Weitere Informationen zur Überprüfung finden Sie unter [Validate Replicated Data](validate-replicated-data.md).  
+ Die Daten des Abonnenten wurden gegen die Daten des Verlegers abgeglichen, und es wurde keine Übereinstimmung der Daten festgestellt. Daher konnte die Überprüfung nicht erfolgreich abgeschlossen werden. Weitere Informationen zur Überprüfung finden Sie unter [Validate Replicated Data](validate-data-at-the-subscriber.md).  
   
 ## <a name="user-action"></a>Benutzeraktion  
  Es wird empfohlen, folgendermaßen vorzugehen:  

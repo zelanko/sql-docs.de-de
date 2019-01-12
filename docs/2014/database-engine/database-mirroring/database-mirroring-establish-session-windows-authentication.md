@@ -13,12 +13,12 @@ ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 433c50834a7dc989d706cc2f67883cd43f5788d9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c1ea3cd62c97cecd9af0b8b696156b9f2622f5b7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508410"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135525"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-transact-sql"></a>Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung (Transact-SQL)
     
@@ -63,13 +63,13 @@ ms.locfileid: "52508410"
   
 4.  Um den Prinzipalserver als Partner auf der Spiegelungsdatenbank festzulegen, stellen Sie eine Verbindung mit dem Spiegelungsserver her, und geben Sie die folgende Anweisung aus:  
   
-     ALTER DATABASE *<Datenbankname>* SET PARTNER **=***<Netzwerkadresse_des_Servers>*  
+     ALTER DATABASE *<Datenbankname>* SET PARTNER **=**_<Server-Netzwerkadresse>_  
   
      Dabei ist *<Datenbankname>* der Name der zu spiegelnden Datenbank (dieser Name ist für beide Partner gleich) und *<Server-Netzwerkadresse>* die Servernetzwerkadresse des Prinzipalservers.  
   
      Die Syntax für eine Server-Netzwerkadresse lautet folgendermaßen:  
   
-     TCP **://**\<*Systemadresse>***:**\<* Port>*  
+     TCP<strong>://</strong>\<*Systemadresse>*<strong>:</strong>\<*Port>*  
   
      Dabei ist \<*Systemadresse>* eine Zeichenfolge, die das Zielcomputersystem eindeutig identifiziert, und \<*Port>* ist die vom Spiegelungsendpunkt der Partnerserverinstanz verwendete Portnummer. Weitere Informationen finden Sie unter [Angeben einer Servernetzwerkadresse &#40;Datenbankspiegelung&#41;](specify-a-server-network-address-database-mirroring.md)verwendet.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "52508410"
   
 5.  Um den Spiegelserver als Partner auf der Prinzipaldatenbank festzulegen, stellen Sie eine Verbindung mit dem Prinzipalserver her, und geben Sie die folgende Anweisung aus:  
   
-     ALTER DATABASE *<Datenbankname>* SET PARTNER **=***<Netzwerkadresse_des_Servers>*  
+     ALTER DATABASE *<Datenbankname>* SET PARTNER **=**_<Server-Netzwerkadresse>_  
   
      Weitere Informationen finden Sie unter Schritt 4.  
   

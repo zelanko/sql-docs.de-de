@@ -16,12 +16,12 @@ ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1fc809277151ee85608c9ca286185011cf52552
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6c3341c37998f61cba743c8da8a4cd772c2c73d9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822574"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133760"
 ---
 # <a name="spaddmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,22 +62,22 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **"**_Veröffentlichung_**"**  
  Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert. Die Veröffentlichung muss bereits vorhanden sein.  
   
- [  **@subscriber =**] **"***Abonnenten***"**  
+ [  **@subscriber =**] **"**_Abonnenten_**"**  
  Der Name des Abonnenten. *Abonnenten* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@subscriber_db=**] **"***Subscriber_db***"**  
+ [  **@subscriber_db=**] **"**_Subscriber_db_**"**  
  Ist der Name der Abonnementdatenbank. *Subscriber_db*ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@subscription_type=**] **"***Subscription_type***"**  
+ [  **@subscription_type=**] **"**_Subscription_type_**"**  
  Ist der Typ des Abonnements. *Subscription_type*ist **nvarchar(15)**, hat den Standardwert PUSH. Wenn **Push**, wird ein Pushabonnement hinzugefügt, und der Merge-Agent auf dem Verteiler hinzugefügt. Wenn **Pull**, ein Pullabonnement wird hinzugefügt, ohne dass ein Merge-Agent auf dem Verteiler hinzugefügt.  
   
 > [!NOTE]  
 >  Für anonyme Abonnements ist diese gespeicherte Prozedur nicht erforderlich.  
   
- [  **@subscriber_type=**] **"***Subscriber_type***"**  
+ [  **@subscriber_type=**] **"**_Subscriber_type_**"**  
  Der Typ des Abonnenten. *subscriber_type kann*ist **nvarchar(15)**, und kann einen der folgenden Werte.  
   
 |Wert|Description|  
@@ -90,7 +90,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@subscription_priority=**] *Subscription_priority*  
  Eine Zahl, die die Priorität für das Abonnement angibt. *Subscription_priority*ist **echte**, hat den Standardwert NULL. Für lokale und anonyme Abonnements ist die Priorität 0,0. Für globale Abonnements muss die Priorität niedriger als 100,0 sein.  
   
- [  **@sync_type=**] **"***Sync_type***"**  
+ [  **@sync_type=**] **"**_Sync_type_**"**  
  Der Synchronisierungstyp des Abonnements. *Sync_type*ist **nvarchar(15)**, hat den Standardwert **automatische**. Kann **automatische** oder **keine**. Wenn **automatische**, das Schema und die Ausgangsdaten für veröffentlichte Tabellen zuerst an den Abonnenten übertragen werden. Wenn **keine**, es wird davon ausgegangen, dass der Abonnent hat bereits das Schema und die Ausgangsdaten für veröffentlichte Tabellen. Systemtabellen und Daten werden immer übertragen.  
   
 > [!NOTE]  
@@ -167,13 +167,13 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@active_end_date=**] *Active_end_date*  
  Das Datum, ab dem der Merge-Agent nicht mehr geplant ist. Dabei wird das Format JJJJMMTT verwendet. *Active_end_date* ist **Int**, hat den Standardwert NULL.  
   
- [  **@optional_command_line=**] **"***Standardwert***"**  
+ [  **@optional_command_line=**] **"**_Standardwert_**"**  
  Die optional auszuführende Befehlszeile. *Der Standardwert*ist **nvarchar(4000)**, hat den Standardwert NULL. Dieser Parameter wird verwendet, um einen Befehl hinzuzufügen, der die Ausgabe aufzeichnet und in einer Datei speichert, oder um eine Konfigurationsdatei oder ein Konfigurationsattribut anzugeben.  
   
- [  **@description=**] **"***Beschreibung***"**  
+ [  **@description=**] **"**_Beschreibung_**"**  
  Eine kurze Beschreibung dieses Mergeabonnements. *Beschreibung*ist **nvarchar(255)**, hat den Standardwert NULL. Dieser Wert wird angezeigt, vom Replikationsmonitor in der **Anzeigenamen** Spalte, die zum Sortieren von Abonnements für eine überwachte Veröffentlichung verwendet werden kann.  
   
- [  **@enabled_for_syncmgr=**] **"***Enabled_for_syncmgr***"**  
+ [  **@enabled_for_syncmgr=**] **"**_Enabled_for_syncmgr_**"**  
  Gibt an, ob das Abonnement über die Synchronisierungsverwaltung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows synchronisiert werden kann. *Enabled_for_syncmgr* ist **nvarchar(5)**, hat den Standardwert "false". Wenn **"false"**, das Abonnement ist nicht mit der Synchronisierungsverwaltung registriert. Wenn **"true"**, das Abonnement mit der Synchronisierungsverwaltung registriert und kann synchronisiert werden, ohne Starten des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  [  **@offloadagent=** ] *Remote_agent_activation*  
@@ -182,16 +182,16 @@ sp_addmergesubscription [ @publication= ] 'publication'
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird nur noch bereitgestellt, um Abwärtskompatibilität von Skripts sicherzustellen.  
   
- [  **@offloadserver=** ] **"***Remote_agent_server_name***"**  
+ [  **@offloadserver=** ] **"**_Remote_agent_server_name_**"**  
  Gibt den Netzwerknamen des Servers an, auf dem die Remoteaktivierung der Momentaufnahme erfolgt. *Remote_agent_server_name*ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@use_interactive_resolver=** ] **"***Use_interactive_resolver***"**  
+ [  **@use_interactive_resolver=** ] **"**_Use_interactive_resolver_**"**  
  Ermöglicht das interaktive Lösen von Konflikten für alle Artikel, die eine interaktive Auflösung zulassen. *Use_interactive_resolver* ist **nvarchar(5)**, hat den Standardwert "false".  
   
- [  **@merge_job_name=** ] **"***Merge_job_name***"**  
+ [  **@merge_job_name=** ] **"**_Merge_job_name_**"**  
  Die *@merge_job_name* -Parameter ist veraltet und kann nicht festgelegt werden. *Merge_job_name* ist **Sysname**, hat den Standardwert NULL.  
   
- [ **@hostname**=] **"***Hostname***"**  
+ [ **@hostname**=] **"**_Hostname_**"**  
  Überschreibt den Rückgabewert von [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) Wenn diese Funktion in der WHERE-Klausel eines parametrisierten Filters verwendet wird. *Hostname* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!IMPORTANT]  

@@ -14,12 +14,12 @@ ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d9b891d4c8196dbac8fd7e557abc17f15bafbe0f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 627bbbafd272b6bb7682b776132445041207f8e1
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545220"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133330"
 ---
 # <a name="customization-file-connect-section"></a>Connect-Abschnitt der Anpassungsdatei
 Das Standardverhalten des ereignishandlers ist, alle Verbindungen zu verweigern. Die **verbinden** Abschnitt gibt Ausnahmen, um dieses Verhalten. Z. B., wenn alle der **verbinden** Abschnitte wurden, fehlt oder ist leer, und dann in der Standardeinstellung keine Verbindungen hergestellt werden konnte.  
@@ -57,11 +57,11 @@ connectionString
 |Teil|Description|  
 |----------|-----------------|  
 |**Verbinden**|Eine Literalzeichenfolge, die dies weist darauf hin, ist ein Eintrag der Verbindungszeichenfolge.|  
-|***connectionString***|Eine Zeichenfolge, die die gesamte Client-Verbindungszeichenfolge ersetzt.|  
+|**_"ConnectionString"_**|Eine Zeichenfolge, die die gesamte Client-Verbindungszeichenfolge ersetzt.|  
 |**Zugriff**|Eine Literalzeichenfolge, die dies weist darauf hin ist ein Zugriffseintrag.|  
-|***accessRight***|Eine der folgenden Zugriffsrechte:<br /><br /> -   **NoAccess** -Benutzer kann nicht auf die Datenquelle zugreifen.<br />-   **ReadOnly** -Benutzer kann die Datenquelle lesen.<br />-   **"ReadWrite"** -Benutzer Lese- oder Schreibzugriff auf Daten in die Datenquelle.|  
+|**_accessRight_**|Eine der folgenden Zugriffsrechte:<br /><br /> -   **NoAccess** -Benutzer kann nicht auf die Datenquelle zugreifen.<br />-   **ReadOnly** -Benutzer kann die Datenquelle lesen.<br />-   **"ReadWrite"** -Benutzer Lese- oder Schreibzugriff auf Daten in die Datenquelle.|  
   
- Wenn Sie eine Verbindung (in "Auswirkung", "das Deaktivieren des Standardverhaltens von Handler") zulassen möchten, legen Sie den Zugriffseintrag in der **standardmäßig verbinden** Abschnitt `Access=ReadWrite`, und löschen, oder kommentieren Sie alle anderen **Verbinden** *Bezeichner* Abschnitt.  
+ Wenn Sie eine Verbindung (in "Auswirkung", "das Deaktivieren des Standardverhaltens von Handler") zulassen möchten, legen Sie den Zugriffseintrag in der **standardmäßig verbinden** Abschnitt `Access=ReadWrite`, und löschen, oder kommentieren Sie alle anderen **Verbinden** _Bezeichner_ Abschnitt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Logs-Abschnitt der Anpassungsdatei](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   

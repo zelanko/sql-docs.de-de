@@ -16,12 +16,12 @@ ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 05314fe18f555d4d2d3cca161a3b770ec85b4256
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 22e08b5eb0bccc02303201b7fae46b55f1012fd8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532134"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133290"
 ---
 # <a name="create-a-server-role"></a>Erstellen einer Serverrolle
   In diesem Thema wird beschrieben, wie Sie einen neuen Server in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]erstellen können.  
@@ -69,7 +69,7 @@ ms.locfileid: "52532134"
   
 3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Serverrollen**, und klicken Sie dann auf **Neue Serverrolle...**.  
   
-4.  In der **neue Serverrolle-*** Server_role_name* Dialogfelds die **allgemeine** geben einen Namen für die neue Serverrolle in der **serverrollenname** Feld.  
+4.  In der **neue Serverrolle -**_Server_role_name_ Dialogfeld auf die **allgemeine** geben einen Namen für die neue Serverrolle in der **serverrollenname**Feld.  
   
 5.  Geben Sie im Feld **Besitzer** den Namen des Serverprinzipals ein, der die neue Rolle besitzt. Klicken Sie alternativ auf die Auslassungspunkte **(...)**, um das Dialogfeld **Serveranmeldenamen oder -rolle auswählen** zu öffnen.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "52532134"
   
 #### <a name="to-create-a-new-server-role"></a>So erstellen Sie eine neue Serverrolle  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

@@ -14,12 +14,12 @@ ms.assetid: 7c71ec9f-0180-4398-b32a-4bfb7592e75d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc2cc36a309f74c63ad13f93c9d5e76fb9140900
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f5fca9032df4f1327933580a306215fd2fd47854
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770222"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135970"
 ---
 # <a name="rename-columns-database-engine"></a>Umbenennen von Spalten (Datenbank-Engine)
   Sie können mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Tabellenspalte in [!INCLUDE[tsql](../../includes/tsql-md.md)]umbenennen.  
@@ -64,7 +64,7 @@ ms.locfileid: "52770222"
   
 2.  Wählen Sie unter **Spaltenname**den zu ändernden Namen aus, und geben Sie einen neuen Namen ein.  
   
-3.  Klicken Sie im Menü **Datei** auf **Speichern** > *Tabellenname*.  
+3.  Klicken Sie im Menü **Datei** auf **Speichern**_table name_.  
   
 > [!NOTE]  
 >  Sie können den Spaltennamen auch auf der Registerkarte **Spalteneigenschaften** ändern. Wählen Sie die Spalte aus, deren Name geändert werden soll, und geben Sie für **Name**einen neuen Wert ein.  

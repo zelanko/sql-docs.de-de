@@ -18,12 +18,12 @@ ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3128828bd26e6d2755f30748c23873538b8a7649
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: be88f92c6dbf2a2fc0f04c3f29c54816174aafa0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527722"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133470"
 ---
 # <a name="create-statistics"></a>Erstellen von Statistiken
   Sie können Abfrageoptimierungsstatistiken in einer oder mehreren Spalten einer Tabelle oder indizierten Sicht in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] erstellen, indem Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]verwenden. Bei den meisten Abfragen generiert der Abfrageoptimierer automatisch die notwendigen Statistiken für einen hochwertigen Abfrageplan. In einigen Fällen müssen Sie weitere Statistiken erstellen.  
@@ -69,7 +69,7 @@ ms.locfileid: "52527722"
   
 4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Statistik**, und wählen Sie dann **New Statistics...** (Neue Statistiken…).  
   
-     Die folgenden Eigenschaften werden auf der Seite **Allgemein** im Dialogfeld **Neue Statistik für Tabelle***Tabellenname* angezeigt.  
+     Die folgenden Eigenschaften werden auf der Seite **Allgemein** im Dialogfeld **Neue Statistik für Tabelle**_table_name_ angezeigt.  
   
      **Tabellenname**  
      Zeigt den Namen der Tabelle an, die von den Statistiken beschrieben wird.  
@@ -113,12 +113,12 @@ ms.locfileid: "52527722"
      **Statistiken für diese Spalten aktualisieren**  
      Aktivieren Sie diese Option, wenn die Statistiken beim Schließen des Dialogfelds aktualisiert werden sollen.  
   
-     Die folgende Eigenschaft wird auf der Seite **Filter** im Dialogfeld **Neue Statistik für Tabelle***Tabellenname* angezeigt.  
+     Die folgende Eigenschaft wird auf der Seite **Filter** im Dialogfeld **Neue Statistik für Tabelle**_table_name_ angezeigt.  
   
      **Filterausdruck**  
-     Definiert, welche Datenzeilen in die gefilterte Statistik eingeschlossen werden sollen. beispielsweise `Production.ProductSubcategoryID IN ( 1,2,3 )`  
+     Definiert, welche Datenzeilen in die gefilterte Statistik eingeschlossen werden sollen. Beispiel: `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  Klicken Sie im Dialogfeld **Neue Statistik für Tabelle***Tabellenname* auf der Seite **Allgemein** auf **Hinzufügen**.  
+5.  Klicken Sie im Dialogfeld **Neue Statistik für Tabelle**_table_name_ auf der Seite **Allgemein** auf **Hinzufügen**.  
   
      Die folgenden Eigenschaften werden im Dialogfeld **Spalten auswählen** angezeigt. Diese Informationen sind schreibgeschützt.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "52527722"
   
 6.  Aktivieren Sie im Dialogfeld **Spalten auswählen** das oder die Kontrollkästchen der einzelnen Spalten, für die Sie eine Statistik erstellen möchten, und klicken Sie auf **OK**.  
   
-7.  Klicken Sie im Dialogfeld **Neue Statistik für Tabelle***Tabellenname* auf **OK**.  
+7.  Klicken Sie im Dialogfeld **Neue Statistik für Tabelle**_table_name_ auf **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   

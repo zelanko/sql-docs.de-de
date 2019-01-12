@@ -16,12 +16,12 @@ ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e93025676d451444140fad80a993813c0463a2f6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 07213247345280e992c2fbd5552d5cdfb96747ab
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206759"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133560"
 ---
 # <a name="spchangearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +48,16 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication=** ] **"***Veröffentlichung***"**  
+ [  **@publication=** ] **"**_Veröffentlichung_**"**  
  Der Name der Oracle-Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@article =** ] **"***Artikel***"**  
+ [  **@article =** ] **"**_Artikel_**"**  
  Der Name des Artikels. *Artikel* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@column**=] **"***Spalte***"**  
+ [ **@column**=] **"**_Spalte_**"**  
  Der Name der Spalte, für die die Datentypzuordnung geändert werden soll. *Spalte* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@type** =] **"***Typ***"**  
+ [ **@type** =] **"**_Typ_**"**  
  Der Name des der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp in der Zielspalte. *Typ* ist **Sysname**, hat den Standardwert NULL.  
   
  [ **@length** =] *Länge*  
@@ -66,7 +66,7 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
  [ **@precision**=] *mit einfacher Genauigkeit*  
  Die Genauigkeit des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyps in der Zielspalte. *Genauigkeit* ist **Bigint**, hat den Standardwert NULL.  
   
- [ **@publisher**=] **"***Verleger***"**  
+ [ **@publisher**=] **"**_Verleger_**"**  
  Gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

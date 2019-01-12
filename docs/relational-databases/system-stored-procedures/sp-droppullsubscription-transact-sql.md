@@ -16,12 +16,12 @@ ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d8d796c5e7b309ef33bf30eba851b3aedb6c1e6b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0343855bbc3d82e58a0a0252109dee6255ee766f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823934"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134050"
 ---
 # <a name="spdroppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +41,13 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publisher=** ] **"***Verleger***"**  
+ [  **@publisher=** ] **"**_Verleger_**"**  
  Der Name des Remoteservers. *Publisher* ist **Sysname**, hat keinen Standardwert. Wenn **alle**, das Abonnement zu die Verlegern gelöscht.  
   
- [  **@publisher_db=** ] **"***Publisher_db***"**  
+ [  **@publisher_db=** ] **"**_Publisher_db_**"**  
  Der Name der Verlegerdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert. **alle** bedeutet, dass alle Verlegerdatenbanken.  
   
- [  **@publication=** ] **"***Veröffentlichung***"**  
+ [  **@publication=** ] **"**_Veröffentlichung_**"**  
  Ist der Veröffentlichungsname. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert. Wenn **alle**, das Abonnement ist für alle Veröffentlichungen gelöscht.  
   
  [  **@reserved=** ] *reserviert*  

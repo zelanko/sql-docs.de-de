@@ -16,12 +16,12 @@ ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d7471bb847028b0b2cab0e71bf6fe33e044c3e2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8bea1a781959cb345ceae785e97766ba659cb94c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819167"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133040"
 ---
 # <a name="spchangedistributorpassword-transact-sql"></a>sp_changedistributor_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ sp_changedistributor_password [ @password= ] 'password'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@password=**] **"***Kennwort***"**  
+ [  **@password=**] **"**_Kennwort_**"**  
  Ist das neue Kennwort. *Kennwort* ist **Sysname**, hat keinen Standardwert. Wenn der Verteiler lokal ist, ist das Kennwort für die **Distributor_admin** systemanmeldung geändert wird.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

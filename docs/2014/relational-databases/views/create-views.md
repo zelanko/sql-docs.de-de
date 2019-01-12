@@ -12,12 +12,12 @@ ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5eaa6c702c02a3258ac66ec55081965d25a12a55
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 27748ee6f4c70ebbcb4d1d28738130ddea07232b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541823"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134400"
 ---
 # <a name="create-views"></a>Erstellen von Sichten
   Sie können in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]Sichten erstellen. Eine Sicht kann für folgende Zwecke verwendet werden:  
@@ -70,7 +70,7 @@ ms.locfileid: "52541823"
   
 6.  Wählen Sie im **Kriterienbereich**zusätzliche Sortier- oder Filterkriterien für die Spalten aus.  
   
-7.  Klicken Sie im Menü **Datei** auf **Speichern***Ansichtsname*.  
+7.  Klicken Sie im Menü **Datei** auf **Speichern**_view name_.  
   
 8.  Geben Sie im Dialogfeld **Namen auswählen** einen Namen für die neue Sicht ein, und klicken Sie auf **OK**.  
   

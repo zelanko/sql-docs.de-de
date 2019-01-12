@@ -16,12 +16,12 @@ ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a71f486318c9431e25898b36343c67562da5451e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9b7c8e0bd544815b7a26afaccd308d6898e3bc95
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784682"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136130"
 ---
 # <a name="spchangemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,19 +42,19 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **"**_Veröffentlichung_**"**  
  Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert %.  
   
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **"**_Verleger_**"**  
  Der Name des Verlegers. *Publisher*ist **Sysname**, hat den Standardwert %.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **"**_Publisher_db_**"**  
  Der Name der Verlegerdatenbank. *Publisher_db*ist **Sysname**, hat den Standardwert %.  
   
- [  **@property=**] **"***Eigenschaft***"**  
+ [  **@property=**] **"**_Eigenschaft_**"**  
  Der Name der zu ändernden Eigenschaft. *Eigenschaft* ist **Sysname**, und kann einen der Werte in der Tabelle.  
   
- [  **@value=**] **"***Wert***"**  
+ [  **@value=**] **"**_Wert_**"**  
  Ist der neue Wert für die angegebene Eigenschaft. *Wert*ist **nvarchar(255)**, und kann einen der Werte in der Tabelle.  
   
 |Eigenschaft|Wert|Description|  

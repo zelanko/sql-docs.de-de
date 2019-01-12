@@ -5,162 +5,238 @@ description: Exemplarische Vorgehensweise eine Bereitstellung von SQL Server-201
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 12/17/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.custom: seodec18
-ms.openlocfilehash: f5ddd80eaf29db657c42eec5c84c8485e8b0d8b6
-ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
-ms.translationtype: MT
+ms.openlocfilehash: 29dda6e0f3849d22568c3e7893dc0926f28144a6
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53531155"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206286"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Schnellstart: Bereitstellen von SQL Server-big Data-Cluster in Azure Kubernetes Service (AKS)
 
-In dieser schnellstartanleitung werden Sie einen SQL Server-2019 big Data-Cluster (Vorschau) in einer Standardkonfiguration für Entwicklungs-/testumgebungen geeignet in AKS bereitstellen.
+In diesem Schnellstart verwenden Sie ein Beispielskript für die Bereitstellung, um die SQL Server-2019 big Data-Cluster (Vorschau) zu Azure Kubernetes Service (AKS) bereitstellen. 
 
-> [!NOTE]
-> ACS ist nur ein Speicherort auf Kubernetes-Host. Big Data-Cluster können unabhängig von der zugrunde liegenden Infrastruktur in Kubernetes bereitgestellt werden. Weitere Informationen finden Sie unter [große SQL Server-Daten bereitstellen in Kubernetes-Clustern](deployment-guidance.md).
+> [!TIP]
+> ACS ist nur eine Option für das Hosten von Kubernetes für Ihre big Data-Cluster. Weitere Informationen zu anderen Bereitstellungsoptionen sowie wie die Optionen zum Anpassen der Bereitstellung finden Sie unter [große SQL Server-Daten bereitstellen in Kubernetes-Clustern](deployment-guidance.md).
 
-Zusätzlich zu einer Instanz des SQL-Master enthält der Cluster, eine Compute-Pool-Instanz, eine Daten-Pool-Instanz und zwei Instanzen von Speicher-Pool. Daten werden beibehalten, über persistente Kubernetes-Volumes, die Standard-Speicherklassen AKS verwenden. Zum weiteren Anpassen Ihrer Konfiguration finden Sie auf die Umgebungsvariablen in der [bereitstellungsanleitung](deployment-guidance.md).
-
-Wenn Sie Ausführen eines Skripts zum Erstellen Ihres AKS-Clusters lieber und zur gleichen Zeit einen big Data-Cluster zu installieren, finden Sie unter [stellen Sie eine SQL-Server, die big Data-in Azure Kubernetes Service (AKS Cluster)](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
+Die hier verwendete Standard big Data-Clusterbereitstellung besteht aus einer Instanz von SQL Master, einer Compute-poolinstanz, zwei Daten ressourcenpoolvorlage ressourcenpoolinstanzen und zwei Instanzen von Speicher-Pool. Daten werden beibehalten, über persistente Kubernetes-Volumes, die Speicher-Standardklassen AKS verwenden. Die Standardkonfiguration, die in diesem Schnellstart verwendete eignet sich für Entwicklungs-/testumgebungen.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-Diese schnellstartanleitung müssen Sie bereits einen AKS-Cluster mit einer Mindestversion v1.10 konfiguriert haben. Weitere Informationen finden Sie unter den [Bereitstellen in AKS](deploy-on-aks.md) Guide.
-
-- [SQL Server-2019 big Data-Tools](deploy-big-data-tools.md):
+- Ein Azure-Abonnement.
+- [Big Data-Tools](deploy-big-data-tools.md):
+   - **mssqlctl**
+   - **"kubectl"**
    - **Azure Data Studio**
    - **SQL Server-2019-Erweiterung**
-   - **"kubectl"**
-   - **mssqlctl**
+   - **Azure-Befehlszeilenschnittstelle**
 
-## <a name="verify-aks-configuration"></a>Überprüfen der AKS-Konfiguration
+## <a name="log-in-to-your-azure-account"></a>Melden Sie sich bei Ihrem Azure-Konto
 
-Nachdem Sie den AKS-Cluster bereitgestellt haben, können Sie Ausführen der folgenden Befehl aus "kubectl", um die Clusterkonfiguration anzuzeigen. Stellen Sie sicher, dass diese "kubectl" auf den richtigen Clusterkontext gezeigt wird.
+Das Skript verwendet die Azure-Befehlszeilenschnittstelle zum Automatisieren der Erstellung eines AKS-Clusters. Vor dem Ausführen des Skripts müssen Sie beim Azure-Konto mit Azure-Befehlszeilenschnittstelle mindestens einmal anmelden. Führen Sie den folgenden Befehl an einer Eingabeaufforderung aus.
 
-```bash
-kubectl config view
+```
+az login
 ```
 
-## <a name="define-environment-variables"></a>Definieren von Umgebungsvariablen
+## <a name="download-the-deployment-script"></a>Laden Sie das Bereitstellungsskript
 
-Festlegen der Umgebungsvariablen, die für die Bereitstellung von big Data-Cluster leicht, hängt davon ab, ob Sie Windows oder Linux/MacOS-Client verwenden.  Wählen Sie die folgenden Schritte aus je nach verwendetem, die Betriebssystem Sie verwenden.
+In dieser schnellstartanleitung wird die Erstellung der big Data-Cluster in AKS über ein Python-Skript automatisiert **bereitstellen – Sql-big-Data-aks.py**. Wenn Sie Python für bereits installiert **Mssqlctl**, Sie muss das Skript erfolgreich in dieser schnellstartanleitung ausführen können. 
 
-Beachten Sie bevor Sie fortfahren die folgenden wichtigen Richtlinien:
+Führen Sie in einer Windows PowerShell oder Linux-Bash-Eingabeaufforderung den folgenden Befehl aus, um das Bereitstellungsskript von GitHub herunterladen.
 
-- In der [Befehlsfenster](https://docs.microsoft.com/visualstudio/ide/reference/command-window), Anführungszeichen sind in den Umgebungsvariablen enthalten. Wenn Sie Anführungszeichen verwenden, um ein Kennwort zu umschließen, sind die Anführungszeichen im Kennwort enthalten.
-- In bash bleibt sind die Anführungszeichen in der Variablen nicht enthalten. Unseren Beispielen verwenden Sie doppelte Anführungszeichen `"`.
-- Sie können das Kennwort Umgebungsvariablen festlegen, um einen beliebigen Namen, aber stellen Sie sicher, dass sie ausreichend komplex sind und verwenden Sie nicht die `!`, `&`, oder `'` Zeichen.
-- Die `sa` Konto ist ein Systemadministrator für die Master für SQL Server-Instanz, die während des Setups erstellt wird. Nach dem Erstellen Ihres SQL Server-Containers wird die von Ihnen festgelegte `MSSQL_SA_PASSWORD` Umgebungsvariable sichtbar, wenn Sie sie in dem Container ausführen`echo $MSSQL_SA_PASSWORD`. Aus Sicherheitsgründen ändern Ihre `sa` Kennwort gemäß der dokumentierten bewährten Methoden [hier](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
-
-Die folgenden Umgebungsvariablen zu initialisieren.  Sie sind für die Bereitstellung von big Data-Cluster erforderlich:
-
-### <a name="windows"></a>Windows
-
-Verwenden ein Befehlsfenster (nicht PowerShell), konfigurieren Sie die folgenden Umgebungsvariablen:
-
-```cmd
-SET ACCEPT_EULA=Y
-SET CLUSTER_PLATFORM=aks
-
-SET CONTROLLER_USERNAME=<controller_admin_name - can be anything>
-SET CONTROLLER_PASSWORD=<controller_admin_password - can be anything, password complexity compliant>
-SET KNOX_PASSWORD=<knox_password - can be anything, password complexity compliant>
-SET MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
-
-SET DOCKER_REGISTRY=private-repo.microsoft.com
-SET DOCKER_REPOSITORY=mssql-private-preview
-SET DOCKER_USERNAME=<your username, credentials provided by Microsoft>
-SET DOCKER_PASSWORD=<your password, credentials provided by Microsoft>
-SET DOCKER_EMAIL=<your Docker email, use the username provided by Microsoft>
-SET DOCKER_PRIVATE_REGISTRY="1"
+```
+curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/deployment/aks/deploy-sql-big-data-aks.py"
 ```
 
-### <a name="linuxmacos"></a>Linux/macOS
+## <a name="run-the-deployment-script"></a>Ausführen des Bereitstellungsskripts
 
-Initialisieren Sie die folgenden Umgebungsvariablen:
+Verwenden Sie die folgenden Schritte aus, um das Ausführen des Bereitstellungsskripts. Dieses Skript ein AKS-Diensts in Azure erstellen und dann einen SQL Server-2019 big Data-Cluster in AKS bereitstellen. Sie können auch ändern, das Skript mit anderen [Umgebungsvariablen](deployment-guidance.md#env) zum Erstellen einer benutzerdefinierten Bereitstellung.
 
-```bash
-export ACCEPT_EULA="Y"
-export CLUSTER_PLATFORM="aks"
+1. Führen Sie das Skript mit dem folgenden Befehl ein:
 
-export CONTROLLER_USERNAME="<controller_admin_name - can be anything>"
-export CONTROLLER_PASSWORD="<controller_admin_password - can be anything, password complexity compliant>"
-export KNOX_PASSWORD="<knox_password - can be anything, password complexity compliant>"
-export MSSQL_SA_PASSWORD="<sa_password_of_master_sql_instance, password complexity compliant>"
+   ```
+   python deploy-sql-big-data-aks.py
+   ```
 
-export DOCKER_REGISTRY="private-repo.microsoft.com"
-export DOCKER_REPOSITORY="mssql-private-preview"
-export DOCKER_USERNAME="<your username, credentials provided by Microsoft>"
-export DOCKER_PASSWORD="<your password, credentials provided by Microsoft>"
-export DOCKER_EMAIL="<your Docker email, use the username provided by Microsoft>"
-export DOCKER_PRIVATE_REGISTRY="1"
+   > [!NOTE]
+   > Wenn Sie sowohl für python3 python2 auf dem Client und im Pfad haben, müssen Sie python3 über den Befehl ausführen: `python3 deploy-sql-big-data-aks.py`.
+
+1. Wenn Sie aufgefordert werden, geben Sie die folgenden Informationen an:
+
+   | Wert | Description |
+   |---|---|
+   | **Azure-Abonnement-ID** | Die Azure-Abonnement-ID, der für AKS verwendet werden soll. Sie können alle Ihre Abonnements und die dazugehörigen IDs auflisten, indem Sie Ausführung `az account list` in einer anderen Befehlszeile. |
+   | **Azure-Ressourcengruppe** | Der Gruppenname des Azure-Ressource für die AKS-Cluster zu erstellen. |
+   | **Docker-Benutzername** | Der Docker-Benutzername, das Ihnen als Teil der begrenzten öffentlichen Vorschau bereitgestellt. |
+   | **Docker-Kennwort** | Das Docker-Kennwort, das Ihnen als Teil der begrenzten öffentlichen Vorschau bereitgestellt. |
+   | **Azure-region** | Der Azure-Region für den neuen AKS-Cluster (standardmäßig **Westus**). |
+   | **VM-Größe** | Die [VM-Größe](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) für Knoten im AKS-Cluster (standardmäßig **Standard_L4s**). |
+   | **Workerknoten** | Die Anzahl der Worker-Knoten im AKS-Cluster (standardmäßig **3**). |
+   | **Clustername** | Der Name des AKS-Clusters und der big Data-Cluster. Der Name Ihres Clusters muss nur alphanumerische Kleinbuchstaben und ohne Leerzeichen sein. (standardmäßig **Sqlbigdata**). |
+   | **Kennwort** | Das Kennwort für den Controller, HDFS/Spark-Gateway und Masterinstanz (standardmäßig **MySQLBigData2019**). |
+   | **Benutzerkonten** | Benutzername für den Controllerbenutzer (Standard: **Admin**). |
+
+   > [!IMPORTANT]
+   > Jeder Anspruch persistentes Volume im Cluster erfordert einen angeschlossenen Datenträger. Big Data-Cluster erfordert derzeit 21 persistentes Volume Ansprüche. Wenn Sie ein Azure-VM-Größe und Anzahl der Knoten auswählen, stellen Sie sicher, dass die Gesamtzahl von Datenträgern, die auf allen Knoten angefügt werden, können größer als oder gleich 21 ist. Z. B. die [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) VM-Größe unterstützt 16 angefügte Datenträgern, damit die drei Knoten bedeutet, dass 48 Datenträger angefügt werden können.
+
+   > [!NOTE]
+   > Die `sa` Konto ist ein Systemadministrator für die master SQL Server-Instanz, die während des Setups erstellt wird. Nach dem Erstellen der Bereitstellung der `MSSQL_SA_PASSWORD` Umgebungsvariable ist mit sichtbaren `echo $MSSQL_SA_PASSWORD` im Container Masterinstanz. Aus Sicherheitsgründen ändern Ihre `sa` Kennwort für die master-Instanz nach der Bereitstellung. Weitere Informationen finden Sie unter [Ändern des Systemadministratorkennworts](../linux/quickstart-install-connect-docker.md#sapassword).
+
+1. Das Skript wird gestartet, durch das Erstellen eines AKS-Clusters mit den Parametern, die Sie angegeben haben. Dieser Schritt dauert einige Minuten.
+
+   <img src="./media/quickstart-big-data-cluster-deploy/script-parameters.png" width="800px" alt="Script parameters and AKS cluster creation"/>
+
+## <a name="monitor-the-status"></a>Überwachen des status
+
+Nachdem das Skript im AKS-Cluster erstellt wurde, wird er zum Festlegen von erforderlichen Umgebungsvariablen mit den Einstellungen, die Sie zuvor angegeben fortgesetzt. Es ruft dann **Mssqlctl** der big Data-Cluster in AKS bereitstellen.
+
+Das Befehlsfenster der Client gibt den Bereitstellungsstatus. Während der Bereitstellung sehen Sie eine Reihe von Nachrichten, in dem sie den Pod Controller wartet:
+
+```output
+2018-11-15 15:42:02.0209 UTC | INFO | Waiting for controller pod to be up...
 ```
 
-> [!NOTE]
-> Während der begrenzten öffentlichen Vorschau werden die Docker-Anmeldeinformationen zum Herunterladen von SQL Server-Images für die big Data-Cluster für jeden Kunden von Microsoft bereitgestellt. Um Zugriff zu beantragen, registrieren [hier](https://aka.ms/eapsignup), und geben Sie Ihr Interesse an, um SQL Server-big Data-Cluster zu versuchen.
+Nach 10 bis 20 Minuten sollten Sie eine Benachrichtigung über der Pod Controller ausgeführt wird:
 
-## <a name="deploy-a-big-data-cluster"></a>Bereitstellen eines big Data-Clusters
-
-Um eine SQL Server 2019 CTP 2.2 big Data-Cluster in Ihrem Kubernetes-Cluster bereitzustellen, führen Sie den folgenden Befehl aus:
-
-```bash
-mssqlctl create cluster <your-cluster-name>
+```output
+2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
+2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.222.222.222:30080
 ```
 
-> [!NOTE]
-> Der Name Ihres Clusters muss nur Kleinbuchstaben alphanumerische Zeichen, keine Leerzeichen enthalten sein. Alle Kubernetes-Artefakte für die big Data-Cluster in einem Namespace mit demselben Namen wie der Cluster erstellt werden angegebenen Namen.
+> [!IMPORTANT]
+> Die gesamte Bereitstellung dauert sehr lange aufgrund der Zeitaufwand für die Container-Images für die Komponenten der big Data-Cluster herunterladen. Er sollte jedoch nicht mehrere Stunden dauern. Wenn Sie Probleme bei der Bereitstellung auftreten, finden Sie unter den [Problembehandlung bei der Bereitstellung](deployment-guidance.md#troubleshoot) Abschnitt im Artikel für die Bereitstellung.
 
-Im Befehlsfenster oder die Shell gibt den Bereitstellungsstatus zurück. Sie können auch den Bereitstellungsstatus überprüfen, indem Sie diese Befehle in einem anderen Cmd-Fenster ausführen:
+## <a name="inspect-the-cluster"></a>Überprüfen Sie den cluster
 
-```bash
-kubectl get all -n <your-cluster-name>
-kubectl get pods -n <your-cluster-name>
-kubectl get svc -n <your-cluster-name>
-```
+Jederzeit während der Bereitstellung können Sie "kubectl" oder das Verwaltungsportal für den Cluster verwenden, um den Status und die Details der Ausführung von big Data-Cluster zu überprüfen.
 
-Sie können eine präzisere Status und die Konfiguration für die einzelnen Pod mit finden Sie unter:
-```bash
-kubectl describe pod <pod name> -n <your-cluster-name>
-```
+### <a name="use-kubectl"></a>Verwenden von kubectl
+
+Öffnen Sie ein neues Befehlsfenster mit **"kubectl"** während der Bereitstellung.
+
+1. Führen Sie den folgenden Befehl aus, um eine Zusammenfassung des Status des gesamten Clusters abzurufen:
+
+   ```
+   kubectl get all -n <your-cluster-name>
+   ```
+
+1. Überprüfen Sie die Kubernetes-Dienste und deren interne und externe Endpunkte mit den folgenden **"kubectl"** Befehl:
+
+   ```
+   kubectl get svc -n <your-cluster-name>
+   ```
+
+1. Sie können auch den Status der Kubernetes-Pods mithilfe des folgenden Befehls überprüfen:
+
+   ```
+   kubectl get pods -n <your-cluster-name>
+   ```
+
+1. Finden Sie weitere Informationen zu einem bestimmten Pod mit dem folgenden Befehl ein:
+
+   ```
+   kubectl describe pod <pod name> -n <your-cluster-name>
+   ```
 
 > [!TIP]
 > Weitere Informationen zum Überwachen und Problembehandlung bei einer Bereitstellung finden Sie unter den [Problembehandlung bei der Bereitstellung](deployment-guidance.md#troubleshoot) Abschnitt im Artikel für die Bereitstellung.
 
-## <a name="open-the-cluster-administration-portal"></a>Öffnen Sie das Cluster-Verwaltungsportal
+### <a name="use-the-cluster-administration-portal"></a>Verwenden Sie das Cluster-Verwaltungsportal
 
-Sobald der Controller-Pod ausgeführt wird, können Sie das Cluster-Verwaltungsportal, zum Überwachen der Bereitstellung. Sie können den Portalzugriff mithilfe der externen IP-Adresse und den Port für die `service-proxy-lb` (z. B.: **https://\<Ip-Adresse\>: 30777/Portal**). Anmeldeinformationen für den Zugriff auf die Administratorportal die Werte sind `CONTROLLER_USERNAME` und `CONTROLLER_PASSWORD` oben angegebenen Umgebungsvariablen.
+Sobald der Controller-Pod ausgeführt wird, können Sie auch das Verwaltungsportal für den Cluster zum Überwachen der Bereitstellung verwenden. Sie können den Portalzugriff mithilfe der externen IP-Adresse und den Port für die `service-proxy-lb` (z. B.: **https://\<Ip-Adresse\>: 30777/Portal**). Die Anmeldeinformationen verwendet, um sich beim Portal anmelden, entsprechen die Werte für **Controllerbenutzer** und **Kennwort** , die Sie im Bereitstellungsskript angegeben.
 
-Sie können die IP-Adresse des Dienst-Proxy-lb-Diensts abrufen, mit dem folgenden Befehl in einem nachfolgenden bash- oder Cmd-Fenster:
+Erhalten Sie die IP-Adresse der **-Dienst-Proxy-lb** Dienst mit dem folgenden Befehl in einem nachfolgenden bash- oder Cmd-Fenster:
 
 ```bash
 kubectl get svc service-proxy-lb -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> Sie werden eine sicherheitswarnung angezeigt, wenn die Webseite zugreifen, da wir automatisch generierte SSL-Zertifikate verwenden. In zukünftigen Versionen werden wir die Möglichkeit, eigene selbstsignierte Zertifikate bieten bieten.
+> In der CTP-Version 2.2 sehen eine sicherheitswarnung Sie beim Zugreifen auf die Webseite, da es sich bei big Data-Cluster derzeit automatisch generierte SSL-Zertifikate verwendet. In CTP-Version 2.2, ist es auch nicht den Status der SQL Server-Masterinstanz angezeigt.
 
-## <a name="connect-to-the-big-data-cluster"></a>Verbinden Sie mit der big Data-cluster
+## <a name="connect-to-the-cluster"></a>Verbinden mit dem cluster
 
-Nachdem das Bereitstellungsskript erfolgreich abgeschlossen wurde, erhalten Sie die IP-Adresse der master SQL Server-Instanz und den Spark/HDFS-Endpunkten, die mithilfe der unten beschriebenen Schritte. Alle clusterendpunkte werden im Abschnitt "Dienstendpunkte" im Verwaltungsportal auch zum einfachen Nachschlagen Cluster angezeigt.
+Wenn das Bereitstellungsskript abgeschlossen ist, benachrichtigt die Ausgabe Sie Erfolg:
 
-Azure bietet den Azure-LoadBalancer-Dienst in AKS. Führen Sie folgenden Befehl eine cmd- oder die bash-Fenster:
-
-```bash
-kubectl get svc endpoint-master-pool -n <your-cluster-name>
-kubectl get svc service-security-lb -n <your-cluster-name>
+```output
+2018-11-15 16:10:25.0583 UTC | INFO | Cluster state: Ready
+2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
 ```
 
-Suchen Sie nach der **externe IP-** Wert, der mit den Diensten zugewiesen ist. Verbinden mit der master SQL Server-Instanz, die die IP-Adresse für die `endpoint-master-pool` an Port 31433 (Beispiel:  **\<Ip-Adresse\>, 31433**) und für den SQL Server-big Data-clusterendpunkt mit dem External-IP-Adresse für die `service-security-lb` Service.   Big Data-cluster-Endpunkt ist können Sie interagieren mit HDFS und Übermitteln von Spark-Aufträge über Knox.
+Die SQL Server-big Data-Cluster wird nun in AKS bereitgestellt. Sie können jetzt Studio für Azure Data verwenden, für die Verbindung für die master SQL Server-Instanz und die Verwendung von Azure Data Studio HDFS/Spark-Endpunkte.
+
+### <a id="master"></a> Master-Instanz
+
+Master SQL Server-Instanz ist eine herkömmliche SQL Server-Instanz, die mit der relationalen SQL Server-Datenbanken. Die folgenden Schritte beschreiben, Herstellen einer Verbindung mit der Verwendung von Azure Data Studio Masterinstanz.
+
+1. Suchen Sie über die Befehlszeile die IP-Adresse Ihrer master-Instanz mit dem folgenden Befehl aus:
+
+   ```
+   kubectl get svc endpoint-master-pool -n <your-cluster-name>
+   ```
+
+1. Drücken Sie in Azure Data Studio **F1** > **neue Verbindung**.
+
+1. In **Verbindungstyp**Option **Microsoft SQL Server**.
+
+1. Geben Sie die IP-Adresse in der SQL Server-Masterinstanz **Servernamen** (z. B.: **\<IP-Adresse\>, 31433**).
+
+1. Geben Sie einen SQL-Anmeldenamen **Benutzernamen** (`SA`) und **Kennwort** (das Kennwort, das Sie im Bereitstellungsskript eingegeben haben).
+
+1. Ändern Sie das Ziel **Datenbanknamen** eines relationalen Datenbanken.
+
+   ![Verbinden Sie mit der master-Instanz](./media/quickstart-big-data-cluster-deploy/connect-to-cluster.png)
+
+1. Drücken Sie **Connect**, und die **Serverdashboard** sollte angezeigt werden.
+
+### <a id="hdfs"></a> HDFS/Spark-gateway
+
+Die **HDFS/Spark-Gateway** ermöglicht es Ihnen, für die Arbeit mit dem HDFS-Speicher-Pool und zum Ausführen von Spark-Aufträgen zu verbinden. Die folgenden Schritte beschreiben, wie eine Verbindung mit Azure Data Studio herstellen.
+
+1. Finden Sie über die Befehlszeile die IP-Adresse Ihres HDFS/Spark-Gateways mit dem folgenden Befehl aus:
+
+   ```
+   kubectl get svc service-security-lb -n <your-cluster-name>
+   ```
+ 
+1. Drücken Sie in Azure Data Studio **F1** > **neue Verbindung**.
+
+1. In **Verbindungstyp**Option **SQL Server-big Data-Cluster**.
+   
+   > [!TIP]
+   > Wenn Sie nicht sehen die **SQL Server-big Data-Cluster** Verbindung geben, stellen Sie sicher, dass Sie installiert haben die [2019 für SQL Server-Erweiterung](../azure-data-studio/sql-server-2019-extension.md) und dass Sie Azure Data Studio nach der Erweiterung abgeschlossen neu gestartet installieren.
+
+1. Geben Sie die IP-Adresse der big Data-Cluster in **Servernamen** (einen Port nicht angegeben).
+
+1. Geben Sie `root` für die **Benutzer** , und geben Sie die **Kennwort** auf Ihre big Data-Cluster, die Sie im Bereitstellungsskript eingegeben haben.
+
+   ![Verbinden Sie mit HDFS/Spark-gateway](./media/quickstart-big-data-cluster-deploy/connect-to-cluster-hdfs-spark.png)
+
+1. Drücken Sie **Connect**, und die **Serverdashboard** sollte angezeigt werden.
+
+## <a name="clean-up"></a>Bereinigen
+
+Wenn Sie SQL Server-big Data-Cluster in Azure testen, sollten Sie die AKS-Cluster, Abschluss, um unerwartete Gebühren zu vermeiden löschen. Entfernen Sie den Cluster nicht, wenn Sie das Produkt weiterhin verwenden möchten.
+
+> [!WARNING]
+> Die folgenden Schritte aus, kurzzeitig von dem AKS-Cluster der SQL Server big Data-Cluster auch entfernt. Wenn Sie Datenbanken oder HDFS-Daten, die Sie beibehalten möchten, Sichern Sie die Daten vor dem Löschen des Clusters.
+
+Führen Sie den folgenden Azure CLI-Befehl zum Entfernen der big Data-Cluster und AKS-Diensts in Azure (ersetzen Sie dies `<resource group name>` mit der **Azure-Ressourcengruppe** Sie im Bereitstellungsskript angegeben):
+
+```azurecli
+az group delete -n <resource group name>
+```
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Nun, dass der SQL Server-big Data-Cluster bereitgestellt wird, versuchen Sie es, einige der neuen Funktionen:
+Nun, dass der SQL Server-big Data-Cluster bereitgestellt wird, können Laden von Beispieldaten und die Tutorials erkunden:
 
 > [!div class="nextstepaction"]
-> [Verwendung von Notebooks in der Vorschau von SQL Server-2019](notebooks-guidance.md)
+> [Tutorial: Laden Sie Beispieldaten in eine SQL Server-2019 big Data-cluster](tutorial-load-sample-data.md)

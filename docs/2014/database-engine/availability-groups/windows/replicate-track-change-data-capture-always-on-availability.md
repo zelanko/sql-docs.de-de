@@ -15,12 +15,12 @@ ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 50328c814b23f9df33a0524bae1758afecd3f5f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b3bf1b9c7b43a2196f2bc2c09422feb43cbc7c4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091260"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134090"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Replikation, Änderungsnachverfolgung, Change Data Capture und AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikation, Change Data Capture (CDC) und Änderungsnachverfolgung (CT) werden unter [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]unterstützt. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] bietet Hochverfügbarkeit und zusätzliche Funktionen zur Datenbankwiederherstellung.  
@@ -142,7 +142,7 @@ ms.locfileid: "48091260"
   
      Obwohl eine Clientanwendung in vielen Fällen immer eine Verbindung mit dem aktuellen primären Replikat herstellen möchte, ist dies nicht die einzige Möglichkeit, [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]zu nutzen. Wenn eine Verfügbarkeitsgruppe für die Unterstützung von lesbaren sekundären Replikaten konfiguriert wurde, können Änderungsdaten auch von sekundären Knoten erfasst werden.  
   
-     Bei der Konfiguration einer Verfügbarkeitsgruppe wird das der SECONDARY_ROLE zugeordnete ALLOW_CONNECTIONS-Attribut verwendet, um den Typ des unterstützten sekundären Zugriffs anzugeben. Bei der Konfiguration als ALL werden alle Verbindungen zum sekundären Replikat zugelassen. Es sind jedoch nur die Verbindungen erfolgreich, die einen schreibgeschützten Zugriff erfordern. Bei der Konfiguration als READ_ONLY ist es bei der Verbindung mit der sekundären Datenbank erforderlich, eine schreibgeschützte Absicht anzugeben, damit die Verbindung erfolgreich hergestellt werden kann. Weitere Informationen finden Sie unter [Konfigurieren des schreibgeschützten Zugriffs auf ein Verfügbarkeitsreplikat &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)besitzen.  
+     Bei der Konfiguration einer Verfügbarkeitsgruppe wird das der SECONDARY_ROLE zugeordnete ALLOW_CONNECTIONS-Attribut verwendet, um den Typ des unterstützten sekundären Zugriffs anzugeben. Bei der Konfiguration als ALL werden alle Verbindungen zum sekundären Replikat zugelassen. Es sind jedoch nur die Verbindungen erfolgreich, die einen schreibgeschützten Zugriff erfordern. Bei der Konfiguration als READ_ONLY ist es bei der Verbindung mit der sekundären Datenbank erforderlich, eine schreibgeschützte Absicht anzugeben, damit die Verbindung erfolgreich hergestellt werden kann. Weitere Informationen finden Sie unter [Konfigurieren des schreibgeschützten Zugriffs auf ein Verfügbarkeitsreplikat &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
      Die folgende Abfrage kann verwendet werden, um zu bestimmen, ob eine schreibgeschützte Absicht benötigt wird, um eine Verbindung mit einem lesbaren sekundären Replikat herzustellen.  
   
@@ -191,9 +191,9 @@ ms.locfileid: "48091260"
   
 -   Verwendung der Mergereplikation, während die Veröffentlichungsdatenbank einer Verfügbarkeitsgruppe angehört:  
   
-    -   Pushabonnement: Sowohl auf dem Verleger als auch auf dem Verteiler muss mindestens [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]ausgeführt werden.  
+    -   Pushabonnement: Sowohl auf dem Verleger als auch auf dem Verteiler muss mindestens [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ausgeführt werden.  
   
-    -   Pullabonnement: Die Verleger-, Verteiler- und Abonnentendatenbank müssen mindestens unter [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]ausgeführt werden. Das liegt daran, dass der Merge-Agent des Abonnenten verstehen muss, wie eine Verfügbarkeitsgruppe ein Failover auf die sekundäre Datenbank ausführen kann.  
+    -   Pullabonnement: Die Verleger-, Verteiler- und Abonnentendatenbanken müssen mindestens unter [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ausgeführt werden. Das liegt daran, dass der Merge-Agent des Abonnenten verstehen muss, wie eine Verfügbarkeitsgruppe ein Failover auf die sekundäre Datenbank ausführen kann.  
   
 -   Das Speichern der Verteilungsdatenbank in einer Verfügbarkeitsgruppe wird nicht unterstützt.  
   
@@ -205,10 +205,10 @@ ms.locfileid: "48091260"
 |||||  
 |-|-|-|-|  
 ||**Verleger**|**Verteiler** <sup>3</sup>|**Abonnent**|  
-|**Transaktion**|Ja<sup>1</sup>|nein|Ja<sup>2</sup>|  
-|**P2P**|nein|nein|nein|  
-|**Merge**|Benutzerkontensteuerung|nein|Ja<sup>2</sup>|  
-|**Momentaufnahme**|Benutzerkontensteuerung|nein|Ja<sup>2</sup>|  
+|**Transaktion**|Ja<sup>1</sup>|Nein|Ja<sup>2</sup>|  
+|**P2P**|Nein|Nein|Nein|  
+|**Merge**|Ja|Nein|Ja<sup>2</sup>|  
+|**Momentaufnahme**|Ja|Nein|Ja<sup>2</sup>|  
   
  <sup>1</sup> bietet keine Unterstützung für die bidirektionale und wechselseitige Transaktionsreplikation.  
   
@@ -231,7 +231,7 @@ ms.locfileid: "48091260"
   
 -   [Warten einer AlwaysOn-Veröffentlichungsdatenbank &#40;SQLServer&#41;](maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [Verwaltung &#40;Replikation&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [Replikationsverwaltung – häufig gestellte Fragen](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
  **Change data capture**  
   

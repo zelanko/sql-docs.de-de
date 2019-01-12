@@ -15,12 +15,12 @@ ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 18a3bed07be7fd035a5011d16c528525685cdfb6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7db85ce6d63cd6c3eb458434357fa5a2d8127dec
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781172"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135930"
 ---
 # <a name="replication-security-best-practices"></a>Bewährte Methoden für die Replikationssicherheit
   Bei der Replikation werden Daten in verteilten Umgebungen verschoben, diese reichen von Intranets auf einer einzelnen Domäne bis hin zu Anwendungen, die auf Daten zwischen nicht vertrauenswürdigen Domänen und über das Internet zugreifen. Es ist wichtig, die beste Methode für die Sicherung der Replikationsverbindungen unter diesen verschiedenen Voraussetzungen zu kennen und zu verstehen.  
@@ -37,7 +37,7 @@ ms.locfileid: "52781172"
   
     -   [Ausführbare Konzepte für die Programmierung von Replikations-Agent](../concepts/replication-agent-executables-concepts.md)  
   
--   Führen Sie jeden Replikations-Agent unter einem anderen Windows-Konto aus, und verwenden Sie die Windows-Authentifizierung für sämtliche Verbindungen des Replikations-Agents. Weitere Informationen zum Angeben von Konten finden Sie unter [Verwalten von Anmeldenamen und Kennwörtern bei der Replikation](manage-logins-and-passwords-in-replication.md).  
+-   Führen Sie jeden Replikations-Agent unter einem anderen Windows-Konto aus, und verwenden Sie die Windows-Authentifizierung für sämtliche Verbindungen des Replikations-Agents. Weitere Informationen zum Angeben von Konten finden Sie unter [Verwalten von Anmeldenamen und Kennwörtern bei der Replikation](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication).  
   
 -   Erteilen Sie jedem Agent nur die erforderlichen Berechtigungen. Weitere Informationen finden Sie im Abschnitt zu den für die Agents erforderlichen Berechtigungen unter [Replication Agent Security Model](replication-agent-security-model.md).  
   
@@ -73,6 +73,6 @@ ms.locfileid: "52781172"
  [Sichern des Abonnenten](secure-the-subscriber.md)   
  [Schützen des Verteilers](secure-the-distributor.md)   
  [Sichern des Verlegers](secure-the-publisher.md)   
- [Sicherheit und Schutz &#40;Replikation&#41;](security-and-protection-replication.md)  
+ [Sicherheit von SQL Server-Replikation](view-and-modify-replication-security-settings.md)  
   
   

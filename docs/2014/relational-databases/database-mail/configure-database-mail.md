@@ -39,12 +39,12 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72f7ee857946267ca1c8732976cb31d30767bfed
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 2686eb387854823ff16a722fe3219c6e2acb2adc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371182"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131490"
 ---
 # <a name="configure-database-mail"></a>Konfigurieren des Datenbank-E-Mail-Features
   Dieses Thema beschreibt die Aktivierung und Konfiguration von Datenbank-E-Mails mithilfe des Assistenten zum Konfigurieren von Datenbank-E-Mails sowie die Erstellung eines Datenbank-E-Mail-Konfigurationsskripts anhand von Vorlagen.  
@@ -394,7 +394,7 @@ ms.locfileid: "53371182"
 
   
 ###  <a name="TestEmail"></a> Send Test E-Mail Page  
- Verwenden Sie die Seite **Test-E-Mail senden von***<Instanzname>*, um eine E-Mail mithilfe des angegebenen Datenbank-E-Mail-Profils zu senden. Nur Mitglieder der festen Serverrolle **sysadmin** können Test-E-Mails über diese Seite senden.  
+ Verwenden Sie die Seite **Test-E-Mail senden von**_<Instanzname>_, um eine E-Mail mithilfe des angegebenen Datenbank-E-Mail-Profils zu senden. Nur Mitglieder der festen Serverrolle **sysadmin** können Test-E-Mails über diese Seite senden.  
   
  **Datenbank-E-Mail-Profil**  
  Wählen Sie aus der Liste ein Datenbank-E-Mail-Profil aus. Dies ist ein Pflichtfeld. Wenn keine Profile angezeigt werden, gibt es keine Profile, oder Sie haben für ein Profil keine Berechtigung. Verwenden Sie den **Assistent zum Konfigurieren von Datenbank-E-Mail** zum Erstellen und Konfigurieren von Profilen. Wenn keine Profile angezeigt werden, erstellen Sie mithilfe des Assistenten zum Konfigurieren von Datenbank-E-Mail ein Profil für die eigene Verwendung.  

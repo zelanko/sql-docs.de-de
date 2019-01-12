@@ -1,6 +1,6 @@
 ---
-title: Hinzufügen der SQLRUserGroup als Datenbankbenutzer – SQL Server Machine Learning Services
-description: Für die Loopback-Verbindungen, die über die implizite Authentifizierung hinzufügen der SQLRUserGroup als Datenbankbenutzer, damit ein workerkonto an den Server für die identitätskonvertierung zurück an den aufrufenden Benutzer anmelden kann.
+title: Hinzufügen der SQLRUserGroup als eine SQL Server-Anmeldung – SQL Server Machine Learning-Dienste
+description: Für die Loopback-Verbindungen, die über die implizite Authentifizierung hinzufügen der SQLRUserGroup als SQL Server-Anmeldung, damit ein workerkonto an den Server für die identitätskonvertierung zurück an den aufrufenden Benutzer anmelden kann.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
@@ -8,17 +8,17 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: abd0745126a4f2a23cf559500b93d2fa53fa2cf9
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 0bc84a7a4cfae14ea19491c42e828d0a93cdfba7
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432353"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143420"
 ---
-# <a name="add-sqlrusergroup-as-a-database-user"></a>Hinzufügen von SQLRUserGroup als Datenbankbenutzer
+# <a name="add-sqlrusergroup-as-a-sql-server-login"></a>Hinzufügen der SQLRUserGroup als SQL Server-Anmeldung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Erstellen Sie eine datenbankanmeldung für [SQLRUserGroup](../concepts/security.md#sqlrusergroup) beim eine [Back Verbindung eine Schleife](../../advanced-analytics/concepts/security.md#implied-authentication) in Ihrem Skript gibt an, eine *vertrauenswürdige Verbindung*, und die Identität verwendet, um ein Objekt auszuführen. enthält der Code ist ein Windows-Benutzerkonto.
+Erstellen Sie eine SQL Server-Anmeldung für [SQLRUserGroup](../concepts/security.md#sqlrusergroup) beim eine [Back Verbindung eine Schleife](../../advanced-analytics/concepts/security.md#implied-authentication) in Ihrem Skript gibt an, eine *vertrauenswürdige Verbindung*, und die Identität verwendet, um ein Objekt auszuführen. enthält der Code ist ein Windows-Benutzerkonto.
 
 Vertrauenswürdige Verbindungen sind diejenigen mit `Trusted_Connection=True` in der Verbindungszeichenfolge. Wenn SQL Server eine Anforderung, die das Angeben einer vertrauenswürdigen Verbindung empfängt, wird überprüft, ob die Identität des die aktuelle Windows-Benutzer eine Anmeldung vorhanden ist. Für externe Prozesse, die als ein workerkonto ausführen (z. B. MSSQLSERVER01 aus **SQLRUserGroup**), die Anforderung schlägt fehl, da diese Konten nicht über eine Anmeldung in der Standardeinstellung verfügen.
 

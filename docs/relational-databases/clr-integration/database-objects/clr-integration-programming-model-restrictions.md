@@ -15,12 +15,12 @@ ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 828608b5c00cdcf0ed625a302359bb5c271381b4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d9d42017e3dfd6016d8b4a42c6953905e804200f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538530"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136020"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Beschränkungen des Programmiermodells für die CLR-Integration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "52538530"
   
 -   Die Assembly ist eine der unterstützten Assemblys. Weitere Informationen finden Sie unter [unterstützt .NET Framework-Bibliotheken](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
   
--   Verwenden Sie **CREATE ASSEMBLY FROM ***\<Speicherort >,* und alle referenzierten Assemblys und deren Abhängigkeiten stehen im  *\<Speicherort >*.  
+-   Verwenden Sie **ASSEMBLY Erstellen von**_\<Speicherort >,_ und alle referenzierten Assemblys und deren Abhängigkeiten stehen im *\<Speicherort >*.  
   
--   Verwenden Sie **CREATE ASSEMBLY FROM ***\<Bytes... >,* und alle Verweise, durch Leerzeichen angegeben werden getrennte Bytes.  
+-   Verwenden Sie **ASSEMBLY Erstellen von**_\<Bytes... >,_ und alle Verweise, durch Leerzeichen angegeben werden getrennte Bytes.  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  Alle **EXTERNAL_ACCESS** Assemblys müssen die folgenden Kriterien erfüllen:  

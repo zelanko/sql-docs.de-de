@@ -16,12 +16,12 @@ ms.assetid: 7c83049b-9227-4723-9b7f-66288bc6bd1d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ee501c8e576363fd4a4bc15883ca322490d60908
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 34f36ea3b27100510857a05cd5edffa68c5be74a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150770"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132390"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>Ausführen des Upgrade Advisors (Eingabeaufforderung)
   Verwenden der **UpgradeAdvisorWizardCmd** Hilfsprogramm, um den Upgrade Advisor von der Befehlszeile aus ausführen. Sie können wählen, ob die Ergebnisse im XML-Format oder als Datei mit durch Trennzeichen getrennten Werten ausgegeben werden sollen.  
@@ -43,7 +43,7 @@ where <server_info> is any combination of the following:
  **-?**  
  Zeigt die Befehlssyntax an.  
   
- **-ConfigFile** *Dateiname*  
+ **-ConfigFile** _Dateiname_  
  Ist der Pfad und Dateiname einer XML-Datei, die enthält Einstellungen zur Verwendung beim Ausführen der **UpgradeAdvisorWizardCmd** Hilfsprogramm.  
   
  *< Server_info >*  
@@ -51,22 +51,22 @@ where <server_info> is any combination of the following:
   
  *< Server_info >* kann eine beliebige Kombination der folgenden vier Argumente sein:  
   
- **-Server** *Servername*  
+ **-Server** _Servername_  
  Gibt den Namen des zu analysierenden Computers an. Dabei kann es sich um den lokalen Computer (Standardwert) oder einen Remotecomputer handeln.  
   
- **-Instanz** *Instance_name*  
+ **-Instanz** _Instance_name_  
  Gibt den Namen der zu analysierenden Instanz an. Es gibt keinen Standardwert. Wenn Sie diesen Parameter nicht angeben, wird das [!INCLUDE[ssDE](../../includes/ssde-md.md)] nicht gescannt. Der Wert für eine Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist MSSQLSERVER. Verwenden Sie für eine benannte Instanz den Namen der Instanz.  
   
- **-ASInstance***as_instanzname*   
+ **-ASInstance**_as_instanzname_   
  Gibt den Namen der zu analysierenden [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanz an. Es gibt keinen Standardwert. Wenn Sie diesen Wert nicht angeben, wird [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nicht gescannt. Der Wert für eine Standardinstanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] lautet MSSQLServerOLAPService. Verwenden Sie für eine benannte Instanz den Namen der Instanz.  
   
- **-RSInstance***rs_instanzname*   
+ **-RSInstance**_rs_instanzname_   
  Gibt den Namen der zu analysierenden [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Instanz an. Es gibt keinen Standardwert. Wenn Sie diesen Wert nicht angeben, wird [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nicht gescannt. Der Wert für eine Standardinstanz von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ist ReportServer. Verwenden Sie für eine benannte Instanz den Namen der Instanz.  
   
- **-SqlUser** *Login_id*  
+ **-SqlUser** _Login_id_  
  Wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwenden, ist dieser Wert die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung, die der Upgrade Advisor dazu verwendet, die Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herzustellen. Wenn Sie keine Anmeldung angeben, wird die Windows-Authentifizierung verwendet, um eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz herzustellen.  
   
- **SqlPassword -** *Kennwort*  
+ **SqlPassword -** _Kennwort_  
  Bei Verwendung der **- SqlUser** -Argument, verwenden Sie dieses Argument an das Kennwort für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung.  
   
  **-CSV**  
@@ -75,7 +75,7 @@ where <server_info> is any combination of the following:
 ## <a name="return-values"></a>Rückgabewerte  
  Die folgende Tabelle zeigt die Werte, die **UpgradeAdvisorWizardCmd** zurückgibt.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |0|Die Analyse war erfolgreich, keine Upgradeprobleme gefunden.|  
 |Positive Ganzzahl|Die Analyse war erfolgreich, es wurden Upgradeprobleme gefunden.|  
@@ -137,11 +137,11 @@ where <server_info> is any combination of the following:
 |`BatchFile`|Gibt eine zu analysierende Batchdatei an. Kann mehrfach vorkommen.|Einmal erforderlich, oder mehrmals, wenn das `BatchFiles`-Element vorhanden ist. Es gibt keinen Standardwert.|  
 |`BatchSeparator`|Gibt das in den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Batchdateien verwendete Batchtrennzeichen an.|Optional einmal pro `SQLServer` Element. Der Standardwert ist GO.|  
 |`AnalysisServices`|Enthält Analyseeinstellungen für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|Optional einmal pro Konfigurationsdatei. Wenn das Element nicht angegeben ist, werden [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbanken nicht analysiert.|  
-|`ASInstance`|Gibt den Namen einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|Erforderlich einmal pro `AnalysisServices` Element. Es gibt keinen Standardwert.|  
+|`ASInstance`|Gibt den Namen einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|Einmal pro `AnalysisServices`-Element erforderlich. Es gibt keinen Standardwert.|  
 |`Databases` für `Analysis Services`-Element|Enthält eine Liste der zu analysierenden Datenbanken.|Optional einmal pro `AnalysisServices` Element. Wenn dieses Element nicht vorhanden ist, werden alle Datenbanken in der Instanz analysiert.|  
 |`Database` für `AnalysisServices`-Element|Gibt den Namen einer zu analysierenden Datenbank an.|Einmal erforderlich, oder mehrmals, wenn das `Databases`-Element vorhanden ist. Wenn ein `Database`-Element den Wert "*" enthält, werden alle Datenbanken in der Instanz analysiert. Es gibt keinen Standardwert.|  
 |`ReportingServices`|Gibt an, dass eine Analyse für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ausgeführt wird.|Optional einmal pro Konfigurationsdatei. Wenn dieses Element nicht angegeben ist, wird [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nicht analysiert.|  
-|`RSInstance`|Gibt den Namen einer Instanz von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Erforderlich einmal pro `ReportingServices` Element. Es gibt keinen Standardwert.|  
+|`RSInstance`|Gibt den Namen einer Instanz von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Einmal pro `ReportingServices`-Element erforderlich. Es gibt keinen Standardwert.|  
 |`IntegrationServices`|Enthält analyseeinstellungen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|Optional einmal pro Konfigurationsdatei. Wenn dieses Element nicht angegeben ist, wird [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nicht analysiert.|  
 |`PackagePath`|Gibt den Pfad eines Satzes von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen an.|Optional einmal pro `IntegrationServices` Element. Wenn dieses Element nicht vorhanden ist, erfolgt die Analyse auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz und kein extern gespeicherte Pakete werden analysiert. Es gibt keinen Standardwert.|  
   
