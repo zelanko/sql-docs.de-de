@@ -14,12 +14,12 @@ ms.assetid: 979ffa7c-3a88-4e70-8cf2-b8d452fd7a7f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c45dc872cd75640f244c55863cdbace607812a38
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 873a16f8e6dcc73b4f2b3da5727d49207252ca63
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815342"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124280"
 ---
 # <a name="compressed-snapshots"></a>Komprimierte Momentaufnahmen
   Das Komprimieren von Momentaufnahmedateien empfiehlt sich, wenn Sie Momentaufnahmen in einem langsamen Netzwerk übertragen, oder wenn Sie große Momentaufnahmen auf einem Wechseldatenträger speichern möchten, die sonst keinen Platz darauf hätten. Das Komprimieren von Momentaufnahmedateien ist in diesen Fällen zwar hilfreich, durch die Komprimierung dauert das Generieren und Anwenden der Momentaufnahme jedoch länger.  
@@ -33,7 +33,7 @@ ms.locfileid: "52815342"
   
  **So komprimieren und übermitteln Sie Momentaufnahmedateien**  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Komprimieren von Momentaufnahmedateien &#40;SQL Server Management Studio&#41;](publish/compress-snapshot-files-sql-server-management-studio.md)  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Komprimieren von Momentaufnahmedateien &#40;SQL Server Management Studio&#41;](snapshot-options.md#compress-snapshot-files)  
   
 -   Replikationsprogrammierung mit [!INCLUDE[tsql](../../includes/tsql-md.md)]: [Konfigurieren von Momentaufnahmeeigenschaften &#40;Replikationsprogrammierung mit Transact-SQL&#41;](publish/configure-snapshot-properties-replication-transact-sql-programming.md)  
   

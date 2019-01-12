@@ -13,12 +13,12 @@ ms.assetid: 7e97197b-ed4d-40d1-9a52-9ab1d92401d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2982dc2825b621248da9f9c29e4aad8ddfc51bd5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c0b0b8236187698917dddd3ca98830add6c3fde9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764392"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129020"
 ---
 # <a name="configure-wmi-to-show-server-status-in-sql-server-tools"></a>Konfigurieren von WMI zum Anzeigen des Serverstatus in SQL Server-Tools
   In diesem Thema wird beschrieben, wie WMI konfiguriert wird, um den Serverstatus in SQL Server-Tools in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] anzuzeigen. Bei der Verbindungsherstellung mit Servern wird von den Komponenten Registrierte Server und Objekt-Explorer von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]sowie auch vom [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager Windows Management Instrumentation (WMI) zum Abrufen des Status der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Dienste (MSSQLSERVER) und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agent-Dienste (MSSQLSERVER) verwendet. Zum Anzeigen des Dienststatus muss der Benutzer über Remotezugriffsrechte für das WMI-Objekt verfügen. Zum Konfigurieren dieser Berechtigung muss auf dem Server WMI installiert sein.  
@@ -37,7 +37,7 @@ ms.locfileid: "52764392"
   
 6.  Fügen Sie zum Feld **Gruppen- oder Benutzernamen** eine Gruppe oder einen Benutzer hinzu, und markieren Sie die Gruppe bzw. den Benutzer.  
   
-7.  In der **Berechtigungen für ***\<Gruppen- oder Benutzername >* wählen Sie im der **zulassen** Spalte für die **Remoteaktivierung** Berechtigung für Benutzer, die Sie Remote möchten erkennen Sie den Dienststatus.  
+7.  In der **Berechtigungen für**_\<Gruppen- oder Benutzername >_ wählen Sie im der **zulassen** Spalte, für die **Remoteaktivierung** Berechtigung , für Benutzer, die Sie Remote möchten der Dienststatus erkannt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Starten, Beenden oder Anhalten des SQL Server-Agent-Dienstes](agent/start-stop-or-pause-the-sql-server-agent-service.md)  

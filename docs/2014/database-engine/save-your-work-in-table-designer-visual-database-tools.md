@@ -14,12 +14,12 @@ ms.assetid: 676e4a9a-be75-44d2-b011-6e7fb921de4a
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 56da0e1bff6811885a2008a0881d52583c24c1ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b6b705f887e0df06684d33fc7be26aa73ff4048
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090292"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130800"
 ---
 # <a name="save-your-work-in-table-designer-visual-database-tools"></a>Speichern Ihrer Arbeit im Tabellen-Designer (Visual Database Tools)
   Sie können Änderungen in Tabellen speichern, die im Tabellen-Designer geöffnet sind.  
@@ -28,7 +28,7 @@ ms.locfileid: "48090292"
   
 1.  Klicken Sie auf eine beliebige Stelle im Tabellen-Designer.  
   
-2.  Von der **Datei** Menü wählen **speichern *** Tablename*.  
+2.  Klicken Sie im Menü **Datei** auf **Speichern**_Tabellenname_.  
   
 3.  Klicken Sie im Dialogfeld **Speichern** auf **Ja** , um die Datenbank zu aktualisieren.  
   

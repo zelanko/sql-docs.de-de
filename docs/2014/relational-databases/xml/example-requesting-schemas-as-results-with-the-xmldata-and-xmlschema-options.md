@@ -13,12 +13,12 @@ ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a2f6a8395db11179d78a6f513890fd307acbd82c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8d0337ea25181ab45426353e69a4f37124aa33bc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352055"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126540"
 ---
 # <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>Beispiel: Anfordern von Schemas als Ergebnisse mithilfe der Optionen XMLDATA und XMLSCHEMA
   Die folgende Abfrage gibt das XML-Datenschema zurück, das die Dokumentstruktur beschreibt.  
@@ -52,7 +52,7 @@ GO
 ```  
   
 > [!NOTE]
->  Das <`Schema`> ist als Namespace deklariert. Damit Namespacekonflikte vermieden werden, wenn mehrere XML-Datenschemas in verschiedenen FOR XML-Abfragen angefordert werden, wird der Namespacebezeichner – in diesem Beispiel `Schema1` – bei jeder Abfrageausführung geändert. Die Namespace-ID setzt sich aus **Schema*n*** zusammen, wobei ***n*** eine ganze Zahl darstellt.  
+>  Das <`Schema`> ist als Namespace deklariert. Damit Namespacekonflikte vermieden werden, wenn mehrere XML-Datenschemas in verschiedenen FOR XML-Abfragen angefordert werden, wird der Namespacebezeichner – in diesem Beispiel `Schema1` – bei jeder Abfrageausführung geändert. Der Namespacebezeichner besteht aus der **Schema_n_** , in denen **_n_** ist eine ganze Zahl.  
   
  Durch Angeben der Option `XMLSCHEMA` können Sie das XSD-Schema für das Ergebnis anfordern.  
   

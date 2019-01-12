@@ -14,35 +14,17 @@ ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2e3422e1fc41069bcb1f5f88c841212b5415cacd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d1a8989492c9efb670b00bda00dbfa757c549fca
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777562"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130270"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>Übermitteln einer Momentaufnahme über FTP
   In diesem Thema wird beschrieben, wie in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]eine Momentaufnahme über FTP bereitgestellt wird.  
   
- **In diesem Thema**  
-  
--   **Vorbereitungen:**  
-  
-     [Einschränkungen](#Restrictions)  
-  
-     [Erforderliche Komponenten](#Prerequisites)  
-  
-     [Sicherheit](#Security)  
-  
--   **So übermitteln Sie eine Momentaufnahme über FTP mit:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
-  
-###  <a name="Restrictions"></a> Einschränkungen  
+##  <a name="Restrictions"></a> Einschränkungen  
   
 -   Der Momentaufnahme-Agent muss Schreibberechtigungen für das angegebene Verzeichnis und der Verteilungs-Agent oder Merge-Agent muss Leseberechtigungen besitzen. Bei Verwendung von Pullabonnements müssen Sie ein freigegebenes Verzeichnis als UNC-Pfad angeben, wie z.B. \\\ftpserver\home\snapshots. Weitere Informationen finden Sie unter [Schützen des Momentaufnahmeordners](../security/secure-the-snapshot-folder.md).  
   
@@ -62,26 +44,16 @@ ms.locfileid: "52777562"
   
 #### <a name="to-specify-ftp-information"></a>So geben Sie FTP-Informationen an  
   
-1.  Aktivieren Sie im Dialogfeld **Veröffentlichungseigenschaften – \<Veröffentlichung>** die Option **Abonnenten das Herunterladen von Momentaufnahmedateien über FTP (File Transfer Protocol) ermöglichen** auf einer der folgenden Seiten:  
-  
-    -   Der Seite **FTP-Momentaufnahme** , für Momentaufnahme- und Transaktionsveröffentlichungen und für Mergeveröffentlichungen bei Verlegern, auf denen niedrigere Versionen als [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]ausgeführt werden.  
-  
-    -   Der Seite **FTP-Momentaufnahme und Internet** , für Mergeveröffentlichungen von Verlegern, auf denen [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder höher ausgeführt wird.  
-  
-2.  Geben Sie Werte für **FTP-Servername**, **Portnummer**, **Pfad des FTP-Stammordners**, **Anmeldename**und **Kennwort**an.  
-  
-     Wenn beispielsweise der FTP-Stammordner \\\ftpserver\home lautet und Momentaufnahmen in \\\ftpserver\home\snapshots gespeichert werden sollen, geben Sie \snapshots\ftp für die Eigenschaft **Pfad des FTP-Stammordners** an (von der Replikation wird beim Erstellen der Momentaufnahmedateien „ftp“ an den Pfad des Momentaufnahmeordners angehängt).  
-  
-3.  Geben Sie an, dass der Momentaufnahme-Agent die Momentaufnahmedateien in das in Schritt 2 angegebene Verzeichnis schreiben soll. Wenn der Momentaufnahme-Agent beispielsweise die Momentaufnahmedateien in das Verzeichnis \\\ftpserver\home\snapshots\ftp schreiben soll, müssen Sie den Pfad \\\ftpserver\home\snapshots an einer von zwei Stellen angeben:  
-  
-    -   Dem Standardspeicherort für Momentaufnahmen für den Verteiler, dem diese Veröffentlichung zugeordnet ist.  
-  
-         Weitere Informationen dazu finden Sie unter [Angeben des standardmäßigen Momentaufnahmespeicherorts &#40;SQL Server Management Studio&#41;](../specify-the-default-snapshot-location-sql-server-management-studio.md).  
-  
-    -   Einem alternativen Speicherort für den Momentaufnahmeordner für diese Veröffentlichung. Ein alternativer Speicherort ist erforderlich, wenn die Momentaufnahme komprimiert wird.  
-  
-         Geben Sie den Pfad im Dialogfeld **Veröffentlichungseigenschaften – \<Veröffentlichung>** auf der Seite „Momentaufnahme“ in das Textfeld **Dateien im folgenden Ordner speichern** ein. Weitere Informationen zu alternativen Speicherorten für Momentaufnahmeordner finden Sie unter [Alternate Snapshot Folder Locations](../alternate-snapshot-folder-locations.md).  
-  
+1.  Aktivieren Sie im Dialogfeld **Veröffentlichungseigenschaften – \<Veröffentlichung>** die Option **Abonnenten das Herunterladen von Momentaufnahmedateien über FTP (File Transfer Protocol) ermöglichen** auf einer der folgenden Seiten:   
+    -   Der Seite **FTP-Momentaufnahme** , für Momentaufnahme- und Transaktionsveröffentlichungen und für Mergeveröffentlichungen bei Verlegern, auf denen niedrigere Versionen als [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]ausgeführt werden.    
+    -   Der Seite **FTP-Momentaufnahme und Internet** , für Mergeveröffentlichungen von Verlegern, auf denen [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder höher ausgeführt wird.    
+2.  Geben Sie Werte für **FTP-Servername**, **Portnummer**, **Pfad des FTP-Stammordners**, **Anmeldename**und **Kennwort**an.    
+     Wenn beispielsweise der FTP-Stammordner \\\ftpserver\home lautet und Momentaufnahmen in \\\ftpserver\home\snapshots gespeichert werden sollen, geben Sie \snapshots\ftp für die Eigenschaft **Pfad des FTP-Stammordners** an (von der Replikation wird beim Erstellen der Momentaufnahmedateien „ftp“ an den Pfad des Momentaufnahmeordners angehängt).    
+3.  Geben Sie an, dass der Momentaufnahme-Agent die Momentaufnahmedateien in das in Schritt 2 angegebene Verzeichnis schreiben soll. Wenn der Momentaufnahme-Agent beispielsweise die Momentaufnahmedateien in das Verzeichnis \\\ftpserver\home\snapshots\ftp schreiben soll, müssen Sie den Pfad \\\ftpserver\home\snapshots an einer von zwei Stellen angeben:    
+    -   Dem Standardspeicherort für Momentaufnahmen für den Verteiler, dem diese Veröffentlichung zugeordnet ist.    
+         Weitere Informationen zum Angeben des standardmäßigen momentaufnahmespeicherorts finden Sie unter [angeben des standardmäßigen Momentaufnahmespeicherorts](../snapshot-options.md#snapshot-folder-locations).    
+    -   Einem alternativen Speicherort für den Momentaufnahmeordner für diese Veröffentlichung. Ein alternativer Speicherort ist erforderlich, wenn die Momentaufnahme komprimiert wird.    
+         Geben Sie den Pfad im Dialogfeld **Veröffentlichungseigenschaften – \<Veröffentlichung>** auf der Seite „Momentaufnahme“ in das Textfeld **Dateien im folgenden Ordner speichern** ein.   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
@@ -89,16 +61,11 @@ ms.locfileid: "52777562"
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-snapshot-or-transactional-publication"></a>So aktivieren Sie die FTP-Momentaufnahmeübermittlung für eine Momentaufnahme- oder Transaktionsveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Geben Sie **@publication**, einen Wert von `true` für **@enabled_for_internet**, und entsprechende Werte für die folgenden Parameter:  
-  
-    -   **@ftp_address** &ndash; die Adresse des FTP-Servers, der für die Übermittlung der Momentaufnahme verwendet wird.  
-  
-    -   (Optional) **@ftp_port** &ndash; der vom FTP-Server verwendete Port.  
-  
-    -   (Optional) **@ftp_subdirectory** &ndash; das Unterverzeichnis des einer FTP-Anmeldung zugewiesenen Standard-FTP-Verzeichnisses. Wenn beispielsweise der FTP-Stammordner \\\ftpserver\home lautet und Momentaufnahmen in \\\ftpserver\home\snapshots gespeichert werden sollen, geben Sie **\snapshots\ftp** für **@ftp_subdirectory** an (von der Replikation wird beim Erstellen der Momentaufnahmedateien „ftp“ an den Pfad des Momentaufnahmeordners angehängt).  
-  
-    -   (Optional) **@ftp_login** &ndash; das Anmeldekonto, das beim Herstellen einer Verbindung mit dem FTP-Server verwendet wird.  
-  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Geben Sie **@publication**, einen Wert von `true` für **@enabled_for_internet**, und entsprechende Werte für die folgenden Parameter:    
+    -   **@ftp_address** &ndash; die Adresse des FTP-Servers, der für die Übermittlung der Momentaufnahme verwendet wird.    
+    -   (Optional) **@ftp_port** &ndash; der vom FTP-Server verwendete Port.    
+    -   (Optional) **@ftp_subdirectory** &ndash; das Unterverzeichnis des einer FTP-Anmeldung zugewiesenen Standard-FTP-Verzeichnisses. Wenn beispielsweise der FTP-Stammordner \\\ftpserver\home lautet und Momentaufnahmen in \\\ftpserver\home\snapshots gespeichert werden sollen, geben Sie **\snapshots\ftp** für **@ftp_subdirectory** an (von der Replikation wird beim Erstellen der Momentaufnahmedateien „ftp“ an den Pfad des Momentaufnahmeordners angehängt).    
+    -   (Optional) **@ftp_login** &ndash; das Anmeldekonto, das beim Herstellen einer Verbindung mit dem FTP-Server verwendet wird.    
     -   (Optional) **@ftp_password** &ndash; das Kennwort für die FTP-Anmeldung.  
   
      Dadurch wird eine Veröffentlichung erstellt, die FTP verwendet. Weitere Informationen finden Sie unter [Create a Publication](create-a-publication.md).  
@@ -107,14 +74,10 @@ ms.locfileid: "52777562"
   
 1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)aus. Geben Sie **@publication**, einen Wert von `true` für **@enabled_for_internet** und entsprechende Werte für die folgenden Parameter:  
   
-    -   **@ftp_address** &ndash; die Adresse des FTP-Servers, der für die Übermittlung der Momentaufnahme verwendet wird.  
-  
-    -   (Optional) **@ftp_port** &ndash; der vom FTP-Server verwendete Port.  
-  
-    -   (Optional) **@ftp_subdirectory** &ndash; das Unterverzeichnis des einer FTP-Anmeldung zugewiesenen Standard-FTP-Verzeichnisses. Wenn beispielsweise der FTP-Stammordner \\\ftpserver\home lautet und Momentaufnahmen in \\\ftpserver\home\snapshots gespeichert werden sollen, geben Sie **\snapshots\ftp** für **@ftp_subdirectory** an (von der Replikation wird beim Erstellen der Momentaufnahmedateien „ftp“ an den Pfad des Momentaufnahmeordners angehängt).  
-  
-    -   (Optional) **@ftp_login** &ndash; das Anmeldekonto, das beim Herstellen einer Verbindung mit dem FTP-Server verwendet wird.  
-  
+    -   **@ftp_address** &ndash; die Adresse des FTP-Servers, der für die Übermittlung der Momentaufnahme verwendet wird.    
+    -   (Optional) **@ftp_port** &ndash; der vom FTP-Server verwendete Port.    
+    -   (Optional) **@ftp_subdirectory** &ndash; das Unterverzeichnis des einer FTP-Anmeldung zugewiesenen Standard-FTP-Verzeichnisses. Wenn beispielsweise der FTP-Stammordner \\\ftpserver\home lautet und Momentaufnahmen in \\\ftpserver\home\snapshots gespeichert werden sollen, geben Sie **\snapshots\ftp** für **@ftp_subdirectory** an (von der Replikation wird beim Erstellen der Momentaufnahmedateien „ftp“ an den Pfad des Momentaufnahmeordners angehängt).    
+    -   (Optional) **@ftp_login** &ndash; das Anmeldekonto, das beim Herstellen einer Verbindung mit dem FTP-Server verwendet wird.    
     -   (Optional) **@ftp_password** &ndash; das Kennwort für die FTP-Anmeldung.  
   
      Dadurch wird eine Veröffentlichung erstellt, die FTP verwendet. Weitere Informationen finden Sie unter [Create a Publication](create-a-publication.md).  
@@ -129,46 +92,32 @@ ms.locfileid: "52777562"
   
 #### <a name="to-create-a-pull-subscription-to-a-merge-publication-that-uses-ftp-snapshot-delivery"></a>So erstellen Sie ein Pullabonnement für eine Mergeveröffentlichung, die FTP-Momentaufnahmeübermittlung verwendet  
   
-1.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)aus. Geben Sie **@publisher** und **@publication**eine Momentaufnahme über FTP bereitgestellt wird.  
-  
-2.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)aus. Geben Sie **@publisher**, **@publisher_db**, **@publication**, die unter dem der Verteilungs-Agent auf dem Abonnenten ausgeführt, für die wird Windows-Anmeldeinformationen **@job_login** und **@job_password**, und den Wert `true` für **@use_ftp**.  
-  
+1.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)aus. Geben Sie **@publisher** und **@publication**eine Momentaufnahme über FTP bereitgestellt wird.   
+2.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)aus. Geben Sie **@publisher**, **@publisher_db**, **@publication**, die unter dem der Verteilungs-Agent auf dem Abonnenten ausgeführt, für die wird Windows-Anmeldeinformationen **@job_login** und **@job_password**, und den Wert `true` für **@use_ftp**.    
 3.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql) aus, um das Pullabonnement zu registrieren. Weitere Informationen finden Sie unter [Create a Pull Subscription](../create-a-pull-subscription.md).  
   
 #### <a name="to-change-one-or-more-ftp-snapshot-delivery-settings-for-a-snapshot-or-transactional-publication"></a>So ändern Sie eine oder mehrere Einstellungen der FTP-Momentaufnahmeübermittlung für eine Momentaufnahme- oder Transaktionsveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)aus. Geben Sie einen der folgenden Werte für **@property** und einen neuen Wert für diese Einstellung für **@value**an:  
-  
-    -   `ftp_address` &ndash; die Adresse des FTP-Servers, der für die Übermittlung der Momentaufnahme verwendet wird.  
-  
-    -   `ftp_port` &ndash; der vom FTP-Server verwendete Port.  
-  
-    -   `ftp_subdirectory` &ndash; das Unterverzeichnis des einer FTP-Anmeldung zugewiesenen Standard-FTP-Verzeichnisses.  
-  
-    -   `ftp_login` &ndash; der Anmeldenamen, der zum Herstellen einer Verbindung mit dem FTP-Server verwendet wird.  
-  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)aus. Geben Sie einen der folgenden Werte für **@property** und einen neuen Wert für diese Einstellung für **@value**an:    
+    -   `ftp_address` &ndash; die Adresse des FTP-Servers, der für die Übermittlung der Momentaufnahme verwendet wird.    
+    -   `ftp_port` &ndash; der vom FTP-Server verwendete Port.    
+    -   `ftp_subdirectory` &ndash; das Unterverzeichnis des einer FTP-Anmeldung zugewiesenen Standard-FTP-Verzeichnisses.    
+    -   `ftp_login` &ndash; der Anmeldenamen, der zum Herstellen einer Verbindung mit dem FTP-Server verwendet wird.    
     -   `ftp_password` &ndash; das Kennwort für die FTP-Anmeldung.  
   
-2.  (Optional) Wiederholen Sie Schritt 1 für jede zu ändernde FTP-Einstellung.  
-  
+2.  (Optional) Wiederholen Sie Schritt 1 für jede zu ändernde FTP-Einstellung.    
 3.  (Optional) Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) aus, um die FTP-Momentaufnahmeübermittlung zu deaktivieren. Geben Sie den Wert `enabled_for_internet` für **@property** und den Wert `false` für **@value**.  
   
 #### <a name="to-change-ftp-snapshot-delivery-settings-for-a-merge-publication"></a>So ändern Sie die Einstellungen der FTP-Momentaufnahmeübermittlung für eine Mergeveröffentlichung  
   
 1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)aus. Geben Sie einen der folgenden Werte für **@property** und einen neuen Wert für diese Einstellung für **@value**an:  
   
-    -   `ftp_address` &ndash; die Adresse des FTP-Servers, der für die Übermittlung der Momentaufnahme verwendet wird.  
-  
-    -   `ftp_port` &ndash; der vom FTP-Server verwendete Port.  
-  
-    -   `ftp_subdirectory` &ndash; das Unterverzeichnis des einer FTP-Anmeldung zugewiesenen Standard-FTP-Verzeichnisses.  
-  
-    -   `ftp_login` &ndash; der Anmeldenamen, der zum Herstellen einer Verbindung mit dem FTP-Server verwendet wird.  
-  
-    -   `ftp_password` &ndash; das Kennwort für die FTP-Anmeldung.  
-  
-2.  (Optional) Wiederholen Sie Schritt 1 für jede zu ändernde FTP-Einstellung.  
-  
+    -   `ftp_address` &ndash; die Adresse des FTP-Servers, der für die Übermittlung der Momentaufnahme verwendet wird.    
+    -   `ftp_port` &ndash; der vom FTP-Server verwendete Port.    
+    -   `ftp_subdirectory` &ndash; das Unterverzeichnis des einer FTP-Anmeldung zugewiesenen Standard-FTP-Verzeichnisses.   
+    -   `ftp_login` &ndash; der Anmeldenamen, der zum Herstellen einer Verbindung mit dem FTP-Server verwendet wird.    
+    -   `ftp_password` &ndash; das Kennwort für die FTP-Anmeldung.    
+2.  (Optional) Wiederholen Sie Schritt 1 für jede zu ändernde FTP-Einstellung.    
 3.  (Optional) Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) aus, um die FTP-Momentaufnahmeübermittlung zu deaktivieren. Geben Sie den Wert `enabled_for_internet` für **@property** und den Wert `false` für **@value**.  
   
 ###  <a name="TsqlExample"></a> Beispiele (Transact-SQL)  

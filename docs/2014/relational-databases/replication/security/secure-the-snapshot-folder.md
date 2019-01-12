@@ -12,12 +12,12 @@ ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cb3aa18f17219f46bc5ce6f3d25af7d4bd29c4d9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f3612a8b2006978a8098a406a6557d6c9f0f1f7f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753952"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127800"
 ---
 # <a name="secure-the-snapshot-folder"></a>Sichern des Momentaufnahmeordners
   Der Momentaufnahmeordner ist ein Verzeichnis, in dem Momentaufnahmedateien gespeichert werden. Es empfiehlt sich, dieses Verzeichnis zum Speichern von Momentaufnahmen zu reservieren. Gewähren Sie dem Momentaufnahme-Agent Schreibzugriff auf den Ordner, und stellen Sie sicher, dass nur das Windows-Konto Leseberechtigung erhält, das der Merge-Agent bzw. der Verteilungs-Agent für den Zugriff auf den Ordner verwendet. Das dem Agent zugeordnete Windows-Konto muss ein Domänenkonto sein, damit auf den Momentaufnahmeordner zugegriffen werden kann, der sich auf einem Remotecomputer befindet.  
@@ -54,7 +54,7 @@ ms.locfileid: "52753952"
  [Alternative Speicherorte für Momentaufnahmeordner](../alternate-snapshot-folder-locations.md)   
  [Initialisieren eines Abonnements mit einer Momentaufnahme](../initialize-a-subscription-with-a-snapshot.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Sicherheit und Schutz &#40;Replikation&#41;](security-and-protection-replication.md)   
+ [Sicherheit von SQL Server-Replikation](view-and-modify-replication-security-settings.md)   
  [Übertragen von Momentaufnahmen über FTP](../transfer-snapshots-through-ftp.md)  
   
   

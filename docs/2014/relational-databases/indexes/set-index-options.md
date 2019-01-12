@@ -23,12 +23,12 @@ ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a9feaa3be20692b89b0d0568f1ccacc49c992667
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 24587f27710381ac787fe8045029df681e401af5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408279"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130190"
 ---
 # <a name="set-index-options"></a>Festlegen von Indexoptionen
   In diesem Thema wird beschrieben, wie die Eigenschaften eines Indexes in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]geändert werden.  
@@ -78,7 +78,7 @@ ms.locfileid: "52408279"
   
 7.  Klicken Sie auf **Schließen**.  
   
-8.  Klicken Sie im Menü **Datei** auf **Speichern***Tabellenname*.  
+8.  Klicken Sie im Menü **Datei** auf **Speichern**_table_name_.  
   
 #### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>So ändern Sie die Eigenschaften eines Indexes in Objekt-Explorer  
   
@@ -96,13 +96,13 @@ ms.locfileid: "52408279"
   
 7.  Ändern Sie die Einstellungen beliebiger oder aller Eigenschaften, um den Index anzupassen.  
   
-8.  Zum Hinzufügen, Entfernen oder Ändern der Position einer Indexspalte wählen Sie im Dialogfeld **Indexeigenschaften –**  **Allgemein** *Allgemein* aus. Weitere Informationen finden Sie unter [Index Properties F1 Help](index-properties-f1-help.md).  
+8.  Zum Hinzufügen, Entfernen oder Ändern der Position einer Indexspalte wählen Sie im Dialogfeld **Indexeigenschaften –**  **Allgemein** _Allgemein_ aus. Weitere Informationen finden Sie unter [Index Properties F1 Help](index-properties-f1-help.md).  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-see-the-properties-of-all-the-indexes-in-a-table"></a>So sehen Sie die Eigenschaften aller Indizes in einer Tabelle  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "52408279"
   
 #### <a name="to-set-the-properties-of-an-index"></a>So stellen Sie die Eigenschaften eines Indexes ein  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

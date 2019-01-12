@@ -12,12 +12,12 @@ ms.assetid: c3dd3109-abf3-4b38-a4e9-ef48d0235656
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 15f4c7759404c0c904f17819f0a8eb750588777e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fc4e2ecd81b6bf0a6c24aff8e89dc31c95e04625
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758912"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126080"
 ---
 # <a name="mssqleng014150"></a>MSSQL_ENG014150
     
@@ -48,7 +48,7 @@ ms.locfileid: "52758912"
 -   Aufträge zur Replikationswartung.  
   
 ## <a name="user-action"></a>Benutzeraktion  
- Der Protokolllese-Agent, der Warteschlangenlese-Agent und der Verteilungs-Agent werden normalerweise kontinuierlich ausgeführt. Die anderen Agents werden hingegen bei Bedarf oder nach einem Zeitplan ausgeführt. Wenn Sie nicht erwarten, dass ein Agent zu Ende ausgeführt wurde, überprüfen Sie den Status des Agents. Weitere Informationen finden Sie unter [Monitor Replication Agents](agents/replication-agents.md).  
+ Der Protokolllese-Agent, der Warteschlangenlese-Agent und der Verteilungs-Agent werden normalerweise kontinuierlich ausgeführt. Die anderen Agents werden hingegen bei Bedarf oder nach einem Zeitplan ausgeführt. Wenn Sie nicht erwarten, dass ein Agent zu Ende ausgeführt wurde, überprüfen Sie den Status des Agents. Weitere Informationen finden Sie unter [Monitor Replication Agents](agents/replication-agents-overview.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Replikations-Agentverwaltung](agents/replication-agent-administration.md)   

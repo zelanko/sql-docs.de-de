@@ -1,5 +1,5 @@
 ---
-title: Überprüfen von Daten auf dem Abonnenten | Microsoft-Dokumentation
+title: Überprüfen von replizierten Daten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,29 @@ ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b8829bb1a585c61bfa1a8ad0a088d23e8573bace
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d8698ef84d74c98d02f0a8df0d59077fe0c7ac7b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816882"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131190"
 ---
-# <a name="validate-data-at-the-subscriber"></a>Überprüfen der Daten am Abonnenten
+# <a name="validate-replicated-data"></a>Überprüfen von replizierten Daten
   In diesem Thema wird beschrieben, wie Daten beim Abonnenten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) überprüft werden.  
+
+  Bei der Transaktions- und der Mergereplikation können Sie überprüfen, ob die Daten auf dem Abonnenten mit denen auf dem Verleger übereinstimmen. Die Überprüfung kann für bestimmte Abonnements oder für alle Abonnements für eine Veröffentlichung ausgeführt werden. Geben Sie einen der folgenden Überprüfungstypen an. Bei der nächsten Ausführung des Verteilungs-Agents oder des Merge-Agents werden die Daten dann überprüft:  
+  
+-   **Nur Zeilenanzahl**. Bei diesem Typ wird lediglich überprüft, ob die Tabelle auf dem Abonnenten dieselbe Zeilenanzahl besitzt wie die Tabelle auf dem Verleger. Der Inhalt der Zeilen wird nicht geprüft. Die Überprüfung der Zeilenanzahl bietet einen Überprüfungsansatz, der kaum Ressourcen beansprucht und Sie Probleme bei den Daten erkennen lässt.    
+-   **Row Count und binäre Prüfsumme**. Bei dieser Form der Überprüfung wird zusätzlich zum Vergleich der Zeilenanzahl auf dem Verleger und dem Abonnenten mithilfe des Prüfsummenalgorithmus eine Prüfsumme aller Daten berechnet. Ist die Zeilenanzahl fehlerhaft, wird die Berechnung der Prüfsumme nicht ausgeführt.  
+  
+ Bei der Mergereplikation kann außer der Übereinstimmung der Daten auf dem Abonnenten und dem Verleger auch überprüft werden, ob die Daten auf den einzelnen Abonnenten richtig partitioniert sind. Weitere Informationen finden Sie unter [Überprüfen von Partitionsinformationen für einen Mergeabonnenten](validate-partition-information-for-a-merge-subscriber.md).  
+
+## <a name="how-data-validation-works"></a>Funktionsweise der Datenüberprüfung  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überprüft Daten, indem es auf dem Verleger die Zeilenanzahl bzw. eine Prüfsumme berechnet und dann diese Werte mit der für den Abonnenten berechneten Zeilenanzahl bzw. Prüfsumme vergleicht. Bei der Berechnung der Prüfsumme wird ein Wert für die gesamte Veröffentlichungstabelle und ein Wert für die gesamte Abonnementtabelle berechnet (die Daten in der `text`-, `ntext`- bzw. `image`-Spalte fließen nicht mit ein).  
+  
+ Während diese Berechnungen ausgeführt werden, werden die Tabellen, deren Zeilenanzahl bzw. Prüfsumme berechnet wird, vorübergehend für den gemeinsamen Zugriff gesperrt. Diese Berechnungen dauern aber nicht lange, sodass die Sperren meist schon innerhalb weniger Sekunden wieder aufgehoben werden.  
+  
+ Bei der Überprüfung anhand von binären Prüfsummen werden nicht die physischen Zeilen auf der Datenseite, sondern die einzelnen Spalten einer 32-Bit-Redundanzüberprüfung (Redundancy Check, CRC) unterzogen. Dadurch können die Spalten mit der Tabelle in einer beliebigen physischen Reihenfolge auf der Datenseite dargestellt werden, es wird aber trotzdem dieselbe CRC für die Zeile berechnet. Die Überprüfung anhand von binären Prüfsummen kann verwendet werden, wenn Zeilen- oder Spaltenfilter auf die Veröffentlichung angewendet wurden.  
   
  Der Prozess der Datenüberprüfung besteht aus drei Teilen:  
   
@@ -34,273 +48,226 @@ ms.locfileid: "52816882"
   
 3.  Anzeigen der Überprüfungsergebnisse:  
   
-    -   In den Detailfenstern im Replikationsmonitor auf der Registerkarte **Verlauf Verteiler zu Abonnent** für die Transaktionsreplikation und auf der Registerkarte **Synchronisierungsverlauf** für die Mergereplikation.  
+    -  In den Detailfenstern im Replikationsmonitor auf der Registerkarte **Verlauf Verteiler zu Abonnent** für die Transaktionsreplikation und auf der Registerkarte **Synchronisierungsverlauf** für die Mergereplikation.    
+    -  Im Dialogfeld **Synchronisierungsstatus anzeigen** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-    -   Im Dialogfeld **Synchronisierungsstatus anzeigen** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+
+
   
- **In diesem Thema**  
+## <a name="considerations-and-restrictions"></a>Wichtige Aspekte und Einschränkungen  
   
--   **Vorbereitungen:**  
-  
-     [Einschränkungen](#Restrictions)  
-  
--   **So prüfen Sie Daten beim Abonnenten mit:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
-  
-###  <a name="Restrictions"></a> Einschränkungen  
-  
--   Die Prozeduren für den Replikationsmonitor sind nur für Pushabonnements geeignet, da Pullabonnements im Replikationsmonitor nicht synchronisiert werden können. Sie können ein Abonnement jedoch für die Überprüfung markieren und die Überprüfungsergebnisse für Pullabonnements im Replikationsmonitor anzeigen.  
-  
+-   Die Prozeduren für den Replikationsmonitor sind nur für Pushabonnements geeignet, da Pullabonnements im Replikationsmonitor nicht synchronisiert werden können. Sie können ein Abonnement jedoch für die Überprüfung markieren und die Überprüfungsergebnisse für Pullabonnements im Replikationsmonitor anzeigen.    
 -   In den Überprüfungsergebnissen wird angezeigt, ob die Überprüfung erfolgreich war oder fehlgeschlagen ist, es wird jedoch nicht angegeben, in welchen Zeilen die Überprüfung beim Auftreten eines Fehlers fehlgeschlagen ist. Verwenden Sie das Hilfsprogramm [tablediff Utility](../../tools/tablediff-utility.md), um die Daten auf dem Verleger und auf dem Abonnenten zu vergleichen. Informationen zum Verwenden dieses Hilfsprogramms finden Sie unter [Überprüfen replizierter Tabellen auf Unterschiede &#40;Replikationsprogrammierung&#41;](administration/compare-replicated-tables-for-differences-replication-programming.md).  
+ 
+Bedenken Sie im Zusammenhang mit dem Überprüfen von Daten Folgendes:  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+-   Vor dem Überprüfen von Daten müssen Sie sämtliche Updateaktivitäten auf den Abonnenten beenden (die Aktivitäten auf dem Verleger müssen für die Überprüfung nicht beendet werden).    
+-   Weil Prüfsummen und binäre Prüfsummen beim Überprüfen eines großen Datensatzes große Mengen der Prozessorressourcen benötigen, sollten Sie die Überprüfung so planen, dass sie zum Zeitpunkt der niedrigsten Aktivität auf den Servern ausgeführt wird, die für die Replikation verwendet werden.    
+-   Die Replikation überprüft lediglich Tabellen. Ein Abgleich reiner Schemaartikel (wie z. B. gespeicherter Prozeduren) auf dem Verleger und dem Abonnenten erfolgt nicht.    
+-   Binäre Prüfsummen können für jede veröffentlichte Tabelle verwendet werden. Die Prüfsumme kann jedoch keine Tabellen mit Spaltenfiltern bzw. logische Tabellenstrukturen überprüfen, bei denen sich die Spaltenoffsets unterscheiden (Ursache dafür sind ALTER TABLE-Anweisungen, die Spalten löschen oder hinzufügen).    
+-   Überprüfung der Replikation verwendet die `checksum` und **Binary_checksum** Funktionen. Informationen zum Verhalten finden Sie unter [CHECKSUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/checksum-transact-sql) und [BINARY_CHECKSUM  &#40;Transact-SQL&#41;](/sql/t-sql/functions/binary-checksum-transact-sql).  
   
-#### <a name="to-validate-data-for-subscriptions-to-a-transactional-publication-management-studio"></a>So überprüfen Sie Daten für Abonnements einer Transaktionsveröffentlichung (Management Studio)  
+-   Die Überprüfung durch binäre Prüfsummen oder Prüfsummen kann dann fälschlicherweise einen Fehler ausgeben, wenn auf dem Abonnenten andere Datentypen vorhanden sind als auf dem Verleger. Dieser Fall kann eintreten, wenn Sie eine der folgenden Aufgaben ausführen:    
+    -   Sie legen explizit Schemaoptionen zum Zuordnen von Datentypen für frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fest.    
+    -   Sie legen den Veröffentlichungskompatibilitätsgrad für eine Mergeveröffentlichung auf eine frühere Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fest, und veröffentlichte Tabellen enthalten mindestens einen Datentyp, der für diese Version zugeordnet werden muss.    
+    -   Sie initialisieren ein Abonnement manuell und verwenden auf dem Abonnenten andere Datentypen.    
+-   Bei der Transaktionsreplikation werden Überprüfungen mithilfe der binären Prüfsumme bzw. der Prüfsumme für transformierbare Abonnements nicht unterstützt.   
+-   Bei Daten, die auf Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten repliziert wurden, kann keine solche Überprüfung stattfinden.  
+
+## <a name="data-validation-results"></a>Ergebnisse der Datenüberprüfung  
+ Nach abgeschlossener Überprüfung protokolliert der Verteilungs-Agent bzw. der Merge-Agent Meldungen zum Erfolg bzw. Misserfolg der Überprüfung (die Replikation vermerkt nicht, bei welchen Zeilen das Ergebnis negativ war). Diese Meldungen können in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], im Replikationsmonitor und in den Replikationssystemtabellen angezeigt werden. Im oben aufgeführten Themen zur Vorgehensweise wird erläutert, wie Sie die Überprüfung ausführen und die Ergebnisse anzeigen können.  
   
-1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit dem Verleger her, und erweitern Sie dann den Serverknoten.  
+ Bei negativem Überprüfungsergebnis sollten folgende Punkte bedacht werden:  
   
-2.  Erweitern Sie den Ordner **Replikation** , und erweitern Sie dann den Ordner **Lokale Veröffentlichungen** .  
+-   Konfigurieren Sie die replikationswarnung **Replikation: Abonnenten Fehler bei der datenüberprüfung** , damit Sie den Fehler benachrichtigt werden. Weitere Informationen finden Sie unter [Konfigurieren von vordefinierten Replikationswarnungen &#40;SQL Server Management Studio & #41(administration/configure-predefined-replication-alerts-sql-server-management-studio.md).  
   
-3.  Klicken Sie mit der rechten Maustaste auf die Veröffentlichung, deren Abonnements Sie überprüfen möchten, und klicken Sie dann auf **Abonnements überprüfen**.  
+-   Ist ein negatives Überprüfungsergebnis ein Problem für Ihre Anwendung? Falls ja, aktualisieren Sie die Daten manuell, damit sie synchronisiert sind, oder initialisieren Sie das Abonnement erneut:  
   
-4.  Wählen Sie im Dialogfeld **Abonnements überprüfen** die zu überprüfenden Abonnements aus:  
+    -   Daten können mit dem [Hilfsprogramm "tablediff"](../../tools/tablediff-utility.md)aktualisiert werden. Weitere Informationen zum Verwenden dieses Hilfsprogramms finden Sie unter [Überprüfen replizierter Tabellen auf Unterschiede &#40;Replikationsprogrammierung&#41;](administration/compare-replicated-tables-for-differences-replication-programming.md).  
   
-    -   Wählen Sie **Alle SQL Server-Abonnements überprüfen**aus.  
+    -   Weitere Informationen zur erneuten Initialisierung finden Sie unter [Erneutes Initialisieren von Abonnements](reinitialize-subscriptions.md).   
+ 
   
-    -   Wählen Sie **Folgende Abonnements überprüfen**aus, und wählen Sie dann ein oder mehrere Abonnements aus.  
+## <a name="articles-in-transactional-replication"></a>Artikel in der Transaktionsreplikation 
+
+### <a name="using-sql-server-management-studio"></a>Verwendung von SQL Server Management Studio  
   
-5.  Um den Typ der durchzuführenden Überprüfung (Zeilenanzahl oder Zeilenanzahl und Prüfsumme) anzugeben, klicken Sie auf **Überprüfungsoptionen**, und geben Sie dann im Dialogfeld **Optionen für die Abonnementüberprüfung** die gewünschten Optionen an.  
   
+1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit dem Verleger her, und erweitern Sie dann den Serverknoten.    
+2.  Erweitern Sie den Ordner **Replikation** , und erweitern Sie dann den Ordner **Lokale Veröffentlichungen** .    
+3.  Klicken Sie mit der rechten Maustaste auf die Veröffentlichung, deren Abonnements Sie überprüfen möchten, und klicken Sie dann auf **Abonnements überprüfen**.    
+4.  Wählen Sie im Dialogfeld **Abonnements überprüfen** die zu überprüfenden Abonnements aus:    
+    -   Wählen Sie **Alle SQL Server-Abonnements überprüfen**aus.    
+    -   Wählen Sie **Folgende Abonnements überprüfen**aus, und wählen Sie dann ein oder mehrere Abonnements aus.    
+5.  Um den Typ der durchzuführenden Überprüfung (Zeilenanzahl oder Zeilenanzahl und Prüfsumme) anzugeben, klicken Sie auf **Überprüfungsoptionen**, und geben Sie dann im Dialogfeld **Optionen für die Abonnementüberprüfung** die gewünschten Optionen an.    
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-7.  Zeigen Sie die Überprüfungsergebnisse Im Replikationsmonitor oder im Dialogfeld **Synchronisierungsstatus anzeigen** an: Führen Sie für jedes Abonnement folgende Vorgänge aus:  
-  
-    1.  Erweitern Sie die Veröffentlichung, klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Synchronisierungsstatus anzeigen**.  
-  
+7.  Zeigen Sie die Überprüfungsergebnisse Im Replikationsmonitor oder im Dialogfeld **Synchronisierungsstatus anzeigen** an: Führen Sie für jedes Abonnement folgende Vorgänge aus:    
+    1.  Erweitern Sie die Veröffentlichung, klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Synchronisierungsstatus anzeigen**.    
     2.  Wenn der Agent nicht ausgeführt wird, klicken Sie im Dialogfeld **Synchronisierungsstatus anzeigen** auf **Start** . Im Dialogfeld werden Meldungen mit Informationen zur Überprüfung angezeigt.  
   
      Wenn keine Meldungen bezüglich der Überprüfung angezeigt werden, hat der Agent bereits eine nachfolgende Meldung protokolliert. Zeigen Sie die Überprüfungsergebnisse in diesem Fall im Replikationsmonitor an. Weitere Informationen finden Sie in den Prozeduren zu den Verfahrensweisen im Replikationsmonitor in diesem Thema.  
+
+### <a name="using-transact-sql-t-sql"></a>Mithilfe von Transact-SQL (T-SQL)
+
+#### <a name="all-articles"></a>Alle Artikel
   
-#### <a name="to-validate-data-for-a-single-subscription-to-a-merge-publication-management-studio"></a>So überprüfen Sie Daten für ein einzelnes Abonnement für eine Mergeveröffentlichung (Management Studio)  
-  
-1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit dem Verleger her, und erweitern Sie dann den Serverknoten.  
-  
-2.  Erweitern Sie den Ordner **Replikation** , und erweitern Sie dann den Ordner **Lokale Veröffentlichungen** .  
-  
-3.  Erweitern Sie die Veröffentlichung, für die Sie Abonnements überprüfen möchten, klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Abonnement überprüfen**.  
-  
-4.  Wählen Sie im Dialogfeld **Abonnement überprüfen** die Option **Dieses Abonnement überprüfen**aus.  
-  
-5.  Um den Typ der durchzuführenden Überprüfung (Zeilenanzahl oder Zeilenanzahl und Prüfsumme) anzugeben, klicken Sie auf **Optionen**, und geben Sie dann im Dialogfeld **Optionen für die Abonnementüberprüfung** die gewünschten Optionen an.  
-  
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
-7.  Zeigen Sie die Überprüfungsergebnisse Im Replikationsmonitor oder im Dialogfeld **Synchronisierungsstatus anzeigen** an:  
-  
-    1.  Erweitern Sie die Veröffentlichung, klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Synchronisierungsstatus anzeigen**.  
-  
-    2.  Wenn der Agent nicht ausgeführt wird, klicken Sie im Dialogfeld **Synchronisierungsstatus anzeigen** auf **Start** . Im Dialogfeld werden Meldungen mit Informationen zur Überprüfung angezeigt.  
-  
-     Wenn keine Meldungen bezüglich der Überprüfung angezeigt werden, hat der Agent bereits eine nachfolgende Meldung protokolliert. Zeigen Sie die Überprüfungsergebnisse in diesem Fall im Replikationsmonitor an. Weitere Informationen finden Sie in den Prozeduren zu den Verfahrensweisen im Replikationsmonitor in diesem Thema.  
-  
-#### <a name="to-validate-data-for-all-subscriptions-to-a-merge-publication-management-studio"></a>So überprüfen Sie Daten für Abonnements einer Mergeveröffentlichung (Management Studio)  
-  
-1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit dem Verleger her, und erweitern Sie dann den Serverknoten.  
-  
-2.  Erweitern Sie den Ordner **Replikation** , und erweitern Sie dann den Ordner **Lokale Veröffentlichungen** .  
-  
-3.  Klicken Sie mit der rechten Maustaste auf die Veröffentlichung, deren Abonnements Sie überprüfen möchten, und klicken Sie dann auf **Alle Abonnements überprüfen**.  
-  
-4.  Geben Sie im Dialogfeld **Alle Abonnements überprüfen** den Typ der durchzuführenden Überprüfung (Zeilenanzahl oder Zeilenanzahl und Prüfsumme) an.  
-  
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
-6.  Zeigen Sie die Überprüfungsergebnisse Im Replikationsmonitor oder im Dialogfeld **Synchronisierungsstatus anzeigen** an: Führen Sie für jedes Abonnement folgende Vorgänge aus:  
-  
-    1.  Erweitern Sie die Veröffentlichung, klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Synchronisierungsstatus anzeigen**.  
-  
-    2.  Wenn der Agent nicht ausgeführt wird, klicken Sie im Dialogfeld **Synchronisierungsstatus anzeigen** auf **Start** . Im Dialogfeld werden Meldungen mit Informationen zur Überprüfung angezeigt.  
-  
-     Wenn keine Meldungen bezüglich der Überprüfung angezeigt werden, hat der Agent bereits eine nachfolgende Meldung protokolliert. Zeigen Sie die Überprüfungsergebnisse in diesem Fall im Replikationsmonitor an. Weitere Informationen finden Sie in den Prozeduren zu den Verfahrensweisen im Replikationsmonitor in diesem Thema.  
-  
-#### <a name="to-validate-data-for-all-push-subscriptions-to-a-transactional-publication-replication-monitor"></a>So überprüfen Sie die Daten aller Pushabonnements einer Transaktionsveröffentlichung (Replikationsüberwachung)  
-  
-1.  Erweitern Sie im Replikationsmonitor im linken Bereich eine Verlegergruppe, und erweitern Sie dann einen Verleger.  
-  
-2.  Klicken Sie mit der rechten Maustaste auf die Veröffentlichung, deren Abonnements Sie überprüfen möchten, und klicken Sie dann auf **Abonnements überprüfen**.  
-  
-3.  Wählen Sie im Dialogfeld **Abonnements überprüfen** die zu überprüfenden Abonnements aus:  
-  
-    -   Wählen Sie **Alle SQL Server-Abonnements überprüfen**aus.  
-  
-    -   Wählen Sie **Folgende Abonnements überprüfen**aus, und wählen Sie dann ein oder mehrere Abonnements aus.  
-  
-4.  Um den Typ der durchzuführenden Überprüfung (Zeilenanzahl oder Zeilenanzahl und Prüfsumme) anzugeben, klicken Sie auf **Überprüfungsoptionen**, und geben Sie dann im Dialogfeld **Optionen für die Abonnementüberprüfung** die gewünschten Optionen an.  
-  
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
-6.  Klicken Sie auf die Registerkarte **Alle Abonnements** .  
-  
-7.  Zeigen Sie die Überprüfungsergebnisse an. Führen Sie für jedes Pushabonnement folgende Vorgänge aus:  
-  
-    1.  Wenn der Agent nicht ausgeführt wird, klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Synchronisierung starten**.  
-  
-    2.  Klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Details anzeigen**.  
-  
-    3.  Zeigen Sie die Informationen auf der Registerkarte **Verlauf Verteiler zu Abonnent** im Textbereich **Aktionen in der ausgewählten Sitzung** an.  
-  
-#### <a name="to-validate-data-for-a-single-push-subscription-to-a-merge-publication-replication-monitor"></a>So überprüfen Sie Daten für ein einzelnes Pushabonnement für eine Mergeveröffentlichung (Replikationsmonitor)  
-  
-1.  Erweitern Sie im Replikationsmonitor im linken Bereich eine Verlegergruppe, erweitern Sie einen Verleger, und klicken Sie dann auf eine Veröffentlichung.  
-  
-2.  Klicken Sie auf die Registerkarte **Alle Abonnements** .  
-  
-3.  Klicken Sie mit der rechten Maustaste auf das Abonnement, das Sie überprüfen möchten, und klicken Sie dann auf **Abonnement überprüfen**.  
-  
-4.  Wählen Sie im Dialogfeld **Abonnement überprüfen** die Option **Dieses Abonnement überprüfen**aus.  
-  
-5.  Um den Typ der durchzuführenden Überprüfung (Zeilenanzahl oder Zeilenanzahl und Prüfsumme) anzugeben, klicken Sie auf **Optionen**, und geben Sie dann im Dialogfeld **Optionen für die Abonnementüberprüfung** die gewünschten Optionen an.  
-  
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
-7.  Klicken Sie auf die Registerkarte **Alle Abonnements** .  
-  
-8.  Zeigen Sie die Überprüfungsergebnisse an:  
-  
-    1.  Wenn der Agent nicht ausgeführt wird, klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Synchronisierung starten**.  
-  
-    2.  Klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Details anzeigen**.  
-  
-    3.  Zeigen Sie die Informationen auf der Registerkarte **Synchronisierungsverlauf** im Textbereich **Letzte Meldung der ausgewählten Sitzung** an.  
-  
-#### <a name="to-validate-data-for-all-push-subscriptions-to-a-merge-publication-replication-monitor"></a>So überprüfen Sie die Daten aller Pushabonnements einer Mergeveröffentlichung (Replikationsüberwachung)  
-  
-1.  Erweitern Sie im Replikationsmonitor im linken Bereich eine Verlegergruppe, und erweitern Sie dann einen Verleger.  
-  
-2.  Klicken Sie mit der rechten Maustaste auf die Veröffentlichung, deren Abonnements Sie überprüfen möchten, und klicken Sie dann auf **Alle Abonnements überprüfen**.  
-  
-3.  Geben Sie im Dialogfeld **Alle Abonnements überprüfen** den Typ der durchzuführenden Überprüfung (Zeilenanzahl oder Zeilenanzahl und Prüfsumme) an.  
-  
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
-5.  Klicken Sie auf die Registerkarte **Alle Abonnements** .  
-  
-6.  Zeigen Sie die Überprüfungsergebnisse an. Führen Sie für jedes Pushabonnement folgende Vorgänge aus:  
-  
-    1.  Wenn der Agent nicht ausgeführt wird, klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Synchronisierung starten**.  
-  
-    2.  Klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Details anzeigen**.  
-  
-    3.  Zeigen Sie die Informationen auf der Registerkarte **Synchronisierungsverlauf** im Textbereich **Letzte Meldung der ausgewählten Sitzung** an.  
-  
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
-  
-#### <a name="to-validate-data-for-all-articles-in-a-transactional-publication"></a>So überprüfen Sie die Daten für alle Artikel in einer Transaktionsveröffentlichung  
-  
-1.  Führen Sie beim Verleger für die Veröffentlichungsdatenbank [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql) aus. Geben Sie **@publication** und einen der folgenden Werte für **@rowcount_only**an:  
-  
-    -   **1** - nur Überprüfung der Zeilenanzahl (Standardeinstellung)  
-  
+1.  Führen Sie beim Verleger für die Veröffentlichungsdatenbank [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql) aus. Geben Sie **@publication** und einen der folgenden Werte für **@rowcount_only**an:    
+    -   **1** - nur Überprüfung der Zeilenanzahl (Standardeinstellung)    
     -   **2** - Zeilenanzahl und binäre Prüfsumme  
   
     > [!NOTE]  
     >  Beim Ausführen von [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql), wird [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql) für jeden Artikel in der Publikation ausgeführt. Um [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql) erfolgreich auszuführen, benötigen Sie SELECT-Berechtigungen für alle Spalten in den veröffentlichten Basistabellen.  
   
-2.  (Optional) Starten Sie den Verteilungs-Agent für jedes Abonnement, wenn er nicht bereits ausgeführt wird. Weitere Informationen finden Sie unter [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) und [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
+2.  (Optional) Starten Sie den Verteilungs-Agent für jedes Abonnement, wenn er nicht bereits ausgeführt wird. Weitere Informationen finden Sie unter [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) und [Synchronize a Push Subscription](synchronize-a-push-subscription.md).    
+3.  Überprüfen Sie die Agentausgabe für das Ergebnis der Überprüfung. Weitere Informationen finden Sie unter [Überprüfen von replizierten Daten](validate-data-at-the-subscriber.md).  
   
-3.  Überprüfen Sie die Agentausgabe für das Ergebnis der Überprüfung. Weitere Informationen finden Sie unter [Überprüfen von replizierten Daten](validate-replicated-data.md).  
+#### <a name="single-article"></a>Einzelne Artikel 
   
-#### <a name="to-validate-data-for-a-single-article-in-a-transactional-publication"></a>So überprüfen Sie die Daten für einen einzelnen Artikel in einer Transaktionsveröffentlichung  
-  
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql) aus. Geben Sie **@publication**, den Namen des Artikels für **@article**und einen der folgenden Werte für **@rowcount_only**an:  
-  
-    -   **1** - nur Überprüfung der Zeilenanzahl (Standardeinstellung)  
-  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql) aus. Geben Sie **@publication**, den Namen des Artikels für **@article**und einen der folgenden Werte für **@rowcount_only**an:    
+    -   **1** - nur Überprüfung der Zeilenanzahl (Standardeinstellung)    
     -   **2** - Zeilenanzahl und binäre Prüfsumme  
   
     > [!NOTE]  
     >  Um [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql) erfolgreich auszuführen, benötigen Sie SELECT-Berechtigungen für alle Spalten in den veröffentlichten Basistabellen.  
   
-2.  (Optional) Starten Sie den Verteilungs-Agent für jedes Abonnement, wenn er nicht bereits ausgeführt wird. Weitere Informationen finden Sie unter [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) und [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
+2.  (Optional) Starten Sie den Verteilungs-Agent für jedes Abonnement, wenn er nicht bereits ausgeführt wird. Weitere Informationen finden Sie unter [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) und [Synchronize a Push Subscription](synchronize-a-push-subscription.md).    
+3.  Überprüfen Sie die Agentausgabe für das Ergebnis der Überprüfung. Weitere Informationen finden Sie unter [Überprüfen von replizierten Daten](validate-data-at-the-subscriber.md).  
   
-3.  Überprüfen Sie die Agentausgabe für das Ergebnis der Überprüfung. Weitere Informationen finden Sie unter [Überprüfen von replizierten Daten](validate-replicated-data.md).  
+#### <a name="single-subscriber"></a>Einzelnen Abonnenten
   
-#### <a name="to-validate-data-for-a-single-subscriber-to-a-transactional-publication"></a>So überprüfen Sie die Daten für einen einzelnen Abonnenten einer Transaktionsveröffentlichung  
-  
-1.  Öffnen Sie auf dem Verleger für die Veröffentlichungsdatenbank eine explizite Transaktion mit [BEGIN TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-transaction-transact-sql).  
-  
-2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql) aus. Geben Sie die Veröffentlichung für **@publication**, den Namen des Abonnenten für **@subscriber**und den Namen der Abonnementdatenbank für **@destination_db**verfügbar sind.  
-  
-3.  (Optional) Wiederholen Sie Schritt 2 für jedes zu überprüfende Abonnement.  
-  
-4.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql) aus. Geben Sie **@publication**, den Namen des Artikels für **@article**und einen der folgenden Werte für **@rowcount_only**an:  
-  
-    -   **1** - nur Überprüfung der Zeilenanzahl (Standardeinstellung)  
-  
+1.  Öffnen Sie auf dem Verleger für die Veröffentlichungsdatenbank eine explizite Transaktion mit [BEGIN TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-transaction-transact-sql).    
+2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql) aus. Geben Sie die Veröffentlichung für **@publication**, den Namen des Abonnenten für **@subscriber**und den Namen der Abonnementdatenbank für **@destination_db**verfügbar sind.    
+3.  (Optional) Wiederholen Sie Schritt 2 für jedes zu überprüfende Abonnement.    
+4.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql) aus. Geben Sie **@publication**, den Namen des Artikels für **@article**und einen der folgenden Werte für **@rowcount_only**an:    
+    -   **1** - nur Überprüfung der Zeilenanzahl (Standardeinstellung)    
     -   **2** - Zeilenanzahl und binäre Prüfsumme  
   
     > [!NOTE]  
     >  Um [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql) erfolgreich auszuführen, benötigen Sie SELECT-Berechtigungen für alle Spalten in den veröffentlichten Basistabellen.  
   
-5.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank mit [COMMIT TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/commit-transaction-transact-sql) einen Commit für die Transaktion aus.  
-  
-6.  (Optional) Wiederholen Sie die Schritte 1 bis 5 für jeden zu überprüfenden Artikel.  
-  
-7.  (Optional) Starten Sie den Verteilungs-Agent, wenn er nicht bereits ausgeführt wird. Weitere Informationen finden Sie unter [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) und [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
-  
+5.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank mit [COMMIT TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/commit-transaction-transact-sql) einen Commit für die Transaktion aus.    
+6.  (Optional) Wiederholen Sie die Schritte 1 bis 5 für jeden zu überprüfenden Artikel.    
+7.  (Optional) Starten Sie den Verteilungs-Agent, wenn er nicht bereits ausgeführt wird. Weitere Informationen finden Sie unter [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) und [Synchronize a Push Subscription](synchronize-a-push-subscription.md).    
 8.  Überprüfen Sie die Agentausgabe für das Ergebnis der Überprüfung. Weitere Informationen finden Sie unter [Validate Data at the Subscriber](validate-data-at-the-subscriber.md).  
+
+##  <a name="all-push-subscriptions-to-a-transactional-publication"></a>Aller Pushabonnements einer Transaktionsveröffentlichung 
+
+### <a name="using-replication-monitor"></a>Mithilfe des Replikationsmonitors
   
-#### <a name="to-validate-data-in-all-subscriptions-to-a-merge-publication"></a>So überprüfen Sie die Daten in allen Abonnements für eine Mergeveröffentlichung  
+1.  Erweitern Sie im Replikationsmonitor im linken Bereich eine Verlegergruppe, und erweitern Sie dann einen Verleger.    
+2.  Klicken Sie mit der rechten Maustaste auf die Veröffentlichung, deren Abonnements Sie überprüfen möchten, und klicken Sie dann auf **Abonnements überprüfen**.    
+3.  Wählen Sie im Dialogfeld **Abonnements überprüfen** die zu überprüfenden Abonnements aus:    
+    -   Wählen Sie **Alle SQL Server-Abonnements überprüfen**aus.    
+    -   Wählen Sie **Folgende Abonnements überprüfen**aus, und wählen Sie dann ein oder mehrere Abonnements aus.   
+4.  Um den Typ der durchzuführenden Überprüfung (Zeilenanzahl oder Zeilenanzahl und Prüfsumme) anzugeben, klicken Sie auf **Überprüfungsoptionen**, und geben Sie dann im Dialogfeld **Optionen für die Abonnementüberprüfung** die gewünschten Optionen an.    
+5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
+6.  Klicken Sie auf die Registerkarte **Alle Abonnements** .    
+7.  Zeigen Sie die Überprüfungsergebnisse an. Führen Sie für jedes Pushabonnement folgende Vorgänge aus:   
+    1.  Wenn der Agent nicht ausgeführt wird, klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Synchronisierung starten**.   
+    2.  Klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Details anzeigen**.    
+    3.  Zeigen Sie die Informationen auf der Registerkarte **Verlauf Verteiler zu Abonnent** im Textbereich **Aktionen in der ausgewählten Sitzung** an.  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_validatemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql) aus. Geben Sie **@publication** und einen der folgenden Werte für **@level**an:  
+
+## <a name="for-a-single-subscription-to-a-merge-publication"></a>Für ein einzelnes Abonnement für eine Mergeveröffentlichung
   
-    -   **1** - Nur Überprüfung der Zeilenzählung  
+### <a name="using-sql-server-management-studio"></a>Verwendung von SQL Server Management Studio
   
-    -   **3** - Überprüfung der Zeilenzählung und binären Prüfsumme  
+1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit dem Verleger her, und erweitern Sie dann den Serverknoten.    
+2.  Erweitern Sie den Ordner **Replikation** , und erweitern Sie dann den Ordner **Lokale Veröffentlichungen** .    
+3.  Erweitern Sie die Veröffentlichung, für die Sie Abonnements überprüfen möchten, klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Abonnement überprüfen**.    
+4.  Wählen Sie im Dialogfeld **Abonnement überprüfen** die Option **Dieses Abonnement überprüfen**aus.    
+5.  Um den Typ der durchzuführenden Überprüfung (Zeilenanzahl oder Zeilenanzahl und Prüfsumme) anzugeben, klicken Sie auf **Optionen**, und geben Sie dann im Dialogfeld **Optionen für die Abonnementüberprüfung** die gewünschten Optionen an.    
+6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
+7.  Zeigen Sie die Überprüfungsergebnisse Im Replikationsmonitor oder im Dialogfeld **Synchronisierungsstatus anzeigen** an:  
+    1.  Erweitern Sie die Veröffentlichung, klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Synchronisierungsstatus anzeigen**.   
+    2.  Wenn der Agent nicht ausgeführt wird, klicken Sie im Dialogfeld **Synchronisierungsstatus anzeigen** auf **Start** . Im Dialogfeld werden Meldungen mit Informationen zur Überprüfung angezeigt.  
   
-     Dadurch werden alle Abonnements zur Überprüfung gekennzeichnet.  
-  
-2.  Starten Sie den Merge-Agent für jedes Abonnement. Weitere Informationen finden Sie unter [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) und [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
-  
-3.  Überprüfen Sie die Agentausgabe für das Ergebnis der Überprüfung. Weitere Informationen finden Sie unter [Validate Data at the Subscriber](validate-data-at-the-subscriber.md).  
-  
-#### <a name="to-validate-data-in-selected-subscriptions-to-a-merge-publication"></a>So überprüfen Sie die Daten in ausgewählten Abonnements für eine Mergeveröffentlichung  
-  
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_validatemergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql) aus. Geben Sie **@publication**, den Namen des Abonnenten für **@subscriber**, den Namen der Abonnementdatenbank für **@subscriber_db**und einen der folgenden Werte für **@level**an:  
-  
-    -   **1** - Nur Überprüfung der Zeilenzählung  
-  
+     Wenn keine Meldungen bezüglich der Überprüfung angezeigt werden, hat der Agent bereits eine nachfolgende Meldung protokolliert. Zeigen Sie die Überprüfungsergebnisse in diesem Fall im Replikationsmonitor an. Weitere Informationen finden Sie in den Prozeduren zu den Verfahrensweisen im Replikationsmonitor in diesem Thema.  
+
+### <a name="using-transact-sql-t-sql"></a>Mithilfe von Transact-SQL (T-SQL)
+
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_validatemergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql) aus. Geben Sie **@publication**, den Namen des Abonnenten für **@subscriber**, den Namen der Abonnementdatenbank für **@subscriber_db**und einen der folgenden Werte für **@level**an:   
+    -   **1** - Nur Überprüfung der Zeilenzählung    
     -   **3** - Überprüfung der Zeilenzählung und binären Prüfsumme  
   
      Dadurch wird das ausgewählte Abonnement zur Überprüfung gekennzeichnet.  
   
-2.  Starten Sie den Merge-Agent für jedes Abonnement. Weitere Informationen finden Sie unter [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) und [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
-  
-3.  Überprüfen Sie die Agentausgabe für das Ergebnis der Überprüfung.  
-  
+2.  Starten Sie den Merge-Agent für jedes Abonnement. Weitere Informationen finden Sie unter [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) und [Synchronize a Push Subscription](synchronize-a-push-subscription.md).    
+3.  Überprüfen Sie die Agentausgabe für das Ergebnis der Überprüfung.    
 4.  Wiederholen Sie die Schritte 1 bis 3 für jedes zu überprüfende Abonnement.  
   
 > [!NOTE]  
 >  Ein Abonnement für eine Mergeveröffentlichung kann auch am Ende einer Synchronisierung überprüft werden. Dazu geben Sie den **-Validate** -Parameter an, wenn der [Replication Merge Agent](agents/replication-merge-agent.md)ausgeführt wird.  
+
   
-#### <a name="to-validate-data-in-a-subscription-using-merge-agent-parameters"></a>So überprüfen Sie die Daten in einem Abonnement mithilfe von Merge-Agentparametern  
+## <a name="for-all-subscriptions-to-a-merge-publication"></a>Für alle Abonnements für eine Mergeveröffentlichung
+
+### <a name="using-sql-server-management-studio"></a>Verwendung von SQL Server Management Studio 
   
-1.  Starten Sie auf eine der folgenden Arten den Merge-Agent auf dem Abonnenten (Pullabonnement) oder auf dem Verteiler (Pushabonnement) von der Befehlszeile.  
+1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit dem Verleger her, und erweitern Sie dann den Serverknoten.    
+2.  Erweitern Sie den Ordner **Replikation** , und erweitern Sie dann den Ordner **Lokale Veröffentlichungen** .    
+3.  Klicken Sie mit der rechten Maustaste auf die Veröffentlichung, deren Abonnements Sie überprüfen möchten, und klicken Sie dann auf **Alle Abonnements überprüfen**.    
+4.  Geben Sie im Dialogfeld **Alle Abonnements überprüfen** den Typ der durchzuführenden Überprüfung (Zeilenanzahl oder Zeilenanzahl und Prüfsumme) an.    
+5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
+6.  Zeigen Sie die Überprüfungsergebnisse Im Replikationsmonitor oder im Dialogfeld **Synchronisierungsstatus anzeigen** an: Führen Sie für jedes Abonnement folgende Vorgänge aus:    
+    1.  Erweitern Sie die Veröffentlichung, klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Synchronisierungsstatus anzeigen**.   
+    2.  Wenn der Agent nicht ausgeführt wird, klicken Sie im Dialogfeld **Synchronisierungsstatus anzeigen** auf **Start** . Im Dialogfeld werden Meldungen mit Informationen zur Überprüfung angezeigt.  
   
-    -   Durch Angeben eines Werts von **1** (Zeilenanzahl) oder **3** (Zeilenanzahl und binäre Prüfsumme) für den **-Validate** -Parameter.  
+     Wenn keine Meldungen bezüglich der Überprüfung angezeigt werden, hat der Agent bereits eine nachfolgende Meldung protokolliert. Zeigen Sie die Überprüfungsergebnisse in diesem Fall im Replikationsmonitor an. Weitere Informationen finden Sie in den Prozeduren zu den Verfahrensweisen im Replikationsmonitor in diesem Thema.  
+
+### <a name="using-transact-sql-t-sql"></a>Mithilfe von Transact-SQL (T-SQL)
+
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_validatemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql) aus. Geben Sie **@publication** und einen der folgenden Werte für **@level**an:    
+    -   **1** - Nur Überprüfung der Zeilenzählung    
+    -   **3** - Überprüfung der Zeilenzählung und binären Prüfsumme  
   
+     Dadurch werden alle Abonnements zur Überprüfung gekennzeichnet.  
+  
+2.  Starten Sie den Merge-Agent für jedes Abonnement. Weitere Informationen finden Sie unter [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) und [Synchronize a Push Subscription](synchronize-a-push-subscription.md).    
+3.  Überprüfen Sie die Agentausgabe für das Ergebnis der Überprüfung. Weitere Informationen finden Sie unter [Validate Data at the Subscriber](validate-data-at-the-subscriber.md).  
+
+
+## <a name="for-a-single-push-subscription-to-a-merge-publication"></a>Für ein einzelnes Pushabonnement für eine Mergeveröffentlichung 
+
+### <a name="using-replication-monitor"></a>Mithilfe des Replikationsmonitors
+  
+1.  Erweitern Sie im Replikationsmonitor im linken Bereich eine Verlegergruppe, erweitern Sie einen Verleger, und klicken Sie dann auf eine Veröffentlichung.    
+2.  Klicken Sie auf die Registerkarte **Alle Abonnements** .    
+3.  Klicken Sie mit der rechten Maustaste auf das Abonnement, das Sie überprüfen möchten, und klicken Sie dann auf **Abonnement überprüfen**.    
+4.  Wählen Sie im Dialogfeld **Abonnement überprüfen** die Option **Dieses Abonnement überprüfen**aus.    
+5.  Um den Typ der durchzuführenden Überprüfung (Zeilenanzahl oder Zeilenanzahl und Prüfsumme) anzugeben, klicken Sie auf **Optionen**, und geben Sie dann im Dialogfeld **Optionen für die Abonnementüberprüfung** die gewünschten Optionen an.    
+6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
+7.  Klicken Sie auf die Registerkarte **Alle Abonnements** .    
+8.  Zeigen Sie die Überprüfungsergebnisse an:    
+    1.  Wenn der Agent nicht ausgeführt wird, klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Synchronisierung starten**.    
+    2.  Klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Details anzeigen**.    
+    3.  Zeigen Sie die Informationen auf der Registerkarte **Synchronisierungsverlauf** im Textbereich **Letzte Meldung der ausgewählten Sitzung** an.  
+  
+## <a name="for-all-push-subscriptions-to-a-merge-publication"></a>Für alle Pushabonnements für eine Mergeveröffentlichung 
+
+### <a name="using-replication-monitor"></a>Mithilfe des Replikationsmonitors
+  
+1.  Erweitern Sie im Replikationsmonitor im linken Bereich eine Verlegergruppe, und erweitern Sie dann einen Verleger.    
+2.  Klicken Sie mit der rechten Maustaste auf die Veröffentlichung, deren Abonnements Sie überprüfen möchten, und klicken Sie dann auf **Alle Abonnements überprüfen**.    
+3.  Geben Sie im Dialogfeld **Alle Abonnements überprüfen** den Typ der durchzuführenden Überprüfung (Zeilenanzahl oder Zeilenanzahl und Prüfsumme) an.    
+4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
+5.  Klicken Sie auf die Registerkarte **Alle Abonnements** .    
+6.  Zeigen Sie die Überprüfungsergebnisse an. Führen Sie für jedes Pushabonnement folgende Vorgänge aus:    
+    1.  Wenn der Agent nicht ausgeführt wird, klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Synchronisierung starten**.    
+    2.  Klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Details anzeigen**.    
+    3.  Zeigen Sie die Informationen auf der Registerkarte **Synchronisierungsverlauf** im Textbereich **Letzte Meldung der ausgewählten Sitzung** an.  
+  
+  
+## <a name="validate-data-using-merge-agent-parameters"></a>Überprüfen von Daten mithilfe von Merge-Agent-Parameter
+  
+1.  Starten Sie auf eine der folgenden Arten den Merge-Agent auf dem Abonnenten (Pullabonnement) oder auf dem Verteiler (Pushabonnement) von der Befehlszeile.    
+    -   Durch Angeben eines Werts von **1** (Zeilenanzahl) oder **3** (Zeilenanzahl und binäre Prüfsumme) für den **-Validate** -Parameter.   
     -   Durch Angeben von **Zeilenanzahlüberprüfung** oder **Überprüfung der Zeilenanzahl und Prüfsumme** für den **-ProfileName** -Parameter.  
   
      Weitere Informationen finden Sie unter [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) oder [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
-##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
+## <a name="using-replication-management-objects-rmo"></a>Verwenden von Replikationsverwaltungsobjekten (RMO)  
  Die Replikation ermöglicht Ihnen mithilfe von Replikationsverwaltungsobjekten (RMO), programmgesteuert zu überprüfen, ob die Daten auf dem Abonnenten mit den Daten auf dem Verleger übereinstimmen. Welche Objekte Sie verwenden, hängt vom Typ der Replikationstopologie ab. Für die Transaktionsreplikation ist eine Überprüfung aller Abonnements für eine Veröffentlichung erforderlich.  
   
 > [!NOTE]  
@@ -308,18 +275,12 @@ ms.locfileid: "52816882"
   
 #### <a name="to-validate-data-for-all-articles-in-a-transactional-publication"></a>So überprüfen Sie die Daten für alle Artikel in einer Transaktionsveröffentlichung  
   
-1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
-  
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransPublication> -Klasse. Legen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> -Eigenschaft und die <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> -Eigenschaft für die Veröffentlichung fest. Legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.  
-  
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die restlichen Objekteigenschaften abzurufen. Wenn diese Methode `false` zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
-  
-4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.TransPublication.ValidatePublication%2A>-Methode auf. Übergeben Sie die folgenden Werte:  
-  
-    -   <xref:Microsoft.SqlServer.Replication.ValidationOption>  
-  
-    -   <xref:Microsoft.SqlServer.Replication.ValidationMethod>  
-  
+1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.    
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransPublication> -Klasse. Legen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> -Eigenschaft und die <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> -Eigenschaft für die Veröffentlichung fest. Legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.   
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die restlichen Objekteigenschaften abzurufen. Wenn diese Methode `false` zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.    
+4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.TransPublication.ValidatePublication%2A>-Methode auf. Übergeben Sie die folgenden Werte:    
+    -   <xref:Microsoft.SqlServer.Replication.ValidationOption>    
+    -   <xref:Microsoft.SqlServer.Replication.ValidationMethod>    
     -   Ein boolescher Wert, der angibt, ob der Verteilungs-Agent nach Abschluss der Überprüfung beendet werden soll.  
   
      Dadurch werden die Artikel zur Überprüfung gekennzeichnet.  
@@ -328,26 +289,18 @@ ms.locfileid: "52816882"
   
 #### <a name="to-validate-data-in-all-subscriptions-to-a-merge-publication"></a>So überprüfen Sie die Daten in allen Abonnements für eine Mergeveröffentlichung  
   
-1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
-  
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePublication> -Klasse. Legen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> -Eigenschaft und die <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> -Eigenschaft für die Veröffentlichung fest. Legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.  
-  
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die restlichen Objekteigenschaften abzurufen. Wenn diese Methode `false` zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
-  
-4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.MergePublication.ValidatePublication%2A>-Methode auf. Übergeben Sie die gewünschte <xref:Microsoft.SqlServer.Replication.ValidationOption>.  
-  
+1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.   
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePublication> -Klasse. Legen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> -Eigenschaft und die <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> -Eigenschaft für die Veröffentlichung fest. Legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.   
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die restlichen Objekteigenschaften abzurufen. Wenn diese Methode `false` zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.    
+4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.MergePublication.ValidatePublication%2A>-Methode auf. Übergeben Sie die gewünschte <xref:Microsoft.SqlServer.Replication.ValidationOption>.    
 5.  Führen Sie für jedes Abonnement den Merge-Agent aus, um die Überprüfung zu starten, oder warten Sie die nächste geplante Ausführung des Agents ab. Weitere Informationen finden Sie unter [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) und [Synchronize a Push Subscription](synchronize-a-push-subscription.md). Das Ergebnis der Überprüfung wird in den Agentverlauf geschrieben. Diesen können Sie mithilfe des Replikationsmonitors anzeigen. Weitere Informationen finden Sie unter [Monitoring Replication](monitoring-replication.md).  
   
 #### <a name="to-validate-data-in-a-single-subscription-to-a-merge-publication"></a>So überprüfen Sie die Daten in einem einzelnen Abonnement für eine Mergeveröffentlichung  
   
-1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
-  
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePublication> -Klasse. Legen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> -Eigenschaft und die <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> -Eigenschaft für die Veröffentlichung fest. Legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.  
-  
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die restlichen Objekteigenschaften abzurufen. Wenn diese Methode `false` zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
-  
-4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.MergePublication.ValidateSubscription%2A>-Methode auf. Übergeben Sie den Namen des Abonnenten und der Abonnementdatenbank, der bzw. die überprüft wird, und die gewünschte <xref:Microsoft.SqlServer.Replication.ValidationOption>.  
-  
+1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.    
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePublication> -Klasse. Legen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> -Eigenschaft und die <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> -Eigenschaft für die Veröffentlichung fest. Legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.    
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die restlichen Objekteigenschaften abzurufen. Wenn diese Methode `false` zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.    
+4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.MergePublication.ValidateSubscription%2A>-Methode auf. Übergeben Sie den Namen des Abonnenten und der Abonnementdatenbank, der bzw. die überprüft wird, und die gewünschte <xref:Microsoft.SqlServer.Replication.ValidationOption>.    
 5.  Führen Sie für das Abonnement den Merge-Agent aus, um die Überprüfung zu starten, oder warten Sie die nächste geplante Ausführung des Agents ab. Weitere Informationen finden Sie unter [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) und [Synchronize a Push Subscription](synchronize-a-push-subscription.md). Das Ergebnis der Überprüfung wird in den Agentverlauf geschrieben. Diesen können Sie mithilfe des Replikationsmonitors anzeigen. Weitere Informationen finden Sie unter [Monitoring Replication](monitoring-replication.md).  
   
 ###  <a name="RMOExample"></a> Beispiel (RMO)  

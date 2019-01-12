@@ -13,12 +13,12 @@ ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b275f7b25d87753911548eda5225d5de29f0897c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a862c5c9cea1087f54a4dbff13b6c39eb5e39385
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143760"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126981"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>Warten einer AlwaysOn-Veröffentlichungsdatenbank (SQL Server)
   In diesem Thema werden besondere Überlegungen zum Verwalten einer Veröffentlichungsdatenbank bei Verwendung von AlwaysOn-Verfügbarkeitsgruppen erläutert.  
@@ -68,7 +68,7 @@ ms.locfileid: "48143760"
     > [!NOTE]  
     >  Wenn eine Verfügbarkeitsgruppe entfernt wird, die über veröffentlichte Mitgliedsdatenbanken verfügt, oder wenn eine veröffentlichte Datenbank aus einer Verfügbarkeitsgruppe entfernt wird, werden alle Kopien der veröffentlichten Datenbanken im Wiederherstellungsstatus belassen. Nach der Wiederherstellung wird jede Datenbank als veröffentlichte Datenbank angezeigt. Nur eine Kopie sollte mit Veröffentlichungsmetadaten beibehalten werden. Um die Replikation für eine veröffentlichte Datenbankkopie zu deaktivieren, entfernen Sie zuerst alle Abonnements und Veröffentlichungen aus der Datenbank.  
   
-     Führen Sie `sp_dropsubscription` um die veröffentlichungsabonnements zu entfernen. Vergessen Sie nicht, den Parameter *@ignore_distributributor* auf 1 festzulegen, um die Metadaten beim Verteiler für die aktive Veröffentlichungsdatenbank beizubehalten.  
+     Führen Sie `sp_dropsubscription` aus, um die Veröffentlichungsabonnements zu entfernen. Vergessen Sie nicht, den Parameter *@ignore_distributributor* auf 1 festzulegen, um die Metadaten beim Verteiler für die aktive Veröffentlichungsdatenbank beizubehalten.  
   
     ```  
     USE MyDBName;  
@@ -81,7 +81,7 @@ ms.locfileid: "48143760"
         @ignore_distributor = 1;  
     ```  
   
-     Führen Sie `sp_droppublication` auf alle Veröffentlichungen zu entfernen. Auch hier dürfen Sie nicht vergessen, den Parameter *@ignore_distributor* auf 1 festzulegen, um die Metadaten beim Verteiler für die aktive Veröffentlichungsdatenbank beizubehalten.  
+     Führen Sie `sp_droppublication` aus, um alle Veröffentlichungen zu entfernen. Auch hier dürfen Sie nicht vergessen, den Parameter *@ignore_distributor* auf 1 festzulegen, um die Metadaten beim Verteiler für die aktive Veröffentlichungsdatenbank beizubehalten.  
   
     ```  
     EXEC sys.sp_droppublication   
@@ -106,7 +106,7 @@ ms.locfileid: "48143760"
   
 -   [Replikation, Änderungsnachverfolgung, Change Data Capture und AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](replicate-track-change-data-capture-always-on-availability.md)  
   
--   [Verwaltung &#40;Replikation&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [Replikationsverwaltung – häufig gestellte Fragen](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
 -   [Replikationsabonnenten und AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)  
   

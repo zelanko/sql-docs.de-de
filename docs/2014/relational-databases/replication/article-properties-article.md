@@ -14,12 +14,12 @@ ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c426781f52a513cca1e90e5f83eac7feab79fdaf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2903eef63152af9b2e9af1434ba12ea91b4058fc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785222"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124990"
 ---
 # <a name="article-properties---ltarticlegt"></a>Artikeleigenschaften – &lt;Artikel&gt;
   Das Dialogfeld **Artikeleigenschaften** steht über den Assistenten für neue Veröffentlichung und das Dialogfeld **Veröffentlichungseigenschaften** zur Verfügung. Es ermöglicht Ihnen, die Eigenschaften für alle Typen von Artikeln anzuzeigen und festzulegen. Bestimmte Eigenschaften können nur beim Erstellen der Veröffentlichung festgelegt werden, andere nur, wenn für die Veröffentlichung keine aktiven Abonnements vorhanden sind. Eigenschaften, die nicht festgelegt werden können, werden als schreibgeschützt angezeigt.  
@@ -121,7 +121,7 @@ ms.locfileid: "52785222"
   
 ### <a name="resolver-tab"></a>Konfliktlöser (Registerkarte)  
  **Standardkonfliktlöser verwenden**  
- Wenn Sie den Standardkonfliktlöser auswählen, werden Konflikte in Abhängigkeit vom verwendeten Abonnementtyp basierend auf der jedem Abonnenten zugewiesenen Priorität oder der ersten auf dem Verleger geschriebenen Änderung gelöst. Weitere Informationen finden Sie unter [Erkennen und Beseitigen von Konflikten bei der Mergereplikation](merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
+ Wenn Sie den Standardkonfliktlöser auswählen, werden Konflikte in Abhängigkeit vom verwendeten Abonnementtyp basierend auf der jedem Abonnenten zugewiesenen Priorität oder der ersten auf dem Verleger geschriebenen Änderung gelöst. Weitere Informationen finden Sie unter [Erkennen und Beseitigen von Konflikten bei der Mergereplikation](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  **Benutzerdefinierten Konfliktlöser verwenden (registriert auf dem Verteiler)**  
  Wenn Sie einen Artikelkonfliktlöser verwenden möchten (entweder einen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] bereitgestellten oder einen von Ihnen geschriebenen), müssen Sie einen Konfliktlöser aus dem Listenfeld auswählen. Weitere Informationen finden Sie unter [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  

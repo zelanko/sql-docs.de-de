@@ -16,12 +16,12 @@ ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04587ac4015719bb8a525754d7c0d9e36790b2b6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5e691c78e0ef0ddf775b5a23baa7dde1d96f72a9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783372"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129245"
 ---
 # <a name="spchangesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +44,16 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
  [  **@job_id=**] *Job_id*  
  Die Auftrags-ID des Verteilungs-Agents für das Pushabonnement. *Job_id* ist **varbinary(16)**, hat keinen Standardwert. Um die Verteilungsauftrags-ID zu ermitteln, führen Sie **Sp_helpsubscription** oder **Sp_helppullsubscription**.  
   
- [ **@dts_package_name**=] **"***Dts_package_name***"**  
+ [ **@dts_package_name**=] **"**_Dts_package_name_**"**  
  Gibt den Namen des DTS-Pakets an. *Dts_package_name* ist eine **Sysname**, hat den Standardwert NULL. Beispielsweise geben Sie ein Paket mit dem Namen **DTSPub_Package**, geben Sie `@dts_package_name = N'DTSPub_Package'`.  
   
- [ **@dts_package_password**=] **"***Dts_package_password***"**  
+ [ **@dts_package_password**=] **"**_Dts_package_password_**"**  
  Gibt das Kennwort für das Paket an. *Dts_package_password* ist **Sysname** hat den Standardwert NULL, der angibt, dass die Kennworteigenschaft ist, werden nicht geändert.  
   
 > [!NOTE]  
 >  Ein DTS-Paket muss über ein Kennwort verfügen.  
   
- [ **@dts_package_location**=] **"***Dts_package_location***"**  
+ [ **@dts_package_location**=] **"**_Dts_package_location_**"**  
  Gibt den Paketspeicherort an. *Dts_package_location* ist eine **nvarchar(12)**, hat den Standardwert NULL, der angibt, dass der Speicherort des Pakets ist, werden nicht geändert. Der Speicherort des Pakets kann geändert werden, um **Verteiler** oder **Abonnenten**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

@@ -14,12 +14,12 @@ ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 780c4913a75b6014c43c407f05181ef93eddb594
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fcb3a7ccfc5e0b5da01d3976f3c9f13e06df7ee7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813966"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124444"
 ---
 # <a name="replication-monitor"></a>Replikationsmonitor
   Dieser Abschnitt der Dokumentation enthält Informationen zum Replikationsmonitor. Die im Monitor angezeigten Seiten und Dialogfelder können Unterschiede aufweisen, abhängig vom Replikationstyp und der Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die überwacht wird.  
@@ -31,15 +31,7 @@ ms.locfileid: "52813966"
 -   [Verteilereinstellungen](distributor-settings.md)  
   
 -   [Verteilerinformationen, Veröffentlichungen](distributor-information-publications.md)  
-  
--   [Verteilerinformationen, Überwachungsliste für Abonnements &#40;Transaktionsveröffentlichung, SQL Server 40 und später&#41;](distributor-info-subscription-watch-list-transaction-pub-sql-2005.md)  
-  
--   [Verteilerinformationen, Überwachungsliste für Abonnements &#40;Mergeveröffentlichung, SQL Server 40 und höher&#41;](distributor-info-subscription-watch-list-merge-pub-sql-2005.md)  
-  
--   [Verteilerinformationen, Überwachungsliste für Abonnements &#40;Momentaufnahmeveröffentlichung, SQL Server 40 und höher#41;](distributor-info-subscription-watch-list-snapshot-pub-sql-2005.md)  
-  
--   [Verteilerinformationen, Agents](distributor-information-agents.md)  
-  
+
 -   [Verlegereinstellungen](publisher-settings.md)  
   
 -   [Verlegerinformationen (Registerkarte Veröffentlichungen)](publisher-information-publications.md)  
@@ -80,8 +72,6 @@ ms.locfileid: "52813966"
   
 -   [Abonnement, Synchronisierungsverlauf &#40;Mergeabonnement, SQL Server 40 und höher&#41;](subscription-synchronization-history.md)  
   
--   [Abonnement, Synchronisierungsverlauf &#40;Mergeabonnement, SQL Server 40&#41;](subscription-synchronization-history-merge-subscription-sql-server-2000.md)  
-  
 -   [Abonnement, Verlauf Verteiler zu Abonnent &#40;Momentaufnahmeabonnement&#41;](subscription-distributor-to-subscriber-history-snapshot-subscription.md)  
   
 -   [Protokolllese-Agent](log-reader-agent.md)  
@@ -97,6 +87,5 @@ ms.locfileid: "52813966"
 ## <a name="see-also"></a>Siehe auch  
  [Starten des Replikationsmonitors](monitor/start-the-replication-monitor.md)   
  [Überwachen der Replikation](monitoring-replication.md)   
- [Eigenschaftenreferenz &#40;Replikation&#41;](properties-reference-replication.md)  
   
   

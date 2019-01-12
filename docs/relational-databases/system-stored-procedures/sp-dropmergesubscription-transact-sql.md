@@ -16,12 +16,12 @@ ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: acb16727506952146ace1383c8d36808d7c22a73
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 34ba40387c246fe5f7f2de8dd74197b7cd43c0f5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791502"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130740"
 ---
 # <a name="spdropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,16 +43,16 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication=** ] **"***Veröffentlichung***"**  
+ [  **@publication=** ] **"**_Veröffentlichung_**"**  
  Ist der Veröffentlichungsname. *Veröffentlichung* ist **Sysname**, hat den Standardwert NULL. Die Veröffentlichung muss bereits vorhanden ist und den Regeln für Bezeichner entsprechen.  
   
- [  **@subscriber=**] **"***Abonnenten***"**  
+ [  **@subscriber=**] **"**_Abonnenten_**"**  
  Der Name des Abonnenten. *Abonnenten* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@subscriber_db=** ] **"***Subscriber_db***"**  
+ [  **@subscriber_db=** ] **"**_Subscriber_db_**"**  
  Ist der Name der Abonnementdatenbank. *subscription_database eingestellt wird*ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@subscription_type=** ] **"***Subscription_type***"**  
+ [  **@subscription_type=** ] **"**_Subscription_type_**"**  
  Ist der Typ des Abonnements. *Subscription_type*ist **nvarchar(15)**, und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  

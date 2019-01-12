@@ -14,12 +14,12 @@ ms.assetid: 64e84c67-acc6-4906-98d4-3451767363fe
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3a3125ef66a88b8d7c47324e67b1a263581a925d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1e63cee642738036933b0a1e2a9da6b48192fba9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788722"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124170"
 ---
 # <a name="snapshot-agent-security"></a>Sicherheit für den Momentaufnahme-Agent
   Mithilfe des Dialogfelds **Sicherheit für den Momentaufnahme-Agent** können Sie folgende Angaben machen:  
@@ -55,7 +55,7 @@ ms.locfileid: "52788722"
  Das für die Verbindung verwendete Windows-Konto bzw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konto muss mindestens Mitglied der festen Datenbankrolle **db_owner** in der Veröffentlichungsdatenbank sein.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwalten von Anmeldeinformationen und Kennwörtern bei der Replikation](security/manage-logins-and-passwords-in-replication.md)   
+ [Verwalten von Anmeldeinformationen und Kennwörtern bei der Replikation](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Sicherheitsmodell des Replikations-Agents](security/replication-agent-security-model.md)   
  [Replikations-Agents (Übersicht)](agents/replication-agents-overview.md)   
  [Bewährte Methoden für die Replikationssicherheit](security/replication-security-best-practices.md)  

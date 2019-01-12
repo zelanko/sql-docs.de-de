@@ -16,12 +16,12 @@ ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4d96dd15857847e739600f087fa63b2c34453d27
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 78328463828b3c4a93b72ddc8790df13677dee81
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816042"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125370"
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **"**_Veröffentlichung_**"**  
  Der Name der Veröffentlichung, aus der ein Artikel gelöscht werden soll. *Veröffentlichung*ist **Sysname**, hat keinen Standardwert.  
   
- [  **@article=**] **"***Artikel***"**  
+ [  **@article=**] **"**_Artikel_**"**  
  Der Name des Artikels, der aus der angegebenen Veröffentlichung gelöscht werden soll. *Artikel*ist **Sysname**, hat keinen Standardwert. Wenn **alle**, werden alle vorhandenen Artikel in der angegebenen Mergeveröffentlichung entfernt. Auch wenn *Artikel* ist **alle**, die Veröffentlichung noch muss gelöscht werden separat aus dem Artikel.  
   
  [  **@ignore_distributor=**] *Ignore_distributor*  

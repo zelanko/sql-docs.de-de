@@ -17,12 +17,12 @@ ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a93abdc2c20b2aabc9da09ce875817ab92789b8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 88629dc1457d148b4a8e01537e35f2f5ccfbbdb3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350866"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128612"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Verbessern der Leistung von Volltextindizes
   Die Leistung für Volltextindizes und Volltextabfragen wird von den Hardwareressourcen wie Arbeitsspeicher, Datenträgergeschwindigkeit, CPU-Geschwindigkeit und Computerarchitektur beeinflusst.  
@@ -128,10 +128,10 @@ ms.locfileid: "53350866"
   
 |Platform|Schätzen der arbeitsspeicheranforderungen von fdhost.exe in MB -*F*<sup>1</sup>|Formel zum Berechnen von max Server Memory -*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|*F* **=** *Number of crawl ranges* **\*** 50|*M* **= Minimum (** *T* **,** 2000 **)-*`F`* -**  500|  
-|x64|*F* **=** *Anzahl der Durchforstungsbereiche* **\*** 10 **\*** 8|*M* **=** *T* **-** *F* **-** 500|  
+|x86|_F_ **=** _Anzahl der durchforstungsbereiche_ **&#42;** 50|_M_ **= Minimum (** _T_ **,** 2000 **)-*`F`* -**  500|  
+|x64|_F_ **=** _Anzahl der durchforstungsbereiche_ **&#42;** 10 **&#42;** 8|_M_ **=** _T_ **-** _F_ **-** 500|  
   
- <sup>1</sup> Wenn mehrere vollständige Auffüllungen ausgeführt werden, berechnen Sie die arbeitsspeicheranforderungen von fdhost.exe aller separat, *F1*, *F2*und so weiter. Anschließend berechnen *M* als *T ***-** Sigma **(***F*ich**) **.  
+ <sup>1</sup> Wenn mehrere vollständige Auffüllungen ausgeführt werden, berechnen Sie die arbeitsspeicheranforderungen von fdhost.exe aller separat, *F1*, *F2*und so weiter. Berechnen Sie anschließend *M* als _T_**-** sigma **(**_F_i **)**.  
   
  <sup>2</sup> 500 MB ist eine Schätzung des Arbeitsspeichers durch andere Prozesse im System erforderlich. Wenn das System noch weitere Aufgaben durchführt, sollten Sie diesen Wert entsprechend erhöhen.  
   

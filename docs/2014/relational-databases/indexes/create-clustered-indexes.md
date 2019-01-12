@@ -16,12 +16,12 @@ ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 06b97ac4bf58b933f55c4b53bfeacfbc9a736f28
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3cea4731ee665e401429679d764832247b2a2242
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516222"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126160"
 ---
 # <a name="create-clustered-indexes"></a>Erstellen gruppierter Indizes
   Sie können gruppierte Indizes für Tabellen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellen. Abgesehen von wenigen Ausnahmen sollte jede Tabelle über einen gruppierten Index verfügen. Ein gruppierter Index steigert nicht nur die Abfrageleistung, sondern kann bei Bedarf auch neu erstellt oder neu organisiert werden, um die Tabellenfragmentierung zu steuern. Ein gruppierter Index kann auch für eine Sicht erstellt werden. (Gruppierte Indizes sind im Thema [Beschreibung von gruppierten und nicht gruppierten Indizes](clustered-and-nonclustered-indexes-described.md)definiert.)  
@@ -86,7 +86,7 @@ ms.locfileid: "52516222"
   
 4.  Klicken Sie unter **Indexschlüsselspalten** auf **Hinzufügen…**.  
   
-5.  Aktivieren Sie im Dialogfeld **Spalten auswählen aus***Tabellenname* das Kontrollkästchen der Tabellenspalte, die dem gruppierten Index hinzugefügt werden soll.  
+5.  Aktivieren Sie im Dialogfeld **Spalten auswählen aus**_table_name_ das Kontrollkästchen der Tabellenspalte, die dem gruppierten Index hinzugefügt werden soll.  
   
 6.  Klicken Sie auf **OK**.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "52516222"
   
 9. Klicken Sie auf **Schließen**.  
   
-10. Klicken Sie im Menü **Datei** auf **Speichern***Tabellenname*.  
+10. Klicken Sie im Menü **Datei** auf **Speichern**_table_name_.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   

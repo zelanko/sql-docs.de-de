@@ -12,26 +12,21 @@ ms.assetid: 0dc485a0-5a50-41eb-a29d-f2b2fb920174
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 19faa0690069d6c16be7591547f4a242ac2469fc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f294ad3868670783d3010498dd0ba89e1e6a48be
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805581"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128390"
 ---
 # <a name="run-replication-maintenance-jobs-sql-server-management-studio"></a>Ausführen von Aufträgen zur Replikationswartung (SQL Server Management Studio)
   Bei der Replikation werden folgende Wartungsaufträge verwendet:  
   
--   **Abonnements mit Datenüberprüfungsfehlern neu initialisieren**  
-  
--   **Agentverlaufscleanup: Verteilung**  
-  
--   **Aktualisierung für die Replikationsüberwachung für Verteilung.**  
-  
--   **Überprüfung des Replikations-Agents**  
-  
--   **Verteilungscleanup: Verteilung**  
-  
+-   **Abonnements mit Datenüberprüfungsfehlern neu initialisieren**
+-   **Agentverlaufscleanup: Verteilung**
+-   **Aktualisierung für die Replikationsüberwachung für Verteilung.**
+-   **Überprüfung des Replikations-Agents**
+-   **Verteilungscleanup: Verteilung**
 -   **Cleanup abgelaufener Abonnements**  
   
  Diese Aufträge können über den Ordner **Aufträge** in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] sowie über die Registerkarte **Agents** im Replikationsmonitor gestartet und beendet werden. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](../monitor/start-the-replication-monitor.md). Die Eigenschaften der einzelnen Aufträge können im Dialogfeld **Auftragseigenschaften - \<Auftrag>** angezeigt und überprüft werden. Der Zugriff hierauf ist über denselben Ordner/dieselbe Registerkarte verfügbar.  
@@ -74,7 +69,7 @@ ms.locfileid: "52805581"
   
 ## <a name="see-also"></a>Siehe auch  
  [Starten und Beenden eines Replikations-Agents &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
- [Anzeigen von Informationen und Ausführen von Aufgaben für einen Verleger &#40;Replication Monitor&#41;](../monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikationsmonitors](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Replikations-Agent-Verwaltung](../agents/replication-agent-administration.md)  
   
   

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3a7a6c0ddee6e425ff80155be3002d8deffe187
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d628f2b5dffc976e32b15bea08407c5d0740c297
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721270"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123991"
 ---
 # <a name="spautostats-transact-sql"></a>sp_autostats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@tblname=** ] **"***Table_or_indexed_view_name***"**  
+ [  **@tblname=** ] **"**_Table_or_indexed_view_name_**"**  
  Der Name der Tabelle oder indizierten Sicht, für die die AUTO_UPDATE_STATISTICS-Option angezeigt werden soll. *Table_or_indexed_view_name* ist **nvarchar(776)**, hat keinen Standardwert.  
   
- [  **@flagc=** ] **"***Stats_value***"**  
+ [  **@flagc=** ] **"**_Stats_value_**"**  
  Aktualisiert die AUTO_UPDATE_STATISTICS-Option auf einen dieser Werte:  
   
  **ON** = ON  
@@ -57,7 +57,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  Wenn *Stats_flag* ist nicht angegeben wird, die die aktuelle AUTO_UPDATE_STATISTICS-Einstellung angezeigt. *Stats_value* ist **varchar(10)**, hat den Standardwert NULL.  
   
- [  **@indname=** ] **"***Statistics_name***"**  
+ [  **@indname=** ] **"**_Statistics_name_**"**  
  Der Name der Statistik, für die die AUTO_UPDATE_STATISTICS-Option angezeigt oder aktualisiert werden soll. Um die Statistik für einen Index anzuzeigen, können Sie den Namen des Indexes verwenden. Ein Index und das dazugehörige Statistikobjekt verfügen über den gleichen Namen.  
   
  *Statistics_name* ist **Sysname**, hat den Standardwert NULL.  

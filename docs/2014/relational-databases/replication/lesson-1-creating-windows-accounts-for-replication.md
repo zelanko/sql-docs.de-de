@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
@@ -14,17 +13,17 @@ ms.assetid: 65c3816b-47f0-448c-a4a4-ebd3e2a58820
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 0269a82d4ef11e53c41d7b288797064e0f3abd16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095570"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127455"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>Lektion 1: Erstellen von Windows-Konten für die Replikation
   In dieser Lektion erstellen Sie Windows-Konten zum Ausführen von Replikations-Agents. Sie erstellen für die folgenden Agents ein separates Windows-Konto auf dem lokalen Server:  
   
-|Agent|Speicherort|Kontoname|  
+|Agent|Speicherort|Account name|  
 |-----------|--------------|------------------|  
 |Momentaufnahme-Agent|Verleger|\<*machine_name*>\repl_snapshot|  
 |Protokolllese-Agent|Verleger|\<*machine_name*>\repl_logreader|  
@@ -63,9 +62,9 @@ ms.locfileid: "48095570"
 6.  Klicken Sie auf **Schließen**.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Sie haben Windows-Konten für Replikations-Agents erfolgreich erstellt. Als Nächstes konfigurieren Sie den Momentaufnahmeordner. Weitere Informationen finden Sie unter [Lektion 2: Vorbereiten des Momentaufnahmeordners](lesson-2-preparing-the-snapshot-folder.md).  
+ Sie haben Windows-Konten für Replikations-Agents erfolgreich erstellt. Als Nächstes konfigurieren Sie den Momentaufnahmeordner. Finden Sie unter [Lektion 2: Vorbereiten des Momentaufnahmeordners](lesson-2-preparing-the-snapshot-folder.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Übersicht über Replikations-Agents](agents/replication-agents-overview.md)  
+ [Replikations-Agents (Übersicht)](agents/replication-agents-overview.md)  
   
   

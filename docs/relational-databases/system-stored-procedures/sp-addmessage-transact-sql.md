@@ -18,12 +18,12 @@ ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b5ba2a19505d0d7a1493b997eda7d12f3a588f7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bbf909004f6b3d809babfb99b1787728194bd140
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524112"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100857"
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,25 +43,25 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@msgnum****=** ] *msg_id*  
+ [  **\@Msgnum =** ] *Msg_id*  
  Die ID der Meldung. *Msg_id* ist **Int** hat den Standardwert NULL. *Msg_id* für benutzerdefinierte Fehler Nachrichten können eine ganze Zahl zwischen 50.001 und 2.147.483.647 sein. Die Kombination von *Msg_id* und *Sprache* muss eindeutig sein; wenn die ID für die angegebene Sprache bereits vorhanden ist, wird ein Fehler zurückgegeben.  
   
- [  **@severity =** ]*Schweregrad*  
+ [  **\@Schweregrad =** ]*Schweregrad*  
  Ist der Schweregrad des Fehlers an. *Schweregrad* ist **Smallint** hat den Standardwert NULL. Die gültigen Werte reichen von 1 bis 25. Weitere Informationen zu den Schweregraden finden Sie unter [Schweregrade von Datenbank-Engine-Fehlern](../../relational-databases/errors-events/database-engine-error-severities.md).  
   
- [  **@msgtext =** ] **"**_msg_**"**  
+ [  **\@Msgtext =** ] **"**_msg_**"**  
  Ist der Text der Fehlermeldung. *msg* ist **nvarchar(255)** hat den Standardwert NULL.  
   
- [  **@lang =** ] **"**_Sprache_**"**  
+ [  **\@Lang =** ] **"**_Sprache_**"**  
  Die Sprache für diese Meldung. *Sprache* ist **Sysname** hat den Standardwert NULL. Da mehrere Sprachen können, auf dem gleichen Server installiert werden *Sprache* gibt die Sprache, die in der jede Nachricht geschrieben wird. Wenn *Sprache* wird ausgelassen, die Sprache ist die Standardsprache für die Sitzung.  
   
- [  **@with_log =** ] { **"**" TRUE "**"** | **'FALSE'** }  
- Gibt an, ob die Meldung beim Auftreten des Fehlers in das Windows-Anwendungsprotokoll geschrieben werden soll. **@with_log** ist **varchar(5)** hat den Standardwert "false". Bei TRUE wird der Fehler immer in das Windows-Anwendungsprotokoll geschrieben. Bei FALSE wird der Fehler nicht immer in das Windows-Anwendungsprotokoll geschrieben, sondern in Abhängigkeit davon, wie er ausgelöst wurde. Nur Mitglieder der **Sysadmin** -Serverrolle kann diese Option verwenden.  
+ [  **\@With_log =** ] { **"**" true "**"** | **'FALSE'** }  
+ Gibt an, ob die Meldung beim Auftreten des Fehlers in das Windows-Anwendungsprotokoll geschrieben werden soll. **\@WITH_LOG** ist **varchar(5)** hat den Standardwert "false". Bei TRUE wird der Fehler immer in das Windows-Anwendungsprotokoll geschrieben. Bei FALSE wird der Fehler nicht immer in das Windows-Anwendungsprotokoll geschrieben, sondern in Abhängigkeit davon, wie er ausgelöst wurde. Nur Mitglieder der **Sysadmin** -Serverrolle kann diese Option verwenden.  
   
 > [!NOTE]  
 >  Wenn eine Meldung in das Windows-Anwendungsprotokoll geschrieben wird, wird sie auch in die [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Fehlerprotokolldatei geschrieben.  
   
- [ **@replace** *=* ] **"**_ersetzen_**"**  
+ [  **\@ersetzen =** ] **"**_ersetzen_**"**  
  Wenn als Zeichenfolge angegeben *ersetzen*, wird eine vorhandene Fehlermeldung mit neuen Meldung und Schweregrad überschrieben. *Ersetzen Sie dies* ist **vom Datentyp varchar(7)** hat den Standardwert NULL. Diese Option muss angegeben werden, wenn *Msg_id* ist bereits vorhanden. Wenn eine englischsprachige Meldung (USA) Englischsprachige Meldung, die den Schweregrad wird für alle Nachrichten in allen anderen Sprachen, die die gleichen ersetzt *Msg_id*.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 44df86f4862ba6e9892e611dabe143e251d9d3cc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: da1a5a26b1d10dca107e7ba061f53ce416348f73
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533000"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129590"
 ---
 # <a name="schemata-transact-sql"></a>SCHEMATA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "52533000"
 |-----------------|---------------|-----------------|  
 |**CATALOG_NAME**|**sysname**|Name der aktuellen Datenbank|  
 |**SCHEMA_NAME**|**Nvarchar (** 128 **)**|Gibt den Namen des Schemas zurück.|  
-|**SCHEMA_OWNER**|**Nvarchar (** 128 **)**|Name des Schemabesitzers.<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit, das Schema eines Objekts zu finden, besteht darin, die sys.objects-Katalogsicht abzufragen.|  
+|**SCHEMA_OWNER**|**Nvarchar (** 128 **)**|Name des Schemabesitzers.<br /><br /> **&#42;&#42;Wichtige &#42; &#42;**  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit, das Schema eines Objekts zu finden, besteht darin, die sys.objects-Katalogsicht abzufragen.|  
 |**DEFAULT_CHARACTER_SET_CATALOG**|**Varchar (** 6 **)**|Gibt immer NULL zurück.|  
 |**DEFAULT_CHARACTER_SET_SCHEMA**|**Varchar (** 3 **)**|Gibt immer NULL zurück.|  
 |**DEFAULT_CHARACTER_SET_NAME**|**sysname**|Gibt den Namen des Standardzeichensatzes zurück.|  

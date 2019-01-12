@@ -14,12 +14,12 @@ ms.assetid: 74bdf5e1-b886-4284-b5fb-332bf79ae083
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85eb91717bba1642270d0851a4a11917d8c40051
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3bd29769b0ba4fd5d9a48fcef07181b7ac70f7c8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770742"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123541"
 ---
 # <a name="validate-subscription"></a>Abonnement überprüfen
   Im Dialogfeld **Abonnements überprüfen** können Sie angeben, dass ein Abonnement für eine Mergeveröffentlichung überprüft werden soll, sobald der Merge-Agent für das Abonnement das nächste Mal ausgeführt wird. Die Ergebnisse der Überprüfung werden im Replikationsmonitor angezeigt. Weitere Informationen finden Sie unter [Validate Data at the Subscriber](validate-data-at-the-subscriber.md).  
@@ -40,6 +40,6 @@ ms.locfileid: "52770742"
  Klicken Sie auf diese Option, um auf das Dialogfeld **Optionen für die Abonnementüberprüfung** zuzugreifen, in dem Sie angeben können, ob die Zeilenanzahlüberprüfung oder die binäre Prüfsummenüberprüfung verwendet werden soll.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Überprüfen von replizierten Daten](validate-replicated-data.md)  
+ [Überprüfen von replizierten Daten](validate-data-at-the-subscriber.md)  
   
   

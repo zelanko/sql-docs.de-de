@@ -15,12 +15,12 @@ ms.assetid: 2597d0d7-951a-48cf-989f-abb67b9fdb36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 75c7fbe2997c84963f2ed1d420840b514fb89860
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c1aa0faafc6fb1cca693fe58665c7344db84c9f1
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779042"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130171"
 ---
 # <a name="send-sql-server-agent-error-messages"></a>Send SQL Server Agent Error Messages
   In diesem Thema wird beschrieben, wie der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent konfiguriert wird, sodass Agent-Fehlermeldungen mit NET SEND in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]übermittelt werden.  
@@ -66,7 +66,7 @@ ms.locfileid: "52779042"
   
 2.  Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent** , und wählen Sie **Eigenschaften**aus.  
   
-3.  In der **SQL Server-Agent-Eigenschaften – *** Server_name* Dialogfeld **Fehlerprotokoll** auf die **allgemeine** Seite, geben Sie den Benutzernamen oder Computernamen, auf die Sie senden möchten, Fehlermeldungen in der **Net send-Empfänger** Feld.  
+3.  In der **SQL Server-Agent-Eigenschaften –**_Server_name_ Dialogfeld **Fehlerprotokoll** auf die **allgemeine** Seite, geben Sie den Benutzernamen oder Computername, die Sie senden möchten, Nachrichten in der **Net send-Empfänger** Feld.  
   
 4.  Klicken Sie auf **OK**.  
   

@@ -18,12 +18,12 @@ ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 027800860166b511b0a548313de30b3d237d9930
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 711c82bb627ca9ad1620cf1e11fdbc9dfa5f4351
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513804"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127451"
 ---
 # <a name="bcpbind"></a>bcp_bind
   Bindet Daten einer Programmvariablen an eine Tabellenspalte im Hinblick auf einen Massenkopiervorgang in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -146,7 +146,7 @@ bcp_bind(hdbc, szName, 0,
 ## <a name="remarks"></a>Hinweise  
  Verwendung **Bcp_bind** für eine schnelle und effiziente Möglichkeit zum Kopieren von Daten aus einer Programmvariablen in eine Tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Rufen Sie [Bcp_init](bcp-init.md) vor diese oder jede andere Funktion zum Massenkopieren aufrufen. Aufrufen von **Bcp_init** legt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Zieltabelle für das Massenkopieren. Beim Aufrufen von **Bcp_init** für die Verwendung mit **Bcp_bind** und [Bcp_sendrow](bcp-sendrow.md), **Bcp_init** *SzDataFile*-Parameter, der angibt, der Datendatei wird auf NULL; festgelegt. die **Bcp_init**_eDirection_ -Parameter auf DB_IN festgelegt ist.  
+ Rufen Sie [Bcp_init](bcp-init.md) vor diese oder jede andere Funktion zum Massenkopieren aufrufen. Aufrufen von **Bcp_init** legt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Zieltabelle für das Massenkopieren. Beim Aufrufen von **Bcp_init** für die Verwendung mit **Bcp_bind** und [Bcp_sendrow](bcp-sendrow.md), **Bcp_init** _SzDataFile_-Parameter, der angibt, der Datendatei wird auf NULL; festgelegt. die **Bcp_init**_eDirection_ -Parameter auf DB_IN festgelegt ist.  
   
  Führen Sie einen separaten **Bcp_bind** rufen Sie für jede Spalte in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle, die in die Sie kopieren möchten. Wenn alle erforderlichen **Bcp_bind** Aufrufe vorgenommen wurden, und rufen Sie dann **Bcp_sendrow** senden Sie eine Zeile mit Daten von Ihren Programmvariablen an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Das erneute Binden einer Spalte wird nicht unterstützt.  
   

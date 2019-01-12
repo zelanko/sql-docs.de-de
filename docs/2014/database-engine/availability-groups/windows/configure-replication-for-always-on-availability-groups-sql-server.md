@@ -13,12 +13,12 @@ ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7cce805ea589a3795a5d617a1d2e01274f8a2fc0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 547ebeb6043345821d2b2a19b407599abfd14008
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174620"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125410"
 ---
 # <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>Konfigurieren der Replikation für Always On-Verfügbarkeitsgruppen (SQL Server)
   Das Konfigurieren von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikation und AlwaysOn-Verfügbarkeitsgruppen umfasst sieben Schritte. Jeder dieser Schritte wird in den folgenden Abschnitten detailliert beschrieben.  
@@ -70,7 +70,7 @@ ms.locfileid: "48174620"
   
  **Konfigurieren des Verlegers beim ursprünglichen Verleger**  
   
-1.  Konfigurieren Sie die Remoteverteilung. Wenn gespeicherte Prozeduren zur Konfiguration des Verlegers verwendet werden, führen Sie `sp_adddistributor`. Geben Sie den Wert für *@password* wie, wann verwendet `sp_adddistrbutor` ausgeführt wurde, auf dem Verteiler, um die Verteilung einzurichten.  
+1.  Konfigurieren Sie die Remoteverteilung. Wenn gespeicherte Prozeduren zur Konfiguration des Verlegers verwendet werden, führen Sie `sp_adddistributor` aus. Geben Sie den Wert für *@password* wie, wann verwendet `sp_adddistrbutor` ausgeführt wurde, auf dem Verteiler, um die Verteilung einzurichten.  
   
     ```  
     exec sys.sp_adddistributor  
@@ -78,7 +78,7 @@ ms.locfileid: "48174620"
         @password = 'MyDistPass'  
     ```  
   
-2.  Aktivieren Sie die Datenbank für die Replikation. Wenn gespeicherte Prozeduren zur Konfiguration des Verlegers verwendet werden, führen Sie `sp_replicationdboption`. Wenn sowohl Transaktions- als auch Mergereplikation für die Datenbank konfiguriert werden sollen, müssen beide aktiviert werden.  
+2.  Aktivieren Sie die Datenbank für die Replikation. Wenn gespeicherte Prozeduren zur Konfiguration des Verlegers verwendet werden, führen Sie `sp_replicationdboption` aus. Wenn sowohl Transaktions- als auch Mergereplikation für die Datenbank konfiguriert werden sollen, müssen beide aktiviert werden.  
   
     ```  
     USE master;  
@@ -133,7 +133,7 @@ EXEC sys.sp_adddistpublisher
     @password = '**Strong password for publisher**';  
 ```  
   
- Konfigurieren Sie die Verteilung auf jedem sekundären Replikathost. Identifizieren Sie den Verteiler des ursprünglichen Verlegers als Remoteverteiler. Verwenden Sie dasselbe Kennwort wie, wann verwendet `sp_adddistributor` ursprünglich auf dem Verteiler ausgeführt wurde. Wenn gespeicherte Prozeduren zum Konfigurieren der Verteilung, verwendet werden die *@password* Parameter `sp_adddistributor` wird verwendet, um das Kennwort angeben.  
+ Konfigurieren Sie die Verteilung auf jedem sekundären Replikathost. Identifizieren Sie den Verteiler des ursprünglichen Verlegers als Remoteverteiler. Verwenden Sie das Kennwort, das verwendet wurde, als `sp_adddistributor` ursprünglich auf dem Verteiler ausgeführt wurde. Wenn gespeicherte Prozeduren zum Konfigurieren der Verteilung, verwendet werden die *@password* Parameter `sp_adddistributor` wird verwendet, um das Kennwort angeben.  
   
 ```  
 EXEC sp_adddistributor   
@@ -141,7 +141,7 @@ EXEC sp_adddistributor
     @password = '**Strong password for distributor**';  
 ```  
   
- Stellen Sie bei jedem sekundären Replikathost sicher, dass die Pushabonnenten der Datenbankveröffentlichungen als Verbindungsserver angezeigt werden. Wenn gespeicherte Prozeduren zum Konfigurieren der Remoteverleger verwendet werden, verwenden Sie `sp_addlinkedserver` , fügen Sie den Abonnenten (sofern nicht bereits vorhanden) als Verbindungsserver für den Verleger.  
+ Stellen Sie bei jedem sekundären Replikathost sicher, dass die Pushabonnenten der Datenbankveröffentlichungen als Verbindungsserver angezeigt werden. Wenn gespeicherte Prozeduren zum Konfigurieren der Remoteverleger verwendet werden, führen Sie `sp_addlinkedserver` aus, um den Verlegern die Abonnenten (sofern nicht bereits vorhanden) als Verbindungsserver hinzuzufügen.  
   
 ```  
 EXEC sys.sp_addlinkedserver   
@@ -176,15 +176,15 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
  Die gespeicherte Prozedur `sp_validate_replica_hosts_as_publishers` sollte von einer Anmeldung mit ausreichender Autorisierung bei jedem Verfügbarkeitsgruppenreplikathost ausgeführt werden, um Informationen zur Verfügbarkeitsgruppe abzufragen. Im Gegensatz zu `sp_validate_redirected_publisher`, es verwendet die Anmeldeinformationen des Aufrufers und nicht die Anmeldung in msdb.dbo.MSdistpublishers beibehalten zur Verbindung mit der Replikate der verfügbarkeitsgruppe.  
   
 > [!NOTE]  
->  `sp_validate_replica_hosts_as_publishers` mit folgendem Fehler fehl, wenn Überprüfung sekundärer replikathosts, die keinen Lesezugriff zulassen oder erfordern leseabsicht angegeben werden.  
+>  Die Überprüfung sekundärer Replikathosts, die keinen Lesezugriff zulassen oder die Angabe der Leseabsicht erfordern, schlägt bei `sp_validate_replica_hosts_as_publishers` mit dem folgenden Fehler fehl.  
 >   
 >  Meldung 21899, Ebene 11, Status 1, Prozedur `sp_hadr_verify_subscribers_at_publisher`, Zeile 109  
 >   
->  Die Abfrage beim umgeleiteten Verleger 'MyReplicaHostName', mit der bestimmt werden sollte, ob sysserver-Einträge für die Abonnenten des ursprünglichen Verlegers 'MyOriginalPublisher' vorlagen, schlug mit Fehler '976', Fehlermeldung 'Fehler 976, Ebene 14, Status 1, Meldung fehl: Die Zieldatenbank, 'MyPublishedDB', nimmt an einer Verfügbarkeitsgruppe teil, und ist derzeit nicht für Abfragen verfügbar. Entweder die Datenverschiebung wurde angehalten, oder für das Verfügbarkeitsreplikat wurde kein Schreibzugriff aktiviert. Um schreibgeschützten Zugriff auf diese und andere Datenbanken in der Verfügbarkeitsgruppe zuzulassen, aktivieren Sie den Lesezugriff auf mindestens ein sekundäres Verfügbarkeitsreplikat in der Gruppe.  Weitere Informationen finden Sie unter den `ALTER AVAILABILITY GROUP` -Anweisung in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Onlinedokumentation. ".  
+>  Die Abfrage beim umgeleiteten Verleger 'MyReplicaHostName', um festzustellen, ob Sysserver-Einträge für die Abonnenten des ursprünglichen Verlegers 'myoriginalpublisher ' Vorlagen bei der Fehler '976', Fehlermeldung ' Fehler 976, Ebene 14, Status 1, Nachricht: Die Zieldatenbank, 'MyPublishedDB', einer verfügbarkeitsgruppe beteiligt ist, und ist zurzeit nicht für Abfragen zugegriffen werden kann. Entweder die Datenverschiebung wurde angehalten, oder für das Verfügbarkeitsreplikat wurde kein Schreibzugriff aktiviert. Um schreibgeschützten Zugriff auf diese und andere Datenbanken in der Verfügbarkeitsgruppe zuzulassen, aktivieren Sie den Lesezugriff auf mindestens ein sekundäres Verfügbarkeitsreplikat in der Gruppe.  Weitere Informationen finden Sie im Thema zur `ALTER AVAILABILITY GROUP`-Anweisung in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
 >   
 >  Es sind ein oder mehrere Verlegerüberprüfungsfehler für Replikathost 'MyReplicaHostName' aufgetreten.  
   
- Dieses Verhalten wird erwartet. Sie müssen das Vorhandensein der Abonnentenservereinträge bei diesen sekundären Replikathosts überprüfen, indem Sie die sysserver-Einträge im Host direkt abfragen.  
+ Dabei handelt es sich um ein erwartetes Verhalten. Sie müssen das Vorhandensein der Abonnentenservereinträge bei diesen sekundären Replikathosts überprüfen, indem Sie die sysserver-Einträge im Host direkt abfragen.  
   
 ##  <a name="step7"></a> 7. Hinzufügen des ursprünglichen Verlegers zum Replikationsmonitor  
  Fügen Sie dem Replikationsmonitor bei jedem Verfügbarkeitsgruppenreplikat den ursprünglichen Verleger hinzu.  
@@ -196,7 +196,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [Replikation, Änderungsnachverfolgung, Change Data Capture und AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](replicate-track-change-data-capture-always-on-availability.md)  
   
--   [Verwaltung &#40;Replikation&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [Replikationsverwaltung – häufig gestellte Fragen](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
  **So erstellen und konfigurieren Sie eine Verfügbarkeitsgruppe**  
   

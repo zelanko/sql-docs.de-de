@@ -21,12 +21,12 @@ ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 95fbb61460c23ca0fedf0baec71aa21acaa50398
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786742"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123930"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Anzeigen des Veröffentlichungs- und Abonnementstatus im Replikationsmonitor
   Im Replikationsmonitor von[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden Statusinformationen für Veröffentlichungen und Abonnements angezeigt:  
@@ -53,11 +53,8 @@ ms.locfileid: "52786742"
   
  **So zeigen Sie den Veröffentlichungs- und Abonnementstatus an**  
   
--   Replikationsmonitor: [Anzeigen von Informationen und Ausführen von Aufgaben für eine Veröffentlichung &#40;Replikationsmonitor&#41; ](view-information-and-perform-tasks-for-a-publication-replication-monitor.md) und [Anzeigen von Informationen und Ausführen von Aufgaben für ein Abonnement &#40;Replikationsmonitor&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
+-   Replikationsmonitor: [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikationsmonitors](view-information-and-perform-tasks-replication-monitor.md).
   
- **So zeigen Sie ausführliche Informationen zu Agents an:**  
-  
--   Replikationsmonitor: [Anzeigen von Informationen und Ausführen von Aufgaben für die einer Veröffentlichung zugeordneten Agents &#40;Replikationsmonitor&#41; ](view-information-and-perform-tasks-for-publication-agents.md) und [Anzeigen von Informationen und Ausführen von Aufgaben für die einem Abonnement zugeordneten Agents &#40;Replikation Monitor&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
   
 ## <a name="publication-status-values"></a>Veröffentlichungsstatuswerte  
  In der nachfolgenden Tabelle werden Veröffentlichungsstatuswerte und ihre entsprechenden Symbole nach Priorität geordnet aufgeführt.  

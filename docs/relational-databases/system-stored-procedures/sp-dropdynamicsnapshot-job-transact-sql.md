@@ -16,12 +16,12 @@ ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 410a852ed1535a219208a62b7d0b45849333cb49
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e4612c7b20e448eecbd6c83a3d09d0796dcff542
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818992"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126260"
 ---
 # <a name="spdropdynamicsnapshotjob-transact-sql"></a>sp_dropdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +41,13 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **"**_Veröffentlichung_**"**  
  Der Name der Veröffentlichung, aus der der Auftrag für die Momentaufnahme gefilterter Daten entfernt wird. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@dynamic_snapshot_jobname**=] **"***Dynamic_snapshot_jobname***"**  
+ [ **@dynamic_snapshot_jobname**=] **"**_Dynamic_snapshot_jobname_**"**  
  Der Name des Auftrags für die Momentaufnahme gefilterter Daten, der entfernt wird. *Dynamic_snapshot_jobname*ist vom Datentyp Sysname und ist dies nicht bereitgestellten Standardwerte Auftragsname zugeordneten *Dynamic_snapshot_jobid*.  
   
- [ **@dynamic_snapshot_jobid**=] **"***Dynamic_snapshot_jobid***"**  
+ [ **@dynamic_snapshot_jobid**=] **"**_Dynamic_snapshot_jobid_**"**  
  Der Bezeichner des Auftrags für die Momentaufnahme gefilterter Daten, der entfernt wird. *Dynamic_snapshot_jobid*ist **Uniqueidentifier**, mit dem Standardwert NULL.  
   
 > [!IMPORTANT]  

@@ -16,12 +16,12 @@ ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ffb78d301762f9b7edcb78a2ba062db6fe662f6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f2ada1011096eb8275f9059e531cfc0fcc1af58c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540022"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126170"
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>API-Funktionen der Kernebene (ODBC-Treiber für Oracle)
 > [!IMPORTANT]  
@@ -38,7 +38,7 @@ ms.locfileid: "52540022"
 |**SQLCancel**|Bricht die Verarbeitung für ein Anweisungshandle Befehls beschäftigt ab. In einigen Fällen lässt Oracle nicht Abbrechen einer ausgeführten Anweisung. Dies bedeutet, dass eine ausgeführte Anweisung weiterhin Oracle Abschluss des Prozesses, zu diesem Zeitpunkt die Ergebnisse von den Anweisungen, die vom ODBC-Treiber für Oracle abgebrochen werden.|  
 |**SQLColAttributes**|Gibt Informationen der Sicherheitsbeschreibung für eine Spalte in einem Resultset zurück. Informationen der Sicherheitsbeschreibung wird als eine Zeichenfolge, eine 32-Bit-Deskriptor-abhängige Wert oder ein ganzzahliger Wert zurückgegeben.|  
 |**SQLConnect**|Eine Verbindung mit einer Datenquelle. Um Oracle-Operating System-Authentifizierung verwenden, geben Sie "/" als die *SzUID* Parameter und "" als die *SzAuthStr* Parameter.|  
-|**SQLDescribeCol**|Gibt den Namen, Typ, Genauigkeit, Dezimalstellen und NULL-Zulässigkeit der angegebenen Ergebnisspalte. **Hinweis**:  **SQLDescribeCol** meldet berechnete Spalten als SQL_VARCHAR.|  
+|**SQLDescribeCol**|Gibt den Namen, Typ, Genauigkeit, Dezimalstellen und NULL-Zulässigkeit der angegebenen Ergebnisspalte. **Hinweis:  SQLDescribeCol** meldet berechnete Spalten als SQL_VARCHAR.|  
 |**SQLDisconnect**|Schließt eine Verbindung Wenn Verbindungspooling, für die einer freigegebenen Umgebung aktiviert ist aus, und eine Anwendung ruft **SQLDisconnect** für eine Verbindung in der Umgebung, die Verbindung an den Verbindungspool zurückgegeben werden soll, und ist weiterhin verfügbar, mit anderen Komponenten, die mithilfe von die gleichen freigegebenen Umgebung.|  
 |**SQLError**|Fehler oder Status Informationen zu den letzten Fehler zurückgegeben. Der Treiber verwaltet einen Stapel oder eine Liste von Fehlern, die für die zurückgegeben werden, können die *Befehls beschäftigt*, *Hdbc*, und *Henv* Argumente, je nachdem, wie der Aufruf von **SQLError**  erfolgt. Die Fehlerwarteschlange wird nach jeder Anweisung geleert. In der Regel ruft Sie eine Oracle-Fehlermeldung ab, und andernfalls leer ist.|  
 |**SQLExecDirect**|Führt eine neue, nicht vorbereiteter SQL­Anweisung. Der Treiber verwendet die aktuellen Werte der Variablen Marker Parameter auf, wenn alle Parameter in der Anweisung vorhanden sind. Wenn Ihre Tabelle, Sicht oder Feldnamen Leerzeichen enthalten, schließen Sie die Namen wieder in Anführungszeichen ein. Wenn Ihre Datenbank eine Tabelle namens enthält z. B. *Meine Tabelle* und das Feld *mein Feld*, schließen Sie jedes Element des Bezeichners wie folgt:<br /><br /> Wählen Sie \`meiner Tabelle\`. \`Meine "Field1"\`, \`Meiner Tabelle\`.\` Meine "Field2"\` FROM \`Meine Tabelle "|  

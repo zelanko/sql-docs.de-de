@@ -19,12 +19,12 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 82452c5e0d4ddff21870ff341673da6d11b18f40
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e9db5352c80cfc45fd6856339e2aaf680b631a47
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772020"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129120"
 ---
 # <a name="enhance-merge-replication-performance"></a>Verbessern der Leistung der Mergereplikation
   Im Anschluss an die in [Verbessern der allgemeinen Replikationsleistung](enhance-general-replication-performance.md)beschriebenen Überlegungen zur allgemeinen Leistung sollten Sie sich Gedanken über die im Folgenden beschriebenen zusätzlichen Aspekte im Zusammenhang mit einer Mergereplikation machen.  
@@ -144,6 +144,6 @@ ms.locfileid: "52772020"
   
 -   Überwachen Sie mithilfe der Registerkarte **Synchronisierungsverlauf** im Replikationsmonitor die Synchronisierungsleistung.  
   
-     Bei Mergereplikationen zeigt der Replikationsmonitor auf der Registerkarte **Synchronisierungsverlauf** detaillierte Statistiken für alle Artikel an, die während einer Synchronisierung verarbeitet werden. So lässt sich diesen Statistiken z. B. die Länge der einzelnen Verarbeitungsphasen (Hochladen von Änderungen, Herunterladen von Änderungen usw.) entnehmen. Auf diese Weise können Sie besser die Tabellen identifizieren, die zu einer Verlangsamung führen, und Sie können hier auch hervorragend Leistungsprobleme im Zusammenhang mit Mergeabonnements diagnostizieren. Weitere Informationen zum Anzeigen detaillierter Statistiken finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für die einem Abonnement zugeordneten Agents &#40;Replikationsmonitor&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     Bei Mergereplikationen zeigt der Replikationsmonitor auf der Registerkarte **Synchronisierungsverlauf** detaillierte Statistiken für alle Artikel an, die während einer Synchronisierung verarbeitet werden. So lässt sich diesen Statistiken z. B. die Länge der einzelnen Verarbeitungsphasen (Hochladen von Änderungen, Herunterladen von Änderungen usw.) entnehmen. Auf diese Weise können Sie besser die Tabellen identifizieren, die zu einer Verlangsamung führen, und Sie können hier auch hervorragend Leistungsprobleme im Zusammenhang mit Mergeabonnements diagnostizieren. Weitere Informationen zum Anzeigen detaillierter Statistiken finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikationsmonitors](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
   

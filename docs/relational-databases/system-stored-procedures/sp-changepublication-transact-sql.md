@@ -16,12 +16,12 @@ ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b247e6869d3eea05325fd9020ee6a073540deb4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5cdd5f3b4c4c1dd8ddac0df34423834c3b09b839
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209129"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131240"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publication =** ] **'***publication***'**  
+ [  **@publication =** ] **"**_Veröffentlichung_**"**  
  Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@property =** ] **"***Eigenschaft***"**  
+ [  **@property =** ] **"**_Eigenschaft_**"**  
  Der Name der zu ändernden Veröffentlichungseigenschaft. *Eigenschaft* ist **nvarchar(255)**.  
   
- [  **@value =** ] **"***Wert***"**  
+ [  **@value =** ] **"**_Wert_**"**  
  Der neue Eigenschaftswert. *Wert* ist **nvarchar(255)**, hat den Standardwert NULL.  
   
  Diese Tabelle beschreibt die änderbaren Eigenschaften der Veröffentlichung sowie die Einschränkungen für die Werte dieser Eigenschaften.  
@@ -130,7 +130,7 @@ Weitere Informationen zu den Eigenschaften, bei deren Änderung die Generierung 
   - **0** gibt an, dass Änderungen am Artikel bewirken nicht, das Abonnement erneut initialisiert werden. Wenn die gespeicherte Prozedur erkennt, dass die Änderung die Neuinitialisierung vorhandener Abonnements erfordert, tritt ein Fehler auf, und es werden keine Änderungen durchgeführt.  
   - **1** gibt an, dass Änderungen am Artikel bewirken, das vorhandene Abonnement erneut initialisiert werden dass, und erteilt die Berechtigung für die Initialisierung des Abonnements erfolgen.  
   
-[ **@publisher** = ] **'***publisher***'**  
+[ **@publisher** =] **"**_Verleger_**"**  
  Gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
   > [!NOTE]  

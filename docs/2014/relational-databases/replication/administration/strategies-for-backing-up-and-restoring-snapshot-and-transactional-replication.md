@@ -20,12 +20,12 @@ ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 43be13027d1460ec407239140cd4306be76a445e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823515"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125230"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Strategien zum Sichern und Wiederherstellen einer Momentaufnahme- und Transaktionsreplikation
   Drei Bereiche sind beim Entwickeln einer Sicherungs- und Wiederherstellungsstrategie für die Momentaufnahme- und Transaktionsreplikation zu berücksichtigen:  
@@ -117,7 +117,7 @@ ms.locfileid: "52823515"
   
          Weitere Informationen zum Starten und Beenden eines Verteilungs-Agents finden Sie unter [Starten und Beenden eines Replikations-Agents &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) und [Ausführbare Konzepte für die Programmierung von Replikations-Agents](../concepts/replication-agent-executables-concepts.md).  
   
-         Weitere Informationen zum Überprüfen von Befehlen finden Sie unter [Anzeigen von replizierten Befehlen und anderen Informationen in der Verteilungsdatenbank &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) und [Anzeigen von Informationen und Ausführen von Aufgaben für die einem Abonnement zugeordneten Agents &#40;Replikationsmonitor&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+         Weitere Informationen zum Überprüfen von Befehlen finden Sie unter [anzeigen replizierter Befehle und anderer Informationen in der Verteilungsdatenbank &#40;Replikationsprogrammierung mit Transact-SQL&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) und [Informationen anzeigen und Ausführen von Aufgaben mithilfe des Replikationsmonitors](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Entfernen Sie die Replikationskonfiguration vom Verleger, vom Verteiler und von den Abonnenten, und erstellen Sie die Konfiguration dann neu. Geben Sie beim Neuerstellen von Abonnements an, dass der Abonnent bereits über die Daten verfügt. Die Wiederherstellung ist abgeschlossen.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "52823515"
   
          Weitere Informationen zum Starten und Beenden eines Verteilungs-Agents finden Sie unter [Starten und Beenden eines Replikations-Agents &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) und [Ausführbare Konzepte für die Programmierung von Replikations-Agents](../concepts/replication-agent-executables-concepts.md).  
   
-         Weitere Informationen zum Überprüfen von Befehlen finden Sie unter [Anzeigen von replizierten Befehlen und anderen Informationen in der Verteilungsdatenbank &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) und [Anzeigen von Informationen und Ausführen von Aufgaben für die einem Abonnement zugeordneten Agents &#40;Replikationsmonitor&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+         Weitere Informationen zum Überprüfen von Befehlen finden Sie unter [anzeigen replizierter Befehle und anderer Informationen in der Verteilungsdatenbank &#40;Replikationsprogrammierung mit Transact-SQL&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) und [Informationen anzeigen und Ausführen von Aufgaben mithilfe des Replikationsmonitors](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Verwenden Sie das [Hilfsprogramm "tablediff"](../../../tools/tablediff-utility.md) oder ein anderes Tool, um den Verleger manuell mit dem Abonnenten zu synchronisieren. So können Sie Daten aus der Abonnementdatenbank wiederherstellen, die nicht in der Sicherung der Veröffentlichungsdatenbank enthalten waren. Fahren Sie mit Schritt c fort.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "52823515"
   
      Weitere Informationen zum Starten und Beenden eines Verteilungs-Agents finden Sie unter [Starten und Beenden eines Replikations-Agents &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) und [Ausführbare Konzepte für die Programmierung von Replikations-Agents](../concepts/replication-agent-executables-concepts.md).  
   
-     Weitere Informationen zum Überprüfen von Befehlen finden Sie unter [Anzeigen von replizierten Befehlen und anderen Informationen in der Verteilungsdatenbank &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) und [Anzeigen von Informationen und Ausführen von Aufgaben für die einem Abonnement zugeordneten Agents &#40;Replikationsmonitor&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     Weitere Informationen zum Überprüfen von Befehlen finden Sie unter [anzeigen replizierter Befehle und anderer Informationen in der Verteilungsdatenbank &#40;Replikationsprogrammierung mit Transact-SQL&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) und [Informationen anzeigen und Ausführen von Aufgaben mithilfe des Replikationsmonitors](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 3.  Wenn Sie Abonnements mit verzögertem Update über eine Warteschlange verwenden, stellen Sie mit jedem Abonnenten eine Verbindung her, und löschen Sie in der Abonnementdatenbank alle Zeilen aus der [MSreplication_queue &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/msreplication-queue-transact-sql)-Tabelle. Fahren Sie mit Schritt 4 fort.  
   
@@ -285,7 +285,7 @@ ms.locfileid: "52823515"
   
     2.  Markieren Sie alle Veröffentlichungen zur Überprüfung. Initialisieren Sie alle Abonnements neu, bei denen die Überprüfung einen Fehler erzeugt. Die Wiederherstellung ist abgeschlossen.  
   
-         Weitere Informationen zur Überprüfung finden Sie unter [Validate Replicated Data](../validate-replicated-data.md). Weitere Informationen zur Neuinitialisierung finden Sie unter [Erneutes Initialisieren von Abonnements](../reinitialize-subscriptions.md).  
+         Weitere Informationen zur Überprüfung finden Sie unter [Validate Replicated Data](../validate-data-at-the-subscriber.md). Weitere Informationen zur Neuinitialisierung finden Sie unter [Erneutes Initialisieren von Abonnements](../reinitialize-subscriptions.md).  
   
 #### <a name="msdb-database-distributor"></a>msdb-Datenbank (Verteiler)  
   
@@ -301,7 +301,7 @@ ms.locfileid: "52823515"
   
 4.  Markieren Sie alle Veröffentlichungen zur Überprüfung. Initialisieren Sie alle Abonnements neu, bei denen die Überprüfung einen Fehler erzeugt. Die Wiederherstellung ist abgeschlossen.  
   
-     Weitere Informationen zur Überprüfung finden Sie unter [Validate Replicated Data](../validate-replicated-data.md). Weitere Informationen zur Neuinitialisierung finden Sie unter [Erneutes Initialisieren von Abonnements](../reinitialize-subscriptions.md).  
+     Weitere Informationen zur Überprüfung finden Sie unter [Validate Replicated Data](../validate-data-at-the-subscriber.md). Weitere Informationen zur Neuinitialisierung finden Sie unter [Erneutes Initialisieren von Abonnements](../reinitialize-subscriptions.md).  
   
 #### <a name="master-database-distributor"></a>master-Datenbank (Verteiler)  
   

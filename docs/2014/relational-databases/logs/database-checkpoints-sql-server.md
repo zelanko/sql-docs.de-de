@@ -26,12 +26,12 @@ ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7f9fec2db69f28f832aa8745cf54ea0ff635f491
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 33f85b2f1cd8b259e46851aab818b258a6d78291
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354452"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128570"
 ---
 # <a name="database-checkpoints-sql-server"></a>Datenbankprüfpunkte (SQL Server)
   Dieses Thema bietet eine Übersicht über [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankprüfpunkte. Ein *Prüfpunkt* erstellt einen bekannten fehlerfreien Punkt, von dem aus [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Änderungen übernehmen kann, die im Protokoll während der Wiederherstellung nach einem unerwarteten Herunterfahren oder einem Absturz enthalten sind.  
@@ -45,7 +45,7 @@ ms.locfileid: "53354452"
 |Name|[!INCLUDE[tsql](../../includes/tsql-md.md)] -Schnittstelle|Description|  
 |----------|----------------------------------|-----------------|  
 |Automatic|EXEC Sp_configure **"`recovery interval`','*`seconds`*"**|Automatisch im Hintergrund, um die oben vorgeschlagene Zeitlimit zu erfüllen ausgegeben, die `recovery interval` Serverkonfigurationsoption. Automatische Prüfpunkte werden vollständig ausgeführt.  Automatische Prüfpunkte werden auf Basis der Anzahl an ausstehenden Schreibvorgängen gedrosselt. Zudem hängt die Drosselung auch davon ab, ob [!INCLUDE[ssDE](../../includes/ssde-md.md)] eine Erhöhung der Schreiblatenz auf über 20 Millisekunden erkennt.<br /><br /> Weitere Informationen finden Sie unter [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
-|Indirekt|ALTER DATABASE ... SET TARGET_RECOVERY_TIME **=***Zielwiederherstellungszeit* { SECONDS &#124; MINUTES }|Wird im Hintergrund ausgegeben, um eine benutzerdefinierte Zielwiederherstellungszeit für eine bestimmte Datenbank zu erfüllen. Die standardmäßige Zielwiederherstellungszeit ist 0. Sie löst die Verwendung der Heuristik für automatische Prüfpunkte auf der Datenbank aus. Wenn Sie ALTER DATABASE verwendet haben, um TARGET_RECOVERY_TIME auf >0 festzulegen, wird dieser Wert anstelle des Wiederherstellungsintervalls verwendet, das für die Serverinstanz angegeben wurde.<br /><br /> Weitere Informationen finden Sie unter [Ändern der Zielwiederherstellungszeit einer Datenbank &#40;SQL Server&#41;](change-the-target-recovery-time-of-a-database-sql-server.md)konfiguriert wird.|  
+|Indirekt|ALTER DATABASE ... SET TARGET_RECOVERY_TIME **=**_Zielwiederherstellungszeit_ { SECONDS &#124; MINUTES }|Wird im Hintergrund ausgegeben, um eine benutzerdefinierte Zielwiederherstellungszeit für eine bestimmte Datenbank zu erfüllen. Die standardmäßige Zielwiederherstellungszeit ist 0. Sie löst die Verwendung der Heuristik für automatische Prüfpunkte auf der Datenbank aus. Wenn Sie ALTER DATABASE verwendet haben, um TARGET_RECOVERY_TIME auf >0 festzulegen, wird dieser Wert anstelle des Wiederherstellungsintervalls verwendet, das für die Serverinstanz angegeben wurde.<br /><br /> Weitere Informationen finden Sie unter [Ändern der Zielwiederherstellungszeit einer Datenbank &#40;SQL Server&#41;](change-the-target-recovery-time-of-a-database-sql-server.md)konfiguriert wird.|  
 |Manuell|CHECKPOINT [ *checkpoint_duration* ]|Wird ausgegeben, wenn Sie einen [!INCLUDE[tsql](../../includes/tsql-md.md)] -CHECKPOINT-Befehl ausführen. Der manuelle Prüfpunkt tritt in der aktuellen Datenbank für die Verbindung auf. Standardmäßig werden manuelle Prüfpunkte vollständig ausgeführt. Das Drosseln erfolgt auf die gleiche Weise wie für automatische Prüfpunkte.  Optional gibt der *checkpoint_duration* -Parameter die Anforderung an, welchen Zeitraum in Sekunden ein Prüfpunkt benötigen darf, bis er abgeschlossen ist.<br /><br /> Weitere Informationen finden Sie unter [CHECKPOINT &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/checkpoint-transact-sql).|  
 |Intern|Keine.|Wird von verschiedenen Servervorgängen wie Sicherung und Erstellung einer Datenbank-Momentaufnahme ausgegeben. So wird gewährleistet, dass Datenträgerabbilder dem aktuellen Protokollstatus entsprechen.|  
   

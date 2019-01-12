@@ -13,12 +13,12 @@ ms.assetid: 631f48bf-50c9-4015-b9d8-8f1ad92d1ee2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bd78bf7da1a68e7e053af52c4fa8f9cf0cd71094
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e4c69b22af2a4e5a087c21b34fc719f971c3844b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755642"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128580"
 ---
 # <a name="create-and-apply-the-snapshot"></a>Erstellen und Anwenden der Momentaufnahme
   Momentaufnahmen werden nach dem Erstellen einer Veröffentlichung vom Momentaufnahme-Agent generiert. Sie können folgendermaßen generiert werden:  
@@ -43,8 +43,7 @@ ms.locfileid: "52755642"
   
  Informationen zum Anzeigen oder Ändern des Standardspeicherorts für den Momentaufnahmeordner finden Sie im entsprechenden Abschnitt.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Geben Sie den standardmäßigen Momentaufnahmespeicherort &#40;SQL Server Management Studio&#41;](specify-the-default-snapshot-location-sql-server-management-studio.md)  
-  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Geben Sie den standardmäßigen Momentaufnahmespeicherort](snapshot-options.md#snapshot-folder-locations)
 -   Replikations- und RMO-Programmierung: [Konfigurieren der Veröffentlichung und der Verteilung](configure-publishing-and-distribution.md)  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -13,12 +13,12 @@ ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2e107acad4bfd844478c47cfc5c19aa947c74bd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8f0eaa3be9d6dbdd27eb52ce66ebc652dd19f7d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104111"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127001"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>Protokollversand und Replikation (SQL Server)
   Beim Protokollversand werden zwei Kopien einer einzigen Datenbank verwendet, die normalerweise auf verschiedenen Computern gespeichert sind. Für die Clients ist immer nur eine Kopie der Datenbank verfügbar. Diese Kopie wird als primäre Datenbank bezeichnet. Updates, die von Clients an der primären Datenbank vorgenommen werden, werden durch den Protokollversand auf die andere Kopie der Datenbank übertragen, die als sekundäre Datenbank bezeichnet wird. Beim Protokollversand wird das Transaktionsprotokoll von jedem Einfüge-, Update- oder Löschvorgang, der an der primären Datenbank vorgenommen wird, auf die sekundäre Datenbank angewandt.  
@@ -48,7 +48,7 @@ ms.locfileid: "48104111"
 ### <a name="log-shipping-with-transactional-replication"></a>Protokollversand mit Transaktionsreplikation  
  Bei der Transaktionsreplikation hängt das Verhalten des Protokollversands von der **sync with backup** -Option ab. Diese Option kann für die Veröffentlichungsdatenbank und für die Verteilungsdatenbank festgelegt werden; beim Protokollversand für den Verleger ist nur die Einstellung für die Veröffentlichungsdatenbank relevant.  
   
- Wenn Sie diese Option für die Veröffentlichungsdatenbank festlegen, stellen Sie sicher, dass Transaktionen erst an die Verteilungsdatenbank übermittelt werden, wenn Sie in der Veröffentlichungsdatenbank gesichert wurden. Die neueste Sicherung der Veröffentlichungsdatenbank kann dann auf dem Sekundärserver wiederhergestellt werden, und es besteht keine Möglichkeit, dass die Verteilungsdatenbank Transaktionen enthält, die in der wiederhergestellten Veröffentlichungsdatenbank nicht vorhanden sind. Mit dieser Option wird die Konsistenz zwischen dem Verleger, dem Verteiler und den Abonnenten sichergestellt, wenn ein Failover des Verlegers zu einem Sekundärserver erfolgt. Latenzzeit und Durchsatz sind betroffen, da Transaktionen erst an die Verteilungsdatenbank übermittelt werden können, nachdem sie auf dem Verleger gesichert wurden. Wenn Ihre Anwendung diese Latenzzeit tolerieren kann, sollten Sie diese Option für die Veröffentlichungsdatenbank festlegen. Wenn die **sync with backup** -Option nicht festgelegt ist, können Abonnenten Änderungen empfangen, die nicht mehr in der wiederhergestellten Datenbank auf dem Sekundärserver enthalten sind. Weitere Informationen finden Sie unter [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](../../relational-databases/replication/transactional/transactional-replication.md).  
+ Wenn Sie diese Option für die Veröffentlichungsdatenbank festlegen, stellen Sie sicher, dass Transaktionen erst an die Verteilungsdatenbank übermittelt werden, wenn Sie in der Veröffentlichungsdatenbank gesichert wurden. Die neueste Sicherung der Veröffentlichungsdatenbank kann dann auf dem Sekundärserver wiederhergestellt werden, und es besteht keine Möglichkeit, dass die Verteilungsdatenbank Transaktionen enthält, die in der wiederhergestellten Veröffentlichungsdatenbank nicht vorhanden sind. Mit dieser Option wird die Konsistenz zwischen dem Verleger, dem Verteiler und den Abonnenten sichergestellt, wenn ein Failover des Verlegers zu einem Sekundärserver erfolgt. Latenzzeit und Durchsatz sind betroffen, da Transaktionen erst an die Verteilungsdatenbank übermittelt werden können, nachdem sie auf dem Verleger gesichert wurden. Wenn Ihre Anwendung diese Latenzzeit tolerieren kann, sollten Sie diese Option für die Veröffentlichungsdatenbank festlegen. Wenn die **sync with backup** -Option nicht festgelegt ist, können Abonnenten Änderungen empfangen, die nicht mehr in der wiederhergestellten Datenbank auf dem Sekundärserver enthalten sind. Weitere Informationen finden Sie unter [Strategien zum Sichern und Wiederherstellen einer Momentaufnahme- und Transaktionsreplikation](../../relational-databases/replication/transactional/transactional-replication.md).  
   
  **Konfigurieren der Transaktionsreplikation und des Protokollversands mit der "sync with backup"-Option**  
   
@@ -109,13 +109,13 @@ ms.locfileid: "48104111"
   
     -   Wird die Veröffentlichung gar nicht gefiltert, sollten Sie die Veröffentlichungsdatenbank durch Synchronisieren mit einem aktuellen Abonnenten auf den neuesten Stand bringen.  
   
-    -   Wenn die Veröffentlichung gefiltert ist, können Sie möglicherweise die Veröffentlichungsdatenbank nicht auf den aktuellen Stand bringen. Nehmen wir einmal an, es gibt eine Tabelle, die so partitioniert ist, dass jedes Abonnement nur die Kundendaten für eine der folgenden Verkaufsregionen erhält: Nord, Ost, Süd und West. Wenn für jede Datenpartition mindestens ein Abonnent vorhanden ist, würde es reichen, die Veröffentlichungsdatenbank mit einem Abonnenten für jede Partition zu synchronisieren, um sie auf den neuesten Stand zu bringen. Wenn aber beispielsweise die Daten in der Partition West auf keinen Abonnenten repliziert wurden, können diese Daten auf dem Verleger nicht auf den aktuellen Stand gebracht werden. In diesem sollten Sie alle Abonnements initialisieren, sodass die Daten auf dem Verleger und den Abonnenten zusammengeführt werden. Weitere Informationen finden Sie unter [Erneutes Initialisieren von Abonnements](../../relational-databases/replication/reinitialize-subscriptions.md).  
+    -   Wenn die Veröffentlichung gefiltert ist, können Sie möglicherweise die Veröffentlichungsdatenbank nicht auf den aktuellen Stand bringen. Betrachten Sie eine Tabelle, die partitioniert wurde, sodass jedes Abonnement erhält dann Kundendaten nur für eine einzelne Region: Nord, Ost, Süd und West. Wenn für jede Datenpartition mindestens ein Abonnent vorhanden ist, würde es reichen, die Veröffentlichungsdatenbank mit einem Abonnenten für jede Partition zu synchronisieren, um sie auf den neuesten Stand zu bringen. Wenn aber beispielsweise die Daten in der Partition West auf keinen Abonnenten repliziert wurden, können diese Daten auf dem Verleger nicht auf den aktuellen Stand gebracht werden. In diesem sollten Sie alle Abonnements initialisieren, sodass die Daten auf dem Verleger und den Abonnenten zusammengeführt werden. Weitere Informationen finden Sie unter [Erneutes Initialisieren von Abonnements](../../relational-databases/replication/reinitialize-subscriptions.md).  
   
      Wenn Sie die Veröffentlichungsdatenbank mit einem Abonnenten synchronisieren, auf dem eine frühere Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ausgeführt wird, kann das Abonnement nicht anonym sein – es muss sich um ein Clientabonnement oder ein Serverabonnement handeln (in früheren Versionen als lokales Abonnement bzw. globales Abonnement bezeichnet). Weitere Informationen finden Sie unter [Synchronisieren von Daten](../../relational-databases/replication/synchronize-data.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Replikationsfunktionen und -tasks](../../relational-databases/replication/replication-features-and-tasks.md)   
- [Informationen zum Protokollversand &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
+ [SQL Server-Replikation](../../relational-databases/replication/sql-server-replication.md)   
+ [Über den Protokollversand &#40;SQLServer&#41;](about-log-shipping-sql-server.md)   
  [Datenbankspiegelung und Replikation &#40;SQL Server&#41;](../database-mirroring/database-mirroring-and-replication-sql-server.md)  
   
   

@@ -16,12 +16,12 @@ ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 073577731fba32e092307ebd7c86eb5904c38a05
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bfe5d9f7bc5c95055af06b0582f2ddcf88ae7cdf
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760233"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125710"
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +48,16 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung  
   
- [ **@login** =] **"***Anmeldung***"**  
+ [ **@login** =] **"**_Anmeldung_**"**  
  Der Name des Windows-Kontos oder der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung, das bzw. die geändert wird. *Anmeldung* ist **nvarchar(257)**, hat keinen Standardwert  
   
- [ **@password** =] **"***Kennwort***"**  
+ [ **@password** =] **"**_Kennwort_**"**  
  Das neue Kennwort gespeichert werden für den angegebenen *Anmeldung*. *Kennwort* ist **Sysname**, hat keinen Standardwert.  
   
 > [!NOTE]  
 >  Nachdem Sie ein Replikationskennwort geändert haben, müssen Sie jeden Agent, der dieses Kennwort verwendet, beenden und neu starten, damit die Änderung für diesen Agent in Kraft tritt.  
   
- [ **@server** =] **"***Server***"**  
+ [ **@server** =] **"**_Server_**"**  
  Die Serververbindung, für die das gespeicherte Kennwort geändert wird. *Server* ist **Sysname**, und kann einen der folgenden Werte:  
   
 |Wert|Description|  

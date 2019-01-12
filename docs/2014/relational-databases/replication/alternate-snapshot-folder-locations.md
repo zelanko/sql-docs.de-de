@@ -14,12 +14,12 @@ ms.assetid: 437553b0-19df-4522-8f27-06b5bc747c69
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ff65f1f4d5042e3b7c401a47e7c9df795dd681b4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: c86e79928bdadb129ed0aa591e4bd035ffe22c1c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777864"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129000"
 ---
 # <a name="alternate-snapshot-folder-locations"></a>Alternative Speicherorte für Momentaufnahmeordner
   Alternative Momentaufnahmespeicherorte ermöglichen Ihnen das Speichern von Momentaufnahmedateien an einem anderen Speicherort oder zusätzlich zum Standardspeicherort, der sich normalerweise auf dem Verteiler befindet. Alternative Speicherorte können sich auf einem anderen Server, in einem Netzlaufwerk oder auf Wechselmedien befinden, z. B. CD-ROMs oder Wechseldatenträgern.  
@@ -36,7 +36,7 @@ ms.locfileid: "52777864"
   
  **So geben Sie alternative Momentaufnahmespeicherorte an**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Angeben eines alternativen Speicherortes für den Momentaufnahmeordner &#40;SQL Server Management Studio&#41;](publish/specify-an-alternate-snapshot-folder-location-sql-server-management-studio.md) 
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Angeben eines Speicherortes für den alternativen Momentaufnahmespeicherort](snapshot-options.md#snapshot-folder-locations) 
   
 -   Replikationsprogrammierung mit [!INCLUDE[tsql](../../includes/tsql-md.md)]: [Konfigurieren von Momentaufnahmeeigenschaften &#40;Replikationsprogrammierung mit Transact-SQL&#41;](publish/configure-snapshot-properties-replication-transact-sql-programming.md)  
   

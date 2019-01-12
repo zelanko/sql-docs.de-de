@@ -18,12 +18,12 @@ ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12c44c565e6e867c2fde6a99d770c2b083e3d6f9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4193e073f4ad4c52d6b2c7f6b82c6246107e85a1
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203280"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127070"
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_add_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@name =** ] **'***name***'**  
+ [  **@name =** ] **"**_Namen_**"**  
  Der Name der Warnung. Der Name wird in der E-Mail- oder Pagernachricht angezeigt, die als Reaktion auf die Warnung gesendet wird. Er muss eindeutig sein und darf kein Prozentzeichen (**%**) Zeichen. *Namen* ist **Sysname**, hat keinen Standardwert.  
   
  [  **@message_id =** ] *Message_id*  
@@ -78,7 +78,7 @@ sp_add_alert [ @name = ] 'name'
   
  Mit dem Festlegen dieses Werts kann beispielsweise verhindert werden, dass unerwünschte E-Mail-Nachrichten gesendet werden, wenn eine Warnung in kurzen Zeitabständen wiederholt auftritt.  
   
- [  **@notification_message =** ] **"***Notification_message***"**  
+ [  **@notification_message =** ] **"**_Notification_message_**"**  
  Ist eine optionale zusätzliche Meldung, die an den Operator gesendet werden, als Teil der e-Mail- **net Send**,- oder Pagerbenachrichtigung. *Notification_message* ist **nvarchar(512)**, hat den Standardwert NULL. Angeben von *Notification_message* eignet sich für spezielle Anmerkungen, z. B. Hilfsmaßnahmen hinzuzufügen.  
   
  [  **@include_event_description_in =** ] *Include_event_description_in*  
@@ -94,16 +94,16 @@ sp_add_alert [ @name = ] 'name'
 |**2**|Pager|  
 |**4**|**net send**|  
   
- [  **@database_name =** ] **"***Datenbank***"**  
+ [  **@database_name =** ] **"**_Datenbank_**"**  
  Die Datenbank, in der der Fehler auftreten muss, damit die Warnung ausgelöst wird. Wenn *Datenbank*nicht angegeben wird, die Warnung ausgelöst wird, unabhängig davon, wo der Fehler aufgetreten ist. *Datenbank* ist **Sysname**. In eckige Klammern ([ ]) eingeschlossene Namen sind nicht zulässig. Der Standardwert ist NULL.  
   
- [  **@event_description_keyword =** ] **"***Event_description_keyword_pattern***"**  
+ [  **@event_description_keyword =** ] **"**_Event_description_keyword_pattern_**"**  
  Die Zeichenfolge, der die Beschreibung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlers entsprechen muss. Zulässig sind Zeichen, die dem Muster des LIKE-Ausdrucks von [!INCLUDE[tsql](../../includes/tsql-md.md)] entsprechen. *Event_description_keyword_pattern* ist **nvarchar(100)**, hat den Standardwert NULL. Dieser Parameter ist hilfreich beim Filtern von Objektnamen (z. B. **%customer_table%**).  
   
  [ **@job_id =** ] *job_id*  
  Die Auftrags-ID des Auftrags, der als Reaktion auf diese Warnung ausgeführt werden soll. *Job_id* ist **Uniqueidentifier**, hat den Standardwert NULL.  
   
- [  **@job_name =** ] **"***Job_name***"**  
+ [  **@job_name =** ] **"**_Job_name_**"**  
  Der Name des Auftrags, der als Reaktion auf diese Warnung ausgeführt werden soll. *Job_name*ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
@@ -112,7 +112,7 @@ sp_add_alert [ @name = ] 'name'
  [  **@raise_snmp_trap =** ] *Raise_snmp_trap*  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Version 7.0, nicht implementiert. *Raise_snmp_trap* ist **Tinyint**, hat den Standardwert 0.  
   
- [  **@performance_condition =** ] **"***Performance_condition***"**  
+ [  **@performance_condition =** ] **"**_Performance_condition_**"**  
  Ein Wert im Format "*Itemcomparatorvalue*". *Performance_condition* ist **nvarchar(512)** hat den Standardwert NULL und besteht aus folgenden Elementen.  
   
 |Format-Element|Description|  
@@ -121,13 +121,13 @@ sp_add_alert [ @name = ] 'name'
 |*Comparator*|Einer dieser Operatoren: >, < oder =|  
 |*Wert*|Numerischer Wert des Indikators|  
   
- [ **@category_name =** ] **'***category***'**  
+ [  **@category_name =** ] **"**_Kategorie_**"**  
  Der Name der Warnungskategorie. *Kategorie* ist **Sysname**, hat den Standardwert NULL.  
   
- [ **@wmi_namespace**=] **"***Wmi_namespace***"**  
+ [ **@wmi_namespace**=] **"**_Wmi_namespace_**"**  
  Der WMI-Namespace zum Abfragen der Ereignisse. *Wmi_namespace* ist **Sysname**, hat den Standardwert NULL. Es werden nur Namespaces auf dem lokalen Server unterstützt.  
   
- [ **@wmi_query**= ] **'***wmi_query***'**  
+ [ **@wmi_query**=] **"**_Wmi_query_**"**  
  Die Abfrage, die das WMI-Ereignis für die Warnung angibt. *Wmi_query* ist **nvarchar(512)**, hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

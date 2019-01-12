@@ -10,12 +10,12 @@ ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6efa9ab6ec2733c67a00b4c16e08d6b4e435cf9b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367192"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127210"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lektion 2: Herstellen einer Verbindung von einem anderen Computer
   Zum Erhöhen der Sicherheit ist der Zugriff auf [!INCLUDE[ssDE](../includes/ssde-md.md)] der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer, Express und Evaluation Edition von einem anderen Computer aus nach der Erstinstallation nicht möglich. In dieser Lektion erfahren Sie, wie Sie die Protokolle aktivieren, die Ports konfigurieren und die Windows-Firewall für das Herstellen von Verbindungen von anderen Computern konfigurieren.  
@@ -44,7 +44,7 @@ ms.locfileid: "53367192"
     > [!NOTE]  
     >  Möglicherweise steht sowohl die 32-Bit- als auch die 64-Bit-Option zur Verfügung.  
   
-2.  In **SQL Server-Konfigurations-Manager**, erweitern Sie **SQL Server-Netzwerkkonfiguration**, und klicken Sie dann auf **Protokolle für**  *\<Instanzname >*.  
+2.  In **SQL Server-Konfigurations-Manager**, erweitern Sie **SQL Server-Netzwerkkonfiguration**, und klicken Sie dann auf **Protokolle für**  _\<Instanzname >_.  
   
      Die Standardinstanz (eine unbenannte Instanz) wird als **MSSQLSERVER**aufgelistet. Wenn Sie eine benannte Instanz installiert haben, wird der von Ihnen angegebene Name aufgeführt. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] wird als **SQLEXPRESS**installiert, es sei denn, der Name wurde während des Setups geändert.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "53367192"
   
 2.  Bestätigen Sie im Dialogfeld **Verbindung mit Server herstellen** in der Liste **Servertyp** die Option **Datenbank-Engine** .  
   
-3.  Geben Sie im Feld **Servername** für das Protokoll **tcp:** ein, gefolgt vom Namen des Computers, einem Komma und der Portnummer. Beim Herstellen einer Verbindung mit der Standardinstanz wird automatisch Port 1433 angenommen und muss nicht angegeben werden. Geben Sie daher Folgendes ein: **tcp:***<Computername>*. In unserem Beispiel für eine benannte Instanz geben Sie Folgendes ein: **tcp:***<Computername>***,49172**.  
+3.  Geben Sie im Feld **Servername** für das Protokoll **tcp:** ein, gefolgt vom Namen des Computers, einem Komma und der Portnummer. Beim Herstellen einer Verbindung mit der Standardinstanz wird automatisch Port 1433 angenommen und muss nicht angegeben werden. Geben Sie daher **tcp:**_<Computername>_ ein. Geben Sie in unserem Beispiel für eine benannte Instanz **tcp:**_<Computername>_**,49172** ein.  
   
     > [!NOTE]  
     >  Wenn Sie **tcp:** nicht im Feld **Servername** eingeben, testet der Client alle aktivierten Protokolle in der Reihenfolge, die in der Clientkonfiguration festgelegt ist.  

@@ -14,12 +14,12 @@ ms.assetid: b67b95c5-61ef-4bd8-9a3e-1640eb7583ac
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b45418c96716cc90ac1b3f42974cd35e60c1919d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 23567accc051e72ede3b8ed079b22411de6bc7c6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797582"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126090"
 ---
 # <a name="modify-columns-database-engine"></a>Ändern von Spalten (Datenbank-Engine)
   Sie können den Datentyp einer Spalte in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]ändern.  
@@ -56,7 +56,7 @@ ms.locfileid: "52797582"
   
 3.  Klicken Sie auf der Registerkarte **Spalteneigenschaften** auf die Datenblattzelle der Eigenschaft **Datentyp** , und wählen Sie aus der Dropdownliste einen neuen Datentyp aus.  
   
-4.  Klicken Sie im Menü **Datei** auf **Speichern** > *Tabellenname*.  
+4.  Klicken Sie im Menü **Datei** auf **Speichern**_table name_.  
   
 > [!NOTE]  
 >  Wenn Sie den Datentyp einer Spalte ändern, wendet der Tabellen-Designer die Standardlänge des neuen Datentyps an, auch wenn Sie zuvor eine andere Länge angegeben haben. Legen Sie deshalb die Datentyplänge erst nach dem Ändern des Datentyps fest.  

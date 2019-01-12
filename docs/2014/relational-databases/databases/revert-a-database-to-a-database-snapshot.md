@@ -13,12 +13,12 @@ ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef9bda4b8eeff394e44ba696e228b121015960b9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 357030c913888d299cbec06c212eb049383b4526
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774352"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125650"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Wiederherstellen einer Datenbank zu einer Datenbank-Momentaufnahme
   Wenn Daten in einer Onlinedatenbank beschädigt werden, empfiehlt es sich gelegentlich, die Datenbank aus einer Datenbank-Momentaufnahme eines Zeitpunkts vor der Beschädigung wiederherzustellen, anstatt die Datenbank aus einer Sicherungskopie wiederherzustellen. Durch das Wiederherstellen einer Datenbank kann beispielsweise ein kürzlich zurückliegender, schwerwiegender Benutzerfehler (z. B. eine gelöschte Tabelle) rückgängig gemacht werden. Alle nach Erstellung der Momentaufnahme vorgenommenen Änderungen gehen jedoch verloren.  
@@ -99,7 +99,7 @@ ms.locfileid: "52774352"
   
      Für einen Wiederherstellungsvorgang sind RESTORE DATABASE-Berechtigungen für die Quelldatenbank erforderlich. Verwenden Sie zum Wiederherstellen der Datenbank die folgende Transact-SQL-Anweisung:  
   
-     RESTORE DATABASE *Datenbankname* FROM DATABASE_SNAPSHOT **=***Name_der_Datenbank_Momentaufnahme*  
+     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=**_database_snapshot_name_  
   
      Dabei ist *database_name* die Quelldatenbank und *database_snapshot_name* der Name der Momentaufnahmen, aus dem die Datenbank wiederhergestellt werden soll. Beachten Sie, dass Sie in dieser Anweisung einen Momentaufnahmenamen statt eines Sicherungsmediums angeben müssen.  
   

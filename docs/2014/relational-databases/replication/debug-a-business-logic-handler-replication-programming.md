@@ -1,5 +1,5 @@
 ---
-title: Debuggen eines Geschäftslogikhandlers (Replikationsprogrammierung) | Microsoft-Dokumentation
+title: Debuggen ein Geschäftslogikhandlers | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -17,12 +17,12 @@ ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 019ff508b10859cae2388636e9189292b498e251
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 90d1fc5d6dd4eb972e15ae942822418aba30573e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761512"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128760"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>Debuggen eines Geschäftslogikhandlers (Replikationsprogrammierung)
   Verwenden Sie einen Geschäftslogikhandler, um eine benutzerdefinierte Geschäftslogik aufzurufen, wenn ein Mergeabonnement synchronisiert wird. Weitere Informationen finden Sie unter [Ausführen von Geschäftslogik während der Mergesynchronisierung](merge/execute-business-logic-during-merge-synchronization.md).  
@@ -31,7 +31,7 @@ ms.locfileid: "52761512"
   
 ### <a name="to-debug-a-business-logic-handler-on-a-local-computer"></a>So debuggen Sie einen Geschäftslogikhandler auf einem lokalen Computer  
   
-1.  Konfigurieren Sie die Veröffentlichung und Verteilung, erstellen Sie eine Veröffentlichung, und erstellen Sie ein Abonnement für die Veröffentlichung. Weitere Informationen finden Sie unter [Konfigurieren der Veröffentlichung und der Verteilung](configure-publishing-and-distribution.md) und [Erstellen, Ändern und Löschen von Veröffentlichungen und Artikeln &#40;Replikation&#41;](publish/create-modify-and-delete-publications-and-articles-replication.md).  
+1.  Konfigurieren Sie die Veröffentlichung und Verteilung, erstellen Sie eine Veröffentlichung, und erstellen Sie ein Abonnement für die Veröffentlichung. Weitere Informationen finden Sie unter [Verleger- und Verteilereigenschaften](configure-publishing-and-distribution.md) und [erstellen Sie eine Veröffentlichung](publish/create-a-publication.md).  
   
 2.  Erstellen und registrieren Sie einen Geschäftslogikhandler. Weitere Informationen finden Sie unter [Implementieren eines Geschäftslogikhandlers für einen Mergeartikel](implement-a-business-logic-handler-for-a-merge-article.md).  
   

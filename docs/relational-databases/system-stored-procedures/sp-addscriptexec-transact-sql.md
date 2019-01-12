@@ -16,12 +16,12 @@ ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 36188e2faa578c0c4ef2a89b32e00d474366d32d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 00c5b4b94bc0a4347991944ccaa7898e75f244f0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212434"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130690"
 ---
 # <a name="spaddscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,20 +41,20 @@ sp_addscriptexec [ @publication = ] publication
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication=** ] **"***Veröffentlichung***"**  
+ [  **@publication=** ] **"**_Veröffentlichung_**"**  
  Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@scriptfile=** ] **"***Scriptfile***"**  
+ [  **@scriptfile=** ] **"**_Scriptfile_**"**  
  Der vollständige Pfad zur SQL-Skriptdatei. *ScriptFile* ist **nvarchar(4000)**, hat keinen Standardwert.  
   
- [  **@skiperror=** ] **"***Skiperror***"**  
+ [  **@skiperror=** ] **"**_Skiperror_**"**  
  Zeigt an, ob der Verteilungs- oder Merge-Agent beendet werden soll, wenn ein Fehler bei der Skriptausführung festgestellt wird. *SkipError* ist **Bit**, hat den Standardwert 0.  
   
  **0** = der Agent beendet.  
   
  **1** = der Agent das Skript weiterhin und ignoriert den Fehler.  
   
- [  **@publisher=** ] **"***Verleger***"**  
+ [  **@publisher=** ] **"**_Verleger_**"**  
  Gibt einen nicht- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  

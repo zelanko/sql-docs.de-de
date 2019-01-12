@@ -14,12 +14,12 @@ ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3254ae226a0ac955f2cf5b2f39077853ebf3e057
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d904f82c793acf6135f600e1ed5392bda96e1bb8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762782"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130850"
 ---
 # <a name="create-a-job-category"></a>Erstellen einer Auftragskategorie
   In diesem Thema wird beschrieben, wie Sie eine Auftragskategorie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects erstellen können.  
@@ -48,7 +48,7 @@ ms.locfileid: "52762782"
   
 3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Aufträge** , und wählen Sie **Auftragskategorien verwalten**aus.  
   
-4.  Klicken Sie im Dialogfeld **Auftragskategorien verwalten >***Servername*  auf **Hinzufügen**.  
+4.  Klicken Sie im Dialogfeld **Auftragskategorien verwalten -**_Servername_ auf **Hinzufügen**.  
   
 5.  Geben Sie im neuen Dialogfeld **Name** einen Namen für die neue Auftragskategorie ein.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "52762782"
   
 7.  Klicken Sie auf **OK**.  
   
-8.  Klicken Sie im Dialogfeld **Auftragskategorien verwalten >***Servername* auf **Aktualisieren**, um sicherzustellen, dass die neue Auftragskategorie aktiv ist. Schließen Sie das Dialogfeld, wenn alles normal aussieht.  
+8.  Klicken Sie im Dialogfeld **Auftragskategorien verwalten -**_Servername_ auf **Aktualisieren** , um sicherzustellen, dass die neue Auftragskategorie aktiv ist. Schließen Sie das Dialogfeld, wenn alles normal aussieht.  
   
  Weitere Informationen zu diesen Dialogfeldern finden Sie unter [Auftragskategorien: Auftragskategorien verwalten](job-categories-manage-job-categories.md) und [Auftrag Eigenschaften für Auftragskategorien und eine neue Auftragskategorie](job-categories-properties-new-job-category.md).  
   

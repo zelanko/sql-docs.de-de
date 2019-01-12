@@ -18,12 +18,12 @@ ms.assetid: e9b1648e-4660-4688-9f56-18b2baf7228c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4834ebec21b69d000a84c6d4fdd5c615f2ca833e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 53bf75f0c153012eb60188f354ac9ac775ce1b26
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757012"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128235"
 ---
 # <a name="sysmergearticles-transact-sql"></a>sysmergearticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "52757012"
 |**fast_multicol_updateproc**|**bit**|Gibt an, ob der Merge-Agent aktiviert wurde, um in einer UPDATE-Anweisung Änderungen auf mehrere Spalten in derselben Zeile anzuwenden.<br /><br /> **0** = Probleme, die für jede Spalte ein getrenntes UPDATE geändert.<br /><br /> **1** = gibt eine UPDATE-Anweisung die Updates aus mehreren Spalten in einer Anweisung verursacht.|  
 |**check_permissions**|**int**|Die Bitmap der Berechtigungen auf Tabellenebene, die überprüft, wenn der Merge-Agent Änderungen an den Verleger anwendet. *Check_permissions* kann einen der folgenden Werte aufweisen:<br /><br /> **0 x 00 =** Berechtigungen werden nicht überprüft.<br /><br /> **0 x 10 =** Berechtigungen auf dem Verleger überprüft, bevor auf einem Abonnenten ausgeführte Einfügevorgänge hochgeladen werden können.<br /><br /> **0 x 20 =** Berechtigungen auf dem Verleger überprüft, bevor UPDATEs, die auf einem Abonnenten hochgeladen werden können.<br /><br /> **0 x 40 =** Berechtigungen auf dem Verleger überprüft, bevor auf einem Abonnenten ausgeführte Löschvorgänge hochgeladen werden können.|  
 |**maxversion_at_cleanup**|**int**|Die höchste Generierung, für die ein Cleanup der Metadaten ausgeführt wird.|  
-|**processing_order**|**int**|Gibt die Verarbeitungsreihenfolge von Artikeln in einer Mergeveröffentlichung an. ein Wert von **0** angegeben, dass der Artikel ungeordnet ist, und die Artikel in der Reihenfolge vom niedrigsten zum höchsten Wert verarbeitet werden. Wenn zwei Artikel denselben Wert haben, werden sie gleichzeitig verarbeitet. Weitere Informationen finden Sie unter [Angeben der Verarbeitungsreihenfolge von Mergeartikeln](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).|  
+|**processing_order**|**int**|Gibt die Verarbeitungsreihenfolge von Artikeln in einer Mergeveröffentlichung an. ein Wert von **0** angegeben, dass der Artikel ungeordnet ist, und die Artikel in der Reihenfolge vom niedrigsten zum höchsten Wert verarbeitet werden. Wenn zwei Artikel denselben Wert haben, werden sie gleichzeitig verarbeitet. Weitere Informationen finden Sie unter [Mergereplikation geben Eigenschaften](../../relational-databases/replication/merge/specify-merge-replication-properties.md).|  
 |**upload_options**|**tinyint**|Definiert Einschränkungen für Updates, die auf einem Abonnenten mit Clientabonnement vorgenommen wurden. Dabei sind folgende Werte möglich.<br /><br /> **0** = es gibt keine Einschränkungen für Updates, die auf einem Abonnenten mit clientabonnement vorgenommen; alle Änderungen an den Verleger hochgeladen werden.<br /><br /> **1** = Änderungen auf einem Abonnenten mit clientabonnement sind zulässig, aber nicht an den Verleger hochgeladen.<br /><br /> **2** = Änderungen sind auf einem Abonnenten mit clientabonnement nicht zulässig.<br /><br /> Weitere Informationen finden Sie unter [Optimieren der Leistung der Mergereplikation durch nur herunterladbare Artikel](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).|  
 |**published_in_tran_pub**|**bit**|Gibt an, dass ein Artikel in einer Mergeveröffentlichung auch in einer Transaktionsveröffentlichung veröffentlicht wird.<br /><br /> **0** = der Artikel ist nicht in einem Transaktionsartikel veröffentlicht.<br /><br /> **1** = der Artikel ist auch in einem Transaktionsartikel veröffentlicht.|  
 |**lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

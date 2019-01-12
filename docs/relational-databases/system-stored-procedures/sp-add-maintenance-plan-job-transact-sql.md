@@ -18,12 +18,12 @@ ms.assetid: 7205855c-964f-4f55-bf75-39a55f6fe7bd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1705c6b171c047b525d888e6e5839cd816cb9979
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f941269d1e42e1adc09dce2a6937b900e0aaa13
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716438"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123480"
 ---
 # <a name="spaddmaintenanceplanjob-transact-sql"></a>sp_add_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47716438"
   Ordnet einem vorhandenen Auftrag einen Wartungsplan zu.  
   
 > [!NOTE]  
->  Diese gespeicherte Prozedur wird mit Datenbankwartungsplänen verwendet. Diese Funktion wurde durch Wartungspläne ersetzt, die nicht diese gespeicherte Prozedur verwenden. Verwenden Sie diese Prozedur, um Datenbankwartungspläne für Installationen bereitzustellen, die von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktualisiert wurden.  
+>  Diese gespeicherte Prozedur wird mit Datenbankwartungsplänen verwendet. Diese Funktion wurde durch Wartungspläne ersetzt, die nicht diese gespeicherte Prozedur verwenden. Verwenden Sie diese Prozedur, um Datenbankwartungspläne für Installationen bereitzustellen, die von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aktualisiert wurden.  
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
@@ -45,10 +45,10 @@ sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@plan_id =**] **'***plan_id***'**  
+ [  **@plan_id =**] **"**_Plan_id_**"**  
  Gibt die ID des Wartungsplans an. *plan_id* ist vom Datentyp **uniqueidentifier**und muss eine gültige ID sein.  
   
- [ **@job_id =**] **'***job_id***'**  
+ [  **@job_id =**] **"**_Job_id_**"**  
  Gibt die ID des Auftrags an, der dem Wartungsplan zugeordnet werden soll. *job_id* ist vom Datentyp **uniqueidentifier**und muss eine gültige ID sein. Um einen oder mehrere Aufträge zu erstellen, führen Sie **sp_add_job**aus, oder verwenden Sie SQL Server Management Studio.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

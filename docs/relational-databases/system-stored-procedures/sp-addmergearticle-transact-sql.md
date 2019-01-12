@@ -16,12 +16,12 @@ ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f7894d5f7f3d3c686c8984c0386f1025f00c2890
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4bcf5b0163156fe078c3bd3382efb193ec417399
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770142"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129408"
 ---
 # <a name="spaddmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -161,7 +161,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**0 x 100000000**|Mit dieser Option können Sie das FILESTREAM-Attribut replizieren, wenn es für angegeben wird **'varbinary(max)'** Spalten. Geben Sie diese Option nicht an, wenn Sie Tabellen auf [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Abonnenten replizieren. Replizieren von Tabellen mit FILESTREAM-Spalten auf [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] -Abonnenten wird unabhängig von der Festlegung dieser Schemaoption nicht unterstützt. Siehe die verwandte Option **0 x 800000000**.|  
 |**0x200000000**|Konvertiert Datentypen für Datum und Uhrzeit (**Datum**, **Zeit**, **Datetimeoffset**, und **datetime2**) in eingeführte [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] auf Daten Typen, die in früheren Versionen von unterstützt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**0x400000000**|Repliziert die Komprimierungsoption für Daten und Indizes. Weitere Informationen finden Sie unter [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
-|**0 x 800000000**|Legen Sie diese Option fest, um FILESTREAM-Daten in einer eigenen Dateigruppe auf dem Abonnenten zu speichern. Wenn diese Option nicht festgelegt wird, werden FILESTREAM-Daten in der Standarddateigruppe gespeichert. Bei der Replikation werden keine Dateigruppen erstellt. Daher müssen Sie beim Festlegen dieser Option die Dateigruppe erstellen, bevor Sie die Momentaufnahme auf dem Abonnenten anwenden. Weitere Informationen zum Erstellen von Objekten vor dem Anwenden der Momentaufnahme, finden Sie unter [Ausführen von Skripts vor und nach dem Anwenden der Momentaufnahme](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md).<br /><br /> Siehe die verwandte Option **0 x 100000000**.|  
+|**0 x 800000000**|Legen Sie diese Option fest, um FILESTREAM-Daten in einer eigenen Dateigruppe auf dem Abonnenten zu speichern. Wenn diese Option nicht festgelegt wird, werden FILESTREAM-Daten in der Standarddateigruppe gespeichert. Bei der Replikation werden keine Dateigruppen erstellt. Daher müssen Sie beim Festlegen dieser Option die Dateigruppe erstellen, bevor Sie die Momentaufnahme auf dem Abonnenten anwenden. Weitere Informationen zum Erstellen von Objekten vor dem Anwenden der Momentaufnahme, finden Sie unter [Ausführen von Skripts vor und nach dem Anwenden der Momentaufnahme](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).<br /><br /> Siehe die verwandte Option **0 x 100000000**.|  
 |**0x1000000000**|Konvertiert von common Language Runtime (CLR) eine benutzerdefinierte Typen (UDTs) in **'varbinary(max)'** , sodass Spalten vom Typ UDT auf Abonnenten repliziert werden können, die ausgeführt werden [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 |**0x2000000000**|Konvertiert die **Hierarchyid** Datentyp, **'varbinary(max)'** so, dass Spalten vom Typ **Hierarchyid** können repliziert werden, auf Abonnenten, die ausgeführt werden [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Weitere Informationen zur Verwendung von **Hierarchyid** Spalten in replizierten Tabellen finden Sie unter [Hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
 |**0x4000000000**|Repliziert die gefilterten Indizes in der Tabelle. Weitere Informationen zu gefilterten Indizes finden Sie unter [erstellen gefilterter Indizes](../../relational-databases/indexes/create-filtered-indexes.md).|  
@@ -296,7 +296,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 >  Wenn die Quelltabelle eines Artikels bereits, in einer anderen Veröffentlichung, und klicken Sie dann auf den Wert der veröffentlicht wurde *Partition_options* muss für beide Artikel gleich sein.  
   
  [  **@processing_order=** ] *Processing_order*  
- Gibt die Verarbeitungsreihenfolge von Artikeln in einer Mergeveröffentlichung an. *Processing_order* ist **Int**, hat den Standardwert 0. **0** gibt an, dass der Artikel ungeordnet ist, und jeder andere Wert den Ordnungswert der Verarbeitungsreihenfolge für diesen Artikel stellt. Artikel werden in der Reihenfolge vom niedrigsten zum höchsten Wert verarbeitet. Wenn zwei Artikel denselben Wert haben, Verarbeitungsreihenfolge hängt von der Reihenfolge des artikelspitznamens in der [Sysmergearticles](../../relational-databases/system-tables/sysmergearticles-transact-sql.md) -Systemtabelle. Weitere Informationen finden Sie unter [Angeben der Verarbeitungsreihenfolge von Mergeartikeln](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).  
+ Gibt die Verarbeitungsreihenfolge von Artikeln in einer Mergeveröffentlichung an. *Processing_order* ist **Int**, hat den Standardwert 0. **0** gibt an, dass der Artikel ungeordnet ist, und jeder andere Wert den Ordnungswert der Verarbeitungsreihenfolge für diesen Artikel stellt. Artikel werden in der Reihenfolge vom niedrigsten zum höchsten Wert verarbeitet. Wenn zwei Artikel denselben Wert haben, Verarbeitungsreihenfolge hängt von der Reihenfolge des artikelspitznamens in der [Sysmergearticles](../../relational-databases/system-tables/sysmergearticles-transact-sql.md) -Systemtabelle. Weitere Informationen finden Sie unter [Mergereplikation geben Eigenschaften](../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
   
  [  **@subscriber_upload_options=** ] *Subscriber_upload_options*  
  Definiert Einschränkungen für Updates, die bei einem Abonnenten mit einem Clientabonnement vorgenommen werden. Weitere Informationen finden Sie unter [Optimieren der Leistung der Mergereplikation durch nur herunterladbare Artikel](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md). *Subscriber_upload_options* ist **Tinyint**, und kann einen der folgenden Werte.  
@@ -358,11 +358,11 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  Wenn Sie einen Wert angeben **3** für *Partition_options*, es darf nur ein Abonnement für jede Partition der Daten in diesem Artikel. Wird ein zweites Abonnement erstellt, in dem das Filterkriterium des neuen Abonnements die gleiche Partition ergibt wie das vorhandene Abonnement, wird das vorhandene Abonnement gelöscht.  
   
- Wenn Sie den Wert 3 für angeben *Partition_options*, Metadaten bereinigt, wenn der Merge-Agent ausgeführt wird und die partitionierte Momentaufnahme läuft schneller ab. Beim Verwenden dieser Option sollten Sie in Erwägung ziehen, vom Abonnenten angeforderte partitionierte Momentaufnahmen zu aktivieren. Weitere Informationen finden Sie unter [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+ Wenn Sie den Wert 3 für angeben *Partition_options*, Metadaten bereinigt, wenn der Merge-Agent ausgeführt wird und die partitionierte Momentaufnahme läuft schneller ab. Beim Verwenden dieser Option sollten Sie in Erwägung ziehen, vom Abonnenten angeforderte partitionierte Momentaufnahmen zu aktivieren. Weitere Informationen finden Sie unter [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
  Hinzufügen eines Artikels mit einem statischen horizontalen Filter, indem *Subset_filterclause*zu eine vorhandene Veröffentlichung mit Artikeln, die parametrisierte Filter verfügen, müssen die Abonnements erneut initialisiert werden.  
   
- Beim Angeben von *Processing_order*, es wird empfohlen die erleichtert es, in der Zukunft Festlegen neuer Werte zwischen den Werten für die Artikelreihenfolge Lücken zu lassen. Wenn Sie drei Artikel Article1, Article2 und Article3 verfügen, z. B. festgelegt *Processing_order* 10, 20 und 30 anstatt 1, 2 und 3. Weitere Informationen finden Sie unter [Angeben der Verarbeitungsreihenfolge von Mergeartikeln](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).  
+ Beim Angeben von *Processing_order*, es wird empfohlen die erleichtert es, in der Zukunft Festlegen neuer Werte zwischen den Werten für die Artikelreihenfolge Lücken zu lassen. Wenn Sie drei Artikel Article1, Article2 und Article3 verfügen, z. B. festgelegt *Processing_order* 10, 20 und 30 anstatt 1, 2 und 3. Weitere Informationen finden Sie unter [Mergereplikation geben Eigenschaften](../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
   
 ## <a name="default-schema-option-table"></a>Tabelle der Standardschemaoptionen  
  Diese Tabelle wird beschrieben, den Standardwert, der von der gespeicherten Prozedur festgelegt wird, wenn für ein NULL-Wert angegeben ist *Schema_option*, dem Artikeltyp abhängig.  

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f06c0b7395ce61a52cae17e9cbc6429cdd6b9eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d08f754022ae28cfce074978bfdd8c3f79ba71a6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728388"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128410"
 ---
 # <a name="spbindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@rulename=**] **"***Regel***"**  
+ [  **@rulename=**] **"**_Regel_**"**  
  Der Name einer von der CREATE RULE-Anweisung erstellten Regel. *Regel* ist **nvarchar(776)**, hat keinen Standardwert.  
   
- [  **@objname=**] **"***Object_name***"**  
+ [  **@objname=**] **"**_Object_name_**"**  
  Die Tabelle und Spalte oder der Aliasdatentyp, an die bzw. den die Regel gebunden werden soll. Eine Regel kann nicht an die Datentypen **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, einen CLR-benutzerdefinierten Typ oder an **timestamp**-Spalten gebunden werden. An eine berechnete Spalte kann keine Regel gebunden werden.  
   
  *Object_name* ist **nvarchar(776)** hat keinen Standardwert. Wenn *Object_name* ist ein einteiliger Name, wird er als einen Aliasdatentyp aufgelöst. Ein zwei- oder dreiteiliger Name wird zunächst als Tabelle und Spalte aufgelöst. Wenn die Auflösung fehlschlägt, wird er als Aliasdatentyp aufgelöst. Vorhandene Spalten des aliasdatentyps erben standardmäßig *Regel* , wenn eine Regel direkt auf die Spalte gebunden wurde.  
@@ -60,7 +60,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
 > [!NOTE]  
 >  Regeln, die für Ausdrücke erstellt werden, die Aliasdatentypen verwenden, können an Spalten oder Aliasdatentypen gebunden werden. Wenn darauf verwiesen wird, schlägt jedoch die Kompilierung fehl. Vermeiden Sie die Verwendung von Regeln, die für Aliasdatentypen erstellt wurden.  
   
- [ **@futureonly=** ] **'***futureonly_flag***'**  
+ [  **@futureonly=** ] **"**_Futureonly_flag_**"**  
  Wird nur beim Binden einer Regel an einen Aliasdatentyp verwendet. *Future_only_flag* ist **varchar(15)** hat den Standardwert NULL. Dieser Parameter, die bei Festlegung auf **Futureonly** verhindert, dass vorhandene Spalten eines aliasdatentyps die neue Regel erben. Wenn *Futureonly_flag* NULL ist, die neue Regel an alle Spalten des aliasdatentyps, der aktuell keine Regel haben oder die die vorhandene Regel des aliasdatentyps, gebunden ist.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

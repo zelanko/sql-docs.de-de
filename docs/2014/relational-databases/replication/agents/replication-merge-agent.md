@@ -15,12 +15,12 @@ ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d3b323be70911881b99f055503d12bb6b79988d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ec21ff98d49cff26bde48452a30fd347c23782fe
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762822"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129540"
 ---
 # <a name="replication-merge-agent"></a>Replikationsmerge-Agent
   Der Replikationsmerge-Agent ist ein Hilfsprogramm in Form einer ausführbaren Datei, die die in den Datenbanktabellen enthaltene Anfangsmomentaufnahme auf die Abonnenten anwendet. Er führt außerdem inkrementelle Datenänderungen zusammen, die nach der Erstellung der Anfangsmomentaufnahme auf dem Verleger ausgeführt wurden, und löst Konflikte entweder entsprechend den von Ihnen konfigurierten Regeln oder mithilfe eines von Ihnen erstellten benutzerdefinierten Konfliktlösers.  
@@ -109,55 +109,55 @@ ms.locfileid: "52762822"
  **-?**  
  Druckt alle verfügbaren Parameter.  
   
- **-Publisher** *Servername*[**\\***Instanzname*]  
- Der Name des Verlegers. Geben Sie *server_name* für die Standardinstanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie *server_name***\\***instance_name* für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an.  
+ **-Publisher** _server_name_[**\\**_instance_name_]  
+ Der Name des Verlegers. Geben Sie *server_name* für die Standardinstanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie _server_name_**\\**_instance_name_ für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an.  
   
- **-PublisherDB** *publisher_database*  
+ **-PublisherDB** _publisher_database_  
  Der Name der Verlegerdatenbank.  
   
- **-Publication** *publication*  
+ **-Publication** _publication_  
  Der Name der Veröffentlichung. Dieser Parameter ist nur gültig, wenn die Veröffentlichung so festgelegt ist, dass sie immer eine Momentaufnahme für neue oder neu initialisierte Abonnements zur Verfügung hat.  
   
- **-Subscriber** *Servername*[**\\***Instanzname*]  
- Der Name des Abonnenten. Geben Sie *server_name* für die Standardinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie *server_name***\\***instance_name* für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an.  
+ **-Subscriber** _server_name_[**\\**_instance_name_]  
+ Der Name des Abonnenten. Geben Sie *server_name* für die Standardinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie _server_name_**\\**_instance_name_ für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an.  
   
- **-SubscriberDB** *subscriber_database*  
+ **-SubscriberDB** _subscriber_database_  
  Der Name der Abonnentendatenbank.  
   
- **-AltSnapshotFolder** *alt_snapshot_folder_path*  
+ **-AltSnapshotFolder** _alt_snapshot_folder_path_  
  Der Pfad zu dem Ordner, der die Anfangsmomentaufnahme für ein Abonnement enthält.  
   
  **-Continuous**  
  Gibt an, ob der Agent fortlaufend versucht, replizierte Transaktionen abzurufen. Wenn dieses Argument angegeben ist, ruft der Agent replizierte Transaktionen in festgelegten Abrufintervallen aus der Quelle ab, selbst wenn keine ausstehenden Transaktionen vorhanden sind.  
   
- **-DestThreads** *number_of_destination_threads*  
+ **-DestThreads** _number_of_destination_threads_  
  Gibt die Anzahl von Zielthreads an, die der Merge-Agent verwendet, um Änderungen auf das Ziel anzuwenden. Das Ziel ist während des Hochladens der Verleger und während des Herunterladens der Abonnent. Der Standardwert ist "4".  
   
- **-DefinitionFile** *def_path_and_file_name*  
+ **-DefinitionFile** _def_path_and_file_name_  
  Der Pfad der Agentdefinitionsdatei. Eine Agentdefinitionsdatei enthält Eingabeaufforderungsargumente für den Agent. Der Inhalt der Datei wird als ausführbare Datei analysiert. Verwenden Sie doppelte Anführungszeichen ("), um Argumentwerte anzugeben, die beliebige Zeichen enthalten.  
   
- **-Distributor** *Servername*[**\\***Instanzname*]  
- Der Name des Verteilers. Geben Sie *server_name* für die Standardinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie *server_name***\\***instance_name* für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Bei der Verteilung durch den Verteiler (Push) wird als Standardwert der Name der Standardinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf dem lokalen Computer verwendet.  
+ **-Distributor** _server_name_[**\\**_instance_name_]  
+ Der Name des Verteilers. Geben Sie *server_name* für die Standardinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie _server_name_**\\**_instance_name_ für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Bei der Verteilung durch den Verteiler (Push) wird als Standardwert der Name der Standardinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf dem lokalen Computer verwendet.  
   
- **-DistributorLogin** *distributor_login*  
+ **-DistributorLogin** _distributor_login_  
  Der Anmeldename des Verteilers.  
   
- **-DistributorPassword** *distributor_password*  
+ **-DistributorPassword** _distributor_password_  
  Das Verteilerkennwort.  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
  Gibt den Sicherheitsmodus des Verteilers an. Der Wert **0** steht für den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierungsmodus (Standard), der Wert **1** für den Windows-Authentifizierungsmodus.  
   
- **-DownloadGenerationsPerBatch** *download_generations_per_batch*  
+ **-DownloadGenerationsPerBatch** _download_generations_per_batch_  
  Die Anzahl von Generierungen, die in einem einzigen Batch verarbeitet werden sollen, während Änderungen vom Verleger auf den Abonnenten heruntergeladen werden. Eine Generierung ist als logische Gruppe von Änderungen pro Artikel definiert. Der Standardwert für eine zuverlässige Kommunikationsverbindung beträgt 100. Der Standardwert für eine unzuverlässige Kommunikationsverbindung beträgt 10.  
   
- **-DownloadReadChangesPerBatch** *download_read_changes_per_batch*  
+ **-DownloadReadChangesPerBatch** _download_read_changes_per_batch_  
  Die Anzahl von Änderungen, die in einem einzigen Batch gelesen werden sollen, während Änderungen vom Verleger auf den Abonnenten heruntergeladen werden. Der Standardwert ist 100.  
   
- **-DownloadWriteChangesPerBatch** *download_write_changes_per_batch*  
+ **-DownloadWriteChangesPerBatch** _download_write_changes_per_batch_  
  Die Anzahl von Änderungen, die in einem einzigen Batch angewendet werden sollen, während Änderungen vom Verleger auf den Abonnenten heruntergeladen werden. Der Standardwert ist 100.  
   
- **-DynamicSnapshotLocation** *dynamic_snapshot_location*  
+ **-DynamicSnapshotLocation** _dynamic_snapshot_location_  
  Der Speicherort der gefilterten Datenmomentaufnahmedateien, wenn die Veröffentlichung parametrisierte Zeilenfilter verwendet.  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
@@ -172,7 +172,7 @@ ms.locfileid: "52762822"
  > [!NOTE]  
  >  Ein gültiges SSL-Zertifikat wird mit dem vollqualifizierten Domänennamen der SQL Server-Instanz definiert. Damit der Agent die Verbindung erfolgreich herstellen kann, wenn „-EncryptionLevel“ auf 2 festgelegt ist, sollten Sie einen Alias auf der lokalen SQL Server-Instanz erstellen. Der Parameter „Alias Name“ sollte den Servernamen enthalten, und für den Parameter „Server“ sollte der vollqualifizierte Name der SQL Server-Instanz festgelegt werden.
   
- Weitere Informationen finden Sie unter [Sicherheitsübersicht &#40;Replikation&#41;](../security/security-overview-replication.md).  
+ Weitere Informationen finden Sie unter [SQL Server-Replikationssicherheit](../security/view-and-modify-replication-security-settings.md).  
   
  **-ExchangeType** [ **1**| **2**| **3**]  
  > [!WARNING]  
@@ -205,16 +205,16 @@ ms.locfileid: "52762822"
 |**1**|Erzwingt die Konvergenz für alle Generierungen.|  
 |**2**|Erzwingt die Konvergenz für alle Generierungen und korrigiert beschädigte Herkunftsangaben. Wenn Sie diesen Wert festlegen, geben Sie an, ob Herkunftsangaben auf dem Verleger, auf dem Abonnenten oder sowohl auf dem Verleger als auch auf dem Abonnenten korrigiert werden sollen.|  
   
- **-FtpAddress** *ftp_address*  
+ **-FtpAddress** _ftp_address_  
  Die Netzwerkadresse des FTP-Diensts für den Verteiler. Wenn keine Netzwerkadresse angegeben wird, wird **Distributor** verwendet.  
   
- **-FtpPassword** *ftp_password*  
+ **-FtpPassword** _ftp_password_  
  Das Benutzerkennwort, mit dem eine Verbindung zum FTP-Dienst hergestellt wird.  
   
- **-FtpPort** *ftp_port*  
+ **-FtpPort** _ftp_port_  
  Die Anschlussnummer des FTP-Diensts für den Verteiler. Wenn keine Portnummer angegeben wird, wird die Standardportnummer für den FTP-Dienst (21) verwendet.  
   
- **-FtpUserName** *ftp_user_name*  
+ **-FtpUserName** _ftp_user_name_  
  Der Benutzername, mit dem eine Verbindung zum FTP-Dienst hergestellt wird. Wenn kein Benutzername angegeben wird, wird anonymous verwendet.  
   
  **-HistoryVerboseLevel** [**1**|**2**|**3**]  
@@ -227,16 +227,16 @@ ms.locfileid: "52762822"
 |**2**|Standard. Protokolliert zusätzlich zur abschließenden Agent-Statusmeldung, zu abschließenden Sitzungsdetails und ggf. aufgetretenen Fehlern sowohl inkrementelle Sitzungsdetails zu jedem Sitzungsstatus als auch Sitzungsdetails auf Artikelebene, u. a. den Prozentsatz der Fertigstellung. Agent-Statusmeldungen werden ebenfalls protokolliert.|  
 |**3**|Identisch mit **-HistoryVerboseLevel** = **2**, allerdings werden mehr Agent-Statusmeldungen protokolliert.|  
   
- **-Hostname** *host_name*  
+ **-Hostname** _host_name_  
  Der Netzwerkname des lokalen Computers. Der Standardwert ist der Name des lokalen Computers.  
   
  **-InteractiveResolution** [**0**|**1**]  
  Gibt an, ob die interaktive Konfliktlösung verwendet wird, wenn während der Synchronisierung ein Konflikt auftritt. Der Standardwert ist **0**. Dieser gibt an, dass die interaktive Konfliktlösung nicht verwendet wird.  
   
- **-InternetLogin** *internet_login*  
+ **-InternetLogin** _internet_login_  
  Gibt den Anmeldenamen an, der beim Herstellen einer Verbindung mit einer Authentifizierung erfordernden ISAPI-DLL-Datei für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikationsüberwachung verwendet wird.  
   
- **-InternetPassword** *internet_password*  
+ **-InternetPassword** _internet_password_  
  Gibt das Kennwort an, das beim Herstellen einer Verbindung mit einer Authentifizierung erfordernden ISAPI-DLL-Datei für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikationsüberwachung verwendet wird.  
   
  **-InternetProxyLogin**  *Internet_proxy_login*  
@@ -251,36 +251,36 @@ ms.locfileid: "52762822"
  **-InternetSecurityMode** [**0**|**1**]  
  Gibt den IIS-Sicherheitsmodus an, der beim Herstellen einer Verbindung mit dem Webserver während der Websynchronisierung verwendet wird. Der Wert **0** steht für die Standardauthentifizierung, der Wert **1** für die integrierte Windows-Authentifizierung (Standard).  
   
- **-InternetTimeout** *internet_timeout*  
+ **-InternetTimeout** _internet_timeout_  
  Die Anzahl von Sekunden, bevor bei einer Verbindung mit der ISAPI-DLL-Datei für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikationsüberwachung ein Timeout auftritt.  
   
- **-InternetURL** *internet_url*  
+ **-InternetURL** _internet_url_  
  Gibt die URL an, die verwendet wird, um eine Verbindung mit der ISAPI-DLL-Datei für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikationsüberwachung herzustellen. Diese Eigenschaft muss angegeben werden.  
   
- **-KeepAliveMessageInterval** *keep_alive_message_interval_seconds*  
+ **-KeepAliveMessageInterval** _keep_alive_message_interval_seconds_  
  Die Anzahl von Sekunden, bevor vom Verlaufsthread geprüft wird, ob bestehende Verbindungen auf eine Antwort vom Server warten. Dieser Wert kann verringert werden, damit der Merge-Agent vom Überprüfungs-Agent nicht als fehlerverdächtig markiert wird, wenn ein lang andauernder Batch ausgeführt wird. Die Standardeinstellung ist **300** Sekunden.  
   
- **-LoginTimeOut** *login_time_out_seconds*  
+ **-LoginTimeOut** _login_time_out_seconds_  
  Die Anzahl von Sekunden, nach denen ein Timeout bei der Anmeldung eintritt. Der Standardwert ist **15** Sekunden.  
   
- **-MakeGenerationInterval** *make_generation_interval_seconds*  
+ **-MakeGenerationInterval** _make_generation_interval_seconds_  
  Die Anzahl der Wartezeit in Sekunden zwischen dem Erstellen von Generierungen oder Änderungsbatches zum Herunterladen auf den Client. Der Standardwert beträgt **1** Sekunde.  
   
  Makegeneration ist der Prozess, der Verlegeränderungen für das Herunterladen auf den Abonnenten vorbereitet. Während des Herunterladens kann dies ein Leistungsengpass sein. Wenn der makegeneration-Prozess bereits mit dem durch **-MakeGenerationInterval**angegebenen Intervall ausgeführt wurde, wird der Prozess für die aktuelle Synchronisierungssitzung übersprungen. Dies kann hilfreich für die Synchronisierungsparallelität sein, und zwar insbesondere dann, wenn Abonnenten nicht damit rechnen, Änderungen herunterzuladen.  
   
- **-MaxBcpThreads** *number_of_threads*  
+ **-MaxBcpThreads** _number_of_threads_  
  Gibt die Anzahl von Massenkopiervorgängen an, die parallel ausgeführt werden können. Die maximale Anzahl von Threads und gleichzeitig vorhandenen ODBC-Verbindungen entspricht entweder **MaxBcpThreads** oder der Anzahl von Massenkopieranforderungen, die in der Veröffentlichungsdatenbank in der **sysmergeschemachange** -Systemtabelle enthalten sind. Dabei gilt der jeweils kleinere Wert. Der Wert von**MaxBcpThreads** muss größer als 0 sein. Es ist keine hartcodierte Obergrenze vorhanden. Der Standardwert lautet **1**.  
   
- **-MaxDownloadChanges** *number_of_download_changes*  
+ **-MaxDownloadChanges** _number_of_download_changes_  
  Gibt die maximale Anzahl von geänderten Zeilen an, die vom Verleger auf den Abonnenten heruntergeladen werden sollen. Die tatsächliche Anzahl heruntergeladener Zeilen kann über dem angegebenen Maximalwert liegen. Dies kann daran liegen, dass vollständige Generierungen verarbeitet werden und dass parallele Zielthreads ausgeführt werden, von denen jeder beim ersten Durchlauf mindestens 100 Änderungen verarbeitet. Standardmäßig werden alle Änderungen gesendet, die zum Herunterladen bereit sind.  
   
- **-MaxUploadChanges** *number_of_upload_changes*  
+ **-MaxUploadChanges** _number_of_upload_changes_  
  Gibt die maximale Anzahl von geänderten Zeilen an, die vom Abonnenten auf den Verleger hochgeladen werden sollen. Die tatsächliche Anzahl hochgeladener Zeilen kann über dem angegebenen Maximalwert liegen. Dies kann daran liegen, dass vollständige Generierungen verarbeitet werden und dass parallele Zielthreads ausgeführt werden, von denen jeder beim ersten Durchlauf mindestens 100 Änderungen verarbeitet. Standardmäßig werden alle Änderungen gesendet, die zum Hochladen bereit sind.  
   
  **-MetadataRetentionCleanup** [**0**|**1**]  
  Gibt an, ob basierend auf der für die Veröffentlichung festgelegten Beibehaltungsdauer Metadaten aus [MSmerge_genhistory](/sql/relational-databases/system-tables/msmerge-genhistory-transact-sql), [MSmerge_contents](/sql/relational-databases/system-tables/msmerge-contents-transact-sql), [MSmerge_tombstone](/sql/relational-databases/system-tables/msmerge-tombstone-transact-sql), [MSmerge_past_partition_mappings](/sql/relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql)und [MSmerge_current_partition_mappings](/sql/relational-databases/system-tables/msmerge-current-partition-mappings) entfernt werden. Der Standardwert ist **1**. Dieser gibt an, dass ein Cleanup ausgeführt werden soll. Der Wert **0** gibt an, dass nicht automatisch ein Cleanup ausgeführt werden soll.  
   
- **-Output** *output_path_and_file_name*  
+ **-Output** _output_path_and_file_name_  
  Der Pfad der Agentausgabedatei. Wenn kein Dateiname angegeben ist, wird die Ausgabe an die Konsole gesendet. Wenn eine Datei mit dem angegebenen Namen vorhanden ist, wird die Ausgabe an diese Datei angefügt.  
   
  **-OutputVerboseLevel** [**0**|**1**|**2**]  
@@ -292,34 +292,34 @@ ms.locfileid: "52762822"
  **-PacketSize**  
  Die Paketgröße in Bytes. Der Standardwert ist 4096 (Bytes).  
   
- **-PollingInterval** *polling_interval*  
+ **-PollingInterval** _polling_interval_  
  Gibt an, wie häufig Datenänderungen vom Verleger oder Abonnenten abgefragt werden (in Sekunden). Der Standardwert ist 60 Sekunden.  
   
- **-ProfileName** *profile_name*  
+ **-ProfileName** _profile_name_  
  Gibt ein Agentprofil an, das für Agentparameter verwendet werden soll. Wenn **ProfileName** den Wert NULL aufweist, wird das Agentprofil deaktiviert. Wenn **ProfileName** nicht angegeben ist, wird das Standardprofil für den Agenttyp verwendet. Weitere Informationen finden Sie unter [Replication Agent Profiles](replication-agent-profiles.md).  
   
- **-PublisherFailoverPartner** *Servername*[**\\***Instanzname*]  
+ **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
  Gibt die Failoverpartnerinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] an, die an einer Datenbank-Spiegelungssitzung mit der Veröffentlichungsdatenbank teilnimmt. Weitere Informationen finden Sie unter [Datenbankspiegelung und Replikation &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
- **-PublisherLogin** *publisher_login*  
+ **-PublisherLogin** _publisher_login_  
  Der Anmeldename des Verlegers. Wenn **PublisherSecurityMode** auf **0** festgelegt ist (für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung), muss dieser Parameter angegeben werden.  
   
- **-PublisherPassword** *publisher_password*  
+ **-PublisherPassword** _publisher_password_  
  Das Kennwort des Verlegers. Wenn **PublisherSecurityMode** auf **0** festgelegt ist (für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung), muss dieser Parameter angegeben werden.  
   
  **-PublisherSecurityMode** [**0**|**1**]  
  Gibt den Sicherheitsmodus des Verlegers an. Der Wert **0** steht für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung (Standard), der Wert **1** für den Windows-Authentifizierungsmodus.  
   
- **-QueryTimeOut** *query_time_out_seconds*  
+ **-QueryTimeOut** _query_time_out_seconds_  
  Die Anzahl von Sekunden, nach denen ein Timeout bei der Abfrage eintritt. Der Standardwert ist 300 Sekunden. Der Merge-Agent ermittelt anhand des Werts von `QueryTimeout` außerdem, wie lange auf die Generierung einer partitionierten Momentaufnahme gewartet wird, wenn dieser Wert 1800 übersteigt.  
   
- **-SrcThreads** *number_of_source_threads*  
+ **-SrcThreads** _number_of_source_threads_  
  Gibt die Anzahl von Quellthreads an, die der Merge-Agent verwendet, um Änderungen von der Quelle aufzuzählen. Die Quelle ist während des Hochladens der Abonnent und während des Herunterladens der Verleger. Der Standardwert ist **3**.  
   
- **-StartQueueTimeout** *start_queue_timeout_seconds*  
+ **-StartQueueTimeout** _start_queue_timeout_seconds_  
  Die maximale Anzahl von Sekunden, die der Merge-Agent wartet, wenn die Anzahl gleichzeitig ausgeführter Mergeprozesse den Grenzwert erreicht, der mit der **@max_concurrent_merge** -Eigenschaft von **sp_addmergepublication**. Wenn der Merge-Agent nach Verstreichen der maximalen Anzahl von Sekunden immer noch wartet, wird der Agent beendet. Der Wert 0 bedeutet, dass der Agent unbegrenzt wartet, der Vorgang jedoch abgebrochen werden kann.  
   
- **-SubscriberDatabasePath** *subscriber_database_path*  
+ **-SubscriberDatabasePath** _subscriber_database_path_  
  Der Pfad der Jet-Datenbank (MDB-Datei), wenn **SubscriberType** auf **2** festgelegt ist. (Dadurch wird eine Verbindung mit einer Jet-Datenbank ohne ODBC-DSN (Data Source Name) möglich.)  
   
  **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
@@ -335,10 +335,10 @@ ms.locfileid: "52762822"
 > [!NOTE]  
 >  Bei Verwendung der Werte **2** und **3**muss in der **SubscriberDatabasePath** -Option der Datenbankpfad für den Abonnenten angegeben werden.  
   
- **-SubscriberLogin** *subscriber_login*  
+ **-SubscriberLogin** _subscriber_login_  
  Der Anmeldename des Abonnenten. Wenn **SubscriberSecurityMode** auf **0** festgelegt ist (für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung), muss dieser Parameter angegeben werden.  
   
- **-SubscriberPassword** *subscriber_password*  
+ **-SubscriberPassword** _subscriber_password_  
  Das Kennwort des Abonnenten. Wenn **SubscriberSecurityMode** auf **0** festgelegt ist (für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung), muss dieser Parameter angegeben werden.  
   
  **-SubscriberSecurityMode** [ **0**| **1**]  
@@ -356,13 +356,13 @@ ms.locfileid: "52762822"
  **-SyncToAlternate** [ **0|1**]  
  Gibt an, ob der Merge-Agent eine Synchronisierung zwischen einem Abonnenten und einem alternativen Verleger ausführt. Der Wert **1** gibt an, dass es sich um einen alternativen Verleger handelt. Die Standardeinstellung ist **0**.  
   
- **-UploadGenerationsPerBatch** *upload_generations_per_batch*  
+ **-UploadGenerationsPerBatch** _upload_generations_per_batch_  
  Die Anzahl von Generierungen, die in einem einzigen Batch verarbeitet werden sollen, während Änderungen vom Abonnenten auf den Verleger hochgeladen werden. Eine Generierung ist als logische Gruppe von Änderungen pro Artikel definiert. Der Standardwert für eine zuverlässige Kommunikationsverbindung beträgt **100**. Der Standardwert für eine unzuverlässige Kommunikationsverbindung beträgt **1**.  
   
- **-UploadReadChangesPerBatch** *upload_read_changes_per_batch*  
+ **-UploadReadChangesPerBatch** _upload_read_changes_per_batch_  
  Die Anzahl von Änderungen, die in einem einzigen Batch gelesen werden sollen, während Änderungen vom Abonnenten auf den Verleger hochgeladen werden. Der Standardwert ist **100**.  
   
- **-UploadWriteChangesPerBatch** *upload_write_changes_per_batch*  
+ **-UploadWriteChangesPerBatch** _upload_write_changes_per_batch_  
  Die Anzahl von Änderungen, die in einem einzigen Batch angewendet werden sollen, während Änderungen vom Abonnenten auf den Verleger hochgeladen werden. Der Standardwert ist **100**.  
   
  **-UseInprocLoader**  
@@ -379,9 +379,9 @@ ms.locfileid: "52762822"
 |**3**|Überprüfung der Zeilenanzahl und der binären Prüfsumme.|  
   
 > [!NOTE]  
->  Die Überprüfung durch binäre Prüfsummen oder Prüfsummen kann dann fälschlicherweise einen Fehler ausgeben, wenn auf dem Abonnenten andere Datentypen vorhanden sind als auf dem Verleger. Weitere Informationen finden Sie im Abschnitt „Überlegungen zur Datenüberprüfung“ unter [Überprüfen von replizierten Daten](../validate-replicated-data.md).  
+>  Die Überprüfung durch binäre Prüfsummen oder Prüfsummen kann dann fälschlicherweise einen Fehler ausgeben, wenn auf dem Abonnenten andere Datentypen vorhanden sind als auf dem Verleger. Weitere Informationen finden Sie im Abschnitt „Überlegungen zur Datenüberprüfung“ unter [Überprüfen von replizierten Daten](../validate-data-at-the-subscriber.md).  
   
- **-ValidateInterval** *validate_interval*  
+ **-ValidateInterval** _validate_interval_  
  Gibt an, wie häufig das Abonnement im kontinuierlichen Modus überprüft wird (in Minuten). Die Standardeinstellung beträgt **60** Minuten.  
   
 ## <a name="remarks"></a>Hinweise  

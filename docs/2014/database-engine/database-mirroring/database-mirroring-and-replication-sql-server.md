@@ -13,12 +13,12 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3141146842bd568336033073f07b41c636129ee7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9268f0d06e0bf960ce3fb8879dfc219232ea822e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543583"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130480"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Datenbankspiegelung und Replikation (SQL Server)
   Die Datenbankspiegelung kann in Verbindung mit der Replikation verwendet werden, um die Verfügbarkeit der Veröffentlichungsdatenbank zu verbessern. Bei der Datenbankspiegelung sind zwei Kopien einer einzigen Datenbank vorhanden, die normalerweise auf verschiedenen Computern gespeichert sind. Für die Clients ist immer nur eine Kopie der Datenbank verfügbar. Diese Kopie wird als Prinzipaldatenbank bezeichnet. Updates, die Clients an der Prinzipaldatenbank vornehmen, werden in der anderen Kopie der Datenbank angewendet, die als Spiegeldatenbank bezeichnet wird. Beim Spiegeln wird das Transaktionsprotokoll von jedem Einfüge-, Update- oder Löschvorgang, der an der Prinzipaldatenbank vorgenommen wird, auf die Spiegeldatenbank angewandt.  
@@ -161,7 +161,7 @@ ms.locfileid: "52543583"
 |Der Modus mit hoher Sicherheit ohne automatisches Failover|Für alle Transaktionen, für die ein Commit ausgeführt wird, wird sichergestellt, dass sie auf dem Datenträger in der Spiegeldatenbank festgeschrieben werden. Der Protokolllese-Agent repliziert jedoch nur solche Transaktionen, die in der Spiegeldatenbank festgeschrieben wurden. Wenn die Spiegeldatenbank nicht verfügbar ist, deaktiviert die Prinzipaldatenbank jede weitere Aktivität in der Datenbank, weshalb der Protokolllese-Agent keine Transaktionen replizieren muss.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Replikationsfunktionen und -tasks](../../relational-databases/replication/replication-features-and-tasks.md)   
+ [SQL Server-Replikation](../../relational-databases/replication/sql-server-replication.md)   
  [Protokollversand und Replikation &#40;SQL Server&#41;](../log-shipping/log-shipping-and-replication-sql-server.md)  
   
   

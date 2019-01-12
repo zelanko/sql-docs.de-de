@@ -13,12 +13,12 @@ ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eb3e20913a2a7232aeeb93132fb6a8d0bb69e532
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8907d3a3644c0795608495c259a93fb64d648332
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782792"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125910"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>Synchronisieren eines Abonnements mithilfe der Synchronisierungsverwaltung von Windows (Synchronisierungsverwaltung von Windows)
   Die Synchronisierungsverwaltung von Windows[!INCLUDE[msCoName](../../includes/msconame-md.md)] kann nur zum Synchronisieren von Abonnements für Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Veröffentlichungen verwendet werden, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf demselben Computer ausgeführt wird wie die Synchronisierungsverwaltung. (Die Synchronisierungsverwaltung kann auch zum Synchronisieren von Offlinedateien und Webseiten verwendet werden.) So verwenden Sie die Synchronisierungsverwaltung:  
@@ -97,7 +97,7 @@ ms.locfileid: "52782792"
   
 ### <a name="to-use-the-interactive-resolver"></a>So verwenden Sie den interaktiven Konfliktlöser  
   
-1.  Aktivieren Sie die Verwendung des interaktiven Konfliktlösers für den Artikel und das Abonnement. Weitere Informationen finden Sie unter [Angeben von interaktiver Konfliktauflösung von Mergeartikeln](publish/specify-interactive-conflict-resolution-for-merge-articles.md).  
+1.  Aktivieren Sie die Verwendung des interaktiven Konfliktlösers für den Artikel und das Abonnement. Weitere Informationen finden Sie unter [Angeben von interaktiver Konfliktauflösung von Mergeartikeln](/publish/specify-merge-replication-properties.md#interactive-conflict-resolution).  
   
 2.  Mit dem Beginn der Synchronisierung des Abonnements in der Synchronisierungsverwaltung wird der interaktive Konfliktlöser automatisch gestartet, wenn der interaktive Konfliktlöser aktiviert ist und bei einem oder mehreren Artikeln Konflikte bestehen. Der interaktive Konfliktlöser zeigt die Konflikte jeweils nacheinander an und schlägt eine Lösung für jeden Konflikt vor (basierend auf dem bei der Erstellung der Veröffentlichung und des Abonnements angegebenen Konfliktlösers).  
   

@@ -16,19 +16,19 @@ ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29c038fb212774015f90da0ed8855e8d46c18d09
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0580ccfaa0505e027cedb5824aca26b6dbe51574
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783492"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124310"
 ---
 # <a name="spcopysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
     
 > [!IMPORTANT]  
->  Die Funktion für anfügbare Abonnements ist als veraltet markiert und wird in einer zukünftigen Version entfernt. Diese Funktion sollte bei neuen Entwicklungen nicht verwendet werden. Für Mergeveröffentlichungen, die mithilfe von parametrisierten Filtern partitioniert werden, ist es empfehlenswert, die neuen Funktionen von partitionierten Momentaufnahmen zu verwenden. Diese vereinfachen die Initialisierung zahlreicher Abonnements. Weitere Informationen finden Sie unter [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md). Für nicht partitionierte Veröffentlichungen können Sie ein Abonnement mit einer Sicherung initialisieren. Weitere Informationen finden Sie unter [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)initialisiert wird.  
+>  Die Funktion für anfügbare Abonnements ist als veraltet markiert und wird in einer zukünftigen Version entfernt. Diese Funktion sollte bei neuen Entwicklungen nicht verwendet werden. Für Mergeveröffentlichungen, die mithilfe von parametrisierten Filtern partitioniert werden, ist es empfehlenswert, die neuen Funktionen von partitionierten Momentaufnahmen zu verwenden. Diese vereinfachen die Initialisierung zahlreicher Abonnements. Weitere Informationen finden Sie unter [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). Für nicht partitionierte Veröffentlichungen können Sie ein Abonnement mit einer Sicherung initialisieren. Weitere Informationen finden Sie unter [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)initialisiert wird.  
   
  Kopiert eine Abonnementdatenbank, die über Pullabonnements, nicht jedoch über Pushabonnements verfügt. Es können nur einzelne Dateidatenbanken kopiert werden. Diese gespeicherte Prozedur wird auf dem Abonnenten für die Abonnementdatenbank ausgeführt.  
   
@@ -44,13 +44,13 @@ sp_copysubscription [ @filename = ] 'file_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@filename =**] **'***file_name***'**  
+ [  **@filename =**] **"**_File_name_**"**  
  Der Zeichenfolgenwert, der den vollständigen Pfad einschließlich des Dateinamens angibt, in dem eine Kopie der Datendatei (.mdf) gespeichert wird. *Dateiname* ist **nvarchar(260)**, hat keinen Standardwert.  
   
- [  **@temp_dir=**] **"***Temp_dir***"**  
+ [  **@temp_dir=**] **"**_Temp_dir_**"**  
  Der Name des Verzeichnisses, das die temporären Dateien enthält. *Temp_dir* ist **nvarchar(260)**, hat den Standardwert NULL. Wenn der Wert NULL ist, die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standarddatenverzeichnis verwendet werden. Das Verzeichnis sollte über ausreichenden Speicherplatz verfügen, um eine Datei aufzunehmen, die der Größe aller Datenbankdateien auf dem Abonnenten zusammen entspricht.  
   
- [  **@overwrite_existing_file=**] **"***Overwrite_existing_file***"**  
+ [  **@overwrite_existing_file=**] **"**_Overwrite_existing_file_**"**  
  Ist ein optionales boolesches Flag, der angibt, ob eine vorhandene Datei mit dem gleichen Namen im angegebenen überschrieben **@filename**. *Overwrite_existing_file*ist **Bit**, hat den Standardwert **0**. Wenn **1**, überschreibt er die angegebene Datei **@filename**, sofern vorhanden. Wenn **0**, die gespeicherte Prozedur fehlschlägt, wenn die Datei vorhanden ist, und die Datei nicht überschrieben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -67,7 +67,7 @@ sp_copysubscription [ @filename = ] 'file_name'
  Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_copysubscription**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Alternative Speicherorte für Momentaufnahmeordner](../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
+ [Alternative Speicherorte für Momentaufnahmeordner](../../relational-databases/replication/snapshot-options.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

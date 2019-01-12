@@ -19,12 +19,12 @@ ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 47fd5d47ea064a6aa783132ff052f8b95a6f2941
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5157fcfeb54e22c404dcba29655771a1c2034e2c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150430"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126900"
 ---
 # <a name="file-restores-simple-recovery-model"></a>Dateiwiederherstellungen (einfaches Wiederherstellungsmodell)
   Dieses Thema betrifft nur Datenbanken, die auf dem einfachen Wiederherstellungsmodell basieren und mindestens eine schreibgeschützte sekundäre Dateigruppe enthalten.  
@@ -46,7 +46,7 @@ ms.locfileid: "48150430"
      Informationen zur Unterstützung von Onlinewiederherstellungen von Seiten und Dateien finden Sie unter [Von den SQL Server 2014-Editionen unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Weitere Informationen zur Onlinewiederherstellung finden Sie unter [Onlinewiederherstellung &#40;SQL Server&#41;](online-restore-sql-server.md).  
   
     > [!TIP]  
-    >  Wenn Sie die Datenbank für eine Dateiwiederherstellung offline schalten möchten, tun Sie dies vor dem Starten der Wiederherstellungssequenz, indem Sie die folgende [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) -Anweisung ausführen: ALTER DATABASE *Datenbankname* SET OFFLINE.  
+    >  Wenn Sie die Datenbank für eine dateiwiederherstellung offline schalten möchten, schalten Sie die Datenbank offline, bevor Sie die Wiederherstellungssequenz starten, indem Sie Folgendes ausführen [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) Anweisung: ALTER DATABASE *Database_name* SET OFFLINE.  
   
 
   
@@ -62,13 +62,13 @@ ms.locfileid: "48150430"
   
  Die Wiederherstellungssequenz enthält nur zwei [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisungen. Mit der ersten Anweisung wird unter Verwendung von WITH NORECOVERY eine sekundäre Datei (Datei `A`) wiederhergestellt. Im zweiten Vorgang werden unter Verwendung von WITH RECOVERY zwei weitere Dateien ( `B` und `C` ) von einem anderen Sicherungsmedium wiederhergestellt:  
   
-1.  RESTORE DATABASE *Datenbank* FILE **=***Name_von_Datei_A*  
+1.  RESTORE DATABASE *Datenbank* FILE **=**_Name_von_Datei_A_  
   
      FROM *Dateisicherung_von_Datei_A*  
   
      WITH NORECOVERY **;**  
   
-2.  RESTORE DATABASE *Datenbank* FILE **=***Name_von_Datei_B***,***Name_von_Datei_C*  
+2.  RESTORE DATABASE *Datenbank* FILE **=**_Name_von_Datei_B_**,**_Name_von_Datei_C_  
   
      FROM *Dateisicherung_der_Dateien_B_und_C*  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48150430"
   
 ### <a name="examples"></a>Beispiele  
   
--   [Beispiel: Onlinewiederherstellung einer schreibgeschützten Datei &#40;einfaches Wiederherstellungsmodell&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
+-   [Beispiel: Onlinewiederherstellung einer schreibgeschützten Datei &#40;einfachen Wiederherstellungsmodell&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
 -   [Beispiel: Offlinewiederherstellung der primären Dateigruppe und einer weiteren Dateigruppe &#40;vollständiges Wiederherstellungsmodell&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48150430"
   
   
 ## <a name="see-also"></a>Siehe auch  
- [Sicherung und Wiederherstellung: Interoperabilität und Koexistenz &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [Sicherung und Wiederherstellung: Interoperabilität und Koexistenz &#40;SQLServer&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Differenzielle Sicherungen &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Vollständige Dateisicherungen &#40;SQL Server&#41;](full-file-backups-sql-server.md)   
  [Übersicht über Sicherungen &#40;SQL Server&#41;](backup-overview-sql-server.md)   

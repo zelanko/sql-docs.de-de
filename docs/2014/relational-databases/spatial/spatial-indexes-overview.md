@@ -11,12 +11,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6e3d145290ac0fb416df91c99337d0e5dc2e30a5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 229674b624913c08b35637a106d9ced7e88e855d
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373222"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100885"
 ---
 # <a name="spatial-indexes-overview"></a>Übersicht über räumliche Indizes
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt räumliche Daten und räumliche Indizes. Ein *räumlicher Index* ist ein erweiterter Index, der es Ihnen ermöglicht, eine räumliche Spalte zu indizieren. Eine räumliche Spalte ist eine Tabellenspalte mit Daten eines räumlichen Datentyps wie beispielsweise `geometry` oder `geography`.  
@@ -127,7 +127,7 @@ ms.locfileid: "53373222"
 >  Dieses Mosaikschema kann mit der USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID)-Klausel der [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung explizit angegeben werden.  
   
 ##### <a name="the-bounding-box"></a>Das umgebende Feld  
- Geometrische Daten belegen eine Fläche, die unendlich sein kann. In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]erfordert ein räumlicher Index jedoch einen endlichen Raum. Um einen endlichen Raum für die Zerlegung einzurichten, erfordert das Geometrierastermosaikschema ein rechteckiges *umgebendes Feld*. Das umgebende Feld wird durch vier Koordinaten definiert, `(` *X-min ***,*** y-min* `)` und `(` *X-Max ***,*** y-Max*  `)`, die als Eigenschaften des räumlichen Indexes gespeichert werden. Diese Koordinaten stellen Folgendes dar:  
+ Geometrische Daten belegen eine Fläche, die unendlich sein kann. In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]erfordert ein räumlicher Index jedoch einen endlichen Raum. Um einen endlichen Raum für die Zerlegung einzurichten, erfordert das Geometrierastermosaikschema ein rechteckiges *umgebendes Feld*. Das umgebende Feld wird durch vier Koordinaten definiert, `(` _X-min_**,**_y-min_ `)` und `(` _X-Max_ **,**_y-Max_`)`, die als Eigenschaften des räumlichen Indexes gespeichert werden. Diese Koordinaten stellen Folgendes dar:  
   
 -   *x-min* ist die X-Koordinate der linken unteren Ecke des umgebenden Felds.  
   
@@ -140,11 +140,11 @@ ms.locfileid: "53373222"
 > [!NOTE]  
 >  Diese Koordinaten werden in der BOUNDING_BOX-Klausel der [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung angegeben.  
   
- Die `(` *X-min ***,*** y-min* `)` und `(` *X-Max ***,*** y-Max* `)` Koordinaten bestimmen die Position und die Größe des umgebenden Felds an. Der Raum außerhalb des umgebenden Felds wird als einzelne Zelle behandelt, die die Nummer&nbsp;0 erhält.  
+ Die `(` _X-min_**,**_y-min_ `)` und `(` _X-Max_**,** _y-Max_ `)` Koordinaten zu bestimmen, die Position und Größe des umgebenden Felds. Der Raum außerhalb des umgebenden Felds wird als einzelne Zelle behandelt, die die Nummer&nbsp;0 erhält.  
   
  Der räumliche Index zerlegt den Raum im umgebenden Feld. Das Raster der Ebene&nbsp;1 der Rasterhierarchie füllt das umgebende Feld aus. Zur Platzierung eines geometrischen Objekts in der Rasterhierarchie vergleicht der räumliche Index die Koordinaten des Objekts mit den Koordinaten des umgebenden Felds.  
   
- Die folgende Abbildung zeigt die Punkte, die von definiert die `(` *X-min ***,*** y-min* `)` und `(` *X-Max ***,*** y-Max* `)` Koordinaten des umgebenden Felds. Die obersten Ebene der Rasterhierarchie wird als 4&nbsp;x&nbsp;4-Raster angezeigt. Zur Veranschaulichung werden die niedrigeren Ebenen weggelassen. Der Raum außerhalb des umgebenden Felds wird durch eine Null (0) angegeben. Beachten Sie, dass Objekt 'A' teilweise über das Feld hinausragt und dass sich Objekt 'B' komplett außerhalb des Felds in Zelle&nbsp;0 befindet.  
+ Die folgende Abbildung zeigt die Punkte, die von definiert die `(` _X-min_**,**_y-min_ `)` und `(` _X-Max_  **,**_y-Max_ `)` Koordinaten des umgebenden Felds. Die obersten Ebene der Rasterhierarchie wird als 4&nbsp;x&nbsp;4-Raster angezeigt. Zur Veranschaulichung werden die niedrigeren Ebenen weggelassen. Der Raum außerhalb des umgebenden Felds wird durch eine Null (0) angegeben. Beachten Sie, dass Objekt 'A' teilweise über das Feld hinausragt und dass sich Objekt 'B' komplett außerhalb des Felds in Zelle&nbsp;0 befindet.  
   
  ![Umgebendes Feld mit Koordinaten und Zelle 0](../../database-engine/media/spndx-bb-4x4-objects.gif "Bounding box showing coordinates and cell 0")  
   

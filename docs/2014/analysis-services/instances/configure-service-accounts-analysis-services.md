@@ -16,12 +16,12 @@ ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 214d58fd64649b23f632b393d6b9b0a2b71a2359
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7b6be38afc2c95d6cfce80bcefa6ad0b3ab954fe
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362832"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125500"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Konfigurieren von Dienstkonten (Analysis Services)
   Unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)wird die Kontobereitstellung für das gesamte Produkt beschrieben. Das Thema enthält umfassende Informationen zu Dienstkonten für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste, einschließlich [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Dort erfahren Sie alles über gültige Kontotypen, beim Setup zugewiesene Windows-Berechtigungen, Dateisystemberechtigungen, Registrierungsberechtigungen und vieles mehr.  
@@ -39,7 +39,7 @@ ms.locfileid: "53362832"
 ## <a name="logon-account-recommendations"></a>Kontoempfehlungen für die Anmeldung  
  In einem Failovercluster sollten alle Instanzen von Analysis Services so konfiguriert werden, dass sie ein Windows-Domänenbenutzerkonto verwenden. Weisen Sie dasselbe Konto für alle Instanzen zu. Weitere Informationen finden Sie unter [Clustern von Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx) .  
   
- Eigenständige Instanzen sollten das virtuelle Standardkonto verwenden **NT Service\MSSQLServerOLAPService** für die Standardinstanz oder **NT Service\MSOLAP$ *** Instanzname* für eine benannte Instanz. Diese Empfehlung gilt für Analysis Services-Instanzen in allen Servermodi, Windows Server 2008 R2 und höher für das Betriebssystem und SQL Server 2012 und höher für Analysis Services vorausgesetzt.  
+ Eigenständige Instanzen sollten das virtuelle Standardkonto verwenden: **NT Service\MSSQLServerOLAPService** für die Standardinstanz oder **NT Service\MSOLAP$**_Instanzname_ für eine benannte Instanz. Diese Empfehlung gilt für Analysis Services-Instanzen in allen Servermodi, Windows Server 2008 R2 und höher für das Betriebssystem und SQL Server 2012 und höher für Analysis Services vorausgesetzt.  
   
 ## <a name="granting-permissions-to-analysis-services"></a>Erteilen von Berechtigungen für Analysis Services  
  Dieser Abschnitt erläutert die Berechtigungen, die Analysis Services für lokale, interne Vorgänge wie das Starten der ausführbaren Datei, das Lesen der Konfigurationsdatei und das Laden von Datenbanken aus dem Datenverzeichnis benötigt. Wenn Sie stattdessen Anleitungen zum Festlegen von Berechtigungen für den Zugriff auf externe Daten und Interoperabilität mit anderen Diensten und Anwendungen suchen, finden Sie weitere Informationen unter [Erteilen zusätzlicher Berechtigungen für bestimmte Servervorgänge](#bkmk_tasks) weiter unten in diesem Thema.  

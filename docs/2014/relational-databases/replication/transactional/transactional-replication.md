@@ -13,41 +13,25 @@ ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7cd024310b00338749147b56e3b63a09fbd515de
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9a6099a43713ebbcfdc65aec43aabcca95fe5e0b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814012"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127680"
 ---
 # <a name="transactional-replication"></a>Transaktionsreplikation
   Eine Transaktionsreplikation beginnt in der Regel mit einer Momentaufnahme des Veröffentlichungsdatenbankobjekts und der entsprechenden Daten. Nach der Erstellung der Anfangsmomentaufnahme werden spätere auf dem Verleger vorgenommene Daten- und Schemaänderungen an den Abonnenten übermittelt, wenn sie auftreten (fast in Echtzeit). Die Datenänderungen werden auf dem Abonnenten in derselben Reihenfolge und mit denselben Transaktionsgrenzen angewendet, in der sie auf dem Verleger stattgefunden haben. Auf diese Weise wird die Transaktionskonsistenz innerhalb einer Veröffentlichung sichergestellt.  
   
  Die Transaktionsreplikation wird typischerweise in reinen Serverumgebungen verwendet und ist für die folgenden Fälle geeignet:  
   
--   Inkrementelle Änderungen sollen an Abonnenten weitergegeben werden, wenn sie auftreten.  
-  
--   Die Anwendung benötigt eine niedrige Latenzzeit zwischen dem Zeitpunkt, zu dem Änderungen auf dem Verleger vorgenommen werden, und dem Zeitpunkt, zu dem die Änderungen auf dem Abonnenten eintreffen.  
-  
--   Die Anwendung benötigt Zugriff auf Zwischenstufen von Datenänderungen. Wenn eine Zeile sich z. B. fünfmal ändert, kann die Anwendung bei Verwendung der Transaktionsreplikation auf jede Änderung reagieren (indem sie z. B. einen Trigger auslöst) und nicht nur auf das endgültige Ergebnis aller Zeilenänderungen.  
-  
--   Auf dem Verleger kommt es sehr häufig zu Einfüge-, Update- und Löschaktivitäten.  
-  
+-   Inkrementelle Änderungen sollen an Abonnenten weitergegeben werden, wenn sie auftreten.    
+-   Die Anwendung benötigt eine niedrige Latenzzeit zwischen dem Zeitpunkt, zu dem Änderungen auf dem Verleger vorgenommen werden, und dem Zeitpunkt, zu dem die Änderungen auf dem Abonnenten eintreffen.    
+-   Die Anwendung benötigt Zugriff auf Zwischenstufen von Datenänderungen. Wenn eine Zeile sich z. B. fünfmal ändert, kann die Anwendung bei Verwendung der Transaktionsreplikation auf jede Änderung reagieren (indem sie z. B. einen Trigger auslöst) und nicht nur auf das endgültige Ergebnis aller Zeilenänderungen.    
+-   Auf dem Verleger kommt es sehr häufig zu Einfüge-, Update- und Löschaktivitäten.    
 -   Der Verleger bzw. Abonnent ist keine[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank, sondern z. B. eine Oracle-Datenbank.  
   
  Standardmäßig sollten Abonnenten von Transaktionsreplikationen schreibgeschützt sein, da Änderungen nicht an den Verleger zurückgegeben werden. Die Transaktionsreplikation bietet aber auch Optionen, die Updates auf dem Abonnenten ermöglichen.  
-  
- **In diesem Thema**  
-  
- [Funktionsweise der Transaktionsreplikation](#HowWorks)  
-  
- [Anfangsdataset](#Dataset)  
-  
- [Momentaufnahme-Agent](#SnapshotAgent)  
-  
- [Protokolllese-Agent](#LogReaderAgent)  
-  
- [Verteilungs-Agent](#DistributionAgent)  
   
 ##  <a name="HowWorks"></a> Funktionsweise der Transaktionsreplikation  
  Die Transaktionsreplikation wird vom Momentaufnahme-Agent, dem Protokolllese-Agent und dem Verteilungs-Agent von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implementiert. Der Momentaufnahme-Agent bereitet Momentaufnahmen vor, die das Schema und die Daten von veröffentlichten Tabellen und Datenbankobjekten enthalten, speichert die Dateien im Momentaufnahmeordner und zeichnet Synchronisierungsaufträge in der Verteilungsdatenbank auf dem Verteiler auf.  
@@ -82,5 +66,17 @@ ms.locfileid: "52814012"
   
 ##  <a name="DistributionAgent"></a> Verteilungs-Agent  
  Der Verteilungs-Agent wird für Pushabonnements auf dem Verteiler und für Pullabonnements auf dem Abonnenten ausgeführt. Der Agent verschiebt Transaktionen aus der Verteilungsdatenbank auf den Abonnenten. Wenn ein Abonnement für die Überprüfung markiert ist, überprüft der Verteilungs-Agent auch, ob die Daten auf dem Verleger und dem Abonnenten übereinstimmen.  
+
+## <a name="publication-types"></a>Veröffentlichungstypen der
+
+  
+Die Transaktionsreplikation stellt vier veröffentlichungstypen bereit:  
+  
+|Veröffentlichungstyp|Description|  
+|----------------------|-----------------|  
+|Standardmäßige Transaktionsveröffentlichung|Geeignet für Topologien, in denen alle Daten auf dem Abonnenten schreibgeschützt sind (von der Transaktionsreplikation wird dies auf dem Abonnenten nicht erzwungen).<br /><br /> Diese Transaktionsveröffentlichungen werden standardmäßig bei der Verwendung von Transact-SQL oder Replikationsverwaltungsobjekten (RMO) erstellt. Im Assistenten für neue Veröffentlichung werden sie erstellt, wenn auf der Seite **Veröffentlichungstyp** die Option **Transaktionsveröffentlichung** ausgewählt wird.<br /><br /> Weitere Informationen zum Erstellen von Veröffentlichungen finden Sie unter [Veröffentlichen von Daten und Datenbankobjekten](../../../relational-databases/replication/publish/publish-data-and-database-objects.md).|  
+|Transaktionsveröffentlichung mit aktualisierbaren Abonnements|Dieser Veröffentlichungstyp weist die folgenden Merkmale auf:<br /><br /> – Jeder Server verfügt über identische Daten, die mit einem Verleger und Abonnenten. <br /> – Es ist möglich, Zeilen auf dem Abonnenten zu aktualisieren.<br /> – Diese Topologie eignet sich am besten für serverumgebungen, die hohen Verfügbarkeit erfordern und leseskalierbarkeit.<br /><br />Weitere Informationen finden Sie unter [aktualisierbare Abonnements](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).|  
+|Peer-zu-Peer-Topologie|Dieser Veröffentlichungstyp weist die folgenden Merkmale auf:<br /> – Jeder Server verfügt über identische Daten und fungiert als Verleger und Abonnenten.<br /> – Dieselbe Zeile kann nur an einem Speicherort zu einem Zeitpunkt geändert werden.<br /> -Unterstützt [konflikterkennung](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)  <br />– Diese Topologie eignet sich am besten für serverumgebungen, die hohen Verfügbarkeit erfordern und leseskalierbarkeit.<br /><br />Weitere Informationen finden Sie unter [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
+|Bidirektionale Transaktionsreplikation|Dieser Veröffentlichungstyp weist die folgenden Merkmale auf:<br />Bidirektionale Replikation zu-Peer-zu-Peer-Replikation ähnelt, aber es bietet keine Auflösung des Konflikts zwischen. Darüber hinaus ist die bidirektionale Replikation auf 2 Server beschränkt. <br /><br /> Weitere Informationen finden Sie unter [bidirektionale Transaktionsreplikation](../../../relational-databases/replication/transactional/bidirectional-transactional-replication.md) |  
   
   

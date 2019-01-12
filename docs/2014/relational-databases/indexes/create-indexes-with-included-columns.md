@@ -20,12 +20,12 @@ ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1a593812709e62a02645cdd0ce1ee2fa53461b4d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5c0c6449082f1c5ca016cfdb0a0f18430cf74731
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540844"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124434"
 ---
 # <a name="create-indexes-with-included-columns"></a>Erstellen von Indizes mit eingeschlossenen Spalten
   In diesem Thema wird beschrieben, wie eingeschlossene Spalten (oder Nichtschlüsselspalten) hinzugefügt werden, um die Funktionalität von nicht gruppierten Indizes in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]zu erweitern. Indem Sie Nichtschlüsselspalten einschließen, erstellen Sie nicht gruppierte Indizes, die eine größere Anzahl von Abfragen abdecken. Dies ist der Fall, weil Nichtschlüsselspalten die folgenden Vorteile aufweisen:  
@@ -102,13 +102,13 @@ ms.locfileid: "52540844"
   
 6.  Klicken Sie in der Registerkarte **Indexschlüsselspalten** auf **Hinzufügen…**.  
   
-7.  Aktivieren Sie im Dialogfeld **Spalten auswählen aus***Tabellenname* das oder die Kontrollkästchen der Tabellenspalte oder der Spalten, die dem Index hinzugefügt werden sollen.  
+7.  Aktivieren Sie im Dialogfeld **Spalten auswählen aus**_table_name_ das oder die Kontrollkästchen der Tabellenspalte oder der Spalten, die dem Index hinzugefügt werden sollen.  
   
 8.  Klicken Sie auf **OK**.  
   
 9. Klicken Sie auf der Registerkarte **Eingeschlossene Spalten** auf **Hinzufügen...**.  
   
-10. Aktivieren Sie im Dialogfeld **Spalten auswählen aus***Tabellenname* das oder die Kontrollkästchen der Tabellenspalte oder der Spalten, die dem Index als Nichtschlüsselspalten hinzugefügt werden sollen.  
+10. Aktivieren Sie im Dialogfeld **Spalten auswählen aus**_table_name_ das oder die Kontrollkästchen der Tabellenspalte oder der Spalten, die dem Index als Nichtschlüsselspalten hinzugefügt werden sollen.  
   
 11. Klicken Sie auf **OK**.  
   

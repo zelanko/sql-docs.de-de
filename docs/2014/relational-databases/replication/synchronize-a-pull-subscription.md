@@ -14,12 +14,12 @@ ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d64d1d589d00222c7c48b4a5516dba8bd1185406
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c8a7a607221599d599438352eab5add1cc94e5d7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752642"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125021"
 ---
 # <a name="synchronize-a-pull-subscription"></a>Synchronisieren eines Pullabonnements
   In diesem Thema wird beschrieben, wie ein Pullabonnement in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [Replikations-Agents](agents/replication-agents-overview.md)oder Replikationsverwaltungsobjekten (RMO) synchronisiert wird.  
@@ -43,7 +43,7 @@ ms.locfileid: "52752642"
 5.  Klicken Sie auf **Schließen**.  
   
 ##  <a name="ReplProg"></a> Replication Agents  
- Pullabonnements können programmgesteuert oder nach Bedarf synchronisiert werden, indem die entsprechende ausführbare Datei für den Replikations-Agent an der Eingabeaufforderung aufgerufen wird. Welche ausführbare Datei für den Replikations-Agent aufgerufen wird, hängt vom Typ der Veröffentlichung ab, zu der das Pullabonnement gehört. Weitere Informationen finden Sie unter [Replication Agents](agents/replication-agents.md).  
+ Pullabonnements können programmgesteuert oder nach Bedarf synchronisiert werden, indem die entsprechende ausführbare Datei für den Replikations-Agent an der Eingabeaufforderung aufgerufen wird. Welche ausführbare Datei für den Replikations-Agent aufgerufen wird, hängt vom Typ der Veröffentlichung ab, zu der das Pullabonnement gehört. Weitere Informationen finden Sie unter [Replication Agents](agents/replication-agents-overview.md).  
   
 > [!NOTE]  
 >  Replikations-Agents stellen die Verbindung zum lokalen Server anhand der Anmeldeinformationen für die Windows-Authentifizierung des Benutzers her, der den Agenten von der Eingabeaufforderung aus aufgerufen hat. Diese Windows-Anmeldeinformationen werden auch verwendet, wenn mithilfe der integrierten Windows-Authentifizierung eine Verbindung zu Remoteservern hergestellt wird.  

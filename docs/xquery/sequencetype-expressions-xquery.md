@@ -18,12 +18,12 @@ ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5f3f2dbe576fe95f89588354785b64bf444eb27b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 542cf5a0960e967d2bebb3889af0f03656004472
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661849"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124560"
 ---
 # <a name="sequencetype-expressions-xquery"></a>SequenceType-Ausdrücke (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Expression instance of SequenceType[Occurrence indicator]
   
  Wenn die **?** -häufigkeitsindikator nicht angegeben ist, `sequence of` gibt "true" nur, wenn die `Expression` Übereinstimmungen geben die `Type` angegebenen und `Expression` ein Singleton zurückgibt.  
   
- **Beachten Sie** das Pluszeichen (**+**) und das Sternchen (**\***) werden in nicht häufigkeitsindikatoren unterstützt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **Beachten Sie** das Pluszeichen (**+**) und das Sternchen (**&#42;**) werden in nicht häufigkeitsindikatoren unterstützt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Die folgenden Beispiele veranschaulichen die Verwendung der**Instanz** -Operators in XQuery.  
   
@@ -139,7 +139,7 @@ where ProductModelID=19
  Diese Abfrage gibt True zurück.  
   
 ### <a name="example-c"></a>Beispiel C  
- Beim Verwenden von UNION-Datentypen in einem `instance of`-Ausdruck gilt in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die folgende Einschränkung: speziell wenn ein Element oder Attribut vom Typ UNION ist, kann `instance of` den genauen Typ möglicherweise nicht bestimmen. Folglich gibt eine Abfrage False zurück, es sei denn, der in SequenceType verwendete atomare Typ ist das höchste übergeordnete Element des aktuellen Typs des Ausdrucks in der simpleType-Hierarchie. Mit anderen Worten müssen die in SequenceType angegebenen atomaren Typen dem Typ anySimpleType direkt untergeordnet sein. Informationen zu der Typhierarchie finden Sie unter [Typumwandlungsregeln in XQuery](../xquery/type-casting-rules-in-xquery.md).  
+ Bei Verwendung von union-Typen, die `instance of` Ausdruck in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gilt eine Beschränkung: Insbesondere, wenn der Typ eines Elements oder Attributs eines union-Typs ist `instance of` den genauen Typ möglicherweise nicht bestimmen. Folglich gibt eine Abfrage False zurück, es sei denn, der in SequenceType verwendete atomare Typ ist das höchste übergeordnete Element des aktuellen Typs des Ausdrucks in der simpleType-Hierarchie. Mit anderen Worten müssen die in SequenceType angegebenen atomaren Typen dem Typ anySimpleType direkt untergeordnet sein. Informationen zu der Typhierarchie finden Sie unter [Typumwandlungsregeln in XQuery](../xquery/type-casting-rules-in-xquery.md).  
   
  Das nächste Abfragebeispiel führt folgende Vorgänge aus:  
   

@@ -16,12 +16,12 @@ ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: caaf907b0db55306ebd341ed727174f3531c947f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 21d0ea34f3521333976ce00a3f5b823c3fcb816a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777737"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129300"
 ---
 # <a name="spaddmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,31 +46,31 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **"**_Verleger_**"**  
  Der Name des Verlegers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **"**_Publisher_db_**"**  
  Der Name der Veröffentlichungsdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **"**_Veröffentlichung_**"**  
  Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@alternate_publisher=**] **"***Alternate_synchronization_partner***"**  
+ [  **@alternate_publisher=**] **"**_Alternate_synchronization_partner_**"**  
  Der Name des alternativen Verlegers. *Alternate_synchronization_partner* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@alternate_publisher_db=**] **"***Alternate_publisher_db***"**  
+ [  **@alternate_publisher_db=**] **"**_Alternate_publisher_db_**"**  
  Der Name der Veröffentlichungsdatenbank auf dem alternativen Verleger. *Alternate_publisher_db* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@alternate_publication=**] **"***Alternate_synchronization_partner***"**  
+ [  **@alternate_publication=**] **"**_Alternate_synchronization_partner_**"**  
  Der Name der Veröffentlichung auf dem alternativen Synchronisierungspartner. *Alternate_synchronization_partner* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@alternate_distributor=**] **"***Alternate_distributor***"**  
+ [  **@alternate_distributor=**] **"**_Alternate_distributor_**"**  
  Der Name des Verteilers für den alternativen Synchronisierungspartner. *Alternate_distributor* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@friendly_name=**] **"***friendly_name wurde***"**  
+ [  **@friendly_name=**] **"**_friendly_name wurde_**"**  
  Ein Anzeigename, durch den die Zuordnung von Verleger, Veröffentlichung und Verteiler, aus denen ein alternativer Synchronisierungspartner besteht, identifiziert werden kann. *friendly_name wurde* ist **nvarchar(255)**, hat den Standardwert NULL.  
   
- [  **@reserved=**] **"***reservierte***"**  
+ [  **@reserved=**] **"**_reservierte_**"**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
