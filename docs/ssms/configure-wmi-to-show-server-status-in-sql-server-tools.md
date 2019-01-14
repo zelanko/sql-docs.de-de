@@ -14,12 +14,12 @@ ms.assetid: 7e97197b-ed4d-40d1-9a52-9ab1d92401d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 93a01e3d3c687485bb9d330dfe8e97c31cc65cef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9309df663b0754b28a9ec1397fb5bfa1ad1beabc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609832"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134710"
 ---
 # <a name="configure-wmi-to-show-server-status-in-sql-server-tools"></a>Konfigurieren von WMI zum Anzeigen des Serverstatus in SQL Server-Tools
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,8 +39,8 @@ In diesem Thema wird beschrieben, wie WMI konfiguriert wird, um den Serverstatus
   
 6.  Fügen Sie zum Feld **Gruppen- oder Benutzernamen** eine Gruppe oder einen Benutzer hinzu, und markieren Sie die Gruppe bzw. den Benutzer.  
   
-7.  Wählen Sie im Feld **Berechtigungen für***<group or user>* die Spalte **Zulassen** für die Berechtigung **Remoteaktivierung** für Benutzer aus, durch die der Dienststatus remote erkannt werden soll.  
+7.  Wählen Sie im Feld **Berechtigungen für**_<group or user>_ die Spalte **Zulassen** für die Berechtigung **Remoteaktivierung** für Benutzer aus, durch die der Dienststatus remote erkannt werden soll.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Starten, Beenden oder Anhalten des SQL Server-Agent-Dienstes](../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  
   

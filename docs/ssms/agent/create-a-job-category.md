@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2e0de2004ce2b3e9c91988bfc08fa0fea2074435
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c7dbc000d71d7d2cda2d299de476346103f2d2a6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701950"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134310"
 ---
 # <a name="create-a-job-category"></a>Erstellen einer Auftragskategorie
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ In diesem Thema wird beschrieben, wie Sie eine Auftragskategorie in [!INCLUDE[ss
   
     [Einschränkungen](#Restrictions)  
   
-    [Security](#Security)  
+    [Sicherheit](#Security)  
   
 -   **So erstellen Sie eine Auftragskategorie mit**  
   
@@ -55,7 +55,7 @@ In diesem Thema wird beschrieben, wie Sie eine Auftragskategorie in [!INCLUDE[ss
 Multiserverkategorien sind nur auf einem Masterserver vorhanden. Auf einem Masterserver ist nur eine Standardauftragskategorie verfügbar: [**Nicht kategorisiert (Multiserver)**]. Beim Herunterladen eines Multiserverauftrags wird seine Kategorie auf dem Zielserver in **Aufträge vom MSX** geändert.  
   
 ### <a name="Security"></a>Sicherheit  
-Ausführliche Informationen finden Sie unter [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
+Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMS"></a>Verwenden von SQL Server Management Studio  
   
@@ -67,7 +67,7 @@ Ausführliche Informationen finden Sie unter [Implement SQL Server Agent Securit
   
 3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Aufträge** , und wählen Sie **Auftragskategorien verwalten**aus.  
   
-4.  Klicken Sie im Dialogfeld **Auftragskategorien verwalten >***Servername*  auf **Hinzufügen**.  
+4.  Klicken Sie im Dialogfeld **Auftragskategorien verwalten -**_Servername_ auf **Hinzufügen**.  
   
 5.  Geben Sie im neuen Dialogfeld **Name** einen Namen für die neue Auftragskategorie ein.  
   
@@ -75,7 +75,7 @@ Ausführliche Informationen finden Sie unter [Implement SQL Server Agent Securit
   
 7.  Klicken Sie auf **OK**.  
   
-8.  Klicken Sie im Dialogfeld **Auftragskategorien verwalten >***Servername* auf **Aktualisieren**, um sicherzustellen, dass die neue Auftragskategorie aktiv ist. Schließen Sie das Dialogfeld, wenn alles normal aussieht.  
+8.  Klicken Sie im Dialogfeld **Auftragskategorien verwalten -**_Servername_ auf **Aktualisieren** , um sicherzustellen, dass die neue Auftragskategorie aktiv ist. Schließen Sie das Dialogfeld, wenn alles normal aussieht.  
   
 Weitere Informationen zu diesen Dialogfeldern finden Sie unter [Auftragskategorien – Auftragskategorien verwalten](../../ssms/agent/job-categories-manage-job-categories.md) und [Eigenschaften für neue Auftragskategorie – Neue Auftragskategorie](../../ssms/agent/job-categories-properties-new-job-category.md).  
   

@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1e56b8180caf8beec9a0371e79e847fd4ff2e30d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cbb3f5d659a859e58deb7410e6890b5b39ac2895
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701108"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131130"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Change the Membership of a Job Category
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ Auftragskategorien helfen Ihnen dabei, Ihre Aufträge zum einfachen Filtern und 
   
 -   **Vorbereitungen:**  
   
-    [Security](#Security)  
+    [Sicherheit](#Security)  
   
 -   **So ändern Sie die Mitgliedschaft einer Auftragskategorie mit**  
   
@@ -51,7 +51,7 @@ Auftragskategorien helfen Ihnen dabei, Ihre Aufträge zum einfachen Filtern und 
 ## <a name="BeforeYouBegin"></a>Vorbereitungen  
   
 ### <a name="Security"></a>Sicherheit  
-Ausführliche Informationen finden Sie unter [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
+Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMS"></a>Verwenden von SQL Server Management Studio  
   
@@ -63,13 +63,13 @@ Ausführliche Informationen finden Sie unter [Implement SQL Server Agent Securit
   
 3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Aufträge** , und wählen Sie **Auftragskategorien verwalten**aus.  
   
-4.  Wählen Sie im Dialogfeld **Auftragskategorien verwalten***Servername* die Auftragskategorie aus, die Sie bearbeiten möchten, und klicken Sie dann auf **Aufträge anzeigen**.  
+4.  Wählen Sie im Dialogfeld **Auftragskategorien verwalten -**_Servername_ die Auftragskategorie aus, die Sie bearbeiten möchten, und klicken Sie dann auf **Aufträge anzeigen**.  
   
 5.  Aktivieren Sie das Kontrollkästchen **Alle Aufträge anzeigen** .  
   
 6.  Um der Kategorie einen Auftrag hinzuzufügen, aktivieren Sie im Hauptraster in der **Select** -Spalte das Kontrollkästchen, das dem Auftrag entspricht. Um einen Auftrag aus der Kategorie zu entfernen, deaktivieren Sie das Kontrollkästchen. Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
-7.  Schließen Sie das Dialogfeld **Auftragskategorien verwalten***Servername*.  
+7.  Schließen Sie das Dialogfeld **Auftragskategorien verwalten -**_Servername_ .  
   
 ## <a name="TSQL"></a>Verwenden von Transact-SQL  
   

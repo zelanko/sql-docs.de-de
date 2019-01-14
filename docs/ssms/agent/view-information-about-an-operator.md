@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 58abfa4ff4add4415b71a536b0c9aeb1f6a9f472
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 0ce920c169e2a3e64be1c6aa02841305b64378ee
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702558"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256395"
 ---
 # <a name="view-information-about-an-operator"></a>View Information About an Operator
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ In diesem Thema wird beschrieben, wie Sie Infodermationen über einen [!INCLUDE[
   
 -   **Vorbereitungen:**  
   
-    [Security](#Security)  
+    [Sicherheit](#Security)  
   
 -   **So zeigen Sie Informationen zu einem Operator an mit**  
   
@@ -73,7 +73,7 @@ Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Fest
   
 4.  Klicken Sie mit der rechten Maustaste auf den Operator, den Sie anzeigen möchten, und wählen Sie **Eigenschaften**aus.  
   
-    Weitere Informationen zu den verfügbaren Optionen im Dialogfeld *Operatorname***Eigenschaften** finden Sie unter:  
+    Weitere Informationen zu den verfügbaren Optionen im Dialogfeld _Operatorname_**Eigenschaften** finden Sie unter:  
   
     -   [Operatoreigenschaften – Neuer Operator &#40;Seite „Allgemein“&#41;](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   
