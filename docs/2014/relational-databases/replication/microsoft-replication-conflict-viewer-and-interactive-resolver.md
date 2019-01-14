@@ -13,12 +13,12 @@ ms.assetid: 641bd224-fcde-4ad4-9518-369cbeb398e4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7fc36ac66702da23f2baf2c8003486bd00ec8bf3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e0cce16636e8f3be542b926170c905353602d95e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780923"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135910"
 ---
 # <a name="microsoft-replication-conflict-viewer-and-interactive-resolver"></a>Replikationskonflikt-Viewer und interaktiver Konfliktlöser von Microsoft
   Dieser Abschnitt enthält Informationen zum Replikationskonflikt-Viewer für Mergereplikationen und Transaktionsreplikationen und zum interaktiven Konfliktlöser für Mergereplikationen:  
@@ -36,7 +36,7 @@ ms.locfileid: "52780923"
  [Anzeigen von Datenkonflikten für Transaktionsveröffentlichungen &#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)   
  [Erweiterte Konflikterkennung und -lösung der Mergereplikation](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Konflikterkennung bei der Peer-zu-Peer-Replikation](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
- [Konflikterkennung und -lösung beim verzögerten Update über eine Warteschlange](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
- [Eigenschaftenreferenz &#40;Replikation&#41;](properties-reference-replication.md)  
+ [Queued Updating Conflict Detection and Resolution](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
+
   
   
