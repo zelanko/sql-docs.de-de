@@ -13,12 +13,12 @@ ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f56669ce6fdb9bdc71017afa351e0f2b31f0b9d3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8e4179324ec6b194e0e60e4d9715ec24c1c4f835
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508048"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100755"
 ---
 # <a name="sqllogship-application"></a>Anwendung sqllogship
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,25 +34,25 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **-server** *instance_name*  
+ **-server** _instance_name_  
  Gibt die Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] an, in der der Vorgang ausgeführt wird. Die anzugebende Serverinstanz hängt vom angegebenen Protokollversandvorgang ab. Für **-backup**muss *instance_name* der Name des primären Servers in einer Protokollversandkonfiguration sein. Für **-copy** oder **-restore**muss *instance_name* der Name eines sekundären Servers in einer Protokollversandkonfiguration sein.  
   
- **-backup** *primary_id*  
+ **-backup** _primary_id_  
  Führt einen Sicherungsvorgang für die primäre Datenbank aus, deren primäre ID durch *primary_id*angegeben ist. Sie können diese ID abrufen, indem Sie sie in der [log_shipping_primary_databases](../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md) -Systemtabelle auswählen oder die gespeicherte Prozedur [sp_help_log_shipping_primary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md) verwenden.  
   
  Bei diesem Sicherungsvorgang wird die Protokollsicherung im Sicherungsverzeichnis erstellt. Für die veralteten Sicherungsdateien wird dann auf der Grundlage der Beibehaltungsdauer der Datei von der Anwendung **sqllogship** ein Cleanup ausgeführt. Anschließend wird der Verlauf für den Sicherungsvorgang von der Anwendung auf dem primären Server und dem Überwachungsserver protokolliert. Abschließend wird von der Anwendung die Prozedur [sp_cleanup_log_shipping_history](../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)ausgeführt, sodass auf der Grundlage der Beibehaltungsdauer veraltete Verlaufsinformationen gelöscht werden.  
   
- **-copy** *secondary_id*  
+ **-copy** _secondary_id_  
  Führt einen Kopiervorgang aus, um Sicherungen vom angegebenen sekundären Server für die sekundäre Datenbank bzw. sekundären Datenbanken zu kopieren, deren sekundäre ID durch *secondary_id*angegeben ist. Sie können diese ID abrufen, indem Sie sie aus der [log_shipping_secondary](../relational-databases/system-tables/log-shipping-secondary-transact-sql.md) -Systemtabelle auswählen oder die gespeicherte Prozedur [sp_help_log_shipping_secondary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md) verwenden.  
   
  Bei dem Vorgang werden die Sicherungsdateien aus dem Sicherungsverzeichnis in das Zielverzeichnis kopiert. Dann wird der Verlauf für den Kopiervorgang von der Anwendung **sqllogship** auf dem sekundären Server und dem Überwachungsserver protokolliert.  
   
- **-restore** *secondary_id*  
+ **-restore** _secondary_id_  
  Führt auf dem angegebenen sekundären Server einen Wiederherstellungsvorgang für die sekundäre Datenbank bzw. sekundären Datenbanken aus, deren sekundäre ID durch *secondary_id*angegeben ist. Sie können diese ID mithilfe der gespeicherten Prozedur **sp_help_log_shipping_secondary_database** abrufen.  
   
  Alle Sicherungsdateien im Zielverzeichnis, die nach dem letzten Wiederherstellungspunkt erstellt wurden, werden in der sekundären Datenbank bzw. in den sekundären Datenbanken wiederhergestellt. Für die veralteten Sicherungsdateien wird dann auf der Grundlage der Beibehaltungsdauer der Datei von der Anwendung **sqllogship** ein Cleanup ausgeführt. Anschließend wird der Verlauf für den Wiederherstellungsvorgang von der Anwendung auf dem sekundären Server und dem Überwachungsserver protokolliert. Abschließend wird von der Anwendung die Prozedur **sp_cleanup_log_shipping_history**ausgeführt, sodass auf der Grundlage der Beibehaltungsdauer veraltete Verlaufsinformationen gelöscht werden.  
   
- **-verboselevel** *level*  
+ **-verboselevel** _level_  
  Gibt die Ebene der dem Protokollversandverlauf hinzugefügten Meldungen an. *level* entspricht einer der folgenden ganzen Zahlen:  
   
 |level|und Beschreibung|  
@@ -63,10 +63,10 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |**3**|Ausgabe von Informationsmeldungen, Warnungen und Fehlerbehandlungsmeldungen. Dies ist der Standardwert.|  
 |4|Ausgabe aller Debug- und Ablaufverfolgungsmeldungen|  
   
- **-logintimeout** *timeout_value*  
+ **-logintimeout** _timeout_value_  
  Gibt die für das Anmelden an der Serverinstanz vorgesehene Zeit an, bevor für den Versuch ein Timeout auftritt. Der Standardwert ist 15 Sekunden. *timeout_value* hat den Typ **int**_._  
   
- **-querytimeout** *timeout_value*  
+ **-querytimeout** _timeout_value_  
  Gibt die für das Starten des angegebenen Vorgangs vorgesehene Zeit an, bevor für den Versuch ein Timeout auftritt. Der Standard ist kein Timeout. *timeout_value* hat den Typ **int**_._  
   
 ## <a name="remarks"></a>Remarks  
@@ -88,7 +88,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 > [!NOTE]  
 >  Um die Pfade der Sicherungs- und Kopierverzeichnisse zu ermitteln, können Sie die gespeicherte Prozedur **sp_help_log_shipping_secondary_database** ausführen oder die **log_shipping_secondary-Tabelle** in **msdb** anzeigen. Der Pfad des Sicherungsverzeichnisses und des Zielverzeichnisses befindet sich in der **backup_source_directory** -Spalte bzw. in der **backup_destination_directory** -Spalte.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Informationen zum Protokollversand &#40;SQL Server&#41;](../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [log_shipping_primary_databases &#40;Transact-SQL&#41;](../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)   
  [log_shipping_secondary &#40;Transact-SQL&#41;](../relational-databases/system-tables/log-shipping-secondary-transact-sql.md)   
