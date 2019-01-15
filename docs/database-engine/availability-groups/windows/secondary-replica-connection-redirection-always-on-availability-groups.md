@@ -1,7 +1,7 @@
 ---
 title: Umleitung von Lese-/Schreib-Verbindungen vom sekundären zum primären Replikat in SQL Server (Always On-Verfügbarkeitsgruppen) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/09/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -18,14 +18,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a811fdb21d6c0c1d702c067f255ece3c2b183b9c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: e64768dcfaf4342c3ea52f1b01c29940fb1c8cf0
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600526"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206306"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Umleitung von Lese-/Schreibverbindungen vom sekundären zum primären Replikat (Always On-Verfügbarkeitsgruppen)
+
 [!INCLUDE[appliesto](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 In [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] CTP 2.0 wird eine *Umleitung von Lese-/Schreibverbindungen vom sekundären zum primären Replikat* für Always On-Verfügbarkeitsgruppen eingeführt. Die Umleitung von Lese-/Schreibverbindungen ist auf jeder Betriebssystemplattform verfügbar. Durch dieses Feature können Clientanwendungsverbindungen zum primären Replikat weitergeleitet werden, unabhängig davon, ob der Zielserver in der Verbindungszeichenfolge angegeben ist. 
@@ -53,8 +54,8 @@ Um die Umleitung von Lese-/Schreibverbindungen zu konfigurieren, legen Sie beim 
 
 In [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] wurde `READ_WRITE_ROUTING_URL` zur `<add_replica_option>`-Spezifikation hinzugefügt. Weitere Informationen finden Sie in den folgenden Artikeln: 
 
-* [CREATE AVAILABILITY GROUP](../../../t-sql\statements\create-availability-group-transact-sql.md)
-* [ALTER AVAILABILITY GROUP](../../../t-sql\statements\alter-availability-group-transact-sql.md)
+* [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)
+* [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)
 
 
 ### <a name="primaryrolereadwriteroutingurl-not-set-default"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) nicht festgelegt (Standardeinstellung) 
@@ -156,7 +157,8 @@ Im folgenden Diagramm wurde für das primäre Replikat ein manuelles Failover zu
 
 Wenn die in der Verbindungszeichenfolge angegebene SQL Server-Instanz nicht verfügbar ist (ausgefallen ist), kann keine Verbindung hergestellt werden, unabhängig davon, welche Rolle das Replikat auf dem Zielserver innehat. Um längere Ausfallzeiten für Anwendungen zu verhindert, konfigurieren Sie einen alternativen `FailoverPartner` in der Verbindungszeichenfolge. Die Anwendung muss eine Wiederholungslogik implementieren, um die Verarbeitung sicherzustellen, falls sowohl das primäre als auch das sekundäre Replikat während des tatsächlichen Failovers nicht online sind. Weitere Informationen zu Verbindungszeichenfolgen finden Sie unter [SqlConnection.ConnectionString-Eigenschaft](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx).
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen
+
 [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  
 [Informationen zum Clientverbindungszugriff auf Verfügbarkeitsreplikate (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   

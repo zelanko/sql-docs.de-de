@@ -22,12 +22,12 @@ ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6123d5e5b5944af3a3495e74541a454a035e91bb
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: fbc0773b08ea682a9bc8e4803572b9ceae3d28d3
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695218"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256175"
 ---
 # <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "51695218"
   Deklariert mindestens einen XML-Namespace.  
   
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -84,7 +84,7 @@ DEFAULT <xml_namespace_uri>
   
 -   Das XML-Namespacepräfix `xmlns` kann nicht deklariert werden.  
   
--   Das XML-Namespacepräfix `xml` kann nur mit dem URI `'https://www.w3.org/XML/1998/namespace'` des Namespaces überschrieben werden, und dieser URI kann keinem anderen Präfix zugeordnet werden.  
+-   Das XML-Namespacepräfix `xml` kann nur mit dem URI `'http://www.w3.org/XML/1998/namespace'` des Namespaces überschrieben werden, und dieser URI kann keinem anderen Präfix zugeordnet werden.  
   
 -   Das XML-Namespacepräfix `xsi` kann nicht erneut deklariert werden, wenn die ELEMENTS XSINIL-Direktive für die Abfrage verwendet wird.  
   
@@ -101,7 +101,7 @@ DEFAULT <xml_namespace_uri>
 ## <a name="examples"></a>Beispiele  
  Beispiele finden Sie unter [Hinzufügen von Namespaces zu Abfragen mit WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [XQuery-Sprachreferenz &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  
   
   

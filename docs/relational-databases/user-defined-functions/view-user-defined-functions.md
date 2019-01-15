@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7bce0be6e849dc2e374ca8af1025a5da386b27a2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5a6f4b6283c6e1a29f273eae5c607478166535af
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533582"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256025"
 ---
 # <a name="view-user-defined-functions"></a>Anzeigen benutzerdefinierter Funktionen
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52533582"
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Abrufen von Informationen zu einer Funktion mit:**  
   
@@ -53,7 +53,7 @@ ms.locfileid: "52533582"
 ####  <a name="Permissions"></a> Berechtigungen  
  Das Anzeigen aller Abhängigkeiten einer Funktion mithilfe von **sys.sql_expression_dependencies** erfordert die VIEW DEFINITION-Berechtigung für die Datenbank und die SELECT-Berechtigung für **sys.sql_expression_dependencies** für die Datenbank. Systemobjektdefinitionen, wie die in OBJECT_DEFINITION zurückgegebenen Definitionen, sind öffentlich sichtbar.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-show-a-user-defined-functions-properties"></a>So zeigen Sie die Eigenschaften einer benutzerdefinierten Funktion an  
   
@@ -71,7 +71,7 @@ ms.locfileid: "52533582"
   
 4.  Klicken Sie mit der rechten Maustaste auf die Funktion, deren Eigenschaften Sie anzeigen möchten, und wählen Sie **Eigenschaften**aus.  
   
-     Die folgenden Eigenschaften werden im Dialogfeld **Funktionseigenschaften >** *Funktionsname* angezeigt.  
+     Die folgenden Eigenschaften werden im Dialogfeld **Funktionseigenschaften >** _Funktionsname_ angezeigt.  
   
      **Datenbank**  
      Name der Datenbank, die diese Funktion enthält.  

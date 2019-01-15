@@ -22,12 +22,12 @@ ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b9d8b702172a66918bd5fe6a101ddf07b05f6484
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7c7c3b925b018ea7f212693b5de02fb43b425bc4
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677889"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256965"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>Hinzufügen von Namespaces zu Abfragen mit WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ FOR XML RAW, ELEMENTS XSINIL
  Dies ist das Ergebnis:  
   
 ```  
-<row xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xmlns:ns1="uri">  
+<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns1="uri">  
   <ns1:ProductID>316</ns1:ProductID>  
   <ns1:Name>Blade</ns1:Name>  
   <ns1:Color xsi:nil="true" />  
@@ -181,7 +181,7 @@ FOR XML PATH('sql:root')
 </sql:root>  
 ```  
   
- Nur das xml-Namespacepräfix kann verwendet werden ohne explizit in WITH XMLNAMESPACES definiert zu sein, was die folgende Abfrage im PATH-Modus zeigt. Wenn das Präfix deklariert wird, muss es außerdem mit dem Namespace https://www.w3.org/XML/1998/namespace verbunden werden. Die in der SELECT-Klausel festgelegten Namen verweisen auf das xml-Namespacepräfix, das nicht explizit mit WITH XMLNAMESPACES definiert ist.  
+ Nur das xml-Namespacepräfix kann verwendet werden ohne explizit in WITH XMLNAMESPACES definiert zu sein, was die folgende Abfrage im PATH-Modus zeigt. Wenn das Präfix deklariert wird, muss es außerdem mit dem Namespace http://www.w3.org/XML/1998/namespace verbunden werden. Die in der SELECT-Klausel festgelegten Namen verweisen auf das xml-Namespacepräfix, das nicht explizit mit WITH XMLNAMESPACES definiert ist.  
   
 ```  
 SELECT 'en'    as "English/@xml:lang",  
@@ -244,7 +244,7 @@ Go
   
  Eine explizite Deklaration im XQuery-Prolog überschreibt das in der WITH-Klausel definierte Namespacepräfix und den Standardelementnamespace.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [XML-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md)   
  [XQuery-Sprachreferenz &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)   
  [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md)   

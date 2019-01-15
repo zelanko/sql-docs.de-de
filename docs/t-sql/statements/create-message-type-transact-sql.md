@@ -29,19 +29,19 @@ ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 83210f76165d18b5e3e4225eccb3673edf0417b5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5c19e21af440dd7f3293b706d38498e102c76248
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700538"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257085"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Erstellt einen neuen Nachrichtentyp. Mit einem Nachrichtentyp wird der Name einer Nachricht und die Überprüfung festgelegt, die [!INCLUDE[ssSB](../../includes/sssb-md.md)] für Nachrichten mit diesem Namen ausführt. Auf beiden Seiten einer Konversation müssen dieselben Nachrichtentypen definiert sein.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -109,7 +109,7 @@ CREATE MESSAGE TYPE
 ```  
 CREATE XML SCHEMA COLLECTION ExpenseReportSchema AS  
 N'<?xml version="1.0" encoding="UTF-16" ?>  
-  <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
      targetNamespace="https://Adventure-Works.com/schemas/expenseReport"  
      xmlns:expense="https://Adventure-Works.com/schemas/expenseReport"  
      elementFormDefault="qualified"  
@@ -160,7 +160,7 @@ CREATE MESSAGE TYPE
     VALIDATION = NONE ;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [ALTER MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-message-type-transact-sql.md)   
  [DROP MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

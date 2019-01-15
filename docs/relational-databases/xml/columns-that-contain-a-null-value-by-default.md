@@ -13,12 +13,12 @@ ms.assetid: 9381c07f-6887-4a62-9730-32661f9aa87c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5d2b56355b21043f37e8d5991a453cc038064dce
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a006fdb96464b855a07e14c750ab8380be30a0a7
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674979"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256805"
 ---
 # <a name="columns-that-contain-a-null-value-by-default"></a>Spalten, die standardmäßig einen NULL-Wert enthalten
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ FOR XML PATH, ELEMENTS XSINIL
  Im Folgenden wird das Ergebnis gezeigt. Beachten Sie, dass das <`Middle`>-Element abwesend sein wird, wenn XSINIL nicht angegeben wird.  
   
 ```  
-<row xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" EmpID="1">  
+<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  
     <Middle xsi:nil="true" />  
@@ -47,7 +47,7 @@ FOR XML PATH, ELEMENTS XSINIL
 </row>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden des PATH-Modus mit FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   

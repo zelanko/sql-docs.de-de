@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51485f1d1bbe120b42371c9d04a9d4576ac8d0d4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ba432d722bcd6f9df6c797d361a53e0b6dc6dff9
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391543"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254959"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Nicht unterstützte SQL Server-Funktionen für In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,8 +54,8 @@ Datenbankübergreifende Transaktionen werden bis auf einige Ausnahmen nicht unte
 
 |Datenbanken|Zulässig|und Beschreibung|  
 |---------------|-------------|-----------------|  
-| Benutzerdatenbanken, **Modell**- und **msdb**-Datenbanken | nein | In den meisten Fällen werden datenbankübergreifende Abfragen und Transaktionen *nicht* unterstützt.<br /><br />Ein Abfrage kann nicht auf andere Datenbanken zugreifen, wenn die Abfrage eine speicheroptimierte Tabelle oder eine nativ kompilierte gespeicherte Prozedur verwendet. Diese Einschränkung gilt für Transaktionen und Abfragen.<br /><br />Ausgenommen sind die Systemdatenbanken **tempdb** und **master**. Hier steht die **master**-Datenbank nur für den schreibgeschützten Zugriff zur Verfügung. |
-| Datenbank **Resource**, **tempdb** | Benutzerkontensteuerung | Bei einer Transaktion, die speicherinterne OLTP-Objekte betrifft, können die Systemdatenbanken **Resource** und **tempdb** ohne zusätzliche Einschränkungen verwendet werden.
+| Benutzerdatenbanken, **Modell**- und **msdb**-Datenbanken | Nein | In den meisten Fällen werden datenbankübergreifende Abfragen und Transaktionen *nicht* unterstützt.<br /><br />Ein Abfrage kann nicht auf andere Datenbanken zugreifen, wenn die Abfrage eine speicheroptimierte Tabelle oder eine nativ kompilierte gespeicherte Prozedur verwendet. Diese Einschränkung gilt für Transaktionen und Abfragen.<br /><br />Ausgenommen sind die Systemdatenbanken **tempdb** und **master**. Hier steht die **master**-Datenbank nur für den schreibgeschützten Zugriff zur Verfügung. |
+| Datenbank **Resource**, **tempdb** | Ja | Bei einer Transaktion, die speicherinterne OLTP-Objekte betrifft, können die Systemdatenbanken **Resource** und **tempdb** ohne zusätzliche Einschränkungen verwendet werden.
 
 
 ## <a name="scenarios-not-supported"></a>Nicht unterstützte Szenarien  
@@ -64,8 +64,8 @@ Datenbankübergreifende Transaktionen werden bis auf einige Ausnahmen nicht unte
   
 - Keysetgesteuerte und dynamische Cursor für Abfragen, die auf speicheroptimierte Tabellen zugreifen. Diese Cursor werden auf "static" und "read-only" heruntergestuft.  
   
-- Das Verwenden von **MERGE INTO** *ziel*, wobei *ziel* eine speicheroptimierte Tabelle ist, wird nicht unterstützt.
-    - **MERGE USING** *quelle* wird für speicheroptimierte Tabellen unterstützt.  
+- Das Verwenden von **MERGE INTO** _ziel_, wobei *ziel* eine speicheroptimierte Tabelle ist, wird nicht unterstützt.
+    - **MERGE USING** _quelle_ wird für speicheroptimierte Tabellen unterstützt.  
   
 - Der Datentyp ROWVERSION (TIMESTAMP) wird nicht unterstützt. Weitere Informationen finden Sie unter [FROM &#40;Transact-SQL &#41;](../../t-sql/queries/from-transact-sql.md).
   
@@ -84,6 +84,6 @@ Datenbankübergreifende Transaktionen werden bis auf einige Ausnahmen nicht unte
     - Die Authentifizierung eigenständiger Datenbanken wird unterstützt. Allerdings werden alle speicherinternen OLTP-Objekte in den **dm_db_uncontained_entities** der dynamischen Verwaltungssicht als „breaking containment“ gekennzeichnet.
 
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 
 - [SQL Server-Unterstützung für In-Memory OLTP](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)

@@ -1,7 +1,7 @@
 ---
 title: 'Columnstore-Indizes: Abfrageleistung | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 12/01/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -12,14 +12,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfe14cc4f52fe0606fd68613736d91fd48bf87f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dddb1ee5aaeab9a741cfe0a09bea2a93b786c57e
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637140"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255279"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Columnstore-Indizes: Abfrageleistung
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Empfehlungen zum Erreichen der sehr schnellen Abfrageleistung, die Columnstore-Indizes vom Design her bereitstellen können sollten.    
@@ -141,11 +142,11 @@ FROM FactResellerSalesXL_CCI
 ```    
     
 ### <a name="string-predicate-pushdown"></a>Zeichenfolgenprädikatweitergabe    
-Beim Entwurf eines Data Warehouse-Schemas besteht die empfohlene Schemamodellierung darin, ein Sternschema oder Schneeflockenschema zu verwenden, das aus einer oder mehreren Faktentabellen und vielen Dimensionstabellen besteht. Die [Faktentabelle](https://en.wikipedia.org/wiki/Fact_table) speichert die Unternehmensmessungen oder -transaktionen, und die [Dimensionstabelle](https://en.wikipedia.org/wiki/Dimension_table) speichert die Dimensionen, anhand derer die Fakten analysiert werden müssen.    
+Beim Entwurf eines Data Warehouse-Schemas besteht die empfohlene Schemamodellierung darin, ein Sternschema oder Schneeflockenschema zu verwenden, das aus einer oder mehreren Faktentabellen und vielen Dimensionstabellen besteht. Die [Faktentabelle](https://wikipedia.org/wiki/Fact_table) speichert die Unternehmensmessungen oder -transaktionen, und die [Dimensionstabelle](https://wikipedia.org/wiki/Dimension_table) speichert die Dimensionen, anhand derer die Fakten analysiert werden müssen.    
     
 Bei einem Fakt kann es sich beispielsweise um einen Datensatz für den Verkauf eines bestimmten Produkts in einer bestimmten Region handeln, während die Dimension eine Reihe von Regionen, Produkten usw. darstellt. Die Fakten- und Dimensionstabellen sind über eine Primär-/Fremdschlüsselbeziehung miteinander verbunden. Die am häufigsten verwendeten Abfragen verbinden eine oder mehrere Dimensionstabellen mit der Faktentabelle.    
     
-Betrachten Sie z.B. eine Dimensionstabelle namens `Products`. Ein typischer Primärschlüssel wäre `ProductCode`, der in der Regel als Zeichenfolgendatentyp dargestellt wird. Für die Abfrageleistung hat es sich bewährt, einen Ersatzschlüssel zu erstellen (in der Regel eine Spalte mit ganzen Zahlen), um aus der Faktentabelle auf die Zeile in der Dimensionstabelle zu verweisen.    
+Betrachten Sie z.B. eine Dimensionstabelle namens `Products`. Ein typischer Primärschlüssel wäre `ProductCode`, der in der Regel als Zeichenfolgendatentyp dargestellt wird. Für die Abfrageleistung hat es sich bewährt, einen Ersatzschlüssel zu erstellen (in der Regel eine Spalte mit ganzen Zahlen), um aus der Faktentabelle auf die Zeile in der Dimensionstabelle zu verweisen.    
     
 Der Columnstore-Index führt die Analyseabfragen mit Joins/Prädikaten mit Schlüsseln auf numerischer Basis bzw. Ganzzahlbasis sehr effizient aus. Bei vielen Kundenworkloads wurden jedoch zeichenfolgenbasierte Spalten verwendet, die Fakt-/Dimensionstabellen verknüpfen. Dies führte dazu, dass die Abfrageleistung mit Columnstore-Indizes nicht gut war. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] verbessert die Leistung von Analyseabfragen mit zeichenfolgenbasierten Spalten erheblich, indem die Prädikate mit Zeichenfolgenspalten an den SCAN-Knoten weitergegeben werden.    
     
@@ -158,7 +159,7 @@ Bei der Zeichenfolgenprädikatweitergabe berechnet die Abfrageausführung das Pr
     -   Keine Weitergabe von Zeichenfolgenprädikaten, wenn die Einträge im Wörterbuch eine Größe von 64 KB überschreiten.    
     -   Ausdrücke, die als NULL-Werte ausgewertet werden, werden nicht unterstützt.    
     
-## <a name="see-also"></a>Weitere Informationen finden Sie unter    
+## <a name="see-also"></a>Weitere Informationen    
  [Columnstore Indexes Design Guidance (Leitfaden zum Entwerfen von Columnstore-Indizes)](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   
  [Columnstore Indexes Data Loading Guidance (Leitfaden zum Laden von Daten in Columnstore-Indizes)](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Erste Schritte mit Columnstore für operative Echtzeitanalyse](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)     

@@ -23,19 +23,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca0ff4ec4c0e4e390f152feac3f3e1359061003d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4252f3511baadc5536823323c026811ee53dd201
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799248"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257175"
 ---
 # <a name="typename-transact-sql"></a>TYPE_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt den nicht qualifizierten Typnamen einer angegebenen Typ-ID zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -58,7 +58,7 @@ TYPE_NAME ( type_id )
 ## <a name="remarks"></a>Remarks  
  TYPE_NAME gibt NULL zurück, wenn *type_id* ungültig ist oder der Aufrufer nicht über die erforderlichen Berechtigungen zum Verweisen auf den Typ verfügt.  
   
- TYPE_NAME funktioniert sowohl für Systemdatentypen als auch für benutzerdefinierte Datentypen. Der Typ kann in einem beliebigen Schema enthalten sein, aber ein nicht qualifizierter Typname wird immer zurückgegeben. Dies bedeutet, dass der Name nicht über das Präfix *schema***.** verfügt.  
+ TYPE_NAME funktioniert sowohl für Systemdatentypen als auch für benutzerdefinierte Datentypen. Der Typ kann in einem beliebigen Schema enthalten sein, aber ein nicht qualifizierter Typname wird immer zurückgegeben. Dies bedeutet, dass der Name nicht über das _schema_**.**-Präfix verfügt .  
   
  Systemfunktionen können in der SELECT-Liste, in einer WHERE-Klausel und überall dort verwendet werden, wo ein Ausdruck zulässig ist. Weitere Informationen finden Sie unter [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md) und [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md).  
   
@@ -107,7 +107,7 @@ SELECT * FROM sys.types;
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [TYPE_ID &#40;Transact-SQL&#41;](../../t-sql/functions/type-id-transact-sql.md)   
  [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)   
  [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   
