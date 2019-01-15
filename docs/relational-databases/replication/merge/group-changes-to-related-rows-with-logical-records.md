@@ -15,12 +15,12 @@ ms.assetid: ad76799c-4486-4b98-9705-005433041321
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8c76fe140a6cfd6e8d4cc2f83e3c0f3143a15708
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a4bebb60c7d40ab7d1a98bbb6c8b28ff64ea7b09
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834118"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134270"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "47834118"
   
 -   Eine benutzerdefinierte Konfliktlösung mit Geschäftslogikhandlern oder benutzerdefinierte Konfliktlöser werden nicht für Artikel unterstützt, die in einen logischen Datensatz eingeschlossen sind.  
   
--   Wenn logische Datensätze in einer Veröffentlichung verwendet werden, die parametrisierte Filter enthält, müssen Sie jeden Abonnenten mit einer Momentaufnahme für dessen Partition initialisieren. Falls Sie einen Abonnenten mit einer anderen Methode initialisieren, schlägt der Merge-Agent fehl. Weitere Informationen finden Sie unter [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+-   Wenn logische Datensätze in einer Veröffentlichung verwendet werden, die parametrisierte Filter enthält, müssen Sie jeden Abonnenten mit einer Momentaufnahme für dessen Partition initialisieren. Falls Sie einen Abonnenten mit einer anderen Methode initialisieren, schlägt der Merge-Agent fehl. Weitere Informationen finden Sie unter [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 -   Konflikte, die logische Datensätze einschließen, werden im Konflikt-Viewer nicht angezeigt. Mit den gespeicherten Replikationsprozeduren können Informationen zu diesen Konflikten angezeigt werden. Weitere Informationen finden Sie unter [Anzeigen von Konfliktinformationen zu Mergeveröffentlichungen &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)  
   
@@ -142,7 +142,7 @@ ms.locfileid: "47834118"
   
  Werden logische Datensätzen verwendet, muss der Merge-Agent die Änderungen für jeden vollständigen logischen Datensatz auf einmal verarbeiten. Das wirkt sich auf die Dauer aus, die der Merge-Agent zum Replizieren der Zeilen benötigt. Darüber hinaus können sich die Sperranforderungen erhöhen, da der Agent eine separate Transaktion für jeden logischen Datensatz öffnet.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Artikeloptionen für die Mergereplikation](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
   
   

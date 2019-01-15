@@ -21,12 +21,12 @@ ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac4d217245516edf109c137897d5e7cee24b172b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 864edbeff7ce15e4cae3d2994ffa9ba2fd05f8ce
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404385"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133350"
 ---
 # <a name="filter-published-data"></a>Filtern von veröffentlichten Daten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,9 +131,9 @@ ms.locfileid: "52404385"
   
 -   Bei der Transaktionsreplikation können Sie eine indizierte Sicht als Sicht oder als Tabelle replizieren. Wenn Sie die Sicht als Tabelle replizieren, können Sie keine Spalten aus der Tabelle filtern.  
   
- Zeilenfilter sind nicht für den datenbankübergreifenden Einsatz konzipiert. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] beschränkt die Ausführung von **sp_replcmds** (für Filter) mit Absicht auf den Datenbankbesitzer (**dbo**). Der **dbo** besitzt keine datenbankübergreifenden Berechtigungen. Aufgrund der CDC (Change Data Capture)-Erweiterung in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] the **sp_replcmds** -Logik die Änderungsnachverfolgungtabellen mit Informationen auf, auf die der Benutzer zu Abfragezwecken zurückgreifen kann. Aus Sicherheitsgründen schränkt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die Ausführung dieser Logik ein, damit dieser Ausführungspfad nicht von einem böswilligen **Datenbankbesitzer** missbräuchlich verwendet werden kann. Beispielsweise könnte ein böswilliger **dbo** Trigger für CDC-Tabellen einschleusen, die dann ausgeführt werden, wenn der Benutzer **sp_replcmds**aufruft (in diesem Fall der logreader-Agent).  Wenn das Konto, unter dem der Agent ausgeführt wird, über höhere Berechtigungen verfügt, könnte der böswillige **dbo** seine Berechtigungen ausweiten.  
+ Zeilenfilter sind nicht für den datenbankübergreifenden Einsatz konzipiert. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] beschränkt die Ausführung von **sp_replcmds** (für Filter) mit Absicht auf den Datenbankbesitzer (**dbo**). Der **dbo** besitzt keine datenbankübergreifenden Berechtigungen. Aufgrund der CDC (Change Data Capture)-Erweiterung in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] the **sp_replcmds** -Logik die Änderungsnachverfolgungtabellen mit Informationen auf, auf die der Benutzer zu Abfragezwecken zurückgreifen kann. Aus Sicherheitsgründen schränkt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die Ausführung dieser Logik ein, damit dieser Ausführungspfad nicht von einem böswilligen **dbo** missbräuchlich verwendet werden kann. Beispielsweise könnte ein böswilliger **dbo** Trigger für CDC-Tabellen einschleusen, die dann ausgeführt werden, wenn der Benutzer **sp_replcmds**aufruft (in diesem Fall der logreader-Agent).  Wenn das Konto, unter dem der Agent ausgeführt wird, über höhere Berechtigungen verfügt, könnte der böswillige **dbo** seine Berechtigungen ausweiten.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Veröffentlichen von Daten und Datenbankobjekten](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

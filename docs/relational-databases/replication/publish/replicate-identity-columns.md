@@ -18,12 +18,12 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7a11a7160f5ba6128358531c15bf24e304fdbaad
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 091ca8ad9fa80876936dcfdc2c7ed0ca687c6aea
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522348"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124343"
 ---
 # <a name="replicate-identity-columns"></a>Replizieren von Identitätsspalten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "52522348"
  So könnten Sie z. B. für **@pub_identity_range**10.000, für **@identity_range** 1.000 (unter der Annahme einer geringeren Anzahl von Updates auf dem Abonnenten) und für **@threshold**. Nach 800 Einfügungen auf einem Abonnenten (80 Prozent von 1.000) wird einem Abonnenten ein neuer Bereich zugewiesen. Nach 8.000 Einfügungen auf dem Verleger wird dem Verleger ein neuer Bereich zugewiesen. Beim Zuweisen eines neuen Bereichs ergibt sich jedoch eine Lücke in den Identitätsbereichswerten in der Tabelle. Durch Angabe eines höheren Schwellenwerts fallen diese Lücken zwar kleiner aus, das System ist dann aber auch weniger fehlertolerant, d. h., wenn der Verteilungs-Agent aus irgendeinem Grund nicht ausgeführt werden kann, gehen einem Abonnenten möglicherweise schneller die Identitäten aus.  
   
 ## <a name="assigning-ranges-for-manual-identity-range-management"></a>Zuweisen von Bereichen für die manuelle Identitätsbereichsverwaltung  
- Wenn Sie die manuelle Identitätsbereichsverwaltung angeben, müssen Sie sicherstellen, dass der Verleger und alle Abonnenten verschiedene Identitätsbereiche verwenden. Stellen Sie sich z. B. eine Tabelle auf dem Verleger mit einer als `IDENTITY(1,1)`definierten Identitätsspalte vor: Die Identitätsspalte beginnt mit 1 und erhöht sich bei jeder neu eingefügten Zeile um 1. Wenn die Tabelle auf dem Verleger 5.000 Zeilen besitzt und Sie für den weiteren Entwicklungsverlauf der Anwendung eine gewisse Vergrößerung der Tabelle erwarten, könnte der Verleger den Bereich 1-10.000 verwenden. Bei Vorhandensein zweier Abonnenten könnte der Abonnent A den Bereich 10.001 bis 20.000 und der Abonnent B den Bereich 20.001 bis 30.000 verwenden.  
+ Wenn Sie die manuelle Identitätsbereichsverwaltung angeben, müssen Sie sicherstellen, dass der Verleger und alle Abonnenten verschiedene Identitätsbereiche verwenden. Stellen Sie sich z. B. eine Tabelle auf dem Verleger mit einer als `IDENTITY(1,1)`definierten Identitätsspalte vor: Die Identitätsspalte beginnt mit 1 und erhöht sich bei jeder neu eingefügten Zeile um 1. Wenn die Tabelle auf dem Verleger 5.000 Zeilen besitzt und Sie für den weiteren Entwicklungsverlauf der Anwendung eine gewisse Vergrößerung der Tabelle erwarten, könnte der Verleger den Bereich 1-10.000 verwenden. Bei Vorhandensein von zwei Abonnenten könnte der Abonnent A den Bereich 10.001-20.000 und der Abonnent B den Bereich 20.001-30.000 verwenden.  
   
  Nachdem ein Abonnent mit einer Momentaufnahme oder auf andere Weise initialisiert wurde, führen Sie DBCC CHECKIDENT aus, um dem Abonnenten einen Anfangspunkt für dessen Identitätsbereich zuzuweisen. Auf Abonnent A würden Sie dazu z. B. `DBCC CHECKIDENT('<TableName>','reseed',10001)`ausführen. Auf Abonnent B ist dann `CHECKIDENT('<TableName>','reseed',20001)`auszuführen.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "52522348"
     > [!NOTE]  
     >  Wenn für den Wert in der Identitätsspalte festgelegt wurde, dass er verringert statt vergrößert werden soll, notieren Sie sich den niedrigsten gefundenen Wert, und legen Sie diesen Wert dann als neuen Ausgangswert fest.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [BACKUP &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-transact-sql.md)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
  [IDENT_CURRENT &#40;Transact-SQL&#41;](../../../t-sql/functions/ident-current-transact-sql.md)   

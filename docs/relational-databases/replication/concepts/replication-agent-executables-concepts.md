@@ -17,12 +17,12 @@ ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ead289095f53693a7e6a487fa2a07a7c94df6219
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45280a18af70578117898f70458ed9d144c61c3d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791818"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131320"
 ---
 # <a name="replication-agent-executables-concepts"></a>Ausführbare Konzepte für die Programmierung von Replikations-Agents
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47791818"
  Beim Aufrufen von Replikations-Agents können Sie Leistungsprofile verwenden, um einen definierten Satz von Parametern automatisch an die ausführbare Datei des Agents zu übergeben. Weitere Informationen finden Sie unter [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
 ## <a name="examples"></a>Beispiele  
- Die folgenden Beispiele zeigen, wie Replikations-Agents von der Eingabeaufforderung aus aufgerufen werden. Replikations-Agents können auch mit Replikationsverwaltungsobjekten (Replication Management Objects, RMO) aufgerufen werden. Weitere Informationen finden Sie unter [Synchronisieren von Abonnements](../../../relational-databases/replication/synchronize-subscriptions-replication.md).  
+ Die folgenden Beispiele zeigen, wie Replikations-Agents von der Eingabeaufforderung aus aufgerufen werden. Replikations-Agents können auch mit Replikationsverwaltungsobjekten (Replication Management Objects, RMO) aufgerufen werden. Weitere Informationen finden Sie unter [Synchronisieren von Abonnements](../../../relational-databases/replication/synchronize-data.md).  
   
 > [!NOTE]  
 >  Zeilenumbrüche wurden in diesen Beispielen hinzugefügt, um die Lesbarkeit zu verbessern. In einer Batchdatei müssen Befehle in einer einzelnen Zeile stehen.  

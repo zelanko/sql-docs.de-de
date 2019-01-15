@@ -11,17 +11,17 @@ ms.assetid: de310bac-2ddc-4ef9-8783-43dcb02a94f1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd75c7b18ef53d871a866024c96fbb7a553ee727
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 53bd2104d0651734d1c65c9800859254f8345b1a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648848"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127040"
 ---
 # <a name="catalogdenypermission-ssisdb-database"></a>catalog.deny_permission (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Verweigert eine Berechtigung für ein sicherungsfähiges Objekt im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog.  
+  Verweigert eine Berechtigung für ein sicherungsfähiges Objekt im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,7 +34,7 @@ catalog.deny_permission [ @object_type = ] object_type
   
 ## <a name="arguments"></a>Argumente  
  [ @object_type = ] *object_type*  
- Der Typ des sicherungsfähigen Objekts. Die Typen von sicherungsfähigen Objekten umfassen Ordner (`1`), Projekt (`2`), Umgebung (`3`) und Vorgang (`4`). Das Argument *object_type* ist vom Typ **smallint***.*  
+ Der Typ des sicherungsfähigen Objekts. Die Typen von sicherungsfähigen Objekten umfassen Ordner (`1`), Projekt (`2`), Umgebung (`3`) und Vorgang (`4`). Das Argument *object_type* ist vom Typ **smallint**_._  
   
  [ @object_id = ] *object_id*  
  Der eindeutige Bezeichner (ID) oder der Primärschlüssel des sicherungsfähigen Objekts. Das Argument *object_id* ist vom Typ **bigint**.  

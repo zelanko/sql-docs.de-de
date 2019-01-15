@@ -13,12 +13,12 @@ ms.assetid: 66b44b6c-10a5-4e3f-a97b-7568609c88ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce595fc0032ef8c1f498993f0953aa90117d73ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be115f4a0dad8cd7cfacca89a5ff117734087b28
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737378"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134910"
 ---
 # <a name="sort-columns"></a>Spalten sortieren
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47737378"
   
 2.  Wählen Sie in der zweiten Zeile des Rasters in der Spalte **Spaltenname** den Eintrag **Verbindungstyp** und dann einen Wert in der Spalte **Sortierreihenfolge** aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Status**  
  Der Name der Spalte, nach Sie sortieren möchten. Sie können nach einer oder mehreren Spalten sortieren. Nach den Spalten **Aktuelle Durchschnittsleistung** oder **Die derzeit schlechteste Leistung** auf der Registerkarte **Veröffentlichungen** können Sie aufgrund der Art und Weise, in der die Werte in diesen Spalten berechnet werden, nicht sortieren.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "47737378"
  **Auswahl aufheben**  
  Hiermit entfernen Sie alle Zeilen aus dem Sortierungsraster. Wenn Sie eine einzelne Zeile entfernen möchten, wählen Sie die Zeile aus, und drücken Sie die ENTF-TASTE.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Überwachen der Replikation](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Überwachen der Replikation](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

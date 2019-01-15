@@ -42,12 +42,12 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9d1acf8774331ca5e789d9c8d9c50e05a6a3b1e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e0f959c6bc5a34fe2c2a3aec08f87f1e703749cf
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523072"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129010"
 ---
 # <a name="publish-data-and-database-objects"></a>Veröffentlichen von Daten und Datenbankobjekten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "52523072"
 |---------------------|--------------------------------------------------------|-----------------------|  
 |Tabellen|X|X|  
 |Partitionierte Tabellen|X|X|  
-|Gespeicherte Prozeduren: Definition ([!INCLUDE[tsql](../../../includes/tsql-md.md)] und CLR)|X|X|  
+|Gespeicherte Prozeduren – Definition ([!INCLUDE[tsql](../../../includes/tsql-md.md)] und CLR)|X|X|  
 |Gespeicherte Prozeduren – Ausführung ([!INCLUDE[tsql](../../../includes/tsql-md.md)] und CLR)|X|nein|  
 |Sichten|X|X|  
 |Indizierte Sichten|X|X|  
@@ -71,36 +71,22 @@ ms.locfileid: "52523072"
 ## <a name="creating-publications"></a>Erstellen von Veröffentlichungen  
  Beim Erstellen einer Veröffentlichung sind die folgenden Informationen bereitzustellen:  
   
--   Verteiler  
-  
--   Speicherort der Momentaufnahmedateien  
-  
--   Veröffentlichungsdatenbank  
-  
--   Typ der zu erstellenden Veröffentlichung (Momentaufnahmeveröffentlichung, Transaktionsveröffentlichung, Transaktionsveröffentlichung mit aktualisierbaren Abonnements oder Mergeveröffentlichung)  
-  
--   Daten und Datenbankobjekte (Artikel), die in die Veröffentlichung aufgenommen werden sollen  
-  
--   statische Zeilenfilter und Spaltenfilter (alle Veröffentlichungstypen) sowie parametrisierte Zeilenfilter und Joinfilter (Mergeveröffentlichungen)  
-  
--   Zeitplan für den Momentaufnahme-Agent  
-  
--   Die Konten, unter denen die folgenden Agents ausgeführt werden: Momentaufnahme-Agent für alle Veröffentlichungen; Protokolllese-Agent für alle Transaktionsveröffentlichungen; Warteschlangenlese-Agent für Transaktionsveröffentlichungen mit aktualisierbaren Abonnements.  
-  
+-   Verteiler    
+-   Speicherort der Momentaufnahmedateien    
+-   Veröffentlichungsdatenbank    
+-   Typ der zu erstellenden Veröffentlichung (Momentaufnahmeveröffentlichung, Transaktionsveröffentlichung, Transaktionsveröffentlichung mit aktualisierbaren Abonnements oder Mergeveröffentlichung)    
+-   Daten und Datenbankobjekte (Artikel), die in die Veröffentlichung aufgenommen werden sollen   
+-   statische Zeilenfilter und Spaltenfilter (alle Veröffentlichungstypen) sowie parametrisierte Zeilenfilter und Joinfilter (Mergeveröffentlichungen)   
+-   Zeitplan für den Momentaufnahme-Agent    
+-   Die Konten, unter denen die folgenden Agents ausgeführt werden: Momentaufnahme-Agent für alle Veröffentlichungen; Protokolllese-Agent für alle Transaktionsveröffentlichungen; Warteschlangenlese-Agent für Transaktionsveröffentlichungen mit aktualisierbaren Abonnements.    
 -   Name und Beschreibung der Veröffentlichung.  
   
- Informationen zum Arbeiten mit Veröffentlichungen finden Sie in den folgenden Themen:  
-  
--   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
-  
--   [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md)  
-  
--   [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)  
-  
--   [Anzeigen und Ändern von Artikeleigenschaften](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)  
-  
--   [Löschen einer Veröffentlichung](../../../relational-databases/replication/publish/delete-a-publication.md)  
-  
+ Informationen zum Arbeiten mit Veröffentlichungen finden Sie in den folgenden Themen:    
+-   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)    
+-   [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md)    
+-   [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)    
+-   [Anzeigen und Ändern von Artikeleigenschaften](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)    
+-   [Löschen einer Veröffentlichung](../../../relational-databases/replication/publish/delete-a-publication.md)    
 -   [Löschen eines Artikels](../../../relational-databases/replication/publish/delete-an-article.md)  
   
 > [!NOTE]  
@@ -109,12 +95,9 @@ ms.locfileid: "52523072"
 ## <a name="publishing-tables"></a>Veröffentlichen von Tabellen  
  Tabellen sind die Objekte, die am häufigsten veröffentlicht werden. In den folgenden Themen finden Sie weiterführende Informationen zu Fragen im Zusammenhang mit dem Veröffentlichen von Tabellen:  
   
--   [Filtern von veröffentlichten Daten](../../../relational-databases/replication/publish/filter-published-data.md)  
-  
--   [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
-  
--   [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
-  
+-   [Filtern von veröffentlichten Daten](../../../relational-databases/replication/publish/filter-published-data.md)    
+-   [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)
+-   [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)    
 -   [Replizieren von Identitätsspalten](../../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
  Beim Veröffentlichen einer Tabelle für die Replikation können Sie angeben, welche Schemaobjekte auf den Abonnenten kopiert werden sollen, z. B. deklarierte referenzielle Integrität (PRIMARY KEY-Einschränkungen, Referenzeinschränkungen, eindeutige Einschränkungen), Indizes, Benutzer-DML-Trigger (DDL-Trigger können nicht repliziert werden), erweiterte Eigenschaften und Sortierungen. Erweiterte Eigenschaften werden nur in der ersten Synchronisierung zwischen dem Verleger und dem Abonnenten repliziert. Wenn Sie eine erweiterte Eigenschaft nach der ersten Synchronisierung hinzufügen oder ändern, wird die Änderung nicht repliziert.  
@@ -199,7 +182,7 @@ ms.locfileid: "52523072"
   
 -   Für Artikel in Veröffentlichungen, die Zeichenmodus-Momentaufnahmen verwenden (werden für Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten und [!INCLUDE[ssEW](../../../includes/ssew-md.md)] -Abonnenten verwendet): Standardmäßig wird der Besitzer leer gelassen. Als Besitzer wird standardmäßig der Besitzer verwendet, der mit dem vom Verteilungs- oder Merge-Agent zum Herstellen einer Verbindung mit dem Abonnenten verwendeten Konto verknüpft ist.  
   
- Der Objektbesitzer kann im Dialogfeld **Artikeleigenschaften\<***Artikel***>** und über folgende gespeicherte Prozeduren festgelegt werden: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** und **sp_changemergearticle**. Weitere Informationen finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md) und [Anzeigen und Ändern von Artikeleigenschaften](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+ Der Objektbesitzer kann im Dialogfeld **Artikeleigenschaften - \<**_Article_**>** und über folgende gespeicherte Prozeduren festgelegt werden: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle**, und **sp_changemergearticle**. Weitere Informationen finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md) und [Anzeigen und Ändern von Artikeleigenschaften](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>Veröffentlichen von Daten auf Abonnenten, auf denen eine frühere Version von SQL Server ausgeführt wird  
   
@@ -251,7 +234,7 @@ ms.locfileid: "52523072"
   
 -   Die Transaktionsreplikation und die ungefilterte Mergereplikation unterstützen das Veröffentlichen einer Tabelle in mehreren Veröffentlichungen und das anschließende Abonnieren innerhalb einer einzelnen Tabelle in der Abonnementdatenbank (üblicherweise als Rollupszenario bezeichnet). Rollup wird häufig zum Aggregieren von Teilsätzen von Daten aus mehreren Speicherorten in einer Tabelle auf einem zentralen Abonnenten verwendet. Gefilterte Mergeveröffentlichungen unterstützen das Szenario mit einem zentralen Abonnenten nicht. Bei der Mergereplikation wird das Rollup typischerweise über eine einzelne Veröffentlichung mit parametrisierten Zeilenfiltern implementiert. Weitere Informationen zu parametrisierten Zeilenfiltern finden Sie unter [Parametrisierte Zeilenfilter](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
  [Verteilung konfigurieren](../../../relational-databases/replication/configure-distribution.md)   
  [Initialize a Subscription](../../../relational-databases/replication/initialize-a-subscription.md)   

@@ -14,12 +14,12 @@ ms.assetid: 6f8e2831-5c45-4e39-8e51-d37e2813cf3d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 05bbc6f6eaad17fc49f210d20ab78126a68eeb60
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 63b21aec220de42f9bf9fb8cd5fae1f109e501fa
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541979"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129604"
 ---
 # <a name="enable-a-remote-publisher-at-a-distributor-sql-server-management-studio"></a>Aktivieren eines Remoteverlegers auf einem Verteiler (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "52541979"
   
 4.  Geben Sie auf der Seite **Verteilerkennwort** in den Textfeldern **Kennwort** und **Kennwort bestätigen** ein sicheres Kennwort für das **distributor_admin** -Konto an, das die Replikation zum Herstellen der Verbindung zwischen dem Verleger und dem Verteiler verwendet, um administrative Aufgaben auszuführen.  
   
-5.  Klicken Sie auf die Schaltfläche mit den drei Punkten (**…**), um die Einstellungen eines Verlegers anzuzeigen und zu ändern.  
+5.  Um die Einstellungen eines Verlegers anzuzeigen und zu ändern, klicken Sie auf die Schaltfläche mit den drei Punkten (**…**).  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -49,11 +49,11 @@ ms.locfileid: "52541979"
   
 4.  Geben Sie auf der Seite **Verleger** in den Textfeldern **Kennwort** und **Kennwort bestätigen** ein sicheres Kennwort für das **distributor_admin** -Konto an, das die Replikation zum Herstellen der Verbindung zwischen dem Verleger und dem Verteiler verwendet, um administrative Aufgaben auszuführen.  
   
-5.  Klicken Sie auf die Schaltfläche mit den drei Punkten (**…**), um die Einstellungen eines Verlegers anzuzeigen und zu ändern.  
+5.  Um die Einstellungen eines Verlegers anzuzeigen und zu ändern, klicken Sie auf die Schaltfläche mit den drei Punkten (**…**).  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren der Veröffentlichung und der Verteilung](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [Verteilung konfigurieren](../../relational-databases/replication/configure-distribution.md)   
  [Schützen des Verteilers](../../relational-databases/replication/security/secure-the-distributor.md)  

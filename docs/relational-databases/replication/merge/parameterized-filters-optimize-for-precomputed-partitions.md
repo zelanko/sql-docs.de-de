@@ -15,12 +15,12 @@ ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f9deab114f4e9185d2c652fd43021c00a6e93a61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7a882660203ee2c23e1cdb6cb9dbf6aa7df407d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807298"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124300"
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>Parametrisierte Filter - Optimierung für vorausberechnete Partitionen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47807298"
   
  Wenn der Verleger und der Abonnent jedoch mit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder einer höheren Version ausgeführt werden und vorausberechnete Partitionen verwenden, wird die Partitionsmitgliedschaft für alle Änderungen auf dem Verleger im Voraus berechnet und persistent gespeichert, während die Änderungen vorgenommen werden. Als Folge kann ein Abonnent beim Synchronisieren mit dem Verleger sofort mit dem Download von Änderungen beginnen, die seine Partition betreffen, ohne die Partitionsauswertung durchlaufen zu müssen. Das kann zu einer erheblichen Verbesserung der Leistung führen, wenn eine Veröffentlichung eine große Zahl von Änderungen, Abonnenten oder Artikeln aufweist.  
   
- Neben dem Verwenden von vordefinierten Partitionen generieren Sie vorab Momentaufnahmen und/oder ermöglichen Abonnenten das Anfordern der Momentaufnahmegenerierung und -anwendung beim ersten Synchronisieren. Verwenden Sie eine oder beide dieser Optionen, um Momentaufnahmen für Veröffentlichungen bereitzustellen, die parametrisierte Filter verwenden. Wenn Sie keine dieser beiden Optionen angeben, werden die Abonnements mit einer Reihe von SELECT- und INSERT-Anweisungen statt mit dem **bcp** -Hilfsprogramm initialisiert, wodurch sich der Prozess deutlich verlangsamt. Weitere Informationen finden Sie unter [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+ Neben dem Verwenden von vordefinierten Partitionen generieren Sie vorab Momentaufnahmen und/oder ermöglichen Abonnenten das Anfordern der Momentaufnahmegenerierung und -anwendung beim ersten Synchronisieren. Verwenden Sie eine oder beide dieser Optionen, um Momentaufnahmen für Veröffentlichungen bereitzustellen, die parametrisierte Filter verwenden. Wenn Sie keine dieser beiden Optionen angeben, werden die Abonnements mit einer Reihe von SELECT- und INSERT-Anweisungen statt mit dem **bcp** -Hilfsprogramm initialisiert, wodurch sich der Prozess deutlich verlangsamt. Weitere Informationen finden Sie unter [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
  **So verwenden Sie vorausberechnete Partitionen**  
   
@@ -68,7 +68,7 @@ ms.locfileid: "47807298"
 ## <a name="performance-of-precomputed-partitions"></a>Leistung vorausberechneter Partitionen  
  Bei vorausberechneten Partitionen besteht ein geringfügiger Leistungsabfall, wenn Änderungen vom Abonnenten auf den Verleger hochgeladen werden. Der Großteil der Zeit bei der Mergeverarbeitung wird jedoch für die Auswertung von Partitionen und den Download von Änderungen vom Verleger zum Abonnenten aufgewendet. Deshalb kann der Reingewinn noch immer erheblich sein. Der Leistungsvorteil variiert je nach Anzahl der Abonnenten, die gleichzeitig eine Synchronisierung ausführen, und der Anzahl von Updates pro Synchronisierung, bei denen Zeilen zwischen Partitionen verschoben werden.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Parametrisierte Zeilenfilter](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

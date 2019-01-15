@@ -13,12 +13,12 @@ ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ca169dc94a2f3fcbe6165bbbe1c69de158f9835f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 787e3c18581339de78a5f4fcd653967566f85ece
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719008"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124660"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Sicherheitsarchitektur für die Websynchronisierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ ms.locfileid: "47719008"
 |Die[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung wird verwendet, wenn Folgendes angegeben wird:<br /><br /> -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]: der Wert **0** für den Parameter **@distributor_security_mode** von [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br />RMO: der Wert <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> für <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>.<br />-   Merge-Agent-Befehlszeile: der Wert **0** für **-DistributorSecurityMode**.|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: die Parameter **@distributor_login** und **@distributor_password** von [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A> und <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A><br /><br /> Merge-Agentbefehlszeile: **-DistributorLogin** und **-DistributorPassword**.|  
   
 ## <a name="g-connection-to-an-ftp-server"></a>G. Verbindung zu einem FTP-Server  
- Geben Sie nur dann einen Windows-Benutzer für diese Verbindung an, wenn Sie Momentaufnahmedateien von einem FTP-Server statt von einem UNC-Speicherort auf den Computer herunterladen, auf dem IIS ausgeführt wird, bevor Sie die Momentaufnahme auf den Abonnenten anwenden. Weitere Informationen finden Sie unter [Übertragen von Momentaufnahmen über FTP](../../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
+ Geben Sie nur dann einen Windows-Benutzer für diese Verbindung an, wenn Sie Momentaufnahmedateien von einem FTP-Server statt von einem UNC-Speicherort auf den Computer herunterladen, auf dem IIS ausgeführt wird, bevor Sie die Momentaufnahme auf den Abonnenten anwenden. Weitere Informationen finden Sie unter [Übertragen von Momentaufnahmen über FTP](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md).  
   
 |Authentifizierungstyp|Stelle, an der die Authentifizierung angegeben wird|  
 |----------------------------|-------------------------------------------|  
@@ -137,8 +137,8 @@ ms.locfileid: "47719008"
 |---------------------|------------------------------------|  
 |Beliebiger Windows-Benutzer, der über die erforderlichen Berechtigungen verfügt.|Internetinformationsdienste-Manager (IIS). |  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Configure Web Synchronization](../../../relational-databases/replication/configure-web-synchronization.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Konfigurieren der Websynchronisierung](../../../relational-databases/replication/configure-web-synchronization.md)   
  [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
   
   

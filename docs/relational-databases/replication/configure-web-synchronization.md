@@ -33,12 +33,12 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 36d70b56432fee62d157bb8e6cf192d906e84bc3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 144323deee0c84ac1be404869a0ca71197ffcd32
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519339"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135580"
 ---
 # <a name="configure-web-synchronization"></a>Websynchronisierung konfigurieren
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -136,7 +136,7 @@ ms.locfileid: "52519339"
   
 -   Wenn Sie große Datenmengen replizieren, müssen Sie ggf. die Batchgröße des Merge-Agents anpassen.  
   
- Die Batchgröße für die Mergereplikation wird in *Generierungen*gemessen, bei denen es sich um Auflistungen von Änderungen pro Artikel handelt. Die Anzahl von Generierungen in einem Batch wird mithilfe der Parameter -**DownloadGenerationsPerBatch** und -**UploadGenerationsPerBatch** des Merge-Agents angegeben. Weitere Informationen finden Sie unter [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
+ Die Batchgröße für die Mergereplikation wird in *Generierungen*gemessen, bei denen es sich um Auflistungen von Änderungen pro Artikel handelt. Die Anzahl von Generierungen in einem Batch wird mithilfe der Parameter –**DownloadGenerationsPerBatch** und –**UploadGenerationsPerBatch** des Merge-Agents angegeben. Weitere Informationen finden Sie unter [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
   
  Geben Sie für große Datenmengen eine kleine Zahl für die einzelnen Batchverarbeitungsparameter an. Es wird empfohlen, mit dem Wert 10 zu beginnen und dann je nach Anwendungsanforderungen und -leistung diesen Wert zu optimieren. Normalerweise werden diese Parameter in einem Agentprofil angegeben. Weitere Informationen zu Profilen finden Sie unter [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
@@ -162,7 +162,7 @@ ms.locfileid: "52519339"
   
 -   Das Konto, unter dem die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikationsüberwachung (Replisapi.dll) ausgeführt wird, ist auch das Konto, das während der Synchronisierung eine Verbindung mit dem Verleger und dem Verteiler herstellt. Dieses Konto muss einem SQL-Anmeldekonto auf dem Verleger und dem Verteiler zugeordnet werden. Weitere Informationen finden Sie im Abschnitt „Festlegen von Berechtigungen für die SQL-Replikationsüberwachung“ unter [Konfigurieren von IIS für die Websynchronisierung](../../relational-databases/replication/configure-iis-for-web-synchronization.md).  
   
--   Sie können FTP verwenden, um die Momentaufnahme vom Verleger an den Computer mit IIS zu übermitteln. Die Momentaufnahme wird von dem Computer mit IIS immer mithilfe von HTTPS an den Abonnenten übermittelt. Weitere Informationen finden Sie unter [Übertragen von Momentaufnahmen über FTP](../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
+-   Sie können FTP verwenden, um die Momentaufnahme vom Verleger an den Computer mit IIS zu übermitteln. Die Momentaufnahme wird von dem Computer mit IIS immer mithilfe von HTTPS an den Abonnenten übermittelt. Weitere Informationen finden Sie unter [Übertragen von Momentaufnahmen über FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
 -   Wenn sich Server in der Replikationstopologie hinter einer Firewall befinden, müssen Sie möglicherweise Ports in der Firewall öffnen, um die Websynchronisierung zu aktivieren.  
   
@@ -170,12 +170,12 @@ ms.locfileid: "52519339"
   
     -   Der Computer, auf dem IIS ausgeführt wird, stellt die Verbindung mit dem Verleger oder Verteiler in der Regel über Port 1433 (Standardinstanz) her. Wenn der Verleger oder der Verteiler eine benannte Instanz auf einem Server mit einer anderen Standardinstanz ist, wird normalerweise die Verbindung mit der benannten Instanz über Port 1500 hergestellt.  
   
-    -   Wenn der Computer, auf dem ISS ausgeführt wird, vom Verteiler durch eine Firewall getrennt ist und für die Momentaufnahmeübermittlung eine FTP-Freigabe verwendet wird, müssen die für FTP verwendeten Ports geöffnet sein. Weitere Informationen finden Sie unter [Übertragen von Momentaufnahmen über FTP](../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
+    -   Wenn der Computer, auf dem ISS ausgeführt wird, vom Verteiler durch eine Firewall getrennt ist und für die Momentaufnahmeübermittlung eine FTP-Freigabe verwendet wird, müssen die für FTP verwendeten Ports geöffnet sein. Weitere Informationen finden Sie unter [Übertragen von Momentaufnahmen über FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
 > [!IMPORTANT]  
 >  Das Öffnen von Ports in der Firewall kann dazu führen, dass der Server böswilligen Angriffen ausgesetzt ist. Daher sollten Sie Ports grundsätzlich nur dann öffnen, wenn Sie sicher sind, dass Sie das Konzept von Firewallsystemen verstanden haben. Weitere Informationen finden Sie unter [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Websynchronisierung für die Mergereplikation](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

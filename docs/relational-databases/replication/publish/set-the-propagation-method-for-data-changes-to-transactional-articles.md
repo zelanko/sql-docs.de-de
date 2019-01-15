@@ -14,12 +14,12 @@ ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2b03471825ee3a6db98a0df68c81828ee61d433a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5231236fea77859bcdd7b1e18979480a944ec22c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527480"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131460"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>Festlegen der Propagierungsmethode für Datenänderungen an Transaktionsartikeln
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "52527480"
   
 -   Gehen Sie bei der Bearbeitung der bei der Replikation generierten Momentaufnahmedateien mit Bedacht vor. Sie müssen die benutzerdefinierte Logik in den benutzerdefinierten gespeicherten Prozeduren testen und unterstützen. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] bietet keine Unterstützung für benutzerdefinierte Logik.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
  Geben Sie die Propagierungsmethode im Dialogfeld **Artikeleigenschaften - \<Artikel>** auf der Registerkarte **Eigenschaften** an. Diese Registerkarte steht sowohl im Assistenten für neue Veröffentlichung als auch im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** zur Verfügung. Weitere Informationen zum Verwenden des Assistenten sowie Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung](../../../relational-databases/replication/publish/create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-the-propagation-method"></a>So geben Sie die Propagierungsmethode an  
@@ -118,11 +118,11 @@ ms.locfileid: "52527480"
   
 1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)aus. Geben Sie den Namen der Veröffentlichung, zu der der Artikel gehört, für **@publication**, den Namen des Artikels für **@article**, das Datenbankobjekt, das veröffentlicht wird, für **@source_object**, einen Wert für die **@schema_option** -Bitmaske, der den Wert **0x02** enthält (aktiviert die automatische Erstellung benutzerdefinierter gespeicherter Prozeduren), und wenigstens einen der folgenden Parameter an:  
   
-    -   **@ins_cmd**: Geben Sie einen Wert für **CALL sp_MSins\__Artikelname_** ein, wobei **_Artikelname_** der für **@article** festgelegte Wert ist.  
+    -   **@ins_cmd**: Geben Sie einen Wert für **CALL sp_MSins_* Artikelname*** an, wobei ***Artikelname*** der für **@article** festgelegte Wert ist.  
   
-    -   **@del_cmd**: Geben Sie einen Wert für **CALL sp_MSdel\__Artikelname_** oder **XCALL sp_MSdel\__Artikelname_** ein, wobei **_Artikelname_** der für **@article** angegebene Wert ist.  
+    -   **@del_cmd**: Geben Sie einen Wert für **CALL sp_MSdel_*Artikelname*** oder **XCALL sp_MSdel_* Artikelname*** an, wobei ***Artikelname*** der für **@article** angegebene Wert ist.  
   
-    -   **@upd_cmd**: Geben Sie einen Wert für **SCALL sp_MSupd\__Artikelname_**, **CALL sp_MSupd\__Artikelname_**, **XCALL sp_MSupd\__Artikelname_** oder **MCALL sp_MSupd\__Artikelname_** an, wobei **_Artikelname_** der für **@article** angegebene Wert ist.  
+    -   **@upd_cmd**: Geben Sie einen Wert für **SCALL sp_MSupd_* Artikelname***, **CALL sp_MSupd_* Artikelname***, **XCALL sp_MSupd_* Artikelname***, oder **MCALL sp_MSupd_* Artikelname*** an, wobei ***Artikelname*** der für **@article** angegebene Wert ist.  
   
     > [!NOTE]  
     >  Für jeden der obigen Befehlsparameter gilt: Sie können einen selbst gewählten Namen für die gespeicherten Prozeduren angeben, die von der Replikation generiert werden.  
@@ -138,11 +138,11 @@ ms.locfileid: "52527480"
   
 1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)aus. Geben Sie den Namen der Veröffentlichung, zu der der Artikel gehört, für **@publication**, den Namen des Artikels für **@article**, das Datenbankobjekt, das veröffentlicht wird, für **@source_object**, einen Wert für die **@schema_option** -Bitmaske, der den Wert **0x02** enthält (aktiviert die automatische Erstellung benutzerdefinierter gespeicherter Prozeduren), und wenigstens einen der folgenden Parameter an:  
   
-    -   **@ins_cmd**: Geben Sie einen Wert für **CALL sp_MSins\__Artikelname_** ein, wobei **_Artikelname_** der für **@article** festgelegte Wert ist.  
+    -   **@ins_cmd**: Geben Sie einen Wert für **CALL sp_MSins_* Artikelname*** an, wobei ***Artikelname*** der für **@article** festgelegte Wert ist.  
   
-    -   **@del_cmd**: Geben Sie einen Wert für **CALL sp_MSdel\__Artikelname_** oder **XCALL sp_MSdel\__Artikelname_** ein, wobei **_Artikelname_** der für **@article** angegebene Wert ist.  
+    -   **@del_cmd**: Geben Sie einen Wert für **CALL sp_MSdel_*Artikelname*** oder **XCALL sp_MSdel_* Artikelname*** an, wobei ***Artikelname*** der für **@article** angegebene Wert ist.  
   
-    -   **@upd_cmd**: Geben Sie einen Wert für **SCALL sp_MSupd\__Artikelname_**, **CALL sp_MSupd\__Artikelname_**, **XCALL sp_MSupd\__Artikelname_** oder **MCALL sp_MSupd\__Artikelname_** an, wobei **_Artikelname_** der für **@article** angegebene Wert ist.  
+    -   **@upd_cmd**: Geben Sie einen Wert für **SCALL sp_MSupd_* Artikelname***, **CALL sp_MSupd_* Artikelname***, **XCALL sp_MSupd_* Artikelname***, **MCALL sp_MSupd_* Artikelname*** an, wobei ***Artikelname*** der für **@article** angegebene Wert ist.  
   
     > [!NOTE]  
     >  Für jeden der obigen Befehlsparameter gilt: Sie können einen selbst gewählten Namen für die gespeicherten Prozeduren angeben, die von der Replikation generiert werden.  
@@ -160,8 +160,8 @@ ms.locfileid: "52527480"
   
 2.  Wiederholen Sie Schritt 1 für jede Propagierungsmethode, die geändert werden soll.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)   
- [Erstellen, Ändern und Löschen von Veröffentlichungen und Artikeln &#40;Replikation&#41;](../../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md)  
+ [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
   
   

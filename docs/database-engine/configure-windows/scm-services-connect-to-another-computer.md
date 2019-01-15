@@ -13,12 +13,12 @@ ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eb0117203d290c32c22691f665a7717a68bb5465
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 327257526f48424398a3931ba9270b3752b4b316
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072144"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135770"
 ---
 # <a name="scm-services---connect-to-another-computer"></a>SCM-Dienste: Verbinden mit einem anderen Computer
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "49072144"
   
 8.  Klicken Sie im Fenster **Snap-In hinzufügen/entfernen** auf **OK**.  
   
-9. Erweitern Sie **Computerverwaltung (***\<Computername>***)** und **Dienste und Anwendungen**.  
+9. Erweitern Sie **Computerverwaltung (**_\<Computername>_**)** und **Dienste und Anwendungen**.  
   
 10. Klicken Sie mit der rechten Maustaste auf **SQL Server-Konfigurations-Manager**, und klicken Sie dann auf **Neues Fenster**.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "49072144"
 > [!CAUTION]  
 >  Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager auf einem Remotecomputer verwenden, ist der Computername nicht offensichtlich, und es ist möglich, versehentlich den falschen Computer zu stoppen oder zu konfigurieren. Überprüfen Sie auf der Registerkarte **Dienst** das Feld **Hostname** , um den Computernamen zu überprüfen, bevor Sie einen Dienst ändern.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von WMI zum Anzeigen des Serverstatus in SQL Server-Tools](../../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)  
   
   

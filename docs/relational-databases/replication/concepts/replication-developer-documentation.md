@@ -15,12 +15,12 @@ ms.assetid: 7ee134ae-1cab-4a35-8017-8ac6d8fc64b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e0bcb10caa86474eafab14cb8347e9e28885a137
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 225ee4520fc69a5beb711d750527cab4807e17ca
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815938"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126780"
 ---
 # <a name="replication-developer-documentation"></a>Entwicklerhandbuch (Replikation)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,5 @@ ms.locfileid: "47815938"
  [Ausführbare Konzepte für die Programmierung von Replikations-Agents](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
  Beschreibt die Verwendung von ausführbaren Dateien von Replikations-Agents.  
   
- [Entwicklerhandbuch: Themen zur Vorgehensweise &#40;Replikation&#41;](../../../relational-databases/replication/concepts/developer-s-guide-how-to-topics-replication.md)  
- Stellt eine Liste von Themen zur Vorgehensweise bereit, die mit der Replikation in Zusammenhang stehen.  
   
   

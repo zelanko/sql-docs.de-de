@@ -15,12 +15,12 @@ ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 397604c04c71b662a36cb5bf39f7aaa99c600a05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9646f61d6cb8d9a277f08711dc8326f34064c5ad
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799468"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124600"
 ---
 # <a name="replication-monitor"></a>Replikationsmonitor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,14 +33,6 @@ ms.locfileid: "47799468"
 -   [Verteilereinstellungen](../../relational-databases/replication/distributor-settings.md)  
   
 -   [Verteilerinformationen, Veröffentlichungen](../../relational-databases/replication/distributor-information-publications.md)  
-  
--   [Verteilerinformationen, Überwachungsliste für Abonnements &#40;Transaktionsveröffentlichung, SQL Server 40 und später&#41;](../../relational-databases/replication/distributor-info-subscription-watch-list-transaction-pub-sql-2005.md)  
-  
--   [Verteilerinformationen, Überwachungsliste für Abonnements &#40;Mergeveröffentlichung, SQL Server 40 und höher&#41;](../../relational-databases/replication/distributor-info-subscription-watch-list-merge-pub-sql-2005.md)  
-  
--   [Verteilerinformationen, Überwachungsliste für Abonnements &#40;Momentaufnahmeveröffentlichung, SQL Server 40 und höher#41;](../../relational-databases/replication/distributor-info-subscription-watch-list-snapshot-pub-sql-2005.md)  
-  
--   [Verteilerinformationen, Agents](../../relational-databases/replication/distributor-information-agents.md)  
   
 -   [Verlegereinstellungen](../../relational-databases/replication/publisher-settings.md)  
   
@@ -68,8 +60,7 @@ ms.locfileid: "47799468"
   
 -   [Veröffentlichungsinformationen, Agents &#40;Transaktionsveröffentlichung&#41;](../../relational-databases/replication/publication-information-agents-transactional-publication.md)  
   
--   [Veröffentlichungsinformationen, Agents &#40;Mergeveröffentlichung&#41;](../../relational-databases/replication/publication-information-agents-merge-publication.md)  
-  
+-   [Veröffentlichungsinformationen, Agents &#40;Mergeveröffentlichung&#41;](../../relational-databases/replication/publication-information-agents-merge-publication.md)    
 -   [Veröffentlichungsinformationen, Agents &#40;Momentaufnahmeveröffentlichung&#41;](../../relational-databases/replication/publication-information-agents-snapshot-publication.md)  
   
 -   [Veröffentlichungsinformationen, Überwachungstoken &#40;Transaktionsveröffentlichung, SQL Server 40 und höher&#41;](../../relational-databases/replication/publication-information-tracer-tokens-sql-server-2005-and-later.md)  
@@ -81,8 +72,6 @@ ms.locfileid: "47799468"
 -   [Abonnement, Verlauf Verteiler zu Abonnent &#40;Transaktionsabonnement&#41;](../../relational-databases/replication/subscription-distributor-to-subscriber-history-transactional-subscription.md)  
   
 -   [Abonnement, Synchronisierungsverlauf &#40;Mergeabonnement, SQL Server 40 und höher&#41;](../../relational-databases/replication/subscription-synchronization-history.md)  
-  
--   [Abonnement, Synchronisierungsverlauf &#40;Mergeabonnement, SQL Server 40&#41;](../../relational-databases/replication/subscription-synchronization-history-merge-subscription-sql-server-2000.md)  
   
 -   [Abonnement, Verlauf Verteiler zu Abonnent &#40;Momentaufnahmeabonnement&#41;](../../relational-databases/replication/subscription-distributor-to-subscriber-history-snapshot-subscription.md)  
   
@@ -96,9 +85,8 @@ ms.locfileid: "47799468"
   
 -   [Spalten sortieren](../../relational-databases/replication/sort-columns.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Starten des Replikationsmonitors](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Überwachen der Replikation](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Eigenschaftenreferenz &#40;Replikation&#41;](../../relational-databases/replication/properties-reference-replication.md)  
+
   
   

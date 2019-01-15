@@ -14,12 +14,12 @@ ms.assetid: e72cfd52-de66-45e9-98b9-b8580ac7b956
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 856b4dfea1025e9cd9b6818a35410d9463d01e8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51383126fe72627c09b00f3e55bdf5cbe82fe070
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817785"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130130"
 ---
 # <a name="cataloggrantpermission-ssisdb-database"></a>catalog.grant_permission (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ catalog.grant_permission [ @object_type = ] object_type
   
 ## <a name="arguments"></a>Argumente  
  [ @object_type = ] *object_type*  
- Der Typ des sicherungsfähigen Objekts. Die Typen von sicherungsfähigen Objekten umfassen Ordner (`1`), Projekt (`2`), Umgebung (`3`) und Vorgang (`4`). Das Argument *object_type* ist vom Typ **smallint***.*  
+ Der Typ des sicherungsfähigen Objekts. Die Typen von sicherungsfähigen Objekten umfassen Ordner (`1`), Projekt (`2`), Umgebung (`3`) und Vorgang (`4`). Das Argument *object_type* ist vom Typ **smallint**_._  
   
  [ @object_id = ] *object_id*  
  Der eindeutige Bezeichner (ID) des sicherungsfähigen Objekts. Das Argument *object_id* ist vom Typ **bigint**.  

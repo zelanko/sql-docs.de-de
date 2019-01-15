@@ -15,12 +15,12 @@ ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4b23378b5340ea5aca32951cd1b35b3e08f78f05
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5b1b6726985643a16eef3bd5bda84a3220ba9442
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209389"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134145"
 ---
 # <a name="synchronize-a-pull-subscription"></a>Synchronisieren eines Pullabonnements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "53209389"
 5.  Klicken Sie auf **Schließen**.  
   
 ##  <a name="ReplProg"></a> Replication Agents  
- Pullabonnements können programmgesteuert oder nach Bedarf synchronisiert werden, indem die entsprechende ausführbare Datei für den Replikations-Agent an der Eingabeaufforderung aufgerufen wird. Welche ausführbare Datei für den Replikations-Agent aufgerufen wird, hängt vom Typ der Veröffentlichung ab, zu der das Pullabonnement gehört. Weitere Informationen finden Sie unter [Replication Agents](../../relational-databases/replication/agents/replication-agents.md).  
+ Pullabonnements können programmgesteuert oder nach Bedarf synchronisiert werden, indem die entsprechende ausführbare Datei für den Replikations-Agent an der Eingabeaufforderung aufgerufen wird. Welche ausführbare Datei für den Replikations-Agent aufgerufen wird, hängt vom Typ der Veröffentlichung ab, zu der das Pullabonnement gehört. Weitere Informationen finden Sie unter [Replication Agents](../../relational-databases/replication/agents/replication-agents-overview.md).  
   
 > [!NOTE]  
 >  Replikations-Agents stellen die Verbindung zum lokalen Server anhand der Anmeldeinformationen für die Windows-Authentifizierung des Benutzers her, der den Agenten von der Eingabeaufforderung aus aufgerufen hat. Diese Windows-Anmeldeinformationen werden auch verwendet, wenn mithilfe der integrierten Windows-Authentifizierung eine Verbindung zu Remoteservern hergestellt wird.  

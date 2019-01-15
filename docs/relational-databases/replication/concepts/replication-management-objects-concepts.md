@@ -21,12 +21,12 @@ ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38ce786d8362f711e238b32059ae3bae4f50006e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3b2ce551f280c56e7526455ee03931478f2322b2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672629"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125052"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,19 +38,19 @@ ms.locfileid: "51672629"
  [Verteilung konfigurieren](../../../relational-databases/replication/configure-distribution.md)  
  Die Themen in diesem Abschnitt veranschaulichen, wie RMO zum Konfigurieren von Veröffentlichung und Verteilung verwendet wird.  
   
- [Erstellen, Ändern und Löschen von Veröffentlichungen und Artikeln &#40;Replikation&#41;](../../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md)  
+ [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
  Die Themen in diesem Abschnitt demonstrieren, wie mit RMO Veröffentlichungen und Artikel erstellt, gelöscht und geändert werden.  
   
  [Abonnieren von Veröffentlichungen](../../../relational-databases/replication/subscribe-to-publications.md)  
  Die Themen in diesem Abschnitt beschreiben, wie mit RMO Abonnements erstellt, gelöscht und geändert werden.  
   
- [Sichern einer Replikationstopologie](../../../relational-databases/replication/security/secure-a-replication-topology.md)  
+ [Sichern einer Replikationstopologie](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
  Die Themen in diesem Abschnitt erläutern, wie mit RMO Sicherheitseinstellungen angezeigt und geändert werden.  
   
- [Synchronisieren von Abonnements &#40;Replikation&#41;](../../../relational-databases/replication/synchronize-subscriptions-replication.md)  
+ [Synchronisieren von Abonnements &#40;Replikation&#41;](../../../relational-databases/replication/synchronize-data.md)  
  Die Themen in diesem Abschnitt veranschaulichen, wie Abonnements synchronisiert werden.  
   
- [Überwachen der Replikation](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Überwachen der Replikation](../../../relational-databases/replication/monitor/monitoring-replication.md)  
  Die Themen in diesem Abschnitt beschreiben, wie eine Replikationstopologie programmgesteuert überwacht wird.  
   
 ## <a name="introduction-to-rmo-programming"></a>Einführung in die RMO-Programmierung  
@@ -191,7 +191,7 @@ ms.locfileid: "51672629"
   
  [!code-cs[HowTo#rmo_ChangeTranPub_cached](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_changetranpub_cached)]  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Konzepte für die Replikationsprogrammierung](../../../relational-databases/replication/concepts/replication-programming-concepts.md)  
   

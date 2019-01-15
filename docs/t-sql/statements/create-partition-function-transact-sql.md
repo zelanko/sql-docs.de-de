@@ -28,19 +28,19 @@ ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fa09a229b3cff08f452417a89bbc2ba357a502b0
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: 52e2d08a629a2e7272a409f0e84ab9b79299649b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52191017"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132130"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Erstellt eine Funktion in der aktuellen Datenbank, die Zeilen einer Tabelle oder eines Indexes Partitionen zuordnet. Dies erfolgt auf Grundlage der Werte einer angegebenen Spalte. Das Verwenden von CREATE PARTITION FUNCTION ist der erste Schritt beim Erstellen einer partitionierten Tabelle oder eines partitionierten Index. Eine Tabelle oder ein Index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] kann maximal 15.000 Partitionen aufweisen.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -74,7 +74,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  Gibt die Anzahl der von *boundary_value* bereitgestellten Werte an, wobei 14.999 nicht überschritten werden darf. Die Anzahl der erstellten Partitionen entspricht *n* + 1. Die Werte müssen nicht der Reihenfolge nach angegeben werden. Wenn die Werte nicht der Reihenfolge nach aufgeführt sind, werden sie von [!INCLUDE[ssDE](../../includes/ssde-md.md)] sortiert, die Funktion wird erstellt und eine Warnung zurückgegeben, die besagt, dass die Werte nicht der Reihenfolge nach bereitgestellt werden. Die Datenbank-Engine gibt einen Fehler zurück, wenn *n* doppelte Werte enthält.  
   
  **LEFT** | RIGHT  
- Gibt an, zu welcher Seite (links oder rechts) die einzelnen Grenzwertintervalle *boundary_value* [ **,***...n* ] gehören, wenn Intervallwerte von [!INCLUDE[ssDE](../../includes/ssde-md.md)] in aufsteigender Reihenfolge von links nach rechts sortiert werden. Fehlt die Angabe, ist LEFT der Standardwert.  
+ Gibt an, zu welcher Seite, links oder rechts, die einzelnen Grenzwertintervalle *boundary_value* [ **,**_...n_ ] gehören, wenn Intervallwerte von [!INCLUDE[ssDE](../../includes/ssde-md.md)] in aufsteigender Reihenfolge von links nach rechts sortiert werden. Fehlt die Angabe, ist LEFT der Standardwert.  
   
 ## <a name="remarks"></a>Remarks  
  Der Bereich einer Partitionsfunktion beschränkt sich auf die Datenbank, in der sie erstellt wird. Innerhalb der Datenbank befinden sich Partitionsfunktionen in einem von anderen Funktionen abgetrennten Namespace.  
@@ -107,7 +107,7 @@ AS RANGE LEFT FOR VALUES (1, 100, 1000);
 |**Werte**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <=`1000`|**col1** > `1000`|  
   
 ### <a name="b-creating-a-range-right-partition-function-on-an-int-column"></a>B. Erstellen einer RANGE RIGHT-Partitionsfunktion für eine int-Spalte  
- In der folgenden Partitionsfunktion werden dieselben Werte für *boundary_value* [ **,***...n* ] wie in der Partitionsfunktion im vorherigen Beispiel verwendet, mit dem Unterschied, dass RANGE RIGHT angegeben wird.  
+ In der folgenden Partitionsfunktion werden dieselben Werte für *boundary_value* [ **,**_...n_ ] wie in der Partitionsfunktion im vorherigen Beispiel verwendet, mit dem Unterschied, dass RANGE RIGHT angegeben wird.  
   
 ```sql  
 CREATE PARTITION FUNCTION myRangePF2 (int)  
@@ -188,7 +188,7 @@ EXEC sp_executesql @DatePartitionFunction;
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Partitionierte Tabellen und Indizes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)   
  [$PARTITION &#40;Transact-SQL&#41;](../../t-sql/functions/partition-transact-sql.md)   
  [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-function-transact-sql.md)   

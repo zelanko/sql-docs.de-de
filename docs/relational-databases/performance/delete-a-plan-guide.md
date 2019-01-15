@@ -12,15 +12,15 @@ ms.assetid: aa4d3188-6927-43de-a3e3-90fc16eeaca7
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: e3767e3b614012b9a5f770067403ac028eb84ad8
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 6e01fbd98d2004566c4831db8b1ac28878095868
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328200"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143400"
 ---
 # <a name="delete-a-plan-guide"></a>Löschen einer Planhinweisliste
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Sie können eine Planhinweisliste in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]löschen. Mit [!INCLUDE[tsql](../../includes/tsql-md.md)]können Sie auch alle Planhinweislisten in einer Datenbank löschen.  
   
  **In diesem Thema**  
@@ -58,7 +58,7 @@ ms.locfileid: "53328200"
   
 #### <a name="to-delete-a-single-plan-guide"></a>So löschen Sie eine einzelne Planhinweisliste  
   
-1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "53328200"
   
 #### <a name="to-delete-all-plan-guides-in-a-database"></a>So löschen Sie alle Planhinweislisten in einer Datenbank  
   
-1.  Stellen Sie im Objekt-Explorer **** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
