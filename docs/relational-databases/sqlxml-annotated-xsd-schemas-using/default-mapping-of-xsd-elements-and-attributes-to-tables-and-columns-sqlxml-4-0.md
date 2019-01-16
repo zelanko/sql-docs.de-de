@@ -28,12 +28,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21b0f28d79f44fd21828475c22748450d8f3628b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5473cca90d26056f82d79a5b3189998d0723269b
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673769"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254425"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Standardzuordnung von XSD-Elementen und -Attributen zu Tabellen und Spalten (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "51673769"
  In diesem Beispiel werden keine Anmerkungen im XSD-Schema angegeben. Die  **\<Person.Contact >** -Element komplexen Typs ist, und wird daher standardmäßig der Person.Contact-Tabelle in der Datenbank AdventureWorks zugeordnet. Alle Attribute (ContactID, FirstName und LastName) des der  **\<Person.Contact >** -Elements sind von einem einfachen Typ und werden standardmäßig Spalten mit den gleichen Namen in der Person.Contact-Tabelle.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Person.Contact" >  
      <xsd:complexType>  
@@ -97,7 +97,7 @@ ms.locfileid: "51673769"
  In diesem Beispiel findet die Standardzuordnung auch statt, da keine Anmerkungen verwendet werden. Die  **\<Person.Contact >** -Element komplexen Typs ist und wird in der Tabelle mit dem gleichen Namen in der Datenbank. Die Elemente  **\<FirstName >** und  **\<"LastName" >** und **EmployeeID** Attribut sind vom einfachen Typ und werden daher die Spalten mit den gleichen Namen. Der einzige Unterschied zwischen diesem und dem vorherigen Beispiel besteht darin, dass für die Zuordnung der Felder FirstName und LastName Elemente verwendet werden.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Person.Contact">  
     <xsd:complexType>  
@@ -151,7 +151,7 @@ ms.locfileid: "51673769"
  In diesem Beispiel findet die Standardzuordnung auch statt, da keine Anmerkungen verwendet werden. Die  **\<Production.ProductModel >** -Element komplexen Typs ist und wird in der Tabelle mit dem gleichen Namen in der Datenbank. Die **ProductModelID** -Attribut von einem einfachen Typ ist, und daher auf die Spalten mit demselben Namen zugeordnet. Der einzige Unterschied zwischen diesem und den vorherigen Beispielen ist, die die  **\<Anweisungen >** -Element zugeordnet ist, auf eine Spalte, die verwendet die **Xml** Datentyp mithilfe der **Xsd: AnyType** Typ.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Production.ProductModel">  
     <xsd:complexType>  

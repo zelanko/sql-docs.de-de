@@ -17,31 +17,31 @@ ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92fb7b0e9722c52c7f1e9fc071d434f531b2fc46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00732de7eca32dc8b2984fdda14163c77c66ad43
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721908"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256225"
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE-, DELETE- und INSERT-Anweisungen
 SQL-basierten Anwendungen und nehmen Sie Änderungen an Tabellen durch Ausführen der **UPDATE**, **löschen**, und **einfügen** Anweisungen. Diese Anweisungen sind Teil der Konformitätsgrad des mindestens SQL-Grammatik und von allen Treibern und Datenquellen unterstützt werden müssen.  
   
  Die Syntax dieser Anweisungen lautet:  
   
- **UPDATE***Tabellenname*   
+ **UPDATE** _Tabellenname_  
   
- **Legen Sie** *Spaltenbezeichner* **=** {*Ausdruck* &#124; **NULL**}  
+ **SET** _column-identifier_ **=** {*expression* &#124; **NULL**}  
   
- [**,** *Spaltenbezeichner* **=** {*Ausdruck* &#124; **NULL**}]...  
+ [**,** _Spaltenbezeichner_ **=** {*Ausdruck* &#124; **NULL**}]...  
   
- [**, In denen** *Suchbedingung*]  
+ [**, In denen** _Suchbedingung_]  
   
- **DELETE FROM** *Tabellenname*[**, in denen** *Suchbedingung*]  
+ **DELETE FROM** _Tabellenname_[**, in denen** _Suchbedingung_]  
   
- **INSERT INTO** *Tabellenname*[**(*** Spaltenbezeichner* [**,** *Spaltenbezeichner*]... **)**]  
+ **INSERT INTO** _Tabellenname_[**(** _Spaltenbezeichner_ [**,** _Spaltenbezeichner-_]... **)**]  
   
- {*-Abfragespezifikation* &#124;  **Werte (*** Wert einfügen* [**,** *Wert einfügen*]... **)**}  
+ {*-Abfragespezifikation* &#124; **Werte (** _Wert einfügen_ [**,** _Wert einfügen_]... **)**}  
   
  Beachten Sie, dass die *-Abfragespezifikation* Element ist nur in der Core und erweiterte SQL-Grammatik, und dass die *Ausdruck* und *Suchbedingung* Elemente steigern. komplexe, in der Core und erweiterte SQL-Grammatik.  
   

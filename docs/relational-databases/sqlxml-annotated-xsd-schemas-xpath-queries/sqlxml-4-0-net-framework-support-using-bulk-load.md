@@ -17,12 +17,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d800875c3255866463aee95ff6446f740ace03fd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 429d881953477592e6d65a601c85778dbcbbc339
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671069"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257145"
 ---
 # <a name="sqlxml-40-net-framework-support---using-bulk-load"></a>SQLXML 4.0 .NET Framework-Unterstützung – Verwendung von Massenladen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51671069"
  Um das SQLXML-Massenladen-COM-Objekt in einer verwalteten Umgebung zu verwenden, müssen Sie diesem Objekt eine Projektreferenz hinzufügen. Dies generiert eine verwaltete Wrapperschnittstelle um das Massenladen-COM-Objekt.  
   
 > [!NOTE]  
->  Verwaltetes XML-Massenladen funktioniert nicht mit verwalteten Datenströmen und erfordert einen Wrapper um systemeigene Datenströme. Die SQLXML-Massenladenkomponente wird nicht in einer Multithreadumgebung ('[MTAThread]'-Attribut) ausgeführt. Wenn Sie versuchen, die massenladenkomponente in einer Umgebung mit mehreren Threads ausführen, erhalten Sie eine InvalidCastException-Ausnahme mit den folgenden zusätzlichen Informationen: "Fehler bei QueryInterface für Schnittstelle SQLXMLBULKLOADLib.ISQLXMLBulkLoad." Die problemumgehung besteht darin, das Objekt zu erstellen, die das Massenladen singlethreads zugänglich enthält (z. B. durch Verwendung der **[STAThread]** -Attribut wie im Beispiel gezeigt).  
+>  Verwaltetes XML-Massenladen funktioniert nicht mit verwalteten Datenströmen und erfordert einen Wrapper um systemeigene Datenströme. Die SQLXML-Massenladenkomponente wird nicht in einer Multithreadumgebung ('[MTAThread]'-Attribut) ausgeführt. Wenn Sie versuchen, die massenladenkomponente in einer Umgebung mit mehreren Threads ausführen, erhalten Sie eine InvalidCastException-Ausnahme mit den folgenden zusätzlichen Informationen an: "Fehler bei QueryInterface für Schnittstelle SQLXMLBULKLOADLib.ISQLXMLBulkLoad." Die problemumgehung besteht darin, das Objekt zu erstellen, die das Massenladen singlethreads zugänglich enthält (z. B. durch Verwendung der **[STAThread]** -Attribut wie im Beispiel gezeigt).  
   
  Dieses Thema stellt eine funktionierende C#-Beispielanwendung für das Massenladen von XML-Daten in der Datenbank bereit. Gehen Sie folgendermaßen vor, um ein funktionierendes Beispiel zu erstellen:  
   
@@ -56,7 +56,7 @@ ms.locfileid: "51671069"
 2.  Speichern Sie das folgende Schema in einer Datei (schema.xml):  
   
     ```  
-    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
     <xsd:annotation>  
       <xsd:appinfo>  

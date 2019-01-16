@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf061fc552a29730fb25a1fd36fb868efb031953
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 3e742e1b5c8ed1b0149292aeee5a3c0e518d9783
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512805"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300187"
 ---
 # <a name="sql-graph-architecture"></a>SQL-Graph-Architektur  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -97,13 +97,15 @@ Die folgende Tabelle enthält die gültigen Werte für `graph_type` Spalte
 
 `sys.columns` speichert auch Informationen zu impliziten Spalten in der Knoten-oder edgetabellen erstellt. Folgende Informationen kann von sys.columns abgerufen werden, allerdings können keine Benutzer diese Spalten auswählen, aus einer Tabelle Knoten- oder edgetabelle. 
 
-Impliziten Spalten in eine Knotentabelle  
+Impliziten Spalten in eine Knotentabelle
+
 |Spaltenname    |Datentyp  |is_hidden  |Anmerkung  |
 |---  |---|---|---  |
 |graph_id_\<hex_string> |bigint |1  |interne `graph_id` Spalte  |
 |$node_id_\<hex_string> |NVARCHAR   |0  |Externe Knoten `node_id` Spalte  |
 
-Impliziten Spalten in eine edgetabelle  
+Impliziten Spalten in eine edgetabelle
+
 |Spaltenname    |Datentyp  |is_hidden  |Anmerkung  |
 |---  |---|---|---  |
 |graph_id_\<hex_string> |bigint |1  |interne `graph_id` Spalte  |
@@ -111,14 +113,14 @@ Impliziten Spalten in eine edgetabelle
 |from_obj_id_\<hex_string>  |INT    |1  |interne von Knoten `object_id`  |
 |from_id_\<hex_string>  |bigint |1  |interne von Knoten `graph_id`  |
 |$from_id_\<hex_string> |NVARCHAR   |0  |externe von Knoten `node_id`  |
-|To_obj_id_\<Hex_string >    |INT    |1  |interne Knoten `object_id`  |
+|to_obj_id_\<hex_string>    |INT    |1  |interne Knoten `object_id`  |
 |to_id_\<hex_string>    |bigint |1  |interne Knoten `graph_id`  |
 |$to_id_\<hex_string>   |NVARCHAR   |0  |außerhalb von Knoten `node_id`  |
  
 ### <a name="system-functions"></a>Systemfunktionen
 Die folgenden integrierten Funktionen werden hinzugefügt. Dies hilft Benutzern, die Informationen aus die generierten Spalten zu extrahieren. Beachten Sie, dass diese Methoden nicht die Eingabe des Benutzers überprüft werden. Wenn der Benutzer ein ungültiges angibt `sys.node_id` die-Methode den entsprechenden Teil zu extrahieren und zurückzugeben. Z. B. OBJECT_ID_FROM_NODE_ID dauert eine `$node_id` als Eingabe und gibt die Object_id der Tabelle dieser Knoten gehört. 
  
-|Integrierte   |Description  |
+|Built-in   |Description  |
 |---  |---  |
 |OBJECT_ID_FROM_NODE_ID |Extrahieren Sie die Object_id von einem `node_id`  |
 |GRAPH_ID_FROM_NODE_ID  |Extrahieren Sie die Graph_id aus einem `node_id`  |
@@ -133,17 +135,17 @@ Die folgenden integrierten Funktionen werden hinzugefügt. Dies hilft Benutzern,
 Erfahren Sie, den [!INCLUDE[tsql-md](../../includes/tsql-md.md)] -Erweiterungen in SQL Server und Azure SQL-Datenbank eingeführt, mit denen erstellen und Abfragen von Graph-Objekte. Die Abfrage-spracherweiterungen helfen Abfrage und durchlaufen Sie das Diagramm mit ASCII-Grafik-Syntax.
  
 ### <a name="data-definition-language-ddl-statements"></a>Anweisungen der Data Definition Language (DDL)
-|Task   |Verwandte Artikel  |Hinweise
+|Aufgabe   |Verwandte Artikel  |Hinweise
 |---  |---  |---  |
 |CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` ist nun erweitert, um Unterstützung für das Erstellen einer Tabelle, die AS-Knoten- oder EDGETABELLE von AS. Beachten Sie, dass eine edgetabelle kann möglicherweise keine benutzerdefinierten Attribute.  |
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|Und Rahmentabellen können geändert werden, die gleiche Weise wie eine relationale Tabelle ist, verwendet der `ALTER TABLE`. Benutzer können hinzufügen oder Ändern von benutzerdefinierten Spalten, Indizes oder Einschränkungen. Allerdings wie ändern die interne Diagrammspalten, `$node_id` oder `$edge_id`, führt zu einem Fehler.  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |Benutzer können Indizes auf Pseudo-Spalten und benutzerdefinierte Spalten und Rahmentabellen erstellen. Alle Typen von Indizes werden unterstützt, einschließlich gruppierten und nicht gruppierten columnstore-Indizes.  |
-|ERSTELLEN VON EDGEEINSCHRÄNKUNGEN    |[EDGEEINSCHRÄNKUNGEN &#40;Transact-SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |Benutzer können jetzt erstellen edgeeinschränkungen auf Edge-Tabellen, um bestimmte Semantik zu erzwingen und Datenintegrität zu gewährleisten  |
+|ERSTELLEN VON EDGEEINSCHRÄNKUNGEN    |[EDGE CONSTRAINTS &#40;Transact-SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |Benutzer können jetzt erstellen edgeeinschränkungen auf Edge-Tabellen, um bestimmte Semantik zu erzwingen und Datenintegrität zu gewährleisten  |
 |DROP TABLE |[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |Und Rahmentabellen können gelöscht werden, die gleiche Weise wie eine relationale Tabelle ist, verwendet der `DROP TABLE`. In dieser Version gibt jedoch keine Einschränkungen, um sicherzustellen, dass keine Ränder zeigen Sie auf ein gelöschter Knoten und kaskadierten Löschung Ränder, nach dem Löschen eines Knotens oder einer Knotentabelle wird nicht unterstützt. Es wird empfohlen, wenn eine Knotentabelle gelöscht wird, Benutzer keinem Rand verbunden, auf die Knoten in dieser Knotentabelle manuell, um die Integrität des Diagramms gewährleisten ablegen.  |
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>Anweisungen der Data Manipulation Language (DML)
-|Task   |Verwandte Artikel  |Hinweise
+|Aufgabe   |Verwandte Artikel  |Hinweise
 |---  |---  |---  |
 |INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|Einfügen in eine Knotentabelle ist unterscheidet sich nicht in eine relationale Tabelle einzufügen. Die Werte für `$node_id` Spalte wird automatisch generiert. Versuch zum Einfügen eines Werts in `$node_id` oder `$edge_id` Spalte führt zu einem Fehler. Benutzer müssen Geben Sie Werte für `$from_id` und `$to_id` Spalten während des Einfügens in eine edgetabelle. `$from_id` und `$to_id` sind die `$node_id` Werte der Knoten, die eine bestimmte Kante verbindet.  |
 |DELETE | [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Daten aus einer Knoten-oder edgetabellen können auf gleiche Weise gelöscht werden, wie sie vom relationalen Tabellen gelöscht werden. In dieser Version gibt jedoch keine Einschränkungen, um sicherzustellen, dass keine Ränder zeigen Sie auf ein gelöschter Knoten und kaskadierten Löschung Ränder, nach dem Löschen eines Knotens wird nicht unterstützt. Es wird empfohlen, dass wenn ein Knoten gelöscht wurde, die verbindenden Rändern auf diesen Knoten ebenfalls gelöscht werden, um die Integrität des Diagramms zu gewährleisten.  |
@@ -152,7 +154,7 @@ Erfahren Sie, den [!INCLUDE[tsql-md](../../includes/tsql-md.md)] -Erweiterungen 
 
 
 ### <a name="query-statements"></a>Abfrageanweisungen
-|Task   |Verwandte Artikel  |Hinweise
+|Aufgabe   |Verwandte Artikel  |Hinweise
 |---  |---  |---  |
 |SELECT |[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|Knoten und Kanten werden als Tabellen intern gespeichert, daher werden die meisten Vorgänge unterstützt, die für eine Tabelle in SQL Server oder Azure SQL-Datenbank unterstützt, für die Tabellen und Rahmentabellen  |
 |MATCH  | [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)|Übereinstimmung integrierte wird zur Unterstützung von Musterabgleich und durchlaufen Sie das Diagramm eingeführt.  |

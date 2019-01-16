@@ -1,7 +1,7 @@
 ---
 title: Sp_addmergepullsubscription_agent (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -16,14 +16,15 @@ ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba75dc83e8fb4ce5a9ad31876b2b2592b22b7197
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2c49ade60bdbdbdc04fe7ec5b2ec221c10037982
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791782"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256535"
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Fügt einen neuen Agentauftrag für die geplante Synchronisierung eines Pullabonnements mit einer Mergeveröffentlichung hinzu. Diese gespeicherte Prozedur wird auf dem Abonnenten für die Abonnementdatenbank ausgeführt.  
@@ -93,25 +94,25 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [ **@name =** ] **'***name***'**  
  Der Name des Agents. *name* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
- [  **@publisher =** ] **"***Verleger***"**  
+ [ **@publisher =** ] **'***publisher***'**  
  Entspricht dem Namen des Verlegerservers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@publisher_db =** ] **"***Publisher_db***"**  
+ [ **@publisher_db =** ] **'***publisher_db***'**  
  Der Name der Verlegerdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
   
  [ **@publication =** ] **'***publication***'**  
  Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@publisher_security_mode =** ] *Publisher_security_mode*  
+ [ **@publisher_security_mode =** ] *publisher_security_mode*  
  Der Sicherheitsmodus, der beim Synchronisieren zum Herstellen der Verbindung mit einem Verleger verwendet wird. *Publisher_security_mode* ist **Int**, hat den Standardwert 1. Wenn **0**, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. Wenn **1**, gibt die Windows-Authentifizierung.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [  **@publisher_login =** ] **"***Publisher_login***"**  
+ [ **@publisher_login =** ] **'***publisher_login***'**  
  Der Anmeldename, der beim Synchronisieren zum Herstellen der Verbindung mit einem Verleger verwendet wird. *Publisher_login* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@publisher_password =** ] **"***Publisher_password***"**  
+ [ **@publisher_password =** ] **'***publisher_password***'**  
  Das Kennwort, das beim Herstellen der Verbindung mit dem Verleger verwendet wird. *Publisher_password* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!IMPORTANT]  
@@ -120,31 +121,31 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@publisher_encrypted_password =** ]*Publisher_encrypted_password*  
  Festlegen von *Publisher_encrypted_password* wird nicht mehr unterstützt. Es wird versucht, diese festgelegt **Bit** Parameter **1** führt zu einem Fehler.  
   
- [  **@subscriber =** ] **"***Abonnenten***"**  
+ [ **@subscriber =** ] **'***subscriber***'**  
  Der Name des Abonnenten. *Abonnenten* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@subscriber_db =** ] **"***Subscriber_db***"**  
+ [ **@subscriber_db =** ] **'***subscriber_db***'**  
  Ist der Name der Abonnementdatenbank. *Subscriber_db* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@subscriber_security_mode =** ] *Subscriber_security_mode*  
+ [ **@subscriber_security_mode =** ] *subscriber_security_mode*  
  Der Sicherheitsmodus, der beim Synchronisieren zum Herstellen der Verbindung mit einem Abonnenten verwendet wird. *Subscriber_security_mode* ist **Int**, hat den Standardwert 1. Wenn **0**, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. Wenn **1**, gibt die Windows-Authentifizierung.  
   
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Der Merge-Agent verwendet für die Herstellung einer Verbindung mit dem lokalen Abonnenten stets die Windows-Authentifizierung. Falls für diesen Parameter ein Wert angegeben wird, wird zwar eine Warnmeldung zurückgegeben, doch der Wert selbst wird ignoriert.  
   
- [  **@subscriber_login =** ] **"***Subscriber_login***"**  
+ [ **@subscriber_login =** ] **'***subscriber_login***'**  
  Ist der Anmeldename des Abonnenten beim Herstellen einer Verbindung an einen Abonnenten, bei der Synchronisierung verwendet. *Subscriber_login* ist erforderlich, wenn *Subscriber_security_mode* nastaven NA hodnotu **0**. *Subscriber_login* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Falls für diesen Parameter ein Wert angegeben wird, wird zwar eine Warnmeldung zurückgegeben, doch der Wert selbst wird ignoriert.  
   
- [  **@subscriber_password =** ] **"***Subscriber_password***"**  
+ [ **@subscriber_password =** ] **'***subscriber_password***'**  
  Entspricht dem Abonnentenkennwort für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung. *Subscriber_password* ist erforderlich, wenn *Subscriber_security_mode* nastaven NA hodnotu **0**. *Subscriber_password* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Falls für diesen Parameter ein Wert angegeben wird, wird zwar eine Warnmeldung zurückgegeben, doch der Wert selbst wird ignoriert.  
   
- [  **@distributor =** ] **"***Verteiler***"**  
+ [ **@distributor =** ] **'***distributor***'**  
  Entspricht dem Namen des Verteilers. *Verteiler* ist **Sysname**, hat den Standardwert *Verleger*; d. h. der Verleger ist auch der Verteiler.  
   
  [  **@distributor_security_mode =** ] *Distributor_security_mode*  
@@ -153,10 +154,10 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [  **@distributor_login =** ] **"***Distributor_login***"**  
+ [ **@distributor_login =** ] **'***distributor_login***'**  
  Der Verteileranmeldename, der beim Synchronisieren zum Herstellen der Verbindung mit einem Verteiler verwendet wird. *Distributor_login* ist erforderlich, wenn *Distributor_security_mode* nastaven NA hodnotu **0**. *Distributor_login* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@distributor_password =** ] **"***Distributor_password***"**  
+ [ **@distributor_password =** ] **'***distributor_password***'**  
  Das Verteilerkennwort. *Distributor_password* ist erforderlich, wenn *Distributor_security_mode* nastaven NA hodnotu **0**. *Distributor_password* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!IMPORTANT]  
@@ -212,10 +213,10 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**16**|Letzter|  
 |NULL (Standard)||  
   
- [  **@frequency_recurrence_factor =** ] *Frequency_recurrence_factor*  
+ [ **@frequency_recurrence_factor =** ] *frequency_recurrence_factor*  
  Wird von verwendete Wiederholungsfaktor *Frequency_type*. *Frequency_recurrence_factor* ist **Int**, hat den Standardwert NULL.  
   
- [  **@frequency_subday =** ] *Frequency_subday*  
+ [ **@frequency_subday =** ] *frequency_subday*  
  Die Häufigkeit für die erneute geplante Ausführung während des definierten Zeitraums. *Frequency_subday* ist **Int**, und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
@@ -226,10 +227,10 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**8**|Hour|  
 |NULL (Standard)||  
   
- [  **@frequency_subday_interval =** ] *Frequency_subday_interval*  
+ [ **@frequency_subday_interval =** ] *frequency_subday_interval*  
  Das Intervall für *Frequency_subday*. *Frequency_subday_interval* ist **Int**, hat den Standardwert NULL.  
   
- [  **@active_start_time_of_day=**] *Active_start_time_of_day*  
+ [ **@active_start_time_of_day=**] *active_start_time_of_day*  
  Die Tageszeit, zu der der Merge-Agent zum ersten Mal geplant ist. Dabei wird das Format HHMMSS verwendet. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert NULL.  
   
  [  **@active_end_time_of_day =** ] *Active_end_time_of_day*  
@@ -241,38 +242,38 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [ **@active_end_date =** ] *active_end_date*  
  Das Datum, ab dem der Merge-Agent nicht mehr geplant ist. Dabei wird das Format JJJJMMTT verwendet. *Active_end_date* ist **Int**, hat den Standardwert NULL.  
   
- [  **@optional_command_line =** ] **"***Standardwert***"**  
+ [ **@optional_command_line =** ] **'***optional_command_line***'**  
  Entspricht einer optionalen Eingabeaufforderung, die für den Merge-Agent bereitgestellt wird. *Der Standardwert* ist **nvarchar(255)**, hat den Standardwert ' '. Kann zur Bereitstellung zusätzlicher Parameter für den Merge-Agent verwendet werden, wie im folgenden Beispiel gezeigt wird, bei dem das Standardtimeout für Abfragen auf `600` Sekunden erhöht wird:  
   
 ```  
 @optional_command_line = N'-QueryTimeOut 600'  
 ```  
   
- [  **@merge_jobid =** ] *der Standard*  
+ [ **@merge_jobid =** ] *merge_jobid*  
  Ist der Ausgabeparameter für die Auftrags-ID. *der Standard* ist **'binary(16)'**, hat den Standardwert NULL.  
   
- [  **@enabled_for_syncmgr =** ] **"***Enabled_for_syncmgr***"**  
+ [ **@enabled_for_syncmgr =** ] **'***enabled_for_syncmgr***'**  
  Gibt an, ob das Abonnement über Windows Synchronization Manager synchronisiert werden kann. *Enabled_for_syncmgr* ist **nvarchar(5)**, hat den Standardwert "false". Wenn **"false"**, das Abonnement ist nicht mit der Synchronisierungsverwaltung registriert. Wenn **"true"**, das Abonnement mit der Synchronisierungsverwaltung registriert und kann synchronisiert werden, ohne Starten des [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- [  **@ftp_address =** ] **"***Ftp_address***"**  
+ [ **@ftp_address =** ] **'***ftp_address***'**  
  Nur aus Gründen der Abwärtskompatibilität beibehalten  
   
- [  **@ftp_port =** ] *Ftp_port*  
+ [ **@ftp_port =** ] *ftp_port*  
  Nur aus Gründen der Abwärtskompatibilität beibehalten  
   
- [  **@ftp_login =** ] **"***Ftp_login***"**  
+ [ **@ftp_login =** ] **'***ftp_login***'**  
  Nur aus Gründen der Abwärtskompatibilität beibehalten  
   
- [  **@ftp_password =** ] **"***Ftp_password***"**  
+ [ **@ftp_password =** ] **'***ftp_password***'**  
  Nur aus Gründen der Abwärtskompatibilität beibehalten  
   
- [  **@alt_snapshot_folder =** ] **"***Alternate_snapshot_folder***"**  
+ [ **@alt_snapshot_folder =** ] **'***alternate_snapshot_folder***'**  
  Gibt den Speicherort an, an dem die Momentaufnahmedateien aufzunehmen sind. *Alternate_snapshot_folder* ist **nvarchar(255)**, hat den Standardwert NULL. Wenn dieser Wert NULL ist, werden die Momentaufnahmedateien aus dem vom Verleger angegebenen Standardspeicherort abgeholt.  
   
- [  **@working_directory =** ] **"***Working_directory***"**  
+ [ **@working_directory =** ] **'***working_directory***'**  
  Entspricht dem Namen des Arbeitsverzeichnisses, das zum temporären Speichern von Daten und Schemadateien für die Veröffentlichung dient, wenn mittels FTP Momentaufnahmedateien übertragen werden. *Working_directory* ist **nvarchar(255)**, hat den Standardwert NULL.  
   
- [  **@use_ftp =** ] **"***Use_ftp***"**  
+ [ **@use_ftp =** ] **'***use_ftp***'**  
  Gibt die FTP-Verwendung anstelle des typischen Protokolls an, um Momentaufnahmen abzurufen. *Use_ftp* ist **nvarchar(5)**, hat den Standardwert "false".  
   
  [  **@reserved =** ] **"***reservierte***"**  
@@ -281,27 +282,27 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@use_interactive_resolver =** ] **"***Use_interactive_resolver***"** ]  
  Verwendet einen interaktiven Konfliktlöser, um Konflikte für alle Artikel zu lösen, die eine interaktive Auflösung ermöglichen. *Use_interactive_resolver* ist **nvarchar(5)**, hat den Standardwert "false".  
   
- [  **@offloadagent =** ] **"***Remote_agent_activation***"**  
+ [ **@offloadagent =** ] **'***remote_agent_activation***'**  
  > [!NOTE]  
 >  Die Aktivierung des Remote-Agents wurde als veraltet markiert und wird nicht mehr unterstützt. Dieser Parameter wird nur zur Aufrechterhaltung der Abwärtskompatibilität von Skripts unterstützt. Festlegen von *Remote_agent_activation* auf einen anderen Wert als **"false"** wird ein Fehler generiert.  
   
- [  **@offloadserver =** ] **"***Remote_agent_server_name***"**  
+ [ **@offloadserver =** ] **'***remote_agent_server_name***'**  
  > [!NOTE]  
 >  Die Aktivierung des Remote-Agents wurde als veraltet markiert und wird nicht mehr unterstützt. Dieser Parameter wird nur zur Aufrechterhaltung der Abwärtskompatibilität von Skripts unterstützt. Festlegen von *Remote_agent_server_name* auf einen beliebigen Wert ungleich NULL wird ein Fehler generiert.  
   
- [  **@job_name =** ] **"***Job_name***"** ]  
+ [ **@job_name =** ] **'***job_name***'** ]  
  Der Name eines vorhandenen Agentauftrags. *Job_name* ist **Sysname**, hat den Standardwert NULL. Dieser Parameter wird nur angegeben, wenn das Abonnement mithilfe eines vorhandenen Auftrags statt mit einem neu erstellten Auftrag (Standard) synchronisiert wird. Wenn Sie nicht Mitglied der sind die **Sysadmin** festen Serverrolle an, Sie müssen angeben, *Job_login* und *Job_password* beim Angeben von *Job_name*.  
   
- [  **@dynamic_snapshot_location =** ] **"***Dynamic_snapshot_location***"** ]  
+ [ **@dynamic_snapshot_location =** ] **'***dynamic_snapshot_location***'** ]  
  Entspricht dem Pfad zum Ordner, aus dem die Momentaufnahmedateien gelesen werden, wenn eine gefilterte Datenmomentaufnahme zu verwenden ist. *Dynamic_snapshot_location* ist **nvarchar(260)**, hat den Standardwert NULL. Weitere Informationen zu parametrisierten Zeilenfiltern finden Sie unter [Parametrisierte Zeilenfilter](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
- [  **@use_web_sync =** ] *Use_web_sync*  
+ [ **@use_web_sync =** ] *use_web_sync*  
  Gibt an, dass die Websynchronisierung aktiviert wird. *Use_web_sync* ist **Bit**, hat den Standardwert 0. **1** gibt an, dass das Pullabonnement mithilfe von HTTP über das Internet synchronisiert werden kann.  
   
- [  **@internet_url =** ] **"***Internet_url***"**  
- Entspricht dem Speicherort der Replikationsüberwachung (REPLISAPI.DLL) zur Websynchronisierung. *Internet_url* ist **nvarchar(260)**, hat den Standardwert NULL. *Internet_url* ist eine vollqualifizierte URL im Format `https://server.domain.com/directory/replisapi.dll`. Wenn der Server so konfiguriert ist, dass er einen anderen Port als Port 80 überwacht, muss auch die Portnummer im Format `https://server.domain.com:portnumber/directory/replisapi.dll` angegeben werden, wobei `portnumber` den Port darstellt.  
+ [ **@internet_url =** ] **'***internet_url***'**  
+ Entspricht dem Speicherort der Replikationsüberwachung (REPLISAPI.DLL) zur Websynchronisierung. *Internet_url* ist **nvarchar(260)**, hat den Standardwert NULL. *Internet_url* ist eine vollqualifizierte URL im Format `http://server.domain.com/directory/replisapi.dll`. Wenn der Server so konfiguriert ist, dass er einen anderen Port als Port 80 überwacht, muss auch die Portnummer im Format `http://server.domain.com:portnumber/directory/replisapi.dll` angegeben werden, wobei `portnumber` den Port darstellt.  
   
- [  **@internet_login =** ] **"***sich***"**  
+ [ **@internet_login =** ] **'***internet_login***'**  
  Entspricht der Anmeldung, über die der Merge-Agent mithilfe der HTTP-Standardauthentifizierung die Verbindung mit dem Webserver herstellt, der die Websynchronisierung hostet. *sich* ist **Sysname**, hat den Standardwert NULL.  
   
  [  **@internet_password =** ] **"***Internet_password***"**  
@@ -310,7 +311,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
- [  **@internet_security_mode =** ] *Internet_security_mode*  
+ [ **@internet_security_mode =** ] *internet_security_mode*  
  Entspricht der vom Merge-Agent verwendeten Authentifizierungsmethode zur Herstellung der Verbindung mit dem Webserver über HTTPS während der Websynchronisierung. *Internet_security_mode* ist **Int** und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
@@ -321,16 +322,16 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 > [!NOTE]  
 >  Wir empfehlen, bei der Websynchronisierung die Standardauthentifizierung zu verwenden. Für die Websynchronisierung müssen Sie eine SSL-Verbindung mit dem Webserver herstellen. Weitere Informationen finden Sie unter [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).  
   
- [  **@internet_timeout =** ] *Internet_timeout*  
+ [ **@internet_timeout =** ] *internet_timeout*  
  Entspricht der Zeit in Sekunden, nach der die Gültigkeit einer Websynchronisierungsanforderung abläuft. *Internet_timeout* ist **Int**, hat den Standardwert **300** Sekunden.  
   
  [  **@hostname =** ] **"***Hostname***"**  
  Überschreibt den Wert von HOST_NAME(), wenn diese Funktion in der WHERE-Klausel eines parametrisierten Filters verwendet wird. *Hostname* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@job_login =** ] **"***Job_login***"**  
+ [ **@job_login =** ] **'***job_login***'**  
  Der Anmeldename für das Windows-Konto, unter dem der Agent ausgeführt wird. *Job_login* ist **nvarchar(257)**, hat keinen Standardwert. Für Agentverbindungen mit dem Abonnenten sowie für Verbindungen mit dem Verteiler und Verleger über die integrierte Windows-Authentifizierung wird stets dieses Windows-Konto verwendet.  
   
- [  **@job_password =** ] **"***Job_password***"**  
+ [ **@job_password =** ] **'***job_password***'**  
  Das Kennwort für das Windows-Konto, unter dem der Agent ausgeführt wird. *Job_password* ist **Sysname**, hat keinen Standardwert.  
   
 > [!IMPORTANT]  
@@ -353,10 +354,10 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ## <a name="see-also"></a>Siehe auch  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Abonnieren von Veröffentlichungen](../../relational-databases/replication/subscribe-to-publications.md)   
- [Sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [Sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
- [Sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
- [Sp_helpmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
+ [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
+ [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
+ [sp_helpmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
  [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

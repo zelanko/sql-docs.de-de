@@ -17,12 +17,12 @@ ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ec725dfdcfb7ad0b37c6fc1d3cbff0c56b315a46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 234a0eeba57958063a6f2eedb8510486df8a53a0
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623488"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255503"
 ---
 # <a name="willexecute-event-ado"></a>WillExecute-Ereignis (ADO)
 Die **WillExecute** Ereignis wird immer dann aufgerufen, unmittelbar bevor ein ausstehenden Befehls für eine Verbindung ausgeführt wird.  
@@ -44,7 +44,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *LockType*  
  Ein [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) , enthält den Sperrentyp für die **Recordset** , die geöffnet wird. Sie können die Sperre mit diesem Parameter ändern, auf einen beliebigen Typ während einer **RecordsetOpen** Vorgang. *LockType* für andere Vorgänge ignoriert werden.  
   
- *enthalten*  
+ *Optionen*  
  Ein **lange** Wert, der Optionen, die verwendet werden können angibt, führen Sie den Befehl aus, oder Öffnen der **Recordset**.  
   
  *adStatus*  
@@ -65,7 +65,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  **WillExecute** können Sie zum Überprüfen und ändern die ausstehende Ausführung-Parameter. Dieses Ereignis kann eine Anforderung zurückgeben, dass der ausstehende Befehl abgebrochen werden.  
   
 > [!NOTE]
->  Wenn die ursprüngliche für die Datenquelle eine **Befehl** ist ein Datenstrom, der gemäß der [CommandStream-Eigenschaft (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md) -Eigenschaft, eine neue Zeichenfolge zuweisen der **WillExecute *** Quelle* Änderung der Quelle des Parameters der **Befehl**. Die **' CommandStream '** Eigenschaft gelöscht und die [CommandText-Eigenschaft (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) Eigenschaft wird mit der neuen Quelle aktualisiert werden. Anhand des ursprünglichen Streams **' CommandStream '** veröffentlicht und kann nicht zugegriffen werden.  
+>  Wenn die ursprüngliche für die Datenquelle eine **Befehl** ist ein Datenstrom, der gemäß der [CommandStream-Eigenschaft (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md) -Eigenschaft, eine neue Zeichenfolge zuweisen der **WillExecute** _Quelle_ Änderung der Quelle des Parameters der **Befehl**. Die **' CommandStream '** Eigenschaft gelöscht und die [CommandText-Eigenschaft (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) Eigenschaft wird mit der neuen Quelle aktualisiert werden. Anhand des ursprünglichen Streams **' CommandStream '** veröffentlicht und kann nicht zugegriffen werden.  
   
  Wenn die ursprüngliche Einstellung der Dialekt, der die neue Quellzeichenfolge unterscheidet die [Dialect-Eigenschaft](../../../ado/reference/ado-api/dialect-property.md) Eigenschaft (die entsprach, um die **' CommandStream '**), durch Festlegen der richtigen Dialekt angegeben werden die **Dialekt** Eigenschaft des Befehlsobjekts auf die verwiesen wird durch *pCommand*.  
   

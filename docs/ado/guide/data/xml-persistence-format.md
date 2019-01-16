@@ -13,12 +13,12 @@ ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f794267904ec1c84595b4b627722a1ca935c15a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2330703450e42e8ddf9bfeed536dd3649d65edf8
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211009"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255685"
 ---
 # <a name="xml-persistence-format"></a>XML-Beibehaltungsformat
 ADO verwendet die UTF-8-Codierung für die XML-Datenstrom.  
@@ -67,7 +67,7 @@ xmlns:z="#RowsetSchema">
   
  Das Schema zeigt die Deklarationen des Namespaces, Schemaabschnitt und Data-Abschnitt. Schema-Abschnitt enthält die Definitionen für die Zeile, Firmen-Nr, CompanyName und Telefon.  
   
- Schemadefinitionen entsprechen den [W3C XML-Data-Spezifikation](https://www.w3.org/TR/1998/NOTE-XML-data/) und können überprüft werden, vollständig (auch wenn die Validierung nicht in Internet Explorer 5 erfolgt). XML-Daten ist derzeit das einzige unterstützte Schemaformat für Recordset-Beibehaltung.  
+ Schemadefinitionen entsprechen den [W3C XML-Data-Spezifikation](http://www.w3.org/TR/1998/NOTE-XML-data/) und können überprüft werden, vollständig (auch wenn die Validierung nicht in Internet Explorer 5 erfolgt). XML-Daten ist derzeit das einzige unterstützte Schemaformat für Recordset-Beibehaltung.  
   
  Data-Abschnitt enthält drei Zeilen, die mit Informationen zu Lieferanten. Für ein leeres Rowset, Data-Abschnitt kann leer sein, aber die \<Rs: Data >-Tags müssen vorhanden sein. Ohne Daten, könnten Sie einfach das Tag die Kurzform schreiben \<Rs: Daten-/ >. Alle Tags, die mit dem Präfix "Rs" gibt an, dass es in das vom Urn: Schemas definierten Namespace-Microsoft-Com:rowset.  
   

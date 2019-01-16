@@ -13,12 +13,12 @@ ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: db90ecbc083a887a9845542b73e50bae6bf61e1e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e352a6c4d548b382d700c54cf0167fadcec8bf7b
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534737"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254545"
 ---
 # <a name="namespaces"></a>Namespaces
 Die XML-Speicherformat in ADO verwendet die folgenden vier Namespaces.  
@@ -29,11 +29,11 @@ Die XML-Speicherformat in ADO verwendet die folgenden vier Namespaces.
 |Präfix|Description|  
 |------------|-----------------|  
 |s|Bezieht sich auf der "XML-Daten"-Namespace enthält die Elemente und Attribute, die das Schema der aktuellen Recordset zu definieren.|  
-|DT|Bezieht sich auf die Definitionen der Datentypspezifikation.|  
+|dt|Bezieht sich auf die Definitionen der Datentypspezifikation.|  
 |rs|Bezieht sich auf die enthaltenden Namespace-Elementen und Attributen, die spezifisch für ADO-Recordset-Eigenschaften und Attribute.|  
 |z|Bezieht sich auf das Schema des aktuellen Rowsets.|  
   
- Ein Client sollte nicht auf diese Namespaces eine eigene Tags hinzufügen, gemäß der Spezifikation. Ein Client sollte beispielsweise nicht definieren ein Namespaces als "Urn: Schemas-Microsoft-Com:rowset", und klicken Sie dann schreiben Sie etwas wie "Rs: MyOwnTag." Weitere Informationen zu Namespaces finden Sie unter den [W3C Empfehlung zu Namespaces in XML-](https://www.w3.org/TR/REC-xml-names/).  
+ Ein Client sollte nicht auf diese Namespaces eine eigene Tags hinzufügen, gemäß der Spezifikation. Ein Client sollte beispielsweise nicht definieren ein Namespaces als "Urn: Schemas-Microsoft-Com:rowset", und klicken Sie dann schreiben Sie etwas wie "Rs: MyOwnTag." Weitere Informationen zu Namespaces finden Sie unter den [W3C Empfehlung zu Namespaces in XML-](http://www.w3.org/TR/REC-xml-names/).  
   
 > [!IMPORTANT]
 >  Die ID für das Schematag muss "RowsetSchema lauten", und der Namespace, der zum Verweisen auf das Schema des aktuellen Rowsets muss zeigen Sie auf "#RowsetSchema."  

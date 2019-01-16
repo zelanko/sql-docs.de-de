@@ -17,26 +17,26 @@ ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 461b9ea2196fed61587b1a9e20cc21feced258da
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 78505f010706a39e5278d50219dd4504e33dd67c
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535053"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254865"
 ---
 # <a name="types-of-events"></a>Ereignistypen
 Es gibt zwei grundlegende Arten von Ereignissen. "Werden Ereignisse" die aufgerufen werden, bevor ein Vorgang gestartet wird, stehen in der Regel "Wird" im Namen – beispielsweise **WillChangeRecordset** oder **WillConnect**. Ereignisse, die aufgerufen werden, nachdem ein Ereignis in der Regel abgeschlossen wurde enthalten "Abgeschlossen" im Namen – beispielsweise **RecordChangeComplete** oder **ConnectComplete**. Ausnahmen vorhanden sind – z. B. **InfoMessage** –, aber diese treten auf, nachdem der zugeordnete Vorgang abgeschlossen wurde.  
   
 ## <a name="will-events"></a>Ereignisse werden  
- -Ereignishandler wird aufgerufen, bevor der Vorgang beginnt Sie die Möglichkeit zum Untersuchen bieten oder ändern die Vorgangsparameter, und klicken Sie dann den Vorgang abbrechen oder erlauben, dass Sie abgeschlossen. Dieser Ereignishandler-Routinen haben in der Regel die Namen im Format **wird*Ereignis ***.  
+ -Ereignishandler wird aufgerufen, bevor der Vorgang beginnt Sie die Möglichkeit zum Untersuchen bieten oder ändern die Vorgangsparameter, und klicken Sie dann den Vorgang abbrechen oder erlauben, dass Sie abgeschlossen. Dieser Ereignishandler-Routinen haben in der Regel die Namen im Format <strong>wird*Ereignis*</strong>.  
   
 ## <a name="complete-events"></a>Ereignisse durch Abschluss  
- -Ereignishandler wird aufgerufen, nachdem ein Vorgang abgeschlossen ist, können die Anwendung benachrichtigt, die eine Operation abgeschlossen wurde. Ein solcher Ereignishandler ist auch benachrichtigt werden, wenn ein Ereignishandler wird über einen ausstehenden Vorgang abbricht. Dieser Ereignishandler-Routinen haben in der Regel die Namen im Format ***Ereignis * abschließen**.  
+ -Ereignishandler wird aufgerufen, nachdem ein Vorgang abgeschlossen ist, können die Anwendung benachrichtigt, die eine Operation abgeschlossen wurde. Ein solcher Ereignishandler ist auch benachrichtigt werden, wenn ein Ereignishandler wird über einen ausstehenden Vorgang abbricht. Dieser Ereignishandler-Routinen haben in der Regel die Namen im Format  <strong>*Ereignis*abschließen</strong>.  
   
  Wird und Ereignisse zum Abschluss werden in der Regel paarweise verwendet.  
   
 ## <a name="other-events"></a>Andere Ereignisse  
- Die anderen Ereignishandler – d.h. die Ereignisse, deren Namen nicht im Format sind **wird * Ereignis*** oder ***Ereignis * abschließen** -werden erst aufgerufen, wenn ein Vorgang abgeschlossen ist. Diese Ereignisse sind **trennen**, **EndOfRecordset**, und **InfoMessage**.  
+ Die anderen Ereignishandler – d.h. die Ereignisse, deren Namen nicht im Format sind <strong>wird*Ereignis*</strong>  oder  <strong>*Ereignis*abschließen</strong> -erst aufgerufen werden ein Vorgang abgeschlossen ist. Diese Ereignisse sind **trennen**, **EndOfRecordset**, und **InfoMessage**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [ADO-Ereignishandler – Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)   

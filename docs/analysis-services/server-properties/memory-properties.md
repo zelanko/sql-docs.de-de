@@ -1,6 +1,6 @@
 ---
 title: Analysis Services-Speichereigenschaften | Microsoft-Dokumentation
-ms.date: 10/03/2018
+ms.date: 01/15/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 763c085e9a4dbc6ecb459ffcd17f5185531b98fb
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 055b46ab1464f360cfb89f9bf4d42c0b8997f841
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53071997"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327861"
 ---
 # <a name="memory-properties"></a>Speichereigenschaften
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -58,7 +58,14 @@ Die folgenden Eigenschaften gelten sowohl für tabellarische als auch für mehrd
  Gibt einen Arbeitsspeicherschwellenwert an, ab dem die Instanz aktive Benutzersitzungen aggressiv beendet, um die Speicherauslastung zu reduzieren. Alle beendete Sitzungen erhalten eine Fehlermeldung, die durch ungenügenden Arbeitsspeicher bedingt abgebrochen wird. Der Standardwert 0 bedeutet, dass **HardMemoryLimit** auf einen mittleren Wert zwischen **TotalMemoryLimit** und dem gesamten physischen Speicher des Systems festgelegt wird. Wenn der physische Speicher größer als der virtuelle Adressraum des Prozesses ist, dann wird anstelle der Berechnung von **HardMemoryLimit**der virtuelle Adressraum verwendet.  
 
 **QueryMemoryLimit**   
-Nur für Azure Analysis Services. Eine erweiterte Eigenschaft zu steuern, wie viel Arbeitsspeicher von temporäre Ergebnisse während der Abfrage verwendet werden kann. Gilt nur für DAX-Measures und Abfragen. MDX-Abfragen für Server im mehrdimensionalen Modus verwenden Sie dieses Limit nicht. Es wird nicht für allgemeine speicherbelegungen, die von der Abfrage verwendeten berücksichtigt. In Prozent angegeben. Der Standardwert 0 bedeutet keine Begrenzung angegeben ist.
+Nur für Azure Analysis Services. Eine erweiterte Eigenschaft zu steuern, wie viel Arbeitsspeicher von temporäre Ergebnisse während der Abfrage verwendet werden kann. Gilt nur für DAX-Measures und Abfragen. Es wird nicht für allgemeine speicherbelegungen, die von der Abfrage verwendeten berücksichtigt. Als Prozentsatz angegeben, wird der Standardwert durch den Plan bestimmt. 
+
+|Planen  |Standard  |
+|---------|---------|
+|D1     |   80      |
+|Alle anderen Optionen geplant     |    20     |
+
+Diese Eigenschaft kann geändert werden. Eine Einstellung von 0 bedeutet keine Begrenzung angegeben ist.
 
  **VirtualMemoryLimit**  
   Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.  

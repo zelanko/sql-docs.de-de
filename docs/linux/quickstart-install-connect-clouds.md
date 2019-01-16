@@ -11,14 +11,17 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 3c64c2ab3927c111b29f0bafa6745fbab2f7fd13
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 77e818109424b5f0d9dea3b495da4e927c506366
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160538"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299237"
 ---
 # <a name="quickstart-run-sql-server-in-the-cloud"></a>Schnellstart: Führen Sie SQL Server in der cloud
+
+  > [!div class="nextstepaction"]
+  > [Teilen Sie uns Ihr Feedback zu SQL-Dokumentation des Inhaltsverzeichnisses!](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -65,4 +68,4 @@ In diesem Schnellstart installieren Sie SQL Server unter Red Hat Enterprise Linu
     * [Ubuntu](quickstart-install-connect-ubuntu.md)
 1.  Konfigurieren Sie für Remoteverbindungen: 
     * Wechseln Sie zu der [Firewall-Regeln](https://console.cloud.google.com/networking/firewalls)
-    * Hinzufügen einer eingehenden Regel zum Zulassen von Datenverkehr über den Port, auf dem SQL Server lauscht (standardmäßig Tcp: Port 1433)
+    * Hinzufügen einer eingehenden Regel zum Zulassen von Datenverkehr über den Port, auf dem SQL Server lauscht (standardmäßig Tcp: 1433)

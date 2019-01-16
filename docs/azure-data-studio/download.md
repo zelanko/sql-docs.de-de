@@ -11,16 +11,20 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a4f8861d8d7104b536abbf14a7629218c46e577e
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: d7e9cd2130487a0ac50d6aa55a8a2e0f9cf9e80c
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143060"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298717"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Herunterladen und Installieren von Azure Data Studio
 
+  > [!div class="nextstepaction"]
+  > [Teilen Sie uns Ihr Feedback zu SQL-Dokumentation des Inhaltsverzeichnisses!](https://aka.ms/sqldocsurvey)
+
 [!INCLUDE[name-sos](../includes/name-sos.md)] auf Windows, MacOS und Linux ausgeführt wird.
+
 
 Herunterladen und installieren die neueste Version der *Release von Januar*:
 
@@ -145,8 +149,8 @@ Wenn Sie installiert [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] m
 - Windows Server 2008 R2 (64-Bit)
 
 ### <a name="macos"></a>macOS
-- MacOS 10.13 High Sierra
-- MacOS 10.12 Sierra
+- macOS 10.13 High Sierra
+- macOS 10.12 Sierra
 
 ### <a name="linux"></a>Linux
 - Red Hat Enterprise Linux 7.4
@@ -186,7 +190,7 @@ Wenn Sie Ihre benutzerdefinierten Einstellungen, Tastenkombinationen in Visual S
 
 1. Öffnen Sie Einstellungen, indem Sie auf das Zahnradsymbol auf der linken unteren und auf **Einstellungen.**
 
-   ![Open-Einstellungen](./media/download/open-settings.png)
+   ![open-settings](./media/download/open-settings.png)
 
 2. Mit der rechten Maustaste die **Benutzereinstellungen** Registerkarte im Vordergrund, und klicken Sie auf **im Explorer anzeigen**
 

@@ -13,12 +13,12 @@ ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5eb8012190914c2b5312a89428947f670db11df4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 45e8e37d8bb85e727771072abda9249b8155076f
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201729"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256195"
 ---
 # <a name="schema-section"></a>Schemaabschnitt
 Schema-Abschnitt ist erforderlich. Wie im vorherige Beispiel gezeigt wird, schreibt ADO detaillierter Metadaten zu jeder Spalte, um die Semantik der Datenwerte für die Aktualisierung so weit wie möglich beizubehalten. Allerdings erfordert um in der XML-Code zu laden, ADO nur die Namen der Spalten und das Rowset, das sie angehören. Hier ist ein Beispiel für ein Schema "minimal":  
@@ -99,7 +99,7 @@ Schema-Abschnitt ist erforderlich. Wie im vorherige Beispiel gezeigt wird, schre
  Auf ähnliche Weise, da es ist kein Alias definiert für `CompanyName` im vorherigen Beispiel `CompanyName` muss konsistent im gesamten Dokument verwendet werden.  
   
 ## <a name="data-types"></a>Datentypen  
- Sie können einen Datentyp an eine Spalte mit dem dt: Type-Attribut anwenden. Das umfassende Handbuch zu zulässige XML-Datentypen, finden Sie im Abschnitt "Datentypen" von der [W3C XML-Data-Spezifikation](https://www.w3.org/TR/1998/NOTE-XML-data/). Sie können einen Datentyp angeben, gibt es zwei Möglichkeiten: das dt: Type-Attribut direkt auf die Definition der Spalte selbst angeben, oder verwenden Sie das Konstrukt S:datatype als ein geschachteltes Element der Spaltendefinition. Beispiel:  
+ Sie können einen Datentyp an eine Spalte mit dem dt: Type-Attribut anwenden. Das umfassende Handbuch zu zulässige XML-Datentypen, finden Sie im Abschnitt "Datentypen" von der [W3C XML-Data-Spezifikation](http://www.w3.org/TR/1998/NOTE-XML-data/). Sie können einen Datentyp angeben, gibt es zwei Möglichkeiten: das dt: Type-Attribut direkt auf die Definition der Spalte selbst angeben, oder verwenden Sie das Konstrukt S:datatype als ein geschachteltes Element der Spaltendefinition. Beispiel:  
   
 ```  
 <s:AttributeType name="Phone" >  

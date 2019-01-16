@@ -10,12 +10,12 @@ ms.assetid: c7757153-9697-4f01-881c-800e254918c9
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 538386a12c2f33038a3688f102140dd5fd4c1845
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: cfd65d3335c7eb57c69f4fe6a37042376efc71bf
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375592"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300607"
 ---
 # <a name="sql-server-transaction-locking-and-row-versioning-guide"></a>Handbuch zu Transaktionssperren und Zeilenversionsverwaltung in SQL Server
   In jeder Datenbank führt die fehlerhafte Verwaltung von Transaktionen bei Systemen mit zahlreichen Benutzern häufig zu Konflikten und Leistungsproblemen. Mit steigender Anzahl von Benutzern, die auf die Daten zugreifen, wird der Einsatz von Anwendungen, die Transaktionen effizient verwenden, immer wichtiger. In diesem Handbuch werden Mechanismen für Sperren und die Zeilenversionsverwaltung beschrieben, durch die das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die physische Integrität jeder Transaktion sicherstellt. Darüber hinaus erfahren Sie, wie Transaktionen von Anwendungen effizient gesteuert werden.  
@@ -152,7 +152,7 @@ GO
   
  Im folgenden Beispiel generiert die dritte `INSERT`-Anweisung einen Laufzeitfehler aufgrund eines doppelten Primärschlüssels. Die ersten zwei `INSERT`-Anweisungen sind erfolgreich, sodass für sie ein Commit ausgeführt wird; sie bleiben somit nach dem Laufzeitfehler erhalten.  
   
-```  
+```sql  
 CREATE TABLE TestBatch (Cola INT PRIMARY KEY, Colb CHAR(3));  
 GO  
 INSERT INTO TestBatch VALUES (1, 'aaa');  

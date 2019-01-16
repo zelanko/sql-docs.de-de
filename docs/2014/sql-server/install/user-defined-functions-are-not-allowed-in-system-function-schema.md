@@ -14,12 +14,12 @@ ms.assetid: 3cb54053-ef65-4558-ae96-8686b6b22f4f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a91275eadeebd6b996774363ab279eddc76f0f75
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b7c21521fbdd4a4e80ed196c67c72f790341f020
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540009"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254275"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-systemfunctionschema"></a>Benutzerdefinierte Funktionen sind in 'system_function_schema' unzulässig
   Der Upgrade Advisor hat erkannt, benutzerdefinierte Funktionen, die nicht dokumentierte Benutzer gehören **System_function_schema**. Sie können eine benutzerdefinierte Systemfunktion erstellen, indem Sie diesen Benutzer angeben. Die **System_function_schema** Benutzername ist nicht vorhanden, und die Benutzer-ID, die diesem Namen zugeordnet ist (UID = 4) ist reserviert für die **Sys** Schema und den internen Gebrauch beschränkt ist.  
@@ -55,7 +55,7 @@ ms.locfileid: "52540009"
   
 4.  Ersetzen Sie Verweise auf **System_function_schema** mit **Dbo** in allen Skripts, User-defined Function, DDL-Anweisungen enthalten.  
   
-5.  Ändern Sie Skripts, die diese Funktionen verwenden Sie entweder der zweiteilige Name Dbo * Aufrufen *. *** Function_name*, oder den dreiteiligen Namen *Database_name ***.** Dbo.* Funktionsname *.  
+5.  Ändern Sie die Skripts, die rufen diese Funktionen zur Verwendung von entweder der zweiteilige Name Dbo **.** _Function_name_, oder den dreiteiligen Namen _Database_name_**.** Dbo. *Function_name*.  
   
  Weitere Informationen finden Sie in den folgenden Themen in der SQL Server-Onlinedokumentation:  
   

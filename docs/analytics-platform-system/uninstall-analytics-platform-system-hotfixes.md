@@ -1,6 +1,6 @@
 ---
-title: Deinstallieren Sie Analytics Platform System-Hotfixes auf | Microsoft Docs
-description: Analyseplattformsystem Hotfixes zu deinstallieren.
+title: Deinstallieren von Analytics Platform System-Hotfixes auf | Microsoft-Dokumentation
+description: Deinstallieren Sie die Hotfixes für Analytics Platform System.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,48 +9,48 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 83e57a676ee0eff21eb3a736484d8e286cdeee01
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 5507eae7bb2f8a5ce138223a031ac4946d9f0030
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538780"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255066"
 ---
-# <a name="uninstall-analytics-platform-system-hotfixes"></a>Deinstallieren Sie Analytics Platform System-hotfixes 
-Die folgenden Schritte beschreiben, wie eine zuvor installierte Analytics Platform System Update zu deinstallieren.  
+# <a name="uninstall-analytics-platform-system-hotfixes"></a>Deinstallieren von Hotfixes für Analytics Platform System 
+Die folgenden Schritte beschreiben, wie Sie einen zuvor installierten Hotfix für Analytics Platform System zu deinstallieren.  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
   
 ### <a name="prerequisites"></a>Erforderliche Komponenten  
-Um diese Schritte ausführen zu können, benötigen Sie Folgendes:  
+Diese Schritte ausführen zu können, benötigen Sie:  
   
--   Ein Analytics Platform System Anmeldenamen mit Berechtigungen zum Zugriff auf die Admin-Konsole zum Überwachen der Einheit.  
+-   Eine Analytics Platform System Anmeldenamen mit Berechtigungen zum Zugriff auf die Admin-Konsole zum Überwachen der Appliance.  
   
--   Das Konto des Domänenadministrators Anmeldung die *< Appliance_domain > ***-HST01** Knoten.  
+-   Das Konto des Domänenadministrators Anmelden die <em>< Appliance_domain ></em>**-HST01** Knoten.  
   
--   Nummer des Knowledge Base-Artikel für den Hotfix zu deinstallieren.  
+-   Nummer des Knowledge Base-Artikel für das Hotfix deinstallieren.  
   
-## <a name="HowToUninstallPDW"></a>So deinstallieren Sie einen SQL Server PDW-hotfix  
+## <a name="HowToUninstallPDW"></a>So deinstallieren Sie einen SQL Server-PDW-hotfix  
   
-1.  Melden Sie sich an den *< Appliance_domain > ***-HST01** als Domänenadministrator Fabric-Knoten.  
+1.  Melden Sie sich an den <em>< Appliance_domain ></em>**-HST01** als Domänenadministrator Fabric-Knoten.  
   
-2.  Verwenden Sie zum Öffnen einer Eingabeaufforderung Ausführen als Administrator aus.  
+2.  Verwenden Sie die Ausführung als Administrator aus, um eine Eingabeaufforderung zu öffnen.  
   
-3.  Wechseln Sie `C:\PDWINST\Patches\<kbarticle>\media` , in denen *<kbarticle>* ist die Nummer des Knowledge Base-Artikel für den Hotfix zu deinstallieren.  
+3.  Wechseln Sie zum `C:\PDWINST\Patches\<kbarticle>\media` , in denen *<kbarticle>* ist die Nummer des Knowledge Base-Artikel für das Hotfix deinstallieren.  
   
     ```  
     cd /d c:\PDWINST\Patches\<kbarticle>\media  
     ```  
   
-4.  Um den Hotfix zu entfernen, führen Sie den folgenden Befehl ein.  
+4.  Führen Sie den folgenden Befehl, um den Hotfix zu entfernen.  
   
     ```  
     setup.exe /action="removepatch" /DomainAdminPassword="<password>"  
     ```  
   
 ## <a name="see-also"></a>Siehe auch  
-[Herunterladen und Anwenden von Microsoft-Updates &#40;Analyseplattformsystem&#41;](download-and-apply-microsoft-updates.md)  
-[Deinstallieren Sie Microsoft Updates &#40;Analyseplattformsystem&#41;](uninstall-microsoft-updates.md)  
-[Anwenden von Analytics Platform System Hotfixes &#40;Analyseplattformsystem&#41;](apply-analytics-platform-system-hotfixes.md)  
-[Wartung von Software &#40;Analyseplattformsystem&#41;](software-servicing.md)  
+[Microsoft-Updates herunterzuladen und anzuwenden &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md)  
+[Deinstallieren von Microsoft-Updates &#40;Analytics Platform System&#41;](uninstall-microsoft-updates.md)  
+[Anwenden von Hotfixes für Analytics Platform System &#40;Analytics Platform System&#41;](apply-analytics-platform-system-hotfixes.md)  
+[Softwarewartung &#40;Analytics Platform System&#41;](software-servicing.md)  
   

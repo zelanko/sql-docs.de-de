@@ -16,12 +16,12 @@ ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1b34c2b88c8e1906438f706143fcf6ec966026d
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: 232b7c739e274ba9252c14dd28e739934cbd42e6
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997592"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257045"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++-ADO-Programmierung
 Die ADO-API-Referenz beschreibt die Funktionalität von der ADO-Anwendungsprogrammierschnittstelle (API) mithilfe einer Syntax ähnlich wie auf Microsoft Visual Basic. Obwohl alle Benutzer, die Zielgruppe ist ADO Programmierern verschiedene Sprachen wie Visual Basic, Visual C++ (mit und ohne die **#import** Richtlinie), und Visual J++ (mit dem Paket für den ADO/WFC-Klasse).  
@@ -74,6 +74,7 @@ variable = objectPtr->GetProperty;  // get property value
  Z. B. die **Befehl** Objekt **ActiveConnection** Eigenschaft wird deklariert, mit der eine alternative Syntax für **erhalten**_ActiveConnection_und **PutRef**_ActiveConnection_. Die **PutRef**-Syntax ist eine gute Wahl, da in der Praxis in der Regel Sie eine offene put möchten **Verbindung** Objekt (, also eine **Verbindung** Objektzeiger) in diesem Diese Eigenschaft. Auf der anderen Seite der **Recordset** Objekt verfügt über **erhalten**-, **Put**–, und **PutRef**_ActiveConnection_Vorgänge, jedoch keine alternative Syntax.  
   
 ## <a name="collections-the-getitem-method-and-the-item-property"></a>Sammlungen, die GetItem-Methode und die Item-Eigenschaft  
+
  ADO definiert mehrere Auflistungen, einschließlich **Felder**, **Parameter**, **Eigenschaften**, und **Fehler**. In Visual C++ die **GetItem (_Index_)** Methode gibt ein Element der Auflistung zurück. *Index* ist eine **Variant**, dessen Wert ist entweder einen numerischen Index des Elements in der Auflistung oder eine Zeichenfolge, die mit dem Namen des Members.  
   
  Die **__declspec(property...)**  Compiler-Anweisung deklariert den **Element** Eigenschaft als eine alternative Syntax für jede Sammlung der grundlegenden **'GetItem()'** Methode. Die alternative Syntax verwendet eckige Klammern und Verweis auf ein Array ähnelt. Im Allgemeinen werden die beiden Formen wie folgt aussehen:  
