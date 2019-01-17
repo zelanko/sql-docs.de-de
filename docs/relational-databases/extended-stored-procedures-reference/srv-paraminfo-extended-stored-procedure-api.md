@@ -64,7 +64,7 @@ pfNull
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *srvproc *  
+ *srvproc*  
  Ein Handle für eine Clientverbindung.  
   
  *n*  
@@ -77,7 +77,7 @@ pfNull
  Zeiger auf die maximale Länge des Parameters.  
   
  *pcbActualLen*  
- Zeiger auf die tatsächliche Länge des Parameters. Der Wert 0 (\**pcbActualLen* == 0) gibt Daten der Länge 0 (null) an, wenn **pfNull* auf FALSE festgelegt ist.  
+ Zeiger auf die tatsächliche Länge des Parameters. Der Wert 0 (\* *pcbActualLen* == 0) gibt Daten der Länge 0 (null) an, wenn * *pfNull* auf FALSE festgelegt ist.  
   
  *pbData*  
  Zeiger auf den Puffer für Parameterdaten. Wenn *pbData* nicht NULL ist, schreibt die API für erweiterte gespeicherte Prozeduren \**pcbActualLen*-Datenbytes in \**pbData*. Wenn *pbData* NULL ist, werden keine Daten in \**pbData* geschrieben, die Funktion gibt jedoch \**pbType*, \**pcbMaxLen*, \**pcbActualLen*, und **pfNull* zurück. Der Arbeitsspeicher für diesen Puffer muss von der Anwendung verwaltet werden.  
@@ -89,7 +89,7 @@ pfNull
  Wenn die Parameterinformationen erfolgreich abgerufen wurden, wird SUCCEED zurückgegeben, andernfalls FAIL. Es wird FAIL zurückgegeben, wenn keine aktuelle remote gespeicherte Prozedur vorhanden ist und wenn kein remote gespeicherter *n*-Prozedurparameter vorhanden ist.  
   
 ## <a name="remarks"></a>Remarks  
- **Sicherheitshinweis** Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren gründlich überprüfen. Außerdem sollten Sie die kompilierten DLLs vor der Installation auf einem Produktionsserver testen. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
+ **Sicherheitshinweis** Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren gründlich überprüfen. Außerdem sollten Sie die kompilierten DLLs vor der Installation auf einem Produktionsserver testen. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Programmierreferenz für erweiterte gespeicherte Prozeduren](../../relational-databases/extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md)  
