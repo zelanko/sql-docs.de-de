@@ -24,12 +24,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 148ae7bcbb2484f6a89b0ca787f8c6d8962a80dd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cfc88234cf7d8fea62a07969949e53b084eee17f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413787"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207789"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE-Anweisungen – HEADERYONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -39,7 +39,7 @@ ms.locfileid: "52413787"
 > [!NOTE]  
 >  Eine Beschreibung der Argumente finden Sie unter [RESTORE-Argumente &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -84,10 +84,10 @@ FROM <backup_device>
 ## <a name="result-sets"></a>Resultsets  
  Zu jeder Sicherung auf dem jeweiligen Medium sendet der Server eine Zeile mit Headerinformationen, die aus den folgenden Spalten besteht:  
   
-> [!NOTE]  
+> [!NOTE]
 >  RESTORE HEADERONLY liest alle Sicherungssätze auf dem Medium. Beim Verwenden von Bandlaufwerken mit hoher Kapazität kann die Erstellung dieses Resultsets daher eine gewisse Zeit in Anspruch nehmen. Wenn die Medien schnell gelesen werden sollen, ohne dass Informationen zu jedem Sicherungssatz abgerufen werden, sollten Sie RESTORE LABELONLY verwenden oder FILE **=** *backup_set_file_number* angeben.  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  Aufgrund der Eigenschaften von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format können Sicherungssätze anderer Softwareprogramme Speicherplatz auf demselben Medium wie [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherungssätze belegen. Das von RESTORE HEADERONLY zurückgegebene Resultset schließt eine Zeile für jeden dieser anderen Sicherungssätze ein.  
   
 |Spaltenname|Datentyp|Beschreibung für SQL Server-Sicherungssätze|  
@@ -121,7 +121,7 @@ FROM <backup_device>
 |**SoftwareVersionMinor**|**int**|Untergeordnete Versionsnummer des Servers, der den Sicherungssatz erstellt hat.|  
 |**SoftwareVersionBuild**|**int**|Buildnummer des Servers, der den Sicherungssatz erstellt hat.|  
 |**MachineName**|**nvarchar(128)**|Name des Computers, der den Sicherungsvorgang ausgeführt hat.|  
-|**Flags**|**int**|Die Bedeutungen der einzelnen Flagbits, wenn diese auf **1** festgelegt sind, lauten folgendermaßen:<br /><br /> **1** = Protokollsicherung enthält massenprotokollierte Vorgänge.<br /><br /> **2** = Momentaufnahmesicherung<br /><br /> **4** = Datenbank war zum Zeitpunkt der Sicherung schreibgeschützt.<br /><br /> **8** = Datenbank war zum Zeitpunkt der Sicherung im Einzelbenutzermodus.<br /><br /> **16** = Sicherung enthält Sicherungsprüfsummen.<br /><br /> **32** = Datenbank war zum Zeitpunkt der Sicherung beschädigt; trotz der Fehler wurde die Fortsetzung des Sicherungsvorgangs angefordert.<br /><br /> **64** = Sicherung des Protokollfragments.<br /><br /> **128** = Sicherung des Protokollfragments mit unvollständigen Metadaten.<br /><br /> **256** = Sicherung des Protokollfragments mithilfe von NORECOVERY.<br /><br /> **Wichtig:** Anstelle von **Flags** sollten die einzelnen booleschen Spalten (weiter unten von **HasBulkLoggedData** bis **IsCopyOnly aufgeführt**) verwendet werden.|  
+|**Flags**|**int**|Die Bedeutungen der einzelnen Flagbits, wenn diese auf **1** festgelegt sind, lauten folgendermaßen:<br /><br /> **1** = Protokollsicherung enthält massenprotokollierte Vorgänge.<br /><br /> **2** = Momentaufnahmesicherung<br /><br /> **4** = Datenbank war zum Zeitpunkt der Sicherung schreibgeschützt.<br /><br /> **8** = Datenbank war zum Zeitpunkt der Sicherung im Einzelbenutzermodus.<br /><br /> **16** = Sicherung enthält Sicherungsprüfsummen.<br /><br /> **32** = Datenbank war zum Zeitpunkt der Sicherung beschädigt; trotz der Fehler wurde die Fortsetzung des Sicherungsvorgangs angefordert.<br /><br /> **64** = Sicherung des Protokollfragments.<br /><br /> **128** = Sicherung des Protokollfragments mit unvollständigen Metadaten.<br /><br /> **256** = Sicherung des Protokollfragments mithilfe von NORECOVERY.<br /><br /> **Wichtig:** Anstelle von **Flags** sollten die einzelnen booleschen Spalten (weiter unten von **HasBulkLoggedData** bis **IsCopyOnly** aufgeführt) verwendet werden.|  
 |**BindingID**|**uniqueidentifier**|Bindungs-ID für die Datenbank. Sie entspricht dem Wert von **sys.database_recovery_status****database_guid**. Wenn eine Datenbank wiederhergestellt wird, wird ein neuer Wert zugewiesen. Weitere Informationen finden Sie unter **FamilyGUID** (weiter unten).|  
 |**RecoveryForkID**|**uniqueidentifier**|ID für den letzten Wiederherstellungs-Verzweigungspunkt. Diese Spalte entspricht dem Wert von **last_recovery_fork_guid** in der [backupset](../../relational-databases/system-tables/backupset-transact-sql.md)-Tabelle.<br /><br /> Bei Datensicherungen ist **RecoveryForkID** mit **FirstRecoveryForkID** identisch.|  
 |**Sortierung**|**nvarchar(128)**|Die von der Datenbank verwendete Sortierung.|  
@@ -147,7 +147,7 @@ FROM <backup_device>
 |**containment**|**tinyint** not NULL|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Zeigt den Kapselungsstatus der Datenbank an.<br /><br /> 0 = Datenbankkapselung ist deaktiviert<br /><br /> 1 = Datenbank ist in Teilkapselung|  
 |**KeyAlgorithm**|**nvarchar(32)**|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1)) bis zur aktuellen Version.<br /><br /> Der Verschlüsselungsalgorithmus, der zum Verschlüsseln der Sicherung verwendet wird. NO_Encryption gibt an, dass die Sicherung nicht verschlüsselt wurde. Wenn Sie der richtige Wert nicht bestimmt werden kann sollte der Wert NULL sein.|  
 |**EncryptorThumbprint**|**varbinary(20)**|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1)) bis zur aktuellen Version.<br /><br /> Der Fingerabdruck der Verschlüsselung, der verwendet werden kann, um das Zertifikat oder den asymmetrischen Schlüssel in der Datenbank zu ermitteln. Wenn die Sicherung nicht verschlüsselt wurde, ist dieser Wert NULL.|  
-|**EncryptorType**|**nvarchar(32)**|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1)) bis zur aktuellen Version.<br /><br /> Der verwendete Verschlüsselungstyp: Zertifikat oder Asymmetrischer Schlüssel. Wenn die Sicherung nicht verschlüsselt wurde, ist dieser Wert NULL.|  
+|**EncryptorType**|**nvarchar(32)**|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1)) bis zur aktuellen Version.<br /><br /> Verwendeter Verschlüsselungstyp: Zertifikat oder asymmetrischer Schlüssel Wenn die Sicherung nicht verschlüsselt wurde, ist dieser Wert NULL.|  
   
 > [!NOTE]  
 >  Wenn für die Sicherungssätze Kennwörter definiert sind, gibt RESTORE HEADERONLY vollständige Informationen nur für den Sicherungssatz zurück, dessen Kennwort mit dem Kennwort übereinstimmt, das mit der Befehlsoption PASSWORD angegeben wird. Außerdem gibt RESTORE HEADERONLY die vollständigen Informationen zu ungeschützten Sicherungssätzen zurück. Für die anderen auf dem Medium befindlichen kennwortgeschützten Sicherungssätze wird die **BackupName**-Spalte auf '***Password Protected\*\*\*' festgelegt; alle anderen Spalten weisen den Wert NULL auf.  
@@ -174,7 +174,7 @@ WITH NOUNLOAD;
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
  [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)   

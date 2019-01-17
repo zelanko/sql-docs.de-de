@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 95ca303d9bed86f92cbd58776d4a24c4d92cce2a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 99e11038cbc7315ff485177f9270e6f0fba74142
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398203"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823694"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Bereitstellen eines Modellbereitstellungspakets mit MDSModelDeploy
 
@@ -49,7 +48,7 @@ ms.locfileid: "52398203"
   
 1.  Legen Sie fest, ob Sie ein neues Modell erstellen, ein Modell klonen oder ein zuvor geklontes Modell aktualisieren. Weitere Informationen finden Sie unter [Optionen für Modellbereitstellung &#40;Master Data Services&#41;](../master-data-services/model-deployment-options-master-data-services.md).  
   
-2.  Öffnen Sie eine Administrator-Eingabeaufforderung, und navigieren Sie zu "MDSModelDeploy.exe".  
+2.  Öffnen Sie eine Administratoreingabeaufforderung, und navigieren Sie zu „MDSModelDeploy.exe“.  
   
     -   Wenn MDS am Standardspeicherort installiert wurde, ist das Tool unter „ *Laufwerk*:\Programme\Microsoft SQL Server\130\Master Data Services\Configuration“ verfügbar.  
   
@@ -98,7 +97,7 @@ ms.locfileid: "52398203"
   
  **Hinweise:**  
   
--   Wenn eine Abonnementsicht im Paket denselben Namen wie eine Abonnementsicht in einem vorhandenen Modell ausweist, wird eine Warnung wie diese angezeigt: **Warnung: Die Abonnementsicht des Bereitstellers wurde umbenannt.** . Für die Anzeige wird zudem *modelname.subscriptionviewname*verwendet. Wenn dieser Name bereits verwendet wird, wird die Abonnementsicht nicht erstellt.  
+-   Wenn eine Abonnementansicht im Paket denselben Namen wie eine Abonnementansicht in einem vorhandenen Modell aufweist, wird die folgende Warnung angezeigt: **Die Abonnementansicht des Bereitstellers wurde umbenannt.** – die Ansicht wird anschließend als *modelname.subscriptionviewname* erstellt. Wenn dieser Name bereits verwendet wird, wird die Abonnementsicht nicht erstellt.  
   
 -   Der Bereitstellungsprozess umfasst vier Schritte:  
   
@@ -119,7 +118,7 @@ ms.locfileid: "52398203"
   
 -   [Zuweisen von Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Bereitstellen von Modellen &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   

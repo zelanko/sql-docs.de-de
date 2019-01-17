@@ -21,12 +21,12 @@ ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03226910c9af65708504dc3d99865e88c9ab193e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00ef0f5df65f6b472e6c439e097c745d03d86040
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605158"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215151"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Parametrisierte Filter – Parametrisierte Zeilenfilter
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
  Der Mitarbeiterin Pamela Ansman-Wolfe wurde z. B. eine Mitarbeiter-ID von 280 zugewiesen. Geben Sie bei der Erstellung eines Abonnements für diese Mitarbeiterin als Wert für HOST-NAME() die Mitarbeiternummer (hier: 280) an. Wenn der Merge-Agent eine Verbindung mit dem Verleger hergestellt hat, vergleicht er den von HOST_NAME() zurückgegebenen Wert mit den Werten in der Tabelle und lädt nur die Zeile herunter, bei der der Wert 280 in der **EmployeeID** -Spalte enthalten ist.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Die HOST_NAME()-Funktion gibt einen **nchar** -Wert zurück, sodass Sie CONVERT verwenden müssen, wenn es sich bei der Spalte in der Filterklausel um eine numerische Spalte handelt (wie im Beispiel oben). Zur Verbesserung der Leistung sollten Funktionen nicht auf Spaltennamen in Klauseln für parametrisierte Zeilenfilter (wie `CONVERT(nchar,EmployeeID) = HOST_NAME()`) angewendet werden. Gehen Sie stattdessen wie im folgenden Beispiel vor: `EmployeeID = CONVERT(int,HOST_NAME())`. Diese Klausel kann zwar für den **@subset_filterclause** -Parameter von [@subset_filterclause](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)verwendet werden, in der Regel aber nicht im Assistenten für neue Veröffentlichung. (Der Assistent führt die Filterklausel aus, um sie zu überprüfen, erhält dabei aber ein negatives Ergebnis, weil der Computername nicht in einen **int**als dynamische Filter bezeichnet). Wenn Sie mit dem Assistenten für neue Veröffentlichung arbeiten, sollten Sie vor dem Erstellen einer Momentaufnahme für die Veröffentlichung `CONVERT(nchar,EmployeeID) = HOST_NAME()` im Assistenten angeben und dann [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) verwenden, um die Klausel in `EmployeeID = CONVERT(int,HOST_NAME())` zu ändern.  
   
  **So überschreiben Sie den HOST_NAME()-Wert**  
@@ -186,7 +186,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   Wenn zwei Tabellen auf dem Abonnenten über eine Joinfilterbeziehung verfügen und die untergeordnete Tabelle Zeilen enthält, für die es in der übergeordneten Tabelle keine entsprechende Zeile gibt, führt das Einfügen der fehlenden übergeordneten Zeile nicht dazu, dass die zugehörigen Zeilen auf den Abonnenten heruntergeladen werden (bei überlappenden Partitionen würde ein Download erfolgen). Wenn z. B. die **SalesOrderDetail** -Tabelle über Zeilen ohne zugehörige Zeile in der **SalesOrderHeader** -Tabelle verfügt und Sie die fehlende Zeile in **SalesOrderHeader**einfügen, wird zwar die Zeile auf dem Abonnenten heruntergeladen, nicht aber die zugehörigen Zeilen in **SalesOrderDetail** .  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Bewährte Methoden für zeitbasierte Zeilenfilter](../../../relational-databases/replication/merge/best-practices-for-time-based-row-filters.md)   
  [Filtern von veröffentlichten Daten](../../../relational-databases/replication/publish/filter-published-data.md)   
  [Filtern veröffentlichter Daten für die Mergereplikation](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)  

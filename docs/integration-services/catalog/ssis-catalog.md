@@ -15,12 +15,12 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41ed2ef9899e4c0df7cb6aa3aa8f00ac62d6ffb2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eaae67a3d08fd899a9a73e4e853b1dbc97dba9ee
+ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535536"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53553212"
 ---
 # <a name="ssis-catalog"></a>SSIS-Katalog
   Der **SSISDB**-Katalog ist der zentrale Punkt zum Arbeiten mit [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]-Projekten (SSIS), die Sie auf dem [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]-Server bereitgestellt haben. Sie legen beispielsweise Projekt- und Paketparameter fest, konfigurieren Umgebungen, um Laufzeitwerte für Pakete anzugeben, führen Pakete aus, behandeln Paketprobleme und verwalten [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] -Servervorgänge.  
@@ -379,7 +379,7 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags**erstellt SSIS die SQL Server-A
   
 ###  <a name="options"></a> Konfigurieren der Optionen  
   
-#### <a name="options"></a>Tastatur  
+#### <a name="options"></a>enthalten  
  In der folgenden Tabelle werden spezifische Eigenschaften im Dialogfeld und die entsprechenden Eigenschaften in der `catalog.catalog_properties`-Ansicht beschrieben.  
   
 |Eigenschaftsname (Dialogfeld Katalogeigenschaften)|Eigenschaftsname (catalog.catalog_properties-Ansicht)|und Beschreibung|  
@@ -412,7 +412,7 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags**erstellt SSIS die SQL Server-A
   
     ```  
   
-3.  Sichern Sie die SSISDB-Datenbank mit dem Dialogfeld **Datenbank sichern** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Weitere Informationen finden Sie unter [Gewusst wie: Sichern einer Datenbank (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
+3.  Sichern Sie die SSISDB-Datenbank mit dem Dialogfeld **Datenbank sichern** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Weitere Informationen finden Sie unter [Vorgehensweise: Sichern einer Datenbank (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
   
 4.  Gehen Sie wie folgt vor, um das CREATE LOGIN-Skript für ##MS_SSISServerCleanupJobLogin## zu generieren. Weitere Informationen finden Sie unter [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md).  
   
@@ -436,7 +436,7 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags**erstellt SSIS die SQL Server-A
   
 ### <a name="to-restore-the-ssis-database"></a>So stellen Sie die SSIS-Datenbank wieder her  
   
-1.  Wenn Sie die SSISDB-Datenbank auf einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz wiederherstellen, auf der der SSISDB-Katalog nie erstellt wurde, aktivieren Sie Common Language Runtime (clr), indem Sie die gespeicherte Prozedur sp_configure ausführen. Weitere Informationen finden Sie unter [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) und [CLR-fähig (Option)](https://go.microsoft.com/fwlink/?LinkId=231855).  
+1.  Wenn Sie die SSISDB-Datenbank auf einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz wiederherstellen, auf der der SSISDB-Katalog nie erstellt wurde, aktivieren Sie Common Language Runtime (clr), indem Sie die gespeicherte Prozedur `sp_configure` ausführen. Weitere Informationen finden Sie unter [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) und [CLR-fähig (Option)](https://go.microsoft.com/fwlink/?LinkId=231855).  
   
     ```  
     use master   
@@ -541,10 +541,10 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags**erstellt SSIS die SQL Server-A
   
 2.  Erweitern Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]den lokalen Server und dann **Integration Services-Katalog**.  
   
-3.  Klicken Sie mit der rechten Maustaste auf **SSISDB**, und wählen Sie **Datenbankupgrade** aus, um den SSISDB-Upgrade-Assistenten zu starten.  
+3.  Klicken Sie mit der rechten Maustaste auf **SSISDB**, und wählen Sie **Datenbankupgrade** aus, um den SSISDB-Upgrade-Assistenten zu starten. Oder Starten Sie den SSISDB-Upgrade-Assistenten, indem Sie `C:\Program Files\Microsoft SQL Server\140\DTS\Binn\ISDBUpgradeWizard.exe` mit erweiterten Berechtigungen auf dem lokalen Server ausführen.
   
-     ![Starten des SSISDB-Upgrade-Assistenten](../../integration-services/service/media/ssisdb-upgrade-wizard-1.png "Starten des SSISDB-Upgrade-Assistenten")  
-  
+     ![Starten des SSISDB-Upgrade-Assistenten](../../integration-services/service/media/ssisdb-upgrade-wizard-1.png)
+
 4.  Wählen Sie auf der Seite **Instanz auswählen** eine SQL Server-Instanz auf dem lokalen Server aus.  
   
     > [!IMPORTANT]  
@@ -598,9 +598,9 @@ Bevor Sie die Always On-Unterstützung für die SSIS-Datenbank aktivieren, müss
 > -   Sie müssen die **SSIS-Unterstützung für Always On** *nach* dem Hinzufügen von SSISDB zu einer Always On-Verfügbarkeitsgruppe aktivieren.  
 
 > [!NOTE]
-> Weitere Informationen zu diesem Vorgang finden Sie in der folgenden exemplarischen Vorgehensweise, die auch zusätzliche Screenshots von Data Platform-MVP Marcos Freccia umfasst: [Adding SSISDB to AG for SQL Server 2016](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/) (Hinzufügen von SSISDB zu Verfügbarkeitsgruppen für SQL Server 2016).
+> Weitere Informationen zu diesem Vorgang finden Sie in der folgenden exemplarischen Vorgehensweise des Data Platform-MVP Marcos Freccia, die auch zusätzliche Screenshots umfasst: [Adding SSISDB to AG for SQL Server 2016 (Hinzufügen von SSISDB zu AG für SQL Server 2016)](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/).
 
-####  <a name="Step1"></a> Schritt 1: Erstellen des Integration Services-Katalogs  
+####  <a name="Step1"></a>Schritt 1: Erstellen des Integration Services-Katalogs  
   
 1.  Starten Sie **SQL Server Management Studio** , und stellen Sie eine Verbindung mit einer SQL Server-Instanz in dem Cluster her, den Sie als **primären Knoten** der Always On-Gruppe mit Hochverfügbarkeit für SSISDB festlegen möchten.  
   
@@ -610,16 +610,16 @@ Bevor Sie die Always On-Unterstützung für die SSIS-Datenbank aktivieren, müss
   
 4.  Klicken Sie auf **Automatische Ausführung gespeicherter Integration Services-Prozeduren beim Starten von SQL Server aktivieren** , um die gespeicherte [catalog.startup](../system-stored-procedures/catalog-startup.md) -Prozedur jedes Mal ausführen zu lassen, wenn die SSIS-Serverinstanz neu gestartet wird. Durch die gespeicherte Prozedur wird der Status von Vorgängen für den SSISDB-Katalog verwaltet. Dabei wird der Status aller Pakete korrigiert, die während des Ausfalls der SSIS-Serverinstanz (falls zutreffend) ausgeführt wurden.  
   
-5.  Geben Sie ein **Kennwort**ein, und klicken Sie dann auf **OK**. Das Kennwort schützt den Datenbank-Hauptschlüssel, der zum Verschlüsseln der Katalogdaten verwendet wird. Bewahren Sie das Kennwort sicher auf. Es wird empfohlen, auch den Datenbank-Hauptschlüssel zu sichern. Weitere Informationen finden Sie unter [Sichern eines Datenbank-Hauptschlüssels](../../relational-databases/security/encryption/back-up-a-database-master-key.md).  
+5.  Geben Sie ein **Kennwort**ein, und klicken Sie dann auf **OK**. Das Kennwort schützt den Datenbank-Hauptschlüssel, der zum Verschlüsseln der Katalogdaten verwendet wird. Bewahren Sie das Kennwort sicher auf. Es wird empfohlen, auch den Datenbank-Hauptschlüssel zu sichern. Weitere Informationen finden Sie unter [Back Up a Database Master Key](../../relational-databases/security/encryption/back-up-a-database-master-key.md).  
   
-####  <a name="Step2"></a> Schritt 2: Hinzufügen von SSISDB zu einer Always On-Verfügbarkeitsgruppe  
+####  <a name="Step2"></a>Schritt 2: Hinzufügen von SSISDB zu einer Always On-Verfügbarkeitsgruppe  
 Das Hinzufügen der SSISDB-Datenbank zu einer Always On-Verfügbarkeitsgruppe ist fast identisch mit dem Hinzufügen einer anderen Benutzerdatenbank zu einer Verfügbarkeitsgruppe. Weitere Informationen finden Sie unter [Verwenden des Assistenten für Verfügbarkeitsgruppen (SQL Server Management Studio)](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md).  
   
 Geben Sie das Kennwort an, das Sie beim Erstellen des SSIS-Katalogs auf der Seite **Datenbanken auswählen** im Assistenten für die **Neue Verfügbarkeitsgruppe** angegeben haben.
 
 ![Neue Verfügbarkeitsgruppe](../../integration-services/service/media/ssis-newavailabilitygroup.png "Neue Verfügbarkeitsgruppe")  
   
-####  <a name="Step3"></a> Schritt 3: Aktivieren der SSIS-Unterstützung für Always On  
+####  <a name="Step3"></a>Schritt 3: Aktivieren der SSIS-Unterstützung für Always On  
  Nach dem Erstellen des Integration Service-Katalogs klicken Sie mit der rechten Maustaste auf den Knoten **Kataloge des Integrationsdiensts**, und klicken Sie auf **Always On-Unterstützung aktivieren**. Daraufhin sollte das Dialogfeld **Unterstützung für Always On aktivieren** angezeigt werden. Wenn dieses Menüelement deaktiviert ist, vergewissern Sie sich, dass Sie alle erforderlichen Komponenten installiert haben, und klicken Sie auf **Aktualisieren**.  
   
  ![Aktivieren der Always On-Unterstützung](../../integration-services/service/media/ssis-enablesupportforalwayson.png)  
@@ -655,9 +655,9 @@ Wenn im Kontextmenü angezeigt wird, dass die Option **Always On-Unterstützung 
   
 3.  Upgraden Sie die SSISDB-Datenbank auf dem **Primärknoten**. Erweitern Sie im**Objekt-Explorer** in SQL Server Management Studio die **Integration Services-Kataloge**, klicken Sie mit der rechten Maustaste auf **SSISDB**, und wählen Sie dann **Datenbankupgrade**aus. Führen Sie die Anweisungen im **SSISDB-Upgrade-Assistenten** aus, um die Datenbank upzugraden. Starten Sie den **SSIDB-Upgrade-Assistenten** lokal auf dem **Primärknoten**.  
   
-4.  Befolgen Sie die Anweisungen in [Schritt 2: Hinzufügen von SSISDB zu einer Always On-Verfügbarkeitsgruppe](#Step2) , um die SSISDB wieder zu einer Verfügbarkeitsgruppe hinzuzufügen.  
+4.  Führen Sie die Anweisungen unter [Schritt 2: Hinzufügen von SSISDB zu einer Always On-Verfügbarkeitsgruppe](#Step2) aus, um die SSISDB wieder zu einer Verfügbarkeitsgruppe hinzuzufügen.  
   
-5.  Befolgen Sie die Anweisungen in [Schritt 3: Aktivieren der SSIS-Unterstützung für Always On](#Step3).  
+5.  Führen Sie die Anweisungen unter [Schritt 3: Aktivieren der SSIS-Unterstützung für Always On](#Step3) aus.  
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   

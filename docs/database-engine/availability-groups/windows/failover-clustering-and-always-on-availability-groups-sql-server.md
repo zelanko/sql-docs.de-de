@@ -1,6 +1,7 @@
 ---
-title: Failoverclustering und Always On-Verfügbarkeitsgruppen (SQL Server) | Microsoft-Dokumentation
-ms.custom: ''
+title: Kombinieren von Failoverclustering mit Verfügbarkeitsgruppen
+description: Verbessern Sie Ihre Hochverfügbarkeit und Notfallwiederherstellbarkeit, indem Sie die Funktionen einer SQL Server-Failoverclusterinstanz und einer Always On-Verfügbarkeitsgruppe kombinieren.
+ms.custom: seodec18
 ms.date: 07/02/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -18,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6e123661aa5b446c433b5e8813c58696bd5a7921
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0db7b259158d9d7404230405c3e72bf78e93b822
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605450"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213039"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
 
@@ -61,11 +62,11 @@ ms.locfileid: "51605450"
   
 ||Knoten in einer FCI|Replikate in einer Verfügbarkeitsgruppe|  
 |-|-------------------------|-------------------------------------------|  
-|**Verwendet WSFC-Cluster**|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|**Verwendet WSFC-Cluster**|Ja|Ja|  
 |**Schutzebene**|Instanz|Datenbank|  
 |**Speichertyp**|Shared|Nicht freigegeben<br /><br /> Obwohl die Replikate in einer Verfügbarkeitsgruppe keinen Speicher gemeinsam verwenden, verwendet ein Replikat, das von einer FCI gehostet wird, gemäß der Anforderung dieser FCI eine gemeinsame Speicherlösung. Die Speicherlösung wird nur von Knoten in dieser FCI verwendet und nicht zwischen den Replikaten der Verfügbarkeitsgruppe.|  
 |**Speicherlösungen**|Direkt angefügt, SAN, Einbindungspunkte, SMB|Hängt von Knotentyp ab|  
-|**Lesbare sekundäre**|Nein*|Benutzerkontensteuerung|  
+|**Lesbare sekundäre**|Nein*|Ja|  
 |**Anwendbare Failoverrichtlinieneinstellungen**|WSFC-Quorum<br /><br /> FCI-spezifisch<br /><br /> Verfügbarkeitsgruppeneinstellungen**|WSFC-Quorum<br /><br /> Verfügbarkeitsgruppeneinstellungen|  
 |**Failoverressourcen**|Server, Instanz und Datenbank|Nur Datenbank|  
   
@@ -115,13 +116,13 @@ ms.locfileid: "51605450"
   
      [Konfigurieren von Windows-Failoverclustering für SQL Server (Verfügbarkeitsgruppe oder Failoverclusterinstanz) mit beschränkter Sicherheit](https://blogs.msdn.microsoft.com/sqlalwayson/2012/06/05/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security/)  
   
-     [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog (SQL Server Always On-Teamblogs: Der offizielle SQL Server Always On-Teamblog)](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog (SQL Server Always On-Teamblog: Der offizielle SQL Server Always On-Teamblog)](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [CSS SQL Server-Technikblogs](https://blogs.msdn.com/b/psssql/)  
   
 -   **Whitepaper:**  
   
-     [AlwaysOn-Architekturhandbuch: Erstellen einer Lösung für hohe Verfügbarkeit und Notfallwiederherstellung unter Verwendung von Failoverclusterinstanzen und Verfügbarkeitsgruppen](https://msdn.microsoft.com/library/jj215886.aspx)  
+     [Always On-Architekturhandbuch: Erstellen einer Lösung für Hochverfügbarkeit und Notfallwiederherstellung unter Verwendung von Failoverclusterinstanzen und Verfügbarkeitsgruppen](https://msdn.microsoft.com/library/jj215886.aspx)  
   
      [Microsoft SQL Server Always On-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
@@ -129,7 +130,7 @@ ms.locfileid: "51605450"
   
      [Whitepapers des SQL Server-Kundenberatungsteams](https://sqlcat.com/)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Aktivieren und Deaktivieren von Always On-Verfügbarkeitsgruppen (SQL Server)](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)   
  [Überwachen von Verfügbarkeitsgruppen &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   

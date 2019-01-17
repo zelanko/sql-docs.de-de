@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bbedfe588a66e166f46e9240db65689a2b2a6459
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 8d2029680262934370479ef2c4ec81792a821f1d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700346"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359662"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "51700346"
 
 Steuert das Verhalten von Sperren und der Zeilenversionsverwaltung von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, die von einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgestellt wurden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## <a name="syntax"></a>Syntax
 
@@ -82,9 +82,9 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
  Das Verhalten von READ COMMITTED hängt von der Einstellung der Datenbankoption READ_COMMITTED_SNAPSHOT ab:  
   
--   Wenn READ_COMMITTED_SNAPSHOT auf OFF (Standardeinstellung) festgelegt wird, verwendet [!INCLUDE[ssDE](../../includes/ssde-md.md)] freigegebene Sperren, um zu verhindern, dass andere Transaktionen Zeilen ändern, während die aktuelle Transaktion einen Lesevorgang ausführt. Durch freigegebene Sperren wird außerdem verhindert, dass die Anweisung Zeilen, die von anderen Transaktionen geändert werden, erst nach Abschluss der anderen Transaktion lesen kann. Mit dem Typ der gemeinsamen Sperre wird festgelegt, wann die Sperre aufgehoben wird. Zeilensperren werden aufgehoben, bevor die nächste Zeile verarbeitet wird. Seitensperren werden aufgehoben, wenn die nächste Seite gelesen wird, und Tabellensperren werden aufgehoben, nachdem die Ausführung der Anweisung beendet wurde.  
+-   Wenn READ_COMMITTED_SNAPSHOT auf OFF (Standardeinstellung in SQL Server) festgelegt wird, verwendet [!INCLUDE[ssDE](../../includes/ssde-md.md)] gemeinsame Sperren, um zu verhindern, dass andere Transaktionen Zeilen ändern, während die aktuelle Transaktion einen Lesevorgang ausführt. Durch freigegebene Sperren wird außerdem verhindert, dass die Anweisung Zeilen, die von anderen Transaktionen geändert werden, erst nach Abschluss der anderen Transaktion lesen kann. Mit dem Typ der gemeinsamen Sperre wird festgelegt, wann die Sperre aufgehoben wird. Zeilensperren werden aufgehoben, bevor die nächste Zeile verarbeitet wird. Seitensperren werden aufgehoben, wenn die nächste Seite gelesen wird, und Tabellensperren werden aufgehoben, nachdem die Ausführung der Anweisung beendet wurde.  
   
--   Wenn READ_COMMITTED_SNAPSHOT auf ON festgelegt wird, verwendet [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Zeilenversionsverwaltung, um jede Anweisung mit einer hinsichtlich der Transaktionen konsistenten Momentaufnahme der Daten so darzustellen, wie sie zu Beginn der Anweisung vorhanden waren. Es werden keine Sperren verwendet, um die Daten vor Updates durch andere Transaktionen zu schützen.
+-   Wenn READ_COMMITTED_SNAPSHOT auf ON festgelegt wird (Standardeinstellung in Azure SQL-Datenbank), verwendet [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Zeilenversionsverwaltung, um jede Anweisung mit einer hinsichtlich der Transaktionen konsistenten Momentaufnahme so darzustellen, wie die Daten zu Beginn der Anweisung vorhanden waren. Es werden keine Sperren verwendet, um die Daten vor Updates durch andere Transaktionen zu schützen.
 
 > [!IMPORTANT]  
 > Das Auswählen einer Transaktionsisolationsstufe hat keine Auswirkungen auf die Sperren, die zum Schutz der Datenänderung eingerichtet werden. Eine Transaktion erhält immer eine exklusive Sperre für alle von ihr geänderten Daten und hält diese Sperre bis zum Abschluss der Transaktion aufrecht, und zwar unabhängig davon, welche Isolationsstufe für diese Transaktion festgelegt wurde. Darüber hinaus verwendet ein auf der Isolationsstufe READ_COMMITTED ausgeführtes Update Aktualisierungssperren für die ausgewählten Datenzeilen, während ein auf der Isolationsstufe SNAPSHOT ausgeführtes Update Zeilenversionen verwendet, um die zu aktualisierenden Zeilen auszuwählen. Für Lesevorgänge wird durch die Transaktionsisolationsstufen in erster Linie der Grad des Schutzes vor den Auswirkungen der Änderungen definiert, die durch andere Transaktionen vorgenommen werden. Weitere Informationen finden Sie im [Handbuch zu Transaktionssperren und Zeilenversionsverwaltung](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).
@@ -188,7 +188,7 @@ COMMIT TRANSACTION;
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [DBCC USEROPTIONS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

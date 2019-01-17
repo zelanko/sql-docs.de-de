@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42247b11f00524ba08dd74f41f11da35fdcb2026
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2a4eb946a9b851342b1f997f2b491b0b0708138c
+ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530352"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306277"
 ---
 # <a name="hints-transact-sql---query"></a>Hinweise (Transact-SQL) – Abfrage
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -153,7 +153,7 @@ ms.locfileid: "52530352"
   
  Dieser Abfragehinweis lässt die direkte Verwendung von indizierten Sichten und Indizes für indizierte Sichten im Abfrageplan praktisch nicht zu.  
   
- Die indizierte Ansicht wird nur dann nicht erweitert, wenn im SELECT-Teil der Abfrage direkt auf die Ansicht verwiesen wird und WITH (NOEXPAND) oder WITH (NOEXPAND, INDEX( *index_value* [ **,**_...n_ ] ) ) angegeben ist. Weitere Informationen zum Abfragehinweis WITH (NOEXPAND) finden Sie unter [FROM](../../t-sql/queries/from-transact-sql.md).  
+ Die indizierte Ansicht wird nur dann nicht erweitert, wenn im SELECT-Teil der Abfrage direkt auf die Ansicht verwiesen wird und WITH (NOEXPAND) oder WITH (NOEXPAND, INDEX( *index_value* [ **,**_...n_ ] ) ) angegeben ist. Weitere Informationen zum Abfragehinweis NOEXPAND finden Sie unter [Using NOEXPAND (Verwenden von NOEXPAND)](../../t-sql/queries/hints-transact-sql-table.md#using-noexpand).  
   
  Der Hinweis wirkt sich nur auf die Sichten im SELECT-Teil von Anweisungen aus, einschließlich der Sichten in den Anweisungen INSERT, UPDATE, MERGE und DELETE.  
   
@@ -287,7 +287,7 @@ ms.locfileid: "52530352"
    > [!NOTE]
    > Der Hinweis QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n überschreibt keine standardmäßigen oder älteren Einstellungen für die Kardinalitätsschätzung, wenn er durch eine datenbankweite Konfiguration, ein Ablaufverfolgungsflag oder einen anderen Abfragehinweis wie QUERYTRACEON erzwungen wurde.   
    > Dieser Hinweis betrifft nur das Verhalten des Abfrageoptimierers. Er wirkt sich nicht auf andere Features von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus, die möglicherweise vom [Datenbank-Kompatibilitätsgrad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) abhängig sind, wie z.B. die Verfügbarkeit bestimmter Datenbankfeatures.  
-   > Weitere Informationen zu diesem Hinweis finden Sie unter [Developer's Choice: Hinting Query Execution model (Developer's Choice: Modell für Hinweisabfrageausführung)](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model).
+   > Weitere Informationen zu diesem Hinweis finden Sie unter [Developer's Choice: Hinting Query Execution model (Von Entwicklern inspiriert: Modell für die Ausführung von Hinweisabfragen)](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model).
     
 *  'QUERY_PLAN_PROFILE'      
  Aktiviert einfache Profilerstellung für die Abfrage. Wenn eine Abfrage, die diesen neuen Hinweis enthält, abgeschlossen wird, wird ein neues erweitertes Ereignis, query_plan_profile, ausgelöst. Dieses erweiterte Ereignis macht Ausführungsstatistiken und ein tatsächliches Ausführungsplan-XML verfügbar, das dem erweiterten Ereignis query_post_execution_showplan ähnelt, aber nur für Abfragen, die den neuen Hinweis enthalten. **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11). 
@@ -296,7 +296,7 @@ ms.locfileid: "52530352"
   > Wenn Sie das Sammeln des erweiterten Ereignisses query_post_execution_showplan aktivieren, wird dadurch jeder Abfrage, die auf dem Server ausgeführt wird, eine Standard-Profilerstellungsinfrastruktur hinzugefügt, was die Gesamtleistung des Servers beeinträchtigen kann.      
   > Wenn Sie das Sammeln des erweiterten Ereignisses *query_thread_profile* stattdessen für die Verwendung der einfachen Profilerstellungsinfrastruktur aktivieren, führt dies zu einem wesentlich geringeren Verarbeitungsaufwand, wirkt sich aber immer noch auf die Gesamtleistung des Servers aus.       
   > Wenn Sie das erweiterte Ereignis „query_plan_profile“ aktivieren, aktiviert dies die einfache Profilerstellungsinfrastruktur nur für eine Abfrage, die mit dem QUERY_PLAN_PROFILE ausgeführt wurde, und wirkt sich deshalb nicht auf andere Workloads auf dem Server aus. Verwenden Sie diesen Hinweis, um ein Profil für eine bestimmte Abfrage zu erstellen, ohne dabei andere Teile der Serverworkload zu beeinträchtigen.
-  > Weitere Informationen zur einfachen Profilerstellung finden Sie unter [Wahl des Entwicklers: Abfragestatus: jederzeit und überall](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
+  > Weitere Informationen zur einfachen Profilerstellung finden Sie unter [Profilerstellungsinfrastruktur für Abfragen](../../relational-databases/performance/query-profiling-infrastructure.md).
  
 Die Liste aller unterstützten USE HINT-Namen kann über die dynamische Verwaltungsansicht [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) abgefragt werden.    
 
@@ -566,7 +566,7 @@ OPTION (RECOMPILE, USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES', 'DIS
 GO  
 ```  
     
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  

@@ -1,6 +1,7 @@
 ---
-title: Verfügbarkeitsgruppe nicht bereit für automatisches Failover | Microsoft-Dokumentation
-ms.custom: ''
+title: Verfügbarkeitsgruppe nicht bereit für automatischen Failover
+description: Bestimmen Sie mögliche Gründe, weshalb eine Always On-Verfügbarkeitsgruppen nicht bereit für ein Failover ist.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dec114e42921c7d7619ad3da6252d54e534826a9
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2951f586d252d058d7de542160f8b103b6a79bef
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601600"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210109"
 ---
-# <a name="availability-group-is-not-ready-for-automatic-failover"></a>Verfügbarkeitsgruppe nicht bereit für automatischen Failover
+# <a name="always-on-availability-group-is-not-ready-for-automatic-failover"></a>Die Always On-Verfügbarkeitsgruppe ist nicht für das automatische Failover bereit.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="introduction"></a>Einführung  
@@ -51,7 +52,7 @@ ms.locfileid: "51601600"
   
 -   Überprüfen Sie anhand der Richtlinie, ob die Daten einen Synchronisierungsstatus aufweisen und ob das Ziel für das automatische Failover SYNCHRONIZED lautet. Beheben Sie dann das Problem des Verfügbarkeitsreplikats.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Verwenden des AlwaysOn-Dashboards &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   

@@ -17,12 +17,12 @@ ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6ea2daec0d2926588e80ade4a5e41cc602da58b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d3094df3f5fff3a0dbeb70573236432202420224
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649358"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210539"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Einschränken der CPU-Nutzung durch die Sicherungskomprimierung mithilfe der Ressourcenkontrolle (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47649358"
 ##  <a name="setup_login_and_user"></a> Einrichten einer Anmeldung und eines Benutzers für Vorgänge mit niedriger Priorität  
  Für das Szenario in diesem Thema sind eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung und ein zugehöriger Benutzer für Vorgänge mit niedriger Priorität erforderlich. Mithilfe des Benutzernamens werden die in der Anmeldung ausgeführten Sitzungen klassifiziert und an eine Arbeitsauslastungsgruppe der Ressourcenkontrolle weitergeleitet, die die CPU-Nutzung einschränkt.  
   
- Im folgenden Verfahren werden die Schritte zum Einrichten einer Anmeldung und eines Benutzers zu diesem Zweck beschrieben. Darauf folgt das [!INCLUDE[tsql](../../includes/tsql-md.md)] -Beispiel "Beispiel A: Einrichten einer Anmeldung und eines Benutzers (Transact-SQL)".  
+ Im folgenden Verfahren werden die Schritte zum Einrichten einer Anmeldung und eines Benutzers zu diesem Zweck beschrieben. Darauf folgt das [!INCLUDE[tsql](../../includes/tsql-md.md)]-Beispiel „Beispiel A: Einrichten einer Anmeldung und eines Benutzers (Transact-SQL).“  
   
 ### <a name="to-set-up-a-login-and-database-user-for-classifying-sessions"></a>So richten Sie eine Anmeldung und einen Datenbankbenutzer zum Klassifizieren von Sitzungen ein  
   
@@ -186,7 +186,7 @@ GO
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     ```  
   
-### <a name="example-b-configuring-resource-governor-transact-sql"></a>Beispiel B: Konfigurieren der Ressourcenkontrolle (Transact-SQL)  
+### <a name="example-b-configuring-resource-governor-transact-sql"></a>Beispiel B: Konfigurieren des Resource Governor (Transact-SQL)  
  Im folgenden Beispiel werden die folgenden Schritte in einer einzelnen Transaktion ausgeführt:  
   
 1.  Der `pMAX_CPU_PERCENT_20` -Ressourcenpool wird erstellt.  
@@ -200,7 +200,7 @@ GO
  Nachdem für die Transaktion ein Commit ausgeführt wurde, werden im Beispiel alle Konfigurationsänderungen angewendet, die in der ALTER WORKLOAD GROUP-Anweisung oder der ALTER RESOURCE POOL-Anweisung angefordert wurden.  
   
 > [!IMPORTANT]  
->  Im folgenden Beispiel wird der Benutzername des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Beispielbenutzers *domain_name*`\MAX_CPU`verwendet, der unter "Beispiel A: Einrichten einer Anmeldung und eines Benutzers (Transact-SQL)" erstellt wurde. Ersetzen Sie diesen durch den Namen des Benutzers der Anmeldung, die zum Erstellen komprimierter Sicherungen mit niedriger Priorität verwendet werden soll.  
+>  Im folgenden Beispiel wird der Benutzername des Beispiel-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Benutzers verwendet, der unter „Beispiel A: Einrichten einer Anmeldung und eines Benutzers (Transact-SQL)“ als *domain_name*`\MAX_CPU` erstellt wurde. Ersetzen Sie diesen durch den Namen des Benutzers der Anmeldung, die zum Erstellen komprimierter Sicherungen mit niedriger Priorität verwendet werden soll.  
   
 ```sql  
 -- Configure Resource Governor.  
@@ -280,7 +280,7 @@ GO
   
  [&#91;Nach oben&#93;](#Top)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen und Testen einer benutzerdefinierten Klassifizierungsfunktion](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)   
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  
   

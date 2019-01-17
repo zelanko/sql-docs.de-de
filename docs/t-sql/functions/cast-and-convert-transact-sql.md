@@ -36,12 +36,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 267e1c145a6a67976f1d057c0c98186f192f9247
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: 513ccaf7c50b7ca08d6651d516a4b5265d86d7fe
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52191070"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210781"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST und CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -72,7 +72,7 @@ SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int,
 
 **Weitere Informationen finden Sie in den [Beispielen](#BKMK_examples)** weiter unten in diesem Thema. 
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -103,7 +103,7 @@ Gibt *expression* zurück, der in *data_type* übersetzt wurde.
 ## <a name="date-and-time-styles"></a>Datums- und Uhrzeitformate  
 Bei dem Datums- oder Uhrzeitdatentyp *expression* kann *style* einer der in der folgenden Tabelle aufgelisteten Werte sein. Andere Werte werden als 0 verarbeitet. Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] sind die einzigen Formate, die bei der Konvertierung von Datums- und Uhrzeittypen in **datetimeoffset** unterstützt werden, 0 oder 1. Bei allen anderen Konvertierungsformaten wird der Fehler 9809 zurückgegeben.
   
->  [!NOTE]  
+> [!NOTE]
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt das Datumsformat im arabischem Format, indem der kuwaitische Algorithmus verwendet wird.
   
 |Ohne Jahrhundert (jj) (<sup>1</sup>)|Mit Jahrhundert (jjjj)|Standard|Eingabe/Ausgabe (<sup>3</sup>)|  
@@ -125,8 +125,8 @@ Bei dem Datums- oder Uhrzeitdatentyp *expression* kann *style* einer der in der 
 |**14**|**114**|-|hh:mi:ss:mmm(24h)|  
 |-|**20** oder **120** (<sup>2</sup>)|ODBC kanonisch|jjjj-mm-tt hh:mi:ss(24h)|  
 |-|**21** oder **121** (<sup>2</sup>)|ODBC kanonisch (mit Millisekunden) Standard für time, date, datetime2 und datetimeoffset|jjjj-mm-tt hh:mi:ss.mmm(24h)|  
-|-|**126** (<sup>4</sup>)|ISO8601|jjjj-mm-ttThh:mi:ss.mmm (keine Leerzeichen)<br /><br /> Hinweis: Bei einem Millisekundenwert (mmm) von 0, wird der Dezimalbruch des Millisekundenwerts nicht angezeigt. Beispielsweise wird der Wert „2012-11-07T18:26:20.000“ als „2012-11-07T18:26:20“ angezeigt.|  
-|-|**127**(<sup>6, 7</sup>)|ISO8601 mit Zeitzone (Z).|jjjj-mm-ttThh:mi:ss.mmmZ (keine Leerzeichen)<br /><br /> Hinweis: Bei einem Millisekundenwert (mmm) von 0, wird der dezimale Millisekundenwert nicht angezeigt. Beispielsweise wird der Wert „2012-11-07T18:26:20.000“ als „2012-11-07T18:26:20“ angezeigt.|  
+|-|**126** (<sup>4</sup>)|ISO8601|jjjj-mm-ttThh:mi:ss.mmm (keine Leerzeichen)<br /><br /> Hinweis: Bei einem Millisekundenwert (mmm) von 0 wird der Dezimalbruch des Millisekundenwerts nicht angezeigt. Beispielsweise wird der Wert „2012-11-07T18:26:20.000“ als „2012-11-07T18:26:20“ angezeigt.|  
+|-|**127**(<sup>6, 7</sup>)|ISO8601 mit Zeitzone (Z).|jjjj-mm-ttThh:mi:ss.mmmZ (keine Leerzeichen)<br /><br /> Hinweis: Bei einem Millisekundenwert (mmm) von 0 wird der dezimale Millisekundenwert nicht angezeigt. Beispielsweise wird der Wert „2012-11-07T18:26:20.000“ als „2012-11-07T18:26:20“ angezeigt.|  
 |-|**130** (<sup>1,</sup><sup>2</sup>)|Hijri (<sup>5</sup>)|tt mon jjjj hh:mi:ss:mmmAM<br /><br /> In diesem Format entspricht **mon** dem vollständigen Monatsnamen in Form einer Hijri-Unicode-Darstellung mit mehreren Token. In einer standardmäßigen US-Installation von SSMS wird dieser Wert nicht ordnungsgemäß gerendert.|  
 |-|**131** (<sup>2</sup>)|Hijri (<sup>5</sup>)|tt/mm/jjjj hh:mi:ss:mmmAM|  
   
@@ -167,9 +167,9 @@ Bei dem **Ausdruck** **money** oder *smallmoney* kann *style* einer der in der f
   
 |value|Ausgabe|  
 |---|---|
-|**0** (Standardwert)|Links vom Dezimaltrennzeichen werden keine Tausendertrennzeichen eingefügt, rechts vom Dezimaltrennzeichen stehen zwei Ziffern<br /><br />Beispiel: 4235,98.|  
-|**1**|Links vom Dezimaltrennzeichen werden Tausendertrennzeichen eingefügt, rechts vom Dezimaltrennzeichen stehen zwei Ziffern<br /><br />Beispiel: 3.510,92.|  
-|**2**|Links vom Dezimaltrennzeichen werden keine Tausendertrennzeichen eingefügt, rechts vom Dezimaltrennzeichen stehen vier Ziffern<br /><br />Beispiel: 4235,9819.|  
+|**0** (Standardwert)|Links vom Dezimaltrennzeichen werden keine Tausendertrennzeichen eingefügt, rechts vom Dezimaltrennzeichen stehen zwei Ziffern<br /><br />Beispiel: 4235.98.|  
+|**1**|Links vom Dezimaltrennzeichen werden Tausendertrennzeichen eingefügt, rechts vom Dezimaltrennzeichen stehen zwei Ziffern<br /><br />Beispiel: 3,510.92.|  
+|**2**|Links vom Dezimaltrennzeichen werden keine Tausendertrennzeichen eingefügt, rechts vom Dezimaltrennzeichen stehen vier Ziffern<br /><br />Beispiel: 4235.9819.|  
 |**126**|Entspricht Format 2 bei der Konvertierung in char(n) oder varchar(n)|  
   
 ## <a name="xml-styles"></a>xml-Formate
@@ -177,7 +177,7 @@ Wenn **expression** *xml* ist, kann *style* einen der in der folgenden Tabelle a
   
 |value|Ausgabe|  
 |---|---|
-|**0** (Standardwert)|Standardanalyseverhalten verwenden, bei dem bedeutungslose Leerzeichen verworfen werden und interne DTD-Teilmengen nicht zulässig sind.<br /><br />**Hinweis:** Beim Konvertieren in den **xml**-Datentyp werden bedeutungslose Leerzeichen aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anders behandelt als in XML 1.0. Weitere Informationen finden Sie unter [Erstellen von Instanzen der XML-Daten](../../relational-databases/xml/create-instances-of-xml-data.md).|  
+|**0** (Standardwert)|Standardanalyseverhalten verwenden, bei dem bedeutungslose Leerzeichen verworfen werden und interne DTD-Teilmengen nicht zulässig sind.<br /><br />**Hinweis:** Beim Konvertieren in den **XML**-Datentyp werden bedeutungslose Leerzeichen aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anders behandelt als in XML 1.0. Weitere Informationen finden Sie unter [Erstellen von Instanzen der XML-Daten](../../relational-databases/xml/create-instances-of-xml-data.md).|  
 |**1**|Bedeutungslose Leerzeichen erhalten. Mit dieser Formateinstellung wird festgelegt, dass die Standardbehandlung **xml:space** dem Verhalten von **xml:space="preserve"** entspricht.|  
 |**2**|Begrenzte interne DTD-Teilmengenverarbeitung aktivieren.<br /><br /> Bei Aktivierung kann der Server die folgenden Informationen, die in einer internen DTD-Teilmenge bereitgestellt werden, zur Ausführung von Analysevorgängen ohne Überprüfungscharakter verwenden.<br /><br />   – Für Attribute werden die Standardwerte angewendet<br />   – Interne Entitätsverweise werden aufgelöst und erweitert<br />   – Das DTD-Inhaltsmodell wird auf seine syntaktische Richtigkeit überprüft<br /><br /> Der Parser ignoriert externe DTD-Teilmengen. Darüber hinaus nimmt er keine Bewertung der XML-Deklaration vor, um zu überprüfen, ob das **eigenständige** Attribut den Wert **Ja** oder **Nein** aufweist. Stattdessen analysiert er die XML-Instanz wie ein eigenständiges Dokument.|  
 |**3**|Bedeutungslose Leerzeichen erhalten und die Verarbeitung begrenzter interner DTD-Teilmengen aktivieren.|  
@@ -326,7 +326,7 @@ In der folgenden Tabelle werden die Formate aufgelistet, bei denen die Konvertie
   
 <sup>1</sup> Mit Ausnahme der Formate 20 und 21
 
-Weitere Informationen finden Sie unter [Nondeterministic conversion of literal date strings into DATE values (Nicht deterministische Konvertierung von Datumsliteralzeichenfolgen in DATE-Werte)](../data-types/nondeterministic-convert-date-literals.md)
+Weitere Informationen finden Sie unter [Nondeterministic conversion of literal date strings into DATE values (Nicht deterministische Konvertierung von Datumsliteralzeichenfolgen in DATE-Werte)](../data-types/nondeterministic-convert-date-literals.md).
 
 ## <a name="supplementary-characters-surrogate-pairs"></a>Ergänzende Zeichen (Ersatzpaare)
 Wenn Sie in Versionen ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Sortierungen ergänzender Zeichen verwenden, wird ein CAST-Vorgang von **nchar** oder **nvarchar** zu einem **nchar**- oder **nvarchar**-Typ von geringerer Länge in einem Ersatzzeichenpaar nicht abgeschnitten. Stattdessen wird er vor dem ergänzenden Zeichen abgeschnitten. Im folgenden Codefragment wird `@x` z. B. weggelassen, sodass nur `'ab'` erhalten bleibt. Es ist nicht genügend Platz für das ergänzende Zeichen vorhanden.

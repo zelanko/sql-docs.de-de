@@ -34,12 +34,12 @@ ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e8c19200923dc21e3000263095438a65b63a019a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 840b6e513e5a1c1cd9408134ced29ac3c22464c5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684738"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202619"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Sicherungsverlauf und Headerinformationen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ ms.locfileid: "47684738"
  Weitere Informationen finden Sie unter [Vergleich von Medienheader- und Sicherungsheaderinformationen](#CompareMediaHeaderBackupHeader)weiter unten in diesem Thema.  
   
 ##  <a name="BackupHeader"></a> Sicherungsheaderinformationen  
- Mit dem Sicherungsheader werden Informationen zu allen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungssätzen und zu allen Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungssätzen auf dem Medium angezeigt. Zu den angezeigten Informationen zählen die Typen der verwendeten Sicherungsmedien, die Sicherungstypen (beispielsweise Datenbank, Transaktion, Datei oder differenzielle Datenbank) sowie Informationen zum Anfangs- und Enddatum als auch zur Anfangs- und Beendigungszeit der Sicherung. Diese Informationen sind dann nützlich, wenn Sie bestimmen müssen, welcher Sicherungssatz auf dem Band wiederhergestellt werden soll oder welche Sicherungen auf dem Medium enthalten sind.  
+ Mit dem Sicherungsheader werden Informationen zu allen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherungssätzen und zu allen Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherungssätzen auf dem Medium angezeigt. Zu den angezeigten Informationen zählen die Typen der verwendeten Sicherungsmedien, die Sicherungstypen (beispielsweise Datenbank, Transaktion, Datei oder differenzielle Datenbank) sowie Informationen zum Anfangs- und Enddatum als auch zur Anfangs- und Beendigungszeit der Sicherung. Diese Informationen sind dann nützlich, wenn Sie bestimmen müssen, welcher Sicherungssatz auf dem Band wiederhergestellt werden soll oder welche Sicherungen auf dem Medium enthalten sind.  
   
 > [!NOTE]  
 >  Das Anzeigen der Sicherungsheaderinformationen kann bei Bändern mit großen Kapazitäten einige Zeit in Anspruch nehmen, da das gesamte Medium gescannt werden muss, damit Informationen zu einzelnen Sicherungen auf dem Medium angezeigt werden können.  
@@ -219,7 +219,7 @@ ms.locfileid: "47684738"
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A> (SMO)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Mediensätze, Medienfamilien und Sicherungssätze &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 20bcd05c479debbbb17883d354390899c1a1f10c
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: e4d15a3762c94d8a4daa6bb1837a2fd89be8fb88
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712521"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791752"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Erstellen eines datengesteuerten Abonnements (SSRS-Lernprogramm)
 In diesem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Tutorial lernen Sie die Konzepte von datengesteuerten Abonnements kennen, indem Sie durch ein einfaches Beispiel geführt werden, in dem ein datengesteuertes Abonnement erstellt wird, das zum Generieren und Speichern einer gefilterten Berichtsausgabe in eine Dateifreigabe verwendet wird. 
@@ -34,7 +34,7 @@ In diesem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Tutorial le
  ------- | --------------
  [Lektion 1: Erstellen einer Beispiel-Abonnentendatenbank](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md) | In dieser Lektion erstellen Sie eine lokale [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank, die Abonnenteninformationen enthält. Die Bestellnummern, die zum Filtern und Ausgeben von Dateiformaten verwendet wird.
 [Lektion 2: Ändern der Eigenschaften der Berichtsdatenquelle](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md) |In dieser Lektion konfigurieren Sie eine Berichtsdatenquelleneigenschaft, sodass der Bericht unbeaufsichtigt ausgeführt werden kann. Für die unbeaufsichtigte Verarbeitung sind gespeicherte Anmeldeinformationen erforderlich. Sie ändern auch das Berichtsdataset, um einen Parameter einzuschließen, der von den Abonnentendaten angegeben wird. Dieser Parameter wird verwendet, um die Berichtsdaten anhand der Bestellnummer zu filtern.
- [Lektion 3: Definieren eines datengesteuerten Abonnements](../reporting-services/lesson-3-defining-a-data-driven-subscription.md) | In dieser Lektion erstellen Sie ein datengesteuertes Abonnement. In dieser Lektion werden Sie durch die einzelnen Seiten im Assistenten für das datengesteuerte Abonnement geführt.
+ [Lektion 3: Erstellen eines datengesteuerten Abonnements](../reporting-services/lesson-3-defining-a-data-driven-subscription.md) | In dieser Lektion erstellen Sie ein datengesteuertes Abonnement. In dieser Lektion werden Sie durch die einzelnen Seiten im Assistenten für das datengesteuerte Abonnement geführt.
 
  Im folgenden Diagramm wird der im Tutorial verwendete grundlegende Workflow veranschaulicht.
 
@@ -70,9 +70,9 @@ Auf Ihrem Computer müssen für die Verwendung dieses Lernprogramms folgende Anw
   
 -   Ein freigegebener Ordner, für den Sie Schreibberechtigungen besitzen. Auf den freigegebenen Ordner muss über eine Netzwerkverbindung zugegriffen werden können.  
   
-**Ungefähre Dauer dieses Tutorials:** 30 Minuten. Zusätzliche 30 Minuten werden benötigt, wenn Sie das Lernprogramm für grundlegende Berichte nicht abgeschlossen haben.  
+**Ungefähre Dauer dieses Tutorials:** 30 Minuten Zusätzliche 30 Minuten werden benötigt, wenn Sie das Lernprogramm für grundlegende Berichte nicht abgeschlossen haben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Data-Driven Subscriptions](../reporting-services/subscriptions/data-driven-subscriptions.md)  
 [Erstellen eines einfachen Tabellenberichts &#40;SSRS-Tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
  

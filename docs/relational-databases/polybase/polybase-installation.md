@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f77ab925ebfba6ab1d3fd524d7d740eca58fcba6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3c08f8cb48e22ba5ca1546f9fcca63f77868b356
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523477"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208799"
 ---
 # <a name="install-polybase-on-windows"></a>Installieren von PolyBase unter Windows
 
@@ -36,18 +36,18 @@ Besuchen Sie [SQL Server Evaluation](https://www.microsoft.com/evalcenter/evalua
    
 - Mindestgröße des Festplattenspeichers: 2 GB
   
-- Empfohlen: Mindestens 16 GB RAM
+- Empfehlenswert: Mindestens 16 GB RAM
    
 - Für PolyBase muss TCP/IP aktiviert sein, um ordnungsgemäß funktionieren zu können. TCP/IP ist standardmäßig in allen Editionen von SQL Server aktiviert. Davon ausgenommen sind nur die Editionen Developer und Express SQL Server. Damit PolyBase auch in den Developer- und Express-Versionen ordnungsgemäß funktionieren kann, müssen Sie die TCP/IP-Konnektivität aktivieren. Weitere Informationen finden Sie unter [Aktivieren oder Deaktivieren eines Servernetzwerkprotokolls](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 
 - MSVC++ 2012 
 
-> [!NOTE]  
-
+> [!NOTE]
+> 
 > PolyBase kann nur auf einer SQL Server-Instanz pro Computer installiert werden.
-
+> 
 > [!IMPORTANT]
->
+> 
 > Wenn Sie die Weitergabeberechnungsfunktion für Hadoop verwenden möchten, muss der Hadoop-Zielcluster über die Kernkomponenten von HDFS (Hadoop Distributed File System), YARN und MapReduce verfügen. Dabei muss der Auftragsverlaufserver aktiviert sein. PolyBase übermittelt die Weitergabeabfrage über MapReduc und ruft den Status über den Auftragsverlaufserver ab. Wenn keine dieser Komponenten vorhanden ist, tritt bei der Abfrage ein Fehler auf.
   
 ## <a name="single-node-or-polybase-scale-out-group"></a>Einzelknoten oder PolyBase-Erweiterungsgruppe

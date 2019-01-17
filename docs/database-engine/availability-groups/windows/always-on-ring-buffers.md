@@ -1,6 +1,7 @@
 ---
-title: Ringpuffer für Always On-Verfügbarkeitsgruppen (SQL Server) | Microsoft-Dokumentation
-ms.custom: ag-guide
+title: Verwenden von Ringpuffern zum Abrufen von Integritätsinformationen für Verfügbarkeitsgruppen
+description: Hier erfahren Sie, wie Sie Diagnoseinformationen für Always On-Verfügbarkeitsgruppen mithilfe von SQL Server-Ringpuffern abrufen können.
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: 47bb7a1a-c0a5-473c-a7db-d9f4bf3ee650
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1bc5ccc83285ead5a5d5de55742380d0af5766b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 26f6cd91a0b2af905d863d398245c672657092dd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642390"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208299"
 ---
-# <a name="always-on-availability-groups-ring-buffers"></a>Ringpuffer für Always On-Verfügbarkeitsgruppen
+# <a name="use-ring-buffers-to-obtain-health-information-about-always-on-availability-groups"></a>Verwenden von Ringpuffern zum Abrufen von Integritätsinformationen für Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Sie können Diagnoseinformationen zu Always On-Verfügbarkeitsgruppen über SQL Server-Ringpuffer oder über die dynamische Verwaltungssicht „sys.dm_os_ring_buffers“ abrufen. Ringpuffer werden während des Starts von SQL Server erstellt und melden Warnungen innerhalb des SQL Server-Systems für die interne Diagnose. Sie werden nicht unterstützt, aber Sie können trotzdem während der Problembehandlung nützliche Informationen daraus ziehen. Diese Ringpuffer bieten eine weitere Möglichkeit zum Erhalt von Diagnosedaten, wenn SQL Server nicht mehr reagiert oder abgestürzt ist.  
   

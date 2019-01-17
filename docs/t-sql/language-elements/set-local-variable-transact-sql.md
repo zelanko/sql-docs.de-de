@@ -19,19 +19,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 839ef762a20d413f5e1c61ca45c46ad80a153d99
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b29291d808b643f9ac66491ae200d6169eb5232a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697326"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589634"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Legt die angegebene lokale Variable, die zuvor mit der Anweisung DECLARE @*local_variable* erstellt wurde, auf den angegebenen Wert fest.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -71,7 +71,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **@** *local_variable*  
+ **@** _local_variable_  
  Der Name einer Variablen eines beliebigen Typs mit Ausnahme von **cursor**, **text**, **ntext**, **image** oder **table**. Variablennamen müssen mit einem at-Zeichen (**@**) beginnen. Variablennamen müssen den Regel für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen.  
   
  *property_name*  
@@ -86,10 +86,10 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  { **.** | **::** }  
  Gibt eine Methode für einen benutzerdefinierten CLR-Typ an. Verwenden Sie bei einer Instanzmethode (nicht statisch) einen Punkt (**.**). Verwenden Sie bei einer statischen Methode zwei Doppelpunkte(**::**). Zum Aufrufen einer Methode, Eigenschaft oder eines Felds eines CLR-benutzerdefinierten Typs müssen Sie über die EXECUTE-Berechtigung für den Typ verfügen.  
   
- *method_name* **(** *argument* [ **,**... *n* ] **)**  
+ _method_name_ **(** _argument_ [ **,**... *n* ] **)**  
  Eine Methode eines benutzerdefinierten Typs, der ein oder mehrere Argumente übergeben werden, um den Status einer Instanz eines Typs zu ändern. Statische Methoden müssen öffentlich sein.  
   
- **@** *SQLCLR_local_variable*  
+ **@** _SQLCLR_local_variable_  
  Eine Variable, deren Typ sich in einer Assembly befindet. Weitere Informationen finden Sie unter [Common Language Runtime &#40;CLR&#41; Programmierkonzepte für die Integration](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md).  
   
  *mutator_method*  
@@ -127,7 +127,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  Gibt an, dass die SET-Anweisung eine Cursordeklaration enthält.  
   
  SCROLL  
- Gibt an, dass der Cursor alle FETCH-Optionen unterstützt (FIRST, LAST, NEXT, PRIOR, RELATIVE und ABSOLUTE). Es kann nur eine der beiden Optionen SCROLL oder FAST_FORWARD angegeben werden.  
+ Gibt an, dass der Cursor alle FETCH-Optionen unterstützt: FIRST, LAST, NEXT, PRIOR, RELATIVE und ABSOLUTE. Es kann nur eine der beiden Optionen SCROLL oder FAST_FORWARD angegeben werden.  
   
  FORWARD_ONLY  
  Gibt an, dass der Cursor nur die Option FETCH NEXT unterstützt. Der Cursor kann nur in einer Richtung abgerufen werden, von der ersten zur letzten Zeile. Wenn FORWARD_ONLY ohne die Schlüsselwörter STATIC, KEYSET oder DYNAMIC angegeben wird, wird der Cursor mit der Option DYNAMIC implementiert. Wenn weder FORWARD_ONLY noch SCROLL angegeben wird, wird standardmäßig FORWARD_ONLY verwendet, es sei denn, die Schlüsselwörter STATIC, KEYSET oder DYNAMIC werden angegeben. STATIC-, KEYSET- und DYNAMIC-Cursor werden standardmäßig auf SCROLL festgelegt.  
@@ -178,7 +178,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  Variablen können nur in Ausdrücken verwendet werden, nicht anstelle von Objektnamen oder Schlüsselwörtern. Um dynamische [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen zu erstellen, verwenden Sie EXECUTE.  
   
- Die Syntaxregeln für SET **@***cursor_variable* schließen nicht die Schlüsselwörter LOCAL und GLOBAL ein. Wenn die Syntax SET **@***cursor_variable* = CURSOR... verwendet wird, wird der Cursor je nach Einstellung der Datenbankoption „default to local cursor“ als GLOBAL oder LOCAL erstellt.  
+ Die Syntaxregeln für SET **@**_cursor_variable_ schließen nicht die Schlüsselwörter LOCAL und GLOBAL ein. Wenn die Syntax SET **@**_cursor_variable_ = CURSOR... verwendet wird, wird der Cursor je nach Einstellung der Datenbankoption „default to local cursor“ als GLOBAL oder LOCAL erstellt.  
   
  Cursorvariablen sind stets lokal, selbst wenn sie auf einen globalen Cursor verweisen. Wenn eine Cursorvariable auf einen globalen Cursor verweist, besitzt der Cursor einen globalen und einen lokalen Verweis. Weitere Informationen finden Sie unter Beispiel C.  
   
@@ -189,7 +189,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  Verwenden Sie keine Variable in einer SELECT-Anweisung, um Werte zu verketten (d. h., um Aggregatwerte zu berechnen). Dies kann zu unerwarteten Abfrageergebnissen führen. Dies liegt daran, dass nicht gewährleistet ist, dass alle Ausdrücke in der SELECT-Liste (einschließlich Zuweisungen) für jede Ausgabezeile exakt einmal ausgeführt werden. Weitere Informationen finden Sie in diesem [KB-Artikel](https://support.microsoft.com/kb/287515).  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der public-Rolle. Alle Benutzer können SET **@***local_variable* verwenden.  
+ Erfordert die Mitgliedschaft in der public-Rolle. Alle Benutzer können SET **@**_local_variable_ verwenden.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -363,7 +363,7 @@ SET @rows = (SELECT COUNT(*) FROM dbo.DimCustomer);
 SELECT TOP 1 @rows FROM sys.tables;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verbundoperatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [DEKLARIEREN SIE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   

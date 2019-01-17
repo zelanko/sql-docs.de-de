@@ -5,21 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Transactions
 - Transactions object
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 31753573d5033a4310c039f016211fa023378e5b
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: 07b4c7d08816d84f3e1273f3fcdcf5324602cfc0
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158788"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380551"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, Transaktionen-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "52158788"
 |**Freier Speicherplatz in tempdb (KB)**|Der verfügbare Speicherplatz (in Kilobytes) in **tempdb**. Es muss ausreichend Speicherplatz zur Aufnahme des Momentaufnahmeisolationsstufen-Versionsspeichers und aller neuer temporärer Objekte vorhanden sein, die in der Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]erstellt worden sind.|  
 |**Längste Transaktionsausführungszeit**|Die verstrichene Zeit (in Sekunden) seit dem Start der Transaktion, die länger aktiv war als alle anderen aktuellen Transaktionen. Dieser Leistungsindikator zeigt nur Aktivität an, wenn die Datenbank unter der READ_COMMITTED_SNAPSHOT-Isolationsstufe ausgeführt wird. Es werden keine Aktivitäten protokolliert, wenn die Datenbank eine andere Isolationsstufe aufweist.|  
 |**NonSnapshot-Versionstransaktionen**|Die Anzahl der aktuell aktiven Transaktionen, die keine Momentaufnahmeisolationsstufe verwenden und von denen keine Änderungen ausgeführt worden sind, die Zeilenversionen im **tempdb** -Versionsspeicher generiert haben.|  
-|**Momentaufnahmetransaktionen**|Die Anzahl aktuell aktiver Transaktionen, die die Momentaufnahmeisolationsstufe verwenden.<br /><br /> Hinweis: Der **Momentaufnahmetransaktionen** -Objektleistungsindikator reagiert, wenn der erste Datenzugriff auftritt, nicht wenn die `BEGIN TRANSACTION` -Anweisung ausgegeben wird.|  
+|**Momentaufnahmetransaktionen**|Die Anzahl aktuell aktiver Transaktionen, die die Momentaufnahmeisolationsstufe verwenden.<br /><br /> Hinweis: Der Objektindikator für **Momentaufnahmetransaktionen** reagiert, wenn der erste Datenzugriff auftritt, nicht wenn die `BEGIN TRANSACTION`-Anweisung ausgegeben wird.|  
 |**Transaktionen**|Die Anzahl aktuell aktiver Transaktionen aller Typen.|  
 |**Updatekonfliktquote**|Der Prozentsatz derjenigen Transaktionen, die die Momentaufnahmeisolationsstufe verwenden und bei denen innerhalb der letzten Sekunde Updatekonflikte aufgetreten sind. Ein Updatekonflikt tritt auf, wenn von einer Momentaufnahmeisolationsstufen-Transaktion der Versuch unternommen wird, eine Zeile zu ändern, die zuletzt von einer anderen Transaktion geändert wurde, für die kein Commit ausgeführt worden ist, als die Momentaufnahmeisolationsstufen-Transaktion gestartet wurde.|  
 |**Basis der Updatekonfliktquote**|Nur zur internen Verwendung.|
@@ -48,7 +48,7 @@ ms.locfileid: "52158788"
 |**Erstellung von Versionsspeichereinheiten**|Die Anzahl der Zuordnungseinheiten, die seit dem Start der Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] im Momentaufnahmeisolationsspeicher erstellt worden sind.|  
 |**Abschneiden von Versionsspeichereinheiten**|Die Anzahl der Zuordnungseinheiten, die seit dem Start der Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] aus dem Momentaufnahmeisolationsspeicher entfernt worden sind.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

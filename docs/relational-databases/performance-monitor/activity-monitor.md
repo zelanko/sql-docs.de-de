@@ -5,26 +5,26 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Activity Monitor [SQL Server]
 ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 533838b933cbe41e868f921bee6eafe14df44def
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: 540774d3b6e41bdadc4f7e9cb06a8302f29f7ff5
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158018"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380381"
 ---
 # <a name="activity-monitor"></a>Aktivitätsmonitor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Im Aktivitätsmonitor werden Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozessen angezeigt sowie Informationen dazu, welche Auswirkungen diese Prozesse auf die aktuelle Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]haben.  
   
- Der Aktivitätsmonitor ist ein Dokumentfenster im Registerformat mit den folgenden erweiterbaren und reduzierbaren Bereichen: **Übersicht**, **Aktive Benutzertasks**, **Ressourcenwartevorgänge**, **Datendatei-E/A**und **Aktuelle wertvolle Abfragen**. Wenn ein Bereich erweitert wird, fragt der Aktivitätsmonitor die Instanz nach Informationen ab. Wenn ein Bereich reduziert wird, werden sämtliche Abfrageaktivitäten für diesen Bereich angehalten. Sie können einen oder mehrere Bereiche gleichzeitig erweitern, um unterschiedliche Aktivitätstypen für die Instanz anzuzeigen.  
+ Der Aktivitätsmonitor ist ein Dokumentfenster im Registerkartenformat, in dem folgende Bereiche erweitert und reduziert werden können: **Übersicht**, **Active User Tasks** (Aktive Benutzertasks), **Ressourcenwartevorgänge**, **Datendatei-E/A** und **Letzte ressourcenintensive Abfragen**. Wenn ein Bereich erweitert wird, fragt der Aktivitätsmonitor die Instanz nach Informationen ab. Wenn ein Bereich reduziert wird, werden sämtliche Abfrageaktivitäten für diesen Bereich angehalten. Sie können einen oder mehrere Bereiche gleichzeitig erweitern, um unterschiedliche Aktivitätstypen für die Instanz anzuzeigen.  
  
  ## <a name="customize-columns"></a>Anpassen von Spalten 
  Für die Spalten in den Bereichen **Aktive Benutzertasks**, **Ressourcenwartevorgänge**, **Datendatei-E/A**und **Aktuelle wertvolle Abfragen** können Sie die Anzeige auf folgende Weise anpassen:  

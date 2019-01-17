@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - free-form attributes [Master Data Services]
@@ -19,12 +18,12 @@ ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4a1469df51ddfebdbbe08c177f3f7a4a0b130fd3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d782a7863d8e6ed029a201b4b309817d2e2a12c8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796060"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813362"
 ---
 # <a name="attributes-master-data-services"></a>Attribute (Master Data Services)
 
@@ -63,7 +62,7 @@ ms.locfileid: "47796060"
 -   Bei einem mithilfe von Gleitkommazahlen berechneten Wert liefert eine *Gegenprobe* möglicherweise ein abweichendes Ergebnis. Der Begriff Roundtrip wird in Bezug auf einen Wert verwendet, wenn ein Vorgang eine ursprüngliche Gleitkommazahl in ein anderes Format konvertiert, ein umgekehrter Vorgang das konvertierte Format zurück zu einer Gleitkommazahl überträgt und die endgültige Gleitkommazahl mit der ursprünglichen Gleitkommazahl übereinstimmt. Der Roundtrip kann fehlschlagen, wenn eine oder mehrere Ziffern am Ende des Werts bei der Konvertierung verloren gehen oder geändert werden.  
   
 ## <a name="attribute-examples"></a>Attributbeispiele  
- Im folgenden Beispiel verfügt die Entität über folgende Attribute: Name, Code, Subcategory, StandardCost, ListPrice und FilePhoto. Diese Attribute beschreiben die Elemente. Jedes Element wird durch eine einzelne Zeile mit Attributwerten dargestellt.  
+ Im folgenden Beispiel weist die Entität die folgenden Attribute auf: Name, Code, Subcategory, StandardCost, ListPrice und FilePhoto. Diese Attribute beschreiben die Elemente. Jedes Element wird durch eine einzelne Zeile mit Attributwerten dargestellt.  
   
  ![Entitätstabelle für Fahrradprodukte](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike Product Entity Table")  
   

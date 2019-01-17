@@ -21,22 +21,22 @@ ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7ff691e764392c65a49dc5527f8a44f8d036ac59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1ede86329f0082bac1927ca0c75fc64d6116a56
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853288"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591714"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>Ausführungsplan und Pufferzuordnung
   Vor der Ausführung überprüft der Datenflusstask seine Komponenten und erstellt einen Ausführungsplan für jede Komponentensequenz. Dieser Abschnitt enthält Einzelheiten zum Ausführungsplan, zur Anzeige des Plans und zur Zuweisung von Eingabe- und Ausgabepuffern anhand des Plans.  
   
 ## <a name="understanding-the-execution-plan"></a>Grundlegendes zum Ausführungsplan  
- Ein Ausführungsplan enthält Quell- und Arbeitsthreads. Diese umfassen jeweils Arbeitslisten, die bei Quellthreads Ausgabearbeitslisten und bei Arbeitsthreads Eingabe- und Ausgabearbeitslisten festlegen. Die Quellthreads eines Ausführungsplans stellen die Quellkomponenten im Datenfluss dar. Sie sind im Ausführungsplan durch *SourceThread**n* gekennzeichnet, wobei *n* die nullbasierte Nummer des Quellthreads ist.  
+ Ein Ausführungsplan enthält Quell- und Arbeitsthreads. Diese umfassen jeweils Arbeitslisten, die bei Quellthreads Ausgabearbeitslisten und bei Arbeitsthreads Eingabe- und Ausgabearbeitslisten festlegen. Die Quellthreads eines Ausführungsplans stellen die Quellkomponenten im Datenfluss dar. Sie sind im Ausführungsplan durch *SourceThreadn* gekennzeichnet, wobei *n* die nullbasierte Nummer des Quellthreads darstellt.  
   
  Jeder Quellthread erstellt einen Puffer, legt eine Überwachung fest und ruft die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>-Methode der Quellkomponente auf. Dies ist der Punkt, an dem die Ausführung beginnt und von dem die Daten stammen. Die Quellkomponente beginnt, den Ausgabepuffern Zeilen hinzuzufügen, die vom Datenflusstask bereitgestellt werden. Sobald die Quellthreads ausgeführt werden, wird die Arbeitslast auf die Arbeitsthreads aufgeteilt.  
   
- Ein Arbeitsthread kann sowohl Eingabe- als auch Ausgabearbeitslisten enthalten und wird im Ausführungsplan mit *WorkThread**n* gekennzeichnet, wobei *n* die nullbasierte Nummer des Arbeitsthreads ist. Diese Threads enthalten Ausgabearbeitslisten, wenn das Diagramm eine Komponente mit asynchronen Ausgaben enthält.  
+ Ein Arbeitsthread kann sowohl Eingabe- als auch Ausgabearbeitslisten enthalten und wird im Ausführungsplan mit *WorkThreadn* gekennzeichnet, wobei *n* die nullbasierte Nummer des Arbeitsthreads ist. Diese Threads enthalten Ausgabearbeitslisten, wenn das Diagramm eine Komponente mit asynchronen Ausgaben enthält.  
   
  Das folgende Beispiel eines Ausführungsplans zeigt einen Datenfluss, der eine Quellkomponente umfasst, die mit einer Transformation mit einer asynchronen Ausgabe verbunden ist, die über eine Verbindung mit einer Zielkomponente verfügt. In diesem Beispiel enthält WorkThread0 eine Ausgabearbeitsliste, da die Transformationskomponente über eine asynchrone Ausgabe verfügt.  
   

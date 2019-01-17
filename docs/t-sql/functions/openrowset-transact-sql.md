@@ -26,12 +26,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: db0fbc2125ca748f0426eea95c4c1a059e5b67f5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7cbf93440d9b164adef0f87c5af88da02d0f9b50
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509963"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531095"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "52509963"
   
  `OPENROWSET` unterstützt auch Massenvorgänge über einen integrierten BULK-Anbieter, mit dem Daten aus einer Datei gelesen und als Rowset zurückgegeben werden können.  
 
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -114,7 +114,7 @@ OPENROWSET
  Informationen zum Verwenden der BULK-Option finden Sie unter "Hinweise" weiter unten in diesem Thema. Informationen zu den für die Option BULK erforderlichen Berechtigungen finden Sie im Abschnitt "Berechtigungen" weiter unten in diesem Thema.  
   
 > [!NOTE]  
->  Wenn OPENROWSET (BULK ...) zum Importieren von Daten mit dem vollständigen Wiederherstellungsmodell verwendet wird, wird die Protokollierung nicht optimiert.  
+> Wenn OPENROWSET (BULK ...) zum Importieren von Daten mit dem vollständigen Wiederherstellungsmodell verwendet wird, wird die Protokollierung nicht optimiert.  
   
  Informationen zum Vorbereiten von Daten für Massenimport finden Sie unter [Vorbereiten von Daten für den Massenexport oder -import &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).  
   
@@ -136,7 +136,7 @@ Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 kann sich „d
 > Die Option CODEPAGE wird unter Linux nicht unterstützt.
 
 > [!NOTE]  
->  Es wird empfohlen, dass Sie für jede Spalte in einer Formatdatei einen Sortierungsnamen angeben, außer wenn die 65001-Option Priorität vor der Angabe von Sortierung/Codepage haben soll.  
+> Es wird empfohlen, dass Sie für jede Spalte in einer Formatdatei einen Sortierungsnamen angeben, außer wenn die 65001-Option Priorität vor der Angabe von Sortierung/Codepage haben soll.  
   
 |CODEPAGE-Wert|und Beschreibung|  
 |--------------------|-----------------|  
@@ -168,7 +168,7 @@ Es handelt sich um eine benannte externe Datenquelle, die auf den Azure Blob-Spe
  Der Standardwert für *maximum_errors* ist 10.  
   
 > [!NOTE]  
->  MAX_ERRORS kann für CHECK-Einschränkungen oder zum Konvertieren der Datentypen **money** und **bigint** nicht verwendet werden.  
+> MAX_ERRORS kann für CHECK-Einschränkungen oder zum Konvertieren der Datentypen **money** und **bigint** nicht verwendet werden.  
   
  ROWS_PER_BATCH =*rows_per_batch*  
  Gibt die ungefähre Anzahl von Datenzeilen in der Datendatei an. Der Wert sollte von der gleichen Größenordnung sein wie die tatsächliche Zeilenanzahl.  
@@ -198,7 +198,7 @@ Es handelt sich um eine benannte externe Datenquelle, die auf den Azure Blob-Spe
  Gibt die Inhalte von *data_file* als einzelne Zeile, als einspaltiges Rowset des **varbinary(max)**-Typs zurück.  
   
 > [!IMPORTANT]  
->  Es wird empfohlen, XML-Daten anstelle von mit SINGLE_CLOB und SINGLE_NCLOB ausschließlich mithilfe der SINGLE_BLOB-Option zu importieren, da nur SINGLE_BLOB alle Windows-Codierungskonvertierungen unterstützt.  
+> Es wird empfohlen, XML-Daten anstelle von mit SINGLE_CLOB und SINGLE_NCLOB ausschließlich mithilfe der SINGLE_BLOB-Option zu importieren, da nur SINGLE_BLOB alle Windows-Codierungskonvertierungen unterstützt.  
   
  SINGLE_CLOB  
  Wenn *data_file* als ASCII gelesen wird, wird der Inhalt als einzeiliges, einspaltiges Rowset vom Typ **varchar(max)** zurückgegeben, wobei die Sortierung der aktuellen Datenbank verwendet wird.  
@@ -248,10 +248,10 @@ Gibt ein Zeichen an, das als Anführungszeichen in der CSV-Datei verwendet wird.
      `FROM OPENROWSET(BULK...) AS table_alias`  
   
      `FROM OPENROWSET(BULK...) AS table_alias(column_alias,...n)`  
->    [!IMPORTANT]  
->    Wenn das Hinzufügen von `AS <table_alias>` fehlschlägt, führt dies zu folgendem Fehler:    
->    Meldung 491, Ebene 16, Status 1, Zeile 20    
->    Für das Massenrowset in der FROM-Klausel muss ein abhängiger Name angegeben werden.    
+> [!IMPORTANT]  
+> Wenn das Hinzufügen von `AS <table_alias>` fehlschlägt, führt dies zu folgendem Fehler:    
+> Meldung 491, Ebene 16, Status 1, Zeile 20    
+> Für das Massenrowset in der FROM-Klausel muss ein abhängiger Name angegeben werden.    
   
 -   Eine `SELECT...FROM OPENROWSET(BULK...)`-Anweisung fragt Daten in einer Datei direkt ab, ohne dass die Daten in eine Tabelle importiert werden. `SELECT...FROM OPENROWSET(BULK...)`-Anweisungen können auch Massenspaltenaliase auflisten, indem eine Formatdatei verwendet wird, um Spaltennamen und auch Datentypen anzugeben.  
   
@@ -262,13 +262,13 @@ Gibt ein Zeichen an, das als Anführungszeichen in der CSV-Datei verwendet wird.
  Weitere Informationen zur Verwendung von `INSERT...SELECT * FROM OPENROWSET(BULK...)`-Anweisungen finden Sie unter [Massenimport und -export von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md). Informationen dazu, wann Zeileneinfügevorgänge, die durch den Massenimport ausgeführt werden, im Transaktionsprotokoll protokolliert werden, finden Sie unter [Voraussetzungen für die minimale Protokollierung beim Massenimport](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
 > [!NOTE]  
->  Für die Verwendung von `OPENROWSET` ist es wichtig, nachvollziehen zu können, wie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit Identitätswechseln umgegangen wird. Weitere Informationen zu Überlegungen zur Sicherheit finden Sie unter [Importieren von Massendaten mithilfe von BULK INSERT oder OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
+> Für die Verwendung von `OPENROWSET` ist es wichtig, nachvollziehen zu können, wie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit Identitätswechseln umgegangen wird. Weitere Informationen zu Überlegungen zur Sicherheit finden Sie unter [Importieren von Massendaten mithilfe von BULK INSERT oder OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 ### <a name="bulk-importing-sqlchar-sqlnchar-or-sqlbinary-data"></a>Massenimport von SQLCHAR-, SQLNCHAR- oder SQLBINARY-Daten  
  Wenn keine maximale Länge für SQLCHAR-, SQLNCHAR- oder SQLBINARY-Daten angegeben wird, geht OPENROWSET(BULK...) davon aus, dass sie 8000 Bytes nicht überschreitet. Wenn sich die zu importierenden Daten in einem LOB-Datenfeld befinden, das Objekte vom Typ **varchar(max)**, **nvarchar(max)** oder **varbinary(max)** mit mehr als 8000 Bytes enthält, müssen Sie eine XML-Formatdatei verwenden, die die maximale Länge für das Datenfeld definiert. Um die maximale Länge anzugeben, bearbeiten Sie die Formatdatei, und deklarieren Sie das Attribut MAX_LENGTH.  
   
 > [!NOTE]  
->  Bei einer automatisch generierten Formatdatei wird die Länge oder maximale Länge für ein LOB-Feld nicht angeben. Sie können eine Formatdatei jedoch bearbeiten und die Länge oder maximale Länge manuell angeben.  
+> Bei einer automatisch generierten Formatdatei wird die Länge oder maximale Länge für ein LOB-Feld nicht angeben. Sie können eine Formatdatei jedoch bearbeiten und die Länge oder maximale Länge manuell angeben.  
   
 ### <a name="bulk-exporting-or-importing-sqlxml-documents"></a>Massenexportieren und -importieren von SQLXML-Dokumenten  
  Verwenden Sie in der Formatdatei einen der folgenden Datentypen für den Massenexport oder -import von SQLXML-Daten.  
@@ -299,7 +299,7 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
  Im folgenden Beispiel wird mithilfe des [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB-Anbieters für Jet auf die `Customers`-Tabelle in der `Northwind`-Datenbank von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access zugegriffen.  
   
 > [!NOTE]  
->  In diesem Beispiel wird vorausgesetzt, dass Access installiert ist. Um dieses Beispiel auszuführen, müssen Sie die Northwind-Datenbank installieren.  
+> In diesem Beispiel wird vorausgesetzt, dass Access installiert ist. Um dieses Beispiel auszuführen, müssen Sie die Northwind-Datenbank installieren.  
   
 ```sql  
 SELECT CustomerID, CompanyName  
@@ -315,7 +315,7 @@ GO
  Im folgenden Beispiel werden alle Daten aus der `Customers`-Tabelle in der `Northwind`-Datenbank der lokalen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sowie alle Daten der `Orders`-Tabelle in der `Northwind`-Datenbank von Microsoft Access auf demselben Computer ausgewählt.  
   
 > [!NOTE]  
->  In diesem Beispiel wird vorausgesetzt, dass Access installiert ist. Um dieses Beispiel auszuführen, müssen Sie die Northwind-Datenbank installieren.  
+> In diesem Beispiel wird vorausgesetzt, dass Access installiert ist. Um dieses Beispiel auszuführen, müssen Sie die Northwind-Datenbank installieren.  
   
 ```sql  
 USE Northwind  ;  
@@ -448,7 +448,7 @@ Vollständige `OPENROWSET`-Beispiele einschließlich der Konfiguration der Anmel
   
 -   [Verwenden einer Formatdatei zum Zuordnen von Tabellenspalten zu Datendateifeldern &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
  [Massenimport und -export von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   

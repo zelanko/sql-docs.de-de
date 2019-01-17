@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: f9572368002a0aef7b02d615701baefb0fd6708b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4e3429a52d24b9bb9fbb0de18c1687cfdaa76d30
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638145"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246739"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Scale Out-Unterstützung für Hochverfügbarkeit
 
@@ -97,7 +97,7 @@ Auf virtuellen Azure-Computern erfordert diese Konfiguration zusätzliche Schrit
 
 1.  Sie müssen eine Azure-Domäne einrichten. Windows Server-Failoverclustering erfordert, dass alle Computer im Cluster Mitglieder derselben Domäne sind. Weitere Informationen finden Sie unter [Enable Azure Active Directory Domain Services using the Azure portal (Aktivieren von Azure Active Directory Domain Services über das Azure-Portal)](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started).
 
-2. Sie müssen einen Azure Load Balancer einrichten. Dies ist für den Verfügbarkeitsgruppenlistener erforderlich. Weitere Informationen finden Sie unter [Tutorial: Durchführen eines Lastenausgleichs für internen Datenverkehr an virtuelle Computer mit einem Load Balancer im Tarif „Basic“ über das Azure-Portal](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
+2. Sie müssen einen Azure Load Balancer einrichten. Dies ist für den Verfügbarkeitsgruppenlistener erforderlich. Weitere Informationen finden Sie unter [Tutorial: Ausgleichen der internen Datenverkehrslast mithilfe eines Lastenausgleichs im Tarif „Basic“ über das Azure-Portal](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
 
 ## <a name="8-update-the-scale-out-master-address-in-ssisdb"></a>8. Aktualisieren der Scale Out-Masteradresse in SSISDB
 
@@ -107,7 +107,7 @@ Führen Sie auf dem primären SQL Server die gespeicherte Prozedur `[catalog].[u
 
 Jetzt können Sie Scale Out-Workers mithilfe des [Integration Services Scale Out-Managers](integration-services-ssis-scale-out-manager.md) hinzufügen. Geben Sie auf der Verbindungsseite `[SQL Server Availability Group Listener DNS name],[Port]` ein.
 
-# <a name="upgrade-scale-out-in-high-availability-environment"></a>Upgrade von Scale Out in einer Hochverfügbarkeitsumgebung
+## <a name="upgrade-scale-out-in-high-availability-environment"></a>Upgrade von Scale Out in einer Hochverfügbarkeitsumgebung
 Befolgen Sie für ein Upgrade von Scale Out in einer Hochverfügbarkeitsumgebung die Schritte [zum Upgrade von Always On für den SSIS-Katalog](../catalog/ssis-catalog.md#Upgrade). Aktualisieren Sie Scale Out Master und Scale Out Worker auf jedem Computer, und erstellen Sie die Failoverclusterrolle von Windows Server in Schritt 7 mit einer neuen Version des Scale Out Master-Diensts.
 
 ## <a name="next-steps"></a>Nächste Schritte

@@ -24,12 +24,12 @@ ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 2d66330f4c575972b019d7df68cf0f1d00f2fab4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9ae3cd167b7f8b2dc633eb50063b4bcaee143acf
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510710"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213849"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,9 +39,9 @@ Zeigt Fragmentierungsinformationen für die Daten und Indizes der angegebenen Ta
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).  
   
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -96,7 +96,7 @@ In der folgenden Tabelle finden Sie eine Beschreibung der Informationen des Resu
 |**Gescannte Blöcke**|Anzahl der Blöcke in der Tabelle oder im Index.|  
 |**Blockwechsel**|Gibt an, wie oft die DBCC-Anweisung von einem Block zu einem anderen gewechselt hat, während die Anweisung die Seiten der Tabelle oder des Indexes durchlaufen hat.|  
 |**Mittlere pro Block (Durchschnitt)**|Die Anzahl der Seiten pro Block in der Seitenkette.|  
-|**Scandichte [Bester Wert:Tatsächlicher Wert]**|Ein Prozentwert. Es handelt sich um das Verhältnis zwischen **Bester Wert** und **Tatsächlicher Wert**. Dieser Wert ist 100, wenn alle Daten zusammenhängen. Liegt der Wert unter 100, sind sie fragmentiert.<br /><br /> **Bester Wert** ist die ideale Anzahl von Blockwechseln, wenn alle Daten zusammenhängend verknüpft sind. **Tatsächlicher Wert** ist die tatsächliche Anzahl von Blockwechseln.|  
+|**Scandichte [Bester Wert: Tatsächlicher Wert]**|Ein Prozentwert. Es handelt sich um das Verhältnis zwischen **Bester Wert** und **Tatsächlicher Wert**. Dieser Wert ist 100, wenn alle Daten zusammenhängen. Liegt der Wert unter 100, sind sie fragmentiert.<br /><br /> **Bester Wert** ist die ideale Anzahl von Blockwechseln, wenn alle Daten zusammenhängend verknüpft sind. **Tatsächlicher Wert** ist die tatsächliche Anzahl von Blockwechseln.|  
 |**Logische Scanfragmentierung**|Prozentsatz der Seiten, die beim Scannen der Blattseiten eines Indexes nicht richtig einsortiert waren. Diese Zahl ist für Heaps nicht relevant. Eine nicht ordnungsgemäß einsortierte Seite ist eine Seite, für die die nächste physische Seite, die dem Index zugeordnet ist, nicht die Seite ist, auf die der Zeiger für die nächste Seit*e* auf der aktuellen Blattseite zeigt.|  
 |**Blockscanfragmentierung**|Prozentsatz der Blöcke, die beim Scannen der Blattseiten eines Indexes nicht richtig einsortiert waren. Diese Zahl ist für Heaps nicht relevant. Ein nicht richtig einsortierter Block ist ein Block, für den der Block, der die aktuelle Seite eines Indexes enthält, physisch nicht der nächste Block nach dem Block ist, der die vorherige Seite des Indexes enthält.<br /><br /> Hinweis: Diese Zahl ist bedeutungslos, wenn der Index mehrere Dateien umfasst.|  
 |**Mittlere frei pro Seite (Durchschnitt)**|Die durchschnittliche Anzahl von freien Bytes auf den gescannten Seiten. Je größer die Zahl, desto weniger sind die Seiten belegt. Kleinere Zahlen sind besser, wenn der Index nur über wenige zufällige Einfügungen verfügt. Diese Zahl wird auch von der Zeilengröße beeinflusst. Große Zeilen können einen höheren Wert verursachen.|  
@@ -342,7 +342,7 @@ DROP TABLE #fraglist;
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  

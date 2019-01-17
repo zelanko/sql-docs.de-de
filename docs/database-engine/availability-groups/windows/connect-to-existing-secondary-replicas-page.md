@@ -1,6 +1,7 @@
 ---
-title: Seite „Mit vorhandenen sekundären Replikaten verbinden“ | Microsoft-Dokumentation
-ms.custom: ''
+title: Seite „Verbinden mit vorhandenen sekundären Replikaten“ für Verfügbarkeitsgruppen
+description: Eine Beschreibung der verschiedenen Optionen finden Sie auf der Seite „Verbinden mit vorhandenen sekundären Replikaten“ im „Assistenten für Verfügbarkeitsgruppen“ in SQL Server Management Studio.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,14 +14,14 @@ ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f2feb2d658f6d333fbe1b1762ea8483562b79db5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee9e77356304670fa884c4ba8cf70667e040f940
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753978"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211229"
 ---
-# <a name="connect-to-existing-secondary-replicas-page"></a>Seite „Mit vorhandenen sekundären Replikaten verbinden“
+# <a name="connect-to-existing-secondary-replicas-page---always-on-availability-groups"></a>Seite „Verbinden mit vorhandenen sekundären Replikaten“ – Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Hilfethema werden die Optionen auf der Seite **Mit vorhandenen sekundären Replikaten verbinden** beschrieben. Dieses Thema wird unter [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] sowohl von [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] als auch von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]verwendet.  
   
@@ -46,7 +47,7 @@ ms.locfileid: "47753978"
   
 -   [Verwenden des Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

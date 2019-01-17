@@ -1,6 +1,7 @@
 ---
-title: 'Aktive sekundäre Replikate: Lesbare sekundäre Replikate (Always On-Verfügbarkeitsgruppen) | Microsoft-Dokumentation'
-ms.custom: ''
+title: Auslagern von schreibgeschützten Workloads auf ein sekundäres Replikat einer Verfügbarkeitsgruppe
+description: Erfahren Sie mehr über das Auslagern von schreibgeschützten Abfragen und Berichten auf ein sekundäres Replikat einer Always On-Verfügbarkeitsgruppe in SQL Server.
+ms.custom: seodec18
 ms.date: 06/06/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,14 +18,14 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e0c7c2b420adedaff0a67ff0f10c14d581f13f94
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 653171f45dff58afe617f1d70380e4ce9f3ee600
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604714"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206269"
 ---
-# <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Aktive sekundäre Replikate: Lesbare sekundäre Replikate (AlwaysOn-Verfügbarkeitsgruppen)
+# <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Auslagern von schreibgeschützten Arbeitsauslastungen auf ein sekundäres Replikat einer Always On-Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Die Funktionen für aktive sekundäre Replikate in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] umfassen Unterstützung für den schreibgeschützten Zugriff auf ein oder mehrere sekundäre Replikate (*lesbare sekundäre Replikate*). Ein lesbares sekundäres Replikat kann sich entweder im Verfügbarkeitsmodus mit synchronem oder asynchronem Commit befinden. Lesbare sekundäre Replikate lassen den schreibgeschützten Zugriff auf alle eigenen sekundären Datenbanken zu. Bei lesbaren sekundären Datenbanken ist jedoch kein Schreibschutz festgelegt. Sie sind dynamisch. Eine sekundäre Datenbank wird geändert, wenn Änderungen an der zugehörigen primären Datenbank auf die sekundäre Datenbank angewendet werden. Bei einem typischen sekundären Replikat liegen die Daten in den sekundären Datenbanken nahezu in Echtzeit vor. Dies gilt auch für dauerhafte speicheroptimierte Tabellen. Weiterhin werden Volltextindizes mit den sekundären Datenbanken synchronisiert. In vielen Fällen beträgt die Datenlatenz zwischen einer primären Datenbank und der zugehörigen sekundären Datenbank nur wenige Sekunden.  
@@ -35,22 +36,6 @@ ms.locfileid: "51604714"
 >  Sie können zwar keine Daten in sekundäre Datenbanken schreiben, aber in Datenbanken mit Lese-/Schreibzugriff auf der Serverinstanz, auf der die sekundären Replikate gehostet werden, einschließlich Benutzerdatenbanken und Systemdatenbanken, wie **tempdb**.  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] unterstützt auch das Umleiten von Verbindungsanforderungen für beabsichtigte Lesevorgänge an ein lesbares sekundäres Replikat (*schreibgeschütztes Routing*). Weitere Informationen zum schreibgeschützten Routing finden Sie unter [Verwenden eines Listeners zum Herstellen einer Verbindung mit einem schreibgeschützten sekundären Replikat (schreibgeschütztes Routing)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConnectToSecondary).  
-  
- **In diesem Thema:**  
-  
--   [Vorteile](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_Benefits)  
-  
--   [Voraussetzungen für die Verfügbarkeitsgruppe](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_Prerequisites)  
-  
--   [Einschränkungen](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_LimitationsRestrictions)  
-  
--   [Leistungsaspekte](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_Performance)  
-  
--   [Aspekte der Kapazitätsplanung](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_CapacityPlanning)  
-  
--   [Verwandte Aufgaben](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_RelatedTasks)  
-  
--   [Verwandte Inhalte](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#RelatedContent)  
   
 ##  <a name="bkmk_Benefits"></a> Vorteile  
  Die Weiterleitung schreibgeschützter Verbindungen an lesbare sekundäre Replikate bietet die folgenden Vorteile:  
@@ -146,7 +131,7 @@ ms.locfileid: "51604714"
  Dies weist auf eine gewisse Latenz zwischen den primären und sekundären Replikaten hin, wobei es sich in der Regel nur um wenige Sekunden handelt. In außergewöhnlichen Fällen, beispielsweise bei Netzwerkproblemen, die den Durchsatz reduzieren, kann die Latenz jedoch signifikant werden. Die Latenz nimmt bei E/A-Engpässen und bei angehaltener Datenverschiebung zu. Zur Überwachung einer angehaltenen Datenverschiebung können Sie das [AlwaysOn-Dashboard](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) oder die dynamische Verwaltungssicht [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) verwenden.  
   
 ####  <a name="bkmk_LatencyWithInMemOLTP"></a> Datenlatenz bei Datenbanken mit speicheroptimierten Tabellen  
- In [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] galten besondere Überlegungen zur Datenlatenz für aktive sekundäre Replikate. Informationen dazu finden Sie unter [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]Aktive sekundäre Replikate: Lesbare sekundäre Replikate](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx). Ab [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] gelten keine Besonderheiten mehr bezüglich der Datenlatenz für speicheroptimierte Tabellen. Die erwartete Datenlatenz für speicheroptimierte Tabellen ist mit der Latenz für datenträgerbasierte Tabellen vergleichbar.  
+ In [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] galten besondere Überlegungen zur Datenlatenz für aktive sekundäre Replikate. Informationen dazu finden Sie unter [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Aktive sekundäre Replikate: Lesbare sekundäre Replikate (Always On-Verfügbarkeitsgruppen)](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx). Ab [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] gelten keine Besonderheiten mehr bezüglich der Datenlatenz für speicheroptimierte Tabellen. Die erwartete Datenlatenz für speicheroptimierte Tabellen ist mit der Latenz für datenträgerbasierte Tabellen vergleichbar.  
   
 ###  <a name="ReadOnlyWorkloadImpact"></a> Auswirkungen auf schreibgeschützte Arbeitsauslastungen  
  Wenn Sie ein sekundäres Replikat für schreibgeschützten Zugriff konfigurieren, belegen die schreibgeschützten Arbeitsauslastungen in den sekundären Datenbanken Systemressourcen, z. B. CPU und E/A-Vorgänge (für datenträgerbasierte Tabellen) aus REDO-Threads, insbesondere wenn die schreibgeschützten Arbeitsauslastungen für datenträgerbasierte Tabellen äußerst E/A-intensiv sind. Der Zugriff auf speicheroptimierte Tabellen hat keine Auswirkungen auf die E/A-Leistung, weil alle Zeilen im Arbeitsspeicher enthalten sind.  
@@ -231,10 +216,10 @@ GO
   
     |Lesbares sekundäres Replikat?|Ist Momentaufnahmeisolation oder RCSI-Stufe aktiviert?|Primäre Datenbank|Sekundäre Datenbank|  
     |---------------------------------|-----------------------------------------------|----------------------|------------------------|  
-    |nein|nein|Keine Zeilenversionen oder 14-Byte-Mehraufwand|Keine Zeilenversionen oder 14-Byte-Mehraufwand|  
-    |nein|Benutzerkontensteuerung|Zeilenversionen und 14-Byte-Mehraufwand|Keine Zeilenversionen, aber 14-Byte-Mehraufwand|  
-    |Benutzerkontensteuerung|nein|Keine Zeilenversionen, aber 14-Byte-Mehraufwand|Zeilenversionen und 14-Byte-Mehraufwand|  
-    |Benutzerkontensteuerung|Benutzerkontensteuerung|Zeilenversionen und 14-Byte-Mehraufwand|Zeilenversionen und 14-Byte-Mehraufwand|  
+    |Nein|Nein|Keine Zeilenversionen oder 14-Byte-Mehraufwand|Keine Zeilenversionen oder 14-Byte-Mehraufwand|  
+    |Nein|Ja|Zeilenversionen und 14-Byte-Mehraufwand|Keine Zeilenversionen, aber 14-Byte-Mehraufwand|  
+    |Ja|Nein|Keine Zeilenversionen, aber 14-Byte-Mehraufwand|Zeilenversionen und 14-Byte-Mehraufwand|  
+    |Ja|Ja|Zeilenversionen und 14-Byte-Mehraufwand|Zeilenversionen und 14-Byte-Mehraufwand|  
   
 ##  <a name="bkmk_RelatedTasks"></a> Verwandte Aufgaben  
   
@@ -252,9 +237,9 @@ GO
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [SQL Server AlwaysOn-Teamblog: Der offizielle SQL Server AlwaysOn-Teamblog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog (SQL Server Always On-Teamblog: Der offizielle SQL Server Always On-Teamblog)](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Informationen zum Clientverbindungszugriff auf Verfügbarkeitsreplikate &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   

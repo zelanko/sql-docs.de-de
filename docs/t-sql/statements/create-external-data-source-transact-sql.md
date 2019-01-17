@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3375af07fc7231321c96c2aa03d95dbbdc6709f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 51e75f21dbaa518e344ec8c43fc8c9a087cea959
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506413"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980006"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "52506413"
 
   Die externe Datenquelle von Azure Blob Storage unterstützt die `BULK INSERT`- und `OPENROWSET`-Syntax und unterscheidet sich von Azure Blob Storage für PolyBase.
     
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -152,14 +152,14 @@ LOCATION = \<location_path> **HADOOP**
 Für HADOOP wird der Uniform Resource Indicator (URI) für ein Hadoop-Cluster angegeben.  
 `LOCATION = 'hdfs:\/\/*NameNode\_URI*\[:*port*\]'`  
 NameNode_URI: Der Computername oder die IP-Adresse von NameNode des Hadoop-Clusters.  
-Port: Der IPC-Port von NameNode. Dies wird durch den Konfigurationsparameter „fs.default.name“ in Hadoop angegeben. Wenn der Wert nicht angegeben wird, wird standardmäßig 8020 verwendet werden.  
+port: Der IPC-Port von NameNode. Dies wird durch den Konfigurationsparameter „fs.default.name“ in Hadoop angegeben. Wenn der Wert nicht angegeben wird, wird standardmäßig 8020 verwendet werden.  
 Beispiel: `LOCATION = 'hdfs://10.10.10.10:8020'`
 
 Gibt den URI für die Verbindung mit Azure Blob Storage für Azure Blob Storage mit Hadoop an.  
 `LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'`  
 wasb[s]: Gibt das Protokoll für Azure Blob Storage an. [s] ist optional und gibt eine sichere SSL-Verbindung an; von SQL Server gesendete Daten werden über das SSL-Protokoll sicher verschlüsselt. Es wird dringend empfohlen, „wasbs“ anstelle von „wasb“ zu verwenden. Beachten Sie, dass der Speicherort asv[s] anstelle von wasb[s] verwenden kann. Die asv[s]-Syntax ist als veraltet markiert und wird in einem zukünftigen Release entfernt.  
-Container: Gibt den Namen des Azure Blob Storage-Containers an. Verwenden Sie den Domänennamen anstelle des Containernamens, um den Stammcontainer des Speicherkontos einer Domäne anzugeben. Stammcontainer sind schreibgeschützt, damit keine Daten zurück in den Container geschrieben werden können.  
-account_name: Der vollständig qualifizierte Domänenname (FQDN) des Azure-Speicherkontos.  
+container: Gibt den Namen des Azure Blob Storage-Containers an. Verwenden Sie den Domänennamen anstelle des Containernamens, um den Stammcontainer des Speicherkontos einer Domäne anzugeben. Stammcontainer sind schreibgeschützt, damit keine Daten zurück in den Container geschrieben werden können.  
+account_name: Der vollqualifizierter Domänenname (FQDN) des Azure-Speicherkontos.  
 Beispiel: `LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'`
 
 Der Speicherort für Azure Data Lake Store gibt den URI für das Herstellen einer Verbindung mit Azure Data Lake Storage an.
@@ -208,7 +208,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 Sie finden ein ausführliches Tutorial für RDBMS unter [Getting started with cross-database queries (vertical partitioning) (Erste Schritte mit datenbankübergreifenden Abfragen (vertikale Partitionierung))](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/).  
 
 **BLOB_STORAGE**   
-Dieser Typ wird nur bei Massenvorgängen verwendet, `LOCATION` muss die gültige URL für Azure Blob Storage und den Container sein. Fügen Sie weder **/**, Dateinamen noch Shared Access Signature-Parameter am Ende der `LOCATION`-URL ein. `CREADENTIAL` ist erforderlich, wenn das Blob-Objekt nicht öffentlich ist. Zum Beispiel: 
+Dieser Typ wird nur bei Massenvorgängen verwendet, `LOCATION` muss die gültige URL für Azure Blob Storage und den Container sein. Fügen Sie weder **/**, Dateinamen noch Shared Access Signature-Parameter am Ende der `LOCATION`-URL ein. `CREDENTIAL` ist erforderlich, wenn das Blob-Objekt nicht öffentlich ist. Zum Beispiel: 
 ```sql
 CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
 WITH (  TYPE = BLOB_STORAGE, 
@@ -445,7 +445,7 @@ WITH (
 ## <a name="examples-azure-sql-data-warehouse"></a>Beispiele: Azure SQL Data Warehouse
 
 ### <a name="g-create-external-data-source-to-reference-azure-data-lake-store"></a>G. Erstellen einer externen Datenquelle, um auf Azure Data Lake Store zu verweisen
-Die Azure Data Lake Store-Konnektivität basiert auf Ihrer ADLS-URI und dem Dienstprinzipal Ihrer Azure Active Directory-Anwendung. Dokumentation zum Erstellen dieser Anwendung finden Sie unter[Data lake store authentication using Active Directory (Authentifizierung in Data Lake Store mit Active Directory)](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory).
+Die Azure Data Lake Store-Konnektivität basiert auf Ihrem ADLS-URI und dem Dienstprinzipal Ihrer Azure Active Directory-Anwendung. Dokumentation zum Erstellen dieser Anwendung finden Sie unter[Data lake store authentication using Active Directory (Authentifizierung in Data Lake Store mit Active Directory)](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory).
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.
@@ -509,7 +509,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoices
 ```   
 Sie finden dieses Beispiel unter [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md#f-importing-data-from-a-file-in-azure-blob-storage).
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 [ALTER EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/alter-external-data-source-transact-sql.md)  
 [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
 [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   

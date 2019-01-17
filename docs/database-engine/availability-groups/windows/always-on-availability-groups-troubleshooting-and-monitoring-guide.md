@@ -1,6 +1,7 @@
 ---
-title: Leitfaden zur Problembehandlung und Überwachung von Always On-Verfügbarkeitsgruppen (SQL Server) | Microsoft-Dokumentation
-ms.custom: ag-guide
+title: Referenz zum Überwachen und Beheben von Problemen von Always On-Verfügbarkeitsgruppen
+description: Dieser Leitfaden dient als Referenz zur Unterstützung bei den ersten Schritten mit der Überwachung und der Behandlung einiger gängiger Probleme von Always On-Verfügbarkeitsgruppen.
+ms.custom: ag-guide, seodec18
 ms.date: 05/10/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -10,19 +11,18 @@ ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6af848993830329f9f5bbc6b2dc42be416a36fcc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 59ca941e6588f00140b4b57fa3a73904b6ad8f35
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398863"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215619"
 ---
 # <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Leitfaden zur Problembehandlung und Überwachung von Always On-Verfügbarkeitsgruppen
  Dieser Leitfaden unterstützt Sie bei den ersten Schritten mit der Überwachung von Always On-Verfügbarkeitsgruppen und der Behandlung einiger gängiger Probleme in Bezug auf Verfügbarkeitsgruppen. Zudem bietet der Leitfaden Originalinhalte sowie eine Angebotsseite mit nützlichen Informationen, die an anderer Stelle veröffentlicht wurden. Im Rahmen dieses Leitfadens können zwar nicht alle Probleme, die auf dem umfassenden Gebiet der Verfügbarkeitsgruppen auftreten können, im Detail erläutert werden, allerdings kann auf die richtige Richtung bezüglich der Ursachenanalyse und Problemlösung gewiesen werden. 
  
  Da Verfügbarkeitsgruppen eine integrierte Technologie darstellen, sind viele der auftretenden Probleme möglicherweise Anzeichen für andere Probleme in Ihrem Datenbanksystem. Einige Probleme werden durch Einstellungen in einer Verfügbarkeitsgruppe verursacht, z.B. eine angehaltene Verfügbarkeitsdatenbank. Darüber hinaus können Probleme mit anderen Aspekten von SQL Server auftreten, z.B. SQL Server-Einstellungen und Bereitstellungen von Datenbankdateien, sowie systemische Leistungsprobleme, die unabhängig von der Verfügbarkeit bestehen. Dennoch können andere Probleme außerhalb von SQL Server auftreten, z.B. Probleme mit Netzwerk-E/As, TCP/IP, Active Directory und Windows Server Failover Clustering (WSFC). Oftmals muss bei Problemen, die sich bei einer Verfügbarkeitsgruppe, einem Replikat oder einer Datenbank abzeichnen, an mehreren Technologien Korrekturen vorgenommen werden, um die Ursache zu ermitteln.  
   
-
   
 ##  <a name="BKMK_SCENARIOS"></a> Problembehandlungsszenarien  
  Die folgende Tabelle enthält Links zu allgemeinen Problembehandlungsszenarien für Verfügbarkeitsgruppen. Sie werden nach den jeweiligen Szenariotypen kategorisiert, z.B. Konfiguration, Clientkonnektivität, Failover und Leistung.  
@@ -65,12 +65,12 @@ ms.locfileid: "52398863"
 |-----------|-----------------|  
 |[Überwachen der Leistung von Always On-Verfügbarkeitsgruppen](monitor-performance-for-always-on-availability-groups.md)|In diesem Thema werden der Datensynchronisierungsprozess für Verfügbarkeitsgruppen, die Flusssteuerungsgates und nützliche Metriken für die Überwachung einer Verfügbarkeitsgruppe sowie der Prozess zum Erfassen der Metriken RTO und RPO beschrieben.|  
 |[Überwachen von Verfügbarkeitsgruppen &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)|Dieses Thema enthält Informationen zu Tools für die Überwachung einer Verfügbarkeitsgruppe.|  
-|[The Always On Health Model Part 1 – Health Model Architecture (Das Always On-Integritätsmodell Teil 1 – Architektur des Integritätsmodells)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx)|Dieses Thema enthält eine Übersicht über das Always On-Integritätsmodell.|  
-|[The Always On Health Model Part 2 – Extending the Health Model (Das Always On-Integritätsmodell Teil 2 – Erweitern des Integritätsmodells)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)|In diesem Thema wird erläutert, wie das Always On-Integritätsmodell und das Always On-Dashboard zur Anzeige weiterer Informationen angepasst werden.|  
-|[Monitoring Always On Health with PowerShell – Part 1: Basic Cmdlet Overview (Überwachen der Always On-Integrität mit PowerShell – Teil 1: Übersicht über grundlegende Cmdlets)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)|Dieses Thema enthält eine grundlegende Übersicht über die PowerShell-Cmdlets, die zur Überwachung der Integrität einer Verfügbarkeitsgruppe verwendet werden können.|  
-|[Monitoring Always On Health with PowerShell – Part 2: Advanced Cmdlet Usage (Überwachen der Always On-Integrität mit PowerShell – Teil 2: Verwendung erweiterter Cmdlets)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)|Dieses Thema enthält Informationen über die erweiterte Verwendung der Always On-PowerShell-Cmdlets zum Überwachen der Integrität einer Verfügbarkeitsgruppe.|  
-|[Monitoring Always On Health with PowerShell – Part 3 : A Simple Monitoring Application (Überwachen der Always On-Integrität mit PowerShell – Teil 3: Eine einfache Überwachungsanwendung)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)|In diesem Thema wird erläutert, wie eine Verfügbarkeitsgruppe mit einer Anwendung automatisch überwacht wird.|  
-|[Monitoring Always On Health with PowerShell – Part 4 : Integration with SQL Server Agent (Überwachen der Always On-Integrität mit PowerShell – Teil 4: Integration im SQL Server-Agent)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)|Dieses Thema enthält Informationen darüber, wie die Überwachung der Verfügbarkeitsgruppe in SQL Server-Agent integriert und Benachrichtigung für die zuständigen Personen bei Problemen konfiguriert werden.|  
+|[The Always On health model, part 1: Health model architecture (Das Always On-Zustandsmodell, Teil 1: Architektur des Zustandsmodells)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx)|Dieses Thema enthält eine Übersicht über das Always On-Integritätsmodell.|  
+|[The Always On health model, part 2: Extending the health model (Das Always On-Zustandsmodell, Teil 2: Erweitern des Zustandsmodells)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)|In diesem Thema wird erläutert, wie das Always On-Integritätsmodell und das Always On-Dashboard zur Anzeige weiterer Informationen angepasst werden.|  
+|[Monitoring Always On health with PowerShell, part 1: Basic cmdlet overview (Überwachen des Always On-Zustands mit PowerShell, Teil 1: allgemeine Übersicht zu Cmdlets)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)|Dieses Thema enthält eine grundlegende Übersicht über die PowerShell-Cmdlets, die zur Überwachung der Integrität einer Verfügbarkeitsgruppe verwendet werden können.|  
+|[Monitoring Always On health with PowerShell, part 2: Advanced cmdlet usage (Überwachen des Always On-Zustands mit PowerShell, Teil 2: Nutzung von Cmdlets für Fortgeschrittene)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)|Dieses Thema enthält Informationen über die erweiterte Verwendung der Always On-PowerShell-Cmdlets zum Überwachen der Integrität einer Verfügbarkeitsgruppe.|  
+|[Monitoring Always On health with PowerShell, part 3: A simple monitoring application (Überwachen des Always On-Zustands mit PowerShell, Teil 3: Eine einfache Überwachungsanwendung)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)|In diesem Thema wird erläutert, wie eine Verfügbarkeitsgruppe mit einer Anwendung automatisch überwacht wird.|  
+|[Monitoring Always On health with PowerShell, part 4: Integration with SQL Server Agent (Überwachen der Always On-Integrität mit PowerShell – Teil 4: Integration in SQL Server-Agent)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)|Dieses Thema enthält Informationen darüber, wie die Überwachung der Verfügbarkeitsgruppe in SQL Server-Agent integriert und Benachrichtigung für die zuständigen Personen bei Problemen konfiguriert werden.|  
 
 ## <a name="next-steps"></a>Nächste Schritte  
  [SQL Server Always On-Teamblog](https://blogs.msdn.com/b/sqlalwayson/)   

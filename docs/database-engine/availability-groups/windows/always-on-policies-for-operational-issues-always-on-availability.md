@@ -1,6 +1,7 @@
 ---
-title: 'Always On-Richtlinien für Betriebsprobleme: Always On-Verfügbarkeit | Microsoft-Dokumentation'
-ms.custom: ''
+title: Richtlinienbasierte Verwaltung von Betriebsproblemen mit Verfügbarkeitsgruppen
+description: Das Zustandsmodell für Always On-Verfügbarkeitsgruppen wertet eine Reihe vordefinierter Richtlinien der richtlinienbasierten Verwaltung (Policy Bases Management, PBM) aus. Sie können Thesen verwenden, um den Zustand einer Verfügbarkeitsgruppe sowie deren Replikate und Datenbanken in SQL Server anzuzeigen.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,31 +14,18 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 330a9169fb1177686ffc95a530b5e068ed98e4e5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6d9d780473346a446811595d850aafd4da9d5930
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601678"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214169"
 ---
-# <a name="always-on-policies-for-operational-issues---always-on-availability"></a>Always On-Richtlinien für Betriebsprobleme: Always On-Verfügbarkeit
+# <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>Richtlinienbasierte Verwaltung von Betriebsproblemen mit Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Das [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Zustandsmodell wertet eine Reihe vordefinierter Richtlinien der richtlinienbasierten Verwaltung aus. Sie können Thesen verwenden, um den Zustand einer Verfügbarkeitsgruppe sowie deren Verfügbarkeitsreplikate und Datenbanken in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]anzuzeigen.  
+  Das Zustandsmodell für Always On-Verfügbarkeitsgruppen wertet eine Reihe vordefinierter Richtlinien der richtlinienbasierten Verwaltung (Policy Bases Management, PBM) aus. Sie können Thesen verwenden, um den Zustand einer Verfügbarkeitsgruppe sowie deren Verfügbarkeitsreplikate und Datenbanken in SQL Server anzuzeigen.  
   
- **In diesem Thema:**  
-  
--   [Begriffe und Definitionen](#TermsAndDefinitions)  
-  
--   [Vordefinierte Richtlinien und Probleme](#Always OnPBM)  
-  
--   [Always On-Dashboard](#Dashboard)  
-  
--   [Erweitern des Always On-Zustandsmodells](#ExtendHealthModel)  
-  
--   [Verwandte Aufgaben](#RelatedTasks)  
-  
--   [Verwandte Inhalte](#RelatedContent)  
   
 ##  <a name="TermsAndDefinitions"></a> Begriffe und Definitionen  
  Vordefinierte Always On-Richtlinien  
@@ -78,7 +66,7 @@ ms.locfileid: "51601678"
 |Joinzustand der Verfügbarkeitsdatenbank|[Sekundäre Datenbank ist nicht verknüpft](../../../database-engine/availability-groups/windows/secondary-database-is-not-joined.md).|Warnung|Verfügbarkeitsdatenbank|  
 |Datensynchronisierungsstatus der Verfügbarkeitsdatenbank|[Datensynchronisierungsstatus der Verfügbarkeitsdatenbank ist nicht fehlerfrei](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md).|Warnung|Verfügbarkeitsdatenbank|  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  **\*** Für Always On-Richtlinien werden die Kategorienamen als IDs verwendet. Durch die Änderung des Namens einer Always On-Kategorie wird deren Funktionalität der Integritätsüberprüfung unterbrochen. Ändern Sie die Namen von Always On-Kategorien daher nicht.  
   
 ##  <a name="Dashboard"></a> Always On-Dashboard  
@@ -99,7 +87,7 @@ ms.locfileid: "51601678"
 ##  <a name="ExtendHealthModel"></a> Erweitern des Always On-Zustandsmodells  
  Die Erweiterung des [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Zustandsmodells bezieht sich darauf, dass Sie eigene benutzerdefinierte Richtlinien erstellen und diese je nach überwachtem Objekttyp bestimmten Kategorien zuweisen können.  Nachdem Sie einige Einstellungen geändert haben, wertet das Always On-Dashboard automatisch Ihre eigenen benutzerdefinierten Richtlinien sowie die vordefinierten Always On-Richtlinien aus.  
   
- Eine benutzerdefinierte Richtlinie kann beliebige der verfügbaren PBM-Facets verwenden, einschließlich der von vordefinierten Always On-Richtlinien verwendeten Facets (siehe [Vordefinierte Richtlinien und Probleme](#Always OnPBM)weiter oben in diesem Thema). Das Serverfacet stellt die folgenden Eigenschaften zum Überwachen des [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Zustands bereit:**(IsHadrEnabled** und **HadrManagerStatus**). Das Serverfacet stellt auch Eigenschaften der folgenden Richtlinien zum Überwachen der WSFC-Clusterkonfiguration bereit: **ClusterQuorumType**und **ClusterQuorumState**.  
+ Eine benutzerdefinierte Richtlinie kann beliebige der verfügbaren PBM-Facets verwenden, einschließlich der von vordefinierten Always On-Richtlinien verwendeten Facets (siehe [Vordefinierte Richtlinien und Probleme](#Always OnPBM)weiter oben in diesem Thema). Das Serverfacet stellt die folgenden Eigenschaften zum Überwachen des [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]-Zustands bereit: **IsHadrEnabled** und **HadrManagerStatus**. Das Serverfacet stellt außerdem Eigenschaften der folgenden Richtlinien zum Überwachen der WSFC-Clusterkonfiguration bereit: **ClusterQuorumType** und **ClusterQuorumState**.  
   
  Weitere Informationen finden Sie im SQL Server-Always On-Teamblog unter [The Always On Health Model Part 2 – Extending the Health Model](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/) (Das Always On-Zustandsmodell Teil 2 – Erweitern des Zustandsmodells).  
   
@@ -125,7 +113,7 @@ ms.locfileid: "51601678"
   
 -   [Microsoft SQL Server Always On-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Verwaltung einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)   

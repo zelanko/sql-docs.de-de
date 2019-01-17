@@ -1,6 +1,7 @@
 ---
 title: Optionen (SQL Server Always On, Dashboardseite) | Microsoft-Dokumentation
-ms.custom: ''
+description: Eine Beschreibung der Seite „Optionen“ auf dem SQL Server-Always On-Dashboard.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +13,12 @@ ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d79165eae0ccbc1e5c442849c5df0ef83d4f1e90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d19f811faffda3584287ec29a4e4c03349586949
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773248"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214811"
 ---
 # <a name="options-sql-server-always-on-dashboard-page"></a>Optionen (SQL Server Always On, Dashboardseite)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "47773248"
  **Aktivieren Sie die benutzerdefinierte Always On-Richtlinie.**  
  Wenn Sie eine eigene Always On-Richtlinie definiert haben, klicken Sie auf diese Option, um die Richtlinie zu aktivieren.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden des AlwaysOn-Dashboards &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

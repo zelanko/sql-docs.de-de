@@ -1,6 +1,7 @@
 ---
-title: Failover und Failovermodi (Always On-Verfügbarkeitsgruppen) | Microsoft-Dokumentation
-ms.custom: ''
+title: Failovermodi für Verfügbarkeitsgruppen
+description: In diesem Artikel werden die verschiedenen Failovermodi beschrieben, die für an einer Always On-Verfügbarkeitsgruppe beteiligte Datenbanken verfügbar sind.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d66d1ccdbfbcd7f59f395b9ecf8367b7a7e16058
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 44e11edc9608dc4c10634ea58af1c0140bba666f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523400"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207439"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Failover und Failovermodi (Always On-Verfügbarkeitsgruppen)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +69,7 @@ ms.locfileid: "52523400"
  Ein Failover, das von einem Datenbankadministrator initiiert werden kann, wenn kein sekundäres Replikat mit dem primären Replikat SYNCHRONISIERT ist oder das primäre Replikat nicht ausgeführt wird und kein sekundäres Replikat für ein Failover bereit ist. Ein erzwungenes Failover birgt das Risiko möglicher Datenverluste und sollte nur für die Notfallwiederherstellung verwendet werden. Erzwungenes Failover ist auch als erzwungenes manuelles Failover bekannt, da es nur manuell initiiert werden kann. Dies ist der einzige Failovertyp, der im Verfügbarkeitsmodus für asynchrone Commits unterstützt wird.  
   
  [!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)]  
- Ein Paar von Verfügbarkeitsreplikaten (einschließlich des aktuellen primären Replikats) in einer Verfügbarkeitsgruppe, die für den synchronem Commitmodus mit automatischem Failover konfiguriert sind (sofern zutreffend). Ein[!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]ist nur wirksam, wenn das sekundäre Replikat derzeit mit dem primären Replikat SYNCHRONISIERT wird.  
+ Ein Paar von Verfügbarkeitsreplikaten (einschließlich des aktuellen primären Replikats) in einer Verfügbarkeitsgruppe, die für den synchronem Commitmodus mit automatischem Failover konfiguriert sind (sofern zutreffend). Ein [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] wird nur wirksam, wenn das sekundäre Replikat derzeit mit dem primären Replikat synchronisiert wird.  
   
  [!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)]  
  Ein Satz von zwei oder drei Verfügbarkeitsreplikaten (einschließlich des aktuellen primären Replikats) in einer Verfügbarkeitsgruppe, die für den synchronen Commitmodus (falls zutreffend) konfiguriert sind. Ein [!INCLUDE[ssFosSync](../../../includes/ssfossync-md.md)]wird nur wirksam, wenn die sekundären Replikate für den manuellen Failovermodus konfiguriert sind und mindestens ein sekundäres Replikat derzeit mit dem primären Replikat SYNCHRONISIERT ist.  
@@ -81,9 +82,9 @@ ms.locfileid: "52523400"
   
 ||Asynchroner Commit-Modus|Synchroner Commit-Modus mit manuellem Failovermodus|Synchroner Commit-Modus mit automatischem Failovermodus|  
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
-|Automatisches Failover|nein|nein|Benutzerkontensteuerung|  
-|Geplantes manuelles Failover|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|erzwungenes Failover|Benutzerkontensteuerung|Benutzerkontensteuerung|Ja**\***|  
+|Automatisches Failover|Nein|Nein|Ja|  
+|Geplantes manuelles Failover|Nein|Ja|Ja|  
+|erzwungenes Failover|Ja|Ja|Ja**\***|  
   
  **\*** Wenn Sie einen Befehl für ein erzwungenes Failover für ein synchronisiertes sekundäres Replikat ausgeben, verhält sich das sekundäre Replikat genauso wie bei einem manuellen Failover.  
   
@@ -95,11 +96,11 @@ ms.locfileid: "52523400"
 ### <a name="failover-sets"></a>Failoversätze  
  Welche Failoverarten für eine bestimmte Verfügbarkeitsgruppe möglich sind, richtet sich nach dem jeweiligen Failoversatz. Ein Failoversatz besteht aus dem primären Replikat und den sekundären Replikaten, die eine bestimmte, im Folgenden beschriebene Failoverart unterstützen:  
   
--   **[!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] (optional):**  Ein Paar von Verfügbarkeitsreplikaten (einschließlich des aktuellen primären Replikats) in einer Verfügbarkeitsgruppe, die für den synchronen Commitmodus mit automatischem Failover (falls zutreffend) konfiguriert sind. Ein automatisches Failover ist nur wirksam, wenn das sekundäre Replikat derzeit mit dem primären Replikat synchronisiert wird.  
+-   **[!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] (optional):**  Ein Paar von Verfügbarkeitsreplikaten (einschließlich des aktuellen primären Replikats) in einer Verfügbarkeitsgruppe, die für den synchronem Commitmodus mit automatischem Failover konfiguriert sind (sofern zutreffend). Ein automatisches Failover ist nur wirksam, wenn das sekundäre Replikat derzeit mit dem primären Replikat synchronisiert wird.  
   
 -   **[!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (optional):**  Ein Satz von zwei oder drei Verfügbarkeitsreplikaten (einschließlich des aktuellen primären Replikats) in einer Verfügbarkeitsgruppe, die für den synchronen Commitmodus (falls zutreffend) konfiguriert sind. Ein Failover mit synchronem Commit ist nur wirksam, wenn die sekundären Replikate für den manuellen Failovermodus konfiguriert sind und mindestens ein sekundäres Replikat derzeit mit dem primären Replikat synchronisiert wird.  
   
--   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :**  Der Satz aller Verfügbarkeitsreplikate in einer Verfügbarkeitsgruppe, deren Betriebszustand derzeit ONLINE lautet, unabhängig vom Verfügbarkeitsmodus und Failovermodus. Der Satz für gesamtes Failover wird relevant, wenn derzeit kein sekundäres Replikat mit dem primären Replikat synchronisiert wird.  
+-   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)]:**  Innerhalb einer angegebenen Verfügbarkeitsgruppe der Satz aller Verfügbarkeitsreplikate, deren Betriebszustand gerade ONLINE ist, unabhängig vom Verfügbarkeitsmodus und Failovermodus. Der Satz für gesamtes Failover wird relevant, wenn derzeit kein sekundäres Replikat mit dem primären Replikat synchronisiert wird.  
   
  Wenn Sie ein Verfügbarkeitsreplikat für synchrone Commits mit automatischem Failover konfigurieren, wird das Verfügbarkeitsreplikat Teil von [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]. Ob jedoch der Satz wirksam wird, hängt vom aktuellen primären Element ab. Die Failovertypen, die tatsächlich zu einem bestimmten Zeitpunkt möglich sind, hängen davon ab, welche Failoversätze aktuell wirksam sind.  
   
@@ -109,7 +110,7 @@ ms.locfileid: "52523400"
 |-------------|--------------------------------------------------|  
 |Ein|Synchroner Commit mit automatischem Failover|  
 |B|Synchroner Commit mit automatischem Failover|  
-|C|Synchroner Commit nur mit geplantem manuellem Failover|  
+|c|Synchroner Commit nur mit geplantem manuellem Failover|  
 |D|Asynchroner Commit (nur mit erzwungenem Failover)|  
   
  Das Failoververhalten für jedes sekundäre Replikat hängt davon ab, welches Verfügbarkeitsreplikat gerade das primäre Replikat ist. Grundsätzlich ist für ein bestimmtes sekundäres Replikat das Failoververhalten der schlimmste Fall angesichts des aktuellen primären Replikats. In der folgenden Abbildung wird veranschaulicht, wie das Failoververhalten des sekundären Replikats in Abhängigkeit des aktuellen primären Replikats variiert und ob es für den asynchronen (nur mit erzwungenem Failover) oder den synchronen Commit-Modus (mit oder ohne manuellem Failover) konfiguriert ist.  
@@ -258,16 +259,16 @@ ms.locfileid: "52523400"
   
 |Verfügbarkeitsmodus des sekundären Replikats|Ist die Datenbank synchronisiert?|Besteht die Möglichkeit eines Datenverlusts?|  
 |--------------------------------------------|-------------------------------|----------------------------|  
-|Synchroner Commit|Benutzerkontensteuerung|nein|  
-|Synchroner Commit|nein|Benutzerkontensteuerung|  
-|Asynchroner Commit|nein|Benutzerkontensteuerung|  
+|Synchroner Commit|Ja|Nein|  
+|Synchroner Commit|Nein|Ja|  
+|Asynchroner Commit|Nein|Ja|  
   
- Sekundäre Datenbanken verfolgen nur zwei Wiederherstellungsverzweigungen nach. Wenn Sie also mehrere erzwungene Failover ausführen, kann eine sekundäre Datenbank, für die die Datensynchronisierung mit dem vorherigen erzwungenen Failover gestartet wurde, u. U. nicht fortgesetzt werden. In diesem Fall müssen alle sekundären Datenbanken, die nicht fortgesetzt werden können, aus der Verfügbarkeitsgruppe entfernt und der Verfügbarkeitsgruppe wieder hinzugefügt werden, nachdem sie bis zum richtigen Zeitpunkt wiederhergestellt wurden. Fehler 1408 mit dem Status 103 kann in diesem Szenario beobachtet werden (Fehler: 1408, Schweregrad: 16, Status: 103). Da eine Wiederherstellung nicht über mehrere Wiederherstellungsverzweigungen ausgeführt werden kann, sollten Sie unbedingt eine Protokollsicherung erstellen, nachdem Sie mehr als ein erzwungenes Failover ausgeführt haben.  
+ Sekundäre Datenbanken verfolgen nur zwei Wiederherstellungsverzweigungen nach. Wenn Sie also mehrere erzwungene Failover ausführen, kann eine sekundäre Datenbank, für die die Datensynchronisierung mit dem vorherigen erzwungenen Failover gestartet wurde, u. U. nicht fortgesetzt werden. In diesem Fall müssen alle sekundären Datenbanken, die nicht fortgesetzt werden können, aus der Verfügbarkeitsgruppe entfernt und der Verfügbarkeitsgruppe wieder hinzugefügt werden, nachdem sie bis zum richtigen Zeitpunkt wiederhergestellt wurden. Fehler 1408 mit dem Status 103 kann in diesem Szenario auftreten (Fehler: 1408, Schweregrad: 16, Status: 103). Da eine Wiederherstellung nicht über mehrere Wiederherstellungsverzweigungen ausgeführt werden kann, sollten Sie unbedingt eine Protokollsicherung erstellen, nachdem Sie mehr als ein erzwungenes Failover ausgeführt haben.  
   
 ###  <a name="WhyFFoPostForcedQuorum"></a> Warum nach Erzwingen des Quorums ein erzwungenes Failover erforderlich ist  
  Nachdem Sie das Quorum (*erzwungenes Quorum*) im WSFC-Cluster erzwungen haben, müssen Sie für jede Verfügbarkeitsgruppe ein Failover erzwingen (mit möglichem Datenverlust). Das Erzwingen eines Failovers ist erforderlich, da der wirkliche Status der WSFC-Clusterwerte verloren gegangen sein könnte. Normale Failover müssen nach einem erzwungenen Quorum verhindert werden, da ein nicht synchronisiertes sekundäres Replikat andernfalls im neu konfigurierten WSFC-Cluster als synchronisiert angezeigt werden könnte.  
   
- Beispiel: Ein WSFC-Cluster, das eine Verfügbarkeitsgruppe auf drei Knoten hostet: Knoten A hostet das primäre Replikat. Knoten B und Knoten C hosten jeweils ein sekundäres Replikat. Knoten C wird vom WSFC-Cluster getrennt, während das lokale sekundäre Replikat SYNCHRONISIERT wird.  Die Knoten A und B weisen weiterhin ein fehlerfreies Quorum auf. Die Verfügbarkeitsgruppe bleibt online. Auf Knoten A akzeptiert das primäre Replikat weiterhin Updates. Auf Knoten B wird das sekundäre Replikat weiterhin mit dem primären Replikat synchronisiert. Das sekundäre Replikat auf Knoten C wird nicht mehr synchronisiert und fällt zunehmend hinter das primäre Replikat zurück. Da Knoten C getrennt wurde, bleibt das Replikat jedoch fälschlicherweise im Status SYNCHRONIZED.  
+ Betrachten Sie beispielsweise einen WSFC-Cluster, der eine Verfügbarkeitsgruppe auf drei Knoten hostet:  Knoten A hostet das primäre Replikat, und Knoten B und Knoten C hosten jeweils ein sekundäres Replikat. Knoten C wird vom WSFC-Cluster getrennt, während das lokale sekundäre Replikat SYNCHRONISIERT wird.  Die Knoten A und B weisen weiterhin ein fehlerfreies Quorum auf. Die Verfügbarkeitsgruppe bleibt online. Auf Knoten A akzeptiert das primäre Replikat weiterhin Updates. Auf Knoten B wird das sekundäre Replikat weiterhin mit dem primären Replikat synchronisiert. Das sekundäre Replikat auf Knoten C wird nicht mehr synchronisiert und fällt zunehmend hinter das primäre Replikat zurück. Da Knoten C getrennt wurde, bleibt das Replikat jedoch fälschlicherweise im Status SYNCHRONIZED.  
   
  Wenn das Quorum verloren geht und dann auf Knoten A erzwungen wird, sollte der Synchronisierungsstatus der Verfügbarkeitsgruppe im WSFC-Cluster richtig sein. Das sekundäre Replikat auf Knoten C sollte den Status UNSYNCHRONIZED aufweisen. Wenn jedoch ein Quorum auf Knoten C erzwungen wird, ist die Synchronisierung der Verfügbarkeitsgruppe falsch. Der Synchronisierungsstatus im Cluster entspricht dem Status, als Knoten C getrennt wurde. Das sekundäre Replikat auf Knoten C weist *fälschlicherweise* den Status SYNCHRONIZED auf. Da geplante manuelle Failover die Sicherheit der Daten gewährleisten, darf eine Verfügbarkeitsgruppe nach dem Erzwingen eines Quorums nicht wieder online geschaltet werden.  
   
@@ -317,7 +318,7 @@ ms.locfileid: "52523400"
      Sie können dann auf der Serverinstanz, die das neue sekundäre Replikat hostet, die angehaltene sekundäre Datenbank löschen und eine neue sekundäre Datenbank durch das Wiederherstellen dieser Sicherung (und mindestens einer nachfolgenden Protokollsicherung) mit RESTORE WITH NORECOVERY erstellen. Es wird empfohlen, zusätzliche Protokollsicherungen der aktuellen primären Datenbanken bis zum Fortsetzen der entsprechenden sekundären Datenbanken hinauszuzögern.  
   
 > [!WARNING]  
->  Die Transaktionsprotokollkürzung in einer primären Datenbank wird verzögert, solange eine ihrer sekundären Datenbanken angehalten ist. Der Synchronisierungszustand eines sekundären Replikats mit synchronem Commit kann auch keinen Übergang zu HEALTHY durchführen, solange alle lokalen Datenbanküberreste angehalten sind.  
+>  Die Transaktionsprotokollkürzung wird auf einer primären Datenbank verzögert, solange eine ihrer sekundären Datenbanken angehalten ist. Der Synchronisierungszustand eines sekundären Replikats mit synchronem Commit kann auch keinen Übergang zu HEALTHY durchführen, solange alle lokalen Datenbanküberreste angehalten sind.  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So konfigurieren Sie das Failoververhalten**  
@@ -350,9 +351,9 @@ ms.locfileid: "52523400"
   
 -   [Microsoft SQL Server Always On-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server Always On-Teamblog: Der offizielle SQL Server Always On-Teamblog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog (SQL Server Always On-Teamblog: Der offizielle SQL Server Always On-Teamblog)](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Verfügbarkeitsmodi &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
  [Windows Server-Failoverclustering &#40;WSFC&#41; mit SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   

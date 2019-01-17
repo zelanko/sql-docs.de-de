@@ -5,17 +5,24 @@ ms.date: 11/26/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
-ms.topic: conceptual - "query plans [SQL Server]" - "execution plans [SQL Server]" - "query profiling" - "lightweight query profiling" - "lightweight profiling" - "lwp"
+ms.topic: conceptual
+helpviewer_keywords:
+- query plans [SQL Server]
+- execution plans [SQL Server]
+- query profiling
+- lightweight query profiling
+- lightweight profiling
+- lwp
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: e0ee0bc2c99d997d6a44d5ca0e9944e0ae4bfeb3
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 39f3d82d65eb0dd05b8459742febd67d2bc56790
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617250"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53732027"
 ---
 # <a name="query-profiling-infrastructure"></a>Profilerstellungsinfrastruktur für Abfragen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,13 +83,13 @@ WITH (MAX_MEMORY=4096 KB,
 ```
 
 > [!NOTE]
-> Weitere Informationen zum Leistungsmehraufwand bei der Abfrageprofilerstellung finden Sie im Blogbeitrag [Developers Choice: Query progress – anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/). 
+> Weitere Informationen zum Leistungsmehraufwand bei der Abfrageprofilerstellung finden Sie im Blogbeitrag [Developers Choice: Query progress - anytime, anywhere (Von Entwicklern inspiriert: Abfragestatus – jederzeit und überall)](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) 
 
 Wenn Sie eine erweiterte Ereignissitzung ausführen, die das Ereignis *query_thread_profile* verwendet, dann wird die [sys.dm_exec_query_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)-DMV ebenfalls unter Verwendung von einfacher Profilerstellung mit Daten aufgefüllt. Dies ermöglicht Live-Abfragestatistiken für alle Sitzungen, indem der [Aktivitätsmonitor](../../relational-databases/performance-monitor/activity-monitor.md) verwendet oder die DMV direkt abgefragt wird.
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v2"></a>Einfache Profilerstellungsinfrastruktur für die Abfrageausführungsstatistik v2
 
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 bis [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). 
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 bis [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) 
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 enthält eine überarbeitete Version der einfachen Profilerstellung mit minimalem Mehraufwand. Einfache Profilerstellung kann auch global über das [Ablaufverfolgungsflag 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) für die Versionen aktiviert werden, die oben unter *Gilt für* angegeben werden. Eine neue DMF [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) wurde eingeführt, um den Abfrageausführungsplan für In-Flight-Anforderungen zurückzugeben.
 
@@ -107,7 +114,7 @@ WITH (MAX_MEMORY=4096 KB,
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v3"></a>Einfache Profilerstellungsinfrastruktur für die Abfrageausführungsstatistik v3
 
-**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] enthält eine neu überarbeitete Version der einfachen Profilerstellung, die Informationen zur Anzahl der Zeilen für alle Ausführungen erfasst. Einfache Profilerstellung ist für [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] standardmäßig aktiviert, und das Ablaufverfolgungsflag 7412 besitzt keine Auswirkungen.
 
@@ -118,9 +125,9 @@ WITH (MAX_MEMORY=4096 KB,
 
 Beginnend mit der einfachen Profilerstellung v2 und ihrem geringen Mehraufwand kann jeder Server, der nicht bereits CPU-gebunden ist, einfache Profilerstellung **kontinuierlich** ausführen und es Datenbankexperten ermöglichen, jederzeit auf jede aktuell ausgeführte Ausführung zuzugreifen (z.B. mit dem Aktivitätsmonitor oder durch direktes Abfragen von `sys.dm_exec_query_profiles`) und den Abfrageplan mit Laufzeitstatistiken abzurufen.
 
-Weitere Informationen zum Leistungsmehraufwand bei der Abfrageprofilerstellung finden Sie im Blogbeitrag [Developers Choice: Query progress – anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/). 
+Weitere Informationen zum Leistungsmehraufwand bei der Abfrageprofilerstellung finden Sie im Blogbeitrag [Developers Choice: Query progress - anytime, anywhere (Von Entwicklern inspiriert: Abfragestatus – jederzeit und überall)](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) 
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Überwachen und Optimieren der Leistung](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [Tools für die Leistungsüberwachung und -optimierung](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [Öffnen des Aktivitätsmonitors &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)     
@@ -133,4 +140,4 @@ Weitere Informationen zum Leistungsmehraufwand bei der Abfrageprofilerstellung f
  [Referenz zu logischen und physischen Showplanoperatoren](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [Tatsächlicher Ausführungsplan](../../relational-databases/performance/display-an-actual-execution-plan.md)    
  [Live-Abfragestatistik](../../relational-databases/performance/live-query-statistics.md)      
- [Developers Choice: Query progress - anytime, anywhere (Wahl der Entwickler: Abfragestatus – jederzeit und überall)](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)
+ [Developers Choice: Query progress - anytime, anywhere (Von Entwicklern inspiriert: Abfragestatus – jederzeit und überall)](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)

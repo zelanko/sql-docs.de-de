@@ -1,6 +1,7 @@
 ---
-title: Verfügbarkeitsgruppe ist offline | Microsoft-Dokumentation
-ms.custom: ''
+title: Verfügbarkeitsgruppe ist offline
+description: Mithilfe dieses Artikels können Sie mögliche Ursachen dafür ermitteln, warum eine Always On-Verfügbarkeitsgruppe offline ist.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 343ae5ff2b5b65b26569f99ff22d51ed1860e69d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 78517d525165c7186c1ecccb2c1fc3561a7f3f45
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600170"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203739"
 ---
-# <a name="availability-group-is-offline"></a>Verfügbarkeitsgruppe ist offline
+# <a name="always-on-availability-group-is-offline"></a>Always On-Verfügbarkeitsgruppe ist offline
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="introduction"></a>Einführung  
@@ -73,7 +74,7 @@ ms.locfileid: "51600170"
   
 -   Falls gerade ein Failover durchgeführt wird, warten Sie, bis das Failover abgeschlossen ist.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Verwenden des AlwaysOn-Dashboards &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   

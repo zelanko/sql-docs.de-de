@@ -2,22 +2,19 @@
 title: 'SQL Server: Partner für Hochverfügbarkeit und Notfallwiederherstellung | Microsoft-Dokumentation'
 description: Liste mit Partnerunternehmen, die Lösungen zur Überwachung von SQL Server anbieten.
 services: sql-server
-documentationcenter: NA
-ms.devlang: NA
 ms.topic: conceptual
 ms.custom: ''
 ms.date: 09/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: 5dc3ba843314297131de569bafa5412577a24adf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1849328d008a6b995d2242a1e00aa9c0040e8d05
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510421"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53732047"
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>SQL Server: Partner für Hochverfügbarkeit und Notfallwiederherstellung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +29,7 @@ Es gibt eine große Auswahl an branchenführenden Tools, die die Komponenten „
 |![Azure][5] |**Azure Site Recovery**<br>Site Recovery repliziert Workloads, die auf virtuellen Computern oder physischen Servern ausgeführt werden, damit sie an einem sekundären Speicherort weiterhin verfügbar sind, wenn der primäre Speicherort nicht verfügbar ist. Sie können virtuelle Computer mit SQL Server replizieren oder einen Failover ausführen. Dabei können Daten von lokalen Rechenzentren in Azure oder auf ein anderes lokales Rechenzentrum oder von einem Azure-Rechenzentrum auf ein anderes verschoben werden.<br><br> Enterprise- und Standard-Editionen von SQL Server 2008 R2 – SQL Server 2016|[Website][azure_website]<br>[Marketplace][azure_marketplace]<br>[Datenblatt][azure_datasheet]<br>[Twitter][azure_twitter]<br>[Video][azure_youtube]|
 |![DH2i][2] |**DH2i**<br>DxEnterprise ist eine Smart Availability-Software für Windows, Linux und Docker, mit der Ihre geplanten und ungeplanten Ausfallzeiten nahezu bei null liegen und die Sie außerdem dabei unterstützt, hohe Kosteneinsparungen zu erzielen, die Verwaltung zu vereinfachen und Ihre physischen und logischen Komponenten zu konsolidieren.<br><br>SQL Server 2005+, Windows Server 2008R2+, Ubuntu 16+, RHEL 7+, CentOS 7+|[Website][dh2i_website]<br>[Datenblatt][dh2i_datasheet]<br>[Twitter][dh2i_twitter]<br>[Video][dh2i_youtube]|
 |![HPE][4] |**HPE Serviceguard**<br>Schützen Sie mit HPE Serviceguard für Linux (SGLX) wichtige SQL Server 2017-Workloads unter Linux ® vor geplanten und ungeplanten Ausfällen, die durch eine Vielzahl von Störungen der Infrastruktur oder der Anwendung entstehen können, und das über physische und virtuelle Umgebungen und große Distanzen hinweg. HPE SGLX A.12.20.00 und höher bietet kontextabhängige Überwachungs- und Wiederherstellungsoptionen für Failoverclusterinstanzen sowie SQL Server-Workloads in Always On-Verfügbarkeitsgruppen. Maximieren Sie die Betriebszeit mit HPE SGLX, ohne die Datenintegrität und Leistung zu beeinträchtigen.<br><br>SQL Server 2017 unter Linux – RedHat 7.3, 7.4, SUSE 12 SP2, SP3|[Website][hpe_website]<br>[Datenblatt][hpe]<br>[Testversion herunterladen][hpe_download]<br>[Blog][hpe_download]<br>[Twitter][hpe_twitter]
-|![IDERA][3]|**IDERA**<br>SQL Safe Backup ist eine Lösung für Backups mit hoher Leistung und Wiederherstellungen für SQL Server, mit der Sie Geld sparen können, indem die Sicherungsdatengröße und die Zeit für die Datenbanksicherung reduziert werden, und indem ein sofortiger Lese- und Schreibzugriff auf die Datenbanken innerhalb der Sicherungsdateien zur Verfügung gestellt wird.<br><br>Microsoft SQL Server: 2005 SP1 oder spätere Versionen, 2008, 2008 R2, 2012, 2014, 2016, alle Editionen |[Website][idera_website]|
+|![IDERA][3]|**IDERA**<br>SQL Safe Backup ist eine Lösung für Backups mit hoher Leistung und Wiederherstellungen für SQL Server, mit der Sie Geld sparen können, indem die Sicherungsdatengröße und die Zeit für die Datenbanksicherung reduziert werden, und indem ein sofortiger Lese- und Schreibzugriff auf die Datenbanken innerhalb der Sicherungsdateien zur Verfügung gestellt wird.<br><br>Microsoft SQL Server: 2005 SP1 der höher, 2008, 2008 R2, 2012, 2014, 2016; alle Editionen |[Website][idera_website]|
 |![NEC][7]|**NEC**<br>ExpressCluster ist eine umfassende und vollständig automatisierte Lösung für hohe Verfügbarkeit und Notfallwiederherstellung nach größeren Ausfällen, z.B. durch Hardware-, Software-, Netzwerk- und Websitefehler. Die Lösung umfasst SQL Server und zugehörige Anwendungen, die auf physischen oder virtuellen Computern in lokalen oder Cloudumgebungen ausgeführt werden.<br><br>Microsoft SQL Server: 2005 oder höher; alle Editionen |[Website][necec_website]<br>[Datenblatt][necec_datasheet]<br>[Video][necec_youtube]<br>[Download][necec_download]|
 |![Portworx][6] |**Portworx**<br>Mit Portworx können zustandsbehaftete Container während der Produktion ausgeführt werden. Mit diesem Tool können Benutzer jede Datenbank oder jeden zustandsbehafteten Dienste mit jeder Infrastruktur verwalten, indem sie einen beliebigen Container-Scheduler, einschließlich Kuvernetes, Mesosphere DV/OS und Docker Swarm, verwenden. Portworx bietet Lösungen für die fünf häufigsten Probleme, auf die DevOps-Teams stoßen, wenn sie Datenbanken mit Containern und zustandsbehaftete Dienste während der Produktion ausführen: Persistenz, Hochverfügbarkeit, Datenautomatisierung, Unterstützung von mehreren Datenspeichern und Infrastrukturen sowie Sicherheit.<br><br>SQL Server 2017 unter Docker |[Website][portworx_website]<br>[Dokumentation][portworx_docs]<br>[Video][portworx_youtube]|
 |![SIOS][8] |**SIOS**<br>SIOS Technology stellt kostengünstige Hochverfügbarkeits- und Notfallwiederherstellungslösungen für SQL Server unter Windows oder Linux bereit. Mit SIOS SANless-Clustern ist kein gemeinsam genutztes SAN (Storage Area Network) mehr erforderlich, sodass Sie Ihre wichtigsten Anwendungen in physischen, virtuellen, cloudbasierten und hybriden Konfigurationen in Umgebungen mit einem oder mehreren Standorten flexibel schützen können.<br><br>Fügen Sie SIOS DataKeeper zu Ihrer Windows Server-Failoverclusterumgebung hinzu, um eine SANless-Volumeressource zu erstellen, die herkömmlichen gemeinsam genutzten Speicher ersetzt, sodass Sie Ihren Windows Server-Failovercluster problemlos in Azure ausführen können.<br><br>SIOS Protection Suite ist eine höchst flexible Clusterlösung, die wichtige Linux-Anwendungen wie SQL Server, SAP, HANA, Oracle und viele weitere schützt.|[Website][sios_website]<br>[Datenblatt][sios_datasheet]<br>[Twitter][sios_twitter]<br>[Marketplace][sios_marketplace]<br>[Video][sios_youtube]|

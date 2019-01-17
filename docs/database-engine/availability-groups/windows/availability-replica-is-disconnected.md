@@ -1,6 +1,7 @@
 ---
-title: Verfügbarkeitsreplikat wird getrennt | Microsoft-Dokumentation
-ms.custom: ''
+title: Verfügbarkeitsreplikat ist in einer Verfügbarkeitsgruppe getrennt
+description: Identifizieren Sie mögliche Ursachen dafür, warum ein Replikat in einer Always On-Verfügbarkeitsgruppe getrennt wurde.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: 1a2162d3-54fb-4356-b349-effbdc15a5a4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d070f183fbe5b09016af950cfad9e6da60e90c6
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9f699a5f23998d5891ccbfe56ce0a3f31b12e0cd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605740"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207379"
 ---
-# <a name="availability-replica-is-disconnected"></a>Verfügbarkeitsreplikat wird getrennt
+# <a name="availability-replica-is-disconnected-within-an-always-on-availability-group"></a>Verfügbarkeitsreplikat ist in einer Always On-Verfügbarkeitsgruppe getrennt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="introduction"></a>Einführung  
@@ -57,7 +58,7 @@ ms.locfileid: "51605740"
   
 -   Überprüfen Sie, ob für den Port ein Konflikt besteht, und ändern Sie ggf. die Portnummer.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Verwenden des AlwaysOn-Dashboards &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   

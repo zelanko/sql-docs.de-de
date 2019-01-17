@@ -35,12 +35,12 @@ ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: f5d0da7fb7b4515875b456eac380a6f5e0588e55
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cd332393a0d605f2ae0e519e6a449fe49bff3477
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420431"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215769"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ Das bedeutet, dass die Befehle DBCC CHECKALLOC, DBCC CHECKTABLE oder DBCC CHECKC
 >     
 > Da DBCC-Reparaturoptionen für speicheroptimierte Tabellen nicht verfügbar sind, müssen Sie Ihre Datenbanken regelmäßig sichern und die Sicherungen testen. Wenn bei einer speicheroptimierten Tabelle Datenintegritätsprobleme auftreten, müssen Sie die Tabelle aus der letzten bekannten fehlerfreien Sicherung wiederherstellen.    
 
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## <a name="syntax"></a>Syntax    
     
@@ -97,7 +97,7 @@ REPAIR_ALLOW_DATA_LOSS | REPAIR_FAST | REPAIR_REBUILD
     
 REPAIR_ALLOW_DATA_LOSS  
  Versucht, alle gemeldeten Fehler zu reparieren. Diese Reparaturen können zu Datenverlusten führen.  
-    
+    
 > [!WARNING]
 > Die Option REPAIR_ALLOW_DATA_LOSS ist ein unterstütztes Feature, stellt jedoch möglicherweise nicht immer die beste Option dar, um eine Datenbank in einen physisch konsistenten Zustand zu versetzen. Im Erfolgsfall kann die REPAIR_ALLOW_DATA_LOSS-Option zu Datenverlusten führen. Tatsächlich können dabei mehr Daten verloren gehen als bei einer Wiederherstellung der Datenbank aus der letzten als funktionierend bekannten Sicherung durch den Benutzer. 
 >
@@ -125,7 +125,7 @@ ALL_ERRORMSGS
  Zeigt alle gemeldeten Fehler für jedes Objekt an. Alle Fehlermeldungen werden standardmäßig angezeigt. Das Angeben oder Weglassen dieser Option hat keine Auswirkungen. Die Fehlermeldungen werden nach der Objekt-ID sortiert. Davon ausgenommen sind Meldungen, die für die [tempdb-Datenbank](../../relational-databases/databases/tempdb-database.md) generiert wurden.     
 
 EXTENDED_LOGICAL_CHECKS  
- Wenn der Kompatiblitätsgrad 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) oder höher ist, werden logische Konsistenzprüfungen an einer indizierten Sicht, XML-Indizes und räumliche Indizes (sofern vorhanden) ausgeführt.  
+ Wenn der Kompatiblitätsgrad 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) oder höher ist, werden logische Konsistenzprüfungen für eine indizierte Sicht, XML-Indizes und räumliche Indizes (sofern vorhanden) ausgeführt.  
  Weitere Informationen finden Sie unter *Ausführen logischer Konsistenzprüfungen an Indizes* im Abschnitt [Hinweise](#remarks) weiter unten in diesem Thema.  
     
 NO_INFOMSGS  
@@ -133,7 +133,7 @@ NO_INFOMSGS
     
 TABLOCK  
  Bewirkt, dass DBCC CHECKDB Sperren erhält, statt eine interne Datenbankmomentaufnahme zu verwenden. Dies schließt eine kurzfristige exklusive Sperre (X) für die Datenbank ein. Durch TABLOCK wird DBCC CHECKDB schneller in einer stark ausgelasteten Datenbank ausgeführt, allerdings verringert sich während der Ausführung von DBCC CHECKDB die in der Datenbank verfügbare Parallelität.  
-    
+    
 > [!IMPORTANT] 
 > TABLOCK beschränkt die ausgeführten Überprüfungen. DBCC CHECKCATALOG wird nicht für die Datenbank ausgeführt, und [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Daten werden nicht überprüft.
     
@@ -155,7 +155,7 @@ Dieses Argument impliziert stets NO_INFOMSGS und kann nicht mit einer der Repara
 DATA_PURITY  
  Bewirkt, dass DBCC CHECKDB die Datenbank auf Spaltenwerte überprüft, die ungültig sind oder außerhalb des zulässigen Bereichs liegen. So können mit DBCC CHECKDB z.B. Spalten mit Datums- und Zeitwerten erkannt werden, die außerhalb des zulässigen Bereichs für den **datetime**-Datentyp liegen, oder es werden **decimal**-Spalten oder Spalten mit einem ungefähren numerischen Datentyp erkannt, die ungültige Dezimal- oder Genauigkeitswerte enthalten.  
  Die Überprüfung der Spaltenwertintegrität ist standardmäßig aktiviert. Die Option DATA_PURITY ist nicht erforderlich. Bei Datenbanken, die von früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktualisiert wurden, ist die Spaltenwertprüfung nicht standardmäßig aktiviert, die Aktivierung erfolgt erst, wenn DBCC CHECKDB WITH DATA_PURITY fehlerfrei für die Datenbank ausgeführt wurde. Danach wird die Spaltenwertintegrität standardmäßig von DBCC CHECKDB überprüft. Weitere Informationen zu den möglichen Auswirkungen des Upgrades einer Datenbank von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie im Abschnitt mit Hinweisen weiter unten in diesem Thema.  
-    
+    
 > [!WARNING]
 > Wenn PHYSICAL_ONLY angegeben ist, wird die Spaltenintegrität nicht überprüft.
     
@@ -267,7 +267,7 @@ Das Ausführen des Befehls DBCC CHECKDB mit der Option REPAIR_ALLOW_DATA_LOSS ka
 -   Tabellen mit Replikationsmetadaten. Für Aktionen, die vom CHECKDB-Prozess zur Reparatur beschädigter Tabellen mit Replikationsmetadaten ausgeführt werden, ist das Entfernen und Neukonfigurieren der Replikation erforderlich.    
     
 Führen Sie Folgendes aus, wenn Sie den Befehl DBCC CHECKDB mit der Option REPAIR_ALLOW_DATA_LOSS für eine Benutzerdatenbank oder Verteilungsdatenbank ausführen müssen:
-1.  Versetzen Sie das System in einen inaktiven Status: Beenden Sie die Aktivität in der Datenbank und allen anderen Datenbanken in der Replikationstopologie, und versuchen Sie anschließend, alle Knoten zu synchronisieren. Weitere Informationen finden Sie unter [Versetzen einer Replikationstopologie in einen inaktiven Status &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).    
+1.  Versetzen Sie das System in einen inaktiven Status. Beenden Sie die Aktivität in der Datenbank und allen anderen Datenbanken in der Replikationstopologie, und versuchen Sie anschließend, alle Knoten zu synchronisieren. Weitere Informationen finden Sie unter [Versetzen einer Replikationstopologie in einen inaktiven Status &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).    
 1.  Führen Sie DBCC CHECKDB aus.    
 1.  Wenn der Bericht von DBCC CHECKDB Reparaturen für Tabellen in der Verteilungsdatenbank oder für Tabellen mit Replikationsmetadaten in einer Benutzerdatenbank einschließt, entfernen Sie die Replikation, und konfigurieren Sie sie neu. Weitere Informationen finden Sie unter [Deaktivieren der Veröffentlichung und Verteilung](../../relational-databases/replication/disable-publishing-and-distribution.md).    
 1.  Wenn der Bericht von DBCC CHECKDB Reparaturen für replizierte Tabellen enthält, führen Sie eine Datenüberprüfung aus, um zu bestimmen, ob Unterschiede zwischen den Daten in den Veröffentlichungs- und Abonnementdatenbanken bestehen.    
@@ -390,7 +390,7 @@ DBCC CHECKDB WITH NO_INFOMSGS;
 GO    
 ```    
     
-## <a name="see-also"></a>Weitere Informationen finden Sie unter    
+## <a name="see-also"></a>Weitere Informationen    
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [Anzeigen der Größe der Datei mit geringer Dichte einer Datenbank-Momentaufnahme &#40;SQL Server&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
 [sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)  

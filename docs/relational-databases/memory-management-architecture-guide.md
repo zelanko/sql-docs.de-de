@@ -1,7 +1,7 @@
 ---
 title: Handbuch zur Architektur der Speicherverwaltung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/08/2018
+ms.date: 12/11/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dadd28224a7f360ee90767861025b0bdebc7cbe5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 924b347e5fa8907fa1f2b9cb9b820a63808cbc3b
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669399"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328980"
 ---
 # <a name="memory-management-architecture-guide"></a>Handbuch zur Architektur der Speicherverwaltung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,8 +57,8 @@ Mithilfe von AWE und der Berechtigung „Locked Pages in Memory“ können Sie f
 | |32-Bit <sup>1</sup> |64-Bit|
 |-------|-------|-------| 
 |Konventioneller Arbeitsspeicher |Alle Editionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Bis zu der für den virtuellen Prozessadressraum geltenden Beschränkung: <br>– 2 GB<br>– 3 GB mit Startparameter „/3gb“ <sup>2</sup> <br>– 4 GB unter WOW64 <sup>3</sup> |Alle Editionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Bis zu der für den virtuellen Prozessadressraum geltenden Beschränkung: <br>– 7 TB mit IA64-Architektur (IA64 wird in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] und höher nicht unterstützt)<br>– Maximum des Betriebssystems mit X64 Architektur <sup>4</sup>
-|AWE-Mechanismus (Ermöglicht [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , auf 32-Bit-Plattformen über die Beschränkung für den virtuellen Prozessadressraum hinauszugehen.) |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard, Enterprise und Developer Edition: Pufferpool kann auf bis zu 64 GB Arbeitsspeicher zugreifen.|Nicht zutreffend <sup>5</sup> |
-|Betriebssystemberechtigung „Lock Pages in Memory“ (ermöglicht das Sperren des physischen Speichers, sodass das Betriebssystem keine Seiten des gesperrten Arbeitsspeichers auslagern kann.) <sup>6</sup> |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard, Enterprise und Developer Edition: Erforderlich, damit der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Prozess den AWE-Mechanismus verwenden kann. Über den AWE-Mechanismus zugeordneter Speicher kann nicht ausgelagert werden. <br> Wird dieses Privileg erteilt, ohne dass AWE aktiviert ist, hat dies keine Auswirkungen auf den Server. | Nur bei Bedarf verwendet, nämlich wenn es Anzeigen gibt, dass der sqlservr-Prozess ausgelagert wird. In diesem Fall wird im Fehlerprotokoll Fehler 17890 gemeldet, ähnlich wie im folgenden Beispiel: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
+|AWE-Mechanismus (Ermöglicht [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , auf 32-Bit-Plattformen über die Beschränkung für den virtuellen Prozessadressraum hinauszugehen.) |Standard-, Enterprise- und Developer-Editionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: Pufferpool kann auf bis zu 64 GB Arbeitsspeicher zugreifen.|Nicht zutreffend <sup>5</sup> |
+|Betriebssystemberechtigung „Lock Pages in Memory“ (ermöglicht das Sperren des physischen Speichers, sodass das Betriebssystem keine Seiten des gesperrten Arbeitsspeichers auslagern kann.) <sup>6</sup> |Standard-, Enterprise- und Developer-Editionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Prozess muss den AWE-Mechanismus verwenden. Über den AWE-Mechanismus zugeordneter Speicher kann nicht ausgelagert werden. <br> Wird dieses Privileg erteilt, ohne dass AWE aktiviert ist, hat dies keine Auswirkungen auf den Server. | Nur bei Bedarf verwendet, nämlich wenn es Anzeigen gibt, dass der sqlservr-Prozess ausgelagert wird. In diesem Fall wird im Fehlerprotokoll Fehler 17890 gemeldet, ähnlich wie im folgenden Beispiel: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
 
 <sup>1</sup> Ab [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]sind 32-Bit-Versionen nicht verfügbar.  
 <sup>2</sup> „/3gb“ ist ein Startparameter des Betriebssystems. Weitere Informationen finden Sie in der MSDN Library.  
@@ -87,11 +87,11 @@ In der folgenden Tabelle ist aufgeführt, ob ein bestimmter Typ von Speicherbele
 
 |Typ der Speicherbelegung| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| Seit [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
-|Einzelseitenbelegungen|Benutzerkontensteuerung|Ja, in Seitenbelegungen beliebiger Größe konsolidiert|
-|Mehrseitenbelegungen|nein|Ja, in Seitenbelegungen beliebiger Größe konsolidiert|
-|CLR-Belegungen|nein|Benutzerkontensteuerung|
-|Threadstapel-Arbeitsspeicher|nein|nein|
-|Direkte Belegungen von Windows|nein|nein|
+|Einzelseitenbelegungen|Ja|Ja, in Seitenbelegungen beliebiger Größe konsolidiert|
+|Mehrseitenbelegungen|Nein|Ja, in Seitenbelegungen beliebiger Größe konsolidiert|
+|CLR-Belegungen|Nein|Ja|
+|Threadstapel-Arbeitsspeicher|Nein|Nein|
+|Direkte Belegungen von Windows|Nein|Nein|
 
 Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird möglicherweise mehr Arbeitsspeicher als der in der Einstellung „Max. Serverarbeitsspeicher“ angegebene Wert zugewiesen. Dieses Verhalten kann auftreten, wenn der Wert für **_Serverspeicher gesamt (KB)_** bereits die Einstellung **_Zielserverspeicher (KB)_** erreicht hat, die als maximaler Serverarbeitsspeicher angegeben ist. Wenn nicht ausreichend zusammenhängender freier Arbeitsspeicher vorhanden ist, um die Anforderung von Mehrseiten-Speicheranforderungen (mehr als 8 KB) zu bedienen, da der Arbeitsspeicher fragmentiert ist, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eine Zusage über den Grenzwert hinaus vornehmen, statt die Arbeitsspeicheranforderung zurückzuweisen. 
 
@@ -103,8 +103,9 @@ Dieses Verhalten wird normalerweise während folgender Vorgänge beobachtet:
 -  Sicherungsvorgänge, die große Speicherpuffer erfordern.
 -  Ablaufverfolgungsvorgänge, die große Eingabeparameter speichern müssen.
 
+<a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
 ## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>Änderungen an "memory_to_reserve" ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
-In früheren Versionen von SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) reservierte die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Arbeitsspeicherverwaltung einen Teil des virtuellen Prozessadressbereichs (Process Virtual Address Space, VAS) für die Verwendung durch die **Mehrseitenbelegung (MPA)**, **CLR-Belegung**, Speicherbelegungen für **Threadstapel** im SQL Server-Prozess und **Direkte Belegungen von Windows (DWA)**. Dieser Teil des virtuellen Adressbereichs wird auch als „Zu belassender Arbeitsspeicher“ oder „Nicht-Pufferpool“-Bereich bezeichnet.
+In früheren Versionen von SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) reservierte die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Arbeitsspeicherverwaltung einen Teil des virtuellen Prozessadressbereichs (Process Virtual Address Space, VAS) für die Verwendung durch die **Mehrseitenbelegung (Multi-Page Allocation, MPA)**, **CLR-Belegung**, Speicherbelegungen für **Threadstapel** im SQL Server-Prozess und **Direkte Belegungen von Windows (Direct Windows Allocations, DWA)**. Dieser Teil des virtuellen Adressbereichs wird auch als „Zu belassender Arbeitsspeicher“ oder „Nicht-Pufferpool“-Bereich bezeichnet.
 
 Der virtuelle Adressbereich, der für diese Zuteilungen reserviert ist, wird durch die Konfigurationsoption _**memory\_to\_reserve**_ festgelegt. Der von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendete Standardwert ist 256 MB. Um diesen Standardwert außer Kraft zu setzen, verwenden Sie den Startparameter [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g*. Informationen zum Startparameter *-g* finden Sie auf der Dokumentationsseite zu [Startoptionen für den Datenbank-Engine-Dienst](../database-engine/configure-windows/database-engine-service-startup-options.md).
 
@@ -114,11 +115,11 @@ Der folgenden Tabelle können Sie entnehmen, ob ein bestimmter Typ Speicherbeleg
 
 |Typ der Speicherbelegung| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| Seit [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
-|Einzelseitenbelegungen|nein|Nein, in Seitenbelegungen beliebiger Größe konsolidiert|
-|Mehrseitenbelegungen|Benutzerkontensteuerung|Nein, in Seitenbelegungen beliebiger Größe konsolidiert|
-|CLR-Belegungen|Benutzerkontensteuerung|Benutzerkontensteuerung|
-|Threadstapel-Arbeitsspeicher|Benutzerkontensteuerung|Benutzerkontensteuerung|
-|Direkte Belegungen von Windows|Benutzerkontensteuerung|Benutzerkontensteuerung|
+|Einzelseitenbelegungen|Nein|Nein, in Seitenbelegungen beliebiger Größe konsolidiert|
+|Mehrseitenbelegungen|Ja|Nein, in Seitenbelegungen beliebiger Größe konsolidiert|
+|CLR-Belegungen|Ja|Ja|
+|Threadstapel-Arbeitsspeicher|Ja|Ja|
+|Direkte Belegungen von Windows|Ja|Ja|
 
 ## <a name="dynamic-memory-management"></a> Dynamische Arbeitsspeicherverwaltung
 Die Arbeitsspeicherverwaltung von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ruft standardmäßig so viel Arbeitsspeicher wie nötig ab, ohne dass es dabei zu einem Speicherengpass auf dem System kommt. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verwendet dazu die für Arbeitsspeicherbenachrichtigungen verfügbaren APIs in Microsoft Windows.
@@ -182,8 +183,8 @@ Wenn eine Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf
 ## <a name="memory-used-by-sql-server-objects-specifications"></a>Spezifikationen für den von SQL Server-Objekten verwendeten Arbeitsspeicher
 In der folgenden Liste werden die Richtwerte für den Arbeitsspeicher beschrieben, den die einzelnen Objekte in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]belegen. Die aufgeführten Angaben sind Schätzwerte und können je nach Umgebung und Erstellung der Objekte variieren:
 
-* Sperre (durch den Sperren-Manager verwaltet): 64 Byte + 32 Byte pro Besitzer   
-* Benutzerverbindung: Etwa (3 \* Netzwerkpaketgröße + 94 KB)    
+* Sperre (durch den Sperren-Manager verwaltet): 64 Bytes + 32 Bytes pro Besitzer   
+* Benutzerverbindung: Ca. (3 \* Netzwerkpaketgröße + 94 KB)    
 
 Die **Netzwerkpaketgröße** entspricht der Größe der TDS-Pakete (Tabular Data Stream), die für die Kommunikation zwischen Anwendungen und der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbank-Engine verwendet werden. Die Standardpaketgröße beträgt 4 KB und wird durch die Konfigurationsoption Netzwerkpaketgröße gesteuert.
 
@@ -313,12 +314,12 @@ Der Prüfsummenschutz, der in [!INCLUDE[ssVersion2005](../includes/ssversion2005
 > TORN_PAGE_DETECTION verwendet zwar weniger Ressourcen, bietet jedoch einen minimalen Teil des Schutzes von CHECKSUM.
 
 ## <a name="understanding-non-uniform-memory-access"></a>Grundlegendes zu NUMA (Non-Uniform Memory Access)
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  ist NUMA-fähig (Non-Uniform Memory Access) und liefert hervorragende Leistungen auf NUMA-Hardware, ohne dass eine besondere Konfiguration notwendig wäre. Mit immer schnelleren Prozessoren und einer wachsenden Anzahl von Prozessoren wird es zunehmend schwieriger, die Speicherlatenzzeit zu verringern, die für die Verwendung dieser zusätzlichen Verarbeitungsleistung erforderlich ist. Für die Umgehung dieser Schwierigkeit stellen Hardwarehersteller große L3-Caches bereit; dies ist jedoch nur eine eingeschränkte Lösung. Die NUMA-Architektur bietet eine skalierbare Lösung für dieses Problem. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kann die Vorteile NUMA-basierter Computer nutzen, ohne dass Anwendungsänderungen erforderlich sind. Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren von SQL Server für die Verwendung von Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md).
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  ist NUMA-fähig (Non-Uniform Memory Access) und liefert hervorragende Leistungen auf NUMA-Hardware, ohne dass eine besondere Konfiguration notwendig wäre. Mit immer schnelleren Prozessoren und einer wachsenden Anzahl von Prozessoren wird es zunehmend schwieriger, die Speicherlatenzzeit zu verringern, die für die Verwendung dieser zusätzlichen Verarbeitungsleistung erforderlich ist. Für die Umgehung dieser Schwierigkeit stellen Hardwarehersteller große L3-Caches bereit; dies ist jedoch nur eine eingeschränkte Lösung. Die NUMA-Architektur bietet eine skalierbare Lösung für dieses Problem. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kann die Vorteile NUMA-basierter Computer nutzen, ohne dass Anwendungsänderungen erforderlich sind. Weitere Informationen finden Sie unter [Vorgehensweise: Soft-NUMA (SQL Server)](../database-engine/configure-windows/soft-numa-sql-server.md).
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 [Serverkonfigurationsoptionen für den Serverarbeitsspeicher](../database-engine/configure-windows/server-memory-server-configuration-options.md)   
 [Lesen von Seiten](../relational-databases/reading-pages.md)   
 [Schreiben von Seiten](../relational-databases/writing-pages.md)   
-[Vorgehensweise: Konfigurieren von SQL Server für die Verwendung von Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md)   
+[Vorgehensweise: Soft-NUMA (SQL Server)](../database-engine/configure-windows/soft-numa-sql-server.md)   
 [Anforderungen für die Verwendung von speicheroptimierten Tabellen](../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)   
 [Beheben von OOM-Problemen (nicht genügend Arbeitsspeicher) mithilfe von arbeitsspeicheroptimierten Tabellen](../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md)

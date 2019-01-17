@@ -1,7 +1,7 @@
 ---
 title: CREATE USER (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/28/2017
+ms.date: 12/03/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -30,25 +30,25 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 533622016967deef4f1fbcb4ead0c17975910899
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a06f59cc72fef384ad68833a3729c862eaa679ea
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618088"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202560"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Fügt der aktuellen Datenbank einen Benutzer hinzu. Die elf Typen von Benutzern werden im Folgenden mit einem Beispiel der grundlegendsten Syntax aufgelistet:  
+  Fügt der aktuellen Datenbank einen Benutzer hinzu. Die zwölf Typen von Benutzern werden im Folgenden mit einem Beispiel der grundlegendsten Syntax aufgelistet:  
   
-**Benutzer mit Anmeldenamen in der master-Datenbank** Dies ist der häufigste Benutzertyp.  
+**Benutzer mit Anmeldeinformationen in der Masterdatenbank:** dies ist der gängigste Benutzertyp.  
   
 -   Benutzer mit Anmeldenamen auf Basis eines Windows Active Directory-Kontos. `CREATE USER [Contoso\Fritz];`     
 -   Benutzer mit Anmeldenamen auf Basis einer Windows-Gruppe. `CREATE USER [Contoso\Sales];`   
 -   Benutzer mit Anmeldenamen unter Verwendung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung. `CREATE USER Mary;`  
   
-**Benutzer, die sich in der Datenbank authentifizieren** Empfohlen, um Ihre Datenbank portierbarer zu machen.  
+**Benutzer, die sich in der Datenbank authentifizieren:** empfohlen, um Ihre Datenbank portierbarer zu machen.  
  Immer in [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] zugelassen. Nur in einer eigenständigen Datenbank in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] zugelassen.  
   
 -   Benutzer auf Basis eine Windows-Benutzers ohne Anmeldenamen. `CREATE USER [Contoso\Fritz];`    
@@ -63,18 +63,18 @@ ms.locfileid: "47618088"
   
 -   Benutzer auf Basis einer Windows-Gruppe ohne Anmeldenamen, die über die Mitgliedschaft in einer anderen Windows-Gruppe eine Verbindung mit [!INCLUDE[ssDE](../../includes/ssde-md.md)] herstellen können. `CREATE USER [Contoso\Fritz];`  
   
-**Benutzer ohne Authentifizierungsmöglichkeit** Diese Benutzer können sich nicht bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssSDS](../../includes/sssds-md.md)] anmelden.  
+**Benutzer ohne Authentifizierungsmöglichkeit:** Diese Benutzer können sich nicht bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssSDS](../../includes/sssds-md.md)] anmelden.  
   
 -   Benutzer ohne Anmeldenamen. Können sich nicht anmelden, jedoch Berechtigungen erhalten. `CREATE USER CustomApp WITHOUT LOGIN;`    
 -   Benutzer auf Basis eines Zertifikats. Können sich nicht anmelden, jedoch Berechtigungen erhalten und Module signieren. `CREATE USER TestProcess FOR CERTIFICATE CarnationProduction50;`  
 -   Benutzer auf Basis eines asymmetrischen Schlüssels. Können sich nicht anmelden, jedoch Berechtigungen erhalten und Module signieren. `CREATE User TestProcess FROM ASYMMETRIC KEY PacificSales09;`   
  
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database  
+-- Syntax for SQL Server, Azure SQL Database, and Azure SQL Database Managed Instance
   
 -- Syntax Users based on logins in master  
 CREATE USER user_name   
@@ -84,7 +84,7 @@ CREATE USER user_name
     [ WITH <limited_options_list> [ ,... ] ]   
 [ ; ]  
   
---Users that authenticate at the database  
+-- Users that authenticate at the database  
 CREATE USER   
     {  
       windows_principal [ WITH <options_list> [ ,... ] ]  
@@ -95,7 +95,7 @@ CREATE USER
   
  [ ; ]  
   
---Users based on Windows principals that connect through Windows group logins  
+-- Users based on Windows principals that connect through Windows group logins  
 CREATE USER   
     {   
           windows_principal [ { FOR | FROM } LOGIN windows_principal ]  
@@ -104,7 +104,7 @@ CREATE USER
     [ WITH <limited_options_list> [ ,... ] ]   
 [ ; ]  
   
---Users that cannot authenticate   
+-- Users that cannot authenticate   
 CREATE USER user_name   
     {  
          WITHOUT LOGIN [ WITH <limited_options_list> [ ,... ] ]  
@@ -125,8 +125,23 @@ CREATE USER user_name
   
 -- SQL Database syntax when connected to a federation member  
 CREATE USER user_name  
-[;]  
-```  
+[;]
+
+-- Syntax for users based on Azure AD logins for Azure SQL Database Managed Instance
+CREATE USER user_name   
+    [   { FOR | FROM } LOGIN login_name  ]  
+    | FROM EXTERNAL PROVIDER
+    [ WITH <limited_options_list> [ ,... ] ]   
+[ ; ]  
+
+<limited_options_list> ::=  
+      DEFAULT_SCHEMA = schema_name 
+    | DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }   
+    | ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | OFF ] ] 
+```
+
+> [!IMPORTANT]
+> Azure AD-Anmeldeinformationen für verwaltete SQL-Datenbank-Instanzen befinden sich in der **Public Preview**.
 
 ```  
 -- Syntax for Azure SQL Data Warehouse  
@@ -162,7 +177,7 @@ CREATE USER user_name
  Gibt den Namen an, mit dem der Benutzer innerhalb dieser Datenbank identifiziert wird. *user_name* ist vom Datentyp **sysname**. Der Name kann bis zu 128 Zeichen lang sein. Wenn Sie einen Benutzer auf Basis eines Windows-Prinzipals erstellen, wird der Prinzipalname von Windows als Benutzername verwendet, es sei denn, ein abweichender Benutzername wird angegeben.  
   
  LOGIN *login_name*  
- Gibt die Anmeldung an, für die der Datenbankbenutzer erstellt wird. *login_name* muss ein gültiger Anmeldename im Server sein. Dies kann ein Anmeldename auf Basis eines Windows-Prinzipals (Benutzer oder Gruppe) oder ein Anmeldename mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung sein. Wird dieser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldename zur Anmeldung in der Datenbank verwendet, erhält er den Namen und die ID des Datenbankbenutzers, der erstellt wird. Verwenden Sie das Format **[**_\<domainName\>_**\\**_\<loginName\>_**]**, wenn Sie einen von einem Windows-Prinzipal zugeordneten Anmeldenamen erstellen. Beispiele finden Sie unter [Syntaxzusammenfassung](#SyntaxSummary).  
+ Gibt die Anmeldung an, für die der Datenbankbenutzer erstellt wird. *login_name* muss ein gültiger Anmeldename im Server sein. Dies kann ein Anmeldename auf Basis eines Windows-Prinzipals (Benutzer oder Gruppe) oder ein Anmeldename mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung sein. Wird diese SQL Server-Anmeldung in die Datenbank eingetragen, erhält sie den Namen und die ID des Datenbankbenutzers, der erstellt wird. Verwenden Sie das Format **[**_\<domainName\>_**\\**_\<loginName\>_**]**, wenn Sie einen von einem Windows-Prinzipal zugeordneten Anmeldenamen erstellen. Beispiele finden Sie unter [Syntaxzusammenfassung](#SyntaxSummary).  
   
  Wenn CREATE USER die einzige Anweisung in einem SQL-Batch ist, unterstützt Windows Azure SQL-Datenbank die WITH LOGIN-Klausel. Wenn CREATE USER nicht die einzige Anweisung in einem SQL-Batch ist oder in dynamischem SQL-Code ausgeführt wird, wird die WITH LOGIN-Klausel nicht unterstützt.  
   
@@ -170,12 +185,12 @@ CREATE USER user_name
  Gibt das erste Schema an, das vom Server beim Auflösen der Namen von Objekten für diesen Datenbankbenutzer durchsucht wird.  
   
  '*windows_principal*'  
- Gibt den Windows-Prinzipal an, für den der Datenbankbenutzer erstellt wird. *windows_principal* kann ein Windows-Benutzer oder eine Windows-Gruppe sein. Der Benutzer wird auch dann erstellt, wenn kein Anmeldename für *windows_principal* vorhanden ist. Wenn *windows_principal* beim Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht über einen Anmeldenamen verfügt, muss vom Windows-Prinzipal über die Mitgliedschaft in einer Windows-Gruppe mit einem Anmeldenamen eine Authentifizierung bei [!INCLUDE[ssDE](../../includes/ssde-md.md)] durchgeführt werden, oder die eigenständige Datenbank muss in der Verbindungszeichenfolge als Anfangskatalog angegeben sein. Verwenden Sie das Format **[**_\<domainName\>_**\\**_\<loginName\>_**]**, wenn Sie einen Benutzer aus einem Windows-Prinzipal erstellen. Beispiele finden Sie unter [Syntaxzusammenfassung](#SyntaxSummary). Auf Active Directory-Benutzer basierende Benutzer sind auf Namen mit weniger als 21 Zeichen beschränkt.    
+ Gibt den Windows-Prinzipal an, für den der Datenbankbenutzer erstellt wird. *windows_principal* kann ein Windows-Benutzer oder eine Windows-Gruppe sein. Der Benutzer wird auch dann erstellt, wenn kein Anmeldename für *windows_principal* vorhanden ist. Wenn *windows_principal* beim Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht über einen Anmeldenamen verfügt, muss vom Windows-Prinzipal über die Mitgliedschaft in einer Windows-Gruppe mit einem Anmeldenamen eine Authentifizierung bei [!INCLUDE[ssDE](../../includes/ssde-md.md)] durchgeführt werden, oder die eigenständige Datenbank muss in der Verbindungszeichenfolge als Anfangskatalog angegeben sein. Verwenden Sie das Format **[**_\<domainName\>_**\\**_\<loginName\>_**]**, wenn Sie einen Benutzer aus einem Windows-Prinzipal erstellen. Beispiele finden Sie unter [Syntaxzusammenfassung](#SyntaxSummary). Benutzer auf Grundlage von Active Directory-Benutzern sind auf Namen mit weniger als 21 Zeichen beschränkt.
   
  '*Azure_Active_Directory_principal*'  
  **Gilt für**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
   
- Gibt den Azure Active Directory-Prinzipal an, für den der Datenbankbenutzer erstellt wird. *Azure_Active_Directory_principal* kann ein Azure Active Directory-Benutzer oder eine Azure Active Directory-Gruppe sein. (Azure Active Directory-Benutzer können in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] nicht über Windows-Authentifizierungsanmeldungen verfügen. Nur Datenbankbenutzer können dies tun.) Die Verbindungszeichenfolge muss die eigenständige Datenbank als den Anfangskatalog angeben. 
+ Gibt den Azure Active Directory-Prinzipal an, für den der Datenbankbenutzer erstellt wird. *Azure_Active_Directory_principal* kann ein Azure Active Directory-Benutzer, eine Azure Active Directory-Gruppe oder eine Azure Active Directory-Anwendung sein. (Azure Active Directory-Benutzer können in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] nicht über Windows-Authentifizierungsanmeldungen verfügen. Nur Datenbankbenutzer können dies tun.) Die Verbindungszeichenfolge muss die eigenständige Datenbank als den Anfangskatalog angeben.
 
  Verwenden Sie für Benutzer den vollständigen Alias ihres Domänenprinzipals.   
  
@@ -220,7 +235,7 @@ SID = *sid*
   
  Gilt nur für Benutzer mit Kennwörtern ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung) in einer eigenständigen Datenbank. Gibt die SID des neuen Datenbankbenutzers an. Wenn diese Option nicht ausgewählt wird, wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatisch ein SID zugewiesen. Erstellen Sie mit dem SID-Parameter Benutzer in mehreren Datenbanken, die die gleiche Identität (SID) aufweisen. Dies ist beim Erstellen von Benutzern in mehreren Datenbanken für die Vorbereitung eines Always On-Failovers hilfreich. Fragen Sie zum Bestimmen der SID eines Benutzers sys.database_principals ab.  
   
-ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ] ]  
+ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ON | **OFF**]  
  **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Verhindert bei Massenkopiervorgängen kryptografische Metadatenüberprüfungen auf dem Server. Dadurch kann der Benutzer durch Massenkopiervorgänge Daten zwischen Tabellen oder Datenbanken austauschen, ohne dabei die Daten zu verschlüsseln. Der Standardwert ist OFF.  
@@ -243,7 +258,7 @@ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ] ]
   
  Durch die WITHOUT LOGIN-Klausel wird ein Benutzer erstellt, der keiner SQL Server-Anmeldung zugeordnet ist. Er kann als guest Verbindungen mit anderen Datenbanken herstellen. Dem Benutzer ohne Anmeldung können Berechtigungen zugewiesen werden, und wenn der Sicherheitskontext in einen Benutzer ohne Anmeldung geändert wird, erhalten die ursprünglichen Benutzer die Berechtigungen des Benutzers ohne Anmeldung. Siehe Beispiel [D: Erstellen und Verwenden eines Benutzers ohne Anmeldename](#withoutLogin).  
   
- Nur Benutzernamen, die Windows-Prinzipalen zugeordnet sind, können den umgekehrten Schrägstrich (**\\**) enthalten.  
+ Nur Benutzernamen, die Windows-Prinzipalen zugeordnet sind, können den umgekehrten Schrägstrich (**\\**) enthalten.
   
  Mithilfe von CREATE USER kann kein guest-Benutzer erstellt werden, da der guest-Benutzer bereits in jeder Datenbank vorhanden ist. Sie können den guest-Benutzer durch Erteilen der CONNECT-Berechtigung aktivieren (siehe Beispiel):  
   
@@ -252,7 +267,15 @@ GRANT CONNECT TO guest;
 GO  
 ```  
   
- Informationen zu Datenbankbenutzern werden in der Katalogsicht [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) angezeigt.  
+ Informationen zu Datenbankbenutzern werden in der Katalogsicht [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) angezeigt.
+
+Die neue Syntaxerweiterung **FROM EXTERNAL PROVIDER** steht zum Erstellen von auf Serverebene gültigen Azure AD-Anmeldeinformationen in der verwalteten Azure SQL-Datenbank-Instanz zur Verfügung. Mit Azure AD-Anmeldeinformationen können Azure AD-Prinzipale auf Datenbankebene zu Azure AD-Anmeldeinformationen auf Serverebene zugeordnet werden. Verwenden Sie die folgende Syntax zum Erstellen eines Azure AD-Benutzers aus Azure AD-Anmeldeinformationen:
+
+`CREATE USER [AAD_principal] FROM LOGIN [Azure AD login]`
+
+Beim Erstellen des Benutzers in der verwalteten Azure SQL-Datenbank-Instanz muss „login_name“ vorhandenen Azure AD-Anmeldeinformationen entsprechen, da die Verwendung der Klausel **FROM EXTERNAL PROVIDER** sonst einen Azure AD-Benutzer ohne Anmeldeinformationen in der Masterdatenbank erstellt. Mit dem folgenden Beispielbefehl wird ein eigenständiger Benutzer erstellt:
+
+`CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER`
   
 ##  <a name="SyntaxSummary"></a> Syntaxzusammenfassung  
  **Benutzer mit Anmeldenamen in der master-Datenbank**  
@@ -439,14 +462,50 @@ CREATE USER [Chin]
 WITH   
       DEFAULT_SCHEMA = dbo  
     , ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON ;  
-```  
-  
+```
+
+### <a name="i-create-an-azure-ad-user-from-an-azure-ad-login-in-sql-database-managed-instance"></a>I. Erstellen eines Azure AD-Benutzers aus Azure AD-Anmeldeinformationen in der verwalteten SQL-Datenbank-Instanz
+
+ Verwenden Sie die folgende Syntax zum Erstellen eines Azure AD-Benutzers aus Azure AD-Anmeldeinformationen.
+
+ Melden Sie sich mit der Azure AD-Anmeldung, der die `sysadmin`-Rolle zugewiesen ist, bei der verwalteten Instanz an. Im Folgenden wird der Azure AD-Benutzer bob@contoso.com mit den Anmeldeinformationen bob@contoso.com erstellt. Diese Anmeldeinformationen wurde im [CREATE LOGIN](create-login-transact-sql.md#d-creating-a-login-for-a-federated-azure-ad-account)-Beispiel erstellt.
+
+```sql
+CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];
+GO
+```
+
+> [!IMPORTANT]
+> Geben Sie beim Erstellen eines **USER** mit Azure AD-Anmeldeinformationen für *user_name* das Gleiche wie für *login_name* von **LOGIN** an.
+
+Das Erstellen eines Azure AD-Benutzers als Gruppe aus einer Azure AD-Anmeldung, die eine Gruppe ist, wird unterstützt.
+
+```sql
+CREATE USER [AAD group] FROM LOGIN [AAD group];
+GO
+```
+
+Sie können einen Azure AD-Benutzer auch aus einer Azure AD-Anmeldung erstellen, die eine Gruppe ist.
+
+```sql
+CREATE USER [bob@contoso.com] FROM LOGIN [AAD group];
+GO
+```
+
+### <a name="j-create-an-azure-ad-user-without-an-aad-login-for-the-database"></a>J. Erstellen eines Azure AD-Benutzers ohne AAD-Anmeldeinformationen für die Datenbank
+
+Die folgende Syntax wird zum Erstellen des Azure AD-Benutzers bob@contoso.com in der Datenbank der verwalteten SQL-Datenbank-Instanz verwendet (eigenständiger Benutzer):
+
+```sql
+CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;
+GO
+```
 
 ## <a name="next-steps"></a>Nächste Schritte  
 Ziehen Sie in Betracht, den Benutzer mithilfe der Anweisung [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) einer Datenbankrolle hinzuzufügen, sobald dieser erstellt wurde.  
 Möglicherweise möchten Sie der Rolle [GRANT-Objektberechtigungen](../../t-sql/statements/grant-object-permissions-transact-sql.md) zuweisen, damit sie auf Tabellen zugreifen können. Allgemeine Informationen über das Sicherheitsmodell von SQL Server finden Sie unter [Berechtigungen](../../relational-databases/security/permissions-database-engine.md).   
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen eines Datenbankbenutzers](../../relational-databases/security/authentication-access/create-a-database-user.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [ALTER USER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-user-transact-sql.md)   

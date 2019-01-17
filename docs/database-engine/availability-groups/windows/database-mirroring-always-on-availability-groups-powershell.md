@@ -1,6 +1,7 @@
 ---
-title: Datenbankspiegelung – Always On-Verfügbarkeitsgruppe – PowerShell | Microsoft-Dokumentation
-ms.custom: ''
+title: Erstellen eines Datenbankspiegelungsendpunkts für eine Verfügbarkeitsgruppe mithilfe von PowerShell
+description: In diesem Artikel wird das Erstellen eines Datenbankspiegelungsendpunkts für eine Always On-Verfügbarkeitsgruppe mithilfe von PowerShell beschrieben.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 857fe97c4ef19456c4ce755857702bfd19ff8bd8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c3c9306b27804603e00bf9c5d542e5bc800f14e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634098"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206379"
 ---
-# <a name="database-mirroring---always-on-availability-groups--powershell"></a>Datenbankspiegelung – Always On-Verfügbarkeitsgruppe – PowerShell
+# <a name="create-a-database-mirroring-endpoint-for-an-availability-group-using-powershell"></a>Erstellen eines Datenbankspiegelungsendpunkts für eine Verfügbarkeitsgruppe mithilfe von PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   In diesem Thema wird beschrieben, wie ein Datenbankspiegelungs-Endpunkt zur Verwendung durch [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit PowerShell erstellt wird.  
@@ -30,7 +31,7 @@ ms.locfileid: "47634098"
   
 -   **Vorbereitungen:**  [Sicherheit](#Security)  
   
--   **So erstellen Sie einen Datenbankspiegelungs-Endpunkt mit:**  [PowerShell](#PowerShellProcedure)  
+-   **So erstellen Sie einen Datenbankspiegelungsendpunkt:**  [PowerShell](#PowerShellProcedure)  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
   
@@ -83,7 +84,7 @@ Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"
   
 -   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen einer Verfügbarkeitsgruppe &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)   
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   

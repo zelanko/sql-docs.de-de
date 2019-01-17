@@ -1,6 +1,7 @@
 ---
-title: Timeout der Integritätsprüfung für Lease der SQL Server-Verfügbarkeitsgruppe | Microsoft-Dokumentation
-ms.custom: ''
+title: Mechanismen der Timeouts für Leaseintegritätsprüfungen für Verfügbarkeitsgruppen
+description: Hier finden Sie die Mechanismen und Richtlinien der Timeouts für Leases, Cluster und Integritätsprüfung für Always On-Verfügbarkeitsgruppen.
+ms.custom: seodec18
 ms.date: 05/02/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25728b2c12d31d53f9638d08c952d75ae929bf9c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c1c337e4a43082cef846623073054ae75513dc31
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393983"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209079"
 ---
-# <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts"></a>Mechanismen und Richtlinien der Timeouts für Lease, Cluster und Integritätsprüfung 
+# <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Mechanismen und Richtlinien der Timeouts für Leases, Cluster und Integritätsprüfung für Always On-Verfügbarkeitsgruppen 
 
 Unterschiedliche Hardware-, Software- und Clusterkonfigurationen sowie unterschiedliche Anwendungsanforderungen in Bezug auf Leistung und Betriebszeit erfordern eine spezifische Konfiguration der Timeoutwerte für Lease, Cluster und Integritätsprüfung. Für bestimmte Anwendungen und Arbeitsauslastungen ist eine striktere Überwachung erforderlich, um Ausfallzeiten infolge schwerer Fehler zu begrenzen. Andere erfordern eine größere Toleranz gegenüber vorübergehenden Netzwerkproblemen und Wartezeiten aufgrund hoher Ressourcennutzung und sind für langsameres Failover geeignet. 
 
@@ -80,7 +81,7 @@ Die Fehlerbedingungsebene der Verfügbarkeitsgruppe ändert die Fehlerbedingunge
 | 2: OnServerUnresponsive | Wenn keine Daten von `sp_server_diagnostics` für HealthCheckTimeout empfangen werden.
 | 3: OnCriticalServerError | (Standardeinstellung) Wenn die Systemkomponente einen Fehler meldet.
 | 4: OnModerateServerError | Wenn die Ressourcenkomponente einen Fehler meldet. 
-| 5: OnAnyQualifiedFailureConitions |  Wenn die Abfrageverarbeitungskomponente einen Fehler meldet.
+| 5:  OnAnyQualifiedFailureConitions |  Wenn die Abfrageverarbeitungskomponente einen Fehler meldet.
 
 ## <a name="updating-cluster-and-always-on-timeout-values"></a>Aktualisieren von Timeoutwerten für Cluster und Always On 
 
@@ -128,7 +129,7 @@ Der Leasemechanismus wird durch einen einzelnen Wert gesteuert, der für jede Ve
    
 ### <a name="health-check-values"></a>Werte für die Integritätsprüfung 
 
-Die Always On-Integritätsprüfung wird durch zwei Werte gesteuert: FailureConditionLevel und HealthCheckTimeout. FailureConditionLevel gibt die Toleranzstufe für bestimmte Fehlerbedingungen an, die von `sp_server_diagnostics` gemeldet werden. HealthCheckTimeout legt den Zeitraum fest, über den die Ressourcen-DLL keine Aktualisierung von `sp_server_diagnostics` empfangen muss. Das Aktualisierungsintervall für `sp_server_diagnostics` ist immer HealthCheckTimeout / 3. 
+Zwei Werte steuern die Always On-Integritätsprüfung: FailureConditionLevel und HealthCheckTimeout. FailureConditionLevel gibt die Toleranzstufe für bestimmte Fehlerbedingungen an, die von `sp_server_diagnostics` gemeldet werden. HealthCheckTimeout legt den Zeitraum fest, über den die Ressourcen-DLL keine Aktualisierung von `sp_server_diagnostics` empfangen muss. Das Aktualisierungsintervall für `sp_server_diagnostics` ist immer HealthCheckTimeout / 3. 
 
 Verwenden Sie zum Konfigurieren der Failover-Bedingungsebene die Option `FAILURE_CONDITION_LEVEL = <n>` der Anweisung `CREATE` oder `ALTER` `AVAILABILITY GROUP`, wobei `<n>` eine ganze Zahl zwischen 1 und 5 ist. Mit dem folgenden Befehl wird die Fehlerbedingungsebene für die Verfügbarkeitsgruppe „AG1“ auf 1 festgelegt: 
 
@@ -153,9 +154,9 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
 
   - SameSubnetDelay \<= CrossSubnetDelay 
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter    
+## <a name="see-also"></a>Weitere Informationen    
 
-[Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten (Always On-Verfügbarkeitsgruppen)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)
+[Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten &#40;Always On-Verfügbarkeitsgruppen&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)
 
 [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)         
 

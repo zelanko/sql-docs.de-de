@@ -1,9 +1,11 @@
 ---
 title: Berichtsparameter (Berichts-Generator und Berichts-Designer) | Microsoft-Dokumentation
-ms.date: 10/17/2016
+ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
+description: In diesem Thema werden die allgemeinen Einsatzbereiche von Reporting Services-Berichtsparametern, die einstellbaren Eigenschaften und vieles mehr beschrieben.
+ms.custom: seodec18
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.reportparameters.general.f1
@@ -15,26 +17,25 @@ f1_keywords:
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fa92c44ff8410049e32ba7ddba2c90fcd07c2821
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 55104192e2a6ac738ca5b99365fd90b74d40430b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50032079"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215021"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Berichtsparameter (Berichts-Generator und Berichts-Designer)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus und einheitlicher Modus
+
   In diesem Thema werden die allgemeinen Einsatzbereiche von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsparametern, die einstellbaren Eigenschaften und vieles mehr beschrieben. Mithilfe von Berichtsparametern können Sie Berichtsdaten steuern, eine Verbindung zwischen verwandten Berichten herstellen und die Berichtspräsentation anpassen. Sie können Berichtsparameter in paginierten Berichten verwenden, die Sie in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] und im Berichts-Designer erstellen, und auch in mobilen Berichten, die Sie in [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]erstellen. Erfahren Sie mehr über [Berichtsparameterkonzepte](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
-  
-||  
-|-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus und einheitlicher Modus|  
-  
- Wenn Sie einem Bericht einen Parameter selbst hinzufügen möchten, lesen Sie unter [Tutorial: Hinzufügen eines Parameters zum Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)erstellen.  
+ 
+Weitere Informationen zum Hinzufügen eines Parameters zu einem Bericht finden Sie unter [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41; (Tutorial: Hinzufügen eines Parameters zu einem Bericht (Berichts-Generator))](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md).  
     
 ##  <a name="bkmk_Common_Uses_for_Parameters"></a> Allgemeine Verwendungsmöglichkeiten für Parameter  
  Im Folgenden sind einige der häufigsten Verwendungsmöglichkeiten für Parameter aufgeführt.  
   
- **Steuern von Daten in paginierten und mobilen Berichten**  
+**Steuern von Daten in paginierten und mobilen Berichten**  
   
 -   Filtern Sie paginierte Berichtsdaten in der Datenquelle, indem Sie Datasetabfragen schreiben, die Variablen enthalten.  
   
@@ -44,7 +45,7 @@ ms.locfileid: "50032079"
   
 -   Ermöglichen Sie Benutzern die Angabe von Werten, um die Daten in einem paginierten Bericht anzupassen. Beispiel: Angabe von zwei Parametern (Start- und Enddatum) für Umsatzdaten.  
   
- **Eine Verbindung zwischen verwandten Berichten herstellen**  
+**Eine Verbindung zwischen verwandten Berichten herstellen**  
   
 -   Verwenden Sie Parameter, um Hauptberichte mit Drillthroughberichten, Unterberichten sowie verknüpften Berichten zu verbinden. Beim Entwurf von Berichtssätzen können Sie jeden Bericht so entwerfen, dass er Antworten auf ganz bestimmte Fragen liefert. Jeder Bericht kann eine andere Sicht oder Detailebene zu verwandten Informationen bereitstellen. Zum Bereitstellen eines Satzes untereinander verbundener Berichte erstellen Sie Parameter für die verbundenen Daten in den Zielberichten.  
   
@@ -52,7 +53,7 @@ ms.locfileid: "50032079"
   
 -   Anpassen von Parametersätzen für mehrere Benutzer. Erstellen Sie auf der Grundlage eines Verkaufsberichts auf dem Berichtsserver zwei verknüpfte Berichte. In einem der verknüpften Berichte werden vordefinierte Parameterwerte für Vertriebsmitarbeiter, im anderen vordefinierte Parameterwerte für Verkaufsmanager verwendet. Für beide Berichte wird die gleiche Berichtsdefinition verwendet.  
   
- **Berichtspräsentation anpassen**  
+**Berichtspräsentation anpassen**  
   
 -   Senden Sie einem Berichtsserver über eine URL-Anforderung Befehle, um das Rendering eines Berichts anzupassen. Weitere Informationen finden Sie unter [URL-Zugriff (SSRS)](../../reporting-services/url-access-ssrs.md) und [Übergeben von Berichtsparametern innerhalb einer URL](../../reporting-services/pass-a-report-parameter-within-a-url.md).  
   
@@ -105,9 +106,9 @@ ms.locfileid: "50032079"
   
  Weitere Informationen finden Sie in diesem Thema unter [Datasetabfrage](#bkmk_Dataset_Parameters) .  
   
- **Manuelles Erstellen von Parametern**  
+**Manuelles Erstellen von Parametern**  
   
- Erstellen Sie einen Parameter manuell aus dem Berichtsdatenbereich. Sie können Berichtsparameter so konfigurieren, dass ein Benutzer interaktiv Werte eingeben kann, um den Inhalt oder die Darstellung eines Berichts anzupassen. Berichtsparameter können auch so konfiguriert werden, dass vorkonfigurierte Werte nicht vom Benutzer geändert werden können.  
+Erstellen Sie einen Parameter manuell aus dem Berichtsdatenbereich. Sie können Berichtsparameter so konfigurieren, dass ein Benutzer interaktiv Werte eingeben kann, um den Inhalt oder die Darstellung eines Berichts anzupassen. Berichtsparameter können auch so konfiguriert werden, dass vorkonfigurierte Werte nicht vom Benutzer geändert werden können.  
   
 > [!NOTE]  
 >  Da Parameter auf dem Server unabhängig verwaltet werden, werden durch das erneute Veröffentlichen eines Hauptberichts mit neuen Parametereinstellungen keine im Bericht vorhandenen Parametereinstellungen überschrieben.  
@@ -210,34 +211,13 @@ ms.locfileid: "50032079"
 >   
 >  Wenn ein Berichtsparameter nicht an einen Datasetparameter gebunden ist und die Parameterwerte im Bericht enthalten sind, können die Benutzer des Berichts Ausdruckssyntax oder eine URL in den Parameterwert eingeben und den Bericht für Excel oder HTML rendern. Wenn anschließend ein anderer Benutzer den Bericht anzeigt und auf die gerenderten Parameterinhalte klickt, führt der Benutzer möglicherweise unbeabsichtigt das bösartige Skript bzw. den bösartigen Link aus.  
 >   
->  Um das Risiko der versehentlichen Ausführung schädlicher Skripts zu minimieren, sollten gerenderte Berichte nur aus vertrauenswürdigen Quellen geöffnet werden. Weitere Informationen zum Sichern von Berichten finden Sie unter [Sichere Berichte und Ressourcen](../../reporting-services/security/secure-reports-and-resources.md).  
-  
-##  <a name="bkmk_How_To_Topics"></a> Themen zur Vorgehensweise  
- In diesem Abschnitt finden Sie Prozeduren, in denen Schritt für Schritt das Arbeiten mit Parametern und Filtern erläutert wird.  
-  
--   [Hinzufügen, Ändern oder Löschen von Berichtsparametern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
-  
--   [Hinzufügen, Ändern oder Löschen von verfügbaren Werten für einen Berichtsparameter &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md)  
-  
--   [Hinzufügen, Ändern oder Löschen von Standardwerten für einen Berichtsparameter &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-default-values-for-a-report-parameter.md)  
-  
--   [Ändern der Reihenfolge von Berichtsparametern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
-  
--   [Hinzufügen von kaskadierenden Parametern zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)  
-  
--   [Hinzufügen eines Filters zu einem Dataset &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
-  
--   [Hinzufügen eines Unterberichts und Hinzufügen von Parametern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)  
-  
--   [Benutzerdefiniertes Anpassen des Parameterbereichs in einem Bericht &#40;Berichts-Generator&#41;](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)  
-  
+>  Um das Risiko der versehentlichen Ausführung schädlicher Skripts zu minimieren, sollten gerenderte Berichte nur aus vertrauenswürdigen Quellen geöffnet werden. Weitere Informationen zum Schützen von Berichten finden Sie unter [Sichere Berichte und Ressourcen](../../reporting-services/security/secure-reports-and-resources.md).  
 
 ##  <a name="bkmk_Related_Topics"></a> Verwandte Abschnitte  
- [Konfigurieren von SSRS-Berichtsparametern (Quiz)](https://go.microsoft.com/fwlink/p/?LinkID=306443)  
+
+ [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41; (Tutorial: Hinzufügen eines Parameters zu einem Bericht (Berichts-Generator))](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md).  
   
- [Tutorial: Hinzufügen eines Parameters zum Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
-  
-[Berichtsparameterkonzepte](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
+[Report Parameters Concepts (Berichtsparameterkonzepte)](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
   
  [Berichtsbeispiele (Berichts-Generator und SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   

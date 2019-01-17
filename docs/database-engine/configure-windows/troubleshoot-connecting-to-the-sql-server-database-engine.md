@@ -14,12 +14,12 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c491a67b55db4a730db2bb7fcd8977162657e516
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 853f3c26f729db2256ad859174eeef16d4698453
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410907"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531075"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Beheben von Verbindungsfehlern mit der SQL Server-Datenbank-Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,11 +30,11 @@ Diese Anweisungen sind besonders für die Problembehandlung des Fehlers „**Ver
 
 *   „Netzwerkbezogener oder instanzspezifischer Fehler beim Herstellen einer Verbindung mit SQL Server. Der Server wurde nicht gefunden, oder auf ihn kann nicht zugegriffen werden. Überprüfen Sie, ob der Instanzname richtig ist und ob SQL Server Remoteverbindungen zulässt. " 
 
-*   „(Anbieter: Named Pipes-Anbieter, Fehler: 40 – Es konnte keine Verbindung mit SQL Server hergestellt werden) (Microsoft SQL Server, Error: 53)“ oder „(Anbieter: TCP-Anbieter, Fehler: 0 – Der angegebene Host ist unbekannt.) (Microsoft SQL Server, Error: 11001)“ 
+*   „(Provider: Named Pipes-Anbieter, Fehler: 40 – Could not open a connection to SQL Server (Es konnte keine Verbindung mit SQL Server hergestellt werden)) (Microsoft SQL Server, Fehler: 53)“ oder „Provider: TCP-Anbieter, Fehler: 0 – No such host is known. (Es ist kein solcher Host bekannt.)) (Microsoft SQL Server, Fehler: 11001)“ 
 
 Dieser Fehler bedeutet normalerweise, dass der SQL Server-Computer nicht gefunden werden kann oder die TCP-Portnummer entweder nicht bekannt ist, die Portnummer falsch ist, oder die Portnummer von einer Firewall blockiert wird.
 
->  [!TIP]
+> [!TIP]
 >  Eine interaktive Seite zur Problembehebung im [!INCLUDE[msCoName_md](../../includes/msconame-md.md)]-Kundendienst unter [Solving Connectivity errors to SQL Server (Lösen von Verbindungsproblemen zu SQL Server)](https://support.microsoft.com/help/4009936/solving-connectivity-errors-to-sql-server) verfügbar.
 
 ### <a name="not-included"></a>Nicht enthalten
@@ -64,8 +64,8 @@ Zunächst müssen Sie grundlegende Informationen über die Datenbank-Engine samm
     2.  Klicken Sie im Protokoll-Viewer auf der Symbolleiste auf die Schaltfläche **Filter** . Tippen Sie im Feld **Meldung enthält Text** **server is listening on**, klicken Sie auf **Filter anwenden**und anschließend auf **OK**.
     3.  Eine ähnliche Meldung **server is listening on ['beliebig' \<ipv4> 1433]** sollte aufgelistet sein. Diese Meldung gibt an, dass diese Instanz von SQL Server an alle IP-Adressen auf diesen Computer (für IP-Version 4) lauscht sowie an den TCP-Port 1433. (TCP-Port 1433 ist in der Regel der Port, der von der Datenbank-Engine verwendet wird. Nur eine Instanz von SQL Server kann einen Port verwenden. Falls also mehr als eine Instanz von SQL Server installiert ist, müssen einige Instanzen andere Portnummern verwenden.) Notieren Sie sich die von der Instanz von [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] verwendete Portnummer, zu der Sie eine Verbindung herstellen möchten. 
 
-    >    [!NOTE] 
-    >    Die IP-Adresse 127.0.0.1 ist möglicherweise aufgelistet. Sie heißt Loopbackadapter-Adresse und kann nur von einem Prozess auf demselben Computer eine Verbindung herstellen. Sie kann für die Problembehandlung nützlich sein, aber Sie können diese Adresse nicht für Verbindungen von einem anderen Computer aus verwenden.
+    > [!NOTE] 
+    > Die IP-Adresse 127.0.0.1 ist möglicherweise aufgelistet. Sie heißt Loopbackadapter-Adresse und kann nur von einem Prozess auf demselben Computer eine Verbindung herstellen. Sie kann für die Problembehandlung nützlich sein, aber Sie können diese Adresse nicht für Verbindungen von einem anderen Computer aus verwenden.
 
 ## <a name="enable-protocols"></a>Aktivieren von Protokollen
 
@@ -98,20 +98,20 @@ Das Herstellen einer Verbindung mit SQL Server über TCP/IP erfordert, dass Wind
 |Standardinstanz|Der Computername|ACCNT27|
 |Benannte Instanz|Der Computername\Instanzname|ACCNT27\PAYROLL|
 
->  [!NOTE] 
+> [!NOTE]
 >  Bei der Verbindung mit einem SQL Server von einer Clientanwendung auf dem gleichen Computer wird das Shared Memory-Protokoll verwendet. Shared Memory ist ein Typ einer lokalen Named Pipe. Manchmal treten jedoch Fehler bezüglich der Pipes auf.
 
 Wenn Sie zu diesem Zeitpunkt eine Fehlermeldung erhalten, müssen Sie den Fehler beheben, bevor Sie fortfahren. Viele Dinge könnten ein Problem darstellen. Ihr Anmeldename ist möglicherweise nicht autorisiert, eine Verbindung herzustellen. Möglicherweise ist Ihre Standarddatenbank nicht vorhanden.
 
->    [!NOTE] 
+> [!NOTE]
 >    Einige Fehlermeldungen, die absichtlich an den Client übergeben wurden, stellen nicht genügend Informationen bereit, wie das Problem behoben werden kann. Dies ist eine Sicherheitsfunktion, die verhindern soll, dass Informationen über SQL Server an einen Angreifer übermittelt werden. Sehen Sie sich das SQL Server-Fehlerprotokoll an, um alle Informationen über den Fehler anzuzeigen. Dort finden Sie die Einzelheiten. Wenn Sie den Fehler **18456 Fehler bei der Anmeldung für den Benutzer**erhalten, sehen Sie sich das Thema [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) in der Onlinedokumentation an, um weitere Informationen über Fehlercodes zu erhalten. Auf Aaron Bertrands Blog unter [Troubleshooting Error 18456](https://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx)(Problembehandlung von Error 18456) finden Sie ebenso eine umfangreiche Liste mit Fehlercodes. Sie können das Fehlerprotokoll mit SSMS (falls Sie eine Verbindung herstellen können) im Abschnitt „Verwaltung“ des Objekt-Explorers anzeigen. Andernfalls können Sie das Fehlerprotokoll mit dem Windows-Editor anzeigen. Der standardmäßige Speicherort variiert je nach Version und kann während des Setups geändert werden. Der Standardspeicherort für [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] ist `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`.  
 
 4.   Wenn Sie keine Verbindung mithilfe von Shared Memory herstellen können, versuchen Sie eine Verbindung mithilfe von TCP herzustellen. Sie können eine TCP-Verbindung durch Angabe von **tcp:** vor dem Namen erzwingen. Zum Beispiel:
 
 |Verbinden mit:|Typ:|Beispiel:|
 |-----------------|---------------|-----------------|
-|Standardinstanz|tcp: der Computername|tcp:ACCNT27|
-|Benannte Instanz|tcp: der Computername\Instanzname|tcp:ACCNT27\PAYROLL|
+|Standardinstanz|tcp: Der Computername|tcp:ACCNT27|
+|Benannte Instanz|tcp: Der Computername/Instanzname|tcp:ACCNT27\PAYROLL|
   
 Wenn Sie zwar mit Shared Memory eine Verbindung herstellen können, jedoch nicht mit TCP, müssen Sie das TCP-Problem beheben. Am wahrscheinlichsten ist es, dass TCP nicht aktiviert ist. Gehen Sie zu den Schritten **Aktivieren von Protokollen** weiter oben, um TCP zu aktivieren.
 

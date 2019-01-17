@@ -13,12 +13,12 @@ ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 92aa4b83697bd424d4e6940f3c46b96033d5ecf1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1a0b583c66355245790004a8612afa0ace72999
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847009"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213129"
 ---
 # <a name="publication-properties-subscription-options"></a>Veröffentlichungseigenschaften, Abonnementoptionen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "47847009"
  Nur in[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen. Bestimmt, ob Sicherungsdateien für die Initialisierung von Abonnements verwendet werden dürfen. Weitere Informationen finden Sie unter [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)initialisiert wird.  
   
  **Nicht-SQL Server-Abonnenten zulassen**  
- Nur in[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen. Bestimmt, ob Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten von der Veröffentlichung unterstützt werden. Wird für diese Option der Wert **True** festgelegt, werden andere Veröffentlichungseigenschaften so festgelegt, dass Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten unterstützt werden. Diese Option ist schreibgeschützt, wenn Abonnenten vorhanden sind. Wenn für **Abonnements mit sofortigem Update zulassen** , **Abonnements mit verzögertem Update über eine Warteschlange zulassen**oder **Peer-zu-Peer-Abonnements zulassen**der Wert **True** festgelegt ist, kann die Option nicht auf **True**festgelegt werden. Weitere Informationen finden Sie unter [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
+ Nur in[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen. Bestimmt, ob Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten von der Veröffentlichung unterstützt werden. Wird für diese Option der Wert **TRUE** festgelegt, werden andere Veröffentlichungseigenschaften so festgelegt, dass Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten unterstützt werden. Diese Option ist schreibgeschützt, wenn Abonnenten vorhanden sind. Wenn für **Abonnements mit sofortigem Update zulassen** , **Abonnements mit verzögertem Update über eine Warteschlange zulassen**oder **Peer-zu-Peer-Abonnements zulassen**der Wert **True** festgelegt ist, kann die Option nicht auf **True**festgelegt werden. Weitere Informationen finden Sie unter [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
 ### <a name="data-transformation"></a>Datentransformation  
  **Datentransformationen zulassen**  
@@ -117,7 +117,7 @@ ms.locfileid: "47847009"
  Nur in[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen. Bestimmt, ob die Synchronisierung optimiert werden soll, indem im Voraus berechnet wird, welche Datenzeilen in welche Partitionen gehören. Der Standardwert für diese Option lautet **True** , wenn die Veröffentlichung die Kriterien für im Voraus berechnete Partitionen erfüllt. Weitere Informationen finden Sie unter [Optimieren der Leistung parametrisierter Filter mithilfe vorausberechneter Partitionen](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
  **Synchronisierung optimieren**  
- Bestimmt, ob die Mergeverarbeitung optimiert werden soll, indem zusätzliche Metadaten auf den einzelnen Abonnenten gespeichert werden. An die Stelle dieser Optimierung sind die im Voraus berechneten Partitionen getreten, d. h., die Option **Synchronisierung optimieren** ist nur relevant, wenn für **Partitionen im Voraus berechnen** der Wert **False**festgelegt ist. Weitere Informationen finden Sie unter [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+ Bestimmt, ob die Mergeverarbeitung optimiert werden soll, indem zusätzliche Metadaten auf den einzelnen Abonnenten gespeichert werden. An die Stelle dieser Optimierung sind die im Voraus berechneten Partitionen getreten, d. h., die Option **Synchronisierung optimieren** ist nur relevant, wenn für **Partitionen im Voraus berechnen** der Wert **False**festgelegt ist. Weitere Informationen zu parametrisierten Zeilenfiltern finden Sie unter [Parametrisierte Zeilenfilter](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 ### <a name="merge-processes"></a>Mergeprozesse  
  **Gleichzeitige Prozesse beschränken**  
@@ -126,7 +126,7 @@ ms.locfileid: "47847009"
  **Maximale Anzahl von gleichzeitigen Prozessen**  
  Die maximale Anzahl der gleichzeitig ausführbaren Merge-Agents ( **Gleichzeitige Prozesse beschränken**erforderlich). Wenn die Anzahl der Agents, für die die Synchronisierung erfolgt, den Maximalwert überschreitet, werden die Agents in eine Warteschlange gestellt, bis die Anzahl unter das Maximum abfällt.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Veröffentlichen von Daten und Datenbankobjekten](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  

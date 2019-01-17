@@ -15,15 +15,15 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72595a95c08d89bec7db4a9b4252fe8873b12195
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ba71da1f77d0fed61908b6d7aab953505a33e511
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525719"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591474"
 ---
 # <a name="data-tier-applications"></a>Datenebenenanwendungen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Eine Datenebenenanwendung (DAC) ist eine logische Datenbankverwaltungsentität, die alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekte definiert, beispielsweise Tabellen, Sichten und Instanzobjekte, einschließlich Anmeldenamen, die mit der Datenbank eines Benutzers verknüpft sind. Eine DAC ist eine in sich geschlossene Einheit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankbereitstellung, mit der Datenebenenentwickler und Datenbankadministratoren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekte in ein portables Artefakt, das sog. "DAC-Paket", packen können. Selbiges ist auch als DACPAC bekannt.  
   
  Ein BACPAC ist ein verwandtes Artefakt, das das Datenbankschema sowie die in der Datenbank gespeicherten Daten kapselt.  
@@ -109,7 +109,7 @@ ms.locfileid: "52525719"
   
 -   **IMPORT**: Der Benutzer kann das Schema und die Daten in eine neue Datenbank auf dem Hostserver importieren.  
   
- Beide Funktionen werden von den Datenbankverwaltungstools unterstützt: SQL Server Management Studio, das Azure-Portal und die DACFx-API.  
+ Diese Funktionen werden beide von den folgenden Datenbankverwaltungstools unterstützt: SQL Server Management Studio, vom Azure-Portal und der DACFx-API.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Der Benutzer muss Mitglied der **dbmanager**-Rolle sein oder **CREATE DATABASE**-Berechtigungen erhalten haben, um eine Datenbank erstellen zu können. Dies gilt auch für das Erstellen einer Datenbank durch Bereitstellen eines DAC-Pakets. Der Benutzer muss Mitglied der **dbmanager**-Rolle sein oder **DROP DATABASE**-Berechtigungen erhalten haben, um eine Datenbank löschen zu können.  

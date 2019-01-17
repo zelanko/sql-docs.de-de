@@ -13,12 +13,12 @@ ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3b590fa12fb2168a80c320068facb979702cd4fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbeeb28aced36cf1d80b2a6c4efeba3c614385c0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853918"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209989"
 ---
 # <a name="restore-database-options-page"></a>Datenbank wiederherstellen (Seite Optionen)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47853918"
  Verwenden Sie die Optionen des Bereichs **Wiederherstellungsoptionen** , um die Aspekte des Verhaltens des Wiederherstellungsvorgangs zu ändern.  
   
  **Vorhandene Datenbank überschreiben (WITH REPLACE)**  
- Beim Wiederherstellungsvorgang werden die Dateien jeder Datenbank überschrieben, die derzeit den Datenbanknamen verwendet, den Sie im Dialogfeld **Wiederherstellen in** auf der Seite [Allgemein](../../relational-databases/backup-restore/restore-database-general-page.md) im Feld **In Datenbank** angeben. Die Dateien der vorhandenen Datenbank werden sogar dann überschrieben, wenn Sie die Sicherungen von einer anderen Datenbank im vorhandenen Datenbanknamen wiederherstellen. Das Auswählen dieser Option entspricht der Verwendung der Option REPLACE in einer [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) -Anweisung ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
+ Beim Wiederherstellungsvorgang werden die Dateien jeder Datenbank überschrieben, die derzeit den Datenbanknamen verwendet, den Sie im Dialogfeld **Wiederherstellen in** auf der Seite [Allgemein](../../relational-databases/backup-restore/restore-database-general-page.md) im Feld **In Datenbank** angeben. Die Dateien der vorhandenen Datenbank werden sogar dann überschrieben, wenn Sie die Sicherungen von einer anderen Datenbank im vorhandenen Datenbanknamen wiederherstellen. Das Auswählen dieser Option entspricht der Verwendung der Option REPLACE in einer [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md)-Anweisung ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
   
 > [!CAUTION]  
 >  Verwenden Sie diese Option nur nach sorgfältiger Überlegung. Weitere Informationen finden Sie unter [RESTORE-Argumente &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "47853918"
  Zum Bestimmen des Status der Datenbank nach dem Wiederherstellungsvorgang müssen Sie eine der Optionen des Bereichs **Wiederherstellungsstatus** angeben.  
   
  **RESTORE WITH RECOVERY**  
- Stellt die Datenbank nach der Wiederherstellung der im Raster **Wiederherzustellende Sicherungssätze**auf der Seite [Allgemein](../../relational-databases/backup-restore/restore-database-general-page.md)ausgewählten letzten Sicherung wieder her. Dies ist die Standardoption und entspricht der Angabe von WITH RECOVERY in einer [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) -Anweisung ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
+ Stellt die Datenbank nach der Wiederherstellung der im Raster **Wiederherzustellende Sicherungssätze**auf der Seite [Allgemein](../../relational-databases/backup-restore/restore-database-general-page.md)ausgewählten letzten Sicherung wieder her. Dies ist die Standardoption und entspricht der Angabe von WITH RECOVERY in einer [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md)-Anweisung ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
   
 > [!NOTE]  
 >  Wählen Sie diese Option beim vollständigen Wiederherstellungsmodell oder beim massenprotokollierten Wiederherstellungsmodell nur dann aus, wenn Sie alle Protokolldateien jetzt wiederherstellen.  
@@ -114,7 +114,7 @@ ms.locfileid: "47853918"
   
 -   Wenn die nächste Sicherung eine Protokollsicherung ist, verwenden Sie den Task **Transaktionsprotokoll wiederherstellen** . Informationen zum Fortsetzen einer Wiederherstellungssequenz durch Wiederherstellen eines Transaktionsprotokolls finden Sie unter [Wiederherstellen einer Transaktionsprotokollsicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Wiederherstellung einer Sicherung von einem Medium &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)   
  [Wiederherstellen einer Transaktionsprotokollsicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)   

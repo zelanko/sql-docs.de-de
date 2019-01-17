@@ -6,8 +6,7 @@ ms.date: 05/18/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: douglasl
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - SQL13.DTS.DESIGNER.AFPADLSTASK.F1
@@ -15,12 +14,12 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: 3060dd1fa3a46f64b34658a1c8ebccbc4155526c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 1b324d4aa115a08c1c13b1680176022cab343daa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641747"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808462"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Azure Data Lake Analytics-Task
 
@@ -42,7 +41,7 @@ Geben Sie den Namen und die Beschreibung der Task an.
 
 ### <a name="u-sql-configuration"></a>U-SQL-Konfiguration
 
-Für die U-SQL-Konfiguration gibt es zwei Einstellungen: **SourceType** und dynamische Optionen basierend auf dem Wert **SourceType**. 
+Die U-SQL-Konfiguration beinhaltet zwei Einstellungen: **SourceType** und dynamische Optionen basierend auf dem Wert **SourceType**. 
 
 **SourceType:** Gibt die Quelle des U-SQL-Skripts an. Das Skript wird während der SSIS-Paketausführung an ein Data Lake Analytics-Konto übermittelt. Die Optionen für diese Eigenschaft sind:
 
@@ -70,7 +69,7 @@ In der Auftragskonfiguration werden die Eigenschaften für die U-SQL-Auftragsüb
 - **AnalyticsUnits:** Gibt die Anzahl der Analytics-Einheiten des U-SQL-Auftrags an.
 - **Priority:** Gibt die Priorität des U-SQL-Auftrags an. Sie können einen Wert zwischen 0 und 1.000 angeben. Je niedriger die Zahl ist, desto höher ist die Priorität.
 - **RuntimeVersion:** Gibt die Data Lake Analytics-Runtimeversion des U-SQL-Auftrags an. Die Standardeinstellung lautet „Standard“. In der Regel müssen Sie diese Eigenschaft nicht ändern.
-- **Synchronous:** Ein boolescher Wert gibt an, ob der Task auf den Abschluss der Auftragsausführung wartet, oder nicht. Wenn der Wert auf „true“ festgelegt wird, ist die Aufgabe nach Abschluss des Auftrags als **erfolgreich** gekennzeichnet. Wenn der Wert auf „false“ festgelegt wird, ist die Aufgabe nach als **erfolgreich** gekennzeichnet, wenn der Auftrag die Vorbereitungsphase durchlaufen hat.
+- **Synchronous:** Ein boolescher Wert gibt an, ob der Task auf den Abschluss der Auftragsausführung wartet oder nicht. Wenn der Wert auf „true“ festgelegt wird, ist die Aufgabe nach Abschluss des Auftrags als **erfolgreich** gekennzeichnet. Wenn der Wert auf „false“ festgelegt wird, ist die Aufgabe nach als **erfolgreich** gekennzeichnet, wenn der Auftrag die Vorbereitungsphase durchlaufen hat.
 
   |value|und Beschreibung|
   |-----------|-----------------|
@@ -83,7 +82,7 @@ In der Auftragskonfiguration werden die Eigenschaften für die U-SQL-Auftragsüb
 
 Über die Seite **Parameterzuordnung** des Dialogfelds **Azure Data Lake Analytics-Task-Editor** können Sie Variablen zu Parametern (U-SQL-Variablen) im U-SQL-Skript zuordnen.
 
-- **Variable Name:** Nachdem Sie eine Parameterzuordnung durch Auswahl von **Hinzufügen** hinzugefügt haben, wählen Sie eine System- oder benutzerdefinierte Variable aus der Liste aus. Alternativ können Sie <**Neue Variable...** > auswählen, um über das Dialogfeld **Variable hinzufügen** eine neue Variable hinzuzufügen. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
+- **Variablenname:** Nachdem Sie eine Parameterzuordnung hinzugefügt haben, indem Sie auf **Hinzufügen** geklickt haben, wählen Sie eine Systemvariable oder benutzerdefinierte Variable aus der Liste aus. Alternativ können Sie <**Neue Variable...** > auswählen, um über das Dialogfeld **Variable hinzufügen** eine neue Variable hinzuzufügen. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
 
 - **Parametername:** Geben Sie einen Parameter- bzw. Variablennamen im U-SQL-Skript an. Stellen Sie sicher, dass der Parametername mit dem \@-Zeichen beginnt, z. B. \@Param1. 
 

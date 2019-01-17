@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Master Data Services], database roles
@@ -19,12 +18,12 @@ ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ed15741a0565cda9735b4e2d851e1b025deea224
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8780bd1545793f08e51e2e0804d03d8a3e98178e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607348"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760170"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Datenbankanmeldenamen, -benutzer und -rollen (Master Data Services)
 
@@ -44,7 +43,7 @@ ms.locfileid: "47607348"
 |Benutzer|und Beschreibung|  
 |----------|-----------------|  
 |**mds_clr_user**|Wird nicht verwendet. Wird mds_dlp_login zugeordnet.|  
-|**mds_email_user**|Wird für Benachrichtigungen verwendet.<br /><br /> - Wird mds_email_login zugeordnet.<br /><br /> - Ist ein Element der Rolle „DatabaseMailUserRole“.|  
+|**mds_email_user**|Wird für Benachrichtigungen verwendet.<br /><br /> - Wird mds_email_login zugeordnet.<br /><br /> –Ist ein Element folgender Rolle: DatabaseMailUserRole.|  
   
 ## <a name="master-data-services-database-users"></a>Master Data Services-Datenbankbenutzer  
   
@@ -56,19 +55,19 @@ ms.locfileid: "47607348"
   
 ## <a name="master-data-services-database-role"></a>Master Data Services-Datenbankrolle  
   
-|-Rolle|und Beschreibung|Berechtigungen|  
+|Rolle|und Beschreibung|Berechtigungen|  
 |----------|-----------------|-----------------|  
 |**mds_exec**|Diese Rolle enthält das Konto, das Sie in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] festlegen, wenn Sie eine [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung erstellen und ein Konto für den Anwendungspool festlegen.|EXECUTE-Berechtigung für alle Schemas<br /><br /> <br /><br /> Berechtigung ALTER, INSERT und SELECT für die folgenden Tabellen:<br /><br /> mdm.tblStgMember<br /><br /> mdm.tblStgMemberAttribute<br /><br /> mdm.tbleStgRelationship<br /><br /> <br /><br /> SELECT-Berechtigung für die folgenden Tabellen:<br /><br /> mdm.tblUser<br /><br /> mdm.tblUserGroup<br /><br /> mdm.tblUserPreference<br /><br /> <br /><br /> SELECT-Berechtigung für die folgenden Sichten:<br /><br /> mdm.viw_SYSTEM_SECURITY_NAVIGATION<br /><br /> mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL<br /><br /> mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL_MEMBER<br /><br /> mdm.viw_SYSTEM_SECURITY_USER_MODEL|  
   
 ## <a name="schemas"></a>Schemas  
   
-|-Rolle|und Beschreibung|  
+|Rolle|und Beschreibung|  
 |----------|-----------------|  
 |**mdm**|Enthält alle [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank- und Service Broker-Objekte außer die im mdq-Schema enthaltenen Funktionen.|  
 |**mdq**|Enthält [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbankfunktionen, die sich auf das Filtern von Elementergebnissen auf Grundlage von regulären Ausdrücken oder Ähnlichkeiten beziehen und die zum Formatieren von Benachrichtigungs-E-Mails vorgesehen sind.|  
 |**stg**|Enthält [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbanktabellen, gespeicherte Prozeduren und Sichten, die sich auf den Stagingprozess beziehen. Löschen Sie keines dieser Objekte. Weitere Informationen zum Stagingprozess finden Sie unter [Übersicht: Importieren von Daten aus Tabellen &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Sicherheit von Datenbankobjekten &#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)  
   
   

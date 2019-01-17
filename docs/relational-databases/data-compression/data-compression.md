@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bba6cc9159ac3cfc9cc45f882a916dcad3365e4e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2370c428d063958079e749c792a60de3b7379ee3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533553"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210529"
 ---
 # <a name="data-compression"></a>Datenkomprimierung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -199,7 +199,7 @@ Die folgende Tabelle enthält Replikationseinstellungen, mit denen die Komprimie
 -   Die Datenkomprimierung ist nicht kompatibel mit Sparsespalten. Daher können Tabellen mit Sparsespalten weder komprimiert werden, noch können Sparsespalten einer komprimierten Tabelle hinzugefügt werden.  
 -   Die Aktivierung der Komprimierung kann bewirken, dass sich Abfragepläne ändern, da die Daten mit einer anderen Anzahl von Seiten und Zeilen pro Seite gespeichert werden.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Implementierung von Zeilenkomprimierung](../../relational-databases/data-compression/row-compression-implementation.md)   
  [Implementierung von Seitenkomprimierung](../../relational-databases/data-compression/page-compression-implementation.md)   
  [Implementierung von Unicode-Komprimierung](../../relational-databases/data-compression/unicode-compression-implementation.md)   

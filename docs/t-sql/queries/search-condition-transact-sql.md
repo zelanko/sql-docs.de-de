@@ -38,19 +38,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8e4fb4a2e8da7ecf32e4bec80f3d18a53a022ac
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ef9f5377ffef172436d7e84164a20f1d92a9a325
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699798"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979516"
 ---
 # <a name="search-condition-transact-sql"></a>Suchbedingung (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Bezeichnet eine Kombination aus einem oder mehreren Prädikaten, die die logischen Operatoren AND, OR und NOT verwenden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -134,7 +134,7 @@ ms.locfileid: "51699798"
  Ein Spaltenname, eine Konstante, eine Funktion, eine Variable, eine skalare Unterabfrage oder eine Kombination aus Spaltennamen, Konstanten und Funktionen, die durch einen Operator bzw. Operatoren oder eine Unterabfrage miteinander verbunden sind. Der Ausdruck kann auch den CASE-Ausdruck enthalten.  
   
 > [!NOTE]  
->  Nicht-Unicode-Zeichenfolgenkonstanten und -Variablen verwenden die Zeichenfolge in die Codepage, die der Standardsortierung der Datenbank entspricht. Codepagekonvertierungen können auftreten, wenn nur Nicht-Unicode-Zeichendaten verwendet und die Nicht-Unicode-Zeichendatentypen **char**, **varchar** und **text** referenziert werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konvertiert Nicht-Unicode-Zeichenkonstanten und -Variablen in die Codepage, die der Sortierung der referenzierten Spalte entspricht oder die mit COLLATE angegeben ist, sofern sich diese Codepage von der Codepage unterscheidet, die der Standardsortierung der Datenbank entspricht. Zeichen, die in der neuen Codepage nicht gefunden werden, werden in ein ähnliches Zeichen übersetzt, falls eine [optimierte Zuordnung](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/) gefunden wird. Andernfalls werden sie in das Standardersetzungszeichen "?" konvertiert.  
+>  Nicht-Unicode-Zeichenfolgenkonstanten und -Variablen verwenden die Zeichenfolge in die Codepage, die der Standardsortierung der Datenbank entspricht. Codepagekonvertierungen können auftreten, wenn nur Nicht-Unicode-Zeichendaten verwendet werden und auf die Nicht-Unicode-Zeichendatentypen **char**, **varchar** und **text** verwiesen wird. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konvertiert Nicht-Unicode-Zeichenkonstanten und -Variablen in die Codepage, die der Sortierung der referenzierten Spalte entspricht oder die mit COLLATE angegeben ist, sofern sich diese Codepage von der Codepage unterscheidet, die der Standardsortierung der Datenbank entspricht. Zeichen, die in der neuen Codepage nicht gefunden werden, werden in ein ähnliches Zeichen übersetzt, falls eine [optimierte Zuordnung](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/) gefunden wird. Andernfalls werden sie in das Standardersetzungszeichen "?" konvertiert.  
 >  
 > Bei Verwendung mehrerer Codepages kann Zeichenkonstanten der Großbuchstabe 'N' vorangestellt werden. Zudem können Unicode-Variablen verwendet werden, um Codepagekonvertierungen zu vermeiden.  
   
@@ -254,7 +254,7 @@ FROM DimEmployee
 WHERE LastName LIKE N'%and%';  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Aggregate Functions &#40;Transact-SQL&#41; (Aggregatfunktionen (Transact-SQL))](../../t-sql/functions/aggregate-functions-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   

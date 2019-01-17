@@ -14,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2c82a2400020baf0d97cda595c630c2b7b55a9b1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 22a4907e0eec995839648371a14022a3f9c94d78
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504512"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266081"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Neues in der Datenbank-Engine – SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -438,17 +438,15 @@ Durch direktes Seeding kann das Seeding eines sekundären Replikats automatisch 
 Laden Sie das neueste [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)herunter
 
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] unterstützt die Active Directory Authentication Library (ADAL), die für die Verbindung mit Microsoft Azure entwickelt wird. Dies ersetzt die zertifikatbasierte Authentifizierung von [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
-- Die[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Installation erfordert die Installation von .NET 4.6 als erforderliche Komponente. .NET 4.6 wird automatisch vom Setupprogramm installiert, wenn [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] installiert wird.
 - Eine neue Abfrageergebnis-Rasteroption unterstützt die Beibehaltung von Wagenrücklauf-/Zeilenvorschubzeichen (neue Zeilenumbruchzeichen) beim Kopieren oder Speichern von Text aus dem Ergebnisraster. Legen Sie dies im Menü „Extras/Optionen“ fest.
 - Die SQL Server-Verwaltungstools werden nicht mehr aus der Hauptfunktionsstruktur installiert. Weitere Informationen finden Sie unter [Installieren von SQL Server-Verwaltungstools mit SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381).
-- Die[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Installation erfordert die Installation von .NET 4.6.1 als erforderliche Komponente. .NET 4.6.1 wird automatisch vom Setupprogramm installiert, wenn [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] installiert wird.
 
 ### <a name="upgrade-advisor"></a>Upgrade Advisor
 SQL Server 2016 Upgrade Advisor Preview ist ein eigenständiges Tool, mit dem Benutzer von früheren Versionen eine Reihe von Upgraderegeln für ihre SQL Server-Datenbank ausführen können, um Unterbrechungen und Verhaltensänderungen sowie veraltete Features zu ermitteln. Zudem bieten sie Hilfe bei der Übernahme von neuen Features wie Stretch Database.
 
  Sie können Upgrade Advisor Preview [hier](https://www.microsoft.com/download/details.aspx?id=48119) herunterladen, oder Sie können es mit dem Webplattform-Installer installieren.
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 [Neues in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
  
 [Versionsanmerkungen zu SQL Server 2016](../sql-server/sql-server-2016-release-notes.md) 

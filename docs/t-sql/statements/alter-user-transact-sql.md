@@ -1,7 +1,7 @@
 ---
 title: ALTER USER (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/05/2017
+ms.date: 12/03/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -26,24 +26,24 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2cd03ba4b9b0363ef1d8ebe9c3ff0721fc08e3f9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3c738f81901ca44891184ff6810eea05dac9d4c3
+ms.sourcegitcommit: 753364d8ac569c9f363d2eb6b1b8214948d2ed8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542267"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52826115"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Benennt einen Datenbankbenutzer um oder ändert sein Standardschema.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
--- Syntax for SQL Server  
+-- Syntax for SQL Server and Azure SQL Database
   
 ALTER USER userName    
      WITH <set_item> [ ,...n ]  
@@ -56,9 +56,12 @@ ALTER USER userName
     | PASSWORD = 'password' [ OLD_PASSWORD = 'oldpassword' ]  
     | DEFAULT_LANGUAGE = { NONE | <lcid> | <language name> | <language alias> }  
     | ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | OFF ]  
-```  
-  
-```  
+```
+
+> [!IMPORTANT]
+> Azure AD-Anmeldeinformationen für verwaltete SQL-Datenbank-Instanzen befinden sich in der **Public Preview**. Nur folgende Optionen werden für verwaltete Azure SQL-Datenbank-Instanzen unterstützt, wenn sie auf Benutzer mit Azure AD-Konten angewendet werden: `DEFAULT_SCHEMA = { schemaName | NULL }` und `DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }`
+
+```
 -- Syntax for Azure SQL Database  
   
 ALTER USER userName    
@@ -234,7 +237,7 @@ GO
 ```  
   
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
  [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
  [Eigenständige Datenbanken](../../relational-databases/databases/contained-databases.md)   

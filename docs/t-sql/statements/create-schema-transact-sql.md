@@ -25,19 +25,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2348a0ba8aa1fa0c3c01a1d59867a14abb4579f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9b2fad9fc09736a335e8fc5797cda836f907191
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808008"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210969"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Erstellt ein Schema in der aktuellen Datenbank. Mit der CREATE SCHEMA-Transaktion können auch Tabellen und Sichten innerhalb des neuen Schemas erstellt und GRANT-, DENY- oder REVOKE-Berechtigungen für diese Objekte festgelegt werden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -123,7 +123,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
  Dieses Verhalten ist erforderlich, damit auf Windows-Gruppen basierende Benutzer Objekte erstellen und besitzen können. Es kann jedoch zur unbeabsichtigten Erstellung von Schemata und Benutzern führen. Um das implizite Erstellen von Benutzern und Schemata tu vermeiden, sollten Sie soweit möglich Datenbankprinzipale explizit erstellen und ein Standardschema zuweisen. Oder geben Sie bei der Erstellung von Objekten in einer Datenbank explizit ein vorhandenes Schema anhand von zwei- oder dreiteiligen Objektnamen an.  
 
->  [!NOTE]
+> [!NOTE]
 >  Eine implizite Erstellung eines Azure Active Directory-Benutzers ist für [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] nicht möglich. Da bei der Erstellung eines Azure AD-Benutzers über einen externen Anbieter der Benutzerstatus in AAD überprüft werden muss, wird der Fehler 2760 ausgelöst: **The specified schema name "\<user_name@domain>" either does not exist or you do not have permission to use it.** (Den angegebenen Schemanamen "<user_name@domain>" gibt es entweder nicht oder Sie verfügen nicht über die Berechtigung, diesen zu verwenden.). Anschließend wird der Fehler 2759 ausgelöst: **CREATE SCHEMA failed due to previous errors.** (Fehler bei CREATE SCHEMA wegen vorheriger Fehler.). Erstellen Sie zum Umgehen dieser Fehler zuerst den Azure AD-Benutzer über einen externen Anbieter und führen Sie die Anweisung erneut aus, indem Sie das Objekt erstellen.
  
   
@@ -179,7 +179,7 @@ CREATE SCHEMA Production AUTHORIZATION [Contoso\Mary];
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [ALTER SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
  [DROP SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   

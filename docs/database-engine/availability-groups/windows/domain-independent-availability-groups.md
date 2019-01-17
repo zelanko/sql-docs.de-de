@@ -1,6 +1,7 @@
 ---
-title: Domänenunabhängige Verfügbarkeitsgruppen (SQL Server) | Microsoft-Dokumentation
-ms.custom: ''
+title: Erstellen einer domänenunabhängigen Verfügbarkeitsgruppe
+description: Mit diesen Schritten erstellen Sie eine Verfügbarkeitsgruppe, die einen Arbeitsgruppencluster verwendet. Dadurch kann SQL Server 2016 (und höher) eine Always On-Verfügbarkeitsgruppe auf einem WSFC bereitstellen, für die Active Directory Domain Services nicht erforderlich sind und somit nicht jeder Server derselben Domäne angehören muss.
+ms.custom: seodec18
 ms.date: 09/25/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +13,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0024663d9d16d191338abfa2604e6c969f0d58e5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c70aba3f6dc1648b70c9bc9a524052a7ba591793
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415077"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211909"
 ---
-# <a name="domain-independent-availability-groups"></a>Domänenunabhängige Verfügbarkeitsgruppen
+# <a name="create-a-domain-independent-availability-group"></a>Erstellen einer domänenunabhängigen Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Always On-Verfügbarkeitsgruppen erfordern einen zugrunde liegenden Windows Server-Failovercluster (WSFC). Das Bereitstellen eines WSFC über Windows Server 2012 R2 erfordert, dass die Server, die an einem WSFC teilnehmen (auch als Knoten bekannt) mit derselben Domäne verknüpft sind. Weitere Informationen zu Active Directory Domain Services (AD DS), finden Sie [hier](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx).

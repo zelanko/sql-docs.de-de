@@ -1,25 +1,26 @@
 ---
-title: Webportal (einheitlicher SSRS-Modus) | Microsoft-Dokumentation
-ms.date: 07/02/2017
+title: Das Webportal eines Berichtsservers (einheitlicher SSRS-Modus) | Microsoft-Dokumentation
+ms.date: 12/05/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
+ms.description: The web portal of a Reporting Services report server is a web-based experience for viewing reports, mobile reports, KPIs, and navigating through the elements in your report server instance.
 ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c5f8405a36595b7a5ddaade9aa00952642625c65
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: ec3fac28637e21da9fecc7ad291b8ff347ba7d6d
+ms.sourcegitcommit: 9d2fef55b0abfc049fbb55c315097dda2aeb6853
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711221"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53010291"
 ---
-# <a name="web-portal-ssrs-native-mode"></a>Webportal (einheitlicher SSRS-Modus)
+# <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>Das Webportal eines Berichtsservers (einheitlicher SSRS-Modus)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-Das Reporting Services-Webportal ist eine webbasierte Umgebung, die es Ihnen ermöglicht, Berichte, mobile Berichte und KPIs anzuzeigen und durch die Elemente zu navigieren, die sich in Ihrer Berichtsserverinstanz befinden. Sie können das Webportal auch dazu verwenden, eine einzelne Berichtsserverinstanz zu verwalten.
+Beim Webportal des Reporting Services-Berichtsservers handelt es sich um eine webbasierte Anwendung. Sie können in dem Portal Berichte, mobile Berichte sowie KPIs abrufen und durch die Elemente in Ihrer Berichtsserverinstanz navigieren. Sie können das Webportal auch dazu verwenden, eine einzelne Berichtsserverinstanz zu verwalten.
 
 ![SSRS-Portal](../reporting-services/media/ssrsportal.png)
 
@@ -28,23 +29,14 @@ Das Reporting Services-Webportal ist eine webbasierte Umgebung, die es Ihnen erm
 Sie können das Webportal dazu verwenden, die folgenden Aufgaben auszuführen:
 
 - Anzeigen, Suchen, Drucken und Abonnieren von Berichten.
-
 - Erstellen, Sichern und Warten der Ordnerhierarchie zum Organisieren von Elementen auf dem Server.
-
 - Konfigurieren der rollenbasierten Sicherheit, die den Zugriff auf Elemente und Vorgänge bestimmt.
-
-- Konfigurieren von Berichtsausführungseigenschaften, des Berichtsverlauf und von Berichtsparametern.
-
+- Konfigurieren von Berichtsausführungseigenschaften, dem Berichtsverlauf und Berichtsparameter.
 - Erstellen freigegebener Zeitpläne und Datenquellen für eine leichtere Verwaltung von Zeitplänen und Datenquellenverbindungen.
-
 - Erstellen datengesteuerter Abonnements, die Berichte an eine lange Empfängerliste verteilen.
-
-- Erstellen verknüpfter Berichte, um einen vorhandenen Bericht wiederzuverwenden und auf verschiedene Weisen dessen Zweck zu ändern.
-
+- Erstellen verknüpfter Berichte zur Wiederverwendung und Änderung des Zwecks eines vorhandenen Berichts auf verschiedene Weise.
 - Herunterladen von weit verbreiteten Tools wie beispielsweise Berichts-Generator und Publisher für mobile Berichte.
-
 - [Erstellen von KPIs](../reporting-services/working-with-kpis-in-reporting-services.md).
-
 - Senden von Feedback oder Anfragen zu Features.
 
 Mit dem Webportal können Sie die Ordner des Berichtsservers durchsuchen oder nach bestimmten Berichten suchen. Sie können einen Bericht, seine allgemeinen Eigenschaften und alte Versionen anzeigen, die in einem Berichtsverlauf erfasst sind. Je nach den Ihnen gewährten Berechtigungen können Sie unter Umständen Berichte abonnieren, die an ein E-Mail-Postfach oder einen freigegeben Ordner im Dateisystem übermittelt werden.
@@ -63,7 +55,7 @@ In einer neuen Installation verfügen nur lokale Administratoren über ausreiche
 
 ## <a name="start-and-use-the-web-portal"></a>Starten und verwenden des Webportals
 
-Das Webportal ist eine Webanwendung, die Sie öffnen, indem Sie die [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]-URL in die Adressleiste eines Browserfensters eingeben. Wenn Sie das [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]starten, variieren die angezeigten Seiten, Links und Optionen je nach den Berechtigungen, über die Sie auf dem Berichtsserver verfügen. Um einen Task auszuführen, müssen Sie einer Rolle zugewiesen sein, die den Task einschließt.  Ein Benutzer, dem eine Rolle mit vollen Berechtigungen zugewiesen wurde, hat Zugriff auf sämtliche Anwendungsmenüs und Seiten zum Verwalten eines Berichtsservers. Einem Benutzer, dem eine Rolle mit der Berechtigung zum Anzeigen und Ausführen von Berichten zugewiesen wurde, werden dagegen nur die Menüs und Seiten angezeigt, die diese Aktivitäten unterstützen. Jeder Benutzer kann über verschiedene Rollenzuweisungen für verschiedene Berichtsserver oder sogar für die verschiedenen Berichte und Ordner auf einem einzigen Berichtsserver verfügen.
+Das Webportal ist eine Webanwendung, die Sie öffnen, indem Sie die [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]-URL in die Adressleiste eines Browserfensters eingeben. Wenn Sie das [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] starten, variieren die angezeigten Seiten, Links und Optionen je nach den Berechtigungen, über die Sie auf dem Berichtsserver verfügen. Um einen Task auszuführen, müssen Sie einer Rolle zugewiesen sein, die den Task einschließt.  Ein Benutzer, dem eine Rolle mit vollen Berechtigungen zugewiesen wurde, hat Zugriff auf sämtliche Anwendungsmenüs und Seiten zum Verwalten eines Berichtsservers. Einem Benutzer, dem eine Rolle mit der Berechtigung zum Anzeigen und Ausführen von Berichten zugewiesen wurde, werden dagegen nur die Menüs und Seiten angezeigt, die diese Aktivitäten unterstützen. Jeder Benutzer kann über verschiedene Rollenzuweisungen für verschiedene Berichtsserver oder sogar für die verschiedenen Berichte und Ordner auf einem einzigen Berichtsserver verfügen.
 
 Weitere Informationen zu den Rollen finden Sie unter [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).
 
@@ -108,7 +100,7 @@ Die Dateien werden innerhalb von Reporting Services gespeichert, ähnlich wie an
 
 ## <a name="search-for-items"></a>Suche nach Elementen
 
-Sie können einen Suchbegriff eingeben, und es werden Ihnen alle Elemente angezeigt auf die Sie Zugriff haben. Die Ergebnisse werden in KPIs, Berichte, Datasets und andere Elemente kategorisiert. Sie können dann mit den Ergebnissen interagieren und diese zu Ihren Favoriten hinzufügen.
+Wenn Sie einen Suchbegriff eingeben, werden Ihnen alle Elemente angezeigt, auf die Sie Zugriff haben. Die Ergebnisse werden in KPIs, Berichte, Datasets und andere Elemente kategorisiert. Sie können dann mit den Ergebnissen interagieren und diese zu Ihren Favoriten hinzufügen.
 
 ![SSRS-WebPortal-Suche](../reporting-services/media/ssrswebportal-search.png)
 

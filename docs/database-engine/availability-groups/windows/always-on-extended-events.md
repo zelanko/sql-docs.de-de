@@ -1,6 +1,7 @@
 ---
-title: Erweiterte Ereignisse von Always On-Verfügbarkeitsgruppen (SQL Server) | Microsoft-Dokumentation
-ms.custom: ag-guide
+title: Konfigurieren erweiterter Ereignisse für Verfügbarkeitsgruppen
+description: SQL Server definiert erweiterte Ereignisse, die speziell für Always On-Verfügbarkeitsgruppen gelten. Sie können diese erweiterten Ereignisse in einer Sitzung aktivieren, die Ihnen bei der Ursachendiagnose helfen, wenn Sie Probleme mit einer Verfügbarkeitsgruppe behandeln.
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2b33f51b741d9bb97882fb2662111833bb4937a0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: fa8c74ec8bb9c80350b537142ce27cb61354c52f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413197"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207569"
 ---
-# <a name="always-on-availability-groups-extended-events"></a>Erweiterte Ereignisse von Always On-Verfügbarkeitsgruppen
+# <a name="configure-extended-events-for-always-on-availability-groups"></a>Konfigurieren erweiterter Ereignisse für Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   SQL Server definiert erweiterte Ereignisse, die speziell für Always On-Verfügbarkeitsgruppen gelten. Sie können diese erweiterten Ereignisse in einer Sitzung aktivieren, die Ihnen bei der Ursachendiagnose helfen, wenn Sie Probleme mit einer Verfügbarkeitsgruppe behandeln. Sie können erweiterte Ereignisse der Verfügbarkeitsgruppe mit der folgenden Abfrage anzeigen:  
   
@@ -355,7 +356,7 @@ GO
   
 |Spalte|und Beschreibung|  
 |------------|-----------------|  
-|Name|error_reported<br /><br /> Fehlernummer 1480: Bei der REPLICATION_TYPE_MSG-Datenbank „DATABASE_NAME“ werden aufgrund von REASON_MSG Rollen von „OLD_ROLE“ in „NEW_ROLE“ geändert.|  
+|Name|error_reported<br /><br /> Fehlernummer 1480: The REPLICATION_TYPE_MSG database "DATABASE_NAME" is changing roles from "OLD_ROLE" to "NEW_ROLE" due to REASON_MSG (Bei der REPLICATION_TYPE_MSG-Datenbank „DATABASE_NAME“ werden aufgrund von REASON_MSG Rollen von „OLD_ROLE“ in „NEW_ROLE“ geändert)|  
 |Kategorie|errors|  
 |Channel|Admin|  
   

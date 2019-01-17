@@ -22,19 +22,19 @@ ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 98a5cdb6b02cda84424cb305a4ecc63e38056bdc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 602c8f5d1cded1c5d19c520087ceac1b9c9124d5
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797268"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591894"
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Beendet SQL Server sofort.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -65,7 +65,7 @@ SHUTDOWN [ WITH NOWAIT ]
   
 -   Mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Managers.  
   
--   Durch Ausführen von **net stop mssqlserver** über eine Eingabeaufforderung für eine Standardinstanz oder durch Ausführen von **net stop mssql$***instancename* über eine Eingabeaufforderung für eine benannte Instanz.  
+-   Durch Ausführen von **net stop mssqlserver** über eine Eingabeaufforderung für eine Standardinstanz oder durch Ausführen von **net stop mssql$**_Instanzname_ über eine Eingabeaufforderung für eine benannte Instanz.  
   
 -   Mithilfe der Dienste in der Systemsteuerung.  
   
@@ -77,7 +77,7 @@ SHUTDOWN [ WITH NOWAIT ]
 ## <a name="permissions"></a>Berechtigungen  
  Die SHUTDOWN-Berechtigungen werden Mitgliedern der festen Serverrollen **sysadmin** und **serveradmin** zugewiesen. Sie sind nicht übertragbar.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)   
  [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   

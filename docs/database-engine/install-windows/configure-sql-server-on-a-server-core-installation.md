@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 26a4fcb38edaa490fd295b7f781a2062a7671199
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 15dd8854a12f5cfc12a4bca095742f2095c44724
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409047"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209069"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Konfigurieren von SQL Server in einer Server Core-Installation
 
@@ -40,7 +40,7 @@ Weitere Informationen zur Remotekonfiguration und -verwaltung einer Server Core-
   
 - [Install Server Roles and Features on a Server Core Server Windows Server 2012 R2 (Installieren von Serverrollen und Features auf einem Server Core-Server (Windows Server 2012 R2))](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx)
   
-- [Managing a Server Core installation: Overview](https://go.microsoft.com/fwlink/?LinkId=245962)  
+- [Verwalten einer Server Core-Installation: Übersicht](https://go.microsoft.com/fwlink/?LinkId=245962)  
   
 - [Administering a Server Core installation: Overview](https://go.microsoft.com/fwlink/?LinkId=245963)
   
@@ -58,7 +58,7 @@ Es gibt zwei Szenarien für die Installation von Produktupdates:
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup integriert die neuesten Produktupdates in die Installation des Hauptprodukts, sodass das Hauptprodukt und geeignete Updates gleichzeitig installiert werden.  
   
-Nachdem Setup die neuesten Versionen der anwendbaren Updates gefunden hat, lädt es diese herunter und integriert sie in den aktuellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installationsvorgang. Das Produktupdate kann ein kumulatives Update, Service Pack oder Service Pack plus kumulatives Update einziehen.  
+Nachdem Setup die neuesten Versionen der anwendbaren Updates gefunden hat, lädt es diese herunter und integriert sie in den aktuellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationsvorgang. Das Produktupdate kann ein kumulatives Update, Service Pack oder Service Pack plus kumulatives Update einziehen.  
   
 Geben Sie die Parameter UpdateEnabled und UpdateSource an, um die neuesten Produktupdates in die Installation des Hauptprodukts einzuschließen. Sehen Sie sich folgendes Beispiel an, um Produktupdates während des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setups zu aktivieren:  
   
@@ -120,7 +120,7 @@ Diese Schritte müssen auf einem PC mit der Clientversion von Windows oder Windo
   
 10. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager speichert die Änderung. Dann müssen Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst manuell neu starten. Dies ermöglicht die Auswahl einer für die Geschäftsanforderungen optimalen Neustartzeit. Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst neu gestartet wird, wird AlwaysOn aktiviert, und die IsHadrEnabled-Servereigenschaft wird auf 1 festgelegt.  
   
-> [!NOTE]  
+> [!NOTE]
 >  -   Sie benötigen die entsprechenden Benutzerberechtigungen, oder Ihnen muss die entsprechende Autorität auf dem Zielcomputer delegiert worden sein, damit Sie eine Verbindung zu diesem Computer herstellen können.  
 > -   Der Name des Computers, den Sie verwalten, wird in Klammern neben Computerverwaltung in der Konsolenstruktur angezeigt.  
   
@@ -226,9 +226,9 @@ $Tcp
 ##  <a name="BKMK_troubleshoot"></a> Verwenden von Tools zur Problembehandlung  
  Mit dem Hilfsprogramm [SQLdiag](../../tools/sqldiag-utility.md) können Sie Protokolle und Datendateien von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und anderen Servertypen sammeln. Dies kann hilfreich sein, um Server für eine gewisse Zeit zu überwachen oder bestimmte Serverprobleme zu behandeln. SQLdiag dient dazu, das Sammeln von Diagnoseinformationen für Microsoft Support Services zu beschleunigen und zu vereinfachen.  
   
- Sie können das Hilfsprogramm in der Administrator-Eingabeaufforderung auf dem Server Core-Computer mit der Syntax starten, die im Artikel [SQLdiag Utility](../../tools/sqldiag-utility.md)angegeben ist.  
+ Sie können das Hilfsprogramm in der Administratoreingabeaufforderung auf Server Core mit der Syntax starten, die in folgendem Artikel angegeben wird: [SQLdiag (Hilfsprogramm)](../../tools/sqldiag-utility.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Installieren von SQL Server unter Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)   
  [Artikel zu Vorgehensweisen für die Installation](https://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
   

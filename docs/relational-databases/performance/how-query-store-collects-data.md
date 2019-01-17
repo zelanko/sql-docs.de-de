@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, data collection
 ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5d262b72fec278e037c99662d1d5aecd93190cf
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: c2e84a286cb4fa59c25426e9b1e8e8506fb51d91
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711072"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370542"
 ---
 # <a name="how-query-store-collects-data"></a>So werden Daten im Abfragespeicher gesammelt
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -32,14 +32,14 @@ ms.locfileid: "52711072"
  ![Prozess im Abfragespeicher](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
 **Sichtbeschreibungen**  
   
-|Anzeigen|und Beschreibung|  
+|Sicht|und Beschreibung|  
 |----------|-----------------|  
 |**sys.query_store_query_text**|Stellt eindeutige Abfragetexte dar, die in der Datenbank ausgeführt wurden. Kommentare und Leerzeichen vor und nach dem Abfragetext werden ignoriert. Kommentare und Leerzeichen im Text werden nicht ignoriert. Jede Anweisung im Batch generiert einen separaten Abfragetexteintrag.|  
 |**sys.query_context_settings**|Stellt eindeutige Kombinationen von Einstellungen zur Planauswirkung dar, unter denen Abfragen ausgeführt werden. Derselbe Abfragetext, der mit unterschiedlichen Einstellungen zur Planauswirkung ausgeführt wurde, erzeugt separate Abfrageeinträge im Abfragespeicher, da `context_settings_id` Teil des Abfrageschlüssels ist.|  
 |**sys.query_store_query**|Abfrageeinträge, die im Abfragespeicher separat nachverfolgt und erzwungen werden. Ein einzelner Abfragetext kann mehrere Abfrageeinträge generieren, wenn er unter unterschiedlichen Kontexteinstellungen bzw. außerhalb oder innerhalb verschiedener [!INCLUDE[tsql](../../includes/tsql-md.md)]-Module (gespeicherte Prozeduren, Trigger usw.) ausgeführt wird.|  
 |**sys.query_store_plan**|Stellt den geschätzten Plan für die Abfrage mit den Kompilierzeitstatistiken dar. Der gespeicherte Plan entspricht einem Plan, den Sie durch die Verwendung von `SET SHOWPLAN_XML ON`erhalten würden.|  
 |**sys.query_store_runtime_stats_interval**|Der Abfragespeicher trennt die Zeit in automatisch generierte Zeitfenster (Intervalle) und speichert aggregierte Statistiken für jeden ausgeführten Plan auf diesem Intervall. Die Größe des Intervalls wird gesteuert durch die Konfigurationsoption „Intervall für Statistikerfassung“ (in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) oder durch `INTERVAL_LENGTH_MINUTES` mithilfe von [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
-|**sys.query_store_runtime_stats**|Aggregierte Laufzeitstatistiken für ausgeführte Pläne. Alle erfassten Metriken werden in Form von 4 Statistikfunktionen ausgedrückt: Mittelwert, Minimum, Maximum und Standardabweichung.|  
+|**sys.query_store_runtime_stats**|Aggregierte Laufzeitstatistiken für ausgeführte Pläne. Alle erfassten Metriken werden in Form von vier statistischen Funktionen ausgedrückt: Average, Minimum, Maximum und Standard Deviation (Durchschnitt, Maximum, Minimum, Standardabweichung)|  
   
  Weitere Informationen zu Abfragespeichersichten finden Sie im Abschnitt **Zugehörige Sichten, Funktionen und Prozeduren** in [Überwachen der Leistung mit dem Abfragespeicher](monitoring-performance-by-using-the-query-store.md).  
   
@@ -70,7 +70,7 @@ Wenn eine Sitzung beendet oder die Clientanwendung neu gestartet wird oder abst�
  ![abfrage-speicher-prozess-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "abfrage-speicher-prozess-4planinfo")    
 
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Bewährte Methoden für den Abfragespeicher](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [Katalogsichten des Abfragespeichers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  

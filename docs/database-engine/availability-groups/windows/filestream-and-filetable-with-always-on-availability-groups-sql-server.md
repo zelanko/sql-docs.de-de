@@ -1,6 +1,7 @@
 ---
-title: FILESTREAM und FileTable bei Always On-Verfügbarkeitsgruppen (SQL Server) | Microsoft-Dokumentation
-ms.custom: ''
+title: Verwenden von FILESTREAM und Dateitabellen mit Verfügbarkeitsgruppen
+description: In diesem Artikel wird die Verwendung von FILESTREAM oder Dateitabellen mit Datenbanken beschrieben, die Teil einer Always On-Verfügbarkeitsgruppe sind.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 51d808592db74aff5144f4fe453fe36a2bd4beb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f27403dcce14e657915abe3d8a98f886dd7cc9a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613498"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214861"
 ---
-# <a name="filestream-and-filetable-with-always-on-availability-groups-sql-server"></a>FILESTREAM und FileTable bei Always On-Verfügbarkeitsgruppen (SQL Server)
+# <a name="use-filestream-and-filetable-with-always-on-availability-groups"></a>Verwenden von FILESTREAM und Dateitabellen mit Always On-Verfügbarkeitsgruppen
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -88,7 +89,7 @@ ms.locfileid: "47613498"
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
  Keine.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

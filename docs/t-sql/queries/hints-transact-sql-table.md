@@ -37,12 +37,12 @@ ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8bbde02754a5cfe9d1a164f025b7442e12167802
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b866f40fddcd5fa12082c296036492ec894d2989
+ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713368"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306267"
 ---
 # <a name="hints-transact-sql---table"></a>Hinweise (Transact-SQL): Tabelle
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,12 +64,11 @@ ms.locfileid: "47713368"
   
  [MERGE](../../t-sql/statements/merge-transact-sql.md)  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 WITH  ( <table_hint> [ [, ]...n ] )  
   
 <table_hint> ::=   
@@ -127,7 +126,7 @@ WITH **(** \<<table_hint>**)** [ [**,** ]...*n* ]
 Bis auf einige Ausnahmen werden Tabellenhinweise nur dann in der FROM-Klausel unterstützt, wenn die Hinweise mit dem WITH-Schlüsselwort angegeben werden. Tabellenhinweise müssen zudem mit Klammern angegeben werden.  
   
 > [!IMPORTANT]  
->  Das WITH-Schlüsselwort wegzulassen ist eine veraltete Funktion: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+> Das WITH-Schlüsselwort wegzulassen ist eine veraltete Funktion: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 Die folgenden Tabellentipps sind mit und ohne WITH-Schlüsselwort zulässig: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT und NOEXPAND. Wenn diese Tabellenhinweise ohne das WITH-Schlüsselwort angegeben werden, sollten die Hinweise allein angegeben werden. Zum Beispiel:  
   
@@ -147,7 +146,7 @@ Es wird empfohlen, Tabellenhinweise durch Kommas voneinander zu trennen.
 >  Hinweise statt durch Kommas durch Leerzeichen zu trennen ist eine veraltete Funktion: [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 NOEXPAND  
-Gibt an, dass indizierte Sichten nicht für den Zugriff auf zugrunde liegende Tabellen erweitert werden, wenn der Abfrageoptimierer die Abfrage verarbeitet. Der Abfrageoptimierer behandelt die Sicht wie eine Tabelle mit einem gruppierten Index. NOEXPAND gilt nur für indizierte Sichten. Weitere Informationen finden Sie in den Hinweisen.  
+Gibt an, dass indizierte Sichten nicht für den Zugriff auf zugrunde liegende Tabellen erweitert werden, wenn der Abfrageoptimierer die Abfrage verarbeitet. Der Abfrageoptimierer behandelt die Sicht wie eine Tabelle mit einem gruppierten Index. NOEXPAND gilt nur für indizierte Sichten. Weitere Informationen finden Sie unter [Verwenden von NOEXPAND](#using-noexpand).  
   
 INDEX  **(**_index\_value_ [**,**... _n_ ] ) | INDEX =  ( _index\_value_**)**  
 Mit der INDEX()-Syntax werden die Namen oder IDs der Indizes angegeben, die der Abfrageoptimierer beim Verarbeiten der Anweisung verwenden soll. Die alternative INDEX = Syntax gibt einen einzigen Indexwert an. Pro Tabelle ist nur ein Indexhinweis zulässig.  
@@ -157,7 +156,7 @@ Falls ein gruppierter Index vorhanden ist, erzwingt INDEX(0) einen Scan des grup
  Werden mehrere Indizes in einer einzigen Hinweisliste verwendet, werden Duplikate ignoriert, und die übrigen aufgeführten Indizes werden verwendet, um die Zeilen aus der Tabelle abzurufen. Die Reihenfolge der Indizes im Indexhinweis ist von Bedeutung. Mehrere Indexhinweise erzwingen die AND-Verknüpfung der Indizes, und der Abfrageoptimierer versucht, so viele Bedingungen wie möglich auf jeden verwendeten Index anzuwenden. Falls die Auflistung der Indexhinweise nicht alle in der Abfrage referenzierten Spalten umfasst, wird ein Abrufvorgang ausgeführt, um die restlichen Spalten abzurufen, nachdem [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] alle indizierten Spalten abgerufen hat.  
   
 > [!NOTE]  
->  Wenn ein Indexhinweis, der auf mehrere Indizes verweist, in der Faktentabelle eines Sternjoins verwendet wird, ignoriert der Optimierer den Indexhinweis und gibt eine Warnmeldung zurück. Außerdem ist die OR-verknüpfte Indexsuche für Tabellen mit einem Indexhinweis nicht zulässig.  
+> Wenn ein Indexhinweis, der auf mehrere Indizes verweist, in der Faktentabelle eines Sternjoins verwendet wird, ignoriert der Optimierer den Indexhinweis und gibt eine Warnmeldung zurück. Außerdem ist die OR-verknüpfte Indexsuche für Tabellen mit einem Indexhinweis nicht zulässig.  
   
  Die maximale Anzahl nicht gruppierter Indizes im Tabellenhinweis beträgt 250.  
   
@@ -167,9 +166,9 @@ Gilt nur in einer INSERT-Anweisung, wenn die BULK-Option mit [OPENROWSET](../../
  Gibt an, dass der oder die Identitätswerte in der importierten Datendatei für die Identitätsspalte verwendet werden sollen. Wird KEEPIDENTITY nicht angegeben, werden die Identitätswerte für diese Spalte zwar überprüft, nicht jedoch importiert, und der Abfrageoptimierer weist auf der Grundlage von Ausgangswerten und den inkrementellen Werten, die beim Erstellen der Tabelle angegeben wurden, eindeutige Werte zu.  
   
 > [!IMPORTANT]  
->  Wenn die Datendatei keine Werte für die Identitätsspalte in der Tabelle oder Sicht enthält und die Identitätsspalte nicht die letzte Spalte der Tabelle ist, müssen Sie die Identitätsspalte überspringen. Weitere Informationen finden Sie unter [Auslassen eines Datenfelds mithilfe einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md). Wenn eine Identitätsspalte erfolgreich übersprungen wird, weist der Abfrageoptimierer der Identitätsspalte in den importierten Tabellenzeilen automatisch eindeutige Werte zu.  
+> Wenn die Datendatei keine Werte für die Identitätsspalte in der Tabelle oder Sicht enthält und die Identitätsspalte nicht die letzte Spalte der Tabelle ist, müssen Sie die Identitätsspalte überspringen. Weitere Informationen finden Sie unter [Auslassen eines Datenfelds mithilfe einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md). Wenn eine Identitätsspalte erfolgreich übersprungen wird, weist der Abfrageoptimierer der Identitätsspalte in den importierten Tabellenzeilen automatisch eindeutige Werte zu.  
   
-Ein Beispiel für die Verwendung dieses Hinweises in einer INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung finden Sie unter [Beibehalten von Identitätswerten beim Massenimport von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md).  
+Ein Beispiel, in dem dieser Hinweis in einer `INSERT ... SELECT * FROM OPENROWSET(BULK...)`-Anweisung verwendet wird, finden Sie unter [Beibehalten von Identitätswerten beim Massenimport von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md).  
   
 Weitere Informationen zum Überprüfen des Identitätswerts für eine Tabelle finden Sie unter [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).  
   
@@ -221,9 +220,9 @@ Bei Angabe von FORCESEEK mit Indexparametern gelten die folgenden Richtlinien un
 -   Bei partitionierten Indizes kann die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implizit hinzugefügte Partitionierungsspalte nicht im FORCESEEK-Hinweise angegeben werden.  
   
 > [!CAUTION]  
-> Bei Angabe von FORCESEEK mit Parametern wird die Anzahl von Plänen, die vom Optimierer berücksichtigt werden können, stärker eingeschränkt als bei Angabe von FORCESEEK ohne Parameter. Dies kann in mehreren Fällen zu dem Fehler führen, dass der Plan nicht generiert werden kann. In zukünftigen Versionen können durch interne Änderungen des Optimierers möglicherweise mehr Pläne berücksichtigt werden.  
+> Bei Angabe von FORCESEEK mit Parametern wird die Anzahl von Plänen, die vom Optimierer berücksichtigt werden können, stärker eingeschränkt als bei Angabe von FORCESEEK ohne Parameter. Dies kann dazu führen, dass der `Plan cannot be generated`-Fehler in mehreren Fällen auftritt. In zukünftigen Releases können durch interne Änderungen des Abfrageoptimierers möglicherweise mehr Pläne berücksichtigt werden.  
   
-FORCESCAN **Gilt für**: [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+FORCESCAN **gilt für:** [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 Gibt an, dass der Abfrageoptimierer nur einen Indexscanvorgang als Zugriffspfad auf die referenzierte Tabelle oder Sicht verwenden darf. Der FORCESCAN-Hinweis kann bei Abfragen nützlich sein, in denen der Optimierer die Anzahl betroffener Zeilen unterschätzt und einen Such- statt eines Scanvorgangs auswählt. In diesem Fall ist der für den Vorgang bereitgestellte Arbeitsspeicher zu klein, was sich negativ auf die Abfrageleistung auswirkt.  
   
 FORCESCAN kann mit oder ohne INDEX-Hinweis angegeben werden. Bei Kombination mit einem Indexhinweis (`INDEX = index_name, FORCESCAN`) berücksichtigt der Abfrageoptimierer beim Zugriff auf die Tabelle, auf die verwiesen wird, nur Scanzugriffspfade über den angegebenen Index. FORCESCAN kann mit dem Indexhinweis INDEX(0) angegeben werden, um einen Tabellenscanvorgang für die Basistabelle zu erzwingen.  
@@ -370,7 +369,7 @@ Falls eine Tabelle berechnete Spalten enthält und die berechneten Spalten von A
 -   Isolationsstufenhinweise: HOLDLOCK, NOLOCK, READCOMMITTED, REPEATABLEREAD, SERIALIZABLE.  
   
 ## <a name="filtered-index-hints"></a>Gefilterte Indexhinweise  
- Ein gefilterter Index kann als Tabellenhinweis verwendet werden, bewirkt jedoch, dass der Abfrageoptimierer den Fehler 8622 generiert, wenn er nicht alle Zeilen abdeckt, die durch die Abfrage ausgewählt werden. Es folgt ein Beispiel für einen ungültigen gefilterten Indexhinweis. Im folgenden Beispiel wird der gefilterte Index `FIBillOfMaterialsWithComponentID` erstellt und anschließend als Indexhinweis für eine SELECT-Anweisung verwendet. Das gefilterte Indexprädikat schließt Datenzeilen für die ComponentIDs 533, 324 und 753 ein. Das Abfrageprädikat schließt ebenfalls Datenzeilen für die ComponentIDs 533, 324 und 753 ein, erweitert das Resultset jedoch um die ComponentIDs 855 und 924, die nicht im gefilterten Index enthalten sind. Deshalb kann der Abfrageoptimierer den gefilterten Indexhinweis nicht verwenden und generiert den Fehler 8622. Weitere Informationen finden Sie unter [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
+ Ein gefilterter Index kann als Tabellenhinweis verwendet werden, bewirkt jedoch, dass der Abfrageoptimierer den Fehler 8622 generiert, wenn er nicht alle Zeilen abdeckt, die durch die Abfrage ausgewählt werden. Es folgt ein Beispiel für einen ungültigen gefilterten Indexhinweis. Im folgenden Beispiel wird der gefilterte Index `FIBillOfMaterialsWithComponentID` erstellt und anschließend als Indexhinweis für eine SELECT-Anweisung verwendet. Das gefilterte Indexprädikat schließt Datenzeilen für die ComponentIDs 533, 324 und 753 ein. Das Abfrageprädikat schließt ebenfalls Datenzeilen für die ComponentIDs 533, 324 und 753 ein, erweitert das Resultset jedoch um die ComponentIDs 855 und 924, die nicht im gefilterten Index enthalten sind. Deshalb kann der Abfrageoptimierer den gefilterten Indexhinweis nicht verwenden und generiert den Fehler 8622. Weitere Informationen finden Sie unter [erstellen gefilterter Indizes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
 ```sql  
 IF EXISTS (SELECT name FROM sys.indexes  
@@ -408,7 +407,7 @@ Damit der Optimierer indizierte Sichten für den Abgleich oder die Verwendung ei
   
  Auch muss die Option NUMERIC_ROUNDABORT auf OFF festgelegt sein.  
   
- Damit der Optimierer einen Index für eine indizierte Sicht verwendet, geben Sie die Option NOEXPAND an. Dieser Hinweis kann nur dann verwendet werden, wenn die Sicht ebenfalls in der Abfrage angegeben wurde. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt keinen Hinweis zur Verfügung, um die Verwendung einer bestimmten indizierten Sicht in einer Abfrage, die die Sicht nicht direkt in der FROM-Klausel benennt, zu erzwingen. Der Abfrageoptimierer zieht jedoch die Verwendung indizierter Sichten in Erwägung, selbst wenn in der Abfrage nicht direkt auf sie verwiesen wird.  
+ Damit der Optimierer einen Index für eine indizierte Sicht verwendet, geben Sie die Option NOEXPAND an. Dieser Hinweis kann nur dann verwendet werden, wenn die Sicht ebenfalls in der Abfrage angegeben wurde. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt keinen Hinweis zur Verfügung, um die Verwendung einer bestimmten indizierten Sicht in einer Abfrage, die die Sicht nicht direkt in der FROM-Klausel benennt, zu erzwingen. Der Abfrageoptimierer zieht jedoch die Verwendung indizierter Sichten in Erwägung, selbst wenn in der Abfrage nicht direkt auf sie verwiesen wird. SQL Server erstellt Statistiken in einer indizierten Sicht nur automatisch, wenn ein NOEXPAND-Tabellenhinweis verwendet wird. Wenn Sie diesen Hinweis auslassen, können beim Ausführungsplan Warnungen zu fehlenden Statistiken auftreten, die nicht durch manuelles Erstellen von Statistiken aufgelöst werden können. Während der Abfrageoptimierung nutzt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ansichtsstatistiken, die automatisch oder manuell erstellt werden, wenn die Abfrage direkt auf die Ansicht verweist und der NOEXPAND-Hinweis verwendet wird.    
   
 ## <a name="using-a-table-hint-as-a-query-hint"></a>Verwenden eines Tabellenhinweises als Abfragehinweis  
  *Tabellenhinweise* können mit der OPTION (TABLE HINT)-Klausel auch als Abfragehinweis angegeben werden. Es wird empfohlen, einen Tabellenhinweis nur im Kontext einer [Planhinweisliste](../../relational-databases/performance/plan-guides.md) als Abfragehinweis zu verwenden. Für Ad-hoc-Abfragen geben Sie diese Hinweise nur als Tabellenhinweise an. Weitere Informationen finden Sie unter [Abfragehinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
@@ -470,7 +469,7 @@ WHERE h.TotalDue > 100
 AND (d.OrderQty > 5 OR d.LineTotal < 1000.00);  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [Abfragehinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)  

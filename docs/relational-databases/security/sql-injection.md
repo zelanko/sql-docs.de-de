@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e4fad8c85b620b817439529bfabd65361ed0207
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e8521fb6bb67f79ae88e026a3231d733490c5719
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536137"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626344"
 ---
 # <a name="sql-injection"></a>SQL Injection
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "52536137"
   
  Das folgende Skript zeigt ein einfaches SQL-Injection-Beispiel. Das Skript erstellt eine SQL-Abfrage, indem hartcodierte Zeichenfolgen mit einer vom Benutzer eingegebenen Zeichenfolge verkettet werden:  
   
-```  
+```csharp
 var Shipcity;  
 ShipCity = Request.form ("ShipCity");  
 var sql = "select * from OrdersTable where ShipCity = '" + ShipCity + "'";  
@@ -40,19 +40,19 @@ var sql = "select * from OrdersTable where ShipCity = '" + ShipCity + "'";
   
  Der Benutzer wird aufgefordert, den Namen einer Stadt einzugeben. Bei der Eingabe `Redmond`sieht die vom Skript erstellt Abfrage ungefähr wie die folgende aus:  
   
-```  
+```sql
 SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond'  
 ```  
   
  Angenommen, der Benutzer gibt jedoch Folgendes ein:  
   
-```  
+```sql
 Redmond'; drop table OrdersTable--  
 ```  
   
  In diesem Fall wird die folgende Abfrage von dem Skript erstellt:  
   
-```  
+```sql
 SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'  
 ```  
   
@@ -86,7 +86,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
   
 -   Verketten Sie niemals Benutzereingaben, die nicht überprüft wurden. Die Zeichenfolgenverkettung ist der primäre Eingangspunkt für Script-Injection.  
   
--   Akzeptieren Sie in Feldern, aus denen Dateinamen erstellt werden können, keine der folgenden Zeichenfolgen: AUX, CLOCK$, COM1 bis COM8, CON, CONFIG$, LPT1 bis LPT8, NUL und PRN.  
+-   Folgende Zeichenfolge dürfen in Feldern, aus denen Dateiname erstellt werden können, nicht zugelassen werden: AUX, CLOCK$, COM1 bis COM8, CON, CONFIG$, LPT1 bis LPT8, NUL und PRN.  
   
  Weisen Sie, wenn möglich, Eingaben mit den folgenden Zeichen zurück.  
   
@@ -101,7 +101,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
 ### <a name="use-type-safe-sql-parameters"></a>Verwenden von typsicheren SQL-Parametern  
  Die **Parameters** -Sammlung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt die Überprüfung von Typ und Länge bereit. Wenn Sie die **Parameters** -Sammlung verwenden, werden Eingaben als Literalwert und nicht als ausführbarer Code behandelt. Ein weiterer Vorteil beim Verwenden der **Parameters** -Sammlung besteht im Erzwingen von Typ- und Längenprüfungen. Werte außerhalb des Bereichs lösen eine Ausnahme aus. Das folgende Codefragment zeigt die Verwendung der **Parameters** -Sammlung:  
   
-```  
+```csharp
 SqlDataAdapter myCommand = new SqlDataAdapter("AuthorLogin", conn);  
 myCommand.SelectCommand.CommandType = CommandType.StoredProcedure;  
 SqlParameter parm = myCommand.SelectCommand.Parameters.Add("@au_id",  
@@ -114,7 +114,7 @@ parm.Value = Login.Text;
 ### <a name="use-parameterized-input-with-stored-procedures"></a>Verwenden von parametrisierten Eingaben mit gespeicherten Prozeduren  
  Wenn gespeicherte Prozeduren ungefilterte Eingaben verwenden, sind sie möglicherweise anfällig für SQL Injection. Der folgende Code ist z. B. nicht gegen Angriffe geschützt:  
   
-```  
+```csharp
 SqlDataAdapter myCommand =   
 new SqlDataAdapter("LoginStoredProcedure '" +   
                                Login.Text + "'", conn);  
@@ -125,7 +125,7 @@ new SqlDataAdapter("LoginStoredProcedure '" +
 ### <a name="use-the-parameters-collection-with-dynamic-sql"></a>Verwenden der Parameterauflistung mit Dynamic SQL  
  Wenn die Verwendung von gespeicherten Prozeduren nicht möglich ist, können Sie weiterhin Parameter verwenden, wie in dem nachfolgenden Codebeispiel gezeigt wird.  
   
-```  
+```csharp
 SqlDataAdapter myCommand = new SqlDataAdapter(  
 "SELECT au_lname, au_fname FROM Authors WHERE au_id = @au_id", conn);  
 SQLParameter parm = myCommand.SelectCommand.Parameters.Add("@au_id",   
@@ -136,7 +136,7 @@ Parm.Value = Login.Text;
 ### <a name="filtering-input"></a>Filtern von Eingaben  
  Auch das Filtern von Eingaben kann sich beim Schutz vor SQL-Injection als hilfreich erweisen. Bei dieser Methode werden Escapezeichen entfernt. Die große Zeichenmenge kann aber möglicherweise Probleme verursachen, die dazu führen, dass diese Verteidigungsmaßnahme nicht verlässlich ist. Das folgende Beispiel sucht nach Zeichenfolgentrennzeichen.  
   
-```  
+```csharp
 private string SafeSqlLiteral(string inputSQL)  
 {  
   return inputSQL.Replace("'", "''");  
@@ -146,7 +146,7 @@ private string SafeSqlLiteral(string inputSQL)
 ### <a name="like-clauses"></a>LIKE-Klauseln  
  Beachten Sie beim Verwenden einer `LIKE` -Klausel, dass Platzhalterzeichen weiterhin mit Escapezeichen versehen werden müssen:  
   
-```  
+```csharp
 s = s.Replace("[", "[[]");  
 s = s.Replace("%", "[%]");  
 s = s.Replace("_", "[_]");  
@@ -155,7 +155,7 @@ s = s.Replace("_", "[_]");
 ## <a name="reviewing-code-for-sql-injection"></a>Überprüfen von Code gegen SQL-Injection  
  Sie sollten sämtlichen Code überprüfen, der `EXECUTE`, `EXEC`oder `sp_executesql`aufruft. Mithilfe von Abfragen, die den folgenden ähnlich sind, können Sie Prozeduren identifizieren, die diese Anweisungen enthalten. Diese Abfrage überprüft 1, 2, 3 oder 4 Leerzeichen nach den Wörtern `EXECUTE` und `EXEC`.  
   
-```  
+```sql
 SELECT object_Name(id) FROM syscomments  
 WHERE UPPER(text) LIKE '%EXECUTE (%'  
 OR UPPER(text) LIKE '%EXECUTE  (%'  
@@ -179,12 +179,12 @@ OR UPPER(text) LIKE '%SP_EXECUTESQL%';
   
  Wenn Sie diese Technik verwenden, kann eine SET-Anweisung wie folgt überarbeitet werden:  
   
-```  
---Before:  
+```sql
+-- Before:  
 SET @temp = N'SELECT * FROM authors WHERE au_lname ='''   
  + @au_lname + N'''';  
   
---After:  
+-- After:  
 SET @temp = N'SELECT * FROM authors WHERE au_lname = '''   
  + REPLACE(@au_lname,'''','''''') + N'''';  
 ```  
@@ -192,7 +192,7 @@ SET @temp = N'SELECT * FROM authors WHERE au_lname = '''
 ### <a name="injection-enabled-by-data-truncation"></a>Aktivieren von SQL-Injection durch das Abschneiden von Daten  
  Jede dynamische [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung, die einer Variablen zugewiesen ist, wird abgeschnitten, falls sie größer als der für die Variable zugewiesene Puffer ist. Ein Angreifer, der in der Lage ist, das Abschneiden der Anweisungen durch das Übergeben von unerwartet langen Zeichenfolgen an eine gespeicherte Prozedur zu erzwingen, kann das Ergebnis verändern. Beispielsweise ist die gespeicherte Prozedur, die von dem folgenden Skript erstellt wurde, anfällig für SQL-Injection durch aktiviertes Abschneiden.  
   
-```  
+```sql
 CREATE PROCEDURE sp_MySetPassword  
 @loginname sysname,  
 @old sysname,  
@@ -222,7 +222,7 @@ GO
   
  Durch das Übergeben von 154 Zeichen an einen Puffer aus 128 Zeichen kann ein Angreifer ein neues Kennwort für „sa“ festlegen, ohne das alte Kennwort zu kennen.  
   
-```  
+```sql
 EXEC sp_MySetPassword 'sa', 'dummy',   
 '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012'''''''''''''''''''''''''''''''''''''''''''''''''''   
 ```  
@@ -232,7 +232,7 @@ EXEC sp_MySetPassword 'sa', 'dummy',
 ### <a name="truncation-when-quotenamevariable--and-replace-are-used"></a>Abschneiden beim Verwenden von QUOTENAME(@variable, '''') und REPLACE()  
  Zeichenfolgen, die von QUOTENAME() und REPLACE() zurückgegeben werden, werden automatisch abgeschnitten, falls Sie über dem zugewiesenen Speicherplatz liegen. Die im folgenden Beispiel erstellte, gespeicherte Prozedur zeigt, was in den Fällen passieren kann.  
   
-```  
+```sql
 CREATE PROCEDURE sp_MySetPassword  
     @loginname sysname,  
     @old sysname,  
@@ -269,13 +269,13 @@ GO
   
  Daher legt die folgende Anweisung die Kennwörter von allen Benutzern auf den Wert fest, der im vorherigen Code übergeben wurde.  
   
-```  
+```sql
 EXEC sp_MyProc '--', 'dummy', '12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678'  
 ```  
   
  Sie können das Abschneiden der Zeichenfolge durch das Überschreiten des zugewiesenen Pufferplatzes erzwingen, falls Sie REPLACE() verwenden. Die im folgenden Beispiel erstellte, gespeicherte Prozedur zeigt, was in den Fällen passieren kann.  
   
-```  
+```sql
 CREATE PROCEDURE sp_MySetPassword  
     @loginname sysname,  
     @old sysname,  
@@ -314,7 +314,7 @@ GO
   
  Die folgende Berechnung deckt alle Fälle ab:  
   
-```  
+```sql
 WHILE LEN(@find_string) > 0, required buffer size =  
 ROUND(LEN(@input)/LEN(@find_string),0) * LEN(@new_string)   
  + (LEN(@input) % LEN(@find_string))  
@@ -323,7 +323,7 @@ ROUND(LEN(@input)/LEN(@find_string),0) * LEN(@new_string)
 ### <a name="truncation-when-quotenamevariable--is-used"></a>Abschneiden beim Verwenden von QUOTENAME(@variable, ']')  
  Ein Abschneiden ist möglich, wenn der Name eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sicherungsfähigen Elements an Anweisungen übergeben wird, die das Format `QUOTENAME(@variable, ']')`verwenden. Im folgenden Beispiel wird dies veranschaulicht.  
   
-```  
+```sql
 CREATE PROCEDURE sp_MyProc  
     @schemaname sysname,  
     @tablename sysname,  
@@ -339,7 +339,7 @@ GO
   
  Wenn Sie Werte vom Typ „sysname“ verketten, sollten Sie temporäre Variablen verwenden, die groß genug sind, um die maximale Anzahl von 128 Zeichen pro Wert aufzunehmen. Falls möglich, sollten Sie `QUOTENAME()` direkt innerhalb von dynamischem [!INCLUDE[tsql](../../includes/tsql-md.md)]aufrufen. Andernfalls können Sie die erforderliche Puffergröße so berechnen, wie es im vorherigen Abschnitt beschrieben wird.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)   
  [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)   

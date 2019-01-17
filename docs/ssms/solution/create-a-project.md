@@ -7,27 +7,24 @@ ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.newproject
-- vs.addnewproject
 helpviewer_keywords:
 - projects [SQL Server Management Studio], creating
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cd6c508700e22a7ef999e3511610093230e7b613
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46a65938bdac731d9922c1ccdb5f95eb8a05f700
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849894"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328000"
 ---
 # <a name="create-a-project"></a>Erstellen eines Projekts
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Sie können innerhalb einer vorhandenen Projektmappe ein oder mehrere Projekte erstellen.  
   
-### <a name="to-create-a-new-project-and-add-it-to-a-solution"></a>So erstellen Sie ein neues Projekt erstellen und fügen es zu einer Projektmappe hinzu  
+## <a name="create-a-new-project-and-add-it-to-a-solution"></a>Erstellen eines neuen Projekts und Hinzufügen des Projekts zu einer Projektmappe  
   
 1.  Wählen Sie die Projektmappe im Projektmappen-Explorer aus.  
   
@@ -96,9 +93,10 @@ Sie können innerhalb einer vorhandenen Projektmappe ein oder mehrere Projekte e
   
 4.  Klicken Sie auf **OK**.  
   
-Für das Skriptprojekt können Sie einen Namen festlegen. Die Ordnernamen hingegen werden von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] festgelegt und können nicht geändert werden. Sie können die Laufwerk- und Pfadspezifikation für den gemeinsamen Ordnersatz mit dem Dialogfeld **Neues Projekt hinzufügen** konfigurieren. Klicken Sie mit der rechten Maustaste auf das Projektmappensymbol im **Projektmappen-Explorer**, und klicken Sie dann auf **Hinzufügen**. Der Standardspeicherort für Skriptprojektordner lautet: „C:\Dokumente und Einstellungen\\*Benutzername*\Eigene Dokumente\SQL Server Management Studio\Projects\\.  
+Für das Skriptprojekt können Sie einen Namen festlegen. Die Ordnernamen hingegen werden von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] festgelegt und können nicht geändert werden. Sie können die Laufwerk- und Pfadspezifikation für den gemeinsamen Ordnersatz mit dem Dialogfeld **Neues Projekt hinzufügen** konfigurieren. Klicken Sie mit der rechten Maustaste auf das Projektmappensymbol im **Projektmappen-Explorer**, und klicken Sie dann auf **Hinzufügen**. Der Standardpfad für Skriptprojektordner lautet folgendermaßen: C:\Documents and Settings\\*Benutzername*\My Documents\SQL Server Management Studio\Projects\\.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen
+
 [Projektmappen-Explorer](../../ssms/solution/solution-explorer.md)  
 [Hinzufügen eines vorhandenen Projekts zu einer Projektmappe](../../ssms/solution/add-an-existing-project-to-a-solution.md)  
 [Hinzufügen neuer Elemente zu einem Projekt](../../ssms/solution/add-new-items-to-a-project.md)  
@@ -106,4 +104,3 @@ Für das Skriptprojekt können Sie einen Namen festlegen. Die Ordnernamen hingeg
 [Ändern des Standardspeicherorts für Projekte](../../ssms/solution/change-the-default-location-for-projects.md)  
 [Entfernen oder Löschen eines Elements oder Projekts](../../ssms/solution/remove-or-delete-an-item-or-project.md)  
 [Löschen einer Projektmappe](../../ssms/solution/delete-a-solution.md)  
-  

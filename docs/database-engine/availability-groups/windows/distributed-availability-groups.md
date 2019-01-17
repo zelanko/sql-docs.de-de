@@ -1,6 +1,7 @@
 ---
-title: Verteilte Verfügbarkeitsgruppen (SQL Server) | Microsoft-Dokumentation
-ms.custom: ''
+title: Verteilte Verfügbarkeitsgruppen
+description: Eine verteilte Verfügbarkeitsgruppe ist ein spezieller Typ einer Verfügbarkeitsgruppe, der zwei separate Verfügbarkeitsgruppen umfasst. Die Verfügbarkeitsgruppen, die Teil einer verteilten Verfügbarkeitsgruppe sind, müssen sich nicht am selben Ort befinden.
+ms.custom: seodec18
 ms.date: 07/31/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +13,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ebc3dfd0534deb313725ab646da26f770d0f99cf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1aaf988a3b9a869aba5ef30c6aac739a6349c70e
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534451"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53381031"
 ---
 # <a name="distributed-availability-groups"></a>Verteilte Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +56,9 @@ Die einzige Möglichkeit, um dem primären Replikat von AG 2 das Akzeptieren von
 
 ## <a name="sql-server-version-and-edition-requirements-for-distributed-availability-groups"></a>Anforderungen für die SQL Server-Version und -Edition für verteilte Verfügbarkeitsgruppen
 
-Verteilte Verfügbarkeitsgruppen funktionieren derzeit nur mit Verfügbarkeitsgruppen, die mit der derselben Hauptversion von SQL Server erstellt werden. Zum Beispiel müssen alle Verfügbarkeitsgruppen, die Teil einer verteilten Verfügbarkeitsgruppe sind, derzeit mit SQL Server 2016 erstellt werden. Da die Funktion für verteilte Verfügbarkeitsgruppen in SQL Server 2012 oder 2014 noch nicht existiert hat, können Verfügbarkeitsgruppen, die mit diesen Versionen erstellt wurden, nicht Teil von verteilten Verfügbarkeitsgruppen werden. 
+Verteilte Verfügbarkeitsgruppen in SQL Server 2017 oder höher können verschiedene Hauptversionen von SQL Server in der gleichen verteilten Verfügbarkeitsgruppe kombinieren. Die Verfügbarkeitsgruppe mit dem primärem Replikat für Lese-/Schreibzugriff kann dieselbe oder eine niedrigere Version als die anderen Verfügbarkeitsgruppen aufweisen, die Teil der verteilten Verfügbarkeitsgruppe sind. Die anderen Verfügbarkeitsgruppen können dieselbe oder eine höhere Version aufweisen. Dieses Szenario gilt für Upgrade- und Migrationsszenarios. Wenn die Verfügbarkeitsgruppe, die das primäre Replikat für Lese-/Schreibzugriff enthält, beispielsweise SQL Server 2016 aufweist, Sie jedoch per Migration oder Upgrade zu SQL Server 2017 oder höher wechseln möchten, können die anderen Verfügbarkeitsgruppen in der verteilten Verfügbarkeitsgruppe mit SQL Server 2017 konfiguriert werden.
+
+Da die Funktion für verteilte Verfügbarkeitsgruppen in SQL Server 2012 oder 2014 noch nicht existiert hat, können Verfügbarkeitsgruppen, die mit diesen Versionen erstellt wurden, nicht Teil von verteilten Verfügbarkeitsgruppen werden. 
 
 > [!NOTE]
 > Verteilte Verfügbarkeitsgruppen können nicht mit der Standard Edition oder mit einer Kombination aus Standard Edition und Enterprise Edition konfiguriert werden.
@@ -85,7 +88,7 @@ Für die einzelnen WSFC-Cluster und ihre entsprechenden Verfügbarkeitsgruppen g
 * Ein WSFC-Cluster ist mit einer Domäne verknüpft und ein WSFC-Cluster ist nicht mit einer Domäne verknüpft.
 * Keiner der WSFC-Cluster ist mit einer Domäne verknüpft.
 
-Wenn beide WSFC-Cluster mit derselben Domäne (gilt nicht für vertrauenswürdige Domänen), müssen Sie beim Erstellen der verteilten Verfügbarkeitsgruppe keine weiteren Schritte durchführen. Bei Verfügbarkeitsgruppen und WSFC-Clustern, die nicht mit derselben Domäne verknüpft sind, müssen Sie Zertifikate verwenden, damit die verteilte Verfügbarkeitsgruppe funktioniert. Dabei gehen Sie so vor wie beim Erstellen einer Verfügbarkeitsgruppe für eine domänenunabhängige Verfügbarkeitsgruppe. Weitere Informationen zum Konfigurieren von Zertifikaten für eine verteilte Verfügbarkeitsgruppe finden Sie in den Schritten 3 bis 13 unter [Create a domain-independent availability group (Erstellen einer domänenunabhängigen Verfügbarkeitsgruppe)](domain-independent-availability-groups.md#create-a-domain-independent-availability-group).
+Wenn beide WSFC-Cluster mit derselben Domäne (gilt nicht für vertrauenswürdige Domänen), müssen Sie beim Erstellen der verteilten Verfügbarkeitsgruppe keine weiteren Schritte durchführen. Bei Verfügbarkeitsgruppen und WSFC-Clustern, die nicht mit derselben Domäne verknüpft sind, müssen Sie Zertifikate verwenden, damit die verteilte Verfügbarkeitsgruppe funktioniert. Dabei gehen Sie so vor wie beim Erstellen einer Verfügbarkeitsgruppe für eine domänenunabhängige Verfügbarkeitsgruppe. Weitere Informationen zum Konfigurieren von Zertifikaten für eine verteilte Verfügbarkeitsgruppe finden Sie in den Schritten 3 bis 13 unter [Create a domain-independent availability group (Erstellen einer domänenunabhängigen Verfügbarkeitsgruppe)](domain-independent-availability-groups.md).
 
 Bei einer verteilten Verfügbarkeitsgruppe müssen die primären Replikate in jeder zugrunde liegenden Verfügbarkeitsgruppe jeweils die Zertifikate der anderen besitzen. Wenn Sie bereits Endpunkte haben, die keine Zertifikate verwenden, konfigurieren Sie diese Endpunkte neu, indem Sie die Anweisung [ALTER ENDPOINT](https://docs.microsoft.com/sql/t-sql/statements/alter-endpoint-transact-sql) verwenden, um das Verwenden von Zertifikaten zu berücksichtigen.
 
@@ -138,7 +141,7 @@ Das heißt, ein primäres Replikat kann Teil von zwei unterschiedlichen verteilt
 
 ![Horizontales Hochskalieren von Lesevorgängen mithilfe von verteilten Verfügbarkeitsgruppen](./media/distributed-availability-group/dag-05-scaling-out-reads-with-distributed-ags.png)
 
-Die folgende Abbildung zeigt AG 1 als das primäre Replikat von zwei unterschiedliche verteilte Verfügbarkeitsgruppen: von der verteilten AG 1 (bestehend aus AG 1 und AG 2) und der verteilten AG 2 (bestehend aus AG 1 und AG 3).
+Auf der folgenden Abbildung wird Verfügbarkeitsgruppe 1 (AG 1) als primäres Replikat für zwei verschiedene verteilte Verfügbarkeitsgruppen gezeigt: Distributed AG1 (verteilte Verfügbarkeitsgruppe 1, bestehend aus AG1 und AG2) und Distributed AG 2 (verteilte Verfügbarkeitsgruppe 2, bestehend aus AG1 und AG3).
 
 
 ![Beispiel: eine weitere Möglichkeit zum horizontalen Hochskalieren von Lesevorgängen mithilfe von verteilten Verfügbarkeitsgruppen]( ./media/distributed-availability-group/dag-06-another-scaling-out-reads-using-distributed-ags-example.png)

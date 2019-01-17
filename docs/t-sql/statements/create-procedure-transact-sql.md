@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67e1f72fef6c10551f3d0670aff694777f52e391
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 845031e6002ef992b6f04b053bde9955896591fe
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512109"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202899"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +75,7 @@ Erstellt eine gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)]- oder CLR
 
 Wenn Sie die ausführlichen Informationen zur Syntax überspringen und ein Beispiel für eine einfache gespeicherte Prozedur möchten, fahren Sie einfach mit dem Abschnitt [Einfache Beispiele](#Simple) fort.
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -148,7 +148,7 @@ AS { [ BEGIN ] sql_statement [;][ ,...n ] [ END ] }
   
 ## <a name="arguments"></a>Argumente
 OR ALTER  
- **Gilt für:** Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1).  
+ **Gilt für**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1).  
   
  Ändert die Prozedur, wenn sie bereits vorhanden ist.
  
@@ -220,7 +220,7 @@ RECOMPILE
  Verwenden Sie den RECOMPILE-Abfragehinweis in der Abfragedefinition, damit das [!INCLUDE[ssDE](../../includes/ssde-md.md)] Abfragepläne für einzelne Abfragen innerhalb einer Prozedur verwirft. Weitere Informationen finden Sie unter [Abfragehinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ENCRYPTION  
- **Gilt für:** SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Gilt für**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Gibt an, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Originaltext der CREATE PROCEDURE-Anweisung in ein verborgenes Format umwandelt. Die Ausgabe der Verbergung ist nicht direkt in den Katalogsichten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sichtbar. Benutzer, die keinen Zugriff auf Systemtabellen oder Datenbankdateien haben, können den verborgenen Text nicht abrufen. Der Text ist jedoch für berechtigte Benutzer verfügbar, die entweder auf die Systemtabellen über den [DAC-Port](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) oder direkt auf die Datenbankdateien zugreifen. Des Weiteren können Benutzer, die einen Debugger an den Serverprozess anfügen können, die entschlüsselte Prozedur zur Laufzeit vom Arbeitsspeicher abrufen. Weitere Informationen zu Berechtigungen zum Zugreifen auf Systemmetadaten finden Sie unter [Konfigurieren der Sichtbarkeit von Metadaten](../../relational-databases/security/metadata-visibility-configuration.md).  
   
@@ -236,7 +236,7 @@ EXECUTE AS-*Klausel*
  Weitere Informationen finden Sie unter [EXECUTE AS-Klausel &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
 FOR REPLICATION  
- **Gilt für:** SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Gilt für**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Gibt an, dass die Prozedur für die Replikation erstellt ist. Entsprechend kann sie nicht für den Abonnenten ausgeführt werden. Eine Prozedur, die mit der Option FOR REPLICATION erstellt wurde, wird als Filter für Prozeduren verwendet und nur während der Replikation ausgeführt. Parameter können nicht deklariert werden, wenn FOR REPLICATION angegeben ist. FOR REPLICATION kann nicht für CLR-Prozeduren angegeben werden. Die Option RECOMPILE wird bei Prozeduren ignoriert, die mit FOR REPLICATION erstellt wurden.  
   
@@ -444,7 +444,7 @@ GO
 ## <a name="metadata"></a>Metadaten  
  In der folgenden Tabelle sind die Katalogsichten und dynamischen Verwaltungssichten aufgeführt, die Sie verwenden können, um Informationen zu gespeicherten Prozeduren zurückzugeben.  
   
-|Anzeigen|und Beschreibung|  
+|Sicht|und Beschreibung|  
 |----------|-----------------|  
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|Gibt die Definition einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur zurück. Der Text einer mit der ENCRYPTION-Option erstellten Prozedur kann nicht mit der **sys.sql_modules**-Katalogsicht angezeigt werden.|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|Gibt Informationen zu einer CLR-Prozedur zurück.|  
@@ -455,7 +455,7 @@ GO
   
 |Name des Systemmonitorobjekts|Indikatorname des Systemmonitors|  
 |-------------------------------------|--------------------------------------|  
-|SQL Server: Plancache-Objekt|Cachetrefferquote|  
+|SQLServer: Plancache-Objekt|Cachetrefferquote|  
 ||Cacheseiten|  
 ||Cacheobjektzähler*|  
   
@@ -546,7 +546,7 @@ GO
 #### <a name="c-creating-a-clr-stored-procedure"></a>C. Erstellen einer gespeicherten CLR-Prozedur  
  Im folgenden Beispiel wird die `GetPhotoFromDB`-Prozedur erstellt, die auf die `GetPhotoFromDB`-Methode der `LargeObjectBinary`-Klasse in der `HandlingLOBUsingCLR`-Assembly verweist. Bevor die Prozedur erstellt wird, wird die `HandlingLOBUsingCLR`-Assembly in der lokalen Datenbank registriert.  
   
-**Gilt für:**  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (wenn eine aus *assembly_bits* erstellte Assembly verwendet wird)  
+**Gilt für: ** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (wenn eine aus *assembly_bits* erstellte Assembly verwendet wird)  
   
 ```sql  
 CREATE ASSEMBLY HandlingLOBUsingCLR  
@@ -993,7 +993,7 @@ GO
 EXEC Get10TopResellers;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)   
  [Control-of-Flow Language &#40;Transact-SQL&#41; (Sprachkonstrukte zur Ablaufsteuerung (Transact-SQL))](~/t-sql/language-elements/control-of-flow.md)   
  [Cursor](../../relational-databases/cursors.md)   

@@ -11,12 +11,12 @@ ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 675379c6c182ad72ecdeefe09423fe981cf67b41
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d08fe92b865076a330f0272f8b3fde81f17a8854
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520525"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589234"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lektion 2: Herstellen einer Verbindung von einem anderen Computer
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ Wenn Sie planen, die Verbindung mit [!INCLUDE[ssDE](../includes/ssde-md.md)] von
     |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
     |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
-2.  Erweitern Sie im **SQL Server-Konfigurations-Manager**den Eintrag **SQL Server-Netzwerkkonfiguration**, und klicken Sie anschließend auf **Protokolle für** *<InstanceName>*.  
+2.  Erweitern Sie im **SQL Server-Konfigurations-Manager**den Eintrag **SQL Server-Netzwerkkonfiguration**, und klicken Sie anschließend auf **Protokolle für** _<InstanceName>_.  
   
     Die Standardinstanz (eine unbenannte Instanz) wird als **MSSQLSERVER**aufgelistet. Wenn Sie eine benannte Instanz installiert haben, wird der von Ihnen angegebene Name aufgeführt. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] wird als **SQLEXPRESS**installiert, es sei denn, der Name wurde während des Setups geändert.  
   
@@ -139,6 +139,6 @@ Um den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Browser zu verwend
 Diese Ausführungen beenden das kurze Lernprogramm zur Konnektivität.  
   
 ## <a name="return-to-tutorials-portal"></a>Zurück zum Portal für die Lernprogramme  
-[Lernprogramm: Erste Schritte mit der Datenbank-Engine](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
+[Tutorial: Erste Schritte mit der Datenbank-Engine](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
   
 

@@ -1,23 +1,25 @@
 ---
 title: Exportieren nach Microsoft Word (Berichts-Generator und SSRS) | Microsoft-Dokumentation
-ms.date: 05/30/2017
+ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
+description: Die Word-Renderingerweiterung rendert paginierte Berichte Format von  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (.docx). Das Format ist Office Open XML.
+ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b315779a4e6c16bdea162ebd5d70c4b9c12ec94b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e8bae0c0ef770acf460840abcc0989f8cdf4324e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393334"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202419"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportieren nach Microsoft Word (Berichts-Generator und SSRS)
 
-  Die Word-Renderingerweiterung rendert paginierte Berichte Format von  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (.docx). Das Format ist Office Open XML.  
+  Die Word-Renderingerweiterung rendert paginierte Berichte im Microsoft Word-Format (.docx). Das Format ist Office Open XML.  
   
  Der Inhaltstyp von Dateien, die vom Renderer generiert werden, ist **application/vnd.openxmlformats-officedocument.wordprocessingml.document** , und die Dateinamenerweiterung lautet „.docx“.  
   
@@ -54,7 +56,7 @@ ms.locfileid: "52393334"
 |Berichtselementeigenschaften|und Beschreibung|  
 |-------------------------------|-----------------|  
 |Berichtstitel (Berichtstitel)|Titel|  
-|Autor des Berichts|Autor|  
+|Autor des Berichts|Author|  
 |Berichtsbeschreibung|Kommentare|  
   
 ##  <a name="ReportHeadersFooters"></a> Seitenkopfzeilen und -fußzeilen  
@@ -70,9 +72,9 @@ ms.locfileid: "52393334"
   
  Dies liegt daran, dass der Word-Renderer den Bericht für Felder analysiert, die mit der Paginierung zusammenhängen, wie **PageNumber** und **TotalPages** , und nur einfache Verweise verarbeitet und keine Funktionsaufrufe. In diesem Fall wird vom Ausdruck die **ToString** -Funktion aufgerufen. Die folgenden beiden Ausdrücke sind gleichwertig und werden beide ordnungsgemäß gerendert, wenn Sie die Vorschau für den Bericht im Berichts-Generator oder Berichts-Designer anzeigen. Sie können den veröffentlichten Bericht aber auch in einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webportal oder einer SharePoint-Bibliothek rendern. Der Word-Renderer analysiert jedoch nur den zweiten Ausdruck erfolgreich und rendert die richtigen Seitenzahlen.  
   
--   **Komplexer Ausdruck:**  Ausdruck ist `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
+-   **Komplexer Ausdruck:**  Der Ausdruck ist `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   **Ausdruck mit Textausführungen:** Text **Average Sales**und Ausdruck  `=Avg(Fields!YTDPurchase.Value, "Sales)`und Text **Page Number**und Ausdruck `=Globals!PageNumber`  
+-   **Ausdruck mit Textausführungen:** Text, **Average Sales** und der Ausdruck `=Avg(Fields!YTDPurchase.Value, "Sales)` und Text, **Page Number** und der Ausdruck `=Globals!PageNumber`  
   
  Um dieses Problem zu umgehen, verwenden Sie mehrere Textausführungen statt eines komplexen Ausdrucks, wenn Sie Ausdrücke in Fuß- und Kopfzeilen verwenden. Die folgenden beiden Ausdrücke sind äquivalent. Der Erste ist ein komplexer Ausdruck, der Zweite verwendet Textausführungen. Der Word-Renderer analysiert nur den zweiten Ausdruck erfolgreich.  
   

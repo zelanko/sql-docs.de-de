@@ -35,12 +35,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2eec14db312bb6fb2a8fb65bb51e396a4c1be3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be0bccac59c011fc36e8481029d9951cd36cad99
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836997"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205399"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47836997"
   
  KILL kann verwendet werden, um eine normale Verbindung zu beenden, wodurch die der angegebenen Sitzungs-ID zugeordneten Transaktionen intern beendet werden. Die Anweisung kann auch verwendet werden, um verwaiste und unsichere verteilte Transaktionen zu beenden, wenn [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) verwendet wird.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -122,7 +122,7 @@ Mit @@SPID kann der Sitzungs-ID-Wert der aktuellen Sitzung angezeigt werden.
  Der gleiche Statusbericht wird durch Wiederholen der gleichen Anweisung KILL *session ID*|*UOW* ohne die WITH STATUSONLY-Option erstellt. Dies wird allerdings nicht empfohlen. Durch das Wiederholen einer KILL *session ID*-Anweisung wird möglicherweise ein neuer Prozess beendet, falls das Rollback bereits abgeschlossen war und die Sitzungs-ID vor der Ausführung der neuen KILL-Anweisung einem neuen Task zugewiesen worden ist. Mit der Angabe von WITH STATUSONLY wird dies verhindert.  
   
 ## <a name="permissions"></a>Berechtigungen  
- **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** Erfordert die Berechtigung ALTER ANY CONNECTION. ALTER ANY CONNECTION ist mit der Mitgliedschaft in den festen Serverrollen sysadmin und processadmin verbunden.  
+ **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** Erfordert die ALTER ANY CONNECTION-Berechtigung. ALTER ANY CONNECTION ist mit der Mitgliedschaft in den festen Serverrollen sysadmin und processadmin verbunden.  
   
  **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]:** Erfordert die Berechtigung KILL DATABASE CONNECTION. Das Prinzipalkonto auf Serverebene verfügt über die Berechtigung KILL DATABASE CONNECTION.  
   
@@ -156,7 +156,7 @@ KILL 'D5499C66-E398-45CA-BF7E-DC9C194B48CF';
 ```  
 
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [KILL STATS JOB &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-stats-job-transact-sql.md)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)   
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   

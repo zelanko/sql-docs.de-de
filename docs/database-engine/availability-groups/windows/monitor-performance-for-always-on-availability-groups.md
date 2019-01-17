@@ -1,6 +1,7 @@
 ---
-title: Überwachen der Leistung für Always On-Verfügbarkeitsgruppen (SQL Server) | Microsoft-Dokumentation
-ms.custom: ag-guide
+title: Überwachen der Leistung von Verfügbarkeitsgruppen
+description: In diesem Artikel werden der Synchronisierungsprozess und die Berechnung einiger der wichtigsten Metriken beschrieben. Zudem enthält der Artikel Links zu einigen allgemeinen leistungsbezogenen Problembehandlungsszenarien.
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2f9b3fb8ce55a57a7609aacd685ef56952b6811e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 52a1bde0da61988793463aa725a5b0a4003b2e12
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601150"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203350"
 ---
-# <a name="monitor-performance-for-always-on-availability-groups"></a>Überwachen der Leistung für Always On-Verfügbarkeitsgruppen
+# <a name="monitor-performance-for-always-on-availability-groups"></a>Überwachen der Leistung von Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Der Leistungsaspekt der Always On-Verfügbarkeitsgruppen ist entscheidend, um die Vereinbarung zum Servicelevel (SLA) für Ihre unternehmenskritischen Datenbanken zu erfüllen. Wenn Sie den Vorgang bei Verfügbarkeitsgruppen zum Senden von Protokollen an sekundäre Replikate verstehen, können Sie die Recovery Time Objective (RTO) und Recovery Point Objective (RPO) Ihrer Verfügbarkeitsimplementierung besser einschätzen und Engpässe bei leistungsschwachen Verfügbarkeitsgruppen oder Replikaten ausfindig machen. In diesem Artikel werden der Synchronisierungsprozess und die Berechnung einiger der wichtigsten Metriken beschrieben. Zudem enthält der Artikel Links zu einigen allgemeinen leistungsbezogenen Problembehandlungsszenarien.  
   
@@ -67,7 +68,7 @@ ms.locfileid: "51601150"
   
  Neben den Flusssteuerungsgates gibt es einen weiteren Faktor, der das Senden der Protokollnachrichten verhindern kann. Durch die Synchronisierung von Replikaten wird sichergestellt, dass die Nachrichten gesendet und in der Reihenfolge der Protokollfolgenummern (Log Sequence Numbers, LSN) angewendet werden. Bevor eine Protokollnachricht gesendet wird, wird auch dessen LSN mit der niedrigsten bestätigten LSN-Zahl abgeglichen, um sicherzustellen, dass diese unter einem der Schwellenwerte (abhängig vom Nachrichtentyp) liegt. Wenn die Diskrepanz zwischen den zwei LSN-Zahlen größer als der Schwellenwert ist, werden die Nachrichten nicht gesendet. Wenn die Diskrepanz wieder unter dem Schwellenwert liegt, werden die Nachrichten gesendet.  
   
- Die zwei nützlichen Leistungsindikatoren [SQL Server: Verfügbarkeitsreplikat > Flusssteuerung/Sekunde](~/relational-databases/performance-monitor/sql-server-availability-replica.md) und [SQL Server: Verfügbarkeitsreplikat > Flusssteuerungszeit (ms/Sekunde)](~/relational-databases/performance-monitor/sql-server-availability-replica.md) zeigen, wie oft die Flusssteuerung innerhalb der letzten Sekunde aktiviert und wie viel Zeit für das Warten auf die Flusssteuerung benötigt wurde. Längere Wartezeiten bei der Flusssteuerung bedeuten eine höhere RPO. Weitere Informationen zu den Arten von Problemen, die eine lange Wartezeit für die Flusssteuerung verursachen können, finden Sie unter [Problembehandlung: Verfügbarkeitsgruppe überschreiten RPO](troubleshoot-availability-group-exceeded-rpo.md).  
+ Die zwei nützlichen Leistungsindikatoren [SQL Server: Verfügbarkeitsreplikat > Flusssteuerung/Sekunde](~/relational-databases/performance-monitor/sql-server-availability-replica.md) und [SQL Server: Verfügbarkeitsreplikat > Flusssteuerungszeit (ms/Sekunde)](~/relational-databases/performance-monitor/sql-server-availability-replica.md) zeigen, wie oft die Flusssteuerung innerhalb der letzten Sekunde aktiviert und wie viel Zeit für das Warten auf die Flusssteuerung benötigt wurde. Längere Wartezeiten bei der Flusssteuerung bedeuten eine höhere RPO. Weitere Informationen zu den Arten von Problemen, die eine lange Wartezeit für die Flusssteuerung verursachen können, finden Sie unter [Problembehandlung: Verfügbarkeitsgruppe hat RPO überschritten](troubleshoot-availability-group-exceeded-rpo.md).  
   
 ##  <a name="estimating-failover-time-rto"></a>Einschätzen der Failoverzeit (RTO)  
  Die RTO in Ihrer SLA hängt von der Failoverzeit Ihrer Always On-Implementierung an einem bestimmten Zeitpunkt ab, die mit der folgenden Formel ausgedrückt werden kann:  
@@ -136,7 +137,7 @@ Für die primäre Datenbank ist **last_commit_time** die Zeit, zu der für die l
 
 - **redo_queue_size** (KB) [*für RTO verwendet*]: Die Größe der Wiederholungswarteschlange ist die Größe der Transaktionsprotokolle zwischen **last_received_lsn** und **last_redone_lsn**. **last_received_lsn** ist die Protokollblock-ID, die den Punkt angibt, bis zu dem alle Protokollblöcke vom sekundären Replikat empfangen wurden, das diese sekundäre Datenbank hostet. **last_redone_lsn** ist die tatsächliche Protokollfolgenummer des letzten Protokolldatensatzes, der zuletzt für die sekundäre Datenbank wiederholt wurde. Basierend auf diesen beiden Werten können wir die IDs des Anfangsprotokollblocks (**last_received_lsn**) und des Endprotokollblocks (**last_redone_lsn**) bestimmen. Der Abstand zwischen diesen beiden Protokollblöcken kann dann abbilden, wie viele Transaktionsprotokollblöcke noch nicht wiederholt wurden. Die Messung erfolgt in Kilobyte (KB).
 -  **redo_rate** (KB/Sek.) [*für RTO verwendet*]: Ein kumulierter Wert, der für einen abgelaufenen Zeitraum angibt, wie viel des Transaktionsprotokolls (KB) in der sekundären Datenbank in Kilobytes(KB)/Sekunde wiederholt wurde. 
-- **last_commit_time** (Datetime) [*für RPO verwendet*]: Für die primäre Datenbank ist **last_commit_time** die Zeit, zu der für die letzte Transaktion ein Commit ausgeführt wurde. Für die sekundäre Datenbank ist **last_commit_time** die letzte Commitzeit für die Transaktion in der primären Datenbank, die auch in der sekundären Datenbank erfolgreich festgeschrieben wurde. Da dieser Wert in der sekundären Datenbank mit dem gleichen Wert für die primäre synchronisiert werden sollte, ist jede Lücke zwischen diesen beiden Werten die Schätzung des Datenverlusts (RPO).  
+- **last_commit_time** (Datetime) [*für RPO verwendet*]: Für die primäre Datenbank ist **last_commit_time** der Zeitpunkt, zu der für die letzte Transaktion ein Commit erfolgt ist. Für die sekundäre Datenbank ist **last_commit_time** die letzte Commitzeit für die Transaktion in der primären Datenbank, die auch in der sekundären Datenbank erfolgreich festgeschrieben wurde. Da dieser Wert in der sekundären Datenbank mit dem gleichen Wert für die primäre synchronisiert werden sollte, ist jede Lücke zwischen diesen beiden Werten die Schätzung des Datenverlusts (RPO).  
  
 ## <a name="estimate-rto-and-rpo-using-dmvs"></a>Schätzen von RTO und RPO mithilfe dynamischer Verwaltungssichten (DMVs)
 
@@ -328,7 +329,7 @@ Es ist möglich, die DMVs [sys.dm_hadr_database_replica_states](../../../relatio
 
   
 ##  <a name="monitoring-for-rto-and-rpo"></a>Überwachen von RTO und RPO  
- In diesem Abschnitt wird das Überwachen von Verfügbarkeitsgruppen für die Metriken RTO und RPO veranschaulicht. Diese Demo ähnelt dem GUI-Tutorial unter [The Always On health model, part 2: Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (Das Always On-Zustandsmodells, Teil 2: Erweitern des Zustandsmodells).  
+ In diesem Abschnitt wird das Überwachen von Verfügbarkeitsgruppen für die Metriken RTO und RPO veranschaulicht. Diese Demonstration ähnelt dem GUI-Tutorial unter [The Always On health model, part 2: Extending the health model (Always On-Integritätsmodell, Teil 2: Erweitern des Integritätsmodells)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx).  
   
  Elemente der Failoverzeit und Berechnungen des möglichen Datenverlusts unter [Einschätzen der Failoverzeit (RTO)](#BKMK_RTO) und [Einschätzen des möglichen Datenverlusts (RPO)](#BKMK_RPO) werden praktischerweise als Leistungsmetriken in der Richtlinienverwaltungsfacets **Datenbankreplikatszustand** bereitgestellt (siehe [Anzeigen der Facets der richtlinienbasierten Verwaltung für ein SQL Server-Objekt](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)). Sie können diese beiden Metriken nach einem Zeitplan überwachen und werden benachrichtigt, wenn die Metriken Ihre RTO bzw. RPO überschreiten.  
   
@@ -358,7 +359,7 @@ Um die Richtlinien zu erstellen, befolgen Sie die nachfolgenden Anweisungen für
   
     -   **Name**: `RTO`  
   
-    -   **Facet**: **Zustand des Datenbankreplikats**  
+    -   **Facet:** **Database Replica State** (Zustand des Datenbankreplikats)  
   
     -   **Feld**: `Add(@EstimatedRecoveryTime, 60)`  
   
@@ -372,7 +373,7 @@ Um die Richtlinien zu erstellen, befolgen Sie die nachfolgenden Anweisungen für
   
     -   **Name**: `RPO`  
   
-    -   **Facet**: **Zustand des Datenbankreplikats**  
+    -   **Facet:** **Database Replica State** (Zustand des Datenbankreplikats)  
   
     -   **Feld**: `@EstimatedDataLoss`  
   
@@ -386,7 +387,7 @@ Um die Richtlinien zu erstellen, befolgen Sie die nachfolgenden Anweisungen für
   
     -   **Name**: `IsPrimaryReplica`  
   
-    -   **Facet**: **Verfügbarkeitsgruppe**  
+    -   **Facet:** **Verfügbarkeitsgruppe**  
   
     -   **Feld**: `@LocalReplicaRole`  
   
@@ -404,25 +405,25 @@ Um die Richtlinien zu erstellen, befolgen Sie die nachfolgenden Anweisungen für
   
         -   **Bedingung überprüfen**: `RTO`  
   
-        -   **Für Ziele**: **Alle DatabaseReplicaState** in **IsPrimaryReplica AvailabilityGroup**  
+        -   **Für Ziele:** **Alle DatabaseReplicaState** in **IsPrimaryReplica AvailabilityGroup**  
   
              Durch diese Einstellung wird sichergestellt, dass die Richtlinie nur für Verfügbarkeitsgruppen ausgewertet wird, bei denen das lokale Verfügbarkeitsreplikat das primäre Replikat darstellt.  
   
-        -   **Auswertungsmodus**: **Nach Zeitplan**  
+        -   **Auswertungsmodus:** **Nach Zeitplan**  
   
-        -   **Zeitplan**: **CollectorSchedule_Every_5min**  
+        -   **Zeitplan:** **CollectorSchedule_Every_5min**  
   
         -   **Aktiviert**: **Ausgewählt**  
   
     -   Seite **Beschreibung**:  
   
-        -   **Kategorie**: **Warnungen zu Verfügbarkeitsdatenbanken**  
+        -   **Kategorie:** **Availability database warnings** (Warnungen zu Verfügbarkeitsdatenbanken)  
   
              Mit dieser Einstellung können die Ergebnisse der Richtlinienauswertung auf dem Always On-Dashboard angezeigt werden.  
   
-        -   **Beschreibung**: **Das aktuelle Replikat ist eine RTO, die 10 Minuten überschreitet. Hierbei wird von einem Mehraufwand von 1 Minute für die Erkennung und das Failover ausgegangen. Sie sollten Leistungsprobleme in der jeweiligen Serverinstanz sofort untersuchen.**  
+        -   **Beschreibung:** **Das aktuelle Replikat ist eine RTO, die 10 Minuten überschreitet. Hierbei wird von einem Mehraufwand von 1 Minute für die Erkennung und das Failover ausgegangen. Sie sollten Leistungsprobleme in der jeweiligen Serverinstanz sofort untersuchen.**  
   
-        -   **Anzuzeigender Text**: **RTO überschritten**  
+        -   **Anzuzeigender Text:** **RTO wurde überschritten.**  
   
 8.  Erstellen Sie eine zweite [richtlinienbasierte Verwaltungsrichtlinie](~/relational-databases/policy-based-management/create-a-policy-based-management-policy.md) mit den folgenden Spezifikationen:  
   
@@ -432,21 +433,21 @@ Um die Richtlinien zu erstellen, befolgen Sie die nachfolgenden Anweisungen für
   
         -   **Bedingung überprüfen**: `RPO`  
   
-        -   **Für Ziele**: **Alle DatabaseReplicaState** in **IsPrimaryReplica AvailabilityGroup**  
+        -   **Für Ziele:** **Alle DatabaseReplicaState** in **IsPrimaryReplica AvailabilityGroup**  
   
-        -   **Auswertungsmodus**: **Nach Zeitplan**  
+        -   **Auswertungsmodus:** **Nach Zeitplan**  
   
-        -   **Zeitplan**: **CollectorSchedule_Every_30min**  
+        -   **Zeitplan:** **CollectorSchedule_Every_30min**  
   
         -   **Aktiviert**: **Ausgewählt**  
   
     -   Seite **Beschreibung**:  
   
-        -   **Kategorie**: **Warnungen zu Verfügbarkeitsdatenbanken**  
+        -   **Kategorie:** **Availability database warnings** (Warnungen zu Verfügbarkeitsdatenbanken)  
   
-        -   **Beschreibung**: **Die Verfügbarkeitsdatenbank hat Ihre RPO von 1 Stunde überschritten. Sie sollten Leistungsprobleme in den Verfügbarkeitsreplikaten sofort untersuchen.**  
+        -   **Beschreibung:** **Die Verfügbarkeitsdatenbank hat Ihre RPO von einer Stunde überschritten. Sie sollten Leistungsprobleme in den Verfügbarkeitsreplikaten sofort untersuchen.**  
   
-        -   **Anzuzeigender Text**: **RPO überschritten**  
+        -   **Anzuzeigender Text:** **RPO wurde überschritten.**  
   
  Wenn Sie fertig sind, werden zwei neue SQL Server-Agent-Aufträge erstellt, jeweils einer für den Richtlinienauswertungszeitplan. Diese Aufträge sollten mit Namen versehen werden, die mit **syspolicy_check_schedule** beginnen.  
   

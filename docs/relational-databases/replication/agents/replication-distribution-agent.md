@@ -16,12 +16,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e4a4805ee3cb706a20659919e28c09c84787934
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a71962ea2e0a6d40534a9884fbb026e3d90aaf1c
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518362"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590484"
 ---
 # <a name="replication-distribution-agent"></a>Replikationsverteilungs-Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,43 +92,43 @@ distrib [-?]
  **-?**  
  Druckt alle verfügbaren Parameter.  
   
- **-Publisher** *Servername*[**\\***Instanzname***]  
- Der Name des Verlegers. Geben Sie *server_name* für die Standardinstanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie *server_name***\\***instance_name* für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an.  
+ **-Publisher** _server_name_[**\\**_instance_name_]  
+ Der Name des Verlegers. Geben Sie *server_name* für die Standardinstanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie _server_name_**\\**_instance_name_ für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an.  
   
- **-PublisherDB** *publisher_database*  
+ **-PublisherDB** _publisher_database_  
  Der Name der Verlegerdatenbank.  
   
- **-Subscriber** *Servername*[**\\***Instanzname*]  
- Der Name des Abonnenten. Geben Sie *server_name* für die Standardinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie *server_name***\\***instance_name* für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an.  
+ **-Subscriber** _server_name_[**\\**_instance_name_]  
+ Der Name des Abonnenten. Geben Sie *server_name* für die Standardinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie _server_name_**\\**_instance_name_ für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an.  
   
- **-SubscriberDB** *subscriber_database*  
+ **-SubscriberDB** _subscriber_database_  
  Der Name der Abonnentendatenbank.  
   
- **-AltSnapshotFolder** *alt_snapshot_folder_path*  
+ **-AltSnapshotFolder** _alt_snapshot_folder_path_  
  Der Pfad zu dem Ordner, der die Anfangsmomentaufnahme für ein Abonnement enthält.  
   
- **-BcpBatchSize** *bcp_batch_size*  
+ **-BcpBatchSize** _bcp_batch_size_  
  Die Anzahl von Zeilen, die in einem Massenkopiervorgang gesendet werden sollen. Bei Ausführung eines **bcp in** -Vorgangs entspricht die Batchgröße der Anzahl von Zeilen, die als eine Transaktion an den Server gesendet werden sollen, und ebenso der Anzahl von Zeilen, die gesendet werden müssen, bevor der Verteilungs-Agent eine **bcp** -Statusmeldung protokolliert. Bei Ausführung eines **bcp out** -Vorgangs wird eine feste Batchgröße von **1000** verwendet.  
   
- **-CommitBatchSize** *commit_batch_size*  
+ **-CommitBatchSize** _commit_batch_size_  
  Die Anzahl von Transaktionen, die an den Abonnenten ausgegeben werden sollen, bevor eine COMMIT-Anweisung ausgegeben wird. Der Standardwert ist 100.  
   
- **-CommitBatchThreshold**  *commit_batch_threshold*  
+ **-CommitBatchThreshold**  _commit_batch_threshold_  
  Die Anzahl von Replikationsbefehlen, die an den Abonnenten ausgegeben werden sollen, bevor eine COMMIT-Anweisung ausgegeben wird. Der Standardwert lautet 1000.  
   
  **-Continuous**  
  Gibt an, ob der Agent fortlaufend versucht, replizierte Transaktionen abzurufen. Wenn dieses Argument angegeben ist, ruft der Agent replizierte Transaktionen in festgelegten Abrufintervallen aus der Quelle ab, selbst wenn keine ausstehenden Transaktionen vorhanden sind.  
   
- **-DefinitionFile** *def_path_and_file_name*  
+ **-DefinitionFile** _def_path_and_file_name_  
  Der Pfad der Agentdefinitionsdatei. Eine Agentdefinitionsdatei enthält Eingabeaufforderungsargumente für den Agent. Der Inhalt der Datei wird als ausführbare Datei analysiert. Verwenden Sie doppelte Anführungszeichen ("), um Argumentwerte anzugeben, die beliebige Zeichen enthalten.  
   
- **-Distributor** *distributor*  
+ **-Distributor** _distributor_  
  Der Name des Verteilers. Bei der Verteilung durch den Verteiler (Push) wird der Name standardmäßig auf dem Namen des lokalen Verteilers festgelegt.  
   
- **-DistributorLogin** *distributor_login*  
+ **-DistributorLogin** _distributor_login_  
  Der Anmeldename des Verteilers.  
   
- **-DistributorPassword** *distributor_password*  
+ **-DistributorPassword** _distributor_password_  
  Das Verteilerkennwort.  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
@@ -148,25 +148,25 @@ distrib [-?]
 
  Weitere Informationen finden Sie unter [Sicherheitsübersicht &#40;Replikation&#41;](../../../relational-databases/replication/security/security-overview-replication.md).  
   
- **-ErrorFile** *error_path_and_file_name*  
+ **-ErrorFile** _error_path_and_file_name_  
  Der Pfad und Dateiname der Fehlerdatei, die der Verteilungs-Agent generiert. Diese Datei wird an dem jeweiligen Punkt erstellt, an dem während der Anwendung der Replikationstransaktionen auf dem Abonnenten ein Fehler aufgetreten ist. Fehler, die auf dem Verleger oder Verteiler auftreten, werden nicht in dieser Datei protokolliert. Diese Datei enthält die Replikationstransaktionen, bei denen Fehler aufgetreten sind, sowie die zugeordneten Fehlermeldungen. Wenn dieser Parameter nicht angegeben ist, wird die Fehlerdatei im aktuellen Verzeichnis des Verteilungs-Agents generiert. Der Name der Fehlerdatei entspricht dem Namen des Verteilungs-Agents mit der Erweiterung ERR. Wenn eine Datei mit dem angegebenen Namen vorhanden ist, werden Fehlermeldungen an diese Datei angefügt. Dieser Parameter kann maximal 256 Unicode-Zeichen umfassen.  
   
- **-ExtendedEventConfigFile** *configuration_path_and_file_name*  
+ **-ExtendedEventConfigFile** _configuration_path_and_file_name_  
  Gibt den Pfad und den Dateinamen für die erweiterte Ereignis-XML-Konfigurationsdatei an. Die erweiterten Ereignis-Konfigurationsdatei ermöglicht das Konfigurieren von Sitzungen und das Aktivieren der Nachverfolgung für Ereignisse.  
   
  **-FileTransferType** [ **0**| **1**]  
  Gibt den Dateiübertragungstyp an. Der Wert **0** steht für UNC (Universal Naming Convention), der Wert **1** für FTP (File Transfer Protocol).  
   
- **-FtpAddress** *ftp_address*  
+ **-FtpAddress** _ftp_address_  
  Die Netzwerkadresse des FTP-Diensts für den Verteiler. Wenn die Netzwerkadresse nicht angegeben wird, wird **DistributorAddress** verwendet. Wenn **DistributorAddress** nicht angegeben wird, wird **Distributor** verwendet.  
   
- **-FtpPassword** *ftp_password*  
+ **-FtpPassword** _ftp_password_  
  Das Benutzerkennwort, mit dem eine Verbindung zum FTP-Dienst hergestellt wird.  
   
- **-FtpPort** *ftp_port*  
+ **-FtpPort** _ftp_port_  
  Die Anschlussnummer des FTP-Diensts für den Verteiler. Wenn keine Portnummer angegeben wird, wird die Standardportnummer für den FTP-Dienst (21) verwendet.  
   
- **-FtpUserName** *FTP-Benutzername*  
+ **-FtpUserName** _FTP-Benutzername_  
  Der Benutzername, mit dem eine Verbindung zum FTP-Dienst hergestellt wird. Wenn kein Benutzername angegeben wird, wird **anonymous** verwendet.  
   
  **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
@@ -179,25 +179,25 @@ distrib [-?]
 |**2**|Fügen Sie neue Verlaufsdatensätze ein, es sei denn, der Datensatz bezieht sich z. B. auf Leerlaufmeldungen oder Meldungen zu Aufträgen mit langer Ausführungszeit. In diesen Fällen aktualisieren Sie die vorherigen Datensätze.|  
 |**3**|Fügen Sie immer neue Datensätze ein, es sei denn, ein Datensatz bezieht sich auf Leerlaufmeldungen.|  
   
- **-Hostname** *host_name*  
+ **-Hostname** _host_name_  
  Der Hostname, der beim Herstellen der Verbindung mit dem Verleger verwendet wird. Dieser Parameter kann maximal 128 Unicode-Zeichen umfassen.  
   
- **-KeepAliveMessageInterval** *keep_alive_message_interval_seconds*  
+ **-KeepAliveMessageInterval** _keep_alive_message_interval_seconds_  
  Die Anzahl von Sekunden, bevor vom Verlaufsthread geprüft wird, ob bestehende Verbindungen auf eine Antwort vom Server warten. Dieser Wert kann verringert werden, damit der Verteilungs-Agent vom Überprüfungs-Agent nicht als fehlerverdächtig markiert wird, wenn ein lang andauernder Batch ausgeführt wird. Die Standardeinstellung ist **300** Sekunden.  
   
- **-LoginTimeOut** *login_time_out_seconds*  
+ **-LoginTimeOut** _login_time_out_seconds_  
  Die Anzahl von Sekunden, nach denen ein Timeout bei der Anmeldung eintritt. Der Standardwert ist **15** Sekunden.  
   
- **-MaxBcpThreads** *number_of_threads*  
+ **-MaxBcpThreads** _number_of_threads_  
  Gibt die Anzahl von Massenkopiervorgängen an, die parallel ausgeführt werden können. Die maximale Anzahl von Threads und gleichzeitig vorhandenen ODBC-Verbindungen entspricht entweder **MaxBcpThreads** oder der Anzahl von Massenkopieranforderungen, die in der Verteilungsdatenbank in der Synchronisierungstransaktion enthalten sind. Dabei gilt der jeweils kleinere Wert. Der Wert von**MaxBcpThreads** muss größer als **0** sein. Es ist keine hartcodierte Obergrenze vorhanden. Der Standardwert entspricht **2** multipliziert mit der Anzahl von Prozessoren. Der Maximalwert beträgt **8**. Wenn Sie eine Momentaufnahme anwenden, der auf dem Verleger mit der Option für gleichzeitige Momentaufnahmen generiert wurde, wird unabhängig von der für **MaxBcpThreads**angegebenen Anzahl nur ein Thread verwendet.  
   
- **-MaxDeliveredTransactions** *number_of_transactions*  
+ **-MaxDeliveredTransactions** _number_of_transactions_  
  Die maximale Anzahl von Push- oder Pulltransaktionen, die in einer Synchronisierung auf Abonnenten angewendet werden. Der Wert **0** gibt an, dass das Maximum einer unendlichen Anzahl von Transaktionen entspricht. Andere Werte können von Abonnenten verwendet werden, um die Dauer einer Synchronisierung zu verkürzen, die von einem Verleger abgerufen wird.  
   
 > [!NOTE]  
 >  Wenn sowohl -MaxDeliveredTransactions als auch -Continuous angegeben wird, übermittelt der Verteilungs-Agent die angegebene Anzahl der Transaktionen und wird dann (obwohl -Continuous angegeben wurde) beendet. Nachdem der Auftrag abgeschlossen wurde, müssen Sie den Verteilungs-Agent neu starten.  
   
- **-MessageInterval**  *message_interval*  
+ **-MessageInterval**  _message_interval_  
  Das für die Verlaufsprotokollierung verwendete Zeitintervall. Ein Verlaufsereignis wird protokolliert, wenn einer der folgenden Parameter erreicht wird:  
   
 -   Der Wert von **TransactionsPerHistory** wird erreicht, nachdem das letzte Verlaufsereignis protokolliert wurde.  
@@ -206,43 +206,43 @@ distrib [-?]
   
  Wenn an der Quelle keine replizierte Transaktion vorhanden ist, sendet der Agent eine entsprechende Meldung an den Verteiler. Mit dieser Option wird angegeben, wie lange der Agent wartet, bevor eine weitere Meldung gesendet wird, dass keine Transaktion vorhanden ist. Agents melden immer, dass keine Transaktion vorhanden ist, wenn sie feststellen, dass an der Quelle keine Transaktionen verfügbar sind, nachdem zuvor replizierte Transaktionen verarbeitet wurden. Der Standardwert ist 60 Sekunden.  
   
- **-OledbStreamThreshold** *oledb_stream_threshold*  
+ **-OledbStreamThreshold** _oledb_stream_threshold_  
  Gibt die Mindestgröße in Bytes für BLOB-Daten (Binary Large Object) an, ab der die Daten als Datenstrom gebunden werden. Zur Verwendung dieses Parameters müssen Sie **-UseOledbStreaming** angeben. Die Werte können zwischen 400 und1048576 Bytes liegen. Der Standardwert beträgt 16384 Bytes.  
   
- **-Output** *output_path_and_file_name*  
+ **-Output** _output_path_and_file_name_  
  Der Pfad der Agentausgabedatei. Wenn kein Dateiname angegeben ist, wird die Ausgabe an die Konsole gesendet. Wenn eine Datei mit dem angegebenen Namen vorhanden ist, wird die Ausgabe an diese Datei angefügt.  
   
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
  Gibt an, ob die Ausgabe ausführlich sein soll. Wenn die Meldungsstufe **0**beträgt, werden nur Fehlermeldungen gedruckt. Wenn die Meldungsstufe **1**beträgt, werden alle Statusberichtsmeldungen gedruckt. Wenn die Meldungsstufe **2** (Standard) beträgt, werden alle Fehlermeldungen und Statusberichtsmeldungen gedruckt, was beim Debuggen nützlich ist.  
   
- **-PacketSize** *packet_size*  
+ **-PacketSize** _packet_size_  
  Die Paketgröße in Bytes. Der Standardwert ist 4096 (Bytes).  
   
- **-PollingInterval** *polling_interval*  
+ **-PollingInterval** _polling_interval__  
  Gibt an, wie häufig replizierte Transaktionen aus der Verteilungsdatenbank abgefragt werden (in Sekunden). Die Standardeinstellung ist 5 Sekunden.  
   
- **-ProfileName** *profile_name*  
+ **-ProfileName** _profile_name_  
  Gibt ein Agentprofil an, das für Agentparameter verwendet werden soll. Wenn **ProfileName** den Wert NULL aufweist, wird das Agentprofil deaktiviert. Wenn **ProfileName** nicht angegeben ist, wird das Standardprofil für den Agenttyp verwendet. Weitere Informationen finden Sie unter [Replikations-Agent-Profile](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
- **-Publication** *Veröffentlichung*  
+ **-Publication** _Veröffentlichung_  
  Der Name der Veröffentlichung. Dieser Parameter ist nur gültig, wenn die Veröffentlichung so festgelegt ist, dass sie immer eine Momentaufnahme für neue oder neu initialisierte Abonnements zur Verfügung hat.  
   
- **-QueryTimeOut** *query_time_out_seconds*  
+ **-QueryTimeOut** _query_time_out_seconds_  
  Die Anzahl von Sekunden, nach denen ein Timeout bei der Abfrage eintritt. Die Standardeinstellung ist 1800 Sekunden.  
   
- **-QuotedIdentifier** *quoted_identifier*  
+ **-QuotedIdentifier** _quoted_identifier_  
  Gibt den zu verwendenden Bezeichner in Anführungszeichenzeichen an. Das erste Zeichen des Werts gibt den Wert an, den der Verteilungs-Agent verwendet. Wenn **QuotedIdentifier** ohne Wert verwendet wird, verwendet der Verteilungs-Agent ein Leerzeichen. Wenn **QuotedIdentifier** nicht verwendet wird, verwendet der Verteilungs-Agent einen vom Abonnenten unterstützten Bezeichner in Anführungszeichen.  
   
- **-SkipErrors** *Native_Fehler-ID* [**:***...n*]  
+ **-SkipErrors** _native_error_id_ [**:**_...n_]  
  Eine durch Doppelpunkte getrennte Liste, die die Fehlernummern angibt, die von diesem Agent übersprungen werden sollen.  
   
- **-SubscriberDatabasePath** *subscriber_database_path*  
+ **-SubscriberDatabasePath** _subscriber_database_path_  
  Der Pfad der Jet-Datenbank (MDB-Datei), wenn **SubscriberType** auf **2** festgelegt ist. (Dadurch wird eine Verbindung mit einer Jet-Datenbank ohne ODBC-DSN (Data Source Name) möglich.)  
   
- **-SubscriberLogin** *subscriber_login*  
+ **-SubscriberLogin** _subscriber_login_  
  Der Anmeldename des Abonnenten. Wenn **SubscriberSecurityMode** auf **0** festgelegt ist (für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung), muss dieser Parameter angegeben werden.  
   
- **-SubscriberPassword** *subscriber_password*  
+ **-SubscriberPassword** _subscriber_password_  
  Das Kennwort des Abonnenten. Wenn **SubscriberSecurityMode** auf **0** festgelegt ist (für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung), muss dieser Parameter angegeben werden.  
   
  **-SubscriberSecurityMode** [ **0**| **1**]  
@@ -258,7 +258,7 @@ distrib [-?]
 |**3**|OLE DB-Datenquelle|  
   
  **-SubscriptionStreams** [**0**|**1**|**2**|...**64**]  
- Die Anzahl zulässiger Verbindungen pro Verteilungs-Agent, um Änderungsbatches parallel auf einen Abonnenten anzuwenden, während viele Transaktionsmerkmale beibehalten werden, die bei Verwendung eines einzigen Threads vorhanden sind. Für einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verleger wird ein Wertebereich von 1 bis 64 unterstützt. Dieser Parameter wird nur unterstützt, wenn auf dem Verleger und dem Verteiler [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder höhere Versionen ausgeführt werden. Dieser Parameter wird für Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten oder Peer-zu-Peer-Abonnements nicht unterstützt, oder er muss auf 0 festgelegt werden.  
+ Die Anzahl zulässiger Verbindungen pro Verteilungs-Agent, um Änderungsbatches parallel auf einen Abonnenten anzuwenden, während viele Transaktionsmerkmale beibehalten werden, die bei Verwendung eines einzigen Threads vorhanden sind. Für einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verleger wird ein Wertebereich von 1 bis 64 unterstützt. Dieser Parameter wird nur unterstützt, wenn auf dem Verleger und dem Verteiler [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder höhere Versionen ausgeführt werden. Dieser Parameter wird für Nicht-Abonnenten von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder Peer-zu-Peer-Abonnements nicht unterstützt, oder er muss auf 0 festgelegt werden.  
   
 > [!NOTE]  
 >  Wenn eine der Verbindungen oder ein Commit hierfür nicht ausgeführt werden kann, wird der aktuelle Batch von allen Verbindungen verworfen, und der Agent versucht mithilfe eines einzigen Datenstroms, die fehlgeschlagenen Batches zu wiederholen. Vor dem Abschluss dieser Wiederholungsphase kann es auf dem Abonnenten vorübergehend zur Transaktionsinkonsistenzen kommen. Nach dem erfolgreichen Ausführen (Commit) der fehlgeschlagenen Batches wird der Abonnent wieder in einen Zustand der Transaktionskonsistenz versetzt.  
@@ -269,7 +269,7 @@ distrib [-?]
 > [!NOTE]  
 >  subscriptionstreams [!INCLUDE[tsql](../../../includes/tsql-md.md)]kann nicht für Artikel verwendet werden, die für die Übermittlung von  konfiguriert sind. Um subscriptionstreams zu verwenden, konfigurieren Sie Artikel stattdessen für die Übermittlung von Aufrufen gespeicherter Prozeduren.  
   
- **-SubscriptionTableName** *subscription_table*  
+ **-SubscriptionTableName** _subscription_table_  
  Der Name der Abonnementtabelle, die auf dem angegebenen Abonnenten generiert oder verwendet wird. Wenn nicht anders angegeben, wird die [MSreplication_subscriptions &#40;Transact-SQL&#41;](../../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)-Tabelle verwendet. Verwenden Sie diese Option für Datenbank-Managementsysteme (DBMS), die keine langen Dateinamen unterstützen.  
   
  **-SubscriptionType** [ **0**| **1**| **2**]  
@@ -282,7 +282,7 @@ distrib [-?]
  Muss als Parameter für eine Veröffentlichung angegeben werden, die eine Datentransformation ermöglicht.  
   
  **-UseInprocLoader**  
- Verbessert die Leistung der Anfangsmomentaufnahme, indem der Verteilungs-Agent veranlasst wird, beim Anwenden von Momentaufnahmedateien auf dem Abonnenten den BULK INSERT-Befehl zu verwenden. Dieser Parameter ist veraltet, da er mit dem XML-Datentyp nicht kompatibel ist. Wenn Sie keine XML-Daten replizieren, können Sie diesen Parameter verwenden. Dieser Parameter kann mit Momentaufnahmen im Zeichenmodus oder mit Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten nicht verwendet werden. Wenn Sie den Parameter verwenden, muss das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkonto auf dem Abonnenten über Leseberechtigungen für das Verzeichnis verfügen, in dem sich die BCP-Datendateien der Momentaufnahmen befinden. Wenn der Parameter nicht verwendet wird, liest der Agent (bei Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten) oder der vom Agent geladene ODBC-Treiber (bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten) aus den Dateien, sodass der Sicherheitskontext des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkontos nicht verwendet wird.  
+ Verbessert die Leistung der Anfangsmomentaufnahme, indem der Verteilungs-Agent veranlasst wird, beim Anwenden von Momentaufnahmedateien auf dem Abonnenten den BULK INSERT-Befehl zu verwenden. Dieser Parameter ist veraltet, da er mit dem XML-Datentyp nicht kompatibel ist. Wenn Sie keine XML-Daten replizieren, können Sie diesen Parameter verwenden. Dieser Parameter kann mit Momentaufnahmen im Zeichenmodus oder mit Nicht-Abonnenten von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nicht verwendet werden. Wenn Sie den Parameter verwenden, muss das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkonto auf dem Abonnenten über Leseberechtigungen für das Verzeichnis verfügen, in dem sich die BCP-Datendateien der Momentaufnahmen befinden. Wenn der Parameter nicht verwendet wird, liest der Agent (bei Nicht-Abonnenten von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) oder der vom Agent geladene ODBC-Treiber (bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Abonnenten) aus den Dateien, sodass der Sicherheitskontext des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Dienstkontos nicht verwendet wird.  
   
  **-UseOledbStreaming**  
  Wenn dieser Parameter angegeben wird, wird die Bindung der BLOB-Daten (Binary Large Object) als Datenstrom aktiviert. Verwenden Sie **-OledbStreamThreshold** , um die Größe in Bytes anzugeben, ab der ein Datenstrom verwendet wird. **UseOledbStreaming** ist standardmäßig aktiviert. **UseOledbStreaming** schreibt in den Ordner **C:\Programme\Microsoft SQL Server\\<Version\>\COM**.  
@@ -300,7 +300,7 @@ distrib [-?]
 |---------------------|  
 |Der **-ExtendedEventConfigFile** -Parameter wurde hinzugefügt.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Replikations-Agent-Verwaltung](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   

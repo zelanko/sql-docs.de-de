@@ -15,19 +15,19 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d4a037898aaa022b7db5d6bf55f4a6dfb08988c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b5ef89fc257782f7977efbee371a40e188893bc7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734608"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53216059"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Ermitteln effektiver Datenbank-Engine-Berechtigungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 In diesem Artikel wird beschrieben, wie Sie feststellen können, wer über Berechtigungen für verschiedene Objekte in der SQL Server-Datenbank-Engine verfügt. SQL Server implementiert zwei Berechtigungssysteme für die Datenbank-Engine. Ein älteres System fester Datenbankrollen hat vorkonfigurierte Berechtigungen. Ab SQL Server 2005 ist ein flexibleres und präziseres System verfügbar. (Die Informationen in diesem Artikel gelten für SQL Server ab Version 2005. Einige Arten von Berechtigungen sind in einigen Versionen von SQL Server nicht verfügbar.)
 
->  [!IMPORTANT] 
+> [!IMPORTANT]
 >  * Die effektiven Berechtigungen sind das Aggregat von beiden Berechtigungssystemen. 
 >  * Eine DOS-Berechtigung überschreibt eine Gewährung von Berechtigungen. 
 >  * Wenn ein Benutzer ein Mitglied der festen Serverrolle „sysadmin“ ist, werden Berechtigungen nicht darüber hinaus überprüft, damit Verweigerungen nicht erzwungen werden. 
@@ -51,24 +51,24 @@ In diesem Artikel wird beschrieben, wie Sie feststellen können, wer über Berec
 ## <a name="older-fixed-role-permission-system"></a>Ältere feste Rollenberechtigungssysteme
 
 Feste Serverrollen und feste Datenbankrollen verfügen über vorkonfigurierte Berechtigungen, die nicht geändert werden können. Führen Sie die folgende Abfrage aus, um zu bestimmen, wer Mitglied der festen Serverrolle ist:    
->  [!NOTE] 
+> [!NOTE]
 >  Dies gilt nicht für SQL-Datenbank oder SQL Data Warehouse, bei denen die Berechtigung auf Serverebene nicht verfügbar ist. Die `is_fixed_role`-Spalte von `sys.server_principals` wurde zu SQL Server 2012 hinzugefügt. Sie ist für ältere Versionen von SQL Server nicht erforderlich.  
-```sql
-SELECT SP1.name AS ServerRoleName, 
- isnull (SP2.name, 'No members') AS LoginName   
- FROM sys.server_role_members AS SRM
- RIGHT OUTER JOIN sys.server_principals AS SP1
-   ON SRM.role_principal_id = SP1.principal_id
- LEFT OUTER JOIN sys.server_principals AS SP2
-   ON SRM.member_principal_id = SP2.principal_id
- WHERE SP1.is_fixed_role = 1 -- Remove for SQL Server 2008
- ORDER BY SP1.name;
+> ```sql
+> SELECT SP1.name AS ServerRoleName, 
+>  isnull (SP2.name, 'No members') AS LoginName   
+>  FROM sys.server_role_members AS SRM
+>  RIGHT OUTER JOIN sys.server_principals AS SP1
+>    ON SRM.role_principal_id = SP1.principal_id
+>  LEFT OUTER JOIN sys.server_principals AS SP2
+>    ON SRM.member_principal_id = SP2.principal_id
+>  WHERE SP1.is_fixed_role = 1 -- Remove for SQL Server 2008
+>  ORDER BY SP1.name;
 ```
->  [!NOTE] 
->  * Alle Anmeldenamen sind Mitglieder der öffentlichen Rollen und können nicht entfernt werden. 
->  * Diese Abfrage überprüft die Tabellen in der Master-Datenbank, sie kann jedoch in jeder Datenbank für das lokale Produkt ausgeführt werden. 
+> [!NOTE]
+>  * All logins are members of the public role and cannot be removed. 
+>  * This query checks tables in the master database but it can be executed in any database for the on premises product. 
 
-Um zu bestimmen, wer die Mitglieder einer festen Datenbankrolle sind, führen Sie die folgende Abfrage in jeder Datenbank aus.
+To determine who is a member of a fixed database role, execute the following query in each database.
 ```sql
 SELECT DP1.name AS DatabaseRoleName, 
    isnull (DP2.name, 'No members') AS DatabaseUserName 
@@ -106,22 +106,22 @@ Denken Sie daran, dass ein Windows-Benutzer Mitglied von mehr als einer Windows-
 ### <a name="server-permissions"></a>Serverberechtigungen
 
 Die folgende Abfrage gibt eine Liste der Berechtigungen zurück, die auf Serverebene erteilt oder verweigert wurden. Diese Abfrage sollte in der Master-Datenbank ausgeführt werden.   
->  [!NOTE] 
+> [!NOTE]
 >  Berechtigungen auf Serverebene können nicht auf SQL-Datenbank oder SQL Data Warehouse abgefragt oder erteilt werden.   
-```sql
-SELECT pr.type_desc, pr.name, 
- isnull (pe.state_desc, 'No permission statements') AS state_desc, 
- isnull (pe.permission_name, 'No permission statements') AS permission_name 
- FROM sys.server_principals AS pr
- LEFT OUTER JOIN sys.server_permissions AS pe
-   ON pr.principal_id = pe.grantee_principal_id
- WHERE is_fixed_role = 0 -- Remove for SQL Server 2008
- ORDER BY pr.name, type_desc;
+> ```sql
+> SELECT pr.type_desc, pr.name, 
+>  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
+>  isnull (pe.permission_name, 'No permission statements') AS permission_name 
+>  FROM sys.server_principals AS pr
+>  LEFT OUTER JOIN sys.server_permissions AS pe
+>    ON pr.principal_id = pe.grantee_principal_id
+>  WHERE is_fixed_role = 0 -- Remove for SQL Server 2008
+>  ORDER BY pr.name, type_desc;
 ```
 
-### <a name="database-permissions"></a>Datenbankberechtigungen
+### Database Permissions
 
-Die folgende Abfrage gibt eine Liste der Berechtigungen zurück, die auf Datenbankebene erteilt oder verweigert wurden. Diese Abfrage sollte in jeder Datenbank ausgeführt werden.   
+The following query returns a list of the permissions that have been granted or denied at the database level. This query should be executed in each database.   
 ```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 

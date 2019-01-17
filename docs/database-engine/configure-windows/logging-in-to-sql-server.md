@@ -22,18 +22,18 @@ ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 35366fbbeac73a551546f2778592f03da5c7e1e7
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 230e57dbbe3b3d2ca88bd6f4fd727555b4fa38b2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617670"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214821"
 ---
 # <a name="logging-in-to-sql-server"></a>Anmelden an SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Sie können sich mithilfe eines beliebigen grafischen Administrationstools oder von der Eingabeaufforderung aus bei einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anmelden.  
   
- Wenn Sie sich mithilfe eines grafischen Administrationstools, wie beispielsweise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , bei einer Instanz von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]anmelden, werden Sie zum Angeben eines Servernamens, eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamens und gegebenenfalls eines Kennworts aufgefordert. Wenn Sie sich mithilfe der Windows-Authentifizierung bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anmelden, müssen Sie den SQL Server-Anmeldenamen nicht jedes Mal angeben, wenn Sie auf eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zugreifen. Stattdessen wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ihr [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto zum automatischen Anmelden verwendet. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit Authentifizierung im gemischten Modus ausgeführt wird (die Modi[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - und Windows-Authentifizierung), und wenn Sie zum Anmelden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden möchten, müssen Sie einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamen und ein Kennwort angeben. Verwenden Sie nach Möglichkeit die Windows-Authentifizierung.  
+ Wenn Sie sich mithilfe eines grafischen Administrationstools, wie beispielsweise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , bei einer Instanz von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]anmelden, werden Sie zum Angeben eines Servernamens, eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamens und gegebenenfalls eines Kennworts aufgefordert. Wenn Sie sich mithilfe der Windows-Authentifizierung bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anmelden, müssen Sie den SQL Server-Anmeldenamen nicht jedes Mal angeben, wenn Sie auf eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zugreifen. Stattdessen wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ihr [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto zum automatischen Anmelden verwendet. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit Authentifizierung im gemischten Modus ausgeführt wird ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]- und Windows-Authentifizierungsmodus) und wenn Sie zum Anmelden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwenden möchten, müssen Sie einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen und ein Kennwort angeben. Verwenden Sie nach Möglichkeit die Windows-Authentifizierung.  
   
 > [!NOTE]  
 >  Wenn Sie beim Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]eine Sortierung ausgewählt haben, die zwischen Groß- und Kleinschreibung unterscheidet, wird bei der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung auch zwischen Groß- und Kleinschreibung unterschieden.  

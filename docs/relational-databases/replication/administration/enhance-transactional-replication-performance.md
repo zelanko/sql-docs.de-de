@@ -22,12 +22,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a5c17d05b00c711c311e41ac98add0e6fd549f58
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 67f22e0608493ba3f33144c8d97b9cb275a5c506
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535765"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207089"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Verbessern der Leistung der Transaktionsreplikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -142,11 +142,11 @@ Dieses Beispielszenario führt zu einem Zustand, in dem keine Sitzung ihre Befeh
 
 Während des Timeoutzeitraums der Abfrage werden Sie Folgendes bei den Leistungsindikatoren des Verteilungs-Agents bemerken: 
 
-- Der Wert des Leistungsindikators **Verteiler:Übermittelte Befehle/Sekunde** ist immer 0.
-- Der Wert des Leistungsindikators **Verteiler: Übermittelte Transaktionen/Sekunde** ist immer 0.
-- Der Leistungsindikator **Verteiler:Übermittlungslatenz** meldet einen Anstieg des Werts, bis der Deadlock des Threads behoben ist.
+- Der Wert des Leistungsindikators **Verteiler: Übermittelte Befehle/Sekunde** beträgt immer 0.
+- Der Wert des Leistungsindikators **Verteiler: Übermittelte Transaktionen/Sekunde** beträgt immer 0.
+- Der Leistungsindikator **Verteiler: Übermittlungslatenz** meldet einen Anstieg des Werts, bis der Deadlock des Threads behoben ist.
 
-Der Artikel „Replikationsverteilungs-Agent“ in der Microsoft SQL Server-Onlinedokumentation enthält folgende Beschreibung für den Parameter *SubscriptionStreams*: „Wenn eine der Verbindungen oder ein Commit hierfür nicht ausgeführt werden kann, wird der aktuelle Batch von allen Verbindungen verworfen, und der Agent versucht mithilfe eines einzigen Datenstroms, die fehlgeschlagenen Batches zu wiederholen.“
+Das Thema „Replication Distribution Agent (Replikationsverteilungs-Agent)“ in der SQL Server-Onlinedokumentation enthält die folgende Beschreibung für den Parameter *SubscriptionStreams*: „Wenn eine der Verbindungen oder ein Commit hierfür nicht ausgeführt werden kann, wird der aktuelle Batch von allen Verbindungen verworfen, und der Agent versucht mithilfe eines einzelnen Datenstroms, die fehlgeschlagenen Batches zu wiederholen.“
 
 Der Verteilungs-Agent verwendet eine Sitzung, um den Batch zu wiederholen, der nicht angewendet werden konnte. Nachdem der Verteilungs-Agent den Batch erfolgreich angewendet hat, verwendet er wieder mehrere Sitzungen, ohne einen Neustart durchzuführen.
 
@@ -156,7 +156,7 @@ Der Verteilungs-Agent verwendet eine Sitzung, um den Batch zu wiederholen, der n
 Das Ausführen (Commit) eines Satzes an Transaktionen führt zu einem bestimmten Verwaltungsaufwand; wenn eine größere Anzahl an Transaktionen mit größerem Zeitabstand ausgeführt werden (Commit), verteilt sich der Verwaltungsaufwand auf einen größeren Datenumfang.  Die Erhöhung von „CommitBatchSize“ (auf bis zu 200) kann die Leistung verbessern, da mehr Transaktionen an den Abonnenten committet werden. Der Vorteil des Verringerns dieses Parameters wird geringer, wenn die Kosten der Anwendung von Änderungen durch andere Faktoren beeinträchtigt werden, beispielsweise der maximalen E/A des Datenträgers, auf dem das Protokoll enthalten ist. Zudem muss folgender Kompromiss beachtet werden: Durch jeden Fehler, der dazu führt, dass der Verteilungs-Agent von vorn beginnt, muss für eine größere Anzahl von Transaktionen ein Rollback ausgeführt sowie die erneute Anwendung vorgenommen werden. Bei unzuverlässigen Netzwerken kann ein geringerer Wert zu weniger Fehler führen, und im Falle eines Fehlers muss das Rollback bzw. die erneute Anwendung für eine geringere Anzahl an Transaktionen ausgeführt werden.  
   
 
-##<a name="see-more"></a>Weitere Informationen
+## <a name="see-more"></a>Weitere Informationen
   
 [Arbeiten mit Replikations-Agent-Profilen](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
 [Anzeigen und Ändern von Befehlszeilenparametern des Replikations-Agents &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  

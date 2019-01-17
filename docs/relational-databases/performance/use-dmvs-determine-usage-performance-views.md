@@ -2,19 +2,19 @@
 title: Bestimmen von Nutzungsstatistiken und der Leistung von Ansichten mit DMV
 description: Bestimmen von Nutzungsstatistiken und der Leistung von Ansichten mit DMV
 manager: craigg
-author: MashaMSFT
-ms.author: mathoma
+author: julieMSFT
+ms.author: jrasnick
 ms.date: 09/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: 4181615840f62b6e4e8a7447f559f4f0c50eb206
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: 75563b5dcceead80b5b4d55c07413b37c9d0c278
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586313"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380661"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>Bestimmen von Nutzungsstatistiken und der Leistung von Ansichten mit DMV
 Dieser Artikel behandelt Methoden und Skripts, mit denen Sie Informationen zur **Leistung von Abfragen, die Sichten verwenden** abrufen können. Der Zweck dieser Skripts besteht darin, Indikatoren für die Nutzung und Leistung verschiedener Sichten in einer Datenbank zu liefern. 
@@ -194,10 +194,4 @@ GO
 ```
 
 ## <a name="see-also"></a>Siehe auch
-[Dynamische Verwaltungssichten und -funktionen](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[DMVs zur Leistungsoptimierung (Video, SQL Saturday, Pordenone)](https://www.youtube.com/watch?v=9FQaFwpt3-k)  (in italienischer Sprache)  
-[DMVs zur Leistungsoptimierung (Präsentation und Demo, SQL Saturday, Pordenone)](https://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)  (in italienischer Sprache)  
-[SQL Server: Optimierung in Kürze (Video, SQL Saturday, Parma)](https://vimeo.com/200980883)   (in italienischer Sprache)  
-[SQL Server: Optimierung in Kürze (Präsentation und Demo, SQL Saturday, Parma)](https://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988)  (in italienischer Sprache)  
-[Optimieren der Leistung mit der dynamischen Verwaltungssicht von SQL Server](https://www.red-gate.com/library/performance-tuning-with-sql-server-dynamic-management-views)  (in englischer Sprache)  
-[Die wichtigsten Wartetypen von SQL Server 2016](https://channel9.msdn.com/Blogs/MVP-Data-Platform/The-Most-Prominent-Wait-Types-of-your-SQL-Server-2016) (in italienischer Sprache)   
+[Dynamische Verwaltungssichten und -funktionen](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) 

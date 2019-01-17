@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, best practices
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a727c599dc5a2b7c21d07a415f6ba9490c7e96cd
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 2203e8fe68861fd0e69dae352fef8c015e76859f
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712118"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328970"
 ---
 # <a name="best-practice-with-the-query-store"></a>Bewährte Methoden für den Abfragespeicher
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -48,7 +48,7 @@ Die Standardparameter sind für den Einstieg ausreichend, Sie sollten jedoch das
   
  Hier sind einige Richtlinien zum Festlegen der Parameterwerte:  
   
- **Maximale Größe (MB):** Gibt den Grenzwert für den Datenbereich an, den Abfragespeicher innerhalb der Datenbank einnimmt. Dies ist die wichtigste Einstellung, die sich direkt auf den Betriebsmodus des Abfragespeichers auswirkt.  
+ **Maximale Größe (MB):** Gibt den Grenzwert für den Datenbereich an, den der Abfragespeicher innerhalb der Datenbank einnimmt. Dies ist die wichtigste Einstellung, die sich direkt auf den Betriebsmodus des Abfragespeichers auswirkt.  
   
  Während der Abfragespeicher Abfragen, Ausführungspläne und Statistiken sammelt, wächst die Datenbank an, bis dieser Grenzwert erreicht ist. In diesem Fall ändert der Abfragespeicher automatisch den Betriebsmodus in schreibgeschützt und beendet die Erfassung von neuen Daten, sodass die Leistungsanalyse nicht mehr korrekt ist.  
   
@@ -70,7 +70,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
 
- **Datenleerungsintervall**: Definiert die Häufigkeit in Sekunden, mit der die erfassten Laufzeitstatistiken auf dem Datenträger gespeichert werden (Standard ist 900 Sekunden, d.h. 15 Minuten). Ziehen Sie in Betracht, einen höheren Wert zu verwenden, wenn Ihre Workload keine große Anzahl verschiedener Abfragen und Pläne generiert oder Sie längere Zeit warten können, bevor Daten vor dem Herunterfahren der Datenbank persistent gespeichert werden. 
+ **Datenleerungsintervall:** Definiert die Häufigkeit in Sekunden, mit der die erfassten Laufzeitstatistiken auf dem Datenträger gespeichert werden (Standard ist 900 Sekunden, d. h. 15 Minuten). Ziehen Sie in Betracht, einen höheren Wert zu verwenden, wenn Ihre Workload keine große Anzahl verschiedener Abfragen und Pläne generiert oder Sie längere Zeit warten können, bevor Daten vor dem Herunterfahren der Datenbank persistent gespeichert werden. 
  
 > [!NOTE]
 > Mit dem Ablaufverfolgungsflag 7745 wird verhindert, dass Abfragespeicherdaten bei einem Failover oder Befehl zum Herunterfahren auf den Datenträger geschrieben werden. Weitere Informationen finden Sie im Abschnitt [Verwenden von Ablaufverfolgungsflags für unternehmenskritische Server zur effizienteren Notfallwiederherstellung](#Recovery).
@@ -82,14 +82,14 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS = 900);  
 ```  
 
- **Statistikerfassungsintervall:** Definiert den Grad der Granularität für die erfasste Laufzeitstatistik (der Standardwert sind 60 Minuten). Ziehen Sie einen niedrigeren Wert in Betracht, wenn Sie eine geringere Granularität oder weniger Zeit benötigen, um Probleme zu erkennen und zu mindern. Denken Sie jedoch daran, dass dies unmittelbar die Größe der Abfragespeicherdaten beeinflusst. Verwenden Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)], um einen anderen Wert für das Statistikerfassungsintervall festzulegen:  
+ **Statistiksammelintervall:** Definiert den Grad der Granularität für die erfasste Laufzeitstatistik (Standardwert: 60 Minuten). Ziehen Sie einen niedrigeren Wert in Betracht, wenn Sie eine geringere Granularität oder weniger Zeit benötigen, um Probleme zu erkennen und zu mindern. Denken Sie jedoch daran, dass dies unmittelbar die Größe der Abfragespeicherdaten beeinflusst. Verwenden Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)], um einen anderen Wert für das Statistikerfassungsintervall festzulegen:  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB] 
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
- **Schwellenwert für veraltete Abfrage (Tage):** Zeitbasierte Cleanuprichtlinie, die die Aufbewahrungsdauer für persistente Laufzeitstatistiken und inaktive Abfragen steuert.  
+ **Schwellenwert für veraltete Abfrage (Tage):** Zeitbasierte Richtlinie zur Bereinigung, die den Aufbewahrungszeitraum für persistente Laufzeitstatistiken und inaktive Abfragen steuert.  
 Standardmäßig ist der Abfragespeicher so konfiguriert, dass Daten 30 Tage lang gespeichert werden. Dies ist möglicherweise für Ihr Szenario unnötig lange.  
   
  Vermeiden Sie es, Verlaufsdaten aufzubewahren, die Sie nicht mehr verwenden möchten. Dies reduziert die Wahrscheinlichkeit für Änderungen in den schreibgeschützten Status. Die Größe der Abfragespeicherdaten sowie die Zeit, um Probleme zu erkennen und zu mindern, lassen sich besser vorhersagen. Verwenden Sie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oder das folgende Skript, um die zeitbasierte Cleanuprichtlinie zu konfigurieren:  
@@ -99,7 +99,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));  
 ```  
   
- **Größenbasierter Bereinigungsmodus:** Gibt an, ob das automatische Cleanup ausgeführt wird, wenn der Umfang der Abfragespeicherdaten den Grenzwert erreicht.  
+ **Größenbasierter Bereinigungsmodus:** Gibt an, ob die automatische Bereinigung ausgeführt wird, wenn der Umfang der Abfragespeicherdaten den Grenzwert erreicht.  
   
  Es wird dringend empfohlen, das größenbasierte Cleanup zu aktivieren, um sicherzustellen, dass der Abfragespeicher immer im Lese-/ Schreibmodus ausgeführt wird und die neuesten Daten erfasst.  
   
@@ -108,7 +108,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);  
 ```  
   
- **Erfassungsmodus für den Abfragespeicher:** Gibt die Abfrageerfassungsrichtlinie für den Abfragespeicher an.  
+ **Erfassungsmodus für Abfragespeicher:** Gibt die Abfrageerfassungsrichtlinie für den Abfragespeicher an.  
   
 -   **Alle**: Erfasst alle Abfragen. Diese Option ist die Standardeinstellung.  
   
@@ -156,10 +156,10 @@ Navigieren Sie zu dem Abfragespeicher-Unterordner unter dem Datenbankknoten im O
 |Abfragen mit höchstem Ressourcenverbrauch|Wählen Sie die gewünschte Ausführungsmetrik, und identifizieren Sie Abfragen mit den extremsten Werten für ein angegebenes Zeitintervall. <br />Verwenden Sie diese Ansicht, um Ihre Aufmerksamkeit auf die relevantesten Abfragen zu konzentrieren, die die größte Auswirkung auf den Ressourcenverbrauch der Datenbank haben.|  
 |Abfragen mit erzwungenen Plänen|Zeigt vorherige erzwungene Pläne durch Verwendung des Abfragespeichers an. <br />Verwenden Sie diese Ansicht, um schnell auf alle aktuell erzwungenen Pläne zuzugreifen.|  
 |Abfragen mit hoher Variation|Analysieren Sie Abfragen mit hoher Ausführungsvariation in Verbindung mit allen verfügbaren Dimensionen wie Dauer, CPU-Zeit, E/A und Speicherauslastung im gewünschten Zeitintervall.<br />Verwenden Sie diese Ansicht, um Abfragen mit stark abweichender Leistung zu identifizieren, die die Benutzerfreundlichkeit in Ihren Anwendungen beeinträchtigen können.|  
-|Statistik der Abfragewartezeit|Analysieren Sie Wartekategorien, die in einer Datenbank am aktivsten sind, sowie welche Abfragen am meisten zur ausgewählten Wartekategorie beitragen.<br />Verwenden Sie diese Ansicht, um Wartezeitenstatistiken zu analysieren und Abfragen zu identifizieren, die sich auf die Benutzerfreundlichkeit in Ihren Anwendungen auswirken können.<br /><br />**Gilt für:** Ab [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18.0 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
+|Statistik der Abfragewartezeit|Analysieren Sie Wartekategorien, die in einer Datenbank am aktivsten sind, sowie welche Abfragen am meisten zur ausgewählten Wartekategorie beitragen.<br />Verwenden Sie diese Ansicht, um Wartezeitenstatistiken zu analysieren und Abfragen zu identifizieren, die sich auf die Benutzerfreundlichkeit in Ihren Anwendungen auswirken können.<br /><br />**Gilt für:** Ab [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], Version 18.0 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
 |Nachverfolgte Abfragen|Verfolgen Sie die Ausführung der wichtigsten Abfragen in Echtzeit. In der Regel verwenden Sie diese Ansicht, wenn Sie über Abfragen mit erzwungenen Plänen verfügen und Sie sicherstellen möchten, dass die Abfrageleistung stabil ist.|
   
-> [!TIP]  
+> [!TIP]
 > Eine ausführliche Beschreibung dazu, wie Sie mit [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] die Abfragen mit dem größten Ressourcenverbrauch identifizieren und diejenigen Abfragen korrigieren können, die aufgrund der Änderung der Planauswahl zurückgestellt wurden, finden Sie unter [Query Store @Azure Blogs](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
  Wenn Sie eine Abfrage mit nicht optimaler Leistung identifiziert haben, richtet sich das weitere Vorgehen nach der Art des Problems.  
@@ -168,7 +168,7 @@ Navigieren Sie zu dem Abfragespeicher-Unterordner unter dem Datenbankknoten im O
   
      ![abfrage-speicher-erzwingungs-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
 
-> [!NOTE]  
+> [!NOTE]
 > Die Abbildung oben kann verschiedene Formen für bestimmte Abfragepläne aufweisen, wobei die möglichen Status folgende Bedeutungen haben:<br />  
 > |Form|Bedeutung|  
 > |-------------------|-------------|
@@ -344,7 +344,7 @@ Das Ablaufverfolgungsflag 7752 ermöglicht das asynchrone Laden eines Abfragespe
 > [!IMPORTANT]
 > Wenn Sie den Abfragespeicher für Erkenntnisse zu Just-In-Time-Arbeitsauslastungen in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] verwenden, planen Sie baldmöglichst die Installation der Fixes zur Leistungsskalierbarkeit in [KB 4340759](https://support.microsoft.com/help/4340759) ein. 
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Katalogsichten des Abfragespeichers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [Gespeicherte Prozeduren für den Abfragespeicher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [Verwenden des Abfragespeichers mit In-Memory-OLTP](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   

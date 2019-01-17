@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 89a7be267cfe6f4e60961e6d9a6610897cb5718d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 743c12fe1ec749c597655f249c1ba6fbfe1b0b4e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542525"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591884"
 ---
 # <a name="query-processing-architecture-guide"></a>Handbuch zur Architektur der Abfrageverarbeitung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -386,7 +386,7 @@ In den folgenden Beispielen wird erläutert, welche Ausführungspläne aus dem P
 * Auf einen Ausführungsplan wird regelmäßig verwiesen, sodass seine Kosten nie den Wert 0 (null) erreichen. Der Plan verbleibt im Plancache und wird nur dann entfernt, wenn nicht genügend Arbeitsspeicher vorhanden ist und die aktuellen Kosten 0 (null) sind.
 * Ein Ad-hoc-Ausführungsplan wird eingefügt. Auf diesen wird erst wieder verwiesen, wenn nicht ausreichend Speicherplatz zur Verfügung steht. Ad-hoc-Pläne werden mit einem Wert für die aktuellen Kosten von 0 (null) initialisiert. Daher wird der Plan aus dem Plancache entfernt, wenn der Ausführungsplan vom [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] überprüft wird und die aktuellen Kosten 0 (null) betragen. Der Ad-hoc-Ausführungsplan verbleibt im Plancache mit aktuellen Kosten vom Wert 0 (null), wenn genügend Arbeitsspeicher vorhanden ist.
 
-Um einen einzelnen Plan oder alle Pläne manuell aus dem Cache zu entfernen, verwenden Sie [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md).
+Um einen einzelnen Plan oder alle Pläne manuell aus dem Cache zu entfernen, verwenden Sie [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md). Ab [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] ist `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` verfügbar, um den Prozedur-/Plancache für die Datenbank im Bereich zu löschen.
 
 ### <a name="recompiling-execution-plans"></a>Erneutes Kompilieren von Ausführungsplänen
 
@@ -572,7 +572,7 @@ Außerdem werden die folgenden Abfrageklauseln nicht parametrisiert. Beachten Si
 Die Parametrisierung wird auf der Ebene der einzelnen Transact-SQL-Anweisungen ausgeführt, d. h. die Anweisungen werden nacheinander batchweise parametrisiert. Nach dem Kompilieren wird eine parametrisierte Abfrage ausgeführt – in dem Kontext des Batches, in dem die Abfrage ursprünglich übermittelt wurde. Wenn ein Ausführungsplan für eine Abfrage zwischengespeichert wird, können Sie anhand der sql-Spalte der dynamischen Verwaltungssicht sys.syscacheobjects ermitteln, ob die Abfrage parametrisiert wurde. Wenn eine Abfrage parametrisiert wird, stehen die Namen und Datentypen der Parameter vor dem Text des übergebenen Batches in dieser Spalte, z. B. (\@1 tinyint).
 
 > [!NOTE]
-> Parameternamen sind willkürlich. Benutzer bzw. Anwendungen sollten sich nicht auf eine bestimmte Namensreihenfolge verlassen. Darüber hinaus kann sich zwischen verschiedenen Versionen und Service Pack-Upgrades von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Folgendes ändern: Parameternamen, die Auswahl der parametrisierten Literale und der Abstand im parametrisierten Text.
+> Parameternamen sind willkürlich. Benutzer bzw. Anwendungen sollten sich nicht auf eine bestimmte Namensreihenfolge verlassen. Darüber hinaus kann sich zwischen verschiedenen Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und Service Pack-Upgrades Folgendes ändern: Parameternamen, die Auswahl der parametrisierten Literale und der Abstand im parametrisierten Text.
 
 #### <a name="data-types-of-parameters"></a>Parameterdatentypen
 

@@ -30,12 +30,12 @@ ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 29cdf6bcf1d79042b0469719341f823ba778dcdb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50360a46d7eaba31ad60a94e3e624a641ec1c6ea
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761418"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979256"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47761418"
   
  An eine Spalte oder an einen Aliasdatentyp kann jeweils nur eine Regel gebunden sein. Allerdings können einer Spalte sowohl eine Regel als auch eine oder mehrere CHECK-Einschränkungen zugeordnet werden. Ist dies der Fall, werden alle Einschränkungen berücksichtigt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -84,7 +84,7 @@ AS condition_expression
   
  Mit **sp_help** erhalten Sie einen Bericht zu einer Regel. Wenn Sie sich den Text der Regel anzeigen lassen möchten, können Sie **sp_helptext** mit dem Regelnamen als Parameter ausführen. Mit **sp_rename** benennen Sie eine Regel um.  
   
- Eine Regel muss mit der DROP RULE-Anweisung gelöscht werden, bevor eine neue Regel gleichen Namens erstellt wird. Außerdem muss ihre Bindung durch die Ausführung von **sp_unbindrule** aufgehoben werden, bevor sie gelöscht wird. Verwenden Sie **sp_unbindrule**, um die Bindung einer Regel an eine Spalte aufzuheben.  
+ Eine Regel muss mit der DROP RULE-Anweisung gelöscht werden, bevor eine neue Regel gleichen Namens erstellt werden kann. Außerdem muss ihre Bindung durch die Ausführung von **sp_unbindrule** aufgehoben werden, bevor sie gelöscht wird. Verwenden Sie **sp_unbindrule**, um die Bindung einer Regel an eine Spalte aufzuheben.  
   
  Sie können eine neue Regel an eine Spalte oder einen Datentyp binden, ohne die Bindung der alten aufzuheben; die neue Regel überschreibt die alte. Regeln, die an Spalten gebunden sind, haben immer Vorrang vor Regeln, die an Aliasdatentypen gebunden sind. Wenn Sie eine Regel an eine Spalte binden, wird dabei die Regel ersetzt, die bereits an den Aliasdatentyp jener Spalte gebunden ist. Binden Sie dagegen eine Regel an einen Datentyp, so ersetzt diese nicht die Regel, die an eine Spalte mit diesem Aliasdatentyp gebunden wurde. Die folgende Tabelle zeigt die Rangfolge, die gilt, wenn Regeln an Spalten und Aliasdatentypen, für die bereits Regeln vorhanden sind, gebunden werden:  
   
@@ -127,7 +127,7 @@ AS
 @value LIKE '__-%[0-9]'  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   

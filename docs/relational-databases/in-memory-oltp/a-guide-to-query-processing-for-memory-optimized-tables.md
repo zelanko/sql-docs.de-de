@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4b9d49756a4edb78fcda40f4c4d86bfbb299904d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b69d261470a674ef6a90a5bef9e0db7aebfbb44a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543497"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205579"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Anleitung zur Abfrageverarbeitung für speicheroptimierte Tabellen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -273,7 +273,7 @@ GO
 |Stream Aggregate|`SELECT count(CustomerID) FROM dbo.Customer`|Beachten Sie, dass der Hash Match-Operator keine Aggregationen unterstützt. Daher verwenden alle Aggregationen in den systemintern kompilierten gespeicherten Prozeduren den Stream Aggregate-Operator, selbst wenn der Plan für die gleiche Abfrage in interpretiertem [!INCLUDE[tsql](../../includes/tsql-md.md)] den Hash Match-Operator verwendet.|  
   
 ## <a name="column-statistics-and-joins"></a>Spaltenstatistiken und Joins  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Statistiken für Werte in den Indexschlüsselspalten beibehalten, damit die Kosten für bestimmte Vorgänge wie Indexscans und Indexsuchen geschätzt werden können. (Von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden auch Statistiken zu Nicht-Indexschlüsselspalten erstellt, wenn Sie sie explizit erstellen, oder wenn sie vom Abfrageoptimierer in Reaktion auf eine Abfrage mit einem Prädikat erstellt werden.) Das wesentliche Maß für die Kostenschätzung ist die Anzahl der Zeilen, die von einem einzelnen Operator verarbeitet werden. Beachten Sie, dass für datenträgerbasierte Tabellen die Anzahl der Seiten, auf die von einem bestimmten Operator zugegriffen wird, für die Kostenschätzung maßgeblich ist. Da die Seitenanzahl bei speicheroptimierten Tabellen jedoch nicht von Bedeutung ist (da sie immer 0 ist), steht hier die Zeilenanzahl im Vordergrund. Die Schätzung beginnt mit den Index Seek- und Index Scan-Operatoren im Plan und schließt danach die anderen Operatoren wie den Join-Operator ein. Die geschätzte Anzahl der von einem Joinoperator zu verarbeitenden Zeilen basiert auf der Schätzung für den zugrunde liegenden Index-, Seek- und Scan-Operator. Beim interpretierten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Zugriff auf speicheroptimierte Tabellen können Sie den tatsächlichen Ausführungsplan beobachten, um den Unterschied zwischen der geschätzten und der tatsächlichen Zeilenanzahl für die Operatoren im Plan herauszufinden.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Statistiken für Werte in den Indexschlüsselspalten beibehalten, damit die Kosten für bestimmte Vorgänge wie Indexscans und Indexsuchen geschätzt werden können. (Von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden auch Statistiken zu Nicht-Indexschlüsselspalten erstellt, wenn Sie sie explizit erstellen oder wenn sie vom Abfrageoptimierer in Reaktion auf eine Abfrage mit einem Prädikat erstellt werden.) Das wesentliche Maß für die Kostenschätzung ist die Anzahl der Zeilen, die von einem einzelnen Operator verarbeitet werden. Beachten Sie, dass für datenträgerbasierte Tabellen die Anzahl der Seiten, auf die von einem bestimmten Operator zugegriffen wird, für die Kostenschätzung maßgeblich ist. Da die Seitenanzahl bei speicheroptimierten Tabellen jedoch nicht von Bedeutung ist (da sie immer 0 ist), steht hier die Zeilenanzahl im Vordergrund. Die Schätzung beginnt mit den Index Seek- und Index Scan-Operatoren im Plan und schließt danach die anderen Operatoren wie den Join-Operator ein. Die geschätzte Anzahl der von einem Joinoperator zu verarbeitenden Zeilen basiert auf der Schätzung für den zugrunde liegenden Index-, Seek- und Scan-Operator. Beim interpretierten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Zugriff auf speicheroptimierte Tabellen können Sie den tatsächlichen Ausführungsplan beobachten, um den Unterschied zwischen der geschätzten und der tatsächlichen Zeilenanzahl für die Operatoren im Plan herauszufinden.  
   
  Für das Beispiel in Abbildung 1 gilt:  
   
@@ -303,7 +303,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
 -   Der vollständige Indexscan für IX_CustomerID wurde durch eine Indexsuche ersetzt. Dies führte zum Scannen von 5 Zeilen anstelle der für den vollständigen Indexscan erforderlichen 830 Zeilen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

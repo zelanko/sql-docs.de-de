@@ -5,19 +5,18 @@ ms.date: 07/08/2016
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 657308bcf378b6e35a360a2c6ad39a807c03e086
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d83bf40c6f5621f694f4ca6a5251dfb148c29ddf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392340"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764602"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Neues in Master Data Services (MDS)
 
@@ -91,7 +90,7 @@ ms.locfileid: "52392340"
 |Der Benutzer, der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ursprünglich installiert hat, verfügt über die Serveradministratorberechtigung.|Benutzer verfügt über die Administratorfunktionsberechtigung|  
 |Benutzer verfügt über die Berechtigung „Aktualisieren“ auf Modellebene und verfügt in der Modellunterstruktur über keine Berechtigungen und ist daher implizit ein Modelladministrator.|Benutzer verfügt über explizite Administratorberechtigungen auf der Modellebene|  
 |Benutzer verfügt über die Berechtigung „Lesen“|Der Benutzer verfügt über die Berechtigung für den Lesezugriff.|  
-|Benutzer verfügt über die Berechtigung „Aktualisieren“|Der Benutzer verfügt über alle vier Zugriffsberechtigungen: Erstellen, Aktualisieren, Löschen und Lesen.|  
+|Benutzer verfügt über die Berechtigung „Aktualisieren“|Benutzer verfügt über alle vier Zugriffsberechtigungen: Erstellen, Aktualisieren, Löschen und Lesen.|  
 |Benutzer verfügt über die Berechtigung „Verweigern“|Benutzer verfügt über die Berechtigung „Verweigern“|  
   
  Weitere Informationen zu Berechtigungen finden Sie unter [Sicherheit &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md).  
@@ -229,9 +228,9 @@ ms.locfileid: "52392340"
    
  **Aktualisierung der Bereitstellungspakete für Beispielmodelle**  
   
- Die Beispielpakete wurden aktualisiert, um neue Szenarien zu unterstützen. Weitere Informationen finden Sie unter [Beispiele: Modellbereitstellungspakete (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
+ Die Beispielpakete wurden aktualisiert, um neue Szenarien zu unterstützen. Weitere Informationen finden Sie unter [SQL Server-Beispiele: Modellbereitstellungspakete (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Master Data Services und Data Quality Services-Funktionen, die von den Editionen von SQL Server 2016 unterstützt](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
  [Veraltete Funktionen von Master Data Services](../master-data-services/deprecated-master-data-services-features.md)   
  [Eingestellte Master Data Services-Funktionen](../master-data-services/discontinued-master-data-services-features.md)  

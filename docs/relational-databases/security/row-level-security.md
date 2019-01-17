@@ -18,12 +18,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5ec86bf23a2fdf951da6d64f934ce8f62f6b3cb5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f1f0e5180c03a033cd854aba9f3261e5a89960f5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409897"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210430"
 ---
 # <a name="row-level-security"></a>Sicherheit auf Zeilenebene
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52409897"
   
  Implementieren Sie RLS, indem Sie die [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung und Prädikate verwenden, die als [Inline-Tabellenwertfunktionen](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md) erstellt werden.  
   
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [aktuelle Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([hier herunterladen](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
+**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([hier herunterladen](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)) und [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
 > [!NOTE]
 > Azure SQL Data Warehouse unterstützt nur Filterprädikate. Blockprädikate werden in Azure SQL Data Warehouse derzeit nicht unterstützt.
@@ -52,7 +52,7 @@ ms.locfileid: "52409897"
   
  Der Zugriff auf Daten auf Zeilenebene in einer Tabelle wird durch ein Sicherheitsprädikat beschränkt, das als Inline-Tabellenwertfunktion definiert ist. Die Funktion wird dann aufgerufen und durch eine Sicherheitsrichtlinie erzwungen. Für Filterprädikate gilt: Es gibt keinen Hinweis für die Anwendung, dass Zeilen aus dem Resultset gefiltert wurden. Wenn alle Zeilen gefiltert werden, wird ein Nullsatz zurückgegeben. Für BLOCK-Prädikate gilt: Alle Vorgänge, die gegen das Prädikat verstoßen, misslingen mit einem Fehler.  
   
- Filterprädikate werden beim Lesen von Daten aus der Basistabelle angewendet. Dies betrifft alle GET-Vorgänge: **SELECT**-, **DELETE**- (d.h., der Benutzer kann keine Zeilen löschen, die gefiltert werden), und **UPDATE**-Vorgänge (d.h., der Benutzer kann keine Zeilen aktualisieren, die gefiltert werden, obwohl es möglich ist, Zeilen so zu aktualisieren, dass sie anschließend gefiltert werden). BLOCK-Prädikate betreffen alle Schreibvorgänge.  
+ Filterprädikate werden beim Lesen von Daten aus der Basistabelle angewendet. Sie betreffen alle GET-Vorgänge: **SELECT**-, **DELETE**- (d. h., der Benutzer kann keine Zeilen löschen, die gefiltert werden), und **UPDATE**-Vorgänge (d. h., der Benutzer kann keine Zeilen aktualisieren, die gefiltert werden, obwohl es möglich ist, Zeilen so zu aktualisieren, dass sie anschließend gefiltert werden). BLOCK-Prädikate betreffen alle Schreibvorgänge.  
   
 -   Die Prädikate AFTER INSERT und AFTER UPDATE können Benutzer am Ändern von Zeilen in Werte hindern, die gegen das Prädikat verstoßen.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "52409897"
   
 -   BLOCK-Prädikate für UPDATE werden in getrennte Vorgänge für BEFORE und AFTER unterteilt. Deshalb ist es beispielsweise nicht möglich zu blockieren, dass Benutzer eine Zeile in einen Wert ändern, der höher als der aktuelle ist. Wenn diese Art von Logik erforderlich ist, müssen Sie Trigger mit den Zwischentabellen des Typs DELETED und INSERTED verwenden, um gemeinsam auf die alten und neuen Werte zu verweisen.  
   
--   Der Optimierer überprüft kein BLOCK-Prädikat des Typs AFTER UPDATE, wenn keine der von der Prädikatfunktion verwendeten Spalten geändert wurde. Beispiel: Alice soll nicht in der Lage sein, ein Gehalt in einen Wert höher als 100.000 zu ändern. Sie soll aber die Adresse eines Mitarbeiters ändern können, dessen Gehalt bereits höher als 100.000 ist (und deshalb bereits gegen das Prädikat verstößt).  
+-   Der Optimierer überprüft kein BLOCK-Prädikat des Typs AFTER UPDATE, wenn keine der von der Prädikatfunktion verwendeten Spalten geändert wurde. Zum Beispiel: Alice soll nicht in der Lage sein, ein Gehalt in einen Wert höher als 100.000 zu ändern. Sie soll aber die Adresse eines Mitarbeiters ändern können, dessen Gehalt bereits höher als 100.000 ist (und deshalb bereits gegen das Prädikat verstößt).  
   
 -   An den APIs für Massenvorgänge, einschließlich BULK INSERT, sind keine Änderungen erfolgt. Dies bedeutet, dass BLOCK-Prädikate des Typs AFTER INSERT für Masseneinfügevorgänge genauso wie für herkömmliche Einfügevorgänge gelten.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "52409897"
   
 -   Vermeiden Sie übermäßige Tabellenverknüpfungen Prädikatfunktionen, um die Leistung zu maximieren.  
   
- Vermeiden Sie Prädikatlogik, die von sitzungsspezifischen [SET](../../t-sql/statements/set-statements-transact-sql.md)-Optionen abhängt: Wenngleich ihre Verwendung in der Praxis eher unwahrscheinlich ist, können Prädikatfunktionen, deren Logik von bestimmten sitzungsspezifischen **SET** -Optionen abhängt, Informationen preisgeben, wenn Benutzer in der Lage sind, beliebige Abfragen auszuführen. Beispiel: Eine Prädikatfunktion, die eine Zeichenfolge implizit in **datetime** konvertiert, kann unterschiedliche Zeilen basierend auf der Option **SET DATEFORMAT** für die aktuelle Sitzung filtern. Im Allgemeinen sollten Prädikatfunktionen die folgenden Regeln einhalten:  
+ Vermeiden Sie Prädikatlogik, die von sitzungsspezifischen [SET-Optionen](../../t-sql/statements/set-statements-transact-sql.md) abhängig: Wenngleich ihre Verwendung in der Praxis eher unwahrscheinlich ist, können Prädikatfunktionen, deren Logik von bestimmten sitzungsspezifischen **SET**-Optionen abhängt, Informationen preisgeben, wenn Benutzer in der Lage sind, beliebige Abfragen auszuführen. Beispiel: Eine Prädikatfunktion, die eine Zeichenfolge implizit in **datetime** konvertiert, kann unterschiedliche Zeilen basierend auf der Option **SET DATEFORMAT** für die aktuelle Sitzung filtern. Im Allgemeinen sollten Prädikatfunktionen die folgenden Regeln einhalten:  
   
 -   Prädikatfunktionen dürfen Zeichenfolgen nicht implizit in **date**, **smalldatetime**, **datetime**, **datetime2** oder **datetimeoffset** bzw. umgekehrt konvertieren, da diese Konvertierungen von den Optionen [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md) und [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md) beeinflusst werden. Verwenden Sie stattdessen die **CONVERT**-Funktion, und geben Sie den „style“-Parameter explizit an.  
   
@@ -142,10 +142,10 @@ ms.locfileid: "52409897"
 -   Prädikatfunktionen dürfen verkettete Zeichenfolgen nicht mit **NULL** vergleichen, da dieses Verhalten von der Option [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md) beeinflusst wird.  
    
   
-##  <a name="SecNote"></a> Sicherheitshinweis: Seitenkanalangriffe  
- **Böswilliger Sicherheitsrichtlinienmanager:** Es ist wichtig zu beachten, dass ein böswilliger Sicherheitsrichtlinienmanager mit ausreichenden Berechtigungen zum Erstellen einer Sicherheitsrichtlinie für eine vertrauliche Spalte und der Berechtigung zum Erstellen oder Ändern von Inline-Tabellenwertfunktionen sich mit einem anderen Benutzer absprechen kann, der SELECT-Berechtigungen für eine Tabelle hat. Dadurch können sie Daten exfiltrieren, indem sie böswillig Inline-Tabellenwertfunktionen erstellen, um durch Seitenkanalangriffe Daten abzuleiten. Solche Angriffe sind möglich, wenn sich Benutzer abgesprochen haben, oder wenn einem böswilligen Benutzer zu hohe Berechtigungen erteilt wurden. Zudem sind vermutlich mehrere Iterationen zum Anpassen der Richtlinie vonnöten. Dazu sind Berechtigungen zum Entfernen das Prädikats erforderlich, um die Schemabindung aufheben zu können. Gleichzeitig müssen die Inline-Tabellenwertfunktionen angepasst und SELECT-Anweisungen wiederholt für die Zieltabelle ausgeführt werden. Es wird dringend empfohlen, Berechtigungen nach Bedarf zu beschränken, und Ihre Umgebung auf verdächtige Aktivitäten zu überwachen, wie z.B. wiederholtes Ändern von Richtlinien und Inline-Tabellenwertfunktionen, die im Zusammenhang mit der zeilenbasierten Sicherheit stehen.  
+##  <a name="SecNote"></a>Sicherheitshinweis: Seiten-Kanal-Angriffe  
+ **Schädliche Sicherheitsrichtlinien-Manager:** Es ist wichtig zu beachten, dass ein schädlicher Sicherheitsrichtlinien-Manager mit ausreichenden Berechtigungen zum Erstellen einer Sicherheitsrichtlinie auf eine vertrauliche Spalte und der Berechtigung zum Erstellen oder Ändern von Inline-Tabellenwertfunktionen mit einem anderen Benutzer zusammenwirken kann, der über ausgewählte Berechtigungen für eine Tabelle verfügt, um eine Datenexfiltration durchzuführen, indem schädliche Inline-Tabellenwertfunktionen erstellt werden, die dazu dienen sollen, Seitenkanalangriffe zu verwenden, um Daten abzuleiten. Solche Angriffe sind möglich, wenn sich Benutzer abgesprochen haben, oder wenn einem böswilligen Benutzer zu hohe Berechtigungen erteilt wurden. Zudem sind vermutlich mehrere Iterationen zum Anpassen der Richtlinie vonnöten. Dazu sind Berechtigungen zum Entfernen das Prädikats erforderlich, um die Schemabindung aufheben zu können. Gleichzeitig müssen die Inline-Tabellenwertfunktionen angepasst und SELECT-Anweisungen wiederholt für die Zieltabelle ausgeführt werden. Es wird dringend empfohlen, Berechtigungen nach Bedarf zu beschränken, und Ihre Umgebung auf verdächtige Aktivitäten zu überwachen, wie z.B. wiederholtes Ändern von Richtlinien und Inline-Tabellenwertfunktionen, die im Zusammenhang mit der zeilenbasierten Sicherheit stehen.  
   
- **Sorgfältig erstellte Abfragen:** Es ist möglich, die Offenlegung von Informationen durch die Verwendung sorgfältig erstellter Abfragen zu verursachen. Beispiel: `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` würde einen schädlichen Benutzer wissen lassen, dass das Gehalt von John Doe 100.000 USD beträgt. Auch wenn ein Sicherheitsprädikat eingerichtet ist, um zu verhindern, dass ein schädlicher Benutzer die Gehälter anderer Personen direkt abfragen kann, kann der Benutzer bestimmen, wann die Abfrage eine Division-durch-Null-Ausnahme zurückgibt.  
+ **Sorgfältig erstellte Abfragen:** Es ist möglich, die Offenlegung von Informationen durch die Verwendung von sorgfältig erstellten Abfragen zu verursachen. Beispiel: `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` würde einen schädlichen Benutzer wissen lassen, dass das Gehalt von John Doe 100.000 USD beträgt. Auch wenn ein Sicherheitsprädikat eingerichtet ist, um zu verhindern, dass ein schädlicher Benutzer die Gehälter anderer Personen direkt abfragen kann, kann der Benutzer bestimmen, wann die Abfrage eine Division-durch-Null-Ausnahme zurückgibt.  
    
   
 ##  <a name="Limitations"></a> Featureübergreifende Kompatibilität  
@@ -165,7 +165,7 @@ ms.locfileid: "52409897"
   
 -   **Änderungsnachverfolgung** Eine Änderungsnachverfolgung kann zum Preisgeben des Primärschlüssels von Zeilen führen, die für Benutzer mit den Berechtigungen **SELECT** und **VIEW CHANGE TRACKING** gefiltert werden sollen. Tatsächliche Datenwerte werden nicht preisgegeben, sondern nur dass Spalte A für die Spalte mit dem Primärschlüssel B aktualisiert/eingefügt/gelöscht wurde. Dies ist problematisch, wenn der primäre Schlüssel ein vertrauliches Element enthält, z. B. eine US-Sozialversicherungsnummer. In der Praxis ist **CHANGETABLE** jedoch fast immer mit der ursprünglichen Tabelle verknüpft, um die neuesten Daten abzurufen.  
   
--   **Volltextsuche** Eine Leistungsverschlechterung wird für Abfragen erwartet, die die folgenden Volltextsuch- und semantischen Suchfunktionen verwenden. Der Grund ist ein zusätzlicher Joinvorgang, der für das Aktivieren der Sicherheit auf Zeilenebene und Vermeiden der Preisgabe der Primärschlüssel von Zeilen erfolgt, die gefiltert werden sollen: **CONTAINSTABLE**, **FREETEXTTABLE**, semantickeyphrasetable, semanticsimilaritydetailstable, semanticsimilaritytable.  
+-   **Volltextsuche:** Eine Leistungsverschlechterung wird für Abfragen erwartet, die die folgenden Volltextsuch- und semantischen Suchfunktionen verwenden. Der Grund ist ein zusätzlicher Joinvorgang, der für das Aktivieren der Sicherheit auf Zeilenebene und Vermeiden der Preisgabe der Primärschlüssel von Zeilen erfolgt, die gefiltert werden sollen: **CONTAINSTABLE**, **FREETEXTTABLE**, semantickeyphrasetable, semanticsimilaritydetailstable und semanticsimilaritytable.  
   
 -   **Columnstore-Indizes** RLS ist kompatibel mit sowohl gruppierten als auch nicht gruppierten Columnstore-Indizes. Da für die Sicherheit auf Zeilenebene jedoch eine Funktion angewendet wird, ist es möglich, dass der Optimierer den Abfrageplan so ändert, dass nicht der Batchmodus verwendet wird.  
   
@@ -370,7 +370,7 @@ REVERT;
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [ALTER SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-security-policy-transact-sql.md)   
  [DROP SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-security-policy-transact-sql.md)   

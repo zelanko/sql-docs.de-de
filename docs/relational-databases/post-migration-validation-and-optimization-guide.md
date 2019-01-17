@@ -13,12 +13,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: 7dcb9f3efe8ffcc0e1dc2dbd0ff800f67f82d499
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d85de6deffa9e140bc5f9bf489afd60e0dbbc948
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506342"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213619"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Handbuch für die Überprüfung und Optimierung nach der Migration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ Die Schritte in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die nach
 Im Folgenden sind einige der häufigsten Leistungsszenarios aufgelistet, die nach der Migration zur Plattform [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auftreten, und wie sie behoben werden können. Hierzu gehören auch Szenarios, die für die Migration von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (ältere Version zu neuere Version) sowie für die Migration von foreign-Plattformen (z.B. Oracle, DB2, MySQL und Sybase) zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] spezifisch sind.
 
 ## <a name="CEUpgrade"></a> Abfrageregressionen aufgrund einer Änderung in der CE-Version
-
+ 
 **Gilt für:** Migration von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 Wenn Sie von einer älteren [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Version zu [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] oder neuer migrieren und ein Upgrade auf den aktuellen [Datenbankkompatibilitätsgrad](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) durchführen, kann es bei einer Arbeitsauslastung womöglich zu einem Leistungsrückgang kommen.
@@ -48,7 +48,7 @@ Weitere Informationen zu diesem Thema finden Sie unter [Aufrechterhalten einer s
 
 ## <a name="ParameterSniffing"></a> Sensitivität für die Parameterermittlung
 
-**Gilt für:** die Migration von Drittanbieter-Plattformen (z.B. Oracle, DB2, MySQL und Sybase) zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+**Gilt für:** die Migration von Drittanbieterplattformen (z.B. Oracle, DB2, MySQL und Sybase) zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!NOTE]
 > Bei Migrationen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird dieses Szenario bei einer Migration auf eine neuere, unveränderte Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  nicht berücksichtigt, wenn das Problem auf dem Quell-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bereits bestand. 
@@ -69,7 +69,7 @@ Ein mögliches Problem tritt auf, wenn diese erste Kompilierung möglicherweise 
 
 ## <a name="MissingIndexes"></a> Fehlende Indizes
 
-**Gilt für:** die Migration von Drittanbieter-Plattformen (z.B. Oracle, DB2, MySQL und Sybase) und die Migration von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+**Gilt für:** die Migration von Drittanbieterplattformen (z.B. Oracle, DB2, MySQL und Sybase) und die Migration von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 Falsche oder fehlende Indizes führt zu zusätzlicher Eingabe/Ausgabe, wegen der zusätzlicher Arbeitsspeicher und CPU verschwendet wird. Dies kann daran liegen, dass das Arbeitsauslastungsprofil geändert wurde, also z.B. die Verwendung anderer Prädikate, die den vorhandenen Indexentwurf ungültig machen. Anzeichen einer schlechten Indizierungsstrategie oder Änderungen am Arbeitsauslastungsprofil sind z.B. folgende:
 -   Doppelte, redundante, selten verwendete und vollständig nicht verwendete Indizes
@@ -87,7 +87,7 @@ Falsche oder fehlende Indizes führt zu zusätzlicher Eingabe/Ausgabe, wegen der
 
 ## <a name="InabilityPredicates"></a> Unmöglichkeit, mit Prädikaten Daten zu filtern
 
-**Gilt für:** die Migration von Drittanbieter-Plattformen (z.B. Oracle, DB2, MySQL und Sybase) und die Migration von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+**Gilt für:** die Migration von Drittanbieterplattformen (z.B. Oracle, DB2, MySQL und Sybase) und die Migration von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!NOTE]
 > Bei Migrationen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird dieses Szenario bei einer Migration auf eine neuere, unveränderte Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nicht berücksichtigt, wenn das Problem auf dem Quell-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bereits bestand.
@@ -115,7 +115,7 @@ Einige Beispiele für nicht SARGable-Prädikate sind:
 
 ## <a name="TableValuedFunctions"></a> Verwendung von Tabellenwertfunktionen (Funktionen mit mehreren Anweisungen oder Inlinefunktionen)
 
-**Gilt für:** die Migration von Drittanbieter-Plattformen (z.B. Oracle, DB2, MySQL und Sybase) und die Migration von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+**Gilt für:** die Migration von Drittanbieterplattformen (z.B. Oracle, DB2, MySQL und Sybase) und die Migration von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!NOTE]
 > Bei Migrationen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird dieses Szenario bei einer Migration auf eine neuere, unveränderte Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nicht berücksichtigt, wenn das Problem auf dem Quell-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bereits bestand.

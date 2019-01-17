@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d12db3ef11d3dc4d658b7126319ea53ddf12a91f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a6cc6dcb53bb7c535db570bbaa68db0673a83879
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535360"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531115"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Konfigurieren von Always Encrypted mithilfe von SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ SSMS unterstützt keine Rollentrennung zwischen Personen, die die Datenbank verw
 
 Der [Always Encrypted-Assistent](../../../relational-databases/security/encryption/always-encrypted-wizard.md) ist ein leistungsstarkes Tool, mit dem Sie die gewünschte Verschlüsselungskonfiguration für ausgewählte Datenbankspalten festlegen können. Der Assistent kann Spalten in Abhängigkeit von der aktuellen Always Encrypted-Konfiguration und der gewünschten Zielkonfiguration verschlüsseln, entschlüsseln (Verschlüsselung entfernen) oder sie erneut verschlüsseln (z.B. mithilfe eines neuen Spaltenverschlüsselungsschlüssels oder eines anderen Verschlüsselungstyps als dem aktuellen, der für die Spalte konfiguriert ist). Während einer einzigen Ausführung des Assistenten können mehrere Spalten konfiguriert werden.
 
-Wenn Sie keinerlei Always Encrypted-Schlüssel bereitgestellt haben, wird der Assistent die Schlüssel automatisch generieren. Sie müssen lediglich einen Schlüsselspeicher für Ihren Spaltenhauptschlüssel auswählen: der Windows-Zertifikatspeicher oder Azure Key Vault. Der Assistent generiert auch die Schlüsselnamen und ihre Metadatenobjekte in der Datenbank automatisch. Wenn Sie mehr Kontrolle über die Bereitstellungsweise der Schlüssel wünschen (und mehr Auswahlmöglichkeiten beim Schlüsselspeicher für den Spaltenhauptschlüssel), können Sie mithilfe der Dialogfelder **Neuer Spaltenhauptschlüssel** und **Neuer Spaltenverschlüsselungsschlüssel** (weiter unten beschrieben) verwenden, um Schlüssel vor dem Start des Assistenten bereitzustellen. Sie können dann im Always Encrypted-Assistenten den vorhandenen Spaltenverschlüsselungsschlüssel auswählen.
+Wenn Sie keinerlei Always Encrypted-Schlüssel bereitgestellt haben, wird der Assistent die Schlüssel automatisch generieren. Sie müssen nur einen Schlüsselspeicher für Ihren Spaltenhauptschlüssel auswählen: Windows-Zertifikatspeicher oder Azure Key Vault. Der Assistent generiert auch die Schlüsselnamen und ihre Metadatenobjekte in der Datenbank automatisch. Wenn Sie mehr Kontrolle über die Bereitstellungsweise der Schlüssel wünschen (und mehr Auswahlmöglichkeiten beim Schlüsselspeicher für den Spaltenhauptschlüssel), können Sie mithilfe der Dialogfelder **Neuer Spaltenhauptschlüssel** und **Neuer Spaltenverschlüsselungsschlüssel** (weiter unten beschrieben) verwenden, um Schlüssel vor dem Start des Assistenten bereitzustellen. Sie können dann im Always Encrypted-Assistenten den vorhandenen Spaltenverschlüsselungsschlüssel auswählen.
 
 Weitere Informationen zur Verwendung des Assistenten finden Sie unter  [Always Encrypted-Assistent](../../../relational-databases/security/encryption/always-encrypted-wizard.md).
 
@@ -77,8 +77,8 @@ So führen Sie eine Abfrage aus, die einen Wert an eine verschlüsselte Spalte s
 1.  Vergewissern Sie sich, dass Always Encrypted für die Datenbankverbindung des Fensters „Abfrage-Editor“ aktiviert ist, in dem Sie Ihre `SELECT` -Abfrage ausführen. Dadurch wird der (von SSMS verwendete) .NET Framework-Datenanbieter für SQL Server angewiesen, parametrisierte Transact-SQL-Variablen (siehe unten) für verschlüsselte Spalten zu verschlüsseln. Siehe [Aktivieren und Deaktivieren von Always Encrypted für eine Datenbankverbindung](#en-dis) weiter unten.   
 2.  Stellen Sie sicher, dass Sie auf alle Spaltenhauptschlüssel zugreifen können, die für verschlüsselte Spalten konfiguriert sind. Wenn beispielsweise Ihr Spaltenhauptschlüssel ein Zertifikat ist, müssen Sie dafür sorgen, dass das Zertifikat auf dem Computer bereitgestellt wird, auf dem SSMS ausgeführt wird. Wenn Ihr Spaltenhauptschlüssel in Azure Key Vault gespeichert ist, müssen Sie sicherstellen, dass Sie über Zugriffsberechtigungen für den Schlüssel verfügen. (Außerdem werden ggf. aufgefordert, sich bei Azure anzumelden.)   
 3.  Stellen Sie sicher, dass „Parametrisierung für Always Encrypted“ für das Fenster „Abfrage-Editor“ aktiviert ist. (Erfordert mindestens SSMS Version 17.0) Deklarieren Sie eine Transact-SQL-Variable, und initialisieren Sie sie mit einem Wert, der an die Datenbank gesendet werden soll (Einfügen, Aktualisieren oder Filtern nach). Details finden Sie weiter unten unter [Parametrisierung für Always Encrypted](#param).   
-    >   [!NOTE]
-    >   Da Always Encrypted nur eine beschränkte Teilmenge von Typumwandlungen unterstützt, ist es in vielen Fällen erforderlich, dass der Datentyp einer Transact-SQL-Variablen dem Typ der Spalte in der Zieldatenbank entspricht.   
+    > [!NOTE]
+    > Da Always Encrypted nur eine beschränkte Teilmenge von Typumwandlungen unterstützt, ist es in vielen Fällen erforderlich, dass der Datentyp einer Transact-SQL-Variablen dem Typ der Spalte in der Zieldatenbank entspricht.   
 4.  Führen Sie die Abfrage aus, um den Wert der Transact-SQL-Variablen an die Datenbank zu senden. SSMS wandelt die Variable in einen Abfrageparameter um und verschlüsselt dessen Wert, ehe er an die Datenbank gesendet wird.   
 
 *Beispiel*   
@@ -94,13 +94,13 @@ Durch Aktivieren von Always Encrypted für eine Datenbankverbindung wird der .NE
 Geben Sie zum Aktivieren von Always Encrypted für eine Datenbankverbindung `Column Encryption Setting=Enabled` im Dialogfeld **Verbindung mit Server herstellen** auf der Registerkarte **Zusätzliche Eigenschaften** an.    
 Geben Sie zum Deaktivieren von Always Encrypted für eine Datenbankverbindung `Column Encryption Setting=Disabled` an, oder entfernen Sie einfach die Einstellung **Spaltenverschlüsselungseinstellung** von der Registerkarte **Zusätzliche Eigenschaften** im Dialogfeld **Verbindung mit Server herstellen** (der Standardwert ist **Deaktiviert**).   
 
->  [!TIP] 
->  So schalten Sie zwischen dem Aktivieren und Deaktivieren von Always Encrypted für ein vorhandenes Fenster „Abfrage-Editor“ um:   
->  1.   Klicken Sie im Fenster „Abfrage-Editor“ mit der rechten Maustaste auf eine beliebige Stelle.
->  2.   Wählen Sie **Verbindung** > **Verbindung ändern...** aus. 
->  3.   Klicken Sie auf **Optionen** >>.
->  4.   Wählen Sie die Registerkarte **Zusätzliche Eigenschaften** aus, und geben Sie `Column Encryption Setting=Enabled` ein, um Always Encrypted zu aktivieren, oder entfernen Sie die Einstellung, um Always Encrypted zu deaktivieren.   
->  5.   Klicken Sie auf **Verbinden**.   
+> [!TIP]
+> So schalten Sie zwischen dem Aktivieren und Deaktivieren von Always Encrypted für ein vorhandenes Fenster „Abfrage-Editor“ um:   
+> 1.    Klicken Sie im Fenster „Abfrage-Editor“ mit der rechten Maustaste auf eine beliebige Stelle.
+> 2.    Wählen Sie **Verbindung** > **Verbindung ändern...** aus. 
+> 3.    Klicken Sie auf **Optionen** >>.
+> 4.    Wählen Sie die Registerkarte **Zusätzliche Eigenschaften** aus, und geben Sie `Column Encryption Setting=Enabled` ein, um Always Encrypted zu aktivieren, oder entfernen Sie die Einstellung, um Always Encrypted zu deaktivieren.   
+> 5.    Klicken Sie auf **Verbinden**.   
    
 ### <a name="param"></a>Parametrisierung für Always Encrypted   
  
@@ -134,8 +134,8 @@ So aktivieren oder deaktivieren Sie „Parametrisierung für Always Encrypted“
 5.  Klicken Sie auf **OK**.   
 
 Bei Ausführung einer Abfrage im Fenster „Abfrage-Editor“, das eine Datenbankverbindung mit aktiviertem Always Encrypted aufweist, ohne dass die Parametrisierung für das Fenster „Abfrage-Editor“ aktiviert ist, werden Sie zur Aktivierung aufgefordert.   
->   [!NOTE]   
->   „Parametrisierung für Always Encrypted“ funktioniert nur in Abfrage-Editor-Fenstern mit Datenbankverbindungen, für die Always Encrypted aktiviert ist (siehe [Aktivieren und Deaktivieren von Always Encrypted für eine Datenbankverbindung](#en-dis)). Transact-SQL-Variablen werden nicht parametrisiert, wenn das Fenster „Abfrage-Editor“ eine Datenbankverbindung ohne aktiviertes Always Encrypted aufweist.   
+> [!NOTE]
+> „Parametrisierung für Always Encrypted“ funktioniert nur in Abfrage-Editor-Fenstern mit Datenbankverbindungen, für die Always Encrypted aktiviert ist (siehe [Aktivieren und Deaktivieren von Always Encrypted für eine Datenbankverbindung](#en-dis)). Transact-SQL-Variablen werden nicht parametrisiert, wenn das Fenster „Abfrage-Editor“ eine Datenbankverbindung ohne aktiviertes Always Encrypted aufweist.   
 
 #### <a name="how-parameterization-for-always-encrypted-works"></a>Funktionsweise von „Parametrisierung für Always Encrypted“   
 
@@ -173,7 +173,7 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 ```
 SQL Server Management Studio nutzt Intellisense, um Sie zu informieren, welche Variablen erfolgreich parametrisiert werden können und welche Parametrisierungsversuche misslingen (samt Grund).   
 
-Eine Deklaration einer Variablen, die erfolgreich parametrisiert werden kann, wird im Abfrage-Editor mit einer Warnunterstreichung markiert. Wenn Sie den Mauszeiger über einer Deklarationsanweisung bewegen, die mit einer Warnunterstreichung markiert wurde, sehen Sie die Ergebnisse des Parametrisierungsvorgangs, einschließlich der Werte der Haupteigenschaften des resultierenden [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) -Objekts (dem die Variable zugeordnet ist): [SqlDbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx), [Size](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.size.aspx), [Precision](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.precision.aspx), [Scale](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.scale.aspx), [SqlValue](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqlvalue.aspx). Eine vollständige Liste aller Variablen, die erfolgreich parametrisiert wurden, finden Sie auf der Registerkarte **Warnung** der Ansicht **Fehlerliste** . Zum Öffnen der Ansicht **Fehlerliste** wählen im Hauptmenü **Ansicht** und dann **Fehlerliste**aus.    
+Eine Deklaration einer Variablen, die erfolgreich parametrisiert werden kann, wird im Abfrage-Editor mit einer Warnunterstreichung markiert. Wenn Sie den Mauszeiger über einer Deklarationsanweisung bewegen, die mit einer Warnunterstreichung markiert wurde, werden die Ergebnisse des Parametrisierungsvorgangs, einschließlich der Werte der Haupteigenschaften des resultierenden [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) -Objekts (dem die Variable zugeordnet ist) angezeigt: [SqlDbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx), [Size](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.size.aspx), [Precision](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.precision.aspx), [Scale](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.scale.aspx) und [SqlValue](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqlvalue.aspx). Eine vollständige Liste aller Variablen, die erfolgreich parametrisiert wurden, finden Sie auf der Registerkarte **Warnung** der Ansicht **Fehlerliste** . Zum Öffnen der Ansicht **Fehlerliste** wählen im Hauptmenü **Ansicht** und dann **Fehlerliste**aus.    
 
 Wenn SQL Server Management Studio versucht hat, eine Variable zu parametrisieren, aber die Parametrisierung misslungen ist, wird die Deklaration der Variablen mit einer Fehlerunterstreichung gekennzeichnet. Wenn Sie den Mauszeiger über der Deklarationsanweisung bewegen, die mit einer Fehlerunterstreichung markiert wurde, erhalten Sie Informationen zum Fehler. In der Ansicht **Fehlerliste** sehen Sie auf der Registerkarte **Fehler** die vollständige Liste von Parametrisierungsfehlern für alle Variablen. Zum Öffnen der Ansicht **Fehlerliste** wählen im Hauptmenü **Ansicht** und dann **Fehlerliste**aus.   
 
@@ -185,8 +185,8 @@ Ein weiteres nachstehendes Beispiel zeigt zwei Variablen, die die Bedingungen f�
  
 ![always-encrypted-error](../../../relational-databases/security/encryption/media/always-encrypted-error.png)
  
->   [!NOTE]
->   Da Always Encrypted eine beschränkte Teilmenge von Typumwandlungen unterstützt, ist es in vielen Fällen erforderlich, dass der Datentyp einer Transact-SQL-Variablen dem Typ der Spalte in der Zieldatenbank entspricht. Angenommen, der Typ der Spalte `SSN` in der Tabelle `Patients` ist `char(11)`. Die folgende Abfrage misslingt, da der Typ der Variablen `@SSN` (der `nchar(11)`ist) nicht dem Typ der Spalte entspricht.   
+> [!NOTE]
+> Da Always Encrypted eine beschränkte Teilmenge von Typumwandlungen unterstützt, ist es in vielen Fällen erforderlich, dass der Datentyp einer Transact-SQL-Variablen dem Typ der Spalte in der Zieldatenbank entspricht. Angenommen, der Typ der Spalte `SSN` in der Tabelle `Patients` ist `char(11)`. Die folgende Abfrage misslingt, da der Typ der Variablen `@SSN` (der `nchar(11)`ist) nicht dem Typ der Spalte entspricht.   
 
 ```sql
 DECLARE @SSN nchar(11) = '795-73-9838'
@@ -202,17 +202,17 @@ WHERE [SSN] = @SSN;
     encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_Auto1', 
     column_encryption_key_database_name = 'Clinic') are incompatible in the equal to operator.
 
->   [!NOTE]
->   Ohne Parametrisierung wird die gesamte Abfrage, einschließlich Typumwandlungen, innerhalb von SQL Server/Azure SQL-Datenbank verarbeitet. Bei aktivierter Parametrisierung erfolgen einige Typumwandlungen durch .NET Framework innerhalb von SQL Server Management Studio. Aufgrund der Unterschiede zwischen dem Typsystem von .NET Framework und dem von SQL Server (z.B. verschiedene Genauigkeit einiger Typen wie „float“) kann eine Abfrage mit aktivierter Parametrisierung andere Ergebnisse als die Abfrage liefern, die ohne aktivierte Parametrisierung ausgeführt wird. 
+> [!NOTE]
+> Ohne Parametrisierung wird die gesamte Abfrage, einschließlich Typumwandlungen, innerhalb von SQL Server/Azure SQL-Datenbank verarbeitet. Bei aktivierter Parametrisierung erfolgen einige Typumwandlungen durch .NET Framework innerhalb von SQL Server Management Studio. Aufgrund der Unterschiede zwischen dem Typsystem von .NET Framework und dem von SQL Server (z.B. verschiedene Genauigkeit einiger Typen wie „float“) kann eine Abfrage mit aktivierter Parametrisierung andere Ergebnisse als die Abfrage liefern, die ohne aktivierte Parametrisierung ausgeführt wird. 
 
 #### <a name="permissions"></a>Berechtigungen      
 
 Zum Anwenden von Abfragen auf verschlüsselte Spalten, einschließlich Abfragen zum Abrufen von Daten in Chiffretext, benötigen Sie für die Datenbank die Berechtigungen `VIEW ANY COLUMN MASTER KEY DEFINITION` und `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` .   
 Zusätzlich zu den oben aufgeführten Berechtigungen benötigen Sie zum Entschlüsseln von Abfrageergebnissen oder Verschlüsseln von Abfrageparametern (die durch parametrisierte Transact-SQL-Anweisungen erstellt wurden) auch Zugriff auf den Spaltenhauptschlüssel, der die Zielspalten schützt:   
 - **Zertifikatspeicher – Lokaler Computer**: Sie benötigen `Read`-Zugriff auf das Zertifikat, das als Spaltenhauptschlüssel verwendet wird, oder Administratorrechte auf dem Computer.   
-- **Azure Key Vault**: Sie benötigen die Berechtigungen `get`und `unwrapKey`für den Tresor, der den Spaltenhauptschlüssel enthält.   
-- **Schlüsselspeicheranbieter (Cryptography Next Generation; CNG)**: Die erforderlichen Berechtigungen und Anmeldeinformationen, zu deren Eingabe Sie möglicherweise aufgefordert werden, wenn Sie einen Schlüsselspeicher oder einen Schlüssel verwenden, hängen von der Konfiguration des Speichers und des Schlüsselspeicheranbieters (Key Storage Provider; KSP) ab.   
-- **Kryptografiedienstanbieter (Kryptografie-API)**: Die erforderlichen Berechtigungen und Anmeldeinformationen, zu deren Eingabe Sie möglicherweise aufgefordert werden, wenn Sie einen Schlüsselspeicher oder einen Schlüssel verwenden, hängen von der Konfiguration des Speichers und des Kryptografiedienstanbieters (Cryptographic Service Provider; CSP) ab.   
+- **Azure Key Vault** : Sie benötigen die Berechtigungen `get`und `unwrapKey`für den Tresor, der den Spaltenhauptschlüssel enthält.   
+- **Schlüsselspeicheranbieter (Cryptography Next Generation; CNG)** : Die erforderlichen Berechtigungen und Anmeldeinformationen, zu deren Eingabe Sie möglicherweise aufgefordert werden, wenn Sie einen Schlüsselspeicher oder einen Schlüssel verwenden, hängen von der Konfiguration des Speichers und des Schlüsselspeicheranbieters (Key Storage Provider; KSP) ab.   
+- **Kryptografiedienstanbieter (Kryptografie-API)** : Die erforderlichen Berechtigungen und Anmeldeinformationen, zu deren Eingabe Sie möglicherweise aufgefordert werden, wenn Sie einen Schlüsselspeicher oder einen Schlüssel verwenden, hängen von der Konfiguration des Speichers und des Kryptografiedienstanbieters (cryptographic service provider; CSP) ab.   
 
 Weitere Informationen finden Sie unter [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)(Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)).
 
@@ -232,8 +232,8 @@ Mit dem Dialogfeld **Neuer Spaltenhauptschlüssel** können Sie einen Spaltenhau
     - **Schlüsselspeicheranbieter (CNG)**: Gibt einen Schlüsselspeicher an, der über einen Schlüsselspeicheranbieter (KSP) zugänglich ist, der die Cryptography Next Generation-API (CNG) implementiert. Bei dieser Art von Speicher handelt sich in der Regel um ein Hardwaresicherheitsmodul (HSM). Nachdem Sie diese Option ausgewählt haben, müssen Sie einen KSP auswählen. Standardmäßig ist der**Softwareschlüsselspeicher-Anbieter von Microsoft** aktiviert. Wenn Sie einen in einem HSM gespeicherten Spaltenhauptschlüssel verwenden möchten, wählen Sie einen KSP für Ihr Gerät aus (muss installiert und auf dem Computer konfiguriert werden, bevor Sie das Dialogfeld öffnen).
     -   **Kryptografiedienstanbieter (Kryptografie-API)** – Ein Schlüsselspeicher, der über einen Kryptografiedienstanbieter (CSP) zugänglich ist, der die Kryptografie-API (Cryptography API; CAPI) implementiert. Bei dieser Art von Speicher handelt sich in der Regel um ein Hardwaresicherheitsmodul (HSM). Nachdem Sie diese Option ausgewählt haben, müssen Sie einen CSP auswählen.  Wenn Sie einen in einem HSM gespeicherten Spaltenhauptschlüssel verwenden möchten, wählen Sie einen CSP für Ihr Gerät aus (muss installiert und auf dem Computer konfiguriert werden, bevor Sie das Dialogfeld öffnen).
     
-    >   [!NOTE]
-    >   Da es sich bei CAPI um eine veraltete API handelt, ist die Option „Kryptografiedienstanbieter“ (CAPI) standardmäßig deaktiviert. Sie können sie aktivieren, indem Sie den für den CAPI-Anbieter aktivierten DWORD-Wert unter dem Schlüssel **[HKEY_CURRENT_USER\Software\Microsoft\Microsoft SQL Server\sql13\Tools\Client\Always Encrypted]** in der Windows-Registrierung erstellen und ihn auf 1 festlegen. Sofern Ihr Schlüsselspeicher CNG unterstützt, sollten Sie CNG statt CAPI verwenden.
+    > [!NOTE]
+    > Da es sich bei CAPI um eine veraltete API handelt, ist die Option „Kryptografiedienstanbieter“ (CAPI) standardmäßig deaktiviert. Sie können sie aktivieren, indem Sie den für den CAPI-Anbieter aktivierten DWORD-Wert unter dem Schlüssel **[HKEY_CURRENT_USER\Software\Microsoft\Microsoft SQL Server\sql13\Tools\Client\Always Encrypted]** in der Windows-Registrierung erstellen und ihn auf 1 festlegen. Sofern Ihr Schlüsselspeicher CNG unterstützt, sollten Sie CNG statt CAPI verwenden.
    
     Weitere Informationen über die oben erwähnten Schlüsselspeicher finden Sie unter [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)(Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)).
 
@@ -369,7 +369,7 @@ Verwenden Sie den Always Encrypted-Assistenten, um einen Spaltenverschlüsselung
 
 ### <a name="permissions"></a>Berechtigungen
 
-Die Rotation eines Spaltenverschlüsselungsschlüssels erfordert die **ALTER ANY COLUMN MASTER KEY** -Berechtigungen – Für die Verwendung eines neuen, automatisch generierten Spaltenverschlüsselungsschlüssels erforderlich (ein neuer Spaltenhauptschlüssel und die neuen, dazugehörigen Metadaten werden ebenfalls generiert).
+Die Rotation eines Spaltenhauptschlüssels erfordert die folgenden Berechtigungen: **ALTER ANY COLUMN MASTER KEY:** ist erforderlich, wenn Sie einen neuen, automatisch generierten Spaltenverschlüsselungsschlüssel verwenden (ein neuer Spaltenhauptschlüssel und die neuen, dazugehörigen Metadaten werden ebenfalls generiert).
 **ALTER ANY COLUMN ENCRYPTION KEY** – Für das Hinzufügen von Metadaten für den neuen Spaltenverschlüsselungsschlüssel erforderlich.
 **VIEW ANY COLUMN MASTER KEY DEFINITION** – Für den Zugriff auf und das Lesen der Metadaten der Spaltenhauptschlüssel erforderlich.
 **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** – Für den Zugriff auf und das Lesen der Metadaten der Spaltenverschlüsselungsschlüssel erforderlich.
@@ -457,7 +457,7 @@ Außerdem benötigen Sie Zugriff auf die Spaltenhauptschlüssel, die für die Sp
 - **Kryptografiedienstanbieter (Kryptografie-API)**: Die erforderlichen Berechtigungen und Anmeldeinformationen, zu deren Eingabe Sie möglicherweise aufgefordert werden, wenn Sie einen Schlüsselspeicher oder einen Schlüssel verwenden, hängen von der Konfiguration des Speichers und des Kryptografiedienstanbieters (Cryptographic Service Provider; CSP) ab.
 Weitere Informationen finden Sie unter [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)(Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)).
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 - [„Immer verschlüsselt“ (Datenbank-Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted-Assistent](../../../relational-databases/security/encryption/always-encrypted-wizard.md)
 - [Übersicht über die Schlüsselverwaltung für Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)

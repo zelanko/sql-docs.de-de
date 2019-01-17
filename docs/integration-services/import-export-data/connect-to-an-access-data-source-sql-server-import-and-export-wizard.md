@@ -11,12 +11,12 @@ ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c49ec9733634d0b8eb5f6523eb6fd7f416b5f408
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb847f12e7b9a508d880033da7e66a426b757791
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829468"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202639"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Herstellen einer Verbindung mit einer Access-Datenquelle (SQL Server-Import/Export-Assistent)
 In diesem Artikel wird erläutert, wie Sie eine Verbindung mit einer **Microsoft Access**-Datenquelle über die Seiten **Datenquelle auswählen** oder **Ziel auswählen** des SQL Server-Import/Export-Assistenten herstellen.
@@ -46,8 +46,8 @@ Die Liste der Datenanbieter kann mehrere Einträge für Microsoft Access enthalt
  **Dateiname**  
 Geben Sie den Pfad und den Dateinamen für die Access-Datei an. Beispielsweise **C:\\MyData.mdb** für eine Datei auf dem lokalen Computer oder **\\\\Sales\\Database\\Northwind.mdb** für eine Datei auf einer Netzwerkfreigabe. Oder klicken Sie auf **Durchsuchen**. 
 
- >   [!NOTE] 
- > Wenn Sie auf **Durchsuchen** klicken, um die Access-Datei zu suchen, filtert das Dialogfeld **Öffnen** standardmäßig automatisch nach Dateien mit dem älteren Format bzw. der älteren Erweiterung MDB. Der Datenanbieter kann jedoch auch Dateien mit dem neueren Format bzw. der neueren Erweiterung ACCDB öffnen.
+> [!NOTE]
+> Wenn Sie auf **Durchsuchen** klicken, um die Access-Datei zu suchen, filtert das Dialogfeld **Öffnen** standardmäßig automatisch nach Dateien mit dem älteren Format bzw. der älteren Erweiterung MDB. Der Datenanbieter kann jedoch auch Dateien mit dem neueren Format bzw. der neueren Erweiterung ACCDB öffnen.
   
  **Durchsuchen**  
  Suchen Sie die Datenbankdatei mithilfe des Dialogfelds **Öffnen**.  
@@ -70,7 +70,7 @@ Wenn Access nicht in der Liste der Datenquellen angezeigt wird, sollten Sie übe
 > Sie müssen SQL Server installieren, um die 64-Bit-Version des SQL Server-Import/Export-Assistenten verwenden zu können. SQL Server Data Tools (SSDT) und SQL Server Management Studio (SSMS) sind 32-Bit-Anwendungen und installieren daher auch nur 32-Bit-Dateien, einschließlich der 32-Bit-Version des Assistenten.
 
 ## <a name="officeDownloads"></a>Herunterladen von Dateien zum Herstellen einer Verbindung mit Access  
-Sie müssen möglicherweise die Konnektivitätskomponenten für Microsoft Office-Datenquellen (einschließlich Access und Excel) herunterladen, wenn diese nicht bereits installiert sind. Laden Sie die neueste Version der Konnektivitätskomponenten für Access- und Excel-Dateien hier herunter: [Microsoft Access Database Engine 2016 – Weitervertreibbare Komponente](https://www.microsoft.com/download/details.aspx?id=54920).
+Sie müssen möglicherweise die Konnektivitätskomponenten für Microsoft Office-Datenquellen (einschließlich Access und Excel) herunterladen, wenn diese nicht bereits installiert sind. Laden Sie die neueste Version der Konnektivitätskomponenten für Access- und Excel-Dateien hier herunter: [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).
   
 Die aktuelle Version der Komponenten dient zum Öffnen von Dateien, die in früheren Versionen von Access erstellt wurden.
 

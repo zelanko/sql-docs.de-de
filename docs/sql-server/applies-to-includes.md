@@ -3,27 +3,27 @@ title: 'SQL Server-Dokumentation: Includedateien | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 08/15/2018
 ms.prod: sql
-ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology: database-engine
+ms.technology: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
+ms.topic: conceptual
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 06d710e269ff4575bf7edb1c074de9421dad5c2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61cee54e6f49ffaf7e996cf593388ad22e8a7b44
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614758"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53731957"
 ---
 # <a name="sql-server-include-files-for-versioning-and-applies-to"></a>SQL Server-Includedateien für die Versionsverwaltung und „Applies-to“
 
-Mithilfe von Includedateien in Markdown können Verweise in der Dokumentation auf einfache Weise geändert werden, ohne den tatsächlichen Text der jeweiligen Artikel zu ändern. Es gibt drei Arten von Includedateien für SQL-Inhalte: SQL-Version, „Applies-to“ und Referenztext. **Includes für die SQL-Version** werden verwendet, um die erörterte Version von SQL anzugeben, z.B. SQL Server 2016 oder 2017. **Includes des Typs „Applies-to“** geben an, für welche SQL-Produkte und -Dienste das Dokument gilt, z.B. SQL Server unter Linux oder Azure SQL-Datenbank. **Referenztexte** sind Includes, die nicht in die anderen beiden Kategorien fallen, wie z.B. das Include „Get Help“ – eine Liste mit Links, die Kunden verwenden können, um Hilfe zu SQL zu erhalten.
+Mithilfe von Includedateien in Markdown können Verweise in der Dokumentation auf einfache Weise geändert werden, ohne den tatsächlichen Text der jeweiligen Artikel zu ändern. Für SQL-Inhalte gibt es drei Arten von Includedateien: SQL-Version, applies-to und Referenztext. Includedateien für die **SQL Server-Version** werden verwendet, um anzugeben, von welcher SQL-Version (z. B. SQL Server 2016 oder 2017) gesprochen wird. Die **applies-to**-Includedateien geben an, für welche SQL-Produkte und -Dienste die Dokumentation gilt (z. B. SQL Server für Linux oder Azure SQL-Datenbank). **Referenztexte** sind Includedateien, die nicht in die anderen beiden Kategorien fallen, z. B. die Includedatei „Get Help“, eine Liste mit Links, die Kunden verwenden können, um Hilfe zu SQL Server zu erhalten.
 
-Dieser Artikel soll als Anhaltspunkt für die ersten beiden Arten von Includes dienen. Sie können die vollständige Liste der Includedateien im Repository [sql-docs](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) durchsuchen.
+Dieser Artikel soll als Anhaltspunkt für die ersten beiden Arten von Includedateien dienen. Sie können die vollständige Liste der Includedateien im Repository [sql-docs](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) durchsuchen.
 
-## <a name="sql-server-version-includes"></a>Includes für die SQL Server-Version
+## <a name="sql-server-version-include-files"></a>Includedateien für die SQL Server-Version
 
 Autoren von SQL-Inhalten müssen häufig den Produktnamen und die Version von SQL Server per Include einschließen. Auf diese Weise wird bei einer Namensänderung die Includedatei geändert, statt den Wert in jedem einzelnen Artikel ändern zu müssen. Diese Includedateien werden als Platzhalter für Produktnamen eingesetzt, wurden aber nicht konsistent in der gesamten SQL-Dokumentation verwendet. SQL Server vNext bezieht sich auf eine zukünftige Version von SQL Server, die noch keine Versionsnummer besitzt, und stellt eine Ausnahme dar.  
 
@@ -41,9 +41,9 @@ Autoren von SQL-Inhalten müssen häufig den Produktnamen und die Version von SQ
 | SQL vNext | sssqlv15-md.md | `[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]` | SQL Server vNext |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |  
 
-## <a name="sql-server-non-version-specific"></a>SQL Server (nicht versionsspezifisch)
+## <a name="sql-server-applies-to-non-version-specific"></a>SQL Server: „applies-to“ (nicht versionsspezifisch)
 
-Bei diesen „Applies-to“-Includedateien wird die SQL Server-Version weggelassen.
+Bei diesen „applies-to“-Includedateien wird die SQL Server-Version ausgelassen.
 
 | Dateiname| Markdownbeispiel |image|
 | :-------------| :----------| :-------------------|
@@ -63,9 +63,9 @@ Bei diesen „Applies-to“-Includedateien wird die SQL Server-Version weggelass
 | appliesto-xx-xxxx-asdw-xxx-md.md | `[!INCLUDE[appliesto-xx-xxxx-asdw-xxx-md.md](../includes/appliesto-xx-xxxx-asdw-xxx-md.md)]` | [!INCLUDE[appliesto-xx-xxxx-asdw-xxx-md.md](../includes/appliesto-xx-xxxx-asdw-xxx-md.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
  
-## <a name="sql-server-version-specific"></a>SQL Server (versionsspezifisch)
+## <a name="sql-server-applies-to-version-specific"></a>SQL Server: „applies-to“ (versionsspezifisch)
 
-Diese „Applies-to“-Includedateien geben an, für welche Versionen von SQL die Dokumentation gilt.
+Diese „applies-to“-Includedateien geben an, für welche Versionen von SQL die Dokumentation gilt.
 
  Dateiname| Markdownbeispiel |image|
 | :-------------| :----------| :-------------------|
@@ -107,9 +107,9 @@ Diese „Applies-to“-Includedateien geben an, für welche Versionen von SQL di
 | tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md | `[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md](../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]` | [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md](../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
 
-## <a name="analysis-services"></a>Analysis Services
+## <a name="analysis-services-applies-to"></a>Analysis Services: „applies-to“
 
-Diese „Applies-to“-Includedateien werden mit der Analysis Services-Dokumentation verwendet.
+Diese „applies-to“-Includedateien werden mit der Analysis Services-Dokumentation verwendet.
 
 | Dateiname| Markdownbeispiel |image|
 | :-------------| :----------| :-------------------|
@@ -124,9 +124,9 @@ Diese „Applies-to“-Includedateien werden mit der Analysis Services-Dokumenta
 | ssas-appliesto-sqlas-all-aas.md | `[!INCLUDE[ssas-appliesto-sqlas-all-aas.md](../includes/ssas-appliesto-sqlas-all-aas.md)]` | [!INCLUDE[ssas-appliesto-sqlas-all-aas.md](../includes/ssas-appliesto-sqlas-all-aas.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
 
-## <a name="reporting-services"></a>Reporting Services
+## <a name="reporting-services-applies-to"></a>Reporting Services: „applies-to“
 
-Diese „Applies-to“-Includedateien werden mit der Reporting Services-Dokumentation verwendet.
+Diese „applies-to“-Includedateien werden mit der Reporting Services-Dokumentation verwendet.
 
 | Dateiname| Markdownbeispiel |image|
 | :-------------| :----------| :-------------------|

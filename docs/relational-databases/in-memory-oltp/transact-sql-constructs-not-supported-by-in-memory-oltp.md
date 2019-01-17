@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8023d29ccdf04ff46b995e1f698bb54a905df5d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5023d29379ab254e85c38e0b9e0b6ae3c8772133
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503617"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590764"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Von In-Memory OLTP nicht unterstützte Transact-SQL-Konstrukte
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,8 +68,8 @@ ms.locfileid: "52503617"
 |Vorgang|Update der Primärschlüsselspalten|Primärschlüsselspalten in speicheroptimierten Tabellen und Tabellentypen können nicht aktualisiert werden. Wenn der Primärschlüssel aktualisiert werden muss, löschen Sie die alte Zeile, und fügen Sie die neue Zeile mit dem aktualisierten Primärschlüssel ein.|  
 |Vorgang|CREATE INDEX|Indizes zu speicheroptimierten Tabellen müssen inline mit der **CREATE TABLE** - oder der **ALTER TABLE** -Anweisung angegeben werden.|  
 |Vorgang|CREATE FULLTEXT INDEX|Volltextindizes werden für speicheroptimierte Tabellen nicht unterstützt.|  
-|Vorgang|Schemaänderung|Speicheroptimierte Tabellen und nativ kompilierte gespeicherte Prozeduren unterstützen folgende Schemaänderungen nicht:<br/> [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] und SQL Server ab Version [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]: ALTER TABLE-, ALTER PROCEDURE- und sp_rename-Vorgänge werden unterstützt. Andere Schemaänderungen, z.B. das Hinzufügen von erweiterten Eigenschaften, werden nicht unterstützt.<br/><br/>[!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]: ALTER TABLE- und ALTER PROCEDURE-Vorgänge werden unterstützt. Andere Schemaänderungen, einschließlich sp_rename, werden nicht unterstützt.<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)]: Schemaänderungen werden nicht unterstützt. Löschen Sie das Objekt, und erstellen Sie es mit der gewünschten Definition neu, um die Definition einer speicheroptimierten Tabelle oder einer nativ kompilierten gespeicherten Prozedur zu ändern.| 
-|Vorgang|TRUNCATE TABLE|Der TRUNCATE-Vorgang wird für speicheroptimierte Tabellen nicht unterstützt. Um alle Zeilen aus einer Tabelle zu entfernen, löschen Sie alle Zeilen mit **DELETE FROM***Tabelle*, oder löschen Sie die Tabelle und erstellen sie neu.|  
+|Vorgang|Schemaänderung|Speicheroptimierte Tabellen und nativ kompilierte gespeicherte Prozeduren unterstützen folgende Schemaänderungen nicht:<br/> [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] und SQL Server ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]: ALTER TABLE-, ALTER PROCEDURE- und sp_rename-Vorgänge werden unterstützt. Andere Schemaänderungen, z.B. das Hinzufügen von erweiterten Eigenschaften, werden nicht unterstützt.<br/><br/>[!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]: ALTER TABLE- und ALTER PROCEDURE-Vorgänge werden unterstützt. Andere Schemaänderungen, einschließlich sp_rename, werden nicht unterstützt.<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)]: Schemaänderungen werden nicht unterstützt. Löschen Sie das Objekt, und erstellen Sie es mit der gewünschten Definition neu, um die Definition einer speicheroptimierten Tabelle oder einer nativ kompilierten gespeicherten Prozedur zu ändern.| 
+|Vorgang|TRUNCATE TABLE|Der TRUNCATE-Vorgang wird für speicheroptimierte Tabellen nicht unterstützt. Löschen Sie alle Zeilen mit **DELETE FROM**_Tabelle_ , oder löschen Sie die Tabelle, und erstellen Sie sie neu, um alle Zeilen aus einer Tabelle zu entfernen.|  
 |Vorgang|ALTER AUTHORIZATION|Das Ändern des Besitzers einer vorhandenen speicheroptimierten Tabelle oder systemintern kompilierten gespeicherten Prozedur wird nicht unterstützt. Löschen Sie die Tabelle oder die Prozedur, und erstellen Sie sie neu, um den Besitzer zu ändern.|  
 |Vorgang|ALTER SCHEMA|Das Übertragen einer vorhandenen Tabelle oder einer nativ kompilierten gespeicherten Prozedur in ein anderes Schema wird nicht unterstützt. Löschen Sie das Objekt, und erstellen Sie es neu, um eine Übertragung zwischen Schemas zu ermöglichen.|  
 |Vorgang|DBCC CHECKTABLE|DBCC CHECKTABLE wird für speicheroptimierte Tabellen nicht unterstützt. Führen Sie eine Sicherung der MEMORY_OPTIMIZED_DATA-Dateigruppe durch, um die Integrität der Prüfpunktdateien auf dem Datenträger zu überprüfen.|  
@@ -104,11 +104,11 @@ ms.locfileid: "52503617"
 |Funktion|Cursor|Cursor werden nicht von oder in systemintern kompilierten gespeicherten Prozeduren unterstützt.<br /><br /> Wenn Sie die Prozedur von einem Client aus ausführen, verwenden Sie RPC anstelle der Cursor-API. Vermeiden Sie bei ODBC die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung **EXECUTE**, und geben Sie stattdessen den Namen der Prozedur direkt an.<br /><br /> Wenn Sie die Prozedur aus einem [!INCLUDE[tsql](../../includes/tsql-md.md)] -Batch oder einer anderen gespeicherten Prozedur ausführen, vermeiden Sie es, einen Cursor mit der systemintern kompilierten gespeicherten Prozedur zu verwenden.<br /><br /> Wenn Sie eine systemintern kompilierte gespeicherte Prozedur erstellen und keinen Cursor verwenden, verwenden Sie setbasierte Logik oder eine **WHILE** -Schleife.|  
 |Funktion|Nicht konstante Parameterstandardwerte|Beim Angeben von Standardwerten für Parameter für systemintern kompilierte gespeicherte Prozeduren müssen die Werte Konstanten sein. Entfernen Sie alle Platzhalter aus den Parameterdeklarationen.|  
 |Funktion|EXTERNAL|CLR-gespeicherte Prozeduren können nicht systemintern kompiliert werden. Entfernen Sie entweder die Klausel AS EXTERNAL oder die Option NATIVE_COMPILATIONS aus der Anweisung CREATE PROCEDURE.|  
-|Funktion|numbered_stored_procedures|Systemintern kompilierte gespeicherte Prozeduren dürfen nicht nummeriert sein. Entfernen Sie die **;***Nummer* aus der **CREATE PROCEDURE** -Anweisung.|  
+|Funktion|numbered_stored_procedures|Systemintern kompilierte gespeicherte Prozeduren dürfen nicht nummeriert sein. Entfernen Sie die **;**_Nummer_ aus der **CREATE PROCEDURE** -Anweisung.|  
 |Funktion|Mehrzeilige INSERT ... VALUES-Anweisungen|Das Einfügen mehrerer Zeilen mit der gleichen **INSERT** -Anweisung in einer systemintern kompilierten gespeicherten Prozedur ist nicht möglich. Erstellen Sie **INSERT** -Anweisungen für jede Zeile.|  
 |Funktion|Allgemeine Tabellenausdrücke (CTEs)|Allgemeine Tabellenausdrücke (Common Table Expressions, CTE) werden in systemintern kompilierten gespeicherten Prozeduren nicht unterstützt. Schreiben Sie die Abfrage um.|  
 |Funktion|COMPUTE|Die **COMPUTE** -Klausel wird nicht unterstützt. Entfernen Sie sie aus der Abfrage.|  
-|Funktion|SELECT INTO|Die **INTO** -Klausel wird mit der **SELECT** -Anweisung nicht unterstützt. Schreiben Sie die Abfrage als **INSERT INTO** *Tabelle* **SELECT** neu.|  
+|Funktion|SELECT INTO|Die **INTO** -Klausel wird mit der **SELECT** -Anweisung nicht unterstützt. Schreiben Sie die Abfrage als **INSERT INTO** _Tabelle_ **SELECT** neu.|  
 |Funktion|Unvollständige Einfügespaltenliste|Generell müssen Werte in INSERT-Anweisungen für alle Spalten in der Tabelle angegeben werden.<br /><br /> Allerdings unterstützen wir DEFAULT-Einschränkungen und IDENTITY(1,1)-Spalten in speicheroptimierten Tabellen. Diese Spalten können in der INSERT-Spaltenliste ausgelassen werden. IDENTITY-Spalten müssen sogar ausgelassen werden.|  
 |Funktion|*Funktion*|Einige integrierte Funktionen werden in nativ kompilierten gespeicherten Prozeduren nicht unterstützt. Entfernen Sie die abgelehnte Funktion aus der gespeicherten Prozedur. Weitere Informationen zu unterstützten integrierten Funktionen finden Sie unter<br />[Unterstützte Funktionen für nativ kompilierte T-SQL-Module](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)oder<br />[Systemintern kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).|  
 |Funktion|CASE|**Gilt für:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] und SQL Server ab Version [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>**CASE**-Ausdrücke werden in Abfragen innerhalb von nativ kompilierten gespeicherten Prozeduren nicht unterstützt. Erstellen Sie Abfragen für jeden einzelnen Fall. Weitere Informationen finden Sie unter [Implementieren eines CASE-Ausdrucks in einer systemintern kompilierten gespeicherten Prozedur](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md).<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] und SQL Server ab Version [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] unterstützen CASE-Ausdrücke.|  
@@ -186,7 +186,7 @@ ms.locfileid: "52503617"
 |Funktion|Gebundene Transaktion|Gebundene Sitzungen können nicht an Transaktionen teilnehmen, die auf speicheroptimierte Tabellen zugreifen. Binden Sie die Sitzung nicht, bevor Sie die Prozedur ausführen.|  
 |Funktion|DTC|Transaktionen, die auf speicheroptimierte Tabellen zugreifen, können keine verteilten Transaktionen sein.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Migrieren zu In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

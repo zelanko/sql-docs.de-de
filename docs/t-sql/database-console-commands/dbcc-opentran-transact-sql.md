@@ -26,22 +26,22 @@ ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: eafe617f4586863dba9bed75a14cee2623cb54e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cebd9e5b52e2aa80308e266858da014b13f267c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821538"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206729"
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Mithilfe von DBCC OPENTRAN können aktive Transaktionen identifiziert werden, die die Protokollkürzung möglicherweise verhindern. DBCC OPENTRAN zeigt Informationen zur ältesten aktiven Transaktion sowie zu den ältesten verteilten und nicht verteilten replizierten Transaktionen (sofern vorhanden) im Transaktionsprotokoll der angegebenen Datenbank an. Ergebnisse werden nur angezeigt, wenn im Protokoll eine aktive Transaktion vorhanden ist oder die Datenbank Replikationsinformationen enthält. Wenn keine aktiven Transaktionen im Protokoll enthalten sind, wird eine Informationsmeldung angezeigt.
   
-> [!NOTE]  
+> [!NOTE]
 >  DBCC OPENTRAN wird ausschließlich für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger unterstützt.  
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -131,7 +131,7 @@ SELECT * FROM #OpenTranStatus;
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)  
 [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  

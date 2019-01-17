@@ -11,19 +11,19 @@ ms.assetid: ''
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 86a56f8394dbddccf00025b750256364aa51e99d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 27ffbf76d0841479b10b515e0a66f14c8b6bfee3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395680"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215819"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Hochverfügbarkeit und Notfallwiederherstellung für Master Data Services
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 
-**Zusammenfassung:** Dieser Artikel beschreibt eine Lösung für die Konfiguration von Master Data Services (MDS), gehostet in einer Always On-Verfügbarkeitsgruppe. Der Artikel beschreibt, wie Sie SQL 2016 Master Data Services auf einer SQL 2016 AlwaysOn-Verfügbarkeitsgruppe (availability group, AG) installieren und konfigurieren. Der Hauptzweck dieser Lösung ist die Verbesserung der Hochverfügbarkeit und der Notfallwiederherstellung von MDS-Back-End-Daten, die auf einer SQL Server-Datenbank gehostet werden.
+**Zusammenfassung:** In diesem Artikel wird eine Lösung für die Konfiguration von Master Data Services (MDS) (auf einer Always On-Verfügbarkeitsgruppe gehostet) beschrieben. Der Artikel beschreibt, wie Sie SQL 2016 Master Data Services auf einer SQL 2016 AlwaysOn-Verfügbarkeitsgruppe (availability group, AG) installieren und konfigurieren. Der Hauptzweck dieser Lösung ist die Verbesserung der Hochverfügbarkeit und der Notfallwiederherstellung von MDS-Back-End-Daten, die auf einer SQL Server-Datenbank gehostet werden.
 
 ## <a name="introduction"></a>Einführung
 
@@ -156,8 +156,8 @@ Sobald das WSFC-Feature auf allen Instanzen installiert ist, können Sie den WSF
 7.  Überprüfen Sie die Seite **Zusammenfassung** auf Warnungen oder Fehlermeldungen.
 
     Fehler müssen behoben werden. Warnungen stellen möglicherweise jedoch kein Problem dar. Eine Warnmeldung bedeutet nur, dass „das geprüfte Element womöglich den Anforderungen entspricht, jedoch gibt es etwas, das Sie überprüfen sollten“. Abbildung 7 zeigt beispielsweise die Warnung „Wartezeit beim Datenträgerzugriff überprüfen“, die aufgrund dessen angezeigt werden könnte, dass der Datenträger derzeit auf andere Aufgaben fokussiert ist. Diese Warnung können Sie ignorieren. Suchen Sie im Onlinedokument für jede Warnung oder Fehlermeldung nach weiteren Informationen. Weitere Informationen in Abbildung 7.
- 
-![Assistent zum Überprüfen der Konfiguration, Seite „Überprüfung“](media/Fig6_ValidationTests.png)
+ 
+    ![Assistent zum Überprüfen der Konfiguration, Seite „Überprüfung“](media/Fig6_ValidationTests.png)
 
     Abbildung 6
 
@@ -305,7 +305,7 @@ Die Verfügbarkeitsgruppe kann nur auf vorhandenen Datenbanken erstellt werden. 
     Konfigurieren Sie für jedes Replikat die folgenden Einstellungen für **Synchroner Commit**, **Automatisches Failover** und **Lesbares sekundäres Replikat**. Weitere Informationen in der Abbildung
 17.
 
-    **Synchroner Commit**: Dadurch wird sichergestellt, dass wenn für eine Transaktion auf dem primären Replikat der Datenbank ein Commit ausgeführt wird, ebenfalls ein Commit für die Transaktion auf allen anderen synchronen Replikaten ausgeführt wird. Ein asynchroner Commit kann dies jedoch nicht garantieren und kann hinter dem primären Replikat liegen.
+    **Synchroner Commit:** Dadurch wird sichergestellt, dass beim Ausführen eines Commit für eine Transaktion auf dem primären Replikat einer Datenbank ebenfalls ein Commit für die Transaktion auf allen anderen synchronen Replikaten ausgeführt wird. Ein asynchroner Commit kann dies jedoch nicht garantieren und kann hinter dem primären Replikat liegen.
 
     Sie müssen normalerweise das synchrone Commit nur aktivieren, wenn sich zwei Knoten im selben Rechenzentrum befinden. Wenn sie sich in unterschiedlichen Rechenzentren befinden, kann ein synchroner Commit die Leistung der Datenbank verlangsamen.
 
@@ -358,7 +358,7 @@ Die Verfügbarkeitsgruppe kann nur auf vorhandenen Datenbanken erstellt werden. 
 
 3.  Klicken Sie auf **Failover**, um ein Failover auf ein synchrones und ein asynchrones Replikat auszuführen. So können Sie überprüfen, ob ein Failover ohne Probleme ausgeführt werden kann.
 
- Die Always On-Einrichtung ist abgeschlossen.
+ Die Always On-Einrichtung ist abgeschlossen.
 
 Weitere Informationen zur Always On-Verfügbarkeitsgruppe finden Sie unter [Always On-Verfügbarkeitsgruppen (SQL Server)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server).
 

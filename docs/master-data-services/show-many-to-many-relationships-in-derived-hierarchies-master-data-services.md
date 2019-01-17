@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d05fc6068b221bfd21ffdfd0e6f8fff850bab179
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6da7d5b12dcd8e998a32403bc9f98ae3ceee121b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755568"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797132"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Anzeigen von m:n-Beziehungen in abgeleiteten Hierarchien (Master Data Services)
 
@@ -44,7 +43,7 @@ ms.locfileid: "47755568"
   
  Beachten Sie im obigen Screenshot, dass die Entität **Employee** unter **Aktuelle Ebenen** in der Mitte als einzige Ebene angezeigt wird. Die abgeleitete Hierarchie **Preview** auf der rechten Seite zeigt einfach eine Liste aller Elemente der Entität **Employee** an. Der Abschnitt **Verfügbare Ebenen** auf der linken Seite zeigt an, welche Ebenen oberhalb der aktuell obersten Ebene hinzugefügt werden können (**Employee**). Bei den meisten handelt es sich um domänenbasierte Attribute (DBAs) für die Entität **Employee** . Hierzu zählt auch das domänenbasierte Attribut **Department** .  
   
- Ab [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]gibt es eine neue Art von Ebene, die m:n-Beziehungen modelliert, z.B. **Class (zugeordnet über „ClassRegistration.Student“)**. Der Ebenenname ist ausführlicher als die anderen, um die zusätzliche Information widerzuspiegeln, die zum eindeutigen Beschreiben der Zuordnungsbeziehung erforderlich ist. Fügen Sie diese Ebene per Drag &amp; Drop zur Ebene **Employee** im Abschnitt **Aktuelle Ebenen** hinzu:  
+ Ab [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] gibt es eine neue Art von Ebene, die m:n-Beziehungen modelliert, z. B. **Class (zugeordnet über „ClassRegistration.Student“)**. Der Ebenenname ist ausführlicher als die anderen, um die zusätzliche Information widerzuspiegeln, die zum eindeutigen Beschreiben der Zuordnungsbeziehung erforderlich ist. Fügen Sie diese Ebene per Drag &amp; Drop zur Ebene **Employee** im Abschnitt **Aktuelle Ebenen** hinzu:  
   
  ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   
@@ -84,7 +83,7 @@ Wie in der folgenden Abbildung gezeigt, lautet der Ebenenname, der diese Beziehu
 Eine Anleitung zum Bereitstellen des Customer-Beispielmodells und weitere in [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]enthaltene Beispielmodelle finden Sie unter [Bereitstellen von Beispielmodelle und Daten](~/master-data-services/sql-server-samples-model-deployment-packages-mds.md).   
   
 ## <a name="one-many-relationship"></a>1:n-Beziehung  
- Ein Element einer abgeleiteten Hierarchie kann das übergeordnete Element vieler untergeordneter Elemente sein, aber es kann in der Regel nicht mehr als ein übergeordnetes Element aufweisen (Ausnahmen finden Sie unter [Elementsicherheit](#bkmk_member_security)). Angenommen, es gibt zwei Entitäten: „Employee“ und „Department“, wobei jeder „Employee“ zu einem einzelnen „Department“ gehört. Diese Beziehung wird durch Hinzufügen eines domänenbasierten Attributs zur Entität „Employee“ modelliert, das auf die Entität „Department“ verweist:  
+ Ein Element einer abgeleiteten Hierarchie kann das übergeordnete Element vieler untergeordneter Elemente sein, aber es kann in der Regel nicht mehr als ein übergeordnetes Element aufweisen (Ausnahmen finden Sie unter [Elementsicherheit](#bkmk_member_security)). Nehmen wir beispielsweise an, dass zwei Entitäten vorhanden sind: „Employee“ und „Department“, wobei jeder „Employee“ zu einem einzelnen „Department“ gehört. Diese Beziehung wird durch Hinzufügen eines domänenbasierten Attributs zur Entität „Employee“ modelliert, das auf die Entität „Department“ verweist:  
   
  ![mds_hierarchies_onetomany](../master-data-services/media/mds-hierarchies-onetomany.png "mds_hierarchies_onetomany")  
   
@@ -104,7 +103,7 @@ Eine Anleitung zum Bereitstellen des Customer-Beispielmodells und weitere in [!I
 ## <a name="collections"></a>Auflistungen  
  Sammlungen und explizite Hierarchien sind veraltet. Die gespeicherte Konvertierungsprozedur (udpConvertCollectionAndConsolidatedMembersToLeaf) konvertiert Sammlungselemente in Blattelemente und erstellt abgeleitete m:n-Hierarchien, um die Informationen zur Sammlungsmitgliedschaft zu erfassen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Abgeleitete Hierarchien &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   

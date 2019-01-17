@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c9612cb4cf45ec71bb511750bab9a84914a0e7f5
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: b1960771504184706bf21e9746a4fa3c784aad3b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712491"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212423"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Arbeiten mit KPIs in Reporting Services
 
@@ -32,7 +32,7 @@ Mit KPIs in SQL Server Reporting Services können Sie einfach Antworten für die
 ## <a name="creating-a-dataset"></a>Erstellen eines Dataset  
 Eine KPI wird nur die erste Zeile der Daten aus einem freigegebenen Dataset verwenden. Stellen Sie sicher, dass sich die Daten, die Sie verwenden möchten, in dieser ersten Zeile befinden. Um ein freigegebenes Dataset zu erstellen, können Sie entweder den Berichts-Generator oder SQL Server Data Tools verwenden.  
   
-> **Hinweis**: Das Dataset muss sich nicht im selben Ordner wie die KPI befinden.  
+> **Hinweis**: Das Dataset muss sich nicht im selben Ordner wie der KPI befinden.  
   
 ## <a name="placement-of-kpis"></a>Platzierung von KPIs  
   
@@ -58,9 +58,9 @@ Sie können entweder statische Werte zuweisen oder Daten aus einem freigegebenen
 |Status|Zum Bestimmen der KPI-Kachelfarbe verwendete und durch Komma getrennte numerische Werte. Gültige Werte sind 1 (Grün), 0 (gelb) und-1 (Rot).|  
 |Trendsatz|Für Diagrammvisualisierungen verwendete durch Komma getrennte numerische Werte. Dies kann auch für eine Spalte eines Dataset mit Werten festgelegt werden, die den Trend darstellen.|  
   
-> **Warnung**: Bei der Verwendung des Wordwerts für das **Status** -Feld zur Entwurfszeit, sollten Sie den Zahlenwert verwenden, wenn Sie ein Dataset aktualisieren. Wenn Sie ein Dataset mit dem Wortwert anstelle des Zahlenwerts aktualisieren, könnten die KPIs auf Ihrem Server beschädigt werden.  
-  
-> **Hinweis:**: Die Felder **Wert**, **Ziel** und **Status** können nur einen Wert aus der ersten Zeile des Ergebnisses eines Datasets auswählen. Das Feld **Trendsatz** kann jedoch wählen, welche Spalte den Trend widerspiegelt.  
+> **Warnung:** Sie können den Wortwert zwar zur Entwurfszeit für das Feld **Status** verwenden, aber wenn Sie ein Dataset aktualisieren, sollten Sie den Zahlenwert verwenden. Wenn Sie ein Dataset mit dem Wortwert anstelle des Zahlenwerts aktualisieren, könnten die KPIs auf Ihrem Server beschädigt werden.  
+> 
+> **Hinweis**: Die Felder **Wert**, **Ziel** und **Status** können nur einen Wert aus der ersten Zeile des Ergebnisses eines Datasets auswählen. Das Feld **Trendsatz** kann jedoch wählen, welche Spalte den Trend widerspiegelt.  
   
 Um Daten aus einem freigegebenen Dataset zu verwenden, können Sie Folgendes tun.  
   
@@ -82,7 +82,7 @@ Um Daten aus einem freigegebenen Dataset zu verwenden, können Sie Folgendes tun
   
     ![rsCreateKPI6](../reporting-services/media/rscreatekpi6.png)  
   
-6.  Wählen Sie **Anwenden** aus.  
+6.  Wählen Sie **Anwenden**aus.  
   
     ![rsCreateKPI7](../reporting-services/media/rscreatekpi7.png)  
   
@@ -94,7 +94,7 @@ Um eine KPI zu entfernen, können Sie Folgendes tun.
   
     ![rsRemoveKPI1](../reporting-services/media/rsremovekpi1.png)  
   
-2.  Wählen Sie **Löschen** aus. Wählen Sie **Löschen** erneut im Bestätigungsdialogfeld aus.  
+2.  Wählen Sie **Löschen**aus. Wählen Sie **Löschen** erneut im Bestätigungsdialogfeld aus.  
   
     ![rsRemoveKPI2](../reporting-services/media/rsremovekpi2.png)  
   

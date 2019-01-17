@@ -1,6 +1,7 @@
 ---
-title: Hinzufügen eines verbesserten Datenbank-Failovers zu einer Verfügbarkeitsgruppe (SQL Server) | Microsoft-Dokumentation
-ms.custom: ''
+title: Aktivieren eines verbesserten Datenbankfailovers für eine Verfügbarkeitsgruppe
+description: Mit diesen Schritten aktivieren Sie ein verbessertes Datenbankfailover, bei dem ein Failover ausgelöst wird, wenn eine Datenbank in einer Always On-Verfügbarkeitsgruppe keine Transaktionen mehr schreiben kann.
+ms.custom: seodec18
 ms.date: 09/25/2017
 ms.prod: sql
 ms.reviewer: mikeray
@@ -13,14 +14,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 181ebdbd2b9d14876b8990bbf8d7b4da768acf39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4dee39cb437011c5e894eb54df91c7282db5fe08
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706138"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211659"
 ---
-# <a name="add-enhanced-database-failover-to-an-availability-group-sql-server"></a>Hinzufügen eines verbesserten Datenbankfailovers zu einer Verfügbarkeitsgruppe (SQL Server)
+# <a name="enable-enhanced-database-failover-to-a-database-in-an-always-on-availability-group"></a>Aktivieren eines verbesserten Datenbankfailovers für eine Datenbank in einer Always On-Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server 2012 und 2014: Wenn eine Datenbank, die in einer Verfügbarkeitsgruppe auf dem primären Replikat enthalten ist, keine Transaktionen mehr schreiben kann, wird dadurch kein Failover ausgelöst, selbst wenn die Replikate synchronisiert und für automatisches Failover konfiguriert sind.

@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e89d2803fda21563b69bb2ba658df2f9a8f0bef
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7a06414a9ca09ecfd02438827cbee6645ca381ae
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545450"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215386"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET-Optionen (Transact-SQL) 
 
@@ -306,7 +306,7 @@ Der Status dieser Option kann mithilfe der Spalte is_auto_close_on in der sys.da
 > [!NOTE]  
 >  Für die Datenbankspiegelung muss AUTO_CLOSE deaktiviert sein (OFF).  
   
-Wenn die Datenbank auf AUTOCLOSE = ON festgelegt ist, wird mit einem Vorgang, bei dem das automatische Beenden der Datenbank initiiert wird, der Plancache für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gelöscht. Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 oder höher enthält das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll für jeden geleerten Cachespeicher im Plancache folgende Meldung zur Information: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat für den '%s'-Cachespeicher (Bestandteil des Plancache) %d Leerungen des Cachespeichers gefunden, die von Datenbankwartungs- oder Neukonfigurierungsvorgängen ausgelöst wurden." Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.  
+Wenn die Datenbank auf AUTOCLOSE = ON festgelegt ist, wird mit einem Vorgang, bei dem das automatische Beenden der Datenbank initiiert wird, der Plancache für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gelöscht. Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 oder höher enthält das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll für jeden geleerten Cachespeicher im Plancache folgende Meldung zur Information: „[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat für den "%2!s!"-Cachespeicher (Bestandteil des Plancache) %1!s! Leerungen des Cachespeichers gefunden, die von Datenbankwartungs- oder Neukonfigurierungsvorgängen ausgelöst wurden.“ Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.  
  
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { ON | OFF }  
 ON  
@@ -668,7 +668,7 @@ Siehe [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-s
   
 **\<mixed_page_allocation_option> ::=**  
   
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [aktuelle Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)). 
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)). 
   
 MIXED_PAGE_ALLOCATION { OFF | ON } steuert, ob die Datenbank die ersten Seiten mit einem gemischten Block für die ersten acht Seiten einer Tabelle oder eines Index erstellen kann.  
  
@@ -695,7 +695,7 @@ Die aktuelle Einstellung der Option kann mithilfe der Spalte is_parameterization
   
 **\<query_store_options> ::=**  
   
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 ON | OFF | CLEAR [ ALL ]  
 Steuert, ob der Abfragespeicher in dieser Datenbank aktiviert ist, und steuert außerdem das Entfernen des Inhalts des Abfragespeichers. Weitere Informationen finden Sie unter [Verwendungsszenarios für den Abfragespeicher](../../relational-databases/performance/query-store-usage-scenarios.md). 
@@ -1115,25 +1115,25 @@ Nicht alle Datenbankoptionen verwenden die WITH \<termination>-Klausel oder kön
   
 |Optionskategorie|Kann mit anderen Optionen angegeben werden|Kann die WITH \<termination>-Klausel verwenden|  
 |----------------------|-----------------------------------------|---------------------------------------------|  
-|\<db_state_option>|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|\<db_user_access_option>|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|\<db_update_option>|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|\<delayed_durability_option>|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|\<external_access_option>|Benutzerkontensteuerung|nein|  
-|\<cursor_option>|Benutzerkontensteuerung|nein|  
-|\<auto_option>|Benutzerkontensteuerung|nein|  
-|\<sql_option>|Benutzerkontensteuerung|nein|  
-|\<recovery_option>|Benutzerkontensteuerung|nein|  
-|\<target_recovery_time_option>|nein|Benutzerkontensteuerung|  
-|\<database_mirroring_option>|nein|nein|  
-|ALLOW_SNAPSHOT_ISOLATION|nein|nein|  
-|READ_COMMITTED_SNAPSHOT|nein|Benutzerkontensteuerung|  
-|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|\<service_broker_option>|Benutzerkontensteuerung|nein|  
-|DATE_CORRELATION_OPTIMIZATION|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|\<parameterization_option>|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|\<change_tracking_option>|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|\<db_encryption_option>|Benutzerkontensteuerung|nein|  
+|\<db_state_option>|Ja|Ja|  
+|\<db_user_access_option>|Ja|Ja|  
+|\<db_update_option>|Ja|Ja|  
+|\<delayed_durability_option>|Ja|Ja|  
+|\<external_access_option>|Ja|Nein|  
+|\<cursor_option>|Ja|Nein|  
+|\<auto_option>|Ja|Nein|  
+|\<sql_option>|Ja|Nein|  
+|\<recovery_option>|Ja|Nein|  
+|\<target_recovery_time_option>|Nein|Ja|  
+|\<database_mirroring_option>|Nein|Nein|  
+|ALLOW_SNAPSHOT_ISOLATION|Nein|Nein|  
+|READ_COMMITTED_SNAPSHOT|Nein|Ja|  
+|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Ja|Ja|  
+|\<service_broker_option>|Ja|Nein|  
+|DATE_CORRELATION_OPTIMIZATION|Ja|Ja|  
+|\<parameterization_option>|Ja|Ja|  
+|\<change_tracking_option>|Ja|Ja|  
+|\<db_encryption_option>|Ja|Nein|  
   
 Der Plancache für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird gelöscht, indem eine der folgenden Optionen festgelegt wird:  
   
@@ -1154,7 +1154,7 @@ Der Prozedurcache wird auch in den folgenden Szenarien geleert.
 - Sie stellen eine Datenbanksicherung wieder her.  
 -   Sie trennen eine Datenbank.  
   
-Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. Für jeden geleerten Cachespeicher im Plancache enthält das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll folgende Meldung zur Information: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat für den '%s'-Cachespeicher (Bestandteil des Plancache) %d Leerungen des Cachespeichers gefunden, die von Datenbankwartungs- oder Neukonfigurierungsvorgängen ausgelöst wurden". Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.  
+Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. Für jeden geleerten Cachespeicher im Plancache enthält das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll folgende Meldung zur Information: „[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat für den "%2!s!"-Cachespeicher (Bestandteil des Plancache) %1!s! Leerungen des Cachespeichers gefunden, die von Datenbankwartungs- oder Neukonfigurierungsvorgängen ausgelöst wurden.“. Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -1242,7 +1242,7 @@ SET CHANGE_TRACKING = OFF;
 ```  
   
 ### <a name="e-enabling-the-query-store"></a>E. Aktivieren des Abfragespeichers  
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 Im folgenden Beispiel werden der Abfragespeicher aktiviert und Parameter des Abfragespeichers konfiguriert.  
   
@@ -1258,7 +1258,7 @@ SET QUERY_STORE = ON
     );  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [ALTER DATABASE-Kompatibilitätsgrad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
 [ALTER DATABASE-Datenbankspiegelung](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
 [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)   
@@ -1946,20 +1946,20 @@ Nicht alle Datenbankoptionen verwenden die WITH \<termination>-Klausel oder kön
   
 |Optionskategorie|Kann mit anderen Optionen angegeben werden|Kann die WITH \<termination>-Klausel verwenden|  
 |----------------------|-----------------------------------------|---------------------------------------------|  
-|\<auto_option>|Benutzerkontensteuerung|nein|  
-|\<change_tracking_option>|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|\<cursor_option>|Benutzerkontensteuerung|nein|  
-|\<db_encryption_option>|Benutzerkontensteuerung|nein|  
-|\<db_update_option>|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|\<db_user_access_option>|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|\<delayed_durability_option>|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|\<parameterization_option>|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|ALLOW_SNAPSHOT_ISOLATION|nein|nein|  
-|READ_COMMITTED_SNAPSHOT|nein|Benutzerkontensteuerung|  
-|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|DATE_CORRELATION_OPTIMIZATION|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|\<sql_option>|Benutzerkontensteuerung|nein|  
-|\<target_recovery_time_option>|nein|Benutzerkontensteuerung|  
+|\<auto_option>|Ja|Nein|  
+|\<change_tracking_option>|Ja|Ja|  
+|\<cursor_option>|Ja|Nein|  
+|\<db_encryption_option>|Ja|Nein|  
+|\<db_update_option>|Ja|Ja|  
+|\<db_user_access_option>|Ja|Ja|  
+|\<delayed_durability_option>|Ja|Ja|  
+|\<parameterization_option>|Ja|Ja|  
+|ALLOW_SNAPSHOT_ISOLATION|Nein|Nein|  
+|READ_COMMITTED_SNAPSHOT|Nein|Ja|  
+|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Ja|Ja|  
+|DATE_CORRELATION_OPTIMIZATION|Ja|Ja|  
+|\<sql_option>|Ja|Nein|  
+|\<target_recovery_time_option>|Nein|Ja|  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -2046,7 +2046,7 @@ SET QUERY_STORE = ON
     );  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [ALTER DATABASE-Kompatibilitätsgrad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
 [ALTER DATABASE-Datenbankspiegelung](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
 [Statistiken](../../relational-databases/statistics/statistics.md)   
@@ -2748,7 +2748,7 @@ SET QUERY_STORE = ON
     );  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [ALTER DATABASE-Kompatibilitätsgrad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
 [ALTER DATABASE-Datenbankspiegelung](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
 [Statistiken](../../relational-databases/statistics/statistics.md)   

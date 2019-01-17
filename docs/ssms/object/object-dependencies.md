@@ -13,12 +13,12 @@ ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1bdda5d95544df6b7cd7cc4108c3bd21dc8f50d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fca3b535b31a3524389804442bb61370fb164008
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779158"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591534"
 ---
 # <a name="object-dependencies"></a>Objektabhängigkeiten
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,10 +29,10 @@ Unter **Objektabhängigkeiten** (erweiterte Seite) für die aktuellen Objekte we
 Mithilfe dieses Dialogfelds können Sie sich einen Überblick über die Abhängigkeiten verschaffen, bevor Sie das ausgewählte Objekt ändern oder löschen.  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
-**Objekte, abhängig von** *<selected object>*  
+**Objekte, die von** _\<ausgewähltes Objekt>_ abhängig sind  
 Durch Klicken auf diese Schaltfläche wird eine Liste der Objekte angezeigt, deren Abhängigkeiten nachverfolgt werden und die vom ausgewählten Objekt abhängig sind.  
   
-**Objekte, von denen** *<selected object>* **abhängt**  
+**Objekte, von denen** _\<ausgewähltes Objekt>_ **abhängt**  
 Durch Klicken auf diese Schaltfläche wird eine Liste der Objekte angezeigt, deren Abhängigkeiten nachverfolgt werden und von denen das ausgewählte Objekt abhängig ist.  
   
 **Abhängigkeiten**  

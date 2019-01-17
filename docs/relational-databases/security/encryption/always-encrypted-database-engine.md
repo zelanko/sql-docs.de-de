@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 748c341960d8bb50a70f06e6473c2eb613b071aa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 841d38d4a862582a393fba116676908572f39d38
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675129"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203039"
 ---
 # <a name="always-encrypted-database-engine"></a>Immer verschlüsselt (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "51675129"
  Ein Kunde verfügt über eine Clientanwendung und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , die beide lokal, an ihrem Unternehmensstandort ausgeführt werden. Der Kunde möchte einen externen Anbieter einstellen, um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]zu verwalten. Um die sensiblen, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]gespeicherten Daten zu schützen, verwendet der Kunde Always Encrypted, um die Trennung der Pflichten von Datenbankadministratoren und Anwendungsadministratoren sicherzustellen. Der Kunde speichert Klartextwerte von Always Encrypted-Schlüsseln in einem vertrauenswürdigen Schlüsselspeicher, auf den die Clientanwendung zugreifen kann. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Administratoren haben keinen Zugriff auf die Schlüssel und sind daher nicht in der Lage, die in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]gespeicherten sensiblen Daten zu entschlüsseln.  
   
 ### <a name="client-on-premises-with-data-in-azure"></a>Lokaler Client mit Daten in Azure  
- Ein Kunde verfügt über eine lokale Clientanwendung an seinem Unternehmensstandort. Die Anwendung arbeitet mit sensiblen Daten, die in einer von Azure gehosteten Datenbank gespeichert sind ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf einem virtuellen Computer in Microsoft Azure ausgeführt). Der Kunde verwendet Always Encrypted und speichert Always Encrypted-Schlüssel in einem vertrauenswürdigen, lokal gehosteten Schlüsselspeicher, damit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] -Cloudadministratoren keinen Zugriff auf sensible Daten haben.  
+ Ein Kunde verfügt über eine lokale Clientanwendung an seinem Unternehmensstandort. Die Anwendung arbeitet mit sensiblen Daten, die in einer von Azure gehosteten Datenbank gespeichert sind ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf einem virtuellen Computer in Microsoft Azure). Der Kunde verwendet Always Encrypted und speichert Always Encrypted-Schlüssel in einem vertrauenswürdigen, lokal gehosteten Schlüsselspeicher, damit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] -Cloudadministratoren keinen Zugriff auf sensible Daten haben.  
   
 ### <a name="client-and-data-in-azure"></a>Client und Daten in Azure  
  Ein Kunde hat eine Clientanwendung, die in Microsoft Azure (z.B. in einer Worker- oder einer Webrolle) gehostet wird. Sie operiert mit sensiblen Daten, die auch in Microsoft Azure gespeichert sind (SQL-Datenbank oder SQL Server werden auf einem virtuellen Computer in Microsoft Azure ausgeführt). Obwohl Always Encrypted keine vollständige Isolation von Daten von Cloudadministratoren bietet, da sowohl die Daten als auch die Schlüssel den Cloudadministratoren der Plattform, die die Clientebene hostet, verfügbar gemacht werden, profitiert der Kunde noch immer von der Verringerung der Angriffsfläche für Sicherheitsangriffe (die Daten werden in der Datenbank immer verschlüsselt).  
@@ -104,10 +104,10 @@ Informationen zu kryptografischen Algorithmen von Always Encrypted finden Sie un
 
 |Task|SSMS|PowerShell|T-SQL|
 |:---|:---|:---|:---
-|Bereitstellung von Spaltenhauptschlüsseln, Spaltenverschlüsselungsschlüsseln und Verschlüsselungsschlüsseln für verschlüsselte Spalten mit dem entsprechenden Spaltenhauptschlüssel|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|
-|Erstellen von Schlüsselmetadaten in der Datenbank|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
-|Erstellen neuer Tabellen mit verschlüsselten Spalten|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
-|Verschlüsseln von vorhandenen Daten in ausgewählten Datenbankspalten|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|
+|Bereitstellung von Spaltenhauptschlüsseln, Spaltenverschlüsselungsschlüsseln und Verschlüsselungsschlüsseln für verschlüsselte Spalten mit dem entsprechenden Spaltenhauptschlüssel|Ja|Ja|Nein|
+|Erstellen von Schlüsselmetadaten in der Datenbank|Ja|Ja|Ja|
+|Erstellen neuer Tabellen mit verschlüsselten Spalten|Ja|Ja|Ja|
+|Verschlüsseln von vorhandenen Daten in ausgewählten Datenbankspalten|Ja|Ja|Nein|
 
 > [!NOTE]
 > Stellen Sie sicher, dass Sie Schlüsselbereitstellungs- oder Datenverschlüsselungstools in einer sicheren Umgebung auf einem Computer ausführen, auf dem nicht Ihre Datenbank gehostet wird. Andernfalls könnten vertrauliche Daten oder die Schlüssel in der Serverumgebung zugänglich werden, was die Vorteile der Verwendung von Always Encrypted verringern würde.  
@@ -255,7 +255,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)   
 [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
 [CREATE TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql.md)   

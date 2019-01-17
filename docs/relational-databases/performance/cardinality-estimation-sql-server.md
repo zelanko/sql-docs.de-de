@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CE (cardinality estimator)
 - estimating cardinality
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 27ef6862a5fcfb6e63ffcbdd89fb1e000c2065f2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4f827b1de0a9cba06a17fc2b84724277e9daab22
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667029"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328850"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Kardinalitätsschätzung (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ Sie verfügen über Techniken, um eine Abfrage zu identifizieren, die mit der ne
 1998 war ein großes Update der Kardinalitätsschätzung Teil von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, dessen Kompatibilitätsgrad 70 betrug. Diese Version des Modells der Kardinalitätsschätzung baut auf vier grundlegenden Annahmen auf:
 
 -  **Unabhängigkeit:** Es wird angenommen, dass Datenverteilungen in verschiedenen Spalten unabhängig voneinander sind, es sei denn, Korrelationsinformationen sind verfügbar und verwendbar.
--  **Einheitlichkeit:** DISTINCT-Werte haben denselben Abstand und dieselbe Häufigkeit. Genauer gesagt, sind DISTINCT-Werte innerhalb der Schritte eines [Histogramms](../../relational-databases/statistics/statistics.md#histogram) gleichmäßig verteilt, und jeder Wert weist dieselbe Häufigkeit auf. 
+-  **Einheitlichkeit:** Unterschiedliche Werte haben denselben Abstand und dieselbe Häufigkeit. Genauer gesagt, sind DISTINCT-Werte innerhalb der Schritte eines [Histogramms](../../relational-databases/statistics/statistics.md#histogram) gleichmäßig verteilt, und jeder Wert weist dieselbe Häufigkeit auf. 
 -  **Einschluss (einfach):** Benutzer fragen Daten ab, die bereits vorhanden sind. Bei einem Gleichheits-Join von zwei Tabellen sollten Sie z.B. die Selektivität<sup>1</sup> von Prädikaten in jedem Eingabehistogramm berücksichtigen, bevor Sie Histogramme verknüpfen, um die Joinselektivität zu schätzen. 
 -  **Aufnahme:** Bei Filterprädikaten, in denen `Column = Constant` gilt, wird angenommen, dass sie für die zugeordnete Spalte tatsächlich vorhanden sind. Wenn ein entsprechender Histogrammschritt nicht leer ist, wird angenommen, dass einer der DISTINCT-Werte des Schritts dem Wert des Prädikats entspricht.
 
@@ -47,10 +47,10 @@ Sie verfügen über Techniken, um eine Abfrage zu identifizieren, die mit der ne
 
 Spätere Updates beginnen mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], also mit Kompatibilitätsgrad 120 und höher. Die Updates der Kardinalitätsschätzung für die Kompatibilitätsgrade 120 und höher umfassen aktualisierte Annahmen und Algorithmen, die für moderne Data Warehousing- und OLTP-Workloads gut funktionieren. Aus den Annahmen der Kardinalitätsschätzung 70 wurden ab Kardinalitätsschätzung 120 die folgenden Modellannahmen geändert:
 
--  **Unabhängigkeit** wird zu **Korrelation**: Die Kombination der verschiedenen Spaltenwerte ist nicht unbedingt unabhängig. Dies ähnelt eher einer realistischen Datenabfrage.
--  Der **einfache Einschluss** wird zum **Basiseinschluss**: Benutzer können Daten abfragen, die nicht vorhanden sind. Bei einem Gleichheits-Join von zwei Tabellen nutzen wir die Basistabellenhistogramme, um die Joinselektivität zu schätzen, und berücksichtigen anschließend die Selektivität der Prädikate.
+-  **Unabhängigkeit** wird zu **Korrelation:** Die Kombination der verschiedenen Spaltenwerte ist nicht unbedingt unabhängig. Dies ähnelt eher einer realistischen Datenabfrage.
+-  Der **einfache Einschluss** wird zu **Basiseinschluss:** Möglicherweise fragen Benutzer Daten ab, die nicht vorhanden sind. Bei einem Gleichheits-Join von zwei Tabellen nutzen wir die Basistabellenhistogramme, um die Joinselektivität zu schätzen, und berücksichtigen anschließend die Selektivität der Prädikate.
   
-**Kompatibilitätsgrad**: Sie können sicherstellen, dass ein bestimmter Grad für Ihre Datenbank gilt, indem Sie den folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code für [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) ausführen.  
+**Kompatibilitätsgrad:** Sie können sicherstellen, dass ein bestimmter Grad für Ihre Datenbank gilt, indem Sie den folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code für [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) ausführen.  
 
 ```sql  
 SELECT ServerProperty('ProductVersion');  
@@ -68,7 +68,7 @@ GO
   
 In einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank, die mit dem Kompatibilitätsgrad 120 oder höher eingerichtet wurde, zwingt die Aktivierung des [Ablaufverfolgungsflags 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) das System dazu, Version 70 der Kardinalitätsschätzung zu verwenden.  
   
-**Ältere Kardinalitätsschätzung**: In einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank, die mit dem Kompatibilitätsgrad 120 oder höher eingerichtet wurde, kann Version 70 der Kardinalitätsschätzung aktiviert werden. Verwenden Sie dazu [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) auf Datenbankebene.
+**Ältere Kardinalitätsschätzung:** In einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank, die mit dem Kompatibilitätsgrad 120 oder höher eingerichtet wurde, kann Version 70 der Kardinalitätsschätzung aktiviert werden. Verwenden Sie dazu [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) auf Datenbankebene.
   
 ```sql  
 ALTER DATABASE SCOPED CONFIGURATION 
@@ -268,7 +268,7 @@ WHERE s.ticket = r.ticket AND
       r.date = '2016-05-11';  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Überwachen und Optimieren der Leistung](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator (Optimieren Ihrer Abfragepläne mit der SQL Server 2014-Kardinalitätsschätzung)](https://msdn.microsoft.com/library/dn673537.aspx)  
  [Abfragehinweise](../../t-sql/queries/hints-transact-sql-query.md)     

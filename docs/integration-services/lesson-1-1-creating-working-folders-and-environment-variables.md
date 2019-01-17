@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 1: Erstellen von Arbeitsordnern und Umgebungsvariablen | Microsoft-Dokumentation'
+title: 'Schritt 1: Erstellen von Arbeitsordnern und Umgebungsvariablen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,19 +11,19 @@ ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5ffaef2277d5e6e902078a75fca75df7c6400106
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51cd0ab995803c9582f91f5a9a732838736ac526
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719245"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207679"
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>Lektion 1-1: Erstellen von Arbeitsordnern und Umgebungsvariablen
 In dieser Aufgabe erstellen Sie den Arbeitsordner (C:\DeploymentTutorial) und die neuen Systemumgebungsvariablen (`DataTransfer` und `LoadXMLData`), die in späteren Lernprogrammaufgaben verwendet werden.  
   
 Der Arbeitsordner befindet sich im Stamm von Laufwerk C. Bei Bedarf können Sie ein anderes Laufwerk bzw. einen anderen Speicherort verwenden. Sie müssen sich diesen Speicherort jedoch notieren und immer dann verwenden, wenn im Lernprogramm auf den Speicherort des Arbeitsordners DeploymentTutorial verwiesen wird.  
   
-In einer späteren Lektion stellen Sie Pakete bereit, die im Dateisystem in der sysssispackages-Tabelle der msdb-Datenbank von[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gespeichert werden. Idealerweise erfolgt die Bereitstellung der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Pakete auf einem anderen Computer. Falls dies nicht möglich ist, können Sie dennoch viel von diesem Lernprogramm profitieren, indem Sie die Pakete auf einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf dem lokalen Computer bereitstellen. Die Umgebungsvariablen, die auf dem lokalen Computer und dem Zielcomputer verwendet werden, weisen die gleichen Variablennamen auf, doch werden unterschiedliche Werte in den Variablen gespeichert. So verweist z. B. der Wert der `DataTransfer` -Umgebungsvariablen auf dem lokalen Computer auf den Ordner C:\DeploymentTutorial, während die `DataTransfer` -Umgebungsvariable auf dem Zielcomputer auf den Ordner C:\DeploymentTutorialInstall verweist.  
+In einer späteren Lektion stellen Sie Pakete bereit, die im Dateisystem in der sysssispackages-Tabelle der msdb-Datenbank von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gespeichert werden. Idealerweise erfolgt die Bereitstellung der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Pakete auf einem anderen Computer. Falls dies nicht möglich ist, können Sie dennoch viel von diesem Lernprogramm profitieren, indem Sie die Pakete auf einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf dem lokalen Computer bereitstellen. Die Umgebungsvariablen, die auf dem lokalen Computer und dem Zielcomputer verwendet werden, weisen die gleichen Variablennamen auf, doch werden unterschiedliche Werte in den Variablen gespeichert. So verweist z. B. der Wert der `DataTransfer` -Umgebungsvariablen auf dem lokalen Computer auf den Ordner C:\DeploymentTutorial, während die `DataTransfer` -Umgebungsvariable auf dem Zielcomputer auf den Ordner C:\DeploymentTutorialInstall verweist.  
   
 Wenn Sie eine Bereitstellung auf dem lokalen Computer planen, müssen Sie nur einen Satz von Umgebungsvariablen erstellen. Es ist jedoch erforderlich, den Wert der Umgebungsvariablen vor der lokalen Bereitstellung auf einen geeigneten Wert zu aktualisieren.  
   

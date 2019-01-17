@@ -22,16 +22,16 @@ ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 864377bee6ee587e95321338d0c1a46f5c7523e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31eb77b8223c13de9fe5a7e098a42462ed4fd915
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742978"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591754"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server Audit-Aktionsgruppen und -Aktionen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Die Funktion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit ermöglicht Ihnen, Ereignisgruppen und einzelne Ereignisse auf Server- und Datenbankebene zu überwachen. Weitere Informationen finden Sie unter [SQL Server Audit &amp;#40;Datenbank-Engine&amp;#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Die Funktion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit ermöglicht Ihnen, Ereignisgruppen und einzelne Ereignisse auf Server- und Datenbankebene zu überwachen. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachungen bestehen aus null oder mehr Überwachungsaktionselementen. Bei diesen Überwachungsaktionselementen kann es sich entweder um Aktionsgruppen, wie Server_Object_Change_Group, oder um einzelne Aktionen, wie SELECT-Vorgänge in einer Tabelle, handeln.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "47742978"
 |DATABASE_CHANGE_GROUP|Das Ereignis wird ausgelöst, wenn eine Datenbank erstellt, geändert oder gelöscht wird. Das Ereignis wird immer dann ausgelöst, wenn eine Datenbank erstellt, geändert oder gelöscht wird. Entspricht der [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md).|  
 |DATABASE_LOGOUT_GROUP|Das Ereignis wird ausgelöst, wenn sich der Benutzer einer eigenständigen Datenbank von einer Datenbank abmeldet. Entspricht der Audit Database Logout-Ereignisklasse.|  
 |DATABASE_MIRRORING_LOGIN_GROUP|Das Ereignis wird für Berichtsüberwachungsmeldungen zur Transportsicherheit der Datenbankspiegelung ausgelöst. Entspricht der [Audit Database Mirroring Login Event Class](../../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md).|  
-|DATABASE_OBJECT_ACCESS_GROUP|Das Ereignis wird jedes Mal ausgelöst, wenn auf Datenbankobjekte, z. B. Nachrichtentyp, Assembly, Vertrag, zugegriffen wird. Dieses Ereignis wird für jeden Zugriff auf eine Datenbank ausgelöst. Hinweis: Dies kann zu sehr vielen Überwachungsdatensätzen führen.<br /><br /> Entspricht der [Audit Database Object Access Event Class](../../../relational-databases/event-classes/audit-database-object-access-event-class.md).|  
+|DATABASE_OBJECT_ACCESS_GROUP|Das Ereignis wird jedes Mal ausgelöst, wenn auf Datenbankobjekte, z. B. Nachrichtentyp, Assembly, Vertrag, zugegriffen wird. Dieses Ereignis wird für jeden Zugriff auf eine Datenbank ausgelöst. Hinweis: Dies kann zu großen Überwachungsdatensätzen führen.<br /><br /> Entspricht der [Audit Database Object Access Event Class](../../../relational-databases/event-classes/audit-database-object-access-event-class.md).|  
 |DATABASE_OBJECT_CHANGE_GROUP|Das Ereignis wird ausgelöst, wenn eine CREATE-, ALTER- oder DROP-Anweisung für Datenbankobjekte, z. B. Schemas, ausgeführt wird. Dieses Ereignis wird immer dann ausgelöst, wenn ein Datenbankobjekt erstellt, geändert oder gelöscht wird. Hinweis: Dies kann zu einer sehr großen Anzahl an Überwachungsdatensätzen führen.<br /><br /> Entspricht der [Audit Database Object Management Event Class](../../../relational-databases/event-classes/audit-database-object-management-event-class.md).|  
 |DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP|Das Ereignis wird ausgelöst, wenn der Besitzer für Objekte im Datenbankbereich geändert wird. Das Ereignis wird für eine Objektbesitzänderung in einer beliebigen Datenbank auf dem Server ausgelöst. Entspricht der [Audit Database Object Take Ownership Event Class](../../../relational-databases/event-classes/audit-database-object-take-ownership-event-class.md).|  
 |DATABASE_OBJECT_PERMISSION_CHANGE_GROUP|Das Ereignis wird ausgelöst, wenn für Datenbankobjekte, z. B. Assemblys und Schemas, eine GRANT-, REVOKE- oder DENY-Anweisung ausgegeben wurde. Das Ereignis wird für eine Objektberechtigungsänderung für eine beliebige Datenbank auf dem Server ausgelöst. Entspricht der [Audit Database Object GDR Event Class](../../../relational-databases/event-classes/audit-database-object-gdr-event-class.md).|  
@@ -122,6 +122,9 @@ ms.locfileid: "47742978"
  Aktionsgruppen auf Serverebene umfassen Aktionen auf einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz. Das Einchecken eines Schemaobjektszugriffs auf eine Datenbank wird beispielsweise aufgezeichnet, wenn die entsprechende Aktionsgruppe der Serverüberwachungsspezifikation hinzugefügt wird. In einer Datenbank-Überwachungsspezifikation werden nur Schemaobjektzugriffe in dieser Datenbank aufgezeichnet.  
   
  Aktionen auf Serverebene ermöglichen keine ausführliche Filterung für Aktionen auf Datenbankebene. Eine Überwachung auf Datenbankebene, z. B. eine Überwachung der SELECT-Aktionen in der Customers-Tabelle für Anmeldedaten in der Employee-Gruppe, ist für die Implementierung einer ausführlichen Aktionsfilterung notwendig. Beziehen Sie in einer Benutzerdatenbank-Überwachungsspezifikation keine Objekte mit Serverbereich ein, wie Systemsichten.  
+
+ > [!NOTE]
+ > Da das Aktivieren einer Überwachung auf Transaktionsebene sehr aufwändig ist, ist dies ab [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] SP2 CU3 und [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 standardmäßig deaktiviert, wenn auch die Common Criteria-Kompatibilität deaktiviert ist.  Wenn die Common Criteria-Kompatibilität deaktiviert ist, können Sie zwar trotzdem eine Aktion der TRANSACTION_GROUP zu einer Überwachungsspezifikation hinzufügen, aber dann werden keine Transaktionsdaten erfasst.  Wenn Sie Überwachungsaktionen der TRANSACTION_GROUP konfigurieren möchten, vergewissern Sie sich, dass die Infrastruktur zur Überwachung auf Transaktionsebene aktiviert ist, indem Sie ab [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] SP2 CU3 und [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 und höher die Common Criteria-Kompatibilität aktivieren.  Beachten Sie dabei, dass bei [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] ab SP1 CU2 die Überwachung auf Transaktionsebene auch mit dem Ablaufverfolgungsflag 3427 deaktiviert sein kann.
   
 ## <a name="database-level-audit-action-groups"></a>Überwachungsaktionsgruppen auf Datenbankebene  
  Überwachungsaktionsgruppen auf Datenbankebene sind Aktionen, die Ereignisklassen der Sicherheitsüberwachung in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ähneln. Weitere Informationen zu Ereignisklassen finden Sie unter [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md).  

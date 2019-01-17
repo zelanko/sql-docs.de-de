@@ -15,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cef241919f29225ee7c6384a7466fc69bc9391ed
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 5f5dcb8899b64a7dc21367b5deda5aa6bd473a65
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571439"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748482"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Handbuch zur Architektur von Seiten und Blöcken
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -155,7 +155,7 @@ IAM-Seiten werden je nach Bedarf für jede Zuordnungseinheit zugeordnet und nach
  
 Pro Zuordnungseinheit in einer Kette verknüpfte IAM-Seiten. Eine IAM-Seite verfügt über einen Header, der den Anfangsblock des Bereichs von Blöcken kennzeichnet, die von der IAM-Seite zugeordnet werden. Die IAM-Seite verfügt darüber hinaus über ein großes Bitmuster, in dem jedes Bit einen Block darstellt. Das erste Bit in dem Bitmuster stellt den ersten Block im Bereich dar, das zweite Bit stellt den zweiten Block dar usw. Wenn ein Bit den Wert 0 hat, ist der Block, den es darstellt, nicht für die Zuordnungseinheit zugeordnet, die die IAM besitzt. Wenn das Bit den Wert 1 hat, ist der Block, den es darstellt, für die Zuordnungseinheit zugeordnet, die die IAM-Seite besitzt.
 
-Wenn von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] eine neue Zeile eingefügt werden muss und auf der aktuellen Seite kein Speicherplatz verfügbar ist, werden die IAM- und PFS-Seiten verwendet, um eine zuzuordnende Seite zu finden oder – bei einem Heap oder einer Text-/Image-Seite – um eine Seite mit ausreichend Platz zur Aufnahme der Zeile zu finden. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verwendet IAM-Seiten, um die Blöcke zu suchen, die für die Zuordnungseinheit zugeordnet sind. Für jeden Block durchsucht [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die FPS-Seiten, um herauszufinden, ob eine geeignete Seite vorhanden ist. Jede IAM- und PFS-Seite erfasst viele Datenseiten, sodass in jeder Datenbank nur wenige IAM- und PFS-Seiten enthalten sind. Dies bedeutet, dass sich die IAM- und PFS-Seiten normalerweise im Arbeitsspeicher des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Pufferpools befinden, sodass sie schnell durchsucht werden können. Für Indizes wird die Einfügemarke einer neuen Zeile durch den Indexschlüssel festgelegt. In diesem Fall wird der zuvor beschriebene Suchprozess nicht verwendet.
+Wenn von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] eine neue Zeile eingefügt werden muss und auf der aktuellen Seite kein Speicherplatz verfügbar ist, werden die IAM- und PFS-Seiten verwendet, um eine zuzuordnende Seite zu finden oder – bei einem Heap oder einer Text-/Image-Seite – um eine Seite mit ausreichend Platz zur Aufnahme der Zeile zu finden. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verwendet IAM-Seiten, um die Blöcke zu suchen, die für die Zuordnungseinheit zugeordnet sind. Für jeden Block durchsucht [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die FPS-Seiten, um herauszufinden, ob eine geeignete Seite vorhanden ist. Jede IAM- und PFS-Seite erfasst viele Datenseiten, sodass in jeder Datenbank nur wenige IAM- und PFS-Seiten enthalten sind. Dies bedeutet, dass sich die IAM- und PFS-Seiten normalerweise im Arbeitsspeicher des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Pufferpools befinden, sodass sie schnell durchsucht werden können. Für Indizes wird die Einfügemarke für eine neue Zeile durch den Indexschlüssel festgelegt. Wenn jedoch eine neue Seite benötigt wird, wird der zuvor beschriebene Vorgang durchgeführt.
 
 Ein neuer Block für eine Zuordnungseinheit wird nur dann von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] zugeordnet, wenn es nicht schnell möglich ist, in einem vorhandenen Block eine Seite zu finden, die ausreichend Speicherplatz bietet, um die eingefügte Zeile aufnehmen zu können. 
 
@@ -175,6 +175,6 @@ Der Abstand zwischen DCM-Seiten und BCM-Seiten ist derselbe Abstand wie zwischen
 
 ![special_page_order](../relational-databases/media/special-page-order.gif)
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 [sys.allocation_units &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
 [Heaps &#40;Tabellen ohne gruppierte Indizes&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)    
