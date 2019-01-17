@@ -16,12 +16,12 @@ ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66db1468b93e2ff95073bfd7e9f065860f774a0f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 8c1be5887e4d3b6ff4af02e12e8af26a456987e2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202789"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125425"
 ---
 # <a name="enable-or-disable-always-on-availability-group-feature"></a>Aktivieren oder Deaktivieren des Features für Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -134,7 +134,7 @@ ms.locfileid: "53202789"
   
 2.  Zeigen Sie im Menü **Start** auf **Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], zeigen Sie auf **Konfigurationstools**, und klicken Sie dann auf **SQL Server Konfigurations-Manager**.  
   
-3.  Klicken Sie im **SQL Server-Konfigurations-Manager** auf **SQL Server-Dienste** und mit der rechten Maustaste auf SQL Server (**\<***Instanzname***>)**, wobei **\<***Instanzname***>** der Name einer lokalen Serverinstanz ist, für die Sie Always On-Verfügbarkeitsgruppen aktivieren sollten, und klicken Sie dann auf **Eigenschaften**.  
+3.  Klicken Sie im **SQL Server-Konfigurations-Manager** auf **SQL Server-Dienste** und mit der rechten Maustaste auf SQL Server (**\<**_Instanzname_**>)**, wobei **\<**_Instanzname_**>** der Name einer lokalen Serverinstanz ist, für die Sie AlwaysOn-Verfügbarkeitsgruppen aktivieren möchten, und klicken Sie dann auf **Eigenschaften**.  
   
 4.  Wählen Sie die Registerkarte **Hohe Verfügbarkeit mit AlwaysOn** aus.  
   
@@ -198,7 +198,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 2.  Zeigen Sie im Menü **Start** auf **Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], zeigen Sie auf **Konfigurationstools**, und klicken Sie dann auf **SQL Server-Konfigurations-Manager**.  
   
-3.  Klicken Sie im **SQL Server-Konfigurations-Manager** auf **SQL Server-Dienste** und mit der rechten Maustaste auf SQL Server (**\<***Instanzname***>)**, wobei **\<***Instanzname***>** der Name einer lokalen Serverinstanz ist, für die Sie Always On-Verfügbarkeitsgruppen deaktivieren sollten, und klicken Sie dann auf **Eigenschaften**.  
+3.  Klicken Sie im **SQL Server-Konfigurations-Manager** auf **SQL Server-Dienste** und mit der rechten Maustaste auf SQL Server (**\<**_Instanzname_**>)**, wobei **\<**_Instanzname_**>** der Name einer lokalen Serverinstanz ist, für die Sie AlwaysOn-Verfügbarkeitsgruppen deaktivieren möchten, und klicken Sie dann auf **Eigenschaften**.  
   
 4.  Deaktivieren Sie auf der Registerkarte**Hohe Verfügbarkeit mit AlwaysOn**das Kontrollkästchen **AlwaysOn-Verfügbarkeitsgruppen aktivieren** , und klicken Sie auf **OK**.  
   

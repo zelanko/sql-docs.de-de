@@ -10,12 +10,12 @@ ms.technology: developer
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/12/2018
-ms.openlocfilehash: 498432a84d523c597d7c7c52c151dce003047ba2
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: c3ea066f93f2848ed822fdac24f37b2c5f179ac9
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328555"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254695"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Entwickeln mit REST-APIs für Reporting Services
 
@@ -40,14 +40,14 @@ Ein REST-API-Anforderung/Antwort-Paar kann in fünf Komponenten gegliedert werde
 
 * Nachrichtenheaderfelder mit HTTP-Anforderungen:
 
-    * eine erforderliche [HTTP-Methode](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) (ebenfalls unter den Bezeichnungen „Vorgang“ oder „Verb“ bekannt), über die der Dienst erfährt, welchen Vorgangstyp Sie anfordern; Reporting Services REST-APIs unterstützen die Methoden DELETE, GET, HEAD, PUT, POST und PATCH (Löschen, Abrufen, Kopfteil, Platzieren, Bereitstellen und Reparieren).
+    * eine erforderliche [HTTP-Methode](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) (ebenfalls unter den Bezeichnungen „Vorgang“ oder „Verb“ bekannt), über die der Dienst erfährt, welchen Vorgangstyp Sie anfordern; Reporting Services REST-APIs unterstützen die Methoden DELETE, GET, HEAD, PUT, POST und PATCH (Löschen, Abrufen, Kopfteil, Platzieren, Bereitstellen und Reparieren).
     * Zusätzliche optionale Headerfelder, die für den angegebenen URI und HTTP-Methode erforderlich sind.
 
 * Optionale **Nachrichtentextfelder mit HTTP-Antworten** zur Unterstützung des URI und des HTTP-Vorgangs. Beispielsweise enthalten POST-Vorgänge MIME-codierte Objekte, die als komplexe Parameter übergeben werden. Für POST- oder PUT-Vorgänge sollte der MIME-codierte Textkörpertyp ebenfalls im Anforderungsheader `Content-type` angegeben werden. Einige Dienste verlangen die Verwendung eines MIME-Typs wie `application/json`.
 
 * **Nachrichtenheaderfelder mit HTTP-Anworten**:
 
-    * Ein [HTTP-Statuscode](https://www.w3.org/Protocols/HTTP/HTRESP.html), der zwischen den Erfolgscodes 2xx und den Fehlercodes 4xx oder 5xx liegt. Stattdessen kann auch, wie in der API-Dokumentation angegeben, ein Statuscode zurückgegeben werden, der für einen Dienst definiert ist.
+    * Ein [HTTP-Statuscode](http://www.w3.org/Protocols/HTTP/HTRESP.html), der zwischen den Erfolgscodes 2xx und den Fehlercodes 4xx oder 5xx liegt. Stattdessen kann auch, wie in der API-Dokumentation angegeben, ein Statuscode zurückgegeben werden, der für einen Dienst definiert ist.
     * Zusätzliche optionale Headerfelder, die zum Unterstützen der Antwort der Anforderung erforderlich sind, z.B. ein `Content-type`-Antwortheader.
 
 * Optionale **Nachrichtentextfelder mit HTTP-Antworten**:

@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: abfad9aeef575035f4f171a19073b97a266797ef
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3de9c31febeecca588464cfb386543347ddad852
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208559"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126580"
 ---
 # <a name="configure-a-flexible-automatic-failover-policy-for-an-always-on-availability-group"></a>Konfigurieren einer flexiblen Richtlinie für ein automatischen Failover für eine Always On-Verfügbarkeitsgruppe
 
@@ -113,7 +113,7 @@ ms.locfileid: "53208559"
   
 2.  Verwenden Sie beim Hinzufügen eines Verfügbarkeitsreplikats zu einer Verfügbarkeitsgruppe das Cmdlet **New-SqlAvailabilityGroup** . Verwenden Sie beim Ändern eines vorhandenen Verfügbarkeitsreplikats das Cmdlet **Set-SqlAvailabilityGroup**.  
   
-    -   Um die Failover-Bedingungsebene festzulegen, verwenden Sie den Parameter **FailureConditionLevel***level*, wobei *level* für einen der folgenden Werte steht:  
+    -   Um die Failover-Bedingungsebene festzulegen, verwenden Sie den **FailureConditionLevel** _level_-Parameter, wobei *level* für einen der folgenden Werte steht:  
   
         |value|Ebene|Automatisches Failover wird initiiert, wenn...|  
         |-----------|-----------|-------------------------------------------|  
@@ -125,7 +125,7 @@ ms.locfileid: "53208559"
   
          Weitere Informationen zu den Failover-Bedingungsebenen finden Sie unter [Flexible Failoverrichtlinie für automatisches Failover einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
   
-         Beispielsweise wird mit dem folgenden Befehl die Fehlerbedingungsebene der vorhandenen Verfügbarkeitsgruppe `AG1`in Ebene 1 geändert.  
+         Beispielsweise wird mit dem folgenden Befehl die Fehlerbedingungsebene der vorhandenen Verfügbarkeitsgruppe `AG1` in Ebene 1 geändert.  
   
         ```  
         Set-SqlAvailabilityGroup `   
@@ -133,7 +133,7 @@ ms.locfileid: "53208559"
         -FailureConditionLevel OnServerDown  
         ```  
   
-    -   Um den Schwellenwert für das Timeout der Integritätsprüfung festzulegen, verwenden Sie den Parameter **HealthCheckTimeout***n*, wobei *n* für eine ganze Zahl zwischen 15.000 Millisekunden (15 Sekunden) und 4.294.967.295 Millisekunden steht. Der Standardwert ist 30000 Millisekunden (oder 30 Sekunden).  
+    -   Um den Schwellenwert für das Timeout der Integritätsprüfung festzulegen, verwenden Sie den **HealthCheckTimeout**_n_ -Parameter, wobei *n* für eine ganze Zahl zwischen 15000 Millisekunden (15 Sekunden) und 4294967295 Millisekunden steht. Der Standardwert ist 30000 Millisekunden (oder 30 Sekunden).  
   
          Mit dem folgenden Befehl wird z. B. der Schwellenwert für das Timeout der Integritätsprüfung der vorhandenen Verfügbarkeitsgruppe `AG1`in 120.000 Millisekunden (zwei Minuten) geändert.  
   

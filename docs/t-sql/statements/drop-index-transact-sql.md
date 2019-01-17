@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fdb2e2dc081bce539bf2671e14993281d2415b98
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3e151639595e181fb434e5144daa64cc84128892
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206229"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132450"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -187,7 +187,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
  Wird ein gruppierter Index mit MOVE TO gelöscht, werden alle nicht gruppierten Indizes für die Basistabelle neu erstellt. Sie verbleiben jedoch in ihren ursprünglichen Dateigruppen oder Partitionsschemas. Wenn die Basistabelle in eine andere Dateigruppe oder ein anderes Partitionsschema verschoben wird, werden die nicht gruppierten Indizes nicht verschoben, um dem neuen Speicherort der Basistabelle (Heap) zu entsprechen. Deshalb ist es möglich, dass die nicht gruppierten Indizes nicht mehr mit dem Heap ausgerichtet sind, selbst wenn sie vorher mit dem gruppierten Index ausgerichtet wurden. Weitere Informationen zu Ausrichtung von partitionierten Indizes finden Sie unter [Partitionierte Tabellen und Indizes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
- *partition_scheme_name* **(** *column_name* **)**  
+ _partition_scheme_name_ **(** _column_name_ **)**  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Gibt ein Partitionsschema als Speicherort für die resultierende Tabelle an. Das Partitionsschema muss bereits durch Ausführen von [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) oder [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) erstellt worden sein. Wird kein Speicherort angegeben und ist die Tabelle partitioniert, dann wird die Tabelle in das Partitionsschema des vorhandenen gruppierten Index aufgenommen.  

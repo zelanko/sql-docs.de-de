@@ -13,12 +13,12 @@ ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e1a0b583c66355245790004a8612afa0ace72999
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: a204ee5d34e37736ddd433636cf0e86564718b77
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213129"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128012"
 ---
 # <a name="publication-properties-subscription-options"></a>Veröffentlichungseigenschaften, Abonnementoptionen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "53213129"
  Bestimmt, ob ein Agent verwendet wird, der von anderen Veröffentlichungen dieser Datenbank unabhängig ist. Diese Option ist schreibgeschützt. Bei Veröffentlichungen, die mit dem Assistenten für neue Veröffentlichungen erstellt wurden und die nach Erstellung der Veröffentlichung nicht geändert werden können, ist für die Option standardmäßig **True** festgelegt. Weitere Informationen finden Sie unter [Replikations-Agent-Verwaltung](../../relational-databases/replication/agents/replication-agent-administration.md).  
   
  **Momentaufnahme immer verfügbar**  
- Bestimmt, ob bei jeder Ausführung des Momentaufnahme-Agents Momentaufnahmedateien erstellt werden ( **Unabhängiger Verteilungs-Agent**erforderlich). Diese Option ist schreibgeschützt; sie wird auf **True** festgelegt, wenn Sie auf der Seite **Momentaufnahme-Agent** des Assistenten für neue Veröffentlichung die Option **Momentaufnahme sofort erstellen und zum Initialisieren von Abonnements verfügbar halten** auswählen (Standardeinstellung). Weitere Informationen finden Sie unter [Erstellen und Anwenden der Momentaufnahme](../../relational-databases/replication/create-and-apply-the-snapshot.md).  
+ Bestimmt, ob bei jeder Ausführung des Momentaufnahme-Agents Momentaufnahmedateien erstellt werden ( **Unabhängiger Verteilungs-Agent**erforderlich). Diese Option ist schreibgeschützt; sie wird auf **True** festgelegt, wenn Sie auf der Seite **Momentaufnahme-Agent** des Assistenten für neue Veröffentlichung die Option **Momentaufnahme sofort erstellen und zum Initialisieren von Abonnements verfügbar halten** auswählen (Standardeinstellung). Weitere Informationen finden Sie unter [Erstellen und Anwenden der Momentaufnahme](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
  **Initialisierung aus Sicherungsdateien zulassen**  
  Nur in[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen. Bestimmt, ob Sicherungsdateien für die Initialisierung von Abonnements verwendet werden dürfen. Weitere Informationen finden Sie unter [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)initialisiert wird.  
