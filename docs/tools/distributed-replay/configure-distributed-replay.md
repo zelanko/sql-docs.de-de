@@ -11,12 +11,12 @@ ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5253fc1b7ace718fc2d83cadd9fca944b4898c7b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 166e5e929863a9c7213f3cda6f43e6c1007865b2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506218"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125560"
 ---
 # <a name="configure-distributed-replay"></a>Konfigurieren von Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -123,7 +123,7 @@ ms.locfileid: "52506218"
   
 |Einstellung|XML-Element|und Beschreibung|Zulässige Werte|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|Zielinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (der Testserver)|`<Server>`|Gibt den Namen des Servers und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz an, mit der eine Verbindung hergestellt werden soll.|*Servername*[\\*Instanzname*]<br /><br /> Sie können zum Darstellen des lokalen Hosts nicht "`localhost`" oder "`.`" verwenden.|Nein, wenn der Servername bereits mit dem **-s***target server*-Parameter für die **replay**-Option des Verwaltungstools angegeben wurde.|  
+|Zielinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (der Testserver)|`<Server>`|Gibt den Namen des Servers und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz an, mit der eine Verbindung hergestellt werden soll.|*Servername*[\\*Instanzname*]<br /><br /> Sie können zum Darstellen des lokalen Hosts nicht "`localhost`" oder "`.`" verwenden.|Nein, wenn der Servername bereits mit dem _target server_-Parameter **-s** für die **replay**-Option des Verwaltungstools angegeben wurde.|  
 |Sequenzierungsmodus|`<SequencingMode>`|Gibt den für die Ereignisplanung verwendeten Modus an.|`synchronization` &#124; `stress`|Nein. Der Standardwert ist `stress`.|  
 |Belastungsskalagranularität|`<StressScaleGranularity>`|Gibt an, ob im Belastungsmodus alle Verbindungen auf dem Dienstprofilbezeichner (Service Profile Identifier, SPID) zusammen (SPID) oder unabhängig voneinander (Verbindung) skaliert werden sollen.|SPID &#124; Verbindung|Ja. Der Standardwert ist `SPID`.|  
 |Verbindungszeitskala|`<ConnectTimeScale>`|Wird verwendet, um die Verbindungszeit im Belastungsmodus zu skalieren.|Eine ganze Zahl zwischen `1` und `100`.|Nein. Der Standardwert ist `100`.|  
@@ -167,8 +167,8 @@ ms.locfileid: "52506218"
 
 ### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>Mögliches Problem bei der Ausführung mit Synchronisierung, die Sequenz-Modus
  Sie können ein Symptom auftreten, in dem die Replay-Funktionen zu "Stall" bzw. Replays Ereignisse nur sehr langsam angezeigt wird. Dieses Phänomen kann auftreten, wenn die Ablaufverfolgung wiedergegeben werden, abhängig von Daten und/oder Ereignisse, die nicht in der wiederhergestellten Datenbank vorhanden sind. 
- 
-Ein Beispiel ist eine aufgezeichnete arbeitsauslastung, die WAITFOR, z. B. in Service Broker empfangen der WAITFOR-Anweisung verwendet werden. Wenn Sie den sequenzierungsmodus Synchronisierung verwenden zu können, werden seriell Batches wiedergegeben. Wenn eine Einfügung tritt auf, für die Quelldatenbank nach der datenbanksicherung, aber vor dem Wiedergabe der Ablaufverfolgung wird gestartet, die WAITFOR erhalten, die während der Wiedergabe ausgegeben möglicherweise die gesamte Dauer des WAITFOR warten. Festlegen, die wiedergegeben werden, nachdem der WAITFOR-EMPFANGS angehalten wird. Dadurch kann den Leistungsindikator für Batchanforderungen/Sekunde, für das Replay Datenbank Ziel löschen 0 (null) bis zum Abschluss der WAITFOR. 
+ 
+ Ein Beispiel ist eine aufgezeichnete arbeitsauslastung, die WAITFOR, z. B. in Service Broker empfangen der WAITFOR-Anweisung verwendet werden. Wenn Sie den sequenzierungsmodus Synchronisierung verwenden zu können, werden seriell Batches wiedergegeben. Wenn eine Einfügung tritt auf, für die Quelldatenbank nach der datenbanksicherung, aber vor dem Wiedergabe der Ablaufverfolgung wird gestartet, die WAITFOR erhalten, die während der Wiedergabe ausgegeben möglicherweise die gesamte Dauer des WAITFOR warten. Festlegen, die wiedergegeben werden, nachdem der WAITFOR-EMPFANGS angehalten wird. Dadurch kann den Leistungsindikator für Batchanforderungen/Sekunde, für das Replay Datenbank Ziel löschen 0 (null) bis zum Abschluss der WAITFOR. 
  
  Wenn Sie Synchronisierungsmodus und möchten verwenden, um dieses Verhalten zu vermeiden möchten, müssen Sie Folgendes ausführen:
  
@@ -181,7 +181,7 @@ Ein Beispiel ist eine aufgezeichnete arbeitsauslastung, die WAITFOR, z. B. in Se
 4.  Starten Sie das distributed Replay-Ablaufverfolgung erfassen, und fortsetzen Sie die normale arbeitsauslastung. 
  
  
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Befehlszeilenoptionen für das Verwaltungstool &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [SQL Server Distributed Replay Forum](https://social.technet.microsoft.com/Forums/sl/sqldru/)   

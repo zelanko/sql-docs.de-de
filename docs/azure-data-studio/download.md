@@ -3,7 +3,7 @@ title: Zur Installation herunterladen können Sie
 titleSuffix: Azure Data Studio
 description: Herunterladen und installieren Sie Azure Data Studio für Windows, MacOS oder Linux
 ms.custom: seodec18
-ms.date: 01/10/2019
+ms.date: 01/17/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d7e9cd2130487a0ac50d6aa55a8a2e0f9cf9e80c
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 09e459b61350a100a64a788e0c7746d9a2ae623e
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54298717"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361610"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Herunterladen und Installieren von Azure Data Studio
 
@@ -26,16 +26,18 @@ ms.locfileid: "54298717"
 [!INCLUDE[name-sos](../includes/name-sos.md)] auf Windows, MacOS und Linux ausgeführt wird.
 
 
-Herunterladen und installieren die neueste Version der *Release von Januar*:
+Herunterladen und installieren die neueste Version der *Release von Januar Hotfix*:
+
+Version 1.3.9 behebt einige Probleme, die in 1.3.8 ermittelt wurden. Weitere Informationen finden Sie unter [Hotfix-Release aus Januar](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1).
 
 > [!NOTE]
 > Wenn Sie über SQL Operations Studio aktualisieren und Ihre Einstellungen, Tastenkombinationen in Visual Studio oder Codeausschnitte beibehalten möchten, finden Sie unter [verschieben benutzereinstellungen](#move-user-settings).
 
 |Platform|Herunterladen|Veröffentlichungsdatum| Version |
 |:---|:---|:---|:---|
-|Windows|[Installationsprogramm für Benutzer (empfohlen)](https://go.microsoft.com/fwlink/?linkid=2049972)<br>[System-Installer](https://go.microsoft.com/fwlink/?linkid=2049975)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2050146)|09 Januar 2019 |1.3.8|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2049981)|09 Januar 2019 |1.3.8|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2050157)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2049989)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2049986)|09 Januar 2019 |1.3.8|
+|Windows|[Installationsprogramm für Benutzer (empfohlen)](https://go.microsoft.com/fwlink/?linkid=2049972)<br>[System-Installer](https://go.microsoft.com/fwlink/?linkid=2049975)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2050146)|16 Januar 2019 |1.3.9|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2049981)|16 Januar 2019 |1.3.9|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2050157)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2049989)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2049986)|16 Januar 2019 |1.3.9|
 
 Weitere Informationen über die neueste Version finden Sie unter den [Anmerkungen zu dieser Version](release-notes.md).
 

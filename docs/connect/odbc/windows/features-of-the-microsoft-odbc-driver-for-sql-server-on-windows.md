@@ -11,12 +11,12 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a06f7360460aef57c9c103474f620796cff31d2e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: db5c3e2e8265e88d49025ffd65894623fc5c5f85
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536641"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202239"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Funktionen von Microsoft ODBC Driver for SQL Server on Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -59,5 +59,5 @@ Ein weiterer Unterschied ist, dass die Angabe sowohl `-h` und `-y0` erzeugt nun 
   
 Beachten Sie, dass `-y0` je nach Größe der zurückgegebene Daten zu Leistungsproblemen auf dem Server und im Netzwerk führen kann.
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Microsoft ODBC Driver for SQL Server on Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  

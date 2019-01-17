@@ -5,16 +5,16 @@ description: Erfahren Sie, wie das Mssqlctl-Tool zum Installieren und Verwalten 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/13/2018
+ms.date: 01/15/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cb012492811383154d10358e1c3ee40c422e3813
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: aec8f030a996e5dd86c44a5a655e98d4926988ed
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241691"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361410"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-2019-big-data-clusters"></a>Installieren Sie Mssqlctl zum Verwalten von SQL Server-2019 big Data-Cluster
 
@@ -49,16 +49,24 @@ Unter Linux müssen Sie Python 3.5 zu installieren und aktualisieren Sie Pip. Da
    ```bash
    sudo apt-get update && /
    sudo apt-get install -y python3 && /
-   sudo apt-get install -y python3-pip && /
-   sudo -H pip3 install --upgrade pip
+   sudo apt-get install -y python3-pip
    ```
 
+1. Aktualisieren Sie pip3:
+
+   ```bash
+   sudo -H pip3 install --upgrade pip
+   ```
+   
 1. Installieren Sie **Mssqlctl** mit den folgenden Befehl aus:
 
    ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl --user
    ```
-
+   
+   > [!NOTE]
+   > Die `--user` Switch Mssqlctl installiert, für das Installationsverzeichnis des Python-Benutzer. Dies ist normalerweise `~/.local/bin` unter Linux. Dieses Verzeichnis zu Ihrem Pfad hinzufügen oder navigieren Sie zum Verzeichnis installieren, und führen Sie `./mssqlctl` von dort aus.
+   
 ## <a name="next-steps"></a>Nächste Schritte
 
 Weitere Informationen über big Data-Cluster finden Sie unter [was SQL Server-2019 big Data-Cluster sind?](big-data-cluster-overview.md).

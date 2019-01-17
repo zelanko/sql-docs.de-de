@@ -15,12 +15,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: ae488cfeabc3d506bc53b455f0df6149c537765d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 125b3de50e127e4b1e7d567da58b71f58e2f72aa
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605280"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980286"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Unterstützung von Dienstprinzipalnamen (SPN) in Clientverbindungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,16 +70,16 @@ ms.locfileid: "51605280"
  Das neue Verbindungsverhalten ist clientseitig implementiert und daher kein spezifisches Verhalten von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="linked-servers-and-delegation"></a>Verbindungsserver und Delegierung  
- Beim Einrichten von Verbindungsservern wird der Parameter **@provstr** von [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) verwendet, um den SPN für den Server und Failoverpartner festzulegen. Diese Vorgehensweise hat den gleichen Vorteil wie das Festlegen von SPNs in Clientverbindungszeichenfolgen: Es ist einfacher und zuverlässiger, Verbindungen mit Kerberos-Authentifizierung herzustellen.  
+ Beim Einrichten von Verbindungsservern wird der Parameter **@provstr** von [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) verwendet, um den SPN für den Server und Failoverpartner festzulegen. Die Vorteile dieser Vorgehensweise sind die gleichen wie die bei der Angabe von SPNs in Client-Verbindungszeichenfolgen: Es ist einfacher und zuverlässiger, Verbindungen herzustellen, die die Kerberos-Authentifizierung verwenden.  
   
  Delegierung über Verbindungsserver erfordert die Kerberos-Authentifizierung.  
   
 ## <a name="management-aspects-of-spns-specified-by-applications"></a>Verwaltungsaspekte von SPNs, die von Anwendungen angegeben werden  
  Berücksichtigen Sie die folgenden Faktoren bei der Entscheidung, ob SPNs in einer Anwendung (über Verbindungszeichenfolgen) oder programmgesteuert über Verbindungseigenschaften (anstatt sich auf den standardmäßig vom Anbieter erstellten SPN zu verlassen) angegeben werden.  
   
--   Sicherheit: Legt der angegebene SPN geschützte Informationen offen?  
+-   Sicherheit: Legt die angegebene SPN geschützte Informationen offen?  
   
--   Zuverlässigkeit: Zur Aktivierung von Standard-SPNs muss das Dienstkonto der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] über ausreichende Privilegien zum Update von Active Directory auf dem Schlüsselverteilungscenter verfügen.  
+-   Zuverlässigkeit: Zur Aktivierung von Standard-SPNs muss das Dienstkonto der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] über ausreichende Privilegien zum Update von Active Directory im KDC verfügen.  
   
 -   Benutzerfreundlichkeit und Speicherorttransparenz: Wie wirkt es sich auf die SPNs einer Anwendung aus, wenn die Datenbank in eine andere Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verschoben wird? Dies gilt für sowohl den Prinzipalserver als auch seinen Failoverpartner, wenn Sie die Datenbankspiegelung verwenden. Wie wirkt es sich auf Anwendungen aus, wenn eine Serveränderung bedeutet, dass SPNs geändert werden müssen? Werden die Änderungen verwaltet?  
   
@@ -107,7 +107,7 @@ ms.locfileid: "51605280"
   
  Informationen zu Beispielanwendungen, die diese Funktion veranschaulichen, finden Sie unter [Beispiele zur Programmierbarkeit von SQL Server-Daten](https://msftdpprodsamples.codeplex.com/).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [OLE DB-Treiber für SQL Server-Features](../../oledb/features/oledb-driver-for-sql-server-features.md)   
  [Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
   

@@ -11,12 +11,12 @@ ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7273baec814905d86e431c5a6a8f13313b9743e4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 98f7e0ac3667bc8546a7bf7ce2d8036341bb2650
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536650"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206599"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>Verwenden von Azure Active Directory mit dem ODBC Driver
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -136,7 +136,7 @@ Das folgende Beispiel zeigt den Code für die Verbindung mit SQL Server mit Azur
     ...
     SQLCHAR connString[] = "Driver={ODBC Driver 13 for SQL Server};Server={server};UID=myuser;PWD=myPass;Authentication=ActiveDirectoryPassword"
     ...
-    SQLDriverConnect(hDbc, NULL, connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);  
+    SQLDriverConnect(hDbc, NULL, connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);  
     ...
 ~~~
 Das folgende Beispiel zeigt den Code für die Verbindung mit SQL Server Access-token-Authentifizierung mit Azure Active Directory. In diesem Fall ist es erforderlich, ändern Anwendungscode so, dass das Zugriffstoken zu verarbeiten, und legen Sie das zugeordnete Verbindungsattribut.
@@ -163,6 +163,6 @@ Folgendes ist eine Beispiel-Verbindungszeichenfolge für die Verwendung mit Azur
 SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};UID=myuser;Authentication=ActiveDirectoryInteractive"
 ~~~
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 [Tokenbasierte authentifizierungsunterstützung für Azure SQL-Datenbank mithilfe von Azure AD-Authentifizierung](https://blogs.msdn.microsoft.com/sqlsecurity/2016/02/09/token-based-authentication-support-for-azure-sql-db-using-azure-ad-auth)
 

@@ -3,7 +3,7 @@ title: Anmerkungen zu dieser Version und das Änderungsprotokoll
 titleSuffix: Azure Data Studio
 description: Versionshinweise zu Azure Data Studio
 ms.custom: seodec18
-ms.date: 01/10/2019
+ms.date: 01/17/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,22 +11,31 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 63cf17e26ce554b901a3c9cc6db1fcb18162140d
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 163f5740626b0f4cb927272d46acddc79495e4c1
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143660"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361680"
 ---
 # <a name="azure-data-studio-latest-release-notes-and-changelog"></a>Azure Data Studio neuesten Anmerkungen zu dieser Version und das Änderungsprotokoll
 
-**[Laden Sie die Januar-Version herunter!](download.md)**
+**[Herunterladen Sie und installieren Sie die neueste Version.](download.md)**
 
+
+## <a name="january-hotfix-2019-january-hotfix-release"></a>Hotfix für Januar 2019 (Januar-Hotfix-Version)
+
+Veröffentlichungsdatum: 16 Januar 2019  
+version: 1.3.9
+
+Version 1.3.9 behebt einige Probleme, die in 1.3.8 ermittelt wurden. Weitere Informationen finden Sie unter [Hotfix-Release aus Januar](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1).
+
+Ausführliche Informationen finden Sie unter den [Änderungsprotokoll](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), und [Versionen](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## <a name="january-2019-january-release"></a>Januar 2019 (Januar-Version)
 
 Veröffentlichungsdatum: 09 Januar 2019  
-Version: 1.3.8
+version: 1.3.8
 
 - Einen neuen Benutzer Installer für Windows wird hinzugefügt. Im Gegensatz zu den vorhandenen System-Webinstaller erfordert das Installationsprogramm für neue Benutzer keine Administratorrechte. Dies ermöglicht auch ein einfacher Upgradeverhalten für nicht-Administratoren.
 - Unterstützung für Azure Active Directory-Authentifizierung.
@@ -38,12 +47,10 @@ Version: 1.3.8
 - Community Extensions: Sp_executesql to Sql und die neue Datenbank.
 - Aufgelöst [Fehler und Probleme](https://github.com/Microsoft/azuredatastudio/milestone/19?closed=1).
 
-Ausführliche Informationen finden Sie unter den [Änderungsprotokoll](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), und [Versionen](https://github.com/Microsoft/azuredatastudio/releases).
-
 ## <a name="november-2018-november-release"></a>November 2018 (Version November)
 
 Veröffentlichungsdatum: 6 November 2018  
-Version: 1.2.4
+version: 1.2.4
 
 - Aktualisieren Sie auf die [2019-Vorschau von SQL Server-Erweiterung](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
 - Einführung in fügen Sie der Plans-Erweiterung
@@ -67,7 +74,7 @@ Version: 1.2.4
 ## <a name="october-2018-october-release"></a>Oktober 2018 (Oktober-Version)
 
 Veröffentlichungsdatum: 29. Oktober 2018  
-Version: 1.1.4
+version: 1.1.4
 
 - Einführung in die Azure-Ressourcen-Explorer zum Durchsuchen von Azure SQL-Datenbanken
 - Die Objekt-Explorer und Abfrage-Editor-Konnektivität Robustheit
@@ -87,7 +94,7 @@ Ausführliche Informationen finden Sie unter den [Änderungsprotokoll](https://g
 ## <a name="september-2018-september-ga-release"></a>September 2018 (September GA-Version)
 
 Veröffentlichungsdatum: 24. September 2018  
-Version: 1,0
+version: 1,0
 
 Allgemein verfügbare Version von Azure Data Studio (früher SQL Operations Studio).
 
@@ -120,7 +127,7 @@ Ausführliche Informationen finden Sie unter den [Änderungsprotokoll](https://g
 ## <a name="august-2018-august-public-preview"></a>August 2018 (öffentliche Vorschau für August)
 
 Veröffentlichungsdatum: 30. August 2018  
-Version: 0.32.8
+version: 0.32.8
 
 *0.32.8 bietet Korrekturen für einige Regressionen finden Sie im 0.32.7 ([#1971](https://github.com/Microsoft/azuredatastudio/issues/1971), [#2372](https://github.com/Microsoft/azuredatastudio/issues/2372)*)
 
@@ -172,7 +179,7 @@ Die *öffentliche Vorschau für August* Fehlerbehebungen, Produkt Stabilisierung
 ## <a name="july-2018-july-public-preview"></a>Juli 2018 (Juli öffentliche Vorschau)
 
 Veröffentlichungsdatum: Am 19. Juli 2018  
-Version: 0.31.4
+version: 0.31.4
 
 Die *Public Preview von Juli* liegt der Schwerpunkt auf dem ersten Release der Konfigurationsszenarien für den SQL Server-Agent, SQL Server Profiler-Sitzung und Ansicht-Vorlage Erweiterungen und weiteren Fehlerbehebungen für Kunden mit GitHub-Probleme gemeldet. Diese Version enthält die folgenden Highlights:  
 
@@ -198,7 +205,7 @@ Die *Public Preview von Juli* liegt der Schwerpunkt auf dem ersten Release der K
  - Beheben Sie [ausgeben 1718](https://github.com/Microsoft/azuredatastudio/issues/1718): Es konnte keine Verbindung mit jeder Datenquelle
  - Beheben Sie [ausgeben 1719](https://github.com/Microsoft/azuredatastudio/issues/1719): TypeError Herstellen der Verbindung mit Server
  - Beheben Sie [ausgeben 1724](https://github.com/Microsoft/azuredatastudio/issues/1724): Erweiterung Dialogfelder beendet haben
- - Beheben Sie [ausgeben 1749](https://github.com/Microsoft/azuredatastudio/issues/1749): FEHLER: HTML-Daten in einer Spalte ruft interpretiert.
+ - Beheben Sie [ausgeben 1749](https://github.com/Microsoft/azuredatastudio/issues/1749): BUG: HTML-Daten in einer Spalte ruft interpretiert.
  - Beheben Sie [ausgeben 1789](https://github.com/Microsoft/azuredatastudio/issues/1789): Erweiterbarkeit: Wenn Sie über einen Verbindungsanbieter hinzufügen wird deinstallieren nie es aus der Liste entfernen
  - Beheben Sie [ausgeben 1791](https://github.com/Microsoft/azuredatastudio/issues/1791): Sqlops Erweiterungen: queryeditor.connect() verbinden, in die Zieldatenbank jedoch Benutzeroberfläche wird nicht angezeigt, ob der Editor verbunden ist.
  - Beheben Sie [ausgeben 1799](https://github.com/Microsoft/azuredatastudio/issues/1799): Diagramm der obersten 10 DB funktioniert nicht auf Instanzen von Groß-/Kleinschreibung beachten
@@ -211,7 +218,7 @@ Die *Public Preview von Juli* liegt der Schwerpunkt auf dem ersten Release der K
 ## <a name="june-2018-june-public-preview"></a>Juni 2018 (Juni-öffentliche Vorschau)
 
 Veröffentlichungsdatum: 20. Juni 2018  
-Version: 0.30.6
+version: 0.30.6
 
 Die *öffentliche Vorschauversion von Juni* enthält die folgenden Highlights:  
 
@@ -235,7 +242,7 @@ Die *öffentliche Vorschauversion von Juni* enthält die folgenden Highlights:
 ## <a name="may-2018-may-public-preview"></a>Mai 2018 (öffentlichen Vorschau Mai)
 
 Veröffentlichungsdatum: 7. Mai 2018  
-Version: 0.29.3
+version: 0.29.3
 
 Die *Public Preview kann* konzentriert sich auf die Stabilität und Fehlerbehebungen. Dieser Build enthält die folgenden Highlights:  
 
@@ -260,7 +267,7 @@ Die *Public Preview kann* konzentriert sich auf die Stabilität und Fehlerbehebu
 ## <a name="april-2018-april-public-preview"></a>April 2018 (April-öffentliche Vorschau)
 
 Veröffentlichungsdatum: 25 April 2018  
-Version: 0.28.6
+version: 0.28.6
 
 Die *Public Preview-Version April* enthält Fehlerbehebungen und Verbesserungen. 
 
@@ -310,7 +317,7 @@ Weitere Informationen finden Sie unter den [Änderungsprotokoll](https://github.
 ## <a name="march-2018-march-public-preview"></a>März 2018 (März öffentliche Vorschau)
 
 Veröffentlichungsdatum: 28. März 2018  
-Version: 0.27.3
+version: 0.27.3
 
 Die *öffentliche Vorschau März* weiterhin die wichtigsten GitHub-Probleme zu beheben und konzentriert sich auf die Verbesserung unserer Geschichte Erweiterbarkeit. Insbesondere Erweiterungs-Manager aktivieren, Verbessern der dashboardverwaltung und Bereitstellen von SQL-Agent "und" Insights-Erweiterungen. Dieses Release enthält die folgenden Verbesserungen:
 
@@ -325,7 +332,7 @@ Die *öffentliche Vorschau März* weiterhin die wichtigsten GitHub-Probleme zu b
 ## <a name="february-2018-february-public-preview"></a>Februar 2018 (Februar öffentliche Vorschau)
 
 Veröffentlichungsdatum: 15. Februar 2018  
-Version: 0.26.7
+version: 0.26.7
 
 Die *Public Preview-Version vom Februar* enthält einige Vorschläge für Features und Fehlerkorrekturen hoher Priorität. Dieses Release enthält die folgenden Verbesserungen:
 
@@ -349,7 +356,7 @@ Die *Public Preview-Version vom Februar* enthält einige Vorschläge für Featur
 ## <a name="january-2018-january-public-preview"></a>Januar 2018 (Januar öffentliche Vorschau)
 
 Veröffentlichungsdatum: 17 Januar 2018  
-Version: 0.25.4
+version: 0.25.4
 
 Die *Public Preview Januar* enthält einige Vorschläge für Features und Fehlerkorrekturen hoher Priorität. Dieses Release enthält die folgenden Verbesserungen:
 
@@ -366,7 +373,7 @@ Die *Public Preview Januar* enthält einige Vorschläge für Features und Fehler
 ## <a name="december-2017-december-public-preview"></a>Dezember 2017 (Dezember öffentliche Vorschau)
 
 Veröffentlichungsdatum: 19. Dezember 2017  
-Version: 0.24.1
+version: 0.24.1
 
 Die *Public Preview-Version Dezember* umfasst verschiedene Fehlerkorrekturen für alle Featurebereiche sowie die folgenden Verbesserungen:
 
@@ -383,7 +390,7 @@ Die *Public Preview-Version Dezember* umfasst verschiedene Fehlerkorrekturen fü
 ## <a name="november-2017"></a>November 2017
 
 Veröffentlichungsdatum: 15. November 2017  
-Version: 0.23.6
+version: 0.23.6
 
 - Erste Version des [!INCLUDE[name-sos](../includes/name-sos-short.md)].
 

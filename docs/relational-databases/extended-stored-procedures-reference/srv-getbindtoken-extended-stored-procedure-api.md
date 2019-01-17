@@ -74,7 +74,7 @@ bindtoken
     >  Es kann immer jeweils nur eine gebundene Sitzung Zugriff auf eine gemeinsam genutzte Verbindung haben. Wenn eine Sitzung derzeit eine Anweisung auf dem Server ausführt oder auf Ergebnisse vom Server wartet, können andere Sitzungen, die dieselbe gebundene Verbindung nutzen, erst dann auf den Server zugreifen, wenn die aktuelle Sitzung die aktuelle Anweisung ausgeführt hat. Wenn durch eine andere Sitzung auf die Verbindung zugegriffen wird, solange der Server ausgelastet ist, wird an die den Konflikt verursachende Sitzung die Fehlermeldung zurückgegeben, dass die Verbindung verwendet wird und der Zugriffsversuch der Sitzung später wiederholt werden kann.  
   
 > [!IMPORTANT]  
->  Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren sorgfältig prüfen, und Sie sollten die kompilierten DLL-Dateien testen, bevor Sie sie auf einem Produktionsserver installieren. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
+>  Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren sorgfältig prüfen, und Sie sollten die kompilierten DLL-Dateien testen, bevor Sie sie auf einem Produktionsserver installieren. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sp_bindsession (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   

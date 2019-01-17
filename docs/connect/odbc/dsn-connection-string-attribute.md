@@ -1,37 +1,35 @@
 ---
-title: DSN und die Verbindungszeichenfolge-Schlüsselwörter und Attribute, die in der ODBC-Treiber für SQLServer verwendet eine Zeichenfolge | Microsoft-Dokumentation
+title: 'DSN-Verbindung Zeichenfolgen-Schlüsselwörter für die ODBC-Treibers: SQL Server | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 11/07/2018
+ms.date: 12/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: MightyPen
+ms.reviewer: MightyPen
 ms.author: v-jizho2
+author: karinazhou
 manager: craigg
-ms.openlocfilehash: a5c75876771efbc87eb30c368fb5246e12c60707
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 0dedb58cf0a9825625027e363db20a56f06839dd
+ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512860"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306237"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>Schlüsselwörter und Attribute von DNS- und Verbindungszeichenfolgen
 
 Diese Seite listet die Schlüsselwörter für Verbindungszeichenfolgen und DSNs sowie die Verbindungsattribute, SQLSetConnectAttr und SQLGetConnectAttr, in der ODBC-Treiber für SQL Server verfügbar.
 
-
-
 ## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>Unterstützt die Schlüsselwörter für Verbindungszeichenfolgen DSN-Verbindung sowie die Verbindungsattribute
 
-Die folgende Tabelle enthält die verfügbaren Schlüsselwörter und die Attribute für jede Plattform (Linux L:; M: Mac W-Windows). Klicken Sie auf das Schlüsselwort oder das Attribut für weitere Details.
+Die folgende Tabelle enthält die verfügbaren Schlüsselwörter und die Attribute für jede Plattform (L: Linux ; M: Mac W Windows: Klicken Sie auf das Schlüsselwort oder das Attribut für weitere Details.
 
-| DSN / Verbindungszeichenfolgen-Schlüsselwort | Verbindungsattribut | Platform | 
+| DSN / Verbindungszeichenfolgen-Schlüsselwort | Verbindungsattribut | Platform |
 |-|-|-|
 | [Addr](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [Adresse](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
-| [AnsiNPW](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) |  [SQL_COPT_SS_ANSI_NPW](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssansinpw) | LMW |
+| [AnsiNPW](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_ANSI_NPW](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssansinpw) | LMW |
 | [APP](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [ApplicationIntent](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_APPLICATION_INTENT](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssapplicationintent) | LMW |
 | [AttachDBFileName](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_ATTACHDBFILENAME](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssattachdbfilename) | LMW |
@@ -103,7 +101,7 @@ Die folgende Tabelle enthält die verfügbaren Schlüsselwörter und die Attribu
 | | [SQL_COPT_SS_BROWSE_SERVER](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssbrowseserver) | LMW |
 | | [SQL_COPT_SS_CEKEYSTOREDATA](dsn-connection-string-attribute.md#sqlcoptsscekeystoredata) | LMW |
 | | [SQL_COPT_SS_CEKEYSTOREPROVIDER](dsn-connection-string-attribute.md#sqlcoptsscekeystoreprovider) | LMW |
-| | [SQL_COPT_SS_CLIENT_CONNECTION_ID](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md#sqlcoptssclientconnectionid) | LMW |
+| | [SQL_COPT_SS_CLIENT_CONNECTION_ID](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) | LMW |
 | | [SQL_COPT_SS_CONCAT_NULL](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssconcatnull) | LMW |
 | | [SQL_COPT_SS_CONNECTION_DEAD](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssconnectiondead) | LMW |
 | | [SQL_COPT_SS_ENLIST_IN_DTC](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssenlistindtc) | W |
@@ -179,8 +177,8 @@ Steuerelemente, versucht die transparente Netzwerk-IP-Adressauflösung-Funktion,
 
 | Schlüsselwortwert | Attributwert| und Beschreibung |
 |-|-|-|
-|Benutzerkontensteuerung|SQL_IS_ON|(Standard) Aktiviert die transparente Netzwerk-IP-Adressauflösung.|
-|nein|SQL_IS_OFF|Deaktiviert die transparente Netzwerk-IP-Adressauflösung.|
+|Ja|SQL_IS_ON|(Standard) Aktiviert die transparente Netzwerk-IP-Adressauflösung.|
+|Nein|SQL_IS_OFF|Deaktiviert die transparente Netzwerk-IP-Adressauflösung.|
 
 ### <a name="usefmtonly"></a>UseFMTONLY
 
@@ -188,8 +186,8 @@ Steuert die Verwendung von SET FMTONLY für Metadaten an, beim Herstellen einer 
 
 | Schlüsselwortwert | und Beschreibung |
 |-|-|
-|nein|(Standard) Verwenden Sie Sp_describe_first_result_set für Metadaten, falls verfügbar. |
-|Benutzerkontensteuerung| Verwenden Sie SET FMTONLY für Metadaten. |
+|Nein|(Standard) Verwenden Sie Sp_describe_first_result_set für Metadaten, falls verfügbar. |
+|Ja| Verwenden Sie SET FMTONLY für Metadaten. |
 
 ### <a name="sqlcoptssaccesstoken"></a>SQL_COPT_SS_ACCESS_TOKEN
 

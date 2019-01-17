@@ -11,19 +11,19 @@ ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5c36ae89563490257ccc9db78c7386642a71f0ce
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8e2df0607162f5f2cb90ff6b0525fdc530b7be66
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398428"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211820"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>JDBC Driver-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  In diesem Thema wird die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-Unterstützung für hohe Verfügbarkeit und Notfallwiederherstellung ([!INCLUDE[ssHADR](../../includes/sshadr_md.md)]) behandelt. Weitere Informationen zu [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] finden Sie in der [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-Onlinedokumentation.  
+  In diesem Artikel wird die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-Unterstützung für Hochverfügbarkeit und Notfallwiederherstellung ([!INCLUDE[ssHADR](../../includes/sshadr_md.md)]) thematisiert. Weitere Informationen über [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]finden Sie in der [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] -Onlinedokumentation.  
   
- Ab Version 4.0 von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] können Sie den Verfügbarkeitsgruppen-Listener einer Verfügbarkeitsgruppe (hohe Verfügbarkeit, Notfallwiederherstellung) in der Verbindungseigenschaft angeben. Wenn eine [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-Anwendung mit einer Always On-Datenbank verbunden ist, für die ein Failover ausgeführt wird, wird die ursprüngliche Verbindung unterbrochen, und die Anwendung muss eine neue Verbindung öffnen, damit ihre Ausführung nach dem Failover fortgesetzt werden kann. Die folgenden [Verbindungseigenschaften](../../connect/jdbc/setting-the-connection-properties.md) wurden in [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] eingeführt:  
+ Ab Version 4.0 von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] können Sie den Verfügbarkeitsgruppenlistener einer Verfügbarkeitsgruppe (Hochverfügbarkeit, Notfallwiederherstellung) in der Verbindungseigenschaft angeben. Wenn eine [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-Anwendung mit einer Always On-Datenbank verbunden ist, für die ein Failover ausgeführt wird, wird die ursprüngliche Verbindung unterbrochen, und die Anwendung muss eine neue Verbindung öffnen, damit ihre Ausführung nach dem Failover fortgesetzt werden kann. Die folgenden [Verbindungseigenschaften](../../connect/jdbc/setting-the-connection-properties.md) wurden in [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] eingeführt:  
   
 -   **multiSubnetFailover**  
   
@@ -40,11 +40,11 @@ Bitte beachten Sie Folgendes:
 * TransparentNetworkIPResolution wird ignoriert, wenn mehr als 64 IP-Adressen vorhanden sind
 * Wenn TransparentNetworkIPResolution auf "true" festgelegt ist, verwendet der erste Verbindungsversuch einen Timeoutwert von 500 ms. Rest Verbindungen führen Sie die gleiche Logik wie die MultiSubnetFailover-Funktion. 
 
-> [!NOTE]  
-Wenn Sie Microsoft JDBC-Treiber 4.2 (oder senken) für SQL Server und **MultiSubnetFailover** ist "false", die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] versucht, eine Verbindung mit der ersten IP-Adresse herstellen. Wenn [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] keine Verbindung mit der ersten IP-Adresse herstellen kann, tritt ein Verbindungsfehler auf. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] versucht nicht, eine Verbindung mit einer der nachfolgenden IP-Adressen herzustellen, die dem Server zugeordnet sind. 
-
-  
-> [!NOTE]  
+> [!NOTE]
+> Wenn Sie Microsoft JDBC-Treiber 4.2 (oder senken) für SQL Server und **MultiSubnetFailover** ist "false", die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] versucht, eine Verbindung mit der ersten IP-Adresse herstellen. Wenn [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] keine Verbindung mit der ersten IP-Adresse herstellen kann, tritt ein Verbindungsfehler auf. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] versucht nicht, eine Verbindung mit einer der nachfolgenden IP-Adressen herzustellen, die dem Server zugeordnet sind. 
+> 
+> 
+> [!NOTE]
 >  Das Erhöhen des Verbindungstimeouts sowie die Implementierung von Verbindungswiederholungslogik erhöhen die Wahrscheinlichkeit, dass eine Anwendung eine Verbindung zu einer Verfügbarkeitsgruppe herstellt. Da zudem eine Verbindung aufgrund eines Verfügbarkeitsgruppenfailovers fehlschlagen kann, empfiehlt sich die Implementierung von Verbindungswiederholungslogik, wodurch im Fall einer fehlgeschlagenen Verbindung bis zur erneuten Verbindung Wiederholungsversuche erfolgen.  
   
  
@@ -70,7 +70,7 @@ Wenn Sie Microsoft JDBC-Treiber 4.2 (oder senken) für SQL Server und **MultiSub
   
 -   Ein Verbindungsversuch mit einer mit mehr als 64 IP-Adressen konfigurierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz verursacht einen Verbindungsfehler.  
   
--   Das Verhalten einer Anwendung, die die **multiSubnetFailover** -Verbindungseigenschaft verwendet, wird nicht vom Authentifizierungstyp beeinflusst: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung, Kerberos-Authentifizierung oder Windows-Authentifizierung.  
+-   Das Verhalten einer Anwendung, die die **multiSubnetFailover**-Verbindungseigenschaft verwendet, wird nicht vom Authentifizierungstyp beeinflusst: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung, Kerberos-Authentifizierung oder Windows-Authentifizierung.  
   
 -   Erhöhen Sie den Wert von **loginTimeout**, um die Failoverzeit zu berücksichtigen und Wiederholungsversuche für Anwendungsverbindungen zu reduzieren.  
   
@@ -115,7 +115,7 @@ Wenn Sie Microsoft JDBC-Treiber 4.2 (oder senken) für SQL Server und **MultiSub
 ## <a name="ssl-certificate-validation"></a>SSL-Zertifikatüberprüfung  
  Eine Verfügbarkeitsgruppe besteht aus mehreren physischen Servern. In [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] wird die Unterstützung von **alternativen Antragstellernamen** in SSL-Zertifikaten eingeführt, sodass einem Zertifikat mehrere Hosts zugeordnet werden können. Weitere Informationen zu SSL finden Sie unter [Grundlegendes zur SSL-Unterstützung](../../connect/jdbc/understanding-ssl-support.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Connecting to SQL Server with the JDBC Driver (Verbinden von SQL Server mit dem JDBC-Treiber)](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)   
  [Festlegen von Verbindungseigenschaften](../../connect/jdbc/setting-the-connection-properties.md)  
   

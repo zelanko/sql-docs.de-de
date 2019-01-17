@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: a0c917c6f7200db2b5a04b47185ba6b61f59ad34
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f91ba6d5e7120f26c4ce4f8572eea779cdddebfc
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506832"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226687"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Verwenden von Always Encrypted mit ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -270,7 +270,7 @@ Die `SQLSetPos` -API ermöglicht es eine Anwendung zum Aktualisieren von Zeilen 
 
 Um dieses Verhalten zu vermeiden, verwenden die `SQL_COLUMN_IGNORE` Flag Spalten ignorieren, die nicht als Teil des aktualisiert werden `SQLBulkOperations` und Verwendung von `SQLSetPos` für Cursor basierend Updates.  Alle Spalten, die von der Anwendung nicht direkt geändert werden sollte ignoriert werden, sowohl für Leistung und um das Abschneiden von Spalten zu vermeiden, die auf einen Puffer gebunden sind *kleinere* als die tatsächliche Größe der (DB). Weitere Informationen finden Sie unter [SQLSetPos Funktionsverweis](https://msdn.microsoft.com/library/ms713507(v=vs.85).aspx).
 
-#### <a name="sqlmoreresults--sqldescribecol"></a>SQLMoreResults & SQLDescribeCol
+#### <a name="sqlmoreresults--sqldescribecol"></a>SQLMoreResults und SQLDescribeCol
 
 Anwendungsprogramme können Aufrufen [SQLDescribeCol](https://msdn.microsoft.com/library/ms716289(v=vs.85).aspx) Metadaten zu den Spalten in der vorbereiteten Anweisungen zurückgegeben.  Wenn Always Encrypted aktiviert ist, Aufrufen `SQLMoreResults` *vor* Aufrufen `SQLDescribeCol` bewirkt, dass [Sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) um aufgerufen werden, das ist nicht ordnungsgemäß zurück nur-Text Metadaten für verschlüsselte Spalten. Um dieses Problem zu vermeiden, rufen Sie `SQLDescribeCol` für vorbereitete Anweisungen *vor* Aufrufen `SQLMoreResults`.
 
@@ -286,7 +286,7 @@ In diesem Abschnitt werden die integrierten Leistungsoptimierungen in ODBC Drive
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>Kontrollieren von Roundtrips zum Abrufen von Metadaten für Abfrageparameter
 
-Wenn Always Encrypted für eine Verbindung aktiviert ist, ruft der Treiber standardmäßig [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) für jede parametrisierte Abfrage auf, wobei die Abfrageanweisung (ohne Parameterwerte) an SQL Server übergeben wird. Diese gespeicherte Prozedur analysiert die Query-Anweisung, um herauszufinden, ob Parameter müssen verschlüsselt werden, und wenn Ja, gibt die verschlüsselungsbezogenen Informationen für jeden Parameter, um den Treiber verschlüsseln zu ermöglichen. Das oben beschriebene Verhalten stellt sicher ein hohes Maß an Transparenz für die Client-Anwendung: die Anwendung (und der Anwendungsentwickler) muss nicht zu beachten, welche Abfragen Zugriff auf verschlüsselte Spalten, solange die Werte, die auf verschlüsselte Spalten ausgerichtet sind, übergeben werden der Treiber in-Parameter.
+Wenn Always Encrypted für eine Verbindung aktiviert ist, ruft der Treiber standardmäßig [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) für jede parametrisierte Abfrage auf, wobei die Abfrageanweisung (ohne Parameterwerte) an SQL Server übergeben wird. Diese gespeicherte Prozedur analysiert die Query-Anweisung, um herauszufinden, ob Parameter müssen verschlüsselt werden, und wenn Ja, gibt die verschlüsselungsbezogenen Informationen für jeden Parameter, um den Treiber verschlüsseln zu ermöglichen. Das oben beschriebene Verhalten stellt einen hohen Grad an Transparenz für die Clientanwendung sicher: Die Anwendung (und der Anwendungsentwickler) muss nicht beachten, welche Abfragen Zugriff auf verschlüsselte Spalten haben, so lange die auf verschlüsselte Spalten ausgerichteten Werte in Parametern an den Treiber übergeben werden.
 
 ### <a name="per-statement-always-encrypted-behavior"></a>Always Encrypted Verhalten pro Anweisung
 
@@ -349,7 +349,7 @@ Der ODBC-Treiber für SQL Server enthält die folgenden integrierten Keystore-An
 
 | Name | und Beschreibung | Name des Anbieters (Metadaten) |Verfügbarkeit|
 |:---|:---|:---|:---|
-|Azure-Schlüsseltresor |Speichern von CMKs in einem Azure-Schlüsseltresor | `AZURE_KEY_VAULT` |Windows, MacOS, Linux|
+|Azure-Schlüsseltresor |Speichern von CMKs in einem Azure-Schlüsseltresor | `AZURE_KEY_VAULT` |Windows, macOS, Linux|
 |Windows-Zertifikatspeicher|CMKs lokal gespeichert, in der Windows-keystore| `MSSQL_CERTIFICATE_STORE`|Windows|
 
 - Sie (oder der Datenbankadministrator) müssen sicherstellen, dass der in den Metadaten des Spaltenhauptschlüssels konfigurierte Anbietername richtig ist und der Pfad des Spaltenhauptschlüssels dem Schlüsselpfadformat für den angegebenen Anbieter entspricht. Es wird empfohlen, dass Sie die Schlüssel mithilfe von Tools wie SQL Server Management Studio konfigurieren, die die gültigen Anbieternamen und Schlüsselpfade automatisch generieren, wenn die Anweisung [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md) ausgegeben wird.
@@ -538,7 +538,7 @@ Verschlüsselt **Geld** oder **Smallmoney** Spalten können nicht durch Paramete
 
 ## <a name="bulk-copy-of-encrypted-columns"></a>Massenkopieren von verschlüsselten Spalten
 
-Verwenden der [Funktionen von SQL-Massenkopieren](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) und **Bcp** -Hilfsprogramm wird seit ODBC Driver 17 for SQL Server mit Always Encrypted unterstützt. Sowohl als nur-Text (auf verschlüsselte einfügen und entschlüsselter auf-Abruf) verschlüsselten Text (wörtlich übertragen) eingefügt werden kann und das Massenkopieren (Bcp_ *) APIs mit abgerufen und die **Bcp** Hilfsprogramm.
+Verwenden der [Funktionen von SQL-Massenkopieren](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) und **Bcp** -Hilfsprogramm wird seit ODBC Driver 17 for SQL Server mit Always Encrypted unterstützt. Sowohl als nur-Text (auf verschlüsselte einfügen und entschlüsselter auf-Abruf) verschlüsselten Text (wörtlich übertragen) eingefügt werden kann und mit den Massenkopiervorgang abgerufen (Bcp_&#42;) APIs und die **Bcp** Hilfsprogramm.
 
 - Chiffretext 'varbinary(max)'-Format (z. B. für das Laden von Massendaten in eine andere Datenbank) abgerufen werden, ohne eine Verbindung herstellen die `ColumnEncryption` Option (oder legen ihn auf `Disabled`) und eine BCP OUT-Vorgang aus.
 
@@ -546,7 +546,7 @@ Verwenden der [Funktionen von SQL-Massenkopieren](../../relational-databases/nat
 
 - Zum Einfügen von Chiffretext 'varbinary(max)'-Format (z. B. im oben abgerufenen) legen Sie die `BCPMODIFYENCRYPTED` option auf "true", und führen Sie einen IN der BCP-Vorgang. Sicherstellen Sie in der Reihenfolge für die resultierenden Daten zu entschlüsselnden werden, dass das Ziel CEK mit der Spalte identisch, die von dem der verschlüsselte Text, die ursprünglich abgerufen wurde.
 
-Bei Verwendung der **Bcp** Dienstprogramm: Steuern der `ColumnEncryption` festlegen, verwenden Sie die Option-d, und geben Sie einen DSN, der den gewünschten Wert enthält. Um verschlüsselte Text einzufügen, stellen Sie sicher die `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` des Benutzers aktiviert ist.
+Bei Verwendung der **Bcp** Hilfsprogramm: Steuern der `ColumnEncryption` festlegen, verwenden Sie die Option-d, und geben Sie einen DSN, der den gewünschten Wert enthält. Um verschlüsselte Text einzufügen, stellen Sie sicher die `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` des Benutzers aktiviert ist.
 
 Die folgende Tabelle enthält eine Zusammenfassung der Aktionen, bei einer verschlüsselten Spalte:
 
@@ -602,7 +602,7 @@ Weitere Informationen finden Sie unter [Migrieren von durch Always Encrypted ges
 |-|-|-|
 |`BCPMODIFYENCRYPTED` (21)|FALSE|Bei "true", können varbinary(max)-Werte in eine verschlüsselte Spalte eingefügt werden soll. Bei "FALSE" wird verhindert, dass einfügen, wenn richtigen Typ und die Verschlüsselung Metadaten angegeben wird.|
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 - [„Immer verschlüsselt“ (Datenbank-Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted-Blog](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)

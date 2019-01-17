@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: e6585c78b26199c7ae5194e37d152db91aab1224
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ba1cb702faef5826158f9f65e9bb36d794934a5a
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396315"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991773"
 ---
 # <a name="download-and-install-sqlpackage"></a>Herunterladen und Installieren von "Sqlpackage"
 
@@ -65,8 +65,9 @@ Diese Version von "Sqlpackage" enthält eine standardmäßige Windows Installer-
    ```bash
    cd ~
    mkdir sqlpackage
-   unzip ~/Downloads/sqlpackage-linux-<version string>.zip ~/sqlpackage 
-   echo 'export PATH="$PATH:~/sqlpackage"' >> ~/.bashrc
+   unzip ~/Downloads/sqlpackage-linux-<version string>.zip -d ~/sqlpackage 
+   echo "export PATH=\"\$PATH:$HOME/sqlpackage\"" >> ~/.bashrc
+   chmod a+x ~/sqlpackage/sqlpackage
    source ~/.bashrc
    sqlpackage
    ```
@@ -77,7 +78,7 @@ Diese Version von "Sqlpackage" enthält eine standardmäßige Windows Installer-
    **Debian:**
 
    ```bash
-   sudo apt-get install libuwind8
+   sudo apt-get install libunwind8
    ```
 
    **Redhat:**
@@ -122,8 +123,8 @@ Wenn Sie mit einer ZIP- oder andere Archiv "Sqlpackage" installiert haben, klick
 
 ### <a name="macos"></a>macOS
 
-- MacOS 10.13 High Sierra
-- MacOS 10.12 Sierra
+- macOS 10.13 High Sierra
+- macOS 10.12 Sierra
 
 ### <a name="linux-x64"></a>Linux (x64)
 

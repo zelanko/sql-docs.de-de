@@ -12,18 +12,18 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 81a0a2e9d5201943cc6b04ac4b931d1e8a9a561e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ea089a65065aedac59eb7cac7308acdab097ff47
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540675"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213069"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>SQL Server-Eigenschaften (Registerkarte "Startparameter")
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   Verwenden Sie dieses Dialogfeld, um Startparameter für [!INCLUDE[ssDE](../../includes/ssde-md.md)]hinzuzufügen oder zu entfernen. Startparameter können große Auswirkungen auf die Leistung von [!INCLUDE[ssDE](../../includes/ssde-md.md)] haben. Lesen Sie vor dem Hinzufügen oder Ändern von Startparametern das Thema "Verwenden der Startoptionen für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Startparameter angeben**  
  Um einen Parameter hinzuzufügen, geben Sie den Parameter ein, und klicken Sie anschließend auf **Hinzufügen**.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "52540675"
  Weitere Informationen zum Verschieben der master-Datenbank finden Sie im Thema "Verschieben von Systemdatenbanken" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
 ## <a name="optional-parameters"></a>Optionale Parameter  
- Alle unterstützten Startparameter sind im Thema "Verwenden der Startoptionen für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation beschrieben. Der Startparameter -T*trace#* gibt an, dass beim Starten einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein angegebenes Ablaufverfolgungsflag (*trace#*) aktiviert sein muss. Ablaufverfolgungsflags werden verwendet, um den Server mit nicht standardmäßigem Verhalten zu starten. Weitere Informationen zu Ablaufverfolgungsflags finden Sie im Thema „Ablaufverfolgungsflags ([!INCLUDE[tsql](../../includes/tsql-md.md)])“ in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
+ Alle unterstützten Startparameter sind im Thema "Verwenden der Startoptionen für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation beschrieben. Der Startparameter -T*trace#* gibt an, dass beim Starten einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein angegebenes Ablaufverfolgungsflag (*trace#*) aktiviert sein muss. Ablaufverfolgungsflags werden verwendet, um den Server mit nicht standardmäßigem Verhalten zu starten. Weitere Informationen zu Ablaufverfolgungsflags finden Sie im Thema „Ablaufverfolgungsflags ([!INCLUDE[tsql](../../includes/tsql-md.md)])“ in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
 > [!CAUTION]  
 >  Möglicherweise treffen Sie auf zusätzliche nicht dokumentierte Startparameter und Ablaufverfolgungsflags, die im Internet beschrieben werden. Nicht dokumentierte Startparameter und Ablaufverfolgungsflags werden erstellt, um ungewöhnliche Probleme zu behandeln oder bestimmte für Tests erforderliche Bedingungen zu erzwingen. Die Verwendung von nicht dokumentierten Startparametern kann zu unerwarteten Ergebnissen führen. Verwenden Sie nicht dokumentierte Parameter nur, wenn Sie von Microsoft Support Services dazu aufgefordert werden.  
@@ -80,6 +80,6 @@ ms.locfileid: "52540675"
 -   Das Domänenkonto, das von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet wird, wenn [!INCLUDE[ssDE](../../includes/ssde-md.md)] für die Ausführung unter einem Domänenkonto konfiguriert ist.  
   
 ## <a name="books-online-references"></a>Referenzen in der Onlinedokumentation  
- Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Startparametern finden Sie in „Vorgehensweise: Konfigurieren von Serverstartoptionen ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager)“ in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
+ Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Startparametern finden Sie unter „Vorgehensweise: Konfigurieren von Serverstartoptionen ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Manager)“ in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
   

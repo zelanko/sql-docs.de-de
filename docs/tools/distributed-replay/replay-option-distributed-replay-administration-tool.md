@@ -11,12 +11,12 @@ ms.assetid: d7bce6a5-d414-488d-a3cd-50c1c62019c4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46285d61f38619ed8dff835faee266e5a76f591d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 709ee04eaaf35501cedae0e61d93cfe6e3b55210
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511153"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125940"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>Option Wiedergabe (Verwaltungstool Distributed Replay)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,12 +36,12 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
 ```  
   
 #### <a name="parameters"></a>Parameter  
- **-m** *Controller*  
+ **-m** _Controller_  
  Gibt den Computernamen des Controllers an. Sie können mit "`localhost`" oder "`.`" auf den lokalen Computer verweisen.  
   
  Wenn der **-m** -Parameter nicht angegeben ist, wird der lokale Computer verwendet.  
   
- **-d** *controller_working_dir*  
+ **-d** _controller_working_dir_  
  Gibt das Verzeichnis auf dem Controller an, in dem die Zwischendatei gespeichert wird. Der **-d** -Parameter ist erforderlich.  
   
  Es gelten die folgenden Anforderungen:  
@@ -59,7 +59,7 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
  Wenn der **-o** -Parameter nicht angegeben wird, wird die Ergebnisdatei der Ablaufverfolgung nicht generiert. Die Konsolenausgabe gibt am Ende der Wiedergabe Zusammenfassungsinformationen zurück, es sind jedoch keine weiteren Wiedergabestatistiken verfügbar.  
   
- **-s** *target_server*  
+ **-s** _target_server_  
  Gibt die Zielinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, für die die verteilte Arbeitsauslastung wiedergegeben werden soll. Sie müssen diesen Parameter im folgenden Format angeben: **server_name[\instance name]**.  
   
  Sie können den Zielserver nicht mit "`localhost`" oder "`.`" angeben.  
@@ -68,18 +68,18 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
  Wenn der **-s** -Parameter verwendet wird, wird das `<Server>` -Element im `<ReplayOptions>` -Abschnitt der Wiedergabekonfigurationsdatei ignoriert.  
   
- **-w** *clients*  
+ **-w** _clients_  
  Dieser erforderliche Parameter ist eine durch Trennzeichen getrennte Liste (ohne Leerzeichen), die die Computernamen von Clients angibt, die an der verteilten Wiedergabe teilnehmen sollten. IP-Adressen sind nicht zulässig. Beachten Sie, dass die Clients bereits beim Controller registriert sein müssen.  
   
 > [!NOTE]  
 >  Jeder Client wird beim Starten des Clientdiensts bei dem Controller registriert, der in der Clientkonfigurationsdatei angegeben ist.  
   
- **-c** *config_file*  
+ **-c** _config_file_  
  Der vollständige Pfad der Wiedergabekonfigurationsdatei. Mit ihm wird der Speicherort angegeben, wenn die Datei an einem anderen Speicherort gespeichert wird.  
   
  Der **-c** -Parameter ist nicht erforderlich, wenn Sie die Standardwerte der Wiedergabekonfigurationsdatei `DReplay.exe.replay.config`verwenden möchten.  
   
- **-f** *status_interval*  
+ **-f** _status_interval_  
  Gibt die Häufigkeit (in Sekunden) für die Anzeige des Status an.  
   
  Wenn **-f** nicht angegeben wird, ist das Standardintervall 30 Sekunden.  
@@ -91,7 +91,7 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
 -   Der **-d** -Parameter gibt den Speicherort der Zwischendatei auf dem Controller im Verzeichnis an ( `c:\WorkingDir`).  
   
--   Der **-o** -Parameter legt fest, dass jeder angegebene Client die Wiedergabeaktivität aufzeichnet und in einer Ergebnisdatei der Ablaufverfolgung speichert. Hinweis: Mit dem `<ResultTrace>` -Element in der Konfigurationsdatei kann angegeben werden, ob Zeilenanzahl und Resultset aufgezeichnet werden.  
+-   Der **-o** -Parameter legt fest, dass jeder angegebene Client die Wiedergabeaktivität aufzeichnet und in einer Ergebnisdatei der Ablaufverfolgung speichert. Hinweis: Mit dem `<ResultTrace>`-Element in der Konfigurationsdatei kann angegeben werden, ob Zeilenanzahl und Resultset aufgezeichnet werden.  
   
 -   Der **-w** -Parameter gibt an, dass die Computer `client1` bis `client4` als Clients an der verteilten Wiedergabe teilnehmen.  
   
@@ -156,7 +156,7 @@ dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,cli
   
  Weitere Informationen finden Sie unter [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Wiedergeben von Ablaufverfolgungsdaten](../../tools/distributed-replay/replay-trace-data.md)   
  [Überprüfen der Wiedergabeergebnisse](../../tools/distributed-replay/review-the-replay-results.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
