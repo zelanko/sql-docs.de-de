@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4409d67e60fd4d82d339ac31e96ca75b578171fe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e7d0e18e67720b301f97cc212f7b3b5de0d08e29
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402815"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980536"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "52402815"
   
  Weitere Informationen finden Sie unter [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md) und [DROP EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-table-transact-sql.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -255,8 +255,8 @@ Sowohl die Ursachendateien als auch die Datendateien haben die „queryID“, di
  Beachten Sie, dass die Anmeldung, die die externe Datenquelle erstellt, die Berechtigung zum Lesen und Schreiben in der externen Datenquelle, die in Hadoop oder Azure Blob Storage gespeichert ist, benötigt.  
 
 
- > [!IMPORTANT]  
-
+> [!IMPORTANT]
+> 
 >  Mit der Berechtigung ALTER ANY EXTERNAL DATA SOURCE besitzt jeder Prinzipal die Fähigkeit, alle externen Datenquellenobjekte zu erstellen und zu ändern. Damit können sie auch auf alle datenbankweit gültigen Anmeldeinformationen der Datenbank zugreifen. Da es sich hierbei um eine weitreichende Berechtigung handelt, darf sie nur vertrauenswürdigen Prinzipalen innerhalb des Systems erteilt werden.
 
 ## <a name="error-handling"></a>Fehlerbehandlung  
@@ -283,7 +283,7 @@ Sowohl die Ursachendateien als auch die Datendateien haben die „queryID“, di
 -   CREATE TABLE und DROP TABLE  
   
 -   CREATE STATISTICS und DROP STATISTICS  
-Hinweis: CREATE und DROP STATISTICS werden nicht auf externen Tabellen in der Azure SQL-Datenbank unterstützt. 
+Hinweis: CREATE und DROP STATISTICS werden nicht auf externen Tabellen in Azure SQL-Datenbank unterstützt. 
   
 -   CREATE VIEW und DROP VIEW  
   
@@ -552,7 +552,7 @@ FROM ClickStream
 ;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Beispiele für Metadatenabfrage (SQL Server PDW)](https://msdn.microsoft.com/733fc99b-b9f6-4a29-b085-a1bd4f09f2ed)   
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   

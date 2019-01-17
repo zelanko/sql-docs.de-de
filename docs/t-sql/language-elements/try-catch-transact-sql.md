@@ -30,19 +30,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3374d7ae2f86ce27de46fad9027f78a040ca356b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 68900243001edf7d9dcb39bcf10bf13e24bd0c48
+ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545754"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53997582"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Implementiert die Fehlerbehandlung für [!INCLUDE[tsql](../../includes/tsql-md.md)], die Ähnlichkeiten mit der Ausnahmebehandlung in den Sprachen [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# und [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ hat. Eine Gruppe von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen kann in einen TRY-Block eingeschlossen werden. Wenn innerhalb des TRY-Blocks ein Fehler auftritt, wird die Steuerung an eine andere Gruppe von Anweisungen innerhalb eines CATCH-Blocks übergeben.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -63,7 +63,7 @@ END CATCH
  *statement_block*  
  Eine beliebige Gruppe von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in einem Batch oder in einem BEGIN…END-Block.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Ein TRY…CATCH-Konstrukt fängt alle Ausführungsfehler ab, deren Schweregrad größer als 10 ist und durch die die Datenbankverbindung nicht geschlossen wird.  
   
  Auf einen TRY-Block muss direkt ein dazugehöriger CATCH-Block folgen. Werden andere Anweisungen zwischen die END TRY- und BEGIN CATCH-Anweisungen eingeschlossen, wird dadurch ein Syntaxfehler generiert.  
@@ -103,7 +103,7 @@ END CATCH
   
 -   [ERROR_MESSAGE()](../../t-sql/functions/error-message-transact-sql.md) gibt den gesamten Text der Fehlermeldung zurück. Der Text umfasst die Werte, die für alle ersetzbaren Parameter angegeben werden, wie z. B. Längen, Objektnamen oder Zeitangaben.  
   
- Diese Funktionen geben NULL zurück, wenn sie außerhalb des Bereichs eines CATCH-Blocks aufgerufen werden. Fehlerinformationen können mithilfe dieser Funktionen an beliebiger Stelle im Bereich des CATCH-Blocks abgerufen werden. Das folgende Skript zeigt beispielsweise eine gespeicherte Prozedur, die Fehlerbehandlungsfunktionen umfasst. Im `CATCH`-Block eines `TRY...CATCH`-Konstrukts wird die gespeicherte Prozedur aufgerufen, und Informationen zum Fehler werden zurückgegeben.  
+Diese Funktionen geben NULL zurück, wenn sie außerhalb des Bereichs eines CATCH-Blocks aufgerufen werden. Fehlerinformationen können mithilfe dieser Funktionen an beliebiger Stelle im Bereich des CATCH-Blocks abgerufen werden. Das folgende Skript zeigt beispielsweise eine gespeicherte Prozedur, die Fehlerbehandlungsfunktionen umfasst. Im `CATCH`-Block eines `TRY...CATCH`-Konstrukts wird die gespeicherte Prozedur aufgerufen, und Informationen zum Fehler werden zurückgegeben.  
   
 ```sql  
 -- Verify that the stored procedure does not already exist.  
@@ -146,17 +146,19 @@ END CATCH;
   
 -   Wenn die Sitzung von einem Systemadministrator mit der KILL-Anweisung beendet wird.  
   
- Die folgenden Fehlertypen werden von einem CATCH-Block nicht behandelt, wenn sie auf der gleichen Ausführungsebene wie das TRY…CATCH-Konstrukt auftreten:  
+Die folgenden Fehlertypen werden von einem CATCH-Block nicht behandelt, wenn sie auf der gleichen Ausführungsebene wie das TRY…CATCH-Konstrukt auftreten:  
   
 -   Kompilierungsfehler, z. B. Syntaxfehler, die die Ausführung eines Batches verhindern.  
   
 -   Fehler, die bei der Neukompilierung auf Anweisungsebene auftreten, beispielsweise Fehler bei der Objektnamensauflösung, die aufgrund einer verzögerten Namensauflösung nach der Kompilierung auftreten.  
+-   Fehler bei der Auflösung von Objektnamen   
+
   
- Diese Fehler werden auf die Ebene zurückgegeben, auf der der Batch, die gespeicherte Prozedur oder der Trigger ausgeführt wurden.  
+Diese Fehler werden auf die Ebene zurückgegeben, auf der der Batch, die gespeicherte Prozedur oder der Trigger ausgeführt wurden.  
   
- Tritt ein Fehler bei der Kompilierung oder Neukompilierung auf Anweisungsebene auf einer niedrigeren Ausführungsebene (z. B. bei Ausführung von sp_executesql oder einer benutzerdefinierten gespeicherten Prozedur) innerhalb des TRY-Blocks auf, befindet sich der Fehler auf einer niedrigeren Ebene als das TRY…CATCH-Konstrukt und wird vom dazugehörigen CATCH-Block behandelt.  
+Tritt ein Fehler bei der Kompilierung oder Neukompilierung auf Anweisungsebene auf einer niedrigeren Ausführungsebene (z. B. bei Ausführung von sp_executesql oder einer benutzerdefinierten gespeicherten Prozedur) innerhalb des TRY-Blocks auf, befindet sich der Fehler auf einer niedrigeren Ebene als das TRY…CATCH-Konstrukt und wird vom dazugehörigen CATCH-Block behandelt.  
   
- Das folgende Beispiel zeigt, wie ein Fehler bei der Objektnamensauflösung, der von einer `SELECT`-Anweisung generiert wurde, nicht vom `TRY...CATCH`-Konstrukt erfasst wurde. Er wird jedoch vom `CATCH`-Block erfasst, wenn dieselbe `SELECT`-Anweisung innerhalb einer gespeicherten Prozedur ausgeführt wird.  
+Das folgende Beispiel zeigt, wie ein Fehler bei der Objektnamensauflösung, der von einer `SELECT`-Anweisung generiert wurde, nicht vom `TRY...CATCH`-Konstrukt erfasst wurde. Er wird jedoch vom `CATCH`-Block erfasst, wenn dieselbe `SELECT`-Anweisung innerhalb einer gespeicherten Prozedur ausgeführt wird.  
   
 ```sql  
 BEGIN TRY  
@@ -342,7 +344,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)   
  [Database Engine Error Severities (Schweregrad von Datenbank-Engine-Fehlern)](../../relational-databases/errors-events/database-engine-error-severities.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   

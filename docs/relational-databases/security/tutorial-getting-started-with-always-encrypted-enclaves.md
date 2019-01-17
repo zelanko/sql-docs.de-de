@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Erste Schritte mit Always Encrypted mit Secure Enclaves mithilfe von SSMS | Microsoft-Dokumentation'
+title: 'Lernprogramm: Erste Schritte mit Always Encrypted mit Secure Enclaves mithilfe von SSMS | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 10/04/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 90a9b797862db65187d991bb6961cdfd0bda8959
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a4d833d132a0b4928d021beaa4cd9fcdd695d6c6
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523553"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046580"
 ---
-# <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutorial: Erste Schritte mit Always Encrypted mit Secure Enclaves mithilfe von SSMS
+# <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Lernprogramm: Erste Schritte mit Always Encrypted mit Secure Enclaves mithilfe von SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 In diesem Tutorial werden Ihnen die erste Schritte mit [Always Encrypted mit Secure Enclaves](encryption/always-encrypted-enclaves.md) vermittelt. Es wird Folgendes gezeigt:
@@ -55,7 +55,7 @@ Alternativ können Sie SSMS auf einem anderen Computer installieren.
 >[!NOTE]
 >Der HGS-Computer sollte nicht mit einer Domäne verknüpft werden, bevor Sie beginnen.
 
-## <a name="step-1-configure-the-hgs-computer"></a>Schritt 1: Konfigurieren des HGS-Computers
+## <a name="step-1-configure-the-hgs-computer"></a>Schritt 1: Konfigurieren des HGS-Computers
 
 In diesem Schritt konfigurieren Sie den HGS-Computer zum Ausführen des Host-Überwachungsdiensts, der den Hostschlüsselnachweis unterstützt.
 
@@ -122,7 +122,8 @@ In diesem Schritt konfigurieren Sie den SQL Server-Computer als überwachten Hos
 7. Führen Sie auf dem SQL Server-Computer den folgenden Befehl in einer Windows PowerShell-Konsole mit erhöhten Rechten aus, um dem SQL Server-Computer den Ort für den Nachweis anzugeben. Vergewissern Sie sich, dass Sie die IP-Adresse oder den DNS-Namen des HSG-Computers angeben. 
 
    ```powershell
-   Set-HgsClientConfiguration -AttestationServerUrl https://<IP address or DNS name>/Attestation -KeyProtectionServerUrl https://<IP address or DNS name>/KeyProtection/  
+   # use http, and not https
+   Set-HgsClientConfiguration -AttestationServerUrl http://<IP address or DNS name>/Attestation -KeyProtectionServerUrl http://<IP address or DNS name>/KeyProtection/  
    ```
 
 Das Ergebnis des oben gezeigten Befehls sollte „AttestationStatus = Passed“ lauten.
@@ -133,7 +134,7 @@ Ein Fehler vom Typ „UnauthorizedHost“ weist darauf hin, dass der öffentlich
 
 Wenn andere Fehler auftreten, führen Sie „Clear-HgsClientHostKey“ aus, und wiederholen Sie die Schritte 4 bis 7.
 
-## <a name="step-3-enable-always-encrypted-with-secure-enclaves-in-sql-server"></a>Schritt 3: Aktivieren von Always Encrypted mit Secure Enclaves in SQL Server
+## <a name="step-3-enable-always-encrypted-with-secure-enclaves-in-sql-server"></a>Schritt 3: Aktivieren von Always Encrypted mit Secure Enclaves in SQL Server
 
 In diesem Schritt aktivieren Sie die Funktionen von Always Encrypted mithilfe von Enclaves in Ihrer SQL Server-Instanz.
 
@@ -295,7 +296,7 @@ Sie können nun umfangreiche Abfragen für verschlüsselte Spalten ausführen. E
 
 1. Aktivieren Sie die Parametrisierung für Always Encrypted.
     1. Wählen Sie im Hauptmenü von SSMS die Option **Abfrage** aus.
-    2. Klicken Sie auf **Abfrageoptionen**.
+    2. Wählen Sie **Abfrageoptionen...** aus.
     3. Navigieren Sie zu **Ausführung** > **Erweitert**.
     4. Aktivieren oder deaktivieren Sie „Parametrisierung für Always Encrypted aktivieren“.
     5. Wählen Sie „OK“ aus.

@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 801cdcf393ebadb9c0fd287fdd97e65cad87c284
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4cc82fcdd1324ae8596d83d6a8911973a98ae569
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533018"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980336"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,9 +51,9 @@ Definiert ein Datum in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 |Genauigkeit|Ein Tag|  
 |Standardwert|1900-01-01<br /><br /> Dieser Wert wird für den angefügten Datumsteil für eine implizite Konvertierung von **time** in **datetime2** oder **DateTimeOffset** verwendet.|  
 |Kalender|Gregorianisch|  
-|Benutzerdefinierte Genauigkeit in Sekundenbruchteilen|nein|  
-|Beachtung und Beibehaltung des Zeitzonenoffsets|nein|  
-|Beachtung der Sommerzeit|nein|  
+|Benutzerdefinierte Genauigkeit in Sekundenbruchteilen|Nein|  
+|Beachtung und Beibehaltung des Zeitzonenoffsets|Nein|  
+|Beachtung der Sommerzeit|Nein|  
   
 ## <a name="supported-string-literal-formats-for-date"></a>Unterstützte Formate der Zeichenfolgenliterale für date
 In den folgenden Tabellen werden die gültigen Formate der Zeichenfolgenliterale für den **date**-Datentyp aufgeführt.
@@ -66,7 +66,7 @@ In den folgenden Tabellen werden die gültigen Formate der Zeichenfolgenliterale
 |------------------|-----------------|  
 |mon [dd][,] yyyy<br /><br /> mon dd[,] [yy]yy<br /><br /> mon yyyy [dd]<br /><br /> [dd] mon[,] yyyy<br /><br /> dd mon[,][yy]yy<br /><br /> dd [yy]yy mon<br /><br /> [dd] yyyy mon<br /><br /> yyyy mon [dd]<br /><br /> yyyy [dd] mon|**mon** stellt den vollständigen Monatsnamen oder die in der aktuellen Sprache angegebene Monatsabkürzung dar. Kommas sind optional, und die Großschreibung wird ignoriert.<br /><br /> Um Mehrdeutigkeiten zu vermeiden, sollten Sie vierstellige Jahreszahlen verwenden.<br /><br /> Wenn der Tag fehlt, wird der erste Tag des Monats angegeben.|  
   
-|ISO 8601|Beschreibung|  
+|ISO 8601|und Beschreibung|  
 |--------------|----------------|  
 |YYYY-MM-DD<br /><br /> YYYYMMDD|Identisch mit dem SQL-Standard. Dies ist das einzige Format, das als internationaler Standard definiert ist.|  
   
@@ -83,7 +83,7 @@ In den folgenden Tabellen werden die gültigen Formate der Zeichenfolgenliterale
 |yyyy-mm-ddTZD|Speziell unterstützt für die XML/SOAP-Verwendung.<br /><br /> TZD ist der Zeitzonenkennzeichner (Z oder +hh:mm oder -hh:mm):<br /><br /> – Der Zeitzonenoffset wird durch hh:mm angegeben. Bei hh handelt es sich um zwei Ziffern im Bereich von 0 bis 14, die die Anzahl der Stunden im Zeitzonenoffset darstellen.<br />– Bei MM handelt es sich um zwei Ziffern im Bereich von 0 bis 59, die die Anzahl der zusätzlichen Minuten im Zeitzonenoffset darstellen.<br />– + (plus) oder - (minus) ist das erforderliche Zeichen des Zeitzonenoffsets. Dieses gibt an, ob der Zeitzonenoffset zu der koordinierten Weltzeit (Coordinated Universal Time, UTC) addiert oder von dieser subtrahiert wird, um die lokale Zeit zu erhalten. Der gültige Zeitzonenoffset liegt im Bereich von -14: 00 bis +14: 00.|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>Kompatibilität mit ANSI und ISO 8601  
-**date** ist mit der ANSI SQL-Standarddefinition für den gregorianischen Kalender kompatibel: „NOTE 85 - Datetime data types will allow dates in the Gregorian format to be stored in the date range 0001-01-01–9999-12-31–01 CE through 9999–12–31 CE.“ (Hinweis 85: Datetime-Datentypen lassen Datumsangaben im gregorianischen Format im Bereich 1.1.0001 bis 31.12.9999 zu.)
+**date** ist mit der ANSI SQL-Standarddefinition für den gregorianischen Kalender kompatibel: „NOTE 85 - Datetime data types will allow dates in the Gregorian format to be stored in the date range 0001-01-01 CE through 9999–12–31 CE.“ („HINWEIS 85: datetime-Datentypen akzeptieren Datumsangaben im gregorianischen Format für die Speicherung im Datumsbereich 0001-01-01 CE – 9999-12-31 CE.“)
   
 Das standardmäßige Format der Zeichenfolgenliterale, das für Downlevelclients verwendet wird, ist mit dem SQL-Standard konform, der als YYYY-MM-DD definiert ist. Dieses Format ist mit der Definition von ISO 8601 für DATE identisch.
   
@@ -106,7 +106,7 @@ Beim Konvertieren in date- und time-Datentypen lehnt [!INCLUDE[ssNoVersion](../.
 ### <a name="converting-date-to-other-date-and-time-types"></a>Konvertieren von date-Werten in andere Datums- und Uhrzeittypen
 Der folgende Abschnitt veranschaulicht die Abläufe bei der Konvertierung des **date**-Datentyps in andere Datums- und Uhrzeittypen.
   
-Beim Konvertieren in **time(n)** schlägt die Konvertierung fehl, und die Fehlermeldung 206 "Operandentypkollision: date ist inkompatibel mit time" wird ausgegeben.
+Beim Konvertieren in **time(n)** schlägt die Konvertierung fehl, und die Fehlermeldung 206 wird ausgegeben: „Operandentypkollision: date ist inkompatibel mit time.“
   
 Beim Konvertieren in **datetime** wird das Datum kopiert. Der folgende Code zeigt die Ergebnisse der Konvertierung eines `date`-Werts in einen `datetime`-Wert.
   
@@ -124,7 +124,7 @@ SELECT @date AS '@date', @datetime AS '@datetime';
 --(1 row(s) affected)  
 ```  
   
-Beim Konvertieren in **smalldatetime** liegt der **Datum**-Wert im Bereich von [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md), die Datumskomponente wird kopiert, und die Uhrzeitkomponente wird auf „00:00:00.000“ festgelegt. Wenn der **date**-Wert außerhalb des Bereichs eines **smalldatetime**-Werts liegt, wird die Fehlermeldung 242 "Bei der Konvertierung eines date-Datentyps in einen smalldatetime-Datentyp liegt der Wert außerhalb des gültigen Bereichs" ausgegeben, und der **smalldatetime**-Wert wird auf NULL gesetzt. Der folgende Code zeigt die Ergebnisse der Konvertierung eines `date`-Werts in einen `smalldatetime`-Wert.
+Beim Konvertieren in **smalldatetime** liegt der **Datum**-Wert im Bereich von [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md), die Datumskomponente wird kopiert, und die Uhrzeitkomponente wird auf „00:00:00.000“ festgelegt. Wenn der **date**-Wert nicht im Bereich eines **smalldatetime**-Werts liegt, wird die Fehlermeldung 242: „The conversion of a date data type to a smalldatetime data type resulted in an out-of-range value.“ („Bei der Konvertierung eines date-Datentyps in einen smalldatetime-Datentyp liegt der Wert außerhalb des gültigen Bereichs.“) ausgegeben, und der **smalldatetime**-Wert ist auf NULL festgelegt. Der folgende Code zeigt die Ergebnisse der Konvertierung eines `date`-Werts in einen `smalldatetime`-Wert.
   
 ```sql
 DECLARE @date date= '1912-10-25';  

@@ -21,19 +21,19 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 52149ae289f0cea89ff31a501acaaf8d0c7cbd3e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 352cd03017b33247c66f7eb0090cd79d0d5cd532
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545620"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980096"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Ändert globale Konfigurationseinstellungen für den aktuellen Server in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -196,7 +196,7 @@ SQLDUMPEREDUMPFLAGS
  Um den Zielcluster zu identifizieren, geben Sie einen der folgenden Werte an:  
   
  *Windows-Cluster*  
- Der Netzwerkname eines WSFCs. Sie können entweder den Kurznamen oder den vollständigen Domänennamen angeben. ALTER SERVER CONFIGURATION sucht die Ziel-IP-Adresse eines Kurznamens mithilfe einer DNS-Auflösung. In einigen Situationen könnte ein Kurzname für Verwirrung sorgen, und DNS gibt möglicherweise die falsche IP-Adresse zurück. Daher empfiehlt es sich, dass Sie den vollständigen Domänennamen angeben.  
+ Der Netzwerkname eines WSFC. Sie können entweder den Kurznamen oder den vollständigen Domänennamen angeben. ALTER SERVER CONFIGURATION sucht die Ziel-IP-Adresse eines Kurznamens mithilfe einer DNS-Auflösung. In einigen Situationen könnte ein Kurzname für Verwirrung sorgen, und DNS gibt möglicherweise die falsche IP-Adresse zurück. Daher empfiehlt es sich, dass Sie den vollständigen Domänennamen angeben.  
   
   > [!NOTE] 
   > Eine clusterübergreifende Migration unter Verwendung dieser Einstellung wird nicht mehr unterstützt. Verwenden Sie zum Ausführen einer clusterübergreifenden Migration eine verteilte Verfügbarkeitsgruppe oder eine andere Methode, wie etwa Protokollversand. 
@@ -237,14 +237,14 @@ SQLDUMPEREDUMPFLAGS
  OFF  
  Deaktiviert die automatische Softwarepartitionierung, um große NUMA-Hardwareknoten in kleine NUMA-Knoten aufzuteilen. Das Ändern des ausgeführten Werts erfordert einen Neustart der Datenbank-Engine.  
 
-> [!WARNING]  
+> [!WARNING]
 > Es gibt bekannte Probleme beim Verhalten der ALTER SERVER CONFIGURATION-Anweisung mit der SOFT NUMA-Option und dem SQL Server-Agent.  Es wird empfohlen, dass Sie folgendermaßen vorgehen:  
 > 1) Beenden Sie die Instanz des SQL Server-Agents.  
 > 2) Führen Sie die Option ALTER SERVER CONFIGURATION SOFT NUMA aus.  
 > 3) Starten Sie die SQL Server-Instanz neu.  
 > 4) Starten Sie die Instanz des SQL Server-Agents wieder.  
   
-**Weitere Informationen:** Wenn ALTER SERVER CONFIGURATION mit dem Befehl SET SOFTNUMA ausgeführt wird, bevor SQL Server neu gestartet wird, führt der SQL Server Agent beim Beenden den Befehl T-SQL RECONFIGURE aus, der die SOFTNUMA-Einstellung auf die Einstellung vor ALTER SERVER CONFIGURATION zurücksetzt. 
+**Weitere Informationen** Wenn ALTER SERVER CONFIGURATION mit dem Befehl SET SOFT NUMA ausgeführt wird, bevor der SQL Server-Dienst neu gestartet wird, führt der SQL Server-Agent beim Beenden den Befehl T-SQL RECONFIGURE aus, der die SOFT NUMA-Einstellungen auf die Einstellungen vor ALTER SERVER CONFIGURATION zurücksetzt. 
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Diese Anweisung erfordert keinen Neustart von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], wenn dies nicht explizit angegeben wird. Im Fall einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failoverclusterinstanz ist kein Neustart der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Clusterressource erforderlich.  
@@ -255,7 +255,7 @@ SQLDUMPEREDUMPFLAGS
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert ALTER SETTINGS-Berechtigungen für die Prozessaffinitätsoption. ALTER SETTINGS- und VIEW SERVER STATE-Berechtigungen für Diagnoseprotokoll- und Failoverclustereigenschaften-Optionen und die CONTROL SERVER-Berechtigung für die HADR-Clusterkontextoption.  
   
- Erfordert die ALTER SERVER STATE-Berechtigung für die Pufferpoolerweiterungsoption.  
+ Erfordert die ALTER SERVER STATE-Berechtigung für die Option Pufferpoolerweiterung.  
   
  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]-Ressourcen-DLL wird unter dem lokalen Systemkonto ausgeführt. Aus diesem Grund muss das lokale Systemkonto über Lese- und Schreibzugriff auf den in der Diagnoseprotokolloption angegebenen Pfad verfügen.  
   
@@ -405,7 +405,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Soft-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)   
  [Ändern des HADR-Clusterkontexts der Serverinstanz &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)   
  [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)   

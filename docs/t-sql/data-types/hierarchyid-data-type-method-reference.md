@@ -19,12 +19,12 @@ ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6bba3aa9dd92086fa887e92c5c5efc3379f419fd
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 51d4b6c9e19f334946657205de6cdc8c6ce593ec
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702950"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980026"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>Methodenverweis für den Datentyp „hierarchyid“
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ Sollte während des Upgrades ein Benutzertyp mit in Konflikt stehendem Namen vor
 Spalten vom Typ **hierarchyid** können in jeder replizierten Tabelle verwendet werden. Die Anforderungen für Ihre Anwendung hängen davon ab, ob die Replikation eindirektional oder bidirektional ist, und davon, welche Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden.
   
 ### <a name="one-directional-replication"></a>Eindirektionale Replikation
-Zur eindirektionalen Replikation gehören die Momentaufnahmereplikation, die Transaktionsreplikation und die Mergereplikation, bei denen Änderungen nicht auf dem Abonnenten vorgenommen werden. Wie **hierarchyid**-Spalten bei eindirektionaler Replikation funktionieren, hängt von der Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab, die der Abonnent ausführt.
+Zur eindirektionalen Replikation gehören die Momentaufnahmereplikation, die Transaktionsreplikation und die Mergereplikation, bei denen Änderungen nicht auf dem Abonnenten vorgenommen werden. Wie **hierarchyid**-Spalten bei unidirektionaler Replikation funktionieren, hängt von der Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab, die der Abonnent ausführt.
 -   Ein [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Verleger kann **hierarchyid**-Spalten problemlos für einen [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Abonnenten replizieren.  
 -   Ein [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Verleger muss **hierarchyid**-Spalten konvertieren, um sie auf einem Abonnenten zu replizieren, der [!INCLUDE[ssEW](../../includes/ssew-md.md)] oder eine frühere Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführt. In [!INCLUDE[ssEW](../../includes/ssew-md.md)] und früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden **hierarchyid**-Spalten nicht unterstützt. Wenn Sie mit einer dieser Versionen arbeiten, können Sie trotzdem Daten auf einen Abonnenten replizieren. Dazu müssen Sie eine Schemaoption oder (bei der Mergereplikation) den Veröffentlichungskompatibilitätsgrad festlegen, sodass die Spalte in einen kompatiblen Datentyp konvertiert werden kann.  
   

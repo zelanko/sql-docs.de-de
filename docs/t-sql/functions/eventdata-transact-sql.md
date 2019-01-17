@@ -17,7 +17,7 @@ dev_langs:
 helpviewer_keywords:
 - server instance event data [SQL Server]
 - event notifications [SQL Server], event status
-- events [SQL Server], status infromation
+- events [SQL Server], status information
 - EVENTDATA function
 - status information [SQL Server], events
 - DDL triggers, returning event data
@@ -25,19 +25,19 @@ ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 953a4d79d128d2295b5365653f0f7b62647f6069
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 0ec1c2d952c334b1ccb394f5abb36ea91d5f1a87
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701328"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979846"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Diese Funktion gibt Informationen zu Server- oder Datenbankereignissen zurück. Beim Auslösen einer Ereignisbenachrichtigung und, wenn der angegebene Service Broker die Ergebnisse empfängt, wird `EVENTDATA` aufgerufen. Ein DDL- oder LOGON-Trigger unterstützt auch die interne Verwendung von `EVENTDATA`.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -74,7 +74,7 @@ Von `EVENTDATA` zurückgegebene Daten sind ungültig, nachdem eine Transaktion
 Kennwörter werden nicht angezeigt, wenn `CREATE LOGIN`- oder `ALTER LOGIN`-Anweisungen ausgeführt werden. Dies dient dem Schutz der Anmeldeinformationen.  
   
 ## <a name="schemas-returned"></a>Zurückgegebene Schemas  
-EVENTDATA gibt einen Wert vom Datentyp **xml** zurück. Standardmäßig wird die Schemadefinition für alle Ereignisse in diesem Verzeichnis installiert: [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd.  
+EVENTDATA gibt einen Wert vom Datentyp **xml** zurück. Standardmäßig wird die Schemadefinition für alle Ereignisse im folgenden Verzeichnis installiert: [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd.  
   
 Auf der Webseite [Microsoft SQL Server: XML-Schemas](https://go.microsoft.com/fwlink/?LinkID=31850) ist ebenfalls das Ereignisschema veröffentlicht.  
   
@@ -151,7 +151,7 @@ DROP TABLE ddl_log;
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden der EVENTDATA-Funktion](../../relational-databases/triggers/use-the-eventdata-function.md)   
  [DDL-Trigger](../../relational-databases/triggers/ddl-triggers.md)   
  [Ereignisbenachrichtigungen](../../relational-databases/service-broker/event-notifications.md)   

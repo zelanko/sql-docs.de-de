@@ -17,12 +17,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de24fe5caaafc1475e647c84ea5a300c5221e5f0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6dd3633cfe8b51cebceac01c0a9b0e2f17ee999a
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511769"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980556"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Handbuch zu Transaktionssperren und Zeilenversionsverwaltung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "52511769"
  Der Autocommit-Modus ist der Standardmodus zur Transaktionsverwaltung von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Für jede [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung wird beim Beenden ein Commit oder Rollback ausgeführt. Wenn eine Anweisung erfolgreich beendet wird, wird ein Commit ausgeführt; wenn hingegen Fehler auftreten, wird ein Rollback ausgeführt. Eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] befindet sich immer dann im Autocommit-Modus, wenn dieser Standardmodus nicht durch explizite oder implizite Transaktionen überschrieben wird. Der Autocommit-Modus ist ebenfalls der Standardmodus für ADO, OLE DB, ODBC und DB-Library.  
   
  **Implizite Transaktionen**  
- Wenn eine Verbindung sich im impliziten Transaktionsmodus befindet, startet [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] automatisch eine neue Transaktion, nachdem für die aktuelle Transaktion ein Commit oder Rollback ausgeführt wurde. Die Kennzeichnung des Starts einer Transaktion entfällt; Sie führen nur einen Commit oder Rollback für die einzelnen Transaktionen aus. Im impliziten Transaktionsmodus wird eine fortlaufende Kette von Transaktionen generiert. Sie legen den impliziten Transaktionsmodus entweder durch eine API-Funktion oder durch die [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung SET IMPLICIT_TRANSACTIONS ON fest.  
+ Wenn eine Verbindung sich im impliziten Transaktionsmodus befindet, startet [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] automatisch eine neue Transaktion, nachdem für die aktuelle Transaktion ein Commit oder Rollback ausgeführt wurde. Die Kennzeichnung des Starts einer Transaktion entfällt; Sie führen nur einen Commit oder Rollback für die einzelnen Transaktionen aus. Im impliziten Transaktionsmodus wird eine fortlaufende Kette von Transaktionen generiert. Sie legen den impliziten Transaktionsmodus entweder durch eine API-Funktion oder durch die [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung SET IMPLICIT_TRANSACTIONS ON fest.  Dieser Modus wird auch Autocommit OFF genannt. Weitere Informationen finden Sie unter [setAutoCommit-Methode](../connect/jdbc/reference/setautocommit-method-sqlserverconnection.md). 
   
  Nachdem der implizite Transaktionsmodus für eine Verbindung aktiviert wurde, startet [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] automatisch eine Transaktion, wenn eine dieser Anweisungen zum ersten Mal ausgeführt wird:  
   
@@ -291,17 +291,17 @@ GO
 |Isolationsstufe der Zeilenversionsverwaltung|Definition|  
 |------------------------------------|----------------|  
 |Read Committed Snapshot|Wenn die READ_COMMITTED_SNAPSHOT-Datenbankoption auf ON festgelegt ist, verwendet die READ COMMITTED-Isolation die Zeilenversionsverwaltung, um eine Lesekonsistenz auf der Anweisungsebene zu gewährleisten. Lesevorgänge erfordern dabei lediglich SCH-S-Sperren auf der Tabellenebene und keine Seiten- oder Zeilensperren. Das heißt, das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verwendet die Zeilenversionsverwaltung, um jede Anweisung mit einer transaktionskonsistenten Momentaufnahme der Daten so darzustellen, wie sie zu Beginn der Anweisung vorhanden waren. Es werden keine Sperren verwendet, um die Daten vor Updates durch andere Transaktionen zu schützen. Eine benutzerdefinierte Funktion kann Daten zurückgeben, für die ein Commit ausgeführt wurde, nachdem die Anweisung mit dem UDF begonnen hat.<br /><br /> Wenn die Datenbankoption `READ_COMMITTED_SNAPSHOT` die Standardeinstellung OFF aufweist, verwendet die Read Committed-Isolation freigegebene Sperren, um zu verhindern, dass andere Transaktionen Zeilen ändern, während die aktuelle Transaktion einen Lesevorgang ausführt. Durch freigegebene Sperren wird außerdem verhindert, dass die Anweisung Zeilen, die von anderen Transaktionen geändert werden, erst nach Abschluss der anderen Transaktion lesen kann. Beide Implementierungen entsprechen der ISO-Definition der Read Committed-Isolation.|  
-|Momentaufnahme|Die Momentaufnahmeisolationsstufe verwendet die Zeilenversionsverwaltung, um die Lesekonsistenz auf der Transaktionsebene zu gewährleisten. Dabei werden durch Lesevorgänge keine Seiten- oder Zeilensperren eingerichtet, sondern lediglich SCH-S-Tabellensperren. Beim Lesen von Zeilen, die durch eine andere Transaktion geändert wurden, wird die Version der Zeile abgerufen, die zum Startzeitpunkt der Transaktion vorhanden war. Sie können die Momentaufnahmeisolation für eine Datenbank nur verwenden, wenn die `ALLOW_SNAPSHOT_ISOLATION`-Datenbankoption auf ON festgelegt wurde. Standardmäßig ist diese Option für Benutzerdatenbanken auf OFF gesetzt.<br /><br /> **Hinweis:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt keine Versionsverwaltung von Metadaten. Aus diesem Grund gibt es bezüglich der DDL-Vorgänge, die in einer unter Momentaufnahmeisolation ausgeführten expliziten Transaktion ausgeführt werden, Einschränkungen. Die folgenden DDL-Anweisungen sind nach einer BEGIN TRANSACTION-Anweisung unter Momentaufnahmeisolation nicht zulässig: ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME sowie alle CLR (Common Language Runtime)-DDL-Anweisungen. Diese Anweisungen sind zulässig, wenn die Momentaufnahmeisolation in impliziten Transaktionen verwendet wird. Eine implizite Transaktion ist definitionsgemäß eine einzelne Anweisung, mit der die Semantik der Momentaufnahmeisolation auch in DDL-Anweisungen erzwungen werden kann. Verstöße gegen dieses Prinzip können zu Fehler 3961 führen: `Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`.|  
+|Momentaufnahme|Die Momentaufnahmeisolationsstufe verwendet die Zeilenversionsverwaltung, um die Lesekonsistenz auf der Transaktionsebene zu gewährleisten. Dabei werden durch Lesevorgänge keine Seiten- oder Zeilensperren eingerichtet, sondern lediglich SCH-S-Tabellensperren. Beim Lesen von Zeilen, die durch eine andere Transaktion geändert wurden, wird die Version der Zeile abgerufen, die zum Startzeitpunkt der Transaktion vorhanden war. Sie können die Momentaufnahmeisolation für eine Datenbank nur verwenden, wenn die `ALLOW_SNAPSHOT_ISOLATION`-Datenbankoption auf ON festgelegt wurde. Standardmäßig ist diese Option für Benutzerdatenbanken auf OFF gesetzt.<br /><br /> **Hinweis:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt keine Versionsverwaltung von Metadaten. Aus diesem Grund gibt es bezüglich der DDL-Vorgänge, die in einer unter Momentaufnahmeisolation ausgeführten expliziten Transaktion ausgeführt werden, Einschränkungen. Die folgenden DDL-Anweisungen sind bei der Momentaufnahme-Isolationsstufe nach einer BEGIN TRANSACTION-Anweisung nicht zulässig: ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME oder eine beliebige CLR-DDL-Anweisung (Common Language Runtime). Diese Anweisungen sind zulässig, wenn die Momentaufnahmeisolation in impliziten Transaktionen verwendet wird. Eine implizite Transaktion ist definitionsgemäß eine einzelne Anweisung, mit der die Semantik der Momentaufnahmeisolation auch in DDL-Anweisungen erzwungen werden kann. Verstöße gegen dieses Prinzip können zu Fehler 3961 führen: `Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`.|  
   
  Die folgende Tabelle veranschaulicht, welche Parallelitätsnebeneffekte in den einzelnen Isolationsstufen möglich sind.  
   
 |Isolationsstufe|Dirty Read|Nonrepeatable Read|Phantom|  
 |---------------------|----------------|------------------------|-------------|  
-|**Read uncommitted**|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|**Read committed**|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|**Repeatable read**|nein|nein|Benutzerkontensteuerung|  
-|**Momentaufnahme**|nein|nein|nein|  
-|**Serializable**|nein|nein|nein|  
+|**Read uncommitted**|Ja|Ja|Ja|  
+|**Read committed**|Nein|Ja|Ja|  
+|**Repeatable read**|Nein|Nein|Ja|  
+|**Momentaufnahme**|Nein|Nein|Nein|  
+|**Serializable**|Nein|Nein|Nein|  
   
  Weitere Informationen zu den speziellen Sperrentypen sowie zur Unterstützung der Zeilenversionsverwaltung durch die einzelnen Transaktionsisolationsstufen finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
@@ -401,8 +401,8 @@ GO
 |Sperrmodus|und Beschreibung|  
 |---------------|-----------------|  
 |Beabsichtigte freigegebene Sperre (Intent Shared, IS)|Schützt angeforderte oder eingerichtete freigegebene Sperren bestimmter (aber nicht aller) Ressourcen untergeordneter Ebenen in der Hierarchie.|  
-|Beabsichtigte exklusive Sperre (Intent Exclusive, IX)|Schützt angeforderte oder eingerichtete exklusive Sperren bestimmter (aber nicht aller) Ressourcen untergeordneter Ebenen in der Hierarchie. IX ist eine Obermenge von IS und schützt auch vor Anforderung freigegebener Sperren auf Ressourcen untergeordneter Ebenen in der Hierarchie.|  
-|Freigegebene Sperre mit beabsichtigter exklusiver Sperre (Shared With Intent Exclusive, SIX)|Schützt angeforderte oder eingerichtete freigegebene Sperren aller Ressourcen untergeordneter Ebenen in der Hierarchie sowie beabsichtigte exklusive Sperren bestimmter (aber nicht aller) Ressourcen untergeordneter Ebenen in der Hierarchie. Gleichzeitige Sperren des Typs IS auf der Ressource der obersten Ebene sind zugelassen. So werden beispielsweise bei einer Sperre des Typs SIX für eine Tabelle auch beabsichtigte exklusive Sperren für die zu ändernden Seiten sowie exklusive Sperren für die zu ändernden Zeilen eingerichtet. Es kann jeweils nur eine Sperre des Typs SIX pro Ressource eingerichtet werden, durch die Updates an der Ressource durch andere Transaktionen verhindert werden. Dennoch können andere Transaktionen Ressourcen, die sich weiter unten in der Hierarchie befinden, lesen, indem sie beabsichtigte freigegebene Sperren auf Tabellenebene einrichten.|  
+|Beabsichtigte exklusive Sperre (Intent Exclusive, IX)|Schützt angeforderte oder eingerichtete exklusive Sperren bestimmter (aber nicht aller) Ressourcen untergeordneter Ebenen in der Hierarchie. IX ist eine Obermenge der beabsichtigten freigegebenen Sperre und schützt auch vor Anforderung freigegebener Sperren auf Ressourcen untergeordneter Ebenen in der Hierarchie.|  
+|Freigegebene Sperre mit beabsichtigter exklusiver Sperre (Shared With Intent Exclusive, SIX)|Schützt angeforderte oder eingerichtete freigegebene Sperren aller Ressourcen untergeordneter Ebenen in der Hierarchie sowie beabsichtigte exklusive Sperren bestimmter (aber nicht aller) Ressourcen untergeordneter Ebenen in der Hierarchie. Gleichzeitige beabsichtigte freigegebene Sperren auf der Ressource der obersten Ebene sind zugelassen. So werden beispielsweise bei einer Sperre des Typs SIX für eine Tabelle auch beabsichtigte exklusive Sperren für die zu ändernden Seiten sowie exklusive Sperren für die zu ändernden Zeilen eingerichtet. Es kann jeweils nur eine Sperre des Typs SIX pro Ressource eingerichtet werden, durch die Updates an der Ressource durch andere Transaktionen verhindert werden. Dennoch können andere Transaktionen Ressourcen, die sich weiter unten in der Hierarchie befinden, lesen, indem sie beabsichtigte freigegebene Sperren auf Tabellenebene einrichten.|  
 |Beabsichtigte Updatesperre (Intent Update, IU)|Schützt angeforderte oder eingerichtete Updatesperren aller Ressourcen untergeordneter Hierarchieebenen. IU-Sperren werden nur mit Seitenressourcen verwendet. IU-Sperren werden zu IX-Sperren konvertiert, wenn ein Updatevorgang ausgeführt wird.|  
 |Freigegebene beabsichtigte Updatesperre (Shared Intent Update, SIU)|Eine Kombination der Sperren vom Typ S und IU, die sich aus der separaten Einrichtung dieser Sperren und dem gleichzeitigen Beibehalten beider Sperren ergibt. Nehmen Sie beispielsweise an, eine Transaktion führt eine Abfrage mit dem PAGLOCK-Hinweis und anschließend einen Updatevorgang aus. Die Abfrage mit dem PAGLOCK-Hinweis richtet also die S-Sperre ein, wohingegen der Updatevorgang die IU-Sperre einrichtet.|  
 |Exklusive beabsichtigte Updatesperre (Update intent exclusive, UIX)|Eine Kombination der Sperren vom Typ U und IX, die sich aus dem separaten Einrichten dieser Sperren und dem gleichzeitigen Beibehalten beider Sperren ergibt.|  
@@ -421,7 +421,7 @@ GO
 -   Es wird entweder der **TABLOCK**-Hinweis angegeben oder die Tabellenoption **table lock on bulk load** mithilfe von **sp_tableoption** festgelegt.  
   
 > [!TIP]  
-> Im Gegensatz zur BULK INSERT-Anweisung, die eine weniger restriktive Massenupdatesperre enthält, weist INSERT INTO...SELECT mit dem TABLOCK-Hinweis eine exklusive Sperre (X) für die Tabelle auf. Das bedeutet, dass Sie keine Zeilen mit parallelen Einfügevorgängen einfügen können.  
+> Im Gegensatz zur BULK INSERT-Anweisung, die eine weniger restriktive Massenupdatesperre enthält, weist INSERT INTO…SELECT mit dem TABLOCK-Hinweis eine exklusive Sperre (X) für die Tabelle auf. Das bedeutet, dass Sie keine Zeilen mit parallelen Einfügevorgängen einfügen können.  
   
 #### <a name="key_range"></a> Schlüsselbereichssperren  
  Schlüsselbereichssperren schützen einen Bereich von Zeilen, die implizit in ein Recordset eingeschlossen wurden, das von einer [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung gelesen wird; dies geschieht bei Verwendung der Transaktionsisolationsstufe SERIALIZABLE. Durch Schlüsselbereichssperren werden Phantomlesezugriffe verhindert. Indem die Schlüsselbereiche zwischen Zeilen geschützt werden, wird auch verhindert, dass beim Zugreifen von Transaktionen auf Recordsets Phantomeinfügungen oder -löschungen erfolgen.  
@@ -434,12 +434,12 @@ GO
 ||Vorhandener erteilter Modus||||||  
 |------|---------------------------|------|------|------|------|------|  
 |**Angeforderter Modus**|**IS**|**S**|**U**|**IX**|**SIX**|**X**|  
-|**Beabsichtigte freigegebene Sperre (Intent Shared, IS)**|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
-|**Freigegebene Sperre (Shared, S)**|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|nein|  
-|**Updatesperre (U)**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|nein|nein|  
-|**Beabsichtigte exklusive Sperre (Intent Exclusive, IX)**|Benutzerkontensteuerung|nein|nein|Benutzerkontensteuerung|nein|nein|  
-|**Freigegebene Sperre mit beabsichtigter exklusiver Sperre (Shared With Intent Exclusive, SIX)**|Benutzerkontensteuerung|nein|nein|nein|nein|nein|  
-|**Exklusive Sperre (X)**|nein|nein|nein|nein|nein|nein|  
+|**Beabsichtigte freigegebene Sperre (Intent Shared, IS)**|Ja|Ja|Ja|Ja|Ja|Nein|  
+|**Freigegebene Sperre (Shared, S)**|Ja|Ja|Ja|Nein|Nein|Nein|  
+|**Updatesperre (U)**|Ja|Ja|Nein|Nein|Nein|Nein|  
+|**Beabsichtigte exklusive Sperre (Intent Exclusive, IX)**|Ja|Nein|Nein|Ja|Nein|Nein|  
+|**Freigegebene Sperre mit beabsichtigter exklusiver Sperre (Shared With Intent Exclusive, SIX)**|Ja|Nein|Nein|Nein|Nein|Nein|  
+|**Exklusive Sperre (X)**|Nein|Nein|Nein|Nein|Nein|Nein|  
   
 > [!NOTE]  
 > Eine beabsichtigte exklusive Sperre (IX) ist mit einem Sperrmodus des Typs IX kompatibel, da IX nur die Absicht zum Aktualisieren einiger statt aller Zeilen anzeigt. Andere Transaktionen, die versuchen, einige der Zeilen zu lesen oder zu aktualisieren, werden ebenfalls zugelassen, sofern es sich nicht um dieselben Zeilen handelt, die von anderen Transaktionen aktualisiert werden. Wenn zwei Transaktionen versuchen, dieselbe Zeile zu aktualisieren, wird beiden Transaktionen eine IX-Sperre auf Tabellen- und Seitenebene erteilt. Bei nur einer Transaktion wird jedoch eine X-Sperre auf Zeilenebene erteilt. Die andere Transaktion muss warten, bis die Sperre auf Zeilenebene aufgehoben wird.  
@@ -477,13 +477,13 @@ GO
 ||Vorhandener erteilter Modus|||||||  
 |------|---------------------------|------|------|------|------|------|------|  
 |**Angeforderter Modus**|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
-|**Freigegebene Sperre (Shared, S)**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
-|**Updatesperre (U)**|Benutzerkontensteuerung|nein|nein|Benutzerkontensteuerung|nein|Benutzerkontensteuerung|nein|  
-|**Exklusive Sperre (X)**|nein|nein|nein|nein|nein|Benutzerkontensteuerung|nein|  
-|**RangeS-S**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|  
-|**RangeS-U**|Benutzerkontensteuerung|nein|nein|Benutzerkontensteuerung|nein|nein|nein|  
-|**RangeI-N**|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|Benutzerkontensteuerung|nein|  
-|**RangeX-X**|nein|nein|nein|nein|nein|nein|nein|  
+|**Freigegebene Sperre (Shared, S)**|Ja|Ja|Nein|Ja|Ja|Ja|Nein|  
+|**Updatesperre (U)**|Ja|Nein|Nein|Ja|Nein|Ja|Nein|  
+|**Exklusive Sperre (X)**|Nein|Nein|Nein|Nein|Nein|Ja|Nein|  
+|**RangeS-S**|Ja|Ja|Nein|Ja|Ja|Nein|Nein|  
+|**RangeS-U**|Ja|Nein|Nein|Ja|Nein|Nein|Nein|  
+|**RangeI-N**|Ja|Ja|Ja|Nein|Nein|Ja|Nein|  
+|**RangeX-X**|Nein|Nein|Nein|Nein|Nein|Nein|Nein|  
   
 #### <a name="lock_conversion"></a> Konvertierungssperren  
  Konvertierungssperren werden erstellt, wenn eine Schlüsselbereichssperre eine andere Sperre überlappt.  
@@ -509,7 +509,7 @@ GO
  Folgende Bedingungen müssen erfüllt werden, ehe Schlüsselbereichssperren verwendet werden können:  
   
 -   Die Isolationsstufe der Transaktion muss auf SERIALIZABLE festgelegt sein.  
--   Der Abfrageprozessor muss zum Implementieren des Bereichsfilterprädikäts verwendet werden. Von der WHERE-Klausel in einer SELECT-Anweisung könnte beispielsweise eine Bereichsbedingung mit diesem Prädikat eingerichtet werden: ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'**. Eine Schlüsselbereichssperre kann nur eingerichtet werden, wenn **ColumnX** durch einen Indexschlüssel abgedeckt ist.  
+-   Der Abfrageprozessor muss zum Implementieren des Bereichsfilterprädikäts verwendet werden. Beispiel: Die WHERE-Klausel in einer SELECT-Anweisung könnte eine Bereichsbedingung mit diesem Prädikat erstellen: ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'**. Eine Schlüsselbereichssperre kann nur eingerichtet werden, wenn **ColumnX** durch einen Indexschlüssel abgedeckt ist.  
   
 #### <a name="examples"></a>Beispiele  
  Die nachfolgende Tabelle und der nachfolgende Index dienen als Grundlage für die Beispiele für Schlüsselbereichssperren, die nachfolgend aufgeführt sind.  
@@ -585,7 +585,7 @@ INSERT mytable VALUES ('Dan');
 -   Die Transaktion A fordert nun eine exklusive Sperre für Zeile 2 an und ist blockiert, bis die Transaktion B beendet ist und die freigegebene Sperre für Zeile 2 aufhebt.  
 -   Die Transaktion B fordert nun eine exklusive Sperre für Zeile 1 an und ist blockiert, bis die Transaktion A beendet ist und die freigegebene Sperre für Zeile 1 aufhebt.  
   
- Folglich kann Transaktion A nicht abgeschlossen werden, bis die Transaktion B abgeschlossen ist. Die Transaktion B ist aber durch Transaktion A blockiert. Diese Bedingung wird auch zyklische Abhängigkeit genannt: die Transaktion A ist von der Transaktion B abhängig und die Transaktion B schließt den Kreis wieder, da sie von der Transaktion A abhängig ist.  
+ Transaktion A kann erst nach Ende von Transaktion B ausgeführt werden, aber Transaktion B ist durch Transaktion A blockiert. Diese Bedingung wird auch als zyklische Abhängigkeit bezeichnet. Transaktion A hängt von Transaktion B ab, und Transaktion B schließt den Kreis, da sie von Transaktion A abhängt.  
   
  Die beiden Transaktionen, die sich im Deadlock befinden, werden auf unbegrenzte Zeit aufeinander warten, es sei denn, der Deadlock wird von einem externen Prozess unterbrochen. Der [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]-Deadlockmonitor überprüft regelmäßig, ob sich Tasks in einem Deadlock befinden. Wenn der Monitor eine solche zyklische Abhängigkeit erkennt, wählt er einen der Tasks als Opfer aus und beendet dessen Transaktion mit einem Fehler. Dies ermöglicht dem anderen Task, seine Transaktion abzuschließen. Die Anwendung mit der Transaktion, die mit einem Fehler beendet wurde, kann nun erneut versuchen, die Transaktion auszuführen. Dies gelingt nun normalerweise, nachdem die andere, an dem Deadlock beteiligte Transaktion bereits abgeschlossen ist.  
   
@@ -997,7 +997,7 @@ GO
 ##### <a name="example-a"></a>Beispiel A  
  Sitzung 1  
   
- Im Rahmen einer Transaktion wird eine `SELECT`-Anweisung ausgeführt. Aufgrund des `HOLDLOCK`-Sperrhinweises aktiviert und hält diese Anweisung eine beabsichtigte freigegebene Sperre (IS) für die Tabelle (in dieser Veranschaulichung werden Zeilen- und Seitensperren ignoriert). Die beabsichtigte freigegebene Sperre wird nur für die Partition aktiviert, die der Transaktion zugewiesen ist. In diesem Beispiel wird vorausgesetzt, dass die IS-Sperre für die Partitions-ID 7 aktiviert wird.  
+ Im Rahmen einer Transaktion wird eine `SELECT`-Anweisung ausgeführt. Aufgrund des `HOLDLOCK`-Sperrhinweises aktiviert und hält diese Anweisung eine beabsichtigte freigegebene Sperre für die Tabelle (in dieser Veranschaulichung werden Zeilen- und Seitensperren ignoriert). Die beabsichtigte freigegebene Sperre wird nur für die Partition aktiviert, die der Transaktion zugewiesen ist. In diesem Beispiel wird vorausgesetzt, dass die beabsichtigte freigegebene Sperre für die Partitions-ID 7 aktiviert wird.  
   
 ```sql  
 -- Start a transaction.  
@@ -1010,7 +1010,7 @@ BEGIN TRANSACTION
   
  Sitzung 2:  
   
- Eine Transaktion wird gestartet, und die im Rahmen dieser Transaktion ausgeführte `SELECT`-Anweisung aktiviert und hält eine freigegebene Sperre (S) für die Tabelle. Die S-Sperre wird für alle Partitionen aktiviert, was mehrere Tabellensperren ergibt, und zwar eine für jede Partition. Auf einem System mit 16 CPUs werden z. B. 16 S-Sperren für die Sperrpartitions-IDs 0 bis 15 aktiviert. Da die S-Sperre mit der IS-Sperre kompatibel ist, die von der Transaktion in Sitzung 1 für die Partitions-ID 7 gehalten wird, kommt es zu keiner Blockierung zwischen den Transaktionen.  
+ Eine Transaktion wird gestartet, und die im Rahmen dieser Transaktion ausgeführte `SELECT`-Anweisung aktiviert und hält eine freigegebene Sperre (S) für die Tabelle. Die S-Sperre wird für alle Partitionen aktiviert, was mehrere Tabellensperren ergibt, und zwar eine für jede Partition. Auf einem System mit 16 CPUs werden z. B. 16 S-Sperren für die Sperrpartitions-IDs 0 bis 15 aktiviert. Da die S-Sperre mit der beabsichtigten freigegebenen Sperre kompatibel ist, die von der Transaktion in Sitzung 1 für die Partitions-ID 7 gehalten wird, kommt es zu keiner Blockierung zwischen den Transaktionen.  
   
 ```sql  
 BEGIN TRANSACTION  
@@ -1032,7 +1032,7 @@ SELECT col1
 ##### <a name="example-b"></a>Beispiel B  
  Sitzung 1  
   
- Im Rahmen einer Transaktion wird eine `SELECT`-Anweisung ausgeführt. Aufgrund des `HOLDLOCK`-Sperrhinweises aktiviert und hält diese Anweisung eine beabsichtigte freigegebene Sperre (IS) für die Tabelle (in dieser Veranschaulichung werden Zeilen- und Seitensperren ignoriert). Die beabsichtigte freigegebene Sperre wird nur für die Partition aktiviert, die der Transaktion zugewiesen ist. In diesem Beispiel wird vorausgesetzt, dass die beabsichtigte freigegebene Sperre für die Partitions-ID 6 aktiviert wird.  
+ Im Rahmen einer Transaktion wird eine `SELECT`-Anweisung ausgeführt. Aufgrund des `HOLDLOCK`-Sperrhinweises aktiviert und hält diese Anweisung eine beabsichtigte freigegebene Sperre für die Tabelle (in dieser Veranschaulichung werden Zeilen- und Seitensperren ignoriert). Die beabsichtigte freigegebene Sperre wird nur für die Partition aktiviert, die der Transaktion zugewiesen ist. In diesem Beispiel wird vorausgesetzt, dass die beabsichtigte freigegebene Sperre für die Partitions-ID 6 aktiviert wird.  
   
 ```sql  
 -- Start a transaction.  

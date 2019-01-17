@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a74cdb7827351c6616a7d37ad3deb80a068a375c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 60938c31712e8bb6b08579cab099baaaf99bb0aa
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394522"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980386"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ Erstellt eine neue Tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 > [!NOTE]   
 >  Eine [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]-Syntax finden Sie unter [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="simple-syntax"></a>Einfache Syntax  
   
@@ -390,10 +390,10 @@ column_name <data_type>
   
  ON {*partition_scheme* | *filegroup* | **"** default **"**} kann auch in den Einschränkungen PRIMARY KEY oder UNIQUE angegeben werden. Diese Einschränkungen erstellen Indizes. Wenn *filegroup* angegeben ist, wird der Index in der genannten Dateigruppe gespeichert. Wenn **"** default **"** angegeben oder ON überhaupt nicht angegeben sind, wird der Index in derselben Dateigruppe wie die Tabelle gespeichert. Wenn die PRIMARY KEY- oder die UNIQUE-Einschränkung einen gruppierten Index erstellt, werden die Datenseiten für die Tabelle in derselben Dateigruppe wie der Index gespeichert. Wenn CLUSTERED angegeben wird oder ein gruppierter Index anderweitig durch die Einschränkung erstellt wird, und ein Wert für *partition_scheme* angegeben wird, der von der Angabe für *partition_scheme* oder *filegroup* der Tabellendefinition abweicht (oder umgekehrt), wird nur die Einschränkungsdefinition berücksichtigt. Der andere Wert wird ignoriert.  
   
-> [!NOTE]  
+> [!NOTE]
 >  In diesem Zusammenhang ist DEFAULT kein Schlüsselwort. Es handelt sich dabei um einen Bezeichner für die Standarddateigruppe. Dieser muss wie in ON **"** default **"** or ON **[** default **]** durch Trennzeichen getrennt werden. Wenn **"** default **"** angegeben ist, muss die QUOTED_IDENTIFIER-Option in der aktuellen Sitzung auf ON festgelegt sein. Dies ist die Standardeinstellung. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  Nachdem Sie eine partitionierte Tabelle erstellt haben, erwägen Sie, die LOCK_ESCALATION-Option für die Tabelle auf AUTO festzulegen. Dies kann die Parallelität verbessern, indem die Sperren auf Partitionsebene (HoBT) statt auf Tabellenebene aktiviert werden. Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
  TEXTIMAGE_ON { *filegroup*| **"** default **"** }  
@@ -401,12 +401,12 @@ column_name <data_type>
   
  TEXTIMAGE_ON ist nicht zulässig, wenn die Tabelle keine Spalten für umfangreiche Werte enthält. TEXTIMAGE_ON darf nicht angegeben werden, wenn *partition_scheme* angegeben wird. Wenn **"** default **"** angegeben wird oder TEXTIMAGE_ON nicht angegeben wird, werden die Spalten für umfangreiche Werte in der Standarddateigruppe gespeichert. Die in CREATE TABLE angegebene Speicherung einer Spalte für umfangreiche Werte kann nachfolgend nicht mehr geändert werden.  
 
-> [!NOTE]  
+> [!NOTE]
 > Varchar(max), nvarchar(max), varbinary(max), XML und große UDT-Werte werden bis zu einem Höchstwert von 8000 Bytes direkt in der Datenzeile gespeichert, sofern der Wert die Größe des Datensatzes nicht überschreitet. Überschreitet der Wert die Größe des Datensatzes, wird ein Zeiger innerhalb der Zeilen gespeichert, während der Rest außerhalb der Zeilen im LOB-Speicherbereich gespeichert wird. Der Standardwert ist 0 (null).
-TEXTIMAGE_ON ändert nur den Speicherort des LOB-Speicherbereichs – in Zeilen gespeicherte Daten werden nicht beeinträchtigt. Verwenden Sie große Werttypen von „sp_tableoption“ außerhalb der Zeilen, um den gesamten LOB-Wert außerhalb der Zeile zu speichern. 
-
-
-> [!NOTE]  
+> TEXTIMAGE_ON ändert nur den Speicherort des LOB-Speicherbereichs – in Zeilen gespeicherte Daten werden nicht beeinträchtigt. Verwenden Sie große Werttypen von „sp_tableoption“ außerhalb der Zeilen, um den gesamten LOB-Wert außerhalb der Zeile zu speichern. 
+> 
+> 
+> [!NOTE]
 >  In diesem Zusammenhang ist DEFAULT kein Schlüsselwort. Es handelt sich um einen Bezeichner für die Standarddateigruppe, der begrenzt werden muss, wie z.B. in TEXTIMAGE_ON **"** default **"** oder TEXTIMAGE_ON **[** default **]**. Wenn **"** default **"** angegeben ist, muss die QUOTED_IDENTIFIER-Option in der aktuellen Sitzung auf ON festgelegt sein. Dies ist die Standardeinstellung. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  FILESTREAM_ON { *partition_scheme_name* | filegroup | **"** default **"** } 
@@ -706,7 +706,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
   
  ON UPDATE CASCADE, SET NULL oder SET DEFAULT können nicht definiert werden, wenn für ON UPDATE schon ein INSTEAD OF-Trigger für die Tabelle vorhanden ist, die geändert wird.  
   
- Beispielsweise verfügt die Tabelle **ProductVendor** in der Datenbank [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] über eine referenzielle Beziehung zu der Tabelle **Vendor**: Der Fremdschlüssel **ProductVendor.BusinessEntity** verweist auf den Primärschlüssel **Vendor.BusinessEntityID**.  
+ In der Datenbank [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] verfügt die Tabelle **ProductVendor** beispielsweise über eine referenzielle Beziehung zur Tabelle **Vendor**: Der Fremdschlüssel **ProductVendor.BusinessEntity** verweist auf den Primärschlüssel **Vendor.BusinessEntityID**.  
   
  Wenn eine UPDATE-Anweisung für eine Zeile in der Tabelle **Vendor** ausgeführt wird, und eine ON UPDATE CASCADE-Aktion für **ProductVendor.BusinessEntityID** festgelegt ist, sucht [!INCLUDE[ssDE](../../includes/ssde-md.md)] nach mindestens einer abhängigen Zeile in der Tabelle **ProductVendor**. Falls eine solche Zeile vorhanden ist, werden die abhängigen Zeilen in der Tabelle **ProductVendor** sowie die Zeile, auf die in der Tabelle **Vendor** verwiesen wird, aktualisiert.  
   
@@ -765,7 +765,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  DATA_COMPRESSION  
  Gibt die Datenkomprimierungsoption für die angegebene Tabelle, die Partitionsnummer oder den Bereich von Partitionen an. Folgende Optionen stehen zur Verfügung:  
   
- NONE  
+ Keine  
  Die Tabelle oder die angegebenen Partitionen werden nicht komprimiert.  
   
  ROW  
@@ -793,13 +793,13 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
   
  *partition_number_expression* kann auf folgenden Weisen angegeben werden:  
   
--   Geben Sie die Partitionsnummer einer Partition an, beispielsweise: ON PARTITIONS (2).  
+-   Geben Sie die Partitionsnummer einer Partition an, z. B.: ON PARTITIONS (2).  
   
 -   Geben Sie die Partitionsnummern mehrerer einzelner Partitionen durch Trennzeichen getrennt an, beispielsweise: ON PARTITIONS (1, 5).  
   
--   Geben Sie sowohl Bereiche als auch einzelne Partitionen an, zum Beispiel: ON PARTITIONS (2, 4, 6 TO 8).  
+-   Geben Sie sowohl Bereiche als auch einzelne Partitionen an, beispielsweise: ON PARTITIONS (2, 4, 6 TO 8).  
   
- Für `<range>` können durch das Wort TO getrennte Partitionsnummern angegeben werden, beispielsweise: ON PARTITIONS (6 TO 8).  
+ Für `<range>` können durch das Wort „TO“ getrennte Partitionsnummern angegeben werden, beispielsweise: ON PARTITIONS (6 TO 8).  
   
  Wenn Sie für verschiedene Partitionen unterschiedliche Datenkomprimierungstypen festlegen möchten, geben Sie die Option DATA_COMPRESSION mehrmals an, beispielsweise:  
   
@@ -928,9 +928,9 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  MEMORY_OPTIMIZED  
    
-**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Die verwaltete Azure SQL-Datenbank-Instanz bietet keine Unterstützung für optimierte Tabellen. 
+**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Die verwaltete Azure SQL-Datenbank-Instanz unterstützt keine speicheroptimierten Tabellen. 
   
- Der Wert ON gibt an, dass die Tabelle speicheroptimiert ist. Speicheroptimierte Tabellen sind Teil des Features „In-Memory OLTP“, das verwendet wird, um die Leistung der Transaktionsverarbeitung zu optimieren. Eine Einführung in In-Memory OLTP finden Sie unter [Schnellstart 1: In-Memory-OLTP-Technologien für höhere Transact-SQL-Leistung](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). Ausführliche Informationen zu speicheroptimierten Tabellen finden Sie unter [Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Der Wert ON gibt an, dass die Tabelle speicheroptimiert ist. Speicheroptimierte Tabellen sind Teil des Features „In-Memory OLTP“, das verwendet wird, um die Leistung der Transaktionsverarbeitung zu optimieren. Erste Schritte mit In-Memory-OLTP finden Sie unter [Schnellstart 1: In-Memory-OLTP-Technologien für höhere Transact-SQL-Leistung](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). Ausführliche Informationen zu speicheroptimierten Tabellen finden Sie unter [Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
  Der Standardwert OFF gibt an, dass die Tabelle auf einem Datenträger basiert.  
   
@@ -957,7 +957,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
    
 **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
   
-Spalten- und Tabellenindizes können als Teil der Anweisung CREATE TABLE angeben werden. Ausführliche Informationen über das Hinzufügen und Entfernen von Indizes von speicheroptimierten Tabellen finden Sie unter [Ändern von speicheroptimierten Tabellen](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
+Spalten- und Tabellenindizes können als Teil der Anweisung CREATE TABLE angeben werden. Ausführliche Informationen zum Hinzufügen und Entfernen von Indizes bei speicheroptimierten Tabellen finden Sie unter [Ändern von speicheroptimierten Tabellen](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
   
  HASH  
    
@@ -1217,13 +1217,13 @@ SELECT * FROM tempdb.sys.database_files
  Verwenden Sie **sp_help** oder **sp_helpconstraint**, um einen Bericht über eine Tabelle und deren Spalten zu erhalten. Zum Umbenennen einer Tabelle verwenden Sie **sp_rename**. Verwenden Sie für einen Bericht zu den Sichten und gespeicherten Prozeduren, die von einer Tabelle abhängen, [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) und [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md).  
   
 ## <a name="nullability-rules-within-a-table-definition"></a>NULL-Zulässigkeitsregeln in einer Tabellendefinition  
- Die NULL-Zulässigkeit einer Spalte bestimmt, ob diese Spalte NULL als Datenwert enthalten kann. NULL ist nicht Null oder leer. NULL bedeutet, dass kein Eintrag vorgenommen oder explizit NULL angegeben wurde, und impliziert üblicherweise, dass der Wert entweder unbekannt oder nicht anwendbar ist.  
+ Die NULL-Zulässigkeit einer Spalte bestimmt, ob diese Spalte NULL als Datenwert enthalten kann. NULL ist nicht null oder leer: NULL bedeutet, dass kein Eintrag vorgenommen oder explizit NULL angegeben wurde, und impliziert üblicherweise, dass der Wert entweder unbekannt oder nicht anwendbar ist.  
   
  Wenn Sie CREATE TABLE- oder ALTER TABLE verwenden, um eine Tabelle zu erstellen bzw. zu ändern, wird die NULL-Zulässigkeit des in einer Spaltendefinition verwendeten Datentyps durch Datenbank- und Sitzungseinstellungen beeinflusst und möglicherweise überschrieben. Es empfiehlt sich, bei nicht berechneten Spalten stets explizit NULL oder NOT NULL für die Spalte anzugeben oder, im Falle eines benutzerdefinierten Datentyps, zuzulassen, dass die Spalte die standardmäßige NULL-Zulässigkeit des Datentyps verwendet. Spalten mit geringer Dichte müssen immer NULL zulassen.  
   
  Wenn die NULL-Zulässigkeit der Spalte nicht explizit angegeben ist, wird sie gemäß den in der folgenden Tabelle aufgeführten Regeln hergeleitet.  
   
-|Spaltendatentyp|Regel|  
+|Spaltendatentyp|Rule|  
 |----------------------|----------|  
 |Aliasdatentyp|Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] verwendet die NULL-Zulässigkeit, die beim Erstellen des Datentyps angegeben wurde. Verwenden Sie **sp_help** zum Bestimmen der standardmäßigen NULL-Zulässigkeit des Datentyps.|  
 |CLR-benutzerdefinierter Typ|Die NULL-Zulässigkeit wird gemäß der Spaltendefinition bestimmt.|  
@@ -1438,7 +1438,7 @@ CREATE TABLE dbo.mylogintable
 ```sql  
 CREATE TABLE dbo.EmployeePhoto  
     (  
-    EmployeeId int NOT NULL PRIMARY KEY,  
+     EmployeeId int NOT NULL PRIMARY KEY  
     ,Photo varbinary(max) FILESTREAM NULL  
     ,MyRowGuidColumn uniqueidentifier NOT NULL ROWGUIDCOL  
         UNIQUE DEFAULT NEWID()  
@@ -1646,7 +1646,7 @@ Could not create constraint or index. See previous errors.
 
 Das Problem ergibt sich aus der Tatsache, dass der Name der temporären Tabelle zwar eindeutig ist, der Name der Einschränkung aber nicht.
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [COLUMNPROPERTY (Transact-SQL)](../../t-sql/functions/columnproperty-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   

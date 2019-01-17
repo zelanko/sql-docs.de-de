@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9115aa7ed39102557243ddcc24754b3c7f5453bc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a488bba170b9df5fd896b85c880bb26388e3d252
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521841"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980196"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Erstellen, Aufbauen und Abfragen von geometry-Instanzen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -248,7 +248,7 @@ ms.locfileid: "52521841"
   
 -   Die Begrenzung von**LineString** - und **MultiLineString** boundaries are formed by the start points - und end points, removing those that occur an even number of times.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTILINESTRING((0 1, 0 0, 1 0, 0 1), (1 1, 1 0))');  
 SELECT @g.STBoundary().ToString();  
@@ -256,7 +256,7 @@ SELECT @g.STBoundary().ToString();
   
  Die Begrenzung einer **Polygon** - oder **MultiPolygon** -Instanz besteht aus der Menge ihrer Ringe.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0), (1 1, 1 2, 2 2, 2 1, 1 1))');  
 SELECT @g.STBoundary().ToString();  
@@ -264,14 +264,12 @@ SELECT @g.STBoundary().ToString();
   
  **So geben Sie die Begrenzung einer Instanz zurück**  
  [STBoundary](../../t-sql/spatial-geometry/stboundary-geometry-data-type.md)  
-  
-  
+   
 ###  <a name="envelope"></a> Umschlag  
  Der *Umschlag* einer **geometry** -Instanz, auch *umgebendes Feld*genannt, ist das an den Achsen ausgerichtete Rechteck, das durch die minimalen und maximalen Koordinaten (X,Y) der Instanz gebildet wird.  
   
  **So geben Sie den Umschlag einer Instanz zurück**  
  [STEnvelope](../../t-sql/spatial-geometry/stenvelope-geometry-data-type.md)  
-  
   
 ###  <a name="closure"></a> Abgeschlossenheit  
  Eine _geschlossene_ **geometry**-Instanz ist eine Abbildung, deren Ausgangs- und Endpunkt identisch ist. Alle**Polygon** -Instanzen gelten als geschlossen. Alle**Point** -Instanzen gelten als nicht geschlossen.  
@@ -300,8 +298,8 @@ SELECT @g.STBoundary().ToString();
  **So können Sie die SRID einer Instanz festlegen oder zurückgeben**  
  [STSrid](../../t-sql/spatial-geometry/stsrid-geometry-data-type.md)  
   
- Diese Eigenschaft kann geändert werden.  
-  
+> [!NOTE]
+> Diese Eigenschaft kann geändert werden.  
   
 ##  <a name="rel"></a> Bestimmen der Beziehungen zwischen geometry-Instanzen  
  Der **geometry** -Datentyp stellt viele integrierte Methoden zur Verfügung, mit denen die Beziehungen zwischen zwei **geometry** -Instanzen bestimmt werden können.  
@@ -339,49 +337,50 @@ SELECT @g.STBoundary().ToString();
  **So bestimmen Sie die kürzeste Entfernung zwischen Punkten in zwei Geometrien**  
  [STDistance](../../t-sql/spatial-geometry/stdistance-geometry-data-type.md)  
   
-  
 ##  <a name="defaultsrid"></a> geometry-Instanzen haben standardmäßig die SRID 0 (null)  
  Der Standard-SRID für **geometry** -Instanzen lautet in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 0. Bei räumlichen **geometry** -Daten ist zur Ausführung von Berechnungen des SRID der Räumlichkeitsinstanz nicht erforderlich. Daher können sich Instanzen in einer undefinierten ebenen Fläche befinden. Zur Angabe einer undefinierten ebenen Fläche in Berechnungen mit Methoden des **geometry** -Datentyps wird in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] der SRID 0 verwendet.  
   
 ##  <a name="examples"></a> Beispiele  
- Die folgenden zwei Beispiele zeigen, wie Geometriedaten hinzugefügt und abgefragt werden.  
+Die folgenden zwei Beispiele zeigen, wie Geometriedaten hinzugefügt und abgefragt werden.  
   
--   Im ersten Beispiel wird eine Tabelle mit einer Identitätsspalte und der `geometry` -Spalte `GeomCol1`erstellt. Eine dritte Spalte rendert die `geometry` -Spalte als Darstellung im Open Geospatial Consortium (OGC) WKT-Format und verwendet die `STAsText()` -Methode. Dann werden zwei Zeilen eingefügt: Eine Zeile enthält eine `LineString` -Instanz des Typs `geometry`und die andere eine `Polygon` -Instanz.  
+### <a name="example-a"></a>Beispiel A.
+Im ersten Beispiel wird eine Tabelle mit einer Identitätsspalte und der `geometry`-Spalte `GeomCol1` erstellt. Eine dritte Spalte rendert die `geometry` -Spalte als Darstellung im Open Geospatial Consortium (OGC) WKT-Format und verwendet die `STAsText()` -Methode. Dann werden zwei Zeilen eingefügt: Eine Zeile enthält eine `LineString` -Instanz des Typs `geometry`und die andere eine `Polygon` -Instanz.  
   
-    ```  
-    IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
-        DROP TABLE dbo.SpatialTable;  
-    GO  
+```sql  
+IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
+DROP TABLE dbo.SpatialTable;  
+GO  
+
+CREATE TABLE SpatialTable   
+  ( id int IDENTITY (1,1),  
+    GeomCol1 geometry,   
+    GeomCol2 AS GeomCol1.STAsText() 
+  );  
+GO  
+
+INSERT INTO SpatialTable (GeomCol1)  
+VALUES (geometry::STGeomFromText('LINESTRING (100 100, 20 180, 180 180)', 0));  
+
+INSERT INTO SpatialTable (GeomCol1)  
+VALUES (geometry::STGeomFromText('POLYGON ((0 0, 150 0, 150 150, 0 150, 0 0))', 0));  
+GO  
+```  
   
-    CREATE TABLE SpatialTable   
-        ( id int IDENTITY (1,1),  
-        GeomCol1 geometry,   
-        GeomCol2 AS GeomCol1.STAsText() );  
-    GO  
+### <a name="example-b"></a>Beispiel B.
+Im zweiten Beispiel werden mithilfe der `STIntersection()`-Methode die Punkte zurückgegeben, an denen die beiden zuvor eingegebenen `geometry`-Instanzen sich überschneiden.  
   
-    INSERT INTO SpatialTable (GeomCol1)  
-    VALUES (geometry::STGeomFromText('LINESTRING (100 100, 20 180, 180 180)', 0));  
+```sql  
+DECLARE @geom1 geometry;  
+DECLARE @geom2 geometry;  
+DECLARE @result geometry;  
+
+SELECT @geom1 = GeomCol1 FROM SpatialTable WHERE id = 1;  
+SELECT @geom2 = GeomCol1 FROM SpatialTable WHERE id = 2;  
+SELECT @result = @geom1.STIntersection(@geom2);  
+SELECT @result.STAsText();  
+```  
   
-    INSERT INTO SpatialTable (GeomCol1)  
-    VALUES (geometry::STGeomFromText('POLYGON ((0 0, 150 0, 150 150, 0 150, 0 0))', 0));  
-    GO  
-    ```  
-  
--   Im zweiten Beispiel werden mithilfe der `STIntersection()` -Methode die Punkte zurückgegeben, an denen die beiden zuvor eingegebenen `geometry` -Instanzen sich schneiden.  
-  
-    ```  
-    DECLARE @geom1 geometry;  
-    DECLARE @geom2 geometry;  
-    DECLARE @result geometry;  
-  
-    SELECT @geom1 = GeomCol1 FROM SpatialTable WHERE id = 1;  
-    SELECT @geom2 = GeomCol1 FROM SpatialTable WHERE id = 2;  
-    SELECT @result = @geom1.STIntersection(@geom2);  
-    SELECT @result.STAsText();  
-    ```  
-  
-  
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Räumliche Daten &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

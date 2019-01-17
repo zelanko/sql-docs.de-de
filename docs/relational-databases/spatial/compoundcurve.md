@@ -11,12 +11,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ed40a84fba304dab0d9c11c7c6bbe950f2511e8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2e58734bb3487e86b30f561e4e636bbe4851435e
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511845"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979957"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,14 +31,13 @@ ms.locfileid: "52511845"
   
 2.  Die Sequenz von **CircularString** - oder **LineString** -Instanzen muss fortlaufend sein.  
   
- Wenn eine **CompoundCurve** eine Sequenz von mehreren **CircularString** - und **LineString** -Instanzen enthält, muss der abschließende Endpunkt für jede Instanz (mit Ausnahme der letzten Instanz) der beginnende Endpunkt für die nächste Instanz in der Sequenz sein. Wenn also der Endpunkt der vorhergehenden Instanz in der Sequenz (4 3 7 2) ist, muss der Anfangspunkt für die nächste Instanz in der Sequenz (4 3 7 2) sein. Beachten Sie, dass die Z-Werte (Höhe) und die M-Werte (Measure) für den Punkt ebenfalls gleich sein müssen. Wenn sich die beiden Punkte unterscheiden, wird ein `System.FormatException` ausgelöst. Punkte in einer **CircularString** -Instanz müssen nicht über einen Z-Wert oder M-Wert verfügen. Wenn keine Z- oder M-Werte für den Endpunkt der vorherigen Instanz angegeben sind, kann der Anfangspunkt der nächsten Instanz keine Z- oder M-Werte einschließen. Wenn der Endpunkt für die vorherige Sequenz (4 3) ist, muss der Anfangspunkt für die nächste Sequenz (4 3) sein; (4 3 7 2) ist hingegen nicht möglich. Alle Punkte in einer **CompoundCurve** -Instanz dürfen entweder keinen Z-Wert haben oder müssen denselben Z-Wert aufweisen.  
+Wenn eine **CompoundCurve** eine Sequenz von mehreren **CircularString** - und **LineString** -Instanzen enthält, muss der abschließende Endpunkt für jede Instanz (mit Ausnahme der letzten Instanz) der beginnende Endpunkt für die nächste Instanz in der Sequenz sein. Wenn also der Endpunkt der vorhergehenden Instanz in der Sequenz (4 3 7 2) ist, muss der Anfangspunkt für die nächste Instanz in der Sequenz (4 3 7 2) sein. Beachten Sie, dass die Z-Werte (Höhe) und die M-Werte (Measure) für den Punkt ebenfalls gleich sein müssen. Wenn sich die beiden Punkte unterscheiden, wird ein `System.FormatException` ausgelöst. Punkte in einer **CircularString** -Instanz müssen nicht über einen Z-Wert oder M-Wert verfügen. Wenn keine Z- oder M-Werte für den Endpunkt der vorherigen Instanz angegeben sind, kann der Anfangspunkt der nächsten Instanz keine Z- oder M-Werte einschließen. Wenn der Endpunkt für die vorherige Sequenz (4 3) ist, muss der Anfangspunkt für die nächste Sequenz (4 3) sein; (4 3 7 2) ist hingegen nicht möglich. Alle Punkte in einer **CompoundCurve** -Instanz dürfen entweder keinen Z-Wert haben oder müssen denselben Z-Wert aufweisen.  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve-Instanzen  
- In der folgenden Abbildung sind gültige **CompoundCurve** -Typen dargestellt.  
+In der folgenden Abbildung sind gültige **CompoundCurve** -Typen dargestellt.  
   
 ![f278742e-b861-4555-8b51-3d972b7602bf](../../relational-databases/spatial/media/f278742e-b861-4555-8b51-3d972b7602bf.gif)  
  
-  
 ### <a name="accepted-instances"></a>Akzeptierte Instanzen  
  Die**CompoundCurve** -Instanz wird akzeptiert, wenn sie leer ist bzw. die folgenden Kriterien erfüllt.  
   
@@ -47,20 +46,20 @@ ms.locfileid: "52511845"
 2.  Alle Kreisbogensegmente in der **CompoundCurve** -Instanz sind verbunden. Der erste Punkt jedes nachfolgenden Kreisbogensegments entspricht dem letzten Punkt des jeweils vorgehenden Kreisbogensegments.  
   
     > [!NOTE]  
-    >  Dies schließt die Z- und M-Koordinaten ein. Daher müssen alle vier Koordinaten X, Y, Z und M identisch sein.  
+    > Dies schließt die Z- und M-Koordinaten ein. Daher müssen alle vier Koordinaten X, Y, Z und M identisch sein.  
   
 3.  Bei keiner der enthaltenen Instanzen handelt es sich um leere Instanzen.  
   
- Im folgenden Beispiel werden akzeptierte **CompoundCurve** -Instanzen veranschaulicht.  
+Im folgenden Beispiel werden akzeptierte **CompoundCurve** -Instanzen veranschaulicht.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'COMPOUNDCURVE EMPTY';  
 DECLARE @g2 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 0, 0 1, -1 0), (-1 0, 2 0))';  
 ```  
   
- Im folgenden Beispiel werden nicht akzeptierte **CompoundCurve** -Instanzen veranschaulicht. Diese Instanzen lösen eine `System.FormatException`aus.  
+Im folgenden Beispiel werden nicht akzeptierte **CompoundCurve** -Instanzen veranschaulicht. Diese Instanzen lösen eine `System.FormatException`aus.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'COMPOUNDCURVE(CIRCULARSTRING EMPTY)';  
 DECLARE @g2 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 0, 0 1, -1 0), (1 0, 2 0))';  
 ```  
@@ -72,28 +71,27 @@ DECLARE @g2 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 0, 0 1, -1 0), (1 0, 2 0)
   
 2.  Alle in der **CompoundCurve** -Instanz enthaltenen Kreisbogensegment-Instanzen sind gültige Instanzen.  
   
- Im folgenden Beispiel werden gültige **CompoundCurve** -Instanzen veranschaulicht.  
+Im folgenden Beispiel werden gültige **CompoundCurve** -Instanzen veranschaulicht.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'COMPOUNDCURVE EMPTY';  
 DECLARE @g2 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 0, 0 1, -1 0), (-1 0, 2 0))';  
 DECLARE @g3 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 1 1, 1 1), (1 1, 3 5, 5 4))';  
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
-  
 ```  
   
- `@g3` ist gültig, da die **CircularString** -Instanz gültig ist. Weitere Informationen zur Gültigkeit der **CircularString** -Instanz finden Sie unter [CircularString](../../relational-databases/spatial/circularstring.md).  
+`@g3` ist gültig, da die **CircularString** -Instanz gültig ist. Weitere Informationen zur Gültigkeit der **CircularString** -Instanz finden Sie unter [CircularString](../../relational-databases/spatial/circularstring.md).  
   
- Im folgenden Beispiel werden nicht gültige **CompoundCurve** -Instanzen veranschaulicht.  
+Im folgenden Beispiel werden nicht gültige **CompoundCurve** -Instanzen veranschaulicht.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 1 1, 1 1), (1 1, 3 5, 5 4, 3 5))';  
 DECLARE @g2 geometry = 'COMPOUNDCURVE((1 1, 1 1))';  
 DECLARE @g3 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 2 3, 1 1))';  
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g1` ist ungültig, da die zweite Instanz keine gültige LineString-Instanz ist. `@g2` ist ungültig, da die **LineString** -Instanz ungültig ist. `@g3` ist ungültig, da die **CircularString** -Instanz ungültig ist. Weitere Informationen zu gültigen **CircularString** - und **LineString** -Instanzen finden Sie unter [CircularString](../../relational-databases/spatial/circularstring.md) bzw. [LineString](../../relational-databases/spatial/linestring.md).  
+`@g1` ist ungültig, da die zweite Instanz keine gültige LineString-Instanz ist. `@g2` ist ungültig, da die **LineString** -Instanz ungültig ist. `@g3` ist ungültig, da die **CircularString** -Instanz ungültig ist. Weitere Informationen zu gültigen **CircularString** - und **LineString** -Instanzen finden Sie unter [CircularString](../../relational-databases/spatial/circularstring.md) bzw. [LineString](../../relational-databases/spatial/linestring.md).  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -140,7 +138,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULARS
 SELECT @g.STLength();  
 ```  
   
- Dies erzeugt die Ausgabe „12.566370“, was 4∏ entspricht. Von der `CompoundCurve` -Instanz im Beispiel wird ein Kreis mit dem Radius 2 gespeichert. In den beiden vorherigen Codebeispielen musste keine `CompoundCurve`verwendet werden. Für das erste Beispiel wäre eine `LineString` -Instanz einfacher gewesen, während sich für das zweite Beispiel eher eine `CircularString` -Instanz empfiehlt. Im nächsten Beispiel wird jedoch verdeutlich, in welchen Fällen eine `CompoundCurve` eine bessere Alternative darstellt.  
+Dies erzeugt die Ausgabe `12.5663706143592`, was 4∏ entspricht. Von der `CompoundCurve` -Instanz im Beispiel wird ein Kreis mit dem Radius 2 gespeichert. In den beiden vorherigen Codebeispielen musste keine `CompoundCurve`verwendet werden. Für das erste Beispiel wäre eine `LineString` -Instanz einfacher gewesen, während sich für das zweite Beispiel eher eine `CircularString` -Instanz empfiehlt. Im nächsten Beispiel wird jedoch verdeutlich, in welchen Fällen eine `CompoundCurve` eine bessere Alternative darstellt.  
   
 ### <a name="f-using-a-compoundcurve-to-store-a-semicircle"></a>F. Speichern eines Halbkreises mithilfe einer CompoundCurve  
  Im folgenden Beispiel wird ein Halbkreis mithilfe einer `CompoundCurve` -Instanz gespeichert.  
@@ -179,16 +177,16 @@ SET @g2 = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULAR
 SELECT 'Circle Two', @g2.STLength() AS Perimeter;  -- now we get an accurate amount  
 ```  
   
- Es wird folgende Ausgabe erhalten:  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 ```  
 Circle One11.940039...  
 Circle Two12.566370...  
 ```  
   
- Der Umfang für Circle Two beträgt annähernd 4. Dies ist der tatsächliche Wert für den Umfang. Der Umkreis für Circle One ist jedoch sehr ungenau. Durch die `CompoundCurve` -Instanz von Circle One werden ein Kreisbogensegment (ABC) und zwei Liniensegmente (CD, DA) gespeichert. Von der `CompoundCurve` -Instanz müssen zwei Kreisbogensegmente (ABC, CDA) gespeichert werden, um einen Kreis zu definieren. Eine `LineString` -Instanz definiert die zweite Punktmenge (4 2, 2 4, 0 2) in der `CompoundCurve` -Instanz von Circle One. Sie müssen in einer `CircularString` explizit eine `CompoundCurve`-Instanz deklarieren.  
+Der Umfang für Circle Two beträgt annähernd 4. Dies ist der tatsächliche Wert für den Umfang. Der Umkreis für Circle One ist jedoch sehr ungenau. Durch die `CompoundCurve` -Instanz von Circle One werden ein Kreisbogensegment (ABC) und zwei Liniensegmente (CD, DA) gespeichert. Von der `CompoundCurve` -Instanz müssen zwei Kreisbogensegmente (ABC, CDA) gespeichert werden, um einen Kreis zu definieren. Eine `LineString` -Instanz definiert die zweite Punktmenge (4 2, 2 4, 0 2) in der `CompoundCurve` -Instanz von Circle One. Sie müssen in einer `CircularString` explizit eine `CompoundCurve`-Instanz deklarieren.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [STIsValid &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   
  [STLength &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STStartPoint &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/ststartpoint-geometry-data-type.md)   

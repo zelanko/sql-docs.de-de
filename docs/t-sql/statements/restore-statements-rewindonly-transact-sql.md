@@ -23,19 +23,19 @@ ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0ba43b04bc5c77d060fd2f8edda25d8a925a2856
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1e6db73f4acea3654e8cffe8699df08f3f8d2c7
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602288"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980086"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>RESTORE-Anweisungen - REWINDONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Führt das Zurückspulen und Schließen der angegebenen Bandmedien aus, die durch mit der Option NOREWIND ausgeführte BACKUP- oder RESTORE-Anweisungen offen geblieben sind. Diese Option wird nur für Bandmedien verwendet.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -65,7 +65,7 @@ FROM <backup_device> [ ,...n ]
  Dies ist der logische Name der von **sp_addumpdevice** erstellten Sicherungsmedien, von denen die Datenbank wiederhergestellt wird. Der Name muss den Regeln für Bezeichner entsprechen. Bei Angabe in Form einer Variablen (**@**_logical\_backup\_device\_name\_var_) kann der Name des Sicherungsmediums entweder als Zeichenfolgenkonstante (**@**_logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) oder als Variable eines Zeichenfolgen-Datentyps (mit Ausnahme der Datentypen **ntext** oder **text**) angegeben werden.  
   
  {DISK | TAPE } **=** { **'**_physical\_backup\_device\_name_**'** | **@**_physical\_backup\_device\_name\_var_ }  
- Ermöglicht die Wiederherstellung von Sicherungen von den angegebenen Datenträgern- oder Bandmedien. Die Gerätetypen von Datenträgern und Bändern müssen durch die tatsächlichen Namen des Geräts angegeben werden (z.B. vollständiger Pfad und Dateiname): DISK = 'C:\Programme\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' oder TAPE = '\\\\.\TAPE0'. Bei Angabe in Form einer Variablen (**@**_physical\_backup\_device\_name\_var_) kann der Gerätename entweder als Zeichenfolgenkonstante (**@**_physical\_backup\_device\_name\_var_ = '*physcial_backup_device_name*') oder als Variable eines Zeichenfolgen-Datentyps (mit Ausnahme der Datentypen **ntext** oder **text**) angegeben werden.  
+ Ermöglicht die Wiederherstellung von Sicherungen von den angegebenen Datenträgern- oder Bandmedien. Die Gerätetypen von Datenträgern und Bändern sollten durch die tatsächlichen Namen des Geräts angegeben werden (z. B. vollständiger Pfad und Dateiname): DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' or TAPE = '\\\\.\TAPE0'. Bei Angabe in Form einer Variablen (**@**_physical\_backup\_device\_name\_var_) kann der Gerätename entweder als Zeichenfolgenkonstante (**@**_physical\_backup\_device\_name\_var_ = '*physical_backup_device_name*') oder als Variable eines Zeichenfolgen-Datentyps (mit Ausnahme der Datentypen **ntext** oder **text**) angegeben werden.  
   
  Wenn Sie einen Netzwerkserver mit einem UNC-Namen (der einen Computernamen enthalten muss) verwenden, geben Sie die Geräteart Datenträger (DISK) an. Weitere Informationen zum Verwenden von UNC-Namen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
@@ -97,7 +97,7 @@ FROM <backup_device> [ ,...n ]
 ### <a name="permissions"></a>Berechtigungen  
  Jeder Benutzer kann RESTORE REWINDONLY verwenden.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Mediensätze, Medienfamilien und Sicherungssätze &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   

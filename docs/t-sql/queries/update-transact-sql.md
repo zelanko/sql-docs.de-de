@@ -39,19 +39,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ab6a40f49ce64e4e157c4eacccb59b6135ed4ff
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b5e69a2ebd97a554620914ffba5ea20c6a08aa21
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520849"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980326"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Ändert vorhandene Daten in einer Tabelle oder Sicht in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Beispiele finden Sie unter [Beispiele](#UpdateExamples).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -207,7 +207,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  Gibt aktualisierte Daten oder Ausdrücke zurück, die darauf als Teil des UPDATE-Vorgangs basieren. Die OUTPUT-Klausel wird nicht in DML-Anweisungen unterstützt, die an Remotetabellen oder -sichten gerichtet sind. Weitere Informationen finden Sie unter [OUTPUT-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
  FROM \<table_source>  
- Gibt an, dass eine Tabelle, Sicht oder abgeleitete Tabelle als Quelle die Kriterien für den Updatevorgang bereitstellen soll. Weitere Informationen finden Sie unter [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
+ Gibt an, dass eine Tabelle, Sicht oder abgeleitete Tabelle als Quelle die Kriterien für den Updatevorgang bereitstellen soll. Weitere Informationen finden Sie unter [FROM &#40;Transact-SQL &#41;](../../t-sql/queries/from-transact-sql.md).  
   
  Wenn das Objekt, das aktualisiert wird, mit dem Objekt in der FROM-Klausel identisch ist und nur ein Verweis auf das Objekt in der FROM-Klausel vorhanden ist, kann ein Objektalias angegeben werden. Wenn das Objekt, das aktualisiert wird, mehrmals in der FROM-Klausel vorhanden ist, darf genau ein Verweis auf das Objekt keinen Tabellenalias angeben. Alle anderen Verweise auf das Objekt in der FROM-Klausel müssen einen Objektalias aufweisen.  
   
@@ -327,7 +327,7 @@ GO
   
  Wenn die UPDATE-Anweisung beim Aktualisieren des Clusteringschlüssels und mindestens einer Spalte des Datentyps **text**, **ntext** oder **image** nicht mehrere Zeilen ändern konnte, wird das teilweise Update für diese Spalten als vollständige Ersetzung dieser Werte ausgeführt.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Die Datentypen **ntext**, **text** und **image** werden in einer zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt. Vermeiden Sie die Verwendung dieser Datentypen bei neuen Entwicklungen, und planen Sie die Änderung von Anwendungen, in denen sie aktuell verwendet werden. Verwenden Sie stattdessen [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)und [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) .  
   
 ### <a name="updating-large-value-data-types"></a>Aktualisieren von Datentypen mit umfangreichen Werten  
@@ -546,7 +546,7 @@ GO
 ```  
   
 #### <a name="e-using-the-with-commontableexpression-clause"></a>E. Verwenden der WITH common_table_expression-Klausel  
- Im folgenden Beispiel wird der `PerAssemnblyQty`-Wert für alle Teile und Komponenten aktualisiert, die direkt oder indirekt zum Erstellen der `ProductAssemblyID 800` verwendet werden. Der allgemeine Tabellenausdruck gibt eine hierarchische Liste mit Teilen zurück, die zum Erstellen der `ProductAssemblyID 800` direkt verwendet werden, sowie mit Teilen, die zum Erstellen dieser Komponenten verwendet werden, usw. Nur die Zeilen, die vom allgemeinen Tabellenausdruck zurückgegeben werden, werden geändert.  
+ Im folgenden Beispiel wird der `PerAssemblyQty`-Wert für alle Teile und Komponenten aktualisiert, die direkt oder indirekt zum Erstellen der `ProductAssemblyID 800` verwendet werden. Der allgemeine Tabellenausdruck gibt eine hierarchische Liste mit Teilen zurück, die zum Erstellen der `ProductAssemblyID 800` direkt verwendet werden, sowie mit Teilen, die zum Erstellen dieser Komponenten verwendet werden, usw. Nur die Zeilen, die vom allgemeinen Tabellenausdruck zurückgegeben werden, werden geändert.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -762,7 +762,7 @@ GO
  In den Beispielen in diesem Abschnitt wird veranschaulicht, wie Zeilen in einer Remotezieltabelle mit einem [Verbindungsserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) oder einer [Rowsetfunktion](../../t-sql/functions/rowset-functions-transact-sql.md) aktualisiert werden, um auf die Remotetabelle zu verweisen.  
   
 #### <a name="o-updating-data-in-a-remote-table-by-using-a-linked-server"></a>O. Aktualisieren von Daten in einer Remotetabelle mithilfe eines Verbindungsservers  
- Im folgenden Beispiel wird eine Tabelle auf einem Remoteserver aktualisiert. In diesem Beispiel wird zunächst mithilfe von [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) ein Link zur Remotedatenquelle erstellt. Der Name des Verbindungsservers (`MyLinkServer`) wird anschließend als Teil des vierteiligen Objektnamens in der Form server.catalog.schema.object angegeben. Beachten Sie, dass Sie einen gültigen Servernamen für `@datasrc` angeben müssen.  
+ Im folgenden Beispiel wird eine Tabelle auf einem Remoteserver aktualisiert. In diesem Beispiel wird zunächst mithilfe von [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) ein Link zur Remotedatenquelle erstellt. Der Name des Verbindungsservers (`MyLinkedServer`) wird anschließend als Teil des vierteiligen Objektnamens in der Form server.catalog.schema.object angegeben. Beachten Sie, dass Sie einen gültigen Servernamen für `@datasrc` angeben müssen.  
   
 ```sql  
 USE master;  
@@ -770,7 +770,7 @@ GO
 -- Create a link to the remote data source.   
 -- Specify a valid server name for @datasrc as 'server_name' or 'server_nameinstance_name'.  
   
-EXEC sp_addlinkedserver @server = N'MyLinkServer',  
+EXEC sp_addlinkedserver @server = N'MyLinkedServer',  
     @srvproduct = N' ',  
     @provider = N'SQLNCLI10',   
     @datasrc = N'<server name>',  
@@ -781,7 +781,7 @@ GO
 -- Specify the remote data source using a four-part name   
 -- in the form linked_server.catalog.schema.object.  
   
-UPDATE MyLinkServer.AdventureWorks2012.HumanResources.Department  
+UPDATE MyLinkedServer.AdventureWorks2012.HumanResources.Department  
 SET GroupName = N'Public Relations'  
 WHERE DepartmentID = 4;  
 ```  
@@ -790,18 +790,18 @@ WHERE DepartmentID = 4;
  Im folgenden Beispiel wird durch Angabe der [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md)-Rowsetfunktion eine Zeile in einer Remotetabelle aktualisiert. Der im vorherigen Beispiel erstellte Name des Verbindungsservers wird hier verwendet.  
   
 ```sql  
-UPDATE OPENQUERY (MyLinkServer, 'SELECT GroupName FROM HumanResources.Department WHERE DepartmentID = 4')   
+UPDATE OPENQUERY (MyLinkedServer, 'SELECT GroupName FROM HumanResources.Department WHERE DepartmentID = 4')   
 SET GroupName = 'Sales and Marketing';  
 ```  
   
 #### <a name="q-updating-data-in-a-remote-table-by-using-the-opendatasource-function"></a>Q. Aktualisieren von Daten in einer Remotetabelle mithilfe der OPENDATASOURCE-Funktion  
- Im folgenden Beispiel wird durch Angabe der Rowsetfunktion [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) eine Zeile in eine Remotetabelle eingefügt. Geben Sie im Format *server_name* oder *server_name\instance_name* einen gültigen Servernamen für die Datenquelle an. Sie müssen möglicherweise die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für "Ad Hoc Distributed Queries" konfigurieren. Weitere Informationen finden Sie unter [Verteilte Ad-hoc-Abfragen (Serverkonfigurationsoption)](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md).  
-  
-```sql  
-UPDATE OPENQUERY (MyLinkServer, 'SELECT GroupName FROM HumanResources.Department WHERE DepartmentID = 4')   
-SET GroupName = 'Sales and Marketing';  
-```  
-  
+ Im folgenden Beispiel wird durch Angabe der [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md)-Rowsetfunktion eine Zeile in einer Remotetabelle aktualisiert. Geben Sie im Format *server_name* oder *server_name\instance_name* einen gültigen Servernamen für die Datenquelle an. Sie müssen möglicherweise die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für "Ad Hoc Distributed Queries" konfigurieren. Weitere Informationen finden Sie unter [Verteilte Ad-hoc-Abfragen (Serverkonfigurationsoption)](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md).  
+
+```sql
+UPDATE OPENDATASOURCE('SQLNCLI', 'Data Source=<server name>;Integrated Security=SSPI').AdventureWorks2012.HumanResources.Department
+SET GroupName = 'Sales and Marketing' WHERE DepartmentID = 4;  
+```
+
 ###  <a name="LOBValues"></a> Aktualisieren von Large Object-Datentypen  
  Anhand von Beispielen in diesem Abschnitt werden Methoden zum Aktualisieren von Werten in Spalten gezeigt, die mit LOB-Datentypen (Large Object) definiert sind.  
   
@@ -1213,7 +1213,7 @@ DROP TABLE CTAS_acs
 ;
 ```
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Cursors &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   

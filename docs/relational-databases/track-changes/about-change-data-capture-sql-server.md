@@ -1,6 +1,6 @@
 ---
 title: Über Change Data Capture (SQL Server) | Microsoft-Dokumentation
-ms.date: 03/14/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -14,15 +14,15 @@ ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5fc24683d4272a4e93ac7d1e30581fa202588e1e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d8c51d95fe74171fe9b90c439c34ea37700419b2
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402745"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991873"
 ---
 # <a name="about-change-data-capture-sql-server"></a>Über Change Data Capture (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   Change Data Capture zeichnet Einfüge-, Aktualisierungs- und Löschaktivitäten auf, die an einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle vorgenommen werden. Hierdurch werden die Details zu diesen Änderungen in einem leicht verwendbaren relationalen Format bereitgestellt. Für die geänderten Zeilen werden die Spaltendaten sowie die Metadaten, die zur Übernahme der Änderungen in einer Zielumgebung erforderlich sind, aufgezeichnet und in Änderungstabellen gespeichert, die die Spaltenstruktur der nachverfolgten Quelltabellen widerspiegeln. Für den systematischen Zugriff auf die Änderungsdaten durch den Consumer werden Tabellenwertfunktionen bereitgestellt.  
   
  Ein Beispiel für einen Datenconsumer, auf den diese Technologie abzielt, ist eine Anwendung zum Extrahieren, Transformieren und Laden (ETL-Anwendung). Eine ETL-Anwendung lädt Änderungsdaten inkrementell aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Quelltabellen in ein Data Warehouse oder Data Mart. Obwohl die Darstellung der Quelltabellen innerhalb des Data Warehouse Änderungen in den Quelltabellen widerspiegeln muss, sind End-to-End-Technologien, die eine Kopie der Quelle aktualisieren, ungeeignet. Benötigt wird stattdessen ein zuverlässiger Datenstrom von Änderungsdaten, der so strukturiert ist, dass er vom Consumer problemlos auf unterschiedliche Darstellungen der Daten in einer Zielumgebung angewendet werden kann. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Technologie bereit.  
@@ -44,7 +44,7 @@ ms.locfileid: "52402745"
   
  Jeder auf die Quelltabelle angewendete Einfüge- oder Löschvorgang erscheint als einzelne Zeile in der Änderungstabelle. Die Datenspalten der Zeile, die sich aus einem Einfügevorgang ergibt, enthalten die Spaltenwerte nach dem Einfügevorgang. Die Datenspalten der Zeile, die sich aus einem Löschvorgang ergibt, enthalten die Spaltenwerte vor dem Löschvorgang. Ein Updatevorgang erfordert einen Zeileneintrag, der die Spaltenwerte vor dem Updatevorgang angibt, und einen Zeileneintrag, der die Spaltenwerte nach dem Updatevorgang angibt.  
   
- Darüber hinaus enthält jede Zeile in einer Änderungstabelle zusätzliche Metadaten, die eine Interpretation der Änderungsaktivitäten erlauben. Die Spalte __$start_lsn identifiziert die Commit-Protokollfolgenummer (Log Sequence Number, LSN), die der Änderung zugewiesen wurde. Die Commit-LSN identifiziert sowohl die Änderungen, die innerhalb der gleichen Transaktion ausgeführt wurden, als auch die Reihenfolge der Transaktionen. Die Spalte \_\_$seqval kann verwendet werden, um die Reihenfolge weiterer Änderungen festzulegen, die innerhalb der gleichen Transaktion ausgeführt wurden. In der Spalte \_\_$operation wird der mit der Änderung verbundene Vorgang aufgezeichnet: 1 = Löschung, 2 = Einfügung, 3 = Update (Anfangsimage) und 4 = Update (Endimage). Die Spalte \_\_$update_mask ist eine variable Bitmaske mit einem definierten Bit für jede aufgezeichnete Spalte. Bei Einträgen für Einfüge- und Löschvorgänge werden alle Bits in der Updatemaske gesetzt. Bei Einträgen für Updatevorgänge sind dagegen nur jene Bits gesetzt, die den geänderten Spalten entsprechen.  
+ Darüber hinaus enthält jede Zeile in einer Änderungstabelle zusätzliche Metadaten, die eine Interpretation der Änderungsaktivitäten erlauben. Die Spalte __$start_lsn identifiziert die Commit-Protokollfolgenummer (Log Sequence Number, LSN), die der Änderung zugewiesen wurde. Die Commit-LSN identifiziert sowohl die Änderungen, die innerhalb der gleichen Transaktion ausgeführt wurden, als auch die Reihenfolge der Transaktionen. Die Spalte \_\_$seqval kann verwendet werden, um die Reihenfolge weiterer Änderungen festzulegen, die innerhalb der gleichen Transaktion ausgeführt wurden. Die Spalte „\_\_$operation“ zeichnet den Vorgang auf, der der Änderung zugeordnet ist: 1 = löschen, 2 = einfügen, 3 = aktualisieren (vor dem Image) und 4 = aktualisieren (nach dem Image). Die Spalte \_\_$update_mask ist eine variable Bitmaske mit einem definierten Bit für jede aufgezeichnete Spalte. Bei Einträgen für Einfüge- und Löschvorgänge werden alle Bits in der Updatemaske gesetzt. Bei Einträgen für Updatevorgänge sind dagegen nur jene Bits gesetzt, die den geänderten Spalten entsprechen.  
   
 ## <a name="change-data-capture-validity-interval-for-a-database"></a>Change Data Capture-Gültigkeitsintervall für eine Datenbank  
  Beim Change Data Capture-Gültigkeitsintervall für eine Datenbank handelt es sich um dem Zeitraum, in dem Änderungsdaten für Aufzeichnungsinstanzen verfügbar sind. Das Gültigkeitsintervall beginnt mit der Erstellung der ersten Aufzeichnungsinstanz für eine Datenbanktabelle und dauert bis zum aktuellen Zeitpunkt.  
@@ -133,7 +133,7 @@ CREATE TABLE T1(
      C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type)
 ```
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Nachverfolgen von Datenänderungen &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Aktivieren und Deaktivieren von Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   
  [Arbeiten mit Änderungsdaten &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   

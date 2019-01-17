@@ -11,19 +11,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 10532564d2310ad3b8eaf28c2693bafb423d81a2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b621fa1c1b21e6b1131c65524675c3da9890e6ac
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658843"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980156"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Ein **CurvePolygon** ist eine von einem äußeren Begrenzungsring und null oder mehr inneren Ringe definierte topologisch geschlossene Fläche.  
   
 > [!IMPORTANT]  
->  Laden Sie das Whitepaper [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Neue räumliche Funktionen in SQL Server 2012 **herunter, um eine ausführliche Beschreibung und Beispiele für die in** eingeführten räumlichen Funktionen (z.B. [CurvePolygon](https://go.microsoft.com/fwlink/?LinkId=226407)-Untertyp) zu erhalten.  
+> Laden Sie das Whitepaper [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Neue räumliche Funktionen in SQL Server 2012 **herunter, um eine ausführliche Beschreibung und Beispiele für die in** eingeführten räumlichen Funktionen (z.B. [CurvePolygon](https://go.microsoft.com/fwlink/?LinkId=226407)-Untertyp) zu erhalten.  
   
  Die Attribute einer **CurvePolygon** -Instanz werden durch folgende Kriterien definiert:  
   
@@ -31,7 +31,7 @@ ms.locfileid: "51658843"
   
 -   Das Innere der **CurvePolygon** -Instanz ist die Fläche zwischen dem äußeren Ring und allen inneren Ringen.  
   
- Eine **CurvePolygon** -Instanz unterscheidet sich von einer **Polygon** -Instanz darin, dass eine **CurvePolygon** -Instanz die folgenden Kreisbogensegmente enthalten kann: **CircularString** und **CompoundCurve**.  
+ Eine **CurvePolygon**-Instanz unterscheidet sich von einer **Polygon**-Instanz darin, dass eine **CurvePolygon**-Instanz die folgenden Kreisbogensegmente enthalten kann: **CircularString** und **CompoundCurve**.  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve-Instanzen  
  In der unten stehenden Abbildung werden gültige **CurvePolygon** -Instanzen dargestellt:  
@@ -46,11 +46,11 @@ ms.locfileid: "51658843"
 3.  Die X- und Y-Koordinaten für den Ausgangspunkt und den Endpunkt sind identisch.  
   
     > [!NOTE]  
-    >  Z- und M-Werte werden ignoriert.  
+    > Z- und M-Werte werden ignoriert.  
   
- Im folgenden Beispiel werden akzeptierte **CurvePolygon** -Instanzen veranschaulicht.  
+Im folgenden Beispiel werden akzeptierte **CurvePolygon** -Instanzen veranschaulicht.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CURVEPOLYGON EMPTY';  
 DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0, 0 0))';  
 DECLARE @g3 geometry = 'CURVEPOLYGON((0 0 1, 0 0 2, 0 0 3, 0 0 3))'  
@@ -58,67 +58,57 @@ DECLARE @g4 geometry = 'CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))';
 DECLARE @g5 geography = 'CURVEPOLYGON((-122.3 47, 122.3 -47, 125.7 -49, 121 -38, -122.3 47))';  
 ```  
   
- `@g3` wird akzeptiert, obwohl sich die Z-Werte des Ausgangspunkts und des Endpunkts voneinander unterscheiden, da Z-Werte ignoriert werden. `@g5` wird akzeptiert, obwohl die **geography** -Typinstanz ungültig ist.  
+`@g3` wird akzeptiert, obwohl sich die Z-Werte des Ausgangspunkts und des Endpunkts voneinander unterscheiden, da Z-Werte ignoriert werden. `@g5` wird akzeptiert, obwohl die **geography** -Typinstanz ungültig ist.  
   
- In den folgenden Beispielen wird `System.FormatException`ausgelöst.  
+In den folgenden Beispielen wird `System.FormatException`ausgelöst.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CURVEPOLYGON((0 5, 0 0, 0 0, 0 0))';  
 DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';  
 ```  
   
- `@g1` wird nicht akzeptiert, da der Ausgangspunkt und der Endpunkt nicht denselben Y-Wert aufweisen. `@g2` wird nicht akzeptiert, da der Ring nicht über eine ausreichende Anzahl von Punkten verfügt.  
+`@g1` wird nicht akzeptiert, da der Ausgangspunkt und der Endpunkt nicht denselben Y-Wert aufweisen. `@g2` wird nicht akzeptiert, da der Ring nicht über eine ausreichende Anzahl von Punkten verfügt.  
   
 ### <a name="valid-instances"></a>Gültige Instanzen  
- Eine **CurvePolygon** -Instanz ist gültig, wenn sowohl der äußere Ring als auch die inneren Ringe die folgenden Kriterien erfüllen:  
+Eine **CurvePolygon** -Instanz ist gültig, wenn sowohl der äußere Ring als auch die inneren Ringe die folgenden Kriterien erfüllen:  
   
 1.  Sie können sich nur an jeweils einem Tangentenpunkt berühren.  
-  
 2.  Sie können einander nicht schneiden.  
-  
 3.  Jeder Ring muss mindestens vier Punkte enthalten.  
-  
 4.  Jeder Ring muss ein akzeptabler Kurventyp sein.  
   
- Auch**CurvePolygon** -Instanzen müssen bestimmte Kriterien erfüllen, je nachdem, ob es sich dabei um einen **geometry** -Datentyp oder einen **geography** -Datentyp handelt.  
+Auch**CurvePolygon** -Instanzen müssen bestimmte Kriterien erfüllen, je nachdem, ob es sich dabei um einen **geometry** -Datentyp oder einen **geography** -Datentyp handelt.  
   
 #### <a name="geometry-data-type"></a>geometry-Datentyp  
- Eine gültige **geometryCurvePolygon** -Instanz muss über die folgenden Attribute verfügen:  
+Eine gültige **geometryCurvePolygon** -Instanz muss über die folgenden Attribute verfügen:  
   
 1.  Alle inneren Ringe müssen im äußeren Ring enthalten sein.  
-  
 2.  Mehrere innere Ringe können vorhanden sein, ein innerer Ring darf jedoch keinen anderen inneren Ring enthalten.  
-  
 3.  Ringe dürfen weder sich selbst noch einen anderen Ring schneiden.  
-  
 4.  Ringe dürfen sich nur an einzelnen Tangentenpunkten berühren (wobei die Anzahl der Punkte, an denen Ringe einander berühren, endlich sein muss).  
-  
 5.  Der Innere des Polygons muss verbunden sein.  
   
- Im folgenden Beispiel werden gültige **geometryCurvePolygon** -Instanzen veranschaulicht.  
+Im folgenden Beispiel werden gültige **geometryCurvePolygon** -Instanzen veranschaulicht.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CURVEPOLYGON EMPTY';  
 DECLARE @g2 geometry = 'CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))';  
 SELECT @g1.STIsValid(), @g2.STIsValid();  
 ```  
   
- Für CurvePolygon-Instanzen gelten dieselben Gültigkeitsregeln wie für Polygon-Instanzen. CurvePolygon-Instanzen können jedoch die neuen Kreisbogensegment-Typen akzeptieren. Weitere Beispiele für gültige oder nicht gültige Instanzen finden Sie unter [Polygon](../../relational-databases/spatial/polygon.md).  
+Für CurvePolygon-Instanzen gelten dieselben Gültigkeitsregeln wie für Polygon-Instanzen. CurvePolygon-Instanzen können jedoch die neuen Kreisbogensegment-Typen akzeptieren. Weitere Beispiele für gültige oder nicht gültige Instanzen finden Sie unter [Polygon](../../relational-databases/spatial/polygon.md).  
   
 #### <a name="geography-data-type"></a>geography-Datentyp  
- Eine gültige **geographyCurvePolygon** -Instanz muss über die folgenden Attribute verfügen:  
+Eine gültige **geographyCurvePolygon** -Instanz muss über die folgenden Attribute verfügen:  
   
 1.  Der Innere des Polygons ist mit der linken Regel verbunden.  
-  
 2.  Ringe dürfen weder sich selbst noch einen anderen Ring schneiden.  
-  
 3.  Ringe dürfen sich nur an einzelnen Tangentenpunkten berühren (wobei die Anzahl der Punkte, an denen Ringe einander berühren, endlich sein muss).  
-  
 4.  Der Innere des Polygons muss verbunden sein.  
   
- Im folgenden Beispiel wird eine gültige CurvePolygon-geography-Instanz veranschaulicht.  
+Im folgenden Beispiel wird eine gültige CurvePolygon-geography-Instanz veranschaulicht.  
   
-```  
+```sql  
 DECLARE @g geography = 'CURVEPOLYGON((-122.3 47, 122.3 47, 125.7 49, 121 38, -122.3 47))';  
 SELECT @g.STIsValid();  
 ```  
@@ -182,9 +172,9 @@ IF @g2.STIsValid() = 1
 SELECT @g1.STIsValid() AS G1, @g2.STIsValid() AS G2;  
 ```  
   
- Sowohl @g1 als auch @g2 verwenden denselben äußeren Begrenzungsring (einen Kreis mit dem Radius 5), und für beide wird ein Quadrat als innerer Ring verwendet.  Die Instanz @g1 ist jedoch gültig, während die Instanz @g2 ungültig ist.  Der Grund für die Ungültigkeit von @g2 ist, dass der innere Ring die vom äußeren Ring begrenzte Fläche in vier separate Bereiche teilt.  Dies wird in der folgenden Zeichnung verdeutlicht:  
+ Sowohl `@g1` als auch `@g2` verwenden denselben äußeren Begrenzungsring (einen Kreis mit dem Radius 5), und für beide wird ein Quadrat als innerer Ring verwendet.  Die Instanz `@g1` ist jedoch gültig, während die Instanz `@g2` ungültig ist. Der Grund für die Ungültigkeit von @g2 ist, dass der innere Ring die vom äußeren Ring begrenzte Fläche in vier separate Bereiche teilt. Dies wird in der folgenden Zeichnung verdeutlicht:  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Polygon](../../relational-databases/spatial/polygon.md)   
  [CircularString](../../relational-databases/spatial/circularstring.md)   
  [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)   

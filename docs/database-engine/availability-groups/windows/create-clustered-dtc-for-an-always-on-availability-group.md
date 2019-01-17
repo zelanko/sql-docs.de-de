@@ -1,6 +1,7 @@
 ---
-title: Erstellen eines gruppierten DTCs für eine Always On-Verfügbarkeitsgruppe | Microsoft-Dokumentation
-ms.custom: ''
+title: Erstellen einer gruppierten DTC-Ressource für eine Verfügbarkeitsgruppe
+description: In diesem Thema werden Sie durch eine vollständige Konfiguration einer gruppierten DTC-Ressource für eine SQL Server AlwaysOn-Verfügbarkeitsgruppe geführt.
+ms.custom: seodec18
 ms.date: 08/30/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,14 +12,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ce78afa02f0a0f5acdb061e21a1311ac20f844d8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2182b11c9416c487d3d583308d07ae1ad5f3f72f
+ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396918"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54069776"
 ---
-# <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>Erstellen eines gruppierten DTCs für eine AlwaysOn-Verfügbarkeitsgruppe
+# <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>Erstellen einer gruppierten DTC-Ressource für eine Always On-Verfügbarkeitsgruppe
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -320,21 +321,21 @@ GO
 ```
 
 > [!IMPORTANT]
-Sie können DTC nicht auf einem vorhandenen [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] aktivieren.  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wird für eine bestehende Verfügbarkeitsgruppe folgende Syntax akzeptiert:  
->
+> Sie können DTC nicht auf einem vorhandenen [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] aktivieren.  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wird für eine bestehende Verfügbarkeitsgruppe folgende Syntax akzeptiert:  
+> 
 > USE master;    
 > ALTER AVAILABILITY GROUP \<Verfügbarkeitsgruppe\>  
-SET (DTC_Support = Per_DB)  
->
->Es wird aber keine tatsächliche Konfigurationsänderung vorgenommen.  Sie können die **dtc_support** -Konfiguration mit der folgenden T-SQL-Abfrage bestätigen:  
->
->SELECT name, dtc_support FROM sys.availability_groups  
->
->Die einzige Möglichkeit zum Aktivieren von DTC-Unterstützung für eine Verfügbarkeitsgruppe besteht darin, eine Verfügbarkeitsgruppe über Transact-SQL zu erstellen.
+> SET (DTC_Support = Per_DB)  
+> 
+> Es wird aber keine tatsächliche Konfigurationsänderung vorgenommen.  Sie können die **dtc_support** -Konfiguration mit der folgenden T-SQL-Abfrage bestätigen:  
+> 
+> SELECT name, dtc_support FROM sys.availability_groups  
+> 
+> Die einzige Möglichkeit zum Aktivieren von DTC-Unterstützung für eine Verfügbarkeitsgruppe besteht darin, eine Verfügbarkeitsgruppe über Transact-SQL zu erstellen.
  
 ## <a name="ClusterDTC"></a>8.  Vorbereiten von Clusterressourcen
 
-In diesem Skript werden die DTC-abhängigen Ressourcen vorbereitet: Datenträger und IP.  Der freigegebene Speicher wird dem Windows-Cluster hinzugefügt.  Es werden Netzwerkressourcen erstellt, und dann wird der DTC erstellt und als Ressource für die Verfügbarkeitsgruppe deklariert.  Führen Sie das folgende PowerShell-Skript auf `SQLNODE1` aus.
+In diesem Skript werden die DTC-abhängigen Ressourcen vorbereitet: Datenträger und IP.  Der freigegebene Speicher wird dem Windows-Cluster hinzugefügt.  Es werden Netzwerkressourcen erstellt, und dann wird der DTC erstellt und als Ressource für die Verfügbarkeitsgruppe deklariert.  Führen Sie das folgende PowerShell-Skript auf `SQLNODE1` aus. Vielen Dank an [Allan Hirt](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/) für das Skript.
 
 ```powershell  
 # Create a clustered Microsoft Distributed Transaction Coordinator properly in the resource group with SQL Server
@@ -587,4 +588,4 @@ GO
 ```
 
 > [!IMPORTANT]
-> Die `USE AG1` -Anweisung muss ausgeführt werden, um sicherzustellen, dass der Datenbankkontext auf `AG1`festgelegt ist.  Andernfalls wird die folgende Fehlermeldung angezeigt: „Der Transaktionskontext wird von einer anderen Sitzung verwendet.“
+> Die `USE AG1` -Anweisung muss ausgeführt werden, um sicherzustellen, dass der Datenbankkontext auf `AG1`festgelegt ist.  Andernfalls wird Ihnen die folgende Fehlermeldung angezeigt: „Der Transaktionskontext wird von einer anderen Sitzung verwendet.“

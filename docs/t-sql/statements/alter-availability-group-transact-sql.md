@@ -23,19 +23,19 @@ ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7098114ba6a69b65ba689f00a726bb93c93b6a2a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1bfefddd741f385fdcd465e93099f05c11ca5473
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528782"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980266"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Ändert eine vorhandene Always On-Verfügbarkeitsgruppe in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die meisten ALTER AVAILABILITY GROUP-Argumente werden nur von dem aktuellen primäre Replikat unterstützt. Die JOIN-, FAILOVER- und FORCE_FAILOVER_ALLOW_DATA_LOSS-Argumente werden hingegen nur auf sekundären Replikaten unterstützt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -69,6 +69,7 @@ ALTER AVAILABILITY GROUP group_name
   | FAILURE_CONDITION_LEVEL  = { 1 | 2 | 3 | 4 | 5 }   
   | HEALTH_CHECK_TIMEOUT = milliseconds  
   | DB_FAILOVER  = { ON | OFF }   
+  | DTC_SUPPORT  = { PER_DB | NONE }  
   | REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = { integer }
   
 <server_instance> ::=   
@@ -93,7 +94,7 @@ ALTER AVAILABILITY GROUP group_name
      | PRIMARY_ROLE ( {   
             [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
         [,] [ READ_ONLY_ROUTING_LIST = { ( '<server_instance>' [ ,...n ] ) | NONE } ]  
-        [,] [ READ_WRITE_ROUTING_URL = { ( '<server_instance>' ) ] 
+        [,] [ READ_WRITE_ROUTING_URL = { ( '<server_instance>' ) ] 
      } )  
      | SESSION_TIMEOUT = integer
   
@@ -193,11 +194,11 @@ ALTER AVAILABILITY GROUP group_name
   
  Wird nur für das primäre Replikat unterstützt.  
   
- Die Fehlerbedingungsebenen (1 bis 5) reichen von der Ebene 1 mit den wenigsten Einschränkungen bis zur Ebene 5 mit den meisten Einschränkungen. Jede Bedingungsebene umfasst stets auch sämtliche weniger restriktiven Ebenen. Daher schließt die strengste Bedingungsebene 5 die vier Bedingungsebenen mit weniger Einschränkungen (1-4) ein, Ebene 4 schließt die Ebenen 1-3 ein usw. In der folgenden Tabelle wird die Fehlerbedingung beschrieben, die der jeweiligen Ebene entspricht.  
+ Die Fehlerbedingungsebenen (1–5) reichen von der Ebene 1 mit den wenigsten Einschränkungen bis zur Ebene 5 mit den meisten Einschränkungen. Jede Bedingungsebene umfasst stets auch sämtliche weniger restriktiven Ebenen. Daher schließt die strengste Bedingungsebene 5 die vier Bedingungsebenen mit weniger Einschränkungen (1-4) ein, Ebene 4 schließt die Ebenen 1-3 ein usw. In der folgenden Tabelle wird die Fehlerbedingung beschrieben, die der jeweiligen Ebene entspricht.  
   
 |Ebene|Fehlerbedingung|  
 |-----------|-----------------------|  
-|1|Gibt an, dass in einem der folgenden Fälle ein automatisches Failover initiiert werden muss:<br /><br /> Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienst ist ausgefallen.<br /><br /> Das Leasing der Verfügbarkeitsgruppe für die Verbindung mit dem WSFC-Cluster läuft ab, da keine ACK-Meldung von der Serverinstanz empfangen wird. Weitere Informationen finden Sie unter [How It Works: SQL Server AlwaysOn Lease Timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).|  
+|1|Gibt an, dass in einem der folgenden Fälle ein automatisches Failover initiiert werden muss:<br /><br /> Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst ist ausgefallen.<br /><br /> Das Leasing der Verfügbarkeitsgruppe für die Verbindung mit dem WSFC-Cluster läuft ab, da keine ACK-Meldung von der Serverinstanz empfangen wird. Weitere Informationen finden Sie unter [How It Works: SQL Server Always On Lease Timeout (Funktionsweise: SQL Server Always On-Leasetimeout)](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).|  
 |2|Gibt an, dass in einem der folgenden Fälle ein automatisches Failover initiiert werden muss:<br /><br /> Die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt keine Verbindung mit dem Cluster her, und der vom Benutzer angegebene HEALTH_CHECK_TIMEOUT-Schwellenwert der Verfügbarkeitsgruppe wurde überschritten.<br /><br /> Das Verfügbarkeitsreplikat weist einen fehlerhaften Status auf.|  
 |3|Gibt an, dass ein automatisches Failover bei kritischen internen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlern initiiert werden soll, z. B. verwaisten Spinlocks, schwerwiegenden Schreibzugriffsverletzungen oder zu vielen Sicherungen.<br /><br /> Dies ist das Standardverhalten.|  
 |4|Gibt an, dass ein automatisches Failover bei mittelschweren internen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlern initiiert werden soll, z. B. bei dauerhaft unzureichendem Arbeitsspeicher im internen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ressourcenpool.|  
@@ -209,7 +210,7 @@ ALTER AVAILABILITY GROUP group_name
  Der FAILURE_CONDITION_LEVEL- und der HEALTH_CHECK_TIMEOUT-Wert definieren eine *flexible Failoverrichtlinie* für eine angegebene Gruppe. Diese flexible Failoverrichtlinie bietet eine präzise Kontrolle der Bedingungen, die ein automatisches Failover verursachen müssen. Weitere Informationen finden Sie unter [Flexible Failoverrichtlinie für automatisches Failover einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
   
  HEALTH_CHECK_TIMEOUT **=** *milliseconds*  
- Gibt die Wartezeit (in Millisekunden) für die gespeicherte [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)-Systemprozedur an, um Informationen über den Serverzustand zurückzugeben, ehe das WSFC-Cluster annimmt, dass die Serverinstanz langsam oder blockiert ist. HEALTH_CHECK_TIMEOUT wird auf Gruppenebene festgelegt, ist aber nur für Verfügbarkeitsreplikate relevant, die für den Verfügbarkeitsmodus für synchrone Commits mit automatischem Failover (AVAILIBILITY_MODE **=** SYNCHRONOUS_COMMIT) konfiguriert sind.  Weiterhin kann ein Integritätsprüfungstimeout nur ein automatisches Failover auslösen, wenn das primäre und das sekundäre Replikat für den automatischen Failovermodus konfiguriert sind (FAILOVER_MODE **=** AUTOMATIC) und das sekundäre Replikat gerade mit dem primären Replikat synchronisiert wird.  
+ Gibt die Wartezeit (in Millisekunden) für die gespeicherte [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)-Systemprozedur an, um Informationen über den Serverzustand zurückzugeben, ehe das WSFC-Cluster annimmt, dass die Serverinstanz langsam oder blockiert ist. HEALTH_CHECK_TIMEOUT wird auf Gruppenebene festgelegt, ist aber nur für Verfügbarkeitsreplikate relevant, die für den Verfügbarkeitsmodus für synchrone Commits mit automatischem Failover (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT) konfiguriert sind.  Weiterhin kann ein Integritätsprüfungstimeout nur ein automatisches Failover auslösen, wenn das primäre und das sekundäre Replikat für den automatischen Failovermodus konfiguriert sind (FAILOVER_MODE **=** AUTOMATIC) und das sekundäre Replikat gerade mit dem primären Replikat synchronisiert wird.  
   
  Der standardmäßige HEALTH_CHECK_TIMEOUT-Wert beträgt 30.000 Millisekunden (30 Sekunden). Der minimale Wert beträgt 15.000 Millisekunden (15 Sekunden) und der maximale Wert 4.294.967.295 Millisekunden.  
   
@@ -223,6 +224,11 @@ ALTER AVAILABILITY GROUP group_name
  
  Weitere Informationen zu dieser Einstellung finden Sie unter [Integritätserkennung auf Datenbankebene](../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). 
 
+DTC_SUPPORT  **=** { PER_DB | NONE }  
+Legt fest, ob verteilte Transaktionen für diese Verfügbarkeitsgruppe aktiviert sind. Verteilte Transaktionen werden ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] nur für Datenbanken für Verfügbarkeitsgruppen unterstützt, und datenbankübergreifende Transaktionen werden erst ab [!INCLUDE[ssSQL16](../../includes/sssql15-md.md)] SP2 unterstützt. Mit `PER_DB` wird die Verfügbarkeitsgruppe mit Unterstützung dieser Transaktionen erstellt und die datenbankübergreifenden Transaktionen im Zusammenhang mit Datenbanken in der Verfügbarkeitsgruppe werden auf verteilte Transaktionen höhergestuft. `NONE` verhindert die automatische Höherstufung der datenbankübergreifenden Transaktionen auf verteilte Transaktionen, und die Datenbank wird nicht mit einer stabilen RMID in DTC registriert. Verteilte Transaktionen werden nicht verhindert, wenn die `NONE`-Einstellung verwendet wird, allerdings schlagen das Datenbankfailover und die automatische Wiederherstellung unter bestimmten Umständen fehl. Weitere Informationen finden Sie unter [Datenbankübergreifende Transaktionen und verteilte Transaktionen für Always On-Verfügbarkeitsgruppen oder Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md). 
+ 
+> [!NOTE]
+> Die Unterstützung zum Ändern der DTC_SUPPORT-Einstellung einer Verfügbarkeitsgruppe wurde in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 2 eingeführt. Diese Option kann nicht mit früheren Versionen verwendet werden. Sie müssen die Verfügbarkeitsgruppe mit DROP und CREATE löschen und erneut erstellen, um diese Einstellung in früheren Versionen von [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] zu ändern.
  
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
  Eingeführt in SQL Server 2017. Dient zum Festlegen einer minimalen Anzahl synchroner sekundärer Replikate, um einen Commit auszuführen, bevor das primäre Replikat einen Commit für die Transaktion ausführt. Garantiert, dass die SQL Server-Transaktion wartet, bis die Transaktionsprotokolle für die minimale Anzahl von sekundären Replikaten aktualisiert werden. Der Standardwert ist 0. Dies bietet das gleiche Verhalten wie SQL Server 2016. Der Mindestwert beträgt 0. Der maximale Wert ist die Anzahl der Replikate minus 1. Diese Option bezieht sich auf Replikate im synchronen Commitmodus. Wenn sich Replikate im synchronen Commitmodus befinden, warten Schreibvorgänge auf dem primären Replikat, bis Schreibvorgänge auf dem zweiten synchronen Replikat an das Transaktionsprotokoll der Replikatsdatenbank übergeben werden. Wenn ein SQL Server, der ein sekundäres synchronisiertes Replikat hostet, nicht mehr reagiert, markiert der SQL Server, der das erste primäre Replikat hostet, dieses sekundäre Replikat als NOT SYNCHRONIZED (nicht synchronisiert). Wenn die nicht reagierende Datenbank wieder online geschaltet wird, befindet sie sich im Zustand „nicht synchronisiert“ und das Replikat wird als fehlerhaft markiert bis das primäre Replikat den Zustand „synchron“ wieder herstellen kann. Diese Einstellung stellt sicher, dass das primäre Replikat wartet, bis die minimale Anzahl der Replikate ein Commit für jede Transaktion ausgeführt hat. Wenn die minimale Anzahl der Replikate nicht verfügbar ist, schlagen Commits auf dem primären Replikat fehl. Für den Clustertyp `EXTERNAL` wird diese Einstellung geändert, wenn die Verfügbarkeitsgruppe der Clusterressource hinzugefügt wird. Weitere Informationen finden Sie unter [Hochverfügbarkeit und Schutz von Daten für Verfügbarkeitsgruppenkonfigurationen](../../linux/sql-server-linux-availability-group-ha.md).
@@ -306,7 +312,10 @@ ALTER AVAILABILITY GROUP group_name
  Gibt den Failovermodus des Verfügbarkeitsreplikats an, das Sie definieren.  
   
  AUTOMATIC  
- Aktiviert das automatische Failover. AUTOMATIC wird nur unterstützt, wenn Sie auch AVAILABILITY_MODE = SYNCHRONOUS_COMMIT angeben. Sie können AUTOMATIC für zwei Verfügbarkeitsreplikate angeben, einschließlich des primären Replikats.  
+ Aktiviert das automatische Failover. AUTOMATIC wird nur unterstützt, wenn Sie auch AVAILABILITY_MODE = SYNCHRONOUS_COMMIT angeben. Sie können AUTOMATIC für drei Verfügbarkeitsreplikate angeben, einschließlich des primären Replikats.  
+  
+> [!NOTE]  
+>  Vor SQL Server 2016 war dies, einschließlich des primären Replikats, auf zwei automatische Failoverreplikate beschränkt.
   
 > [!NOTE]  
 >  SQL Server-Failoverclusterinstanzen (FCIs) unterstützen kein automatisches Failover durch Verfügbarkeitsgruppen. Daher können die Verfügbarkeitsreplikate, die von einer FCI gehostet werden, nur für manuelles Failover konfiguriert werden.  
@@ -335,7 +344,7 @@ ALTER AVAILABILITY GROUP group_name
   
 -   0 gibt an, dass dieses Verfügbarkeitsreplikat nie zum Ausführen von Sicherungen ausgewählt wird. Dies ist zum Beispiel für ein Remoteverfügbarkeitsreplikat hilfreich, für das keine Failover bei Sicherungen auftreten sollen.  
   
- Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten &#40;Always On-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)wichtig sind.  
+ Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten &#40;Always On-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
  SECONDARY_ROLE **(** ... **)**  
  Gibt rollenspezifische Einstellungen an, die wirksam werden, wenn dieses Verfügbarkeitsreplikat die sekundäre Rolle (d. h. wenn es gerade ein sekundäres Replikat ist) gerade besitzt. Geben Sie innerhalb der Klammern eine oder beide sekundäre Rollenoptionen an. Wenn Sie beide angeben, verwenden Sie eine durch Trennzeichen getrennte Liste.  
@@ -345,7 +354,7 @@ ALTER AVAILABILITY GROUP group_name
  ALLOW_CONNECTIONS **=** { NO | READ_ONLY | ALL }  
  Gibt an, ob die Datenbanken eines bestimmten Verfügbarkeitsreplikats, das die sekundäre Rolle einnimmt (das heißt, als sekundäres Replikat dient), Verbindungen von Clients akzeptieren können, z. B.:  
   
- NO  
+ Nein  
  Es werden keine Verbindungen mit sekundären Datenbanken dieses Replikats zugelassen. Sie sind für den Lesezugriff nicht verfügbar. Dies ist das Standardverhalten.  
   
  READ_ONLY  
@@ -354,7 +363,7 @@ ALTER AVAILABILITY GROUP group_name
  ALL  
  Für alle Verbindungen mit den Datenbanken im sekundären Replikat ist der schreibgeschützte Zugriff zugelassen.  
   
- Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Lesbare sekundäre Replikate &#40;Always On-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)wichtig sind.  
+ Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Lesbare sekundäre Replikate &#40;Always On-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  READ_ONLY_ROUTING_URL **='** TCP **://**_system-address_**:**_port_**'**  
  Gibt die URL an, die zum Weiterleiten von Verbindungsanforderungen für beabsichtigte Lesevorgänge zu diesem Verfügbarkeitsreplikat verwendet werden soll. Dies ist die URL, die die SQL Server-Datenbank-Engine überwacht. In der Regel überwacht die Standardinstanz der SQL Server-Datenbank-Engine auf TCP-Port 1433.  
@@ -453,11 +462,11 @@ Initiiert ein manuelles Failover der Verfügbarkeitsgruppe ohne Datenverlust an 
  ADD LISTENER **'**_dns\_name_**'(** \<add_listener_option> **)**  
  Definiert einen neuen Verfügbarkeitsgruppenlistener für diese Verfügbarkeitsgruppe. Wird nur für das primäre Replikat unterstützt.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Vor dem Erstellen Ihres ersten Listeners wird dringend empfohlen, den Artikel [Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md) zu lesen.  
->   
+> 
 >  Nachdem Sie einen Listener für eine Verfügbarkeitsgruppe erstellt haben, empfehlen wir dringend, folgende Schritte auszuführen:  
->   
+> 
 >  -   Bitten Sie den Netzwerkadministrator, die IP-Adresse des Listeners zur exklusiven Verwendung zu reservieren.  
 > -   Geben Sie den DNS-Hostnamen des Listeners an Anwendungsentwickler weiter, damit diese den Namen in Verbindungszeichenfolgen zum Anfordern von Clientverbindungen mit dieser Verfügbarkeitsgruppe verwenden.  
   
@@ -620,7 +629,7 @@ ALTER AVAILABILITY GROUP AccountsAG FORCE_FAILOVER_ALLOW_DATA_LOSS;
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)   
  [DROP AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-availability-group-transact-sql.md)   

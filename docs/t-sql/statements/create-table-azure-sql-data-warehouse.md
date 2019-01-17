@@ -13,12 +13,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d647102d72b9ec3dc03e0887dbc1b9abe60a3308
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7dae0b33b2b3a9100aada7505e61f3e75f8bf66c
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703818"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980480"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ Informationen zu Tabellen und deren Verwendung finden Sie unter [Einführung in 
 
 HINWEIS: Sofern nicht anders angegeben, beziehen sich die Beschreibungen von SQL Data Warehouse in diesem Artikel sowohl auf SQL Data Warehouse als auch auf Parallel Data Warehouse. 
  
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 <a name="Syntax"></a>   
 ## <a name="syntax"></a>Syntax  
@@ -324,7 +324,7 @@ Weitere Informationen dazu finden Sie in diesen Artikeln:
   
  Lokale temporäre Tabellen weisen die folgenden Einschränkungen auf:  
   
--   Sie sind nur für die aktuelle Sitzung sichtbar. Am Ende der Sitzung werden sie von [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] automatisch gelöscht. Verwenden Sie zum Löschen von lokalen temporären Tabellen die DROP TABLE-Anweisung.   
+-   Sie sind nur für die aktuelle Sitzung sichtbar. Am Ende der Sitzung werden sie von [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] automatisch gelöscht. Verwenden Sie zum Löschen die DROP TABLE-Anweisung.   
 -   Sie können nicht umbenannt werden. 
 -   Sie dürfen keine Partitionen oder Sichten enthalten.  
 -   Deren Berechtigungen können nicht geändert werden. Im Zusammenhang mit lokalen temporären Tabellen können die Anweisungen `GRANT`, `DENY` und `REVOKE` nicht verwendet werden.   

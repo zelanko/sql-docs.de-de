@@ -25,12 +25,12 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c541081382065d327e4d056a860aad47462be5a1
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 939ba409a75d332d0aba97aa972db2ba9eecaf7a
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970521"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980016"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ FROM tbl_B
 WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);  
 ```  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -251,7 +251,7 @@ SET
  Gibt den Namen oder die ID eines oder mehrerer Indizes in der Zieltabelle zum Ausführen eines impliziten Joins mit der Quelltabelle an. Weitere Informationen finden Sie unter [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  \<OUTPUT_Clause>  
- Gibt ohne bestimmte Reihenfolge eine Zeile für jede Zeile in *target_table* zurück, die aktualisiert, eingefügt oder gelöscht wird. **$action** kann in der OUTPUT-Klausel angegeben werden. **$action** ist eine Spalte vom Typ **nvarchar(10)**, die einen der drei folgenden Werte für jede Zeile zurückgibt: INSERT, UPDATE oder DELETE. Der zurückgegebene Wert hängt von der für diese Zeile ausgeführten Aktion ab. Weitere Informationen zu den Argumenten dieser Klausel finden Sie unter [OUTPUT-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
+ Gibt ohne bestimmte Reihenfolge eine Zeile für jede Zeile in *target_table* zurück, die aktualisiert, eingefügt oder gelöscht wird. **$action** kann in der OUTPUT-Klausel angegeben werden. **$action** ist eine Spalte vom Typ **nvarchar(10)**, die für jede Zeile einen von drei Werten zurückgibt: 'INSERT', 'UPDATE' oder 'DELETE', je nach der für diese Zeile ausgeführten Aktion. Weitere Informationen zu den Argumenten dieser Klausel finden Sie unter [OUTPUT-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
  OPTION ( \<query_hint> [ ,...n ] )  
  Gibt an, dass zum Anpassen der Art und Weise, wie die Anweisung durch die Datenbank-Engine verarbeitet wird, Hinweise des Abfrageoptimierers verwendet werden. Weitere Informationen finden Sie unter [Abfragehinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
@@ -317,7 +317,7 @@ SET
 ### <a name="a-using-merge-to-perform-insert-and-update-operations-on-a-table-in-a-single-statement"></a>A. Verwenden von MERGE zum Ausführen von INSERT- und UPDATE-Vorgängen für eine Tabelle in einer einzelnen Anweisung  
  Ein verbreitetes Szenario ist das Aktualisieren mindestens einer Spalte in einer Tabelle, wenn eine übereinstimmende Zeile vorhanden ist, oder das Einfügen der Daten als neue Zeile, wenn keine übereinstimmende Zeile vorhanden ist. Dazu werden normalerweise Parameter an eine gespeicherte Prozedur übergeben, die die entsprechende UPDATE-Anweisung und INSERT-Anweisung enthält. Mit der MERGE-Anweisung können Sie beide Tasks in einer einzelnen Anweisung ausführen. Im folgenden Beispiel wird eine gespeicherte Prozedur in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank dargestellt, die sowohl eine INSERT-Anweisung als auch eine UPDATE-Anweisung enthält. Anschließend wird die Prozedur so geändert, dass sie die entsprechenden Vorgänge mit einer einzelnen MERGE-Anweisung ausführt.  
   
-```  
+```sql  
 CREATE PROCEDURE dbo.InsertUnitMeasure  
     @UnitMeasureCode nchar(3),  
     @Name nvarchar(25)  
@@ -389,7 +389,7 @@ GO
 ### <a name="b-using-merge-to-perform-update-and-delete-operations-on-a-table-in-a-single-statement"></a>B. Verwenden von MERGE zum Ausführen von UPDATE- und DELETE-Operationen für eine Tabelle in einer einzelnen Anweisung  
  Im folgenden Beispiel wird die `ProductInventory`-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Beispieldatenbank täglich mit MERGE aktualisiert. Dies erfolgt auf der Grundlage der in der `SalesOrderDetail`-Tabelle verarbeiteten Bestellungen. Die `Quantity`-Spalte der `ProductInventory`-Tabelle wird aktualisiert, indem die Anzahl der täglich aufgegebenen Bestellungen für die einzelnen Produkte in der `SalesOrderDetail`-Tabelle subtrahiert wird. Wenn die Anzahl der Bestellungen für ein Produkt dazu führt, dass der Produktbestand auf oder unter 0 (null) fällt, wird die Zeile für dieses Produkt aus der `ProductInventory`-Tabelle gelöscht.  
   
-```  
+```sql  
 CREATE PROCEDURE Production.usp_UpdateInventory  
     @OrderDate datetime  
 AS  
@@ -416,7 +416,7 @@ EXECUTE Production.usp_UpdateInventory '20030501'
 ### <a name="c-using-merge-to-perform-update-and-insert-operations-on-a-target-table-by-using-a-derived-source-table"></a>C. Verwenden von MERGE zum Ausführen von UPDATE- und INSERT-Vorgängen für eine Zieltabelle unter Verwendung einer abgeleiteten Quelltabelle  
  Im folgenden Beispiel wird die `SalesReason`-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank durch das Aktualisieren oder Einfügen von Zeilen mithilfe von MERGE geändert. Wenn der Wert von `NewName` in der Quelltabelle einem Wert in der `Name`-Spalte der Zieltabelle entspricht (`SalesReason`), wird die `ReasonType`-Spalte in der Zieltabelle aktualisiert. Wenn der Wert von `NewName` jedoch nicht übereinstimmt, wird die Quellzeile in die Zieltabelle eingefügt. Die Quelltabelle ist eine abgeleitete Tabelle, die mithilfe des [!INCLUDE[tsql](../../includes/tsql-md.md)]-Tabellenwertkonstruktors mehrere Zeilen für die Quelltabelle angibt. Weitere Informationen zum Verwenden des Tabellenwertkonstruktors in einer abgeleiteten Tabelle finden Sie unter [Table Value Constructor &#40;Transact-SQL&#41; (Tabellenwertkonstruktor &#40;Transact-SQL&#41;)](../../t-sql/queries/table-value-constructor-transact-sql.md). Im Beispiel wird auch gezeigt, wie die Ergebnisse der OUTPUT-Klausel in einer Tabellenvariablen gespeichert werden. Es wird erläutert, wie die Ergebnisse der MERGE-Anweisung zusammengefasst werden, indem ein einfacher SELECT-Vorgang ausgeführt wird, der die Anzahl an eingefügten und aktualisierten Zeilen zurückgibt.  
   
-```  
+```sql  
 -- Create a temporary table variable to hold the output actions.  
 DECLARE @SummaryOfChanges TABLE(Change VARCHAR(20));  
   
@@ -440,7 +440,7 @@ GROUP BY Change;
 ### <a name="d-inserting-the-results-of-the-merge-statement-into-another-table"></a>D. Einfügen der Ergebnisse der MERGE-Anweisung in eine andere Tabelle  
  Im folgenden Beispiel werden aus der OUTPUT-Klausel einer MERGE-Anweisung zurückgegebene Daten erfasst und in eine andere Tabelle eingefügt. Die MERGE-Anweisung aktualisiert die `Quantity`-Spalte der `ProductInventory`-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank täglich auf der Grundlage der Bestellungen, die in der `SalesOrderDetail`-Tabelle verarbeitet werden. In diesem Beispiel werden die aktualisierten Zeilen erfasst und in eine andere Tabelle eingefügt, in der Bestandsänderungen nachverfolgt werden.  
   
-```  
+```sql  
 CREATE TABLE Production.UpdatedInventory  
     (ProductID INT NOT NULL, LocationID int, NewQty int, PreviousQty int,  
      CONSTRAINT PK_Inventory PRIMARY KEY CLUSTERED (ProductID, LocationID));  
@@ -543,7 +543,7 @@ WHERE MATCH(Person-(livesIn)->city)
 GO
 ```
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   

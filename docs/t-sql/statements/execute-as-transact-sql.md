@@ -23,12 +23,12 @@ ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4db2249838a1032ce44e13870463fac43012dfa9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2183c64e1d525e0d0add54317e2af10d0ada311b
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512620"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979706"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "52512620"
   
 
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -128,7 +128,7 @@ Wenn der Benutzer verwaist ist (der zugeordnete Anmeldename ist nicht mehr vorha
 ## <a name="using-with-no-revert"></a>Verwenden von WITH NO REVERT  
  Wenn die EXECUTE AS-Anweisung die optionale WITH NO REVERT-Klausel enthält, kann der Ausführungskontext einer Sitzung nicht mithilfe von REVERT oder durch Ausführen einer anderen EXECUTE AS-Anweisung zurückgesetzt werden. Der von der Anweisung festgelegte Kontext bleibt aktiv, bis die Sitzung gelöscht wird.  
   
- Wenn die WITH NO REVERT COOKIE = @*varbinary_variable*-Klausel angegeben wird, übergibt [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] den Cookiewert an @*varbinary_variable*. Der von dieser Anweisung festgelegte Ausführungskontext kann nur auf einen vorherigen Kontext zurückgesetzt werden, wenn die aufrufende REVERT WITH COOKIE = @*varbinary_variable*-Anweisung den gleichen *@varbinary_variable*-Wert enthält.  
+ Wenn die WITH NO REVERT COOKIE = @*varbinary_variable*-Klausel angegeben wurde, übergibt [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] den Cookiewert an @*varbinary_variable*. Der von dieser Anweisung festgelegte Ausführungskontext kann nur auf einen vorherigen Kontext zurückgesetzt werden, wenn die aufrufende REVERT WITH COOKIE = @*varbinary_variable*-Anweisung den gleichen *@varbinary_variable*-Wert enthält.  
   
  Diese Option ist in einer Umgebung nützlich, in der Verbindungspools verwendet werden. Mithilfe von Verbindungspools wird eine Gruppe von Datenbankverbindungen verwaltet, die von Anwendungen auf einem Anwendungsserver wiederverwendet werden können. Da nur der Aufrufer der EXECUTE AS-Anweisung den an *@varbinary_variable* übergebenen Wert kennt, kann der Aufrufer sicherstellen, dass der eingerichtete Ausführungskontext von keinem anderen Benutzer geändert werden kann.  
   
@@ -206,7 +206,7 @@ SELECT SUSER_NAME(), USER_NAME();
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)   
  [EXECUTE AS-Klausel &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)  
   

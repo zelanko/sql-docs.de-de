@@ -23,19 +23,19 @@ ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 92876c7411082757cdd3ac3d06885b9a88520c89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03b1a748eaece8345a9d1c496633dd318a948692
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796248"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980406"
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Wechselt den Ausführungskontext zurück zum Aufrufer der letzten EXECUTE AS-Anweisung.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -78,7 +78,7 @@ EXECUTE dbo.usp_myproc;
  Als eigenständige Anweisung wird REVERT auf EXECUTE AS-Anweisungen angewendet, die in einem Batch oder einer Sitzung definiert sind. REVERT hat keinerlei Auswirkungen, wenn die entsprechende EXECUTE AS-Anweisung die WITH NO REVERT-Klausel enthält. In diesem Fall bleibt der Ausführungskontext so lange wirksam, bis die Sitzung gelöscht wird.  
   
 ## <a name="using-revert-with-cookie"></a>Verwenden von REVERT WITH COOKIE  
- Die zum Festlegen des Ausführungskontexts einer Sitzung verwendete EXECUTE AS-Anweisung kann die optionale Klausel WITH NO REVERT COOKIE = @*varbinary_variable* einschließen. Wird diese Anweisung ausgeführt, übergibt das [!INCLUDE[ssDE](../../includes/ssde-md.md)] das Cookie an @*varbinary_variable*. Der von dieser Anweisung festgelegte Ausführungskontext kann nur auf einen vorherigen Kontext zurückgesetzt werden, wenn die aufrufende REVERT WITH COOKIE = @*varbinary_variable*-Anweisung den gleichen *@varbinary_variable*-Wert enthält.  
+ Die zum Festlegen des Ausführungskontexts einer Sitzung verwendete EXECUTE AS-Anweisung kann die optionale Klausel WITH NO REVERT COOKIE = @*varbinary_variable* enthalten. Wird diese Anweisung ausgeführt, übergibt [!INCLUDE[ssDE](../../includes/ssde-md.md)] das Cookie an @*varbinary_variable*. Der von dieser Anweisung festgelegte Ausführungskontext kann nur auf einen vorherigen Kontext zurückgesetzt werden, wenn die aufrufende REVERT WITH COOKIE = @*varbinary_variable*-Anweisung den gleichen *@varbinary_variable*-Wert enthält.  
   
  Dieser Mechanismus eignet sich für eine Umgebung, in der Verbindungs-Pooling verwendet wird. Verbindungs-Pooling bezeichnet die Verwaltung einer Gruppe von Datenbankverbindungen für die Wiederverwendung durch Anwendungen durch mehrere Endbenutzer. Da der an *@varbinary_variable* übergebene Wert nur dem Aufrufer der EXECUTE AS-Anweisung (in diesem Fall die Anwendung) bekannt ist, kann der Aufrufer sicherstellen, dass der eingerichtete Ausführungskontext nicht von dem Endbenutzer geändert werden kann, der die Anwendung aufruft. Nach dem Wiederherstellen des Ausführungskontexts kann die Anwendung einen Kontextwechsel zu einem anderen Prinzipal durchführen.  
   
@@ -153,7 +153,7 @@ SELECT SUSER_NAME(), USER_NAME();
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
  [EXECUTE AS-Klausel &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   

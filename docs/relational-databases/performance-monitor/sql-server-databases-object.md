@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SQLServer:Databases
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 554e582d23afa6ef62b8bc1fd5ab7c8f0c704f4c
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: 668fe6a825be365aa605febaaea7aafdd71ddf7d
+ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158917"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53997572"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, Datenbanken-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52158917"
 |**Sicherungs-/Wiederherstellungsdurchsatz/Sekunde**|Durchsatz von Lese-/Schreiboperationen bei Sicherungs- und Wiederherstellungsvorgängen für eine Datenbank pro Sekunde. So können Sie beispielsweise messen, wie sich die Leistung des Datenbank-Sicherungsvorgangs ändert, wenn mehr Sicherungsmedien parallel verwendet werden oder wenn schnellere Medien verwendet werden. Der Durchsatz eines Datenbank-Sicherungs- oder -Wiederherstellungsvorgangs ermöglicht es Ihnen, den Fortschritt und die Leistung der gesamten Sicherungs- und Wiederherstellungsvorgänge zu ermitteln.|  
 |**Zeilen für Massenkopieren/Sekunde**|Anzahl von massenkopierten Zeilen pro Sekunde.|  
 |**Durchsatz bei Massenkopieren/Sekunde**|Umfang der pro Sekunde massenkopierten Daten (in KB).|  
-|**Commit-Tabelleneinträge**|Die Größe des speicherinternen Anteils der Commit-Tabelle für die Datenbanken. Weitere Informationen finden Sie unter [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md).|  
+|**Commit-Tabelleneinträge**|Die Größe (Anzahl der Zeilen) des speicherinternen Anteils der Committabelle für die Datenbanken. Weitere Informationen finden Sie unter [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md).|  
 |**Größe der Datendatei(en) (KB)**|Die kumulierte Größe (in KB) aller Datendateien in der Datenbank, wobei auch jegliche automatische Vergrößerung berücksichtigt ist. Die Überwachung dieses Leistungsindikators ist z. B: nützlich, wenn die richtige Größe von **tempdb**ermittelt werden soll.|  
 |**DBCC - Rate logischer Scans/Sekunde**|Anzahl an Bytes logischer Lesescans pro Sekunde für DBCC-Anweisungen (Database Console Commands, Datenbankkonsolenbefehle).|  
 |**Commitzeit der Gruppe/s**|Die Verzögerungszeit der Gruppe (Mikrosekunden) pro Sekunde.|
@@ -84,7 +84,7 @@ ms.locfileid: "52158917"
 |**Verarbeitete XTP-Controllerprotokolle/Sekunde**|Die Anzahl von Protokollbytes, die pro Sekunde vom XTP-Controllerthread verarbeitet werden.|
 |**Verwendeter XTP-Speicher (KB)**|Die von XTP in der Datenbank verwendete Speichermenge.| 
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, Datenbankreplikat](../../relational-databases/performance-monitor/sql-server-database-replica.md)  
   

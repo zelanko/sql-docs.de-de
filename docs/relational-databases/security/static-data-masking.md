@@ -8,15 +8,15 @@ ms.technology: security
 ms.topic: conceptual
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: egranet
-ms.author: esgranet
+ms.author: aliceku
 manager: ajayj
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18dd28aeb4c1678b4b6ae454c065d3d96770cb5a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cec6c79fadb5ef2a63145fff3efe0df3c8cd0f9d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539108"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980456"
 ---
 # <a name="static-data-masking"></a>Statische Datenmaskierung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ Hier finden Sie eine ausführliche Anleitung für die Ausführung der statischen
  
  ![Dropdownliste der Maskierungsfunktionen](../../relational-databases/security/media/sql-static-data-masking/masking_functions.PNG)
  
- Hinweis: Für die meisten dieser Maskierungsfunktionen gibt es zusätzliche Konfigurationsparameter. Für die Shufflemaskierung ist ein Standardparameter in der statischen Datenmaskierung verfügbar. Für die Funktionen „Group Shuffle“ (Gruppenshuffle), „Single value“ (Einzelwert) und „String Composite“ (Zusammengesetzte Zeichenfolge) muss der Benutzer Konfigurationsparameter angeben. Klicken Sie zum Ändern oder Bereitstellen von Konfigurationsparametern auf die Option **Konfigurieren...**, und geben Sie in dem Dialogfeld, das angezeigt wird, einen (alternativen) Wert für den Parameter an. Die Maskierungsfunktionen werden unter [Maskierungsfunktionen](#masking-functions) ausführlich beschrieben.
+ HINWEIS: Für die meisten dieser Maskierungsfunktionen gibt es zusätzliche Konfigurationsparameter. Für die Shufflemaskierung ist ein Standardparameter in der statischen Datenmaskierung verfügbar. Für die Funktionen „Group Shuffle“ (Gruppenshuffle), „Single value“ (Einzelwert) und „String Composite“ (Zusammengesetzte Zeichenfolge) muss der Benutzer Konfigurationsparameter angeben. Klicken Sie zum Ändern oder Bereitstellen von Konfigurationsparametern auf die Option **Konfigurieren...**, und geben Sie in dem Dialogfeld, das angezeigt wird, einen (alternativen) Wert für den Parameter an. Die Maskierungsfunktionen werden unter [Maskierungsfunktionen](#masking-functions) ausführlich beschrieben.
  
  ![Schaltfläche „Konfigurieren...“ für Maskierungsfunktionen](../../relational-databases/security/media/sql-static-data-masking/masking_functions_configure.png)
  
@@ -125,7 +125,7 @@ Hier finden Sie eine ausführliche Anleitung für die Ausführung der statischen
 6. Bei der statischen Datenmaskierung wird im Ordner **Dokumente** des Benutzers ein Ordner namens „Static Data Masking“ (Statische Datenmaskierung) erstellt, in dem Protokolldateien gespeichert werden. Die Protokolldateien können beim Debuggen nützlich sein. Der Name der Protokolldatei wird am unteren Rand des Konfigurationsfensters angezeigt. 
   
  
-7. Nur SQL Server: Wenn Sie die statische Datenmaskierung auf einer lokalen Datenbank ausführen, führt diese eine Sicherung und eine Wiederherstellung durch. Geben Sie unter **Step 2: Clone .BAK file Location** (Schritt 2: Speicherort der BAK-Datei klonen) den Speicherort auf dem Server an, an dem die Sicherungsdatei gespeichert wird. 
+7. Nur SQL Server: Wenn Sie die statische Datenmaskierung auf einer lokalen Datenbank ausführen, führt diese eine Sicherung und eine Wiederherstellung durch. Geben Sie in **Step 2: Clone .BAK file Location** (Schritt 2: Speicherort der BAK-Datei klonen) den Speicherort auf dem Server an, an dem die Sicherungsdatei gespeichert wird. 
 
 ## <a name="masking-functions"></a>Maskierungsfunktionen
 
@@ -206,6 +206,6 @@ Außerdem gibt es drei Beschränkungen bei der statischen Datenmaskierung:
 
 - Nur SQL Server: Die [Datendatei(en)](../../relational-databases/databases/database-files-and-filegroups.md) und die [Protokolldatei](../../relational-databases/logs/the-transaction-log-sql-server.md) können weiterhin Teile von vertraulichen Daten im nicht zugeordneten Arbeitsspeicher enthalten, nachdem die statische Datenmaskierung durchgeführt wurde. Diese vertraulichen Daten können mit einem Hexadezimal-Editor abgerufen werden, wenn Zugriff auf die Datendatei(en) und die Protokolldatei besteht.
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Dynamische Datenmaskierung](../../relational-databases/security/dynamic-data-masking.md)   
  [Erste Schritte mit der statischen Datenmaskierung in SQL-Datenbank](https://azure.microsoft.com/documentation/articles/sql-database-static-data-masking-get-started/)  

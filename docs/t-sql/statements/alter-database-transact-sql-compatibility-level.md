@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d923536f678884307be526ddebf0f825774c1093
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f01c19b7afd63402abc5729404d73e52429722be
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699668"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980076"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 > 
 > Wenn Sie den Datenbank-Kompatibilitätsgrad „140“ für Ihre gesamte Datenbank nutzen möchten, aber aus irgendeinem Grund das **Kardinalitätsschätzung**smodell von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bevorzugen, sodass eine Zuordnung zum Datenbank-Kompatibilitätsgrad „110“ erfolgt, sollten Sie die Dokumentation zur Anweisung [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) und insbesondere den Abschnitt zu deren Schlüsselwort `LEGACY_CARDINALITY_ESTIMATION = ON` lesen.
 >  
-> Weitere Einzelheiten zur Bewertung der Leistungsunterschiede bei Ihren wichtigsten Abfragen zwischen zwei Kompatibilitätsgraden in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] finden Sie unter [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/) (Verbesserte Abfrageleistung bei Kompatibilitätsgrad 130 in Azure SQL-Datenbank). Beachten Sie, dass dieser Artikel sich auf den Kompatibilitätsgrad „130“ und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bezieht. Es gelten jedoch die gleichen Vorgehensweisen für den Wechsel zu „140“ für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+> Weitere Einzelheiten zur Bewertung der Leistungsunterschiede bei Ihren wichtigsten Abfragen zwischen zwei Kompatibilitätsgraden in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] finden Sie unter [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/) (Verbesserte Abfrageleistung bei Kompatibilitätsgrad 130 in Azure SQL-Datenbank). Beachten Sie, dass dieser Artikel sich auf den Kompatibilitätsgrad „130“ und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bezieht. Es gelten jedoch die gleichen Vorgehensweisen für den Wechsel zu „140“ für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Führen Sie die folgende Abfrage aus, um die [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Version zu bestimmen, mit der Sie verbunden sind.  
   
@@ -255,7 +255,7 @@ Fixes unter dem Ablaufverfolgungsflag 4199 in früheren Versionen von [!INCLUDE[
 |Die für eine xQuery-Methode erforderlichen SET-Optionen werden nicht überprüft, wenn die Methode in einer Sicht oder Inline-Tabellenwertfunktion enthalten ist.|Die für eine xQuery-Methode erforderlichen SET-Optionen werden überprüft, wenn die Methode in einer Sicht oder Inline-Tabellenwertfunktion enthalten ist. Wenn die SET-Optionen der Methode nicht ordnungsgemäß festgelegt sind, wird ein Fehler ausgegeben.|Low|  
 |XML-Attributwerte, die Zeilenendezeichen enthalten (Wagenrücklauf und Zeilenvorschub) werden nicht gemäß dem XML-Standard normalisiert. Somit werden anstelle eines einzelnen Zeilenvorschubzeichens beide Zeichen zurückgegeben.|XML-Attributwerte, die Zeilenendezeichen enthalten (Wagenrücklauf und Zeilenvorschub) werden gemäß dem XML-Standard normalisiert. Somit werden alle Zeilenumbrüche in extern analysierten Entitäten (einschließlich der Dokumententität) bei Eingabe normalisiert, indem sowohl die aus zwei Zeichen bestehende Folge #xD #xA als auch alle Vorkommnisse von #xD, die nicht von #xA gefolgt werden, in das einzelne Zeichen #xA übersetzt werden.<br /><br /> Anwendungen, die mithilfe von Attributen Zeichenfolgenwerte transportieren, die Zeilenendezeichen enthalten, erhalten diese Zeichen nicht wie gesendet zurück. Um die Normalisierung zu verhindern, müssen für die Codierung aller Zeilenendezeichen numerische XML-Zeichenentitäten verwendet werden.|Low|  
 |Die Spalteneigenschaften `ROWGUIDCOL` und `IDENTITY` können als Einschränkung falsch benannt werden. Beispielsweise wird die Anweisung `CREATE TABLE T (C1 int CONSTRAINT MyConstraint IDENTITY)` ausgeführt, doch wird der Einschränkungsname nicht beibehalten und ist für den Benutzer nicht verfügbar.|Die Spalteneigenschaften `ROWGUIDCOL` und `IDENTITY` können nicht als Einschränkung benannt werden. Der Fehler 156 wird zurückgegeben.|Low|  
-|Die Aktualisierung von Spalten mithilfe einer zweiseitigen Zuweisung, wie z.B. `UPDATE T1 SET @v = column_name = <expression>`, kann zu unerwarteten Ergebnissen führen, weil während der Ausführung der Anweisung anstelle des Anfangswerts der aktuelle Wert der Variablen in anderen Klauseln verwendet werden kann, wie z.B. in der `WHER`- und `ON`-Klausel. Dies kann dazu führen, dass sich die Bedeutungen der Prädikate für jede Zeile einzeln unvorhersehbar ändern.<br /><br /> Dieses Verhalten gilt nur, wenn der Kompatibilitätsgrad auf 90 festgelegt ist.|Die Aktualisierung von Spalten mithilfe einer zweiseitigen Zuweisung liefert die erwarteten Ergebnisse, weil während der Ausführung der Anweisung nur auf den Anweisungsanfangswert der Spalte zugegriffen wird.|Low|  
+|Die Aktualisierung von Spalten mithilfe einer bidirektionalen Zuweisung, wie z.B. `UPDATE T1 SET @v = column_name = <expression>`, kann zu unerwarteten Ergebnissen führen, weil während der Ausführung der Anweisung anstelle des Anfangswerts der aktuelle Wert der Variablen in anderen Klauseln verwendet werden kann, wie z.B. in der `WHERE`- und `ON`-Klausel. Dies kann dazu führen, dass sich die Bedeutungen der Prädikate für jede Zeile einzeln unvorhersehbar ändern.<br /><br /> Dieses Verhalten gilt nur, wenn der Kompatibilitätsgrad auf 90 festgelegt ist.|Die Aktualisierung von Spalten mithilfe einer zweiseitigen Zuweisung liefert die erwarteten Ergebnisse, weil während der Ausführung der Anweisung nur auf den Anweisungsanfangswert der Spalte zugegriffen wird.|Low|  
 |Weitere Informationen finden Sie im Beispiel E weiter unten im Abschnitt „Beispiele“.|Siehe Beispiel F im nachfolgenden Abschnitt „Beispiele“.|Low|  
 |Die ODBC-Funktion {fn CONVERT ()} verwendet das Standarddatumsformat der Sprache. Bei einigen Sprachen lautet das Standardformat YDM. Dies kann zu Konvertierungsfehlern führen, wenn CONVERT() mit anderen Funktionen kombiniert wird, die ein YMD-Format erwarten, wie z.B. `{fn CURDATE()}`.|Die ODBC-Funktion `{fn CONVERT()}` verwendet für die Konvertierung in die ODBC-Datentypen SQL_TIMESTAMP, SQL_DATE, SQL_TIME, SQLDATE, SQL_TYPE_TIME und SQL_TYPE_TIMESTAMP das sprachenunabhängige XMD-Format im Format 121.|Low|  
 |Für systeminterne datetime-Funktionen, wie z.&#160;B. DATEPART, ist es nicht erforderlich, dass Zeichenfolgeneingabewerte gültige datetime-Literale sind. `SELECT DATEPART (year, '2007/05-30')` wird beispielsweise erfolgreich kompiliert.|Für systeminterne datetime-Funktionen wie z.B. `DATEPART` ist es erforderlich, dass Zeichenfolgeneingabewerte gültige datetime-Literale sind. Fehler 241 wird zurückgegeben, wenn ein ungültiges datetime-Literal verwendet wird.|Low|  
@@ -383,7 +383,7 @@ SELECT @v = BusinessEntityID FROM
 SELECT @v;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Reserved Keywords &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)   

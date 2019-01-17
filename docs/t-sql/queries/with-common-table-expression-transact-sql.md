@@ -28,12 +28,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c7768b97ba5fc337ab06b42e61fb1e80330bc76
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 066b202a91f646dadd4a72182193e9fb0fcee6f1
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970972"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979996"
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "50970972"
 
 Gibt ein temporäres benanntes Resultset an, das als allgemeiner Tabellenausdruck (CTE, Common Table Expression) bezeichnet wird. Dieser wird von einer einfachen Abfrage abgeleitet und innerhalb des Ausführungsbereichs einer einzelnen SELECT-, INSERT-, UPDATE- oder DELETE-Anweisung definiert. Diese Klausel kann auch in einer CREATE VIEW-Anweisung als Teil der definierenden SELECT-Anweisung verwendet werden. Ein allgemeiner Tabellenausdruck kann auch Verweise auf sich selbst enthalten. In diesem Fall handelt es sich um einen rekursiven allgemeinen Tabellenausdruck.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -66,7 +66,7 @@ Ein gültiger Bezeichner für den allgemeinen Tabellenausdruck. *expression_name
  *CTE_query_definition*  
  Gibt eine SELECT-Anweisung an, mit deren Resultset der allgemeine Tabellenausdruck aufgefüllt wird. Die SELECT-Anweisung für *CTE_query_definition* muss die gleichen Anforderungen erfüllen wie für das Erstellen einer Ansicht. Als Ausnahme gilt, dass mit einem allgemeinen Tabellenausdruck kein anderer allgemeiner Tabellenausdruck definiert werden kann. Weitere Informationen finden Sie im Abschnitt „Hinweise“ und unter [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
- Wenn *CTE_query_definition* mehrfach definiert ist, müssen die Abfragedefinitionen durch einen der folgenden Mengenoperator verbunden werden: UNION ALL, UNION, EXCEPT oder INTERSECT.  
+ Wenn *CTE_query_definition* mehrfach definiert wurde, müssen die Abfragedefinitionen durch einen der folgenden Mengenoperatoren verbunden werden: UNION ALL, UNION, EXCEPT oder INTERSECT.  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -678,7 +678,7 @@ UNION ALL
 SELECT TableName, TotalAvg FROM CountCustomer;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [EXCEPT und INTERSECT &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   

@@ -1,7 +1,7 @@
 ---
 title: ORDER BY-Klausel (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 12/13/2017
+ms.date: 12/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -40,12 +40,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f7279def5a168f46a86db05be1c41b28bbfa9db
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8babb966273c05524a373a14c6a084e5c74cfc7b
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530232"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980276"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY-Klausel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "52530232"
   
 -   Bestimmen Sie die Reihenfolge, in der Werte der [Rangfolgenfunktion](../../t-sql/functions/ranking-functions-transact-sql.md) auf das Resultset angewendet werden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 > [!NOTE]  
 >  ORDER BY wird in SELECT/INTO- oder CREATE TABLE AS SELECT (CTAS)-Anweisungen in [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] nicht unterstützt.
@@ -98,7 +98,14 @@ ORDER BY order_by_expression
   
  Es können mehrere Sortierspalten angegeben werden. Spaltennamen müssen eindeutig sein. Die Reihenfolge der Sortierspalten in der ORDER BY-Klausel definiert die Anordnung des sortierten Resultsets. Dies bedeutet, dass das Resultset anhand der ersten Spalte sortiert wird, und diese sortierte Liste wird anhand der zweiten Spalte sortiert usw.  
   
- Die Spaltennamen, auf die in der ORDER BY-Klausel verwiesen wird, müssen entweder einer Spalte in der Auswahlliste oder einer Spalte aus einer Tabelle in der FROM-Klausel entsprechen, ohne dass dabei Zweideutigkeiten zulässig sind.  
+ Die Spaltennamen, auf die in der ORDER BY-Klausel verwiesen wird, müssen entweder einer Spalte oder einem Spaltenalias in der Auswahlliste oder einer Spalte aus einer Tabelle in der FROM-Klausel entsprechen, ohne dass dabei Zweideutigkeiten zulässig sind. Wenn die ORDER BY-Klausel auf einen Spaltenalias aus der Auswahlliste verweist, muss der Spaltenalias eigenständig und nicht als Teil eines Ausdrucks in der ORDER BY-Klausel verwendet werden, zum Beispiel folgendermaßen:
+ 
+```sql
+SELECT SCHEMA_NAME(schema_id) AS SchemaName FROM sys.objects 
+ORDER BY SchemaName; -- correct 
+SELECT SCHEMA_NAME(schema_id) AS SchemaName FROM sys.objects 
+ORDER BY SchemaName + ''; -- wrong
+```
   
  COLLATE *collation_name*  
  Gibt an, dass der ORDER BY-Vorgang gemäß der in *collation_name* angegebenen Sortierung und nicht gemäß der in der Tabelle oder Sicht definierten Sortierung der Spalte ausgeführt werden soll. *collation_name* kann entweder der Name einer Windows-Sortierreihenfolge oder ein SQL-Sortierungsname sein. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). COLLATE ist nur für Spalten vom Typ **char**, **varchar**, **nchar** und **nvarchar** anwendbar.  
@@ -188,7 +195,7 @@ ORDER BY order_by_expression
   
  Weitere Informationen finden Sie im Beispiel "Ausführen von mehreren Abfragen in einer einzelnen Transaktion" im Abschnitt "Beispiele" weiter unten in diesem Thema.  
   
- Wenn konsistente Ausführungspläne in der Auslagerungslösung wichtig sind, können Sie den OPTIMIZE FOR-Abfragehinweis für den OFFSET-Parameter und den FETCH-Parameter verwenden. Weitere Informationen finden Sie unter "Angeben von Ausdrücken für OFFSET- und FETCH-Werten" im Abschnitt "Beispiele" weiter unten in diesem Thema. Weitere Informationen zu OPTIMZE FOR finden Sie unter [Abfragehinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
+ Wenn konsistente Ausführungspläne in der Auslagerungslösung wichtig sind, können Sie den OPTIMIZE FOR-Abfragehinweis für den OFFSET-Parameter und den FETCH-Parameter verwenden. Weitere Informationen finden Sie unter "Angeben von Ausdrücken für OFFSET- und FETCH-Werten" im Abschnitt "Beispiele" weiter unten in diesem Thema. Weitere Informationen zu OPTIMIZE FOR finden Sie unter [Hinweise &#40;Transact-SQL&#41; – Abfrage](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -543,7 +550,7 @@ WHERE LastName LIKE 'A%'
 ORDER BY LastName, FirstName;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   

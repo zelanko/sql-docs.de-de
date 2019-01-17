@@ -25,12 +25,12 @@ helpviewer_keywords:
 - information types
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 075615be9adac78aa59e6dfad1934fc4d7993bf3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 82bd6847bd50d8ba43795f56deab4a6f08cc29cc
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392985"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980106"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ Der Name der Datenbankspalte, aus der die Klassifizierung entfernt werden soll. 
 
 ## <a name="permissions"></a>Berechtigungen  
 
-Erfordert die Berechtigung ALTER ANY SENSITIVITY CLASSIFICATION. Die Berechtigung ALTER ANY SENSITIVITY CLASSIFACTION wird von der Datenbankberechtigung ALTER oder der Serverberechtigung CONTROL SERVER impliziert.
+Erfordert die Berechtigung ALTER ANY SENSITIVITY CLASSIFICATION. Die Berechtigung ALTER ANY SENSITIVITY CLASSIFICATION wird von der Datenbankberechtigung ALTER oder der Serverberechtigung CONTROL SERVER impliziert.
 
 
 ## <a name="examples"></a>Beispiele  
@@ -88,7 +88,7 @@ DROP SENSITIVITY CLASSIFICATION FROM
     dbo.sales.price, dbo.sales.discount, SalesLT.Customer.Phone  
 ```
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 
 [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
 

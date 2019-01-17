@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 47d911c6a05af96d042211f98b5365230dd57084
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d89d70b7aae73acd965f053a993432c62878351f
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525204"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979646"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>Konfigurieren von SQL Server zum Senden von Feedback an Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ Enterprise-Kunden können die Einstellungen für Gruppenrichtlinien konfiguriere
     
     Name des Registrierungseintrags = CustomerFeedback
     
-    Eingabetyp DWORD: 0 bedeutet deaktivieren; 1 bedeutet aktivieren
+    DWORD-Eintrag: 0 bedeutet „deaktiviert“, 1 bedeutet „aktiviert“
     
     {InstanzID} ist der Instanztyp und die Instanz, wie in folgendem Beispiel:
 
@@ -91,18 +91,18 @@ Enterprise-Kunden können die Einstellungen für Gruppenrichtlinien konfiguriere
     
     Name des Registrierungseintrags = CustomerFeedback
     
-    Eingabetyp DWORD: 0 bedeutet deaktivieren; 1 bedeutet aktivieren
+    DWORD-Eintrag: 0 bedeutet „deaktiviert“, 1 bedeutet „aktiviert“
 
 > [!NOTE]
 > {Hauptversion} ist die Version von SQL Server, z. B. 140 für SQL Server 2017
 
-- Für SQL Server Management Studio:
+- Für SQL Server Management Studio 17:
   
-    Unterschlüssel = HKEY_CURRENT_USER\Software\Microsoft\Microsoft SQL Server\140
+    Subkey = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\14.0
 
-    Name des Registrierungseintrags = CustomerFeedback
+    RegEntry name = UserFeedbackOptIn
 
-    Eingabetyp DWORD: 0 bedeutet deaktivieren; 1 bedeutet aktivieren
+    DWORD-Eintrag: 0 bedeutet „deaktiviert“, 1 bedeutet „aktiviert“
 
     Außerdem basiert SSMS 17.x auf der Visual Studio 2015-Shell, und die Visual Studio-Installation ermöglicht standardmäßig Kundenfeedback.  
 
@@ -114,6 +114,13 @@ Enterprise-Kunden können die Einstellungen für Gruppenrichtlinien konfiguriere
 
     Die registrierungsbasierte Gruppenrichtlinie dieses Registrierungsschlüssels wird von der Nutzungsdatenerfassung von SQL Server 2017 berücksichtigt.
 
+- Für SQL Server Management Studio 18:
+    
+    Subkey = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\18.0_IsoShell
+
+    RegEntry name = UserFeedbackOptIn
+
+    DWORD-Eintrag: 0 bedeutet „deaktiviert“, 1 bedeutet „aktiviert“
 ## <a name="set-registry-subkeys-for-crash-dump-collection"></a>Festlegen des Registrierungsunterschlüssels für die Absturzabbilderfassung
 
 Kunden von SQL Server 2017 Enterprise können, ähnlich zum Verhalten früherer Versionen von SQL Server, Einstellungen für Gruppenrichtlinien auf dem Server konfigurieren, um die Absturzabbilderfassung zu aktivieren oder zu deaktivieren. Dies erfolgt mit dem Konfigurieren einer registrierungsbasierten Richtlinie. Die entsprechenden Registrierungsschlüssel und Einstellungen lauten wie folgt: 
@@ -124,7 +131,7 @@ Kunden von SQL Server 2017 Enterprise können, ähnlich zum Verhalten früherer 
 
     Name des Registrierungseintrags = EnableErrorReporting
 
-    Eingabetyp DWORD: 0 bedeutet deaktivieren; 1 bedeutet aktivieren
+    DWORD-Eintrag: 0 bedeutet „deaktiviert“, 1 bedeutet „aktiviert“
  
     {InstanzID} ist der Instanztyp und die Instanz, wie in folgendem Beispiel: 
 
@@ -139,7 +146,7 @@ Kunden von SQL Server 2017 Enterprise können, ähnlich zum Verhalten früherer 
 
     Name des Registrierungseintrags = EnableErrorReporting
 
-    Eingabetyp DWORD: 0 bedeutet deaktivieren; 1 bedeutet aktivieren
+    DWORD-Eintrag: 0 bedeutet „deaktiviert“, 1 bedeutet „aktiviert“
 
 > [!NOTE]
 > {Hauptversion} ist die Version von SQL Server. „140“ ist z.B. SQL Server 2017.

@@ -26,19 +26,19 @@ ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d971857a0d46ff2ed0bd54588558ac74ab5eb549
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 9677ef3717fb83bdaf6ea108279b98a6598adced
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119628"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980346"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE: Triggerfunktionen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt einen booleschen Wert zurück, der zeigt, ob der Versuch einer INSERT- oder UPDATE-Aktion an einer angegebenen Tabellenspalte oder Sicht unternommen wurde. UPDATE() wird im Text eines [!INCLUDE[tsql](../../includes/tsql-md.md)]-INSERT- oder UPDATE-Triggers verwendet, um zu testen, ob der Trigger bestimmte Aktionen ausführen sollte.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,7 +62,7 @@ UPDATE ( column )
  IF UPDATE gibt den TRUE-Wert in INSERT-Aktionen zurück, da in die Spalten entweder explizite Werte oder implizite Werte (NULL) eingefügt werden.  
   
 > [!NOTE]  
->  Die IF UPDATE(*column*)-Klausel funktioniert genauso wie eine IF-, IF…ELSE- oder WHILE-Klausel und kann den BEGIN…END-Block verwenden. Weitere Informationen finden Sie unter [Control-of-Flow Language &#40;Transact-SQL&#41; (Sprachkonstrukte zur Ablaufsteuerung &#40;Transact-SQL&#41;)](~/t-sql/language-elements/control-of-flow.md).  
+>  Die IF UPDATE(*spalte*)-Klausel funktioniert genauso wie eine IF-, IF…ELSE- oder WHILE-Klausel und kann den BEGIN…END-Block verwenden. Weitere Informationen finden Sie unter [Control-of-Flow Language &#40;Transact-SQL&#41; (Sprachkonstrukte zur Ablaufsteuerung &#40;Transact-SQL&#41;)](~/t-sql/language-elements/control-of-flow.md).  
   
  UPDATE(*column*) kann überall innerhalb des Texts eines [!INCLUDE[tsql](../../includes/tsql-md.md)]-Triggers verwendet werden.  
   
@@ -92,7 +92,7 @@ WHERE PostalCode = '12345';
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [COLUMNS_UPDATED &#40;Transact-SQL&#41;](../../t-sql/functions/columns-updated-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
   
