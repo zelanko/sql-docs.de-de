@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 10/02/2018
+ms.date: 12/03/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d15863bfeb814d88d3971b0cb3a957abee947c47
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 75c1bb4f7c236f45b94e534ceec2655fc24808df
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516093"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980436"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -86,13 +86,13 @@ CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }
   
 ## <a name="arguments"></a>Argumente  
 *login_name*  
-Gibt den Anmeldenamen an, der erstellt wird. Es gibt vier Arten von Anmeldenamen: SQL Server-Anmeldenamen, Windows-Anmeldenamen, Anmeldenamen mit zugeordneten Zertifikaten sowie Anmeldenamen mit zugeordneten asymmetrischen Schlüsseln. Wenn Sie Anmeldenamen erstellen, die von einem Windows-Domänenkonto zugeordnet werden, müssen Sie den Benutzeranmeldenamen einer Version vor Windows 2000 im Format [\<domainName>\\<login_name>] verwenden. Sie können keine UPN im Format login_name@DomainName verwenden. Ein Beispiel hierzu finden Sie unter „Beispiel D“ weiter unten in diesem Artikel. Anmeldenamen für die Authentifizierung sind vom Typ **sysname**. Sie müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen und dürfen keinen „**\\**“ enthalten. Windows-Anmeldenamen können '**\\**'-Zeichen enthalten. Auf Active Directory-Benutzer basierende Anmeldenamen sind auf Namen mit weniger als 21 Zeichen beschränkt. 
+Gibt den Anmeldenamen an, der erstellt wird. Es gibt vier Arten von Anmeldenamen: SQL Server-Anmeldungen, Windows-Anmeldenamen, Anmeldenamen mit zugeordneten Zertifikaten sowie Anmeldenamen mit zugeordneten asymmetrischen Schlüsseln. Wenn Sie Anmeldenamen erstellen, die von einem Windows-Domänenkonto zugeordnet werden, müssen Sie den Benutzeranmeldenamen einer Version vor Windows 2000 im Format [\<domainName>\\<login_name>] verwenden. Sie können keine UPN im Format login_name@DomainName verwenden. Ein Beispiel hierzu finden Sie unter „Beispiel D“ weiter unten in diesem Artikel. Anmeldenamen für die Authentifizierung sind vom Typ **sysname**. Sie müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen und dürfen keinen „**\\**“ enthalten. Windows-Anmeldenamen können '**\\**'-Zeichen enthalten. Anmeldenamen auf Grundlage von Active Directory-Benutzern sind auf Namen mit weniger als 21 Zeichen beschränkt. 
 
-PASSWORD **='**_Kennwort_**'* Gilt nur für SQL Server-Anmeldungen. Gibt das Kennwort für den Anmeldenamen an, der erstellt wird. Sie sollten ein sicheres Kennwort verwenden. Weitere Informationen finden Sie unter [Sichere Kennwörter](../../relational-databases/security/strong-passwords.md) und [Kennwortrichtlinie](../../relational-databases/security/password-policy.md). Ab SQL Server 2012 (11.x) werden gespeicherte Kennwortinformationen mithilfe der SHA-512-Komponente des mit Salt verschlüsselten Kennworts berechnet. 
+PASSWORD **=**'*Kennwort*' Gilt nur für SQL Server-Anmeldungen. Gibt das Kennwort für den Anmeldenamen an, der erstellt wird. Verwenden Sie ein sicheres Kennwort. Weitere Informationen finden Sie unter [Sichere Kennwörter](../../relational-databases/security/strong-passwords.md) und [Kennwortrichtlinie](../../relational-databases/security/password-policy.md). Ab SQL Server 2012 (11.x) werden gespeicherte Kennwortinformationen mithilfe der SHA-512-Komponente des mit Salt verschlüsselten Kennworts berechnet. 
   
-Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. Kennwörter sollten immer mindestens 8 Zeichen lang sein und dürfen 128 Zeichen nicht überschreiten. Kennwörter dürfen a-z, A-Z, 0-9 und die meisten nicht alphanumerischen Zeichen einschließen. Kennwörter dürfen keine einfachen Anführungszeichen oder *login_name* enthalten. 
+Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. Kennwörter sollten immer mindestens acht Zeichen lang sein und dürfen 128 Zeichen nicht überschreiten. Kennwörter dürfen a-z, A-Z, 0-9 und die meisten nicht alphanumerischen Zeichen einschließen. Kennwörter dürfen keine einfachen Anführungszeichen oder *login_name* enthalten. 
   
-PASSWORD **=**_gehashtes\_Kennwort_  
+PASSWORD **=** *gehashtes\_Kennwort*  
 Gilt nur für das HASHED-Schlüsselwort. Gibt den Hashwert des Kennworts für den Anmeldenamen an, der erstellt wird. 
   
 HASHED Gilt nur für SQL Server-Anmeldenamen. Gibt an, dass das nach dem PASSWORD-Argument eingegebene Kennwort bereits einen Hashwert darstellt. Wenn diese Option nicht ausgewählt wird, wird aus der als Kennwort eingegebenen Zeichenfolge vor dem Speichern in der Datenbank ein Hashwert erstellt. Diese Option sollte nur verwendet werden, um Datenbanken von einem Server auf einen anderen zu migrieren. Verwenden Sie die HASHED-Option nicht, um neue Anmeldenamen zu erstellen. Die HASHED-Option kann nicht mit Hashes verwendet werden, die in SQL 7 oder einer früheren Version erstellt wurden.
@@ -247,7 +247,7 @@ SELECT * FROM sys.sql_logins WHERE name = 'TestLogin';
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 - [Erste Schritte mit Berechtigungen für die Datenbank-Engine](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)   
 - [Prinzipale &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
 - [Kennwortrichtlinie](../../relational-databases/security/password-policy.md)   
@@ -285,9 +285,9 @@ CREATE LOGIN login_name
 Gibt den Anmeldenamen an, der erstellt wird. Azure SQL-Datenbank (logischer Server) unterstützt nur SQL-Anmeldenamen. 
 
 PASSWORD **='** Kennwort**'*  
-Gibt das Kennwort für den SQL-Anmeldenamen an, der erstellt wird. Sie sollten ein sicheres Kennwort verwenden. Weitere Informationen finden Sie unter [Sichere Kennwörter](../../relational-databases/security/strong-passwords.md) und [Kennwortrichtlinie](../../relational-databases/security/password-policy.md). Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] werden gespeicherte Kennwortinformationen mithilfe der SHA-512-Komponente des mit Salt verschlüsselten Kennworts berechnet. 
+Gibt das Kennwort für den SQL-Anmeldenamen an, der erstellt wird. Verwenden Sie ein sicheres Kennwort. Weitere Informationen finden Sie unter [Sichere Kennwörter](../../relational-databases/security/strong-passwords.md) und [Kennwortrichtlinie](../../relational-databases/security/password-policy.md). Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] werden gespeicherte Kennwortinformationen mithilfe der SHA-512-Komponente des mit Salt verschlüsselten Kennworts berechnet. 
   
-Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. Kennwörter sollten immer mindestens 8 Zeichen lang sein und dürfen 128 Zeichen nicht überschreiten. Kennwörter dürfen a-z, A-Z, 0-9 und die meisten nicht alphanumerischen Zeichen einschließen. Kennwörter dürfen keine einfachen Anführungszeichen oder *login_name* enthalten. 
+Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. Kennwörter sollten immer mindestens acht Zeichen lang sein und dürfen 128 Zeichen nicht überschreiten. Kennwörter dürfen a-z, A-Z, 0-9 und die meisten nicht alphanumerischen Zeichen einschließen. Kennwörter dürfen keine einfachen Anführungszeichen oder *login_name* enthalten. 
 
 SID = *sid*  
 Wird verwendet, um eine Anmeldung neu zu erstellen. Gilt nur für Anmeldenamen für die SQL Server-Authentifizierung, nicht für Anmeldenamen für die Windows-Authentifizierung. Gibt die SID des neuen Anmeldenamens für die SQL Server-Authentifizierung an. Wenn diese Option nicht verwendet wird, weist SQL Server automatisch eine SID zu. Die SID-Struktur hängt von der SQL Server-Version ab. Bei SQL-Datenbank ist dies normalerweise ein 32-Byte-Literalwert (**binary(32)**) bestehend aus `0x01060000000000640000000000000000` plus 16 Byte, die eine GUID darstellen. Beispiel: `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`. 
@@ -316,7 +316,7 @@ In SQL-Datenbank werden Anmeldedaten, die für die Authentifizierung einer Verbi
  
 ## <a name="permissions"></a>Berechtigungen
 
-Neue Anmeldenamen können nur mit den Anmeldenamen des Serverebenenprinzipals (im Bereitstellungsprozess erstellt) oder von Mitgliedern der `loginmanager`-Datenbankrolle in der Masterdatenbank erstellt werden. Weitere Informationen finden Sie unter [Rollen auf Serverebene](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) und unter [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles.
+Neue Anmeldenamen können nur mit den Anmeldenamen des Serverebenenprinzipals (im Bereitstellungsprozess erstellt) oder von Mitgliedern der `loginmanager`-Datenbankrolle in der Masterdatenbank erstellt werden. Weitere Informationen finden Sie unter [Rollen auf Serverebene](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) und unter [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).<https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles>.
 
 ## <a name="logins"></a>Anmeldungen
 - Erfordert eine **ALTER ANY LOGIN**-Berechtigung auf dem Server oder eine Mitgliedschaft bei der festen Serverrolle**securityadmin**. Dieser Befehl kann nur auf dem Azure AD-Konto (Azure Active Directory) mit der **ALTER ANY LOGIN**-Berechtigung auf dem Server oder mit einer Mitgliedschaft bei der Serverrolle „securityadmin“ ausgeführt werden
@@ -326,7 +326,7 @@ Neue Anmeldenamen können nur mit den Anmeldenamen des Serverebenenprinzipals (i
 Nach dem Erstellen eines Anmeldenamens kann mit diesem Namen eine Verbindung mit der SQL-Datenbank hergestellt werden. Er verfügt jedoch nur über die der Rolle **public** erteilten Berechtigungen. Ziehen Sie die Ausführung einiger der folgenden Aktivitäten in Betracht. 
   
 - Erstellen Sie zum Herstellen einer Verbindung mit einer Datenbank einen Datenbankbenutzer für den Anmeldenamen in dieser Datenbank. Weitere Informationen finden Sie unter [CREATE USER](../../t-sql/statements/create-user-transact-sql.md). 
-- Verwenden Sie für die Erteilung von Berechtigungen für einen Benutzer in einer Datenbank die Anweisung **ALTER SERVER ROLE** ... **ADD MEMBER**-Anweisung zum Hinzufügen des Benutzer zu einer der integrierten Datenbankrollen oder einer benutzerdefinierten Rolle oder zum Erteilen von Berechtigungen für den Benutzer über die direkte Verwendung der Anweisung [GRANT](../../t-sql/statements/grant-transact-sql.md). Weitere Informationen finden Sie unter [Nichtadministratorrollen](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users) und bei den Anweisungen [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles und [GRANT](grant-transact-sql.md).
+- Verwenden Sie für die Erteilung von Berechtigungen für einen Benutzer in einer Datenbank die Anweisung **ALTER SERVER ROLE** ... **ADD MEMBER**-Anweisung zum Hinzufügen des Benutzer zu einer der integrierten Datenbankrollen oder einer benutzerdefinierten Rolle oder zum Erteilen von Berechtigungen für den Benutzer über die direkte Verwendung der Anweisung [GRANT](../../t-sql/statements/grant-transact-sql.md). Weitere Informationen finden Sie unter [Benutzer ohne Administratorrechte](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users) und in den Artikeln zu den Anweisungen [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md), https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles und [GRANT](grant-transact-sql.md).
 - Wenn Sie serverweite Berechtigungen erteilen möchten, erstellen Sie in der Masterdatenbank einen Datenbankbenutzer, und verwenden Sie die Anweisung **ALTER SERVER ROLE** ... **ADD MEMBER**-Anweisung zum Hinzufügen des Benutzers zu einer der administrativen Serverrollen. Weitere Informationen finden Sie unter [Rollen auf Serverebene](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) und unter [Serverrollen](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
 - Gewähren Sie mit der **GRANT**-Anweisung Berechtigungen auf Serverebene für den neuen Anmeldenamen oder für eine Rolle, die den Anmeldenamen enthält. Weitere Informationen finden Sie unter [GRANT](../../t-sql/statements/grant-transact-sql.md).
   
@@ -363,7 +363,7 @@ SELECT * FROM sys.sql_logins WHERE name = 'TestLogin';
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erste Schritte mit Berechtigungen für die Datenbank-Engine](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)   
  [Prinzipale &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Kennwortrichtlinie](../../relational-databases/security/password-policy.md)   
@@ -384,104 +384,159 @@ GO
 
 ## <a name="azure-sql-database-managed-instance"></a>Verwaltete Azure SQL-Datenbank-Instanz.
 
-## <a name="overview"></a>Übersicht
-
 ## <a name="syntax"></a>Syntax 
   
 ```sql
--- Syntax for Azure SQL Database  
-CREATE LOGIN login_name  
- { WITH <option_list> }  
+-- Syntax for Azure SQL Database Managed Instance
+CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
   
-<option_list> ::=   
-    PASSWORD = { 'password' }  
-    [ , SID = sid ]  
+<option_list> ::=
+    PASSWORD = {'password'}
+    | SID = sid
+    | DEFAULT_DATABASE = database
+    | DEFAULT_LANGUAGE = language  
 ```  
 
-## <a name="arguments"></a>Argumente  
+> [!IMPORTANT]
+> Azure AD-Anmeldeinformationen für verwaltete SQL-Datenbank-Instanzen befinden sich in der **Public Preview**. Dies wurde mit der Syntax **FROM EXTERNAL PROVIDER** eingeführt.
+
+## <a name="arguments"></a>Argumente
 *login_name*  
-Gibt den Anmeldenamen an, der erstellt wird. Azure SQL-Datenbank (Verwaltete Instanz) unterstützt nur SQL-Anmeldenamen. 
+Bei Verwendung mit der Klausel **FROM EXTERNAL PROVIDER** legt der Anmeldename den Azure AD-Prinzipal fest, bei dem es sich um einen Azure AD-Benutzer, eine -Gruppe oder eine -Anwendung handelt. Andernfalls stellt der Anmeldename den Namen der erstellten SQL Server-Anmeldung dar.
 
-PASSWORD **='** Kennwort**'*  
-Gibt das Kennwort für den SQL-Anmeldenamen an, der erstellt wird. Sie sollten ein sicheres Kennwort verwenden. Weitere Informationen finden Sie unter [Sichere Kennwörter](../../relational-databases/security/strong-passwords.md) und [Kennwortrichtlinie](../../relational-databases/security/password-policy.md). Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] werden gespeicherte Kennwortinformationen mithilfe der SHA-512-Komponente des mit Salt verschlüsselten Kennworts berechnet. 
-  
-Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. Kennwörter sollten immer mindestens 8 Zeichen lang sein und dürfen 128 Zeichen nicht überschreiten. Kennwörter dürfen a-z, A-Z, 0-9 und die meisten nicht alphanumerischen Zeichen einschließen. Kennwörter dürfen keine einfachen Anführungszeichen oder *login_name* enthalten. 
+FROM EXTERNAL PROVIDER </br>
+Legt fest, dass der Anmeldename zur Azure AD-Authentifizierung dient.
 
-SID = *sid*  
-Wird verwendet, um eine Anmeldung neu zu erstellen. Gilt nur für Anmeldenamen für die SQL Server-Authentifizierung, nicht für Anmeldenamen für die Windows-Authentifizierung. Gibt die SID des neuen Anmeldenamens für die SQL Server-Authentifizierung an. Wenn diese Option nicht verwendet wird, weist SQL Server automatisch eine SID zu. Die SID-Struktur hängt von der SQL Server-Version ab. Bei SQL-Datenbank ist dies normalerweise ein 32-Byte-Literalwert (**binary(32)**) bestehend aus `0x01060000000000640000000000000000` plus 16 Byte, die eine GUID darstellen. Beispiel: `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`. 
+PASSWORD **=** '*password*'  
+Gibt das Kennwort für den SQL-Anmeldenamen an, der erstellt wird. Verwenden Sie ein sicheres Kennwort. Weitere Informationen finden Sie unter [Sichere Kennwörter](../../relational-databases/security/strong-passwords.md) und [Kennwortrichtlinie](../../relational-databases/security/password-policy.md). Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] werden gespeicherte Kennwortinformationen mithilfe der SHA-512-Komponente des mit Salt verschlüsselten Kennworts berechnet. 
   
-## <a name="remarks"></a>Remarks  
+Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. Kennwörter sollten immer mindestens acht Zeichen lang sein und dürfen 128 Zeichen nicht überschreiten. Kennwörter dürfen a-z, A-Z, 0-9 und die meisten nicht alphanumerischen Zeichen einschließen. Kennwörter dürfen keine einfachen Anführungszeichen oder *login_name* enthalten.
+
+SID **=** *sid*  
+Wird verwendet, um eine Anmeldung neu zu erstellen. Gilt nur für SQL Server-Authentifizierungsanmeldungen. Gibt die SID des neuen Anmeldenamens für die SQL Server-Authentifizierung an. Wenn diese Option nicht verwendet wird, weist SQL Server automatisch eine SID zu. Die SID-Struktur hängt von der SQL Server-Version ab. Bei SQL-Datenbank ist dies normalerweise ein 32-Byte-Literalwert (**binary(32)**) bestehend aus `0x01060000000000640000000000000000` plus 16 Byte, die eine GUID darstellen. Beispiel: `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`. 
+
+## <a name="remarks"></a>Remarks
+
 - Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.
+- Eine neue Syntax für die Erstellung von Serverebenenprinzipalen für Azure AD-Konten wurde eingeführt (**FROM EXTERNAL PROVIDER**).
+- Wenn **FROM EXTERNAL PROVIDER** festgelegt wird:
+    - „login_name“ muss einem vorhandenen Azure AD-Konto (Benutzer, Gruppe oder Anwendung) entsprechen, auf das in Azure AD über die aktuelle verwaltete Azure SQL-Datenbank-Instanz zugegriffen werden kann.
+    - Die Option **PASSWORD** kann nicht verwendet werden.
+    - Derzeit muss der erste erstellte Azure AD-Anmeldename über das SQL Server-Standardkonto erstellt werden (nicht über Azure AD), das die `sysadmin`-Rolle besitzt und die obige Syntax verwendet.
+        - Beim Erstellen eines Azure AD-Anmeldenamens mithilfe eines Azure AD-Administratorkontos für die verwaltete SQL-Datenbank-Instanz tritt folgende Fehlermeldung auf:</br>
+        `Msg 15247, Level 16, State 1, Line 1
+        User does not have permission to perform this action.`
+        - Dies ist eine bekannte Einschränkung der **Public Preview** und wird zu einem späteren Zeitpunkt behoben.
+    - Sobald der erste Azure AD-Anmeldename erstellt wurde, kann er zum Erstellen weiterer Azure AD-Anmeldenamen verwendet werden, sobald die erforderlichen Berechtigungen gewährt wurden.
+- Wenn die Klausel **FROM EXTERNAL PROVIDER** ausgelassen wird, wird standardmäßig eine SQL Server-Anmeldung erstellt.
+- Azure AD-Anmeldenamen werden in „sys.server_principals“ aufgeführt. Für Anmeldenamen, die Azure AD-Benutzern zugeordnet sind, ist der Wert der Typspalte auf **E** und „type_desc“ ist auf **EXTERNAL_LOGIN** festgelegt. Für Anmeldenamen, die Azure AD-Gruppen zugeordnet sind, ist der Wert der Typspalte auf **X** und „type_desc“ ist auf **EXTERNAL_GROUP** festgelegt.
 - Ein Skript zum Übertragen von Anmeldenamen finden unter [Übertragen von Benutzernamen und Kennwörtern zwischen Instanzen von SQL Server](https://support.microsoft.com/kb/918992).
-- Durch das Erstellen eines Anmeldenamens wird der neue Anmeldename automatisch aktiviert, und diesem Anmeldenamen wird die **CONNECT SQL**-Berechtigung auf Serverebene gewährt. 
-- Der [Authentifizierungsmodus](../../relational-databases/security/choose-an-authentication-mode.md) muss mit dem Anmeldetyp übereinstimmen, damit der Zugriff gewährt wird.
-    - Informationen zum Entwerfen eines Berechtigungssystems finden Sie unter [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
+- Durch das Erstellen eines Anmeldenamens wird der neue Anmeldename automatisch aktiviert, und diesem Anmeldenamen wird die **CONNECT SQL**-Berechtigung auf Serverebene gewährt.
   
-## <a name="login"></a>Anmeldename
+## <a name="logins-and-permissions"></a>Anmeldenamen und Berechtigungen
 
-### <a name="sql-database-logins"></a>Anmeldenamen für SQL-Datenbanken
-Die **CREATE LOGIN**-Anweisung muss die einzige Anweisung in einem Batch sein. 
-  
-In einigen Methoden zum Herstellen einer Verbindung mit SQL-Datenbank, z.B. **sqlcmd**, müssen Sie den Servernamen von SQL-Datenbank mit der *\<login>*@*\<server>*-Notation an den Anmeldenamen in der Verbindungszeichenfolge anfügen. Wenn Ihr Anmeldename beispielsweise `login1` und der vollqualifizierte Name des Servers von SQL-Datenbank `servername.database.windows.net` lautet, sollte der Parameter *username* der Verbindungszeichenfolge `login1@servername` lauten. Da die Gesamtlänge des *username*-Parameters 128 Zeichen beträgt, ist *login_name* auf 127 Zeichen abzüglich der Länge des Servernamens beschränkt. Im Beispiel darf `login_name` nur 117 Zeichen lang sein, da `servername` 10 Zeichen enthält. 
-  
-In SQL-Datenbank muss eine Verbindung mit der Masterdatenbank bestehen, um einen Anmeldenamen erstellen zu können. 
-  
- Mithilfe von SQL Server-Regeln können Sie einen Anmeldenamen für die SQL Server-Authentifizierung im Format \<loginname>@\<servername> erstellen. Wenn der [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Servername **myazureserver** und der Anmeldename **myemail@live.com** lauten, müssen Sie den Anmeldenamen als **myemail@live.com@myazureserver** bereitstellen. 
-  
-In SQL-Datenbank werden Anmeldedaten, die für die Authentifizierung einer Verbindung und für Firewallregeln auf Serverebene erforderlich sind, über einen gewissen Zeitraum in jeder Datenbank gespeichert. Dieser Cache wird regelmäßig aktualisiert. Führen Sie [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md) aus, um eine Aktualisierung des Authentifizierungscache zu erzwingen und sicherzustellen, dass eine Datenbank über die aktuelle Version der Tabelle mit Anmeldenamen verfügt. 
-  
- Weitere Informationen zu Anmeldenamen für SQL-Datenbank finden Sie unter [Verwalten von Datenbanken und Anmeldenamen in der Windows Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins). 
- 
-## <a name="permissions"></a>Berechtigungen
+Neue Anmeldenamen können nur mit den Anmeldenamen des Serverebenenprinzipals (im Bereitstellungsprozess erstellt) oder von Mitgliedern der Datenbankrollen `securityadmin` oder `sysadmin` in der Masterdatenbank erstellt werden. Weitere Informationen finden Sie unter [Rollen auf Serverebene](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) und unter [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
 
-Neue Anmeldenamen können nur mit den Anmeldenamen des Serverebenenprinzipals (im Bereitstellungsprozess erstellt) oder von Mitgliedern der `loginmanager`-Datenbankrolle in der Masterdatenbank erstellt werden. Weitere Informationen finden Sie unter [Rollen auf Serverebene](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) und unter [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles.
+Die folgenden Standardberechtigungen werden neu erstellten Azure AD-Anmeldenamen in der Masterdatenbank gewährt:
+- **CONNECT SQL** und **VIEW ANY DATABASE**.
 
-## <a name="logins"></a>Anmeldungen
-- Erfordert eine **ALTER ANY LOGIN**-Berechtigung auf dem Server oder eine Mitgliedschaft bei der festen Serverrolle**securityadmin**. Dieser Befehl kann nur auf dem Azure AD-Konto (Azure Active Directory) mit der **ALTER ANY LOGIN**-Berechtigung auf dem Server oder mit einer Mitgliedschaft bei der Serverrolle „securityadmin“ ausgeführt werden
-- Muss in dem gleichen Verzeichnis, das auch für den logischen Azure SQL-Server verwendet wird, ein Azure AD-Mitglied sein
-  
+### <a name="sql-database-managed-instance-logins"></a>Anmeldenamen für die verwaltete SQL-Datenbank-Instanz
+
+- Erfordert eine **ALTER ANY LOGIN**-Berechtigung auf dem Server oder eine Mitgliedschaft bei einer der festen Serverrollen `securityadmin` oder `sysadmin`. Dieser Befehl kann nur mit einem Azure AD-Konto (Azure Active Directory) mit der **ALTER ANY LOGIN**-Berechtigung auf dem Server oder mit einer Mitgliedschaft bei einer dieser Serverrollen ausgeführt werden.
+- Wenn der Anmeldename ein SQL-Prinzipal ist, können nur Anmeldenamen, die Teil der `sysadmin`-Rolle sind, den CREATE-Befehl zum Erstellen von Anmeldenamen für ein Azure AD-Konto verwenden.
+- Muss im gleichen Verzeichnis, das auch für die verwaltete Azure SQL-Datenbank-Instanz verwendet wird, ein Azure AD-Mitglied sein.
+
 ## <a name="after-creating-a-login"></a>Nach dem Erstellen eines Anmeldenamens  
-Nach dem Erstellen eines Anmeldenamens kann mit diesem Namen eine Verbindung mit der SQL-Datenbank hergestellt werden. Er verfügt jedoch nur über die der Rolle **public** erteilten Berechtigungen. Ziehen Sie die Ausführung einiger der folgenden Aktivitäten in Betracht. 
+Nach dem Erstellen eines Anmeldenamens kann dieser zum Herstellen einer Verbindung mit einer verwaltete SQL-Datenbank-Instanz verwendet werden. Dem Anmeldenamen werden jedoch nur die Berechtigungen der Rolle **public** gewährt. Ziehen Sie die Ausführung einiger der folgenden Aktivitäten in Betracht. 
   
-- Erstellen Sie zum Herstellen einer Verbindung mit einer Datenbank einen Datenbankbenutzer für den Anmeldenamen in dieser Datenbank. Weitere Informationen finden Sie unter [CREATE USER](../../t-sql/statements/create-user-transact-sql.md). 
-- Verwenden Sie für die Erteilung von Berechtigungen für einen Benutzer in einer Datenbank die Anweisung **ALTER SERVER ROLE** ... **ADD MEMBER**-Anweisung zum Hinzufügen des Benutzer zu einer der integrierten Datenbankrollen oder einer benutzerdefinierten Rolle oder zum Erteilen von Berechtigungen für den Benutzer über die direkte Verwendung der Anweisung [GRANT](../../t-sql/statements/grant-transact-sql.md). Weitere Informationen finden Sie unter [Nichtadministratorrollen](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users) und bei den Anweisungen [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles und [GRANT](grant-transact-sql.md).
+- Informationen zum Erstellen eines Azure AD-Benutzers aus Azure AD-Anmeldeinformationen finden Sie unter [CREATE USER](../../t-sql/statements/create-user-transact-sql.md). 
+- Verwenden Sie für die Erteilung von Berechtigungen für einen Benutzer in einer Datenbank die Anweisung **ALTER SERVER ROLE** ... **ADD MEMBER**-Anweisung zum Hinzufügen des Benutzer zu einer der integrierten Datenbankrollen oder einer benutzerdefinierten Rolle oder zum Erteilen von Berechtigungen für den Benutzer über die direkte Verwendung der Anweisung [GRANT](../../t-sql/statements/grant-transact-sql.md). Weitere Informationen finden Sie unter [Benutzer ohne Administratorrechte](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users) und in den Artikeln zu den Anweisungen [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md), https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles und [GRANT](grant-transact-sql.md).
 - Wenn Sie serverweite Berechtigungen erteilen möchten, erstellen Sie in der Masterdatenbank einen Datenbankbenutzer, und verwenden Sie die Anweisung **ALTER SERVER ROLE** ... **ADD MEMBER**-Anweisung zum Hinzufügen des Benutzers zu einer der administrativen Serverrollen. Weitere Informationen finden Sie unter [Rollen auf Serverebene](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) und unter [Serverrollen](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
+    - Verwenden Sie den folgenden Befehl, um einem Azure AD-Anmeldenamen die Rolle `sysadmin` zu gewähren: `ALTER SERVER ROLE sysadmin ADD MEMBER [AzureAD_Login_name]`
 - Gewähren Sie mit der **GRANT**-Anweisung Berechtigungen auf Serverebene für den neuen Anmeldenamen oder für eine Rolle, die den Anmeldenamen enthält. Weitere Informationen finden Sie unter [GRANT](../../t-sql/statements/grant-transact-sql.md).
+
+## <a name="limitations"></a>Einschränkungen
+
+- Das Festlegen eines Azure AD-Anmeldenamens, der einer Azure AD-Gruppe zugeordnet ist, als Besitzer der Datenbank wird nicht unterstützt.
+- Das Ausführen eines Identitätswechsels der Azure AD-Serverebenenprinzipale mithilfe anderer Azure AD-Prinzipale wird unterstützt. Ein Beispiel hierfür ist die Klausel [EXECUTE AS](execute-as-transact-sql.md).
+- Nur SQL-Serverebenenprinzipale (Anmeldungen), die Teil der `sysadmin`-Rolle sind, können die folgenden Vorgänge für Azure AD-Prinzipale ausführen:
+  - EXECUTE AS USER
+  - EXECUTE AS LOGIN
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-creating-a-login-with-a-password"></a>A. Erstellen einer Anmeldung mit einem Kennwort  
- Im folgenden Beispiel wird ein Anmeldename für einen bestimmten Benutzer erstellt, und es wird ein Kennwort zugewiesen. 
-  
-```sql  
-CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';  
-GO  
-```  
-  
-### <a name="b-creating-a-login-from-a-sid"></a>B. Erstellen eines Anmeldenamens aus einer SID  
- Im folgenden Beispiel wird ein Anmeldename für die SQL Server-Authentifizierung erstellt und die SID des Anmeldenamens festgelegt. 
-  
-```sql  
-CREATE LOGIN TestLogin WITH PASSWORD = 'SuperSecret52&&';  
-  
-SELECT name, sid FROM sys.sql_logins WHERE name = 'TestLogin';  
-GO  
-```  
-  
+ Im folgenden Beispiel wird ein Anmeldename für einen bestimmten Benutzer erstellt, und es wird ein Kennwort zugewiesen.
+
+ ```sql
+ CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';  
+ GO  
+ ```
+
+### <a name="b-creating-a-login-from-a-sid"></a>B. Erstellen eines Anmeldenamens aus einer SID
+ Im folgenden Beispiel wird ein Anmeldename für die SQL Server-Authentifizierung erstellt und die SID des Anmeldenamens festgelegt.
+
+ ```sql
+ CREATE LOGIN TestLogin WITH PASSWORD = 'SuperSecret52&&';  
+
+ SELECT name, sid FROM sys.sql_logins WHERE name = 'TestLogin';  
+ GO  
+ ```  
+
  Die Abfrage hier gibt 0x241C11948AEEB749B0D22646DB1A19F2 als SID zurück. Die Abfrage gibt einen anderen Wert zurück. Die folgenden Anweisungen löschen den Anmeldenamen und erstellen dann erneut die Anmeldung. Verwenden Sie die SID aus der vorherigen Abfrage. 
+
+ ```sql
+ DROP LOGIN TestLogin;  
+ GO  
+
+ CREATE LOGIN TestLogin
+ WITH PASSWORD = 'SuperSecret52&&', SID = 0x241C11948AEEB749B0D22646DB1A19F2;  
+
+ SELECT * FROM sys.sql_logins WHERE name = 'TestLogin';  
+ GO  
+ ```
+
+### <a name="c-creating-a-login-for-a-local-azure-ad-account"></a>C. Erstellen eines Anmeldenamens für ein lokales Azure AD-Konto
+ Im folgenden Beispiel wird ein Anmeldename für das Azure AD-Konto joe@myaad.onmicrosoft.com erstellt, das in der Azure AD-Instanz *myaad* vorhanden ist.
+
+```sql
+CREATE LOGIN [joe@myaad.onmicrosoft.com] FROM EXTERNAL PROVIDER
+GO
+```
+
+### <a name="d-creating-a-login-for-a-federated-azure-ad-account"></a>D. Erstellen eines Anmeldenamens für ein lokales Azure AD-Verbundkonto
+ Im folgenden Beispiel wird ein Anmeldename für das Azure AD-Verbundkonto bob@contoso.com erstellt, das in der Azure AD-Instanz *contoso* vorhanden ist. Der Benutzer „Bob“ kann auch ein Gastbenutzer sein.
+
+```sql
+CREATE LOGIN [bob@contoso.com] FROM EXTERNAL PROVIDER
+GO
+```
+
+### <a name="e-creating-a-login-for-an-azure-ad-group"></a>E. Erstellen eines Anmeldenamens für eine Azure AD-Gruppe
+ Im folgenden Beispiel wird ein Anmeldename für die Azure AD-Gruppe *mygroup* erstellt, die in der Azure AD-Instanz *myaad* vorhanden ist.
+
+```sql
+CREATE LOGIN [mygroup] FROM EXTERNAL PROVIDER
+GO
+```
+
+### <a name="f-creating-a-login-for-an-azure-ad-application"></a>F. Erstellen eines Anmeldenamens für eine Azure AD-Anwendung
+ Im folgenden Beispiel wird ein Anmeldename für die Azure AD-Anwendung *myapp* erstellt, die in der Azure AD-Instanz *myaad* vorhanden ist.
+
+```sql
+CREATE LOGIN [myapp] FROM EXTERNAL PROVIDER
+```
+
+### <a name="g-check-newly-added-logins"></a>G. Überprüfen neu hinzugefügter Anmeldenamen
+ Führen Sie den folgenden T-SQL-Befehl aus, um neu hinzugefügte Anmeldenamen zu überprüfen:
+
+```sql
+SELECT *   
+FROM sys.server_principals;
+GO
+```
   
-```sql  
-DROP LOGIN TestLogin;  
-GO  
-  
-CREATE LOGIN TestLogin   
-WITH PASSWORD = 'SuperSecret52&&', SID = 0x241C11948AEEB749B0D22646DB1A19F2;  
-  
-SELECT * FROM sys.sql_logins WHERE name = 'TestLogin';  
-GO  
-```  
-  
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erste Schritte mit Berechtigungen für die Datenbank-Engine](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)   
  [Prinzipale &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Kennwortrichtlinie](../../relational-databases/security/password-policy.md)   
@@ -498,7 +553,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL-Datenbank<br />logischer Server](create-login-transact-sql.md?view=azuresqldb-current)|[SQL-Datenbank<br />Verwaltete Instanz]()|**_\* SQL Data<br />Warehouse \*_**|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL-Datenbank<br />logischer Server](create-login-transact-sql.md?view=azuresqldb-current)|[SQL-Datenbank<br />Verwaltete Instanz](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -521,9 +576,9 @@ CREATE LOGIN login_name
 Gibt den Anmeldenamen an, der erstellt wird. Die Azure SQL-Datenbank unterstützt nur SQL-Anmeldenamen. 
 
 PASSWORD **='** Kennwort**'*  
-Gibt das Kennwort für den SQL-Anmeldenamen an, der erstellt wird. Sie sollten ein sicheres Kennwort verwenden. Weitere Informationen finden Sie unter [Sichere Kennwörter](../../relational-databases/security/strong-passwords.md) und [Kennwortrichtlinie](../../relational-databases/security/password-policy.md). Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] werden gespeicherte Kennwortinformationen mithilfe der SHA-512-Komponente des mit Salt verschlüsselten Kennworts berechnet. 
+Gibt das Kennwort für den SQL-Anmeldenamen an, der erstellt wird. Verwenden Sie ein sicheres Kennwort. Weitere Informationen finden Sie unter [Sichere Kennwörter](../../relational-databases/security/strong-passwords.md) und [Kennwortrichtlinie](../../relational-databases/security/password-policy.md). Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] werden gespeicherte Kennwortinformationen mithilfe der SHA-512-Komponente des mit Salt verschlüsselten Kennworts berechnet. 
   
-Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. Kennwörter sollten immer mindestens 8 Zeichen lang sein und dürfen 128 Zeichen nicht überschreiten. Kennwörter dürfen a-z, A-Z, 0-9 und die meisten nicht alphanumerischen Zeichen einschließen. Kennwörter dürfen keine einfachen Anführungszeichen oder *login_name* enthalten. 
+Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. Kennwörter sollten immer mindestens acht Zeichen lang sein und dürfen 128 Zeichen nicht überschreiten. Kennwörter dürfen a-z, A-Z, 0-9 und die meisten nicht alphanumerischen Zeichen einschließen. Kennwörter dürfen keine einfachen Anführungszeichen oder *login_name* enthalten. 
 
  SID = *sid*  
  Wird verwendet, um eine Anmeldung neu zu erstellen. Gilt nur für Anmeldenamen für die SQL Server-Authentifizierung, nicht für Anmeldenamen für die Windows-Authentifizierung. Gibt die SID des neuen Anmeldenamens für die SQL Server-Authentifizierung an. Wenn diese Option nicht verwendet wird, weist SQL Server automatisch eine SID zu. Die SID-Struktur hängt von der SQL Server-Version ab. Bei SQL Data Warehouse ist dies normalerweise ein 32-Byte-Literalwert (**binary(32)**) bestehend aus `0x01060000000000640000000000000000` plus 16 Byte, die eine GUID darstellen. Beispiel: `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`. 
@@ -551,13 +606,13 @@ In SQL Data Warehouse werden Anmeldedaten, die für die Authentifizierung einer 
  
 ## <a name="permissions"></a>Berechtigungen
 
-Neue Anmeldenamen können nur mit den Anmeldenamen des Serverebenenprinzipals (im Bereitstellungsprozess erstellt) oder von Mitgliedern der `loginmanager`-Datenbankrolle in der Masterdatenbank erstellt werden. Weitere Informationen finden Sie unter [Rollen auf Serverebene](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) und unter [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles.
+Neue Anmeldenamen können nur mit den Anmeldenamen des Serverebenenprinzipals (im Bereitstellungsprozess erstellt) oder von Mitgliedern der `loginmanager`-Datenbankrolle in der Masterdatenbank erstellt werden. Weitere Informationen finden Sie unter [Rollen auf Serverebene](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) und unter [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).<https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles>.
 
 ## <a name="after-creating-a-login"></a>Nach dem Erstellen eines Anmeldenamens  
 Nach dem Erstellen eines Anmeldenamens kann mit diesem Namen eine Verbindung mit SQL Data Warehouse hergestellt werden, er verfügt jedoch nur über die der Rolle **public** gewährten Berechtigungen. Ziehen Sie die Ausführung einiger der folgenden Aktivitäten in Betracht. 
   
 - Erstellen Sie zum Herstellen einer Verbindung mit einer Datenbank einen Datenbankbenutzer für den Anmeldenamen. Weitere Informationen finden Sie unter [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
-- Verwenden Sie für die Erteilung von Berechtigungen für einen Benutzer in einer Datenbank die Anweisung **ALTER SERVER ROLE** ... **ADD MEMBER**-Anweisung zum Hinzufügen des Benutzer zu einer der integrierten Datenbankrollen oder einer benutzerdefinierten Rolle oder zum Erteilen von Berechtigungen für den Benutzer über die direkte Verwendung der Anweisung [GRANT](grant-transact-sql.md). Weitere Informationen finden Sie unter [Nichtadministratorrollen](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users) und bei den Anweisungen [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles und [GRANT](grant-transact-sql.md).
+- Verwenden Sie für die Erteilung von Berechtigungen für einen Benutzer in einer Datenbank die Anweisung **ALTER SERVER ROLE** ... **ADD MEMBER**-Anweisung zum Hinzufügen des Benutzer zu einer der integrierten Datenbankrollen oder einer benutzerdefinierten Rolle oder zum Erteilen von Berechtigungen für den Benutzer über die direkte Verwendung der Anweisung [GRANT](grant-transact-sql.md). Weitere Informationen finden Sie unter [Benutzer ohne Administratorrechte](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users) und in den Artikeln zu den Anweisungen [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md), https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles und [GRANT](grant-transact-sql.md).
 - Wenn Sie serverweite Berechtigungen erteilen möchten, erstellen Sie in der Masterdatenbank einen Datenbankbenutzer, und verwenden Sie die Anweisung **ALTER SERVER ROLE** ... **ADD MEMBER**-Anweisung zum Hinzufügen des Benutzers zu einer der administrativen Serverrollen. Weitere Informationen finden Sie unter [Rollen auf Serverebene](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) und unter [Serverrollen](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
 
 - Gewähren Sie mit der **GRANT**-Anweisung Berechtigungen auf Serverebene für den neuen Anmeldenamen oder für eine Rolle, die den Anmeldenamen enthält. Weitere Informationen finden Sie unter [GRANT](../../t-sql/statements/grant-transact-sql.md). 
@@ -595,7 +650,7 @@ SELECT * FROM sys.sql_logins WHERE name = 'TestLogin';
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erste Schritte mit Berechtigungen für die Datenbank-Engine](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)   
  [Prinzipale &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Kennwortrichtlinie](../../relational-databases/security/password-policy.md)   
@@ -610,7 +665,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL-Datenbank<br />logischer Server](create-login-transact-sql.md?view=azuresqldb-current)|[SQL-Datenbank<br />Verwaltete Instanz]()|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_**
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL-Datenbank<br />logischer Server](create-login-transact-sql.md?view=azuresqldb-current)|[SQL-Datenbank<br />Verwaltete Instanz](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_**
 
 &nbsp;
 
@@ -634,11 +689,11 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
 
 ## <a name="arguments"></a>Argumente  
 *login_name*  
-Gibt den Anmeldenamen an, der erstellt wird. Es gibt vier Arten von Anmeldenamen: SQL Server-Anmeldenamen, Windows-Anmeldenamen, Anmeldenamen mit zugeordneten Zertifikaten sowie Anmeldenamen mit zugeordneten asymmetrischen Schlüsseln. Wenn Sie Anmeldenamen erstellen, die von einem Windows-Domänenkonto zugeordnet werden, müssen Sie den Benutzeranmeldenamen einer Version vor Windows 2000 im Format [\<domainName>\\<login_name>] verwenden. Sie können keine UPN im Format login_name@DomainName verwenden. Ein Beispiel hierzu finden Sie unter „Beispiel D“ weiter unten in diesem Artikel. Anmeldenamen für die Authentifizierung sind vom Typ **sysname**. Sie müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen und dürfen keinen „**\\**“ enthalten. Windows-Anmeldenamen können '**\\**'-Zeichen enthalten. Auf Active Directory-Benutzer basierende Anmeldenamen sind auf Namen mit weniger als 21 Zeichen beschränkt. 
+Gibt den Anmeldenamen an, der erstellt wird. Es gibt vier Arten von Anmeldenamen: SQL Server-Anmeldungen, Windows-Anmeldenamen, Anmeldenamen mit zugeordneten Zertifikaten sowie Anmeldenamen mit zugeordneten asymmetrischen Schlüsseln. Wenn Sie Anmeldenamen erstellen, die von einem Windows-Domänenkonto zugeordnet werden, müssen Sie den Benutzeranmeldenamen einer Version vor Windows 2000 im Format [\<domainName>\\<login_name>] verwenden. Sie können keine UPN im Format login_name@DomainName verwenden. Ein Beispiel hierzu finden Sie unter „Beispiel D“ weiter unten in diesem Artikel. Anmeldenamen für die Authentifizierung sind vom Typ **sysname**. Sie müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen und dürfen keinen „**\\**“ enthalten. Windows-Anmeldenamen können '**\\**'-Zeichen enthalten. Anmeldenamen auf Grundlage von Active Directory-Benutzern sind auf Namen mit weniger als 21 Zeichen beschränkt. 
 
-PASSWORD **='**_Kennwort_**'* Gilt nur für SQL Server-Anmeldungen. Gibt das Kennwort für den Anmeldenamen an, der erstellt wird. Sie sollten ein sicheres Kennwort verwenden. Weitere Informationen finden Sie unter [Sichere Kennwörter](../../relational-databases/security/strong-passwords.md) und [Kennwortrichtlinie](../../relational-databases/security/password-policy.md). Ab SQL Server 2012 (11.x) werden gespeicherte Kennwortinformationen mithilfe der SHA-512-Komponente des mit Salt verschlüsselten Kennworts berechnet. 
+PASSWORD **='**_Kennwort_' Gilt nur für SQL Server-Anmeldungen. Gibt das Kennwort für den Anmeldenamen an, der erstellt wird. Verwenden Sie ein sicheres Kennwort. Weitere Informationen finden Sie unter [Sichere Kennwörter](../../relational-databases/security/strong-passwords.md) und [Kennwortrichtlinie](../../relational-databases/security/password-policy.md). Ab SQL Server 2012 (11.x) werden gespeicherte Kennwortinformationen mithilfe der SHA-512-Komponente des mit Salt verschlüsselten Kennworts berechnet. 
   
-Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. Kennwörter sollten immer mindestens 8 Zeichen lang sein und dürfen 128 Zeichen nicht überschreiten. Kennwörter dürfen a-z, A-Z, 0-9 und die meisten nicht alphanumerischen Zeichen einschließen. Kennwörter dürfen keine einfachen Anführungszeichen oder *login_name* enthalten. 
+Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. Kennwörter sollten immer mindestens acht Zeichen lang sein und dürfen 128 Zeichen nicht überschreiten. Kennwörter dürfen a-z, A-Z, 0-9 und die meisten nicht alphanumerischen Zeichen einschließen. Kennwörter dürfen keine einfachen Anführungszeichen oder *login_name* enthalten. 
   
 MUST_CHANGE Gilt nur für SQL Server-Anmeldenamen. Wenn diese Option angegeben wird, wird der Benutzer von SQL Server zur Eingabe eines neuen Kennworts aufgefordert, wenn der neue Anmeldename zum ersten Mal verwendet wird. 
   
@@ -672,7 +727,7 @@ Gibt an, dass der Anmeldename einem Windows-Anmeldenamen zugeordnet wird.
 - Informationen zum Entwerfen eines Berechtigungssystems finden Sie unter [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
 
 ## <a name="permissions"></a>Berechtigungen  
-Nur Benutzer mit **ALTER ANY LOGIN**-Berechtigung auf dem Server oder einer Mitgliedschaft bei der festen Serverrolle **securityadmin** können Anmeldenamen erstellen. Weitere Informationen finden Sie unter [Rollen auf Serverebene](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) und unter [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles.
+Nur Benutzer mit **ALTER ANY LOGIN**-Berechtigung auf dem Server oder einer Mitgliedschaft bei der festen Serverrolle **securityadmin** können Anmeldenamen erstellen. Weitere Informationen finden Sie unter [Rollen auf Serverebene](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) und unter [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).<https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles>.
   
 ## <a name="after-creating-a-login"></a>Nach dem Erstellen eines Anmeldenamens  
 Nach dem Erstellen eines Anmeldenamens kann mit diesem Namen eine Verbindung mit SQL Data Warehouse hergestellt werden, er verfügt jedoch nur über die der Rolle **public** gewährten Berechtigungen. Ziehen Sie die Ausführung einiger der folgenden Aktivitäten in Betracht. 
@@ -711,7 +766,7 @@ CREATE LOGIN [Contoso\Mary] FROM WINDOWS;
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erste Schritte mit Berechtigungen für die Datenbank-Engine](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)   
  [Prinzipale &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Kennwortrichtlinie](../../relational-databases/security/password-policy.md)   
