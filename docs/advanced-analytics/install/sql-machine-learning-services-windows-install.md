@@ -3,19 +3,20 @@ title: 'Installieren Sie SQL Server Machine Learning Services (Datenbankintern) 
 description: R in SQL Server oder Python auf SQL Server-Installationsschritte für SQL Server 2017 Machine Learning Services auf Windows.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2018
+ms.date: 01/17/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9118edd1ab25cf13cbb6d10212b50f7e7428fe9f
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 2f323ac135ed41ff15c1d41a17407d03138e4807
+ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645349"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54372698"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Installieren von SQL Server Machine Learning-Dienste auf Windows
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Ab SQL Server 2017, R und Python Unterstützung für in-Database-Analyse in bereitgestellt **SQL Server Machine Learning Services**, der Nachfolger von [SQL Server R Services](../r/sql-server-r-services.md) in SQL Server 2016 eingeführt wurde. Funktionsbibliotheken in R und Python verfügbar sind und als externes Skript auf eine Instanz der Datenbank-Engine ausgeführt. 
@@ -203,6 +204,13 @@ Verwenden Sie die folgenden Schritte aus, um sicherzustellen, dass alle Komponen
     | 1|
 
 
+<!--  The preceding 'hello' table is NOT rendering properly on live Docs.
+Instead, the RAW markdown for the table is being displayed.  Probable bug in this markdown source,
+due to stricter rules imposed by 'markdig' engine (replaced 'DFM').
+I will inform HeidiSteen  [GeneMi, 2019/01/17]
+-->
+
+
 > [!NOTE]
 > Spalten oder Überschriften, die im Python-Skript verwendet werden, von nicht Entwurf zurückgegeben. Wenn Spaltennamen für die Ausgabe hinzufügen möchten, müssen Sie das Schema für die zurückgegebenen Daten Menge angeben. Dies erfolgt mithilfe des WITH RESULTS-Parameters der gespeicherten Prozedur, die Spalten benennen und Angeben des SQL-Datentyps.
 > 
@@ -288,7 +296,7 @@ Der Prozess zum Installieren und Verwalten von R-Pakete ist in SQL Server 2016 u
 
 R-Entwickler können mit einigen einfachen Beispielen beginnen, und die Grundlagen der Funktionsweise von R mit SQL Server. Der nächste Schritt ist finden Sie in den folgenden Links:
 
-+ [Tutorial: Führen Sie R in T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [Tutorial: Run R in T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
 + [Tutorial: Datenbankinterne Analysen für R-Entwickler](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Python-Entwickler erfahren, wie Python mit SQL Server verwenden, indem Sie die folgenden in diesen Tutorials:
