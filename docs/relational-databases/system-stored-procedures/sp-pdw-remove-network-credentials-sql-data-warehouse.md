@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.service: sql-data-warehouse
-ms.component: design
+ms.subservice: design
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -14,12 +14,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1ab5e9ed459e9abbd67b15010be35e9cc873db36
-ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
+ms.openlocfilehash: 7a86459f8ea20b2596068093a2e24cb87aa788cb
+ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50254393"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54395371"
 ---
 # <a name="sppdwremovenetworkcredentials-sql-data-warehouse"></a>Sp_pdw_remove_network_credentials (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- "*Target_server_name*"  
+ '*target_server_name*'  
  Gibt an, die Ziel-Serverhostnamen oder die IP-Adresse. Anmeldeinformationen für den Zugriff auf diesem Server aus entfernt [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Dies nicht ändern oder entfernen Sie alle Berechtigungen auf dem tatsächlichen Zielserver, der von Ihrem eigenen Team verwaltet wird.  
   
  *Target_server_name* als nvarchar(337) definiert ist.  
