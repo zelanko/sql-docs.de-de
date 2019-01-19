@@ -3,20 +3,21 @@ title: Was&#39;neues – SQL Server Machine Learning Services
 description: Ankündigungen neuer Merkmale für jede Version von SQL Server 2016 R Services, R Server, SQL Server 2017-Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/07/2018
+ms.date: 01/18/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f9e98d59318c9c7d43fd6f99195da972c4eca0c9
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 4a3450b308918e51b370865db4ad2bedeb8e004c
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432493"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397619"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Neuerungen in SQL Server Machine Learning Services 
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Machine Learning-Funktionen werden mit SQL Server in jedem Release hinzugefügt, während weiter erweitern, erweitern und vertiefen, die Integration zwischen der Datenplattform, erweiterte Analyse und Data Science. 
@@ -32,6 +33,7 @@ Diese Version bietet die am häufigsten gewünschten Features für R- und Python
 |   | [Java-spracherweiterung](java/extension-java.md) ist neu in SQL Server-2019 Preview unter Windows und Linux. Sie können kompilierte Java-code zu SQL Server zur Verfügung durch Zuweisen von Berechtigungen und Festlegen des Pfads. Client-apps mit Zugriff auf SQL Server können Sie Daten und Ausführen des Codes durch den Aufruf [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), den gleichen Schritten für die Integration von R und Python in SQL Server. | 
 |  | Die [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) führt zwei neue Parameter, mit denen Sie problemlos mehrere Modelle von partitionierten Daten generieren können. Weitere Informationen in diesem Tutorial [Partition basierenden Modellen in R erstellen](tutorials/r-tutorial-create-models-per-partition.md). |
 |   | Failover-Clusterunterstützung wird jetzt unterstützt, unter Windows und Linux, vorausgesetzt, dass SQL Server Launchpad-Dienst auf allen Knoten gestartet wurde. Weitere Informationen finden Sie unter [SQL Server-Failoverclusterinstallation](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md). |
+
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -71,7 +73,7 @@ Können Sie das T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) Funkti
 
 | Package | Description |
 |---------|-------------|
-[**die revoscalepy**](python/ref-py-revoscalepy.md)| Python-Entsprechung zu RevoScaleR. Sie können Python-Modelle für lineare und logistische Regressionen, Entscheidungsstrukturen, verstärkte Strukturen und zufällige Gesamtstrukturen, die alle parallelisiert werden kann und mit in remotecomputekontexten ausgeführt wird, erstellen. Dieses Paket unterstützt die Verwendung von mehreren Datenquellen und remote Compute-Kontexte. Der Data Scientist oder Entwickler kann Python-Code auf einem remote-SQL-Server, zum Durchsuchen von Daten oder erstellen Sie Modelle ohne Verschieben von Daten ausführen. |
+|[**revoscalepy**](python/ref-py-revoscalepy.md)| Python-Entsprechung zu RevoScaleR. Sie können Python-Modelle für lineare und logistische Regressionen, Entscheidungsstrukturen, verstärkte Strukturen und zufällige Gesamtstrukturen, die alle parallelisiert werden kann und mit in remotecomputekontexten ausgeführt wird, erstellen. Dieses Paket unterstützt die Verwendung von mehreren Datenquellen und remote Compute-Kontexte. Der Data Scientist oder Entwickler kann Python-Code auf einem remote-SQL-Server, zum Durchsuchen von Daten oder erstellen Sie Modelle ohne Verschieben von Daten ausführen. |
 |[**microsoftml**](python/ref-py-microsoftml.md) |Python-Darstellung des MicrosoftML-R-Pakets. |
 
 ### <a name="pre-trained-models"></a>Vortrainierte Modelle

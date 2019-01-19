@@ -12,17 +12,19 @@ ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 934262fb9f5e1e67ebf475310518f924aebbc4c1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8d3a1a2c3c5f1f4bce9a3662e1bc7c7bc49f2836
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351474"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397599"
 ---
 # <a name="developer-reference-for-sql-server-2014"></a>Entwicklerverweis für SQL Server 2014
+
   Mit folgenden Funktionen und Technologien können Sie Anwendungen entwickeln, mit denen auf Daten in einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank zugegriffen werden kann.  
   
 ## <a name="programming-reference-sections"></a>Abschnitte des Programmierverzeichnisses  
+
  ![Kleines Dateiordnersymbol](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Common Language Runtime &#40;CLR&#41; Programmierkonzepte für die Integration](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
  ![Kleines Dateiordnersymbol](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [systemeigene XML](https://technet.microsoft.com/library/ms191274.aspx)  
@@ -60,6 +62,7 @@ ms.locfileid: "53351474"
  ![Kleines Dateiordnersymbol](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Reporting Services-Entwicklerhandbuch](../reporting-services/reporting-services-features-and-tasks-ssrs.md)  
   
 ## <a name="other-programming-resources"></a>Weitere Programmierressourcen  
+
  Für das Entwickeln einer Datenzugriffsanwendung ist möglicherweise eine oder mehrere der folgenden Technologien erforderlich:  
   
  [Datenzugriff in Visual Studio](https://go.microsoft.com/fwlink/?LinkId=129902)  
