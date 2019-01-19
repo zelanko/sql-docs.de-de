@@ -8,19 +8,21 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8e5b0bc8633e956817e778a1d5a2d75a86df8588
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 8d3235c585d3ea56a64776fde841ccc6d71b1a4d
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596342"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405600"
 ---
-# <a name="tutorial-in-database-analytics-for-sql-developers-using-r"></a>Lernprogramm: Datenbankinterne Analysen für SQL-Entwickler, die mithilfe von R
+# <a name="tutorial-r-data-analytics-for-sql-developers"></a>Lernprogramm: R-Data-Analysen für SQL-Entwickler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In diesem Tutorial für die SQL-Programmierer erfahren Sie mehr über R-Integration durch die Erstellung und Bereitstellung einer R-basierte-Machine learning-Lösung mit einem [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) Datenbank auf SQL Server. 
+In diesem Tutorial für die SQL-Programmierer erfahren Sie mehr über R-Integration durch die Erstellung und Bereitstellung einer R-basierte-Machine learning-Lösung mit einem [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) Datenbank auf SQL Server. Verwenden Sie T-SQL und SQL Server Management Studio eine Datenbank-Engine-Instanz mit [Machine Learning-Dienste] ([Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) und die R-sprachunterstützung
 
-Dieses Tutorial führt Sie in R-Funktionen, die in einem Workflow der Modellierung verwendet. Schritte schließen das Durchsuchen von Daten, erstellen und Trainieren ein binärklassifizierungsmodell für und Bereitstellung eines Modells. Das Modell, das Sie erstellen vorhersagt, ob eine Fahrt wahrscheinlich zu einer QuickInfo, die basierend auf dem der Tag, Wegstrecke und einstiegsort ist. Alle in diesem Tutorial verwendeten R-Code ist eingeschlossen in gespeicherten Prozeduren, die Sie erstellen, und führen Sie in Management Studio.
+Dieses Tutorial führt Sie in R-Funktionen, die in einem Workflow der Modellierung verwendet. Schritte schließen das Durchsuchen von Daten, erstellen und Trainieren ein binärklassifizierungsmodell für und Bereitstellung eines Modells. Das Modell, das Sie erstellen vorhersagt, ob eine Fahrt wahrscheinlich zu einer QuickInfo, die basierend auf dem der Tag, Wegstrecke und einstiegsort ist. 
+
+Alle in diesem Tutorial verwendeten R-Code ist eingeschlossen in gespeicherten Prozeduren, die Sie erstellen, und führen Sie in Management Studio.
 
 ## <a name="background-for-sql-developers"></a>Hintergrund für SQL-Entwickler
 

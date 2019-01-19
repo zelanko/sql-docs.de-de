@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 36a904eeb4c7cde7d3a5356aff2029698e91f059
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 76e3fdca639ed576b6b0664042aea5df2b5a9f74
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645499"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405780"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>Lektion 1: Untersuchen und Visualisieren von Daten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -106,7 +106,7 @@ Die folgenden: wichtigen Punkte in diesem Skript zu verstehen
 
 Die gespeicherte Prozedur gibt das Bild als Strom von varbinary-Daten zurück, die Sie natürlich nicht direkt anzeigen können. Sie können jedoch das Hilfsprogramm **bcp** verwenden, um die varbinary-Daten abzurufen und sie als Bilddatei auf einem Clientcomputer zu speichern.
   
-1.  Führen Sie die folgende Anweisung in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]aus:
+1. Führen Sie die folgende Anweisung in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]aus:
   
     ```sql
     EXEC [dbo].[RxPlotHistogram]
@@ -114,25 +114,24 @@ Die gespeicherte Prozedur gibt das Bild als Strom von varbinary-Daten zurück, d
   
     **Ergebnisse**
     
-    *Plot*
-    *0xFFD8FFE000104A4649...*
+    *Plot* *0xFFD8FFE000104A4649...*
   
-2.  Öffnen Sie eine PowerShell-Eingabeaufforderung und führen Sie den folgenden Befehl, der Bereitstellung den erforderlichen Instanznamen, Datenbanknamen, Benutzernamen und Anmeldeinformationen als Argumente. Sie können für Benutzer, die Windows-Identitäten, ersetzen **- U** und **-P** mit **-T**.
+2. Öffnen Sie eine PowerShell-Eingabeaufforderung und führen Sie den folgenden Befehl, der Bereitstellung den erforderlichen Instanznamen, Datenbanknamen, Benutzernamen und Anmeldeinformationen als Argumente. Sie können für Benutzer, die Windows-Identitäten, ersetzen **- U** und **-P** mit **-T**.
   
-     ```powershell
-     bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
-     ```
+    ```powershell
+    bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
+    ```
 
     > [!NOTE]
     > Befehlsoptionen für Bcp-beachtet werden.
   
-3.  Wenn die Verbindung erfolgreich hergestellt wurde, werden Sie dazu aufgefordert, weitere Informationen über das Format der Grafikdatei einzugeben. 
+3. Wenn die Verbindung erfolgreich hergestellt wurde, werden Sie dazu aufgefordert, weitere Informationen über das Format der Grafikdatei einzugeben. 
 
    Drücken Sie bei jeder Eingabeaufforderung die EINGABETASTE, um die bestehenden Angaben zu akzeptieren, außer der folgenden Änderungen:
     
-    -   Geben Sie für **prefix-length of field plot**0 ein
+   + Geben Sie für **prefix-length of field plot**0 ein
   
-    -   Geben Sie **Y** ein, wenn Sie die Ausgabeparameter für den späteren Gebrauch speichern möchten.
+   + Geben Sie **Y** ein, wenn Sie die Ausgabeparameter für den späteren Gebrauch speichern möchten.
   
     ```powershell
     Enter the file storage type of field plot [varbinary(max)]: 

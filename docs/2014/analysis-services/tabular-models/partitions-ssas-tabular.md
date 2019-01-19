@@ -11,12 +11,12 @@ ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0cb150e2bf076c6cef4e05d626b71eaab05d64a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8126278319caff77a3d4ff6a334ed985c190288e
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197207"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405640"
 ---
 # <a name="partitions-ssas-tabular"></a>Partitionen (SSAS – tabellarisch)
   Durch Partitionen wird eine Tabelle logisch unterteilt. Jede Partition kann unabhängig von anderen Partitionen verarbeitet (aktualisiert) werden. Partitionen, die während der Modellerstellung mit dem Dialogfeld Partitionen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] erstellt werden, beziehen sich auf die Arbeitsbereichsdatenbank des Modells. Beim Bereitstellen des Modells werden die für die Arbeitsbereichsdatenbank des Modells definierten Partitionen in der bereitgestellten Modelldatenbank dupliziert. Mithilfe des Dialogfelds Partitionen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]können Sie weitere Partitionen für eine bereitgestellte Modelldatenbank erstellen und verwalten.  In diesem Thema werden Partitionen beschrieben, die während der Modellerstellung unter Verwendung des Dialogfelds Partitions-Manager in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erstellt wurden. Informationen zum Erstellen und Verwalten von Partitionen für ein bereitgestelltes Modell finden Sie unter [Erstellen und Verwalten von Tabellenmodellpartitionen &#40;SSAS – tabellarisch&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "48197207"
  Indem Sie eine Tabelle weiter in logische Partitionen unterteilen, können Sie selektiv bestimmen, welche Daten in den einzelnen Partitionen, wann und wie verarbeitet werden. Wenn Sie ein Modell bereitstellen, kann die Verarbeitung der Partitionen manuell im Dialogfeld Partitionen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]erfolgen oder mithilfe eines Skripts ausgeführt werden, das einen Verarbeitungsbefehl ausführt.  
   
 ### <a name="partitions-in-the-model-workspace-database"></a>Partitionen in der Arbeitsbereichsdatenbank des Modells  
- Mit dem Partitions-Manager in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]können Sie neue Partitionen erstellen sowie Partitionen bearbeiten, zusammenführen oder löschen. Der Partitions-Manager bietet zwei Modi zum Auswählen von Tabellen, Zeilen und Spalten für eine Partition: den Tabellenvorschaumodus und den SQL-Abfragemodus. Zwar werden alle Partitionen unter Verwendung einer SQL-Abfrage definiert, durch die Verwendung des Tabellenvorschaumodus können Sie jedoch die Daten in der Vorschau anzeigen und auswählen, die Sie in die Partition einschließen möchten. Die SQL-Abfrage wird automatisch erstellt und für Sie überprüft. Da der Tabellenvorschaumodus mit der Tabellenvorschau im Dialogfeld Tabelleneigenschaften bearbeiten und der Seite Tabellenvorschau des Tabellenimport-Assistenten identisch ist, können in der Vorschau maximal 50 Zeilen angezeigt werden.  
+ Mit dem Partitions-Manager in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]können Sie neue Partitionen erstellen sowie Partitionen bearbeiten, zusammenführen oder löschen. Partitions-Manager bietet zwei Modi für die Auswahl von Tabellen, Zeilen und Spalten für eine Partition: Tabellenvorschaumodus und SQL-Abfragemodus. Zwar werden alle Partitionen unter Verwendung einer SQL-Abfrage definiert, durch die Verwendung des Tabellenvorschaumodus können Sie jedoch die Daten in der Vorschau anzeigen und auswählen, die Sie in die Partition einschließen möchten. Die SQL-Abfrage wird automatisch erstellt und für Sie überprüft. Da der Tabellenvorschaumodus mit der Tabellenvorschau im Dialogfeld Tabelleneigenschaften bearbeiten und der Seite Tabellenvorschau des Tabellenimport-Assistenten identisch ist, können in der Vorschau maximal 50 Zeilen angezeigt werden.  
   
 ### <a name="partitions-in-a-deployed-model-database"></a>Partitionen in der Datenbank eines bereitgestellten Modells  
  Wenn Sie ein Modell bereitstellen, werden die Partitionen für die Datenbank des bereitgestellten Modells in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]als Datenbankobjekte dargestellt. Im Dialogfeld Partitionen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]können Sie Partitionen für ein bereitgestelltes Modell erstellen, bearbeiten, zusammenführen und löschen. Die Verwaltung von Partitionen für ein bereitgestelltes Modell in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] wird nicht in diesem Thema behandelt. Informationen zum Verwalten von Partitionen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] finden Sie unter [Erstellen und Verwalten von Tabellenmodellpartitionen &#40;SSAS – tabellarisch&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md).  
@@ -50,7 +50,7 @@ ms.locfileid: "48197207"
 |Thema|Description|  
 |-----------|-----------------|  
 |[Erstellen und Verwalten von Partitionen in der Arbeitsbereichsdatenbank &#40;SSAS – tabellarisch&#41;](workspace-database-ssas-tabular.md)|Beschreibt, wie Partitionen in der Arbeitsbereichsdatenbank des Modells mit dem Partitions-Manager in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erstellt und verwaltet werden.|  
-|[Verarbeiten von Partitionen in der Arbeitsbereichsdatenbank &#40;SSAS – tabellarisch&#41;](process-partitions-in-the-workspace-databse-ssas-tabular.md)|Beschreibt, wie Partitionen in der Arbeitsbereichsdatenbank des Modells verarbeitet (aktualisiert) werden.|  
+|[Verarbeiten von Partitionen in der Arbeitsbereichsdatenbank &#40;SSAS – tabellarisch&#41;](process-partitions-in-the-workspace-database-ssas-tabular.md)|Beschreibt, wie Partitionen in der Arbeitsbereichsdatenbank des Modells verarbeitet (aktualisiert) werden.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [DirectQuery-Modus &#40;SSAS – tabellarisch&#41;](directquery-mode-ssas-tabular.md)   

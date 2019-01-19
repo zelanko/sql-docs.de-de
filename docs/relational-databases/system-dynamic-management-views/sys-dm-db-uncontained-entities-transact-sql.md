@@ -19,12 +19,12 @@ ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40235280563039493bdd174de1c314809a424336
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb3351abb75827c3eac7f48687823ffeed76986c
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694088"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405610"
 ---
 # <a name="sysdmdbuncontainedentities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47694088"
 |**Spaltenname**|**Typ**|**Beschreibung**|  
 |*class*|**int**|1 = Objekt oder Spalte (einschließlich Modulen, XPs, Sichten, Synonymen und Tabellen).<br /><br /> 4 = Datenbankprinzipal<br /><br /> 5 = Assembly<br /><br /> 6 = Typ<br /><br /> 7 = Index (Volltextindex)<br /><br /> 12 = DDL-Trigger auf Datenbankebene<br /><br /> 19 = Route<br /><br /> 30 = Überwachungsspezifikation|  
 |*class_desc*|**nvarchar(120)**|Klassenbeschreibung der Entitätsklasse. Eine der folgenden entsprechend die Klasse:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
-|*major_id*|**int**|Die ID der Entität.<br /><br /> Wenn *Klasse* = 1, und klicken Sie dann auf Object_id<br /><br /> Wenn *Klasse* = 4, und klicken Sie dann auf principal_id.<br /><br /> Wenn *Klasse* = 5, und klicken Sie dann auf Sys.Assemblies.<br /><br /> Wenn *Klasse* = 6, und klicken Sie dann auf user_type_id.<br /><br /> Wenn *Klasse* = 7, und klicken Sie dann auf index_id.<br /><br /> Wenn *Klasse* = 12, dann sys.Triggers.<br /><br /> Wenn *Klasse* = 19, Route_ID.<br /><br /> Wenn *Klasse* = 30, und klicken Sie dann auf Sys. database_audit_specifications.databse_specification_id.|  
+|*major_id*|**int**|Die ID der Entität.<br /><br /> Wenn *Klasse* = 1, und klicken Sie dann auf Object_id<br /><br /> Wenn *Klasse* = 4, und klicken Sie dann auf principal_id.<br /><br /> Wenn *Klasse* = 5, und klicken Sie dann auf Sys.Assemblies.<br /><br /> Wenn *Klasse* = 6, und klicken Sie dann auf user_type_id.<br /><br /> Wenn *Klasse* = 7, und klicken Sie dann auf index_id.<br /><br /> Wenn *Klasse* = 12, dann sys.Triggers.<br /><br /> Wenn *Klasse* = 19, Route_ID.<br /><br /> Wenn *Klasse* = 30, und klicken Sie dann auf Sys. database_audit_specifications.database_specification_id.|  
 |*statement_line_number*|**int**|Wenn die Klasse ein Modul ist, wird die Zeilennummer für die nicht enthaltene Verwendung zurückgegeben.  Anderenfalls ist der Wert NULL.|  
 |*Statement_ offset_begin*|**int**|Wenn die Klasse ein Modul ist, gibt dies die Startposition der nicht enthaltenen Verwendung in Byte an, beginnend bei 0. Andernfalls ist der Rückgabewert NULL.|  
 |*Statement_ offset_end*|**int**|Wenn die Klasse ein Modul ist, gibt dies die Endposition der nicht enthaltenen Verwendung in Byte an, beginnend bei 0. Der Wert -1 gibt das Ende des Moduls an. Andernfalls ist der Rückgabewert NULL.|  
@@ -63,7 +63,7 @@ ms.locfileid: "47694088"
   
 -   Integrierte Systemfunktion  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
  Sys. dm_db_uncontained_entities gibt nur Objekte für die der Benutzer eine Art von Berechtigung verfügt. Auszuwertende vollständig die Kapselung der Datenbank diese Funktion werden, von einem Benutzer mit hohen Privilegien wie z. B. ein Mitglied verwendet sollte der **Sysadmin** -Serverrolle sein oder die **Db_owner** Rolle.  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 12ec074501e93af586a5d495bd7984ad62f3fd88
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 900bd5fea075e304dae73a20168da952433f20be
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242141"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405820"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Wie Sie SQL Server-big Data-Cluster in Kubernetes bereitstellen
 
@@ -53,7 +53,7 @@ Sie können zum Bereitstellen von Kubernetes stehen drei Möglichkeiten zur Verf
 
 Vor der Bereitstellung von SQL Server-2019 big Data-Cluster, zuerst [die big Data-Tools installieren](deploy-big-data-tools.md):
 - **mssqlctl**
-- **"kubectl"**
+- **kubectl**
 - **Azure Data Studio**
 - **SQL Server-2019-Erweiterung**
 
@@ -85,7 +85,7 @@ Die Cluster-Konfiguration kann angepasst werden, mithilfe eines Satzes von Umgeb
 | Umgebungsvariable | Erforderlich | Standardwert | Description |
 |---|---|---|---|
 | **ACCEPT_EULA** | Ja | Nicht zutreffend | Akzeptieren Sie den SQL Server-Lizenzvertrag (z. B. "Y").  |
-| **CLUSTERNAME** | Ja | Nicht zutreffend | Der Name des zu SQL Server bereitstellen, big Data-in Cluster, Kubernetes-Namespace. |
+| **CLUSTER_NAME** | Ja | Nicht zutreffend | Der Name des zu SQL Server bereitstellen, big Data-in Cluster, Kubernetes-Namespace. |
 | **CLUSTER_PLATFORM** | Ja | Nicht zutreffend | Die Plattform des Kubernetes-Clusters bereitgestellt wird. Kann `aks`, `minikube`, `kubernetes`|
 | **CLUSTER_COMPUTE_POOL_REPLICAS** | Nein | 1 | Die Anzahl der Compute-Pool Replikate zu erstellen. In der CTP-Version 2.2 nur Wert zulässig ist 1. |
 | **CLUSTER_DATA_POOL_REPLICAS** | Nein | 2 | Die Anzahl der Pools Replikate zu erstellen. |
@@ -248,7 +248,7 @@ kubectl get svc -n <your-cluster-name>
 
 Derzeit ist die einzige Möglichkeit, einen big Data-Cluster auf eine neue Version ein upgrade manuell entfernen und erstellen Sie den Cluster neu. Jede Version weist eine eindeutige Version **Mssqlctl** , die nicht mit der vorherigen Version kompatibel ist. Darüber hinaus, wenn ein ältere Cluster ein Image auf einem neuen Knoten herunterzuladen musste, kann das neueste Image mit den älteren Images auf dem Cluster nicht kompatibel. Um auf die neueste Version aktualisieren, verwenden Sie die folgenden Schritte aus:
 
-1. Sichern Sie vor dem Löschen der alten Clusters, die Daten auf dem SQL Server-Masterinstanz und HDFS aus. Für die master SQL Server-Instanz, können Sie [SQL Server-Sicherung und Wiederherstellung](data-ingestion-restore-databse.md). Für HDFS Sie [können die Daten mit Kopieren **curl**](data-ingestion-curl.md).
+1. Sichern Sie vor dem Löschen der alten Clusters, die Daten auf dem SQL Server-Masterinstanz und HDFS aus. Für die master SQL Server-Instanz, können Sie [SQL Server-Sicherung und Wiederherstellung](data-ingestion-restore-database.md). Für HDFS Sie [können die Daten mit Kopieren **curl**](data-ingestion-curl.md).
 
 1. Löschen Sie den alten Cluster mit der `mssqlctl delete cluster` Befehl.
 
@@ -310,10 +310,10 @@ Verwenden Sie zum Überwachen und Problembehandlung bei einer Bereitstellung **"
 
    | Dienst | Description |
    |---|---|
-   | **Endpunkt-Master-pool** | Bietet Zugriff auf die master-Instanz.<br/>(**Externe IP-, 31433** und **SA** Benutzer) |
-   | **Dienst-Mssql-Controller-lb**<br/>**Dienst-Mssql-Controller-nodeport** | Unterstützt die Tools und Clients, die den Cluster zu verwalten. |
-   | **Dienst-Proxy-lb**<br/>**Dienst-Proxy-nodeport** | Ermöglicht den Zugriff auf die [Cluster Verwaltungsportal](cluster-admin-portal.md).<br/>(https://**externe IP-**: 30777/Portal)|
-   | **Dienst-Security-lb**<br/>**Dienst-Security-nodeport** | Bietet Zugriff auf das HDFS/Spark-Gateway.<br/>(**Externe IP-** und **Stamm** Benutzer) |
+   | **endpoint-master-pool** | Bietet Zugriff auf die master-Instanz.<br/>(**Externe IP-, 31433** und **SA** Benutzer) |
+   | **service-mssql-controller-lb**<br/>**service-mssql-controller-nodeport** | Unterstützt die Tools und Clients, die den Cluster zu verwalten. |
+   | **service-proxy-lb**<br/>**service-proxy-nodeport** | Ermöglicht den Zugriff auf die [Cluster Verwaltungsportal](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777/portal)|
+   | **service-security-lb**<br/>**service-security-nodeport** | Bietet Zugriff auf das HDFS/Spark-Gateway.<br/>(**Externe IP-** und **Stamm** Benutzer) |
 
    > [!NOTE]
    > Den Namen des Diensts können je nach Ihrer Kubernetes-Umgebung variieren. Wenn Sie auf der Azure Kubernetes Service (AKS) bereitstellen, den Namen des Diensts enden **-lb**. Für Bereitstellungen von Minikube und Kubeadm, den Namen des Diensts enden **- Nodeport**.

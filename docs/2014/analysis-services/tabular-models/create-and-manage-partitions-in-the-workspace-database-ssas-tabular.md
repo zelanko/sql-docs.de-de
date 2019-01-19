@@ -13,12 +13,12 @@ ms.assetid: 0b3027d6-652b-4eb3-a197-58b25df65218
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fe732d1647acbfdf70dacaddfc4eea3eca479d8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd519c9cafb1358f21af30d2c9ea0522e47768b7
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094800"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405740"
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database-ssas-tabular"></a>Erstellen und Verwalten von Partitionen in der Arbeitsbereichsdatenbank (SSAS – tabellarisch)
   Durch Partitionen wird eine Tabelle logisch unterteilt. Die einzelnen Partitionen können dann unabhängig voneinander oder parallel mit anderen Partitionen verarbeitet (aktualisiert) werden. Durch Partitionen kann sich die Skalierbarkeit und Verwaltbarkeit großer Datenbanken verbessern. Standardmäßig verfügt jede Tabelle über eine Partition, die alle Spalten einschließt. In diesem Thema wird beschrieben, wie Partitionen in der Arbeitsbereichsdatenbank des Modells unter Verwendung des Dialogfelds **Partitions-Manager** in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
@@ -36,7 +36,7 @@ ms.locfileid: "48094800"
 > [!NOTE]  
 >  Partitionen in der Arbeitsbereichsdatenbank des Modells können nicht mithilfe des Dialogfelds Partitions-Manager zusammengeführt werden. Partitionen können in einem bereitgestellten Modell nur mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]zusammengeführt werden.  
   
-## <a name="tasks"></a>Aufgaben  
+## <a name="tasks"></a>Richtlinienübersicht  
  Um Partitionen zu erstellen und zu verwalten, verwenden Sie das Dialogfeld **Partitions-Manager** . Sie öffnen das Dialogfeld **Partitions-Manager** , indem Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]auf das Menü **Tabelle** und dann auf **Partitionen**klicken.  
   
 ###  <a name="bkmk_create_new"></a> So erstellen Sie eine neue Partition  
@@ -71,6 +71,6 @@ ms.locfileid: "48094800"
   
 ## <a name="see-also"></a>Siehe auch  
  [Partitionen &#40;SSAS – tabellarisch&#41;](partitions-ssas-tabular.md)   
- [Verarbeiten von Partitionen in der Arbeitsbereichsdatenbank &#40;SSAS – tabellarisch&#41;](process-partitions-in-the-workspace-databse-ssas-tabular.md)  
+ [Verarbeiten von Partitionen in der Arbeitsbereichsdatenbank &#40;SSAS – tabellarisch&#41;](process-partitions-in-the-workspace-database-ssas-tabular.md)  
   
   
