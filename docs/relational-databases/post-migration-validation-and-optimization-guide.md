@@ -1,6 +1,6 @@
 ---
 title: Handbuch für die Überprüfung und Optimierung nach der Migration | Microsoft-Dokumtenation
-ms.date: 5/03/2017
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,23 +13,25 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: d85de6deffa9e140bc5f9bf489afd60e0dbbc948
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7e9e96ee56895c38a8c242d3cd48804884f581d1
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213619"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206366"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Handbuch für die Überprüfung und Optimierung nach der Migration
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Die Schritte in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die nach der der Migration ausgeführt werden, sind sehr wichtig für das Abgleichen der Genauigkeit und der Vollständigkeit der Daten sowie für das Aufdecken von Leistungsproblemen mit der Arbeitsauslastung.
 
-# <a name="common-performance-scenarios"></a>Allgemeine Leistungsszenarios 
+## <a name="common-performance-scenarios"></a>Allgemeine Leistungsszenarios
+
 Im Folgenden sind einige der häufigsten Leistungsszenarios aufgelistet, die nach der Migration zur Plattform [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auftreten, und wie sie behoben werden können. Hierzu gehören auch Szenarios, die für die Migration von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (ältere Version zu neuere Version) sowie für die Migration von foreign-Plattformen (z.B. Oracle, DB2, MySQL und Sybase) zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] spezifisch sind.
 
 ## <a name="CEUpgrade"></a> Abfrageregressionen aufgrund einer Änderung in der CE-Version
- 
+
 **Gilt für:** Migration von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 Wenn Sie von einer älteren [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Version zu [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] oder neuer migrieren und ein Upgrade auf den aktuellen [Datenbankkompatibilitätsgrad](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) durchführen, kann es bei einer Arbeitsauslastung womöglich zu einem Leistungsrückgang kommen.
@@ -126,6 +128,7 @@ Tabellenwertfunktionen geben einen table-Datentyp zurück, der eine Alternative 
 > Da die Ausgabetabelle einer Tabellenwertfunktion mit mehreren Anweisungen (Multi-Statement Table Valued Function, MSTVF) nicht zur Kompilierzeit erstellt wird, verwendet der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer Heuristik und keine tatsächliche Statistik, um Zeileneinschätzungen zu bestimmen. Auch wenn den Basistabellen Indizes hinzugefügt werden, wird dies nicht helfen. Für MSTVFs verwendet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eine feste Schätzung von 1 für die Anzahl der Zeilen, die von einer MSTVF zurückgegeben werden sollen (beginnend mit [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], wo die behobene Schätzung 100 Zeilen beträgt).
 
 ### <a name="steps-to-resolve"></a>Schritte zum Beheben
+
 1.  Wenn die Tabellenwertfunktion mit mehreren Anweisungen nur eine einzelne Anweisung enthält, konvertieren Sie zu einer Inline-Tabellenwertfunktion.
 
     ```sql
@@ -142,7 +145,8 @@ Tabellenwertfunktionen geben einen table-Datentyp zurück, der eine Alternative 
     RETURN
     END
     ```
-    Aktion 
+
+    Es folgt das Beispiel für das Inline-Format.
 
     ```sql
     CREATE FUNCTION dbo.tfnGetRecentAddress_inline(@ID int)
@@ -158,7 +162,8 @@ Tabellenwertfunktionen geben einen table-Datentyp zurück, der eine Alternative 
 
 2.  Wenn sie komplexer ist, sollten Sie die Zwischenergebnisse verwenden, die in speicheroptimierten Tabellen oder in temporären Tabellen gespeichert sind.
 
-##  <a name="Additional_Reading"></a> Zusätzliches Lesematerial  
+##  <a name="Additional_Reading"></a> Zusätzliches Lesematerial
+
  [Bewährte Methoden für den Abfragespeicher](../relational-databases/performance/best-practice-with-the-query-store.md)  
 [Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
 [Benutzerdefinierte Funktionen](../relational-databases/user-defined-functions/user-defined-functions.md)  

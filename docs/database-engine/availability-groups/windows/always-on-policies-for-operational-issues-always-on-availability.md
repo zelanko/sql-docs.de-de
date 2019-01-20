@@ -14,12 +14,12 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6d9d780473346a446811595d850aafd4da9d5930
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 07cc3b6b11d4f40792ede3c0d2a9668c5ada0db6
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214169"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226557"
 ---
 # <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>Richtlinienbasierte Verwaltung von Betriebsproblemen mit Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "53214169"
 ##  <a name="Always OnPBM"></a> Vordefinierte Richtlinien und Probleme  
  In der folgenden Tabelle sind die vordefinierten Richtlinien zusammengefasst.  
   
-|Richtlinienname|Problem|Kategorie**\***|Facet|  
+|Richtlinienname|Problem|Kategorie **&#42;**|Facet|  
 |-----------------|-----------|--------------------|-----------|  
 |WSFC-Clusterstatus|[WSFC-Clusterdienst ist offline](../../../database-engine/availability-groups/windows/wsfc-cluster-service-is-offline.md).|Kritisch|SQL Server-Instanz|  
 |Onlinezustand der Verfügbarkeitsgruppe|[Verfügbarkeitsgruppe ist offline](../../../database-engine/availability-groups/windows/availability-group-is-offline.md).|Kritisch|Verfügbarkeitsgruppe|  
@@ -67,7 +67,7 @@ ms.locfileid: "53214169"
 |Datensynchronisierungsstatus der Verfügbarkeitsdatenbank|[Datensynchronisierungsstatus der Verfügbarkeitsdatenbank ist nicht fehlerfrei](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md).|Warnung|Verfügbarkeitsdatenbank|  
   
 > [!IMPORTANT]
->  **\*** Für Always On-Richtlinien werden die Kategorienamen als IDs verwendet. Durch die Änderung des Namens einer Always On-Kategorie wird deren Funktionalität der Integritätsüberprüfung unterbrochen. Ändern Sie die Namen von Always On-Kategorien daher nicht.  
+>  **&#42;** Für Always On-Richtlinien werden die Kategorienamen als IDs verwendet. Durch die Änderung des Namens einer AlwaysOn-Kategorie wird deren Funktionalität zur Integritätsüberprüfung unterbrochen. Ändern Sie die Namen von Always On-Kategorien daher nicht.  
   
 ##  <a name="Dashboard"></a> Always On-Dashboard  
  Das Always On-Dashboard bietet eine Übersicht über die Integrität einer Verfügbarkeitsgruppe. Das Always On-Dashboard umfasst die folgenden Funktionen:  

@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer Berichtsserver-Datenbank (SSRS-Konfigurations-Manager) | Microsoft-Dokumentation
+title: Erstellen einer Berichtsserver-Datenbank, SSRS-Konfigurations-Manager | Microsoft-Dokumentation
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -7,23 +7,25 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 12/12/2018
-ms.openlocfilehash: a893b213b5678fa1c5cea7f4735da239bdf01048
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.date: 12/15/2018
+ms.openlocfilehash: 9fee8b60cff2b0c8bdfa2e38576cfed036f09584
+ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328740"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54184986"
 ---
-# <a name="create-a-report-server-database"></a>Erstellen einer Berichtsserver-Datenbank
+# <a name="create-a-report-server-database"></a>Erstellen einer Berichtsserver-Datenbank 
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **von** verwendet zwei relationale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken, um Berichtsserver-Metadaten und -Objekte zu speichern. Eine Datenbank, die als primärer Speicher dient, und eine zweite Datenbank zum Speichern temporärer Daten. Die Datenbanken werden gemeinsam erstellt und sind durch ihre Namen aneinander gebunden. Bei einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Standardinstanz werden die Datenbanken als **reportserver** und **reportservertempdb**benannt. Zusammen werden die beiden Datenbanken als "Berichtsserver-Datenbank" oder "Berichtsserver-Katalog" bezeichnet.
+Im einheitlichen Modus von SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden zwei relationale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken verwendet, um Berichtsserver-Metadaten und -Objekte zu speichern. Eine Datenbank, die als primärer Speicher dient, und eine zweite Datenbank zum Speichern temporärer Daten. 
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **von** schließt eine dritte Datenbank ein, die für Datenwarnungsmetadaten verwendet wird. Die drei Datenbanken werden für jede [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung erstellt, und die Datenbanknamen enthalten standardmäßig einen GUID, der die Dienstanwendung darstellt. Im Folgenden finden Sie Beispielnamen der drei Datenbanken im SharePoint-Modus:
+Die Datenbanken werden gemeinsam erstellt und sind durch ihre Namen aneinander gebunden. Bei einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Standardinstanz werden die Datenbanken als **reportserver** und **reportservertempdb**benannt. Zusammen werden die beiden Datenbanken als die **Berichtsserver-Datenbank** oder der **Berichtsserver-Katalog** bezeichnet.
+
+Der **SharePoint-Modus** von SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] umfasst eine dritte Datenbank, die für Datenwarnungsmetadaten verwendet wird. Die drei Datenbanken werden für jede SSRS-Dienstanwendung erstellt. Die Datenbanknamen enthalten standardmäßig eine GUID, die der Dienstanwendung entspricht. Im Folgenden finden Sie Beispielnamen der drei Datenbanken im SharePoint-Modus:
 
 - ReportingService_90a9f37075544f22953c4a62e4a9f370  
   
@@ -32,26 +34,29 @@ ms.locfileid: "53328740"
 - ReportingService_90a9f37075544f22953c4a62e4a9f370_Alerting  
   
 > [!IMPORTANT]  
-> Schreiben Sie keine Anwendungen, um Abfragen auf der Berichtsserver-Datenbank auszuführen. Die Berichtsserver-Datenbank ist kein öffentliches Schema. Die Tabellenstruktur kann sich von einer Version zur nächsten ändern. Verwenden Sie für den Zugriff auf die Berichtsserver-Datenbank stets [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -APIs, wenn Sie eine Anwendung schreiben, die auf die Berichtsserver-Datenbank zugreifen muss.  
-> Dies gilt nicht für die Ausführungsprotokollsichten. Weitere Informationen finden Sie unter [Berichtsserverausführungsprotokoll und die ExecutionLog3-Ansicht](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md).  
+> Schreiben Sie keine Anwendungen, die Abfragen für die Berichtsserver-Datenbank ausführen. Die Berichtsserver-Datenbank ist kein öffentliches Schema. Die Tabellenstruktur kann sich von einer Version zur nächsten ändern. Verwenden Sie für den Zugriff auf die Berichtsserver-Datenbank stets SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -APIs, wenn Sie eine Anwendung schreiben, die auf die Berichtsserver-Datenbank zugreifen muss.  
+>
+> Sichten des Ausführungsprotokolls sind Ausnahmen von dieser Regel. Weitere Informationen finden Sie unter [Berichtsserverausführungsprotokoll und die ExecutionLog3-Ansicht](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md).  
   
 ## <a name="ways-to-create-the-report-server-database"></a>Möglichkeiten zum Erstellen der Berichtsserver-Datenbank
 
- **Einheitlicher Modus:** Sie können die Berichtsserver-Datenbank im einheitlichen Modus wie folgt erstellen:  
+ ### <a name="native-mode"></a>Einheitlicher Modus
+ Sie können die Berichtsserver-Datenbank im einheitlichen Modus wie folgt erstellen:  
   
-- Automatisch: Verwenden Sie den Setup-Assistenten für SQL Server, wenn Sie die Installationsoption für die Standardkonfiguration auswählen. Im SQL Server-Installations-Assistenten ist dies die Option **Installieren und konfigurieren** auf der Seite Berichtsserver-Installationsoptionen. Wenn Sie die Option **Nur installieren** auswählen, müssen Sie die Datenbank mithilfe des Reporting Services-Konfigurations-Managers erstellen.  
+- **Automatisch**. Verwenden Sie den Setup-Assistenten für SQL Server, wenn Sie die Standardkonfigurationsoption für eine Installation auswählen. Im SQL Server-Installations-Assistenten ist diese Option die Option **Installieren und konfigurieren** auf der Seite **Berichtsserver-Installationsoptionen**. Wenn Sie die Option **Nur installieren** auswählen, müssen Sie die Datenbank mit dem SQL Server-Konfigurations-Manager für Reporting Services erstellen.  
   
-- Manuell: Verwenden Sie den Konfigurations-Manager für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Sie müssen die Berichtsserver-Datenbank manuell erstellen, wenn Sie zum Hosten der Datenbank Remote- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verwenden. Weitere Informationen finden Sie unter [Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
+- **Manuell**. Verwenden Sie den SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Konfigurations-Manager. Erstellen Sie die Berichtsserver-Datenbank manuell, wenn Sie zum Hosten der Datenbank eine Remote-[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verwenden. Weitere Informationen finden Sie unter [Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
- **SharePoint-Modus:** Die Seite „Berichtsserver-Installationsoptionen“ besitzt nur eine Option für den SharePoint-Modus von **Nur installieren**. Diese Option installiert alle [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dateien und den gemeinsamen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienst. Der nächste Schritt besteht darin mindestens eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung in einer der folgenden Methoden zu erstellen:  
+### <a name="sharepoint-mode"></a>SharePoint-Modus 
+Die Seite **Berichtsserver-Installationsoptionen** hat nur eine Option für den SharePoint-Modus, **Nur installieren**. Diese Option installiert alle SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dateien und den gemeinsamen SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienst. Der nächste Schritt besteht darin, mindestens eine SSRS-Dienstanwendung auf eine der folgenden Arten zu erstellen:  
   
-- Verwenden Sie die SharePoint-Zentraladministration, um eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung zu erstellen. Weitere Informationen finden Sie im Abschnitt "Dienstanwendung" in [Schritt 3: Erstellen einer Reporting Services-Dienstanwendung](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
+- Navigieren Sie zur Zentraladministration in SharePoint Server, um eine SSRS-Dienstanwendung zu erstellen. Weitere Informationen finden Sie im Abschnitt **Erstellen einer Dienstanwendung** von [Installieren des ersten Berichtsservers im SharePoint-Modus](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
   
-- Verwenden Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -PowerShell-Cmdlets zum Erstellen einer Dienstanwendung und der Berichtsserver-Datenbanken. Weitere Informationen finden Sie im Beispiel für die Erstellung von Dienstanwendungen im Thema [PowerShell-Cmdlets für SharePoint-Modus von Reporting Services](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+- Verwenden Sie SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-PowerShell-Cmdlets, um eine Dienstanwendung und die Berichtsserver-Datenbanken zu erstellen. Weitere Informationen finden Sie im Beispiel für die Erstellung von Dienstanwendungen im Thema [PowerShell-Cmdlets für den SharePoint-Modus von Reporting Services](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
-## <a name="database-server-version-requirements"></a>Anforderungen für die Datenbankserver-Version
+## <a name="database-server-version-requirements"></a>Anforderungen hinsichtlich der Datenbankserverversion
 
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird zum Hosten der Berichtsserver-Datenbanken verwendet. Die Instanz [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] kann eine lokale oder eine Remoteinstanz sein. Im Folgenden finden Sie die unterstützten Version von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , die zum Hosten der Berichtsserver-Datenbanken verwendet werden können.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird zum Hosten der Berichtsserver-Datenbanken verwendet. Die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz kann eine lokale oder eine Remoteinstanz sein. Mit den folgenden unterstützten Version von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] können die Berichtsserver-Datenbanken gehostet werden:  
   
 - [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
@@ -63,17 +68,19 @@ ms.locfileid: "53328740"
   
 - [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
- Wenn Sie die Berichtsserver-Datenbank auf einem Remotecomputer erstellen, müssen Sie die Verbindung so konfigurieren, dass ein Domänenbenutzerkonto oder ein Dienstkonto mit Netzwerkzugriff verwendet wird. Wenn Sie eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Remoteinstanz verwenden, sollten Sie sorgfältig überlegen, welche Anmeldeinformationen der Berichtsserver für die Verbindung zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz verwenden soll. Weitere Informationen finden Sie unter [Konfigurieren einer Berichtsserver-Datenbankverbindung &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+Wenn Sie die Berichtsserver-Datenbank auf einem Remotecomputer erstellen, konfigurieren Sie die Verbindung so, dass ein Domänenbenutzerkonto oder ein Dienstkonto mit Netzwerkzugriff verwendet wird. Wenn Sie eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Remoteinstanz verwenden, sollten Sie überlegen, welche Anmeldeinformationen der Berichtsserver für die Verbindung zur Instanz verwenden soll. Weitere Informationen finden Sie unter [Konfigurieren einer Berichtsserver-Datenbankverbindung &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 > [!IMPORTANT]  
-> Der Berichtsserver und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz, die die Berichtsserver-Datenbank hostet, können sich in verschiedenen Domänen befinden. Bei einer Internetbereitstellung ist es üblich, einen Server zu verwenden, der sich hinter einer Firewall befindet. Wenn Sie einen Berichtsserver für den Internetzugriff konfigurieren, sollten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen verwenden, um die Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz hinter der Firewall herzustellen, und IPSec zum Schützen dieser Verbindung.  
+> Der Berichtsserver und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz, die die Berichtsserver-Datenbank hostet, können sich in verschiedenen Domänen befinden. Bei einer Internetbereitstellung ist es üblich, einen Server zu verwenden, der sich hinter einer Firewall befindet. 
+>
+> Wenn Sie einen Berichtsserver für Internetzugriff konfigurieren, verwenden Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldeinformationen, um eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz herzustellen, die sich hinter der Firewall befindet. Schützen Sie die Verbindung, indem Sie IPSEC verwenden.  
   
-## <a name="database-server-edition-requirements"></a>Anforderungen für die Datenbankserver-Edition
+## <a name="edition-requirements-for-a-database-server"></a>Editionsanforderungen für einen Datenbankserver 
 
- Wenn Sie eine Berichtsserver-Datenbank erstellen, sollten Sie beachten, dass nicht alle Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Hosten der Datenbank verwendet werden können. Weitere Informationen finden Sie im Abschnitt [Anforderungen für die Edition der Berichtsserver-Datenbank](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#report-server-database-server-edition-requirements) unter [Von den SQL Server 2017-Editionen unterstützte Reporting Services-Features](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).  
+ Wenn Sie eine Berichtsserver-Datenbank erstellen, können nicht alle Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden, um die Datenbank zu hosten. Weitere Informationen finden Sie unter [Anforderungen für die Berichtsserver-Datenbankserver-Edition](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#edition-requirements-for-the-report-server-database) in [Von den SQL Server-Editionen unterstützte Reporting Services-Features](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).  
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Reporting Services-Konfigurations-Manager](https://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
+Lesen Sie [Reporting Services-Konfigurations-Manager](https://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434).  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? Stellen Sie Ihre Frage im [Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231).

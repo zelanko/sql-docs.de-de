@@ -20,30 +20,32 @@ ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7cf815386b00ca70ceacbb549b9dbccd50c9a482
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 88f175d5d3658a61964ab7d7daba1be88438e2cd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206349"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130570"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Erweiterte Konflikterkennung und -lösung bei der Mergereplikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Wenn zwischen einem Verleger und einem Abonnenten eine Verbindung besteht und die Synchronisierung vorgenommen wird, werden jegliche Konflikte vom Merge-Agent erkannt. Wenn Konflikte erkannt werden, verwendet der Merge-Agent einen Konfliktlöser (der angegeben wird, wenn ein Artikel einer Veröffentlichung hinzugefügt wird), um festzustellen, welche Daten akzeptiert und an andere Sites weitergegeben werden.  
+
+ Die Mergereplikation bietet eine Reihe unterschiedlicher Methoden zur Erkennung und Lösung von Konflikten. Für die meisten Anwendungen empfiehlt sich die Standardmethode.  
+  
+-   Wenn es zwischen einem Verleger und einem Abonnenten zu einem Konflikt kommt, wird die Verlegeränderung beibehalten und die Abonnentenänderung verworfen.   
+-   Wenn es zwischen zwei Abonnenten bei der Verwendung von Clientabonnements (dem Standardtyp für Pullabonnements) zu einem Konflikt kommt, wird die Änderung des Abonnenten beibehalten, der als erster die Synchronisierung mit dem Verleger vornimmt. Die Änderung des zweiten Abonnenten wird verworfen. Informationen zum Angeben von Client- und Serverabonnements finden Sie unter [Angeben eines Mergeabonnementtyps und einer Konfliktlösungspriorität &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md).   
+-   Wenn es zwischen zwei Abonnenten bei der Verwendung von Serverabonnements (dem Standardtyp für Pushabonnements) zu einem Konflikt kommt, wird die Änderung des Abonnenten mit dem höchsten priority-Wert beibehalten, die Änderung des zweiten Abonnenten wird verworfen. Wenn die priority-Werte identisch sind, wird die Änderung des Abonnenten beibehalten, der als erster die Synchronisierung mit dem Verleger vornimmt.  
   
 > [!NOTE]  
 >  Obwohl ein Abonnent mit dem Verleger synchronisiert wird, treten Konflikte normalerweise zwischen den Updates auf, die bei verschiedenen Abonnenten erfolgen, und nicht bei Updates, die bei einem Abonnenten und bei dem Verleger ausgeführt werden.  
   
- Das Verhalten der Konflikterkennung und -lösung ist von folgenden in diesem Thema beschriebenen Optionen abhängig:  
-  
--   Angabe der Nachverfolgung auf Spaltenebene, auf Zeilenebene oder auf der Ebene des logischen Datensatzes.  
-  
+ Das Verhalten der Konflikterkennung und -lösung ist von folgenden in diesem Thema beschriebenen Optionen abhängig:    
+-   Angabe der Nachverfolgung auf Spaltenebene, auf Zeilenebene oder auf der Ebene des logischen Datensatzes.    
 -   Angabe der standardmäßigen prioritätsbasierten Mechanismen zur Konfliktlösung oder Angabe eines Artikelkonfliktlösers. Als Artikelkonfliktlöser kommen infrage:  
   
-    -   Ein in verwaltetem Code geschriebener *Geschäftslogikhandler*  
-  
-    -   Ein COM-basierter *benutzerdefinierter Konfliktlöser*  
-  
+    -   Ein in verwaltetem Code geschriebener *Geschäftslogikhandler*   
+    -   Ein COM-basierter *benutzerdefinierter Konfliktlöser*    
     -   Ein von [!INCLUDE[msCoName](../../../includes/msconame-md.md)]bereitgestellter COM-basierter Konfliktlöser  
   
      Wenn der standardmäßige Mechanismus zur Konfliktlösung verwendet wird, wird das Verhalten durch den verwendeten Abonnementtyp, Client oder Server, näher bestimmt.  
@@ -51,18 +53,32 @@ ms.locfileid: "53206349"
 ## <a name="conflict-detection"></a>Konflikterkennung  
  Ob eine Datenänderung als Konflikt in Betracht kommt oder nicht ist vom Typ der für den Artikel festgelegten Konfliktnachverfolgung abhängig:  
   
--   Wenn Sie die Konfliktnachverfolgung auf Spaltenebene auswählen, wird eine Änderung als Konflikt eingestuft, wenn die Änderungen in derselben Spalte und derselben Zeile auf mehreren Replikationsknoten vorgenommen wurden.  
-  
--   Wenn Sie die Nachverfolgung auf Zeilenebene auswählen, wird ein Konflikt verursacht, wenn Änderungen in beliebigen Spalten derselben Zeilen auf mehreren Replikationsknoten vorgenommen wurden (die betroffenen Spalten in den entsprechenden Zeilen müssen identisch sein).  
-  
+-   Wenn Sie die Konfliktnachverfolgung auf Spaltenebene auswählen, wird eine Änderung als Konflikt eingestuft, wenn die Änderungen in derselben Spalte und derselben Zeile auf mehreren Replikationsknoten vorgenommen wurden.    
+-   Wenn Sie die Nachverfolgung auf Zeilenebene auswählen, wird ein Konflikt verursacht, wenn Änderungen in beliebigen Spalten derselben Zeilen auf mehreren Replikationsknoten vorgenommen wurden (die betroffenen Spalten in den entsprechenden Zeilen müssen identisch sein).    
 -   Wenn Sie die Nachverfolgung auf der Ebene des logischen Datensatzes auswählen, wird ein Konflikt verursacht, wenn Änderungen in beliebigen Zeilen desselben logischen Datensatzes auf mehreren Replikationsknoten vorgenommen wurden (die betroffenen Spalten in den entsprechenden Zeilen müssen identisch sein).  
   
  Weitere Informationen finden Sie unter [Ermitteln und Lösen von Konflikten in logischen Datensätzen](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
- Informationen zum Eingeben der Konfliktnachverfolgungs- und -lösungsebene für einen Artikel finden Sie unter [Geben Sie den Konflikt nachverfolgen und-lösungsebene für Mergeveröffentlichungen](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
+ Informationen zum Angeben der Konfliktnachverfolgungs- und -lösungsebene für einen Artikel finden Sie unter [Ändern von Mergereplikationseigenschaften](../../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
   
 ## <a name="conflict-resolution"></a>Konfliktlösung  
  Wenn ein Konflikt erkannt wird, startet der Merge-Agent den ausgewählten Konfliktlöser und verwendet diesen zur Bestimmung des Konfliktgewinners. Die Gewinnerzeile wird auf dem Verleger und auf dem Abonnenten angewendet, und die Daten der verlierenden Zeile werden in eine Konflikttabelle geschrieben. Konflikte werden direkt nach dem Ausführen des Konfliktlösers gelöst, es sei denn, Sie haben angegeben, dass Konflikte interaktiv gelöst werden sollen.  
+
+Lösen von Konflikten bei einer Mergereplikation[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Wenn zwischen einem Verleger und einem Abonnenten eine Verbindung besteht und die Synchronisierung vorgenommen wird, werden jegliche Konflikte vom Merge-Agent erkannt. Wenn Konflikte erkannt werden, legt der Merge-Agent mithilfe eines Konfliktlösers fest, welche Daten akzeptiert und für andere Sites weitergegeben werden.  
+  
+> [!NOTE]  
+>  Obwohl ein Abonnement die Synchronisierung mit dem Verleger vornimmt, treten Konflikte in der Regel zwischen Updates auf, die auf verschiedenen Abonnenten vorgenommen wurden, und nicht notwendigerweise zwischen Updates auf einem Abonnenten und dem Verleger.  
+  
+ Die Mergereplikation bietet eine Reihe unterschiedlicher Methoden zur Erkennung und Lösung von Konflikten. Für die meisten Anwendungen empfiehlt sich die Standardmethode.  
+  
+-   Wenn es zwischen einem Verleger und einem Abonnenten zu einem Konflikt kommt, wird die Verlegeränderung beibehalten und die Abonnentenänderung verworfen.  
+  
+-   Wenn es zwischen zwei Abonnenten bei der Verwendung von Clientabonnements (dem Standardtyp für Pullabonnements) zu einem Konflikt kommt, wird die Änderung des Abonnenten beibehalten, der als erster die Synchronisierung mit dem Verleger vornimmt. Die Änderung des zweiten Abonnenten wird verworfen. Informationen zum Angeben von Client- und Serverabonnements finden Sie unter [Angeben eines Mergeabonnementtyps und einer Konfliktlösungspriorität &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md).  
+  
+-   Wenn es zwischen zwei Abonnenten bei der Verwendung von Serverabonnements (dem Standardtyp für Pushabonnements) zu einem Konflikt kommt, wird die Änderung des Abonnenten mit dem höchsten priority-Wert beibehalten, die Änderung des zweiten Abonnenten wird verworfen. Wenn die priority-Werte identisch sind, wird die Änderung des Abonnenten beibehalten, der als erster die Synchronisierung mit dem Verleger vornimmt.  
+  
+ Weitere Informationen zur Konflikterkennung und -lösung bei der Mergereplikation finden Sie unter [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 ### <a name="resolver-types"></a>Konfliktlösertypen  
  Bei der Mergereplikation erfolgt die Konfliktlösung auf Artikelebene. Bei Veröffentlichungen, die sich aus mehreren Artikeln zusammensetzen, ist die Verwendung unterschiedlicher Konfliktlöser für verschiedene Artikel oder desselben Konfliktlösers für einen Artikel, mehrere Artikel oder alle Artikel möglich, die zu einer Veröffentlichung gehören.  

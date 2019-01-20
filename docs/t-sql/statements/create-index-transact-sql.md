@@ -55,18 +55,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55f5056f65daa3c9f52809087f4cf6773d708910
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 8a77956d457e70566cbebef0e92d952b0b1158d9
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980506"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300507"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Unterstützen Sie uns bei der Verbesserung der Dokumentation für SQL Server.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Senden Sie uns Ihr Feedback zum Inhaltsverzeichnis der SQL-Dokumentation!](https://aka.ms/sqldocsurvey)
 
 Erstellt einen eindeutigen Index für eine Tabelle oder Sicht. Wird auch als Rowstore-Index bezeichnet, da es sich entweder um einen gruppierten oder nicht gruppierten B-Strukturindex handelt. Sie können noch bevor die Tabelle mit Daten aufgefüllt wird, einen Rowstore-Index erstellen. Verwenden Sie einen Rowstore-Index, um die Abfrageleistung zu verbessern, insbesondere, wenn die Abfragen aus bestimmten Spalten auswählen oder Werte erfordern, die in einer bestimmten Reihenfolge sortiert werden sollen.  
   
@@ -278,7 +278,7 @@ Erstellt einen Index, der die logische Reihenfolge einer Tabelle angibt. Bei ein
   
  Gefilterte Indizes gelten nicht für XML-Indizes und Volltextindizes. Bei UNIQUE-Indizes müssen nur die ausgewählten Zeilen über eindeutige Indexwerte verfügen. Bei gefilterten Indizes ist die IGNORE_DUP_KEY-Option nicht zulässig.  
   
-ON *partition_scheme_name* **( *column_name* )**  
+ON _partition_scheme_name_ **( *column_name* )**  
 **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Gibt das Partitionsschema an, das die Dateigruppen definiert, denen die Partitionen eines partitionierten Index zugeordnet werden. Das Partitionsschema muss bereits durch Ausführen von [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) oder [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) in der Datenbank vorhanden sein. *column_name* gibt die Spalte an, auf deren Grundlage ein partitionierter Index partitioniert wird. Diese Spalte muss mit dem Datentyp, der Länge und der Genauigkeit des Arguments der Partitionsfunktion übereinstimmen, die *partition_scheme_name* verwendet. *column_name* ist nicht auf Spalten in der Indexdefinition beschränkt. Es können beliebige Spalten der Basistabelle angegeben werden, mit der Ausnahme, dass *column_name* beim Partitionieren von UNIQUE-Indizes aus den Spalten ausgewählt werden muss, die als eindeutige Schlüssel verwendet werden. Mit dieser Einschränkung kann [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Eindeutigkeit der Schlüsselwerte in nur einer einzigen Partition überprüfen.  
@@ -476,7 +476,7 @@ RESUMABLE **=** { ON | **OFF**}
 
  Der Indexvorgang OFF ist nicht fortsetzbar.
 
-MAX_DURATION **=** *time* [**MINUTES**] kombiniert mit **RESUMABLE = ON** (erfordert **ONLINE = ON**).
+MAX_DURATION **=** _time_ [**MINUTES**] kombiniert mit **RESUMABLE = ON** (erfordert **ONLINE = ON**).
  
 **Gilt für**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] als öffentliche Previewfunktion
 
@@ -696,7 +696,7 @@ INSERT INTO t1 VALUES (1, 0);
   
 -   Neue Indexoptionen können nur mithilfe von WITH (**_option\_name_ = ON | OFF**) angegeben werden.  
 -   Optionen können nicht mithilfe der abwärtskompatiblen und der neuen Syntax in derselben Anweisung angegeben werden. Wenn Sie beispielsweise WITH (**DROP_EXISTING, ONLINE = ON**) angeben, schlägt die Anweisung fehl.  
--   Beim Erstellen eines XML-Index müssen die Optionen mithilfe von WITH (***option_name*= ON | OFF**) angegeben werden.  
+-   Beim Erstellen eines XML-Index müssen die Optionen mithilfe von WITH (**_option_name_= ON | OFF**) angegeben werden.  
   
 ## <a name="dropexisting-clause"></a>DROP_EXISTING (Klausel)  
  Mit der DROP_EXISTING-Klausel können Sie den Index neu erstellen, Spalten hinzufügen oder löschen, Optionen ändern, die Sortierreihenfolge für Spalten ändern sowie das Partitionsschema oder die Dateigruppe ändern.  

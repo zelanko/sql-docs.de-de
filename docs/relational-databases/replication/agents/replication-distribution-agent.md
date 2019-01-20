@@ -16,12 +16,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a71962ea2e0a6d40534a9884fbb026e3d90aaf1c
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: b1b43a2c739de3ae0f23871c7bc023b3f215b4ce
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590484"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126640"
 ---
 # <a name="replication-distribution-agent"></a>Replikationsverteilungs-Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -146,7 +146,7 @@ distrib [-?]
  > [!NOTE]  
  >  Ein gültiges SSL-Zertifikat wird mit dem vollqualifizierten Domänennamen der SQL Server-Instanz definiert. Damit der Agent die Verbindung erfolgreich herstellen kann, wenn „-EncryptionLevel“ auf 2 festgelegt ist, sollten Sie einen Alias auf der lokalen SQL Server-Instanz erstellen. Der Parameter „Alias Name“ sollte den Servernamen enthalten, und für den Parameter „Server“ sollte der vollqualifizierte Name der SQL Server-Instanz festgelegt werden.
 
- Weitere Informationen finden Sie unter [Sicherheitsübersicht &#40;Replikation&#41;](../../../relational-databases/replication/security/security-overview-replication.md).  
+ Weitere Informationen finden Sie unter [Anzeigen und Ändern von Replikationssicherheitseinstellungen](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
  **-ErrorFile** _error_path_and_file_name_  
  Der Pfad und Dateiname der Fehlerdatei, die der Verteilungs-Agent generiert. Diese Datei wird an dem jeweiligen Punkt erstellt, an dem während der Anwendung der Replikationstransaktionen auf dem Abonnenten ein Fehler aufgetreten ist. Fehler, die auf dem Verleger oder Verteiler auftreten, werden nicht in dieser Datei protokolliert. Diese Datei enthält die Replikationstransaktionen, bei denen Fehler aufgetreten sind, sowie die zugeordneten Fehlermeldungen. Wenn dieser Parameter nicht angegeben ist, wird die Fehlerdatei im aktuellen Verzeichnis des Verteilungs-Agents generiert. Der Name der Fehlerdatei entspricht dem Namen des Verteilungs-Agents mit der Erweiterung ERR. Wenn eine Datei mit dem angegebenen Namen vorhanden ist, werden Fehlermeldungen an diese Datei angefügt. Dieser Parameter kann maximal 256 Unicode-Zeichen umfassen.  
@@ -276,7 +276,7 @@ distrib [-?]
  Gibt den Abonnementtyp für die Verteilung an. Der Wert **0** steht für ein Pushabonnement, der Wert **1** für ein Pullabonnement und der Wert **2** für ein anonymes Abonnement.  
   
  **-TransactionsPerHistory** [ **0**| **1**|... **10000**]  
- Gibt das Transaktionsintervall für die Verlaufsprotokollierung an. Wenn die Anzahl von Transaktionen mit ausgeführtem Commit seit der letzten Instanz der Verlaufsprotokollierung den Wert dieser Option übersteigt, wird eine Verlaufsmeldung protokolliert. Der Standardwert ist 100. Der Wert **0** gibt unendliche **TransactionsPerHistory**an. Siehe vorherigen Parameter **-MessageInterval**.  
+ Gibt das Transaktionsintervall für die Verlaufsprotokollierung an. Wenn die Anzahl von Transaktionen mit ausgeführtem Commit seit der letzten Instanz der Verlaufsprotokollierung den Wert dieser Option übersteigt, wird eine Verlaufsmeldung protokolliert. Der Standardwert ist 100. Der Wert **0** gibt unendliche **TransactionsPerHistory**an. See the preceding **–MessageInterval**parameter.  
   
  **-UseDTS**  
  Muss als Parameter für eine Veröffentlichung angegeben werden, die eine Datentransformation ermöglicht.  

@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/16/2018
+ms.date: 01/08/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f01c19b7afd63402abc5729404d73e52429722be
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 55d919cefd20ef4b139dbf30a053bbda568f6e38
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980076"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242161"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -168,9 +168,9 @@ Den empfohlenen Workflow für das Aktualisieren des Kompatibilitätsgrads finden
 ## <a name="differences-between-compatibility-level-140-and-level-150"></a>Unterschiede zwischen Kompatibilitätsgrad 140 und Kompatibilitätsgrad 150  
 In diesem Abschnitt werden neue mit Kompatibilitätsgrad 150 eingeführte Verhaltensweisen beschrieben.
 
-Der Datenbank-Kompatibilitätsgrad 150 befindet sich derzeit in der privaten Vorschau für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. Dieser Datenbank-Kompatibilitätsgrad wird mit der nächsten Generation von Abfrageverarbeitungverbesserungen verbunden sein, die über das hinausgehen, was bei Datenbank-Kompatibilitätsgrad 140 eingeführt wurde.     
+Der Datenbank-Kompatibilitätsgrad 150 befindet sich derzeit in der öffentlichen Vorschau für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. Dieser Datenbank-Kompatibilitätsgrad wird mit der nächsten Generation von Abfrageverarbeitungverbesserungen verbunden sein, die über das hinausgehen, was bei Datenbank-Kompatibilitätsgrad 140 eingeführt wurde.     
 
-Weitere Informationen zu Abfrageverarbeitungsfeatures, die im Datenbank-Kompatibilitätsgrad 150 aktiviert sind, finden Sie unter [Neuigkeiten zu SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md).     
+Weitere Informationen zu Abfrageverarbeitungsfeatures, die im Datenbank-Kompatibilitätsgrad 150 aktiviert sind, finden Sie unter [Neuigkeiten zu SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md) und [Intelligente Abfrageverarbeitung in SQL-Datenbanken](https://docs.microsoft.com/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017).
 
 ## <a name="differences-between-compatibility-level-130-and-level-140"></a>Unterschiede zwischen Kompatibilitätsgrad 130 und Kompatibilitätsgrad 140  
 In diesem Abschnitt werden neue mit Kompatibilitätsgrad 140 eingeführte Verhaltensweisen beschrieben.

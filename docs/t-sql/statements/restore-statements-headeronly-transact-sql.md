@@ -20,16 +20,16 @@ helpviewer_keywords:
 - RESTORE HEADERONLY statement
 - backup header information [SQL Server]
 ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: cfc88234cf7d8fea62a07969949e53b084eee17f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 818bd4150965f0a1e36c942f21d9446759c4ec04
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207789"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242243"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE-Anweisungen – HEADERYONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -85,7 +85,7 @@ FROM <backup_device>
  Zu jeder Sicherung auf dem jeweiligen Medium sendet der Server eine Zeile mit Headerinformationen, die aus den folgenden Spalten besteht:  
   
 > [!NOTE]
->  RESTORE HEADERONLY liest alle Sicherungssätze auf dem Medium. Beim Verwenden von Bandlaufwerken mit hoher Kapazität kann die Erstellung dieses Resultsets daher eine gewisse Zeit in Anspruch nehmen. Wenn die Medien schnell gelesen werden sollen, ohne dass Informationen zu jedem Sicherungssatz abgerufen werden, sollten Sie RESTORE LABELONLY verwenden oder FILE **=** *backup_set_file_number* angeben.  
+>  RESTORE HEADERONLY liest alle Sicherungssätze auf dem Medium. Beim Verwenden von Bandlaufwerken mit hoher Kapazität kann die Erstellung dieses Resultsets daher eine gewisse Zeit in Anspruch nehmen. Wenn die Medien schnell gelesen werden sollen, ohne dass Informationen zu jedem Sicherungssatz abgerufen werden, sollten Sie RESTORE LABELONLY verwenden oder FILE **=** _backup_set_file_number_ angeben.  
 > 
 > [!NOTE]
 >  Aufgrund der Eigenschaften von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format können Sicherungssätze anderer Softwareprogramme Speicherplatz auf demselben Medium wie [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherungssätze belegen. Das von RESTORE HEADERONLY zurückgegebene Resultset schließt eine Zeile für jeden dieser anderen Sicherungssätze ein.  
@@ -122,7 +122,7 @@ FROM <backup_device>
 |**SoftwareVersionBuild**|**int**|Buildnummer des Servers, der den Sicherungssatz erstellt hat.|  
 |**MachineName**|**nvarchar(128)**|Name des Computers, der den Sicherungsvorgang ausgeführt hat.|  
 |**Flags**|**int**|Die Bedeutungen der einzelnen Flagbits, wenn diese auf **1** festgelegt sind, lauten folgendermaßen:<br /><br /> **1** = Protokollsicherung enthält massenprotokollierte Vorgänge.<br /><br /> **2** = Momentaufnahmesicherung<br /><br /> **4** = Datenbank war zum Zeitpunkt der Sicherung schreibgeschützt.<br /><br /> **8** = Datenbank war zum Zeitpunkt der Sicherung im Einzelbenutzermodus.<br /><br /> **16** = Sicherung enthält Sicherungsprüfsummen.<br /><br /> **32** = Datenbank war zum Zeitpunkt der Sicherung beschädigt; trotz der Fehler wurde die Fortsetzung des Sicherungsvorgangs angefordert.<br /><br /> **64** = Sicherung des Protokollfragments.<br /><br /> **128** = Sicherung des Protokollfragments mit unvollständigen Metadaten.<br /><br /> **256** = Sicherung des Protokollfragments mithilfe von NORECOVERY.<br /><br /> **Wichtig:** Anstelle von **Flags** sollten die einzelnen booleschen Spalten (weiter unten von **HasBulkLoggedData** bis **IsCopyOnly** aufgeführt) verwendet werden.|  
-|**BindingID**|**uniqueidentifier**|Bindungs-ID für die Datenbank. Sie entspricht dem Wert von **sys.database_recovery_status****database_guid**. Wenn eine Datenbank wiederhergestellt wird, wird ein neuer Wert zugewiesen. Weitere Informationen finden Sie unter **FamilyGUID** (weiter unten).|  
+|**BindingID**|**uniqueidentifier**|Bindungs-ID für die Datenbank. Sie entspricht dem Wert von **sys.database_recovery_status database_guid**. Wenn eine Datenbank wiederhergestellt wird, wird ein neuer Wert zugewiesen. Weitere Informationen finden Sie unter **FamilyGUID** (weiter unten).|  
 |**RecoveryForkID**|**uniqueidentifier**|ID für den letzten Wiederherstellungs-Verzweigungspunkt. Diese Spalte entspricht dem Wert von **last_recovery_fork_guid** in der [backupset](../../relational-databases/system-tables/backupset-transact-sql.md)-Tabelle.<br /><br /> Bei Datensicherungen ist **RecoveryForkID** mit **FirstRecoveryForkID** identisch.|  
 |**Sortierung**|**nvarchar(128)**|Die von der Datenbank verwendete Sortierung.|  
 |**FamilyGUID**|**uniqueidentifier**|ID der ursprünglichen Datenbank zum Zeitpunkt der Erstellung. Der Wert bleibt unverändert, wenn die Datenbank wiederhergestellt wird.|  
@@ -150,7 +150,7 @@ FROM <backup_device>
 |**EncryptorType**|**nvarchar(32)**|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1)) bis zur aktuellen Version.<br /><br /> Verwendeter Verschlüsselungstyp: Zertifikat oder asymmetrischer Schlüssel Wenn die Sicherung nicht verschlüsselt wurde, ist dieser Wert NULL.|  
   
 > [!NOTE]  
->  Wenn für die Sicherungssätze Kennwörter definiert sind, gibt RESTORE HEADERONLY vollständige Informationen nur für den Sicherungssatz zurück, dessen Kennwort mit dem Kennwort übereinstimmt, das mit der Befehlsoption PASSWORD angegeben wird. Außerdem gibt RESTORE HEADERONLY die vollständigen Informationen zu ungeschützten Sicherungssätzen zurück. Für die anderen auf dem Medium befindlichen kennwortgeschützten Sicherungssätze wird die **BackupName**-Spalte auf '***Password Protected\*\*\*' festgelegt; alle anderen Spalten weisen den Wert NULL auf.  
+>  Wenn für die Sicherungssätze Kennwörter definiert sind, gibt RESTORE HEADERONLY vollständige Informationen nur für den Sicherungssatz zurück, dessen Kennwort mit dem Kennwort übereinstimmt, das mit der Befehlsoption PASSWORD angegeben wird. Außerdem gibt RESTORE HEADERONLY die vollständigen Informationen zu ungeschützten Sicherungssätzen zurück. Für die anderen auf dem Medium befindlichen kennwortgeschützten Sicherungssätze wird die **BackupName**-Spalte auf '**_Password Protected_**' festgelegt; alle anderen Spalten weisen den Wert NULL auf.  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Ein Client kann RESTORE HEADERONLY zum Abrufen aller Headerinformationen für alle Sicherungen auf einem bestimmten Sicherungsmedium verwenden. Für jede Sicherung auf dem Sicherungsmedium sendet der Server die Headerinformationen als Zeile zurück.  

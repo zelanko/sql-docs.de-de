@@ -30,15 +30,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 68900243001edf7d9dcb39bcf10bf13e24bd0c48
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: 1487803dbbcb2ef09dd182dea2eaffa6a967badf
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997582"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298927"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Senden Sie uns Ihr Feedback zum Inhaltsverzeichnis der SQL-Dokumentation!](https://aka.ms/sqldocsurvey)
 
   Implementiert die Fehlerbehandlung für [!INCLUDE[tsql](../../includes/tsql-md.md)], die Ähnlichkeiten mit der Ausnahmebehandlung in den Sprachen [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# und [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ hat. Eine Gruppe von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen kann in einen TRY-Block eingeschlossen werden. Wenn innerhalb des TRY-Blocks ein Fehler auftritt, wird die Steuerung an eine andere Gruppe von Anweisungen innerhalb eines CATCH-Blocks übergeben.  
   

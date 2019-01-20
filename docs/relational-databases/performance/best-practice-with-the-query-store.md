@@ -14,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2203e8fe68861fd0e69dae352fef8c015e76859f
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 8b46686dfb440e9d0d9fa68fcaf23d51eea86c97
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328970"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143470"
 ---
 # <a name="best-practice-with-the-query-store"></a>Bewährte Methoden für den Abfragespeicher
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -329,17 +329,17 @@ WHERE is_forced_plan = 1;
   
 ##  <a name="Renaming"></a> Vermeiden der Umbenennung von Datenbanken bei Abfragen mit erzwungenen Plänen  
 
- Ausführungspläne verweisen auf Objekte mithilfe von dreiteiligen Namen `database.schema.object`.   
+Ausführungspläne verweisen auf Objekte mithilfe von dreiteiligen Namen `database.schema.object`.   
 
 Wenn Sie eine Datenbank umbenennen, wird das Erzwingen eines Plans fehlschlagen, wodurch bei allen nachfolgenden Abfrageausführungen eine Neukompilierung durchgeführt wird.  
 
-##  <a name="Recovery"></a> Verwenden von Ablaufverfolgungsflags für unternehmenskritische Server zur effizienteren Notfallwiederherstellung
+##  <a name="Recovery"></a> Verwenden von Ablaufverfolgungsflags für unternehmenskritische Server
  
-Die globalen Ablaufverfolgungsflags 7745 und 7752 können zur Leistungsoptimierung des Abfragespeichers in HADR-Szenarios verwendet werden. Weitere Informationen hierzu finden Sie unter [Ablaufverfolgungsflags](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
+Die globalen Ablaufverfolgungsflags 7745 und 7752 können verwendet werden, um die Verfügbarkeit von Datenbanken mit Abfragespeicher zu verbessern. Weitere Informationen hierzu finden Sie unter [Ablaufverfolgungsflags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
   
-Das Ablaufverfolgungsflag 7745 verhindert, dass der Abfragespeicher standardmäßig Daten auf den Datenträger schreibt, bevor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beendet werden kann.
+-  Das Ablaufverfolgungsflag 7745 verhindert, dass der Abfragespeicher standardmäßig Daten auf den Datenträger schreibt, bevor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beendet werden kann. Dies bedeutet, dass Abfragespeicherdaten, die erfasst, aber noch nicht dauerhaft auf einem Datenträger gespeichert wurden, verloren gehen. 
   
-Das Ablaufverfolgungsflag 7752 ermöglicht das asynchrone Laden eines Abfragespeichers und erlaubt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Ausführung von Abfragen, bevor der Abfragespeicher vollständig geladen wurde. Der Abfragespeicher verhindert standardmäßig, dass Abfragen ausgeführt werden, bevor der Abfragespeicher wiederhergestellt wurde.
+-  Ablaufverfolgungsflag 7752 aktiviert asynchrones Laden von Abfragespeicher. Dadurch kann eine Datenbank online geschaltet und können Abfragen ausgeführt werden, bevor der Abfragespeicher vollständig wiederhergestellt wurde. Beim Standardverhalten erfolgt synchrones Laden von Abfragespeicher. Das Standardverhalten verhindert, dass Abfragen ausgeführt werden, bevor der Abfragespeicher wiederhergestellt wurde, verhindert aber auch, dass irgendwelche Abfragen in der Datensammlung ignoriert werden.
 
 > [!IMPORTANT]
 > Wenn Sie den Abfragespeicher für Erkenntnisse zu Just-In-Time-Arbeitsauslastungen in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] verwenden, planen Sie baldmöglichst die Installation der Fixes zur Leistungsskalierbarkeit in [KB 4340759](https://support.microsoft.com/help/4340759) ein. 

@@ -47,18 +47,18 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 60938c31712e8bb6b08579cab099baaaf99bb0aa
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 4cb25fff7ac946808ecad9cb4d0e8594f32ad5a2
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980386"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300567"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [Unterstützen Sie uns bei der Verbesserung der Dokumentation für SQL Server.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Senden Sie uns Ihr Feedback zum Inhaltsverzeichnis der SQL-Dokumentation!](https://aka.ms/sqldocsurvey)
 
 Erstellt eine neue Tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
@@ -990,6 +990,8 @@ INSERT INTO #MyTempTable VALUES (1);
 ```  
   
  Wenn mehr als eine temporäre Tabelle innerhalb einer einzigen gespeicherten Prozedur oder innerhalb eines Batches erstellt wird, müssen verschiedene Namen für die temporären Tabellen verwendet werden.  
+ 
+ Wenn Sie eine temporäre Tabelle erstellen oder auf eine temporäre Tabelle zugreifen und dabei einen Schemanamen (*schema_name*) angeben, wird dieser ignoriert.  Alle temporären Tabellen werden im dbo-Schema erstellt.
   
  Wenn eine lokale temporäre Tabelle in einer gespeicherten Prozedur oder einer Anwendung erstellt wird, die von mehreren Benutzern gleichzeitig ausgeführt werden kann, muss es dem [!INCLUDE[ssDE](../../includes/ssde-md.md)] möglich sein, die von den verschiedenen Benutzern erstellten Tabellen zu unterscheiden. Zu diesem Zweck fügt das [!INCLUDE[ssDE](../../includes/ssde-md.md)] intern ein numerisches Suffix an alle Namen lokaler temporärer Tabellen an. Der vollständige, in der Tabelle **sysobjects** von **tempdb** gespeicherte Name einer temporären Tabelle besteht aus dem in der CREATE TABLE-Anweisung angegebenen Tabellennamen und dem vom System generierten numerischen Suffix. Damit das Suffix angefügt werden kann, darf *table_name* für eine lokale temporäre Tabelle nicht länger als 116 Zeichen sein.  
   

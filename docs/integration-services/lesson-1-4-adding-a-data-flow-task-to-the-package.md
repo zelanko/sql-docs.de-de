@@ -1,7 +1,7 @@
 ---
 title: 'Schritt 4: Hinzufügen eines Datenflusstasks zum Paket | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/03/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,38 +11,39 @@ ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 27e18408d3e96c6b03814beae37238bf52c5c192
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2f9bfb46276de6804aa9222a298bec96d970fd51
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205899"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143080"
 ---
-# <a name="lesson-1-4---adding-a-data-flow-task-to-the-package"></a>Lektion 1-4: Hinzufügen eines Datenflusstasks zum Paket
-Nach dem Erstellen des Verbindungs-Managers für die Quell- und Zieldaten besteht die nächste Aufgabe im Hinzufügen eines Datenflusstasks zu Ihrem Paket. Der Datenflusstask kapselt die Datenfluss-Engine, von der Daten zwischen Quellen und Zielen verschoben werden, und bietet die Funktionalität für das Transformieren, das Cleanup und das Ändern von Daten beim Verschieben. Im Datenflusstask wird der Hauptteil eines ETL-Prozesses (Extract, Transform, Load - Extrahieren, Transformieren, Laden) durchgeführt.  
+# <a name="lesson-1-4-add-a-data-flow-task-to-the-package"></a>Lektion 1-4: Hinzufügen eines Datenflusstasks zum Paket
+
+Nachdem Sie die Verbindungs-Manager für die Quell- und die Zieldaten erstellt haben, fügen Sie einen Datenflusstasks zu Ihrem Paket hinzu. Im Datenflusstask ist die Datenfluss-Engine definiert, über die Daten zwischen Quellen und Zielen verschoben werden, und der Task bietet die Funktionalität für das Transformieren, das Cleanup und das Ändern von Daten beim Verschieben. Im Datenflusstask wird der Hauptteil eines ETL-Prozesses (Extract, Transform, Load - Extrahieren, Transformieren, Laden) durchgeführt.  
   
-> [!NOTE]
+> [!NOTE]  
 > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Trennt den Datenfluss von der Ablaufsteuerung.  
   
-### <a name="to-add-a-data-flow-task"></a>So fügen Sie einen Datenflusstask hinzu  
+## <a name="add-a-data-flow-task"></a>Hinzufügen eines Datenflusstasks  
   
-1.  Klicken Sie auf die Registerkarte **Ablaufsteuerung** .  
+1.  Wählen Sie die Registerkarte **Ablaufsteuerung** aus.  
   
-2.  Erweitern Sie in der **SSIS-Toolbox**die Option **Favoriten**, und ziehen Sie anschließend einen **Datenflusstask** auf die Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** .  
+2.  Erweitern Sie im Bereich **SSIS-Toolbox** die Option **Favoriten**, und ziehen Sie anschließend einen **Datenflusstask** auf die Entwurfsoberfläche der Registerkarte **Ablaufsteuerung**.  
   
     > [!NOTE]  
-    > Wenn die SSIS-Toolbox nicht verfügbar ist, wählen Sie im Hauptmenü SSIS und dann SSIS-Toolbox aus, um die SSIS-Toolbox anzuzeigen.  
+    > Wenn die SSIS-Toolbox nicht verfügbar ist, wählen Sie das Menü **SSIS** aus, und wählen Sie dann **SSIS-Toolbox** aus, um die Toolbox anzuzeigen.  
+
+3.  Klicken Sie auf der **Ablaufsteuerung**-Entwurfsoberfläche mit der rechten Maustaste auf den neuen **Datenflusstask**, wählen Sie **Umbenennen** aus, und ändern Sie den Namen in **Extract Sample Currency Data**.  
   
-3.  Klicken Sie auf der **Ablaufsteuerung** -Entwurfsoberfläche mit der rechten Maustaste auf den neu hinzugefügten **Datenflusstask**, klicken Sie auf **Umbenennen**, und ändern Sie den Namen zu **Extract Sample Currency Data**.  
+    Geben Sie eindeutige Namen für alle Komponenten an, die Sie einer Entwurfsoberfläche hinzufügen. Aus Gründen der Benutzer- und Wartungsfreundlichkeit sollten die Namen die Funktion jeder Komponente beschreiben. Das Befolgen dieser Namensrichtlinien ermöglicht die Selbstdokumentierung Ihrer [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Pakete. Eine andere Möglichkeit zur Dokumentation Ihrer Pakete besteht im Verwenden von Anmerkungen. Weitere Informationen zum Verwenden von Anmerkungen finden Sie unter [Verwenden von Anmerkungen in Paketen](../integration-services/use-annotations-in-packages.md).  
   
-    Es empfiehlt sich, eindeutige Namen für alle Komponenten bereitzustellen, die Sie einer Entwurfsoberfläche hinzufügen. Aus Gründen der Benutzer- und Wartungsfreundlichkeit sollten die Namen die Funktion beschreiben, die jede Komponente ausführt. Das Befolgen dieser Namensrichtlinien ermöglicht die Selbstdokumentierung Ihrer [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Pakete. Eine andere Möglichkeit zur Dokumentation Ihrer Pakete besteht im Verwenden von Anmerkungen. Weitere Informationen zum Verwenden von Anmerkungen finden Sie unter [Verwenden von Anmerkungen in Paketen](../integration-services/use-annotations-in-packages.md).  
+4.  Klicken Sie mit der rechten Maustaste auf den Datenflusstask, wählen Sie **Eigenschaften** aus, und prüfen Sie im Eigenschaftenfenster, ob die **LocaleID**-Eigenschaft auf **Englisch (USA)** festgelegt ist.  
   
-4.  Klicken Sie mit der rechten Maustaste auf den Datenflusstask, klicken Sie auf **Eigenschaften**, und prüfen Sie im Eigenschaftenfenster, ob die **LocaleID** -Eigenschaft auf **Englisch (USA)** festgelegt ist.  
-  
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="go-to-next-task"></a>Weiter zur nächsten Aufgabe
 [Schritt 5: Hinzufügen und Konfigurieren der Flatfilequelle](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
 [Datenflusstask](../integration-services/control-flow/data-flow-task.md)  
   
   

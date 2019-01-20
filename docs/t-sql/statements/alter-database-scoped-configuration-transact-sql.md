@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 972cd8bf1acc8a7abcf428c3bfd553e878248fde
-ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
+ms.openlocfilehash: e50b19daefc7f765a4d24850c6557af419c0a345
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069786"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226597"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -103,7 +103,7 @@ Damit können Sie das Kardinalitätsschätzungsmodell für den Abfrageoptimierer
 
 > [!TIP]
 > Fügen Sie den [Abfragehinweis](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) **QUERYTRACEON** hinzu, um dies auf Abfrageebene zu erreichen.
-> Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 müssen Sie den [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md) **USE HINT** hinzufügen, statt das Ablaufverfolgungsflag zu verwenden, um dies auf Abfrageebene zu erreichen.
+> Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 müssen Sie den [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md#use_hint) **USE HINT** hinzufügen, statt das Ablaufverfolgungsflag zu verwenden, um dies auf Abfrageebene zu erreichen.
 
 PRIMARY
 
@@ -115,7 +115,7 @@ Aktiviert oder deaktiviert die [Parameterermittlung](../../relational-databases/
 
 > [!TIP]
 > Informationen darüber, wie Sie dies auf Abfrageebene erreichen, finden Sie unter dem [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md) **OPTIMIZE FOR UNKNOWN**.
-> Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 ist der [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md) **USE HINT** auch verfügbar, damit dies auf Abfrageebene erreicht werden kann.
+> Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 ist der [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md#use_hint) **USE HINT** auch verfügbar, damit dies auf Abfrageebene erreicht werden kann.
 
 PRIMARY
 
@@ -127,7 +127,7 @@ Aktiviert oder deaktiviert Hotfixes für die Abfrageoptimierung unabhängig vom 
 
 > [!TIP]
 > Fügen Sie den [Abfragehinweis](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) **QUERYTRACEON** hinzu, um dies auf Abfrageebene zu erreichen.
-> Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 müssen Sie den [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md) USE HINT hinzufügen, statt das Ablaufverfolgungsflag zu verwenden, um dies auf Abfrageebene zu erreichen.
+> Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 müssen Sie den [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md#use_hint) USE HINT hinzufügen, statt das Ablaufverfolgungsflag zu verwenden, um dies auf Abfrageebene zu erreichen.
 
 PRIMARY
 
@@ -139,7 +139,7 @@ Löscht den Prozedurcache (Plan) für die Datenbank und kann sowohl in den prim�
 
 IDENTITY_CACHE **=** { **ON** | OFF }
 
-**Gilt für **: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Gilt für** : [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Aktiviert oder deaktiviert den Identitätscache auf Datenbankebene. Der Standardwert ist **ON**. Identitätszwischenspeichern wird verwendet, um die Leistung von INSERT in Tabellen mit Identitätsspalten zu verbessern. Deaktiviert die Option IDENTITY_CACHE, um Lücken in einer Identitätsspalte zu vermeiden, wenn der Server unerwartet neu gestartet oder ein Failover zu einem sekundären Server ausgeführt wird. Diese Option ist mit dem vorhandenen [Ablaufverfolgungsflag 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) vergleichbar. Der einzige Unterschied besteht darin, dass sie auf Datenbankebene und nicht nur auf Serverebene festgelegt werden kann.
 
@@ -189,7 +189,7 @@ Dieser Wert erhöht Vorgänge, die ONLINE unterstützen. Vorgänge, die den Onli
 
 ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
-***Gilt für**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] als öffentliche Previewfunktion
+**Gilt für**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] als öffentliche Previewfunktion
 
 Ermöglicht es Ihnen, Optionen auszuwählen, die das Modul dazu veranlassen, unterstützte Vorgänge automatisch in fortsetzbar zu erhöhen. Der Standardwert ist OFF, was bedeutet, dass Vorgänge nicht in fortsetzbar erhöht werden, es sei denn, dies ist in der Anweisung angegeben. [sys. database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) enthält den aktuellen Wert von ELEVATE_RESUMABLE. Diese Optionen gelten nur für Vorgänge, die für fortsetzbar unterstützt werden.
 
@@ -215,19 +215,19 @@ Gestattet das Festlegen der Funktion für automatisches Löschen von [globalen t
 
 DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }
 
-**Gilt für **: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren der verschachtelten Ausführung für Tabellenwertfunktionen mit mehreren Anweisungen im Datenbank- oder Anweisungsbereich. Dabei kann ein Datenbank-Kompatibilitätsgrad von mindestens 140 beibehalten werden. Verschachtelte Funktionen stellen ein Feature der adaptiven Abfrageverarbeitung in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] dar. Weitere Informationen finden Sie unter [Adaptive Abfrageverarbeitung](../../relational-databases/performance/adaptive-query-processing.md).
 
 DISABLE_BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
 
-**Gilt für **: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren von adaptiven Joins im Datenbank- oder Anweisungsbereich. Dabei kann ein Datenbank-Kompatibilitätsgrad von mindestens 140 beibehalten werden. Adaptive Joins sind ein Feature der [adaptiven Abfrageverarbeitung](../../relational-databases/performance/adaptive-query-processing.md), die in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] eingeführt wurde.
 
 ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
-**Gilt für**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] als öffentliche Previewfunktion
+**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (das Feature befindet sich in der öffentlichen Vorschau)
 
 Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren von Feedback zur Speicherzuweisung im Zeilenmodus im Datenbank- oder Anweisungsbereich. Dabei kann ein Datenbank-Kompatibilitätsgrad von mindestens 150 beibehalten werden. Das Feedback zur Speicherzuweisung im Zeilenmodus stellt einen Bestandteil der [Adaptiven Abfrageverarbeitung](../../relational-databases/performance/adaptive-query-processing.md) dar, die in SQL Server 2019 eingeführt wurde.
 
@@ -271,7 +271,7 @@ Lesbare sekundäre Datenbanken (Always On-Verfügbarkeitsgruppen und georeplizie
 
 ### <a name="dacfx"></a>DacFX
 
-Da `ALTER DATABASE SCOPED CONFIGURATION` ein neues Feature in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) ist, das sich auf das Datenbankschema auswirkt, können Exporte des Schemas (mit oder ohne Daten) nicht in ältere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (z. B. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] oder [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]) importiert werden. Ein Export in ein [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) oder ein [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) aus einer Datenbank von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] oder [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], in der dieses neue Feature verwendet wird, könnte nicht in einen Server der Vorgängerversion importiert werden.
+Da `ALTER DATABASE SCOPED CONFIGURATION` ein neues Feature in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) ist, das sich auf das Datenbankschema auswirkt, können Exporte des Schemas (mit oder ohne Daten) nicht in ältere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (z. B. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] oder [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) importiert werden. Ein Export in ein [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) oder ein [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) aus einer Datenbank von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] oder [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], in der dieses neue Feature verwendet wird, könnte nicht in einen Server der Vorgängerversion importiert werden.
 
 ### <a name="elevateonline"></a>ELEVATE_ONLINE
 
@@ -289,7 +289,7 @@ Die Systemansicht [sys.database_scoped_configurations &#40;Transact-SQL&#41;](..
 Folgende Beispiele veranschaulichen die Verwendung von ALTER DATABASE SCOPED CONFIGURATION
 
 ### <a name="a-grant-permission"></a>A. Erteilen einer Berechtigung
-In diesem Beispiel wird dem Benutzer [Joe] die Berechtigung erteilt, die zum Ausführen von ALTER DATABASE SCOPED CONFIGURATION erforderlich ist.
+In diesem Beispiel wird dem Benutzer Joe die Berechtigung erteilt, die zum Ausführen von ALTER DATABASE SCOPED CONFIGURATION erforderlich ist.
 
 ```sql
 GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;
@@ -300,59 +300,59 @@ In diesem Beispiel wird in einem Georeplikationsszenario bei einer primären Dat
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET MAXDOP = 1 ;
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=4 ;
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = 4 ;
 ```
 
 In diesem Beispiel wird in einem Georeplikationsszenario der Wert für MAXDOP bei einer sekundären Datenbank auf den gleichen Wert wie für die zugehörige primäre Datenbank festgelegt.
 
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY ;
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = PRIMARY ;
 ```
 
 ### <a name="c-set-legacycardinalityestimation"></a>C. Festlegen von LEGACY_CARDINALITY_ESTIMATION
 In diesem Beispiel wird LEGACY_CARDINALITY_ESTIMATION in einem Georeplikationsszenario bei einer sekundären Datenbank auf ON festgelegt.
 
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=ON ;
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION = ON ;
 ```
 
 In diesem Beispiel wird der Wert für LEGACY_CARDINALITY_ESTIMATION in einem Georeplikationsszenario bei einer sekundären Datenbank auf den gleichen Wert wie für die zugehörige primäre Datenbank festgelegt.
 
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=PRIMARY ;
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION = PRIMARY ;
 ```
 
 ### <a name="d-set-parametersniffing"></a>D. Festlegen von PARAMETER_SNIFFING
 In diesem Beispiel wird PARAMETER_SNIFFING in einem Georeplikationsszenario bei einer primären Datenbank auf OFF festgelegt.
 
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING =OFF ;
+ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING = OFF ;
 ```
 
 In diesem Beispiel wird PARAMETER_SNIFFING in einem Georeplikationsszenario bei einer primären Datenbank auf OFF festgelegt.
 
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=OFF ;
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING = OFF ;
 ```
 
 In diesem Beispiel wird der Wert für PARAMETER_SNIFFING in einem Georeplikationsszenario bei einer sekundären Datenbank auf den gleichen Wert festgelegt wie für die zugehörige primäre Datenbank.
 
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY ;
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING = PRIMARY ;
 ```
 
 ### <a name="e-set-queryoptimizerhotfixes"></a>E. Festlegen von QUERY_OPTIMIZER_HOTFIXES
 Legt QUERY_OPTIMIZER_HOTFIXES in einem Georeplikationsszenario bei einer primären Datenbank auf ON fest.
 
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES=ON ;
+ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES = ON ;
 ```
 
 ### <a name="f-clear-procedure-cache"></a>F. Leeren des Prozedurcache
 In diesem Beispiel wird der Prozedurcache geleert (dies ist nur bei einer primären Datenbank möglich).
 
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;
+ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 ```
 
 ### <a name="g-set-identitycache"></a>G. Festlegen von IDENTITY_CACHE
@@ -361,7 +361,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;
 In diesem Beispiel wird der Identitätscache deaktiviert.
 
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
+ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE = OFF ;
 ```
 
 ### <a name="h-set-optimizeforadhocworkloads"></a>H. Festlegen von OPTIMIZE_FOR_AD_HOC_WORKLOADS
@@ -374,21 +374,21 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ```
 
 ### <a name="i-set-elevateonline"></a>I. Festlegen von ELEVATE_ONLINE
-**Gilt für**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] und als öffentliches Vorschaufeature
+**Gilt für**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (das Feature befindet sich in der öffentlichen Vorschau)
 
 In diesem Beispiel wird ELEVATE_ONLINE auf FAIL_UNSUPPORTED festgelegt.
 
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE=FAIL_UNSUPPORTED ;
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = FAIL_UNSUPPORTED ;
 ```
 
 ### <a name="j-set-elevateresumable"></a>J. Festlegen von ELEVATE_RESUMABLE
-**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] als öffentliche Previewfunktion
+**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (das Feature befindet sich in der öffentlichen Vorschau)
 
 In diesem Beispiel wird ELEVATE_RESUMABLE auf WHEN_SUPPORTED festgelegt.
 
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE=WHEN_SUPPORTED ;
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED ;
 ```
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen

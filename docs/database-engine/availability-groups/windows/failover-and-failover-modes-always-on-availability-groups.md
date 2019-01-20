@@ -16,12 +16,12 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 44e11edc9608dc4c10634ea58af1c0140bba666f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e20ad7cab67a87dd7bb76be0117ee87752e3e66f
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207439"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226667"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Failover und Failovermodi (Always On-Verfügbarkeitsgruppen)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,9 +84,9 @@ ms.locfileid: "53207439"
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
 |Automatisches Failover|Nein|Nein|Ja|  
 |Geplantes manuelles Failover|Nein|Ja|Ja|  
-|erzwungenes Failover|Ja|Ja|Ja**\***|  
+|erzwungenes Failover|Ja|Ja|Ja **&#42;**|  
   
- **\*** Wenn Sie einen Befehl für ein erzwungenes Failover für ein synchronisiertes sekundäres Replikat ausgeben, verhält sich das sekundäre Replikat genauso wie bei einem manuellen Failover.  
+ **&#42;** Wenn Sie einen Befehl für ein erzwungenes Failover für ein synchronisiertes sekundäres Replikat ausgeben, verhält sich das sekundäre Replikat genauso wie bei einem manuellen Failover.  
   
  Die Zeitdauer, für die Datenbank während eines Failovers nicht verfügbar ist, hängt vom Failovertyp und seiner Ursache ab.  
   

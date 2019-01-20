@@ -1,7 +1,7 @@
 ---
 title: 'Schritt 2: Hinzufügen und Konfigurieren des Foreach-Schleifencontainers | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/03/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,88 +11,81 @@ ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 56eaead79ddb85dc9948fabefb9956aa5516e2a9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0c0bf6d7db1b65e5a95413edf2088e3b1b79df60
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207419"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143357"
 ---
-# <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>Lektion 2-2 – Hinzufügen und Konfigurieren des Foreach-Schleifencontainers
-In dieser Aufgabe fügen Sie die Möglichkeit zum Schleifendurchlauf für einen Ordner von Flatfiles hinzu und wenden die auch in Lektion 1 verwendete Datenflusstransformation auf jede dieser Flatfiles an. Dies geschieht durch das Hinzufügen eines Foreach-Schleifencontainers zur Ablaufsteuerung und dessen Konfigurierung.  
+# <a name="lesson-2-2-add-and-configure-the-foreach-loop-container"></a>Lektion 2-2: Hinzufügen und Konfigurieren des Foreach-Schleifencontainers
+
+In dieser Aufgabe fügen Sie die Möglichkeit zum Schleifendurchlauf für einen Ordner von Flatfiles hinzu und wenden die Datenflusstransformation aus Lektion 1 auf jede dieser Flatfiles an. Dies geschieht durch das Hinzufügen eines Foreach-Schleifencontainers zur Ablaufsteuerung und dessen Konfigurierung.  
   
-Für den von Ihnen hinzugefügten Foreach-Schleifencontainer muss es möglich sein, eine Verbindung mit jeder Flatfile im Ordner herzustellen. Da alle Dateien im Ordner das gleiche Format aufweisen, kann vom Foreach-Schleifencontainer der gleiche Flatfile-Verbindungs-Manager zum Herstellen einer Verbindung mit jeder dieser Dateien verwendet werden. Der vom Container verwendete Flatfile-Verbindungs-Manager ist der gleiche Flatfile-Verbindungs-Manager, den Sie in Lektion 1 erstellt haben.  
+Für den von Ihnen hinzugefügten Foreach-Schleifencontainer muss es möglich sein, eine Verbindung mit jeder Flatfile im Ordner herzustellen. Da alle Dateien im Ordner das gleiche Format aufweisen, kann vom Foreach-Schleifencontainer der gleiche Flatfile-Verbindungs-Manager zum Herstellen einer Verbindung mit jeder dieser Dateien verwendet werden. Der Flatfile-Verbindungs-Manager, den der Container verwendet wird, ist derjenige, den Sie in Lektion 1 erstellt haben.  
   
-Zurzeit wird vom Flatfile-Verbindungs-Manager aus der Lektion 1 nur eine Verbindung mit einer bestimmten Flatfile hergestellt. Um iterativ Verbindungen mit jedem Flatfile im Ordner herzustellen, müssen Sie sowohl den Foreach-Schleifencontainer als auch den Flatfile-Verbindungs-Manager wie folgt konfigurieren:  
+Zurzeit wird vom Flatfile-Verbindungs-Manager aus Lektion 1 nur eine Verbindung mit einer bestimmten Flatfile hergestellt. Um iterativ Verbindungen mit jedem Flatfile im Ordner herzustellen, müssen Sie sowohl den Foreach-Schleifencontainer als auch den Flatfile-Verbindungs-Manager wie folgt konfigurieren:  
   
--   **Foreach-Schleifencontainer:** Sie ordnen den aufgezählten Wert des Containers einer benutzerdefinierten Paketvariablen zu. Der Container verwendet diese benutzerdefinierte Variable dann, um die **ConnectionString** -Eigenschaft des Verbindungs-Managers für Flatfiles dynamisch zu ändern und iterativ Verbindungen mit jeder Flatfile im Ordner herzustellen.  
+-   **Foreach-Schleifencontainer:** Sie ordnen den aufgezählten Wert des Containers einer benutzerdefinierten Paketvariablen zu. Der Container verwendet dann diese Variable, um die **ConnectionString**-Eigenschaft des Flatfile-Verbindungs-Managers dynamisch zu ändern und iterativ Verbindungen mit jeder Flatfile im Ordner herzustellen.  
   
 -   **Verbindungs-Manager für Flatfiles:** Sie ändern den Verbindungs-Manager, der in Lektion 1 erstellt wurde, indem Sie eine benutzerdefinierte Variable zum Auffüllen der **ConnectionString**-Eigenschaft des Verbindungs-Managers verwenden.  
   
-Die Vorgänge in diesem Task verdeutlichen, wie Sie den Foreach-Schleifencontainer erstellen und ändern, um eine benutzerdefinierte Paketvariable zu verwenden, und wie der Schleife der Datenflusstask hinzugefügt wird. Sie lernen, wie der Flatfile-Verbindungs-Manager geändert wird, um eine benutzerdefinierte Variable in der nächsten Aufgabe zu verwenden.  
+Die Vorgänge in diesem Task verdeutlichen, wie Sie den Foreach-Schleifencontainer erstellen und ändern, um eine benutzerdefinierte Paketvariable zu verwenden, und wie der Schleife der Datenflusstask hinzugefügt wird. Sie erfahren, wie der Flatfile-Verbindungs-Manager so geändert wird, dass er diese benutzerdefinierte Variable in der nächsten Aufgabe verwendet.  
   
-Nachdem Sie diese Änderungen am Paket vorgenommen haben, iteriert der Foreach-Schleifencontainer beim Ausführen des Pakets durch die Auflistung der Dateien im Ordner Sample Data. Jedes Mal, wenn eine mit den Kriterien übereinstimmende Datei gefunden wird, wird die benutzerdefinierte Variable vom Foreach-Schleifencontainer mit dem Dateinamen aufgefüllt, die benutzerdefinierte Variable der **ConnectionString** -Eigenschaft des Flatfile-Verbindungs-Managers für Sample Currency Data zugeordnet und der Datenfluss anschließend gegen diese Datei ausgeführt. Dadurch wird in jeder Iteration der Foreach-Schleife vom Datenflusstask eine andere Flatfile verarbeitet.  
+Nachdem Sie diese Änderungen am Paket vorgenommen haben, iteriert der Foreach-Schleifencontainer beim Ausführen des Pakets durch alle Dateien im Ordner „Sample Data“. Jedes Mal, wenn eine mit dem Kriterium übereinstimmende Datei gefunden wird, wird die neue Variable vom Foreach-Schleifencontainer mit dem Dateinamen aufgefüllt, wird diese Variable zur **ConnectionString**-Eigenschaft des Flatfile-Verbindungs-Managers für Sample Currency Data zugeordnet und wird der Datenfluss anschließend für diese Datei ausgeführt. Dies führt dazu, dass bei jeder Iteration der Foreach-Schleife im Datenflusstask eine andere Flatfile verarbeitet wird.  
   
-> [!NOTE]
-> Weil [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] die Ablaufsteuerung vom Datenfluss trennt, erfordert keine der Schleifen, die Sie der Ablaufsteuerung hinzufügen, Änderungen am Datenfluss. Deshalb muss der von Ihnen in Lektion 1 erstellte Datenfluss nicht geändert werden.  
+> [!NOTE]  
+> Weil [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] die Ablaufsteuerung vom Datenfluss trennt, erfordert keine der Schleifen, die Sie der Ablaufsteuerung hinzufügen, Änderungen am Datenfluss. Daher muss der Datenfluss aus Lektion 1 nicht geändert werden.  
   
-### <a name="to-add-a-foreach-loop-container"></a>So fügen Sie einen Foreach-Schleifencontainer hinzu  
+## <a name="add-a-foreach-loop-container"></a>Hinzufügen eines Foreach-Schleifencontainers  
   
-1.  Klicken Sie in **SQL Server Data Tools**auf die Registerkarte **Ablaufsteuerung** .  
+1.  Wählen Sie in **SQL Server Data Tools** die Registerkarte **Ablaufsteuerung** aus.  
   
 2.  Erweitern Sie **Container**in der **SSIS-Toolbox**, und ziehen Sie anschließend **Foreach-Schleifencontainer** auf die Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** .  
   
-3.  Klicken Sie mit der rechten Maustaste auf den neu hinzugefügten **Foreach-Schleifencontainer** , und wählen Sie **Bearbeiten**aus.  
+3.  Klicken Sie mit der rechten Maustaste auf den neuen **Foreach-Schleifencontainer**, und wählen Sie **Bearbeiten** aus.  
   
-4.  Geben Sie auf der Seite **Allgemein** im Dialogfeld **Foreach-Schleifen-Editor** für **Name** **Foreach File in Folder**(Foreach-Datei in Ordner) ein. Klicken Sie auf **OK**.  
+4.  Geben Sie im Dialogfeld **Foreach-Schleifen-Editor** auf der Seite**Allgemein** für **Name** den Namen **Foreach File in Folder** ein. Wählen Sie **OK**.  
   
-5.  Klicken Sie mit der rechten Maustaste auf den Foreach-Schleifencontainer, klicken Sie auf **Eigenschaften**, und prüfen Sie im Eigenschaftenfenster, ob die Eigenschaft **LocaleID** auf **Englisch (USA)** festgelegt ist.  
+5.  Klicken Sie mit der rechten Maustaste auf den Foreach-Schleifencontainer, wählen Sie **Eigenschaften** aus, und vergewissern Sie sich im **Eigenschaften**-Fenster, dass die Eigenschaft **LocaleID** auf **Englisch (USA)** festgelegt ist.  
   
-### <a name="to-configure-the-enumerator-for-the-foreach-loop-container"></a>So konfigurieren Sie den Enumerator für den Foreach-Schleifencontainer  
+## <a name="configure-the-enumerator-for-the-foreach-loop-container"></a>Konfigurieren des Enumerators für den Foreach-Schleifencontainer  
   
-1.  Doppelklicken Sie auf „Foreach File in Folder“, um den **Foreach-Schleifen-Editor**erneut zu öffnen.  
+1.  Doppelklicken Sie auf **Foreach File in Folder**, um den **Foreach-Schleifen-Editor** erneut zu öffnen.  
   
-2.  Klicken Sie auf **Sammlung**.  
+2.  Wählen Sie **Sammlung** aus.  
   
 3.  Wählen Sie auf der Seite **Sammlung** **Foreach-Dateienumerator**aus.  
   
-4.  Klicken Sie in der Gruppe **Enumeratorkonfiguration** auf **Durchsuchen**.  
+4.  Wählen Sie in der Gruppe **Enumeratorkonfiguration** die Option **Durchsuchen** aus.  
   
-5.  Suchen Sie im Dialogfeld **Nach Ordner suchen** den Ordner auf dem Computer, der die „Currency_*.txt“-Dateien enthält.  
+5.  Suchen Sie im Dialogfeld **Ordner suchen** nach dem Ordner auf Ihrem Computer, der die „Currency_*.txt“-Dateien enthält, die zu den Beispieldateien gehören.
+
+6.  Geben Sie in das Feld **Dateien** die Zeichenfolge **Currency_\*.txt** ein.  
   
-    Die Beispieldaten sind in den [!INCLUDE[ssIS](../includes/ssis-md.md)] -Lektionspaketen enthalten. Um die Beispieldaten und die Lektionspakete herunterzuladen, gehen Sie wie folgt vor.  
+## <a name="map-the-enumerator-to-a-user-defined-variable"></a>Zuordnen des Enumerators zu einer benutzerdefinierten Variablen  
   
-    1.  Navigieren Sie zu [Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=275027). 
+1.  Wählen Sie **Variablenzuordnungen** aus.  
   
-    2.  Klicken Sie auf die Registerkarte **DOWNLOADS** .  
+2.  Wählen Sie auf der Seite **Variablenzuordnungen** in der Spalte **Variable** die leere Zelle aus, und wählen Sie **\<Neue Variable…>** aus.  
   
-    3.  Klicken Sie auf den Link für die Datei [SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip](https://msftisprodsamples.codeplex.com/downloads/get/596031).  
+3.  Geben Sie im Dialogfeld **Variable hinzufügen** für **Name** den Namen **varFileName** ein.  
   
-6.  Geben Sie im Feld **Dateien** **Currency_\*.txt** ein.  
-  
-### <a name="to-map-the-enumerator-to-a-user-defined-variable"></a>So ordnen Sie den Enumerator einer benutzerdefinierten Variablen zu  
-  
-1.  Klicken Sie auf **Variablenzuordnungen**.  
-  
-2.  Klicken Sie auf der Seite **Variablenzuordnungen** in der Spalte **Variable** auf die leere Zelle, und wählen Sie **\<Neue Variable…>** aus.  
-  
-3.  Geben Sie im Dialogfeld **Variable hinzufügen** für **Name** **varFileName**ein.  
-  
-    > [!IMPORTANT]  
+    > [!NOTE]  
     > Bei Variablennamen wird nach Groß-/Kleinschreibung unterschieden.  
   
-4.  Klicken Sie auf **OK**.  
+4.  Wählen Sie **OK**.  
   
-5.  Klicken Sie erneut auf **OK** , um das Dialogfeld **Foreach-Schleifen-Editor** zu schließen.  
+5.  Wählen Sie erneut **OK** aus, um das Dialogfeld **Foreach-Schleifen-Editor** zu schließen.  
   
-### <a name="to-add-the-data-flow-task-to-the-loop"></a>So fügen Sie der Schleife den Datenflusstask hinzu  
+## <a name="add-the-data-flow-task-to-the-loop"></a>Hinzufügen des Datenflusstasks zur Schleife  
   
--   Ziehen Sie den Datenflusstask **Extract Sample Currency Data** (Beispielwährungsdaten extrahieren) in Foreach-Schleifencontainer, der jetzt **Foreach File in Folder**(Foreach-Datei in Ordner) heißt.  
+-   Ziehen Sie den Datenflusstask **Extract Sample Currency Data** in den Foreach-Schleifencontainer **Foreach File in Folder**.  
   
-## <a name="next-lesson-task"></a>Aufgabe in der nächsten Lektion  
-[Schritt 3: Ändern des Flatfile-Verbindungs-Managers](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+## <a name="go-to-next-task"></a>Weiter zur nächsten Aufgabe  
+[Schritt 3: Ändern von Flatfile-Verbindungs-Manager](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
 [Konfigurieren eines Foreach-Schleifencontainers](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
 [Verwenden von Variablen in Paketen](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   

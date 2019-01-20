@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd062ba7ea48de6cce202b964dea9d80754b75f9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 757d06003da83e2506e2912f0f5e7cd6a03a3e52
+ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215589"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54211111"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
@@ -209,22 +209,29 @@ ALTER LOGIN Mary5 ENABLE;
 ```sql  
 ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>';  
 ```  
+
+### <a name="c-changing-the-password-of-a-login-when-logged-in-as-the-login"></a>C. Ändern des Kennworts einer Anmeldung, wenn Sie mit dieser angemeldet sind 
+ Wenn Sie versuchen, das Kennwort der Anmeldung zu ändern, mit der Sie derzeit angemeldet sind, und wenn Sie nicht die `ALTER ANY LOGIN`-Berechtigung haben, müssen Sie die Option `OLD_PASSWORD` angeben.    
   
-### <a name="c-changing-the-name-of-a-login"></a>C. Ändern des Namens einer Anmeldung  
+```sql  
+ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>' OLD_PASSWORD = '<oldWeakPasswordHere>';  
+```  
+
+### <a name="d-changing-the-name-of-a-login"></a>D. Ändern des Namens einer Anmeldung  
  Im folgenden Beispiel wird der Name der Anmeldung `Mary5` in `John2` geändert.  
   
 ```sql  
 ALTER LOGIN Mary5 WITH NAME = John2;  
 ```  
   
-### <a name="d-mapping-a-login-to-a-credential"></a>D. Zuordnen einer Anmeldung zu Anmeldeinformationen  
+### <a name="e-mapping-a-login-to-a-credential"></a>E. Zuordnen einer Anmeldung zu Anmeldeinformationen  
  Im folgenden Beispiel wird die Anmeldung `John2` den Anmeldeinformationen `Custodian04` zugeordnet.  
   
 ```sql  
 ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;  
 ```  
   
-### <a name="e-mapping-a-login-to-an-extensible-key-management-credential"></a>E. Zuordnen einer Anmeldung zu Anmeldeinformationen der erweiterbaren Schlüsselverwaltung  
+### <a name="f-mapping-a-login-to-an-extensible-key-management-credential"></a>F. Zuordnen einer Anmeldung zu Anmeldeinformationen der erweiterbaren Schlüsselverwaltung  
  Im folgenden Beispiel wird die Anmeldung `Mary5` den EKM-Anmeldeinformationen `EKMProvider1` zugeordnet.  
   
   
