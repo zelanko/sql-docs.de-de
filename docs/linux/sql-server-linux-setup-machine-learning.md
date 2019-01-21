@@ -4,18 +4,18 @@ description: Dieser Artikel beschreibt, wie zum Installieren von SQL Server Mach
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 12/07/2018
+ms.date: 01/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 15a1a411672303fc8556927bcaf218052758744d
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: 7e140a4eeb8fe6481b52be378c6ad9569160e9e3
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553252"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397659"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-java-on-linux"></a>Installieren von SQL Server 2019 Machine Learning-Diensten (R, Python, Java) unter Linux
 
@@ -71,17 +71,17 @@ Für jeden Satz betriebssystemspezifischen Anweisungen zur Installation *höchst
 
 2. Führen Sie Befehle zur Installation über die Paket-Manager und die Syntax für das Betriebssystem an: 
 
-   + [Red hat](#RHEL)
+   + [RedHat](#RHEL)
    + [Ubuntu](#ubuntu)
    + [SUSE](#SUSE)
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-+ Die Linux-Version muss [von SQL Server unterstützte](sql-server-linux-release-notes-2019.md#supported-platforms), lokal oder in einem Docker-Container ausgeführt. Versionen werden unterstützt:
++ Die Linux-Version muss [von SQL Server unterstützte](sql-server-linux-release-notes-2019.md#supported-platforms), aber nicht die Docker-Engine enthalten ist. Versionen werden unterstützt:
 
    + [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
 
-   + [SUSE Enterprise Linux-Server](quickstart-install-connect-suse.md)
+   + [SUSE Enterprise Linux Server](quickstart-install-connect-suse.md)
 
    + [Ubuntu](quickstart-install-connect-ubuntu.md)
 
@@ -165,19 +165,19 @@ zypper update
 
 Pakete sind auf einem Gerät Internetverbindung heruntergeladen und installiert, unabhängig von der Datenbank-Engine, die mit dem Paketinstaller für jedes Betriebssystem. Die folgende Tabelle beschreibt alle verfügbaren Pakete, aber für R und Python, geben Sie Pakete, die entweder die vollständige Funktion-Installation oder die minimale funktionsinstallation bereitstellen.
 
-| Paketname | Gilt für | Description |
+| Paketname | Applies-to | Description |
 |--------------|----------|-------------|
-|MSSQL-Server-Erweiterbarkeit  | All | Das Erweiterungsframework zum Ausführen von R, Python oder Java-Code verwendet. |
-|MSSQL-Server-Erweiterbarkeit – java | Java | Java-Erweiterung für das Laden einer Java-ausführungsumgebung. Es gibt keine zusätzliche Bibliotheken oder Pakete für Java. |
-| Microsoft-openmpi  | Python, R | Nachrichtenübergabe, die Schnittstelle, die von den Revo *-Bibliotheken für die Parallelisierung unter Linux verwendet. |
-| MSSQL-Mlservices-python | Python | Open-Source-Verteilung von Anaconda und Python. |
-|MSSQL-Mlservices-Mlm-py  | Python | *Vollständige Installation*. Bietet bereits trainierter Modelle für die Image-featurebereitstellung und Text standpunktanalyse zur Revoscalepy, Microsoftml lautet.| 
-|MSSQL-Mlservices-Pakete-py  | Python | *Minimalinstallation*. Stellt die Revoscalepy und Microsoftml bereit. <br/>Schließt vorab trainierte Modelle. | 
-| [Microsoft-R-Open *](#mro) | R | Open-Source-Distribution von R, die aus drei Paketen besteht. |
-|MSSQL-Mlservices-Mlm-r  | R | *Vollständige Installation*. Stellt bereits trainierter Modelle für die Image-featurebereitstellung und Text standpunktanalyse zur RevoScaleR, MicrosoftML lautet SqlRUtils, OlapR, bereit.| 
-|MSSQL-Mlservices-Pakete-r  | R | *Minimalinstallation*. Stellt die RevoScaleR, SqlRUtils, MicrosoftML, OlapR bereit. <br/>Schließt vorab trainierte Modelle. | 
-|MSSQL-Mlservices-Mml-py  | Nur CTP 2.0-2.1 | Veraltet in CTP 2.2 aufgrund der Konsolidierung von Python-Paket in den Mssql-Mslservices-Python. Stellt die Revoscalepy bereit. Vortrainierte Modelle und Microsoftml ausgeschlossen.| 
-|MSSQL-Mlservices-Mml-r  | Nur CTP 2.0-2.1 | Veraltet in CTP 2.2 aufgrund der Konsolidierung von R-Paket in den Mssql-Mslservices-Python. Stellt RevoScaleR, SqlRUtils, OlapR bereit. Vortrainierte Modelle und MicrosoftML ausgeschlossen.  |
+|mssql-server-extensibility  | All | Das Erweiterungsframework zum Ausführen von R, Python oder Java-Code verwendet. |
+|mssql-server-extensibility-java | Java | Java-Erweiterung für das Laden einer Java-ausführungsumgebung. Es gibt keine zusätzliche Bibliotheken oder Pakete für Java. |
+| microsoft-openmpi  | Python, R | Nachrichtenübergabe, die Schnittstelle, die von den Revo *-Bibliotheken für die Parallelisierung unter Linux verwendet. |
+| mssql-mlservices-python | Python | Open-Source-Verteilung von Anaconda und Python. |
+|mssql-mlservices-mlm-py  | Python | *Vollständige Installation*. Bietet bereits trainierter Modelle für die Image-featurebereitstellung und Text standpunktanalyse zur Revoscalepy, Microsoftml lautet.| 
+|mssql-mlservices-packages-py  | Python | *Minimalinstallation*. Stellt die Revoscalepy und Microsoftml bereit. <br/>Schließt vorab trainierte Modelle. | 
+| [microsoft-r-open*](#mro) | R | Open-Source-Distribution von R, die aus drei Paketen besteht. |
+|mssql-mlservices-mlm-r  | R | *Vollständige Installation*. Stellt bereits trainierter Modelle für die Image-featurebereitstellung und Text standpunktanalyse zur RevoScaleR, MicrosoftML lautet SqlRUtils, OlapR, bereit.| 
+|mssql-mlservices-packages-r  | R | *Minimalinstallation*. Provides RevoScaleR, sqlRUtils, MicrosoftML, olapR. <br/>Schließt vorab trainierte Modelle. | 
+|mssql-mlservices-mml-py  | Nur CTP 2.0-2.1 | Veraltet in CTP 2.2 aufgrund der Konsolidierung von Python-Paket in den Mssql-Mslservices-Python. Stellt die Revoscalepy bereit. Vortrainierte Modelle und Microsoftml ausgeschlossen.| 
+|mssql-mlservices-mml-r  | Nur CTP 2.0-2.1 | Veraltet in CTP 2.2 aufgrund der Konsolidierung von R-Paket in den Mssql-Mslservices-Python. Provides RevoScaleR, sqlRUtils, olapR. Vortrainierte Modelle und MicrosoftML ausgeschlossen.  |
 
 <a name="RHEL"></a>
 
@@ -564,7 +564,7 @@ Es gibt Parität zwischen Linux und Windows für [Ressourcenkontrolle](../t-sql/
 
 R-Entwickler können mit einigen einfachen Beispielen beginnen, und die Grundlagen der Funktionsweise von R mit SQL Server. Der nächste Schritt ist finden Sie in den folgenden Links:
 
-+ [Tutorial: Führen Sie R in T-SQL](../advanced-analytics/tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [Tutorial: Run R in T-SQL](../advanced-analytics/tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
 + [Tutorial: Datenbankinterne Analysen für R-Entwickler](../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Python-Entwickler erfahren, wie Python mit SQL Server verwenden, indem Sie die folgenden in diesen Tutorials:
