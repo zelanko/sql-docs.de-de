@@ -11,12 +11,12 @@ ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f732c4038940ef2ed5ee511e399f3bcf2efae54f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 43423c8db03d27c26558672d287415fa5e12d638
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606890"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255955"
 ---
 # <a name="buffer-pool-extension"></a>Pufferpoolerweiterung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "51606890"
   
  Daten- und Indexseiten werden vom Datenträger in den Pufferpool gelesen und geänderte Seiten (auch bekannt als modifizierte Seiten) werden zurück auf den Datenträger geschrieben. Ungenügender Arbeitsspeicher auf den Server- und Datenbankprüfpunkten bewirkt heiße (aktive) modifizierte Seiten im Puffercache, die aus dem Cache entfernt und auf mechanische Datenträger geschrieben und dann wieder in den Cache gelesen werden. Diese E/A-Vorgänge sind in der Regel kleine zufällige Lese- und Schreibvorgänge in der Größenordnung von 4 bis 16 KB Daten. Kleine zufällige E/A-Muster verursachen häufige Suchen, die um den mechanischen Datenträgerarm konkurrieren, die E/A-Latenzzeit erhöhen und den aggregierten E/A-Durchsatz des Systems verringern.  
   
- Der normale Ansatz zum Beheben dieser E/A-Engpässe besteht darin, mehr DRAM hinzuzufügen oder leistungsstarke SAS-Spindeln hinzuzufügen. Auch wenn diese Optionen hilfreich sind, haben sie erhebliche Nachteile: DRAM ist teurer als Datenspeicherungslaufwerke und das Hinzufügen von Spindeln erhöht den Investitionsaufwand bei der Hardwareanschaffung und die Betriebskosten durch erhöhte Leistungsaufnahme und erhöhte Wahrscheinlichkeit von Komponentenfehlern.  
+ Der normale Ansatz zum Beheben dieser E/A-Engpässe besteht darin, mehr DRAM hinzuzufügen oder leistungsstarke SAS-Spindeln hinzuzufügen. Auch wenn diese Optionen hilfreich sind, haben sie erhebliche Nachteile: DRAM ist teurer als Datenspeicherungslaufwerke, und das Hinzufügen von Spindeln erhöht den Investitionsaufwand bei der Hardwareanschaffung und die Betriebskosten durch erhöhte Leistungsaufnahme und erhöhte Wahrscheinlichkeit von Komponentenfehlern.  
   
  Die Pufferpoolerweiterungsfunktion erweitert den Pufferpoolcache um nicht flüchtigen Speicher (üblicherweise SSD). Aufgrund der Erweiterung kann der Pufferpool ein größeres Datenbankworkingset aufnehmen, das die Auslagerung von E/A-Vorgängen zwischen RAM und SSDs erzwingt. Dies verlagert effektiv kleine zufällige E/A-Vorgänge von den mechanischen Datenträgern auf SSDs. Aufgrund der niedrigeren Latenzzeit und besser verteilten zufälligen E/A-Zugriffen von SSDs verbessert die Pufferpoolerweiterung erheblich den E/A-Durchsatz.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "51606890"
   
 -   Die Pufferpoolerweiterungsgröße kann maximal das 32fache des max_server_memory-Werts betragen.  Es wird empfohlen, ein Verhältnis von 1:16 oder kleiner zwischen der Größe des physischen Arbeitsspeichers (max_server_memory) und der Größe der Pufferpoolerweiterung beizubehalten. Ein niedrigeres Verhältnis im Bereich von 1:4 bis 1:8 kann optimal sein. Informationen zum Einrichten der max_server_memory-Option finden Sie unter [Serverkonfigurationsoptionen für den Serverarbeitsspeicher](../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
   
--   Testen Sie die Pufferpoolerweiterung gründlich, bevor Sie sie in einer Produktionsumgebung implementieren. Vermeiden Sie in der Produktionsumgebung, Konfigurationsänderungen an der Datei vorzunehmen oder die Funktion zu deaktivieren. Diese Aktivitäten können negative Auswirkungen auf die Serverleistung haben, da die Größe des Pufferpools erheblich reduziert wird, wenn die Funktion deaktiviert ist. Wenn sie deaktiviert ist, wird der zur Unterstützung der Funktion verwendete Arbeitsspeicher erst wieder freigegeben, wenn die Instanz von SQL Server neu gestartet wird. Beim erneuten Aktivieren der Funktion wird der Arbeitsspeicher jedoch sofort wiederverwendet, ohne dass ein Neustart der Instanz erforderlich ist.  
+-   Testen Sie die Pufferpoolerweiterung gründlich, bevor Sie sie in einer Produktionsumgebung implementieren. Vermeiden Sie in der Produktionsumgebung, Konfigurationsänderungen an der Datei vorzunehmen oder die Funktion zu deaktivieren. Diese Aktivitäten können negative Auswirkungen auf die Serverleistung haben, da die Größe des Pufferpools erheblich reduziert wird, wenn die Funktion deaktiviert ist. Wenn sie deaktiviert ist, wird der zur Unterstützung der Funktion verwendete Arbeitsspeicher erst wieder freigegeben, wenn die Instanz von SQL Server neu gestartet wird. Beim erneuten Aktivieren der Funktion wird der Arbeitsspeicher jedoch sofort wiederverwendet, ohne dass ein Neustart der Instanz erforderlich ist.  
   
 ## <a name="return-information-about-the-buffer-pool-extension"></a>Rückgabeinformationen zur Pufferpoolerweiterung  
  Sie können die folgenden dynamischen Verwaltungssichten verwenden, um die Konfiguration der Pufferpoolerweiterung anzuzeigen und Informationen über die Datenseiten in der Erweiterung zurückzugeben.  

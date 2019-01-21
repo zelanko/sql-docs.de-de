@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: becdad9b10bb5632ecefe96bcef2fa9e7ebaf29e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 30b7c524a47459354f6e42e734fbbe4c8faec4ea
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530406"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256995"
 ---
 # <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ Im Protokolldatei-Viewer können Protokollinformationen aus einer Vielzahl von K
   
     [Einschränkungen](#Restrictions)  
   
-    [Security](#Security)  
+    [Sicherheit](#Security)  
   
 -   [So zeigen Sie ein SQL Server-Agent-Fehlerprotokoll mithilfe von SQL Server Management Studio an](#SSMSProcedure)  
   
@@ -77,7 +77,7 @@ Weitere Informationen zu den Windows-Berechtigungen, die für das [!INCLUDE[ssNo
   
 4.  Klicken Sie mit der rechten Maustaste auf das Fehlerprotokoll, das Sie anzeigen möchten, und wählen Sie **Agentprotokoll anzeigen**aus.  
   
-    Die folgenden Optionen sind im Dialogfeld **Protokolldatei-Viewer >***Servername* verfügbar:  
+    Die folgenden Optionen sind im Dialogfeld **Protokolldatei-Viewer -**_Servername_ verfügbar:  
   
     **Protokoll laden**  
     Öffnen Sie ein Dialogfeld, in dem Sie eine zu ladende Protokolldatei angeben können.  

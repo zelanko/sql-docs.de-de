@@ -18,12 +18,12 @@ ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 26771864aab13c9e5c65976532c1c46151367259
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1bc7cdf4c8ba8e114565aee25b557ea3173b7051
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519528"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255405"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>DDL ausführen (Analysis Services-Task)
   Der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Task DDL ausführen führt DLL-Anweisungen (Data Definition Language, Datendefinitionssprache) aus, mit denen Miningmodelle und mehrdimensionale Objekte, wie z. B. Cubes und Dimensionen, erstellt, gelöscht oder geändert werden können. Beispielsweise kann mit einer DDL-Anweisung eine Partition im **Adventure Works** -Cube erstellt oder eine Dimension in [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)], der im Lieferumfang von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] enthaltenen Beispieldatenbank von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], gelöscht werden.  
@@ -69,7 +69,7 @@ ms.locfileid: "52519528"
 ```  
 <Batch xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
   <Parallel>  
-    <Process xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+    <Process xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
       <Object>  
         <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  
       </Object>  
@@ -90,7 +90,7 @@ ms.locfileid: "52519528"
         <MiningStructureID>Forecasting</MiningStructureID>  
     </ParentObject>  
     <ObjectDefinition>  
-        <MiningModel xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+        <MiningModel xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
             <ID>Forecasting</ID>  
             <Name>Forecasting</Name>  
             <Algorithm>Microsoft_Time_Series</Algorithm>  
@@ -152,7 +152,7 @@ ms.locfileid: "52519528"
 ```  
 <Batch xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
   <Parallel>  
-    <Process xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+    <Process xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
       <Object>  
         <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  
       </Object>  
@@ -173,7 +173,7 @@ ms.locfileid: "52519528"
         <MiningStructureID>Forecasting</MiningStructureID>  
     </ParentObject>  
     <ObjectDefinition>  
-        <MiningModel xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+        <MiningModel xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
             <ID>Forecasting</ID>  
             <Name>Forecasting</Name>  
             <Algorithm>Microsoft_Time_Series</Algorithm>  
@@ -235,7 +235,7 @@ ms.locfileid: "52519528"
 ## <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Editor für den Analysis Services-Task 'DDL ausführen' (Seite Allgemein)
   Auf der Seite **Allgemein** des Dialogfelds **Editor für den Analysis Services-Task „DDL ausführen“** können Sie den Namen und eine Beschreibung des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Tasks „DDL ausführen“ angeben.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Name**  
  Geben Sie einen eindeutigen Namen für den [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Task „DDL ausführen“ an. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
   

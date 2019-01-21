@@ -19,12 +19,12 @@ ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 42b9955b4bae6549e26cefd3739d7a8f624f2ab5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c4f4c40711fad6d32d8fcc0aa859507e266fdd7
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825178"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255375"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>Anzeigen oder Ändern von Servereigenschaften (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47825178"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Anzeigen oder Ändern von Servereigenschaften mit:**  
   
@@ -48,7 +48,7 @@ ms.locfileid: "47825178"
   
 -   **Nachverfolgung:**  [Nach dem Ändern von Servereigenschaften](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -66,7 +66,7 @@ ms.locfileid: "47825178"
   
  Die Ausführungsberechtigungen für **sp_configure** ohne Parameter oder nur mit dem ersten Parameter werden standardmäßig allen Benutzern erteilt. Zum Ausführen von **sp_configure** mit beiden Parametern zum Ändern einer Konfigurationsoption oder zum Ausführen der RECONFIGURE-Anweisung muss einem Benutzer die ALTER SETTINGS-Berechtigung auf Serverebene erteilt worden sein. Die ALTER SETTINGS-Berechtigung ist in den festen Serverrollen **sysadmin** und **serveradmin** eingeschlossen.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-view-or-change-server-properties"></a>So zeigen Sie Servereigenschaften an oder ändern sie  
   
@@ -155,14 +155,14 @@ GO
   
 2.  Klicken Sie im **SQL Server-Konfigurations-Manager**auf **SQL Server-Dienste**.  
   
-3.  Klicken Sie im Detailbereich mit der rechten Maustaste auf **SQL Server (\<***Instanzname***>**), und klicken Sie dann auf **Eigenschaften**.  
+3.  Klicken Sie im Detailbereich mit der rechten Maustaste auf **SQL Server (\<**_instancename_**>)**, und klicken Sie dann auf **Eigenschaften**.  
   
-4.  Ändern Sie im Dialogfeld **SQL Server (\<***Instanzname***>)-Eigenschaften** die Servereigenschaften auf der Registerkarte **Dienst** oder auf der Registerkarte **Erweitert**, und klicken Sie dann auf **OK**.  
+4.  Ändern Sie im Dialogfeld **SQL Server (\<**_Instanzname_**>)-Eigenschaften** die Servereigenschaften auf der Registerkarte **Dienst** oder auf der Registerkarte **Erweitert**, und klicken Sie dann auf **OK**.  
   
 ##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Ändern von Servereigenschaften  
  Für einige Eigenschaften muss der Server u. U. neu gestartet werden, bevor die Änderung wirksam werden kann.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [SET-Anweisungen (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   

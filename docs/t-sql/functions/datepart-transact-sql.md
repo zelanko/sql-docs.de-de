@@ -28,24 +28,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebc5c6b688bf7871ff3e75ab30fbb7dadb31f315
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 92373c80cfd2de09e0222aa9af6ef0a3dca90cf6
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521220"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299947"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Unterstützen Sie uns bei der Verbesserung der Dokumentation für SQL Server.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Senden Sie uns Ihr Feedback zum Inhaltsverzeichnis der SQL-Dokumentation!](https://aka.ms/sqldocsurvey)
 
 Diese Funktion gibt eine ganze Zahl zurück, die das angegebene *datepart*-Argument des angegebenen *date*-Arguments darstellt.
   
 Unter [Datums- und Uhrzeitdatentypen und zugehörige Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) finden Sie eine Übersicht über alle [!INCLUDE[tsql](../../includes/tsql-md.md)] Datums- und Uhrzeitdatentypen und zugehörige Funktionen.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -162,12 +162,12 @@ Das Nummerierungssystem anderer Länder oder Regionen entspricht möglicherweise
   
 |Erster Tag der Woche|Erste Woche im Jahr enthält|Doppelt zugewiesene Wochen|Verwendet von/in|  
 |---|---|---|---|
-|Sonntag|1. Januar<br /><br /> Erster Samstag<br /><br /> 1–7 Tage im Jahr|Benutzerkontensteuerung|United States|  
-|Montag|1. Januar<br /><br /> Erster Sonntag<br /><br /> 1–7 Tage im Jahr|Benutzerkontensteuerung|Die meisten Länder Europas und das Vereinigte Königreich|  
-|Montag|4. Januar<br /><br /> Erster Donnerstag<br /><br /> 4–7 Tage im Jahr|nein|ISO 8601, Norwegen und Schweden|  
-|Montag|7. Januar,<br /><br /> Erster Montag<br /><br /> 7 Tage im Jahr|nein||  
-|Mittwoch|1. Januar<br /><br /> Erster Dienstag<br /><br /> 1–7 Tage im Jahr|Benutzerkontensteuerung||  
-|Samstag|1. Januar<br /><br /> Erster Freitag<br /><br /> 1–7 Tage im Jahr|Benutzerkontensteuerung||  
+|Sonntag|1. Januar<br /><br /> Erster Samstag<br /><br /> 1–7 Tage im Jahr|Ja|United States|  
+|Montag|1. Januar<br /><br /> Erster Sonntag<br /><br /> 1–7 Tage im Jahr|Ja|Die meisten Länder Europas und das Vereinigte Königreich|  
+|Montag|4. Januar<br /><br /> Erster Donnerstag<br /><br /> 4–7 Tage im Jahr|Nein|ISO 8601, Norwegen und Schweden|  
+|Montag|7. Januar,<br /><br /> Erster Montag<br /><br /> 7 Tage im Jahr|Nein||  
+|Mittwoch|1. Januar<br /><br /> Erster Dienstag<br /><br /> 1–7 Tage im Jahr|Ja||  
+|Samstag|1. Januar<br /><br /> Erster Freitag<br /><br /> 1–7 Tage im Jahr|Ja||  
   
 ## <a name="tzoffset"></a>TZoffset  
 `DATEPART` gibt den Wert **TZoffset** (**tz**) als Anzahl der Minuten (mit Vorzeichen) zurück. Diese Anweisung gibt einen Zeitzonenoffset von 310 Minuten zurück:

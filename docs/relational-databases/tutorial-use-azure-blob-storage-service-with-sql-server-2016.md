@@ -1,7 +1,7 @@
 ---
-title: 'Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016 | Microsoft-Dokumentation'
+title: 'Tutorial: Verwenden des Microsoft Azure Blob Storage-Diensts mit SQL Server 2016 | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 01/07/2016
+ms.date: 01/09/2019
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -15,14 +15,15 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: abbccb66ca86fb80991c6f0733e1cbfa0ee8a8e8
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: 1af4926f367b79c7e4cc9117042d0b21e4f47b77
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302843"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206351"
 ---
-# <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016
+# <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Tutorial: Verwenden des Microsoft Azure Blob Storage-Diensts mit SQL Server 2016
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Willkommen zum Tutorial über das Arbeiten mit SQL Server 2016 im Dienst Microsoft Azure Blob Storage. Dieses Tutorial hilft Ihnen dabei, zu verstehen, wie der Dienst Microsoft Azure Blob Storage für SQL Server-Datendateien und SQL Server-Sicherungen verwendet wird.  
   
@@ -30,7 +31,8 @@ Die Unterstützung der SQL Server-Integration für den Dienst Microsoft Azure Bl
 
 In diesem Tutorial erfahren Sie in mehreren Abschnitten, wie Sie im Dienst Microsoft Azure Blob Storage mit SQL Server-Datendateien arbeiten. Jeder Abschnitt ist auf eine bestimmte Aufgabe fokussiert, und die Abschnitte sollten nacheinander ausgeführt werden. Zunächst erfahren Sie, wie Sie in Blob Storage einen neuen Container mit einer gespeicherten Zugriffsrichtlinie und einer Shared Access Signature (SAS) erstellen. Danach erfahren Sie, wie Sie SQL Server-Anmeldeinformationen erstellen, um SQL Server in Azure Blob Storage zu integrieren. Als Nächstes sichern Sie eine Datenbank in Blob Storage und stellen sie in einem virtuellen Azure-Computer wieder her. Anschließend verwenden Sie die Protokollsicherung für die Übertragung von Dateimomentaufnahmen von SQL Server 2016, um den Stand eines bestimmten Zeitpunkts in einer neuen Datenbank wiederherzustellen. Das Tutorial wird schließlich die Verwendung der gespeicherten Meta Data-Prozeduren und -Funktionen demonstrieren, um Ihnen dabei zu helfen, Dateimomentaufnahme-Sicherungen zu verstehen und mit ihnen zu arbeiten.
   
-## <a name="prerequisites"></a>Voraussetzungen  
+## <a name="prerequisites"></a>Voraussetzungen
+
 Um dieses Tutorial abzuschließen, müssen Sie mit den Sicherungs- und Wiederherstellungskonzepten in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und der T-SQL-Syntax vertraut sein. Zur Verwendung dieses Tutorials benötigen Sie ein Azure-Speicherkonto, SQL Server Management Studio (SSMS), Zugriff auf eine Instanz eines lokalen SQL Servers, Zugriff auf einen virtuellen Azure-Computer (VM), auf dem SQL Server 2016 ausgeführt wird, und eine AdventureWorks2016-Datenbank. Darüber hinaus sollte das zum Ausgeben von BACKUP- oder RESTORE-Befehlen verwendete Benutzerkonto Mitglied der Datenbankrolle **db_backupoperator** sein und über Berechtigungen zum **Ändern beliebiger Anmeldeinformationen** verfügen. 
 
 - Erstellen Sie ein kostenloses [Azure-Konto](https://azure.microsoft.com/offers/ms-azr-0044p/).
@@ -42,6 +44,7 @@ Um dieses Tutorial abzuschließen, müssen Sie mit den Sicherungs- und Wiederher
 - Weisen Sie das Benutzerkonto der Rolle des [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) zu und gewähren Sie die Berechtigung zum [Ändern beliebiger Anmeldeinformationen](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql). 
  
 ## <a name="1---create-stored-access-policy-and-shared-access-storage"></a>1: Erstellen einer gespeicherten Zugriffsrichtlinie und von Speicher mit freigegebenem Zugriff
+
 In diesem Abschnitt verwenden Sie ein [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)-Skript zum Erstellen einer SAS für einen Azure-Blobcontainer mithilfe einer gespeicherten Zugriffsrichtlinie.  
   
 > [!NOTE]  
@@ -129,6 +132,7 @@ Befolgen Sie folgende Schritte, um eine Richtlinie für einen Container zu erste
 
 
 ## <a name="2---create-a-sql-server-credential-using-a-shared-access-signature"></a>2: Erstellen von SQL Server-Anmeldeinformationen mit einer Shared Access Signature (SAS)
+
 In diesem Abschnitt erstellen Sie Anmeldeinformationen zum Speichern der Sicherheitsinformationen, die von SQL Server verwendet werden, um in einen Azure-Container zu schreiben und aus diesem zu lesen, den Sie im vorherigen Abschnitt erstellt haben.  
   
 SQL Server-Anmeldeinformationen sind ein Objekt zum Speichern von Authentifizierungsinformationen, die für die Verbindung mit einer Ressource außerhalb von SQL Server erforderlich sind. In den Anmeldeinformationen werden der URI-Pfad des Speichercontainers und die Shared Access Signature für diesen Container gespeichert.  
@@ -169,6 +173,7 @@ Führen Sie die folgenden Schritte aus, um SQL Server-Anmeldeinformationen zu er
 7.  Wiederholen Sie die Schritte 5 und 6 für alle zusätzlichen SQL Server-Instanzen, die auf den Azure-Container zugreifen sollen.  
 
 ## <a name="3---database-backup-to-url"></a>3: Datenbanksicherung über URLs
+
 In diesem Abschnitt werden Sie die AdventureWorks2016-Datenbank in Ihrer lokalen SQL Server 2016-Instanz in dem Azure-Container sichern, den Sie in [Abschnitt 1](#1---create-stored-access-policy-and-shared-access-storage) erstellt haben.
   
 > [!NOTE]  
@@ -200,6 +205,7 @@ So sichern Sie eine Datenbank in Blob Storage:
 
 
 ## <a name="4----restore-database-to-virtual-machine-from-url"></a>4: Wiederherstellen einer Datenbank auf einem virtuellen Computer über URLs
+
 In diesem Abschnitt werden Sie die AdventureWorks2016-Datenbank für Ihre SQL Server 2016-Instanz auf Ihrem virtuellen Azure-Computer wiederherstellen.
   
 > [!NOTE]  
@@ -235,7 +241,8 @@ Zum Wiederherstellen der AdventureWorks2016-Datenbank von Azure Blob Storage auf
   
    ![Datendateien im Container in Azure](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/data-files-in-container.png)
 
-# <a name="5---backup-database-using-file-snapshot-backup"></a>5: Backup einer Datenbank mit Dateimomentaufnahme-Sicherung
+## <a name="5---backup-database-using-file-snapshot-backup"></a>5: Backup einer Datenbank mit Dateimomentaufnahme-Sicherung
+
 In diesem Abschnitt werden Sie in Ihrem virtuellen Azure-Computer Ihre AdventureWorks2016-Datenbank per Dateimomentaufnahme-Sicherung zum Ausführen einer nahezu sofortigen Sicherung mithilfe von Azure-Momentaufnahmen sichern. Weitere Informationen zu Momentaufnahme-Sicherungen finden Sie unter [Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
   
 So sichern Sie die AdventureWorks2016-Datenbank mithilfe der Dateimomentaufnahme-Sicherung:  
@@ -275,6 +282,7 @@ So sichern Sie die AdventureWorks2016-Datenbank mithilfe der Dateimomentaufnahme
     ![Momentaufnahme-Sicherung in Azure](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/snapshot-backup-on-azure.PNG)
 
 ## <a name="6----generate-activity-and-backup-log-using-file-snapshot-backup"></a>6: Generieren von Aktivität und Erstellen einer Sicherung eines Protokolls mithilfe der Dateimomentaufnahme-Sicherung
+
 In diesem Abschnitt generieren Sie Aktivität in der AdventureWorks2016-Datenbank und erstellen regelmäßig Transaktionsprotokollsicherungen mithilfe von Dateimomentaufnahme-Sicherungen. Weitere Informationen zur Verwendung von Momentaufnahme-Sicherungen finden Sie unter [Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
 Um Aktivität in der AdventureWorks2016-Datenbank zu generieren und regelmäßig Transaktionsprotokollsicherungen mithilfe von Dateimomentaufnahme-Sicherungen zu erstellen, befolgen Sie folgende Schritte:  
@@ -340,6 +348,7 @@ Um Aktivität in der AdventureWorks2016-Datenbank zu generieren und regelmäßig
     ![Mehrere Momentaufnahmen in Azure-Container](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/tutorial-snapshots-in-container.png)
 
 ## <a name="7---restore-a-database-to-a-point-in-time"></a>7: Wiederherstellen einer Datenbank bis zu einem Zeitpunkt
+
 In diesem Abschnitt stellen Sie eine AdventureWorks2016-Datenbank zu einem Zeitpunkt zwischen zwei Transaktionsprotokollsicherungen wieder her.  
   
 Um bei herkömmlichen Sicherungen einen bestimmten Zeitpunkt wiederherzustellen zu können, müssen Sie über eine vollständige Sicherung der Datenbank, z.B. eine differenzielle Sicherung, sowie über alle Transaktionsprotokolldateien bis zu diesem und direkt nach diesem Zeitpunkt verfügen, den Sie wiederherstellen möchten. Mit Dateimomentaufnahme-Sicherungen benötigen Sie nur die zwei angrenzenden Protokollsicherungsdateien als Zeitrahmen, den Sie wiederherstellen möchten. Sie benötigen nur zwei Momentaufnahmesicherungssätze, weil jede Momentaufnahmesicherung einer Protokolldatei eine Dateimomentaufnahme jeder Datenbankdatei (jede Datendatei und die Protokolldatei) erstellt.  
@@ -378,6 +387,7 @@ Zum Wiederherstellen einer Datenbank bis zu einem bestimmten Zeitpunkt per Datei
     ![18-thousand-rows.JPG](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/18-thousand-rows.png)
 
 ## <a name="8----restore-as-new-database-from-log-backup"></a>8: Wiederherstellen als neue Datenbank aus der Protokollsicherung
+
 In diesem Abschnitt stellen Sie eine AdventureWorks2016-Datenbank als eine neue Datenbank aus einer Sicherung einer Protokolldatei für Datei-Momentaufnahmen wieder her.  
   
 In diesem Szenario führen Sie eine Wiederherstellung auf eine SQL Server-Instanz auf einem anderen virtuellen Computer für Geschäftsanalysen und Berichterstellung aus. Die Wiederherstellung auf eine andere Instanz auf einem anderen virtuellen Computer verlagert die Arbeitsauslastung auf einen virtuellen Computer, der für diesen Zweck dediziert und der Größe angepasst ist und entfernt dessen Ressourcenanforderungen vom Transaktionssystem.  
@@ -411,6 +421,7 @@ Befolgen Sie folgende Schritte, um eine Datenbank auf eine neue Datenbank einer 
     ![Azure-Container mit den Daten- und Protokolldateien für die neue Datenbank](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/new-db-in-azure-container.png)
 
 ## <a name="9---manage-backup-sets-and-file-snapshot-backups"></a>9: Verwalten von Sicherungssätzen und Dateimomentaufnahme-Sicherungen
+
 In diesem Abschnitt löschen Sie einen Sicherungssatz mithilfe der gespeicherten Systemprozedur [sp_delete_backup &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md). Diese gespeicherte Systemprozedur löscht die Sicherungsdatei und die Dateimomentaufnahme in jeder Datenbankdatei, die diesem Sicherungssatz zugeordnet ist.  
   
 > [!NOTE]  
@@ -440,6 +451,7 @@ Befolgen Sie folgende Schritte, um einen Dateimomentaufnahme-Sicherungssatz zu l
     ![Bereich „Ergebnisse“ mit 2 gelöschten Dateimomentaufnahmen](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/results-of-two-deleted-snapshot-files.png)
 
 ## <a name="10---remove-resources"></a>10: Entfernen von Ressourcen
+
 Sobald Sie dieses Tutorial beendet haben, und um Ressourcen zu sparen, stellen Sie sicher, dass Sie die in diesem Tutorial erstellte Ressourcengruppe löschen. 
 
 Um die Ressourcengruppe zu löschen, führen Sie den folgenden PowerShell-Code aus:
@@ -463,7 +475,8 @@ Um die Ressourcengruppe zu löschen, führen Sie den folgenden PowerShell-Code a
 
 
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen
+
 [SQL Server-Datendateien in Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
 [Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [SQL Server-Sicherung in URL](../relational-databases/backup-restore/sql-server-backup-to-url.md) 

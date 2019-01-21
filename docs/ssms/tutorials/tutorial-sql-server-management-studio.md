@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: SQL Server Management Studio (SSMS) | Microsoft-Dokumentation'
+title: 'Lernprogramm: SQL Server Management Studio | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 08/30/2017
 ms.prod: sql
@@ -23,18 +23,18 @@ ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5deb2b29c70187bb0222e21df7193f300f7eb7b0
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: f8b1560ef694885ae0debbf06f2d61d23c5d0f66
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970541"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299397"
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>Tutorials zu SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 > [!div class="nextstepaction"]
-> [Unterstützen Sie uns bei der Verbesserung der Dokumentation für SQL Server.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Senden Sie uns Ihr Feedback zum Inhaltsverzeichnis der SQL-Dokumentation!](https://aka.ms/sqldocsurvey)
 
 Dieses Tutorial zu SQL Server Management Studio (SSMS) bietet eine Einführung in die integrierte Umgebung zum Verwalten Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Infrastruktur. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügt über eine grafische Oberfläche zum Konfigurieren, Überwachen und Verwalten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen. Darüber hinaus vermittelt Ihnen das Tutorial, wie Sie die von Ihren Anwendungen, z.B. Datenbanken, verwendeten Datenebenenkomponenten bereitstellen, überwachen und aktualisieren. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] stellt auch Editoren für die [!INCLUDE[tsql](../../includes/tsql-md.md)]-, MDX-, DMX- und XML-Sprache bereit, um Skripts zu bearbeiten und zu debuggen.  
   
@@ -47,24 +47,24 @@ Am besten machen Sie sich mit SSMS vertraut, indem Sie einige praktische Aufgabe
 Folgende Themen werden behandelt: 
 
   
-- [Tutorial: Connect & Query SQL Server using SSMS (Tutorial: Herstellen einer Verbindung mit und Abfragen von SQL Server über SSMS)](connect-query-sql-server.md)
+- [Tutorial: Herstellen einer Verbindung mit und Abfragen von einer SQL Server-Instanz über SQL Server Management Studio](connect-query-sql-server.md)
 
     In diesem Tutorial erfahren Sie, wie Sie eine Verbindung mit einer SQL Server-Instanz herstellen. Außerdem lernen Sie einige grundlegende T-SQL-Befehle (Transact-SQL) kennen, mit denen Sie eine neue Datenbank erstellen und anschließend abfragen. 
 
-- [Tutorial: Scripting Objects in SSMS (Tutorial: Erstellung von Skripts für Objekte in SSMS)](scripting-ssms.md)
+- [Tutorial: Erstellen von Skripts für Objekte in SQL Server Management Studio](scripting-ssms.md)
 
     In diesem Tutorial erfahren Sie, wie Sie Skripts für verschiedene Objekte wie Datenbanken und Abfragen in SSMS erstellen. 
 
-- [Tutorial: Using Templates in SSMS (Tutorial: Verwenden von Vorlagen in SSMS)](templates-ssms.md)
+- [Tutorial: Verwenden von Vorlagen in SQL Server Management Studio](templates-ssms.md)
    
     In diesem Tutorial erfahren Sie, wie Sie mit bereits vorhandenen Vorlagen in SSMS arbeiten können. Vorlagen sind ein wenig bekanntes Feature, das eine Reihe von Transact-SQL-Codeausschnitten für unterschiedliche Datenbankadministrationsaufgaben speichert. 
 
-- [Tutorial: SSMS Configuration (Tutorial: SSMS-Konfiguration)](ssms-configuration.md)
+- [Tutorial: SQL Server Management Studio-Komponenten und -Konfiguration](ssms-configuration.md)
 
     In diesem Tutorial lernen Sie die Grundlagen zum Konfigurieren Ihrer SSMS-Umgebung kennen, z.B. die Änderung des Umgebungslayouts. Es werden ebenso die unterschiedlichen SSMS-Komponenten erklärt. 
   
 
-- [Tutorial: Additional Tips and Tricks for using SSMS (Tutorial: Zusätzliche Tipps und Tricks für die Verwendung von SSMS)](ssms-tricks.md)
+- [Tutorial: Zusätzliche Tipps und Tricks für die Verwendung von SSMS](ssms-tricks.md)
 
     In diesem Tutorial lernen Sie zusätzliche Tipps und Tricks zur Nutzung von SSMS kennen. Folgende Themen werden dabei behandelt:
     - Kommentieren von Text und Aufheben von Auskommentierungen
@@ -81,11 +81,11 @@ Zum Durchlaufen dieses Tutorials muss Folgendes installiert sein:
 
   -   Installieren Sie die neueste Version von [SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md).  
 
-Im ersten Artikel erfahren Sie, wie Sie eine Datenbank erstellen. Weitere beispielhafte Datenbanken finden Sie unter [AdventureWorks-Beispieldatenbanken](https://github.com/Microsoft/sql-server-samples/releases). Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Restoring a Database (Wiederherstellen einer Datenbank)](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+Im ersten Artikel erfahren Sie, wie Sie eine Datenbank erstellen. Weitere beispielhafte Datenbanken finden Sie hier: [AdventureWorks-Beispieldatenbanken](https://github.com/Microsoft/sql-server-samples/releases). Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Restore a Database Backup Using SSMS (Wiederherstellen einer Datenbanksicherung mit SSMS)](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Lernprogramme zur Datenbank-Engine](../../relational-databases/database-engine-tutorials.md)          
   
   

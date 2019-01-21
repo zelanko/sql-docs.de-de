@@ -13,18 +13,21 @@ ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7157a60410fcf2d0b75dce7e73edb0814d042e97
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 107bbfa29c7118252bbad06d2f81829e3d9dedf0
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699888"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299207"
 ---
 # <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Senden Sie uns Ihr Feedback zum Inhaltsverzeichnis der SQL-Dokumentation!](https://aka.ms/sqldocsurvey)
+
+
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) ist eine integrierte Umgebung für die Verwaltung jeder SQL-Infrastruktur. Verwenden Sie SSMS, um auf alle Komponenten von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Azure SQL-Datenbank und SQL Data Warehouse zuzugreifen und diese zu konfigurieren, zu verwalten und zu entwickeln. SSMS bietet ein einzelnes, umfassendes Hilfsprogramm, das eine Vielzahl grafischer Tools mit einer Reihe von Skript-Editoren mit großem Funktionsumfang kombiniert, um Entwicklern und Datenbankadministratoren mit unterschiedlichem Kenntnisstand den Zugriff auf [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu ermöglichen.
-
-
 
  
  - [**Herunterladen von SQL Server Management Studio (SSMS)**](download-sql-server-management-studio-ssms.md) 
@@ -48,8 +51,8 @@ ms.locfileid: "51699888"
 - Weitere Informationen finden Sie unter [Häufig gestellte Fragen zur modernen Richtlinie](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq).
 
 ## <a name="next-steps"></a>Nächste Schritte  
-[Lernprogramm: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)  
-[Lernprogramm: Schreiben von Transact-SQL-Anweisungen](https://msdn.microsoft.com/2addc9be-67d0-423d-a457-192fe9d7d058)  
+[Tutorial: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)  
+[Tutorial: Schreiben von Transact-SQL-Anweisungen](https://msdn.microsoft.com/2addc9be-67d0-423d-a457-192fe9d7d058)  
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 

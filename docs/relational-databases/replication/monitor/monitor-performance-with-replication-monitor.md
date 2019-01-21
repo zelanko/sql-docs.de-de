@@ -20,12 +20,12 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc8f5b10cd0dce7b3d9b6e8acc5b6018eff0e85a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0881bb74dbd5018d194464d6a8ce58161062a901
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515460"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130580"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>Überwachen der Leistung mit dem Replikationsmonitor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "52515460"
   
     |Hervorragend|Gut|Durchschnittlich|Schlecht|Kritisch|  
     |---------------|----------|----------|----------|--------------|  
-    |0 – 34 %|35 – 59 %|60 – 84 %|85 – 99 %|100% +|  
+    |0 – 34%|35 – 59%|60 – 84%|85 – 99%|100% +|  
   
 -   Bei der Mergereplikation ist der Wert für die Leistungsqualität unabhängig von den beiden Schwellenwerten. (Der Schwellenwert für die Zeilenverarbeitung bestimmt, ob der Wert **Leistungskritisch** in der **Status** -Spalte angezeigt wird). Die Leistungsqualität wird ermittelt, indem die Leistung der einzelnen Abonnements mit der durchschnittlichen bisherigen Leistung der Veröffentlichungsabonnements mit dem gleichen Verbindungstyp (DFÜ oder LAN) verglichen wird. Der Replikationsmonitor zeigt einen Wert an, nachdem fünf Synchronisierungen mit jeweils mindestens 50 Änderungen über denselben Verbindungstyp stattgefunden haben. Wenn weniger als fünf Synchronisierungen mit 50 oder mehr Änderungen ausgeführt wurden oder wenn die letzte Synchronisierung weniger als 50 Änderungen aufweist, zeigt der Replikationsmonitor keinen Wert an.  
   
@@ -85,21 +85,21 @@ ms.locfileid: "52515460"
   
     |Hervorragend|Gut|Durchschnittlich|Schlecht|  
     |---------------|----------|----------|----------|  
-    |151+%|76 – 150 %|26 – 75 %|0 – 25 %|  
+    |151+%|76 – 150%|26 – 75%|0 – 25%|  
   
- Weitere Informationen zum Anzeigen von Abonnementinformationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für ein Abonnement &#40;Replikationsmonitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md).  
+ Weitere Informationen zum Anzeigen von Abonnementinformationen finden Sie unter [View Information and Perform Tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="determine-latency-with-tracer-tokens"></a>Ermitteln der Latenzzeit mit Überwachungstokens  
  Mithilfe der Transaktionsreplikation können Sie die Latenzzeit (Latenz) in einem System messen, indem Sie ein Token (kleine Menge von Daten) in das Transaktionsprotokoll der Veröffentlichungsdatenbank einfügen und aufzeichnen, wie lange dieses Token benötigt, bis es beim Verteiler und den Abonnenten ankommt. Mithilfe des Tokens können Sie auch feststellen, ob Daten den Verteiler oder die Abonnenten gar nicht erreichen. Weitere Informationen finden Sie unter [Messen der Wartezeit und Überprüfen der Verbindungen bei Transaktionsreplikationen](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
 ## <a name="view-detailed-synchronization-performance-for-merge-replication"></a>Anzeigen von Details zur Synchronisierungsleistung bei der Mergereplikation  
- Bei Mergereplikationen zeigt der Replikationsmonitor detaillierte Statistiken für alle Artikel an, die während einer Synchronisierung verarbeitet werden. So lässt sich diesen Statistiken z. B. die Länge der einzelnen Verarbeitungsphasen (Hochladen von Änderungen, Herunterladen von Änderungen usw.) entnehmen. Auf diese Weise können Sie besser die Tabellen identifizieren, die zu einer Verlangsamung führen, und Sie können hier auch hervorragend Leistungsprobleme im Zusammenhang mit Mergeabonnements diagnostizieren. Weitere Informationen zum Anzeigen detaillierter Statistiken finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für die einem Abonnement zugeordneten Agents &#40;Replikationsmonitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+ Bei Mergereplikationen zeigt der Replikationsmonitor detaillierte Statistiken für alle Artikel an, die während einer Synchronisierung verarbeitet werden. So lässt sich diesen Statistiken z. B. die Länge der einzelnen Verarbeitungsphasen (Hochladen von Änderungen, Herunterladen von Änderungen usw.) entnehmen. Auf diese Weise können Sie besser die Tabellen identifizieren, die zu einer Verlangsamung führen, und Sie können hier auch hervorragend Leistungsprobleme im Zusammenhang mit Mergeabonnements diagnostizieren. Weitere Informationen zum Anzeigen detaillierten Statistiken finden Sie unter [View Information and Perform Tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="view-transactions-and-delivery-time-for-transactional-replication"></a>Anzeigen von Transaktions- und Bereitstellungszeiten bei der Transaktionsreplikation  
- Bei Transaktionsreplikationen zeigt der Replikationsmonitor Informationen zur Anzahl der Transaktionen in der Verteilungsdatenbank an, die noch nicht an einen Abonnenten verteilt wurden, und er gibt an, wie lange die Verteilung dieser Transaktionen schätzungsweise dauert. Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für die einem Abonnement zugeordneten Agent &#40;Replikationsmonitor &#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+ Bei Transaktionsreplikationen zeigt der Replikationsmonitor Informationen zur Anzahl der Transaktionen in der Verteilungsdatenbank an, die noch nicht an einen Abonnenten verteilt wurden, und er gibt an, wie lange die Verteilung dieser Transaktionen schätzungsweise dauert. Weitere Informationen finden Sie unter [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Überwachen der Replikation](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Überwachen der Replikation](../../../relational-databases/replication/monitor/monitoring-replication.md)   
  [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

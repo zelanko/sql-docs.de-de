@@ -14,12 +14,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 04e138f38923745d0095344959bc5876fc213b00
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5f6d488b46f576ed5c5d97358ec8674a64be46bd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507442"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135360"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Häufig gestellte Fragen für Replikationsadministratoren
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,9 +44,9 @@ ms.locfileid: "52507442"
 ### <a name="when-is-a-subscription-available-when-can-the-subscription-database-be-used"></a>Wenn ein Abonnement verfügbar ist, wann kann dann die Abonnementdatenbank verwendet werden?  
  Ein Abonnement ist verfügbar, nachdem die Momentaufnahme auf die Abonnementdatenbank angewendet wurde. Obgleich auch vorher auf die Abonnementdatenbank zugegriffen werden kann, sollte die Datenbank erst verwendet werden, nachdem die Momentaufnahme angewendet wurde. Überprüfen Sie den Status der Momentaufnahmeerstellung mithilfe des Replikationsmonitors:  
   
--   Die Momentaufnahme wird durch den Momentaufnahme-Agent erstellt. Im Replikationsmonitor können Sie den Status der Momentaufnahmeerstellung auf der Registerkarte **Agents** anzeigen. Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für die einer Veröffentlichung zugeordneten Agents &#40;Replikationsmonitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md).  
+-   Die Momentaufnahme wird durch den Momentaufnahme-Agent erstellt. Im Replikationsmonitor können Sie den Status der Momentaufnahmeerstellung auf der Registerkarte **Agents** anzeigen. Weitere Informationen finden Sie unter [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
--   Die Momentaufnahme wird vom Verteilungs-Agent oder vom Merge-Agent angewendet. Im Replikationsmonitor können Sie den Status der Momentaufnahmeanwendung auf der Seite **Verteilungs-Agent** oder **Merge-Agent** anzeigen. Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für die einem Abonnement zugeordneten Agent &#40;Replikationsmonitor &#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+-   Die Momentaufnahme wird vom Verteilungs-Agent oder vom Merge-Agent angewendet. Im Replikationsmonitor können Sie den Status der Momentaufnahmeanwendung auf der Seite **Verteilungs-Agent** oder **Merge-Agent** anzeigen. Weitere Informationen finden Sie unter [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ### <a name="what-happens-if-the-snapshot-agent-has-not-completed-when-the-distribution-or-merge-agent-starts"></a>Was geschieht, wenn beim Start des Verteilungs- oder des Merge-Agents der Momentaufnahme-Agent noch nicht abgeschlossen ist?  
  Wenn der Verteilungs-Agent oder der Merge-Agent gleichzeitig mit dem Momentaufnahme-Agent ausgeführt wird, tritt kein Fehler auf. Es ist jedoch Folgendes zu beachten:  
@@ -96,7 +96,7 @@ ms.locfileid: "52507442"
  Diese Informationen sind über [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]und mehrere gespeicherte Replikationsprozeduren verfügbar. Weitere Informationen finden Sie unter [Distributor and Publisher Information Script](../../../relational-databases/replication/administration/distributor-and-publisher-information-script.md).  
   
 ### <a name="does-replication-encrypt-data"></a>Werden bei der Replikation Daten verschlüsselt?  
- Nein. Bei der Replikation werden keine Daten verschlüsselt, die in der Datenbank gespeichert oder über das Netzwerk übertragen werden. Weitere Informationen hierzu finden Sie im Abschnitt zur Verschlüsselung im Thema [Sicherheitsübersicht &#40;Replikation&#41;](../../../relational-databases/replication/security/security-overview-replication.md).  
+ Nein. Bei der Replikation werden keine Daten verschlüsselt, die in der Datenbank gespeichert oder über das Netzwerk übertragen werden. Weitere Informationen finden Sie im Abschnitt „Verschlüsselung“ des Artikels [Anzeigen und Ändern von Replikationssicherheitseinstellungen](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
 ### <a name="how-do-i-replicate-data-over-the-internet"></a>Wie repliziere ich Daten über das Internet?  
  Verwenden Sie Folgendes, um Daten über das Internet zu replizieren:  
@@ -123,7 +123,7 @@ ms.locfileid: "52507442"
   
 -   Die Definition eines Objekts, beispielsweise als CREATE TABLE-Anweisung. Bei der Replikation werden standardmäßig die Definitionen aller replizierten Objekte auf den Abonnenten kopiert.  
   
--   Der Namespace, in dem ein Objekt erstellt wird: \<<Database>\<.Schema>.\<Object>. Schemas werden mit der CREATE SCHEMA-Anweisung definiert.  
+-   Der Namespace, in dem ein Objekt erstellt wird: \<Datenbank>. \<Schema>. \<Objekt>. Schemas werden mit der CREATE SCHEMA-Anweisung definiert.  
   
 -   Im Assistenten für neue Veröffentlichung weist die Replikation in Bezug auf Schemas und den Objektbesitz das folgende Standardverhalten auf:  
   
@@ -142,8 +142,9 @@ ms.locfileid: "52507442"
   
 -   Führen Sie GRANT-Anweisungen direkt in der Abonnementdatenbank aus.  
   
--   Verwenden Sie zum Ausführen der Anweisungen ein Nach-Momentaufnahme-Skript. Weitere Informationen finden Sie unter [Ausführen von Skripts vor und nach dem Anwenden der Momentaufnahme](../../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md).  
-  
+-   Verwenden Sie zum Ausführen der Anweisungen ein Nach-Momentaufnahme-Skript. Weitere Informationen finden Sie unter [Ausführen von Skripts vor und nach dem Anwenden der Momentaufnahme](../../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).  
+
+ 
 -   Verwenden Sie die gespeicherte Prozedur [sp_addscriptexec](../../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md) zum Ausführen der Anweisungen.  
   
 ### <a name="what-happens-to-permissions-granted-in-a-subscription-database-if-a-subscription-is-reinitialized"></a>Was geschieht mit den in einer Abonnementdatenbank erteilten Berechtigungen, wenn ein Abonnement erneut initialisiert wird?  
@@ -169,7 +170,7 @@ ms.locfileid: "52507442"
  Ja. Für an einer Replikation beteiligte Datenbanken sind mehrere besondere Punkte zu berücksichtigen. Weitere Informationen finden Sie unter [Sichern und Wiederherstellen von replizierten Datenbanken](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  
   
 ### <a name="does-replication-affect-the-size-of-the-transaction-log"></a>Hat die Replikation Auswirkungen auf die Größe des Transaktionsprotokolls?  
- Die Mergereplikation und die Momentaufnahmereplikation haben im Gegensatz zur Transaktionsreplikation keine Auswirkungen auf die Transaktionsprotokollgröße. Wenn eine Datenbank eine oder mehrere Transaktionsveröffentlichungen enthält, wird das Protokoll erst dann abgeschnitten, wenn alle für die Veröffentlichungen relevanten Transaktionen an die Verteilungsdatenbank übermittelt wurden. Wenn das Transaktionsprotokoll zu umfangreich wird und der Protokolllese-Agent basierend auf einem Zeitplan ausgeführt wird, sollten Sie eine Verkürzung des Intervalls zwischen den Ausführungen in Betracht ziehen. Sie können auch festlegen, dass die Ausführung im kontinuierlichen Modus erfolgt. Wenn der Agent so festgelegt ist, dass er im kontinuierlichen Modus ausgeführt wird (Standardeinstellung), stellen Sie sicher, dass er läuft. Weitere Informationen zum Überprüfen des Status des Protokolllese-Agents finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für die einer Veröffentlichung zugeordneten Agents &#40;Replikationsmonitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md).  
+ Die Mergereplikation und die Momentaufnahmereplikation haben im Gegensatz zur Transaktionsreplikation keine Auswirkungen auf die Transaktionsprotokollgröße. Wenn eine Datenbank eine oder mehrere Transaktionsveröffentlichungen enthält, wird das Protokoll erst dann abgeschnitten, wenn alle für die Veröffentlichungen relevanten Transaktionen an die Verteilungsdatenbank übermittelt wurden. Wenn das Transaktionsprotokoll zu umfangreich wird und der Protokolllese-Agent basierend auf einem Zeitplan ausgeführt wird, sollten Sie eine Verkürzung des Intervalls zwischen den Ausführungen in Betracht ziehen. Sie können auch festlegen, dass die Ausführung im kontinuierlichen Modus erfolgt. Wenn der Agent so festgelegt ist, dass er im kontinuierlichen Modus ausgeführt wird (Standardeinstellung), stellen Sie sicher, dass er läuft. Weitere Informationen zur Überprüfung des Protokolllese-Agent-Status finden Sie unter [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  Zudem wird das Transaktionsprotokoll nicht abgeschnitten, bis alle Transaktionen gesichert wurden, wenn Sie für die Veröffentlichungsdatenbank oder für die Verteilungsdatenbank die Option 'sync with backup' festgelegt haben. Wenn das Transaktionsprotokoll zu umfangreich wird und Sie diese Option festgelegt haben, sollten Sie eine Verkürzung des Intervalls zwischen den Transaktionsprotokollsicherungen in Betracht ziehen. Weitere Informationen zum Sichern und Wiederherstellen von an der Transaktionsreplikation beteiligten Datenbanken finden Sie unter [Strategien zum Sichern und Wiederherstellen einer Momentaufnahme- und Transaktionsreplikation](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  
   
@@ -191,7 +192,7 @@ ms.locfileid: "52507442"
 ## <a name="replication-maintenance"></a>Replikationswartung  
   
 ### <a name="how-do-i-determine-if-the-data-at-subscribers-is-synchronized-with-data-at-the-publisher"></a>Wie kann ich feststellen, ob die Daten auf den Abonnenten mit denen auf dem Verleger synchronisiert sind?  
- Führen Sie eine Überprüfung aus. Bei der Überprüfung wird angegeben, ob ein bestimmter Abonnent mit dem Verleger synchronisiert ist. Weitere Informationen finden Sie unter [Überprüfen von replizierten Daten](../../../relational-databases/replication/validate-replicated-data.md). Bei der Überprüfung wird nicht angegeben, in welchen Zeilen die Synchronisierung möglicherweise nicht richtig ausgeführt wurde. Im [Hilfsprogramm "tablediff"](../../../tools/tablediff-utility.md) werden die entsprechenden Informationen hingegen angezeigt.  
+ Führen Sie eine Überprüfung aus. Bei der Überprüfung wird angegeben, ob ein bestimmter Abonnent mit dem Verleger synchronisiert ist. Weitere Informationen finden Sie unter [Überprüfen von replizierten Daten](../../../relational-databases/replication/validate-data-at-the-subscriber.md). Bei der Überprüfung wird nicht angegeben, in welchen Zeilen die Synchronisierung möglicherweise nicht richtig ausgeführt wurde. Im [Hilfsprogramm "tablediff"](../../../tools/tablediff-utility.md) werden die entsprechenden Informationen hingegen angezeigt.  
   
 ### <a name="how-do-i-add-a-table-to-an-existing-publication"></a>Wie füge ich einer vorhandenen Veröffentlichung eine Tabelle hinzu?  
  Wenn eine Tabelle (oder ein anderes Objekt) hinzugefügt werden soll, ist das Anhalten der Aktivität in der Veröffentlichungs- oder in der Abonnementdatenbank nicht erforderlich. Im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** oder über die gespeicherten Prozeduren [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) und [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) können Sie einer Veröffentlichung eine Tabelle hinzufügen. Weitere Informationen finden Sie unter [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
@@ -209,7 +210,7 @@ ms.locfileid: "52507442"
  Die zum Entfernen einer Replikation aus einer Datenbank erforderlichen Aktionen sind davon abhängig, ob die Datenbank als Veröffentlichungsdatenbank, als Abonnementdatenbank oder beides dient.  
   
 ### <a name="how-do-i-determine-whether-there-are-transactions-or-rows-to-be-replicated"></a>Wie stelle ich fest, ob Transaktionen oder Zeilen repliziert werden müssen?  
- Verwenden Sie für die Transaktionsreplikation gespeicherte Prozeduren oder die Registerkarte **Nicht verteilte Befehle** im Replikationsmonitor. Weitere Informationen finden Sie unter [Anzeigen replizierter Befehle und anderer Informationen in der Verteilungsdatenbank &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) und [Anzeigen von Informationen und Ausführen von Aufgaben für die einem Abonnement zugeordneten Agents &#40;Replikationsmonitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+ Verwenden Sie für die Transaktionsreplikation gespeicherte Prozeduren oder die Registerkarte **Nicht verteilte Befehle** im Replikationsmonitor. Weitere Informationen finden Sie unter [View Replicated Commands and Other Information in the Distribution Database &#40;Replication Transact-SQL Programming&#41; (Anzeigen von replizierten Befehlen und anderen Informationen in der Verteilungsdatenbank &#40;Replikationsprogrammierung mit Transact-SQL&#41;)](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) und [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  Verwenden Sie für die Mergereplikation die gespeicherte Prozedur **sp_showpendingchanges**. Weitere Informationen finden Sie unter [sp_showpendingchanges &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql.md).  
   
@@ -220,7 +221,7 @@ ms.locfileid: "52507442"
   
 -   Die geschätzte Zeitdauer für die Übermittlung von Befehlen an den Abonnenten. Wenn dieser Wert größer ist, als die zum Generieren und Anwenden einer Momentaufnahme auf den Abonnenten erforderliche Zeit, sollten Sie eine erneute Initialisierung des Abonnenten in Betracht ziehen. Weitere Informationen finden Sie unter [Erneutes Initialisieren von Abonnements](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
- Weitere Informationen finden Sie unter [sp_replmonitorsubscriptionpendingcmds &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql.md) und [Anzeigen von Informationen und Ausführen von Aufgaben für die einem Abonnement zugeordneten Agents &#40;Replikationsmonitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+ Weitere Informationen finden Sie unter [sp_replmonitorsubscriptionpendingcmds &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql.md) und [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="replication-and-other-database-features"></a>Replikationen und sonstige Datenbankfunktionen  
   
@@ -230,8 +231,8 @@ ms.locfileid: "52507442"
 ### <a name="does-replication-work-in-conjunction-with-clustering"></a>Ist die Replikation in Verbindung mit dem Cluster funktionsfähig?  
  Ja. Da alle Daten auf einem Datenträgersatz im Cluster gespeichert sind, sind keine besonderen Überlegungen erforderlich.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Verwaltung &#40;Replikation&#41;](../../../relational-databases/replication/administration/administration-replication.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Häufig gestellte Fragen für Replikationsadministratoren](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
   
   

@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 4256efa5952870ede608d96fa2659ce9d88f35da
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 279a5c55ddc305d62e3e09f1f8073057b4ff226b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668419"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124610"
 ---
 # <a name="upgrade-replicated-databases"></a>Aktualisieren von replizierten Datenbanken
 
@@ -131,10 +131,10 @@ Wenn Sie ein Upgrade Ihrer SQL Server-Instanz auf SQL Server 2016 (oder höher) 
 ## <a name="restoring-a-replicated-database-from-an-earlier-version"></a>Wiederherstellen einer replizierten Datenbank von einer früheren Version  
  Um sicherzustellen, dass die Replikationseinstellungen beibehalten werden, wenn die Sicherung einer replizierten Datenbank mithilfe einer früheren Version wiederhergestellt wird, stellen Sie die Sicherung auf einem Server und in einer Datenbank wieder her, deren Namen mit den Namen des Servers und der Datenbank übereinstimmen, von dem bzw. der die Sicherung erstellt wurde.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Verwaltung &#40;Replikation&#41;](../../relational-databases/replication/administration/administration-replication.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server-Replikation](../../relational-databases/replication/sql-server-replication.md)  
+ [Häufig gestellte Fragen für Replikationsadministratoren](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Abwärtskompatibilität von Replikationen](../../relational-databases/replication/replication-backward-compatibility.md)   
- [Neuigkeiten (Replikation)](../../relational-databases/replication/what-s-new-replication.md)   
  [Unterstützte Versions- und Editionsupgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Aktualisieren von SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
  [Upgrading a Replication Topology to SQL Server 2016 (Upgrade der Replikationstopologie auf SQL Server 2016)](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)

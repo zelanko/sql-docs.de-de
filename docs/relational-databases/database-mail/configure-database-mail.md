@@ -40,20 +40,20 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d0f86f70a4cd496c4f4f32dd0a88077337cf645
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e16bca2aabbf35c3bd75dd7a0c75e81c13efcfbd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505138"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127660"
 ---
 # <a name="configure-database-mail"></a>Konfigurieren des Datenbank-E-Mail-Features
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Dieses Thema beschreibt die Aktivierung und Konfiguration von Datenbank-E-Mails mithilfe des Assistenten zum Konfigurieren von Datenbank-E-Mails sowie die Erstellung eines Datenbank-E-Mail-Konfigurationsskripts anhand von Vorlagen.  
   
--   **Vorbereitungen:**  [Einschränkungen](#Restrictions), [Sicherheit](#Security)  
+-   **Vorbereitungen:**  [Beschränkungen](#Restrictions), [Sicherheit](#Security)  
   
--   **So konfigurieren Sie Datenbank-E-Mails mit folgenden Komponenten:**  [Assistent zum Konfigurieren von Datenbank-E-Mail](#DBWizard), [Vorlagen](#Template)  
+-   **So konfigurieren Sie Datenbank-E-Mails mithilfe von:**  [dem Assistenten zum Konfigurieren von Datenbank-E-Mail](#DBWizard), [Vorlagen](#Template)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
  Verwenden Sie die Option **DatabaseMail XPs** , um Datenbank-E-Mail auf diesem Server zu aktivieren. Weitere Informationen finden Sie im Referenzthema [Database Mail XPs (Serverkonfigurationsoption)](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) .  
@@ -155,7 +155,7 @@ ms.locfileid: "52505138"
  Geben Sie die E-Mail-Adresse ein, die für Antworten auf E-Mail-Nachrichten aus diesem Konto verwendet wird. Der Eintrag für die Antwort-E-Mail ist optional. Antworten auf ein Konto von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent könnten beispielsweise an den Datenbankadministrator gehen, danw@Adventure-Works.com.  
   
  **Servername**  
- Geben Sie den Namen oder die IP-Adresse des SMTP-Servers ein, der von diesem Konto zum Senden von E-Mails verwendet wird. Normalerweise hat der Eintrag ein ähnliches Format wie **smtp.***<Ihr_Unternehmen>***.com**. Informationen hierzu erhalten Sie von Ihrem E-Mail-Administrator.  
+ Geben Sie den Namen oder die IP-Adresse des SMTP-Servers ein, der von diesem Konto zum Senden von E-Mails verwendet wird. Normalerweise hat der Eintrag ein ähnliches Format wie **smtp.**_<Ihr_Unternehmen>_**.com**. Informationen hierzu erhalten Sie von Ihrem E-Mail-Administrator.  
   
  **Portnummer**  
  Geben Sie die Portnummer des SMTP-Servers für dieses Konto ein. Die meisten SMTP-Server verwenden Port 25.  
@@ -420,7 +420,7 @@ ms.locfileid: "52505138"
  [Assistent zum Konfigurieren von Datenbank-E-Mail](#DBWizard)  
   
 ###  <a name="TestEmail"></a> Send Test E-Mail Page  
- Verwenden Sie die Seite **Test-E-Mail senden von***<Instanzname>*, um eine E-Mail mithilfe des angegebenen Datenbank-E-Mail-Profils zu senden. Nur Mitglieder der festen Serverrolle **sysadmin** können Test-E-Mails über diese Seite senden.  
+ Verwenden Sie die Seite **Test-E-Mail senden von**_<Instanzname>_, um eine E-Mail mithilfe des angegebenen Datenbank-E-Mail-Profils zu senden. Nur Mitglieder der festen Serverrolle **sysadmin** können Test-E-Mails über diese Seite senden.  
   
  **Datenbank-E-Mail-Profil**  
  Wählen Sie aus der Liste ein Datenbank-E-Mail-Profil aus. Dies ist ein Pflichtfeld. Wenn keine Profile angezeigt werden, gibt es keine Profile, oder Sie haben für ein Profil keine Berechtigung. Verwenden Sie den **Assistent zum Konfigurieren von Datenbank-E-Mail** zum Erstellen und Konfigurieren von Profilen. Wenn keine Profile angezeigt werden, erstellen Sie mithilfe des Assistenten zum Konfigurieren von Datenbank-E-Mail ein Profil für die eigene Verwendung.  

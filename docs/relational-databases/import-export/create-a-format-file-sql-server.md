@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7130114f33159290dd6917db87638140838ee8c2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a32e66e87d3e2cdcf9c8f0498ec845c2b8921825
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538072"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255015"
 ---
 # <a name="create-a-format-file-sql-server"></a>Erstellen einer Formatdatei (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52538072"
 ## <a name="creating-a-non-xml-format-file"></a>Erstellen einer Nicht-XML-Formatdatei  
  Geben Sie bei der Ausführung eines **bcp** -Befehls zum Erstellen einer Formatdatei das **format** -Argument an, und verwenden Sie **nul** anstatt eines Datendateipfads. Die **format** -Option erfordert außerdem die **-f** -Option, z.B.:  
   
- **bcp** *Tabelle_oder_Ansicht* **Format** NULL **-f***Formatdateiname*  
+ **bcp** _Tabelle_oder_Ansicht_ **format** nul **-f**_Formatdateiname_  
   
 > [!NOTE]  
 >  Um Nicht-XML-Formatdateien klar zu kennzeichnen, empfiehlt es sich, als Dateierweiterung FMT zu verwenden, beispielsweise "MeineTabelle.fmt".  
@@ -66,7 +66,7 @@ ms.locfileid: "52538072"
   
 |Qualifizierer|und Beschreibung|  
 |----------------|-----------------|  
-|**formatnul-f** *Formatdatei*|Gibt die Nicht-XML-Formatdatei an.|  
+|**formatnul-f** _Formatdatei_|Gibt die Nicht-XML-Formatdatei an.|  
 |**-n**|Gibt systemeigene Datentypen an.|  
 |**-T**|Gibt an, dass das Hilfsprogramm **bcp** die Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe integrierter Sicherheit über eine vertrauenswürdige Verbindung herstellt. Wenn **-T** nicht angegeben wird, müssen Sie **-U** und **-P** angeben, um sich erfolgreich anzumelden.|  
   
@@ -96,7 +96,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
 |Qualifizierer|und Beschreibung|  
 |----------------|-----------------|  
-|**formatnul-f** *Formatdatei*|Gibt eine Nicht-XML-Formatdatei an.|  
+|**formatnul-f** _Formatdatei_|Gibt eine Nicht-XML-Formatdatei an.|  
 |**-c**|Gibt Zeichendaten an.|  
 |**-T**|Gibt an, dass das Hilfsprogramm **bcp** die Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe integrierter Sicherheit über eine vertrauenswürdige Verbindung herstellt. Wenn **-T** nicht angegeben wird, müssen Sie **-U** und **-P** angeben, um sich erfolgreich anzumelden.|  
   
@@ -169,7 +169,7 @@ Im Folgenden ist ein Beispiel für die Formatdatei ohne Sortierungsinformationen
 ## <a name="creating-an-xml-format-file"></a>Erstellen einer XML-Formatdatei  
  Geben Sie bei der Ausführung eines **bcp** -Befehls zum Erstellen einer Formatdatei das **format** -Argument an, und verwenden Sie **nul** anstatt eines Datendateipfads. Für die Option **format** ist immer auch die Option **-f** erforderlich. Zum Erstellen einer XML-Formatdatei muss zudem die Option **-x** angegeben werden, wie im Folgenden dargestellt:  
   
- **bcp** *Tabelle_oder_Ansicht* **format nul -f** *Formatdateiname* **-x**  
+ **bcp** _Tabelle_oder_Ansicht_ **format nul -f** _Formatdateiname_ **-x**  
   
 > [!NOTE]  
 >  Um eine XML-Formatdatei klar zu kennzeichnen, empfiehlt es sich, die Dateierweiterung XML zu verwenden, beispielsweise "MeineTabelle.xml".  
@@ -183,7 +183,7 @@ Im Folgenden ist ein Beispiel für die Formatdatei ohne Sortierungsinformationen
   
 -   B. Erstellen einer XML-Formatdatei für systemeigene Daten  
   
- In diesen Beispielen wird die `HumanResources.Department`-Tabelle der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Beispieldatenbank verwendet. Die `HumanResources.Department` -Tabelle enthält vier Spalten: `DepartmentID`, `Name`, `GroupName`und `ModifiedDate`.  
+ In diesen Beispielen wird die `HumanResources.Department` -Tabelle der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank verwendet. Die `HumanResources.Department` -Tabelle enthält vier Spalten: `DepartmentID`, `Name`, `GroupName`und `ModifiedDate`.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssSampleDBdesc](../../includes/sssampledbdesc-md.md)]  
@@ -195,9 +195,9 @@ Im Folgenden ist ein Beispiel für die Formatdatei ohne Sortierungsinformationen
   
 |Qualifizierer|und Beschreibung|  
 |----------------|-----------------|  
-|**formatnul-f** *Formatdatei* **-x**|Gibt die XML-Formatdatei an.|  
+|**formatnul-f** _Formatdatei_ **-x**|Gibt die XML-Formatdatei an.|  
 |**-c**|Gibt Zeichendaten an.|  
-|**-t** `,`|Gibt ein Komma (**,**) als Feldabschlusszeichen an.<br /><br /> Hinweis: Wenn von der Datendatei das standardmäßige Feldabschlusszeichen (`\t`) verwendet wird, ist der **-t** -Schalter nicht erforderlich.|  
+|**-t** `,`|Gibt ein Komma (**,**) als Feldabschlusszeichen an.<br /><br /> Hinweis: Wenn von der Datendatei das Standardfeldabschlusszeichen (`\t`) verwendet wird, ist der **-t**-Schalter nicht erforderlich.|  
 |**-T**|Gibt an, dass das Hilfsprogramm **bcp** die Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe integrierter Sicherheit über eine vertrauenswürdige Verbindung herstellt. Wenn **-T** nicht angegeben wird, müssen Sie **-U** und **-P** angeben, um sich erfolgreich anzumelden.|  
   
  Geben Sie an der Windows-Eingabeaufforderung den folgenden `bcp` -Befehl ein:  
@@ -210,7 +210,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
 ```xml
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>  
   <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
@@ -235,7 +235,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
 |Qualifizierer|und Beschreibung|  
 |----------------|-----------------|  
-|**formatnul-f** *Formatdatei* **-x**|Gibt die XML-Formatdatei an.|  
+|**formatnul-f** _Formatdatei_ **-x**|Gibt die XML-Formatdatei an.|  
 |**-n**|Gibt systemeigene Datentypen an.|  
 |**-T**|Gibt an, dass das Hilfsprogramm **bcp** die Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe integrierter Sicherheit über eine vertrauenswürdige Verbindung herstellt. Wenn **-T** nicht angegeben wird, müssen Sie **-U** und **-P** angeben, um sich erfolgreich anzumelden.|  
   
@@ -249,7 +249,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
   
 ```xml
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="NativeFixed" LENGTH="2"/>  
   <FIELD ID="2" xsi:type="NCharPrefix" PREFIX_LENGTH="2" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
@@ -276,7 +276,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
   
 -   [Verwenden einer Formatdatei zum Zuordnen von Tabellenspalten zu Datendateifeldern &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
  [Verwenden einer Formatdatei zum Zuordnen von Tabellenspalten zu Datendateifeldern &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)   
  [Überspringen einer Tabellenspalte mithilfe einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)   

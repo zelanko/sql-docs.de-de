@@ -21,18 +21,18 @@ ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d52233102f5ebe9a812e8071556afa4aff0316f4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b95da5f74481fed0053f31cde326fe271e79abc9
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511713"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299217"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>Datums- und Uhrzeitdatentypen und zugehörige Funktionen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [Unterstützen Sie uns bei der Verbesserung der Dokumentation für SQL Server.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Senden Sie uns Ihr Feedback zum Inhaltsverzeichnis der SQL-Dokumentation!](https://aka.ms/sqldocsurvey)
 
 Die Abschnitte in diesem Thema enthalten sämtliche Datums- und Uhrzeitdatentypen und zugehörige Funktionen für [!INCLUDE[tsql](../../includes/tsql-md.md)].
 -   [Datums- und Uhrzeitdatentypen:](#DateandTimeDataTypes)  
@@ -51,12 +51,12 @@ In der folgenden Tabelle werden die Datums- und Uhrzeitdatentypen von [!INCLUDE[
   
 |Datentyp|Format|Bereich|Genauigkeit|Speichergröße (Bytes)|Benutzerdefinierte Genauigkeit in Sekundenbruchteilen|Zeitzonenoffset|  
 |---|---|---|---|---|---|---|
-|[Uhrzeit](../../t-sql/data-types/time-transact-sql.md)|hh:mm:ss[.nnnnnnn]|00:00:00.0000000 bis 23:59:59.9999999|100 Nanosekunden|3 bis 5|Benutzerkontensteuerung|nein|  
-|[Datum](../../t-sql/data-types/date-transact-sql.md)|YYYY-MM-DD|0001-01-01 bis 9999-12-31|1 Tag|3|nein|nein|  
-|[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)|YYYY-MM-DD hh:mm:ss|1900-01-01 bis 2079-06-06|1 Minute|4|nein|nein|  
-|[datetime](../../t-sql/data-types/datetime-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnn]|1753-01-01 bis 9999-12-31|0,00333 Sekunden|8|nein|nein|  
-|[datetime2](../../t-sql/data-types/datetime2-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|0001-01-01 00:00:00.0000000 bis 9999-12-31 23:59:59.9999999|100 Nanosekunden|6 bis 8|Benutzerkontensteuerung|nein|  
-|[datetimeoffset](../../t-sql/data-types/datetimeoffset-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|0001-01-01 00:00:00.0000000 bis 9999-12-31 23:59:59.9999999 (in UTC)|100 Nanosekunden|8 bis 10|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|[Uhrzeit](../../t-sql/data-types/time-transact-sql.md)|hh:mm:ss[.nnnnnnn]|00:00:00.0000000 bis 23:59:59.9999999|100 Nanosekunden|3 bis 5|Ja|Nein|  
+|[Datum](../../t-sql/data-types/date-transact-sql.md)|YYYY-MM-DD|0001-01-01 bis 9999-12-31|1 Tag|3|Nein|Nein|  
+|[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)|YYYY-MM-DD hh:mm:ss|1900-01-01 bis 2079-06-06|1 Minute|4|Nein|Nein|  
+|[datetime](../../t-sql/data-types/datetime-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnn]|1753-01-01 bis 9999-12-31|0,00333 Sekunden|8|Nein|Nein|  
+|[datetime2](../../t-sql/data-types/datetime2-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|0001-01-01 00:00:00.0000000 bis 9999-12-31 23:59:59.9999999|100 Nanosekunden|6 bis 8|Ja|Nein|  
+|[datetimeoffset](../../t-sql/data-types/datetimeoffset-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|0001-01-01 00:00:00.0000000 bis 9999-12-31 23:59:59.9999999 (in UTC)|100 Nanosekunden|8 bis 10|Ja|Ja|  
   
 > [!NOTE]  
 >  Der [!INCLUDE[tsql](../../includes/tsql-md.md)] [rowversion](../../t-sql/data-types/rowversion-transact-sql.md)-Datentyp ist kein Datums- oder Uhrzeitdatentyp. **timestamp** ist ein veraltetes Synonym für **rowversion**.  
@@ -99,11 +99,11 @@ In den folgenden Tabellen werden die Datums- und Uhrzeitfunktionen von [!INCLUDE
 |Funktion|Syntax|Rückgabewert|Rückgabedatentyp|Determinismus|  
 |---|---|---|---|---|
 |[DATEFROMPARTS](../../t-sql/functions/datefromparts-transact-sql.md)|DATEFROMPARTS  ( *year*, *month*, *day* )|Gibt einen **date**-Wert für das angegebene Jahr, den Monat und den Tag zurück.|**Datum**|Deterministisch|  
-|[DATETIME2FROMPARTS](../../t-sql/functions/datetime2fromparts-transact-sql.md)|DATETIME2FROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *precision*)|Gibt einen **datetime2**-Wert für das angegebene Datum und die angegebene Uhrzeit mit der angegebenen Genauigkeit zurück.|**datetime2(** *precision* **)**|Deterministisch|  
+|[DATETIME2FROMPARTS](../../t-sql/functions/datetime2fromparts-transact-sql.md)|DATETIME2FROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *precision*)|Gibt einen **datetime2**-Wert für das angegebene Datum und die angegebene Uhrzeit mit der angegebenen Genauigkeit zurück.|**datetime2(** _precision_ **)**|Deterministisch|  
 |[DATETIMEFROMPARTS](../../t-sql/functions/datetimefromparts-transact-sql.md)|DATETIMEFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *milliseconds*)|Gibt einen **datetime**-Wert für das angegebene Datum und die Uhrzeit zurück.|**datetime**|Deterministisch|  
-|[DATETIMEOFFSETFROMPARTS](../../t-sql/functions/datetimeoffsetfromparts-transact-sql.md)|DATETIMEOFFSETFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *hour_offset*, *minute_offset*, *precision*)|Gibt einen **datetimeoffset**-Wert für das angegebene Datum und die angegebene Uhrzeit mit dem angegebenen Offset und der angegebenen Genauigkeit zurück.|**datetimeoffset(** *Genauigkeit* **)**|Deterministisch|  
+|[DATETIMEOFFSETFROMPARTS](../../t-sql/functions/datetimeoffsetfromparts-transact-sql.md)|DATETIMEOFFSETFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *hour_offset*, *minute_offset*, *precision*)|Gibt einen **datetimeoffset**-Wert für das angegebene Datum und die angegebene Uhrzeit mit dem angegebenen Offset und der angegebenen Genauigkeit zurück.|**datetimeoffset(** _Genauigkeit_ **)**|Deterministisch|  
 |[SMALLDATETIMEFROMPARTS](../../t-sql/functions/smalldatetimefromparts-transact-sql.md)|SMALLDATETIMEFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute* )|Gibt einen **smalldatetime**-Wert für das angegebene Datum und die Uhrzeit zurück.|**smalldatetime**|Deterministisch|  
-|[TIMEFROMPARTS](../../t-sql/functions/timefromparts-transact-sql.md)|TIMEFROMPARTS  ( *hour*, *minute*, *seconds*, *fractions*, *precision* )|Gibt einen **time**-Wert für die angegebene Uhrzeit mit der angegebenen Genauigkeit zurück.|**time(** *precision* **)**|Deterministisch|  
+|[TIMEFROMPARTS](../../t-sql/functions/timefromparts-transact-sql.md)|TIMEFROMPARTS  ( *hour*, *minute*, *seconds*, *fractions*, *precision* )|Gibt einen **time**-Wert für die angegebene Uhrzeit mit der angegebenen Genauigkeit zurück.|**time(** _precision_ **)**|Deterministisch|  
   
 ###  <a name="GetDateandTimeDifference"></a> Funktionen, die Datums- und Uhrzeitunterschiede zurückgeben
   
@@ -127,10 +127,10 @@ In den folgenden Tabellen werden die Datums- und Uhrzeitfunktionen von [!INCLUDE
 |---|---|---|---|---|
 |[@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md)|@@DATEFIRST|Gibt den für die Sitzung aktuellen Wert von SET DATEFIRST zurück.|**tinyint**|Nicht deterministisch|  
 |[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)|SET DATEFIRST { *number* &#124; **@***number_var* }|Legt den ersten Wochentag auf eine Zahl von 1 bis 7 fest.|Nicht verfügbar|Nicht verfügbar|  
-|[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT { *format* &#124; **@***format_var* }|Legt die Reihenfolge der Datumsbestandteile (Tag, Monat, Jahr) für die Eingabe von **datetime**- oder **smalldatetime**-Daten fest.|Nicht verfügbar|Nicht verfügbar|  
+|[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT { *format* &#124; **@**_format_var_ }|Legt die Reihenfolge der Datumsbestandteile (Tag, Monat, Jahr) für die Eingabe von **datetime**- oder **smalldatetime**-Daten fest.|Nicht verfügbar|Nicht verfügbar|  
 |[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|@@LANGUAGE|Gibt den Namen der derzeit verwendeten Sprache zurück. @@LANGUAGE ist keine Datums- oder Uhrzeitfunktion. Die Spracheinstellung kann sich jedoch auf die Ausgabe von Datumsfunktionen auswirken.|Nicht verfügbar|Nicht verfügbar|  
-|[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE { [ N ] **'***language***'** &#124; **@***language_var* }|Legt die Sprachumgebung für die Sitzung und die Systemmeldungen fest. SET LANGUAGE ist keine Datums- oder Uhrzeitfunktion. Die Spracheinstellung wirkt sich jedoch auf die Ausgabe von Datumsfunktionen aus.|Nicht verfügbar|Nicht verfügbar|  
-|[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [ [ **@language =** ] **'***language***'** ]|Gibt Informationen den Datumsformaten aller unterstützten Sprachen zurück. **sp_helplanguage** ist keine gespeicherte Prozedur für Datum oder Uhrzeit. Die Spracheinstellung wirkt sich jedoch auf die Ausgabe von Datumsfunktionen aus.|Nicht verfügbar|Nicht verfügbar|  
+|[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE { [ N ] **'**_Sprache_**'** &#124; **@***language_var* }|Legt die Sprachumgebung für die Sitzung und die Systemmeldungen fest. SET LANGUAGE ist keine Datums- oder Uhrzeitfunktion. Die Spracheinstellung wirkt sich jedoch auf die Ausgabe von Datumsfunktionen aus.|Nicht verfügbar|Nicht verfügbar|  
+|[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [ [ **@language =** ] **'**_Sprache_**'** ]|Gibt Informationen den Datumsformaten aller unterstützten Sprachen zurück. **sp_helplanguage** ist keine gespeicherte Prozedur für Datum oder Uhrzeit. Die Spracheinstellung wirkt sich jedoch auf die Ausgabe von Datumsfunktionen aus.|Nicht verfügbar|Nicht verfügbar|  
   
 ###  <a name="ValidateDateandTimeValues"></a> Funktionen, die Datums- und Uhrzeitwerte überprüfen
   

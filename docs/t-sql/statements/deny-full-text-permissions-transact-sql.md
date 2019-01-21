@@ -19,12 +19,12 @@ ms.assetid: d86e9a1d-0938-4ec2-a169-2d0564f3642e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fd7cf407f3634824f18137ec4539c56d930221c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6818a3ea8879b0fe49743e83261e120894cc359
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800198"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130750"
 ---
 # <a name="deny-full-text-permissions-transact-sql"></a>DENY-Berechtigungen für Volltext (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47800198"
   Verweigert Berechtigungen für einen Volltextkatalog und Volltext-Stopplisten.  
   
 
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,10 +52,10 @@ DENY permission [ ,...n ] ON
  *permission*  
  Der Name einer Berechtigung. Die gültigen Zuordnungen von Berechtigungen zu sicherungsfähigen Elementen werden im Abschnitt mit den Hinweisen weiter unten in diesem Thema beschrieben.  
   
- ON FULLTEXT CATALOG **::***full-text_catalog_name*  
+ ON FULLTEXT CATALOG **::**_Volltext-Katalogname_  
  Gibt den Volltextkatalog an, für den die Berechtigung verweigert wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
- ON FULLTEXT STOPLIST **::***full-text_stoplist_name*  
+ ON FULLTEXT STOPLIST **::**_Volltext-Stopplistenname_  
  Gibt die Volltext-Stoppliste an, für die die Berechtigung verweigert wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
  *database_principal*  
@@ -125,7 +125,7 @@ DENY permission [ ,...n ] ON
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die CONTROL-Berechtigung für den Volltextkatalog. Wenn Sie die Option AS verwenden, muss der angegebene Prinzipal Besitzer des Volltextkatalogs sein.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
@@ -137,7 +137,8 @@ DENY permission [ ,...n ] ON
  [GRANT (Berechtigungen für Volltext) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
  [Berechtigungen &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/permissions-database-engine.md)   
- [Prinzipale &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ 
+  [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [sys.fulltext_stoplists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)  

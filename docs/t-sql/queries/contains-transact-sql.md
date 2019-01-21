@@ -35,15 +35,18 @@ ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: adb6c91dfdbec4bc9e09d83f2adbf0aba6dab998
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: dccf940867666cf9d3a6ca88c2e6980cc4db0dc7
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531733"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300257"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Senden Sie uns Ihr Feedback zum Inhaltsverzeichnis der SQL-Dokumentation!](https://aka.ms/sqldocsurvey)
 
   Sucht nach genauen oder ungenauen (Fuzzy-)Übereinstimmungen mit einzelnen Wörtern und Satzteilen, für innerhalb einer bestimmten Entfernung angrenzende Wörter sowie für gewichtete Übereinstimmungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CONTAINS ist ein Prädikat, das in der [WHERE](../../t-sql/queries/where-transact-sql.md)-Klausel einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-SELECT-Anweisung verwendet wird, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Volltextsuchvorgänge für volltextindizierte Spalten mit zeichenbasierten Datentypen durchzuführen.  
   
@@ -61,7 +64,7 @@ ms.locfileid: "52531733"
   
  Informationen zu den Formen der Volltextsuche, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt werden, finden Sie unter [Abfragen mit Volltextsuche](../../relational-databases/search/query-with-full-text-search.md).  
  
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -535,7 +538,7 @@ WHERE CONTAINS(PROPERTY(Document,'Title'), 'Maintenance OR Repair');
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erste Schritte mit der Volltextsuche](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Erstellen und Verwalten von Volltextkatalogen](../../relational-databases/search/create-and-manage-full-text-catalogs.md)   
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   

@@ -25,19 +25,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2829710d348c56a5b3fcc09d06436929bcbfe16
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 4d2234f6f8d9fa54ccbbae35e1e1dfc7568cc8ff
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418321"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206226"
 ---
 # <a name="todatetimeoffset-transact-sql"></a>TODATETIMEOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt einen **datetimeoffset**-Wert zurück, der von einem **datetime2**-Ausdruck übersetzt wird.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -53,7 +53,7 @@ TODATETIMEOFFSET ( expression , time_zone )
 >  Ein Ausdruck kann nicht vom Typ **text**, **ntext** oder **image** sein, da diese Typen nicht implizit in **varchar** oder **nvarchar** konvertiert werden können.  
   
  *time_zone*  
- Ein Ausdruck, der den Zeitzonenoffset in Minuten (bei einer ganzen Zahl), z.B. -120, oder in Stunden und Minuten (bei einer Zeichenfolge), z.B. „+13.00“ darstellt. Der Bereich liegt zwischen +14 und -14 (in Stunden). Der Ausdruck wird in Ortszeit für die angegebene time_zone interpretiert.  
+ Ein Ausdruck, der den Zeitzonenoffset in Minuten (bei einer ganzen Zahl), z.B. -120, oder in Stunden und Minuten (bei einer Zeichenfolge), z.B. „+13:00“ darstellt. Der Bereich liegt zwischen +14 und -14 (in Stunden). Der Ausdruck wird in Ortszeit für die angegebene time_zone interpretiert.  
   
 > [!NOTE]  
 >  Wenn der Ausdruck eine Zeichenfolge ist, muss er folgendes Format aufweisen: {+ | -} TZH:THM.  
@@ -92,7 +92,7 @@ SELECT TODATETIMEOFFSET (@dateTime, '+13:00');
 -- RETURNS 2007-08-28 18:00:30.0000000 +13:00  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [Date and Time Data Types and Functions &#40;Transact-SQL&#41; (Datums- und Uhrzeitdatentypen und zugehörige Funktionen &#40;Transact-SQL&#41;)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
  [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  

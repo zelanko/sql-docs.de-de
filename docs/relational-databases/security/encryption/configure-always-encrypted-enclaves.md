@@ -1,7 +1,7 @@
 ---
 title: Konfigurieren von Always Encrypted mit Secure Enclaves | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,14 +11,15 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 246fa155a8de930cd81d65df633d3f47bed9f56e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0cfe8b4bf09b545a5141a2896eb757254265e092
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534773"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206406"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Konfigurieren von Always Encrypted mit Secure Enclaves
+
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 [Always Encrypted mit Secure Enclaves](always-encrypted-enclaves.md) erweitert das vorhandene [Always Encrypted](always-encrypted-database-engine.md)-Feature um umfangreichere Funktionalitäten für sensible Daten und schützt gleichzeitig die vertraulichen Daten.
@@ -26,14 +27,14 @@ ms.locfileid: "52534773"
 Um Always Encrypted mit Secure Enclaves einzurichten, verwenden Sie den folgenden Workflow:
 
 1. Konfigurieren Sie den Nachweis für den Host-Überwachungsdienst (Host Guardian Service, HSG).
-2. Installieren Sie [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] auf dem SQL Server-Computer.
+2. Installieren Sie [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] auf dem SQL Server-Computer.
 3. Installieren Sie Tools auf dem Client-/Entwicklungscomputer.
 4. Konfigurieren Sie den Enclave-Typ in Ihrer SQL Server-Instanz.
 5. Stellen Sie Enclave-fähige Schlüssel bereit.
 6. Verschlüsseln Sie Spalten, die sensible Daten enthalten.
 
->[!NOTE]
->Ein schrittweises Tutorial zum Einrichten Ihrer Testumgebung mit anschließendem Testen der Funktionalität von Always Encrypted mit Secure Enclaves in SSMS finden Sie unter [Tutorial: Erste Schritte mit Always Encrypted mit Secure Enclaves mithilfe von SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).
+> [!NOTE]
+> Ein ausführliches Tutorial zum Einrichten Ihrer Testumgebung mit anschließendem Testen der Funktionalität von Always Encrypted mit Secure Enclaves in SSMS finden Sie unter [Tutorial: Erste Schritte mit Always Encrypted mit Secure Enclaves mithilfe von SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).
 
 ## <a name="configure-your-environment"></a>Konfigurieren Ihrer Umgebung
 
@@ -45,7 +46,7 @@ Der Computer, auf dem SQL Server ausgeführt wird, benötigt das folgende Betrie
 
 *SQL Server*:
 
-- [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] oder höher
+- [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] oder höher
 
 *Windows*:
 
@@ -134,7 +135,7 @@ Auf dem Client-/Entwicklungscomputer:
    ```
 
     > [!NOTE]
-    > Umfangreiche Berechnungen sind standardmäßig in [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] deaktiviert. Sie müssen über die oben genannte Anweisung nach jedem Neustart der SQL Server-Instanz aktiviert werden.
+    > Umfangreiche Berechnungen sind in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] standardmäßig deaktiviert. Sie müssen über die oben genannte Anweisung nach jedem Neustart der SQL Server-Instanz aktiviert werden.
 
 ## <a name="provision-enclave-enabled-keys"></a>Bereitstellen Enclave-fähiger Schlüssel
 
@@ -217,7 +218,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 Öffnen Sie auf dem Client-/Entwicklungscomputer Windows PowerShell ISE, und führen Sie das folgende Skript aus.
 
-**Schritt 1: Stellen Sie einen Spaltenhauptschlüssels in Azure Key Vault bereit.**
+**Schritt 1: Stellen Sie den Spaltenhauptschlüssel im Azure Key Vault bereit**
 
 Dies ist auch über das Azure-Portal möglich. Weitere Informationen finden Sie unter [Verwalten Ihrer Schlüsseltresore im Azure-Portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/).
 
@@ -249,7 +250,7 @@ Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resource
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination "Software"
 ```
 
-**Schritt 2: Erstellen Sie die Metadaten für den Spaltenhauptschlüssel in der Datenbank, erstellen Sie den Spaltenverschlüsselungsschlüssel und anschließend die dazugehörigen Metadaten in der Datenbank.**
+**Schritt 2: Erstellen Sie die Metadaten für den Spaltenhauptschlüssel in der Datenbank, erstellen Sie den Spaltenverschlüsselungsschlüssel und anschließend die dazugehörigen Metadaten in der Datenbank**
 
 
 ```powershell
@@ -497,12 +498,12 @@ GO
 Es gibt mehrere Möglichkeiten, die Enclave-Funktionalität für eine bestehende Spalte zu aktivieren, die nicht Enclave-fähig ist. Für welche Methode Sie sich entscheiden, hängt von verschiedenen Faktoren ab:
 
 - **Bereich/Granularität:** Möchten Sie die Enclave-Funktionalität für eine Teilmenge von Spalten oder für alle mit einem bestimmten Spaltenhauptschlüssel geschützten Spalten aktivieren?
-- **Datengröße:** Wie groß sind die Tabellen mit den Spalten, die Sie für die Enclave aktivieren möchten?
+- **Datengröße:** Wie groß sind die Tabellen mit den Spalten, die enclavefähig sein sollen?
 - Möchten Sie auch den Verschlüsselungstyp für Ihre Spalte(n) ändern? Denken Sie daran, dass nur die Verschlüsselung nach dem Zufallsprinzip umfangreiche Berechnungen (Musterabgleich, Vergleichsoperatoren) unterstützt. Wenn Ihre Spalte mit deterministischer Verschlüsselung verschlüsselt ist, müssen Sie sie auch mit der Verschlüsselung nach dem Zufallsprinzip neu verschlüsseln, um die gesamte Enclave-Funktionalität freizuschalten.
 
 Hier sind die drei Ansätze für die Enclave-Freigabe für bestehende Spalten:
 
-#### <a name="option-1-rotate-the-column-master-key-to-replace-it-with-an-enclave-enabled-column-master-key"></a>Rotieren Sie den Spaltenhauptschlüssel, um ihn durch einen Enclave-fähigen Spaltenhauptschlüssel zu ersetzen.
+#### <a name="option-1-rotate-the-column-master-key-to-replace-it-with-an-enclave-enabled-column-master-key"></a>Option 1: Drehen Sie den Spaltenhauptschlüssel, um ihn durch einen enclavefähigen Spaltenhauptschlüssel zu ersetzen.
   
 - Vorteile:
   - Erfordert keine erneute Verschlüsselung von Daten. Daher ist dies in der Regel der schnellste Ansatz. Dieser Ansatz wird für Spalten mit großen Datenmengen empfohlen. Voraussetzung ist, dass alle Spalten, für die Sie umfangreiche Berechnungen aktivieren müssen, bereits die deterministische Verschlüsselung verwenden und daher nicht erneut verschlüsselt werden müssen.
@@ -514,7 +515,7 @@ Hier sind die drei Ansätze für die Enclave-Freigabe für bestehende Spalten:
   - Mehraufwand bei der Schlüsselverwaltung – Sie müssen einen neuen Spaltenhauptschlüssel erstellen und ihn Anwendungen zur Verfügung stellen, die die betroffenen Spalten abfragen.  
 
 
-#### <a name="option-2-this-approach-involves-two-steps-1-rotating-the-column-master-key-as-in-option-1-and-2-re-encrypting-a-subset-of-deterministically-encrypted-columns-using-randomized-encryption-to-enable-rich-computations-for-those-columns"></a>Option 2: Dieser Ansatz umfasst zwei Schritte: 1) Rotieren des Spaltenhauptschlüssels (wie in Option 1) und 2) erneutes Verschlüsseln einer Teilmenge deterministisch verschlüsselter Spalten unter Verwendung der Verschlüsselung nach dem Zufallsprinzip, um umfangreiche Berechnungen für diese Spalten zu ermöglichen.
+#### <a name="option-2-this-approach-involves-two-steps-1-rotating-the-column-master-key-as-in-option-1-and-2-re-encrypting-a-subset-of-deterministically-encrypted-columns-using-randomized-encryption-to-enable-rich-computations-for-those-columns"></a>Option 2: Diese Vorgehensweise umfasst zwei Schritte: 1) Drehen des Spaltenhauptschlüssels (wie in Option 1) und 2) erneutes Verschlüsseln einer Teilmenge deterministisch verschlüsselter Spalten unter Verwendung der Verschlüsselung nach dem Zufallsprinzip, um umfangreiche Berechnungen für diese Spalten zu ermöglichen.
   
 - Vorteile:
   - Die Daten werden mit direkter Verschlüsselung erneut verschlüsselt. Daher ist dies eine empfohlene Methode, um umfangreiche Abfragen für deterministisch verschlüsselte Spalten mit großen Datenmengen zu ermöglichen. Beachten Sie, dass Schritt 1 die direkte Verschlüsselung für die Spalten unter Verwendung einer deterministischen Verschlüsselung aktiviert, sodass Schritt 2 per Vor-Ort-Verschlüsselung ausgeführt werden kann.
@@ -524,7 +525,7 @@ Hier sind die drei Ansätze für die Enclave-Freigabe für bestehende Spalten:
   - Ermöglicht es Ihnen nicht, einige der Spalten, die einem bestimmten Spaltenhauptschlüssel zugeordnet sind, selektiv zu konvertieren.
   - Mehraufwand bei der Schlüsselverwaltung – Sie müssen einen neuen Spaltenhauptschlüssel erstellen und ihn Anwendungen zur Verfügung stellen, die die betroffenen Spalten abfragen.
 
-#### <a name="option-3-re-encrypting-selected-columns-with-a-new-enclave-enabled-column-encryption-key-and-randomized-encryption-if-needed-on-the-client-side"></a>Option 3: Clientseitige Neuverschlüsselung ausgewählter Spalten mit einem neuen Enclave-fähigen Spaltenverschlüsselungsschlüssel und Verschlüsselung nach dem Zufallsprinzip (falls erforderlich).
+#### <a name="option-3-re-encrypting-selected-columns-with-a-new-enclave-enabled-column-encryption-key-and-randomized-encryption-if-needed-on-the-client-side"></a>Option 3: Clientseitige Neuverschlüsselung ausgewählter Spalten mit einem neuen enclavefähigen Spaltenverschlüsselungsschlüssel und Verschlüsselung nach dem Zufallsprinzip (falls erforderlich).
   
 - Vorteile dieser Methode:
   - Ermöglicht es Ihnen, die Enclave-Funktionalität selektiv für eine Spalte oder eine kleine Teilmenge von Spalten zu aktivieren.
@@ -860,7 +861,7 @@ Darüber hinaus muss sich Ihre Anwendung an allgemeine Richtlinien halten, die f
 Einzelheiten zur Entwicklung von.NET Framework-Anwendungen mit Always Encrypted finden Sie in den folgenden Artikeln:
 
 - [Entwickeln von Always Encrypted mit .NET Framework-Datenanbieter](develop-using-always-encrypted-with-net-framework-data-provider.md)
-- [Always Encrypted – Schützen vertraulicher Daten in SQL-Datenbank und Speichern von Verschlüsselungsschlüsseln in Azure Key Vault](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)
+- [Always Encrypted: Protect sensitive data in SQL Database and store your encryption keys in Azure Key Vault (Schützen vertraulicher Daten in SQL-Datenbank und Speichern von Verschlüsselungsschlüsseln im Azure Key Vault)](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)
 
 #### <a name="example"></a>Beispiel
 

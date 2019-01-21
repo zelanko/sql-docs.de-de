@@ -18,12 +18,12 @@ ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 35f53ef33d1cf9316fcb7225ab5baf67a3b33383
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b8b74629bcaea743026c453614f2c69e268b6bc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804059"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130930"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>Debuggen eines Geschäftslogikhandlers (Replikationsprogrammierung)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47804059"
   
 ### <a name="to-debug-a-business-logic-handler-on-a-local-computer"></a>So debuggen Sie einen Geschäftslogikhandler auf einem lokalen Computer  
   
-1.  Konfigurieren Sie die Veröffentlichung und Verteilung, erstellen Sie eine Veröffentlichung, und erstellen Sie ein Abonnement für die Veröffentlichung. Weitere Informationen finden Sie unter [Konfigurieren der Veröffentlichung und der Verteilung](../../relational-databases/replication/configure-publishing-and-distribution.md) und [Erstellen, Ändern und Löschen von Veröffentlichungen und Artikeln &#40;Replikation&#41;](../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md).  
+1.  Konfigurieren Sie die Veröffentlichung und Verteilung, erstellen Sie eine Veröffentlichung, und erstellen Sie ein Abonnement für die Veröffentlichung. Weitere Informationen finden Sie unter [Konfigurieren der Veröffentlichung und der Verteilung](../../relational-databases/replication/configure-publishing-and-distribution.md) und [Create a Publication (Erstellen einer Veröffentlichung)](../../relational-databases/replication/publish/create-a-publication.md).  
   
 2.  Erstellen und registrieren Sie einen Geschäftslogikhandler. Weitere Informationen finden Sie unter [Implementieren eines Geschäftslogikhandlers für einen Mergeartikel](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
   
@@ -83,7 +83,7 @@ ms.locfileid: "47804059"
   
 11. Die Ausführung stoppt, wenn sie den Breakpoint im Geschäftslogikhandler erreicht, falls keine anderen Breakpoints festgelegt und die richtigen Befehle repliziert wurden.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Implementieren eines Geschäftslogikhandlers für einen Mergeartikel](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
   

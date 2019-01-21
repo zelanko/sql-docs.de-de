@@ -17,12 +17,12 @@ ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 58fa9cf55a0ef120266c0398734fc6671402634c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51b083073e38c44708f4d017ee1fd1eb86278f24
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785248"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129310"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>Peer-zu-Peer - Transaktionsreplikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47785248"
  Die Peer-zu-Peer-Replikation schließt die Option ein, die Konflikterkennung für eine gesamte Peer-zu-Peer-Topologie zu aktivieren. Diese Option hilft, den Problemen vorzubeugen, die sich aus nicht erkannten Konflikten, einschließlich inkonsistentem Verhalten von Anwendungen und verlorenen Updates ergeben. Standardmäßig wird, wenn diese Option aktiviert ist, eine konfliktverursachende Änderung als ein schwerwiegender Fehler betrachtet, der zu einem Fehler des Verteilungs-Agents führt. Bei einem Konflikt verbleibt die Topologie so lange in einem inkonsistenten Zustand, bis der Konflikt manuell gelöst und die Datenkonsistenz in der Topologie wiederhergestellt wurde. Weitere Informationen finden Sie unter [Conflict Detection in Peer-to-Peer Replication](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
 > [!NOTE]  
->  Stellen Sie, um inkonsistente Daten zu vermeiden, in einer Peer-zu-Peer-Topologie sicher, dass keine Konflikte auftreten, auch wenn die Konflikterkennung aktiviert ist. Damit sichergestellt ist, dass Schreibvorgänge für eine bestimmte Zeile nur an einem Knoten durchgeführt werden, müssen Anwendungen, die auf Daten zugreifen und diese ändern, Einfügungen, Updates und Löschungen partitionieren. Diese Partitionierung gewährleistet, dass Änderungen an einer bestimmten Zeile, die von einem Knoten stammen, mit allen anderen Knoten in der Topologie synchronisiert werden, bevor die Zeile von einem anderen Knoten geändert wird. Wenn eine Anwendung ausgereifte Fähigkeiten zur Konflikterkennung und -lösung erfordert, verwenden Sie die Mergereplikation. Weitere Informationen finden Sie unter [Mergereplikation](../../../relational-databases/replication/merge/merge-replication.md) und [Erkennen und Beseitigen von Konflikten bei der Mergereplikation](../../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
+>  Stellen Sie, um inkonsistente Daten zu vermeiden, in einer Peer-zu-Peer-Topologie sicher, dass keine Konflikte auftreten, auch wenn die Konflikterkennung aktiviert ist. Damit sichergestellt ist, dass Schreibvorgänge für eine bestimmte Zeile nur an einem Knoten durchgeführt werden, müssen Anwendungen, die auf Daten zugreifen und diese ändern, Einfügungen, Updates und Löschungen partitionieren. Diese Partitionierung gewährleistet, dass Änderungen an einer bestimmten Zeile, die von einem Knoten stammen, mit allen anderen Knoten in der Topologie synchronisiert werden, bevor die Zeile von einem anderen Knoten geändert wird. Wenn eine Anwendung ausgereifte Fähigkeiten zur Konflikterkennung und -lösung erfordert, verwenden Sie die Mergereplikation. Weitere Informationen finden Sie unter [Mergereplikation](../../../relational-databases/replication/merge/merge-replication.md) und [Erkennen und Beseitigen von Konflikten bei der Mergereplikation](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 ## <a name="peer-to-peer-topologies"></a>Peer-zu-Peer-Topologien  
  In folgenden Szenarien werden die typischen Verwendungsarten der Peer-zu-Peer-Replikation erläutert.  
@@ -159,7 +159,7 @@ ms.locfileid: "47785248"
   
 ||Nur SQL Server 2005-Peers oder eine Kombination aus SQL Server 2005- und SQL Server 2008-Peers und höher|Nur SQL Server 2005-Peers oder eine Kombination aus SQL Server 2005- und SQL Server 2008-Peers und höher|SQL Server 2008-Peers und höher|SQL Server 2008-Peers und höher|  
 |-|------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|------------------------------|------------------------------|  
-|Hinzufügen eines Knotens zur Topologie|2 Knoten in vollständiger Topologie: Kein Versetzen in inaktiven Status erforderlich. Verwenden Sie `sync_type = 'initialize with backup'`.|Mehr als 2 Knoten: Versetzen in inaktiven Status erforderlich.|`sync_type = 'replication support only'`: Versetzen in inaktiven Status erforderlich.|`sync_type = 'initialize with backup'` und `'initialize from lsn'`: Kein Versetzen in inaktiven Status erforderlich.|  
+|Hinzufügen eines Knotens zur Topologie|Zwei Knoten in vollständiger Topologie: Stilllegung nicht erforderlich. Verwenden Sie `sync_type = 'initialize with backup'`.|Mehr als zwei Knoten: Stilllegung erforderlich.|`sync_type = 'replication support only'`: Stilllegung erforderlich.|`sync_type = 'initialize with backup'` und `'initialize from lsn'`: Stilllegung nicht erforderlich.|  
   
  Für Änderungen am Topologieschema (Hinzufügen oder Löschen von Artikeln) ist ein Versetzen in den inaktiven Status erforderlich. Weitere Informationen finden Sie unter [Verwalten einer Peer-zu-Peer-Topologie &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md).  
   
@@ -169,9 +169,9 @@ ms.locfileid: "47785248"
   
  Für Änderungen am Artikelschema (Hinzufügen oder Löschen von Spalten) ist kein Versetzen in den inaktiven Status erforderlich.  
   
--   Artikel hinzufügen: Zum Hinzufügen eines Artikels zu einer vorhandenen Konfiguration muss das System in den inaktiven Status versetzt werden. Danach wird die CREATE TABLE-Anweisung ausgeführt, die Ausgangsdaten werden auf jeden Knoten der Topologie geladen und der neue Artikel wird jedem Knoten der Topologie hinzugefügt.  
+-   Hinzufügen eines Artikels: Zum Hinzufügen eines Artikels zu einer vorhandenen Konfiguration muss das System stillgelegt werden. Danach wird die CREATE TABLE-Anweisung ausgeführt, die Ausgangsdaten werden auf jeden Knoten der Topologie geladen, und der neue Artikel wird jedem Knoten der Topologie hinzugefügt.  
   
--   Artikel löschen: Zur Aufrechterhaltung eines konsistenten Status auf allen Knoten muss die Topologie in den inaktiven Status versetzt werden.  
+-   Löschen eines Artikels: Zur Aufrechterhaltung eines konsistenten Status auf allen Knoten muss die Topologie stillgelegt werden.  
   
  Weitere Informationen finden Sie unter [Versetzen einer Replikationstopologie in einen inaktiven Status &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md) und [Verwalten einer Peer-zu-Peer-Topologie &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md).  
   
@@ -179,9 +179,9 @@ ms.locfileid: "47785248"
   
 -   In einer Peer-zu-Peer-Topologie können Abonnements nicht erneut initialisiert werden. Wenn Sie sicherstellen müssen, dass ein Knoten eine neue Kopie der Daten besitzt, stellen Sie an diesem Knoten eine Sicherung wieder her.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten einer Peer-zu-Peer-Topologie &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Strategien zum Sichern und Wiederherstellen einer Momentaufnahme- und Transaktionsreplikation](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
- [Veröffentlichungstypen der Transaktionsreplikation](../../../relational-databases/replication/transactional/publication-types-for-transactional-replication.md)  
+ [Transaktionsreplikation](../../../relational-databases/replication/transactional/transactional-replication.md)  
   
   

@@ -15,15 +15,18 @@ ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0c629fec392dd286c0828aa5a34b282e71b19bfb
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 2aa8a6ca557e4d4b358f646c73cb24cc69bdd009
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383875"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299038"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Senden Sie uns Ihr Feedback zum Inhaltsverzeichnis der SQL-Dokumentation!](https://aka.ms/sqldocsurvey)
 
   In diesem Thema wird beschrieben, wie eine Windows-Firewall für Datenbank-Engine-Zugriff in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe des SQL Server-Konfigurations-Managers konfiguriert wird. Durch Firewallsysteme kann der nicht autorisierte Zugriff auf Computerressourcen verhindert werden. Um über eine Firewall auf eine Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] zugreifen zu können, müssen Sie die Firewall auf dem Computer mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entsprechend konfigurieren.  
   
@@ -47,7 +50,7 @@ ms.locfileid: "49383875"
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff mithilfe von:**  
   
@@ -95,7 +98,7 @@ ms.locfileid: "49383875"
   
 7.  Geben Sie im Dialogfeld **Name** einen Namen und eine Beschreibung für die Regel ein, und klicken Sie dann auf **Fertig stellen**.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Gewusst wie: Konfigurieren von Firewalleinstellungen (Azure SQL-Datenbank)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Vorgehensweise: Konfigurieren von Firewalleinstellungen (Azure SQL-Datenbank)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   

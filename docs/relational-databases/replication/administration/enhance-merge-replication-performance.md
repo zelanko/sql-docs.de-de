@@ -20,12 +20,12 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c5cb5603b98701597847e1997c17714affa7b923
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 931c881651b87fd7ab8ce4b47a4e24710ce8c487
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535281"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136070"
 ---
 # <a name="enhance-merge-replication-performance"></a>Verbessern der Leistung der Mergereplikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,9 +102,9 @@ ms.locfileid: "52535281"
   
      Beim Aktualisieren des Abonnenten auf [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder eine höhere Version wird auch der Merge-Agent aktualisiert, der von den Abonnements auf diesem Abonnenten verwendet wird. Dieser Merge-Agent von [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder einer höheren Version ist erforderlich, um die neuen Funktionen und Leistungsoptimierungsmöglichkeiten nutzen zu können.  
   
--   Wenn ein Abonnement über eine schnelle Verbindung synchronisiert wird sowie Änderungen vom Verleger und vom Abonnenten gesendet werden, verwenden Sie für den Merge-Agent den Parameter **-ParallelUploadDownload**.  
+-   Wenn ein Abonnement über eine schnelle Verbindung synchronisiert wird und vom Verleger und vom Abonnenten Änderungen gesendet werden, verwenden Sie für den Merge-Agent den **–ParallelUploadDownload** -Parameter.  
   
-     Mit [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] wurde ein neuer Parameter für den Merge-Agent eingeführt: **-ParallelUploadDownload**. Wenn Sie diesen Parameter verwenden, kann der Merge-Agent gleichzeitig sowohl die Änderungen, die auf den Verleger hochgeladen werden, als auch die Änderungen verarbeiten, die auf den Abonnenten heruntergeladen werden. Dieses Verhalten erweist sich in Umgebungen mit hohem Volumen als nützlich, die eine hohe Netzwerkbandbreite besitzen. Agentparameter können in den Agentprofilen und in der Befehlszeile angegeben werden. Weitere Informationen finden Sie in den folgenden Themen:  
+     In[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] wurde ein neuer Parameter für den Merge-Agent eingeführt: **–ParallelUploadDownload**. Wenn Sie diesen Parameter verwenden, kann der Merge-Agent gleichzeitig sowohl die Änderungen, die auf den Verleger hochgeladen werden, als auch die Änderungen verarbeiten, die auf den Abonnenten heruntergeladen werden. Dieses Verhalten erweist sich in Umgebungen mit hohem Volumen als nützlich, die eine hohe Netzwerkbandbreite besitzen. Agentparameter können in den Agentprofilen und in der Befehlszeile angegeben werden. Weitere Informationen finden Sie in den folgenden Themen:  
   
     -   [Arbeiten mit Replikations-Agent-Profilen](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
@@ -136,16 +136,16 @@ ms.locfileid: "52535281"
   
 -   Generieren Sie vorab Momentaufnahmen, und/oder ermöglichen Sie es den Abonnenten, beim ersten Synchronisieren die Momentaufnahmegenerierung und -anwendung anzufordern.  
   
-     Verwenden Sie eine oder beide dieser Optionen, um Momentaufnahmen für Veröffentlichungen bereitzustellen, die parametrisierte Filter verwenden. Wenn Sie keine dieser beiden Optionen angeben, werden die Abonnements mit einer Reihe von SELECT- und INSERT-Anweisungen statt mit dem **bcp** -Hilfsprogramm initialisiert, wodurch sich der Prozess deutlich verlangsamt. Weitere Informationen finden Sie unter [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+     Verwenden Sie eine oder beide dieser Optionen, um Momentaufnahmen für Veröffentlichungen bereitzustellen, die parametrisierte Filter verwenden. Wenn Sie keine dieser beiden Optionen angeben, werden die Abonnements mit einer Reihe von SELECT- und INSERT-Anweisungen statt mit dem **bcp** -Hilfsprogramm initialisiert, wodurch sich der Prozess deutlich verlangsamt. Weitere Informationen finden Sie unter [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## <a name="maintenance-and-monitoring-considerations"></a>Überlegungen zur Wartung und Überwachung  
   
 -   Indizieren Sie die Systemtabellen für die Mergereplikation von Zeit zu Zeit neu.  
   
-     Als Teil der Wartung für die Mergereplikation überprüfen Sie gelegentlich die Vergrößerung der Systemtabellen, die mit der Mergereplikation verbunden sind: **MSmerge_contents**, **MSmerge_genhistory**, **MSmerge_tombstone**, **MSmerge_current_partition_mappings**und **MSmerge_past_partition_mappings**. Führen Sie eine regelmäßige Neuindizierung dieser Tabellen durch. Weitere Informationen finden Sie unter [Neuorganisieren und Neuerstellen von Indizes](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
+     Als Teil der Wartung für die Mergereplikation überprüfen Sie gelegentlich die Vergrößerung der Systemtabellen, die mit der Mergereplikation verbunden sind: **MSmerge_contents**, **MSmerge_genhistory**, and **MSmerge_tombstone**, **MSmerge_current_partition_mappings** und **MSmerge_past_partition_mappings**. Führen Sie eine regelmäßige Neuindizierung dieser Tabellen durch. Weitere Informationen finden Sie unter [Neuorganisieren und Neuerstellen von Indizes](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
 -   Überwachen Sie mithilfe der Registerkarte **Synchronisierungsverlauf** im Replikationsmonitor die Synchronisierungsleistung.  
   
-     Bei Mergereplikationen zeigt der Replikationsmonitor auf der Registerkarte **Synchronisierungsverlauf** detaillierte Statistiken für alle Artikel an, die während einer Synchronisierung verarbeitet werden. So lässt sich diesen Statistiken z. B. die Länge der einzelnen Verarbeitungsphasen (Hochladen von Änderungen, Herunterladen von Änderungen usw.) entnehmen. Auf diese Weise können Sie besser die Tabellen identifizieren, die zu einer Verlangsamung führen, und Sie können hier auch hervorragend Leistungsprobleme im Zusammenhang mit Mergeabonnements diagnostizieren. Weitere Informationen zum Anzeigen detaillierter Statistiken finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für die einem Abonnement zugeordneten Agents &#40;Replikationsmonitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     Bei Mergereplikationen zeigt der Replikationsmonitor auf der Registerkarte **Synchronisierungsverlauf** detaillierte Statistiken für alle Artikel an, die während einer Synchronisierung verarbeitet werden. So lässt sich diesen Statistiken z. B. die Länge der einzelnen Verarbeitungsphasen (Hochladen von Änderungen, Herunterladen von Änderungen usw.) entnehmen. Auf diese Weise können Sie besser die Tabellen identifizieren, die zu einer Verlangsamung führen, und Sie können hier auch hervorragend Leistungsprobleme im Zusammenhang mit Mergeabonnements diagnostizieren. Weitere Informationen zum Anzeigen detaillierten Statistiken finden Sie unter [View Information and Perform Tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
   

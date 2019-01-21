@@ -25,18 +25,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3eae62b963843c369731ca0abd800c9552c37d3
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d2f36af646ee1fb41279b8401c5e2bdf18ed6896
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698818"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299387"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char und varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Unterstützen Sie uns bei der Verbesserung der Dokumentation für SQL Server.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Senden Sie uns Ihr Feedback zum Inhaltsverzeichnis der SQL-Dokumentation!](https://aka.ms/sqldocsurvey)
 
 Dieser Artikel beschreibt Zeichendatentypen, die entweder über eine feste Länge – **char** – oder über eine variable Länge – **varchar** – verfügen. Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] gilt Folgendes: Wenn eine Sortierung mit aktiviertem UTF-8 verwendet wird, speichern diese Datentypen den gesamten Bereich der [Unicodezeichendaten](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) und verwenden die Zeichencodierung [UTF-8](https://www.wikipedia.org/wiki/UTF-8). Wenn eine Sortierung ohne aktivierte UTF-8 angegeben wird, speichern diese Datentypen nur eine Teilmenge von Zeichen, die von der entsprechenden Codepage dieser Sortierung unterstützt wird.
   
@@ -52,7 +52,7 @@ Objekten, die **char** oder **varchar** verwenden, wird die Standardsortierung d
 
 Multibyte-Codierungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] umfassen:
 -   Doppelbyte-Zeichensätze (DBCS) für einige ostasiatische Sprachen mit Codepages 936 und 950 (Chinesisch), 932 (Japanisch) oder 949 (Koreanisch).
--   UTF-8 mit Codepage 65001. **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
+-   UTF-8 mit Codepage 65001. **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]))
 
 Wenn Sie Websites haben, die mehrere Sprachen unterstützen:
 - Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wird eine Sortierung mit aktiviertem UTF-8 empfohlen, um Unicode zu unterstützen und Probleme bei der Zeichenkonvertierung zu vermeiden. 

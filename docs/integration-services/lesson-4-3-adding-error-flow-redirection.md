@@ -1,7 +1,7 @@
 ---
-title: 'Schritt 3: Hinzufügen von Fehlerflussumleitungen | Microsoft Docs'
+title: 'Schritt 3: Hinzufügen der Fehlerflussumleitung | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/07/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,49 +11,48 @@ ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aaaa071f447b77242196da7a83a7b71f6f2ca395
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: 0f5d292a7fa1f4097de300fc1f7e8c1a579f541a
+ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302883"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54211061"
 ---
-# <a name="lesson-4-3---adding-error-flow-redirection"></a>Lektion 4-3: Hinzufügen der Fehlerflussumleitung
-Wie in der vorhergehenden Aufgabe gezeigt, kann von der Lookup Currency Key-Transformation keine Übereinstimmung generiert werden, wenn die Transformation versucht, die beschädigte Beispielflatfile, die einen Fehler produziert hat, zu verarbeiten. Da die Transformation die Standardeinstellungen für die Fehlerausgabe verwendet, führt jeder Fehler dazu, dass die Transformation fehlschlägt. Wenn die Transformation fehlschlägt, schlägt auch der Rest des Pakets fehl.  
+# <a name="lesson-4-3-add-error-flow-redirection"></a>Lektion 4.3: Hinzufügen der Fehlerflussumleitung
+
+Wie in der vorhergehenden Aufgabe gezeigt, kann von der Lookup Currency Key-Transformation keine Übereinstimmung generiert werden, wenn von der Transformation die beschädigte Beispielflatfile verarbeitet werden soll, weil Letztere einen Fehler verursacht. Da die Transformation die Standardeinstellungen für die Fehlerausgabe verwendet, führt jeder Fehler dazu, dass die Transformation fehlschlägt. Wenn die Transformation fehlschlägt, schlägt auch der Rest des Pakets fehl.  
   
-Anstatt ein Fehlschlagen der Transformation zuzulassen, können Sie die Komponente so konfigurieren, dass die fehlerverursachende Zeile mithilfe der Fehlerausgabe in einen anderen Verarbeitungspfad umgeleitet wird. Die Verwendung eines separaten Fehlerverarbeitungspfades gibt Ihnen die Möglichkeit, mehrere Vorgänge auszuführen. Sie können beispielsweise die Daten säubern und dann die fehlerhafte Zeile erneut verarbeiten. Oder Sie speichern die fehlerhafte Zeile zusammen mit zusätzlichen Fehlerinformationen zum späteren Überprüfen und erneutem Verarbeiten.  
+Anstatt ein Fehlschlagen der Transformation zuzulassen, können Sie die Komponente so konfigurieren, dass die fehlerverursachende Zeile mithilfe der Fehlerausgabe zu einem anderen Verarbeitungspfad umgeleitet wird. Die Nutzung eines separaten Verarbeitungspfads bietet mehr Optionen. Sie können beispielsweise die Daten bereinigen und dann die fehlerverursachende Zeile neu verarbeiten. Alternativ können Sie die fehlerverursachende Zeile mit den zugehörigen Fehlerinformationen speichern, um später eine Überprüfung und Neuverarbeitung durchzuführen.  
   
-In dieser Aufgabe konfigurieren Sie die Lookup Currency Key-Transformation so, dass alle fehlerverursachenden Zeilen in die Fehlerausgabe umgeleitet werden. In der Fehlerverzweigung des Datenflusses werden diese Zeilen in eine Datei geschrieben.  
+In dieser Aufgabe konfigurieren Sie die Lookup Currency Key-Transformation so, dass alle fehlerhaften Zeilen in die Fehlerausgabe umgeleitet werden. In der Fehlerverzweigung des Datenflusses schreibt [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] diese Zeilen in eine Datei.  
   
-Standardmäßig enthalten die beiden zusätzlichen Spalten in einer [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Fehlerausgabe **ErrorCode** und **ErrorColumn**nur numerische Codes, die eine Fehlernummer darstellen, und die ID der Spalte, in der der Fehler auftrat. Diese numerischen Werte sind ohne die entsprechende Fehlerbeschreibung nur von begrenztem Nutzen.  
+Standardmäßig enthalten die beiden zusätzlichen Spalten **ErrorCode** und **ErrorColumn** in einer [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Fehlerausgabe nur einen numerischen Fehlercode und die ID der Spalte, in der der Fehler aufgetreten ist. In dieser Aufgabe greifen Sie mithilfe einer Skriptkomponente auf die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-API zu und rufen eine Beschreibung des Fehlers ab, bevor das Paket die fehlerverursachenden Zeilen in die Datei schreibt.  
   
-Um die Nützlichkeit der Fehlerausgabe zu verbessern, werden Sie mithilfe einer Skriptkomponente auf die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -API zugreifen und eine Beschreibung des Fehlers abrufen, bevor das Paket die fehlerverursachenden Zeilen in die Datei schreibt.  
-  
-## <a name="to-configure-an-error-output"></a>So konfigurieren Sie eine Fehlerausgabe  
+## <a name="configure-an-error-output"></a>Konfigurieren einer Fehlerausgabe  
   
 1.  Erweitern Sie in der **SSIS-Toolbox**die Option **Allgemein**, und ziehen Sie anschließend **Skriptkomponente** auf die Entwurfsoberfläche der Registerkarte **Datenfluss** . Legen Sie **Skript** rechts von der **Lookup Currency Key** -Transformation ab.  
   
-2.  Klicken Sie im Dialogfeld **Skriptkomponententyp auswählen** auf **Transformation**und anschließend auf **OK**.  
+2.  Klicken Sie im Dialogfeld **Skriptkomponententyp auswählen** auf **Transformation** und anschließend auf **OK**.  
   
-3.  Klicken Sie auf die **Lookup Currency Key** -Transformation, und ziehen Sie anschließend den roten Pfeil auf die neu hinzugefügte **Skripttransformation** , um die zwei Komponenten zu verbinden.  
+3.  Klicken Sie auf die **Lookup Currency Key**-Transformation, und ziehen Sie anschließend den roten Pfeil auf die neue Transformation **Skript**, um die beiden Komponenten zu verbinden.  
   
-    Der rote Pfeil stellt die Fehlerausgabe der **Lookup Currency Key** -Transformation dar. Indem Sie den roten Pfeil zum Verbinden der Transformation mit der Skriptkomponente verwenden, können Sie alle Verarbeitungsfehler in die Skriptkomponente umleiten. Diese verarbeitet dann die Fehler und sendet sie an das Ziel.  
+    Der rote Pfeil stellt die Fehlerausgabe der **Lookup Currency Key** -Transformation dar. Indem Sie den roten Pfeil zum Verbinden der Transformation mit der Skriptkomponente verwenden, werden alle Verarbeitungsfehler in die Skriptkomponente umgeleitet. Diese verarbeitet dann die Fehler und sendet sie an das Ziel.  
   
-4.  Wählen Sie im Dialogfeld **Fehlerausgabe konfigurieren** in der **Fehler** -Spalte **Zeile umleiten**aus, und klicken Sie anschließend auf **OK**.  
+4.  Markieren Sie im Dialogfeld **Fehlerausgabe konfigurieren** in der **Fehler**-Spalte **Zeile umleiten**, und klicken Sie anschließend auf **OK**.  
   
-5.  Klicken Sie auf der **Datenfluss** -Entwurfsoberfläche in der neu hinzugefügten **Skriptkomponente** auf **Skriptkomponente**, und ändern Sie den Namen in **Get Error Description**.  
+5.  Klicken Sie auf der **Datenfluss**-Entwurfsoberfläche in der neu hinzugefügten **Skriptkomponente** auf den Namen **Skriptkomponente**, und ändern Sie den Namen in **Fehlerbeschreibung abrufen**.  
   
-6.  Doppelklicken Sie auf die **Get Error Description** -Transformation.  
+6.  Doppelklicken Sie auf die **Fehlerbeschreibung abrufen**-Transformation.  
   
 7.  Wählen Sie im Dialogfeld **Transformations-Editor für Skripterstellung** auf der Seite **Eingabespalten** die **ErrorCode** -Spalte aus.  
   
-8.  Erweitern Sie auf der Seite **Eingaben und Ausgaben** das Element **Ausgabe 0**, klicken Sie auf **Ausgabespalten**und anschließend auf **Spalte hinzufügen**.  
+8.  Erweitern Sie auf der Seite **Eingaben und Ausgaben** das Element **Ausgabe 0**, klicken Sie auf **Ausgabespalten** und anschließend auf **Spalte hinzufügen**.  
   
-9. Geben Sie in der **Name** -Eigenschaft **ErrorDescription** ein, und legen Sie die **DataType** -Eigenschaft auf **Unicode-Zeichenfolge [DT_WSTR]** fest.  
+9. Geben Sie in der **Name**-Eigenschaft *Fehlerbeschreibung* ein, und legen Sie die **DataType**-Eigenschaft auf **Unicode string [DT_WSTR]** (Unicode-Zeichenfolge [DT_WSTR]) fest.  
   
-10. Überprüfen Sie auf der Seite **Skript**, ob die **LocaleID** -Eigenschaft auf **Englisch (USA)** festgelegt ist.  
+10. Überprüfen Sie auf der Seite **Skript**, ob die **LocaleID**-Eigenschaft auf **Englisch (USA)** festgelegt ist.
   
-11. Klicken Sie auf **Skript bearbeiten** , um [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA) zu öffnen. Geben Sie den folgenden Code in die **Input0_ProcessInputRow** -Methode ein, oder fügen Sie ihn mit Kopieren und Einfügen ein.  
+11. Klicken Sie auf **Edit Script** (Skript bearbeiten), um [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA) zu öffnen. Geben Sie in der Methode **Input0_ProcessInputRow** den folgenden Code ein, oder fügen Sie ihn ein:  
   
     [Visual Basic]  
   
@@ -68,9 +67,9 @@ Um die Nützlichkeit der Fehlerausgabe zu verbessern, werden Sie mithilfe einer 
     Row.ErrorDescription = this.ComponentMetaData.GetErrorDescription(Row.ErrorCode);  
     ```  
   
-    Die fertige Unterroutine sieht wie der folgende Code aus.  
+    Die vollständige Unterroutine enthält den folgenden Code:  
   
-    [Visual Basic]  
+    [Visual Basic]  
   
     ```vb
     Public Overrides Sub Input0_ProcessInputRow(ByVal Row As Input0Buffer)  
@@ -92,11 +91,11 @@ Um die Nützlichkeit der Fehlerausgabe zu verbessern, werden Sie mithilfe einer 
         }  
     ```  
   
-12. Klicken Sie im Menü **Erstellen** auf **Projektmappe erstellen** , um das Skript zu erstellen und die Änderungen zu speichern, und schließen Sie anschließend VSTA.  
+12. Klicken Sie im Menü **Erstellen** auf **Projektmappe erstellen**, um das Skript zu erstellen und die Änderungen zu speichern, und schließen Sie anschließend VSTA.  
   
-13. Klicken Sie auf **OK** , um das Dialogfeld **Transformations-Editor für Skripterstellung** zu schließen.  
+13. Klicken Sie auf **OK**, um das Dialogfeld **Transformations-Editor für Skripterstellung** zu schließen.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="go-to-next-task"></a>Weiter zur nächsten Aufgabe
 [Schritt 4: Hinzufügen eines Flatfileziels](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  
   
   

@@ -16,12 +16,12 @@ ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1f0a1a40b1f4dd31a91436ae7af80f691c2e5a7c
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 4225bb49eb60c61ba01575a2269120dff4a427d3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559193"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125610"
 ---
 # <a name="rebuild-system-databases"></a>Neuerstellen von Systemdatenbanken
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,13 +107,13 @@ ms.locfileid: "51559193"
     |/ACTION=REBUILDDATABASE|Gibt an, dass die Systemdatenbanken vom Setup neu erstellt werden.|  
     |/INSTANCENAME=*InstanceName*|Der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz. Geben Sie MSSQLSERVER für die Standardinstanz ein.|  
     |/SQLSYSADMINACCOUNTS=*accounts*|Gibt die Windows-Gruppen oder die individuellen Konten an, die der festen Serverrolle **sysadmin** hinzugefügt werden sollen. Wenn Sie mehr als ein Konto angeben, trennen Sie die Konten mit einem Leerzeichen. Geben Sie z.B. **BUILTIN\Administrators MyDomain\MyUser**ein. Wenn Sie ein Konto angeben, dessen Name ein Leerzeichen enthält, setzen Sie den Kontonamen in doppelte Anführungszeichen. Geben Sie beispielsweise **NT AUTHORITY\SYSTEM**ein.|  
-    |[ /SAPWD=*StrongPassword* ]|Gibt das Kennwort für das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **-Konto von** an. Dieser Parameter ist erforderlich, wenn die Instanz den gemischten Authentifizierungsmodus ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - und Windows-Authentifizierung) verwendet.<br /><br /> **\*\* Sicherheitshinweis \*\*** Das Konto **sa** ist ein bekanntes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konto und oft das Ziel böswilliger Benutzer. Es ist sehr wichtig, dass Sie für die **sa** -Anmeldung ein sicheres Kennwort verwenden.<br /><br /> Geben Sie diesen Parameter nicht für den Windows-Authentifizierungsmodus an.|  
+    |[ /SAPWD=*StrongPassword* ]|Gibt das Kennwort für das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **-Konto von** an. Dieser Parameter ist erforderlich, wenn die Instanz den gemischten Authentifizierungsmodus ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - und Windows-Authentifizierung) verwendet.<br /><br /> **&#42;&#42; Sicherheitshinweis &#42;&#42;** Das Konto **sa** ist ein bekanntes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konto und oft das Ziel böswilliger Benutzer. Es ist sehr wichtig, dass Sie für die **sa** -Anmeldung ein sicheres Kennwort verwenden.<br /><br /> Geben Sie diesen Parameter nicht für den Windows-Authentifizierungsmodus an.|  
     |[ /SQLCOLLATION=*CollationName* ]|Gibt eine neue Sortierung auf Serverebene an. Dieser Parameter ist optional. Wenn keine Sortierung angegeben wird, wird die aktuelle Sortierung des Servers verwendet.<br /><br /> **\*\* Wichtig \*\*** Die Änderung der Sortierung auf Serverebene ändert nicht die Sortierung vorhandener Benutzerdatenbanken. Alle neu erstellten Benutzerdatenbanken verwenden standardmäßig die neue Sortierung.<br /><br /> Weitere Informationen finden Sie unter [Festlegen oder Ändern der Serversortierung](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
     |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|Gibt die Anzahl von tempdb-Datendateien an. Dieser Wert kann auf bis zu 8 bzw. auf die Anzahl von Kernen erhöht werden, je nachdem, welcher Wert größer ist.<br /><br /> Standardwert: 8 oder die Anzahl von Kernen, je nachdem, welcher Wert niedriger ist.|  
-    |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|Gibt die Anfangsgröße jeder tempdb-Datendatei in MB an. Das Setup ermöglicht eine Größe von bis zu 1024 MB.<br /><br /> Standardwert: 8.|  
+    |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|Gibt die Anfangsgröße jeder tempdb-Datendatei in MB an. Das Setup ermöglicht eine Größe von bis zu 1024 MB.<br /><br /> Standardwert: 8|  
     |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|Gibt das Dateivergrößerungsinkrement jeder tempdb-Datendatei in MB an. Der Wert 0 zeigt an, dass die automatische Vergrößerung deaktiviert ist und kein zusätzlicher Platz zulässig ist. Das Setup ermöglicht eine Größe von bis zu 1024 MB.<br /><br /> Standardwert: 64|  
-    |[ /SQLTEMPDBLOGFILESIZE=FileSizeInMB ]|Gibt die Anfangsgröße einer tempdb-Protokolldatei in MB an. Das Setup ermöglicht eine Größe von bis zu 1024 MB.<br /><br /> Standardwert: 8.<br /><br /> Zulässiger Bereich: Min = 8, Max = 1024.|  
-    |[ /SQLTEMPDBLOGFILEGROWTH=FileSizeInMB ]|Gibt das Dateivergrößerungsinkrement jeder tempdb-Protokolldatei in MB an. Der Wert 0 zeigt an, dass die automatische Vergrößerung deaktiviert ist und kein zusätzlicher Platz zulässig ist. Das Setup ermöglicht eine Größe von bis zu 1024 MB.<br /><br /> Standardwert: 64<br /><br /> Zulässiger Bereich: Min = 8, Max = 1024.|  
+    |[ /SQLTEMPDBLOGFILESIZE=FileSizeInMB ]|Gibt die Anfangsgröße einer tempdb-Protokolldatei in MB an. Das Setup ermöglicht eine Größe von bis zu 1024 MB.<br /><br /> Standardwert: 8.<br /><br /> Zulässiger Bereich: Min. = 8, max. = 1024.|  
+    |[ /SQLTEMPDBLOGFILEGROWTH=FileSizeInMB ]|Gibt das Dateivergrößerungsinkrement jeder tempdb-Protokolldatei in MB an. Der Wert 0 zeigt an, dass die automatische Vergrößerung deaktiviert ist und kein zusätzlicher Platz zulässig ist. Das Setup ermöglicht eine Größe von bis zu 1024 MB.<br /><br /> Standardwert: 64<br /><br /> Zulässiger Bereich: Min. = 8, max. = 1024.|  
     |[ /SQLTEMPDBDIR=Directories ]|Gibt die Verzeichnisse für tempdb-Datendateien an. Wenn Sie mehr als ein Verzeichnis angeben, trennen Sie die Verzeichnisse mit einem Leerzeichen. Wenn mehrere Verzeichnisse angegeben sind, werden die tempdb-Datendateien auf die Verzeichnisse im Rahmen eines Roundrobinverfahrens verteilt.<br /><br /> Standardwert: Systemdatenverzeichnis|  
     |[ /SQLTEMPDBLOGDIR=Directory ]|Gibt das Verzeichnis für die tempdb-Protokolldatei an.<br /><br /> Standardwert: Systemdatenverzeichnis|  
   
@@ -200,7 +200,7 @@ ms.locfileid: "51559193"
   
  Wenn der Neuerstellungsvorgang abgeschlossen ist, überprüfen Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Protokolle auf Fehler. Der Standardprotokollspeicherort ist „C:\Programme\Microsoft SQL Server\130\Setup Bootstrap\Logs“. Um die Protokolldatei zu suchen, die die Ergebnisse des Neuerstellungsprozesses enthält, wechseln Sie über eine Eingabeaufforderung zum Ordner Protokolle, und führen Sie dann `findstr /s RebuildDatabase summary*.*`aus. Diese Suche führt Sie zu den Protokolldateien, die die Ergebnisse der Neuerstellung der Systemdatenbanken enthalten. Öffnen Sie die Protokolldateien, und untersuchen Sie sie auf relevante Fehlermeldungen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Systemdatenbanken](../../relational-databases/databases/system-databases.md)  
   
   

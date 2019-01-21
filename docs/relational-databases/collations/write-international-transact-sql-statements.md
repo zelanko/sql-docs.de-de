@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ab973f34d0bcfb94d3df97e10efcbba69655f8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fece5fabc394ff01175273378a2fb7c23ef483cf
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724738"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256565"
 ---
 # <a name="write-international-transact-sql-statements"></a>Schreiben internationaler Transact-SQL-Anweisungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "47724738"
   
     -   ADO-, OLE DB- und ODBC-Anwendungen sollten folgende ODBC-Timestamps und folgende ESCAPE-Klauseln für Datum und Zeit verwenden:  
   
-         **{ ts'** yyyy**-**_mm_**-_** dd**hh_**:**_mm_**:**_ss_[**.**_fff_] **'}** such as: **{ ts'** 1998**-**09**-**24 10**:**02**:**20**' }**  
+         **{ ts'** _yyyy_ **-** _mm_ **-** _dd_ _hh_ **:** _mm_ **:** _ss_ [**.**_fff_] **'}** Beispiel: **{ ts'1998-09-24 10:02:20'}**  
   
-         **{ d'** *yyyy* **-** *mm* **-** *dd* **'}** Beispiel: **{ d'** 1998**-** 09**-** 24 **'}**  
+         **{ d'** _yyyy_ **-** _mm_ **-** _dd_ **'}** Beispiel: **{ d'1998-09-24'}**
   
-         **{ t'** *hh* **:** *mm* **:** *ss* **'}** Beispiel: **{ t'** 10:02:20 **'}**  
+         **{ t'** _hh_ **:** _mm_ **:** _ss_ **'}** Beispiel: **{ t'10:02:20'}**  
   
     -   Anwendungen, die andere APIs verwenden, oder [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts, gespeicherte Prozedure und Trigger sollten unstrukturierte Zeichenfolgen verwenden. Zum Beispiel *yyyymmdd* für 19980924.  
   

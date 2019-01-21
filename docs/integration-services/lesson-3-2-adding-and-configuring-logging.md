@@ -1,7 +1,7 @@
 ---
 title: 'Schritt 2: Hinzufügen und Konfigurieren der Protokollierung | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/04/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,53 +11,54 @@ ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3d28fe017e3757b3f21d6d735911692708eb66c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b20d5ec3a67bfe744d39e8c3a4fad8d5c0e5be0e
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726658"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143348"
 ---
-# <a name="lesson-3-2---adding-and-configuring-logging"></a>Lektion 3-2: Hinzufügen und Konfigurieren der Protokollierung
-In dieser Aufgabe aktivieren Sie die Protokollierung für den Datenfluss im Paket Lesson 3.dtsx. Sie konfigurieren dann einen Protokollanbieter für Textdateien, um die Ereignisse PipelineExecutionPlan und PipelineExecuteTrees zu protokollieren. Der Protokollanbieter für Textdateien erstellt Protokolle, die auf einfache Weise angezeigt werden können und portabel sind. Die Einfachheit dieser Protokolldateien ist besonders während der grundlegenden Testphase eines Pakets nützlich. Sie können die Protokolleinträge auch im Fenster Protokollereignisse des [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designers anzeigen.  
+# <a name="lesson-3-2-add-and-configure-logging"></a>Lektion 3.2: Hinzufügen und Konfigurieren der Protokollierung
+
+In dieser Aufgabe aktivieren Sie die Protokollierung für den Datenfluss im Paket „Lesson 3.dtsx“. Anschließend konfigurieren Sie einen Protokollanbieter für Textdateien, um die Ereignisse „PipelineExecutionPlan“ und „PipelineExecuteTrees“ zu protokollieren. Der Protokollanbieter für Textdateien erstellt Protokolle, die auf einfache Weise angezeigt werden können und portabel sind. Die Einfachheit dieser Protokolldateien ist während der grundlegenden Testphase eines Pakets nützlich. Sie können die Protokolleinträge auch im Fenster **Protokollereignisse** des [!INCLUDE[ssIS](../includes/ssis-md.md)]-Designers anzeigen.  
   
-### <a name="to-add-logging-to-the-package"></a>So fügen Sie die Protokollierung zum Paket hinzu  
+## <a name="add-logging-to-the-package"></a>Hinzufügen der Protokollierung zu einem Paket  
   
 1.  Klicken Sie im Menü **SSIS** auf **Protokollierung**.  
   
-2.  Stellen Sie im Dialogfeld **SSIS-Protokolle konfigurieren** im **Container** -Bereich sicher, dass das oberste Objekt, das das Paket aus Lektion 3 darstellt, ausgewählt ist.  
+2.  Achten Sie darauf, dass im Dialogfeld **Configure SSIS Logs** (SSIS-Protokolle konfigurieren) innerhalb des Bereichs **Container** das oberste Objekt ausgewählt ist. Dieses Objekt stellt das Paket aus Lektion 3 dar.
   
 3.  Wählen Sie auf der Registerkarte **Anbieter und Protokolle** im Feld **Anbietertyp** die Option **SSIS-Protokollanbieter für Textdateien**aus, und klicken Sie anschließend auf **Hinzufügen**.  
   
-    Von Integration Services wird ein neuer Protokollanbieter für Textdateien mit dem Standardnamen **SSIS-Protokollanbieter für Textdateien**zum Paket hinzugefügt. Sie können jetzt den neuen Protokollanbieter konfigurieren.  
+    Von Integration Services wird ein neuer Protokollanbieter für Textdateien mit dem Standardnamen **SSIS-Protokollanbieter für Textdateien** dem Paket hinzugefügt. Sie können jetzt den neuen Protokollanbieter konfigurieren.  
   
-4.  Geben Sie in der **Name** -Spalte **Lesson 3 Log File**ein.  
+4.  Geben Sie in der Spalte **Name** die Zeichenfolge **Protokolldatei für Lektion 3** ein.  
   
 5.  Ändern Sie optional **Beschreibung**.  
   
-6.  Klicken Sie in der Spalte **Konfiguration** auf **<New Connection>** , um das Ziel anzugeben, wohin die Protokollinformationen geschrieben werden.  
+6.  Klicken Sie in der Spalte **Konfiguration** auf **\<Neue Verbindung>**, um anzugeben, wohin [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] die Protokollinformationen schreibt.  
   
-    Wählen Sie im Dialogfeld **Dateiverbindungs-Manager-Editor** für **Verwendungstyp**die Option **Datei erstellen**aus, und klicken Sie anschließend auf **Durchsuchen**. Standardmäßig wird vom Dialogfeld **Dateien auswählen** der Projektordner geöffnet, aber Sie können Protokollinformationen an beliebiger Stelle speichern.  
+    Wählen Sie im Dialogfeld **Dateiverbindungs-Manager-Editor** für **Verwendungstyp** die Option **Datei erstellen** aus, und klicken Sie anschließend auf **Durchsuchen**. Standardmäßig wird vom Dialogfeld **Datei auswählen** der Projektordner geöffnet, aber Sie können Protokollinformationen an beliebigen Speicherorten speichern.  
   
-7.  Geben Sie im Dialogfeld **Datei auswählen** im Feld **Dateiname** **TutorialLog.log**ein, und klicken Sie auf **Öffnen**.  
+7.  Geben Sie im Dialogfeld **Datei auswählen** innerhalb des Felds **Dateiname** den Namen **Tutorialprotokoll.log**, und klicken Sie auf **Öffnen**.
   
-8.  Klicken Sie auf **OK** , um das Dialogfeld **Dateiverbindungs-Manager-Editor** zu schließen.  
+8.  Klicken Sie auf **OK**, um das Dialogfeld **Dateiverbindungs-Manager-Editor** zu schließen.  
   
 9. Erweitern Sie im **Container** -Bereich alle Knoten der Paketcontainerhierarchie, und deaktivieren Sie anschließend alle Kontrollkästchen, einschließlich des Kontrollkästchens für **Extract Sample Currency Data** . Aktivieren Sie jetzt das Kontrollkästchen für **Extract Sample Currency Data** , um nur die Ereignisse für diesen Knoten abzurufen.  
   
-    > [!IMPORTANT]  
-    > Wenn der Status des Kontrollkästchens **Extract Sample Currency Data** abgeblendet anstatt ausgewählt ist, verwendet der Task die Protokolleinstellungen des übergeordneten Containers. In diesem Fall können Sie die taskspezifischen Protokollereignisse nicht aktivieren.  
+    > [!NOTE]  
+    > Wenn der Status des Kontrollkästchens **Extract Sample Currency Data** abgeblendet anstatt ausgewählt ist, verwendet die Aufgabe die Protokolleinstellungen des übergeordneten Containers. In diesem Fall können Sie die aufgabenspezifischen Protokollereignisse nicht aktivieren. Deaktivieren Sie das übergeordnete Kontrollkästchen, um das Problem zu beheben.
   
 10. Wählen Sie auf der Registerkarte **Details** in der Spalte **Ereignisse** die Ereignisse **PipelineExecutionPlan** und **PipelineExecutionTrees** aus.  
   
-11. Klicken Sie auf **Erweitert** , um die Details zu überprüfen, die vom Protokollanbieter für jedes Ereignis in das Protokoll geschrieben werden. Standardmäßig werden alle Informationskategorien für die Ereignisse ausgewählt, die Sie angeben.  
+11. Klicken Sie auf **Erweitert**, um sich die Details anzusehen, die der Protokollanbieter für jedes Ereignis in das Protokoll schreibt. Standardmäßig werden alle Informationskategorien für die Ereignisse ausgewählt, die Sie angeben.  
   
-12. Klicken Sie auf **Standard** , um die Informationskategorien auszublenden.  
+12. Klicken Sie auf **Basic** (Einfach), um die Informationskategorien auszublenden.  
   
-13. Wählen Sie auf der Registerkarte **Anbieter und Protokolle** in der **Name** -Spalte **Lesson 3 Log File**aus. Nach dem Erstellen eines Protokollanbieters für Ihr Paket können Sie diesen optional deaktivieren, um die Protokollierung zeitweise zu deaktivieren, ohne dass Sie einen Protokollanbieter löschen und dann erneut erstellen müssen.  
+13. Wählen Sie auf der Registerkarte **Anbieter und Protokolle** in der **Name** -Spalte **Protokolldatei für Lektion 3**aus. Nach dem Erstellen eines Protokollanbieters für Ihr Paket können Sie diesen optional deaktivieren, um die Protokollierung zu deaktivieren, ohne dass Sie einen Protokollanbieter löschen und dann neu erstellen müssen.  
   
-14. Klicken Sie auf **OK**.  
+14. Wählen Sie **OK**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="go-to-next-task"></a>Weiter zur nächsten Aufgabe  
 [Schritt 3: Testen des Tutorialpakets aus Lektion 3](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   

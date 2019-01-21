@@ -25,15 +25,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d07dc597f293414c2c4fae2704085ac4449038cf
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: b8781f155f96fa9e80270eaf6f75f2438eae4549
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905771"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299477"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM: Verwenden von PIVOT und UNPIVOT
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Senden Sie uns Ihr Feedback zum Inhaltsverzeichnis der SQL-Dokumentation!](https://aka.ms/sqldocsurvey)
 
   Verwenden Sie die relationalen Operatoren `PIVOT` und `UNPIVOT`, um einen Tabellenwertausdruck in einer andere Tabelle zu ändern. Mit dem `PIVOT`-Operator wird ein Tabellenwertausdruck gedreht, indem die eindeutigen Werte einer Spalte des Ausdrucks in mehrere Spalten der Ausgabe versetzt werden und dabei gegebenenfalls Aggregationen für verbliebene Spaltenwerte erfolgen, die in der endgültigen Ausgabe erwünscht sind. Der `UNPIVOT`-Operator führt den umgekehrten Vorgang aus, d.h., er setzt Spalten eines Tabellenwertausdrucks in Spaltenwerte zurück.  
   
@@ -206,7 +209,7 @@ VendorID    Employee    Orders
   
  Für die Sicht `Sales.vSalesPersonSalesByFiscalYears` in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Beispieldatenbank wird `PIVOT` verwendet, um den Gesamtumsatz jedes Vertriebsmitarbeiters pro Geschäftsjahr zurückzugeben. Um die Sicht in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] skripten zu können, suchen Sie diese im **Objekt-Explorer** im Ordner **Sichten** für die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank. Klicken Sie mit der rechten Maustaste auf den Namen der Sicht, und klicken Sie auf **Script View as** (Skript für Sicht als).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   
  [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)  
   

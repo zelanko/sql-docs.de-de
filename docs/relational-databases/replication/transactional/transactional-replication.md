@@ -14,12 +14,12 @@ ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b85e937dc16ffe3e9561a6344829c9aae5af508c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1d5269b19f8bfb04321ac23e01d1f85b8c0861e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791168"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129460"
 ---
 # <a name="transactional-replication"></a>Transaktionsreplikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,5 +72,15 @@ ms.locfileid: "47791168"
   
 ##  <a name="DistributionAgent"></a> Verteilungs-Agent  
  Der Verteilungs-Agent wird für Pushabonnements auf dem Verteiler und für Pullabonnements auf dem Abonnenten ausgeführt. Der Agent verschiebt Transaktionen aus der Verteilungsdatenbank auf den Abonnenten. Wenn ein Abonnement für die Überprüfung markiert ist, überprüft der Verteilungs-Agent auch, ob die Daten auf dem Verleger und dem Abonnenten übereinstimmen.  
+
+## <a name="publication-types"></a>Veröffentlichungstypen 
+Die Transaktionsreplikation stellt vier Veröffentlichungstypen bereit:  
+  
+|Veröffentlichungstyp|und Beschreibung|  
+|----------------------|-----------------|  
+|Standardmäßige Transaktionsveröffentlichung|Geeignet für Topologien, in denen alle Daten auf dem Abonnenten schreibgeschützt sind (von der Transaktionsreplikation wird dies auf dem Abonnenten nicht erzwungen).<br /><br /> Diese Transaktionsveröffentlichungen werden standardmäßig bei der Verwendung von Transact-SQL oder Replikationsverwaltungsobjekten (RMO) erstellt. Im Assistenten für neue Veröffentlichung werden sie erstellt, wenn auf der Seite **Veröffentlichungstyp** die Option **Transaktionsveröffentlichung** ausgewählt wird.<br /><br /> Weitere Informationen zum Erstellen von Veröffentlichungen finden Sie unter [Veröffentlichen von Daten und Datenbankobjekten](../../../relational-databases/replication/publish/publish-data-and-database-objects.md).|  
+|Transaktionsveröffentlichung mit aktualisierbaren Abonnements|Dieser Veröffentlichungstyp weist die folgenden Merkmale auf:<br /><br /> – Jeder Speicherort verfügt über identische Daten auf einem Verleger und einem Abonnenten. <br /> – Zeilen können auf dem Abonnenten aktualisiert werden.<br /> – Diese Topologie eignet sich für Serverumgebungen am besten, die Hochverfügbarkeit und Leseskalierbarkeit erfordern.<br /><br />Weitere Informationen finden Sie unter [Aktualisierbare Abonnements](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).|  
+|Peer-zu-Peer-Topologie|Dieser Veröffentlichungstyp weist die folgenden Merkmale auf:<br /> – Jeder Speicherort verfügt über identische Daten und wird gleichzeitig als Verleger und Abonnent genutzt.<br /> – Dieselbe Zeile kann nur jeweils an einem Speicherort geändert werden.<br /> – Die [Konflikterkennung](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md) wird unterstützt.  <br />– Diese Topologie eignet sich am besten für Serverumgebungen, die Hochverfügbarkeit und Leseskalierbarkeit erfordern.<br /><br />Weitere Informationen finden Sie unter [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
+|Bidirektionale Transaktionsreplikation|Dieser Veröffentlichungstyp weist die folgenden Merkmale auf:<br />Die bidirektionale Replikation ähnelt der Peer-zu-Peer-Replikation, stellt jedoch keine Konfliktauflösung bereit. Darüber hinaus ist die bidirektionale Replikation auf zwei Server beschränkt. <br /><br /> Weitere Informationen finden Sie unter [Bidirektionale Transaktionsreplikation](../../../relational-databases/replication/transactional/bidirectional-transactional-replication.md). |  
   
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - pages [SQL Server], damaged
 - restoring [SQL Server], pages
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
-author: MikeRayMSFT
-ms.author: mikeray
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: de03858d60e5a8ad21232b2f13d17b880f106ed2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d2e5e0cad34fdd9364868e5f9c2e4a02d460dba
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761988"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242263"
 ---
 # <a name="restore-pages-sql-server"></a>Wiederherstellung von Seiten (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47761988"
   
      [Empfehlungen](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Wiederherstellen von Seiten mit:**  
   
@@ -65,7 +65,7 @@ ms.locfileid: "47761988"
   
     -   Transaktionsprotokoll  
   
-    -   Zuordnungsseiten: GAM-Seiten (Global Allocation Map), SGAM-Seiten (Shared Global Allocation Map) und PFS-Seiten (Page Free Space).  
+    -   Zuordnungsseiten: GAM (Global Allocation Map)-Seiten, SGAM (Shared Global Allocation Map)-Seiten und PFS (Page Free Space)-Seiten.  
   
     -   Seite 0 von allen Datendateien (die Startseite der Datei)  
   
@@ -107,7 +107,7 @@ ms.locfileid: "47761988"
   
  RESTORE-Berechtigungen werden Rollen erteilt, in denen Mitgliedsinformationen immer für den Server verfügbar sind. Da die Mitgliedschaft in einer festen Datenbankrolle nur bei unbeschädigten und zugänglichen Datenbanken geprüft werden kann (was beim Ausführen von RESTORE nicht immer der Fall ist), verfügen Mitglieder der festen Datenbankrolle **db_owner** nicht über RESTORE-Berechtigungen.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
  Ab [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]unterstützt [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Seitenwiederherstellungen.  
   
 #### <a name="to-restore-pages"></a>So stellen Sie Seiten wieder her  
@@ -137,7 +137,7 @@ ms.locfileid: "47761988"
     |------------|------------|  
     |**Name**|Name des Sicherungssatzes.|  
     |**Komponente**|Die gesicherte Komponente: **Datenbank**, **Datei** oder **\<leer>** (bei Transaktionsprotokollen).|  
-    |**Typ**|Der Typ der ausgeführten Sicherung: **Vollständig**, **Differenziell**oder **Transaktionsprotokoll**.|  
+    |**Typ**|Der Typ des ausgeführten Sicherungsvorgangs: **Vollständig**, **Differenziell** oder **Transaktionsprotokoll**.|  
     |**Server**|Der Name der Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)] s, von der der Sicherungsvorgang ausgeführt wurde.|  
     |**Datenbank**|Name der an der Sicherungsoperation beteiligten Datenbank.|  
     |**Position**|Position des Sicherungssatzes auf dem Volume.|  
@@ -220,7 +220,7 @@ RESTORE LOG <database> FROM <new_log_backup> WITH RECOVERY;
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Anwenden von Transaktionsprotokollsicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [Verwalten der suspect_pages-Tabelle &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   

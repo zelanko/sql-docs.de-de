@@ -18,12 +18,12 @@ ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 47a13686f1e4938886d11df7b2ee104553d3a684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8d607e528164e71d1e771d497ff7660cb7ecf66
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756938"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132990"
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>Aktualisierbare Abonnements – Für die Transaktionsreplikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -125,10 +125,10 @@ ms.locfileid: "47756938"
   
     -   Wenn Konflikte zu erwarten sind, gehen Sie folgendermaßen vor: Verwenden Sie keine FOREIGN KEY-Einschränkungen auf dem Verleger oder dem Abonnenten, wenn Sie die Konfliktlösung "Abonnent gewinnt" verwenden; verwenden Sie keine FOREIGN KEY-Einschränkungen auf dem Abonnenten, wenn Sie die Konfliktlösung "Verleger gewinnt" verwenden.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
- [Veröffentlichungstypen der Transaktionsreplikation](../../../relational-databases/replication/transactional/publication-types-for-transactional-replication.md)   
+ [Transaktionsreplikation](../../../relational-databases/replication/transactional/transactional-replication.md)   
  [Veröffentlichen von Daten und Datenbankobjekten](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)  
+ [Abonnieren von Veröffentlichungen](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   

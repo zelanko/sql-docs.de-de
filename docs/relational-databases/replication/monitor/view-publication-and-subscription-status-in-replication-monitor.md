@@ -22,12 +22,12 @@ ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 851431754767545977c43c19b44880c54543872d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b11a1206e691e834c3ed44d7ab83c73ffc002ec
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613439"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127731"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Anzeigen des Veröffentlichungs- und Abonnementstatus im Replikationsmonitor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,11 +55,11 @@ ms.locfileid: "47613439"
   
  **So zeigen Sie den Veröffentlichungs- und Abonnementstatus an**  
   
--   Replikationsmonitor: [Anzeigen von Informationen und Ausführen von Aufgaben für eine Veröffentlichung &#40;Replikationsmonitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md) und [Anzeigen von Informationen und Ausführen von Aufgaben für ein Abonnement &#40;Replikationsmonitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
+-   Replikationsmonitor: [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md) 
   
  **So zeigen Sie ausführliche Informationen zu Agents an:**  
   
--   Replikationsmonitor: [Anzeigen von Informationen und Ausführen von Aufgaben für die einer Veröffentlichung zugeordneten Agents &#40;Replikationsmonitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md) und [Anzeigen von Informationen und Ausführen von Aufgaben für die einem Abonnement zugeordneten Agents &#40;Replikationsmonitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+-   Replikationsmonitor: [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)
   
 ## <a name="publication-status-values"></a>Veröffentlichungsstatuswerte  
  In der nachfolgenden Tabelle werden Veröffentlichungsstatuswerte und ihre entsprechenden Symbole nach Priorität geordnet aufgeführt.  
@@ -112,7 +112,7 @@ ms.locfileid: "47613439"
 |Wird synchronisiert|![UI-Symbol: Replikations-Agent Ausführung](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "UI icon: replication agent running")|  
 |Synchronisierung wird nicht ausgeführt|![UI-Symbol: Replikations-Agent beendet](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "UI icon: replication agent stopped")|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Überwachen der Replikation](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Überwachen der Replikation](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

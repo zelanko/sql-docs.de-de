@@ -18,12 +18,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f820161dcf242a06054e3f64198aad1f827ed3dd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3d911c26eee5893d6817fe98b7a982e2ce25316f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395353"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133210"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Herstellen einer Verbindung mit der Datenbank-Engine unter Verwendung von Erweiterter Schutz
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "52395353"
   
 1.  Zeigen Sie im Menü **Start** auf **Alle Programme**, zeigen Sie auf **Microsoft SQL Server** , und klicken Sie dann auf **SQL Server-Konfigurations-Manager**.  
   
-2.  Erweitern Sie **SQL Server-Netzwerkkonfiguration**, klicken Sie mit der rechten Maustaste auf **Protokolle für** *\<* Instanzname*>*, und klicken Sie dann auf **Eigenschaften**.  
+2.  Erweitern Sie **SQL Server-Netzwerkkonfiguration**, klicken Sie mit der rechten Maustaste auf **Protokolle für** _\<_Instanzname*>*, und klicken Sie dann auf **Eigenschaften**.  
   
 3.  Legen Sie sowohl für die Kanalbindung als auch für die Dienstbindung auf der Registerkarte **Erweitert** die geeignete Einstellung für die Funktion **Erweiterter Schutz** fest.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "52395353"
   
  Wenn IIS verwendet wird, um über eine HTTP- oder HTTPS-Verbindung auf [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Daten zuzugreifen, kann [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] den von IIS bereitgestellten erweiterten Schutz nutzen. Weitere Informationen dazu, wie IIS für die Verwendung des erweiterten Schutzes konfiguriert wird, finden Sie unter [Konfigurieren von "Erweiterter Schutz" in IIS 7.5](https://go.microsoft.com/fwlink/?LinkId=181105)(möglicherweise auf Englisch).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Server-Netzwerkkonfiguration](../../database-engine/configure-windows/server-network-configuration.md)   
  [Client-Netzwerkkonfiguration](../../database-engine/configure-windows/client-network-configuration.md)   
  [Übersicht über den erweiterten Schutz für die Authentifizierung (möglicherweise auf Englisch)](https://go.microsoft.com/fwlink/?LinkID=177943)   

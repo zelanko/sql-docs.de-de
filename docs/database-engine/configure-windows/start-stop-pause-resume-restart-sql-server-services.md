@@ -41,15 +41,18 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 49a5a5681093c9a4f39f843d713aa286c86fc818
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6977a20130073326a50c522edbd47be32f8a117c
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601960"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298697"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Starten, Beenden, Anhalten, Fortsetzen und Neustarten von SQL Server-Diensten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Senden Sie uns Ihr Feedback zum Inhaltsverzeichnis der SQL-Dokumentation!](https://aka.ms/sqldocsurvey)
 
   In diesem Thema wird beschrieben, wie das [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent oder der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browserdienst mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager, mit  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], **net** -Befehlen von einer Eingabeaufforderung, mit [!INCLUDE[tsql](../../includes/tsql-md.md)]oder mit PowerShell gestartet, beendet, angehalten, fortgesetzt oder neu gestartet werden.  
   
@@ -59,7 +62,7 @@ ms.locfileid: "51601960"
   
     -   [Zusätzliche Informationen](#MoreInformation)  
   
-    -   [Security](#Security)  
+    -   [Sicherheit](#Security)  
   
 -   **Anweisungen mit:**  
   
@@ -354,7 +357,7 @@ ms.locfileid: "51601960"
     $DfltInstance  
     ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über die SQL Server-Setupdokumentation](https://msdn.microsoft.com/library/2620439a-f9d3-4b3c-9968-48f60b4bb9a5)   
  [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [SQL Server-Konfigurations-Manager](../../relational-databases/sql-server-configuration-manager.md)   

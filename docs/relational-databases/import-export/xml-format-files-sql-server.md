@@ -1,7 +1,7 @@
 ---
 title: XML-Formatdateien (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2cbf1dfaef9b5985cff5764f3855d23029fd29f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a8c29bf1705343972bf8921bad1523f2ad5b19a8
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659359"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256115"
 ---
 # <a name="xml-format-files-sql-server"></a>XML-Formatdateien (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -257,7 +257,7 @@ ms.locfileid: "51659359"
 |----------------------|-----------------|------------------------------|  
 |SOURCE **="**_fieldID_**"**|Gibt die ID des Felds an, das der Spalte zugeordnet wird.<br /><br /> \<COLUMN SOURCE **="**_fieldID_**"**/> wird \<FIELD ID **="**_fieldID_**"**/> zugeordnet.|Required|  
 |NAME = "*columnName*"|Gibt den Namen der Spalte im Rowset an, die durch die Formatdatei dargestellt wird. Dieser Spaltenname wird verwendet, um die Spalte im Resultset zu identifizieren; er muss nicht dem in der Zieltabelle verwendeten Spaltennamen entsprechen.|Required|  
-|xsi **:** type **="**_ColumnType_**"**|Dies ist ein (als Attribut verwendetes) XML-Konstrukt, das den Datentyp der Instanz des Elements identifiziert. Der Wert von *ColumnType* bestimmt, welche der optionalen Attribute (unten) in einer bestimmten Instanz erforderlich sind.<br /><br /> Hinweis: Mögliche Werte für *ColumnType* sowie die zugehörigen Attribute werden in der \<COLUMN>-Elementtabelle im Abschnitt [Xsi:type-Werte des &lt;COLUMN&gt;-Elements](#XsiTypeValuesOfCOLUMN) aufgelistet.|Optional|  
+|xsi **:** type **="**_ColumnType_**"**|Dies ist ein (als Attribut verwendetes) XML-Konstrukt, das den Datentyp der Instanz des Elements identifiziert. Der Wert von *ColumnType* bestimmt, welche der optionalen Attribute (unten) in einer bestimmten Instanz erforderlich sind.<br /><br /> Hinweis: Mögliche Werte für *ColumnType* und die zugehörigen Attribute werden in der \<COLUMN>-Elementtabelle im Abschnitt [Xsi:type-Werte des &lt;COLUMN&gt;-Elements](#XsiTypeValuesOfCOLUMN) aufgelistet.|Optional|  
 |LENGTH **="**_n_**"**|Definiert die Länge für eine Instanz mit einem Datentyp fester Länge. LENGTH wird nur verwendet, wenn es sich bei xsi:type um einen Zeichenfolgen-Datentyp handelt.<br /><br /> Der Wert von *n* muss eine positive ganze Zahl sein.|Optional (nur verfügbar, wenn xsi:type ein Zeichenfolgen-Datentyp ist)|  
 |PRECISION **="**_n_**"**|Gibt die Anzahl der Stellen einer Zahl an. Beispielsweise hat die Zahl 123,45 eine Genauigkeit von 5.<br /><br /> Der Wert muss eine positive ganze Zahl sein.|Optional (nur verfügbar, wenn xsi:type ein Datentyp mit variablen Zahlen ist)|  
 |SCALE **="**_int_**"**|Gibt die Anzahl der Stellen rechts vom Dezimaltrennzeichen einer Zahl an. Beispielsweise verfügt die Zahl 123,45 über 2 Dezimalstellen.<br /><br /> Der Wert muss eine ganze Zahl sein.|Optional (nur verfügbar, wenn xsi:type ein Datentyp mit variablen Zahlen ist)|  
@@ -278,7 +278,7 @@ ms.locfileid: "51659359"
 |Zeichenfolge|**SQLCHAR**, **SQLVARYCHAR**, **SQLNCHAR**und **SQLNVARCHAR**|Keine.|NULLABLE, LENGTH|  
   
 > [!IMPORTANT]  
->  Verwenden Sie in Ihrer Formatdatei einen der folgenden Datentypen, um einen Massenexport oder -import von SQLXML-Daten auszuführen: SQLCHAR oder SQLVARYCHAR (die Daten werden in der Clientcodepage oder in der Codepage, die durch die Sortierung impliziert wird, gesendet), SQLNCHAR oder SQLNVARCHAR (die Daten werden als Unicode gesendet) oder SQLBINARY oder SQLVARYBIN (die Daten werden ohne Konvertierung gesendet).  
+>  Verwenden Sie in der Formatdatei einen der folgenden Datentypen für den Massenexport oder -import von SQLXML-Daten: SQLCHAR oder SQLVARYCHAR (die Daten werden in der Clientcodepage oder in der Codepage, die durch die Sortierung impliziert wird, gesendet), SQLNCHAR oder SQLNVARCHAR (die Daten werden als Unicode gesendet) oder SQLBINARY oder SQLVARYBIN (die Daten werden ohne Konvertierung gesendet).  
   
  Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
   
@@ -319,7 +319,7 @@ XmlNodeList ColumnList = myDoc.GetElementsByTagName("COLUMN");
 for(int i=0;i<ColumnList.Count;i++)  
 {  
    Console.Write("COLUMN: xsi:type=" +ColumnList[i].Attributes["type",  
-      "https://www.w3.org/2001/XMLSchema-instance"].Value+"\n");  
+      "http://www.w3.org/2001/XMLSchema-instance"].Value+"\n");  
 }  
 ```  
   
@@ -349,9 +349,9 @@ for(int i=0;i<ColumnList.Count;i++)
 >  Informationen zum Erstellen einer Formatdatei finden Sie unter [Erstellen einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md).  
   
 ###  <a name="OrderCharFieldsSameAsCols"></a> A. Gleiches Anordnen von Zeichendatenfeldern und Tabellenspalten  
- Das folgende Beispiel zeigt eine XML-Formatdatei, die eine Datendatei beschreibt, in der drei Felder mit Zeichendaten enthalten sind. Die Formatdatei ordnet die Datendatei einer Tabelle zu, die drei Spalten enthält. Die Datenfelder entsprechen den Spalten der Tabelle eins zu eins.  
+ Das folgende Beispiel zeigt eine XML-Formatdatei, die eine Datendatei beschreibt, in der drei Felder mit Zeichendaten enthalten sind. Die Formatdatei ordnet die Datendatei einer Tabelle zu, die drei Spalten enthält. Die Datenfelder entsprechen den Spalten der Tabelle eins zu eins.  
   
- **Tabelle (Zeile):** Person (Age int, FirstName Varchar(20), LastName Varchar(30))  
+ **Tabelle (Zeile):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
   
  **Datendatei (Datensatz):** Age\<tab>Firstname\<tab>Lastname\<return>  
   
@@ -365,7 +365,7 @@ for(int i=0;i<ColumnList.Count;i++)
 <?xml version="1.0"?>  
 <BCPFORMAT   
 xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
-xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
       MAX_LENGTH="12"/>   
@@ -389,7 +389,7 @@ xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="OrderFieldsAndColsDifferently"></a> B. Unterschiedliches Anordnen von Datenfeldern und Tabellenspalten  
  Das folgende Beispiel zeigt eine XML-Formatdatei, die eine Datendatei beschreibt, in der drei Felder mit Zeichendaten enthalten sind. Die Formatdatei ordnet die Datendatei einer Tabelle zu, die drei Spalten enthält, die anders angeordnet sind als die Felder der Datendatei.  
   
- **Tabelle (Zeile):** Person (Age int, FirstName Varchar(20), LastName Varchar(30))  
+ **Tabelle (Zeile):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
   
  **Datendatei (Datensatz):** Age\<tab>Lastname\<tab>Firstname\<return>  
   
@@ -401,7 +401,7 @@ xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
 <?xml version="1.0"?>  
 <BCPFORMAT   
 xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
-xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
       MAX_LENGTH="12"/>  
@@ -424,7 +424,7 @@ xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="OmitField"></a> C. Auslassen eines Datenfelds  
  Das folgende Beispiel zeigt eine XML-Formatdatei, die eine Datendatei beschreibt, in der vier Felder mit Zeichendaten enthalten sind. Die Formatdatei ordnet die Datendatei einer Tabelle zu, die drei Spalten enthält. Das zweite Datenfeld entspricht keiner Tabellenspalte.  
   
- **Tabelle (Zeile):** Person (Age int, FirstName Varchar(20), LastName Varchar(30))  
+ **Tabelle (Zeile):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
   
  **Datendatei (Datensatz):** Age\<tab>employeeID\<tab>Firstname\<tab>Lastname\<return>  
   
@@ -436,7 +436,7 @@ xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
 <?xml version = "1.0"?>  
 <BCPFORMAT   
 xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
-xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
       MAX_LENGTH="12"/>  
@@ -468,7 +468,7 @@ xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
 <?xml version = "1.0"?>  
 <BCPFORMAT  
 xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
-   xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
    <RECORD>  
       <FIELD xsi:type="CharTerm" ID="C1" TERMINATOR="\t"   
             MAX_LENGTH="4"/>  
@@ -510,7 +510,7 @@ CREATE TABLE t_xml (c1 int, c2 xml)
 ```xml
 <?xml version="1.0"?>  
 <BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
-xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="NativePrefix" PREFIX_LENGTH="1"/>  
   <FIELD ID="2" xsi:type="NCharPrefix" PREFIX_LENGTH="8"/>  
@@ -529,7 +529,7 @@ xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
 <?xml version="1.0"?>  
 <BCPFORMAT  
        xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"  
-       xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharFixed" LENGTH="10"/>  
     <FIELD ID="2" xsi:type="CharFixed" LENGTH="6"/>  
@@ -566,7 +566,7 @@ xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
  Keine.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Massenimport und -export von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Nicht-XML-Formatdateien &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)   

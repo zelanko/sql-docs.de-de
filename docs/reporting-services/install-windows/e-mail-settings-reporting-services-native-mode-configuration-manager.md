@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ab2d4208d26ca6da5188e635dda8183c545d6f3e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b2c8e71f65f4b6dfe4f5fe74f6030049d67c735f
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020394"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226567"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>E-Mail-Einstellungen – Einheitlicher Modus von Reporting Services (Konfigurations-Manager)
 Reporting Services enthält eine Erweiterung zur E-Mail-Übermittlung, damit Sie Berichte per E-Mail verteilen können. Je nachdem, wie Sie das Abonnieren von E-Mails definieren, kann eine E-Mail-Übermittlung aus einer Nachricht, einem Link, einem Anhang oder einem eingebetteten Bericht bestehen. Die Erweiterung der E-Mail-Übermittlung arbeitet mit Ihrer vorhandenen E-Mail-Server-Technologie. Der E-Mail-Server muss ein SMTP-Server oder eine Weiterleitung sein. Der Berichtsserver stellt über CDO-Bibliotheken (Collaboration Data Objects, cdosys.dll), die das Betriebssystem stellt, eine Verbindung zu einem SMTP-Server her.
@@ -109,7 +109,7 @@ Das folgende Beispiel veranschaulicht die Einstellungen für einen SMTP-Remotese
      <SendPassword></SendPassword>
 </RSEmailDPConfiguration>
 ```
-## <a name="configuration-options-for-setting-the-to-field-in-a-message"></a>Konfigurationsoptionen für die Einstellung des "An:"-Felds in einer Nachricht
+## <a name="configuration-options-for-setting-the-to-field-in-a-message"></a>Konfigurationsoptionen für die Einstellung des „An:“- Felds in einer Nachricht
 Benutzerdefinierte Abonnements, die gemäß den durch den Task „Einzelne Abonnements verwalten“ erteilten Berechtigungen erstellt werden, enthalten einen vorher festgelegten Benutzernamen, der auf dem Domänenbenutzerkonto basiert. Wenn der Benutzer das Abonnement erstellt, wird der Empfängername im **An:** -Feld mit dem Domänenbenutzerkonto der Person ausgefüllt, die das Abonnement erstellt.
 
 Bei Verwendung eines SMTP-Servers bzw. einer Weiterleitung, der bzw. die E-Mail-Konten verwendet, die mit dem Domänenbenutzerkonto nicht übereinstimmen, erzeugt die Berichtsübermittlung einen Fehler, wenn der SMTP-Server den Bericht an diesen Benutzer übermitteln will.
@@ -183,7 +183,7 @@ Die Verbindung zwischen dem Berichtsserver und einem lokalen SMTP-Server oder ei
 
 3. Wählen Sie den Server aus, auf dem Internetinformationsdienste (IIS) installiert werden sollen, und klicken Sie auf **Weiter**.
 
-4. Klicken Sie auf der Seite für **Serverrollen** * auf *Weiter*.
+4. Wählen Sie auf der Seite **Serverrollen** die Option *Weiter*.
      
 5. Wählen Sie auf der Seite *Features* die Option **SMTP-Server** aus, und klicken Sie auf **Weiter**.
 
@@ -219,7 +219,7 @@ Die Verbindung zwischen dem Berichtsserver und einem lokalen SMTP-Server oder ei
      
 17. Speichern Sie die Datei.
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Reporting Services-Konfigurations-Manager (einheitlicher Modus)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 [Modify a Reporting Services Configuration File (rsreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
 [Rsreportserver.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)

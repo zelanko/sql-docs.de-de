@@ -13,12 +13,12 @@ ms.assetid: 405b2655-acb4-4e15-bcc6-b8f86bb22b37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e05a58c9a88ffaa4292fd4d103cd56f5b827e9b5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ecdd4da637f8f29df60b6815d2f8231b8ba941c5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665649"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130110"
 ---
 # <a name="mssqleng018752"></a>MSSQL_ENG018752
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "51665649"
 ## <a name="user-action"></a>Benutzeraktion  
  Folgende Schritte können Ihnen bei der Problembehandlung behilflich sein. Wenn der Protokolllese-Agent in einem beliebigen Schritt ohne Fehler gestartet werden kann, müssen die verbleibenden Schritte nicht mehr ausgeführt werden.  
   
--   Überprüfen Sie den Verlauf des Protokolllese-Agents für alle anderen Fehler, die möglicherweise zu diesem Fehler beitragen. Informationen zum Anzeigen des Agentstatus und der Fehlerinformationen im Replikationsmonitor finden Sie unter [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41; (Anzeigen von Informationen und Ausführen von Aufgaben für die einer Veröffentlichung zugeordneten Agents &#40;Replikationsmonitor&#41;)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md).  
+-   Überprüfen Sie den Verlauf des Protokolllese-Agents für alle anderen Fehler, die möglicherweise zu diesem Fehler beitragen. Informationen zum Anzeigen des Agent-Status und der Fehlerinformationen im Replikationsmonitor finden Sie unter [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Überprüfen Sie die Ausgabe von [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md) für spezielle SPIDs, die mit der veröffentlichten Datenbank verbunden sind. Schließen Sie alle Verbindungen, mit denen **sp_repldone**, **sp_replcmds**oder **sp_replshowcmds**möglicherweise ausgeführt wurden.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "51665649"
   
 -   Wenn der Fehler weiterhin auftritt, erhöhen Sie die Protokollierungsstufe des Agents, und geben Sie eine Ausgabedatei für das Protokoll an. Je nach Zusammenhang, in dem der Fehler auftritt, finden Sie hier möglicherweise die Schritte, die zum Fehler führen, und/oder weitere Fehlermeldungen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Ereignisreferenz &#40;Replikation&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
  [Replikationsprotokolllese-Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   

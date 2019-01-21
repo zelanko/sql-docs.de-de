@@ -15,12 +15,12 @@ ms.assetid: 978d150f-8971-458a-ab2b-3beba5937b46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 62bef7f28b04c03c15d32da5097420ca1345a2d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b454197982685882610fc808d9319835053e21bb
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623438"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134210"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>Konfigurieren von Momentaufnahmeeigenschaften (Replikationsprogrammierung mit Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,14 +30,10 @@ ms.locfileid: "47623438"
   
 1.  Führen Sie auf dem Verleger [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)aus. Geben Sie einen Veröffentlichungsnamen für **@publication**, den Wert **snapshot** oder **continuous** für **@repl_freq**und einen oder mehrere der folgenden Momentaufnahmeparameter ein:  
   
-    -   **@alt_snapshot_folder** &ndash; Geben Sie einen Pfad an, wenn von diesem Speicherort, anstatt vom Standardmomentaufnahmeordner oder zusätzlich zu diesem, auf die Momentaufnahme für diese Veröffentlichung zugegriffen wird.  
-  
-    -   **@compress_snapshot** &ndash; Geben Sie den Wert **true** an, wenn die Momentaufnahmedateien im alternativen Momentaufnahmeordner im [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CAB-Dateiformat komprimiert sind.  
-  
-    -   **@pre_snapshot_script** &ndash; Geben Sie den Dateinamen und den vollständigen Pfad einer **.sql** -Datei an, die während der Initialisierung auf dem Abonnenten ausgeführt wird, bevor die Anfangsmomentaufnahme angewendet wird.  
-  
-    -   **@post_snapshot_script** &ndash; Geben Sie den Dateinamen und den vollständigen Pfad einer **.sql** -Datei an, die während der Initialisierung auf dem Abonnenten ausgeführt wird, nachdem die Anfangsmomentaufnahme angewendet wurde.  
-  
+    -   **@alt_snapshot_folder** &ndash; Geben Sie einen Pfad an, wenn von diesem Speicherort, anstatt vom Standardmomentaufnahmeordner oder zusätzlich zu diesem, auf die Momentaufnahme für diese Veröffentlichung zugegriffen wird.    
+    -   **@compress_snapshot** &ndash; Geben Sie den Wert **true** an, wenn die Momentaufnahmedateien im alternativen Momentaufnahmeordner im [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CAB-Dateiformat komprimiert sind.    
+    -   **@pre_snapshot_script** &ndash; Geben Sie den Dateinamen und den vollständigen Pfad einer **.sql** -Datei an, die während der Initialisierung auf dem Abonnenten ausgeführt wird, bevor die Anfangsmomentaufnahme angewendet wird.    
+    -   **@post_snapshot_script** &ndash; Geben Sie den Dateinamen und den vollständigen Pfad einer **.sql** -Datei an, die während der Initialisierung auf dem Abonnenten ausgeführt wird, nachdem die Anfangsmomentaufnahme angewendet wurde.    
     -   **@snapshot_in_defaultfolder** &ndash; Geben Sie den Wert **false** an, wenn die Momentaufnahme nur in einem anderen als dem Standardverzeichnis verfügbar ist.  
   
      Weitere Informationen zum Erstellen von Veröffentlichungen finden Sie unter [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
@@ -46,14 +42,10 @@ ms.locfileid: "47623438"
   
 1.  Führen Sie auf dem Verleger [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)aus. Geben Sie einen Veröffentlichungsnamen für **@publication**, den Wert **snapshot** oder **continuous** für **@repl_freq**und einen oder mehrere der folgenden Momentaufnahmeparameter ein:  
   
-    -   **@alt_snapshot_folder** &ndash; Geben Sie einen Pfad an, wenn von diesem Speicherort, anstatt vom Standardmomentaufnahmeordner oder zusätzlich zu diesem, auf die Momentaufnahme für diese Veröffentlichung zugegriffen wird.  
-  
-    -   **@compress_snapshot** &ndash; Geben Sie den Wert **true** an, wenn die Momentaufnahmedateien im alternativen Momentaufnahmeordner im CAB-Dateiformat komprimiert sind.  
-  
-    -   **@pre_snapshot_script** &ndash; Geben Sie den Dateinamen und den vollständigen Pfad einer **.sql** -Datei an, die während der Initialisierung auf dem Abonnenten ausgeführt wird, bevor die Anfangsmomentaufnahme angewendet wird.  
-  
-    -   **@post_snapshot_script** &ndash; Geben Sie den Dateinamen und den vollständigen Pfad einer **.sql** -Datei an, die während der Initialisierung auf dem Abonnenten ausgeführt wird, nachdem die Anfangsmomentaufnahme angewendet wurde.  
-  
+    -   **@alt_snapshot_folder** &ndash; Geben Sie einen Pfad an, wenn von diesem Speicherort, anstatt vom Standardmomentaufnahmeordner oder zusätzlich zu diesem, auf die Momentaufnahme für diese Veröffentlichung zugegriffen wird.    
+    -   **@compress_snapshot** &ndash; Geben Sie den Wert **true** an, wenn die Momentaufnahmedateien im alternativen Momentaufnahmeordner im CAB-Dateiformat komprimiert sind.   
+    -   **@pre_snapshot_script** &ndash; Geben Sie den Dateinamen und den vollständigen Pfad einer **.sql** -Datei an, die während der Initialisierung auf dem Abonnenten ausgeführt wird, bevor die Anfangsmomentaufnahme angewendet wird.    
+    -   **@post_snapshot_script** &ndash; Geben Sie den Dateinamen und den vollständigen Pfad einer **.sql** -Datei an, die während der Initialisierung auf dem Abonnenten ausgeführt wird, nachdem die Anfangsmomentaufnahme angewendet wurde.    
     -   **@snapshot_in_defaultfolder** &ndash; Geben Sie den Wert **false** an, wenn die Momentaufnahme nur in einem anderen als dem Standardverzeichnis verfügbar ist.  
   
 2.  Weitere Informationen zum Erstellen von Veröffentlichungen finden Sie unter [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
@@ -62,14 +54,10 @@ ms.locfileid: "47623438"
   
 1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)aus. Geben Sie den Wert **1** für **@force_invalidate_snapshot** und einen der folgenden Werte für **@property**an:  
   
-    -   **alt_snapshot_folder** &ndash; Geben Sie außerdem einen neuen Pfad zum alternativen Momentaufnahmeordner für **@value**aus.  
-  
-    -   **compress_snapshot** &ndash; Geben Sie außerdem entweder **true** oder **false** für **@value** an, um zu definieren, ob die Momentaufnahmedateien im alternativen Momentaufnahmeordner im CAB-Dateiformat komprimiert sind.  
-  
-    -   **pre_snapshot_script** &ndash; Geben Sie außerdem für **@value** den Dateinamen und den vollständigen Pfad einer **.sql** -Datei an, die während der Initialisierung auf dem Abonnenten ausgeführt wird, bevor die Anfangsmomentaufnahme angewendet wird.  
-  
-    -   **post_snapshot_script** &ndash; Geben Sie außerdem für **@value** den Dateinamen und den vollständigen Pfad einer **.sql** -Datei an, die während der Initialisierung auf dem Abonnenten ausgeführt wird, nachdem die Anfangsmomentaufnahme angewendet wurde.  
-  
+    -   **alt_snapshot_folder** &ndash; Geben Sie außerdem einen neuen Pfad zum alternativen Momentaufnahmeordner für **@value**aus.    
+    -   **compress_snapshot** &ndash; Geben Sie außerdem entweder **true** oder **false** für **@value** an, um zu definieren, ob die Momentaufnahmedateien im alternativen Momentaufnahmeordner im CAB-Dateiformat komprimiert sind.    
+    -   **pre_snapshot_script** &ndash; Geben Sie außerdem für **@value** den Dateinamen und den vollständigen Pfad einer **.sql** -Datei an, die während der Initialisierung auf dem Abonnenten ausgeführt wird, bevor die Anfangsmomentaufnahme angewendet wird.    
+    -   **post_snapshot_script** &ndash; Geben Sie außerdem für **@value** den Dateinamen und den vollständigen Pfad einer **.sql** -Datei an, die während der Initialisierung auf dem Abonnenten ausgeführt wird, nachdem die Anfangsmomentaufnahme angewendet wurde.    
     -   **snapshot_in_defaultfolder** &ndash; Geben Sie außerdem den Wert **true** oder **false** an, um zu definieren, ob die Momentaufnahme an einem anderen als dem Standardspeicherort verfügbar ist.  
   
 2.  (Optional) Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changepublication_snapshot](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)aus. Geben Sie **@publication** und einen oder mehrere der zu ändernden Parameter für die Zeitplanung oder Sicherheitsanmeldeinformationen an.  
@@ -83,14 +71,10 @@ ms.locfileid: "47623438"
   
 1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)aus. Geben Sie den Wert **1** für **@force_invalidate_snapshot** und einen der folgenden Werte für **@property**an:  
   
-    -   **alt_snapshot_folder** &ndash; Geben Sie außerdem einen neuen Pfad zum alternativen Momentaufnahmeordner für **@value**aus.  
-  
-    -   **compress_snapshot** &ndash; Geben Sie außerdem entweder **true** oder **false** für **@value** an, um zu definieren, ob die Momentaufnahmedateien im alternativen Momentaufnahmeordner im CAB-Dateiformat komprimiert sind.  
-  
-    -   **pre_snapshot_script** &ndash; Geben Sie außerdem für **@value** den Dateinamen und den vollständigen Pfad einer **.sql** -Datei an, die während der Initialisierung auf dem Abonnenten ausgeführt wird, bevor die Anfangsmomentaufnahme angewendet wird.  
-  
-    -   **post_snapshot_script** &ndash; Geben Sie außerdem für **@value** den Dateinamen und den vollständigen Pfad einer **.sql** -Datei an, die während der Initialisierung auf dem Abonnenten ausgeführt wird, nachdem die Anfangsmomentaufnahme angewendet wurde.  
-  
+    -   **alt_snapshot_folder** &ndash; Geben Sie außerdem einen neuen Pfad zum alternativen Momentaufnahmeordner für **@value**aus.    
+    -   **compress_snapshot** &ndash; Geben Sie außerdem entweder **true** oder **false** für **@value** an, um zu definieren, ob die Momentaufnahmedateien im alternativen Momentaufnahmeordner im CAB-Dateiformat komprimiert sind.    
+    -   **pre_snapshot_script** &ndash; Geben Sie außerdem für **@value** den Dateinamen und den vollständigen Pfad einer **.sql** -Datei an, die während der Initialisierung auf dem Abonnenten ausgeführt wird, bevor die Anfangsmomentaufnahme angewendet wird.    
+    -   **post_snapshot_script** &ndash; Geben Sie außerdem für **@value** den Dateinamen und den vollständigen Pfad einer **.sql** -Datei an, die während der Initialisierung auf dem Abonnenten ausgeführt wird, nachdem die Anfangsmomentaufnahme angewendet wurde.    
     -   **snapshot_in_defaultfolder** &ndash; Geben Sie außerdem den Wert **true** oder **false** an, um zu definieren, ob die Momentaufnahme an einem anderen als dem Standardspeicherort verfügbar ist.  
   
 2.  Führen Sie den [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md) von der Eingabeaufforderung aus, oder starten Sie den Momentaufnahme-Agentauftrag, um eine neue Momentaufnahme zu erzeugen. Weitere Informationen finden Sie unter [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
@@ -100,12 +84,11 @@ ms.locfileid: "47623438"
   
  [!code-sql[HowTo#sp_mergealtsnapshot](../../../relational-databases/replication/codesnippet/tsql/configure-snapshot-prope_1.sql)]  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Alternative Speicherorte für Momentaufnahmeordner](../../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
- [Komprimierte Momentaufnahmen](../../../relational-databases/replication/compressed-snapshots.md)   
- [Ausführen von Skripts vor und nach dem Anwenden der Momentaufnahme](../../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Ändern von Momentaufnahmeoptionen](../../../relational-databases/replication/snapshot-options.md)   
+ [Ausführen von Skripts vor und nach dem Anwenden der Momentaufnahme](../../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)   
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Übertragen von Momentaufnahmen über FTP](../../../relational-databases/replication/transfer-snapshots-through-ftp.md)   
+ [Übertragen von Momentaufnahmen über FTP](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md)   
  [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)  
   
   

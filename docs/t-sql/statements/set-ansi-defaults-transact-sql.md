@@ -22,19 +22,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 36902b633219f60d8f76a45e7d8e2fd2ccfdb129
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 871d79c805451e1710dbc400914d2dace01c7eea
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804238"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143440"
 ---
 # <a name="set-ansidefaults-transact-sql"></a>SET ANSI_DEFAULTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Steuert eine Gruppe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Einstellungen, die zusammen einen bestimmten Teil des Standardverhaltens von ISO angeben.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,9 +51,9 @@ SET ANSI_DEFAULTS ON
 ```
 
 ## <a name="remarks"></a>Remarks  
- SET ANSI_DEFAULTS ist eine serverseitige Einstellung, die vom Client nicht verändert wird. Der Client verwaltet eigene Einstellungen. Diese Einstellungen sind standardmäßig das Gegenstück zur Servereinstellung. Benutzer sollten die Servereinstellung nicht ändern. Zum Ändern des Clientverhaltens sollten Benutzer SQL_COPT_SS_PRESERVE_CURSORS verwenden. Weitere Informationen finden Sie unter [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).  
+ANSI_DEFAULTS ist eine serverseitige Einstellung, die vom Client nicht verändert wird. Der Client verwaltet eigene Einstellungen. Diese Einstellungen sind standardmäßig das Gegenstück zur Servereinstellung. Benutzer sollten die Servereinstellung nicht ändern. Zum Ändern des Clientverhaltens sollten Benutzer SQL_COPT_SS_PRESERVE_CURSORS verwenden. Weitere Informationen finden Sie unter [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).  
   
- Wird die Option aktiviert (ON), werden die folgenden ISO-Einstellungen aktiviert:  
+Wird die Option aktiviert (ON), werden die folgenden ISO-Einstellungen aktiviert:  
   
 |||  
 |-|-|  
@@ -62,13 +62,13 @@ SET ANSI_DEFAULTS ON
 |SET ANSI_PADDING|SET QUOTED_IDENTIFIER|  
 |SET ANSI_WARNINGS||  
   
- Diese SET-Optionen gemäß ISO-Standard definieren zusammen die Abfrageverarbeitungsumgebung für die Dauer der Arbeitssitzung des Benutzers oder für den Zeitraum, in dem ein Trigger oder eine gespeicherte Prozedur ausgeführt wird. Die aufgeführten SET-Optionen schließen jedoch nicht alle Optionen ein, die erforderlich wären, um dem ISO-Standard zu entsprechen.  
+Diese SET-Optionen gemäß ISO-Standard definieren zusammen die Abfrageverarbeitungsumgebung für die Dauer der Arbeitssitzung des Benutzers oder für den Zeitraum, in dem ein Trigger oder eine gespeicherte Prozedur ausgeführt wird. Die aufgeführten SET-Optionen schließen jedoch nicht alle Optionen ein, die erforderlich wären, um dem ISO-Standard zu entsprechen.  
   
- Beim Verwenden von Indizes für berechnete Spalten und indizierte Sichten, müssen vier dieser Standardwerte (ANSI_NULLS, ANSI_PADDING, ANSI_WARNINGS und QUOTED_IDENTIFIER) auf ON festgelegt sein. Diese Standardwerte gehören zu den insgesamt sieben SET-Optionen, für die bestimmte Werte beim Erstellen und Ändern von Indizes für berechnete Spalten und indizierte Sichten zugewiesen werden müssen. Die anderen SET-Optionen lauten ARITHABORT (ON), CONCAT_NULL_YIELDS_NULL (ON) und NUMERIC_ROUNDABORT (OFF). Weitere Informationen zu den erforderlichen Einstellungen der SET-Option mit indizierten Sichten und Indizes für berechnete Spalten finden Sie in den Überlegungen zum Verwenden der SET-Anweisungen unter [SET-Anweisungen &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md).  
+Beim Verwenden von Indizes für berechnete Spalten und indizierte Sichten, müssen vier dieser Standardwerte (ANSI_NULLS, ANSI_PADDING, ANSI_WARNINGS und QUOTED_IDENTIFIER) auf ON festgelegt sein. Diese Standardwerte gehören zu den insgesamt sieben SET-Optionen, für die bestimmte Werte beim Erstellen und Ändern von Indizes für berechnete Spalten und indizierte Sichten zugewiesen werden müssen. Die anderen SET-Optionen lauten ARITHABORT (ON), CONCAT_NULL_YIELDS_NULL (ON) und NUMERIC_ROUNDABORT (OFF). Weitere Informationen zu den erforderlichen Einstellungen der SET-Option mit indizierten Sichten und Indizes für berechnete Spalten finden Sie im Abschnitt [Überlegungen beim Verwenden von SET-Anweisungen](../../t-sql/statements/set-statements-transact-sql.md#considerations-when-you-use-the-set-statements).  
   
- Der ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client und der OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] legen für ANSI_DEFAULTS beim Herstellen einer Verbindung automatisch ON fest. Treiber und Anbieter legen anschließend CURSOR_CLOSE_ON_COMMIT und IMPLICIT_TRANSACTIONS auf OFF fest. Die Einstellung OFF für SET CURSOR_CLOSE_ON_COMMIT und SET IMPLICIT_TRANSACTIONS kann in ODBC-Datenquellen, in ODBC-Verbindungsattributen oder in OLE DB-Verbindungseigenschaften konfiguriert werden, die in der Anwendung festgelegt werden, bevor die Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hergestellt wird. SET ANSI_DEFAULTS wird für Verbindungen von DB-Library-Anwendungen standardmäßig auf OFF festgelegt.  
+Der ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client und der OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] legen für ANSI_DEFAULTS beim Herstellen einer Verbindung automatisch ON fest. Treiber und Anbieter legen anschließend CURSOR_CLOSE_ON_COMMIT und IMPLICIT_TRANSACTIONS auf OFF fest. Die OFF-Einstellungen für CURSOR_CLOSE_ON_COMMIT und IMPLICIT_TRANSACTIONS können in ODBC-Datenquellen, in ODBC-Verbindungsattributen oder in OLE DB-Verbindungseigenschaften konfiguriert werden, die in der Anwendung festgelegt werden, bevor die Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hergestellt wird. ANSI_DEFAULTS wird für Verbindungen von DB-Library-Anwendungen standardmäßig auf OFF festgelegt.  
   
- Wenn SET ANSI_DEFAULTS ausgeführt wird, wird SET QUOTED_IDENTIFIER zur Analysezeit festgelegt, und die folgenden Optionen werden zur Ausführungszeit festgelegt:  
+Wenn SET ANSI_DEFAULTS ausgeführt wird, wird QUOTED_IDENTIFIER zur Analysezeit festgelegt, und die folgenden Optionen werden zur Ausführungszeit festgelegt:  
   
 |||  
 |-|-|  
@@ -77,24 +77,26 @@ SET ANSI_DEFAULTS ON
 |SET ANSI_PADDING|SET IMPLICIT_TRANSACTIONS|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **public** -Rolle.  
+Erfordert die Mitgliedschaft in der **public** -Rolle.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird `SET ANSI_DEFAULTS ON` festgelegt, und die `DBCC USEROPTIONS`-Anweisung wird zum Anzeigen der betroffenen Einstellungen verwendet.  
+Im folgenden Beispiel wird ANSI_DEFAULTS auf ON festgelegt, und die `DBCC USEROPTIONS`-Anweisung wird zum Anzeigen der betroffenen Einstellungen verwendet.  
   
-```  
+```sql  
 -- SET ANSI_DEFAULTS ON.  
 SET ANSI_DEFAULTS ON;  
 GO  
+
 -- Display the current settings.  
 DBCC USEROPTIONS;  
-GO  
+GO 
+
 -- SET ANSI_DEFAULTS OFF.  
 SET ANSI_DEFAULTS OFF;  
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [DBCC USEROPTIONS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md)   
  [SET-Anweisungen (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
  [SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)   

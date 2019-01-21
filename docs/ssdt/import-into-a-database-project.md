@@ -15,12 +15,12 @@ ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c5cf17437f97aa649ee81f2fb0f71061df04fec8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5ed0acd238ebc934c6adf5061eafe3f15ce44bef
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400393"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143460"
 ---
 # <a name="import-into-a-database-project"></a>Importieren in ein Datenbankprojekt
 Mithilfe von Importieren können Sie ein Projekt mit neuen Objekten aus einer Livedatenbank oder einer DACPAC-Datei auffüllen bzw. im Projekt vorhandene Objekte anhand einer neuen Definition aus einem Skript aktualisieren. Bei den drei nachfolgend beschriebenen Methoden sind einige Verhaltensunterschiede zu beachten.  
@@ -59,8 +59,7 @@ Alle Objekte aus der Importquelle, die *noch nicht* im Projekt enthalten sind, w
   
 Beim Import aus Skripts können Skripts vor und nach der Bereitstellung, SQLCMD-Variablen oder RefactorLog-Dateien nicht ausgewertet werden. Diese und andere nicht unterstützte Konstrukte, die beim Import erkannt werden, werden projektweise in einer Datei **ScriptsIgnoredOnImport.sql** im Ordner **Skripts** abgelegt.  
   
-Weitere Informationen finden Sie im Forum des SSDT-Teams [https://social.msdn.microsoft.com/Forums/en-US/ssdt/threads](https://social.msdn.microsoft.com/Forums/en-US/ssdt/threads).  
-  
+ 
 ## <a name="bkmk_import_encrypted"></a>Importieren verschlüsselter Objekte  
 Beim Importieren verschlüsselter Objekte in ein Datenbankprojekt kann der vollständige Text der Objektdefinition nicht immer vom Server abgerufen werden. Somit kann das Importverhalten bei der Verwendung dieser Objektklasse abweichen.  
   

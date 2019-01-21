@@ -20,12 +20,12 @@ ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 78bc2ed5285440afa526cc7e6e6ef1e732e4fc9e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8b11894150e184233b985dcfd21002175b1d9555
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530008"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255925"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Verwenden des Assistenten für Failover-Verfügbarkeitsgruppen (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "52530008"
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
  Bevor Ihrem ersten geplanten manuellen Failovers, gehen Sie zum Abschnitt „Vorbereitungen“ unter [Ausführen eines geplanten manuellen Failovers einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)ausgeführt wird.  
   
- Vor dem ersten erzwungenen Failover lesen Sie die Abschnitte „Vorbereitungen“ und „Nachverfolgung: Wichtige Aufgaben nach einem erzwungenen Failover“ unter [Ausführen eines erzwungenen manuellen Failovers einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)ausgeführt wird.  
+ Lesen Sie vor dem ersten erzwungenen Failover die Abschnitte „Vorbereitungen“ und „Follow Up: Essential Tasks After a Forced Failover“ (Nächste Schritte: wichtige Aufgaben nach einem erzwungenen Failover) im Artikel [Ausführen eines erzwungenen manuellen Failovers einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -49,7 +49,7 @@ ms.locfileid: "52530008"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER AVAILABILITY GROUP-Berechtigung für die Verfügbarkeitsgruppe, die CONTROL AVAILABILITY GROUP-Berechtigung, die ALTER ANY AVAILABILITY GROUP-Berechtigung oder die CONTROL SERVER-Berechtigung.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
  **So verwenden Sie den Assistenten für das Failover von Verfügbarkeitsgruppen**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit der Serverinstanz her, die ein sekundäres Replikat der Verfügbarkeitsgruppe hostet, für die ein Failover ausgeführt werden muss, und erweitern Sie die Serverstruktur.  
@@ -60,7 +60,7 @@ ms.locfileid: "52530008"
   
 4.  Welche Informationen auf der Seite **Einführung** angezeigt werden, hängt davon ab, ob ein sekundäres Replikat für ein geplantes Failover geeignet ist. Wenn diese Seite den Text "**Geplantes Failover für diese Verfügbarkeitsgruppe ausführen**" enthält, dann können Sie ein Failover für die Verfügbarkeitsgruppe ohne Datenverlust durchführen.  
   
-5.  Auf der Seite **Neues primäres Replikat auswählen** können Sie den Status des aktuellen primären Replikats und des WSFC-Quorums überprüfen, bevor Sie das sekundäre Replikat auswählen, das das neue primäre Replikat (das *Failoverziel*) wird. Für ein geplantes manuelles Failover müssen Sie ein sekundäres Replikat auswählen, das für **Failoverbereitschaft** den Wert "**Kein Datenverlust**" aufweist. Bei einem erzwungenen Failover lautet dieser Wert für alle möglichen Failoverziele „**Data loss, Warnings(***#***)**“, wobei *#* die Anzahl von Warnungen angibt, die für ein angegebenes sekundäres Replikat vorhanden sind. Um die Warnungen für ein angegebenes Failoverziel anzuzeigen, klicken Sie auf dessen „Failoverbereitschaft“-Wert.  
+5.  Auf der Seite **Neues primäres Replikat auswählen** können Sie den Status des aktuellen primären Replikats und des WSFC-Quorums überprüfen, bevor Sie das sekundäre Replikat auswählen, das das neue primäre Replikat (das *Failoverziel*) wird. Für ein geplantes manuelles Failover müssen Sie ein sekundäres Replikat auswählen, das für **Failoverbereitschaft** den Wert "**Kein Datenverlust**" aufweist. Bei einem erzwungenen Failover lautet dieser Wert für alle möglichen Failoverziele „**Data loss, Warnings(**_#_**)**“ (Datenverlust, Warnungen (#)), wobei *#* die Anzahl der Warnungen angibt, die für ein angegebenes sekundäres Replikat vorhanden sind. Um die Warnungen für ein angegebenes Failoverziel anzuzeigen, klicken Sie auf dessen „Failoverbereitschaft“-Wert.  
   
      Weitere Informationen finden Sie weiter unten in diesem Thema unter [Seite 'Neues primäres Replikat auswählen'](#SelectNewPrimaryReplica).  
   
@@ -78,7 +78,7 @@ ms.locfileid: "52530008"
   
      Weitere Informationen finden Sie unter [Seite „Ergebnisse“ &#40;Always On-Verfügbarkeitsgruppen-Assistenten&#41;](../../../database-engine/availability-groups/windows/results-page-always-on-availability-group-wizards.md)ausgeführt wird.  
   
-11. Nach einem erzwungenen Failover lesen Sie „Nachverfolgung: Wichtige Aufgaben nach einem erzwungenen Failover“ unter [Ausführen eines erzwungenen manuellen Failovers einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)ausgeführt wird.  
+11. Lesen Sie nach einem erzwungenen Failover den Abschnitt „Follow Up: Essential Tasks After a Forced Failover“ (Nächste Schritte: wichtige Aufgaben nach einem erzwungenen Failover) im Artikel [Ausführen eines erzwungenen manuellen Failovers einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
 ## <a name="help-for-pages-that-are-exclusive-to-this-wizard"></a>Hilfe zu Seiten, die diesem Assistenten eigen sind  
  In diesem Abschnitt werden die Seiten beschrieben, die dem [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]eigen sind.  
@@ -151,7 +151,7 @@ ms.locfileid: "52530008"
 |value|und Beschreibung|  
 |-----------|-----------------|  
 |**Kein Datenverlust**|Dieses sekundäre Replikat unterstützt gegenwärtig geplante Failover. Dieser Wert tritt nur dann auf, wenn ein für den Verfügbarkeitsmodus mit synchronem Commit konfiguriertes sekundäres Replikat mit dem primären Replikat synchronisiert wird.|  
-|**Datenverlust, Warnungen (** *#* **)**|Dieses sekundäre Replikat unterstützt nur erzwungene manuelle Failover (mit möglichem Datenverlust). Dieser Wert tritt immer dann auf, wenn das sekundäre Replikat nicht mit dem primären Replikat synchronisiert ist. Klicken Sie den Link für Datenverlust-Warnungen, um Informationen zum möglichen Datenverlust zu erhalten.|  
+|**Datenverlust, Warnungen (** _#_ **)**|Dieses sekundäre Replikat unterstützt nur erzwungene manuelle Failover (mit möglichem Datenverlust). Dieser Wert tritt immer dann auf, wenn das sekundäre Replikat nicht mit dem primären Replikat synchronisiert ist. Klicken Sie den Link für Datenverlust-Warnungen, um Informationen zum möglichen Datenverlust zu erhalten.|  
   
  **Aktualisieren**  
  Klicken Sie, um das Raster zu aktualisieren.  
@@ -188,7 +188,7 @@ ms.locfileid: "52530008"
  **Abbrechen**  
  Klicken Sie, um den Assistenten abzubrechen. Wenn Sie den Assistenten auf der Seite **Verbindung mit Replikat herstellen** abbrechen, wird dieser beendet, ohne dass Aktionen ausgeführt werden.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Verfügbarkeitsmodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
  [Failover und Failovermodi (Always On-Verfügbarkeitsgruppen)](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   

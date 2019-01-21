@@ -1,7 +1,7 @@
 ---
 title: Transparente Datenverschlüsselung (TDE) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/09/2017
+ms.date: 01/08/2019
 ms.prod: sql
 ms.technology: security
 ms.topic: conceptual
@@ -19,12 +19,12 @@ ms.author: aliceku
 ms.reviewer: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2fda42994bb86d1087f22024205f8a521ec530d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: bb61a9c18c8e0f2b164c8df01a8b84cebd5c8ab8
+ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210579"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185126"
 ---
 # <a name="transparent-data-encryption-tde"></a>Transparente Datenverschlüsselung (TDE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "53210579"
   
  **Informationen zu [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]**  
   
- Bei der Verwendung von TDE mit [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 wird das auf Serverebene in der „master“-Datenbank gespeicherte Zertifikat automatisch von [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]erstellt. Zum Verschieben einer TDE-Datenbank auf [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] müssen Sie die Datenbank entschlüsseln, verschieben und auf der Ziel- [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]erneut aktivieren. Schrittweise Anweisungen für TDE auf [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]finden Sie unter [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).  
+ Bei der Verwendung von TDE mit [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 wird das auf Serverebene in der „master“-Datenbank gespeicherte Zertifikat automatisch von [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] erstellt. Beim Verschieben einer TDE-Datenbank nach [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] muss die Datenbank für den Verschiebevorgang nicht entschlüsselt werden. Weitere Informationen zur Verwendung von TDE mit [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] finden Sie unter [Transparent Data Encryption with Azure SQL Database (Transparent Data Encryption mit Azure SQL-Datenbank)](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).  
   
  **Informationen zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   
@@ -242,7 +242,8 @@ GO
  [Transparente Datenverschlüsselung in Azure SQL-Datenbank](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
  [Erste Schritte mit transparenter Datenverschlüsselung (TDE) in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-encryption-tde-tsql/)  
  [SQL Server-Verschlüsselung](../../../relational-databases/security/encryption/sql-server-encryption.md)  
- [Verschlüsselungsschlüssel für SQL Server und Datenbank &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
+ 
+  [Verschlüsselungsschlüssel für SQL Server und Datenbank &#40;Datenbank-Engine&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
    
 ## <a name="see-also"></a>Weitere Informationen  
  [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   

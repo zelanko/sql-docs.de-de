@@ -18,12 +18,12 @@ ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e9378663dbe37bb6e00602cc34bc42c4a5bd4e08
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fa5285bee7041b0da548a963087493f4c5cc9b21
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530496"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134736"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>ALTER DATABASE- (Transact-SQL)-Datenbankspiegelung 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "52530496"
   
  Informationen zu ALTER DATABASE-Optionen finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md). Informationen zu ALTER DATABASE SET-Optionen finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -89,7 +89,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 > [!NOTE]  
 >  Pro SET PARTNER-Klausel ist nur eine \<partner_option> zugelassen.  
   
- **'** *partner_server* **'**  
+ **'** _partner_server_ **'**  
  Gibt die Server-Netzwerkadresse einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, die als Failoverpartner in einer neuen Datenbank-Spiegelungssitzung agiert. Jede Sitzung erfordert zwei Partner, von denen einer als Prinzipalserver, der andere als Spiegelserver beginnt. Die beiden Partner sollten sich auf unterschiedlichen Computern befinden.  
   
  Diese Option wird einmal pro Sitzung für jeden Partner angegeben. Für das Starten einer Datenbank-Spiegelungssitzung sind zwei ALTER DATABASE *Datenbank* SET PARTNER **='**_partner_server_**'**-Anweisungen erforderlich. Ihre Reihenfolge ist wichtig. Stellen Sie zuerst eine Verbindung mit dem Spiegelserver her, und geben Sie die Prinzipalserverinstanz als *partner_server* (SET PARTNER **='**_principal_server_**'**) an. Stellen Sie anschließend eine Verbindung mit dem Prinzipalserver her, und geben Sie die Spiegelserverinstanz als *partner_server* (SET PARTNER **='**_mirror_server_**'**) an; auf diese Weise wird eine Datenbank-Spiegelungssitzung zwischen diesen beiden Partnern gestartet. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Einrichten der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
@@ -175,7 +175,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  Weitere Informationen finden Sie unter [Possible Failures During Database Mirroring](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md).  
   
  WITNESS \<witness_option>  
- Steuert die Datenbankeigenschaften, die einen Datenbank-Spiegelungszeugen definieren. Eine SET WITNESS-Klausel wirkt sich auf beide Kopien der Datenbank aus, Sie können SET WITNESS jedoch nur auf dem Prinzipalserver angeben. Wenn ein Zeuge für eine Sitzung festgelegt wird, ist unabhängig von der SAFETY-Einstellung ein Quorum zum Anbieten der Datenbank erforderlich. Weitere Informationen finden Sie unter [Quorum: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ Steuert die Datenbankeigenschaften, die einen Datenbank-Spiegelungszeugen definieren. Eine SET WITNESS-Klausel wirkt sich auf beide Kopien der Datenbank aus, Sie können SET WITNESS jedoch nur auf dem Prinzipalserver angeben. Wenn ein Zeuge für eine Sitzung festgelegt wird, ist unabhängig von der SAFETY-Einstellung ein Quorum zum Anbieten der Datenbank erforderlich; weitere Informationen finden Sie unter [Quorum: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
  Zeuge und Failoverpartner sollten sich auf separaten Computern befinden. Informationen zum Hinzufügen oder Entfernen eines Zeugen finden Sie unter [Datenbank-Spiegelungszeuge](../../database-engine/database-mirroring/database-mirroring-witness.md).  
   
@@ -195,7 +195,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 > [!NOTE]  
 >  Pro SET WITNESS-Klausel ist nur eine \<witness_option> zugelassen.  
   
- **'** *witness_server* **'**  
+ **'** _witness_server_ **'**  
  Gibt eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] an, die als Zeugenserver für die Datenbank-Spiegelungssitzung agiert. Sie können SET WITNESS-Anweisungen nur auf dem Prinzipalserver angeben.  
   
  In einer SET WITNESS **='**_witness_server_**'**-Anweisung ist die Syntax von *witness_server* mit der Syntax von *partner_server* identisch.  
@@ -246,7 +246,7 @@ GO
   
      Der aktuelle Wert von `mirroring_role_desc` ist jetzt `Mirror`.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)   
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)  

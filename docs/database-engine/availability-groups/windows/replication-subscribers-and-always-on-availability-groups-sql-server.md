@@ -14,12 +14,12 @@ ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 80bc2cd3fab4a81d76bac5623fef8f37d3167289
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 46348ec891fba60479633f824a96232290859cd3
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416891"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298507"
 ---
 # <a name="replication-subscribers-and-always-on-availability-groups-sql-server"></a>Replikationsabonnenten und Always On-Verfügbarkeitsgruppen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "52416891"
   Wenn für eine Always On-Verfügbarkeitsgruppe mit einer Datenbank, die einen Replikationsabonnenten darstellt, ein Failover ausgeführt wird, tritt u.U. ein Fehler beim Replikationsabonnement auf. Bei Transaktionsabonnenten setzt der Verteilungs-Agent die Replikation automatisch fort, wenn für das Abonnement der Name des Verfügbarkeitsgruppenlisteners des Abonnenten verwendet wird. Bei Mergeabonnenten muss der Abonnent vom Replikationsadministrator manuell neu konfiguriert werden, indem er das Abonnement neu erstellt.  
   
 ## <a name="what-is-supported"></a>Unterstützte Vorgänge  
- Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Replikation unterstützt das automatische Failover des Verlegers und das automatische Failover transaktionale Abonnenten. Das Failover eines Verteilers zu einer Verfügbarkeitsdatenbank wird nicht unterstützt. Mergeabonnenten können Teil einer Verfügbarkeitsgruppe sein, jedoch sind manuelle Aktionen erforderlich, um den neuen Abonnenten nach einem Failover zu konfigurieren. Verfügbarkeitsgruppen können nicht mit WebSync- und ssNoVersion Compact-Szenarien kombiniert werden.  
+ Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Replikation unterstützt das automatische Failover des Verlegers und das automatische Failover transaktionale Abonnenten. Das Failover eines Verteilers zu einer Verfügbarkeitsdatenbank wird nicht unterstützt. Mergeabonnenten können Teil einer Verfügbarkeitsgruppe sein, jedoch sind manuelle Aktionen erforderlich, um den neuen Abonnenten nach einem Failover zu konfigurieren. Verfügbarkeitsgruppen können nicht mit WebSync- und SQL Server Compact-Szenarios kombiniert werden.  
   
 ## <a name="how-to-create-transactional-subscription-in-an-always-on-environment"></a>Erstellen eines Transaktionsabonnements in einer Always On-Umgebung  
  Führen Sie bei der Transaktionsreplikation folgende Schritte aus, um die Verfügbarkeitsgruppe eines Abonnenten zu konfigurieren und ein Failover auszuführen:  

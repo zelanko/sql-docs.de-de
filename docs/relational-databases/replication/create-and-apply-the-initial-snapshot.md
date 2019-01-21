@@ -1,7 +1,7 @@
 ---
 title: Erstellen und Anwenden der Anfangsmomentaufnahme | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -14,70 +14,78 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 62abe846572eff13f44658cdea33670ca2b0bf1c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8d537dedf9cf84cafd0b61cfac6605f1b0457fb8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657549"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135610"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Erstellen und Anwenden der Anfangsmomentaufnahme
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  In diesem Thema wird beschrieben, wie die Anfangsmomentaufnahme in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) erstellt und übernommen wird. Mergeveröffentlichungen, die parametrisierte Filter verwenden, erfordern eine zweiteilige Momentaufnahme. Weitere Informationen finden Sie unter [Erstellen einer Momentaufnahme für eine Mergeveröffentlichung mit parametrisierten Filtern](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+In diesem Thema wird beschrieben, wie die Anfangsmomentaufnahme in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) erstellt und übernommen wird. Mergeveröffentlichungen, die parametrisierte Filter verwenden, erfordern eine zweiteilige Momentaufnahme. Weitere Informationen finden Sie unter [Erstellen einer Momentaufnahme für eine Mergeveröffentlichung mit parametrisierten Filtern](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+  Momentaufnahmen werden nach dem Erstellen einer Veröffentlichung vom Momentaufnahme-Agent generiert. Sie können folgendermaßen generiert werden:  
   
- **In diesem Thema**  
+-   Sofort. Standardmäßig wird eine Momentaufnahme für eine Mergeveröffentlichung sofort nach dem Erstellen der Veröffentlichung im Assistenten für neue Veröffentlichung generiert.    
+-   Zu einem geplanten Zeitpunkt. Geben Sie auf der Seite **Momentaufnahme-Agent** des Assistenten für neue Veröffentlichung oder beim Verwenden von gespeicherten Prozeduren bzw. Replikationsverwaltungsobjekten (RMO) einen Zeitpunkt an.    
+-   Manuell. Führen Sie den Momentaufnahme-Agent von der Eingabeaufforderung oder in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aus. Weitere Informationen zum Ausführen von Agents finden Sie unter [Ausführbare Konzepte für die Programmierung von Replikations-Agents](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md) und [Starten und Beenden eines Replikations-Agents &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md).  
   
--   **So erstellen Sie die Anfangsmomentaufnahme und wenden sie an mit:**  
+Bei der Mergereplikation wird jedes Mal eine Momentaufnahme generiert, wenn der Momentaufnahme-Agent ausgeführt wird. Bei der Transaktionsreplikation hängt die Momentaufnahmegenerierung von der Einstellung der **immediate_sync**-Veröffentlichungseigenschaft ab. Ist die Eigenschaft auf TRUE festgelegt (die Standardeinstellung bei der Verwendung des Assistenten für neue Veröffentlichung), wird bei jedem Ausführen des Momentaufnahme-Agents eine Momentaufnahme generiert, der jederzeit auf einen Abonnenten angewendet werden kann. Ist die Eigenschaft auf FALSE festgelegt (die Standardeinstellung bei der Verwendung von **sp_addpublication**), wird die Momentaufnahme nur dann generiert, wenn seit dem letzten Ausführen des Momentaufnahme-Agents ein neues Abonnement hinzugefügt wurde. Abonnenten können erst synchronisiert werden, nachdem der Momentaufnahme-Agent abgeschlossen ist.  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+Generierte Momentaufnahmen werden im Standardmomentaufnahmeordner auf dem Verteiler gespeichert. Sie können Momentaufnahmedateien aber auch auf Wechselmedien wie z. B. Wechseldatenträgern, CD-ROMs oder an anderen Speicherorten als dem Standardmomentaufnahmeordner speichern. Darüber hinaus können Sie die Momentaufnahmedateien komprimieren, sodass sie leichter zu speichern und zu übertragen sind, und Skripts vor oder nach der Anwendung der Momentaufnahme auf den Abonnenten ausführen. Weitere Informationen zu diesen Optionen finden Sie unter [Snapshot Options](../../relational-databases/replication/snapshot-options.md).  
   
-     [Transact-SQL](#TsqlProcedure)  
+Handelt es sich um eine Momentaufnahme für eine Mergeveröffentlichung, die parametrisierte Filter verwendet, wird die Momentaufnahme mit einem zweiteiligen Prozess erstellt. Zuerst wird eine Schemamomentaufnahme erstellt, die die Replikationsskripts und das Schema der veröffentlichten Objekte enthält, nicht jedoch die Daten. Jedes Abonnement wird dann mit einer Momentaufnahme initialisiert, die die aus der Schemamomentaufnahme kopierten Skripts und das Schema sowie die Daten enthält, die zur Partition des Abonnements gehören. Weitere Informationen finden Sie unter [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
-     [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
+Nachdem die Momentaufnahme auf dem Verleger erstellt und am standardmäßigen bzw. einem anderen Momentaufnahmespeicherort gespeichert wurde, kann sie an den Abonnenten übertragen und auf diesen angewendet werden. Der Verteilungs-Agent (bei Momentaufnahme- oder Transaktionsreplikation) bzw. der Merge-Agent (bei Mergereplikation) überträgt die Momentaufnahme und wendet die Schema- und Datendateien während der Erstsynchronisierung auf die Abonnement-Datenbank auf dem Abonnenten an. Standardmäßig erfolgt die Erstsynchronisierung unmittelbar nach dem Erstellen einer Abonnements, wenn Sie den Assistenten für neue Veröffentlichung verwenden. Dieses Verhalten wird von der Option **Initialisierungszeitpunkt** auf der Seite **Abonnements initialisieren** des Assistenten gesteuert. Wenn Momentaufnahmen generiert werden, nachdem ein Abonnement initialisiert wurde, werden sie nicht auf den Abonnenten angewendet, es sei denn, ein Abonnement ist für die erneute Initialisierung markiert. Weitere Informationen finden Sie unter [Erneutes Initialisieren von Abonnements](../../relational-databases/replication/reinitialize-subscriptions.md).  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
- Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ausgeführt wird, wird vom Momentaufnahme-Agent standardmäßig sofort eine Momentaufnahme generiert, nachdem mit dem Assistenten für neue Veröffentlichung eine Veröffentlichung erstellt wurde. Diese Momentaufnahme wird dann standardmäßig vom Verteilungs-Agent (bei der Momentaufnahme- und der Transaktionsreplikation) oder vom Merge-Agent (bei Mergeabonnement) für alle Abonnements angewendet. Eine Momentaufnahme kann auch mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und dem Replikationsmonitor generiert werden. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+Nachdem der Verteilungs- bzw. der Merge-Agent die Anfangsmomentaufnahme angewendet hat, gibt er nachfolgende Updates und andere Datenänderungen weiter. Wenn Momentaufnahmen an Abonnenten verteilt und auf ihnen angewendet werden, sind nur die Abonnenten betroffen, die auf eine Anfangsmomentaufnahme oder neue Momentaufnahmen warten. Andere Abonnenten dieser Veröffentlichung (diejenigen, die bereits Einfügungen, Updates, Löschungen oder andere Änderungen der veröffentlichten Daten empfangen) sind nicht betroffen.  
+
+Informationen zum Anzeigen oder Ändern des Standardspeicherorts für den Momentaufnahmeordner finden Sie im entsprechenden Abschnitt.  
   
-#### <a name="to-create-a-snapshot-in-management-studio"></a>So erstellen Sie eine Momentaufnahme in Management Studio  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Ändern von Momentaufnahmeoptionen](../../relational-databases/replication/snapshot-options.md)  
   
-1.  Stellen Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]eine Verbindung mit dem Verleger her, und erweitern Sie dann den Serverknoten.  
+-   Replikations- und RMO-Programmierung: [Konfigurieren der Veröffentlichung und der Verteilung](../../relational-databases/replication/configure-publishing-and-distribution.md)  
+
+## <a name="default-snapshot-location"></a>Standardspeicherort für Momentaufnahmen
+
+ Geben Sie den standardmäßigen Momentaufnahmespeicherort im Verteilungskonfigurations-Assistenten auf der Seite **Snapshotordner** an. Weitere Informationen zum Verwenden dieses Assistenten finden Sie unter [Konfigurieren der Veröffentlichung und der Verteilung](../../relational-databases/replication/configure-publishing-and-distribution.md). Wenn Sie eine Veröffentlichung auf einem Server erstellen, der nicht als Verteiler konfiguriert ist, geben Sie im Assistenten für neue Veröffentlichung auf der Seite **Momentaufnahmeordner** einen standardmäßigen Momentaufnahmespeicherort an. Weitere Informationen zum Zugreifen auf diesen Assistenten finden Sie unter [Erstellen einer Veröffentlichung](../../relational-databases/replication/publish/create-a-publication.md).  
   
-2.  Erweitern Sie den Ordner **Replikation** , und erweitern Sie dann den Ordner **Lokale Veröffentlichungen** .  
+ Ändern Sie den standardmäßigen Momentaufnahmespeicherort im Dialogfeld **Verteilereigenschaften - \<Distributor>** auf der Seite **Verleger**. Weitere Informationen finden Sie unter [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md). Bestimmen Sie den Momentaufnahmeordner für die einzelnen Veröffentlichungen im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>**. Weitere Informationen finden Sie unter [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
-3.  Klicken Sie mit der rechten Maustaste auf die Veröffentlichung, für die Sie eine Momentaufnahme erstellen möchten, und klicken Sie anschließend auf **Status des Momentaufnahme-Agents anzeigen**.  
+### <a name="modify-the-default-snapshot-location"></a>Ändern des Standardspeicherorts für Momentaufnahmen  
   
-4.  Klicken Sie im Dialogfeld **Status des Momentaufnahme-Agents anzeigen - \<Publication>** auf **Start**.  
+1.  Klicken Sie auf der Seite **Verleger** des Dialogfelds **Verteilereigenschaften - \<Distributor>** auf die Schaltfläche mit den drei Punkten (**…**) für den Verleger, dessen standardmäßiger Momentaufnahmespeicherort geändert werden soll.  
   
+2.  Geben Sie im Dialogfeld **Verlegereigenschaften - \<Publisher>** einen Wert für die Eigenschaft **Standardmomentaufnahmeordner** ein.  
+  
+    > [!NOTE]  
+    >  Der Momentaufnahme-Agent muss Schreibberechtigungen für das angegebene Verzeichnis und der Verteilungs-Agent oder Merge-Agent muss Leseberechtigungen besitzen. Bei Verwendung von Pullabonnements müssen Sie ein freigegebenes Verzeichnis als UNC-Pfad angeben, wie z.B. \\\Computername\Momentaufnahme. Weitere Informationen finden Sie unter [Schützen des Momentaufnahmeordners](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
+  
+3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+
+## <a name="create-snapshot"></a>Erstellen einer Momentaufnahme
+Wenn der SQL Server-Agent ausgeführt wird, wird vom Momentaufnahmen-Agent standardmäßig sofort eine Momentaufnahme generiert, nachdem mit dem Assistenten für neue Veröffentlichung eine Veröffentlichung erstellt wurde. Diese Momentaufnahme wird dann standardmäßig vom Verteilungs-Agent (bei der Momentaufnahme- und der Transaktionsreplikation) oder vom Merge-Agent (bei Mergeabonnement) für alle Abonnements angewendet. Eine Momentaufnahme kann auch mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und dem Replikationsmonitor generiert werden. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+
+### <a name="using-sql-server-management-studio"></a>Verwendung von SQL Server Management Studio
+
+1.  Stellen Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]eine Verbindung mit dem Verleger her, und erweitern Sie dann den Serverknoten.    
+2.  Erweitern Sie den Ordner **Replikation** , und erweitern Sie dann den Ordner **Lokale Veröffentlichungen** .    
+3.  Klicken Sie mit der rechten Maustaste auf die Veröffentlichung, für die Sie eine Momentaufnahme erstellen möchten, und klicken Sie anschließend auf **Status des Momentaufnahme-Agents anzeigen**.    
+4.  Klicken Sie im Dialogfeld **Status des Momentaufnahme-Agents anzeigen - \<Publication>** auf **Start**.    
  Nachdem der Momentaufnahme-Agent die Momentaufnahme generiert hat, wird eine Meldung angezeigt, die beispielsweise wie folgt lautet: "[100%] Es wurde eine Momentaufnahme mit 17 Artikel(n) generiert".  
   
-#### <a name="to-create-a-snapshot-in-replication-monitor"></a>So erstellen Sie eine Momentaufnahme im Replikationsmonitor  
+### <a name="in-replication-monitor"></a>Im Replikationsmonitor:  
   
-1.  Erweitern Sie im Replikationsmonitor im linken Bereich eine Verlegergruppe, und erweitern Sie dann einen Verleger.  
-  
-2.  Klicken Sie mit der rechten Maustaste auf die Veröffentlichung, für die Sie eine Momentaufnahme generieren möchten, und klicken Sie anschließend auf **Momentaufnahme generieren**.  
-  
+1.  Erweitern Sie im Replikationsmonitor im linken Bereich eine Verlegergruppe, und erweitern Sie dann einen Verleger.    
+2.  Klicken Sie mit der rechten Maustaste auf die Veröffentlichung, für die Sie eine Momentaufnahme generieren möchten, und klicken Sie anschließend auf **Momentaufnahme generieren**.    
 3.  Um den Status des Momentaufnahme-Agents anzuzeigen, klicken Sie auf die Registerkarte **Agents** . Wenn Sie genauere Informationen anzeigen möchten, klicken Sie im Raster mit der rechten Maustaste auf den Momentaufnahme-Agent, und klicken Sie dann auf **Details anzeigen**.  
-  
-#### <a name="to-apply-a-snapshot"></a>So wenden Sie eine Momentaufnahme an  
-  
-1.  Eine generierte Momentaufnahme wird angewendet, indem das Abonnement mit dem Verteilungs-Agent oder dem Merge-Agent synchronisiert wird:  
-  
-    -   Wenn der Agent fortlaufend ausgeführt wird (die Standardeinstellung bei der Transaktionsreplikation), wird die Momentaufnahme automatisch nach dem Generieren angewendet.  
-  
-    -   Wenn der Agent nach einem Zeitplan ausgeführt wird, wird die Momentaufnahme bei der nächsten geplanten Ausführung des Agents angewendet.  
-  
-    -   Wenn der Agent bedarfsgesteuert ausgeführt wird, wird der Snapshot bei der nächsten Ausführung des Agents angewendet.  
-  
-     Weitere Informationen zum Synchronisieren von Abonnements finden Sie unter [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md) und [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)verfügbar ist.  
-  
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
- Sie können Anfangsmomentaufnahmen programmgesteuert erstellen, indem Sie entweder einen Momentaufnahme-Agentauftrag erstellen und ausführen oder die ausführbare Datei für den Momentaufnahme-Agent von einer Batchdatei ausführen. Nachdem eine Anfangsmomentaufnahme generiert wurde, wird sie an den Abonnenten übertragen und auf diesen angewendet, sobald die erste Synchronisierung für das Abonnement durchgeführt wird. Wenn Sie den Momentaufnahme-Agent von der Eingabeaufforderung oder einer Batchdatei ausführen, müssen Sie den Agent immer dann erneut ausführen, wenn die bestehende Momentaufnahme ungültig wird.  
+
+## <a name="using-transact-sql"></a>Verwenden von Transact-SQL
+Sie können Anfangsmomentaufnahmen programmgesteuert erstellen, indem Sie entweder einen Momentaufnahme-Agentauftrag erstellen und ausführen oder die ausführbare Datei für den Momentaufnahme-Agent von einer Batchdatei ausführen. Nachdem eine Anfangsmomentaufnahme generiert wurde, wird sie an den Abonnenten übertragen und auf diesen angewendet, sobald die erste Synchronisierung für das Abonnement durchgeführt wird. Wenn Sie den Momentaufnahme-Agent von der Eingabeaufforderung oder einer Batchdatei ausführen, müssen Sie den Agent immer dann erneut ausführen, wenn die bestehende Momentaufnahme ungültig wird.  
   
 > [!IMPORTANT]  
 >  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden müssen, muss die Datei an einem sicheren Ort gespeichert werden, um unberechtigten Zugriff zu vermeiden.  
-  
-#### <a name="to-create-and-run-a-snapshot-agent-job-to-generate-the-initial-snapshot"></a>So erstellen Sie einen Momentaufnahme-Agentauftrag und führen ihn aus, um die Anfangsmomentaufnahme zu generieren  
-  
+
 1.  Erstellen Sie eine Momentaufnahme-, Transaktions- oder Mergeveröffentlichung. Weitere Informationen finden Sie unter [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
 2.  Führen Sie [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) aus. Geben Sie **@publication** und die folgenden Parameter an:  
@@ -91,14 +99,25 @@ ms.locfileid: "51657549"
     -   (Optional) Einen Synchronisierungszeitplan für den Momentaufnahme-Agentauftrag. Weitere Informationen finden Sie unter [Angeben von Synchronisierungszeitplänen](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
     > [!IMPORTANT]  
-    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp;#40;SQL Server-Konfigurations-Manager&amp;#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 3.  Fügen Sie der Veröffentlichung Artikel hinzu. Weitere Informationen finden Sie unter [Definieren eines Artikels](../../relational-databases/replication/publish/define-an-article.md).  
   
 4.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md) unter Angabe des Werts **@publication** aus Schritt 1 aus.  
   
-#### <a name="to-run-the-snapshot-agent-to-generate-the-initial-snapshot"></a>So führen Sie den Momentaufnahme-Agent zum Generieren der Anfangsmomentaufnahme aus  
+## <a name="apply-a-snapshot"></a>Anwenden einer Momentaufnahme  
+
+### <a name="using-sql-server-management-studio"></a>Verwendung von SQL Server Management Studio
   
+1.  Eine generierte Momentaufnahme wird angewendet, indem das Abonnement mit dem Verteilungs-Agent oder dem Merge-Agent synchronisiert wird:   
+    -   Wenn der Agent fortlaufend ausgeführt wird (die Standardeinstellung bei der Transaktionsreplikation), wird die Momentaufnahme automatisch nach dem Generieren angewendet.   
+    -   Wenn der Agent nach einem Zeitplan ausgeführt wird, wird die Momentaufnahme bei der nächsten geplanten Ausführung des Agents angewendet.    
+    -   Wenn der Agent bedarfsgesteuert ausgeführt wird, wird der Snapshot bei der nächsten Ausführung des Agents angewendet.  
+  
+     Weitere Informationen zum Synchronisieren von Abonnements finden Sie unter [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md) und [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)verfügbar ist.  
+  
+###   <a name="use-transact-sql"></a>Verwendung von Transact-SQL  
+ 
 1.  Erstellen Sie eine Momentaufnahme-, Transaktions- oder Mergeveröffentlichung. Weitere Informationen finden Sie unter [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
 2.  Fügen Sie der Veröffentlichung Artikel hinzu. Weitere Informationen finden Sie unter [Definieren eines Artikels](../../relational-databases/replication/publish/define-an-article.md).  
@@ -106,27 +125,18 @@ ms.locfileid: "51657549"
 3.  Starten Sie den [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md) von der Eingabeaufforderung oder in einer Batchdatei, indem Sie die Datei **snapshot.exe**ausführen. Geben Sie hierzu die folgenden Befehlszeilenargumente ein:  
   
     -   **-Publication**  
-  
     -   **-Publisher**  
-  
-    -   **-Distributor**  
-  
-    -   **-PublisherDB**  
-  
+    -   **-Distributor**   
+    -   **-PublisherDB**   
     -   **-ReplicationType**  
   
      Wenn Sie die SQL Server-Authentifizierung verwenden, müssen Sie auch die folgenden Argumente angeben:  
   
-    -   **-DistributorLogin**  
-  
-    -   **-DistributorPassword**  
-  
-    -   **-DistributorSecurityMode** = **0**  
-  
-    -   **-PublisherLogin**  
-  
-    -   **-PublisherPassword**  
-  
+    -   **-DistributorLogin**    
+    -   **-DistributorPassword**   
+    -   **-DistributorSecurityMode** = **0**    
+    -   **-PublisherLogin**    
+    -   **-PublisherPassword**    
     -   **-PublisherSecurityMode** = **0**  
   
 ###  <a name="TsqlExample"></a> Beispiele (Transact-SQL)  
@@ -213,7 +223,7 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
 #### <a name="to-generate-the-initial-snapshot-for-a-merge-publication-by-running-the-snapshot-agent-synchronous"></a>So generieren Sie die Anfangsmomentaufnahme für eine Mergeveröffentlichung durch Ausführen des Momentaufnahme-Agents (synchron)  
   
-1.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent>-Klasse, und legen Sie die folgenden erforderlichen Eigenschaften fest:  
+1.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> -Klasse, und legen Sie die folgenden erforderlichen Eigenschaften fest:  
   
     -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publisher%2A> – Name des Verlegers  
   
@@ -244,12 +254,11 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
  [!code-vb[HowTo#rmo_vb_GenerateSnapshot_WithJob](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_generatesnapshot_withjob)]  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)   
- [Erstellen und Anwenden der Momentaufnahme](../../relational-databases/replication/create-and-apply-the-snapshot.md)   
  [Initialisieren eines Abonnements mit einer Momentaufnahme](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   

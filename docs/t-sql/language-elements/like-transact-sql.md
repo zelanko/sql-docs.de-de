@@ -32,19 +32,22 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05489fa8c36f037ecde7d15f1e1109299bbec7f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e7d8bfaf8e2b07bd34843893a67a823e6841b6d6
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625088"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299987"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
+  > [!div class="nextstepaction"]
+  > [Senden Sie uns Ihr Feedback zum Inhaltsverzeichnis der SQL-Dokumentation!](https://aka.ms/sqldocsurvey)
+
   Bestimmt, ob eine bestimmte Zeichenfolge mit einem angegebenen Muster übereinstimmt. Ein Muster kann normale Zeichen und Platzhalterzeichen einschließen. Bei einem Mustervergleich müssen normale Zeichen exakt mit den angegebenen Zeichen in der Zeichenfolge übereinstimmen. Platzhalterzeichen können jedoch mit beliebigen Teilen der Zeichenfolge übereinstimmen. Das Verwenden der Vergleichsoperatoren für Zeichenfolgen = und != ist nicht so flexibel wie das Verwenden von Platzhalterzeichen mit dem LIKE-Operator. Wenn eines der Argumente kein Zeichenfolgen-Datentyp ist, wird es ggf. von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in einen Zeichenfolgen-Datentyp konvertiert.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -122,17 +125,17 @@ EXEC FindEmployee @EmpLName = 'Barb';
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
  ```
- FirstName      LastName            City
+ FirstName      LastName            City
  ----------     -------------------- --------------- 
  Angela         Barbariol            Snohomish
  David          Barber               Snohomish
  (2 row(s) affected)  
- ``` 
+ ``` 
  
-## <a name="pattern-matching-by-using-like"></a>Mustervergleich mithilfe von LIKE  
- LIKE unterstützt Mustervergleiche im ASCII- und Unicode-Format. Sind alle Argumente (*match_expression*, *pattern* und ggf. *escape_character*) ASCII-Zeichen, wird ein ASCII-Mustervergleich durchgeführt. Wenn eines der Argumente von einem Unicode-Datentyp ist, werden alle Argumente in Unicode konvertiert und ein Unicode-Mustervergleich durchgeführt. Wenn Sie beim LIKE-Operator Unicode-Daten (**nchar**- oder **nvarchar**-Datentypen) verwenden, werden nachfolgende Leerzeichen berücksichtigt. Bei Daten, die nicht vom Typ Unicode sind, werden nachfolgende Leerzeichen ignoriert. Der Unicode-LIKE-Operator ist mit dem ISO-Standard kompatibel. Der ASCII-LIKE-Operator ist mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kompatibel.  
+## Pattern Matching by Using LIKE  
+ LIKE supports ASCII pattern matching and Unicode pattern matching. When all arguments (*match_expression*, *pattern*, and *escape_character*, if present) are ASCII character data types, ASCII pattern matching is performed. If any one of the arguments are of Unicode data type, all arguments are converted to Unicode and Unicode pattern matching is performed. When you use Unicode data (**nchar** or **nvarchar** data types) with LIKE, trailing blanks are significant; however, for non-Unicode data, trailing blanks are not significant. Unicode LIKE is compatible with the ISO standard. ASCII LIKE is compatible with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Die folgenden Beispiele verdeutlichen die Unterschiede der zurückgegebenen Zeilen beim Durchführen von Mustervergleichen mit ASCII- und Unicode-LIKE-Operatoren.  
+ The following is a series of examples that show the differences in rows returned between ASCII and Unicode LIKE pattern matching.  
   
 ```sql  
 -- ASCII pattern matching with char column  
@@ -219,7 +222,7 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
  
  ```
- FirstName             LastName             Phone
+ FirstName             LastName             Phone
  -----------------     -------------------  ------------
  Ruben                 Alonso               415-555-124  
  Shelby                Cook                 415-555-0121  
@@ -233,10 +236,10 @@ GO
  Gabrielle              Russell             415-555-0197  
  Dalton                 Simmons             415-555-0115  
  (11 row(s) affected)  
- ``` 
+ ``` 
  
-### <a name="b-using-not-like-with-the--wildcard-character"></a>B. Verwenden von NOT LIKE mit dem Platzhalterzeichen %  
- Im folgenden Beispiel werden alle Telefonnummern in der `PersonPhone`-Tabelle gefunden, die nicht die Vorwahl `415` aufweisen.  
+### B. Using NOT LIKE with the % wildcard character  
+ The following example finds all telephone numbers in the `PersonPhone` table that have area codes other than `415`.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -253,7 +256,7 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
  
  ```
-FirstName              LastName            Phone
+FirstName              LastName            Phone
 ---------------------- -------------------- -------------------
 Gail                  Alexander            1 (11) 500 555-0120  
 Gail                  Butler               1 (11) 500 555-0191  
@@ -263,11 +266,11 @@ Gail                  Griffin              450-555-0171
 Gail                  Moore                155-555-0169  
 Gail                  Russell              334-555-0170  
 Gail                  Westover             305-555-0100  
-(8 row(s) affected)  
-```  
+(8 row(s) affected)  
+```  
 
-### <a name="c-using-the-escape-clause"></a>C. Verwenden der ESCAPE-Klausel  
- Im folgenden Beispiel werden die `ESCAPE`-Klausel und das Escapezeichen verwendet, um die exakte Zeichenfolge `10-15%` in der `c1`-Spalte der `mytbl2`-Tabelle zu suchen.  
+### C. Using the ESCAPE clause  
+ The following example uses the `ESCAPE` clause and the escape character to find the exact character string `10-15%` in column `c1` of the `mytbl2` table.  
   
 ```sql
 USE tempdb;  
@@ -353,7 +356,7 @@ WHERE phone LIKE '6_2%'
 ORDER by LastName;   
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
  [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   

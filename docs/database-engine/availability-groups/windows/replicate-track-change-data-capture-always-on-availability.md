@@ -15,12 +15,12 @@ ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8738e882455cfdb05630754e94f349d2e5f0204a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3a40d8209fd01c6f5e3c4ec2c3d4344d2b62ee35
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512107"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125950"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Replikation, Änderungsnachverfolgung und Change Data Capture (Always On-Verfügbarkeitsgruppen)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -196,9 +196,9 @@ Wenn Change Data Capture in einer Datenbank deaktiviert werden muss, die Teil ei
   
 -   Verwendung der Mergereplikation, während die Veröffentlichungsdatenbank einer Verfügbarkeitsgruppe angehört:  
   
-    -   Pushabonnement: Sowohl auf dem Verleger als auch auf dem Verteiler muss mindestens [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]ausgeführt werden.  
+    -   Pushabonnement: Sowohl auf dem Verleger als auch auf dem Verteiler muss mindestens [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ausgeführt werden.  
   
-    -   Pullabonnement: Die Verleger-, Verteiler- und Abonnentendatenbank müssen mindestens unter [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]ausgeführt werden. Das liegt daran, dass der Merge-Agent des Abonnenten verstehen muss, wie eine Verfügbarkeitsgruppe ein Failover auf die sekundäre Datenbank ausführen kann.  
+    -   Pullabonnement: Die Verleger-, Verteiler- und Abonnentendatenbanken müssen mindestens unter [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ausgeführt werden. Das liegt daran, dass der Merge-Agent des Abonnenten verstehen muss, wie eine Verfügbarkeitsgruppe ein Failover auf die sekundäre Datenbank ausführen kann.  
   
 -   Die Verlegerinstanzen erfüllen alle zur Teilnahme an einer Always On-Verfügbarkeitsgruppe erforderlichen Voraussetzungen. Weitere Informationen finden Sie unter [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)unterstützt.  
   
@@ -208,10 +208,10 @@ Wenn Change Data Capture in einer Datenbank deaktiviert werden muss, die Teil ei
 |||||  
 |-|-|-|-|  
 ||**Verleger**|**Verteiler**|**Abonnent**|  
-|**Transaktion**|Benutzerkontensteuerung<br /><br /> Hinweis: Bietet keine Unterstützung für die bidirektionale und wechselseitige Transaktionsreplikation.|Benutzerkontensteuerung|Benutzerkontensteuerung| 
-|**P2P**|nein|nein|nein|  
-|**Merge**|Benutzerkontensteuerung|nein|nein|  
-|**Momentaufnahme**|Benutzerkontensteuerung|nein|Benutzerkontensteuerung|
+|**Transaktion**|Ja<br /><br /> Hinweis: Bietet keine Unterstützung für die bidirektionale und wechselseitige Transaktionsreplikation.|Ja|Ja| 
+|**P2P**|Nein|Nein|Nein|  
+|**Merge**|Ja|Nein|Nein|  
+|**Momentaufnahme**|Ja|Nein|Ja|
   
  **Die Verteilerdatenbank wird für die Verwendung mit der Datenbankspiegelung nicht unterstützt.  
   
@@ -230,7 +230,7 @@ Wenn Change Data Capture in einer Datenbank deaktiviert werden muss, die Teil ei
   
 -   [Warten einer Always On-Veröffentlichungsdatenbank &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [Verwaltung &#40;Replikation&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [Häufig gestellte Fragen für Replikationsadministratoren](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
  **Change data capture**  
   
@@ -248,7 +248,7 @@ Wenn Change Data Capture in einer Datenbank deaktiviert werden muss, die Teil ei
   
 -   [Verwenden der Änderungsnachverfolgung &#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Replikationsabonnenten und Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

@@ -13,18 +13,18 @@ ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7eb5a872b713571c544a03039010aa3dbdc4aa1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: adbece38622571eecc0e3bcb00c8f69f022919b6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639948"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135600"
 ---
 # <a name="replication-monitor-main-page"></a>Replikationsmonitor (Hauptseite)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Mithilfe des Replikationsmonitors können Sie den Status und die Leistung von Veröffentlichungen und Abonnements über eine Replikationstopologie hinweg überwachen. Die folgenden Themen stellen weitere Informationen bereit:  
   
--   Eine Übersicht zum Replikationsmonitor finden Sie unter [Überwachen der Replikation](../../relational-databases/replication/monitor/monitoring-replication-overview.md).  
+-   Eine Übersicht zum Replikationsmonitor finden Sie unter [Überwachen der Replikation](../../relational-databases/replication/monitor/monitoring-replication.md).  
   
 -   Der linke Bereich des Replikationsmonitors zeigt vor allem Verleger und Verlegergruppen an. Fügen Sie dem Replikationsmonitor einen oder mehrere Verleger hinzu, um Veröffentlichungs- und Abonnementinformationen anzuzeigen. Weitere Informationen finden Sie unter [Hinzufügen und Entfernen von Verlegern vom Replikationsmonitor aus](../../relational-databases/replication/monitor/add-and-remove-publishers-from-replication-monitor.md).  
   
@@ -32,15 +32,7 @@ ms.locfileid: "47639948"
   
     -   [Aktualisieren von Daten in Replikationsmonitor](../../relational-databases/replication/monitor/refresh-data-in-replication-monitor.md)  
   
-    -   [Anzeigen von Informationen und Ausführen von Aufgaben für einen Verleger &#40;Replikationsmonitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
-  
-    -   [Anzeigen von Informationen und Ausführen von Aufgaben für eine Veröffentlichung &#40;Replikationsmonitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)  
-  
-    -   [Anzeigen von Informationen und Ausführen von Aufgaben für die einer Veröffentlichung zugeordneten Agents &#40;Replikationsmonitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)  
-  
-    -   [Anzeigen von Informationen und Ausführen von Aufgaben für ein Abonnement &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
-  
-    -   [Anzeigen von Informationen und Ausführen von Aufgaben für die einem Abonnement zugeordneten Agents &#40;Replikationsmonitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)  
+    -   [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)    
   
     -   [Messen der Latenzzeit und Überprüfen der Verbindungen bei Transaktionsreplikationen](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
@@ -48,8 +40,8 @@ ms.locfileid: "47639948"
   
     -   [Zulassen, dass Nichtadministratoren den Replikationsmonitor verwenden](../../relational-databases/replication/monitor/allow-non-administrators-to-use-replication-monitor.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Starten des Replikationsmonitors](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Überwachen der Replikation](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Überwachen der Replikation](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

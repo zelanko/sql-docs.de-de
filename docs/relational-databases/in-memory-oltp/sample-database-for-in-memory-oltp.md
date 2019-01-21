@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d7adb7156a6f61ef76f62d1eeff9a4689208815
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: ddbafb58662497dc2ee9c513aa206d826d5db8c1
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712481"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226697"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Beispieldatenbank für In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "52712481"
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   Für Leistungstests benötigen Sie einen Server, dessen Kapazität ungefähr der eines Servers in Ihrer Produktionsumgebung entspricht. Für dieses spezielle Beispiel sollten SQL Server mindestens 16 GB Arbeitsspeicher zur Verfügung stehen. Allgemeine Richtlinien zur Hardware für In-Memory-OLTP finden Sie in folgendem Blogeintrag:[Aspekte zur Hardware für In-Memory-OLTP in SQL Server 2014](blog-hardware-in-memory-oltp.md).
+-   Für Leistungstests benötigen Sie einen Server, dessen Kapazität ungefähr der eines Servers in Ihrer Produktionsumgebung entspricht. Für dieses spezielle Beispiel sollten SQL Server mindestens 16 GB Arbeitsspeicher zur Verfügung stehen. Allgemeine Richtlinien zur Hardware für In-Memory-OLTP finden Sie in folgendem Blogbeitrag: [Aspekte zur Hardware für In-Memory-OLTP in SQL Server 2014](blog-hardware-in-memory-oltp.md).
 
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Installieren des auf AdventureWorks basierenden InMemory OLTP-Beispiels  
  Führen Sie die folgenden Schritte aus, um das Beispiel zu installieren:  
@@ -148,7 +148,7 @@ ms.locfileid: "52712481"
   
 -   *Berechnete Spalten* : Auf die berechneten Spalten SalesOrderNumber und TotalDue wurde verzichtet, da berechnete Spalten in speicheroptimierten Tabellen von [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] nicht unterstützt werden. In der neuen Sicht Sales.vSalesOrderHeader_extended_inmem sind die Spalten SalesOrderNumber und TotalDue enthalten. Falls diese Spalten benötigt werden, können Sie diese Sicht verwenden.  
 
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
 Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 werden in speicheroptimierten Tabellen und Indizes berechnete Spalten unterstützt.
 
   
@@ -215,7 +215,7 @@ Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 werden in spei
   
  Da in der exemplarischen Arbeitsauslastung nicht auf Sales.SpecialOfferProduct_inmem verwiesen wird, ist es nicht erforderlich, HASH-Indizes für die Tabelle zu verwenden, um die Arbeitsauslastung zu optimieren. Für (SpecialOfferID, ProductID) und (ProductID) werden NONCLUSTERED-Indizes verwendet.  
   
- Beachten Sie, dass einige der oben genannten Bucketanzahlen zu hoch angesetzt sind. Auf die Bucketanzahlen für die Indizes von SalesOrderHeader_inmem und SalesOrderDetail_inmem trifft dies jedoch nicht zu, da sie auf eine Anzahl von 10 Millionen Verkaufsaufträgen beschränkt sind. Auf diese Weise kann das Beispiel auch auf Systemen mit geringerer Arbeitsspeicherkapazität installiert werden. In diesen Fällen verursacht die exemplarische Arbeitsauslastung jedoch einen Fehler vom Typ "Nicht genügend Arbeitsspeicher". Wenn Sie einen Wert festlegen möchten, der 10 Millionen Verkaufsaufträge erheblich überschreitet, können Sie die Bucketanzahlen einfach entsprechend erhöhen.  
+ Beachten Sie, dass einige der oben genannten Bucketanzahlen zu hoch angesetzt sind. Auf die Bucketanzahlen für die Indizes von SalesOrderHeader_inmem und SalesOrderDetail_inmem trifft dies jedoch nicht zu, da sie auf eine Anzahl von 10 Millionen Verkaufsaufträgen beschränkt sind. Auf diese Weise kann das Beispiel auch auf Systemen mit geringerer Arbeitsspeicherkapazität installiert werden. In diesen Fällen verursacht die exemplarische Arbeitsauslastung jedoch einen Fehler vom Typ "Nicht genügend Arbeitsspeicher". Wenn Sie einen Wert festlegen möchten, der 10 Millionen Verkaufsaufträge erheblich überschreitet, können Sie die Bucketanzahlen einfach entsprechend erhöhen.  
   
 #### <a name="considerations-for-memory-utilization"></a>Überlegungen zur Arbeitsspeichernutzung  
  Die Arbeitsspeichernutzung der Beispieldatenbank vor und nach der Ausführung der exemplarischen Arbeitsauslastung wird im Abschnitt [Arbeitsspeichernutzung für speicheroptimierte Tabellen](#Memoryutilizationforthememory-optimizedtables)erörtert.  
@@ -313,7 +313,7 @@ Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 werden in spei
   
  Installationsschritte:  
   
-1.  Laden Sie die x64-Version des Installationspakets für die RML-Hilfsprogramme von folgender Seite herunter, und führen Sie das Paket aus: [Report Markup Language (RML) für SQL Server herunterladen](https://www.microsoft.com/en-us/download/details.aspx?id=4511).
+1.  Laden Sie die x64-Version des Installationspakets für die RML-Hilfsprogramme von folgender Seite herunter, und führen Sie das Paket aus: [Download Report Markup Language (RML) for SQL Server (Report Markup Language (RML) für SQL Server herunterladen)](https://www.microsoft.com/en-us/download/details.aspx?id=4511).
 
 2.  Falls Sie in einem Dialogfeld darauf hingewiesen werden, dass bestimmte Dateien gerade verwendet werden, klicken Sie auf „Weiter“.  
   
@@ -380,14 +380,14 @@ END
  Wir verwenden das OSTRESS-Tool, um die Skripts unter Verwendung mehrerer gleichzeitiger Verbindungen auszuführen. Dabei wird mit dem Parameter „-n“ gesteuert, wie viele Verbindungen verwendet werden, und mit dem Parameter „-r“, wie oft das Skript für jede Verbindung ausgeführt wird.  
   
 #### <a name="running-the-workload"></a>Ausführen der Arbeitsauslastung  
- Um das Verhalten in einem größeren Szenario zu testen, fügen wir unter Verwendung von 100 Verbindungen 10 Millionen Verkaufsaufträge ein. Bei einem einfach ausgestatteten Server (z. B. mit 8 physischen und 16 logischen Kernen) und SSD-Basisspeicher für das Protokoll liefert der Test zufriedenstellende Ergebnisse. Falls der Test mit Ihrer Hardware nicht gut abschneidet, sollten Sie sich im Abschnitt [Problembehandlung bei langsamer Testausführung](#Troubleshootingslow-runningtests) informieren. Wenn Sie das Belastungsniveau für diesen Test verringern möchten, reduzieren Sie die Anzahl der Verbindungen, indem Sie den Parameter „-n“ ändern. Um die Anzahl der Verbindungen z. B. auf 40 zu verringern, ändern Sie den Parameter „-n100“ in „-n40“.  
+ Um das Verhalten in einem größeren Szenario zu testen, fügen wir unter Verwendung von 100 Verbindungen 10 Millionen Verkaufsaufträge ein. Bei einem einfach ausgestatteten Server (z. B. mit 8 physischen und 16 logischen Kernen) und SSD-Basisspeicher für das Protokoll liefert der Test zufriedenstellende Ergebnisse. Falls der Test mit Ihrer Hardware nicht gut abschneidet, sollten Sie sich im Abschnitt [Problembehandlung bei langsamer Testausführung](#Troubleshootingslow-runningtests) informieren. Wenn Sie das Belastungsniveau für diesen Test verringern möchten, reduzieren Sie die Anzahl der Verbindungen, indem Sie den Parameter „-n“ ändern. Um die Anzahl der Verbindungen z. B. auf 40 zu verringern, ändern Sie den Parameter „-n100“ in „-n40“.  
   
  Als Leistungskennzahl für die Arbeitsauslastung wird die Zeitspanne verwendet, die von ostress.exe nach Ausführung der Arbeitsauslastung gemeldet wird.  
   
  Den unten angegebenen Anweisungen und Messungen liegt eine Arbeitsauslastung zugrunde, bei der 10 Millionen Verkaufsaufträge eingefügt werden. Eine Anleitung zum Ausführen einer herunterskalierten Arbeitsauslastung zum Einfügen von 1 Million Verkaufsaufträgen finden in der Datei „In-Memory OLTP\readme.txt“, die im Archiv „SQLServer2016CTP3Samples.zip“ enthalten ist.  
   
 ##### <a name="memory-optimized-tables"></a>Speicheroptimierte Tabellen  
- Zuerst führen wir die Arbeitsauslastung für speicheroptimierte Tabellen aus. Mit dem folgenden Befehl werden 100 Threads geöffnet, die jeweils für 5.000 Iterationen ausgeführt werden.  Pro Iteration werden 20 Verkaufsaufträge in getrennten Transaktionen eingefügt. Die 20 Einfügungen pro Iteration sind darauf zurückzuführen, dass die einzufügenden Daten unter Verwendung der Datenbank generiert werden. Daraus ergeben sich insgesamt 20 · 5.000 \* 100 = 10.000.000 eingefügte Verkaufsaufträge.  
+ Zuerst führen wir die Arbeitsauslastung für speicheroptimierte Tabellen aus. Mit dem folgenden Befehl werden 100 Threads geöffnet, die jeweils für 5.000 Iterationen ausgeführt werden.  Pro Iteration werden 20 Verkaufsaufträge in getrennten Transaktionen eingefügt. Die 20 Einfügungen pro Iteration sind darauf zurückzuführen, dass die einzufügenden Daten unter Verwendung der Datenbank generiert werden. Daraus ergeben sich insgesamt 20 \* 5.000 \* 100 = 10.000.000 eingefügte Verkaufsaufträge.  
   
  Öffnen Sie die RML-Eingabeaufforderung, und führen Sie folgenden Befehl aus:  
   
@@ -496,7 +496,7 @@ WHERE t.type='U'
 |SalesOrderHeader_inmem|7168|147456|  
 |Product_inmem|124|12352|  
   
- Sie erkennen, dass die Tabellen relativ klein sind: SalesOrderHeader_inmem umfasst ca. 7 MB und SalesOrderDetail_inmem ca. 15 MB.  
+ Sie erkennen, dass die Tabellen relativ klein sind: SalesOrderHeader_inmem umfasst ca. 7 MB und SalesOrderDetail_inmem ca. 15 MB.  
   
  Hier fällt auf, dass die den Indizes zugeordnete Arbeitsspeicherkapazität deutlich über der Kapazität der Tabellendaten liegt. Dies liegt daran, dass die Datengröße für die Hashindizes im Beispiel vorab auf einen höheren Wert festgelegt wurde. Da Hashindizes über eine feste Größe verfügen, wachsen sie nicht mit der Größe der Daten in der Tabelle mit.  
   
@@ -769,7 +769,7 @@ ORDER BY state, file_type
   
  In diesem Fall gibt es zwei Prüfpunktdateipaare mit dem Status „under construction“. Das legt die Vermutung nahe, dass aufgrund des hohen Parallelitätsgrads der Arbeitsauslastung mehrere Dateipaare in den Status „under construction“ versetzt wurden. Mehrere gleichzeitige Threads erforderten also zur selben Zeit ein neues Dateipaar, wodurch sich der Status eines Paares von „precreated“ in „under construction“ geändert hat.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

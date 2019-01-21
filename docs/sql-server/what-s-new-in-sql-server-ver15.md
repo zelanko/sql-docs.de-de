@@ -1,6 +1,6 @@
 ---
 title: Neuigkeiten zu SQL Server 2019 | Microsoft-Dokumentation
-ms.date: 12/07/2018
+ms.date: 01/09/2019
 ms.prod: sql-server-2018
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,16 +9,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0d36e43d4015d0edf2271ee86ea0d2f7a761ce8d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e0a5dab4eeccc5c4e31a151ec9611d7ed8367a78
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207779"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300177"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Neuigkeiten zu SQL Server 2019
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+  > [!div class="nextstepaction"]
+  > [Senden Sie uns Ihr Feedback zum Inhaltsverzeichnis der SQL-Dokumentation!](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] ist eine Erweiterung der SQL Server-Plattform basierend auf früheren Releases, die Ihnen eine große Auswahl an Entwicklungssprachen, Datentypen und Betriebssystemen sowie die Arbeit mit einer lokalen Umgebung oder der Cloud bietet. Dieser Artikel beschreibt die Neuigkeiten zu SQL Server 2019. Weitere Informationen und bekannte Probleme finden Sie unter [SQL Server 2019 (Vorschau) – Anmerkungen zu dieser Version](sql-server-ver15-release-notes.md).
 
@@ -39,7 +42,7 @@ Community Technology Preview (CTP) 2.2 ist das neueste öffentliche Release von 
 
 ## <a name="previous-ctps"></a>Vorherige CTPs
 
-Frühere CTP-Releases haben für [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] die folgenden Features hinzugefügt oder sie verbessert.
+In früheren CTP-Releases wurden für [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] folgende Features hinzugefügt oder verbessert.
 
 - [Big Data-Cluster](#bigdatacluster) 
   - Bereitstellen eines Big Data-Clusters mit SQL und Spark-Linux-Containern in Kubernetes (CTP 2.0)

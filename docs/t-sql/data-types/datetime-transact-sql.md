@@ -23,18 +23,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e75c6040a74f58ae0c6fb8e340a61a8a90332de
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 6485ebf0eea1565a13e53a0aa7746a724352c35e
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970671"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300197"
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Unterstützen Sie uns bei der Verbesserung der Dokumentation für SQL Server.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Senden Sie uns Ihr Feedback zum Inhaltsverzeichnis der SQL-Dokumentation!](https://aka.ms/sqldocsurvey)
 
 Definiert ein Datum, das mit einer Uhrzeit mit Sekundenbruchteilen kombiniert ist und auf dem 24-Stunden-Format basiert.
   
@@ -57,9 +57,9 @@ Definiert ein Datum, das mit einer Uhrzeit mit Sekundenbruchteilen kombiniert is
 |Genauigkeit|Gerundet in Inkrementen von 0,000, 0,003 oder 0,007 Sekunden|  
 |Standardwert|1900-01-01 00:00:00|  
 |Kalender|Gregorianisch (schließt nicht den vollständigen Bereich von Jahren ein)|  
-|Benutzerdefinierte Genauigkeit in Sekundenbruchteilen|nein|  
-|Beachtung und Beibehaltung des Zeitzonenoffsets|nein|  
-|Beachtung der Sommerzeit|nein|  
+|Benutzerdefinierte Genauigkeit in Sekundenbruchteilen|Nein|  
+|Beachtung und Beibehaltung des Zeitzonenoffsets|Nein|  
+|Beachtung der Sommerzeit|Nein|  
   
 ## <a name="supported-string-literal-formats-for-datetime"></a>Unterstützte Formate der Zeichenfolgenliterale für datetime  
 In den folgenden Tabellen werden die unterstützten Formate für Zeichenfolgenliterale für **datetime** aufgelistet. Außer bei ODBC stehen **datetime**-Zeichenfolgenliterale in einfachen Anführungszeichen ('), z.B. 'string_literaL'. Wenn die Umgebung nicht **us_english** lautet, sollten die Zeichenfolgenliterale das Format N'string_literaL' aufweisen.

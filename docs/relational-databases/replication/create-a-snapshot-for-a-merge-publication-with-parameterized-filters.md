@@ -1,7 +1,7 @@
 ---
 title: Erstellen Sie eine Momentaufnahme für eine Mergeveröffentlichung mit parametrisierten Filtern | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/03/2016
+ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,40 +15,50 @@ ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 71d7e79a0e941b5f080b033469700e19eaa3241e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 14255fde1f8d0d165e1071f95c737f60aacf5058
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666093"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131430"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Erstellen einer Momentaufnahme für eine Mergeveröffentlichung mit parametrisierten Filtern
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  In diesem Thema wird beschrieben, wie eine Momentaufnahme für eine Mergeveröffentlichung mit parametrisierten Filtern in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) erstellt wird.  
+In diesem Thema wird beschrieben, wie eine Momentaufnahme für eine Mergeveröffentlichung mit parametrisierten Filtern in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) erstellt wird.  
+
+Wenn parametrisierte Zeilenfilter in Mergeveröffentlichungen verwendet werden, wird jedes Abonnement bei der Replikation mit einer zweiteiligen Momentaufnahme initialisiert. Zuerst wird eine Schemamomentaufnahme erstellt, die alle von der Replikation benötigten Objekte und das Schema der veröffentlichten Objekte enthält, nicht jedoch die Daten. Jedes Abonnement wird dann mit einer Momentaufnahme initialisiert, die die Objekte und das Schema aus der Schemamomentaufnahme sowie die Daten enthält, die zur Partition des Abonnements gehören. Wenn mehrere Abonnements eine bestimmte Partition erhalten (anders ausgedrückt, sie erhalten dasselbe Schema und dieselben Daten), wird die Momentaufnahme für diese Partition nur einmal erstellt. Mehrere Abonnements werden mit derselben Momentaufnahme initialisiert. Weitere Informationen zu parametrisierten Zeilenfiltern finden Sie unter [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
- **In diesem Thema**  
+ Es gibt drei Methoden zum Erstellen von Momentaufnahmen für Veröffentlichungen mit parametrisierten Filtern:  
   
--   **Vorbereitungen:**  
+-   **Vorabgenerieren von Momentaufnahmen für jede Partition.** Bei dieser Methode können Sie steuern, wann Momentaufnahmen generiert werden.    
+     Sie haben auch die Möglichkeit, die Momentaufnahmen nach einem Zeitplan zu aktualisieren. Wenn neue Abonnenten eine Partition abonnieren, für die eine Momentaufnahme erstellt wurde, erhalten sie eine aktuelle Momentaufnahme.   
+-   **Abonnenten das Anfordern der Momentaufnahmegenerierung** und -anwendung beim erstmaligen Synchronisieren ermöglichen. Bei dieser Methode können neue Abonnenten Synchronisierungen ohne Administratoreingriff ausführen (der[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent muss auf dem Verleger ausgeführt werden, damit die Momentaufnahme generiert werden kann).  
   
-     [Empfehlungen](#Recommendations)  
+    > [!NOTE]  
+    >  Wenn das Filtern nach einem oder mehreren Artikeln in der Veröffentlichung nicht überlappende Partitionen ergibt, die für jedes Abonnement eindeutig sind, wird für Metadaten bei jedem Ausführen des Merge-Agents einen Cleanup ausgeführt. Das bedeutet, dass die partitionierte Momentaufnahme schneller abläuft. Bei dieser Methode sollten Sie zulassen, dass Abonnenten das Generieren und Übermitteln von Momentaufnahmen einleiten. Weitere Informationen zu den Filteroptionen finden Sie unter [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
--   **So erstellen Sie eine Momentaufnahme für eine Mergeveröffentlichung unter Verwendung von parametrisierten Filtern mit:**  
+-   **Manuelles Generieren einer Momentaufnahme für jeden Abonnenten mit dem Momentaufnahme-Agent.** Der Abonnent muss dann einen Momentaufnahmespeicherort für den Merge-Agent bereitstellen, damit die richtige Momentaufnahme abgerufen und angewendet werden kann.  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+    > [!NOTE]  
+    >  Diese Methode wird aus Gründen der Abwärtskompatibilität unterstützt, lässt jedoch keine FTP-Momentaufnahmefreigaben zu.  
   
-     [Transact-SQL](#TsqlProcedure)  
+ Die flexibelste Vorgehensweise besteht in einer Kombination der Methoden der Vorabgenerierung und der vom Abonnenten angeforderten Momentaufnahmen: Momentaufnahmen werden vorab generiert und auf der Basis eines Terminplans (normalerweise nicht während Spitzenzeiten) aktualisiert. Falls jedoch ein Abonnement erstellt wird, das eine neue Partition erfordert, kann ein Abonnent eigene Momentaufnahmen generieren.  
   
-     [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
+ Beispiel: Die Außendienstmitarbeiter von [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]liefern Waren an einzelne Geschäfte aus. Jeder Vertriebsmitarbeiter erhält basierend auf seiner Anmeldung ein Abonnement, das die Daten für das vom jeweiligen Mitarbeiter bediente Geschäft abruft. Der Administrator generiert die Momentaufnahmen vorab und aktualisiert sie jeden Sonntag. Gelegentlich wird dem System ein neuer Benutzer hinzugefügt, der Daten für eine Partition benötigt, für die noch keine Momentaufnahme verfügbar ist. Um zu verhindern, dass ein Abonnent die Veröffentlichung nicht abonnieren kann, weil noch keine Momentaufnahme verfügbar ist, lässt der Administrator vom Abonnenten angeforderte Momentaufnahmen zu. Wenn der neue Abonnent erstmalig eine Verbindung herstellt, wird die Momentaufnahme für die angegebene Partition generiert und auf dem Abonnenten angewendet (der[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent muss auf dem Verleger ausgeführt werden, damit die Momentaufnahme generiert werden kann).  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+ Informationen zum Erstellen einer Momentaufnahme für eine Veröffentlichung mit parametrisierten Filtern finden Sie unter [Erstellen einer Momentaufnahme für eine Mergeveröffentlichung mit parametrisierten Filtern](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
-###  <a name="Recommendations"></a> Empfehlungen  
+## <a name="security-settings-for-the-snapshot-agent"></a>Sicherheitseinstellungen für den Momentaufnahme-Agent  
+ Der Momentaufnahme-Agent erstellt für jede Partition Momentaufnahmen. Der Agent wird für vorab generierte Momentaufnahmen und Momentaufnahmen ausgeführt, die vom Abonnenten angefordert werden. Er stellt Verbindungen mit den Anmeldeinformationen her, die beim Erstellen des Auftrags des Momentaufnahme-Agents für die Veröffentlichung angegeben wurden (der Auftrag wird vom Assistenten für neue Veröffentlichung oder von **sp_addpublication_snapshot**erstellt.) Verwenden Sie **sp_changedynamicsnapshot_job**zum Ändern der Anmeldeinformationen. Weitere Informationen finden Sie unter [sp_changedynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md).  
+
+  
+##  <a name="Recommendations"></a> Empfehlungen  
   
 -   Zur Erstellung einer Momentaufnahme für eine Mergeveröffentlichung mit parametrisierten Filtern müssen Sie zunächst eine Standardmomentaufnahme (Schemamomentaufnahme) erstellen, die alle veröffentlichten Daten und die Abonnentenmetadaten für das Abonnement enthält. Weitere Informationen finden Sie unter [Erstellen und Anwenden der Anfangsmomentaufnahme](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md). Nachdem Sie die Schemamomentaufnahme erstellt haben, können Sie den Teil der Momentaufnahme generieren, der die abonnentenspezifische Partition der veröffentlichten Daten enthält.  
   
--   Wenn das Filtern nach einem oder mehreren Artikeln in der Veröffentlichung nicht überlappende Partitionen ergibt, die für jedes Abonnement eindeutig sind, wird für Metadaten bei jedem Ausführen des Merge-Agents einen Cleanup ausgeführt. Das bedeutet, dass die partitionierte Momentaufnahme schneller abläuft. Bei dieser Methode sollten Sie zulassen, dass Abonnenten das Generieren und Übermitteln von Momentaufnahmen einleiten. Weitere Informationen zu Filteroptionen finden Sie im Abschnitt „Festlegen von ‚Partitionsoptionen‘“ von [Momentaufnahmen für Mergeveröffentlichungen mit parametrisierten Filtern](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+-   Wenn das Filtern nach einem oder mehreren Artikeln in der Veröffentlichung nicht überlappende Partitionen ergibt, die für jedes Abonnement eindeutig sind, wird für Metadaten bei jedem Ausführen des Merge-Agents einen Cleanup ausgeführt. Das bedeutet, dass die partitionierte Momentaufnahme schneller abläuft. Bei dieser Methode sollten Sie zulassen, dass Abonnenten das Generieren und Übermitteln von Momentaufnahmen einleiten. 
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
  Sie können Momentaufnahmen für Partitionen im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** auf der Seite **Datenpartitionen** generieren. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md). Sie können zulassen, dass Abonnenten die Momentaufnahmegenerierung und -übermittlung starten bzw. Momentaufnahmen generieren.  
   
  Vor der Generierung von Momentaufnahmen für eine oder mehrere Partitionen müssen Sie folgende Aktionen ausführen:  
@@ -118,7 +128,7 @@ ms.locfileid: "51666093"
 2.  Führen Sie auf dem Verleger [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) aus. Geben Sie den in Schritt 1 verwendeten Veröffentlichungsnamen für **@publication** und die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldeinformationen, unter denen der [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md) ausgeführt wird, für **@job_login** und **@password**. Wenn der Agent zum Herstellen der Verbindung mit dem Verleger die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwendet, müssen Sie zudem den Wert **0** für **@publisher_security_mode** und die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen für **@publisher_login** und **@publisher_password**. Dadurch wird ein Auftrag des Momentaufnahme-Agents für die Veröffentlichung erstellt. Weitere Informationen darüber, wie eine Anfangsmomentaufnahme generiert und ein benutzerdefinierter Zeitplan für den Momentaufnahme-Agent definiert wird, finden Sie unter [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
     > [!IMPORTANT]  
-    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp;#40;SQL Server-Konfigurations-Manager&amp;#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 3.  Führen Sie [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) aus, um der Veröffentlichung Artikel hinzuzufügen. Diese gespeicherte Prozedur muss einmal für jeden Artikel in der Veröffentlichung ausgeführt werden. Wenn Sie parametrisierte Filter verwenden, müssen Sie mithilfe des Parameters **@subset_filterclause** einen parametrisierten Filter für einen oder mehrere Artikel angeben. Weitere Informationen finden Sie unter [Definieren und Ändern eines parametrisierten Zeilenfilters für einen Mergeartikel](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
@@ -133,7 +143,7 @@ ms.locfileid: "51666093"
 2.  Führen Sie auf dem Verleger [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) aus. Geben Sie den in Schritt 1 verwendeten Veröffentlichungsnamen für **@publication** und die Windows-Anmeldeinformationen, unter denen der Momentaufnahme-Agent ausgeführt wird, für **@job_login** und **@password**. Wenn der Agent zum Herstellen der Verbindung mit dem Verleger die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwendet, müssen Sie zudem den Wert **0** für **@publisher_security_mode** und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen für **@publisher_login** und **@publisher_password**. Dadurch wird ein Auftrag des Momentaufnahme-Agents für die Veröffentlichung erstellt. Weitere Informationen darüber, wie eine Anfangsmomentaufnahme generiert und ein benutzerdefinierter Zeitplan für den Momentaufnahme-Agent definiert wird, finden Sie unter [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
     > [!IMPORTANT]  
-    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp;#40;SQL Server-Konfigurations-Manager&amp;#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 3.  Führen Sie [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) aus, um der Veröffentlichung Artikel hinzuzufügen. Diese gespeicherte Prozedur muss einmal für jeden Artikel in der Veröffentlichung ausgeführt werden. Wenn Sie parametrisierte Filter verwenden, müssen Sie mithilfe des Parameters **@subset_filterclause** einen parametrisierten Filter für einen oder mehrere Artikel angeben. Weitere Informationen finden Sie unter [Definieren und Ändern eines parametrisierten Zeilenfilters für einen Mergeartikel](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
@@ -165,7 +175,7 @@ ms.locfileid: "51666093"
 2.  Führen Sie auf dem Verleger [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) aus. Geben Sie den in Schritt 1 verwendeten Veröffentlichungsnamen für **@publication** und die Windows-Anmeldeinformationen, unter denen der Momentaufnahme-Agent ausgeführt wird, für **@job_login** und **@password**. Wenn der Agent zum Herstellen der Verbindung mit dem Verleger die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwendet, müssen Sie zudem den Wert **0** für **@publisher_security_mode** und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen für **@publisher_login** und **@publisher_password**. Dadurch wird ein Auftrag des Momentaufnahme-Agents für die Veröffentlichung erstellt. Weitere Informationen darüber, wie eine Anfangsmomentaufnahme generiert und ein benutzerdefinierter Zeitplan für den Momentaufnahme-Agent definiert wird, finden Sie unter [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
     > [!IMPORTANT]  
-    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp;#40;SQL Server-Konfigurations-Manager&amp;#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 3.  Führen Sie [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) aus, um der Veröffentlichung Artikel hinzuzufügen. Diese gespeicherte Prozedur muss einmal für jeden Artikel in der Veröffentlichung ausgeführt werden. Wenn Sie parametrisierte Filter verwenden, müssen Sie mithilfe des Parameters **@subset_filterclause** einen parametrisierten Filter für einen oder mehrere Artikel angeben. Weitere Informationen finden Sie unter [Definieren und Ändern eines parametrisierten Zeilenfilters für einen Mergeartikel](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
@@ -413,7 +423,6 @@ PAUSE
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Momentaufnahmen für eine Mergeveröffentlichung mit parametrisierten Filtern](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)   
  [Bewährte Methoden für die Replikationssicherheit](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Transact-SQL restore sequence
 - file restores [SQL Server], Transact-SQL restore sequence
 ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
-author: MikeRayMSFT
-ms.author: mikeray
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2817ce0133db51ae5b4cd8ed4d7a81db81074fc2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85cd45abfbc434ce02d5000d48ed5dacd48ad208
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639938"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242121"
 ---
 # <a name="file-restores-full-recovery-model"></a>Dateiwiederherstellungen (vollständiges Wiederherstellungsmodell)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "47639938"
      Informationen zur Unterstützung von Onlinewiederherstellungen von Seiten und Dateien finden Sie unter [Editionen und unterstützte Funktionen für SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Weitere Informationen zur Onlinewiederherstellung finden Sie unter [Onlinewiederherstellung(SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md).
   
     > [!TIP]  
-    >  Wenn Sie die Datenbank für eine Dateiwiederherstellung offline schalten möchten, tun Sie dies vor dem Starten der Wiederherstellungssequenz, indem Sie die folgende [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) -Anweisung ausführen: ALTER DATABASE *Datenbankname* SET OFFLINE.  
+    >  Wenn Sie möchten, dass die Datenbank für eine Dateiwiederherstellung offline ist, können Sie die Datenbank vor dem Starten der Wiederherstellungssequenz offline schalten, indem Sie die folgende [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md)-Anweisung ausführen: ALTER DATABASE *Datenbankname* SET OFFLINE  
   
   
 ##  <a name="Overview"></a> Wiederherstellen von beschädigten Dateien aus Dateisicherungen  
@@ -132,8 +132,8 @@ RESTORE LOG database_name FROM <tail_log_backup>
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A> (SMO)  
   
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Sicherung und Wiederherstellung: Interoperabilität und Koexistenz &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Sicherung und Wiederherstellung: Interoperabilität und gleichzeitige Verwendung &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Differenzielle Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [Vollständige Dateisicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)   
  [Übersicht über Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   

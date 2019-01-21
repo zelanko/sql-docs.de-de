@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc09bcca6e70d80e256cba8cd8a1ad6a477a4742
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9f967453ff629a7827d47b25085edd4aa304b1aa
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545542"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130720"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Tutorial: Konfigurieren der Replikation zwischen einem Server und mobilen Clients (Mergereplikation)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ In diesem Tutorial lernen Sie Folgendes:
 > * Synchronisieren des Abonnements für die Mergeveröffentlichung
   
 ## <a name="prerequisites"></a>Voraussetzungen  
-Dieses Tutorial richtet sich an Benutzer, die mit grundlegenden Datenbankvorgängen vertraut sind, aber nur über begrenzte Kenntnisse in Bezug auf die Replikation verfügen. Bevor Sie mit diesem Tutorial beginnen, müssen Sie die Schritte unter [Tutorial: Vorbereiten von SQL Server auf die Replikation](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md) durchführen.  
+Dieses Tutorial richtet sich an Benutzer, die mit grundlegenden Datenbankvorgängen vertraut sind, aber nur über begrenzte Kenntnisse in Bezug auf die Replikation verfügen. Bevor Sie dieses Tutorial starten, sollten Sie Folgendes abgeschlossen haben: [Tutorial: Vorbereiten von SQL Server auf die Replikation](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
   
 Für dieses Tutorial benötigen Sie SQL Server, SQL Server Management Studio (SSMS) und eine AdventureWorks-Datenbank: 
   
@@ -58,7 +58,7 @@ Für dieses Tutorial benötigen Sie SQL Server, SQL Server Management Studio (SS
 > - Sie müssen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Verbindung mit dem Verleger und dem Abonnenten herstellen. Dazu verwenden Sie einen Anmeldenamen eines Mitglieds der festen Serverrolle **sysadmin** ist. Weitere Informationen zu dieser Rolle finden Sie unter [Rollen auf Serverebene](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).  
   
   
-**Geschätzte Dauer dieses Tutorials: 60 Minuten**  
+**Ungefähre Dauer dieses Tutorials: 60 Minuten**  
   
 ## <a name="configure-a-publisher-for-merge-replication"></a>Konfigurieren eines Verlegers für die Mergereplikation
 In diesem Abschnitt erfahren Sie, wie Sie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Mergeveröffentlichung erstellen, um eine Teilmenge der Tabellen **Employee**, **SalesOrderHeader** und **SalesOrderDetail** in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Beispieldatenbank zu veröffentlichen. Diese Tabellen werden mit parametrisierten Zeilenfiltern gefiltert, sodass in den einzelnen Abonnements jeweils eine eindeutige Teilmenge der Daten enthalten ist. Außerdem fügen Sie der Veröffentlichungszugriffsliste (Publication Access List, PAL) die vom Merge-Agent verwendete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung hinzu.  
@@ -251,7 +251,7 @@ In diesem Abschnitt erfahren Sie, wie Sie der zuvor erstellten Mergeveröffentli
 Weitere Informationen finden Sie in den folgenden Themen:  
 - [Abonnieren von Veröffentlichungen](../../relational-databases/replication/subscribe-to-publications.md)  
 - [Erstellen eines Pullabonnements](../../relational-databases/replication/create-a-pull-subscription.md)  
-- [Momentaufnahmen für Mergeveröffentlichungen mit parametrisierten Filtern](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
+- [Momentaufnahmen für Mergeveröffentlichungen mit parametrisierten Filtern](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
 
 ## <a name="synchronize-the-subscription-to-the-merge-publication"></a>Synchronisieren des Abonnements für die Mergeveröffentlichung
 

@@ -18,12 +18,12 @@ ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 083a4ccb00c834fba4f250aa1a2063b76ad9bd86
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f8e1433d9157aed6a933d5117417be1a4fcc1c79
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407627"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133745"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>Ausführen der Geschäftslogik während der Mergesynchronisierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52407627"
   
 -   In der API-Referenz (Application Programming Interface, Schnittstelle für Anwendungsprogrammierung): <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
   
--   Anweisungen zum Implementieren eines Geschäftslogikhandlers: [Implementieren eines Geschäftslogikhandlers für einen Mergeartikel](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
+-   In den Anweisungen zum Implementieren eines Geschäftslogikhandlers: [Implementieren eines Geschäftslogikhandlers für einen Mergeartikel](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
 ## <a name="uses-for-business-logic-handlers"></a>Verwendungsmöglichkeiten für Geschäftslogikhandler  
  Bei der Mergesynchronisierung können Geschäftslogikhandler für folgende Zwecke aufgerufen werden:  
@@ -50,7 +50,7 @@ ms.locfileid: "52407627"
   
 -   Daten ablehnen  
   
-     Das ist bei Anwendungen nützlich, bei denen keine Änderungen von einem oder an einen bestimmten Abonnenten weitergegeben werden sollen. Ein Administrator kann z.B. Einfügungen herausfiltern, die nicht in die Partition des Abonnenten gehören, oder Löschungen ablehnen, die auf einem Abonnenten ausgeführt werden. Ein weiteres Beispiel ist eine Anwendung, die eine Bestellung ablehnt, die auf einem Abonnenten eingegeben wird, weil der Bestand nicht mehr verfügbar ist.  
+     Das ist bei Anwendungen nützlich, bei denen keine Änderungen von einem oder an einen bestimmten Abonnenten weitergegeben werden sollen. Ein Administrator kann z. B. Einfügungen herausfiltern, die nicht in die Partition des Abonnenten gehören, oder Löschungen ablehnen, die auf einem Abonnenten ausgeführt werden. Ein weiteres Beispiel ist eine Anwendung, die eine Bestellung ablehnt, die auf einem Abonnenten eingegeben wird, weil der Bestand nicht mehr verfügbar ist.  
   
 -   Daten annehmen  
   
@@ -91,7 +91,7 @@ ms.locfileid: "52407627"
   
 -   Ein IIS-Server (Internetinformationsdienste), wenn die Websynchronisierung verwendet wird. Verwenden Sie ein mit der Websynchronisierung synchronisiertes Pullabonnement. Der Geschäftslogikhandler wird dann auf dem IIS-Server ausgeführt.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Mergereplikation](../../../relational-databases/replication/merge/merge-replication.md)   
  [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)   
  [Synchronisieren von Daten](../../../relational-databases/replication/synchronize-data.md)   

@@ -13,12 +13,12 @@ ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8fbef18dc28786fc6455af68e09c788a3f0e2db1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7488391716a4ebc094bd6e783b591252bd24590f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748748"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125855"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Überlegungen zum Entwurf und Einschränkungen für Oracle-Verleger
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -137,7 +137,7 @@ ms.locfileid: "47748748"
   
 -   Abonnenten von Oracle-Veröffentlichungen können nicht automatisch von einer Sicherung initialisiert werden.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt zwei Überprüfungstypen: binär und Zeilenanzahl. Oracle-Verleger unterstützen die Zeilenanzahlüberprüfung. Weitere Informationen finden Sie unter [Überprüfen von replizierten Daten](../../../relational-databases/replication/validate-replicated-data.md).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt zwei Überprüfungstypen: binär und Zeilenanzahl. Oracle-Verleger unterstützen die Zeilenanzahlüberprüfung. Weitere Informationen finden Sie unter [Überprüfen von replizierten Daten](../../../relational-databases/replication/validate-data-at-the-subscriber.md).  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt zwei Momentaufnahmeformate bereit: systemeigener BCP-Modus und Zeichenmodus. Oracle-Verleger unterstützen Momentaufnahmen im Zeichenmodus.  
   
@@ -165,9 +165,9 @@ ms.locfileid: "47748748"
   
     -   Sie können den **@job_login**-Parameter nicht über [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) oder [sp_changelogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md) angeben, das Kennwort kann jedoch geändert werden.  
   
- Weitere Informationen zur Replikationssicherheit finden Sie unter [Sicherheit und Schutz &#40;Replikation&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md).  
+ Weitere Informationen zur Replikationssicherheit finden Sie unter [Anzeigen und Ändern von Replikationssicherheitseinstellungen](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Überlegungen zu administrativen Aufgaben bei Oracle-Verlegern](../../../relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md)   
  [Konfigurieren eines Oracle-Verlegers](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Veröffentlichungen mit Oracle (Übersicht)](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  

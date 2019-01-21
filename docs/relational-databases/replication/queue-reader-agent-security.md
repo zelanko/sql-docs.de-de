@@ -15,12 +15,12 @@ ms.assetid: 77938da0-2afd-4455-8826-f4a6a9440cb3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a2129289ae91688527156772c43d093851f52190
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d37032b9c13d9447ba5879e5e29bd91256c75398
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754379"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133436"
 ---
 # <a name="queue-reader-agent-security"></a>Sicherheit für den Warteschlangenlese-Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,17 +28,17 @@ ms.locfileid: "47754379"
   
  Das Konto muss für das angegebene Kennwort gültig sein. Konten und Kennwörter werden erst bei der Ausführung eines Agents überprüft.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Prozesskonto**  
  Geben Sie das Windows-Konto ein, unter dem der Warteschlangenlese-Agent auf dem Verteiler ausgeführt wird. Das angegebene Windows-Konto muss mindestens ein Mitglied der festen Datenbankrolle **db_owner** in der Verteilungsdatenbank sein.  
   
  **Kennwort** und **Kennwort bestätigen**  
  In diese Felder geben Sie das Kennwort für das Windows-Konto ein.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Verwalten von Anmeldeinformationen und Kennwörtern bei der Replikation](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Identität und Zugriffssteuerung (Replikation)](../../relational-databases/replication/security/identity-and-access-control-replication.md)   
  [Sicherheitsmodell des Replikations-Agents](../../relational-databases/replication/security/replication-agent-security-model.md)   
  [Replikations-Agents (Übersicht)](../../relational-databases/replication/agents/replication-agents-overview.md)   
- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [Bewährte Methoden für die Replikationssicherheit](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

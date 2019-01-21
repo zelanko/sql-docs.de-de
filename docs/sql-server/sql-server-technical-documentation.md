@@ -21,18 +21,18 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6da677a558c2af47d49fa7c8f957604ab7fc1b78
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 3ed5059f50c45e3bcac5d3e17ce1fd09d2fb4fa8
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698839"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300457"
 ---
 # <a name="sql-server-documentation"></a>SQL Server-Dokumentation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [Unterstützen Sie uns bei der Verbesserung der Dokumentation für SQL Server.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Senden Sie uns Ihr Feedback zum Inhaltsverzeichnis der SQL-Dokumentation!](https://aka.ms/sqldocsurvey)
 
 ::: moniker range=">= sql-server-linux-2017 || >= sql-server-2017  || = sqlallproducts-allversions"
 SQL Server ist ein zentraler Bestandteil der Microsoft-Datenplattform. SQL Server ist ein im Bereich Betriebsdatenbank-Management (Operational Database Management System, ODBMS) branchenführendes Produkt. In dieser Dokumentation finden Sie Hilfe zur Installation, Konfiguration und Verwendung von SQL Server unter Windows und Linux. Die Inhalte umfassen End-to-End-Beispiele, Codebeispiele und Videos. Informationen zu SQL Server-Sprachthemen finden Sie in der [Sprachreferenz](../t-sql/language-reference.md).
@@ -53,7 +53,7 @@ SQL Server ist ein zentraler Bestandteil der Microsoft-Datenplattform. SQL Serve
 |[Neues in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [Versionsanmerkungen zu SQL Server 2017](../sql-server/sql-server-2017-release-notes.md)        |
 |[Neues in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [Versionsanmerkungen zu SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)        |
 
-![info_tip](../sql-server/media/info-tip.png) Die gesamte SQL Server **2014**-Dokumentation ist [hier](https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014) verfügbar.
+![info_tip](../sql-server/media/info-tip.png) Die gesamte SQL Server** 2014**-Dokumentation ist [hier](https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014) verfügbar.
 ::: moniker-end
 
 ::: moniker range="= sql-server-ver15"

@@ -18,23 +18,23 @@ ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9616a482a220c1c15813fc548ad959dccf46e10
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 64341fd261cb1c1e419b925049cf86403a64ab3e
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703098"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299597"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [Unterstützen Sie uns bei der Verbesserung der Dokumentation für SQL Server.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Senden Sie uns Ihr Feedback zum Inhaltsverzeichnis der SQL-Dokumentation!](https://aka.ms/sqldocsurvey)
 
 
 Gibt einen mit dem angegebenen Format und der optionalen Kultur in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] formatierten Wert zurück. Verwenden Sie die FORMAT-Funktion für die gebietsschemabasierte Formatierung von Datums-/Uhrzeitwerten sowie numerischen Werten als Zeichenfolgen. Für allgemeine Datentypkonvertierungen verwenden Sie CAST oder CONVERT.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -76,15 +76,15 @@ FORMAT ( value, format [, culture ] )
   
 |Kategorie|Typ|.NET-Typ|  
 |--------------|----------|---------------|  
-|Numerisch|bigint|Int64|  
+|Numerisch|BIGINT|Int64|  
 |Numerisch|ssNoversion|Int32|  
 |Numerisch|SMALLINT|Int16|  
 |Numerisch|TINYINT|Byte|  
-|Numerisch|decimal|SqlDecimal|  
+|Numerisch|Decimal|SqlDecimal|  
 |Numerisch|Numerisch|SqlDecimal|  
 |Numerisch|FLOAT|Double|  
 |Numerisch|REAL|Single|  
-|Numerisch|smallmoney|Decimal|  
+|Numerisch|SMALLMONEY|Decimal|  
 |Numerisch|money|decimal|  
 |Datum und Uhrzeit|date|datetime|  
 |Datum und Uhrzeit|Uhrzeit|TimeSpan|  
@@ -211,7 +211,7 @@ SELECT FORMAT(cast('07:35' as time), N'hh\.mm');  --> returns 07.35
 SELECT FORMAT(cast('07:35' as time), N'hh\:mm');  --> returns 07:35  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
  [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
  [String Functions &#40;Transact-SQL&#41; (Zeichenfolgenfunktionen &#40;Transact-SQL&#41;)](../../t-sql/functions/string-functions-transact-sql.md)   

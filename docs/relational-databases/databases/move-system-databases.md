@@ -28,12 +28,12 @@ ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb3ae1a8437ddf73b371f317d6a9c85f200cff8c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0995346ac3c740efb6779f69e29003abf625a81e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531484"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136120"
 ---
 # <a name="move-system-databases"></a>Verschieben von Systemdatenbanken
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,11 +66,11 @@ ms.locfileid: "52531484"
     ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
     ```  
   
-2.  Beenden Sie die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , oder fahren Sie das System für die Wartungsarbeiten herunter. Weitere Informationen finden Sie unter [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+2.  Beenden Sie die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , oder fahren Sie das System für die Wartungsarbeiten herunter. Weitere Informationen finden Sie unter [Starten, Beenden, Anhalten, Fortsetzen und Neustarten von SQL Server-Diensten](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  Verschieben Sie die Datei(en) an den neuen Speicherort.  
 
-4.  Starten Sie die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder den Server neu. Weitere Informationen finden Sie unter [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+4.  Starten Sie die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder den Server neu. Weitere Informationen finden Sie unter [Starten, Beenden, Anhalten, Fortsetzen und Neustarten von SQL Server-Diensten](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 5.  Überprüfen Sie die Dateiänderung durch Ausführen der folgenden Abfrage.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "52531484"
         NET START MSSQL$instancename /f /T3608
         ```  
   
-     Weitere Informationen finden Sie unter [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+     Weitere Informationen finden Sie unter [Starten, Beenden, Anhalten, Fortsetzen und Neustarten von SQL Server-Diensten](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  Verwenden Sie für jede zu verschiebende Datei die **sqlcmd** -Befehle oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , um die folgende Anweisung auszuführen:  
   
@@ -149,7 +149,7 @@ ms.locfileid: "52531484"
   
 2.  Klicken Sie im Knoten **SQL Server-Dienste** mit der rechten Maustaste auf die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (z. B. **SQL Server (MSSQLSERVER)**), und wählen Sie **Eigenschaften**aus.  
   
-3.  Klicken Sie im Dialogfeld **Eigenschaften von SQL Server (***Instanzname***)** auf die Registerkarte **Startparameter**.  
+3.  Klicken Sie im Dialogfeld **Eigenschaften von SQL Server (**_Instanzname_**)** auf die Registerkarte **Startparameter** .  
   
 4.  Wählen Sie im Feld **Vorhandene Parameter** den Parameter „-d“aus, um die Masterdatendatei zu verschieben. Klicken Sie auf **Aktualisieren** , um die Änderung zu speichern.  
   
@@ -192,7 +192,7 @@ ms.locfileid: "52531484"
 ##  <a name="Resource"></a> Verschieben der Ressourcendatenbank  
  Der Speicherort der Ressourcendatenbank lautet \<*Laufwerk*>:\Programme\Microsoft SQL Server\MSSQL\<Version>.\<*instance_name*>\MSSQL\Binn\\. Die Datenbank kann nicht verschoben werden.  
   
-##  <a name="Follow"></a> Nachverfolgung: Nach dem Verschieben aller Systemdatenbanken  
+##  <a name="Follow"></a> Anschlussaufgaben: Nach dem Verschieben aller Systemdatenbanken  
  Wenn Sie alle Systemdatenbanken auf ein neues Laufwerk oder Volume bzw. auf einen anderen Server mit einem anderen Laufwerkbuchstaben verschoben haben, führen Sie die folgenden Updates aus.  
   
 -   Ändern Sie den Pfad des SQL Server-Agent-Protokolls. Wenn Sie diesen Pfad nicht aktualisieren, kann SQL Server-Agent nicht gestartet werden.  
@@ -259,7 +259,7 @@ ms.locfileid: "52531484"
   
 5.  Löschen Sie die Dateien `tempdb.mdf` und `templog.ldf` am ursprünglichen Speicherort.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Ressourcendatenbank](../../relational-databases/databases/resource-database.md)   
  [tempdb-Datenbank](../../relational-databases/databases/tempdb-database.md)   
  [master-Datenbank](../../relational-databases/databases/master-database.md)   

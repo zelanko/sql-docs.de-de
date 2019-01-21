@@ -16,12 +16,12 @@ ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3ce470350556e035453e68c8e84e6cff1ae1ee14
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: c7262d2ed909729d03563ca0f5aa17f8781ab843
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590224"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125900"
 ---
 # <a name="replication-merge-agent"></a>Replikationsmerge-Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ replmerg [-?]
 [-InternetLogin internet_login]  
 [-InternetPassword internet_password]  
 [-InternetProxyLogin internet_proxy_login]  
-[-InternetProxyPassword internet_proxy_password]  
+[–InternetProxyPassword internet_proxy_password]  
 [-InternetProxyServer internet_proxy_server]  
 [-InternetSecurityMode [0|1]]  
 [-InternetTimeout internet_timeout]  
@@ -176,7 +176,7 @@ replmerg [-?]
  > [!NOTE]  
  >  Ein gültiges SSL-Zertifikat wird mit dem vollqualifizierten Domänennamen der SQL Server-Instanz definiert. Damit der Agent die Verbindung erfolgreich herstellen kann, wenn „-EncryptionLevel“ auf 2 festgelegt ist, sollten Sie einen Alias auf der lokalen SQL Server-Instanz erstellen. Der Parameter „Alias Name“ sollte den Servernamen enthalten, und für den Parameter „Server“ sollte der vollqualifizierte Name der SQL Server-Instanz festgelegt werden.
 
- Weitere Informationen finden Sie unter [Sicherheitsübersicht &#40;Replikation&#41;](../../../relational-databases/replication/security/security-overview-replication.md).  
+ Weitere Informationen finden Sie unter [Anzeigen und Ändern von Replikationssicherheitseinstellungen](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
  **-ExchangeType** [ **1**| **2**| **3**]  
 > [!WARNING]
@@ -246,7 +246,7 @@ replmerg [-?]
  **-InternetProxyLogin**  *Internet_proxy_login*  
  Gibt den Anmeldenamen an, der beim Herstellen einer Verbindung mit einem Authentifizierung erfordernden Proxyserver (in *internet_proxy_server*definiert) verwendet wird.  
   
- **-InternetProxyPassword**  *Internet_proxy_password*  
+ **–InternetProxyPassword**  *Internet_proxy_password*  
  Gibt das Kennwort an, das beim Herstellen einer Verbindung mit einem Authentifizierung erfordernden Proxyserver (in *internet_proxy_server*definiert) verwendet wird.  
   
  **-InternetProxyServer**  *internet_proxy_server*  
@@ -383,7 +383,7 @@ replmerg [-?]
 |**3**|Überprüfung der Zeilenanzahl und der binären Prüfsumme.|  
   
 > [!NOTE]  
->  Die Überprüfung durch binäre Prüfsummen oder Prüfsummen kann dann fälschlicherweise einen Fehler ausgeben, wenn auf dem Abonnenten andere Datentypen vorhanden sind als auf dem Verleger. Weitere Informationen finden Sie im Abschnitt „Überlegungen zur Datenüberprüfung“ unter [Überprüfen von replizierten Daten](../../../relational-databases/replication/validate-replicated-data.md).  
+>  Die Überprüfung durch binäre Prüfsummen oder Prüfsummen kann dann fälschlicherweise einen Fehler ausgeben, wenn auf dem Abonnenten andere Datentypen vorhanden sind als auf dem Verleger. Weitere Informationen finden Sie im Abschnitt „Überlegungen zur Datenüberprüfung“ unter [Überprüfen von replizierten Daten](../../../relational-databases/replication/validate-data-at-the-subscriber.md).  
   
  **-ValidateInterval** _validate_interval_  
  Gibt an, wie häufig das Abonnement im kontinuierlichen Modus überprüft wird (in Minuten). Die Standardeinstellung beträgt **60** Minuten.  

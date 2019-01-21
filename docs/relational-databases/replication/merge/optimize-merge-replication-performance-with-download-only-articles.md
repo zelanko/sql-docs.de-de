@@ -15,12 +15,12 @@ ms.assetid: 8851faa6-e6df-4ea5-a6ea-2a3471680fa3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bd5c45f61329a63825eac983d21aca7e3106920d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7dadf635e055a06a8f86349c73d4921c124f7f4c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814079"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123800"
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>Optimieren der Leistung der Mergereplikation durch nur herunterladbare Artikel
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,12 +43,12 @@ ms.locfileid: "47814079"
   
  Nur herunterladbare Artikel funktionieren in Verbindung mit Clientabonnements: wenn ein Artikel als nur zum Herunterladen angegeben wird, können Zeilen für diesen Artikel nicht auf Abonnenten, die Clientabonnements verwenden, eingefügt, aktualisiert oder gelöscht werden. Verleger und Abonnenten, die den Serverabonnementtyp verwenden (in der Regel Abonnenten, die Daten auf anderen Abonnenten erneut veröffentlichen), können Daten einfügen, aktualisieren und löschen. Weitere Informationen zu Clientabonnements finden Sie unter [Abonnieren von Veröffentlichungen](../../../relational-databases/replication/subscribe-to-publications.md).  
   
- Informationen zum Angeben eines herunterladbaren Artikels finden Sie unter [Angeben, dass ein neuer Mergetabellenartikel nur herunterladbar ist](../../../relational-databases/replication/publish/specify-that-a-merge-table-article-is-download-only.md).  
+ Informationen zur Angabe, dass ein Artikel nur als Download verfügbar ist, finden Sie unter [Specify Merge Replication properties (Angeben von Mergereplikationseigenschaften)](../../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
   
 ## <a name="using-different-article-types-in-your-applications"></a>Verwenden unterschiedlicher Artikeltypen in den Anwendungen  
  Wenn Sie die Anforderungen Ihrer Anwendung kennen, können Sie die Vor- und Nachteile zwischen einer maximalen Flexibilität und einer optimalen Leistung abwägen. Wenn z. B. bei einer Anwendung zahlreiche Konflikte und Änderungen auf dem Verleger und den Abonnenten auftreten, wird hier eine aus Standardartikeln bestehende Veröffentlichung verwendet. Einige Anwendungen, z. B. SFA-Anwendungen (Sales Force Automation), enthalten möglicherweise Artikel mit potenziellen Konflikten sowie weitere Artikel, die als Nachschlagetabellen fungieren und nur herunterladbar sind. In Anwendungen zur Dateneingabe, wie Point-of-Sale-Systeme und FFA-Anwendungen (Field Force Automation), werden Daten häufig streng partitioniert, damit keine Konflikte auftreten, und es werden in keinem Fall Daten zwischen Abonnenten ausgetauscht. In diesen Fällen bietet eine Kombination aus nicht überlappenden Partitionen, nur herunterladbare Artikeln und vorausberechneten Partitionen ein Maximum an Leistung und Skalierbarkeit. Weitere Informationen zu nicht überlappenden Partition und vorausberechneten Partitionen finden Sie unter [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)   
  [Optimieren der Mergereplikationsleistung durch bedingtes Nachverfolgen von Löschvorgängen](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
   

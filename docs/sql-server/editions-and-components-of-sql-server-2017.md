@@ -34,15 +34,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: b512abcb57cc65cc3335504d706a87bf582467c7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6e3378bf754f2a67b78e986d29acf58132c4af62
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544052"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300497"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Editionen und unterstützten Funktionen von SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+
+
+  > [!div class="nextstepaction"]
+  > [Senden Sie uns Ihr Feedback zum Inhaltsverzeichnis der SQL-Dokumentation!](https://aka.ms/sqldocsurvey)
 
 Dieses Thema bietet detaillierte Informationen zu den von verschiedenen SQL Server 2017-Versionen unterstützten Funktionen. 
 
@@ -134,7 +138,7 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |Maximaler Arbeitsspeicher für den Pufferpool pro Instanz von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Maximum des Betriebssystems|128 GB|64 GB|1410 MB|1410 MB|
 |Maximaler Arbeitsspeicher für Columnstore-Segmentcache pro Instanz von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Unbegrenzter Arbeitsspeicher| 32 GB| 16 GB| 352 MB| 352 MB|  
 |Maximale speicheroptimierte Datengröße pro Datenbank in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Unbegrenzter Arbeitsspeicher| 32 GB| 16 GB| 352 MB| 352 MB|  
-|Maximaler genutzter Arbeitsspeicher pro Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Maximum des Betriebssystems|Tabellarisch: 16 GB<br /><br /> MOLAP: 64 GB|–|–|–|  
+|Maximaler genutzter Arbeitsspeicher pro Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Maximum des Betriebssystems|Tabellarisch: 16 GB<br /><br /> MOLAP: 64 GB|Nicht zutreffend|–|–|  
 |Maximaler genutzter Arbeitsspeicher pro Instanz von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Maximum des Betriebssystems|64 GB|64 GB|4 GB|–|
 |Maximale relationale Datenbankgröße|524 PB|524 PB|524 PB|10 GB|10 GB|  
   
@@ -144,26 +148,26 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
   
 |Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Server Core-Unterstützung <sup>1</sup>|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|Protokollversand|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|  
-|Datenbankspiegelung|Benutzerkontensteuerung|Benutzerkontensteuerung<br /><br /> Nur vollständige Sicherheit|Nur WITNESS|Nur WITNESS|Nur WITNESS| 
-|Sicherungskomprimierung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|nein| 
-|Datenbankmomentaufnahme|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
-|Always On-Failoverclusterinstanzen<sup>2</sup>|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|nein|  
-|Always On-Verfügbarkeitsgruppen<sup>3</sup>|Benutzerkontensteuerung|nein|nein|nein|nein|
-|Basis-Verfügbarkeitsgruppen<sup>4</sup>|nein|Benutzerkontensteuerung|nein|nein|nein|
-|Onlineseiten- und Onlinedateiwiederherstellung|Benutzerkontensteuerung|nein|nein|nein|nein|
-|Online-Indizierung|Benutzerkontensteuerung|nein|nein|nein|nein|
-|Fortsetzbare Neuerstellung von online geschalteten Indizes|Benutzerkontensteuerung|nein|nein|nein|nein|
-|Onlineschemaänderung|Benutzerkontensteuerung|nein|nein|nein|nein|
-|Schnelle Wiederherstellung|Benutzerkontensteuerung|nein|nein|nein|nein|
-|Gespiegelte Sicherungen|Benutzerkontensteuerung|nein|nein|nein|nein|
-|Hinzufügen von Speicher im laufenden Systembetrieb und CPU|Benutzerkontensteuerung|nein|nein|nein|nein|
-|Datenbankwiederherstellungsberater|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
-|Verschlüsselte Sicherung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|nein|
-|Hybridsicherung in Windows Azure (Sicherung über URL)|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|nein|
-|Verfügbarkeitsgruppe ohne Cluster|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|nein|nein|
-|Mindestreplikate für Commitverfügbarkeitsgruppen|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|nein|
+|Server Core-Unterstützung <sup>1</sup>|Ja|Ja|Ja|Ja|Ja|  
+|Protokollversand|Ja|Ja|Ja|Nein|Nein|  
+|Datenbankspiegelung|Ja|Ja<br /><br /> Nur vollständige Sicherheit|Nur WITNESS|Nur WITNESS|Nur WITNESS| 
+|Sicherungskomprimierung|Ja|Ja|Nein|Nein|Nein| 
+|Datenbankmomentaufnahme|Ja|Ja|Ja|Ja|Ja|
+|Always On-Failoverclusterinstanzen<sup>2</sup>|Ja|Ja|Nein|Nein|Nein|  
+|Always On-Verfügbarkeitsgruppen<sup>3</sup>|Ja|Nein|Nein|Nein|Nein|
+|Basis-Verfügbarkeitsgruppen<sup>4</sup>|Nein|Ja|Nein|Nein|Nein|
+|Onlineseiten- und Onlinedateiwiederherstellung|Ja|Nein|Nein|Nein|Nein|
+|Online-Indizierung|Ja|Nein|Nein|Nein|Nein|
+|Fortsetzbare Neuerstellung von online geschalteten Indizes|Ja|Nein|Nein|Nein|Nein|
+|Onlineschemaänderung|Ja|Nein|Nein|Nein|Nein|
+|Schnelle Wiederherstellung|Ja|Nein|Nein|Nein|Nein|
+|Gespiegelte Sicherungen|Ja|Nein|Nein|Nein|Nein|
+|Hinzufügen von Speicher im laufenden Systembetrieb und CPU|Ja|Nein|Nein|Nein|Nein|
+|Datenbankwiederherstellungsberater|Ja|Ja|Ja|Ja|Ja|
+|Verschlüsselte Sicherung|Ja|Ja|Nein|Nein|Nein|
+|Hybridsicherung in Windows Azure (Sicherung über URL)|Ja|Ja|Nein|Nein|Nein|
+|Verfügbarkeitsgruppe ohne Cluster|Ja|Ja|Nein|Nein|Nein|Nein|
+|Mindestreplikate für Commitverfügbarkeitsgruppen|Ja|Ja|Ja|Nein|Nein|Nein|
   
 
 <sup>1</sup> Weitere Informationen zum Installieren von SQL Server unter Server Core finden Sie unter [Install SQL Server on Server Core (Installieren von SQL unter Server Core)](../database-engine/install-windows/install-sql-server-on-server-core.md). 
@@ -179,27 +183,27 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
   
 |Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|Columnstore <sup>1</sup>|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|Große Objektbinärdateien in gruppierten Columnstore-Indizes|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|Onlineneuerstellung für nicht gruppierten Columnstore-Index|Benutzerkontensteuerung|nein|nein|nein|nein|
-|In-Memory-OLTP <sup>1</sup>|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Ja, <sup>2</sup>|Benutzerkontensteuerung|
-|Stretch-Datenbank|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
-|Persistenter Hauptspeicher|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
+|Columnstore <sup>1</sup>|Ja|Ja|Ja|Ja|Ja|  
+|Große Objektbinärdateien in gruppierten Columnstore-Indizes|Ja|Ja|Ja|Ja|Ja|  
+|Onlineneuerstellung für nicht gruppierten Columnstore-Index|Ja|Nein|Nein|Nein|Nein|
+|In-Memory-OLTP <sup>1</sup>|Ja|Ja|Ja|Ja, <sup>2</sup>|Ja|
+|Stretch-Datenbank|Ja|Ja|Ja|Ja|Ja|
+|Persistenter Hauptspeicher|Ja|Ja|Ja|Ja|Ja|
 |Unterstützung mehrerer Instanzen|50|50|50|50|50|
-|Tabellen- und Indexpartitionierung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|Datenkomprimierung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
-|Ressourcenkontrolle|Benutzerkontensteuerung|nein|nein|nein|nein|  
-|Parallelverarbeitung für partitionierte Tabellen|Benutzerkontensteuerung|nein|nein|nein|nein|
-|Mehrere FILESTREAM-Container|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
-|NUMA-basierter und großer Arbeitsspeicher für umfangreiche Seiten und Zuordnung von Pufferarrays|Benutzerkontensteuerung|nein|nein|nein|nein|
-|Pufferpoolerweiterung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|nein|
-|Ressourcenkontrolle für E/A-Vorgänge|Benutzerkontensteuerung|nein|nein|nein|nein|  
-|Verzögerte Dauerhaftigkeit|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
-|Automatische Optimierung|Benutzerkontensteuerung|nein|nein|nein|nein|
-|Adaptive Joins im Batchmodus|Benutzerkontensteuerung|nein|nein|nein|nein|
-|Feedback zur Speicherzuweisung im Batchmodus|Benutzerkontensteuerung|nein|nein|nein|nein|
-|Verschachtelte Ausführung mit Tabellenwertfunktionen mit mehreren Anweisungen|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
-|Verbesserungen beim massenhaften Einfügen|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
+|Tabellen- und Indexpartitionierung|Ja|Ja|Ja|Ja|Ja|  
+|Datenkomprimierung|Ja|Ja|Ja|Ja|Ja|
+|Resource Governor|Ja|Nein|Nein|Nein|Nein|  
+|Parallelverarbeitung für partitionierte Tabellen|Ja|Nein|Nein|Nein|Nein|
+|Mehrere FILESTREAM-Container|Ja|Ja|Ja|Ja|Ja|
+|NUMA-basierter und großer Arbeitsspeicher für umfangreiche Seiten und Zuordnung von Pufferarrays|Ja|Nein|Nein|Nein|Nein|
+|Pufferpoolerweiterung|Ja|Ja|Nein|Nein|Nein|
+|Ressourcenkontrolle für E/A-Vorgänge|Ja|Nein|Nein|Nein|Nein|  
+|Verzögerte Dauerhaftigkeit|Ja|Ja|Ja|Ja|Ja|
+|Automatische Optimierung|Ja|Nein|Nein|Nein|Nein|
+|Adaptive Joins im Batchmodus|Ja|Nein|Nein|Nein|Nein|
+|Feedback zur Speicherzuweisung im Batchmodus|Ja|Nein|Nein|Nein|Nein|
+|Verschachtelte Ausführung mit Tabellenwertfunktionen mit mehreren Anweisungen|Ja|Ja|Ja|Ja|Ja|
+|Verbesserungen beim massenhaften Einfügen|Ja|Ja|Ja|Ja|Ja|
 
 
 <sup>1</sup> Die Größe der In-Memory OLTP-Daten und des Columnstore-Segmentcaches sind auf die Größe des Arbeitsspeichers beschränkt, die von der Edition im Bereich Kapazitätsgrenzen festgelegt wird. Den maximale Grad an Parallelität ist beschränkt. Der Grad an Prozessparallelität (Degree of Parallelism, DOP) für eine Indexerstellung ist auf 2 DOP für die Standard Edition und auf 1 DOP für die Web und die Express Edition beschränkt. Dies gilt für Columnstore-Indizes, die über datenträgerbasierte Tabellen und speicheroptimierte Tabellen erstellt wurden.
@@ -210,45 +214,45 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
   
 |Funktion|Enterprise|Standard|Web|Express|Express mit Advanced Services|  
 |-------------|----------------|--------------|---------|-------------|------------------------------------| 
-|Sicherheit auf Zeilenebene|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|Always Encrypted|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung| 
-|Dynamische Datenmaskierung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|   
-|Allgemeine Überwachung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung| 
-|Feine Überwachung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung| 
-|Transparente Datenbankverschlüsselung|Benutzerkontensteuerung|nein|nein|nein|nein|   
-|Erweiterbare Schlüsselverwaltung|Benutzerkontensteuerung|nein|nein|nein|nein| 
-|Benutzerdefinierte Rollen|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung| 
-|Eigenständige Datenbanken|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung| 
-|Verschlüsselung von Sicherungen|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|nein|  
+|Sicherheit auf Zeilenebene|Ja|Ja|Ja|Ja|Ja|  
+|Always Encrypted|Ja|Ja|Ja|Ja|Ja| 
+|Dynamische Datenmaskierung|Ja|Ja|Ja|Ja|Ja|   
+|Allgemeine Überwachung|Ja|Ja|Ja|Ja|Ja| 
+|Feine Überwachung|Ja|Ja|Ja|Ja|Ja| 
+|Transparente Datenbankverschlüsselung|Ja|Nein|Nein|Nein|Nein|   
+|Erweiterbare Schlüsselverwaltung|Ja|Nein|Nein|Nein|Nein| 
+|Benutzerdefinierte Rollen|Ja|Ja|Ja|Ja|Ja| 
+|Eigenständige Datenbanken|Ja|Ja|Ja|Ja|Ja| 
+|Verschlüsselung von Sicherungen|Ja|Ja|Nein|Nein|Nein|  
 
 ##  <a name="Replication"></a> Replication  
   
 |Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|Heterogene Abonnenten|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|nein|  
-|Mergereplikation|Benutzerkontensteuerung|Benutzerkontensteuerung|Ja (Nur Abonnent)|Ja (Nur Abonnent)|Ja (Nur Abonnent)|   
-|Veröffentlichungen mit Oracle|Benutzerkontensteuerung|nein|nein|nein|nein| 
-|Peer-zu-Peer-Transaktionsreplikation|Benutzerkontensteuerung|nein|nein|nein|nein|   
-|Momentaufnahmereplikation|Benutzerkontensteuerung|Benutzerkontensteuerung|Ja (Nur Abonnent)|Ja (Nur Abonnent)|Ja (Nur Abonnent)|   
-|SQL Server-Änderungsnachverfolgung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung| 
-|Transaktionsreplikation|Benutzerkontensteuerung|Benutzerkontensteuerung|Ja (Nur Abonnent)|Ja (Nur Abonnent)|Ja (Nur Abonnent)|   
-|Transaktionsreplikation zu Azure|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|nein|   
-|Aktualisierbares Abonnement für Transaktionsreplikation|Benutzerkontensteuerung|nein|nein|nein|nein|  
+|Heterogene Abonnenten|Ja|Ja|Nein|Nein|Nein|  
+|Mergereplikation|Ja|Ja|Ja (Nur Abonnent)|Ja (Nur Abonnent)|Ja (Nur Abonnent)|   
+|Veröffentlichungen mit Oracle|Ja|Nein|Nein|Nein|Nein| 
+|Peer-zu-Peer-Transaktionsreplikation|Ja|Nein|Nein|Nein|Nein|   
+|Momentaufnahmereplikation|Ja|Ja|Ja (Nur Abonnent)|Ja (Nur Abonnent)|Ja (Nur Abonnent)|   
+|SQL Server-Änderungsnachverfolgung|Ja|Ja|Ja|Ja|Ja| 
+|Transaktionsreplikation|Ja|Ja|Ja (Nur Abonnent)|Ja (Nur Abonnent)|Ja (Nur Abonnent)|   
+|Transaktionsreplikation zu Azure|Ja|Ja|Nein|Nein|Nein|   
+|Aktualisierbares Abonnement für Transaktionsreplikation|Ja|Nein|Nein|Nein|Nein|  
   
 ##  <a name="SSMS"></a> Verwaltungstools  
   
 |Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express| 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|SQL Management Objects (SMO)|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|SQL-Konfigurations-Manager|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|   
-|SQL CMD (Command Prompt Tool – Eingabeaufforderungstool)|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|      
-|Distributed Replay: Administratortool|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
-|Distributed Replay – Client|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|  
-|Distributed Replay - Controller|Ja (bis zu 16 Clients)|Ja (1 Client)|Ja (1 Client)|nein|nein|   
-|SQL Profiler|Benutzerkontensteuerung|Benutzerkontensteuerung|Nein <sup>1</sup>|Nein <sup>1</sup>|Nein <sup>1</sup>|  
-|SQL Server-Agent|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein| 
-|Microsoft System Center Operations Manager Management Pack|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|  
-|Datenbankoptimierungsratgeber (DTA)|Benutzerkontensteuerung|Ja <sup>2</sup>|Ja <sup>2</sup>|nein|nein|      
+|SQL Management Objects (SMO)|Ja|Ja|Ja|Ja|Ja|  
+|SQL-Konfigurations-Manager|Ja|Ja|Ja|Ja|Ja|   
+|SQL CMD (Command Prompt Tool – Eingabeaufforderungstool)|Ja|Ja|Ja|Ja|Ja|      
+|Distributed Replay: Administratortool|Ja|Ja|Ja|Ja|Nein|  
+|Distributed Replay – Client|Ja|Ja|Ja|Nein|Nein|  
+|Distributed Replay - Controller|Ja (bis zu 16 Clients)|Ja (1 Client)|Ja (1 Client)|Nein|Nein|   
+|SQL Profiler|Ja|Ja|Nein <sup>1</sup>|Nein <sup>1</sup>|Nein <sup>1</sup>|  
+|SQL Server-Agent|Ja|Ja|Ja|Nein|Nein| 
+|Microsoft System Center Operations Manager Management Pack|Ja|Ja|Ja|Nein|Nein|  
+|Datenbankoptimierungsratgeber (DTA)|Ja|Ja <sup>2</sup>|Ja <sup>2</sup>|Nein|Nein|      
   
  <sup>1</sup> SQL Server Web, SQL Server Express, SQL Server Express mit Tools und SQL Server Express mit Advanced Services können mit der SQL Server Standard- und SQL Server Enterprise-Edition profiliert werden.  
   
@@ -258,25 +262,25 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
   
 |Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Benutzerinstanzen|nein|nein|nein|Benutzerkontensteuerung|Benutzerkontensteuerung| 
-|LocalDB|nein|nein|nein|Benutzerkontensteuerung|nein| 
-|Dedizierte Administratorverbindung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Ja, mit Ablaufverfolgungsflag|Ja, mit Ablaufverfolgungsflag|   
-|SysPrep-Unterstützung <sup>1</sup>|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung| 
-|PowerShell-Skriptunterstützung<sup>2</sup>|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung| 
-|Unterstützung für Komponentenvorgänge der Datenschichtanwendung: Extrahieren, Bereitstellen, Aktualisieren, Löschen|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung| 
-|Richtlinienautomatisierung (Überprüfung nach Zeitplan und Änderungen)|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|   
-|Sammler von Leistungsdaten|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein| 
-|Fähigkeit zur Registrierung als verwaltete Instanz in einer Mehrfachinstanzverwaltung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|   
-|Standardleistungsberichte|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein| 
-|Planhinweislisten und Planeinfrierung für Planhinweislisten|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|   
-|Direkte Abfrage von indizierten Sichten (mittels NOEXPAND-Hinweis)|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung| 
-|Automatische Wartung für indizierte Sichten|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein| 
-|Verteilte partitionierte Sichten|Benutzerkontensteuerung|nein|nein|nein|nein| 
-|Parallele Indexvorgänge|Benutzerkontensteuerung|nein|nein|nein|nein|  
-|Automatische Verwendung indizierter Sichten mittels Abfrageoptimierer|Benutzerkontensteuerung|nein|nein|nein|nein| 
-|Parallele Konsistenzprüfung|Benutzerkontensteuerung|nein|nein|nein|nein| 
-|SQL Server-Steuerungspunkt für das Hilfsprogramm|Benutzerkontensteuerung|nein|nein|nein|nein|    
-|Pufferpoolerweiterung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|nein| 
+|Benutzerinstanzen|Nein|Nein|Nein|Ja|Ja| 
+|LocalDB|Nein|Nein|Nein|Ja|Nein| 
+|Dedizierte Administratorverbindung|Ja|Ja|Ja|Ja, mit Ablaufverfolgungsflag|Ja, mit Ablaufverfolgungsflag|   
+|SysPrep-Unterstützung <sup>1</sup>|Ja|Ja|Ja|Ja|Ja| 
+|PowerShell-Skriptunterstützung<sup>2</sup>|Ja|Ja|Ja|Ja|Ja| 
+|Unterstützung für Komponentenvorgänge der Datenschichtanwendung: Extrahieren, Bereitstellen, Aktualisieren, Löschen|Ja|Ja|Ja|Ja|Ja| 
+|Richtlinienautomatisierung (Überprüfung nach Zeitplan und Änderungen)|Ja|Ja|Ja|Nein|Nein|   
+|Sammler von Leistungsdaten|Ja|Ja|Ja|Nein|Nein| 
+|Fähigkeit zur Registrierung als verwaltete Instanz in einer Mehrfachinstanzverwaltung|Ja|Ja|Ja|Nein|Nein|   
+|Standardleistungsberichte|Ja|Ja|Ja|Nein|Nein| 
+|Planhinweislisten und Planeinfrierung für Planhinweislisten|Ja|Ja|Ja|Nein|Nein|   
+|Direkte Abfrage von indizierten Sichten (mittels NOEXPAND-Hinweis)|Ja|Ja|Ja|Ja|Ja| 
+|Automatische Wartung für indizierte Sichten|Ja|Ja|Ja|Nein|Nein| 
+|Verteilte partitionierte Sichten|Ja|Nein|Nein|Nein|Nein| 
+|Parallele Indexvorgänge|Ja|Nein|Nein|Nein|Nein|  
+|Automatische Verwendung indizierter Sichten mittels Abfrageoptimierer|Ja|Nein|Nein|Nein|Nein| 
+|Parallele Konsistenzprüfung|Ja|Nein|Nein|Nein|Nein| 
+|SQL Server-Steuerungspunkt für das Hilfsprogramm|Ja|Nein|Nein|Nein|Nein|    
+|Pufferpoolerweiterung|Ja|Ja|Nein|Nein|Nein| 
   
  <sup>1</sup> Weitere Informationen finden Sie unter [Überlegungen zur Installation von SQL Server mit SysPrep](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
  
@@ -285,38 +289,38 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
   
 |Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express| 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|Integration in Microsoft Visual Studio|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung| 
-|IntelliSense (Transact-SQL und MDX)|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung| 
-|SQL Server Data Tools (SSDT)|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|    
-|MDX-Bearbeitungs-, MDX-Debug- und MDX-Entwurfstools|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|nein|   
+|Integration in Microsoft Visual Studio|Ja|Ja|Ja|Ja|Ja| 
+|IntelliSense (Transact-SQL und MDX)|Ja|Ja|Ja|Ja|Ja| 
+|SQL Server Data Tools (SSDT)|Ja|Ja|Ja|Ja|Nein|    
+|MDX-Bearbeitungs-, MDX-Debug- und MDX-Entwurfstools|Ja|Ja|Nein|Nein|Nein|   
   
 ##  <a name="Programmability"></a> Programmability  
   
 |Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Grundlegende Integration von R <sup>1</sup>|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|   
-|Erweiterte Integration von R <sup>2</sup>|Benutzerkontensteuerung|nein|nein|nein|nein| 
-|Grundlegende Integration von Python|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|
-|Erweiterte Integration von Python|Benutzerkontensteuerung|nein|nein|nein|nein| 
-|Machine Learning-Server (eigenständig)|Benutzerkontensteuerung|nein|nein|nein|nein|   
-|PolyBase-Computeknoten|Benutzerkontensteuerung|Ja <sup>3</sup>|Ja <sup>3</sup>|Ja <sup>3</sup>|Ja <sup>3</sup> | 
-|PolyBase-Hauptknoten|Benutzerkontensteuerung|nein|nein|nein|nein| 
-|JSON|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|   
-|Abfragespeicher|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|   
-|Temporal|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|   
-|Common Language Runtime (CLR)-Integration|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|   
-|Systemeigene XML-Unterstützung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung| 
-|XML-Indizierung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung| 
-|MERGE- und UPSERT-Funktionen|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|   
-|FILESTREAM-Unterstützung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung| 
-|FileTable|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung| 
-|Datums- und Uhrzeitdatentypen|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|Internationalisierungsunterstützung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung| 
-|Volltextsuche und semantische Suche|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein| 
-|Angabe der Sprache in einer Abfrage|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|   
-|Service Broker (Messaging)|Benutzerkontensteuerung|Benutzerkontensteuerung|Nein (nur Client)|Nein (nur Client)|Nein (nur Client)|   
-|Transact-SQL-Endpunkte|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein| 
-|Diagramm|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|Grundlegende Integration von R <sup>1</sup>|Ja|Ja|Ja|Ja|Nein|   
+|Erweiterte Integration von R <sup>2</sup>|Ja|Nein|Nein|Nein|Nein| 
+|Grundlegende Integration von Python|Ja|Ja|Ja|Ja|Nein|
+|Erweiterte Integration von Python|Ja|Nein|Nein|Nein|Nein| 
+|Machine Learning-Server (eigenständig)|Ja|Nein|Nein|Nein|Nein|   
+|PolyBase-Computeknoten|Ja|Ja <sup>3</sup>|Ja <sup>3</sup>|Ja <sup>3</sup>|Ja <sup>3</sup> | 
+|PolyBase-Hauptknoten|Ja|Nein|Nein|Nein|Nein| 
+|JSON|Ja|Ja|Ja|Ja|Ja|   
+|Abfragespeicher|Ja|Ja|Ja|Ja|Ja|   
+|Temporal|Ja|Ja|Ja|Ja|Ja|   
+|Common Language Runtime (CLR)-Integration|Ja|Ja|Ja|Ja|Ja|   
+|Systemeigene XML-Unterstützung|Ja|Ja|Ja|Ja|Ja| 
+|XML-Indizierung|Ja|Ja|Ja|Ja|Ja| 
+|MERGE- und UPSERT-Funktionen|Ja|Ja|Ja|Ja|Ja|   
+|FILESTREAM-Unterstützung|Ja|Ja|Ja|Ja|Ja| 
+|FileTable|Ja|Ja|Ja|Ja|Ja| 
+|Datums- und Uhrzeitdatentypen|Ja|Ja|Ja|Ja|Ja|  
+|Internationalisierungsunterstützung|Ja|Ja|Ja|Ja|Ja| 
+|Volltextsuche und semantische Suche|Ja|Ja|Ja|Ja|Nein| 
+|Angabe der Sprache in einer Abfrage|Ja|Ja|Ja|Ja|Nein|   
+|Service Broker (Messaging)|Ja|Ja|Nein (nur Client)|Nein (nur Client)|Nein (nur Client)|   
+|Transact-SQL-Endpunkte|Ja|Ja|Ja|Nein|Nein| 
+|Diagramm|Ja|Ja|Ja|Ja|Ja|  
 
 
 <sup>1</sup> Die grundlegende Integration ist auf 2 Kerne und In-Memory-Datasets beschränkt. 
@@ -338,13 +342,13 @@ Informationen zu SSIS-Features (SQL Server Integration Services), die von den ei
   
 |Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|Erstellen von Cubes ohne Datenbank|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|nein |   
-|Automatisches Generieren von Staging- und Data Warehouse-Schemas|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|nein| 
-|Change Data Capture|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|nein| 
-|Optimierung von Sternjoin-Abfragen|Benutzerkontensteuerung|nein|nein|nein|nein| 
-|Skalierbare schreibgeschützte Analysis Services-Konfiguration|Benutzerkontensteuerung|nein|nein|nein|nein| 
-|Parallele Abfrageverarbeitung bei partitionierten Tabellen und Indizes|Benutzerkontensteuerung|nein|nein|nein|nein|   
-|Globale Batchaggregation|Benutzerkontensteuerung|nein|nein|nein|nein| 
+|Erstellen von Cubes ohne Datenbank|Ja|Ja|Nein|Nein|Nein |   
+|Automatisches Generieren von Staging- und Data Warehouse-Schemas|Ja|Ja|Nein|Nein|Nein| 
+|Change Data Capture|Ja|Ja|Nein|Nein|Nein| 
+|Optimierung von Sternjoin-Abfragen|Ja|Nein|Nein|Nein|Nein| 
+|Skalierbare schreibgeschützte Analysis Services-Konfiguration|Ja|Nein|Nein|Nein|Nein| 
+|Parallele Abfrageverarbeitung bei partitionierten Tabellen und Indizes|Ja|Nein|Nein|Nein|Nein|   
+|Globale Batchaggregation|Ja|Nein|Nein|Nein|Nein| 
 
 ##  <a name="SSAS"></a> Analysis Services  
   
@@ -378,24 +382,24 @@ Informationen über die Business Intelligence-Clientfeatures, die von den einzel
   
 |Funktionsname|Enterprise|Standard|Web|Express mit Advanced Services|Express|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|
-|Räumlichkeitsindizes|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|   
-|Planarer und geodätischer Datentyp|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung| 
-|Erweiterte räumliche Bibliotheken|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|   
-|Importieren/Exportieren räumlicher Industriestandard-Datenformate|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|   
+|Räumlichkeitsindizes|Ja|Ja|Ja|Ja|Ja|   
+|Planarer und geodätischer Datentyp|Ja|Ja|Ja|Ja|Ja| 
+|Erweiterte räumliche Bibliotheken|Ja|Ja|Ja|Ja|Ja|   
+|Importieren/Exportieren räumlicher Industriestandard-Datenformate|Ja|Ja|Ja|Ja|Ja|   
   
 ##  <a name="ADS"></a> Weitere Datenbankdienste  
   
 |Funktionsname|Enterprise|Standard|Web|Express mit Advanced Services|Express|   
 |------------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migration Assistant|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|   
-|Datenbank-E-Mail|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein| 
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migration Assistant|Ja|Ja|Ja|Ja|Ja|   
+|Datenbank-E-Mail|Ja|Ja|Ja|Nein|Nein| 
   
 ##  <a name="Other"></a> Andere Komponenten  
   
 |Funktionsname|Enterprise|Standard|Web|Express mit Advanced Services|Express|   
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|StreamInsight|StreamInsight Premium-Edition|StreamInsight Standard-Edition|StreamInsight Standard-Edition|nein|nein| 
-|StreamInsight HA|StreamInsight Premium-Edition|nein|nein|nein|nein|   
+|StreamInsight|StreamInsight Premium-Edition|StreamInsight Standard-Edition|StreamInsight Standard-Edition|Nein|Nein| 
+|StreamInsight HA|StreamInsight Premium-Edition|Nein|Nein|Nein|Nein|   
 
 > [![Herunterladen von SSMS](../analysis-services/media/download.png)](../ssms/download-sql-server-management-studio-ssms.md) Laden Sie die neueste Version von **[SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) herunter.**     
   

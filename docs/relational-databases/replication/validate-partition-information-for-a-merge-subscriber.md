@@ -15,12 +15,12 @@ ms.assetid: c059553e-df2c-4333-ba79-e8d6e2890c34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cfb463245cc649d010ce6ce97b49170ec37ac9e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 057d3f820ac0f580a6109d5b5c04ea43e8eabd9c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729598"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129710"
 ---
 # <a name="validate-partition-information-for-a-merge-subscriber"></a>Überprüfen von Partitionsinformationen für einen Mergeabonnenten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +35,10 @@ ms.locfileid: "47729598"
   
  Beim Überprüfen einer Partition gleicht der Merge-Agent aber nicht nur die Partition mit den Werten ab, die von den in den Filterausdrücken verwendeten Funktionen zurückgegeben werden, sondern er kontrolliert auch, ob die Momentaufnahme generiert wurde, bevor Änderungen vorgenommen wurden, durch die sie ungültig geworden ist. Solche Änderungen können z. B. Metadaten-Cleanupoperationen oder Schemaänderungen sein. Wenn eine partitionierte Momentaufnahme zu alt ist, gibt der Merge-Agent einen Fehler zurück. In diesem Fall müssen Sie auf der Grundlage einer aktuellen regulären Momentaufnahme eine neue partitionierte Momentaufnahme für diesen Abonnenten generieren.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Verwaltung &#40;Replikation&#41;](../../relational-databases/replication/administration/administration-replication.md)   
- [Bewährte Methoden für die Replikationsverwaltung](../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Häufig gestellte Fragen für Replikationsadministratoren](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
+ [Best Practices for Replication Administration](../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
  [Erneutes Initialisieren von Abonnements](../../relational-databases/replication/reinitialize-subscriptions.md)   
- [Überprüfen von replizierten Daten](../../relational-databases/replication/validate-replicated-data.md)  
+ [Überprüfen von replizierten Daten](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

@@ -16,12 +16,12 @@ ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9705b867d8f12c83b0c3e3c0d1ec6a8461e7a2dd
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: dd24314a8948e5893e4e4625c695485c7611c5bb
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559927"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130280"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Erstellen eines Auftrags des SQL Server-Agents zum Archivieren von Datenbank-E-Mail-Nachrichten und Ereignisprotokollen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "51559927"
   
 -   Die erste Prozedur erstellt den Auftrag "Datenbank-E-Mail archivieren" in den folgenden Schritten:  
   
-    1.  Kopieren Sie alle Nachrichten aus den Datenbank-E-Mail-Tabellen in eine neue Tabelle, die nach dem vorhergehenden Monat im Format **DBMailArchive_***<Jahr_Monat>* benannt wird.  
+    1.  Kopieren Sie alle Nachrichten aus den Datenbank-E-Mail-Tabellen in eine neue Tabelle, die nach dem vorhergehenden Monat im Format **DBMailArchive_**_Jahr_Monat_ benannt wird.  
   
-    2.  Kopieren Sie die zu den im ersten Schritt kopierten Nachrichten gehörenden Anlagen aus den Datenbank-E-Mail-Tabellen in eine neue Tabelle, die nach dem vorhergehenden Monat im Format **DBMailArchive_Attachments_***<Jahr_Monat>* benannt wird.  
+    2.  Kopieren Sie die zu den im ersten Schritt kopierten Nachrichten gehörenden Anlagen aus den Datenbank-E-Mail-Tabellen in eine neue Tabelle, die nach dem vorhergehenden Monat im Format **DBMailArchive_Attachments_**_Jahr_Monat_ benannt wird.  
   
-    3.  Kopieren Sie die zu den im ersten Schritt kopierten Nachrichten gehörenden Ereignisse aus dem Datenbank-E-Mail-Ereignisprotokoll aus den Datenbank-E-Mail-Tabellen in eine neue Tabelle, die nach dem vorhergehenden Monat im Format **DBMailArchive_Log_***<Jahr_Monat>* benannt wird.  
+    3.  Kopieren Sie die zu den im ersten Schritt kopierten Nachrichten gehörenden Ereignisse aus dem Datenbank-E-Mail-Ereignisprotokoll aus den Datenbank-E-Mail-Tabellen in eine neue Tabelle, die nach dem vorhergehenden Monat im Format **DBMailArchive_Log_**_Jahr_Monat_ benannt wird.  
   
     4.  Löschen Sie die Datensätze der übertragenen E-Mail-Elemente aus den Datenbank-E-Mail-Tabellen.  
   

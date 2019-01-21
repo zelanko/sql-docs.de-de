@@ -11,23 +11,23 @@ ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b4e9112840f6329bd846c62bd7f8dbb8b5d99340
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 128e1feeb3b344a21dbb682d4d41d402060ab1ff
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520954"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256945"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Verwenden von MSDeploy mit dem dbSqlPackage-Anbieter
 **dbSqlPackage** ist ein **MSDeploy**-Anbieter, der Ihnen die Interaktion mit SQL Server- oder SQL Azure-Datenbanken ermöglicht. **dbSqlPackage** unterstützt die folgenden Aktionen:  
   
--   **Extract**: Erstellt eine Datenbankmomentaufnahme (DACPAC-Datei) von einer SQL Server- oder SQL Azure-Livedatenbank.  
+-   **Extract:** Erstellt eine Datenbankmomentaufnahme (DACPAC-Datei) von einer SQL Server- oder SQL Azure-Livedatenbank  
   
--   **Publish:** Aktualisiert ein Datenbankschema inkrementell, sodass dieses dem Schema einer DACPAC-Quelldatei entspricht.  
+-   **Publish:** Aktualisiert ein Datenbankschema inkrementell, sodass dieses dem Schema einer DACPAC-Quelldatei entspricht  
   
--   **DeployReport:** Erstellt einen XML-Bericht der Änderungen, die durch eine Veröffentlichung vorgenommen würden.  
+-   **DeployReport:** Erstellt einen XML-Bericht der Änderungen, die durch eine Veröffentlichungsaktion vorgenommen würden  
   
--   **Script**: Erstellt ein Transact\-SQL-Skript, das dem von der Veröffentlichungsaktion ausgeführten Skript entspricht.  
+-   **Script:** Erstellt ein Transact\-SQL-Skript, das dem von der Veröffentlichungsaktion ausgeführten Skript entspricht  
   
 Weitere Informationen über DACFx finden Sie in der Dokumentation zur verwalteten DACFx-API unter [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) oder in [SqlPackage.exe](../tools/sqlpackage.md) (DACFx-Befehlszeilentool).  
   
@@ -47,15 +47,15 @@ Sie verwenden den Switch **-verb** in der MS Deploy-Befehlszeile, um MS Deploy-V
   
 |Verb|und Beschreibung|  
 |--------|---------------|  
-|dump|Stellt Informationen über eine in einer DACPAC-Datei enthaltene Quelldatenbank bereit, z. B. Namen, Versionsnummer und Beschreibung. Geben Sie die Quelldatenbank im folgenden Format in der Befehlszeile an:<br /><br />**msdeploy -verb:dump -source:dbSqlPackage=„***DACPAC-Dateipfad***“**|  
-|sync|Gibt die dbSqlPackage-Aktionen im folgenden Format in der Befehlszeile an:<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**=„Eingabe“ *[,DbSqlPackage-source-parameters] -***dest:dbSqlPackage**=„Eingabe“ *[,DbSqlPackage-destination-parameters]*<br /><br />Weitere Informationen finden Sie in den folgenden Abschnitten zu den gültigen Quell- und Zielparametern für das sync-Verb.|  
+|dump|Stellt Informationen über eine in einer DACPAC-Datei enthaltene Quelldatenbank bereit, z. B. Namen, Versionsnummer und Beschreibung. Geben Sie die Quelldatenbank im folgenden Format in der Befehlszeile an:<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="**_DACPAC-Dateipfad_**"**|  
+|sync|Gibt die dbSqlPackage-Aktionen im folgenden Format in der Befehlszeile an:<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="Eingabe" _[,DbSqlPackage-source-parameters] -_**dest:dbSqlPackage**="Eingabe" *[,DbSqlPackage-destination-parameters]*<br /><br />Weitere Informationen finden Sie in den folgenden Abschnitten zu den gültigen Quell- und Zielparametern für das sync-Verb.|  
   
 ## <a name="dbsqlpackage-source"></a>dbSqlPackage-Quelle  
 Der **dbSqlPackage**-Anbieter akzeptiert eine Eingabe, die entweder einer gültigen SQL Server- oder SQL Azure-Verbindungszeichenfolge bzw. einem Pfad zu einer DACPAC-Datei auf dem Datenträger entspricht.  Die Syntax zum Angeben der Eingabequelle für den Anbieter lautet wie folgt:  
   
 |Eingabe|Default|und Beschreibung|  
 |---------|-----------|---------------|  
-|**-source:dbSqlPackage=**{*input*}|**N/V**|*input* ist eine gültige SQL Server- oder SQL Azure-Verbindungszeichenfolge bzw. ein Pfad zu einer DACPAC-Datei auf dem Datenträger.<br /><br />**HINWEIS**: Die einzigen Verbindungszeichenfolgeneigenschaften, die bei der Verwendung einer Verbindungszeichenfolge als Eingabequelle unterstützt werden, sind *InitialCatalog, DataSource, UserID, Password, IntegratedSecurity, Encrypt, TrustServerCertificate* und *ConnectionTimeout*.|  
+|**-source:dbSqlPackage=**{*input*}|**N/V**|*input* ist eine gültige SQL Server- oder SQL Azure-Verbindungszeichenfolge bzw. ein Pfad zu einer DACPAC-Datei auf dem Datenträger.<br /><br />**HINWEIS:** Die einzigen Verbindungszeichenfolgen-Eigenschaften, die bei der Verwendung einer Verbindungszeichenfolge als Eingabequelle unterstützt werden, sind *InitialCatalog, DataSource, UserID, Password, IntegratedSecurity, Encrypt, TrustServerCertificate* und *ConnectionTimeout*.|  
   
 Wenn die Eingabequelle eine Verbindungszeichenfolge zu einer SQL Server- oder Azure SQL-Livedatenbank ist, extrahiert **dbSqlPackage** eine Datenbankmomentaufnahme in Form einer DACPAC-Datei aus einer SQL Server- oder SQL Azure-Livedatenbank.  
   

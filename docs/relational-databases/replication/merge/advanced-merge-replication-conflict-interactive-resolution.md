@@ -16,12 +16,12 @@ ms.assetid: 172c60c7-f605-4eb5-b185-54ae9e9d3c60
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c701e9fb98bbabe013632a3fd93f91d368ec2784
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20c748e6dea95ae06c2f0c8364b8720ca0d7a36a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849228"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132750"
 ---
 # <a name="advanced-merge-replication-conflict---interactive-resolution"></a>Erweiterte Konflikte bei der Mergereplikation – Interaktive Lösung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "47849228"
   
  Damit der interaktive Konfliktlöser verwendet werden kann, muss die interaktive Konfliktlösung für alle Artikel und alle Abonnements aktiviert sein, für die sie erforderlich ist. Wenn der interaktive Konfliktlöser für einen oder mehrere Artikel und Abonnements aktiviert wurde, wird er verwendet, wenn während einer Mergesynchronisierung ein Konflikt erkannt wird.  
   
- Informationen zur Verwendung des interaktiven Konfliktlösers finden Sie unter [Angeben der interaktiven Konfliktlösung für Mergeveröffentlichungen](../../../relational-databases/replication/publish/specify-interactive-conflict-resolution-for-merge-articles.md) und [Synchronisieren eines Abonnements mithilfe der Synchronisierungsverwaltung von Windows &#40;Windows Synchronization Manager&#41;](../../../relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md).  
+ Informationen zur Verwendung des interaktiven Konfliktlösers finden Sie unter [Specify Merge Replication options (Angeben von Mergereplikationsoptionen)](../../../relational-databases/replication/merge/specify-merge-replication-properties.md) und [Synchronisieren eines Abonnements mit der Synchronisierungsverwaltung von Windows](../../../relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Advanced Merge Replication Conflict Detection and Resolution (Erweiterte Konflikterkennung und -lösung bei der Mergereplikation)](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   

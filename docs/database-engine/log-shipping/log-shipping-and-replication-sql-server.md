@@ -13,12 +13,12 @@ ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9970c01b1af46287c9438b2b731af6a1c9e1f44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c92321a8f9e0cb70a1e16a268ef1e84b17946ae
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655948"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130430"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>Protokollversand und Replikation (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -110,12 +110,12 @@ ms.locfileid: "47655948"
   
     -   Wird die Veröffentlichung gar nicht gefiltert, sollten Sie die Veröffentlichungsdatenbank durch Synchronisieren mit einem aktuellen Abonnenten auf den neuesten Stand bringen.  
   
-    -   Wenn die Veröffentlichung gefiltert ist, können Sie möglicherweise die Veröffentlichungsdatenbank nicht auf den aktuellen Stand bringen. Nehmen wir einmal an, es gibt eine Tabelle, die so partitioniert ist, dass jedes Abonnement nur die Kundendaten für eine der folgenden Verkaufsregionen erhält: Nord, Ost, Süd und West. Wenn für jede Datenpartition mindestens ein Abonnent vorhanden ist, würde es reichen, die Veröffentlichungsdatenbank mit einem Abonnenten für jede Partition zu synchronisieren, um sie auf den neuesten Stand zu bringen. Wenn aber beispielsweise die Daten in der Partition West auf keinen Abonnenten repliziert wurden, können diese Daten auf dem Verleger nicht auf den aktuellen Stand gebracht werden. In diesem sollten Sie alle Abonnements initialisieren, sodass die Daten auf dem Verleger und den Abonnenten zusammengeführt werden. Weitere Informationen finden Sie unter [Erneutes Initialisieren von Abonnements](../../relational-databases/replication/reinitialize-subscriptions.md).  
+    -   Wenn die Veröffentlichung gefiltert ist, können Sie möglicherweise die Veröffentlichungsdatenbank nicht auf den aktuellen Stand bringen. Angenommen, eine Tabelle ist so partitioniert, dass jedes Abonnement nur die Kundendaten für eine der folgenden Regionen erhält: Nord, Ost, Süd und West. Wenn für jede Datenpartition mindestens ein Abonnent vorhanden ist, würde es reichen, die Veröffentlichungsdatenbank mit einem Abonnenten für jede Partition zu synchronisieren, um sie auf den neuesten Stand zu bringen. Wenn aber beispielsweise die Daten in der Partition West auf keinen Abonnenten repliziert wurden, können diese Daten auf dem Verleger nicht auf den aktuellen Stand gebracht werden. In diesem sollten Sie alle Abonnements initialisieren, sodass die Daten auf dem Verleger und den Abonnenten zusammengeführt werden. Weitere Informationen finden Sie unter [Erneutes Initialisieren von Abonnements](../../relational-databases/replication/reinitialize-subscriptions.md).  
   
      Wenn Sie die Veröffentlichungsdatenbank mit einem Abonnenten synchronisieren, auf dem eine frühere Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ausgeführt wird, kann das Abonnement nicht anonym sein – es muss sich um ein Clientabonnement oder ein Serverabonnement handeln (in früheren Versionen als lokales Abonnement bzw. globales Abonnement bezeichnet). Weitere Informationen finden Sie unter [Synchronisieren von Daten](../../relational-databases/replication/synchronize-data.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Replikationsfunktionen und -tasks](../../relational-databases/replication/replication-features-and-tasks.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server-Replikation](../../relational-databases/replication/sql-server-replication.md)   
  [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Datenbankspiegelung und Replikation &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Verlegereinstellungen | Microsoft-Dokumentation
+title: Dialogfeld „Verlegereinstellungen“ für die SQL Server-Replikation | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,18 +15,18 @@ ms.assetid: 4fb70427-082d-4179-82a1-34b235accc43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9bfb4b85bddf33ee4631f2fa2f1799fa8cb593cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24def3d19d38356bb48886a64a0566254aeb1aec
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827358"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132560"
 ---
-# <a name="publisher-settings"></a>Verlegereinstellungen
+# <a name="sql-server-replication-publisher-settings-dialog-box"></a>Dialogfeld „Verlegereinstellungen“ für die SQL Server-Replikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Im Dialogfeld **Verlegereinstellungen** können Sie die Einstellungen für Verleger ändern, die dem linken Bereich des Replikationsmonitors hinzugefügt wurden.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Verlegerverbindung**  
  Klicken Sie auf diese Option, um das Dialogfeld **Verbindung mit dem Server herstellen** zu starten. In diesem Dialogfeld können Sie die Verbindungseigenschaften und Anmeldeinformationen anzeigen und ändern, die vom Replikationsmonitor für die Verbindung mit einem Verleger verwendet werden.  
   
@@ -48,8 +48,8 @@ ms.locfileid: "47827358"
  **Neue Gruppe**  
  Klicken Sie auf diese Option, um eine neue Verlegergruppe zu erstellen. Eine Verlegergruppe stellt eine einfache Möglichkeit dar, um die Verleger innerhalb des Replikationsmonitors zu organisieren. Gruppen haben keinen Einfluss auf die Replikation der Daten oder die Beziehungen zwischen den Servern in der Replikationstopologie.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Starten des Replikationsmonitors](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Überwachen der Replikation](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Überwachen der Replikation](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

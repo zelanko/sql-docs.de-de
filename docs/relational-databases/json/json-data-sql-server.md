@@ -14,18 +14,18 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b25ee3d20432b5cba03fb745f8d95e51771619ec
-ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
+ms.openlocfilehash: 72de8dd56909ff947b947602ef05860fd367156f
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52886935"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299377"
 ---
 # <a name="json-data-in-sql-server"></a>JSON-Daten in SQL Server
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [Unterstützen Sie uns bei der Verbesserung der Dokumentation für SQL Server.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Senden Sie uns Ihr Feedback zum Inhaltsverzeichnis der SQL-Dokumentation!](https://aka.ms/sqldocsurvey)
 
 JSON ist ein beliebtes Textdatenformat, das zum Austauschen von Daten in modernen Webanwendungen und mobilen Anwendungen verwendet wird. JSON wird auch zum Speichern von unstrukturierten Daten in Protokolldateien oder NoSQL-Datenbanken wie Microsoft Azure Cosmos DB verwendet. Viele REST-Webdienste geben Ergebnisse zurück, die als JSON-Text formatiert sind, oder akzeptieren Daten, die im JSON-Format formatiert sind. Beispielsweise verfügen die meisten Azure-Dienste wie Azure Search, Azure Storage und Azure Cosmos DB über REST-Endpunkte, die JSON zurückgeben oder verarbeiten. JSON ist auch das hauptsächliche Format zum Austauschen von Daten zwischen Webseiten und Webservern über AJAX-Aufrufe. 
 

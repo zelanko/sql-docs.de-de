@@ -1,7 +1,7 @@
 ---
-title: 'Schritt 3: Testen des Lektion 3-Tutorialpakets | Microsoft-Dokumentation'
+title: 'Schritt 3: Testen des Tutorialpakets aus Lektion 3 | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/04/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,18 +11,19 @@ ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ca00f40146d5019f770e3141d3961e40ed526ccc
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 31f08374ad46929c52305cb6558b603a03b439bd
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559158"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143340"
 ---
-# <a name="lesson-3-3---testing-the-lesson-3-tutorial-package"></a>Lektion 3-3: Testen des Lektion 3-Tutorialpakets
-In dieser Aufgabe führen Sie das Paket Lesson 3.dtsx aus. Beim Ausführen des Pakets werden im Fenster Protokollereignisse die Protokolleinträge aufgelistet, die in die Protokolldatei geschrieben werden. Nachdem vom Paket die Ausführung abgeschlossen wurde, überprüfen Sie den Inhalt der Protokolldatei, die vom Protokollanbieter generiert worden ist.  
+# <a name="lesson-3-3-test-the-lesson-3-tutorial-package"></a>Lektion 3.3: Testen des Tutorialpakets aus Lektion 3
+
+In dieser Aufgabe sollen Sie das Paket **Lesson 3.dtsx** ausführen. Während das Paket ausgeführt wird, werden im Fenster **Protokollereignisse** die Protokollereignisse nach Protokollanbieter aufgelistet, die SSIS in die Protokolldatei schreibt. Wenn die Ausführung des Pakets beendet wird, können Sie die Inhalte der Protokolldatei abrufen.  
   
-## <a name="checking-the-package-layout"></a>Überprüfen des Paketlayouts  
-Bevor Sie das Paket testen, sollten Sie überprüfen, ob Ablaufsteuerung und Datenfluss im Paket aus Lektion 3 die in den folgenden Diagrammen gezeigten Objekte enthalten. Die Ablaufsteuerung sollte mit der Ablaufsteuerung in Lektion 2 übereinstimmen. Der Datenfluss sollte mit dem Datenfluss in den Lektionen 1 und 2 übereinstimmen.  
+## <a name="check-the-package-layout"></a>Überprüfen des Paketlayouts  
+Bevor Sie das Paket testen, sollten Sie überprüfen, ob Ablaufsteuerung und Datenfluss im Paket aus Lektion 3 den in den folgenden Diagrammen gezeigten Objekte ähneln. Die Ablaufsteuerung sollte dieselbe wie im Paket aus Lektion 2 sein, und der Datenfluss sollte derselbe wie in den Paketen aus Lektion 1 und 2 sein.  
   
 **Ablaufsteuerung**  
   
@@ -32,19 +33,19 @@ Bevor Sie das Paket testen, sollten Sie überprüfen, ob Ablaufsteuerung und Dat
   
 ![Datenfluss im Paket](../integration-services/media/task9lesson1data.gif "Datenfluss im Paket")  
   
-### <a name="to-run-the-lesson-3-tutorial-package"></a>So führen Sie das Tutorialpaket aus Lektion 3 aus  
+## <a name="run-the-lesson-3-tutorial-package"></a>Ausführen des Tutorialpakets aus Lektion 3  
   
-1.  Klicken Sie im Menü SSIS auf Protokollereignisse.  
+1.  Klicken Sie im Menü „SSIS“ auf **Protokollereignisse**.  
   
-2.  Klicken Sie im Menü **Debuggen** auf **Debuggen starten**.  
+2.  Klicken Sie im Menü **Debuggen** auf **Start Debugging** (Debuggen starten).  
   
-3.  Klicken Sie nach Ausführen des Pakets im Menü **Debuggen** auf **Debuggen beenden**.  
+3.  Klicken Sie nach dem Ausführen des Pakets im Menü **Debuggen** auf **Stop Debugging** (Debuggen beenden).  
   
-### <a name="to-examine-the-generated-log-file"></a>So überprüfen Sie die generierte Protokolldatei  
+## <a name="examine-the-generated-log-file"></a>Überprüfen der generierten Protokolldatei  
   
 -   Öffnen Sie mithilfe von Editor oder einem anderen Text-Editor die Datei TutorialLog.log.  
   
--   Obwohl dieses Tutorial die Semantik der Informationen, die für die Ereignisse **PipelineExecutionPlan** und **PipelineExecutionTrees** generiert wurden, nicht abdeckt, können Sie erkennen, dass in der ersten Zeile die Informationsfelder aufgeführt sind, die auf der Registerkarte **Details** des Dialogfelds **SSIS-Protokolle konfigurieren** angegeben wurden. Darüber hinaus können Sie überprüfen, dass die zwei von Ihnen ausgewählten Ereignisse (PipelineExecutionPlan und PipelineExecutionTrees) für jede Iteration der Foreach-Schleife protokolliert worden sind.  
+-   Eine vollständige Beschreibung der für die Ereignisse **PipelineExecutionPlan** und **PipelineExecutionTrees** erstellten Informationen kann in diesem Tutorial nicht abgedeckt werden.  In der Protokolldatei werden in der ersten Zeile die auf der Registerkarte **Details** des Dialogfelds **SSIS-Protokolle konfigurieren** angegebenen Informationsfelder angezeigt. Darüber hinaus sollten Sie sehen, dass [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] die zwei von Ihnen ausgewählten Ereignisse (**PipelineExecutionPlan** und **PipelineExecutionTrees**) für jede Iteration der Foreach-Schleife protokolliert hat.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
 [Lektion 4: Hinzufügen der Fehlerflussumleitung mit SSIS](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  

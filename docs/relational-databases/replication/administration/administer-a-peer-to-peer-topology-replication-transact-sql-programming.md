@@ -15,12 +15,12 @@ ms.assetid: 4d0fa941-f9ea-4a14-aed9-34df593fc6f2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a3a71b93887b604dcd258143fde9e78dffb09cd3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2ba35386a91e6660b69b1e00c31da95e405b8627
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851973"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126200"
 ---
 # <a name="administer-a-peer-to-peer-topology-replication-transact-sql-programming"></a>Verwalten einer Peer-zu-Peer-Topologie (Replikationsprogrammierung mit Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47851973"
   
 4.  Kopieren Sie die Daten mithilfe des [Hilfsprogramms "bcp"](../../../tools/bcp-utility.md)in einem Massenkopiervorgang für die neue Tabelle manuell in alle Knoten.  
   
-5.  Führen Sie [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) aus, um den neuen Artikel in jedem Knoten in der Topologie zu erstellen. Weitere Informationen finden Sie unter [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+5.  Führen Sie [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) aus, um den neuen Artikel in jedem Knoten in der Topologie zu erstellen. Weitere Informationen finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
   
     > [!NOTE]  
     >  Nach dem Ausführen von [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) fügt die Replikation den Artikel automatisch den Abonnements in der Topologie hinzu.  
@@ -63,8 +63,8 @@ ms.locfileid: "47851973"
   
  [!code-sql[HowTo#sp_addp2particle_createarticle](../../../relational-databases/replication/codesnippet/tsql/administer-a-peer-to-pee_3.sql)]  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Verwaltung &#40;Replikation&#41;](../../../relational-databases/replication/administration/administration-replication.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Häufig gestellte Fragen für Replikationsadministratoren](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Sichern und Wiederherstellen von SQL Server-Datenbanken](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Peer-zu-Peer-Transaktionsreplikation](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   

@@ -1,7 +1,7 @@
 ---
 title: Identität und Zugriffssteuerung (Replikation) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 4da0e793-1ee4-4f69-a80b-45c6732a238d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 50e746f05ba3d38a99aa8ccd1c783aec9be87f40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9bbdc659100477b7a4d5edae427ba74c76365ea3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836533"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135980"
 ---
 # <a name="identity-and-access-control-replication"></a>Identität und Zugriffssteuerung (Replikation)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47836533"
   
 -   Agentsicherheit  
   
-     Das Sicherheitsmodell des Replikations-Agents ermöglicht die präzise Steuerung der Konten, unter denen Replikations-Agents ausgeführt werden und Verbindungen herstellen. Ausführliche Informationen zum agentbezogenen Sicherheitsmodell finden Sie unter [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md). Informationen zum Festlegen von Anmeldungen und Kennwörtern für Agents finden Sie unter [Verwalten von Anmeldeinformationen und Kennwörtern bei der Replikation](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md).  
+     Das Sicherheitsmodell des Replikations-Agents ermöglicht die präzise Steuerung der Konten, unter denen Replikations-Agents ausgeführt werden und Verbindungen herstellen. Ausführliche Informationen zum agentbezogenen Sicherheitsmodell finden Sie unter [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md). 
   
 -   Verwaltungsrollen  
   
@@ -47,10 +47,13 @@ ms.locfileid: "47836533"
  Bei der Definition eines Artikels können Sie lediglich die Spalten veröffentlichen, die für die Veröffentlichung relevant sind, und diejenigen auslassen, die nicht relevant sind oder vertrauliche Daten enthalten. Wenn Sie beispielsweise die **Customer** -Tabelle aus der Adventure Works-Datenbank für Vertriebsmitarbeiter im Außendienst veröffentlichen, können Sie die **AnnualSales** -Spalte auslassen, die möglicherweise nur für leitende Mitarbeiter im Unternehmen relevant ist.  
   
  Durch das Filtern von veröffentlichten Daten können Sie den Zugriff auf Daten einschränken und die Daten angeben, die auf dem Abonnenten zur Verfügung stehen. Sie können beispielsweise die **Customer** -Tabelle so filtern, dass Geschäftspartner nur die Informationen zu den Kunden erhalten, deren **ShareInfo** -Spalte den Wert "yes" aufweist. Im Fall von Mergereplikationen gelten besondere Sicherheitsüberlegungen, wenn Sie einen parametrisierten Filter verwenden, der HOST_NAME() einschließt. Weitere Informationen finden Sie im Abschnitt über das Filtern mit HOST_NAME() unter [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+
+## <a name="manage-logins-and-passwords-in-replication"></a>Verwalten von Anmeldeinformationen und Kennwörtern bei der Replikation
+Geben Sie bei der Replikationskonfiguration Anmeldeinformationen und Kennwörter für Replikations-Agents an. Nach der Replikationskonfiguration können Sie die Anmeldenamen und -kennwörter ändern. Weitere Informationen finden Sie unter [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md). Wenn Sie das Kennwort für ein von einem Replikations-Agent verwendetes Konto ändern, führen Sie [sp_changereplicationserverpasswords &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md) aus.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Sicherheit und Schutz &#40;Replikation&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)   
- [Sicherheitsübersicht &#40;Replikation&#41;](../../../relational-databases/replication/security/security-overview-replication.md)   
- [Mindern von Bedrohungen und Sicherheitsrisiken &#40;Replication&#41;](../../../relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Mindern von Bedrohungen und Sicherheitsrisiken &#40;Replikation&#41;](../../../relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md) [Sicherheitsmodell des Replikations-Agents](../../../relational-databases/replication/security/replication-agent-security-model.md)   
+ [Bewährte Methoden für die Replikationssicherheit](../../../relational-databases/replication/security/replication-security-best-practices.md)   
+
   
   

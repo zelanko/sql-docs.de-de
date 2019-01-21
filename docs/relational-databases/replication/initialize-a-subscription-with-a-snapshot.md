@@ -14,20 +14,20 @@ ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d5532e7916f5713dea0dde30f5afb01634f86367
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d17b39369f19736e587fc82507a82fe02f85590
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684748"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124260"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>Initialisieren eines Abonnements mit einer Momentaufnahme
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Nachdem eine Veröffentlichung erstellt wurde, wird normalerweise eine Anfangsmomentaufnahme erstellt und in den Momentaufnahmeordner kopiert (dies erfolgt standardmäßig bei Mergeveröffentlichungen, die mit dem Assistenten für neue Veröffentlichung erstellt wurden). Die Momentaufnahme wird dann während der Erstsynchronisierung des Abonnements vom Verteilungs-Agent (für Transaktions- und Snapshotveröffentlichungen) oder vom Merge-Agent (für Mergeveröffentlichungen) auf den Abonnenten angewendet. Der Momentaufnahmeprozess hängt vom Veröffentlichungstyp ab:  
   
--   Handelt es sich um eine Momentaufnahme für eine Momentaufnahmeveröffentlichung, eine Transaktionsveröffentlichung oder eine Mergeveröffentlichung, die keine parametrisierte Filter verwendet, enthält die Momentaufnahme das Schema und die Daten in BCP-Dateien (Bulk Copy Program, Massenkopierprogramm) sowie Einschränkungen, erweiterte Eigenschaften, Indizes, Trigger und die für die Replikation erforderlichen Systemtabellen. Weitere Informationen zum Erstellen und Anwenden einer Momentaufnahme finden Sie unter [Erstellen und Anwenden der Momentaufnahme](../../relational-databases/replication/create-and-apply-the-snapshot.md).  
+-   Handelt es sich um eine Momentaufnahme für eine Momentaufnahmeveröffentlichung, eine Transaktionsveröffentlichung oder eine Mergeveröffentlichung, die keine parametrisierte Filter verwendet, enthält die Momentaufnahme das Schema und die Daten in BCP-Dateien (Bulk Copy Program, Massenkopierprogramm) sowie Einschränkungen, erweiterte Eigenschaften, Indizes, Trigger und die für die Replikation erforderlichen Systemtabellen. Weitere Informationen zum Erstellen und Anwenden einer Momentaufnahme finden Sie unter [Erstellen und Anwenden der Momentaufnahme](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
--   Handelt es sich um eine Momentaufnahme für eine Mergeveröffentlichung, die parametrisierte Filter verwendet, wird die Momentaufnahme mit einem zweiteiligen Prozess erstellt. Zuerst wird eine Schemamomentaufnahme erstellt, die die Replikationsskripts und das Schema der veröffentlichten Objekte enthält, nicht jedoch die Daten. Jedes Abonnement wird dann mit einer Momentaufnahme initialisiert, die die aus der Schemamomentaufnahme kopierten Skripts und das Schema sowie die Daten enthält, die zur Partition des Abonnements gehören. Weitere Informationen finden Sie unter [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+-   Handelt es sich um eine Momentaufnahme für eine Mergeveröffentlichung, die parametrisierte Filter verwendet, wird die Momentaufnahme mit einem zweiteiligen Prozess erstellt. Zuerst wird eine Schemamomentaufnahme erstellt, die die Replikationsskripts und das Schema der veröffentlichten Objekte enthält, nicht jedoch die Daten. Jedes Abonnement wird dann mit einer Momentaufnahme initialisiert, die die aus der Schemamomentaufnahme kopierten Skripts und das Schema sowie die Daten enthält, die zur Partition des Abonnements gehören. Weitere Informationen finden Sie unter [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
  Die Momentaufnahme besteht aus verschiedenen Dateien, die vom Replikationstyp und den Artikeln in der Veröffentlichung abhängen. Diese Dateien werden in den Standardmomentaufnahmeordner kopiert, der beim Konfigurieren des Verteilers angegeben wurde, oder in den beim Erstellen der Veröffentlichung angegeben alternativen Momentaufnahmeordner.  
   
@@ -41,15 +41,15 @@ ms.locfileid: "47684748"
 ## <a name="snapshot-options"></a>Momentaufnahmeoptionen  
  Zum Initialisieren eines Abonnements mit einer Momentaufnahme stehen verschiedene Optionen zur Verfügung. Folgende Aktionen sind möglich:  
   
--   Geben Sie anstelle des oder zusätzlich zum Speicherort des Standardmomentaufnahmeordners einen alternativen Speicherort für den Momentaufnahmeordner an. Weitere Informationen finden Sie unter [Alternate Snapshot Folder Locations](../../relational-databases/replication/alternate-snapshot-folder-locations.md).  
+-   Geben Sie anstelle des oder zusätzlich zum Speicherort des Standardmomentaufnahmeordners einen alternativen Speicherort für den Momentaufnahmeordner an. Weitere Informationen finden Sie unter [Ändern von Momentaufnahmeoptionen](../../relational-databases/replication/snapshot-options.md).  
   
--   Komprimieren Sie Momentaufnahmen zum Speichern auf Wechselmedien oder zum Übertragen in einem langsamen Netzwerk. Weitere Informationen finden Sie unter [Compressed Snapshots](../../relational-databases/replication/compressed-snapshots.md).  
+-   Komprimieren Sie Momentaufnahmen zum Speichern auf Wechselmedien oder zum Übertragen in einem langsamen Netzwerk. Weitere Informationen finden Sie unter [Compressed Snapshots](../../relational-databases/replication/snapshot-options.md#compressed-snapshots). 
+
+-   Führen Sie vor oder nach dem Anwenden der Momentaufnahme Transact-SQL-Skripts aus. Weitere Informationen finden Sie unter [Ausführen von Skripts vor und nach dem Anwenden der Momentaufnahme](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).  
   
--   Führen Sie vor oder nach dem Anwenden der Momentaufnahme Transact-SQL-Skripts aus. Weitere Informationen finden Sie unter [Ausführen von Skripts vor und nach dem Anwenden der Momentaufnahme](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md).  
+-   Übertragen Sie Momentaufnahmedateien über FTP (File Transfer Protocol). Weitere Informationen finden Sie unter [Übertragen von Momentaufnahmen über FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
--   Übertragen Sie Momentaufnahmedateien über FTP (File Transfer Protocol). Weitere Informationen finden Sie unter [Übertragen von Momentaufnahmen über FTP](../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
-  
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Initialize a Subscription](../../relational-databases/replication/initialize-a-subscription.md)   
  [Sichern des Momentaufnahmeordners](../../relational-databases/replication/security/secure-the-snapshot-folder.md)  
   

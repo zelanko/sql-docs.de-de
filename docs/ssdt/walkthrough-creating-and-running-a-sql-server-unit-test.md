@@ -11,12 +11,12 @@ ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 71be318c40c5776440bf427cad57ed3fb903e55a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a8eb48a0c3147b61eb57b6a8035765ed73850efa
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540938"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143590"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Exemplarische Vorgehensweise: Erstellen und Ausführen eines SQL Server-Komponententests
 In dieser exemplarischen Vorgehensweise erstellen Sie einen SQL Server-Komponententest, mit dem das Verhalten mehrerer gespeicherter Prozeduren überprüft wird. Mithilfe von SQL Server-Komponententests können Codefehler, die u.U. ein fehlerhaftes Anwendungsverhalten verursachen, leichter identifiziert werden. SQL Server-Komponententests und -Anwendungstests können im Rahmen einer automatisierten Testreihe ausgeführt werden.  
@@ -274,7 +274,7 @@ Wenn Sie F5 drücken, wird die Datenbank standardmäßig auf einer LocalDB-Daten
   
 2.  Klicken Sie mit der rechten Maustaste auf eine der gespeicherten Prozeduren und dann auf **Komponententests erstellen**, um das Dialogfeld **Komponententests erstellen** anzuzeigen.  
   
-3.  Aktivieren Sie die Kontrollkästchen für alle fünf gespeicherten Prozeduren: **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder**und **Sales.uspShowOrderDetails**.  
+3.  Aktivieren Sie die Kontrollkästchen für alle fünf gespeicherten Prozeduren: **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder** und **Sales.uspShowOrderDetails**.  
   
 4.  Wählen Sie in der Dropdownliste **Projekt** die Option **Neues Visual C#-Testprojekt erstellen** aus.  
   
@@ -723,7 +723,7 @@ Zu Testbeginn wird davon ausgegangen, dass die Datenbank einen fehlerfreien Zust
     |--------|-------------------|  
     |Sales_uspPlaceNewOrderTest|Erfolgreich|  
     |Sales_uspShowOrderDetailsTest|Erfolgreich|  
-    |Sales_uspFillOrderTest|Verursacht folgenden Fehler: "ScalarValueCondition-Bedingung (scalarValueCondition2) Fehler: ResultSet 1 Zeile 1 Spalte 1: Werte stimmen nicht überein, tatsächlich '-100' erwartet '100'." Dieser Fehler tritt auf, weil die Definition der gespeicherten Prozedur einen geringfügigen Fehler enthält.|  
+    |Sales_uspFillOrderTest|Es tritt der folgende Fehler auf: "Fehler bei ScalarValueCondition Condition (scalarValueCondition2): ResultSet 1 Zeile 1 Spalte 1: die Werte stimmen nicht überein, tatsächlich '-100', erwartet '100'. " Dieser Fehler tritt auf, weil die Definition der gespeicherten Prozedur einen geringfügigen Fehler enthält.|  
   
     Im nächsten Schritt berichtigen Sie den Fehler und führen den Text erneut aus.  
   
@@ -950,7 +950,7 @@ Zum Erstellen und Überprüfen eines negativen Tests führen Sie folgende Aufgab
   
     Der Test schlägt mit folgender Fehlermeldung fehl:  
   
-    **Die Testmethode „TestProject1.SqlServerUnitTests1.Sales_uspCancelOrderTest“ hat eine Ausnahme ausgelöst: System.Data.SqlClient.SqlException: Sie können nur offene Aufträge abbrechen.**  
+    **Test method TestProject1.SqlServerUnitTests1.Sales_uspCancelOrderTest threw exception: System.Data.SqlClient.SqlException: You can only cancel open orders. (Die Testmethode „TestProject1.SqlServerUnitTests1.Sales_uspCancelOrderTest“ hat eine Ausnahme ausgelöst: System.Data.SqlClient.SqlException: Sie können offene Aufträge abbrechen.)**  
   
     Im nächsten Schritt ändern Sie den Code, um anzugeben, dass die Ausnahme erwartet wird.  
   
@@ -968,7 +968,7 @@ Zum Erstellen und Überprüfen eines negativen Tests führen Sie folgende Aufgab
     Sie geben an, dass Sie eine bestimmte Ausnahme erwarten. Optional können Sie eine bestimmte Fehlernummer angeben. Wenn Sie dieses Attribut nicht hinzufügen, schlägt der Komponententest fehl, und im Fenster "Testergebnisse" wird eine Meldung angezeigt.  
   
     > [!IMPORTANT]  
-    > Derzeit wird das ExpectedSqlException-Attribut in Visual Studio 2012 nicht unterstützt. Wie Sie dieses Problem umgehen können, erfahren Sie unter [Datenbankkomponententest "Erwarteter Fehler" kann nicht ausgeführt werden](https://social.msdn.microsoft.com/Forums/en-US/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345)(möglicherweise nur in englischer Sprache).  
+    > Derzeit wird das ExpectedSqlException-Attribut in Visual Studio 2012 nicht unterstützt. Wie Sie dieses Problem umgehen können, erfahren Sie unter [Datenbankkomponententest "Erwarteter Fehler" kann nicht ausgeführt werden](https://social.msdn.microsoft.com/Forums/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345)(möglicherweise nur in englischer Sprache).  
   
 3.  Klicken Sie im Menü „Datei“ auf „SqlServerUnitTests1.cs“ speichern.  
   
@@ -987,9 +987,9 @@ In einem typischen Projekt würden Sie zusätzliche Komponententests definieren,
   
 Nachdem Sie eine Basis geschaffen haben, können Sie Datenbankobjekte erstellen, anpassen und anschließend geeignete Tests erstellen, um festzustellen, ob sich eine Änderung auf das erwartete Verhalten auswirken würde.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Erstellen und Definieren von SQL Server-Komponententests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Überprüfen des Datenbankcodes mithilfe von SQL Server-Komponententests](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-[Gewusst wie: Erstellen eines leeren SQL Server-Komponententests](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  
-[Gewusst wie: Konfigurieren der Ausführung von SQL Server-Komponententests](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
+[Vorgehensweise: Erstellen eines leeren SQL Server-Komponententests](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  
+[Vorgehensweise: Konfigurieren der Ausführung von SQL Server-Komponententests](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
   

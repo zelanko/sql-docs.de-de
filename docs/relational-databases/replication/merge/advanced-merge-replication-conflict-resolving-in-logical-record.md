@@ -14,18 +14,18 @@ ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e196af0c5c2e71eb544426183300959be3bedab8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4aee8234b48fca2919f75a1cbf999e0dfb3c49c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776138"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128900"
 ---
 # <a name="advanced-merge-replication-conflict---resolving-in-logical-record"></a>Erweiterte Konflikte in Mergereplikationen – Lösen von Konflikten in logischen Datensätzen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Thema werden die verschiedenen Kombinationsmöglichkeiten aus Konflikterkennung und Konfliktlösung bei der Verwendung logischer Datensätze behandelt. Konflikte treten bei der Mergereplikation auf, wenn ein und dieselben Daten von mehreren Knoten geändert werden oder wenn die Mergereplikation auf bestimmte Arten von Fehlern stößt, wie z. B. Einschränkungsverletzungen beim Replizieren von Änderungen. Weitere Informationen zur Konflikterkennung und -lösung finden Sie unter [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
- Informationen zum Eingeben der Konfliktnachverfolgungs- und -lösungsebene für einen Artikel finden Sie unter [Geben Sie den Konflikt nachverfolgen und-lösungsebene für Mergeveröffentlichungen](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
+ Informationen zum Angeben der Konfliktnachverfolgungs- und -lösungsebene für einen Artikel finden Sie unter [Modify Merge Replication options (Ändern von Mergereplikationsoptionen)](../../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
   
 ## <a name="conflict-detection"></a>Konflikterkennung  
  Wie Konflikte bei logischen Datensätzen ermittelt werden, hängt von den folgenden beiden Artikeleigenschaften ab: **column_tracking** und **logical_record_level_conflict_detection**. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] und höhere Versionen unterstützen ebenfalls die Erkennung auf der logischen Datensatzebene.  
@@ -106,7 +106,7 @@ ms.locfileid: "47776138"
   
  ![Reihe von Tabellen mit Änderungen an verknüpften Zeilen](../../../relational-databases/replication/merge/media/logical-records-08.gif "Series of tables showing changes to related rows")  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)  
   
   

@@ -32,12 +32,12 @@ ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c3920cdf30575d5b51948fe7789d568a1dacc961
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41b6c0009c2cfc3c83a4326875c13083875166b3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596219"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124580"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,9 +54,9 @@ ms.locfileid: "47596219"
   
      Hier definieren Sie die Nutzlast, die auf dem Endpunkt unterstützt wird. Für die Nutzlast sind folgende unterstützte Typen möglich: [!INCLUDE[tsql](../../includes/tsql-md.md)], Service Broker und Datenbankspiegelung. Außerdem geben Sie hier sprachspezifische Informationen ein.  
   
-> **HINWEIS:** Native XML-Webdienste (SOAP-/HTTP-Endpunkte) wurden in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] entfernt.  
+> **HINWEIS:** Systemeigene XML-Webdienste (SOAP-/HTTP-Endpunkte) wurden in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] entfernt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -145,10 +145,10 @@ FOR DATABASE_MIRRORING (
   
  Die folgenden Argumente gelten nur für die TCP-Option.  
   
- LISTENER_PORT **=***listenerPort*  
+ LISTENER_PORT **=**_listenerPort_  
  Gibt die Portnummer an, die für Verbindungen vom Service Broker-TCP/IP überwacht wird. Gemäß der Konvention wird 4022 verwendet, aber jede Zahl zwischen 1024 und 32767 ist gültig.  
   
- LISTENER_IP **=** ALL | **(***4-part-ip* **)** | **(** "* ip_address_v6*" **)**  
+ LISTENER_IP **=** ALL | **(**_4-part-ip_ **)** | **(** "*IP-Adresse_V6*" **)**  
  Gibt die IP-Adresse an, auf der der Endpunkt lauscht. Der Standardwert ist ALL. Das bedeutet, dass die Überwachung lässt eine Verbindung an einer gültigen IP-Adresse zulässt.  
   
  Wenn Sie die Datenbankspiegelung mit einer IP-Adresse anstelle eines vollqualifizierten Domänennamens (`ALTER DATABASE SET PARTNER = partner_IP_address` oder `ALTER DATABASE SET WITNESS = witness_IP_address`) konfigurieren, müssen Sie beim Erstellen von Spiegelungsendpunkten `LISTENER_IP =IP_address` anstelle von `LISTENER_IP=ALL` angeben.  
@@ -230,7 +230,7 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  Nachrichten für externe Dienste werden verworfen. Dies ist die Standardeinstellung.  
   
- MESSAGE_FORWARD_SIZE **=***forward_size*  
+ MESSAGE_FORWARD_SIZE **=**_Weiterleitungsgröße_  
  Gibt an, wie viel Speicherplatz dem Endpunkt zum Speichern weiterzuleitender Nachrichten maximal in MB zugeordnet werden soll.  
   
  **Optionen für DATABASE_MIRRORING**  

@@ -14,12 +14,12 @@ ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 791c9fc5b7a411a094d6fedc8aa16290baeea234
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aaf073341709e2c612f89d70f566f3b2dd09283d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763348"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130330"
 ---
 # <a name="best-practices-for-replication-administration"></a>Bewährte Methoden für die Replikationsverwaltung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,16 +114,16 @@ ms.locfileid: "47763348"
 ## <a name="monitor-the-replication-topology"></a>Überwachen der Replikationstopologie  
  Nachdem die Replikationstopologie eingerichtet wurde sowie Schwellenwerte und Warnungen konfiguriert wurden, sollte die Replikation regelmäßig überwacht werden. Die Überwachung einer Replikationstopologie ist ein wichtiger Aspekt bei der Bereitstellung der Replikation. Da die Replikationsaktivität verteilt ist, ist es außerordentlich wichtig, die Aktivität und den Status auf allen an der Replikation beteiligten Computern nachzuverfolgen. Zum Überwachen der Replikation stehen die folgenden Tools zur Verfügung:  
   
--   Der Replikationsmonitor ist das wichtigste Tool bei der Überwachung der Replikation. Er ermöglicht es Ihnen, die allgemeine Integrität der Replikationstopologie zu überwachen. Weitere Informationen finden Sie unter [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md).  
+-   Der Replikationsmonitor ist das wichtigste Tool bei der Überwachung der Replikation. Er ermöglicht es Ihnen, die allgemeine Integrität der Replikationstopologie zu überwachen. Weitere Informationen finden Sie unter [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md).  
   
--   [!INCLUDE[tsql](../../../includes/tsql-md.md)] und Replikationsverwaltungsobjekte (RMO) stellen eine Schnittstelle zur Überwachung der Replikation bereit. Weitere Informationen finden Sie unter [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md).  
+-   [!INCLUDE[tsql](../../../includes/tsql-md.md)] und Replikationsverwaltungsobjekte (RMO) stellen eine Schnittstelle zur Überwachung der Replikation bereit. Weitere Informationen finden Sie unter [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md).  
   
 -   Auch der Systemmonitor kann bei der Überwachung der Replikationsleistung hilfreich sein. Weitere Informationen finden Sie unter [Monitoring Replication with System Monitor](../../../relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md).  
   
 ## <a name="validate-data-periodically"></a>Regelmäßige Überprüfung der Daten  
  Eine Datenüberprüfung ist bei der Replikation zwar nicht erforderlich, es wird jedoch empfohlen, die Überprüfung regelmäßig für die Transaktions- und die Mergereplikation auszuführen. Mit der Überprüfung stellen Sie sicher, dass die Daten auf dem Abonnenten mit denen auf dem Verleger übereinstimmen. Eine erfolgreiche Überprüfung bedeutet, dass zu diesem Zeitpunkt alle Änderungen vom Verleger auf den Abonnenten repliziert wurden (und vom Abonnenten auf den Verleger, wenn Updates auf dem Abonnenten unterstützt werden) und dass die beiden Datenbanken synchron sind.  
   
- Es wird empfohlen, die Überprüfung in Übereinstimmung mit dem Sicherungszeitplan der Veröffentlichungsdatenbank auszuführen. Wenn beispielsweise einmal wöchentlich eine vollständige Sicherung der Veröffentlichungsdatenbank erfolgt, könnte die Überprüfung einmal wöchentlich nach Abschluss der Sicherung ausgeführt werden. Weitere Informationen finden Sie unter [Überprüfen von replizierten Daten](../../../relational-databases/replication/validate-replicated-data.md).  
+ Es wird empfohlen, die Überprüfung in Übereinstimmung mit dem Sicherungszeitplan der Veröffentlichungsdatenbank auszuführen. Wenn beispielsweise einmal wöchentlich eine vollständige Sicherung der Veröffentlichungsdatenbank erfolgt, könnte die Überprüfung einmal wöchentlich nach Abschluss der Sicherung ausgeführt werden. Weitere Informationen finden Sie unter [Überprüfen von replizierten Daten](../../../relational-databases/replication/validate-data-at-the-subscriber.md).  
   
 ## <a name="use-agent-profiles-to-change-agent-parameters-if-necessary"></a>Verwenden von Agentprofilen zum Ändern von Agentparameter bei Bedarf  
  Agentprofile stellen eine praktische Methode zum Festlegen von Parametern des Replikations-Agents dar. Parameter können auch in der Befehlszeile des Agents angegeben werden. Es ist jedoch in der Regel besser, ein vordefiniertes Agentprofil zu verwenden oder ein neues Profil zu erstellen, wenn Sie den Wert eines Parameters ändern müssen. Wenn Sie z. B. die Mergereplikation verwenden und ein Abonnent von einer Breitbandverbindung auf eine DFÜ-Verbindung wechselt, sollten Sie das **slow link** -Profil für den Merge-Agent verwenden. Dieses Profil verwendet eine Reihe von Parametern, die sich für langsame Datenverbindungen besser eigenen. Weitere Informationen finden Sie unter [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
@@ -149,7 +149,7 @@ ms.locfileid: "47763348"
   
  Weitere Informationen finden Sie unter [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Verwaltung &#40;Replikation&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Häufig gestellte Fragen für Replikationsadministratoren](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
   

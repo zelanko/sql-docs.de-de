@@ -14,12 +14,12 @@ ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 20ebb8bc0658b7d31388d6f514102fba8db4a8e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12fbfd6c6e6ba6e6a3bb015aed5375553fcd735f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634308"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131900"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>Synchronisieren eines Abonnements mit der Synchronisierungsverwaltung von Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47634308"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>So aktivieren Sie die Synchronisierung von Pullabonnements mithilfe der Synchronisierungsverwaltung von Windows  
   
-1.  Wählen Sie im Dialogfeld **Abonnementeigenschaften – \<Subscriber>: \<SubscriptionDatabase>** auf der Seite **Allgemein** für die Option **Synchronisierungsverwaltung von Windows verwenden** den Wert **Aktivieren** aus.  
+1.  Wählen Sie auf der Seite **Allgemein** im Dialogfeld **Abonnenteigenschaften – \<Abonnent>: \<Abonnementdatenbank>** für die Option **Synchronisierungsverwaltung von Windows verwenden** den Wert **Aktivieren** aus.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -99,7 +99,7 @@ ms.locfileid: "47634308"
   
 ### <a name="to-use-the-interactive-resolver"></a>So verwenden Sie den interaktiven Konfliktlöser  
   
-1.  Aktivieren Sie die Verwendung des interaktiven Konfliktlösers für den Artikel und das Abonnement. Weitere Informationen finden Sie unter [Angeben von interaktiver Konfliktauflösung von Mergeartikeln](../../relational-databases/replication/publish/specify-interactive-conflict-resolution-for-merge-articles.md).  
+1.  Aktivieren Sie die Verwendung des interaktiven Konfliktlösers für den Artikel und das Abonnement. Weitere Informationen finden Sie unter [Specify Merge Replication properties (Angeben von Mergereplikationseigenschaften)](../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
   
 2.  Mit dem Beginn der Synchronisierung des Abonnements in der Synchronisierungsverwaltung wird der interaktive Konfliktlöser automatisch gestartet, wenn der interaktive Konfliktlöser aktiviert ist und bei einem oder mehreren Artikeln Konflikte bestehen. Der interaktive Konfliktlöser zeigt die Konflikte jeweils nacheinander an und schlägt eine Lösung für jeden Konflikt vor (basierend auf dem bei der Erstellung der Veröffentlichung und des Abonnements angegebenen Konfliktlösers).  
   
@@ -118,7 +118,7 @@ ms.locfileid: "47634308"
 > [!NOTE]  
 >  Bearbeitungen werden nur dann angewendet, wenn sie zur Zeile gehören, die für die Lösung ausgewählt wurde. Wenn Sie z. B. Bearbeitungen unter **Verleger**vornehmen und dann auf **Abonnenten akzeptieren**klicken, werden die Bearbeitungen verworfen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Interaktive Konfliktlösung](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)  
   
   

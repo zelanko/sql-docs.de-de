@@ -13,15 +13,15 @@ helpviewer_keywords:
 - piecemeal restores [SQL Server]
 - restoring [SQL Server], piecemeal restore scenario
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
-author: MikeRayMSFT
-ms.author: mikeray
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3b86bc0dec0924752c586b837b3f79d3c87e814e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 481146623145c2abc6e3e9c8ed5b971f614979e6
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759080"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242051"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Schrittweise Wiederherstellungen [SQL Server]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -121,7 +121,7 @@ ms.locfileid: "47759080"
   
 ### <a name="examples"></a>Beispiele  
   
--   [Beispiel: Schrittweise Wiederherstellung einer Datenbank &#40;einfaches Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [Beispiel: Schrittweise Wiederherstellung einer Datenbank &#40;Einfaches Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
 -   [Beispiel: Schrittweise Wiederherstellung nur bestimmter Dateigruppen &#40;einfaches Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
@@ -151,7 +151,7 @@ ms.locfileid: "47759080"
   
 -   [Beispiel: Schrittweise Wiederherstellung einer Datenbank &#40;Vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-full-recovery-model.md)  
   
--   [Beispiel: Schrittweise Wiederherstellung nur bestimmter Dateigruppen &#40;Vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
+-   [Beispiel: Schrittweise Wiederherstellung nur bestimmter Dateigruppen &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
 ## <a name="performing-a-piecemeal-restore-of-a-database-whose-recovery-model-has-been-switched-from-simple-to-full"></a>Ausführen einer schrittweisen Wiederherstellung einer Datenbank, deren Wiederherstellungsmodell von einfach in vollständig geändert wurde  
  Sie können eine schrittweise Wiederherstellung einer Datenbank ausführen, bei der nach der vollständigen Teil- oder Datenbanksicherung vom einfachen Wiederherstellungsmodell zum vollständigen Wiederherstellungsmodell gewechselt wurde. Angenommen, Sie führen in einer Datenbank die folgenden Schritte aus:  
@@ -174,7 +174,7 @@ ms.locfileid: "47759080"
   
 4.  Die differenzielle Sicherung, die nach allen anderen Sicherungen ausgeführt wird, die in der ursprünglichen schrittweisen Wiederherstellung gespeichert wurden, um die Daten bis zum ursprünglichen Wiederherstellungszeitpunkt wiederherzustellen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Anwenden von Transaktionsprotokollsicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Wiederherstellen einer SQL Server-Datenbank zu einem Zeitpunkt &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   

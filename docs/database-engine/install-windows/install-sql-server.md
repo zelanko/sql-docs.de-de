@@ -15,26 +15,29 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: c58fcf00f0feb3f6dc78f1df095a5934edfde6f3
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 89bb096f92bfd2ae5cc4da46ba99fb4ae41929d0
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600890"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300367"
 ---
 # <a name="install-sql-server"></a>Installieren von SQL Server
-
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  > [!div class="nextstepaction"]
+  > [Senden Sie uns Ihr Feedback zum Inhaltsverzeichnis der SQL-Dokumentation!](https://aka.ms/sqldocsurvey)
+
  
  Ab [!INCLUDE[sssql15](../../includes/sssql15-md.md)] ist [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] nur noch als 64-Bit-Anwendung verfügbar. Hier erhalten Sie wichtige Informationen zum Erhalt und zur Installation von SQL Server.
 
 ## <a name="installation-details"></a>Installationsdetails
   
-*  **Optionen**: Installation mithilfe des Installations-Assistenten, einer Eingabeaufforderung oder mithilfe von SysPrep
+*  **Optionen:** Installation mithilfe des Installations-Assistenten, einer Eingabeaufforderung oder mithilfe von SysPrep
  
-*  **Anforderungen**: Nehmen Sie sich vor der Installation etwas Zeit, um die Installationsanforderungen, die Überprüfung der Systemkonfiguration und die Sicherheitsaspekte in [Planen einer SQL Server-Installation](../../sql-server/install/planning-a-sql-server-installation.md) 
+*  **Anforderungen:** Nehmen Sie sich vor der Installation etwas Zeit, um die Installationsanforderungen, die Überprüfung der Systemkonfiguration und die Sicherheitsaspekte in [Planen einer SQL Server-Installation](../../sql-server/install/planning-a-sql-server-installation.md) durchzuarbeiten. 
 
-* **Vorgehensweise**: Umfassende Anweisungen zum Installationsvorgang finden Sie unter [Installation für SQL Server](../../database-engine/install-windows/installation-for-sql-server-2016.md)
+* **Vorgehensweise:** Umfassende Anweisungen zum Installationsvorgang finden Sie unter [Installation für SQL Server](../../database-engine/install-windows/installation-for-sql-server-2016.md).
 
 * **Beispieldatenbanken und Beispielcode**: 
     * Sie sind standardmäßig nicht als Teil der SQL Server-Installation installiert. 

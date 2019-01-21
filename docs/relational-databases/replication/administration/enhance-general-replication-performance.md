@@ -22,12 +22,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8d10759ad75dd1df48aa3f59d3c17ab9f632755d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e58d15af6605a8b50440fcff6e181a39c58098f4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539188"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134364"
 ---
 # <a name="enhance-general-replication-performance"></a>Verbessern der allgemeinen Replikationsleistung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "52539188"
   
     -   Für die Mergereplikation kann es effizienter sein, Geschäftslogikhandler zu verwenden. Weitere Informationen finden Sie unter [Ausführen von Geschäftslogik während der Mergesynchronisierung](../../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
   
-     Wenn Sie zur Wahrung der referenziellen Integrität Trigger in Tabellen verwenden, die für die Mergereplikation veröffentlicht werden, geben Sie die Verarbeitungsreihenfolge der Tabellen an. Auf diese Weise reduzieren Sie die Zahl der Wiederholungsversuche für den Merge-Agent. Weitere Informationen finden Sie unter [Angeben der Verarbeitungsreihenfolge von Mergeartikeln](../../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).  
+     Wenn Sie zur Wahrung der referenziellen Integrität Trigger in Tabellen verwenden, die für die Mergereplikation veröffentlicht werden, geben Sie die Verarbeitungsreihenfolge der Tabellen an. Auf diese Weise reduzieren Sie die Zahl der Wiederholungsversuche für den Merge-Agent. Weitere Informationen finden Sie unter [Specify merge replication options (Festlegen von Mergereplikationsoptionen)](../../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
   
 -   Schränken Sie die Verwendung des LOB-Datentyps (Large OBjects) ein.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "52539188"
   
      Wenn umfangreiche Änderungen an Abonnenten gesendet werden müssen, kann die Neuinitialisierung mit einer neuen Momentaufnahme schneller sein als das Verwenden der Replikation zum Verschieben der einzelnen Änderungen. Weitere Informationen finden Sie unter [Erneutes Initialisieren von Abonnements](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
-     Bei der Transaktionsreplikation zeigt der Replikationsmonitor folgende Informationen auf der Registerkarte **Nicht verteilte Befehle** an: die Anzahl der Transaktionen in der Verteilungsdatenbank, die noch nicht an einen Abonnenten verteilt wurden; und die geschätzte Zeit für das Verteilen dieser Transaktionen. Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für die einem Abonnement zugeordneten Agent &#40;Replikationsmonitor &#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     Bei der Transaktionsreplikation zeigt der Replikationsmonitor folgende Informationen auf der Registerkarte **Nicht verteilte Befehle** an: die Anzahl der Transaktionen in der Verteilungsdatenbank, die noch nicht an einen Abonnenten verteilt wurden; und die geschätzte Zeit für das Verteilen dieser Transaktionen. Weitere Informationen finden Sie unter [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="snapshot-considerations"></a>Überlegungen zu Momentaufnahmen  
   
@@ -144,8 +144,7 @@ ms.locfileid: "52539188"
   
      Das Komprimieren von Momentaufnahmedateien im alternativen Momentaufnahmeordner kann den Speicherplatzbedarf von Momentaufnahmen reduzieren und das Übertragen der Momentaufnahmedateien auf Wechselmedien vereinfachen.  
   
-     Komprimierte Momentaufnahmen können in einigen Fällen die Leistung beim Übertragen der Momentaufnahmedateien im Netzwerk verbessern. Beim Komprimieren der Momentaufnahme fällt jedoch zusätzlicher Verarbeitungsaufwand für den Momentaufnahme-Agent an, wenn die Momentaufnahmedateien erstellt werden, sowie für den Verteilungs-Agent oder den Merge-Agent, wenn die Momentaufnahmedateien angewendet werden. Dies könnte das Erstellen von Momentaufnahmen verlangsamen und den Zeitaufwand für das Anwenden einer Momentaufnahme in manchen Fällen erhöhen. Darüber hinaus kann das Übertragen komprimierter Momentaufnahmen bei einem Netzwerkausfall nicht wieder aufgenommen werden, weshalb sie sich nicht für unzuverlässige Netzwerke eignen. Wägen Sie die Vor- und Nachteile sorgfältig ab, wenn Sie komprimierte Momentaufnahmen in einem Netzwerk verwenden. Weitere Informationen finden Sie unter [Alternate Snapshot Folder Locations](../../../relational-databases/replication/alternate-snapshot-folder-locations.md) und [Compressed Snapshots](../../../relational-databases/replication/compressed-snapshots.md).  
-  
+     Komprimierte Momentaufnahmen können in einigen Fällen die Leistung beim Übertragen der Momentaufnahmedateien im Netzwerk verbessern. Beim Komprimieren der Momentaufnahme fällt jedoch zusätzlicher Verarbeitungsaufwand für den Momentaufnahme-Agent an, wenn die Momentaufnahmedateien erstellt werden, sowie für den Verteilungs-Agent oder den Merge-Agent, wenn die Momentaufnahmedateien angewendet werden. Dies könnte das Erstellen von Momentaufnahmen verlangsamen und den Zeitaufwand für das Anwenden einer Momentaufnahme in manchen Fällen erhöhen. Darüber hinaus kann das Übertragen komprimierter Momentaufnahmen bei einem Netzwerkausfall nicht wieder aufgenommen werden, weshalb sie sich nicht für unzuverlässige Netzwerke eignen. Wägen Sie die Vor- und Nachteile sorgfältig ab, wenn Sie komprimierte Momentaufnahmen in einem Netzwerk verwenden. Weitere Informationen finden Sie unter [Ändern von Momentaufnahmeoptionen](../../../relational-databases/replication/snapshot-options.md). 
 -   Initialisieren Sie ein Abonnement gegebenenfalls manuell.  
   
      In einigen Szenarien, wenn z. B. große Anfangsdatasets eine Rolle spielen, ist es vorteilhafter, ein Abonnement statt mit einer Momentaufnahme mit einer anderen Methode zu initialisieren. Weitere Informationen finden Sie unter [Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)initialisiert wird.  
@@ -154,11 +153,11 @@ ms.locfileid: "52539188"
   
 -   Reduzieren Sie die Meldungsstufen von Replikations-Agents, außer während erster Test-, Überwachungs- oder Debugverfahren.  
   
-     Reduzieren Sie den Parameter **-HistoryVerboseLevel** und den Parameter **-OutputVerboseLevel** der Verteilungs-Agents oder Merge-Agents. Dadurch wird die Anzahl der neuen Zeilen reduziert, die zum Nachverfolgen des Verlaufs und der Ausgabe von Agents eingefügt werden. Stattdessen werden frühere Verlaufsmeldungen mit dem gleichen Status auf die neuen Verlaufsinformationen aktualisiert. Erhöhen Sie die Meldungsstufen für das Testen, Überwachen und Debuggen, sodass Sie so viele Informationen zur Agent-Aktivität erhalten wie möglich.  
+     Reduzieren Sie den **–HistoryVerboseLevel** -Parameter und den **–OutputVerboseLevel** -Parameter der Verteilungs-Agents oder Merge-Agents. Dadurch wird die Anzahl der neuen Zeilen reduziert, die zum Nachverfolgen des Verlaufs und der Ausgabe von Agents eingefügt werden. Stattdessen werden frühere Verlaufsmeldungen mit dem gleichen Status auf die neuen Verlaufsinformationen aktualisiert. Erhöhen Sie die Meldungsstufen für das Testen, Überwachen und Debuggen, sodass Sie so viele Informationen zur Agent-Aktivität erhalten wie möglich.  
   
--   Verwenden Sie den Parameter **-MaxBCPThreads** des Momentaufnahmen-Agents, Merge-Agents und Verteilungs-Agents (die Anzahl der angegebenen Threads sollte die Anzahl der Prozessoren des Computers nicht überschreiten). Mit diesem Parameter wird die Anzahl der Massenkopiervorgänge angegeben, die beim Erstellen und Anwenden der Momentaufnahme parallel ausgeführt werden können.  
+-   Verwenden Sie den **–MaxBCPThreads** -Parameter des Momentaufnahme-Agents, Merge-Agents und Verteilungs-Agents (die Anzahl der angegebenen Threads sollte die Anzahl der Prozessoren des Computers nicht überschreiten). Mit diesem Parameter wird die Anzahl der Massenkopiervorgänge angegeben, die beim Erstellen und Anwenden der Momentaufnahme parallel ausgeführt werden können.  
   
--   Verwenden Sie den Parameter **-UseInprocLoader** des Verteilungs-Agents und des Merge-Agents (dieser Parameter kann nicht verwendet werden, wenn veröffentlichte Tabellen XML-Spalten enthalten). Durch diesen Parameter verwendet der Agent beim Anwenden der Momentaufnahme den BULK INSERT-Befehl.  
+-   Verwenden Sie den **–UseInprocLoader** -Parameter des Verteilungs-Agents und des Merge-Agents (dieser Parameter kann nicht verwendet werden, wenn veröffentlichte Tabellen XML-Spalten enthalten). Durch diesen Parameter verwendet der Agent beim Anwenden der Momentaufnahme den BULK INSERT-Befehl.  
   
  Agentparameter können in den Agentprofilen und in der Befehlszeile angegeben werden. Weitere Informationen finden Sie in den folgenden Themen:  
   

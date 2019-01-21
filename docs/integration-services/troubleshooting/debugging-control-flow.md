@@ -20,12 +20,12 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fcc1dd9aa113c53071363beefc5d9ad238144e28
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef4d7e038c9c8ed4d22bbc49e0139f2408ca8afe
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796138"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134930"
 ---
 # <a name="debugging-control-flow"></a>Debuggen der Ablaufsteuerung
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] und [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include features und tools that you can use to troubleshoot the control flow in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket behandeln können.  
@@ -53,7 +53,7 @@ ms.locfileid: "47796138"
 |Wenn der Task oder Container das **OnTaskFailed** -Ereignis empfängt.|Wird durch den Taskhost bei einem Fehler aufgerufen.|  
 |Wenn der Task oder Container das **OnProgress** -Ereignis empfängt.|Wird aufgerufen, um den Status der Taskausführung zu aktualisieren.|  
 |Wenn der Task oder Container das **OnQueryCancel** -Ereignis empfängt.|Wird zu einem beliebigen Zeitpunkt der Taskverarbeitung aufgerufen, wenn Sie die Ausführung abbrechen.|  
-|Wenn der Task oder Container das **OnVariableValueChanged** -Ereignis empfängt.|Wird durch die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Laufzeit aufgerufen, wenn sich der Wert einer Variablen ändert. Das RaiseChangeEvent der Variablen muss auf **TRUE** festgelegt werden, damit dieses Ereignis ausgelöst wird.<br /><br /> **\*\* Warnung \*\*** Die diesem Breakpoint zugeordnete Variable muss im **Containerbereich** definiert werden. Wenn die Variable im Paketbereich definiert wird, wird der Breakpoint nicht erreicht.|  
+|Wenn der Task oder Container das **OnVariableValueChanged** -Ereignis empfängt.|Wird durch die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Laufzeit aufgerufen, wenn sich der Wert einer Variablen ändert. Das RaiseChangeEvent der Variablen muss auf **TRUE** festgelegt werden, damit dieses Ereignis ausgelöst wird.<br /><br /> **&#42;&#42; Warnung &#42;&#42;** Die diesem Breakpoint zugeordnete Variable muss im **Containerbereich** definiert werden. Wenn die Variable im Paketbereich definiert wird, wird der Breakpoint nicht erreicht.|  
 |Wenn der Task oder Container das **OnCustomEvent** -Ereignis empfängt.|Wird durch Tasks aufgerufen, um benutzerdefinierte Taskereignisse auszulösen.|  
   
  Neben den Unterbrechungsbedingungen, die für alle Tasks und Container verfügbar sind, enthalten manche Tasks und Container spezielle Unterbrechungsbedingungen zum Festlegen von Breakpoints. Beispielsweise können Sie eine Unterbrechungsbedingung für den For-Schleifencontainer aktivieren, um einen Breakpoint festzulegen, der die Ausführung zu Beginn jeder Iteration der Schleife anhält.  
@@ -141,7 +141,7 @@ ms.locfileid: "47796138"
 ## <a name="set-breakpoints"></a>Breakpoints festlegen
   Verwenden Sie das Dialogfeld **Breakpoints festlegen** , um die Ereignisse anzugeben, für die Breakpoints aktiviert werden sollen, sowie um das Verhalten der Breakpoints zu steuern.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Enabled**  
  Wählen Sie diese Option aus, um einen Breakpoint für ein Ergebnis zu aktivieren.  
   
@@ -161,6 +161,6 @@ ms.locfileid: "47796138"
  **Trefferanzahl**  
  Geben Sie die Anzahl der Treffer an, nach denen ein Breakpoint ausgelöst werden soll. Diese Option ist nicht verfügbar, wenn der Breakpoint immer wirksam ist.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Tools zur Problembehandlung für die Paketentwicklung](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
  [Debuggen eines Skripts durch Festlegen von Breakpoints in einem Skripttask und einer Skriptkomponente](../../integration-services/extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)   

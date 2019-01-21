@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Erstellen eines Freiformberichts (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Lernprogramm: Erstellen eines Freiformberichts (Berichts-Generator) | Microsoft-Dokumentation'
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d89562ce168d8cf5662fc7af96da3d89cdafe509
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: d473ba8f0a16fd161ec2c6edce2cd6de51a08f36
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021924"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143490"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Lernprogramm: Erstellen eines Freiformberichts (Berichts-Generator)
 In diesem Tutorial erfahren Sie, wie Sie einen paginierten Bericht erstellen, der wie ein Newslettern funktioniert. Jede Seite zeigt statischen Text, zusammenfassende Visualisierungen und detaillierte Beispielumsatzdaten an.
@@ -48,11 +48,11 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen fü
   
 1.  Klicken Sie im Bereich „Berichtsdaten“ auf **Neu** > **Datenquelle**.  
   
-2.  Geben Sie im Feld **Name** Folgendes ein: **ListDataSource**  
+2.  Geben Sie im Feld **Name** Folgendes ein: **ListDataSource**.  
   
 3.  Klicken Sie auf **In Bericht eingebettete Verbindung verwenden**.  
   
-4.  Überprüfen Sie, ob der Verbindungstyp „Microsoft SQL Server“ ist, und geben Sie anschließend im Feld **Verbindungszeichenfolge** Folgendes ein: **Datenquelle = \<Servername>**.  
+4.  Überprüfen Sie, ob der Verbindungstyp Microsoft SQL Server ist, und geben Sie anschließend im Feld **Verbindungszeichenfolge** Folgendes ein: **Data Source = \<servername>**  
   
     Der **\<Servername>**, z.B. Report001, bezeichnet einen Computer, auf dem eine Instanz des SQL Server-Datenbankmoduls installiert ist. Da die Daten für diesen Bericht nicht aus einer SQL Server-Datenbank extrahiert werden, muss der Name einer Datenbank nicht eingeschlossen werden. Die Standarddatenbank auf dem angegebenen Server wird nur verwendet, um die Abfrage zu analysieren.  
   
@@ -64,7 +64,7 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen fü
   
 1.  Klicken Sie im Bereich „Berichtsdaten“ auf **Neu** > **Dataset**.  
   
-2.  Geben Sie im Feld **Name** **ListDataset**ein.  
+2.  Geben Sie im Feld **Name** Folgendes ein: **ListDataset**.  
   
 3.  Klicken Sie auf **Ein in den eigenen Bericht eingebettetes Dataset verwenden**und überprüfen Sie, ob **ListDataSource**die Datenquelle ist.  
   
@@ -215,7 +215,7 @@ Sie können Textfelder hinzufügen, um statischen Text anzuzeigen, der auf jeder
     *  **20 pt**
     *  **Tomate**  
   
-9. Platzieren Sie den Cursor unterhalb des Texts, den Sie in Schritt 3 eingegeben haben, und geben Sie **Hallo** mit einem anschließenden Leerzeichen ein, um den Text von dem Feld zu trennen, das Sie im nächsten Schritt hinzufügen.  
+9. Platzieren Sie den Cursor unter dem Text, den Sie in Schritt 3 eingegeben haben, und geben Sie Folgendes ein: Das Wort **Hallo** gefolgt von einem Leerzeichen, um den Text und das Feld, das Sie im nächsten Schritt hinzufügen, voneinander zu trennen.  
  
 10. Ziehen Sie das `[FullName]` -Feld aus ListDataSet im Bereich „Berichtsdaten“ in das Textfeld, platzieren Sie es hinter „Hallo “, und geben Sie anschließend ein Komma (,) ein.  
    
@@ -244,7 +244,7 @@ Sie können Textfelder hinzufügen, um statischen Text anzuzeigen, der auf jeder
       *  **10 pt**
       *  **Schwarz**  
  
-20. Platzieren Sie den Cursor im Textfeld unter dem bedeutungslosen Text, und geben Sie **Glückwünsche zum Gesamtumsatz von**mit einem anschließenden Leerzeichen ein, um den Text von dem Feld zu trennen, das Sie im nächsten Schritt hinzufügen. 
+20. Bewegen Sie den Cursor in das Textfeld unter den bedeutungslosen Text und geben Sie Folgendes ein: **Herzlichen Glückwunsch zu Ihrem Gesamtumsatz von** gefolgt von einem Leerzeichen, um den Text und das Feld, das Sie im nächsten Schritt hinzufügen, voneinander zu trennen. 
   
 21. Ziehen Sie das Feld „Sales“ in das Textfeld, platzieren Sie es hinter dem im vorherigen Schritt eingegebenen Text, und geben Sie anschließend ein Ausrufezeichen (!) ein.  
 
@@ -405,7 +405,7 @@ Mit Rechtecken kann das Rendern des Berichts beeinflusst werden. Platzieren Sie 
   
 9. Ziehen Sie das Diagramm in das Rechteck.  
    
-10. Wählen Sie den Diagrammtitel und Typ **Verkaufte Produktmengen**aus.  
+10. Wählen Sie den Diagrammtitel aus, und geben Sie Folgendes ein: **Verkaufte Produktmengen**.  
   
 12. Legen Sie für den Titel auf der Registerkarte **Start** im Bereich **Font** (Schriftart) Folgendes fest:
     * **Schriftart** **Segoe UI Semibold**.
@@ -444,7 +444,7 @@ Mit Rechtecken kann das Rendern des Berichts beeinflusst werden. Platzieren Sie 
   
 9. Ziehen Sie das Diagramm in das Rechteck unter dem Kreisdiagramm.  
    
-10. Wählen Sie den Diagrammtitel aus und geben Sie **Produktumsatz**ein.  
+10. Wählen Sie den Diagrammtitel aus, und geben Sie Folgendes ein: **Produktverkaufszahlen**.  
   
 12. Legen Sie für den Titel auf der Registerkarte **Start** im Bereich **Font** (Schriftart) Folgendes fest:
     * **Schriftart** **Segoe UI Semibold**.
@@ -458,7 +458,7 @@ Mit Rechtecken kann das Rendern des Berichts beeinflusst werden. Platzieren Sie 
   
     ![Berichts-Generator-Freiform-Spalte](../reporting-services/media/report-builder-free-form-column.png)
 
-12. Wählen Sie die Diagrammachse aus, und klicken Sie auf der Registerkarte *Start* auf **Number** > **Currency** (Zahl > Währung).
+12. Wählen Sie die Diagrammachse aus, und klicken Sie auf der Registerkarte **Home** > **Nummer** > **Währung**.
 
 13. Klicken Sie zweimal auf **Dezimalstellen verringern** , sodass die nur der Dollarwert ohne Cents angezeigt wird.      
 ### <a name="to-verify-the-charts-are-inside-the-rectangle"></a>So überprüfen Sie, ob die Diagramme im Rechteck enthalten sind  
@@ -507,7 +507,7 @@ Weitere Informationen zu Listen finden Sie unter:
   
 Weitere Informationen zu Abfrage-Designern finden Sie unter [Abfrage-Designer (Berichts-Generator)](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) und [Benutzeroberfläche des textbasierten Abfrage-Designers (Berichts-Generator)](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Lernprogramme für den Berichts-Generator](../reporting-services/report-builder-tutorials.md) 
   
 

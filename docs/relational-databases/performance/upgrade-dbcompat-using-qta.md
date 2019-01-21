@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 28bd264498c681542c9cb27e79cdd21f3cf0821c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2270917dad9f366b09fbc7cbc0d88c286fe6761c
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509945"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257095"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Upgraden von Datenbanken mit dem Abfrageoptimierungs-Assistenten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,9 +64,9 @@ QTA bezieht sich nur auf `SELECT`-Abfragen, die aus dem Abfragespeicher ausgefü
 QTA zielt auf bekannte mögliche Muster von Anfrageregressionen aufgrund von Änderungen in [Kardinalitätsschätzungsversionen (Cardinality Estimator, CE)](../../relational-databases/performance/cardinality-estimation-sql-server.md). Wenn Sie beispielsweise eine Datenbank aus [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] mit dem Datenbank-Kompatibilitätsgrad 110 in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] mit dem Datenbank-Kompatibilitätsgrad 140 aktualisieren, können einige Abfragen Regression zeigen, da sie speziell für die Zusammenarbeit mit der CE-Version entworfen wurden, die in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] vorhanden war (CE 70). Dies bedeutet nicht, dass das Zurücksetzen von CE 140 auf CE 70 die einzige Option ist. Wenn nur eine bestimmte Änderung in der neueren Version zur Regression führt, dann ist es möglich, diese Abfrage mit einem Hinweis zu versehen, dass sie nur den relevanten Teil der vorherigen CE-Version verwendet, der für die spezifische Abfrage besser funktioniert hat, während sie gleichzeitig alle anderen Optimierungen der neueren CE-Versionen nutzt. Und auch andere Abfragen in der Workload, die keine Regression gezeigt haben, können von neueren CE-Optimierungen profitieren.
 
 Die folgenden CE-Muster werden von QTA gesucht: 
--  **Unabhängigkeit im Vergleich zu Korrelation**: Wenn die Unabhängigkeitsannahme bessere Schätzungen für die spezifische Abfrage liefert, dann bewirkt der Abfragehinweis `USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES')`, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Ausführungsplan generiert, indem minimale Selektivität verwendet wird, wenn `AND`-Prädikate für Filter geschätzt werden, um die Korrelation zu berücksichtigen. Weitere Informationen finden Sie unter [USE HINT-Abfragehinweise](../../t-sql/queries/hints-transact-sql-query.md#use_hint) und [Versionen der Kardinalitätsschätzung](../../relational-databases/performance/cardinality-estimation-sql-server.md#versions-of-the-ce).
--  **Einfacher Einschluss im Vergleich zu Basiseinschluss**: Wenn ein anderer Joineinschluss bessere Schätzungen für die spezifische Abfrage liefert, dann bewirkt der Abfragehinweis `USE HINT ('ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS')`, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Ausführungsplan generiert, indem die Annahme eines einfachen Einschlusses anstelle der Standardannahme eines Basiseinschlusses verwendet wird. Weitere Informationen finden Sie unter [USE HINT-Abfragehinweise](../../t-sql/queries/hints-transact-sql-query.md#use_hint) und [Versionen der Kardinalitätsschätzung](../../relational-databases/performance/cardinality-estimation-sql-server.md#versions-of-the-ce).
--  **Feste Kardinalitätsschätzung der Tabellenwertfunktion mit mehreren Anweisungen (Multi-Statement Table-Valued Function, MSTVF)** von 100 Zeilen im Vergleich zu 1 Zeile: Wenn die feste Standardschätzung für TVFs von 100 Zeilen nicht zu einem effizienteren Plan führt als die Verwendung der festen Schätzung für TVFs von 1 Zeile (entsprechend dem Standard unter dem Abfrageoptimierer-CE-Modell von [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] und früheren Versionen), dann wird der Abfragehinweis `QUERYTRACEON 9488` verwendet, um einen Ausführungsplan zu erstellen. Weitere Informationen zu MSTVFs finden Sie unter [Erstellen benutzerdefinierter Funktionen &#40;Datenbank-Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+-  **Unabhängigkeit im Vergleich zu Korrelation:** Wenn die Unabhängigkeitsannahme bessere Schätzungen für die spezifische Abfrage liefert, bewirkt der Abfragehinweis `USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES')`, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Ausführungsplan generiert, indem minimale Selektivität verwendet wird, wenn `AND`-Prädikate für Filter geschätzt werden, um die Korrelation zu berücksichtigen. Weitere Informationen finden Sie unter [USE HINT-Abfragehinweise](../../t-sql/queries/hints-transact-sql-query.md#use_hint) und [Versionen der Kardinalitätsschätzung](../../relational-databases/performance/cardinality-estimation-sql-server.md#versions-of-the-ce).
+-  **Einfacher Einschluss im Vergleich zu Basiseinschluss:** Wenn ein anderer Joineinschluss bessere Schätzungen für die spezifische Abfrage liefert, bewirkt der Abfragehinweis `USE HINT ('ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS')`, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Ausführungsplan generiert, indem die Annahme eines einfachen Einschlusses anstelle der Standardannahme eines Basiseinschlusses verwendet wird. Weitere Informationen finden Sie unter [USE HINT-Abfragehinweise](../../t-sql/queries/hints-transact-sql-query.md#use_hint) und [Versionen der Kardinalitätsschätzung](../../relational-databases/performance/cardinality-estimation-sql-server.md#versions-of-the-ce).
+-  **Feste Kardinalitätsschätzung der Tabellenwertfunktion mit mehreren Anweisungen (Multi-Statement Table-Valued Function, MSTVF)** von 100 Zeilen im Vergleich zu einer Zeile: Wenn die feste Standardschätzung für die Tabellenwertfunktion von 100 Zeilen nicht zu einem effizienteren Plan führt als die Verwendung der festen Schätzung einer Zeile (entsprechend dem Standard unter dem CE-Abfrageoptimierermodell von [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] und früheren Versionen), wird der Abfragehinweis `QUERYTRACEON 9488` verwendet, um einen Ausführungsplan zu erstellen. Weitere Informationen zu MSTVFs finden Sie unter [Erstellen benutzerdefinierter Funktionen &#40;Datenbank-Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
 
 > [!NOTE]
 > Als letztes Mittel (wenn die Hinweise mit engem Bereich nicht ausreichend gute Ergebnisse für die zulässigen Abfragemuster liefern) wird auch die vollständige Verwendung von CE 70 in Betracht gezogen, indem der Abfragehinweis `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')` verwendet wird, um einen Ausführungsplan zu erstellen.
@@ -98,10 +98,10 @@ QTA ist eine sitzungsbasierte Funktion, die den Sitzungszustand im `msqta`-Schem
 
        ![Fenster für neue Datenbankupgradeeinstellungen](../../relational-databases/performance/media/qta-new-session-settings.png "Fenster für neue Datenbankupgradeeinstellungen")
 
-        > [!IMPORTANT]
-        > Die vorgeschlagene *Maximale Größe* ist ein beliebiger Wert, der ggf. für eine Workload mit kurzer Ausführungszeit geeignet ist.   
-        > Beachten Sie jedoch, dass es unter Umständen nicht ausreicht, Informationen zu den Baseline- und den Workloads nach dem Datenbankupgrade für sehr intensive Workloads zu speichern, insbesondere wenn viele verschiedene Pläne generiert werden können.   
-        > Wenn Sie davon ausgehen, dass dies der Fall sein wird, geben Sie einen höheren Wert ein, der angemessen ist.
+       > [!IMPORTANT]
+       > Die vorgeschlagene *Maximale Größe* ist ein beliebiger Wert, der ggf. für eine Workload mit kurzer Ausführungszeit geeignet ist.   
+       > Beachten Sie jedoch, dass es unter Umständen nicht ausreicht, Informationen zu den Baseline- und den Workloads nach dem Datenbankupgrade für sehr intensive Workloads zu speichern, insbesondere wenn viele verschiedene Pläne generiert werden können.   
+       > Wenn Sie davon ausgehen, dass dies der Fall sein wird, geben Sie einen höheren Wert ein, der angemessen ist.
 
 4.  Im Fenster **Optimierung** wird die Sitzungskonfiguration abgeschlossen, und die nächsten Schritte zum Öffnen und Fortsetzen der Sitzung werden eingeleitet. Klicken Sie nach Abschluss des Vorgangs auf **Fertig stellen**.
 
@@ -120,10 +120,10 @@ QTA ist eine sitzungsbasierte Funktion, die den Sitzungszustand im `msqta`-Schem
     
     Die Liste enthält die folgenden Informationen:
     -  **Sitzungs-ID**
-    -  **Sitzungsname**: Vom System generierter Name, bestehend aus dem Namen der Datenbank sowie Datum und Uhrzeit der Sitzungserstellung.
+    -  **Sitzungsname:** Vom System generierter Name, bestehend aus dem Namen der Datenbank sowie Datum und Uhrzeit der Sitzungserstellung.
     -  **Status**: Status der Sitzung („Aktiv“ oder „Geschlossen“).
     -  **Beschreibung**: Vom System generierte Beschreibung, bestehend aus dem vom Benutzer ausgewählten Kompatibilitätsgrad der Zieldatenbank und der Anzahl der Tage für die Geschäftszyklusworkload.
-    -  **Startzeit**: Das Datum und die Uhrzeit der Erstellung der Sitzung.
+    -  **Startzeit:** Das Datum und die Uhrzeit der Sitzungserstellung.
 
     ![QTA-Sitzungsverwaltungsseite](../../relational-databases/performance/media/qta-session-management.png "QTA-Sitzungsverwaltungsseite")
 
@@ -162,11 +162,11 @@ QTA ist eine sitzungsbasierte Funktion, die den Sitzungszustand im `msqta`-Schem
         Die Liste enthält die folgenden Informationen:
         -  **Abfrage-ID** 
         -  **Abfragetext**: Eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, die durch Klicken auf die Schaltfläche **...** erweitert werden kann.
-        -  **Ausführungen**: Zeigt die Anzahl der Ausführungen dieser Abfrage für die gesamte Workloadsammlung an.
-        -  **Baselinemetrik**: Die ausgewählte Metrik (Dauer oder CpuTime) in Millisekunden für die Baselinedatensammlung vor dem Upgrade des Datenbank-Kompatibilitätsgrads.
-        -  **Beobachtete Metrik**: Die ausgewählte Metrik (Dauer oder CpuTime) in Millisekunden für die Datensammlung nach dem Upgrade des Datenbank-Kompatibilitätsgrads.
-        -  **% Änderung**: Prozentuale Änderung für die ausgewählte Metrik zwischen dem Zustand vor und nach dem Upgrade der Datenbankkompatibilität. Ein negativer Wert stellt die Menge der gemessenen Regression für die Abfrage dar.
-        -  **Optimierbar**: *TRUE* oder *FALSE* abhängig davon, ob die Abfrage für Experimente geeignet ist.
+        -  **Ausführungen:** Zeigt die Anzahl der Ausführungen dieser Abfrage für die gesamte Workloadsammlung an.
+        -  **Baselinemetrik:** Die ausgewählte Metrik (Dauer oder CpuTime) in Millisekunden für die Baselinedatensammlung vor dem Upgrade des Datenbank-Kompatibilitätsgrads.
+        -  **Beobachtete Metrik:** Die ausgewählte Metrik (Dauer oder CpuTime) in Millisekunden für die Datensammlung nach dem Upgrade des Datenbank-Kompatibilitätsgrads.
+        -  **Änderung in %:** Prozentuale Änderung für die ausgewählte Metrik zwischen dem Zustand vor und nach dem Upgrade des Datenbank-Kompatibilitätsgrads. Ein negativer Wert stellt die Menge der gemessenen Regression für die Abfrage dar.
+        -  **Optimierbar:** *TRUE* oder *FALSE*, abhängig davon, ob die Abfrage für Experimente geeignet ist.
 
 4.  **Analyse anzeigen** ermöglicht die Auswahl, mit welchen Abfragen experimentiert werden soll, um Optimierungsmöglichkeiten zu ermitteln. Der Wert **Anzuzeigende Abfragen** wird zum Bereich der geeigneten Abfragen für Experimente. Nachdem die gewünschten Abfragen aktiviert wurden, klicken Sie auf **Weiter**, um die Experimente zu starten.  
 
@@ -184,12 +184,12 @@ QTA ist eine sitzungsbasierte Funktion, die den Sitzungszustand im `msqta`-Schem
     Die Liste enthält die folgenden Informationen:
     -  **Abfrage-ID** 
     -  **Abfragetext**: Eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, die durch Klicken auf die Schaltfläche **...** erweitert werden kann.
-    -  **Status**: Zeigt den aktuellen Experimentierstatus für die Abfrage an.
-    -  **Baselinemetrik**: Die ausgewählte Metrik (Dauer oder CpuTime) in Millisekunden für die Abfrage, die in **Schritt 2, Teilschritt 3** ausgeführt wurde. Diese Metrik stellt die zurückgestellte Abfrage nach dem Upgrade des Datenbank-Kompatibilitätsgrads dar.
-    -  **Beobachtete Metrik**: Die ausgewählte Metrik (Dauer oder CpuTime) in Millisekunden für die Abfrage nach dem Experimentieren, für die eine ausreichend gute Optimierung vorgeschlagen wurde.
-    -  **% Änderung**: Prozentuale Änderung für die ausgewählte Metrik zwischen dem Zustand vor und nach dem Experimentieren. Sie stellt die Menge der gemessenen Optimierung für die Abfrage mit der vorgeschlagenen Optimierung dar.
-    -  **Abfrageoption**: Link zum vorgeschlagenen Hinweis, der die Abfrageausführungsmetrik verbessert.
-    -  **Kann bereitgestellt werden**: *TRUE* oder *FALSE* abhängig davon, ob die vorgeschlagene Abfrageoptimierung als Planhinweisliste bereitgestellt werden kann.
+    -  **Status:** Zeigt den aktuellen Experimentierstatus für die Abfrage an.
+    -  **Baselinemetrik:** Die ausgewählte Metrik (Dauer oder CpuTime) für die Abfrage in Millisekunden, die in **Schritt 2.3** ausgeführt wurde. Diese Metrik stellt die zurückgestellte Abfrage nach dem Upgrade des Datenbank-Kompatibilitätsgrads dar.
+    -  **Beobachtete Metrik:** Die ausgewählte Metrik (Dauer oder CpuTime) für die Abfrage nach dem Experimentieren in Millisekunden, für die eine ausreichend gute Optimierung vorgeschlagen wurde.
+    -  **Änderung in %:** Prozentuale Änderung für die ausgewählte Metrik zwischen dem Zustand vor und nach dem Experimentieren. Sie stellt die Menge der gemessenen Optimierung für die Abfrage mit der vorgeschlagenen Optimierung dar.
+    -  **Abfrageoption:** Link zum vorgeschlagenen Hinweis, der die Abfrageausführungsmetrik verbessert.
+    -  **Bereitstellung möglich:** *TRUE* oder *FALSE*, abhängig davon, ob die vorgeschlagene Abfrageoptimierung als Planhinweisliste bereitgestellt werden kann.
 
     ![QTA-Schritt 4](../../relational-databases/performance/media/qta-step4.png "QTA-Schritt 4")
 
@@ -209,7 +209,7 @@ QTA ist eine sitzungsbasierte Funktion, die den Sitzungszustand im `msqta`-Schem
 ## <a name="permissions"></a>Berechtigungen  
 Erfordert Mitgliedschaft bei der Rolle **db_owner**.
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Kompatibilitätsgrade und SQL Server-Upgrades](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades)    
  [Tools für die Leistungsüberwachung und -optimierung](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     

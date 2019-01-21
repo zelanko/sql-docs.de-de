@@ -23,12 +23,12 @@ ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d26d4d303ffb312a2dc289e9f7426fbc6d191de8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9bfeddd0aad93427a3f65c44364d3749981ccbae
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629033"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226527"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47629033"
   
  Informationen und Szenarien, in denen die **CREATE SEQUENCE** -Funktion und die **NEXT VALUE FOR** -Funktion verwendet werden, finden Sie unter [Sequenznummern](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,52 +56,48 @@ CREATE SEQUENCE [schema_name . ] sequence_name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *sequence_name*  
- Gibt den eindeutigen Namen der Sequenz in der Datenbank an. Der Typ ist **sysname**.  
+*sequence_name*  
+Gibt den eindeutigen Namen der Sequenz in der Datenbank an. Der Typ ist **sysname**.  
   
- [ built_in_integer_type | user-defined_integer_type  
- Eine Sequenz kann als beliebiger ganzzahliger Typ definiert werden. Die folgenden Typen sind zulässig.  
+[ built_in_integer_type | user-defined_integer_type  
+Eine Sequenz kann als beliebiger ganzzahliger Typ definiert werden. Die folgenden Typen sind zulässig.  
   
 -   **tinyint**: von 0 bis 255  
-  
 -   **smallint**: von –32.768 bis 32.767  
-  
 -   **int**: von –2.147.483.648 bis 2.147.483.647  
-  
 -   **bigint**: von –9.223.372.036.854.775.808 bis 9.223.372.036.854.775.807  
-  
 -   **decimal** und **numeric** mit einem Bereich von 0.  
-  
 -   Ein beliebiger benutzerdefinierter Datentyp (Aliastyp), der auf einem der zulässigen Typen basiert.  
   
- Wird kein Datentyp bereitgestellt, wird der **bigint**-Datentyp als Standardtyp verwendet.  
+Wird kein Datentyp bereitgestellt, wird der **bigint**-Datentyp als Standardtyp verwendet.  
   
- START WITH \<constant>  
- Der erste Wert, der vom Sequenzobjekt zurückgegeben wird. Der **START**-Wert muss kleiner oder gleich dem maximalen und größer oder gleich dem minimalen Wert des Sequenzobjekts sein. Der Standardstartwert eines neuen Sequenzobjekts ist gleich dem minimalen Wert eines aufsteigenden Sequenzobjekts und dem maximalen Wert eines absteigenden Sequenzobjekts.  
+START WITH \<constant>  
+Der erste Wert, der vom Sequenzobjekt zurückgegeben wird. Der **START**-Wert muss kleiner oder gleich dem maximalen und größer oder gleich dem minimalen Wert des Sequenzobjekts sein. Der Standardstartwert eines neuen Sequenzobjekts ist gleich dem minimalen Wert eines aufsteigenden Sequenzobjekts und dem maximalen Wert eines absteigenden Sequenzobjekts.  
   
- INCREMENT BY \<constant>  
- Der Wert, mit dem der Wert des Sequenzobjekts bei jedem Aufruf der **NEXT VALUE FOR**-Funktion inkrementiert (oder bei negativem Wert dekrementiert) wird. Wenn als Inkrement ein negativer Wert verwendet wird, ist der Wert des Sequenzobjekts absteigend, andernfalls ist er aufsteigend. Das Inkrement kann nicht 0 sein. Das Standardinkrement für ein neues Sequenzobjekt ist 1.  
+INCREMENT BY \<constant>  
+Der Wert, mit dem der Wert des Sequenzobjekts bei jedem Aufruf der **NEXT VALUE FOR**-Funktion inkrementiert (oder bei negativem Wert dekrementiert) wird. Wenn als Inkrement ein negativer Wert verwendet wird, ist der Wert des Sequenzobjekts absteigend, andernfalls ist er aufsteigend. Das Inkrement kann nicht 0 sein. Das Standardinkrement für ein neues Sequenzobjekt ist 1.  
   
- [ MINVALUE \<constant> | **NO MINVALUE** ]  
- Gibt die Grenzen für das Sequenzobjekt an. Der minimale Standardwert eines neuen Sequenzobjekts ist gleich dem minimalen Wert für den Datentyp des Sequenzobjekts. Dieser ist für den **tinyint** -Datentyp 0 und für alle anderen Datentypen eine negative Zahl.  
+[ MINVALUE \<constant> | **NO MINVALUE** ]  
+Gibt die Grenzen für das Sequenzobjekt an. Der minimale Standardwert eines neuen Sequenzobjekts ist gleich dem minimalen Wert für den Datentyp des Sequenzobjekts. Dieser ist für den **tinyint** -Datentyp 0 und für alle anderen Datentypen eine negative Zahl.  
   
- [ MAXVALUE \<constant> | **NO MAXVALUE**  
- Gibt die Grenzen für das Sequenzobjekt an. Der maximale Standardwert eines neuen Sequenzobjekts ist gleich dem maximalen Wert für den Datentyp des Sequenzobjekts.  
+[ MAXVALUE \<constant> | **NO MAXVALUE**  
+Gibt die Grenzen für das Sequenzobjekt an. Der maximale Standardwert eines neuen Sequenzobjekts ist gleich dem maximalen Wert für den Datentyp des Sequenzobjekts.  
   
- [ CYCLE | **NO CYCLE** ]  
- Eigenschaft, die angibt, ob das Sequenzobjekt vom minimalen Wert (oder bei absteigenden Sequenzobjekten vom maximalen Wert) neu gestartet oder ob eine Ausnahme ausgelöst werden soll, wenn der minimale oder maximale Wert überschritten wird. Die Standardzyklusoption für neue Sequenzobjekte ist NO CYCLE.  
+[ CYCLE | **NO CYCLE** ]  
+Eigenschaft, die angibt, ob das Sequenzobjekt vom minimalen Wert (oder bei absteigenden Sequenzobjekten vom maximalen Wert) neu gestartet oder ob eine Ausnahme ausgelöst werden soll, wenn der minimale oder maximale Wert überschritten wird. Die Standardzyklusoption für neue Sequenzobjekte ist NO CYCLE.  
   
- Beachten Sie, dass der Durchlauf ab dem minimalen oder maximalen Wert neu startet, und nicht ab dem Startwert.  
+> [!NOTE]
+> Der Durchlauf einer SEQUENCE startet ab dem minimalen oder maximalen Wert neu, und nicht ab dem Startwert.  
   
- [ **CACHE** [\<constant> ] | NO CACHE ]  
- Erhöht die Leistung für Anwendungen, die Sequenzobjekte verwenden, indem die Anzahl der Datenträger-E/As verringert wird, die zum Generieren von Sequenznummern erforderlich sind. Der Standardwert ist CACHE.  
+[ **CACHE** [\<constant> ] | NO CACHE ]  
+Erhöht die Leistung für Anwendungen, die Sequenzobjekte verwenden, indem die Anzahl der Datenträger-E/As verringert wird, die zum Generieren von Sequenznummern erforderlich sind. Der Standardwert ist CACHE.  
   
- Wenn beispielsweise die Cachegröße 50 ausgewählt wird, werden in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht 50 einzelne Werte zwischengespeichert. Es werden lediglich der aktuelle Wert und die Anzahl der im Cache verbleibenden Werte zwischengespeichert. Daher ist der zum Speichern des Caches erforderliche Arbeitsspeicher immer doppelt so groß wie zwei Instanzen des Sequenzobjekt-Datentyps.  
+Wenn beispielsweise die Cachegröße 50 ausgewählt wird, werden in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht 50 einzelne Werte zwischengespeichert. Es werden lediglich der aktuelle Wert und die Anzahl der im Cache verbleibenden Werte zwischengespeichert. Daher ist der zum Speichern des Caches erforderliche Arbeitsspeicher immer doppelt so groß wie zwei Instanzen des Sequenzobjekt-Datentyps.  
   
 > [!NOTE]  
->  Wenn die Cacheoption aktiviert wird, ohne eine Cachegröße anzugeben, wählt die Datenbank-Engine eine Größe aus. Benutzer sollten sich jedoch nicht darauf verlassen, dass die Auswahl konsistent ist. [!INCLUDE[msCoName](../../includes/msconame-md.md)] könnte die Methode zur Berechnung der Cachegröße ohne vorherige Ankündigung ändern.  
+> Wenn die Cacheoption aktiviert wird, ohne eine Cachegröße anzugeben, wählt die Datenbank-Engine eine Größe aus. Benutzer sollten sich jedoch nicht darauf verlassen, dass die Auswahl konsistent ist. [!INCLUDE[msCoName](../../includes/msconame-md.md)] könnte die Methode zur Berechnung der Cachegröße ohne vorherige Ankündigung ändern.  
   
- Bei Erstellung mit der **CACHE**-Option kann ein unerwartetes Herunterfahren (z.B. durch einen Stromausfall) möglicherweise zum Verlust der im Cache verbleibenden Sequenznummern führen.  
+Bei Erstellung mit der **CACHE**-Option kann ein unerwartetes Herunterfahren (z.B. durch einen Stromausfall) möglicherweise zum Verlust der im Cache verbleibenden Sequenznummern führen.  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Sequenznummern werden außerhalb des Bereichs der aktuellen Transaktion generiert. Sie werden unabhängig davon genutzt, ob ein Commit oder ein Rollback für die Transaktion ausgeführt wird, die die Sequenznummer verwendet.  
@@ -167,7 +163,7 @@ CREATE SEQUENCE [schema_name . ] sequence_name
   
  Im folgenden Beispiel wird dem Benutzer die Berechtigung „AdventureWorks\Larry“ erteilt, um Sequenzen im Test-Schema zu erstellen.  
   
-```  
+```sql  
 GRANT CREATE SEQUENCE ON SCHEMA::Test TO [AdventureWorks\Larry]  
 ```  
   
@@ -185,7 +181,7 @@ GRANT CREATE SEQUENCE ON SCHEMA::Test TO [AdventureWorks\Larry]
   
  Um das Test-Schema zu erstellen, führen Sie die folgende Anweisung aus.  
   
-```  
+```sql  
 CREATE SCHEMA Test ;  
 GO  
 ```  
@@ -193,7 +189,7 @@ GO
 ### <a name="a-creating-a-sequence-that-increases-by-1"></a>A. Erstellen einer Sequenz, die sich um 1 vergrößert  
  Im folgenden Beispiel erstellt Thierry eine Sequenz namens „CountBy1“, die sich bei jeder Verwendung um 1 vergrößert.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.CountBy1  
     START WITH 1  
     INCREMENT BY 1 ;  
@@ -203,7 +199,7 @@ GO
 ### <a name="b-creating-a-sequence-that-decreases-by-1"></a>B. Erstellen einer Sequenz, die sich um 1 verkleinert  
  Das folgende Beispiel startet bei 0 und zählt bei jeder Verwendung um 1 zurück in negative Zahlen.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.CountByNeg1  
     START WITH 0  
     INCREMENT BY -1 ;  
@@ -213,7 +209,7 @@ GO
 ### <a name="c-creating-a-sequence-that-increases-by-5"></a>C. Erstellen einer Sequenz, die sich um 5 vergrößert  
  Im folgenden Beispiel wird eine Sequenz erstellt, die sich bei jeder Verwendung um 5 vergrößert.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.CountBy1  
     START WITH 5  
     INCREMENT BY 5 ;  
@@ -223,7 +219,7 @@ GO
 ### <a name="d-creating-a-sequence-that-starts-with-a-designated-number"></a>D. Erstellen einer Sequenz, die mit einer festgelegten Zahl beginnt  
  Nachdem Thierry eine Tabelle importiert hat, stellt er fest, dass die höchste verwendete ID-Nummer 24,328 ist. Thierry benötigt eine Sequenz, die Zahlen generiert, die mit 24,329 starten. Im folgenden Code wird eine Sequenz erstellt, die mit 24,329 startet und um 1 inkrementiert wird.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.ID_Seq  
     START WITH 24329  
     INCREMENT BY 1 ;  
@@ -233,13 +229,13 @@ GO
 ### <a name="e-creating-a-sequence-using-default-values"></a>E. Erstellen einer Sequenz mit Standardwerten  
  Im folgenden Beispiel wird eine Sequenz mit den Standardwerten erstellt.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.TestSequence ;  
 ```  
   
  Führen Sie die folgende Anweisung aus, um die Eigenschaften der Sequenz anzuzeigen.  
   
-```  
+```sql  
 SELECT * FROM sys.sequences WHERE name = 'TestSequence' ;  
 ```  
   
@@ -258,15 +254,15 @@ SELECT * FROM sys.sequences WHERE name = 'TestSequence' ;
 ### <a name="f-creating-a-sequence-with-a-specific-data-type"></a>F. Erstellen einer Sequenz mit einem bestimmten Datentyp  
  Im folgenden Beispiel wird eine Sequenz erstellt, die den **smallint**-Datentyp mit einem Bereich von –32.768 bis 32.767 verwendet.  
   
-```  
-CREATE SEQUENCE SmallSeq  
+```sql  
+CREATE SEQUENCE SmallSeq 
     AS smallint ;  
 ```  
   
 ### <a name="g-creating-a-sequence-using-all-arguments"></a>G. Erstellen einer Sequenz, die alle Argumente verwendet  
  Im folgenden Beispiel wird eine Sequenz namens „DecSeq“ erstellt, die den **decimal**-Datentyp verwendet und einen Bereich von 0 bis 255 aufweist. Die Sequenz beginnt mit 125 und wird immer um 25 inkrementiert, wenn eine Zahl generiert wurde. Da die Sequenz zum Durchlaufen konfiguriert wurde, wird sie beim Überschreiten des maximalen Werts von 200 beim minimalen Wert von 100 neu gestartet.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.DecSeq  
     AS decimal(3,0)   
     START WITH 125  
@@ -280,7 +276,7 @@ CREATE SEQUENCE Test.DecSeq
   
  Führen Sie die folgende Anweisung aus, um den ersten Wert anzuzeigen; die `START WITH`-Option mit 125.  
   
-```  
+```sql  
 SELECT NEXT VALUE FOR Test.DecSeq;  
 ```  
   
@@ -290,13 +286,13 @@ SELECT NEXT VALUE FOR Test.DecSeq;
   
  Führen Sie den folgenden Code aus, um die Cachegröße zu bestätigen und den aktuellen Wert anzuzeigen.  
   
-```  
+```sql  
 SELECT cache_size, current_value   
 FROM sys.sequences  
 WHERE name = 'DecSeq' ;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
  [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
  [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   

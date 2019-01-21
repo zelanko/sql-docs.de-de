@@ -21,12 +21,12 @@ ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 881cb75b8f58bb20c8418fe18aaab6499b58e442
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 148fdfd642c18a2cc4e583edab73778cffa5c71e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612578"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125270"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Strategien zum Sichern und Wiederherstellen einer Momentaufnahme- und Transaktionsreplikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "47612578"
   
  **So legen Sie die Option sync with backup fest**  
   
--   [!INCLUDE[tsql](../../../includes/tsql-md.md)] Replikationsprogrammierung: [Aktivieren Sie koordinierte Sicherungen für die Transaktionsreplikation &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)  
+-   Replikationsprogrammierung mit [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Aktivieren koordinierter Sicherungen für die Transaktionsreplikation &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)  
   
 ## <a name="restoring-databases-involved-in-replication"></a>Wiederherstellen der an der Replikation beteiligten Datenbanken  
  Wenn aktuelle Sicherungen verfügbar sind und die entsprechenden Schritte befolgt werden, können Sie alle Datenbanken einer Replikationstopologie wiederherstellen. Die Wiederherstellungsschritte für die Veröffentlichungsdatenbank hängen vom Typ der verwendeten Replikation und den verwendeten Optionen ab. Die Wiederherstellungsschritte für alle anderen Datenbanken sind jedoch vom Typ und den Optionen unabhängig.  
@@ -119,7 +119,7 @@ ms.locfileid: "47612578"
   
          Weitere Informationen zum Starten und Beenden eines Verteilungs-Agents finden Sie unter [Starten und Beenden eines Replikations-Agents &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) und [Ausführbare Konzepte für die Programmierung von Replikations-Agents](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-         Weitere Informationen zum Überprüfen von Befehlen finden Sie unter [Anzeigen von replizierten Befehlen und anderen Informationen in der Verteilungsdatenbank &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) und [Anzeigen von Informationen und Ausführen von Aufgaben für die einem Abonnement zugeordneten Agents &#40;Replikationsmonitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+         Weitere Informationen zum Überprüfen von Befehlen finden Sie unter [View Replicated Commands and Other Information in the Distribution Database &#40;Replication Transact-SQL Programming&#41; (Anzeigen von replizierten Befehlen und anderen Informationen in der Verteilungsdatenbank &#40;Replikationsprogrammierung mit Transact-SQL&#41;)](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) und [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Entfernen Sie die Replikationskonfiguration vom Verleger, vom Verteiler und von den Abonnenten, und erstellen Sie die Konfiguration dann neu. Geben Sie beim Neuerstellen von Abonnements an, dass der Abonnent bereits über die Daten verfügt. Die Wiederherstellung ist abgeschlossen.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "47612578"
   
          Weitere Informationen zum Starten und Beenden eines Verteilungs-Agents finden Sie unter [Starten und Beenden eines Replikations-Agents &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) und [Ausführbare Konzepte für die Programmierung von Replikations-Agents](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-         Weitere Informationen zum Überprüfen von Befehlen finden Sie unter [Anzeigen von replizierten Befehlen und anderen Informationen in der Verteilungsdatenbank &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) und [Anzeigen von Informationen und Ausführen von Aufgaben für die einem Abonnement zugeordneten Agents &#40;Replikationsmonitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+         Weitere Informationen zum Überprüfen von Befehlen finden Sie unter [View Replicated Commands and Other Information in the Distribution Database &#40;Replication Transact-SQL Programming&#41; (Anzeigen von replizierten Befehlen und anderen Informationen in der Verteilungsdatenbank &#40;Replikationsprogrammierung mit Transact-SQL&#41;)](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) und [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Verwenden Sie das [Hilfsprogramm "tablediff"](../../../tools/tablediff-utility.md) oder ein anderes Tool, um den Verleger manuell mit dem Abonnenten zu synchronisieren. So können Sie Daten aus der Abonnementdatenbank wiederherstellen, die nicht in der Sicherung der Veröffentlichungsdatenbank enthalten waren. Fahren Sie mit Schritt c fort.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "47612578"
   
      Weitere Informationen zum Starten und Beenden eines Verteilungs-Agents finden Sie unter [Starten und Beenden eines Replikations-Agents &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) und [Ausführbare Konzepte für die Programmierung von Replikations-Agents](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-     Weitere Informationen zum Überprüfen von Befehlen finden Sie unter [Anzeigen von replizierten Befehlen und anderen Informationen in der Verteilungsdatenbank &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) und [Anzeigen von Informationen und Ausführen von Aufgaben für die einem Abonnement zugeordneten Agents &#40;Replikationsmonitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     Weitere Informationen zum Überprüfen von Befehlen finden Sie unter [View Replicated Commands and Other Information in the Distribution Database &#40;Replication Transact-SQL Programming&#41; (Anzeigen von replizierten Befehlen und anderen Informationen in der Verteilungsdatenbank &#40;Replikationsprogrammierung mit Transact-SQL&#41;)](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) und [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 3.  Wenn Sie Abonnements mit verzögertem Update über eine Warteschlange verwenden, stellen Sie mit jedem Abonnenten eine Verbindung her, und löschen Sie in der Abonnementdatenbank alle Zeilen aus der [MSreplication_queue &#40;Transact-SQL&#41;](../../../relational-databases/system-tables/msreplication-queue-transact-sql.md)-Tabelle. Fahren Sie mit Schritt 4 fort.  
   
@@ -287,7 +287,7 @@ ms.locfileid: "47612578"
   
     2.  Markieren Sie alle Veröffentlichungen zur Überprüfung. Initialisieren Sie alle Abonnements neu, bei denen die Überprüfung einen Fehler erzeugt. Die Wiederherstellung ist abgeschlossen.  
   
-         Weitere Informationen zur Überprüfung finden Sie unter [Validate Replicated Data](../../../relational-databases/replication/validate-replicated-data.md). Weitere Informationen zur Neuinitialisierung finden Sie unter [Erneutes Initialisieren von Abonnements](../../../relational-databases/replication/reinitialize-subscriptions.md).  
+         Weitere Informationen zur Überprüfung finden Sie unter [Validate Replicated Data](../../../relational-databases/replication/validate-data-at-the-subscriber.md). Weitere Informationen zur Neuinitialisierung finden Sie unter [Erneutes Initialisieren von Abonnements](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
 #### <a name="msdb-database-distributor"></a>msdb-Datenbank (Verteiler)  
   
@@ -303,7 +303,7 @@ ms.locfileid: "47612578"
   
 4.  Markieren Sie alle Veröffentlichungen zur Überprüfung. Initialisieren Sie alle Abonnements neu, bei denen die Überprüfung einen Fehler erzeugt. Die Wiederherstellung ist abgeschlossen.  
   
-     Weitere Informationen zur Überprüfung finden Sie unter [Validate Replicated Data](../../../relational-databases/replication/validate-replicated-data.md). Weitere Informationen zur Neuinitialisierung finden Sie unter [Erneutes Initialisieren von Abonnements](../../../relational-databases/replication/reinitialize-subscriptions.md).  
+     Weitere Informationen zur Überprüfung finden Sie unter [Validate Replicated Data](../../../relational-databases/replication/validate-data-at-the-subscriber.md). Weitere Informationen zur Neuinitialisierung finden Sie unter [Erneutes Initialisieren von Abonnements](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
 #### <a name="master-database-distributor"></a>master-Datenbank (Verteiler)  
   
@@ -323,7 +323,7 @@ ms.locfileid: "47612578"
   
 2.  Stellen Sie die aktuellste Sicherung der Abonnementdatenbank wieder her. Fahren Sie mit Schritt 3 fort.  
   
-3.  Wenn die Abonnementdatenbank nur Pushabonnements enthält, fahren Sie mit Schritt 4 fort. Enthält die Abonnementdatenbank auch Pullabonnements, stellen Sie die folgenden Fragen: Sind die Abonnementinformationen aktuell? Sind in der Datenbank alle Tabellen und Optionen eingeschlossen, die beim Auftreten des Fehlers festgelegt waren? Wenn ja, fahren Sie mit Schritt 4 fort. Wenn nein, initialisieren Sie das Abonnement erneut. Die Wiederherstellung ist abgeschlossen.  
+3.  Wenn die Abonnementdatenbank nur Pushabonnements enthält, fahren Sie mit Schritt 4 fort. Wenn die Abonnementdatenbank Pullabonnements enthält, sollten Sie sich die folgenden Fragen stellen: Sind die Abonnementinformationen aktuell? Sind in der Datenbank alle Tabellen und Optionen eingeschlossen, die beim Auftreten des Fehlers festgelegt waren? Wenn ja, fahren Sie mit Schritt 4 fort. Wenn nein, initialisieren Sie das Abonnement erneut. Die Wiederherstellung ist abgeschlossen.  
   
 4.  Führen Sie den Verteilungs-Agent aus, um den Abonnenten zu synchronisieren. Die Wiederherstellung ist abgeschlossen.  
   
@@ -347,12 +347,12 @@ ms.locfileid: "47612578"
   
 2.  Stellen Sie sicher, dass die Datenbank hinsichtlich der Replikationskonfiguration und der Einstellungen mit der Veröffentlichungsdatenbank konsistent ist.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Sichern und Wiederherstellen von SQL Server-Datenbanken](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Sichern und Wiederherstellen von replizierten Datenbanken](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  [Verteilung konfigurieren](../../../relational-databases/replication/configure-distribution.md)   
  [Veröffentlichen von Daten und Datenbankobjekten](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)   
+ [Abonnieren von Veröffentlichungen](../../../relational-databases/replication/subscribe-to-publications.md)   
  [Initialize a Subscription](../../../relational-databases/replication/initialize-a-subscription.md)   
  [Synchronisieren von Daten](../../../relational-databases/replication/synchronize-data.md)  
   

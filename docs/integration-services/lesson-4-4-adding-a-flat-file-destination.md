@@ -1,7 +1,7 @@
 ---
 title: 'Schritt 4: Hinzufügen eines Flatfileziels | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/07/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,55 +11,56 @@ ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ed5aa9aab3e53288f2cc482f87b32048d45a56b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b59967b631475fc0f7eb7737fac65022fc18973
+ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842788"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54211021"
 ---
-# <a name="lesson-4-4---adding-a-flat-file-destination"></a>Lektion 4-4: Hinzufügen eines Flatfileziels
-Die Fehlerausgabe der "Lookup Currency Key"-Transformation leitet alle Datenzeilen, für die im Suchvorgang keine Übereinstimmung gefunden wurde, zur Skripttransformation um. Um die zu den Fehlern angezeigten Informationen zu verbessern, führt die Skripttransformation ein Skript aus, mit dem die Fehlerbeschreibung abgerufen wird.  
+# <a name="lesson-4-4-add-a-flat-file-destination"></a>Lektion 4.4: Hinzufügen eines Flatfileziels
+
+Die Fehlerausgabe der Lookup Currency Key-Transformation leitet alle Datenzeilen, für die beim Suchvorgang keine Übereinstimmung gefunden wurde, zum Skripttransformationsvorgang um. Um mehr Informationen zu den aufgetretenen Fehlern bereitzustellen, führt die Skripttransformation ein Skript aus, mit dem die Beschreibung jedes Fehlers abgerufen wird.  
   
-In dieser Aufgabe speichern Sie alle Informationen zu den fehlerhaften Zeilen für eine spätere Verarbeitung in einer Datei mit Trennzeichen. Um die fehlerhaften Zeilen zu speichern, müssen Sie einen Flatfile-Verbindungs-Manager für die Textdatei, die die Fehlerdaten enthalten wird, und ein Flatfileziel hinzufügen und konfigurieren. Durch Festlegen von Eigenschaften im Verbindungs-Manager für Flatfiles, der vom Flatfileziel verwendet wird, können Sie angeben, wie das Flatfileziel die Textdatei formatiert und schreibt. Weitere Informationen finden Sie unter [Verbindungs-Manager für Flatfiles](../integration-services/connection-manager/flat-file-connection-manager.md) und [Flatfileziel](../integration-services/data-flow/flat-file-destination.md).  
+In dieser Aufgabe speichern Sie alle Informationen zu den fehlerhaften Zeilen zur späteren Verarbeitung in einer durch Trennzeichen getrennten Textdatei. Um die fehlerhaften Zeilen zu speichern, fügen Sie einen Flatfile-Verbindungs-Manager für die Textdatei, die die Fehlerdaten enthält, sowie ein Flatfileziel hinzu und konfigurieren diese. Durch Festlegen von Eigenschaften im Verbindungs-Manager für Flatfiles, der vom Flatfileziel verwendet wird, können Sie angeben, wie das Flatfileziel die Textdatei formatiert und schreibt. Weitere Informationen finden Sie unter [Verbindungs-Manager für Flatfiles](../integration-services/connection-manager/flat-file-connection-manager.md) und [Flatfileziel](../integration-services/data-flow/flat-file-destination.md).  
   
-### <a name="to-add-and-configure-a-flat-file-destination"></a>So fügen Sie ein Flatfileziel hinzu und konfigurieren es  
+## <a name="add-and-configure-a-flat-file-destination"></a>Hinzufügen und Konfigurieren eines Flatfileziels  
   
-1.  Klicken Sie auf die Registerkarte **Datenfluss** .  
+1.  Wählen Sie die Registerkarte **Datenfluss** aus.  
   
-2.  Erweitern Sie in der **SSIS-Toolbox**die Option **Weitere**, und ziehen Sie **Flatfileziel** auf die Datenfluss-Entwurfsoberfläche. Setzen Sie das **Flatfileziel** direkt unter die **Get Error Description** -Transformation.  
+2.  Erweitern Sie in der **SSIS-Toolbox** die Option **Weitere Ziele**, und ziehen Sie **Flatfileziel** auf die Datenfluss-Entwurfsoberfläche. Setzen Sie das **Flatfileziel** direkt unter die **Get Error Description** -Transformation.  
   
-3.  Klicken Sie auf die **Get Error Description** -Transformation, und ziehen Sie anschließend den grünen Pfeil auf das neue **Flatfileziel**.  
+3.  Wählen Sie die Transformation **Get Error Description** (Fehlerbeschreibung abrufen) aus, und ziehen Sie anschließend den blauen Pfeil auf das neue **Flatfileziel**.  
   
-4.  Klicken Sie auf der **Datenfluss** -Entwurfsoberfläche in der neu hinzugefügten **Flatfileziel** -Transformation auf **Flatfileziel** , und ändern Sie den Namen in **Failed Rows**.  
+4.  Wählen Sie auf der **Datenfluss**-Entwurfsoberfläche den Namen **Flatfileziel** in der neuen Transformation **Flatfileziel** aus, und ändern Sie den Namen in **Failed Rows** (Fehlerhafte Zeilen).  
   
-5.  Klicken Sie mit der rechten Maustaste auf die Transformation **Failed Rows** , klicken Sie auf **Bearbeiten**und anschließend im **Ziel-Editor für Flatfiles**auf **Neu**.  
+5.  Klicken Sie mit der rechten Maustaste auf die Transformation **Failed Rows** (Fehlerhafte Zeilen), wählen Sie **Bearbeiten** und anschließend im **Ziel-Editor für Flatfiles** die Option **Neu** aus.  
   
-6.  Überprüfen Sie im Dialogfeld **Flatfileformat** , ob **Mit Trennzeichen** ausgewählt ist, und klicken Sie anschließend auf **OK**.  
+6.  Überprüfen Sie im Dialogfeld **Flatfileformat**, ob **Mit Trennzeichen** ausgewählt ist, und wählen Sie anschließend **OK** aus.  
   
-7.  Geben Sie im **Verbindungs-Manager-Editor für Flatfiles**im Feld **Name des Verbindungs-Managers** die Zeichenfolge **Error Data**ein.  
+7.  Geben Sie im **Verbindungs-Manager-Editor für Flatfiles** im Feld **Name des Verbindungs-Managers** die Zeichenfolge *Error Data* (Fehlerdaten) ein.  
   
-8.  Klicken Sie im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** auf **Durchsuchen**, und suchen Sie den Ordner, in dem die Datei gespeichert werden soll.  
+8.  Wählen Sie im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** die Option **Durchsuchen** aus, und suchen Sie den Ordner, in dem die Datei gespeichert werden soll.  
   
-9. Geben Sie im Dialogfeld **Öffnen** für **Dateiname**den Namen **ErrorOutput.txt**ein, und klicken Sie anschließend auf **Öffnen**.  
+9. Geben Sie im Dialogfeld **Öffnen** für **Dateiname** den Namen *ErrorOutput.txt* ein, und wählen Sie anschließend **Öffnen** aus.  
   
-10. Prüfen Sie im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** , ob das Feld **Gebietsschema** den Wert Englisch (USA) und das Feld **Codepage** den Wert 1252 (ANSI -Latin I) enthält.  
+10. Überprüfen Sie im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles**, ob **Gebietsschema** auf **Englisch (USA)** und **Codepage** auf **1252 (ANSI-Latin I)** festgelegt ist.  
   
-11. Klicken Sie im Optionen-Bereich auf **Spalten**.  
+11. Wählen Sie im Optionsbereich **Spalten** aus.  
   
-    Beachten Sie, dass zusätzlich zu den Spalten aus der Quelldatendatei drei neue Spalten vorhanden sind: ErrorCode, ErrorColumn und ErrorDescription. Diese Spalten werden von der Fehlerausgabe der Lookup Currency Key-Transformation und vom Skript in der Get Error Description-Transformation generiert und können dazu verwendet werden, die Ursache für das Fehlschlagen der Zeile zu beheben.  
+    Zusätzlich zu den Spalten aus der Quelldatendatei sind drei neue Spalten vorhanden: ErrorCode, ErrorColumn und ErrorDescription. Diese Spalten sind die Fehlerausgabe der Lookup Currency Key-Transformation und des Skripts in der Get Error Description-Transformation (Fehlerbeschreibung abrufen). Sie können diese Spalten verwenden, um die Ursache für das Fehlschlagen der Zeile zu beheben.  
   
-12. Klicken Sie auf **OK**.  
+12. Wählen Sie **OK**.  
   
 13. Deaktivieren Sie im **Ziel-Editor für Flatfiles**das Kontrollkästchen **Daten in der Datei überschreiben** .  
   
-    Wenn Sie dieses Kontrollkästchen deaktivieren, werden die Fehler über mehrere Paketausführungen beibehalten.  
+    Wenn Sie dieses Kontrollkästchen deaktivieren, werden die Fehler durch Anfügen der Fehlerausgabe für jede neue Ausführung über mehrere Paketausführungen beibehalten.
   
-14. Klicken Sie im **Ziel-Editor für Flatfiles**auf **Zuordnungen** um zu überprüfen, ob alle Spalten ordnungsgemäß sind. Optional können Sie die Spalten im Ziel umbenennen.  
+14. Wählen Sie im **Ziel-Editor für Flatfiles** die Option **Zuordnungen** aus, um zu überprüfen, ob alle Spalten ordnungsgemäß sind. Optional können Sie die Spalten im Ziel umbenennen.  
   
-15. Klicken Sie auf **OK**.  
+15. Wählen Sie **OK**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="go-to-next-task"></a>Weiter zur nächsten Aufgabe
 [Schritt 5: Testen des Tutorialpakets aus Lektion 4](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
   

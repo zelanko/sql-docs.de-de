@@ -16,12 +16,12 @@ ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f35ed02444cc1fc4773eec528af73df76cde5bb5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7f238b5b31c4e354562091bb80768b7db1e9af5c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534684"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131850"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Verbinden von Clients mit einer Datenbank-Spiegelungssitzung (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Server-Attribut  
  Die Verbindungszeichenfolge muss ein **Server**-Attribut enthalten, das den Namen des ersten Partners bereitstellt, der die aktuelle Prinzipalserverinstanz identifizieren sollte.  
   
- Die einfachste Art, die Serverinstanz zu identifizieren, besteht darin, ihren Namen *<Servername>*[**\\***<SQL_Server_Instanzname>*] anzugeben. Zum Beispiel:  
+ Die einfachste Art, die Serverinstanz zu identifizieren, besteht darin, ihren Namen (*<Servername>*[**\\**_<SQL_Server_Instanzname>_]) anzugeben. Beispiel:  
   
  `Server=Partner_A;`  
   
@@ -132,7 +132,7 @@ Server=123.34.45.56,4724;
 |ODBC-Treiber|**Failover_Partner**|  
 |ActiveX-Datenobjekte (ADO)|**Failoverpartner**|  
   
- Die einfachste Art, die Serverinstanz zu identifizieren, ist über ihren Systemnamen, *<Servername>*[**\\***<SQL_Server_Instanzname>*].  
+ Die einfachste Art, die Serverinstanz zu identifizieren, ist über ihren Systemnamen, *<Servername>*[**\\**_<SQL_Server_Instanzname>_].  
   
  Alternativ können die IP-Adresse und die Portnummer im Attribut **Failover Partner** bereitgestellt werden. Wenn der Anfangsverbindungsversuch während der ersten Verbindung mit der Datenbank fehlschlägt, wird beim Versuch, eine Verbindung mit dem Failoverpartner herzustellen, auf das Zurückgreifen auf DNS und SQL Server-Browser verzichtet. Wenn eine Verbindung hergestellt wurde, wird der Failoverpartnername durch den Failoverpartnernamen überschrieben; bei einem Failover benötigen die umgeleiteten Verbindung somit DNS- und SQL Server-Browser.  
   
@@ -169,7 +169,7 @@ Server=123.34.45.56,4724;
   
  Die Wiederholungszeit wird mit der folgenden Formel berechnet:  
   
- *Wiederholungszeit* **=** *Vorhergehende Wiederholungszeit* **+(** 0,08 **\****Anmeldungstimeout***)**  
+ _Wiederholungszeit_ **=** _Vorhergehende Wiederholungszeit_ **+(** 0,08 **&#42;**_Anmeldungstimeout_**)**  
   
  Hierbei gilt für *Vorhergehende Wiederholungszeit* ein Anfangswert von 0.  
   
@@ -177,10 +177,10 @@ Server=123.34.45.56,4724;
   
 |Round|Berechnung der*Wiederholungszeit* |Wiederholungszeit pro Versuch|  
 |-----------|-----------------------------|----------------------------|  
-|1|0 **+(** 0.08 **\*** 15 **)**|1,2 Sekunden|  
-|2|1.2 **+(** 0.08 **\*** 15 **)**|2,4 Sekunden|  
-|3|2.4 **+(** 0.08 **\*** 15 **)**|3,6 Sekunden|  
-|4|3.6 **+(** 0.08 **\*** 15 **)**|4,8 Sekunden|  
+|1|0 **+(** 0,08 **&#42;** 15 **)**|1,2 Sekunden|  
+|2|1.2 **+(** 0,08 **&#42;** 15 **)**|2,4 Sekunden|  
+|3|2.4 **+(** 0,08 **&#42;** 15 **)**|3,6 Sekunden|  
+|4|3.6 **+(** 0,08 **&#42;** 15 **)**|4,8 Sekunden|  
   
  In der folgenden Abbildung werden diese Wiederholungszeiten für aufeinander folgende Wiederholungsversuche, für die jeweils ein Timeout erfolgt, veranschaulicht.  
   
@@ -247,7 +247,7 @@ Server=123.34.45.56,4724;
 |Für den Dienst wird ein manuelles Failover zu Partner_C ausgeführt (Trennung der Clientverbindungen).|Partner_C|Partner_B|Client versucht, anfänglich eine Verbindung mit Partner_A herzustellen und dann mit Partner_B. Beide Namen schlagen fehl, und schließlich wird das Timeout der Verbindungsanforderung erreicht, und die Anforderung schlägt fehl.|  
   
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Mögliche Fehler während der Datenbankspiegelung](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)  
   

@@ -17,12 +17,12 @@ ms.assetid: a2d8b666-ed41-4f86-b2b8-c8e118416ab7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f11bd1d26e363628a80ed2cd673e4acda7476526
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afa70f42c2ea5602bf549a4d5596bff2c8bbff66
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852848"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123880"
 ---
 # <a name="caching-refresh-and-replication-monitor-performance"></a>Zwischenspeichern, Aktualisieren und Leistung des Replikationsmonitors
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,9 +30,9 @@ ms.locfileid: "47852848"
   
  Die Aktualisierung des Cache wird durch einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agentauftrag ausgeführt: **Aktualisierung für die Replikationsüberwachung**. Der Auftrag wird fortlaufend ausgeführt. Der Zeitplan für die Aktualisierung des Cache hängt von einer bestimmten Wartedauer nach der vorhergehenden Aktualisierung ab:  
   
--   Wenn seit dem letzten Erstellen des Cache Änderungen des Agent-Verlaufs stattgefunden haben, beträgt die Wartezeit mindestens 4 Sekunden oder die Zeitspanne, die das Erstellen des vorherigen Cache gedauert hat.  
+-   Wenn seit der letzten Cacheerstellung Änderungen am Agent-Verlauf vorgenommen wurden, beträgt die Wartezeit mindestens 4 Sekunden oder aber den Zeitraum, der zum Erstellen des vorherigen Caches erforderlich war.  
   
--   Wenn seit dem letzten Erstellen des Cache keine Änderungen des Agent-Verlaufs stattgefunden haben (es könnten andere Änderungen eingetreten sein), beträgt die Wartezeit maximal 30 Sekunden oder die Zeitspanne, die das Erstellen des vorherigen Cache gedauert hat.  
+-   Wenn seit der letzten Cacheerstellung keine Änderungen am Agent-Verlauf vorgenommen wurden (andere Änderungen sind jedoch möglich), beträgt die Wartezeit höchstens 30 Sekunden oder aber den Zeitraum, der zum Erstellen des vorherigen Caches erforderlich war.  
   
 ## <a name="refreshing-the-replication-monitor-user-interface"></a>Aktualisieren der Benutzeroberfläche des Replikationsmonitors  
  Die Benutzeroberfläche des Replikationsmonitors kann folgendermaßen aktualisiert werden:  
@@ -54,8 +54,8 @@ ms.locfileid: "47852848"
   
 -   Vermeiden Sie es, eine große Zahl von Verteilern zu registrieren und festzulegen, dass der Replikationsmonitor zu allen automatisch eine Verbindung herstellt.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausführen von Aufträgen zur Replikationswartung &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/run-replication-maintenance-jobs-sql-server-management-studio.md)   
- [Überwachen (Replikation)](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Überwachen (Replikation)](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

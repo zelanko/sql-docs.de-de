@@ -15,12 +15,12 @@ ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fb896309e39a2abe054ce470fd9cec33b690181c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b858639e60419d955a32981ceeac56d8acc42110
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535569"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133180"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Wiederherstellen einer SQL Server-Datenbank zu einem Zeitpunkt (vollständiges Wiederherstellungsmodell)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "52535569"
   
      [Empfehlungen](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Wiederherstellen einer SQL Server-Datenbank zu einem bestimmten Zeitpunkt mit:**  
   
@@ -57,7 +57,7 @@ ms.locfileid: "52535569"
   
  RESTORE-Berechtigungen werden Rollen erteilt, in denen Mitgliedsinformationen immer für den Server verfügbar sind. Da die Mitgliedschaft in einer festen Datenbankrolle nur bei unbeschädigten und zugänglichen Datenbanken geprüft werden kann (was beim Ausführen von RESTORE nicht immer der Fall ist), verfügen Mitglieder der festen Datenbankrolle **db_owner** nicht über RESTORE-Berechtigungen.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
  **So stellen Sie eine Datenbank bis zu einem Zeitpunkt wieder her**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit der entsprechenden Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]her, und erweitern Sie die Serverstruktur.  
@@ -135,11 +135,11 @@ ms.locfileid: "52535569"
   
  **Grundlegende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Syntax**  
   
- RESTORE LOG *Datenbankname* FROM <Sicherungsgerät> WITH STOPAT **=***Zeit***,** RECOVERY...  
+ RESTORE LOG *Datenbankname* FROM <Sicherungsgerät> WITH STOPAT **=**_Zeit_**,** RECOVERY...  
   
  Der Wiederherstellungszeitpunkt ist der Transaktionscommit, der zuletzt vor oder genau zu dem gegebenen **datetime** -Wert erfolgte, der für *time*angegeben wird.  
   
- Wenn Sie nur die Änderungen vor dem angegebenen Zeitpunkt wiederherstellen möchten, geben Sie für die einzelnen Sicherungen, die Sie wiederherstellen, WITH STOPAT **=** *time* an. Damit stellen Sie sicher, dass der Zielzeitpunkt nicht überschritten wird.  
+ Wenn Sie nur die Änderungen vor dem angegebenen Zeitpunkt wiederherstellen möchten, geben Sie für die einzelnen Sicherungen, die Sie wiederherstellen, WITH STOPAT **=** _time_ an. Damit stellen Sie sicher, dass der Zielzeitpunkt nicht überschritten wird.  
   
  **So stellen Sie eine Datenbank bis zu einem Zeitpunkt wieder her**  
   
@@ -155,7 +155,7 @@ ms.locfileid: "52535569"
   
 3.  Stellen Sie die letzte differenzielle Datenbanksicherung wieder her und – sofern vorhanden –  ohne dabei die Datenbank wiederherzustellen (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY).  
   
-4.  Wenden Sie jede einzelne Transaktionsprotokollsicherung in derselben Reihenfolge an, in der sie erstellt wurde, und geben Sie dabei den Zeitpunkt an, zu dem die Wiederherstellung des Protokolls beendet werden soll (RESTORE DATABASE *Datenbankname* FROM <Sicherungsgerät> WITH STOPAT**=***Zeit***,** RECOVERY).  
+4.  Wenden Sie jede einzelne Transaktionsprotokollsicherung in derselben Reihenfolge an, in der sie erstellt wurde, und geben Sie dabei den Zeitpunkt an, zu dem die Wiederherstellung des Protokolls beendet werden soll (RESTORE DATABASE *Datenbankname* FROM <Sicherungsmedium> WITH STOPAT**=**_time_**,** RECOVERY).  
   
     > [!NOTE]  
     >  Die Optionen RECOVERY und STOPAT. Wenn die Transaktionsprotokollsicherung den geforderten Zeitpunkt nicht enthält (z. B. wenn der angegebene Zeitpunkt hinter dem Zeitpunkt liegt, bis zu dem das Transaktionsprotokoll reicht), wird eine Warnung erzeugt, und die Datenbank wird nicht wiederhergestellt.  
@@ -197,7 +197,7 @@ GO
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> (SMO)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  

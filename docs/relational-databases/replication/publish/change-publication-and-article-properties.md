@@ -17,12 +17,12 @@ ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8b57bcb42bfc48563e73b783bd7b04a9905a5e43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d0e5b67288e9cc9d0491f30dc98b3edf9c01c0f1
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717838"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135720"
 ---
 # <a name="change-publication-and-article-properties"></a>Ändern von Veröffentlichungs- und Artikeleigenschaften
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -94,9 +94,9 @@ ms.locfileid: "47717838"
 |Aktivieren bzw. Deaktivieren von nur zum Herunterladen berechtigten Abonnements (beim Ändern in oder aus andere(n) Uploadoptionen sind keine gesonderten Aktionen erforderlich)|**sp_changemergearticle**|Ändern in den oder aus dem Wert **2** für **subscriber_upload_options**|Erneutes Initialisieren von Abonnements|  
 |Ändern des Besitzers der Zieltabelle|**sp_changemergearticle**|**destination_owner**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Verwaltung &#40;Replikation&#41;](../../../relational-databases/replication/administration/administration-replication.md)   
- [Erstellen und Anwenden der Momentaufnahme](../../../relational-databases/replication/create-and-apply-the-snapshot.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Häufig gestellte Fragen für Replikationsadministratoren](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
+ [Erstellen und Anwenden der Momentaufnahme](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
  [Erneutes Initialisieren von Abonnements](../../../relational-databases/replication/reinitialize-subscriptions.md)   
  [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   

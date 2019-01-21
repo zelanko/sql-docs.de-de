@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1c72f5294a7727b7d5a7903e0c12f8daa8c93cbf
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a63d6e347f83e63f7f99a2e06e1122b1c93934b0
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394148"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257055"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Aktualisieren von SQL Server-Instanzen auf Windows Server 2008/2008 R2/2012-Clustern
 
@@ -46,12 +46,12 @@ Die angemessene Migrationsstrategie hängt von einigen Parametern der ursprüngl
 
 |                                   | Alle Serverobjekte und VNNs erforderlich | Alle Serverobjekte und VNNs erforderlich | Keine Serverobjekte und VNNs erforderlich\* | Keine Serverobjekte und VNNs erforderlich\* |
 |-----------------------------------|--------------------------------------|--------------------------------------------------------------------|------------|------------|
-| ***Verfügbarkeitsgruppen? (J/N)***                  | ***J***                              | ***N***                                                            | ***J***    | ***N***    |
+| **_Verfügbarkeitsgruppen? (J/N)_**                  | **_J_**                              | **_N_**                                                            | **_J_**    | **_N_**    |
 | **Der Cluster verwendet nur SQL FCI**         | [Szenario 3](#scenario-3-cluster-has-sql-fcis-only-and-uses-availability-groups)                           | [Szenario 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag)                                                        | [Szenario 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [Szenario 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag) |
 | **Der Cluster verwendet eigenständige Instanzen** | [Szenario 5](#scenario-5-cluster-has-some-non-fci-and-uses-availability-groups)                           | [Szenario 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups)                                                         | [Szenario 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [Szenario 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups) |
 \* Dies schließt nicht den Listenernamen der Verfügbarkeitsgruppe ein.
 
-## <a name="scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis"></a>Szenario 1: Windows-Cluster mit SQL Server-Verfügbarkeitsgruppen und keinen FCIs (Failoverclusterinstanzen)
+## <a name="scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis"></a>Szenario 1: Windows-Cluster mit SQL Server-Verfügbarkeitsgruppen und ohne Failoverclusterinstanzen (FCIs)
 Wenn Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eingerichtet haben, das Verfügbarkeitsgruppen und keine FCIs verwendet, können Sie zu einem neuen Cluster migrieren, indem Sie eine parallele [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Bereitstellung auf einem anderen Cluster mit Windows Server 2016/2012 R2 durchführen. Anschließend können Sie eine verteilte Verfügbarkeitsgruppe erstellen, wo der Zielcluster der sekundäre Cluster des Produktionsclusters ist. Dafür ist es erforderlich, dass der Benutzer ein Upgrade auf [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] oder höher durchführt.
 
 ###  <a name="to-perform-the-upgrade"></a>So führen Sie ein Upgrade durch
@@ -87,7 +87,7 @@ Wenn Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eingericht
 
 11. Stellen Sie den Datenverkehr zum Listener wieder her.
 
-## <a name="scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis"></a>Szenario 2: Windows-Cluster mit SQL Server-FCIs (Failoverclusterinstanzen)
+## <a name="scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis"></a>Szenario 2: Windows-Cluster mit SQL Server-Failoverclusterinstanzen (FCIs)
 
 Wenn Sie über eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Umgebung mit nur SQL-FCI-Instanzen verfügen, können Sie zu einem neuen Cluster migrieren, indem Sie eine parallele [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Umgebung auf einem anderen Windows-Cluster mit Windows Server 2016/2012 R2 erstellen. Die Migration zum Zielcluster führen Sie durch, indem Sie die VNNs der alten SQL-FCIs „stehlen“ und sie auf dem neuen Cluster laden. Dabei kann es zu zusätzlicher Downtime kommen, die davon abhängig ist, wie viel Zeit die DNS-Verteilung in Anspruch nimmt.
 
@@ -242,7 +242,7 @@ Die Migration eines Clusters, der Verfügbarkeitsgruppen mit eigenständigen Rep
 
 ### [!INCLUDE[sshadrc-md](../../../includes/sshadrc-md.md)]
 
--   **Datenbank-Spiegelungsendpunkt**
+-   **Endpunkt für die Datenbankspiegelung**
 
     Aus SQL-Sicht migriert der Datenbankspiegelungsendpunkt mit den Systemtabellen zur neuen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz. Stellen Sie vor der Migration sicher, dass die entsprechenden Regeln auf die Firewalls angewendet wurden und dass kein anderer Prozess auf dem gleichen Port lauscht.
 
@@ -256,7 +256,7 @@ Die Migration eines Clusters, der Verfügbarkeitsgruppen mit eigenständigen Rep
 
 ### <a name="replication"></a>Replikation
 
--   **Remote Verteiler, Herausgeber und Abonnenten**
+-   **Remoteverteiler, Verleger und Abonnenten**
 
     Das Verhältnis zwischen einem Verteiler und einem Herausgeber hängt nur vom VNN der Computer ab, die diese hosten, der ordnungsgemäß zum neuen Computer aufgelöst werden kann. Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent-Aufträge werden auch ordnungsgemäß mit den Systemtabellen migriert, sodass die verschiedenen Replikations-Agents weiterhin ausgeführt werden können. Vor der Migration ist es erforderlich, dass Windows-Konten, auf denen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent selbst oder ein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent-Auftrag ausgeführt wird, die gleichen Berechtigungen in der Zielumgebung haben. Die Kommunikation mit dem Herausgeber und den Abonnenten verläuft normal.
 

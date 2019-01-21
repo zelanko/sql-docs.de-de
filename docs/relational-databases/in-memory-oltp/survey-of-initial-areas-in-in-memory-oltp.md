@@ -12,15 +12,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 31a4e59da5f3555f79ac6fe6b82fa2d03721a81b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 21d42cb015227b06021878e37b4c1b94bd96a446
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519451"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300397"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Überblick des Anfangsbereichs in In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Senden Sie uns Ihr Feedback zum Inhaltsverzeichnis der SQL-Dokumentation!](https://aka.ms/sqldocsurvey)
 
   
 Dieser Artikel ist für Entwickler konzipiert, die schnell die Grundlagen der In-Memory-OLTP-Leistungsmerkmale von Microsoft SQL Server und der Azure SQL-Datenbank lernen möchten.  
@@ -93,12 +96,12 @@ Eine Reihe exzellenter Blogbeiträge erklärt Ihnen aus verschiedenen Blickwinke
 
 1. [Real-Time Operational Analytics Using In-Memory Technology (Operative Echtzeitanalyse mit In-Memory-Technologie)](https://blogs.technet.microsoft.com/dataplatforminsider/2015/12/09/real-time-operational-analytics-using-in-memory-technology/)
 2. [Real-Time Operational Analytics – Overview nonclustered columnstore index (NCCI) (Operative Echtzeitanalyse: Überblick über den nicht gruppierten Columnstore-Index [Nonclustered Columnstore Index, NCCI])](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-using-nonclustered-columnstore-index/)
-3. [Real-Time Operational Analytics: Simple example using nonclustered clustered columnstore index (NCCI) in SQL Server 2016 (Operative Echtzeitanalyse: Einfaches Beispiel mit Verwendung des gruppierten/nicht gruppierten Columnstore-Index [Nonclustered Columnstore Index, NCCI] in SQL Server 2016)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci/)
-4. [Real-Time Operational Analytics: DML operations and nonclustered columnstore index (NCCI) in SQL Server 2016 (Operative Echtzeitanalyse: DML-Operationen und nicht gruppierter Columnstore-Index [Nonclustered Columnstore Index, NCCI] in SQL Server 2016)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/04/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016/)
-5. [Real-Time Operational Analytics: Filtered nonclustered columnstore index (NCCI) (Operative Echtzeitanalyse: Gefilterter, nicht gruppierter Columnstore-Index [Nonclustered Columnstore Index, NCCI])](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)
-6. [Real-Time Operational Analytics: Compression Delay Option for Nonclustered Columnstore Index (NCCI) (Operative Echtzeitanalyse: Die Option Kompressionsverzögerung für einen nicht gruppierten Columnstore-Index [Nonclustered Columnstore Index, NCCI])](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)
-7. [Real-Time Operational Analytics: Compression Delay option with NCCI and the performance (Operative Echtzeitanalyse: Performance des nicht gruppierten Columnstore-Index [Nonclustered Columnstore Index, NCCI] mit aktivierter Option „Kompressionsverzögerung“)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance/)
-8. [Real-Time Operational Analytics: Memory-Optimized Tables and Columnstore Index (Operative Echtzeitanalyse: Speicheroptimierte Tabellen und der Columnstore-Index)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)
+3. [Real-Time Operational Analytics: Simple example using nonclustered clustered columnstore index (NCCI) in SQL Server 2016 (Operative Echtzeitanalyse: Einfaches Beispiel mit Verwendung des geclusterten/nicht geclusterten Columnstore-Index (Nonclustered Columnstore Index, NCCI) in SQL Server 2016)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci/)
+4. [Real-Time Operational Analytics: DML operations and nonclustered columnstore index (NCCI) in SQL Server 2016 (Operative Echtzeitanalyse: DML-Vorgänge und nicht geclusterter Columnstore-Index (Nonclustered Columnstore Index, NCCI) in SQL Server 2016)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/04/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016/)
+5. [Real-Time Operational Analytics: Filtered nonclustered columnstore index (NCCI) (Operative Echtzeitanalyse: gefilterte, nicht geclusterte Columnstore-Indizes)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)
+6. [Real-Time Operational Analytics: Compression Delay Option for Nonclustered Columnstore Index (NCCI) (Operative Echtzeitanalyse: Die Option „Kompressionsverzögerung“ für einen nicht geclusterten Columnstore-Index (Nonclustered Columnstore Index, NCCI))](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)
+7. [Real-Time Operational Analytics: Compression Delay option with NCCI and the performance (Operative Echtzeitanalyse: Leistung des nicht geclusterten Columnstore-Index (Nonclustered Columnstore Index, NCCI) mit aktivierter Option „Kompressionsverzögerung“)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance/)
+8. [Real-Time Operational Analytics: Memory-Optimized Tables and Columnstore Index (Speicheroptimierte Tabellen und der Columnstore-Index)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)
 
 #### <a name="defragment-a-columnstore-index"></a>Defragmentieren eines Columnstore-Index
 
@@ -107,9 +110,9 @@ Eine Reihe exzellenter Blogbeiträge erklärt Ihnen aus verschiedenen Blickwinke
 
 #### <a name="bulk-importation-of-data"></a>Ausführen eines Massenimports von Daten
 
-1. [Clustered Column Store: Bulk Load (Gruppierter Columnstore-Index: Massenladen)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2014/07/27/clustered-column-store-index-bulk-loading-the-data/)
-2. [Clustered Columnstore Index: Data Load Optimizations – Minimal Logging (Gruppierter Columnstore-Index: Optimieren des Ladens von Daten – Minimale Protokollierung)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/10/clustered-columnstore-index-data-load-optimizations-minimal-logging/)
-3. [Clustered Columnstore Index: Data Load Optimizations – Parallel Bulk Import (Gruppierter Columnstore-Index: Optimieren des Ladens von Daten – Paralleles Massenladen)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/28/clustered-columnstore-index-parallel-bulk-import/)
+1. [Clustered Column Store: Bulk Load (Geclusterter Columnstore: Massenladen)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2014/07/27/clustered-column-store-index-bulk-loading-the-data/)
+2. [Clustered Columnstore Index: Data Load Optimizations - Minimal Logging (Geclusterter Columnstore-Index: Optimierungen des Ladens von Daten – minimale Protokollierung)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/10/clustered-columnstore-index-data-load-optimizations-minimal-logging/)
+3. [Clustered columnstore Index: Data Load Optimizations – Parallel Bulk Import (Gruppierter Columnstore-Index: Optimieren des Ladens von Daten – Paralleler Massenimport)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/28/clustered-columnstore-index-parallel-bulk-import/)
 
 
 
@@ -217,7 +220,7 @@ Auf Azure SQL-Datenbank können und brauchen Sie keine solche FILEGROUP erstelle
 
 Das folgende T-SQL-Beispielskript aktiviert eine Datenbank für In-Memory-OLTP und konfiguriert alle empfohlene Einstellungen. Es funktioniert mit SQL Server und Azure SQL-Datenbank: [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql).
 
-Beachten Sie, dass nicht alle Features von SQL Server für Datenbanken mit einer MEMORY_OPTIMIZED_DATA-Dateigruppe unterstützt werden. Weitere Informationen zu den Einschränkungen finden Sie unter [Nicht unterstützte SQL Server-Funktionen für In-Memory OLTP](unsupported-sql-server-features-for-in-memory-oltp.md).
+Beachten Sie, dass nicht alle Features von SQL Server für Datenbanken mit einer MEMORY_OPTIMIZED_DATA-Dateigruppe unterstützt werden. Details zu Einschränkungen finden Sie unter: [Nicht unterstützte SQL Server-Funktionen für In-Memory OLTP](unsupported-sql-server-features-for-in-memory-oltp.md)
   
 <a name="create-a-memory-optimized-table-26y"></a>  
   
@@ -361,7 +364,7 @@ In den folgenden Unterabschnitten wird kurz beschrieben, wie die In-Memory-OLTP-
 ### <a name="how-memory-optimized-tables-perform-faster"></a>So werden speicheroptimierte Tabellen schneller ausgeführt  
   
   
-**Dualer Aufbau:** Eine speicheroptimierte Tabelle ist dual aufgebaut; eine Darstellung im aktiven Arbeitsspeicher, und die andere auf der Festplatte. Jede Transaktion wird in beiden Versionen der Tabelle committet. Transaktionen arbeiten gegen die Darstellung des viel schnelleren aktiven Arbeitsspeichers. Speicheroptimierte Tabellen profitieren von der höheren Geschwindigkeit des aktiven Arbeitsspeichers im Vergleich zum Datenträger. Darüber hinaus erlaubt die höhere Agilität des aktiven Speichers die Verwendung einer komplexeren, auf Geschwindigkeit optimierten Tabellenstruktur. Zusätzlich ist die erweiterte Struktur seitenlos, wodurch der Mehraufwand sowie der Konflikt von Latches und Spinlocks vermieden werden.  
+**Dualer Aufbau:** Eine speicheroptimierte Tabelle ist dual aufgebaut und umfasst eine Darstellung im aktiven Arbeitsspeicher sowie eine Darstellung auf der Festplatte. Jede Transaktion wird in beiden Versionen der Tabelle committet. Transaktionen arbeiten gegen die Darstellung des viel schnelleren aktiven Arbeitsspeichers. Speicheroptimierte Tabellen profitieren von der höheren Geschwindigkeit des aktiven Arbeitsspeichers im Vergleich zum Datenträger. Darüber hinaus erlaubt die höhere Agilität des aktiven Speichers die Verwendung einer komplexeren, auf Geschwindigkeit optimierten Tabellenstruktur. Zusätzlich ist die erweiterte Struktur seitenlos, wodurch der Mehraufwand sowie der Konflikt von Latches und Spinlocks vermieden werden.  
   
   
 **Keine Sperren:** Die speicheroptimierte Tabelle basiert auf einem *optimistischen* Ansatz für die konkurrierenden Ziele der Datenintegrität gegenüber Parallelität und hohem Durchsatz. Während der Transaktion platziert die Tabelle keine Sperren auf keiner Version der aktualisierten Zeilen von Daten. Diese kann im Konflikte erheblich in einigen Systemen mit hohem Volumen reduzieren.  
@@ -398,14 +401,14 @@ Im Rest dieses Abschnitts werden einige der wichtigsten Aspekte hinsichtlich Pla
 ### <a name="trade-offs-of-memory-optimized-tables"></a>Vor- und Nachteile von speicheroptimierten Tabellen  
   
   
-**Schätzen Sie den Arbeitsspeicher:** Sie müssen die Menge des aktiven Arbeitsspeichers schätzen, den Ihre speicheroptimierte Tabelle verbrauchen wird. Ihr Computersystem muss über ausreichend Kapazität zum Hosten einer speicheroptimierten Tabelle verfügen. Einzelheiten dazu finden Sie unter:  
+**Schätzen des Arbeitsspeichers:** Sie müssen den Umgang des aktiven Arbeitsspeichers schätzen, den Ihre speicheroptimierte Tabelle verbrauchen wird. Ihr Computersystem muss über ausreichend Kapazität zum Hosten einer speicheroptimierten Tabelle verfügen. Einzelheiten dazu finden Sie unter:  
   
 - [Überwachung und Fehlerbehebung für die Arbeitsspeicherauslastung](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)  
 - [Schätzen der Arbeitsspeicheranforderungen speicheroptimierter Tabellen](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
 - [Tabellen- und Zeilengröße in speicheroptimierten Tabellen](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
   
-**Partitionieren Sie Ihre große Tabelle:** Eine Möglichkeit, den Bedarf an großer Menge aktiven Arbeitsspeichers zu decken, ist das Partitionieren Ihrer große Tabelle in Teile im Arbeitsspeicher, *die heiße* Datenzeilen enthalten, verglichen mit *kalte, alte* Datenzeilen, die auf der Festplatte gespeichert werden (z.B. Aufträge, die vollständig ausgeliefert und abgeschlossen wurden). Diese Partitionierung ist ein manueller Prozess von Entwurf und Implementierung. Weitere Informationen:  
+**Partitionieren der großen Tabelle:** Eine Möglichkeit, den Bedarf an einer großen Menge an aktivem Arbeitsspeicher zu decken, ist das Partitionieren Ihrer große Tabelle in Teile im Arbeitsspeicher, die im Vergleich zu *kalten veralteten* Datenzeilen, die auf der Festplatte gespeichert werden (z. B. Aufträge, die vollständig ausgeliefert und abgeschlossen wurden), *heiße aktuelle* Datenzeilen enthalten. Diese Partitionierung ist ein manueller Prozess von Entwurf und Implementierung. Weitere Informationen:  
   
 - [Partitionierung auf Anwendungsebene](../../relational-databases/in-memory-oltp/application-level-partitioning.md)  
 - [Anwendungsmuster zur Partitionierung von speicheroptimierten Tabellen](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)  
@@ -495,7 +498,7 @@ Im folgenden Artikel und dessen untergeordneten Artikel im Inhaltsverzeichnis si
   
 ## <a name="related-links"></a>Verwandte Links  
   
-- Ursprünglicher Artikel: [In-Memory-OLTP (Arbeitsspeicheroptimierung)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+- Ursprünglicher Artikel: [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
     
 Hier finden Sie Artikel, die Code zum Veranschaulichen der Leistungsverbesserungen bieten, die Sie mit In-Memory-OLTP erreichen können.  
   

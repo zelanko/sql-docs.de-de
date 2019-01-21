@@ -25,19 +25,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fd1a43b50d0d36efacfe3c5a93a9bf0a169c4ede
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed0dd384b3ca1a90b1a40bbb23d63feabf2ae85d
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760338"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143290"
 ---
 # <a name="set-ansipadding-transact-sql"></a>SET ANSI_PADDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Steuert das Speichern von Werten in der Spalte, wenn die Werte kürzer als die definierte Spaltengröße sind, und das Speichern von Werten mit nachfolgenden Leerzeichen in **char**-, **varchar**-, **binary**- und **varbinary** -Daten.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax
   
@@ -59,7 +59,7 @@ SET ANSI_PADDING ON
  Diese Einstellung betrifft ausschließlich die Definition neuer Spalten. Nachdem die Spalte erstellt wurde, speichert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Werte gemäß der Einstellung, die beim Erstellen der Spalte festgelegt war. Bestehende Spalten sind von späteren Änderungen dieser Einstellung nicht betroffen.  
   
 > [!NOTE]  
->  Es wird empfohlen, für ANSI_PADDING stets den Wert ON festzulegen.  
+> ANSI_PADDING sollte immer auf ON festgelegt werden.  
   
  Die folgende Tabelle zeigt die Auswirkungen der SET ANSI_PADDING-Einstellung, wenn Werte in Spalten vom Datentyp **char**, **varchar**, **binary** und **varbinary** eingefügt werden.  
   
@@ -69,34 +69,35 @@ SET ANSI_PADDING ON
 |OFF|Füllt den ursprünglichen Wert (mit nachfolgenden Leerräumen für **char**-Spalten und nachfolgenden Nullen für **binary**-Spalten) bis zur Spaltenlänge auf.|Folgt den gleichen Regeln wie für **varchar** oder **varbinary**, wenn SET ANSI_PADDING auf OFF festgelegt ist.|Nachfolgende Leerräume in Zeichenwerten, die in eine **varchar**-Spalte eingefügt werden, werden abgeschnitten. Nachfolgende Nullen in Binärwerten, die in eine **varbinary**-Spalte eingefügt werden, werden abgeschnitten.|  
   
 > [!NOTE]  
->  Beim Auffüllen werden **char**-Spalten mit Leerräumen und **binary**-Spalten mit Nullen aufgefüllt. Wenn ein Abschneiden stattfindet, werden bei **char**-Spalten die abschließenden Leerräume abgeschnitten und bei **binary**-Spalten die abschließenden Nullen.  
+> Beim Auffüllen werden **char**-Spalten mit Leerräumen und **binary**-Spalten mit Nullen aufgefüllt. Wenn ein Abschneiden stattfindet, werden bei **char**-Spalten die abschließenden Leerräume abgeschnitten und bei **binary**-Spalten die abschließenden Nullen.  
   
- Für SET ANSI_PADDING muss beim Erstellen oder Ändern von Indizes für berechnete Spalten oder indizierte Sichten die Einstellung ON festgelegt werden. Weitere Informationen zu den erforderlichen Einstellungen der SET-Option mit indizierten Sichten und Indizes für berechnete Spalten finden Sie in den Überlegungen zum Verwenden der SET-Anweisungen unter [SET-Anweisungen &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md).  
+Für ANSI_PADDING muss beim Erstellen oder Ändern von Indizes für berechnete Spalten oder indizierte Sichten die Einstellung ON festgelegt werden. Weitere Informationen zu den erforderlichen Einstellungen der SET-Option mit indizierten Sichten und Indizes für berechnete Spalten finden Sie in den Überlegungen zum Verwenden der SET-Anweisungen unter [SET-Anweisungen &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md).  
   
- Die Standardeinstellung für SET ANSI_PADDING ist ON. Der ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client und der OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] legen für ANSI_PADDING beim Herstellen einer Verbindung automatisch ON fest. Diese Einstellung kann in ODBC-Datenquellen, in ODBC-Verbindungsattributen oder in OLE DB-Verbindungseigenschaften konfiguriert werden, die in der Anwendung festgelegt werden, bevor die Verbindung hergestellt wird. Die Standardeinstellung für SET ANSI_PADDING für Verbindungen von DB-Library-Anwendungen ist OFF.  
+Die Standardeinstellung für SET ANSI_PADDING ist ON. Der ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client und der OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] legen für ANSI_PADDING beim Herstellen einer Verbindung automatisch ON fest. Diese Einstellung kann in ODBC-Datenquellen, in ODBC-Verbindungsattributen oder in OLE DB-Verbindungseigenschaften konfiguriert werden, die in der Anwendung festgelegt werden, bevor die Verbindung hergestellt wird. Die Standardeinstellung für SET ANSI_PADDING für Verbindungen von DB-Library-Anwendungen ist OFF.  
   
  Die Einstellung SET ANSI_PADDING hat keine Auswirkungen auf die Datentypen **nchar**, **nvarchar**, **ntext**, **text**, **image**, **varbinary(max)**, **varchar(max)** und **nvarchar(max)**. Diese zeigen immer das Verhalten von SET ANSI_PADDING ON. Das heißt, dass nachfolgende Leerzeichen und Nullen nicht abgeschnitten werden.  
   
- Ist SET ANSI_DEFAULTS auf ON festgelegt, so ist SET ANSI_PADDING aktiviert.  
+Ist ANSI_DEFAULTS auf ON festgelegt, so ist ANSI_PADDING aktiviert.  
   
- Die Einstellung von SET ANSI_PADDING wird zur Ausführungszeit und nicht zur Analysezeit festgelegt.  
+Die Einstellung von ANSI_PADDING wird zur Ausführungszeit und nicht zur Analysezeit definiert.  
   
- Um die aktuelle Einstellung anzuzeigen, führen Sie die folgende Abfrage aus.  
+Um die aktuelle Einstellung anzuzeigen, führen Sie die folgende Abfrage aus.  
   
-```  
+```sql  
 DECLARE @ANSI_PADDING VARCHAR(3) = 'OFF';  
 IF ( (16 & @@OPTIONS) = 16 ) SET @ANSI_PADDING = 'ON';  
 SELECT @ANSI_PADDING AS ANSI_PADDING;  
-  
 ```  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der public-Rolle.  
+Erfordert die Mitgliedschaft in der **public** -Rolle.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel zeigt, wie sich die Einstellung auf die einzelnen Datentypen auswirkt.  
-  
-```  
+Das folgende Beispiel zeigt, wie sich die Einstellung auf die einzelnen Datentypen auswirkt.  
+
+Legen Sie ANSI_PADDING auf ON fest, und führen Sie einen Test durch.
+
+```sql  
 PRINT 'Testing with ANSI_PADDING ON'  
 SET ANSI_PADDING ON;  
 GO  
@@ -114,7 +115,11 @@ SELECT 'CHAR' = '>' + charcol + '\<', 'VARCHAR'='>' + varcharcol + '\<',
    varbinarycol  
 FROM t1;  
 GO  
-  
+```
+
+Legen Sie nun ANSI_PADDING auf OFF fest, und führen Sie noch einmal einen Test durch.
+
+```sql
 PRINT 'Testing with ANSI_PADDING OFF';  
 SET ANSI_PADDING OFF;  
 GO  
@@ -137,7 +142,7 @@ DROP TABLE t1;
 DROP TABLE t2;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SET-Anweisungen (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
  [SESSIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   

@@ -1,7 +1,7 @@
 ---
 title: 'Lektion 1: Erstellen eines Projekts und Basispakets mit SSIS | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 03/03/2017
+ms.date: 01/03/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,31 +11,41 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a4431e593a74c7f6a656f78cd70abfd19c813bdd
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 56c6d8a971026f6efac7d7e76c9ab1efd13b95d1
+ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642077"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185016"
 ---
-# <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Lesson 1: Create a Project and Basic Package with SSIS
+# <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Lektion 1: Erstellen eines Projekts und Basispakets mit SSIS
 
-In dieser Lektion erfahren Sie, wie Sie ein einfaches ETL-Paket erstellen, durch das Daten aus einer einzelnen Flatfilequelle extrahiert, mithilfe zweier Transformationskomponenten zum Suchen transformiert und anschließend in eine Kopie der **FactCurrencyRate**-Faktentabelle in **AdventureWorksDW2012** geschrieben werden. Als Teil dieser Lektion lernen Sie das Erstellen neuer Pakete, das Hinzufügen und Konfigurieren von Datenquellen- und Datenzielverbindungen sowie das Arbeiten mit neuen Ablaufsteuerungs- und Datenflusskomponenten.  
+In dieser Lektion erstellen Sie ein einfaches ETL-Paket, durch das Daten aus einer einzelnen Flatfilequelle extrahiert, mithilfe zweier Transformationen zum Suchen transformiert und anschließend in eine Kopie der **FactCurrencyRate**-Faktentabelle in die Beispieldatenbank **AdventureWorksDW2012** geschrieben werden. Als Teil dieser Lektion lernen Sie das Erstellen neuer Pakete, das Hinzufügen und Konfigurieren von Datenquellen- und Datenzielverbindungen sowie das Arbeiten mit neuen Ablaufsteuerungs- und Datenflusskomponenten.  
   
-> [!IMPORTANT]  
-> Dieses Lernprogramm erfordert die **AdventureWorksDW2012** -Beispieldatenbank. Weitere Informationen zum Installieren und Bereitstellen von **AdventureWorksDW2012**finden Sie unter [Reporting Services Produktbeispiel-Projekt auf CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=526910).  
+Vor dem Erstellen eines Pakets müssen Sie die Formatierung kennen, die in den Quelldaten und im Ziel verwendet wird. Dann können Sie die Transformationen definieren, die zum Zuordnen der Quelldaten zum Ziel erforderlich sind.  
+
+## <a name="prerequisites"></a>Voraussetzungen
+
+Dieses Tutorial basiert auf Microsoft SQL Server Data Tools, mehreren Beispielpaketen und einer Beispieldatenbank.
+
+* Informationen zum Installieren von SQL Server Data Tools finden Sie unter [Herunterladen und Installieren von SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).  
   
-## <a name="understanding-the-package-requirements"></a>Grundlegendes zu Paketanforderungen  
-Dieses Lernprogramm erfordert Microsoft SQL Server Data Tools.  
+* So laden Sie alle Lektionspakete für dieses Tutorial herunter:
+
+    1.  Navigieren Sie zu den [Integration Services tutorial files (Integration Services-Tutorialdateien)](https://www.microsoft.com/en-us/download/details.aspx?id=56827).
+
+    2.  Klicken Sie auf die Schaltfläche **Download** (Herunterladen).
+
+    3.  Wählen Sie die Datei **Creating a Simple ETL Package.zip**, und klicken Sie dann auf **Next** (Weiter).
+
+    4.  Entpacken Sie den Inhalt der Datei nach dem Herunterladen in ein lokales Verzeichnis.  
+
+* Informationen zum Installieren und Bereitstellen der Beispieldatenbank **AdventureWorksDW2012** finden Sie unter [Install and configure AdventureWorks sample database – SQL (Installieren und Konfigurieren der AdventureWorks-Beispieldatenbank)](../samples/adventureworks-install-configure.md).
   
-Weitere Informationen zum Installieren von SQL Server Data Tools finden Sie unter [Herunterladen von SQL Server Data Tools](https://msdn.microsoft.com/data/hh297027).  
+## <a name="look-at-the-source-data"></a>Sichten der Quelldaten
+Für dieses Tutorial bestehen die Quelldaten aus historischen Währungsdaten in der Flatfile **SampleCurrencyData.txt**. Die Quelldaten bestehen aus den vier folgenden Spalten: der Durchschnittsrate der Währung, einem Währungsschlüssel, einem Datenschlüssel und der Tagesendrate.  
   
-Vor dem Erstellen eines Pakets benötigen Sie ein durchgehendes Verständnis der Formatierung in Quelldaten und dem Ziel. Nachdem Sie sich mit beiden dieser Datenformate vertraut gemacht haben, können Sie die Transformationen definieren, die zum Zuordnen der Quelldaten zum Ziel erforderlich sind.  
-  
-### <a name="looking-at-the-source"></a>Untersuchen der Quelle  
-Für dieses Lernprogramm bestehen die Quelldaten aus einer Reihe von historischen Währungsdaten in der Flatfile SampleCurrencyData.txt. Die Quelldaten bestehen aus den vier folgenden Spalten: der Durchschnittsrate der Währung, einem Währungsschlüssel, einem Datenschlüssel und der Tagesendrate.  
-  
-Im Folgenden sehen Sie ein Beispiel der in der Datei SampleCurrencyData.txt enthaltenen Quelldaten:  
+Im Folgenden sehen Sie ein Beispiel der Quelldaten in der Datei „SampleCurrencyData.txt“:  
   
 <pre>1.00070049USD9/3/05 0:001.001201442  
 1.00020004USD9/4/05 0:001  
@@ -48,10 +58,10 @@ Im Folgenden sehen Sie ein Beispiel der in der Datei SampleCurrencyData.txt enth
 1.00020004USD9/11/05 0:001.001101211  
 1.00020004USD9/12/05 0:000.99970009</pre>  
   
-Für das Arbeiten mit Flatfile-Quelldaten ist das Verständnis darüber wichtig, wie vom Flatfile-Verbindungs-Manager die Flatfiledaten interpretiert werden. Wenn die Flatfilequelle aus Unicode besteht, definiert der Flatfile-Verbindungs-Manager alle Spalten als [DT_WSTR] mit einer Standardspaltenbreite von 50. Wenn die Flatfilequelle ANSI-codiert ist, werden die Spalten als [DT_STR] mit einer Spaltenbreite von 50 definiert. Wahrscheinlich müssen Sie diese Standards ändern, um die Zeichenfolgen-Spaltentypen Ihren Daten anzupassen. Dafür müssen Sie den Datentyp des Zieles untersuchen, wohin die Daten geschrieben werden, und dann den entsprechenden Typ innerhalb des Flatfile-Verbindungs-Managers auswählen.  
+Für das Arbeiten mit Flatfile-Quelldaten ist es wichtig zu verstehen, wie die Flatfiledaten vom Flatfile-Verbindungs-Manager interpretiert werden. Wenn die Flatfilequelle aus Unicode besteht, definiert der Flatfile-Verbindungs-Manager alle Spalten als [DT_WSTR] mit einer Standardspaltenbreite von 50. Wenn die Flatfilequelle ANSI-codiert ist, werden die Spalten als [DT_STR] mit einer Standardspaltenbreite von 50 definiert. Wahrscheinlich müssen Sie diese Standardeinstellungen ändern, um die Zeichenfolgen-Spaltentypen an Ihre Daten anzupassen. Sehen Sie sich den Datentyp des Ziels an, und wählen Sie diesen Typ dann im Verbindungs-Manager für Flatfiles aus.  
   
-### <a name="looking-at-the-destination"></a>Untersuchen des Zieles  
-Das endgültige Ziel für die Quelldaten ist eine Kopie der **FactCurrencyRate**-Faktentabelle in **AdventureWorksDW**. Die **FactCurrencyRate**-Faktentabelle weist vier Spalten auf und hat Beziehungen zu zwei Dimensionstabellen, wie der folgenden Tabelle zu entnehmen ist.  
+## <a name="look-at-the-destination-data"></a>Sichten der Zieldaten
+Das Ziel für die Quelldaten ist eine Kopie der **FactCurrencyRate**-Faktentabelle in **AdventureWorksDW**. Die **FactCurrencyRate**-Faktentabelle weist vier Spalten auf und hat Beziehungen zu zwei Dimensionstabellen, wie der folgenden Tabelle zu entnehmen ist.  
   
 |Spaltenname|Datentyp|Nachschlagetabelle|Suchspalte|  
 |---------------|-------------|----------------|-----------------|  
@@ -60,8 +70,8 @@ Das endgültige Ziel für die Quelldaten ist eine Kopie der **FactCurrencyRate**
 |DateKey|int (FK)|DimDate|DateKey (PK)|  
 |EndOfDayRate|FLOAT|None|None|  
   
-### <a name="mapping-source-data-to-be-compatible-with-the-destination"></a>Zuordnen der Quelldaten zum Ziel aus Kompatibilitätsgründen  
-Die Analyse der Quell- und Zieldatenformate ergibt, dass Suchvorgänge für die Werte **CurrencyKey** und **DateKey** notwendig sein werden. Die Transformationen, von denen diese Suchvorgänge ausgeführt werden, rufen die Werte **CurrencyKey** und **DateKey** ab, indem die alternativen Schlüssel aus den Dimensionstabellen **DimCurrency** und **DimDate** verwendet werden.  
+## <a name="map-the-source-data-to-the-destination"></a>Zuordnen der Quelldaten zum Ziel  
+Die Analyse der Quell- und Zieldatenformate ergibt, dass Suchvorgänge für die Werte **CurrencyKey** und **DateKey** notwendig sind. Die Transformationen, von denen diese Suchvorgänge ausgeführt werden, rufen diese Werte mithilfe der alternativen Schlüssel aus den Dimensionstabellen **DimCurrency** und **DimDate** ab.  
   
 |Flatfilespalte|Tabellenname|Spaltenname|Datentyp|  
 |--------------------|--------------|---------------|-------------|  
@@ -70,7 +80,7 @@ Die Analyse der Quell- und Zieldatenformate ergibt, dass Suchvorgänge für die 
 |2|DimDate|FullDateAlternateKey|date|  
 |3|FactCurrencyRate|EndOfDayRate|FLOAT|  
   
-## <a name="lesson-tasks"></a>Lektionsaufgaben  
+## <a name="lesson-tasks"></a>Aufgaben der Lektion  
 Diese Lektion enthält die folgenden Aufgaben:  
   
 -   [Schritt 1: Erstellen eines neuen Integration Services-Projekts](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
@@ -89,7 +99,7 @@ Diese Lektion enthält die folgenden Aufgaben:
   
 -   [Schritt 8: Vereinfachen des Layouts des Pakets aus Lektion 1](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
--   [Schritt 9: Testen des Lektion 1-Lernprogrammpakets](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+-   [Schritt 9: Testen des Tutorialpakets aus Lektion 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Lektion beginnen  
 [Schritt 1: Erstellen eines neuen Integration Services-Projekts](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  

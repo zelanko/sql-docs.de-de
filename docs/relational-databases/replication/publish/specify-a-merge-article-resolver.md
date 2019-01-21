@@ -15,32 +15,19 @@ ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ef65d698db19d1ada3c9c5260f19fa39c4140e95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 216387f82df57f8f3485ba95566fecf36c0ca897
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821938"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136000"
 ---
 # <a name="specify-a-merge-article-resolver"></a>Angeben eines Mergeartikelkonfliktlösers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Thema wird beschrieben, wie ein Konfliktlöser für Mergeartikel in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]angegeben wird.  
+
   
- **In diesem Thema**  
-  
--   **Vorbereitungen:**  
-  
-     [Empfehlungen](#Recommendations)  
-  
--   **So geben Sie einen Mergeartikelkonfliktlöser an mit:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
-  
-###  <a name="Recommendations"></a> Empfehlungen  
+##  <a name="recommendations"></a>Empfehlungen  
   
 -   Die Mergereplikation unterstützt die folgenden Typen von Artikelkonfliktlösern:  
   
@@ -58,7 +45,7 @@ ms.locfileid: "47821938"
   
     -   Dem Server mit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internetinformationsdienste (IIS) für ein Pullabonnement, das die Websynchronisierung verwendet.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
  Nach dem Registrieren des Konfliktlösers geben Sie dessen Verwendung durch einen Artikel im Dialogfeld **Artikeleigenschaften - \<Artikel>** auf der Registerkarte **Konfliktlöser** an. Dieses Dialogfeld ist im Assistenten für neue Veröffentlichung über das Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** verfügbar. Weitere Informationen zum Verwenden des Assistenten sowie Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung](../../../relational-databases/replication/publish/create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-a-resolver"></a>So geben Sie einen Konfliktlöser an  
@@ -112,7 +99,7 @@ ms.locfileid: "47821938"
     > [!NOTE]  
     >  Der Standardinstallationspfad der ausführbaren Merge-Agent-Datei lautet [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM.  
   
-#### <a name="to-specify-a-custom-resolver-when-defining-a-merge-article"></a>So geben Sie in der Definition eines Mergeartikels einen benutzerdefinierten Konfliktlöser an  
+## <a name="specify-a-custom-resolver-when-defining-a-merge-article"></a>Angeben eines benutzerdefinierten Konfliktlösers beim Definieren eines Mergeartikels  
   
 1.  Wenn Sie einen eigenen benutzerdefinierten Konfliktlöser verwenden möchten, erstellen und registrieren Sie den Konfliktlöser wie oben beschrieben.  
   
@@ -120,7 +107,7 @@ ms.locfileid: "47821938"
   
 3.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) aus. Geben Sie den Namen des Konfliktlösers aus Schritt 2 für **@article_resolver** und gegebenenfalls alle für den benutzerdefinierten Konfliktlöser erforderlichen Eingaben im Parameter **@resolver_info** an. Bei benutzerdefinierten Konfliktlösern, die auf einer gespeicherten Prozedur basieren, entspricht **@resolver_info** dem Namen der gespeicherten Prozedur. Weitere Informationen zu den für [!INCLUDE[msCoName](../../../includes/msconame-md.md)] erforderlichen Eingaben für Konfliktlöser finden Sie unter [Microsoft COM-Based Resolvers (Microsoft COM-basierte Konfliktlöser)](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
-#### <a name="to-specify-or-change-a-custom-resolver-for-an-existing-merge-article"></a>So geben Sie einen benutzerdefinierten Konfliktlöser für einen vorhandenen Mergeartikel an oder ändern diesen  
+## <a name="specify-or-change-a-custom-resolver-for-an-existing-merge-article"></a>Angeben oder Ändern eines benutzerdefinierten Konfliktlösers für einen vorhandenen Mergeartikel  
   
 1.  Um zu bestimmen, ob ein benutzerdefinierter Konfliktlöser für einen Artikel definiert wurde, oder um den Namen des Konfliktlösers abzurufen, führen Sie [sp_helpmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md) aus. Wenn ein benutzerdefinierter Konfliktlöser für einen Artikel definiert wurde, wird dessen Namen im Feld **article_resolver** angezeigt. Alle dem Konfliktlöser übergegebene Eingaben werden im Feld **resolver_info** des Resultsets angezeigt.  
   
@@ -130,7 +117,7 @@ ms.locfileid: "47821938"
   
 4.  Führen Sie nochmals [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) aus, um irgendwelche erforderlichen Eingaben für den benutzerdefinierten Konfliktlöser zu ändern. Geben Sie den Wert **resolver_info** für **@property** und alle erforderlichen Eingaben für den benutzerdefinierten Konfliktlöser für **@value**angegeben wird. Bei benutzerdefinierten Konfliktlösern, die auf einer gespeicherten Prozedur basieren, entspricht **@resolver_info** dem Namen der gespeicherten Prozedur. Weitere Informationen zu den erforderlichen Eingaben finden Sie unter [Microsoft COM-Based Resolvers (Microsoft COM-basierte Konfliktlöser)](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
-#### <a name="to-unregister-a-custom-conflict-resolver"></a>So heben Sie die Registrierung eines benutzerdefinierten Konfliktlösers auf  
+## <a name="unregister-a-custom-conflict-resolver"></a>Aufheben der Registrierung eines benutzerdefinierten Konfliktlösers  
   
 1.  Führen Sie auf dem Verleger [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) aus, und notieren Sie den Namen des zu entfernenden benutzerdefinierten Konfliktlösers im **value**-Feld des Resultsets.  
   
@@ -145,8 +132,8 @@ ms.locfileid: "47821938"
   
  [!code-sql[HowTo#sp_changemerge_resolver](../../../relational-databases/replication/codesnippet/tsql/specify-a-merge-article-_2.sql)]  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [Implementieren eines Geschäftslogikhandlers für einen Mergeartikel](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Erweiterte Konflikterkennung und -lösung der Mergereplikation](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Implement a Business Logic Handler for a Merge Article](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
   
