@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 841d38d4a862582a393fba116676908572f39d38
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2ac5ce3e74713da1b1560d4fd0e1cb86bb4593be
+ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203039"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185026"
 ---
 # <a name="always-encrypted-database-engine"></a>Immer verschlüsselt (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -124,7 +124,7 @@ Verwenden Sie den [Always Encrypted-Assistenten](../../../relational-databases/s
 >  Ein Video, das die Verwendung des Assistenten erläutert, finden Sie unter [Getting Started with Always Encrypted with SSMS](https://channel9.msdn.com/Shows/Data-Exposed/Getting-Started-with-Always-Encrypted-with-SSMS)(Video in englischer Sprache).
 
 1.  Stellen Sie eine Verbindung zu einer vorhandenen Datenbank her, die Tabellen mit Spalten enthält, die Sie mithilfe des **Objekt-Explorers** oder Management Studio verschlüsseln möchten, oder erstellen Sie eine neue Datenbank und anschließend eine Tabelle oder mehrere Tabellen mit Spalten, die verschlüsselt werden müssen, und stellen Sie eine Verbindung dazu her.
-2.  Klicken Sie mit der rechten Maustaste auf Ihre Datenbank, bewegen Sie den Mauszeiger zu **Aufgaben** und klicken Sie auf „Spalten verschlüsseln“, um den **Assistenten für Always Encrypted** zu öffnen.
+2.  Klicken Sie mit der rechten Maustaste auf Ihre Datenbank, zeigen Sie auf **Aufgaben**, und klicken Sie auf **Spalten verschlüsseln**, um den **Assistenten für Always Encrypted** zu öffnen.
 3.  Lesen Sie die Seite **Einführung** , und klicken Sie dann auf **Weiter**.
 4.  Erweitern Sie die Tabellen auf der **Spaltenauswahl** -Seite, und wählen Sie die Spalten aus, die Sie verschlüsseln möchten.
 5.  Legen Sie für jede zu verschlüsselnde Spalte den **Verschlüsselungstyp** fest: entweder *deterministisch* oder *zufällig*.
