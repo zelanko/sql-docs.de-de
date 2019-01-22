@@ -23,12 +23,12 @@ ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c96134ede585acee4b556200e67c7301feef7713
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca04967d4230ce6693736b53c99a21bbfd07eae6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730898"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125685"
 ---
 # <a name="replication-agent-administration"></a>Replikations-Agent-Verwaltung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "47730898"
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] und Replikationsmonitor: [Starten und Beenden eines Replikations-Agents &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)  
   
--   Replikationsprogrammierung: [Ausführbare Konzepte für die Programmierung von Replikations-Agents](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+-   Replikationsprogrammierung: [Ausführbare Konzepte für die Programmierung von Replikations-Agent](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
 ## <a name="agent-profiles"></a>Agentprofile  
  Wenn die Replikation konfiguriert wird, wird ein Satz Agentprofile auf dem Verteiler installiert. Ein Agentprofil enthält eine Reihe Parameter, die bei jeder Ausführung des Agents zur Anwendung kommen: Jeder Agent meldet sich während seines Startprozesses beim Verteiler an und fragt die Parameter in seinem Profil ab. Die Replikation stellt ein Standardprofil für jeden Agent und zusätzliche vordefinierte Profile für den Protokolllese-Agent, den Verteilungs-Agent und den Merge-Agent bereit. Neben den bereitgestellten Profilen können Sie Profile erstellen, die sich für Ihre Anwendungsanforderungen eignen. Weitere Informationen finden Sie unter [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
@@ -71,7 +71,7 @@ ms.locfileid: "47730898"
   
     -   Warteschlangenlese-Agent  
   
-     Auf die Informationen und Aufgaben zu diesen Agents können Sie über die Registerkarte **Agents** zugreifen. Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für die einer Veröffentlichung zugeordneten Agents &#40;Replikationsmonitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md).  
+     Auf die Informationen und Aufgaben zu diesen Agents können Sie über die Registerkarte **Agents** zugreifen. Weitere Informationen finden Sie unter [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Die folgenden Agents sind Abonnements im Replikationsmonitor zugeordnet:  
   
@@ -79,7 +79,7 @@ ms.locfileid: "47730898"
   
     -   Merge-Agent  
   
-     Auf die Informationen und Aufgaben im Zusammenhang mit diesen Agents kann über die folgenden Registerkarten zugegriffen werden: **Überwachungsliste für Abonnements** (verfügbar für jeden Verleger) bzw. **Alle Abonnements** (verfügbar für jede Veröffentlichung). Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für die einem Abonnement zugeordneten Agents &#40;Replikationsmonitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     Auf die Informationen und Aufgaben zu diesen Agents können Sie über die folgenden Registerkarten zugreifen: **Überwachungsliste für Abonnements** (verfügbar für jeden Verleger) oder **Alle Abonnements** (verfügbar für jede Veröffentlichung). Weitere Informationen finden Sie unter [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="independent-and-shared-agents"></a>Unabhängige und freigegebene Agents  
  Ein unabhängiger Agent ist ein Agent, der ein Abonnement bedient. Ein freigegebener Agent bedient mehrere Abonnements. Wenn mehrere Abonnements, die denselben freigegebenen Agent verwenden, synchronisiert werden müssen, warten sie standardmäßig in einer Warteschlange. Der freigegebene Agent bedient die Abonnements einzeln nacheinander. Die Latenzzeit wird reduziert, wenn unabhängige Agents verwendet werden, da der Agent immer dann bereitsteht, wenn das Abonnement synchronisiert werden muss. Die Mergereplikation verwendet grundsätzlich unabhängige Agents, während die Transaktionsreplikation standardmäßig unabhängige Agents nur für Veröffentlichungen verwendet, die im Assistenten für neue Veröffentlichung erstellt wurden (in früheren [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Versionen hat die Transaktionsreplikation standardmäßig freigegebene Agents verwendet).  
@@ -89,14 +89,14 @@ ms.locfileid: "47730898"
   
 |Cleanupauftrag|und Beschreibung|Standardzeitplan|  
 |------------------|-----------------|----------------------|  
-|Agentverlaufscleanup: Verteilung|Entfernt Verlaufseinträge des Replikations-Agents aus der Verteilungsdatenbank.|Wird alle zehn Minuten ausgeführt.|  
-|Verteilungscleanup: Verteilung|Entfernt replizierte Transaktionen aus der Verteilungsdatenbank. |Wird alle zehn Minuten ausgeführt.|  
+|Bereinigung des Agent-Verlaufs: Distribution|Entfernt Verlaufseinträge des Replikations-Agents aus der Verteilungsdatenbank.|Wird alle zehn Minuten ausgeführt.|  
+|Verteilungsbereinigung: Distribution|Entfernt replizierte Transaktionen aus der Verteilungsdatenbank. |Wird alle zehn Minuten ausgeführt.|  
 |Cleanup abgelaufener Abonnements|Ermittelt und entfernt abgelaufene Abonnements aus Veröffentlichungsdatenbanken. Deaktiviert Abonnements auf dem Verteiler, die innerhalb der maximalen Beibehaltungsdauer für Verteilung nicht synchronisiert wurden.|Wird täglich um 1:00 Uhr nachts ausgeführt.| 
 |Abonnements mit Datenüberprüfungsfehlern erneut initialisieren|Ermittelt alle Abonnements mit Datenüberprüfungsfehlern und kennzeichnet diese für eine erneute Initialisierung. Bei der nächsten Ausführung des Merge-Agents oder Verteilungs-Agents wird auf die Abonnenten eine neue Momentaufnahme angewendet.|Kein Standardzeitplan (nicht standardmäßig aktiviert).|  
 |Überprüfung des Replikations-Agents|Ermittelt Replikations-Agents, die keinen Verlauf protokollieren. Schreibt in das [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Ereignisprotokoll, wenn ein Auftragsschritt einen Fehler erzeugt.|Wird alle zehn Minuten ausgeführt.|  
 |Aktualisierung für die Replikationsüberwachung für die Verteilung|Aktualisiert die vom Replikationsmonitor verwendeten zwischengespeicherten Abfragen.|Wird fortlaufend ausgeführt.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Überwachen der Replikation](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Überwachen der Replikation](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   
