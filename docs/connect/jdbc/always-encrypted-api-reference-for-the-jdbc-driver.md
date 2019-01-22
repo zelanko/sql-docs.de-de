@@ -11,12 +11,12 @@ ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1605b608550446ecb31a79e6074a7e8cfa7ea916
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 66f659f5fbb2daa0b0a9969c3e7cde75dccc53d0
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420702"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361670"
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>Always Encrypted – API-Referenz für den JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -42,6 +42,7 @@ ms.locfileid: "52420702"
 |`public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)`|Ändert die Einstellung der-Verbindungseigenschaft SendTimeAsDatetime.|
 
  **SQLServerConnectionPoolProxy-Klasse**
+ 
 |Name|und Beschreibung|  
 |----------|-----------------|  
 |`public final boolean getSendTimeAsDatetime()` | Die Einstellung der-Verbindungseigenschaft SendTimeAsDatetime zurückgegeben.|
@@ -74,8 +75,8 @@ ms.locfileid: "52420702"
   
 |Name|und Beschreibung|  
 |----------|-----------------|  
-|`public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)`|Entschlüsselt den angegebenen verschlüsselten Wert eines CEK. Es wird erwartet, dass der verschlüsselte Wert verschlüsselt wird, indem das Zertifikat mit dem angegebenen Schlüsselpfad sowie der angegebene Algorithmus verwendet wird.<br /><br /> **Das Format des Schlüsselpfads sollte eines der folgenden sein:**<br /><br /> Fingerabdruck: <certificate_thumbprint><br /><br /> Alias:<certificate_alias><br /><br /> (Überschreibt SQLServerColumnEncryptionKeyStoreProvider. "decryptcolumnencryptionkey" (String, String, Byte[]).)|  
-|`public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)`|Verschlüsselt einen CEK, indem das Zertifikat mit dem angegebenen Schlüsselpfad und der angegebene Algorithmus verwendet wird.<br /><br /> **Das Format des Schlüsselpfads sollte eines der folgenden sein:**<br /><br /> Fingerabdruck: <certificate_thumbprint><br /><br /> Alias:<certificate_alias><br /><br /> (Überschreibt SQLServerColumnEncryptionKeyStoreProvider. Decryptcolumnencryptionkey (String, String, Byte[]).)|  
+|`public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)`|Entschlüsselt den angegebenen verschlüsselten Wert eines CEK. Es wird erwartet, dass der verschlüsselte Wert verschlüsselt wird, indem das Zertifikat mit dem angegebenen Schlüsselpfad sowie der angegebene Algorithmus verwendet wird.<br /><br /> **Das Format des Schlüsselpfads sollte eines der folgenden sein:**<br /><br /> Fingerabdruck: <certificate_thumbprint><br /><br /> Alias:<certificate_alias><br /><br /> (Überschreibt SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey(String, String, Byte[]).)|  
+|`public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)`|Verschlüsselt einen CEK, indem das Zertifikat mit dem angegebenen Schlüsselpfad und der angegebene Algorithmus verwendet wird.<br /><br /> **Das Format des Schlüsselpfads sollte eines der folgenden sein:**<br /><br /> Fingerabdruck: <certificate_thumbprint><br /><br /> Alias:<certificate_alias><br /><br /> (Überschreibt SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey(String, String, Byte[]).)|  
 |`public void setName (String name)`|Legt den Namen des diesem Schlüsselspeicher-Anbieter.|
 |`public String getName ()`|Ruft den Namen dieser Schlüsselspeicheranbieter ab.|
   
@@ -93,8 +94,8 @@ ms.locfileid: "52420702"
   
 |Name|und Beschreibung|  
 |----------|-----------------|  
-| `public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)` | Decryptes eines verschlüsselten spaltenverschlüsselungsschlüssels (CEK). Dieser Entschlüsselung erfolgt mit einem RSA-Verschlüsselungsalgorithmus, der den asymmetrischen Schlüssel, der durch den Pfad des spaltenhauptschlüssels angegeben verwendet.<br />(Überschreibt SQLServerColumnEncryptionKeyStoreProvider. "decryptcolumnencryptionkey" (String, String, Byte[]).) |  
-| `public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] columnEncryptionKey)` | Verschlüsselt einen spaltenverschlüsselungsschlüssel, erteilen Sie den Hauptschlüssel der angegebenen Spalte dem angegebenen Algorithmus.<br />(Überschreibt SQLServerColumnEncryptionKeyStoreProvider. Decryptcolumnencryptionkey (String, String, Byte[]).) |  
+| `public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)` | Decryptes eines verschlüsselten spaltenverschlüsselungsschlüssels (CEK). Dieser Entschlüsselung erfolgt mit einem RSA-Verschlüsselungsalgorithmus, der den asymmetrischen Schlüssel, der durch den Pfad des spaltenhauptschlüssels angegeben verwendet.<br />(Überschreibt SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey(String, String, Byte[]).) |  
+| `public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] columnEncryptionKey)` | Verschlüsselt einen spaltenverschlüsselungsschlüssel, erteilen Sie den Hauptschlüssel der angegebenen Spalte dem angegebenen Algorithmus.<br />(Überschreibt SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey(String, String, Byte[]).) |  
 |`public void setName (String name)`|Legt den Namen des diesem Schlüsselspeicher-Anbieter.|
 |`public String getName ()`|Ruft den Namen dieser Schlüsselspeicheranbieter ab.|  
   
@@ -152,9 +153,10 @@ ms.locfileid: "52420702"
 
   
 Neue Typen in **microsoft.sql.Types** Klasse
+
 |Name|und Beschreibung|  
 |----------|-----------------|  
-|"DATETIME", "SMALLDATETIME", "MONEY", "SMALLMONEY", "GUID|Verwenden Sie diese Typen als die Ziel-SQL-Datentypen beim Senden von Parameterwerten, die **verschlüsselte** Datetime, Smalldatetime, Money, Smallmoney, Uniqueidentifier-Spalten, die mit `setObject()/updateObject()` -API-Methoden.|  
+|DATETIME, SMALLDATETIME, MONEY, SMALLMONEY, GUID|Verwenden Sie diese Typen als die Ziel-SQL-Datentypen beim Senden von Parameterwerten, die **verschlüsselte** Datetime, Smalldatetime, Money, Smallmoney, Uniqueidentifier-Spalten, die mit `setObject()/updateObject()` -API-Methoden.|  
   
   
  **Sqlserverstatementcolumnencryptionsetting darf-Enumeration**  
@@ -192,7 +194,7 @@ Public enum  SQLServerStatementColumnEncryptionSetting
 >   
 >  Wenn Always Encrypted für eine Abfrage deaktiviert ist, und die Abfrage gibt Ergebnisse aus verschlüsselten Spalten zurück, gibt die Abfrage verschlüsselte Werte zurück. Die verschlüsselten Werte müssen den Varbinary-Datentyp.  
   
- ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ ## <a name="see-also"></a>Weitere Informationen  
  [Verwenden von „Immer verschlüsselt“ mit dem JDBC-Treiber](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)  
   
 
