@@ -1,7 +1,7 @@
 ---
 title: SQLGetDiagField-Funktion | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -20,24 +20,24 @@ ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 386b2352db8912c0af4a1571cbfc2d7e7f5384c6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f975b15d07bf837c0f5fe5d2649cc78b341d23c6
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203979"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420165"
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField-Funktion
+
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 3.0 Standardkompatibilität: ISO-92  
+ Eingeführt in Version: ODBC 3.0 Standards Compliance: ISO 92  
   
  **Zusammenfassung**  
  **SQLGetDiagField** gibt den aktuellen Wert eines Felds eines Datensatzes von der Diagnosedaten-Struktur (mit einem angegebenen Handle zugeordnete), Fehler-, Warnungs-und Statusinformationen enthält.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
-  
+```cpp
 SQLRETURN SQLGetDiagField(  
      SQLSMALLINT     HandleType,  
      SQLHANDLE       Handle,  
@@ -52,15 +52,15 @@ SQLRETURN SQLGetDiagField(
  *HandleType*  
  [Eingabe] Ein Handle-Typbezeichner, der den Typ des Handles wird beschrieben, für die Diagnose erforderlich sind. Dies muss eine der folgenden Ressourcen sein:  
   
--   SQL_HANDLE_DBC AUF  
+-   SQL_HANDLE_DBC  
   
 -   SQL_HANDLE_DBC_INFO_TOKEN  
   
 -   SQL_HANDLE_DESC  
   
--   SQL_HANDLE_ENV AUF  
+-   SQL_HANDLE_ENV  
   
--   SQL_HANDLE_STMT AUF  
+-   SQL_HANDLE_STMT  
   
  SQL_HANDLE_DBC_INFO_TOKEN Handle wird nur von der Treiber-Manager und Treiber verwendet. Anwendungen sollten nicht mit dieser Handletyp verwenden. Weitere Informationen zu SQL_HANDLE_DBC_INFO_TOKEN, finden Sie unter [Entwickeln von Verbindungspool Unterstützung in einem ODBC-Treiber](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
   
@@ -95,7 +95,7 @@ SQLRETURN SQLGetDiagField(
  [Ausgabe] Zeiger auf einen Puffer für die Rückgabe der Gesamtanzahl der Bytes, die (mit Ausnahme von der Anzahl der Bytes, die für die Null-Terminierungszeichen erforderlich) zur Verfügung, die in zurückgegeben \* *DiagInfoPtr*, für Zeichendaten. Wenn die Anzahl der Bytes, die für die Rückgabe verfügbar, größer als oder gleich ist *Pufferlänge*, den Text im \* *DiagInfoPtr* auf abgeschnitten *Pufferlänge* minus die Länge eines Zeichens Null-Terminierung vorliegt.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE oder SQL_NO_DATA zurückgibt.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE, or SQL_NO_DATA.  
   
 ## <a name="diagnostics"></a>Diagnose  
  **SQLGetDiagField** veröffentlichen DiagnoseDatensätze nicht für sich selbst. Sie können die folgenden Rückgabewerte verwendet, um das Ergebnis seiner eigenen Ausführung zu melden:  
@@ -106,7 +106,7 @@ SQLRETURN SQLGetDiagField(
   
 -   SQL_INVALID_HANDLE: Das Handle angegeben wird, indem *HandleType* und *behandeln* war es sich nicht um ein gültiges Handle.  
   
--   SQL_ERROR ZURÜCK: Eine der folgenden aufgetreten ist:  
+-   SQL_ERROR: Eine der folgenden aufgetreten ist:  
   
     -   *Die DiagIdentifier* Argument war keiner der gültigen Werte.  
   
@@ -118,7 +118,7 @@ SQLRETURN SQLGetDiagField(
   
     -   Wenn Sie asynchrone Benachrichtigung verwenden zu können, war der asynchrone Vorgang auf den Ziehpunkt nicht abgeschlossen werden.  
   
--   SQL_NO_DATA ZURÜCKGIBT: *RecNumber* war größer als die Zahl der DiagnoseDatensätze, die für das Handle, das im angegebenen vorhanden waren *behandeln.* Die Funktion gibt SQL_NO_DATA auch für eine beliebige Positive *RecNumber* treten keine DiagnoseDatensätze für *behandeln*.  
+-   SQL_NO_DATA: *RecNumber* war größer als die Zahl der DiagnoseDatensätze, die für das Handle, das im angegebenen vorhanden waren *behandeln.* Die Funktion gibt SQL_NO_DATA auch für eine beliebige Positive *RecNumber* treten keine DiagnoseDatensätze für *behandeln*.  
   
 ## <a name="comments"></a>Kommentare  
  Ruft eine Anwendung in der Regel **SQLGetDiagField** um eines der drei Ziele erreichen:  
@@ -189,38 +189,59 @@ SQLRETURN SQLGetDiagField(
   
 |SQL-Anweisung<br /><br /> ausgeführt|Wert des<br /><br /> SQL_DIAG_DYNAMIC_FUNCTION|Wert des<br /><br /> SQL_DIAG_DYNAMIC_FUNCTION_CODE|  
 |--------------------------------|-----------------------------------------------|-----------------------------------------------------|  
-|*Alter-Domain-Anweisung*|"ALTER DER DOMÄNE"|SQL_DIAG_ALTER_DOMAIN|  
-|*Alter Table-Anweisung*|"ALTER TABLE"|SQL_DIAG_ALTER_TABLE|  
-|*Assertion-definition*|"ERSTELLEN SIE ASSERTION"|SQL_DIAG_CREATE_ASSERTION|  
-|*Zeichen-Set-definition*|"CREATE-ZEICHENSATZ AUSGEWÄHLT WERDEN."|SQL_DIAG_CREATE_CHARACTER_SET|  
-|*Sortierung-definition*|"ERSTELLEN DER SORTIERUNG"|SQL_DIAG_CREATE_COLLATION|  
-|*Create-Index-Anweisung*|"ERSTELLEN SIE INDEX"|SQL_DIAG_CREATE_INDEX|  
-|*Erstellen Sie-Table-Anweisung*|"ERSTELLEN SIE TABELLE"|SQL_DIAG_CREATE_TABLE|  
-|*Erstellen Sie-View-Anweisung*|"ERSTELLEN SIE ANSICHT"|SQL_DIAG_CREATE_VIEW|  
-|*Cursor-Spezifikation*|"SELECT CURSOR"|SQL_DIAG_SELECT_CURSOR|  
-|*DELETE-Anweisung positioniert*|"DELETE MIT DYNAMIC-CURSOR"|SQL_DIAG_DYNAMIC_DELETE_CURSOR|  
-|*DELETE-Anweisung durchsucht*|"WHERE LÖSCHEN"|SQL_DIAG_DELETE_WHERE|  
-n-Definition *|"ERSTELLEN SIE DOMÄNE"|SQL_DIAG_CREATE_DOMAIN|  
-|*Drop-Assertion-Anweisung*|"ASSERTION" DROP "|SQL_DIAG_DROP_ASSERTION|  
-|*Drop-Zeichen-Set-stmt*|"DROP-ZEICHENSATZ"|SQL_DIAG_DROP_CHARACTER_SET|  
-|*Ablegen-Sortierung-Anweisung*|"DROP COLLATION"|SQL_DIAG_DROP_COLLATION|  
-|*Drop-Domain-Anweisung*|"DROP-DOMÄNE"|SQL_DIAG_DROP_DOMAIN|  
-|*Drop Index-Anweisung*|"DROP INDEX"|SQL_DIAG_DROP_INDEX|  
-|*Drop-Schema-Anweisung*|"DROP SCHEMA"|SQL_DIAG_DROP_SCHEMA|  
-|*Drop-Table-Anweisung*|"DROP TABLE"|SQL_DIAG_DROP_TABLE|  
-|*Drop-Übersetzung-Anweisung*|"DROP TRANSLATION"|SQL_DIAG_DROP_TRANSLATION|  
-|*Drop-View-Anweisung*|"DROP VIEW"|SQL_DIAG_DROP_VIEW|  
--Anweisung *|"GEWÄHRUNG"|SQL_DIAG_GRANT|  
-|*INSERT-Anweisung*|"INSERT"|SQL_DIAG_INSERT|  
-|*ODBC-Prozedur-extension*|"CALL"|SQL_DIAG_-AUFRUF|  
-|*REVOKE-Anweisung*|"REVOKE"|SQL_DIAG_REVOKE|  
-|*Schema-definition*|"ERSTELLEN SIE SCHEMA"|SQL_DIAG_CREATE_SCHEMA|  
-|*Translation-definition*|"ÜBERSETZUNG ZU ERSTELLEN"|SQL_DIAG_CREATE_TRANSLATION|  
-|*Update-Anweisung positioniert*|"DYNAMISCHES UPDATE CURSOR"|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
-|*Update-Anweisung durchsucht*|"AKTUALISIEREN, WO"|SQL_DIAG_UPDATE_WHERE|  
+|*alter-domain-statement*|"ALTER DER DOMÄNE"|SQL_DIAG_ALTER_DOMAIN|  
+|*alter-table-statement*|"ALTER TABLE"|SQL_DIAG_ALTER_TABLE|  
+|*assertion-definition*|"ERSTELLEN SIE ASSERTION"|SQL_DIAG_CREATE_ASSERTION|  
+|*character-set-definition*|"CREATE-ZEICHENSATZ AUSGEWÄHLT WERDEN."|SQL_DIAG_CREATE_CHARACTER_SET|  
+|*collation-definition*|"ERSTELLEN DER SORTIERUNG"|SQL_DIAG_CREATE_COLLATION|  
+|*domainn-definition*|"ERSTELLEN SIE DOMÄNE"|SQL_DIAG_CREATE_DOMAIN|
+|*create-index-statement*|"ERSTELLEN SIE INDEX"|SQL_DIAG_CREATE_INDEX|  
+|*create-table-statement*|"ERSTELLEN SIE TABELLE"|SQL_DIAG_CREATE_TABLE|  
+|*create-view-statement*|"ERSTELLEN SIE ANSICHT"|SQL_DIAG_CREATE_VIEW|  
+|*cursor-specification*|"SELECT CURSOR"|SQL_DIAG_SELECT_CURSOR|  
+|*delete-statement-positioned*|"DELETE MIT DYNAMIC-CURSOR"|SQL_DIAG_DYNAMIC_DELETE_CURSOR|  
+|*delete-statement-searched*|"WHERE LÖSCHEN"|SQL_DIAG_DELETE_WHERE|  
+|*drop-assertion-statement*|"ASSERTION" DROP "|SQL_DIAG_DROP_ASSERTION|  
+|*drop-character-set-stmt*|"DROP-ZEICHENSATZ"|SQL_DIAG_DROP_CHARACTER_SET|  
+|*drop-collation-statement*|"DROP COLLATION"|SQL_DIAG_DROP_COLLATION|  
+|*drop-domain-statement*|"DROP-DOMÄNE"|SQL_DIAG_DROP_DOMAIN|  
+|*drop-index-statement*|"DROP INDEX"|SQL_DIAG_DROP_INDEX|  
+|*drop-schema-statement*|"DROP SCHEMA"|SQL_DIAG_DROP_SCHEMA|  
+|*drop-table-statement*|"DROP TABLE"|SQL_DIAG_DROP_TABLE|  
+|*drop-translation-statement*|"DROP TRANSLATION"|SQL_DIAG_DROP_TRANSLATION|  
+|*drop-view-statement*|"DROP VIEW"|SQL_DIAG_DROP_VIEW|  
+|*grantstatement*|"GEWÄHRUNG"|SQL_DIAG_GRANT|
+|*insert-statement*|"INSERT"|SQL_DIAG_INSERT|  
+|*ODBC-procedure-extension*|"CALL"|SQL_DIAG_-AUFRUF|  
+|*revoke-statement*|"REVOKE"|SQL_DIAG_REVOKE|  
+|*schema-definition*|"ERSTELLEN SIE SCHEMA"|SQL_DIAG_CREATE_SCHEMA|  
+|*translation-definition*|"ÜBERSETZUNG ZU ERSTELLEN"|SQL_DIAG_CREATE_TRANSLATION|  
+|*update-statement-positioned*|"DYNAMISCHES UPDATE CURSOR"|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
+|*update-statement-searched*|"AKTUALISIEREN, WO"|SQL_DIAG_UPDATE_WHERE|  
 |Unknown|*leere Zeichenfolge*|SQL_DIAG_UNKNOWN_STATEMENT|  
-  
-## <a name="sequence-of-status-records"></a>Sequenz der Statusdatensätze  
+
+<!--
+These two malformed table rows were fixed by educated GUESS only.
+Each pair starts with the original flawed row.
+Flawed because treated as only two cells by HTML render,
+and because missing info anyway.
+Also, these flawed rows lacked '|' as their first nonWhitespace character (although markdown technically allows this omission, unfortunately).
+Arguably the following SQL.H file shows the sequence of the flawed rows in the table was suboptimal also.
+
+ftp://www.fpc.org/fpc32/VS6Disk1/VC98/INCLUDE/SQL.H
+
+GeneMi , 2019/01/19
+- - - - - - - - - - - - - -
+
+n-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|  
+|*domain-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
+
+-statement*|"GRANT"|SQL_DIAG_GRANT|  
+|*grant-statement*|"GRANT"|SQL_DIAG_GRANT|
+-->
+
+## <a name="sequence-of-status-records"></a>Sequenz der Statusdatensätze
+
  Statusdatensätze werden in einer Sequenz, die anhand der Zeilennummer und den Typ der Diagnose positioniert. Der Treiber-Manager bestimmt die endgültige Reihenfolge in den statusdatensätzen zurückgegeben, die es generiert. Der Treiber ermittelt, die endgültige Reihenfolge in den statusdatensätzen zurückgegeben, die es generiert.  
   
  Wenn sowohl der Treiber-Manager als auch der Treiber DiagnoseDatensätze bereitgestellt werden, ist der Treiber-Manager für ihre Anordnung verantwortlich.  
@@ -254,7 +275,7 @@ n-Definition *|"ERSTELLEN SIE DOMÄNE"|SQL_DIAG_CREATE_DOMAIN|
   
 |Informationen zu|Finden Sie unter|  
 |---------------------------|---------|  
-|Abrufen von mehreren Feldern einer Datenstruktur für die Diagnose|[SQLGetDiagRec-Funktion](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|  
+|Abrufen von mehreren Feldern einer Datenstruktur für die Diagnose|[SQLGetDiagRec-Funktion](sqlgetdiagrec-function.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   

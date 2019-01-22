@@ -1,7 +1,7 @@
 ---
 title: Beziehungsdarstellung (tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -12,12 +12,12 @@ ms.assetid: 86a5eff8-4e07-444b-ac15-5695f09aa105
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c62af4be43978f36f46594757964a9fcdae58ce5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d11d0b6a1e1be93cb3c521bb32782dcb127e822
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058900"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420155"
 ---
 # <a name="relationship-representation-tabular"></a>Beziehungsdarstellung (tabellarisch)
   Eine Beziehung ist eine Verbindung zwischen zwei Tabellen mit Daten. Die Beziehung legt fest, wie die Daten in den beiden Tabellen korreliert werden sollen.  
@@ -32,8 +32,7 @@ ms.locfileid: "48058900"
   
  Die folgenden Codeausschnitte veranschaulichen, wie eine Beziehung in tabellarischen Modellen erstellt, wie eine Beziehung aktiviert und wie ein Primärschlüssel (abweichend von "RowNumber") in einer Tabelle definiert wird. Um eine aktive Beziehung zu erstellen, muss ein Primärschlüssel in der Primärschlüsseltabelle PKTableName der Beziehung (der 1-Seite der Beziehung) definiert werden. Im hier gezeigten Beispiel wird der Primärschlüssel für PKColumnName erstellt, sofern kein Primärschlüssel in dieser Spalte definiert ist. Beim Erstellen inaktiver Beziehungen ist kein Primärschlüssel in der Primärschlüsselspalte erforderlich.  
   
-```  
-  
+```cs
 private Boolean createRelationship(string PKTableName, string PKColumnName, string MVTableName, string MVColumnName, AMO.Database tabularDb, string cubeName, Boolean forceActive)  
 {  
     //verify input parameters  

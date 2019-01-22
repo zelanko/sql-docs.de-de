@@ -1,7 +1,7 @@
 ---
 title: Metadaten (Master Data Services) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -16,12 +16,12 @@ ms.assetid: ac1aabe3-d8d4-4d7a-8954-50ee3c185d81
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2050e1fe428108713d4cfed8473feec592bc1daa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 186329f71e19f23801fb366fe2117067fbf70c6c
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185010"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419886"
 ---
 # <a name="metadata-master-data-services"></a>Metadaten (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] handelt es sich bei benutzerdefinierten Metadaten um Informationen, mit denen Sie die Modellobjekte beschreiben. Sie möchten z. B. die Besitzer eines bestimmten Modells oder einer Entität oder die Quellsysteme verfolgen, die Daten für eine Entität bereitstellen.  
@@ -33,7 +33,7 @@ ms.locfileid: "48185010"
 ## <a name="metadata-entities"></a>Metadatenentitäten  
  Das Modell Metadaten umfasst fünf Entitäten, von denen jede einen Typ eines Masterdaten-Modellobjekts darstellt, das benutzerdefinierte Metadaten unterstützt. Z. B. die **Modell-Metadatendefinition** Entität enthält Elemente, die Modelle, darstellen und die **Attribut-Metadatendefinition** -Entität verfügt über Elemente, die alle Attribute in allen Modellen stehen.  
   
- Um Metadaten für ein Modellobjekt zu definieren, füllen Sie die Attribute eines dieser Elemente auf. Z. B. in der **Entitäts-Metadatendefinition** Entität können Sie die Description-Attribut des Price-Elements mit dem Text auffüllen: **der Produktpreis beim Verkauf an einen Kunden**.  
+ Um Metadaten für ein Modellobjekt zu definieren, füllen Sie die Attribute eines dieser Elemente auf. Z. B. in der **Entitäts-Metadatendefinition** Entität können Sie die Description-Attribut des Price-Elements mit dem Text auffüllen: **Der Produktpreis beim Verkauf an einen Kunden**.  
   
  Die Elemente im Metadatenmodell werden automatisch immer dann aktualisiert, wenn Modellobjekte, die benutzerdefinierte Metadaten unterstützen, hinzugefügt oder gelöscht werden.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48185010"
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
 |Fügen Sie einem Modellobjekt Metadaten hinzu.|[Hinzufügen von Metadaten &#40;Master Data Services&#41;](add-metadata-master-data-services.md)
-)|  
+|&nbsp;|&nbsp;|
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   

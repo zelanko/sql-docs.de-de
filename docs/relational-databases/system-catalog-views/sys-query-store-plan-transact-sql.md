@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60b9137e52b34b79fa4faddbef7b9e4da8734142
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+ms.openlocfilehash: ea7c955718dbe6d2437b44b915057fc095151dc4
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397609"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419795"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "54397609"
   Enthält Informationen über jeden Ausführungsplan, der mit einer Abfrage verbunden.  
   
 |Spaltenname|Datentyp|Description|  
-|-----------------|---------------|-----------------|  
+|-----------------|---------------|-----------------|
 |**plan_id**|**bigint**|Der Primärschlüssel.|  
 |**query_id**|**bigint**|Fremdschlüssel. Verknüpft mit [query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md).|  
 |**plan_group_id**|**bigint**|Die ID der Gruppe "Plan". Cursorabfragen erfordern in der Regel mehrere (Auffüllen und fetch) Pläne. Füllen und Fetch-Pläne, die zusammen kompiliert werden, befinden sich in derselben Gruppe.<br /><br /> 0 bedeutet, dass der Plan nicht in einer Gruppe ist.|  
@@ -57,13 +57,8 @@ ms.locfileid: "54397609"
 |**last_execution_time**|**datetimeoffset**|Zeitpunkt der letzten Ausführung bezeichnet die letzte Beendigungszeit der den Abfrageplan.|  
 |**avg_compile_duration**|**float**|Planen Sie die Kompilierung Statistiken.|  
 |**last_compile_duration**|**bigint**|Planen Sie die Kompilierung Statistiken.|  
-|**plan_forcing_type**|**int**|Planen Sie das Erzwingen des Typs.<br /><br />
-0: Keine<br /><br />
-1: MANUAL<br /><br />
-2: AUTO| |**plan_forcing_type_desc**|**nvarchar(60)**|Text description of plan_forcing_type.<br /><br />
-NONE: Keine Erzwingung eines Plans<br /><br />
-MANUELL: Vom Benutzer erzwungenen Plan<br /><br />
-AUTO: Plan erzwungen, indem Sie die automatische Optimierung |
+|**plan_forcing_type**|**int**|Planen Sie das Erzwingen des Typs.<br /><br />0: Keine<br /><br />1: MANUAL<br /><br />2: AUTO|  
+|**plan_forcing_type_desc**|**nvarchar(60)**|Beschreibung des Plan_forcing_type.<br /><br />NONE: Keine Erzwingung eines Plans<br /><br />MANUELL: Vom Benutzer erzwungenen Plan<br /><br />AUTO: Von der automatischen Optimierung erzwungener Plan|  
 
 ## <a name="plan-forcing-limitations"></a>Einschränkungen für die planerzwingung
 Der Abfragedatenspeicher verfügt über eine Mechanismus, der den Abfrageoptimierer dazu zwingen kann, einen bestimmten Ausführungsplan zu verwenden. Es gibt allerdings Einschränkungen, die dazu führen können, dass das Erzwingen eines Plans verhindert wird. 

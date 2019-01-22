@@ -1,7 +1,7 @@
 ---
 title: SQL Server-PowerShell | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: scripting
@@ -10,12 +10,12 @@ ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 481e31b23dde3f1fd37ac1af513cf7790dc31250
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: acfa87245449566c1f91b447910f5194eda192b0
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349651"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420075"
 ---
 # <a name="sql-server-powershell"></a>SQL Server-PowerShell
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] unterstützt Windows PowerShell, ein leistungsstarkes Skriptshell, mit der Administratoren und Entwickler die Serververwaltung und die Anwendungsbereitstellung automatisieren können. Die Windows PowerShell-Sprache unterstützt komplexere Logik als [!INCLUDE[tsql](../includes/tsql-md.md)] -Skripts und ermöglicht [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Administratoren dadurch die Erstellung stabiler Verwaltungsskripts. Windows PowerShell-Skripts können außerdem dazu verwendet werden, andere [!INCLUDE[msCoName](../includes/msconame-md.md)] -Serverprodukte zu verwalten. So steht Administratoren eine serverübergreifende allgemeine Skriptsprache zur Verfügung.  
@@ -39,8 +39,7 @@ ms.locfileid: "53349651"
 |Beschreibt den bevorzugten Mechanismus zum Ausführen der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell-Komponenten zum Öffnen einer PowerShell-Sitzung und Laden des `sqlps`-Moduls. Das `sqlps`-Modul lädt in den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell-Anbieter und die Cmdlets und die vom Anbieter und den Cmdlets verwendeten SQL Server Management Object-Assemblys (SMO).|[Importieren des SQLPS-Moduls](../database-engine/import-the-sqlps-module.md)|  
 |Beschreibt, wie nur die SMO-Assemblys ohne den Anbieter oder die Cmdlets geladen werden.|[Laden der SMO-Assemblys in Windows PowerShell](load-the-smo-assemblies-in-windows-powershell.md)|  
 |Beschreibt, wie eine Windows-PowerShell-Sitzungen durch Rechtsklick auf einen Knoten im **Objekt-Explorer**ausgeführt wird. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Startet eine Windows PowerShell-Sitzung, lädt die `sqlps` -Modul, und legt den Pfad des SQL Server-Anbieters auf das ausgewählte Objekt fest.|[Ausführen von Windows PowerShell über SQL Server Management Studio](run-windows-powershell-from-sql-server-management-studio.md)|  
-|Beschreibt, wie Auftragsschritte des SQL Server-Agents erstellt werden, die ein Windows PowerShell-Skript ausführen. Die Aufträge können dann zum Ausführen zu bestimmten Zeitpunkten oder als Reaktion auf Ereignisse geplant werden.|[Ausführen von Windows-PowerShell-Schritten in SQL Server-Agent] (run-windows-powershell-steps-in-sql-server-agent.md
-)|  
+|Beschreibt, wie Auftragsschritte des SQL Server-Agents erstellt werden, die ein Windows PowerShell-Skript ausführen. Die Aufträge können dann zum Ausführen zu bestimmten Zeitpunkten oder als Reaktion auf Ereignisse geplant werden.|[Ausführen von Windows PowerShell-Schritten in SQL Server-Agent](run-windows-powershell-steps-in-sql-server-agent.md)|  
 |Beschreibt, wie der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anbieter zum Navigieren in einer Hierarchie von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Objekten verwendet wird.|[SQL Server PowerShell-Anbieter](sql-server-powershell-provider.md)|  
 |Beschreibt, wie die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Cmdlets verwendet werden, die [!INCLUDE[ssDE](../includes/ssde-md.md)] -Aktionen wie Ausführen eines [!INCLUDE[tsql](../includes/tsql-md.md)] -Skripts angeben.|[Verwenden der Datenbank-Engine-Cmdlets](../database-engine/use-the-database-engine-cmdlets.md)|  
 |Beschreibt, wie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Begrenzungsbezeichner angegeben werden, die von Windows PowerShell nicht unterstützte Zeichen enthalten.|[SQL Server-Bezeichnern in PowerShell](sql-server-identifiers-in-powershell.md)|  

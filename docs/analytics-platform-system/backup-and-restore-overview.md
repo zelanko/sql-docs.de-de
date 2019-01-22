@@ -6,28 +6,28 @@ manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
-ms.date: 04/17/2018
+ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 01585c399d648bbc72d7d2811d24b2558b947bff
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: e95415c689fda43c2a9d118713c96d0a1d531904
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400603"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419995"
 ---
 # <a name="backup-and-restore"></a>Sichern und Wiederherstellen
+
 Beschreibt, wie Sie Daten zum Sichern und Wiederherstellen für Parallel Data Warehouse (PDW). Sicherungs-und Wiederherstellungsvorgänge werden für die notfallwiederherstellung verwendet. Sicherung und Wiederherstellung können auch zum Kopieren einer Datenbank von einer Appliance in einer anderen Anwendung verwendet werden.  
     
-## <a name="BackupRestoreBasics"></a>Grundlagen der sicherungs- und Wiederherstellungsvorgänge  
+## <a name="BackupRestoreBasics"></a>Grundlagen der sicherungs- und Wiederherstellungsvorgänge
+
 Ein PDW *datenbanksicherung* ist eine Kopie einer Anwendungsdatenbank, in einem Format gespeichert werden, sodass sie zum Wiederherstellen der ursprünglichen Datenbank in einer Anwendung verwendet werden kann.  
   
 Eine Sicherung der PDW-Datenbank wird erstellt, mit der [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md) t-Sql-Anweisung und formatierte für die Verwendung mit der [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md) -Anweisung; Es kann nicht verwendet werden, für andere Zwecke. Die Sicherung kann nur auf einer Appliance mit der gleichen Anzahl oder eine größere Anzahl von Compute-Knoten wiederhergestellt werden.  
   
 <!-- MISSING LINKS
-
 The [master database](master-database.md) is a SMP SQL Server database. It is backed up with the BACKUP DATABASE statement. To restore master, use the [Restore the Master Database](configuration-manager-restore-master-database.md) page of the Configuration Manager tool.  
-
 -->
   
 PDW verwendet SQL Server-sicherungs-Technologie, um die Appliance Datenbanken sichern und wiederherstellen. SQL Server--Sicherungsoptionen sind vorkonfiguriert, um die sicherungskomprimierung zu verwenden. Sie können keine Sicherungsoptionen wie Komprimierung, Prüfsumme, Blockgröße und Pufferanzahl festlegen.  
@@ -36,7 +36,8 @@ Datenbanksicherungen werden auf einem oder mehreren Servern sichern, gespeichert
   
 Sicherungen werden auf dem Sicherungsserver als einen Satz von Dateien im Windows-Dateisystem gespeichert. Eine vollständige datenbanksicherung von PDW kann nur mit PDW wiederhergestellt werden. Allerdings können Sie die datenbanksicherungen vom backup-Server an einen anderen Speicherort mithilfe von Standardprozessen für die Sicherung von Windows-Datei archivieren. Weitere Informationen zu backup-Server, finden Sie unter [abrufen und die Konfiguration eines Sicherungsservers](acquire-and-configure-backup-server.md).  
   
-## <a name="BackupTypes"></a>Datenbank-Sicherungstypen  
+## <a name="BackupTypes"></a>Datenbank-Sicherungstypen
+
 Es gibt zwei Arten von Daten, die eine Sicherung erfordern: Benutzerdatenbanken und Systemdatenbanken (z. B. der master-Datenbank). PDW das Transaktionsprotokoll nicht gesichert.  
   
 Eine vollständige datenbanksicherung ist eine Sicherung einer gesamten PDW-Datenbank. Dies ist der backup-Standardtyp. Eine vollständige Sicherung einer Benutzerdatenbank schließt Datenbankbenutzer und Datenbankrollen. Eine Sicherung der Master enthält Anmeldungen.  
@@ -49,7 +50,8 @@ Eine differenzielle Sicherung wird nur für Benutzerdatenbanken unterstützt. Ei
   
 Um das gesamte Gerät zu sichern, müssen Sie eine Sicherung aller Benutzerdatenbanken und eine Sicherung der master-Datenbank ausführen.  
   
-## <a name="BackupProc"></a>Sicherungsvorgang der Datenbank  
+## <a name="BackupProc"></a>Sicherungsvorgang der Datenbank
+
 Das folgende Diagramm zeigt den Fluss der Daten während einer datenbanksicherung.  
   
 ![PDW-Sicherungsverfahren](media/backup-process.png "PDW-Sicherungsverfahren")  
@@ -82,14 +84,16 @@ Der Sicherungsvorgang funktioniert wie folgt aus:
   
     -   Sie können nicht den Namen der Sicherung ändern, vor dem Ausführen einer Wiederherstellung. Der Name für das Sicherungsverzeichnis muss es sich um den Namen der den ursprünglichen Namen der Sicherung übereinstimmen. Der ursprüngliche Name der die Sicherung befindet sich in der Datei "Backup.xml" in das Sicherungsverzeichnis. Um eine Datenbank auf einen anderen Namen wiederherstellen möchten, können Sie den neuen Namen in der Restore-Befehl angeben. Beispiel: `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`.  
   
-## <a name="RestoreModes"></a>Datenbank wiederherstellen-Modi  
+## <a name="RestoreModes"></a>Datenbank wiederherstellen-Modi
+
 Eine vollständige datenbankwiederherstellung erstellt die PDW-Datenbank mithilfe der Daten in der datenbanksicherung neu. Die Wiederherstellung der Datenbank erfolgt über eine vollständige Sicherung zuerst wiederhergestellt und anschließend optional eine differenzielle Sicherung wiederherstellen. Die Wiederherstellung der Datenbank enthält die Datenbankbenutzer und Datenbankrollen.  
   
 Wiederherstellung nur Header gibt die Headerinformationen für eine Datenbank zurück. Es werden keine Daten an das Gerät wiederhergestellt.  
   
 Eine Wiederherstellung der Appliance ist eine Wiederherstellung der gesamten Appliance. Dies umfasst die Wiederherstellung alle Benutzerdatenbanken und der master-Datenbank.  
   
-## <a name="RestoreProc"></a>Wiederherstellungsprozess  
+## <a name="RestoreProc"></a>Wiederherstellungsprozess
+
 Das folgende Diagramm zeigt den Fluss der Daten während einer Wiederherstellung der Datenbank.  
   
 ![Wiederherstellungsprozess](media/restore-process.png "Wiederherstellungsprozess")  
@@ -130,7 +134,8 @@ Nach der Umverteilung enthält jeder Computeknoten weniger tatsächliche Daten u
 |---------------------------|---------------|  
 |Bereiten Sie einen Server als Sicherungsserver.|[Abrufen und die Konfiguration eines Sicherungsservers ](acquire-and-configure-backup-server.md)|  
 |Sichern einer Datenbank.|[DATENBANK SICHERN](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  
-|Wiederherstellen einer Datenbank.|[DATENBANK WIEDERHERSTELLEN](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
+|Wiederherstellen einer Datenbank.|[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
+
 <!-- MISSING LINKS
 |Create a disaster recovery plan.|[Create a Disaster Recovery Plan](create-disaster-recovery-plan.md)|
 |Restore the master database.|To restore the master database, use the [Restore the master database](configuration-manager-restore-master-database.md) page in the Configuration Manager tool.| 

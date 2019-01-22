@@ -14,18 +14,18 @@ ms.assetid: dfac8ade-eebe-4ebe-a199-feb740ed5bae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0aba0eeb6d3d6450a0493a4cf06a8c58bb21d23a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6737a995db78f2a5ba625ddf200a0171582026ae
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655998"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419735"
 ---
 # <a name="installing-the-software-odbc"></a>Installieren der Software (ODBC)
 > [!IMPORTANT]  
 >  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber, die von Oracle bereitgestellt.  
   
- Der ODBC-Treiber für Oracle ist eine der die Data Access Components. Sie begleitet andere ODBC-Komponenten, z. B. ODBC-Datenquellen-Administrator, und sollte bereits installiert sein. Der Treiber auch "Treiber und andere Downloads" auf der Microsoft Software Service Online-Website unter www.microsoft.com finden Sie unter.  
+ Der ODBC-Treiber für Oracle ist eine der die Data Access Components. Sie begleitet andere ODBC-Komponenten, z. B. ODBC-Datenquellen-Administrator, und sollte bereits installiert sein. Der Treiber auch finden Sie unter "Treiber und andere Downloads" auf der Microsoft Product Support Services Online-Website unter [www.microsoft.com](https://www.microsoft.com).  
   
  Netzwerksoftware muss entsprechend ihrer eigenen Dokumentation installiert werden. Der ODBC-Treiber für Oracle erfordert keine besondere Installation zu berücksichtigen, solange die Netzwerksoftware unterstützt wird.  
   

@@ -33,12 +33,12 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a5a265f75e983ec6994114196b6890f13d94e850
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 31e280cd389bdfd7985bfa995aecbf8ed020417d
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299967"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420225"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>Editionen und unterstützte Funktionen von SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -145,7 +145,7 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |Datenbankspiegelung|Ja|Ja<br /><br /> Nur vollständige Sicherheit|Nur WITNESS|Nur WITNESS|Nur WITNESS| 
 |Sicherungskomprimierung|Ja|Ja|Nein|Nein|Nein| 
 |Datenbankmomentaufnahme|Ja|Ja <sup>3</sup>|Ja <sup>3</sup>|Ja <sup>3</sup>|Ja <sup>3</sup>|
-|Always On-Failoverclusterinstanzen|Ja<br /><br /> Anzahl der Knoten ist das Maximum des Betriebssystems|Ja<br /><br /> Unterstützung für 2 Knoten|Nein|Nein|Nein|  
+|Always On-Failoverclusterinstanzen|Ja<br /><br /> 16|Ja<br /><br /> Unterstützung für 2 Knoten|Nein|Nein|Nein|  
 |AlwaysOn-Verfügbarkeitsgruppen|Ja<br /><br /> Bis zu 8 sekundäre Replikate, einschließlich 2 synchronen sekundären Replikaten|Nein|Nein|Nein|Nein|
 |Basis-Verfügbarkeitsgruppen <sup>2</sup>|Nein|Ja<br /><br /> Unterstützung für 2 Knoten|Nein|Nein|Nein|
 |Onlineseiten- und Onlinedateiwiederherstellung|Ja|Nein|Nein|Nein|Nein|

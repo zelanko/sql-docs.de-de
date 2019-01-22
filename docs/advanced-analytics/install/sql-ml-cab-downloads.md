@@ -3,17 +3,17 @@ title: CAB-Downloads für SQL Server kumulative Updates – SQL Server-Machine L
 description: R und Python-CAB-Datei und Paket-downloads für SQL Server 2017-Machine Learning Services und SQL Server 2016 R Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/18/2018
+ms.date: 01/19/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: bb89093909b2ec39bdcfc892bd2d8b14651f2f7d
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 83eb9ace15a3f96a15baa98000f872d719d5d0d2
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626364"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420055"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>CAB-downloads für kumulative Updates Analysefunktionen von SQL Server in der Datenbank-Instanzen
 
@@ -34,14 +34,14 @@ Sie können auch kumulative Updates auf einem eigenständigen Server anwenden.
 
 CAB-Dateien werden in umgekehrter chronologischer Reihenfolge aufgeführt. Wenn Sie die CAB-Dateien herunterladen und auf den Zielcomputer übertragen, sie in einem geeigneten Ordner speichern wie z. B. **Downloads** oder des Setup-Benutzers % temp %-Ordner.
 
-Release  |Komponente | Downloadlink  | Die Probleme | 
----------|----------|----------------|------------------|
-**[SQL Server 2017 CU13](https://support.microsoft.com/help/4466404)** |  |  |  |
+|Release  |Komponente | Downloadlink  | Die Probleme | 
+|---------|----------|----------------|------------------|
+|**[SQL Server 2017 CU13](https://support.microsoft.com/help/4466404)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| Keine Änderung gegenüber früheren Versionen. |
 | | R Server      |[SRS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038263&clcid=1033)| Enthält einen Fix für ein Upgrade einer [operationalisiert eigenständigen R Servers](https://docs.microsoft.com/machine-learning-server/what-is-operationalization), wie Sie mithilfe von SQL Server-Setup installiert. Verwenden Sie die CAB-Dateien CU13 und führen Sie [diese Anweisungen](sql-machine-learning-standalone-windows-install.md#apply-cu) zum Anwenden des Updates. |
 | | Öffnen Sie Microsoft-Python     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| Keine Änderung gegenüber früheren Versionen. |
 | | Python-Server    |[SPS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038197&clcid=1033)| Enthält einen Fix für ein Upgrade einer [eigenständigen Python-Server in Betrieb genommen](https://docs.microsoft.com/machine-learning-server/what-is-operationalization), wie Sie mithilfe von SQL Server-Setup installiert. Verwenden Sie die CAB-Dateien CU13 und führen Sie [diese Anweisungen](sql-machine-learning-standalone-windows-install.md#apply-cu) zum Anwenden des Updates. |
-**[SQL Server 2017 CU10](https://support.microsoft.com/help/4342123)-[CU11](https://support.microsoft.com/help/4462262)-[CU12](https://support.microsoft.com/help/4464082)** |  |  |  |
+|**[SQL Server 2017 CU10](https://support.microsoft.com/help/4342123)-[CU11](https://support.microsoft.com/help/4462262)-[CU12](https://support.microsoft.com/help/4464082)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| Keine Änderung gegenüber früheren Versionen. |
 | | R Server      |[SRS_9.2.0.1000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2006287&clcid=1033)| Einige kleinere Korrekturen.|
 | | Öffnen Sie Microsoft-Python     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| Keine Änderung gegenüber früheren Versionen. |

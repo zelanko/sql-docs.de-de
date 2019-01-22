@@ -1,7 +1,7 @@
 ---
 title: 'SQL zu C: Zeichen | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -15,43 +15,40 @@ ms.assetid: 7fdb7f38-b64d-48f2-bcb4-1ca96b2bbdb6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0d6ce8e1f961851f74f3ae5b6bdad30904bd18d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3a0a7036d67716a3d90bd8953a3c7ba2c575c92
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646034"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419975"
 ---
 # <a name="sql-to-c-character"></a>SQL zu C: Zeichen
-Der Bezeichner für die ODBC-SQL-Datentypen sind:  
-  
- SQL_CHAR  
-  
- SQL_VARCHAR  
-  
- SQL_LONGVARCHAR  
-  
- SQL_WCHAR  
-  
- SQL_WVARCHAR  
-  
- SQL_WLONGVARCHAR  
-  
- Die folgende Tabelle zeigt die ODBC-C-Datentypen, die in denen SQL-Zeichendaten konvertiert werden können. Eine Erläuterung der Spalten und Ausdrücke in der Tabelle, finden Sie unter [Konvertieren von Daten aus SQL in C-Datentypen](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md).  
-  
-|C-Typ-ID|Test|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
-|-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|Die Bytelänge der Daten < *Pufferlänge*<br /><br /> Die Bytelänge der Daten > = *Pufferlänge*|data<br /><br /> Abgeschnittene Daten|Länge der Daten in bytes<br /><br /> Länge der Daten in bytes|–<br /><br /> 01004|  
-|SQL_C_WCHAR|Länge der Daten Zeichen < *Pufferlänge*<br /><br /> Zeichen Länge > = *Pufferlänge*|data<br /><br /> Abgeschnittene Daten|Länge der Daten in Zeichen<br /><br /> Länge der Daten in Zeichen|–<br /><br /> 01004|  
-|SQL_C_STINYINT SQL_C_UTINYINT SQL_C_TINYINT SQL_C_SBIGINT SQL_C_UBIGINT SQL_C_SSHORT SQL_C_USHORT SQL_C_SHORT SQL_C_SLONG SQL_C_ULONG SQL_C_LONG SQL_C_NUMERIC|Daten konvertiert werden, ohne Abschneiden [b]<br /><br /> Daten konvertiert werden, mit dem Abschneiden der Dezimalstellen [a]<br /><br /> Konvertierung von Daten führt zu Verlust insgesamt (im Gegensatz zu Bruch) Ziffern [a]<br /><br /> Daten sind keine *numerischen Literalen*[b].|data<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert<br /><br /> Nicht definiert|Anzahl von Datenbytes der C-Datentyp<br /><br /> Anzahl von Datenbytes der C-Datentyp<br /><br /> Nicht definiert<br /><br /> Nicht definiert|–<br /><br /> 01 S 07<br /><br /> 22003<br /><br /> 22018|  
-|SQL_C_FLOAT SQL_C_DOUBLE|Daten sind innerhalb des Bereichs des Datentyps, der die Zahl konvertiert wird wird [a]<br /><br /> Daten sind außerhalb des Bereichs des Datentyps, der die Zahl konvertiert wird wird [a]<br /><br /> Daten sind keine *numerischen Literalen*[b].|data<br /><br /> Nicht definiert<br /><br /> Nicht definiert|Anzahl der C-Datentyp<br /><br /> Nicht definiert<br /><br /> Nicht definiert|–<br /><br /> 22003<br /><br /> 22018|  
-_C_BIT|Daten sind 0 oder 1<br /><br /> Daten ist größer als 0 ist, kleiner als 2, und nicht gleich-1<br /><br /> Daten ist kleiner als 0 oder größer als oder gleich 2<br /><br /> Daten sind keine *numerischen Literalen*|data<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert<br /><br /> Nicht definiert|1 [b]<br /><br /> 1 [b]<br /><br /> Nicht definiert<br /><br /> Nicht definiert|–<br /><br /> 01 S 07<br /><br /> 22003<br /><br /> 22018|  
-|SQL_C_BINARY|Die Bytelänge der Daten < = *Pufferlänge*<br /><br /> Die Bytelänge der Daten > *Pufferlänge*|data<br /><br /> Abgeschnittene Daten|Länge der Daten in bytes<br /><br /> Länge der Daten|–<br /><br /> 01004|  
-|SQL_C_TYPE_DATE|Datenwert ist ein gültiger *Datumswert*[a]<br /><br /> Datenwert ist ein gültiger *Timestamp-Wert*; Uhrzeitanteil ist 0 (null) [a]<br /><br /> Datenwert ist ein gültiger *Timestamp-Wert*; Uhrzeitanteil ist ungleich Null [a], [c]<br /><br /> Wert ist kein gültiger *Datumswert* oder *Timestamp-Wert*[a]|data<br /><br /> data<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|6 [b]<br /><br /> 6 [b]<br /><br /> 6 [b]<br /><br /> Nicht definiert|–<br /><br /> –<br /><br /> 01 S 07<br /><br /> 22018|  
-|SQL_C_TYPE_TIME|Datenwert ist ein gültiger *Zeit-Wert und die Sekundenbruchteile, 0 wird*[a]<br /><br /> Datenwert ist ein gültiger *Timestamp-Wert oder ein gültiger Zeitwert*; Bruchteilen Sekundenteil ist 0 (null) [a], [d]<br /><br /> Datenwert ist ein gültiger *Timestamp-Wert*; Bruchteilen Sekundenteil ungleich NULL ist [a], [d], [e]<br /><br /> Wert ist kein gültiger *Zeitwert* oder *Timestamp-Wert*[a]|data<br /><br /> data<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|6 [b]<br /><br /> 6 [b]<br /><br /> 6 [b]<br /><br /> Nicht definiert|–<br /><br /> –<br /><br /> 01 S 07<br /><br /> 22018|  
-_C_TYPE_TIMESTAMP|Datenwert ist ein gültiger *Timestamp-Wert oder ein gültiger Zeitwert*; Bruchteilen Sekundenteil nicht abgeschnitten, [a]<br /><br /> Datenwert ist ein gültiger *Timestamp-Wert oder ein gültiger Zeitwert*; Bruchteilen Sekundenteil abgeschnitten, [a]<br /><br /> Datenwert ist ein gültiger *Datumswert*[a]<br /><br /> Datenwert ist ein gültiger *Zeitwert*[a]<br /><br /> Wert ist kein gültiger *Datumswert*, *Zeitwert*, oder *Timestamp-Wert*[a]|data<br /><br /> Abgeschnittene Daten<br /><br /> Daten [f]<br /><br /> Daten [g]<br /><br /> Nicht definiert|16 [b]<br /><br /> 16 [b]<br /><br /> 16 [b]<br /><br /> 16 [b]<br /><br /> Nicht definiert|–<br /><br /> 01 S 07<br /><br /> –<br /><br /> –<br /><br /> 22018|  
-|Alle C-Intervall-Typen|Datenwert ist ein gültiger *Intervallwert*; kein Abschneiden<br /><br /> Datenwert ist ein gültiger *Intervallwert*; Abschneiden von ein oder mehrere nachfolgende Felder<br /><br /> Daten werden Sie gültige Intervall. Feld erhebliche Genauigkeit für anführenden ist verloren gegangen.<br /><br /> Der Wert ist kein gültiges Intervallwert|data<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert<br /><br /> Nicht definiert|Länge der Daten in bytes<br /><br /> Länge der Daten in bytes<br /><br /> Nicht definiert<br /><br /> Nicht definiert|–<br /><br /> 01 S 07<br /><br /> 22015<br /><br /> 22018|  
-  
+
+Der Bezeichner für die ODBC-SQL-Datentypen sind die folgenden:
+
+- SQL_CHAR
+- SQL_VARCHAR
+- SQL_LONGVARCHAR
+- SQL_WCHAR
+- SQL_WVARCHAR
+- SQL_WLONGVARCHAR
+
+Die folgende Tabelle zeigt die ODBC-C-Datentypen, die in denen SQL-Zeichendaten konvertiert werden können. Eine Erläuterung der Spalten und Ausdrücke in der Tabelle, finden Sie unter [Konvertieren von Daten aus SQL in C-Datentypen](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md).  
+
+|C-Typ-ID|Test|TargetValuePtr|StrLen_or_IndPtr|SQLSTATE|
+|:----------------|:---|:-------------|:---------------|:-------|
+|SQL_C_CHAR|Die Bytelänge der Daten < *Pufferlänge*<br /><br /> Die Bytelänge der Daten > = *Pufferlänge*|Daten<br /><br /> Abgeschnittene Daten|Länge der Daten in bytes<br /><br /> Länge der Daten in bytes|–<br /><br /> 01004|  
+|SQL_C_WCHAR|Länge der Daten Zeichen < *Pufferlänge*<br /><br /> Zeichen Länge > = *Pufferlänge*|Daten<br /><br /> Abgeschnittene Daten|Länge der Daten in Zeichen<br /><br /> Länge der Daten in Zeichen|–<br /><br /> 01004|  
+|SQL_C_STINYINT SQL_C_UTINYINT SQL_C_TINYINT SQL_C_SBIGINT SQL_C_UBIGINT SQL_C_SSHORT SQL_C_USHORT SQL_C_SHORT SQL_C_SLONG SQL_C_ULONG SQL_C_LONG SQL_C_NUMERIC|Daten konvertiert werden, ohne Abschneiden [b]<br /><br /> Daten konvertiert werden, mit dem Abschneiden der Dezimalstellen [a]<br /><br /> Konvertierung von Daten führt zu Verlust insgesamt (im Gegensatz zu Bruch) Ziffern [a]<br /><br /> Daten sind keine *numerischen Literalen*[b].|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert<br /><br /> Nicht definiert|Anzahl von Datenbytes der C-Datentyp<br /><br /> Anzahl von Datenbytes der C-Datentyp<br /><br /> Nicht definiert<br /><br /> Nicht definiert|–<br /><br /> 01S07<br /><br /> 22003<br /><br /> 22018|  
+|SQL_C_FLOAT SQL_C_DOUBLE|Daten sind innerhalb des Bereichs des Datentyps, der die Zahl konvertiert wird wird [a]<br /><br /> Daten sind außerhalb des Bereichs des Datentyps, der die Zahl konvertiert wird wird [a]<br /><br /> Daten sind keine *numerischen Literalen*[b].|Daten<br /><br /> Nicht definiert<br /><br /> Nicht definiert|Anzahl der C-Datentyp<br /><br /> Nicht definiert<br /><br /> Nicht definiert|–<br /><br /> 22003<br /><br /> 22018|  
+|SQL_C_BIT|Daten sind 0 oder 1<br /><br /> Daten ist größer als 0 ist, kleiner als 2, und nicht gleich-1<br /><br /> Daten ist kleiner als 0 oder größer als oder gleich 2<br /><br /> Daten sind keine *numerischen Literalen*|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert<br /><br /> Nicht definiert|1[b]<br /><br /> 1[b]<br /><br /> Nicht definiert<br /><br /> Nicht definiert|–<br /><br /> 01S07<br /><br /> 22003<br /><br /> 22018|  
+|SQL_C_BINARY|Die Bytelänge der Daten < = *Pufferlänge*<br /><br /> Die Bytelänge der Daten > *Pufferlänge*|Daten<br /><br /> Abgeschnittene Daten|Länge der Daten in bytes<br /><br /> Länge der Daten|–<br /><br /> 01004|  
+|SQL_C_TYPE_DATE|Datenwert ist ein gültiger *Datumswert*[a]<br /><br /> Datenwert ist ein gültiger *Timestamp-Wert*; Uhrzeitanteil ist 0 (null) [a]<br /><br /> Datenwert ist ein gültiger *Timestamp-Wert*; Uhrzeitanteil ist ungleich Null [a], [c]<br /><br /> Wert ist kein gültiger *Datumswert* oder *Timestamp-Wert*[a]|Daten<br /><br /> Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|6[b]<br /><br /> 6[b]<br /><br /> 6[b]<br /><br /> Nicht definiert|–<br /><br /> –<br /><br /> 01S07<br /><br /> 22018|  
+|SQL_C_TYPE_TIME|Datenwert ist ein gültiger *Zeit-Wert und die Sekundenbruchteile, 0 wird*[a]<br /><br /> Datenwert ist ein gültiger *Timestamp-Wert oder ein gültiger Zeitwert*; Bruchteilen Sekundenteil ist 0 (null) [a], [d]<br /><br /> Datenwert ist ein gültiger *Timestamp-Wert*; Bruchteilen Sekundenteil ungleich NULL ist [a], [d], [e]<br /><br /> Wert ist kein gültiger *Zeitwert* oder *Timestamp-Wert*[a]|Daten<br /><br /> Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|6[b]<br /><br /> 6[b]<br /><br /> 6[b]<br /><br /> Nicht definiert|–<br /><br /> –<br /><br /> 01S07<br /><br /> 22018|  
+|SQL_C_TYPE_TIMESTAMP|Datenwert ist ein gültiger *Timestamp-Wert oder ein gültiger Zeitwert*; Bruchteilen Sekundenteil nicht abgeschnitten, [a]<br /><br /> Datenwert ist ein gültiger *Timestamp-Wert oder ein gültiger Zeitwert*; Bruchteilen Sekundenteil abgeschnitten, [a]<br /><br /> Datenwert ist ein gültiger *Datumswert*[a]<br /><br /> Datenwert ist ein gültiger *Zeitwert*[a]<br /><br /> Wert ist kein gültiger *Datumswert*, *Zeitwert*, oder *Timestamp-Wert*[a]|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Daten [f]<br /><br /> Daten [g]<br /><br /> Nicht definiert|16[b]<br /><br /> 16[b]<br /><br /> 16[b]<br /><br /> 16[b]<br /><br /> Nicht definiert|–<br /><br /> 01S07<br /><br /> –<br /><br /> –<br /><br /> 22018|  
+|Alle C-Intervall-Typen|Datenwert ist ein gültiger *Intervallwert*; kein Abschneiden<br /><br /> Datenwert ist ein gültiger *Intervallwert*; Abschneiden von ein oder mehrere nachfolgende Felder<br /><br /> Daten werden Sie gültige Intervall. Feld erhebliche Genauigkeit für anführenden ist verloren gegangen.<br /><br /> Der Wert ist kein gültiges Intervallwert|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert<br /><br /> Nicht definiert|Länge der Daten in bytes<br /><br /> Länge der Daten in bytes<br /><br /> Nicht definiert<br /><br /> Nicht definiert|–<br /><br /> 01S07<br /><br /> 22015<br /><br /> 22018|  
+|&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
+
  [a] den Wert der *Pufferlänge* für diese Konvertierung ignoriert wird. Der Treiber setzt voraus, dass die Größe des **TargetValuePtr* ist die Größe der C-Datentyp.  
   
  [b] Dies ist die Größe des entsprechenden C-Datentyp.  
@@ -65,5 +62,13 @@ _C_TYPE_TIMESTAMP|Datenwert ist ein gültiger *Timestamp-Wert oder ein gültiger
  [f] Zeitfelder der Timestamp-Struktur werden auf 0 (null) festgelegt.  
   
  [g] die Datumsfelder der Timestamp-Struktur werden auf das aktuelle Datum festgelegt.  
-  
- Wenn SQL-Zeichendaten in numerische konvertiert werden, werden Datum, Uhrzeit, Timestamp- oder C Intervalldaten, die führende und nachfolgende Leerzeichen ignoriert.
+
+**Zusätzliche Leerzeichen**
+
+Führende und nachfolgende Leerzeichen werden ignoriert, wenn SQL-Zeichendaten in der folgenden Typen konvertiert werden:
+
+- date
+- NUMERIC
+- Uhrzeit
+- timestamp
+- C Intervalldaten

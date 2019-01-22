@@ -3,17 +3,17 @@ title: 'Standardbibliotheken Sie R- und Python-Paket: SQL Server Machine Learnin
 description: R und Python-Pakete, die von SQLServer für R Services, R Server, Machine Learning Services (Datenbankintern) und Machine Learning Server (eigenständig) installiert
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/29/2018
+ms.date: 01/19/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0a8c4c0f14a099dd4b6d8e6c48b8d84e209f6024
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 907932911ef522383678774f596772904f687dc2
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432333"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419855"
 ---
 # <a name="default-r-and-python-packages-in-sql-server"></a>Standard-R und Python-Paketen in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +24,7 @@ Dieser Artikel beschreibt, die R- und Python-Pakete, die mit SQL Server und, wo 
 
 R-Pakete installiert und die [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) und [SQL Server 2017-Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) Wenn Sie die R-Funktion während des Setups auswählen. 
 
-Pakete         | 2016 | 2017 | Description |
+|Pakete         | 2016 | 2017 | Description |
 |----------------|--------------|--------------|-------------|
 | [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | 9.2 | Für remotecomputekontexte, streaming, parallele Ausführung über Rx-Funktionen für Datenimport und -Transformation, Modellierung, Visualisierung und Analyse verwendet. |
 | [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 8.0.3 | 9.2 |Zum Einschließen von R-Skripts in gespeicherten Prozeduren verwendet. |
@@ -65,7 +65,7 @@ SQL Server 2017-Machine Learning ist die erste Version, um R und Python-Unterst�
 
 |Release             | Anaconda version| Microsoft-Pakete    |
 |--------------------|-----------------|-----------------------|
-| SQL Server 2017-Machine Learning-Dienste  | 4.2 über Python 3.5 | die Revoscalepy, microsoftml |
+| SQL Server 2017-Machine Learning-Dienste  | 4.2 über Python 3.5 | revoscalepy, microsoftml |
 
 Sie sollten die Version von Python, die von SQL Server-Setup installiert werden, durch neuere Versionen im Internet niemals manuell überschreiben. Microsoft Python-Paketen basieren auf bestimmte Versionen von Anaconda. Ändern die Installation kann es destabilisieren.
 
@@ -91,7 +91,7 @@ Pfade umfassen auch die Instanznamen. SQL Server installiert [Datenbank-Engine-I
 |----------------------|------------|
 | SQL Server 2016 |C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\R_SERVICES\library|
 | SQLServer 2017 mit R|C:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES\library |
-| SQLServer 2017 mit Python |C:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\Lib\site-Pakete |
+| SQLServer 2017 mit Python |C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages |
 
 
 #### <a name="file-path-for-standalone-server-installations"></a>Dateipfad für die eigenständige Installation

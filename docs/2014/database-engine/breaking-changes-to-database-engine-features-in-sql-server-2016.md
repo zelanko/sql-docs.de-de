@@ -1,7 +1,7 @@
 ---
 title: Wichtige Änderungen an der Datenbank-Engine-Funktionen in SQLServer 2014 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/27/2018
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: release-landing
@@ -13,12 +13,12 @@ ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fe4dc2f55b8d9b1bc9475e936341d24d16ce77a6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: cfb905cb56c053d44b93021838915d3a628241a0
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375272"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420205"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>Fehlerhafte Änderungen an Funktionen der Datenbank-Engine in SQL Server 2014
   Dieses Thema beschreibt wichtige Änderungen in der [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] und früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Diese Änderungen können u. U. zur Funktionsunfähigkeit von Anwendungen, Skripts oder Funktionen führen, die auf früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]basieren. Diese Probleme können nach einem Upgrade auftreten. Weitere Informationen finden Sie unter [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -42,7 +42,6 @@ ms.locfileid: "53375272"
 |ALTER TABLE|Die ALTER TABLE-Anweisung lässt nur zweiteilige Tabellennamen (schema.object) zu. Angabe eines Tabellennamens nun mit den folgenden Formaten tritt zur Kompilierzeit mit Fehler 117:<br /><br /> server.database.schema.table<br /><br /> .database.schema.table<br /><br /> ..schema.table<br /><br /> Bei früheren Versionen wurde durch die Angabe des Formats "server.database.schema.table" der Fehler 4902 zurückgegeben. Die Angabe des Formats ".database.schema.table" oder "..schema.table" war erfolgreich. Um das Problem zu beheben, vermeiden Sie die Verwendung eines vierteiligen Präfixes.|  
 |Durchsuchen von Metadaten|Abfragen einer Sicht mit FOR BROWSE oder SET NO_BROWSETABLE ON geben jetzt die Metadaten der Sicht zurück, jedoch nicht die Metadaten des zugrunde liegenden Objekts. Dieses Verhalten entspricht jetzt anderen Methoden zum Durchsuchen von Metadaten.|  
 |SOUNDEX|Unter dem Datenbank-Kompatibilitätsgrad 110 implementiert die SOUNDEX-Funktion neue Regeln, durch die sich möglicherweise die Werte, die von der Funktion berechnet wurden, von den Werten unterscheiden, die unter vorherigen Kompatibilitätsgraden berechnet wurden. Möglicherweise sind die Indizes, Heaps oder CHECK-Einschränkungen, die die SOUNDEX-Funktion verwenden, nach dem Upgrade auf Kompatibilitätsgrad 110 erneut zu erstellen. Weitere Informationen finden Sie unter [SOUNDEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/soundex-transact-sql).
- .|  
 |Meldung zur Zeilenanzahl für fehlgeschlagene DML-Anweisungen|In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] sendet das [!INCLUDE[ssDE](../includes/ssde-md.md)] konsistent das TDS DONE-Token mit RowCount: 0 an Clients, wenn eine DML-Anweisung fehlschlägt. In früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird ein falscher Wert von -1 an den Client gesendet, wenn die DML-Anweisung, bei der ein Fehler auftritt, in einem TRY-CATCH-Block enthalten ist und entweder von [!INCLUDE[ssDE](../includes/ssde-md.md)] automatisch parametrisiert wird oder sich der TRY-CATCH-Block nicht auf der gleichen Ebene wie die fehlgeschlagene Anweisung befindet. Wenn beispielsweise ein TRY-CATCH-Block eine gespeicherte Prozedur aufruft und eine DML-Anweisung in der Prozedur fehlschlägt, empfängt der Client den Wert von -1 nicht korrekt.<br /><br /> Anwendungen, die auf diesem falschen Verhalten basieren, schlagen fehl.|  
 |SERVERPROPERTY ("Edition")|Installierte Produktedition der Instanz von [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Verwenden Sie den Wert dieser Eigenschaft, um die Funktionen und Beschränkungen zu ermitteln, wie z. B. die maximale Anzahl der CPUs, die vom installierten Produkt unterstützt werden.<br /><br /> Basierend auf der installierten Enterprise-Edition, der Rückgabewert kann 'Enterprise Edition' oder ' Enterprise Edition: Core-basierte Lizenzierung ". Die Enterprise-Editionen unterscheiden sich anhand der maximalen Rechenkapazität, die von einer einzelnen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz genutzt wird. Weitere Informationen zu rechenkapazitätsgrenzen in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], finden Sie unter [Compute Capacity Limits Edition von SQL Server-](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).|  
 |CREATE LOGIN|Die `CREATE LOGIN WITH PASSWORD = '` *Kennwort* `' HASHED` Option kann nicht verwendet werden, mit Hashes von erstellten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7 oder älter.|  
@@ -57,7 +56,7 @@ ms.locfileid: "53375272"
 |sys.dm_os_memory_cache_entries|Die Spalte Pages_allocated_count-Spalte wurde umbenannt Pages_kb.|  
 |sys.dm_os_memory_clerks|Die Spalte Multi_pages_kb wurde entfernt.<br /><br /> Die Spalte Single_pages_kb-Spalte wurde umbenannt Pages_kb.|  
 |sys.dm_os_memory_nodes|Die folgenden Spalten wurden umbenannt:<br /><br /> Single_pages_kb lautet nun: <br />                            pages_kb<br /><br /> Multi_pages_kb lautet nun: <br />                            foreign_committed_kb|  
-|sys.dm_os_memory_objects|Die folgenden Spalten wurden umbenannt.<br /><br /> Pages_allocated_count lautet nun:<br />                            pages_in_bytes<br /><br /> Max_pages_allocated_count ist jetzt: Max_pages_in_bytes|  
+|sys.dm_os_memory_objects|Die folgenden Spalten wurden umbenannt.<br /><br /> Pages_allocated_count lautet nun:<br />                            pages_in_bytes<br /><br /> max_pages_allocated_count is now: max_pages_in_bytes|  
 |sys.dm_os_sys_info|Die folgenden Spalten wurden umbenannt:<br /><br /> Physical_memory_in_bytes lautet nun: <br />                            physical_memory_kb<br /><br /> Bpool_commit_target lautet nun: <br />                            committed_target_kb<br /><br /> Bpool_visible lautet nun: <br />                            visible_target_kb<br /><br /> Virtual_memory_in_bytes lautet nun: <br />                            virtual_memory_kb<br /><br /> Bpool_commited lautet nun:<br />                            committed_kb|  
 |sys.dm_os_workers|Die Spalte "locale" wurde entfernt.|  
   
@@ -148,11 +147,11 @@ ms.locfileid: "53375272"
   
 -   **fn: string-Length**. Aber wenn ein ungültiges oder partielles Ersatzzeichenpaar als Argument, das Verhalten der übergeben wird **Zeichenfolgenlängen** ist nicht definiert.  
   
--   **fn: SUBSTRING**.  
+-   **fn:substring**.  
   
--   **fn: enthält**. Jedoch, wenn ein partielles Ersatzzeichenpaar als Wert übergeben wird **enthält** möglicherweise unerwartete Ergebnisse zurück, da es das partielle Ersatzzeichenpaar in einem wohlgeformten Ersatzzeichenpaar enthalten möglicherweise.  
+-   **fn:contains**. Jedoch, wenn ein partielles Ersatzzeichenpaar als Wert übergeben wird **enthält** möglicherweise unerwartete Ergebnisse zurück, da es das partielle Ersatzzeichenpaar in einem wohlgeformten Ersatzzeichenpaar enthalten möglicherweise.  
   
--   **fn: concat**. Jedoch, wenn ein partielles Ersatzzeichenpaar als Wert übergeben wird **"concat"** falsche Ersatzzeichenpaare oder partielle Ersatzzeichenpaare erzeugen können.  
+-   **fn:concat**. Jedoch, wenn ein partielles Ersatzzeichenpaar als Wert übergeben wird **"concat"** falsche Ersatzzeichenpaare oder partielle Ersatzzeichenpaare erzeugen können.  
   
 -   Vergleichsoperatoren und die **order by-** Klausel. Vergleichsoperatoren umfassen +, \<, >, \<=, > =, `eq`, `lt`, `gt`, `le`, und `ge`.  
   
@@ -179,9 +178,9 @@ ms.locfileid: "53375272"
   
  Die folgenden Funktionen und Operatoren zeigen das neue oben beschriebene Verhalten nur, wenn der Kompatibilitätsgrad mindestens 110 ist:  
   
--   **fn: enthält**.  
+-   **fn:contains**.  
   
--   **fn: concat**.  
+-   **fn:concat**.  
   
 -   Vergleichsoperatoren und **order by-** Klausel  
   
@@ -189,9 +188,9 @@ ms.locfileid: "53375272"
   
  Die folgenden Funktionen zeigen das neue Verhalten beschrieben oben nur, wenn der standardmäßige Namespace-URI auf den Namespace in der endgültigen Empfehlung, d. h. entspricht [ http://www.w3.org/2005/xpath-functions ](http://www.w3.org/2005/xpath-functions). Wenn der Kompatibilitätsgrad mindestens 110 ist, bindet [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] den Standardfunktionsnamespace standardmäßig an diesen Namespace. Diese Funktionen zeigen das neue Verhalten, wenn dieser Namespace unabhängig vom Kompatibilitätsgrad verwendet wird.  
   
--   **fn: string-Length**  
+-   **fn:string-length**  
   
--   **fn: SUBSTRING**  
+-   **fn:substring**  
   
 ##  <a name="KJKatmai"></a> Wichtige Änderungen in SQL Server 2008/SQL Server 2008 R2  
  Dieser Abschnitt enthält die in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] eingeführten wichtigen Änderungen. In [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] wurden keine Änderungen eingeführt.  
@@ -215,7 +214,7 @@ ms.locfileid: "53375272"
 |Sicht|Description|  
 |----------|-----------------|  
 |sys.dm_os_sys_info|Entfernt die Spalte cpu_ticks_in_ms- und die sqlserver_start_time_cpu_ticks.|  
-|Sys.dm_exec_query_resource_semaphoressys.dm_exec_query_memory_grants|Die Spalte resource_semaphore_id-Spalte stellt keine eindeutige ID in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] dar. Diese Änderung kann die Abfrageausführung bei der Problembehandlung beeinflussen. Weitere Informationen finden Sie unter [Sys. dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql).|  
+|sys.dm_exec_query_resource_semaphoressys.dm_exec_query_memory_grants|Die Spalte resource_semaphore_id-Spalte stellt keine eindeutige ID in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] dar. Diese Änderung kann die Abfrageausführung bei der Problembehandlung beeinflussen. Weitere Informationen finden Sie unter [Sys. dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql).|  
   
 ### <a name="errors-and-events"></a>Fehler und Ereignisse  
   

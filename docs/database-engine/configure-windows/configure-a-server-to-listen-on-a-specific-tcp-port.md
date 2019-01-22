@@ -18,12 +18,12 @@ ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0b8be637da67d9aa083fb4afbc024381c1b83a81
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a990088feab172954f82b3be34a505202626c7d0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605300"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132800"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>Konfigurieren eines Servers für das Überwachen eines bestimmten TCP-Ports
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,11 +56,11 @@ Da Port 1433 der bekannte Standard für [!INCLUDE[ssNoVersion](../../includes/ss
   
      ![TCP_Ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
   
-4.  Geben Sie im Dialogfeld **IP***n* **Eigenschaften** im Feld **TCP-Port** die Portnummer ein, die diese IP-Adresse überwachen soll, und klicken Sie auf **OK**. Sie können mehrere Ports angegeben, indem Sie sie durch ein Komma trennen.
+4.  Geben Sie im Dialogfeld **Eigenschaften** von **IP**_n_ im Feld **TCP-Port** box, type the port number you want this Eigenschaften von IP address to listen on, and then click **OK**. Sie können mehrere Ports angegeben, indem Sie sie durch ein Komma trennen.
 
     > [!NOTE] 
-    > Wenn die Einstellung **Alle überwachen** auf der Registerkarte **Protokoll** auf „Ja“ festgelegt ist, werden nur die Werte **TCP Port** (TCP-Port) und **TCP Dynamic Port** (Dynamischer TCP-Port) unter **IPAll** verwendet, und individuelle **IP***n*-Abschnitte werden ignoriert. Wenn die Einstellung **Alle überwachen** auf „Nein“ festgelegt ist, werden die Werte**TCP Port** und **TCP Dynamic Port** unter **IPAll** ignoriert, und die Einstellungen **TCP Port**, **TCP Dynamic Port** und **Enabled** (Aktiviert) werden stattdessen für die jeweiligen **IP***n*-Abschnitte verwendet.
-    > Jeder **IP***n*-Abschnitt verfügt über die Einstellung **Aktiviert** mit dem Standardwert „Nein“, wodurch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diese IP-Adresse ignoriert, auch wenn dafür ein Port definiert ist.  
+    > Wenn die Einstellung **Alle überwachen** auf der Registerkarte **Protokoll** auf „Ja“ festgelegt ist, werden nur die Werte **TCP Port** (TCP-Port) und **TCP Dynamic Port** (Dynamischer TCP-Port) unter **IPAll** verwendet, und individuelle **IP**_n_-Abschnitte werden ignoriert. Wenn die Einstellung **Alle überwachen** auf „Nein“ festgelegt ist, werden die Werte**TCP Port** und **TCP Dynamic Port** unter **IPAll** ignoriert, und die Einstellungen **TCP Port**, **TCP Dynamic Port** und **Enabled** (Aktiviert) werden stattdessen für die jeweiligen **IP**_n_-Abschnitte verwendet.
+    > Jeder **IP**_n_-Abschnitt verfügt über die Einstellung **Aktiviert** mit dem Standardwert „Nein“, wodurch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diese IP-Adresse ignoriert, auch wenn dafür ein Port definiert ist.  
   
 5.  Klicken Sie im Konsolenbereich auf **SQL Server-Dienste**.  
   
@@ -73,7 +73,7 @@ Nachdem Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] so konfigu
 -   Erstellen Sie einen Alias auf dem Client, und geben Sie die Portnummer an.  
 -   Programmieren Sie den Client so, dass die Verbindung mithilfe einer benutzerdefinierten Verbindungszeichenfolge hergestellt wird.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen oder Löschen eines Serveralias für die Verwendung durch einen Client &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md)   
  [SQL Server-Browserdienst](../../tools/configuration-manager/sql-server-browser-service.md)  
   

@@ -2,7 +2,7 @@
 title: Problembehandlung in Scale Out mit SQL Server Integration Services (SSIS) | Microsoft-Dokumentation
 description: In diesem Artikel wird beschrieben, wie Sie gängige Probleme mit SSIS Scale Out behandeln.
 ms.custom: performance
-ms.date: 05/09/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 20473c4555a0f0a98484bd66ef93ce659d51a2a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1afc1a2fbb8777df0c4bf5a488cde951fd4e32c
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732492"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206326"
 ---
 # <a name="troubleshoot-scale-out"></a>Problembehandlung in Scale Out
 
@@ -38,7 +38,7 @@ Führen Sie die unten aufgeführten Schritte nacheinander aus, bis Ihr Problem g
 
     Führen Sie im Objekt-Explorer von SSMS einen Rechtsklick auf **SSISDB** aus, und überprüfen Sie, ob das **Feature Scale Out aktiviert ist**.
 
-    ![Scale Out ist aktiviert](media\isenabled.PNG)
+    ![Scale Out ist aktiviert](media/isenabled.PNG)
 
     Wenn der Eigenschaftswert FALSE ist, aktivieren Sie Scale Out, indem Sie die gespeicherte Prozedur `[catalog].[enable_scaleout]` aufrufen.
 
@@ -62,7 +62,7 @@ Führen Sie die unten aufgeführten Schritte nacheinander aus, bis Ihr Problem g
 
 ### <a name="symptoms"></a>Symptome
 
-*System.ServiceModel.EndpointNotFoundException: Unter https://*[Computername]:[Port]*/ClusterManagement/ wurde keine Überwachung durch einen Endpunkt durchgeführt, der die Meldung annehmen konnte.*
+*"System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://*[MachineName]:[Port]*/ClusterManagement/ that could accept the message."* (System.ServiceModel.EndpointNotFoundException: Unter https://[Computername]:[Port]/ClusterManagement/ wurde keine Überwachung durch einen Endpunkt durchgeführt, der die Meldung annehmen konnte.)
 
 ### <a name="solution"></a>Lösung
 
@@ -77,11 +77,11 @@ Führen Sie die unten aufgeführten Schritte nacheinander aus, bis Ihr Problem g
 ## <a name="could-not-establish-trust-relationship"></a>Es konnte keine Vertrauensstellung hergestellt werden
 
 ### <a name="symptoms"></a>Symptome
-*System.ServiceModel.Security.SecurityNegotiationException: Es konnte keine Vertrauensstellung für den sicheren SSL/TLS-Kanal mit der Stelle „[Computername]:[Port]“ eingerichtet werden.*
+*""System.ServiceModel.Security.SecurityNegotiationException: Could not establish trust relationship for the SSL/TLS secure channel with authority '[Machine Name]:[Port]'."* (System.ServiceModel.Security.SecurityNegotiationException: Es konnte keine Vertrauensstellung für den sicheren SSL/TLS-Kanal mit der Autorität „[Computername]:[Port]“ eingerichtet werden.)
 
-*System.Net.WebException: Die zugrunde liegende Verbindung wurde geschlossen: Für den sicheren SSL/TLS-Kanal konnte keine Vertrauensstellung hergestellt werden.*
+*"System.Net.WebException: The underlying connection was closed: Could not establish trust relationship for the SSL/TLS secure channel."* (System.Net.WebException: Die zugrunde liegende Verbindung wurde vom Server geschlossen: Es konnte keine Vertrauensstellung für den sicheren SSL/TLS-Kanal eingerichtet werden.)
 
-*System.Security.Authentication.AuthenticationException: Das Remotezertifikat ist laut Validierungsverfahren ungültig.*
+*"System.Security.Authentication.AuthenticationException: System.Security.Authentication.AuthenticationException: The remote certificate is invalid according to the validation procedure."* (System.Security.Authentication.AuthenticationException: Das Remotezertifikat ist laut Validierungsverfahren ungültig.)
 
 ### <a name="solution"></a>Lösung
 1.  Installieren Sie das Scale Out-Masterzertifikat im Stammzertifikatspeicher auf dem lokalen Computer auf dem Scale Out-Workerknoten, falls noch nicht geschehen, und starten Sie den Scale Out-Workerdienst neu.
@@ -97,9 +97,9 @@ Führen Sie die unten aufgeführten Schritte nacheinander aus, bis Ihr Problem g
 
 ### <a name="symptoms"></a>Symptome
 
-*System.ServiceModel.Security.SecurityNegotiationException: Es konnte kein sicherer Kanal für SSL/TLS mit der Stelle „[Computername]:[Port]“ eingerichtet werden.*
+*"System.ServiceModel.Security.SecurityNegotiationException: Could not establish secure channel for SSL/TLS with authority '[Machine Name]:[Port]'."* (System.ServiceModel.Security.SecurityNegotiationException: Es konnte kein sicherer SSL/TLS-Kanal mit der Autorität „[Computername]:[Port]“ hergestellt werden.)
 
-*System.Net.WebException: Die Anforderung wurde abgebrochen: Es konnte kein sicherer SSL/TLS-Kanal erstellt werden.*
+*"System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel."* (System.Net.WebException: Die Anforderung wurde abgebrochen: Es konnte kein sicherer SSL/TLS-Kanal erstellt werden).
 
 ### <a name="solution"></a>Lösung
 Überprüfen Sie mithilfe des folgenden Befehls, ob das Konto, das den Scale Out-Workerdienst ausführt, Zugriff auf das Zertifikat des Scale Out-Workers hat:
@@ -118,9 +118,9 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
 ### <a name="symptoms"></a>Symptome
 
-*System.ServiceModel.Security.MessageSecurityException: Die HTTP-Anforderung wurde mit dem Clientauthentifizierungsschema „Anonym“ nicht zugelassen.*
+*"System.ServiceModel.Security.MessageSecurityException: The HTTP request was forbidden with client authentication scheme 'Anonymous'."* (System.ServiceModel.Security.MessageSecurityException: Die HTTP-Anforderung wurde mit dem Clientauthentifizierungsschema „Anonym“ verboten.)
 
-*System.Net.WebException: Der Remoteserver hat einen Fehler zurückgegeben: 403 Verboten.*
+*"System.Net.WebException: The remote server returned an error: (403) Forbidden."* (System.Net.WebException: Der Remoteserver hat einen Fehler zurückgegeben: (403) Verboten.)
 
 ### <a name="solution"></a>Lösung
 1.  Installieren Sie das Scale Out-Workerzertifikat im Stammzertifikatspeicher auf dem lokalen Computer auf dem Scale Out-Masterknoten, falls noch nicht geschehen, und starten Sie den Scale Out-Workerdienst neu.
@@ -154,7 +154,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
 ### <a name="symptoms"></a>Symptome
 
-*„System.ServiceModel.CommunicationException: Fehler beim Erstellen der HTTP-Anforderung für https://[Machine Name]:[Port]/ClusterManagement/. Dies ist möglicherweise darauf zurückzuführen, dass das Serverzertifikat im Fall von HTTPS nicht ordnungsgemäß mit HTTP.SYS konfiguriert wurde. Dies könnte daran liegen, dass das Serverzertifikat nicht richtig mit „HTTP.SYS“ im HTTPS-Fall konfiguriert wurde. Eine andere mögliche Ursache kann eine fehlende Übereinstimmung bei der Sicherheitsbindung zwischen Client und Server sein.“*
+*"System.ServiceModel.CommunicationException: An error occurred while making the HTTP request to https://[Machine Name]:[Port]/ClusterManagement/. This could be due to the fact that the server certificate is not configured properly with HTTP.SYS in the HTTPS case. This could also be caused by a mismatch of the security binding between the client and the server."* („System.ServiceModel.CommunicationException: Fehler beim Erstellen der HTTP-Anforderung für https://[Computername]:[Port]/ClusterManagement/. Dies könnte daran liegen, dass das Serverzertifikat nicht richtig mit „HTTP.SYS“ im HTTPS-Fall konfiguriert wurde. Eine andere mögliche Ursache kann eine fehlende Übereinstimmung bei der Sicherheitsbindung zwischen Client und Server sein.“*
 
 ### <a name="solution"></a>Lösung
 1.  Überprüfen Sie mithilfe des folgenden Befehls, ob das Scale Out-Masterzertifikat korrekt an den Port im Masterendpunkt auf dem Masterknoten gebunden ist:
@@ -224,4 +224,4 @@ WHERE executions.execution_id = *Your Execution Id* AND tasks.JobId = executions
 ## <a name="next-steps"></a>Nächste Schritte
 Weitere Informationen finden Sie in den folgenden Artikeln, in denen das Einrichten und die Konfiguration von SSIS Scale Out behandelt werden:
 -   [Erste Schritte mit Scale Out von SQL Server Integration Services (SSIS) auf einem einzelnen Computer](get-started-with-ssis-scale-out-onebox.md)
--   [Exemplarische Vorgehensweise: Einrichten von Scale Out für Integration Services (SSIS)](walkthrough-set-up-integration-services-scale-out.md)
+-   [Exemplarische Vorgehensweise: Einrichten von SQL Server Integration Services Scale Out (SSIS)](walkthrough-set-up-integration-services-scale-out.md)
