@@ -10,12 +10,12 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a424f6fa95a7b295722750f9bb68db9ef30d66a4
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: b4ac8b044308ad7bfb2431e35429558b9deb3cf5
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257245"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405880"
 ---
 # <a name="database-engine-errors"></a>Datenbank-Engine – Fehler
 
@@ -270,7 +270,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   348 |   16  |   Nein  |   Die "%.*ls"-Tabellenvariable kann nicht mit der Option OUTPUT an eine gespeicherte Prozedur übergeben werden.   |
 |   349 |   16  |   Nein  |   Die "%.*ls"-Prozedur hat keinen Parameter mit der Bezeichnung "%.* ls".   |
 |   350 |   16  |   Nein  |   Die '%.*ls'-Spalte hat keinen gültigen Datentyp. Eine Spalte darf kein benutzerdefinierter Tabellentyp sein.    |
-|   351 |   16  |   Nein  |   Der %.*Is-Datentyp für die Spalte, den Parameter oder die Variable "%*.ls"  wurde nicht gefunden.    |
+|   351 |   16  |   Nein  |   Der %*ls-Datentyp für die Spalte, den Parameter oder die Variable Nr. '%* ls!' wurde nicht gefunden.    |
 |   352 |   15  |   Nein  |   Der '%.*ls'-Tabellenwertparameter muss mit der Option READONLY deklariert werden.   |
 |   353 |   16  |   Nein  |   Die '%.*ls'-Funktion ist in der %S_MSG-Klausel nicht zulässig, wenn die FROM-Klausel eine geschachtelte INSERT-, UPDATE-, DELETE- oder MERGE-Anweisung enthält. Dies ist der Fall, weil die Funktion auf Benutzer- oder Systemdaten zugreift bzw. weil angenommen wird, dass sie darauf zugreift. Bei einer Funktion, die nicht schemagebunden ist, wird standardmäßig angenommen, dass sie auf Daten zugreift. |
 |   354 |   15  |   Nein  |   Das Ziel '%.*ls' der INSERT-Anweisung darf keine Sicht oder und kein allgemeiner Tabellenausdruck sein, wenn die FROM-Klausel eine geschachtelte INSERT-, UPDATE-, DELETE- oder MERGE-Anweisung enthält.   |
@@ -927,7 +927,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   1846    |   16  |   Nein  |   Die SQL VSS (Volume Shadow Copy) Writer-Komponente für die '%ls'-Datenbank wurde beim Erstellen einer automatisch wiederhergestellten VSS-Momentaufnahme für die DBCC-Onlineüberprüfung nicht gefunden.  |
 |   1847    |   16  |   Nein  |   Die aktuelle Version des Betriebssystems unterstützt keine automatisch wiederhergestellten VSS (Volume Shadow Copy)-Momentaufnahmen.  |
 |   1848    |   16  |   Nein  |   VSS (Volume Shadow Copy Service) konnte keine automatisch wiederhergestellte Momentaufnahme der '%ls'-Datenbank für die DBCC-Onlineüberprüfung erstellen.   |
-|   1849    |   16  |   Nein  |   Fehler bei CREATE DATABASE, weil FILESTREAM-Dateigruppen deklariert wurden, und ALLOW_SNAPSHOT_ISOLATION oder READ_COMMITTED_SNAPSHOT in der Modelldatenbank auf ON festgelegt ist. Legen Sie entweder ALLOW_SNAPSHOT_ISOLATION und READ_COMMITTED_SNAPSHOT in der Modeldatenbank auf OFF fest, oder erstellen Sie die Datenbank, ohne FILESTREAM-Dateigruppen zu deklarieren, legen Sie ALLOW_SNAPSHOT_ISOLATION und READ_COMMITTED_SNAPSHOT in der neuen Datenbank auf OFF fest, und fügen Sie die FILESTREAM-Dateigruppen und Dateien dann mithilfe von ALTER DATABASE hinzu.    |
+|   1849    |   16  |   Nein  |   Fehler bei CREATE DATABASE, weil FILESTREAM-Dateigruppen deklariert wurden, und ALLOW_SNAPSHOT_ISOLATION oder READ_COMMITTED_SNAPSHOT in der Modelldatenbank auf ON festgelegt ist. Legen Sie entweder ALLOW_SNAPSHOT_ISOLATION und READ_COMMITTED_SNAPSHOT in der Modeldatenbank auf OFF fest, oder erstellen Sie die Datenbank, ohne FILESTREAM-Dateigruppen zu deklarieren, legen Sie ALLOW_SNAPSHOT_ISOLATION und READ_COMMITTED_SNAPSHOT in der neuen Datenbank auf OFF fest, und fügen Sie die FILESTREAM-Dateigruppen und Dateien dann mithilfe von ALTER DATABASE hinzu.   |
 |   1901    |   16  |   Nein  |   Der Index oder die Statistik "%.*ls" kann in der "%.* ls"-Ansicht nicht erstellt werden, weil die Schlüsselspalte "%.*ls" unpräzise, berechnet und nicht persistiert ist. Entfernen Sie den Verweis auf die Spalte im Sichtindex oder im Statistikschlüssel, oder ändern Sie die Spalte in eine präzise Spalte. Wenn die Spalte in der Basistabelle berechnet ist, können Sie sie dort als PERSISTED kennzeichnen. |
 |   1902    |   16  |   Nein  |   Es ist nicht möglich, mehr als einen gruppierten Index für %S_MSG "%.*ls" zu erstellen. Löschen Sie den bestehenden gruppierten Index "%.* ls", bevor Sie einen weiteren gruppierten Index erstellen.   |
 |   [1904](mssqlserver-1904-database-engine-error.md)   |   16  |   Nein  |   %S_MSG "%.*ls" in der "%.* ls"-Tabelle weist %d Spaltennamen in der %S_MSG-Schlüsselliste auf. Die maximale Anzahl für Spaltenlisten von Index- oder Statistikschlüsseln beträgt % d.    |
@@ -1305,8 +1305,8 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   2711    |   16  |   Nein  |   Die Definition von Objekt "%.*ls" in der Ressourcendatenbank enthält das Nicht-ASCII-Zeichen "%.* ls". |
 |   2712    |   16  |   Nein  |   Die Datenbank '%.*ls' kann nicht als Verteilungsdatenbank konfiguriert werden, weil die Änderungsnachverfolgung aktiviert ist.   |
 |   2714    |   16  |   Nein  |   In der Datenbank ist bereits ein Objekt mit dem Namen '%.*ls' vorhanden.   |
-|   2715    |   16  |   Nein  |   Der %.*ls-Datentyp für die Spalte, den Parameter oder die Variable Nr. %d wurde nicht gefunden.     |
-|   2716    |   16  |   Nein  |   Für den %.*ls-Datentyp der Spalte, des Parameters oder der Variablen Nr. %d kann keine Spaltenbreite angegeben werden.    |
+|   2715    |   16  |   Nein  |   Der %.*ls-Datentyp für die Spalte, den Parameter oder die Variable Nr. #%d wurde nicht gefunden.    |
+|   2716    |   16  |   Nein  |   Der %.*ls-Datentyp für die Spalte, den Parameter oder die Variable Nr. #%d kann keine Spaltenbreite angegeben werden.   |
 |   2717    |   15  |   Nein  |   Die Größe (%d) von %S_MSG '%.*ls' überschreitet den zulässigen maximalen Wert (%d). |
 |   2719    |   16  |   Nein  |   Fehler beim Aktualisieren der '%.*ls'-Datenbank, weil sie den Benutzer 'sys' enthält, der in dieser Version von SQL Server ein reservierter Benutzer- oder Schemaname ist.    |
 |   2720    |   16  |   Nein  |   %S_MSG "%.*ls" kann nicht an ein Schema gebunden werden, weil es auf das Systemobjekt "%.* ls" verweist.  |
@@ -1333,7 +1333,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   2747    |   16  |   Nein  |   Zu viele Ersetzungsparameter für RAISERROR. Es sind höchstens %d Ersetzungsparameter zulässig.   |
 |   2748    |   16  |   Nein  |   Der %ls-Datentyp (%d-Parameter) kann nicht als Ersetzungsparameter angegeben werden.    |
 |   2749    |   16  |   Nein  |   Die '%.*ls'-Identitätsspalte muss vom Datentyp 'int', 'bigint', 'smallint', 'tinyint' oder 'decimal' bzw. 'numeric' mit 0 Dezimalstellen sein und darf keine NULL-Werte zulassen.    |
-|   2750    |   16  |   Nein  |   Spalte oder Parameter Nr. %d: Die angegebene Spaltengenauigkeit "%d" ist größer als die maximale Genauigkeit von %d. |
+|   2750    |   16  |   Nein  |   Spalte oder Parameter Nr. %d: Die angegebene Spaltengenauigkeit %d ist größer als die maximale Genauigkeit von %d. |
 |   2751    |   16  |   Nein  |   Spalte oder Parameter Nr. %d: Die angegebene Dezimalstellenanzahl %d der Spalte ist größer als die angegebene Genauigkeit %d.   |
 |   2752    |   16  |   Nein  |   Die '%.*ls'-Identitätsspalte enthält einen ungültigen Ausgangswert.  |
 |   2753    |   16  |   Nein  |   Die '%.*ls'-Identitätsspalte enthält ein ungültiges Inkrement. |
@@ -5861,7 +5861,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   14684   |   16  |   Nein  |   Gefundene Fehlernummer: %d, Ebene: %d, Status: %d, in Prozedur: %s, Zeile: %d, mit Meldung: %s   |
 |   14685   |   16  |   Nein  |   Der Sammlungssatz '%s' enthält keine Sammelelemente. Das Starten des Sammlungssatzes hat daher keinerlei Auswirkungen. |
 |   14686   |   16  |   Nein  |   Der MDWInstance- und der MDWDatabase-Parameter des Konfigurationsspeichers darf nicht NULL sein.   |
-|   14687   |   16  |   Nein  |   Ungültiger Wert (%d) des \@cache_window-Parameters.  Zulässige Werte sind: -1 (alle hochgeladenen Daten von früheren Uploadfehlern werden zwischengespeichert), 0 (es werden keine hochgeladenen Daten zwischengespeichert), N (Daten aus N früheren Uploadfehlern werden zwischengespeichert, wobei N >= 1).  |
+|   14687   |   16  |   Nein  |   Ungültiger Wert (%d) des \@cache_window-Parameters. Zulässige Werte sind: -1 (alle hochgeladenen Daten von früheren Uploadfehlern werden zwischengespeichert), 0 (es werden keine hochgeladenen Daten zwischengespeichert), N (Daten aus N früheren Uploadfehlern werden zwischengespeichert, wobei N >= 1).  |
 |   14688   |   16  |   Nein  |   Ein Sammlungssatz kann nicht gestartet werden, wenn der SQL Server-Agent angehalten wurde. Starten Sie den SQL Server-Agent. |
 |   14689   |   16  |   Nein  |   Ein Sammlungssatz kann nicht gestartet werden, wenn das Verwaltungs-Data Warehouse nicht konfiguriert ist. Führen Sie das instmdw.sql-Skript aus, um das Verwaltungs-Data Warehouse zu erstellen und zu konfigurieren. |
 |   14690   |   16  |   Nein  |   Diese Prozedur kann nicht durchgeführt werden, wenn der Sammler aktiviert ist. Deaktivieren Sie den Sammler, und wiederholen Sie den Vorgang.  |
@@ -6571,7 +6571,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   17189   |   16  |   Ja |   Fehler bei SQL Server beim Erzeugen eines Threads zum Verarbeiten einer neuen Anmeldung oder Verbindung. Der Fehlercode ist 0x%x. Suchen Sie im SQL Server-Fehlerprotokoll und in den Windows-Ereignisprotokollen nach Informationen zu möglichen verwandten Problemen.%.*ls  |
 |   17190   |   16  |   Ja |   Fehler beim Initialisieren des FallBack-Zertifikats. Fehlercode: %d. |
 |   17191   |   16  |   Ja |   Eine neue Verbindung kann nicht angenommen werden, weil die Sitzung beendet wurde. Dieser Fehler tritt auf, wenn eine neue Batchausführung versucht wird, während die betreffende Sitzung abgemeldet wird, oder wenn bei der Verbindungsherstellung ein schwerer Fehler auftritt. Überprüfen Sie das Fehlerprotokoll, um zu bestimmen, ob diese Sitzung mit einem KILL-Befehl oder aufgrund von schweren Fehlern beendet wurde.%.*ls    |
-|   17192   |   10  |   Ja |   Die Unterstützung für dedizierte Administratorverbindungen wurde aufgrund des Fehlers 0x%lx, Statuscode: 0x%lx, nicht gestartet.  Dieser Fehler ist gewöhnlich ein Hinweis auf einen socketbasierten Fehler, wie z. B. ein bereits verwendeter Port.  |
+|   17192   |   10  |   Ja |   Die Unterstützung für dedizierte Administratorverbindungen wurde aufgrund des Fehlers 0x%lx, Statuscode 0x%lx, nicht gestartet. Dieser Fehler ist gewöhnlich ein Hinweis auf einen socketbasierten Fehler, wie z. B. ein bereits verwendeter Port.  |
 |   17193   |   10  |   Ja |   Die systemeigene SOAP-Unterstützung von SQL Server ist nun bereit für Clientverbindungen. Diese Meldung dient nur zu Informationszwecken. Es ist keine Benutzeraktion erforderlich.  |
 |   [17194](mssqlserver-17194-database-engine-error.md) |   16  |   Ja |   Der Server konnte die für das Anmelden erforderliche SSL-Anbieterbibliothek nicht laden. Die Verbindung wurde geschlossen. SSL wird zum Verschlüsseln der Anmeldesequenz oder der gesamten Kommunikation verwendet, je nach der vom Administrator festgelegten Serverkonfiguration. In der Onlinedokumentation finden Sie weitere Informationen zu dieser Fehlermeldung: %d %.*ls %.* ls   |
 |   17195   |   16  |   Ja |   Der Server konnte die Initialisierungssequenz nicht abschließen, weil die verfügbaren Netzwerkbibliotheken die geforderte Verschlüsselungsstufe nicht unterstützen. Der Serverprozess wurde angehalten. Bevor Sie den Server erneut starten, sollten Sie sich vergewissern, dass die SSL-Zertifikate installiert sind. Weitere Informationen finden Sie in der Onlinedokumentation unter "Konfigurieren von Clientprotokollen und Netzwerkbibliotheken". |
