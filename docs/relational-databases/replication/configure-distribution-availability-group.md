@@ -1,7 +1,7 @@
 ---
 title: Konfigurieren einer SQL Server-Verteilungsdatenbank in einer Verfügbarkeitsgruppe | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/13/2018
+ms.date: 01/16/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -20,12 +20,12 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5b2f6defed7ad897f3464aec1b8b99391a2b9149
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: d23495f210a2c5979a5e5abecd9f43e4f5b62c02
+ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126450"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54372688"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Einrichten der Verteilungsdatenbank für die Replikation in einer Always On-Verfügbarkeitsgruppe
 
@@ -34,7 +34,9 @@ Dieser Artikel beschreibt, wie Sie eine SQL Server-Verteilungsdatenbank für die
 Ab SQL Server 2017 CU6 und SQL Server 2016 SP2-CU3 werden Verteilungsdatenbanken für die Replikation in Verfügbarkeitsgruppen folgendermaßen unterstützt:
 
 - Die Verfügbarkeitsgruppe der Verteilungsdatenbank muss über einen Listener verfügen. Wenn der Verleger den Verteiler hinzufügt, wird der Listenername als Verteilername verwendet.
-- Bei der Erstellung von Replikationsaufträgen dient der Listenername als Verteilername.
+- Bei der Erstellung von Replikationsaufträgen dient der Listenername als Verteilername. Replikationsmomentaufnahme-, Protokolllese- und Verteilungs-Agent-Aufträge (Pushabonnementaufträge), die auf dem Verteilungsserver erstellt wurden, werden in allen sekundären Replikaten der Verfügbarkeitsgruppe für die Verteilungsdatenbank erstellt.
+ >[!NOTE]
+ >Verteilungs-Agent-Aufträge für Pullabonnements werden auf dem Abonnentenserver, nicht auf dem Verteilungsserver erstellt. 
 - Ein neuer Auftrag überwacht den Status der Verteilungsdatenbanken (primäres oder sekundäres Replikat in der Verteilungsgruppe) und deaktiviert oder aktiviert die Replikationsaufträge entsprechend.
 
 Nachdem eine Verteilungsdatenbank gemäß der nachfolgenden Anleitung in der Verfügbarkeitsgruppe konfiguriert wurde, können die Replikationskonfiguration und die Aufträge zur Laufzeit ordnungsgemäß vor und nach dem Failover auf die Verteilungsdatenbank ausgeführt werden.

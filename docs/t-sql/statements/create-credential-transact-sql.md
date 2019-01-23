@@ -21,16 +21,16 @@ helpviewer_keywords:
 - CREATE CREDENTIAL statement
 - credentials [SQL Server], CREATE CREDENTIAL statement
 ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e0481611eb666b893395581805c923cf03921ad9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 91cc75f835320b6cf15c20cbb7d72101dc2868df
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509380"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327781"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "52509380"
 > [!NOTE]  
 >  Verwenden Sie [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md) zum Erstellen der Anmeldeinformationen auf Datenbankebene. Verwenden Sie Anmeldeinformationen auf Serverebene, wenn Sie dieselben Anmeldeinformationen für mehrere Datenbanken auf demselben Server verwenden müssen. Verwenden Sie datenbankbezogene Anmeldeinformationen, um die Datenbank portierbarer zu machen. Wenn eine Datenbank auf einen neuen Server verschoben wird, werden gleichzeitig auch diese datenbankbezogenen Anmeldeinformationen verschoben. Verwenden Sie datenbankbezogene Anmeldeinformationen in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -65,7 +65,7 @@ WITH IDENTITY = 'identity_name'
  SECRET **='**_secret_**'**  
  Gibt den geheimen Bereich an, der für die ausgehende Authentifizierung erforderlich ist.  
   
- Wenn die Anmeldeinformationen zum Zugreifen auf Azure Key Vault verwendet werden, müssen an das **SECRET**-Argument von **CREATE CREDENTIAL** die *\<Client-ID>* (ohne Bindestriche) und der *\<geheime Schlüssel>* eines **Dienstprinzipals** in Azure Active Directory zusammen, ohne Leerzeichen dazwischen, übergeben werden. Weitere Informationen finden Sie unten im Beispiel C. Wenn die Anmeldeinformationen eine Shared Access Signature (SAS) verwenden, ist **SECRET** das freigegebene SAS-Token. Siehe Beispiel D.  Weitere Informationen zum Erstellen einer gespeicherten Zugriffsrichtlinie und einer SAS auf einem Azure-Container finden Sie unter [Lektion 1: Erstellen einer gespeicherten Zugriffsrichtlinie und SAS](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
+ Wenn die Anmeldeinformationen zum Zugreifen auf Azure Key Vault verwendet werden, müssen an das **SECRET**-Argument von **CREATE CREDENTIAL** die *\<Client-ID>* (ohne Bindestriche) und der *\<geheime Schlüssel>* eines **Dienstprinzipals** in Azure Active Directory zusammen, ohne Leerzeichen dazwischen, übergeben werden. Weitere Informationen finden Sie unten im Beispiel C. Wenn die Anmeldeinformationen eine Shared Access Signature (SAS) verwenden, ist **SECRET** das freigegebene SAS-Token. Siehe Beispiel D.  Informationen über das Erstellen einer gespeicherten Zugriffsrichtlinie und einer Shared Access Signature (SAS) in einem Azure-Container finden Sie unter [Lektion 1: Erstellen einer gespeicherten Zugriffsrichtlinie und von Speicher mit freigegebenem Zugriff](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
   
  FOR CRYPTOGRAPHIC PROVIDER *cryptographic_provider_name*  
  Gibt den Namen eines *Anbieters für die Schlüsselverwaltung in Unternehmen* (Enterprise Key Management Provider (EKM)) an. Weitere Informationen zum Verwalten von Schlüsseln finden Sie unter [Erweiterbare Schlüsselverwaltung &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
@@ -146,7 +146,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>D. Erstellen von Anmeldeinformationen mithilfe eines SAS-Token  
  **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
- Das folgende Beispiel erstellt SAS-Anmeldinformationen mit dem SAS-Token.  Ein Tutorial zum Erstellen einer gespeicherten Zugriffsrichtlinie und einer SAS für einen Azure-Container und das anschließende Erstellen von Anmeldeinformationen unter Verwendung dieser SAS finden Sie unter [Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+ Das folgende Beispiel erstellt SAS-Anmeldinformationen mit dem SAS-Token.  Ein Tutorial zum Erstellen einer gespeicherten Zugriffsrichtlinie und einer SAS für einen Azure-Container und das anschließende Erstellen von Anmeldeinformationen mit dieser SAS finden Sie unter [Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 > [!IMPORTANT]  
 >  Das **CREDENTIAL NAME**-Argument erfordert, dass der Name dem Containerpfad zugeordnet werden kann, mit „https“ beginnt und keinen nachgestellten Schrägstrich enthält. Das **IDENTITY**-Argument erfordert den Namen *SHARED ACCESS SIGNATURE*. Das **SECRET**-Argument erfordert das SAS-Token.  
@@ -159,7 +159,7 @@ CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystora
 GO    
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Anmeldeinformationen &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [ALTER CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-credential-transact-sql.md)   
  [DROP CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-credential-transact-sql.md)   

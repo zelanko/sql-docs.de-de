@@ -1,7 +1,7 @@
 ---
 title: Leitfaden zur Architektur und zum Design von SQL Server-Indizes | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/06/2018
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 217fe5bc510d5f25eaddfad69fa08ad4dd760c8f
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: e294759588beeb5d79f4613848ca49634d8e40cf
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712701"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420185"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Leitfaden zur Architektur und zum Design von SQL Server-Indizes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -218,7 +218,7 @@ Verwenden Sie diese Metadatenansichten, um die Attribute des Indizes anzuzeigen.
 |-|-|
 |[sys.indexes &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)|[sys.index_columns &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)|  
 |[sys.partitions &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)|[sys.internal_partitions &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|
-[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)|  
+|[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)|  
 |[sys.column_store_segments &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)|[sys.column_store_dictionaries &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)|  
 |[sys.column_store_row_groups &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)|[sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|
 |[sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)|[sys.dm_column_store_object_pool &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)|  
@@ -591,7 +591,7 @@ SELECT ComponentID, StartDate FROM Production.BillOfMaterials
 WHERE EndDate IS NOT NULL;   
 ```  
   
- Eine Spalte im gefilterten Indexausdruck sollte in der gefilterten Indexdefinition eine Schlüsselspalte oder eingeschlossene Spalte sein, wenn das Abfrageprädikat die Spalte in einem Vergleich verwendet, der nicht dem gefilterten Indexausdruck entspricht. Zum Beispiel ist `FIBillOfMaterialsWithEndDate` für die folgende Abfrage gültig, da damit aus dem gefilterten Index eine Teilmenge von Zeilen ausgewählt wird. Damit wird jedoch nicht die folgende Abfrage abgedeckt, da `EndDate` im Vergleich `EndDate > '20040101'`verwendet wird, der nicht dem gefilterten Indexausdruck entspricht. Der Abfrageprozessor kann diese Abfrage nicht ausführen, ohne die Werte von `EndDate`abzurufen. Deshalb sollte `EndDate` eine Schlüsselspalte oder eingeschlossene Spalte in der Definition des gefilterten Indexes darstellen.  
+ Eine Spalte im gefilterten Indexausdruck sollte in der Definition des gefilterten Indexes eine Schlüsselspalte oder eingeschlossene Spalte sein, wenn das Abfrageprädikat die Spalte in einem Vergleich verwendet, der nicht dem gefilterten Indexausdruck entspricht. Zum Beispiel ist `FIBillOfMaterialsWithEndDate` für die folgende Abfrage gültig, da damit aus dem gefilterten Index eine Teilmenge von Zeilen ausgewählt wird. Damit wird jedoch nicht die folgende Abfrage abgedeckt, da `EndDate` im Vergleich `EndDate > '20040101'`verwendet wird, der nicht dem gefilterten Indexausdruck entspricht. Der Abfrageprozessor kann diese Abfrage nicht ausführen, ohne die Werte von `EndDate`abzurufen. Deshalb sollte `EndDate` eine Schlüsselspalte oder eingeschlossene Spalte in der Definition des gefilterten Indexes darstellen.  
   
 ```sql  
 SELECT ComponentID, StartDate FROM Production.BillOfMaterials  
@@ -824,7 +824,7 @@ Nicht gruppierte Indizes zählen zu den möglichen Typen von Indizes in einer sp
 
 ### <a name="in-memory-nonclustered-index-architecture"></a>Architektur nicht gruppierter In-Memory-Indizes
 
-Nicht gruppierte In-Memory-Indizes werden mithilfe einer Datenstruktur implementiert, die als Bw-Struktur bezeichnet wird. Diese wurde 2011 ursprünglich von Microsoft Research entworfen und beschrieben. Bei einer Bw-Struktur handelt es sich um eine Variante der B-Struktur, die keine Sperren oder Latches aufweist. Weitere Informationen finden Sie unter [The Bw-Tree: A B-tree for New Hardware Platforms (Die Bw-Struktur: eine B-Struktur für neue Hardwareplattformen)](https://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/). 
+Nicht gruppierte In-Memory-Indizes werden mithilfe einer Datenstruktur implementiert, die als Bw-Struktur bezeichnet wird. Diese wurde 2011 ursprünglich von Microsoft Research entworfen und beschrieben. Bei einer Bw-Struktur handelt es sich um eine Variante der B-Struktur, die keine Sperren oder Latches aufweist. Weitere Informationen finden Sie unter [The Bw-Tree: A B-tree for New Hardware Platforms](https://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/). 
 
 Im Allgemeinen kann die Bw-Struktur als Zuordnung von Seiten verstanden werden, die von der Seiten-ID (PidMap) organisiert wird, sowie als Hilfsmittel zum Belegen und Wiederverwenden von Seiten-IDs (PidAlloc) und als Reihe von Seiten, die mit der Seitenzuordnung und miteinander verknüpft sind. Diese drei allgemeinen Unterkomponenten bilden zusammen die grundlegende interne Struktur einer Bw-Struktur.
 

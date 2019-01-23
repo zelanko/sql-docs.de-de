@@ -11,14 +11,14 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: fc9923cdc27594c37e8f89390f0cb4906f3478f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11a429ef4dec41fa316831ae38a76e4a7998d558
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758948"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326131"
 ---
-# <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>Tutorial: Bereitstellen und Ausführen eines SSIS-Pakets in Azure
+# <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>Lernprogramm: Bereitstellen und Ausführen eines SSIS-Pakets in Azure
 In diesem Tutorial wird gezeigt, wie ein SSIS-Projekt für den SSIS-Katalog in einer Azure SQL-Datenbank bereitgestellt wird, ein Paket in Azure SSIS Integration Runtime ausgeführt wird und das ausgeführte Paket überwacht wird.
 
 ## <a name="prerequisites"></a>Voraussetzungen
@@ -206,13 +206,13 @@ Weitere Informationen finden Sie unter [Monitor Azure-SSIS integration runtime (
 ### <a name="get-metadata-about-the-azure-ssis-integration-runtime"></a>Abrufen von Metadaten über Azure SSIS Integration Runtime
 
 ```powershell
-Get-AzureRmDataFactoryV2IntegrationRuntime -DataFactoryName $DataFactoryName -Name $AzureSsisIRName -ResourceGroupName $ResourceGroupName
+Get-AzDataFactoryV2IntegrationRuntime -DataFactoryName $DataFactoryName -Name $AzureSsisIRName -ResourceGroupName $ResourceGroupName
 ```
 
 ### <a name="get-the-status-of-the-azure-ssis-integration-runtime"></a>Abrufen des Status von Azure SSIS Integration Runtime
 
 ```powershell
-Get-AzureRmDataFactoryV2IntegrationRuntime -Status -DataFactoryName $DataFactoryName -Name $AzureSsisIRName -ResourceGroupName $ResourceGroupName
+Get-AzDataFactoryV2IntegrationRuntime -Status -DataFactoryName $DataFactoryName -Name $AzureSsisIRName -ResourceGroupName $ResourceGroupName
 ```
 
 ## <a name="next-steps"></a>Nächste Schritte

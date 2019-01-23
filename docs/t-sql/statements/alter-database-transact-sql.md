@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9eb95a89fa8539eede53a154f7e7087a3f31f71b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 64c4819bd307afe3b7e4b310949148deabb8c938
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135320"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327811"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -82,7 +82,7 @@ Stellt die Syntax und weitere Informationen zu den ALTER DATABASE-Optionen für 
 Stellt die Syntax und weitere Informationen für die SET-Optionen von ALTER DATABASE bereit, die sich auf die Datenbank-Kompatibilitätsgrade beziehen.  
   
 ## <a name="syntax"></a>Syntax  
-  
+
 ```
 -- SQL Server Syntax  
 ALTER DATABASE { database_name  | CURRENT }  
@@ -124,14 +124,15 @@ ALTER DATABASE { database_name  | CURRENT }
  
 <compatibility_level>
    { 140 | 130 | 120 | 110 | 100 | 90 }   
-```  
-  
+```
+
 ## <a name="arguments"></a>Argumente  
+
 *database_name*  
 Der Name der Datenbank, die geändert werden soll.  
   
-> [!NOTE]  
->  Diese Option ist in einer eigenständigen Datenbank nicht verfügbar.  
+> [!NOTE]
+> Diese Option ist in einer eigenständigen Datenbank nicht verfügbar.
   
 CURRENT  
 **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -159,7 +160,8 @@ Weitere Informationen finden Sie unter [ALTER DATABASE SET-Optionen](../../t-sql
 **\<file_and_filegroup_options>::=**  
 Weitere Informationen finden Sie unter [ALTER DATABASE-Optionen für Dateien und Dateigruppen](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks
+
 Verwenden Sie [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md), um eine Datenbank zu entfernen.  
   
 Verwenden Sie [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md), um die Größe einer Datenbank zu reduzieren.  
@@ -191,7 +193,8 @@ Der Prozedurcache wird in den folgenden Situationen ebenfalls geleert:
 - Sie stellen eine Datenbanksicherung wieder her.  
 - Sie trennen eine Datenbank.  
   
-## <a name="changing-the-database-collation"></a>Ändern der Datenbanksortierung  
+## <a name="changing-the-database-collation"></a>Ändern der Datenbanksortierung
+
 Bevor Sie auf eine Datenbank eine andere Sortierung anwenden, stellen Sie sicher, dass die folgenden Bedingungen erfüllt sind:  
   
 - Die Datenbank wird derzeit nur von Ihnen verwendet.  
@@ -221,31 +224,35 @@ Durch das Ändern der Sortierung der Datenbank werden keine Duplikate von System
   
 Durch doppelte Namen, die durch die neue Sortierung entstanden sind, schlägt die ALTER-Aktion fehl. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt eine Fehlermeldung zurück, in der der Namespace angegeben wird, in dem das Duplikat gefunden wurde.  
   
-## <a name="viewing-database-information"></a>Anzeigen von Datenbankinformationen  
+## <a name="viewing-database-information"></a>Anzeigen von Datenbankinformationen
+
 Sie können Katalogsichten, Systemfunktionen und gespeicherte Systemprozeduren verwenden, um Informationen zu Datenbanken, Dateien und Dateigruppen zurückzugeben.  
   
-## <a name="permissions"></a>Berechtigungen  
+## <a name="permissions"></a>Berechtigungen
+
 Erfordert die ALTER-Berechtigung für die Datenbank.  
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-changing-the-name-of-a-database"></a>A. Ändern des Namens einer Datenbank  
+### <a name="a-changing-the-name-of-a-database"></a>A. Ändern des Namens einer Datenbank
+
 Im folgenden Beispiel wird der Name der Datenbank `AdventureWorks2012` in `Northwind` geändert.  
-  
-```sql  
+
+```sql
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012  
 Modify Name = Northwind ;  
 GO  
-```  
-  
-### <a name="b-changing-the-collation-of-a-database"></a>B. Ändern der Datenbanksortierung  
+```
+
+### <a name="b-changing-the-collation-of-a-database"></a>B. Ändern der Datenbanksortierung
+
 Im folgenden Beispiel wird die Datenbank `testdb` mit der `SQL_Latin1_General_CP1_CI_A`S-Sortierung erstellt. Danach wird die Sortierung der Datenbank `testdb` in `COLLATE French_CI_AI` geändert.  
   
 **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-  
-```sql  
+
+```sql
 USE master;  
 GO  
   
@@ -256,9 +263,10 @@ GO
 ALTER DATABASE testDB  
 COLLATE French_CI_AI ;  
 GO  
-```  
-  
-## <a name="see-also"></a>Weitere Informationen  
+```
+
+## <a name="see-also"></a>Weitere Informationen
+
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)   
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)   
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)   
@@ -367,8 +375,8 @@ ALTER DATABASE { database_name | CURRENT }
   | <temporal_history_retention>  
 }  
 ```
-  
-## <a name="arguments"></a>Argumente  
+
+## <a name="arguments"></a>Argumente
 
 *database_name*  
 
@@ -392,11 +400,11 @@ MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'Bus
 Ändert die Dienstebene der Datenbank. 
 
 Im folgenden Beispiel wird die Edition in `premium` geändert:
-  
-```sql  
+
+```sql
 ALTER DATABASE current 
     MODIFY (EDITION = 'premium');
-``` 
+```
 
 Wenn die MAXSIZE-Eigenschaft für die Datenbank auf einen Wert außerhalb des gültigen, von der jeweiligen Edition unterstützten Bereichs festgelegt wird, schlägt die Änderung der EDITION-Eigenschaft fehl.  
 
@@ -440,22 +448,25 @@ Der MAXSIZE-Wert für das DTU-basierte Modell muss – wenn angegeben –ein gü
 **vCore-basiertes Modell**
 
 **Dienstebene „Universell“: Computeplattform der 4. Generation**
+
 |MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_4|GP_Gen4_8|GP_Gen4_16|GP4_24|
 |:--- | --: |--: |--: |--: |--: |--:|
 |Maximale Datengröße (GB)|1024|1024|1536|3072|4096|4096|
 
 **Dienstebene „Universell“: Computeplattform der 5. Generation**
+
 |MAXSIZE|GP_Gen5_2|GP_Gen5_4|GP_Gen5_8|GP_Gen5_16|GP_Gen5_24|GP_Gen5_32|GP_Gen5_48|GP_Gen5_80|
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
 |Maximale Datengröße (GB)|1024|1024|1536|3072|4096|4096|4096|4096|
 
-
 **Dienstebene „Unternehmenskritisch“: Computeplattform der 4. Generation**
+
 |Leistungsebene|BC_Gen4_1|BC_Gen4_2|BC_Gen4_4|BC_Gen4_8|BC_Gen4_16|
 |:--- | --: |--: |--: |--: |--: |--: |
 |Maximale Datengröße (GB)|1024|1024|1024|1024|1024|1024|
 
 **Dienstebene „Unternehmenskritisch“: Computeplattform der 5. Generation**
+
 |MAXSIZE|BC_Gen5_2|BC_Gen5_4|BC_Gen5_8|BC_Gen5_16|BC_Gen5_24|BC_Gen5_32|BC_Gen5_48|BC_Gen5_80|
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
 |Maximale Datengröße (GB)|1024|1024|1024|1024|2048|4096|4096|4096|
@@ -471,13 +482,13 @@ Die folgenden Regeln gelten für das MAXSIZE-Argument und das EDITION-Argument:
 MODIFY (SERVICE_OBJECTIVE = \<service-objective>)  
 
 Gibt die Leistungsebene an. Im folgenden Beispiel wird das Dienstziel einer Premium-Datenbank in `P6` geändert:
- 
-```sql  
+
+```sql
 ALTER DATABASE current 
     MODIFY (SERVICE_OBJECTIVE = 'P6');
 ```  
 
-Gibt die Leistungsebene an. Verfügbare Werte für Dienstziele sind:  `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_8`, `GP_Gen5_16`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_48`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_8`, `BC_Gen5_16`, `BC_Gen5_24`, `BC_Gen5_32`, `BC_Gen5_48`, `BC_Gen5_80`, `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_8`, `HS_Gen5_16`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_48`, `HS_Gen5_80`.  
+Gibt die Leistungsebene an. Verfügbare Werte für Dienstziele sind:  `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_8`, `GP_Gen5_16`, `GP_Gen5_24`,`GP_Gen5_32`, `GP_Gen5_48`, `GP_Gen5_80`, `BC_Gen5_2`,`BC_Gen5_4`,`BC_Gen5_8`,`BC_Gen5_16`,`BC_Gen5_24`,`BC_Gen5_32`,`BC_Gen5_48`,`BC_Gen5_80`, `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`,`HS_Gen5_4`,`HS_Gen5_8`,`HS_Gen5_16`,`HS_Gen5_24`,`HS_Gen5_32`,`HS_Gen5_48`,`HS_Gen5_80`.  
 
 Dienstzielbeschreibungen und weitere Informationen zu Größe, Editionen und Dienstzielkombinationen finden Sie unter [Azure SQL Database Service Tiers and Performance Levels (Dienstebenen und Leistungsstufen von Azure SQL-Datenbank)](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [DTU-based resource limits (DTU-basierte Ressourcenbeschränkungen)](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) und [vCore-based resource limits (vCore-basierte Ressourcenbeschränkungen)](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits). Die Unterstützung für PRS-Dienstziele wurde entfernt. Wenn Sie Fragen haben, wenden Sie sich an den E-Mail-Alias premium-rs@microsoft.com. 
   
@@ -499,7 +510,7 @@ WITH ALLOW_CONNECTIONS { **ALL** | NO }
 
 Wenn ALLOW_CONNECTIONS nicht angegeben ist, wird es standardmäßig auf ALL festgelegt. Wenn ALL festgelegt ist, handelt es sich um eine schreibgeschützte Datenbank, zu der alle Anmeldenamen mit den entsprechenden Berechtigungen eine Verbindung herstellen dürfen.  
   
-WITH SERVICE_OBJECTIVE {  `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_8`, `GP_Gen5_16`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_48`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_8`, `BC_Gen5_16`, `BC_Gen5_24`, `BC_Gen5_32`, `BC_Gen5_48`, `BC_Gen5_80` }  
+WITH SERVICE_OBJECTIVE {  `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`,`GP_Gen5_4`,`GP_Gen5_8`,`GP_Gen5_16`,`GP_Gen5_24`,`GP_Gen5_32`,`GP_Gen5_48`,`GP_Gen5_80`, `BC_Gen5_2`,`BC_Gen5_4`,`BC_Gen5_8`,`BC_Gen5_16`,`BC_Gen5_24`,`BC_Gen5_32`,`BC_Gen5_48`,`BC_Gen5_80` }  
 
 Wenn SERVICE_OBJECTIVE nicht angegeben ist, wird die sekundäre Datenbank auf derselben Dienstebene wie die primäre Datenbank erstellt. Wenn SERVICE_OBJECTIVE angegeben ist, wird die sekundäre Datenbank auf der angegebenen Ebene erstellt. Diese Option unterstützt die Erstellung georeplizierter sekundärer Datenbanken mit kostengünstigeren Servicelevels. Das angegebene SERVICE_OBJECTIVE muss sich in derselben Edition wie die Quelle befinden. So können Sie beispielsweise nicht „S0“ angeben, wenn es sich bei der Edition um eine Premium-Edition handelt.  
   
@@ -796,9 +807,10 @@ ALTER DATABASE database_name
           | 'DW2500c' | 'DW3000c' | 'DW5000c' | 'DW6000c' | 'DW7500c' 
           | 'DW10000c' | 'DW15000c' | 'DW30000c'
       }  
-```  
-  
-## <a name="arguments"></a>Argumente  
+```
+
+## <a name="arguments"></a>Argumente
+
 *database_name*  
 Gibt den Namen der zu ändernden Datenbank an.  
 
@@ -819,7 +831,8 @@ Die maximal zulässige Größe für Rowstore-Daten in der Datenbank Daten, die i
 SERVICE_OBJECTIVE  
 Gibt die Leistungsebene an. Weitere Informationen zu Dienstzielen für [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] finden Sie unter [Leistungsstufen](https://azure.microsoft.com/documentation/articles/performance-tiers/).  
   
-## <a name="permissions"></a>Berechtigungen  
+## <a name="permissions"></a>Berechtigungen
+
 Folgende Berechtigungen sind erforderlich:  
   
 - Der Prinzipalanmeldename auf Serverebene (der während des Bereitstellungsprozesses erstellt wurde) oder  
@@ -827,14 +840,16 @@ Folgende Berechtigungen sind erforderlich:
   
 Der Datenbankbesitzer kann die Datenbank nur ändern, wenn er Mitglied der Rolle `dbmanager` ist.  
   
-## <a name="general-remarks"></a>Allgemeine Hinweise  
+## <a name="general-remarks"></a>Allgemeine Hinweise
+
 Bei der aktuellen Datenbank muss es sich um eine andere Datenbank als die handeln, die Sie ändern. Deshalb muss **ALTER ausgeführt werden, während eine Verbindung zur Masterdatenbank besteht**.  
   
 SQL Data Warehouse ist auf COMPATIBILITY_LEVEL 130 festgelegt und kann nicht verändert werden. Weitere Informationen finden Sie unter [Verbesserte Abfrageleistung mit Kompatibilitätsgrad 130 in Azure SQL-Datenbank](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/).
   
 Verwenden Sie [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md), um die Größe einer Datenbank zu reduzieren.  
   
-## <a name="limitations-and-restrictions"></a>Einschränkungen  
+## <a name="limitations-and-restrictions"></a>Einschränkungen
+
 Für die Ausführung von ALTER DATABASE muss die Datenbank online sein und darf sich nicht im angehaltenen Zustand befinden.  
   
 Die ALTER DATABASE-Anweisung muss im Autocommitmodus ausgeführt werden. Dabei handelt es sich um den Standardmodus für die Transaktionsverwaltung. Dies wird in den Verbindungseinstellungen festgelegt.  
@@ -843,7 +858,8 @@ Die ALTER DATABASE-Anweisung darf nicht Teil einer benutzerdefinierten Transakti
 
 Sie können die Datenbanksortierung nicht ändern.  
   
-## <a name="examples"></a>Beispiele  
+## <a name="examples"></a>Beispiele
+
 Stellen Sie vor dem Ausführen dieser Beispiele sicher, dass es sich bei der Datenbank, die Sie ändern, nicht um die aktuelle Datenbank handelt. Bei der aktuellen Datenbank muss es sich um eine andere Datenbank als die handeln, die Sie ändern. Deshalb muss **ALTER ausgeführt werden, während eine Verbindung zur Masterdatenbank besteht**.  
 
 ### <a name="a-change-the-name-of-the-database"></a>A. Ändern des Datenbanknamens  
@@ -871,7 +887,8 @@ ALTER DATABASE dw1 MODIFY ( SERVICE_OBJECTIVE= 'DW1200' );
 ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Weitere Informationen
+
 [CREATE DATABASE (Azure SQL Data Warehouse)](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldw.md)
 [SQL Data Warehouse list of reference topics (Liste der SQL Data Warehouse-Referenzartikel)](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-reference/) 
  
@@ -914,7 +931,8 @@ ALTER DATABASE database_name
     ENCRYPTION { ON | OFF }  
 ```  
   
-## <a name="arguments"></a>Argumente  
+## <a name="arguments"></a>Argumente
+
 *database_name*  
 Der Name der Datenbank, die geändert werden soll. Um eine Liste von Datenbanken auf dem Gerät anzuzeigen, verwenden Sie [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
@@ -952,32 +970,39 @@ Bei neuen Datenbanken, die nach dem Upgrade auf AU7 erstellt wurden, ist die Opt
 
 Weitere Informationen zu Statistiken finden Sie unter [Statistik](/sql/relational-databases/statistics/statistics).
 
-## <a name="permissions"></a>Berechtigungen  
+## <a name="permissions"></a>Berechtigungen
+
 Erfordert die ALTER-Berechtigung für die Datenbank.  
   
 ## <a name="error-messages"></a>Fehlermeldungen
+
 Wenn „auto-stats“ deaktiviert ist und Sie versuchen, die Statistikeinstellungen zu ändern, gibt PDW folgende Fehlermeldung aus: „This option is not supported in PDW“ (Diese Option wird in PDW nicht unterstützt.). Der Systemadministrator kann „auto-stats“ aktivieren, indem er den Featureschalter [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md) aktiviert.
 
-## <a name="general-remarks"></a>Allgemeine Hinweise  
+## <a name="general-remarks"></a>Allgemeine Hinweise
+
 Die Werte für REPLICATED_SIZE, DISTRIBUTED_SIZE und LOG_SIZE können größer, gleich oder kleiner als die aktuellen Werte für die Datenbank sein.  
   
-## <a name="limitations-and-restrictions"></a>Einschränkungen  
+## <a name="limitations-and-restrictions"></a>Einschränkungen
+
 Vergrößerungs- und Verkleinerungsvorgänge sind ungenau. Die resultierenden tatsächlichen Größen können von den Größenparametern abweichen.  
   
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] führt die ALTER DATABASE-Anweisung nicht als unteilbaren Vorgang aus. Wenn die Anweisung während der Ausführung abgebrochen wird, bleiben Änderungen, die bereits durchgeführt wurden, erhalten.  
 
 Die Statistikeinstellungen funktionieren nur, wenn der Administrator „auto-stats“ aktiviert hat.  Wenn Sie Administrator sind, aktivieren oder deaktivieren Sie „auto-stats“ mithilfe des Featureschalters [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md). 
   
-## <a name="locking-behavior"></a>Sperrverhalten  
+## <a name="locking-behavior"></a>Sperrverhalten
+
 Führt eine gemeinsame Sperre für das DATABASE-Objekt durch. Sie können eine Datenbank, die von einem anderen Benutzer im Lese- oder Schreibmodus verwendet wird, nicht ändern. Dies schließt auch Sitzungen ein, die eine [USE](../language-elements/use-transact-sql.md)-Anweisung für die Datenbank ausgeführt haben.  
   
-## <a name="performance"></a>Leistung  
+## <a name="performance"></a>Leistung
+
 Das Verkleinern einer Datenbank kann, abhängig von der Größe der tatsächlichen Daten innerhalb der Datenbank und der Menge der Fragmentierung auf dem Datenträger, viel Zeit und viele Systemressourcen in Anspruch nehmen. Das Verkleinern einer Datenbank könnte beispielsweise mehrere Stunden oder noch länger dauern.  
   
-## <a name="determining-encryption-progress"></a>Bestimmen des Verschlüsselungsfortschritts  
+## <a name="determining-encryption-progress"></a>Bestimmen des Verschlüsselungsfortschritts
+
 Verwenden Sie die folgende Abfrage, um den Fortschritt der transparenten Datenverschlüsselung für die Datenbank als Prozentsatz zu bestimmen:  
   
-```sql  
+```sql
 WITH  
 database_dek AS (  
     SELECT ISNULL(db_map.database_id, dek.database_id) AS database_id,  
@@ -1023,7 +1048,8 @@ Ein umfangreiches Beispiel mit allen Schritten zur Implementierung von TDE finde
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-altering-the-autogrow-setting"></a>A. Ändern der AUTOGROW-Einstellung  
+### <a name="a-altering-the-autogrow-setting"></a>A. Ändern der AUTOGROW-Einstellung
+
 Legen Sie AUTOGROW für die Datenbank `CustomerSales` auf ON fest.  
   
 ```sql  
@@ -1031,7 +1057,8 @@ ALTER DATABASE CustomerSales
     SET ( AUTOGROW = ON );  
 ```  
   
-### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>B. Ändern des maximalen Speicherplatzes für replizierte Tabellen  
+### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>B. Ändern des maximalen Speicherplatzes für replizierte Tabellen
+
 Im folgenden Beispiel wird die Speicherbegrenzung für replizierte Tabellen für die Datenbank `CustomerSales` auf 1 GB festgelegt. Dabei handelt es sich um die Speicherbegrenzung pro Computeknoten.  
   
 ```sql  
@@ -1039,7 +1066,8 @@ ALTER DATABASE CustomerSales
     SET ( REPLICATED_SIZE = 1 GB );  
 ```  
   
-### <a name="c-altering-the-maximum-storage-for-distributed-tables"></a>C. Ändern des maximalen Speicherplatzes für verteilte Tabellen  
+### <a name="c-altering-the-maximum-storage-for-distributed-tables"></a>C. Ändern des maximalen Speicherplatzes für verteilte Tabellen
+
  Im folgenden Beispiel wird die Speicherbegrenzung für verteilte Tabellen für die Datenbank `CustomerSales` auf 1000 GB (ein Terabyte) festgelegt. Dabei handelt es sich um die gemeinsame Speicherbegrenzung für alle Computeknoten der Appliance und nicht um die Speicherbegrenzung pro Computeknoten.  
   
 ```sql  
@@ -1047,7 +1075,8 @@ ALTER DATABASE CustomerSales
     SET ( DISTRIBUTED_SIZE = 1000 GB );  
 ```  
   
-### <a name="d-altering-the-maximum-storage-for-the-transaction-log"></a>D. Ändern des maximalen Speicherplatzes für das Transaktionsprotokoll  
+### <a name="d-altering-the-maximum-storage-for-the-transaction-log"></a>D. Ändern des maximalen Speicherplatzes für das Transaktionsprotokoll
+
  Im folgenden Beispiel wird die Datenbank `CustomerSales` so aktualisiert, dass die maximale Größe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Transaktionsprotokolls für die Appliance 10 GB beträgt.  
   
 ```sql  
@@ -1067,6 +1096,7 @@ SELECT NAME,
 FROM sys.databases;
 ```
 ### <a name="f-enable-auto-create-and-auto-update-stats-for-a-database"></a>F. Aktivieren der automatischen Erstellung und des automatischen Updates von Statistiken für eine Datenbank
+
 Mit der folgenden Anweisung können Sie Statistiken zur automatischen und asynchronen Erstellung und Aktualisierung für die Datenbank „CustomerSales“ aktivieren.  Dadurch werden zur Erstellung hochwertiger Abfragepläne nach Bedarf einspaltige Statistiken erstellt und aktualisiert.
 
 ```sql
@@ -1074,11 +1104,12 @@ ALTER DATABASE CustomerSales
     SET AUTO_CREATE_STATISTICS ON;
 ALTER DATABASE CustomerSales
     SET AUTO_UPDATE_STATISTICS ON; 
-ALTER DATABASE CustomerSales
+ALTER DATABASE 
     SET AUTO_UPDATE_STATISTICS_ASYNC ON;
 ```
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Weitere Informationen
+
  [CREATE DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlpdw)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
 

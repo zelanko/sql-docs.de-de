@@ -1,7 +1,7 @@
 ---
 title: Failoveroption zur Datenbank-Integritätserkennung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/28/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -16,12 +16,12 @@ ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 04f1834ebc282044164b2e1d2b77e784b3260973
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7bb2a0c9582fcf5e0092ef23009b9270a7b0d010
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525111"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419965"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Failoveroption für die Integritätserkennung auf Datenbankebene in einer Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,8 +35,8 @@ Die Option „Integritätserkennung auf Datenbankebene“ für Verfügbarkeitsgr
 
 Wenn die Option „Integritätserkennung auf Datenbankebene“ aktiviert ist und ein SQL Server beispielsweise für eine der Datenbanken nicht in die Transaktionsprotokolldatei schreiben kann, würde der Status dieser Datenbank einen Fehler anzeigen und die Verfügbarkeitsgruppe bald darauf ein Failover auslösen. Ihre Anwendung könnte die Verbindung wiederherstellen und ihre Arbeit mit minimalen Unterbrechungen fortsetzen, sobald die Datenbanken wieder online sind.
 
-<a name="enabling-database-level-health-detection"></a>Aktivieren der Integritätserkennung auf Datenbankebene
-----
+### <a name="enabling-database-level-health-detection"></a>Aktivieren der Integritätserkennung auf Datenbankebene
+
 Obwohl sie allgemein empfohlen wird, ist die Option für die Datenbank-Integritätserkennung **standardmäßig ausgeschaltet**, um die Abwärtskompatibilität mit den Standardeinstellungen von früheren Versionen zu gewährleisten.
 
 Es gibt mehrere Möglichkeiten, um die Einstellung „Integritätserkennung auf Datenbankebene“ zu aktivieren:
@@ -52,7 +52,7 @@ Es gibt mehrere Möglichkeiten, um die Einstellung „Integritätserkennung auf 
 
 3. Transact-SQL-Syntax für **CREATE AVAILABILITY GROUP**. Der Parameter „DB_FAILOVER“ akzeptiert die Werte „ON“ oder „OFF“.
 
-   ```Transact-SQL
+   ```sql
    CREATE AVAILABILITY GROUP [Contoso-ag]
    WITH (DB_FAILOVER=ON)
    FOR DATABASE [AutoHa-Sample]
@@ -65,7 +65,7 @@ Es gibt mehrere Möglichkeiten, um die Einstellung „Integritätserkennung auf 
 
 4. Transact-SQL-Syntax für **ALTER AVAILABILITY GROUP**. Der Parameter „DB_FAILOVER“ akzeptiert die Werte „ON“ oder „OFF“.
 
-   ```Transact-SQL
+   ```sql
    ALTER AVAILABILITY GROUP [Contoso-ag] SET (DB_FAILOVER = ON);
 
    ALTER AVAILABILITY GROUP [Contoso-ag] SET (DB_FAILOVER = OFF);
@@ -89,16 +89,16 @@ Durch die Integritätserkennung auf Datenbankebene wird eine flexible Failoverri
 
 Das DMV-System „sys.availability_groups“ zeigt die Spalte „db_failover“ an, die angibt, ob die Option „Integritätserkennung auf Datenbankebene“ deaktiviert (0) oder aktiviert (1) ist.
 
-```Transact-SQL
+```sql
 select name, db_failover from sys.availability_groups
 ```
 
 
 Beispielausgabe für DMV:
 
-NAME  |  db_failover
----------|---------
-| Contoso-ag |  1  |
+|NAME  |  db_failover|
+|---------|---------|
+| Contoso-ag | 1  |
 
 ### <a name="errorlog"></a>ErrorLog
 Das SQL Server-Fehlerprotokoll (oder der Text aus „sp_readerrorlog“) zeigt wegen der Integritätserkennung auf Datenbankebene die Fehlermeldung 41653 an, wenn eine Verfügbarkeitsgruppe ein Failover ausgelöst hat.
@@ -107,7 +107,7 @@ Dieser Auszug aus dem Fehlerprotokoll zeigt beispielsweise, dass das Schreiben e
 
 >2016-04-25 12:20:21.08 spid1s      Fehler: 17053, Schweregrad: 16, Status: 1.
 >
->2016-04-25 12:20:21.08 spid1s      SQLServerLogMgr::LogWriter: Ein Betriebssystemfehler 21(Das Gerät ist nicht bereit) ist aufgetreten.
+>2016-04-25 12:20:21.08 spid1s      SQLServerLogMgr::LogWriter: Betriebssystemfehler 21 (Das Gerät ist nicht bereit).
 >2016-04-25 12:20:21.08 spid1s      Schreibfehler während der Protokollleerung.
 >
 >2016-04-25 12:20:21.08 spid79      Fehler: 9001, Schweregrad: 21, Status: 4.
@@ -116,13 +116,13 @@ Dieser Auszug aus dem Fehlerprotokoll zeigt beispielsweise, dass das Schreiben e
 >
 >**2016-04-25 12:20:21.15 spid79      Fehler: 41653, Schweregrad: 21, Status: 1.**
 >
->**2016-04-25 12:20:21.15 spid79      Fehler in der Datenbank „AutoHa-Sample“ (Fehlertyp: 2 „DB_SHUTDOWN“). Dieser verursacht einen Fehler der Verfügbarkeitsgruppe „Contoso-ag“.  Informationen zu den aufgetretenen Fehlern finden Sie im SQL Server-Fehlerprotokoll.  Falls das Problem weiterhin besteht, wenden Sie sich an den Systemadministrator.**
+>**2016-04-25 12:20:21.15 spid79      Fehler in Datenbank 'AutoHa-Sample' (Fehlertyp: 2 "DB_SHUTDOWN"), wodurch ein Fehler der Verfügbarkeitsgruppe 'Contoso-ag' verursacht wird.  Informationen zu den aufgetretenen Fehlern finden Sie im SQL Server-Fehlerprotokoll.  Falls das Problem weiterhin besteht, wenden Sie sich an den Systemadministrator.**
 >
 >2016-04-25 12:20:21.17 spid79      Zustandsinformationen der Datenbank „AutoHa-Sample“ - Festgeschriebene LSN: „(34:664:1)“    Commit-LSN: „(34:656:1)“    Commitzeit: „Apr 25 2016 12:19PM“
 >
 >2016-04-25 12:20:21.19 spid15s     Die Verbindung der Always On-Verfügbarkeitsgruppen mit der sekundären Datenbank wurde für die primäre Datenbank „AutoHa-Sample“ auf dem Verfügbarkeitsreplikat „SQLServer-0“ mit der Replikat-ID {c4ad5ea4-8a99-41fa-893e-189154c24b49} beendet. Diese Meldung dient nur zu Informationszwecken. Es ist keine Benutzeraktion erforderlich.
 >
->2016-04-25 12:20:21.21 spid75      Always On: Das lokale Replikat der Verfügbarkeitsgruppe „Contoso-ag“  wird in Reaktion auf eine Anforderung vom WSFC (Windows Server Failover Clustering)-Cluster für den Wechsel zur primären Rolle vorbereitet. Diese Meldung dient nur zu Informationszwecken. Es ist keine Benutzeraktion erforderlich.
+>2016-04-25 12:20:21.21 spid75      Always On: Das lokale Replikat der Verfügbarkeitsgruppe „Contoso-ag“ wird in Reaktion auf eine Anforderung vom WSFC (Windows Server Failover Clustering)-Cluster für den Wechsel zur primären Rolle vorbereitet. Diese Meldung dient nur zu Informationszwecken. Es ist keine Benutzeraktion erforderlich.
 >
 >2016-04-25 12:20:21.21 spid75      Der Status des lokalen Verfügbarkeitsreplikats in der Verfügbarkeitsgruppe „ag“ wurde von „PRIMARY_NORMAL“ in „RESOLVING_NORMAL“ geändert.  Der Status hat sich geändert, weil die Verfügbarkeitsgruppe offline geschaltet wird.  Das Replikat wird offline geschaltet, weil die zugeordnete Verfügbarkeitsgruppe gelöscht wurde, der Benutzer die zugeordnete Verfügbarkeitsgruppe in der WSFC (Windows Server Failover Clustering)-Verwaltungskonsole offline geschaltet hat, oder die Verfügbarkeitsgruppe einen Failover auf eine andere Instanz von SQL Server ausführt.  Weitere Informationen finden Sie im SQL Server-Fehlerprotokoll, in der WSFC-Verwaltungskonsole (Windows Server Failover Clustering) oder im WSFC-Protokoll.
 
@@ -135,7 +135,8 @@ Dieses XEvent wird nur auf dem primären Replikat ausgelöst. Dieses XEvent wird
 Hier finden Sie ein Beispiel zum Erstellen einer XEvent-Sitzung, das dieses Ereignis erfasst. Da kein Pfad angegeben ist, sollte die XEvent-Ausgabedatei im Standardpfad für SQL-Fehlerprotokolle gespeichert sein. Führen Sie folgendes Skript auf dem primären Replikat Ihrer Verfügbarkeitsgruppe aus:
 
 Beispielskript für eine Sitzung für erweiterte Ereignisse
-```
+
+```sql
 CREATE EVENT SESSION [AlwaysOn_dbfault] ON SERVER
 ADD EVENT sqlserver.availability_replica_database_fault_reporting
 ADD TARGET package0.event_file(SET filename=N'dbfault.xel',max_file_size=(5),max_rollover_files=(4))
@@ -151,32 +152,32 @@ Wenn Sie SQL Server Management Studio verwenden, stellen Sie eine Verbindung mit
 
 Eine Erläuterung der Felder finden Sie im Folgenden:
 
-|Spaltendaten    | und Beschreibung
-|---------|---------
-|availability_group_id  |Die ID der Verfügbarkeitsgruppe.
-|availability_group_name    |Der Name der Verfügbarkeitsgruppe.
-|availability_replica_id    |Die ID des Verfügbarkeitsreplikats.
-|availability_replica_name  |Der Name des Verfügbarkeitsreplikats.
-|database_name  |Der Name der Datenbank, die den Fehler meldet.
-|database_replica_id    |Die ID der Verfügbarkeitsreplikatdatenbank.
-|failover_ready_replicas    |Die Anzahl der sekundären Replikate mit automatischem Failover, die synchronisiert werden.
-|fault_type     | Die angegebene Fehler-ID. Mögliche Werte:  <br/> 0: NONE <br/>1: Unknown<br/>2: Shutdown
-|is_critical    | Dieser Wert sollte ab SQL Server 2016 immer TRUE für XEvent zurückgeben.
+|Spaltendaten | und Beschreibung|
+|---------|---------|
+|availability_group_id |Die ID der Verfügbarkeitsgruppe.|
+|availability_group_name |Der Name der Verfügbarkeitsgruppe.|
+|availability_replica_id |Die ID des Verfügbarkeitsreplikats.|
+|availability_replica_name |Der Name des Verfügbarkeitsreplikats.|
+|database_name |Der Name der Datenbank, die den Fehler meldet.|
+|database_replica_id |Die ID der Verfügbarkeitsreplikatdatenbank.|
+|failover_ready_replicas |Die Anzahl der sekundären Replikate mit automatischem Failover, die synchronisiert werden.|
+|fault_type  | Die angegebene Fehler-ID. Mögliche Werte:  <br/> 0: NONE <br/>1: Unknown<br/>2: Shutdown|
+|is_critical | Dieser Wert sollte ab SQL Server 2016 immer TRUE für XEvent zurückgeben.|
 
 
 In dieser Beispielausgabe zeigt „fault_type“, dass ein kritisches Ereignis auf der Verfügbarkeitsgruppe „Contoso-ag“ stattgefunden hat, die sich auf dem Replikat „SQLSERVER-1“ befindet. Der Grund dafür ist die Datenbank namens „AutoHaSample2“ mit dem Fehlertyp 2 (Herunterfahren).
 
-|Feld  | value
-|---------|---------
-|availability_group_id |    24E6FE58-5EE8-4C4E-9746-491CFBB208C1
-|availability_group_name |  Contoso-ag
-|availability_replica_id    | 3EAE74D1-A22F-4D9F-8E9A-DEFF99B1F4D1
-|availability_replica_name |    SQLSERVER-1
-|database_name |    AutoHa-Sample2
-|database_replica_id | 39971379-8161-4607-82E7-098590E5AE00
-|failover_ready_replicas |  1
-|fault_type |   2
-|is_critical    | Wahr
+|Feld  | value|
+|---------|---------|
+|availability_group_id | 24E6FE58-5EE8-4C4E-9746-491CFBB208C1|
+|availability_group_name | Contoso-ag|
+|availability_replica_id | 3EAE74D1-A22F-4D9F-8E9A-DEFF99B1F4D1|
+|availability_replica_name | SQLSERVER-1|
+|database_name | AutoHa-Sample2|
+|database_replica_id | 39971379-8161-4607-82E7-098590E5AE00|
+|failover_ready_replicas | 1|
+|fault_type | 2|
+|is_critical | Wahr|
 
 
 ### <a name="related-references"></a>Verwandte Verweise

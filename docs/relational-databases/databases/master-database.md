@@ -14,12 +14,12 @@ ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2ef7392b4e41271bacd91b5e1a9244bbfe1c1139
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 1b14a63222721f21848518cbee5acfe99feb4d0f
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558637"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405860"
 ---
 # <a name="master-database"></a>master-Datenbank
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,35 +49,35 @@ Die folgende Tabelle zeigt den Standardwert jeder Datenbankoption in der **maste
 
 |Datenbankoption|Standardwert|Kann geändert werden.|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|nein|  
-|ANSI_NULL_DEFAULT|OFF|Benutzerkontensteuerung|  
-|ANSI_NULLS|OFF|Benutzerkontensteuerung|  
-|ANSI_PADDING|OFF|Benutzerkontensteuerung|  
-|ANSI_WARNINGS|OFF|Benutzerkontensteuerung|  
-|ARITHABORT|OFF|Benutzerkontensteuerung|  
-|AUTO_CLOSE|OFF|nein|  
-|AUTO_CREATE_STATISTICS|ON|Benutzerkontensteuerung|  
-|AUTO_SHRINK|OFF|nein|  
-|AUTO_UPDATE_STATISTICS|ON|Benutzerkontensteuerung|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Benutzerkontensteuerung|  
-|CHANGE_TRACKING|OFF|nein|  
-|CONCAT_NULL_YIELDS_NULL|OFF|Benutzerkontensteuerung|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|Benutzerkontensteuerung|  
-|CURSOR_DEFAULT|GLOBAL|Benutzerkontensteuerung|  
-|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|nein<br /><br /> nein<br /><br /> nein|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|Benutzerkontensteuerung|  
-|DB_CHAINING|ON|nein|  
-|ENCRYPTION|OFF|nein|  
-|MIXED_PAGE_ALLOCATION|ON|nein|  
-|NUMERIC_ROUNDABORT|OFF|Benutzerkontensteuerung|  
-|PAGE_VERIFY|CHECKSUM|Benutzerkontensteuerung|  
-|PARAMETERIZATION|SIMPLE|Benutzerkontensteuerung|  
-|QUOTED_IDENTIFIER|OFF|Benutzerkontensteuerung|  
-|READ_COMMITTED_SNAPSHOT|OFF|nein|  
-|RECOVERY|SIMPLE|Benutzerkontensteuerung|  
-|RECURSIVE_TRIGGERS|OFF|Benutzerkontensteuerung|  
-|Service Broker-Optionen|DISABLE_BROKER|nein|  
-|TRUSTWORTHY|OFF|Benutzerkontensteuerung|  
+|ALLOW_SNAPSHOT_ISOLATION|ON|Nein|  
+|ANSI_NULL_DEFAULT|OFF|Ja|  
+|ANSI_NULLS|OFF|Ja|  
+|ANSI_PADDING|OFF|Ja|  
+|ANSI_WARNINGS|OFF|Ja|  
+|ARITHABORT|OFF|Ja|  
+|AUTO_CLOSE|OFF|Nein|  
+|AUTO_CREATE_STATISTICS|ON|Ja|  
+|AUTO_SHRINK|OFF|Nein|  
+|AUTO_UPDATE_STATISTICS|ON|Ja|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Ja|  
+|CHANGE_TRACKING|OFF|Nein|  
+|CONCAT_NULL_YIELDS_NULL|OFF|Ja|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|Ja|  
+|CURSOR_DEFAULT|GLOBAL|Ja|  
+|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Nein<br /><br /> Nein<br /><br /> Nein|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|Ja|  
+|DB_CHAINING|ON|Nein|  
+|ENCRYPTION|OFF|Nein|  
+|MIXED_PAGE_ALLOCATION|ON|Nein|  
+|NUMERIC_ROUNDABORT|OFF|Ja|  
+|PAGE_VERIFY|CHECKSUM|Ja|  
+|PARAMETERIZATION|SIMPLE|Ja|  
+|QUOTED_IDENTIFIER|OFF|Ja|  
+|READ_COMMITTED_SNAPSHOT|OFF|Nein|  
+|RECOVERY|SIMPLE|Ja|  
+|RECURSIVE_TRIGGERS|OFF|Ja|  
+|Service Broker-Optionen|DISABLE_BROKER|Nein|  
+|TRUSTWORTHY|OFF|Ja|  
   
 Eine Beschreibung dieser Datenbankoptionen finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   

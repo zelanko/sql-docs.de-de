@@ -23,23 +23,23 @@ helpviewer_keywords:
 - search property lists [SQL Server], permissions
 - TAKE OWNERSHIP
 ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6855f45379f113f91c54b46e3d1c77a913c853f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c7f31849aa75d0102f1406a49faf0d1c8c6a8e9
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730708"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327541"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Ändert den Besitz eines sicherungsfähigen Elements.    
     
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## <a name="syntax"></a>Syntax    
     
@@ -129,7 +129,7 @@ ALTER AUTHORIZATION ON
 |OBJECT|**GILT FÜR:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|    
 |ASSEMBLY|**GILT FÜR:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|    
 |ASYMMETRIC KEY|**GILT FÜR:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|    
-|AVAILABILITY GROUP |**GILT FÜR:** SQL Server 2012 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|
+|AVAILABILITY GROUP |**GILT FÜR**: SQL Server 2012 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|
 |CERTIFICATE|**GILT FÜR:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|    
 |CONTRACT|**GILT FÜR:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|    
 |DATABASE|**GILT FÜR:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Weitere Informationen finden Sie weiter unten im Abschnitt [ALTER AUTHORIZATION für Datenbanken](#AlterDB).|    
@@ -171,7 +171,7 @@ ALTER AUTHORIZATION ON
  Falls es sich bei der Zielentität nicht um eine Datenbank handelt und die Entität an einen neuen Besitzer übertragen wird, werden alle Berechtigungen für das Ziel gelöscht.    
     
 > [!CAUTION]    
->  Das Verhalten der Schemas in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] unterscheidet sich von dem in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Code, in dem vorausgesetzt wird, dass Schemas Datenbankbenutzern entsprechen, gibt möglicherweise nicht die richtigen Ergebnisse zurück. Alte Katalogsichten, einschließlich sysobjects, sollten nicht in einer Datenbank verwendet werden, in der eine der folgenden DDL-Anweisungen bereits verwendet wurde: CREATE SCHEMA, ALTER SCHEMA, DROP SCHEMA, CREATE USER, ALTER USER, DROP USER, CREATE ROLE, ALTER ROLE, DROP ROLE, CREATE APPROLE, ALTER APPROLE, DROP APPROLE, ALTER AUTHORIZATION. In einer Datenbank, in der jemals eine dieser Anweisungen verwendet wurde, müssen Sie die neuen Katalogsichten verwenden. In den neuen Katalogsichten wird die Trennung zwischen Prinzipalen und Schemas berücksichtigt, die in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] eingeführt wurde. Weitere Informationen zu Katalogansichten finden Sie unter [Catalog Views &#40;Transact-SQL&#41; (Katalogansichten (Transact-SQL))](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).    
+>  Das Verhalten der Schemas in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] unterscheidet sich von dem in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Code, in dem vorausgesetzt wird, dass Schemas Datenbankbenutzern entsprechen, gibt möglicherweise nicht die richtigen Ergebnisse zurück. Alte Katalogsichten, einschließlich „sysobjects“, sollten nicht in einer Datenbank verwendet werden, in der bereits irgendeine der folgenden DDL-Anweisungen verwendet wurde: CREATE SCHEMA, ALTER SCHEMA, DROP SCHEMA, CREATE USER, ALTER USER, DROP USER, CREATE ROLE, ALTER ROLE, DROP ROLE, CREATE APPROLE, ALTER APPROLE, DROP APPROLE, ALTER AUTHORIZATION. In einer Datenbank, in der jemals eine dieser Anweisungen verwendet wurde, müssen Sie die neuen Katalogsichten verwenden. In den neuen Katalogsichten wird die Trennung zwischen Prinzipalen und Schemas berücksichtigt, die in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] eingeführt wurde. Weitere Informationen zu Katalogansichten finden Sie unter [Catalog Views &#40;Transact-SQL&#41; (Katalogansichten (Transact-SQL))](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).    
     
  Beachten Sie dabei außerdem Folgendes:    
     
@@ -181,7 +181,7 @@ ALTER AUTHORIZATION ON
 ## <a name="special-cases-and-conditions"></a>Spezialfälle und Bedingungen    
  In der folgenden Tabelle sind Spezialfälle, Ausnahmen und Bedingungen aufgeführt, die beim Ändern der Autorisierung gelten.    
     
-|Klasse|Bedingung|    
+|Class|Bedingung|    
 |-----------|---------------|    
 |OBJECT|Der Besitz von Triggern, Einschränkungen, Regeln, Standardwerten, Statistiken, Systemobjekten, Warteschlangen, indizierten Sichten oder Tabellen mit indizierten Sichten kann nicht geändert werden.|    
 |SCHEMA|Wenn der Besitz übertragen wird, werden Berechtigungen für in einem Schema enthaltene Objekte, die keine expliziten Besitzer aufweisen, gelöscht. Der Besitzer von sys, dbo oder information_schema kann nicht geändert werden.|    
@@ -360,7 +360,7 @@ ALTER AUTHORIZATION ON database::targetDB TO [rachel@cqclinic.onmicrosoft.com];
  Beachten Sie, dass die Klammern um den Benutzernamen bei Azure AD-Benutzern verwendet werden müssen.  
   
     
-## <a name="see-also"></a>Weitere Informationen finden Sie unter    
+## <a name="see-also"></a>Weitere Informationen    
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)     
  [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)     
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)    

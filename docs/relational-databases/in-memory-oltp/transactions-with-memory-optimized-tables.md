@@ -12,17 +12,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f84b4801446fd970c0d1e42054782d533b18574
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: fab75b8f4550f30e8448bc427ab41a158c1656ee
+ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670719"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54395412"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transaktionen mit speicheroptimierten Tabellen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  
 In diesem Artikel werden alle Aspekte von Transaktionen beschrieben, die für speicheroptimierte Tabellen und nativ kompilierte gespeicherte Prozeduren spezifisch sind.  
   
 Die Transaktionsisolationsstufen in SQL Server werden auf speicheroptimierte Tabellen anders angewendet als auf datenträgerbasierte Tabellen, und zudem sind die zugrunde liegenden Mechanismen verschieden. Ein Überblick über die Unterschiede kann Programmierern dabei helfen, ein System mit hohem Durchsatz zu entwerfen. Das Ziel der Transaktionsintegrität wird in allen Fällen geteilt.  
@@ -30,9 +29,6 @@ Die Transaktionsisolationsstufen in SQL Server werden auf speicheroptimierte Tab
 Informationen zu Fehlerbedingungen, die für Transaktionen in speicheroptimierten Tabellen spezifisch sind, finden Sie im Abschnitt [Konflikterkennung und Wiederholungslogik](#confdetretry34ni).
   
 Allgemeine Informationen finden Sie unter [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
-  
-  
-<a name="pessvoptim22ni"/>  
   
 ## <a name="pessimistic-versus-optimistic"></a>Pessimistisch und optimistisch  
   
@@ -44,8 +40,6 @@ Die funktionalen Unterschiede ergeben sich aufgrund von pessimistischen und opti
   - Für eine speicheroptimierte Tabelle darf der Fehler 1205, ein Deadlock, nicht auftreten.  
   
 Der optimistische Ansatz bedeutet weniger Aufwand und ist in der Regel effizienter, da Transaktionskonflikte in den meisten Anwendungen selten auftreten. Der wichtigste funktionale Unterschied zwischen dem pessimistischen und dem optimistischen Ansatz ist folgender: Wenn ein Konflikt auftritt, wird beim pessimistischen Ansatz einfach gewartet. Beim optimistischen Ansatz dagegen tritt bei einer der Transaktionen ein Fehler auf, und die Transaktion muss vom Client wiederholt werden. Die funktionalen Unterschiede sind größer, wenn die Isolationsstufe REPEATABLE READ aktiv ist, und sie sind für die Stufe SERIALIZABLE am größten.  
-  
-<a name="txninitmodes24ni"/>  
   
 ## <a name="transaction-initiation-modes"></a>Transaktionseinleitungsmodi  
   
@@ -60,8 +54,6 @@ SQL Server verfügt über die folgenden Modi für den Start einer Transaktion:
 - **Implizit** : Wenn SET IMPLICIT_TRANSACTION ON aktiv ist. Ein besserer Name wäre wahrscheinlich IMPLICIT_BEGIN_TRANSACTION gewesen, da diese Option lediglich das Äquivalent einer expliziten BEGIN TRANSACTION vor jeder UPDATE-Anweisung implizit ausführt, wenn „ 0 = @@trancount“ gilt. Daher muss Ihr T-SQL-Code ggf. ein explizites COMMIT TRANSACTION ausgeben.   
   
 - **ATOMIC BLOCK** (ATOMISCHER BLOCK): Sämtliche Anweisungen in den ATOMISCHEN Blöcken werden immer als Teil einer einzelnen Transaktion durchgeführt. Entweder werden für alle Aktionen eines atomischen Blocks erfolgreiche Commits ausgeführt, oder es wird, wenn ein Fehler auftritt, ein Rollback für alle Aktionen durchgeführt. Jede nativ kompilierte gespeicherte Prozedur erfordert einen ATOMISCHEN Block.  
-  
-<a name="codeexamexpmode25ni"/>  
   
 ### <a name="code-example-with-explicit-mode"></a>Codebeispiel im Explicit-Modus  
   
@@ -87,10 +79,9 @@ BEGIN TRANSACTION;  -- Explicit transaction.
 SELECT * FROM  
            dbo.Order_mo  as o  WITH (SNAPSHOT)  -- Table hint.  
       JOIN dbo.Customer  as c  on c.CustomerId = o.CustomerId;  
-     
 COMMIT TRANSACTION;
 ```
-  
+
 Die Notwenigkeit des Hinweises `WITH (SNAPSHOT)` kann durch die Verwendung der Datenbankoption `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` umgangen werden. Wenn diese Option auf `ON`festgelegt ist, wird der Zugriff auf eine speicheroptimierte Tabelle einer niedrigeren Isolationsstufe automatisch auf die SNAPSHOT-Isolation hochgestuft.  
 
 ```sql
@@ -98,15 +89,11 @@ ALTER DATABASE CURRENT
     SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT = ON;
 ```
 
-<a name="rowver28ni"/>  
-  
 ## <a name="row-versioning"></a>Zeilenversionsverwaltung  
   
 Speicheroptimierte Tabellen verwenden ein sehr komplexes System zur Zeilenversionsverwaltung, das den optimistischen Ansatz sogar auf der strengsten Isolationsstufe SERIALIZABLE effizient gestaltet. Weitere Informationen finden Sie unter [Einführung in speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
 Datenträgerbasierte Tabellen weisen indirekt ein System zur Zeilenversionsverwaltung auf, wenn READ_COMMITTED_SNAPSHOT oder die SNAPSHOT-Isolationsstufe aktiviert ist. Dieses System basiert auf tempdb. Bei speicheroptimierten Datenstrukturen hingegen ist zum Erzielen einer maximalen Effizienz die Zeilenversionsverwaltung bereits integriert.  
-  
-<a name="confdegreeiso30ni"/>  
   
 ## <a name="isolation-levels"></a>Isolationsstufen 
   
@@ -120,11 +107,6 @@ Die folgende Tabelle enthält die möglichen Stufen der Transaktionsisolation, w
 | REPEATABLE READ | Dies wird für speicheroptimierte Tabellen unterstützt. Die Isolationsstufe REPEATABLE READ garantiert, dass zum Zeitpunkt der Commitausführung keine gleichzeitige Transaktion eine der von dieser Transaktion gelesenen Zeilen aktualisiert hat. <br/><br/> Aufgrund des optimistischen Modells wird nicht verhindert, dass gleichzeitige Transaktionen Zeilen aktualisieren, die von dieser Transaktion gelesen werden. Stattdessen validiert diese Transaktion zum Zeitpunkt der Commitausführung, dass die REPEATABLE READ-Isolation nicht verletzt wurde. Wenn die Isolation verletzt wurde, wird ein Rollback für die Transaktion ausgeführt, und die Transaktion muss wiederholt werden. | 
 | SERIALIZABLE | Dies wird für speicheroptimierte Tabellen unterstützt. <br/><br/> Die Bezeichnung *SERIALIZABLE* wird verwendet, da die Isolation so streng ist, dass es ein wenig dem aufeinanderfolgenden anstatt dem parallelen Ausführen von Transaktionen entspricht. | 
 
-
-
-
-<a name="txnphaslife32ni"/>  
-  
 ## <a name="transaction-phases-and-lifetime"></a>Transaktionsphasen und Lebensdauer  
   
 Wenn eine speicheroptimierte Tabelle einbezogen wird, durchläuft die Lebensdauer einer Transaktion die in der folgenden Abbildung veranschaulichten Phasen:
@@ -150,8 +132,6 @@ Beschreibungen der Phasen folgen.
   
 Wie immer sollten Sie Ihre Transaktionsarbeitseinheiten so minimal und kurz halten, wie es Ihre Datenanforderungen zulassen.  
   
-<a name="confdetretry34ni"/>  
-  
 ## <a name="conflict-detection-and-retry-logic"></a>Konflikterkennung und Wiederholungslogik 
 
 Es gibt zwei Arten von transaktionsbezogenen Fehlerbedingungen, die einen Fehler und ein Rollback für eine Transaktion verursachen können. In den meisten Fällen muss die Transaktion nach dem Auftreten eines solchen Fehlers wiederholt werden – ähnlich wie bei einem Deadlock.
@@ -168,15 +148,12 @@ Im Folgenden finden Sie eine Auflistung der Fehlerbedingungen, die dazu führen 
 | **41301** | Abhängigkeitsfehler: Es besteht eine Abhängigkeit von einer anderen Transaktion, bei der später ein Commitfehler auftritt. | Für diese Transaktion (Tx1) entstand eine Abhängigkeit von einer anderen Transaktion (Tx2), während die Transaktion (Tx2) sich in der Überprüfungs- oder Commitverarbeitungsphase befand. Der Grund: Tx1 hat Daten gelesen, die von Tx2 geschrieben wurden. Bei Tx2 trat anschließend ein Fehler beim Commit auf. Die häufigsten Ursachen für Fehler beim Commit von Tx2 sind REPEATABLE READ-Überprüfungsfehler (41305) und SERIALIZABLE-Überprüfungsfehler (41325). Eine weniger häufige Ursache ist ein Protokoll-E/A-Fehler. |
 | **41823** und **41840** | Das Kontingent für Benutzerdaten in speicheroptimierten Tabellen und Tabellenvariablen wurde erreicht. | Der Fehler 41823 bezieht sich auf SQL Server Express/Web/Standard Edition sowie eigenständige Datenbanken in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. Der Fehler 41840 bezieht sich auf Pools für elastische Datenbanken in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/> In den meisten Fällen geben diese Fehler an, dass die maximalen Kapazität für Benutzerdaten erreicht wurde. Der Fehler kann behoben werden, indem Daten aus den speicheroptimierten Tabellen gelöscht werden. Es gibt jedoch seltene Fälle, in denen dieser Fehler nur vorübergehend ist. Deshalb wird empfohlen, dass Sie es zunächst erneut versuchen, wenn dieser Fehler zum ersten Mal auftritt.<br/><br/> Wie andere Fehler in dieser Liste verursachen die Fehler 41823 und 41840 einen Abbruch der aktiven Transaktion. |
 | **41839** | Die Transaktion hat die maximale Anzahl von Commitabhängigkeiten überschritten. |**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. In höhere Versionen von [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] und [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] ist die Anzahl von Commitabhängigkeiten nicht eingeschränkt.<br/><br/> Eine bestimmte Transaktion (Tx1) kann nur von einer bestimmten Anzahl von Transaktionen abhängig sein. Diese Transaktionen werden als ausgehende Abhängigkeiten bezeichnet. Darüber hinaus kann nur eine bestimmte Anzahl von Transaktionen von einer bestimmten Transaktion (Tx1) abhängig sein. Diese Transaktionen werden als eingehende Abhängigkeiten bezeichnet. Der Grenzwert für beide Arten lautet 8. <br/><br/> Dieser Fehler tritt am häufigsten dann auf, wenn eine große Anzahl von Lesetransaktionen auf Daten zugreift, die von einer einzigen Schreibtransaktion geschrieben werden. Die Wahrscheinlichkeit, dass diese Bedingung eintritt, steigt, wenn die Lesetransaktionen umfangreiche Scans der gleichen Daten durchführen und die Überprüfung oder Commitverarbeitung der Schreibtransaktion lange dauert. Beispiele: Die Schreibtransaktion führt in der SERIALIZABLE-Isolation umfangreiche Scans durch (dies verlängert die Überprüfungsphase), oder das Transaktionsprotokoll ist auf einem langsamen Protokoll-E/A-Gerät platziert (dies verlängert die Commitverarbeitung). Wenn die Lesetransaktionen umfangreiche Scans durchführen und nur auf einige wenige Zeilen zugreifen, fehlt möglicherweise ein Index. Gleiches gilt, wenn die Schreibtransaktion die SERIALIZABLE-Isolation verwendet und umfangreiche Scans durchführt, aber nur auf einige wenige Zeilen zugreifen soll. Auch dies kann ein Hinweis auf einen fehlenden Index sein. <br/><br/> Die maximale Anzahl von Commitabhängigkeiten kann durch Verwendung des Ablaufverfolgungsflags **9926** erhöht werden. Verwenden Sie dieses Flag nur, wenn die Fehlerbedingung weiterhin auftritt, nachdem Sie sichergestellt haben, dass keine Indizes fehlen. Ansonsten könnte dieses Flag die Fehler in den oben genannten Fällen verbergen. Eine weitere wichtige Überlegung: Komplexe Abhängigkeitsdiagramme, in denen für jede Transaktion eine Vielzahl von eingehenden und ausgehenden Abhängigkeiten besteht und in denen einzelne Transaktionen Abhängigkeiten auf vielen Ebenen aufweisen, können zu Ineffizienzen im System führen.  |
- 
   
 ### <a name="retry-logic"></a>Wiederholungslogik 
 
 Wenn aufgrund einer der oben genannten Bedingungen bei einer Transaktion ein Fehler auftritt, sollte die Transaktion wiederholt werden.
   
 Die Wiederholungslogik kann Client- oder Serverseite implementiert werden. Im Allgemeinen empfiehlt es sich, die Wiederholungslogik auf Clientseite zu implementieren, da dies effizienter ist und Ihnen ermöglicht, von der Transaktion zurückgegebene Resultsets zu verarbeiten, bevor der Fehler auftritt.  
-  
-<a name="retrytsqlcodeexam35ni"/>  
   
 #### <a name="retry-t-sql-code-example"></a>Beispiel zum Wiederholen von T-SQL-Code  
   
@@ -238,17 +215,13 @@ GO
 --  EXECUTE usp_update_salesorder_dates;
 ```
 
-
-<a name="crossconttxn38ni"/>  
-  
 ## <a name="cross-container-transaction"></a>Containerübergreifende Transaktion  
-  
   
 Eine Transaktion wird als containerübergreifende Transaktion bezeichnet, wenn Folgendes auf sie zutrifft:  
   
 - Sie greift über interpretiertes Transact-SQL auf eine speicheroptimierte Tabelle zu.  
-- Sie führt eine native Prozedur aus, wenn eine Transaktion bereits geöffnet ist (XACT_STATE() = 1).  
-  
+- Sie führt eine native Prozedur aus, wenn eine Transaktion bereits geöffnet ist (XACT_STATE() = 1). 
+
 Der Begriff „containerübergreifend“ bezieht sich auf die Tatsache, dass diese Transaktionen in den beiden Transaktionsverwaltungscontainern ausgeführt werden – einer für datenträgerbasierte Tabellen, einer für speicheroptimierte Tabellen.  
   
 Bei einer einzelnen containerübergreifenden Transaktion können verschiedene Isolationsstufen verwendet werden, um auf die datenträgerbasierten und speicheroptimierten Tabellen zuzugreifen. Dieser Unterschied kann auf verschiedene Weise ausgedrückt werden: durch explizite Tabellenhinweise, z.B. WITH (SERIALIZABLE), oder durch die Datenbankoption MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT, die implizit die Isolationsstufe für die speicheroptimierte Tabelle erhöht, für die die Momentaufnahme erstellt werden soll, wenn TRANSACTION ISOLATION LEVEL als READ COMMITTED oder READ UNCOMMITTED konfiguriert ist.  
@@ -285,20 +258,13 @@ COMMIT TRANSACTION;
 go
 ```
 
-
-<a name="limitations40ni"/>  
-  
 ## <a name="limitations"></a>Einschränkungen  
-  
   
 - Datenbankübergreifende Transaktionen werden für speicheroptimierte Tabellen nicht unterstützt. Wenn eine Transaktion auf eine speicheroptimierte Tabelle zugreift, kann die Transaktion nicht auf eine andere Datenbank zugreifen. Ausnahme:  
   - tempdb-Datenbank.  
   - Von der Masterdatenbank schreibgeschützt.  
   
 - Verteilte Transaktionen werden nicht unterstützt: Wenn BEGIN DISTRIBUTED TRANSACTION verwendet wird, kann die Transaktion nicht auf speicheroptimierte Tabellen zugreifen.  
-  
-  
-<a name="natcompstorprocs42ni"/>  
   
 ## <a name="natively-compiled-stored-procedures"></a>Systemintern kompilierte gespeicherte Prozeduren  
   
@@ -308,8 +274,6 @@ go
 - Es sind im Hauptteil einer systemeigenen Prozess keine expliziten Transaktionssteueranweisungen zulässig. BEGIN TRANSACTION, ROLLBACK TRANSACTION usw. sind nicht zulässig.  
   
 - Nähere Informationen zur Transaktionssteuerung mit ATOMISCHEN Blöcken finden Sie unter [ATOMIC-Blöcke](atomic-blocks-in-native-procedures.md)  
-  
-<a name="othertxnlinks44ni"/>  
   
 ## <a name="other-transaction-links"></a>Andere Transaktionslinks  
   

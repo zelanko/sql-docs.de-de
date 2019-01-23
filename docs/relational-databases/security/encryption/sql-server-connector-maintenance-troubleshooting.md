@@ -12,12 +12,12 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: b7bf2dcebf6b9b453a0f5ff839b9eb627698899e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 48db6ede27c4ca7565ca4de1b0eab798c1eb2ef7
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520694"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327841"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server-Connector – Wartung &amp; Problembehandlung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,11 @@ ms.locfileid: "52520694"
 -   **In PowerShell:** Erstellen Sie im Schlüsseltresor einen neuen asymmetrischen Schlüssel (mit einem anderen Namen als dem Ihres aktuellen asymmetrischen TDE-Schlüssels).  
   
     ```powershell  
-    Add-AzureRmKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
+    Add-AzKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
       -Name 'Key2' -Destination 'Software'  
     ```  
   
--   **Mithilfe von [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] oder „sqlcmd.exe“:** Verwenden Sie die folgenden Anweisungen, wie in Schritt 3, Abschnitt 3 dargestellt.  
+-   **Mit [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] oder „sqlcmd.exe“:** Verwenden Sie die folgenden Anweisungen, wie in Schritt 3, Abschnitt 3 dargestellt.  
   
      Importieren Sie den neuen asymmetrischen Schlüssel.  
   
@@ -152,7 +152,7 @@ Zusammengefasst ergeben sich folgende Schritte:
 * Erteilen Sie dem SQL Server-Dienstprinzipal Berechtigungen zum Verwenden dieses neuen Tresors.  
 * Ändern Sie die von der Datenbank-Engine verwendeten SQL Server-Anmeldeinformationen so, dass sie den neuen Tresornamen widerspiegeln (falls erforderlich).  
   
-Schlüsselsicherungen können übergreifend über Azure-Regionen wiederhergestellt werden, sofern sie in der gleichen geografischen Region oder nationalen Cloud bleiben: USA, Kanada, Japan, Australien, Indien, APAC, Europa, Brasilien, China, US-Regierung oder Deutschland.  
+Schlüsselsicherungen können in Azure-Regionen wiederhergestellt werden, solange sie in derselben geografischen Region oder nationalen Cloud verbleiben: USA, Kanada, Japan, Australien, Indien, APAC, Europa, Brasilien, China, US-Regierung oder Deutschland.  
   
   
 ##  <a name="AppendixB"></a> B. Häufig gestellte Fragen  
@@ -293,7 +293,7 @@ SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente
   
 -   Referenz der PowerShell- [Azure Key Vault-Cmdlets](https://msdn.microsoft.com/library/dn868052.aspx)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erweiterbare Schlüsselverwaltung mithilfe von Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Verwenden von SQL Server-Connector mit SQL-Verschlüsselungsfunktionen](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
  [EKM provider enabled (Serverkonfigurationsoption)](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
  [Installationsschritte für die Erweiterbare Schlüsselverwaltung mit Azure Key Vault.](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  

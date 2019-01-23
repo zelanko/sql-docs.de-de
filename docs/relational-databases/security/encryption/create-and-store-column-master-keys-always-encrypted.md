@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 33faa406912e2f80d6911e9e4f94b27397e89cef
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3893672f6d253bf3f428198dd58d63e3cac30baa
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534763"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326421"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -120,16 +120,16 @@ Das folgende Beispiel erstellt einen neuen Azure-Schlüsseltresor und Schlüssel
 
 ```
 # Create a column master key in Azure Key Vault.
-Login-AzureRmAccount
+Connect-AzAccount
 $SubscriptionId = "<Azure subscription ID>"
 $resourceGroup = "<resource group name>"
 $azureLocation = "<key vault location>"
 $akvName = "<key vault name>"
 $akvKeyName = "<column master key name>"
-$azureCtx = Set-AzureRMContext -SubscriptionId $SubscriptionId # Sets the context for the below cmdlets to the specified subscription.
-New-AzureRmResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
-New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation -SKU premium # Creates a new key vault - skip if your vault already exists.
-Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey, unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
+$azureCtx = Set-AzContext -SubscriptionId $SubscriptionId # Sets the context for the below cmdlets to the specified subscription.
+New-AzResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
+New-AzKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation -SKU premium # Creates a new key vault - skip if your vault already exists.
+Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey, unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination HSM
 ```
 
@@ -145,7 +145,7 @@ Um Spaltenverschlüsselungsschlüssel bereitzustellen, die mit einem in Azure Ke
 
 #### <a name="using-powershell"></a>PowerShell
 
-Um Benutzern und Anwendungen den Zugriff auf die tatsächlichen Schlüssel im Azure-Schlüsseltresor zu ermöglichen, müssen Sie die Tresorzugriffsrichtlinie ([Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx)) einrichten:
+Um Benutzern und Anwendungen den Zugriff auf die tatsächlichen Schlüssel im Azure-Schlüsseltresor zu ermöglichen, müssen Sie die Tresorzugriffsrichtlinie ([Set-AzKeyVaultAccessPolicy](https://docs.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)) einrichten:
 
 ```
 $vaultName = "<vault name>"
@@ -154,9 +154,9 @@ $userPrincipalName = "<user to grant access to>"
 $clientId = "<client Id>"
 
 # grant users permissions to the keys:
-Set-AzureRmKeyVaultAccessPolicy -VaultName $vaultName -ResourceGroupName $resourceGroupName -PermissionsToKeys create,get,wrapKey,unwrapKey,sign,verify,list -UserPrincipalName $userPrincipalName
+Set-AzKeyVaultAccessPolicy -VaultName $vaultName -ResourceGroupName $resourceGroupName -PermissionsToKeys create,get,wrapKey,unwrapKey,sign,verify,list -UserPrincipalName $userPrincipalName
 # grant applications permissions to the keys:
-Set-AzureRmKeyVaultAccessPolicy  -VaultName $vaultName  -ResourceGroupName $resourceGroupName -ServicePrincipalName $clientId -PermissionsToKeys get,wrapKey,unwrapKey,sign,verify,list
+Set-AzKeyVaultAccessPolicy  -VaultName $vaultName  -ResourceGroupName $resourceGroupName -ServicePrincipalName $clientId -PermissionsToKeys get,wrapKey,unwrapKey,sign,verify,list
 ```
 
 ## <a name="creating-column-master-keys-in-hardware-security-modules-using-cng"></a>Erstellen von Spaltenhauptschlüsseln in Hardwaresicherheitsmodulen mithilfe von CNG
@@ -207,7 +207,7 @@ Informieren Sie sich in Ihrer HSM- und KSP-Dokumentation, wie Sie den KSP auf ei
 
 Ein Spaltenhauptschlüssel für Always Encrypted kann in einem Schlüsselspeicher gespeichert werden, der die Kryptografie-API (Cryptography API, CAPI) implementiert. Üblicherweise handelt es sich bei einem solchen Speicher um ein Hardwaresicherheitsmodul (HSM) – ein physisches Gerät, das digitale Schlüssel schützt und verwaltet und die kryptografische Verarbeitung bereitstellt. Hardwaresicherheitsmodule werden üblicherweise als Plug-In-Karte oder externes Gerät bereitgestellt, die bzw. das direkt an einen Computer (lokales HSM) oder einen Netzwerkserver angeschlossen wird.
 
-Um ein HSM für Anwendungen auf einem bestimmten Computer verfügbar zu machen, muss ein Kryptografiedienstanbieter (Cryptography Service Provider, CSP), der die CAPI implementiert, auf dem Computer installiert und konfiguriert werden. Ein Always Encrypted-Clienttreiber (ein Speicheranbieter für einen Spaltenhauptschlüssel innerhalb des Treibers) verwendet den CSP, um Spaltenverschlüsselungsschlüssel zu ver- und entschlüsseln, die mit dem im Schlüsselspeicher gespeicherten Spaltenhauptschlüssel geschützt sind. Hinweis: die CAPI ist eine veraltete API. Wenn für Ihr HSM ein KSP verfügbar ist, sollten Sie diesen statt des CSP bzw. der CAPI verwenden.
+Um ein HSM für Anwendungen auf einem bestimmten Computer verfügbar zu machen, muss ein Kryptografiedienstanbieter (Cryptography Service Provider, CSP), der die CAPI implementiert, auf dem Computer installiert und konfiguriert werden. Ein Always Encrypted-Clienttreiber (ein Speicheranbieter für einen Spaltenhauptschlüssel innerhalb des Treibers) verwendet den CSP, um Spaltenverschlüsselungsschlüssel zu ver- und entschlüsseln, die mit dem im Schlüsselspeicher gespeicherten Spaltenhauptschlüssel geschützt sind. Hinweis: CAPI ist eine veraltete API. Wenn für Ihr HSM ein KSP verfügbar ist, sollten Sie diesen statt des CSP bzw. der CAPI verwenden.
 
 Ein CSP muss den RSA-Algorithmus unterstützen, um mit Always Encrypted verwendet werden zu können.
 

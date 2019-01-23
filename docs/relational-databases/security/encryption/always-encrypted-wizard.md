@@ -17,19 +17,19 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 38077378d0980d351c4c65ca25b1574b7a7d7bc2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: db55b4763dc0a5956d419fd45ced58073e2affbb
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673576"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327869"
 ---
 # <a name="always-encrypted-wizard"></a>Always Encrypted-Assistent
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Verwenden Sie den **Always Encrypted-Assistent** zum Schutz sensibler Daten, die in einer SQL Server-Datenbank gespeichert sind. „Immer verschlüsselt“ ermöglicht es Clients, sensible Daten in Clientanwendungen zu verschlüsseln und die Verschlüsselungsschlüssel niemals an SQL Server weiterzugeben. Always Encrypted trennt daher zwischen denjenigen Benutzern, die die Daten besitzen (und sie ansehen können) und denjenigen, die die Daten verwalten, (aber keinen Zugriff haben sollten).  Eine vollständige Beschreibung des Features finden Sie unter [Always Encrypted &amp;#40;Datenbank-Engine&amp;#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
+Verwenden Sie den **Always Encrypted-Assistent** zum Schutz sensibler Daten, die in einer SQL Server-Datenbank gespeichert sind. „Immer verschlüsselt“ ermöglicht es Clients, sensible Daten in Clientanwendungen zu verschlüsseln und die Verschlüsselungsschlüssel niemals an SQL Server weiterzugeben. Always Encrypted trennt daher zwischen denjenigen Benutzern, die die Daten besitzen (und sie ansehen können) und denjenigen, die die Daten verwalten, (aber keinen Zugriff haben sollten).  Eine vollständige Beschreibung des Features finden Sie unter [Always Encrypted &#40;Datenbank-Engine&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
  
- - Eine exemplarische End-to-End-Vorgehensweise, die das Konfigurieren von Always Encrypted mit dem Assistenten sowie die Verwendung in einer Clientanwendung veranschaulicht, finden Sie unter [Tutorial zur SQL-Datenbank: Schützen von sensiblen Daten mit Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).  
+ - Eine exemplarische End-to-End-Vorgehensweise, die das Konfigurieren von Always Encrypted mit dem Assistenten sowie die Verwendung von Always Encrypted in einer Clientanwendung veranschaulicht, finden Sie unter [Always Encrypted: Schützen von vertraulichen Daten und Speichern der Verschlüsselungsschlüssel im Windows-Zertifikatspeicher](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).  
  
  - Ein Video, das die Verwendung des Assistenten erläutert, finden Sie unter [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)(Sensible Daten mit Always Encrypted schützen). Weitere Informationen finden Sie auch im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Security-Teamblog [SSMS Encryption Wizard - Enabling Always Encrypted in a Few Easy Steps](https://blogs.msdn.com/b/sqlsecurity/archive/2015/11/01/ssms-encryption-wizard-enabling-always-encrypted-made-easy.aspx).  
  
@@ -57,7 +57,7 @@ Verwenden Sie den **Always Encrypted-Assistent** zum Schutz sensibler Daten, die
  
    - **Einen Hauptschlüssel in AKV speichern** Weitere Informationen finden Sie unter [Erste Schritte mit dem Azure-Schlüsseltresor](https://azure.microsoft.com/documentation/articles/key-vault-get-started/).  
  
- - Zum Generieren eines Spaltenhauptschlüssels im Azure Key Vault muss der Benutzer über die Berechtigungen **WrapKey**, **UnwrapKey**, **Verify**, und **Sign** für den Schlüsseltresor verfügen. Benutzer benötigen möglicherweise auch die Berechtigungen **Get**, **List**, **Create**, **Delete**, **Update**, **Import**, **Backup**, und **Restore** . Weitere Informationen finden Sie unter [Was ist der Azure-Schlüsseltresor?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) und   [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx).  
+ - Zum Generieren eines Spaltenhauptschlüssels im Azure Key Vault muss der Benutzer über die Berechtigungen **WrapKey**, **UnwrapKey**, **Verify**, und **Sign** für den Schlüsseltresor verfügen. Benutzer benötigen möglicherweise auch die Berechtigungen **Get**, **List**, **Create**, **Delete**, **Update**, **Import**, **Backup**, und **Restore** . Weitere Informationen finden Sie unter [Was ist der Azure-Schlüsseltresor?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) und [Set-AzKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx).  
  
  - Der Assistent hat nur zwei Optionen unterstützt. Hardwaresicherheitsmodule und Kundenspeicher müssen mithilfe von [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] konfiguriert werden.  
  
@@ -71,6 +71,7 @@ Verwenden Sie den **Always Encrypted-Assistent** zum Schutz sensibler Daten, die
 
  - **Spaltenverschlüsselungsschlüssel** werden verwendet, um sensible Daten zu verschlüsseln, die in Datenbankspalten gespeichert sind. Alle Werte in einer Spalte können mit einem einzelnen Spaltenverschlüsselungsschlüssel verschlüsselt werden. Verschlüsselte Werte der Spaltenverschlüsselungsschlüssel werden in der Datenbank in Systemkatalogsichten gespeichert. Sie sollten eine Sicherung der Spaltenverschlüsselungsschlüssel an einem sicheren/vertrauenswürdigen Ort speichern.  
 
- ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- - [Always Encrypted &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ ## <a name="see-also"></a>Weitere Informationen  
+ - 
+  [Always Encrypted &#40;Datenbank-Engine&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  - [Erweiterbare Schlüsselverwaltung mit Azure Key Vault &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  

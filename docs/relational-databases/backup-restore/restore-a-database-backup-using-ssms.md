@@ -20,12 +20,12 @@ ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: dd018941567ec56619177928d55b83681c07a039
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: a97bee55c0f23a82470091c1c9ea7b44463221e0
+ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302903"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54317810"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -145,7 +145,7 @@ Im folgenden Beispiel wird eine frühere Datenträgersicherung von `Sales` wiede
 7.  Aktivieren Sie im Abschnitt **Wiederherstellungsoptionen** die Option **Vorhandene Datenbank überschreiben (WITH REPLACE)**.
 
     > [!NOTE]
-    > Wenn Sie diese Option nicht aktivieren, wird möglicherweise die folgende Fehlermeldung angezeigt: „System.Data.SqlClient.SqlError: Der Sicherungssatz enthält die Sicherung einer anderen Datenbank als der vorhandenen '`Sales`'-Datenbank. (Microsoft.SqlServer.SmoExtended)“
+    > Wird diese Option nicht aktiviert, wird möglicherweise die folgende Fehlermeldung angezeigt: „System.Data.SqlClient.SqlError: Der Sicherungssatz enthält die Sicherung einer anderen Datenbank als der vorhandenen '`Sales`'-Datenbank. (Microsoft.SqlServer.SmoExtended)“
 
 8.  Deaktivieren Sie im Abschnitt **Sicherung des Protokollfragments** die Option **Protokollfragment vor der Wiederherstellung sichern**.
 
@@ -157,7 +157,7 @@ Im folgenden Beispiel wird eine frühere Datenträgersicherung von `Sales` wiede
 9.  Aktivieren Sie im Abschnitt **Serververbindungen** das Kontrollkästchen **Bestehende Verbindungen mit der Zieldatenbank schließen**.
 
     > [!NOTE]
-    > Wenn Sie diese Option nicht aktivieren, wird möglicherweise die folgende Fehlermeldung angezeigt: „System.Data.SqlClient.SqlError: Der exklusive Zugriff auf die Datenbank ist nicht möglich, da die Datenbank gerade verwendet wird. (Microsoft.SqlServer.SmoExtended)“
+    > Wird diese Option nicht aktiviert, wird möglicherweise die folgende Fehlermeldung angezeigt: „System.Data.SqlClient.SqlError: Der exklusive Zugriff auf die Datenbank ist nicht möglich, da die Datenbank gerade verwendet wird. (Microsoft.SqlServer.SmoExtended)“
     
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 
@@ -180,7 +180,7 @@ Im folgenden Beispiel wird eine frühere Datenträgersicherung von `Sales` wiede
 
     > [!NOTE]
     > Wenn Sie die folgende Fehlermeldung erhalten:      
-    > „System.Data.SqlClient.SqlError: Das Protokollfragment für die Datenbank `Sales` wurde nicht gesichert.“ Verwenden Sie `BACKUP LOG WITH NORECOVERY` zum Sichern des Protokolls, wenn dieses Daten enthält, die Sie nicht verlieren möchten. Verwenden Sie die `WITH REPLACE`- oder `WITH STOPAT`-Klausel der `RESTORE`-Anweisung, um den Inhalt des Protokolls zu überschreiben. (Microsoft.SqlServer.SmoExtended)“.      
+    > „System.Data.SqlClient.SqlError: Das Protokollfragment für die "`Sales`"-Datenbank wurde nicht gesichert. Verwenden Sie `BACKUP LOG WITH NORECOVERY` zum Sichern des Protokolls, wenn dieses Daten enthält, die Sie nicht verlieren möchten. Verwenden Sie die `WITH REPLACE`- oder `WITH STOPAT`-Klausel der `RESTORE`-Anweisung, um den Inhalt des Protokolls zu überschreiben. (Microsoft.SqlServer.SmoExtended)“.      
     > angezeigt wird, haben Sie wahrscheinlich nicht den neuen Datenbanknamen aus Schritt 6 oben eingegeben. Die Wiederherstellung verhindert normalerweise, dass eine Datenbank versehentlich durch eine andere Datenbank überschrieben wird. Wenn die in einer `RESTORE`-Anweisung angegebene Datenbank bereits auf dem aktuellen Server vorhanden ist und sich die angegebene GUID der Datenbankfamilie von der im Sicherungssatz aufgezeichneten GUID der Datenbankfamilie unterscheidet, wird die Datenbank nicht wiederhergestellt. Dies ist ein wichtiges Sicherheitselement.
 
 ### <a name="d--restore-earlier-disk-backups-to-a-point-in-time"></a>D.  Wiederherstellen früherer Datenträgersicherungen bis zu einem bestimmten Zeitpunkt
@@ -250,7 +250,7 @@ Die Datenbank `Sales` wird aus einer Sicherung unter `E:\MSSQL\BAK` im Microsoft
 11. Geben Sie den Container ( `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`) in die Textfelder für **Datendateiordner:** und **Protokolldateiordner:** ein.
 12. Klicken Sie auf **OK**.
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter    
+## <a name="see-also"></a>Weitere Informationen    
  [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)     
  [Erstellen einer vollständigen Datenbanksicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)     
  [Wiederherstellen einer Datenbank an einem neuen Speicherort &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)     

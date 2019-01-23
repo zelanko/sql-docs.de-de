@@ -35,12 +35,12 @@ ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8480a8b8f3889a1686d29bcd3858ee3921383cd
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: a73e8c25d891350f26bfff0ce62a2835fc5355d0
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559471"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405840"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einem anderen Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,11 +108,11 @@ ms.locfileid: "51559471"
   
  Weitere Informationen zu diesem Feature finden Sie unter [Anmeldeinformationen &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
-> **HINWEIS:** Agent-Proxykonten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwenden Anmeldeinformationen. Die ID der von einem Proxykonto verwendeten Anmeldeinformationen kann anhand der [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) -Systemtabelle festgestellt werden.  
+> **HINWEIS:** Für Proxykonten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents werden Anmeldeinformationen verwendet. Die ID der von einem Proxykonto verwendeten Anmeldeinformationen kann anhand der [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) -Systemtabelle festgestellt werden.  
   
   
 ##  <a name="cross_database_queries"></a> Cross-Database Queries  
- Die Datenbankoptionen DB_CHAINING und TRUSTWORTHY sind standardmäßig auf OFF festgelegt. Ist eine dieser Optionen für die ursprüngliche Datenbank auf ON festgelegt, müssen Sie die betreffende Option u. U. auch auf der Zielserverinstanz aktivieren. Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+ Die Datenbankoptionen DB_CHAINING und TRUSTWORTHY sind standardmäßig auf OFF festgelegt. Ist eine dieser Optionen für die ursprüngliche Datenbank auf ON festgelegt, müssen Sie die betreffende Option u. U. auch auf der Zielserverinstanz aktivieren. Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  Durch Anfüge- und Trennvorgänge wird die datenbankübergreifende Besitzverkettung für die Datenbank deaktiviert. Informationen zum Aktivieren der Verkettung finden Sie unter [Datenbankübergreifende Besitzverkettung (Serverkonfigurationsoption)](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md).  
   
@@ -131,7 +131,7 @@ ms.locfileid: "51559471"
   
  Um die automatische Entschlüsselung des Datenbank-Hauptschlüssels auf einer Serverinstanz zu ermöglichen, wird eine Kopie dieses Schlüssels mit dem Diensthauptschlüssel verschlüsselt. Diese verschlüsselte Kopie wird sowohl in der Datenbank als auch in der **master**-Datenbank gespeichert. In der Regel wird die in **master** gespeicherte Kopie im Hintergrund aktualisiert, sobald der Hauptschlüssel geändert wird. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht zuerst, den Datenbank-Hauptschlüssel mit dem Diensthauptschlüssel der Instanz zu entschlüsseln. Wenn beim Entschlüsseln ein Fehler auftritt, wird der Anmeldeinformationsspeicher von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nach Anmeldeinformationen des Hauptschlüssels durchsucht, die dieselbe Familien-GUID wie die Datenbank aufweisen, für die der Hauptschlüssel benötigt wird. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , den Datenbank-Hauptschlüssel mit allen übereinstimmenden Anmeldeinformationen zu entschlüsseln, bis die Entschlüsselung erfolgreich ausgeführt wurde oder keine Anmeldeinformationen mehr vorhanden sind. Ein Hauptschlüssel, der nicht mit dem Diensthauptschlüssel verschlüsselt ist, muss mithilfe der OPEN MASTER KEY-Anweisung und eines Kennworts geöffnet werden.  
   
- Wird eine verschlüsselte Datenbank auf eine neue Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]kopiert, auf dieser wiederhergestellt oder an diese angefügt, wird keine Kopie des vom Diensthauptschlüssels verschlüsselten Datenbank-Hauptschlüssels in der **master** -Datenbank der Zielserverinstanz gespeichert. Auf der Zielserverinstanz müssen Sie den Hauptschlüssel der Datenbank öffnen. Führen Sie zum Öffnen des Hauptschlüssels die folgende Anweisung aus: OPEN MASTER KEY DECRYPTION BY PASSWORD **='**_Kennwort_**'**. Es empfiehlt sich, die automatische Entschlüsselung des Datenbank-Hauptschlüssels mit folgender Anweisung zu aktivieren: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Durch diese ALTER MASTER KEY-Anweisung wird für die Serverinstanz eine Kopie des mit dem Diensthauptschlüssel verschlüsselten Datenbank-Hauptschlüssels bereitgestellt. Weitere Informationen finden Sie unter [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) und [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
+ Wird eine verschlüsselte Datenbank auf eine neue Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]kopiert, auf dieser wiederhergestellt oder an diese angefügt, wird keine Kopie des vom Diensthauptschlüssels verschlüsselten Datenbank-Hauptschlüssels in der **master** -Datenbank der Zielserverinstanz gespeichert. Auf der Zielserverinstanz müssen Sie den Hauptschlüssel der Datenbank öffnen. Um den Hauptschlüssel zu öffnen, führen Sie die folgende Anweisung aus: OPEN MASTER KEY DECRYPTION BY PASSWORD **='**_Kennwort_**'**. Es empfiehlt sich, anschließend die automatische Entschlüsselung des Datenbank-Hauptschlüssels zu aktivieren, indem folgende Anweisung ausgeführt wird: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Durch diese ALTER MASTER KEY-Anweisung wird für die Serverinstanz eine Kopie des mit dem Diensthauptschlüssel verschlüsselten Datenbank-Hauptschlüssels bereitgestellt. Weitere Informationen finden Sie unter [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) und [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
   
  Informationen zum Aktivieren der automatischen Entschlüsselung des Datenbank-Hauptschlüssels einer Spiegeldatenbank finden Sie unter [Einrichten einer verschlüsselten Spiegeldatenbank](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   
@@ -335,7 +335,7 @@ Die TRUSTWORTHY-Datenbankeigenschaft gibt an, ob diese Instanz von SQL Server di
  Informationen zu dieser Funktion finden Sie unter [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md).  
   
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Eigenständige Datenbanken](../../relational-databases/databases/contained-databases.md)   
  [Kopieren von Datenbanken auf andere Server](../../relational-databases/databases/copy-databases-to-other-servers.md)   
  [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   

@@ -23,12 +23,12 @@ ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 483696e8ecc717e0ead5c7be16a627c046cb47ca
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 96c6292c4c14f97ce0cf0dda17f107a5d5e1bb15
+ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300067"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54395423"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -102,6 +102,8 @@ Konfigurieren Sie die Einstellungen der Windows-Firewall entweder über **Micros
     -   [How to use the "netsh advfirewall firewall" context instead of the "netsh firewall" context to control Windows Firewall behavior in Windows Server 2008 and in Windows Vista (verwenden des Kontexts „netsh advfirewall firewall“ anstelle des Kontexts „netsh firewall“ zum Kontrollieren des Firewall-Verhaltens unter Windows Server 2008 und Windows Vista)](https://support.microsoft.com/kb/947709)  
   
     -   [Der "netsh firewall"-Befehl in Verbindung mit dem Parameter "profile=all" konfiguriert nicht das öffentliche Profil auf einem Windows Vista-Computer](https://support.microsoft.com/kb/947213)  
+    
+- **Für Linux**: Unter Linux müssen Sie auch die Ports öffnen, die mit den Diensten verknüpft sind, auf die Sie zugreifen müssen. Für verschiedene Distributionen von Linux und unterschiedliche Firewalls gibt es jeweils eigene Vorgehensweisen. Zwei Beispiele finden Sie unter [SQL Server unter Red Hat](https://review.docs.microsoft.com/sql/linux/quickstart-install-connect-red-hat?view=sqlallproducts-allversions) und [SQL Server unter SUSE](https://review.docs.microsoft.com/sql/linux/quickstart-install-connect-suse?view=sqlallproducts-allversions). 
   
 ## <a name="ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>Von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Die folgenden Tabellen können Sie dabei unterstützen, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendeten Ports zu identifizieren.  

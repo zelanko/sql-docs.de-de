@@ -1,7 +1,7 @@
 ---
 title: Kennwortrichtlinie | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/25/2015
+ms.date: 01/16/2019
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
@@ -33,79 +33,85 @@ ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 310e44e1f38d986a45e910248c708255548c76a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d8b1196eb1292532320c77559cd4578532957ac
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770858"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361609"
 ---
 # <a name="password-policy"></a>Kennwortrichtlinie
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann Mechanismen der Windows-Kennwortrichtlinien verwenden. Die Kennwortrichtlinie gilt für eine Anmeldung, die die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwendet, und für einen eigenständige Datenbankbenutzer mit Kennwort.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann die gleichen Komplexitäts- und Ablaufrichtlinien anwenden, die in Windows für in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendete Kennwörter verwendet werden. Diese Funktion basiert auf der `NetValidatePasswordPolicy` -API.  
   
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] setzt die Kennwortkomplexität durch. Die Abschnitte zum Ablauf von Kennwörtern und zur Durchsetzung von Richtlinien gelten nicht für [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+> [!NOTE]
+> [!INCLUDE[ssSDS](../../includes/sssds-md.md)] setzt die Kennwortkomplexität durch. Die Abschnitte zum Ablauf von Kennwörtern und zur Durchsetzung von Richtlinien gelten nicht für [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ## <a name="password-complexity"></a>Kennwortkomplexität  
+
  Richtlinien zur Kennwortkomplexität werden als Maßnahme gegen Brute Force-Angriffe entworfen. Dabei wird die Anzahl der möglichen Kennwörter erhöht. Wenn eine Richtlinie zur Kennwortkomplexität erzwungen wird, müssen neue Kennwörter die folgenden Richtlinien erfüllen:  
   
--   Das Kennwort enthält nicht den Kontonamen des Benutzers.  
+- Das Kennwort enthält nicht den Kontonamen des Benutzers.  
   
--   Das Kennwort ist wenigstens acht Zeichen lang.  
+- Das Kennwort ist wenigstens acht Zeichen lang.  
   
--   Das Kennwort enthält Zeichen aus drei der folgenden vier Kategorien:  
+- Das Kennwort enthält Zeichen aus drei der folgenden vier Kategorien:  
   
-    -   Lateinische Großbuchstaben (A - Z)  
+  - Lateinische Großbuchstaben (A - Z)  
   
-    -   Lateinische Kleinbuchstaben (a - z)  
+  - Lateinische Kleinbuchstaben (a - z)  
   
-    -   10 Grundziffern (0 - 9)  
+  - 10 Grundziffern (0 - 9)  
   
-    -   Nicht alphanumerische Zeichen, wie z. B.: Ausrufezeichen (!), Dollarzeichen ($), Nummernzeichen (#) oder Prozentzeichen (%)  
+  - Nicht alphanumerische Zeichen, wie z. B.: Ausrufezeichen (!), Dollarzeichen ($), Nummernzeichen (#) oder Prozentzeichen (%)  
   
- Kennwörter können bis zu 128 Zeichen lang sein. Sie sollten möglichst lange und komplexe Kennwörter verwenden.  
+ Kennwörter können bis zu 128 Zeichen lang sein. Verwenden Sie möglichst lange und komplexe Kennwörter.  
   
 ## <a name="password-expiration"></a>Ablauf des Kennworts  
+
  Richtlinien zum Ablauf von Kennwörtern werden verwendet, um die Lebensdauer von Kennwörtern zu verwalten. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Richtlinie zum Ablauf von Kennwörtern durchsetzt, werden Benutzer daran erinnert, alte Kennwörter zu ändern. Konten mit abgelaufenen Kennwörtern werden deaktiviert.  
   
 ## <a name="policy-enforcement"></a>Richtliniendurchsetzung  
+
  Das Erzwingen der Kennwortrichtlinie kann für jede SQL Server-Anmeldung einzeln konfiguriert werden. Verwenden Sie [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md) , um die Kennwortrichtlinienoptionen für eine SQL Server-Anmeldung zu konfigurieren. Die folgenden Regeln gelten für die Konfiguration zur Erzwingung der Kennwortrichtlinie:  
   
--   Wenn CHECK_POLICY in ON geändert wird, kommt es zu folgenden Verhaltensweisen:  
+- Wenn CHECK_POLICY in ON geändert wird, kommt es zu folgenden Verhaltensweisen:  
   
-    -   Für CHECK_EXPIRATION wird ebenfalls ON festgelegt, es sei denn, der Wert OFF wurde ausdrücklich festgelegt.  
+  - Für CHECK_EXPIRATION wird ebenfalls ON festgelegt, es sei denn, der Wert OFF wurde ausdrücklich festgelegt.  
   
-    -   Der Kennwortverlauf wird mit dem Wert des aktuellen Kennworthashes initialisiert.  
+  - Der Kennwortverlauf wird mit dem Wert des aktuellen Kennworthashes initialisiert.  
   
-    -   **Kontosperrdauer**, **Kontensperrungsschwelle**und **Zurücksetzungsdauer des Kontosperrungszählers** sind ebenfalls aktiviert.  
+  - **Kontosperrdauer**, **Kontensperrungsschwelle**und **Zurücksetzungsdauer des Kontosperrungszählers** sind ebenfalls aktiviert.  
   
--   Wenn CHECK_POLICY in OFF geändert wird, kommt es zu folgenden Verhaltensweisen:  
+- Wenn CHECK_POLICY in OFF geändert wird, kommt es zu folgenden Verhaltensweisen:  
   
-    -   CHECK_EXPIRATION wird ebenfalls auf OFF festgelegt.  
+  - CHECK_EXPIRATION wird ebenfalls auf OFF festgelegt.  
   
-    -   Der Kennwortverlauf wird gelöscht.  
+  - Der Kennwortverlauf wird gelöscht.  
   
-    -   Der Wert von `lockout_time` wird zurückgesetzt.  
+  - Der Wert von `lockout_time` wird zurückgesetzt.  
   
  Einige Kombinationen von Richtlinienoptionen werden nicht unterstützt.  
   
--   Falls MUST_CHANGE angegeben wird, müssen CHECK_EXPIRATION und CHECK_POLICY auf ON festgelegt werden. Andernfalls erzeugt die Anweisung einen Fehler.  
+- Falls MUST_CHANGE angegeben wird, müssen CHECK_EXPIRATION und CHECK_POLICY auf ON festgelegt werden. Andernfalls schlägt die Anweisung fehl.  
   
--   Falls CHECK_POLICY auf OFF festgelegt ist, kann CHECK_EXPIRATION nicht auf ON festgelegt werden. Eine ALTER LOGIN-Anweisung mit dieser Kombination von Optionen erzeugt einen Fehler.  
+- Falls CHECK_POLICY auf OFF festgelegt ist, kann CHECK_EXPIRATION nicht auf ON festgelegt werden. Eine ALTER LOGIN-Anweisung mit dieser Kombination von Optionen erzeugt einen Fehler.  
   
- Durch Festlegen von CHECK_POLICY = ON wird die Erstellung von Kennwörtern mit folgenden Eigenschaften verhindert:  
+- Durch Festlegen von CHECK_POLICY = ON wird verhindert, dass Kennwörter mit einem dieser Inhalte erstellt werden können:  
   
--   NULL-Werte oder leere Kennwörter  
+  - NULL-Werte oder leere Kennwörter  
   
--   Kennwörter, die dem Computer- oder Anmeldenamen entsprechen  
+  - Kennwörter, die dem Computer- oder Anmeldenamen entsprechen  
   
--   Eines der folgenden Kennwörter: "kennwort", "admin", "administrator", "sa", "sysadmin"  
+  - Eines der folgenden Kennwörter: "kennwort", "admin", "administrator", "sa", "sysadmin"  
   
  Die Sicherheitsrichtlinie kann in Windows festgelegt oder von der Domäne abgerufen werden. Um die Kennwortrichtlinie auf dem Computer anzuzeigen, verwenden Sie das MMC-Snap-In „Lokale Sicherheitsrichtlinie“ (**secpol.msc**).  
   
 ## <a name="related-tasks"></a>Related Tasks  
+
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)  
   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)  
@@ -119,6 +125,6 @@ ms.locfileid: "47770858"
  [Erstellen eines Datenbankbenutzers](../../relational-databases/security/authentication-access/create-a-database-user.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
+
  [Sichere Kennwörter](../../relational-databases/security/strong-passwords.md)  
-  
-  
+ 

@@ -1,7 +1,7 @@
 ---
 title: APPROX_COUNT_DISTINCT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/23/2018
+ms.date: 01/17/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,19 +15,19 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5b0eb2db49a4bda6fc8be884790c3caf9cfdb7bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 718d03619165f94ae9b0820a7c2c6319549069be
+ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836724"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54372651"
 ---
 # <a name="approxcountdistinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
 [!INCLUDE[appliesto-xx-asdb-asdw-pdw-md](../../includes/appliesto-xx-asdb-asdw-pdw-md.md)]
 
 Diese Funktion gibt die ungefähre Anzahl von eindeutigen Ungleich-Null-Werten in einer Gruppe zurück. 
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 > [!NOTE]
 > APPROX_COUNT_DISTINCT ist ein öffentliches Vorschaufeature.  
@@ -56,7 +56,7 @@ Eine [expression](../../t-sql/language-elements/expressions-transact-sql.md) bel
 
 Die Funktionsimplementierung garantiert eine Fehlerquote von bis zu 2 % mit einer Wahrscheinlichkeit von 97 %. 
 
-`APPROX_COUNT_DISTINCT` erfordert weniger Speicherplatz als ein vollständiger COUNT DISTINCT-Vorgang.  Angesichts des geringeren Speicherbedarfs ist es weniger wahrscheinlich, dass durch `APPROX_COUNT_DISTINCT` weniger Speicher zum Datenträger überläuft, als bei einem präzisen COUNT DISTINCT-Vorgang. 
+`APPROX_COUNT_DISTINCT` erfordert weniger Speicherplatz als ein vollständiger COUNT DISTINCT-Vorgang.  Angesichts des geringeren Speicherbedarfs ist es weniger wahrscheinlich, dass durch `APPROX_COUNT_DISTINCT` weniger Speicher zum Datenträger überläuft, als bei einem präzisen COUNT DISTINCT-Vorgang. Weitere Informationen zu dem Algorithmus, mit dem dies erreicht wird, finden Sie unter [HyperLogLog](https://en.wikipedia.org/wiki/HyperLogLog).
 
 > [!NOTE]
 > Bei sortierungsbezogenen Zeichenfolgen verwendet die öffentliche Vorschauversion von APPROX_COUNT_DISTINCT einen binären Abgleich und liefert Ergebnisse, die bei Vorhandensein von BIN-Sortierungen und nicht von BIN2 erzeugt worden wären. 

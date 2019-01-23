@@ -1,7 +1,7 @@
 ---
 title: Ablaufverfolgungsflags (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/09/2019
+ms.date: 01/15/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 90f27a36b455b4c0b497b43d5b302684a1a7a9ba
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: f57bd4ef770d4958c09bd54fb19718e8e8c641df
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206466"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361690"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON – Ablaufverfolgungsflags
 
@@ -145,6 +145,7 @@ In der folgenden Tabelle werden die in [!INCLUDE[ssNoVersion](../../includes/ssn
 |**9488**|<a name="9488"></a>Legt die feste Schätzung für Tabellenwertfunktionen auf den Standardwert 1 fest (entspricht dem Standardwert unter dem Kardinalitätsschätzungsmodell für den Abfrageoptimierer von [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] und früheren Versionen), bei Verwendung des Kardinalitätsschätzungsmodells für den Abfrageoptimierer der Versionen [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />**Bereich:** global oder Sitzung oder Abfrage|
 |**9495**|Deaktiviert die Parallelität während der Einfügung für INSERT...SELECT-Vorgänge und betrifft sowohl Benutzer-als auch temporäre Tabellen. Weitere Informationen finden Sie im folgenden [Microsoft-Support-Artikel](https://support.microsoft.com/kb/3180087).<br /><br />**Bereich:** global oder Sitzung| 
 |**9567**|Aktiviert die Komprimierung des Datenstroms für Always On-Verfügbarkeitsgruppen während des automatischen Seedings. Die Komprimierung kann die Übertragungszeit während des Seedings erheblich reduzieren und die Arbeitslast für den Prozessor erhöhen. Weitere Informationen finden Sie unter [Automatisches Initialisieren der Always On-Verfügbarkeitsgruppe](../../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md) und [Optimieren der Komprimierung für die Verfügbarkeitsgruppe](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md).<br /><br />**Bereich:** global oder Sitzung|
+|**9571**|Deaktiviert für Verfügbarkeitsgruppen das automatische Seeding in den Standarddatenbankpfad. Weitere Informationen finden Sie unter [Datenträgerlayout](../../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md).<br /><br />**Bereich:** global oder Sitzung| 
 |**9591**|Deaktiviert die Protokollblockkomprimierung in Always On-Verfügbarkeitsgruppen. Die Protokollblockkomprimierung ist das Standardverhalten, das sowohl auf synchrone als auch auf asynchrone Replikate in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] angewendet wird. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] wird die Komprimierung nur mit asynchronen Replikaten verwendet. <br /><br />**Bereich:** global oder Sitzung|
 |**9592**|Aktiviert die Protokolldatenstrom-Komprimierung für synchrone Verfügbarkeitsgruppen. Dieses Feature ist für synchrone Verfügbarkeitsgruppen standardmäßig deaktiviert, da die Komprimierung die Latenz erhöht. Weitere Informationen finden Sie unter [Optimieren der Komprimierung für die Verfügbarkeitsgruppe](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md).<br /><br />**Bereich:** global oder Sitzung| 
 |**9929**|Verringert speicherinterne Prüfpunktdateien mit je 1 MB. Weitere Informationen finden Sie im folgenden [Microsoft Support-Artikel](https://support.microsoft.com/kb/3147012).<br /><br />**Bereich:** nur global|  

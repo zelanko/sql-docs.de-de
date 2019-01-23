@@ -1,7 +1,7 @@
 ---
 title: Rollen auf Datenbankebene | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/29/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -39,14 +39,15 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f90a0ac06ed8852410874ffc2fb4a26b04ebf3c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8d205e184f31e628cf9629b702e21e43c200e38
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780828"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420095"
 ---
 # <a name="database-level-roles"></a>Rollen auf Datenbankebene
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Zur einfachen Verwaltung der Berechtigungen für Ihre Datenbanken stellt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mehrere *Rollen* zur Verfügung. Dies sind Sicherheitsprinzipale, die andere Prinzipale gruppieren. Sie entsprechen den ***Gruppen*** im [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Betriebssystem. Der Geltungsbereich der Berechtigungen von Rollen auf Datenbankebene erstreckt sich auf die gesamte Datenbank.  
@@ -92,8 +93,8 @@ Diese Datenbankrollen sind nur in der virtuellen Masterdatenbank vorhanden. Ihre
 
 |Rollenname|und Beschreibung|  
 |--------------------|-----------------|
-**dbmanager** | Kann Datenbanken erstellen und löschen. Ein Mitglied der dbmanager-Rolle, das eine Datenbank erstellt, wird zum Besitzer der betreffenden Datenbank, wodurch es diesem Benutzer möglich wird, eine Verbindung mit der Datenbank als dbo-Benutzer herzustellen. Der dbo-Benutzer verfügt über alle Datenbankberechtigungen in der Datenbank. Mitglieder der dbmanager-Rolle haben nicht unbedingt die Berechtigung zum Zugriff auf Datenbanken, die sie nicht besitzen.
-**loginmanager** | Kann Anmeldungen in der virtuellen Masterdatenbank erstellen und löschen.  
+|**dbmanager** | Kann Datenbanken erstellen und löschen. Ein Mitglied der dbmanager-Rolle, das eine Datenbank erstellt, wird zum Besitzer der betreffenden Datenbank, wodurch es diesem Benutzer möglich wird, eine Verbindung mit der Datenbank als dbo-Benutzer herzustellen. Der dbo-Benutzer verfügt über alle Datenbankberechtigungen in der Datenbank. Mitglieder der dbmanager-Rolle haben nicht unbedingt die Berechtigung zum Zugriff auf Datenbanken, die sie nicht besitzen.|
+|**loginmanager** | Kann Anmeldungen in der virtuellen Masterdatenbank erstellen und löschen.|
 
 > [!NOTE]
 > Der Prinzipal auf Serverebene und der Azure Active Directory-Administrator (falls konfiguriert) besitzen alle Berechtigungen in [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] und [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] , ohne dazu Mitglieder irgendwelcher Rollen sein zu müssen. Weitere Informationen finden Sie unter [SQL-Datenbank-Authentifizierung und -Autorisierung: Gewähren von Zugriff](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 
@@ -114,7 +115,7 @@ Diese Datenbankrollen sind nur in der virtuellen Masterdatenbank vorhanden. Ihre
 
 ## <a name="working-with-r-services"></a>Arbeiten mit R Services  
 
-**Gilt für:** SQL Server ab Version [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]   
+**Gilt für:** SQL Server ab [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]   
 
 Wenn R Services installiert wird, stehen zusätzliche Datenbankrollen für das Verwalten von Paketen zur Verfügung. Weitere Informationen finden Sie unter [R-Paketverwaltung für SQL Server](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md).
 

@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 2270917dad9f366b09fbc7cbc0d88c286fe6761c
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: f2df34057c02171701aefb878cfb79c56f97a699
+ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257095"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54317800"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Upgraden von Datenbanken mit dem Abfrageoptimierungs-Assistenten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ Als Ausgangspunkt geht QTA davon aus, dass eine Datenbank aus einer früheren Ve
 1.  Konfigurieren des Abfragespeichers gemäß den empfohlenen Einstellungen für die Workloaddauer (in Tagen), die vom Benutzer festgelegt wird. Verwenden Sie eine Workloaddauer, die Ihrem normalen Geschäftszyklus entspricht.
 2.  Anfordern des Starts der erforderlichen Workload, damit der Abfragespeicher eine Baseline für Workloaddaten erfassen kann (wenn noch keine Baseline verfügbar ist).
 3.  Upgrade auf den vom Benutzer ausgewählten Zieldatenbank-Kompatibilitätsgrad.
-4.  Anfordern eines 2. Durchgangs der Workloaddatenerfassung für Vergleichs- und Regressionserkennungszwecke.
+4.  Anfordern eines zweiten Durchgangs der Workloaddatenerfassung für Vergleichs- und Regressionserkennungszwecke.
 5.  Iterieren durch alle Regressionen, die auf Grundlage der Ansicht [Abfragespeicher**Zurückgestellte Abfragen**](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed) gefunden wurden, Experimentieren durch Erfassen von Laufzeitstatistiken für mögliche Permutationen anwendbarer Optimierungsmodellvariationen und Messen des Ergebnisses. 
 6.  Melden der gemessenen Optimierungen und optional Zulassen, dass diese Änderungen mit [Planhinweislisten](../../relational-databases/performance/plan-guides.md) persistent gespeichert werden.
 
@@ -84,7 +84,7 @@ QTA ist eine sitzungsbasierte Funktion, die den Sitzungszustand im `msqta`-Schem
 
 3.  Im Fenster des QTA-Assistenten sind zwei Schritte erforderlich, um eine Sitzung zu konfigurieren:
 
-    1.  Konfigurieren Sie im Fenster **Setup** den Abfragespeicher so, dass er das Äquivalent eines vollständigen Geschäftszyklus von Workloaddaten erfasst, die analysiert und optimiert werden. 
+    1.  Konfigurieren Sie im Fenster **Setup** den Abfragespeicher so, dass er das Äquivalent eines vollständigen Geschäftszyklus von Workloaddaten erfasst, die analysiert und optimiert werden sollen. 
         -  Geben Sie die erwartete Workloaddauer in Tagen ein (der Mindestwert ist 1 Tag). Diese Angabe wird verwendet, um empfohlene Abfragespeichereinstellungen vorzuschlagen, um vorläufig die gesamte Baseline zu erfassen. Die Erfassung einer guten Baseline ist wichtig, um sicherzustellen, dass alle zurückgestellten Abfragen, die nach einer Änderung des Kompatibilitätsgrads der Datenbank gefunden wurden, analysiert werden können. 
         -  Legen Sie den vorgesehenen Zieldatenbank-Kompatibilitätsgrad fest, den die Benutzerdatenbank verwenden soll, nachdem der QTA-Workflow abgeschlossen wurde.
         Klicken Sie dann auf **Weiter**.
@@ -92,7 +92,7 @@ QTA ist eine sitzungsbasierte Funktion, die den Sitzungszustand im `msqta`-Schem
        ![Fenster für das Einrichten einer neuen Datenbank-Upgradesitzung](../../relational-databases/performance/media/qta-new-session-setup.png "Fenster für das Einrichten einer neuen Datenbank-Upgradesitzung")  
   
     2.  Im Fenster **Einstellungen** zeigen zwei Spalten den Status **Aktuell** des Abfragespeichers in der Zieldatenbank sowie die **empfohlenen** Einstellungen an. 
-        -  Die empfohlenen Einstellungen sind standardmäßig ausgewählt. Wenn Sie aber auf das Optionsfeld über der Spalte „Aktuell“ klicken, werden die aktuellen Einstellungen akzeptiert, und Sie können auch die aktuelle Konfiguration des Abfragespeichers optimieren. 
+        -  Die empfohlenen Einstellungen sind standardmäßig ausgewählt. Wenn Sie aber auf das Optionsfeld über der Spalte „Aktuell“ klicken, werden die aktuellen Einstellungen akzeptiert, und Sie können auch die aktuelle Konfiguration des Abfragedatenspeichers optimieren. 
         -  Die vorgeschlagene Einstellung *Schwellenwert für veraltete Abfragen* ist zwei Mal so groß wie die erwartete Workloaddauer in Tagen. Dies liegt daran, dass der Abfragespeicher Informationen zur Baselineworkload und zur Workload nach dem Datenbankupgrade speichern muss.
         Klicken Sie anschließend auf **Weiter**.
 
@@ -138,7 +138,7 @@ QTA ist eine sitzungsbasierte Funktion, die den Sitzungszustand im `msqta`-Schem
     > [!NOTE]
     > Über die Schaltfläche **Sitzungen** kehren Sie zur Seite **Sitzungsverwaltung** zurück und behalten die aktive Sitzung in ihrem aktuellen Zustand bei.
 
-    Dieser Schritt beinhaltet 3 Teilschritte:
+    Dieser Schritt hat drei Teilschritte:
 
     1.  **Baselinedatenerfassung** fordert den Benutzer auf, den repräsentativen Workloadzyklus auszuführen, damit der Abfragespeicher eine Baseline erfassen kann. Nachdem die Workload abgeschlossen wurde, überprüfen Sie **Workloadausführung abgeschlossen**, und klicken Sie dann auf **Weiter**.
 
@@ -207,7 +207,7 @@ QTA ist eine sitzungsbasierte Funktion, die den Sitzungszustand im `msqta`-Schem
     > Suchen Sie stattdessen mit der [sys.plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)-Systemtabelle nach Planhinweislisten, und löschen Sie diese mit [sp_control_plan_guide](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md) manuell.  
   
 ## <a name="permissions"></a>Berechtigungen  
-Erfordert Mitgliedschaft bei der Rolle **db_owner**.
+Erfordert Mitgliedschaft in der Rolle **db_owner**.
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Kompatibilitätsgrade und SQL Server-Upgrades](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades)    

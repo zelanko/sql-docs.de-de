@@ -14,12 +14,12 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 253dd918fb3fec410e2bcf28d6fba7cd24786d04
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3bdc541e919e9a30d4ab043ef9c13d78a2f4b445
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522924"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327351"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Erweiterbare Schlüsselverwaltung mit Azure Key Vault (SQL Server-TDE): Setupschritte
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente
      Installieren und Starten Sie die [neueste Version von Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) (5.2.0 oder höher). Melden Sie sich beim Azure-Konto mit dem folgenden Befehl an:  
   
     ```powershell  
-    Login-AzureRmAccount  
+    Connect-AzAccount  
     ```  
   
      Die Anweisung gibt Folgendes zurück:  
@@ -83,14 +83,14 @@ SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente
     ```  
   
     > [!NOTE]  
-    >  Wenn Sie über mehrere Abonnements verfügen und ein bestimmtes zur Verwendung durch den Tresor angeben möchten, verwenden Sie `Get-AzureRmSubscription` , um die Abonnements anzuzeigen und `Select-AzureRmSubscription` , um das richtige Abonnement auszuwählen. Andernfalls sucht PowerShell standardmäßig ein Abonnement aus.  
+    >  Wenn Sie über mehrere Abonnements verfügen und ein bestimmtes zur Verwendung durch den Tresor angeben möchten, verwenden Sie `Get-AzSubscription` , um die Abonnements anzuzeigen und `Select-AzSubscription` , um das richtige Abonnement auszuwählen. Andernfalls sucht PowerShell standardmäßig ein Abonnement aus.  
   
 2.  **Erstellen Sie eine neue Ressourcengruppe**  
   
      Alle mithilfe des Azure-Ressourcen-Managers erstellten Ressourcen müssen in Ressourcengruppen enthalten sein. Erstellen Sie eine Ressourcengruppe, die Ihren Schlüsseltresor aufnehmen soll. In diesem Beispiel wird `ContosoDevRG`verwendet. Wählen Sie Ihren eigenen **eindeutigen** Ressourcengruppen- und Schlüsseltresornamen, da alle Schlüsseltresornamen global eindeutig sind.  
   
     ```powershell  
-    New-AzureRmResourceGroup -Name ContosoDevRG -Location 'East Asia'  
+    New-AzResourceGroup -Name ContosoDevRG -Location 'East Asia'  
     ```  
   
      Die Anweisung gibt Folgendes zurück:  
@@ -109,10 +109,10 @@ SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente
   
 3.  **Erstellen Sie einen Schlüsseltresor**  
   
-     Das `New-AzureRmKeyVault` -Cmdlet benötigt einen Ressourcengruppennamen, einen Schlüsseltresornamen und einen geografischen Standort. Geben Sie z. B. für einen Schlüsseltresor mit dem Namen `ContosoDevKeyVault`Folgendes ein:  
+     Das `New-AzKeyVault` -Cmdlet benötigt einen Ressourcengruppennamen, einen Schlüsseltresornamen und einen geografischen Standort. Geben Sie z. B. für einen Schlüsseltresor mit dem Namen `ContosoDevKeyVault`Folgendes ein:  
   
     ```powershell  
-    New-AzureRmKeyVault -VaultName 'ContosoDevKeyVault' `  
+    New-AzKeyVault -VaultName 'ContosoDevKeyVault' `  
        -ResourceGroupName 'ContosoDevRG' -Location 'East Asia'  
     ```  
   
@@ -152,15 +152,15 @@ SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente
     > [!IMPORTANT]  
     >  Der Azure Active Directory-Dienstprinzipal benötigt mindestens die Berechtigungen `get`, `wrapKey` und `unwrapKey` für den Schlüsseltresor.  
   
-     Verwenden Sie die **Client-ID** aus Teil I für den `ServicePrincipalName` -Parameter, wie unten dargestellt. Die `Set-AzureRmKeyVaultAccessPolicy` wird lautlos ausgeführt und gibt bei erfolgreicher Ausführung keinen Wert zurück.  
+     Verwenden Sie die **Client-ID** aus Teil I für den `ServicePrincipalName` -Parameter, wie unten dargestellt. Die `Set-AzKeyVaultAccessPolicy` wird lautlos ausgeführt und gibt bei erfolgreicher Ausführung keinen Wert zurück.  
   
     ```powershell  
-    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
+    Set-AzKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
       -ServicePrincipalName EF5C8E09-4D2A-4A76-9998-D93440D8115D `  
       -PermissionsToKeys get, wrapKey, unwrapKey  
     ```  
   
-     Rufen Sie das `Get-AzureRmKeyVault` -Cmdlet auf, um die Berechtigungen zu bestätigen. In der Ausgabe der Anweisung sollten Sie unter „Zugriffsrichtlinien“ den Namen Ihrer AAD-Anwendung als weiteren Mandanten finden, der Zugriff auf diesen Schlüsseltresor hat.  
+     Rufen Sie das `Get-AzKeyVault` -Cmdlet auf, um die Berechtigungen zu bestätigen. In der Ausgabe der Anweisung sollten Sie unter „Zugriffsrichtlinien“ den Namen Ihrer AAD-Anwendung als weiteren Mandanten finden, der Zugriff auf diesen Schlüsseltresor hat.  
   
        
 5.  **Erstellen Sie einen asymmetrischen Schlüssel im Schlüsseltresor**  
@@ -187,7 +187,7 @@ SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente
   
     -   **Softwaregeschützt:** In Software verarbeitet und in Ruhezeiten verschlüsselt. Vorgänge für softwaregeschützte Schlüssel erfolgen auf virtuellen Azure-Computern. Für Schlüssel empfohlen, die nicht in einer Produktionsumgebung verwendet werden.  
   
-    -   **HSM-geschützt** : Von einem Hardwaresicherheitsmodul (HSM) erstellt und geschützt, um zusätzliche Sicherheit zu erzielen. Die Kosten liegen bei ungefähr $ 1 pro Schlüsselversion.  
+    -   **HSM-geschützt:** Von einem Hardwaresicherheitsmodul (HSM) erstellt und geschützt, um zusätzliche Sicherheit zu erreichen. Die Kosten liegen bei ungefähr $ 1 pro Schlüsselversion.  
   
         > [!IMPORTANT]  
         >  Für den SQL Server-Connector ist es erforderlich, dass im Schlüsselnamen nur die Zeichen „a-z“, „A-Z“, „0-9“ und „-“ bei einem Zeichenlimit von 26 Zeichen verwendet werden.   
@@ -262,7 +262,7 @@ SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente
 -   [C. Fehlercodeerläuterungen für SQL Server-Connector](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixC)  
   
   
-## <a name="part-iv-configure-includessnoversionincludesssnoversion-mdmd"></a>Teil IV: Konfigurieren [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+## <a name="part-iv-configure-includessnoversionincludesssnoversion-mdmd"></a>Teil IV: Konfigurieren von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  Einen Hinweis zu den mindestens erforderlichen Berechtigungsstufen für jede Aktion in diesem Abschnitt finden Sie unter [B. Häufig gestellte Fragen (FAQ)](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB).  
   
 1.  **Starten Sie „sqlcmd.exe“ oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio**  
@@ -359,6 +359,6 @@ SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente
   
 Jetzt, da Sie die Grundkonfiguration abgeschlossen haben, erfahren Sie mehr zum [Verwenden von SQL Server-Connector mit SQL-Verschlüsselungsfunktionen](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erweiterbare Schlüsselverwaltung mit Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)   
 [SQL Server-Connector – Verwaltung und Problembehandlung](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)
