@@ -4,17 +4,17 @@ description: Dieser Artikel enthält Antworten auf häufig gestellte Fragen zu S
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/25/2018
+ms.date: 01/10/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: c45203e8524fe2df9301250afd1bef40df37bc3d
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: b17f232fc9dfb2c9d1ac663e831b8e9f78aaa3bb
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419355"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457663"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQLServer unter Linux: häufig gestellte Fragen (FAQ)
 
@@ -32,10 +32,6 @@ Die folgenden Abschnitte enthalten allgemeine Fragen und Antworten für SQL Serv
 
    SQL Server wird getestet und für die zuvor aufgeführten Distributionen unter Linux unterstützt. Andere Linux-Distributionen sind eng miteinander verknüpft und möglicherweise zum Ausführen von SQL Server (z. B. CentOS ist eng verwandt mit Red Hat Enterprise Server). Aber wenn Sie SQL Server auf einem nicht unterstützten Betriebssystem installieren möchten, lesen Sie bitte die **Supportrichtlinie** im Abschnitt der [technischer Support-Richtlinie für Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) zu verstehen, die Unterstützung Auswirkungen auf. Beachten Sie außerdem, dass einige Community, dass die Linux-Distributionen keine formale können Support zu erhalten verwaltet, wenn das zugrunde liegende Betriebssystem, das Problem ist.
 
-1. **Wie funktioniert die Lizenzierung unter Linux?**
-
-   SQL Server wird die gleiche Weise wie für Windows und Linux lizenziert. In der Tat Sie SQL Server lizenzieren, und klicken Sie dann können Sie diese Lizenz auf der Plattform Ihrer Wahl verwenden. Weitere Informationen finden Sie unter [wie SQL Server-Lizenz](https://www.microsoft.com/sql-server/sql-server-2017-pricing).
-
 1. **Ist SQL Server unter Linux, wie unter Windows?**
 
    Der Kern für SQL Server-Datenbank-Engine ist identisch für Linux, wie mit Windows. Allerdings werden einige Funktionen unter Linux derzeit nicht unterstützt. Eine Liste der Funktionen, die unter Linux nicht unterstützt werden, finden Sie unter den [nicht unterstützte Features und-Dienste](sql-server-linux-release-notes.md#Unsupported). Überprüfen Sie auch die [bekannte Probleme](sql-server-linux-release-notes.md#known-issues). Es sei denn, die in diesen Listen angegeben, werden andere SQL Server-Funktionen und Dienste unter Linux unterstützt.
@@ -47,6 +43,39 @@ Die folgenden Abschnitte enthalten allgemeine Fragen und Antworten für SQL Serv
 1. **Ich bin aus dem Windows SQL Server-Umfeld stammen. Gibt es Ressourcen, um zu erfahren, wie Sie SQL Server unter Linux verwenden?**
 
    Die [Schnellstarts](sql-server-linux-setup.md#platforms) enthalten schrittweise Anleitungen zum Installieren von SQL Server unter Linux und Ausführen von Transact-SQL-Abfragen. Andere Tutorials enthalten zusätzliche Anleitungen zur Verwendung von SQL Server unter Linux. Eine Liste der Drittanbieter-Tipps, finden Sie unter den [MSSQLTIPS Liste von SQL Server unter Linux Tipps](https://www.mssqltips.com/sql-server-tip-category/226/sql-server-on-linux/).
+
+## <a name="licensing"></a>Lizenzierung
+
+1. **Wie funktioniert die Lizenzierung unter Linux?**
+
+   SQL Server wird die gleiche Weise wie für Windows und Linux lizenziert. In der Tat Sie SQL Server lizenzieren, und klicken Sie dann können Sie diese Lizenz auf der Plattform Ihrer Wahl verwenden. Weitere Informationen finden Sie unter [wie SQL Server-Lizenz](https://www.microsoft.com/sql-server/sql-server-2017-pricing).
+
+1. **Welche Edition von SQL Server sollte ich auswählen, wenn ich bereits gekauft?**
+
+   Beim Ausführen von Mssql-Conf Setup werden die folgenden Optionen angezeigt:
+   
+   ```
+   Choose an edition of SQL Server:
+      1. Evaluation (free, no production use rights, 180-day limit)
+      2. Developer (free, no production use rights)
+      3. Express (free)
+      4. Web (PAID)
+      5. Standard (PAID)
+      6. Enterprise (PAID)
+      7. Enterprise Core (PAID)
+      8. I bought a license through a retail sales channel and have a product key to enter.
+   ```
+     
+   Wenn Sie Ihre Lizenz, die über die Volumenlizenzierung, die im Rahmen eines Enterprise Agreements oder über Ihr MSDN-Abonnement erhalten haben, müssen Sie Option 4 bis 7. Dieser Schritt fordert Sie zur Eingabe der Lizenz jedoch nicht, aber Sie müssen zuvor erworben haben die entsprechende Lizenz für Ihre Konfiguration. Wenn Sie die Standard Edition über einen Einzelhandelskanal erworben haben, wählen Sie Option 8. Diese Option fordert Sie zur Eingabe eines Schlüssels. 
+
+1. **Wie überprüfe ich die installierte Version und Edition von SQL Server unter Linux?**
+
+   Verbindung mit SQL Server-Instanz mit einem Clienttool wie z. B. **Sqlcmd**, **Mssql-Cli**, oder Visual Studio Code. Führen Sie dann die folgende Transact-SQL-Abfrage, um zu überprüfen, ob die Version und Edition von SQL Server, die Sie ausgeführt werden: 
+
+   ```sql
+   SELECT @@VERSION
+   SELECT SERVERPROPERTY('Edition')
+   ```
 
 ## <a name="installation"></a>Installation
 
@@ -69,22 +98,6 @@ Die folgenden Abschnitte enthalten allgemeine Fragen und Antworten für SQL Serv
 1. **Kann ich eine unbeaufsichtigte Installation von SQL Server unter Linux durchführen?**
 
    Ja. Eine Erläuterung der für die unbeaufsichtigte Installation, finden Sie unter [zur Installation von SQL Server unter Linux](sql-server-linux-setup.md#unattended). Finden Sie die Beispielskripts für [Red Hat](sample-unattended-install-redhat.md), [SUSE Linux Enterprise Server](sample-unattended-install-suse.md), und [Ubuntu](sample-unattended-install-ubuntu.md). Sie können auch überprüfen [dieses Beispielskript](https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/) von SQL Server Customer Advisory Teams erstellt.
-
-1. **Welche Edition von SQL Server sollte ich auswählen, wenn ich bereits gekauft?**
-
-   Wenn Sie Mssql-Conf Setup ausführen, erhalten Sie diese Optionen:  
-   `Choose an edition of SQL Server:` <br>
-`     1. Evaluation (free, no production use rights, 180-day limit)` <br>
-`     2. Developer (free, no production use rights)` <br>
-`     3. Express (free)` <br>
-`     4. Web (PAID)` <br>
-`     5. Standard (PAID)` <br>
-`     6. Enterprise (PAID)` <br>
-`     7. Enterprise Core (PAID)` <br>
-`     8. I bought a license through a retail sales channel and have a product key to enter.`
-     
-   Wenn Sie Ihre Lizenz, die über die Volumenlizenzierung, die im Rahmen eines Enterprise Agreements oder über Ihr MSDN-Abonnement erhalten haben, müssen Sie 4 bis 7 auswählen. Wenn Sie die Standard Edition über einen Einzelhandelskanal erworben haben, müssen Sie 8 auswählen. 
-
 
 ## <a name="tools"></a>Tools
 
