@@ -1,233 +1,249 @@
-- name: AlwaysOn-Verfügbarkeitsgruppen
-  href: always-on-availability-groups-sql-server.md
-- name: 'Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen'
-  href: prereqs-restrictions-recommendations-always-on-availability.md
-- name: Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen
-  href: failover-clustering-and-always-on-availability-groups-sql-server.md
-- name: Erste Schritte mit AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
-  href: getting-started-with-always-on-availability-groups-sql-server.md
-- name: Übersicht über AlwaysOn-Verfügbarkeitsgruppen
+- name: Übersicht
   href: overview-of-always-on-availability-groups-sql-server.md
   items:
+    - name: 'Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen'
+      href: prereqs-restrictions-recommendations-always-on-availability.md
     - name: Verfügbarkeitsmodi
       href: availability-modes-always-on-availability-groups.md
+- name: Schnellstart
+  items:
+    - name: Erste Schritte
+      href: getting-started-with-always-on-availability-groups-sql-server.md
+    - name: Erstellen der Verfügbarkeitsgruppe
       items:
+        - name: Assistent
+          href: use-the-availability-group-wizard-sql-server-management-studio.md
+        - name: Dialogfeld
+          href: use-the-new-availability-group-dialog-box-sql-server-management-studio.md
+        - name: Transact-SQL
+          href: create-an-availability-group-transact-sql.md
+        - name: PowerShell
+          href: create-an-availability-group-sql-server-powershell.md
+        - name: Virtuelle Azure-Computer
+          href: 'https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview'
+- name: Vorgehensweise
+  items:
+    - name: Konfiguration
+      href: creation-and-configuration-of-availability-groups-sql-server.md
+      items:
+        - name: Aktivieren und Deaktivieren von AlwaysOn-Verfügbarkeitsgruppen
+          href: enable-and-disable-always-on-availability-groups-sql-server.md
+        - name: Erstellen eines Endpunkts für Always On-Verfügbarkeitsgruppen (PowerShell)
+          href: database-mirroring-always-on-availability-groups-powershell.md
+        - name: Angeben der Endpunkt-URL beim Hinzufügen oder Ändern eines Verfügbarkeitsreplikats
+          href: specify-endpoint-url-adding-or-modifying-availability-replica.md
+        - name: Verknüpfen eines sekundären Replikats mit einer Verfügbarkeitsgruppe
+          href: join-a-secondary-replica-to-an-availability-group-sql-server.md
+        - name: Starten der Datenverschiebung auf einer sekundären AlwaysOn-Datenbank
+          href: start-data-movement-on-an-always-on-secondary-database-sql-server.md
+        - name: Manuelles Vorbereiten einer sekundären Datenbank auf eine Verfügbarkeitsgruppe
+          href: manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md
+        - name: Verknüpfen einer sekundären Datenbank mit einer Verfügbarkeitsgruppe
+          href: join-a-secondary-database-to-an-availability-group-sql-server.md
+        - name: Hinzufügen eines sekundären Replikats zu einer Verfügbarkeitsgruppe
+          href: add-a-secondary-replica-to-an-availability-group-sql-server.md
+        - name: Verwenden des Assistenten zum Hinzufügen von Replikaten zu Verfügbarkeitsgruppen
+          href: use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md
+        - name: Verwenden des Assistenten zum Hinzufügen von Azure-Replikaten
+          href: use-the-add-azure-replica-wizard-sql-server.md
+        - name: Hinzufügen einer Datenbank zu einer Verfügbarkeitsgruppe
+          href: availability-group-add-a-database.md
+        - name: Verwenden des Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen
+          href: availability-group-add-database-to-group-wizard.md
+        - name: Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners
+          href: create-or-configure-an-availability-group-listener-sql-server.md
+        - name: Konfigurieren des schreibgeschützten Routing für eine Verfügbarkeitsgruppe
+          href: configure-read-only-routing-for-an-availability-group-sql-server.md
+        - name: Entfernen einer sekundären Datenbank aus einer Verfügbarkeitsgruppe (SQL Server)
+          href: remove-a-secondary-database-from-an-availability-group-sql-server.md
+        - name: Entfernen einer primären Datenbank aus einer Verfügbarkeitsgruppe
+          href: remove-a-primary-database-from-an-availability-group-sql-server.md
+        - name: Entfernen einer sekundären Replikats aus einer Verfügbarkeitsgruppe
+          href: remove-a-secondary-replica-from-an-availability-group-sql-server.md
+        - name: Entfernen einer Verfügbarkeitsgruppe
+          href: remove-an-availability-group-sql-server.md
+        - name: Entfernen eines Verfügbarkeitsgruppenlisteners
+          href: remove-an-availability-group-listener-sql-server.md
+        - name: Problembehandlung für die AlwaysOn-Verfügbarkeitsgruppenkonfiguration
+          href: troubleshoot-always-on-availability-groups-configuration-sql-server.md
+    - name: Verwaltung
+      items:
+        - name: Ausführen eines geplanten manuellen Failovers einer Verfügbarkeitsgruppe
+          href: perform-a-planned-manual-failover-of-an-availability-group-sql-server.md
+        - name: Ausführen eines erzwungenen manuellen Failovers einer Verfügbarkeitsgruppe
+          href: perform-a-forced-manual-failover-of-an-availability-group-sql-server.md
+        - name: Verwenden des Assistenten für Failover-Verfügbarkeitsgruppen
+          href: use-the-fail-over-availability-group-wizard-sql-server-management-studio.md
         - name: Ändern des Verfügbarkeitsmodus eines Verfügbarkeitsreplikats
           href: change-the-availability-mode-of-an-availability-replica-sql-server.md
-    - name: Failover und Failovermodi
-      href: failover-and-failover-modes-always-on-availability-groups.md
-    - name: Ändern des Failovermodus eines Verfügbarkeitsreplikats
-      href: change-the-failover-mode-of-an-availability-replica-sql-server.md
-    - name: Flexible Failoverrichtlinie für automatisches Failover einer Verfügbarkeitsgruppe
-      href: flexible-automatic-failover-policy-availability-group.md
-    - name: Konfigurieren der flexiblen Failoverrichtlinie zum Steuern der Bedingungen für ein automatisches Failover
-      href: configure-flexible-automatic-failover-policy.md
-    - name: Mögliche Fehler bei Sitzungen zwischen Verfügbarkeitsreplikaten (SQL Server)
-      href: possible-failures-during-sessions-between-availability-replicas-sql-server.md
-    - name: 'Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten'
-      href: active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md
-    - name: Konfigurieren der Sicherung auf Verfügbarkeitsreplikaten
-      href: configure-backup-on-availability-replicas-sql-server.md
-    - name: 'Aktive sekundäre Replikate: Lesbare sekundäre Replikate'
-      href: active-secondaries-readable-secondary-replicas-always-on-availability-groups.md
-    - name: Informationen zum Clientverbindungszugriff auf Verfügbarkeitsreplikate
-      href: about-client-connection-access-to-availability-replicas-sql-server.md
-    - name: Konfigurieren des schreibgeschützten Zugriffs auf ein Verfügbarkeitsreplikat
-      href: configure-read-only-access-on-an-availability-replica-sql-server.md
-    - name: 'Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover'
-      href: ../../listeners-client-connectivity-application-failover.md
-    - name: Always On-Clientkonnektivität
-      href: always-on-client-connectivity-sql-server.md
-    - name: Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners
-      href: create-or-configure-an-availability-group-listener-sql-server.md
-    - name: Dialogfeld IP-Adresse hinzufügen
-      href: add-ip-address-dialog-box-sql-server-management-studio.md
-    - name: Konfigurieren des schreibgeschützten Routing für eine Verfügbarkeitsgruppe
-      href: configure-read-only-routing-for-an-availability-group-sql-server.md
-    - name: Entfernen eines Verfügbarkeitsgruppenlisteners
-      href: remove-an-availability-group-listener-sql-server.md
+        - name: Ändern des Failovermodus eines Verfügbarkeitsreplikats
+          href: change-the-failover-mode-of-an-availability-replica-sql-server.md
+        - name: Konfigurieren der flexiblen Failoverrichtlinie zum Steuern der Bedingungen für ein automatisches Failover
+          href: configure-flexible-automatic-failover-policy.md
+        - name: Konfigurieren der Sicherung auf Verfügbarkeitsreplikaten
+          href: configure-backup-on-availability-replicas-sql-server.md
+        - name: Konfigurieren des schreibgeschützten Zugriffs auf ein Verfügbarkeitsreplikat
+          href: configure-read-only-access-on-an-availability-replica-sql-server.md
+        - name: Anhalten einer Verfügbarkeitsdatenbank
+          href: suspend-an-availability-database-sql-server.md
+        - name: Fortsetzen einer Verfügbarkeitsdatenbank
+          href: resume-an-availability-database-sql-server.md
+        - name: Ändern des Sitzungstimeouts für ein Verfügbarkeitsreplikat
+          href: change-the-session-timeout-period-for-an-availability-replica-sql-server.md
+        - name: Offlineschalten einer Verfügbarkeitsgruppe
+          href: ../../take-an-availability-group-offline-sql-server.md
+        - name: Ändern des HADR-Clusterkontexts der Serverinstanz
+          href: change-the-hadr-cluster-context-of-server-instance-sql-server.md
+        - name: Problembehandlung bei einem fehlgeschlagenen Vorgang zum Hinzufügen einer Datei (AlwaysOn-Verfügbarkeitsgruppen)
+          href: troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md
+    - name: Überwachung
+      href: monitoring-of-availability-groups-sql-server.md
+      items:
+        - name: Überwachen von Verfügbarkeitsgruppen (T-SQL)
+          href: monitor-availability-groups-transact-sql.md
+        - name: Überwachen von Verfügbarkeitsgruppen anhand der Details im Objekt-Explorer
+          href: use-object-explorer-details-to-monitor-availability-groups.md
+        - name: Anzeigen von Verfügbarkeitsgruppeneigenschaften
+          href: view-availability-group-properties-sql-server.md
+        - name: Anzeigen von Verfügbarkeitsreplikateigenschaften
+          href: view-availability-replica-properties-sql-server.md
+        - name: Anzeigen von Eigenschaften des Verfügbarkeitsgruppenlisteners
+          href: view-availability-group-listener-properties-sql-server.md
+- name: Konzepte
+  items:
+    - name: Konfiguration
+      items:
+        - name: Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen
+          href: failover-clustering-and-always-on-availability-groups-sql-server.md
+        - name: Failover und Failovermodi
+          href: failover-and-failover-modes-always-on-availability-groups.md
+        - name: Flexible Failoverrichtlinie für automatisches Failover einer Verfügbarkeitsgruppe
+          href: flexible-automatic-failover-policy-availability-group.md
+        - name: Verwaltung von Anmeldungen und Aufträgen für die Datenbanken einer Verfügbarkeitsgruppe
+          href: ../../logins-and-jobs-for-availability-group-databases.md
+    - name: Verwaltung
+      href: administration-of-an-availability-group-sql-server.md
+      items:
+        - name: Mögliche Fehler bei Sitzungen zwischen Verfügbarkeitsreplikaten (SQL Server)
+          href: possible-failures-during-sessions-between-availability-replicas-sql-server.md
+        - name: Sicherung auf sekundären Replikaten
+          href: active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md
+        - name: Lesbare sekundäre Replikate
+          href: active-secondaries-readable-secondary-replicas-always-on-availability-groups.md
+        - name: Upgrade und Update von Verfügbarkeitsgruppenservern bei minimaler Downtime und minimalem Datenverlust
+          href: upgrading-always-on-availability-group-replica-instances.md
+    - name: Connectivity
+      items:
+        - name: Clientverbindung
+          href: about-client-connection-access-to-availability-replicas-sql-server.md
+        - name: Clientkonnektivität
+          href: ../../listeners-client-connectivity-application-failover.md
+        - name: Always On-Clientkonnektivität
+          href: always-on-client-connectivity-sql-server.md
+    - name: Interoperabilität
+      href: always-on-availability-groups-interoperability-sql-server.md
+      items:
+        - name: Eigenständige Datenbanken bei Always On-Verfügbarkeitsgruppen
+          href: contained-databases-with-always-on-availability-groups-sql-server.md
+        - name: Datenbankübergreifende Transaktionen nicht unterstützt für Datenbankspiegelungs- oder AlwaysOn-Verfügbarkeitsgruppen
+          href: transactions-always-on-availability-and-database-mirroring.md
+        - name: Datenbankmomentaufnahmen bei AlwaysOn-Verfügbarkeitsgruppen
+          href: database-snapshots-with-always-on-availability-groups-sql-server.md
+        - name: Verschlüsselte Datenbanken bei AlwaysOn-Verfügbarkeitsgruppen
+          href: encrypted-databases-with-always-on-availability-groups-sql-server.md
+        - name: FILESTREAM und FileTable bei AlwaysOn-Verfügbarkeitsgruppen
+          href: filestream-and-filetable-with-always-on-availability-groups-sql-server.md
+        - name: Voraussetzungen für das Migrieren vom Protokollversand zu AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
+          href: prereqs-migrating-log-shipping-to-always-on-availability-groups.md
+        - name: Remote Blob Store (RBS) und AlwaysOn-Verfügbarkeitsgruppen
+          href: remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md
+        - name: Konfigurieren der Replikation für Always On-Verfügbarkeitsgruppen
+          href: configure-replication-for-always-on-availability-groups-sql-server.md
+        - name: Warten einer AlwaysOn-Veröffentlichungsdatenbank
+          href: maintaining-an-always-on-publication-database-sql-server.md
+        - name: Replikationsabonnenten und AlwaysOn-Verfügbarkeitsgruppen
+          href: replication-subscribers-and-always-on-availability-groups-sql-server.md
+        - name: 'Replikation, Änderungsnachverfolgung, Change Data Capture und AlwaysOn-Verfügbarkeitsgruppen'
+          href: replicate-track-change-data-capture-always-on-availability.md
+        - name: Analysis Services mit Always On-Verfügbarkeitsgruppen
+          href: analysis-services-with-always-on-availability-groups.md
+        - name: Reporting Services mit AlwaysOn-Verfügbarkeitsgruppen
+          href: reporting-services-with-always-on-availability-groups-sql-server.md
+        - name: Service Broker mit AlwaysOn-Verfügbarkeitsgruppen
+          href: service-broker-with-always-on-availability-groups-sql-server.md
+- name: Verweis
+  items:
     - name: Übersicht über Transact-SQL-Anweisungen für AlwaysOn-Verfügbarkeitsgruppen
       href: transact-sql-statements-for-always-on-availability-groups.md
     - name: Übersicht über PowerShell-Cmdlets für AlwaysOn-Verfügbarkeitsgruppen
       href: overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md
-- name: Konfiguration einer Serverinstanz für Always On-Verfügbarkeitsgruppen
-  href: configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md
-  items:
-    - name: Aktivieren und Deaktivieren von AlwaysOn-Verfügbarkeitsgruppen
-      href: enable-and-disable-always-on-availability-groups-sql-server.md
-    - name: Erstellen eines Datenbankspiegelungs-Endpunkts für AlwaysOn-Verfügbarkeitsgruppen (SQL Server PowerShell)
-      href: database-mirroring-always-on-availability-groups-powershell.md
-    - name: Problembehandlung für die AlwaysOn-Verfügbarkeitsgruppenkonfiguration
-      href: troubleshoot-always-on-availability-groups-configuration-sql-server.md
-- name: Erstellung und Konfiguration von Verfügbarkeitsgruppen
-  href: creation-and-configuration-of-availability-groups-sql-server.md
-  items:
-    - name: Verwenden des Assistenten für Verfügbarkeitsgruppen
-      href: use-the-availability-group-wizard-sql-server-management-studio.md
-    - name: Seite Namen der Verfügbarkeitsgruppe angeben (Assistent für neue Verfügbarkeitsgruppen/Assistent zum Hinzufügen von Datenbanken)
-      href: specify-availability-group-name-page.md
-    - name: Seite Datenbanken auswählen (Assistent für neue Verfügbarkeitsgruppen/Assistent zum Hinzufügen von Datenbanken)
-      href: select-databases-page-new-availability-group-wizard-and-add-database-wizard.md
-    - name: 'Seite „Replikate angeben“ (Assistent für neue Verfügbarkeitsgruppen: Assistent zum Hinzufügen von Replikaten)'
-      href: specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md
-    - name: Seite 'Anfängliche Datensynchronisierung auswählen' (AlwaysOn-Verfügbarkeitsgruppen-Assistenten)
-      href: select-initial-data-synchronization-page-always-on-availability-group-wizards.md
-    - name: Seite 'Überprüfung' (AlwaysOn-Verfügbarkeitsgruppen-Assistenten)
-      href: validation-page-always-on-availability-group-wizards.md
-    - name: Seite 'Zusammenfassung' (AlwaysOn-Verfügbarkeitsgruppen-Assistenten)
-      href: summary-page-always-on-availability-group-wizards.md
-    - name: Seite 'Status' (AlwaysOn-Verfügbarkeitsgruppen-Assistenten)
-      href: progress-page-always-on-availability-group-wizards.md
-    - name: Seite 'Ergebnisse' (AlwaysOn-Verfügbarkeitsgruppen-Assistenten)
-      href: results-page-always-on-availability-group-wizards.md
-    - name: Verwenden der neuen Verfügbarkeitsgruppe (Dialogfeld)
-      href: use-the-new-availability-group-dialog-box-sql-server-management-studio.md
-    - name: Erstellen einer Verfügbarkeitsgruppe (Transact-SQL)
-      href: create-an-availability-group-transact-sql.md
-    - name: Erstellen einer Verfügbarkeitsgruppe (SQL Server PowerShell)
-      href: create-an-availability-group-sql-server-powershell.md
-    - name: Angeben der Endpunkt-URL beim Hinzufügen oder Ändern eines Verfügbarkeitsreplikats
-      href: specify-endpoint-url-adding-or-modifying-availability-replica.md
-    - name: Verknüpfen eines sekundären Replikats mit einer Verfügbarkeitsgruppe
-      href: join-a-secondary-replica-to-an-availability-group-sql-server.md
-    - name: Starten der Datenverschiebung auf einer sekundären AlwaysOn-Datenbank
-      href: start-data-movement-on-an-always-on-secondary-database-sql-server.md
-    - name: Manuelles Vorbereiten einer sekundären Datenbank auf eine Verfügbarkeitsgruppe
-      href: manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md
-    - name: Verknüpfen einer sekundären Datenbank mit einer Verfügbarkeitsgruppe
-      href: join-a-secondary-database-to-an-availability-group-sql-server.md
-    - name: Verwaltung von Anmeldungen und Aufträgen für die Datenbanken einer Verfügbarkeitsgruppe
-      href: ../../logins-and-jobs-for-availability-group-databases.md
-- name: Verwaltung einer Verfügbarkeitsgruppe
-  href: administration-of-an-availability-group-sql-server.md
-  items:
-    - name: Ausführen eines geplanten manuellen Failovers einer Verfügbarkeitsgruppe
-      href: perform-a-planned-manual-failover-of-an-availability-group-sql-server.md
-    - name: Ausführen eines erzwungenen manuellen Failovers einer Verfügbarkeitsgruppe
-      href: perform-a-forced-manual-failover-of-an-availability-group-sql-server.md
-    - name: Verwenden des Assistenten für Failover-Verfügbarkeitsgruppen
-      href: use-the-fail-over-availability-group-wizard-sql-server-management-studio.md
-    - name: Hinzufügen einer Datenbank zu einer Verfügbarkeitsgruppe
-      href: availability-group-add-a-database.md
-    - name: Verwenden des Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen
-      href: availability-group-add-database-to-group-wizard.md
-- name: Seite „Mit vorhandenen sekundären Replikaten verbinden“ (Assistent zum Hinzufügen von Replikaten und Assistent zum Hinzufügen von Datenbanken)
-  href: connect-to-existing-secondary-replicas-page.md
-  items:
-    - name: Anhalten einer Verfügbarkeitsdatenbank
-      href: suspend-an-availability-database-sql-server.md
-    - name: Fortsetzen einer Verfügbarkeitsdatenbank
-      href: resume-an-availability-database-sql-server.md
-    - name: Entfernen einer sekundären Datenbank aus einer Verfügbarkeitsgruppe (SQL Server)
-      href: remove-a-secondary-database-from-an-availability-group-sql-server.md
-    - name: Entfernen einer primären Datenbank aus einer Verfügbarkeitsgruppe
-      href: remove-a-primary-database-from-an-availability-group-sql-server.md
-    - name: Hinzufügen eines sekundären Replikats zu einer Verfügbarkeitsgruppe
-      href: add-a-secondary-replica-to-an-availability-group-sql-server.md
-    - name: Verwenden des Assistenten zum Hinzufügen von Replikaten zu Verfügbarkeitsgruppen
-      href: use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md
-    - name: Verwenden des Assistenten zum Hinzufügen von Azure-Replikaten
-      href: use-the-add-azure-replica-wizard-sql-server.md
-    - name: Ändern des Sitzungstimeouts für ein Verfügbarkeitsreplikat
-      href: change-the-session-timeout-period-for-an-availability-replica-sql-server.md
-    - name: Entfernen einer sekundären Replikats aus einer Verfügbarkeitsgruppe
-      href: remove-a-secondary-replica-from-an-availability-group-sql-server.md
-    - name: Entfernen einer Verfügbarkeitsgruppe
-      href: remove-an-availability-group-sql-server.md
-    - name: Offlineschalten einer Verfügbarkeitsgruppe
-      href: ../../take-an-availability-group-offline-sql-server.md
-    - name: Ändern des HADR-Clusterkontexts der Serverinstanz
-      href: change-the-hadr-cluster-context-of-server-instance-sql-server.md
-    - name: Problembehandlung bei einem fehlgeschlagenen Vorgang zum Hinzufügen einer Datei (AlwaysOn-Verfügbarkeitsgruppen)
-      href: troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md
-- name: Upgrade und Update von Verfügbarkeitsgruppenservern bei minimaler Downtime und minimalem Datenverlust
-  href: upgrading-always-on-availability-group-replica-instances.md
-- name: Always On-Richtlinien für Betriebsprobleme mit Always On-Verfügbarkeitsgruppen
-  href: always-on-policies-for-operational-issues-always-on-availability.md
-  items:
-    - name: Verwenden von AlwaysOn-Richtlinien zum Anzeigen des Zustands einer Verfügbarkeitsgruppe
-      href: use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md
-    - name: Verwenden des AlwaysOn-Dashboards (SQL Server Management Studio)
-      href: use-the-always-on-dashboard-sql-server-management-studio.md
-    - name: 'Optionen (SQL Server AlwaysOn, Dashboardseite)'
-      href: options-sql-server-always-on-dashboard-page.md
-    - name: Richtlinienauswertungsergebnis (AlwaysOn)
-      href: policy-evaluation-result-always-on.md
-    - name: WSFC-Clusterdienst ist offline
-      href: wsfc-cluster-service-is-offline.md
-    - name: Verfügbarkeitsgruppe ist offline
-      href: availability-group-is-offline.md
-    - name: Verfügbarkeitsgruppe nicht bereit für automatischen Failover
-      href: availability-group-is-not-ready-for-automatic-failover.md
-    - name: Einige Verfügbarkeitsreplikate synchronisieren keine Daten
-      href: some-availability-replicas-are-not-synchronizing-data.md
-    - name: Einige synchrone Replikate wurden nicht synchronisiert
-      href: some-synchronous-replicas-are-not-synchronized.md
-    - name: Einige Verfügbarkeitsreplikate haben keine fehlerfreie Rolle
-      href: some-availability-replicas-do-not-have-a-healthy-role.md
-    - name: Einige Verfügbarkeitsreplikate sind getrennt
-      href: some-availability-replicas-are-disconnected.md
-    - name: Verfügbarkeitsreplikat hat keine fehlerfreie Rolle
-      href: availability-replica-does-not-have-a-healthy-role.md
-    - name: Verfügbarkeitsreplikat wird getrennt
-      href: availability-replica-is-disconnected.md
-    - name: Datensynchronisierungsstatus der Verfügbarkeitsdatenbank ist nicht fehlerfrei
-      href: data-synchronization-state-of-availability-database-is-not-healthy.md
-    - name: Verfügbarkeitsreplikat ist nicht verknüpft
-      href: availability-replica-is-not-joined.md
-    - name: Verfügbarkeitsdatenbank angehalten
-      href: availability-database-is-suspended.md
-    - name: Sekundäre Datenbank ist nicht verknüpft
-      href: secondary-database-is-not-joined.md
-    - name: Datensynchronisierungsstatus einer Verfügbarkeitsdatenbank ist nicht fehlerfrei
-      href: data-synchronization-state-of-some-availability-database-is-not-healthy.md
-- name: Überwachen von Verfügbarkeitsgruppen
-  href: monitoring-of-availability-groups-sql-server.md
-  items:
-    - name: Überwachen von Verfügbarkeitsgruppen (Transact-SQL)
-      href: monitor-availability-groups-transact-sql.md
-    - name: Verwenden der Details zum Objekt-Explorer zum Überwachen von Verfügbarkeitsgruppen (SQL Server Management Studio)
-      href: use-object-explorer-details-to-monitor-availability-groups.md
-    - name: Anzeigen von Verfügbarkeitsgruppeneigenschaften
-      href: view-availability-group-properties-sql-server.md
-    - name: „Eigenschaften der Verfügbarkeitsgruppe“ und „Neue Verfügbarkeitsgruppe“ (Seite „Allgemein“)
+    - name: Verfügbarkeitsgruppenrichtlinien
+      href: always-on-policies-for-operational-issues-always-on-availability.md
+      items:
+        - name: Verwenden von AlwaysOn-Richtlinien zum Anzeigen des Zustands einer Verfügbarkeitsgruppe
+          href: use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md
+        - name: Verwenden des AlwaysOn-Dashboards (SQL Server Management Studio)
+          href: use-the-always-on-dashboard-sql-server-management-studio.md
+        - name: 'Optionen (SQL Server AlwaysOn, Dashboardseite)'
+          href: options-sql-server-always-on-dashboard-page.md
+        - name: Richtlinienauswertungsergebnis (AlwaysOn)
+          href: policy-evaluation-result-always-on.md
+        - name: WSFC-Clusterdienst ist offline
+          href: wsfc-cluster-service-is-offline.md
+        - name: Verfügbarkeitsgruppe ist offline
+          href: availability-group-is-offline.md
+        - name: Verfügbarkeitsgruppe nicht bereit für automatischen Failover
+          href: availability-group-is-not-ready-for-automatic-failover.md
+        - name: Einige Verfügbarkeitsreplikate synchronisieren keine Daten
+          href: some-availability-replicas-are-not-synchronizing-data.md
+        - name: Einige synchrone Replikate wurden nicht synchronisiert
+          href: some-synchronous-replicas-are-not-synchronized.md
+        - name: Einige Verfügbarkeitsreplikate haben keine fehlerfreie Rolle
+          href: some-availability-replicas-do-not-have-a-healthy-role.md
+        - name: Einige Verfügbarkeitsreplikate sind getrennt
+          href: some-availability-replicas-are-disconnected.md
+        - name: Verfügbarkeitsreplikat hat keine fehlerfreie Rolle
+          href: availability-replica-does-not-have-a-healthy-role.md
+        - name: Verfügbarkeitsreplikat wird getrennt
+          href: availability-replica-is-disconnected.md
+        - name: Datensynchronisierungsstatus der Verfügbarkeitsdatenbank ist nicht fehlerfrei
+          href: data-synchronization-state-of-availability-database-is-not-healthy.md
+        - name: Verfügbarkeitsreplikat ist nicht verknüpft
+          href: availability-replica-is-not-joined.md
+        - name: Verfügbarkeitsdatenbank angehalten
+          href: availability-database-is-suspended.md
+        - name: Sekundäre Datenbank ist nicht verknüpft
+          href: secondary-database-is-not-joined.md
+        - name: Datensynchronisierungsstatus einer Verfügbarkeitsdatenbank ist nicht fehlerfrei
+          href: data-synchronization-state-of-some-availability-database-is-not-healthy.md
+    - name: Eigenschaften von Verfügbarkeitsgruppen
       href: availability-group-properties-new-availability-group-general-page.md
-    - name: 'Eigenschaften der Verfügbarkeitsgruppe: Neue Verfügbarkeitsgruppe (Seite Sicherungseinstellungen)'
-      href: availability-group-properties-new-availability-group-backup-preferences-page.md
-    - name: Anzeigen von Verfügbarkeitsreplikateigenschaften
-      href: view-availability-replica-properties-sql-server.md
-    - name: Eigenschaften des Verfügbarkeitsreplikats (Seite Allgemein)
-      href: availability-replica-properties-general-page.md
-    - name: Anzeigen von Eigenschaften des Verfügbarkeitsgruppenlisteners
-      href: view-availability-group-listener-properties-sql-server.md
-- name: 'Always On-Verfügbarkeitsgruppen: Interoperabilität'
-  href: always-on-availability-groups-interoperability-sql-server.md
-  items:
-    - name: Eigenständige Datenbanken bei Always On-Verfügbarkeitsgruppen
-      href: contained-databases-with-always-on-availability-groups-sql-server.md
-    - name: Datenbankübergreifende Transaktionen nicht unterstützt für Datenbankspiegelungs- oder AlwaysOn-Verfügbarkeitsgruppen
-      href: transactions-always-on-availability-and-database-mirroring.md
-    - name: Datenbankmomentaufnahmen bei AlwaysOn-Verfügbarkeitsgruppen
-      href: database-snapshots-with-always-on-availability-groups-sql-server.md
-    - name: Verschlüsselte Datenbanken bei AlwaysOn-Verfügbarkeitsgruppen
-      href: encrypted-databases-with-always-on-availability-groups-sql-server.md
-    - name: FILESTREAM und FileTable bei AlwaysOn-Verfügbarkeitsgruppen
-      href: filestream-and-filetable-with-always-on-availability-groups-sql-server.md
-    - name: Voraussetzungen für das Migrieren vom Protokollversand zu AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
-      href: prereqs-migrating-log-shipping-to-always-on-availability-groups.md
-    - name: Remote Blob Store (RBS) und AlwaysOn-Verfügbarkeitsgruppen
-      href: remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md
-    - name: Konfigurieren der Replikation für Always On-Verfügbarkeitsgruppen
-      href: configure-replication-for-always-on-availability-groups-sql-server.md
-    - name: Warten einer AlwaysOn-Veröffentlichungsdatenbank
-      href: maintaining-an-always-on-publication-database-sql-server.md
-    - name: Replikationsabonnenten und AlwaysOn-Verfügbarkeitsgruppen
-      href: replication-subscribers-and-always-on-availability-groups-sql-server.md
-    - name: 'Replikation, Änderungsnachverfolgung, Change Data Capture und AlwaysOn-Verfügbarkeitsgruppen'
-      href: replicate-track-change-data-capture-always-on-availability.md
-    - name: Analysis Services mit Always On-Verfügbarkeitsgruppen
-      href: analysis-services-with-always-on-availability-groups.md
-    - name: Reporting Services mit AlwaysOn-Verfügbarkeitsgruppen
-      href: reporting-services-with-always-on-availability-groups-sql-server.md
-    - name: Service Broker mit AlwaysOn-Verfügbarkeitsgruppen
-      href: service-broker-with-always-on-availability-groups-sql-server.md
+      items:
+        - name: Eigenschaften des Verfügbarkeitsreplikats (Seite Allgemein)
+          href: availability-replica-properties-general-page.md
+        - name: 'Eigenschaften von Verfügbarkeitsgruppen: Neue Verfügbarkeitsgruppe (Seite Sicherungseinstellungen)'
+          href: availability-group-properties-new-availability-group-backup-preferences-page.md
+    - name: Assistent für Verfügbarkeitsgruppen
+      items:
+        - name: Dialogfeld IP-Adresse hinzufügen
+          href: add-ip-address-dialog-box-sql-server-management-studio.md
+        - name: Seite „Namen der Verfügbarkeitsgruppe angeben“
+          href: specify-availability-group-name-page.md
+        - name: Seite „Datenbanken auswählen“
+          href: select-databases-page-new-availability-group-wizard-and-add-database-wizard.md
+        - name: Seite „Replikate angeben“
+          href: specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md
+        - name: Seite „Anfängliche Datensynchronisierung auswählen“
+          href: select-initial-data-synchronization-page-always-on-availability-group-wizards.md
+        - name: Überprüfung (Seite)
+          href: validation-page-always-on-availability-group-wizards.md
+        - name: Seite "Zusammenfassung"
+          href: summary-page-always-on-availability-group-wizards.md
+        - name: Status (Seite)
+          href: progress-page-always-on-availability-group-wizards.md
+        - name: Ergebnisse (Seite)
+          href: results-page-always-on-availability-group-wizards.md
+        - name: Verwenden der neuen Verfügbarkeitsgruppe (Dialogfeld)
+          href: use-the-new-availability-group-dialog-box-sql-server-management-studio.md
+        - name: Seite „Mit vorhandenen sekundären Replikaten verbinden“ (Assistent zum Hinzufügen von Replikaten und Assistent zum Hinzufügen von Datenbanken)
+          href: connect-to-existing-secondary-replicas-page.md

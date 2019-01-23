@@ -34,13 +34,24 @@
           href: breaking-changes-to-management-tools-features-in-sql-server-2014.md
         - name: Verhaltensänderungen an Funktionen der Verwaltungstools in SQL Server 2014
           href: behavior-changes-to-management-tools-features-in-sql-server-2014.md
+- name: Geschäftskontinuität
+  href: ../sql-server/failover-clusters/high-availability-solutions-sql-server.md
+  items:
+    - name: AlwaysOn-Verfügbarkeitsgruppen
+      href: availability-groups/windows/toc.yml
+    - name: Failoverclusterinstanz
+      href: ../sql-server/failover-clusters/toc.yml
+    - name: Datenbankspiegelung
+      href: database-mirroring/toc.yml
+    - name: Protokollversand +
+      href: log-shipping/toc.yml
 - name: Datenbank-Engine-Funktionen und Tasks
   href: database-engine-features-and-tasks.md
 - name: Datenbank-Engine-Instanzen (SQL Server)
   href: configure-windows/database-engine-instances-sql-server.md
   items:
     - name: Konfigurieren von Datenbank-Engine-Instanzen +
-      href: configure-windows/configure-database-engine-instances-sql-server.md
+      href: configure-windows/toc.yml
     - name: Unterstützung von Sortierungen und Unicode +
       href: ../relational-databases/collations/collation-and-unicode-support.md
     - name: Verbindungsserver (Datenbank-Engine)
@@ -123,12 +134,6 @@
       items:
         - name: Öffnen des Aktivitätsmonitors (SQL Server Management Studio)
           href: ../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md
-- name: Always On-Verfügbarkeitsgruppen +
-  href: availability-groups/windows/always-on-availability-groups-sql-server.md
-- name: Der Datenbankspiegelungs-Endpunkt +
-  href: database-mirroring/the-database-mirroring-endpoint-sql-server.md
-- name: Informationen zum Protokollversand +
-  href: log-shipping/about-log-shipping-sql-server.md
 - name: Security Center für SQL Server-Datenbank-Engine und Azure SQL-Datenbank +
   href: ../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md
 - name: Technische Referenz
