@@ -1,7 +1,7 @@
 ---
 title: sys.query_store_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 01/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea7c955718dbe6d2437b44b915057fc095151dc4
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 8a1b27787c1b987c4fc881c3d1e170efae937670
+ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419795"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54838097"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -43,20 +43,20 @@ ms.locfileid: "54419795"
 |**compatibility_level**|**smallint**|Der Kompatibilitätsgrad der Datenbank, die in der Abfrage verwiesen wird.|  
 |**query_plan_hash**|**binary(8)**|MD5-Hash des einzelnen Plans.|  
 |**query_plan**|**nvarchar(max)**|Showplan XML für den Abfrageplan.|  
-|**is_online_index_plan**|**bit**|Plan wurde während einer onlineindexerstellung verwendet.|  
-|**is_trivial_plan**|**bit**|Plan ist ein trivialer Plan (die Ausgabe in Phase 0 der Abfrageoptimierer).|  
-|**is_parallel_plan**|**bit**|Plan ist parallel.|  
-|**is_forced_plan**|**bit**|Plan wird markiert, da erzwungen, wenn Benutzer die gespeicherte Prozedur ausführt **sys.sp_query_store_force_plan**. Nutzungsplanerzwingungsmechanismus *garantiert keine* dieser verwendet genau diesen Plan für die Abfrage verweist **Query_id**. Bewirkt, dass die Abfrage erneut kompiliert werden und in der Regel erzeugt genau den gleichen oder ähnlichen Plan für den Plan aus, auf die verwiesen wird durch das Erzwingen eines Plans **Plan_id**. Wenn das Erzwingen eines Plans nicht gelingt, **Force_failure_count** wird erhöht, und **Last_force_failure_reason** mit Fehlerursache aufgefüllt wird.|  
-|**is_natively_compiled**|**bit**|Plan enthält Speicheroptimierte systemintern kompilierte Prozeduren. (0 = FALSE, 1 = TRUE).|  
-|**force_failure_count**|**bigint**|Anzahl der Fälle, in denen dieser Plan erzwingen ein Fehler aufgetreten ist. Er kann erhöht werden, nur, wenn die Abfrage erneut kompiliert wird (*nicht bei jeder Ausführung*). Es auf 0 zurückgesetzt wird jedes Mal **Is_plan_forced** ändert sich von **"false"** zu **"true"**.|  
-|**last_force_failure_reason**|**int**|Der Grund, warum das Erzwingen eines Plans fehlgeschlagen ist.<br /><br /> 0: kein Fehler, die andernfalls Fehlernummer des Fehlers, der verursacht hat, der erzwungen wird fehlschlagen<br /><br /> 8637: ONLINE_INDEX_BUILD<br /><br /> 8683: INVALID_STARJOIN<br /><br /> 8684: TIME_OUT<br /><br /> 8689: NO_DB<br /><br /> 8690: HINT_CONFLICT<br /><br /> 8691: SETOPT_CONFLICT<br /><br /> 8694: DQ_NO_FORCING_SUPPORTED<br /><br /> 8698: NO_PLAN<br /><br /> 8712: NO_INDEX<br /><br /> 8713: VIEW_COMPILE_FAILED<br /><br /> \<anderer Wert >: GENERAL_FAILURE|  
-|**last_force_failure_reason_desc**|**nvarchar(128)**|Textbeschreibung des Last_force_failure_reason_desc.<br /><br /> ONLINE_INDEX_BUILD: Abfrage versucht, um Daten zu ändern, während die Zieltabelle einen Index verfügt, der online erstellt wird<br /><br /> INVALID_STARJOIN: Plan enthält ungültige StarJoin-Spezifikation<br /><br /> TIME_OUT: Anzahl zulässiger Vorgänge bei der Suche nach anhand des erzwungenen Plan Optimizer überschritten<br /><br /> NO_DB: Eine Datenbank, die im Plan angegeben ist nicht vorhanden.<br /><br /> HINT_CONFLICT: Abfrage kann nicht kompiliert werden, da der Plan mit einem Abfragehinweis steht in Konflikt<br /><br /> DQ_NO_FORCING_SUPPORTED: Abfrage kann nicht ausgeführt werden, da der Plan mit Verwendung der verteilten Abfrage oder volltextvorgänge in Konflikt steht.<br /><br /> NO_PLAN: Abfrageprozessor konnte keine Abfrageplan erstellen, da der erzwungene Plan nicht überprüft werden konnte, für die Abfrage gültig ist<br /><br /> NO_INDEX: Index, der im Plan angegeben sind, nicht mehr vorhanden ist.<br /><br /> VIEW_COMPILE_FAILED: Abfrageplan konnte aufgrund eines Problems in einer indizierten Sicht, die im Plan verwiesen wird nicht erzwungen werden.<br /><br /> GENERAL_FAILURE: Allgemeiner erzwingen-Fehler (nicht mit den oben genannten Gründen behandelt)|  
+|**is_online_index_plan**|**bit**|Plan wurde während einer onlineindexerstellung verwendet. <br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|  
+|**is_trivial_plan**|**bit**|Plan ist ein trivialer Plan (die Ausgabe in Phase 0 der Abfrageoptimierer). <br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|  
+|**is_parallel_plan**|**bit**|Plan ist parallel. <br/>**Hinweis**: Azure SQL Data Warehouse wird immer eins (1) zurückgegeben.|  
+|**is_forced_plan**|**bit**|Plan wird markiert, da erzwungen, wenn Benutzer die gespeicherte Prozedur ausführt **sys.sp_query_store_force_plan**. Nutzungsplanerzwingungsmechanismus *garantiert keine* dieser verwendet genau diesen Plan für die Abfrage verweist **Query_id**. Bewirkt, dass die Abfrage erneut kompiliert werden und in der Regel erzeugt genau den gleichen oder ähnlichen Plan für den Plan aus, auf die verwiesen wird durch das Erzwingen eines Plans **Plan_id**. Wenn das Erzwingen eines Plans nicht gelingt, **Force_failure_count** wird erhöht, und **Last_force_failure_reason** mit Fehlerursache aufgefüllt wird. <br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|  
+|**is_natively_compiled**|**bit**|Plan enthält Speicheroptimierte systemintern kompilierte Prozeduren. (0 = FALSE, 1 = TRUE). <br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|  
+|**force_failure_count**|**bigint**|Anzahl der Fälle, in denen dieser Plan erzwingen ein Fehler aufgetreten ist. Er kann erhöht werden, nur, wenn die Abfrage erneut kompiliert wird (*nicht bei jeder Ausführung*). Es auf 0 zurückgesetzt wird jedes Mal **Is_plan_forced** ändert sich von **"false"** zu **"true"**. <br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|  
+|**last_force_failure_reason**|**int**|Der Grund, warum das Erzwingen eines Plans fehlgeschlagen ist.<br /><br /> 0: kein Fehler, die andernfalls Fehlernummer des Fehlers, der verursacht hat, der erzwungen wird fehlschlagen<br /><br /> 8637: ONLINE_INDEX_BUILD<br /><br /> 8683: INVALID_STARJOIN<br /><br /> 8684: TIME_OUT<br /><br /> 8689: NO_DB<br /><br /> 8690: HINT_CONFLICT<br /><br /> 8691: SETOPT_CONFLICT<br /><br /> 8694: DQ_NO_FORCING_SUPPORTED<br /><br /> 8698: NO_PLAN<br /><br /> 8712: NO_INDEX<br /><br /> 8713: VIEW_COMPILE_FAILED<br /><br /> \<anderer Wert >: GENERAL_FAILURE <br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|  
+|**last_force_failure_reason_desc**|**nvarchar(128)**|Textbeschreibung des Last_force_failure_reason_desc.<br /><br /> ONLINE_INDEX_BUILD: Abfrage versucht, um Daten zu ändern, während die Zieltabelle einen Index verfügt, der online erstellt wird<br /><br /> INVALID_STARJOIN: Plan enthält ungültige StarJoin-Spezifikation<br /><br /> TIME_OUT: Anzahl zulässiger Vorgänge bei der Suche nach anhand des erzwungenen Plan Optimizer überschritten<br /><br /> NO_DB: Eine Datenbank, die im Plan angegeben ist nicht vorhanden.<br /><br /> HINT_CONFLICT: Abfrage kann nicht kompiliert werden, da der Plan mit einem Abfragehinweis steht in Konflikt<br /><br /> DQ_NO_FORCING_SUPPORTED: Abfrage kann nicht ausgeführt werden, da der Plan mit Verwendung der verteilten Abfrage oder volltextvorgänge in Konflikt steht.<br /><br /> NO_PLAN: Abfrageprozessor konnte keine Abfrageplan erstellen, da der erzwungene Plan nicht überprüft werden konnte, für die Abfrage gültig ist<br /><br /> NO_INDEX: Index, der im Plan angegeben sind, nicht mehr vorhanden ist.<br /><br /> VIEW_COMPILE_FAILED: Abfrageplan konnte aufgrund eines Problems in einer indizierten Sicht, die im Plan verwiesen wird nicht erzwungen werden.<br /><br /> GENERAL_FAILURE: Allgemeiner erzwingen-Fehler (nicht mit den oben genannten Gründen behandelt) <br/>**Hinweis**: Azure SQL Data Warehouse gibt stets *NONE*.|  
 |**count_compiles**|**bigint**|Planen Sie die Kompilierung Statistiken.|  
 |**initial_compile_start_time**|**datetimeoffset**|Planen Sie die Kompilierung Statistiken.|  
 |**last_compile_start_time**|**datetimeoffset**|Planen Sie die Kompilierung Statistiken.|  
 |**last_execution_time**|**datetimeoffset**|Zeitpunkt der letzten Ausführung bezeichnet die letzte Beendigungszeit der den Abfrageplan.|  
-|**avg_compile_duration**|**float**|Planen Sie die Kompilierung Statistiken.|  
-|**last_compile_duration**|**bigint**|Planen Sie die Kompilierung Statistiken.|  
+|**avg_compile_duration**|**float**|Planen Sie die Kompilierung Statistiken. <br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|  
+|**last_compile_duration**|**bigint**|Planen Sie die Kompilierung Statistiken. <br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|  
 |**plan_forcing_type**|**int**|Planen Sie das Erzwingen des Typs.<br /><br />0: Keine<br /><br />1: MANUAL<br /><br />2: AUTO|  
 |**plan_forcing_type_desc**|**nvarchar(60)**|Beschreibung des Plan_forcing_type.<br /><br />NONE: Keine Erzwingung eines Plans<br /><br />MANUELL: Vom Benutzer erzwungenen Plan<br /><br />AUTO: Von der automatischen Optimierung erzwungener Plan|  
 
