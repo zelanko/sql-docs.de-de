@@ -1,67 +1,74 @@
+items:
 - name: Übersicht
   href: windows/windows-server-failover-clustering-wsfc-with-sql-server.md
   items:
-    - name: AlwaysOn-Failoverclusterinstanzen
-      href: windows/always-on-failover-cluster-instances-sql-server.md
+  - name: AlwaysOn-Failoverclusterinstanzen
+    href: windows/always-on-failover-cluster-instances-sql-server.md
 - name: Vorgehensweise
   items:
-    - name: Bereitstellung
+  - name: Bereitstellung
+    items:
+    - name: Vor der Installation
+      href: install/before-installing-failover-clustering.md
+    - name: Installation
+      href: install/sql-server-failover-cluster-installation.md
+    - name: Erstellen eines Clusters
+      href: install/create-a-new-sql-server-failover-cluster-setup.md
+    - name: Installieren der Clienttools
+      href: install/install-client-tools-on-a-sql-server-failover-cluster.md
+    - name: Hinzufügen oder Entfernen von Knoten in einem SQL Server-Failovercluster
+      href: install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md
+    - name: Entfernen einer SQL Server-Failoverclusterinstanz
+      href: install/remove-a-sql-server-failover-cluster-instance-setup.md
+    - name: Aktualisieren einer Failoverclusterinstanz
+      href: windows/upgrade-a-sql-server-failover-cluster-instance.md
       items:
-        - name: Vor der Installation
-          href: install/before-installing-failover-clustering.md
-        - name: Installation
-          href: install/sql-server-failover-cluster-installation.md
-        - name: Erstellen eines Clusters
-          href: install/create-a-new-sql-server-failover-cluster-setup.md
-        - name: Installieren der Clienttools
-          href: install/install-client-tools-on-a-sql-server-failover-cluster.md
-        - name: Hinzufügen oder Entfernen von Knoten in einem SQL Server-Failovercluster
-          href: install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md
-        - name: Entfernen einer SQL Server-Failoverclusterinstanz
-          href: install/remove-a-sql-server-failover-cluster-instance-setup.md
-        - name: Aktualisieren einer Failoverclusterinstanz
-          href: windows/upgrade-a-sql-server-failover-cluster-instance.md
-          items:
-            - name: Aktualisieren einer SQL Server-Failoverclusterinstanz (Setup)
-              href: windows/upgrade-a-sql-server-failover-cluster-instance-setup.md
-    - name: Konfiguration
-      items:
-        - name: Umbenennen einer Failoverclusterinstanz
-          href: install/rename-a-sql-server-failover-cluster-instance.md
-        - name: Hinzufügen von Abhängigkeiten zu einer Ressource von SQL Server
-          href: windows/add-dependencies-to-a-sql-server-resource.md
-        - name: Konfigurieren von Cluster-Quorum-NodeWeight-Einstellungen
-          href: windows/configure-cluster-quorum-nodeweight-settings.md
-        - name: Ändern der IP-Adresse einer Failoverclusterinstanz
-          href: windows/change-the-ip-address-of-a-failover-cluster-instance.md
-        - name: Konfigurieren von FailureConditionLevel-Eigenschafteneinstellungen
-          href: windows/configure-failureconditionlevel-property-settings.md
-        - name: Anzeigen und Lesen des Failoverclusterinstanz-Diagnoseprotokolls
-          href: windows/view-and-read-failover-cluster-instance-diagnostics-log.md
-    - name: Verwaltung
-      items:
-        - name: Anzeigen von Cluster-Quorum-NodeWeight-Einstellungen
-          href: windows/view-cluster-quorum-nodeweight-settings.md
-        - name: WSFC-Notfallwiederherstellung durch erzwungenes Quorum
-          href: windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md
-        - name: Erzwingen des Starts eines Clusters ohne Quorum
-          href: windows/force-a-wsfc-cluster-to-start-without-a-quorum.md
-        - name: Erzwingen des Starts eines Clusters ohne Quorum
-          href: windows/force-a-wsfc-cluster-to-start-without-a-quorum.md
-        - name: Problembehandlung bei verwaisten Benutzern
-          href: troubleshoot-orphaned-users-sql-server.md
+      - name: Aktualisieren einer SQL Server-Failoverclusterinstanz (Setup)
+        href: windows/upgrade-a-sql-server-failover-cluster-instance-setup.md
+  - name: Konfiguration
+    items:
+    - name: Umbenennen einer Failoverclusterinstanz
+      href: install/rename-a-sql-server-failover-cluster-instance.md
+    - name: Hinzufügen von Abhängigkeiten zu einer Ressource von SQL Server
+      href: windows/add-dependencies-to-a-sql-server-resource.md
+    - name: Konfigurieren von Cluster-Quorum-NodeWeight-Einstellungen
+      href: windows/configure-cluster-quorum-nodeweight-settings.md
+    - name: Ändern der IP-Adresse einer Failoverclusterinstanz
+      href: windows/change-the-ip-address-of-a-failover-cluster-instance.md
+    - name: Konfigurieren von FailureConditionLevel-Eigenschafteneinstellungen
+      href: windows/configure-failureconditionlevel-property-settings.md
+    - name: Anzeigen und Lesen des Failoverclusterinstanz-Diagnoseprotokolls
+      href: windows/view-and-read-failover-cluster-instance-diagnostics-log.md
+  - name: Verwaltung
+    items:
+    - name: Anzeigen von Cluster-Quorum-NodeWeight-Einstellungen
+      href: windows/view-cluster-quorum-nodeweight-settings.md
+    - name: WSFC-Notfallwiederherstellung durch erzwungenes Quorum
+      href: windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md
+    - name: Erzwingen des Starts eines Clusters ohne Quorum
+      href: windows/force-a-wsfc-cluster-to-start-without-a-quorum.md
+    - name: Erzwingen des Starts eines Clusters ohne Quorum
+      href: windows/force-a-wsfc-cluster-to-start-without-a-quorum.md
+    - name: Problembehandlung bei verwaisten Benutzern
+      href: troubleshoot-orphaned-users-sql-server.md
 - name: Konzepte
   items:
-    - name: Konfiguration
-      items:
-        - name: WSFC-Quorummodi und Abstimmungskonfiguration
-          href: windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md
-        - name: SQL Server-Multisubnetzclustering
-          href: windows/sql-server-multi-subnet-clustering-sql-server.md
-    - name: Verwaltung
-      href: windows/failover-cluster-instance-administration-and-maintenance.md
-      items:
-        - name: Automatische Seitenreparatur (für Verfügbarkeitsgruppen und Datenbankspiegelung)
-          href: automatic-page-repair-availability-groups-database-mirroring.md
-        - name: Verwaltung von Anmeldenamen und Aufträgen nach einem Rollenwechsel
-          href: management-of-logins-and-jobs-after-role-switching-sql-server.md
+  - name: Konfiguration
+    items:
+    - name: WSFC-Quorummodi und Abstimmungskonfiguration
+      href: windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md
+    - name: SQL Server-Multisubnetzclustering
+      href: windows/sql-server-multi-subnet-clustering-sql-server.md
+  - name: Verwaltung
+    href: windows/failover-cluster-instance-administration-and-maintenance.md
+    items:
+    - name: Automatische Seitenreparatur (für Verfügbarkeitsgruppen und Datenbankspiegelung)
+      href: automatic-page-repair-availability-groups-database-mirroring.md
+    - name: Verwaltung von Anmeldenamen und Aufträgen nach einem Rollenwechsel
+      href: management-of-logins-and-jobs-after-role-switching-sql-server.md
+ms.openlocfilehash: 7ab9ae4e45983d34d420fedb6b52f8c827f06f5e
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457523"
