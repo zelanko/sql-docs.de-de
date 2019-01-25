@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 39c79c39c04d64656b83004425d476896cbc75db
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 3495d41028f72093b58f546d3da2139ff02b848d
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241701"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898985"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Schnellstart: Bereitstellen von SQL Server-big Data-Cluster in Azure Kubernetes Service (AKS)
 
@@ -33,7 +33,7 @@ Die hier verwendete Standard big Data-Clusterbereitstellung besteht aus einer In
 - Ein Azure-Abonnement.
 - [Big Data-Tools](deploy-big-data-tools.md):
    - **mssqlctl**
-   - **"kubectl"**
+   - **kubectl**
    - **Azure Data Studio**
    - **SQL Server-2019-Erweiterung**
    - **Azure-Befehlszeilenschnittstelle**
@@ -85,7 +85,7 @@ Verwenden Sie die folgenden Schritte aus, um das Ausführen des Bereitstellungss
    | **Benutzerkonten** | Benutzername für den Controllerbenutzer (Standard: **Admin**). |
 
    > [!IMPORTANT]
-   > Jeder Anspruch persistentes Volume im Cluster erfordert einen angeschlossenen Datenträger. Big Data-Cluster erfordert derzeit 21 persistentes Volume Ansprüche. Wenn Sie ein Azure-VM-Größe und Anzahl der Knoten auswählen, stellen Sie sicher, dass die Gesamtzahl von Datenträgern, die auf allen Knoten angefügt werden, können größer als oder gleich 21 ist. Z. B. die [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) VM-Größe unterstützt 16 angefügte Datenträgern, damit die drei Knoten bedeutet, dass 48 Datenträger angefügt werden können.
+   > Der Standardwert **Standard_L4s** Größe für den Computer möglicherweise nicht verfügbar in jeder Azure-Region. Wenn Sie eine andere computergröße auswählen, stellen Sie sicher, dass die Gesamtzahl von Datenträgern, die auf die Knoten im Cluster angefügt werden, kann größer als oder gleich 21. Jeder Anspruch persistentes Volume im Cluster erfordert einen angeschlossenen Datenträger. Big Data-Cluster erfordert derzeit 21 persistentes Volume Ansprüche. Z. B. die [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) VM-Größe unterstützt 16 angefügte Datenträgern, damit die drei Knoten bedeutet, dass 48 Datenträger angefügt werden können.
 
    > [!NOTE]
    > Die `sa` Konto ist ein Systemadministrator für die master SQL Server-Instanz, die während des Setups erstellt wird. Nach dem Erstellen der Bereitstellung der `MSSQL_SA_PASSWORD` Umgebungsvariable ist mit sichtbaren `echo $MSSQL_SA_PASSWORD` im Container Masterinstanz. Aus Sicherheitsgründen ändern Ihre `sa` Kennwort für die master-Instanz nach der Bereitstellung. Weitere Informationen finden Sie unter [Ändern des Systemadministratorkennworts](../linux/quickstart-install-connect-docker.md#sapassword).
@@ -236,6 +236,8 @@ az group delete -n <resource group name>
 ```
 
 ## <a name="next-steps"></a>Nächste Schritte
+
+Das Bereitstellungsskript konfiguriert Azure Kubernetes Service und auch einen SQL Server-2019 big Data-Cluster bereitgestellt. Sie können auch zukünftige Bereitstellungen über manuelle Agentinstallationen anpassen. Mehr wie big Data-Cluster sowie zum Anpassen von Bereitstellungen bereitgestellt sind, finden Sie unter [große SQL Server-Daten bereitstellen in Kubernetes-Clustern](deployment-guidance.md).
 
 Nun, dass der SQL Server-big Data-Cluster bereitgestellt wird, können Laden von Beispieldaten und die Tutorials erkunden:
 

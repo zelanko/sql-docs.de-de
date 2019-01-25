@@ -8,19 +8,19 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 76e3fdca639ed576b6b0664042aea5df2b5a9f74
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: b6822892547b8fa4ff3ad4dced02908d10cd39ec
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405780"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898995"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>Lektion 1: Untersuchen und Visualisieren von Daten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel ist Teil eines Tutorials für SQL-Entwickler zur Verwendung von R in SQL Server.
 
-In dieser Lektion werden Sie überprüfen Sie die Beispieldaten, und generieren anschließend einige Diagramme mit [RxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) aus [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) und die generische [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) -Funktion in r Basis. Dieser R-Funktionen befinden sich bereits im [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
+In diesem Schritt haben Sie die Beispieldaten zu überprüfen, und generieren anschließend einige Diagramme mit [RxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) aus [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) und die generische [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) -Funktion in r Basis. Dieser R-Funktionen befinden sich bereits im [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
 
 Eine wichtige Ziel in dieser Lektion wird das Aufrufen von R-Funktionen aus angezeigt [!INCLUDE[tsql](../../includes/tsql-md.md)] in gespeicherten Prozeduren und speichern Sie die Ergebnisse im Application-Dateiformate:
 
