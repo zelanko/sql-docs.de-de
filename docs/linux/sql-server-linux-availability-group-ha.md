@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a76cadf3fafc1980d6600d406b30492b6a6bc2fa
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: a9d09f9f769d195600c8af97b347831340837d91
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031023"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044933"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Hohe Verfügbarkeit und Datenschutz für die Konfigurationen von Verfügbarkeitsgruppen
 
@@ -59,12 +59,13 @@ Diese Konfiguration besteht aus drei synchronen Replikaten. Standardmäßig wird
 
 Eine verfügbarkeitsgruppe mit drei synchrone Replikate kann schreibgeschützte horizontale Skalierung, hohe Verfügbarkeit und Schutz von Daten bereitstellen. In der folgende Tabelle wird die Verfügbarkeit Verhalten beschrieben. 
 
-| |schreibgeschützte horizontale Skalierung|Hohe Verfügbarkeit & </br> Datenschutz | Schutz von Daten
-|:---|---|---|---
-|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
-|Ausfall des primären Replikats | Manuelles Failover. Möglicherweise kommt es zu Datenverlusten. Neues primäres Replikat ist R / w. |Automatisches Failover. Neues primäres Replikat ist R / w. |Automatisches Failover. Neue primäre Replikat ist nicht verfügbar für Transaktionen, bis die vorherigen primären wiederhergestellt und verknüpft die verfügbarkeitsgruppe als sekundär. 
-|Ausfall eines sekundären Replikats  | Primäre ist R / w. Kein automatisches Failover, wenn die primäre Datenbank ausfällt. |Primäre ist R / w. Kein automatisches Failover, wenn das primäre schlägt auch fehl. | Primäre ist nicht verfügbar, für Transaktionen. 
-<sup>*</sup> Standardwert
+| |read-scale|Hohe Verfügbarkeit & </br> Datenschutz | Schutz von Daten|
+|:---|---|---|---|
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
+|Ausfall des primären Replikats | Manuelles Failover. Möglicherweise kommt es zu Datenverlusten. Neues primäres Replikat ist R / w. |Automatisches Failover. Neues primäres Replikat ist R / w. |Automatisches Failover. Neue primäre Replikat ist nicht verfügbar für Transaktionen, bis die vorherigen primären wiederhergestellt und verknüpft die verfügbarkeitsgruppe als sekundär. |
+|Ausfall eines sekundären Replikats  | Primäre ist R / w. Kein automatisches Failover, wenn die primäre Datenbank ausfällt. |Primäre ist R / w. Kein automatisches Failover, wenn das primäre schlägt auch fehl. | Primäre ist nicht verfügbar, für Transaktionen. |
+
+<sup>\*</sup> Standardwert
 
 <a name="twoSynch"></a>
 
@@ -76,15 +77,16 @@ Diese Konfiguration ermöglicht den Schutz von Daten. Wie die anderen Konfigurat
 
 Eine verfügbarkeitsgruppe mit zwei synchronen Replikaten enthält die schreibgeschützte horizontale Skalierung und den Datenschutz. In der folgende Tabelle wird die Verfügbarkeit Verhalten beschrieben. 
 
-| |schreibgeschützte horizontale Skalierung |Schutz von Daten
-|:---|---|---
-|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
-|Ausfall des primären Replikats | Manuelles Failover. Möglicherweise kommt es zu Datenverlusten. Neues primäres Replikat ist R / w.| Automatisches Failover. Neue primäre Replikat ist nicht verfügbar für Transaktionen, bis die vorherigen primären wiederhergestellt und verknüpft die verfügbarkeitsgruppe als sekundär.
-|Ausfall eines sekundären Replikats  |Die primäre ist R/W, mit Gefahr von Datenverlusten. |Primäre steht nicht für Transaktionen bis das sekundäre wiederhergestellt.
-<sup>*</sup> Standardwert
+| |read-scale |Schutz von Daten|
+|:---|---|---|
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
+|Ausfall des primären Replikats | Manuelles Failover. Möglicherweise kommt es zu Datenverlusten. Neues primäres Replikat ist R / w.| Automatisches Failover. Neue primäre Replikat ist nicht verfügbar für Transaktionen, bis die vorherigen primären wiederhergestellt und verknüpft die verfügbarkeitsgruppe als sekundär.|
+|Ausfall eines sekundären Replikats  |Die primäre ist R/W, mit Gefahr von Datenverlusten. |Primäre steht nicht für Transaktionen bis das sekundäre wiederhergestellt.|
 
->[!NOTE]
->Das oben beschriebene Szenario ist das Verhalten vor SQL Server 2017 CU 1. 
+<sup>\*</sup> Standardwert
+
+> [!NOTE]
+> Das oben beschriebene Szenario ist das Verhalten vor SQL Server 2017 CU 1. 
 
 <a name = "configOnly"></a>
 
@@ -99,38 +101,39 @@ Eine verfügbarkeitsgruppe mit zwei (oder mehr) einen synchronen Replikaten und 
 
 Im Diagramm Gruppe Verfügbarkeit überträgt ein primäres Replikat Konfigurationsdaten auf dem reinen konfigurationsreplikat und das sekundäre Replikat. Das sekundäre Replikat empfängt auch die Daten des Benutzers. Die reinen konfigurationsreplikat erhält keine Benutzerdaten. Das sekundäre Replikat ist im Verfügbarkeitsmodus für synchrone. Die reinen konfigurationsreplikat enthält keine Datenbanken in der verfügbarkeitsgruppe – nur die Metadaten zur verfügbarkeitsgruppe. Konfigurationsdaten auf dem reinen konfigurationsreplikat ist synchron ein Commit ausgeführt.
 
->[!NOTE]
->Eine Availabilility-Gruppe mit reinen konfigurationsreplikat ist neu in SQL Server 2017 CU1. Alle Instanzen von SQL Server in der verfügbarkeitsgruppe muss SQL Server 2017 CU1 oder höher. 
+> [!NOTE]
+> Eine Availabilility-Gruppe mit reinen konfigurationsreplikat ist neu in SQL Server 2017 CU1. Alle Instanzen von SQL Server in der verfügbarkeitsgruppe muss SQL Server 2017 CU1 oder höher. 
 
 Der Standardwert für `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` ist 0. In der folgende Tabelle wird die Verfügbarkeit Verhalten beschrieben. 
 
-| |Hohe Verfügbarkeit & </br> Datenschutz | Schutz von Daten
-|:---|---|---
-|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
-|Ausfall des primären Replikats | Automatisches Failover. Neues primäres Replikat ist R / w. | Automatisches Failover. Neue primäre Replikat ist nicht verfügbar, für Transaktionen. 
-|Ausfall des sekundären Replikats | Primäre Replikat ist R/W, mit Gefahr von Datenverlust (wenn primäre schlägt fehl und kann nicht wiederhergestellt werden). Kein automatisches Failover, wenn das primäre schlägt auch fehl. | Primäre ist nicht verfügbar, für Transaktionen. Kein für den Failover zu durchführen, wenn das primäre Replikat schlägt auch fehl. 
-|Konfiguration nur Replikat Ausfall | Primäre ist R / w. Kein automatisches Failover, wenn das primäre schlägt auch fehl. | Primäre ist R / w. Kein automatisches Failover, wenn das primäre schlägt auch fehl. 
-|Synchronen sekundären Replikat + -Konfiguration nur Replikat Ausfall| Primäre ist nicht verfügbar, für Transaktionen. Kein automatisches Failover. | Primäre ist nicht verfügbar, für Transaktionen. Kein Replikat für ein Failover auf, wenn auch die primären fehlschlägt. 
-<sup>*</sup> Standardwert
+| |Hohe Verfügbarkeit & </br> Datenschutz | Schutz von Daten|
+|:---|---|---|
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
+|Ausfall des primären Replikats | Automatisches Failover. Neues primäres Replikat ist R / w. | Automatisches Failover. Neue primäre Replikat ist nicht verfügbar, für Transaktionen. |
+|Ausfall des sekundären Replikats | Primäre Replikat ist R/W, mit Gefahr von Datenverlust (wenn primäre schlägt fehl und kann nicht wiederhergestellt werden). Kein automatisches Failover, wenn das primäre schlägt auch fehl. | Primäre ist nicht verfügbar, für Transaktionen. Kein für den Failover zu durchführen, wenn das primäre Replikat schlägt auch fehl. |
+|Konfiguration nur Replikat Ausfall | Primäre ist R / w. Kein automatisches Failover, wenn das primäre schlägt auch fehl. | Primäre ist R / w. Kein automatisches Failover, wenn das primäre schlägt auch fehl. |
+|Synchronen sekundären Replikat + -Konfiguration nur Replikat Ausfall| Primäre ist nicht verfügbar, für Transaktionen. Kein automatisches Failover. | Primäre ist nicht verfügbar, für Transaktionen. Kein Replikat für ein Failover auf, wenn auch die primären fehlschlägt. |
 
->[!NOTE]
->Die Instanz von SQL Server, dem reinen konfigurationsreplikat hostet, kann auch andere Datenbanken hosten. Sie können auch als eine einzige Konfigurationsdatenbank für mehr als eine verfügbarkeitsgruppe teilnehmen. 
+<sup>\*</sup> Standardwert
+
+> [!NOTE]
+> Die Instanz von SQL Server, dem reinen konfigurationsreplikat hostet, kann auch andere Datenbanken hosten. Sie können auch als eine einzige Konfigurationsdatenbank für mehr als eine verfügbarkeitsgruppe teilnehmen. 
 
 ## <a name="requirements"></a>Anforderungen
 
-* Alle Replikate in einer verfügbarkeitsgruppe mit einer reinen konfigurationsreplikat müssen SQL Server 2017 CU 1 oder höher sein.
-* Eine beliebige Edition von SQL Server kann es sich um einen reinen konfigurationsreplikat, einschließlich SQL Server Express hosten. 
-* Die verfügbarkeitsgruppe benötigt mindestens ein sekundäres Replikat – zusätzlich zu das primäre Replikat.
-* Konfiguration nur Replikate werden für die maximale Anzahl von Replikaten pro Instanz von SQL Server nicht berücksichtigt. SQL Server standard Edition kann bis zu drei Replikate, SQL Server Enterprise Edition können bis zu 9.
+- Alle Replikate in einer verfügbarkeitsgruppe mit einer reinen konfigurationsreplikat müssen SQL Server 2017 CU 1 oder höher sein.
+- Eine beliebige Edition von SQL Server kann es sich um einen reinen konfigurationsreplikat, einschließlich SQL Server Express hosten. 
+- Die verfügbarkeitsgruppe benötigt mindestens ein sekundäres Replikat – zusätzlich zu das primäre Replikat.
+- Konfiguration nur Replikate werden für die maximale Anzahl von Replikaten pro Instanz von SQL Server nicht berücksichtigt. SQL Server standard Edition kann bis zu drei Replikate, SQL Server Enterprise Edition können bis zu 9.
 
 ## <a name="considerations"></a>Weitere Überlegungen
 
-* Nicht mehr als einen reinen konfigurationsreplikat pro verfügbarkeitsgruppe. 
-* Einen reinen konfigurationsreplikat darf nicht über ein primäres Replikat sein.
-* Den Verfügbarkeitsmodus des reinen konfigurationsreplikat kann nicht geändert werden. Um von einem reinen konfigurationsreplikat an ein sekundäres Replikat für synchrone oder asynchrone ändern möchten, entfernen Sie die reinen konfigurationsreplikat und Hinzufügen eines sekundären Replikats mit den erforderlichen Verfügbarkeitsmodus. 
-* Einen reinen konfigurationsreplikat ist synchron Metadaten der verfügbarkeitsgruppe. Es sind keine Benutzerdaten. 
-* Eine verfügbarkeitsgruppe mit einem primären Replikat und einem reinen konfigurationsreplikat, aber kein sekundäres Replikat ist ungültig. 
-* Das Erstellen einer verfügbarkeitsgruppe auf einer Instanz von SQL Server Express Edition ist nicht möglich. 
+- Nicht mehr als einen reinen konfigurationsreplikat pro verfügbarkeitsgruppe. 
+- Einen reinen konfigurationsreplikat darf nicht über ein primäres Replikat sein.
+- Den Verfügbarkeitsmodus des reinen konfigurationsreplikat kann nicht geändert werden. Um von einem reinen konfigurationsreplikat an ein sekundäres Replikat für synchrone oder asynchrone ändern möchten, entfernen Sie die reinen konfigurationsreplikat und Hinzufügen eines sekundären Replikats mit den erforderlichen Verfügbarkeitsmodus. 
+- Einen reinen konfigurationsreplikat ist synchron Metadaten der verfügbarkeitsgruppe. Es sind keine Benutzerdaten. 
+- Eine verfügbarkeitsgruppe mit einem primären Replikat und einem reinen konfigurationsreplikat, aber kein sekundäres Replikat ist ungültig. 
+- Das Erstellen einer verfügbarkeitsgruppe auf einer Instanz von SQL Server Express Edition ist nicht möglich. 
 
 <a name="pacemakerNotify"></a>
 
@@ -150,8 +153,8 @@ Z. B. eine verfügbarkeitsgruppe mit drei synchronen Replikaten: ein primäres R
 
 In diesem Szenario haben zwei Replikate für das Failover ausgelöst werden zu reagieren. Für eine erfolgreiche automatische testfailover nach einem Ausfall des primären Replikats, beide sekundären Replikate müssen auf dem neuesten Stand und reagieren auf die Vorabbenachrichtigung. Wenn sie online und synchron sind, haben sie die gleiche Sequenznummer. Die verfügbarkeitsgruppe wird eine davon. Wenn nur einer der sekundären Replikate, reagiert das Heraufstufen, der Ressourcen-Agent kann nicht garantieren, dass das sekundäre Replikat, das geantwortet die höchste Sequence_number hat, und ein Failover wird nicht ausgelöst.
 
->[!IMPORTANT]
->Wenn `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 0 (null) entspricht, besteht das Risiko von Datenverlust. Bei einem Ausfall des primären Replikats ist der Ressourcen-Agent nicht automatisch ein Failover auslösen. Sie können entweder warten, bis vom primären zum Wiederherstellen oder Ausführen des manuellen Failovers mit `FORCE_FAILOVER_ALLOW_DATA_LOSS`.
+> [!IMPORTANT]
+> Wenn `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 0 (null) entspricht, besteht das Risiko von Datenverlust. Bei einem Ausfall des primären Replikats ist der Ressourcen-Agent nicht automatisch ein Failover auslösen. Sie können entweder warten, bis vom primären zum Wiederherstellen oder Ausführen des manuellen Failovers mit `FORCE_FAILOVER_ALLOW_DATA_LOSS`.
 
 Sie können das Standardverhalten außer Kraft setzen und verhindern, dass die verfügbarkeitsgruppenressource Einstellung `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` automatisch.
 
@@ -167,8 +170,8 @@ Wieder in den Standardwert, basierend auf der Konfiguration der verfügbarkeitsg
 sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=
 ```
 
->[!NOTE]
->Wenn Sie die vorherigen Befehle ausführen, wird das primäre vorübergehend zum sekundären Standort, herabgestuft, klicken Sie dann erneut heraufgestuft. Das Update der Ressource bewirkt, dass alle Replikate beendet und neu gestartet wird. Der neue Wert für`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` wird nur festgelegt werden, sobald die Replikate neu gestartet werden, nicht sofort.
+> [!NOTE]
+> Wenn Sie die vorherigen Befehle ausführen, wird das primäre vorübergehend zum sekundären Standort, herabgestuft, klicken Sie dann erneut heraufgestuft. Das Update der Ressource bewirkt, dass alle Replikate beendet und neu gestartet wird. Der neue Wert für`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` wird nur festgelegt werden, sobald die Replikate neu gestartet werden, nicht sofort.
 
 ## <a name="see-also"></a>Siehe auch
 

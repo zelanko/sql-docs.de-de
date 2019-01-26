@@ -14,14 +14,15 @@ ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 696685a4c1550ab503b7847ae676ee7c41c679c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f24ffa490ac8ae5b88809b89eed8a188b86fabb
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611498"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044675"
 ---
 # <a name="ado-properties"></a>ADO-Eigenschaften
+
 |||  
 |-|-|  
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|Gibt an, auf welche Seite des aktuellen Datensatzes gespeichert ist.|  
@@ -31,17 +32,17 @@ ms.locfileid: "47611498"
 |[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)|Gibt die tatsächliche Länge der Wert des Felds an.|  
 |[Attribute](../../../ado/reference/ado-api/attributes-property-ado.md)|Gibt einen oder mehrere Eigenschaften eines Objekts an.|  
 |[BOF- und EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|**BOF** gibt an, dass die aktuelle Position des Datensatzes vor dem ersten Datensatz in einem Recordset-Objekt.<br /><br /> **EOF** gibt an, dass die Position des aktuelle Datensatzes nach dem letzten Datensatz in einem Recordset-Objekt.|  
-|[Lesezeichen](../../../ado/reference/ado-api/bookmark-property-ado.md)|Gibt an, ein Lesezeichen, das den aktuellen Datensatz in eindeutig identifiziert einen **Recordset** Objekt, oder legt den aktuellen Datensatz einer **Recordset** Objekt, das den Datensatz, der durch ein gültiges Lesezeichen identifiziert wird.|  
+|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|Gibt an, ein Lesezeichen, das den aktuellen Datensatz in eindeutig identifiziert einen **Recordset** Objekt, oder legt den aktuellen Datensatz einer **Recordset** Objekt, das den Datensatz, der durch ein gültiges Lesezeichen identifiziert wird.|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|Gibt die Anzahl der Datensätze aus einer **Recordset** -Objekt, das lokal im Arbeitsspeicher zwischengespeichert werden.|  
-|[Kapitel](../../../ado/reference/ado-api/chapter-property-ado.md)|Ruft ab oder legt einen OLE DB **Kapitel** Objekt aus, bzw. auf eine **ADORecordsetConstruction** Objekt.|  
+|[Chapter](../../../ado/reference/ado-api/chapter-property-ado.md)|Ruft ab oder legt einen OLE DB **Kapitel** Objekt aus, bzw. auf eine **ADORecordsetConstruction** Objekt.|  
 |[CharSet](../../../ado/reference/ado-api/charset-property-ado.md)|Gibt den Zeichensatz in den der Inhalt einer **Stream** übersetzt werden soll.|  
 |[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)|Gibt den Datenstrom verwendet als Eingabe für eine **Befehl** Objekt.|  
-|[CommandText-Eigenschaft](../../../ado/reference/ado-api/commandtext-property-ado.md)|Gibt den Text eines Befehls für einen Anbieter ausgestellt werden.|  
+|[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)|Gibt den Text eines Befehls für einen Anbieter ausgestellt werden.|  
 |[CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)|Gibt an, wie lange warten, während der Ausführung eines Befehls, bevor der Versuch beendet und ein Fehler generiert.|  
 |[CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)|Gibt den Typ des eine **Befehl** Objekt.|  
 |[ConnectionString-Eigenschaft](../../../ado/reference/ado-api/connectionstring-property-ado.md)|Gibt an, die Informationen, die zum Herstellen einer Verbindung mit einer Datenquelle verwendet.|  
 |[ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)|Gibt an, wie lange warten, die beim Herstellen einer Verbindung, bevor der Versuch beendet und ein Fehler generiert.|  
-|[Anzahl](../../../ado/reference/ado-api/count-property-ado.md)|Gibt die Anzahl der Objekte in einer Auflistung an.|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Gibt die Anzahl der Objekte in einer Auflistung an.|  
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|Gibt die Position des Cursordiensts.|  
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Gibt den Typ des Cursors verwendet eine **Recordset** Objekt.|  
 |[DataMember](../../../ado/reference/ado-api/datamember-property.md)|Gibt den Namen des Datenmembers, der aus dem Objekt, das auf abgerufen werden, wird die **DataSource** Eigenschaft.|  
@@ -82,10 +83,10 @@ ms.locfileid: "47611498"
 |[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|Ruft ab oder legt einen OLE DB **RowPosition** Objekt aus, bzw. auf eine **ADORecordsetConstruction** Objekt.|  
 |[Rowset](../../../ado/reference/ado-api/rowset-property-ado.md)|Ruft ab oder legt einen OLE DB **Rowset** Objekt aus, bzw. auf eine **ADORecordsetConstruction** Objekt.|  
 |[Quelle (ADO-Fehler)](../../../ado/reference/ado-api/source-property-ado-error.md)|Gibt den Namen des Objekts oder der Anwendung, die ursprünglich ein Fehler generiert.|  
-|[Quelle (ADO Record)](../../../ado/reference/ado-api/source-property-ado-record.md)|Gibt an, die Entität, dargestellt durch die **Datensatz** Objekt.|  
+|[Source (ADO Record)](../../../ado/reference/ado-api/source-property-ado-record.md)|Gibt an, die Entität, dargestellt durch die **Datensatz** Objekt.|  
 |[Quelle (ADO Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)|Gibt die Quelle für die Daten in einem **Recordset** Objekt|  
 |[SQLState](../../../ado/reference/ado-api/sqlstate-property.md)|Gibt den SQL-Status für einen bestimmten **Fehler** Objekt.|  
-|[Status](../../../ado/reference/ado-api/state-property-ado.md)|Gibt für alle entsprechenden Objekte an, ob der Zustand des Objekts offen oder geschlossen ist. Gibt an, für alle entsprechenden Objekte, die Ausführung von einer asynchronen Methode, ob der aktuelle Zustand des Objekts Herstellen einer Verbindung, Ausführen von abrufen oder|  
+|[Zustand](../../../ado/reference/ado-api/state-property-ado.md)|Gibt für alle entsprechenden Objekte an, ob der Zustand des Objekts offen oder geschlossen ist. Gibt an, für alle entsprechenden Objekte, die Ausführung von einer asynchronen Methode, ob der aktuelle Zustand des Objekts Herstellen einer Verbindung, Ausführen von abrufen oder|  
 |[Status (ADO Field)](../../../ado/reference/ado-api/status-property-ado-field.md)|Gibt den Status einer **Feld** Objekt.|  
 |[Status (ADO Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Gibt den Status des aktuellen Datensatzes in Bezug auf BatchUpdates andere Vorgänge oder Massenvorgänge.|  
 |[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)|Gibt an, in einer hierarchischen **Recordset** Objekt, gibt an, ob den Verweis auf die zugrunde liegenden untergeordneten Datensätze (d. h. die *Kapitel*) ändert sich, wenn die übergeordnete Zeile positionieren, Änderungen.|  
@@ -93,7 +94,7 @@ ms.locfileid: "47611498"
 |[Typ](../../../ado/reference/ado-api/type-property-ado.md)|Gibt an, die betriebliche Typ oder den Datentyp einer **Parameter**, **Feld**, oder **Eigenschaft** Objekt.|  
 |[Typ (ADO Stream)](../../../ado/reference/ado-api/type-property-ado-stream.md)|Gibt den Typ der in enthaltenen Daten in die **Stream** (binär oder Text).|  
 |[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|Gibt den aktuellen Wert in der Datenbank für eine **Feld** Objekt.|  
-|[ReplTest1](../../../ado/reference/ado-api/value-property-ado.md)|Gibt den zugewiesenen Wert einen **Feld**, **Parameter**, oder **Eigenschaft** Objekt.|  
+|[Wert](../../../ado/reference/ado-api/value-property-ado.md)|Gibt den zugewiesenen Wert einen **Feld**, **Parameter**, oder **Eigenschaft** Objekt.|  
 |[Version](../../../ado/reference/ado-api/version-property-ado.md)|Gibt an, die ADO-Versionsnummer.|  
   
 ## <a name="see-also"></a>Siehe auch  

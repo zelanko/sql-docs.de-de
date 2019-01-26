@@ -14,14 +14,15 @@ ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12b78faed3c45a92c1b20796ade5ce0a6844a84e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 494de627d6e76ba59f1bfb0684c31afe4bf07e68
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530240"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044756"
 ---
 # <a name="ado-methods"></a>ADO-Methoden
+
 |||  
 |-|-|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Erstellt einen neuen Datensatz für einen aktualisierbaren **Recordset** Objekt.|  
@@ -32,7 +33,7 @@ ms.locfileid: "52530240"
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Bricht eine ausstehende Batchaktualisierung ab.|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Verwirft alle Änderungen, die an der aktuellen oder der neuen Zeile vorgenommen wurden eine **Recordset** -Objekt, oder die **Felder** Auflistung von einer **Datensatz** Objekt vor dem Aufruf der  **Update** Methode.|  
 |[Löschen](../../../ado/reference/ado-api/clear-method-ado.md)|Entfernt alle der **Fehler** Objekte aus der **Fehler** Auflistung.|  
-|[Klonen](../../../ado/reference/ado-api/clone-method-ado.md)|Erstellt ein Duplikat **Recordset** -Objekt aus einem vorhandenen **Recordset** Objekt. Optional gibt an, dass der Klon schreibgeschützt sein.|  
+|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Erstellt ein Duplikat **Recordset** -Objekt aus einem vorhandenen **Recordset** Objekt. Optional gibt an, dass der Klon schreibgeschützt sein.|  
 |[Schließen](../../../ado/reference/ado-api/close-method-ado.md)|Schließt ein geöffnetes Objekt und alle abhängigen Objekte.|  
 |[CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)|Vergleicht zwei Lesezeichen aus, und gibt Sie eine Angabe über das Verhältnis der jeweiligen Werte zurück.|  
 |[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)|Kopiert eine Datei oder Verzeichnis und dessen Inhalt an einen anderen Speicherort an.|  
@@ -40,11 +41,11 @@ ms.locfileid: "52530240"
 |[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)|Erstellt ein neues **Parameter** -Objekt, das den angegebenen Eigenschaften.|  
 |[Löschen Sie (ADO-Parameters-Auflistung)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)|Löscht ein Objekt aus der **Parameter** Auflistung.|  
 |[Löschen Sie (ADO-Fields-Sammlung)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)|Löscht ein Objekt aus der **Felder** Auflistung.|  
-|[Löschen Sie (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Löscht den aktuellen Datensatz oder eine Gruppe von Datensätzen.|  
+|[Delete (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Löscht den aktuellen Datensatz oder eine Gruppe von Datensätzen.|  
 |[DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)|Löscht eine Datei oder Verzeichnis und allen seinen Unterverzeichnisse.|  
 |[Führen Sie (ADO-Befehl)](../../../ado/reference/ado-api/execute-method-ado-command.md)|Führt die Abfrage, SQL-Anweisung oder im angegebenen gespeicherten Prozedur die **CommandText** Eigenschaft.|  
 |[Führen Sie (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|Führt die angegebene Abfrage, SQL-Anweisung, gespeicherte Prozedur oder Anbieter-spezifischen Text.|  
-|[Suchen](../../../ado/reference/ado-api/find-method-ado.md)|Sucht eine **Recordset** für die Zeile, die die angegebenen Kriterien erfüllt.|  
+|[Find](../../../ado/reference/ado-api/find-method-ado.md)|Sucht eine **Recordset** für die Zeile, die die angegebenen Kriterien erfüllt.|  
 |[leeren](../../../ado/reference/ado-api/flush-method-ado.md)|Erzwingt, dass der Inhalt der **Stream** im ADO-Puffer auf das zugrunde liegende Objekt mit dem verbleibenden der **Stream** zugeordnet ist.|  
 |[get_OLEDBCommand-Methode](../../../ado/reference/ado-api/get-oledbcommand-method.md)|Gibt den zugrunde liegenden OLE DB-Befehl, weitergeben zuerst alle Parameterinformationen für die ADO-Befehls festgelegt werden, an den OLE DB-Befehl zurück.|  
 |[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|Gibt eine **Recordset** darstellen, deren Zeilen, die Dateien und Unterverzeichnisse im Verzeichnis dargestellt, die von diesem **Datensatz**.|  
@@ -58,8 +59,8 @@ ms.locfileid: "52530240"
 |[MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)|Verschiebt eine Datei oder ein Verzeichnis und dessen Inhalt an einen anderen Speicherort an.|  
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Löscht das aktuelle **Recordset** Objekt und gibt die nächste **Recordset** durch eine Reihe von Befehlen gelangt sind.|  
 |[Öffnen Sie (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)|Öffnet eine Verbindung mit einer Datenquelle.|  
-|[Öffnen Sie (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)|Öffnet ein vorhandenes **Datensatz** Objekt oder erstellt eine neue Datei oder ein Verzeichnis.|  
-|[Öffnen Sie (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Öffnet einen Cursor.|  
+|[Open (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)|Öffnet ein vorhandenes **Datensatz** Objekt oder erstellt eine neue Datei oder ein Verzeichnis.|  
+|[Open (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Öffnet einen Cursor.|  
 |[Öffnen Sie (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)|Öffnet eine **Stream** Objekt zum Bearbeiten von binären Vergleich oder einen Datenströme.|  
 |[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)|Ruft Informationen über das Datenbankschema vom Anbieter ab.|  
 |[put_OLEDBCommand-Methode](../../../ado/reference/ado-api/put-oledbcommand-method.md)|Diese Methode führt keine Operation – immer S_OK zurückgegeben.|  
@@ -67,18 +68,18 @@ ms.locfileid: "52530240"
 |[ReadText](../../../ado/reference/ado-api/readtext-method.md)|Liest eine angegebene Anzahl von Zeichen aus einem Textobjekt **Stream** Objekt.|  
 |[Aktualisieren](../../../ado/reference/ado-api/refresh-method-ado.md)|Aktualisiert die Objekte in eine Sammlung von verfügbaren Objekte entsprechend, und klicken Sie auf spezifische an den Anbieter an.|  
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Aktualisiert die Daten in einem **Recordset** Objekt durch erneutes Ausführen der Abfrage, die auf dem das Objekt basiert.|  
-|[Erneute Synchronisierung](../../../ado/reference/ado-api/resync-method.md)|Aktualisiert die Daten in der aktuellen **Recordset** Objekt oder **Felder** Auflistung von einem **Datensatz** Objekt, aus der zugrunde liegenden Datenbank.|  
+|[Resync](../../../ado/reference/ado-api/resync-method.md)|Aktualisiert die Daten in der aktuellen **Recordset** Objekt oder **Felder** Auflistung von einem **Datensatz** Objekt, aus der zugrunde liegenden Datenbank.|  
 |[Speichern](../../../ado/reference/ado-api/save-method.md)|Speichert die **Recordset** in einer Datei oder **Stream** Objekt.|  
 |[SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)|Speichert den binären Inhalt, der eine **Stream** in eine Datei.|  
 |[Suchen](../../../ado/reference/ado-api/seek-method.md)|Sucht den Index einer **Recordset** , schnell die Zeile, die mit den angegebenen Werten übereinstimmt, und die aktuelle Zeilenposition Zeile ändert.|  
 |[SetEOS](../../../ado/reference/ado-api/seteos-method.md)|Legt fest, der die Position das Ende des Streams.|  
 |[SkipLine](../../../ado/reference/ado-api/skipline-method.md)|Überspringt eine gesamte Zeile, bei einen Textstream zu lesen.|  
-|[STAT](../../../ado/reference/ado-api/stat-method.md)|Ruft die statistische Informationen zu einem geöffneten Datenstrom ab.|  
+|[Stat](../../../ado/reference/ado-api/stat-method.md)|Ruft die statistische Informationen zu einem geöffneten Datenstrom ab.|  
 |[Unterstützt](../../../ado/reference/ado-api/supports-method.md)|Bestimmt, ob ein angegebener **Recordset** Objekt unterstützt, eine bestimmte Art von Funktionalität.|  
 |[Update](../../../ado/reference/ado-api/update-method.md)|Speichert alle Änderungen an der aktuellen Zeile eine **Recordset** Objekt oder die **Felder** Auflistung von einer **Datensatz** Objekt.|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Schreibt alle ausstehenden BatchUpdates auf den Datenträger.|  
 |[Schreiben](../../../ado/reference/ado-api/write-method.md)|Schreibt binäre Daten in einem **Stream** Objekt.|  
-|[WRITETEXT-Anweisung](../../../ado/reference/ado-api/writetext-method.md)|Schreibt eine Zeichenfolge angegebenen Text in einem **Stream** Objekt.|  
+|[WriteText](../../../ado/reference/ado-api/writetext-method.md)|Schreibt eine Zeichenfolge angegebenen Text in einem **Stream** Objekt.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [ADO-API-Referenz](../../../ado/reference/ado-api/ado-api-reference.md)   

@@ -16,14 +16,15 @@ ms.assetid: cbde2ca1-5d4e-4444-a371-a72f3ac4d92a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7cd6188de21c40b1edb5a365724451b44189e462
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04bd9a37d87c91fe3f42cbb1fdf464660ba5a299
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821308"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044417"
 ---
 # <a name="setting-options-programmatically-for-the-text-file-driver"></a>Programmgesteuertes Festlegen von Optionen für die Textdateitreiber
+
 |Option|Description|Methode|  
 |------------|-----------------|------------|  
 |Datenquellenname|Ein Name, der die Datenquelle, z. B. Gehaltsabrechnungen oder Mitarbeiter identifiziert.|Um diese Option dynamisch festzulegen, verwenden die **DSN** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  

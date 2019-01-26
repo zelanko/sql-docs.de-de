@@ -14,21 +14,22 @@ ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d37b1a07566943038bd73b0d79eb2dcd4655fda6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 522c563a113bab599481821dbb5d79422126a901
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696929"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044772"
 ---
 # <a name="ado-md-properties"></a>ADO MD-Eigenschaften
+
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)|Gibt an, welche ADO **Verbindung** Objekt das aktuelle Cellset oder Katalog derzeit gehört.|  
 |[Beschriftung](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|Gibt an, die textbeschriftung, die bei der Anzeige verwendet eine **Ebene** oder **Member** Objekt.|  
 |[ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)|Gibt die Anzahl der Elemente für den aktuellen **Member** Objekt ist das übergeordnete Element in einer Hierarchie.|  
 |[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)|Gibt eine Auflistung von **Mitglieder** für den aktuellen **Member** ist das übergeordnete Element in der Hierarchie.|  
-|[Anzahl](../../../ado/reference/ado-api/count-property-ado.md)|Gibt die Anzahl der Objekte in einer Auflistung an.|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Gibt die Anzahl der Objekte in einer Auflistung an.|  
 |[Tiefe](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|Gibt die Anzahl der Ebenen zwischen den **Ebene** und dem Stamm der Hierarchieebene.|  
 |[Beschreibung](../../../ado/reference/ado-md-api/description-property-ado-md.md)|Gibt eine Erläuterung der Text des aktuellen Objekts zurück.|  
 |[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)|Gibt die Anzahl der Dimensionen auf einer Achse an.|  
@@ -40,15 +41,15 @@ ms.locfileid: "47696929"
 |[LevelDepth](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md)|Gibt die Anzahl der Ebenen zwischen den Stamm der Hierarchie und einen Member an.|  
 |[LevelName](../../../ado/reference/ado-md-api/levelname-property-ado-md.md)|Gibt den Namen der Ebene eines Elements.|  
 |[Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)|Gibt den Namen eines Objekts.|  
-|[Ordinalzahl (Zelle)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)|Zur eindeutigen Identifizierung eine Zelle durch ihre Position innerhalb eines cellSets dar.|  
+|[Ordinal (Cell)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)|Zur eindeutigen Identifizierung eine Zelle durch ihre Position innerhalb eines cellSets dar.|  
 |[Ordinalzahl (Position)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-position.md)|Zur eindeutigen Identifizierung eine Position auf einer Achse aus.|  
 |[Parent](../../../ado/reference/ado-md-api/parent-property-ado-md.md)|Gibt an, das Element, das das übergeordnete Element des aktuellen Elements in einer Hierarchie ist.|  
 |[ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)|Gibt an, ob das übergeordnete Element dieses Positionselements dem übergeordneten Element des unmittelbar vorangehenden Elements übereinstimmt.|  
 |[Quelle](../../../ado/reference/ado-md-api/source-property-ado-md.md)|Gibt die Quelle für die Daten im Cellset dar.|  
-|[Status](../../../ado/reference/ado-md-api/state-property-ado-md.md)|Gibt den aktuellen Zustand des das Cellset an.|  
+|[Zustand](../../../ado/reference/ado-md-api/state-property-ado-md.md)|Gibt den aktuellen Zustand des das Cellset an.|  
 |[Typ](../../../ado/reference/ado-md-api/type-property-ado-md.md)|Gibt den Typ des aktuellen Elements.|  
 |[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)|Gibt einen eindeutigen Namen für das aktuelle Objekt an.|  
-|[ReplTest1](../../../ado/reference/ado-md-api/value-property-ado-md.md)|Gibt den Wert der aktuellen Zelle.|  
+|[Wert](../../../ado/reference/ado-md-api/value-property-ado-md.md)|Gibt den Wert der aktuellen Zelle.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [ADO MD-API-Referenz](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   

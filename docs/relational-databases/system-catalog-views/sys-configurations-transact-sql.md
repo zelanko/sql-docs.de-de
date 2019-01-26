@@ -20,27 +20,28 @@ ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f1a2ae2d0d8f8c5eea00ed5d31ad8aadb88e5ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa2bae15b2da81dcf69ca1e486c74e7b4ccd5ba8
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596108"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044996"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Enthält eine Zeile für jede für den serverweiten Wert der Konfigurationsoption im System an.  
+
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**configuration_id**|**int**|Eindeutige ID des Konfigurationswerts.|  
 |**name**|**nvarchar(35)**|Der Name der Konfigurationsoption.|  
-|**Wert**|**sql_variant**|Der für diese Option konfigurierte Wert.|  
+|**value**|**sql_variant**|Der für diese Option konfigurierte Wert.|  
 |**minimum**|**sql_variant**|Der Mindestwert für die Konfigurationsoption.|  
 |**maximum**|**sql_variant**|Der Höchstwert für die Konfigurationsoption.|  
 |**value_in_use**|**sql_variant**|Ausgeführter Wert, der derzeit für diese Option wirksam ist.|  
 |**description**|**nvarchar(255)**|Beschreibung der Konfigurationsoption.|  
-|**Sys.Configurations**|**bit**|1 = Variable, die bei Ausführung der RECONFIGURE-Anweisung wirksam wird.|  
+|**is_dynamic**|**bit**|1 = Variable, die bei Ausführung der RECONFIGURE-Anweisung wirksam wird.|  
 |**is_advanced**|**bit**|1 = die Variable wird nur dann, wenn die **Advancedoption anzeigen** festgelegt ist.|  
   
  Eine Liste aller Serverkonfigurationsoptionen, finden Sie unter [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  

@@ -14,21 +14,22 @@ ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6218ef0c0d39aa1393c5b467c4d8d96960c487f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 176afb0ed710087ec150838e1e6bc6c49eb9e908
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637228"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044664"
 ---
 # <a name="adox-properties"></a>ADOX-Eigenschaften
+
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|Gibt an, das ADO **Verbindung** Objekts, zu dem der Katalog gehört.|  
 |[Attribute](../../../ado/reference/adox-api/attributes-property-adox.md)|Beschreibt die Spalteneigenschaften.|  
 |[Gruppiert](../../../ado/reference/adox-api/clustered-property-adox.md)|Gibt an, ob der Index gruppiert ist.|  
 |[Befehl](../../../ado/reference/adox-api/command-property-adox.md)|Gibt an, ein ADO **Befehl** -Objekt, das zum Erstellen oder Ausführen der Prozedur verwendet werden kann.|  
-|[Anzahl](../../../ado/reference/ado-api/count-property-ado.md)|Gibt die Anzahl der Objekte in einer Auflistung an.|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Gibt die Anzahl der Objekte in einer Auflistung an.|  
 |[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|Gibt das Datum, die das Objekt erstellt wurde.|  
 |[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|Gibt das Datum, das Objekt zuletzt geändert wurde.|  
 |[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|Gibt die festgelegte maximale Größe der Spalte an.|  

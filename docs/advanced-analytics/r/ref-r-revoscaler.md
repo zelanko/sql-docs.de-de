@@ -8,14 +8,15 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 92992847e2806e18014d2d6828a5f5019ad100b3
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: c67fd63af6ed3492b8064be037ed4f8f5dff338f
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645425"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044407"
 ---
 # <a name="revoscaler-r-library-in-sql-server"></a>RevoScaleR (R-Bibliothek in SQL Server)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 **RevoScaleR** ist eine Bibliothek von Hochleistungs-Data-Science-Funktionen von Microsoft. Funktionen unterstützen das Importieren von Daten, die Datentransformation, Zusammenfassung, Visualisierung und Analyse.
@@ -55,7 +56,7 @@ Verwenden unterschiedliche Datentypen in einigen Fällen, SQL Server und R. Eine
 | Funktion| Description|
 | ------- | ---------- |
 | [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) |  Erstellen Sie eine SQL Server Compute Context-Objekt, Push-Berechnungen auf einer remote-Instanz. Mehrere **RevoScaleR** Funktionen nehmen computekontext als Argument. |
-[RxGetComputeContext / RxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) | Abrufen oder den aktiven computekontext festlegen. |
+|[rxGetComputeContext / rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) | Abrufen oder den aktiven computekontext festlegen. |
 | [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata) | Erstellen Sie ein Datenobjekt, das basierend auf einer SQL Server-Abfrage oder Tabelle. |
 | [RxOdbcData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxodbcdata) | Erstellen Sie eine Datenquelle basierend auf einer ODBC-Verbindung. |
 | [RxXdfData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxxdfdata) | Erstellen Sie eine Datenquelle basierend auf eine lokale XDF-Datei. XDF-Dateien werden häufig verwendet, um in-Memory-Daten auf den Datenträger auszulagern. Eine XDF-Datei kann nützlich sein, bei der Verwendung von mehr Daten als aus der Datenbank in einem einzigen Batch übertragen werden kann, oder mehr Daten als in den Speicher passen. Z. B. Wenn Sie regelmäßig große Mengen von Daten aus einer Datenbank zu einer lokalen Arbeitsstation verschieben, anstatt die Abfrage der Datenbank wiederholt für jede R-Vorgang können Sie die XDF-Datei als eine Art von Cache die Daten lokal speichern, und klicken Sie dann mit Ihren R-Arbeitsbereich bearbeiten.|
@@ -78,7 +79,7 @@ Nachdem Sie ein Datenquellenobjekt erstellt haben, können Sie das Objekt, das L
 
 | Funktion | Description |
 |----------|-------------|
-| [RxOpen-Methoden](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxopen-methods) | Überprüfen, ob eine Datenquelle verfügbar ist, öffnen oder schließen Sie eine Datenquelle, Lesen von Daten aus einer Quelle, Schreiben von Daten in das Ziel und schließt eine Datenquelle.|
+| [rxOpen-methods](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxopen-methods) | Überprüfen, ob eine Datenquelle verfügbar ist, öffnen oder schließen Sie eine Datenquelle, Lesen von Daten aus einer Quelle, Schreiben von Daten in das Ziel und schließt eine Datenquelle.|
 | [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) | Verschieben von Daten aus einer Datenquelle in File Storage oder in einen Datenrahmen.|
 | [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) | Transformieren von Daten beim Verschieben zwischen Datenquellen.|
 
@@ -104,7 +105,7 @@ Nachdem Sie ein Datenquellenobjekt erstellt haben, können Sie das Objekt, das L
 |[rxCrossTabs](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcrosstabs) <sup>*</sup> |Formel-basierte Kreuztabelle von Daten. | 
 |[rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcube) <sup>*</sup> |Alternative Formel basierende Kreuztabelle entwickelt, die für die effiziente Darstellung, die Cube-Ergebnisse zurückgegeben. Schreiben der Ausgabe in xdf-Datei, die nicht unterstützt. | 
 |[rxMarginals](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxmarginals)  |Marginale Zusammenfassungen von Cross-Tabulatorzeichen. | 
-|[As.xtabs](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/as.xtabs)  |Konvertiert kreuztabellenergebnisse in ein Xtabs-Objekt. | 
+|[as.xtabs](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/as.xtabs)  |Konvertiert kreuztabellenergebnisse in ein Xtabs-Objekt. | 
 |[rxChiSquaredTest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxchisquaredtest)  |Führt einen Chi-Test für Xtabs-Objekt. Bei kleinen Datasets verwendet und keine Daten segmentieren. | 
 |[rxFisherTest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxchisquaredtest)  |Führt exakten Test nach Fisher für Xtabs-Objekt. Bei kleinen Datasets verwendet und keine Daten segmentieren. | 
 |[rxKendallCor](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxchisquaredtest)  |Berechnet den Kendalls Tau-Rangkorrelationskoeffizienten mithilfe Xtabs-Objekts. | 
@@ -122,13 +123,13 @@ Nachdem Sie ein Datenquellenobjekt erstellt haben, können Sie das Objekt, das L
 |---------------|-------------|
 |[rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) <sup>*</sup> |Passt ein Lineares Modell auf Daten. | 
 |[rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) <sup>*</sup> |Passt ein Logistisches Regressionsmodell auf Daten. | 
-|["rxglm"](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm) <sup>*</sup> |Passt ein Verallgemeinertes Lineares Modell auf Daten. | 
+|[rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm) <sup>*</sup> |Passt ein Verallgemeinertes Lineares Modell auf Daten. | 
 |[rxCovCor](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcovcor) <sup>*</sup> |Berechnet die Kovarianz, Korrelation oder Summe der Quadrate Kreuzprodukt Matrix für einen Satz von Variablen. | 
 |[rxDTree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree) <sup>*</sup> |Passen die Struktur klassifizierungs- oder Regressionsmodells aus, die Daten. | 
 |[rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees) <sup>*</sup> |Passen einen entscheidungswald klassifizierungs- oder Regressionsmodell auf Daten mithilfe einer stochastic Gradient-boosting-Algorithmus. | 
 |[rxDForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest) <sup>*</sup> |Passen einen entscheidungswald klassifizierungs- oder Regressionsmodell auf Daten. | 
 |[rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxPredict) <sup>*</sup> |Berechnet Vorhersagen für angepasste Modelle. Ausgabe muss es sich um eine XDF-Datenquelle sein. | 
-|[k-Means](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxkmeans) <sup>*</sup> |Führt die k-Means-clustering. | 
+|[rxKmeans](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxkmeans) <sup>*</sup> |Führt die k-Means-clustering. | 
 |[rxNaiveBayes](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxnaivebayes) <sup>*</sup> |Führt die Naive Bayes-Klassifikation. | 
 |[rxCov](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcovcor) |Berechnet die kovarianzmatrix für einen Satz von Variablen. | 
 |[rxCor](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcovcor)  |Berechnet die Korrelationsmatrix für einen Satz von Variablen. | 

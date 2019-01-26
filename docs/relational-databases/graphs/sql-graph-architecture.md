@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e742e1b5c8ed1b0149292aeee5a3c0e518d9783
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: e4c7c5bae386f142dff45be8a1b1371f104cfab3
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300187"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044546"
 ---
 # <a name="sql-graph-architecture"></a>SQL-Graph-Architektur  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -135,6 +135,7 @@ Die folgenden integrierten Funktionen werden hinzugefügt. Dies hilft Benutzern,
 Erfahren Sie, den [!INCLUDE[tsql-md](../../includes/tsql-md.md)] -Erweiterungen in SQL Server und Azure SQL-Datenbank eingeführt, mit denen erstellen und Abfragen von Graph-Objekte. Die Abfrage-spracherweiterungen helfen Abfrage und durchlaufen Sie das Diagramm mit ASCII-Grafik-Syntax.
  
 ### <a name="data-definition-language-ddl-statements"></a>Anweisungen der Data Definition Language (DDL)
+
 |Aufgabe   |Verwandte Artikel  |Hinweise
 |---  |---  |---  |
 |CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` ist nun erweitert, um Unterstützung für das Erstellen einer Tabelle, die AS-Knoten- oder EDGETABELLE von AS. Beachten Sie, dass eine edgetabelle kann möglicherweise keine benutzerdefinierten Attribute.  |
@@ -145,6 +146,7 @@ Erfahren Sie, den [!INCLUDE[tsql-md](../../includes/tsql-md.md)] -Erweiterungen 
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>Anweisungen der Data Manipulation Language (DML)
+
 |Aufgabe   |Verwandte Artikel  |Hinweise
 |---  |---  |---  |
 |INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|Einfügen in eine Knotentabelle ist unterscheidet sich nicht in eine relationale Tabelle einzufügen. Die Werte für `$node_id` Spalte wird automatisch generiert. Versuch zum Einfügen eines Werts in `$node_id` oder `$edge_id` Spalte führt zu einem Fehler. Benutzer müssen Geben Sie Werte für `$from_id` und `$to_id` Spalten während des Einfügens in eine edgetabelle. `$from_id` und `$to_id` sind die `$node_id` Werte der Knoten, die eine bestimmte Kante verbindet.  |
@@ -154,6 +156,7 @@ Erfahren Sie, den [!INCLUDE[tsql-md](../../includes/tsql-md.md)] -Erweiterungen 
 
 
 ### <a name="query-statements"></a>Abfrageanweisungen
+
 |Aufgabe   |Verwandte Artikel  |Hinweise
 |---  |---  |---  |
 |SELECT |[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|Knoten und Kanten werden als Tabellen intern gespeichert, daher werden die meisten Vorgänge unterstützt, die für eine Tabelle in SQL Server oder Azure SQL-Datenbank unterstützt, für die Tabellen und Rahmentabellen  |

@@ -20,12 +20,12 @@ ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb6061adf707a58737fd34d7cb7bbe33b2e9579a
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: ce80e7b9c6e8cfcf15c0810986c1a34e8d881ade
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420235"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044357"
 ---
 # <a name="sqlsetdescfield-function"></a>SQLSetDescField-Funktion
 
@@ -147,7 +147,7 @@ SQLRETURN SQLSetDescField(
 |SQL_DESC_ARRAY_STATUS_PTR|SQLUSMALLINT*|ARD: R/W-APD: R/W-IRD: R/W-IPD: R/W|ARD: NULL-Ptr-APD: NULL-Ptr-IRD: NULL-Ptr-IPD: NULL ptr|  
 |SQL_DESC_BIND_OFFSET_PTR|SQLLEN*|ARD: R/W-APD: R/W-IRD: Nicht verwendete IPD: Nicht verwendet|ARD: NULL-Ptr-APD: NULL-Ptr-IRD: Nicht verwendete IPD: Nicht verwendet|  
 |SQL_DESC_BIND_TYPE|SQLINTEGER|ARD: R/W-APD: R/W-IRD: Nicht verwendete IPD: Nicht verwendet|ARD: SQL_BIND_BY_COLUMN<br /><br /> APD: SQL_BIND_BY_COLUMN<br /><br /> IRD: Nicht verwendet<br /><br /> IPD: Nicht verwendet|  
-SQL_DESC_COUNT|SQLSMALLINT|ARD: R/W-APD: R/W-IRD: R-IPD: R/W|ARD: 0 APD: 0 IRD: D IPD: 0|  
+|SQL_DESC_COUNT|SQLSMALLINT|ARD: R/W-APD: R/W-IRD: R-IPD: R/W|ARD: 0 APD: 0 IRD: D IPD: 0|  
 |SQL_DESC_ROWS_PROCESSED_PTR|SQLULEN*|ARD: Nicht verwendete APD: Nicht verwendete IRD: R/W-IPD: R/W|ARD: Nicht verwendete APD: Nicht verwendete IRD: NULL-Ptr-IPD: NULL ptr|  
   
  [1] für diese Felder werden definiert, nur, wenn die IPD vom Treiber automatisch aufgefüllt wird. Falls nicht, sind sie nicht definiert. Wenn eine Anwendung versucht, diese Felder SQLSTATE HY091 festgelegt werden (Ungültiger Deskriptorfeldbezeichner) zurückgegeben.  

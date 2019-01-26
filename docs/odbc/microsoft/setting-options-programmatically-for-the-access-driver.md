@@ -16,14 +16,15 @@ ms.assetid: 1690eb71-0cd3-4c00-9e15-f6a3ac5316dd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5227985c56d5e2fd4730c86fe9182c8b16b2cb02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57bc9dd31299a70c5c8a2272dd49b577f58b7bb0
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804458"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044466"
 ---
 # <a name="setting-options-programmatically-for-the-access-driver"></a>Programmgesteuertes Festlegen von Optionen für die Access-Treiber
+
 |Option|Description|Methode|  
 |------------|-----------------|------------|  
 |Puffergröße|Die Größe des internen Puffers, in Kilobyte, die von Microsoft Access verwendet wird, um Daten zu und vom Datenträger übertragen werden soll. Die Standardpuffergröße beträgt 2048 KB, die (angezeigt als 2048). Jeder ganzzahlige Wert von 256 geteilt werden kann, kann eingegeben werden.|Um diese Option dynamisch festzulegen, verwenden Sie das MAXBUFFERSIZE-Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  

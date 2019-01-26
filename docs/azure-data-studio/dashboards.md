@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: faaa59e8607f707bb43f31638880f771ae7ae6ab
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 26e93209e2cbd9809d607f90c7eff4da32d2cd98
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030484"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55045029"
 ---
 # <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>Dashboards in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -84,6 +84,7 @@ Beispielkonfiguration für Insight-Details-flyout
     },
     "value": "second_column_and_condition_check_value_column_for_summary_list_view",
 ```
+
 |property|Typ|Wert|Standardwert|description|comment|
 |:---|:---|:---|:---|:---|:---|
 |Details|JSON-Objekt|||erforderliche Eigenschaft Insight-Detail-Definitionen in ihrer Struktur definieren.||
@@ -93,7 +94,7 @@ Beispielkonfiguration für Insight-Details-flyout
 |column|Zeichenfolge|||Geben Sie den Namen der ersten Spalte in der Liste "Zusammenfassung" Ansicht aus dem Resultset der Abfrage|der Name dieser Eigenschaft wird in Zukunft intuitiver Namen geändert werden|
 |Wert|Zeichenfolge|||Geben Sie den Namen der zweiten Spalte in der Liste "Zusammenfassung" Ansicht aus dem Resultset der Abfrage. Der Wert dieser Spalte wird zum Überprüfen von Bedingungen, und legen die Farbe für jede Liste "Zusammenfassung" anzeigen Elemente Farbe Punkt|der Name dieser Eigenschaft wird in Zukunft etwas intuitiver ändern.|
 |Bedingung|JSON-Objekt|||die Überprüfung der Bedingung für den Wert der Spalte definiert, und bestimmen Sie die Farbe für jedes Element der Liste "Zusammenfassung" anzeigen||
-|wenn|String|immer, equals, NotEquals, GreaterThan, LessThan, GreaterThanOrEquals, lessThanOrEquals||Bedingung überprüfen-operator|Namen der Eigenschaft wird in Zukunft an Operator ändern.|
+|wenn|String|always, equals, notEquals, greaterThan, lessThan, greaterThanOrEquals, lessThanOrEquals||Bedingung überprüfen-operator|Namen der Eigenschaft wird in Zukunft an Operator ändern.|
 |Ist gleich|Zeichenfolge|||Wert der Bedingung-Überprüfung|Diese Eigenschaftsnamen werden in Zukunft auf 'Value' ändern.|
 
 ## <a name="insight-actions"></a>Insight-Aktionen
