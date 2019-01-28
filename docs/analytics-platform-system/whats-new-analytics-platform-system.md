@@ -9,28 +9,29 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5467362b32733e6ef10036bf9b45d38fe3150a1e
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 44ed335524d21cd4931722a20be4eb0da5681603
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626354"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044707"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Neuerungen in Analytics Platform System, das ein horizontales MPP Datawarehouse
 Finden Sie unter Neues in den neuesten Appliance Updates für Microsoft Analytics Platform System (APS). APS ist es sich um eine horizontale Skalierung auf lokale Anwendung, die MPP SQL Server Parallel Data Warehouse hostet. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
 <a name="h2-aps-cu7.3"></a>
-## <a name="aps-cu73"></a>APS-CU7.3
+## <a name="aps-cu73"></a>APS CU7.3
 Datum der Veröffentlichung: Dezember 2018
 
-### <a name="common-subexpression-elimination"></a>Gemeinsame Teilausdrücke entfernen
+### <a name="common-subexpression-elimination"></a>Entfernen gemeinsamer Teilausdrücke
 APS-CU7.3 verbessert die abfrageleistung mit gängiger Unterausdrücke in SQL-Abfrageoptimierer. Die Verbesserung der verbessert die Abfragen auf zwei Arten. Der erste Vorteil ist die Möglichkeit, erkennen und zu eliminieren, z. B. Ausdrücken können SQL-Kompilierungszeit zu reduzieren. Der zweite, wichtigere-Vorteil ist, dass Verschiebevorgänge für Abfragedaten für diesen redundanten Teilausdrücken daher Ausführungszeit behoben wurden, für Abfragen wird schneller. Ausführliche Erläuterung dieser Funktion finden Sie [hier](common-sub-expression-elimination.md).
 
 ### <a name="aps-informatica-connector-for-informatica-1020-published"></a>APS Informatica-Connector für Informatica 10.2.0 veröffentlicht
 Wir haben eine neue Version der Informatica-Connectors für APS veröffentlicht, die mit Informatica Version 10.2.0 funktioniert. Die neuen Connectors können heruntergeladen werden [Downloadwebsite](https://www.microsoft.com/download/details.aspx?id=57472).
 
 #### <a name="supported-versions"></a>Unterstützte Versionen
+
 | APS-Version | Informatica PowerCenter | Treiber |
 |:---|:---|:---|
 | APS 2016 | 9.6.1 | SQL Server Native Client 11.x |
@@ -147,7 +148,7 @@ APS-AU6 unterstützt diese Verbesserungen der T-SQL-Kompatibilität.  Diese zus�
 
 - [SQL-Sortierungen auf Spaltenebene][] werden jetzt unterstützt, zusätzlich zu Windows-Sortierungen.
 - [Nicht gruppierte Indizes für gruppierte columnstore-Indizes][] Verbessern der Leistung von Abfragen, die in den gruppierten columnstore-Index nach bestimmten Werten suchen. 
-- [AUSWÄHLEN... IN][] 
+- [SELECT...INTO][] 
 - [sp_spaceused()][] zeigt, wie viel Speicherplatz verwendet oder in einer Tabelle oder Datenbank reserviert.
 - [Breite Tabellen][] Unterstützung entspricht dem SQL Server 2016. Der vorherige Grenzwert von 32 KB für die Zeilengröße ist nicht mehr vorhanden. 
 
@@ -174,7 +175,7 @@ APS-AU6 unterstützt diese Verbesserungen der T-SQL-Kompatibilität.  Diese zus�
 **Zusätzliche Funktionen**
 
 - [NEWID()][]
-- [ZUFALLSZAHL)][]
+- [RAND()][]
 
 ### <a name="polybasehadoop-enhancements"></a>PolyBase/Hadoop-Verbesserungen
 
@@ -219,7 +220,7 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [NVARCHAR(MAX)]:/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql
 [VARBINARY(MAX)]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql
 [SYSNAME]:/sql/relational-databases/system-catalog-views/sys-types-transact-sql
-[AUSWÄHLEN... IN]:/sql/t-sql/queries/select-into-clause-transact-sql
+[SELECT...INTO]:/sql/t-sql/queries/select-into-clause-transact-sql
 [sp_spaceused()]:/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql
 [Breite Tabellen]:/sql/sql-server/maximum-capacity-specifications-for-sql-server
 [BULK INSERT]:/sql/t-sql/statements/bulk-insert-transact-sql
@@ -235,7 +236,7 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [BINARY_CHECKSUM()]:/sql/t-sql/functions/binary-checksum-transact-sql
 [HAS_PERMS_BY_NAME()]:/sql/t-sql/functions/has-perms-by-name-transact-sql
 [NEWID()]:/sql/t-sql/functions/newid-transact-sql
-[ZUFALLSZAHL)]:/sql/t-sql/functions/rand-transact-sql
+[RAND()]:/sql/t-sql/functions/rand-transact-sql
 
 
   
