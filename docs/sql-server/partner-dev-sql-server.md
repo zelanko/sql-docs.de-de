@@ -10,22 +10,24 @@ ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: 72dc0b6cd9b5cf5f5818e0f447901fcce8c17def
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c47021ce06d51b833ede6ee75f1e575e4b078314
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416232"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044903"
 ---
 # <a name="sql-server-development-partners"></a>SQL Server: Entwicklungspartner
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Es gibt eine große Auswahl an branchenführenden Tools zur Unterstützung bei der Entwicklung von Datenbanklösungen mit SQL Server.  Im Folgenden werden Partnerunternehmen von Microsoft aufgelistet, die Entwicklungslösungen für Microsoft SQL Server anbieten.
 
 ## <a name="our-development-partners"></a>Unsere Entwicklungspartner
+
 | Partner | und Beschreibung | Links |
 | --- | --- | --- |
 |![idera][1] |**IDERA**<br>Rapid SQL ist eine intelligente in SQL integrierte Entwicklungsumgebung, die es Datenbankentwicklern und -administratoren ermöglicht, leistungsfähige SQL-Codes auf allen größeren Datenbankplattformen, einschließlich SQL Server, von nur einer Benutzeroberfläche aus zu entwickeln.<br><br>[Systemanforderungen][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Website][idera_website]<br>[Twitter][idera_twitter]<br>[Video][idera_youtube] |
 |![click2cloud][2] |**Click2Cloud Inc.**<br>Click2Cloud Inc. ermöglicht der Entwicklercommunity dank entsprechender Toolsets Flexibilität bei der Auswahl der Programmiersprachen, Frameworks und Dienste. Mit dem Toolkit von Click2Cloud können Entwickler SQL Server unter Linux-Container erstellen und an eine Anwendung anfügen und gleichzeitig weiterhin sichere, mehrinstanzfähige Architekturen bereitstellen. Die Container können unabhängig voneinander auf beliebigen cloudbasierten Containerplattformen bereitgestellt werden.|[Marketplace][click2cloud_marketplace]<br>[Website][click2cloud_website]<br>[Twitter][click2cloud_twitter]<br>[Video][click2cloud_youtube] |
+
 ## <a name="next-steps"></a>Nächste Schritte
 Nähere Informationen über unsere anderen Partner finden Sie unter [Partner für Hochverfügbarkeit und Notfallwiederherstellung][hadr_partners], [Verwaltungspartner][management_partners] und [Entwicklungspartner][monitor_partners].
 

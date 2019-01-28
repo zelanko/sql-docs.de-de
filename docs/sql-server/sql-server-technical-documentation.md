@@ -21,12 +21,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3ed5059f50c45e3bcac5d3e17ce1fd09d2fb4fa8
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 307c1f1a526b96cfd3c01f9ba841e44189e70139
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300457"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044307"
 ---
 # <a name="sql-server-documentation"></a>SQL Server-Dokumentation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,22 +47,26 @@ SQL Server ist ein zentraler Bestandteil der Microsoft-Datenplattform. SQL Serve
 -->
 
 ::: moniker range="= sqlallproducts-allversions"
+
 |Neues  | Versionshinweise  |
 |---------|---------|
 |[Neues in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)     | [Versionsanmerkungen zu SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md)        |
 |[Neues in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [Versionsanmerkungen zu SQL Server 2017](../sql-server/sql-server-2017-release-notes.md)        |
 |[Neues in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [Versionsanmerkungen zu SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)        |
 
-![info_tip](../sql-server/media/info-tip.png) Die gesamte SQL Server** 2014**-Dokumentation ist [hier](https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014) verfügbar.
+![info_tip](../sql-server/media/info-tip.png) Die gesamte SQL Server **2014**-Dokumentation ist [hier](https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014) verfügbar.
 ::: moniker-end
 
 ::: moniker range="= sql-server-ver15"
+
 |Neues  | Versionshinweise  |
 |---------|---------|
 |[Neues in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)     | [Versionsanmerkungen zu SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md)        |
+
 ::: moniker-end
 
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
 |Neues  | Versionshinweise  |
 |---------|---------|
 |[Neues in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [Versionsanmerkungen zu SQL Server 2017](../sql-server/sql-server-2017-release-notes.md)        |
@@ -72,9 +76,11 @@ SQL Server ist ein zentraler Bestandteil der Microsoft-Datenplattform. SQL Serve
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016"
+
 |Neues  | Versionshinweise  |
 |---------|---------|
 |[Neues in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [Versionsanmerkungen zu SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)        |
+
 ::: moniker-end
 
 ::: moniker range="= sql-server-2016 || = sqlallproducts-allversions"

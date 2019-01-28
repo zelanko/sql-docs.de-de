@@ -9,12 +9,12 @@ ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 46cbbaa2654e18f0aef5d5a3b904f41ce5a88219
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: f9ee612238f9e8208de48b6d52256141d1ed638d
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596581"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457633"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>Wiederherstellen von Stretch-aktivierten Datenbanken (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "53596581"
   Weitere Informationen finden Sie unter [Sichern von Stretch-aktivierten Datenbanken](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md).
 
 > [!TIP]
-> Backup ist nur ein Teil einer umfassenden Lösung für Hochverfügbarkeit und Geschäftskontinuität. Weitere Informationen zu Hochverfügbarkeit finden Sie unter [Lösungen mit Hochverfügbarkeit](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md).
+> Backup ist nur ein Teil einer umfassenden Lösung für Hochverfügbarkeit und Geschäftskontinuität. Weitere Informationen zu Hochverfügbarkeit finden Sie unter [Lösungen mit Hochverfügbarkeit](../../database-engine/sql-server-business-continuity-dr.md).
 
 ## <a name="restore-your-sql-server-data"></a>Wiederherstellen der SQL Server-Daten
 Nach einem Hardwareausfall oder einer Beschädigung stellen Sie die Stretch-aktivierte SQL Server-Datenbank aus einer Sicherung wieder her. Dafür können Sie die derzeit verwendeten und üblichen SQL Server-Wiederherstellungsmethoden verwenden. Weitere Informationen finden Sie unter [Übersicht über Wiederherstellungsvorgänge](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).
