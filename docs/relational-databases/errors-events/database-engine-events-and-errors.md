@@ -10,12 +10,12 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b4ac8b044308ad7bfb2431e35429558b9deb3cf5
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: bd33483d148b3f94ae54c1a1b94dbaf21acbac27
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405880"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55045083"
 ---
 # <a name="database-engine-errors"></a>Datenbank-Engine – Fehler
 
@@ -578,6 +578,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-1000-to-1999"></a>Fehler 1.000 bis 1.999
+
 | Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   1001    |   16  |   Nein  |   Zeile %d: Längen- oder Präzisionsangabe %d ist ungültig.   |
@@ -1009,6 +1010,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-2000-to-2999"></a>Fehler 2.000 bis 2.999
+
 | Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   2002    |   16  |   Nein  |   Für die Replikation kann keine Prozedur mit einer Gruppennummer erstellt werden, die höher als 1 ist.   |
@@ -1381,6 +1383,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-3000---3999"></a>Fehler 3.000 bis 3.999
+
 | Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   3002    |   16  |   Nein  |   BACKUP oder RESTORE kann für eine Datenbankmomentaufnahme nicht ausgeführt werden.   |
@@ -1821,6 +1824,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-4000-to-4999"></a>Fehler 4.000 bis 4.999
+
 | Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   4001    |   10  |   Nein  |   Der Client sendet eine sp_reset_connection, obwohl noch Anforderungen ausstehen. Die Verbindung mit dem Server wird getrennt.  |
@@ -3155,6 +3159,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-7000-to-7999"></a>Fehler 7.000 bis 7.999
+
 | Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   7000    |   16  |   Nein  |   Der OPENXML-Dokumenthandleparameter muss vom Datentyp 'int' sein. |
@@ -3598,6 +3603,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-8000-to-8999"></a>Fehler 8.000 bis 8.999
+
 | Fehler| Schweregrad | Protokolliertes Ereignis | und Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   8001    |   16  |   Nein  |   Der eingehende Tabular Data Stream (TDS) für das RPC-Protokoll (Remote Procedure Call) ist nicht richtig. Metainformationen sind für den SQL_Variant-Parameter ungültig. |
@@ -6571,7 +6577,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   17189   |   16  |   Ja |   Fehler bei SQL Server beim Erzeugen eines Threads zum Verarbeiten einer neuen Anmeldung oder Verbindung. Der Fehlercode ist 0x%x. Suchen Sie im SQL Server-Fehlerprotokoll und in den Windows-Ereignisprotokollen nach Informationen zu möglichen verwandten Problemen.%.*ls  |
 |   17190   |   16  |   Ja |   Fehler beim Initialisieren des FallBack-Zertifikats. Fehlercode: %d. |
 |   17191   |   16  |   Ja |   Eine neue Verbindung kann nicht angenommen werden, weil die Sitzung beendet wurde. Dieser Fehler tritt auf, wenn eine neue Batchausführung versucht wird, während die betreffende Sitzung abgemeldet wird, oder wenn bei der Verbindungsherstellung ein schwerer Fehler auftritt. Überprüfen Sie das Fehlerprotokoll, um zu bestimmen, ob diese Sitzung mit einem KILL-Befehl oder aufgrund von schweren Fehlern beendet wurde.%.*ls    |
-|   17192   |   10  |   Ja |   Die Unterstützung für dedizierte Administratorverbindungen wurde aufgrund des Fehlers 0x%lx, Statuscode 0x%lx, nicht gestartet. Dieser Fehler ist gewöhnlich ein Hinweis auf einen socketbasierten Fehler, wie z. B. ein bereits verwendeter Port.  |
+|   17192   |   10  |   Ja |   Die Unterstützung für dedizierte Administratorverbindungen wurde aufgrund des Fehlers 0x%lx, Statuscode 0x%lx. Dieser Fehler ist gewöhnlich ein Hinweis auf einen socketbasierten Fehler, wie z. B. ein bereits verwendeter Port.  |
 |   17193   |   10  |   Ja |   Die systemeigene SOAP-Unterstützung von SQL Server ist nun bereit für Clientverbindungen. Diese Meldung dient nur zu Informationszwecken. Es ist keine Benutzeraktion erforderlich.  |
 |   [17194](mssqlserver-17194-database-engine-error.md) |   16  |   Ja |   Der Server konnte die für das Anmelden erforderliche SSL-Anbieterbibliothek nicht laden. Die Verbindung wurde geschlossen. SSL wird zum Verschlüsseln der Anmeldesequenz oder der gesamten Kommunikation verwendet, je nach der vom Administrator festgelegten Serverkonfiguration. In der Onlinedokumentation finden Sie weitere Informationen zu dieser Fehlermeldung: %d %.*ls %.* ls   |
 |   17195   |   16  |   Ja |   Der Server konnte die Initialisierungssequenz nicht abschließen, weil die verfügbaren Netzwerkbibliotheken die geforderte Verschlüsselungsstufe nicht unterstützen. Der Serverprozess wurde angehalten. Bevor Sie den Server erneut starten, sollten Sie sich vergewissern, dass die SSL-Zertifikate installiert sind. Weitere Informationen finden Sie in der Onlinedokumentation unter "Konfigurieren von Clientprotokollen und Netzwerkbibliotheken". |
@@ -8743,7 +8749,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   30022   |   10  |   Nein  |   Warnung: Die Konfiguration einer Volltextstoppliste wurde mithilfe der WITH NO POPULATION-Klausel geändert. Dadurch wurde der Volltextindex inkonsistent. Um die Konsistenz des Volltextindexes wiederherzustellen, müssen Sie eine vollständige Auffüllung starten. Die Transact-SQL-Basissyntax hierfür lautet: ALTER FULLTEXT INDEX ON table_name START FULL POPULATION.   |
 |   30023   |   16  |   Nein  |   Die '%.*ls'-Volltextstoppliste ist nicht vorhanden, oder der aktuelle Benutzer hat keine Berechtigung für diese Aktion. Stellen Sie sicher, dass der Stopplistenname richtig ist und der Benutzer die für die Transact-SQL-Anweisung erforderliche Berechtigung hat.   |
 |   30024   |   16  |   Nein  |   Die '%.*ls'-Volltextstoppliste ist in der aktuellen Datenbank bereits vorhanden. Doppelte Stopplistennamen sind nicht zulässig. Führen Sie die Anweisung erneut aus, und geben Sie einen eindeutigen Stopplistennamen an. |
-|   30028   |   17  |   Nein  |   Fehler beim Abrufen der Pipelineoberfläche für "%ls" (Fehler: 0x%X). Problem bei der Kommunikation mit dem Hostcontroller oder Filterdaemonhost.  |
+|   30028   |   17  |   Nein  |   Fehler beim Abrufen der Pipelineoberfläche für "%ls" (Fehler: 0x%X. Problem bei der Kommunikation mit dem Hostcontroller oder Filterdaemonhost.  |
 |   30029   |   17  |   Nein  |   Fehler beim Starten des Volltext-Hostcontrollers. Error: 0x%X. |
 |   30031   |   17  |   Nein  |   Fehler bei Volltext-Masterzusammenführung für '%ls'-Volltextkatalog in '%.*ls'-Datenbank mit Fehler 0x%08X.   |
 |   30032   |   16  |   Nein  |   Die "%.*ls"-Stoppliste enthält kein Volltextstoppwort "%.* ls" mit der Gebietsschema-ID %d. Geben Sie ein gültiges Stoppwort und eine Gebietsschema-ID in die Transact-SQL-Anweisung ein. |

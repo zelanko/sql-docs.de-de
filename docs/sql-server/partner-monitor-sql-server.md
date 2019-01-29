@@ -9,22 +9,25 @@ ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: 1dbe3213ae6b5774cd08efa6f6a24b799f74a6a7
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.openlocfilehash: 426b0eed5b53760e872ebd18b11fce4de5ff22b9
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53731997"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044923"
 ---
 # <a name="sql-server-monitoring-partners"></a>SQL Server-Überwachungspartner
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Es gibt eine große Auswahl an branchenführenden Tools zur Überwachung Ihrer SQL Server-Dienste. Im Folgenden werden Partnerunternehmen von Microsoft aufgelistet, die Überwachungslösungen für Microsoft SQL Server anbieten.
 
 <!--
+
 |![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros Server 2005 SP4 - SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
+
 -->
 
 ## <a name="microsoft-monitoring-partners"></a>Microsoft-Überwachungspartner
+
 | Partner | und Beschreibung | Links |
 | --- | --- | --- | --- |
 |[![idera][1]][idera_website] |**IDERA**<br>SQL-Diagnose-Manager ist eine leistungsstarke Lösung zur Leistungsüberwachung und Diagnose, die Administratoren proaktiv warnt, wenn Probleme bei der Integrität, Leistung oder Verfügbarkeit in SQL Server-Umgebungen auftreten – und das alles in einer zentralen Konsole.<br><br>[Systemanforderungen][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Website][idera_website]<br>[Twitter][idera_twitter]<br>[Video][idera_youtube] | |
