@@ -20,14 +20,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 620413448f7bd6c10af2d0e7333cd9eb793ef41a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 43cd85210c437520d2f72b7e9a16fbe2aab84514
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521254"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087839"
 ---
-# <a name="sysquerystorewaitstats-transact-sql"></a>Sys. query_store_wait_stats (Transact-SQL)
+# <a name="sysquerystorewaitstats-transact-sql"></a>sys.query_store_wait_stats (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
@@ -46,7 +46,7 @@ ms.locfileid: "52521254"
 |**avg_query_wait_time_ms**|**float**|Durchschnittliche Wartezeit für den Abfrageplan pro Ausführung innerhalb der Aggregation Intervall und warten Sie, Kategorie (in Millisekunden gemeldet).|
 |**last_query_wait_time_ms**|**bigint**|Letzte Wartezeit für den Abfrageplan in aggregationsintervalls und warte-Kategorie (in Millisekunden gemeldet).|
 |**min_query_wait_time_ms**|**bigint**|Minimale `CPU wait` Zeit für den Abfrageplan in aggregationsintervalls und warte-Kategorie (in Millisekunden gemeldet).|
-|**max_query_wait_time_ms**|**bigint**|Maximale "CPU-Wartezeit" Zeit für den Abfrageplan in aggregationsintervalls und warte-Kategorie (in Millisekunden gemeldet).|
+|**max_query_wait_time_ms**|**bigint**|Maximale `CPU wait` Zeit für den Abfrageplan in aggregationsintervalls und warte-Kategorie (in Millisekunden gemeldet).|
 |**stdev_query_wait_time_ms**|**float**|`Query wait` Standardabweichung der Dauer für die Abfrage innerhalb eines aggregationsintervalls planen und warte-Kategorie (in Millisekunden gemeldet).|
 
 ## <a name="wait-categories-mapping-table"></a>Wartekategorien Tabelle zuordnen
@@ -58,14 +58,14 @@ ms.locfileid: "52521254"
 |**0**|**Unbekannt**|Unknown |  
 |**1**|**CPU**|SOS_SCHEDULER_YIELD|
 |**2**|**Arbeitsthread**|THREADPOOL|
-|**3**|**Sperre**|LCK_M_ %|
+|**3**|**Lock**|LCK_M_%|
 |**4**|**Latch**|LATCH_ %|
 |**5**|**Pufferlatch**|PAGELATCH_ %|
 |**6**|**E/a-Puffer**|PAGEIOLATCH_ %|
 |**7**|**Kompilierung***|RESOURCE_SEMAPHORE_QUERY_COMPILE|
-|**8**|**SQL-CLR**|CLR %, SQLCLR|
+|**8**|**SQL CLR**|CLR%, SQLCLR%|
 |**9**|**Datenbankspiegelung**|DBMIRROR %|
-|**10**|**Transaction**|XACT % "," DTC % "," TRAN_MARKLATCH_ % "," MSQL_XACT_ %, TRANSACTION_MUTEX|
+|**10**|**Transaction**|XACT%, DTC%, TRAN_MARKLATCH_%, MSQL_XACT_%, TRANSACTION_MUTEX|
 |**11**|**Im Leerlauf**|SLEEP_ %, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_ WARTESCHLANGE XE_TIMER_EVENT|
 |**12**|**PreEmptive**|PREEMPTIVE_ %|
 |**13**|**Service Broker**|BROKER_ % **(aber nicht BROKER_RECEIVE_WAITFOR)**|
@@ -73,7 +73,7 @@ ms.locfileid: "52521254"
 |**15**|**Netzwerk-e/a**|ASYNC_NETWORK_IO, NET_WAITFOR_PACKET, PROXY_NETWORK_IO, EXTERNAL_SCRIPT_NETWORK_IOF|
 |**16**|**Parallelism**|CXPACKET, EXCHANGE|
 |**17**|**Speicher**|RESOURCE_SEMAPHORE, CMEMTHREAD, CMEMPARTITIONED, EE_PMOLOCK, MEMORY_ALLOCATION_EXT, RESERVED_MEMORY_ALLOCATION_EXT, MEMORY_GRANT_UPDATE|
-|**18**|**Wartezeit für Benutzer**|WAITFOR WAIT_FOR_RESULTS, BROKER_RECEIVE_WAITFOR|
+|**18**|**Wartezeit für Benutzer**|WAITFOR, WAIT_FOR_RESULTS, BROKER_RECEIVE_WAITFOR|
 |**19**|**Ablaufverfolgung**|TRACEWRITE, SQLTRACE_LOCK, SQLTRACE_FILE_BUFFER, SQLTRACE_FILE_WRITE_IO_COMPLETION, SQLTRACE_FILE_READ_IO_COMPLETION, SQLTRACE_PENDING_BUFFER_WRITERS, SQLTRACE_SHUTDOWN, QUERY_TRACEOUT, TRACE_EVTNOTIFF|
 |**20**|**Volltextsuche**|FT_RESTART_CRAWL, VOLLTEXT-GATHERER, MSSEARCH, FT_METADATA_MUTEX, FT_IFTSHC_MUTEX, FT_IFTSISM_MUTEX, FT_IFTS_RWLOCK, FT_COMPROWSET_RWLOCK, FT_MASTER_MERGE, FT_PROPERTYLIST_CACHE, FT_MASTER_MERGE_COORDINATOR, PWAIT_RESOURCE_SEMAPHORE_FT_ PARALLEL_QUERY_SYNC|
 |**21**|**Andere Datenträger-e/a**|ASYNC_IO_COMPLETION, IO_COMPLETION, BACKUPIO, WRITE_COMPLETION, IO_QUEUE_LIMIT, IO_RETRY|
@@ -84,7 +84,7 @@ ms.locfileid: "52521254"
 
 ## <a name="permissions"></a>Berechtigungen
 
- Erfordert die **VIEW DATABASE STATE** Berechtigung.  
+ Erfordert die `VIEW DATABASE STATE`-Berechtigung.  
   
 ## <a name="see-also"></a>Siehe auch
 

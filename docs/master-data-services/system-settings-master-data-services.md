@@ -14,12 +14,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: fabd4b6da2a6c7016d00e503918062f86f6ce147
-ms.sourcegitcommit: 7ea015dc8527de14e7bd4401f5c74c8402fab3d6
+ms.openlocfilehash: 4a76d8d657f2451c52aea74c99576ffd89b30c8c
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53738116"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044486"
 ---
 # <a name="system-settings-master-data-services"></a>Systemeinstellungen (Master Data Services)
 
@@ -130,6 +130,7 @@ ms.locfileid: "53738116"
 ||**SecurityMemberProcessInterval**|Gibt im Funktionsbereich [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **User and Group Permissions** functional area, the frequency, in seconds, that user and group permissions set on the **Hierarchy Members** tab are applied. Der Standardwert ist **3600** Sekunden (60 Minuten).|  
 
 ##  <a name="Performance"></a> Leistungseinstellungen  
+
 |Einstellung des Konfigurations-Managers|Systemeinstellung|und Beschreibung|  
 |-----------------------------------|--------------------|-----------------|  
 |**Enable performance improvement setting** (Einstellung zur Leistungsverbesserung aktivieren)|**PerformanceImprovementEnable**|Diese Einstellung ist standardmäßig aktiviert (**auf 1 festgelegt**), damit die Leistung der mit der Ladeberechtigung in Zusammenhang stehenden Seite gut ist. In diesem Fall ist die Leistung beim Erstellen bzw. Ändern von Entitäten, Attributen, Benutzern oder Gruppen allerdings schlecht. Sie können die Einstellung deaktivieren (**auf 0 festgelegt**), um dies zu vermeiden. Wenn Sie diese Einstellung geändert haben, müssen Sie den Befehl **EXEC [mdm].[udpPerformanceToggleSwitch];** ausführen, damit die Ansicht sowie die Daten keine Fehler aufweisen.|  

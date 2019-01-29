@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 758917c8f3fd11d79162ac650cd29efd709e9dd3
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 1f604f75c685e1d06edf4287ea86a71020197188
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813124"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457453"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>Aktivieren von Remotefehlern (Reporting Services)
   Sie können Servereigenschaften auf einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] festlegen, um zusätzliche Informationen zu auf Remoteservern aufgetretenen Fehlerbedingungen zurückzugeben. Wenn in einer Fehlermeldung der Text "Um weitere Informationen zu diesem Fehler zu erhalten, navigieren Sie zum Berichtsserver auf dem lokalen Servercomputer, oder aktivieren Sie Remotefehler." angezeigt wird, können Sie die **EnableRemoteErrors** -Eigenschaft festlegen, um zusätzliche Informationen zum Behandeln des Problems zu erhalten. Weitere Informationen finden Sie unter [Berichtsserver-Systemeigenschaften](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
@@ -108,7 +108,7 @@ ms.locfileid: "51813124"
   
 ##  <a name="bkmk_ConfigurationInfo"></a> Ändern der ConfigurationInfo-Tabelle (Einheitlicher Modus)  
   
-1.  > [!NOTE]  
-    >  Sie können die **ConfigurationInfo** -Tabelle in der Berichtsserver-Datenbank bearbeiten, um **EnableRemoteErrors** auf **True**festzulegen. Wenn der Berichtsserver jedoch aktiv verwendet wird, sollten Sie nach Möglichkeit SQL Server Management Studio oder ein Skript zum Ändern der Einstellungen verwenden. Wenn Sie die Einstellung in der Datenbank ändern, müssen Sie den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienst neu starten, bevor die Änderungen wirksam werden.  
+> [!NOTE]  
+>  Sie können die **ConfigurationInfo** -Tabelle in der Berichtsserver-Datenbank bearbeiten, um **EnableRemoteErrors** auf **True**festzulegen. Wenn der Berichtsserver jedoch aktiv verwendet wird, sollten Sie nach Möglichkeit SQL Server Management Studio oder ein Skript zum Ändern der Einstellungen verwenden. Wenn Sie die Einstellung in der Datenbank ändern, müssen Sie den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienst neu starten, bevor die Änderungen wirksam werden.  
   
   

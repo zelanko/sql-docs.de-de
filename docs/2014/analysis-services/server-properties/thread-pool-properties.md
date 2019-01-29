@@ -18,12 +18,12 @@ ms.assetid: e2697bb6-6d3f-4621-b9fd-575ac39c2185
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e9177f154af1085a28c902e137cad0640f5702fb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 384d1cd437947e23f571cf30b6ec7fad84704942
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354888"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087899"
 ---
 # <a name="thread-pool-properties"></a>Threadpooleigenschaften
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet Multithreading für viele Vorgänge, um die Gesamtserverleistung zu verbessern, indem mehrere Aufträge parallel ausgeführt werden. Zur effizienteren Verwaltung von Threads verwendet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Threadpools, um Threads vorab zuzuordnen und die Threadverfügbarkeit für den nächsten Auftrag zu erleichtern.  
@@ -193,13 +193,13 @@ ms.locfileid: "53354888"
   
  NUMA-Knoten werden ignoriert. Es ist nur ein IOProcess-Threadpool vorhanden, und alle Threads in diesem Threadpool werden allen logischen Prozessoren zugeordnet. Dies ist (bei PerNumaNode=-1) die operative Standardeinstellung, wenn der Computer über weniger als vier NUMA-Knoten verfügt.  
   
- ![NUMA, Prozessor und Threadpool](../media/ssas-threadpool-numaex0.PNG "Numa, Prozessor und Threadpool")  
+ ![NUMA, Übereinstimmung zwischen Prozessor und pool Korrespondenz](../media/ssas-threadpool-numaex0.PNG "Numa, Übereinstimmung zwischen Prozessor und pool-Entsprechung")  
   
  **Festlegen von "PerNumaNode=1"**  
   
  IOProcess-Threadpools werden für jeden NUMA-Knoten erstellt. Die Verwendung separater Threadpools verbessert den koordinierten Zugriff auf lokale Ressourcen wie den lokalen Cache für einen NUMA-Knoten.  
   
- ![NUMA, Prozessor und Threadpool](../media/ssas-threadpool-numaex1.PNG "Numa, Prozessor und Threadpool")  
+ ![NUMA, Übereinstimmung zwischen Prozessor und pool Korrespondenz](../media/ssas-threadpool-numaex1.PNG "Numa, Übereinstimmung zwischen Prozessor und pool-Entsprechung")  
   
  **Festlegen von "PerNumaNode=2"**  
   
@@ -207,7 +207,7 @@ ms.locfileid: "53354888"
   
  Im folgenden Beispiel auf einem System müssen 4 NUMA-Knoten und 32 logischen Prozessoren festlegen `PerNumaNode` auf 2 ergibt 32 IOProcess-Threadpools. Die Threads in den ersten 8 Threadpools werden allen logischen Prozessoren im NUMA-Knoten 0 zugeordnet, wobei jedoch der ideale Prozessor auf 0, 1, 2 bis 7 festgelegt ist. Die nächsten acht Threadpools würden allen logischen Prozessoren im NUMA-Knoten 1 zugeordnet werden, wobei der ideale Prozessor auf 8,9, 10 bis zu 15 festgelegt wird, und so weiter.  
   
- ![NUMA, Prozessor und Threadpool](../media/ssas-threadpool-numaex2.PNG "Numa, Prozessor und Threadpool")  
+ ![NUMA, Übereinstimmung zwischen Prozessor und pool Korrespondenz](../media/ssas-threadpool-numaex2.PNG "Numa, Übereinstimmung zwischen Prozessor und pool-Entsprechung")  
   
  Auf dieser Affinitätsebene versucht das Zeitplanungsmodul immer, zuerst den idealen logischen Prozessor im bevorzugten NUMA-Knoten zu verwenden. Wenn der logische Prozessor nicht verfügbar ist, wählt das Zeitplanungsmodul einen anderen Prozessor im selben Knoten oder in derselben Prozessorgruppe aus, wenn keine anderen Threads verfügbar sind. Weitere Informationen und Beispiele finden Sie unter [Analysis Services 2012 Configuration settings (Wordpress-Blog)](https://go.microsoft.com/fwlink/?LinkId=330387)(Analysis Services 2012-Konfigurationseinstellungen).  
   

@@ -11,12 +11,12 @@ ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9a2172bdefebdbfd327d8d253e32cd63c254d8e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cf132a6cd6e15002b36ba7ecdced512e3686e433
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419872"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087711"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>PowerPivot-Management-Dashboard und Verwendungsdaten
   Das PowerPivot-Management-Dashboard ist eine Sammlung vordefinierter Berichte und Webparts in der SharePoint-Zentraladministration, die Sie bei der Verwaltung einer SQL Server PowerPivot für SharePoint-Bereitstellung unterstützen. Das Management-Dashboard bietet Informationen zum Serverstatus, zur Arbeitsmappenaktivität sowie zur Datenaktualisierung. Das Dashboard nutzt Daten aus der Sammlung von Verwendungsdaten in SharePoint.  
@@ -67,7 +67,7 @@ ms.locfileid: "52419872"
 ### <a name="change-the-current-service-application"></a>Ändern Sie die aktuelle Dienstanwendung.  
  So ändern Sie die aktuelle PowerPivot-Dienstanwendung im Management-Dashboard:  
   
-1.  Merken Sie sich den Namen der aktuellen Dienstanwendung, der im oberen Bereich des PowerPivot-Management-Dashboards angezeigt wird, beispielsweise **PowerPivot-Standarddienstanwendung**.  
+1.  Beachten Sie am oberen Rand der PowerPivot-Management-Dashboard, den Namen der aktuellen dienstanwendung, z. B. **PowerPivot-Standarddienstanwendung**.  
   
 2.  Klicken Sie im Dashboard **Aktionen** auf **Dienstanwendungen auflisten**.  
   

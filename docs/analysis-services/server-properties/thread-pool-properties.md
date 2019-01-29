@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ee8f8c4a222b2949f49c8be019b6e4f6724cfa04
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: d46ff8318543d4e2a4b4dc547c9f19640d463f49
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785961"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087869"
 ---
 # <a name="thread-pool-properties"></a>Threadpooleigenschaften
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -173,13 +173,13 @@ Wir empfehlen das kumulative Update 1 für SQL Server 2016 (CU1) oder höher fü
   
  NUMA-Knoten werden ignoriert. Es ist nur ein IOProcess-Threadpool vorhanden, und alle Threads in diesem Threadpool werden allen logischen Prozessoren zugeordnet. Dies ist (bei PerNumaNode=-1) die operative Standardeinstellung, wenn der Computer über weniger als vier NUMA-Knoten verfügt.  
   
- ![NUMA, Prozessor und Threadpool](../../analysis-services/server-properties/media/ssas-threadpool-numaex0.PNG "Numa, Prozessor und Threadpool")  
+ ![NUMA, Übereinstimmung zwischen Prozessor und pool Korrespondenz](../../analysis-services/server-properties/media/ssas-threadpool-numaex0.PNG "Numa, Übereinstimmung zwischen Prozessor und pool-Entsprechung")  
   
  **Festlegen von "PerNumaNode=1"**  
   
  IOProcess-Threadpools werden für jeden NUMA-Knoten erstellt. Die Verwendung separater Threadpools verbessert den koordinierten Zugriff auf lokale Ressourcen wie den lokalen Cache für einen NUMA-Knoten.  
   
- ![NUMA, Prozessor und Threadpool](../../analysis-services/server-properties/media/ssas-threadpool-numaex1.PNG "Numa, Prozessor und Threadpool")  
+ ![NUMA, Übereinstimmung zwischen Prozessor und pool Korrespondenz](../../analysis-services/server-properties/media/ssas-threadpool-numaex1.PNG "Numa, Übereinstimmung zwischen Prozessor und pool-Entsprechung")  
   
  **Festlegen von "PerNumaNode=2"**  
   
@@ -187,7 +187,7 @@ Wir empfehlen das kumulative Update 1 für SQL Server 2016 (CU1) oder höher fü
   
  Wenn Sie wie im folgenden Beispiel über ein System mit vier NUMA-Knoten und 32 logischen Prozessoren verfügen und **PerNumaNode** auf 2 festlegen, ergibt dies 32 IOProcess-Threadpools. Die Threads in den ersten 8 Threadpools werden allen logischen Prozessoren im NUMA-Knoten 0 zugeordnet, wobei jedoch der ideale Prozessor auf 0, 1, 2 bis 7 festgelegt ist. Die nächsten acht Threadpools würden allen logischen Prozessoren im NUMA-Knoten 1 zugeordnet werden, wobei der ideale Prozessor auf 8,9, 10 bis zu 15 festgelegt wird, und so weiter.  
   
- ![NUMA, Prozessor und Threadpool](../../analysis-services/server-properties/media/ssas-threadpool-numaex2.PNG "Numa, Prozessor und Threadpool")  
+ ![NUMA, Übereinstimmung zwischen Prozessor und pool Korrespondenz](../../analysis-services/server-properties/media/ssas-threadpool-numaex2.PNG "Numa, Übereinstimmung zwischen Prozessor und pool-Entsprechung")  
   
  Auf dieser Affinitätsebene versucht das Zeitplanungsmodul immer, zuerst den idealen logischen Prozessor im bevorzugten NUMA-Knoten zu verwenden. Wenn der logische Prozessor nicht verfügbar ist, wählt das Zeitplanungsmodul einen anderen Prozessor im selben Knoten oder in derselben Prozessorgruppe aus, wenn keine anderen Threads verfügbar sind. Weitere Informationen und Beispiele finden Sie unter [Analysis Services 2012 Configuration settings (Wordpress-Blog)](http://go.microsoft.com/fwlink/?LinkId=330387)(Analysis Services 2012-Konfigurationseinstellungen).  
   

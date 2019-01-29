@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d0b91668141b73b8ce5e4708cb403b7cc09b4ce9
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 8ef383a0f2c85525e408607c22513065dd5bcb50
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432833"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087739"
 ---
 # <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>Unterschiede bei der Installation von SQL Server Machine Learning Services in SQL Server-2019  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -58,7 +58,7 @@ Wie zuvor zusätzliche Konfiguration für noch erforderlich ist *implizite Authe
 
 ## <a name="symbolic-link-created-by-setup"></a>Symbolische Verknüpfung, die von Setup erstellt wurde
 
-Eine symbolische Verknüpfung wird erstellt, um die aktuelle Standardeinstellung **R_SERVICES** und **PYTHON_SERIVCES** als Teil des SQL Server-Setup. Wenn Sie nicht diesen Link erstellen möchten, ist eine Alternative, der Hierarchie, zu dem Ordner "alle Anwendungspakete" Leseberechtigung gewähren.
+Eine symbolische Verknüpfung wird erstellt, um die aktuelle Standardeinstellung **R_SERVICES** und **PYTHON_SERVICES** als Teil des SQL Server-Setup. Wenn Sie nicht diesen Link erstellen möchten, ist eine Alternative, der Hierarchie, zu dem Ordner "alle Anwendungspakete" Leseberechtigung gewähren.
 
 
 ## <a name="see-also"></a>Siehe auch

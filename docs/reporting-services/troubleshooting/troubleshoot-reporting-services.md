@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6eeed553-512d-4603-9b14-0492a9d052b5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 40f54f79c918f580d758dec342508dec96ae5b45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13a85c169421f4ab794ed95f8696d32e5215f6c9
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686128"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087929"
 ---
 # <a name="troubleshoot-reporting-services"></a>Reporting Services-Problembehandlung
   Mithilfe dieses Abschnitts können Sie Probleme bei [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]bestimmen und beheben.  
@@ -30,16 +30,16 @@ ms.locfileid: "47686128"
 
 +  [Troubleshoot Reporting Services Report Rendering Issues (Problembehandlung: Probleme beim Rendern von Reporting Services-Berichten)](../../reporting-services/troubleshooting/troubleshoot-reporting-services-report-rendering-issues.md)  
 
-+  [Problembehandlung beim Veröffentlichen oder Anzeigen eines Berichts auf einem Berichtsserver im einheitlichen Modus](../../reporting-services/troubleshooting/troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server.md)  
++  [Troubleshoot Publishing or Viewing a Report on a Native Mode Report Server (Problembehandlung: Veröffentlichen oder Anzeigen eines Berichts auf einem Berichtsserver im einheitlichen Modus)](../../reporting-services/troubleshooting/troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server.md)  
 
-+  [Problembehandlung bei Server- und Datenbankverbindungsproblemen mit Reporting Services](troubleshoot-server-and-database-connection-problems-with-reporting-services.md)  
++  [Troubleshoot Server and Database Connection Problems with Reporting Services (Problembehandlung: Server- und Datenbankverbindungsprobleme mit Reporting Services)](troubleshoot-server-and-database-connection-problems-with-reporting-services.md)  
 
  ![Kleines Dateiordnersymbol](../../reporting-services/troubleshooting/media/filefolder-small.png)   **Fehler- und Ereignisreferenz**  
  + [Fehler- und Ereignisreferenz &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 
 +  [Ursachen und Lösungen für Reporting Services-Fehler](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 
 -  [Reporting Services Log Files and Sources (Reporting Services-Protokolldateien und -Quellen)](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
 -   [Aktivieren von Reporting Services-Ereignissen für das SharePoint-Ablaufverfolgungsprotokoll (ULS)](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  

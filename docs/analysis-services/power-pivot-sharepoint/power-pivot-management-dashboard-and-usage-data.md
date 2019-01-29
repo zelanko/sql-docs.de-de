@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7158c0c441c11f87c4cc4989ca66061318a60df4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f53c8835da14fc3ee41eb9598303f80c062a0e82
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419701"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087749"
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>PowerPivot-Management-Dashboard und Verwendungsdaten
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "52419701"
 ### <a name="change-the-current-service-application"></a>Ändern Sie die aktuelle Dienstanwendung.  
  So ändern Sie die aktuelle [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Dienstanwendung im Management-Dashboard:  
   
-1.  Notieren Sie sich den Namen der aktuellen Dienstanwendung, der im oberen Bereich des [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]-Management-Dashboards angezeigt wird, beispielsweise **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]-Standarddienstanwendung**.  
+1.  Am oberen Rand der [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Management-Dashboard, notieren Sie den Namen der aktuellen dienstanwendung, z. B. **Standard [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Dienstanwendung**.  
   
 2.  Klicken Sie im Dashboard **Aktionen** auf **Dienstanwendungen auflisten**.  
   

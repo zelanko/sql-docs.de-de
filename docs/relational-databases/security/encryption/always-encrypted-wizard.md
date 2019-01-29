@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db55b4763dc0a5956d419fd45ced58073e2affbb
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 696d3bfc454e396f8cc590d3178f8ae54b89128a
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327869"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805716"
 ---
 # <a name="always-encrypted-wizard"></a>Always Encrypted-Assistent
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,13 +35,13 @@ Verwenden Sie den **Always Encrypted-Assistent** zum Schutz sensibler Daten, die
  
  - **Berechtigungen:** Damit Sie mit diesem Assistenten verschlüsselte Spalten abfragen und Schlüssel auswählen können, müssen Sie die Berechtigungen `VIEW ANY COLUMN MASTER KEY DEFINITION` und `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` haben. Damit Sie neue Schlüssel erstellen können, müssen Sie auch die Berechtigungen `ALTER ANY COLUMN MASTER KEY` und `ALTER ANY COLUMN ENCRYPTION KEY` haben.  
  
- #### <a name="to-open-the-always-encrypted-wizard"></a>So öffnen Sie den Always Encrypted-Assistenten  
+ #### <a name="to-open-the-always-encrypted-wizard"></a>So öffnen Sie den Always Encrypted-Assistenten
  
  1.  Stellen Sie eine Verbindung mit Ihrem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der Objekt-Explorer-Komponente von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]her.  
    
  2.  Klicken Sie mit der rechten Maustaste auf Ihre Datenbank, bewegen Sie den Mauszeiger zu **Aufgaben**, und klicken Sie dann auf **Spalten verschlüsseln**.  
    
- ## <a name="column-selection-page"></a>Die Seite „Spaltenauswahl“  
+ ## <a name="column-selection-page"></a>Die Seite „Spaltenauswahl“
  - Suchen Sie eine Tabelle und eine Spalte, und wählen Sie dann einen Verschlüsselungstyp (deterministisch oder zufällig) und einen Verschlüsselungsschlüssel für die ausgewählte Spalte aus. Um eine verschlüsselte Spalte zu entschlüsseln, wählen Sie **Klartext**. Um einen Spaltenverschlüsselungsschlüssel zu wechseln, wählen Sie die Option „andere Verschlüsselungsschlüssel“ und der Assistent wird die Spalte entschlüsseln und dann wieder mit dem neuen Schlüssel verschlüsseln. (Das Verschlüsseln von temporalen und speicherinternen Tabellen wird von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt, kann jedoch nicht mit diesem Assistenten konfiguriert werden.)  
  
 ## <a name="master-key-configuration-page"></a>Die Seite „Konfigurieren des Hauptschlüssels“  
