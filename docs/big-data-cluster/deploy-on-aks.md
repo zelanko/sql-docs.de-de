@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a5dcc1c2726eaf234056fc77979df4d21a0dea17
-ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
+ms.openlocfilehash: 5e4ec4e6f0de497e3ec5d35293ad142696a19a46
+ms.sourcegitcommit: 3a1e0b92cbe53ccf3b233faf8629d16bbf673b30
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898925"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55229031"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-big-data-cluster-preview-deployments"></a>Konfigurieren von Azure Kubernetes Service für SQL Server-2019 big Data-Cluster (Vorschau)-Bereitstellungen
 
@@ -81,7 +81,7 @@ Eine Azure-Ressourcengruppe ist eine logische Gruppe, in dem, die Azure Ressourc
     --generate-ssh-keys \
     --node-vm-size Standard_L4s \
     --node-count 3 \
-    --kubernetes-version 1.10.8
+    --kubernetes-version 1.10.9
     ```
 
    Sie können erhöhen oder verringern Sie die Anzahl von Kubernetes-Agent-Knoten durch Ändern der `--node-count <n>` , in denen `<n>` ist die Anzahl von Agent-Knoten, die Sie verwenden möchten. Dies schließt nicht den Hauptschlüssel Kubernetes-Knoten, der hinter den Kulissen von AKS verwaltet wird. Im Beispiel oben stehen **3** virtuelle Computer der Größe **Standard_L4s** für die Agent-Knoten Ihres AKS-Clusters verwendet.
