@@ -1,14 +1,15 @@
+items:
 - name: Übersicht
   href: data-flow.md
 - name: Daten in Datenflüssen
   href: data-in-data-flows.md
   items:
-    - name: SQL Server Integration Services-Datentypen
-      href: integration-services-data-types.md
-    - name: Analysieren von Daten
-      href: parsing-data.md
-    - name: Vergleichen von Zeichenfolgendaten
-      href: comparing-string-data.md
+  - name: SQL Server Integration Services-Datentypen
+    href: integration-services-data-types.md
+  - name: Analysieren von Daten
+    href: parsing-data.md
+  - name: Vergleichen von Zeichenfolgendaten
+    href: comparing-string-data.md
 - name: Hinzufügen oder Löschen einer Komponente im Datenfluss
   href: add-or-delete-a-component-in-a-data-flow.md
 - name: Festlegen der Eigenschaften einer Datenflusskomponente
@@ -46,39 +47,39 @@
 - name: CDC-Flusskomponenten
   href: cdc-flow-components.md
   items:
-    - name: CDC-Quelle
-      href: cdc-source.md
-      items:
-        - name: Benutzerdefinierte Eigenschaften der CDC-Quelle
-          href: cdc-source-custom-properties.md
-        - name: Extrahieren von Änderungsdaten mithilfe der CDC-Quelle
-          href: extract-change-data-using-the-cdc-source.md
-    - name: CDC-Splitter
-      href: cdc-splitter.md
-    - name: Weiterleiten des CDC-Datenstroms gemäß Änderungstyp
-      href: direct-the-cdc-stream-according-to-the-type-of-change.md
-    - name: Definieren einer Statusvariablen
-      href: define-a-state-variable.md
+  - name: CDC-Quelle
+    href: cdc-source.md
+    items:
+    - name: Benutzerdefinierte Eigenschaften der CDC-Quelle
+      href: cdc-source-custom-properties.md
+    - name: Extrahieren von Änderungsdaten mithilfe der CDC-Quelle
+      href: extract-change-data-using-the-cdc-source.md
+  - name: CDC-Splitter
+    href: cdc-splitter.md
+  - name: Weiterleiten des CDC-Datenstroms gemäß Änderungstyp
+    href: direct-the-cdc-stream-according-to-the-type-of-change.md
+  - name: Definieren einer Statusvariablen
+    href: define-a-state-variable.md
 - name: Ziel des Data Mining-Modelltrainings
   href: data-mining-model-training-destination.md
   items:
-    - name: Benutzerdefinierte Eigenschaften des Ziels des Data Mining-Modelltrainings
-      href: data-mining-model-training-destination-custom-properties.md
+  - name: Benutzerdefinierte Eigenschaften des Ziels des Data Mining-Modelltrainings
+    href: data-mining-model-training-destination-custom-properties.md
 - name: Konfigurieren des Datenstreamingziels
   href: data-streaming-destination.md
   items:
-    - name: 'Exemplarische Vorgehensweise: Veröffentlichen eines SSIS-Pakets als eine SQL-Ansicht'
-      href: walkthrough-publish-an-ssis-package-as-a-sql-view.md
+  - name: 'Exemplarische Vorgehensweise: Veröffentlichen eines SSIS-Pakets als eine SQL-Ansicht'
+    href: walkthrough-publish-an-ssis-package-as-a-sql-view.md
 - name: DataReader-Ziel
   href: datareader-destination.md
   items:
-    - name: Benutzerdefinierte Eigenschaften des DataReader-Ziels
-      href: datareader-destination-custom-properties.md
+  - name: Benutzerdefinierte Eigenschaften des DataReader-Ziels
+    href: datareader-destination-custom-properties.md
 - name: Ziel für Dimensionsverarbeitung
   href: dimension-processing-destination.md
   items:
-    - name: Benutzerdefinierte Eigenschaften des Ziels für Dimensionsverarbeitung
-      href: dimension-processing-destination-custom-properies.md
+  - name: Benutzerdefinierte Eigenschaften des Ziels für Dimensionsverarbeitung
+    href: dimension-processing-destination-custom-properies.md
 - name: Excel-Quelle
   href: excel-source.md
 - name: Excel-Ziel
@@ -98,48 +99,50 @@
 - name: OData-Quelle
   href: odata-source.md
   items:
-    - name: 'Lernprogramm: Verwenden der OData-Quelle'
-      href: tutorial-using-the-odata-source.md
-    - name: Bereitstellen einer OData-Quellabfrage zur Laufzeit
-      href: modify-odata-source-query-at-runtime.md
-    - name: OData-Quelleneigenschaften
-      href: odata-source-properties.md
+  - name: 'Lernprogramm: Verwenden der OData-Quelle'
+    href: tutorial-using-the-odata-source.md
+  - name: Bereitstellen einer OData-Quellabfrage zur Laufzeit
+    href: modify-odata-source-query-at-runtime.md
+  - name: OData-Quelleneigenschaften
+    href: odata-source-properties.md
 - name: ODBC-Flusskomponenten
   href: odbc-flow-components.md
   items:
-    - name: ODBC-Ziel
-      href: odbc-destination.md
-      items:
-        - name: Laden von Daten mithilfe des ODBC-Ziels
-          href: load-data-by-using-the-odbc-destination.md
-        - name: ODBC Destination Custom Properties
-          href: odbc-destination-custom-properties.md
-    - name: ODBC-Quelle
-      href: odbc-source.md
-      items:
-        - name: Extrahieren von Daten mithilfe der ODBC-Quelle
-          href: extract-data-by-using-the-odbc-source.md
-        - name: ODBC Source Custom Properties
-          href: odbc-source-custom-properties.md
+  - name: ODBC-Ziel
+    href: odbc-destination.md
+    items:
+    - name: Laden von Daten mithilfe des ODBC-Ziels
+      href: load-data-by-using-the-odbc-destination.md
+    - name: ODBC Destination Custom Properties
+      href: odbc-destination-custom-properties.md
+  - name: ODBC-Quelle
+    href: odbc-source.md
+    items:
+    - name: Extrahieren von Daten mithilfe der ODBC-Quelle
+      href: extract-data-by-using-the-odbc-source.md
+    - name: ODBC Source Custom Properties
+      href: odbc-source-custom-properties.md
 - name: OLE DB-Quelle
   href: ole-db-source.md
   items:
-    - name: Zuordnen von Abfrageparametern zu Variablen in einer Datenflusskomponente
-      href: map-query-parameters-to-variables-in-a-data-flow-component.md
-    - name: Extrahieren von Daten mithilfe der OLE DB-Quelle
-      href: extract-data-by-using-the-ole-db-source.md
+  - name: Zuordnen von Abfrageparametern zu Variablen in einer Datenflusskomponente
+    href: map-query-parameters-to-variables-in-a-data-flow-component.md
+  - name: Extrahieren von Daten mithilfe der OLE DB-Quelle
+    href: extract-data-by-using-the-ole-db-source.md
 - name: OLE DB-Ziel
   href: ole-db-destination.md
   items:
-    - name: Laden von Daten mithilfe des OLE DB-Ziels
-      href: load-data-by-using-the-ole-db-destination.md
+  - name: Laden von Daten mithilfe des OLE DB-Ziels
+    href: load-data-by-using-the-ole-db-destination.md
 - name: Benutzerdefinierte Eigenschaften für OLE DB
   href: ole-db-custom-properties.md
 - name: Ziel für Partitionsverarbeitung
   href: partition-processing-destination.md
   items:
-    - name: Benutzerdefinierte Eigenschaften des Ziels für Partitionsverarbeitung
-      href: partition-processing-destination-custom-properties.md
+  - name: Benutzerdefinierte Eigenschaften des Ziels für Partitionsverarbeitung
+    href: partition-processing-destination-custom-properties.md
+- name: Power Query-Quelle
+  href: power-query-source.md
 - name: Rohdatendatei-Quelle
   href: raw-file-source.md
 - name: Raw File Destination
@@ -149,74 +152,80 @@
 - name: Recordsetziel
   href: recordset-destination.md
   items:
-    - name: Verwenden eines Recordsetziels
-      href: use-a-recordset-destination.md
-    - name: Benutzerdefinierte Eigenschaften des Recordsetziels
-      href: recordset-destination-custom-properties.md
+  - name: Verwenden eines Recordsetziels
+    href: use-a-recordset-destination.md
+  - name: Benutzerdefinierte Eigenschaften des Recordsetziels
+    href: recordset-destination-custom-properties.md
 - name: SAP BW-Quelle
   href: sap-bw-source.md
   items:
-    - name: Quellen-Editor für SAP BW (Seite Verbindungs-Manager)
-      href: sap-bw-source-editor-connection-manager-page.md
-    - name: Quellen-Editor für SAP BW (Seite Spalten)
-      href: sap-bw-source-editor-columns-page.md
-    - name: Quellen-Editor für SAP BW (Seite Fehlerausgabe)
-      href: sap-bw-source-editor-error-output-page.md
-    - name: Quellen-Editor für SAP BW (Seite Erweitert)
-      href: sap-bw-source-editor-advanced-page.md
-    - name: RFC-Ziel suchen
-      href: look-up-rfc-destination.md
-    - name: Prozesskette suchen
-      href: look-up-process-chain.md
-    - name: Anforderungsprotokoll
-      href: request-log.md
-    - name: Vorschau
-      href: preview.md
+  - name: Quellen-Editor für SAP BW (Seite Verbindungs-Manager)
+    href: sap-bw-source-editor-connection-manager-page.md
+  - name: Quellen-Editor für SAP BW (Seite Spalten)
+    href: sap-bw-source-editor-columns-page.md
+  - name: Quellen-Editor für SAP BW (Seite Fehlerausgabe)
+    href: sap-bw-source-editor-error-output-page.md
+  - name: Quellen-Editor für SAP BW (Seite Erweitert)
+    href: sap-bw-source-editor-advanced-page.md
+  - name: RFC-Ziel suchen
+    href: look-up-rfc-destination.md
+  - name: Prozesskette suchen
+    href: look-up-process-chain.md
+  - name: Anforderungsprotokoll
+    href: request-log.md
+  - name: Vorschau
+    href: preview.md
 - name: SAP BW-Ziel
   href: sap-bw-destination.md
   items:
-    - name: Ziel-Editor für SAP BW (Seite Verbindungs-Manager)
-      href: sap-bw-destination-editor-connection-manager-page.md
-    - name: Ziel-Editor für SAP BW (Seite Zuordnungen)
-      href: sap-bw-destination-editor-mappings-page.md
-    - name: Ziel-Editor für SAP BW (Seite Fehlerausgabe)
-      href: sap-bw-destination-editor-error-output-page.md
-    - name: Ziel-Editor für SAP BW (Seite Erweitert)
-      href: sap-bw-destination-editor-advanced-page.md
-    - name: InfoPackage suchen
-      href: look-up-infopackage.md
-    - name: Neues InfoObject erstellen
-      href: create-new-infoobject.md
-    - name: InfoCube für Transaktionsdaten erstellen
-      href: create-infocube-for-transaction-data.md
-    - name: InfoObject suchen
-      href: look-up-infoobject.md
-    - name: InfoSource erstellen
-      href: create-infosource.md
-    - name: InfoSource für Transaktionsdaten erstellen
-      href: create-infosource-for-transaction-data.md
-    - name: InfoSource für Masterdaten erstellen
-      href: create-infosource-for-master-data.md
-    - name: InfoPackage erstellen
-      href: create-infopackage.md
+  - name: Ziel-Editor für SAP BW (Seite Verbindungs-Manager)
+    href: sap-bw-destination-editor-connection-manager-page.md
+  - name: Ziel-Editor für SAP BW (Seite Zuordnungen)
+    href: sap-bw-destination-editor-mappings-page.md
+  - name: Ziel-Editor für SAP BW (Seite Fehlerausgabe)
+    href: sap-bw-destination-editor-error-output-page.md
+  - name: Ziel-Editor für SAP BW (Seite Erweitert)
+    href: sap-bw-destination-editor-advanced-page.md
+  - name: InfoPackage suchen
+    href: look-up-infopackage.md
+  - name: Neues InfoObject erstellen
+    href: create-new-infoobject.md
+  - name: InfoCube für Transaktionsdaten erstellen
+    href: create-infocube-for-transaction-data.md
+  - name: InfoObject suchen
+    href: look-up-infoobject.md
+  - name: InfoSource erstellen
+    href: create-infosource.md
+  - name: InfoSource für Transaktionsdaten erstellen
+    href: create-infosource-for-transaction-data.md
+  - name: InfoSource für Masterdaten erstellen
+    href: create-infosource-for-master-data.md
+  - name: InfoPackage erstellen
+    href: create-infopackage.md
 - name: SQL Server Compact Edition-Ziel
   href: sql-server-compact-edition-destination.md
   items:
-    - name: Benutzerdefinierte Eigenschaften des Ziels für SQL Server Compact Edition
-      href: sql-server-compact-edition-destination-custom-properties.md
+  - name: Benutzerdefinierte Eigenschaften des Ziels für SQL Server Compact Edition
+    href: sql-server-compact-edition-destination-custom-properties.md
 - name: SQL Server-Ziel
   href: sql-server-destination.md
   items:
-    - name: Massenladen von Daten mithilfe des SQL Server-Ziels
-      href: bulk-load-data-by-using-the-sql-server-destination.md
-    - name: Benutzerdefinierte Eigenschaften des SQL Server-Ziels
-      href: sql-server-destination-custom-properties.md
+  - name: Massenladen von Daten mithilfe des SQL Server-Ziels
+    href: bulk-load-data-by-using-the-sql-server-destination.md
+  - name: Benutzerdefinierte Eigenschaften des SQL Server-Ziels
+    href: sql-server-destination-custom-properties.md
 - name: Transformationen
   href: ../../integration-services/data-flow/transformations/integration-services-transformations.md
 - name: XML-Quelle
   href: xml-source.md
   items:
-    - name: Extrahieren von Daten mithilfe der XML-Quelle
-      href: extract-data-by-using-the-xml-source.md
-    - name: Benutzerdefinierte Eigenschaften der XML-Quelle
-      href: xml-source-custom-properties.md
+  - name: Extrahieren von Daten mithilfe der XML-Quelle
+    href: extract-data-by-using-the-xml-source.md
+  - name: Benutzerdefinierte Eigenschaften der XML-Quelle
+    href: xml-source-custom-properties.md
+ms.openlocfilehash: e7c500c6534b746589fda6889c7c8a4561918a89
+ms.sourcegitcommit: 3a1e0b92cbe53ccf3b233faf8629d16bbf673b30
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55229051"

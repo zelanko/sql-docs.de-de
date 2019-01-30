@@ -3,7 +3,7 @@ items:
   href: index.md
 - name: Machine Learning-Erweiterungen (R, Python)
   items:
-  - name: Neuerungen
+  - name: Neues
     href: what-s-new-in-sql-server-machine-learning-services.md
   - name: SQL ML Services (R, Python)
     href: what-is-sql-server-machine-learning.md
@@ -21,7 +21,7 @@ items:
     href: java/java-first-sample.md
   - name: Java- und SQL-Datentypen
     href: java/java-sql-datatypes.md
-- name: Installation
+- name: Install
   items:
   - name: Unterschiede in SQL Server 2019
     href: install/sql-machine-learning-services-ver15.md
@@ -78,7 +78,7 @@ items:
       href: tutorials/quickstart-python-data-structures.md
     - name: Trainieren und Verwenden Ihres ersten Modells
       href: tutorials/quickstart-python-train-score-in-tsql.md
-- name: Tutorials
+- name: Lernprogramme
   href: tutorials/machine-learning-services-tutorials.md
   items:
   - name: Beispieldaten
@@ -258,8 +258,8 @@ items:
       href: security/sql-server-launchpad-service-account.md
     - name: Konfigurieren der Firewall
       href: security/firewall-configuration.md
-    - name: Hinzufügen von SQLRUserGroup als Datenbankbenutzer
-      href: security/add-sqlrusergroup-to-database.md
+    - name: Erstellen von Anmeldeinformationen für SQLRUserGroup
+      href: security/create-a-login-for-sqlrusergroup.md
   - name: Verwaltung
     items:
     - name: Verwalten der Integration
@@ -329,9 +329,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server
       href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=MicrosoftR
-ms.openlocfilehash: 2f3ba355f5d2cb9a7ddcb60cfa8a59e93a1203de
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: 88b6b357a2abf19e587f8fffcad63e590c3e1748
+ms.sourcegitcommit: 32a55df1275ad169bb1457243dc8caa8b48b206f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405691"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55146998"
