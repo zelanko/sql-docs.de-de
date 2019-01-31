@@ -1,7 +1,7 @@
 ---
 title: dm_geo_replication_link_status (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 10/13/2016
+ms.date: 01/28/2019
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -20,14 +20,15 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 251dcb7121b568444387a1e864294095a556b827
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 94d5a2e924cfe4aa7625f6cfce40c5758eecb6a5
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396021"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421157"
 ---
 # <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL-Datenbank)
+
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Enthält eine Zeile für jeden Replikationslink zwischen primären und sekundären Datenbanken in einer georeplikationspartnerschaft. Dies schließt primäre und sekundäre Datenbanken. Wenn mehr als einen Link für die fortlaufende Replikation für eine bestimmte primäre Datenbank vorhanden ist, enthält diese Tabelle eine Zeile für jede der Beziehungen. Die Sicht wird in allen Datenbanken, einschließlich der logischen Master erstellt. Wenn aber diese Sicht in der logischen master-Datenbank abgerufen wird, wird ein leeres Set zurückgegeben.  
@@ -35,8 +36,8 @@ ms.locfileid: "52396021"
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |link_guid|**uniqueidentifier**|Eindeutige ID des Replikationslinks.|  
-|partner_server|**sysname**|Der Name des logischen Servers mit der verknüpften Datenbank.|  
-|partner_database|**sysname**|Der Name der Verbindungsdatenbank auf dem logischen Verbindungsserver.|  
+|partner_server|**sysname**|Name der SQL-Datenbankserver, der die verknüpfte Datenbank enthält.|  
+|partner_database|**sysname**|Name der Verbindungsdatenbank auf dem SQL-Datenbankverbindungsserver.|  
 |last_replication|**datetimeoffset**|Der Zeitstempel, der die letzte Transaktion Bestätigung vom sekundären basierend auf der primären Datenbank Uhr. Dieser Wert ist auf nur die primäre Datenbank verfügbar.|  
 |replication_lag_sec|**int**|Der Zeitunterschied in Sekunden zwischen der Last_replication-Wert und dem Zeitstempel des, Transaktionscommits auf dem primären Replikat basierend auf der primären Datenbank Uhr.  Dieser Wert ist auf nur die primäre Datenbank verfügbar.|  
 |replication_state|**tinyint**|Der Status der geografischen Replikation für diese Datenbank, eines:.<br /><br /> 1 = Seeding. Das Ziel für die geografische Replikation ist das Seeding durchgeführt wird, aber die beiden Datenbanken sind noch nicht synchronisiert. Bis zum Abschluss des Seedings können nicht Sie in der sekundären Datenbank verbinden. Entfernen der sekundären Datenbank vom primären Replikat wird den Seedingvorgang abzubrechen.<br /><br /> 2 = aufholen. Die sekundäre Datenbank befindet sich in einem transaktionskonsistenten Zustand und wird ständig mit der primären Datenbank synchronisiert.<br /><br /> 4 = angehalten. Dies ist keine aktive Beziehung mit kontinuierlichem Kopieren. Dieser Status gibt normalerweise an, dass die Bandbreite, die für den Interlink verfügbar ist, für die Ebene der Transaktionsaktivität in der primären Datenbank nicht ausreicht. Die Beziehung mit kontinuierlichem Kopieren ist jedoch nach wie vor intakt.|  

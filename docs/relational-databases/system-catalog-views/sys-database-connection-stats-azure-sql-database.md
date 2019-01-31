@@ -1,7 +1,7 @@
 ---
 title: Sys. database_connection_stats (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/25/2016
+ms.date: 01/28/2019
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 801074dd7e82f5e1564564125486e0845e2303fb
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 86e8c5af0a2b992a1167e23497a419e0f90abe56
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589483"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421107"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL-Datenbank)
+
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Enthält Statistiken für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Datenbank **Konnektivität** Ereignisse, und eine Übersicht über Datenbank erfolgreichen und fehlgeschlagenen Datenbankverbindungen. Weitere Informationen zu konnektivitätsereignissen finden Sie unter Ereignistypen in [Sys. event_log &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
@@ -47,7 +48,8 @@ ms.locfileid: "53589483"
   
 ## <a name="remarks"></a>Hinweise  
   
-### <a name="event-aggregation"></a>Ereignisaggregation  
+### <a name="event-aggregation"></a>Ereignisaggregation
+
  Die Ereignisinformationen für diese Sicht werden gesammelt und innerhalb von 5-minütigen Intervallen aggregiert. Die Anzahlspalten stellen die Häufigkeit dar, mit der ein bestimmtes Konnektivitätsereignis für eine bestimmte Datenbank innerhalb eines angegebenen Zeitintervalls aufgetreten ist.  
   
  Wenn ein Benutzer beispielsweise am 05.02.2012 zwischen 11:00 und 11:05 Uhr (UTC) sieben Mal eine Verbindung mit der Datenbank „Database1“ herstellt, sind diese Informationen in dieser Sicht in einer einzelnen Zeile verfügbar:  
@@ -56,7 +58,8 @@ ms.locfileid: "53589483"
 |------------------------|---------------------|-------------------|------------------------|-------------------------------|------------------------------------|---------------------------------------|--------------------------------------|  
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`0`|`7`|`7`|`0`|`0`|  
   
-### <a name="interval-starttime-and-endtime"></a>start_time und end_time des Intervalls  
+### <a name="interval-starttime-and-endtime"></a>start_time und end_time des Intervalls
+
  Ein Ereignis wird in ein aggregationsintervall eingefügt, wenn das Ereignis tritt auf, *auf* oder _nach_**Start_time** und _vor_  **End_time** für dieses Intervall. Beispielsweise würde ein Ereignis, das genau zum Zeitpunkt `2012-10-30 19:25:00.0000000` eintritt, nur im zweiten unten gezeigten Intervall aufgenommen werden:  
   
 ```  
@@ -66,34 +69,40 @@ start_time                    end_time
 2012-10-30 19:25:00.0000000   2012-10-30 19:30:00.0000000  
 ```  
   
-### <a name="data-updates"></a>Datenupdates  
+### <a name="data-updates"></a>Datenupdates
+
  Die Daten in dieser Sicht werden im Zeitverlauf gesammelt. Normalerweise werden die Daten innerhalb einer Stunde nach Beginn des Aggregationsintervalls gesammelt, es kann aber maximal 24 Stunden dauern, bis alle Daten in der Sicht angezeigt werden. Während dieser Zeit werden die Informationen in einer einzelnen Zeile möglicherweise gelegentlich aktualisiert.  
   
-### <a name="data-retention"></a>Datenbeibehaltung  
- Die Daten in dieser Sicht werden maximal 30 Tage oder kürzer beibehalten, abhängig von der Anzahl der Datenbanken auf dem logischen Server und der Anzahl der eindeutigen Ereignisse, die jede Datenbank generiert. Um diese Informationen für einen längeren Zeitraum beizubehalten, kopieren Sie die Daten in eine separate Datenbank. Nachdem Sie eine erste Kopie der Sicht erstellt haben, werden die Zeilen in der Sicht möglicherweise aktualisiert, während die Daten gesammelt werden. Damit die Kopie der Daten aktuell bleibt, führen Sie regelmäßig einen Tabellenscan der Zeilen aus, um nach einer Erhöhung der Ereignisanzahl für vorhandene Zeilen zu suchen und um neue Zeilen zu ermitteln (eindeutige Zeilen bestimmen Sie anhand der Start- und Endzeiten). Aktualisieren Sie dann die Kopie der Daten mit diesen Änderungen.  
+### <a name="data-retention"></a>Datenbeibehaltung
+
+ Die Daten in dieser Ansicht werden beibehalten, für bis zu 30 Tage oder kürzer abhängig von der Anzahl der Datenbanken und die Anzahl der eindeutigen Ereignisse, die jede Datenbank generiert. Um diese Informationen für einen längeren Zeitraum beizubehalten, kopieren Sie die Daten in eine separate Datenbank. Nachdem Sie eine erste Kopie der Sicht erstellt haben, werden die Zeilen in der Sicht möglicherweise aktualisiert, während die Daten gesammelt werden. Damit die Kopie der Daten aktuell bleibt, führen Sie regelmäßig einen Tabellenscan der Zeilen aus, um nach einer Erhöhung der Ereignisanzahl für vorhandene Zeilen zu suchen und um neue Zeilen zu ermitteln (eindeutige Zeilen bestimmen Sie anhand der Start- und Endzeiten). Aktualisieren Sie dann die Kopie der Daten mit diesen Änderungen.  
   
-### <a name="errors-not-included"></a>Fehler nicht enthalten  
+### <a name="errors-not-included"></a>Fehler nicht enthalten
+
  Diese Sicht enthält möglicherweise nicht alle Verbindungs- und Fehlerinformationen:  
   
--   In dieser Ansicht enthält nicht alle [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Datenbank Fehler auf, die auftreten können, sondern nur die unter den Ereignistypen in [Sys. event_log &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+- In dieser Ansicht enthält nicht alle [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Datenbank Fehler auf, die auftreten können, sondern nur die unter den Ereignistypen in [Sys. event_log &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
--   Wenn ein Computerfehler innerhalb des [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Datencenters auftritt, ist es möglich, dass eine geringe Anzahl der Daten des logischen Servers in der Ereignistabelle fehlt.  
+- Es ist ein Computerfehler innerhalb der [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Datacenter, ist eine kleine Menge Daten möglicherweise in der Ereignistabelle fehlt.  
   
--   Wenn eine IP-Adresse von DoSGuard blockiert wurde, können Verbindungsversuchsereignisse von dieser IP-Adresse nicht gesammelt werden. Diese werden in dieser Sicht nicht angezeigt.  
+- Wenn eine IP-Adresse von DoSGuard blockiert wurde, können Verbindungsversuchsereignisse von dieser IP-Adresse nicht gesammelt werden. Diese werden in dieser Sicht nicht angezeigt.  
   
-## <a name="permissions"></a>Berechtigungen  
+## <a name="permissions"></a>Berechtigungen
+
  Benutzer mit Berechtigung zum Zugriff auf die **master** Datenbank haben schreibgeschützten Zugriff auf diese Sicht.  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a>Beispiel
+
  Das folgende Beispiel zeigt eine Abfrage der **Sys. database_connection_stats** eine Zusammenfassung der Datenbankverbindungen zurückgegeben, die zwischen Mittag für 9/25/2011 und Mittag für 9/28/2011 (UTC) eingetreten sind. Standardmäßig werden die Ergebnisse der Abfrage nach sortiert **Start_time** (aufsteigende Reihenfolge).  
   
-```  
+```sql
 SELECT *  
-FROM sys.database_connection_stats   
+FROM sys.database_connection_stats
 WHERE start_time>='2011-09-25:12:00:00' and end_time<='2011-09-28 12:00:00';  
 ```  
-  
-## <a name="see-also"></a>Siehe auch  
+
+## <a name="see-also"></a>Siehe auch
+
  [Problembehandlung bei Windows Azure SQL-Datenbank](https://msdn.microsoft.com/library/windowsazure/ee730906.aspx)  
   
   

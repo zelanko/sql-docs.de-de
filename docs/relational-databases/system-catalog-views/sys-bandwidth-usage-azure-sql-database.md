@@ -1,7 +1,7 @@
 ---
 title: Sys. bandwidth_usage (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/04/2017
+ms.date: 01/28/2019
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -22,21 +22,23 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 90ad88cfaae5c82b79d9da1fa7de5baa60fe46f3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 046e9e651daeb2946538ff5ae269aaad27666fd0
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403716"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421307"
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
+
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  **Hinweis: Dies gilt nur für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]V11.**  
+> [!NOTE]
+> Dies gilt nur für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]V11.* *  
   
- Gibt Informationen über die Netzwerkbandbreite verwendet, die für jede Datenbank in eine  **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] logische V11-Servers**,. Jede Zeile, die für eine bestimmte Datenbank zurückgegeben wird, gibt eine einzelne Richtung und eine Verwendungsklasse über eine Stunde hinweg an.  
+ Gibt Informationen über die Netzwerkbandbreite verwendet, die für jede Datenbank in eine  **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V11-Datenbank-Server**,. Jede Zeile, die für eine bestimmte Datenbank zurückgegeben wird, gibt eine einzelne Richtung und eine Verwendungsklasse über eine Stunde hinweg an.  
   
- **Dies ist veraltet einem [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] logischen V12-Server.**  
+ **Dies ist veraltet einem [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].**  
   
  Die **Sys. bandwidth_usage** -Ansicht enthält die folgenden Spalten.  
   
@@ -46,15 +48,17 @@ ms.locfileid: "52403716"
 |**database_name**|Der Name der Datenbank, die Bandbreite verwendet hat.|  
 |**direction**|Der Typ der Bandbreite, der verwendet wurde. Dies kann eine der folgenden Optionen sein:<br /><br /> Eingang: In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] eingehende Daten.<br /><br /> Ausgang: Aus [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ausgehende Daten.|  
 |**class**|Die Klasse der Bandbreite, die verwendet wurde. Dies kann eine der folgenden Optionen sein:<br />Interne: Daten, die auf der Azure-Plattform verschoben werden.<br />Extern: Daten, die aus der Azure-Plattform heraus verschoben werden.<br /><br /> Diese Klasse wird nur zurückgegeben, wenn die Datenbank in einer kontinuierlichen Kopienbeziehung zwischen Regionen ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]) ist. Wenn eine bestimmte Datenbank nicht in jeder fortlaufenden kopierbeziehung beteiligt ist, werden keine "Interlink"-Zeilen zurückgegeben. Weitere Informationen finden Sie im Abschnitt "Hinweise" weiter unten in diesem Thema.|  
-|**Zeitraum**|Der Zeitraum, der die Verwendung des Auftretens ist Spitze oder OffPeak. Die Spitzenzeit basiert auf der Region, in der der Server erstellt wurde. Wenn ein -Server beispielsweise in der Region "US_Northwest" erstellt wurde, liegt die Spitzenzeit laut Definition zwischen 10:00 Uhr und 18:00 Uhr PST.|  
-|**Menge**|Die Menge der verwendeten Bandbreite in KB.|  
+|**time_period**|Der Zeitraum, der die Verwendung des Auftretens ist Spitze oder OffPeak. Die Spitzenzeit basiert auf der Region, in der der Server erstellt wurde. Wenn ein -Server beispielsweise in der Region "US_Northwest" erstellt wurde, liegt die Spitzenzeit laut Definition zwischen 10:00 Uhr und 18:00 Uhr PST.|  
+|**quantity**|Die Menge der verwendeten Bandbreite in KB.|  
   
-## <a name="permissions"></a>Berechtigungen  
+## <a name="permissions"></a>Berechtigungen
+
  Diese Ansicht ist nur verfügbar, in der **master** Datenbank, um die prinzipalanmeldung auf Serverebene.  
   
 ## <a name="remarks"></a>Hinweise  
   
-### <a name="external-and-internal-classes"></a>Externe und interne Klassen  
+### <a name="external-and-internal-classes"></a>Externe und interne Klassen
+
  Für jede Datenbank zu einem bestimmten Zeitpunkt, verwendet der **Sys. bandwidth_usage** -Sicht die Zeilen, die die Klasse und die Richtung der bandbreitenverwendung anzeigen zurück. Das folgende Beispiel zeigt Daten, die für eine bestimmte Datenbank verfügbar gemacht werden können. In diesem Beispiel ist der Zeitpunkt 2012-04-21 17:00:00, der im Zeitraum mit Spitzenwerten liegt. Der Datenbankname ist Db1. In diesem Beispiel **Sys. bandwidth_usage** wie folgt eine Zeile für alle vier Kombinationen der Ingress- und Egress-Richtungen und externe und interne Klassen zurück:  
   
 |Uhrzeit|database_name|direction|class|time_period|quantity|  
@@ -64,10 +68,9 @@ ms.locfileid: "52403716"
 |2012-04-21 17:00:00|Db1|Ingress|Internal|Peak|1052|  
 |2012-04-21 17:00:00|Db1|Egress|Intern|Peak|3525|  
   
-### <a name="interpreting-data-direction-for-includessgeodrincludesssgeodr-mdmd"></a>Interpretieren der Datenrichtung für [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]  
- Bei [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] sind die Bandbreitenverwendungsdaten in der logischen Masterdatenbank auf beiden Seiten einer kontinuierlichen Kopienbeziehung sichtbar. Daher müssen Sie die Ingress- und Egress-Richtungsindikatoren aus der Perspektive des logischen Servers interpretieren, den Sie abfragen. Betrachten Sie beispielsweise einen Replikationsdatenstrom, der 1 MB Daten vom Quell- auf den Zielserver überträgt. In diesem Fall auf dem Quellserver die 1MB gezählt gesendeten Daten, und klicken Sie auf dem Zielserver ist die 1MB als empfangene Daten aufgezeichnet.  
+### <a name="interpreting-data-direction-for-includessgeodrincludesssgeodr-mdmd"></a>Interpretieren der Datenrichtung für [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]
+
+ Bei [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] sind die Bandbreitenverwendungsdaten in der logischen Masterdatenbank auf beiden Seiten einer kontinuierlichen Kopienbeziehung sichtbar. Daher müssen Sie den Eingang zu interpretieren und egress-richtungsindikatoren aus der Perspektive der Datenbanken, die Sie Abfragen. Betrachten Sie beispielsweise einen Replikationsdatenstrom, der 1 MB Daten vom Quell- auf den Zielserver überträgt. In diesem Fall auf dem Quellserver die 1MB gezählt gesendeten Daten, und klicken Sie auf dem Zielserver ist die 1MB als empfangene Daten aufgezeichnet.  
   
 > [!NOTE]  
->  Die vom Quell- auf den Zielserver übertragenen Massendaten werden in Richtung des Benutzerdatendatenflusses übertragen. Manche Daten müssen jedoch in die andere Richtung übertragen werden.  
-  
-  
+> Die vom Quell- auf den Zielserver übertragenen Massendaten werden in Richtung des Benutzerdatendatenflusses übertragen. Manche Daten müssen jedoch in die andere Richtung übertragen werden.  
