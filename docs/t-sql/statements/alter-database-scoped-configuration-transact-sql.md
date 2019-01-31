@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/02/2018
+ms.date: 01/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e50b19daefc7f765a4d24850c6557af419c0a345
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: d7bb8abac5765265e93282ae88266ece24d8a8a5
+ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226597"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54838120"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -73,6 +73,12 @@ ALTER DATABASE SCOPED CONFIGURATION
     | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
     | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
     | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
+    | BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
+    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF  }
+    | BATCH_MODE_ON_ROWSTORE = { ON | OFF }
+    | DEFERRED_COMPILATION_TV = { ON | OFF }
+    | INTERLEAVED_EXECUTION_TVF = {  ON | OFF }
+    | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
 }
 ```
 
@@ -229,7 +235,31 @@ ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 **Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (das Feature befindet sich in der öffentlichen Vorschau)
 
-Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren von Feedback zur Speicherzuweisung im Zeilenmodus im Datenbank- oder Anweisungsbereich. Dabei kann ein Datenbank-Kompatibilitätsgrad von mindestens 150 beibehalten werden. Das Feedback zur Speicherzuweisung im Zeilenmodus stellt einen Bestandteil der [Adaptiven Abfrageverarbeitung](../../relational-databases/performance/adaptive-query-processing.md) dar, die in SQL Server 2019 eingeführt wurde.
+Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren von Feedback zur Speicherzuweisung im Zeilenmodus im Datenbankbereich. Dabei kann ein Datenbank-Kompatibilitätsgrad von mindestens 150 beibehalten werden. Das Feedback zur Speicherzuweisung im Zeilenmodus stellt einen Bestandteil der [adaptiven Abfrageverarbeitung](../../relational-databases/performance/adaptive-query-processing.md) dar, die in SQL Server 2017 eingeführt wurde (der Zeilenmodus wird in SQL Server 2019 und Azure SQL-Datenbank unterstützt).
+
+BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
+
+**Gilt für** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+
+Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren von Feedback zur Speicherzuweisung im Batchmodus im Datenbankbereich. Dabei kann ein Datenbank-Kompatibilitätsgrad von mindestens 140 beibehalten werden. Das Feedback zur Speicherzuweisung im Batchmodus stellt einen Bestandteil der [adaptiven Abfrageverarbeitung](../../relational-databases/performance/adaptive-query-processing.md) dar, die in SQL Server 2017 eingeführt wurde.
+
+BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF}
+
+**Gilt für** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+
+Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren von adaptiven Joins im Batchmodus im Datenbankbereich. Dabei kann ein Datenbank-Kompatibilitätsgrad von mindestens 140 beibehalten werden. Adaptive Joins im Batchmodus stellen einen Bestandteil der [adaptiven Abfrageverarbeitung](../../relational-databases/performance/adaptive-query-processing.md) dar, die in SQL Server 2017 eingeführt wurde.
+
+BATCH_MODE_ON_ROWSTORE = { ON | OFF}
+
+**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (das Feature befindet sich in der öffentlichen Vorschau)
+
+Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren des Batchmodus bei Rowstore im Datenbankbereich. Dabei kann ein Datenbank-Kompatibilitätsgrad von mindestens 150 beibehalten werden. Der Batchmodus bei Rowstore gehört zur Funktionsfamilie für die [intelligente Abfrageverarbeitung](../../relational-databases/performance/intelligent-query-processing.md).
+
+DEFERRED_COMPILATION_TV = { ON | OFF}
+
+**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (das Feature befindet sich in der öffentlichen Vorschau)
+
+Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren der verzögerten Kompilierung von Tabellenvariablen im Datenbankbereich. Dabei kann ein Datenbank-Kompatibilitätsgrad von mindestens 150 beibehalten werden. Die verzögerte Kompilierung von Tabellenvariablen gehört zur Funktionsfamilie für die [intelligente Abfrageverarbeitung](../../relational-databases/performance/intelligent-query-processing.md).
 
 ## <a name="Permissions"></a> Berechtigungen
 

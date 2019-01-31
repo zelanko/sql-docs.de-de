@@ -1,7 +1,7 @@
 ---
 title: 'Schritt 2: Konvertieren des Projekts in das Projektbereitstellungsmodell | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,47 +11,46 @@ ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ce29d9e39b2abd46845a035183e6dee80f6c7236
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cfa218409ae82f5e59f81e110cffafb1775c6dd3
+ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767708"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54880414"
 ---
-# <a name="lesson-6-2---converting-the-project-to-the-project-deployment-model"></a>Lektion 6-2: Konvertieren des Projekts in das Projektbereitstellungsmodell
-In dieser Aufgabe verwenden Sie den Konvertierungs-Assistenten von Integration Services-Projekt, um das Projekt in das Projektbereitstellungsmodell zu konvertieren.  
+# <a name="lesson-6-2-convert-the-project-to-the-project-deployment-model"></a>Lektion 6.2: Konvertieren des Projekts in das Projektbereitstellungsmodell
+
+In dieser Aufgabe verwenden Sie den Assistenten zum Konvertieren von Integration Services-Projekten, um das Projekt in das Projektbereitstellungsmodell zu konvertieren.  
   
-### <a name="converting-the-project-to-the-project-deployment-model"></a>Konvertieren des Projekts in das Projektbereitstellungsmodell  
+1.  Wählen Sie im Menü **Projekt** die Option **Paketbereitstellungsmodell konvertieren** aus.  
   
-1.  Klicken Sie im Menü „Projekt“ auf „Paketbereitstellungsmodell konvertieren“.  
+2.  Überprüfen Sie die Schritte auf der **Einführungsseite** des **Assistenten zum Konvertieren von Integration Services-Projekten**, und klicken Sie auf **Weiter**.  
   
-2.  Überprüfen Sie die Schritte der Konvertierungs-Assistent von Integration Services-Einführungsseite und klicken Sie auf Weiter.  
+3.  Deaktivieren Sie auf der Seite **Pakete auswählen** in der Liste **Pakete** alle Kontrollkästchen außer **Lesson 6.dtsx**, und klicken Sie dann auf **Weiter**.  
   
-3.  Klicken Sie auf der Seite zur Paketauswahl in die Paketliste, deaktivieren Sie alle Kontrollkästchen außer Lektion 6.dtsx, und klicken Sie dann auf Weiter.  
+4.  Klicken Sie auf der Seite **Projekteigenschaften angeben** auf **Weiter**.  
   
-4.  Klicken Sie auf der Projekteigenschaftenseite auf Weiter.  
+5.  Klicken Sie auf der Seite **Task „Paket ausführen“ aktualisieren** auf **Weiter**.  
   
-5.  Klicken Sie auf der Seite Task 'Paket ausführen' aktualisieren auf Weiter.  
+6.  Stellen Sie auf der Seite **Konfigurationen auswählen** sicher, dass das Paket **Lesson 6.dtsx** in der Liste **Konfigurationen** aktiviert ist, und klicken Sie dann auf **Weiter**.  
   
-6.  Stellen Sie auf auf der Konfigurationsauswahlseite sicher, dass das Paket Lektion 6.dtsx in der Konfigurationsliste ausgewählt ist, und klicken Sie auf Weiter.  
+7.  Stellen Sie auf der Seite **Parameter erstellen** sicher, dass das Paket **Lesson 6.dtsx** ausgewählt ist.  Achten Sie darauf, dass in der Liste **Konfigurationseigenschaften** für **Bereich** die Option **Paket** festgelegt ist, und klicken Sie dann auf **Weiter**.  
   
-7.  Stellen Sie auf der Seite zum Erstellen von Parametern sicher, dass das Paket Lektion 6.dtsx ausgewählt ist, und der Bereich in der Konfigurationseigenschaftsliste auf Paket festgelegt ist, und klicken Sie dann auf Weiter.  
+8.  Stellen Sie auf der Seite **Parameter konfigurieren** sicher, dass die Werte für **Name** und **Wert** demselben Namen und Wert entsprechen, den Sie in der Lektion 5 für den Variablen- und Konfigurationswert angegeben haben. Wählen Sie dann **Weiter** aus.  
   
-8.  Stellen Sie auf der Seite zur Konfiguration der Parameter sicher, dass die Werte für den Namen und den Wert demselben Namen und Wert entsprechen, den Sie in der Lektion 5 für den Variablen- und Konfigurationswert angegeben haben, und klicken Sie dann auf Weiter.  
+9. Beachten Sie auf der Seite **Überprüfung** im Bereich **Zusammenfassung**, dass der Assistent die Informationen aus der Konfigurationsdatei verwendet hat, um die zu konvertierenden **Eigenschaften** festzulegen.  
   
-9. Beachten Sie auf der Überprüfungsseite im Zusammenfassungsbereich, dass der Assistent die Informationen aus der Konfigurationsdatei verwendet hat, um die zu konvertierenden Eigenschaften festzulegen.  
+10. Wählen Sie **Konvertieren** aus.  
   
-10. Klicken Sie auf Konvertieren.  
+    Nach der Konvertierung wird eine Warnmeldung angezeigt, die darauf hinweist, dass die Änderungen erst gespeichert werden, wenn Sie das Projekt speichern. Klicken Sie auf **OK**, um die Warnung zu schließen.  
   
-    Beim Abschluss der Konvertierung einer Nachricht wird eine Warnung angezeigt, das die Änderungen nicht gespeichert werden, bis das Projekt in Visual Studio gespeichert wird. Klicken Sie im Warnungsdialogfeld auf OK.  
+11. Klicken Sie im **Assistent zum Konvertieren von Integration Services-Projekten** auf **Schließen**.  
   
-11. Klicken Sie im Konvertierungs-Assistenten des Integration Services-Projekts auf Schließen.  
+12. Wählen Sie in **SQL Server Data Tools** im Menü **Datei** die Option **Speichern** aus, um das konvertierte Paket zu speichern.  
   
-12. Klicken Sie in SQL Server Data Tools auf das Menü "Datei", klicken Sie auf "Speichern", um das konvertierte Paket zu speichern.  
+13. Wählen Sie die Registerkarte **Parameter** aus, und überprüfen Sie, ob das Paket jetzt einen Parameter für **VarFolderName** enthält. Bei diesem Parameterwert handelt es sich um denselben Pfad, der für den Ordner **Neue Beispieldaten** in der Konfigurationsdatei aus Lektion 5 angegebenen wurde.  
   
-13. Klicken Sie auf der Registerkarte "Parameter", und stellen Sie sicher, dass das Paket jetzt einen Parameter für VarFolderName enthält und der Wert denselben Pfad für den Ordner der neuen Beispieldaten aus der Lektion 5-Konfigurationsdatei angegeben ist.  
-  
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="go-to-next-task"></a>Weiter zur nächsten Aufgabe
 [Schritt 3: Testen des Pakets aus Lektion 6](../integration-services/lesson-6-3-testing-the-lesson-6-package.md)  
   
   

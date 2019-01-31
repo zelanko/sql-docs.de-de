@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e9b2d920b55e412f3b9fa119db0a7cf893659fca
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8c5e406cdab8f4950a897cc66556e54a1faa53f1
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502819"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805726"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Bereitstellen des Webparts des Berichts-Viewers für SQL Server Reporting Services auf einer SharePoint-Website
 
@@ -20,7 +20,7 @@ ms.locfileid: "52502819"
 
 Das Berichts-Viewer-Webpart ist ein benutzerdefiniertes Webpart, das verwendet werden kann, um SQL Server Reporting Services-Berichte (im einheitlichen Modus) auf Ihrer SharePoint-Website anzuzeigen. Sie können mit dem Webpart Berichte auf einem Berichtsserver anzeigen lassen, drucken und exportieren sowie in Berichten navigieren. Das Berichts-Viewer-Webpart ist mit den Berichtsdefinitionsdateien (RDL) verknüpft, die von einem SQL Server Reporting Services-Berichtsserver oder Power BI-Berichtsserver verarbeitet werden. Das Berichts-Viewer-Webpart kann nicht mit Power BI-Berichten verwendet werden, die in Power BI-Berichtsserver gehostet werden.
 
-Verwenden Sie die folgenden Anweisungen, um zwei Lösungspakete manuell bereitzustellen, die einer SharePoint Server 2013- oder SharePoint Server 2016-Umgebung das Berichts-Viewer-Webpart hinzufügen. Die Bereitstellung der Lösung ist für die Konfiguration des Webparts erforderlich.
+Verwenden Sie die folgenden Anweisungen, um zwei Lösungspakete manuell bereitzustellen, die einer SharePoint Server 2013-, SharePoint Server 2016- oder SharePoint Server 2019-Umgebung das Berichts-Viewer-Webpart hinzufügen. Die Bereitstellung der Lösung ist für die Konfiguration des Webparts erforderlich.
 
 **Das Berichts-Viewer-Webpart ist ein eigenständiges Lösungspaket und ist nicht dem integrierten SharePoint-Modus für SQL Server Reporting Services verknüpft.**
 
@@ -32,6 +32,7 @@ Verwenden Sie die folgenden Anweisungen, um zwei Lösungspakete manuell bereitzu
 >
 
 **Unterstützte SharePoint Server-Versionen:**
+* SharePoint Server 2019
 * SharePoint Server 2016
 * SharePoint Server 2013
 
@@ -67,7 +68,7 @@ In diesem Abschnitt erfahren Sie, wie Sie das Lösungspaket für Ihre SharePoint
     Install-SPSolution -Identity ReportViewerWebPart.wsp -CompatibilityLevel "14,15" -GACDeployment -WebApplication {URL to web application}
     ```
 
-    **SharePoint 2016**
+    **SharePoint Server 2016 und 2019**
 
     ```
     Install-SPSolution -Identity ReportViewerWebPart.wsp -GACDeployment -WebApplication {URL to web application}

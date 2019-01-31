@@ -11,12 +11,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 742c9a63388192bc0fb09a7b91a5a727c789ed3a
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 9efb08ec81de552581fd2d1d0c34bbf731dac7d7
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712802"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087590"
 ---
 # <a name="hardware-considerations-for-in-memory-oltp-in-sql-server-2014"></a>Aspekte zur Hardware für In-Memory-OLTP in SQL Server 2014
 
@@ -40,7 +40,7 @@ In-Memory-OLTP erfordert keinen High-End-Server, um eine OLTP-Workload mit hohem
 
 Es wird empfohlen, Hyperthreading mit In-Memory-OLTP zu aktivieren. Bei einigen OLTP-Workloads konnten wir bei Verwendung von Hyperthreading Leistungssteigerungen von bis zu 40 % verzeichnen.
 
-## <a name="memory"></a>Arbeitsspeicher
+## <a name="memory"></a>Speicher
 
 Alle speicheroptimierten Tabellen befinden sich vollständig im Arbeitsspeicher. Daher müssen Sie über genügend physischen Arbeitsspeicher für die Tabellen selbst verfügen, um die in der Datenbank ausgeführte Workload zu unterstützen. Wie viel Arbeitsspeicher Sie tatsächlich benötigen, hängt ganz von der Workload ab. Als Ausgangspunkt benötigen Sie jedoch wahrscheinlich genügend verfügbaren Arbeitsspeicher für etwa die doppelte Datengröße. Sie benötigen auch genügend Arbeitsspeicher für den Pufferpool, falls die Workload auch mit herkömmlichen datenträgerbasierten Tabellen arbeitet.
 

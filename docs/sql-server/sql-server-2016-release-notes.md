@@ -14,12 +14,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f7252b672eb29206bbd77cc92cdb3de68f3d6c91
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c243af9bdc0963ba83e94f8e35d90b68c5874a2c
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524318"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044377"
 ---
 # <a name="sql-server-2016-release-notes"></a>Versionsanmerkungen zu SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -39,6 +39,7 @@ ms.locfileid: "52524318"
 Sie müssen Ihren Computer möglicherweise nach der Installation von SQL Server 2016 SP2 neu starten. Als bewährte Methode wird empfohlen, nach der Installation von SQL Server 2016 SP2 einen Neustart zu planen und durchzuführen.
 
 Leistungs- und skalierungsbasierte Verbesserungen, die in SQL Server 2016 SP2 enthalten sind
+
 |Funktion|und Beschreibung|Weitere Informationen|
 |   --- |   --- |   --- |
 |Verbesserter Cleanupvorgang für die Verteilungsdatenbank |   Übergroße Verteilungsdatenbanktabellen führten zu Blockierungs- und Deadlocksituationen. Im Rahmen einer verbesserten Cleanup-Prozedur sollen einige davon beseitigt werden. |   [KB4040276](https://support.microsoft.com/help/4040276/fix-indirect-checkpoints-on-the-tempdb-database-cause-non-yielding)  |
@@ -53,6 +54,7 @@ Leistungs- und skalierungsbasierte Verbesserungen, die in SQL Server 2016 SP2 en
 |Verbessertes Update für automatische Statistiken für inkrementelle Statistiken |    Wenn z.B. mehrere Datenänderungen für mehrere Partitionen in einer Tabelle vorgenommen wurden und die Anzahl aller Änderung für inkrementelle Statistiken – jedoch keine einzelnen Partitionen – den Grenzwert für automatische Updates überschreitet, kann sich das Statistikupdate so lange verzögern, bis weitere Änderungen in der Tabelle vorgenommen werden. Dieses Verhalten wird unter dem Ablaufverfolgungsflag 11024 korrigiert.   |       |
 
 Unterstützbarkeit und Diagnose betreffende Verbesserungen sind in SQL Server 2016 SP2 beinhaltet.
+
 |Funktion |und Beschreibung   |Weitere Informationen   |
 |   --- |   --- |   --- |
 |Vollständige DTC-Unterstützung für Datenbanken in einer Verfügbarkeitsgruppe    |   Datenbankübergreifende Transaktionen für Datenbanken, die Teil einer Verfügbarkeitsgruppe sind, werden für SQL Server 2016 nicht unterstützt. Mit SQL Server 2016 SP2 führen wir die vollständige Unterstützung für verteilte Transaktionen mit Datenbanken der Verfügbarkeitsgruppe ein.   |       |
@@ -110,12 +112,12 @@ In der folgenden Tabelle werden wichtige Verbesserungen in SQL Server 2016 SP1 z
 |CREATE OR ALTER|Bereitstellen von Objekten wie gespeicherten Prozeduren, Triggern, benutzerdefinierten Funktionen und Ansichten.|[Blog der SQL Server-Datenbank-Engine](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
 |DROP TABLE-Unterstützung für die Replikation|DROP TABLE DDL-Unterstützung für die Replikation zum Löschen von Replikationsartikeln.|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)|
 |Signieren des FileStream RsFx-Treibers|Der Filestream RsFx-Treiber wird im Windows Hardware Developer Center Dashboard-Portal (Dev-Portal) signiert und zertifiziert. Dadurch kann der Filestream RsFx-Treiber von SQL Server 2016 SP1 problemlos unter Windows Server 2016/Windows 10 installiert werden.|[Migrating SAP workloads to SQL Server just got 2.5x faster (Beschleunigung der Migration von SAP-Workloads zu SQL Server um das 2,5-fache)](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
-|LPIM für SQL-Dienstkonto – programmgesteuerte Identifikation|Ermöglicht DBAs die programmgesteuerte Identifikation, wenn die Berechtigung zum Sperren von Seiten im Speicher (Lock Pages in Memory, LPIM) zur Startzeit des Service besteht.|[Wahl für Entwickler: LPIM- und IFI-Berechtigungen zur programmgesteuerten Identifikation in SQL Server](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)|
+|LPIM für SQL-Dienstkonto – programmgesteuerte Identifikation|Ermöglicht DBAs die programmgesteuerte Identifikation, wenn die Berechtigung zum Sperren von Seiten im Speicher (Lock Pages in Memory, LPIM) zur Startzeit des Service besteht.|[Developers Choice: Programmatically identify LPIM and IFI privileges in SQL Server (Wahl für Entwickler: LPIM- und IFI-Berechtigungen zur programmgesteuerten Identifikation in SQL Server)](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)|
 |Manuelles Bereinigen der Änderungsnachverfolgung|Die neue gespeicherte Prozedur löscht die interne Tabelle der Änderungsnachverfolgung bedarfsgesteuert.| [KB 3173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking)|
 |Parallele INSERT..SELECT-Änderungen in lokalen temporären Tabellen|Neue parallele INSERT in INSERT..SELECT-Vorgänge.|[SQL Server-Kundenberatungsteam](https://blogs.msdn.microsoft.com/sqlcat/2016/07/21/real-world-parallel-insert-what-else-you-need-to-know/)|
 |Showplan XML|Erweiterte Diagnose einschließlich einer aktivierten Zuweisungswarnung und eines aktivierten maximalen Arbeitsspeichers für eine Abfrage, aktivierter Ablaufverfolgungsflags und Oberflächen für andere Diagnoseinformationen. | [KB 3190761](https://support.microsoft.com/help/3190761/update-to-improve-diagnostics-by-expose-data-type-of-the-parameters-fo)|
 |Speicherklassenspeicher|Steigern Sie mit dem Speicherklassenspeicher in Windows Server 2016 die Transaktionsverarbeitung, wodurch die Commitzeiten für Transaktionen nach Größenordnungen beschleunigt werden können.|[Blog der SQL Server-Datenbank-Engine](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)|
-|USE HINT|Verwenden Sie die Abfrageoption `OPTION(USE HINT('<option>'))`, um das Verhalten des Abfrageoptimierers mit unterstützten Hinweisen auf Abfrageebene zu ändern. Anders als bei der Option QUERYTRACEON sind bei der Option USE HINT keine Systemadministratorberechtigungen erforderlich.|[Wahl der Entwickler: USE HINT-Abfragehinweise](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-use-hint-query-hints/)|
+|USE HINT|Verwenden Sie die Abfrageoption `OPTION(USE HINT('<option>'))`, um das Verhalten des Abfrageoptimierers mit unterstützten Hinweisen auf Abfrageebene zu ändern. Anders als bei der Option QUERYTRACEON sind bei der Option USE HINT keine Systemadministratorberechtigungen erforderlich.|[Developers Choice: USE HINT-Abfragehinweise](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-use-hint-query-hints/)|
 |XEvent-Ergänzungen|Neue XEvents- und Perfmon-Diagnosefunktionen bewirken eine Optimierung der Wartezeit bei der Problembehandlung.|[Erweiterte Ereignisse](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)|
 
 Zudem sollten Sie folgende Problembehandlungen beachten:
@@ -141,9 +143,9 @@ Für die Installation von SQL Server 2016 SP1 ist nach der Installation möglich
 -   [Produktdokumentation (GA)](#bkmk_ga_docs)
  
 ### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Install Patch Requirement (GA) 
-**Problem und Kundenbeeinträchtigung:** Microsoft hat ein Problem erkannt, das die Microsoft VC++ 2013 Runtime-Binarys betrifft, die von SQL Server 2016 als erforderliche Komponente installiert werden. Ein Update ist verfügbar, um dieses Problem zu beheben. Wenn dieses Update an den VC++ Runtime-Binarys nicht installiert wird, können bei SQL Server 2016 in bestimmten Szenarien Stabilitätsprobleme auftreten. Bevor Sie SQL Server 2016 installieren, überprüfen Sie, ob der Computer das in [KB 3164398](https://support.microsoft.com/kb/3164398)beschriebenen Patch benötigt. Der Patch ist auch im [Kumulativen Updatepaket 1 (CU1) für SQL Server 2016 RTM](https://www.microsoft.com/download/details.aspx?id=53338) enthalten. 
+**Problem und Kundenbeeinträchtigung:** Microsoft hat ein Problem erkannt, das die Microsoft VC++ 2013 Runtime-Binärdateien betrifft, die von SQL Server 2016 als erforderliche Komponente installiert werden. Ein Update ist verfügbar, um dieses Problem zu beheben. Wenn dieses Update an den VC++ Runtime-Binarys nicht installiert wird, können bei SQL Server 2016 in bestimmten Szenarien Stabilitätsprobleme auftreten. Bevor Sie SQL Server 2016 installieren, überprüfen Sie, ob der Computer das in [KB 3164398](https://support.microsoft.com/kb/3164398)beschriebenen Patch benötigt. Der Patch ist auch im [Kumulativen Updatepaket 1 (CU1) für SQL Server 2016 RTM](https://www.microsoft.com/download/details.aspx?id=53338) enthalten. 
 
-**Lösung:** Greifen Sie auf eine der folgenden Lösungen zurück:
+**Lösung:** Verwenden Sie eine der folgenden Lösungen:
 
 - Installieren Sie [KB 3138367 – Update für Visual C++ 2013 und Visual C++ Redistributable Package](https://support.microsoft.com/kb/3138367). Der KB-Hotfix ist die bevorzugte Lösung. Sie können dies vor oder nach der Installation von SQL Server 2016 installieren. 
 
@@ -170,23 +172,23 @@ Für die Installation von SQL Server 2016 SP1 ist nach der Installation möglich
 
 #### <a name="problem-with-a-specific-character-in-a-database-or-table-name"></a>Problem mit einem bestimmten Zeichen in einem Datenbank- oder Tabellennamen
 
-**Problem und Beeinträchtigung des Kunden:** Beim Versuch, Stretch Database auf einer Datenbank oder in einer Tabelle zu aktivieren, ist ein Fehler aufgetreten. Das Problem tritt auf, wenn der Name des Objekts ein Zeichen enthält, das beim Konvertieren von Klein- und Großschreibung als ein anderes Zeichen behandelt wird. Ein Beispiel für ein Zeichen, das dieses Problem auslöst, ist das Zeichen „ƒ“ (durch Drücken von ALT+159 erstellt).
+**Problem und Kundenbeeinträchtigung:** Beim Versuch, Stretch Database in einer Datenbank oder Tabelle zu aktivieren, ist ein Fehler aufgetreten. Das Problem tritt auf, wenn der Name des Objekts ein Zeichen enthält, das beim Konvertieren von Klein- und Großschreibung als ein anderes Zeichen behandelt wird. Ein Beispiel für ein Zeichen, das dieses Problem auslöst, ist das Zeichen „ƒ“ (durch Drücken von ALT+159 erstellt).
 
-**Lösung:** Wenn Sie Stretch Database in einer Datenbank oder Tabelle aktivieren möchten, ist die einzige Option, das Objekt umzubenennen und das Problemzeichen zu entfernen.
+**Problemumgehung:** Wenn Sie Stretch Database in einer Datenbank oder Tabelle aktivieren möchten, ist die einzige Option, das Objekt umzubenennen und das Problemzeichen zu entfernen.
 
 #### <a name="problem-with-an-index-that-uses-the-include-keyword"></a>Problem mit einem Index, der das Schlüsselwort INCLUDE verwendet
 
 **Problem und Kundenbeeinträchtigung:** Der Versuch, Stretch Database in einer Tabelle zu aktivieren, die über einen Index verfügt, der das INCLUDE-Schlüsselwort verwendet, um zusätzliche Spalten in den Index einzubeziehen, resultiert in einem Fehler.
 
-**Lösung:** Löschen Sie den Index, der das INCLUDE-Schlüsselwort verwendet, aktivieren Sie Stretch Database in der Tabelle, und erstellen Sie den Index neu. Wenn Sie dies tun, achten Sie darauf, die Wartungsmethoden und Richtlinien Ihrer Organisation einzuhalten, um sicherzustellen, dass für Benutzer der betreffenden Tabelle höchstens minimale Auswirkungen entstehen.
+**Problemumgehung:** Löschen Sie den Index, der das INCLUDE-Schlüsselwort verwendet, aktivieren Sie Stretch Database in der Tabelle, und erstellen Sie den Index neu. Wenn Sie dies tun, achten Sie darauf, die Wartungsmethoden und Richtlinien Ihrer Organisation einzuhalten, um sicherzustellen, dass für Benutzer der betreffenden Tabelle höchstens minimale Auswirkungen entstehen.
 
 ### <a name="bkmk_ga_query_store"></a>Query Store
 
 #### <a name="problem-with-automatic-data-cleanup-on-editions-other-than-enterprise-and-developer"></a>Problem mit automatischer Datenbereinigung bei anderen Editionen als Enterprise und Developer
 
- **Problem und Kundenbeeinträchtigung:** Fehler bei automatischer Datenbereinigung bei anderen Editionen als Enterprise und Developer. In Folge dessen wächst der vom Abfragespeicher verwendete Speicherplatz mit der Zeit, bis das konfigurierte Limit erreicht ist, wenn Daten nicht manuell gelöscht werden. Wenn dieses Problem nicht beseitigt wird, wird auch der Speicherplatz aufgefüllt, der den Fehlerprotokollen zugeordnet ist, da jeder Bereinigungsversuch eine Dumpdatei erzeugt. Der Aktivierungszeitraum für die Bereinigung hängt von der Häufigkeit der Arbeitsauslastung ab, ist aber nicht länger als 15 Minuten.
+ **Problem und Kundenbeeinträchtigung:** Bei der automatischen Datenbereinigung bei anderen Editionen als Enterprise und Developer tritt ein Fehler auf. In Folge dessen wächst der vom Abfragespeicher verwendete Speicherplatz mit der Zeit, bis das konfigurierte Limit erreicht ist, wenn Daten nicht manuell gelöscht werden. Wenn dieses Problem nicht beseitigt wird, wird auch der Speicherplatz aufgefüllt, der den Fehlerprotokollen zugeordnet ist, da jeder Bereinigungsversuch eine Dumpdatei erzeugt. Der Aktivierungszeitraum für die Bereinigung hängt von der Häufigkeit der Arbeitsauslastung ab, ist aber nicht länger als 15 Minuten.
 
- **Lösung:** Wenn Sie den Abfragespeicher bei anderen Editionen als Enterprise und Developer verwenden möchten, müssen Sie explizit die Bereinigungsrichtlinien deaktivieren. Dies kann über SQL Server Management Studio (Seite „Datenbankeigenschaften“) oder über das Transact-SQL-Skript erfolgen:
+ **Problemumgehung:** Wenn Sie den Abfragespeicher bei anderen Editionen als Enterprise und Developer verwenden möchten, müssen Sie explizit die Bereinigungsrichtlinien deaktivieren. Dies kann über SQL Server Management Studio (Seite „Datenbankeigenschaften“) oder über das Transact-SQL-Skript erfolgen:
 
 ```ALTER DATABASE <database name> SET QUERY_STORE (OPERATION_MODE = READ_WRITE, CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 0), SIZE_BASED_CLEANUP_MODE = OFF)```
 
@@ -216,7 +218,7 @@ Führen Sie außerdem die folgenden gespeicherten Prozeduren des Abfragespeicher
 
  **F1-Hilfe:** Beim Drücken von F1 in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] wird standardmäßig die Onlineversion des F1-Hilfeartikels im Browser angezeigt. Für die Probleme wird browserbasierte Hilfe angeboten, auch wenn Sie die lokale Hilfe konfiguriert und installiert haben. 
 
-**Aktualisieren von Inhalt:** In SQL Server Management Studio und Visual Studio kann die Anwendung Help Viewer während des Hinzufügens der Dokumentation einfrieren (hängen bleiben). Führen Sie zur Lösung des Problems folgende Schritte aus. Weitere Informationen zu diesem Problem finden Sie unter [Visual Studio Help Viewer friert beim Begrüßungsbildschirm ein](https://msdn.microsoft.com/library/mt654096.aspx).    
+**Aktualisieren von Inhalten:** In SQL Server Management Studio und Visual Studio kann die Anwendung Help Viewer während des Hinzufügens der Dokumentation einfrieren (hängenbleiben). Führen Sie zur Lösung des Problems folgende Schritte aus. Weitere Informationen zu diesem Problem finden Sie unter [Visual Studio Help Viewer friert beim Begrüßungsbildschirm ein](https://msdn.microsoft.com/library/mt654096.aspx).    
     
 * Öffnen Sie die Datei „%LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings“ | „HlpViewer_VisualStudio14_en-US.settings“ im Editor, und ändern Sie das Datum im folgenden Code in einen Zeitpunkt in der Zukunft.
 

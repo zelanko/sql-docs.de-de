@@ -1,7 +1,7 @@
 ---
-title: 'Schritt 1: Kopieren des Pakets aus Lektion 4 | Microsoft-Dokumentation'
+title: 'Schritt 1: Kopieren des Pakets aus Lektion 4 | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/08/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,56 +11,51 @@ ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 77c3644de5503ac35121c954c8dda4137322ea0a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f6e3f2999bb686d0e6242ec8a6eea9d926cc787c
+ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504118"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54880443"
 ---
-# <a name="lesson-5-1---copying-the-lesson-4-package"></a>Lektion 5-1: Kopieren des Pakets aus Lektion 4
-In dieser Aufgabe erstellen Sie eine Kopie des in Lektion 4 erstellten Pakets namens „Lesson 4.dtsx“. Alternativ können Sie dem Projekt auch das im Tutorial enthaltene, abgeschlossene Paket aus Lektion 4 hinzufügen und anschließend eine Kopie dieses Pakets erstellen. Sie werden diese neue Kopie in der gesamten Lektion 5 verwenden.  
+# <a name="lesson-5-1-copy-the-lesson-4-package"></a>Lektion 5.1: Kopieren des Pakets aus Lektion 4
+
+In dieser Aufgabe erfahren Sie, wie Sie eine Kopie des Pakets **Lesson 4.dtsx** aus Lektion 4 erstellen. Wenn Sie Lektion 4 nicht abgeschlossen haben, können Sie stattdessen das abgeschlossene Paket aus dem Tutorial im Projekt hinzufügen und dann kopieren. Sie verwenden diese neue Kopie für den weiteren Verlauf von Lektion 5.  
   
-### <a name="to-copy-the-lesson-4-package"></a>So kopieren Sie das Paket aus Lektion 4  
+## <a name="create-the-lesson-5-package"></a>Erstellen des Pakets für Lektion 5  
   
-1.  Wenn [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools noch nicht geöffnet ist, klicken Sie auf **Start**und zeigen Sie auf **Alle Programme**. Klicken Sie anschließend auf **Microsoft SQL Server 2012**und danach auf **SQL Server Data Tools**.  
+Gehen Sie wie folgt vor, wenn Sie das abgeschlossene Paket aus Lektion 4 kopieren möchten.  Informationen zum Kopieren des Beispielpakets für Lektion 4 finden Sie im nächsten Abschnitt.
+
+1.  Wenn [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools noch nicht geöffnet ist, klicken Sie auf **Start** > **All Programs** (Alle Programme)  > **Microsoft SQL Server 2017**, und wählen Sie **SQL Server Data Tools** aus.
+
+2.  Klicken Sie im Menü **Datei** auf **Öffnen** > **Projekt/Projektmappe**, wählen Sie den Ordner **SSIS Tutorial** (SSIS-Tutorial) und dann **Öffnen** aus.  Doppelklicken Sie anschließend auf **SSIS Tutorial.sln**.
+
+3.  Klicken Sie im **Projektmappen-Explorer** erst mit der rechten Maustaste auf **Lesson 4.dtsx**, und wählen Sie dann **Kopieren** aus.
+
+4.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **SSIS-Pakete**, und wählen Sie dann **Einfügen** aus.
+
+    Standardmäßig lautet der Name des kopierten Pakets **Lesson 4.dtsx**.
+
+5.  Doppelklicken Sie im **Projektmappen-Explorer** auf **Lesson 4.dtsx**, um das Paket zu öffnen.
+
+6.  Klicken Sie erst mit der rechten Maustaste auf eine beliebige Stelle im Hintergrund der Entwurfsoberfläche **Ablaufsteuerung**, und klicken Sie anschließend auf **Eigenschaften**.
+
+7.  Ändern Sie im Fenster **Eigenschaften** die Eigenschaft **Name** in **Lesson 5** (Lektion 5).
+
+8.  Aktivieren Sie zunächst das Kontrollkästchen für die Eigenschaft **ID**, klicken Sie dann auf den Dropdownpfeil und anschließend auf **\<Neue ID generieren>**.
+
+## <a name="add-the-completed-lesson-4-package"></a>Hinzufügen des abgeschlossenen Pakets aus Lektion 4
+
+1.  Öffnen Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools und das SSIS-Lernprogrammprojekt.
+
+2.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **SSIS-Pakete**, und klicken Sie auf **Vorhandenes Paket hinzufügen**.
+
+3.  Wählen Sie im Dialogfeld **Kopie des vorhandenen Pakets hinzufügen** unter **Paketspeicherort**die Option **Dateisystem**aus.
+
+4.  Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)**, navigieren Sie zu **Lesson 4.dtsx** auf Ihrem Computer, und wählen Sie anschließend **Öffnen** aus.
+
+5.  Kopieren Sie das Paket aus Lektion 4, und fügen Sie es wie in den Schritten 3 bis 8 im vorherigen Abschnitt beschrieben ein.
   
-2.  Klicken Sie im Menü **Datei** auf **Öffnen**&gt; **Projekt/Projektmappe**. Wählen Sie **SSIS Tutorial** aus, klicken Sie auf **Öffnen**und anschließend auf **SSIS Tutorial.sln**.  
-  
-3.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf **Lesson 4.dtsx**, und klicken Sie anschließend auf **Kopieren**.  
-  
-4.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf **SSIS-Pakete**und anschließend auf **Einfügen**.  
-  
-    Standardmäßig wird das kopierte Paket „Lesson 5.dtsx“ benannt.  
-  
-5.  Doppelklicken Sie im Projektmappen-Explorer auf **Lesson 5.dtsx** , um das Paket zu öffnen.  
-  
-6.  Klicken Sie mit der rechten Maustaste auf eine beliebige Stelle im Hintergrund der Registerkarte **Ablaufsteuerung** und anschließend auf **Eigenschaften**.  
-  
-7.  Aktualisieren Sie im Eigenschaftenfenster die **Name** -Eigenschaft auf **Lektion 5**.  
-  
-8.  Klicken Sie in das Feld für die **ID** -Eigenschaft, klicken Sie auf den Dropdownpfeil, und klicken Sie zuletzt auf **<Generate New ID>**.  
-  
-### <a name="to-add-the-completed-lesson-4-package"></a>So fügen Sie das abgeschlossene Paket aus Lektion 4 hinzu  
-  
-1.  Öffnen Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools und das SSIS-Lernprogrammprojekt.  
-  
-2.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf **SSIS-Pakete**, und klicken Sie auf **Vorhandenes Paket hinzufügen**.  
-  
-3.  Wählen Sie im Dialogfeld **Kopie des vorhandenen Pakets hinzufügen** unter **Paketspeicherort**die Option **Dateisystem**aus.  
-  
-4.  Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)**, navigieren Sie zu **Lesson 4.dtsx** auf Ihrem Computer, und klicken Sie anschließend auf **Öffnen**.  
-  
-    Um alle Lektionspakete für dieses Lernprogramm herunterzuladen, gehen Sie wie folgt vor.  
-  
-    1.  Klicken Sie [hier](https://go.microsoft.com/fwlink/?LinkId=275027), um zur Seite Integration Services Product Samples zu gelangen  
-  
-    2.  Klicken Sie auf die Registerkarte **DOWNLOADS** .  
-  
-    3.  Klicken Sie auf die Datei SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
-  
-5.  Kopieren Sie das Paket aus Lektion 4, und fügen Sie es gemäß den Schritten 3 bis 8 der vorherigen Prozedur ein.  
-  
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="go-to-next-task"></a>Weiter zur nächsten Aufgabe  
 [Schritt 2: Aktivieren und Konfigurieren von Paketkonfigurationen](../integration-services/lesson-5-2-enabling-and-configuring-package-configurations.md)  
   

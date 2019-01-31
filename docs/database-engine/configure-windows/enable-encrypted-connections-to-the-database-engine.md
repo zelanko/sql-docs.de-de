@@ -21,12 +21,12 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 316becea16562fda0e1ba05623f09018367254af
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 6fd3c164b539c8c6fc2dcce24f8ea1ad479ddee6
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589294"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087689"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,6 +48,9 @@ ms.locfileid: "53589294"
   
  
 ##  <a name="Provision"></a> So stellen Sie ein Zertifikat auf dem Server bereit bzw. installieren Sie ein Zertifikat  
+
+>[!NOTE]
+>Informationen zum Hinzufügen eines Zertifikats auf einem einzelnen Server finden Sie unter [Certificate Management (SQL Server Configuration Manager) (Zertifikatverwaltung (SQL Server-Konfigurations-Manager))](https://docs.microsoft.com/sql/database-engine/configure-windows/manage-certificates.md).
   
 1.  Klicken Sie im Menü **Start** auf **Ausführen**, geben Sie in das Feld **Öffnen** den Wert **MMC** ein, und klicken Sie dann auf **OK**.  
   
@@ -69,6 +72,10 @@ ms.locfileid: "53589294"
   
 10. Ergänzen Sie die Angaben im **Zertifikatimport-Assistenten**, um dem Computer ein Zertifikat hinzuzufügen, und schließen Sie dann die MMC-Konsole. Weitere Informationen zum Hinzufügen von Zertifikaten zu einem Computer finden Sie in der Windows-Dokumentation.  
   
+## <a name="to-provision-install-a-certificate-across-multiple-servers"></a>So stellen Sie ein Zertifikat auf mehreren Servern bereit bzw. installieren Sie ein Zertifikat
+
+Informationen zum Hinzufügen eines Zertifikats auf mehreren Servern finden Sie unter [Certificate Management (SQL Server Configuration Manager) (Zertifikatverwaltung (SQL Server-Konfigurations-Manager))](https://docs.microsoft.com/sql/database-engine/configure-windows/manage-certificates.md).
+
 ##  <a name="Export"></a> So exportieren Sie das Serverzertifikat  
   
 1.  Erweitern Sie im **Zertifikate** -Snap-In den Ordner **Zertifikate** / **Eigene Zertifikate** , klicken Sie mit der rechten Maustaste auf das **Zertifikat**, zeigen Sie auf **Alle Tasks**, und klicken Sie dann auf **Exportieren**.  
@@ -89,15 +96,15 @@ ms.locfileid: "53589294"
 > [!NOTE]
 > Konfigurieren Sie den Client so, dass verschlüsselte Verbindungen angefordert werden, um eine sichere Verbindung zwischen Client und Server zu gewährleisten. Weitere Informationen finden Sie [weiter unten in diesem Artikel](#client-request-encrypt-connect-23h).
 
-
-
 ### <a name="wildcard-certificates"></a>Platzhalterzertifikate  
 Ab [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 unterstützen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client Platzhalterzertifikate. Andere Clients unterstützen möglicherweise keine Platzhalterzertifikate. Weitere Informationen finden Sie in der Clientdokumentation. Platzhalterzertifikate können nicht mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager ausgewählt werden. Sie müssen den Registrierungsschlüssel `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` bearbeiten und den Fingerabdruck des Zertifikats ohne Leerraum zum Wert des **Zertifikats** hinzufügen, um ein Platzhalterzertifikat zu verwenden.  
+
 > [!WARNING]  
 > [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry-md.md)]  
 
-<a name="client-request-encrypt-connect-23h"/>
-##  <a name="ConfigureClientConnections"></a> So konfigurieren Sie den Client zum Anfordern verschlüsselter Verbindungen  
+<a name="client-request-encrypt-connect-23h"/></a>
+
+## <a name="ConfigureClientConnections"></a> So konfigurieren Sie den Client zum Anfordern verschlüsselter Verbindungen  
   
 1.  Kopieren Sie entweder das Originalzertifikat oder die exportierte Zertifikatsdatei auf den Clientcomputer.  
   
@@ -107,7 +114,7 @@ Ab [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 unterstützen 
   
 4.  Klicken Sie auf der Seite **Flags** im Feld **Protokollverschlüsselung erzwingen** auf **Ja**.  
   
-##  <a name="EncryptConnection"></a> So verschlüsseln Sie eine Verbindung in SQL Server Management Studio  
+## <a name="EncryptConnection"></a> So verschlüsseln Sie eine Verbindung in SQL Server Management Studio  
   
 1.  Klicken Sie auf der Symbolleiste des Objekt-Explorers auf **Verbinden**, und klicken Sie dann auf **Datenbank-Engine**.  
   

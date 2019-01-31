@@ -1,7 +1,7 @@
 ---
 title: Festlegen oder Ändern der Serversortierung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 12/03/2017
+ms.date: 01/22/2019
 ms.prod: sql
 ms.reviewer: carlrab
 ms.technology: ''
@@ -13,12 +13,12 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 231cc69c164e9ac4d91477710f959b073420c08e
-ms.sourcegitcommit: 4df7db58095384152195039d91a01d2bee6bd07d
+ms.openlocfilehash: 629ab86b869e36ec816dc99070f11a88147a1ca8
+ms.sourcegitcommit: e6e5da19b393f30b068552a18c911495cbc32952
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52954394"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54443696"
 ---
 # <a name="set-or-change-the-server-collation"></a>Festlegen oder Ändern der Serversortierung
 
@@ -61,8 +61,8 @@ ms.locfileid: "52954394"
   
 ## <a name="setting-the-server-collation-in-managed-instance"></a>Festlegen der Serversortierung in der verwalteten Instanz
 
-Die Serversortierung in der verwalteten Azure SQL-Datenbank-Instanz (Vorschauversion) kann beim Erstellen der Instanz festgelegt werden (derzeit nur mit PowerShell). Die Standardsortierung auf Serverebene ist **SQL_Latin1_General_CP1_CI_AS**. Nur-Unicode- und die neuen UTF-8-Sortierungen können nicht als Serversortierungen festgelegt werden.
-Eine Skriptvorlage zur Veranschaulichung des Festlegens der Sortierung auf Serverebene in der verwalteten Azure SQL-Datenbank-Instanz finden Sie unter [Festlegen der Sortierung für die verwaltete Instanz mithilfe einer Resource Manager-Vorlage](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template). Wenn Sie Datenbanken von SQL Server zur verwalteten Instanz migrieren, überprüfen Sie die Serversortierung in der SQL Server-Quelle mit der `SERVERPROPERTY(N'Collation')`-Funktion, und erstellen Sie eine verwaltete Instanz, die der Sortierung der SQL Server-Instanz entspricht. Die Migration einer Datenbank aus SQL Server in eine verwaltete Instanz mit Sortierungen auf Serverebene, die nicht übereinstimmen, kann zu einigen unerwarteten Abfragefehlern führen. Die Sortierung auf Serverebene kann bei vorhandenen verwalteten Instanzen nicht geändert werden.
+Die Sortierung auf Serverebene (Vorschau) in der verwalteten Azure SQL-Instanz kann beim Erstellen der Instanz festgelegt werden. Sie kann später nicht mehr geändert werden. Sie können die Sortierung auf Serverebene über das [Azure-Portal](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance) oder über [PowerShell und eine Resource Manager-Vorlage](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template) beim Erstellen der Instanz festlegen. Die Standardsortierung auf Serverebene ist **SQL_Latin1_General_CP1_CI_AS**. Nur-Unicode- und die neuen UTF-8-Sortierungen können nicht als Serversortierungen festgelegt werden.
+Wenn Sie Datenbanken von SQL Server zur verwalteten Instanz migrieren, überprüfen Sie die Serversortierung in der SQL Server-Quelle mit der `SERVERPROPERTY(N'Collation')`-Funktion, und erstellen Sie eine verwaltete Instanz, die der Sortierung der SQL Server-Instanz entspricht. Die Migration einer Datenbank aus SQL Server in eine verwaltete Instanz mit Sortierungen auf Serverebene, die nicht übereinstimmen, kann zu einigen unerwarteten Abfragefehlern führen. Die Sortierung auf Serverebene kann bei vorhandenen verwalteten Instanzen nicht geändert werden.
 
 ## <a name="see-also"></a>Weitere Informationen
 

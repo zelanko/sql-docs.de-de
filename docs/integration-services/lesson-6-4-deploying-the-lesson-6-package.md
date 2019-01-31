@@ -1,7 +1,7 @@
 ---
 title: 'Schritt 4: Bereitstellen des Pakets aus Lektion 6 | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,113 +11,109 @@ ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 36028cceb24dc1dea804fe749aeaca9e9085fe2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 501161af0ea953b528bca174ba0c910b1bb3bd09
+ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857288"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54880493"
 ---
-# <a name="lesson-6-4---deploying-the-lesson-6-package"></a>Lektion 6-4 – Bereitstellen des Pakets aus Lektion 6
-Zum Bereitstellen des Pakets muss das Paket dem SSISDB-Katalog in Integration Services in einer Instanz von SQL Server hinzugefügt werden. In dieser Lektion werden Sie dem SSISDB-Katalog das Paket aus Lektion 6 hinzufügen, den Parameter festlegen und das Paket ausführen. Für diese Lektion werden Sie mithilfe von SQL Server Management Studio dem SSISDB-Katalog das Paket aus Lektion 6 hinzufügen und das Paket bereitstellen. Nach dem Bereitstellen des Pakets, ändern Sie den Parameter, um auf einen neuen Speicherort zu verweisen, und führen dann das Paket aus.  
+# <a name="lesson-6-4-deploy-the-lesson-6-package"></a>Lektion 6.4: Bereitstellen des Pakets aus Lektion 6
+
+Zum Bereitstellen des Pakets muss das Paket dem SSISDB-Katalog in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in einer SQL Server-Instanz hinzugefügt werden. In dieser Lektion werden Sie dem SSISDB-Katalog das Paket aus Lektion 6 hinzufügen, den neuen Parameter festlegen und das Paket ausführen. Für diese Lektion werden Sie mithilfe von SQL Server Management Studio dem SSISDB-Katalog das Paket aus Lektion 6 hinzufügen und das Paket bereitstellen. Nach dem Bereitstellen des Pakets, ändern Sie den Parameter, um auf einen neuen Speicherort zu verweisen, und führen dann das Paket aus.   
+Diese Aufgabe umfasst folgende Schritte:  
+
+1. Hinzufügen des Pakets zum SSISDB-Katalog im SSIS-Knoten in SQL Server.  
   
-In dieser Lektion führen Sie die folgenden Aktionen aus:  
+2. Bereitstellen des Pakets.  
   
--   Hinzufügen des Pakets zum SSISDB-Katalog im SSIS-Knoten in SQL Server.  
+3. Festlegen des Paketparameterwerts.  
+
+4. Ausführen des Pakets in SSMS.  
   
--   Bereitstellen des Pakets.  
+## <a name="locate-or-add-the-ssisdb-catalog"></a>Suchen oder Hinzufügen des SSISDB-Katalogs  
   
--   Festlegen des Paketparameterwerts.  
+1.  Wählen Sie **Start** > **Programme** > **Microsoft SQL Server 2017** und dann **SQL Management Studio** aus.  
   
--   Ausführen des Pakets in SSMS.  
+2.  Überprüfen Sie im Dialogfeld **Mit Server verbinden** die Standardeinstellungen, und wählen Sie dann **Verbinden** aus. Damit die Verbindung hergestellt werden kann, muss der Name des **Servers** den Namen des Computers enthalten, auf dem SQL Server installiert ist. Wenn es sich bei der **Datenbank-Engine** um eine benannte Instanz handelt, muss im Namen des **Servers** der Instanzname im Format *\<Computername>\\\<Instanzname>* enthalten sein. 
   
-### <a name="to-locate-or-add-the-ssisdb-catalog"></a>So suchen Sie den SSISDB-Katalog oder fügen ihn hinzu  
+3.  Erweitern Sie im **Objekt-Explorer** **Integration Services-Kataloge**.  
   
-1.  Klicken Sie auf "Start", zeigen Sie auf "Alle Programme" und auf "Microsoft SQL Server 2012", und klicken Sie anschließend auf "SQL Management Studio".  
+4.  Wenn unter **Integration Services-Kataloge** keine Kataloge aufgeführt sind, fügen Sie den SSISDB-Katalog hinzu.  
   
-2.  Überprüfen Sie im Dialogfeld "Verbindung mit dem Server herstellen" die Standardeinstellungen, und klicken Sie dann auf "Verbinden". Damit die Verbindung hergestellt werden kann, muss das Feld "Servername" den Namen des Computers enthalten, auf dem SQL Server installiert ist. Wenn es sich bei der Datenbank-Engine um eine benannte Instanz handelt, sollte das Feld „Servername“ zudem den Instanznamen im Format &lt;Computername&gt;\\&lt;Instanzname&gt; enthalten.  
+5.  Um den SSISDB-Katalog hinzuzufügen, klicken Sie mit der rechten Maustaste auf **Integration Services-Kataloge**, und wählen Sie dann **Katalog erstellen** aus.  
   
-3.  Erweitern Sie im Objekt-Explorer "Integration Services-Kataloge".  
+6.  Klicken Sie im Dialogfeld **Katalog erstellen** auf **CLR-Integration aktivieren**.  
   
-4.  Wenn unter "Integration Services-Kataloge" keine Kataloge aufgeführt sind, fügen Sie dann den SSISDB-Katalog hinzu.  
+7.  Geben Sie im Feld **Kennwort** ein Kennwort ein, und geben Sie es erneut im Feld **Kennwort erneut eingeben** ein. 
   
-5.  Um den SSISDB-Katalog hinzuzufügen, klicken Sie mit der rechten Maustaste auf "Integration Services-Kataloge", und klicken Sie dann auf "Katalog erstellen".  
+8.  Klicken Sie auf **OK**, um den SSISDB-Katalog hinzuzufügen.  
   
-6.  Wählen Sie im Dialogfeld "Katalog erstellen" die Option "CLR-Integration aktivieren" aus.  
+## <a name="add-the-package-to-the-ssisdb-catalog"></a>Hinzufügen des Pakets zum SSISDB-Katalog  
   
-7.  Geben Sie im Feld "Kennwort" ein neues Kennwort ein, und geben Sie es erneut im Feld "Kennwort erneut eingeben" ein. Achten Sie darauf, dass Sie das eingegebene Kennwort nicht vergessen.  
+1.  Klicken Sie im **Objekt-Explorer** mit der rechten Maustaste auf **SSISDB**, und wählen Sie **Ordner erstellen** aus.  
   
-8.  Klicken Sie auf "OK", um den SSISDB-Katalog hinzuzufügen.  
+2.  Geben Sie im Dialogfeld **Ordner erstellen** in das Feld „Ordnername“ den Namen „SSIS-Tutorial“ ein, und klicken Sie auf **OK**.  
   
-### <a name="to-add-the-package-to-the-ssisdb-catalog"></a>So fügen Sie das Paket dem SSISDB-Katalog hinzu  
+3.  Erweitern Sie den Ordner **SSIS-Tutorial**, klicken Sie mit der rechten Maustaste auf **Projekte** und dann auf **Pakete importieren**.  
   
-1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf "SSISDB", und klicken Sie auf "Ordner erstellen".  
+4.  Klicken Sie auf der Seite **Einführung** des **Assistenten zum Konvertieren von Integration Services-Projekten** auf **Weiter**.  
   
-2.  Geben Sie im Dialogfeld "Ordner erstellen" in das Feld "Ordnername" den Namen "SSIS-Lernprogramm" ein, und klicken Sie auf "OK".  
+5.  Stellen Sie auf der Seite **Pakete suchen** sicher, dass das **Dateisystem** in der Liste **Quelle** ausgewählt ist, und klicken Sie auf **Durchsuchen**.  
   
-3.  Erweitern Sie den Ordner "SSIS-Lernprogramm", klicken Sie mit der rechten Maustaste auf "Projekte" und dann auf "Pakete importieren".  
+6.  Navigieren Sie im Dialogfeld **Nach Ordner suchen** zum Ordner mit dem Projekt „SSIS-Tutorial“, und klicken Sie dann auf **OK**.  
   
-4.  Klicken Sie auf der Seite "Einführung" des Assistenten zum Konvertieren von Integration Services-Projekten auf "Weiter".  
+7.  Wählen Sie **Weiter**aus.  
   
-5.  Stellen Sie auf der Seite "Pakete suchen" sicher, dass das Dateisystem in der Liste "Quelle" ausgewählt ist, und klicken Sie auf "Durchsuchen".  
+8.  Auf der Seite „Pakete auswählen“ sollten alle sechs Pakete aus dem SSIS-Tutorial angezeigt werden. Wählen Sie in der Liste **Pakete** die Datei **Lesson 6.dtsx** aus, und klicken Sie dann auf **Weiter**.  
   
-6.  Navigieren Sie im Dialogfeld "Nach Ordner suchen" zum Ordner mit dem Projekt "SSIS-Lernprogramm", und klicken Sie dann auf "OK".  
+9. Geben Sie auf der Seite **Ziel auswählen** in das Feld **Projektname** **SSIS-Tutorialbereitstellung** ein, und klicken Sie auf **Weiter**.
+
+10. Klicken Sie auf jeder der verbleibenden Seiten des Assistenten auf **Weiter**, bis Sie zur Seite **Überprüfung** gelangen.  
   
-7.  Klicken Sie auf Weiter.  
+11. Klicken Sie auf der Seite **Überprüfung** auf **Konvertieren**.  
   
-8.  Auf der Seite "Pakete auswählen" sollten alle sechs Pakete aus dem SSIS-Lernprogramm angezeigt werden. Wählen Sie in der Liste "Pakete" die Datei "Lektion 6.dtsx" aus, und klicken Sie dann auf "Weiter".  
-  
-9. Geben Sie auf der Seite "Ziel auswählen" in das Feld "Projektname" "SSIS-Lernprogrammbereitstellung" ein, und klicken Sie auf "Weiter".  
-  
-10. Klicken Sie auf jedem der verbleibenden Seiten des Assistenten auf "Weiter", bis Sie zur Seite "Überprüfen" gelangen.  
-  
-11. Klicken Sie auf der Seite "Überprüfen" auf "Konvertieren".  
-  
-12. Wenn die Konvertierung abgeschlossen ist, klicken Sie auf "Schließen".  
+12. Klicken Sie nach der Konvertierung auf **Schließen**.  
   
 Wenn Sie den Assistenten zum Konvertieren von Integration Services-Projekten schließen, zeigt SSIS den Bereitstellungs-Assistenten für Integration Services an. Verwenden Sie diesen Assistenten jetzt zur Bereitstellung des Pakets aus Lektion 6.  
   
-1.  Überprüfen Sie auf der Seite "Einführung" des Bereitstellungs-Assistenten für Integration Services die Schritte zum Bereitstellen des Projekts, und klicken Sie dann auf "Weiter".  
+1.  Überprüfen Sie auf der Seite **Einführung** des **Bereitstellungs-Assistenten für Integration Services** die Schritte zum Bereitstellen des Projekts, und klicken Sie dann auf **Weiter**.  
   
-2.  Stellen Sie auf der Seite "Ziel auswählen" sicher, dass der Servername die Instanz von SQL Server mit dem SSISDB-Katalog ist und dass der Pfad "SSIS-Lernprogrammbereitstellung" zeigt, und klicken Sie dann auf "Weiter".  
+2.  Stellen Sie auf der Seite **Ziel auswählen** sicher, dass der Servername der SQL Server-Instanz mit dem SSISDB-Katalog entspricht und dass der Pfad **SSIS-Tutorialbereitstellung** zeigt. Klicken Sie dann auf **Weiter**.  
   
-3.  Überprüfen Sie auf der Seite "Überprüfen" die Zusammenfassung, und klicken Sie auf "Bereitstellen".  
+3.  Überprüfen Sie auf der Seite **Überprüfung** die **Zusammenfassung**, und klicken Sie auf **Bereitstellen**.  
   
-4.  Wenn die Bereitstellung abgeschlossen ist, klicken Sie auf "Schließen".  
+4.  Wenn die Bereitstellung abgeschlossen ist, klicken Sie auf **Schließen**.  
   
-5.  Klicken Sie mit der rechten Maustaste im Objekt-Explorer auf "Integration Services-Kataloge" und dann auf "Aktualisieren".  
+5.  Klicken Sie mit der rechten Maustaste im **Objekt-Explorer** auf **Integration Services-Kataloge** und dann auf **Aktualisieren**.  
   
-6.  Erweitern Sie "Integration Services-Kataloge" und dann "SSISDB". Erweitern Sie weiterhin die Struktur unter "SSIS-Lernprogramm", bis Sie das Projekt vollständig erweitert haben. Unter dem Knoten "Pakete" des Knotens "SSIS-Lernprogrammbereitstellung" sollte "Lektion 6.dtsx" angezeigt werden.  
+6.  Erweitern Sie **Integration Services-Kataloge** und dann **SSISDB**. Klappen Sie die Struktur unter **SSIS-Tutorial** soweit auf, bis Sie das Projekt vollständig erweitert haben. Unter dem Knoten **Pakete** des Knotens **SSIS-Tutorialbereitstellung** sollte **Lesson 6.dtsx** angezeigt werden.  
   
-Um sicherzustellen, dass das Paket abgeschlossen ist, klicken Sie mit der rechten Maustaste auf "Lektion 6.dtsx", und klicken Sie auf "Konfigurieren". Wählen Sie im Dialogfeld "Konfigurieren" "Parameter" aus, und überprüfen Sie, ob es einen Eintrag mit "Lektion 6.dtsx" als Container, "VarFolderName" als Namen und dem Pfad zu "Neue Beispieldaten" als Wert vorhanden ist, und klicken Sie dann auf "Schließen".  
+7.  Um sicherzustellen, dass das Paket abgeschlossen ist, klicken Sie mit der rechten Maustaste auf **Lesson 6.dtsx** und wählen dann **Konfigurieren** aus. Wählen Sie im Dialogfeld **Konfigurieren** die Option **Parameter** aus, und überprüfen Sie, ob es einen Eintrag mit **Lesson 6.dtsx** als **Container**, **VarFolderName** als **Name** und dem Pfad zu **Neue Beispieldaten** als Wert vorhanden ist. Klicken Sie dann auf **Schließen**.  
   
-Erstellen Sie vor dem Fortfahren einen neuen Beispieldatenordner, geben Sie ihm den Namen "Beispieldaten Zwei", und kopieren Sie alle drei der ursprünglichen Beispieldateien hinein.  
+## <a name="create-and-populate-a-new-sample-data-folder"></a>Erstellen und Füllen eines neuen Beispieldatenordners  
   
-### <a name="to-create-and-populate-a-new-sample-data-folder"></a>So erstellen und füllen Sie einen neuen Beispieldatenordner  
+1.  Erstellen Sie im **Windows-Explorer** im Stammverzeichnis Ihres Laufwerks (beispielsweise **C:\\**) einen neuen Ordner mit dem Namen **Beispieldaten Zwei**.  
   
-1.  Erstellen Sie im Windows-Explorer im Stammverzeichnis Ihres Laufwerks (beispielsweise C:\\) einen neuen Ordner mit dem Namen „Beispieldaten Zwei“.  
+2.  Öffnen Sie den Ordner **Beispieldaten** aus [Lektion 1 – Voraussetzungen](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites), und kopieren Sie alle drei Beispieldateien.  
   
-2.  Öffnen Sie den Ordner "C:\Programme\Microsoft SQL Server\110\Samples\Integration Services\Tutorial\Creating a Simple ETL Package\Sample Data", und kopieren Sie dann drei der Beispieldateien aus dem Ordner.  
+3.  Navigieren Sie zum Ordner **Beispieldaten Zwei**, und fügen Sie die kopierten Dateien ein.  
   
-3.  Fügen Sie die kopierten Dateien in den Ordner "Neue Beispieldaten" ein.  
+## <a name="change-the-package-parameter-to-point-to-the-new-sample-data"></a>Ändern des Paketparameters für den Verweis auf die neuen Beispieldaten  
   
-### <a name="to-change-the-package-parameter-to-point-to-the-new-sample-data"></a>So ändern Sie den Paketparameter, um auf die neuen Beispieldaten zu verweisen  
+1.  Klicken Sie im **Objekt-Explorer** mit der rechten Maustaste auf **Lesson 6.dtsx** und wählen dann **Konfigurieren** aus.  
   
-1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf "Lektion 6.dtsx", und klicken Sie auf "Konfigurieren".  
+2.  Ändern Sie im Dialogfeld **Konfigurieren** den Parameterwert in den Pfad zu **Beispieldaten Zwei** (z.B. **C:\\Beispieldaten Zwei**).  
   
-2.  Ändern Sie im Dialogfeld "Konfigurieren" den Parameterwert in den Pfad zu "Beispieldaten Zwei". Zum Beispiel "C:\Beispieldaten Zwei", wenn Sie den neuen Ordner im Stammordner von Laufwerk C platziert haben.  
+3.  Klicken Sie auf **OK**, um das Dialogfeld **Konfigurieren** zu schließen.  
   
-3.  Klicken Sie auf "OK", um das Dialogfeld "Konfigurieren" zu schließen.  
+## <a name="test-the-lesson-6-package-deployment"></a>Testen der Bereitstellung des Pakets aus Lektion 6  
   
-### <a name="to-test-the-lesson-6-package-deployment"></a>So testen Sie die Bereitstellung des Lektion 6-Pakets  
+1.  Klicken Sie im **Objekt-Explorer** mit der rechten Maustaste auf **Lesson 6.dtsx** und wählen dann **Ausführen** aus.  
   
-1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf "Lektion 6.dtsx", und klicken Sie auf "Ausführen".  
+2.  Klicken Sie im Dialogfeld **Paket ausführen** auf **OK**.  
   
-2.  Klicken Sie im Dialogfeld "Paket ausführen" auf "OK".  
+3.  Klicken Sie in der angezeigten Meldung auf **Ja**, um den **Übersichtsbericht** zu öffnen.  
   
-3.  Klicken Sie im Dialogfeld "Meldung" auf "Ja", um den Übersichtsbericht zu öffnen.  
-  
-Der Übersichtsbericht für das Paket wird mit dem Namen des Pakets und einer Statusübersicht angezeigt. Der Abschnitt "Übersicht über die Ausführung" enthält das Ergebnis jeder Aufgabe im Paket, und der Abschnitt "Verwendete Parameter" zeigt die Namen und Werte aller Parameter an, die bei der Ausführung des Pakets verwendet werden, einschließlich "VarFolderName".  
-  
-  
+Der **Übersichtsbericht** für das Paket wird mit dem Namen des Pakets und einer Statuszusammenfassung angezeigt. Im Abschnitt **Übersicht über die Ausführung** wird das Ergebnis jeder Aufgabe im Paket angezeigt. Der Abschnitt **Verwendete Parameter** enthält die Namen und Werte aller Parameter, die bei der Ausführung des Pakets verwendet werden, einschließlich **VarFolderName**.  
   

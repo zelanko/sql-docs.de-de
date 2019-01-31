@@ -8,14 +8,14 @@ ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3ed9f661a49e6ad64642938672f6355a1d19d9f6
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: 4de4f510bcb584e0ec409f89eaba8c13ba6d8c6e
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302560"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457653"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lektion 3: Definieren eines datengesteuerten Abonnements
 In dieser Lektion des [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Tutorials verwenden Sie die datengesteuerten Abonnementseiten des [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Webportals, um eine Verbindung mit einer Abonnementdatenquelle herzustellen, um eine Abfrage zu erstellen, die Abonnementdaten abruft, und um das Resultset den Berichts- und Übermittlungsoptionen zuzuordnen.  
   
 > [!NOTE]  
@@ -60,8 +60,9 @@ In dieser Lektion wird davon ausgegangen, dass Sie Lektion 1 und Lektion 2 abges
 1. Wählen Sie **Die folgenden Anmeldeinformationen verwenden**aus.
 2. Wählen Sie **Windows-Benutzername und -Kennwort**aus.
 3.  Geben Sie unter **Benutzername** und **Kennwort**Ihren Benutzernamen und Ihr Kennwort für die Domäne ein. Geben Sie unter **Benutzername**sowohl die Domäne als auch das Benutzerkonto an.
-    > [!NOTE]  
-    > Die Anmeldeinformationen, die für die Verbindung mit einer Abonnentendatenquelle verwendet werden, werden nicht an [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]zurückgegeben. Wenn Sie das Abonnement später ändern, müssen Sie das Kennwort zum Herstellen der Verbindung mit der Datenquelle erneut eingeben.
+
+> [!NOTE]  
+> Die Anmeldeinformationen, die für die Verbindung mit einer Abonnentendatenquelle verwendet werden, werden nicht an [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]zurückgegeben. Wenn Sie das Abonnement später ändern, müssen Sie das Kennwort zum Herstellen der Verbindung mit der Datenquelle erneut eingeben.
 
 ## <a name="query"></a>Dataseteigenschaften      
 1.  Geben Sie im Abfragefeld folgende Abfrage ein:  
@@ -97,13 +98,13 @@ Beim Ausführen des Abonnements werden vier Berichtsdateien an die von Ihnen ang
 ![Liste der Dateien, die vom Abonnement erstellt werden](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "List of files created by the subscription").  
   
 Die Abonnementseite im Webportal enthält das Datum der **letzten Ausführung** und den **Status** des Abonnements. 
-**Hinweis:** Aktualisieren Sie die Seite, nachdem das Abonnement ausgeführt wurde, um die aktualisierten Informationen anzuzeigen.  
+**Hinweis:** Aktualisieren Sie die Seite, nachdem das Abonnement ausgeführt wurde, um die aktualisierten Informationen zu sehen.  
     
 ![Abonnementergebnisse im Berichts-Manager](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "Subscription results in Report Manager")  
   
 Dies ist der letzte Schritt des Tutorials „Defining a Data-Driven Subscription“ (Definieren eines datengesteuerten Abonnements).   
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Abonnements und Übermittlung &#40;Reporting Services&#41;](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
 [Datengesteuerte Abonnements](../reporting-services/subscriptions/data-driven-subscriptions.md)  
 [Erstellen, Ändern und Löschen von datengesteuerten Abonnements](../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  

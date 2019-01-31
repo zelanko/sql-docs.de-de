@@ -1,7 +1,7 @@
 ---
 title: Analysis Services-Verbindungs-Manager | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 10/31/2018
+ms.date: 1/25/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 9f9cadad-a1d0-4db5-98f5-df5dbbec1be4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 38addbd487a0d3e5f348d59028c85e16bca1dd5c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 5251e9b5842f7b5aa4dde71866c1c625faa81d5e
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639167"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044476"
 ---
 # <a name="analysis-services-connection-manager"></a>Analysis Services-Verbindungs-Manager
   Mit einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Verbindungs-Manager kann ein Paket eine Verbindung mit einem Server herstellen, auf dem eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank ausgeführt wird, oder mit einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt herstellen, das den Zugriff auf Cube- und Dimensionsdaten ermöglicht. Die Verbindung mit einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt ist nur beim Entwickeln von Paketen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]möglich. Zur Laufzeit stellen Pakete eine Verbindung mit dem Server und der Datenbank her, für den bzw. die Sie das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt bereitgestellt haben.  
@@ -41,7 +41,7 @@ ms.locfileid: "51639167"
 -   Wenn Sie eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]herstellen, geben Sie den Authentifizierungsmodus an.  
 
 > [!NOTE]    
->  Wenn Sie SSIS in Azure Data Factory (ADF) verwenden und eine Verbindung mit der Azure Analysis Services-Instanz (AAS) herstellen möchten, können Sie kein Konto verwenden, für das die mehrstufige Authentifizierung aktiviert ist, sondern müssen auf einen Dienstprinzipal zurückgreifen. Informationen zum Erstellen eines solchen Dienstprinzipals, zum **Verwenden eines bestimmten Benutzernamen und Kennworts** für die Anmeldung bei Ihrem Server über den Verbindungs-Manager und zum Eingeben Ihrer Anwendungs-ID bzw. Ihres Schlüssels als Benutzername bzw. als Kennwort finden Sie [hier](https://docs.microsoft.com/azure/analysis-services/analysis-services-service-principal). Anschließend müssen Sie die erforderlichen Clientbibliotheken über ein benutzerdefiniertes Setup für Azure-SSIS Integration Runtime installieren. Weitere Informationen finden Sie im Beispiel **AAS** unter [Anpassen des Setups für Azure-SSIS Integration Runtime](https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
+>  Wenn Sie SSIS in Azure Data Factory (ADF) verwenden und eine Verbindung mit der Azure Analysis Services-Instanz (AAS) herstellen möchten, können Sie kein Konto verwenden, für das die mehrstufige Authentifizierung aktiviert ist, sondern müssen auf ein Konto zurückgreifen, das keine Interaktivität/MFA bzw. keinen Dienstprinzipal erfordert. Wenn Sie Letzteres verwenden möchten, finden Sie [hier](https://docs.microsoft.com/azure/analysis-services/analysis-services-service-principal) Informationen zum Erstellen und zum Zuweisen der Serveradministratorrolle. Wählen Sie anschließend **SQL Server-Authentifizierung verwenden** aus, um sich im Verbindungs-Manager beim Server anzumelden, und geben Sie abschließend `User name: app:YourApplicationID` und `Password: YourAuthorizationKey` ein.
   
 -   Geben Sie an, ob die im Verbindungs-Manager erstellte Verbindung zur Laufzeit beibehalten wird.  
   

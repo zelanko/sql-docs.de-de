@@ -1,6 +1,6 @@
 ---
 title: Berichtsdefinitionssprache (Report Definition Language, RDL) (SSRS) | Microsoft-Dokumentation
-ms.date: 03/14/2017
+ms.date: 01/24/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reports
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8303c08d67a6a18b7dff13db60fccf5653cbae18
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 6ab16fccf8808aca17a64d0764c84295bc56f351
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813509"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044596"
 ---
 # <a name="report-definition-language-ssrs"></a>Berichtsdefinitionssprache (Report Definition Language, RDL) (SSRS)
   Bei der Berichtsdefinitionssprache (RDL) handelt es sich um eine XML-Darstellung einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsdefinition. In einer Berichtsdefinition sind Informationen zum Datenabruf und Datenlayout für einen Bericht enthalten. RDL besteht aus XML-Elementen, die der für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]entwickelten XML-Grammatik entsprechen. Sie können eigene benutzerdefinierte Funktionen zur Steuerung von Werten, Formaten und Formatierungen von Berichtselementen hinzufügen, indem Sie in Berichtsdefinitionsdateien auf Code-Assemblys zugreifen.  
@@ -41,7 +41,7 @@ ms.locfileid: "51813509"
 ##  <a name="bkmk_RDL_XML_Schema_Definition"></a> RDL-XML-Schemadefinition  
  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -RDL-Datei (Report Definition Language, Berichtsdefinitionssprache) wird mithilfe einer XSD-Datei (XML Schema Definition) überprüft. Das Schema definiert die Regeln dafür, wo RDL-Elemente in einer RDL-Datei auftreten können. Ein Element schließt seinen Datentyp und seine Kardinalität ein, also die Anzahl der erlaubten Vorkommen. Ein Element kann einfach oder komplex sein. Ein einfaches Element besitzt keine untergeordneten Elemente oder Attribute. Ein komplexes Element verfügt über untergeordnete Elemente und (optional) Attribute.  
   
- Das Schema enthält beispielsweise das RDL-Element **ReportParameters**, das den komplexen Typ **ReportParametersType**aufweist. Gemäß der Konvention ist ein komplexer Typ für ein Element der Name des Elements gefolgt von dem Wort **Type**. Ein **ReportParameters** -Element kann im **Report** -Element (einem komplexen Typ) enthalten sein und selbst **ReportParameter** -Elemente enthalten. Ein **ReportParameterType** ist ein einfacher Typ, bei dem es sich nur um einen der folgenden Werte handeln kann: **Boolean**, **DateTime**, **Integer**, **Float**oder **String**. Weitere Informationen zu XML-Schema-Datentypen finden Sie unter [XML Schema Part 2: Datatypes Second Edition](https://go.microsoft.com/fwlink/?linkid=4871).  
+ Das Schema enthält beispielsweise das RDL-Element **ReportParameters**, das den komplexen Typ **ReportParametersType**aufweist. Gemäß der Konvention ist ein komplexer Typ für ein Element der Name des Elements gefolgt von dem Wort **Type**. Ein **ReportParameters** -Element kann im **Report** -Element (einem komplexen Typ) enthalten sein und selbst **ReportParameter** -Elemente enthalten. Ein **ReportParameterType** ist ein einfacher Typ, bei dem es sich nur um einen der folgenden Werte handeln kann: **Boolean**, **DateTime**, **Integer**, **Float** oder **String**. Weitere Informationen zu XML-Schema-Datentypen finden Sie unter [XML Schema Part 2: Datatypes Second Edition](https://go.microsoft.com/fwlink/?linkid=4871).  
   
  Die RDL-XSD steht in der Datei "ReportDefinition.xsd" zur Verfügung, die sich im Ordner "Extras" auf der Produkt-CD-ROM befindet. Sie ist auch auf dem Berichtsserver über die folgende URL verfügbar: `https://servername/reportserver/reportdefinition.xsd`.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "51813509"
 |----------|-----------------|  
 |**Binär (Binary)**|Eine Eigenschaft mit einem Base-64-codierten Binärwert.|  
 |**Boolean**|Eine Eigenschaft, die den Wert **true** oder **false** für ein Objekt annehmen kann. Sofern nichts anderes angegeben ist, hat ein nicht angegebenes, optionales Boolean-Objekt den Wert **False**.|  
-|**Datum**|Eine Eigenschaft mit einem vollständigen date- oder datetime-Wert, der im ISO8601-Datumsformat angegeben ist: JJJJ-MM-TT[THH:MM[:SS[.S]]]|  
+|**Datum**|Eine Eigenschaft mit einem vollständigen date- oder datetime-Wert, der im ISO8601-Datumsformat angegeben ist: JJJJ-MM-TT[THH:MM[:SS[.S]]].|  
 |**Enum**|Eine Eigenschaft mit einem Zeichenfolgen-Textwert, der einem Wert aus einer Liste mit angegebenen Werten entsprechen muss|  
 |**Float**|Eine Eigenschaft mit einem Gleitkommawert. Als optionales Dezimaltrennzeichen wird ein Punkt (.) verwendet.|  
 |**Integer**|Eine Eigenschaft mit einem ganzzahligen (int32) Wert|  
@@ -84,7 +84,7 @@ ms.locfileid: "51813509"
 |Single, Double|float|  
 |String, Char, GUID, Timespan|Zeichenfolge|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Suchen der Berichtsdefinitions-Schemaversion &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)   
  [Verwenden benutzerdefinierter Assemblys mit Berichten](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
  [Benutzerdefinierte Berichtselemente](../../reporting-services/custom-report-items/custom-report-items.md)  

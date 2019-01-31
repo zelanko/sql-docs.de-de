@@ -6,13 +6,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 08/16/2018
-ms.openlocfilehash: 49058b7c6ef7bc3fce9997c5492a1551b94f46dd
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.date: 01/15/2019
+ms.openlocfilehash: b041e4a7f672468f5c2959f8ecb86ddaa62f09fd
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021694"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805746"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Servereigenschaften (Seite Erweitert) – Reporting Services
 
@@ -22,7 +22,7 @@ Verwenden Sie diese Seite, um Systemeigenschaften auf dem Berichtsserver festzul
 
 Öffnen Sie diese Seite, indem Sie SQL Server Management Studio starten und eine Verbindung mit einer Berichtsserverinstanz herstellen. Klicken Sie mit der rechten Maustaste auf den Namen des Berichtsservers, und klicken Sie anschließend auf **Eigenschaften**. Klicken Sie auf **Erweitert**, um diese Seite zu öffnen.
 
-## <a name="options"></a>Tastatur
+## <a name="options"></a>enthalten
 
 **EnableMyReports**  
 Gibt an, ob die Funktion <legacyBold>Meine Berichte</legacyBold> aktiviert ist. Der Wert **true** gibt an, dass die Funktion aktiviert ist.  
@@ -71,7 +71,7 @@ Definiert, wie Momentaufnahmen komprimiert werden. Der Standardwert lautet **SQL
 |Werte|und Beschreibung|
 |---------|---------|
 |**location**|Momentaufnahmen werden komprimiert, wenn sie in der Berichtsserver-Datenbank gespeichert werden. Diese Komprimierung entspricht dem aktuellen Verhalten.|
-|**Keine**|Momentaufnahmen werden nicht komprimiert.|
+|**None**|Momentaufnahmen werden nicht komprimiert.|
 |**Alle**|Momentaufnahmen werden bei allen Speicheroptionen komprimiert. Dazu gehören auch die Berichtsserver-Datenbank oder das Dateisystem.|
 
 **SystemReportTimeout**  
@@ -79,6 +79,28 @@ Der Standard-Timeoutwert für die Berichtsverarbeitung in Sekunden für alle im 
 
 **SystemSnapshotLimit**  
 Die maximale Anzahl an Momentaufnahmen, die für einen Bericht gespeichert werden. Gültige Werte sind **-1** bis **2**.**147**.**483**.**647**. Lautet der Wert **-1**, so ist die Anzahl von Momentaufnahmen nicht einschränkt.  
+
+**AccessControlAllowCredentials**  
+Gibt an, ob die Antwort auf die Client-Anforderung verfügbar gemacht werden kann, wenn das Kennzeichen „Anmeldeinformationen“ auf TRUE festgelegt ist. Der Standardwert ist **false**.
+
+**AccessControlAllowHeaders** Eine durch Trennzeichen getrennte Liste von Headern, die der Server zulässt, wenn ein Client eine Anforderung stellt. Diese Eigenschaft kann aus einer leeren Zeichenfolge bestehen, wobei * angibt, dass alle Header zulässig sind.
+
+**AccessControlAllowMethods** Eine durch Trennzeichen getrennte Liste von HTTP-Methoden, die der Server zulässt, wenn ein Client eine Anforderung stellt. Die Standardwerte sind GET, PUT, POST, PATCH, DELETE, wobei * angibt, dass alle Methoden zulässig sind.
+
+**AccessControlAllowOrigin** Eine durch Trennzeichen getrennte Liste von Headern, die der Server zulässt, wenn ein Client eine Anforderung stellt. Der Standardwert ist leer, wodurch sämtliche Anforderungen verhindert werden. Wenn * angegeben wird, sind alle Ursprünge zulässig, wenn keine Anmeldeinformationen festgelegt sind. Wenn hingegen Anmeldeinformationen festgelegt sind, muss eine explizite Liste von Ursprüngen angegeben werden.
+
+**AccessControlExposeHeaders** Eine durch Trennzeichen getrennte Liste von Headern, die der Server den Clients verfügbar macht. Für diese Einstellung gibt es keinen Standardwert.
+
+**AccessControlMaxAge** Gibt die Anzahl der Sekunden an, für die Ergebnisse einer Preflightanforderung im Cache gespeichert werden können. Der Standardwert ist 600 (10 Minuten).
+
+**AllowedResourceExtensionsForUpload** ***(nur Power BI-Berichtsserver)*** Legt Erweiterungen von Ressourcen fest, die auf den Berichtsserver hochgeladen werden können. Erweiterungen für integrierte Dateitypen wie &ast;.rdl und &ast;.pbix müssen nicht einbezogen werden. Der Standardwert lautet „&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx“. 
+
+
+**EditSessionCacheLimit**  
+Gibt die Anzahl von Datencacheeinträgen an, die in einer Berichtsbearbeitungssitzung aktiv sein können. Die Standardanzahl ist 5.  
+
+**EditSessionTimeout**  
+Gibt die Anzahl der Sekunden bis zum Timeout einer Berichtsbearbeitungssitzung an. Der Standardwert ist 7.200 Sekunden (zwei Stunden).  
 
 **EnableIntegratedSecurity**  
 Bestimmt, ob die integrierte Sicherheit von Windows für Berichtsdatenquellen-Verbindungen unterstützt wird. Der Standardwert ist **True**. Die folgenden Werte sind gültig:
@@ -97,25 +119,6 @@ Die Deaktivierung dieser Option führt zu einem Sicherheitsrisiko, weil böswill
 
 **EnableRemoteErrors**  
 Nimmt externe Fehlerinformationen (beispielsweise Fehlerinformationen zu Berichtsdatenquellen) in die Fehlermeldungen auf, die für Benutzer zurückgegeben werden, die Berichte von Remotecomputern anfordern. Gültige Werte sind **true** und **false**. Der Standardwert ist **false**. Weitere Informationen finden Sie unter [Aktivieren von Remotefehlern &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md).  
-
-**AccessControlAllowCredentials**  
-Gibt an, ob die Antwort auf die Client-Anforderung verfügbar gemacht werden kann, wenn das Kennzeichen „Anmeldeinformationen“ auf TRUE festgelegt ist. Der Standardwert ist **false**.
-
-**AccessControlAllowHeaders** Eine durch Trennzeichen getrennte Liste von Headern, die der Server zulässt, wenn ein Client eine Anforderung stellt. Diese Eigenschaft kann aus einer leeren Zeichenfolge bestehen, wobei * angibt, dass alle Header zulässig sind.
-
-**AccessControlAllowMethods** Eine durch Trennzeichen getrennte Liste von HTTP-Methoden, die der Server zulässt, wenn ein Client eine Anforderung stellt. Die Standardwerte sind GET, PUT, POST, PATCH, DELETE, wobei * angibt, dass alle Methoden zulässig sind.
-
-**AccessControlAllowOrigin** Eine durch Trennzeichen getrennte Liste von Headern, die der Server zulässt, wenn ein Client eine Anforderung stellt. Der Standardwert ist leer, wodurch sämtliche Anforderungen verhindert werden. Wenn * angegeben wird, sind alle Ursprünge zulässig, wenn keine Anmeldeinformationen festgelegt sind. Wenn hingegen Anmeldeinformationen festgelegt sind, muss eine explizite Liste von Ursprüngen angegeben werden.
-
-**AccessControlExposeHeaders** Eine durch Trennzeichen getrennte Liste von Headern, die der Server den Clients verfügbar macht. Für diese Einstellung gibt es keinen Standardwert.
-
-**AccessControlMaxAge** Gibt die Anzahl der Sekunden an, für die Ergebnisse einer Preflightanforderung im Cache gespeichert werden können. Der Standardwert ist 600 (10 Minuten).
-
-**EditSessionCacheLimit**  
-Gibt die Anzahl von Datencacheeinträgen an, die in einer Berichtsbearbeitungssitzung aktiv sein können. Die Standardanzahl ist 5.  
-
-**EditSessionTimeout**  
-Gibt die Anzahl der Sekunden bis zum Timeout einer Berichtsbearbeitungssitzung an. Der Standardwert ist 7.200 Sekunden (zwei Stunden).  
 
 **EnableCustomVisuals** ***(nur Power BI-Berichtsserver)*** Dient zum Aktivieren der Anzeige benutzerdefinierter Visualisierungen für Power BI. Mögliche Werte sind TRUE/FALSE. *Der Standardwert ist TRUE.*  
 
@@ -137,6 +140,8 @@ Gibt die Anzahl der Sekunden bis zum Timeout einer Berichtsbearbeitungssitzung a
 
 **ShowDownloadMenu** Aktiviert das Menü zum Herunterladen von Clienttools. *Der Standardwert ist TRUE.*
 
+**SupportedHyperlinkSchemes** ***(nur Power BI-Berichtsserver)*** Legt eine durch Trennzeichen getrennte Liste mit URI-Schemas fest, die für Linkaktionen definiert werden dürfen, die gerendert werden dürfen, oder „&ast;“, um alle Linkschemas zu aktivieren. Mit der Einstellung „http,https“ sind beispielsweise Links zu „https://www. contoso.com“ zulässig. Links zu „mailto:bill@contoso.com“ oder „javascript:window.open(‘www.contoso.com’, ‘_blank’)“ werden dagegen entfernt. Die Standardeinstellung ist „&ast;“.
+
 **TimeInitialDelaySeconds** Legen Sie (in Sekunden) fest, für wie lange die Anfangszeit verzögert werden soll. *Der Standardwert ist 60.*
 
 **TrustedFileFormat** Legt alle externen Dateiformate fest, die sich auf der Reporting Services-Portalwebsite im Browser öffnen lassen. Bei hier nicht aufgeführten Dateiformaten wird der Benutzer aufgefordert, die Datei im Browser herunterzuladen. Die Standardwerte sind JPG, JPEG, JPE, WAV, BMP, PDF, IMG, GIF, JSON, MP4, WEB, PNG.
@@ -150,7 +155,7 @@ Timeout bei der Datenaktualisierung in Minuten für die geplante Aktualisierung 
 **EnableTestConnectionDetailedErrors**  
 Gibt an, ob ausführliche Fehlermeldungen an den Clientcomputer gesendet werden sollen, wenn Benutzer Datenquellverbindungen mit dem Berichtsserver testen. Der Standardwert ist **true**. Wenn die Option auf **false**festgelegt wird, werden nur generische Fehlermeldungen gesendet.
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [Festlegen von Berichtsservereigenschaften &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
 [Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   

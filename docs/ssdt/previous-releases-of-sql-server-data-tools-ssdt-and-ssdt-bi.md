@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 39f2ebeca9f19c8c00707c9e5427c797dfc09881
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5121af5edf195454ec6a27d5a586a921c2853b4c
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519761"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087639"
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>Vorgängerversionen von SQL Server Data Tools (SSDT und SSDT-BI)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,10 +34,12 @@ Die letzten Downloads werden für den unwahrscheinlichen Fall bereitgestellt, da
 
 |SSDT-Release| Visual Studio 2017|
 |:---|:---|
+|15.8.2|[SSDT für VS2017 15.8.2](https://go.microsoft.com/fwlink/?linkid=2038031)|
 |15.8.0|[SSDT für VS2017 15.8.0](https://go.microsoft.com/fwlink/?linkid=2014060)|
 |15.7.1|[SSDT für VS2017 15.7.1](https://go.microsoft.com/fwlink/?LinkId=875613)|
 |15.7.0|[SSDT für VS2017 15.7.0](https://go.microsoft.com/fwlink/?LinkId=874716)|
 |15.6.0|[SSDT für VS2017 15.6.0](https://go.microsoft.com/fwlink/?LinkId=871368)|
+
 <br>
 
 |SSDT-Release| Visual Studio 2015|
@@ -45,11 +47,13 @@ Die letzten Downloads werden für den unwahrscheinlichen Fall bereitgestellt, da
 |17.4|[SSDT für VS2015 17.4](https://go.microsoft.com/fwlink/?linkid=863440)|
 |17.3|[SSDT für VS2015 17.3](https://go.microsoft.com/fwlink/?linkid=858660)|
 |16.5|[SSDT für VS2015 16.5](https://go.microsoft.com/fwlink/?LinkID=832313)|  
+
 <br>
 
 |SSDT-Release| Visual Studio 2013|
 |:---|:---|
 |16.5|[SSDT für VS2013 16.5](https://go.microsoft.com/fwlink/?LinkID=832308)|  
+
 <br>
 
 
@@ -85,7 +89,7 @@ Business Intelligence Development Studio (BIDS) wird über SQL Server-Setup inst
   
 Für SQL Server 2012 oder 2014 können Sie entweder **SSDT-BI für Visual Studio 2012** oder **SSDT-BI foder Visual Studio 2013**. Der einzige Unterschied zwischen den beiden besteht in der Visual Studio-Version.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Herunterladen von SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [Herunterladen von SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md)  
 [SQL Tools and Utilities (Tools und Hilfsprogramme für SQL)](../tools/overview-sql-tools.md)

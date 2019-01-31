@@ -1,7 +1,7 @@
 ---
 title: 'Schritt 2: Aktivieren und Konfigurieren von Paketkonfigurationen | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/08/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,30 +11,31 @@ ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e9ce064f0d1e629ea8492dfbee3292d9a580d676
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1ff16205f71cdbcea36718f45d1afbc67012a035
+ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505761"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54880483"
 ---
-# <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>Lektion 5-2: Aktivieren und Konfigurieren von Paketkonfigurationen
-In dieser Aufgabe konvertieren Sie das Projekt in das Paketbereitstellungsmodell und aktivieren Paketkonfigurationen mithilfe des Paketkonfigurations-Assistenten. Sie verwenden diesen Assistenten zum Generieren einer XML-Konfigurationsdatei, die Konfigurationseinstellungen für die **Directory** -Eigenschaft des Foreach-Schleifencontainers enthält. Der Wert der Directory-Eigenschaft wird durch eine neue Variable auf Paketebene bereitgestellt, die Sie zur Laufzeit aktualisieren können. Zusätzlich füllen Sie einen neuen Beispieldatenordner auf, der während des Testens verwendet wird.  
+# <a name="lesson-5-2-enable-and-configure-package-configurations"></a>Lektion 5.2: Aktivieren und Konfigurieren von Paketkonfigurationen
+
+In dieser Aufgabe konvertieren Sie das Projekt in das Paketbereitstellungsmodell und aktivieren Paketkonfigurationen mithilfe des Paketkonfigurations-Assistenten. Sie verwenden diesen Assistenten zum Generieren einer XML-Konfigurationsdatei, die Konfigurationseinstellungen für die **Directory**-Eigenschaft des Foreach-Schleifencontainers enthält. Der Wert der **Directory**-Eigenschaft wird durch eine neue Variable auf Paketebene bereitgestellt, die Sie zur Laufzeit aktualisieren können. Zudem füllen Sie einen neuen Beispieldatenordner, den Sie zum Testen verwenden.  
   
-### <a name="to-create-a-new-package-level-variable-mapped-to-the-directory-property"></a>So erstellen Sie eine neue Variable auf Paketebene, die der Directory-Eigenschaft zugeordnet ist  
+## <a name="create-a-package-level-variable-mapped-to-the-directory-property"></a>Erstellen Sie eine Variable auf Paketebene, die der Directory-Eigenschaft zugeordnet ist.  
   
-1.  Klicken Sie in den Hintergrund der Registerkarte **Ablaufsteuerung** im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer. Dadurch wird der Bereich für die Variable, die Sie erstellen, auf das Paket festgelegt.  
+1.  Wählen Sie den Hintergrund der Registerkarte **Ablaufsteuerung** im [!INCLUDE[ssIS](../includes/ssis-md.md)]-Designer aus. Durch diese Auswahl wird der Bereich für die Variable, die Sie erstellen, auf das Paket festgelegt.  
   
 2.  Wählen Sie im Menü [!INCLUDE[ssIS](../includes/ssis-md.md)] den Befehl **Variablen**aus.  
   
-3.  Klicken Sie im Fenster **Variablen** auf das Symbol „Variable hinzufügen“.  
+3.  Wählen Sie im Fenster **Variablen** das Symbol **Variable hinzufügen** aus.  
   
-4.  Geben Sie im Feld **Name** den Namen **varFolderName**ein.  
+4.  Geben Sie im Feld **Name** den Namen **varFolderName** ein.  
   
     > [!IMPORTANT]  
     > Bei Variablennamen wird nach Groß-/Kleinschreibung unterschieden.  
   
-5.  Überprüfen Sie, ob im Feld **Bereich** der Name des Pakets (Lesson 5) angezeigt wird.  
+5.  Überprüfen Sie, ob im Feld **Bereich** der Name des Pakets **Lesson 5** (Lektion 5) angezeigt wird.  
   
 6.  Legen Sie den Wert des Felds **Datentyp** der `varFolderName` -Variable auf **String**fest.  
   
@@ -42,69 +43,74 @@ In dieser Aufgabe konvertieren Sie das Projekt in das Paketbereitstellungsmodell
   
 8.  Klicken Sie auf der Seite **Sammlung** des **Foreach-Schleifen-Editors** auf **Ausdrücke** und anschließend auf die Schaltfläche mit den Auslassungspunkten **(...)**.  
   
-9. Klicken Sie im **Eigenschaftsausdrucks-Editor**in die Liste **Eigenschaft** , und wählen Sie **Verzeichnis**aus.  
+9. Wählen Sie im **Eigenschaftsausdrucks-Editor** in die Liste **Eigenschaft** die Option **Verzeichnis** aus.  
   
 10. Klicken Sie im Feld **Ausdruck** auf die Schaltfläche mit den Auslassungspunkten **(...)**.  
   
-11. Erweitern Sie im **Ausdrucks-Generator**den Ordner Variablen, und ziehen Sie die Variable **User::varFolderName** in das Feld **Ausdruck** .  
+11. Erweitern Sie im **Ausdrucks-Generator** den Ordner **Variablen und Parameter**, und ziehen Sie die Variable **User::varFolderName** in das Feld **Ausdruck**.  
   
-12. Klicken Sie auf **OK** , um den **Ausdrucks-Generator**zu schließen.  
+12. Klicken Sie auf **OK**, um den **Ausdrucks-Generator** zu beenden.  
   
-13. Klicken Sie auf **OK** , um den **Eigenschaftsausdrucks-Editor**zu schließen.  
+13. Klicken Sie auf **OK**, um den **Eigenschaftsausdrucks-Editor** zu beenden.  
   
-14. Klicken Sie auf **OK** , um den **Foreach-Schleifen-Editor**zu beenden.  
+14. Klicken Sie auf **OK**, um den **Foreach-Schleifen-Editor** zu beenden.  
   
-### <a name="to-enable-package-configurations"></a>So aktivieren Sie Paketkonfigurationen  
+## <a name="enable-package-configurations"></a>Paketkonfigurationen aktivieren  
   
-1.  Klicken Sie im **Menü 'Projekt'** auf **In Paketbereitstellungsmodell konvertieren**.  
+1.  Wählen Sie im **Menü „Projekt“** die Option **In Paketbereitstellungsmodell konvertieren** aus.  
   
-2.  Klicken Sie in der Warnungs-Eingabeaufforderung auf **OK** , nachdem die Konvertierung abgeschlossen ist, und klicken Sie im Dialogfeld **In Paketbereitstellungsmodell konvertieren** auf **OK** .  
+2.  Klicken Sie in der Warnmeldung auf **OK**, nachdem die Konvertierung abgeschlossen ist, und klicken Sie im Dialogfeld **In Paketbereitstellungsmodell konvertieren** auf **OK**.  
   
-3.  Klicken Sie in den Hintergrund der Registerkarte **Ablaufsteuerung** im [!INCLUDE[ssIS](../includes/ssis-md.md)]-Designer.  
+3.  Wählen Sie den Hintergrund der Registerkarte **Ablaufsteuerung** im [!INCLUDE[ssIS](../includes/ssis-md.md)]-Designer aus.  
   
-4.  Klicken Sie im Menü **SSIS** auf **Paketkonfigurationen**.  
+4.  Wählen Sie im Menü **SSIS** die Option **Paketkonfigurationen** aus.  
   
-5.  Wählen Sie im Dialogfeld **Paketkonfigurationsplaner** die Option **Paketkonfigurationen aktivieren**aus, und klicken Sie anschließend auf **Hinzufügen**.  
+5.  Klicken Sie im Dialogfeld **Paketkonfigurationsplaner** auf **Paketkonfigurationen aktivieren** und anschließend auf **Hinzufügen**.  
   
-6.  Klicken Sie auf der Willkommensseite des Paketkonfigurations-Assistenten auf **Weiter**.  
+6.  Klicken Sie auf der Willkommensseite des **Paketkonfigurations-Assistenten** auf **Weiter**.  
   
 7.  Überprüfen Sie auf der Seite **Konfigurationstyp auswählen** , ob **Konfigurationstyp** auf **XML-Konfigurationsdatei**festgelegt ist.  
   
 8.  Klicken Sie auf der Seite **Konfigurationstyp auswählen** auf **Durchsuchen**.  
   
-9. Standardmäßig wird das Dialogfeld **Speicherort der Konfigurationsdatei auswählen** mit dem Projektordner geöffnet.  
+9. Das Dialogfeld **Speicherort der Konfigurationsdatei auswählen** mit dem Projektordner wird geöffnet.  
   
 10. Geben Sie im Dialogfeld **Speicherort der Konfigurationsdatei auswählen** als **Dateinamen** **SSISTutorial**ein, und klicken Sie auf **Speichern**.  
   
-11. Klicken Sie auf der Seite **Konfigurationstyp auswählen** auf **Weiter**.  
+11. Klicken Sie auf der Seite **Konfigurationstyp auswählen** auf **Weiter**.
   
-12. Erweitern Sie **Variablen** auf der Seite **Eigenschaften für den Exportvorgang auswählen** im Bereich **Objekte**, erweitern Sie **varFolderName**und **Eigenschaften**, und wählen Sie anschließend **Wert**aus.  
+12. Erweitern Sie **Variablen** auf der Seite **Eigenschaften für den Exportvorgang auswählen** im Bereich **Objekte**, erweitern Sie **varFolderName** und **Eigenschaften**, und wählen Sie anschließend **Wert**aus.  
   
 13. Klicken Sie auf der Seite **Eigenschaften für den Exportvorgang auswählen** auf **Weiter**.  
   
-14. Geben Sie auf der Seite **Assistenten abschließen** einen Konfigurationsnamen für die Konfiguration ein, beispielsweise **SSIS Tutorial Directory configuration**. Dies ist der Konfigurationsname, der im Dialogfeld **Paketkonfigurationsplaner** angezeigt wird.  
+14. Geben Sie auf der Seite **Assistenten abschließen** einen Konfigurationsnamen für die Konfiguration ein, beispielsweise **SSIS Tutorial Directory configuration**. Der Konfigurationsname wird im Dialogfeld **Paketkonfigurationsplaner** angezeigt.  
   
-15. Klicken Sie auf **Fertig stellen**.  
+15. Wählen Sie **Fertig stellen** aus.  
   
 16. Klicken Sie auf **Schließen**.  
   
-17. Vom Assistenten wird eine Konfigurationsdatei mit dem Namen „SSISTutorial.dtsConfig“ erstellt, die die Konfigurationseinstellungen für den Wert (**Value**) der Variablen enthält, durch die wiederum die **Directory**-Eigenschaft des Enumerators festgelegt wird.  
+17. Vom Assistenten wird eine Konfigurationsdatei mit dem Namen **SSISTutorial.dtsConfig** erstellt, die die Konfigurationseinstellungen für den Wert **Value** der Variablen enthält, durch die wiederum die **Directory**-Eigenschaft des Enumerators festgelegt wird.  
   
     > [!NOTE]  
-    > Eine Konfigurationsdatei enthält typischerweise komplexe Informationen zu den Paketeigenschaften. In diesem Lernprogramm sollte die einzige Konfigurationsinformation allerdings Folgende sein:  
-    > <Configuration ConfiguredType="Property"  
-    > Path="\Package.Variables[User::varFolderName].Properties[Value]" ValueType\="String">  
-    >  <ConfiguredValue>\<\/ConfiguredValue >  
-    > \<\/Configuration>.  
+    > Eine Konfigurationsdatei enthält typischerweise komplexe Informationen zu den Paketeigenschaften. In diesem Tutorial sollte die einzige Konfigurationsinformation allerdings Folgende sein:
+
+    ```
+    <Configuration 
+        ConfiguredType="Property"  
+        Path="\Package.Variables[User::varFolderName].Properties[Value]" 
+        ValueType="String">  
+      <ConfiguredValue></ConfiguredValue>  
+    </Configuration>
+    ```
   
-### <a name="to-create-and-populate-a-new-sample-data-folder"></a>So erstellen und füllen Sie einen neuen Beispieldatenordner  
+## <a name="create-and-populate-a-new-sample-data-folder"></a>Erstellen und Füllen eines neuen Beispieldatenordners  
   
-1.  Erstellen Sie im Windows-Explorer im Stammverzeichnis Ihres Laufwerks (beispielsweise C:\\) einen neuen Ordner mit dem Namen **New Sample Data**.  
+1.  Erstellen Sie im Windows-Explorer im Stammverzeichnis Ihres Laufwerks (beispielsweise **C:\\**) einen Ordner mit dem Namen **Neue Beispieldaten**.  
   
 2.  Suchen Sie die Beispieldateien auf dem Computer, und kopieren Sie drei der Dateien aus dem Ordner.  
   
 3.  Fügen Sie die kopierten Dateien in den Ordner **Neue Beispieldaten** ein.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
-[Schritt 3: Ändern des Konfigurationswerts der Directory-Eigenschaft](../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md)  
+## <a name="go-to-next-task"></a>Weiter zur nächsten Aufgabe  
+[Schritt 3: Ändern des Directory-Eigenschaftskonfigurationswerts](../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
