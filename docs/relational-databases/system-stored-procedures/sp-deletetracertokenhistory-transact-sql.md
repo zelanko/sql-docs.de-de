@@ -1,5 +1,5 @@
 ---
-title: Sp_deletetracertokenhistory (Transact-SQL) | Microsoft-Dokumentation
+title: sp_deletetracertokenhistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 70853b86d60eab82feb1fe12b03fabbd61dafb6e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f8f1a91210cbd263a9225cef54bcf27a81bf2bf4
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211919"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428597"
 ---
 # <a name="spdeletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,24 +42,27 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication=** ] **"***Veröffentlichung***"**  
+ [ **@publication=** ] **'***publication***'**  
  Der Name der Veröffentlichung, in die das Überwachungstoken eingefügt wurde. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@tracer_id=** ] *Tracer_id*  
+ [ **@tracer_id=** ] *tracer_id*  
  Die ID des zu löschenden Überwachungstokens. *Tracer_id* ist **Int**, hat den Standardwert NULL. Wenn **null**, und klicken Sie dann alle Überwachungstoken, die zur Veröffentlichung gehörenden gelöscht werden.  
   
- [  **@cutoff_date=** ] *Cutoff_date*  
+ [ **@cutoff_date=** ] *cutoff_date*  
  Gibt das Umstellungsdatum an, sodass alle vor diesem Datum in die Veröffentlichung eingefügten Überwachungstoken entfernt werden. *Cutoff_date* ist "DateTime", hat den Standardwert NULL.  
   
- [  **@publisher=** ] **"***Verleger***"**  
+ [ **@publisher=** ] **'***publisher***'**  
  Der Name des Verlegers. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]
->  Dieser Parameter sollte nur angegeben werden, für nicht - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herausgeber.  
+>  Dieser Parameter sollte nur angegeben werden, für nicht - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herausgeber oder beim Ausführen der gespeicherten Prozedur vom Verteiler.  
   
- [  **@publisher_db=** ] **"***Publisher_db***"**  
+ [ **@publisher_db=** ] **'***publisher_db***'**  
  Der Name der Veröffentlichungsdatenbank. *Publisher_db* ist **Sysname**, hat den Standardwert NULL. Dieser Parameter wird ignoriert, wenn die gespeicherte Prozedur auf dem Verleger ausgeführt wird.  
   
+> [!NOTE]
+>  Dieser Parameter sollte angegeben werden, wenn die gespeicherte Prozedur vom Verteiler ausgeführt.  
+
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
@@ -77,6 +80,6 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>Siehe auch  
  [Messen der Latenzzeit und Überprüfen der Verbindungen bei Transaktionsreplikationen](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
- [Sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)  
+ [sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)  
   
   
