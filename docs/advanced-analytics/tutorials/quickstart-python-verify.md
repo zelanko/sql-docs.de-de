@@ -8,14 +8,14 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 7a2e9bf58839832ba29b103d2e862a845090a9f1
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: b0ef5d33757d9f8c4e3aed53d3867bfd5b1297b2
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046817"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513760"
 ---
-# <a name="quickstart-verify-python-exists-in-sql-server"></a>Schnellstart: Stellen Sie sicher, dass Python in SQL Server vorhanden ist. 
+# <a name="quickstart-verify-python-exists-in-sql-server"></a>Schnellstart: Überprüfen der Verfügbarkeit von Python in SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server umfasst die Python-sprachunterstützung für Data Science-Analyse in residenten SQL Server-Daten. Ausführung des Skripts wird mithilfe von gespeicherten Prozeduren, die mit einem der folgenden Methoden:
