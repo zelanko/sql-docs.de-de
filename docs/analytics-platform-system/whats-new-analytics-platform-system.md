@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 44ed335524d21cd4931722a20be4eb0da5681603
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 3731f60047e22da7209b6c131ab93b28a20a99c2
+ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044707"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55652589"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Neuerungen in Analytics Platform System, das ein horizontales MPP Datawarehouse
 Finden Sie unter Neues in den neuesten Appliance Updates für Microsoft Analytics Platform System (APS). APS ist es sich um eine horizontale Skalierung auf lokale Anwendung, die MPP SQL Server Parallel Data Warehouse hostet. 
@@ -28,14 +28,14 @@ Datum der Veröffentlichung: Dezember 2018
 APS-CU7.3 verbessert die abfrageleistung mit gängiger Unterausdrücke in SQL-Abfrageoptimierer. Die Verbesserung der verbessert die Abfragen auf zwei Arten. Der erste Vorteil ist die Möglichkeit, erkennen und zu eliminieren, z. B. Ausdrücken können SQL-Kompilierungszeit zu reduzieren. Der zweite, wichtigere-Vorteil ist, dass Verschiebevorgänge für Abfragedaten für diesen redundanten Teilausdrücken daher Ausführungszeit behoben wurden, für Abfragen wird schneller. Ausführliche Erläuterung dieser Funktion finden Sie [hier](common-sub-expression-elimination.md).
 
 ### <a name="aps-informatica-connector-for-informatica-1020-published"></a>APS Informatica-Connector für Informatica 10.2.0 veröffentlicht
-Wir haben eine neue Version der Informatica-Connectors für APS veröffentlicht, die mit Informatica Version 10.2.0 funktioniert. Die neuen Connectors können heruntergeladen werden [Downloadwebsite](https://www.microsoft.com/download/details.aspx?id=57472).
+Wir haben eine neue Version der Informatica-Connectors für Zugriffspunkte, die mit Informatica Version 10.2.0 und 10.2.0 veröffentlicht Hotfix 1. Die neuen Connectors können heruntergeladen werden [Downloadwebsite](https://www.microsoft.com/download/details.aspx?id=57472).
 
 #### <a name="supported-versions"></a>Unterstützte Versionen
 
 | APS-Version | Informatica PowerCenter | Treiber |
 |:---|:---|:---|
 | APS 2016 | 9.6.1 | SQL Server Native Client 11.x |
-| APS 2016 und höher | 10.2.0 | SQL Server Native Client 11.x |
+| APS 2016 und höher | 10.2.0, 10.2.0 Hotfix 1 | SQL Server Native Client 11.x |
 
 <a name="h2-aps-cu7.2"></a>
 ## <a name="aps-cu72"></a>APS CU7.2

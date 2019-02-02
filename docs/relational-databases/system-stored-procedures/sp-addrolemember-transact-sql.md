@@ -1,7 +1,7 @@
 ---
 title: Sp_addrolemember (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/20/2017
+ms.date: 01/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 610c4c6a5692496ff8bcf6bd2650557264f70862
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d7b47670d56ab916a8c2f263f9ddee3dc85c0a6
+ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659648"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55652539"
 ---
 # <a name="spaddrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,18 +38,10 @@ ms.locfileid: "47659648"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
--- Syntax for SQL Server and Azure SQL Database  
-  
-sp_addrolemember [ @rolename = ] 'role',  
-    [ @membername = ] 'security_account'  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-sp_addrolemember 'role', 'security_account'  
-```  
+```
+sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'  
+
+```    
   
 ## <a name="arguments"></a>Argumente  
  [ @rolename=] '*Rolle*"  
@@ -103,7 +95,7 @@ GO
 EXEC sp_addrolemember 'Production', 'Mary5';  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-adding-a-windows-login"></a>C. Hinzufügen eines Windows-Anmeldenamens  
  Im folgenden Beispiel wird die Anmeldung `LoginMary` auf die `AdventureWorks2008R2` Datenbank als Benutzer `UserMary`. Der Benutzer `UserMary` wird dann der `Production`-Rolle hinzugefügt.  
@@ -129,7 +121,7 @@ EXEC sp_addrolemember 'Production', 'UserMary'
 ## <a name="see-also"></a>Siehe auch  
  [Security Stored Procedures &#40;Transact-SQL&#41; (Gespeicherte Sicherheitsprozeduren (Transact-SQL))](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
- [Sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_grantdbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Rollen auf Datenbankebene](../../relational-databases/security/authentication-access/database-level-roles.md)  

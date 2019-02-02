@@ -1,7 +1,7 @@
 ---
 title: Sys. dm_hadr_cluster_members (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/23/2017
+ms.date: 01/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -23,17 +23,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 71493b066385840d065ff51e1f202c547686f774
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e19451a24d35e63fa84a17d409d19b5c9b02ccc3
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857109"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570723"
 ---
 # <a name="sysdmhadrclustermembers-transact-sql"></a>sys.dm_hadr_cluster_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Wenn der WSFC-Knoten, der eine lokale Instanz von hostet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -fähige [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] über ein WSFC-Quorum verfügt, wird eine Zeile für jedes Element, aus denen das Quorum und den Status aller von ihnen besteht. Dazu gehören alle Knoten in dem Cluster (zurückgegeben von der Funktion **Clusterenum** mit dem Typ CLUSTER_ENUM_NODE) sowie die Datenträger- bzw. Dateifreigabenzeugen. Die für ein bestimmtes Element zurückgegebene Zeile enthält Informationen zum Status dieses Elements. Beispielsweise für einen Cluster mit fünf Knoten mit mehrheitsknotenquorum, in dem ein Knoten nicht verfügbar, wenn ist **Sys. dm_hadr_cluster_members** wird abgefragt, von einer Serverinstanz, die die für aktiviert ist [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] , die sich auf einem Knoten mit Quorum befindet **Sys. dm_hadr_cluster_members** zeigt den Status des heruntergefahrenen Knotens als "NODE_DOWN".  
+  Wenn der WSFC-Knoten, der eine lokale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -fähige Instanz von [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] hostet, über ein WSFC-Quorum verfügt, wird eine Zeile für jedes Element, aus denen das Quorum besteht, einschließlich Elementstatus zurückgegeben. Dazu gehören alle Knoten in dem Cluster (zurückgegeben von der Funktion **Clusterenum** mit dem Typ CLUSTER_ENUM_NODE) sowie die Datenträger- bzw. Dateifreigabenzeugen. Die für ein bestimmtes Element zurückgegebene Zeile enthält Informationen zum Status dieses Elements. Beispiel: Für einen Cluster mit fünf Knoten mit Mehrheitsknotenquorum, in dem ein Knoten heruntergefahren ist, stellt **sys.dm_hadr_cluster_members** den Status des heruntergefahrenen Knotens als "NODE_DOWN" dar, wenn [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] sys.dm_hadr_cluster_members **von einer Serverinstanz aus abgefragt wird, die** -fähig ist und sich in einem Knoten mit Quorum befindet.  
   
  Wenn der WSFC-Knoten nicht über ein Quorum verfügt, werden keine Zeilen zurückgegeben.  
   
@@ -49,11 +49,11 @@ ms.locfileid: "47857109"
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**member_name**|**nvarchar(128)**|Der Elementname, der ein Computername, ein Laufwerkbuchstabe oder ein Dateifreigabepfad sein kann.|  
-|**member_type**|**tinyint**|Der Typ des Elements. Folgende Werte sind möglich:<br /><br /> 0 = WSFC-Knoten<br /><br /> 1 = Datenträgerzeuge<br /><br /> 2 = Dateifreigabenzeuge|  
-|**member_type_desc**|**nvarchar(50)**|Beschreibung von **member_type**. Folgende Werte sind möglich:<br /><br /> CLUSTER_NODE<br /><br /> DISK_WITNESS<br /><br /> FILE_SHARE_WITNESS|  
+|**member_type**|**tinyint**|Der Typ des Elements. Folgende Werte sind möglich:<br /><br /> 0 = WSFC-Knoten<br /><br /> 1 = Datenträgerzeuge<br /><br /> 2 = Dateifreigabenzeuge<br /><br /> 3 = Cloudzeugen|  
+|**member_type_desc**|**nvarchar(50)**|Beschreibung von **member_type**. Folgende Werte sind möglich:<br /><br /> CLUSTER_NODE<br /><br /> DISK_WITNESS<br /><br /> FILE_SHARE_WITNESS<br /><br /> CLOUD_WITNESS|  
 |**member_state**|**tinyint**|Der Status des Elements. Folgende Werte sind möglich:<br /><br /> 0 = Offline<br /><br /> 1 = Online|  
 |**member_state_desc**|**nvarchar(60)**|Beschreibung von **member_state**. Folgende Werte sind möglich:<br /><br /> UP<br /><br /> NACH UNTEN|  
-|**number_of_quorum_votes**|**tinyint**|Anzahl von Quorumabstimmungen, die im Besitz dieses Quorumelements sind. Wenn keine Mehrheit vorliegt: Nur Datenträger-Quorumstypen. Dieser Wert wird standardmäßig auf "0" festgelegt. Für andere Quorumstypen wird dieser Wert standardmäßig auf "1" festgelegt.|  
+|**number_of_quorum_votes**|**tinyint**|Anzahl von Quorumabstimmungen, die im Besitz dieses Quorumelements sind. Wenn keine Mehrheit: Nur Datenträger-Quorumstypen ist dieser Wert 0. Für andere Quorumstypen wird dieser Wert standardmäßig auf "1" festgelegt.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  
