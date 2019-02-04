@@ -1,24 +1,35 @@
+items:
 - name: Übersicht
   href: about-log-shipping-sql-server.md
-- name: Konfigurieren des Protokollversands
-  href: configure-log-shipping-sql-server.md
-- name: Hinzufügen einer sekundären Datenbank zu einer Protokollversandkonfiguration
-  href: add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md
-- name: Entfernen einer sekundären Datenbank aus einer Protokollversandkonfiguration
-  href: remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md
-- name: Entfernen des Protokollversands
-  href: remove-log-shipping-sql-server.md
-- name: Anzeigen des Protokollversandberichts (SQL Server Management Studio)
-  href: view-the-log-shipping-report-sql-server-management-studio.md
-- name: Überwachen des Protokollversands (Transact-SQL)
-  href: monitor-log-shipping-transact-sql.md
-- name: Failover zu einer sekundären Datenbank für den Protokollversand
-  href: fail-over-to-a-log-shipping-secondary-sql-server.md
-- name: Ändern der Rollen zwischen primärem und sekundärem Protokollversandserver
-  href: change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md
-- name: Protokollversand und Replikation
-  href: log-shipping-and-replication-sql-server.md
-- name: Log Shipping Tables and Stored Procedures
-  href: log-shipping-tables-and-stored-procedures.md
-- name: Aktualisieren des Protokollversands auf SQL Server 2016 (Transact-SQL)
-  href: upgrading-log-shipping-to-sql-server-2016-transact-sql.md
+- name: Vorgehensweise
+  items:
+  - name: Konfigurieren des Protokollversands
+    href: configure-log-shipping-sql-server.md
+  - name: Hinzufügen einer sekundären Datenbank
+    href: add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md
+  - name: Entfernen einer sekundären Datenbank
+    href: remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md
+  - name: Entfernen des Protokollversands
+    href: remove-log-shipping-sql-server.md
+  - name: Anzeigen des Protokollversandberichts
+    href: view-the-log-shipping-report-sql-server-management-studio.md
+  - name: Überwachen des Protokollversands
+    href: monitor-log-shipping-transact-sql.md
+  - name: Durchführen eines Failover auf eine sekundäre Datenbank
+    href: fail-over-to-a-log-shipping-secondary-sql-server.md
+  - name: Ändern der Rollen je nach Server
+    href: change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md
+- name: Konzepte
+  items:
+  - name: Protokollversand und Replikation
+    href: log-shipping-and-replication-sql-server.md
+  - name: Log Shipping Tables and Stored Procedures
+    href: log-shipping-tables-and-stored-procedures.md
+  - name: Aktualisieren des Protokollversands auf SQL Server 2016
+    href: upgrading-log-shipping-to-sql-server-2016-transact-sql.md
+ms.openlocfilehash: 5530e222895a32760cb60ef406685a6e9736461c
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513930"
