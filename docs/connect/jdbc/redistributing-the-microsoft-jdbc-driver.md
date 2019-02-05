@@ -1,7 +1,7 @@
 ---
 title: Weitervertreiben des Microsoft JDBC-Treibers | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/19/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,18 +11,18 @@ ms.assetid: 625d64d3-6e7c-41c2-912a-38fdf6695922
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8a6847408584283e9796c57633f3b79b7f2c9f2d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c9bd82cc6b6de3fed5acfe9fd496e457f2cef381
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395923"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736861"
 ---
 # <a name="redistributing-the-microsoft-jdbc-driver"></a>Weitervertreiben des Microsoft JDBC-Treibers
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-## <a name="redistribute-the-microsoft-jdbc-41-42-60-62-64-and-70-driver"></a>Verteilen Sie den Microsoft JDBC 4.1, 4.2, 6.0, 6.2, 6.4 und 7.0-Treiber
-Die JDBC-Treiber 4.1, 4.2, 6.0, 6.2, 6.4 und 7.0 können verteilt werden. Überprüfen Sie die Klausel "Verteilbarer Code" in die lizenzvereinbarungen für die 4.1, 4.2, 6.0, 6.2, 6.4 und 7.0 Versionen des Treibers aus.
+## <a name="redistribute-the-microsoft-jdbc-41-42-60-62-64-70-and-72-driver"></a>Verteilen Sie den Microsoft JDBC 4.1, 4.2, 6.0, 6.2, 6.4, 7.0 und 7.2-Treiber
+Die JDBC-Treiber 4.1, 4.2, 6.0, 6.2, 6.4, 7.0 und 7.2 können verteilt werden. Überprüfen Sie die Klausel "Verteilbarer Code" in die lizenzvereinbarungen für die 4.1, 4.2, 6.0, 6.2, 6.4, 7.0 und 7.2 Versionen des Treibers.
     
 ## <a name="register-to-redistribute-the-microsoft-jdbc-40-driver"></a>Registrieren für den Weitervertrieb des Microsoft JDBC-Treibers 4.0  
  Microsoft JDBC-Treiber 4.0 erfordert die Registrierung, damit Sie sie erneut verteilen. Klicken Sie auf folgenden Link, um den Lizenzvertrag für Version 4.0 des Treibers einzusehen.  Sie können sich eine Kopie für Ihre Unterlagen ausdrucken.  
