@@ -15,15 +15,15 @@ ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 517a07d539c8ca4d775f270cf16fdeee1967361c
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 0a17a0708621a01c101cb29786d61ceda192b5b8
+ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380571"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689793"
 ---
 # <a name="resource-governor-classifier-function"></a>Resource Governor Classifier Function
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Beim Klassifizierungsprozess der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressourcenkontrolle werden eingehende Sitzungen auf Grundlage der Eigenschaften der Sitzung einer Arbeitsauslastungsgruppe zugewiesen. Sie können die Klassifizierungslogik anpassen, indem Sie eine benutzerdefinierte Funktion schreiben, die als Klassifizierungsfunktion bezeichnet wird.  
   
 ## <a name="classification"></a>Klassifizierung  

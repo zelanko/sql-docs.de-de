@@ -1,7 +1,7 @@
 ---
 title: Datentyp-IDs und Deskriptoren | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2019
+ms.date: 02/02/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: f0077c9b-8eb2-4b5f-8c4c-7436fdef37ab
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d50d0bdfe31db1ad002c4915d7afa2c2decb79bb
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: ec1d8f0a79f9bcd08fc74bc9d5e7fd52da4a2709
+ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419945"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689893"
 ---
 # <a name="data-type-identifiers-and-descriptors"></a>Datentypbezeichner und Deskriptoren
 Die Datentypen aufgelistet, der [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md) und [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) Abschnitten weiter oben in diesem Anhang werden "präzise"-Datentypen: Jeder Bezeichner verweist auf einen single-Datentyp. Es ist zwischen den Bezeichner und den Datentyp aus. Deskriptoren, jedoch implementieren das Automatisierungsmodell nicht in allen Fällen einen einzelnen Wert verwenden, um die Identifizierung von Datentypen. In einigen Fällen verwenden sie einen Datentyp für die "verbose" und ein Untercode Typ. Für alle Datentypen mit Ausnahme von "DateTime" "und" Interval-Datentypen entspricht der ausführlichen Typbezeichner der präzise Typ-ID, und der Wert in SQL_DESC_DATETIME_INTERVAL_CODE gleich 0 ist. Für Datetime "und" Interval-Datentypen jedoch ein ausführlichen Typ (SQL_DATETIME oder SQL_INTERVAL) befindet sich in SQL_DESC_TYPE, ein präziser in SQL_DESC_CONCISE_TYPE gespeichert ist und ein Untercode für jeden präzise in SQL_DESC_DATETIME_INTERVAL_CODE gespeichert. Eines dieser Felder wirkt sich auf die anderen. Weitere Informationen zu diesen Feldern finden Sie unter den [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) funktionsbeschreibung.  
@@ -40,7 +40,7 @@ Die Datentypen aufgelistet, der [SQL-Datentypen](../../../odbc/reference/appendi
 |SQL_INTERVAL_MONTH|SQL_C_INTERVAL_MONTH|SQL_INTERVAL|SQL_CODE_MONTH|  
 |SQL_INTERVAL_YEAR|SQL_C_INTERVAL_YEAR|SQL_INTERVAL|SQL_CODE_YEAR|  
 |SQL_INTERVAL_YEAR_TO_MONTH|SQL_C_INTERVAL_YEAR_TO_MONTH|SQL_INTERVAL|SQL_CODE_YEAR_TO_MONTH|  
-|S|SQL_INTERVAL_DAY|SQL_C_INTERVAL_DAY|SQL_INTERVAL|SQL_CODE_DAY|  
+|SQL_INTERVAL_DAY|SQL_C_INTERVAL_DAY|SQL_INTERVAL|SQL_CODE_DAY|  
 |SQL_INTERVAL_HOUR|SQL_C_INTERVAL_HOUR|SQL_INTERVAL|SQL_CODE_HOUR|  
 |SQL_INTERVAL_MINUTE|SQL_C_INTERVAL_MINUTE|SQL_INTERVAL|SQL_CODE_MINUTE|  
 |SQL_INTERVAL_SECOND|SQL_C_INTERVAL_SECOND|SQL_INTERVAL|SQL_CODE_SECOND|  

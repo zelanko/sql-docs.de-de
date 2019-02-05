@@ -23,12 +23,12 @@ ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9bfeddd0aad93427a3f65c44364d3749981ccbae
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: a44c62bfa8c85999112887dcacd54bfd176dfaa1
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226527"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428647"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ Bei Erstellung mit der **CACHE**-Option kann ein unerwartetes Herunterfahren (z.
   
 3.  Der berechnete Wert wird an die aufrufende Anweisung zurückgegeben.  
   
- **CACHE-Option, wenn kein Platz im Cache mehr verfügbar ist**  
+**CACHE-Option, wenn kein Platz im Cache mehr verfügbar ist**  
   
  Der folgende Prozess tritt immer dann auf, wenn von einem Sequenzobjekt angefordert wird, den nächsten Wert für die **CACHE**-Option zu generieren, wenn im Cache kein Platz mehr vorhanden ist:  
   
@@ -139,7 +139,7 @@ Bei Erstellung mit der **CACHE**-Option kann ein unerwartetes Herunterfahren (z.
   
 3.  Die Systemtabellenzeile für das Sequenzobjekt wird gesperrt, und der in Schritt 2 berechnete Wert (der letzte Wert) wird in die Systemtabelle geschrieben. Ein cache-exhausted-Xevent wird ausgelöst, um den Benutzer über den neuen beibehaltenen Wert zu benachrichtigen.  
   
- **NO CACHE-Option**  
+**NO CACHE-Option**  
   
  Der folgende Prozess tritt immer dann auf, wenn von einem Sequenzobjekt angefordert wird, den nächsten Wert für die **NO CACHE**-Option zu generieren:  
   
