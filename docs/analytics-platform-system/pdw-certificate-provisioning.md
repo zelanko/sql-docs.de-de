@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4876b890067bd851167bc1e3e3c355c9701569d5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: af6d4df964820ced9f4d79b67859e010a895bc29
+ms.sourcegitcommit: 99847f34e949a5c3c58565d76be3abf5b80f9632
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405095"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55742120"
 ---
 # <a name="pdw-certificate-provisioning---analytics-platform-system"></a>PDW-zertifikatbereitstellung - Analytics Platform System
 Die **PDW-Zertifikatbereitstellung** auf der Seite das Analytics Platform System **Configuration Manager** importiert oder entfernt das Zertifikat, das von der PDW-Region verwendet. Verwenden, ein Zertifikat zum Verschlüsseln von Verbindungen kann Unterstützung der sicheren Kommunikation mit dem Steuerungsknoten über SQL Server-Clients, Tools, mit denen die SQL Server-PDW-Treiber, die [Verwaltungskonsole](monitor-the-appliance-by-using-the-admin-console.md), und lädt Sie Integration Services.  
@@ -41,7 +41,10 @@ Zertifizierungspfad muss den vollständig qualifizierten Domänennamen, der mit 
 Verwenden Sie das Analytics Platform System**Configuration Manager** hinzufügen oder entfernen das vertrauenswürdige Zertifikat. Direkt mithilfe des Konfigurationstools für Microsoft Windows HTTP-Dienste-Zertifikat (**winHttpCertCfg.exe**) zum Verwalten des Zertifikats werden nicht unterstützt.  
   
 ## <a name="import-or-remove-the-certificate"></a>Importieren Sie oder entfernen Sie das Zertifikat  
-Die folgenden Anweisungen zeigen, wie zum Importieren oder entfernen Sie das Zertifikat für die Appliance.  
+Die folgenden Anweisungen zeigen, wie zum Importieren oder entfernen Sie das Zertifikat für die Appliance.
+
+> [!WARNING]
+> Um ein abgelaufenes Zertifikat erneuern müssen Sie das vorhandene Zertifikat entfernen, vor dem Importieren des neuen Projekt.
   
 ### <a name="to-import-the-certificate"></a>Zum Importieren des Zertifikats  
   
@@ -69,7 +72,7 @@ SQL Server PDW aktuellen Verbindung nicht anhand des importierten Zertifikats ve
   
 SQL Server PDW zum Verschlüsseln von aktuellen Verbindungen weiterhin, aber es wird nicht für neue Verbindungen verwenden Sie das Zertifikat entfernte.  
   
-![DWConfig-Anwendung-PDW-Zertifikat](./media/pdw-certificate-provisioning/SQL_Server_PDW_DWConfig_ApplPDWCert.png "SQL_Server_PDW_DWConfig_ApplPDWCert")  
+![DWConfig Appliance PDW Certificate](./media/pdw-certificate-provisioning/SQL_Server_PDW_DWConfig_ApplPDWCert.png "SQL_Server_PDW_DWConfig_ApplPDWCert")  
   
 ## <a name="see-also"></a>Siehe auch  
 [Starten Sie den Konfigurations-Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)  
