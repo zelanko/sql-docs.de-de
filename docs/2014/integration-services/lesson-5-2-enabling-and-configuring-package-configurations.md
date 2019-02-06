@@ -10,12 +10,12 @@ ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2895a40dbff1215f5f6b2b2d873069f41b1d315
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5de90c3be35ca5989498872e4c86f4303d17ffc0
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747962"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760073"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>Schritt 2: Aktivieren und Konfigurieren von Paketkonfigurationen
   In dieser Aufgabe konvertieren Sie das Projekt in das Paketbereitstellungsmodell und aktivieren Paketkonfigurationen mithilfe des Paketkonfigurations-Assistenten. Sie verwenden diesen Assistenten zum Generieren einer XML-Konfigurationsdatei, die Konfigurationseinstellungen für die `Directory`-Eigenschaft des Foreach-Schleifencontainers enthält. Der Wert der Directory-Eigenschaft wird durch eine neue Variable auf Paketebene bereitgestellt, die Sie zur Laufzeit aktualisieren können. Zusätzlich füllen Sie einen neuen Beispieldatenordner auf, der während des Testens verwendet wird.  
@@ -43,7 +43,7 @@ ms.locfileid: "52747962"
   
 9. In der **Eigenschaftsausdrucks-Editor**, klicken Sie in der **Eigenschaft** aus, und wählen Sie `Directory`.  
   
-10. Klicken Sie im Feld **Ausdruck** auf die Schaltfläche mit den Auslassungspunkten **(...)**.  
+10. In der **Ausdruck** klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)** .  
   
 11. Erweitern Sie im **Ausdrucks-Generator**den Ordner Variablen, und ziehen Sie die Variable **User::varFolderName** in das Feld **Ausdruck** .  
   
@@ -87,13 +87,13 @@ ms.locfileid: "52747962"
   
 16. Klicken Sie auf **Schließen**.  
   
-17. Vom Assistenten wird eine Konfigurationsdatei mit dem Namen SSISTutorial.dtsConfig erstellt, die die Konfigurationseinstellungen für den Wert (v`alue`) der Variablen enthält, durch die wiederum die `Directory`-Eigenschaft des Enumerators festgelegt wird.  
+17. Der Assistent erstellt eine Konfigurationsdatei mit dem Namen SSISTutorial.dtsConfig, die enthält Konfigurationseinstellungen für die `value` der Variablen, die wiederum die `Directory` -Eigenschaft des Enumerators.  
   
     > [!NOTE]  
     >  Eine Konfigurationsdatei enthält typischerweise komplexe Informationen zu den Paketeigenschaften. In diesem Lernprogramm sollte die einzige Konfigurationsinformation allerdings Folgende sein:  
     > <Configuration ConfiguredType="Property"  
-    > Path="\package.Variables[User::varFolderName]. Eigenschaften [Wert]"ValueType ="String"\>  
-    >  \<ConfiguredValue >\</ConfiguredValue >  
+    > Path="\Package.Variables[User::varFolderName].Properties[Value]" ValueType="String"\>  
+    >  \<ConfiguredValue>\</ConfiguredValue>  
     > \</ Configuration >.  
   
 ### <a name="to-create-and-populate-a-new-sample-data-folder"></a>So erstellen und füllen Sie einen neuen Beispieldatenordner  

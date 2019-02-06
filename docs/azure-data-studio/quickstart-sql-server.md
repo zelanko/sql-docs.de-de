@@ -11,12 +11,12 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 9e25008836b72ac8860953c5a1f98c13d7540d92
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 4dfe47c44a6bc5e706db3123d167802bfd74dddc
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143450"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759983"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Schnellstart: Verbinden und Abfragen von SQL Server verwenden [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 Dieser Schnellstart veranschaulicht, wie [!INCLUDE[name-sos](../includes/name-sos-short.md)] zum Verbinden mit SQL Server, und klicken Sie dann mithilfe von Transact-SQL (T-SQL)-Anweisungen zum Erstellen der *"tutorialdb"* verwendet [!INCLUDE[name-sos](../includes/name-sos-short.md)] Tutorials.
@@ -69,10 +69,10 @@ Die folgenden Schritte erstellen Sie eine Datenbank, die mit dem Namen **"tutori
       FROM sys.databases
       WHERE name = N'TutorialDB'
    )
-   CREATE DATABASE [TutorialDB]
+      CREATE DATABASE [TutorialDB];
    GO
-
-   ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
+   IF SERVERPROPERTY('ProductVersion') > '12'
+       ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON;
    GO
    ```
 1. Um die Abfrage auszuführen, klicken Sie auf **ausführen** .
@@ -99,15 +99,15 @@ Abfrage-Editor immer noch verbunden ist die *master* -Datenbank, aber wir möcht
    -- Create a new table called 'Customers' in schema 'dbo'
    -- Drop the table if it already exists
    IF OBJECT_ID('dbo.Customers', 'U') IS NOT NULL
-   DROP TABLE dbo.Customers
+      DROP TABLE dbo.Customers;
    GO
    -- Create the table in the specified schema
    CREATE TABLE dbo.Customers
    (
-      CustomerId        INT    NOT NULL   PRIMARY KEY, -- primary key column
-      Name      [NVARCHAR](50)  NOT NULL,
-      Location  [NVARCHAR](50)  NOT NULL,
-      Email     [NVARCHAR](50)  NOT NULL
+       CustomerId  int NOT NULL PRIMARY KEY, -- primary key column
+       Name        nvarchar(50) NOT NULL,
+       Location    nvarchar(50) NOT NULL,
+       Email       nvarchar(50) NOT NULL
    );
    GO
    ```
@@ -121,7 +121,7 @@ Nach Abschluss die Abfrage, die neue **Kunden** Tabelle in der Liste der Tabelle
    ```sql
    -- Insert rows into table 'Customers'
    INSERT INTO dbo.Customers
-      ([CustomerId],[Name],[Location],[Email])
+      ([CustomerId], [Name], [Location], [Email])
    VALUES
       ( 1, N'Orlando', N'Australia', N''),
       ( 2, N'Keith', N'India', N'keith0@adventure-works.com'),
