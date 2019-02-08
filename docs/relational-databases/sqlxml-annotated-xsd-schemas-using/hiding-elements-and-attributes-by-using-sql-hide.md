@@ -45,7 +45,7 @@ ms.locfileid: "54256985"
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. Angeben von sql:hide für ein Attribut  
  Das XSD-Schema in diesem Beispiel besteht aus einem  **\<Person.Contact >** -Element mit **ContactID**, **FirstName**, und **"LastName"** Attribute.  
   
- Die  **\<Person.Contact >** -Element komplexen Typs ist, und wird aus diesem Grund wird der Tabelle mit dem gleichen Namen (standardzuordnung). Alle Attribute des  **\<Person.Contact >** Element sind vom einfachen Typ und Spalten mit den gleichen Namen in der Person.Contacttable in der AdventureWorks-Datenbank. Im Schema die **SQL: hide** -Anmerkung für das **ContactID** Attribut. Wenn eine XPath-Abfrage mit diesem Schema wird die **ContactID** in das XML-Dokument nicht zurückgegeben wird.  
+ Die **\<Person.Contact >** -Element komplexen Typs ist, und wird aus diesem Grund wird der Tabelle mit dem gleichen Namen (standardzuordnung). Alle Attribute des  **\<Person.Contact >** Element sind vom einfachen Typ und Spalten mit den gleichen Namen in der Person.Contacttable in der AdventureWorks-Datenbank. Im Schema die **SQL: hide** -Anmerkung für das **ContactID** Attribut. Wenn eine XPath-Abfrage mit diesem Schema wird die **ContactID** in das XML-Dokument nicht zurückgegeben wird.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
