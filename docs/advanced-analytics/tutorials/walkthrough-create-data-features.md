@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 40bd2140ba28307cca30befb7cdad8b180cc856a
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 527f88ed14adc0140cbca179177e85670f72cafd
+ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645139"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55890011"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>Erstellen von Datenfunktionen mit R und SQL Server (Exemplarische Vorgehensweise)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -130,7 +130,7 @@ Wechseln Sie zur [SQL Server Management Studio](https://docs.microsoft.com/sql/s
 
 1. Verwenden Sie eine SQL-Funktion, mit dem Namen *FnCalculateDistance*. Die Funktion sollte bereits in der Datenbank NYCTaxi_Sample vorhanden sein. Überprüfen Sie im Objekt-Explorer, ob die Funktion vorhanden ist, indem Sie diesen Pfad navigieren: Datenbanken > NYCTaxi_Sample > Programmierbarkeit > Funktionen > Skalarwertfunktionen > dbo.fnCalculateDistance.
 
-  Wenn die Funktion nicht vorhanden ist, mit der SQL Server Management Studio die Funktion in der Datenbank NYCTaxi_Sample generiert.
+    Wenn die Funktion nicht vorhanden ist, mit der SQL Server Management Studio die Funktion in der Datenbank NYCTaxi_Sample generiert.
 
     ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)
