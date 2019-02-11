@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 12/03/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -28,12 +28,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c29c19a67e3cbbfa4131e25151e33c67fe667169
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 8448d5fd564ff001d847e7af981bc34734cef727
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327901"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421407"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -50,7 +50,7 @@ Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meiste
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |**_\* SQL Server \*_**|[SQL-Datenbank<br />logischer Server](create-login-transact-sql.md?view=azuresqldb-current)|[SQL-Datenbank<br />Verwaltete Instanz](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |**_\* SQL Server \*_**|[SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-login-transact-sql.md?view=azuresqldb-current)|[SQL-Datenbank<br />verwaltete Instanz](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -262,11 +262,11 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|**_\* SQL-Datenbank<br />logischer Server \*_**|[SQL-Datenbank<br />Verwaltete Instanz](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|**_\* SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken\*_**|[SQL-Datenbank<br />verwaltete Instanz](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-database-logical-server"></a>Logischer Azure SQL-Datenbank-Server
+## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL-Datenbank Singleton/Pool für elastische Datenbanken
   
 ## <a name="syntax"></a>Syntax 
   
@@ -282,7 +282,7 @@ CREATE LOGIN login_name
 
 ## <a name="arguments"></a>Argumente  
 *login_name*  
-Gibt den Anmeldenamen an, der erstellt wird. Azure SQL-Datenbank (logischer Server) unterstützt nur SQL-Anmeldenamen. 
+Gibt den Anmeldenamen an, der erstellt wird. Azure SQL-Datenbank Singleton/Pool für elastische Datenbanken unterstützt nur SQL-Anmeldungen. 
 
 PASSWORD **='** Kennwort**'*  
 Gibt das Kennwort für den SQL-Anmeldenamen an, der erstellt wird. Verwenden Sie ein sicheres Kennwort. Weitere Informationen finden Sie unter [Sichere Kennwörter](../../relational-databases/security/strong-passwords.md) und [Kennwortrichtlinie](../../relational-databases/security/password-policy.md). Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] werden gespeicherte Kennwortinformationen mithilfe der SHA-512-Komponente des mit Salt verschlüsselten Kennworts berechnet. 
@@ -320,7 +320,7 @@ Neue Anmeldenamen können nur mit den Anmeldenamen des Serverebenenprinzipals (i
 
 ## <a name="logins"></a>Anmeldungen
 - Erfordert eine **ALTER ANY LOGIN**-Berechtigung auf dem Server oder eine Mitgliedschaft bei der festen Serverrolle**securityadmin**. Dieser Befehl kann nur auf dem Azure AD-Konto (Azure Active Directory) mit der **ALTER ANY LOGIN**-Berechtigung auf dem Server oder mit einer Mitgliedschaft bei der Serverrolle „securityadmin“ ausgeführt werden
-- Muss in dem gleichen Verzeichnis, das auch für den logischen Azure SQL-Server verwendet wird, ein Azure AD-Mitglied sein
+- Muss in dem gleichen Verzeichnis, das auch für den Azure SQL-Datenbankserver verwendet wird, ein Azure AD-Mitglied sein
   
 ## <a name="after-creating-a-login"></a>Nach dem Erstellen eines Anmeldenamens  
 Nach dem Erstellen eines Anmeldenamens kann mit diesem Namen eine Verbindung mit der SQL-Datenbank hergestellt werden. Er verfügt jedoch nur über die der Rolle **public** erteilten Berechtigungen. Ziehen Sie die Ausführung einiger der folgenden Aktivitäten in Betracht. 
@@ -379,16 +379,16 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL-Datenbank<br />logischer Server](create-login-transact-sql.md?view=azuresqldb-current)|**_\* SQL-Datenbank<br />Verwaltete Instanz \*_**|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-login-transact-sql.md?view=azuresqldb-current)|**_\* SQL-Datenbank<br />verwaltete Instanz \*_**|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Verwaltete Azure SQL-Datenbank-Instanz.
+## <a name="azure-sql-database-managed-instance"></a>Verwaltete Azure SQL-Datenbank-Instanz
 
 ## <a name="syntax"></a>Syntax 
   
 ```sql
--- Syntax for Azure SQL Database Managed Instance
+-- Syntax for Azure SQL Database managed instance
 CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
   
 <option_list> ::=
@@ -399,7 +399,7 @@ CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
 ```  
 
 > [!IMPORTANT]
-> Azure AD-Anmeldeinformationen für verwaltete SQL-Datenbank-Instanzen befinden sich in der **Public Preview**. Dies wurde mit der Syntax **FROM EXTERNAL PROVIDER** eingeführt.
+> Azure AD-Anmeldungen für verwaltete SQL-Datenbankinstanzen befinden sich in der **Public Preview**. Dies wurde mit der Syntax **FROM EXTERNAL PROVIDER** eingeführt.
 
 ## <a name="arguments"></a>Argumente
 *login_name*  
@@ -555,7 +555,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL-Datenbank<br />logischer Server](create-login-transact-sql.md?view=azuresqldb-current)|[SQL-Datenbank<br />Verwaltete Instanz](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-login-transact-sql.md?view=azuresqldb-current)|[SQL-Datenbank<br />verwaltete Instanz](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -668,7 +668,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL-Datenbank<br />logischer Server](create-login-transact-sql.md?view=azuresqldb-current)|[SQL-Datenbank<br />Verwaltete Instanz](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_**
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-login-transact-sql.md?view=azuresqldb-current)|[SQL-Datenbank<br />verwaltete Instanz](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_**
 
 &nbsp;
 

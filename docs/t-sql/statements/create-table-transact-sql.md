@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cbf03f09ce4d72a738fe018bd0ca0cd67af3d107
-ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
+ms.openlocfilehash: 81d4a9bf01c4c9a958d8ae2b7292a1130250bbf4
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54838147"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421397"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -926,7 +926,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  MEMORY_OPTIMIZED  
    
-**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Die verwaltete Azure SQL-Datenbank-Instanz unterstützt keine speicheroptimierten Tabellen. 
+**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Die verwaltete Azure SQL-Datenbank-Instanz unterstützt keine arbeitsspeicheroptimierten Tabellen. 
   
  Der Wert ON gibt an, dass die Tabelle speicheroptimiert ist. Speicheroptimierte Tabellen sind Teil des Features „In-Memory OLTP“, das verwendet wird, um die Leistung der Transaktionsverarbeitung zu optimieren. Erste Schritte mit In-Memory-OLTP finden Sie unter [Schnellstart 1: In-Memory-OLTP-Technologien für höhere Transact-SQL-Leistung](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). Ausführliche Informationen zu speicheroptimierten Tabellen finden Sie unter [Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   

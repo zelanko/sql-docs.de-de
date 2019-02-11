@@ -28,19 +28,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a24090fdcb1bd8b8576f545dfef11764f22a192f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8c027df69ca11c88c82195c2d621ecd33f470d6
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595688"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421147"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   Fügt der Routingtabelle der aktuellen Datenbank eine neue Route hinzu. Bei ausgehenden Nachrichten bestimmt [!INCLUDE[ssSB](../../includes/sssb-md.md)] das Routing durch eine Prüfung der Routingtabelle in der lokalen Datenbank. Bei Nachrichten in Konversationen, die aus einer anderen Instanz stammen, sowie bei Nachrichten, die weitergeleitet werden sollen, prüft [!INCLUDE[ssSB](../../includes/sssb-md.md)] die Routen in **msdb**.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -225,7 +225,7 @@ CREATE ROUTE TransportRoute
     WITH ADDRESS = 'TRANSPORT' ;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [ALTER ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-route-transact-sql.md)   
  [DROP ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-route-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/22/2019
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d7bb8abac5765265e93282ae88266ece24d8a8a5
-ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
+ms.openlocfilehash: d8d0a557640795462f4da21345f07df9db96be97
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54838120"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421317"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -216,7 +216,7 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
 
 Gestattet das Festlegen der Funktion für automatisches Löschen von [globalen temporären Tabellen](create-table-transact-sql.md). Der Standardwert ist ON, was bedeutet, dass die globalen temporären Tabellen automatisch gelöscht werden, wenn sie von keiner Sitzung verwendet werden. Wenn sie auf OFF festgelegt ist, müssen globale temporäre Tabellen explizit mithilfe einer DROP TABLE-Anweisung gelöscht werden, oder sie werden beim Serverneustart automatisch gelöscht.
 
-- Auf dem logischen [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Server kann diese Option in den einzelnen Benutzerdatenbanken des logischen Servers festgelegt werden.
+- Für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Singletons und Pools für elastische Datenbanken kann diese Option in den einzelnen Benutzerdatenbanken des SQL-Datenbankservers festgelegt werden.
 - In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und der verwalteten [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Instanz wird diese Option in der `TempDB` festgelegt, und die Einstellungen der einzelnen Benutzerdatenbanken haben keine Auswirkungen.
 
 DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }

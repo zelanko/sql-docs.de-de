@@ -13,12 +13,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7dae0b33b2b3a9100aada7505e61f3e75f8bf66c
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 48044f9c24942079f66ee4675c1aa01bb6549532
+ms.sourcegitcommit: 31c8f9eab00914e056e9219093dbed1b0b4542a6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980480"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55484859"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -289,7 +289,7 @@ Informationen zu Unter- und Obergrenzen finden Sie unter [Kapazitätsgrenzen von
 ### <a name="determining-the-number-of-table-partitions"></a>Bestimmen der Anzahl der Tabellenpartitionen
 Jede benutzerdefinierte Tabelle ist in mehrere kleinere Tabellen aufgeteilt, die in getrennten entfernten Speicherorten, so genannten Verteilungen, gespeichert sind. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] verwendet 60 Verteilungen. Bei [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] hängt die Anzahl der Verteilungen von der Anzahl der Computeknoten ab.
  
-Jede Verteilung enthält alle Tabellenpartitionen. Bei 60 Verteilungen und vier Tabellenpartitionen sind beispielsweise 320 Partitionen vorhanden. Wenn es sich bei der Tabelle um einen gruppierten Columnstore-Index handelt, gibt es einen Columnstore-Index pro Partition und somit 320 Columnstore-Indizes.
+Jede Verteilung enthält alle Tabellenpartitionen. Bei 60 Verteilungen und vier Tabellenpartitionen, zuzüglich einer leeren Partition, sind beispielsweise 300 Partitionen (5 x 60 = 300) vorhanden. Wenn es sich bei der Tabelle um einen gruppierten columnstore-Index handelt, gibt es einen columnstore-Index pro Partition und somit 300 columnstore-Indizes.
 
 Es wird empfohlen, weniger Tabellenpartitionen zu verwenden, um sicherzustellen, dass jeder Columnstore-Index genügend Zeilen aufweist, um von den Vorteilen der Columnstore-Indizes zu profitieren. Weitere Informationen finden Sie unter [Partitionieren von Tabellen in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/) und [Indizieren von Tabellen in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/).  
 

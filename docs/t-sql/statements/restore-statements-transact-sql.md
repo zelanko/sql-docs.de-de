@@ -41,12 +41,12 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 72d978967591fbffa8d25b3954c78256149f7592
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: a3257e1c92460f29eef8a9f82749746d18ee8a28
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55045093"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421417"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE-Anweisungen (Transact-SQL)
 Stellt SQL-Datenbank-Sicherungen wieder her, die mit dem BACKUP-Befehl erstellt wurden. 
@@ -64,7 +64,7 @@ Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meiste
 > [!div class="mx-tdCol2BreakAll"]
 > ||||
 > |-|-|-|
-> |**_\* SQL Server \*_**|[SQL-Datenbank<br />Verwaltete Instanz](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Parallel<br />Data Warehouse](restore-statements-transact-sql.md?view=aps-pdw-2016)
+> |**_\* SQL Server \*_**|[SQL-Datenbank<br />verwaltete Instanz](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Parallel<br />Data Warehouse](restore-statements-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -708,11 +708,11 @@ RESTORE DATABASE Sales
 > [!div class="mx-tdCol2BreakAll"]
 > ||||
 > |-|-|-|
-> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|**_\* SQL-Datenbank<br />Verwaltete Instanz \*_**|[Parallel<br />Data Warehouse](restore-statements-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|**_\* SQL-Datenbank<br />verwaltete Instanz \*_**|[Parallel<br />Data Warehouse](restore-statements-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Verwaltete Azure SQL-Datenbank-Instanz.
+## <a name="azure-sql-database-managed-instance"></a>Verwaltete Azure SQL-Datenbank-Instanz
 
 Über diesen Befehl können Sie eine komplette Datenbank aus einer vollständigen Datenbanksicherung in einem Azure Blob Storage-Konto wiederherstellen (vollständige Wiederherstellung).
 
@@ -766,7 +766,7 @@ Die folgenden Datenbankoptionen werden festgelegt oder überschrieben und könne
 - Eine arbeitsspeicheroptimierte Dateigruppe wird hinzugefügt und hat XTP aufgerufen, wenn sie nicht in der BAK-Quelldatei war. Alle vorhandenen arbeitsspeicheroptimierten Dateigruppen werden in XTP umbenannt.
 - Die Optionen SINGLE_USER und RESTRICTED_USER werden in MULTI_USER konvertiert.
 
-## <a name="limitations---sql-database-managed-instance"></a>Einschränkungen bei verwalteten SQL-Datenbank-Instanzen
+## <a name="limitations---sql-database-managed-instance"></a>Einschränkungen bei verwalteten SQL-Datenbankinstanzen
 Diese Einschränkungen gelten:
 
 - BAK-Dateien, die mehrere Sicherungssätze enthalten, können nicht wiederhergestellt werden.
@@ -840,7 +840,7 @@ WHERE r.command = 'RESTORE DATABASE'
 > [!div class="mx-tdCol2BreakAll"]
 > ||||
 > |-|-|-|
-> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|[SQL-Datenbank<br />Verwaltete Instanz](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|**_\* Parallel<br />Data Warehouse \*_**
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|[SQL-Datenbank<br />verwaltete Instanz](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|**_\* Parallel<br />Data Warehouse \*_**
 
 &nbsp;
 

@@ -1,7 +1,7 @@
 ---
 title: Abfragehinweise (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 10/22/2018
+ms.date: 02/04/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a4eb946a9b851342b1f997f2b491b0b0708138c
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+ms.openlocfilehash: 96f34d4ececcb05f91e5fc6329a598907269501e
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306277"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736966"
 ---
 # <a name="hints-transact-sql---query"></a>Hinweise (Transact-SQL) – Abfrage
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -264,7 +264,9 @@ ms.locfileid: "53306277"
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'       
    Deaktiviert Adaptive Joins im Batchmodus. Weitere Informationen finden Sie unter [Adaptive Joins im Batchmodus](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins).
 *  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'       
-   Deaktiviert das Feedback zur Speicherzuweisung im Batchmodus. Weitere Informationen finden Sie unter [Feedback zur Speicherzuweisung im Batchmodus](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback).
+   Deaktiviert das Feedback zur Speicherzuweisung im Batchmodus. Weitere Informationen finden Sie unter [Feedback zur Speicherzuweisung im Batchmodus](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback).   
+* 'DISABLE_DEFERRED_COMPILATION_TV'    
+  Deaktiviert die verzögerte Kompilierung von Tabellenvariablen. Weitere Informationen finden Sie unter [Verzögerte Kompilierung von Tabellenvariablen](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation).
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'      
    Deaktiviert die verschachtelte Ausführung mit Tabellenwertfunktionen mit mehreren Anweisungen. Weitere Informationen finden Sie unter [Verschachtelte Ausführung mit Tabellenwertfunktionen mit mehreren Anweisungen](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
 *  'DISABLE_OPTIMIZED_NESTED_LOOP'      
@@ -292,11 +294,11 @@ ms.locfileid: "53306277"
 *  'QUERY_PLAN_PROFILE'      
  Aktiviert einfache Profilerstellung für die Abfrage. Wenn eine Abfrage, die diesen neuen Hinweis enthält, abgeschlossen wird, wird ein neues erweitertes Ereignis, query_plan_profile, ausgelöst. Dieses erweiterte Ereignis macht Ausführungsstatistiken und ein tatsächliches Ausführungsplan-XML verfügbar, das dem erweiterten Ereignis query_post_execution_showplan ähnelt, aber nur für Abfragen, die den neuen Hinweis enthalten. **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11). 
 
-  > [!NOTE]
-  > Wenn Sie das Sammeln des erweiterten Ereignisses query_post_execution_showplan aktivieren, wird dadurch jeder Abfrage, die auf dem Server ausgeführt wird, eine Standard-Profilerstellungsinfrastruktur hinzugefügt, was die Gesamtleistung des Servers beeinträchtigen kann.      
-  > Wenn Sie das Sammeln des erweiterten Ereignisses *query_thread_profile* stattdessen für die Verwendung der einfachen Profilerstellungsinfrastruktur aktivieren, führt dies zu einem wesentlich geringeren Verarbeitungsaufwand, wirkt sich aber immer noch auf die Gesamtleistung des Servers aus.       
-  > Wenn Sie das erweiterte Ereignis „query_plan_profile“ aktivieren, aktiviert dies die einfache Profilerstellungsinfrastruktur nur für eine Abfrage, die mit dem QUERY_PLAN_PROFILE ausgeführt wurde, und wirkt sich deshalb nicht auf andere Workloads auf dem Server aus. Verwenden Sie diesen Hinweis, um ein Profil für eine bestimmte Abfrage zu erstellen, ohne dabei andere Teile der Serverworkload zu beeinträchtigen.
-  > Weitere Informationen zur einfachen Profilerstellung finden Sie unter [Profilerstellungsinfrastruktur für Abfragen](../../relational-databases/performance/query-profiling-infrastructure.md).
+   > [!NOTE]
+   > Wenn Sie das Sammeln des erweiterten Ereignisses query_post_execution_showplan aktivieren, wird dadurch jeder Abfrage, die auf dem Server ausgeführt wird, eine Standard-Profilerstellungsinfrastruktur hinzugefügt, was die Gesamtleistung des Servers beeinträchtigen kann.      
+   > Wenn Sie das Sammeln des erweiterten Ereignisses *query_thread_profile* stattdessen für die Verwendung der einfachen Profilerstellungsinfrastruktur aktivieren, führt dies zu einem wesentlich geringeren Verarbeitungsaufwand, wirkt sich aber immer noch auf die Gesamtleistung des Servers aus.       
+   > Wenn Sie das erweiterte Ereignis „query_plan_profile“ aktivieren, aktiviert dies die einfache Profilerstellungsinfrastruktur nur für eine Abfrage, die mit dem QUERY_PLAN_PROFILE ausgeführt wurde, und wirkt sich deshalb nicht auf andere Workloads auf dem Server aus. Verwenden Sie diesen Hinweis, um ein Profil für eine bestimmte Abfrage zu erstellen, ohne dabei andere Teile der Serverworkload zu beeinträchtigen.
+   > Weitere Informationen zur einfachen Profilerstellung finden Sie unter [Profilerstellungsinfrastruktur für Abfragen](../../relational-databases/performance/query-profiling-infrastructure.md).
  
 Die Liste aller unterstützten USE HINT-Namen kann über die dynamische Verwaltungsansicht [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) abgefragt werden.    
 

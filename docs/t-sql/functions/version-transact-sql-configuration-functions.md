@@ -22,19 +22,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c72da307abd6de30cfb188128eeea52f64b074e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f5b04781959218d9044f1bf032156ce6ec65946
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841158"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55420958"
 ---
 # <a name="x40x40version---transact-sql-configuration-functions"></a>&#x40;&#x40;Version: Transact SQL-Konfigurationsfunktionen
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt System- und Buildinformationen für die aktuelle Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -77,7 +77,7 @@ ms.locfileid: "47841158"
 > [!NOTE]  
 > Derzeit ist ein Problem bekannt, durch das @@VERSION die falsche Produktversion für Azure SQL-Datenbank meldet. Die von Azure SQL-Datenbank ausgeführte Version der SQL Server-Datenbank-Engine ist im Gegensatz zur lokalen Version von SQL Server immer aktuell und enthält die neuesten Sicherheitspatches. Die Patchstufe entspricht also der lokalen Version von SQL Server oder ist aktueller als diese. Außerdem sind die neuesten SQL Server-Features in Azure SQL-Datenbank verfügbar.
 >
-> Um die Edition der Engine programmgesteuert zu ermitteln, können Sie die Anweisung SELECT SERVERPROPERTY('EngineEdition') verwenden. Diese Abfrage gibt für eigenständige Datenbanken „5“ und für verwaltete Instanzen in Azure SQL-Datenbank „8“ zurück. 
+> Um die Edition der Engine programmgesteuert zu ermitteln, können Sie die Anweisung SELECT SERVERPROPERTY('EngineEdition') verwenden. Diese Abfrage gibt für Singletons/Pools für elastische Datenbanken „5“ und für verwaltete Instanzen in Azure SQL-Datenbank „8“ zurück. 
 >
 > Sobald dieses Problem behoben ist, wird die Dokumentation aktualisiert.
 
@@ -99,7 +99,7 @@ SELECT @@VERSION AS 'SQL Server Version';
 SELECT @@VERSION AS 'SQL Server PDW Version';  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)  
   
   

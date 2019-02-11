@@ -2,7 +2,7 @@
 title: Voraussetzungen, Einschränkungen und Empfehlungen für Verfügbarkeitsgruppen
 description: Beschreibung der Voraussetzungen, Einschränkungen und Empfehlungen zur Bereitstellung von Always On-Verfügbarkeitsgruppen.
 ms.custom: seodec18
-ms.date: 06/05/2018
+ms.date: 01/31/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -20,12 +20,12 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e4aa84ac344bc9ca6d698f1ae3aa26f2a11f8072
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 28d0e3c791fc838a292d1846613af34fdabd32a4
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202989"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570803"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -160,7 +160,7 @@ ms.locfileid: "53202989"
     -   Eine SQL Server-Instanz verwendet bis zu 100 Threads für parallele Wiederholung für sekundäre Replikate. Für jede Datenbank wird bis zur Hälfte der Gesamtzahl von CPU-Kernen, jedoch nicht mehr als 16 Threads pro Datenbank verwendet. Überschreitet die Gesamtzahl von erforderlichen Threads für eine einzelne Instanz den Wert 100, verwendet SQL Server einen einzelnes Wiederholungsthread für jede verbleibende Datenbank. Serielle Wiederholungsthreads werden nach ca. 15 Sekunden Inaktivität freigegeben. 
     
     > [!NOTE]
-    > Datenbanken werden anhand ihrer Datenbank-ID in aufsteigender Reihenfolge für das Singlethreading ausgewählt. Daher sollte die Erstellungsreihenfolge von Datenbanken bei SQL Server-Instanzen berücksichtigt werden, die mehr Verfügbarkeitsgruppen hosten, als Workerthreads verfügbar sind. Ein Beispiel: In einem System mit 32 oder mehr CPU-Kernen befinden sich alle Datenbanken ab der 7. Datenbank, die der Verfügbarkeitsgruppe beigetreten ist, im seriellen Wiederholungsmodus, unabhängig von der tatsächlichen Wiederholungsworkload für jede Datenbank. Datenbanken, die eine parallele Wiederholung erfordern, sollten der Verfügbarkeitsgruppe zuerst hinzugefügt werden.    
+    > Datenbanken werden anhand ihrer Datenbank-ID in aufsteigender Reihenfolge für das Singlethreading ausgewählt. Daher sollte die Erstellungsreihenfolge von Datenbanken bei SQL Server-Instanzen berücksichtigt werden, die mehr Verfügbarkeitsgruppen hosten, als Workerthreads verfügbar sind. Z. B. verwenden auf einem System mit mindestens 32 CPU-Kernen die ersten sechs Datenbanken (sortiert nach Datenbank-ID) in einer Verfügbarkeitsgruppe oder -gruppen den parallelen Wiederholungsmodus, und alle nachfolgenden Datenbanken verwenden den Einzelwiederholungsmodus.
   
 -   Darüber hinaus verwenden Verfügbarkeitsgruppen nicht freigegebene Threads wie folgt:  
   

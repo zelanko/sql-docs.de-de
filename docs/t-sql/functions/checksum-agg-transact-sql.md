@@ -20,19 +20,19 @@ ms.assetid: cdede70c-4eb5-4c92-98ab-b07787ab7222
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4312bbe98c024ce22eb775bfef03cdb1cb876e01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f74f05dcb91885bf6f95571242699672f10fb871
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838488"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513810"
 ---
 # <a name="checksumagg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Diese Funktion gibt die Prüfsumme der Werte in einer Gruppe zurück. `CHECKSUM_AGG` ignoriert NULL-Werte. Die [OVER-Klausel](../../t-sql/queries/select-over-clause-transact-sql.md) kann `CHECKSUM_AGG` folgen.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,7 +56,7 @@ Gibt die Prüfsumme aller *Ausdruckswerte* als **int** zurück.
 ## <a name="remarks"></a>Remarks  
 `CHECKSUM_AGG` kann Änderungen in einer Tabelle erkennen.
   
-Das `CHECKSUM_AGG`-Ergebnis hängt nicht von der Reihenfolge der Zeilen in der Tabelle ab. Zudem lassen `CHECKSUM_AGG`-Funktionen das Verwenden des Schlüsselworts DISTINCT und der Klausel GROUP BY zu.
+Das `CHECKSUM_AGG`-Ergebnis hängt nicht von der Reihenfolge der Zeilen in der Tabelle ab. Zudem lassen `CHECKSUM_AGG`-Funktionen das Verwenden des Schlüsselworts `DISTINCT` und der Klausel `GROUP BY` zu.
   
 Wenn der Listenwert eines Ausdrucks geändert wird, ist es wahrscheinlich, dass sich auch die Werteliste der Listenprüfsumme verändert. Es besteht jedoch auch die Möglichkeit, dass sich die berechnete Prüfsumme nicht ändert.
   
@@ -67,6 +67,7 @@ In den folgenden Beispielen wird `CHECKSUM_AGG` verwendet, um Änderungen in der
   
 ```sql
 --Get the checksum value before the column value is changed.  
+
 SELECT CHECKSUM_AGG(CAST(Quantity AS int))  
 FROM Production.ProductInventory;  
 GO  
@@ -74,7 +75,7 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 ------------------------  
 262  
 ```  
@@ -84,6 +85,7 @@ UPDATE Production.ProductInventory
 SET Quantity=125  
 WHERE Quantity=100;  
 GO  
+
 --Get the checksum of the modified column.  
 SELECT CHECKSUM_AGG(CAST(Quantity AS int))  
 FROM Production.ProductInventory;  
@@ -91,13 +93,14 @@ FROM Production.ProductInventory;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 ------------------------  
 287  
 ```  
   
 ## <a name="see-also"></a>Siehe auch
 [CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)  
+[HASHBYTES &#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
+[BINARY_CHECKSUM  &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)
 [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
-  
   

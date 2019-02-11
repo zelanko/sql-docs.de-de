@@ -28,19 +28,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c00302049a1831a7126484e953fc2ce384724bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ffe255903a397fd3bc1f36dd57cf38f17eac00ba
+ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841488"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55652549"
 ---
 # <a name="set-arithabort-transact-sql"></a>SET ARITHABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Beendet eine Abfrage, wenn während der Abfrage ein Überlauffehler oder ein Fehler aufgrund einer Division durch Null auftritt.  
+Beendet eine Abfrage, wenn während der Abfrage ein Überlauffehler oder ein Fehler aufgrund einer Division durch Null auftritt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -57,33 +57,33 @@ SET ARITHABORT ON
 ```
   
 ## <a name="remarks"></a>Remarks  
- Sie sollten ARITHABORT in Anmeldesitzungen immer auf ON festlegen. Wenn ARITHABORT auf OFF festgelegt wird, kann dies negative Auswirkungen auf die Abfrageoptimierung haben und zu Leistungsproblemen führen.  
+Legen Sie ARITHABORT in Ihren Anmeldesitzungen immer auf ON fest. Wenn ARITHABORT auf OFF festgelegt wird, kann dies negative Auswirkungen auf die Abfrageoptimierung haben und zu Leistungsproblemen führen.  
   
 > [!WARNING]  
->  Der Standardwert der ARITHABORT-Einstellung für [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ist ON. Wenn ARITHABORT für Clientanwendungen auf OFF festgelegt ist, können diese unterschiedliche Abfragepläne empfangen, was die Problembehandlung von Abfragen mit schlechter Leistung erschwert. Das heißt, dieselbe Abfrage kann in Management Studio schnell, in der Anwendung jedoch langsam ausgeführt werden. Gleichen Sie die ARITHABORT-Einstellung des Clients bei der Problembehandlung von Abfragen mit [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] immer ab.  
+>  Der Standardwert der ARITHABORT-Einstellung für [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ist ON. Wenn ARITHABORT für Clientanwendungen auf OFF festgelegt ist, können diese unterschiedliche Abfragepläne empfangen, was die Problembehandlung von Abfragen mit schlechter Leistung erschwert. Das heißt, dieselbe Abfrage könnte in Management Studio schnell, in der Anwendung jedoch langsam ausgeführt werden. Gleichen Sie die ARITHABORT-Einstellung des Clients bei der Problembehandlung von Abfragen mit [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] immer ab.  
   
- Wenn SET ARITHABORT auf ON und SET ANSI WARNINGS auf ON festgelegt ist, bewirken diese Fehlerbedingungen, dass die Abfrage beendet wird.  
+Wenn SET ARITHABORT und SET ANSI WARNINGS auf ON festgelegt sind, bewirken diese Fehlerbedingungen, dass die Abfrage beendet wird.  
   
- Wenn SET ARITHABORT auf ON und SET ANSI WARNINGS auf OFF festgelegt ist, bewirken diese Fehlerbedingungen, dass der Batch beendet wird. Treten die Fehler in einer Transaktion auf, so wird für die Transaktion ein Rollback durchgeführt. Wenn SET ARITHABORT auf OFF festgelegt ist und einer dieser Fehler auftritt, wird eine Warnmeldung angezeigt und dem Ergebnis der arithmetischen Operation NULL zugewiesen.  
+Wenn SET ARITHABORT auf ON und SET ANSI WARNINGS auf OFF festgelegt ist, bewirken diese Fehlerbedingungen, dass der Batch beendet wird. Treten die Fehler in einer Transaktion auf, so wird für die Transaktion ein Rollback durchgeführt. Wenn SET ARITHABORT auf OFF festgelegt ist und einer dieser Fehler auftritt, wird eine Warnmeldung angezeigt, und das Ergebnis der arithmetischen Operation ist NULL.  
   
- Wenn SET ARITHABORT und SET ANSI WARNINGS auf OFF festgelegt sind und einer dieser Fehler auftritt, wird eine Warnmeldung angezeigt und dem Ergebnis der arithmetischen Operation NULL zugewiesen.  
+Wenn SET ARITHABORT und SET ANSI WARNINGS auf OFF festgelegt sind und einer dieser Fehler auftritt, wird eine Warnmeldung angezeigt, und das Ergebnis der arithmetischen Operation ist NULL.  
   
 > [!NOTE]  
->  Wenn weder SET ARITHABORT noch SET ARITHIGNORE festgelegt sind, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NULL zurück und gibt nach dem Ausführen der Abfrage eine Warnmeldung zurück.  
+>  Wenn weder SET ARITHABORT noch SET ARITHIGNORE auf ON festgelegt sind, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NULL zurück, und nach Ausführung der Abfrage wird eine Warnmeldung zurückgegeben.  
   
- Durch Festlegen von ANSI_WARNINGS auf ON wird implizit ARITHABORT auf ON festgelegt, wenn der Kompatibilitätsgrad der Datenbank auf 90 oder höher festgelegt ist. Wird der Kompatibilitätsgrad der Datenbank auf 80 oder niedriger festgelegt, muss die ARITHABORT-Option explizit auf ON festgelegt werden.  
+Durch Festlegen von ANSI_WARNINGS auf ON wird implizit ARITHABORT auf ON festgelegt, wenn der Kompatibilitätsgrad der Datenbank auf 90 oder höher festgelegt ist. Wird der Kompatibilitätsgrad der Datenbank auf 80 oder niedriger festgelegt, muss die ARITHABORT-Option explizit auf ON festgelegt werden.  
   
- Wenn in einer INSERT-, DELETE- oder UPDATE-Anweisung ein arithmetischer Fehler (Überlauf, Division durch Null oder Bereichsfehler) bei der Auswertung eines Ausdrucks auftritt und SET ARITHABORT auf OFF festgelegt ist, fügt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen NULL-Wert ein oder aktualisiert ihn. Wenn die Zielspalte keine NULL-Werte zulässt, schlägt das Einfügen oder Aktualisieren fehl, und dem Benutzer wird ein Fehler angezeigt.  
+Wenn bei der Auswertung eines Ausdrucks SET ARITHABORT auf OFF festgelegt ist und es in einer INSERT-, DELETE- oder UPDATE-Anweisung zu einem arithmetischen, Überlauf-, Division durch Null- oder Domänenfehler kommt, fügt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen NULL-Wert ein oder aktualisiert diesen. Wenn die Zielspalte keine NULL-Werte zulässt, schlägt das Einfügen oder Aktualisieren fehl, und dem Benutzer wird ein Fehler angezeigt.  
   
- Auch wenn SET ARITHABORT oder SET ARITHIGNORE auf OFF und SET ANSI_WARNINGS auf ON festgelegt sind, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Fehlermeldung zurück, wenn ein Fehler aufgrund einer Division durch Null oder ein Überlauffehler auftritt.  
+Auch wenn SET ARITHABORT oder SET ARITHIGNORE auf OFF und SET ANSI_WARNINGS auf ON festgelegt sind, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Fehlermeldung zurück, wenn ein Fehler aufgrund einer Division durch Null oder ein Überlauffehler auftritt.  
   
- Wenn SET ARITHABORT auf OFF festgelegt ist und bei der Auswertung der booleschen Bedingung einer IF-Anweisung ein Abbruchfehler auftritt, wird der FALSE-Zweig ausgeführt.
+Wenn SET ARITHABORT auf OFF festgelegt ist und bei der Auswertung der booleschen Bedingung einer IF-Anweisung ein Abbruchfehler auftritt, wird der FALSE-Zweig ausgeführt.
   
- SET ARITHABORT muss beim Erstellen oder Ändern von Indizes für berechnete Spalten oder indizierte Sichten auf ON festgelegt sein. Wenn SET ARITHABORT auf OFF festgelegt ist, schlagen die CREATE-, UPDATE-, INSERT- und DELETE-Anweisungen in Tabellen mit Indizes auf berechneten Spalten oder indizierten Sichten fehl.
+SET ARITHABORT muss beim Erstellen oder Ändern von Indizes für berechnete Spalten oder indizierte Sichten auf ON festgelegt sein. Wenn SET ARITHABORT auf OFF festgelegt ist, schlagen die CREATE-, UPDATE-, INSERT- und DELETE-Anweisungen in Tabellen mit Indizes auf berechneten Spalten oder indizierten Sichten fehl.
   
- Die Einstellung von SET ARITHABORT wird zur Ausführungszeit und nicht zur Analysezeit festgelegt.  
+Das Festlegen von SET ARITHABORT erfolgt zur Laufzeit, nicht zur Analysezeit.  
   
- Um die aktuelle Einstellung anzuzeigen, führen Sie die folgende Abfrage aus:
+Um die aktuelle Einstellung für SET ARITHABORT anzuzeigen, führen Sie die folgende Abfrage aus:
   
 ```  
 DECLARE @ARITHABORT VARCHAR(3) = 'OFF';  
@@ -93,10 +93,10 @@ SELECT @ARITHABORT AS ARITHABORT;
 ```  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **public** -Rolle.  
+Erfordert die Mitgliedschaft in der **public** -Rolle.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel werden die Fehler aufgrund einer Division durch Null und Überlauffehler mit beiden `SET ARITHABORT`-Einstellungen veranschaulicht.  
+Im folgenden Beispiel werden die Fehler aufgrund einer Division durch Null und Überlauffehler mit `SET ARITHABORT`-Einstellungen veranschaulicht.  
   
 ```  
 -- SET ARITHABORT  
@@ -191,7 +191,7 @@ DROP TABLE t2;
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SET-Anweisungen (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
  [SET ARITHIGNORE &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithignore-transact-sql.md)   
  [SESSIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  

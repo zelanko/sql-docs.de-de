@@ -1,7 +1,7 @@
 ---
 title: Auswählen einer Datenquelle (SQL Server-Import/Export-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -13,20 +13,23 @@ ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c8e337704f95b432c30a6451aabe8a85b4609d5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a93eb928b8d9a756380879ad8cc30475ffd223e9
+ms.sourcegitcommit: 92c524119d7df5daf69ec144d532ddcb2e46abc0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806015"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55290420"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Datenquelle auswählen (SQL Server-Import/Export-Assistent)
   Nach der Begrüßungsseite zeigt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistent die Seite **Datenquelle auswählen**an. Auf dieser Seite geben Sie Informationen zur Quelle für Ihre Daten an und darüber, wie Sie eine Verbindung mit dieser herstellen.
   
 Weitere Informationen zu Datenquellen, die Sie verwenden können, finden Sie unter [Welche Datenquellen und -ziele kann ich verwenden?](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)
 
+> [!NOTE]
+> Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import- und Export-Assistent nutzt SQL Server Integration Services (SSIS). Daher gelten dieselben Einschränkungen, die für SSIS gelten, auch für den Assistenten.  Z. B. die Spalten „ErrorCode“ und „ErrorColumn“, die standardmäßig hinzugefügt werden, wie in [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md) beschrieben.
+
 ## <a name="screen-shot-of-the-choose-a-data-source-page"></a>Screenshot der Seite „Datenquelle auswählen“ 
-Der folgende Screenshot zeigt den oberen Teil der Seite **Datenquelle auswählen** im Assistenten, der sich nicht ändert. Auf den restlichen Seiten finden Sie verschiedene Optionen, die von der von Ihnen ausgewählten Datenquelle abhängig sind.
+Die folgende Abbildung zeigt den oberen Teil der Seite **Datenquelle auswählen** im Assistenten, der sich nicht ändert. Auf den restlichen Seiten finden Sie verschiedene Optionen, die von der von Ihnen ausgewählten Datenquelle abhängig sind.
 
 ![Quelle auswählen](../../integration-services/import-export-data/media/choose-source.png)
 
@@ -66,10 +69,12 @@ Sehen Sie sich eine der folgenden Seiten an, um eine Verbindung mit einer häufi
 
 Weitere Informationen zum Herstellen einer Verbindung mit einer Datenquelle, die hier nicht aufgeführt ist, finden Sie unter [The Connection Strings Reference (Verweis auf Verbindungszeichenfolgen)](https://www.connectionstrings.com/). Auf dieser Website eines Drittanbieters sind Beispielverbindungszeichenfolgen aufgelistet, und es werden Angaben zu Datenanbietern und den erforderlichen Verbindungsinformationen bereitgestellt.
 
-## <a name="whats-next"></a>Wie geht es weiter?  
+## <a name="whats-next"></a>Wie geht es weiter?
  Nachdem Sie Informationen zur Quelle Ihrer Daten bereitgestellt haben und darüber, wie Sie eine Verbindung mit ihnen herstellen, wird als nächste Seite **Ziel auswählen**angezeigt. Auf dieser Seite geben Sie Informationen zum Ziel für Ihre Daten an und dazu, wie Sie eine Verbindung damit herstellen. Weitere Informationen finden Sie unter [Ziel auswählen](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).
- 
+
 ## <a name="see-also"></a>Siehe auch
 [Erste Schritte mit diesem einfachen Beispiel des Import/Export-Assistenten](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
+[!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
 
+[!INCLUDE[contribute-to-content](../../includes/paragraph-content/contribute-to-content.md)]
