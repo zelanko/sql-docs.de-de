@@ -343,7 +343,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ## <a name="remarks"></a>Hinweise  
  **Sp_addmergepullsubscription_agent** wird bei der Mergereplikation verwendet und verwendet ähnliche Funktionen wie [Sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md).  
   
- Ein Beispiel für die Sicherheitseinstellungen ordnungsgemäß angeben, für die Ausführung **Sp_addmergepullsubscription_agent**, finden Sie unter [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md).  
+ Ein Beispiel für die Sicherheitseinstellungen ordnungsgemäß angeben, für die Ausführung **Sp_addmergepullsubscription_agent**, finden Sie unter [Erstellen eines Pullabonnements](../../relational-databases/replication/create-a-pull-subscription.md).  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_addmergepullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergepullsubscript_1_1.sql)]  
@@ -352,7 +352,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_addmergepullsubscription_agent**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Erstellen eines Pullabonnements](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Abonnieren von Veröffentlichungen](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   

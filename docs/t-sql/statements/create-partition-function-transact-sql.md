@@ -68,7 +68,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
 > [!NOTE]  
 >  Wenn *boundary_value* aus den Literalen **datetime** oder **smalldatetime** besteht, werden diese Literale ausgewertet, wobei angenommen wird, dass us_english die Sitzungssprache darstellt. Dieses Verhalten ist als veraltet markiert. Wenn Sie sicherstellen möchten, dass sich die Definition der Partitionsfunktion für alle Sitzungssprachen wie erwartet verhält, wird empfohlen, dass Sie die Konstanten verwenden, die für alle Sprachen gleich interpretiert werden, z. B. das Format yyyymmdd, oder dass Sie die Literale explizit in ein bestimmtes Format konvertieren. Führen Sie `SELECT @@LANGUAGE` aus, um die Sitzungssprache des Servers zu bestimmen.
 >
-> Weitere Informationen finden Sie unter [Nondeterministic conversion of literal date strings into DATE values (Nicht deterministische Konvertierung von Datumsliteralzeichenfolgen in DATE-Werte)](../data-types/nondeterministic-convert-date-literals.md).
+> Weitere Informationen finden Sie unter [Nicht deterministische Konvertierung von Datumsliteralzeichenfolgen in DATE-Werte](../data-types/nondeterministic-convert-date-literals.md).
   
  *...n*  
  Gibt die Anzahl der von *boundary_value* bereitgestellten Werte an, wobei 14.999 nicht überschritten werden darf. Die Anzahl der erstellten Partitionen entspricht *n* + 1. Die Werte müssen nicht der Reihenfolge nach angegeben werden. Wenn die Werte nicht der Reihenfolge nach aufgeführt sind, werden sie von [!INCLUDE[ssDE](../../includes/ssde-md.md)] sortiert, die Funktion wird erstellt und eine Warnung zurückgegeben, die besagt, dass die Werte nicht der Reihenfolge nach bereitgestellt werden. Die Datenbank-Engine gibt einen Fehler zurück, wenn *n* doppelte Werte enthält.  
