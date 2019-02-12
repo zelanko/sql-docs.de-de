@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
-ms.openlocfilehash: 531286af24740e37e125708a4b874b6aba27c3dc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5c82c32922712b377fd732b6745b1761e9f32a82
+ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403425"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55890001"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>Verwenden von Always Encrypted mit den PHP-Treibern für SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -157,7 +157,7 @@ Die folgenden Beispiele veranschaulichen Filtern von Daten basierend auf verschl
  -   Beim Ausführen der Abfrage mit gebundenen Parametern, die PHP-Treibern bestimmt automatisch die SQL-Typ für den Benutzer, wenn der Benutzer explizit den SQL-Typ gibt an, wenn der SQLSRV-Treiber verwenden.
  -   Alle Werte werden vom Programm als Klartext ausgegeben, da der Treiber die aus den Spalten „SSN“ und „BirthDate“ abgerufenen Daten transparent entschlüsselt.
  
-Hinweis: Abfragen können Übereinstimmungsvergleiche für verschlüsselte Spalten nur ausführen, wenn die Verschlüsselung deterministisch ist. Weitere Informationen finden Sie im Abschnitt [Auswählen der deterministischen oder zufälligen Verschlüsselung](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
+Hinweis: Abfragen können die Durchführung von Gleichheitsvergleichen für verschlüsselte Spalten ausführen, nur dann, wenn die Verschlüsselung deterministisch ist. Weitere Informationen finden Sie im Abschnitt [Auswählen der deterministischen oder zufälligen Verschlüsselung](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
 
 SQLSRV:
 ```
@@ -269,7 +269,7 @@ Microsoft Driver 5.3.0 für PHP für SQL Server werden nur für Windows Store-Ze
 
 Der ODBC-Treiber für SQL Server unter Windows enthält einen integrierten Speicheranbieter für spaltenhauptschlüssel für den Windows Store-Zertifikat, mit dem Namen `MSSQL_CERTIFICATE_STORE`. (Dieser Anbieter ist nicht unter MacOS oder Linux verfügbar.) Mit diesem Anbieter der CMK lokal auf dem Clientcomputer gespeichert, und ist keine zusätzliche Konfiguration von der Anwendung für die Verwendung mit dem Treiber erforderlich. Allerdings muss die Anwendung auf das Zertifikat und seinen privaten Schlüssel im Speicher zugreifen. Weitere Informationen finden Sie unter [Create and Store Column Master Keys (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)(Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)).
 
-### <a name="using-azure-key-vault"></a>Mithilfe von Azure Key Vault
+### <a name="using-azure-key-vault"></a>EKM mit dem Azure Key Vault
 
 Azure Key Vault bietet eine Möglichkeit zum Speichern von Verschlüsselungsschlüsseln, Kennwörter und andere Geheimnisse mithilfe von Azure und zum Speichern von Schlüsseln für Always Encrypted verwendet werden können. Der ODBC-Treiber für SQL Server (Version 17 und höher) enthält einen integrierten spaltenhauptschlüssel-Speicheranbieter für Azure Key Vault. Die folgenden Verbindungsoptionen Behandeln von Azure Key Vault-Konfiguration: `KeyStoreAuthentication`, `KeyStorePrincipalId`, und `KeyStoreSecret`. 
  -   `KeyStoreAuthentication` kann einen von zwei mögliche Werte annehmen: `KeyVaultPassword` und `KeyVaultClientSecret`. Diese Werte steuern, welche Art von Anmeldeinformationen für die Authentifizierung mit den beiden anderen Schlüsselwörtern verwendet werden.
@@ -288,23 +288,23 @@ SQLSRV:
 
 Verwenden von Azure Active Directory-Konto:
 ```
-$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultPassword", "KeyStorePrincipalId"=>$AADUsername, "KeyStoreAuthentication"=>$AADPassword);
+$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultPassword", "KeyStorePrincipalId"=>$AADUsername, "KeyStoreSecret"=>$AADPassword);
 $conn = sqlsrv_connect($server, $connectionInfo);
 ```
 Verwenden ein Azure-Anwendung-Client-ID und geheimen Schlüssel ein:
 ```
-$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultClientSecret", "KeyStorePrincipalId"=>$applicationClientID, "KeyStoreAuthentication"=>$applicationClientSecret);
+$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultClientSecret", "KeyStorePrincipalId"=>$applicationClientID, "KeyStoreSecret"=>$applicationClientSecret);
 $conn = sqlsrv_connect($server, $connectionInfo);
 ```
 
 PDO_SQLSRV: Verwenden von Azure Active Directory-Konto:
 ```
-$connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultPassword; KeyStorePrincipalId = $AADUsername; KeyStoreAuthentication = $AADPassword;";
+$connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultPassword; KeyStorePrincipalId = $AADUsername; KeyStoreSecret = $AADPassword;";
 $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
 ```
 Verwenden ein Azure-Anwendung-Client-ID und geheimen Schlüssel ein:
 ```
-$connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultClientSecret; KeyStorePrincipalId = $applicationClientID; KeyStoreAuthentication = $applicationClientSecret;";
+$connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultClientSecret; KeyStorePrincipalId = $applicationClientID; KeyStoreSecret = $applicationClientSecret;";
 $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
 ```
 
@@ -327,7 +327,7 @@ Nur PDO_SQLSRV:
  
 Die PHP-Treiber erbt auch die Einschränkungen, die vom ODBC-Treiber für SQL Server und die Datenbank. Finden Sie unter [Einschränkungen des ODBC-Treibers bei Verwendung von Always Encrypted](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) und [Featuredetails Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md#feature-details).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Programmierhandbuch für den PHP-SQL-Treiber](../../connect/php/programming-guide-for-php-sql-driver.md)
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)  
 [API-Referenz für den PDO_SQLSRV-Treiber](../../connect/php/pdo-sqlsrv-driver-reference.md)  

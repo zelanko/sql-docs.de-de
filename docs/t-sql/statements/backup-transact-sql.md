@@ -47,12 +47,12 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1237e85271949279a96ddd149536189b9940a919
-ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
+ms.openlocfilehash: a098756919cec261d9416149a508b311c48cd147
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805776"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421497"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -71,7 +71,7 @@ Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meiste
 > [!div class="mx-tdCol2BreakAll"]  
 > |||| 
 > |---|---|---| 
-> |**_\* SQL Server \*_** &nbsp;|[SQL-Datenbank<br />Verwaltete Instanz](backup-transact-sql.md?view=azuresqldb-mi-current)|[Parallel<br />Data Warehouse](backup-transact-sql.md?view=aps-pdw-2016)|  
+> |**_\* SQL Server \*_** &nbsp;|[SQL-Datenbank<br />verwaltete Instanz](backup-transact-sql.md?view=azuresqldb-mi-current)|[Parallel<br />Data Warehouse](backup-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
@@ -940,11 +940,11 @@ WITH STATS = 5;
 > [!div class="mx-tdCol2BreakAll"]  
 > |||| 
 > |---|---|---| 
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* SQL-Datenbank<br />Verwaltete Instanz \*_** &nbsp;|[Parallel<br />Data Warehouse](backup-transact-sql.md?view=aps-pdw-2016)|  
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* SQL-Datenbank<br />verwaltete Instanz \*_** &nbsp;|[Parallel<br />Data Warehouse](backup-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Verwaltete Azure SQL-Datenbank-Instanz.
+## <a name="azure-sql-database-managed-instance"></a>Verwaltete Azure SQL-Datenbank-Instanz
 
 Sichert eine SQL-Datenbank, die sich in einer verwalteten Azure SQL-Datenbank-Instanz befindet bzw. gehostet wird. Die [verwaltete Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) wird automatisch gesichert und ermöglicht Benutzern, vollständige `COPY_ONLY`-Datensicherungen zu erstellen. Differenzielle Sicherungen, Protokollsicherungen und Dateimomentaufnahmesicherungen werden nicht unterstützt.  
 
@@ -990,7 +990,7 @@ Gibt eine vollständige Datenbanksicherung an. Während einer Datenbanksicherung
 > [!IMPORTANT]
 > Eine Datenbanksicherung, die auf einer verwalteten Instanz erstellt wird, kann nur auf einer anderen verwalteten Instanz wiederhergestellt werden. Sie kann nicht auf einer lokalen SQL Server-Instanz wiederhergestellt werden (genauso wenig, wie eine Sicherung einer SQL Server 2016-Datenbank auf einer SQL Server 2012-Instanz wiederhergestellt werden kann).
   
-Wenn Sie eine von BACKUP DATABASE (eine *Datensicherung*) erstellte Sicherung wiederherstellen, wird die komplette Sicherung wiederhergestellt. Informationen zur Wiederherstellung automatischer Sicherungen der verwalteten Azure SQL-Datenbank-Instanz finden Sie unter [SQL Database Restore (SQL-Datenbank-Wiederherstellung)](https://docs.microsoft.com/azure/sql-database/sql-database-restore)  
+Wenn Sie eine von BACKUP DATABASE (eine *Datensicherung*) erstellte Sicherung wiederherstellen, wird die komplette Sicherung wiederhergestellt. Informationen zur Wiederherstellung automatischer Sicherungen der verwalteten Azure SQL-Datenbank-Instanz finden Sie unter [SQL Database Restore (SQL-Datenbank-Wiederherstellung)](https://docs.microsoft.com/azure/sql-database/sql-database-restore).  
   
 { *database_name* | **@**_database\_name\_var_ }   
 Dies ist die Datenbank, aus der die vollständige Datenbank gesichert wird. Bei Angabe in Form einer Variablen (**@**_database\_name\_var_) kann dieser Name entweder als Zeichenfolgenkonstante (**@**_database\_name\_var_**=**_database name_) oder als Variable eines Zeichenfolgen-Datentyps (mit Ausnahme der Datentypen **ntext** oder **text**) angegeben werden.  
@@ -1148,7 +1148,7 @@ WITH STATS = 5, COPY_ONLY;
 > [!div class="mx-tdCol2BreakAll"]  
 > |||| 
 > |---|---|---| 
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL-Datenbank<br />Verwaltete Instanz](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Parallel<br />Data Warehouse \*_** &nbsp;|  
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL-Datenbank<br />verwaltete Instanz](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Parallel<br />Data Warehouse \*_** &nbsp;|  
 
 &nbsp;
 

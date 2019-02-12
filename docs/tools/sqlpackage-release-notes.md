@@ -10,21 +10,44 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 69b3b5c9574578b286b882b7d2125b0bb984759b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f9fe0558b169acea58bb98a4f9a07267549aa58f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413748"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013001"
 ---
 # <a name="sqlpackage-release-notes"></a>Anmerkungen zur Version von "Sqlpackage"
 
 **[Aktuelle Version herunterladen](sqlpackage-download.md)**
 
+## <a name="sqlpackage-181"></a>sqlpackage 18.1
+
+Releasedatum: 1. Februar 2019  
+Build 15.0.4316.1 
+
+Die Version enthält die folgenden Features und Fixes:
+
+- Unterstützung für die UTF8-Sortierungen.
+- Behebung von Leistungsproblemen, die die legacy-kardinalitätsschätzung für reverse-engineering-Abfragen verwendet.
+- Aktiviert die nicht gruppierten Columnstore-Indizes für eine indizierte Sichten.
+- Eine erhebliche Schema vergleichen Leistungsproblem wurde behoben, wenn ein Skript zu generieren.
+- Korrektur der Logik Schema Abweichung zur Erkennung, um bestimmte Xevent-Sitzungen zu ignorieren.
+- Feste importieren, die Reihenfolge für die Graph-Tabellen.
+- Korrektur, exportieren externe Tabellen mit Berechtigungen für Systemobjekte.
+- In .NET Core 2.2 verschoben 
+- Verwenden Sie Arbeitsspeicher-Speicherung für Schemavergleich in .NET Core.
+
+Diese Version enthält, Cross-Platform Preview-Builds von "Sqlpackage", die .NET Core 2.2, und können unter MacOS und Linux ausgeführt wird. Diese Vorschauversion enthält die folgenden bekannten Probleme:
+
+- Build- und bereitstellungs-Contributors werden nicht unterstützt.
+- Ältere DACPAC- und bacpac-Dateien, die Serialisierung von JSON-Daten verwenden, werden nicht unterstützt.
+- Auf die verwiesen wird .dacpacs (z. B. master.dacpac) kann aufgrund von Problemen mit der Groß-/Kleinschreibung Dateisysteme nicht aufgelöst werden.
+  - Eine problemumgehung besteht darin, profitieren Sie den Namen der Verweisdatei (z. B. "MASTER". BACPAC-DATEI).
 ## <a name="sqlpackage-180"></a>sqlpackage 18.0
 
-Veröffentlichungsdatum: 24. Oktober 2018  
-Build: 15.0.4200.1 
+Releasedatum: 24. Oktober 2018  
+Build 15.0.4200.1 
 
 Die Version enthält die folgenden Features und Fixes:
 
@@ -41,8 +64,8 @@ Die Version enthält die folgenden Features und Fixes:
 
 ## <a name="sqlpackage-178"></a>sqlpackage 17.8
 
-Veröffentlichungsdatum: 22. Juni 2018  
-Build: 14.0.4079.2  
+Releasedatum: 22. Juni 2018  
+Build 14.0.4079.2  
 
 Die Version enthält die folgenden Updates:
 
@@ -53,8 +76,8 @@ Die Version enthält die folgenden Updates:
 
 ## <a name="sqlpackage-1741"></a>sqlpackage 17.4.1
 
-Veröffentlichungsdatum: 25 Januar 2018  
-Build: 14.0.3917.1
+Releasedatum: 25 Januar 2018  
+Build 14.0.3917.1
 
 Die Version enthält die folgenden Updates:
 
@@ -66,8 +89,8 @@ Die Version enthält die folgenden Updates:
 
 ## <a name="sqlpackage-1740"></a>sqlpackage 17.4.0
 
-Veröffentlichungsdatum: 12. Dezember 2017  
-Build: 14.0.3881.1
+Releasedatum: 12. Dezember 2017  
+Build 14.0.3881.1
 
 Die Version enthält die folgenden Updates:
 
@@ -76,22 +99,3 @@ Die Version enthält die folgenden Updates:
 - Hinzugefügt /DiagnosticsFile:"C:\Temp\sqlpackage.log" Befehlszeilenparameter verwenden, geben Sie einen Dateipfad zum Speichern der Diagnoseinformationen zu erhalten.
 - Hinzugefügte/Diagnostics Befehlszeilenparameter an Diagnoseinformationen an der Konsole protokolliert.
 
-## <a name="sqlpackage-on-macos-and-linux-net-core-preview"></a>"Sqlpackage" unter MacOS und Linux .NET Core (Vorschau)
-
-Veröffentlichungsdatum: 15. November 2018  
-Build: 15.0.4240.1
-
-Diese Version enthält die Cross-Platform Preview-Builds von "Sqlpackage", die auf .NET Core 2.1 abzielt, und kann unter MacOS und Linux ausführen. 
-
-Die Version enthält die folgenden Updates:
-
-- In .NET Core 2.1 verschoben 
-- Unterstützung für CLR-UDT-Typen, einschließlich der SQL CLR UDT-Typen: "sqlgeography", "sqlgeometry" und SqlHierarchyId.
-
-Diese Version ist eine frühe Vorschau mit folgenden bekannten Probleme:
-
-- Der /p:CommandTimeout-Parameter ist schwer auf jeweils 120 codiert.
-- Build- und bereitstellungs-Contributors werden nicht unterstützt.
-- Ältere DACPAC- und bacpac-Dateien, die Serialisierung von JSON-Daten verwenden, werden nicht unterstützt.
-- Auf die verwiesen wird .dacpacs (z. B. master.dacpac) kann aufgrund von Problemen mit der Groß-/Kleinschreibung Dateisysteme nicht aufgelöst werden.
-  - Eine problemumgehung besteht darin, profitieren Sie den Namen der Verweisdatei (z. B. "MASTER". BACPAC-DATEI).

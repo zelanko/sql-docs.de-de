@@ -20,19 +20,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f962d98bc60ea8fedc585add7617ddf938db6f4
-ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
+ms.openlocfilehash: 23f7329c6964f59cb0b7cb9f0d2db6d3b4b825ad
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49960764"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55420947"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Definiert eine Sortierung einer Datenbank oder Tabellenspalte, oder einen Umwandlungsvorgang für eine Sortierung, wenn er für einen Zeichenfolgenausdruck angewendet wird. Als Sortierungsname kann entweder der Name einer Windows-Sortierreihenfolge oder ein SQL-Sortierungsname verwendet werden. Wenn Sie während der Datenbankerstellung keine Sortierung angeben, wird der Datenbank die Standardsortierung der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugewiesen. Wenn Sie während der Tabellenspaltenerstellung keine Sortierung angeben, wird der Spalte die Standardsortierung der Datenbank zugewiesen.
 
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -156,7 +156,7 @@ Chiapas
 ### <a name="b-additional-examples"></a>B. Zusätzliche Beispiele  
  Zusätzliche Beispiele zur Verwendung von **COLLATE** finden Sie unter [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver#examples) in Beispiel **G. Erstellen einer Datenbank und Angeben eines Sortierungsnamens und von Optionen**, und unter [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column) in Beispiel **V. Ändern der Spaltensortierung**.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)    
  [Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md)    
  [Rangfolge von Sortierungen](../../t-sql/statements/collation-precedence-transact-sql.md)     

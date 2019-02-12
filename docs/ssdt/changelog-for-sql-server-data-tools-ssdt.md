@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 53a852b5293cfc013c170723f0e031cc3800e27c
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: a82fe061c8886dc88af8b44faf4b4fb86ccda2e6
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087889"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428677"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Änderungsprotokoll für SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,13 +32,13 @@ Releasedatum: 28. Januar 2019
 
 ### <a name="whats-new"></a>Neues
 **SSIS:**
-1. Die Power Query-Quelle (Vorschauversion) für SSIS 2017 wurde hinzugefügt.
-2. Unterstützung für SSIS 2012 wurde wieder hinzugefügt.
-3. Eine Oracle-Quelle und ein Oracle-Ziel für SSIS 2019 wurden hinzugefügt.
+1. Die Power Query-Quelle (Preview) für SSIS in ADF 2017 wurde hinzugefügt.
+2. Unterstützung für SQL Server 2012 wurde wieder hinzugefügt.
+3. Eine Oracle-Quelle und ein Oracle-Ziel für SQL Server 2019 wurden hinzugefügt.
 4. Es wurde ein Problem behoben, bei dem ein Skripttask bzw. eine Komponente bei der Migration von früheren SSIS-Versionen nicht geladen werden konnte.
 5. Es wurde ein Problem behoben, bei dem der Daten-Viewer unter Windows 7 SP1 und Windows 8.1 nicht funktioniert hat.
 6. Es wurde ein Problem behoben, bei dem in einigen Fällen das Speichern des Pakets zum Absturz von Visual Studio geführt hat. 
-7. Es wurde ein Problem behoben, bei dem in einigen Fällen das Paket nicht ausgeführt werden konnte, wenn die Schutzebene auf „EncryptSensitiveWithPassword“ festgelegt war und eine ältere Zielserverversion als SQL 2017 vorlag.
+7. Es wurde ein Problem behoben, bei dem in einigen Fällen das Paket nicht ausgeführt werden konnte, wenn die Schutzebene auf „EncryptSensitiveWithPassword“ festgelegt war und eine ältere Zielserverversion als SQL Server 2017 vorlag.
 8. Es wurde ein Problem behoben, bei dem Anmerkungen in der Standardschriftart in SSDT nicht angezeigt wurden.
 9. ISDeploymentWizard unterstützt die SQL-Authentifizierung, die integrierte Azure Active Directory-Authentifizierung und die Azure Active Directory-Kennwortauthentifizierung im Befehlszeilenmodus.
 

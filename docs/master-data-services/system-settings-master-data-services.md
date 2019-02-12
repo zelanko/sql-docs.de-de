@@ -99,7 +99,7 @@ ms.locfileid: "55044486"
   
 |Einstellung des Konfigurations-Managers|Systemeinstellung|und Beschreibung|  
 |-----------------------------------|--------------------|-----------------|  
-|**Zahl, mit der neue Geschäftsregeln inkrementiert werden**|**BusinessRuleDefaultPriorityIncrement**|Im Funktionsbereich [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **System Administration** functional area, the number the priority of each new business rule is incremented by. Der Standardwert lautet **10**.|  
+|**Zahl, mit der neue Geschäftsregeln inkrementiert werden**|**BusinessRuleDefaultPriorityIncrement**|Im Funktionsbereich [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Systemverwaltung** die Zahl, mit der die Priorität der einzelnen neuen Geschäftsregeln inkrementiert wird. Der Standardwert lautet **10**.|  
 |**Anzahl von Elementen zur Anwendung von Geschäftsregeln.**|**BusinessRuleRealtimeMemberCount**|Gibt im Funktionsbereich [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the maximum number of members in the grid to apply business rules to. In [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]die maximale Anzahl von Elementen im aktiven Arbeitsblatt, auf die Geschäftsregeln angewendet werden sollen. Der Standardwert ist **10000**.|  
 |**Vorgezogene Ausführung des Benutzerskripts für Geschäftsregeln**|**BusinessRuleUserScriptExecuteFirst**|Normalerweise werden Geschäftsregelaktionen in der Reihenfolge „Standardwert“, „Wertänderung“, „Überprüfung“, „Externe Aktion“, „Benutzerdefiniertes Aktionsskript“ ausgeführt. Wenn diese Einstellung in **1** geändert wird, ist „Benutzerdefiniertes Aktionsskript“ der erste Schritt beim Ausführen von Geschäftsregelaktionen. Diese Einstellung ist ausgeblendet. Der Standardwert ist **0**.|  
   
@@ -113,7 +113,7 @@ ms.locfileid: "55044486"
 |**Benachrichtigungs-E-Mail-Intervall**|**NotificationInterval**|Die Häufigkeit in Sekunden, in der E-Mail-Benachrichtigungen gesendet werden. Der Standardwert ist **120** Sekunden (2 Minuten).|  
 |**Anzahl von Benachrichtigungen in einer einzelnen E-Mail**|**NotificationsPerEmail**|Die maximale Anzahl von Problemen bei der Überprüfung, die in einer Benachrichtigungs-E-Mail aufgeführt werden. Weitere Probleme (sofern vorhanden) werden nicht in die E-Mail aufgenommen, sind aber im [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]verfügbar.|  
 |**E-Mail-Standardformat**|**EmailFormat**|Das Format für alle E-Mail-Benachrichtigungen. Der Standardwert ist **HTML** oder **1**. Die Datenbankeinstellung **2** steht für **Text**.<br /><br /> Hinweis: Sie können das Format für einen einzelnen Benutzer in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] überschreiben, indem Sie das **E-Mail-Format** auf der Registerkarte **Allgemein** des Benutzers ändern und speichern.|  
-|**Regulärer Ausdruck für E-Mail-Adresse**|**EmailRegExPattern**|Gibt im Funktionsbereich [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **User and Group Permissions** functional area, the regular expression used to validate the email address entered on a user's **General** tab. Weitere Informationen zu regulären Ausdrücken finden Sie unter [Sprachelemente für reguläre Ausdrücke](https://go.microsoft.com/fwlink/?LinkId=164401) in der MSDN Library.|  
+|**Regulärer Ausdruck für E-Mail-Adresse**|**EmailRegExPattern**|Gibt im Funktionsbereich [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Benutzer- und Gruppenberechtigungen** den regulären Ausdruck an, mit dem die auf der Registerkarte **Allgemein** des Benutzers ändern und speichern. Weitere Informationen zu regulären Ausdrücken finden Sie unter [Sprachelemente für reguläre Ausdrücke](https://go.microsoft.com/fwlink/?LinkId=164401) in der MSDN Library.|  
 |**Datenbank-E-Mail-Konto**|**EmailProfilePrincipalAccount**|Zeigt das Datenbank-E-Mail-Konto an, das für das Senden von E-Mail-Benachrichtigungen verwendet werden soll. Das Standardprofil lautet **mds_email_user**.|  
 |**Profil für Datenbank-E-Mail**|**DatabaseMailProfile**|Das zu verwendende Datenbank-E-Mail-Profil beim Senden von E-Mail-Benachrichtigungen. Für diese Einstellung gibt es keinen Standardwert.|  
 ||**ValidationIssueHTML**|Der Text der E-Mail-Benutzer ist im HTML-Format, wenn keine Überprüfung für eine Geschäftsregel besteht.|  
@@ -127,7 +127,7 @@ ms.locfileid: "55044486"
   
 |Einstellung des Konfigurations-Managers|Systemeinstellung|und Beschreibung|  
 |-----------------------------------|--------------------|-----------------|  
-||**SecurityMemberProcessInterval**|Gibt im Funktionsbereich [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **User and Group Permissions** functional area, the frequency, in seconds, that user and group permissions set on the **Hierarchy Members** tab are applied. Der Standardwert ist **3600** Sekunden (60 Minuten).|  
+||**SecurityMemberProcessInterval**|Gibt im Funktionsbereich [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Benutzer- und Gruppenberechtigungen** an, mit welcher Häufigkeit (in Sekunden) Benutzer- und Gruppenberechtigungen angewendet werden, die auf der Registerkarte **Hierarchieelemente** festlegt sind. Der Standardwert ist **3600** Sekunden (60 Minuten).|  
 
 ##  <a name="Performance"></a> Leistungseinstellungen  
 

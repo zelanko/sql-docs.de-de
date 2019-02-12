@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft-Dokumentation
 description: Erstellen einer Datenbanksyntax für SQL Server, Azure SQL-Datenbank, Azure SQL Data Warehouse und Parallel Data Warehouse
 ms.custom: ''
-ms.date: 11/16/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d0ba661f6cc2c19b00dd5c51be9b3dfeb1d47a6e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 76f0d24c3c8eb0c2cfa77b69d45d8f5d88517a4f
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327882"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570843"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -62,7 +62,7 @@ Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meiste
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |**_\* SQL Server \*_** | [SQL-Datenbank<br />logischer Server](create-database-transact-sql.md?view=azuresqldb-current) | [SQL-Datenbank<br />Verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |**_\* SQL Server \*_** | [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-database-transact-sql.md?view=azuresqldb-current) | [SQL-Datenbank<br />verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -893,15 +893,15 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| **_\* SQL-Datenbank<br />logischer Server \*_**  | [SQL-Datenbank<br />Verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| **_\* SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken\*_**  | [SQL-Datenbank<br />verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
-## <a name="azure-sql-database-logical-server"></a>Logischer Azure SQL-Datenbank-Server
+## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL-Datenbank Singleton/Pool für elastische Datenbanken
 
 ## <a name="overview"></a>Übersicht
 
-Im logischen Azure SQL-Datenbank-Server kann diese Anweisung zusammen mit einer Azure SQL Server-Instanz verwendet werden, um eine einzelne Datenbank oder eine Datenbank in einem Pool für elastische Datenbanken zu erstellen. Mit dieser Anweisung geben Sie für die neue Datenbank den Datenbanknamen, die Sortierung, die maximale Größe, die Edition, das Dienstziel und ggf. den Pool für elastische Datenbanken an. Mit ihr lässt sich auch die Datenbank in einem Pool für elastische Datenbanken erstellen. Außerdem kann sie verwendet werden, um eine Kopie der Datenbank auf einem anderen logischen Server zu erstellen.
+Im Azure SQL-Datenbank Singletons und Pools für elastische Datenbanken kann diese Anweisung zusammen mit einer Azure SQL Server-Instanz verwendet werden, um eine einzelne Datenbank oder eine Datenbank in einem Pool für elastische Datenbanken zu erstellen. Mit dieser Anweisung geben Sie für die neue Datenbank den Datenbanknamen, die Sortierung, die maximale Größe, die Edition, das Dienstziel und ggf. den Pool für elastische Datenbanken an. Mit ihr lässt sich auch die Datenbank in einem Pool für elastische Datenbanken erstellen. Außerdem kann sie verwendet werden, um eine Kopie der Datenbank auf einem anderen SQL-Datenbankserver zu erstellen.
 
 ## <a name="syntax"></a>Syntax 
 
@@ -973,7 +973,7 @@ EDITION
  
 Gibt die Dienstebene der Datenbank an. 
 
-Einzelne und in einem Pool zusammengefasste Datenbanken auf einem logischen Server. Die verfügbaren Werte sind „basic“, „standard“, „premium“, „GeneralPurpose“, „BusinessCritical“ und „Hyperscale“. 
+Einzelne und in einem Pool zusammengefasste Datenbanken auf einem Singleton/Pool für elastische Datenbanken. Die verfügbaren Werte sind „basic“, „standard“, „premium“, „GeneralPurpose“, „BusinessCritical“ und „Hyperscale“. 
   
 Wenn EDITION angegeben ist, MAXSIZE jedoch nicht, wird MAXSIZE auf die restriktivste, von der Edition unterstützte Größe festgelegt.  
   
@@ -984,7 +984,7 @@ Gibt die maximale Größe der Datenbank an. MAXSIZE muss für die angegebene EDI
 > [!NOTE]
 > Das Argument **MAXSIZE** gilt nicht für Einzeldatenbanken im Diensttarif „Hyperscale“. Datenbanken im Tarif „Hyperscale“ können bei Bedarf auf bis zu 100 TB skaliert werden. Der SQL-Datenbank-Dienst fügt automatisch Speicher hinzu. Sie müssen keine maximale Größe festlegen.
 
-**DTU-basiertes Modell für einzelne und in einem Pool zusammengefasste Datenbanken auf einem logischen Server**
+**DTU-basiertes Modell für einzelne und in einem Pool zusammengefasste Datenbanken auf einem SQL-Datenbankserver**
 
 |**MAXSIZE**|**Grundlegend**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** |
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------| 
@@ -1014,7 +1014,7 @@ Gibt die maximale Größe der Datenbank an. MAXSIZE muss für die angegebene EDI
 
 Der MAXSIZE-Wert für das DTU-basierte Modell muss – wenn angegeben –ein gültiger Wert sein, der in der Tabelle oben für die angegebene Dienstebene angezeigt wird.
  
-**V-Kern-basiertes Modell für einzelne und in einem Pool zusammengefasste Datenbanken auf einem logischen Server**
+**V-Kern-basiertes Modell für einzelne und in einem Pool zusammengefasste Datenbanken auf einem SQL-Datenbankserver**
 
 **Dienstebene „Universell“: Computeplattform der 4. Generation**
 
@@ -1063,12 +1063,12 @@ Die folgenden Regeln gelten für das MAXSIZE-Argument und das EDITION-Argument:
 
 SERVICE_OBJECTIVE
 
-- **Für einzelne und in einem Pool zusammengefasste Datenbanken auf einem logischen Server**
+- **Bei einzelnen und in einem Pool zusammengefassten Datenbanken**
 
   - Gibt die Leistungsebene an. Verfügbare Werte für Dienstziele sind: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_8`, `GP_Gen5_16`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_48`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_8`, `BC_Gen5_16`, `BC_Gen5_24`, `BC_Gen5_32`, `BC_Gen5_48`, `BC_Gen5_80`. 
- - **Bei Einzeldatenbanken auf einem logischen Server im Diensttarif „Hyperscale“**: Gibt die Leistungsebene an. Verfügbare Werte für Dienstziele sind: `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`,    `HS_Gen5_4`,    `HS_Gen5_8`,    `HS_Gen5_16`,   `HS_Gen5_24`,   `HS_Gen5_32`,   `HS_Gen5_48`,   `HS_Gen5_80`. 
+ - **Bei Singletons im Diensttarif „Hyperscale“**: Gibt die Leistungsebene an. Verfügbare Werte für Dienstziele sind: `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`,    `HS_Gen5_4`,    `HS_Gen5_8`,    `HS_Gen5_16`,   `HS_Gen5_24`,   `HS_Gen5_32`,   `HS_Gen5_48`,   `HS_Gen5_80`. 
  
-- **Für Datenbanken in einer verwalteten Instanz**
+- **Bei Datenbanken in einer verwalteten Instanz**
 
   Gibt die Leistungsebene an. Verfügbare Werte für Dienstziele sind: `GP_GEN4_8`, `GP_GEN4_16`, `GP_Gen5_8`, `GP_Gen5_16`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`. 
 
@@ -1232,11 +1232,11 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL-Datenbank<br />logischer Server](create-database-transact-sql.md?view=azuresqldb-current)| **_\* SQL-Datenbank<br />Verwaltete Instanz \*_**   | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-database-transact-sql.md?view=azuresqldb-current)| **_\* SQL-Datenbank<br />verwaltete Instanz \*_**   | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Verwaltete Azure SQL-Datenbank-Instanz.
+## <a name="azure-sql-database-managed-instance"></a>Verwaltete Azure SQL-Datenbank-Instanz
 
 ## <a name="overview"></a>Übersicht
 
@@ -1305,7 +1305,7 @@ Siehe [ALTER DATABASE](alter-database-transact-sql.md?&tabs=sqldbmi)
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL-Datenbank<br />logischer Server](create-database-transact-sql.md?view=azuresqldb-current)| [SQL-Datenbank<br />Verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current)| **_\* SQL Data<br />Warehouse \*_**    | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-database-transact-sql.md?view=azuresqldb-current)| [SQL-Datenbank<br />verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current)| **_\* SQL Data<br />Warehouse \*_**    | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1313,7 +1313,7 @@ Siehe [ALTER DATABASE](alter-database-transact-sql.md?&tabs=sqldbmi)
 
 ## <a name="overview"></a>Übersicht
 
-In Azure SQL Data Warehouse kann diese Anweisung mit einer logischen Azure SQL Server-Instanz verwendet werden, um eine SQL Data Warehouse-Datenbank zu erstellen. Mit dieser Anweisung geben Sie den Datenbanknamen, die Sortierung, die maximale Größe, die Edition und das Dienstziel an.
+In Azure SQL Data Warehouse kann diese Anweisung mit einem Azure SQL-Datenbankserver verwendet werden, um eine SQL Data Warehouse-Datenbank zu erstellen. Mit dieser Anweisung geben Sie den Datenbanknamen, die Sortierung, die maximale Größe, die Edition und das Dienstziel an.
 
 ## <a name="syntax"></a>Syntax  
   
@@ -1330,6 +1330,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
     SERVICE_OBJECTIVE = { 
          'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500' | 'DW600' 
         | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000' | 'DW3000' | 'DW6000' 
+        |'DW100c' | 'DW200c' | 'DW300c' | 'DW400c' | 'DW500c'
         | 'DW1000c' | 'DW1500c' | 'DW2000c' | 'DW2500c' | 'DW3000c' | 'DW5000c' 
         | 'DW6000c' | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
     }  
@@ -1423,7 +1424,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL-Datenbank<br />logischer Server](create-database-transact-sql.md?view=azuresqldb-current)| [SQL-Datenbank<br />Verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|  **_\* Parallel<br />Data Warehouse \*_** |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-database-transact-sql.md?view=azuresqldb-current)| [SQL-Datenbank<br />verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|  **_\* Parallel<br />Data Warehouse \*_** |
 
 &nbsp;
 

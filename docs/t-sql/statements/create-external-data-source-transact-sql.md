@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51e75f21dbaa518e344ec8c43fc8c9a087cea959
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 7f3c92067adfc0469802c81d78a7267af2cd28cc
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980006"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421197"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -167,7 +167,7 @@ Der Speicherort für Azure Data Lake Store gibt den URI für das Herstellen eine
 
 
 **SHARD_MAP_MANAGER**   
- Für SHARD_MAP_MANAGER wird der Name des logischen Servers angegeben, der den Shardzuordnungs-Manager in Azure SQL-Datenbank oder einer SQL Server-Datenbank auf einer Azure-VM hostet.
+ Für SHARD_MAP_MANAGER wird der Name des SQL-Datenbankservers angegeben, der den Shardzuordnungs-Manager in Azure SQL-Datenbank oder einer SQL Server-Datenbank auf einer Azure-VM hostet.
  
  ```
  CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
@@ -188,7 +188,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 Sie finden ein ausführliches Tutorial unter [Getting started with elastic queries for sharding (horizontal partitioning) (Erste Schritte mit elastischen Abfragen für Sharding (horizontales Partitionieren))](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/).
   
 **RDBMS**   
-Für RDBMS wird der Name des logischen Servers der Remotedatenbank in Azure SQL-Datenbank angegeben.  
+Für RDBMS wird der Name des SQL-Datenbankservers der Remotedatenbank in Azure SQL-Datenbank angegeben.  
 
 ```  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';  
@@ -404,7 +404,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ## <a name="examples-azure-sql-database"></a>Beispiele: Azure SQL-Datenbank
 
 ### <a name="e-create-a-shard-map-manager-external-data-source"></a>E. Erstellen einer externen Datenquelle für einen Shardzuordnungs-Manager
-Zur Erstellung einer externen Datenquelle, die auf SHARD_MAP_MANAGER verweist, wird der Name des logischen Servers angegeben, der den Shardzuordnungs-Manager in Azure SQL-Datenbank oder einer SQL Server-Datenbank auf einer Azure-VM hostet.
+Zur Erstellung einer externen Datenquelle, die auf SHARD_MAP_MANAGER verweist, wird der Name des SQL-Datenbankservers angegeben, der den Shardzuordnungs-Manager in Azure SQL-Datenbank oder einer SQL Server-Datenbank auf einer Azure-VM hostet.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
@@ -424,7 +424,7 @@ WITH (
 ```
 
 ### <a name="f-create-an-rdbms-external-data-source"></a>F. Erstellen einer externen RDBMS-Datenquelle
-Zur Erstellung einer externen Datenquelle, die auf RDBMS verweist, wird der Name des logischen Servers der Remotedatenbank in Azure SQL-Datenbank angegeben.
+Zur Erstellung einer externen Datenquelle, die auf RDBMS verweist, wird der Name des SQL-Datenbankservers der Remotedatenbank in Azure SQL-Datenbank angegeben.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';

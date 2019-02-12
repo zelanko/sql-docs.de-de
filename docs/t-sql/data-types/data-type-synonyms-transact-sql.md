@@ -1,7 +1,7 @@
 ---
 title: Datentypsynonyme (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 7/23/2017
+ms.date: 07/23/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -17,12 +17,12 @@ ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 482177b87fb4d62cbebb64361e0b26ed9a681c1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74fe3be365919d61a7b32587f910f083cc5e846d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816558"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034211"
 ---
 # <a name="data-type-synonyms-transact-sql"></a>Datentypsynonyme (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,23 +35,27 @@ Synonyme für Datentypen werden für die ISO-Kompatibilität in [!INCLUDE[ssNoVe
 |**char varying**|**varchar**|  
 |**character**|**char**|  
 |**character**|**char(1)**|  
-|**character(** *n* **)**|**char(n)**|  
-|**character varying(** *n* **)**|**varchar(n)**|  
+|**character(**_n_**)**|**char(n)**|  
+|**character varying(**_n_**)**|**varchar(n)**|  
 |**Dec**|**decimal**|  
 |**Double precision**|**float**|  
-|**float**[**(***n***)**] for *n* = 1-7|**real**|  
-|**float**[**(***n***)**] for *n* = 8-15|**float**|  
+|**float**[**(**_n_**)**] for _n_ = 1-7|**real**|  
+|**float**[**(**_n_**)**] for _n_ = 8-15|**float**|  
 |**integer**|**int**|  
-|**national character(** *n* **)**|**nchar(n)**|  
-|**national char(** *n* **)**|**nchar(n)**|  
-|**national character varying(** *n* **)**|**nvarchar(n)**|  
-|**national char varying(** *n* **)**|**nvarchar(n)**|  
+|**national character(**_n_**)**|**nchar(n)**|  
+|**national char(**_n_**)**|**nchar(n)**|  
+|**national character varying(**_n_**)**|**nvarchar(n)**|  
+|**national char varying(**_n_**)**|**nvarchar(n)**|  
 |**national text**|**ntext**|  
 |**timestamp**|rowversion|  
   
-Synonyme für Datentypen können in DDL-Anweisungen (Data Definition Language, Datendefinitionssprache), wie z.B. CREATE TABLE, CREATE PROCEDURE oder DECLARE *@variable*, statt der entsprechenden Basisdatentypnamen verwendet werden. Die Synonyme sind allerdings nicht sichtbar, nachdem die Objekte erstellt wurden. Wenn ein Objekt erstellt wird, wird ihm der Basisdatentyp zugewiesen, der dem Synonym zugeordnet ist. Es gibt keinen Protokolleintrag, dem entnommen werden kann, dass das Synonym in der Anweisung angegeben wurde, mit der das Objekt erstellt wurde.
+Synonyme für Datentypen können in DDL-Anweisungen (Data Definition Language, Datendefinitionssprache) statt der entsprechenden Basisdatentypnamen verwendet werden. Zu diesen Anweisungen zählen CREATE TABLE, CREATE PROCEDURE und DECLARE *@variable*. Die Synonyme sind allerdings nicht sichtbar, nachdem die Objekte erstellt wurden. Wenn ein Objekt erstellt wird, wird ihm der Basisdatentyp zugewiesen, der dem Synonym zugeordnet ist. Es gibt keinen Protokolleintrag, dem entnommen werden kann, dass das Synonym in der Anweisung angegeben wurde, mit der das Objekt erstellt wurde.
   
-Allen Objekten, die von einem Originalobjekt abgeleitet wurden, wie z. B. Spalten eines Resultsets oder Ausdrücke, ist der Basisdatentyp zugewiesen. Alle Metadatenfunktionen, die später für das Originalobjekt oder für eines der abgeleiteten Objekte ausgeführt werden, melden den Basisdatentyp, nicht das Synonym. Dieses Verhalten tritt bei Metadatenoperationen, wie z.B. **sp_help**, und bei anderen gespeicherten Systemprozeduren, den Informationsschemasichten oder den verschiedenen Datenzugriff-API-Metadatenoperationen auf, die die Datentypen von Tabellen- oder Resultsetspalten zurückgeben.
+Objekten, die von einem Originalobjekt abgeleitet wurden, wie z. B. Spalten eines Resultsets oder Ausdrücke, ist der Basisdatentyp zugewiesen. Alle Metadatenfunktionen, die das Originalobjekt oder jegliches abgeleitete Objekt verwenden, melden den Basisdatentyp, nicht das Synonym, einschließlich:
+
+* Metadatenvorgänge wie **sp_help** und andere gespeicherte Systemprozeduren,
+* Informationsschemasichten und
+* Datenzugriffs-API-Metadatenvorgänge, die die Datentypen von Tabellen- oder Resultset-Spalten melden.
   
 Sie können z. B. eine Tabelle durch Angabe von `national character varying` erstellen:
   
@@ -59,7 +63,7 @@ Sie können z. B. eine Tabelle durch Angabe von `national character varying` ers
 CREATE TABLE ExampleTable (PriKey int PRIMARY KEY, VarCharCol national character varying(10))  
 ```  
   
-`VarCharCol` wird tatsächlich ein **nvarchar(10)**-Datentyp zugewiesen, und alle später ausgeführten Metadatenfunktionen melden die Spalte als **nvarchar(10)**-Spalte. Die Metadatenfunktionen melden sie nie als **national character varying(10)**-Spalte.
+`VarCharCol` wird ein **nvarchar(10)**-Datentyp zugewiesen, und alle folgenden Metadatenfunktionen melden die Spalte als **nvarchar(10)**-Spalte. Die Metadatenfunktionen melden sie nie als **national character varying(10)**-Spalte.
   
 ## <a name="see-also"></a>Siehe auch
 [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)

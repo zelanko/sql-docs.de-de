@@ -20,22 +20,22 @@ helpviewer_keywords:
 - dropping XML schema collections
 - DROP XML SCHEMA COLLECTION statement
 ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 320c11c78f95f644e373b1cd410858a81e72edad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6dccd502689a91cd006c5f20961923ec2c740fc9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804488"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041081"
 ---
 # <a name="drop-xml-schema-collection-transact-sql"></a>DROP XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Löscht die gesamte XML-Schemaauflistung und alle zugehörigen Komponenten.  
+Löscht die gesamte XML-Schemaauflistung und alle zugehörigen Komponenten.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,16 +45,16 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *relational_schema*  
- Identifiziert den Namen des relationalen Schemas. Wenn kein Name angegeben ist, wird das relationale Standardschema verwendet.  
+*relational_schema*  
+Identifiziert den Namen des relationalen Schemas. Wenn kein Name angegeben ist, wird das relationale Standardschema verwendet.  
   
- *sql_identifier*  
- Der Name der zu löschenden XML-Schemaauflistung.  
+*sql_identifier*  
+Der Name der zu löschenden XML-Schemaauflistung.  
   
 ## <a name="remarks"></a>Remarks  
- Das Löschen einer XML-Schemaauflistung ist ein Transaktionsvorgang. Das heißt, wenn Sie eine XML-Schemaauflistung innerhalb einer Transaktion löschen und später ein Rollback für die Transaktion ausführen, wird die XML-Schemaauflistung nicht gelöscht.  
+Das Löschen einer XML-Schemaauflistung ist ein Transaktionsvorgang. Wenn Sie eine XML-Schemaauflistung innerhalb einer Transaktion löschen und später ein Rollback für die Transaktion ausführen, wird die XML-Schemaauflistung nicht gelöscht.  
   
- Eine XML-Schemaauflistung, die verwendet wird, kann nicht gelöscht werden. Das heißt, Folgendes darf für die zu löschende Auflistung nicht zutreffen:  
+Eine XML-Schemaauflistung, die verwendet wird, kann nicht gelöscht werden. Also darf für die zu löschende Auflistung keine der folgenden Bedingungen zutreffen:  
   
 -   Sie darf keinem Parameter bzw. keiner Spalte vom Typ **xml** zugeordnet sein.  
   
@@ -75,17 +75,17 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
     ```  
   
 ## <a name="permissions"></a>Berechtigungen  
- Zum Löschen von XML SCHEMA COLLECTION ist die DROP-Berechtigung für die Auflistung erforderlich.  
+Zum Löschen von XML SCHEMA COLLECTION ist die DROP-Berechtigung für die Auflistung erforderlich.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel zeigt, wie eine XML-Schemaauflistung entfernt wird.  
+Das folgende Beispiel zeigt, wie eine XML-Schemaauflistung entfernt wird.  
   
 ```  
 DROP XML SCHEMA COLLECTION ManuInstructionsSchemaCollection;  
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
  [ALTER XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   

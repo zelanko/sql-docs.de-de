@@ -21,23 +21,23 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6febad4b4bbb9de2dcec7d0c7fc93adb0403947e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7feb3a0e82a1c3737f9d8723ecd26c741b334e17
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795578"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513910"
 ---
 # <a name="checksum-transact-sql"></a>CHECKSUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 Die `CHECKSUM`-Funktion gibt den Prüfsummenwert zurück, der für eine Zeile einer Tabelle oder eine Liste mit Ausdrücken berechnet wurde. Verwenden Sie `CHECKSUM`, um Hashindizes zu erstellen.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
-```sql
+```
 CHECKSUM ( * | expression [ ,...n ] )  
 ```  
   
@@ -60,13 +60,13 @@ Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines 
  **int**  
   
 ## <a name="remarks"></a>Remarks  
-CHECKSUM berechnet aus der Liste der Argumente einen Hashwert, der Prüfsumme genannt wird. Verwenden Sie diesen Hashwert zum Erstellen von Hashindizes. Wenn die `CHECKSUM`-Funktion Spaltenargumente aufweist, ist das Ergebnis ein Hashindex, und ein Index für den berechneten CHECKSUM-Wert wird erstellt. Dieser kann für Gleichheitssuchen in den Spalten verwendet werden.
+`CHECKSUM` berechnet aus der Liste der Argumente einen Hashwert, der Prüfsumme genannt wird. Verwenden Sie diesen Hashwert zum Erstellen von Hashindizes. Wenn die `CHECKSUM`-Funktion Spaltenargumente aufweist, ist das Ergebnis ein Hashindex, und ein Index für den berechneten `CHECKSUM`-Wert wird erstellt. Dieser kann für Gleichheitssuchen in den Spalten verwendet werden.
   
-Die Funktion `CHECKSUM` erfüllt die Eigenschaften einer Hashfunktion: Wenn `CHECKSUM` auf zwei beliebige Listen mit Ausdrücken angewendet wird, wird immer derselbe Wert zurückgegeben, falls die entsprechenden Elemente der beiden Listen vom gleichen Datentyp sind und bezüglich des Vergleichs mit dem Gleichheitsoperator (=) gleich sind. NULL-Werte eines angegebenen Typs werden definiert, um zu prüfen, ob sie gleich sind (zu Zwecken der `CHECKSUM`-Funktion). Wenn sich einer der Werte in der Liste mit Ausdrücken ändert, ändert sich gewöhnlich auch die Prüfsumme der Liste. Dies ist jedoch nicht immer der Fall. Daher wird empfohlen, `CHECKSUM` nur zur Ermittlung von Änderungen der Daten zu verwenden, wenn Ihre Anwendung auch bei gelegentlich nicht ausgeführten Änderungen weiter ausgeführt werden kann. Sie sollten andernfalls in Betracht ziehen, stattdessen [HashBytes](../../t-sql/functions/hashbytes-transact-sql.md) zu verwenden. Wenn ein MD5-Hashalgorithmus angegeben ist, ist die Wahrscheinlichkeit, dass HashBytes für zwei verschiedene Eingaben dasselbe Ergebnis zurückgibt, wesentlich geringer als bei der Verwendung von CHECKSUM.
+Die Funktion `CHECKSUM` erfüllt die Eigenschaften einer Hashfunktion: Wenn `CHECKSUM` auf zwei beliebige Listen mit Ausdrücken angewendet wird, wird immer derselbe Wert zurückgegeben, falls die entsprechenden Elemente der beiden Listen vom gleichen Datentyp sind und bezüglich des Vergleichs mit dem Gleichheitsoperator (=) gleich sind. NULL-Werte eines angegebenen Typs werden definiert, um zu prüfen, ob sie gleich sind (zu Zwecken der `CHECKSUM`-Funktion). Wenn sich einer der Werte in der Liste mit Ausdrücken ändert, ändert sich gewöhnlich auch die Prüfsumme der Liste. Dies ist jedoch nicht immer der Fall. Daher wird empfohlen, `CHECKSUM` nur zur Ermittlung von Änderungen der Daten zu verwenden, wenn Ihre Anwendung auch bei gelegentlich nicht ausgeführten Änderungen weiter ausgeführt werden kann. Sie sollten andernfalls in Betracht ziehen, stattdessen `HASHBYTES` zu verwenden. Wenn ein MD5-Hashalgorithmus angegeben ist, ist die Wahrscheinlichkeit, dass `HASHBYTES` für zwei verschiedene Eingaben dasselbe Ergebnis zurückgibt, wesentlich geringer als bei der Verwendung von `CHECKSUM`.
   
-Die Ausdrucksreihenfolge wirkt sich auf den berechneten `CHECKSUM`-Wert aus. Die Spaltenreihenfolge, die bei CHECKSUM(\*) verwendet wird, ist die Spaltenreihenfolge, die in der Tabellen- oder Sichtdefinition angegeben ist. Dies schließt die berechneten Spalten ein.
+Die Ausdrucksreihenfolge wirkt sich auf den berechneten `CHECKSUM`-Wert aus. Die Spaltenreihenfolge, die bei `CHECKSUM(*)` verwendet wird, ist die Spaltenreihenfolge, die in der Tabellen- oder Sichtdefinition angegeben ist. Dies schließt die berechneten Spalten ein.
   
-Der CHECKSUM-Wert ist von der Sortierung abhängig. Der gleiche Wert gibt einen anderen CHECKSUM-Wert zurück, wenn er mit einer anderen Sortierung gespeichert ist.
+Der `CHECKSUM`-Wert ist von der Sortierung abhängig. Der gleiche Wert gibt einen anderen `CHECKSUM`-Wert zurück, wenn er mit einer anderen Sortierung gespeichert ist.
   
 ## <a name="examples"></a>Beispiele  
 In diesen Beispielen wird veranschaulicht, wie Sie mit `CHECKSUM` Hashindizes erstellen können.
@@ -75,6 +75,7 @@ Im ersten Beispiel wird eine Spalte für die berechnete Prüfsumme der zu indizi
   
 ```sql
 -- Create a checksum index.  
+
 SET ARITHABORT ON;  
 USE AdventureWorks2012;   
 GO  
@@ -91,6 +92,7 @@ In diesem Beispiel wird veranschaulicht, wie der Prüfsummenindex als Hashindex 
 /*Use the index in a SELECT query. Add a second search   
 condition to catch stray cases where checksums match,   
 but the values are not the same.*/  
+
 SELECT *   
 FROM Production.Product  
 WHERE CHECKSUM(N'Bearing Ball') = cs_Pname  
