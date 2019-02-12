@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: fb22cffa-ac99-4d34-ac4a-9c93068e33e8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 109c4eb07dd34aa5ef3e41d794edfc39ffffcac8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ca1aa4022931c78f6139a8058c05adc707af5e77
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119870"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027991"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>Erstellen von Zeitreihenvorhersagen (Data Mining-Lernprogramm für Fortgeschrittene)
   In den vorherigen Aufgaben dieser Lektion haben Sie ein Zeitreihenmodell erstellt und die Ergebnisse untersucht. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erstellt standardmäßig immer einen Satz von fünf (5) Vorhersagen für ein Zeitreihenmodell und zeigt die vorhergesagten Werte in einem Prognosediagramm an. Sie können Prognosen jedoch auch mithilfe von Data Mining Extensions (DMX)-Vorhersageabfragen erzeugen.  
@@ -178,7 +177,7 @@ ms.locfileid: "48119870"
     > [!NOTE]  
     >  Stellen Sie eine Verbindung zur Instanz der Datenbank-Engine her, in der Sie die Daten gespeichert haben, und erstellen Sie eine Abfrage, um die Tabelle anzuzeigen, die Sie erstellt haben.  
   
-## <a name="conclusion"></a>Fazit  
+## <a name="conclusion"></a>Schlussbemerkung  
  Sie können nun ein grundlegendes Zeitreihenmodell erstellen, Prognosen interpretieren und Vorhersagen erstellen.  
   
  Die verbleibenden Aufgaben in diesem Lernprogramm sind optional und beschreiben erweiterte Zeitreihenvorhersagen. Wenn Sie dieses Thema weiter verfolgen, lernen Sie, wie Sie dem Modell neue Daten hinzufügen und Vorhersagen zur erweiterten Reihe erstellen können. Sie lernen zudem, Kreuzvorhersagen durchzuführen, indem Sie den Trend im Modell verwenden und die Daten durch eine neue Datenreihe ersetzen.  

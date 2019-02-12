@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 9e1ee42d-b388-4929-89c7-8741b956c3be
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b40693cd426779f7878c1101fb57efa12ce4e6de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b6413a1cf3e25575078c2f126439cc03ca95a933
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057260"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023891"
 ---
 # <a name="setservicestate-method-wmi-msreportserverconfigurationsetting"></a>SetServiceState-Methode (WMI: MSReportServer_ConfigurationSetting)
   Aktiviert und deaktiviert den Berichtsserver-Windows-Dienst und den Berichtsserver-Webdienst.  
@@ -44,13 +44,13 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
   
 ## <a name="parameters"></a>Parameter  
  *EnableWindowsService*  
- Ein `Boolean` Wert, der angibt, des Status des Windows-Diensts. Der Wert `true` startet den Report Server-Windows-Dienst, der Wert `false` beendet den Windows-Dienst.  
+ Ein `Boolean`-Wert, der den Status des Windows-Diensts angibt. Bei dem Wert `true` wird der Windows-Dienst des Berichtsservers gestartet. Bei dem Wert `false` wird der Windows-Dienst beendet.  
   
  *EnableWebService*  
  Ein `Boolean`-Wert, der den Status des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Webdiensts angibt. Bei dem Wert `true` wird der Webdienst des Berichtsservers gestartet. Bei dem Wert `false` wird der Webdienst beendet.  
   
  *EnableReportManager*  
- Ein `Boolean` Wert, der den gewünschten Status des Berichts-Managers.  
+ Ein `Boolean`-Wert, der den gewünschten Status des Berichts-Managers angibt.  
   
  *HRESULT*  
  [out] Wert, der angibt, ob der Aufruf erfolgreich war oder zu einem Fehler geführt hat.  
@@ -64,6 +64,6 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](msreportserver-configurationsetting-members.md)  
+ [MSReportServer_ConfigurationSetting-Member](msreportserver-configurationsetting-members.md)  
   
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d0914520-30c5-4d63-9b59-8d9342ed63b9
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 517ee5ae6690e2c2cc835c3f44862545e5ea94e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e3aad13a60182b4fe040d21ce132763e55f412f3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208670"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026069"
 ---
 # <a name="first-function-report-builder-and-ssrs"></a>First-Funktion (Berichts-Generator und SSRS)
   Gibt den ersten Wert im festgelegten Bereich des angegebenen Ausdrucks zurück.  
@@ -33,10 +33,10 @@ First(expression, scope)
   
 #### <a name="parameters"></a>Parameter  
  *expression*  
- (`Variant` oder `Binary`) der Ausdruck für den die Aggregation, z. B. ausgeführt `=Fields!FieldName.Value`.  
+ (`Variant` oder `Binary`) Der Ausdruck, für den die Aggregation auszuführen ist. Beispiel: `=Fields!FieldName.Value`.  
   
  *Bereich*  
- (`String`) Optional. Der Name eines Datasets, einer Gruppe oder eines Datenbereichs mit den Berichtselementen, auf die die Aggregatfunktion anzuwenden ist. Wenn *scope* nicht angegeben ist, wird der aktuelle Bereich verwendet.  
+ (`String`) optional. Der Name eines Datasets, einer Gruppe oder eines Datenbereichs mit den Berichtselementen, auf die die Aggregatfunktion anzuwenden ist. Wenn *scope* nicht angegeben ist, wird der aktuelle Bereich verwendet.  
   
 ## <a name="return-type"></a>Rückgabetyp  
  Wird durch den Typ des Ausdrucks bestimmt.  
@@ -44,9 +44,9 @@ First(expression, scope)
 ## <a name="remarks"></a>Hinweise  
  Die `First`-Funktion gibt den ersten Wert in einem Satz von Daten zurück, nachdem alle Sortierfunktionen und Filter im angegebenen Bereich angewendet wurden.  
   
- Die `First` Funktion kann nicht in Gruppe-Filter-Ausdrücken mit beliebigen Domänen außer dem aktuellen (Standard-) Bereich verwendet werden.  
+ Die `First`-Funktion kann nur in Gruppenfilterausdrücken mit dem aktuellen (Standard-) Bereich verwendet werden.  
   
- Sie können auch `First` in einem Seitenkopf, um den ersten Wert zurückzugeben der `ReportItems` -Auflistung für eine Seite Überschriften im Wörterbuchformat zu erstellen, die den ersten und letzten Eintrag auf einer Seite anzeigen.  
+ Sie können die `First`-Funktion auch in einem Seitenkopf verwenden, um den ersten Wert der `ReportItems`-Auflistung für eine Seite zurückzugeben und Überschriften im Wörterbuchformat zu erstellen, die den ersten und den letzten Eintrag auf einer Seite anzeigen.  
   
  Der Wert des *scope* -Objekts muss eine Zeichenfolgenkonstante sein und darf kein Ausdruck sein. Für äußere Aggregate oder Aggregate, die keine anderen Aggregate angeben, muss das *scope* -Objekt auf den aktuellen Bereich oder einen enthaltenen Bereich verweisen. Bei Aggregaten von Aggregaten können geschachtelte Aggregate einen untergeordneten Bereich angeben.  
   
@@ -75,6 +75,6 @@ First(expression, scope)
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](expressions-report-builder-and-ssrs.md)   
- [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   
