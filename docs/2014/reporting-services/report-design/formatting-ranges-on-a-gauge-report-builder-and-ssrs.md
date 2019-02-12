@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: ffdec8ca-3e95-41cd-850b-9e8c83be4b49
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 82ae72d5639f4ea22e6a3762e72f65f3354d315a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: de1906afd22e5a6e33fad54e331431611d9c0998
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223020"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037961"
 ---
 # <a name="formatting-ranges-on-a-gauge-report-builder-and-ssrs"></a>Formatieren von Bereichen auf einem Messgerät (Berichts-Generator und SSRS)
   Ein Messbereich ist eine Zone oder ein Bereich auf der Messgerätskala, die oder der einen wichtigen Unterabschnitt von Werten auf dem Messgerät angibt. Mit einem Messbereich können Sie grafisch angeben, wann der Zeigerwert in eine bestimmte Wertespanne eintritt. Messbereiche sind durch einen Startwert und einen Endwert definiert.  
   
  Mithilfe von Messbereichen können Sie auch unterschiedliche Abschnitte eines Messgeräts definieren. Auf einem Messgerät mit Werten von 0 bis 10 können Sie beispielsweise einen roten Messbereich mit Werten von 0 bis 3, einen gelben Messbereich mit Werten von 4 bis 7 und einen grünen Messbereich mit Werten von 8 bis 10 definieren. Wenn der von Ihnen angegebene Startwert größer als der angegebene Endwert ist, werden die Werte ausgetauscht, sodass der Startwert als Endwert und der Endwert als Startwert verwendet wird.  
   
- Sie können den Messbereich auf dieselbe Weise wie Zeiger auf einer Skala positionieren. Die Position des Messbereichs wird von den Eigenschaften **Position** und **Abstand von Skala** bestimmt. Weitere Informationen finden Sie unter [Gauges &#40;Report Builder and SSRS&#41;](gauges-report-builder-and-ssrs.md).  
+ Sie können den Messbereich auf dieselbe Weise wie Zeiger auf einer Skala positionieren. Die Position des Messbereichs wird von den Eigenschaften **Position** und **Abstand von Skala** bestimmt. Weitere Informationen finden Sie unter [Messgeräte &#40;Berichts-Generator und SSRS&#41;](gauges-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -32,7 +32,7 @@ ms.locfileid: "48223020"
  [Formatieren von Skalen auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [Formatieren von Zeigern auf einem Messgerät (Berichts-Generator und SSRS)](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [Festlegen eines Mindestwerts oder eines Höchstwerts auf einem Messgerät (Berichts-Generator und SSRS)](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)   
- [Tutorial: Hinzufügen eines KPI zu einem Bericht (Berichts-Generator)](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
+ [Tutorial: Hinzufügen eines KPIS zu einem Bericht &#40;Berichts-Generator&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
  [Messgeräte &#40;Berichts-Generator und SSRS&#41;](gauges-report-builder-and-ssrs.md)  
   
   

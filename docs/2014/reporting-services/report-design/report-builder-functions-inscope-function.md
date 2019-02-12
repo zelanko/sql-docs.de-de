@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a8cd209a-e5d3-4dce-ab2d-f271f6c54955
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e37a25432e6e701ffd97bf95799b1a567748e1df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ecb91bd2a4b570a1e625a013270e59a121e6430a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183785"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025471"
 ---
 # <a name="inscope-function-report-builder-and-ssrs"></a>InScope-Funktion (Berichts-Generator und SSRS)
   Gibt an, ob sich die aktuelle Instanz eines Elements innerhalb des angegebenen Bereichs befindet.  
@@ -32,17 +32,17 @@ InScope(scope)
   
 #### <a name="parameters"></a>Parameter  
  *Bereich*  
- (`String`) Den Namen der ein Dataset, Datenbereich oder Gruppe, die einen Bereich angibt.  
+ (`String`) Der Name eines Datasets, eines Datenbereichs oder einer Gruppe, die einen Bereich angibt.  
   
 ## <a name="return-type"></a>Rückgabetyp  
- Gibt eine `Boolean`.  
+ Gibt einen `Boolean` zurück.  
   
 ## <a name="remarks"></a>Hinweise  
  Die `InScope` Funktion testet den Bereich für die Mitgliedschaft der aktuellen Instanz eines Berichtselements im Bereich gemäß der *Bereich*Parameter.  
   
  *Scope* darf kein Ausdruck sein.  
   
- Eine typische Verwendung für die `InScope` Funktion ist in Datenbereichen mit dynamischer Bereichsdefinierung. Z. B. `InScope` kann in einem Drillthroughlink in einer datenbereichszelle verwendet werden, um unterschiedliche Berichtsnamen und unterschiedliche Parametersätze bereitzustellen abhängig, welche Zelle geklickt wird. Dies wird im folgenden Beispiel verdeutlicht:  
+ Die `InScope`-Funktion wird üblicherweise in Datenbereichen mit dynamischer Bereichsdefinierung eingesetzt. So kann `InScope` beispielsweise in einem Drillthroughlink in einer Datenbereichszelle verwendet werden, um unterschiedliche Berichtsnamen und unterschiedliche Parametersätze bereitzustellen, je nach Zelle, auf die Sie klicken. Dies wird im folgenden Beispiel verdeutlicht:  
   
 -   Mit dem folgenden Ausdruck, der in einem Drillthroughlink als Berichtsname verwendet wird, wird der `ProductDetail` -Bericht geöffnet, wenn sich die angeklickte Zelle in der `Month` -Gruppierung befindet; andernfalls wird der `ProductSummary` -Bericht geöffnet.  
   
@@ -50,7 +50,7 @@ InScope(scope)
     =Iif(InScope("Month"), "ProductDetail", "ProductSummary")  
     ```  
   
--   Der folgende Ausdruck in verwendet die `Omit` -Eigenschaft eines Drillthroughberichts-Parameters, wird der Parameter an den Zielbericht übergeben, nur, wenn die angeklickte Zelle in ist die `Product` Gruppe.  
+-   Mit dem folgenden Ausdruck, der in der `Omit`-Eigenschaft eines Drillthroughberichts-Parameters verwendet wird, wird der Parameter nur dann an den Zielbericht übergeben, wenn sich die angeklickte Zelle in der `Product`-Gruppierung befindet.  
   
     ```  
     =Not(InScope("Product"))  
@@ -69,6 +69,6 @@ InScope(scope)
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](expressions-report-builder-and-ssrs.md)   
- [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   
