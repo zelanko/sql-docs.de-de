@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 871c6acc823606a249f0886864a84300be7f9899
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1b276f913c70619933d5f317f322fc840cc4d672
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396643"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016771"
 ---
 # <a name="create-term-based-relations"></a>Erstellen von begriffsbasierten Beziehungen
   In diesem Thema wird die Erstellung von begriffsbasierten Beziehungen für eine Domäne in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) beschrieben. Mithilfe von begriffsbasierten Beziehungen (Term-based Relation, TBR) können Sie eine Korrektur an einem Begriff vornehmen, der Teil eines Werts in einer Domäne ist. Mehrere Werte, die abgesehen von der Schreibweise eines gemeinsamen Teils identisch sind, werden als identische Synonyme angesehen. Sie können z.B. eine begriffsbasierte Beziehung einrichten, die den Begriff „Inc.“ in „Incorporated“ ändert. Der Begriff „Inc.“ wird jedes Mal geändert, wenn er in der Domäne vorkommt. Instanzen von „Contoso, Inc.“ werden in „Contoso, Incorporated“ geändert, und die beiden Werte werden als exakte Synonyme angesehen.  
@@ -99,7 +99,7 @@ ms.locfileid: "52396643"
   
 7.  Klicken Sie auf **Fertig stellen** , um die Domänenverwaltungsaktivität abzuschließen, wie in [Beenden der Domänenverwaltungsaktivität](../../2014/data-quality-services/end-the-domain-management-activity.md)beschrieben.  
   
-##  <a name="FollowUp"></a> Zur Nachverfolgung: Nach dem Erstellen von Begriffsbasierten Beziehungen  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Erstellen von Begriffsbasierten Beziehungen  
  Nachdem Sie die begriffsbasierten Beziehungen erstellt haben, können Sie andere Domänenverwaltungsaufgaben in der Domäne ausführen. Sie können die Wissensermittlung durchführen, um der Domäne Wissen hinzuzufügen, oder Sie können der Domäne eine Abgleichsrichtlinie hinzufügen. Weitere Informationen finden Sie unter [Durchführen der Wissensermittlung](../../2014/data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../../2014/data-quality-services/managing-a-domain.md) oder [Erstellen einer Abgleichsrichtlinie](../../2014/data-quality-services/create-a-matching-policy.md).  
   
   

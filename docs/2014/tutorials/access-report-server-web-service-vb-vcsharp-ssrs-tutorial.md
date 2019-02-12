@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -14,15 +13,15 @@ helpviewer_keywords:
 - Reporting Services, Web service
 - Web service [Reporting Services], tutorials
 ms.assetid: cf688163-4ac0-475b-b6dd-6f2f05b553c6
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 44a9bd204b352ee0ab891dceb65922cc877704c7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 9f8c549bef9d07f7b206f4dd8a9a652c8c72896f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366682"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015621"
 ---
 # <a name="accessing-the-report-server-web-service-using-visual-basic-or-visual-c-ssrs-tutorial"></a>Zugreifen auf den Berichtsserver-Webdienst mithilfe von Visual Basic oder Visual C# (SSRS-Lernprogramm)
   Im folgende Tutorial erfahren Sie, wie Sie eine Anwendung erstellt, mit der Berichtsserver-Webdienst zugreifen [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] oder [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)].  
@@ -52,7 +51,7 @@ ms.locfileid: "53366682"
 > [!NOTE]  
 >  Die Beispiele werden nicht automatisch beim Setup installiert. Sie können sie jedoch jederzeit installieren. Weitere Informationen zu Beispielen finden Sie unter [SQL Server Product Samples](https://go.microsoft.com/fwlink/?LinkId=182887).  
   
- **Geschätzte Zeit bis zum Abschluss des Tutorials:** 60 Minuten  
+ **Ungefähre Dauer dieses Tutorials:** 60 Minuten  
   
 ## <a name="tasks"></a>Richtlinienübersicht  
  [Lektion 1: Erstellen die Webdienst-Clientprojekts](../../2014/tutorials/lesson-1-creating-the-web-service-client-project.md)  

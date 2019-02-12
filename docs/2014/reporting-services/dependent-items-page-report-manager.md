@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f43168d9085ba513094f9cce05c16a173c260e68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 73549c4e578b65d87da4c9863f537bc898973657
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197584"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030071"
 ---
 # <a name="dependent-items-page-report-manager"></a>Abhängige Elemente (Seite) (Berichts-Manager)
   Auf der Seite Abhängige Elemente können Sie eine Liste der Berichte und Modelle anzeigen, die auf eine freigegebene Datenquelle verweisen. Das Symbol für jeden Elementtyp zeigt an, ob es sich um einen Bericht oder ein Modell handelt. Die Seite kann in der Listen- oder Detailansicht angezeigt werden. Verwenden Sie die Detailansicht, um mehr Informationen über jedes einzelne Element anzuzeigen. In der Detailansicht sind zusätzliche Seitenoptionen verfügbar. Um Ihnen bei der Verwaltung freigegebener Datenquellen zu helfen, bietet diese Seite Links zu Berichten und Modellen, die die Datenquelle verwenden, sowie Metriken, die zeigen, wann der Bericht oder das Modell zuletzt ausgeführt oder geändert wurde. Mit den Schaltflächen Löschen und Verschieben können Sie nicht mehr verwendete Berichte und Modelle bequem entfernen oder sie an einen anderen Speicherort verschieben, wenn Sie feststellen, dass sie noch immer benötigt werden.  
@@ -34,7 +34,7 @@ ms.locfileid: "48197584"
   
 4.  Wählen Sie die Registerkarte **Abhängige Elemente** aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name**  
  Zeigt den Namen des Berichts oder Modells an. Klicken Sie auf den Namen, um den Bericht zu öffnen. Klicken Sie auf den Namen des Modells, um dessen Eigenschaftenseiten zu öffnen.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48197584"
 ## <a name="see-also"></a>Siehe auch  
  [Berichts-Manager-F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Inhalt der Seite &#40;Berichts-Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Inhalt &#40;Seite, Berichts-Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Berichts-Manager (F1-Hilfe)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

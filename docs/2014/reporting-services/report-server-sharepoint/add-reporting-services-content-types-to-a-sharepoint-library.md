@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: cac75345-2380-467d-a394-0a2140908a5a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ea197ddd0c24a487d152c8c6aa9eb9e177605d5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d98e8eafeb08ab8b0d37fd6a513d2fb6eb773828
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105890"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030691"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page-reporting-services-in-sharepoint-integrated-mode"></a>Hinzufügen des Berichts-Viewer-Webparts zu einer Webseite (Reporting Services im integrierten SharePoint-Modus)
   Mithilfe des Berichts-Viewer-Webparts können Sie Berichte anzeigen, die auf einem Berichtsserver ausgeführt werden, der für die Ausführung im integrierten SharePoint-Modus konfiguriert ist. Mithilfe des Webparts können im Berichts-Generator oder Berichts-Designer erstellte und in eine Bibliothek hochgeladene Berichtsdefinitionsdateien (RDL) angezeigt werden.  

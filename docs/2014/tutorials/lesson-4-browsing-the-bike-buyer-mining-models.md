@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 8de3c500-f881-42da-a096-b6c03300d58d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f04abc5506e78e332b188cfc87c727b0000ca621
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+manager: kfile
+ms.openlocfilehash: 709df371d840d4b24e420b4fcd08750fd31e8075
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147345"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011529"
 ---
-# <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>Lektion 4: Durchsuchen des Bike Buyer-Miningmodells
-  In dieser Lektion verwenden Sie die [SELECT (DMX)](/sql/dmx/select-dmx) Anweisung zum Untersuchen des Inhalts in der Decision Tree- und clustering-Miningmodelle modelliert, die Sie im erstellten [Lektion 2: Hinzufügen von Miningmodellen, Bike Buyer-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
+# <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>Lektion 4: Durchsuchen der Bike Buyer-Miningmodells
+  In dieser Lektion verwenden Sie die [SELECT (DMX)](/sql/dmx/select-dmx) Anweisung zum Untersuchen des Inhalts in der Decision Tree- und clustering-Miningmodelle modelliert, die Sie im erstellten [Lektion 2: Hinzufügen von Miningmodellen zur der Vorhersageminingstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
   
  Die in einem Miningmodell enthaltenen Spalten entsprechen nicht den Spalten, die durch die Miningstruktur definiert werden; stattdessen handelt es sich um eine bestimmte Gruppe von Spalten, die die vom Algorithmus ermittelten Tendenzen und Muster beschreiben. Diese Miningmodellspalten werden beschrieben, der [DMSCHEMA_MINING_MODEL_CONTENT-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset) -Schemarowsets. Beispielsweise enthält die MODEL_NAME-Spalte im Schemarowset für den Inhalt den Namen des Miningmodells. Für ein Clustering-Miningmodell enthält die NODE_CAPTION-Spalte den Namen des jeweiligen Clusters und die NODE_DESCRIPTION-Spalte eine Beschreibung der Merkmale des jeweiligen Clusters. Sie können diese Spalten durchsuchen, indem Sie mit der SELECT FROM \<Modell >. Inhalt in DMX-Anweisung. Sie können diese Anweisung auch verwenden, um die zum Erstellen des Miningmodells verwendeten Daten zu durchsuchen. Drillthrough muss in der Miningstruktur aktiviert sein, um diese Anweisung verwenden zu können. Weitere Informationen zur Anweisung finden Sie unter [SELECT FROM &#60;Modell&#62;. Fällen &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx).  
   
@@ -258,6 +257,6 @@ SELECT DISTINCT [<column>]
  In der nächsten Lektion sagen Sie mithilfe des Decision Tree-Miningmodells vorher, ob potenzielle Kunden ein Fahrrad kaufen werden.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 5: Ausführen von Vorhersageabfragen](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
+ [Lesson 5: Ausführen von Vorhersageabfragen](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
   
   

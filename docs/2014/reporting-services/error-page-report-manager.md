@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8311ed32-00f3-451d-8279-946429f5fee1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 19d1fdd45018e436dddab95cfe01173ec63f794d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 43a591e8fa9f590550b53a16891f8c1880cbcf99
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511673"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029231"
 ---
 # <a name="error-page-report-manager"></a>Fehler (Seite, Berichts-Manager)
   Auf der Seite Fehler können Sie Details zu einer Fehlerbedingung anzeigen. Server-basierten oder sitzungsbasierte Fehler, die auf dieser Seite angezeigt werden. Überprüfungsfehler, die sich auf spezifische Steuerelemente der Seite beziehen, werden inline neben dem Steuerelement angezeigt.  
@@ -27,7 +27,7 @@ ms.locfileid: "52511673"
   
 -   Wenn Fehlermeldungen ähnlich der folgenden angezeigt werden, finden Sie weitere Informationen unter [Configure a Report Server for Remote Administration](report-server/configure-a-report-server-for-remote-administration.md).  
   
-     Der Computer wurde nicht gefunden. "Der RPC-Server ist nicht verfügbar. (Ausnahme von HRESULT: 0x800706BA) ".  
+     Der Computer wurde nicht gefunden. "Der RPC-Server ist nicht verfügbar. (Ausnahme von HRESULT: 0x800706BA)".  
   
 -   Sie können Servereigenschaften auf einem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] festlegen, um zusätzliche Informationen zu auf Remoteservern aufgetretenen Fehlerbedingungen zurückzugeben. Wenn eine Fehlermeldung der Text "Weitere Informationen zu diesem Fehler erhalten, navigieren Sie zum Berichtsserver auf dem lokalen Servercomputer, oder aktivieren Sie Remotefehler", finden Sie unter [Remotefehler aktivieren &#40;Reporting Services&#41;](report-server/enable-remote-errors-reporting-services.md).  
   

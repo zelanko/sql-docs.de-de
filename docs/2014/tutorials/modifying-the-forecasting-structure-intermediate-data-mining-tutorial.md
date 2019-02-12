@@ -4,25 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 1a6c138e-643b-4ae6-ad08-93631f149c20
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 559f6aa6b31b8998703a93e84dc100ce375cbda8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a86ddf0a715fc3a2313f555e898b3bd94cf66d8c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139530"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030591"
 ---
 # <a name="modifying-the-forecasting-structure-intermediate-data-mining-tutorial"></a>Ändern der Planungserstellungsstruktur (Data Mining-Lernprogramm für Fortgeschrittene)
   Die Miningstruktur, die Sie in der vorherigen Aufgabe angelegt haben, umfasst ein Forecasting-Modell. Bevor Sie das Modell verarbeiten und prüfen, müssen Sie noch die Struktur leicht verändern sowie eine der Eigenschaften modifizieren.  
   
 ## <a name="modifying-the-mining-structure"></a>Ändern der Miningstruktur  
- Die Miningstruktur ändern Sie im Data Mining-Designer auf der Registerkarte **Miningstruktur** . Wenn Sie das Modell mit dem Data Mining-Assistenten erstellt haben, werden drei Spalten verwendet: ReportingDate, ModelRegion und Menge. Allerdings die **Forecasting** Tabelle enthält auch eine Mengenspalte, die Sie auf die Vorhersage der Umsatzbeträge verwenden können. Auf der Registerkarte **Miningstruktur** können Sie diese Spalte aus der Datenquellensicht der Miningstruktur hinzufügen.  
+ Die Miningstruktur ändern Sie im Data Mining-Designer auf der Registerkarte **Miningstruktur** . Wenn Sie das Modell mit dem Data Mining-Assistenten erstellt haben, haben Sie drei Spalten verwendet: Berichtsdatum ModelRegion und Menge. Allerdings die **Forecasting** Tabelle enthält auch eine Mengenspalte, die Sie auf die Vorhersage der Umsatzbeträge verwenden können. Auf der Registerkarte **Miningstruktur** können Sie diese Spalte aus der Datenquellensicht der Miningstruktur hinzufügen.  
   
 #### <a name="to-add-the-amount-column-to-the-forecasting-mining-structure"></a>So fügen Sie der Forecasting-Miningstruktur die Spalte Amount hinzu  
   
@@ -54,7 +53,7 @@ ms.locfileid: "48139530"
  [Anpassen und Verarbeiten des Forecasting-Modells &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/customize-process-forecasting-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningstrukturen &#40;Analysis Services – Datamining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Miningmodelle &#40;Analysis Services – Datamining&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Miningmodelle &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

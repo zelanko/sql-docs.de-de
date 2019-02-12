@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: bc1c0f27-41cb-49ad-8bef-634a4c23586f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: af50422d5f293b1c3bfd58a7db6472bbf81a81d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f8f319a2bbca4a274800d72b9ef027f4852fb4a5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056160"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030111"
 ---
 # <a name="delete-group-dialog-box"></a>Gruppe löschen (Dialogfeld)
   Im Dialogfeld **Gruppe löschen** können Sie eine Gruppe aus einer Tabelle, einer Matrix oder einem Listendatenbereich löschen. Wenn dieser Gruppe Zeilen oder Spalten zugeordnet sind, können Sie diese Strukturen ebenfalls löschen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Löschen der Gruppe und verwandte Zeilen und Spalten**  
  Wählen Sie diese Option aus, um eine Gruppendefinition und alle der Gruppe zugeordneten Zeilen und Spalten zu löschen.  
   

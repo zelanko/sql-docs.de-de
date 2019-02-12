@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: d0de3f1f-4887-47fb-bacf-46aaad74c4be
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: dc026c697b07c8c16922a623dc2bce79d6cf89e4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: f161edf881b4f1157a0473eeb543d780239e5909
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531547"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030181"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Bereitstellen von Abonnements und Warnungen für SSRS-Dienstanwendungen
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements und -Datenwarnungen setzt voraus, dass der SQL Server-Agent verwendet und SQL Server-Agentberechtigungen konfiguriert werden. Wenn Fehlermeldungen darauf hinweisen, dass der SQL Server-Agent erforderlich ist und Sie den SQL Server-Agent gestartet haben, können Sie die Berechtigungen aktualisieren oder überprüfen. Dieses Thema erstreckt sich auf [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus. Es werden drei Methoden beschrieben, wie Sie SQL Server-Agentberechtigungen bei Verwendung von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements aktualisieren können. Die Anmeldeinformationen, die Sie in den Schritten dieses Themas verwenden, müssen ausreichende Berechtigungen aufweisen, um RSExecRole-Ausführungsberechtigungen für Objekte in der Dienstanwendung sowie in der msdb- und Masterdatenbank zu gewähren.  

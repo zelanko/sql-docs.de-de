@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: f87a00c79af0fdf1f2ecc164c7d14421318e052a
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 85dcae394c84a6af889dc6483e9989bc6dbe2ead
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032927"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014289"
 ---
 # <a name="building-a-knowledge-base"></a>Aufbau einer Wissensdatenbank
   Eine Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ist ein Repository des Wissens zu den Daten. Sie ermöglicht es Ihnen, die Daten zu verstehen und ihre Integrität aufrechtzuerhalten. Eine Wissensdatenbank besteht aus Domänen, die jeweils die Daten in einem Datenfeld darstellen. Die Wissensdatenbank wird von DQS zur Datenbereinigung und Deduplizierung in einer Datenbank verwendet. Um die Wissensdatenbank für die Datenbereinigung vorzubereiten, können Sie eine computergestützte Analyse eines Datenbeispiels ausführen und die Werte in den Domänen interaktiv verwalten. Mithilfe von DQS können Sie Wissen importieren, Regeln und Beziehungen erstellen, Datenwerte direkt ändern und eine Standarddatenbank verwenden.  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 88cd7f9323740df84f9123a37c69765f37fb14ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 055c0b60ae13f1933d0de753a3096f9b48786aa2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182710"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034821"
 ---
 # <a name="secure-folders"></a>Sichere Ordner
   Die Ordnersicherheit ist die Grundlage für das Sichern des gesamten Inhalts auf einem Berichtsserver. Da die Sicherheit in der Ordnerstruktur weitervererbt wird, können Sie für große oder kleine Abschnitte der Ordnerhierarchie eine bestimmte Zugriffsart zulassen.  
@@ -37,7 +37,7 @@ ms.locfileid: "48182710"
   
 |Verwendete Aufgabe|Erteilte Berechtigungen|  
 |----------------------|---------------------------|  
-|Ordner anzeigen|Anzeigen der Ordnerhierarchie und der schreibgeschützten Eigenschaften, die anzeigen, wann der Ordner erstellt und geändert wurde.<br /><br /> Benutzer können Elemente im Ordner nur anzeigen, wenn ihnen Rollen zugewiesen wurden, die auch die folgenden Aufgaben einschließen: "Berichte anzeigen", "Modelle anzeigen", "Ressourcen anzeigen" und "Datenquellen anzeigen".|  
+|Ordner anzeigen|Anzeigen der Ordnerhierarchie und der schreibgeschützten Eigenschaften, die anzeigen, wann der Ordner erstellt und geändert wurde.<br /><br /> Benutzer können nicht im Ordner "" Elemente anzeigen, es sei denn, ihnen Rollen zugewiesen sind, die auch die folgenden Aufgaben enthalten: "Berichte anzeigen", "Modelle anzeigen", "Ressourcen anzeigen" und "Datenquellen anzeigen".|  
 |Ordner verwalten|Anzeigen von Ordnereigenschaften, Ändern des Namens oder der Beschreibung oder Verschieben des Ordners an einen anderen Speicherort. Diese Aufgabe ermöglicht Benutzern das Erstellen von Ordnern.|  
 |Berichte verwalten|Hinzufügen von Berichten vom Dateisystem zu einem Ordner und Veröffentlichen von Berichten vom Berichts-Designer auf dem Berichtsserver.|  
 |Datenquellen verwalten|Hinzufügen von neuen freigegebenen Datenquellenelementen zu einem Ordner und Ändern von vorhandenen freigegebenen Datenquellen.|  

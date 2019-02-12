@@ -17,26 +17,26 @@ helpviewer_keywords:
 ms.assetid: d62159a8-ec67-4e28-a9f1-05a9250065bb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 89b1476adadf6b409d68dbf524a9352d6b7cb6ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 61f1decb93244bfd2b52718dd448ac3eb016499f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129338"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016612"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>Erstellen, Löschen oder Ändern eines Ordners (Berichts-Manager)
   Sie können Ordner erstellen, um die auf einem Berichtsserver zu veröffentlichenden Elemente zu organisieren und zu verwalten. Mit der Erstellung von Ordnern können Benutzer relevante Berichte leichter finden. Für Inhalts-Manager stellen Ordner ein Framework für die Anwendung von Berechtigungen dar. Sie können Rollenzuweisungen für bestimmte Ordner erstellen, um den Zugriff auf Berichte einzuschränken, die sich aktuell in der Entwicklung befinden oder die nur bestimmten Personen zugänglich gemacht werden sollen.  
   
 ### <a name="to-create-a-folder"></a>So erstellen Sie einen Ordner  
   
-1.  Starten Sie [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md).  
+1.  Starten Sie den [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md).  
   
 2.  Wählen Sie im Berichts-Manager den Ordner Home, und klicken Sie auf **Neuer Ordner**. Sie können einen Ordner auch unter einem vorhandenen Ordner erstellen. Navigieren Sie auf der Seite **Inhalt** zu diesem Ordner, und klicken Sie darauf, um ihn zu öffnen. Klicken Sie dann auf **Neuer Ordner**.  
   
      Die Seite **Neuer Ordner** wird geöffnet.  
   
-3.  Geben Sie einen Ordnernamen ein. Ein Ordnername kann Leerzeichen enthalten, jedoch keine reservierten Zeichen, die für die URL-Codierung verwendet werden: ; ? : \@ & = +, $ / * \< > |. Sie können keine Reihe von Ordnernamen eingeben, um mehrere Ordner gleichzeitig zu erstellen.  
+3.  Geben Sie einen Ordnernamen ein. Ein Ordnername kann Leerzeichen enthalten, jedoch keine reservierten Zeichen, die für die URL-Codierung verwendet werden: ; ? : \@ & = + , $ / * \< > |. Sie können keine Reihe von Ordnernamen eingeben, um mehrere Ordner gleichzeitig zu erstellen.  
   
 4.  Geben Sie optional eine Beschreibung ein.  
   
@@ -75,8 +75,8 @@ ms.locfileid: "48129338"
 7.  Klicken Sie auf **Anwenden** , um die Änderungen zu speichern.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Seite "Neuer Ordner" &#40;Berichts-Manager&#41;](../new-folder-page-report-manager.md)   
- [Inhalt der Seite &#40;Berichts-Manager&#41;](../contents-page-report-manager.md)   
+ [Neuer Ordner &#40;Seite, Berichts-Manager&#41;](../new-folder-page-report-manager.md)   
+ [Inhalt &#40;Seite, Berichts-Manager&#41;](../contents-page-report-manager.md)   
  [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS )](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

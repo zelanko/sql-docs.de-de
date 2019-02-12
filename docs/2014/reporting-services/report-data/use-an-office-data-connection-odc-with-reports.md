@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c40f02e86f736b96398de4bb9e3d1183de2f9c6e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 54082236bed728d81d060b73ecdc03fb53d82825
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162860"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016595"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports-reporting-services-in-sharepoint-integrated-mode"></a>Verwenden einer Office Data Connection (.odc) für Berichte (Reporting Services im integrierten SharePoint-Modus)
   Bei beschränkten Szenarien können Sie eine vorhandene Office Data Connection (.odc)-Datei verwenden, um Verbindungsinformationen für einen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Bericht bereitzustellen. Sie können beim Erstellen einer freigegebenen Datenquelle eine ODC-Datei statt einer RSDS-Datei verwenden. Eine ODC-Datei wird vom Berichtsserver auf dieselbe Weise verwendet wie eine RSDS-Datei. Die Datei wird gelesen, um den Datenquellentyp, eine Verbindungszeichenfolge und Anmeldeinformationen abzurufen.  
@@ -35,7 +35,7 @@ ms.locfileid: "48162860"
   
 -   In der ODC-Datei muss eine Verbindungszeichenfolge angegeben sein.  
   
--   Anmeldeinformationen können festgelegt werden, um `None`, `Stored`, oder `Integrated`. Wenn die Anmeldeinformationen-Methode, um festgelegt wird `Stored`, der Berichtsserver fordert den Benutzer zur Eingabe von Anmeldeinformationen nicht die gespeicherten Anmeldeinformationen. Vom Berichtsserver können wie in einer ODC-Datei definiert keine gespeicherten Anmeldeinformationen verwendet werden.  
+-   Die Anmeldeinformationen können auf `None`, `Stored` oder `Integrated` festgelegt werden. Wenn die Methode für die Anmeldeinformationen auf `Stored` festgelegt ist, wird der Benutzer vom Berichtsserver zur Eingabe seiner Anmeldeinformationen aufgefordert, und es werden nicht die gespeicherten Anmeldeinformationen verwendet. Vom Berichtsserver können wie in einer ODC-Datei definiert keine gespeicherten Anmeldeinformationen verwendet werden.  
   
 -   Die Datenquelle muss über ein Schema verfügen, das mit dem zum Erstellen des Berichts verwendeten Schema identisch ist. Wenn die Datenstrukturen unterschiedlich sind, wird der Bericht nicht ausgeführt.  
   
@@ -102,6 +102,6 @@ ms.locfileid: "48162860"
      Wenn Sie versuchen, diese Schritte für die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank und -Beispielberichte auszuführen, sollten Sie beachten, dass nur der Bericht Company Sales sofort mit einer ODC-Datei verwendet werden kann. Die anderen Beispielberichte enthalten Abfrageparameter und Funktionen, die den OLE DB-Anbieter nicht unterstützen. Sie können die Berichte jedoch für den OLE DB-Anbieter aufbereiten, wenn Sie sie zuerst im Berichts-Designer ändern.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen, ändern und Löschen von freigegebenen Datenquellen &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)  
+ [Erstellen, Ändern und Löschen von freigegebenen Datenquellen &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)  
   
   

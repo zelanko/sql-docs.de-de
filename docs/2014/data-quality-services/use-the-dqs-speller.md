@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7d3e0ab451344b443452052960c16f9ccfdc9462
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 7e043e20af78653fccfa0ed3a2b227a1023e0657
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412947"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016081"
 ---
 # <a name="use-the-dqs-speller"></a>Verwenden der DQS-Rechtschreibprüfung
   Die [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS)-Rechtschreibprüfung überprüft die Syntax, Rechtschreibung und Satzstruktur von Zeichenfolgenwerten in einer Domäne. Die Rechtschreibprüfung ist eine eigenständige, clientseitige Funktion, die nicht in serverseitige Engines integriert ist und keine Auswirkungen auf aktuelle Abläufe oder Status hat. Mit der Rechtschreibprüfung werden die Zeichenfolgenwerte identifiziert, bei denen es sich möglicherweise um Fehler handelt. Diese werden an der gleichen Stelle, an der andere manuelle Änderungen an Domänenwerten vorgenommen werden, mit einem roten Unterstrich markiert. Dazu gehören die folgenden Stellen:  
@@ -64,7 +64,7 @@ ms.locfileid: "52412947"
   
 6.  Wenn Sie den Wert dem Wörterbuch hinzufügen möchten, klicken Sie auf **Zum Wörterbuch hinzufügen**. Der Wert ist nicht mehr mit einem roten Unterstrich markiert.  
   
-##  <a name="FollowUp"></a> Zur Nachverfolgung: Nach dem Verwenden der Rechtschreibprüfung  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Verwenden der Rechtschreibprüfung  
  Nachdem Sie die Rechtschreibprüfung ausgeführt haben, schließen Sie die Aktivität ab, in der sich die Domäne befindet, um die von der Rechtschreibprüfung vorgeschlagenen Korrekturen zu verwenden. Wenn die Wissensermittlungs-, Domänenverwaltungs- oder Abgleichsrichtlinienaktivität durchgeführt wird, veröffentlichen Sie die Wissensdatenbank, um die Ergebnisse der Rechtschreibprüfung für die Verwendung in der Wissensdatenbank verfügbar zu machen. Weitere Informationen finden Sie unter [Durchführen der Wissensermittlung](../../2014/data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../../2014/data-quality-services/managing-a-domain.md) oder [Erstellen einer Abgleichsrichtlinie](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="How"></a> Funktionsweise der Rechtschreibprüfung  

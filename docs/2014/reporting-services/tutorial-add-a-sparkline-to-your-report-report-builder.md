@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: dcadf726623b71daa0f9bf3e699c6bd8ac3ab122
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 72a8778ce3edc2370c08d971703b5db09cd7f38d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376672"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016911"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Lernprogramm: Lernprogramm: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator)
   In diesem Lernprogramm erstellen Sie auf Grundlage der Beispielumsatzdaten einen einfachen Tabellenbericht und fügen anschließend einer Zelle in der Tabelle ein Sparklinediagramm hinzu.  
   
  Eine erweiterte Version des Berichts, den Sie in diesem Lernprogramm erstellen, ist als [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Berichts-Generator-Beispielbericht verfügbar. Weitere Informationen zum Herunterladen dieses Beispielberichts und anderer finden Sie unter [Beispielberichte für Berichts-Generator](https://go.microsoft.com/fwlink/?LinkId=184851). Die folgende Abbildung zeigt den Beispielbericht, der dem Bericht ähnelt, den Sie erstellen.  
   
- ![Rs_SparklineMatrixTutorial](../../2014/tutorials/media/rs-sparklinematrixtutorial.gif "Rs_SparklineMatrixTutorial")  
+ ![rs_SparklineMatrixTutorial](../../2014/tutorials/media/rs-sparklinematrixtutorial.gif "rs_SparklineMatrixTutorial")  
   
  Das Video [Vorgehensweise: Erstellen einer Sparkline in einer Tabelle (Video zu Berichts-Generator)](https://technet.microsoft.com/bi/ff871942.aspx) wird veranschaulicht, wie einen ähnlichen Bericht mit Sparklines erstellt.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "53376672"
   
 14. Die Tabelle wird der Entwurfsoberfläche hinzugefügt. Die Tabelle enthält drei Spalten und drei Zeilen.  
   
-     Betrachten Sie den Gruppierungsbereich. Wenn der Gruppierungsbereich nicht angezeigt wird, klicken Sie im Menü **Ansicht** auf **Gruppierung**. Im Zeilengruppenbereich wird eine Zeilengruppe angezeigt: **Produkt**. Im Spaltengruppenbereich wird eine Spaltengruppe angezeigt: **"Salesdate"**. Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden.  
+     Betrachten Sie den Gruppierungsbereich. Wenn der Gruppierungsbereich nicht angezeigt wird, klicken Sie im Menü **Ansicht** auf **Gruppierung**. Im Zeilengruppenbereich wird eine Zeilengruppe angezeigt: **Produkt**. Im Spaltengruppenbereich wird eine Spaltengruppe angezeigt: **SalesDate**. Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden.  
   
 15. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "53376672"
   
      Für jede Zeile entspricht die maximale Balkenlänge der jeweiligen Höhe der Zeile. Dies ist ebenfalls irreführend, da die größten Werte für jede Zeile nicht identisch sind: der größte Wert für Budget Movie-Maker ist USD 10.400, aber der größte Wert für Slim Digital beträgt USD 26.576 – mehr als doppelt so groß ist. Dennoch sind die größten Balken in diesen zwei Zeilen etwa gleich hoch. Auch das muss an die anderen Sparklines angepasst werden.  
   
-     ![Rs_SprklineMtrxUnaligndBars](../../2014/tutorials/media/rs-sprklinemtrxunaligndbars.gif "Rs_SprklineMtrxUnaligndBars")  
+     ![rs_SprklineMtrxUnaligndBars](../../2014/tutorials/media/rs-sprklinemtrxunaligndbars.gif "rs_SprklineMtrxUnaligndBars")  
   
 ##  <a name="AlignSparklines"></a> 4. Vertikales und horizontales Ausrichten der Sparklines  
  Die Sparklines sind schwierig zu lesen, wenn sie alle der gleiche Maßstab verwendet nicht. Sowohl die horizontale als auch die vertikale Achse muss mit dem Rest übereinstimmen.  

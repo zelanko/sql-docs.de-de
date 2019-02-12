@@ -15,13 +15,13 @@ f1_keywords:
 ms.assetid: fe541501-cac5-47b1-b95f-c410db789190
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d3be68007b9398b356d86cb0c1395be62c60aac0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d2c8f3d7062f0ab720767c13bb486a4060cec8ab
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166813"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016011"
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>Formatieren von Reihenfarben in einem Diagramm (Berichts-Generator und SSRS)
   Reporting Services stellt mehrere integrierte Paletten für Diagramme bereit. Außerdem können Sie eine benutzerdefinierte Palette definieren. Diagramme verwenden standardmäßig die integrierte **"leuchtendes Pastell"** Farbpalette, um die einzelnen Reihen auszufüllen. Diese Farben werden auch in der Legende angezeigt. Beim Hinzufügen mehrerer Reihen zum Diagramm erfolgt das Zuweisen von Farben zu einer Reihe durch das Diagramm anhand der Reihenfolge, in der die Farben in der Palette definiert wurden.  
@@ -57,7 +57,7 @@ ms.locfileid: "48166813"
   
 ## <a name="see-also"></a>Siehe auch  
  [Formatieren eines Diagramms &#40;Berichts-Generator und SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [Hinzufügen einer Abschrägung, Prägung und Struktur zu einem Diagramm (Berichts-Generator und SSRS)](chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
+ [Hinzufügen einer Abschrägung, Prägung und Struktur zu einem Diagramm &#40;Berichts-Generator und SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Formatieren der Legende in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](chart-legend-formatting-report-builder.md)  
   

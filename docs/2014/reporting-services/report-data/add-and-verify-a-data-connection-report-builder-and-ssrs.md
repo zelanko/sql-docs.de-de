@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1d3b2573-e29d-480d-9dde-d26379c86618
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 60c12e1ea7f184770d07fcd4af42b81ca41d13db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 731d0eb5f61bd9b9002e674a9dc276db5621591a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082016"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030561"
 ---
 # <a name="add-and-verify-a-data-connection-or-data-source-report-builder-and-ssrs"></a>Hinzufügen und Prüfen einer Datenverbindung oder Datenquelle (Berichts-Generator und SSRS)
   Im Berichts-Generator können Sie eine freigegebene Datenquelle des Berichtsservers hinzufügen oder eine eingebettete Datenquelle für Ihren Bericht erstellen. Im Berichts-Designer können Sie eine freigegebene Datenquelle oder eine eingebettete Datenquelle erstellen und sie auf einem Berichtsserver bereitstellen.  
@@ -59,7 +59,7 @@ ms.locfileid: "48082016"
   
     2.  Geben Sie eine Verbindungszeichenfolge mit einer der folgenden Möglichkeiten an:  
   
-    -   Geben Sie die Verbindungszeichenfolge direkt in das Textfeld **Verbindungszeichenfolge** ein. Eine Liste der Beispiele für Verbindungszeichenfolgen, finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
+    -   Geben Sie die Verbindungszeichenfolge direkt in das Textfeld **Verbindungszeichenfolge** ein. Eine Liste von Beispielen für Verbindungszeichenfolgen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
     -   Klicken Sie auf die Ausdrucksschaltfläche (**fx)** , um einen Ausdruck zu erstellen, der als Verbindungszeichenfolge ausgewertet wird. Geben Sie den Ausdruck im Dialogfeld **Ausdruck** in den Bereich Ausdruck ein. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -81,9 +81,9 @@ ms.locfileid: "48082016"
   
 2.  Klicken Sie auf **Verbindung testen**.  
   
-3.  Bei einer erfolgreichen Verbindung wird die folgende Meldung angezeigt: "Die Verbindung wurde erfolgreich erstellt". [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Wenn die Verbindung erfolgreich ist, wird die folgende Meldung angezeigt: "Die Verbindung wurde erfolgreich erstellt". [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-4.  Wenn die Verbindung nicht erfolgreich hergestellt werden kann, wird die folgende Meldung angezeigt: "Es konnte keine Verbindung mit der Datenquelle hergestellt werden".  
+4.  Wenn die Verbindung nicht erfolgreich ist, wird die folgende Meldung angezeigt: "Keine Verbindung mit der Datenquelle herstellen."  
   
 5.  Klicken Sie auf **Details**, und beheben Sie das Problem mithilfe der angezeigten Informationen.  
   
@@ -95,6 +95,6 @@ ms.locfileid: "48082016"
  [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](report-datasets-ssrs.md)   
  [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
+ [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen im Berichts-Generator](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   
   

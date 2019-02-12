@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ba16d9d50faaaef740f3aa4c4eaff5122fdff438
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 93a8d8b8c93dc340b4ffa0337f14478bc4bf910a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081040"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015771"
 ---
 # <a name="change-the-text-of-a-legend-item-report-builder-and-ssrs"></a>Ändern des Texts eines Legendenelements (Berichts-Generator und SSRS)
   Wenn Sie ein Feld im Wertebereich des Diagramms ablegen, wird automatisch ein Legendenelement mit dem Namen dieses Felds erstellt. Alle Legendenelemente im Diagramm sind mit jeweils einer Reihe verknüpft, mit Ausnahme von Formdiagrammen, bei denen die Legende stattdessen mit einzelnen Datenpunkten verknüpft ist.  
   
- In Formdiagrammen können Sie den Text eines Legendenelements so ändern, dass weitere Informationen zu den einzelnen Datenpunkten angezeigt werden. Z. B. wenn die Werte der Datenpunkte in der Legende als Prozentsätze angezeigt werden sollen, können ein Schlüsselwort wie z. B. `#PERCENT`. Sie können .NET Framework-Formatcodes in Verbindung mit Schlüsselwörtern anfügen, um numerische Formate und Datumsformate anzuwenden. Weitere Informationen zu Schlüsselwörtern finden Sie unter [Formatieren von Datenpunkten in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
+ In Formdiagrammen können Sie den Text eines Legendenelements so ändern, dass weitere Informationen zu den einzelnen Datenpunkten angezeigt werden. Wenn beispielsweise die Werte der Datenpunkte in der Legende als Prozentsätze angezeigt werden sollen, können Sie ein Schlüsselwort wie `#PERCENT` angeben. Sie können .NET Framework-Formatcodes in Verbindung mit Schlüsselwörtern anfügen, um numerische Formate und Datumsformate anzuwenden. Weitere Informationen zu Schlüsselwörtern finden Sie unter [Formatieren von Datenpunkten in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
  ![Sharp-Diagramm](../media/sharpchart.png "Sharp-Diagramm")  
   
@@ -57,6 +57,6 @@ ms.locfileid: "48081040"
 ## <a name="see-also"></a>Siehe auch  
  [Formatieren der Legende in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [Formatieren von Reihenfarben in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Ausblenden von Legendenelementen im Diagramm (Berichts-Generator und SSRS)](chart-legend-hide-items-report-builder.md)  
+ [Ausblenden von Legendenelementen im Diagramm &#40;Berichts-Generator und SSRS&#41;](chart-legend-hide-items-report-builder.md)  
   
   

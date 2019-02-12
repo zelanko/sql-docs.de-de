@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6e90517a-910c-4c33-8f11-92ac3cff4fdc
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 042cff6f687bb54466afb2334ad95402de319e94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef3d063db5578485e89dc18b4a5e93af800b15fe
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207110"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037731"
 ---
 # <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Aufgabe 6: Überprüfen, ob das domänenbasierte Attribut mithilfe von Master Data Manager erstellt wird
   In dieser Aufgabe überprüfen Sie mit **Master Data Manager**, ob die Entität **Bundesland** in **MDS** erstellt wird und ob das Attribut **Bundesland** der Entität **Lieferant** ein domänenbasiertes Attribut ist, das von der Entität **Bundesland** abhängig ist.  
@@ -29,7 +26,7 @@ ms.locfileid: "48207110"
   
 3.  Stellen Sie sicher, dass das Modell **Lieferanten** ausgewählt ist, und klicken Sie auf **Explorer**. Sie können die Seite aktualisieren, wenn **Explorer** bereits geöffnet ist.  
   
-4.  Bewegen Sie die Maus über **Entitäten** in der Menüleiste. Es sind nun zwei Entitäten vorhanden: **Supplier** und **State**.  
+4.  Der Mauszeiger über **Entitäten** auf der Menüleiste und nun zwei Entitäten vorhanden sind: **Lieferanten** und **Zustand**.  
   
      ![Menü "Entitäten" mit Bundesland und Lieferant](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-01.jpg "Menü \"Entitäten\" mit Bundesland und Lieferant")  
   
@@ -82,6 +79,6 @@ ms.locfileid: "48207110"
      ![Status-Attribut mit aktualisiertem Code und Namen](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-02.jpg "Attribut mit aktualisiertem Code und Namen angeben")  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 7: Anzeigen von Updates, die mit Master Data Manager in Excel durchgeführt wurden](../../2014/tutorials/task-7-viewing-updates-made-using-master-data-manager-in-excel.md)  
+ [Aufgabe 7: Anzeigen von Updates vorgenommen, mit der Master Data Manager in Excel](../../2014/tutorials/task-7-viewing-updates-made-using-master-data-manager-in-excel.md)  
   
   
