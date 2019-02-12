@@ -15,28 +15,28 @@ helpviewer_keywords:
 - logging,severity levels
 - configure severity levels
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3b4deba7e3aa788bf42be9fbd173a6b20844ac68
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c7b6476b9875b52f6961df20b750e68e5df0858c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202379"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010583"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Konfigurieren von Schweregraden für DQS-Protokolldateien
   In diesem Thema wird beschrieben, wie Schweregrade für verschiedene Aktivitäten und Module in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) mit [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]konfiguriert werden. Schweregrade definieren die Intensität von Ereignissen, die in DQS auftreten. DQS-Ereignisse verfügen über die folgenden Schweregrade, angefangen mit dem höchsten Schweregrad:  
   
--   **Schwerwiegender**: Kritische Laufzeitfehler, die schwerwiegende/unerwartete Ergebnisse verursachen können.  
+-   **Schwerwiegend:** Kritische Laufzeitfehler, die schwerwiegende/unerwartete Ergebnisse verursachen können.  
   
--   **Fehler**: Andere Laufzeitfehler.  
+-   **Fehler:** Andere Laufzeitfehler.  
   
--   **Warnhinweis anzeigen,**: Warnung vor Ereignissen, die zu einem Fehler führen können.  
+-   **Warnen:** Warnung vor Ereignissen, die zu einem Fehler führen können.  
   
--   **Info**: Informationen zu allgemeinen Ereignissen, die nicht auf einen Fehler oder eine Warnung ist. Beispiel: Ein DQS-Prozess wurde gestartet.  
+-   **Info:** Informationen zu allgemeinen Ereignissen, die weder ein Fehler noch eine Warnung sind. Beispiel: Ein DQS-Prozess wurde gestartet.  
   
--   **Debuggen von**: Detaillierte (ausführliche) Informationen zum Ereignis.  
+-   **Debuggen:** Detaillierte (ausführliche) Informationen zum Ereignis.  
   
  Indem Sie Schweregrade für verschiedene DQS-Aktivitäten und -Module konfigurieren, filtern Sie die Informationen, die protokolliert und in die DQS-Protokolldatei für die entsprechende DQS-Aktivität oder das entsprechende DQS-Modul geschrieben werden sollen. Wenn Sie z. B. den Schweregrad einer DQS-Aktivität auf **Warnen**festlegen, werden nur Warnungen und Meldungen mit einem höheren Schweregrad ("Fehler" und "Schwerwiegend") der DQS-Aktivität zugeordnet und protokolliert.  
   
@@ -54,9 +54,9 @@ ms.locfileid: "53202379"
   
 2.  Klicken Sie im [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Startbildschirm auf **Konfiguration**.  
   
-3.  Klicken Sie dann auf die Registerkarte **Protokolleinstellungen** . Die folgenden DQS-Aktivitäten sind aufgeführt, für die Sie einen Schweregrad auswählen können: **Domänenverwaltung**, **Wissensermittlung**, **Bereinigungsprojekt (z.B.) RDS)**, **Abgleichsrichtlinie und -projekt** und **RDS**.  
+3.  Klicken Sie dann auf die Registerkarte **Protokolleinstellungen** . Es werden die folgenden DQS-Aktivitäten aufgeführt, für die Sie einen Schweregrad auswählen können: **Domänenverwaltung**, **Wissensermittlung**, **Bereinigungsprojekt (z. B. RDS)**, **Abgleichsrichtlinie und -projekt** und **RDS**.  
   
-4.  Wählen Sie für eine DQS-Aktivität den Schweregrad für die Protokollierung aus. Sie können eine der folgenden auswählen: **Schwerwiegender**, **Fehler**, **warnen**, **Informationen**, und **Debuggen**. Wenn z. B. nur schwerwiegende Meldungen in die DQS-Protokolldateien für die Wissensermittlungsaktivität geschrieben werden sollen, wählen Sie für die Aktivität **Wissensermittlung** in der Dropdownliste die Option **Schwerwiegend** aus.  
+4.  Wählen Sie für eine DQS-Aktivität den Schweregrad für die Protokollierung aus. Folgende Optionen stehen zur Wahl: **Schwerwiegend**, **Fehler**, **Warnen**, **Info** und **Debuggen**. Wenn z. B. nur schwerwiegende Meldungen in die DQS-Protokolldateien für die Wissensermittlungsaktivität geschrieben werden sollen, wählen Sie für die Aktivität **Wissensermittlung** in der Dropdownliste die Option **Schwerwiegend** aus.  
   
     > [!NOTE]  
     >  Standardmäßig ist **Fehler** für jede Aktivität ausgewählt. Diese Einstellung bedeutet, dass für jede Aktivität standardmäßig Fehler und schwerwiegende Meldungen in die DQS-Protokolldateien geschrieben werden.  
@@ -80,7 +80,7 @@ ms.locfileid: "53202379"
   
 2.  Wählen Sie im angezeigten Raster aus der Dropdownliste in der Spalte **Modul** einen Modulnamen aus.  
   
-3.  Wählen Sie als Nächstes aus der Dropdownliste in der Spalte **Schweregrad** einen Schweregrad für das Modul aus. Sie können eine der folgenden auswählen: **Schwerwiegender**, **Fehler**, **warnen**, **Informationen**, und **Debuggen**.  
+3.  Wählen Sie als Nächstes aus der Dropdownliste in der Spalte **Schweregrad** einen Schweregrad für das Modul aus. Folgende Optionen stehen zur Wahl: **Schwerwiegend**, **Fehler**, **Warnen**, **Info** und **Debuggen**.  
   
      Sie können z. B. in der Domänenverwaltungsaktivität für die Funktionalitäten der Domänenregeldefinition eine Granularitätsebene festlegen, die sich von der Einstellung für die Domänenverwaltungsaktivität unterscheidet, indem Sie das Modul **Microsoft.Ssdqs.DomainRules.Define** auswählen und einen anderen Protokollschweregrad auswählen. Dementsprechend können Sie eine andere Granularitätsebene für die Funktionalität der domänenübergreifenden Regel festlegen, indem Sie das Modul **Microsoft.Ssdqs.DomainRules.Condition.CrossDomain** auswählen und einen anderen Protokollschweregrad auswählen.  
   

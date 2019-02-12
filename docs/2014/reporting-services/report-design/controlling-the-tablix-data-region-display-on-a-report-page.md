@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: cb41b6fe5e19d69c68e7942dd1581eb7792a06af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3f740965cdc0b3c17e1a889975fae72bf37a85a6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117850"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043051"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page-report-builder-and-ssrs"></a>Steuern der Tablix-Datenbereichsanzeige auf einer Berichtsseite (Berichts-Generator und SSRS)
   In diesem Thema werden die Eigenschaften für einen Tablix-Datenbereich beschrieben, die Sie modifizieren können, um die Darstellung eines Tablix-Datenbereichs bei der Anzeige des Datenbereichs in einem Bericht zu ändern.  
@@ -56,7 +56,7 @@ ms.locfileid: "48117850"
 ## <a name="controlling-how-tablix-row-and-column-groups-render"></a>Steuernd, wie Tablix-Zeilen- und -Spaltengruppen gerendert werden  
  Die Steuerung, wie ein Tablix-Datenbereich gerendert wird, hängt von den Gruppenstrukturen ab. Ein Tablix-Datenbereich kann vier Bereiche enthalten, wie in der folgenden Abbildung dargestellt:  
   
- ![Tablix-Datenbereiche](../media/rs-tablixareas.gif "Tablix-Datenbereiche")  
+ ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
   
  Der Zeilengruppenbereich und der Spaltegruppenbereich enthalten Gruppenköpfe. Wenn ein Tablix-Datenbereich Gruppenheader hat, steuern Sie, wie Zeilen und Spalten wiederholt werden, indem Sie auf der Seite **Allgemein** des Dialogfelds **Tablix-Eigenschaften** Eigenschaften festlegen.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48117850"
 ## <a name="see-also"></a>Siehe auch  
  [Verknüpfen mehrerer Datenbereiche mit einem Dataset &#40;Berichts-Generator und SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [Geschachtelte Datenbereiche &#40;Berichts-Generator und SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
- [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
+ [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
  [Steuern von Seitenumbrüchen, Überschriften, Spalten und Zeilen &#40;Berichts-Generator und SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
  [Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Tabellen (Berichts-Generator und SSRS)](tables-report-builder-and-ssrs.md)   

@@ -11,19 +11,19 @@ f1_keywords:
 - sql12.rtp.rptwizard.selectdatasource.f1
 ms.assetid: cdd84ad8-7c6a-41ac-bf51-1b0973434829
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: aa201b447d9263e32aecf7d525e9460b8c0a8b37
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 6afc3b709daf906aec429ae92da785ecff681a48
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166960"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011821"
 ---
 # <a name="select-the-data-source"></a>Auswählen der Datenquelle
   Auf dieser Seite des Berichts-Assistenten können Sie eine Datenquelle für den Bericht definieren.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Freigegebene Datenquelle**  
  Wählen Sie **Freigegebene Datenquelle** aus, um eine vordefinierte Datenquelle zu verwenden, die bereits über die zu verwendenden Datenquellen-Verbindungsinformationen verfügt. Die Liste enthält alle freigegebenen Datenquellen, die in dem Projekt enthalten sind.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "48166960"
  Geben Sie einen Namen für die Verbindung mit der Datenquelle ein. Der Datenquellenname muss innerhalb des Berichts eindeutig sein.  
   
  **Typ**  
- Wählen Sie den Typ der verwendeten Datenquelle aus (bei einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbank z.B. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]).  
+ Wählen Sie den Typ der verwendeten Datenquelle aus (bei einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank z.B. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]).  
   
  **Verbindungszeichenfolge**  
  Geben Sie eine Verbindungszeichenfolge für die Datenquelle ein. Weitere Informationen zu Verbindungszeichenfolgen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 253b4e2178f7a3e2e20d3b1263f83ff184d3b9c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b36b196f28bf029d68729c6c8e88116646829705
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051000"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010541"
 ---
 # <a name="reporting-services-backward-compatibility"></a>Abwärtskompatibilität von Reporting Services
   In diesem Abschnitt werden die Verhaltensänderungen zwischen den Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]beschrieben. Es werden Funktionen behandelt, die nicht mehr verfügbar sind oder in einer zukünftigen Version entfernt. Es werden außerdem grundlegende Änderungen am Produkt beschrieben, die bekanntermaßen eine benutzerdefinierte Anwendung unterbrechen, die die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Funktionalität enthält.  

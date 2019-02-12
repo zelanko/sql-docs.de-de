@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Bereitstellen einer Datenverarbeitungserweiterung für den Berichts-Designer | Microsoft-Dokumentation'
+title: 'Gewusst wie: Bereitstellen eine Datenverarbeitungserweiterung für Berichts-Designer | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3614e601-004e-4a16-8388-836ffd67e9dd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 242071ac3ee49932f1767d6736cba5c17993ff40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ded3d366450ab3d5ea3375bb02929b4b52337d0f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088484"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011562"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>Vorgehensweise: Bereitstellen einer Datenverarbeitungserweiterung für den Berichts-Designer
+# <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>Gewusst wie: Bereitstellen einer Datenverarbeitungserweiterung für Berichts-Designer
   Beim Entwerfen von Berichten verwendet der Berichts-Designer Datenverarbeitungserweiterungen zum Abruf und zur Verarbeitung von Daten. Sie sollten Ihre Assembly für Datenverarbeitungserweiterungen auf dem Berichts-Designer als private Assembly bereitstellen. Sie müssen auch einen Eintrag in der Konfigurationsdatei des Berichts-Designers RSReportDesigner.config vornehmen.  
   
 #### <a name="to-deploy-a-data-processing-extension-assembly"></a>So stellen Sie eine Assembly für Datenverarbeitungserweiterungen bereit  

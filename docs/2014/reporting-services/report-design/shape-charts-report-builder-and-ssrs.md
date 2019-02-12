@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 30068c028b497b00408ca87cf1e796df8ba34926
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c547558f98d514b73c4613d4e11f8694a6a7a91b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081707"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014951"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>Formdiagramme (Berichts-Generator und SSRS)
   Ein Formdiagramm zeigt Wertdaten als Prozentsatz des Ganzen an. Formdiagramme werden üblicherweise zum Anzeigen proportionaler Vergleiche zwischen verschiedenen Werten in einem Satz verwendet. Kategorien werden durch einzelne Segmente der Form dargestellt. Die Größe des Segments wird durch den Wert bestimmt. Formdiagramme werden ähnlich verwendet wie Kreisdiagramme, außer dass die Kategorien von der größten zur kleinsten angeordnet werden.  
   
- Ein Trichterdiagramm zeigt Werte als progressiv abnehmende Verhältnisse an. Die Größe eines Bereichs wird durch den Reihenwert als Prozentsatz der Summe aller Werte bestimmt. Beispielsweise lassen sich in einem Trichterdiagramm Websitebesuchertrends darstellen. Das Trichterdiagramm zeigt meist einen großen Bereich ganz oben an, der die Besuche der Startseite angibt. Die anderen Bereiche werden proportional kleiner. Weitere Informationen zum Hinzufügen von Daten zu einem Trichterdiagramm finden Sie unter [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md).  
+ Ein Trichterdiagramm zeigt Werte als progressiv abnehmende Verhältnisse an. Die Größe eines Bereichs wird durch den Reihenwert als Prozentsatz der Summe aller Werte bestimmt. Beispielsweise lassen sich in einem Trichterdiagramm Websitebesuchertrends darstellen. Das Trichterdiagramm zeigt meist einen großen Bereich ganz oben an, der die Besuche der Startseite angibt. Die anderen Bereiche werden proportional kleiner. Weitere Informationen zu Hinzufügen von Daten zu einem Trichterdiagramm finden Sie unter [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
  Die folgende Abbildung zeigt ein Beispiel für ein Trichterdiagramm.  
   

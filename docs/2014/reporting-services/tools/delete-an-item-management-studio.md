@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 57381914-3106-4dc4-acd4-7ed5b565cca6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 16ba4327d2ca82e2c85c104b1617fdea68849654
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bb19d703480532c66ff06de8c6885779652f8385
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165320"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013611"
 ---
 # <a name="delete-an-item-management-studio"></a>Löschen eines Elements (Management Studio)
   Bei der Herstellung einer Verbindung mit einer Berichtsserverinstanz in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]können Sie Rollendefinitionen und freigegebene Zeitpläne löschen. Sie können keine Berichte, Modelle oder andere Elemente auf einem Berichtsserver löschen. Verwenden Sie zum Löschen von Berichtsserverinhalt stattdessen den Berichts-Manager. Verwenden Sie alternativ bei Konfiguration des Berichtsservers für den integrierten SharePoint-Modus die Elementverwaltungsfunktionen in der SharePoint-Bibliothek, die Ihren Inhalt enthält.  
@@ -37,7 +37,7 @@ ms.locfileid: "48165320"
   
 ## <a name="see-also"></a>Siehe auch  
  [Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](connect-to-a-report-server-in-management-studio.md)   
- [Delete Catalog Items (Management Studio) (Löschen von Katalogelementen (Management Studio))](delete-catalog-items-management-studio.md)   
- [Reporting Services in SQL Server Management Studio (SSRS)](reporting-services-in-sql-server-management-studio-ssrs.md)  
+ [Katalogelemente löschen &#40;Management Studio&#41;](delete-catalog-items-management-studio.md)   
+ [Reporting Services in SQL Server Management Studio &#40;SSRS&#41;](reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

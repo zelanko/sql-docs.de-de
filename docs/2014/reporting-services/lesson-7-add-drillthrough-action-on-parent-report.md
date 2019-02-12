@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: aad2da1a-d7b1-4afa-a66a-1ff102e8306f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7e6c8547a4234c1edf4273097b53bc41661d3482
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3181cfd46cbb2eaf307a539d0b3f906d611dd19b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102650"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042531"
 ---
 # <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>Lektion 7: Hinzufügen einer Drillthroughaktion für den übergeordneten Bericht
   Nachdem Sie der Websiteanwendung ein ReportViewer-Steuerelement hinzugefügt haben, fügen Sie im nächsten Schritt eine Drillthroughaktion für den übergeordneten Bericht hinzu.  

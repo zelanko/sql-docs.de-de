@@ -2,8 +2,8 @@
 title: Sys.pdw_nodes_partitions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: aadbe305d7ad72858a46b1df2af4ef2cb0e940be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e70d11a9161461a01189bbfe69e1959eed124543
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843358"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012551"
 ---
 # <a name="syspdwnodespartitions-transact-sql"></a>sys.pdw_nodes_partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -42,13 +42,13 @@ ms.locfileid: "47843358"
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
 
-### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>Beispiel A: Anzeige Zeilen in jeder Partition in den einzelnen Verteilungen 
+### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>Beispiel A: Zeilen in jeder Partition in den einzelnen Verteilungen anzeigen 
 
 Gilt für: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
  
 Verwenden Sie zum Anzeigen der Anzahl der Zeilen in jeder Partition in den einzelnen Verteilungen [DBCC PDW_SHOWPARTITIONSTATS (SQL Server PDW)](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md) .
 
-### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>Beispiel B: verwendet Systemsichten auf Zeilen in jeder Partition der einzelnen Verteilungspunkte in einer Tabelle anzuzeigen.
+### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>Beispiel B: Systemsichten verwendet, um Zeilen in jeder Partition der einzelnen Verteilungspunkte in einer Tabelle anzuzeigen.
 
 Gilt für: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
  

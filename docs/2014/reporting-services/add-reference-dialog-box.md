@@ -12,20 +12,20 @@ f1_keywords:
 helpviewer_keywords:
 - Edit References dialog box
 ms.assetid: 7bdd2eee-195a-4a2f-a0aa-56f7e90c1fb4
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d857a936c0c1a25ff54f4b51aa6511a101e96b2d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 72c14cba8580e926eff05dbb5b7644d64e517913
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223290"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009484"
 ---
 # <a name="add-reference-dialog-box"></a>Verweis hinzufügen (Dialogfeld)
   Verwenden Sie das Dialogfeld **Verweis hinzufügen** , um Verweise auf eine benutzerdefinierte Assembly oder [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] -Komponente zum Bericht hinzuzufügen. Nach dem Hinzufügen eines Assemblyverweises können Sie Ausdrücke oder eingebetteten benutzerdefinierten Code schreiben, der vollqualifizierte Verweise auf Klassen oder Methoden in der Assembly oder Komponente enthält. Weitere Informationen finden Sie unter [Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md) und [Hinzufügen eines Assemblyverweises zu einem Bericht &#40;SSRS&#41;](report-design/add-an-assembly-reference-to-a-report-ssrs.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **.NET**  
  Verwenden Sie die Option zur Auswahl einer [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] -Komponente oder einer Assembly, die im globalen Assemblycache (GAC) installiert ist.  
   

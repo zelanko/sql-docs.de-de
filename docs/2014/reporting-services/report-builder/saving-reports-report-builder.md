@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e549fa2b443d0ec634c6d226b79bbcc33d674a3c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 01fcf6ef333a9b7c8a5c99630e6e9573f70d8059
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376132"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011232"
 ---
 # <a name="saving-reports-report-builder"></a>Speichern von Berichten (Berichts-Generator)
   Im Berichts-Generator können Sie einen Bericht auf einem Berichtsserver, in einer SharePoint-Bibliothek, in einer Dateifreigabe, für die Sie Schreibrechte haben, oder auf dem Computer speichern. Sie können einen Bericht am gleichen Speicherort speichern, an dem Sie ihn geöffnet haben, oder Sie können ihn an einem anderen Speicherort oder unter einem neuen Namen am gleichen Speicherort oder einem anderen Speicherort speichern. Standardmäßig wird ein Bericht an dem Speicherort erneut gespeichert, an dem er geöffnet wurde. Wenn Sie den Bericht speichern, speichern Sie in Wirklichkeit die Berichtsdefinition, in der das Berichtslayout beschrieben wird. Die Daten werden nicht gespeichert. Bei jeder Ausführung des Berichts werden die Berichtsdaten aktualisiert. Sie sind dann wahrscheinlich anders als bei der letzten Ausführung des Berichts.  

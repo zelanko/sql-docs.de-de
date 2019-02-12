@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7d74a60b-8933-4038-bcbb-4e9dcc4f70e9
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 53b67f363f076108a3b3add6950b14e37e0bd1ca
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: eeaebadd43fe1969ae1c728f8e2f8284ddf7f7ac
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373202"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011101"
 ---
 # <a name="task-1-creating-a-knowledge-base-and-domains"></a>Aufgabe 1: Erstellen einer Wissensdatenbank und von Domänen
   In dieser Aufgabe erstellen Sie die **Lieferanten** Wissensdatenbank und Domänen, die für die Bereinigung und Abgleich von Daten verwendet wird, um Duplikate zu entfernen.  
@@ -66,6 +63,6 @@ ms.locfileid: "53373202"
     -   PLZ  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 2: Manuelles Hinzufügen von Domänenwerten](../../2014/tutorials/task-2-adding-domain-values-manually.md)  
+ [Task 2: Manuelles Hinzufügen von Domänenwerten](../../2014/tutorials/task-2-adding-domain-values-manually.md)  
   
   

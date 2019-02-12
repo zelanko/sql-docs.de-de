@@ -11,14 +11,14 @@ f1_keywords:
 - "10421"
 ms.assetid: 7e103637-4371-43d7-821c-d269c2cc1b34
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 682b3db94bbac8e3d77b30fed90fb33885cca465
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 5821d8d747609abfc8433a3ff9ad0ecf2676be7d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183490"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011012"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-report-builder"></a>Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator
   Um Daten in einen Bericht einzuschließen, erstellen Sie Datenverbindungen und Datasets. Eine Datenverbindung schließt Informationen zum Zugreifen auf eine externe Datenquelle ein. Ein Dataset enthält einen Abfragebefehl, der angibt, welche Daten mit der Datenverbindung eingeschlossen werden sollen.  
@@ -49,21 +49,21 @@ ms.locfileid: "48183490"
   
 |**Datenquelle**|**Beispiel**|**Beschreibung**|  
 |---------------------|-----------------|---------------------|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbank auf dem lokalen Server|`data source="(local)";initial catalog=AdventureWorks2012`|Legen Sie den Datenquellentyp auf `SQL Server`.|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanzdatenbank|`Data Source=localhost\MSSQL12.InstanceName; Initial Catalog= AdventureWorks2012`|Legen Sie den Datenquellentyp auf `SQL Server`.|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express-Datenbank|`Data Source=localhost\MSSQL12.SQLEXPRESS; Initial Catalog= AdventureWorks2012`|Legen Sie den Datenquellentyp auf `SQL Server`.|  
-|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenbank auf dem lokalen Server|`data source=localhost;initial catalog=Adventure Works DW 2012`|Legen Sie den Datenquellentyp auf `SQL Server Analysis Services`.|  
-|SharePoint-Liste|`data source=http://MySharePointWeb/MySharePointSite/`|Legen Sie den Datenquellentyp auf `SharePoint List`.|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbank auf dem lokalen Server|`data source="(local)";initial catalog=AdventureWorks2012`|Legen Sie den Datenquellentyp auf `SQL Server` fest.|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanzdatenbank|`Data Source=localhost\MSSQL12.InstanceName; Initial Catalog= AdventureWorks2012`|Legen Sie den Datenquellentyp auf `SQL Server` fest.|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express-Datenbank|`Data Source=localhost\MSSQL12.SQLEXPRESS; Initial Catalog= AdventureWorks2012`|Legen Sie den Datenquellentyp auf `SQL Server` fest.|  
+|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenbank auf dem lokalen Server|`data source=localhost;initial catalog=Adventure Works DW 2012`|Legen Sie den Datenquellentyp auf `SQL Server Analysis Services` fest.|  
+|SharePoint-Liste|`data source=http://MySharePointWeb/MySharePointSite/`|Legen Sie den Datenquellentyp auf `SharePoint List` fest.|  
 ||||  
 |Berichtsmodelle|Nicht verfügbar.|Sie benötigen keine Verbindungszeichenfolge für ein Berichtsmodell. Wechseln Sie im Berichts-Generator zum Berichtsserver, und wählen Sie die SMDL-Datei aus, die das Berichtsmodell darstellt.|  
-|Oracle-Server|`data source=myserver`|Legen Sie den Datenquellentyp auf `Oracle`. Auf dem Computer mit dem Berichts-Generator und auf dem Berichtsserver müssen die Oracle-Clienttools installiert sein.|  
-|SAP NetWeaver BI-Datenquelle|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Legen Sie den Datenquellentyp auf `SAP NetWeaver BI`.|  
-|Hyperion Essbase-Datenquelle|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Legen Sie den Datenquellentyp auf `Hyperion Essbase`.|  
-|Teradata-Datenquelle|`data source=` *\<NN &GT;. \<NNN &GT;. \<NNN &GT;. \<N &GT;* `;`|Legen Sie den Datenquellentyp auf `Teradata`. Die Verbindungszeichenfolge ist eine IP-Adresse (Internet Protocol) in Form von vier Feldern, wobei jedes Feld ein bis drei Ziffern aufweisen kann.|  
+|Oracle-Server|`data source=myserver`|Legen Sie den Datenquellentyp auf `Oracle` fest. Auf dem Computer mit dem Berichts-Generator und auf dem Berichtsserver müssen die Oracle-Clienttools installiert sein.|  
+|SAP NetWeaver BI-Datenquelle|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Legen Sie den Datenquellentyp auf `SAP NetWeaver BI` fest.|  
+|Hyperion Essbase-Datenquelle|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Legen Sie den Datenquellentyp auf `Hyperion Essbase` fest.|  
+|Teradata-Datenquelle|`data source=` *\<NN>.\<NNN>.\<NNN>.\<N>* `;`|Legen Sie den Datenquellentyp auf `Teradata` fest. Die Verbindungszeichenfolge ist eine IP-Adresse (Internet Protocol) in Form von vier Feldern, wobei jedes Feld ein bis drei Ziffern aufweisen kann.|  
 |Teradata-Datenquelle|`Database=` *\<Databankname>* `; data source=` *\<NN*N *>.\<NNN>.\<NNN>.\<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|Legen Sie den Datenquellentyp auf `Teradata` fest, ähnlich dem vorherigen Beispiel. Verwenden Sie nur die Standarddatenbank, die im Datenbank-Tag angegeben wird, und ermitteln Sie nicht automatisch Datenbeziehungen.|  
-|XML-Datenquelle, Webdienst|`data source=http://adventure-works.com/results.aspx`|Legen Sie den Datenquellentyp auf `XML`. Die Verbindungszeichenfolge ist eine URL für einen Webdienst, der Webdienste-Definitionssprache (WSDL) unterstützt.|  
-|XML-Datenquelle, XML-Dokument|`http://localhost/XML/Customers.xml`|Legen Sie den Datenquellentyp auf `XML`. Die Verbindungszeichenfolge besteht aus einer URL für das XML-Dokument.|  
-|XML-Datenquelle, eingebettetes XML-Dokument|*Leer*|Legen Sie den Datenquellentyp auf `XML`. Die XML-Daten sind in der Berichtsdefinition eingebettet.|  
+|XML-Datenquelle, Webdienst|`data source=http://adventure-works.com/results.aspx`|Legen Sie den Datenquellentyp auf `XML` fest. Die Verbindungszeichenfolge ist eine URL für einen Webdienst, der Webdienste-Definitionssprache (WSDL) unterstützt.|  
+|XML-Datenquelle, XML-Dokument|`http://localhost/XML/Customers.xml`|Legen Sie den Datenquellentyp auf `XML` fest. Die Verbindungszeichenfolge besteht aus einer URL für das XML-Dokument.|  
+|XML-Datenquelle, eingebettetes XML-Dokument|*Leer*|Legen Sie den Datenquellentyp auf `XML` fest. Die XML-Daten sind in der Berichtsdefinition eingebettet.|  
   
  Weitere Informationen zu jedem Verbindungstyp finden Sie unter [Hinzufügen von Daten aus externen Datenquellen &#40;SSRS&#41; ](report-data/add-data-from-external-data-sources-ssrs.md) und [von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   

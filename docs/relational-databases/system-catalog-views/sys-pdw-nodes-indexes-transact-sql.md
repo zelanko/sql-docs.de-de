@@ -1,9 +1,9 @@
 ---
-title: Sys.pdw_nodes_indexes (Transact-SQL) | Microsoft-Dokumentation
+title: sys.pdw_nodes_indexes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1eb00d935eccd8f6af4d4ffef1c01fe42824f355
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c13e41abea44bdbe0f954518f42aab118360a155
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856408"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012381"
 ---
 # <a name="syspdwnodesindexes-transact-sql"></a>sys.pdw_nodes_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -41,10 +41,10 @@ ms.locfileid: "47856408"
 |is_padded|**bit**|0 = PADINDEX ist OFF.|Immer 0.|  
 |is_disabled|**bit**|1 = Der Index ist deaktiviert.<br /><br /> 0 = Der Index ist nicht deaktiviert.||  
 |is_hypothetical|**bit**|0 = Der Index ist nicht hypothetisch.|Immer 0.|  
-|allow_row_locks|**bit**|1 = Der Index lässt Zeilensperren zu.|Immer 1.|  
-|allow_page_locks|**bit**|1 = Der Index lässt Seitensperren zu.|Immer 1.|  
+|allow_row_locks|**bit**|1 = Der Index lässt Zeilensperren zu.|Always 1.|  
+|allow_page_locks|**bit**|1 = Der Index lässt Seitensperren zu.|Always 1.|  
 |has_filter|**bit**|0 = Index hat keinen Filter.|Immer 0.|  
-|filter_definition|**nvarchar(max)**|Ausdruck für die Teilmenge von Zeilen, die im gefilterten Index enthalten sind.|Immer NULL.|  
+|filter_definition|**nvarchar(max)**|Ausdruck für die Teilmenge von Zeilen, die im gefilterten Index enthalten sind.|Always NULL.|  
 |pdw_node_id|**int**|Der eindeutige Bezeichner des eine [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Knoten.|NOT NULL|  
   
 ## <a name="permissions"></a>Berechtigungen  

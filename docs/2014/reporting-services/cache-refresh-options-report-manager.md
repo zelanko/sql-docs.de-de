@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e1fb1f7f249d8252873eb7ecc879aac05fb496b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b759391592a84d0509a8036277ccb6e0cc92a279
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081550"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011502"
 ---
 # <a name="cache-refresh-options-report-manager"></a>Optionen zur Cacheaktualisierung (Berichts-Manager)
   Verwenden Sie die Seite Optionen zur Cacheaktualisierung, um Zeitpläne zum Vorabladen des Caches mit temporären Datenkopien für einen Bericht oder ein freigegebenes Dataset zu erstellen. Ein Aktualisierungsplan enthält einen Zeitplan und bietet die Möglichkeit, Werte für Parameter anzugeben oder zu überschreiben. Bei einem freigegebenen Dataset können keine Werte für Parameter überschrieben werden, die als schreibgeschützt gekennzeichnet sind. Sie können auf der Seite mit den Aktualisierungsoptionen auch mehrere Aktualisierungspläne erstellen und verwenden.  
@@ -66,12 +66,12 @@ ms.locfileid: "48081550"
  **Konfigurieren**  
  Klicken Sie auf diese Schaltfläche, um die Seite Zeitplan zu öffnen, auf der Sie Angaben zur Häufigkeit machen können.  
   
- Weitere Informationen finden Sie unter [neuer Zeitplan: Bearbeiten der Zeitplanseite &#40;Berichts-Manager&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md).  
+ Weitere Informationen finden Sie unter [neuer Zeitplan: Seite "Zeitplan" Edit &#40;Berichts-Manager&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md).  
   
  **Freigegebenen Zeitplan**  
  Aktivieren Sie diese Option, um einen vorhandenen Zeitplan auszuwählen.  
   
- Weitere Informationen finden Sie unter [erstellen, ändern und Löschen von Zeitplänen](subscriptions/create-modify-and-delete-schedules.md).  
+ Weitere Informationen finden Sie unter [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md).  
   
  **@\<** *Parameter* **>**  
  Geben Sie eine Kombination von Parameterwerten an. Dieser Abschnitt wird nur angezeigt, wenn das aktuelle Dataset oder der aktuelle Bericht über Parameter verfügt.  

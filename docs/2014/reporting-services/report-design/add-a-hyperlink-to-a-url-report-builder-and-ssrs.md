@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1219998db8ec07de6e03aa14b3aefaee6515e235
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 2dae0498da8fe1387b6b082d7cc6ae37af27d464
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366172"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010191"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Hinzufügen eines Links zu einer URL (Berichts-Generator und SSRS)
   Sie können einem Berichtselement einen Hyperlink hinzufügen, wenn Benutzer in der Lage sein sollen, in einem Bericht auf einen Link zu klicken und einen Browser mit der von Ihnen angegebenen URL zu öffnen. Ein Link kann eine statische URL sein oder ein Ausdruck, der zu einer URL ausgewertet wird. Wenn ein Feld in einer Datenbank URLs enthält, kann der Ausdruck dieses Feld enthalten, wodurch eine dynamische Liste von Links in dem Bericht entsteht. Links können Textfeldern, Bildern, Diagrammen und Messgeräten hinzugefügt werden. Sie müssen sicherstellen, dass der Benutzer Zugriff auf die URL hat, die Sie bereitstellen.  
@@ -28,7 +28,7 @@ ms.locfileid: "53366172"
   
  Ein Link zu einer URL kann jedem Element hinzugefügt werden, das über eine **Action** -Eigenschaft verfügt, z. B. ein Textfeld, ein Bild oder eine berechnete Reihe in einem Diagramm. Wenn der Benutzer auf das Berichtselement klickt, wird die von Ihnen definierte Aktion ausgeführt. Weitere Informationen finden Sie unter [Aktionseigenschaften &#40;Dialogfeld, Berichts-Generator und SSRS&#41;](../action-properties-dialog-box-report-builder-and-ssrs.md) und [Angeben von Pfaden zu externen Elementen &#40;Berichts-Generator und SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   
- Zum schnellen Einstieg finden Sie unter [Lernprogramm: Formatieren von Text &#40;Berichts-Generator&#41;](../tutorial-format-text-report-builder.md).  
+ Eine schnelle Einführung finden Sie unter [Tutorial: Formatieren von Text &#40;Berichts-Generator&#41;](../tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  Links, die an Datasetfelder gebunden sind, sind unter Umständen anfällig für böswillige Manipulationen. Weitere Informationen finden Sie unter [Sichern von Berichten und Ressourcen](../security/secure-reports-and-resources.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[Onlinedokumentation](https://go.microsoft.com/fwlink/?LinkId=154888) auf msdn.microsoft.com.  

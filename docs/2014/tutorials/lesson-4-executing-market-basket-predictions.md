@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b3238f1b-ea04-4253-ade2-838a806b62fe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6db486a5d497ba6b6c5bfe312197d78a5656d388
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3b49fc242eb8b2242269c5af33cc094937bbe0de
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177495"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041431"
 ---
 # <a name="lesson-4-executing-market-basket-predictions"></a>Lektion 4: Ausführen von Warenkorbvorhersagen
-  In dieser Lektion verwenden Sie die DMX `SELECT` Anweisung zum Erstellen von Vorhersagen auf Grundlage der Zuordnung modelliert, die Sie in erstellt [Lektion 2: Hinzufügen von Miningmodellen, die Market Basket-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Eine Vorhersageabfrage wird unter Verwendung der DMX `SELECT`-Anweisung unter Hinzufügung einer `PREDICTION JOIN`-Klausel erstellt. Weitere Informationen zur Syntax eines Prediction Joins finden Sie unter [SELECT FROM &#60;Modell&#62; PREDICTION JOIN &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx).  
+  In dieser Lektion verwenden Sie die DMX `SELECT` Anweisung zum Erstellen von Vorhersagen auf Grundlage der Zuordnung modelliert, die Sie in erstellt [Lektion 2: Hinzufügen von Miningmodellen zur Market Basket-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Eine Vorhersageabfrage wird unter Verwendung der DMX `SELECT`-Anweisung unter Hinzufügung einer `PREDICTION JOIN`-Klausel erstellt. Weitere Informationen zur Syntax eines Prediction Joins finden Sie unter [SELECT FROM &#60;Modell&#62; PREDICTION JOIN &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx).  
   
  Die **SELECT FROM \<Model > PREDICTION JOIN** Form der `SELECT` Anweisung besteht aus drei Teilen:  
   
@@ -81,7 +80,7 @@ SELECT <select list> FROM [<mining model>]
   
 1.  In **Objekt-Explorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX** um den Abfrage-Editor zu öffnen.  
   
-2.  Kopieren Sie das allgemeine Beispiel der `PREDICTION JOIN` -Anweisung in die leere Abfrage.  
+2.  Kopieren Sie das Standardbeispiel der `PREDICTION JOIN`-Anweisung in die leere Abfrage.  
   
 3.  Ersetzen Sie Folgendes:  
   
@@ -147,7 +146,7 @@ SELECT <select list> FROM [<mining model>]
   
 8.  Klicken Sie auf der Symbolleiste auf die **Execute** Schaltfläche.  
   
-     Die Abfrage gibt eine Tabelle zurück, die drei Produkte enthält: HL Mountain Tire, Fender Set - Mountain und ML Mountain Tire. In der Tabelle werden diese zurückgegebenen Produkte in der Reihenfolge ihrer Wahrscheinlichkeit aufgeführt. Das zurückgegebene Produkt, dessen Wahrscheinlichkeit, zusammen mit den in der Abfrage angegebenen drei Produkten in den gleichen Warenkorb eingefügt zu werden, am höchsten ist, wird an der Spitze der Tabelle angezeigt. Die folgenden zwei Produkte besitzen die nächsthöhere Wahrscheinlichkeit, in den Warenkorb eingefügt zu werden. Die Tabelle enthält zudem statistische Informationen, die die Genauigkeit der Vorhersage beschreiben.  
+     Die Abfrage gibt eine Tabelle mit drei Produkte zurück: HL Mountain Tire, Fender Set – Mountain und ML Mountain Tire. In der Tabelle werden diese zurückgegebenen Produkte in der Reihenfolge ihrer Wahrscheinlichkeit aufgeführt. Das zurückgegebene Produkt, dessen Wahrscheinlichkeit, zusammen mit den in der Abfrage angegebenen drei Produkten in den gleichen Warenkorb eingefügt zu werden, am höchsten ist, wird an der Spitze der Tabelle angezeigt. Die folgenden zwei Produkte besitzen die nächsthöhere Wahrscheinlichkeit, in den Warenkorb eingefügt zu werden. Die Tabelle enthält zudem statistische Informationen, die die Genauigkeit der Vorhersage beschreiben.  
   
 ## <a name="create-a-prediction-by-using-a-model-with-a-minimumprobability-of-001"></a>Erstellen einer Vorhersage durch Verwenden eines Modells mit dem MINIMUM_PROBABILITY-Wert 0,01  
   
@@ -155,7 +154,7 @@ SELECT <select list> FROM [<mining model>]
   
 1.  In **Objekt-Explorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX** um den Abfrage-Editor zu öffnen.  
   
-2.  Kopieren Sie das allgemeine Beispiel der `PREDICTION JOIN` -Anweisung in die leere Abfrage.  
+2.  Kopieren Sie das Standardbeispiel der `PREDICTION JOIN`-Anweisung in die leere Abfrage.  
   
 3.  Ersetzen Sie Folgendes:  
   
@@ -219,7 +218,7 @@ SELECT <select list> FROM [<mining model>]
   
 8.  Klicken Sie auf der Symbolleiste auf die **Execute** Schaltfläche.  
   
-     Die Abfrage gibt eine Tabelle zurück, die drei Produkte enthält: HL Mountain Tire, Water Bottle und Fender Set - Mountain. In der Tabelle werden diese Produkte in der Reihenfolge ihrer Wahrscheinlichkeit aufgeführt. Das Produkt, das an der Spitze der Tabelle angezeigt wird, besitzt die höchste Wahrscheinlichkeit, zusammen mit den in der Abfrage angegebenen drei Produkten in den gleichen Warenkorb eingefügt zu werden. Die restlichen Produkte besitzen die nächsthöhere Wahrscheinlichkeit, in den Warenkorb eingefügt zu werden. Die Tabelle enthält auch Statistiken, die die Genauigkeit der Vorhersage beschreiben.  
+     Die Abfrage gibt eine Tabelle mit drei Produkte zurück: HL Mountain Tire, Water Bottle und Fender Set – Mountain. In der Tabelle werden diese Produkte in der Reihenfolge ihrer Wahrscheinlichkeit aufgeführt. Das Produkt, das an der Spitze der Tabelle angezeigt wird, besitzt die höchste Wahrscheinlichkeit, zusammen mit den in der Abfrage angegebenen drei Produkten in den gleichen Warenkorb eingefügt zu werden. Die restlichen Produkte besitzen die nächsthöhere Wahrscheinlichkeit, in den Warenkorb eingefügt zu werden. Die Tabelle enthält auch Statistiken, die die Genauigkeit der Vorhersage beschreiben.  
   
      Auf sehen Sie die Ergebnisse dieser Abfragen, die den Wert des der *MINIMUM_PROBABILITY* Parameter wirkt sich auf die von der Abfrage zurückgegebenen Ergebnisse.  
   
@@ -228,7 +227,7 @@ SELECT <select list> FROM [<mining model>]
  Verwendung von DMX in einem anderen vorhersageszenario finden Sie unter [Bike Buyer DMX Tutorial](../../2014/tutorials/bike-buyer-dmx-tutorial.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Zuordnungsmodellabfragen](../../2014/analysis-services/data-mining/association-model-query-examples.md)   
+ [Beispiele für Zuordnungsmodellabfragen](../../2014/analysis-services/data-mining/association-model-query-examples.md)   
  [Schnittstellen für Data Mining-Abfragen](../../2014/analysis-services/data-mining/data-mining-query-tools.md)  
   
   

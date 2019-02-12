@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Lernprogramm: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 25d3fafc654ab1c272d7688e49d67cd2af5d1820
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0b21826cb926dbd5f8b0315f490b20850c6ccd23
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106800"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041421"
 ---
-# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)
   In einem Balkendiagramm werden Kategoriedaten horizontal angezeigt. Diese Darstellung bietet folgende Vorteile:  
   
 -   Bessere Lesbarkeit langer Kategorienamen  
@@ -29,7 +29,7 @@ ms.locfileid: "48106800"
   
  Die folgende Abbildung zeigt das zu erstellende Balkendiagramm mit den Umsätzen der fünf besten Vertriebsmitarbeiter für die Jahre 2008 und 2009 in alphabetischer Reihenfolge.  
   
- ![Rs_BarChartTutorial](../../2014/tutorials/media/rs-barcharttutorial.gif "Rs_BarChartTutorial")  
+ ![rs_BarChartTutorial](../../2014/tutorials/media/rs-barcharttutorial.gif "rs_BarChartTutorial")  
   
 ##  <a name="BackToTop"></a> Lernziele  
  In diesem Lernprogramm lernen Sie Folgendes:  
@@ -55,9 +55,9 @@ ms.locfileid: "48106800"
 10. [Speichern des Berichts](#Save)  
   
 > [!NOTE]  
->  In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Erstellen eines Datasets und zum Auswählen einer Datenquelle finden Sie im ersten Tutorial dieser Reihe unter [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Schrittweise Anweisungen zum Navigieren zu einem Berichtsserver her erstellen Sie ein Dataset, und wählen Sie eine Datenquelle, finden Sie im erste Lernprogramm dieser Reihe: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
- Geschätzte Zeit zum Bearbeiten dieses Tutorials: 15 Minuten.  
+ Ungefähre Dauer dieses Lernprogramms: 15 Minuten.  
   
 ## <a name="requirements"></a>Anforderungen  
  Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).  
@@ -294,7 +294,7 @@ ms.locfileid: "48106800"
   
 5.  Klicken Sie auf **Hinzufügen**. Ein neuer leerer Filter wird angezeigt.  
   
-6.  In **Ausdruck**, Typ **[Sum(SalesYear2009)]**. Dies erstellt den zugrunde liegenden Ausdruck `=Sum(Fields!SalesYear2009.Value)`, die Sie sehen können, wenn Sie auf die **fx** Schaltfläche.  
+6.  In **Ausdruck**, Typ **[Sum(SalesYear2009)]**. Dadurch wird der zugrunde liegende Ausdruck `=Sum(Fields!SalesYear2009.Value)`erstellt, der durch Klicken auf die Schaltfläche **fx** angezeigt wird.  
   
 7.  Überprüfen Sie, ob der Datentyp gleich **Text**ist.  
   

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2a88ea46-c9f8-4dd7-aad1-16de11da4f06
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3d75fed63f44e0371b81fbd7309a0a3f826543b5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 24457cb6a471b91666f4eb0792e1c8fa186eaf42
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401053"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011831"
 ---
 # <a name="custom-report-item-architecture"></a>Architektur des benutzerdefinierten Berichtselements
   Ein benutzerdefiniertes Berichtselement ist eine Erweiterung von RDL (Report Definition Language), mit dem Entwickler Funktionen hinzufügen können, die ursprünglich nicht in RDL unterstützt werden oder mit denen die Funktionen bestehender Steuerelemente erweitert werden. Es gibt zwei Hauptkomponenten in einem benutzerdefinierten Berichtselement: die Laufzeitkomponente und die Entwurfszeitkomponente. Diese Komponenten sind als [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Assemblys implementiert und können in jeder CLS-konformen Sprache geschrieben werden.  
@@ -37,6 +37,6 @@ ms.locfileid: "52401053"
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen einer Laufzeitkomponente für ein benutzerdefiniertes Berichtselement](../custom-report-items/creating-a-custom-report-item-run-time-component.md)   
  [Erstellen einer Entwurfszeitkomponente für ein benutzerdefiniertes Berichtselement](../custom-report-items/creating-a-custom-report-item-design-time-component.md)   
- [So wird es gemacht: Bereitstellen eines benutzerdefinierten Berichtselements](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [Vorgehensweise: Bereitstellen eines benutzerdefinierten Berichtselements](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   

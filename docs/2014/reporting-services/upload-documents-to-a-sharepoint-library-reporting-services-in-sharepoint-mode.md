@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 93bd1b19-061b-409f-8dc2-ec416b2f4b39
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5cfb22d29120f7ee27e378329045c79f57252d61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c5534c1946cc07e35f64ab3baf3654a589a60706
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194290"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017151"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>Hochladen von Dokumenten in eine SharePoint-Bibliothek (Reporting Services im SharePoint-Modus)
   Sie können Berichtsdefinitionen und Berichtsmodelle in eine SharePoint-Bibliothek hochladen. Beim Hochladen eines Berichtsserverelements müssen Sie eine Bibliothek oder einen Ordner innerhalb der Bibliothek auswählen. Sie können ein Berichtsserverelement nicht in eine Liste oder auf eine Seite hochladen.  
@@ -28,7 +28,7 @@ ms.locfileid: "48194290"
  Sie können keine Datenquellendatei (.rds) hochladen. Sie können RDS-Dateien jedoch aus einem Designtool wie dem Berichts-Designer in eine SharePoint-Bibliothek hochladen. Während der Veröffentlichung wird aus der ursprünglichen RDS-Datei im Projekt eine neue RSDS-Datei erstellt. Sie können auch eine neue RSDS-Datei in einer SharePoint-Bibliothek erstellen und Datenquellen-Verbindungseigenschaften in den hochgeladenen Berichten und Modellen festlegen, um die neue Verbindung zu verwenden.  
   
 > [!NOTE]  
->  Der Berichtsserver muss für den SharePoint-Modus konfiguriert sein, und die Instanz des SharePoint-Produkts muss über das [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Add-In verfügen, das Programmdateien zum Speichern und Aufrufen von Berichtsserverelementen über eine SharePoint-Website bereitstellt.  
+>  Der Berichtsserver muss für den SharePoint-Modus konfiguriert sein, und die Instanz des SharePoint-Produkts muss über das [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Add-In verfügen, das Programmdateien zum Speichern und Aufrufen von Berichtsserverelementen über eine SharePoint-Website bereitstellt.  
   
  Sie müssen auf der Websiteebene über die Berechtigung zum Hinzufügen von Elementen verfügen, um ein Dokument in eine Bibliothek hochzuladen. Wenn Sie Standardsicherheitseinstellungen verwenden, wird diese Berechtigung Mitgliedern der Gruppe **Besitzer** erteilt, die über Berechtigungen für den Vollzugriff verfügen, und der Gruppe **Mitglieder** , die über Berechtigungen vom Typ Teilnahme verfügen.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48194290"
   
 ## <a name="see-also"></a>Siehe auch  
  [Veröffentlichen eines Berichts in einer SharePoint-Bibliothek](reports/publish-a-report-to-a-sharepoint-library.md)   
- [Publish a Shared Data Source to a SharePoint Library (Veröffentlichen einer freigegebenen Datenquelle in einer SharePoint-Bibliothek)](reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
- [Granting Permissions on Report Server Items on a SharePoint Site (Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website)](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
+ [Veröffentlichen einer freigegebenen Datenquelle in einer SharePoint-Bibliothek](reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
+ [Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   

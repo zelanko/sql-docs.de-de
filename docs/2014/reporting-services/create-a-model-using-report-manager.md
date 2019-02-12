@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 8e5d2bd3-48ec-45f3-afee-6d86797c8f28
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 781a9f469692f26cc7742920935531f6cb0f2353
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: adbcaf8bdbae605941422a4e5b6d3df9ed7031f2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064850"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010442"
 ---
 # <a name="create-a-model-using-report-manager"></a>Erstellen eines Modells mithilfe des Berichts-Managers
   Mithilfe des Berichts-Managers können Sie Modelle auf der Grundlage eines [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Cubes, einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank oder einer Oracle-Datenbank generieren. Berichtsmodelle werden aus freigegebenen Datenquellen generiert, die auf dem Berichtsserver veröffentlicht werden. Wenn Sie noch nicht über eine freigegebene Datenquelle verfügen, müssen Sie sie erstellen.  
@@ -41,15 +41,15 @@ ms.locfileid: "48064850"
   
 5.  Überprüfen Sie, ob das Kontrollkästchen **Diese Datenquelle aktivieren** aktiviert ist.  
   
-6.  Wählen Sie in der Liste **Verbindungstyp** den Typ der Datenquelle aus, mit der Sie eine Verbindung herstellen möchten. Als Verbindungstyp muss einer der folgenden angegeben werden: **Oracle**, **Microsoft SQL Server** oder **Microsoft SQL Server Analysis Services**.  
+6.  Wählen Sie in der Liste **Verbindungstyp** den Typ der Datenquelle aus, mit der Sie eine Verbindung herstellen möchten. Der Verbindungstyp muss einer der folgenden sein: **Oracle**, **Microsoft SQL Server** oder **Microsoft SQL Server Analysis Services**.  
   
 7.  Geben Sie im Feld **Verbindungszeichenfolge** die Verbindungszeichenfolge ein, die auf die Datenbank zeigt.  
   
 8.  Wählen Sie die Verbindungsmethode aus, die Benutzer des Berichts-Generators zum Herstellen der Verbindung mit der Datenbank verwenden müssen.  
   
-    -   Windows-Authentifizierung: Wählen Sie diese Option aus, wenn [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Benutzer vom Betriebssystem authentifiziert werden sollen. Diese Option ermöglicht es [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , Sicherheitsfunktionen von Windows, z. B. die Kennwortverschlüsselung, für die Authentifizierung von Benutzern zu verwenden. Es wird nachdrücklich empfohlen, diese Option auszuwählen.  
+    -   Windows-Authentifizierung: Wählen Sie diese Option aus, wenn Sie möchten, dass das Betriebssystem zur Authentifizierung [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Benutzer. Diese Option ermöglicht es [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , Sicherheitsfunktionen von Windows, z. B. die Kennwortverschlüsselung, für die Authentifizierung von Benutzern zu verwenden. Es wird nachdrücklich empfohlen, diese Option auszuwählen.  
   
-    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentifizierung: Wählen Sie diese Option, wenn die Benutzer verwenden sollen eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Anmeldekonto, das Sie erstellt haben. Die Benutzer müssen einen gültigen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anmeldenamen und ein Kennwort angeben.  
+    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentifizierung: Wählen Sie diese Option aus, wenn die Benutzer verwenden sollen eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Anmeldekonto, das Sie erstellt haben. Die Benutzer müssen einen gültigen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anmeldenamen und ein Kennwort angeben.  
   
         > [!CAUTION]  
         >  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung.  

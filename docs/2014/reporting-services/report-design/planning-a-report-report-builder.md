@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1de13a23edc8a248008dcdad415e58e108e9d0e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c13019d5845e0c580b28fef750683044d344a9ab
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202030"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017281"
 ---
 # <a name="planning-a-report-report-builder"></a>Planen eines Berichts (Berichts-Generator)
   Mit dem Berichts-Generator können viele Arten von Berichten erstellt werden. Sie können beispielsweise Berichte erstellen, die zusammenfassende oder detaillierte Umsatzdaten, Marketing- und Umsatztrends sowie Betriebsberichte oder Dashboards enthalten. Sie können auch Berichte erstellen, die umfassend formatierten Text nutzen, beispielsweise für Bestellungen, Produktkataloge oder Serienbriefe. All diese Berichte werden mit unterschiedlichen Kombinationen derselben grundlegenden Bausteine im Berichts-Generator erstellt. Das Erstellen eines sinnvollen, verständlichen Berichts erfordert zunächst eine sorgfältige Planung. Bevor Sie beginnen, sollten Sie Folgendes beachten:  
@@ -38,7 +38,7 @@ ms.locfileid: "48202030"
   
 -   **Welche Daten sollen die Leser sehen? Sollen die Daten oder das Format für unterschiedliche Zielgruppen gefiltert werden?**  
   
-     Sie können den Geltungsbereich des Berichts auf bestimmte Benutzer oder Speicherorte bzw. auf einen bestimmten Zeitraum eingrenzen. Zum Filtern der Berichtsdaten verwenden Sie Parameter, um nur die gewünschten Daten abzurufen und anzuzeigen. Weitere Informationen finden Sie unter [Report Parameters &#40;Report Builder and Report Designer&#41;](report-parameters-report-builder-and-report-designer.md).  
+     Sie können den Geltungsbereich des Berichts auf bestimmte Benutzer oder Speicherorte bzw. auf einen bestimmten Zeitraum eingrenzen. Zum Filtern der Berichtsdaten verwenden Sie Parameter, um nur die gewünschten Daten abzurufen und anzuzeigen. Weitere Informationen finden Sie unter [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](report-parameters-report-builder-and-report-designer.md)" basiert.  
   
 -   **Müssen Sie eigene Berechnungen erstellen?**  
   
@@ -50,11 +50,11 @@ ms.locfileid: "48202030"
   
 -   **Wie soll der Bericht übermittelt werden?**  
   
-     Sie können den Bericht auf dem lokalen Computer speichern und weiter bearbeiten oder lokal zu Ihrer eigenen Information ausführen. Sie müssen den Bericht jedoch auf einem im einheitlichen Modus konfigurierten Berichtsserver oder einem Berichtsserver im integrierten SharePoint-Modus speichern, um ihn für andere Benutzer freizugeben. Wenn Sie den Bericht auf einem Server speichern, können andere Benutzer ihn jederzeit ausführen. Der Berichtsserveradministrator kann jedoch auch ein Abonnement für den Bericht oder eine E-Mail-Übermittlung des Berichts an andere Personen einrichten. Sie können den Bericht auch in einem bestimmten Exportformat übermitteln. Weitere Informationen finden Sie unter [suchen, anzeigen und Verwalten von Berichten &#40;Berichts-Generator und SSRS &#41; ](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
+     Sie können den Bericht auf dem lokalen Computer speichern und weiter bearbeiten oder lokal zu Ihrer eigenen Information ausführen. Sie müssen den Bericht jedoch auf einem im einheitlichen Modus konfigurierten Berichtsserver oder einem Berichtsserver im integrierten SharePoint-Modus speichern, um ihn für andere Benutzer freizugeben. Wenn Sie den Bericht auf einem Server speichern, können andere Benutzer ihn jederzeit ausführen. Der Berichtsserveradministrator kann jedoch auch ein Abonnement für den Bericht oder eine E-Mail-Übermittlung des Berichts an andere Personen einrichten. Sie können den Bericht auch in einem bestimmten Exportformat übermitteln. Weitere Informationen finden Sie unter [Suchen, Anzeigen und Verwalten von Berichten &#40;Berichts-Generator und SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Berichts-Generator in SQLServer 2014](../report-builder/report-builder-in-sql-server-2016.md)   
- [Berichtserstellungskonzepte &#40;Berichts-Generator und SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Berichterstellungskonzepte &#40;Berichts-Generator und SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
  [Lernprogramme &#40;Berichts-Generator&#41;](../report-builder-tutorials.md)  
   
   

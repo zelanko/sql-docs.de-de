@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: af73681d-ce1c-4b6e-b195-6df3d2fb5275
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74bc6afe0c5c3bddd4b36ebe844ae963da8fbe28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2017defaba74071b1a12bee14a5d8907e4c71cda
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185490"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041801"
 ---
 # <a name="time-series-predictions-using-updated-data-intermediate-data-mining-tutorial"></a>Erstellen von Zeitreihenvorhersagen mit aktualisierten Daten (Data Mining-Lernprogramm für Fortgeschrittene)
     
@@ -70,7 +69,7 @@ ms.locfileid: "48185490"
   
     4.  Ziehen Sie das Feld Menge aus dem **Miningmodell** -Bereich in die **Kriterium/Argument** Spalte.  
   
-    5.  In der **Kriterium/Argument** Spalte, nach dem Namen des Felds geben Sie den folgenden Text: **5, EXTEND_MODEL_CASES**  
+    5.  In der **Kriterium/Argument** Spalte, nach dem Namen des Felds geben Sie den folgenden Text:  **5,EXTEND_MODEL_CASES**  
   
          Den vollständigen Text der der **Kriterium/Argument** Textfeld sollte wie folgt lauten: `[Forecasting].[Quantity],5,EXTEND_MODEL_CASES`  
   
@@ -102,7 +101,7 @@ ms.locfileid: "48185490"
  [Zeitreihenvorhersagen mit Ersetzungsdaten &#40;fortgeschrittene Data Mining-Lernprogramm&#41;](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Technische Referenz für Microsoft Time Series-Algorithmus](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [Mingingmodellinhalt von Zeitreihenmodellen &#40;Analysis Services – Datamining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Technische Referenz für den Microsoft Time Series-Algorithmus](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
+ [Miningmodellinhalt von Zeitreihenmodellen &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

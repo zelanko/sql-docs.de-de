@@ -12,14 +12,14 @@ f1_keywords:
 - "10522"
 ms.assetid: 8c0310ba-eedd-4c9f-95bd-1f9e2a1a8ed3
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0e1fd77ed97e42eaadd76f7b9c50f74d6b5007a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 411dd5fdcd58b9f009ffe8fbdefa39e39c273435
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162740"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012881"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>Eigenschaften des Kartenviewports (Dialogfeld), Optimierung
   Wählen Sie **Optimierung** aus, um mithilfe des Dialogfelds **Viewporteigenschaften zuordnen** die Auflösung zum Anzeigen einer Karte in einem Bericht zu steuern.  
@@ -28,11 +28,11 @@ ms.locfileid: "48162740"
   
  Klicken Sie auf die Schaltfläche **Ausdruck** (*fx*), um einen Ausdruck zu bearbeiten, der den Wert der Option festlegt.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Leistung**  
  Schieben Sie den Zeiger näher zu **Leistung** , um die Karte zu vereinfachen und weniger Details anzuzeigen.  
   
- **Qualität**  
+ **Quality**  
  Schieben Sie den Zeiger näher zu **Qualität** , um die Karte detaillierter zu zeichnen.  
   
  **Kartenauflösung**  

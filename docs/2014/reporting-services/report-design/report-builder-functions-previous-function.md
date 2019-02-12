@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a0c4a4a8f66f00e8446c189bddfe31ed626d0170
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e3e856bf37328c5abaf4edd5bf296c1d557a2be7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118210"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010681"
 ---
 # <a name="previous-function-report-builder-and-ssrs"></a>Previous-Funktion (Berichts-Generator und SSRS)
   Gibt den Wert oder den angegebenen Aggregatwert für die vorherige Instanz eines Elements innerhalb des angegebenen Bereichs zurück.  
@@ -33,20 +33,20 @@ Previous(expression, scope)
   
 #### <a name="parameters"></a>Parameter  
  *expression*  
- (`Variant` oder `Binary`) der Ausdruck, mit dem die Daten zu identifizieren und für die zum Abrufen des vorherigen Werts, z. B. `Fields!Fieldname.Value` oder `Sum(Fields!Fieldname.Value)`.  
+ (`Variant` oder `Binary`) Der Ausdruck, mit dem die Daten identifiziert werden und für den der vorherige Wert abgerufen wird. Beispiel: `Fields!Fieldname.Value` oder `Sum(Fields!Fieldname.Value)`.  
   
  *Bereich*  
- (`String`) Optional. Der Name der einer Gruppe oder eines Datenbereichs oder Null (`Nothing` in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), Bereich angibt, die aus dem angegebene vorherige Wert abgerufen werden soll *Ausdruck*.  
+ (`String`) optional. Der Name der einer Gruppe oder eines Datenbereichs oder Null (`Nothing` in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), Bereich angibt, die aus dem angegebene vorherige Wert abgerufen werden soll *Ausdruck*.  
   
 ## <a name="return-type"></a>Rückgabetyp  
- Gibt eine `Variant` oder `Binary`.  
+ Gibt einen `Variant`- oder `Binary`-Wert zurück.  
   
 ## <a name="remarks"></a>Hinweise  
  Die `Previous`-Funktion gibt den vorherigen Wert für den Ausdruck zurück, der in dem angegebenen Bereich ausgewertet wird, nachdem die Sortierfunktionen und Filter angewendet wurden.  
   
  Wenn *Ausdruck* enthält keine Aggregatfunktion gehört, die `Previous` -Funktion standardmäßig auf den aktuellen Bereich für das Berichtselement.  
   
- Verwenden Sie in einer Detailgruppe `Previous` um den Wert eines Feldverweises in der vorherigen Instanz der Detailzeile anzugeben.  
+ Verwenden Sie in einer Detailgruppe `Previous`, um den Wert eines Feldverweises in der vorherigen Instanz der Detailzeile anzugeben.  
   
 > [!NOTE]  
 >  Die `Previous` -Funktion werden nur Feldverweise in der Detailgruppe unterstützt. Beispielsweise werden in einem Textfeld in der Detailgruppe durch `=Previous(Fields!Quantity.Value)` die Daten für das Feld `Quantity` aus der vorherigen Zeile zurückgegeben. In der ersten Zeile gibt dieser Ausdruck NULL zurück (`Nothing` in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]).  
@@ -85,6 +85,6 @@ Previous(expression, scope)
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](expressions-report-builder-and-ssrs.md)   
- [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

@@ -17,14 +17,14 @@ helpviewer_keywords:
 - modules [Reporting Services]
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0d3c218b5e72e231179443c146a6ea3c23747d4e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: e33547643adf7345bbbc7c020dcbd11959bb6119
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180610"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012028"
 ---
 # <a name="supported-access-report-features-ssrs"></a>Unterstützte Access-Berichtsfunktionen (SSRS)
   Wenn Sie einen Bericht in den Berichts-Designer importieren, wird der [!INCLUDE[msCoName](../includes/msconame-md.md)] Access-bericht während des Importvorgangs in eine [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Report Definition Language (RDL)-Datei konvertiert. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] unterstützt zahlreiche Funktionen von Access. Aufgrund der Unterschiede zwischen Access und [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] werden einige Elemente jedoch leicht angewandelt oder nicht unterstützt. In diesem Thema wird beschrieben, auf welche Weise Access-Berichtsfunktionen in RDL konvertiert werden.  
@@ -57,15 +57,15 @@ ms.locfileid: "48180610"
   
 |||||  
 |-|-|-|-|  
-|image|Bezeichnung|Linie|Rechteck|  
-|Unterformular|Unterbericht<br /><br /> **Beachten Sie** während ein Unterbericht-Steuerelement innerhalb des Hauptberichts konvertiert wird, des Unterberichts selbst separat konvertiert wird.|Textfeld||  
+|Bild|Bezeichnung|Linie|Rechteck|  
+|Unterformular|SubReport<br /><br /> **Beachten Sie** während ein Unterbericht-Steuerelement innerhalb des Hauptberichts konvertiert wird, des Unterberichts selbst separat konvertiert wird.|TextBox||  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] unterstützt die folgenden Steuerelemente nicht:  
   
 |||||  
 |-|-|-|-|  
-|Gebundenes Objektfeld|Kontrollkästchen|Kombinationsfeld|Befehlsschaltfläche|  
-|Benutzerdefiniertes Steuerelement|Listenfeld|Objektfeld|Optionsfeld-Steuerelement|  
+|Gebundenes Objektfeld|CheckBox|Kombinationsfeld|Befehlsschaltfläche|  
+|Benutzerdefiniertes Steuerelement|Listenfeld|Objektfeld|OptionButton|  
 |Registersteuerelement|Umschaltfläche|||  
   
  Wenn Berichts-Designer, eines dieser Steuerelemente während des Importvorgangs auftritt, wird eine Warnung generiert und angezeigt werden, der **Aufgabenliste** Fenster.  
@@ -77,10 +77,10 @@ ms.locfileid: "48180610"
   
 |||||  
 |-|-|-|-|  
-|Hintergrundfarbe|Hintergrundart|BorderColor|Rahmenart|  
+|BackColor|Hintergrundart|BorderColor|Rahmenart|  
 |Rahmenbreite|BottomMargin|Vergrößerbar (Textfeld)|Verkleinerbar (Textfeld)|  
-|Beschriftung|SchriftFett|Kursiv|FontName|  
-|FontSize|Extras|Schriftbreite|NeueSeite|  
+|Beschriftung|SchriftFett|FontItalic|FontName|  
+|FontSize|FontUnderline|Schriftbreite|NeueSeite|  
 |ForeColor|Höhe|HideDuplicates|Hyperlink|  
 |IsHyperlink|Sichtbar|Zusammenhalten (Gruppe)|Left|  
 |LeftMargin|Neigung|Zeilenabstand|VerknüpfenVon|  
@@ -100,7 +100,7 @@ ms.locfileid: "48180610"
 |Bildgrößenmodus|BildNebeneinander (Bild)|ScrollBars|Spezialeffekt|  
 |Vertikal||||  
   
-## <a name="grouping"></a>Grouping  
+## <a name="grouping"></a>Gruppieren  
  In Access wird eine Gruppenebene durch eine Kombination aus drei Eigenschaften definiert: Gruppenausdruck, `GroupOn`-Eigenschaft und `GroupInterval`-Eigenschaft. Eine Gruppe ohne Gruppenkopf oder -fuß wird mit der darin enthaltenen Gruppe zusammengeführt. Enthält die Gruppe keine andere Gruppe, wird der Detailabschnitt sortiert und die Gruppe gelöscht.  
   
 ## <a name="expressions"></a>Ausdrücke  
@@ -264,7 +264,7 @@ ms.locfileid: "48180610"
 |||||  
 |-|-|-|-|  
 |Avg|Count|Max|Min|  
-|StDev|StDevP|SUM|Var|  
+|StDev|StDevP|Summe|Var|  
 |VarP||||  
   
 #### <a name="text-functions"></a>Textfunktionen  

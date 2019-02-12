@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 4c72d35c92cabae9f9b1f73daa8c665c1b19771b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 684ee8c4738b2cc46cb847820a2408365c1a5cd1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053890"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042831"
 ---
 # <a name="reportitems-collection-references-report-builder-and-ssrs"></a>Verweise auf ReportItems-Auflistungen (Berichts-Generator und SSRS)
-  Die integrierte `ReportItems`-Auflistung besteht aus einem Satz von Textfeldern aus Berichtselementen, wie Zeilen eines Datenbereichs oder Textfelder auf der Berichtsentwurfsoberfläche. Die `ReportItems` -Auflistung umfasst Textfelder, die im aktuellen Bereich einen Seitenkopf, Seitenfuß oder Berichtshauptteil sind. Diese Auflistung wird vom Berichtsprozessor und vom Berichtsrenderer zur Laufzeit bestimmt. Der aktuelle Bereich wird geändert, wenn der Berichtsprozessor Berichtsdaten und die Layoutelemente des Berichtselements erfolgreich kombiniert, während der Benutzer Seiten eines Berichts anzeigt. Sie können die `ReportItems` integrierten Sammlung, um Seitenkopfzeilen im Wörterbuchformat zu erstellen, die die ersten und letzten Elemente auf jeder Seite angezeigt.  
+  Die integrierte `ReportItems`-Auflistung besteht aus einem Satz von Textfeldern aus Berichtselementen, wie Zeilen eines Datenbereichs oder Textfelder auf der Berichtsentwurfsoberfläche. Die `ReportItems`-Auflistung umfasst Textfelder, die sich im aktuellen Bereich einer Seitenkopfzeile, einer Seitenfußzeile oder eines Berichtshauptteils befinden. Diese Auflistung wird vom Berichtsprozessor und vom Berichtsrenderer zur Laufzeit bestimmt. Der aktuelle Bereich wird geändert, wenn der Berichtsprozessor Berichtsdaten und die Layoutelemente des Berichtselements erfolgreich kombiniert, während der Benutzer Seiten eines Berichts anzeigt. Sie können die integrierte `ReportItems`-Auflistung verwenden, um Seitenkopfzeilen im Wörterbuchformat zu erstellen, die das erste und das letzte Element auf jeder Seite anzeigen.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -47,14 +47,14 @@ ms.locfileid: "48053890"
  In einem Seitenkopf- oder Seitenfußabschnitt sind nur Textfelder auf der aktuellen Seite als Elemente der `ReportItems`-Auflistung verfügbar. Wenn `ReportItems!textboxLastName.Value` beispielsweise auf ein Textfeld verweist, das nur auf der ersten Seite eines mehrseitigen Datenbereichs angezeigt wird, wird ein Wert für die erste Seite angezeigt. Alle anderen Seiten enthalten jedoch die Meldung **#Error** , die angibt, dass der Ausdruck nicht als geschrieben ausgewertet werden konnte.  
   
 ## <a name="scope-for-the-reportitems-collection"></a>Bereich der ReportItems-Auflistung  
- Während der Bericht verarbeitet wird, wird jedes Textfeld im Berichtshauptteil oder in einem Datenbereich im Kontext des entsprechenden Datasets, des Datenbereichs und der Gruppenzuordnungen ausgewertet. Der Bereich für einen Verweis auf die `ReportItems` Auflistung ist, den aktuellen Bereich oder jeder Punkt, der höher als der aktuelle Bereich.  
+ Während der Bericht verarbeitet wird, wird jedes Textfeld im Berichtshauptteil oder in einem Datenbereich im Kontext des entsprechenden Datasets, des Datenbereichs und der Gruppenzuordnungen ausgewertet. Der Bereich für einen Verweis auf die `ReportItems`-Auflistung ist der aktuelle Bereich oder jeder Punkt, der höher liegt als der aktuelle Bereich.  
   
  Ein Textfeld in einer Zeile, die sich in einer übergeordneten Gruppe befindet, darf beispielsweise keinen Ausdruck enthalten, der auf den Namen eines Textfelds in einer Zeile einer untergeordneten Gruppe verweist. Ein solcher Ausdruck wird nicht in einen Wert des Berichts aufgelöst, da sich das Textfeld in der untergeordneten Zeile außerhalb des Bereichs befindet. Weitere Informationen finden Sie unter [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Integrierte Auflistungen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
+ [Integrierte Sammlungen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Filtern, gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

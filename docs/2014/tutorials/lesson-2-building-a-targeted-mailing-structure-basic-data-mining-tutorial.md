@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 9d0d6ceb-49b5-47c7-9ee6-464da43cc1f6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4dc87445828f446f9ba2cf066248d57eef260ce7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 42893ce0b921f47a86e6a52f3262786ca8b82bb9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086466"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013651"
 ---
-# <a name="lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial"></a>Lektion 2: Erstellen einer Targeted Mailing-Struktur (Lernprogramm zu Data Mining-Grundlagen)
+# <a name="lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial"></a>Lektion 2: Erstellen einer Targeted Mailing-Struktur (Lernprogramm zu Datamining-Grundlagen)
   Die Marketingabteilung von [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] möchte den Umsatz steigern, indem bestimmte Kunden mit einer Mailing-Kampagne angesprochen werden. Die Unternehmensdatenbank enthält eine Liste früherer Kunden sowie eine Liste potenzieller Neukunden. Durch die Prüfung der Merkmale früherer Kunden, hofft das Unternehmen Muster zu ermitteln, die es bei potenziellen Neukunden anwenden können. Sie können z. B. früherer Trends verwenden, um vorherzusagen, welche potenziellen Kunden am wahrscheinlichsten ein Fahrrad von kaufen werden [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], Kundensegmente für zukünftige Werbekampagnen.  
   
  In dieser Lektion verwenden Sie die **Data Mining-Assistenten** der targeted mailing-Struktur zu erstellen. Nachdem Sie die Aufgaben in dieser Lektion ausgeführt haben, haben Sie eine Miningstruktur mit einem einzelnen Modell. Da das Erstellen einer Struktur aus vielen Schritte und wichtigen Konzepten besteht, wurde dieser Prozess in die folgenden drei Aufgaben untergliedert:  

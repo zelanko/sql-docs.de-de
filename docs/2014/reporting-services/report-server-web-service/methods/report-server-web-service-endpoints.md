@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fae03147c4e5364ae7c41590c88c9b6791a6370c
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+manager: kfile
+ms.openlocfilehash: 75123271b73c166f87be0ab1a83242736fa966ca
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119987"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009704"
 ---
 # <a name="report-server-web-service-endpoints"></a>Report Server-Webdienst-Endpunkte
   Der Report Server-Webdienst stellt mehrere Endpunkte für die Verwaltung eines Berichtsservers sowie für das Ausführen von Berichten und die Berichtsnavigation bereit.  
   
 ## <a name="the-management-endpoints"></a>Die Verwaltungsendpunkte  
- Drei Endpunkte sind für das Verwalten von Objekten auf einem Berichtsserver verfügbar: <xref:ReportService2005>, <xref:ReportService2006> und <xref:ReportService2010>. Der <xref:ReportService2005>-Endpunkt wird zum Verwalten von Objekten auf einem Berichtsserver verwendet, der für den einheitlichen Modus konfiguriert ist. Der <xref:ReportService2006>-Endpunkt wird zum Verwalten von Objekten auf einem Berichtsserver verwendet, der für den integrierten SharePoint-Modus konfiguriert ist. Die <xref:ReportService2010> Endpunkt vereint die Funktionen von <xref:ReportService2005> und <xref:ReportService2006> und Verwalten von Objekten auf einem Berichtsserver, die entweder systemeigen oder integrierten SharePoint-Modus konfiguriert werden können.  
+ Drei Endpunkte sind für das Verwalten von Objekten auf einem Berichtsserver verfügbar: <xref:ReportService2005>, <xref:ReportService2006> und <xref:ReportService2010>. Der <xref:ReportService2005>-Endpunkt wird zum Verwalten von Objekten auf einem Berichtsserver verwendet, der für den einheitlichen Modus konfiguriert ist. Der <xref:ReportService2006>-Endpunkt wird zum Verwalten von Objekten auf einem Berichtsserver verwendet, der für den integrierten SharePoint-Modus konfiguriert ist. Der <xref:ReportService2010>-Endpunkt führt die Funktionen von <xref:ReportService2005> und <xref:ReportService2006> zusammen und kann Objekte auf einem Berichtsserver verwalten, die entweder für den einheitlichen oder integrierten SharePoint-Modus konfiguriert sind.  
   
 > [!IMPORTANT]  
 >  Wenn ein Berichtsserver für den integrierten SharePoint-Modus konfiguriert ist, geben die <xref:ReportService2005>-APIs einen `rsOperationNotSupportedSharePointMode`-Fehler zurück. Wenn der Berichtsserver für den einheitlichen Modus konfiguriert ist, geben die <xref:ReportService2006>-APIs einen `rsOperationNotSupportedNativeMode`-Fehler zurück. Auch wenn modusspezifische APIs in <xref:ReportService2010> in einem nicht beabsichtigten Modus verwendet werden, geben die APIs die entsprechenden Fehler zurück.  
@@ -67,7 +67,7 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?
   
 |Proxyendpunkt|Description|  
 |--------------------|-----------------|  
-|<xref:ReportService2006>|Stellt die APIs für das Verwalten eines Berichtsservers bereit, der für den integrierten SharePoint-Modus konfiguriert ist. **Hinweis:** dieser Endpunkt ist in veraltet [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)].|  
+|<xref:ReportService2006>|Stellt die APIs für das Verwalten eines Berichtsservers bereit, der für den integrierten SharePoint-Modus konfiguriert ist. **Hinweis**:  Dieser Endpunkt ist in [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] als veraltet markiert.|  
 |<xref:ReportService2010>|Stellt die APIs für das Verwalten eines Berichtsservers bereit, der entweder für den einheitlichen Modus oder für den integrierten SharePoint-Modus konfiguriert ist.|  
 |<xref:ReportExecution2005>|Stellt die APIs für die Ausführung von Berichten und die Berichtsnavigation bereit.|  
 |<xref:ReportServiceAuthentication>|Stellt die APIs zum Authentifizieren von Benutzern für einen Berichtsserver bereit, wenn die SharePoint-Webanwendung für die Formularauthentifizierung konfiguriert ist.|  

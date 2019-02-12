@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 32335af1-5eae-4420-a0ef-b1e8a3267166
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 630680051d8f7c0806a23fb59232e67f14ad8176
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d86fc709f3cc322c17514309906355cc4489876e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197510"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012351"
 ---
 # <a name="listreservedurls-method-wmi-msreportserverconfigurationsetting"></a>ListReservedURLs-Methode (WMI: MSReportServer_ConfigurationSetting)
   Listet für alle Anwendungen auf dem Berichtsserver reservierte URLs auf  
@@ -65,6 +65,6 @@ public void ListReservedUrls(out string[] Application, out string[] UrlString,
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](msreportserver-configurationsetting-members.md)  
+ [MSReportServer_ConfigurationSetting-Member](msreportserver-configurationsetting-members.md)  
   
   

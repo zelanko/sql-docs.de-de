@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 21cf0a14492c31c33d7923ea34c7cb00fa69bb29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b3b42828eab3a439cb21c6d32ff0881debc663e8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162360"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011891"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>Hinzufügen oder Entfernen einer Seitenkopf- oder Seitenfußzeile (Berichts-Generator und SSRS)
   Sie können statischen Text, Bilder, Linien, Rechtecke und Rahmen zu Seitenköpfen und -füßen hinzufügen. Wenn Sie variable oder berechnete Daten in einem Seitenkopf oder -fuß verwenden möchten, können Sie Ausdrücke und datengebundene Bilder in einem Textfeld platzieren.  
@@ -48,7 +48,7 @@ ms.locfileid: "48162360"
   
     -   **Rechteck**  
   
-    -   **Bild**  
+    -   **Image**  
   
 3.  Klicken Sie mit der rechten Maustaste auf den Seitenkopf, und klicken Sie anschließend auf **Seitenkopfeigenschaften** , um Rahmen, Hintergrundbilder oder Farben hinzuzufügen oder die Breite des Seitenkopfes anzupassen. Klicken Sie dann auf **OK**.  
   
@@ -64,6 +64,6 @@ ms.locfileid: "48162360"
 >  Wenn Sie einen Seitenkopf oder -fuß entfernen, wird er aus dem Bericht gelöscht. Alle Elemente, die Sie zuvor zum Seitenkopf oder -fuß hinzugefügt haben, werden nicht erneut angezeigt, wenn Sie den Seitenkopf oder -fuß anschließend wieder hinzufügen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Seitenkopf-und Seitenfußzeilen &#40;Berichts-Generator und SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
+ [Seitenkopf- und Seitenfußzeilen &#40;Berichts-Generator und SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
   
   

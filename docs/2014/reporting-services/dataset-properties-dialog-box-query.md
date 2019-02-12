@@ -12,14 +12,14 @@ f1_keywords:
 - sql12.rtp.rptdesigner.datasetproperties.query.f1
 ms.assetid: 1fa34a4b-7de0-4e92-99fa-bc28a206773f
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 7a9a15146c6abbcad899f9af3c9fb5e665b76fa9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: f83cde4947e9734aa11a6758d19d056ce7e6a82c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205950"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011801"
 ---
 # <a name="dataset-properties-dialog-box-query"></a>Dataseteigenschaften (Dialogfeld), Abfrage
   Wählen Sie **Abfrage** auf die **Dataseteigenschaften** Dialogfeld zum Auswählen einer Datenquelle und eine Abfrage erstellen.  
@@ -34,7 +34,7 @@ ms.locfileid: "48205950"
   
 -   [Dataset Properties Dialog Box, Filters (Dataseteigenschaften (Dialogfeld), Filter)](report-data/dataset-properties-dialog-box-filters.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name**  
  Geben Sie einen Namen für das Dataset ein. Der Name darf nicht mit dem Namen eines Datenbereichs oder einer Gruppe im Bericht identisch sein.  
   

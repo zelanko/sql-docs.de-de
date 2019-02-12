@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 85ebc0b57f5bd87bf12726fb9abe091f8c16b25a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2762e1057e7d6343310ff5ae98257e4e4e331913
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131950"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010462"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Formatieren von Berichtselementen (Berichts-Generator und SSRS)
   Durch Formatieren der Elemente in einem Bericht lässt sich das Aussehen und die Lesbarkeit des Berichts deutlich verbessern. Die Textfelder und individuellen Elemente in Textfeldern, Bilder, Ausdrücke und Daten können im Berichtsentwurfsmodus formatiert werden.  
@@ -42,7 +42,7 @@ ms.locfileid: "48131950"
  [Formatieren von Text und Platzhaltern &#40;Berichts-Generator und SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
  Beschreibt das Formatieren von Text und Anpassen von Formatoptionen für unterschiedliche Textblöcke innerhalb eines Textfelds.  
   
- [Importieren von HTML in einem Bericht &#40;Berichts-Generator und SSRS&#41;](importing-html-into-a-report-report-builder-and-ssrs.md)  
+ [Importieren von HTML in einen Bericht &#40;Berichts-Generator und SSRS&#41;](importing-html-into-a-report-report-builder-and-ssrs.md)  
  Beschreibt das Einfügen und Verwenden von HTML in einem Bericht.  
   
  [Formatieren von Zahlen und Datumsangaben &#40;Berichts-Generator und SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)  

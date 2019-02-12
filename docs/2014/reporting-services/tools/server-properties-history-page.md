@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: be9d8018-a46f-4625-9ae1-138ebe6b38ba
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: eaa801caa34181262c5ac8879d9b2a77ba127fdd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b2e6fb7ad7c50395aa40b31a98e9bd6bd8743875
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206060"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042731"
 ---
 # <a name="server-properties-history-page"></a>Servereigenschaften (Seite Verlauf)
   Verwenden Sie diese Seite als Standardwert für die Anzahl von Kopien der Berichtsverläufe, die Sie beibehalten möchten. Mithilfe eines Standardwertes werden erste Grenzwerte für den Berichtsverlauf für alle Berichte festgelegt. Sie können diese Werte für die jeweiligen Berichte anpassen.  
@@ -29,7 +29,7 @@ ms.locfileid: "48206060"
   
  Öffnen Sie diese Seite, indem Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] starten und eine Verbindung mit einer Berichtsserverinstanz herstellen. Klicken Sie mit der rechten Maustaste auf den Namen des Berichtsservers, und wählen Sie anschließend **Eigenschaften** aus. Klicken Sie auf **Verlauf** , um diese Seite zu öffnen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Beliebig viele Momentaufnahmen im Berichtsverlauf speichern**  
  Alle Berichtsverlaufs-Momentaufnahmen werden beibehalten. Sie müssen die Momentaufnahmen manuell löschen, um die Größe des Berichtsverlaufs zu verringern.  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b017b37228702adddf3cf50a8f9fb125b28074a9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 9205097462a2c9bcc08334e4d83716a224d3b786
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350265"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043331"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Problembehandlung für eine Reporting Services-Installation
   Wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aufgrund von Fehlern während der Ausführung von Setup nicht installieren können, können Sie mithilfe der Anweisungen in diesem Thema die häufigsten Ursachen von Installationsfehlern behandeln.  
@@ -194,9 +194,9 @@ ms.locfileid: "53350265"
   
 1.  Löschen Sie die folgenden Registrierungsschlüssel:  
   
-    -   **HKLM\SYSTEM\CurrentControlSet\Services\MSRS 2011-Webdienst**  
+    -   **HKLM\SYSTEM\CurrentControlSet\Services\MSRS 2011 Web Service**  
   
-    -   **HKLM\SYSTEM\CurrentControlSet\Services\MSRS 2011-Windows-Dienst**  
+    -   **HKLM\SYSTEM\CurrentControlSet\Services\MSRS 2011 Windows Service**  
   
 2.  Öffnen Sie ein Eingabeaufforderungsfenster, und geben Sie den folgenden Befehl ein:  
   

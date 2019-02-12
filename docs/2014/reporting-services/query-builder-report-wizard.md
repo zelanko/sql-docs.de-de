@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Query Builder [Reporting Services]
 ms.assetid: 1b0904ea-28c1-448e-b56c-c0fdfbc8b222
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6bf7bfb94237b34056502d08f5cec8e4d5b80bb9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 6f6a7e4e8e6d4a70ecb3695819f3648c86034b4e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056300"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013162"
 ---
 # <a name="query-builder-report-wizard"></a>Abfrage-Generator (Berichts-Assistent)
   Mithilfe des Abfrage-Generators können Sie eine Abfrage angeben, die ein Resultset abruft, das in einem Bericht verwendet werden soll. Sie können zwischen zwei Abfrage-Generatoren auswählen:  
@@ -41,7 +41,7 @@ ms.locfileid: "48056300"
  **Importieren**  
  Öffnet das Dialogfeld **Abfrage importieren** und zeigt RDL- und SQL-Dateien für jeden verfügbaren Bericht an. Sie können die importierte Abfrage so verwenden, wie sie ist, oder diese im Abfrage-Generator ändern.  
   
- **! (Ausführen)**  
+ **! (Run)**  
  Führt die Abfrage aus und gibt ein Resultset zurück, falls die Abfrage gültig ist. Beachten Sie, dass Sie die Abfrage nicht ausführen können, wenn sie ein Ausdruck ist. Um eine ausdruckbasierte Abfrage zu überprüfen, müssen Sie eine Vorschau des Berichts anzeigen.  
   
  **Befehlstyp**  

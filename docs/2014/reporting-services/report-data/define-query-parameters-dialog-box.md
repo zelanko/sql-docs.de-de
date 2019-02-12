@@ -13,18 +13,18 @@ f1_keywords:
 ms.assetid: a9697101-aa52-4a62-8f33-fad8f5bc2a0c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c5399dd2ae5979fad310bbb048e9c3f3c2147db5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9f9f1dd070ecfd2f680ce68460e2adc5c9727097
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199990"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041671"
 ---
 # <a name="define-query-parameters-dialog-box"></a>Abfrageparameter definieren (Dialogfeld)
   Im Dialogfeld **Abfrageparameter definieren** können Sie Parameterwerte angeben, wenn Sie in einem Abfrage-Designer zur Entwurfszeit eine Abfrage ausführen, um Beispieldaten anzuzeigen. Mit Abfrageparameter werden Daten der Datenquelle gefiltert und die Datenmenge, die ein Bericht verarbeitet, beschränkt. Diese Werte werden nicht in der Berichtsdefinition gespeichert.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Parametername**  
  Geben Sie den Namen des Abfrageparameters ein, den Sie verwenden möchten.  
   

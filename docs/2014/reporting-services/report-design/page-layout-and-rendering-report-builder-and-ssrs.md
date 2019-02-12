@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 99d7bcaf87fec0181392fd8673cb90df37849308
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fa140a2c4311a3bfa77ba056fc957bacbb99e5d9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082830"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043271"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Seitenlayout und Rendering (Berichts-Generator und SSRS)
-  Wenn Sie Berichte erstellen, ist es wichtig, das Verhalten des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Renderers zu verstehen, um sicherzustellen, dass der gerenderte Bericht wie von Ihnen gewünscht aussieht, einschließlich Seitenlayouts und Seitenumbrüchen. Sie möchten wahrscheinlich auch sicherstellen, dass der gerenderte Bericht auf das Papierformat passt, das Sie oder die Organisation im Allgemeinen verwenden.  
+  Wenn Sie Berichte erstellen, ist es wichtig, das Verhalten des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Renderers zu verstehen, um sicherzustellen, dass der gerenderte Bericht wie von Ihnen gewünscht aussieht, einschließlich Seitenlayouts und Seitenumbrüchen. Sie möchten wahrscheinlich auch sicherstellen, dass der gerenderte Bericht auf das Papierformat passt, das Sie oder die Organisation im Allgemeinen verwenden.  
   
  Wenn Sie Berichte im Berichts-Manager oder im Vorschaufenster von Berichts-Generator oder Berichts-Designer anzeigen, wird der Bericht zuerst vom HTML-Renderer gerendert. Sie können dann den Bericht in andere Formate, z. B. Excel oder durch Trennzeichen getrennte Dateien (CSV) exportieren. Der exportierte Bericht kann dann in Excel oder als Datenquelle für Anwendungen verwendet werden, die CSV-Datendateien importieren und verwenden können.  
   
@@ -49,14 +49,14 @@ ms.locfileid: "48082830"
 ##  <a name="RenderingExtensions"></a> Renderer  
  Reporting Services schließt einen Satz von Renderern ein, die auch als Renderingerweiterungen bezeichnet werden, mit denen Sie Berichte in andere Formate exportieren können. Es stehen drei Arten von Renderern zur Verfügung:  
   
--   **Datenrenderer** : Datenrenderer entfernen alle Formatierungs- und Layoutinformationen aus dem Bericht und zeigen nur die Daten an. Die mithilfe dieser Option erstellte Datei kann zum Importieren der Rohberichtsdaten in einen anderen Dateityp verwendet werden, z. B. Excel, eine andere Datenbank, eine XML-Datennachricht oder eine benutzerdefinierte Anwendung. Die verfügbaren Datenrenderer sind: CSV und XML.  
+-   **Datenrenderer** : Datenrenderer entfernen alle Formatierungs- und Layoutinformationen aus dem Bericht und zeigen nur die Daten an. Die mithilfe dieser Option erstellte Datei kann zum Importieren der Rohberichtsdaten in einen anderen Dateityp verwendet werden, z. B. Excel, eine andere Datenbank, eine XML-Datennachricht oder eine benutzerdefinierte Anwendung. Die verfügbaren datenrenderer sind: CSV und XML.  
   
     > [!NOTE]  
     >  Obwohl es keinen direkten Export für ein anderes Format bereitstellt, generiert Atom-Rendering Datendateien aus Berichten.  
   
 -   **Renderer mit weichem Seitenumbruch:** Renderer mit weichem Seitenumbruch behalten das Berichtslayout und die Formatierung bei. Die mithilfe dieser Option erstellte Datei wird für die Bildschirmanzeige und -bereitstellung optimiert, beispielsweise auf einer Webseite. Die verfügbaren vorläufig Renderer mit weichem Seitenumbruch sind: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word, Webarchiv (MHTML) und HTML.  
   
--   **Renderer mit hartem Seitenumbruch** : Renderer mit hartem Seitenumbruch behalten das Berichtslayout und die Formatierung bei. Die mithilfe dieser Option erstellte Datei wird für einen konsistenten Druck oder für die Onlineanzeige in einem Buchformat optimiert. Die folgenden Renderer mit festem Seitenumbruch sind verfügbar: TIFF und PDF.  
+-   **Renderer mit hartem Seitenumbruch:** Renderer mit hartem Seitenumbruch behalten das Berichtslayout und die Formatierung bei. Die mithilfe dieser Option erstellte Datei wird für einen konsistenten Druck oder für die Onlineanzeige in einem Buchformat optimiert. Die verfügbaren schwer Renderer mit weichem Seitenumbruch werden unterstützt: TIFF und PDF.  
   
  Wenn Sie einen Bericht im Berichts-Generator oder Berichts-Manager in der Vorschau anzeigen oder einen Bericht in Berichts-Manager ausführen, wird der Bericht immer zuerst in HTML gerendert. Nachdem Sie den Bericht ausgeführt haben, können Sie ihn in andere Dateiformate exportieren. Weitere Informationen finden Sie unter [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
   
@@ -112,7 +112,7 @@ ms.locfileid: "48082830"
 ##  <a name="InThisSection"></a> In diesem Abschnitt  
  Die folgenden Themen enthalten weitere Informationen zu Seitenlayout und Rendering.  
   
- [Seitenkopf-und Seitenfußzeilen &#40;Berichts-Generator und SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
+ [Seitenkopf- und Seitenfußzeilen &#40;Berichts-Generator und SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
  Stellt Informationen zum Verwenden von Headern und Fußzeilen in Berichten bereit und wie die Paginierung mit ihnen gesteuert wird.  
   
  [Steuern von Seitenumbrüchen, Überschriften, Spalten und Zeilen &#40;Berichts-Generator und SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  

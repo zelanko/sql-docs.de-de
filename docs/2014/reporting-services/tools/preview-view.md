@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5ac2aa3d352de78fae6c3d9613bef2df390e46fa
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: e3644de6d5a11e801e2b41d7d7aa517bad771714
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354032"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033261"
 ---
 # <a name="preview-view"></a>Vorschauansicht
   Verwenden Sie die Ansicht **Vorschau** , um den gerenderten Bericht anzuzeigen. Wenn ein Bericht in der Vorschau angezeigt wird, führt der Berichts-Designer den Bericht lokal aus und zeigt ihn in der Vorschauansicht an. Der Bericht wird im Vorschaumodus vollständig verarbeitet. Wenn der Bericht eine komplexe Abfrage oder eine große Datenmenge enthält, kann das Generieren der Vorschau beim erstmaligen Anzeigen mehrere Minuten in Anspruch nehmen. Bei späteren Änderungen, die sich nur auf das Format des Berichts auswirken, wird die Vorschau mit zwischengespeicherten Daten generiert.  
@@ -82,7 +82,7 @@ ms.locfileid: "53354032"
  **Suchen von Text**  
  Geben Sie Text zum Suchen nach einer Übereinstimmung in dem Bericht ein. Das Verwenden von Suchoperatoren ist nicht möglich. Klicken Sie auf **Suchen** , um nach der ersten Instanz zu suchen.  
   
- **Suchen**  
+ **Find**  
  Wählen Sie diese Option aus, um die Suche nach dem Suchtext in dem Bericht zu beginnen.  
   
  **Weitersuchen**  

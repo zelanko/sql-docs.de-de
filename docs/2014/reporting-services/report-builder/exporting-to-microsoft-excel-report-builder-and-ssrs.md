@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d4c00c9d9881e7775ec311c103ca156eb555b70f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: ceba0cdab54d825cfc28e1c156ca33767dfb8b8f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352387"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013554"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
   Die Excel-Renderingerweiterung von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] rendert einen Bericht im systemeigenen Format von [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010. Mit der Excel-Renderingerweiterung spiegelt die Breite von Spalten in Excel die Breite von Spalten in Berichten genauer wider.  
@@ -114,15 +114,15 @@ ms.locfileid: "53352387"
 ### <a name="report-row-groups-and-column-groups"></a>Zeilen- und Spaltengruppen in Berichten  
  Berichte mit Zeilen- oder Spaltengruppen enthalten beim Export in Excel leere Zellen. Angenommen, in einem Bericht werden Zeilen nach Vertriebskanal und Postleitzahl gruppiert. Jeder Kanal umfasst viele Postleitzahlen, und unter jeder Postleitzahl sind viele Geschäftsnamen aufgeführt. Der Bericht ist im folgenden Bild dargestellt.  
   
- ![Rs_ExportExcelRpt](../media/rs-exportexcelrpt.gif "Rs_ExportExcelRpt")  
+ ![rs_ExportExcelRpt](../media/rs-exportexcelrpt.gif "rs_ExportExcelRpt")  
   
  Wenn der Bericht in Excel exportiert wird, wird die Postleitzahl nur in einer Zelle der Postleitzahlspalte angezeigt. Abhängig von der Ausrichtung des Texts im Bericht (oben, Mitte oder unten) befindet sich der Wert in der ersten, mittleren oder letzten Zelle. Die anderen Zellen sind leer. Die Spalte mit Geschäftsnamen enthält keine leeren Zellen. Das folgende Bild zeigt den Bericht nach dem Export in Excel. Die roten Zellrahmen wurden zur Hervorhebung hinzugefügt. Sie sind nicht Teil des exportierten Berichts.  
   
- ![Rs_ExportExcelBefore](../media/rs-exportexcelbefore.gif "Rs_ExportExcelBefore")  
+ ![rs_ExportExcelBefore](../media/rs-exportexcelbefore.gif "rs_ExportExcelBefore")  
   
  Berichte mit Zeilen- oder Spaltengruppen müssen also nach dem Export in Excel geändert werden, bevor Sie die exportierten Daten als PivotTable anzeigen können. Sie müssen den Gruppenwert in Zellen, in denen er fehlt, hinzufügen, um das Arbeitsblatt zu einer flachen Tabelle mit Werten in allen Zellen zu machen. Das folgende Bild zeigt das aktualisierte Arbeitsblatt.  
   
- ![Rs_ExportExcelAfter](../media/rs-exportexcelafter.gif "Rs_ExportExcelAfter")  
+ ![rs_ExportExcelAfter](../media/rs-exportexcelafter.gif "rs_ExportExcelAfter")  
   
  Wenn Sie einen Bericht gezielt erstellen, um ihn zur weiteren Analyse der Berichtsdaten in Excel zu exportieren, sollten Sie keine Zeilen- oder Spaltengruppen in den Bericht aufnehmen.  
   

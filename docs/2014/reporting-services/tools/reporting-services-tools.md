@@ -21,18 +21,18 @@ helpviewer_keywords:
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 859959ec966c9a3c3141f3fb962668e141d14175
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 144cce158e6b4f8814392a996699ddbe214ca628
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200542"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016031"
 ---
 # <a name="reporting-services-tools"></a>Reporting Services-Tools
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält einen Satz von grafischen Tools und Skriptingtools, die die Entwicklung und Verwendung ausführlicher Berichte in einer verwalteten Umgebung unterstützen. Darin enthalten sind Entwicklungstools, Konfigurations- und Administrationstools sowie Tools zur Berichtsanzeige. Dieses Thema enthält eine kurze Übersicht zu jedem Tool in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und wie darauf zugegriffen werden kann.  
   
- Um sofort ein Tool zu finden, sehen Sie sich [Tutorial: So suchen und starten Sie Reporting Services-Tools (SSRS)](tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md) an.  
+ Ein Tool sofort finden Sie unter [Lernprogramm: So suchen und starten Sie den Reporting Services-Tools &#40;SSRS&#41;](tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
   
 ## <a name="tools-for-report-authoring"></a>Tools zur Berichtserstellung  
  In der folgenden Tabelle sind die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]verfügbaren Tools zu Berichterstellung aufgeführt.  
@@ -40,13 +40,13 @@ ms.locfileid: "48200542"
 |Tool|Description|So erfolgt der Zugriff|  
 |----------|-----------------|-------------------|  
 |[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]|Dieses Tool ermöglicht die interaktive Durchsuchung und visuelle Darstellung von Daten und lässt Sie Berichte erstellen und mit Berichten basierend auf tabellarischen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Modellen interagieren.<br /><br /> Hinweis: Erfordert [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus.|Browser mit Silverlight.|  
-|Berichts-Designer|Verwenden Sie dieses Tool, um Berichte zu entwerfen und diese auf einem Berichtsserver im einheitlichen Modus oder im SharePoint-Modus bereitzustellen.<br /><br /> Gehostet in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]<br /><br /> Berichtsdatenbereich, um im Bericht verwendete Daten zu organisieren<br /><br /> Sichten im Registerformat für Entwurf und Vorschau zum interaktiven Berichtsentwurf<br /><br /> Abfrage-Designern, um anzugeben, welche Daten aus Datenquellen und die abzurufenden Datenquellentypen in zugeordnet sind die [RSReportDesigner-Konfigurationsdatei](../report-server/rsreportdesigner-configuration-file.md)<br /><br /> Ausdrucks-Editor mit IntelliSense, um [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Ausdrücke zu erstellen, mit denen Berichtsinhalte und -darstellung angepasst werden können.<br /><br /> Unterstützt benutzerdefinierte Berichtselemente und Abfrage-Designer<br /><br /> <br /><br /> Weitere Informationen finden Sie unter [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md).|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|  
+|Berichts-Designer|Verwenden Sie dieses Tool, um Berichte zu entwerfen und diese auf einem Berichtsserver im einheitlichen Modus oder im SharePoint-Modus bereitzustellen.<br /><br /> Gehostet in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]<br /><br /> Berichtsdatenbereich, um im Bericht verwendete Daten zu organisieren<br /><br /> Sichten im Registerformat für Entwurf und Vorschau zum interaktiven Berichtsentwurf<br /><br /> Mithilfe von Abfrage-Designern kann festgelegt werden, welche Daten aus Datenquellen abgerufen werden sollen, und die Datenquellentypen in der [RSReportDesigner-Konfigurationsdatei](../report-server/rsreportdesigner-configuration-file.md)zugeordnet sind.<br /><br /> Ausdrucks-Editor mit IntelliSense, um [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Ausdrücke zu erstellen, mit denen Berichtsinhalte und -darstellung angepasst werden können.<br /><br /> Unterstützt benutzerdefinierte Berichtselemente und Abfrage-Designer<br /><br /> <br /><br /> Weitere Informationen finden Sie unter [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md).|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|  
 |Berichts-Generator|Verwenden Sie dieses Tool, um Berichte zu entwerfen und diese auf einem Berichtsserver im einheitlichen Modus oder im SharePoint-Modus bereitzustellen.<br /><br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office-ähnliche Erstellungsumgebung<br /><br /> Fähigkeit, Berichtselemente als Berichtsteile zu speichern<br /><br /> Ein Assistent zum Erstellen von Karten<br /><br /> Aggregate von Aggregaten<br /><br /> Verbesserte Unterstützung für Ausdrücke<br /><br /> Mithilfe von Abfrage-Designern kann festgelegt werden, welche Daten aus einer Auswahl von integrierten Datenquellentypen abgerufen werden sollen.<br /><br /> <br /><br /> Weitere Informationen finden Sie unter [Berichts-Generator &#40;SSRS&#41;](report-builder-authoring-environment-ssrs.md).|Herunterladen von MSI oder Öffnen vom Berichts-Manager/SharePoint|  
   
 ## <a name="tools-for-report-server-administration"></a>SQL Server-Tools für Berichtsserververwaltung  
  Zum Verwalten des Berichtsservers in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ist ein Satz von grafischen Tools und Skriptingtools verfügbar. Welche Tools Sie verwenden hängt vom Bereitstellungsmodus Ihres Berichtsservers ab.  
   
-### <a name="native-mode"></a>Einheitlicher Modus  
+### <a name="native-mode"></a>im einheitlichen Modus  
  In der folgenden Tabelle sind die verfügbaren Tools zum Verwalten des Berichtsservers, der im einheitlichen Modus bereitgestellt wird, aufgeführt.  
   
 |Tool|Description|So erfolgt der Zugriff|  
@@ -56,7 +56,7 @@ ms.locfileid: "48200542"
 |SQL Server-Konfigurations-Manager|Verwenden Sie dieses Tool, um Folgendes zu tun:<br /><br /> Installieren und starten Sie die gemeinsamen Dienste für Reporting Services.<br /><br /> Konfigurieren der Berichterstellung für Kundenfeedback, des Speicherverzeichnisorts und der Fehlerberichterstellung<br /><br /> <br /><br /> **\*\* Warnung \* \***  verwenden Sie dieses Tool nicht zum Konfigurieren des Dienstkontos. Verwenden Sie stattdessen das Reporting Services-Konfigurationstool.<br /><br /> Weitere Informationen finden Sie unter [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).|Startmenü|  
 |Rsconfig-Hilfsprogramm|Verwenden Sie dieses Tool, um eine Berichtsserververbindung zur Berichtsserver-Datenbank zu konfigurieren und zu verwalten. Darüber hinaus können Sie damit ein Benutzerkonto für die unbeaufsichtigte Berichtsverarbeitung angeben.<br /><br /> Weitere Informationen finden Sie unter [Eingabeaufforderungs-Hilfsprogramme für Berichtsserver (SSRS)](report-server-command-prompt-utilities-ssrs.md).|Eingabeaufforderung|  
 |Hilfsprogramm rskeymgmt|Verwenden Sie dieses Tool, um Folgendes zu tun:<br /><br /> Extrahieren, Wiederherstellen, Erstellen und Löschen des symmetrischen Schlüssels, der zur Verschlüsselung der Berichtsserverdaten verwendet wird<br /><br /> Verknüpfen von Berichtsserverinstanzen in einer Bereitstellung für horizontales Skalieren<br /><br /> <br /><br /> Weitere Informationen finden Sie unter [Eingabeaufforderungs-Hilfsprogramme für Berichtsserver (SSRS)](report-server-command-prompt-utilities-ssrs.md).|Eingabeaufforderung|  
-|WMI-Klassen (Windows Management Instrumentation, Windows-Verwaltungsinstrumentation)|Verwenden Sie diese Klassen, um die Konfigurationstasks in Reporting Services-Konfigurations-Manager zu automatisieren, ohne dabei die grafische Benutzeroberfläche verwenden zu müssen.<br /><br /> Weitere Informationen finden Sie unter [den Zugriff auf den WMI-Anbieter programmgesteuert](../accessing-the-wmi-provider-programmatically.md).|Visual Basic-Skript|  
+|WMI-Klassen (Windows Management Instrumentation, Windows-Verwaltungsinstrumentation)|Verwenden Sie diese Klassen, um die Konfigurationstasks in Reporting Services-Konfigurations-Manager zu automatisieren, ohne dabei die grafische Benutzeroberfläche verwenden zu müssen.<br /><br /> Weitere Informationen finden Sie unter [Programmgesteuerter Zugriff auf den WMI-Anbieter](../accessing-the-wmi-provider-programmatically.md).|Visual Basic-Skript|  
   
 ### <a name="sharepoint-integrated-mode"></a>Integrierter SharePoint-Modus  
  Im SharePoint-Modus ist Reporting Services eine Dienstanwendung in der SharePoint-Architektur und wird direkt durch SharePoint verwaltet  
@@ -64,7 +64,7 @@ ms.locfileid: "48200542"
 |Tool|Description|So erfolgt der Zugriff|  
 |----------|-----------------|-------------------|  
 |SharePoint-Zentraladministration|Verwenden Sie SharePoint-Zentraladministration, um die freigegebenen Dienstanwendungen für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]zu erstellen, abzufragen und zu verwalten.<br /><br /> Weitere Informationen finden Sie unter [Konfiguration und Verwaltung eines Berichtsservers &#40;SharePoint-Modus von Reporting Services&#41;](../configure-administer-report-server-reporting-services-sharepoint-mode.md).|Browser zur SharePoint-Website-URL für Zentraladministration|  
-|PowerShell-Cmdlets|Verwenden Sie PowerShell-Cmdlets, um die freigegebenen Dienstanwendungen für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]zu erstellen, abzufragen und zu verwalten.<br /><br /> Weitere Informationen finden Sie unter [PowerShell-Cmdlets für Reporting Services SharePoint Mode](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md).|SharePoint 2010-Verwaltungsshell|  
+|PowerShell-Cmdlets|Verwenden Sie PowerShell-Cmdlets, um die freigegebenen Dienstanwendungen für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]zu erstellen, abzufragen und zu verwalten.<br /><br /> Weitere Informationen finden Sie unter [PowerShell-Cmdlets für SharePoint-Modus von Reporting Services](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md).|SharePoint 2010-Verwaltungsshell|  
   
 ## <a name="tools-for-report-content-management"></a>Tools für die Berichtsinhaltsverwaltung  
  Zum Verwalten der Inhalte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ist ein Satz von grafischen Tools und Skriptingtools verfügbar. Welche Tools Sie verwenden hängt vom Bereitstellungsmodus Ihres Berichtsservers ab.  

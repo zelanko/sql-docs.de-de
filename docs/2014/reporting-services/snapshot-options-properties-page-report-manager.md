@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f6641f59-5267-4f57-8957-63b93d1a9679
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4342504d0d62f2c611c680c58fcdeae1f046f29b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 458a04b87bf8aedd0d772e18ceb9cbc669fe6ba4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078100"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042351"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>Momentaufnahmeoptionen (Eigenschaftenseite) (Berichts-Manager)
   Mithilfe der Eigenschaftenseite Momentaufnahmeoptionen können Sie das Hinzufügen von Berichtsmomentaufnahmen zum Berichtsverlauf planen und die Anzahl von Berichtsmomentaufnahmen begrenzen, die im Berichtsverlauf gespeichert werden.  
@@ -37,7 +37,7 @@ ms.locfileid: "48078100"
   
 4.  Wählen Sie die Registerkarte **Momentaufnahmeoptionen** aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Berichtsverlauf kann manuell erstellt werden**  
  Aktivieren Sie dieses Kontrollkästchen, um nach Bedarf dem Berichtsverlauf Momentaufnahmen hinzuzufügen. Wenn Sie dieses Kontrollkästchen aktivieren, wird die Schaltfläche **Neue Momentaufnahme** auf der Seite Verlauf angezeigt.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48078100"
 ## <a name="see-also"></a>Siehe auch  
  [Hinzufügen einer Momentaufnahme zum Berichtsverlauf &#40;Berichts-Manager&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Erstellen, ändern und Löschen von Momentaufnahmen im Berichtsverlauf](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
+ [Erstellen, Ändern und Löschen von Momentaufnahmen im Berichtsverlauf](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [Berichts-Manager (F1-Hilfe)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

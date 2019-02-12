@@ -1,25 +1,24 @@
 ---
-title: 'Lektion 4: Aktualisieren die Berichtsdefinition programmgesteuert | Microsoft-Dokumentation'
+title: 'Lektion 4: Aktualisieren Sie die Berichtsdefinition programmgesteuert | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1f0a1d46-6d6d-4f67-b51e-06dbbbffacf9
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 5b1b996e2135953e862b27d992d22c6a7666904c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 703643f2c51ec86090cb03ba7089080dfe416620
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137130"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012701"
 ---
-# <a name="lesson-4-update-the-report-definition-programmatically"></a>Lektion 4: Programmgesteuertes Update der Berichtsdefinition
-  Nachdem die Berichtsdefinition vom Berichtsserver geladen wurde und mit dem Berichtsfelds ein Verweis darauf vorhanden ist, müssen Sie die Berichtsdefinition aktualisieren. In diesem Beispiel aktualisieren Sie die `Description` -Eigenschaft für den Bericht.  
+# <a name="lesson-4-update-the-report-definition-programmatically"></a>Lektion 4: Aktualisieren Sie die Berichtsdefinition programmgesteuert
+  Nachdem die Berichtsdefinition vom Berichtsserver geladen wurde und mit dem Berichtsfelds ein Verweis darauf vorhanden ist, müssen Sie die Berichtsdefinition aktualisieren. Im folgenden Beispiel wird die `Description`-Eigenschaft für den Bericht aktualisiert.  
   
 ### <a name="to-update-the-report-definition"></a>So aktualisieren Sie die Berichtsdefinition  
   

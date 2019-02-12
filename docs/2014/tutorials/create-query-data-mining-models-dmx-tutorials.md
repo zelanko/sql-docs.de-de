@@ -1,29 +1,28 @@
 ---
-title: 'Erstellen und Abfragen von Datamining-Modellen mit DMX: Lernprogramme (Analysis Services – Datamining) | Microsoft-Dokumentation'
+title: 'Das Erstellen und Abfragen von Datamining-Modellen mit DMX: Lernprogramme (Analysis Services – Datamining) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: 145b81a7-c0c3-4ca3-bb32-0b482423b9a0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4cc23d274fc086168f580031d9dd7f44b1afd05c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 22ed01105a32f460bcbeb2c067299fdf62af2eed
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176990"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012521"
 ---
-# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>Erstellen und Abfragen von Data Mining-Modellen mit DMX: Lernprogramme (Analysis Services – Data Mining)
-  Nach der Erstellung einer Datamining-Projektmappe mithilfe von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], können Sie Abfragen, mit denen Trends vorhergesagt, Muster in den Daten abgerufen und die Genauigkeit der Miningmodelle gemessen, die Datamining-Modelle erstellen.  
+# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>Das Erstellen und Abfragen von Datamining-Modellen mit DMX: Lernprogramme (Analysis Services – Datamining)
+  Nachdem Sie eine Data Mining-Lösung mit [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]erstellt haben, können Sie Abfragen für die Data Mining-Modelle erstellen, mit denen Trends vorhergesagt, Muster in den Daten abgerufen und die Genauigkeit der Miningmodelle gemessen werden können.  
   
- Der schrittweisen Lernprogramme in der folgenden Liste werden können, erfahren Sie, wie zum Erstellen und Ausführen von Datamining-Abfragen mithilfe von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , damit Sie Ihre Daten optimal nutzen können.  
+ Mithilfe der schrittweisen Lernprogramme in der folgenden Liste können Sie erfahren, wie Sie Data Mining-Abfragen mit [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erstellen und ausführen, um Ihre Daten effizient nutzen zu können.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
@@ -37,12 +36,12 @@ ms.locfileid: "48176990"
   
 -   [DMX-Tutorial für Zeitreihenvorhersagen](../../2014/tutorials/time-series-prediction-dmx-tutorial.md)  
   
-     In diesem Lernprogramm wird ein Forecasting-Modell erstellt, um die Verwendung der CREATE MODEL (DMX)-Anweisung zu veranschaulichen. Anschließend fügen Sie verwandte Modelle hinzu und passen das Verhalten der einzelnen Modelle durch Ändern der Parameter im Microsoft Time Series-Algorithmus an. Abschließend erstellen Sie Vorhersagen und aktualisieren die Vorhersagen mit neuen Daten. Die Möglichkeit, das update beim treffen von Vorhersagen von Zeitreihen wurde hinzugefügt, [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
+     In diesem Lernprogramm wird ein Forecasting-Modell erstellt, um die Verwendung der CREATE MODEL (DMX)-Anweisung zu veranschaulichen. Anschließend fügen Sie verwandte Modelle hinzu und passen das Verhalten der einzelnen Modelle durch Ändern der Parameter im Microsoft Time Series-Algorithmus an. Abschließend erstellen Sie Vorhersagen und aktualisieren die Vorhersagen mit neuen Daten. Die Möglichkeit zum Update von Zeitreihen wurde in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]hinzugefügt.  
   
-## <a name="reference"></a>Verweis  
- [Datamining-Algorithmen &#40;Analysis Services – Datamining&#41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+## <a name="reference"></a>Referenz  
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [Datamining-Erweiterungen &#40;DMX&#41; Verweis](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](/sql/dmx/data-mining-extensions-dmx-reference)  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
   
@@ -55,8 +54,8 @@ ms.locfileid: "48176990"
      Dieses Lernprogramm enthält eine Reihe unabhängiger Lektionen, in denen jeweils ein anderer Modelltyp vorgestellt wird. In jeder Lektion werden Sie Schritt für Schritt durch den Erstellungsprozess eines Modells geführt, machen sich mit dem Modell vertraut, passen es an und erstellen Vorhersageabfragen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Lösungen](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
- [Datamining-Tools](../../2014/analysis-services/data-mining/data-mining-tools.md)   
+ [Data Mining-Projektmappen](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
+ [Data Mining-Tools](../../2014/analysis-services/data-mining/data-mining-tools.md)   
  [Data Mining-Projekte](../../2014/analysis-services/data-mining/data-mining-projects.md)  
   
   

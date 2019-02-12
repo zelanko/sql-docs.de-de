@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ff8e8792079fcca8ed4affa373964ec6cb39fe1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2f036d86b7bcdef97de03a80c0b9b615f08eda82
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111019"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012462"
 ---
 # <a name="delete-and-re-create-encryption-keys--ssrs-configuration-manager"></a>Löschen und erneutes Erstellen von Verschlüsselungsschlüsseln (SSRS-Konfigurations-Manager)
   Das Löschen und erneute Erstellen von Verschlüsselungsschlüsseln gehört nicht zu den routinemäßigen Aktivitäten bei der Verwaltung von Schlüsseln. Sie führen diese Aufgaben als Reaktion auf eine bestimmte Gefahr für den Berichtsserver oder als letzte Möglichkeit vor dem Verlust des Zugriffs auf die Datenbank des Berichtsservers aus.  
@@ -37,11 +37,11 @@ ms.locfileid: "48111019"
   
  Sie können den symmetrischen Schlüssel nur dann erneut erstellen, wenn der Server ausgeführt wird. Das erneute Erstellen der Verschlüsselungsschlüssel und das erneute Verschlüsseln des Inhalts unterbricht die Serveroperationen. Sie müssen den Server offline nehmen, während die erneute Verschlüsselung ausgeführt wird. Während dieser Zeit sollten keine Anforderungen an den Server gestellt werden.  
   
- Sie können das Reporting Services-Konfigurationstool oder das Hilfsprogramm **rskeymgmt** verwenden, um den symmetrischen Schlüssel und die verschlüsselten Daten zurückzusetzen. Weitere Informationen dazu, wie der symmetrische Schlüssel erstellt wird, finden Sie unter [Initialisieren eines Berichtsservers (SSRS-Konfigurations-Manager)](ssrs-encryption-keys-initialize-a-report-server.md).  
+ Sie können das Reporting Services-Konfigurationstool oder das Hilfsprogramm **rskeymgmt** verwenden, um den symmetrischen Schlüssel und die verschlüsselten Daten zurückzusetzen. Weitere Informationen dazu, wie der symmetrische Schlüssel erstellt wird, finden Sie unter [Initialisieren eines Berichtsservers &#40;SSRS-Konfigurations-Manager&#41;](ssrs-encryption-keys-initialize-a-report-server.md).  
   
 #### <a name="how-to-re-create-encryption-keys-reporting-services-configuration-tool"></a>Erneutes Erstellen der Verschlüsselungsschlüssel (Reporting Services-Konfigurationstool)  
   
-1.  Deaktivieren Sie den Berichtsserver-Webdienst und HTTP-durch Ändern Zugriff der `IsWebServiceEnabled` Eigenschaft in der Datei "rsreportserver.config". Mit diesem Schritt werden Authentifizierungsanforderungen vorübergehend nicht mehr an den Berichtsserver gesendet, ohne dass der Server vollständig herunterfährt. Sie müssen minimale Berechtigungen haben, damit Sie die Schlüssel neu erstellen können.  
+1.  Deaktivieren Sie den Report Server-Webdienst und HTTP-Zugriff, indem Sie die `IsWebServiceEnabled`-Eigenschaft in der Datei rsreportserver.config ändern. Mit diesem Schritt werden Authentifizierungsanforderungen vorübergehend nicht mehr an den Berichtsserver gesendet, ohne dass der Server vollständig herunterfährt. Sie müssen minimale Berechtigungen haben, damit Sie die Schlüssel neu erstellen können.  
   
      Wenn Sie Verschlüsselungsschlüssel für eine Berichtsserverbereitstellung durch dezentrales Skalieren erneut erstellen, deaktivieren Sie diese Eigenschaft für alle Instanzen in der Bereitstellung.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48111019"
   
     2.  Öffnen Sie die Datei rsreportserver.config.  
   
-    3.  Für die `IsWebServiceEnabled` -Eigenschaft, geben Sie `False`, und klicken Sie dann Ihre Änderungen zu speichern.  
+    3.  Geben Sie für die `IsWebServiceEnabled`-Eigenschaft `False` an, und speichern Sie dann die Änderungen.  
   
 2.  Starten Sie das Reporting Services-Konfigurationstool, und stellen Sie anschließend eine Verbindung zu der zu konfigurierenden Berichtsserverinstanz her.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48111019"
   
 4.  Starten Sie den Windows-Dienst des Berichtsservers erneut. Wenn Sie Verschlüsselungsschlüssel für eine Bereitstellung für horizontales Skalieren erneut erstellen, starten Sie den Dienst auf allen Instanzen erneut.  
   
-5.  Reaktivieren den Webdienst und HTTP-Zugriff auf durch Ändern der `IsWebServiceEnabled` Eigenschaft in der Datei "rsreportserver.config". Wiederholen Sie diesen Schritt für alle Instanzen, wenn Sie mit einer Bereitstellung für horizontales Skalieren arbeiten.  
+5.  Aktivieren Sie den Webdienst und den HTTP-Zugriff erneut, indem Sie die `IsWebServiceEnabled`-Eigenschaft in der Datei rsreportserver.config ändern. Wiederholen Sie diesen Schritt für alle Instanzen, wenn Sie mit einer Bereitstellung für horizontales Skalieren arbeiten.  
   
 #### <a name="how-to-re-create-encryption-keys-rskeymgmt"></a>Erneutes Erstellen von Verschlüsselungsschlüsseln (rskeymgmt)  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48111019"
   
 1.  Sie müssen für jede freigegebene Datenquelle die Verbindungszeichenfolge erneut eingeben.  
   
-2.  Für jeden Bericht und jede freigegebene Datenquelle, der bzw. die gespeicherte Anmeldeinformationen verwendet, müssen Sie den Benutzernamen und das Kennwort erneut eingeben und dann speichern. Weitere Informationen finden Sie unter [angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen-Verbindungen](../../integration-services/connection-manager/data-sources.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
+2.  Für jeden Bericht und jede freigegebene Datenquelle, der bzw. die gespeicherte Anmeldeinformationen verwendet, müssen Sie den Benutzernamen und das Kennwort erneut eingeben und dann speichern. Weitere Informationen finden Sie unter [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../integration-services/connection-manager/data-sources.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
 3.  Für datengesteuerte Abonnements öffnen Sie jedes Abonnement, und geben Sie die Anmeldeinformationen für die Abonnementdatenbank erneut ein.  
   
@@ -118,6 +118,6 @@ ms.locfileid: "48111019"
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
- [Verschlüsselter Berichtsserverdaten Store &#40;SSRS-Konfigurations-Manager&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Speichern verschlüsselter Berichtsserverdaten &#40;SSRS-Konfigurations-Manager&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

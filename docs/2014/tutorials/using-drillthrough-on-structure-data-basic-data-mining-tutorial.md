@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a693979c-0564-4d6d-b35d-cbbc8f350469
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9e12e4c4bcde1887de25e3ed75479da8b4eb5433
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 68d5d29a4aed7380bd7a53c65d140aac24912392
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053042"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012761"
 ---
 # <a name="using-drillthrough-on-structure-data-basic-data-mining-tutorial"></a>Verwenden von Drillthrough für Strukturdaten (Lernprogramm zu Data Mining-Grundlagen)
-  Als Teil des Werbekampagne [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] sendet einen Prospekt an potenziellen Kunden im Alter von 34 bis 40 Jahren demografische. Die marketingabteilung hat beschlossen, dass sie auch das Adressfeld für den Kunden zu senden, die Fahrräder von gekauft haben möchten [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] vor mehr als fünf Jahren. In dieser Lektion identifizieren Sie Kunden mit älteren Fahrrädern und rufen ihre Kontaktinformationen ab. Diese Informationen sind nicht im Modell, sondern in der Struktur enthalten. Stellen Sie zunächst sicher, dass die Drillthroughfunktion für die Struktur aktiviert ist, um die Kontaktinformationen abzurufen. Rufen Sie dann die Namen und Adressen der Kundenzielgruppe ab, indem Sie einen Drillthrough ausführen.  
+  Im Rahmen einer Werbekampagne sendet [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] einen Prospekt an alle potenziellen Kunden im Alter von 34 bis 40 Jahren. Der gleiche Prospekt soll auf Wunsch der Marketingabteilung auch an Kunden gesendet werden, die vor mehr als fünf Jahren ein Fahrrad von [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] gekauft haben. In dieser Lektion identifizieren Sie Kunden mit älteren Fahrrädern und rufen ihre Kontaktinformationen ab. Diese Informationen sind nicht im Modell, sondern in der Struktur enthalten. Stellen Sie zunächst sicher, dass die Drillthroughfunktion für die Struktur aktiviert ist, um die Kontaktinformationen abzurufen. Rufen Sie dann die Namen und Adressen der Kundenzielgruppe ab, indem Sie einen Drillthrough ausführen.  
   
 ### <a name="to-enable-drillthrough-on-a-mining-model"></a>So aktivieren Sie Drillthrough für ein Miningmodell  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]auf die **Miningmodelle** Registerkarte Data Mining-Designer, Informationen zu diesem mit der rechten Maustaste die **TM_Decision_Tree** Modell, und wählen **Eigenschaften**.  
+1.  Klicken Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]im Data Mining-Designer auf der Registerkarte **Miningmodelle** mit der rechten Maustaste auf das **TM_Decision_Tree** -Modell, und wählen Sie **Eigenschaften**aus.  
   
 2.  Klicken Sie im Eigenschaftenfenster auf **AllowDrillthrough**, und wählen Sie **True**aus.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "48053042"
  Gratulation – Sie haben das Lernprogramm zu Data Mining-Grundlagen abgeschlossen. Nachdem Sie sich mit der Verwendung der Data Mining-Tools vertraut gemacht haben, wird empfohlen, das Data Mining-Lernprogramm für Fortgeschrittene zu absolvieren. Darin wird das Erstellen von Modellen für Vorhersagen, Market Basket-Analysen und Sequenzcluster veranschaulicht.  
   
 ## <a name="previous-task-in-lesson"></a>Vorherige Aufgabe in der Lektion  
- [Erstellen von Vorhersagen &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Erstellen von Vorhersagen &#40;Tutorial zu Data Mining-Grundlagen&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen von Vorhersageabfragen mithilfe des Generators für Vorhersageabfragen](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
