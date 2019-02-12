@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 153729c4-d01e-4629-b78f-0cfd5a7f83da
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 80b5c2e77c5e10a543c7847bd2bd2e60d9d50920
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9861bc63a8fd1e4dd76fb030baf2a11c2774961a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221750"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027572"
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>Hinzufügen einer Drillthroughaktion für einen Bericht (Berichts-Generator und SSRS)
   Der Bericht, der geöffnet wird, wenn Sie auf den Link im Hauptbericht klicken, wird als *Drillthroughbericht*bezeichnet. Der Drillthrough-Link ermöglicht einen Drillthrough-Vorgang.  
@@ -61,7 +61,7 @@ ms.locfileid: "48221750"
 7.  Führen Sie den Bericht aus, und klicken Sie auf das Berichtselement, für das Sie den Link festgelegt haben, um den Link zu testen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Im Dialogfeld "Eigenschaften" Aktion &#40;Berichts-Generator und SSRS&#41;](../action-properties-dialog-box-report-builder-and-ssrs.md)   
+ [Aktionseigenschaften (Dialogfeld) &#40;Berichts-Generator und SSRS&#41;](../action-properties-dialog-box-report-builder-and-ssrs.md)   
  [Formatieren von Datenpunkten in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Anzeigen von QuickInfos für eine Reihe &#40;Berichts-Generator und SSRS&#41;](show-tooltips-on-a-series-report-builder-and-ssrs.md)  
   

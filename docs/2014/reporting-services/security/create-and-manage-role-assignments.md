@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b26701352b94150a61fe0586f4c32cdf3db87137
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 88c864b3e3243ab7cb380b4af5b092757585115d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211010"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023741"
 ---
 # <a name="create-and-manage-role-assignments"></a>Erstellen und Verwalten von Rollenzuweisungen
   Eine *Rollenzuweisung* ist eine Sicherheitsrichtlinie, die bestimmt, ob ein Benutzer oder eine Gruppe auf einen bestimmten Berichtsserver zugreifen und einen Vorgang ausführen kann. Eine Rollenzuweisung besteht aus einem einzelnen Benutzer- oder Gruppenkontonamen und mindestens einer Rollendefinition.  
@@ -42,7 +42,7 @@ ms.locfileid: "48211010"
   
  Sie müssen Mitglied der lokalen Gruppe Administratoren auf dem Berichtsserver-Computer sein, um eine Rollenzuweisung erstellen zu können. Sie können diese Aufgabe delegieren, indem Sie andere Benutzer der Rolle **Inhalts-Manager** zuweisen.  
   
- Weitere Informationen finden Sie unter [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41;](grant-user-access-to-a-report-server.md).  
+ Weitere Informationen finden Sie unter [Grant User Access to a Report Server &#40;Report Manager&#41;](grant-user-access-to-a-report-server.md).  
   
 ## <a name="creating-a-system-level-role-assignment"></a>Erstellen einer Rollenzuweisung auf Systemebene  
  Öffnen Sie im Berichts-Manager die Seite Siteeinstellungen, um Rollenzuweisungen auf Systemebene zu definieren und zu verwalten.  
@@ -51,7 +51,7 @@ ms.locfileid: "48211010"
   
  Rollenzuweisungen auf Systemebene umfassen eine Vielzahl von Berechtigungen, jedoch keine Berechtigungen, die Teil einer Rollenzuweisung auf Elementebene sind. Im Gegensatz zu den Systemberechtigungen auf einem Computer umfassen die Systemrollen in Berichtsservern keine übergreifenden Berechtigungen, die den gesamten Satz an möglichen Vorgängen beinhalten. Bei Rollenzuweisungen auf Systemebene handelt es sich einfach um eine Menge von Tasks, die die Berichtsserversite betreffen. Berechtigungen, die über die Systemrollenzuweisungen übertragen werden, bestimmen, ob Benutzer Anwendungseigenschaften (beispielsweise als Bild oder Titel der Homepage) anzeigen, freigegebene Zeitpläne anzeigen oder verwalten oder den Berichts-Generator ausführen können.  
   
- Weitere Informationen finden Sie unter [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41; ](grant-user-access-to-a-report-server.md) und [vordefinierte Rollen](role-definitions-predefined-roles.md).  
+ Weitere Informationen finden Sie unter [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41;](grant-user-access-to-a-report-server.md) und [Vordefinierte Rollen](role-definitions-predefined-roles.md).  
   
 ## <a name="modifying-a-role-assignment"></a>Ändern einer Rollenzuweisung  
  Eine Rollenzuweisung kann jederzeit geändert werden. Die Änderungen werden wirksam, wenn Sie die Rollenzuweisung speichern. Benutzersitzungen sind von Rollenzuweisungsänderungen nicht betroffen. Wenn ein Benutzer einen Bericht geöffnet hat, und Sie ändern eine Rollenzuweisung, um den Zugriff darauf zu sperren, kann der Benutzer den Bericht weiterhin in der aktuellen Sitzung verwenden.  
@@ -65,7 +65,7 @@ ms.locfileid: "48211010"
   
 ## <a name="see-also"></a>Siehe auch  
  [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41;](grant-user-access-to-a-report-server.md)   
- [Ändern oder Löschen einer Rollenzuweisung (Berichts-Manager)](role-assignments-modify-or-delete.md)   
+ [Ändern oder Löschen einer Rollenzuweisung &#40;Berichts-Manager&#41;](role-assignments-modify-or-delete.md)   
  [Rollenzuweisungen](role-assignments.md)   
  [Rollendefinitionen](role-definitions.md)   
  [Vordefinierte Rollen](role-definitions-predefined-roles.md)   

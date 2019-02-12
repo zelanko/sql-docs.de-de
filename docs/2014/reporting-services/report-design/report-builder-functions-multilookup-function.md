@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 62923987b3214a319268291b1349cb32f5bd0bd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1350c25450dfae5ed02b9761ed79182ccac817d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147456"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021592"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Multilookup-Funktion (Berichts-Generator und SSRS)
   Gibt den Satz der ersten übereinstimmenden Werte für den angegebenen Satz von Namen aus einem Dataset mit Name-Wert-Paaren zurück.  
@@ -33,24 +33,24 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 #### <a name="parameters"></a>Parameter  
  *source_expression*  
- (`VariantArray`) Ein Ausdruck, der im aktuellen Bereich ausgewertet wird und den Satz der zu suchenden Namen oder Schlüssel angibt. Beispiel für einen mehrwertigen Parameter: `=Parameters!IDs.value`.  
+ (`VariantArray`) Ein Ausdruck, der im aktuellen Bereich ausgewertet wird und der den Satz der zu suchenden Namen oder Schlüssel angibt. Beispiel für einen mehrwertigen Parameter: `=Parameters!IDs.value`.  
   
  *destination_expression*  
- (`Variant`) Ein Ausdruck, der für jede Zeile in einem Dataset ausgewertet wird und der den Namen oder den Schlüssel für die Übereinstimmung angibt. Beispiel: `=Fields!ID.Value`.  
+ (`Variant`) Ein Ausdruck, der für jede Zeile in einem Dataset ausgewertet wird und der den Namen oder den Schlüssel für die Übereinstimmung angibt. Beispiel: `=Fields!ID.Value`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.  
   
  *result_expression*  
- (`Variant`) Ein Ausdruck, der für die Zeile im Dataset ausgewertet wird, in denen *Source_expression* = *Destination_expression*, und den abzurufenden Wert angibt. Beispiel: `=Fields!Name.Value`.  
+ (`Variant`) Ein Ausdruck, der für die Zeile im Dataset ausgewertet wird, in denen *Source_expression* = *Destination_expression*, und den abzurufenden Wert angibt. Beispiel: `=Fields!Name.Value`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.  
   
  *Dataset (dataset)*  
  Eine Konstante, die den Namen eines Datasets im Bericht angibt. Beispiel: "Colors".  
   
 ## <a name="return"></a>Rückgabewert  
- Gibt eine `VariantArray`, oder `Nothing` , wenn keine Übereinstimmung vorhanden ist.  
+ Gibt einen Wert vom Typ `VariantArray` zurück; gibt `Nothing` zurück, wenn keine Übereinstimmung vorhanden ist.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwendung `Multilookup` auf einen Satz von Werten aus einem Dataset für Name-Wert-Paare abzurufen, in dem jedes Paar über eine 1: 1 Beziehung verfügt. `MultiLookup` ist das Äquivalent eines Aufrufs `Lookup` für einen Satz von Namen oder Schlüsseln. Z. B. für einen mehrwertigen Parameter, der auf primärschlüsselbezeichnern basiert, können Sie `Multilookup` in einem Ausdruck in einem Textfeld in einer Tabelle, um zugeordnete Werte aus einem Dataset abzurufen, die nicht an den Parameter oder die Tabelle gebunden ist.  
+ Verwenden Sie `Multilookup`, um eine Wertemenge aus einem Dataset für Name-Wert-Paare abzurufen, in dem jedes Paar über eine 1:1-Beziehung verfügt. `MultiLookup` ist mit dem Aufrufen von `Lookup` für eine Menge von Namen oder Schlüsseln vergleichbar. Beispiel: Für einen mehrwertigen Parameter, der auf Primärschlüsselbezeichnern basiert, können Sie `Multilookup` in einem Ausdruck in einem Textfeld in einer Tabelle verwenden, um zugeordnete Werte aus einem Dataset abzurufen, das nicht an den Parameter oder die Tabelle gebunden ist.  
   
- `Multilookup` führt Folgendes aus:  
+ Mit `Multilookup` wird Folgendes ausgeführt:  
   
 -   Der Quellausdruck wird im aktuellen Bereich ausgewertet, und ein Array von Variant-Objekten wird generiert.  
   
@@ -62,7 +62,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Es gelten folgende Einschränkungen:  
   
--   `Multilookup` wird ausgewertet, nachdem alle Filterausdrücke angewendet wurden  
+-   `Multilookup` wird ausgewertet, nachdem alle Filterausdrücke angewendet wurden.  
   
 -   Nur eine Suchebene wird unterstützt. Ein Quell-, Ziel- oder Ergebnisausdruck kann keinen Verweis auf eine Suchfunktion einschließen.  
   
@@ -91,14 +91,14 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Das Dataset "CategoryNames" enthält den Kategoriebezeichner und den Kategorienamen, wie in der folgenden Tabelle gezeigt.  
   
-|im Elementknoten &lt;Customer ID="1"|Name|  
+|ID|Name|  
 |--------|----------|  
 |1|Accessories|  
 |2|Bikes|  
 |3|Clothing|  
-|4|Components|  
+|4|Komponenten|  
   
- Verwenden Sie für die Suche der Namen, die der Liste der Bezeichner entsprechen, `Multilookup`. Sie müssen zuerst die Liste in ein Zeichenfolgenarray, Aufruf aufteilen `Multilookup` die Kategorienamen abzurufen, und die Ergebnisse in einer Zeichenfolge verkettet.  
+ Verwenden Sie für die Suche der Namen, die der Liste der Bezeichner entsprechen, `Multilookup`. Sie müssen zuerst die Liste in ein Zeichenfolgenarray aufteilen, `Multilookup` aufrufen, um die Kategorienamen abzurufen, und die Ergebnisse zu einer Zeichenfolge verketten.  
   
  Wenn der folgende Ausdruck in ein Textfeld in einem Datenbereich platziert wird, der an das Dataset "Category" gebunden ist, wird "Bikes, Components, Bikes, Accessories" angezeigt:  
   
@@ -127,6 +127,6 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](expressions-report-builder-and-ssrs.md)   
- [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ab5e18825ec9a328db926829355b706cff2a58d8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 1f8dcab2a07aca7971ea8c799660b075fe0bcfd2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366712"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022973"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Erstellen eines einfachen Tabellenberichts (SSRS-Lernprogramm)
   In diesem Tutorial wurde entwickelt, unterstützt Sie beim Erstellen eines einfachen Tabellenberichts basierend auf den [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] -Datenbank mithilfe von Berichts-Designer. Sie können die Berichte auch mithilfe des Berichts-Generators oder des Berichts-Assistenten erstellen. In diesem Lernprogramm erstellen Sie ein Berichtsprojekt, richten Verbindungsinformationen ein, definieren eine Abfrage, fügen einen Tabellendatenbereich hinzu und zeigen den Bericht in der Vorschau an.  
@@ -55,7 +55,7 @@ ms.locfileid: "53366712"
   
  [Lektion 5: Formatieren eines Berichts &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md)  
   
- [Lektion 6: Hinzufügen von Gruppierungen und Summen &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)  
+ [Lektion 6: Hinzufügen von Gruppierungen und Gesamtwerten &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)  
   
 > [!NOTE]  
 >  Anzeige der Lernprogramme empfehlen wir, hinzuzufügen, **Weiter** und **zurück** in der Symbolleiste der Dokumentanzeige die Schaltflächen. Weitere Informationen finden Sie weiter oben unter  

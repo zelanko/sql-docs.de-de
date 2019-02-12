@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: b1b75d72-6220-43fe-abfb-f967f3972d00
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8547320f6ac9cda5f98da04209060f433da1436e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 98ac0b972d9833a72345df2603452de5b39abbf0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191760"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027661"
 ---
 # <a name="iswindowsserviceenabled-property-wmi-msreportserverconfigurationsetting"></a>IsWindowsServiceEnabled-Eigenschaft (WMI: MSReportServer_ConfigurationSetting)
   Gibt an, ob der Report Server-Windows-Dienst aktiviert ist. Schreibgeschützt.  
@@ -43,12 +43,12 @@ public boolean IsWindowsServiceEnabled;
  Ein schreibgeschützter **boolescher** Wert. Der Wert `true` gibt an, dass der Report Server-Windows-Dienst aktiviert ist.  
   
 ## <a name="example-code"></a>Beispielcode  
- [MSReportServer_ConfigurationSetting Class (MSReportServer_ConfigurationSetting-Klasse)](msreportserver-configurationsetting-class.md)  
+ [MSReportServer_ConfigurationSetting-Klasse](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Anforderungen  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](msreportserver-configurationsetting-members.md)  
+ [MSReportServer_ConfigurationSetting-Member](msreportserver-configurationsetting-members.md)  
   
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 9140c5f2-b340-45a6-9c27-d870d15aafea
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8a66c6284ea53f65351a964e3f24492c569521af
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: bee5ca4ded1b2fd5cbda0712cb766c825b9d0318
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544272"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022361"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>Vorhersagen von Zuordnungen (Data Mining-Lernprogramm für Fortgeschrittene)
   Im Anschluss an die Verarbeitung der Modelle können Sie anhand der Informationen über Zuordnungen, die im Modell gespeichert sind, Vorhersagen erstellen. In der abschließenden Aufgabe der Lektion lernen Sie, Vorhersageabfragen auf Basis der erstellten Zuordnungsmodelle zu erstellen. In dieser Lektion wird davon ausgegangen, dass Sie mit der Verwendung des Generators für Vorhersageabfragen vertraut sind und lernen möchten, wie Vorhersageabfragen für Zuordnungsmodelle erstellt werden. Weitere Informationen zum Verwenden des Generators für Vorhersageabfragen finden Sie unter [Data Mining-Abfrageschnittstellen](../../2014/analysis-services/data-mining/data-mining-query-tools.md).  
@@ -125,8 +124,8 @@ ms.locfileid: "52544272"
 |Model|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.291...|0.252...|  
-|Water Bottle|2866|0,192...|0.175...|  
-|Patchkit|2113|0,142...|0.132|  
+|Water Bottle|2866|0.192...|0.175...|  
+|Patchkit|2113|0.142...|0.132|  
   
 ## <a name="working-with-results"></a>Arbeiten mit Ergebnissen  
  Wenn Ihre Ergebnisse eine große Zahl von geschachtelten Tabellen enthalten, können Sie diese vereinfachen, um die Anzeige übersichtlicher zu gestalten. Dazu können Sie die Abfrage manuell ändern und das `FLATTENED`-Schlüsselwort hinzufügen.  

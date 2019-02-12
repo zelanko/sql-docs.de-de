@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 4a7545fd-37a3-4766-ad59-0946f1bd3524
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d9d5dc03fefedbf95d9e84069c2875db9e8a4be7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 63f46f2d548437a707922bb9cf8b58727061253b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066170"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022171"
 ---
 # <a name="processing-the-sequence-clustering-model"></a>Verarbeiten des Sequenzclustermodells
   Nachdem Sie eine neue Miningstruktur erstellt haben, müssen Sie die Änderungen an der Data Mining-Lösung bereitstellen und die Struktur verarbeiten. Im Anschluss an die Verarbeitung der neuen Struktur und des Miningmodells können Sie das Miningmodell durchsuchen.  
@@ -25,7 +24,7 @@ ms.locfileid: "48066170"
   
 ### <a name="to-process-the-mining-structure-and-model"></a>So verarbeiten Sie die Miningstruktur und das Miningmodell  
   
-1.  Auf der **Miningmodell** Menü [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Option **Miningstruktur verarbeiten und alle Modelle**.  
+1.  Klicken Sie im Menü **Miningmodell** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]auf **Miningstruktur und alle Modelle verarbeiten**.  
   
 2.  Klicken Sie in der Meldung mit der Frage, ob Sie das Projekt erstellen und bereitstellen möchten, auf **Ja**.  
   
@@ -41,8 +40,8 @@ ms.locfileid: "48066170"
  [Prüfen der Sequence Clustering-Modell &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Designer](../../2014/analysis-services/data-mining/data-mining-designer.md)   
- [Microsoft Sequence Clustering-Algorithmus](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Anforderungen und Überlegungen zur Verarbeitung &#40;Datamining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Data Mining-Designer](../../2014/analysis-services/data-mining/data-mining-designer.md)   
+ [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Anforderungen und Überlegungen zur Verarbeitung &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

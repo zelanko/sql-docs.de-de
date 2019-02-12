@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 60685458-9108-47bf-820a-5e7db454d408
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f6cbd9cc0723f6b1ce01799423a88c6a0f62e801
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d11f943dcbe22080609c8e10a457e2c64d904de2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132182"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036761"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>Reporting Services in SQL Server Management Studio (SSRS)
   Berichtsserveradministratoren können [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] für folgende Aufgaben verwenden:  
@@ -35,15 +35,15 @@ ms.locfileid: "48132182"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Connect to a Report Server in Management Studio (Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio)](connect-to-a-report-server-in-management-studio.md)  
+-   [Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](connect-to-a-report-server-in-management-studio.md)  
   
 -   [Festlegen von Berichtsservereigenschaften &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)  
   
--   [Erstellen, löschen oder Ändern einer Rolle &#40;Management Studio&#41;](../security/role-definitions-create-delete-or-modify.md)  
+-   [Erstellen, Löschen oder Ändern einer Rolle &#40;Management Studio&#41;](../security/role-definitions-create-delete-or-modify.md)  
   
 -   [Löschen eines Elements &#40;Management Studio&#41;](delete-an-item-management-studio.md)  
   
--   [Berichtsserveraufträge Abbrechen &#40;Management Studio&#41;](cancel-report-server-jobs-management-studio.md)  
+-   [Berichtsserveraufträge abbrechen &#40;Management Studio&#41;](cancel-report-server-jobs-management-studio.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Berichtsserver im Management Studio (F1-Hilfe)](report-server-in-management-studio-f1-help.md)   

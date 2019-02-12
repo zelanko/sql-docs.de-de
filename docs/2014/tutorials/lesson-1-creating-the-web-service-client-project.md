@@ -1,24 +1,23 @@
 ---
-title: 'Lektion 1: Erstellen der Webdienst-Clientprojekts | Microsoft-Dokumentation'
+title: 'Lektion 1: Erstellen die Webdienst-Clientprojekts | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0070daa6-56b0-4663-83b2-44c96acafad8
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: bf5a2f15aaed3c50c456eb635b34a19973a51f21
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: aa992d78e8075459115fb4a298b8c8dba02a8157
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080800"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025291"
 ---
-# <a name="lesson-1-creating-the-web-service-client-project"></a>Lektion 1: Erstellen des Webdienst-Clientprojekts
+# <a name="lesson-1-creating-the-web-service-client-project"></a>Lektion 1: Erstellen die Webdienst-Clientprojekts
   Mithilfe dieser Anleitung werden Sie eine einfache Konsolenanwendung erstellen, die auf den Berichtsserver-Webdienst zugreift. Im Zusammenhang mit dieser Anleitung wird davon ausgegangen, dass Sie in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] entwickeln.  
   
 ### <a name="to-create-a-console-application"></a>So erstellen Sie eine Konsolenanwendung  

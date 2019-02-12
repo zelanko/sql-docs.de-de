@@ -2,8 +2,7 @@
 title: Sp_pdw_add_network_credentials (SQL Data Warehouse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 38111262840a7667a432422b996c666ddc0d0748
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49d2fc908bc7f2ef7c2e43a2e4028189528f6110
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708228"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019051"
 ---
 # <a name="sppdwaddnetworkcredentials-sql-data-warehouse"></a>Sp_pdw_add_network_credentials (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -36,7 +35,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
 ```  
   
 ## <a name="arguments"></a>Argumente  
- "*Target_server_name*"  
+ '*target_server_name*'  
  Gibt an, die Ziel-Serverhostnamen oder die IP-Adresse. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] wird für diesen Server erlauben mithilfe der Benutzername und Kennwort-Anmeldeinformationen, die an diese gespeicherte Prozedur übergeben wird.  
   
  Um über das InfiniBand-Netzwerk verbinden möchten, verwenden Sie die InfiniBand IP-Adresse des Zielservers ein.  

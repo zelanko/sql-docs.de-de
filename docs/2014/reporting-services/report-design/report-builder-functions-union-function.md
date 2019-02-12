@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 37d858e465e67bfba98da5d4ad9a0c44fbf1e46b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 09c16397bae867309fce5d47cc5f0397825d7953
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102840"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027192"
 ---
 # <a name="union-function-report-builder-and-ssrs"></a>Union-Funktion (Berichts-Generator und SSRS)
   Gibt die Vereinigung aller numerischen Werte ungleich NULL aus dem angegebenen Ausdruck im Kontext des festgelegten Bereichs ausgewertet zurück.  
@@ -33,13 +33,13 @@ Union(expression, scope, recursive)
   
 #### <a name="parameters"></a>Parameter  
  *expression*  
- (`SqlGeometry` oder `SqlGeography`) der Ausdruck für den die Aggregation auszuführen.  
+ (`SqlGeometry` oder `SqlGeography`) Der Ausdruck, für den die Aggregation ausgeführt werden soll.  
   
  *Bereich*  
- (`String`) Optional. Der Name eines Datasets, einer Gruppe oder eines Datenbereichs mit den Berichtselementen, auf die die Aggregatfunktion anzuwenden ist. Wenn *scope* nicht angegeben ist, wird der aktuelle Bereich verwendet.  
+ (`String`) optional. Der Name eines Datasets, einer Gruppe oder eines Datenbereichs mit den Berichtselementen, auf die die Aggregatfunktion anzuwenden ist. Wenn *scope* nicht angegeben ist, wird der aktuelle Bereich verwendet.  
   
  *Rekursiv*  
- (**Enumerationstyp**) Optional. `Simple` (Standard) oder `RdlRecursive`. Gibt an, ob die Aggregation rekursiv auszuführen ist.  
+ (**Enumerationstyp**) Optional. `Simple` (Standardwert) oder `RdlRecursive`. Gibt an, ob die Aggregation rekursiv auszuführen ist.  
   
 ## <a name="return"></a>Rückgabewert  
  Gibt ein räumliches Objekt zurück. Dies ist je nach Ausdruckstyp vom Typ `SqlGeometry` oder `SqlGeography`. Weitere Informationen zu `SqlGeometry` und `SqlGeography` räumlichen Datentypen finden Sie unter [Übersicht über räumliche Datentypen](../../relational-databases/spatial/spatial-data-types-overview.md).  
@@ -64,7 +64,7 @@ Union(expression, scope, recursive)
  Weitere Informationen zu rekursiven Aggregaten finden Sie unter [Creating Recursive Hierarchy Groups (Report Builder and SSRS) (Erstellen von rekursiven Hierarchiegruppen (Berichts-Generator und SSRS))](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
 ## <a name="example"></a>Beispiel  
- Die folgende Tabelle zeigt Beispiele für `SqlGeometry` Ausdrücke und `Union` -Ergebnisausdrücke im WKT (Well-Known Text)-Format für räumliche Daten gezeigt.  
+ In der folgenden Tabelle werden Beispiele für `SqlGeometry`-Ausdrücke und `Union`-Ergebnisausdrücke im WKT-Format (Well Known Text) für räumliche Daten gezeigt.  
   
 |Feld mit räumlichen Daten|Beispiel|Union-Ergebnis|  
 |-----------------------------|-------------|------------------|  
@@ -82,6 +82,6 @@ Union(expression, scope, recursive)
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](expressions-report-builder-and-ssrs.md)   
- [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

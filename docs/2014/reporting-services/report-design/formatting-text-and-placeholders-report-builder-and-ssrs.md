@@ -17,13 +17,13 @@ f1_keywords:
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0b2dc831119ae6356761b525f76fe11b37236724
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 12daff3490a0ca11fefa5c120952b30499118a4d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111745"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037431"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>Formatieren von Text und Platzhaltern (Berichts-Generator und SSRS)
   Ein Textfeld kann ein Berichtselement sein oder eine einzelne Zelle in einem Datenbereich mit Text, ein berechnetes Feld oder ein Zeiger auf ein Feld in einer Datenbank. Es kann sich auch um eine Kombination aus diesen drei Elementen handeln. Sie können Schriftarten und Farben kombinieren sowie Fett- und Kursivformatierungen hinzufügen; außerdem können Sie Absätze mithilfe von Ausrichtungen und Einzügen formatieren. Sie können ein vollständiges Textfeld formatieren, oder Sie können bestimmte Textelemente, Zahlen, Ausdrücke oder Felder in einem Textfeld formatieren.  
@@ -46,7 +46,7 @@ ms.locfileid: "48111745"
   
 -   Ziehen Sie ein Feld aus dem **Berichtsdatenbereich** in das Textfeld. Wenn Sie den Ausdruck an eine andere Stelle im Hauptteil des Berichts ziehen, wird ein neues Textfeld mit dem Platzhalter erstellt. Beim Wert des Platzhalters handelt es sich um den Feldausdruck, der dem abgelegten Feld entspricht.  
   
--   Klicken Sie mit der rechten Maustaste auf eine beliebige Stelle im Textfeld, und wählen Sie **Platzhalter einfügen**aus. Im Dialogfeld **Platzhaltereigenschaften** können Sie einen Ausdruck als Wert des Platzhalters angeben. Weitere Informationen finden Sie unter [im Dialogfeld "Eigenschaften" Platzhalter "," Allgemein &#40;Berichts-Generator und SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md).  
+-   Klicken Sie mit der rechten Maustaste auf eine beliebige Stelle im Textfeld, und wählen Sie **Platzhalter einfügen**aus. Im Dialogfeld **Platzhaltereigenschaften** können Sie einen Ausdruck als Wert des Platzhalters angeben. Weitere Informationen finden Sie unter [Platzhaltereigenschaften (Dialogfeld), Allgemein &#40;Berichts-Generator und SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md).  
   
 -   Geben Sie einen einfachen oder komplexen Ausdruck in das Textfeld ein. Wenn Sie z.B. **Name: [Name]** im Textfeld eingeben, wird der Text **[Name]** als Platzhalter angezeigt, der den Ausdruck `=Fields!Name.Value`darstellt.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48111745"
  [Formatieren von Skalen auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [Listen (Berichts-Generator und SSRS)](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Platzhaltereigenschaften (Dialogfeld), Allgemein (Berichts-Generator und SSRS)](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)   
- [Exportieren nach Microsoft Excel (Berichts-Generator und SSRS)](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
+ [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41; (Exportieren nach Microsoft Excel (Berichts-Generator und SSRS))](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
  [Textfelder &#40;Berichts-Generator und SSRS&#41;](text-boxes-report-builder-and-ssrs.md)  
   
   

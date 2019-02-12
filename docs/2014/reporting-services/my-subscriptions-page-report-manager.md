@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 491a85a3-f323-4155-a0a8-de2779899995
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6ecb5d4b5216139c7d762b03fd5a8a8fbc6a1b5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 29824d30b1fdd96c2bc847b8908b49340a05aaf3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165960"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026901"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>Meine Abonnements (Seite, Berichts-Manager)
   Auf der Seite Meine Abonnements können Sie alle eigenen Abonnements zentral anzeigen. Von dieser Seite aus können Sie auf Ihre Abonnements zugreifen und diese ändern oder löschen. Als eigene Abonnements gelten nur die von Ihnen erstellten Abonnements. Sie können weder auf die Abonnements anderer Benutzer zugreifen noch auf Abonnements, die Sie zwar verwenden, deren Eigentümer Sie aber nicht sind (dies ist z. B. der Fall, wenn Ihr Name zu einem vorhandenen Abonnement hinzugefügt wird, das durch einen anderen Benutzer definiert wurde). Das Erstellen von Abonnements ist auf dieser Seite nicht möglich. Weitere Informationen zum Erstellen von Abonnements finden Sie unter den [neues Abonnement oder Abonnement-Seite bearbeiten &#40;Berichts-Manager&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md).  
@@ -38,7 +38,7 @@ ms.locfileid: "48165960"
     > [!NOTE]  
     >  Die Seite Meine Abonnements ist auch verfügbar, wenn Sie nicht über die Berechtigung zum Erstellen von Abonnements verfügen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Delete**  
  Aktivieren Sie das Kontrollkästchen neben dem Abonnement, das Sie löschen möchten, und klicken Sie auf **Löschen**.  
   

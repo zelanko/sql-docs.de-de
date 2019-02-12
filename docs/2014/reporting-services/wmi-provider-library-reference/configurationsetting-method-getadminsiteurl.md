@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: fbc5bf3c-120c-4aec-a4f2-f5391bd415f6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 68f3811c448fca9921308b520dc6c6ef9a006d5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f1fc08eb50c62cc9295d80cac894a9d9f3338698
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098570"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021659"
 ---
 # <a name="getadminsiteurl-method-wmi"></a>GetAdminSiteUrl-Methode (WMI)
   Ruft die absolute URL für die Zentraladministrationswebsite für die Microsoft [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]-, [!INCLUDE[offSPServ](../../includes/offspserv-md.md)]-, [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]- oder [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] -Farm ab, in die der Berichtsserver integriert ist  
@@ -48,6 +48,6 @@ public void GetAdminSiteUrl(out string AdminSiteUrl, out Int32 HRESULT);
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [MSReportServer_ConfigurationSetting Methods (MSReportServer_ConfigurationSetting-Methoden)](msreportserver-configurationsetting-methods.md)  
+ [MSReportServer_ConfigurationSetting-Methoden](msreportserver-configurationsetting-methods.md)  
   
   
