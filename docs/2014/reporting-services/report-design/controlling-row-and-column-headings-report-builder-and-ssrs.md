@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b8732495ad9eadf6660104f9a3edb4c991dce800
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f844db8f44e501ef373de73d0b0676730877db62
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183470"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019931"
 ---
 # <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>Steuern von Zeilen- und Spaltenüberschriften (Berichts-Generator und SSRS)
   Eine Tabelle, eine Matrix oder ein Listendatenbereich kann horizontal und vertikal mehrere Seiten enthalten. Sie können angeben, ob die Zeilen- oder Spaltenüberschriften auf jeder Seite wiederholt werden sollen. In einem interaktiven Renderer, z. B. dem Berichts-Manager oder der Berichtsvorschau, können Sie auch angeben, ob die Zeilen- bzw. Spaltenüberschriften fixiert werden sollen, sodass sie sichtbar bleiben, wenn Sie einen Bildlauf in einem Bericht durchführen. In einer Tabelle oder Matrix enthält die erste Zeile normalerweise Spaltenüberschriften mit Beschriftungen für jede Spalte. Die erste Spalte enthält normalerweise Zeilenüberschriften für jede Zeile. Bei geschachtelten Gruppen können Sie nach Bedarf den Anfangssatz mit Zeilen- und Spaltenüberschriften wiederholen, in dem die Gruppenbezeichnungen angegeben sind. In der Standardeinstellung beinhaltet ein Listendatenbereich keine Überschriften.  
@@ -113,7 +113,7 @@ ms.locfileid: "48183470"
   
  ![Zeilengruppen, erweiterter Modus mit statischen Mitgliedern](../media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "Row Groups, Advanced mode with static members")  
   
- Es werden vier Tablix-Elemente aufgelistet: **Statisch**, (**Statisch**), Kategorie und (**Details**). Ein Tablix-Element mit Klammern () zeigt an, dass keine zugehörige Gruppenkopfzeile vorhanden ist. Um Spaltenüberschriften zu wiederholen oder zu fixieren, wählen Sie das oberste statische Tablix-Element aus und legen im Eigenschaftenbereich die entsprechenden Eigenschaften fest.  
+ Es werden die folgenden Tablix-Elemente aufgelistet: **Statische**, (**statische**), Kategorie und (**Details**). Ein Tablix-Element mit Klammern () zeigt an, dass keine zugehörige Gruppenkopfzeile vorhanden ist. Um Spaltenüberschriften zu wiederholen oder zu fixieren, wählen Sie das oberste statische Tablix-Element aus und legen im Eigenschaftenbereich die entsprechenden Eigenschaften fest.  
   
  [Zurück zum Anfang](#Top)  
   
@@ -140,7 +140,7 @@ ms.locfileid: "48183470"
   
  ![Zeilengruppen, Erweitert, kein Gruppenkopf](../media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "Row Groups, Advanced, no group header.")  
   
- Im Bereich Zeilengruppen werden die folgenden Tablix-Elemente aufgelistet: (**Statisch**), (Kategorie), (**Statisch**) und (**Details**). Um Spaltenüberschriften zu wiederholen oder zu fixieren, wählen Sie das oberste Tablix-Element (**Statisch**) aus und legen im Eigenschaftenbereich die entsprechenden Eigenschaften fest.  
+ Im Bereich Zeilengruppen werden die folgenden Tablix-Elemente aufgelistet: (**Statische**), (Kategorie), (**statische**), und (**Details**). Um Spaltenüberschriften zu wiederholen oder zu fixieren, wählen Sie das oberste Tablix-Element (**Statisch**) aus und legen im Eigenschaftenbereich die entsprechenden Eigenschaften fest.  
   
  [Zurück zum Anfang](#Top)  
   

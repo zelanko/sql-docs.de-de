@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: e02d6529-ce67-4305-b7f0-433997e99c21
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a89c8c66eab37f20c8816823b44cefcfb77ad9ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a6194516bfc230c73df928bda5095c106776beff
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208393"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030131"
 ---
 # <a name="new-subscription-or-edit-subscription-page-report-manager"></a>Neues Abonnement oder Abonnement bearbeiten (Berichts-Manager)
   Mithilfe der Seite Neues Abonnement oder Abonnement bearbeiten können Sie ein neues Abonnement erstellen oder ein vorhandenes Abonnement für einen Bericht bearbeiten. Abhängig von Ihrer Rollenzuweisung stehen auf dieser Seite unterschiedliche Optionen zur Verfügung. Benutzer mit erweiterten Berechtigungen können zusätzliche Optionen verwenden.  
   
- Abonnements werden nur für Berichte unterstützt, die unbeaufsichtigt ausgeführt werden können. Der Bericht muss zumindest gespeicherte oder gar keine Anmeldeinformationen verwenden. Wenn der Bericht Parameter verwendet, muss ein Standardwert angegeben werden. Abonnements können inaktiv werden, wenn die Berichtsausführungseinstellungen geändert oder die von den Parametereigenschaften verwendeten Standardwerte entfernt werden. Weitere Informationen finden Sie unter [erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md).  
+ Abonnements werden nur für Berichte unterstützt, die unbeaufsichtigt ausgeführt werden können. Der Bericht muss zumindest gespeicherte oder gar keine Anmeldeinformationen verwenden. Wenn der Bericht Parameter verwendet, muss ein Standardwert angegeben werden. Abonnements können inaktiv werden, wenn die Berichtsausführungseinstellungen geändert oder die von den Parametereigenschaften verwendeten Standardwerte entfernt werden. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md).  
   
 > [!NOTE]  
 >  Diese Funktion ist nicht in jeder Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den Editionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]unterstützt werden, finden Sie unter [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -37,11 +37,11 @@ ms.locfileid: "48208393"
   
 3.  Führen Sie im Dropdownmenü einen der folgenden Schritte aus:  
   
-    -   Klicken Sie auf **Verwalten**. Dadurch wird die Seite Allgemeine Eigenschaften für den Bericht geöffnet. Wählen Sie dann die Registerkarte **Abonnements** aus. Klicken Sie auf der Symbolleiste auf **neues Abonnement**, oder wählen Sie ein vorhandenes Abonnement, und klicken Sie auf **bearbeiten**.  
+    -   Klicken Sie auf **Verwalten**. Dadurch wird die Seite Allgemeine Eigenschaften für den Bericht geöffnet. Wählen Sie dann die Registerkarte **Abonnements** aus. Klicken Sie auf der Symbolleiste auf **Neues Abonnement**, oder wählen Sie ein vorhandenes Abonnement aus, und klicken Sie auf **Bearbeiten**.  
   
     -   Klicken Sie auf **Abonnieren**. Dadurch wird die Seite **Neues Abonnement** für den Bericht geöffnet.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Übermittelt von**  
  Wählen Sie die Übermittlungserweiterung aus, die zum Verteilen des Berichts verwendet werden soll. Abhängig von der ausgewählten Übermittlungserweiterung werden die folgenden Einstellungen angezeigt:  
   

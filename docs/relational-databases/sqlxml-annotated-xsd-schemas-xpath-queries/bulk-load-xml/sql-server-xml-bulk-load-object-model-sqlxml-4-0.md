@@ -29,16 +29,16 @@ helpviewer_keywords:
 - Execute method
 - XML Bulk Load [SQLXML], object model
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32e6ae99d44fbcf3f09a18fb899a2d14368dfd31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cdd0c4efafbab577aef1016d367ca2210ea3d863
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790908"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011432"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML Bulk Load-Objektmodell (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "47790908"
   
  Hinweis: Wenn ID-Propagierung erfolgt, kommt diese Option nicht zur Anwendung, und Einschränkungen werden weiter überprüft. Dies ist der Fall, wenn `KeepIdentity=False` gilt und eine Beziehung definiert ist, in der es sich beim übergeordneten Element um ein Identitätsfeld handelt und der Wert bei der Generierung an das untergeordnete Element übertragen wird.  
   
- "Connectioncommand"  
+ ConnectionCommand  
  Gibt ein vorhandenes Verbindungsobjekt (zum Beispiel das ADO- oder ICommand Command-Objekt), das XML-Massenladen verwendet werden soll. Sie können der "connectioncommand"-Eigenschaft verwenden, anstatt eine Verbindungszeichenfolge mit der ConnectionString-Eigenschaft. Der Transaction-Eigenschaft muss auf "true" festgelegt werden, bei der Verwendung von "connectioncommand".  
   
  Wenn Sie die "ConnectionString" und "connectioncommand"-Eigenschaft verwenden, verwendet XML-Massenladen die zuletzt angegebene Eigenschaft.  
@@ -118,7 +118,7 @@ ms.locfileid: "47790908"
   
  Der Standardwert ist FALSE.  
   
- "Schemagen"  
+ SchemaGen  
  Gibt an, ob die erforderlichen Tabellen vor dem Ausführen eines Massenladevorgangs erstellt werden sollen. Hierbei handelt es sich um eine boolesche Eigenschaft. Wenn diese Eigenschaft auf TRUE gesetzt ist, werden die im Zuordnungsschema angegebenen Tabellen erstellt (die Datenbank muss vorhanden sein). Wenn mindestens eine der Tabellen in der Datenbank bereits vorhanden sind, bestimmt die SGDropTables-Eigenschaft an, ob diese bereits vorhandenen Tabellen gelöscht und neu erstellt werden.  
   
  Der Standardwert für die Eigenschaft "schemagen" ist "false". "Schemagen" erstellt keine PRIMARY KEY-Einschränkungen für die neu erstellten Tabellen. "Schemagen" der Fall ist, FOREIGN KEY-Einschränkungen jedoch in der Datenbank erstellen werden, wenn die Übereinstimmung gefunden werden kann **SQL: Relationship** und **SQL: Key-Felder** Anmerkungen im Zuordnungsschema und das Schlüsselfeld aus besteht. eine einzelne Spalte.  

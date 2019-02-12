@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 97480368-1fc3-4c32-b1b0-63edfb54e472
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 03c0dde2c3df8d8403897b660ed81ba7dbe75f43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 31c2c4392ebfcd055975078e3d92fdaf5e302d15
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163730"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028591"
 ---
 # <a name="code-access-security-in-reporting-services"></a>Codezugriffssicherheit in Reporting Services
   Die Codezugriffssicherheit dreht sich um diese Kernbegriffe: Beweise, Codegruppen und benannte Berechtigungssätze. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] haben die Komponenten Berichts-Manager, Berichts-Designer und Berichtsserver jeweils eine Richtliniendatei, die die Codezugriffssicherheit für benutzerdefinierte Assemblys sowie für die Daten-, Übermittlungs-, Rendering- und Sicherheitserweiterung konfiguriert. Die folgenden Abschnitte enthalten eine Übersicht über die Codezugriffssicherheit. Ausführliche Informationen zu den Themen dieses Abschnitts finden Sie unter „Sicherheitsrichtlinienmodell“ in der Dokumentation zum [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK.  

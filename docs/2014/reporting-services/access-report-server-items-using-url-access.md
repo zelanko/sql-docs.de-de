@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d1af38969f461cc607eb2b002fbc88aea77a2880
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0fe057b1fc441a41d536e4890cd4971202df7e38
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098600"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018032"
 ---
 # <a name="access-report-server-items-using-url-access"></a>Zugreifen auf Berichtsserverelemente über den URL-Zugriff
   In diesem Thema wird beschrieben, wie Sie in einer Berichtsserver-Datenbank oder auf einer SharePoint-Website unter Verwendung von *rs:Befehl*=*Wert*auf Katalogelemente mit unterschiedlichen Typen zugreifen.  
   
  Es ist nicht erforderlich, diese Parameterzeichenfolge hinzuzufügen. Wenn Sie sie weglassen, wertet der Berichtsserver den Elementtyp aus und wählt den entsprechenden Parameterwert automatisch aus. Durch die Verwendung der *rs:Command*=*Value* -Zeichenfolge in der URL verbessert sich jedoch die Leistung des Berichtsservers.  
   
- Beachten Sie in den Beispielen unten die `_vti_bin` -Proxysyntax. Weitere Informationen zum Verwenden der proxysyntax finden Sie unter [URL Access Parameter Reference](url-access-parameter-reference.md).  
+ Beachten Sie in den Beispielen unten die `_vti_bin` -Proxysyntax. Weitere Informationen zum Verwenden der Proxysyntax finden Sie unter [URL Access Parameter Reference](url-access-parameter-reference.md).  
   
 ## <a name="access-a-report"></a>Zugreifen auf einen Bericht  
  Verwenden Sie den *rs:Command*=*Render* -Parameter, um einen Bericht im Browser anzuzeigen. Zum Beispiel:  
@@ -66,7 +66,7 @@ ms.locfileid: "48098600"
 </DataSourceDefinition>  
 ```  
   
- Die Verbindungszeichenfolge wird auf Grundlage der **SecureConnectionLevel** -Einstellung des Berichtsservers zurückgegeben. Weitere Informationen zu den **SecureConnectionLevel** finden Sie unter [Using Secure Web Service Methods](report-server-web-service/net-framework/using-secure-web-service-methods.md).  
+ Die Verbindungszeichenfolge wird auf Grundlage der **SecureConnectionLevel** -Einstellung des Berichtsservers zurückgegeben. Weitere Informationen zur **SecureConnectionLevel** -Einstellung finden Sie unter [Using Secure Web Service Methods](report-server-web-service/net-framework/using-secure-web-service-methods.md).  
   
 ## <a name="access-the-contents-of-a-folder"></a>Zugreifen auf den Inhalt eines Ordners  
  Verwenden Sie den *rs:Command*=*GetChildren* -Parameter, um auf den Inhalt eines Ordners zuzugreifen. Es wird eine generische Seite zur Ordnernavigation zurückgegeben, die Links zu den Unterordnern, Berichten, Datenquellen und Ressourcen im angeforderten Ordner enthält. Zum Beispiel:  
@@ -79,6 +79,6 @@ ms.locfileid: "48098600"
   
 ## <a name="see-also"></a>Siehe auch  
  [URL-Zugriff &#40;SSRS&#41;](url-access-ssrs.md)   
- [URL Access Parameter Reference (URL-Zugriffsparameterverweis)](url-access-parameter-reference.md)  
+ [URL-Zugriffsparameterverweis](url-access-parameter-reference.md)  
   
   

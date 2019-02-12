@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 67884329476d76619399cfedabb6f84d97881bcb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a788984a75a950ae822180c070200ce7cc88694d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136270"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018891"
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>Datenwarnungs-Manager für Warnungsadministratoren
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] stellt den Datenwarnungs-Manager zum Verwalten von Datenwarnungen für SharePoint-Warnungsadministratoren bereit. Warnungsadministratoren können Informationen zu allen auf der Website gespeicherten Warnungen anzeigen und Warnungen löschen. Das folgende Bild zeigt SharePoint-Warnungsadministratoren die verfügbaren Funktionen im Datenwarnungs-Manager.  
@@ -48,7 +48,7 @@ ms.locfileid: "48136270"
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|  
 |SalesQTR|SalesByTerritoryAndQTR|Lauren Johnson|4|6/12/2011|6/1/2011|Die letzte Warnung war erfolgreich, und die Warnung wurde gesendet.|  
 |UnitsSold|ProductsSalesByQTR|Michael Blythe|2|7/1/2011|6/28/2011|Die letzte Warnung wurde erfolgreich ausgeführt, aber die Daten blieben unverändert, und es wurde keine Warnung gesendet.|  
-|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<Fehlermeldung>Die Protokolldatei enthält Details zum Fehler. Weitere Informationen erhalten Sie unter dem Protokolleintrag mit dem Bezeichner: \<GUID>.|  
+|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<Fehlermeldung>Die Protokolldatei enthält Details zum Fehler. Finden Sie in den Protokolleintrag mit dem Bezeichner: \<GUID &GT;.|  
 |TopPromotion|PromotionTracking|Cristian Petculescu|0||5/23/2011|Die Warnung wurde erstellt.|  
   
  Weitere Informationen finden Sie unter [Verwalten aller Datenwarnungen auf einer SharePoint-Website im Datenwarnungs-Manager](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  

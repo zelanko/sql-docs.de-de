@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Erstellen eines Freiformberichts (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Lernprogramm: Erstellen eines Freiformberichts (Berichts-Generator) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 97082f1fcfc739e622c976b4dff0c1dbe4e6a79d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9e1246a32f890c5842a1d1a9c8ad0202c160a171
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068990"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013751"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Lernprogramm: Erstellen eines Freiformberichts (Berichts-Generator)
   Dieses Lernprogramm zeigt Ihnen, wie Sie einen SSRS-Freiformbericht erstellen, der einem Formularbrief gleicht. Sie können Berichtselemente zu einem Formular mit Textfeldern, Bildern und anderen Datenbereichen anordnen.  
@@ -71,11 +71,11 @@ ms.locfileid: "48068990"
   
 1.  Klicken Sie im Berichtsdatenbereich auf **Neu**, und klicken Sie dann auf **Datenquelle**.  
   
-2.  In der `Name` geben: **ListDataSource**  
+2.  In der `Name` geben: **ListDataSource**.  
   
 3.  Klicken Sie auf **In Bericht eingebettete Verbindung verwenden**.  
   
-4.  Überprüfen Sie, ob der Verbindungstyp „Microsoft SQL Server“ ist, und geben Sie anschließend im Feld **Verbindungszeichenfolge** Folgendes ein: **Datenquelle = \<Servername>**.  
+4.  Überprüfen Sie, ob der Verbindungstyp Microsoft SQL Server ist, und geben Sie anschließend im Feld **Verbindungszeichenfolge** Folgendes ein: **Data Source = \<servername>**  
   
      \<Servername >, z.B. Report001, bezeichnet einen Computer, auf dem eine Instanz von SQL Server-Datenbankmoduls installiert ist. Da die Berichtsdaten nicht aus einer SQL Server-Datenbank extrahiert werden, muss der Name einer Datenbank nicht eingeschlossen werden. Die Standarddatenbank auf dem angegebenen Server wird verwendet, um die Abfrage zu analysieren.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "48068990"
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     Eine neue Spalte wird der Liste hinzugefügt. Die Spalte enthält der Zelle. `[Territory].`  
+     Eine neue Spalte wird der Liste hinzugefügt. Die Spalte enthält die Zelle `[Territory].`  
   
 4.  Klicken Sie mit der rechten Maustaste in der Liste auf die Spalte „Territory“, und klicken Sie anschließend auf **Spalten löschen**.  
   
@@ -245,7 +245,7 @@ ms.locfileid: "48068990"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-9. Platzieren Sie den Cursor unter dem Text, den Sie in Schritt 3 eingegeben haben, und geben Sie **Hello** ein.  
+9. Platzieren Sie den Cursor unter dem Text, den Sie in Schritt 3 eingegeben haben, und geben Sie Folgendes ein: **Hello** .  
   
     > [!NOTE]  
     >  Fügen Sie nach dem Begriff "Hello" zusätzliche Leerzeichen ein. Durch die Leerzeichen werden der Text und das Feld getrennt, die im nächsten Schritt hinzugefügt werden.  
@@ -279,7 +279,7 @@ ms.locfileid: "48068990"
   
      ![Hinzufügen von newslettertext](../../2014/tutorials/media/tutorial-newslettertext.png "Hinzufügen von newslettertext")  
   
-20. Setzen Sie den Cursor unter den Text, den Sie in Schritt 15 eingefügt haben, und geben Sie dann Folgendes ein: **Glückwünsche zum Gesamtumsatz von** .  
+20. Platzieren Sie den Cursor unter dem Text, den Sie in Schritt 15 eingefügt haben, und geben Sie dann Folgendes ein: **Herzlichen Glückwunsch zum Gesamtumsatz von** .  
   
     > [!NOTE]  
     >  Fügen Sie nach dem Begriff "von" zusätzliche Leerzeichen ein. Durch die Leerzeichen werden der Text und das Feld getrennt, die im nächsten Schritt hinzugefügt werden.  
@@ -466,7 +466,7 @@ ms.locfileid: "48068990"
   
 10. Klicken Sie mit der rechten Maustaste auf den Diagrammtitel, und klicken Sie dann auf **Titeleigenschaften**.  
   
-11. Geben Sie im Dialogfeld **Diagrammtiteleigenschaften** im Titeltext Folgendes ein: **Verkaufte Produktmengen**.  
+11. In der **Diagrammtiteleigenschaften** im Dialogfeld im Titeltext Folgendes ein: **Verkaufte Produktmengen**.  
   
 12. Klicken Sie auf die Registerkarte **Schriftart** , und klicken Sie in der Liste **Größe** auf **10 pt**.  
   
@@ -500,7 +500,7 @@ ms.locfileid: "48068990"
   
 10. Klicken Sie mit der rechten Maustaste auf den Diagrammtitel, und klicken Sie dann auf **Titeleigenschaften**.  
   
-11. Geben Sie im Dialogfeld **Diagrammtiteleigenschaften** im Titeltext Folgendes ein: **Produktverkäufe**.  
+11. In der **Diagrammtiteleigenschaften** im Dialogfeld im Titeltext Folgendes ein: **Produktverkaufszahlen**.  
   
 12. Klicken Sie auf die Registerkarte **Schriftart** , und klicken Sie in der Liste **Größe** auf **10 pt**, und klicken Sie dann auf **OK**.  
   
@@ -519,7 +519,7 @@ ms.locfileid: "48068990"
   
 1.  Klicken Sie auf das Rechteck, das Sie zuvor in dieser Lektion hinzugefügt haben.  
   
-     Klicken Sie im Bereich "Eigenschaften" die `Name` Eigenschaft zeigt den Namen des Rechtecks.  
+     Im Eigenschaftenbereich zeigt die `Name`-Eigenschaft den Namen des Rechtecks an.  
   
      ![Name des Rechtecks](../../2014/tutorials/media/tutorial-rectanglename.png "Namen des Rechtecks")  
   

@@ -17,16 +17,16 @@ helpviewer_keywords:
 - SQL Server Native Client, SQLXML
 - side-by-side installations [SQLXML]
 ms.assetid: 48f7720b-1705-402d-93ce-097ff1737877
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e55b8ee380645df874d10b04e54e341411105953
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: deb6b0044caabeaca23f5bb7c01f976ca6b874e3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658293"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016841"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>Was&#39;Neues in SQLXML 4.0 SP1
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "51658293"
   
 -   Probleme bei gleichzeitiger Installation  
   
--   SQLXML 4.0 und MSXML  
+-   SQLXML 4.0 und MSXML  
   
 -   Neuverteilen von SQLXML 4.0  
   
@@ -89,7 +89,7 @@ ms.locfileid: "51658293"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ist eine neue Datenzugriffstechnologie, die in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] eingeführt wurde. Dabei werden die SQLOLEDB-Anbieter und der SQLODBC-Treiber in einer systemeigenen DLL (Dynamic Link Library) zusammengeführt. Außerdem wird eine neue eigenständige Funktionalität bereitgestellt, die sich von Microsoft Data Access Components (MDAC) unterscheidet.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client kann verwendet werden, um neue Anwendungen zu erstellen oder vorhandene Anwendungen zu erweitern, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eingeführte Funktionen nutzen, die von SQLOLEDB und SQLODBC in MDAC und [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows nicht unterstützt werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ist beispielsweise für clientseitige SQLXML-Funktionen wie FOR XML erforderlich, um den **xml** -Datentyp zu verwenden. Weitere Informationen finden Sie unter [clientseitige XML-Formatierung &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md), [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md), und [SQL Server Native Client-Programmierung](../../relational-databases/native-client/sql-server-native-client-programming.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client kann verwendet werden, um neue Anwendungen zu erstellen oder vorhandene Anwendungen zu erweitern, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eingeführte Funktionen nutzen, die von SQLOLEDB und SQLODBC in MDAC und [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows nicht unterstützt werden.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ist beispielsweise für clientseitige SQLXML-Funktionen wie FOR XML erforderlich, um den **xml** -Datentyp zu verwenden. Weitere Informationen finden Sie unter [clientseitige XML-Formatierung &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md), [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md), und [SQL Server Native Client-Programmierung](../../relational-databases/native-client/sql-server-native-client-programming.md).  
   
 > [!NOTE]  
 >  SQLXML 4.0 ist mit SQLXML 3.0 nicht vollkommen abwärts kompatibel. Virtuelle IIS-Verzeichnisse können aufgrund einiger Fehlerbehebungen und anderer funktioneller Änderungen, insbesondere der Einstellung der SQLXML ISAPI-Unterstützung, nicht mit SQLXML 4.0 verwendet werden. Obwohl die meisten Anwendungen mit geringfügigen Änderungen ausgeführt werden können, müssen sie vor der Inbetriebnahme mit SQLXML 4.0 getestet werden.  
@@ -123,7 +123,7 @@ ms.locfileid: "51658293"
     >  Die versionsabhängige Programm-ID ist SQLXMLBulkLoad.SQLXMLBulkLoad.4.0.  
   
 ## <a name="registry-key-changes-for-sqlxml-40"></a>Änderungen des Registrierungsschlüssels für SQLXML 4.0  
- In SQLXML 4.0 wurden die Registrierungsschlüssel aus den früheren Versionen wie folgt geändert:  
+ In SQLXML 4.0 wurden die Registrierungsschlüssel aus den früheren Versionen wie folgt geändert:  
   
  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML4\TemplateCacheSize  
   
@@ -143,7 +143,7 @@ ms.locfileid: "51658293"
   
 -   HKEY_LOCAL_MACHINE\Software\Microsoft\MSSQLServer\Client\SQLXML4\SQL2000CompatMode  
   
-     Wenn der XML-Parser die Daten lädt, werden Leerzeichen standardmäßig den XML 1.0-Regeln entsprechend normalisiert. Dadurch gehen einige Leerzeichen in Ihren Daten verloren. Daher ist die Textdarstellung Ihrer Daten nach der Analyse möglicherweise nicht unverändert, wobei die Daten semantisch jedoch identisch sind.  
+     Wenn der XML-Parser die Daten lädt, werden Leerzeichen standardmäßig den XML 1.0-Regeln entsprechend normalisiert. Dadurch gehen einige Leerzeichen in Ihren Daten verloren. Daher ist die Textdarstellung Ihrer Daten nach der Analyse möglicherweise nicht unverändert, wobei die Daten semantisch jedoch identisch sind.  
   
      Dieser Schlüssel wurde eingeführt, sodass Sie die Leerzeichen in den Daten bei Bedarf beibehalten können. Wenn Sie diesen Registrierungsschlüssel hinzufügen und seinen Wert auf 0 (NULL) setzen, werden Leerzeichen (LF, CR und TAB) in XML bei Attributwerten codiert zurückgegeben. Bei Elementwerten wird nur CR codiert zurückgegeben.  
   
@@ -192,7 +192,7 @@ ms.locfileid: "51658293"
 ## <a name="migration-issues"></a>Migrationsprobleme  
  Die folgenden Probleme können sich negativ auf die Migration der älteren SQLXML-Anwendungen auf SQLXML 4.0 auswirken.  
   
-### <a name="ado-and-sqlxml-40-queries"></a>ADO- und SQLXML 4.0-Abfragen  
+### <a name="ado-and-sqlxml-40-queries"></a>ADO- und SQLXML 4.0-Abfragen  
  In früheren Versionen von SQLXML wurde die URL-basierte Abfrageausführung mit virtuellen IIS-Verzeichnissen und dem SQLXML ISAPI-Filter unterstützt. Für Anwendungen, die SQLXML 4.0 verwenden, ist diese Unterstützung nicht mehr verfügbar.  
   
  Stattdessen können SQLXML-Abfragen, -Vorlagen und -Updategrams mit den SQLXML-Erweiterungen für ActiveX Data Objects (ADO) ausgeführt werden, die in Microsoft Data Access Components (MDAC) 2.6 eingeführt wurden.  
