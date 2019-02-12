@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5076b0d7eb5e81a71aafc840521d7924c83433a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 90a41365f249c112b7ac1c0a07bdfd1186c6a97b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189530"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032475"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Verwenden von Reporting Services-Sicherheitsrichtliniendateien
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] speichert Informationen zu Komponentensicherheitsrichtlinien in drei Konfigurationsdateien, die bei der Installation in das Dateisystem kopiert werden. Diese Konfigurationsdateien können eine Kombination aus nur intern verwendeten und benutzerdefinierten Sicherheitsrichtlinien für Codeassemblys in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enthalten. Die drei Konfigurationsdateien entsprechen drei sicherungsfähigen Komponenten in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: Berichtsserver und Windows-Dienst, Berichts-Manager-Webanwendung und Vorschaufenster des Berichts-Designers.  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] speichert Informationen zu Komponentensicherheitsrichtlinien in drei Konfigurationsdateien, die bei der Installation in das Dateisystem kopiert werden. Diese Konfigurationsdateien können eine Kombination aus nur intern verwendeten und benutzerdefinierten Sicherheitsrichtlinien für Codeassemblys in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enthalten. Die drei Konfigurationsdateien entsprechen drei sicherungsfähigen Komponenten in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: Der Berichtsserver und Windows-Dienst, der Berichts-Manager-Webanwendung und den Berichts-Designer eine Vorschau Fensters aus.  
   
 > [!NOTE]  
 >  Es stehen zwei Vorschaumodi für den Berichts-Designer zur Verfügung: die Registerkarte „Vorschau“ und das Popup-Vorschaufenster, das beim Start Ihres Berichtsprojekts im **DebugLocal**-Modus aufgerufen wird. Die Registerkarte **Vorschau** ist keine sicherungsfähige Komponente und übernimmt keine Sicherheitsrichtlinieneinstellungen. Im Vorschaufenster sollen die Berichtsserverfunktionen simuliert werden. Es enthält daher eine Richtlinienkonfigurationsdatei, die von Ihnen oder einem Administrator verändert werden muss, um benutzerdefinierte Assemblys und benutzerdefinierte Erweiterungen im Berichts-Designer zu verwenden.  

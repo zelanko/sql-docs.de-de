@@ -24,21 +24,21 @@ helpviewer_keywords:
 - report snapshots [Reporting Services], creating
 ms.assetid: 44cb1e6f-a6b8-498a-8e8b-ca28e7ab1007
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: e73924828fcae11908e83f2383e63dd68670071e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: b0f5f3d9c3dc788a4b55932e8a28b43a6b4135bc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117890"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031390"
 ---
 # <a name="view-or-delete-report-history-report-manager"></a>Anzeigen oder Löschen des Berichtsverlaufs (Berichts-Manager)
   Der Berichtsverlauf wird mit dem Bericht geführt, auf dem er basiert. Jeder Benutzer mit Zugriff auf einen Bericht kann den Berichtsverlauf für diesen Bericht anzeigen.  
   
 ### <a name="to-view-a-history-snapshot"></a>So zeigen Sie eine Verlaufsmomentaufnahme an  
   
-1.  Starten Sie [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md).  
+1.  Starten Sie den [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md).  
   
 2.  Navigieren Sie im Berichts-Manager zur Seite **Inhalt** . Navigieren Sie zu dem Bericht, für den Sie Verlaufsmomentaufnahmen erstellen oder anzeigen möchten, und klicken Sie zum Öffnen auf den Bericht.  
   

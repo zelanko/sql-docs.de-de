@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 50ac9bd023b8fb581f423a039b629015de7b423d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a67d093576076e9822427773afb710c57f801827
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196400"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025491"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>Ausblenden eines Elements (Berichts-Generator und SSRS)
   Legen Sie die Sichtbarkeit eines Berichtselements fest, wenn Sie ein Element basierend auf einem Berichtsparameter oder einem anderen von Ihnen angegebenen Ausdruck bedingt ausblenden möchten.  
@@ -72,7 +72,7 @@ ms.locfileid: "48196400"
   
 ## <a name="see-also"></a>Siehe auch  
  [Drilldownaktion &#40;Berichts-Generator und SSRS&#41;](../report-design/drilldown-action-report-builder-and-ssrs.md)   
- [Hinzufügen einer Erweiterungs- oder Reduzieraktion zu einem Element (Berichts-Generator und SSRS)](../report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
+ [Hinzufügen einer Erweiterungs- oder Reduzieraktion zu einem Element &#40;Berichts-Generator und SSRS&#41;](../report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

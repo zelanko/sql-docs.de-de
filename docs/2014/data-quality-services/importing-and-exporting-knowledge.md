@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9045ee53e6e3e08222c99ddffa2935040a314b16
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: cc4665cb0730b283491bffd1a3bd27c8707ffb09
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031937"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035121"
 ---
 # <a name="importing-and-exporting-knowledge"></a>Importieren und Exportieren von Wissen
   Sie können Wissensdatenbanken und Domänen direkt in der [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Anwendung erstellen, oder Sie können Wissen in eine Wissensdatenbank importieren oder daraus exportieren. In der [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Anwendung können Sie eine Datendatei für Import- und Exportvorgänge, oder eine Excel-Datei für Importvorgänge, verwenden. Die verwendete Datendatei ist eine verschlüsselte Datei, die von [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) mit einer DQS-Erweiterung erstellt wird. Die von Microsoft Excel erstellten Dateien können die Erweiterung .xlsx, .xls oder .csv haben. Diese Vorgänge geben Ihnen mehr Flexibilität bei der Erstellung und Freigabe des Wissens, mit dem Sie Datenbereinigung und Datenabgleich durchführen.  

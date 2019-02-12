@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0b0f0b2087471d8f0c905b1a173eff57a0be7fd4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 80b5920bdcf3aa3f1db9c649115613f6dca34ab5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096696"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031209"
 ---
 # <a name="print-reports-report-builder-and-ssrs"></a>Drucken von Berichten (Berichts-Generator und SSRS)
   Nach dem Speichern eines Berichts auf einem Berichtsserver können Sie diesen mit einem Browser, dem Berichts-Manager oder einer beliebigen Anwendung, die Sie zum Anzeigen eines exportierten Berichts verwenden, anzeigen und drucken. Vor dem Speichern eines Berichts können Sie ihn aus der Vorschau drucken.  
@@ -47,12 +47,12 @@ ms.locfileid: "48096696"
  Beschreibt das Drucken von in eine andere Anwendung exportierten Berichten.  
   
  [Drucken eines Berichts &#40;Berichts-Generator und SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
- Enthält schrittweise Anweisungen zum Drucken eines Berichts, Steuern der Ränder einer Seite und Festlegen des Papierformats für Berichte, die von Renderern mit festem Seitenumbruch gerendert werden: PDF, Bild oder Drucken.  
+ Enthält schrittweise Anleitungen zum Drucken eines Berichts, Gewusst wie: Steuern der Ränder auf einer Seite und Festlegen des Papierformats für Berichte an, die von Renderern mit hartem Seitenumbruch gerendert werden: PDF, Bild oder drucken.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
- [Seitenkopf-und Seitenfußzeilen &#40;Berichts-Generator und SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Images &#40;Berichts-Generator und SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)   
- [Paginierung in Reporting Services (Berichts-Generator und SSRS)](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)  
+ [Seitenkopf- und Seitenfußzeilen &#40;Berichts-Generator und SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Bilder &#40;Berichts-Generator und SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)   
+ [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)  
   
   

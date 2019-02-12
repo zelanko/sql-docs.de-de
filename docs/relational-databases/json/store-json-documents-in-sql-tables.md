@@ -4,18 +4,18 @@ ms.description: This article describes why and how to store and index JSON docum
 ms.custom: ''
 ms.date: 01/04/2018
 ms.prod: sql
-ms.reviewer: douglasl
+ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: cd100639007c12acca5aab8c8271239cec42cdda
-ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
+ms.openlocfilehash: 385ae3aafb58d012e6473abc0fe4b8f8f5d40eb6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52886725"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033251"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>Speichern von JSON-Dokumenten in SQL Server oder SQL-Datenbank
 SQL Server und Azure SQL-Datenbank verfügen über native JSON-Funktionen, mit denen Sie JSON-Dokumente durch die standardmäßige SQL-Sprache analysieren können. Jetzt können Sie JSON-Dokumente in SQL Server oder SQL-Datenbank speichern und JSON-Daten wie in einer NoSQL-Datenbank abfragen. Dieser Artikel beschreibt die Optionen zum Speichern von JSON-Dokumenten in SQL Server oder SQL-Datenbank.

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 0ec6ef80-3b48-40c1-9618-2326a1d167a5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f43203d1f9c3314ef195406bf78b53fa7ed7646a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2f85011fa54227035ae312c9b424443667455840
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051182"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028731"
 ---
 # <a name="databasename-property-wmi-msreportserverconfigurationsetting"></a>DatabaseName-Eigenschaft (WMI: MSReportServer_ConfigurationSetting)
   Gibt den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz an, die die Berichtsserver-Datenbank hostet Schreibgeschützt.  
@@ -43,12 +43,12 @@ public string DatabaseName;
  Ein `String`-Objekt, dessen Wert den Datenbankinstanznamen der Berichtsserver-Datenbank darstellt  
   
 ## <a name="example-code"></a>Beispielcode  
- [MSReportServer_ConfigurationSetting Class (MSReportServer_ConfigurationSetting-Klasse)](msreportserver-configurationsetting-class.md)  
+ [MSReportServer_ConfigurationSetting-Klasse](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Anforderungen  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](msreportserver-configurationsetting-members.md)  
+ [MSReportServer_ConfigurationSetting-Member](msreportserver-configurationsetting-members.md)  
   
   

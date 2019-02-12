@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ef19d96e-9f00-4434-950e-152dda9c1ced
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d4c3dab6371b9272436a49147c8ff2c09b2620d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3dc1cfa85fde084327567e36fea728d9c76ef3f6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157190"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028251"
 ---
 # <a name="schedules-page-report-manager"></a>Zeitpläne (Seite) (Berichts-Manager)
   Auf der Seite Zeitpläne können Sie freigegebene Zeitpläne erstellen, ändern, löschen, anhalten oder fortsetzen. Ein freigegebener Zeitplan ist ein von Ihnen erstellter benannter Zeitplan, den Sie getrennt von Berichten, Abonnements und anderen Prozessen verwalten, die Zeitplaninformationen verwenden. Benutzer können die von Ihnen bereitgestellten Zeitpläne auswählen.  
@@ -37,7 +37,7 @@ ms.locfileid: "48157190"
   
 3.  Wählen Sie die Registerkarte **Zeitpläne** aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Neuer Zeitplan**  
  Klicken Sie auf diese Schaltfläche, um die Seite Zeitplanung zu öffnen. Auf dieser Seite können Sie Angaben zur Häufigkeit machen.  
   

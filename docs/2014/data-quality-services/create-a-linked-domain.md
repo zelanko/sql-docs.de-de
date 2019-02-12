@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 114dcb05567fc58cb58ce46cae064f2514c1331e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 800326d3255180087cb7603435e2d0e1a8c8e029
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396501"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033651"
 ---
 # <a name="create-a-linked-domain"></a>Erstellen einer verknüpften Domäne
   In diesem Thema wird beschrieben, wie eine verknüpfte Domäne in einer Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) erstellt wird. Eine verknüpfte Domäne wird aus einer anderen, zuvor vorhandenen Domäne, erstellt und erbt alle Werte, Regeln und Eigenschaften von der Domäne, mit der sie verknüpft wird - mit Ausnahme des Namens und der Beschreibung. Sie können einen Satz verknüpfter Domänen als eine Domäne verwalten. Indem Sie eine Domäne mit der anderen verknüpfen, erstellen Sie eine Domäne, die ihre Inhalte von einer anderen Domäne erbt.  
@@ -72,7 +72,7 @@ ms.locfileid: "52396501"
   
 4.  Geben Sie im Dialogfeld „Domäne erstellen“ einen Domänennamen und eine Beschreibung ein, und klicken Sie dann auf „OK“.  
   
-##  <a name="FollowUp"></a> Zur Nachverfolgung: Nach dem Erstellen einer verknüpften Domäne  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Erstellen einer verknüpften Domäne  
  Nachdem Sie eine verknüpfte Domäne erstellt haben, können Sie andere Domänenverwaltungsaufgaben in der Domäne ausführen, Sie können die Wissensermittlung durchführen, um der Domäne Wissen hinzuzufügen, oder Sie können der Domäne eine Abgleichsrichtlinie hinzufügen. Weitere Informationen finden Sie unter [Durchführen der Wissensermittlung](../../2014/data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../../2014/data-quality-services/managing-a-domain.md) oder [Erstellen einer Abgleichsrichtlinie](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Behavior"></a> Verhalten einer verknüpften Domäne  

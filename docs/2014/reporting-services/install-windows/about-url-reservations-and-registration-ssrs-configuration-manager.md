@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fb50a9f9674e13c1032091fbae6da55170d44863
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: fb1f04a10837088a9c427d6c0994af4334e8988f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374322"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035101"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Informationen zu URL-Reservierungen und Registrierungen (SSRS-Konfigurations-Manager)
   Anwendungen für URLs für Reporting Services werden als URL-Reservierungen in HTTP.SYS definiert. Eine URL-Reservierung definiert die Syntax eines URL-Endpunkts für eine Webanwendung. URL-Reservierungen werden sowohl für den Berichtsserver-Webdienst als auch für den Berichts-Manager beim Konfigurieren der Anwendungen auf dem Berichtsserver definiert. Beim Konfigurieren von URLs mit Setup oder mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool werden URL-Reservierungen automatisch für Sie erstellt:  
@@ -63,7 +63,7 @@ ms.locfileid: "53374322"
   
 |URL-Reservierung in HTTP.SYS|URL|Erklärung|  
 |---------------------------------|---------|-----------------|  
-|http://+:80/reportserver|http://\<Computername > / Reportserver<br /><br /> http://\<IP-Adresse > / Reportserver<br /><br /> http://localhost/reportserver|Die URL-Reservierung gibt ein Platzhalterzeichen (+) für Port 80 an. Dadurch werden alle eingehenden Anforderungen, die einen Host für die Auflösung zum Berichtsservercomputer auf Port 80 angeben, in der Berichtsserverwarteschlange abgelegt. Mit dieser URL-Reservierung kann eine beliebige Anzahl von URLs für den Zugriff auf den Berichtsserver verwendet werden.<br /><br /> Dies ist die Standard-URL-Reservierung für einen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver für die meisten Betriebssysteme.|  
+|http://+:80/reportserver|http://\<computername>/reportserver<br /><br /> http://\<IPAddress>/reportserver<br /><br /> http://localhost/reportserver|Die URL-Reservierung gibt ein Platzhalterzeichen (+) für Port 80 an. Dadurch werden alle eingehenden Anforderungen, die einen Host für die Auflösung zum Berichtsservercomputer auf Port 80 angeben, in der Berichtsserverwarteschlange abgelegt. Mit dieser URL-Reservierung kann eine beliebige Anzahl von URLs für den Zugriff auf den Berichtsserver verwendet werden.<br /><br /> Dies ist die Standard-URL-Reservierung für einen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver für die meisten Betriebssysteme.|  
 |http://123.45.67.0:80/reportserver|http://123.45.67.0/reportserver|Diese URL-Reservierung gibt eine IP-Adresse an und ist viel restriktiver als die Platzhalter-URL-Reservierung. Nur mit URLs, die eine IP-Adresse enthalten, kann eine Verbindung mit dem Berichtsserver hergestellt werden. Dieser URL-Reservierung angegeben haben, wird eine Anforderung an einen Berichtsserver unter http:// angegebenen\<Computername > / Reportserver oder http://localhost/reportserver fehlschlug.|  
   
 ##  <a name="DefaultURLs"></a> Standard-URLs  
@@ -86,12 +86,12 @@ ms.locfileid: "53374322"
   
 |Instanztyp|Application|Standard-URL|Tatsächliche URL-Reservierung in HTTP.SYS|  
 |-------------------|-----------------|-----------------|----------------------------------------|  
-|Standardinstanz|Report Server-Webdienst|http://\<Servername > / Reportserver|http://\<Servername >: 80/Reportserver|  
-|Standardinstanz|Berichts-Manager|http://\<Servername > / Reportserver|http://\<Servername >: 80/Reportserver|  
+|Standardinstanz|Report Server-Webdienst|http://\<servername>/reportserver|http://\<servername>:80/reportserver|  
+|Standardinstanz|Berichts-Manager|http://\<servername>/reportserver|http://\<servername>:80/reportserver|  
 |Benannte Instanz|Report Server-Webdienst|http://\<Servername > / Reportserver_\<Instanzname >|http://\<Servername >: 80/Reportserver_\<Instanzname >|  
-|Benannte Instanz|Berichts-Manager|http://\<Servername > / Reports_\<Instanzname >|http://\<Servername >: 80/Reports_\<Instanzname >|  
-|SQL Server Express|Report Server-Webdienst|http://\<Servername > / Reportserver_SQLExpress|http://\<Servername >: 80/Reportserver_SQLExpress|  
-|SQL Server Express|Berichts-Manager|http://\<Servername > / Reports_SQLExpress|http://\<Servername >: 80/Reports_SQLExpress|  
+|Benannte Instanz|Berichts-Manager|http://\<servername>/reports_\<instancename>|http://\<servername>:80/reports_\<instancename>|  
+|SQL Server Express|Report Server-Webdienst|http://\<servername>/reportserver_SQLExpress|http://\<servername>:80/reportserver_SQLExpress|  
+|SQL Server Express|Berichts-Manager|http://\<servername>/reports_SQLExpress|http://\<servername>:80/reports_SQLExpress|  
   
 ##  <a name="URLPermissionsAccounts"></a> Authentifizierung und Dienstidentität für Reporting Services-URLs  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL-Reservierungen geben das Dienstkonto für den Berichtsserver-Dienst an. Das Konto, unter dem der Dienst ausgeführt wird, wird für alle URLs verwendet, die für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Anwendungen erstellt werden, die in der gleichen Instanz ausgeführt werden. Die Dienstidentität der Berichtsserverinstanz wird in der Datei RSReportServer.config gespeichert.  

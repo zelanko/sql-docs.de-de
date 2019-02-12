@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f8439c48f7379b983b46edcaf1111606c1a3fbcc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e53af8ff7de611f00af6e38553f21885597e7232
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193200"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040641"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Erstellen und Verwalten von Abonnements für Berichtsserver im SharePoint-Modus
   Sie können [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements erstellen, um Berichte von einer SharePoint-Webanwendung zu übermitteln, die in einem im SharePoint-Modus ausgeführten Berichtsserver integriert ist. Abonnements können Berichte an eine Dokumentbibliothek, einen Dateiordner oder als E-Mail übermitteln. Dieses Thema fasst die Anforderungen und Schritte zum Erstellen eines [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements zusammen.  
@@ -31,11 +31,11 @@ ms.locfileid: "48193200"
   
  Beim Erstellen eines Abonnements gibt es drei Möglichkeiten zum Angeben der Übermittlung:  
   
--   **Dokumentbibliothek**: Sie können ein Abonnement erstellen, das ein auf dem ursprünglichen Bericht basierendes Dokument an eine Bibliothek übermittelt, die sich auf derselben SharePoint-Website wie der ursprüngliche Bericht befindet. Sie können das Dokument nicht an eine Bibliothek auf einem anderen Server oder einer anderen Website in der gleichen Websiteauflistung übermitteln. Wenn Sie das Dokument übermitteln möchten, müssen Sie für die Bibliothek, an die der Bericht übermittelt wird, über die Berechtigung zum Hinzufügen von Elementen verfügen.  
+-   **Dokumentbibliothek**: Sie können ein Abonnement erstellen, bei dem ein Dokument, das auf dem ursprünglichen Bericht basiert, an eine Bibliothek innerhalb derselben SharePoint-Website wie der des ursprünglichen Berichts übermittelt wird. Sie können das Dokument nicht an eine Bibliothek auf einem anderen Server oder einer anderen Website in der gleichen Websiteauflistung übermitteln. Wenn Sie das Dokument übermitteln möchten, müssen Sie für die Bibliothek, an die der Bericht übermittelt wird, über die Berechtigung zum Hinzufügen von Elementen verfügen.  
   
--   **Dateiordner** : Sie können ein auf dem ursprünglichen Bericht basierendes Dokument an einen freigegebenen Ordner im Dateisystem übermitteln. Sie müssen einen vorhandenen Ordner auswählen, auf den über eine Netzwerkverbindung zugegriffen werden kann.  
+-   **Dateiordner:** Sie können ein Dokument, das auf dem ursprünglichen Bericht basiert, an einen freigegebenen Ordner im Dateisystem übermitteln. Sie müssen einen vorhandenen Ordner auswählen, auf den über eine Netzwerkverbindung zugegriffen werden kann.  
   
--   **E-Mail:** Wenn der Berichtsserver für die Verwendung der E-Mail-Übermittlungserweiterung konfiguriert ist, können Sie ein Abonnement erstellen, das einen Bericht oder eine exportierte Berichtsdatei (die in einem Ausgabeformat gespeichert ist) an Ihren Posteingang sendet. Wenn Sie nur die Benachrichtigung, aber keinen Bericht oder keine Berichts-URL erhalten möchten, deaktivieren Sie die Kontrollkästchen **Einen Link zum Bericht einschließen** und **Bericht in Nachricht anzeigen** .  
+-   **E-Mail-Adresse:** Wenn der Berichtsserver für die Verwendung der Berichtsserver-E-Mail-Übermittlungserweiterung konfiguriert ist, können Sie ein Abonnement erstellen, von dem ein Bericht oder eine exportierte Berichtsdatei (die in einem Ausgabeformat gespeichert ist) an Ihren Posteingang gesendet wird. Wenn Sie nur die Benachrichtigung, aber keinen Bericht oder keine Berichts-URL erhalten möchten, deaktivieren Sie die Kontrollkästchen **Einen Link zum Bericht einschließen** und **Bericht in Nachricht anzeigen** .  
   
  **In diesem Thema:**  
   
@@ -160,7 +160,7 @@ ms.locfileid: "48193200"
 ## <a name="see-also"></a>Siehe auch  
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [E-Mail Delivery in Reporting Services (E-Mail-Übermittlung in Reporting Services)](e-mail-delivery-in-reporting-services.md)   
- [Verwenden der Dateifreigabeübermittlung in Reporting Services](file-share-delivery-in-reporting-services.md)   
+ [Dateifreigabeübermittlung in Reporting Services](file-share-delivery-in-reporting-services.md)   
  [SharePoint-Bibliotheksübermittlung in Reporting Services](sharepoint-library-delivery-in-reporting-services.md)   
  [Konfigurieren eines Berichtsservers für die e-Mail-Übermittlung &#40;SSRS-Konfigurations-Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
   

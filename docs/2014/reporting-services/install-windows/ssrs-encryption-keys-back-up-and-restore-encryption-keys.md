@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 19bdabaab24d9276386095cb8ef97b0130a13c58
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 558c27c978ec6343b6185fab3792906c6d21ad52
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530361"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036591"
 ---
 # <a name="back-up-and-restore-reporting-services-encryption-keys"></a>Sichern und Wiederherstellen von Reporting Services-Verschlüsselungsschlüsseln
   Das Erstellen einer Sicherungskopie des symmetrischen Schlüssels, der zum Verschlüsseln sensibler Informationen verwendet wird, ist ein wichtiger Bestandteil der Berichtsserverkonfiguration. Eine Sicherungskopie des Schlüssels ist für viele Routinevorgänge erforderlich und ermöglicht Ihnen das Wiederverwenden einer vorhandenen Berichtsserver-Datenbank in einer neuen Installation.  

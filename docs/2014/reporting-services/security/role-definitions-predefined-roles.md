@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b18501020d1764399315202d2c7efe9a31549172
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5567ee441075f015a7d6418761b30d29c591698f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167220"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035131"
 ---
 # <a name="predefined-roles"></a>Vordefinierte Rollen
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wird mit vordefinierten Rollen installiert, mit denen Sie den Zugriff auf Berichtsservervorgänge gewähren können. Jede vordefinierte Rolle beschreibt eine Auflistung verwandter Aufgaben. Sie können Gruppen und Benutzerkonten vordefinierten Rollen zuweisen, um den unmittelbaren Zugriff auf Berichtsservervorgänge bereitzustellen.  
@@ -31,7 +31,7 @@ ms.locfileid: "48167220"
   
 2.  Identifizieren Sie, für welche Benutzer und Gruppen der Zugriff auf den Berichtsserver erforderlich ist und auf welcher Ebene. Die meisten Benutzer sollten der **Browser** -Rolle oder der **Berichts-Generator** -Rolle zugewiesen werden. Eine kleinere Anzahl von Benutzern sollte der **Verleger** -Rolle zugewiesen werden. **Inhalts-Manager**sollten nur sehr wenige Benutzer zugewiesen werden.  
   
-3.  Verwenden Sie den Berichts-Manager, wenn Sie bereit sind, Benutzer- und Gruppenkonten bestimmten Rollen zuzuweisen. Weitere Informationen finden Sie unter [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41;](grant-user-access-to-a-report-server.md).  
+3.  Verwenden Sie den Berichts-Manager, wenn Sie bereit sind, Benutzer- und Gruppenkonten bestimmten Rollen zuzuweisen. Weitere Informationen finden Sie unter [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41;](grant-user-access-to-a-report-server.md)sollten nur sehr wenige Benutzer zugewiesen werden.  
   
 ##  <a name="bkmk_rolelist"></a> Vordefinierte Rollendefinitionen  
  Vordefinierte Rollen werden durch die von ihnen unterstützten Aufgaben definiert. Sie können diese Rollen ändern oder durch benutzerdefinierte Rollen ersetzen.  
@@ -58,7 +58,7 @@ ms.locfileid: "48167220"
 ### <a name="content-manager-tasks"></a>Aufgaben des Inhalts-Managers  
  In der folgenden Tabelle sind die in der **Inhalts-Manager** -Rolle enthaltenen Aufgaben aufgeführt.  
   
-|Task|Description|  
+|Aufgabe|Description|  
 |----------|-----------------|  
 |Berichte lesen|Lesen von Berichtsdefinitionen.|  
 |Verknüpfte Berichte erstellen|Verknüpfte Berichte erstellen, die auf einem nicht verknüpften Bericht basieren.|  
@@ -70,7 +70,7 @@ ms.locfileid: "48167220"
 |Berichtsverlauf verwalten|Ermöglicht das Erstellen, Anzeigen und Löschen des Berichtsverlaufs, das Anzeigen von Berichtsverlaufeigenschaften sowie das Anzeigen und Ändern von Einstellungen, die Grenzwerte für den Momentaufnahmeverlauf und die Funktionsweise der Zwischenspeicherung bestimmen.|  
 |Berichte verwalten|Berichte hinzufügen und löschen, Berichtsparameter ändern, Berichtseigenschaften anzeigen und ändern, Datenquellen, die Inhalt für den Bericht bereitstellen, anzeigen und ändern, Berichtsdefinitionen anzeigen und ändern sowie Sicherheitsrichtlinien auf Berichtsebene festlegen.|  
 |Ressourcen verwalten|Ressourcen erstellen, ändern und löschen sowie Ressourceneigenschaften anzeigen und ändern.|  
-|Die Sicherheit für einzelne Elemente festlegen|Sicherheitsrichtlinien für Berichte, verknüpfte Berichte, Ordner, Ressourcen und Datenquellen definieren. Weitere Informationen finden Sie unter [sicherungsfähige Elemente](securable-items.md).|  
+|Die Sicherheit für einzelne Elemente festlegen|Sicherheitsrichtlinien für Berichte, verknüpfte Berichte, Ordner, Ressourcen und Datenquellen definieren. Weitere Informationen finden Sie unter [Projektelemente](securable-items.md).|  
 |Datenquellen anzeigen|Freigegebene Datenquellenelemente in der Ordnerhierarchie anzeigen.|  
 |Berichte anzeigen|Berichte ausführen und Berichtseigenschaften anzeigen.|  
 |Modelle anzeigen|Anzeigen von Modellen in der Ordnerhierarchie, Verwenden von Modellen als Datenquellen für Berichte und Ausführen von Abfragen für das Modell, um Daten abzurufen.|  
@@ -95,7 +95,7 @@ ms.locfileid: "48167220"
 ### <a name="publisher-tasks"></a>Verlegeraufgaben  
  In der folgenden Tabelle sind die in der **Verleger** -Rolle enthaltenen Aufgaben aufgeführt.  
   
-|Task|Description|  
+|Aufgabe|Description|  
 |----------|-----------------|  
 |Verknüpfte Berichte erstellen|Verknüpfte Berichte erstellen und in einem Berichtsserverordner veröffentlichen.|  
 |Datenquellen verwalten|Freigegebene Datenquellenelemente erstellen und löschen, Datenquelleneigenschaften und Inhalt anzeigen und ändern.|  
@@ -117,7 +117,7 @@ ms.locfileid: "48167220"
 ### <a name="browser-tasks"></a>Browseraufgaben  
  In der folgenden Tabelle sind die in der **Browser** -Rolle enthaltenen Aufgaben beschrieben.  
   
-|Task|Description|  
+|Aufgabe|Description|  
 |----------|-----------------|  
 |Berichte anzeigen|Berichte ausführen und Berichtseigenschaften anzeigen.|  
 |Ressourcen anzeigen|Ressourcen und Ressourceneigenschaften anzeigen.|  
@@ -136,7 +136,7 @@ ms.locfileid: "48167220"
 ### <a name="report-builder-tasks"></a>Berichts-Generator-Aufgaben  
  In der folgenden Tabelle sind die Aufgaben beschrieben, die die **Berichts-Generator** -Rolle einschließt.  
   
-|Task|Description|  
+|Aufgabe|Description|  
 |----------|-----------------|  
 |Berichte lesen|Lesen von Berichtsdefinitionen.|  
 |Berichte anzeigen|Berichte ausführen und Berichtseigenschaften anzeigen.|  
@@ -158,7 +158,7 @@ ms.locfileid: "48167220"
 ### <a name="my-reports-tasks"></a>Aufgaben in Meine Berichte  
  In der folgenden Tabelle sind die in der **Meine Berichte** -Rolle enthaltenen Aufgaben aufgeführt.  
   
-|Task|Description|  
+|Aufgabe|Description|  
 |----------|-----------------|  
 |Verknüpfte Berichte erstellen|Verknüpfte Berichte erstellen, die auf Berichten basieren, die im Ordner Meine Berichte des Benutzers gespeichert sind.|  
 |Ordner verwalten|Ordner erstellen, anzeigen und löschen sowie Ordnereigenschaften anzeigen und ändern.|  
@@ -186,7 +186,7 @@ ms.locfileid: "48167220"
 ### <a name="system-administrator-tasks"></a>Systemadministratoraufgaben  
  In der folgenden Tabelle sind die in der **Systemadministrator** -Rolle enthaltenen Aufgaben aufgeführt.  
   
-|Task|Description|  
+|Aufgabe|Description|  
 |----------|-----------------|  
 |Berichtsdefinitionen ausführen|Ausführung der Berichtsdefinition, ohne die Veröffentlichung auf einem Berichtsserver zu starten.|  
 |Aufträge verwalten|Aufträge, die ausgeführt werden, anzeigen und abbrechen. Weitere Informationen finden Sie unter [Verwalten eines ausgeführten Prozesses](../subscriptions/manage-a-running-process.md).|  
@@ -202,7 +202,7 @@ ms.locfileid: "48167220"
   
 ### <a name="system-user-tasks"></a>Systembenutzeraufgaben  
   
-|Task|Description|  
+|Aufgabe|Description|  
 |----------|-----------------|  
 |Berichtsdefinitionen ausführen|Führen Sie einen Bericht aus, ohne ihn auf einem Berichtsserver zu veröffentlichen.|  
 |Berichtsservereigenschaften anzeigen|Eigenschaften für den Berichtsserver anzeigen, wie z. B. den Anwendungsnamen, Standardwerte für den Berichtsverlauf sowie ob Meine Berichte aktiviert ist.<br /><br /> Wenn Sie diese Aufgabe aus der **Systembenutzer** -Rolle entfernen, ist die Seite Siteeinstellungen nicht verfügbar. Außerdem wird der Titel der Anwendung nicht oben auf jeder Seite angezeigt. Standardmäßig lautet der Titel für den Berichtsmanager "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]".|  
@@ -214,7 +214,7 @@ ms.locfileid: "48167220"
  [Erstellen, Löschen oder Ändern einer Rolle &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)   
  [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41;](grant-user-access-to-a-report-server.md)   
  [Ändern oder Löschen einer Rollenzuweisung (Berichts-Manager)](role-assignments-modify-or-delete.md)   
- [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](granting-permissions-on-a-native-mode-report-server.md)   
- [Tasks and Permissions (Aufgaben und Berechtigungen)](tasks-and-permissions.md)  
+ [Granting Permissions on a Native Mode Report Server](granting-permissions-on-a-native-mode-report-server.md)   
+ [Aufgaben und Berechtigungen](tasks-and-permissions.md)  
   
   

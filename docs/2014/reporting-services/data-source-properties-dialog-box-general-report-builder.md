@@ -11,14 +11,14 @@ f1_keywords:
 - "10018"
 ms.assetid: b956f43a-8426-4679-acc1-00f405d5ff5b
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2568f22f30ffb722aa7438f9b83f35a7e39f1f5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: e64f98f376e704716a40eedcda8351331280fb9e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138730"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031851"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>Datenquelleneigenschaften (Dialogfeld), Allgemein (Berichts-Generator)
   Wählen Sie **Allgemein** im Dialogfeld **Datenquelleneigenschaften** aus, um eine freigegebene Datenquelle aus einem Berichtsserver zu wählen oder um Verbindungsinformationen für eine Datenquelle zu erstellen oder zu ändern, die im Bericht eingebettet ist.  
@@ -40,7 +40,7 @@ ms.locfileid: "48138730"
   
  Wenn die angegebenen Anmeldeinformationen unvollständig sind (wenn z. B. ein Kennwort erforderlich ist), werden Sie in Berichts-Generator erneut zur Eingabe von Laufzeitanmeldeinformationen aufgefordert, wenn eine Verbindung mit der Datenquelle hergestellt werden muss. Die Entwurfszeitanmeldeinformationen werden gespeichert, und Sie werden nicht erneut aufgefordert.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name**  
  Geben Sie den Namen der Datenquelle ein. Der Datenquellenname muss innerhalb des Berichts eindeutig sein. Standardmäßig wird der Datenquelle ein allgemeiner Name, wie DataSource1 oder DataSource2, zugewiesen.  
   

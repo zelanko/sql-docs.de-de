@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 9f76a235-0b58-479c-8e5b-50588091b71c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6efdf5eb4eb216b0d5ebb3427f0bc8c13b184030
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b523199c6d1af6f7dc29a8ba785b0333400292d0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070990"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036661"
 ---
 # <a name="new-user-role-management-studio"></a>Neue Benutzerrolle (Management Studio)
   Verwenden Sie diese Seite, um eine Rollendefinition auf Elementebene zu erstellen. Eine Rollendefinition auf Elementebene ist eine benannte Auflistung von Tasks, die Benutzer in Bezug auf Ordner, Berichte, Modelle, Ressourcen und freigegebene Datenquellen ausführen können. Ein Beispiel für eine Rollendefinition auf Elementebene ist die vordefinierte Rolle Browser, die Aktionen identifiziert, die der Endbenutzer eines Berichts zum Navigieren in Ordnern und zum Anzeigen von Berichten verwenden kann.  
@@ -28,11 +28,11 @@ ms.locfileid: "48070990"
 > [!NOTE]  
 >  Rollendefinitionen werden nur auf einem Berichtsserver verwendet, der im einheitlichen Modus ausgeführt wird. Ist der Berichtsserver für den integrierten SharePoint-Modus konfiguriert, ist diese Seite nicht verfügbar.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name**  
  Geben Sie den Namen der Rollendefinition ein. Ein Rollendefinitionsname muss innerhalb des Berichtsserver-Namespaces eindeutig sein. Der Name muss mindestens ein alphanumerisches Zeichen enthalten. Er kann auch Leerzeichen und Sonderzeichen enthalten. Folgende Zeichen können beim Angeben eines Namens nicht verwendet werden:  
   
- ; ? : \@ & = +, $ / * \< >  
+ ; ? : \@ & = + , $ / * \< >  
   
  " /  
   

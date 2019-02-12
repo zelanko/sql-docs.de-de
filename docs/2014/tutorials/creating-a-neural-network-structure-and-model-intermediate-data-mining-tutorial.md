@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - discretization [Analysis Services]
@@ -16,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3f16215c-531e-4ecf-a11f-ee7c6a764463
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 144f2f754dc93be29f6be8fc786afa354a96c911
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 6787db165770f944838a312ecd3e0386d161da38
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395803"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037721"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>Erstellen einer neuronalen Netzwerkstruktur und eines neuronalen Netzwerkmodells (Data Mining-Lernprogramm für Fortgeschrittene)
   Um ein Data Mining-Modell zu erstellen, müssen Sie zuerst mithilfe des Data Mining-Assistenten eine neue Miningstruktur auf Grundlage der neuen Datenquellensicht erstellen. In diesem Task erstellen Sie mit dem Assistenten eine Miningstruktur und zugleich ein zugehöriges Miningmodell auf Grundlage des [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network-Algorithmus.  
@@ -122,7 +121,7 @@ ms.locfileid: "52395803"
   
  ![Verteilung von Werten für Dienstqualität](../../2014/tutorials/media/skt-service-grade-valuesc.gif "Verteilung von Werten für Dienstqualität")  
   
- Bei der Verarbeitung des Modells könnten die Ausgaben daher anders als erwartet gruppiert werden. Bei Verwendung von clustering Identifizieren der besten Wertegruppen unterteilt der Algorithmus z. B. die Werte in ServiceGrade in Bereiche wie diese: 0,0748051948 - 0,09716216215. Obwohl diese Gruppierung mathematisch korrekt ist, sind solche Bereiche für Geschäftsbenutzer möglicherweise weniger sinnvoll.  
+ Bei der Verarbeitung des Modells könnten die Ausgaben daher anders als erwartet gruppiert werden. Bei Verwendung von clustering Identifizieren der besten Wertegruppen unterteilt der Algorithmus z. B. die Werte in ServiceGrade in Bereiche wie diese: 0.0748051948 - 0.09716216215. Obwohl diese Gruppierung mathematisch korrekt ist, sind solche Bereiche für Geschäftsbenutzer möglicherweise weniger sinnvoll.  
   
  In diesem Schritt werden um das Ergebnis intuitiver, machen Sie die numerischen Werte gruppieren anders und Kopien der numerischen Datenspalte erstellen.  
   
@@ -146,20 +145,20 @@ ms.locfileid: "52395803"
   
 |Value|Alias|  
 |-----------|-------------|  
-|\< 0,0748051948|34|  
-|0,0748051948 - 0,09716216215|27|  
-|0,09716216215 - 0.13297297295|39|  
+|\< 0.0748051948|34|  
+|0.0748051948 - 0.09716216215|27|  
+|0.09716216215 - 0.13297297295|39|  
 |0.13297297295 - 0.167499999975|10|  
-|> = 0.167499999975|10|  
+|>= 0.167499999975|10|  
   
  Klassifiziert durch gleiche Bereiche  
   
 |Value|Alias|  
 |-----------|-------------|  
-|\< 0,07|26|  
-|0,07 - 0,00|22|  
-|0,09 - 0,11|36|  
-|> = 0,12|36|  
+|\< 0.07|26|  
+|0.07 - 0.00|22|  
+|0.09 - 0.11|36|  
+|>= 0.12|36|  
   
 > [!NOTE]  
 >  Diese Statistik kann nach der Verarbeitung aller Daten vom Knoten für Randstatistik des Modells abgerufen werden. Weitere Informationen zu den Knoten für randstatistik, finden Sie unter [Mingingmodellinhalt von neuronalen Netzwerkmodellen &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  

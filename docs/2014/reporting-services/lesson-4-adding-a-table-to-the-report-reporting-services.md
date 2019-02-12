@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d990d18498547434a6f7774dfcee076d2986ee40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d6255750df935fd3112f0e3b41941983a4882a0b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220810"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033231"
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>Lektion 4: Hinzufügen einer Tabelle zum Bericht (Reporting Services)
   Nach dem Definieren des Datasets können Sie mit dem Entwerfen des Berichts beginnen. Zum Erstellen eines Berichtslayouts verschieben Sie mit Drag und Drop Datenbereiche, Textfelder, Bilder und andere Elemente auf die Entwurfsoberfläche, die in den Bericht eingebunden werden sollen.  
@@ -47,7 +47,7 @@ ms.locfileid: "48220810"
     > [!NOTE]  
     >  Der Spaltenheader lautet "Line Total". Der Berichts-Designer erstellt für die Spalte automatisch einen besser lesbaren Namen, indem er "LineTotal" in zwei Wörter unterteilt.  
   
-     Die folgende Abbildung zeigt einen Datenbereich einer Tabelle, der mit folgenden Feldern aufgefüllt wurde: Date, Order, Product, Qty und Line Total.  
+     Das folgende Diagramm zeigt einen Tabellendatenbereich, der mit folgenden Feldern aufgefüllt wurde: Date, Order, Product, Qty und Zeilensumme.  
   
      ![Entwurf, Tabelle mit Kopfzeile und Detailzeile](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "Design, Tabelle mit Kopfzeile und Detailzeile")  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48220810"
 >  Klicken Sie im Menü **Datei** auf **Alle Speichern** , um den Bericht zu speichern.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Sie haben Ihrem Bericht erfolgreich einen Tabellendatenbereich hinzugefügt, dem Datenbereich Felder hinzugefügt und den Bericht in der Vorschau angezeigt. Anschließend formatieren Sie Spaltenheader sowie Datums- und Währungswerte. Weitere Informationen finden Sie unter [Lektion 5: Formatieren eines Berichts (Reporting Services)](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
+ Sie haben Ihrem Bericht erfolgreich einen Tabellendatenbereich hinzugefügt, dem Datenbereich Felder hinzugefügt und den Bericht in der Vorschau angezeigt. Anschließend formatieren Sie Spaltenheader sowie Datums- und Währungswerte. Finden Sie unter [Lektion 5: Formatieren eines Berichts &#40;Berichtsdienste&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Tabellen (Berichts-Generator und SSRS)](report-design/tables-report-builder-and-ssrs.md)   

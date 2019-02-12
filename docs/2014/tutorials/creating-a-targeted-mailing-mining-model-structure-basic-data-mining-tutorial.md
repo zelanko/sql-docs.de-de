@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a9c67f29-0c47-4a5a-862b-db0f5213c2c9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 112b45f2d5797d6797903661de0376bd4d316c6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2bd2e9d0decc730a59b63ee600bec2d080cc85fb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087710"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030801"
 ---
 # <a name="creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial"></a>Erstellen der Miningmodellstruktur "Targeted Mailing" (Basic Data Mining-Lernprogramm)
   Der erste Schritt beim Erstellen eines Targeted Mailing-Szenarios besteht darin, mit dem Data Mining-Assistenten in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] eine neue Miningstruktur und ein Entscheidungsstruktur-Miningmodell zu erstellen.  
@@ -93,7 +92,7 @@ ms.locfileid: "48087710"
   
 13. Aktivieren Sie in der Spalte ganz links auf der Seite die Kontrollkästchen in den folgenden Zeilen.  
   
-    -   **Adresszeile 1**  
+    -   **AddressLine1**  
   
     -   **AddressLine2**  
   
@@ -103,7 +102,7 @@ ms.locfileid: "48087710"
   
     -   **Vorname**  
   
-    -   **"LastName"**  
+    -   **LastName**  
   
      Stellen Sie sicher, dass diese Zeilen nur Häkchen in der linken Spalte aufweisen. Diese Spalten werden der Struktur hinzugefügt, jedoch nicht in das Modell aufgenommen. Nachdem das Modell erstellt wurde, stehen sie jedoch für Drillthrough und Tests zur Verfügung. Weitere Informationen zu Drillthrough finden Sie unter [Drillthroughabfragen &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
@@ -114,7 +113,7 @@ ms.locfileid: "48087710"
   
 ## <a name="see-also"></a>Siehe auch  
  [Tabellentypen angeben &#40;Datamining-Assistent&#41;](../../2014/analysis-services/specify-table-types-data-mining-wizard.md)   
- [Datamining-Designer](../../2014/analysis-services/data-mining/data-mining-designer.md)   
+ [Data Mining-Designer](../../2014/analysis-services/data-mining/data-mining-designer.md)   
  [Microsoft Decision Trees-Algorithmus](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)  
   
   

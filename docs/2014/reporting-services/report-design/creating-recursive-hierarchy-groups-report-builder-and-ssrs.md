@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 06eccab6-4089-46e8-a84f-5bf3bbe0c23b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 14eb29f4e5390a92118ddb97bab908d8c6c1a1d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 92412bbde8a1032b34264ca254560f31704281e8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169200"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038131"
 ---
 # <a name="creating-recursive-hierarchy-groups-report-builder-and-ssrs"></a>Erstellen von rekursiven Hierarchiegruppen (Berichts-Generator und SSRS)
   Um rekursive Daten anzuzeigen, in dem die Beziehung zwischen übergeordnetem und untergeordnetem durch Felder im Dataset dargestellt wird, können Sie den Region Gruppenausdruck basierend auf dem untergeordneten Feld festgelegt und die übergeordnete Eigenschaft basierend auf dem übergeordneten Feld festlegen.  
@@ -34,12 +34,12 @@ ms.locfileid: "48169200"
  Weitere Informationen finden Sie unter [Hinzufügen oder Löschen einer Gruppe in einem Datenbereich (Berichts-Generator und SSRS)](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md) und [Erstellen einer rekursiven Hierarchiegruppe (Berichts-Generator und SSRS)](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md).  
   
 ### <a name="aggregate-functions-that-support-recursion"></a>Aggregatfunktionen zur Unterstützung der Rekursion  
- Sie können Reporting Services-Aggregatfunktionen verwenden, die den Parameter *Rekursiv* akzeptieren, um Zusammenfassungsdaten für eine rekursive Hierarchie zu berechnen. Die folgenden Funktionen akzeptieren `Recursive` als Parameter: [Summe](report-builder-functions-sum-function.md), [Avg](report-builder-functions-avg-function.md), [Anzahl](report-builder-functions-count-function.md), [CountDistinct](report-builder-functions-countdistinct-function.md), [ CountRows](report-builder-functions-countrows-function.md), [Max](report-builder-functions-max-function.md), [Min](report-builder-functions-min-function.md), [StDev](report-builder-functions-stdev-function.md), [StDevP](report-builder-functions-stdevp-function.md), [Summe](report-builder-functions-sum-function.md), [Var](report-builder-functions-var-function.md), und [VarP](report-builder-functions-varp-function.md). Weitere Informationen finden Sie unter [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
+ Sie können Reporting Services-Aggregatfunktionen verwenden, die den Parameter *Rekursiv* akzeptieren, um Zusammenfassungsdaten für eine rekursive Hierarchie zu berechnen. Die folgenden Funktionen akzeptieren `Recursive` als Parameter: [Summe](report-builder-functions-sum-function.md), [Avg](report-builder-functions-avg-function.md), [Anzahl](report-builder-functions-count-function.md), [CountDistinct](report-builder-functions-countdistinct-function.md), [CountRows](report-builder-functions-countrows-function.md), [Max](report-builder-functions-max-function.md), [Min](report-builder-functions-min-function.md), [StDev](report-builder-functions-stdev-function.md), [StDevP](report-builder-functions-stdevp-function.md), [Summe](report-builder-functions-sum-function.md), [Var](report-builder-functions-var-function.md), und [VarP](report-builder-functions-varp-function.md) . Weitere Informationen finden Sie unter [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
- [Referenz zu Aggregatfunktionen &#40;Berichts-Generator und SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
+ [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
  [Tabellen (Berichts-Generator und SSRS)](tables-report-builder-and-ssrs.md)   
  [Matrizen (Berichts-Generator und SSRS)](create-a-matrix-report-builder-and-ssrs.md)   
  [Listen (Berichts-Generator und SSRS)](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   

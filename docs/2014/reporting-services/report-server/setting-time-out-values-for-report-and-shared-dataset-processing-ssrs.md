@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d1ab4d3e1a5b251bb4ff2b311dc344dfad03b3ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 790e512beed24295e7ca31dd471905ab814a7d1d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166260"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028562"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Festlegen von Timeoutwerten für die Verarbeitung von Berichten und freigegebenen Datasets (SSRS)
   Mithilfe von Timeoutwerten können Sie Grenzwerte für die Verwendung der Systemressourcen festlegen. Der Berichtsserver unterstützt die folgenden beiden Timeoutwerte:  
@@ -35,7 +35,7 @@ ms.locfileid: "48166260"
  Die meisten Timeoutfehler treten während der Abfrageverarbeitung auf. Verwenden Sie beim Auftreten von Timeoutfehlern einen höheren Abfragetimeoutwert. Passen Sie unbedingt den Timeoutwert für die Berichtsausführung so an, dass dieser Wert höher als der Abfragetimeoutwert ist. Dieser Zeitraum sollte so lang sein, dass sowohl die Abfrage- als auch die Berichtsverarbeitung abgeschlossen werden kann.  
   
 ## <a name="setting-a-query-time-out-for-an-embedded-dataset-in-a-report"></a>Festlegen eines Abfragetimeouts für ein eingebettetes Dataset in einem Bericht  
- Abfragetimeoutwerte werden im Rahmen der Erstellung eines Berichts beim Definieren eines eingebetteten Datasets angegeben. Der Timeoutwert wird mit dem Bericht gespeichert, der `Timeout` -Element der Berichtsdefinition. Standardmäßig ist dieser Wert auf 30 Sekunden festgelegt. Weitere Informationen finden Sie unter [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
+ Abfragetimeoutwerte werden im Rahmen der Erstellung eines Berichts beim Definieren eines eingebetteten Datasets angegeben. Der Timeoutwert wird zusammen mit dem Bericht im `Timeout`-Element der Berichtsdefinition gespeichert. Standardmäßig ist dieser Wert auf 30 Sekunden festgelegt. Weitere Informationen finden Sie unter [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
  Benutzer mit der Berechtigung zum Ändern der Eigenschaften eines veröffentlichten Berichts können diesen Wert zurücksetzen, indem sie die Definitionsdatei des Berichts bearbeiten.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48166260"
 >  Sie können die Einstellung `RunningRequestsDbCycle` in der Datei RSReportServer.config festlegen, um die Häufigkeit zu ändern, mit der Aufträge, die ausgeführt werden, ausgewertet werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Festlegen von Verarbeitungsoptionen &#40;integrierten Reporting Services im SharePoint-Modus&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Festlegen von Verarbeitungsoptionen &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](reporting-services-report-server-native-mode.md)   
  [Verwalten eines ausgeführten Prozesses](../subscriptions/manage-a-running-process.md)   
  [Berichts-Manager (einheitlicher SSRS-Modus)](../report-manager-ssrs-native-mode.md)  

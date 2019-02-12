@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Hinzufügen einer KPI zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Lernprogramm: Hinzufügen eines KPIS zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 595e05361087ad821b8baeaf6a676936626eb1e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5362e72fefa36102737e362a1b4ec8b11b96c77f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056521"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037661"
 ---
-# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines KPIs zu einem Bericht (Berichts-Generator)
+# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines KPIS zu einem Bericht (Berichts-Generator)
   Ein Key Performance Indicator (KPI) ist ein messbarer Wert mit einer Aussagekraft für das Geschäft. In diesem Lernprogramm erfahren Sie, wie ein (KPI) in einen Bericht eingeschlossen wird. In diesem Szenario ist die Verkaufszusammenfassung nach Produktunterkategorien der KPI. Der aktuelle Status des KPI wird mit Farben, Messgeräten und Indikatoren angezeigt.  
   
  Die folgende Abbildung zeigt den Bericht, den Sie erstellen.  
   
- ![Rs_AddKPITutorial](../../2014/tutorials/media/rs-addkpitutorial.gif "Rs_AddKPITutorial")  
+ ![rs_AddKPITutorial](../../2014/tutorials/media/rs-addkpitutorial.gif "rs_AddKPITutorial")  
   
 ##  <a name="BackToTop"></a> Lernziele  
  In diesem Lernprogramm erfahren Sie, wie ein KPI hinzugefügt wird, indem Sie die Hintergrundfarbe von Tabellenzellen basierend auf dem Zellenwert festlegen und ein Messgerät und einen Indikator hinzufügen und konfigurieren. Sie erfahren auch, wie der Ausdruck zum Festlegen der Hintergrundfarbe der Tabellenzellen geschrieben wird.  
@@ -45,9 +45,9 @@ ms.locfileid: "48056521"
 7.  [Speichern des Berichts](#Save)  
   
 > [!NOTE]  
->  In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst: ein Verfahren zum Erstellen des Datasets und ein Verfahren zum Erstellen einer Tabelle. Im ersten Tutorial dieser Reihe erhalten Sie ausführliche Anweisungen zum Navigieren zu einem Berichtsserver, Auswählen einer Datenquelle, Erstellen eines Datasets und Ausführen des Assistenten: [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst: ein Verfahren zum Erstellen des Datasets und ein Verfahren zum Erstellen einer Tabelle. Schrittweise Anweisungen zum Navigieren zu einem Berichtsserver Auswählen einer Datenquelle, erstellen Sie ein Dataset, und führen Sie den Assistenten, finden Sie im erste Lernprogramm dieser Reihe: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
- Geschätzte Zeit zum Bearbeiten dieses Tutorials: 15 Minuten.  
+ Ungefähre Dauer dieses Lernprogramms: 15 Minuten.  
   
 ## <a name="requirements"></a>Anforderungen  
  Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).  
@@ -75,7 +75,7 @@ ms.locfileid: "48056521"
   
 5.  Klicken Sie auf **Weiter**.  
   
-6.  Wählen Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** eine vorhandene Datenquelle aus, oder navigieren Sie zum Berichtsserver, und wählen Sie eine Datenquelle aus. Falls dort keine Datenquelle verfügbar ist oder Sie keinen Zugriff auf einen Berichtsserver haben, können Sie stattdessen eine eingebettete Datenquelle verwenden. Weitere Informationen finden Sie unter [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Wählen Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** eine vorhandene Datenquelle aus, oder navigieren Sie zum Berichtsserver, und wählen Sie eine Datenquelle aus. Falls dort keine Datenquelle verfügbar ist oder Sie keinen Zugriff auf einen Berichtsserver haben, können Sie stattdessen eine eingebettete Datenquelle verwenden. Weitere Informationen finden Sie unter [Lernprogramm: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Klicken Sie auf **Weiter**.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "48056521"
   
 12. Klicken Sie auf **Fertig stellen**.  
   
-     Die Tabelle wird der Entwurfsoberfläche hinzugefügt. Die Tabelle enthält fünf Spalten und fünf Zeilen. Im Bereich "Zeilengruppen" werden drei Zeilengruppen angezeigt: "SalesDate", "Subcategory" und "Details". Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden.  
+     Die Tabelle wird der Entwurfsoberfläche hinzugefügt. Die Tabelle enthält fünf Spalten und fünf Zeilen. Im Bereich Zeilengruppen werden drei Zeilengruppen angezeigt: "Salesdate", Unterkategorie und Details. Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden.  
   
 13. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
@@ -185,7 +185,7 @@ ms.locfileid: "48056521"
  In der Teilergebniszeile, die den Umsatz für eine Unterkategorie anzeigt, ist die Hintergrundfarbe der Zelle abhängig vom Wert der Umsatzsumme rot, gelb oder grün.  
   
 ##  <a name="Gauge"></a> 4. Anzeigen eines KPI mit einem Messgerät  
- Ein Messgerät stellt einen einzelnen Wert in einem Dataset dar. In diesem Lernprogramm wird ein horizontales lineares Messgerät verwendet, da es aufgrund seiner Form und Einfachheit auch dann leicht zu lesen ist, wenn es klein ist und innerhalb einer Tabellenzelle verwendet wird. Weitere Informationen finden Sie unter [Gauges &#40;Report Builder and SSRS&#41;](report-design/gauges-report-builder-and-ssrs.md).  
+ Ein Messgerät stellt einen einzelnen Wert in einem Dataset dar. In diesem Lernprogramm wird ein horizontales lineares Messgerät verwendet, da es aufgrund seiner Form und Einfachheit auch dann leicht zu lesen ist, wenn es klein ist und innerhalb einer Tabellenzelle verwendet wird. Weitere Informationen finden Sie unter [Messgeräte &#40;Berichts-Generator und SSRS&#41;](report-design/gauges-report-builder-and-ssrs.md).  
   
 #### <a name="to-display-the-present-state-of-a-kpi-using-a-gauge"></a>So zeigen Sie den aktuellen Status eines KPI mit einem Messgerät an  
   

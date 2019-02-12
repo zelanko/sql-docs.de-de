@@ -1,5 +1,5 @@
 ---
-title: 'Neue Systemrollenzuweisung: Bearbeiten System Systemrollenzuweisungen (Seite) (Berichts-Manager) | Microsoft-Dokumentation'
+title: 'Neue Systemrollenzuweisung: Bearbeiten Sie die System Systemrollenzuweisungen (Seite) (Berichts-Manager) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 26a2ca4499787fce12508e55bb5197b6f0c6f527
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7c1354228c1afbebe519a94d16973d024b84caac
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053990"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032391"
 ---
-# <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>Neue Systemrollenzuweisung: Systemrollenzuweisung bearbeiten (Seite, Berichts-Manager)
+# <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>Neue Systemrollenzuweisung: Bearbeiten Sie die System Systemrollenzuweisungen (Seite) (Berichts-Manager)
   Verwenden Sie zum Definieren der Sicherheit für den Berichtsserver die Seite Neue Systemrollenzuweisung oder Systemrollenzuweisung bearbeiten. Die gesamte Sicherheit wird durch Rollenzuweisungen definiert, in denen spezifische Benutzer oder Gruppen zu Aufgaben zugeordnet werden, die diese ausführen können. Die Aufgabenliste stellt eine Rollendefinition dar, die Sie beim Erstellen einer Rollenzuweisung auswählen.  
   
  Auf der Systemebene gelten die von Ihnen erstellten oder geänderten Rollenzuweisungen für den gesamten Berichtsserver. Die Berechtigung zum Erstellen freigegebener Zeitpläne wird z. B. auf der Systemebene angegeben, da freigegebene Zeitpläne im gesamten System verwendet werden.  
@@ -42,7 +42,7 @@ ms.locfileid: "48053990"
   
 4.  Um eine neue Rollenzuweisung zu erstellen, klicken Sie auf der Symbolleiste auf **Neue Rollenzuweisung** . Um eine vorhandene Rollenzuweisung zu bearbeiten, klicken Sie neben einer Gruppe oder einem Benutzer auf der Eigenschaftenseite Sicherheit auf **Bearbeiten** .  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Gruppen- oder Benutzernamen**  
  Geben Sie den Namen eines Gruppen- oder Benutzerkontos in der Domäne ein. Wenn der Berichtsserver unter einem lokalen Konto ausgeführt wird, müssen Sie lokale Gruppen oder Benutzer angeben. Wenn der Berichtsserver unter einem Domänenkonto ausgeführt wird, müssen Sie Domänengruppen oder -benutzer angeben. Geben Sie das Konto im folgenden Format: \<Domäne >\\< Konto\>.  
   
@@ -52,9 +52,9 @@ ms.locfileid: "48053990"
  **Roles**  
  Stellt eine Liste von Rollen auf Systemebene bereit, die Sie anderen Benutzern zuweisen können. Sie können mehrere Rollen für eine einzelne Rollenzuweisung angeben.  
   
- Der Berichts-Manager zeigt die Aufgaben in jeder Rolle nicht an und bietet auch keine Möglichkeit, Aufgaben hinzuzufügen oder sie zu ändern. Sie müssen die Rollen so verwenden, wie sie definiert sind. Erstellen, ändern oder Löschen von Rollen, verwenden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Weitere Informationen finden Sie unter [erstellen, löschen oder Ändern einer Rolle &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
+ Der Berichts-Manager zeigt die Aufgaben in jeder Rolle nicht an und bietet auch keine Möglichkeit, Aufgaben hinzuzufügen oder sie zu ändern. Sie müssen die Rollen so verwenden, wie sie definiert sind. Verwenden Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], um Rollen zu erstellen, zu ändern oder zu löschen. Weitere Informationen finden Sie unter [Erstellen, Löschen oder Ändern einer Rolle &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
   
- Beachten Sie, dass bei Verwendung von [!INCLUDE[ssExpressEd2005](../includes/ssexpressed2005-md.md)] mit Advanced Services verwenden, müssen Sie verwenden die Standardrollen, die bereitgestellt werden.  
+ Beachten Sie, dass Sie bei Verwendung von [!INCLUDE[ssExpressEd2005](../includes/ssexpressed2005-md.md)] with Advanced Services die vorhandenen Rollen verwenden müssen.  
   
  **Eine Beschreibung**  
  Zeigt zusätzliche Informationen zur Rolle an. Bei vordefinierten Rollen wie z. B. Systembenutzer oder Systemadministrator werden in der Beschreibung die Aufgaben zusammengefasst, die von einer Rolle unterstützt werden.  

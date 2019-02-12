@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a15a96c3-7d2c-433e-a440-4ea051e967a9
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: dcc748a025b638e1207902b0c5ef839c5fb8476d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9dcd848643f942006b6e837a5a4670cf7c7b90d8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128500"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032231"
 ---
 # <a name="set-and-configure-measurement-units-report-builder-and-ssrs"></a>Festlegen und Konfigurieren von Maßeinheiten (Berichts-Generator und SSRS)
   Indikatoren stellen zwei Maßeinheiten bereit: eine prozentuale und eine numerische Maßeinheit. Standardmäßig sind Indikatoren so konfiguriert, dass Prozentsätze als Maßeinheit verwendet werden. Dies bedeutet, dass die Indikatorwerte, die den einzelnen Symbolen im Indikatorsatz zugewiesen sind, von einem Prozentbereich bestimmt werden. Die Prozentbereiche werden gleichmäßig auf die Symbole im Indikatorsatz verteilt. Jedes Symbol stellt einen Indikatorstatus dar. Sie können die Prozentsätze für die einzelnen Symbole im Indikatorsatz ändern, indem Sie andere Prozentsätze für den Start- und Endbereich angeben. Darüber hinaus wird der Minimal- und Maximalwert in den Daten von Indikatoren automatisch erkannt.  

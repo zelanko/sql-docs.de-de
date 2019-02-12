@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 1fb4f5bc-1756-45ca-9cd7-411a8c5992a9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4dfbb3d917be60ced676882895d70247e4a5f8d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 71db7ba5246e151bbca8a52972a2ba835b80ddb6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202660"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035111"
 ---
 # <a name="creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Erstellen eines Clustermodells für verwandte Sequenzen (Data Mining-Lernprogramm für Fortgeschrittene)
   Bei der Untersuchung des Sequenzclustermodells haben Sie gelernt, dass Attribute wie "Region" oder "Einkommen" starke Auswirkungen auf die Modelle haben. Aus diesem Grund erstellen Sie nun ein Clustermodell für verwandte Sequenzen und entfernen die Attribute für demografische Kundendaten, um ein besseres Verständnis der Sequenzen zu entwickeln.  
@@ -27,7 +26,7 @@ ms.locfileid: "48202660"
   
 ### <a name="to-make-a-copy-of-the-sequence-clustering-model"></a>So erstellen Sie eine Kopie des Sequenzclustermodells  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], klicken Sie in der Data Mining-Designer auf die **Miningmodelle** Registerkarte.  
+1.  Klicken Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]im Data Mining-Designer auf die Registerkarte **Miningmodelle** .  
   
 2.  Klicken Sie mit der rechten Maustaste auf das Modell, das Sie kopieren möchten, und wählen Sie **Neues Miningmodell**aus.  
   
@@ -69,6 +68,6 @@ ms.locfileid: "48202660"
  [Erstellen von Vorhersagen für ein Sequenzclustermodell &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/create-predictions-on-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Anforderungen und Überlegungen zur Verarbeitung &#40;Datamining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Anforderungen und Überlegungen zur Verarbeitung &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

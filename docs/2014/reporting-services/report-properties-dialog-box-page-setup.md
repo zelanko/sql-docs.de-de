@@ -12,19 +12,19 @@ f1_keywords:
 - sql12.rtp.rptdesigner.reportproperties.pagesetup.f1
 ms.assetid: f9d406dd-a87c-4321-bf23-339d90654062
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c9331aede0a02f0f84bd2ae76998efeb8edc075b
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: d1dcf20ef0a282d28ce8c50c5935100b48fb57e6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905070"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029421"
 ---
 # <a name="report-properties-dialog-box-page-setup"></a>Berichtseigenschaften (Dialogfeld), Seite einrichten
   Wählen Sie **Seiteneinrichtung** auf die **Berichtseigenschaften**, im Dialogfeld, um Seitenoptionen für den gesamten Bericht festzulegen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Zoll**  
  Gibt das Seitenformat in Zoll an. Standardmäßig wird durch die Gebietsschemaeinstellungen bestimmt, welche Seiteneinheit ausgewählt ist.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48905070"
  **Top**  
  Legt den Abstand zwischen dem oberen Rand des Berichts und dem oberen Rand der ersten Zeile des Berichts fest.  
   
- **nach unten**  
+ **Bottom**  
  Legt den Abstand zwischen dem unteren Rand des Berichts und dem unteren Rand der letzten Zeile des Berichts fest.  
   
  **Links**  

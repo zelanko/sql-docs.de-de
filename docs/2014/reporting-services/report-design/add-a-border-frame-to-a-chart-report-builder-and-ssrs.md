@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ca0c5040-40bb-4cb7-bc2b-5bcbe73858bb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 4eeac09776fec458b1f887769cc690e158eab40b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a15dbae1d2192c31165e04fb21ada9d0807d591e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160070"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038481"
 ---
 # <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>Hinzufügen eines Rahmens zu einem Diagramm (Berichts-Generator und SSRS)
   Sie können die visuelle Wirkung eines Diagramms verbessern, indem Sie einen Rahmen um das Diagramm ziehen. Sie können einen Rahmen im Dialogfeld **Diagrammeigenschaften** oder im Bereich Eigenschaften auswählen. Die Diagrammrahmen können nicht für einen beliebigen anderen Datenbereich übernommen werden.  
@@ -49,6 +49,6 @@ ms.locfileid: "48160070"
 ## <a name="see-also"></a>Siehe auch  
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Formatieren eines Diagramms &#40;Berichts-Generator und SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [Hinzufügen einer Abschrägung, Prägung und Struktur zu einem Diagramm (Berichts-Generator und SSRS)](chart-effects-add-bevel-emboss-or-texture-report-builder.md)  
+ [Hinzufügen einer Abschrägung, Prägung und Struktur zu einem Diagramm &#40;Berichts-Generator und SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)  
   
   

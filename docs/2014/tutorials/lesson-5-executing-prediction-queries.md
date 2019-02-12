@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0037bd2f-aa2d-464b-bf86-b0210f0438b1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1ad048ec7efe492b604ad930450c83d3c6da666c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a5f4d6dd79f62541e207df688349f694680e2421
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139970"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038411"
 ---
 # <a name="lesson-5-executing-prediction-queries"></a>Lektion 5: Ausführen von Vorhersageabfragen
-  In dieser Lektion verwenden Sie die [SELECT FROM \<Model > PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx) Form der SELECT-Anweisung zum Erstellen von zwei verschiedene Arten von Vorhersagen auf Grundlage der Entscheidungsstruktur Modellieren Sie erstellt haben, im [ Lektion 2: Hinzufügen von Miningmodellen für die Miningstruktur Association](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Diese Vorhersagetypen werden weiter unten definiert.  
+  In dieser Lektion verwenden Sie die [SELECT FROM \<Model > PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx) Form der SELECT-Anweisung zum Erstellen von zwei verschiedene Arten von Vorhersagen auf Grundlage der Entscheidungsstruktur Modellieren Sie erstellt haben, im [ Lektion 2: Hinzufügen von Miningmodellen zur Association-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Diese Vorhersagetypen werden weiter unten definiert.  
   
  Singleton-Abfrage  
  Verwenden Sie eine SINGLETON-Abfrage, um Ad-hoc-Werte bereitzustellen, wenn Sie Vorhersagen treffen. Sie können beispielsweise bestimmen, ob ein einzelner Kunde wahrscheinlich ein Fahrradkäufer ist, indem Sie Eingaben wie die Pendelstrecke, die Postleitzahl oder die Anzahl der Kinder des Kunden an die Abfrage übergeben. Die SINGLETON-Abfrage gibt basierend auf diesen Eingaben einen Wert zurück, der angibt, wie wahrscheinlich es ist, dass die Person ein Fahrrad kauft.  
@@ -37,7 +36,7 @@ ms.locfileid: "48139970"
   
  Mithilfe von Vorhersagefunktionen lässt sich die Abfrage zusätzlich optimieren. Vorhersagefunktionen stellen zusätzliche Informationen bereit, z. B. die Wahrscheinlichkeit des Eintreffens einer Vorhersage; außerdem bieten sie Unterstützung für die Vorhersage im Trainings-Dataset. Weitere Informationen zu Vorhersagefunktionen finden Sie unter [Funktionen &#40;DMX&#41;](/sql/dmx/functions-dmx).  
   
- Die Vorhersagen in diesem Lernprogramm basieren auf der ProspectiveBuyer-Tabelle in der [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] -Beispieldatenbank. Die ProspectiveBuyer-Tabelle enthält eine Liste potenzieller Kunden und die Merkmale dieser Kunden. Die Kunden in dieser Tabelle sind von den zum Erstellen des Entscheidungsstruktur-Miningmodells verwendeten Kunden unabhängig.  
+ Die Vorhersagen in diesem Lernprogramm basieren auf der ProspectiveBuyer-Tabelle in der [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]-Beispieldatenbank. Die ProspectiveBuyer-Tabelle enthält eine Liste potenzieller Kunden und die Merkmale dieser Kunden. Die Kunden in dieser Tabelle sind von den zum Erstellen des Entscheidungsstruktur-Miningmodells verwendeten Kunden unabhängig.  
   
  Vorhersagen können auch mit dem Generator für Vorhersageabfragen in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] erstellt werden.  
   

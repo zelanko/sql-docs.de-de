@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bb0768e479c9a308121d99202fea7ea497acd1e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4966841751b7eaf0382cc02d19fd2dac99462386
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182180"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034081"
 ---
 # <a name="publishing-data-sources-and-reports"></a>Veröffentlichen von Datenquellen und Berichten
   Vor dem Veröffentlichen Ihres Berichts sollten Sie ihn in der Vorschau anzeigen. Sie können die Gestaltung weiter optimieren, bis Sie mit den Ergebnissen zufrieden sind.  
@@ -30,13 +30,13 @@ ms.locfileid: "48182180"
  Wenn Sie den Bericht mithilfe einer freigegebenen Datenquelle erstellt haben, müssen Sie diese an demselben Speicherort veröffentlichen wie den Bericht. Ähnlich wie Berichte können auch freigegebene Datenquellen auf dem Berichtsserver getrennt verwaltet werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Previewing Reports (Vorschau von Berichten)](previewing-reports.md)  
+ [Ausführen einer Vorschau für Berichte](previewing-reports.md)  
  Beschreibt, wie der Bericht vor dem Veröffentlichen in der Vorschau angezeigt werden kann.  
   
  [Veröffentlichen von Berichten auf einem Berichtsserver](publishing-reports-to-a-report-server.md)  
  Beschreibt das Veröffentlichen eines Berichts auf einem Berichtsserver.  
   
- [Beispiele URLs von veröffentlichten Berichtselementen auf einem Berichtsserver im SharePoint-Modus &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
+ [Beispiele für URLs von veröffentlichten Berichtselementen auf einem Berichtsserver im SharePoint-Modus &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
  Beschreibt das Veröffentlichen eines Berichts auf einer SharePoint-Website.  
   
 ## <a name="see-also"></a>Siehe auch  

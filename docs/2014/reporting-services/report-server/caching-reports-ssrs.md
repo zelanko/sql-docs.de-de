@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7f026e83f5f968480b9484c0a1251929a299055b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e0e063b662d83655eb9c8a99b8ec1317dfffa263
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069413"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029701"
 ---
 # <a name="caching-reports-ssrs"></a>Zwischenspeichern von Berichten (SSRS)
   Ein Berichtsserver kann eine Kopie eines verarbeiteten Berichts zwischenspeichern und diese anzeigen, wenn ein Benutzer den Bericht öffnet. Für den Benutzer ist der einzige Hinweis darauf, dass es sich bei dem Bericht um eine zwischengespeicherte Kopie handelt, das Datum und die Uhrzeit des Berichts. Wenn der Bericht kein aktuelles Datum oder keine aktuelle Uhrzeit aufweist und es sich um keine Momentaufnahme handelt, wurde der Bericht aus dem Cache abgerufen.  
@@ -38,7 +38,7 @@ ms.locfileid: "48069413"
  Die Zwischenspeicherung ist eine Technik zur Leistungsoptimierung. Der Inhalt des Zwschenspeichers ist flüchtig und kann sich beim Hinzufügen, Ersetzen oder Entfernen von Berichten ändern. Falls Sie eine zuverlässigere Zwischenspeicherungsstrategie benötigen, sollten Sie eine Momentaufnahme erstellen. Weitere Informationen finden Sie unter [Festlegen von Berichtsverarbeitungseigenschaften](set-report-processing-properties.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] speichert temporäre Dateien in einer Datenbank, damit Benutzersitzungen und Berichtsverarbeitung unterstützt werden. Diese Dateien werden zur internen Verwendung und zur Unterstützung einer konsistenten Anzeige während einer einzelnen Browsersitzung zwischengespeichert. Weitere Informationen zur Zwischenspeicherung von temporären Dateien für die interne Verwendung finden Sie unter [Berichtsserver-Datenbank (einheitlicher SSRS-Modus)](report-server-database-ssrs-native-mode.md).  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden temporäre Dateien in einer Datenbank gespeichert, damit Benutzersitzungen und Berichtsverarbeitung unterstützt werden. Diese Dateien werden zur internen Verwendung und zur Unterstützung einer konsistenten Anzeige während einer einzelnen Browsersitzung zwischengespeichert. Weitere Informationen zur Zwischenspeicherung von temporären Dateien für die interne Verwendung finden Sie unter [Berichtsserver-Datenbank (einheitlicher SSRS-Modus)](report-server-database-ssrs-native-mode.md).  
   
 ## <a name="cached-instances"></a>Zwischengespeicherte Instanzen  
  Eine zwischengespeicherte Instanz eines Berichts basiert auf dem Berichtszwischenformat. Der Berichtsserver führt im Allgemeinen die Zwischenspeicherung einer Berichtsinstanz basierend auf dem Berichtsnamen durch. Wenn allerdings ein Bericht gemäß den Abfrageparametern verschiedene Daten enthalten kann, können jeweils mehrere Versionen des Berichts zwischengespeichert werden. Angenommen, Sie haben einen parametrisierten Bericht, der einen Landes-/Regionscode als Parameterwert verwendet. Wenn vier verschiedene Benutzer vier eindeutige Landes-/Regionscodes angeben, werden vier zwischengespeicherte Kopien erstellt.  
@@ -63,7 +63,7 @@ ms.locfileid: "48069413"
   
  Das Zwischenspeichern eines Berichts ist besonders hilfreich, wenn Sie mehrere Instanzen eines parametrisierten Berichts zwischenspeichern möchten, wobei zum Erstellen unterschiedlicher Berichtsinstanzen unterschiedliche Parameterwerte verwendet werden. Beachten Sie, dass nur abfragebasierte Parameter im Bericht angegeben werden können.  
   
- Beim Angeben eines Zeitplans oder Erstellen des datengesteuerten Abonnements planen Sie, wie oft Berichte an den Cache übermittelt werden. Damit neue Kopien an den Cache übermittelt werden, müssen die alten Kopien abgelaufen sein. Deshalb müssen die Ausführungseigenschaften des Berichts die Einstellungen für den Cacheablaufzeitpunkt enthalten. Die Einstellungen für den Cacheablaufzeitpunkt müssen mit dem von Ihnen definierten Abonnementzeitplan konsistent sein. Wenn Sie z. B. ein Abonnement erstellen, das jede Nacht ausgeführt wird, sollte der Cache ebenfalls jede Nacht zur Laufzeit des Abonnements abgelaufen sein. Wenn auf der Eigenschaftenseite Ausführung keine Ablaufzeiten angegeben sind, werden neue Übermittlungen ignoriert. Weitere Informationen zu cacheaktualisierungsplänen finden Sie unter [Zeitpläne](../subscriptions/schedules.md). Weitere Informationen zum Festlegen von Eigenschaften finden Sie unter [Festlegen von Berichtsverarbeitungseigenschaften](set-report-processing-properties.md). Weitere Informationen zum Verwenden eines datengesteuerten Abonnements finden Sie unter [Datengesteuerte Abonnements](../subscriptions/data-driven-subscriptions.md).  
+ Beim Angeben eines Zeitplans oder Erstellen des datengesteuerten Abonnements planen Sie, wie oft Berichte an den Cache übermittelt werden. Damit neue Kopien an den Cache übermittelt werden, müssen die alten Kopien abgelaufen sein. Deshalb müssen die Ausführungseigenschaften des Berichts die Einstellungen für den Cacheablaufzeitpunkt enthalten. Die Einstellungen für den Cacheablaufzeitpunkt müssen mit dem von Ihnen definierten Abonnementzeitplan konsistent sein. Wenn Sie z. B. ein Abonnement erstellen, das jede Nacht ausgeführt wird, sollte der Cache ebenfalls jede Nacht zur Laufzeit des Abonnements abgelaufen sein. Wenn auf der Eigenschaftenseite Ausführung keine Ablaufzeiten angegeben sind, werden neue Übermittlungen ignoriert. Weitere Informationen zu Cacheaktualisierungsplänen finden Sie unter [Zeitpläne](../subscriptions/schedules.md). Weitere Informationen zur Einstellung von Eigenschaften finden Sie unter [Festlegen von Berichtsverarbeitungseigenschaften](set-report-processing-properties.md). Weitere Informationen zum Verwenden datengesteuerter Abonnements finden Sie unter [Datengesteuerte Abonnements](../subscriptions/data-driven-subscriptions.md).  
   
 ## <a name="conditions-that-cause-cache-expiration"></a>Bedingungen, die zum Ablaufen des Caches führen  
  Ein zwischengespeicherter Bericht wird als Konsequenz aus den folgenden Ereignissen ungültig: Die Berichtsdefinition wird geändert, Berichtsparameter werden geändert, die Datenquellen-Anmeldeinformationen ändern sich, oder die Optionen zum Ausführen des Berichts werden geändert. Wenn Sie einen Bericht löschen, wird auch die zwischengespeicherte Version gelöscht, falls sie schon im Cache gespeichert wurde.  
@@ -71,12 +71,12 @@ ms.locfileid: "48069413"
  Falls ein Bericht aus irgendeinem Grund nicht aus einer zwischengespeicherten Instanz generiert werden kann (z. B., wenn die von einem Benutzer angegebenen Parameterwerte von den Werten abweichen, mit denen der zwischengespeicherte Bericht erstellt wird), führt der Berichtsserver den Bericht erneut aus.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Festlegen von Verarbeitungsoptionen &#40;integrierten Reporting Services im SharePoint-Modus&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Festlegen von Verarbeitungsoptionen &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Festlegen von Berichtsverarbeitungseigenschaften](set-report-processing-properties.md)   
- [Konzepte von Reporting Services (SSRS)](../reporting-services-concepts-ssrs.md)   
- [Vorabladen des Caches (Berichts-Manager)](preload-the-cache-report-manager.md)   
+ [Konzepte von Reporting Services &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
+ [Vorabladen des Caches &#40;Berichts-Manager&#41;](preload-the-cache-report-manager.md)   
  [Zeitpläne](../subscriptions/schedules.md)   
- [Zwischenspeichern von freigegebenen Datasets (SSRS)](cache-shared-datasets-ssrs.md)   
+ [Zwischenspeichern von freigegebenen Datasets &#40;SSRS&#41;](cache-shared-datasets-ssrs.md)   
  [Optionen zur Cacheaktualisierung &#40;Berichts-Manager&#41;](../cache-refresh-options-report-manager.md)  
   
   

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e83d32be1dbb93a75c1d46f3edf7f46d8a0f8a7d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ff32fcd498d7998f79b480369d90a07f974f6dc6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209500"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035081"
 ---
 # <a name="preload-the-cache-report-manager"></a>Vorabladen des Caches (Berichts-Manager)
   Sie können den Cache für ein freigegebenes Dataset vorab laden, indem Sie einen Cacheaktualisierungsplan für das freigegebene Dataset erstellen.  
@@ -40,7 +40,7 @@ ms.locfileid: "48209500"
   
 ### <a name="to-preload-the-cache-by-creating-a-cache-refresh-plan"></a>So laden Sie den Cache vorab, indem Sie einen Cacheaktualisierungsplan erstellen  
   
-1.  Starten Sie [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md).  
+1.  Starten Sie den [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md).  
   
 2.  Navigieren Sie im Berichts-Manager zur Seite **Inhalt** und dann zu dem Element, das zwischengespeichert werden soll.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48209500"
   
 ### <a name="to-preload-the-cache-with-a-user-specific-report-by-using-a-data-driven-subscription"></a>So laden Sie den Cache mit einem benutzerspezifischen Bericht vorab, indem Sie ein datengesteuertes Abonnement verwenden  
   
-1.  Starten Sie [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md).  
+1.  Starten Sie den [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md).  
   
 2.  Navigieren Sie im Berichts-Manager zur Seite **Inhalt** und dann zum Bericht, für den Sie ein Abonnement erstellen möchten.  
   
@@ -121,9 +121,9 @@ ms.locfileid: "48209500"
 18. Klicken Sie auf **Anwenden**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datengesteuerte Abonnements](../subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../subscriptions/data-driven-subscriptions.md)   
  [Erstellen eines datengesteuerten Abonnements &#40;SSRS-Tutorial&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)   
- [Leistung, Momentaufnahmen, Zwischenspeichern (Reporting Services)](performance-snapshots-caching-reporting-services.md)   
+ [Leistung, Momentaufnahmen, Zwischenspeichern &#40;Reporting Services&#41;](performance-snapshots-caching-reporting-services.md)   
  [Festlegen von Berichtsverarbeitungseigenschaften](set-report-processing-properties.md)   
  [Zwischenspeichern von Berichten &#40;SSRS&#41;](caching-reports-ssrs.md)  
   

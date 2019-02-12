@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 43135554b1340b92f4801a0f08e002142b443981
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 8fe9eaf39f101e6f64946e7c60a04765e4099d5a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359862"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040161"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Lernprogramm: Kartenbericht (Berichts-Generator)
   In diesem Lernprogramm erfahren Sie mehr über die Kartenfunktionen, mit denen Sie Berichtsdaten vor einem geografischen Hintergrund anzeigen können.  
@@ -359,7 +359,7 @@ ms.locfileid: "53359862"
   
  Jedem County mit einem Geschäft ist eine Farbe zugeordnet, die auf der Farbpalette für das im Assistenten ausgewählte Format basiert.  
   
-###  <a name="ColorRules"></a> 6 b. Festlegen von Farbregeln für Polygone  
+###  <a name="ColorRules"></a> 6b. Festlegen von Farbregeln für Polygone  
  Zum Erstellen einer Regel, die die Farbe jedes Countys basierend auf dem Geschäftsumsatz verändert, müssen Sie die Bereichswerte, die Anzahl anzuzeigender Einteilungen innerhalb dieses Bereichs und die zu verwendenden Farben angeben.  
   
 ##### <a name="to-specify-color-rules-for-all-polygons-that-have-associated-data"></a>So geben Sie Farbregeln für alle Polygone mit zugeordneten Daten an  
@@ -415,7 +415,7 @@ ms.locfileid: "53359862"
   
  Die Farbskala zeigt für jeden Bereich den Jahresumsatz im Währungsformat an.  
   
-###  <a name="NewLegend"></a> 6-d. Erstellen einer neuen Legende  
+###  <a name="NewLegend"></a> 6d. Erstellen einer neuen Legende  
  Standardmäßig werden alle Regeln in der ersten Legende angezeigt. Sie können Legenden hinzufügen, um die Anzeige für eine Karte zu verbessern.  
   
  Das Ändern der Standardanzeige umfasst zwei Schritte: Erstellen Sie eine neue Legende, und ordnen Sie dann die Regelergebnisse für eine Kartenebene der neuen Legende zu.  
@@ -463,7 +463,7 @@ ms.locfileid: "53359862"
   
  Die Countys mit zugeordneten Geschäften und Umsätzen werden entsprechend den Farbregeln angezeigt. Countys ohne Umsätze ist keine Farbe zugeordnet.  
   
-###  <a name="NoData"></a> 6F. Ändern der Farbe für Countys ohne Daten  
+###  <a name="NoData"></a> 6f. Ändern der Farbe für Countys ohne Daten  
  Sie können die Standardanzeigeoptionen für alle Kartenelemente auf einer Ebene festlegen. Farbregeln haben Vorrang vor diesen Anzeigeoptionen.  
   
 ##### <a name="to-set-the-display-properties-for-all-elements-on-a-layer"></a>So legen Sie die Anzeigeeigenschaften für alle Elemente auf einer Ebene fest  

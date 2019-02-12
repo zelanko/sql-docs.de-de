@@ -3,7 +3,6 @@ title: dm_repl_articles (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -19,12 +18,12 @@ ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 48112a8cf804b329b16aadc04992ac04b852ba07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65bc88be1b9a6cdb9a69d41a526916ab3aa7ab2a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791071"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031831"
 ---
 # <a name="sysdmreplarticles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,9 +47,9 @@ ms.locfileid: "47791071"
 |**wszArtinscmd**|**nvarchar(510)**|Befehl oder gespeicherte Prozedur, der bzw. die für Einfügungen verwendet wird.|  
 |**cmdTypeIns**|**int**|Aufrufsyntax für die gespeicherte Prozedur zur Einfügung. Folgende Werte sind möglich.<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = KEINE<br /><br /> **7** = UNBEKANNT|  
 |**wszArtdelcmd**|**nvarchar(510)**|Befehl oder gespeicherte Prozedur, der bzw. die für Löschungen verwendet wird.|  
-|**cmdTypeDel**|**int**|Aufrufsyntax für die gespeicherte Prozedur zur Löschung. Folgende Werte sind möglich.<br /><br /> **0** XCALL =<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = KEINE<br /><br /> **7** = UNBEKANNT|  
+|**cmdTypeDel**|**int**|Aufrufsyntax für die gespeicherte Prozedur zur Löschung. Folgende Werte sind möglich.<br /><br /> **0** = XCALL<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = KEINE<br /><br /> **7** = UNBEKANNT|  
 |**wszArtupdcmd**|**nvarchar(510)**|Befehl oder gespeicherte Prozedur, der bzw. die für Updates verwendet wird.|  
-|**cmdTypeUpd**|**int**|Aufrufsyntax für die gespeicherte Updateprozedur. Folgende Werte sind möglich.<br /><br /> **0** XCALL =<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = KEINE<br /><br /> **4** MCALL =<br /><br /> **5** VCALL =<br /><br /> **6** SCALL =<br /><br /> **7** = UNBEKANNT|  
+|**cmdTypeUpd**|**int**|Aufrufsyntax für die gespeicherte Updateprozedur. Folgende Werte sind möglich.<br /><br /> **0** = XCALL<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = KEINE<br /><br /> **4** = MCALL<br /><br /> **5** = VCALL<br /><br /> **6** = SCALL<br /><br /> **7** = UNBEKANNT|  
 |**wszArtpartialupdcmd**|**nvarchar(510)**|Befehl oder gespeicherte Prozedur, der bzw. die für Teilupdates verwendet wird.|  
 |**cmdTypePartialUpd**|**int**|Aufrufsyntax für die gespeicherte Teilupdateprozedur. Folgende Werte sind möglich.<br /><br /> **2** = SQL|  
 |**numcol**|**int**|Anzahl von Spalten in der Partition für einen vertikal gefilterten Artikel.|  

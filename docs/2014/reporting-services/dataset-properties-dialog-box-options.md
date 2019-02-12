@@ -12,19 +12,19 @@ f1_keywords:
 - sql12.rtp.rptdesigner.datasetproperties.options.f1
 ms.assetid: 95299049-71ba-427f-b723-775cb696243f
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 81a50aa53c41ee0db4b6e9d97f2b96ca58e2649c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 502d3636998b6bdcebd8f3ac9044bd5df14bd66e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228036"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029861"
 ---
 # <a name="dataset-properties-dialog-box-options"></a>Dataseteigenschaften (Dialogfeld), Optionen
   Wählen Sie **Optionen** auf die **Dataseteigenschaften** um Datenoptionen, wie Sortierungsoptionen und Teilergebnisse, für die Abfrage zu ändern. Weitere Informationen finden Sie unter [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Sortierung**  
  Wählen Sie ein Gebietsschema aus, das die zum Sortieren der Daten verwendete Sortierreihenfolge bestimmt. Der Wert**Standard** gibt an, dass der Bericht diesen Wert vom Datenanbieter herleiten soll, wenn der Bericht ausgeführt wird. Falls der Wert nicht hergeleitet werden kann, wird der Standardwert von der Gebietsschemaeinstellung des Computers hergeleitet.  
   

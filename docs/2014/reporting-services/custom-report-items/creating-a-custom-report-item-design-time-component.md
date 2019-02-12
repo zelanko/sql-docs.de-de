@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 292baa254bffc16650376dbbc30e7193b8bc367c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 03d555f967b50b503d608244bdd4a8885cede61e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358822"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025861"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Erstellen einer Entwurfszeitkomponente für ein benutzerdefiniertes Berichtselement
   Die Entwurfszeitkomponente für ein benutzerdefiniertes Berichtselement ist eine Steuerung, die in der Berichts-Designer-Umgebung von Visual Studio verwendet werden kann. Diese Komponente bietet eine aktivierte Entwurfsoberfläche, die Drag und Drop-Vorgänge, Integration in den Eigenschaftenbrowser von [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] und die Möglichkeit zum Bereitstellen von Editoren für benutzerdefinierte Eigenschaften zulassen.  
@@ -194,12 +194,12 @@ private void OnProportionalScaling(object sender, EventArgs e)
   
 -   Komponenten in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
   
--   Exemplarische Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das von Visual Studio-Entwurfszeitfunktionen nutzt  
+-   Exemplarische Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das Visual Studio-Entwurfszeitfunktionen nutzt  
   
 ## <a name="see-also"></a>Siehe auch  
  [Custom Report Item Architecture (Architektur des benutzerdefinierten Berichtselements)](custom-report-item-architecture.md)   
  [Erstellen einer Laufzeitkomponente für ein benutzerdefiniertes Berichtselement](creating-a-custom-report-item-run-time-component.md)   
  [Custom Report Item Class Libraries (Klassenbibliotheken für ein benutzerdefiniertes Berichtselement)](custom-report-item-class-libraries.md)   
- [So wird es gemacht: Bereitstellen eines benutzerdefinierten Berichtselements](how-to-deploy-a-custom-report-item.md)  
+ [Vorgehensweise: Bereitstellen eines benutzerdefinierten Berichtselements](how-to-deploy-a-custom-report-item.md)  
   
   

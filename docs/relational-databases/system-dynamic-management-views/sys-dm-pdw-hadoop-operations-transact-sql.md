@@ -2,8 +2,8 @@
 title: Sys.dm_pdw_hadoop_operations (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,14 +13,14 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 60ae2d8cc9b03a03dee159d04dcd0e4e1a8bd7cd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 11c8cc0797bafff6cc8c38bffb55023be00003a9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663153"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023962"
 ---
-# <a name="sysdmpdwhadoopoperations-transact-sql"></a>Sys.dm_pdw_hadoop_operations (Transact-SQL)
+# <a name="sysdmpdwhadoopoperations-transact-sql"></a>sys.dm_pdw_hadoop_operations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Enthält eine Zeile für jedes map-reduce-Auftrags, der als Teil der Ausführung an Hadoop weitergegeben wird eine [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Abfrage einer externen Hadoop-Tabelle. Jeder map-reduce-Auftrag stellt eines der Prädikate in der Abfrage dar. Dies wird nur verwendet, wenn die prädikatweitergabe für Abfragen für Hadoop externe Tabellen aktiviert ist.  

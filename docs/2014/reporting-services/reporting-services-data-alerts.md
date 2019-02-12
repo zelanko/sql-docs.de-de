@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bf7824140a6072e58a9f84bc47943d7025aed7a8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 15323e5ea5f2762e0cef9b4e275e8131d43c591a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505465"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017271"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services-Datenwarnungen
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Datenwarnungen sind eine datengesteuerte Warnungslösung, mit der Sie sich leichter und zu einem relevanten Zeitpunkt über für Sie interessante oder wichtige Berichtsdaten informieren können. Mithilfe von Datenwarnungen müssen Sie nicht mehr nach Informationen suchen – diese werden Ihnen bereitgestellt.  

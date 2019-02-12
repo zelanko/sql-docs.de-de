@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e0040fec-e2b7-4099-ae01-3b9bb9128bbd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3286d9067401216c17747feaa13c46442fad66dc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: b2e6997afd52c8b999d981c5c15b782ad9a56407
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415827"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031071"
 ---
 # <a name="reporting-services-site-settings-and-site-featuressharepoint-mode"></a>Einstellungen und Funktionen für Reporting Services-Websites (SharePoint-Modus)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint-Modus bietet mehrere benutzerdefinierte Funktionen auf Websiteebene und Websitefunktionen, die auf der Seite mit den SharePoint-Websiteeinstellungen verwaltet werden können. Die Einstellungen gelten auf der gesamten Website und für alle [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienstanwendungen. Sie müssen über Inhalts-Manager- und Systemadministratorberechtigungen verfügen, um diese Seite anzuzeigen.  

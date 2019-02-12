@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: cb70d0cd-707b-4de5-b39f-e4eb57d316aa
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 48e9673e31371f76f84a9e5d8d5841282b364425
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bfe582a3d3e6d07883235b3dc447e4d823e29d87
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221695"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039612"
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>Häufig verwendete Filter (Berichts-Generator und SSRS)
   Zum Erstellen eines Filters müssen Sie mindestens eine Filtergleichung angeben. Eine Filtergleichung schließt einen Ausdruck, einen Datentyp, einen Operator und einen Wert ein. Dieses Thema enthält Beispiele für häufig verwendete Filter.  
@@ -32,7 +32,7 @@ ms.locfileid: "48221695"
 ## <a name="filter-examples"></a>Beispiele für Filter  
  In der folgenden Tabelle werden Beispiele für Filtergleichungen dargestellt, die andere Datentypen und andere Operatoren verwenden. Der Bereich für den Vergleich wird von dem Berichtselement bestimmt, für das ein Filter definiert wird. Beispiel: Bei einem für ein Dataset definierten Filter bezeichnet **Erste % 10** die ersten 10 Prozent der Werte im Dataset. Im Falle eines für eine Gruppe definierten Filters bedeutet **Erste % 10** die ersten 10 Prozent der Werte in der Gruppe.  
   
-|Einfacher Ausdruck|Datentyp|Operator|value|Description|  
+|Einfacher Ausdruck|Datentyp|Operator|Wert|Description|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
 |`[SUM(Quantity)]`|`Integer`|`>`|`7`|Schließt Datenwerte ein, die größer als 7 sind.|  
 |`[SUM(Quantity)]`|`Integer`|`TOP N`|`10`|Schließt die ersten 10 Datenwerte ein.|  
@@ -47,7 +47,7 @@ ms.locfileid: "48221695"
 ## <a name="examples-with-report-parameters"></a>Beispiele für Berichtsparameter  
  In der folgenden Tabelle werden Beispiele für Filterausdrücke bereitgestellt, die einen einwertigen oder mehrwertigen Parameterverweis einschließen.  
   
-|Parametertyp|(Filter-)Ausdruck|Operator|value|Datentyp|  
+|Parametertyp|(Filter-)Ausdruck|Operator|Wert|Datentyp|  
 |--------------------|---------------------------|--------------|-----------|---------------|  
 |Einzelwert|`[EmployeeID]`|=|`[@EmployeeID]`|Integer|  
 |Mehrwertig|`[EmployeeID]`|IN|`[@EmployeeID]`|Integer|  

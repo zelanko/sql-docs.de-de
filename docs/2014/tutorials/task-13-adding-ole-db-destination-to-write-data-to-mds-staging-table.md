@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e6c67fa9-bb52-44a9-82f6-d86551cf12b2
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: bf8a96891040a6a751e0a6e34c902d77cec9dd35
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 34f68c4604d70dc83579f8c9284802b82cc6291d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223100"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035071"
 ---
 # <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>Aufgabe 13: Hinzufügen von OLE DB-Ziels, um Daten in die MDS-Stagingtabelle zu schreiben
   Nun, da Sie hinzugefügt haben, **ImportType** und **BatchTag** Werte für alle Datensätze, Sie sind bereit, um sie an MDS für das Staging senden. In dieser Aufgabe verwenden Sie das OLE DB-Ziel zum Schreiben der Daten in **supplier_leaf** Stagingtabelle.  

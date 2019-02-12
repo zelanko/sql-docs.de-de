@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7df0a7c71dbc0298b2f9448f19287f83d34a8617
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a0c9605bfafac3611b9a24f25bb7e46c194ed22c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209540"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030481"
 ---
 # <a name="report-builder-in-sql-server-2014"></a>Berichts-Generator in SQL Server 2014
   Berichts-Generator ist eine Berichterstellungsumgebung für Geschäftsbenutzer, die lieber in der vertrauten [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office-Umgebung arbeiten. Beim Entwurf eines Berichts geben Sie an, wo die Daten abgerufen werden sollen, welche Daten abgerufen werden sollen und wie die Daten angezeigt werden sollen. Bei der Ausführung des Berichts übernimmt der Berichtsprozessor alle angegebenen Informationen, ruft die Daten ab und kombiniert sie mit dem Berichtslayout, um den Bericht zu generieren. Sie können Berichte im Berichts-Generator in der Vorschau anzeigen oder auf einem Berichtsserver oder einem Berichtsserver im integrierten SharePoint-Modus veröffentlichen, damit auch andere Benutzer den Bericht ausführen können.  
@@ -38,7 +38,7 @@ ms.locfileid: "48209540"
   
 -   **Beginnen Sie mit dem Tabellen-, Matrix- oder Diagramm-Assistenten**. Wählen Sie eine Datenquellenverbindung aus, verschieben Sie Felder per Drag &amp; Drop, um eine Datasetabfrage zu erstellen, wählen Sie das Layout und Format aus, und passen Sie den Bericht an.  
   
--   **Beginnen Sie mit dem Karten-Assistenten** , um Berichte zu erstellen, die aggregierte Daten vor einem geografischen oder geometrischen Hintergrund anzeigen. Kartendaten können räumliche Daten aus einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage oder einer ESRI-Shape-Datei (Environmental Systems Research Institute, Inc.) sein. Sie können auch Hinzufügen einer [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Bing Maps-kachelhintergrund.  
+-   **Beginnen Sie mit dem Karten-Assistenten** , um Berichte zu erstellen, die aggregierte Daten vor einem geografischen oder geometrischen Hintergrund anzeigen. Kartendaten können räumliche Daten aus einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfrage oder einer ESRI-Shape-Datei (Environmental Systems Research Institute, Inc.) sein. Sie können auch einen [!INCLUDE[msCoName](../../../includes/msconame-md.md)] -Bing Map-Kachelhintergrund hinzufügen.  
   
 
   
@@ -79,19 +79,19 @@ ms.locfileid: "48209540"
  [Neues im Berichts-Generator für SQL Server 2014](../what-s-new-in-report-builder-for-sql-server-2014.md)  
  Beschreibt die neuen Funktionen in dieser Version des Berichts-Generators, einschließlich Karten.  
   
- [Lernprogramm: Erstellen eines Quick-Diagrammberichts Offline](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+ [Tutorial: Erstellen eines Quick-Diagrammberichts Offline](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  Enthält eine Einführung in Berichts-Generator und die verfügbaren Assistenten, damit Sie Berichte erstellen können. Das Lernprogramm enthält eine Reihe von Daten, mit denen Sie arbeiten können, ohne eine Verbindung mit einer Datenquelle herstellen zu müssen.  
   
  [Planen eines Berichts &#40;Berichts-Generator&#41;](../report-design/planning-a-report-report-builder.md)  
  Enthält Informationen zu den Punkten, die Sie vor dem Erstellen des Berichts beachten sollten.  
   
- [Berichtserstellungskonzepte &#40;Berichts-Generator und SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Berichterstellungskonzepte &#40;Berichts-Generator und SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
  Enthält Definitionen der Schlüsselkonzepte, die in der Dokumentation zum Berichts-Generator verwendet werden.  
   
  [Berichtsentwurfsansicht &#40;Berichts-Generator&#41;](report-design-view-report-builder.md)  
  Erläutert die unterschiedlichen Bereiche und Abschnitte der Berichtsentwurfsansicht.  
   
- [Freigegebene Datasetentwurfsansicht &#40;Berichts-Generator&#41;](shared-dataset-design-view-report-builder.md)  
+ [Freigegebene Dataset-Entwurfsansicht &#40;Berichts-Generator&#41;](shared-dataset-design-view-report-builder.md)  
  Erläutert die unterschiedliche Bereiche und Abschnitte der Entwurfsansicht für freigegebene Datasets.  
   
  [Tastenkombinationen &#40;Berichts-Generator&#41;](keyboard-shortcuts-report-builder.md)  

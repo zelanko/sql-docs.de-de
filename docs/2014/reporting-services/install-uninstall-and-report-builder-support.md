@@ -11,14 +11,14 @@ helpviewer_keywords:
 - administering Report Builder
 ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 216623bca9dbbc086a600578c174a60d1797a2f4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 58cd6e3180de71aff25a4ed07e3ab53c91bd5ba8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377512"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034241"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>Installation, Deinstallation und Unterstützung des Berichts-Generators
   Der Berichts-Generator ist ein Berichterstellungstool, das Sie zum Erstellen, Aktualisieren und Freigeben von Berichten, Berichtsteilen und freigegebenen Datasets verwenden können. Der Berichts-Generator ist in zwei Versionen verfügbar: als eigenständige Version und als [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]-Version. Die eigenständige Version wird von Ihnen oder einem Administrator auf dem Computer installiert. Die [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] -Version wird automatisch mit [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] installiert und vom Berichts-Manager oder von einer in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]integrierten SharePoint-Website auf den Computer heruntergeladen.  

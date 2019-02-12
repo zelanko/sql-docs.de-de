@@ -27,13 +27,13 @@ helpviewer_keywords:
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 55f7b30650abdacc9a7fe85ec1e9de77d36cecd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 80cc037b98e527815f1b0b2e7010c1411da03c16
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185390"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023581"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Formatieren von Achsenbezeichnungen in einem Diagramm (Berichts-Generator und SSRS)
   Koordinatenbasierte Diagrammtypen (Säulen-, Balken-, Flächen-, Punkt-, Linien- und Bereichsdiagramme) verfügen über zwei Achsen, die zur Kategorisierung und Anzeige von Datenbeziehungen verwendet werden. Auf jede Achse werden unterschiedliche Formatierungstypen angewendet.  
@@ -52,7 +52,7 @@ ms.locfileid: "48185390"
   
  Wenn Sie ein Feld aus Ihrem Dataset auf die Entwurfsoberfläche ziehen, bestimmt das Diagramm, ob dieses Feld zur Kategorie- oder zur Wertachse gehört.  
   
- Die Wertachse ist normalerweise die vertikale Achse oder y-Achse des Diagramms. Sie wird verwendet, um numerische Datenwerte anzuzeigen, aus denen ein Diagramm erstellt wird. Ein Feld, das in den Datenfeldbereich gezogen wird, wird auf der Wertachse dargestellt. Die Kategorieachse ist normalerweise die horizontale Achse oder x-Achse des Diagramms. Bei Balkendiagrammen sind diese Achsen umgekehrt. Bei Balkendiagrammtypen ist die Kategorieachse die vertikale Achse, und die Wertachse ist die horizontale Achse. Weitere Informationen finden Sie unter [Balkendiagrammen &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md).  
+ Die Wertachse ist normalerweise die vertikale Achse oder y-Achse des Diagramms. Sie wird verwendet, um numerische Datenwerte anzuzeigen, aus denen ein Diagramm erstellt wird. Ein Feld, das in den Datenfeldbereich gezogen wird, wird auf der Wertachse dargestellt. Die Kategorieachse ist normalerweise die horizontale Achse oder x-Achse des Diagramms. Bei Balkendiagrammen sind diese Achsen umgekehrt. Bei Balkendiagrammtypen ist die Kategorieachse die vertikale Achse, und die Wertachse ist die horizontale Achse. Weitere Informationen finden Sie unter [Balkendiagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
 ## <a name="how-the-chart-calculates-axis-label-intervals"></a>Wie das Diagramm Achsenbezeichnungsintervalle berechnet  
  Bevor Sie Achsenbezeichnungen formatieren, sollten Sie verstehen, wie das Diagramm Achsenbezeichnungsintervalle berechnet. Dies ermöglicht es Ihnen, die Eigenschaften festzulegen, die für das gewünschte Achsenbezeichnungsverhalten erforderlich sind.  
@@ -92,13 +92,13 @@ ms.locfileid: "48185390"
  Das Feld Name wird an der Kategorieachse dargestellt. Das Diagramm berechnet zwischen vier und sechs Bezeichnungen sowie die erforderlichen automatischen Anpassungseinstellungen, damit die Bezeichnungen auf die Kategorieachse passen und keine Bezeichnungskollisionen verursachen. Als Ergebnis werden möglicherweise einige Kategoriebezeichnungen weggelassen. Sie können die Optionen zur automatischen Anpassung für jede Achse einzeln überschreiben.  
   
 ## <a name="displaying-all-labels-on-the-category-axis"></a>Anzeigen aller Bezeichnungen an der Kategorieachse  
- Auf der Wertachse stellen die Achsenintervalle ein konsistentes Maß für die Datenpunkte im Diagramm bereit. Auf der Kategorieachse kann diese Funktion jedoch bewirken, dass Kategorien ohne Achsenbezeichnungen angezeigt werden. In der Regel sollten alle Kategorien eine Bezeichnung aufweisen. Sie können die Anzahl der Intervalle auf 1 festlegen, um alle Kategorien anzuzeigen.  Weitere Informationen finden Sie unter [angeben eines Achsenintervalls &#40;Berichts-Generator und SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md).  
+ Auf der Wertachse stellen die Achsenintervalle ein konsistentes Maß für die Datenpunkte im Diagramm bereit. Auf der Kategorieachse kann diese Funktion jedoch bewirken, dass Kategorien ohne Achsenbezeichnungen angezeigt werden. In der Regel sollten alle Kategorien eine Bezeichnung aufweisen. Sie können die Anzahl der Intervalle auf 1 festlegen, um alle Kategorien anzuzeigen.  Weitere Informationen finden Sie unter [Angeben eines Achsenintervalls &#40;Berichts-Generator und SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  Da Sie durch ein manuelles Intervall an einer Achse die automatischen Bezeichnungsfunktionen überschreiben, muss das Diagramm die Größer aller anderen Elemente entsprechend ändern. Dies kann zu unerwarteten Ergebnissen bezüglich der Größe und Positionierung der Bezeichnungen oder der Größe anderer Elemente im Diagramm führen.  
   
 ## <a name="variable-axis-intervals"></a>Variable Achsenintervalle  
- Das Diagramm berechnet unabhängig von der Größe des Diagramms ungefähr fünf Achsenbezeichnungsintervalle. Wenn Sie in breiteren oder höheren Diagrammen nur fünf Bezeichnungen an einer Achse anzeigen, können dadurch große Lücken zwischen den einzelnen Bezeichnungen entstehen. Dies macht es schwieriger, den Wert jedes Datenpunkts an der Achse zu identifizieren. Um dieses Verhalten bei breiteren oder höheren Diagrammen zu vermeiden, können Sie ein variables Achsenintervall festlegen. Das Diagramm berechnet die optimale Anzahl der Bezeichnungen, die an der Achse angezeigt werden können, je nach Achse auf Grundlage der Breite oder der Höhe des Diagramms. Weitere Informationen finden Sie unter [angeben eines Achsenintervalls &#40;Berichts-Generator und SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md).  
+ Das Diagramm berechnet unabhängig von der Größe des Diagramms ungefähr fünf Achsenbezeichnungsintervalle. Wenn Sie in breiteren oder höheren Diagrammen nur fünf Bezeichnungen an einer Achse anzeigen, können dadurch große Lücken zwischen den einzelnen Bezeichnungen entstehen. Dies macht es schwieriger, den Wert jedes Datenpunkts an der Achse zu identifizieren. Um dieses Verhalten bei breiteren oder höheren Diagrammen zu vermeiden, können Sie ein variables Achsenintervall festlegen. Das Diagramm berechnet die optimale Anzahl der Bezeichnungen, die an der Achse angezeigt werden können, je nach Achse auf Grundlage der Breite oder der Höhe des Diagramms. Weitere Informationen finden Sie unter [Angeben eines Achsenintervalls &#40;Berichts-Generator und SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md).  
   
 ## <a name="sorting-axis-values"></a>Sortieren von Achsenwerten  
  Kategorien werden an der x-Achse in der Reihenfolge angezeigt, in der sie im Resultset vorkommen. Sie können die Gruppenreihenfolge ändern, indem Sie der Abfrage einen SORT-Befehl hinzufügen oder das Dataset mithilfe eines Ausdrucks sortieren. Diagrammdatenbereiche werden auf dieselbe Weise sortiert wie alle anderen Datenbereiche. Weitere Informationen zum Sortieren von Daten finden Sie unter [Sortieren von Daten in einem Datenbereich (Berichts-Generator und SSRS)](sort-data-in-a-data-region-report-builder-and-ssrs.md).  
@@ -113,7 +113,7 @@ ms.locfileid: "48185390"
 -   Wählen Sie ein Feld aus, oder geben Sie in das Dialogfeld **Reiheneigenschaften** einen Ausdruck für die Option **Kategorienfeld** ein. Das Diagramm fügt Achsenintervalle für alle Werte im Kategorienfeld hinzu, das Sie angegeben haben.  
   
 ## <a name="adding-or-removing-side-margins-from-the-category-axis"></a>Hinzufügen oder Entfernen von Seitenrändern an der Kategorieachse  
- Bei Balken-, Säulen- und Punktdiagrammen fügt das Diagramm anf den Enden der x-Achse automatisch Seitenränder hinzu. Die Größe der Seitenränder kann nicht geändert werden. Bei allen anderen Diagrammtypen fügt das Diagramm keine Seitenränder hinzu. Weitere Informationen finden Sie unter [hinzufügen oder Entfernen von Rändern aus einem Diagramm &#40;Berichts-Generator und SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md).  
+ Bei Balken-, Säulen- und Punktdiagrammen fügt das Diagramm anf den Enden der x-Achse automatisch Seitenränder hinzu. Die Größe der Seitenränder kann nicht geändert werden. Bei allen anderen Diagrammtypen fügt das Diagramm keine Seitenränder hinzu. Weitere Informationen finden Sie unter [Hinzufügen oder Entfernen von Rändern aus einem Diagramm &#40;Berichts-Generator und SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Formatieren von Achsenbezeichnungen als Datumsangabe oder Währung &#40;Berichts-Generator und SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  

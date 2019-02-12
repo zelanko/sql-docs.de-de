@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: e1ccf22f-80d6-45bc-aae0-f5f263275092
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3d855e911a20749b405179ebd31dfb10ac6ddc97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c6150d3060861d2e485ea8e3cd5ad2a0eecc6e38
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122860"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031401"
 ---
 # <a name="set-the-language-for-report-parameters-in-a-url"></a>Festlegen der Sprache für Berichtsparameter in einer URL
   Der *rs:ParameterLanguage* -Parameter für den URL-Zugriff behebt ein Problem, das auftritt, wenn kulturabhängige Berichtsparameter wie Datums-, Zeit-, Währungs- und Zahlenangaben über die Spracheinstellung des Browsers interpretiert werden. Mit *rs:ParameterLanguage*wird die URL unabhängig vom Browser interpretiert. Wenn die Ländereinstellungen des Berichtsservers z. B. auf die Option Deutsch festgelegt sind, ein Benutzer jedoch mit einem Browser, für den die Option Englisch festgelegt ist, über eine URL auf einen Bericht zugreift, werden die an den Berichtsserver übergebenen Parameterwerte falsch interpretiert.  
@@ -44,6 +44,6 @@ http://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render
   
 ## <a name="see-also"></a>Siehe auch  
  [URL-Zugriff &#40;SSRS&#41;](url-access-ssrs.md)   
- [URL Access Parameter Reference (URL-Zugriffsparameterverweis)](url-access-parameter-reference.md)  
+ [URL-Zugriffsparameterverweis](url-access-parameter-reference.md)  
   
   

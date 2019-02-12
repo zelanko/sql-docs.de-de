@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2b056119-439f-494f-83cf-ee0c05dc6487
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 09b5228ff383db7700d5b8f027314e6e45feb40c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fe529ac655bb9b5f0f4810ed7d0e1582693f1108
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207410"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036322"
 ---
 # <a name="add-empty-points-to-the-chart-report-builder-and-ssrs"></a>Hinzufügen von leeren Punkten zum Diagramm (Berichts-Generator und SSRS)
   NULL-Werte werden im Diagramm als Leerzeichen oder Lücken zwischen Datenpunkten einer Reihe angezeigt. Leere Punkte sind Datenpunkte, die in den leeren Bereich eingefügt werden können, der von NULL-Werten erstellt wird.  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5973d419bb87c4b53313afa3051865b4e746ef96
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: kfile
+ms.openlocfilehash: e6e98f8a1989193fba440ad7e8574d409c3a4996
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211849"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038251"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>SharePoint-Bibliotheksübermittlung in Reporting Services
   Falls der Berichtsserver für die SharePoint-Integration konfiguriert ist, enthält er eine Übermittlungserweiterung, mit der Sie einen Bericht an eine SharePoint-Bibliothek senden können.  

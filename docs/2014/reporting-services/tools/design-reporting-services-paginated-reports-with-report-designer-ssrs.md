@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: daaa0d4a48f1e5feb90fdf2fd8270b287fa7fc97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3216a1978378676ef74c0ec11a57d73a9ba528ab
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145890"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037811"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>Entwerfen von Berichten mithilfe des Berichts-Designers (SSRS)
   Mit dem Berichts-Designer können Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichte und -Berichtslösungen mit vollem Funktionsumfang erstellen. Die grafische Benutzeroberfläche des Berichts-Designers ermöglicht Ihnen, Datenquellen, Datasets und Abfragen, Berichtslayoutpositionen für Datenbereiche und Felder sowie interaktive Funktionen. z. B. Parameter und zusammenwirkende Berichtssätze, zu definieren.  
@@ -34,7 +34,7 @@ ms.locfileid: "48145890"
   
 -   Behalten Sie einen Satz von Masterkopien für Berichte und verwandte Elemente bei. Nach der Bereitstellung können veröffentlichte Berichte unbeabsichtigt geändert werden.  
   
- Anhand der Informationen in diesem Thema können Sie Berichte und verwandte Elemente für ein konkretes Berichtsprojekt in einer [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] -Projektmappe entwerfen. Weitere Informationen zu Projektmappen und mehreren Projekten in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] finden Sie unter [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md).  
+ Anhand der Informationen in diesem Thema können Sie Berichte und verwandte Elemente für ein konkretes Berichtsprojekt in einer [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] -Projektmappe entwerfen. Weitere Informationen zu Projektmappen und mehreren Projekten in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]finden Sie unter [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md).  
   
 ##  <a name="bkmk_SharedDataSources"></a> Freigegebene Datenquellen  
  Verwenden Sie [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] , um freigegebene Datenquellen für eine Berichtslösung zu definieren und bereitzustellen. Freigegebene Datenquellen können mit den Eigenschaften **OverwriteDataSources** und **TargetDataSourceFolder** unabhängig von anderen Elementen in einem Projekt bereitgestellt werden. Weitere Informationen finden Sie unter [Festlegen von Bereitstellungseigenschaften &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md).  
@@ -118,7 +118,7 @@ ms.locfileid: "48145890"
   
     -   Drücken Sie F5.  
   
-     Bei Verwendung einer Projektkonfiguration, die den Bericht erstellt, aber wird nicht bereitgestellt, wird der Bericht, der im angegebenen die `StartItem` -Eigenschaft der aktuellen Konfiguration wird in einem separaten Vorschaufenster geöffnet.  
+     Falls Sie eine Projektkonfiguration verwenden, die zwar den Bericht erstellt, aber nicht bereitstellt, wird der in der `StartItem`-Eigenschaft angegebene Bericht der aktuellen Konfiguration in einem separaten Vorschaufenster geöffnet.  
   
     > [!NOTE]  
     >  Um den Debugmodus verwenden zu können, müssen Sie ein Startelement festlegen. Im Projektmappen-Explorer das Berichtsprojekt, klicken Sie auf **Eigenschaften**, und klicken Sie in `StartItem`, wählen Sie den Namen des Berichts angezeigt.  
@@ -183,7 +183,7 @@ ms.locfileid: "48145890"
 |3|Kleinere Erstellungsprobleme, die das Berichtslayout auf geringfügigere Weise ändern, die möglicherweise nicht auffällt.|  
 |4|Wird nur für Veröffentlichungswarnungen verwendet.|  
   
- Wenn Sie versuchen, eine Vorschau anzeigen, oder stellen Sie einen Bericht, der neue Berichtselemente in enthält [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], z. B. Karten und Datenbalken, können diese Berichtselemente aus dem Bericht entfernt werden. Standardmäßig wird die ErrorLevel-Eigenschaft der Konfiguration auf 2 festgelegt. Dies würde dazu führen, dass der Bericht nicht erstellt wird, sobald die Struktur entfernt wurde. Wenn Sie den Wert der ErrorLevel-Eigenschaft in 0 oder 1 ändern, wird die Struktur jedoch gelöscht, eine Warnung ausgegeben und der Erstellungsvorgang fortgesetzt.  
+ Wenn Sie versuchen, einen Bericht, der neue Berichtselemente in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]enthält, z. B. Karten und Datenbalken, in der Vorschau anzuzeigen oder bereitzustellen, können diese Berichtselemente aus dem Bericht entfernt werden. Standardmäßig wird die ErrorLevel-Eigenschaft der Konfiguration auf 2 festgelegt. Dies würde dazu führen, dass der Bericht nicht erstellt wird, sobald die Struktur entfernt wurde. Wenn Sie den Wert der ErrorLevel-Eigenschaft in 0 oder 1 ändern, wird die Struktur jedoch gelöscht, eine Warnung ausgegeben und der Erstellungsvorgang fortgesetzt.  
   
   
 ## <a name="see-also"></a>Siehe auch  

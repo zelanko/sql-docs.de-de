@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d5004ad7cb8283be11d7e89f96ee46bd29ccccd6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 581da37baeead00355e6ada1b822731833e5adaf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189920"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037064"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>Lektion 8: Erstellen eines Datenfilters
   Nachdem Sie im übergeordneten Bericht eine Drillthroughaktion hinzugefügt haben, erstellen Sie im nächsten Schritt einen Datenfilter für die Datentabelle, die Sie für den untergeordneten Bericht definiert haben.  
@@ -44,7 +44,7 @@ ms.locfileid: "48189920"
   
 5.  Klicken Sie auf den Gleichheitsoperator (**=**)-Operator in der **Operator** Dropdown-Liste.  
   
-6.  Klicken Sie auf die Schaltfläche "Ausdruck" neben der **Wert** auf **Parameter** in die **Kategorie** Bereich, und doppelklicken Sie dann auf `productid` in die  **Werte** Bereich. Das Feld **Ausdruck festlegen für: Wert** sollte jetzt einen mit **=Parameters!productid.Value**vergleichbaren Ausdruck enthalten.  
+6.  Klicken Sie auf die Schaltfläche "Ausdruck" neben der **Wert** auf **Parameter** in die **Kategorie** Bereich, und doppelklicken Sie dann auf `productid` in die  **Werte** Bereich. Die **Ausdruck festlegen für: Wert** Feld sollte nun ähnlich wie Ausdruck enthalten **= Parameter! "ProductID". Wert**.  
   
 7.  Klicken Sie im Dialogfeld **Tablix-Eigenschaften** auf **OK** und ein zweites Mal auf **OK** .  
   
@@ -58,13 +58,13 @@ ms.locfileid: "48189920"
   
     1.  Erstellt eine Instanz des Datasets `DataSet2`, in Schritt2 erstellte [Lektion 4: Definieren einer Datenverbindung und einer Datentabelle für den untergeordneten Bericht](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
-    2.  Herstellen einer Verbindung mit der SQL Server-Datenbank, um die in **Lektion 4: Definieren einer Datenverbindung und einer Datentabelle für den untergeordneten Bericht**definierte Abfrage auszuführen.  
+    2.  Herstellen einer Verbindung mit der SQL Server-Datenbank zum Ausführen der Abfrage, die in definierten **Lektion 4: Definieren Sie eine Verbindung und einer Datentabelle für den untergeordneten Bericht**.  
   
     3.  Die Abfrage gibt ungefilterte Daten zurück.  
   
     4.  Füllen der DataSet-Instanz mit den ungefilterten Daten, indem die Abfrage ausgeführt wird.  
   
-    5.  Zurückgeben der `PurchaseOrderDetail` DataTable.  
+    5.  Zurückgeben der `PurchaseOrderDetail`-DataTable.  
   
          Die Funktion sieht etwa wie folgt aus. (Sie dient nur zur Veranschaulichung. Sie können zum Abrufen der erforderlichen Daten für den untergeordneten Bericht ein beliebiges Muster verwenden.)  
   
@@ -156,7 +156,7 @@ ms.locfileid: "48189920"
 ## <a name="query-filter"></a>Abfragefilter  
  Führen Sie folgende Aufgaben aus, um einen Abfragefilter zu implementieren.  
   
--   Erstellen Sie eine Funktion, die ausgewählt gefilterte Daten aus der `PurchaseOrderDetail` Tabelle.  
+-   Erstellen Sie eine Funktion, mit der gefilterte Daten aus der `PurchaseOrderDetail`-Tabelle ausgewählt werden.  
   
 -   Fügen Sie einen Ereignishandler hinzu, durch den Parameterwerte abgerufen und die `PurchaseOrdeDetail`-DataTable an den untergeordneten Bericht gebunden wird.  
   
@@ -164,17 +164,17 @@ ms.locfileid: "48189920"
   
 1.  Erweitern Sie im Projektmappen-Explorer Default.aspx, und doppelklicken Sie dann auf Default.aspx.cs.  
   
-2.  Erstellen Sie eine neue Funktion, die einen Parameter akzeptiert `productid`, vom Typ Integer und gibt eine `datatable` Objekt und führt die folgenden.  
+2.  Erstellen Sie eine neue Funktion, die den `productid`-Parameter vom Typ Integer akzeptiert, ein `datatable`-Objekt zurückgibt und folgende Schritte ausführt.  
   
     1.  Erstellt eine Instanz des Datasets `DataSet2`, in Schritt2 erstellte [Lektion 4: Definieren einer Datenverbindung und einer Datentabelle für den untergeordneten Bericht](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
-    2.  Herstellen einer Verbindung mit der SQL Server-Datenbank, um die in **Lektion 4: Definieren einer Datenverbindung und einer Datentabelle für den untergeordneten Bericht**definierte Abfrage auszuführen.  
+    2.  Herstellen einer Verbindung mit der SQL Server-Datenbank zum Ausführen der Abfrage definierten **Lektion 4: Definieren Sie eine Verbindung und einer Datentabelle für den untergeordneten Bericht**.  
   
     3.  Die Abfrage enthält den `productid`-Parameter, der gewährleistet, dass die zurückgegebenen Daten auf Grundlage der im übergeordneten Bericht ausgewählten `ProductID` gefiltert werden.  
   
     4.  Füllen der DataSet-Instanz mit den gefilterten Daten, indem die Abfrage ausgeführt wird.  
   
-    5.  Zurückgeben der `PurchaseOrderDetail` DataTable.  
+    5.  Zurückgeben der `PurchaseOrderDetail`-DataTable.  
   
          Die Funktion sieht etwa wie folgt aus. (Sie dient nur zur Veranschaulichung. Sie können zum Abrufen der erforderlichen Daten für den untergeordneten Bericht ein beliebiges Muster verwenden.)  
   
@@ -237,11 +237,11 @@ ms.locfileid: "48189920"
   
     2.  Abrufen der Parameterliste des untergeordneten Berichts aus dem abgerufenen untergeordneten Berichtsobjekt.  
   
-    3.  Durchlaufen der Parameterauflistung und Abrufen des Werts für den Parameter `ProductID`aus dem übergeordneten Bericht übergebenen.  
+    3.  Durchlaufen der Parameterauflistung und Abrufen des aus dem übergeordneten Bericht übergebenen Werts für den `ProductID`-Parameter.  
   
     4.  Aufrufen der `GetPurchaseOrderDetail`-Funktion und Übergeben des Werts für den `ProductID`-Parameter.  
   
-    5.  Binden der `PurchaseOrderDetail` DataTable mit dem Bericht die entsprechende Datenquelle.  
+    5.  Binden der `PurchaseOrderDetail`-DataTable an die entsprechende Datenquelle des Berichts.  
   
          Der vollständige Ereignishandlercode sollte dem folgenden ähnlich sein.  
   

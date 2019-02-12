@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 34547b62ecac2a41f9d59d96d8f5c9d99f79b21e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 490b81e30833a8572ff7ce8bd51c72b5314c3bf7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081060"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030615"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Benutzeroberfläche des MDX-Abfrage-Designers für Analysis Services
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Stellt grafische Abfrage-Designer zum Erstellen von Abfragen (Multidimensional Expression) und Data Mining-Ausdrücke (DMX) Abfragen für ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenquelle. In diesem Thema wird der MDX-Abfrage-Designer beschrieben. Weitere Informationen zu den DMX-Abfrage-Designer, finden Sie unter [Analysis Services-Verbindungstyp für DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md).  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] stellt grafische Abfrage-Designer zum Erstellen von MDX-Abfragen (Multidimensional Expressions) und DMX-Abfragen (Data Mining Expressions) für eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenquelle bereit. In diesem Thema wird der MDX-Abfrage-Designer beschrieben. Weitere Informationen zum DMX-Abfrage-Designer finden Sie unter [Analysis Services-Verbindungstyp für DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md).  
   
  Der grafische MDX-Abfrage-Designer verfügt über zwei Modi: Entwurfsmodus und Abfragemodus. Jeder Modus stellt einen Metadatenbereich bereit, in dem Sie Elemente aus den ausgewählten Cubes ziehen können, um eine MDX-Abfrage zu erstellen, die beim Verarbeiten des Berichts Daten abruft.  
   
@@ -69,11 +69,11 @@ ms.locfileid: "48081060"
 |![Wechseln zur MDX-Abfrageansicht](../../analysis-services/media/rsqdicon-commandtypemdx.gif "Change to MDX query view")|Wechselt zum MDX-Befehlstyp.|  
 |![Wechseln zur DMX-Abfragesprachenansicht](../media/rsqdicon-commandtypedmx.gif "Change to DMX query language view")|Wechselt zum DMX-Befehlstyp.|  
 |![Aktualisieren der Ergebnisdaten](../../analysis-services/media/rsqdicon-refresh.gif "Refresh result data")|Aktualisieren von Metadaten aus der Datenquelle.|  
-|![Berechnetes Element hinzufügen](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "berechnetes Element hinzufügen")|Zeigt das Dialogfeld **Generator für berechnete Elemente** an.|  
+|![Add calculated member](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Zeigt das Dialogfeld **Generator für berechnete Elemente** an.|  
 |![Umschalten zum Anzeigen von leeren Zellen](../../analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells")|Schaltet zwischen dem Anzeigen und Nichtanzeigen von leeren Zellen im Datenbereich um. (Dies entspricht dem Verwenden der NON EMPTY-Klausel in MDX.)|  
 |![Automatisches Ausführen der Abfrage](../../analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query")|Bei jeder Änderung wird die Abfrage automatisch ausgeführt, und das Ergebnis wird angezeigt. Die Ergebnisse werden im Datenbereich angezeigt.|  
 |![Anzeigen der Schaltfläche „Aggregationen“](../../analysis-services/media/rsqdicon-showaggregations.gif "Show Aggregations button")|Zeigt Aggregationen im Datenbereich an.|  
-|![Löschen Sie](../../analysis-services/media/rsqdicon-delete.gif "löschen")|Löschen der ausgewählten Spalte im Datenbereich aus der Abfrage.|  
+|![Löschen](../../analysis-services/media/rsqdicon-delete.gif "Löschen")|Löschen der ausgewählten Spalte im Datenbereich aus der Abfrage.|  
 |![Symbol für das Dialogfeld „Abfrageparameter“](../../analysis-services/media/iconqueryparameter.gif "Icon for the Query Parameters dialog box")|Anzeigen des Dialogfelds **Abfrageparameter** . Bei der Angabe von Werten für einen Abfrageparameter wird automatisch ein Berichtsparameter mit demselben Namen erstellt. Der Wert des Abfrageparameters wird auf einen Ausdruck festgelegt, der auf den Berichtsparameter verweist.|  
 |![Schaltfläche „Abfrage vorbereiten“](../../analysis-services/media/rsqdicon-preparequery.gif "Prepare Query button")|Bereitet die Abfrage vor.|  
 |![Führen Sie die Abfrage aus](../../analysis-services/media/rsqdicon-run.gif "Run the query")|Führt die Abfrage aus und zeigt die Ergebnisse im Datenbereich an.|  
@@ -107,7 +107,7 @@ ms.locfileid: "48081060"
   
 -   **Als Text bearbeiten**  
   
--   **Berechnetes Element hinzufügen** (![berechnetes Element hinzufügen](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "berechnetes Element hinzufügen"))  
+-   **Berechnetes Element hinzufügen** (![Add calculated member](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
 -   **Leere Zellen anzeigen** (![Umschalten zum Anzeigen von leeren Zellen](../../analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells"))  
   

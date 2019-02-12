@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 93ddce72-31f1-42f7-abd5-8191acbb00c5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bdbf9f69b3e1df0471b731363387542ce1fb4a3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a3872636fdfda37165bdf6cb83aa13aa51b230b2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136245"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040481"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>Allgemeine Eigenschaften (Seite), Berichtsteile (Berichts-Manager)
   Verwenden Sie die Eigenschaftenseite, um die allgemeinen Eigenschaften für einen Berichtsteil anzuzeigen und zu verwalten.  
@@ -34,7 +34,7 @@ ms.locfileid: "48136245"
   
 3.  Klicken Sie in der Dropdownliste auf **Verwalten**. Die Eigenschaftenseite Allgemein wird geöffnet.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Änderungsdatum**  
  Datum und Uhrzeit, zu denen die Berichtsteileigenschaften zuletzt auf dem Server geändert wurden oder eine neue Version des Berichtsteils auf dem Server veröffentlicht wurde. Schreibgeschützt.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48136245"
 ## <a name="see-also"></a>Siehe auch  
  [Verwaltung von Berichtsteilen](report-design/managing-report-parts.md)   
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Inhalt der Seite &#40;Berichts-Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Inhalt &#40;Seite, Berichts-Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Berichtsteile &#40;Berichts-Generator und SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
  [Berichts-Manager-F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
  [Report Parts and Datasets in Report Builder (Berichtsteile und Datasets in Berichts-Generator)](report-data/report-parts-and-datasets-in-report-builder.md)  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 79ad4c19b0f6b3dff91def701611b0a20d66a34d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 076c9593a8f44d97de0f4856801f3864818d2a6e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049810"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016001"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>Operatoren in Ausdrücken (Berichts-Generator und SSRS)
   Ein Operator ist ein Symbol, das Aktionen darstellt, die auf einen oder mehrere Begriffe in einem Ausdruck angewendet werden. Die folgenden Operatorkategorien werden in einem Ausdruck unterstützt: Arithmetik, Vergleich, Verkettung, logisch oder bitweise und Bitverschiebung  
@@ -48,7 +48,7 @@ ms.locfileid: "48049810"
 |>=|Größer oder gleich.|  
 |=|Gleich.|  
 |<>|Ungleich.|  
-|Wie|Bestimmt, ob eine bestimmte Zeichenfolge mit einem angegebenen Muster übereinstimmt. Ein Muster kann normale Zeichen und Platzhalterzeichen einschließen. Bei einem Mustervergleich müssen normale Zeichen exakt mit den angegebenen Zeichen in der Zeichenfolge übereinstimmen. Platzhalterzeichen können jedoch mit beliebigen Teilen der Zeichenfolge übereinstimmen. Das Verwenden der Vergleichsoperatoren für Zeichenfolgen = und != ist nicht so flexibel wie das Verwenden von Platzhalterzeichen mit dem LIKE-Operator.<br /><br /> Die folgenden Listen-Zeichen, die als Platzhalter verwendet werden können:<br /><br /> **%**: Eine beliebige Zeichenfolge NULL oder mehr Zeichen.<br /><br /> **_**: Ein einzelnes Zeichen.<br /><br /> **[]**: Ein einzelnes Zeichen innerhalb des angegebenen Bereichs (z. B. [a-f]) oder der festgelegten Menge (z. B. [Aeiou]).<br /><br /> **[^]** : Ein einzelnes Zeichen, die nicht innerhalb des angegebenen Bereichs (z. B. [^ a-f]) oder festlegen (z. B. [^ Aeiou]).|  
+|Wie|Bestimmt, ob eine bestimmte Zeichenfolge mit einem angegebenen Muster übereinstimmt. Ein Muster kann normale Zeichen und Platzhalterzeichen einschließen. Bei einem Mustervergleich müssen normale Zeichen exakt mit den angegebenen Zeichen in der Zeichenfolge übereinstimmen. Platzhalterzeichen können jedoch mit beliebigen Teilen der Zeichenfolge übereinstimmen. Das Verwenden der Vergleichsoperatoren für Zeichenfolgen = und != ist nicht so flexibel wie das Verwenden von Platzhalterzeichen mit dem LIKE-Operator.<br /><br /> Die folgenden Listen-Zeichen, die als Platzhalter verwendet werden können:<br /><br /> **%**: Eine Zeichenfolge aus null oder mehr Zeichen<br /><br /> **_**: Ein einzelnes Zeichen.<br /><br /> **[ ]**: Ein einzelnes Zeichen innerhalb des angegebenen Bereichs (z. B. [a-f]) oder der festgelegten Menge (z. B. [aeiou]).<br /><br /> **[^]**: Ein einzelnes Zeichen, das nicht innerhalb des angegebenen Bereichs (z. B. [^a-f]) oder der festgelegten Menge (z. B. [^aeiou]) liegt.|  
 |Is|Vergleicht zwei Objektverweise.|  
   
 ### <a name="string-concatenation"></a>Verketten von Zeichenfolgen  
