@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7482b4a2ac81541cdd9f6317d7f76291e34aa162
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b2e318d8426f9c78e0065377dcb27a6186e31c0d
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420651"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079466"
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>Konfigurieren von HTTP-Zugriff auf Analysis Services auf IIS 8.0
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "52420651"
 > [!NOTE]  
 >  Achten Sie darauf, die Blockierung der Ports in der Windows-Firewall aufzuheben, um Clientverbindungen zu einem Analysis Services-Remoteserver zuzulassen. Weitere Informationen finden Sie unter [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
-##  <a name="bkmk_copy"></a> Schritt 1: Kopieren der MSMDPUMP-Dateien in einen Ordner auf dem Webserver  
+##  <a name="bkmk_copy"></a>Schritt 1: Kopieren der MSMDPUMP-Dateien in einen Ordner auf dem Webserver  
  Jeder erstellte HTTP-Endpunkt muss über eine eigene MSMDPUMP-Dateigruppe verfügen. In diesem Schritt kopieren Sie die ausführbare MSMDPUMP-Datei, die Konfigurationsdatei und den Ressourcenordner aus den Analysis Services-Programmordnern in einen neuen virtuellen Verzeichnisordner, den Sie im Dateisystem des Computers erstellen, auf dem IIS ausgeführt wird.  
   
  Das Laufwerk muss für das NTFS-Dateisystem formatiert sein. Der Pfad zum Ordner, den Sie erstellen, darf keine Leerzeichen enthalten.  
@@ -108,11 +108,13 @@ ms.locfileid: "52420651"
   
     -   \<Laufwerk >: \inetpub\wwwroot\OLAP\MSMDPUMP.dll  
   
-    -   \<Laufwerk >: \inetpub\wwwroot\OLAP\MSMDPUMP.ini  
+    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.ini  
   
     -   \<Laufwerk >: \inetpub\wwwroot\OLAP\Resources  
+> [!NOTE]  
+>  IIS-Manager kann möglicherweise nicht in der aktuellen Version der Analysis Services herstellen, wenn die Datenbank eine Sicherung von einer vorherigen ist. Dies wird verursacht, wenn Änderungen an der MSMDPUMP und sollte durch Kopieren der msmdpump.dll-Datei aus die zuletzt funktionierende Version gelöst werden.
   
-##  <a name="bkmk_appPool"></a> Schritt 2: Erstellen eines Anwendungspools und eines virtuellen Verzeichnisses in IIS  
+##  <a name="bkmk_appPool"></a>Schritt 2: Erstellen eines Anwendungspools und eines virtuellen Verzeichnisses in IIS  
  Als Nächstes erstellen Sie einen Anwendungspool und einen Endpunkt für die Datapump.  
   
 #### <a name="create-an-application-pool"></a>Erstellen eines Anwendungspools  
@@ -148,7 +150,7 @@ ms.locfileid: "52420651"
 > [!NOTE]  
 >  Frühere Versionen dieser Anweisungen enthalten Schritte zum Erstellen eines virtuellen Verzeichnisses. Dieser Schritt ist nicht mehr erforderlich.  
   
-##  <a name="bkmk_auth"></a> Schritt 3: Konfigurieren der IIS-Authentifizierung und Hinzufügen der Erweiterung  
+##  <a name="bkmk_auth"></a>Schritt 3: Konfigurieren der IIS-Authentifizierung und Hinzufügen der Erweiterung  
  In diesem Schritt führen Sie die Konfiguration des soeben erstellten virtuellen SSAS-Verzeichnisses fort. Sie geben eine Authentifizierungsmethode an und fügen dann eine Skriptzuordnung hinzu. Folgende Authentifizierungsmethoden werden für Analysis Services über HTTP unterstützt:  
   
 -   Windows-Authentifizierung (Kerberos oder NTLM)  
