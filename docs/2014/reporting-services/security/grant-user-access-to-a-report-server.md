@@ -16,26 +16,26 @@ helpviewer_keywords:
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9814db13e9d360f390456283077bd42973b978d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1859d70c0ee0c10571897c4695eb64179b313168
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071150"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024851"
 ---
 # <a name="grant-user-access-to-a-report-server-report-manager"></a>Gewähren von Benutzerzugriff auf einen Berichtsserver (Berichts-Manager)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet rollenbasierte Sicherheit, um Benutzerzugriff auf einen Berichtsserver zu gewähren. Bei der Installation eines neuen Berichtsservers haben nur Benutzer, die Mitglieder der lokalen Administratorengruppe sind, Zugriff auf Berichtsserverinhalte und -vorgänge. Damit der Berichtsserver auch von anderen Benutzern verwendet werden kann, müssen Sie Rollenzuweisungen erstellen, mit denen Benutzer- oder Gruppenkonten einer vordefinierten Rolle zugeordnet werden, die eine Auflistung von Tasks festlegt.  
   
- **Berichtsserver im SharePoint-Modus:** Für Berichtsserver, die für den integrierten SharePoint-Modus konfiguriert sind, muss der Zugriff von einer SharePoint-Website mit SharePoint-Berechtigungen konfiguriert werden. Die Berechtigungsebenen der SharePoint-Website legen den Zugriff auf Berichtsserverinhalt und -vorgänge fest. Sie müssen Websiteadministrator sein, um Berechtigungen auf einer SharePoint-Website gewähren zu können. Weitere Informationen finden Sie unter [Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website](granting-permissions-on-report-server-items-on-a-sharepoint-site.md).  
+ **Berichtsserver im SharePoint-Modus:** Wenn ein Berichtsserver so konfiguriert ist, dass er im integrierten SharePoint-Modus ausgeführt wird, konfigurieren Sie den Zugriff von einer SharePoint-Website mit SharePoint-Berechtigungen. Die Berechtigungsebenen der SharePoint-Website legen den Zugriff auf Berichtsserverinhalt und -vorgänge fest. Sie müssen Websiteadministrator sein, um Berechtigungen auf einer SharePoint-Website gewähren zu können. Weitere Informationen finden Sie unter [Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website](granting-permissions-on-report-server-items-on-a-sharepoint-site.md).  
   
- **Berichtsserver im einheitlichen Modus:** In diesem Thema liegt der Schwerpunkt auf einem für den einheitlichen Modus konfigurierten Berichtsserver und der Verwendung des Berichts-Managers zum Zuweisen von Benutzern zu Rollen. Die folgenden beiden Rollen stehen zur Verfügung:  
+ **Berichtsserver im einheitlichen Modus:** Dieses Thema konzentriert sich auf einem Berichtsserver, der für einheitlichen Modus und die Verwendung des Berichts-Managers zum Zuweisen von Benutzern zu einer Rolle konfiguriert ist. Die folgenden beiden Rollen stehen zur Verfügung:  
   
 -   Rollen auf Elementebene werden verwendet, um Berichtsserverinhalte, Abonnements, Berichtsverarbeitung und Berichtsverlauf anzuzeigen, hinzuzufügen und zu verwalten. Rollenzuweisungen auf Elementebene werden im Stammknoten (dem Stammordner) oder in bestimmten Ordnern oder Elementen weiter unten in der Hierarchie definiert.  
   
 -   Rollen auf Systemebene gewähren Zugriff auf siteweite Vorgänge, die an kein bestimmtes Element gebunden sind. Beispiele sind die Verwendung des Berichts-Generators und die Verwendung von freigegebenen Zeitplänen.  
   
-     Diese beiden Rollentypen ergänzen sich gegenseitig und sollten zusammen verwendet werden. Das Hinzufügen eines Benutzers zu einem Berichtsserver ist daher ein Vorgang mit zwei Teilvorgängen. Wenn Sie einen Benutzer einer Rolle auf Elementebene zuweisen, sollten Sie ihn ebenfalls einer Rolle auf Systemebene zuweisen. Beim Zuweisen eines Benutzers zu einer Rolle müssen Sie eine bereits definierte Rolle wählen. Verwenden Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], um Rollen zu erstellen, zu ändern oder zu löschen. Weitere Informationen finden Sie unter [erstellen, löschen oder Ändern einer Rolle &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md).  
+     Diese beiden Rollentypen ergänzen sich gegenseitig und sollten zusammen verwendet werden. Das Hinzufügen eines Benutzers zu einem Berichtsserver ist daher ein Vorgang mit zwei Teilvorgängen. Wenn Sie einen Benutzer einer Rolle auf Elementebene zuweisen, sollten Sie ihn ebenfalls einer Rolle auf Systemebene zuweisen. Beim Zuweisen eines Benutzers zu einer Rolle müssen Sie eine bereits definierte Rolle wählen. Verwenden Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], um Rollen zu erstellen, zu ändern oder zu löschen. Weitere Informationen finden Sie unter [Erstellen, Löschen oder Ändern einer Rolle &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md).  
   
 ## <a name="before-you-start"></a>Vorbereitungen  
  Überprüfen Sie die folgende Liste vor dem Hinzufügen von Benutzern zu einem Berichtsserver im einheitlichen Modus.  
@@ -86,9 +86,9 @@ ms.locfileid: "48071150"
 7.  Wiederholen Sie den Vorgang, um weiteren Benutzern oder Gruppen Rollen zuzuweisen.  
   
 ## <a name="see-also"></a>Siehe auch  
- (erstellen-und-Verwaltung-Rolle-assignments.md)   
- [Neue Rollenzuweisung: Bearbeiten der Zuweisung Rollenseite &#40;Berichts-Manager&#41;](../new-role-assignment-edit-role-assignment-page-report-manager.md)   
- [Sicherheit (Eigenschaftenseite) Elemente &#40;Berichts-Manager&#41;](../security-properties-page-items-report-manager.md)   
+ (create-and-manage-role-assignments.md)   
+ [Neue Rollenzuweisung: Bearbeiten Sie die Rollenseite für die Zuweisung &#40;Berichts-Manager&#41;](../new-role-assignment-edit-role-assignment-page-report-manager.md)   
+ [Sicherheit (Eigenschaftenseite) &#40;Elemente, Berichts-Manager&#41;](../security-properties-page-items-report-manager.md)   
  [Rollenzuweisungen](role-assignments.md)   
  [Rollendefinitionen](role-definitions.md)  
   

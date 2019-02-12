@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: ce458f9f-4b4f-4a58-aa75-9a90dda1e622
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 90649f491fac7d867ebad0516d1ccea5fc41d4a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: a1b5ead3e2ab16eea905af3312779631ae6344ea
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134170"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026770"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Konfigurieren der Reporting Services für die Verwendung eines alternativen Antragstellernamens
   In diesem Thema wird erklärt, wie Sie [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS) für die Verwendung eines alternativen Antragstellernamens (Subject Alternative Name, SAN) konfigurieren, indem Sie die Datei „rsreportserver.config“ ändern und das Tool „Netsh.exe“ verwenden.  
@@ -29,9 +29,9 @@ ms.locfileid: "48134170"
   
  Zum Verwenden eines SAN muss das SSL-Zertifikat auf dem Server registriert und signiert sein und über den privaten Schlüssel verfügen. Sie können kein selbstsigniertes Zertifikat verwenden.  
   
- URLs in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] für die Verwendung ein SSL-Zertifikats konfiguriert werden können. Ein Zertifikat verfügt normalerweise nur über einen Antragstellernamen, der nur eine URL für eine SSL-Sitzung (Secure Sockets Layer) zulässt. Der SAN ist ein zusätzliches Feld im Zertifikat, über das ein SSL-Zertifikat viele URLs überwachen und für diese gültig sein kann. Außerdem kann der SSL-Port dann mit anderen Anwendungen gemeinsam verwendet werden. Der SAN sieht wie folgt aus: www.s2.com.  
+ URLs in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] können für die Verwendung eines SSL-Zertifikats konfiguriert werden. Ein Zertifikat verfügt normalerweise nur über einen Antragstellernamen, der nur eine URL für eine SSL-Sitzung (Secure Sockets Layer) zulässt. Der SAN ist ein zusätzliches Feld im Zertifikat, über das ein SSL-Zertifikat viele URLs überwachen und für diese gültig sein kann. Außerdem kann der SSL-Port dann mit anderen Anwendungen gemeinsam verwendet werden. Der SAN sieht wie folgt aus: www.s2.com.  
   
- Weitere Informationen zu SSL-Einstellungen für [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], finden Sie unter [Konfigurieren von SSL-Verbindungen auf einem Berichtsserver im einheitlichen Modus](security/configure-ssl-connections-on-a-native-mode-report-server.md).  
+ Weitere Informationen zu SSL-Einstellungen für [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]finden Sie unter [Konfigurieren von SSL-Verbindungen auf einem Berichtsserver im einheitlichen Modus](security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
 ### <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>Konfigurieren von SSRS für die Verwendung eines alternativen Antragstellernamens für die Webdienst-URL  
   
@@ -126,7 +126,7 @@ ms.locfileid: "48134170"
   
 ## <a name="see-also"></a>Siehe auch  
  [RSReportServer-Konfigurationsdatei](report-server/rsreportserver-config-configuration-file.md)   
- [Reporting Services-Konfigurations-Manager &#40;im einheitlichen Modus&#41;](../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Ändern einer Reporting Services-Konfigurationsdatei &#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Konfigurieren von Berichtsserver-URLs &#40;SSRS-Konfigurations-Manager&#41;](install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   

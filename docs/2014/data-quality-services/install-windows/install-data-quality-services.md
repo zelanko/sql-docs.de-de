@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 28e95e0afe1e2667bd962f6c41fa53e622b4962b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 728d69dcf44e0cab436c73396d833f754891a3f5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371432"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019636"
 ---
 # <a name="install-data-quality-services"></a>Installieren von Data Quality Services
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) enthält die folgenden zwei Komponenten: **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** und **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]**.  
@@ -47,7 +47,7 @@ ms.locfileid: "53371432"
   
 |DQS-Komponente|Mindestsystemanforderungen|  
 |-------------------|---------------------------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|Arbeitsspeicher (RAM):<br />-Mindestens: 2 GB<br />-Empfohlen: 4 GB oder mehr<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Datenbank-Engine. Weitere Informationen finden Sie unter [über die SQL Server-Datenbank-Engine](../../database-engine/sql-server-database-engine-overview.md).|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|Arbeitsspeicher (RAM):<br />-Minimum: 2 GB<br />-Empfohlen: 4 GB oder mehr<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Datenbank-Engine. Weitere Informationen finden Sie unter [über die SQL Server-Datenbank-Engine](../../database-engine/sql-server-database-engine-overview.md).|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|.NET Framework 4.0 (wird mit dem [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] installiert, sofern nicht bereits installiert)<br /><br /> Internet Explorer 6.0 SP1 oder höher|  
   
 > [!IMPORTANT]

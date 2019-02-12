@@ -12,20 +12,20 @@ helpviewer_keywords:
 - properties [Reporting Services], general
 ms.assetid: 10b941b2-28e6-4408-9ee4-acebc63c8496
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 24cf490734933eaa367eacf3881bacec92e877fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: b1e453bf06f0035a2ceca17f9f5c0af2d2fc9a0c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112182"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023841"
 ---
 # <a name="configure-general-properties-for-a-report-report-manager"></a>Konfigurieren allgemeiner Berichtseigenschaften (Berichts-Manager)
     
 ### <a name="to-configure-general-report-properties"></a>So konfigurieren Sie allgemeine Berichteigenschaften  
   
-1.  Starten Sie [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md).  
+1.  Starten Sie den [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md).  
   
 2.  Navigieren Sie im Berichts-Manager zur Seite **Inhalt** . Navigieren Sie zu dem Bericht, für den Sie allgemeine Eigenschaften konfigurieren möchten, und öffnen Sie ihn.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48112182"
   
 ## <a name="see-also"></a>Siehe auch  
  [Verschieben oder Löschen eines Elements &#40;Berichts-Manager&#41;](report-server/move-or-delete-an-item-report-manager.md)   
- [Inhalt der Seite &#40;Berichts-Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Inhalt &#40;Seite, Berichts-Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Allgemeine Eigenschaftenseite meldet &#40;Berichts-Manager&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)  
   

@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: a9bf043a-139a-4929-9a58-244815323df0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8871e43e88d042d4afc89a83dfd035a3709687e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 49a7568135604fc09d42c47d4226050b9a294096
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061948"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021471"
 ---
 # <a name="understanding-security-policies"></a>Grundlegendes zu Sicherheitsrichtlinien
   Jeder Code, der von einem Berichtsserver ausgeführt wird, muss Teil einer bestimmten Codezugriff-Sicherheitsrichtlinie sein. Diese Sicherheitsrichtlinien bestehen aus Codegruppen, die einem Satz von benannten Berechtigungen Beweise zuordnen. Häufig sind Codegruppen einem benannten Berechtigungssatz zugeordnet, der die zulässigen Berechtigungen für Code in dieser Gruppe angibt. Die Laufzeit bestimmt anhand von Beweisen, die von einem vertrauenswürdigen Host oder dem Ladeprogramm bereitgestellt werden, zu welchen Codegruppen der Code gehört und welche Berechtigungen ihm daher zuzuweisen sind. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verwendet diese von der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Common Language Runtime (CLR) definierte Sicherheitsrichtlinienarchitektur. In den nachfolgenden Abschnitten werden die verschiedenen Codetypen in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sowie die damit verknüpften Richtlinienregeln aufgeführt.  

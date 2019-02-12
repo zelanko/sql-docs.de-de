@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5703d15cccb49575d617568fd90f2719603a0a7a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 52a1bcb820d444e33ab034a09ee486592540e50c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391593"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020141"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>Öffnen von Integration Services-Projekten im Data Quality-Client
   [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] ermöglicht es Ihnen, im Batchmodus ein Bereinigungsprojekt auszuführen. Manchmal möchten Sie allerdings die Bereinigungsergebnisse vielleicht in einem Integration Services-Paket überprüfen, wie Sie auch die Bereinigungsergebnisse auf der Registerkarte **Ergebnisse verwalten und anzeigen** einer Bereinigungsaktivität in einem Data Quality-Projekt in DQS überprüfen können. DQS ermöglicht es Ihnen, Integration Services-Projekte nur in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] wie ein beliebiges anderes Data Quality-Projekt im Bildschirm **Projekt öffnen** zu öffnen und eine interaktive Bereinigung der Bereinigungsergebnisse in einem Integration Services-Projekt durchzuführen.  
@@ -48,9 +48,9 @@ ms.locfileid: "52391593"
   
 3.  Im Bildschirm **Projekt öffnen** können Sie ein Integration Services-Projekt auf eine der folgenden Weisen identifizieren:  
   
-    1.  **Projektname**: Integration Services-Projekten werden anhand der folgenden namensterminologie aufgelistet: "Package.DQS Cleansing_*\<Datum > **\<Zeit >*_ {GUID}." Bei jeder erfolgreichen Ausführung des gleichen Pakets in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]wird ein neues Projekt auf dem Bildschirm **Projekt öffnen** aufgelistet.  
+    1.  **Projektname:** Die Auflistung von Integration Services-Projekten erfolgt anhand der folgenden Namensterminologie: "Package.DQS Cleansing_*\<Datum > **\<Zeit >*_ {GUID}." Bei jeder erfolgreichen Ausführung des gleichen Pakets in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]wird ein neues Projekt auf dem Bildschirm **Projekt öffnen** aufgelistet.  
   
-    2.  **Projekttyp**: Integration Services-Projekte haben **SSIS** als Projekttyp in der **geöffneten Projekt** Bildschirm.  
+    2.  **Projekttyp:** Für Integration Services-Projekte wird **SSIS** auf dem Bildschirm **Projekt öffnen** als Projekttyp angezeigt.  
   
      Wählen Sie ein Projekt aus, und klicken Sie auf **Weiter**.  
   

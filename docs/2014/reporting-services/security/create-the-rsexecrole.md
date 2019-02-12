@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bfcf78ea493794527d22a0bc1b62051ede2871b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 13131359ddf4df667e18a674533954f95d8a6665
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171520"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023491"
 ---
 # <a name="create-the-rsexecrole"></a>Erstellen der Rolle RSExecRole
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verwendet eine vordefinierte Datenbankrolle namens `RSExecRole` um berichtsserverberechtigungen für die Berichtsserver-Datenbank zu gewähren. Die `RSExecRole` Rolle wird automatisch mit der Berichtsserver-Datenbank erstellt. Als Faustregel gilt, dass Sie sie nie ändern und ihr keine anderen Benutzer zuweisen sollten. Wenn Sie die Berichtsserver-Datenbank jedoch auf ein neues oder anderes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)] verlagern, müssen Sie die Rolle in den Systemdatenbanken Master und MSDB neu erstellen.  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verwendet eine vordefinierte Datenbankrolle namens `RSExecRole`, um Berichtsserverberechtigungen für die Berichtsserver-Datenbank zu gewähren. Die `RSExecRole` Rolle wird automatisch mit der Berichtsserver-Datenbank erstellt. Als Faustregel gilt, dass Sie sie nie ändern und ihr keine anderen Benutzer zuweisen sollten. Wenn Sie die Berichtsserver-Datenbank jedoch auf ein neues oder anderes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)]verlagern, müssen Sie die Rolle in den Systemdatenbanken Master und MSDB neu erstellen.  
   
  Mithilfe der folgenden Anweisungen führen Sie die folgenden Schritte aus:  
   
@@ -34,22 +34,22 @@ ms.locfileid: "48171520"
   
 ## <a name="before-you-start"></a>Vorbereitungen  
   
--   Sichern Sie die Verschlüsselungsschlüssel, damit Sie sie wiederherstellen können, nachdem die Datenbank verschoben wurde. Dies ist Schritt direkt wirkt sich nicht die Möglichkeit zum Erstellen und Bereitstellen der `RSExecRole`, aber Sie müssen eine Sicherung der Schlüssel verfügen, um Ihre Arbeit zu überprüfen. Weitere Informationen finden Sie unter [Back Up and Restore Reporting Services Encryption Keys](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
+-   Sichern Sie die Verschlüsselungsschlüssel, damit Sie sie wiederherstellen können, nachdem die Datenbank verschoben wurde. Dieser Schritt wirkt sich nicht direkt auf die Erstellung oder Bereitstellung der Rolle `RSExecRole` aus. Sie müssen jedoch über eine Sicherung der Schlüssel verfügen, um die durchgeführten Schritte verifizieren zu können. Weitere Informationen finden Sie unter [Back Up and Restore Reporting Services Encryption Keys](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   
--   Stellen Sie sicher, Sie sind angemeldet als ein Benutzerkonto an, dessen `sysadmin` Berechtigungen für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instanz.  
+-   Überzeugen Sie sich davon, dass Sie unter einem Benutzerkonto angemeldet sind, das über `sysadmin`-Berechtigungen für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz verfügt.  
   
--   Überprüfen Sie, ob der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent-Dienst installiert wurde und auf der Instanz der [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz ausgeführt wird, die Sie verwenden möchten.  
+-   Überprüfen Sie, ob der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Dienst installiert wurde und auf der Instanz der [!INCLUDE[ssDE](../../../includes/ssde-md.md)] -Instanz ausgeführt wird, die Sie verwenden möchten.  
   
 -   Fügen Sie die Datenbanken reportservertempdb und reportserver an. Zum Erstellen der Rolle ist das Anfügen der Datenbanken nicht erforderlich. Die Datenbanken müssen jedoch angefügt werden, damit Sie Ihre Implementierung testen können.  
   
- Die Anweisungen zum manuellen Erstellen der Rolle `RSExecRole` sollen im Kontext einer Migration der Berichtsserver-Installation verwendet werden. In diesem Thema wird auf wichtige Aufgaben, wie z. B. das Sichern und Verschieben der Berichtsserver-Datenbank, nicht eingegangen. Diese Aufgaben werden aber in der Dokumentation zur Datenbank-Engine beschrieben.  
+ Die Anweisungen zum manuellen Erstellen der Rolle `RSExecRole` sollen im Kontext einer Migration der Berichtsserver-Installation verwendet werden. In diesem Thema wird auf wichtige Aufgaben, wie z. B. das Sichern und Verschieben der Berichtsserver-Datenbank, nicht eingegangen. Diese Aufgaben werden aber in der Dokumentation zur Datenbank-Engine beschrieben.  
   
 ## <a name="create-rsexecrole-in-master"></a>Erstellen der Rolle 'RSExecRole' in 'Master'  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verwendet erweiterte gespeicherte Prozeduren für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Dienst geplante Vorgänge unterstützt. Die folgenden Schritte erklären, wie der Rolle `RSExecRole` Berechtigungen zum Ausführen der Prozeduren gewährt werden.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] wird durch den Einsatz von erweiterten gespeicherten Prozeduren sichergestellt, dass der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Dienst geplante Vorgänge unterstützt. Die folgenden Schritte erklären, wie der Rolle `RSExecRole` Berechtigungen zum Ausführen der Prozeduren gewährt werden.  
   
 #### <a name="to-create-rsexecrole-in-the-master-system-database-using-management-studio"></a>So erstellen Sie die Rolle 'RSExecRole' mit Management Studio in der Systemdatenbank 'Master'  
   
-1.  Starten Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] und Herstellen einer Verbindung mit der [!INCLUDE[ssDE](../../../includes/ssde-md.md)] her, die die Berichtsserver-Datenbank hostet.  
+1.  Starten Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , und stellen Sie eine Verbindung mit der [!INCLUDE[ssDE](../../../includes/ssde-md.md)] -Instanz her, die als Host für die Berichtsserver-Datenbank fungiert.  
   
 2.  Öffnen Sie **Datenbanken**  
   
@@ -229,9 +229,9 @@ ms.locfileid: "48171520"
 15. Klicken Sie auf den Link zum Öffnen des Berichts-Managers. Daraufhin sollten die Berichtsserver-Elemente aus der Berichtsserver-Datenbank angezeigt werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verschieben die Berichtsserver-Datenbanken auf andere Computer &#40;einheitlicher SSRS-Modus&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
- [Reporting Services-Konfigurations-Manager &#40;im einheitlichen Modus&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Erstellen eine Berichtsserver-Datenbank im einheitlichen Modus &#40;SSRS-Konfigurations-Manager&#41;](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [Verschlüsselungsschlüssel für SSRS: Sichern und Wiederherstellen von Verschlüsselungsschlüsseln](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+ [Verschieben von Berichtsserver-Datenbanken auf einen anderen Computer &#40;einheitlicher SSRS-Modus&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
+ [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus &#40;SSRS-Konfigurations-Manager&#41;](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+ [Back Up and Restore Reporting Services Encryption Keys](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   

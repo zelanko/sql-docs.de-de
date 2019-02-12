@@ -3,9 +3,8 @@ title: Sys.dm_pdw_query_stats_xe (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
-ms.prod_service: pdw
-ms.reviewer: ''
 ms.technology: system-objects
+ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -14,12 +13,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a1dedb33e198fba5e9f51352c184fb1a3e9917f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d4ade9fe6cb13ae26823a399678e994edc69a3f8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828238"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020661"
 ---
 # <a name="sysdmpdwquerystatsxe-transact-sql"></a>sys.dm_pdw_query_stats_xe (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47828238"
 |cpu|**int**|||  
 |reads|**int**|Die Anzahl der logischen Lesevorgänge, die seit dem Start des Ereignisses.||  
 |writes|**int**|Anzahl logischer Schreibvorgänge seit dem Start des Ereignisses.||  
-|"sql_text"|**nvarchar(4000)**|||  
+|sql_text|**nvarchar(4000)**|||  
 |client_app_name|**nvarchar(255)**|||  
 |tsql_stack|**nvarchar(255)**|||  
 |pdw_node_id|**int**|Knoten, auf denen diese Xevent-Instanz ausgeführt wird.|  

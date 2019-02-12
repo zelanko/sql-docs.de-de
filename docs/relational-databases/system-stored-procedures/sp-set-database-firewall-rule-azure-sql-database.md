@@ -2,10 +2,9 @@
 title: Sp_set_database_firewall_rule (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/04/2017
-ms.prod: ''
+ms.service: sql-database
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sp_set_database_firewall_rule
@@ -22,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 8530d8a2d19a5dd9f50fb437626202565435222a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93acd6ad9e904e1e3db5dfe7e244b459e7853d70
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800678"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025461"
 ---
 # <a name="spsetdatabasefirewallrule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -48,11 +47,11 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
  **[@name**  =] [N]'*Namen*"  
  Der verwendete Name, um die Firewalleinstellung auf Datenbankebene zu beschreiben und von anderen zu unterscheiden. *Namen* ist **vom Datentyp nvarchar(128)** hat keinen Standardwert. Der Unicode-Bezeichner `N` ist optional für [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
   
- **[@start_ip_address**  =] '*Start_ip_address*"  
- Die niedrigste IP-Adresse im Bereich der Firewalleinstellung auf Datenbankebene. IP-Adressen, die gleich oder größer dieser IP-Adresse sind, können versuchen, eine Verbindung mit der [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Instanz herzustellen. Die niedrigste mögliche IP-Adresse ist `0.0.0.0`. *Start_ip_address* ist **varchar(50)-Spalte** hat keinen Standardwert.  
+ **[@start_ip_address** =] '*start_ip_address*'  
+ Die niedrigste IP-Adresse im Bereich der Firewalleinstellung auf Datenbankebene. IP-Adressen, die gleich oder größer dieser IP-Adresse sind, können versuchen, eine Verbindung mit der [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Instanz herzustellen. Die niedrigste mögliche IP-Adresse ist `0.0.0.0`. *Start_ip_address* ist **varchar(50)-Spalte** hat keinen Standardwert.  
   
  [**@end_ip_address** =] '*End_ip_address*"  
- Die höchste IP-Adresse im Bereich der Firewalleinstellung auf Datenbankebene. IP-Adressen gleich oder kleiner als dieser versuchen kann, für die Verbindung der [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Instanz. Die höchste mögliche IP-Adresse ist `255.255.255.255`. *End_ip_address* ist **varchar(50)-Spalte** hat keinen Standardwert.  
+ Die höchste IP-Adresse im Bereich der Firewalleinstellung auf Datenbankebene. IP-Adressen, die kleiner oder gleich dieser IP-Adresse sind, können versuchen, eine Verbindung mit der [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Instanz herzustellen. Die höchste mögliche IP-Adresse ist `255.255.255.255`. *End_ip_address* ist **varchar(50)-Spalte** hat keinen Standardwert.  
   
  In der folgende Tabelle veranschaulicht die unterstützten Argumente und Optionen in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -76,7 +75,7 @@ EXECUTE sp_set_database_firewall_rule N'Allow Azure', '0.0.0.0', '0.0.0.0';
   
 ```  
   
- Der folgende Code erstellt eine Firewall auf Datenbankebene, die Einstellung `Example DB Setting 1` nur die IP-Adresse `0.0.0.4`. Anschließend wird die `sp_set_database firewall_rule` gespeicherte Prozedur erneut aufgerufen, um die End-IP-Adresse zu aktualisieren `0.0.0.6`, Firewall-Einstellungen. Erstellt einen Bereich der IP-Adressen ermöglichen `0.0.0.4`, `0.0.0.5`, und `0.0.0.6` Zugriff auf die Datenbank.
+ Der folgende Code erstellt eine Firewalleinstellung auf Datenbankebene namens `Example DB Setting 1` nur für die IP-Adresse `0.0.0.4`. Anschließend wird die `sp_set_database firewall_rule` gespeicherte Prozedur erneut aufgerufen, um die End-IP-Adresse zu aktualisieren `0.0.0.6`, Firewall-Einstellungen. Erstellt einen Bereich der IP-Adressen ermöglichen `0.0.0.4`, `0.0.0.5`, und `0.0.0.6` Zugriff auf die Datenbank.
   
 ```  
 -- Create database-level firewall setting for only IP 0.0.0.4  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8b9724139d6a89e345d1a8dd0c967f51afe5f8c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9fed65b504d8e76cdd6c827126ab752950ae821c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183480"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025371"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>Gleichzeitiges Installieren von Reporting Services und Internetinformationsdiensten (einheitlicher SSRS-Modus)
   Sie können [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) und die Internetinformationsdienste (IIS) auf dem gleichen Computer installieren und ausführen. Je nach IIS-Version treten bestimmte Interoperabilitätsprobleme auf.  
@@ -50,7 +50,7 @@ ms.locfileid: "48183480"
 |http://+:80|Empfängt für alle Anwendungsendpunkte, die **Alle zugewiesenen**zugeordnet sind, Anforderungen, die nicht bereits von anderen Anwendungen empfangen wurden.|  
 |http://*:80|Empfängt für Anwendungsendpunkte, die **Alle nicht zugewiesenen**zugeordnet sind, Anforderungen, die nicht bereits von anderen Anwendungen empfangen wurden.|  
   
- Ein Zeichen für einen Portkonflikt ist die folgende Fehlermeldung: 'System.IO.FileLoadException: Der Prozess kann nicht auf die Datei zugreifen, da sie von einem anderen Prozess verwendet wird. (Ausnahme von HRESULT: 0x80070020).  
+ Ein Hinweis auf ein Portkonflikt ist, dass Sie die folgende Fehlermeldung angezeigt werden: 'System.IO.FileLoadException: Der Prozess kann nicht auf die Datei zugreifen, da sie von einem anderen Prozess verwendet wird. (Ausnahme von HRESULT: 0x80070020).'  
   
 ## <a name="url-reservations-for-iis-60-70-80-85-with-includesssql14includessssql14-mdmd-reporting-services"></a>URL-Reservierungen für IIS 6.0, 7.0, 8.0, 8.5 mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services  
  Anhand der im vorherigen Abschnitt beschriebenen Rangfolgeregeln wird deutlich, wie die für Reporting Services und IIS definierten URL-Reservierungen zur Interoperabilität beitragen. Reporting Services empfängt Anforderungen, die die Namen der virtuellen Verzeichnisse seiner Anwendungen explizit angeben; IIS empfängt alle verbleibenden Anforderungen, die dann an Anwendungen umgeleitet werden können, die innerhalb des IIS-Verarbeitungsmodells ausgeführt werden.  
@@ -74,13 +74,13 @@ ms.locfileid: "48183480"
   
  Um sicherzustellen, dass alle Anwendungen Anforderungen empfangen, sollten Sie diesen Richtlinien folgen:  
   
--   In Reporting Services-Installationen sollten Sie Namen für virtuelle Verzeichnisse angeben, die nicht bereits von einer IIS-Website an dem Port verwendet werden, den auch Reporting Services verwendet. Wenn ein Konflikt auftritt, müssen Sie Reporting Services im Dateimodus installieren (über die Option Server installieren, jedoch nicht konfigurieren im Installations-Assistenten), sodass Sie die virtuellen Verzeichnisse nach dem Setup konfigurieren können. Ein Zeichen für einen Konflikt in Ihrer Konfiguration ist die folgende Fehlermeldung: 'System.IO.FileLoadException: Der Prozess kann nicht auf die Datei zugreifen, da sie von einem anderen Prozess verwendet wird. (Ausnahme von HRESULT: 0x80070020).  
+-   In Reporting Services-Installationen sollten Sie Namen für virtuelle Verzeichnisse angeben, die nicht bereits von einer IIS-Website an dem Port verwendet werden, den auch Reporting Services verwendet. Wenn ein Konflikt auftritt, müssen Sie Reporting Services im Dateimodus installieren (über die Option Server installieren, jedoch nicht konfigurieren im Installations-Assistenten), sodass Sie die virtuellen Verzeichnisse nach dem Setup konfigurieren können. Ein Hinweis darauf, dass Ihre Konfiguration ein Konflikt vorliegt, ist, dass Sie die Fehlermeldung angezeigt werden: System.IO.FileLoadException: Der Prozess kann nicht auf die Datei zugreifen, da sie von einem anderen Prozess verwendet wird. (Ausnahme von HRESULT: 0x80070020).  
   
 -   Übernehmen Sie für Installationen, die Sie manuell konfigurieren, die Standardnamenskonventionen in den URLs. Wenn Sie [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] als benannte Instanz installieren, müssen Sie beim Erstellen eines virtuellen Verzeichnisses den Instanznamen angeben.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren von Berichtsserver-URLs &#40;SSRS-Konfigurations-Manager&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
  [Konfigurieren einer URL &#40;SSRS-Konfigurations-Manager&#41;](configure-a-url-ssrs-configuration-manager.md)   
- [Installieren von Reporting Services-Berichtsserver im einheitlichen Modus](install-reporting-services-native-mode-report-server.md)  
+ [Installieren des Reporting Services-Berichtsservers im einheitlichen Modus](install-reporting-services-native-mode-report-server.md)  
   
   

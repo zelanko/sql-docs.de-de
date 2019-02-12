@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5db74e0b-8be8-4b47-b386-faab56dffa9b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 77a4a9b2749eefbe43cac04351fd1d2bd2c9300e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cfc294f1ae01241dbcabfff954aa42c242f6aad7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138737"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018232"
 ---
 # <a name="position-labels-in-a-chart-report-builder-and-ssrs"></a>Positionieren von Bezeichnungen in einem Diagramm (Berichts-Generator und SSRS)
   Da jeder Diagrammtyp über eine andere Form verfügt, werden Datenpunktbezeichnungen so platziert, dass sie sich im Diagramm nicht überlappen. Die Standardposition der Bezeichnungen ist vom Diagrammtyp abhängig:  
@@ -63,7 +63,7 @@ ms.locfileid: "48138737"
 6.  Wählen Sie bei Trichterdiagrammen einen Wert für die Eigenschaft FunnelLabelStyle aus. Wählen Sie bei Pyramidendiagrammen einen Wert für die Eigenschaft PyramidLabelStyle aus.  
   
     > [!NOTE]  
-    >  Wenn diese Eigenschaft auf einen Wert festgelegt ist `OutsideInColumn`, werden die Bezeichnungen in einer vertikalen Spalte gezeichnet. Die Position der Spalte kann nicht geändert werden.  
+    >  Wird diese Eigenschaft auf den Wert `OutsideInColumn` festgelegt, werden die Bezeichnungen in einer vertikalen Spalte gezeichnet. Die Position der Spalte kann nicht geändert werden.  
   
 ### <a name="to-change-the-position-of-point-labels-in-a-bar-chart"></a>So ändern Sie die Position von Punktbezeichnungen in einem Balkendiagramm  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48138737"
   
 6.  Wählen Sie einen Wert für die Eigenschaft BarLabelStyle aus.  
   
- Wenn die balkenbezeichnungsart nastaven NA hodnotu `Outside`, die Bezeichnungen werden außerhalb des Balkens, platziert werden, solange sie in den Diagrammbereich passen. Falls die Bezeichnung nicht außerhalb des Balkens positioniert werden kann, sondern im Diagrammbereich platziert werden muss, wird sie im Balken an der dem Ende des Balkens am nächsten gelegenen Stelle eingefügt.  
+ Wenn Sie für die Balkenbezeichnungsart den Wert `Outside` festlegen, werden die Bezeichnungen außerhalb des Balkens platziert, sofern sie in den Diagrammbereich passen. Falls die Bezeichnung nicht außerhalb des Balkens positioniert werden kann, sondern im Diagrammbereich platziert werden muss, wird sie im Balken an der dem Ende des Balkens am nächsten gelegenen Stelle eingefügt.  
   
 ### <a name="to-change-the-position-of-point-labels-in-an-area-column-line-or-scatter-chart"></a>So ändern Sie die Position von Punktbezeichnungen in einem Flächen-, Säulen-, Linien- oder Punktdiagramm  
   

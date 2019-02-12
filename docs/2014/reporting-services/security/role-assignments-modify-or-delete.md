@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6a562c7b9a888f6bfbb071e3068a3c4cf661c3ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 19f87ffa52dcc8cc1434afa7e6519e93bd580cb5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215530"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026891"
 ---
 # <a name="modify-or-delete-a-role-assignment-report-manager"></a>Ändern oder Löschen einer Rollenzuweisung (Berichts-Manager)
   Mit einer Rollenzuweisung werden eine Gruppe oder ein Benutzerkonto einer vordefinierten Rollendefinition zugewiesen, die ausführbare Aufgaben beinhaltet. Hiermit werden die Vorgangstypen festgelegt, die ein Benutzer für einen Ordner, einen Bericht, ein Modell oder einen anderen Inhaltstyp ausführen kann. Verwenden Sie den Berichts-Manager zum Erstellen, Löschen oder Ändern von Rollenzuweisungen. Nach der Erstellung einer Rollenzuweisung für einen bestimmten Benutzer oder eine bestimmte Gruppe können Sie diese später durch Auswahl einer anderen Rolle ändern. Möchten Sie Berechtigungen für einen Berichtsserver widerrufen, können Sie die Rollenzuweisung vom Berichtsserver löschen.  
@@ -37,7 +37,7 @@ ms.locfileid: "48215530"
   
 ### <a name="to-modify-or-delete-a-system-role-assignment"></a>So löschen oder ändern Sie eine Systemrollenzuweisung  
   
-1.  Starten Sie [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md).  
+1.  Starten Sie den [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md).  
   
 2.  Klicken Sie auf **Siteeinstellungen**.  
   
@@ -64,9 +64,9 @@ ms.locfileid: "48215530"
 6.  Aktivieren Sie zum Löschen einer Rollenzuweisung das Kontrollkästchen neben dem Gruppen- oder Benutzernamen, und klicken Sie dann auf **Löschen**.  
   
 ## <a name="see-also"></a>Siehe auch  
- (erstellen-und-Verwaltung-Rolle-assignments.md)   
+ (create-and-manage-role-assignments.md)   
  [Rollenzuweisungen](role-assignments.md)   
  [Site Settings Page (Report Manager) (Seite „Siteeinstellungen“ (Berichts-Manager))](../site-settings-page-report-manager.md)   
- [New System Role Assignments: Edit System Role Assignments Page (Report Manager) (Neue Systemrollenzuweisungen: Seite „Systemrollenzuweisungen bearbeiten“ (Berichts-Manager))](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
+ [Neue Systemrollenzuweisung: Bearbeiten System Role Assignments Page &#40;Berichts-Manager&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
   
   

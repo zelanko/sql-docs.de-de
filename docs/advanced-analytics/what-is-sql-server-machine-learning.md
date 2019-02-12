@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 59ec5bbacf23d0f86f88a17a68faaf27162ebdcb
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 283f39efa34721aea7613ac1a9cba115dc3311a8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596791"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032951"
 ---
 # <a name="machine-learning-services-r-python-in-sql-server-2017"></a>Machine Learning-Dienste (R, Python), in SQLServer 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +22,7 @@ SQL Server 2017-Machine Learning Services ist ein Add-on für eine Datenbank-Eng
 
 Wenn Sie zuvor [SQL Server 2016 R Services](r/sql-server-r-services.md), Machine Learning Services in SQL Server 2017 ist die nächste Generation von Unterstützung für R, mit aktualisierten Versionen von Basis-R "," RevoScaleR-MicrosoftML lautet und anderen Bibliotheken, die in 2016 eingeführt wurde. 
 
-In Azure SQL-Datenbank [Machine Learning Services (mit R)](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r) befindet sich derzeit in der öffentlichen Vorschau.
+In Azure SQL-Datenbank [Machine Learning Services (mit R)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview) befindet sich derzeit in der öffentlichen Vorschau.
 
 Der entscheidenden Wertbeiträge von Machine Learning Services ist die Potenz Enterprise R und Python-Pakete, um erweiterte Analysen und Berechnungen und Verarbeitung an, in denen die Daten befinden, bieten die Möglichkeit zu übermitteln und Sie müssen Daten in das Netzwerk.
 
@@ -98,7 +98,7 @@ In der Vergangenheit mussten Datenanalysten, die mithilfe von R Probleme mit der
 
 + **RevoScaleR**: Dieses R-Paket enthält die Implementierung einiger der beliebtesten R-Funktionen, die neu gestaltet, um die Parallelität und Skalierung bereitzustellen. Das Paket enthält auch Funktionen, die weiter erhöhen, Leistung und Skalierbarkeit durch pushen von Berechnungen auf dem SQL Server-Computer, der in der Regel wesentlich mehr Arbeitsspeicher und rechenleistung verfügt.
 
-+ **die Revoscalepy**. Diese Python-Bibliothek implementiert der beliebtesten Funktionen in RevoScaleR, z. B. remotecomputekontexte und viele Algorithmen, die Unterstützung verteilter Verarbeitung.
++ **revoscalepy**. Diese Python-Bibliothek implementiert der beliebtesten Funktionen in RevoScaleR, z. B. remotecomputekontexte und viele Algorithmen, die Unterstützung verteilter Verarbeitung.
 
 Weitere Informationen zur Leistung finden Sie in diesem [Fallstudie zur Leistung](r/performance-case-study-r-services.md) und [R und Data-Optimierung](r/r-and-data-optimization-r-services.md).
 

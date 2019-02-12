@@ -12,19 +12,19 @@ f1_keywords:
 - "10184"
 ms.assetid: db718f8f-f185-422f-871c-96f0749e5893
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 4b939fe20f4bcd280c00dc6279ebb1c8ba3a1f45
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: c6a9c5445e5ed0371922a7c5aad929519ed4e0d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082246"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022781"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>Legendeneigenschaften (Dialogfeld), Allgemein (Berichts-Generator und SSRS)
   Mithilfe des Dialogfelds **Legende** können Sie die Darstellung und das Layout der Legende im Diagramm definieren. Weitere Informationen finden Sie unter [Formatieren der Legende in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](report-design/chart-legend-formatting-report-builder.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name**  
  Geben Sie einen Namen für die Legende ein.  
   

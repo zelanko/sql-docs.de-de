@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 71ef931fc857841365919073cb470c725c3714e0
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 951ff99f6c1e234a0c2861b12ae8f54815f1e37e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030699"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019921"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>Zugriff auf Daten für DQS-Vorgänge
   Sie haben die folgenden Möglichkeiten, um die Quelldaten für [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS)-Vorgänge zu verwenden und die verarbeiteten Daten zu exportieren:  
@@ -40,13 +40,13 @@ ms.locfileid: "51030699"
   
 4.  Klicken Sie im Dialogfeld **Anmeldungseigenschaften** auf die Seite **Benutzerzuordnung** im linken Bereich.  
   
-5.  Aktivieren Sie im rechten Bereich in der Spalte **Zuordnen** das Kontrollkästchen für die **DQS_STAGING_DATA** -Datenbank, und wählen Sie anschließend im Bereich **Mitgliedschaft in Datenbankrolle für: DQS_STAGING_DATA** die folgenden Rollen aus:  
+5.  Wählen Sie im rechten Bereich das Kontrollkästchen unter der **Zuordnung** Spalte für die **DQS_STAGING_DATA** Datenbank, und wählen Sie dann die folgenden Rollen in der **Mitgliedschaft in Datenbankrolle für: DQS_STAGING_DATA** Bereich:  
   
     -   **db_datareader**: Lesen von Daten aus Tabellen/Sichten.  
   
-    -   **db_datawriter**: Hinzufügen, Löschen oder Ändern von Daten in Tabellen.  
+    -   **db_datawriter**: Hinzufügen, löschen oder Ändern von Daten in Tabellen.  
   
-    -   **db_ddladmin**: Erstellen, Ändern oder Löschen von Tabellen/Sichten.  
+    -   **db_ddladmin**: Erstellen, ändern oder Löschen von Tabellen/Sichten.  
   
 6.  Klicken Sie im Dialogfeld **Anmeldungseigenschaften** auf **OK** , um die Änderungen zu übernehmen.  
   

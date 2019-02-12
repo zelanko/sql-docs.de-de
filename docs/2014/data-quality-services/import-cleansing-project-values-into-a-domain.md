@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.importprojectvalues.f1
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4239776908aaca1f6f925baa6ce412dcc71bc343
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 07992b9a5150e6b81d869aa21831e019c32ae6e4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032357"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020011"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Importieren von Bereinigungsprojektwerten in eine Domäne
   In [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) können Sie während des Bereinigungsprozesses in einem Datenqualitätsbereinigungsprojekt oder einem Integration Services-Paket mit der DQS-Bereinigungskomponente erfasstes Datenqualitätswissen in eine Domäne importieren. Dadurch wird sichergestellt, dass vertrauenswürdiges Wissen nicht verloren geht und dass die Wissensdatenbank ständig verbessert wird.  
@@ -71,7 +71,7 @@ ms.locfileid: "51032357"
     > [!NOTE]  
     >  Weitere Informationen zum Arbeiten mit Werten auf der Registerkarte **Domänenwerte** finden Sie unter [Change Domain Values](../../2014/data-quality-services/change-domain-values.md).  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Importieren von Projektwerten in eine Domäne  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Importieren von Projektwerten in eine Domäne  
  Nachdem Sie während des Bereinigungsprozesses gesammeltes Data Quality-Wissen in eine Domäne importiert haben, können Sie andere Domänenverwaltungsaufgaben für die Domäne und die Werte ausführen. Weitere Informationen finden Sie unter [Verwalten einer Domäne](../../2014/data-quality-services/managing-a-domain.md).  
   
 ##  <a name="Values"></a> Importierte Werte  

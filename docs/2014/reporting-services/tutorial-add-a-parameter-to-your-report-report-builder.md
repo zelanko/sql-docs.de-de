@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Hinzufügen eines Parameters zum Bericht (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Lernprogramm: Hinzufügen eines Parameters zum Bericht (Berichts-Generator) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0ec3f74d9237d917fd4b5d94e029cb5a15ea6e59
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cf5f7a4bee10b58f644d98fe03ada0a9e8d0faa3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190300"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018881"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines Parameters zum Bericht (Berichts-Generator)
   Fügen Sie dem Bericht einen Parameter hinzu, um Benutzern das Filtern von Berichtsdaten aus der Datenquelle oder im Bericht zu ermöglichen. Berichtsparameter werden automatisch für jeden Abfrageparameter erstellt, den Sie in eine Datasetabfrage einschließen. Der Parameterdatentyp bestimmt, wie der Parameter auf der Symbolleiste der Berichtsansicht angezeigt wird.  
   
- ![Rs_tut_Parameter](../../2014/tutorials/media/rs-tut-parameter.gif "Rs_tut_Parameter")  
+ ![rs_tut_Parameter](../../2014/tutorials/media/rs-tut-parameter.gif "rs_tut_Parameter")  
   
 ##  <a name="BackToTop"></a> Lernziele  
  In diesem Lernprogramm lernen Sie Folgendes:  
@@ -55,7 +55,7 @@ ms.locfileid: "48190300"
 10. [Speichern des Berichts](#Save)  
   
 > [!NOTE]  
->  In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Im ersten Tutorial dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Auswählen einer Datenquelle sowie zum Erstellen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Schrittweise Anweisungen zum Navigieren zu einem Berichtsserver Auswählen einer Datenquelle, und erstellen Sie ein Dataset, finden Sie im erste Lernprogramm dieser Reihe: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Ungefähre Dauer dieses Lernprogramms: 25 Minuten.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "48190300"
   
      Diese Abfrage enthält keine Abfrageparameter. Abfrageparameter werden später in diesem Lernprogramm hinzugefügt.  
   
-11. Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** (**!**). Das Resultset enthält 11 Datenzeilen, in denen die Menge verkaufter Artikel in jeder Unterkategorie für vier Geschäfte angezeigt wird, und die folgenden Spalten: "StoreID", "Subcategory" und "Quantity".  
+11. Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** (**!**). Das Resultset enthält 11 Datenzeilen, die die Menge verkaufter Artikel in jeder Unterkategorie für vier Geschäfte angezeigt, und enthält die folgenden Spalten: StoreID, Unterkategorie und Menge.  
   
 12. Klicken Sie auf **Weiter**.  
   
@@ -238,7 +238,7 @@ ms.locfileid: "48190300"
   
      Im Berichtsdatenbereich werden die Felder „StoreID“ und „StoreName“ unter dem Datasetknoten **Geschäfte** angezeigt.  
   
-##  <a name="AvailableValues"></a> 4 b: Angeben verfügbarer Werte zum Erstellen einer Dropdownliste von Werten  
+##  <a name="AvailableValues"></a> 4b. Angeben verfügbarer Werte zum Erstellen einer Dropdownliste von Werten  
  Nachdem Sie ein Dataset erstellt haben, um verfügbare Werte bereitzustellen, müssen Sie die Berichtseigenschaften ändern, um das Dataset und das Feld anzugeben, aus denen die Dropdownliste gültiger Werte auf der Berichts-Viewer-Symbolleiste aufgefüllt wird.  
   
 #### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>So stellen Sie verfügbare Werte für einen Parameter aus einem Dataset bereit  
@@ -269,7 +269,7 @@ ms.locfileid: "48190300"
   
  Im Bericht werden die verkauften Mengen für Zubehör, Camcorder und digitale SLR-Kameras für die Geschäfts-ID **200**angezeigt.  
   
-##  <a name="DefaultValues"></a> 4 Kerne. Angeben von Standardwerten zur automatischen Ausführung des Berichts  
+##  <a name="DefaultValues"></a> 4c. Angeben von Standardwerten zur automatischen Ausführung des Berichts  
  Sie können einen Standardwert für jeden Berichtsparameter angeben, damit der Bericht automatisch ausgeführt wird.  
   
 #### <a name="to-specify-a-default-value-from-a-dataset"></a>So geben Sie einen Standardwert aus einem Dataset an  
@@ -306,7 +306,7 @@ ms.locfileid: "48190300"
   
  Für *@StoreID*, im Berichts-Viewer zeigt den Wert "Contoso Catalog Store". Dies ist der Anzeigename für Geschäfts-ID **200**. Im Bericht werden die verkauften Mengen für Zubehör, Camcorder und digitale SLR-Kameras für die Geschäfts-ID **200**angezeigt.  
   
-##  <a name="NameValue"></a> 4D. Suchen nach Werten in einem Dataset mit Name-Wert-Paaren  
+##  <a name="NameValue"></a> 4d. Suchen nach Werten in einem Dataset mit Name-Wert-Paaren  
  Ein Dataset kann sowohl den Bezeichner als auch das entsprechende Namensfeld enthalten. Wenn Sie nur einen Bezeichner haben, können Sie in einem von Ihnen erstellten Dataset, das Name-Wert-Paare enthält, nach dem entsprechenden Namen suchen.  
   
 #### <a name="to-look-up-a-value-from-a-dataset"></a>So suchen Sie nach einem Wert in einem Dataset  
@@ -327,7 +327,7 @@ ms.locfileid: "48190300"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     Der Spaltenheader für das Geschäft enthält den Anzeigetext für einen komplexen Ausdruck:  **< \<Expr >>**.  
+     Der Spaltenheader für das Geschäft enthält den Anzeigetext für einen komplexen Ausdruck: **<\<Expr>>**.  
   
 8.  Zeigen Sie eine Vorschau des Berichts an.  
   
@@ -422,7 +422,7 @@ ms.locfileid: "48190300"
   
 14. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-15. Klicken Sie vor dem soeben erstellten Ausdruck in das Textfeld, und geben Sie dann Folgendes ein: "Ausgewählte Parameterwerte:".  
+15. Klicken Sie vor dem soeben erstellten Ausdruck in das Textfeld, und geben Sie dann Folgendes ein: Ausgewählte Parameterwerte:.  
   
 16. Zeigen Sie eine Vorschau des Berichts an.  
   

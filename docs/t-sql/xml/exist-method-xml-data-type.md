@@ -3,7 +3,6 @@ title: exist()-Methode (xml Data Type) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - exist() method
 - exist method
 ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83b029554b8a85f11c477063a818bd90a4019740
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 97b13091d9b43a371a629d4f3d929e66ffffd368
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698548"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026640"
 ---
 # <a name="exist-method-xml-data-type"></a>exist()-Methode (XML-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -113,7 +112,7 @@ SELECT @f;
 ```  
   
 ### <a name="example-specifying-the-exist-method-against-an-xml-type-column"></a>Beispiel: Angeben der exist()-Methode für eine Spalte vom Typ xml  
- Die folgende Abfrage ruft Produktmodell-IDs ab, deren Katalogbeschreibungen nicht das Spezifikationselement <`Specifications`> enthalten:  
+ Die folgende Abfrage ruft Produktmodell-IDs ab, deren Katalogbeschreibungen nicht das Spezifikationselement <`Specifications`> umfassen:  
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
@@ -154,7 +153,7 @@ WHERE CatalogDescription.exist('
     ) = 1;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen von Namespaces zu Abfragen mit WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Erstellen von Instanzen der XML-Daten](../../relational-databases/xml/create-instances-of-xml-data.md)   

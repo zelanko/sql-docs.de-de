@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d30e91edb402af3797bf88aa67492032206159cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 21b24350f3ab377170a51333716b710b4a3f44ad
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064950"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020131"
 ---
 # <a name="enable-and-disable-my-reports"></a>Aktivieren und Deaktivieren von "Meine Berichte"
   Die Funktion Meine Berichte ordnet persönlichen Speicherbereich in der Berichtsserver-Datenbank zu, damit Benutzer ihre eigenen Berichte in einem privaten Ordner speichern können. Als Berichtsserveradministrator können Sie diese Funktion aktivieren bzw. deaktivieren oder dessen Funktionsweise ändern, indem Sie die Sicherheitseinstellungen bearbeiten, die steuern, welche Funktionen die Benutzer mit diesem Arbeitsbereich ausführen können.  

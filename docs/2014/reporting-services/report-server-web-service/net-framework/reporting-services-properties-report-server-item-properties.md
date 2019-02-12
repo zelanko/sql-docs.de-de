@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b81c8eb53247caa2a0f0a4d931df10f9f43cd602
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 368ee35385a7147c849a4800cf9419b19986545d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221280"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020501"
 ---
 # <a name="report-server-item-properties"></a>Eigenschaften der Berichtsserverelemente
   Elementeigenschaften sind Eigenschaften, die für Elemente in der Berichtsserver-Datenbank spezifisch sind. Zu diesen Elementen gehören Berichte, verlinkte Berichte, Ordner, Ressourcen, Modelle und Datenquellen.  
@@ -60,7 +60,7 @@ ms.locfileid: "48221280"
 |Eigenschaft|Description|  
 |--------------|-----------------|  
 |**Sprache**|Die in einem Bericht verwendete Sprache. Der Wert ist ein Sprachcode, der in der IETF-Spezifikation (Internet Engineering Task Force) RFC1766 definiert ist. Der erste Teil ist eine Bezeichnung aus zwei Zeichen für die Basissprache. Der zweite Teil ist durch einen Bindestrich getrennt und legt die Variation oder den Dialekt der Sprache fest. Wenn der Wert nicht im `Style`-Element angegeben ist, das zum `Body`-Element in der Berichtsdefinition gehört, entspricht der Standardwert der Sprache des Berichtsservers.|  
-|`ReportProcessingTimeout`|Timeout (in Sekunden) für einen einzelnen Bericht. Wenn dieser Wert festgelegt ist, versucht der Berichtsserver, die Verarbeitung eines Berichts zu beenden, sobald der angegebene Zeitraum überschritten wird. Gültige Werte sind `-1` über `2`,`147`,`483`,`647`. Wenn der Wert `-1` ist, findet bei Berichten während der Verarbeitung kein Timeout statt. Wenn der Wert `null` ist, wird für das Timeout bei der Berichtsverarbeitung der Wert der Systemeigenschaft `ReportProcessingTimeout` verwendet. Der Standardwert lautet `null`. Weitere Informationen finden Sie unter [Berichtsserver-Systemeigenschaften](reporting-services-properties-report-server-system-properties.md).|  
+|`ReportProcessingTimeout`|Timeout (in Sekunden) für einen einzelnen Bericht. Wenn dieser Wert festgelegt ist, versucht der Berichtsserver, die Verarbeitung eines Berichts zu beenden, sobald der angegebene Zeitraum überschritten wird. Gültige Werte sind `-1` und `2`,`147`,`483`,`647`. Wenn der Wert `-1` ist, findet bei Berichten während der Verarbeitung kein Timeout statt. Wenn der Wert `null` ist, wird für das Timeout bei der Berichtsverarbeitung der Wert der Systemeigenschaft `ReportProcessingTimeout` verwendet. Der Standardwert ist `null`. Weitere Informationen finden Sie unter [Berichtsserver-Systemeigenschaften](reporting-services-properties-report-server-system-properties.md).|  
 |**ExecutionDate**|Zeitpunkt (Datum und Uhrzeit), zu dem zuletzt eine Berichtsmomentaufnahme für einen Bericht erstellt wurde.|  
 |**CanRunUnattended**|Ein Wert, der angibt, ob ein Bericht unbeaufsichtigt nach einem Zeitplan ausgeführt werden kann. Ist diese Eigenschaft auf `true` eingestellt, sind die Standardwerte für die Berichtsparameter definiert, und die Anmeldeinformationen für die Datenquelle werden mit dem Bericht gespeichert, oder die Option zum Abrufen der Anmeldeinformationen ist auf `None` eingestellt. Ist diese Eigenschaft auf `false` eingestellt, sind die Voraussetzungen zum unbeaufsichtigten Ausführen eines Berichts nicht erfüllt. Weitere Informationen finden Sie unter [Konfigurieren des Kontos für die unbeaufsichtigte Ausführung &#40;SSRS-Konfigurations-Manager&#41;](../../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
 |**HasParameterDefaultValues**|Ein Wert, der angibt, ob im Bericht gültige Standardwerte für alle Berichtsparameter festgelegt wurden. Der Wert lautet auch `true`, wenn ein Bericht keine Berichtsparameter hat. Wenn diese Eigenschaft `false` lautet, verfügen ein oder mehrere Berichtsparameter über keinen gültigen Standardwert.|  

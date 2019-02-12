@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dqs.dm.rules.f1
 - sql12.dqs.dm.testdomainrule.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 809ac3ce20bbda443840c807ac05fd6ade7cc225
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 750773c728b2cbe026aac404f90a13928802a4bc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365112"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022951"
 ---
 # <a name="create-a-domain-rule"></a>Erstellen einer Domänenregel
   In diesem Thema wird beschrieben, wie Sie eine Domänenregel in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) erstellen. Eine Domänenregel ist eine Bedingung, mit der Domänenwerte validiert, korrigiert und standardisiert werden. Eine Domänenregel muss über eine Domäne hinweg wahr sein, damit Domänenwerte als genau betrachtet werden und den Geschäftsanforderungen entsprechen. Domänenregeln können Überprüfungsregeln enthalten, die für die Überprüfung von Domänenwerten, aber nicht für die Korrektur von Daten in Data Quality-Projekten verwendet werden. Regeln umfassen auch Standardisierungsregeln, die auf gültige Daten angewendet und in der Datenkorrektur verwendet werden.  
@@ -97,7 +97,7 @@ ms.locfileid: "53365112"
   
 3.  Klicken Sie auf **Fertig stellen** , um die Domänenverwaltungsaktivität abzuschließen, wie in [Beenden der Domänenverwaltungsaktivität](../../2014/data-quality-services/end-the-domain-management-activity.md)beschrieben.  
   
-##  <a name="FollowUp"></a> Zur Nachverfolgung: Nach dem Erstellen einer Domänenregel  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Erstellen einer Domänenregel  
  Nachdem Sie eine Domänenregel erstellt haben, können Sie andere Domänenverwaltungsaufgaben in der Domäne ausführen. Sie können die Wissensermittlung durchführen, um der Domäne Wissen hinzuzufügen, oder Sie können der Domäne eine Abgleichsrichtlinie hinzufügen. Weitere Informationen finden Sie unter [Durchführen der Wissensermittlung](../../2014/data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../../2014/data-quality-services/managing-a-domain.md) oder [Erstellen einer Abgleichsrichtlinie](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Conditions"></a> Domänenregelbedingungen  
@@ -114,20 +114,20 @@ ms.locfileid: "53365112"
 |Länge ist gleich|Nur die Werte, die die vom Operanden festgelegte Anzahl an Zeichen enthalten, sind gültig.|Beispieloperand: 3<br /><br /> Gültiger Wert: BB1<br /><br /> Ungültiger Wert: AA|  
 |Länge ist größer als oder gleich|Nur die Werte, die mindestens die vom Operanden festgelegte Anzahl an Zeichen enthalten, sind gültig.|Beispieloperand: 3<br /><br /> Gültige Werte: BB1, BBAA<br /><br /> Ungültiger Wert: AA|  
 |Länge ist kleiner als oder gleich|Nur die Werte, die höchstens die vom Operanden festgelegte Anzahl an Zeichen enthalten, sind gültig.|Beispieloperand: 3<br /><br /> Gültige Werte: BB1, AA<br /><br /> Ungültiger Wert: BBAA|  
-|Wert ist gleich|Nur die Werte, die mit dem Operanden identisch sind, sind gültig.|Beispieloperand: BB1<br /><br /> Gültiger Wert: BB1<br /><br /> Ungültiger Wert: BB, BB1 NR.|  
-|Wert ist ungleich|Nur die Werte, die mit dem Operanden nicht identisch sind, sind gültig.|Beispieloperand: BB1<br /><br /> Gültiger Wert: BB, BB1 NR.<br /><br /> Ungültiger Wert: BB1|  
+|Wert ist gleich|Nur die Werte, die mit dem Operanden identisch sind, sind gültig.|Beispieloperand: BB1<br /><br /> Gültiger Wert: BB1<br /><br /> Ungültiger Wert: BB, BB1#|  
+|Wert ist ungleich|Nur die Werte, die mit dem Operanden nicht identisch sind, sind gültig.|Beispieloperand: BB1<br /><br /> Gültiger Wert: BB, BB1#<br /><br /> Ungültiger Wert: BB1|  
 |Wert enthält|Nur die Werte, von denen alle Zeichen in beliebiger Reihenfolge im Operanden enthalten sind, sind gültig.|Beispieloperand: A1<br /><br /> Gültige Werte: A1, AA1<br /><br /> Ungültiger Wert: 1A, AA|  
 |Wert enthält nicht|Nur die Werte, die nicht im Operanden enthalten sind, sind gültig.|Beispieloperand: A1<br /><br /> Gültige Werte: 1A, AA<br /><br /> Ungültige Werte: A1, AA1|  
 |Wert beginnt mit|Nur die Werte, die mit den Zeichen im Operanden beginnen, sind gültig.|Beispieloperand: AA<br /><br /> Gültige Werte: AA1<br /><br /> Ungültige Werte: 1AAB|  
 |Wert endet mit|Nur die Werte, die mit den Zeichen im Operanden enden, sind gültig.|Beispieloperand: AA<br /><br /> Gültige Werte: 1AA<br /><br /> Ungültige Werte: 1AAB|  
-|Wert ist numerisch|Nur Werte eines numerischen SQL Server-Datentyps sind gültig. Dazu gehören "int", "decimal", "float" usw.|Beispieloperand: Nicht zutreffend<br /><br /> Gültige Werte: 1, 25, 345.1234<br /><br /> Ungültige Werte: 2 b, bcdef|  
+|Wert ist numerisch|Nur Werte eines numerischen SQL Server-Datentyps sind gültig. Dazu gehören "int", "decimal", "float" usw.|Beispieloperand: Nicht zutreffend<br /><br /> Gültige Werte: 1, 25, 345.1234<br /><br /> Ungültige Werte: 2b, bcdef|  
 |Wert ist Datum\Uhrzeit|Nur Werte eines SQL Server-Datum\Uhrzeit-Datentyps sind gültig. Dazu gehören "datetime", "time", "date" usw.|Beispieloperand: Nicht zutreffend<br /><br /> Gültige Werte: 1916-06-04; 1916-06-04-18:24:24; 21. März 2001; 5/18/2011; 18:24:24<br /><br /> Ungültige Werte: 213. März 2006|  
 |Wert ist in|Nur die Werte, die im Satz im Operanden enthalten sind, sind gültig.<br /><br /> Um die Werte im Satz einzugeben, klicken Sie in das Operandentextfeld, geben Sie den ersten Wert ein, drücken Sie die EINGABETASTE, geben Sie den zweiten Wert ein, und wiederholen Sie den Vorgang für alle Werte, die Sie im Satz eingeben möchten. Klicken Sie anschließend erneut in das Operandentextfeld. DQS fügt zwischen den Werten im Satz ein Komma hinzu. Wenn Sie eine einzelne Zeichenfolge mit Kommas und ohne Wagenrücklauf eingeben (z. B. „A1, B1“), wird diese Zeichenfolge in DQS als einzelner Wert im Satz angesehen.|Beispieloperand: [A1, B1]<br /><br /> Gültige Werte: A1, B1<br /><br /> Ungültige Werte: AA, 11|  
 |Wert ist nicht in|Nur die Werte, die nicht im Satz im Operanden enthalten sind, sind gültig.|Beispieloperand: [A1, B1]<br /><br /> Gültige Werte: AA, 11<br /><br /> Ungültige Werte: A1, B1|  
-|Wert entspricht Muster|Nur die Werte, die dem Muster der Zeichen, Ziffern oder Sonderzeichen im Operanden entsprechen, sind gültig.<br /><br /> Alle Buchstaben A (...Z) können als Muster für einen beliebigen Buchstaben verwendet werden. Es wird Groß/Kleinschreibung unterschieden. Alle Ziffern (0...9) können als Muster für eine beliebige Ziffer verwendet werden. Alle Sonderzeichen mit Ausnahme eines Buchstabes oder einer Ziffer können als Muster für sich selbst verwendet werden. Durch Klammern [] wird ein optionaler Abgleich definiert.|Beispieloperand: 000 (Muster *alle* zwei Zeichen gefolgt von einem Doppelpunkt (:), wiederum gefolgt von *alle* drei Ziffern.<br /><br /> Gültige Werte: 012, DF: 257<br /><br /> Ungültige Werte: abc:123, FJ-369<br /><br /> Weitere Informationen zu Musterregeln in DQS und Beispiele finden Sie unter [Mustervergleich in DQS-Domänenregeln](https://blogs.msdn.com/b/dqs/archive/2012/10/08/pattern-matching-in-dqs-domain-rules.aspx).|  
-|Wert entspricht keinem Muster|Nur die Werte, die dem Muster der Zeichen, Ziffern oder Sonderzeichen im Operanden nicht entsprechen, sind gültig.|Beispieloperand: A1 (Wert darf einem Muster von nicht übereinstimmen *alle* Zeichens, gefolgt von *alle* eine Ziffer.)<br /><br /> Gültige Werte: AB1, A, A: 5<br /><br /> Ungültige Werte: B7, c9|  
-|Wert enthält Muster|Nur die Werte, die das Muster der Zeichen, Ziffern oder Sonderzeichen im Operanden enthalten, sind gültig.|Beispieloperand: AA-12 (Wert enthält ein Muster von *alle* zwei Zeichen gefolgt von einem Bindestrich (-), wiederum gefolgt wird *alle* zwei Ziffern.)<br /><br /> Gültige Werte: AAA-01, Ab-975<br /><br /> Ungültiger Wert: A7, AA-6, c-45, aa; 98|  
-|Wert enthält kein Muster|Nur die Werte, die das Muster der Zeichen im Operanden nicht enthalten, sind gültig.|Beispieloperand: AB-12 (Wert darf einem Muster von *alle* zwei Zeichen gefolgt von einem Bindestrich (-), wiederum gefolgt wird *alle* zwei Ziffern.)<br /><br /> Gültige Werte: A7, AA-6, c-45, aa; 98<br /><br /> Ungültiger Wert: AAA-01, Ab-975|  
+|Wert entspricht Muster|Nur die Werte, die dem Muster der Zeichen, Ziffern oder Sonderzeichen im Operanden entsprechen, sind gültig.<br /><br /> Alle Buchstaben A (...Z) können als Muster für einen beliebigen Buchstaben verwendet werden. Es wird Groß/Kleinschreibung unterschieden. Alle Ziffern (0...9) können als Muster für eine beliebige Ziffer verwendet werden. Alle Sonderzeichen mit Ausnahme eines Buchstabes oder einer Ziffer können als Muster für sich selbst verwendet werden. Durch Klammern [] wird ein optionaler Abgleich definiert.|Beispieloperand: 000 (Muster *alle* zwei Zeichen gefolgt von einem Doppelpunkt (:), wiederum gefolgt von *alle* drei Ziffern.<br /><br /> Gültige Werte: AB:012, df:257<br /><br /> Ungültige Werte: abc:123, FJ-369<br /><br /> Weitere Informationen zu Musterregeln in DQS und Beispiele finden Sie unter [Mustervergleich in DQS-Domänenregeln](https://blogs.msdn.com/b/dqs/archive/2012/10/08/pattern-matching-in-dqs-domain-rules.aspx).|  
+|Wert entspricht keinem Muster|Nur die Werte, die dem Muster der Zeichen, Ziffern oder Sonderzeichen im Operanden nicht entsprechen, sind gültig.|Beispieloperand: A1 (Wert darf einem Muster von nicht übereinstimmen *alle* Zeichens, gefolgt von *alle* eine Ziffer.)<br /><br /> Gültige Werte: AB1, A, A:5<br /><br /> Ungültige Werte: B7, c9|  
+|Wert enthält Muster|Nur die Werte, die das Muster der Zeichen, Ziffern oder Sonderzeichen im Operanden enthalten, sind gültig.|Beispieloperand: AA-12 (Wert enthält ein Muster von *alle* zwei Zeichen gefolgt von einem Bindestrich (-), wiederum gefolgt wird *alle* zwei Ziffern.)<br /><br /> Gültige Werte: AAA-01, ab-975<br /><br /> Ungültiger Wert: A7, AA-6, C-45, aa;98|  
+|Wert enthält kein Muster|Nur die Werte, die das Muster der Zeichen im Operanden nicht enthalten, sind gültig.|Beispieloperand: AB-12 (Wert darf einem Muster von *alle* zwei Zeichen gefolgt von einem Bindestrich (-), wiederum gefolgt wird *alle* zwei Ziffern.)<br /><br /> Gültige Werte: A7, AA-6, C-45, aa;98<br /><br /> Ungültiger Wert: AAA-01, ab-975|  
 |Der Wert stimmt mit dem regulären Ausdruck überein|Nur die Werte, die dem regulären Ausdruck im Operanden entsprechen, werden als gültig angesehen.<br /><br /> Der reguläre Ausdruck darf nicht die Anker „^“ oder „$“ enthalten, da DQS diese Anker automatisch zu einer Klausel mit „Wert ist gleich regulärem Ausdruck“ hinzufügt. (Alternativ können Sie den regulären Ausdruck, der die Anker „^“ und „$“ enthält, in Klammern einschließen.) Weitere Informationen zu regulären Ausdrücken finden Sie unter [Sprachelemente für reguläre Ausdrücke](https://go.microsoft.com/fwlink/?LinkId=225561).|Beispieloperand: [1-5] + (jedes Zeichen muss eine Ziffer von 1 bis 5 sein, die mindestens einmal vorkommt)<br /><br /> Gültige Werte: 123, 12345, 14352<br /><br /> Ungültige Werte: 456, ABC|  
 |Der Wert stimmt nicht mit einem regulären Ausdruck überein|Nur die Werte, die nicht dem regulären Ausdruck im Operanden entsprechen, werden als gültig angesehen.|Beispieloperand: [1-5] + (die Zeichenfolge darf nicht nur Ziffern von 1 bis 5 enthalten)<br /><br /> Gültige Werte: 456, ABC<br /><br /> Ungültiger Wert: 123, 123456, 14352|  
   

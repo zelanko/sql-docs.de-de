@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Lernprogramm: Erstellen eines einfachen Tabellenberichts (Berichts-Generator) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 438ea8d61900a78c6522cf8897b960598d8d3976
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fa3c6f3f6d1a0870fca88871ad3effe642f547e6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189110"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020431"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Lernprogramm: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)
   In diesem Lernprogramm erfahren Sie, wie Sie auf Grundlage von Beispielumsatzdaten einen einfachen Tabellenbericht erstellen. Die folgende Abbildung zeigt den Bericht, den Sie erstellen.  
   
- ![Rs_CreateBasicReportTutorial](../../2014/tutorials/media/rs-createbasicreporttutorial.gif "Rs_CreateBasicReportTutorial")  
+ ![rs_CreateBasicReportTutorial](../../2014/tutorials/media/rs-createbasicreporttutorial.gif "rs_CreateBasicReportTutorial")  
   
 ##  <a name="BackToTop"></a> Lernziele  
  In diesem Lernprogramm lernen Sie Folgendes:  
@@ -71,7 +71,7 @@ ms.locfileid: "48189110"
   
 3.  Vergewissern Sie sich, dass im rechten Bereich **Tabellen- oder Matrix-Assistent** ausgewählt ist.  
   
-##  <a name="DataConnection"></a> 1a: Angeben einer Datenverbindung im Tabellen-Assistenten  
+##  <a name="DataConnection"></a> 1a. Angeben einer Datenverbindung im Tabellen-Assistenten  
  Eine Datenverbindung enthält die Informationen zum Herstellen einer Verbindung mit einer externen Datenquelle, z. B. einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank. Normalerweise erhalten Sie die Verbindungsinformationen und den zu verwendenden Anmeldeinformationstyp vom Datenquellenbesitzer. Sie können zum Angeben einer Datenverbindung eine freigegebene Datenquelle vom Berichtsserver verwenden oder eine eingebettete Datenquelle erstellen, die nur in diesem Bericht verwendet wird.  
   
  In diesem Lernprogramm verwenden Sie eine eingebettete Datenquelle. Weitere Informationen zur Verwendung von freigegebenen Datenquellen finden Sie unter [Alternative Verfahren zum Herstellen einer Datenverbindung (Berichts-Generator)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
@@ -108,7 +108,7 @@ ms.locfileid: "48189110"
   
 10. Klicken Sie auf **Weiter**.  
   
-##  <a name="Query"></a> 1 b. Erstellen einer Abfrage im Tabellen-Assistenten  
+##  <a name="Query"></a> 1b. Erstellen einer Abfrage im Tabellen-Assistenten  
  In einem Bericht können Sie ein freigegebenes Dataset mit einer vordefinierten Abfrage verwenden oder ein eingebettetes Dataset erstellen, das nur in Ihrem Bericht verwendet wird. In diesem Lernprogramm erstellen Sie ein eingebettetes Dataset.  
   
 > [!NOTE]  
@@ -191,7 +191,7 @@ ms.locfileid: "48189110"
   
 6.  Klicken Sie auf **Weiter**.  
   
-##  <a name="Subtotals"></a> 1D. Hinzufügen von Teilergebnis- und Ergebniszeilen im Tabellen-Assistenten  
+##  <a name="Subtotals"></a> 1d. Hinzufügen von Teilergebnis- und Ergebniszeilen im Tabellen-Assistenten  
  Nachdem Sie Gruppen erstellt haben, können Sie Zeilen hinzufügen und formatieren, in denen Aggregatwerte für die Felder angezeigt werden. Sie können auswählen, ob alle Daten angezeigt werden oder der Benutzer gruppierte Daten interaktiv erweitern und reduzieren kann.  
   
 #### <a name="to-add-subtotals-and-totals"></a>So fügen Sie Teilergebnisse und Summen hinzu  
@@ -229,7 +229,7 @@ ms.locfileid: "48189110"
   
 3.  Klicken Sie auf **Fertig stellen**.  
   
- Die Tabelle wird der Entwurfsoberfläche hinzugefügt. Die Tabelle enthält 5 Spalten und 5 Zeilen. Im Bereich "Zeilengruppen" werden drei Zeilengruppen angezeigt: "SalesDate", "Subcategory" und "Details". Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden.  
+ Die Tabelle wird der Entwurfsoberfläche hinzugefügt. Die Tabelle enthält 5 Spalten und 5 Zeilen. Im Bereich Zeilengruppen werden drei Zeilengruppen angezeigt: "Salesdate", Unterkategorie und Details. Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden.  
   
 ##  <a name="FormatCurrency"></a> 2. Formatieren von Daten als Währung  
  Die Zusammenfassungsdaten für das Feld "Sales" werden standardmäßig als eine Zahl im Standardzahlenformat angezeigt. Formatieren Sie das Feld, um die Zahl als Währung anzuzeigen. Ändern Sie die Einstellung der Option **Platzhalterformate** , um formatierte Textfelder und Platzhaltertext als Beispielwerte anzuzeigen.  

@@ -1,24 +1,23 @@
 ---
-title: 'Lektion 5: Erweitern des Zeitreihenmodells modellieren | Microsoft-Dokumentation'
+title: 'Lektion 5: Erweitern die Zeitreihe zu modellieren. | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 7aad4946-c903-4e25-88b9-b087c20cb67d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7b67d295f79188cf83994225125886142c961e3b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2716e985897f8115d189d9410b7cdb13fb1af291
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138229"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028821"
 ---
-# <a name="lesson-5-extending-the-time-series-model"></a>Lektion 5: Erweitern des Zeitreihenmodells
+# <a name="lesson-5-extending-the-time-series-model"></a>Lektion 5: Erweitern die Zeitreihe zu modellieren.
   In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise können Sie einem Zeitreihenmodell neue Daten hinzufügen und die neuen Daten automatisch in das Modell einbeziehen. Es gibt zwei Möglichkeiten, einem Zeitreihen-Miningmodell neue Daten hinzuzufügen:  
   
 -   Verknüpfen von Daten in einer externen Quelle mit den Trainingsdaten durch eine PREDICTION JOIN-Anweisung   
@@ -231,10 +230,10 @@ WHERE [ModelRegion] = 'M200 Europe'
 |M200 Europe|12/25/2008 12:00:00 AM|89|  
   
 ## <a name="making-predictions-with-replacemodelcases"></a>Treffen von Vorhersagen mit REPLACE_MODEL_CASES  
- Das Ersetzen der Modellfälle ist sinnvoll, wenn Sie ein Modell mit einem Satz von Fällen trainieren und dieses Modell auf eine andere Datenreihe anwenden möchten. Eine ausführliche exemplarische Vorgehensweise dieses Szenarios werden im [Lektion 2: erstellen eine Forecasting-Szenarios &#40;Data Mining Tutorial für fortgeschrittene&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
+ Das Ersetzen der Modellfälle ist sinnvoll, wenn Sie ein Modell mit einem Satz von Fällen trainieren und dieses Modell auf eine andere Datenreihe anwenden möchten. Eine ausführliche exemplarische Vorgehensweise dieses Szenarios werden im [Lektion 2: Erstellen eines Planungserstellungsszenarios &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Time Series Model Query Examples](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Abfragebeispiel Zeitreihenmodell](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
  [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
   
   

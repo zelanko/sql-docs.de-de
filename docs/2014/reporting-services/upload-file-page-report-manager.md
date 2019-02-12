@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: 7bb3166f-9374-4449-b66a-ffb77298507d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8c58757e975f4a5ef68804f190aafeec0197a902
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d83f8d097c74b0a7171d0e91e1d36ad716a00415
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128260"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023541"
 ---
 # <a name="upload-file-page-report-manager"></a>Datei hochladen (Seite) (Berichts-Manager)
   Mithilfe der Seite Datei hochladen können Sie eine Datei aus dem Dateisystem in der Berichtsserver-Datenbank veröffentlichen. Hochgeladene Dateien werden als Elemente in der Ordnerhierarchie des Berichtsservers dargestellt.  
   
 -   Hochgeladene RDL-Dateien werden als Berichte auf einem Berichtsserver veröffentlicht.  
   
--   Hochgeladene SMDL-Dateien werden als Berichtsmodelle veröffentlicht, wenn sie Informationen zur Datenquellensicht enthalten. Wenn ein Verweis auf eine Datenquellensicht fehlt, tritt beim Hochladen ein Fehler auf. Informationen zur Datenquellensicht möglicherweise fehlen, wenn Sie eine SMDL-Datei aus Hochladen einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Berichtsmodellprojekt. In Berichtsmodellprojekten werden die Informationen zu Datenquellensichten in einer separaten Datei gespeichert und nicht in der SMDL-Datei selbst.  
+-   Hochgeladene SMDL-Dateien werden als Berichtsmodelle veröffentlicht, wenn sie Informationen zur Datenquellensicht enthalten. Wenn ein Verweis auf eine Datenquellensicht fehlt, tritt beim Hochladen ein Fehler auf. Informationen über Datenquellensichten könnten fehlen, wenn Sie eine SMDL-Datei aus einem [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] -Berichtsmodell hochladen. In Berichtsmodellprojekten werden die Informationen zu Datenquellensichten in einer separaten Datei gespeichert und nicht in der SMDL-Datei selbst.  
   
      Modelldateien, die Informationen zu Datenquellensichten enthalten (und daher erfolgreich hochgeladen werden können), sind jene, die zuvor auf einen Berichtsserver veröffentlicht und dann vom Server in eine Datei im Dateisystem gespeichert wurden. Wenn Sie die Seite mit den allgemeinen Eigenschaften eines Modells öffnen und auf **Bearbeiten** klicken, um das Modell zu öffnen, können Sie es in einer Datei speichern und dann als neues Modell auf den Berichtsserver hochladen. Die SMDL-Datei, die Sie hochladen, enthält alle Informationen, die zum Veröffentlichen des Modell notwendig sind.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48128260"
   
 2.  Klicken Sie auf der Symbolleiste auf **Datei hochladen**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Hochzuladende Datei**  
  Zeigt den vollqualifizierten Pfad der Datei an, die Sie aus dem Dateisystem kopieren.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48128260"
   
 ## <a name="see-also"></a>Siehe auch  
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Inhalt der Seite &#40;Berichts-Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Inhalt &#40;Seite, Berichts-Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Berichts-Manager-F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
  [Hochladen von Dateien in einen Ordner](report-server/upload-files-to-a-folder.md)  
   

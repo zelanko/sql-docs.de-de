@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 096a0678ccb86c232d4eaca792aa143379710fea
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 5dce14880b54d33eee438bf6a7e9e6a2c88f108c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399334"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022292"
 ---
 # <a name="tutorial-introducing-expressions"></a>Lernprogramm: Einführung in Ausdrücke
   Mit Ausdrücken können Sie leistungsfähige und flexible Berichte erstellen. In diesem Lernprogramm erfahren Sie, wie Sie Ausdrücke mit allgemeinen Funktionen und Operatoren erstellen und implementieren. Verwenden Sie die **Ausdruck** Ausdrücke schreiben, die Namen von Werten in einem separaten Dataset zu, suchen verketten im Dialogfeld angezeigt, verschiedene Bilder anhand von Feldwerten und So weiter.  
@@ -25,7 +25,7 @@ ms.locfileid: "52399334"
   
  Die folgende Abbildung zeigt einen Bericht, der mit dem Bericht vergleichbar ist, den Sie erstellen werden.  
   
- ![Rs_ExpressionsTutorial](../../2014/tutorials/media/rs-expressionstutorial.gif "Rs_ExpressionsTutorial")  
+ ![rs_ExpressionsTutorial](../../2014/tutorials/media/rs-expressionstutorial.gif "rs_ExpressionsTutorial")  
   
 ##  <a name="BackToTop"></a> Lernziele  
  In diesem Lernprogramm lernen Sie Folgendes:  
@@ -343,7 +343,7 @@ ms.locfileid: "52399334"
   
 #### <a name="to-look-up-values-in-the-countryregion-dataset"></a>So schlagen Sie Werte im CountryRegion-Dataset nach  
   
-1.  Klicken Sie auf die **Country Region ID** Spaltentitel und löschen Sie den Text: -ID.  
+1.  Klicken Sie auf die **Country Region ID** Spaltentitel und löschen Sie den Text: ID.  
   
 2.  Klicken Sie mit der rechten Maustaste in die Datenzelle der Spalte **Country Region** und klicken Sie auf **Ausdruck**.  
   

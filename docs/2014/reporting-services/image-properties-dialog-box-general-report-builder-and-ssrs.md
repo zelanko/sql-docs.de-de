@@ -12,23 +12,23 @@ f1_keywords:
 - sql12.rtp.rptdesigner.pictureproperties.general.f1
 ms.assetid: c2218b93-f7fe-46ef-995f-d7dadf9752ec
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: afd91dda1a6a4694980d0976f1ceae9db928c36a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: cbbe4fe5917419bc07cef81629c7b2e38b7cff15
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108430"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019635"
 ---
 # <a name="image-properties-dialog-box-general-report-builder-and-ssrs"></a>Bildeigenschaften (Dialogfeld), Allgemein (Berichts-Generator und SSRS)
   Wählen Sie im Dialogfeld **Bildeigenschaften** die Option **Allgemein** , um ein Bild hinzuzufügen, den Standardnamen des Bilds zu ändern und um QuickInfo-Text hinzuzufügen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name**  
  Geben Sie einen Namen für das Element ein. Der Name muss innerhalb des Berichts eindeutig sein. Standardmäßig wird ein allgemeiner Name zugewiesen, z. B. Image1 oder Image2.  
   
- **QuickInfo**  
+ **Tooltip**  
  Geben Sie Text oder einen Ausdruck ein, der zu einer QuickInfo ausgewertet wird. Klicken Sie auf die Ausdrucksschaltfläche (*fx*), um den Ausdruck zu bearbeiten. Die **QuickInfo** wird angezeigt, wenn der Benutzer den Zeiger über das Element in einem HTML-Bericht hält.  
   
  **Bildquelle auswählen**  
@@ -58,7 +58,7 @@ ms.locfileid: "48108430"
   
 ## <a name="see-also"></a>Siehe auch  
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [Images &#40;Berichts-Generator und SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [Bilder &#40;Berichts-Generator und SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [Hilfe zu Dialogfeldern, Bereichen und Assistenten in Berichts-Generator](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

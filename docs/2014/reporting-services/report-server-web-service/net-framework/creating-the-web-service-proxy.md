@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: b1217843-8d3d-49f3-a0d2-d35b0db5b2df
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f7cddd1a918c1e25ae434b47a737d7d329c94cae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6b4ba7b4775009fe346cbb32473ecf34d2445c9c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080543"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022591"
 ---
 # <a name="creating-the-web-service-proxy"></a>Erstellen des Webdienstproxys
   Ein Client und ein Webdienst können über SOAP-Nachrichten kommunizieren, die die Eingabe- und Ausgabeparameter als XML-Datei einkapseln. Eine Proxyklasse ordnet XML-Elementen Parameter zu und sendet dann die SOAP-Nachrichten über ein Netzwerk. So sorgt die Proxyklasse dafür, dass Sie nicht auf der SOAP-Ebene mit dem Webdienst kommunizieren müssen. Außerdem können Sie die Webdienstmethoden in jeder Entwicklungsumgebung aufrufen, die SOAP- und Webdienstproxys unterstützt.  

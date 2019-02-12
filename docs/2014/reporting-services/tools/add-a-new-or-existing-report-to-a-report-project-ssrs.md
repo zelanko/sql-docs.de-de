@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4bffdacee7496c27f41db7897861e3ec1f015dc1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bc714c2ffb7f4483823e7e49e9825c070a0b9672
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173600"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021411"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>Hinzufügen eines neuen oder vorhandenen Berichts zu einem Berichtsprojekt (SSRS)
-  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], Sie können einen neuen Bericht hinzufügen, mit dem Berichts-Assistenten oder durch Hinzufügen eines neuen leeren Berichts zum Projekt. Darüber hinaus können Sie einen vorhandenen Bericht hinzufügen. Nachdem Sie einen Bericht hinzugefügt haben, wird der Name des Berichts im Ordner **Berichte** Ihres Projekts aufgelistet.  
+  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]können Sie einen neuen Bericht hinzufügen, indem Sie den Berichts-Assistenten nutzen oder einen neuen, leeren Bericht zum Projekt hinzufügen. Darüber hinaus können Sie einen vorhandenen Bericht hinzufügen. Nachdem Sie einen Bericht hinzugefügt haben, wird der Name des Berichts im Ordner **Berichte** Ihres Projekts aufgelistet.  
   
 > [!NOTE]  
 >  Um eine Vorschau eines Berichts mit vorhandenen Datenquellen einzusehen, müssen Sie über die Berechtigung zur Datenquelle von Ihrem Berichtserstellungsclient verfügen. Weitere Informationen finden Sie unter [erstellen Sie eine eingebettete oder freigegebene Datenquelle &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "48173600"
   
     -   **Wählen Sie einen Berichtstyp aus.** Als Nächstes muss der gewünschte Berichtstyp ausgewählt werden. Sie können zwischen einem tabellarischen Bericht und einem Matrixbericht auswählen. Ein tabellarischer Bericht verfügt über eine feste Anzahl von Spalten. Ein Matrix- oder Kreuztabellenbericht verfügt über eine variable Anzahl von Spalten, die vom Ergebnis der Abfrage abhängt. In einem Kartenbericht werden Analysedaten vor einem geografischen Hintergrund dargestellt.  
   
-    -   **Wählen Sie einen Stil aus.** Im nächsten Schritt wird mithilfe einer Formatvorlage ein Format auf den Bericht angewendet. Wählen Sie eine Vorlage aus, um Formate wie Schriftart, Farbe und Rahmenart auf den Bericht anzuwenden. Der Berichts-Designer stellt sechs Formatvorlagen bereit: Schiefer, Wald, Geschäftlich, Fett, Ozean und Generisch. Darüber hinaus können Sie weitere Formatvorlagen hinzufügen.  
+    -   **Wählen Sie einen Stil aus.** Im nächsten Schritt wird mithilfe einer Formatvorlage ein Format auf den Bericht angewendet. Wählen Sie eine Vorlage aus, um Formate wie Schriftart, Farbe und Rahmenart auf den Bericht anzuwenden. Berichts-Designer stellt sechs Formatvorlagen bereit: Slate-Objekt, Gesamtstruktur, Unternehmen, fett, Ozean und generische. Darüber hinaus können Sie weitere Formatvorlagen hinzufügen.  
   
         > [!NOTE]  
         >  Sie können vorhandene Vorlagen ändern oder neue hinzufügen, bearbeiten Sie die Datei "StyleTemplates.xml" in der \Programme\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\Business Intelligence Wizards\Reports\Styles\\< Lang\>Ordner, in denen \<Lang > ist die Sprache, die Sie verwenden (z. B., wenn Sie die englische Sprachversion von verwenden [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], den Namen des Ordners ist "EN"). Dieser Ordner befindet sich auf dem Computer, auf dem Berichts-Designer installiert ist. Von der Datei StyleTemplates.xml sind zwei Kopien verfügbar. Um die mithilfe des Berichts-Assistenten angewendeten Formate zu ändern, müssen Sie die Datei bearbeiten, die in dem für die verwendete Sprache erstellten Ordner gespeichert wurde.  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 814b4653-572a-48c7-847f-b310ba0f3046
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 041553621a9f85cf4ca4f409f25b05cb2660c12b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d3abebe357646aab1a09e3bc6a59130461d268bd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116855"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027041"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>Datengesteuertes Abonnement erstellen (Seite) (Berichts-Manager)
   Mithilfe der Seiten Erstellen eines datengesteuerten Abonnements können Sie ein Abonnement erstellen oder ändern, das bei jeder Ausführung eine Abonnentendatenbank nach Abonnementinformationen abfragt. Datengesteuerte Abonnements verwenden die Abfrageergebnisse, um die Empfänger des Abonnements, Übermittlungseinstellungen und Berichtsparameterwerte zu bestimmen. Zur Laufzeit führt der Berichtsserver eine Abfrage aus, um die für das Abonnement verwendeten Einstellungen abzurufen. Sie können die Seiten Erstellen eines datengesteuerten Abonnements verwenden, um die Abfrage zu definieren und den Abonnementeinstellungen Abfragewerte zuzuweisen. Die von Ihnen für ein datengesteuertes Abonnement angegebenen Werte und Optionen werden ähnlich wie bei einem Assistenten auf mehrere Seiten verteilt. Insgesamt handelt es sich um sieben Seiten.  
@@ -53,7 +53,7 @@ ms.locfileid: "48116855"
   
 -   Wählen Sie die Option **Berichtsserver-Dateifreigabe** , um Berichte an eine Dateifreigabe zu übermitteln. Der Bericht wird als statische, vom Berichtsserver getrennte Datei übermittelt. Weitere Informationen finden Sie unter [File Share Delivery in Reporting Services](subscriptions/file-share-delivery-in-reporting-services.md).  
   
--   Wählen Sie die Option **Berichtsserver-E-Mail** , um Berichte an einen E-Mail-Posteingang zu übermitteln. Weitere Informationen finden Sie unter [E-Mail-Übermittlung in Reporting Services](subscriptions/e-mail-delivery-in-reporting-services.md).  
+-   Wählen Sie die Option **Berichtsserver-E-Mail** , um Berichte an einen E-Mail-Posteingang zu übermitteln. Weitere Informationen finden Sie unter [E-Mail Delivery in Reporting Services](subscriptions/e-mail-delivery-in-reporting-services.md).  
   
 -   Wählen Sie die Option **NULL-Übermittlungsanbieter** , um Berichte an die Berichtsserver-Datenbank zu übermitteln. Mithilfe dieser Option werden Berichtsmomentaufnahmen erstellt. Wählen Sie diese Option aus, wenn benutzerspezifische oder parametrisierte Berichtsmomentaufnahmen gemäß einem bestimmten Zeitplan auf dem Berichtsserver vorab geladen werden sollen. Weitere Informationen finden Sie unter [Zwischenspeichern von Berichten &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)bestand darin die einzige Möglichkeit, den Cache vorab zu laden.  
   
@@ -148,17 +148,17 @@ ms.locfileid: "48116855"
 ## <a name="schedule-a-subscription-page-7"></a>Planen eines Abonnements (Seite 7)  
  Beim Planen des Abonnements müssen Sie die Häufigkeit angeben, mit der der Bericht übermittelt wird. Die erste Gruppe von Optionen gibt eine Kategorie der Häufigkeit an (Stunde, Tag, Woche usw.). Die zweite Gruppe von Optionen, die angezeigt wird, basiert auf der ersten Auswahl.  
   
- **Pro Stunde**  
+ **Hourly**  
  Definieren Sie einen Zeitplan mit stündlicher Ausführung.  
   
  **Pro Tag**  
- Definieren Sie einen Zeitplan, der an den von Ihnen angegebenen Tagen zu einer bestimmten Uhrzeit (Stunde und Minute) ausgeführt wird. Auf folgende Weise die Tage anzugeben: alle  *\<Tag >*, an jedem Arbeitstag und alle  *\<Anzahl >* Tag. Wenn eine Option ausgewählt ist, stehen die anderen nicht zur Verfügung, auch wenn es so aussieht, als seien die anderen Tage ebenfalls ausgewählt.  
+ Definieren Sie einen Zeitplan, der an den von Ihnen angegebenen Tagen zu einer bestimmten Uhrzeit (Stunde und Minute) ausgeführt wird. Sie können Tage auf folgende Weise angeben: Jede  *\<Tag >*, an jedem Arbeitstag und alle  *\<Anzahl >* Tag. Wenn eine Option ausgewählt ist, stehen die anderen nicht zur Verfügung, auch wenn es so aussieht, als seien die anderen Tage ebenfalls ausgewählt.  
   
  **Wöchentlich**  
  Definieren Sie einen Zeitplan, der zu der von Ihnen angegebenen Uhrzeit (Stunde und Minute) wöchentlich ausgeführt wird. Der Zeitabstand kann vollständige Wochen betragen (z. B. alle zwei Wochen) oder Tage innerhalb einer Woche.  
   
  **Monatliche**  
- Definieren Sie einen Zeitplan mit monatlicher Ausführung. Innerhalb eines Monats können Sie einen Tag auf der Grundlage eines Musters auswählen (z. B. den letzten Sonntag jeden Monats) oder spezifische Kalenderdaten angeben (z. B. den 1. und 15., um den ersten und fünfzehnten Tag jeden Monats anzugeben). Mithilfe von Kommas und Bindestrichen können Sie mehrere Tage und Bereiche angeben (Beispiel: 1, 5, 7-12, 21).  
+ Definieren Sie einen Zeitplan mit monatlicher Ausführung. Innerhalb eines Monats können Sie einen Tag auf der Grundlage eines Musters auswählen (z. B. den letzten Sonntag jeden Monats) oder spezifische Kalenderdaten angeben (z. B. den 1. und 15., um den ersten und fünfzehnten Tag jeden Monats anzugeben). Mithilfe von Kommas und Bindestrichen können Sie mehrere Tage und Bereiche angeben (Beispiel: 1, 5, 7-12, 21).  
   
  **Einmal**  
  Definieren Sie einen Zeitplan mit einmaliger Ausführung. Im Abschnitt **Anfangs- und Enddatum** können Sie den Tag angeben, an dem der Zeitplan ausgeführt werden soll. Dieser Zeitplan läuft unmittelbar nach seiner Verarbeitung ab.  
@@ -171,7 +171,7 @@ ms.locfileid: "48116855"
   
 ## <a name="see-also"></a>Siehe auch  
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Datengesteuerte Abonnements](subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [Erstellen eines datengesteuerten Abonnements &#40;SSRS-Tutorial&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   

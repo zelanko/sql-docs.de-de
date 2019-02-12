@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 095a043f-cf6f-45bb-a021-ae4e1b535c65
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 979738186c9af128087049e71fa248d41fd27b50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ce2c2e6944d524a38edc331d2cd128ca7cf7d419
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192250"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018262"
 ---
 # <a name="lesson-3-processing-the-market-basket-mining-structure"></a>Lektion 3: Verarbeiten der Market Basket-Miningstruktur
-  In dieser Lektion verwenden Sie die [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) -Anweisung und vAssocSeqLineItems sowie vAssocSeqOrders aus der [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] Beispieldatenbank zum Verarbeiten von Miningstrukturen und Mining-Modellen, die Sie im erstellten [Lektion 1: Erstellen der Market Basket-Miningstruktur](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md) und [Lektion 2: Hinzufügen von Miningmodellen, die Market Basket-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md).  
+  In dieser Lektion verwenden Sie die [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) -Anweisung und vAssocSeqLineItems sowie vAssocSeqOrders aus der [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] Beispieldatenbank zum Verarbeiten von Miningstrukturen und Mining-Modellen, die Sie im erstellten [Lektion 1: Erstellen der Market Basket-Miningstruktur](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md) und [Lektion 2: Hinzufügen von Miningmodellen zur Market Basket-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md).  
   
- Wenn Sie eine Miningstruktur verarbeiten [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] liest die Daten und erstellt die Strukturen, die die Miningmodelle unterstützen. Wenn Sie ein Miningmodell verarbeiten, werden von der Miningstruktur definierten Daten über die Datamining-Algorithmus übergeben, die Sie ausgewählt haben. Der Algorithmus sucht nach Trends und Mustern und speichert diese Informationen dann im Miningmodell. Aus diesem Grund enthält das Miningmodell nicht die tatsächlichen Quelldaten, sondern die vom Algorithmus ermittelten Informationen. Weitere Informationen zum Verarbeiten von Miningmodellen finden Sie unter [Verarbeitung von Anforderungen und Überlegungen &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
+ Wenn Sie eine Miningstruktur verarbeiten, liest [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] die Quelldaten und erstellt die Strukturen, die Miningmodelle unterstützen. Wenn Sie ein Miningmodell verarbeiten, werden von der Miningstruktur definierten Daten über die Datamining-Algorithmus übergeben, die Sie ausgewählt haben. Der Algorithmus sucht nach Trends und Mustern und speichert diese Informationen dann im Miningmodell. Aus diesem Grund enthält das Miningmodell nicht die tatsächlichen Quelldaten, sondern die vom Algorithmus ermittelten Informationen. Weitere Informationen zum Verarbeiten von Miningmodellen finden Sie unter [Verarbeitung von Anforderungen und Überlegungen &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
  Sie müssen eine Miningstruktur nur erneut verarbeiten, wenn Sie eine Strukturspalte oder die Quelldaten ändern. Wenn Sie einer Miningstruktur, die bereits verarbeitet wurde, ein Miningmodell hinzufügen, können Sie das neue Miningmodell mithilfe der `INSERT INTO MINING MODEL`-Anweisung für die vorhandenen Daten trainieren.  
   
@@ -36,7 +35,7 @@ ms.locfileid: "48192250"
   
 -   Definieren der Trainingsdaten mithilfe von `SHAPE`  
   
- Folgendes ist ein allgemeines Beispiel der `INSERT INTO` Anweisung:  
+ Das folgende Beispiel ist ein allgemeines Beispiel für die `INSERT INTO`-Anweisung:  
   
 ```  
 INSERT INTO MINING STRUCTURE [<mining structure name>]  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 2aa43ce9-f51e-408a-8ce0-b40d3dd62561
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0203866f4c8d7380e0590ad843e52432a0fcf119
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: debcba90ebdbf051997325a36da425329731db21
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100470"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027491"
 ---
 # <a name="report-server-namespace-management-methods"></a>Methoden zur Berichtsserver-Namespaceverwaltung
   Der Webdienst zur Berichtsserververwaltung enthält Methoden, mit denen Sie Berichte, Ordner und Ressourcen in der Berichtsserver-Datenbank verwalten können.  
@@ -31,7 +31,7 @@ ms.locfileid: "48100470"
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.CancelJob%2A>|Bricht die Ausführung eines Auftrags ab|  
 |<xref:ReportService2010.ReportingService2010.CreateFolder%2A>|Fügt der Berichtsserver-Datenbank oder SharePoint-Bibliothek einen Ordner hinzu.|  
-|<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>|Fügt einer Berichtsserver-Datenbank oder einer SharePoint-Bibliothek ein neues Element hinzu. Diese Methode gilt für die `Report`, `Model`, `Dataset`, `Component`, `Resource`, und `DataSource` Elementtypen.|  
+|<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>|Fügt einer Berichtsserver-Datenbank oder einer SharePoint-Bibliothek ein neues Element hinzu. Diese Methode gilt für die Elementtypen `Report`, `Model`, `Dataset`, `Component`, `Resource` und `DataSource`.|  
 |M:ReportService2010.ReportingService2010.CreateReportEditSession(System.String,System.String,System.Byte[],ReportService2010.Warning[]@)|Erstellt eine neue Berichtsbearbeitungssitzung.|  
 |<xref:ReportService2010.ReportingService2010.DeleteItem%2A>|Entfernt ein Element aus der Berichtsserver-Datenbank oder SharePoint-Bibliothek.|  
 |<xref:ReportService2010.ReportingService2010.FindItems%2A>|Gibt die Elemente in der Berichtsserver-Datenbank oder SharePoint-Bibliothek zurück, die den angegebenen Suchkriterien entsprechen.|  
@@ -39,7 +39,7 @@ ms.locfileid: "48100470"
 |<xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A>|Gibt eine Liste der Einstellungen für eine angegebene Erweiterung zurück.|  
 |<xref:ReportService2010.ReportingService2010.GetItemType%2A>|Ruft den Typ eines Elements in der Berichtsserver-Datenbank oder SharePoint-Bibliothek ab, wenn das Element vorhanden ist.|  
 |<xref:ReportService2010.ReportingService2010.GetProperties%2A>|Gibt die Werte einer oder mehrerer Eigenschaften eines Elements in der Berichtsserver-Datenbank oder SharePoint-Bibliothek zurück.|  
-|<xref:ReportService2010.ReportingService2010.GetItemDefinition%2A>|Ruft die Definition oder den Inhalt für ein Element ab. Diese Methode gilt für die `Report`, `Model`, `Dataset`, `Component`, `Resource`, und `DataSource` Elementtypen.|  
+|<xref:ReportService2010.ReportingService2010.GetItemDefinition%2A>|Ruft die Definition oder den Inhalt für ein Element ab. Diese Methode gilt für die Elementtypen `Report`, `Model`, `Dataset`, `Component`, `Resource` und `DataSource`.|  
 |<xref:ReportService2010.ReportingService2010.GetItemReferences%2A>|Gibt eine Liste der einem Element zugeordneten Katalogelementverweise zurück.|  
 |<xref:ReportService2010.ReportingService2010.GetReportServerConfigInfo%2A>|Gibt Informationen zur verbundenen Berichtsserverinstanz oder allen Berichtsserverinstanzen in einer Bereitstellung für horizontales Skalieren zurück.|  
 |<xref:ReportService2010.ReportingService2010.GetSystemProperties%2A>|Gibt eine oder mehrere Systemeigenschaften zurück.|  
@@ -60,7 +60,7 @@ ms.locfileid: "48100470"
 |<xref:ReportService2010.ReportingService2010.SetItemReferences%2A>|Legt die einem Element zugeordneten Katalogelemente fest.|  
 |<xref:ReportService2010.ReportingService2010.MoveItem%2A>|Verschiebt ein Element und/oder benennt es um.|  
 |<xref:ReportService2010.ReportingService2010.SetProperties%2A>|Legt mindestens eine Eigenschaft für ein Element fest.|  
-|<xref:ReportService2010.ReportingService2010.SetItemDefinition%2A>|Legt die Definition oder den Inhalt für ein angegebenes Element fest. Diese Methode gilt für die `Report`, `Model`, `Dataset`, `Component`, `Resource`, und `DataSource` Elementtypen.|  
+|<xref:ReportService2010.ReportingService2010.SetItemDefinition%2A>|Legt die Definition oder den Inhalt für ein angegebenes Element fest. Diese Methode gilt für die Elementtypen `Report`, `Model`, `Dataset`, `Component`, `Resource` und `DataSource`.|  
 |<xref:ReportService2010.ReportingService2010.SetSystemProperties%2A>|Legt mindestens eine Systemeigenschaft auf dem Berichtsserver oder in der SharePoint-Farm fest.|  
 |<xref:ReportService2010.ReportingService2010.ValidateExtensionSettings%2A>|Überprüft [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Erweiterungseinstellungen.|  
   

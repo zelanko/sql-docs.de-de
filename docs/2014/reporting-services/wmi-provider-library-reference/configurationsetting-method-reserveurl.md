@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: b9008a62-3edd-4f8a-99f2-7598c2133899
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d670170a594af7346f44f236e96a724813278743
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2b771042ca00c9a9a80d7ffa035b100e2c4a6dc0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162760"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020511"
 ---
 # <a name="reserveurl-method-wmi-msreportserverconfigurationsetting"></a>ReserveURL-Methode (WMI: MSReportServer_ConfigurationSetting)
   Fügt eine URL-Reservierung für eine gegebene Anwendung hinzu  
@@ -56,7 +56,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
  Gibt *HRESULT* zurück, wodurch der Erfolg oder das Fehlschlagen des Methodenaufrufs angegeben wird. Der Wert 0 (null) gibt an, dass der Methodenaufruf erfolgreich war. Ein Fehlercode gibt an, dass der Aufruf nicht erfolgreich war.  
   
 ## <a name="remarks"></a>Hinweise  
- *UrlString* beinhaltet nicht den Namen des virtuellen Verzeichnisses. Die [SetVirtualDirectory](configurationsetting-method-setvirtualdirectory.md) Methode wird für diesen Zweck bereitgestellt.  
+ *UrlString* beinhaltet nicht den Namen des virtuellen Verzeichnisses. Dazu wird die [SetVirtualDirectory](configurationsetting-method-setvirtualdirectory.md) -Methode bereitgestellt.  
   
  URL-Reservierungen werden für das aktuelle Windows-Dienstkonto erstellt. Eine Änderung des Windows-Dienstkontos erfordert das manuelle Aktualisieren der URL-Reservierungen.  
   
@@ -66,6 +66,6 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](msreportserver-configurationsetting-members.md)  
+ [MSReportServer_ConfigurationSetting-Member](msreportserver-configurationsetting-members.md)  
   
   

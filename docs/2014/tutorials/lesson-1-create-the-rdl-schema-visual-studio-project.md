@@ -1,24 +1,23 @@
 ---
-title: 'Lektion 1: Erstellen des RDL-Schema-Visual Studio-Projekts | Microsoft-Dokumentation'
+title: 'Lektion 1: Erstellen Sie die Visual Studio-Projekt die RDL-Schema | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f420509c-51aa-4170-8c25-64c2954f4bb9
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: fdf146743a74ff3e546072287848b033f365bc8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: c34062acefc2dfd847790a39cea35b03727f49ff
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187330"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018911"
 ---
-# <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>Lektion 1: Erstellen des RDL-Schema-Projekts in Visual Studio
+# <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>Lektion 1: Erstellen Sie die Visual Studio-Projekt die RDL-Schema
   In diesem Lernprogramm erstellen Sie eine einfache Konsolenanwendung. In diesem Tutorial wird vorausgesetzt, Sie entwickeln im [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)].  
   
 > [!NOTE]  
@@ -62,7 +61,7 @@ ms.locfileid: "48187330"
   
 8.  Navigieren Sie zum Speicherort der CS- oder VB-Datei löschen, die Sie generiert, und wählen Sie die Datei, und klicken Sie dann auf **hinzufügen**.  
   
-     Sie müssen auch einen Verweis zum Hinzufügen der <xref:System.Web.Services> Namespace-URI für den Webverweis funktioniert.  
+     Damit der Webverweis funktionsfähig ist, muss auch dem <xref:System.Web.Services>-Namespace ein Verweis hinzugefügt werden.  
   
 9. Klicken Sie auf das Menü Projekt auf **Verweis hinzufügen**.  
   
@@ -70,9 +69,9 @@ ms.locfileid: "48187330"
   
      Weitere Informationen zum Herstellen einer Verbindung mit der Berichtsserver-Webdienst finden Sie unter [Erstellen von Anwendungen mit dem Webdienst und .NET Framework](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
   
-10. Erweitern Sie den Projektknoten im Projektmappen-Explorer. Sehen Sie eine Codedatei mit dem Standardnamen Program.cs (Module1.vb für [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) Ihrem Projekt hinzugefügt wurde.  
+10. Erweitern Sie den Projektknoten im Projektmappen-Explorer. Sie werden feststellen, dass dem Projekt eine Codedatei mit dem Standardnamen Program.cs (bzw. Module1.vb für [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) hinzugefügt wurde.  
   
-11. Öffnen Sie die Datei "Program.cs" (bzw. Module1.vb für [!INCLUDE[vbprvb](../includes/vbprvb-md.md)])-Datei und Ersetzen Sie den Code durch Folgendes:  
+11. Öffnen Sie die Datei Program.cs (Module1.vb für [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]), und ersetzen Sie den Code durch folgenden Code:  
   
      Mit dem folgenden Code werden die Methodenstubs bereitgestellt, die zum Implementieren der Funktionalität zum Laden, Aktualisieren und Speichern verwendet werden.  
   

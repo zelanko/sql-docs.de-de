@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: c6674cd8-0de7-4a5a-9e7c-12ffa49f6fd2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c4715b7b0b1cf810a2874e41d1f3ad0bed1a2f59
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 98f498ceb1f0d2d05261c08e14d7adb0b7cfd716
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356584"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020691"
 ---
 # <a name="deploying-a-custom-assembly"></a>Bereitstellen einer benutzerdefinierten Assembly
   Platzieren Sie die Assembly in die Anwendungsordner des Berichtsservers und des Berichts-Designers, um eine benutzerdefinierte Assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bereitzustellen. Standardmäßig wird benutzerdefinierten Assemblys die `Execution`-Berechtigung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] erteilt. Sie müssen die Konfigurationsdatei „rssrvpolicy.config“ für den Berichtsserver und die Konfigurationsdatei „rspreviewpolicy.config“ für das Vorschaufenster des Berichts-Designers bearbeiten, um benutzerdefinierten Assemblys Privilegien über die Execute-Berechtigung hinaus zu erteilen. Alternativ dazu können Sie die benutzerdefinierte Assembly auch im globalen Assemblycache (Global Assembly Cache, GAC) installieren.  

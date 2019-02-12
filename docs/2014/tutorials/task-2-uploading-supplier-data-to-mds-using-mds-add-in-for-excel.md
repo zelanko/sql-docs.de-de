@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 598deb57-e0cc-4e0a-aeb1-94432c094c67
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 36e50a34f708bc13da489591d73ca0521cdb5a6b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1cbaacd23fcaa1e28d6cce6d64a168d0fab4befc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101210"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025661"
 ---
 # <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>Aufgabe 2: Hochladen von Lieferantendaten in MDS mithilfe des MDS-Add-Ins für Excel
   In dieser Aufgabe veröffentlichen Sie die bereinigten Daten und Lieferantendaten zu **MDS** mithilfe der **MDS-Add-in für Excel**. Sie erstellen eine Entität mit dem Namen **Lieferanten** in die **Lieferanten** Modell, die Sie in der vorherigen Lektion erstellt haben. Die Entität weist ein Attribut für jede Spalte in der Excel-Datei auf. Die Attribute der Entität "Supplier" Code und den Namen entsprechen den **SupplierID** und **Lieferantenname** Spalten in Excel.  

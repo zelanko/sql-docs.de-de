@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 902c251e-e1e8-41d2-ac20-5bb6138ac410
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: bd681b0616aa175c68104da48577ad5dc19f1897
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5122fe6ddecacb492539573aa769e34164e699f2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191226"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021531"
 ---
 # <a name="countdistinct-function-report-builder-and-ssrs"></a>CountDistinct-Funktion (Berichts-Generator und SSRS)
   Gibt die Anzahl aller unterschiedlichen Werte ungleich NULL aus dem angegebenen Ausdruck im Kontext des angegebenen Bereichs ausgewertet zurück.  
@@ -33,16 +33,16 @@ CountDistinct(expression, scope, recursive)
   
 #### <a name="parameters"></a>Parameter  
  *expression*  
- (`Variant`) Der Ausdruck für den die Aggregation auszuführen.  
+ (`Variant`) Der Ausdruck, für den die Aggregation auszuführen ist.  
   
  *Bereich*  
- (`String`) Optional. Der Name eines Datasets, einer Gruppe oder eines Datenbereichs mit den Berichtselementen, auf die die Aggregatfunktion anzuwenden ist. Wenn *scope* nicht angegeben ist, wird der aktuelle Bereich verwendet.  
+ (`String`) optional. Der Name eines Datasets, einer Gruppe oder eines Datenbereichs mit den Berichtselementen, auf die die Aggregatfunktion anzuwenden ist. Wenn *scope* nicht angegeben ist, wird der aktuelle Bereich verwendet.  
   
  *Rekursiv*  
- (**Enumerationstyp**) Optional. `Simple` (Standard) oder `RdlRecursive`. Gibt an, ob die Aggregation rekursiv auszuführen ist.  
+ (**Enumerationstyp**) Optional. `Simple` (Standardwert) oder `RdlRecursive`. Gibt an, ob die Aggregation rekursiv auszuführen ist.  
   
 ## <a name="return-type"></a>Rückgabetyp  
- Gibt eine `Integer`.  
+ Gibt einen Wert vom Typ `Integer` zurück.  
   
 ## <a name="remarks"></a>Hinweise  
  Der Wert des *scope* -Objekts muss eine Zeichenfolgenkonstante sein und darf kein Ausdruck sein. Für äußere Aggregate oder Aggregate, die keine anderen Aggregate angeben, muss das *scope* -Objekt auf den aktuellen Bereich oder einen enthaltenen Bereich verweisen. Bei Aggregaten von Aggregaten können geschachtelte Aggregate einen untergeordneten Bereich angeben.  
@@ -76,6 +76,6 @@ CountDistinct(expression, scope, recursive)
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](expressions-report-builder-and-ssrs.md)   
- [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

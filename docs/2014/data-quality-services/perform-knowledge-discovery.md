@@ -12,15 +12,15 @@ f1_keywords:
 - sql12.dqs.kb.kbmap.f1
 - sql12.dqs.kb.kbterms.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 627c3d071609b1b0053e7f8b79d20b9bff08c921
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1577fbdfd4133e419ab5dfe6520efd5e19893cb8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505577"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019671"
 ---
 # <a name="perform-knowledge-discovery"></a>Durchführen der Wissensermittlung
   In diesem Thema wird beschrieben, wie eine Wissensdatenbank über die Wissensermittlung erstellt wird. Im Wissensermittlungsprozess werden die Daten in einer Beispieldatenquelle in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) über einen computergestützten Prozess analysiert, und das gewonnene Wissen wird zur Wissensdatenbank hinzugefügt. Dieses Wissen kann im Schritt **Domänenwerte verwalten** der Wissensermittlungsaktivität oder in der Domänenverwaltungsaktivität geändert und verbessert werden.  
@@ -186,7 +186,7 @@ ms.locfileid: "52505577"
   
 11. Klicken Sie auf **Fertig stellen** , um den Wissensermittlungsaktivität abzuschließen. Ein Popupfenster wird angezeigt, wenn Sie nicht jede einzelne Domäne überprüft haben. Klicken Sie auf **Ja** , um weiterhin zu überprüfen, oder auf **Nein** , um fortzufahren. Wenn Sie auf Nein klicken, wird ein anderes Popupfenster mit den folgenden Optionen angezeigt:  
   
-    1.  **Veröffentlichen von**: Die Wissensdatenbank wird für den aktuellen Benutzer oder von anderen Benutzern verwenden veröffentlicht werden. Die Wissensdatenbank wird nicht gesperrt, der Status der Wissensdatenbank (in der Wissensdatenbanktabelle) wird auf leer festgelegt, und die Aktivitäten für die Domänenverwaltung sowie die Wissensermittlung sind verfügbar. Sie kehren zur Startseite zurück. Um den Prozess abzuschließen, klicken Sie auf **Ja** .  
+    1.  **Publish:** Die Wissensdatenbank wird für den aktuellen Benutzer oder von anderen Benutzern verwenden veröffentlicht werden. Die Wissensdatenbank wird nicht gesperrt, der Status der Wissensdatenbank (in der Wissensdatenbanktabelle) wird auf leer festgelegt, und die Aktivitäten für die Domänenverwaltung sowie die Wissensermittlung sind verfügbar. Sie kehren zur Startseite zurück. Um den Prozess abzuschließen, klicken Sie auf **Ja** .  
   
     2.  **Keine**: Ihre Arbeit wird gespeichert, die Wissensdatenbank bleibt gesperrt, und der Status der Wissensdatenbank wird auf Arbeit festgelegt werden. Sowohl die Domänenverwaltungs- als auch die Wissensermittlungsaktivitäten sind verfügbar. Sie kehren zur Startseite zurück.  
   
@@ -200,7 +200,7 @@ ms.locfileid: "52505577"
   
     -   Klicken Sie auf **Zurück** , um zur Seite **Ermitteln** zurückzukehren. Nach dem Klicken auf **schließen**, um die domänenverwaltungsaktivität ausführen müssen, klicken Sie auf **Wissensermittlung** aus der **Wissensdatenbank öffnen** Bildschirm, fahren Sie mit der **Wissensdatenbank-Verwaltung: Domänenbegriffe verwalten** auf **Fertig stellen**, und klicken Sie dann entweder **Ja** um die Wissensdatenbank zu veröffentlichen oder **keine** zum Speichern der Arbeit an der Wissensdatenbank und Beenden Sie.  
   
-##  <a name="FollowUp"></a> Zur Nachverfolgung: Nach dem Ausführen der Wissensermittlung  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Ausführen der Wissensermittlung  
  Nachdem Sie mithilfe des computergestützten Wissensermittlungsprozesses Wissen zur Wissensdatenbank hinzugefügt haben, können Sie die Wissensdatenbank sofort für ein Bereinigungsprojekt verwenden oder die Domänenverwaltung vor der Bereinigung durchführen. Weitere Informationen zur Datenbereinigung oder Domänenverwaltung finden Sie unter [Datenbereinigung](../../2014/data-quality-services/data-cleansing.md) oder [Verwalten einer Domäne](../../2014/data-quality-services/managing-a-domain.md).  
   
 ##  <a name="Meaning"></a> Die Bedeutung von richtigen, fehlerhaften und ungültigen Werten  
@@ -252,7 +252,7 @@ ms.locfileid: "52505577"
   
 -   **Feld**: Name des Felds in der Quelldatenbank  
   
--   **Domäne**: Name der Domäne, die dem Feld zugeordnet ist.  
+-   **Domain**: Name der Domäne, die dem Feld zugeordnet ist.  
   
 -   **Neue**: Die Anzahl der neuen Werte und die Prozentzahlen neuer Werte im Vergleich zu vorhandenen Werten im Feld  
   

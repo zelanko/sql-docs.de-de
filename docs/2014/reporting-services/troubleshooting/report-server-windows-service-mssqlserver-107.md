@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 52b5704b-27f9-400a-a821-d8fa0786afe4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cf34475a4b2b79251284db6d36018b0c6d243d8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5351b052a26b2a4f5b9bc9d91f93aa2e4cdc5357
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106060"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020282"
 ---
 # <a name="report-server-windows-service-mssqlserver-107"></a>Report Server-Windows-Dienst (MSSQLServer) 107
     
@@ -51,8 +51,8 @@ ms.locfileid: "48106060"
 ## <a name="internal-only"></a>Nur intern  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurieren Sie die Berichtsserver-Dienstkontos &#40;SSRS-Konfigurations-Manager&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Reporting Services-Konfigurations-Manager &#40;im einheitlichen Modus&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Start and Stop the Report Server Service (Starten und Beenden des Berichtsserverdiensts)](../report-server/start-and-stop-the-report-server-service.md)  
+ [Konfigurieren des Berichtsserver-Dienstkontos &#40;SSRS-Konfigurations-Manager&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Starten und Beenden des Berichtsserverdiensts](../report-server/start-and-stop-the-report-server-service.md)  
   
   

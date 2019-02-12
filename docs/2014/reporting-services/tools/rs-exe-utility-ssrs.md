@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3cbc3a76c1f6e5c67297f44c312fe0497666a9b8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 859c7d2cb6545c6a15e1e3e40aff28720921fb27
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505642"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023121"
 ---
 # <a name="rsexe-utility-ssrs"></a>Hilfsprogramm 'RS.exe' (SSRS)
   Das Dienstprogramm rs.exe verarbeitet Skripts, die von Ihnen in einer Eingabedatei bereitgestellt werden. Verwenden Sie dieses Hilfsprogramm, um die Berichtsserverbereitstellung und Verwaltungsaufgaben zu automatisieren.  
@@ -65,7 +65,7 @@ ms.locfileid: "52505642"
  **-?**  
  (Optional) Zeigt die Syntax der **rs** -Argumente an.  
   
- `-i` *Eingabedatei*  
+ `-i` *input_file*  
  (Erforderlich) Gibt die auszuführende RSS-Datei an. Dieser Wert kann einen relativen oder einen vollqualifizierten Pfad zur RSS-Datei enthalten.  
   
  `-s` *Server-URL*  
@@ -90,13 +90,13 @@ ms.locfileid: "52505642"
   
  Wird kein Wert angegeben, wird der Endpunkt Mgmt2005 verwendet. Weitere Informationen zu den SOAP-Endpunkten finden Sie unter [Report Server Web Service Endpoints](../report-server-web-service/methods/report-server-web-service-endpoints.md).  
   
- `-l` *Timeout*  
+ `-l` *time_out*  
  (Optional) Gibt die Anzahl von Sekunden an, die verstreichen, ehe sich für die Verbindung mit dem Server ein Timeout ergibt. Der Standardwert ist 60 Sekunden. Wenn Sie keinen Timeoutwert angeben, wird der Standardwert verwendet. Ein Wert von `0` gibt an, dass sich für die Verbindung kein Timeout ergibt.  
   
  **-b**  
  (Optional) Gibt an, dass die Befehle in der Skriptdatei als Batch ausgeführt werden. Falls ein Befehl fehlschlägt, wird ein Rollback für den Batch ausgeführt. Einige Befehle können nicht als Batch ausgeführt werden. Diese Befehle werden wie gewohnt ausgeführt. Nur Ausnahmen, die ausgegeben werden und nicht innerhalb des Skripts behandelt werden, führen zu einem Rollback. Wenn das Skript eine Ausnahme behandelt und normalerweise von `Main` zurückgegeben wird, wird ein Commit für den Batch ausgeführt. Wenn Sie diesen Parameter nicht angeben, werden die Befehle ausgeführt, ohne dass ein Batch erstellt wird. Weitere Informationen finden Sie unter [Batching Methods](../report-server-web-service-net-framework-soap-headers/batching-methods.md).  
   
- `-v` *GlobalVar*  
+ `-v` *globalvar*  
  (Optional) Gibt globale Variablen an, die in dem Skript verwendet werden. Wenn das Skript globale Variablen verwendet, müssen Sie dieses Argument angeben. Der angegebene Wert muss für die in der RSS-Datei definierten globalen Variablen gültig sein. Sie müssen eine globale Variable für jedes **-v**-Argument angeben.  
   
  Das Argument `-v` wird in der Befehlszeile angegeben und verwendet, um zur Laufzeit einen Wert für eine globale Variable festzulegen, die in Ihrem Skript definiert ist. Wenn Ihr Skript beispielsweise eine Variable namens *parentFolder*, enthält, können Sie in der Befehlszeile einen Namen für diesen Ordner angeben:  

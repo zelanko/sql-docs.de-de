@@ -12,14 +12,14 @@ f1_keywords:
 - "10530"
 ms.assetid: 3c5eb1c5-d40a-424f-aa7c-43b112f42dec
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3553a338bf1d5a9263d1d4eadc5975784517a559
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 8d3006469ef9b9d84fcbbff1a05339930134dbc6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192090"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018172"
 ---
 # <a name="map-embedded-point-properties-dialog-box-marker"></a>Eigenschaften für eingebettete Punkte der Karte (Dialogfeld), Marker
   Wählen Sie im Dialogfeld **Eigenschaften für eingebettete Punkte** den Eintrag **Marker** aus, um Markertyp- und Markergrößenoptionen für die folgenden Elemente zu ändern:  
@@ -30,7 +30,7 @@ ms.locfileid: "48192090"
   
  Weitere Informationen finden Sie unter [Ändern der Kartenlegenden, Farbskala und zugeordneten Regeln &#40;Berichts-Generator und SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Markertyp**  
  Geben Sie den Markertyp an. Der Standardwert ist `Circle`.  
   

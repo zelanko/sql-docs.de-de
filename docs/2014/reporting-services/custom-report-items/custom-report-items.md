@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 64dcaf2c-1af5-4937-8ff7-98f1ec3b367e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b5699ed160d55c099ccc4361b6f5253ddac705cc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 162ec67283142da27f3afb1aa4f591a232177ac3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362422"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017942"
 ---
 # <a name="custom-report-items"></a>Custom Report Items
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält eine komplexe Sammlung von Tools für die Erstellung und Veröffentlichung von Unternehmensberichten, für die Verwaltung der Zugriffsrechte und Abonnements und die Erweiterung der Berichtsfunktionen durch eine umfassende API. Die Berichte werden mit der XML-Sprache RDL (Report Definition Language) definiert. RDL verfügt über einen Satz von Anweisungen, die Layout, Abfrageinformationen und Elementtypen eines Berichts beschreiben. Es ist möglich, RDL durch das Schreiben eines benutzerdefinierten Berichtselements zu erweitern. Das benutzerdefinierte Berichtselement besteht aus einer Laufzeitkomponente, die vom Berichtsprozessor zur Laufzeit aufgerufen wird, und einer Entwurfszeitkomponente, die das benutzerdefinierte Berichtselement im Berichts-Designer zur Verfügung stellt.  
@@ -46,7 +46,7 @@ ms.locfileid: "53362422"
  [Creating a Custom Report Item Design-Time Component (Erstellen einer Entwurfszeitkomponente für ein benutzerdefiniertes Berichtselement)](creating-a-custom-report-item-design-time-component.md)  
  Beschreibt, wie eine benutzerdefinierte Entwurfszeitkomponente für ein Berichtselement erstellt wird.  
   
- [So wird es gemacht: Bereitstellen eines benutzerdefinierten Berichtselements](how-to-deploy-a-custom-report-item.md)  
+ [Vorgehensweise: Bereitstellen eines benutzerdefinierten Berichtselements](how-to-deploy-a-custom-report-item.md)  
  Beschreibt, wie ein benutzerdefiniertes Berichtselement angewendet wird.  
   
  [Custom Report Item Class Libraries (Klassenbibliotheken für ein benutzerdefiniertes Berichtselement)](custom-report-item-class-libraries.md)  

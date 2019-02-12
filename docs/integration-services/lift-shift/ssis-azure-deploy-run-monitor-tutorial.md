@@ -1,7 +1,7 @@
 ---
 title: Bereitstellen und Ausführen von SSIS-Paketen in Azure | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie ein SSIS-Projekt (SQL Server Integration Services) für den SSIS-Katalog auf einer Azure SQL-Datenbank bereitstellen und ein Paket ausführen.
-ms.date: 5/22/2018
+ms.date: 05/22/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -11,12 +11,12 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 11a429ef4dec41fa316831ae38a76e4a7998d558
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 96a93c846fa2d958343d0fd3913e5710bd79e628
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326131"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019511"
 ---
 # <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>Lernprogramm: Bereitstellen und Ausführen eines SSIS-Pakets in Azure
 In diesem Tutorial wird gezeigt, wie ein SSIS-Projekt für den SSIS-Katalog in einer Azure SQL-Datenbank bereitgestellt wird, ein Paket in Azure SSIS Integration Runtime ausgeführt wird und das ausgeführte Paket überwacht wird.

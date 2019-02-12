@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3e0e860a-afe9-47ce-ae6a-f8c7ca26494f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2e031e0e1dacc072308dbec80675a2bef8cc3350
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 42366a4163fd1a231f6a2a6db3ae092fb3dc20d2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115860"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020392"
 ---
 # <a name="virtualdirectoryreportserver-property-wmi-msreportserverconfigurationsetting"></a>VirtualDirectoryReportServer-Eigenschaft (WMI: MSReportServer_ConfigurationSetting)
   Gibt das virtuelle Verzeichnis für die Berichtsserveranwendung zurück. Schreibgeschützt.  
@@ -34,15 +34,15 @@ public string VirtualDirectoryReportServer;
 ```  
   
 ## <a name="property-values"></a>Eigenschaftswerte  
- Ein `string` , das das virtuelle Verzeichnis enthält.  
+ Ein `string`-Wert, der das virtuelle Verzeichnis enthält  
   
 ## <a name="example-code"></a>Beispielcode  
- [MSReportServer_ConfigurationSetting Class (MSReportServer_ConfigurationSetting-Klasse)](msreportserver-configurationsetting-class.md)  
+ [MSReportServer_ConfigurationSetting-Klasse](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Anforderungen  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](msreportserver-configurationsetting-members.md)  
+ [MSReportServer_ConfigurationSetting-Member](msreportserver-configurationsetting-members.md)  
   
   

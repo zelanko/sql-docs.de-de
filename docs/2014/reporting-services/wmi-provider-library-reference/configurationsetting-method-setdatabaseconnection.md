@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: c040aa78-92b8-41e4-9ae2-eff9fcdddc5b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 08c490fd6643d8d440444d46d9ac19673d847938
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 02c15c6336171bb324f610b42c97559bcfb0d44b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518627"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026621"
 ---
 # <a name="setdatabaseconnection-method-wmi-msreportserverconfigurationsetting"></a>SetDatabaseConnection-Methode (WMI: MSReportServer_ConfigurationSetting)
   Legt die Berichtsserver-Datenbankverbindung auf eine bestimmte Berichtsserver-Datenbank fest  
@@ -82,7 +82,7 @@ public void BackupEncryptionKey(string Server,
   
  Die „SetDatabaseConnection“-Methode überprüft nicht, ob der Berichtsserver mithilfe der angegebenen Daten eine Verbindung mit der Berichtsserver-Datenbank herstellen kann.  
   
- Wenn zum ersten Mal festgelegt wird, basiert die ConnectionPoolSize-Eigenschaft festgelegt ist, folgende Prozessoren: ConnectionPoolSize = #Processors * 75.  
+ Wenn die ConnectionPoolSize-Eigenschaft zum ersten Mal festgelegt wird, werden folgende Prozessoren zugrunde gelegt: ConnectionPoolSize = #Processors * 75.  
   
  Die „SetDatabaseConnection“-Methode erteilt den angegebenen Konten keine Berechtigungen. Sie müssen die [GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md) -Methode für jedes Konto aufrufen, das Zugriff auf die Berichtsserver-Datenbank erfordert, und dann das resultierende Skript ausführen.  
   

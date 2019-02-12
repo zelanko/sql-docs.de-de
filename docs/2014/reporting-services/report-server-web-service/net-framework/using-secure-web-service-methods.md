@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 87329299-c2ea-4517-9148-d855726768a9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 84dd6a3dcf6ca60a2f0af92064777ae5e204c31d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bedd007e7dabe1f96ac9f5fc22f565952c99d728
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074444"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018861"
 ---
 # <a name="using-secure-web-service-methods"></a>Verwenden von sicheren Webdienstmethoden
   Es kann sein, dass für bestimmte Berichtsserver-Webdienstmethoden eine sichere Verbindung erforderlich ist, wenn Sie diese aufrufen. Die Methoden, die eine sichere Verbindung benötigen, werden von der Einstellung `SecureConnectionLevel` in der Datei RSReportServer.config bestimmt. Der Wert der Einstellung ist ein ganzzahliger Wert im gültigen Bereich von 0 und höher. In der folgenden Tabelle werden diese Werte beschrieben.  

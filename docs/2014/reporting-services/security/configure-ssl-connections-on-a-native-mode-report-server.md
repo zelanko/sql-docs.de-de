@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d08af66f091793bd0d317a43fb7d1f75fe2c3b0b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 6f557d777941e6c5da6d099c0121a5ff5498afc3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350536"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017771"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Konfigurieren von SSL-Verbindungen auf einem Berichtsserver im einheitlichen Modus
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Im einheitlichen Modus wird der HTTP-SSL-Dienst (Secure Sockets Layer, SSL) verwendet, um verschlüsselte Verbindungen mit einem Berichtsserver herzustellen. Wenn in einem lokalen Zertifikatspeicher auf dem Berichtsservercomputer eine Zertifikatsdatei (CER-Datei) installiert ist, können Sie das Zertifikat an eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -URL-Reservierung binden, um Berichtsserververbindungen über einen verschlüsselten Kanal zu unterstützen.  

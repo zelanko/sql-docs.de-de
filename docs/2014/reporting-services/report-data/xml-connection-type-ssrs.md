@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 24804b6233e701ef0c27f113a294987156b6174c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 1be357ab864a0d7249a2f9d4529591813b4a01ed
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363372"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028011"
 ---
 # <a name="xml-connection-type-ssrs"></a>XML-Verbindungstyp (SSRS)
   Wenn Sie Daten aus einer XML-Datenquelle in den Bericht einschließen möchten, benötigen Sie ein Dataset, das auf einer Berichtsdatenquelle vom Typ "XML" basiert. Dieser integrierte Datenquellentyp basiert auf der XML-Datenerweiterung. Verwenden Sie diesen Datenquellentyp, um eine Verbindung mit XML-Dokumenten, Webdiensten oder in die Abfrage eingebetteten XML-Daten herzustellen und Daten abzurufen.  
@@ -110,7 +110,7 @@ ms.locfileid: "53363372"
   
  Weitere Informationen zur Abfragesyntax finden Sie unter [XML-Abfragesyntax für XML-Berichtsdaten &#40;SSRS&#41;](report-data-ssrs.md) in der Dokumentation zu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[Onlinedokumentation](https://go.microsoft.com/fwlink/?linkid=121312) auf msdn.microsoft.com.  
   
- Beispiele finden Sie in [Reporting Services: Verwenden von XML- und Webdienstdatenquellen](https://go.microsoft.com/fwlink/?LinkId=81654).  
+ Beispiele finden Sie unter [Reporting Services: Verwenden von XML und Webdienst-Datenquellen](https://go.microsoft.com/fwlink/?LinkId=81654).  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>Anforderungen für das Abrufen von XML-Webdienstdaten  
  Die XML-Datenverarbeitungserweiterung kann das Schema nicht selbstständig erkennen. Daher müssen Sie über eine Möglichkeit verfügen, die SOAP-Methoden zu ermitteln, mit denen die gewünschten Daten abgerufen werden können. Sie müssen außerdem wissen, welches Adressierungsschema oder welchen Namespace der Webdienst für seine Daten verwendet.  

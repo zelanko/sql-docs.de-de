@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ebfb4834-5445-480c-9a51-6868c60308af
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 33110a98ff97f01eff18bdc1281798293a6324cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: abe1a88ef57a90abd836df2e80e1c2634b859386
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078680"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022611"
 ---
 # <a name="report-history-methods"></a>Berichtsverlaufsmethoden
   Mit diesen Methoden können Sie Momentaufnahmen zum Elementverlauf erstellen und verwalten.  

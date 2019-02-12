@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e5ec066e467ba83c33b95d46b4ed3cc593ecc551
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7534c317f2e690e0766299961f4f21d35a674702
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220310"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020645"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>Berichte, Berichtsteile und Berichtsdefinitionen (Berichts-Generator und SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet eine Vielzahl von Begriffen zum Beschreiben eines Berichts in verschiedenen Zuständen, darunter Anfangsdefinition, veröffentlichter Bericht und angezeigter Bericht, für den Benutzer angezeigt wird.  
+  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wird eine Vielzahl von Begriffen verwendet, mit denen die verschiedenen Zustände eines Berichts beschrieben werden, darunter Anfangsdefinition, veröffentlichter Bericht und angezeigter Bericht, wie der Benutzer ihn sieht.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -64,7 +64,7 @@ ms.locfileid: "48220310"
  Das Standardrenderingformat für Berichte ist HTML 4.0. Außer in HTML können Berichte in einer Vielzahl von Dateiformaten gerendert werden, z. B. Excel, Word, XML, PDF, TIFF und CSV. Wie veröffentlichte Berichte können auch gerenderte Berichte nicht bearbeitet oder wieder auf einem Berichtsserver gespeichert werden. Weitere Informationen finden Sie unter [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Berichtserstellungskonzepte &#40;Berichts-Generator und SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Berichterstellungskonzepte &#40;Berichts-Generator und SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
  [Berichts-Generator in SQLServer 2014](../report-builder/report-builder-in-sql-server-2016.md)   
  [Installieren und Deinstallieren von Berichts-Generator-Unterstützung](../install-uninstall-and-report-builder-support.md)   
  [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2f4f0217fd3941e236e132487041020f0c1ec3f2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: e062d516b929f436c6a255a9dfb28e69568133e5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371342"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025141"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Aktivieren von Reporting Services-Ereignissen für das SharePoint-Ablaufverfolgungsprotokoll (ULS)
   Ab [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]schreiben [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Server im SharePoint-Modus [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Ereignisse in die Ablaufverfolgung des SharePoint Unified Logging Service (ULS). [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -spezifische Kategorien sind auf der Seite Überwachung der SharePoint-Zentraladministration verfügbar.  

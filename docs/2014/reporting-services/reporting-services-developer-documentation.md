@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: d8afa405-1012-4349-a72d-e10d94f8453d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 16c0f4451b66b0aa0c004476a4dc332acf973a1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 97d59933a1df11123b153e11f7ae75d926829dcb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116009"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023441"
 ---
 # <a name="developer39s-guide-reporting-services"></a>Entwickler&#39;Benutzerhandbuch (Reporting Services)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] enthält mehrere Programmierschnittstellen, die Sie in Ihre eigenen Anwendungen einbauen können. Sie können die vorhandenen Funktionen und Funktionen von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] verwenden, um benutzerdefinierte Berichts- und Verwaltungstools in Websites und Windows-Anwendungen zu erstellen, oder Sie können die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Plattform erweitern.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] enthält mehrere Programmierschnittstellen, die Sie in Ihre eigenen Anwendungen einbauen können. Sie können die vorhandenen Funktionen und Funktionen von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] verwenden, um benutzerdefinierte Berichts- und Verwaltungstools in Websites und Windows-Anwendungen zu erstellen, oder Sie können die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Plattform erweitern.  
   
- Das Erweitern der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Plattform umfasst die Erstellung neuer Komponenten und Ressourcen, die für den Datenzugriff, die Berichtsübermittlung und vieles mehr verwendet werden können. Sie können diese Komponenten und Ressourcen in den Unternehmen vermarkten, die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in ihrer Organisation verwenden.  
+ Das Erweitern der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Plattform umfasst die Erstellung neuer Komponenten und Ressourcen, die für den Datenzugriff, die Berichtsübermittlung und vieles mehr verwendet werden können. Sie können diese Komponenten und Ressourcen in den Unternehmen vermarkten, die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in ihrer Organisation verwenden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Integrating Reporting Services into Applications (Integration von Reporting Services in Anwendungen)](application-integration/integrating-reporting-services-into-applications.md)  
@@ -39,7 +39,7 @@ ms.locfileid: "48116009"
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] unterstützt einen vollständige Satz URL-basierter Anforderungen, über die Sie schnell und problemlos auf die Berichtsnavigation und -anzeige zugreifen können. Sie können diese Technologie zusammen mit dem Berichtsserver-Webdienst verwenden, um eine vollständige Berichtslösung in Ihre vorhandenen Geschäftsanwendungen zu integrieren. Der URL-Zugriff ist dann besonders sinnvoll, wenn Sie Berichte als Teil eines Internetportals integrieren oder wenn Sie Berichte über einen Webbrowser anzeigen.  
   
  [Reporting Services Extensions (Erweiterungen für Reporting Services)](extensions/reporting-services-extensions.md)  
- Die modulare Architektur von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ermöglicht Erweiterungen. Eine verwaltete Code-API steht zur Verfügung, sodass Sie problemlos Erweiterungen entwickeln, installieren und verwalten können, die von vielen [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Komponenten benötigt werden. Sie können Assemblys erstellen, indem Sie [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] verwenden und neue [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Funktionen für das Rendering, die Sicherheit, die Übermittlung und die Datenverarbeitung hinzufügen, um den wachsenden betrieblichen Anforderungen Ihres Unternehmens gerecht zu werden.  
+ Die modulare Architektur von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ermöglicht Erweiterungen. Eine verwaltete Code-API steht zur Verfügung, sodass Sie problemlos Erweiterungen entwickeln, installieren und verwalten können, die von vielen [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Komponenten benötigt werden. Sie können Assemblys erstellen, indem Sie [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] verwenden und neue [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Funktionen für das Rendering, die Sicherheit, die Übermittlung und die Datenverarbeitung hinzufügen, um den wachsenden betrieblichen Anforderungen Ihres Unternehmens gerecht zu werden.  
   
  [Custom Report Items (Benutzerdefinierte Berichtselemente)](custom-report-items/custom-report-items.md)  
  Beschreibt, wie Sie benutzerdefinierte Elemente erstellen, um Funktionen zu RDL hinzuzufügen, oder wie Sie vorhandene Steuerelemente erweitern.  
@@ -48,7 +48,7 @@ ms.locfileid: "48116009"
  Beschreibt, wie benutzerdefinierte Assemblys mit Berichten verwendet werden, indem Codeverweise in die Berichtsdefinition aufgenommen werden.  
   
  [Access the Reporting Services WMI Provider (Zugreifen auf den Reporting Services-WMI-Anbieter)](tools/access-the-reporting-services-wmi-provider.md)  
- Beschreibt, wie Sie den [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-WMI-Anbieter zum Verwalten von Berichtsserverbereitstellungen verwenden.  
+ Beschreibt, wie Sie den [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -WMI-Anbieter zum Verwalten von Berichtsserverbereitstellungen verwenden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   

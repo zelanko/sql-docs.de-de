@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 76975f2eba0423c6fd36a764663b9df8d6ae921c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fe263ce5008c98fa620aa54baad10490529aed0e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082550"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018082"
 ---
 # <a name="using-url-access-in-a-windows-application"></a>Verwenden des URL-Zugriffs in einer Windows-Anwendung
   Obwohl der URL-Zugriff auf einen Berichtsserver für eine Webumgebung optimiert ist, können Sie mit dem URL-Zugriff auch [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichte in eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anwendung integrieren. Aber der URL-Zugriff, der auch Windows Forms umfasst, erfordert trotzdem die Verwendung der Webbrowsertechnologie. Sie können folgende Integrationsszenarien mit dem URL-Zugriff und Windows Forms verwenden:  

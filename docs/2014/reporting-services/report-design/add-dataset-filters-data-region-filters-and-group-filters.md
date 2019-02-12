@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 94095fd1879b4f4343a7a65dfd9d018ca355084f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 75136807b3bf87d143ef037dcdf4c865f73a1f48
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154220"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026178"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern (Berichts-Generator und SSRS)
   In einem Bericht ist ein Filter Teil eines Datasets, eines Datenbereichs oder einer Datenbereichsgruppe, den Sie erstellen, um die im Bericht verwendeten Daten zu beschränken. Mithilfe von Filtern können Berichtsdaten gesteuert werden, wenn es nicht möglich ist, die Datasetabfrage zu ändern, z. B. bei Verwendung eines freigegebenen Datasets.  
@@ -84,11 +84,11 @@ ms.locfileid: "48154220"
 |--------------|------------|  
 |**Equal, Like, NotEqual, GreaterThan, GreaterThanOrEqual, LessThan, LessThanOrEqual**|Vergleicht den Ausdruck mit einem Wert.|  
 |**TopN, BottomN**|Vergleicht den Ausdruck mit einem `Integer`-Wert.|  
-|**TopPercent, BottomPercent**|Vergleicht den Ausdruck mit einem `Integer` oder `Float` Wert.|  
+|**TopPercent, BottomPercent**|Vergleicht den Ausdruck mit einem `Integer`- oder einem `Float`-Wert.|  
 |**Zwischen**|Prüft, ob der Ausdruck zwischen zwei Werten (einschließlich) liegt.|  
 |**In**|Prüft, ob der Ausdruck in einem Satz von Werten enthalten ist.|  
   
-### <a name="value"></a>value  
+### <a name="value"></a>Wert  
  Der Value-Ausdruck legt den abschließenden Teil der Filtergleichung fest. Der Berichtsprozessor konvertiert den ausgewerteten Ausdruck in den festgelegten Datentyp und wertet dann die gesamte Filtergleichung aus, um zu ermitteln, ob die unter Ausdruck angegebenen Daten den Filter passieren dürfen.  
   
  Wenn der Ausdruck in einen Datentyp konvertiert werden soll, bei dem es sich nicht um einen Standard-CLR-Datentyp handelt, müssen Sie den Ausdruck so ändern, dass explizit in einen Datentyp konvertiert wird. Sie können hierfür die im Dialogfeld **Ausdruck** unter **Allgemeine Funktionen**, **Konvertierung**aufgelisteten Konvertierungsfunktionen verwenden. Beispiel: Das Feld `ListPrice` repräsentiert Daten, die mit einem **money** -Datentyp in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquelle gespeichert sind. Die Datenverarbeitungserweiterung gibt den Feldwert als <xref:System.Decimal> -Datentyp zurück. Wenn Sie einen Filter festlegen möchten, durch den nur Werte über **€ 50000,00** in der Berichtswährung verwendet werden, konvertieren Sie den Wert mit dem Ausdruck `=CDec(50000.00)`in einen Dezimalwert.  

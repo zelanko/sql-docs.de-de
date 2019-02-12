@@ -1,22 +1,21 @@
 ---
-title: 'Lektion 2: Hinzufügen von Miningmodellen auf die Bike Buyer-Miningstruktur | Microsoft-Dokumentation'
+title: 'Lektion 2: Hinzufügen von Miningmodellen zur Bike Buyer-Miningstruktur | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 03fe44c5-6452-4ed0-95f6-9682670c0f52
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7bcc33e35ff0cdfcd46a73f939083ea23091673d
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+manager: kfile
+ms.openlocfilehash: de65fb7a85154f607cd8f266faec4621cdc41476
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49462046"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025221"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>Lektion 2: Hinzufügen von Miningmodellen zur Bike Buyer-Miningstruktur
   In dieser Lektion fügen Sie zwei Miningmodelle der Bike Buyer-Miningstruktur, die Sie erstellt [Lektion 1: Erstellen der Bike Buyer-Miningstruktur](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md). Diese Miningmodelle ermöglichen es Ihnen, mit einem Modell die Daten zu prüfen und mit einem anderen Vorhersagen zu erstellen.  

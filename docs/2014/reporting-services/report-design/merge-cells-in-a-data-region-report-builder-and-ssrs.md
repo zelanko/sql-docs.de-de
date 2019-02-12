@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 43551300-89b2-4f4e-af09-69084324afaf
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7b9d02b37b45d920e87f25c6f700401bf83be50b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 87a6aae22985b462c65e229ffe607a33748ddad5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162545"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025996"
 ---
 # <a name="merge-cells-in-a-data-region-report-builder-and-ssrs"></a>Zusammenführen von Zellen in einem Datenbereich (Berichts-Generator und SSRS)
   Sie können Zellen in einem Datenbereich zusammenführen, um Zellen zu kombinieren, die Darstellung des Datenbereichs zu verbessern oder umfassende Bezeichnungen für Spaltengruppen und Zeilengruppen zur Verfügung zu stellen.  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: af3216db3e2e281448a0fd371d67b475fafd5af0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: b1b083ab1da347d3aa90b1eff8480b14bac8350c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371975"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027537"
 ---
 # <a name="oracle-connection-type-ssrs"></a>Oracle-Verbindungstyp (SSRS)
   Wenn Sie Daten aus einer Oracle-Datenbank im Bericht verwenden möchten, benötigen Sie ein Dataset, das auf einer Berichtsdatenquelle vom Typ "Oracle" basiert. Dieser integrierte Datenquellentyp basiert auf dem verwalteten .NET Framework-Anbieter für Oracle und erfordert eine Oracle-Clientsoftwarekomponente.  

@@ -13,27 +13,27 @@ helpviewer_keywords:
 ms.assetid: bb5f3566-f033-4470-be87-1f52fb7a4ab6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f9a7213b59e435f797609a7abb7fcd560c4890e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f287e26bac61f2c29b1a60d72f66f4fd32bca966
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116202"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025751"
 ---
 # <a name="excel-device-information-settings"></a>Geräteinformationseinstellungen für Excel
   In der folgenden Tabelle werden die Geräteinformationseinstellungen zum Rendern in das Format [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] aufgeführt.  
   
-|Einstellung|value|  
+|Einstellung|Wert|  
 |-------------|-----------|  
-|**OmitDocumentMap**|Gibt an, ob die Dokumentstruktur für Berichte weggelassen werden soll, die sie unterstützen. Der Standardwert lautet `false`.|  
-|**OmitFormulas**|Gibt an, ob Formeln aus dem gerenderten Bericht weggelassen werden sollen. Der Standardwert lautet `false`.|  
-|`SimplePageHeade`RS|Gibt an, ob der Seitenkopf des Berichts in den Excel-Seitenkopf gerendert wird. Der Wert `false` gibt an, dass der Seitenkopf in die erste Zeile des Arbeitsblatts gerendert wird. Der Standardwert lautet `false`.|  
+|**OmitDocumentMap**|Gibt an, ob die Dokumentstruktur für Berichte weggelassen werden soll, die sie unterstützen. Der Standardwert ist `false`.|  
+|**OmitFormulas**|Gibt an, ob Formeln aus dem gerenderten Bericht weggelassen werden sollen. Der Standardwert ist `false`.|  
+|`SimplePageHeade`rs|Gibt an, ob der Seitenkopf des Berichts in den Excel-Seitenkopf gerendert wird. Der Wert `false` gibt an, dass der Seitenkopf in die erste Zeile des Arbeitsblatts gerendert wird. Der Standardwert ist `false`.|  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [Übergeben von Geräteinformationseinstellungen an Renderingerweiterungen](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Anpassen der Parameter für Renderingerweiterungen in der Datei „RSReportServer.config“](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Technische Referenz (SSRS)](../../2014/reporting-services/technical-reference-ssrs.md)  
+ [Anpassen der Parameter für Renderingerweiterungen in der Datei RSReportServer.config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Technische Referenz &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

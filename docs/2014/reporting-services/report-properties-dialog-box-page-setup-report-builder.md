@@ -11,19 +11,19 @@ f1_keywords:
 - "10080"
 ms.assetid: eb3b5d01-7b82-4808-a58b-9e096742f8c6
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 496b94444e79666c0ce57904f5ef6d7da81ed26f
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: c42d509f3ef228b08555c26f5fdfc6ddd62a0c8d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905080"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022131"
 ---
 # <a name="report-properties-dialog-box-page-setup-report-builder"></a>Berichtseigenschaften (Dialogfeld), Seite einrichten (Berichts-Generator)
   Wählen Sie **Seiteneinrichtung** auf die **Berichtseigenschaften**, im Dialogfeld, um Seitenoptionen für den gesamten Bericht festzulegen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Zoll**  
  Gibt das Seitenformat in Zoll an. Standardmäßig wird durch die Gebietsschemaeinstellungen bestimmt, welche Seiteneinheit ausgewählt ist.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48905080"
  **Top**  
  Legt den Abstand zwischen dem oberen Rand des Berichts und dem oberen Rand der ersten Zeile des Berichts fest.  
   
- **nach unten**  
+ **Bottom**  
  Legt den Abstand zwischen dem unteren Rand des Berichts und dem unteren Rand der letzten Zeile des Berichts fest.  
   
  **Links**  

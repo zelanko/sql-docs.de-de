@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 846e86d0-fbbb-426c-97f9-f179cd42b390
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 335300f5b8e7f91c3595cdb26cb531bb589c782a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ca5f2b01894818680b6b760a1f2b8a342d43d8ce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085620"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022895"
 ---
 # <a name="configuration-and-administration-of-a-report-server-reporting-services-sharepoint-mode"></a>Konfiguration und Verwaltung eines Berichtsservers (SharePoint-Modus von Reporting Services)
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ist eine serverbasierte Berichtsplattform, die eine Vielzahl von bereit zu bedienende Tools und Dienste können Sie das Erstellen, bereitstellen und Verwalten von Berichten für Ihre Organisation sowie Programmierfunktionen, mit denen Sie zum Erweitern und anpassen, die Berichte bereitstellt die Funktionalität. Sie können die Berichtsumgebung in ein SharePoint-Produkt integrieren, um die Vorteile der Zusammenarbeitsumgebung zu nutzen, die von SharePoint-Websites bereitgestellt wird.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ist eine serverbasierte Berichtsplattform. Sie bietet zahlreiche einsatzbereite Tools und Dienste, die Ihnen dabei helfen, Berichte für Ihr Unternehmen zu erstellen, bereitzustellen und zu verwalten. Darüber hinaus ermöglichen Ihnen die Programmierfunktionen eine Erweiterung und individuelle Anpassung Ihrer Funktionen zur Berichterstellung. Sie können die Berichtsumgebung in ein SharePoint-Produkt integrieren, um die Vorteile der Zusammenarbeitsumgebung zu nutzen, die von SharePoint-Websites bereitgestellt wird.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  Die folgenden Abschnitte enthalten Informationen zu Konzepten, Bereitstellungsszenarios, Verfahren usw. zum Integrieren der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Umgebung in ein SharePoint-Produkt oder eine SharePoint-Technologie:  

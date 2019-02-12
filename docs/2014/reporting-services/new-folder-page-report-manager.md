@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9212fc68-f0a6-4f79-83c1-84baf4d1957e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fbe0e3b1226eca1c739d9ddb2abeff594d36793e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b4af24352b24741fffe53f9eae6675a9a43b4595
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053590"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020587"
 ---
 # <a name="new-folder-page-report-manager"></a>Neuer Ordner (Seite) (Berichts-Manager)
   Auf der Seite Neuer Ordner können Sie einen neuen Ordner in der Ordnerhierarchie des Berichtsservers erstellen. Der erstellte Ordner ist ein virtueller Ordner, der in einer Berichtsserver-Datenbank gespeichert wird. Der Ordner wird nicht im Dateisystem des Computers erstellt.  
@@ -34,7 +34,7 @@ ms.locfileid: "48053590"
   
 2.  Klicken Sie auf der Symbolleiste auf **Neuer Ordner**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name**  
  Geben Sie den Namen des Ordners an. Der Name muss mindestens ein alphanumerisches Zeichen enthalten. Er kann auch Leerzeichen und bestimmte Sonderzeichen enthalten. Folgende Zeichen können nicht beim Angeben eines Namens verwendet werden: ; ? : \@ & = +, $ / * \< > | "oder / beim Angeben eines Namens.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48053590"
  [Erstellen, löschen oder Ändern eines Ordners &#40;Berichts-Manager&#41;](report-server/create-delete-or-modify-a-folder-report-manager.md)   
  [Allgemeine Eigenschaftenseite, Ordner &#40;Berichts-Manager&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Inhalt der Seite &#40;Berichts-Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Inhalt &#40;Seite, Berichts-Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Berichts-Manager-F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
  [Allgemeine Eigenschaftenseite, Ordner &#40;Berichts-Manager&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)  
   

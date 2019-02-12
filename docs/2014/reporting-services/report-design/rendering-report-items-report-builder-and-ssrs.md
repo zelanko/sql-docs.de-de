@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 2330060b0a659715f8a8b80c3d2e1fbe24e93d04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1b1bed586c6ec2878fd2a63f7d9ca8bce46bab53
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050898"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017700"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>Rendern von Berichtselementen (Berichts-Generator und SSRS)
   Die Zahl, die Größe und der Ort der Berichtselemente beeinflussen, wie die Renderer den Text des Berichts paginieren. Unten finden Sie eine Beschreibung zum Rendering verschiedener Berichtselemente.  
@@ -78,7 +78,7 @@ ms.locfileid: "48050898"
   
 -   Wiederholte Spaltenkopfzeilen und Zeilenheader.  
   
-     Kopfzeilen haben Vorrang gegenüber Fußzeilen. Innere wiederholte Gruppen haben Priorität über äußere Gruppen. Elemente mit den `RepeatWith` festgelegt wird, die näher an die Zielregion für die Daten haben Priorität über Elemente, die weiter vom Datenbereich entfernt liegen.  
+     Kopfzeilen haben Vorrang gegenüber Fußzeilen. Innere wiederholte Gruppen haben Priorität über äußere Gruppen. Elemente mit der Eigenschaft `RepeatWith`, die näher am Zieldatenbereich liegen, haben Priorität über Elemente, die weiter vom Datenbereich entfernt liegen.  
   
 -   Kleine Berichtselemente, z. B. Textfelder oder Rechtecke, mit einer expliziten KeepTogether-Eigenschaft auf festgelegt `true`.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "48050898"
   
 ## <a name="see-also"></a>Siehe auch  
  [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Renderingverhalten (Berichts-Generator und SSRS)](rendering-behaviors-report-builder-and-ssrs.md)   
+ [Renderingverhalten &#40;Berichts-Generator und SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)   
  [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Listen (Berichts-Generator und SSRS)](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   

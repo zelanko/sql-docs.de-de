@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 40cf4da099d5b9a9055b6fcd266c1f6169d8aaee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 52d0771d07efddd949961761d90f241f146c0af4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086910"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025831"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services-Berichtsserver (einheitlicher Modus)
   Ein für den einheitlichen Modus konfigurierter Berichtsserver läuft als Anwendungsserver, der alle Verarbeitungs- und Verwaltungsfunktionen ausschließlich über [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Komponenten bereitstellt.  
@@ -78,7 +78,7 @@ ms.locfileid: "48086910"
   
 -   Ausgleichen der Anforderungen hinsichtlich der Verarbeitung von Berichten auf dem Server und Angeben der Berichte, die bei Bedarf ausgeführt werden bzw. die aus dem Cache geladen werden.  
   
- Die Berechtigung, Verwaltungsaufgaben auszuführen, wird durch zwei vordefinierte Rollen bereitgestellt: **Systemadministrator** und **Inhalts-Manager**. Eine effektive Verwaltung des Berichtsserverinhalts erfordert, dass Sie beiden Rollen zugewiesen sind. Weitere Informationen zu diesen vordefinierten Rollen finden Sie unter [Rollen und Berechtigungen (Reporting Services)](../security/roles-and-permissions-reporting-services.md).  
+ Berechtigung zum Ausführen von Verwaltungsaufgaben werden durch zwei vordefinierte Rollen bereitgestellt: **Systemadministrator** und **Inhalts-Manager**. Eine effektive Verwaltung des Berichtsserverinhalts erfordert, dass Sie beiden Rollen zugewiesen sind. Weitere Informationen zu diesen vordefinierten Rollen finden Sie unter [Rollen und Berechtigungen (Reporting Services)](../security/roles-and-permissions-reporting-services.md).  
   
  Tools zum Verwalten von Berichtsserverinhalt schließen [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] bzw. den Berichts-Manager ein. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ermöglicht es Ihnen, Standards festzulegen und Funktionen zu aktivieren. Der Berichts-Manager wird verwendet, um Benutzern Zugriff auf Berichtsserverelemente und -vorgänge zu gewähren und Berichte und andere Inhaltstypen sowie alle freigegebenen Elemente und Berichtsverteilungsfunktionen anzuzeigen und zu verwenden.  
   
@@ -109,6 +109,6 @@ ms.locfileid: "48086910"
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren und Verwalten eines Berichtsservers &#40;einheitlicher SSRS-Modus&#41;](configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [Troubleshoot a Reporting Services Installation (Problembehandlung für eine Reporting Services-Installation)](../install-windows/troubleshoot-a-reporting-services-installation.md)  
+ [Problembehandlung für eine Reporting Services-Installation](../install-windows/troubleshoot-a-reporting-services-installation.md)  
   
   

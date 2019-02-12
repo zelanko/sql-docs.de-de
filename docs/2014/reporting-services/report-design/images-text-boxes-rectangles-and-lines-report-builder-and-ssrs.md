@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e704f1526fd60ed843c409a9f12d09441d822a9c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ded5827fa476d6d71839d77fd00f56d69e7cd710
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113810"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024191"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>Bilder, Textfelder, Rechtecke und Linien (Berichts-Generator und SSRS)
   Neben Datenbereichen wie Tabellen, Matrizen und Diagrammen werden in Berichten andere Berichtselemente wie Bilder, Textfelder und Rechtecke verwendet, um visuelle Effekte hinzuzufügen, wichtige Informationen hervorzuheben oder verwandte Informationen bereitzustellen. Sie können die Formatierung eines Berichtselements ändern. Sie können z. B. einen Rahmen oder eine Auffüllung hinzufügen, die ursprüngliche Sichtbarkeit oder Richtung ändern oder die genaue Größe oder Position des Elements angeben.  
@@ -35,7 +35,7 @@ ms.locfileid: "48113810"
   
  **Rechtecke** können als grafisches Element oder als Container für andere Berichtselemente verwendet werden. Als grafisches Element verfügt ein Rechteck über die gleichen Eigenschaften wie eine Zeile. Ein Rechteck fungiert als übergeordneter Container für alle enthaltenen Berichtselemente. Durch Platzieren von Berichtselementen in einen übergeordneten Container können Sie besser kontrollieren, wie die Elemente auf jeder Berichtsseite angezeigt werden.  
   
- [Images &#40;Berichts-Generator und SSRS&#41;](images-report-builder-and-ssrs.md)  
+ [Bilder &#40;Berichts-Generator und SSRS&#41;](images-report-builder-and-ssrs.md)  
  Bilder zeigen binäre Bilddaten in einem Bericht an. Sie stellen die Quelle für das Bild bereit. Bei der Quelle kann es sich um einen URL-Verweis auf ein auf einem Webserver gespeichertes Bild, einen Verweis auf eingebettete Bilddaten oder einen Verweis auf binäre Bilddaten in einer Datenbank handeln. Berichts-Generator und Berichts-Designer unterstützen BMP-, JPEG-, GIF- und PNG-Dateien.  
   
 ## <a name="see-also"></a>Siehe auch  

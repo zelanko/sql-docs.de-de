@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 3d1d56e6-a283-44a7-8417-36cb4d2c74d1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 19844f7fccb9e2578169f383b59bb34099de78a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e56037bbabff784ed59f8b579f3b3402d63ccfdb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166330"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032861"
 ---
 # <a name="create-delete-or-modify-a-role-management-studio"></a>Erstellen, Löschen oder Ändern einer Rolle (Management Studio)
   Reporting Services stellt vordefinierte Rollen, die eine Zugriffsebene für einen Berichtsserver definieren, zur Verfügung. Jeder Benutzer bzw. jede Benutzergruppe, die auf den Berichtsserver zugreifen möchte, benötigt hierfür eine Rolle, mit der die ausführbaren Aufgaben beschrieben werden. Rollen werden für den gesamten Berichtsserver definiert. Sie können eine Rollendefinition nicht für bestimmte Bereiche des Berichtsservers abändern oder angeben, dass eine Rolle je nach Zusammenhängen unterschiedlich verwendet werden soll.  
@@ -46,7 +46,7 @@ ms.locfileid: "48166330"
   
      Falls Sie eine Rollendefinition auf Systemebene erstellen, können Sie mit der rechten Maustaste auf **Systemrollen**klicken und anschließend auf **Neue Systemrolle**zeigen.  
   
-4.  Geben Sie einen eindeutigen Namen für die Rolle ein. Der Name muss mindestens ein Zeichen enthalten. Er kann auch Leerzeichen und Sonderzeichen enthalten, er darf jedoch folgende Zeichen nicht enthalten: ; ? : \@ & = +, $ / * \< > | "oder /.  
+4.  Geben Sie einen eindeutigen Namen für die Rolle ein. Der Name muss mindestens ein Zeichen enthalten. Er kann auch Leerzeichen und Sonderzeichen enthalten, er darf jedoch folgende Zeichen nicht enthalten: ; ? : \@ & = + , $ / * \< > | " or /.  
   
 5.  Geben Sie optional eine Beschreibung ein. In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] wird diese Beschreibung nur auf dieser Seite angezeigt. Benutzer, die dieses Element im Berichts-Manager anzeigen, können diese Beschreibung in diesem Tool anzeigen.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "48166330"
   
 ## <a name="see-also"></a>Siehe auch  
  [Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../tools/connect-to-a-report-server-in-management-studio.md)   
- (erstellen-und-Verwaltung-Rolle-assignments.md)   
+ (create-and-manage-role-assignments.md)   
  [Reporting Services in SQL Server Management Studio (SSRS)](../tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

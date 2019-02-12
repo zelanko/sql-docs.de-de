@@ -2,8 +2,8 @@
 title: Sys.dm_pdw_resource_waits (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,14 +13,14 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9be76f5f308213f905224de5ade9b604ec119c30
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 634cded452697c91dfd2ff60635faa7fe1163958
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514652"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027501"
 ---
-# <a name="sysdmpdwresourcewaits-transact-sql"></a>Sys.dm_pdw_resource_waits (Transact-SQL)
+# <a name="sysdmpdwresourcewaits-transact-sql"></a>sys.dm_pdw_resource_waits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Warten Sie, zeigt Informationen für alle Ressourcentypen im [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
@@ -30,7 +30,7 @@ ms.locfileid: "52514652"
 |wait_id|**bigint**|Die Position der Anforderung in der Liste der wartenden.|0-basierte Ordnungszahl. Dies ist in allen Einträgen der Wartevorgang nicht eindeutig.|  
 |session_id|**nvarchar(32)**|ID der Sitzung, in der der Wartezustand aufgetreten ist.|Finden Sie unter Sitzungs-ID in [dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
 |Typ|**nvarchar(255)**|Der Typ des Wartevorgangs, den dieser Eintrag darstellt.|Mögliche Werte:<br /><br /> Verbindung<br /><br /> Parallelität für lokale Abfragen<br /><br /> Parallelität von verteilten Abfragen<br /><br /> DMS-Parallelität<br /><br /> Sicherung der Parallelität|  
-|object_type|**nvarchar(255)**|Der Typ des Objekts, das den Wartevorgang betroffen ist.|Mögliche Werte:<br /><br /> **OBJEKT**<br /><br /> **DATABASE**<br /><br /> **SYSTEM**<br /><br /> **SCHEMA**<br /><br /> **ANWENDUNG**|  
+|object_type|**nvarchar(255)**|Der Typ des Objekts, das den Wartevorgang betroffen ist.|Mögliche Werte:<br /><br /> **OBJECT**<br /><br /> **DATABASE**<br /><br /> **SYSTEM**<br /><br /> **SCHEMA**<br /><br /> **ANWENDUNG**|  
 |object_name|**nvarchar(386)**|Name oder die GUID des angegebenen Objekts, das von den Wartevorgang betroffen war.|Tabellen und Ansichten werden mit den dreiteiligen Namen angezeigt.<br /><br /> Indizes und Statistiken werden mit vierteiligen Namen angezeigt.<br /><br /> Namen, Prinzipale und Datenbanken sind die Zeichenfolgennamen.|  
 |request_id|**nvarchar(32)**|Die ID der Anforderung auf der der Wartezustand aufgetreten ist.|QID Bezeichner der Anforderung.<br /><br /> GUID-Bezeichner für die Anforderungen zum Laden.|  
 |request_time|**datetime**|Der Zeitpunkt, an dem die Sperre oder eine Ressource angefordert wurde.||  
@@ -38,7 +38,7 @@ ms.locfileid: "52514652"
 |state|**nvarchar(50)**|Status des den Wartezustand.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |priority|**int**|Die Priorität des Elements warten.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |concurrency_slots_used|**int**|Anzahl von parallelitätsslots (maximal 32) für diese Anforderung reserviert.|1 – für "smallrc"<br /><br /> 3 – für "mediumrc"<br /><br /> 7 für "largerc"<br /><br /> 22 – für "xlargerc"|  
-|resource_class|**nvarchar(20)**|Die Ressourcenklasse für diese Anforderung.|"Smallrc"<br /><br /> "Mediumrc"<br /><br /> "Largerc"<br /><br /> "Xlargerc"|  
+|resource_class|**nvarchar(20)**|Die Ressourcenklasse für diese Anforderung.|"Smallrc"<br /><br /> MediumRC<br /><br /> LargeRC<br /><br /> XLargeRC|  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Datawarehouse und Parallel Data Warehouse-dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

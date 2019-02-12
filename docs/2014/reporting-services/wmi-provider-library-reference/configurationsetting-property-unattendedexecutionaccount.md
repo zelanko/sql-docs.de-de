@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: ab5203ba-c01e-4020-8619-ee290cf9da07
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 631fb365701436ef0e3531aae07f7d553353d265
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 59148f4664497d96fcf836c8205434d97a2d6dd5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153810"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028481"
 ---
 # <a name="unattendedexecutionaccount-property-wmi-msreportserverconfigurationsetting"></a>UnattendedExecutionAccount-Eigenschaft (WMI: MSReportServer_ConfigurationSetting)
   Gibt das Benutzerkonto zurück, dessen Identität der Berichtsserver bei der unbeaufsichtigten Ausführung von Berichten annimmt. Schreibgeschützt.  
@@ -43,12 +43,12 @@ public string UnattendedExecutionAccount;
  Ein `String`-Objekt, das den Kontonamen darstellt  
   
 ## <a name="example-code"></a>Beispielcode  
- [MSReportServer_ConfigurationSetting Class (MSReportServer_ConfigurationSetting-Klasse)](msreportserver-configurationsetting-class.md)  
+ [MSReportServer_ConfigurationSetting-Klasse](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Anforderungen  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](msreportserver-configurationsetting-members.md)  
+ [MSReportServer_ConfigurationSetting-Member](msreportserver-configurationsetting-members.md)  
   
   

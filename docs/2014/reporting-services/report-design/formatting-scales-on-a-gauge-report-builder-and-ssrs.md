@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3995d85af81e6417e3117c25c1ec06052d60f269
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 36074fe67459cb47f6becfe914fe868baf5d4940
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069000"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021660"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Formatieren von Skalen auf einem Messgerät (Berichts-Generator und SSRS)
   Eine Messgerätskala umfasst den durch einen Mindestwert und einen Höchstwert begrenzten Bereich von Zahlen, der auf dem Messgerät angezeigt wird. Typischerweise enthält eine Messgerätskala Messgerätbezeichnungen und Teilstriche, die das exakte Ablesen des Messgerätzeigers ermöglichen. Eine Messgerätskala ist generell mindestens einem Messgerätzeiger zugeordnet. Sie können mehrere Skalen auf einem Messgerät festlegen.  
@@ -73,7 +73,7 @@ ms.locfileid: "48069000"
   
  ![Skalierungsradius im Bezug auf Messgerätedurchmesser](../media/scaleradiusdiagram.gif "Scale radius relative to gauge diameter")  
   
- Der Startwinkel ist der Drehwinkel (zwischen 0 und 360), bei dem die Skala beginnt. Die Nullposition (0) befindet sich unten im Messgerät, und der Startwinkel wird im Uhrzeigersinn gedreht. Bei einem Startwinkel von 90 Grad wird die Skala an der 9-Uhr-Position begonnen.  
+ Der Startwinkel ist der Drehwinkel (zwischen 0 und 360), bei dem die Skala beginnt. Die Nullposition (0) befindet sich unten im Messgerät, und der Startwinkel wird im Uhrzeigersinn gedreht. Bei einem Startwinkel von 90 Grad wird die Skala an der 9-Uhr-Position begonnen.  
   
  Der Mittelpunktswinkel entspricht der Gradzahl (zwischen 0 und 360), um die die Skala gedreht wird. Bei einem Mittelpunktswinkel von 360 Grad wird eine Skala erzeugt, die einen vollständigen Kreis darstellt. Dies ist hilfreich, wenn Sie ein Messgerät entwerfen möchten, das einer Uhr ähnelt.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48069000"
   
 ## <a name="see-also"></a>Siehe auch  
  [Formatieren von Bereichen auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
- [Formatieren von Zeigern auf einem Messgerät (Berichts-Generator und SSRS)](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+ [Formatieren von Zeigern auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [Formatieren von Achsenbezeichnungen als Datumsangabe oder Währung (Berichts-Generator und SSRS)](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [Formatieren von Achsenbezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Messgeräte &#40;Berichts-Generator und SSRS&#41;](gauges-report-builder-and-ssrs.md)  

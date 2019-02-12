@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2f1da635e524b746bb96d0d19876285c869679e2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: bf9bcf7f96616d4c0ac49fa361a145bc69ec1d55
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395513"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020382"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
   Die Datenbereinigung ist der Prozess der Datenqualitätsanalyse in einer Datenquelle, wobei die Empfehlungen vom System manuell genehmigt/zurückgewiesen werden und dadurch Änderungen an den Daten vorgenommen werden. Datenbereinigung in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) schließt einen computerunterstützten Prozess ein, der analysiert, wie Daten mit den Informationen in einer Wissensdatenbank übereinstimmen, sowie einen interaktiven Prozess, mit dem der Data Steward computerunterstützte Prozessergebnisse anzeigen und ändern kann, um sicherzustellen, dass die Datenbereinigung entsprechend ausgeführt wird.  

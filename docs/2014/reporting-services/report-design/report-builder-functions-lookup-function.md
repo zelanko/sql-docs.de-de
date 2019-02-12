@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 066982863d07cd125b5904e4c7467ffe9da5b107
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: efed574d2fc68fc88d5352b6bb6db09e6cab4076
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217500"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026041"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Lookup-Funktion (Berichts-Generator und SSRS)
   Gibt den ersten übereinstimmenden Wert für den angegebenen Namen aus einem Dataset mit Name-Wert-Paaren zurück.  
@@ -33,24 +33,24 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>Parameter  
  *source_expression*  
- (`Variant`) Ein Ausdruck, der im aktuellen Bereich ausgewertet wird und der den zu suchenden Namen oder Schlüssel angibt. Beispiel: `=Fields!ProdID.Value`.  
+ (`Variant`) Ein Ausdruck, der im aktuellen Bereich ausgewertet wird und der den zu suchenden Namen oder Schlüssel angibt. Beispiel: `=Fields!ProdID.Value`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.  
   
  *destination_expression*  
- (`Variant`) Ein Ausdruck, der für jede Zeile in einem Dataset ausgewertet wird und der den Namen oder den Schlüssel für die Übereinstimmung angibt. Beispiel: `=Fields!ProductID.Value`.  
+ (`Variant`) Ein Ausdruck, der für jede Zeile in einem Dataset ausgewertet wird und der den Namen oder den Schlüssel für die Übereinstimmung angibt. Beispiel: `=Fields!ProductID.Value`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.  
   
  *result_expression*  
- (`Variant`) Ein Ausdruck, der für die Zeile im Dataset ausgewertet wird, in denen *Source_expression* = *Destination_expression*, und den abzurufenden Wert angibt. Beispiel: `=Fields!ProductName.Value`.  
+ (`Variant`) Ein Ausdruck, der für die Zeile im Dataset ausgewertet wird, in denen *Source_expression* = *Destination_expression*, und den abzurufenden Wert angibt. Beispiel: `=Fields!ProductName.Value`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.  
   
  *Dataset (dataset)*  
  Eine Konstante, die den Namen eines Datasets im Bericht angibt. Beispiel: "Products".  
   
 ## <a name="return"></a>Rückgabewert  
- Gibt eine `Variant`, oder `Nothing` , wenn keine Übereinstimmung vorhanden ist.  
+ Gibt einen Wert vom Typ `Variant` zurück; gibt `Nothing` zurück, wenn keine Übereinstimmung vorhanden ist.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwendung `Lookup` zum Abrufen des Werts aus dem angegebenen Dataset für Name/Wert-Paar eine 1: 1 Beziehung vorhanden ist. Beispiel: Für ein ID-Feld in einer Tabelle können Sie das entsprechende Namensfeld mithilfe von `Lookup` aus einem Dataset abrufen, das nicht an den Datenbereich gebunden wird.  
+ Rufen Sie für ein Name-Wert-Paar, für das eine 1:1-Beziehung vorhanden ist, den Wert mithilfe von `Lookup` aus dem angegebenen Dataset ab. Beispiel: Für ein ID-Feld in einer Tabelle können Sie das entsprechende Namensfeld mithilfe von `Lookup` aus einem Dataset abrufen, das nicht an den Datenbereich gebunden wird.  
   
- `Lookup` führt Folgendes aus:  
+ Mit `Lookup` wird Folgendes ausgeführt:  
   
 -   Der Quellausdruck wird im aktuellen Bereich ausgewertet.  
   
@@ -101,6 +101,6 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](expressions-report-builder-and-ssrs.md)   
- [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

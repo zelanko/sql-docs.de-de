@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.dqs.matchingproject.export.f1
 - sql12.dqs.matchingproject.map.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6c39c1c9651872a7e47070cfec400e77fa578a7f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f020f30d651acd8ac9267b510d116af808d9b5e7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512051"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019691"
 ---
 # <a name="run-a-matching-project"></a>Ausführen eines Abgleichsprojekts
   In diesem Thema wird beschrieben, wie ein Datenabgleich in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ausgeführt wird. Der Abgleichsprozess identifiziert anhand von Abgleichsregeln in der Abgleichsrichtlinie Cluster von übereinstimmenden Datensätzen, legt basierend auf einer Survivorship-Regel einen Datensatz von jedem Cluster als Survivor fest und exportiert die Ergebnisse. DQS führt den Abgleichsprozess, auch Deduplizierung genannt, in einem computerunterstützten Prozess aus, Sie erstellen die Abgleichsregeln jedoch interaktiv und wählen die Survivorship-Regel aus mehreren Optionen aus, so dass Sie den Abgleichsprozess selbst steuern können.  
@@ -164,7 +164,7 @@ ms.locfileid: "52512051"
     > [!NOTE]  
     >  Wenn Sie ein Abgleichsprojekt beendet haben und es dann erneut verwenden, verwendet es die Wissensdatenbank in dem Zustand, als es veröffentlicht wurde. Es werden keine Änderungen berücksichtigt, die Sie seit Abschluss des Projekts an der Wissensdatenbank vorgenommen haben. Um die Änderungen oder eine neue Wissensdatenbank zu verwenden, müssen Sie ein neues Abgleichsprojekt erstellen. Wenn Sie jedoch ein Abgleichsprojekt erstellt, aber noch nicht abgeschlossen haben, werden alle an der Abgleichsrichtlinie vorgenommenen und veröffentlichten Änderungen beim Ausführen des Abgleichs in dem Projekt verwendet.  
   
-##  <a name="FollowUp"></a> Zur Nachverfolgung: Nach dem Ausführen eines Abgleichsprojekts  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Ausführen eines Abgleichsprojekts  
  Nachdem Sie ein Abgleichsprojekt ausgeführt haben, können Sie die Abgleichsrichtlinie in der Wissensdatenbank ändern und ein anderes Abgleichsprojekt basierend auf der aktualisierten Abgleichsrichtlinie erstellen und ausführen. Weitere Informationen finden Sie unter [Create a Matching Policy](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Profiler"></a> Registerkarten „Profiler“ und „Ergebnisse“  
@@ -189,7 +189,7 @@ ms.locfileid: "52512051"
   
 -   **Feld**: Der Name des Felds, das in die Zuordnungen eingeschlossen wurde.  
   
--   **Domäne**: Der Name der Domäne, die die dem Feld zugeordnet wurde.  
+-   **Domain**: Der Name der Domäne, die die dem Feld zugeordnet wurde.  
   
 -   **Neue**: Die Anzahl der neuen Übereinstimmungen und ihr prozentualer Anteil am Gesamtwert  
   

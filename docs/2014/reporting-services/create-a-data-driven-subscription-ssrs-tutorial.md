@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d91acd160949d0438c73d21ac3e422f57a3522cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f4122aa579766d80cfac6600753d4a8f8a672ae9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081683"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017912"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Erstellen eines datengesteuerten Abonnements (SSRS-Lernprogramm)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ermöglicht datengesteuerte Abonnements, sodass Sie die Verteilung eines Berichts auf der Basis dynamischer Abonnentendaten anpassen können. Datengesteuerte Abonnements sind für folgende Arten von Szenarios gedacht:  
@@ -34,13 +34,13 @@ ms.locfileid: "48081683"
   
  Dieses Lernprogramm ist in drei Lektionen aufgeteilt:  
   
- [Lesson 1: Creating a Sample Subscriber Database (Lektion 1: Erstellen einer Beispiel-Abonnentendatenbank)](lesson-1-creating-a-sample-subscriber-database.md)  
+ [Lektion 1: Erstellen einer Beispiel-Abonnentendatenbank](lesson-1-creating-a-sample-subscriber-database.md)  
  In dieser Lektion erfahren Sie, wie eine lokale [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbank erstellt wird, die Abonnenteninformationen enthält.  
   
- [Lesson 2: Modifying the Report Data Source Properties (Lektion 2: Ändern der Eigenschaften der Berichtsdatenquelle)](lesson-2-modifying-the-report-data-source-properties.md)  
+ [Lektion 2: Ändern der Eigenschaften der Berichtsdatenquelle](lesson-2-modifying-the-report-data-source-properties.md).  
  In dieser Lektion erfahren Sie, wie Berichtsdatenquelleneigenschaften so geändert werden können, dass der Bericht unbeaufsichtigt ausgeführt werden kann. Für die unbeaufsichtigte Verarbeitung sind gespeicherte Anmeldeinformationen erforderlich. Sie ändern auch das Berichtsdataset, um einen Parameter einzuschließen, der von den Abonnentendaten angegeben wird.  
   
- [Lesson 3: Defining a Data-Driven Subscription (Lektion 3: Definieren eines datengesteuerten Abonnements)](lesson-3-defining-a-data-driven-subscription.md)  
+ [Lektion 3: Definieren eines datengesteuerten Abonnements](lesson-3-defining-a-data-driven-subscription.md)  
  In dieser Lektion erfahren Sie, wie ein datengesteuertes Abonnement definiert wird. In dieser Lektion werden Sie durch die einzelnen Seiten im Assistenten für das datengesteuerte Abonnement geführt.  
   
 ## <a name="requirements"></a>Anforderungen  
@@ -56,18 +56,18 @@ ms.locfileid: "48081683"
   
 -   Der SQL Server-Agent-Dienst muss ausgeführt werden.  
   
--   Ein Bericht mit Parametern. In diesem Tutorial wird den Beispielbericht `Sales Orders` erstellen Sie mit dem Tutorial [Erstellen eines einfachen Tabellenberichts &#40;SSRS-Tutorial&#41;](create-a-basic-table-report-ssrs-tutorial.md).  
+-   Ein Bericht mit Parametern. Dieses Tutorial geht von dem Beispielbericht `Sales Orders` aus, den Sie mit dem Tutorial [Erstellen eines einfachen Tabellenberichts &#40;SSRS-Tutorial&#41;](create-a-basic-table-report-ssrs-tutorial.md).  
   
 -   Die [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]-Beispieldatenbank, die Daten für den Beispielbericht bereitstellt.  
   
--   Eine Rollenzuordnung, welche die Aufgabe Alle Abonnements verwalten für den Beispielbericht umfasst. Diese Aufgabe ist für das Definieren eines datengesteuerten Abonnements erforderlich. Wenn Sie als Administrator am Computer angemeldet sind, gewährt die standardmäßige Rollenzuweisung für lokale Administratoren die zum Erstellen datengesteuerter Abonnements erforderlichen Berechtigungen. Weitere Informationen finden Sie unter [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](security/granting-permissions-on-a-native-mode-report-server.md).  
+-   Eine Rollenzuordnung, welche die Aufgabe Alle Abonnements verwalten für den Beispielbericht umfasst. Diese Aufgabe ist für das Definieren eines datengesteuerten Abonnements erforderlich. Wenn Sie als Administrator am Computer angemeldet sind, gewährt die standardmäßige Rollenzuweisung für lokale Administratoren die zum Erstellen datengesteuerter Abonnements erforderlichen Berechtigungen. Weitere Informationen finden Sie unter [Granting Permissions on a Native Mode Report Server](security/granting-permissions-on-a-native-mode-report-server.md).  
   
 -   Ein freigegebener Ordner, für den Sie Schreibberechtigungen besitzen. Auf den freigegebenen Ordner muss über eine Netzwerkverbindung zugegriffen werden können.  
   
- **Ungefähre Dauer dieses Tutorials:** 30 Minuten. Zusätzliche 30 Minuten werden benötigt, wenn Sie das Lernprogramm für grundlegende Berichte nicht abgeschlossen haben.  
+ **Ungefähre Dauer dieses Tutorials:** 30 Minuten Zusätzliche 30 Minuten werden benötigt, wenn Sie das Lernprogramm für grundlegende Berichte nicht abgeschlossen haben.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datengesteuerte Abonnements](subscriptions/data-driven-subscriptions.md)   
- [Erstellen ein einfachen Tabellenberichts &#40;SSRS-Tutorial&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
+ [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
+ [Erstellen eines einfachen Tabellenberichts &#40;SSRS-Tutorial&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
   
   

@@ -1,24 +1,21 @@
 ---
-title: 'Aufgabe 9: Hinzufügen von Union All Transformation, um richtige und korrigierte Datensätze zu kombinieren | Microsoft-Dokumentation'
+title: 'Aufgabe 9: Hinzufügen von Union All Transformation um richtige und korrigierte Datensätze zu kombinieren. | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 24ba466d-a7d3-49e7-9111-b348399c9e58
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8900b595bcb90eb7ca0712d2b6e7e3010c4a7b24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a3861e7de24e4fdf43ea11cf447b448c9d17b48
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180910"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022861"
 ---
 # <a name="task-9-adding-union-all-transform-to-combine-correct-and-corrected-records"></a>Aufgabe 9: Hinzufügen der Transformation UNION ALL, um richtige und korrigierte Datensätze zu kombinieren
   In dieser Aufgabe fügen Sie dem Datenfluss die Transformation UNION ALL hinzu. Die Transformation für UNION ALL kombiniert mehrere Eingaben zu einer einzigen Ausgabe. In Ihrem Szenario kombiniert sie richtige und korrigierte Datensätze zu einem Datenstrom.  
@@ -46,6 +43,6 @@ ms.locfileid: "48180910"
 7.  Dies **Connector** sollte die Bezeichnung **korrigiert**. Da Sie nur zwei Bedingungen vorliegen **richtig** und **korrigiert**, und eine Bedingung bereits verwendet wurde, wird die **Eingabe/Ausgabe-Auswahl** diesmal im Dialogfeld nicht angezeigt. Wenn sich die Konnektoren überlappen, verschieben Sie einen nach links und den anderen nach rechts, indem Sie den Konnektor nach links bzw. rechts ziehen.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 10: Hinzufügen der Transformation für Fuzzygruppierung, um Duplikate zu identifizieren](../../2014/tutorials/task-10-adding-fuzzy-group-transform-to-identify-duplicates.md)  
+ [Aufgabe 10: Hinzufügen der Transformation für Fuzzygruppierung um Duplikate zu identifizieren](../../2014/tutorials/task-10-adding-fuzzy-group-transform-to-identify-duplicates.md)  
   
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a68fb27df3c1a00ca5b4cf615963d7d9ce4bf2d3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 16233754f8e0eaca8d068ddd276b96d9ab6ad73c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357163"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023561"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Konzepte von Reporting Services (SSRS)
   Dieses Thema bietet eine kurze Einführung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Konzepte.  
@@ -156,7 +156,7 @@ ms.locfileid: "53357163"
  **Drilldownberichte**  
  Ein Drilldownbericht ist ein Layoutentwurf, der zunächst Komplexität ausblendet und es dem Benutzer ermöglicht, bedingt ausgeblendete Berichtselemente umzuschalten, um die Detailliertheit der Anzeige steuern zu können. Für Drilldownberichte müssen alle möglichen Daten abgerufen werden, die im Bericht angezeigt werden können. Erwägen Sie bei Berichten mit großen Datenmengen stattdessen die Verwendung von Drillthroughberichten. Weitere Informationen finden Sie unter [Drilldownaktion &#40;Berichts-Generator und SSRS&#41;](report-design/drilldown-action-report-builder-and-ssrs.md).  
   
- **Unterberichte**  
+ **Subreports**  
  Ein Unterbericht ist ein Berichtselement, das Sie einem Bericht als Layoutelement hinzufügen. Ein Unterbericht zeigt auf einen anderen Bericht und wird innerhalb eines Hauptberichts als Unterberichtsinstanz angezeigt. In einem Unterbericht können andere Datenquellen verwendet werden als im Hauptbericht. Zwar kann ein Unterbericht innerhalb von Datenbereichen wiederholt werden, indem die Daten in den einzelnen Instanzen des Unterberichts mithilfe eines Parameters gefiltert werden, doch werden Unterberichte meist mit einem Hauptbericht als "Lagebesprechungsprotokoll" oder Container für eine Auflistung miteinander verknüpfter Berichte verwendet. Jede Instanz eines Unterberichts wechselt den Kontext für die Berichtsverarbeitung zwischen dem Hauptbericht und dem Unterbericht. Erwägen Sie bei Berichten mit vielen Instanzen von Unterberichten stattdessen die Verwendung von Drillthroughberichten. Weitere Informationen finden Sie unter [Unterberichte (Berichts-Generator und SSRS)](report-design/subreports-report-builder-and-ssrs.md).  
   
  **Haupt-/Detailberichte und Drillthroughberichte**  
@@ -175,7 +175,7 @@ ms.locfileid: "53357163"
   
  Sie können die Abfrageergebnisse für ein freigegebenes Dataset auch zwischenspeichern. Weitere Informationen finden Sie unter [Zwischenspeichern von freigegebenen Datasets (SSRS)](report-server/cache-shared-datasets-ssrs.md).  
   
- **Momentaufnahmen**  
+ **Snapshots**  
  Ein Berichtsmomentaufnahme ist ein Bericht, der Layoutinformationen und Abfrageergebnisse enthält, die zu einem bestimmten Zeitpunkt abgerufen wurden. Im Gegensatz zu bedarfsgesteuerten Berichten nach, die aktuelle Abfrageergebnisse abrufen, wenn Sie den Bericht anzeigen, ruft der Berichtsserver den kompilierten Bericht und die Berichtsdaten ab, die für den Bericht zur Zeit der Momentaufnahmeerstellung aktuell waren. Berichtsmomentaufnahmen werden in keinem speziellen Renderingformat gespeichert. Stattdessen werden Berichtsmomentaufnahmen erst dann in einem endgültigen Anzeigeformat (wie HTML) gerendert, wenn sie von einem Benutzer oder einer Anwendung angefordert werden. Weitere Informationen finden Sie unter [Leistung, Momentaufnahmen, Zwischenspeichern &#40;Reporting Services&#41;](report-server/performance-snapshots-caching-reporting-services.md).  
   
  **Modellberichte und Berichte mit durchklicken**  

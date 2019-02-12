@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 763d33dd182883f3b781b3e7e70cf91eda906044
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9138f2b27518a3b271bd14628b753ba5f729b3f6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157930"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026531"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>Beispiele für URLs von veröffentlichten Berichtselementen auf einem Berichtsserver im SharePoint-Modus (SSRS)
   Wenn Sie Berichte und verwandte Elemente in einer SharePoint-Bibliothek veröffentlichen möchten, können Sie den Inhalt mithilfe der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Erstellungstools, wie dem Berichts-Designer, veröffentlichen oder den Inhalt mithilfe von SharePoint-Websiteaktionen hochladen.  
@@ -76,7 +76,7 @@ ms.locfileid: "48157930"
  Eine Berichtsdefinition kann eine Bilddatei enthalten, die als externe Datei gespeichert ist. Sie können in der Berichtsdefinition auf diese Datei verweisen, indem Sie eine vollqualifizierte URL für die Bilddatei festlegen. Er kann auf einer SharePoint-Website oder auf einem Remotecomputer gespeichert sein.  
   
 > [!IMPORTANT]  
->  Falls die externe URL auf ein Bild auf einer SharePoint-Website verweist, wird das Symbol für beschädigte Bilder angezeigt, wenn Sie den Bericht im Berichts-Generator in der Vorschau anzeigen. Wenn Sie den Bericht auf der SharePoint-Website hochladen und im verbundenen Modus rendern, wird das Symbol für beschädigte Bilder angezeigt, wenn nur `View Items` Berechtigungen.  
+>  Falls die externe URL auf ein Bild auf einer SharePoint-Website verweist, wird das Symbol für beschädigte Bilder angezeigt, wenn Sie den Bericht im Berichts-Generator in der Vorschau anzeigen. Wenn Sie den Bericht auf die SharePoint-Website hochladen und im verbundenen Modus rendern, wird das Symbol für beschädigte Bilder eingeblendet, wenn Sie lediglich über die Berechtigung `View Items` verfügen.  
   
  Unabhängig vom Berichtsservermodus muss es sich in einem Bericht bei Verweisen auf eine externe Bilddatei um eine vollqualifizierte URL handeln. Zudem ist es für Verweise auf eine externe Bilddatei im Allgemeinen erforderlich, dass Sie das Konto für die unbeaufsichtigte Berichtsverarbeitung konfigurieren.  
   
@@ -138,6 +138,6 @@ ms.locfileid: "48157930"
 ## <a name="see-also"></a>Siehe auch  
  [Veröffentlichen eines Berichts in einer SharePoint-Bibliothek](../reports/publish-a-report-to-a-sharepoint-library.md)   
  [Publish a Shared Data Source to a SharePoint Library (Veröffentlichen einer freigegebenen Datenquelle in einer SharePoint-Bibliothek)](../reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
- [Project Property Pages Dialog Box (Projekt (Eigenschaftenseiten, Dialogfeld))](project-property-pages-dialog-box.md)  
+ [Eigenschaftsseiten für Projekt (Dialogfeld)](project-property-pages-dialog-box.md)  
   
   

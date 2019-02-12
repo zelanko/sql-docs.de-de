@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4382ecd50979efb6877d8eb19e8aff7dc340d847
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: d071000fa25a732465deb9c1020ed6365a9fc58e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355667"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017926"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Erweiterter Schutz für die Authentifizierung mit Reporting Services
   Erweiterter Schutz ist eine Gruppe von Erweiterungen zu den letzten Versionen des [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Windows-Betriebssystems. Erweiterter Schutz verbessert den Schutz der Anmeldeinformationen und der Authentifizierung durch Anwendungen. Das Feature selbst bietet keinen Schutz gegen bestimmte Angriffe, z.B. die Anmeldeinformationen-Weiterleitung, sie stellt jedoch eine Infrastruktur für Anwendungen wie [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] bereit, um erweiterten Schutz für die Authentifizierung zu erzwingen.  
@@ -166,7 +166,7 @@ ms.locfileid: "53355667"
  [Herstellen einer Verbindung mit der Datenbank-Engine unter Verwendung von Erweiterter Schutz](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
  [Übersicht über den erweiterten Schutz für die Authentifizierung (möglicherweise auf Englisch)](https://go.microsoft.com/fwlink/?LinkID=177943)   
  [Integrierte Windows-Authentifizierung unter Verwendung von „Erweiterter Schutz“](https://go.microsoft.com/fwlink/?LinkId=179922)   
- [Microsoft-Sicherheitsempfehlung: Erweiterter Schutz für Authentifizierung](https://go.microsoft.com/fwlink/?LinkId=179923)   
+ [Microsoft-Sicherheitsempfehlung: Erweiterter Schutz für die Authentifizierung](https://go.microsoft.com/fwlink/?LinkId=179923)   
  [Berichtsserverdienst-Ablaufverfolgungsprotokoll](../report-server/report-server-service-trace-log.md)   
  [RSReportServer-Konfigurationsdatei](../report-server/rsreportserver-config-configuration-file.md)   
  [SetExtendedProtectionSettings-Methode &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: a08c2476-5b8e-4792-94da-1360fe231c6e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0bfe72762875d2c92b78a985a5b8239eefd9256a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d726e3982636b89819afed3a8500a581eebffc13
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182700"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019621"
 ---
 # <a name="msreportserverconfigurationsetting-methods"></a>MSReportServer_ConfigurationSetting-Methoden
   Die MSReportServer_ConfigurationSetting-Klasse des Berichtsserver-WMI-Anbieters stellt die folgenden öffentlichen Methoden bereit.  
@@ -41,7 +41,7 @@ ms.locfileid: "48182700"
 |[GenerateDatabaseCreationScript](configurationsetting-method-generatedatabasecreationscript.md)|Generiert ein SQL-Skript, mit dem die Berichtsserver-Datenbank erstellt werden kann|  
 |[GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md)|Generiert ein SQL-Skript, mit dem einem Benutzer Berechtigungen für die Berichtsserver-Datenbank erteilt werden können|  
 |[GenerateDatabaseUpgradeScript](configurationsetting-method-generatedatabaseupgradescript.md)|Generiert ein SQL-Skript, mit dem die Berichtsserver-Datenbank aktualisiert werden kann|  
-|[GetAdminSiteUrl-Methode &#40;WMI&#41;](configurationsetting-method-getadminsiteurl.md)|Ruft die absolute URL für die Zentraladministrationswebsite ab|  
+|[GetAdminSiteUrl Method &#40;WMI&#41;](configurationsetting-method-getadminsiteurl.md)|Ruft die absolute URL für die Zentraladministrationswebsite ab|  
 |[GetDatabaseVersionDisplayName](configurationsetting-method-getdatabaseversiondisplayname.md)|Ruft den Anzeigenamen für eine gegebene Versionszeichenfolge in der Berichtsserver-Datenbank ab|  
 |[InitializeReportServer](configurationsetting-method-initializereportserver.md)|Initialisiert die angegebene Berichtsserverinstanz.|  
 |[ListInstalledSharePointVersions-Methode &#40;WMI&#41;](configurationsetting-method-listinstalledsharepointversions.md)|Gibt einen Satz von Token zurück, die die Versionen von Microsoft [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]oder [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] darstellen, die auf dem gleichen Computer wie der Berichtsserver installiert sind.|  
@@ -67,6 +67,6 @@ ms.locfileid: "48182700"
 |[SetWindowsServiceIdentity](configurationsetting-method-setwindowsserviceidentity.md)|Lässt den Berichtsserverdienst als den angegebenen Windows-Benutzer ausführen und gewährt diesem Konto die erforderlichen Dateisystemberechtigungen, damit der Berichtsserver ausgeführt werden kann.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [MSReportServer_ConfigurationSetting Class (MSReportServer_ConfigurationSetting-Klasse)](msreportserver-configurationsetting-class.md)  
+ [MSReportServer_ConfigurationSetting Class](msreportserver-configurationsetting-class.md)  
   
   

@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 19a5f34c95aa82c7002c301bc940345aa0f0940e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9a6538366883ea6feee2234b524a21d97110d177
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050190"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027931"
 ---
 # <a name="job-properties-management-studio"></a>Auftragseigenschaften (Management Studio)
   Verwenden Sie das Fenster **Auftragseigenschaften** , um Informationen zu einem ausgeführten Bericht oder Abonnement anzuzeigen, bevor Sie den Vorgang abbrechen.  
@@ -28,7 +28,7 @@ ms.locfileid: "48050190"
 > [!NOTE]  
 >  Diese Funktion wird in [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services nicht unterstützt. Die Seite wird nicht angezeigt, wenn Sie [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]ausführen.  
   
-## <a name="tasks"></a>Aufgaben  
+## <a name="tasks"></a>Richtlinienübersicht  
  Bevor Sie Informationen zu einem Auftrag anzeigen können, müssen Sie die Seite aktualisieren, damit die Informationen über die gerade auf dem Berichtsserver ausgeführten Aufträge abgerufen werden:  
   
 1.  Öffnen Sie den Berichtsserverordner.  
@@ -37,7 +37,7 @@ ms.locfileid: "48050190"
   
 3.  Wird ein Auftrag aufgeführt, dann klicken Sie mit der rechten Maustaste auf den Auftrag, und klicken Sie anschließend auf **Eigenschaften**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Auftrags-ID**  
  Dem Auftrag wird während seiner Verarbeitung ein GUID zugewiesen. Dieser Zufallswert wird jedes Mal generiert, wenn ein Bericht oder Abonnement ausgeführt wird.  
   

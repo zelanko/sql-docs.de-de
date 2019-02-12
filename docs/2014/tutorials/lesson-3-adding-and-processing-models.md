@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: cc29927a-c368-4b8a-bbd0-af89a9f54dc9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b1ed899f1f96ef2c6bf57179bae8a2aa76f9e5a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2596ed7eb2d714ff0790daa013a5e47ecd134b38
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166460"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018931"
 ---
 # <a name="lesson-3-adding-and-processing-models"></a>Lektion 3: Hinzufügen und Verarbeiten von Modellen
   Die ursprüngliche Miningstruktur, die Sie in der vorhergehenden Lektion erstellt haben, umfasst ein einzelnes Miningmodell, das auf dem [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees-Algorithmus basiert. Anhand dieses Modells können Sie Kunden für die Targeted Mailing-Kampagne identifizieren. Um fundierte Analyseergebnisse zu erhalten, ist es jedoch üblich, verwandte Modelle anhand verschiedener Algorithmen zu erstellen und deren Ergebnisse zu vergleichen. Auf diese Weise erhalten Sie auch andere Einblicke. Aus diesem Grund erstellen Sie zwei zusätzliche Modelle, die Sie anschließend verarbeiten und bereitstellen.  
   
  In dieser Lektion erstellen Sie eine Reihe von Miningmodellen, die aus einer Liste potenzieller Kunden die wahrscheinlichsten Kunden vorschlagen.  
   
- Zum Ausführen der Aufgaben in dieser Lektion verwenden Sie die [Microsoft Clustering-Algorithmus](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md) und [Microsoft Naive Bayes Algorithm](../../2014/analysis-services/data-mining/microsoft-naive-bayes-algorithm.md).  
+ Zum Ausführen der Aufgaben in dieser Lektion verwenden Sie den [Microsoft Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md) sowie den [Microsoft Naive Bayes Algorithm](../../2014/analysis-services/data-mining/microsoft-naive-bayes-algorithm.md).  
   
  Diese Lektion enthält die folgenden Aufgaben:  
   
@@ -41,6 +40,6 @@ ms.locfileid: "48166460"
  [Lektion 4: Untersuchen der Targeted Mailing-Modelle &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Hinzufügen von Miningmodellen zu einer Struktur &#40;Analysis Services – Datamining&#41;](../../2014/analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)  
+ [Hinzufügen von Miningmodellen zu einer Struktur &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)  
   
   

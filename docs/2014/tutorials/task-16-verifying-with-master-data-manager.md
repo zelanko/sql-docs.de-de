@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 57ad9d3e-8f95-4df6-af01-c291ccf49164
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: b0f8c608384e3840f0c154233e90a79d4319bbad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b9e24e062695c3b8b4c1aacd37b464fafd99558
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203190"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023601"
 ---
 # <a name="task-16-verifying-with-master-data-manager"></a>Aufgabe 16: Überprüfung mit Master Data Manager
   In dieser Aufgabe prüfen Sie den Status des vom SSIS-Paket gesendeten Batchauftrags und verifizieren, ob die Daten mit Master Data Manager auf den MDS-Server hochgeladen wurden.  
@@ -35,9 +32,9 @@ ms.locfileid: "48203190"
   
 5.  Stellen Sie sicher, dass **Lieferanten** Modell ausgewählt ist **Modell** und **VERSION_1** ausgewählt ist **Version**, und klicken Sie auf  **Explorer**.  
   
-6.  Sie können das in MDS importierte Daten-SSIS-Paket anzeigen. Die Daten sollten bereinigt werden und haben keine Duplikate **Code** Werte (Hinweis: **SupplierID** Spalte in Excel entspricht **Code** -Attribut der lieferantenentität in MDS).  
+6.  Sie können das in MDS importierte Daten-SSIS-Paket anzeigen. Die Daten sollten bereinigt werden und haben keine Duplikate **Code** Werte (Beachten Sie: **SupplierID** Spalte in Excel entspricht **Code** -Attribut der lieferantenentität in MDS).  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 17: Überprüfung des DQS-Bereinigungsprojekts, das vom SSIS-Paket erstellt wurde](../../2014/tutorials/task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package.md)  
+ [Task 17: Überprüfung des DQS-Bereinigung erstellt wurde vom SSIS-Paket](../../2014/tutorials/task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package.md)  
   
   

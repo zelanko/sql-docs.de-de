@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 78ebab378601e63f0b50c18ed0693efb97a59254
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 33252d10da04299c4b4f4e6177745567335a5256
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154140"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024817"
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>Hinzufügen eines Lesezeichens zu einem Bericht (Berichts-Generator und SSRS)
   Fügen Sie einem Bericht Lesezeichen und Lesezeichenlinks hinzu, wenn Sie ein benutzerdefiniertes Inhaltsverzeichnis oder benutzerdefinierte interne Navigationslinks bereitstellen möchten. In der Regel fügen Sie Lesezeichen an Positionen im Bericht hinzu, an die Benutzer verwiesen werden sollen, wie beispielsweise Tabellen, Diagramme oder eindeutige Gruppenwerte, die in einer Tabelle oder Matrix angezeigt werden. Sie können eigene Zeichenfolgen zur Verwendung als Lesezeichen erstellen. Bei Gruppen können Sie das Lesezeichen auf den Gruppierungsausdruck festlegen.  
@@ -58,6 +58,6 @@ ms.locfileid: "48154140"
 ## <a name="see-also"></a>Siehe auch  
  [Interaktive Sortierung, Dokumentstrukturen und Links &#40;Berichts-Generator und SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Filtern, gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

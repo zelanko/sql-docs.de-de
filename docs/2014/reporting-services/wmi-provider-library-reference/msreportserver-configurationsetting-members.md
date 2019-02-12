@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 5e21a53a-a2f8-4b35-a8d9-5483519e3857
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 981db90ba9114b26b0581f9b1e3d62561c8b6939
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7acfc09d226c3e352feae42e76d85f1dd8d1a531
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180620"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024171"
 ---
 # <a name="msreportserverconfigurationsetting-members"></a>MSReportServer_ConfigurationSetting-Member
   Die MSReportServer_ConfigurationSetting-Klasse enthält die folgenden Eigenschaften und Methoden.  
@@ -55,8 +55,8 @@ ms.locfileid: "48180620"
 |[SMTPServer](configurationsetting-property-smtpserver.md)|Ruft die SMTP-Server-Eigenschaft aus der Datei RSReportServer.config ab. Schreibgeschützt.|  
 |[UnattendedExecutionAccount](configurationsetting-property-unattendedexecutionaccount.md)|Gibt das Benutzerkonto für die Anmeldung an, dessen Identität der Berichtsserver bei der unbeaufsichtigten Ausführung von Berichten annimmt. Schreibgeschützt.|  
 |[Version](configurationsetting-property-version.md)|Gibt die Version des Berichtsservers zurück|  
-|[VirtualDirectoryReportManager-Eigenschaft &#40;WMI: MSReportServer_ConfigurationSetting&#41;](configurationsetting-property-virtualdirectoryreportmanager.md)|Gibt das virtuelle Verzeichnis für die Berichts-Manager-Anwendung zurück|  
-|[VirtualDirectoryReportServer-Eigenschaft &#40;WMI: MSReportServer_ConfigurationSetting&#41;](configurationsetting-property-virtualdirectoryreportserver.md)|Gibt das virtuelle Verzeichnis für die Report Server-Webdienstanwendung zurück|  
+|[VirtualDirectoryReportManager-Eigenschaft &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-property-virtualdirectoryreportmanager.md)|Gibt das virtuelle Verzeichnis für die Berichts-Manager-Anwendung zurück|  
+|[VirtualDirectoryReportManager-Eigenschaft &#40;WMI: MSReportServer_ConfigurationSetting&#41;](configurationsetting-property-virtualdirectoryreportserver.md)|Gibt das virtuelle Verzeichnis für die Report Server-Webdienstanwendung zurück|  
 |[WindowsServiceIdentityActual](configurationsetting-property-windowsserviceidentityactual.md)|Gibt die Identität zurück, unter der der Report Server-Windows-Dienst tatsächlich ausgeführt wird. Schreibgeschützt.|  
 |[WindowsServiceIdentityConfigured](windowsserviceidentityconfigured-property.md)|Gibt die Identität zurück, unter der der Report Server-Windows-Dienst entsprechend seiner letzten Konfiguration ausgeführt wird. Schreibgeschützt.|  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48180620"
 |[GenerateDatabaseCreationScript](configurationsetting-method-generatedatabasecreationscript.md)|Generiert ein SQL-Skript, mit dem die Berichtsserver-Datenbank erstellt werden kann|  
 |[GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md)|Generiert ein SQL-Skript, mit dem einem Benutzer Berechtigungen für die Berichtsserver-Datenbank erteilt werden können|  
 |[GenerateDatabaseUpgradeScript](configurationsetting-method-generatedatabaseupgradescript.md)|Generiert ein SQL-Skript, mit dem die Berichtsserver-Datenbank aktualisiert werden kann|  
-|[GetAdminSiteUrl-Methode &#40;WMI&#41;](configurationsetting-method-getadminsiteurl.md)|Ruft die absolute URL für die Zentraladministrationswebsite ab|  
+|[GetAdminSiteUrl Method &#40;WMI&#41;](configurationsetting-method-getadminsiteurl.md)|Ruft die absolute URL für die Zentraladministrationswebsite ab|  
 |[GetDatabaseVersionDisplayName](configurationsetting-method-getdatabaseversiondisplayname.md)|Ruft den Anzeigenamen für eine gegebene Versionszeichenfolge in der Berichtsserver-Datenbank ab|  
 |[InitializeReportServer](configurationsetting-method-initializereportserver.md)|Initialisiert die angegebene Berichtsserverinstanz.|  
 |[ListInstalledSharePointVersions-Methode &#40;WMI&#41;](configurationsetting-method-listinstalledsharepointversions.md)|Gibt einen Satz von Token zurück, die die Versionen von [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]oder [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] darstellen, die auf dem gleichen Computer wie der Berichtsserver installiert sind.|  
@@ -97,6 +97,6 @@ ms.locfileid: "48180620"
 |[SetWindowsServiceIdentity](configurationsetting-method-setwindowsserviceidentity.md)|Lässt den Berichtsserver-Windows-Dienst als den angegebenen Windows-Benutzer ausführen und gewährt diesem Konto die erforderlichen Dateisystemberechtigungen, damit der Berichtsserver ausgeführt werden kann.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [MSReportServer_ConfigurationSetting Class (MSReportServer_ConfigurationSetting-Klasse)](msreportserver-configurationsetting-class.md)  
+ [MSReportServer_ConfigurationSetting Class](msreportserver-configurationsetting-class.md)  
   
   

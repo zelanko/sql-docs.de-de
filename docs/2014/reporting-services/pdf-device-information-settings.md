@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6484ee2466fc58c6d7330822f4f47e43fcdcd955
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 185b7c9119dbd5a6105152aadcf1241abc6b82ce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148300"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025041"
 ---
 # <a name="pdf-device-information-settings"></a>PDF-Geräteinformationseinstellungen
   In der folgenden Tabelle werden die Einstellungen der Geräteinformationen zum Rendern von Berichten in das PDF-Format aufgeführt.  
   
-|Einstellung|value|  
+|Einstellung|Wert|  
 |-------------|-----------|  
 |**Spalten**|Die für den Bericht gewünschte Anzahl der Spalten. Dieser Wert überschreibt die ursprünglichen Einstellungen des Berichts.|  
 |**ColumnSpacing**|Der für den Bericht gewünschte Spaltenabstand. Dieser Wert überschreibt die ursprünglichen Einstellungen des Berichts.|  
@@ -38,11 +38,11 @@ ms.locfileid: "48148300"
 |**MarginTop**|Der für den Bericht gewünschte Wert für den oberen Rand in Zoll. Sie müssen eine ganze Zahl oder einen Dezimalwert gefolgt von „in“ angeben (z. B. „1in“). Dieser Wert überschreibt die ursprünglichen Einstellungen des Berichts.|  
 |**PageHeight**|Die für den Bericht gewünschte Seitenhöhe in Zoll. Sie müssen eine ganze Zahl oder einen Dezimalwert gefolgt von „in“ angeben (z. B. „11in“). Dieser Wert überschreibt die ursprünglichen Einstellungen des Berichts.|  
 |**PageWidth**|Die für den Bericht gewünschte Seitenbreite in Zoll. Sie müssen eine ganze Zahl oder einen Dezimalwert angeben, gefolgt von „in“ (z. B. 8,5in). Dieser Wert überschreibt die ursprünglichen Einstellungen des Berichts.|  
-|`StartPage`|Die erste Seite des zu rendernden Berichts. Der Wert `0` gibt an, dass alle Seiten des Berichts gerendert werden. Der Standardwert lautet `1`.|  
+|`StartPage`|Die erste Seite des zu rendernden Berichts. Der Wert `0` gibt an, dass alle Seiten des Berichts gerendert werden. Der Standardwert ist `1`.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Übergeben von Geräteinformationseinstellungen an Renderingerweiterungen](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Anpassen der Parameter für Renderingerweiterungen in der Datei „RSReportServer.config“](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Technische Referenz (SSRS)](../../2014/reporting-services/technical-reference-ssrs.md)  
+ [Anpassen der Parameter für Renderingerweiterungen in der Datei RSReportServer.config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Technische Referenz &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

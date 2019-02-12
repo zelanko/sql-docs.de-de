@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 351b8503-354f-4b1b-a7ac-f1245d978da0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 87bdd8c30468f18a30de5bcb3ee122469ac3958c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9b38c5820a1680726b3c69d2e09c1d29600a71b4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189610"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024471"
 ---
 # <a name="security-properties-page-items-report-manager"></a>Sicherheit (Eigenschaftenseite) (Elemente, Berichts-Manager)
   Mithilfe der Eigenschaftenseite für Sicherheit können Sie die Sicherheitseinstellungen für den Zugriff auf Ordner, Berichte, Modelle, Ressourcen und freigegebene Datenquellen anzeigen und ändern. Diese Seite steht für Elemente zur Verfügung, für die Sie die Berechtigung zur Änderung der Sicherheitseinstellungen besitzen.  
@@ -51,7 +51,7 @@ ms.locfileid: "48189610"
  Aktivieren Sie das Kontrollkästchen neben der Gruppe oder dem Benutzernamen, den Sie löschen möchten, und klicken Sie auf **Löschen**. Die letzte Rollenzuweisung kann nicht gelöscht werden. Dasselbe gilt für eine integrierte Rollenzuweisung (Beispiel: "VORDEFINIERT\Administratoren"), in der die Sicherheitsbasis für den Berichtsserver definiert ist. Durch das Löschen einer Rollenzuweisung werden weder Gruppen- oder Benutzerkonten noch Rollendefinitionen gelöscht.  
   
  **Neue Rollenzuweisung**  
- Klicken Sie auf diese Schaltfläche, um die Seite Neue Rollenzuweisung zu öffnen. Auf dieser Seite können Sie weitere Rollenzuweisungen für das aktuelle Element erstellen. Weitere Informationen finden Sie unter [neue Rollenzuweisung: Role Assignment-Bearbeitungsseite &#40;Berichts-Manager&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md).  
+ Klicken Sie auf diese Schaltfläche, um die Seite Neue Rollenzuweisung zu öffnen. Auf dieser Seite können Sie weitere Rollenzuweisungen für das aktuelle Element erstellen. Weitere Informationen finden Sie unter [neue Rollenzuweisung: Bearbeiten Sie die Rollenseite für die Zuweisung &#40;Berichts-Manager&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md).  
   
  **Zur übergeordneten Sicherheit zurückkehren**  
  Aktivieren Sie diese Option, um die Sicherheitseinstellungen des Elements auf die des übergeordneten Elements zurückzusetzen. Wenn die Vererbung in der Berichtsserver-Ordnerhierarchie nicht unterbrochen ist, werden die Sicherheitseinstellungen des Ordners Home auf der höchsten Ebene verwendet.  

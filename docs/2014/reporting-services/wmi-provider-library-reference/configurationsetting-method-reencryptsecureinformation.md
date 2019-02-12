@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8a487497-c207-45b2-8c92-87c58cc68716
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4cf5c75a959c0794fea1d66b137c2370dfb3d6b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b02e6f8bbaa25b3141d602107fa44ca526c9eb31
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217800"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022051"
 ---
 # <a name="reencryptsecureinformation-method-wmi-msreportserverconfigurationsetting"></a>ReencryptSecureInformation-Methode (WMI: MSReportServer_ConfigurationSetting)
   Generiert einen neuen Verschlüsselungsschlüssel und verschlüsselt alle sicheren Informationen im Katalog erneut mit diesem neuen Schlüssel  
@@ -62,6 +62,6 @@ public void ReencryptSecureInformation (out Int32 HRESULT, out string[] Extended
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](msreportserver-configurationsetting-members.md)  
+ [MSReportServer_ConfigurationSetting-Member](msreportserver-configurationsetting-members.md)  
   
   

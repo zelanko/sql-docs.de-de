@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4a4a2d97-4c10-43a9-8298-ef5a820ea549
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d165b4137c8deb0afb232d58f0e19bb183ddf860
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 85556b6ec616d16962214b1737fcc445b54d0801
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098750"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019681"
 ---
 # <a name="preventing-invalid-requests"></a>Verhindern von ungültigen Anforderungen
   Sie können verhindern, dass bestimmte Ausnahmearten ausgelöst werden, indem Sie den Anwendungsablauf analysieren und sicherstellen, dass die an den Berichtsserver gesendeten Anforderungen gültig sind. In Anwendungen, in denen die Benutzer den Namen eines Berichts, einer Datenquelle oder eines anderen Berichtsserverelements ändern oder aktualisieren dürfen, sollten Sie beispielsweise den Text, den ein Benutzer eingeben kann, validieren. Sie sollten stets nach reservierten Zeichen suchen, bevor die Anforderung an einen Berichtsserver gesendet werden kann. Verwenden Sie bedingte **if**-Anweisungen oder andere logische Konstrukte im Code, um den Benutzer darauf aufmerksam zu machen, dass die erforderlichen Bedingungen für das Senden der Anforderung an den Berichtsserver nicht erfüllt sind.  

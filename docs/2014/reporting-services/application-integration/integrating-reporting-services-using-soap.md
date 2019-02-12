@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6bc17af5-883c-4bfa-87d9-48cd7056d145
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a7deac283e848ec932b266ac77cf4f5575da5d38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bec5c1b3d2df5c6a721179de5848fd90c08fdd4e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057840"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018022"
 ---
 # <a name="integrating-reporting-services-using-soap"></a>Integrieren von Reporting Services mit SOAP
   Die [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-SOAP-API verfügt über mehrere Webdienst-Endpunkte zur Entwicklung von benutzerdefinierten Berichtslösungen. Die Endpunkte lassen sich derzeit in zwei Kategorien unterteilen: Verwaltung und Ausführung. Die Verwaltungsfunktionen werden durch die Endpunkte <xref:ReportService2005>, <xref:ReportService2006> und <xref:ReportService2010> verfügbar gemacht. Mit dem <xref:ReportService2005>-Endpunkt wird ein Berichtsserver verwaltet, der im einheitlichen Modus konfiguriert ist, und mit dem <xref:ReportService2006>-Endpunkt wird ein Berichtsserver verwaltet, der für den integrierten SharePoint-Modus konfiguriert ist. Der <xref:ReportService2010>-Endpunkt führt die Funktionen von <xref:ReportService2005> und <xref:ReportService2006> zusammen und kann einen Berichtsserver verwalten, der entweder für den einheitlichen Modus oder integrierten SharePoint-Modus konfiguriert ist.  

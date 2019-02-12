@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 44587147-1013-4937-a26c-4fd023eea578
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 46bc4a7b3767a18ba6e7f3b5869a56dd259e1285
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6207c9a80ca2a18e182d57127da1fc1133086144
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094960"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026491"
 ---
 # <a name="delete-columns-dialog-box"></a>Spalten löschen (Dialogfeld)
   Im Dialogfeld **Spalten löschen** können Sie Spalten aus einem Tabellen-, Matrix- oder Listendatenbereich löschen. Bei Spalten, die Gruppen zugeordnet sind, können Sie auch die Gruppendefinition löschen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Spalten und verwandte Gruppe löschen**  
  Wählen Sie diese Option aus, um Spalten und die zugeordnete Gruppendefinition zu löschen.  
   

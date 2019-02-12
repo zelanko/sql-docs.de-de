@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d096f978b138de32c9aae7cdadd1480484dd095f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5c62d4244b025ab987100a58aef1b2a10a7efa17
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206120"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022968"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>Interaktive Sortierung (Berichts-Generator und SSRS)
   Sie können Schaltflächen für die interaktive Sortierung hinzufügen, um Benutzern das Umschalten zwischen der auf- und absteigenden Reihenfolge für Zeilen in einer Tabelle oder für Zeilen und Spalten in einer Matrix zu ermöglichen. Die häufigste Verwendung der interaktiven Sortierung besteht im Hinzufügen einer Sortierungsschaltfläche für die einzelnen Spaltenkopfzeilen. Benutzer können dann die Spalte auswählen, anhand derer die Sortierung erfolgen soll.  
@@ -28,17 +28,17 @@ ms.locfileid: "48206120"
   
  Beim Hinzufügen einer interaktiven Sortierung müssen folgende Elemente angegeben werden:  
   
--   **Sortierungselement:** z. B. Zeilen oder Spalten.  
+-   **Zu sortierende Elemente:** Zeilen oder Spalten?  
   
--   **Sortierungskriterium:** z. B. ein Feld, das in einer Tabellenspalte angezeigt wird. ein Feld, das nicht angezeigt wird.  
+-   **Elemente, die Sortierkriterien:** Ein Feld, das in einer Tabellenspalte angezeigt wird? ein Feld, das nicht angezeigt wird.  
   
--   **Sortierungskontext:** Sie können z. B. nach Zeilen sortieren, die Zeilengruppen zugeordnet sind, oder nach Spalten, die Spaltengruppen zugeordnet sind. Ebenso können Sie nach Detailzeilen oder nach untergeordneten Gruppen in einer übergeordneten Gruppe sortieren sowie nach über- und untergeordneten Gruppen.  
+-   **Welche Kontext zum Sortieren in:** Beispielsweise können Sie Zeilen, die Zeilengruppen zugeordnet sortieren; Spalten, die Spaltengruppen zugeordnet werden; Detailzeilen; untergeordnete Gruppen in einer übergeordneten Gruppe oder über- und untergeordneten Gruppen zusammen.  
   
--   **Textfeld für die Sortierungsschaltfläche:** z. B. Spaltenkopf oder Gruppenzeilenkopf.  
+-   **Textfeld für die sortierungsschaltfläche:** In der Kopfzeile der Spalte oder in der Gruppenkopfzeile für die Zeile?  
   
--   **Synchronisierung der Sortierung mehrerer Datenbereiche:** Sie können einen Bericht so gestalten, dass beim Umschalten der Sortierreihenfolge andere Datenbereiche mit dem gleichen Vorgänger ebenfalls neu sortiert werden.  
+-   **Synchronisierung die Sortierung mehrerer Datenbereiche:** Sie können einen Bericht entwerfen, sodass beim Umschalten der Sortierreihenfolge andere Datenbereiche mit den gleichen Vorgänger ebenfalls neu sortiert.  
   
- Schrittweise Anweisungen finden Sie unter [Hinzufügen einer interaktiven Sortierung zu einer Tabelle oder Matrix &#40;Berichts-Generator und SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
+ Eine Schritt-für-Schritt-Anleitung finden Sie unter [Hinzufügen einer interaktiven Sortierung zu einer Tabelle oder Matrix &#40;Berichts-Generator und SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
   
  In der folgenden Tabelle werden die Funktionen von interaktiven Sortierschaltflächen zusammengefasst.  
   

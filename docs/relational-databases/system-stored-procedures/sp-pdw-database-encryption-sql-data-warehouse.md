@@ -2,8 +2,7 @@
 title: sp_pdw_database_encryption aktiviert werden (SQL Data Warehouse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: eeb1263c02b9b06ffe747b78f8dae5691b7f92fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a76b34f09fb78bb63dca88947eef044acb6cd304
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846618"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019021"
 ---
 # <a name="sppdwdatabaseencryption-sql-data-warehouse"></a>sp_pdw_database_encryption aktiviert werden (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -41,7 +40,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
   
 -   1 = Aktiviert  
   
- Ausführen von **sp_pdw_database_encryption aktiviert werden** ohne Parameter gibt den aktuellen Status von TDE auf dem Gerät als skalare Resultset zurück: 0 für deaktiviert oder 1 für aktiviert.  
+ Ausführen von **sp_pdw_database_encryption aktiviert werden** ohne Parameter gibt den aktuellen Status von TDE auf dem Gerät als skalare Resultset zurück: für deaktiviert 0 oder 1 für aktiviert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

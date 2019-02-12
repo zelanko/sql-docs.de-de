@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a73ac60b-660f-458a-bd2f-993fbeba7226
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d6aa8d340b64f98193b31b6ebc6321407cff8368
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d6384910858d87a80aa3c8f897bc88e45f4504fb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082680"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025801"
 ---
 # <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>Lektion 1: Erstellen der Bike Buyer-Miningstruktur
   In dieser Lektion erstellen Sie eine Miningstruktur, mit der sich vorhersagen lässt, ob ein potenzieller Kunde von [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ein Fahrrad kaufen wird. Wenn Sie nicht mit Miningstrukturen und ihre Rolle beim Datamining vertraut sind, finden Sie unter [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
@@ -59,7 +58,7 @@ CREATE MINING STRUCTURE [<mining structure name>]
 <key column>,  
 ```  
   
- In der Miningstruktur, die Sie Erstellen der Kunden-ID, `CustomerKey`, definiert eine Entität in den Quelldaten.  
+ In der Miningstruktur, die Sie erstellen, definiert der Kundenbezeichner `CustomerKey` eine Entität in den Quelldaten.  
   
  Mit der nächsten Codezeile werden die Miningspalten definiert, die von den Miningmodellen verwendet werden, die der Miningstruktur zugeordnet sind:  
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], changing
 ms.assetid: cf30312e-4338-49a7-90f0-6e4f7b431ff8
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 593e71b63cb4fc6e63c1c087e62f24c37c399e8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a10b20332059c9cf1b9aed41caf462faf96414e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069938"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020292"
 ---
 # <a name="change-the-system-administrator-account-master-data-services"></a>Ändern Systemadministratorkontos (Master Data Services)
   Sie können ändern, dass das Benutzerkonto, das als festgelegt ist die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Systemadministrator.  

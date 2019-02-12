@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 25232dc7-00fe-4cd1-8a1c-7e36d552de00
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5d456e0949f38a402b4947c72a3f3f9ec029f2a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d2dbd112c340662ed90632a06904c0b3bd1939a3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213484"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022111"
 ---
 # <a name="generatedatabasecreationscript-method-wmi-msreportserverconfigurationsetting"></a>GenerateDatabaseCreationScript-Methode (WMI: MSReportServer_ConfigurationSetting)
   Generiert ein SQL-Skript, mit dem eine Berichtsserver-Datenbank erstellt werden kann  
@@ -53,7 +53,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
  Gibt an, ob die Datenbank im einheitlichen Modus oder im SharePoint-Modus erstellt werden soll.  
   
 > [!IMPORTANT]  
->  Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], *IsSharePointMode* = `True` wird nicht unterstützt werden, da im SharePoint-Modus [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ist eine SharePoint shared Service und nicht vom WMI-Anbieter kontrolliert wird. Legen Sie diesen Parameter immer auf `False`.  
+>  Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], *IsSharePointMode* = `True` wird nicht unterstützt werden, da im SharePoint-Modus [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ist eine SharePoint shared Service und nicht vom WMI-Anbieter kontrolliert wird. Es wird empfohlen, diesen Parameter immer auf `False` festzulegen.  
   
  *Skript*  
  [out] Eine Zeichenfolge, die das generierte SQL-Skript enthält  
@@ -79,6 +79,6 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](msreportserver-configurationsetting-members.md)  
+ [MSReportServer_ConfigurationSetting-Member](msreportserver-configurationsetting-members.md)  
   
   

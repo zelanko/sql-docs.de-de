@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Bereitstellen einer Datenverarbeitungserweiterung für einen Berichtsserver | Microsoft-Dokumentation'
+title: 'Gewusst wie: Bereitstellen eine Datenverarbeitungserweiterung auf einem Berichtsserver | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cf4013f5a557dde93cf628f55e108c5a4e1772ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: db03408b8ed7909f534b5dad09dbb742f7edc6c9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160746"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017972"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Vorgehensweise: Bereitstellen einer Datenverarbeitungserweiterung für einen Berichtsserver
+# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Gewusst wie: Bereitstellen einer Datenverarbeitungserweiterung auf einem Berichtsserver
   Berichtsserver verwenden Datenverarbeitungserweiterungen zum Abrufen und Verarbeiten von Daten in gerenderten Berichten. Sie sollten Ihre Assembly für Datenverarbeitungserweiterungen auf dem Berichtsserver als private Assembly bereitstellen. Sie müssen auch einen Eintrag in der Konfigurationsdatei des Berichtsservers RSReportServer.config vornehmen.  
   
 ## <a name="procedures"></a>Vorgehensweisen  
@@ -36,7 +36,7 @@ ms.locfileid: "48160746"
   
 2.  Nachdem die Assemblydatei kopiert wurde, öffnen Sie die Datei RSReportServer.config. Die Datei RSReportServer.config befindet sich im Verzeichnis "ReportServer". Sie müssen einen Eintrag in der Konfigurationsdatei für die Datei Ihrer Datenverarbeitungserweiterungsassembly vornehmen. Sie können die Konfigurationsdatei mit Visual Studio oder mit einem einfachen Text-Editor wie dem Microsoft-Editor öffnen.  
   
-3.  Suchen Sie die `Data` Element in der Datei "rsreportserver.config". In folgendem Verzeichnis muss ein Eintrag für Ihre neu erstellte Datenverarbeitungserweiterung erstellt werden:  
+3.  Suchen Sie das `Data`-Element in der Datei RSReportServer.config. In folgendem Verzeichnis muss ein Eintrag für Ihre neu erstellte Datenverarbeitungserweiterung erstellt werden:  
   
     ```  
     <Extensions>  

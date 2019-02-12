@@ -12,19 +12,19 @@ f1_keywords:
 - "10505"
 ms.assetid: 6c9c773e-5c56-4571-95ed-8a157cfdfe52
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 62d20c36271bd6dd1bfa591edf606c3e295d1adb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 33849743e47ad910fad44938e7537d7b4be8624a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138632"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018182"
 ---
 # <a name="map-viewport-properties-dialog-box-general"></a>Eigenschaften des Kartenviewports (Dialogfeld), Allgemein
   Wählen Sie im Dialogfeld **Viewporteigenschaften zuordnen** den Bereich **Allgemein** aus, um das Koordinatensystem, die Projektion und die Begrenzungsoptionen zu ändern.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Koordinatensystem**  
  Geben Sie den Typ des Koordinatensystems an, das für die Kartendaten verwendet wird.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48138632"
  **Begrenzungsoptionen**  
  Geben Sie die Unter- und die Obergrenzen für Koordinaten an, um zu steuern, welcher Teil der Karte im Bericht angezeigt wird.  
   
- **X minimal**  
+ **Minimum X**  
  Niedrigster X-Wert. Nur für **Planar** verfügbar.  
   
  **Maximale X**  

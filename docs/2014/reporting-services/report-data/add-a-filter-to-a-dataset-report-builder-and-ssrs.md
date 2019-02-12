@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: eed37e74-6a43-4d7c-9959-2d5fa6a6aba9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a7ab54f0f2cf6d1ee4a8358df9062e125a9b496a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 38b71bc3f92a8cb6d3c514c4115395cb3bd619ef
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048900"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020481"
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>Hinzufügen eines Filters zu einem Dataset (Berichts-Generator und SSRS)
   Fügen Sie einem Dataset einen Filter hinzu, um die Daten in einem Bericht einzuschränken, nachdem die Daten aus einer externen Datenquelle abgerufen wurden. Wenn Sie einem Dataset einen Filter hinzufügen, verwenden alle Berichtsteile oder Datenbereiche nur Daten, die den Filterbedingungen entsprechen.  
@@ -75,6 +75,6 @@ ms.locfileid: "48048900"
 ## <a name="see-also"></a>Siehe auch  
  [Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern &#40;Berichts-Generator und SSRS&#41;](../report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../report-design/expression-examples-report-builder-and-ssrs.md)   
- [Hinzufügen eines Filters (Berichts-Generator und SSRS)](../report-design/add-a-filter-report-builder-and-ssrs.md)  
+ [Hinzufügen eines Filters &#40;Berichts-Generator und SSRS&#41;](../report-design/add-a-filter-report-builder-and-ssrs.md)  
   
   

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2cf353aedff8d906ebb2aa53a4bab269f6083854
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a605117b6d2b1011d9285c0fb02275e5abeb35ac
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071290"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019331"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver
   Standardmäßig akzeptiert Reporting Services Anforderungen, die Negotiate- und NTLM-Authentifizierung angeben. Wenn Ihre Bereitstellung Client-Anwendungen oder Browser umfasst, die die Standardauthentifizierung verwenden, müssen Sie die Standardauthentifizierung in die Liste der unterstützten Typen aufnehmen. Zusätzlich müssen Sie den anonymen Zugriff auf die Dateien des Berichts-Generators aktivieren, wenn Sie mit dem Berichts-Generator arbeiten möchten.  
@@ -41,7 +41,7 @@ ms.locfileid: "48071290"
   
      Die Datei befindet sich unter  *\<Laufwerk >:* \Programme\Microsoft SQL Server\MSRS12. MSSQLSERVER\Reporting Services\ReportServer.  
   
-2.  Finden Sie <`Authentication`>.  
+2.  Suchen Sie den Eintrag <`Authentication`>.  
   
 3.  Kopieren Sie die XML-Struktur, die Ihren Anforderungen am besten entspricht. Die erste XML-Struktur stellt Platzhalter bereit, über die Sie alle im nächsten Abschnitt beschriebenen Elemente angegeben können:  
   
@@ -66,11 +66,11 @@ ms.locfileid: "48071290"
           </AuthenticationTypes>  
     ```  
   
-4.  Fügen Sie ihn über die vorhandenen Einträge für <`Authentication`>.  
+4.  Ersetzen Sie damit die vorhandenen Einträge für <`Authentication`>.  
   
-     Wenn Sie mehrere Authentifizierungstypen verwenden, fügen Sie nur die `RSWindowsBasic` Element aber löschen Sie die Einträge für nicht `RSWindowsNegotiate`, `RSWindowsNTLM`, oder `RSWindowsKerberos`.  
+     Wenn Sie mehrere Authentifizierungstypen verwenden, fügen Sie lediglich das `RSWindowsBasic`-Element ein, löschen Sie jedoch die Einträge für `RSWindowsNegotiate`, `RSWindowsNTLM` oder `RSWindowsKerberos` nicht.  
   
-     Wenn Sie den Safari-Browser unterstützen möchten, können Sie den Berichtsserver nicht für die Verwendung mehrerer Authentifizierungstypen konfigurieren. Geben Sie nur `RSWindowsBasic` und löschen Sie die anderen Einträge.  
+     Wenn Sie den Safari-Browser unterstützen möchten, können Sie den Berichtsserver nicht für die Verwendung mehrerer Authentifizierungstypen konfigurieren. Geben Sie nur `RSWindowsBasic` an, und löschen Sie die anderen Einträge.  
   
      Beachten Sie, dass Sie `Custom` nicht mit anderen Authentifizierungstypen verwenden können.  
   
@@ -85,9 +85,9 @@ ms.locfileid: "48071290"
 ## <a name="rswindowsbasic-reference"></a>Referenz auf RSWindowsBasic  
  Beim Konfigurieren der Standardauthentifizierung können die folgenden Elemente angegeben werden.  
   
-|Element|Required|Gültige Werte|  
+|Element|Erforderlich|Gültige Werte|  
 |-------------|--------------|------------------|  
-|LogonMethod|Benutzerkontensteuerung<br /><br /> Wenn Sie keinen Wert angeben, wird 3 verwendet.|`2` = Netzwerkanmeldung für Server mit hoher Leistungsfähigkeit zur Authentifizierung von nur-Text-Kennwörter.<br /><br /> `3` = Klartextanmeldung, wobei die Anmeldeinformationen in das Authentifizierungspaket, die mit jeder HTTP-Anforderung gesendet wird beibehalten, so, dass der Server die Identität des Benutzers beim Verbinden mit anderen Servern im Netzwerk. (Standardwert)<br /><br /> Hinweis: Die Werte 0 (für interaktive Anmeldung) und 1 (für Batchanmeldung) werden in [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]nicht unterstützt.|  
+|LogonMethod|Ja<br /><br /> Wenn Sie keinen Wert angeben, wird 3 verwendet.|`2` = Netzwerkanmeldung für Server mit hoher Leistungsfähigkeit zur Authentifizierung von Nur-Text-Kennwörtern<br /><br /> `3` = Klartextanmeldung, wobei die Anmeldeinformationen in das Authentifizierungspaket, die mit jeder HTTP-Anforderung gesendet wird beibehalten, so, dass der Server die Identität des Benutzers beim Verbinden mit anderen Servern im Netzwerk. (Standardwert)<br /><br /> Hinweis: Die Werte 0 (für interaktive Anmeldung) und 1 (für Batchanmeldung) werden in [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] nicht unterstützt.|  
 |Realm|Optional|Gibt eine Ressourcenpartition mit Autorisierungs- und Authentifizierungsfunktionen an, mit denen Sie den Zugriff auf geschützte Ressourcen in Ihrem Unternehmen steuern können.|  
 |DefaultDomain|Optional|Gibt die Domäne an, die vom Server für die Benutzerauthentifizierung verwendet wird. Dieser Wert ist optional. Wenn Sie ihn weglassen, verwendet der Berichtsserver den Computernamen als Domäne. Wenn der Computer zu einer Domäne gehört, ist diese Domäne die Standarddomäne. Wenn Sie den Berichtsserver auf einem Domänencontroller installiert haben, ist die verwendete Domäne die vom Computer gesteuerte.|  
   
@@ -136,17 +136,17 @@ ms.locfileid: "48071290"
     </configuration>  
     ```  
   
-     Authentifizierungsmodus muss festgelegt werden, um `Windows` , wenn Sie eine Datei "Web.config" aufnehmen.  
+     Der Authentifizierungsmodus muss auf `Windows` festgelegt werden, wenn Sie eine Web.config-Datei aufnehmen möchten.  
   
-     `Identity impersonate` kann `True` oder `False`.  
+     `Identity impersonate` kann `True` oder `False` sein.  
   
-    -   Legen Sie ihn auf `False` , wenn Sie nicht, dass ASP.NET das Sicherheitstoken zu lesen möchten. Die Anforderung wird im Sicherheitskontext des Berichtsserverdienstes ausgeführt.  
+    -   Legen Sie `False` fest, wenn ASP.NET das Sicherheitstoken nicht lesen darf. Die Anforderung wird im Sicherheitskontext des Berichtsserverdienstes ausgeführt.  
   
-    -   Legen Sie ihn auf `True` Wenn ASP.NET das Sicherheitstoken von der Hostebene lesen soll. Wenn Sie `True` festlegen, müssen Sie auch `userName` und `password` angeben, damit ein anonymes Konto bestimmt werden kann. Die von Ihnen angegebenen Anmeldeinformationen legen den Sicherheitskontext fest, unter dem die Anforderung ausgegeben wird.  
+    -   Legen Sie `True` fest, wenn ASP.NET das Sicherheitstoken von der Hostebene lesen soll. Wenn Sie `True` festlegen, müssen Sie auch `userName` und `password` angeben, damit ein anonymes Konto bestimmt werden kann. Die von Ihnen angegebenen Anmeldeinformationen legen den Sicherheitskontext fest, unter dem die Anforderung ausgegeben wird.  
   
 5.  Speichern Sie die Datei Web.config im Ordner ReportBuilder\bin.  
   
-6.  Öffnen die Datei RSReportServer.config im Abschnitt Dienste suchen `IsReportManagerEnabled` und fügen Sie den folgenden Eintrag hinzu:  
+6.  Öffnen Sie die Datei RSReportServer.config im Abschnitt zu Reporting Services, suchen Sie `IsReportManagerEnabled`, und fügen Sie den folgenden Eintrag an das Ende an:  
   
     ```  
     <IsReportBuilderAnonymousAccessEnabled>True</IsReportBuilderAnonymousAccessEnabled>  
@@ -158,6 +158,6 @@ ms.locfileid: "48071290"
   
 ## <a name="see-also"></a>Siehe auch  
  [Anwendungsdomänen für Berichtsserveranwendungen](../report-server/application-domains-for-report-server-applications.md)   
- [Reporting Services-Sicherheit und Schutz](reporting-services-security-and-protection.md)  
+ [Sicherheit und Schutz für Reporting Services](reporting-services-security-and-protection.md)  
   
   

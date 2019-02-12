@@ -1,27 +1,26 @@
 ---
-title: 'Lektion 3: Verarbeiten der Zeitreihenstruktur und -Modellen | Microsoft-Dokumentation'
+title: 'Lektion 3: Verarbeiten von Time Series-Struktur und Modelle | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 16e27b57-eae1-47a7-a02c-47b6ed487d87
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 605476076746aafe6336c82a8cd6c5b2a32b30c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 493d27c9836eb765c655eba5bbb004e4d48cde40
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061660"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026271"
 ---
-# <a name="lesson-3-processing-the-time-series-structure-and-models"></a>Lektion 3: Verarbeiten der Zeitreihenstruktur und -modelle
+# <a name="lesson-3-processing-the-time-series-structure-and-models"></a>Lektion 3: Verarbeiten von Time Series-Struktur und Modelle
   In dieser Lektion verwenden Sie die [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) -Anweisung verarbeitet die Zeitreihe, Miningstrukturen und Miningmodelle, die Sie erstellt haben.  
   
- Wenn Sie eine Miningstruktur verarbeiten [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] liest die Daten und erstellt die Strukturen, die die Miningmodelle unterstützen. Nachdem Sie ein Miningmodell und eine Struktur erstellt haben, müssen Sie diese immer zunächst verarbeiten. Wenn Sie die Miningstruktur bei Verwendung der INSERT INTO-Anweisung angegeben, wird die Miningstruktur zusammen mit allen zugehörigen Miningmodellen von der Struktur verarbeitet.  
+ Wenn Sie eine Miningstruktur verarbeiten, liest [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] die Quelldaten und erstellt die Strukturen, die Miningmodelle unterstützen. Nachdem Sie ein Miningmodell und eine Struktur erstellt haben, müssen Sie diese immer zunächst verarbeiten. Wenn Sie die Miningstruktur bei Verwendung der INSERT INTO-Anweisung angegeben, wird die Miningstruktur zusammen mit allen zugehörigen Miningmodellen von der Struktur verarbeitet.  
   
  Wenn Sie einer Miningstruktur, die bereits verarbeitet wurde, ein Miningmodell hinzufügen, können Sie nur das neue Miningmodell mithilfe der `INSERT INTO MINING MODEL`-Anweisung unter Verwendung von vorhandenen Daten verarbeiten.  
   
@@ -36,7 +35,7 @@ ms.locfileid: "48061660"
   
 -   Definieren der Trainingsdaten  
   
- Folgendes ist ein allgemeines Beispiel der `INSERT INTO` Anweisung:  
+ Das folgende Beispiel ist ein allgemeines Beispiel für die `INSERT INTO`-Anweisung:  
   
 ```  
 INSERT INTO MINING STRUCTURE [<mining structure name>]  
@@ -123,7 +122,7 @@ OPENQUERY (<source data definition>)
     FROM vTimeSeries ORDER BY [ReportingDate]')  
     ```  
   
-     Die Quellabfrage verweist auf die [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] Datenquelle, die im Beispielprojekt definiert. Diese Datenquelle wird verwendet, um auf die vTimeSeries-Sicht zuzugreifen. Diese Sicht enthält die Quelldaten, die zum Trainieren des Miningmodells verwendet werden. Wenn Sie nicht mit diesem Projekt oder diesen Sichten vertraut sind, finden Sie unter[Lektion 2: erstellen eine Forecasting-Szenarios &#40;Data Mining Tutorial für fortgeschrittene&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
+     Die Quellabfrage verweist auf die [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] Datenquelle, die im Beispielprojekt definiert. Diese Datenquelle wird verwendet, um auf die vTimeSeries-Sicht zuzugreifen. Diese Sicht enthält die Quelldaten, die zum Trainieren des Miningmodells verwendet werden. Wenn Sie nicht mit diesem Projekt oder diesen Sichten vertraut sind, finden Sie unter[Lektion 2: Erstellen eines Planungserstellungsszenarios &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
   
      Die gesamte Anweisung sollte wie folgt aussehen:  
   
@@ -152,6 +151,6 @@ OPENQUERY (<source data definition>)
 ## <a name="see-also"></a>Siehe auch  
  [Anforderungen und Überlegungen zur Verarbeitung &#40;Datamining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)   
  [&#60;quelldatenabfrage&#62;](/sql/dmx/source-data-query)   
- [OPENQUERY &AMP;#40;DMX&AMP;#41;](/sql/dmx/source-data-query-openquery)  
+ [OPENQUERY &#40;DMX&#41;](/sql/dmx/source-data-query-openquery)  
   
   

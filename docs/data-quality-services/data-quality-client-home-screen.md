@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.clienthome.f1
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6a7e84ae47e5a9ce6e934e612f546478335d35a1
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 928624480fca725392bb13c87a18c6d48e639f25
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616181"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024041"
 ---
 # <a name="data-quality-client-home-screen"></a>Startbildschirm des Data Quality-Clients
 
@@ -26,7 +26,7 @@ ms.locfileid: "52616181"
 
   Über diesen Bildschirm können Sie auf die Benutzeroberflächen für die drei wichtigsten [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] -Taskgruppen (DSQ) zugreifen: Wissensdatenbank-Verwaltung, Data Quality-Projekte und Verwaltung.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
   
 ### <a name="knowledge-base-management"></a>Wissensdatenbank-Verwaltung  
  Eine DQS-Wissensdatenbank ist ein Repository mit Metadaten, die von DQS zur Verbesserung der Datenqualität verwendet werden. Diese Metadaten werden von der DQS-Plattform in einem computergestützten Wissensermittlungsprozess und vom Data Steward in einem interaktiven Domänenverwaltungsprozess erstellt.  
@@ -63,7 +63,7 @@ ms.locfileid: "52616181"
  **Configuration**  
  Zeigen Sie die Konfigurationseigenschaften für Verweisdatendienstkonten, (beide durch Windows Azure Marketplace und direkt zu Verweisdatendiensten) allgemeine Einstellungen (interaktive Bereinigung, Abgleich und Profilerstellung) und Einstellungen über den Protokollschweregrad an.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [DQS-Wissensdatenbanken und -Domänen](../data-quality-services/dqs-knowledge-bases-and-domains.md)   
  [Data Quality-Projekte &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
  [DQS-Verwaltung](../data-quality-services/dqs-administration.md)  

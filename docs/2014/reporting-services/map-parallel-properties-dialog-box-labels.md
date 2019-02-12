@@ -12,14 +12,14 @@ f1_keywords:
 - "10519"
 ms.assetid: 4560a7e4-e19b-4a6e-8ef4-e963497e01ae
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ba603b2b05108f6b7cd0b4cb7b6a4d65904af678
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: f82b38efac61ca6cdddb10c13e584c0c8f79a346
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097290"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018102"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>Paralleleneigenschaften von Karten (Dialogfeld), Bezeichnungen
   Verwenden der **MapParallel Eigenschaften** im Dialogfeld Optionen für Bezeichnungen für das horizontale Raster im kartenviewport zu ändern. Eine Parallele stellt den folgenden Wert abhängig vom angegebenen Koordinatensystem für den Viewport dar:  
@@ -30,7 +30,7 @@ ms.locfileid: "48097290"
   
  Klicken Sie auf die Schaltfläche **Ausdruck** (*fx*), um einen Ausdruck zu bearbeiten, der den Wert der Option festlegt.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Intervall**  
  Geben Sie einen ganzzahligen Wert in Grad ein, der das Intervall zwischen Parallelen angibt. Standardmäßig ist **Automatisch** ausgewählt. Wenn diese Option auf **Automatisch**festgelegt wird, wird der Wert durch die Daten aus dem Kartendataset bestimmt.  
   

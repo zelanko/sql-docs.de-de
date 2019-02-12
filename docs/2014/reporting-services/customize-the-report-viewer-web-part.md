@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 086d6546-7299-41bc-bca9-083a15a53679
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1cfb1dcfb635bbd7c70babcbd5a157c919c36892
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 46873ce2a5a8ad006fafb2c0311e895c6305cd6a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110040"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017962"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Anpassen des Berichts-Viewer-Webparts
   Mithilfe des Berichts-Viewer-Webparts können Sie Berichte anzeigen, die auf einem Berichtsserver ausgeführt werden, der für die Ausführung im integrierten SharePoint-Modus konfiguriert ist. Sie können u. a. Berichtsdefinitionsdateien (RDL-Dateien) und Berichts-Generator-Berichte anzeigen. Berichte werden im Berichts-Viewer-Webpart automatisch auf einer neuen Seite angezeigt, doch können Sie auch einer vorhandenen Webseite oder Website ein Berichts-Viewer-Webpart hinzufügen, wenn auf der Seite ein bestimmter Bericht immer angezeigt werden soll.  
@@ -62,7 +62,7 @@ ms.locfileid: "48110040"
 |Eigenschaft|Description|  
 |--------------|-----------------|  
 |Bericht|Ein vollqualifizierter Pfad für einen Bericht, der sich auf der aktuellen SharePoint-Website oder auf einer Website innerhalb der gleichen Webanwendung oder Farm befindet. Optimale Ergebnisse beim Festlegen zusätzlicher Eigenschaften erzielen Sie, indem Sie nach dem Angeben der Berichts-URLs auf Anwenden klicken.|  
-|Linkziel|Standard-HTML, die den Zielrahmen für die Anzeige von verknüpftem Inhalt im aktuellen Dokument angibt. Für Berichte, die Links zu externen Websites enthalten, können Sie angeben, ob ein Zieldokument den vorhandenen Bericht im aktuellen Fenster ersetzt oder in einem neuen Browserfenster geöffnet wird. Gültige Werte sind `_Top`, `_Blank`, und `_Self`. Mit `_Top` wird das aktuelle Fenster verwendet, mit `_Blank` wird das Dokument in einem neuen Browserfenster geladen, und mit `_Self` wird das Dokument im aktuellen Frame geöffnet. Obwohl `_Parent` ein gültiger Wert für das Target-Attribut in HTML ist, sollten Sie ihn nicht für ein in eine Seite eingebettetes Berichts-Viewer-Webpart verwenden.|  
+|Linkziel|Standard-HTML, die den Zielrahmen für die Anzeige von verknüpftem Inhalt im aktuellen Dokument angibt. Für Berichte, die Links zu externen Websites enthalten, können Sie angeben, ob ein Zieldokument den vorhandenen Bericht im aktuellen Fenster ersetzt oder in einem neuen Browserfenster geöffnet wird. Gültige Werte sind unter anderem `_Top`, `_Blank` und `_Self`. Mit `_Top` wird das aktuelle Fenster verwendet, mit `_Blank` wird das Dokument in einem neuen Browserfenster geladen, und mit `_Self` wird das Dokument im aktuellen Frame geöffnet. Obwohl `_Parent` ein gültiger Wert für das Target-Attribut in HTML ist, sollten Sie ihn nicht für ein in eine Seite eingebettetes Berichts-Viewer-Webpart verwenden.|  
 |Automatisches Generieren von Webparttiteln|Ein generierter Titel , der den Namen des Berichts-Viewer-Webparts und den Namen des Berichts enthält, abgetrennt durch einen Bindestrich. Wenn der Bericht über keinen Titel verfügt, wird der Berichtsdateiname verwendet. Der Titel ist sichtbar, wenn Sie ein Webpart zu einer Seite hinzufügen. Wenn dieses Kontrollkästchen aktiviert ist, wird der Titel bei jeder Aktualisierung der Seite generiert.|  
 |Automatisches Generieren von Detaillinks für Webparts|Ein generierter Link, der über dem Webpart angezeigt wird. Sie können auf den Link klicken, um den Bericht auf einer neuen Seite im Ganzseitenmodus anzuzeigen.|  
 |Anzeigen des Menüelements Berichts-Generator|Zeigt die Option des Menüs **Aktionen** an, mit der der Berichts-Generator geöffnet oder ausgeblendet wird.|  
@@ -76,9 +76,9 @@ ms.locfileid: "48110040"
 |Anzeigen des Zoomsteuerelement|Zeigt das Zoomsteuerelement auf der Symbolleiste an oder blendet es aus.|  
 |Anzeigen der ATOM-Feed-Schaltfläche|Zeigt die ATOM-Feed-Schaltfläche auf der Symbolleiste an oder blendet sie aus.<br /><br /> ![htmlviewer_datafeed](media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|  
 |Symbolleistenspeicherort|Bestimmt die Position der Symbolleiste innerhalb des Berichts-Viewers. Gültige Werte sind `Top` und `Bottom`.|  
-|Bereich Eingabeaufforderung|Gültige Werte sind `Displayed`, `Collapsed`, und `Hidden`. `Displayed` Zeigt den Parameterbereich für Berichte, die parametrisierte Werte enthalten, und, die eine Benutzereingabe erforderlich, bevor der Bericht ausgeführt wird. Verwendung `Hidden` , wenn alle Berichtsparameter angegeben wurden und nicht, dass den Parameterbereich für Benutzer sichtbar möchten.|  
+|Bereich Eingabeaufforderung|Gültige Werte sind unter anderem `Displayed`, `Collapsed` und `Hidden`. Mit `Displayed` wird der Parameterbereich für Berichte angezeigt, die parametrisierte Werte enthalten und für die eine Benutzereingabe erforderlich ist, bevor der Bericht ausgeführt werden kann. Verwenden Sie `Hidden`, wenn alle Berichtsparameter angegeben wurden und Sie nicht möchten, dass der Parameterbereich für Benutzer sichtbar ist.|  
 |Breite des Parameterbereichs|Sie können die Maßeinheit und den Wert auswählen. Der Standardwert ist 200 Pixel. Die einzige Anforderung für diese Eigenschaft lautet, dass sie größer als 0 sein muss.|  
-|Dokumentstruktur|Ein Steuerelement für die Berichtsnavigation, das im Bericht definiert und zum Bereitstellen eines Zugriffs auf bestimmte Abschnitte eines Berichts mit einem Klick verwendet wird. Es ist in HTML-Berichten verfügbar. Die Dokumentstruktur wird in einem reduzierbaren Bereich neben dem Berichtsansichtsbereich angezeigt. Gültige Werte sind `Displayed`, `Collapsed`, und `Hidden`. Wenn für einen Bericht eine Dokumentstruktur definiert ist, ist der Bereich standardmäßig erweitert, sofern er nicht in den Webparteigenschaften als ausgeblendet oder reduziert markiert ist. Wenn die Dokumentstruktur reduziert ist, können Sie auf den Pfeil klicken, um sie zu erweitern.|  
+|Dokumentstruktur|Ein Steuerelement für die Berichtsnavigation, das im Bericht definiert und zum Bereitstellen eines Zugriffs auf bestimmte Abschnitte eines Berichts mit einem Klick verwendet wird. Es ist in HTML-Berichten verfügbar. Die Dokumentstruktur wird in einem reduzierbaren Bereich neben dem Berichtsansichtsbereich angezeigt. Gültige Werte sind unter anderem `Displayed`, `Collapsed` und `Hidden`. Wenn für einen Bericht eine Dokumentstruktur definiert ist, ist der Bereich standardmäßig erweitert, sofern er nicht in den Webparteigenschaften als ausgeblendet oder reduziert markiert ist. Wenn die Dokumentstruktur reduziert ist, können Sie auf den Pfeil klicken, um sie zu erweitern.|  
 |Breite des Dokumentstrukturbereichs|Sie können die Maßeinheit und den Wert auswählen. Der Standardwert ist 200 Pixel. Die einzige Anforderung für diese Eigenschaft lautet, dass sie größer als 0 sein muss.|  
 |Parameter laden|Abrufen von Parametereigenschaften für den Bericht. Nicht alle Berichte verfügen über Parameter. Wenn der Bericht nicht über Parameter verfügt, werden keine Werte zurückgegeben. Wenn Sie Eigenschaften für einen soeben hochgeladenen Bericht festlegen, erhalten Sie möglicherweise eine Fehlermeldung, die angibt, dass die Datenquellenverbindung gelöscht wurde. Wenn dies auftritt, setzen Sie die Verbindung zurück, und stellen Sie das Festlegen der Parametereigenschaften fertig, nachdem die Verbindung angegeben wurde. Weitere Informationen zum Einrichten der Verbindung finden Sie unter [Erstellen und Verwalten von freigegebenen Datenquellen (Reporting Services im integrierten SharePoint-Modus)](../../2014/reporting-services/create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md).<br /><br /> Optimale Ergebnisse erzielen Sie, indem Sie auf **Anwenden** klicken, bevor Sie auf Parameter laden klicken.<br /><br /> Nach dem Laden von Parametereigenschaften können Sie sie auf die gleiche Weise festlegen, wie Sie dies auf den Parametereigenschaftenseiten des Berichts tun würden. Weitere Informationen zum Festlegen von Parametern finden Sie unter [Festlegen von Parametern für einen veröffentlichten Bericht (Reporting Services im integrierten SharePoint-Modus)](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).|  
   
@@ -94,6 +94,6 @@ ms.locfileid: "48110040"
   
 ## <a name="see-also"></a>Siehe auch  
  [Berichts-Viewer-Webpart auf einer SharePoint-Website](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
- [Hinzufügen des Berichts-Viewer-Webparts zu einer Webseite &#40;integrierten Reporting Services im SharePoint-Modus&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
+ [Hinzufügen des Berichts-Viewer-Webparts zu einer Webseite &#40;Reporting Services im integrierten SharePoint-Modus&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

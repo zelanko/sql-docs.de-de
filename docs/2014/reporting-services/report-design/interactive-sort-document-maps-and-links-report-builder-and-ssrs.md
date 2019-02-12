@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 68e73b7fc2d7b1982724da4040c4912473f30d78
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 62ed0c324711ab38460c59ecc0e74291a1080d2d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352572"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017731"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>Interaktive Sortierung, Dokumentstrukturen und Links (Berichts-Generator und SSRS)
   In webbasierten Umgebungen können Sie eine Reihe von Funktionen hinzufügen, über die Benutzer mit Berichten interagieren können. Die Benutzer können die Sortierreihenfolge der Werte im Bericht ändern, Elemente im Bericht anzeigen oder ausblenden oder auf Links klicken, die zu anderen Berichten oder Webseiten führen. Sie können auch ein Inhaltsverzeichnis oder eine Dokumentstruktur hinzufügen. Die Berichtsbenutzer können auf Elemente im Inhaltsverzeichnis oder in der Dokumentstruktur klicken, um zu Bereichen in einem Bericht zu springen.  

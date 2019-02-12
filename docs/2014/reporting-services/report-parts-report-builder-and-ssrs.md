@@ -11,14 +11,14 @@ f1_keywords:
 - "10543"
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6114407d959a29944f01711b2446ce375f203b83
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 97e15adf9bbc18fadfd9789472f75a1070ebd60d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366372"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022831"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Berichtsteile (Berichts-Generator und SSRS)
   Berichtselemente wie Tabellen, Matrizen, Diagramme und Bilder können als *Berichtsteile*veröffentlicht werden. Berichtsteile sind Berichtselemente, die separat auf einem Berichtsserver veröffentlicht wurden und die in anderen Berichten wieder verwendet werden können. Berichtsteile besitzen die Dateierweiterung ".rsc".  

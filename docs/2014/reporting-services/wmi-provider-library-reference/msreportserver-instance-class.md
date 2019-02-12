@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: 0c2e8587-1dda-4e7b-8ef8-646fcda051fc
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 80aa9e3838440e93cf92c7efb7f93723a1bdbdef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4edf20d92883c5446a4e63472e006acc3763084d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205930"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024151"
 ---
 # <a name="msreportserverinstance-class"></a>MSReportServer_Instance-Klasse
   Die MSReportServer_Instance-Klasse stellt grundlegende Informationen bereit, die ein Client benötigt, um eine Verbindung mit einem installierten Berichtsserver herzustellen.  
   
- Eine Liste aller Member dieses Typs, finden Sie unter [MSReportServer_Instance-Member](msreportserver-instance-members.md)  
+ Eine Liste aller Member dieses Typs finden Sie unter [MSReportServer_Instance Members](msreportserver-instance-members.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,6 +51,6 @@ public class MSReportServer_Instance
  **Plattform:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [MSReportServer_Instance Members (MSReportServer_Instance-Member)](msreportserver-instance-members.md)  
+ [MSReportServer_Instance-Member](msreportserver-instance-members.md)  
   
   

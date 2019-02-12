@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ebb53598-2378-46ae-8935-d5192f8ea49a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 37b865f5f1e0ff029f030fcfab5bc1534fcb4a3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8b41d68eea7ced40f88fa505db1f8342c8c9faeb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153722"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020751"
 ---
 # <a name="parameters-properties-page-report-manager"></a>Parameter (Eigenschaftenseite) (Berichts-Manager)
   Verwenden Sie die Eigenschaftenseite Parameter, um Parametereinstellungen für einen parametrisierten Bericht anzuzeigen oder zu ändern.  
@@ -36,7 +36,7 @@ ms.locfileid: "48153722"
   
 4.  Wählen Sie die Registerkarte **Parameter** aus. Wenn die Registerkarte **Parameter** nicht angezeigt wird, enthält der Bericht keine Parameter.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Parametername**  
  Gibt den Namen des Parameters an.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48153722"
  **NULL**  
  Aktivieren Sie dieses Kontrollkästchen, um NULL als Standardwert anzugeben. Ein NULL-Wert bedeutet, dass der Bericht ausgeführt werden kann, auch wenn der Benutzer keinen Parameterwert bereitstellt. Falls in dieser Spalte kein Kontrollkästchen angezeigt wird, akzeptiert der Parameter keine NULL-Werte.  
   
- **Ausblenden**  
+ **Hide**  
  Aktivieren Sie dieses Kontrollkästchen, um den Parameter im Parameterbereich auszublenden, der oben im Bericht angezeigt wird. Der Parameter wird weiterhin in den Abonnementsdefinitionsseiten angezeigt und kann ebenso noch in einer Berichts-URL angegeben werden. Das Ausblenden des Parameters ist hilfreich, wenn Sie den Bericht immer mit dem von Ihnen angegebenen Standardwert ausführen möchten.  
   
  Deaktivieren Sie dieses Kontrollkästchen, wenn Sie möchten, dass der Parameter im Bericht sichtbar ist.  

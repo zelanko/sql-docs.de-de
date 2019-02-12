@@ -2,8 +2,7 @@
 title: Sp_pdw_log_user_data_masking (SQL Data Warehouse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 23d7846bd72329a62579765679687204a8e14ec5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0d9a6ec090e799b4b6f0aad7e7335d1e36999dd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630238"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022975"
 ---
 # <a name="sppdwloguserdatamasking-sql-data-warehouse"></a>Sp_pdw_log_user_data_masking (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "47630238"
 > [!IMPORTANT]  
 >  Die [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitätsprotokolle betroffen **Sp_pdw_log_user_data_masking** sind bestimmte [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitätsprotokolle. **Sp_pdw_log_user_data_masking** wirkt sich nicht auf Datenbankprotokolle oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fehlerprotokolle.  
   
- **Hintergrund:** In der Standardkonfiguration [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitätsprotokolle enthalten vollständige [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, und es in einigen Fällen enthalten Benutzerdaten enthalten Vorgänge wie z. B. **einfügen**,  **UPDATE**, und **wählen** Anweisungen. Wenn auf dem Gerät ein Problem vorliegt können die Analyse der Bedingungen, die die Ursache des Problems, ohne das Problem reproduzieren. Um zu verhindern, dass die Benutzerdaten in geschriebenen [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] -Aktivitätsprotokollen, Kunden können auswählen, um die datenmaskierung Benutzer mit dieser gespeicherten Prozedur zu aktivieren. Die Anweisungen werden weiterhin in geschrieben [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitätsprotokolle, aber alle die Literale in Anweisungen, die Benutzerdaten enthalten unter Umständen werden maskiert werden; mit einigen vordefinierten Konstanten Werte ersetzt.  
+ **Hintergrund:** In der Standardkonfiguration [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitätsprotokolle enthalten vollständige [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, und es in einigen Fällen enthalten Benutzerdaten enthalten Vorgänge wie z. B. **einfügen**, **UPDATE**, und **Wählen** Anweisungen. Wenn auf dem Gerät ein Problem vorliegt können die Analyse der Bedingungen, die die Ursache des Problems, ohne das Problem reproduzieren. Um zu verhindern, dass die Benutzerdaten in geschriebenen [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] -Aktivitätsprotokollen, Kunden können auswählen, um die datenmaskierung Benutzer mit dieser gespeicherten Prozedur zu aktivieren. Die Anweisungen werden weiterhin in geschrieben [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitätsprotokolle, aber alle die Literale in Anweisungen, die Benutzerdaten enthalten unter Umständen werden maskiert werden; mit einigen vordefinierten Konstanten Werte ersetzt.  
   
  Wenn die transparente datenverschlüsselung auf dem Gerät aktiviert ist, maskieren Sie die Benutzerdaten in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitätsprotokolle wird automatisch aktiviert.  
   

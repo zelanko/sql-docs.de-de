@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e0137273-85b8-45f0-83e5-38a50481768f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7a3e1d824567358d54afef75c22d78613b883b5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ca003e937f5e9547fa1bda0243967a8ff1d8331a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133290"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019321"
 ---
 # <a name="report-manager-f1-help"></a>Berichts-Manager (F1-Hilfe)
   Die folgenden Themen stellen Hilfe auf Seitenebene für den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichts-Manager zur Verfügung. Für jede Seite in der Anwendung ist ein Thema vorhanden. Möglicherweise stehen nicht alle Seiten zur Verfügung. Auf welche Seiten zugegriffen werden kann, wird durch Sicherheitseinstellungen bestimmt. Um auf diese Themen innerhalb des Berichts-Managers zuzugreifen, klicken Sie auf der Hauptsymbolleiste auf **Hilfe** .  

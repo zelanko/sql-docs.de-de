@@ -17,13 +17,13 @@ f1_keywords:
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3baf73ba7f2c9e5d4d206234b1c9b874fbb15c59
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: bb45eb7274763446358a0336a9b2a415bc4543b8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366262"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023501"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Berichtsparameter (Berichts-Generator und Berichts-Designer)
   In diesem Thema werden die allgemeinen Verwendungen von SSRS-Berichtsparametern und die einstellbaren Eigenschaften beschrieben. Zudem erhalten Sie viele weitere Informationen zu Parametern. Mithilfe von Berichtsparametern können Sie Berichtsdaten steuern, eine Verbindung zwischen verwandten Berichten herstellen und die Berichtspräsentation anpassen.  
@@ -65,7 +65,7 @@ ms.locfileid: "53366262"
 ##  <a name="UserInterface"></a> Bereich "Parameter"  
  Wenn Sie einen Bericht anzeigen, werden auf der Berichts-Viewer-Symbolleiste alle Parameter angezeigt, sodass ein Benutzer interaktiv Werte angeben kann. Die folgende Abbildung zeigt den Parameterbereich für einen Bericht mit Parametern @StartDate, @EndDate, @Subcategory, und @ShowAllRows.  
   
- ![Rs_ParameterStory](../media/rs-parameterstory.gif "Rs_ParameterStory")  
+ ![rs_ParameterStory](../media/rs-parameterstory.gif "rs_ParameterStory")  
   
 1.  **Parameterbereich** Auf der Berichts-Viewer-Symbolleiste werden für jeden Parameter eine Eingabeaufforderung und ein Standardwert angezeigt. Das Parameterlayout auf der Symbolleiste wird automatisch formatiert. Die Reihenfolge richtet sich nach der Reihenfolge, in der die Parameter im Berichtsdatenbereich angezeigt werden.  
   
@@ -227,7 +227,7 @@ ms.locfileid: "53366262"
 ##  <a name="bkmk_Related_Topics"></a> Verwandte Inhalte  
  [Konfigurieren von SSRS-Berichtsparametern (Quiz)](https://go.microsoft.com/fwlink/p/?LinkID=306443)  
   
- [Tutorial: Hinzufügen eines Parameters zum Bericht &#40;Berichts-Generator&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41; (Tutorial: Hinzufügen eines Parameters zu einem Bericht (Berichts-Generator))](../tutorial-add-a-parameter-to-your-report-report-builder.md).  
   
  [Erweiterung der Geheimnisse invalidreportparameterexception im Berichterstellungsdienst](https://go.microsoft.com/fwlink/p/?LinkId=393118)  
   

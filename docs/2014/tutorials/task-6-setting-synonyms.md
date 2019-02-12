@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b7d35ee9-d1c9-41d9-bbc5-0ca7db93e54d
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 00640766d7a19c91f517d8e96e6de9f863d5ed54
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a81a538e2cd15dd38a6c32993395cac20079b6f2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365702"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022274"
 ---
 # <a name="task-6-setting-synonyms"></a>Aufgabe 6: Festlegen von Synonymen
   In dieser Aufgabe legen Sie zwei Domänenwerte, **USA** und **USA**, der die **Land** Domäne als Synonyme mit **USA** wie die führender Wert. Da die **führende Werte** ausgewählt war beim Erstellen der **Land** Domäne alle **USA** Werte für die **Land** Domäne Gibt als **USA** (wie der Vereinigten Staaten der führende Wert ist). Finden Sie unter [Change Domain Values](https://msdn.microsoft.com/library/hh510408.aspx) Weitere Details.  
