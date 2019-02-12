@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 1e00c5b9-a9f8-4503-99ee-377c9cc02d7f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 820a65ce9d45a72fe6a7629aebb7bb10374dbfae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 97db61dc3b9adf2e345957c8e08aa752e51286e0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147313"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039901"
 ---
-# <a name="lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial"></a>Lektion 4: Untersuchen der Targeted Mailing-Modelle (Lernprogramm zu Data Mining-Grundlagen)
+# <a name="lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial"></a>Lektion 4: Untersuchen der Targeted Mailing-Modelle (Lernprogramm zu Datamining-Grundlagen)
   Nachdem die Modelle im Projekt verarbeitet wurden, können Sie sie auf interessante Trends untersuchen. Da Muster bei bloßer Betrachtung der Zahlen komplex und schwierig erscheinen können, bietet SQL Server Data Mining visuelle Tools, mit deren Hilfe die Daten untersucht und die Regeln und Beziehungen, die von den Algorithmen innerhalb der Daten ermittelt wurden, interpretiert werden können. Sie können auch verschiedene Genauigkeitstests verwenden, um das Dataset zu überprüfen bzw. um vor der Bereitstellung festzustellen, welches Modell am besten geeignet ist.  
   
  Bei Verwendung von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] um Ihre Modelle untersuchen zu können, wird jedes erstellte Modell aufgeführt, der **Miningmodell-Viewer** -Registerkarte im Data Mining-Designer. Sie können die Modelle mithilfe der Viewer untersuchen. Diese Viewer sind auch in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] verfügbar.  
@@ -52,10 +51,10 @@ ms.locfileid: "48147313"
  [Lektion 3: Hinzufügen und Verarbeiten von Modellen](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 5: Testen von Modellen &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
+ [Lesson 5: Testen von Modellen &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningmodell-Viewer miningmodelltasks und Anweisungen](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Tasks und Anweisungen für Miningmodell-Viewer](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Data Mining-Modell-Viewer](../../2014/analysis-services/data-mining/data-mining-model-viewers.md)  
   
   

@@ -12,19 +12,19 @@ f1_keywords:
 - sql12.rtp.rptdesigner.calculatedseriesproperties.markers.f1
 ms.assetid: 3a0bb42a-af1b-4228-bc9d-f9a02bb3b987
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0ffa3f0b1709754dc7fd4269ca403a86856b4863
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 8e4d6eef27b79e86f8994dd6e79d3de83c809f48
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053417"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029831"
 ---
 # <a name="calculated-series-properties-dialog-box-markers-report-builder-and-ssrs"></a>Eigenschaften von berechneten Reihen (Dialogfeld), Marker (Berichts-Generator und SSRS)
-  Wählen Sie im Dialogfeld **Eigenschaften von berechneten Reihen** die Option **Marker** aus, um die Darstellung von Markern auf den einzelnen Datenpunkten einer Reihe zu definieren. Marker sind nur für bestimmte Diagrammtypen verfügbar. Die folgenden Diagrammtypen unterstützen Marker: Flächendiagramm, Balkendiagramm, Säulendiagramm, Liniendiagramm, Polardiagramm und Punktdiagramm. Weitere Informationen zu Diagrammfunktionen finden Sie unter [Diagrammtypen &#40;Berichts-Generator und SSRS&#41;](report-design/chart-types-report-builder-and-ssrs.md).  
+  Wählen Sie im Dialogfeld **Eigenschaften von berechneten Reihen** die Option **Marker** aus, um die Darstellung von Markern auf den einzelnen Datenpunkten einer Reihe zu definieren. Marker sind nur für bestimmte Diagrammtypen verfügbar. Die folgenden Diagrammtypen unterstützen Marker: Bereich, Balken, Spalte, Polar-, Zeile und Punktdiagramm. Weitere Informationen zu Diagrammfunktionen finden Sie unter [Diagrammtypen &#40;Berichts-Generator und SSRS&#41;](report-design/chart-types-report-builder-and-ssrs.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Markertyp**  
  Wählen Sie einen Markertyp aus, wenn Marker im Diagramm aktiviert werden. Standardmäßig ist der Wert **Kreis**festgelegt.  
   

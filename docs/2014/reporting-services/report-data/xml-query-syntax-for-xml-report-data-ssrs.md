@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4c8a1a3b41bd30702a04ce6cbb49b70bc561e508
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: ac63791bd33d9f6f774cd1d56601a28d3683b249
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369892"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037141"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>XML-Abfragesyntax für XML-Berichtsdaten (SSRS)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]können Sie Datasets für XML-Datenquellen erstellen. Wenn Sie eine Datenquelle definiert haben, erstellen Sie eine Abfrage für das Dataset. Je nach Typ der XML-Daten, auf die die Datenquelle zeigt, können Sie die Datasetabfrage erstellen, indem Sie eine XML-`Query` oder einen Elementpfad einfügen. XML `Query` beginnt mit einem  **\<Abfrage >** -Tag und enthält Namespaces und XML-Elemente, die je nach Datenquelle variieren. Ein Elementpfad ist von Namespaces unabhängig und gibt die Knoten und Knotenattribute in den zugrunde liegenden XML-Daten an, die mit der XPath-ähnlichen Syntax verwendet werden sollen. Weitere Informationen zu Elementpfaden finden Sie unter [Syntax für Elementpfade für XML-Berichtsdaten (SSRS)](report-data-ssrs.md).  
@@ -89,7 +89,7 @@ ms.locfileid: "53369892"
 |XML-Abfrageelement|Resultierende Felder im Dataset|  
 |-----------------------|-------------------------------------|  
 |\<Query/>|Wert A: https://schemas.microsoft.com/...<br /><br /> Wert B: https://schemas.microsoft.com/...<br /><br /> Wert C: https://schemas.microsoft.com/...|  
-|\<XmlDP:Query Xmlns:xmldp = "https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" Xmlns:ns = "https://schemas.microsoft.com/..." ><br /><br /> \<XmlDP:ElementPath > Stamm {}/ns:Element2 / Knoten\</xmldp:ElementPath ><br /><br /> \</XmlDP:Query >|Value D<br /><br /> Value E<br /><br /> Value F|  
+|\<xmldp:Query xmlns:xmldp="https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="https://schemas.microsoft.com/..."><br /><br /> \<xmldp:ElementPath>Root {}/ns:Element2/Node\</xmldp:ElementPath><br /><br /> \</xmldp:Query>|Value D<br /><br /> Value E<br /><br /> Value F|  
   
 #### <a name="xml-document-dpnamespacexml"></a>XML-Dokument: DPNamespace.xml  
  Sie können dieses XML-Dokument kopieren und unter einer URL speichern, auf den der Berichts-Designer zugreifen kann, um es als XML-Datenquelle zu verwenden: z. B. http://localhost/DPNamespace.xml.  

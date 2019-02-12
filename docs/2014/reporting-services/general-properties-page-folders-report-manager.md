@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 31d99d9b-2303-4bae-9466-fb67b97cf11a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f8fca88baa1a3886f06e0c812164d0c759e7d835
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2181e4ab949eef70c5ba9cb06c4fc8cfe82435dc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156454"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031591"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>Allgemein (Eigenschaftenseite, Ordner) (Berichts-Manager)
   Verwenden Sie die Seite Allgemeine Eigenschaften für Ordner, um Eigenschaften für die von Ihnen erstellten Ordner anzuzeigen und festzulegen. Informationen zum Benutzer, der den Ordner erstellt oder geändert hat, und zum Zeitpunkt der Änderung werden oben auf der Seite Allgemeine Eigenschaften angezeigt.  
@@ -34,7 +34,7 @@ ms.locfileid: "48156454"
   
 2.  Klicken Sie unter dem Ordnerbanner auf der Symbolleiste auf **Ordnereinstellungen**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name**  
  Geben Sie einen Namen für den Ordner an. Der Name muss mindestens ein alphanumerisches Zeichen enthalten. Er kann auch Leerzeichen und Sonderzeichen enthalten. Folgende Zeichen können nicht beim Angeben eines Namens verwendet werden: ; ? : \@ & = +, $ * \< > | "oder / beim Angeben eines Namens.  
   

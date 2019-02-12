@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: bbc1b3eaabe4760cd8f0778f1c2e2659e4c6db74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 84a55d4f18b52d103997fdafee2fc2c84d9495f6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095710"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040731"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Planen eines Kartenberichts (Berichts-Generator und SSRS)
   Gute Berichte enthalten Informationen, die als Grundlage für Aktionen oder Verständniszugewinn dienen können. Um Analytische Daten, wie z. B. Gesamtumsätze oder demografische Daten, mit einem geografischen Hintergrund zu präsentieren, können Sie dem Bericht eine Karte hinzufügen. Eine Karte kann mehrere Ebenen enthalten, wobei jede Ebene Kartenelemente anzeigt, die von einem bestimmten Typ räumlicher Daten definiert werden: Punkte, die Positionen darstellen, Linien, die Routen darstellen, oder Polygone, die Flächen darstellen. Sie können den analytischen Daten auf jeder Ebene Kartenelemente zuordnen.  
@@ -59,11 +59,11 @@ ms.locfileid: "48095710"
   
 -   ESRI-Shape-Dateien, einschließlich öffentlich verfügbarer Shape-Dateien, nach denen Sie im Internet suchen können.  
   
--   Räumliche Daten aus räumlichen Datenquellen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Räumliche Daten aus räumlichen Datenquellen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   Karten aus Berichten im Kartenkatalog.  
   
--   Websites von Drittanbietern, die räumliche Daten in Form von ESRI-Shape-Dateien bieten oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] räumliche Daten.  
+-   Drittanbieterwebsites, die räumliche Daten in Form von ESRI-Shape-Dateien oder räumlichen Daten von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anbieten.  
   
 -   Bing-Kartenkacheln, die einen Hintergrund für die Kartenansicht bereitstellen. Wenn Sie in einer Karte Kacheln anzeigen möchten, muss der Berichtsserver zur Unterstützung der Bing Maps-Webdienste konfiguriert werden.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "48095710"
   
  Nachdem Sie mit dem Karten-Assistenten eine Karte hinzugefügt haben, können Sie mit dem Ebenen-Assistenten zusätzliche Ebenen erstellen oder die Optionen für eine Ebene ändern. Weitere Informationen zu Assistenten finden Sie unter [Karten-Assistent und Kartenebenen-Assistent (Berichts-Generator und SSRS)](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
- Sie können die Anzeige oder die Datenoptionen für jede Ebene unabhängig anpassen. Weitere Informationen zum Anpassen einer Karte nach Ausführung des Assistenten finden Sie unter [Customize the Data and Display of a Map or Map Layer &#40;Report Builder and SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
+ Sie können die Anzeige oder die Datenoptionen für jede Ebene unabhängig anpassen. Weitere Informationen zum Anpassen einer Karte nach Ausführung des Assistenten finden Sie unter [Anpassen der Daten und der Anzeige einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
  
   
@@ -163,7 +163,7 @@ ms.locfileid: "48095710"
   
 ## <a name="see-also"></a>Siehe auch  
  [Anpassen der Daten und der Anzeige einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Tutorial: Kartenbericht (Berichts-Generator)](../tutorial-map-report-report-builder.md)   
+ [Tutorial: Kartenbericht &#40;Berichts-Generator&#41;](../tutorial-map-report-report-builder.md)   
  [Karten &#40;Berichts-Generator und SSRS&#41;](maps-report-builder-and-ssrs.md)   
  [Problembehandlung bei Berichten: Kartenberichte &#40;Berichts-Generator und SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   

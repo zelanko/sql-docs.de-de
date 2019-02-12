@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d84ee2971ca430d87220d07ec461180f5c31f759
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8b43eebafb47a2f9173825ea79b5ba035e27ebca
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166400"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029541"
 ---
 # <a name="lookupset-function-report-builder-and-ssrs"></a>LookupSet-Funktion (Berichts-Generator und SSRS)
   Gibt den Satz der übereinstimmenden Werte für den angegebenen Namen aus einem Dataset mit Name-Wert-Paaren zurück.  
@@ -33,24 +33,24 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>Parameter  
  *source_expression*  
- (`Variant`) Ein Ausdruck, der im aktuellen Bereich ausgewertet wird und der den zu suchenden Namen oder Schlüssel angibt. Beispiel: `=Fields!ID.Value`.  
+ (`Variant`) Ein Ausdruck, der im aktuellen Bereich ausgewertet wird und der den zu suchenden Namen oder Schlüssel angibt. Beispiel: `=Fields!ID.Value`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.  
   
  *destination_expression*  
- (`Variant`) Ein Ausdruck, der für jede Zeile in einem Dataset ausgewertet wird und der den Namen oder den Schlüssel für die Übereinstimmung angibt. Beispiel: `=Fields!CustomerID.Value`.  
+ (`Variant`) Ein Ausdruck, der für jede Zeile in einem Dataset ausgewertet wird und der den Namen oder den Schlüssel für die Übereinstimmung angibt. Beispiel: `=Fields!CustomerID.Value`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.  
   
  *result_expression*  
- (`Variant`) Ein Ausdruck, der für die Zeile im Dataset ausgewertet wird, in denen *Source_expression* = *Destination_expression*, und den abzurufenden Wert angibt. Beispiel: `=Fields!PhoneNumber.Value`.  
+ (`Variant`) Ein Ausdruck, der für die Zeile im Dataset ausgewertet wird, in denen *Source_expression* = *Destination_expression*, und den abzurufenden Wert angibt. Beispiel: `=Fields!PhoneNumber.Value`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.  
   
  *Dataset (dataset)*  
  Eine Konstante, die den Namen eines Datasets im Bericht angibt. Beispiel: "ContactInformation".  
   
 ## <a name="return"></a>Rückgabewert  
- Gibt eine `VariantArray`, oder `Nothing` , wenn keine Übereinstimmung vorhanden ist.  
+ Gibt einen Wert vom Typ `VariantArray` zurück; gibt `Nothing` zurück, wenn keine Übereinstimmung vorhanden ist.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwendung `LookupSet` um einen Satz von Werten aus dem angegebenen Dataset für Name/Wert-Paar abzurufen, eine 1: n-Beziehung vorhanden ist. Z. B. für einen Kundenbezeichner in einer Tabelle, können Sie `LookupSet` alle zugeordneten Telefonnummern dieses Kunden aus einem Dataset abrufen, die nicht an den Datenbereich gebunden ist.  
+ Rufen Sie für ein Name-Wert-Paar, für das eine 1:n-Beziehung vorhanden ist, einen Satz von Werten mithilfe von `LookupSet` aus dem angegebenen Dataset ab. Beispiel: Für einen Kundenbezeichner in einer Tabelle können Sie alle zugeordneten Telefonnummern dieses Kunden aus einem Dataset, das nicht an den Datenbereich gebunden ist, mithilfe von `LookupSet` abrufen.  
   
- `LookupSet` führt Folgendes aus:  
+ Mit `LookupSet` wird Folgendes ausgeführt:  
   
 -   Der Quellausdruck wird im aktuellen Bereich ausgewertet.  
   
@@ -98,9 +98,9 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ```  
   
 ## <a name="example"></a>Beispiel  
- Da `LookupSet` gibt eine Auflistung von Objekten können nicht Sie den Ergebnisausdruck direkt in einem Textfeld anzeigen. Sie können die Werte der Objekte in der Sammlung als Zeichenfolge verketten.  
+ Da `LookupSet` eine Sammlung von Objekten zurückgibt, können Sie den Ergebnisausdruck nicht direkt in einem Textfeld anzeigen. Sie können die Werte der Objekte in der Sammlung als Zeichenfolge verketten.  
   
- Verwenden der [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] Funktion `Join` erstellen Sie eine durch Trennzeichen getrennte Zeichenfolge aus einem Satz von Objekten. Verwenden Sie ein Komma als Trennzeichen, um die Objekte an einer einzelnen Zeile zu kombinieren. In einigen Renderern könnten Sie einen [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Zeilenvorschub (`vbCrLF`) als Trennzeichen verwenden, um jeden Wert auf einer neuen Zeile aufzulisten.  
+ Verwenden Sie die [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Funktion `Join`, um aus einem Satz von Objekten eine Zeichenfolge mit Trennzeichen zu erstellen. Verwenden Sie ein Komma als Trennzeichen, um die Objekte an einer einzelnen Zeile zu kombinieren. In einigen Renderern könnten Sie einen [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Zeilenvorschub (`vbCrLF`) als Trennzeichen verwenden, um jeden Wert auf einer neuen Zeile aufzulisten.  
   
  Verwendet der folgende Ausdruck ein, wenn sie für ein Textfeld als Value-Eigenschaft verwendet wird `Join` zum Erstellen einer Liste.  
   
@@ -151,6 +151,6 @@ End Function
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](expressions-report-builder-and-ssrs.md)   
- [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

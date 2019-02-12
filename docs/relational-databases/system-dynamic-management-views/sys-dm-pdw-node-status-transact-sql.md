@@ -3,9 +3,8 @@ title: Sys.dm_pdw_node_status (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
-ms.prod_service: pdw
+ms.technology: data-warehouse
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -14,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fef824d594ea77e1c13df2251872b780e21344b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c56d169e8aa55e83b86713e1b9fa476bc213ae3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796838"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014146"
 ---
-# <a name="sysdmpdwnodestatus-transact-sql"></a>Sys.dm_pdw_node_status (Transact-SQL)
+# <a name="sysdmpdwnodestatus-transact-sql"></a>sys.dm_pdw_node_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Enthält zusätzliche Informationen (über [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)) über die Leistung und Status von allen applianceknoten. Sie enthält eine Zeile pro Knoten in der Appliance.  
@@ -35,7 +34,7 @@ ms.locfileid: "47796838"
 |available_memory|**bigint**|Gesamten verfügbaren Arbeitsspeichers auf diesem Knoten.||  
 |process_cpu_usage|**bigint**|Gesamt-Prozess-CPU-Nutzung in Ticks.||  
 |total_cpu_usage|**bigint**|Gesamte CPU-Auslastung in Ticks.||  
-|Thread_Count|**bigint**|Die Gesamtanzahl der Threads auf diesem Knoten.||  
+|thread_count|**bigint**|Die Gesamtanzahl der Threads auf diesem Knoten.||  
 |handle_count|**bigint**|Gesamtanzahl der Handles in Verwendung auf diesem Knoten.||  
 |total_elapsed_time|**bigint**|Insgesamt verstrichene Zeit seit System starten oder neu starten.|Insgesamt verstrichene Zeit seit System starten oder neu starten. Überschreitet Total_elapsed_time den maximalen Wert für eine ganze Zahl (rund 24,8 Tage in Millisekunden), wird es Materialisierung Fehler aufgrund einer zu einem Überlauf führen.<br /><br /> Der maximale Wert in Millisekunden entspricht rund 24,8 Tage.|  
 |is_available|**bit**|Flag, der angibt, ob dieser Knoten verfügbar ist.||  

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 707a18ee54776bee46c58fc9db843c06d14a2ff4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: fcbf2d23dc543edbd6fc6fc20136f0ff4e81bd90
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544603"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031731"
 ---
 # <a name="url-access-parameter-reference"></a>URL-Zugriffsparameterreferenz
   Sie können die folgenden Parameter als Teil einer URL verwenden, um das Aussehen und Verhalten Ihrer Berichte zu konfigurieren. In diesem Abschnitt sind die am häufigsten verwendeten Parameter aufgeführt. Bei Parametern muss keine Groß- und Kleinschreibung beachtet werden. Sie beginnen mit dem Präfix *rs:* , wenn sie an den Berichtsserver weitergeleitet werden, und mit *rs:* , wenn sie zu einem HTML-Viewer weitergeleitet werden. Sie können außerdem Parameter angeben, die für Geräte oder Renderingerweiterungen spezifisch sind. Weitere Informationen zu gerätespezifischen Parametern finden Sie unter [Angeben von Geräteinformationseinstellungen in einer URL](specify-device-information-settings-in-a-url.md).  
@@ -42,7 +42,7 @@ ms.locfileid: "52544603"
 |*StartFind*|Legt den letzten Abschnitt für die Suche fest.<br /><br /> `Native` Beispiel für Modus, sucht das erste Vorkommen des Texts "Mountain-400" im Beispielbericht Product Catalog melden Seite beginnend und endend mit auf der fünften Seite:<br /><br /> `http://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400`|Der Standardwert dieses Parameters ist die letzte Seite des Berichts.|  
 |*EndFind*|Legt die Seitenzahl der letzten Seite für die Suche fest. Beispiel: Der Wert `5` gibt an, dass Seite 5 des Berichts die letzte zu durchsuchende Seite ist. Verwenden Sie diesen Parameter in Verbindung mit dem *StartFind* -Parameter. Im obigen Beispiel für *StartFind* .|Der Standardwert ist die Seitenzahl der aktuellen Seite.|  
 |*FallbackPage*|Legt die Seitenzahl der Seite fest, die bei einer fehlgeschlagenen Suche oder Dokumentstrukturauswahl angezeigt wird.|Der Standardwert ist die Seitenzahl der aktuellen Seite.|  
-|*Der GetImage*|Ruft ein bestimmtes Symbol für die Benutzeroberfläche des HTML-Viewers ab.||  
+|*GetImage*|Ruft ein bestimmtes Symbol für die Benutzeroberfläche des HTML-Viewers ab.||  
 |*Symbol*|Ruft ein Symbol einer bestimmten Renderingerweiterung ab.||  
 |*Stylesheet*|Legt ein Stylesheet fest, das auf den HTML-Viewer angewendet wird.||  
 |Geräteinformationseinstellung|Gibt eine geräteinformationseinstellung in Form von `rc:tag=value`, wobei *Tag* ist der Name des einen spezifischen geräteinformationseinstellung an die Renderingerweiterung, die derzeit verwendet wird (siehe die Beschreibung für die  *Formatieren Sie* Parameter). Sie können z.B. die *OutputFormat* -Geräteinformationseinstellung für die IMAGE-Renderingerweiterung verwenden, um den Bericht mithilfe der folgenden Parameter in der URL-Zugriffszeichenfolge zu einem JPEG-Bild zu rendern: `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`. Weitere Informationen zu allen erweiterungsspezifischen Geräteinformationseinstellungen finden Sie im Artikel [Geräteinformationseinstellungen für Renderingerweiterungen &#40;Reporting Services&#41;](device-information-settings-for-rendering-extensions-reporting-services.md).||  

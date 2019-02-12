@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cfe2b65ec8f8260d87636384953101e3c674a0d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bb8c7b6467b862d13f242debf0d963012b44bb61
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149700"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015486"
 ---
 # <a name="user-role-properties-management-studio"></a>Benutzerrolleneigenschaften (Management Studio)
   Mithilfe dieser Seite sehen Sie, welche Aufgaben in einer Rollendefinition auf Elementebene eingeschlossen sind. Mit dieser Seite können Sie außerdem die Aufgabenliste oder eine Rollenbeschreibung ändern.  
@@ -30,7 +30,7 @@ ms.locfileid: "48149700"
 > [!NOTE]  
 >  Benutzerrollenzuweisungen werden nur auf einem Berichtsserver verwendet, der im einheitlichen Modus ausgeführt wird. Ist der Berichtsserver für die SharePoint-Integration konfiguriert, werden auf dieser Seite schreibgeschützte Informationen zu den Berechtigungsstufen und -rollen angezeigt, die auf der SharePoint-Website definiert sind.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name**  
  Gibt den Namen der Rollendefinition an.  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c70d749a560ff5dcc39d36d84e8c9ff09b44894f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 5a26f9c950dd09b8e47c83089415bd2b3d47458f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404195"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041051"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>Implementieren von dynamischer Sicherheit mithilfe von Zeilenfiltern
   In dieser ergänzenden Lektion erstellen Sie eine zusätzliche Rolle, die dynamische Sicherheit implementiert. Dynamische Sicherheit bietet Sicherheit auf Zeilenebene basierend auf dem Benutzernamen oder der Anmelde-ID des angemeldeten Benutzers. Weitere Informationen finden Sie unter [Rollen &#40;SSAS – tabellarisch&#41;](../analysis-services/tabular-models/roles-ssas-tabular.md).  
@@ -86,10 +85,10 @@ ms.locfileid: "52404195"
   
     |Employee Id|Sales Territory Id|First Name|Last Name|Login Id|  
     |-----------------|------------------------|----------------|---------------|--------------|  
-    |1|2|\<Vorname des Benutzers >|\<Nachname des Benutzers >|\<"Domäne\Benutzername" >|  
-    |1|3|\<Vorname des Benutzers >|\<Nachname des Benutzers >|\<"Domäne\Benutzername" >|  
-    |2|4|\<Vorname des Benutzers >|\<Nachname des Benutzers >|\<"Domäne\Benutzername" >|  
-    |3|5|\<Vorname des Benutzers >|\<Nachname des Benutzers >|\<"Domäne\Benutzername" >|  
+    |1|2|\<Vorname des Benutzers >|\<Nachname des Benutzers >|\<domain\username>|  
+    |1|3|\<Vorname des Benutzers >|\<Nachname des Benutzers >|\<domain\username>|  
+    |2|4|\<Vorname des Benutzers >|\<Nachname des Benutzers >|\<domain\username>|  
+    |3|5|\<Vorname des Benutzers >|\<Nachname des Benutzers >|\<domain\username>|  
   
 3.  Ersetzen Sie im neuen Arbeitsblatt "Vorname", "Nachname" sowie "Domäne\Benutzername" durch die Namen und Anmelde-IDs von drei Benutzern in Ihrer Organisation. Verwenden Sie den gleichen Benutzer in den ersten beiden Zeilen für Employee Id 1. Dadurch wird angezeigt, dass der Benutzer zu mehreren Vertriebsgebieten gehört. Ändern Sie die Felder Employee Id und Sales Territory Id nicht.  
   

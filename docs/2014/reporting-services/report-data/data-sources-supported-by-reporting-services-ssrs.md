@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8083fef109483f423cfabf0ecf2c256c405cd11c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 54a32a3961336f22fed462cd955027f3387a1e70
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352475"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032701"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Von Reporting Services unterstützte Datenquellen (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden Berichtsdaten von Datenquellen über eine modulare und erweiterbare Datenschicht abgerufen, für die Datenverarbeitungserweiterungen verwendet werden. Zum Abrufen von Berichtsdaten von einer Datenquelle müssen Sie eine Datenverarbeitungserweiterung auswählen, die den Typ der Datenquelle, die Version der für die Datenquelle ausgeführten Software und die Plattform der Datenquelle (32-Bit oder 64-Bit [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]) unterstützt.  
@@ -94,13 +94,13 @@ ms.locfileid: "53352475"
   
 -   Name der Datenverarbeitungserweiterung/des Datenanbieters: Die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Datenverarbeitungserweiterung oder andere Datenanbieter, die dem ausgewählten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Datenquellentyp entsprechen. In dieser Spalte wird die folgende Frage beantwortet: "Welche Datenverarbeitungserweiterung oder welcher Datenanbieter wird verwendet, wenn ich einen Datenquellentyp auswähle?"  
   
--   Zugrunde liegende Datenanbieterversion (optional): Einige Datenquellentypen unterstützen mehrere Datenanbieter. Dabei kann es sich um unterschiedliche Versionen eines Datenanbieters oder um unterschiedliche Implementierungen von Drittanbietern für einen Typ von Datenanbieter handeln. Der Name des Anbieters wird nach dem Konfigurieren einer Datenquelle häufig in der Verbindungszeichenfolge angegeben. In dieser Spalte wird die folgende Frage beantwortet: "Wenn Sie den Typ der Datenquelle auswählen, welchen Datenanbieter wähle ich nach die **Verbindungseigenschaften** Dialogfeld?"  
+-   Zugrunde liegende Datenanbieterversion (optional): Einige Datenquellentypen unterstützen mehrere Datenanbieter. Dabei kann es sich um unterschiedliche Versionen eines Datenanbieters oder um unterschiedliche Implementierungen von Drittanbietern für einen Typ von Datenanbieter handeln. Der Name des Anbieters wird nach dem Konfigurieren einer Datenquelle häufig in der Verbindungszeichenfolge angegeben. In dieser Spalte wird die folgende Frage beantwortet: „Welchen Datenanbieter wähle ich nach der Auswahl des Datenquellentyps im Dialogfeld **Verbindungseigenschaften** aus?“  
   
--   Datenquelle  *\<Plattform >*: Die von der Datenverarbeitungserweiterung oder dem Datenanbieter für die Zieldatenquelle unterstützte Plattform. In dieser Spalte wird die folgende Frage beantwortet: "Können mit dieser Datenverarbeitungserweiterung oder diesem Datenanbieter Daten von einer Datenquelle auf diesem Plattformtyp abgerufen werden?"  
+-   Datenquelle *\<plattform>*: Die von der Datenverarbeitungserweiterung oder dem Datenanbieter für die Zieldatenquelle unterstützte Plattform. In dieser Spalte wird die folgende Frage beantwortet: "Können mit dieser Datenverarbeitungserweiterung oder diesem Datenanbieter Daten von einer Datenquelle auf diesem Plattformtyp abgerufen werden?"  
   
 -   Version der Datenquelle: Die Version der Zieldatenquelle, die von der Datenverarbeitungserweiterung oder dem Datenanbieter unterstützt wird. In dieser Spalte wird die folgende Frage beantwortet: "Können mit dieser Datenverarbeitungserweiterung oder diesem Datenanbieter Daten von dieser Version der Datenquelle abgerufen werden?"  
   
--   RS  *\<Plattform >*: Die Plattformen für den Berichtsserver und den Berichterstellungsclient, auf denen Sie eine benutzerdefinierte Datenverarbeitungserweiterung oder einen benutzerdefinierten Datenanbieter installieren können. Die integrierten Datenverarbeitungserweiterungen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden bei jeder Installation von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]bereitgestellt. Eine benutzerdefinierte Datenverarbeitungserweiterung oder ein [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieter müssen systemintern für eine bestimmte Plattform kompiliert werden. In dieser Spalte wird die folgende Frage beantwortet: "Kann diese Datenverarbeitungserweiterung oder dieser Datenanbieter auf diesem Plattformtyp installiert werden?"  
+-   RS *\<plattform>*: Die Plattformen für den Berichtsserver und den Berichterstellungsclient, auf denen Sie eine benutzerdefinierte Datenverarbeitungserweiterung oder einen benutzerdefinierten Datenanbieter installieren können. Die integrierten Datenverarbeitungserweiterungen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden bei jeder Installation von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]bereitgestellt. Eine benutzerdefinierte Datenverarbeitungserweiterung oder ein [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieter müssen systemintern für eine bestimmte Plattform kompiliert werden. In dieser Spalte wird die folgende Frage beantwortet: "Kann diese Datenverarbeitungserweiterung oder dieser Datenanbieter auf diesem Plattformtyp installiert werden?"  
   
 ###  <a name="DataSourcesTable"></a> Typen von Datenquellen  
   
@@ -290,7 +290,7 @@ ms.locfileid: "53352475"
   
  Weitere Informationen finden Sie unter [Teradataverbindungstyp (SSRS)](teradata-connection-type-ssrs.md).  
   
- Sie können auch Modelle auf Grundlage einer Teradata-Datenbank erstellen. Weitere Informationen finden Sie im folgenden Whitepaper auf der Teradata-Website: [Microsoft SQL Server 2012 Reporting Services und Teradata Corporation](http://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP).  
+ Sie können auch Modelle auf Grundlage einer Teradata-Datenbank erstellen. Weitere Informationen finden Sie im folgenden Whitepaper auf der Teradata-Website: [Microsoft SQL Server 2012 Reporting Services and Teradata Corporation (Microsoft SQL Server Reporting Services und Teradata)](http://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP).  
   
  [Zurück zur Datenquellentabelle](#DataSourcesTable)  
   
@@ -314,7 +314,7 @@ ms.locfileid: "53352475"
  Die Anmeldeinformationen, die Sie angeben können, hängen von der Implementierung ab, die die Clientanwendung verwendet. Weitere Informationen finden Sie unter [SharePoint-Listenverbindungstyp &#40;SSRS&#41;](sharepoint-list-connection-type-ssrs.md).  
   
 ###  <a name="XML"></a> XML-Datenverarbeitungserweiterung  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] besitzt eine XML-Datenverarbeitungserweiterung, sodass die Verwendung von XML-Daten in einem Bericht möglich ist. Die Daten können von einem XML-Dokument, einem Webdienst oder einer webbasierten Anwendung abgerufen werden, auf die mit einer URL zugegriffen wird. Weitere Informationen finden Sie unter [XML-Verbindungstyp (SSRS)](xml-connection-type-ssrs.md). Weitere Informationen zum zugeordneten Abfrage-Designer finden Sie im Abschnitt zum textbasierten Abfrage-Designer unter [Grafische Benutzeroberfläche des Abfrage-Designers](graphical-query-designer-user-interface.md). Beispiele finden Sie in [Reporting Services: Verwenden von XML- und Webdienstdatenquellen](https://go.microsoft.com/fwlink/?LinkId=81654).  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] besitzt eine XML-Datenverarbeitungserweiterung, sodass die Verwendung von XML-Daten in einem Bericht möglich ist. Die Daten können von einem XML-Dokument, einem Webdienst oder einer webbasierten Anwendung abgerufen werden, auf die mit einer URL zugegriffen wird. Weitere Informationen finden Sie unter [XML-Verbindungstyp (SSRS)](xml-connection-type-ssrs.md). Weitere Informationen zum zugeordneten Abfrage-Designer finden Sie im Abschnitt zum textbasierten Abfrage-Designer unter [Grafische Benutzeroberfläche des Abfrage-Designers](graphical-query-designer-user-interface.md). Beispiele finden Sie unter [Reporting Services: Verwenden von XML und Webdienst-Datenquellen](https://go.microsoft.com/fwlink/?LinkId=81654).  
   
  [Zurück zur Datenquellentabelle](#DataSourcesTable)  
   

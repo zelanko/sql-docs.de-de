@@ -2,10 +2,8 @@
 title: Sys. dm_db_wait_stats (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - dm_db_wait_stats_TSQL
@@ -22,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 01fd39cccc2872e1ebbc87340f5290dc9690e093
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5b81c48e017312048f15b600382af5f95aec821
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628158"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038921"
 ---
 # <a name="sysdmdbwaitstats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -73,7 +71,7 @@ ms.locfileid: "47628158"
  Warteschlangen-Wartevorgänge finden statt, wenn sich ein Arbeitsthread im Leerlauf befindet und auf die Zuweisung von Arbeit wartet. Warteschlangen-Wartevorgänge treten am häufigsten bei Hintergrundtasks des Systems auf, wie z. B. der Deadlocküberwachung und dem Cleanup gelöschter Datensätze. Diese Tasks warten, dass Arbeitsanforderungen in einer Arbeitswarteschlange platziert werden. Warteschlangen-Wartevorgänge können in regelmäßigen Abständen selbst dann aktiviert werden, wenn keine neuen Pakete in die Warteschlange übertragen wurden.  
   
  Externe Wartevorgänge  
- Externe Wartevorgänge finden statt bei einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Worker wartet darauf, dass ein externes Ereignis, z. B. einen Aufruf für die erweiterte gespeicherte Prozedur oder eine verknüpfte Serverabfrage, um den Vorgang abzuschließen. Wenn Sie Probleme mit Blockierungen diagnostizieren, sollten Sie bedenken, dass externe Wartevorgänge nicht immer auf den Leerlauf eines Arbeitsthreads hinweisen, da der Arbeitsthread möglicherweise aktiv externen Code ausführt.  
+ Externe Wartevorgänge finden statt, wenn ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Arbeitsthread auf das Ende eines externen Ereignisses wartet, wie z. B. eines erweiterten gespeicherten Prozeduraufrufs oder einer Verbindungsserverabfrage. Wenn Sie Probleme mit Blockierungen diagnostizieren, sollten Sie bedenken, dass externe Wartevorgänge nicht immer auf den Leerlauf eines Arbeitsthreads hinweisen, da der Arbeitsthread möglicherweise aktiv externen Code ausführt.  
   
  Obwohl der Thread nicht mehr wartet, muss er nicht sofort mit der Ausführung beginnen. Ein solcher Thread wird zunächst in die Warteschlange der ausführbaren Arbeitsthreads eingereiht und muss warten, dass ein Quantum auf dem Zeitplanungsmodul ausgeführt wird.  
   
@@ -93,22 +91,22 @@ ms.locfileid: "47628158"
 |AUDIT_ON_DEMAND_TARGET_LOCK|Tritt bei einem Wartevorgang auf eine Sperre auf, mit der eine einmalige Initialisierung überwachungsbezogener Ziele von erweiterten Ereignissen sichergestellt werden soll.|  
 |AUDIT_XE_SESSION_MGR|Tritt bei einem Wartevorgang auf eine Sperre auf, mit der das Starten und Beenden überwachungsbezogener Ziele von erweiterten Ereignissen synchronisiert werden soll.|  
 |BACKUP|Tritt auf, wenn ein Task im Rahmen der Sicherungsverarbeitung blockiert wird.|  
-|BACKUP_OPERATOR|Tritt auf, wenn ein Task auf das Einlegen eines Bands wartet. Fragen Sie zum Anzeigen des Status des Bands [Sys. dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md). Wenn keine Bandeinlegung aussteht, kann dieser Wartetyp auf ein Hardwareproblem mit dem Bandlaufwerk hinweisen.|  
+|BACKUP_OPERATOR|Tritt auf, wenn ein Task auf das Einlegen eines Bands wartet. Sie können den Status eines Bands mithilfe von [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md)abfragen. Wenn keine Bandeinlegung aussteht, kann dieser Wartetyp auf ein Hardwareproblem mit dem Bandlaufwerk hinweisen.|  
 |BACKUPBUFFER|Tritt auf, wenn ein Sicherungstask auf Daten oder auf einen Puffer wartet, in dem Daten gespeichert werden sollen. Dies ist nur dann ein Standardwartetyp, wenn ein Task auf die Einlegung eines Bands wartet.|  
 |BACKUPIO|Tritt auf, wenn ein Sicherungstask auf Daten oder auf einen Puffer wartet, in dem Daten gespeichert werden sollen. Dies ist nur dann ein Standardwartetyp, wenn ein Task auf die Einlegung eines Bands wartet.|  
 |BACKUPTHREAD|Tritt auf, wenn ein Task auf das Ende eines Sicherungstasks wartet. Die Wartezeiten können lang sein (von einigen Minuten bis zu mehreren Stunden). Wenn der Task, auf den gewartet wird, Teil eines E/A-Prozesses ist, weist dieser Wartetyp nicht auf ein Problem hin.|  
 |BAD_PAGE_PROCESS|Tritt auf, wenn die Hintergrundprotokollierung fehlerverdächtiger Seiten eine häufigere Ausführung als alle fünf Sekunden zu vermeiden versucht. Eine übermäßige Anzahl von fehlerverdächtigen Seiten bewirkt, dass die Protokollierung häufig ausgeführt wird.|  
 |BROKER_CONNECTION_RECEIVE_TASK|Tritt auf, wenn auf einen Zugriff für den Empfang einer Nachricht an einem Verbindungsendpunkt gewartet wird. Der Empfangszugriff auf den Endpunkt wird serialisiert.|  
 |BROKER_ENDPOINT_STATE_MUTEX|Tritt auf, wenn ein Konflikt über den Zugriff auf den Status eines Verbindungsendpunktes von [!INCLUDE[ssSB](../../includes/sssb-md.md)] vorliegt. Der Zugriff auf den Status für Änderungen wird serialisiert.|  
-|BROKER_EVENTHANDLER|Tritt auf, wenn ein Task in den primären Ereignishandler von wartet der [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Dieser Wartetyp sollte nur sehr kurz auftreten.|  
-|BROKER_INIT|Tritt beim Initialisieren von [!INCLUDE[ssSB](../../includes/sssb-md.md)] in jeder aktiven Datenbank. Dieser Wartetyp sollte nicht häufig auftreten.|  
-|BROKER_MASTERSTART|Tritt auf, wenn ein Task für den primären Ereignishandler von wartet der [!INCLUDE[ssSB](../../includes/sssb-md.md)] zu starten. Dieser Wartetyp sollte nur sehr kurz auftreten.|  
+|BROKER_EVENTHANDLER|Tritt auf, wenn ein Task auf den primären Ereignishandler von [!INCLUDE[ssSB](../../includes/sssb-md.md)]wartet. Dieser Wartetyp sollte nur sehr kurz auftreten.|  
+|BROKER_INIT|Tritt beim Initialisieren von [!INCLUDE[ssSB](../../includes/sssb-md.md)] in jeder aktiven Datenbank auf. Dieser Wartetyp sollte nicht häufig auftreten.|  
+|BROKER_MASTERSTART|Tritt auf, wenn ein Task auf den Start des primären Ereignishandlers von [!INCLUDE[ssSB](../../includes/sssb-md.md)] wartet. Dieser Wartetyp sollte nur sehr kurz auftreten.|  
 |BROKER_RECEIVE_WAITFOR|Tritt auf, wenn RECEIVE WAITFOR wartet. Dies ist ein Standardwartetyp, wenn keine Nachrichten empfangen werden können.|  
-|BROKER_REGISTERALLENDPOINTS|Tritt auf, während der Initialisierung einer [!INCLUDE[ssSB](../../includes/sssb-md.md)] Verbindungsendpunkt. Dieser Wartetyp sollte nur sehr kurz auftreten.|  
-|BROKER_SERVICE|Tritt auf, wenn die einem Zieldienst zugeordnete [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Zielliste aktualisiert wird oder deren Priorität neu festgelegt wird.|  
-|BROKER_SHUTDOWN|Tritt bei ein geplantes Herunterfahren von [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Dieser Wartetyp sollte, wenn überhaupt, nur sehr kurz auftreten.|  
-|BROKER_TASK_STOP|Tritt auf, wenn die [!INCLUDE[ssSB](../../includes/sssb-md.md)] Warteschlangen-taskhandler versucht wird, um den Task herunterzufahren. Die Statusüberprüfung wird serialisiert und muss vorher ausgeführt werden.|  
-|BROKER_TO_FLUSH|Tritt auf, wenn die [!INCLUDE[ssSB](../../includes/sssb-md.md)] lazy Arbeitstabelle geleert die speicherinternen Übertragungsobjekte in eine Arbeitstabelle.|  
+|BROKER_REGISTERALLENDPOINTS|Tritt während der Initialisierung eines [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Verbindungsendpunkts auf. Dieser Wartetyp sollte nur sehr kurz auftreten.|  
+|BROKER_SERVICE|Tritt auf, wenn die einem Zieldienst zugeordnete [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Zielliste aktualisiert wird oder deren Priorität neu festgelegt wird.|  
+|BROKER_SHUTDOWN|Tritt bei einem geplanten Herunterfahren von [!INCLUDE[ssSB](../../includes/sssb-md.md)]auf. Dieser Wartetyp sollte, wenn überhaupt, nur sehr kurz auftreten.|  
+|BROKER_TASK_STOP|Tritt auf, wenn der Warteschlangen-Taskhandler von [!INCLUDE[ssSB](../../includes/sssb-md.md)] versucht, den Task herunterzufahren. Die Statusüberprüfung wird serialisiert und muss vorher ausgeführt werden.|  
+|BROKER_TO_FLUSH|Tritt auf, wenn bei der verzögerten Speicherung von [!INCLUDE[ssSB](../../includes/sssb-md.md)] die speicherinternen Übertragungsobjekte in eine Arbeitstabelle geleert werden.|  
 |BROKER_TRANSMITTER|Tritt auf, wenn die Übertragung von [!INCLUDE[ssSB](../../includes/sssb-md.md)] auf Arbeit wartet.|  
 |BUILTIN_HASHKEY_MUTEX|Kann nach dem Start einer Instanz auftreten, während interne Datenstrukturen initialisiert werden. Tritt nach dem Initialisieren der Datenstrukturen nicht erneut auf.|  
 |CHECK_PRINT_RECORD|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -139,12 +137,12 @@ ms.locfileid: "47628158"
 |DEADLOCK_ENUM_MUTEX|Tritt auf, wenn die Deadlocküberwachung und sys.dm_os_waiting_tasks sicherstellen, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehrere Deadlocksuchvorgänge gleichzeitig ausführt.|  
 |DEADLOCK_TASK_SEARCH|Eine lange Wartezeit für diese Ressource zeigt an, dass der Server Abfragen zusätzlich zu sys.dm_os_waiting_tasks ausführt und diese Abfragen die Ausführung einer Deadlocksuche durch die Deadlocküberwachung blockieren. Dieser Wartetyp wird nur von der Deadlocküberwachung verwendet. Für Abfragen zusätzlich zu sys.dm_os_waiting_tasks wird DEADLOCK_ENUM_MUTEX verwendet.|  
 |DEBUG|Tritt beim Debuggen von [!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR für eine interne Synchronisierung auf.|  
-|DISABLE_VERSIONING|Tritt auf, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fragt den Version-Transaktions-Manager, um festzustellen, ob der Zeitstempel der ältesten aktiven Transaktion als der Zeitstempel liegt des bei der Statuswechsel begonnen hat. Wenn dies der Fall ist, sind alle Momentaufnahmetransaktionen abgeschlossen, die vor dem Ausführen der ALTER DATABASE-Anweisung begonnen wurden. Dieser Wartestatus wird verwendet, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versionsverwaltung mithilfe der ALTER DATABASE-Anweisung deaktiviert.|  
+|DISABLE_VERSIONING|Tritt auf, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Versionstransaktions-Manager abruft, um festzustellen, ob der Zeitstempel der ersten aktiven Transaktion nach dem Zeitstempel liegt, an dem der Statuswechsel begonnen hat. Wenn dies der Fall ist, sind alle Momentaufnahmetransaktionen abgeschlossen, die vor dem Ausführen der ALTER DATABASE-Anweisung begonnen wurden. Dieser Wartestatus wird verwendet, wenn von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Versionsverwaltung mithilfe der ALTER DATABASE-Anweisung deaktiviert wird.|  
 |DISKIO_SUSPEND|Tritt auf, wenn ein Task auf den Zugriff auf eine Datei wartet, wenn eine externe Sicherung aktiviert ist. Dieser Wartetyp wird für jeden wartenden Benutzerprozess gemeldet. Ein Wert über fünf pro Benutzerprozess kann darauf hinweisen, dass die externe Sicherung zu lange dauert.|  
 |DISPATCHER_QUEUE_SEMAPHORE|Tritt auf, wenn ein Thread aus dem Verteilerpool auf weitere Arbeit wartet. Die Wartezeit für diesen Wartetyp steigt voraussichtlich, wenn der Verteiler im Leerlauf ist.|  
 |DLL_LOADING_MUTEX|Tritt einmal auf, während auf das Laden der DLL des XML-Parsers gewartet wird.|  
 |DROPTEMP|Tritt zwischen den Versuchen, ein temporäres Objekt zu löschen, auf, wenn beim vorherigen Versuch ein Fehler aufgetreten ist. Die Wartedauer nimmt mit jedem fehlerhaften Löschversuch exponentiell zu.|  
-|DTC|Tritt auf, wenn ein Task auf ein Ereignis wartet, das für die Verwaltung des Statusübergangs verwendet wird. Dieser Status steuert, wann die Wiederherstellung der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Transaktionen Distributed Transaction Coordinator (MS DTC) tritt ein, nachdem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erhält eine Benachrichtigung, dass der MS DTC-Dienst nicht verfügbar ist.<br /><br /> Dieser Status beschreibt auch eine Aufgabe, die beim Initiieren eines Commits einer MS DTC-Transaktion durch wartet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wartet darauf, dass der MS DTC-Commits.|  
+|DTC|Tritt auf, wenn ein Task auf ein Ereignis wartet, das für die Verwaltung des Statusübergangs verwendet wird. Mit diesem Status wird die Wiederherstellung von MS DTC-Transaktionen ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator) gesteuert, nachdem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Benachrichtigung erhalten hat, dass der MS DTC-Dienst nicht mehr zur Verfügung steht.<br /><br /> Dieser Status beschreibt auch einen Task, der auf das Initiieren eines Commits einer MS DTC-Transaktion durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wartet, während [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf das Ende des MS DTC-Commits wartet.|  
 |DTC_ABORT_REQUEST|Tritt in einer MS DTC-Arbeitsthreadsitzung auf, wenn die Sitzung darauf wartet, eine MS DTC-Transaktion in Besitz zu nehmen. Sobald MS DTC die Transaktion besitzt, kann die Sitzung ein Rollback der Transaktion ausführen. Im Allgemeinen wartet die Sitzung auf eine andere Sitzung, die die Transaktion verwendet.|  
 |DTC_RESOLVE|Tritt auf, wenn ein Wiederherstellungstask auf die master-Datenbank in einer datenbankübergreifenden Transaktion wartet, damit der Task das Ergebnis der Transaktion abfragen kann.|  
 |DTC_STATE|Tritt auf, wenn ein Task auf ein Ereignis wartet, das Änderungen am internen globalen Statusobjekt für MS DTC schützt. Dieser Status sollte nur sehr kurze Zeit andauern.|  
@@ -154,8 +152,8 @@ ms.locfileid: "47628158"
 |DUMPTRIGGER|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |EC|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |EE_PMOLOCK|Tritt bei der Synchronisierung bestimmter Typen von Speicherbelegungen während der Ausführung von Anweisungen auf.|  
-|EE_SPECPROC_MAP_INIT|Tritt bei der Synchronisierung der Erstellung der internen Prozedurhashtabelle auf. Dieser Wartevorgang kann nur beim ersten Zugriff auf die Hashtabelle nach dem Auftreten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz gestartet wird.|  
-|ENABLE_VERSIONING|Tritt auf, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wartet darauf, alle update-Transaktionen in dieser Datenbank beendet wurde, und deklarieren die Datenbank für den Übergang zum Status der Zulässigkeit der Snapshot-Isolation bereit. Dieser Status wird verwendet, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht die Snapshot-Isolation mithilfe von ALTER DATABASE-Anweisung.|  
+|EE_SPECPROC_MAP_INIT|Tritt bei der Synchronisierung der Erstellung der internen Prozedurhashtabelle auf. Dieser Wartevorgang kann nur beim ersten Zugriff auf die Hashtabelle nach dem Start der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz auftreten.|  
+|ENABLE_VERSIONING|Tritt auf, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf das Beenden aller Updatetransaktionen in dieser Datenbank wartet, bevor die Datenbank als bereit für den Übergang in den Status der Zulässigkeit der Momentaufnahmeisolation deklariert werden kann. Dieser Status wird verwendet, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Momentaufnahmeisolation mithilfe der ALTER DATABASE-Anweisung aktiviert.|  
 |ERROR_REPORTING_MANAGER|Tritt bei der Synchronisierung mehrerer gleichzeitiger Fehlerprotokollinitialisierungen auf.|  
 |EXCHANGE|Tritt während der Synchronisierung des Austauschiterators des Abfrageprozessors während paralleler Abfragen auf.|  
 |EXECSYNC|Tritt während paralleler Abfragen bei der Synchronisierung im Abfrageprozessor in Bereichen auf, die nicht mit dem Austauschiterator verbunden sind. Beispiele für solche Bereiche sind Bitmaps, LOBs (Large Objects) und der Spooliterator. Dieser Wartestatus kann von LOBs häufig verwendet werden.|  
@@ -177,7 +175,7 @@ ms.locfileid: "47628158"
 |GUARDIAN|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |HTTP_ENUMERATION|Tritt beim Starten auf, wenn die HTTP-Endpunkte zum Starten von HTTP aufgezählt werden sollen.|  
 |HTTP_START|Tritt auf, wenn eine Verbindung auf den Abschluss der HTTP-Initialisierung wartet.|  
-|IMPPROV_IOWAIT|Tritt auf, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wartet, eine Bulkload-e/a, um den Vorgang abzuschließen.|  
+|IMPPROV_IOWAIT|Tritt auf, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf das Fertigstellen eines E/A-Massenladevorgang wartet.|  
 |INTERNAL_TESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |IO_AUDIT_MUTEX|Tritt während der Synchronisierung von Ereignispuffern der Ablaufverfolgung auf.|  
 |IO_COMPLETION|Tritt auf, während auf den Abschluss von E/A-Vorgängen gewartet wird. Dieser Wartetyp stellt in der Regel Nicht-Datenseiten-E/A-Vorgänge dar. E/A-Abschlusswartezeiten für Datenseiten werden als PAGEIOLATCH_*-Wartevorgänge angezeigt.|  
@@ -246,7 +244,7 @@ ms.locfileid: "47628158"
 |PAGELATCH_UP|Tritt auf, wenn ein Task auf einen Latch für einen Puffer außerhalb einer E/A-Anforderung wartet. Die Latchanforderung erfolgt im Updatemodus.|  
 |PARALLEL_BACKUP_QUEUE|Tritt beim Serialisieren der Ausgabe auf, die von RESTORE HEADERONLY, RESTORE FILELISTONLY oder RESTORE LABELONLY erstellt wurde.|  
 |PREEMPTIVE_ABR|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|PREEMPTIVE_AUDIT_ACCESS_EVENTLOG|Tritt auf, wenn das Zeitplanungsmodul für das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Betriebssystem (SQLOS) in den präemptiven Modus wechselt, um ein Überwachungsereignis in das Windows-Ereignisprotokoll zu schreiben.|  
+|PREEMPTIVE_AUDIT_ACCESS_EVENTLOG|Tritt auf, wenn das Zeitplanungsmodul für das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Betriebssystem (SQLOS) in den präemptiven Modus wechselt, um ein Überwachungsereignis in das Windows-Ereignisprotokoll zu schreiben.|  
 |PREEMPTIVE_AUDIT_ACCESS_SECLOG|Tritt auf, wenn das SQLOS-Zeitplanungsmodul in den präemptiven Modus wechselt, um ein Überwachungsereignis in das Windows-Sicherheitsprotokoll zu schreiben.|  
 |PREEMPTIVE_CLOSEBACKUPMEDIA|Tritt auf, wenn das SQLOS-Zeitplanungsmodul in den präemptiven Modus wechselt, um Sicherungsmedien zu schließen.|  
 |PREEMPTIVE_CLOSEBACKUPTAPE|Tritt auf, wenn das SQLOS-Zeitplanungsmodul in den präemptiven Modus wechselt, um ein Bandsicherungsmedium zu schließen.|  
@@ -279,7 +277,7 @@ ms.locfileid: "47628158"
 |QUERY_NOTIFICATION_SUBSCRIPTION_MUTEX|Tritt während der Statussynchronisierung für Transaktionen in Abfragebenachrichtigungen auf.|  
 |QUERY_NOTIFICATION_TABLE_MGR_MUTEX|Tritt während der internen Synchronisierung im Abfragebenachrichtigungs-Manager auf.|  
 |QUERY_NOTIFICATION_UNITTEST_MUTEX|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|QUERY_OPTIMIZER_PRINT_MUTEX|Tritt während der Synchronisierung der Erstellung der Diagnoseausgabe des Abfrageoptimierers auf. Dieser Wartetyp tritt nur auf, wenn diagnoseeinstellungen unter der Anleitung von aktiviert wurden [!INCLUDE[msCoName](../../includes/msconame-md.md)] Microsoft Support Services.|  
+|QUERY_OPTIMIZER_PRINT_MUTEX|Tritt während der Synchronisierung der Erstellung der Diagnoseausgabe des Abfrageoptimierers auf. Dieser Wartetyp tritt nur auf, wenn Diagnoseeinstellungen unter der Anleitung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Support Services aktiviert wurden.|  
 |QUERY_TRACEOUT|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |QUERY_WAIT_ERRHDL_SERVICE|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |RECOVER_CHANGEDB|Tritt während der Synchronisierung des Datenbankstatus in einer Datenbank im betriebsbereiten Standbymodus auf.|  
@@ -302,28 +300,28 @@ ms.locfileid: "47628158"
 |SEC_DROP_TEMP_KEY|Tritt nach einem fehlerhaftem Versuch, einen temporären Sicherheitsschlüssel zu löschen, vor einem Wiederholungsversuch auf.|  
 |SECURITY_MUTEX|Tritt bei einem Wartevorgang auf Mutexe auf, die den Zugriff auf die globale Liste von EKM (Extensible Key Management)-Kryptografieanbietern und die Sitzungsbereichsliste der EKM-Sitzungen steuern.|  
 |SEQUENTIAL_GUID|Tritt auf, während eine neue sequenzielle GUID empfangen wird.|  
-|SERVER_IDLE_CHECK|Tritt bei der Synchronisierung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Leerlaufstatus Instanz, wenn ein Ressourcenmonitor versucht, Sie deklarieren eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz als im Leerlauf oder reaktivieren möchten.|  
+|SERVER_IDLE_CHECK|Tritt während der Synchronisierung des Leerlaufstatus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz auf, wenn ein Ressourcenmonitor versucht, eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz als im Leerlauf oder in einem Reaktivierungsversuch befindlich zu deklarieren.|  
 |SHUTDOWN|Tritt auf, während eine Anweisung zum Herunterfahren darauf wartet, dass aktive Verbindungen beendet werden.|  
 |SLEEP_BPOOL_FLUSH|Tritt auf, wenn ein Prüfpunkt die Ausgabe neuer E/A-Vorgänge drosselt, um eine Überflutung des Datenträgersubsystems zu vermeiden.|  
 |SLEEP_DBSTARTUP|Tritt beim Datenbankstart auf, während darauf gewartet wird, dass alle Datenbanken wiederhergestellt werden.|  
-|SLEEP_DCOMSTARTUP|Tritt höchstens einmal beim Start einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz auf, während auf den Abschluss der DCOM-Initialisierung gewartet wird.|  
+|SLEEP_DCOMSTARTUP|Tritt höchstens einmal beim Start einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz auf, während auf den Abschluss der DCOM-Initialisierung gewartet wird.|  
 |SLEEP_MSDBSTARTUP|Tritt auf, wenn die SQL-Ablaufverfolgung auf den Abschluss des Startvorgangs der msdb-Datenbank wartet.|  
 |SLEEP_SYSTEMTASK|Tritt beim Start eines Hintergrundtasks auf, während auf den Abschluss des Startvorgangs von tempdb gewartet wird.|  
 |SLEEP_TASK|Tritt auf, wenn ein Task ruht, während auf das Auftreten eines generischen Ereignisses gewartet wird.|  
 |SLEEP_TEMPDBSTARTUP|Tritt auf, während ein Task auf den Abschluss des Startvorgangs von tempdb wartet.|  
-|SNI_CRITICAL_SECTION|Tritt auf, während der internen Synchronisierung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Netzwerkkomponenten.|  
-|SNI_HTTP_WAITFOR_0_DISCON|Tritt während der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herunterfahren, während des Wartens auf ausstehender HTTP-Verbindungen zu beenden.|  
+|SNI_CRITICAL_SECTION|Tritt während der internen Synchronisierung innerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Netzwerkkomponenten auf.|  
+|SNI_HTTP_WAITFOR_0_DISCON|Tritt während des Herunterfahrens von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf, während darauf gewartet wird, dass ausstehende HTTP-Verbindungen beendet werden.|  
 |SNI_LISTENER_ACCESS|Tritt auf, während darauf gewartet wird, dass nicht einheitliche Speicherzugriffsknoten (Non-Uniform Memory Access, NUMA) die Statusänderung aktualisieren. Der Zugriff auf die Statusänderung wird serialisiert.|  
 |SNI_TASK_COMPLETION|Tritt bei einem Wartevorgang auf das Beenden aller Tasks während der Statusänderung eines NUMA-Knotens auf.|  
 |SOAP_READ|Tritt während eines Wartevorgangs auf den Abschluss eines HTTP-Netzwerklesevorgangs auf.|  
 |SOAP_WRITE|Tritt auf, während auf den Abschluss eines HTTP-Netzwerkschreibvorgangs gewartet wird.|  
 |SOS_CALLBACK_REMOVAL|Tritt beim Ausführen einer Synchronisierung für eine Rückrufliste auf, um einen Rückruf zu entfernen. Es wird nicht erwartet, dass dieser Leistungsindikator nach dem Abschluss der Serverinitialisierung geändert wird.|  
 |SOS_DISPATCHER_MUTEX|Tritt während der internen Synchronisierung des Verteilerpools auf. Dies schließt Anpassungsvorgänge des Pools mit ein.|  
-|SOS_LOCALALLOCATORLIST|Tritt auf, während der internen Synchronisierung in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Speicher-Manager.|  
+|SOS_LOCALALLOCATORLIST|Tritt während der internen Synchronisierung im Speicher-Manager von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf.|  
 |SOS_MEMORY_USAGE_ADJUSTMENT|Tritt auf, wenn die Speicherauslastung zwischen Pools angepasst wird.|  
 |SOS_OBJECT_STORE_DESTROY_MUTEX|Tritt während der internen Synchronisierung in Speicherpools auf, wenn Objekte im Pool gelöscht werden.|  
 |SOS_PROCESS_AFFINITY_MUTEX|Tritt während der Synchronisierung des Zugriffs für die Verarbeitung von Affinitätseinstellungen auf.|  
-|SOS_RESERVEDMEMBLOCKLIST|Tritt auf, während der internen Synchronisierung in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Speicher-Manager.|  
+|SOS_RESERVEDMEMBLOCKLIST|Tritt während der internen Synchronisierung im Speicher-Manager von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf.|  
 |SOS_SCHEDULER_YIELD|Tritt auf, wenn ein Task freiwillig das Zeitplanungsmodul freigibt, damit andere Tasks ausgeführt werden können. Während dieses Wartevorgangs wartet der Task darauf, dass sein Quantum erneuert wird.|  
 |SOS_SMALL_PAGE_ALLOC|Tritt während der Zuordnung und Freigabe von Arbeitsspeicher auf, der von einigen Arbeitsspeicherobjekten verwaltet wird.|  
 |SOS_STACKSTORE_INIT_MUTEX|Tritt während der Synchronisierung der Initialisierung des internen Speichers auf.|  
@@ -331,8 +329,8 @@ ms.locfileid: "47628158"
 |SOS_VIRTUALMEMORY_LOW|Tritt auf, wenn eine Speicherbelegung darauf wartet, dass ein Ressourcen-Manager virtuellen Arbeitsspeicher freigibt.|  
 |SOSHOST_EVENT|Tritt auf, wenn eine gehostete Komponente, wie z. B. CLR, auf ein Ereignissynchronisierungsobjekt von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wartet.|  
 |SOSHOST_INTERNAL|Tritt während der Synchronisierung von Rückrufen des Speicher-Managers auf, die von gehosteten Komponenten, wie z. B. CLR, verwendet werden.|  
-|SOSHOST_MUTEX|Tritt auf, wenn eine gehostete Komponente, wie z. B. CLR, wartet auf eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mutexsynchronisierungsobjekt.|  
-|SOSHOST_RWLOCK|Tritt auf, wenn eine gehostete Komponente, wie z. B. CLR, wartet auf eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Reader / Writer-Synchronisierungsobjekt.|  
+|SOSHOST_MUTEX|Tritt auf, wenn eine gehostete Komponente, wie z. B. CLR, auf ein Mutexsynchronisierungsobjekt von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wartet.|  
+|SOSHOST_RWLOCK|Tritt auf, wenn eine gehostete Komponente, wie z. B. CLR, auf ein Leser-/Schreibersynchronisierungsobjekt von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wartet.|  
 |SOSHOST_SEMAPHORE|Tritt auf, wenn eine gehostete Komponente, wie z. B. CLR, auf ein Semaphorensynchronisierungsobjekt von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wartet.|  
 |SOSHOST_SLEEP|Tritt auf, wenn ein gehosteter Task ruht, während auf das Auftreten eines generischen Ereignisses gewartet wird. Gehostete Tasks werden von gehosteten Komponenten, wie z. B. CLR, verwendet.|  
 |SOSHOST_TRACELOCK|Tritt während der Synchronisierung des Zugriffs auf Ablaufverfolgungsdatenströme auf.|  
@@ -363,7 +361,7 @@ ms.locfileid: "47628158"
 |VIA_ACCEPT|Tritt auf, wenn eine VIA (Virtual Interface Adapter)-Anbieterverbindung während des Startvorgangs abgeschlossen wird.|  
 |VIEW_DEFINITION_MUTEX|Tritt während der Synchronisierung für den Zugriff auf zwischengespeicherte Sichtdefinitionen auf.|  
 |WAIT_FOR_RESULTS|Tritt auf, wenn auf das Auslösen einer Abfragebenachrichtigung gewartet wird.|  
-|WAITFOR|Tritt als Ergebnis der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung WAITFOR auf. Die Dauer des Wartevorgangs wird durch die Parameter der Anweisung bestimmt. Hierbei handelt es sich um einen vom Benutzer initiierten Wartevorgang.|  
+|WAITFOR|Tritt als Ergebnis der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung WAITFOR auf. Die Dauer des Wartevorgangs wird durch die Parameter der Anweisung bestimmt. Hierbei handelt es sich um einen vom Benutzer initiierten Wartevorgang.|  
 |WAITFOR_TASKSHUTDOWN|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |WAITSTAT_MUTEX|Tritt während der Synchronisierung des Zugriffs auf die Statistikauflistung auf, die zum Auffüllen von sys.dm_os_wait_stats verwendet wird.|  
 |WCC|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -387,6 +385,6 @@ ms.locfileid: "47628158"
 |FT_IFTS_SCHEDULER_IDLE_WAIT|Volltext-Wartetyp für den Ruhezustand des Zeitplanungsmoduls. Das Zeitplanungsmodul befindet sich im Leerlauf.|  
 |FT_IFTSHC_MUTEX|Volltext wartet auf einen fdhost-Steuerungsvorgang. Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
 |FT_IFTSISM_MUTEX|Volltext wartet auf einen Kommunikationsvorgang. Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
-|FT_MASTER_MERGE|Volltext wartet auf Masterzusammenführungsvorgang. Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Künftige Kompatibilität wird nicht garantiert.|  
+|FT_MASTER_MERGE|Volltext wartet auf Masterzusammenführungsvorgang. Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
   
   

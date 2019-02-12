@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: douglasl
+ms.reviewer: genemi
 ms.technology: t-sql
 ms.topic: language-reference
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.assetid: ec97d451-06af-44a3-8304-305d410cfc8e
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: a8ac8dc01e6a011ae737f1af8adac17cef311b38
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c8879dcc66e029e6de19ff3b259995006b02664f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798261"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039841"
 ---
 # <a name="json-functions-transact-sql"></a>JSON-Funktionen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ Verwenden Sie die Funktionen, die auf den Seiten in diesem Abschnitt beschrieben
 
  Weitere Informationen zur integrierten Unterstützung für JSON in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie unter [JSON-Daten &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md).  
     
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Überprüfen, Abfragen und Ändern von JSON-Daten mit integrierten Funktionen &#40;SQL Server&#41;](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md)   
  [JSON-Pfadausdrücke &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [JSON-Daten &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  

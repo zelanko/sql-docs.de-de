@@ -12,19 +12,19 @@ f1_keywords:
 - "10151"
 ms.assetid: 97d4a29b-30ae-4141-8595-e994e47e6648
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 8b202d3eadef7abc2f638cc8c084849249f8eaab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 8dd12cb87bdc4c88aca9fe68455a179bcd5896c9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096730"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033661"
 ---
 # <a name="calculated-series-properties-dialog-box-general-report-builder-and-ssrs"></a>Eigenschaften von berechneten Reihen (Dialogfeld), Allgemein (Berichts-Generator und SSRS)
   Wählen Sie die Option **Formel** im Dialogfeld **Eigenschaften von berechneten Reihen** aus, um eine Reihe hinzuzufügen oder zu ändern, die auf Basis integrierter Formeln, die vorhandene Reihendaten als Eingaben verwenden, berechnet wird.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Formel**  
  Wählen Sie die Formel aus, die für das Diagramm übernommen werden soll. Zu den Optionen gehören:  
   

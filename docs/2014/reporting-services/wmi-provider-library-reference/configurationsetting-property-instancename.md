@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 5e8aa5fb-2d4a-45ac-bbd8-47ed3c667cbb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 75551a28646c54caeaaae8d2a214a5a0c6cbc2de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9ff7824705c167b2747e30e590d13f4fe1566caa
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212350"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040221"
 ---
 # <a name="instancename-property-wmi-msreportserverconfigurationsetting"></a>InstanceName-Eigenschaft (WMI: MSReportServer_ConfigurationSetting)
   Gibt den Namen einer Berichtsserverinstanz auf einem bestimmten Computer an. Schreibgeschützt.  
@@ -40,15 +40,15 @@ public string InstanceName;
 ```  
   
 ## <a name="property-value"></a>Eigenschaftswert  
- Ein `String` -Objekt, das den Namen der Berichtsserverinstanz darstellt.  
+ Ein `String`-Objekt, das den Namen der Berichtsserverinstanz darstellt.  
   
 ## <a name="example-code"></a>Beispielcode  
- [MSReportServer_ConfigurationSetting Class (MSReportServer_ConfigurationSetting-Klasse)](msreportserver-configurationsetting-class.md)  
+ [MSReportServer_ConfigurationSetting-Klasse](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Anforderungen  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](msreportserver-configurationsetting-members.md)  
+ [MSReportServer_ConfigurationSetting-Member](msreportserver-configurationsetting-members.md)  
   
   

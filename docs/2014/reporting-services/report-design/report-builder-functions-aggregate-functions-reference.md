@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7d3a6843ea643ac447e42a1d78f5f2e7b3bc09da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 51dac05945565e7952141b247f3f3e326e7ad9d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194116"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040881"
 ---
 # <a name="aggregate-functions-reference-report-builder-and-ssrs"></a>Aggregatfunktionsreferenz (Berichts-Generator und SSRS)
   Um aggregierte Werte in den Bericht einzuschließen, können Sie integrierte Aggregatfunktionen in Ausdrücken verwenden. Die Standardaggregatfunktion für numerische Felder ist SUM. Sie können den Ausdruck bearbeiten und eine andere integrierte Aggregatfunktion verwenden oder einen anderen Bereich angeben. Mit dem Bereich wird angegeben, welcher Satz an Daten für die Berechnung verwendet werden soll.  
@@ -56,7 +56,7 @@ ms.locfileid: "48194116"
 |**Funktion**|**Beschreibung**|  
 |------------------|---------------------|  
 |[Avg](report-builder-functions-avg-function.md)|Gibt den Durchschnitt aller numerischen Werte ungleich NULL aus dem angegebenen Ausdruck im Kontext des festgelegten Bereichs ausgewertet zurück.|  
-|[Anzahl](report-builder-functions-count-function.md)|Gibt die Anzahl der Werte ungleich NULL aus dem angegebenen Ausdruck im Kontext des festgelegten Bereichs ausgewertet zurück.|  
+|[Count](report-builder-functions-count-function.md)|Gibt die Anzahl der Werte ungleich NULL aus dem angegebenen Ausdruck im Kontext des festgelegten Bereichs ausgewertet zurück.|  
 |[CountDistinct](report-builder-functions-countdistinct-function.md)|Gibt die Anzahl aller unterschiedlichen Werte ungleich NULL aus dem angegebenen Ausdruck im Kontext des angegebenen Bereichs ausgewertet zurück.|  
 |[Max](report-builder-functions-max-function.md)|Gibt den Maximalwert aller numerischen Werte ungleich NULL aus dem angegebenen Ausdruck im Kontext des angegebenen Bereichs zurück. Sie können diese Funktion verwenden, um einen Diagrammachsen-Höchstwert zur Steuerung der Skala anzugeben.|  
 |[Min](report-builder-functions-min-function.md)|Gibt den Minimalwert aller numerischen Werte ungleich NULL aus dem angegebenen Ausdruck im Kontext des angegebenen Bereichs zurück. Sie können diese Funktion verwenden, um einen Diagrammachsen-Mindestwert zur Steuerung der Skala anzugeben.|  
@@ -72,19 +72,19 @@ ms.locfileid: "48194116"
   
 |Position im Bericht|Felder|Parameter|Berichtselemente|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> Dataset|Variablen|RenderFormat|  
 |------------------------|------------|----------------|-----------------|-------------------------------|----------------------------|---------------|------------------|  
-|Seitenheader<br /><br /> Seitenfuß|Benutzerkontensteuerung|Benutzerkontensteuerung|Höchstens eins<br /><br /> Hinweis 1|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|Body|Benutzerkontensteuerung<br /><br /> Hinweis 2|Benutzerkontensteuerung|Nur Elemente im aktuellen Bereich oder einem enthaltenen Bereich<br /><br /> Hinweis 3|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|Berichtsparameter|nein|Nur Parameter am Anfang der Liste<br /><br /> Hinweis 4|nein|nein|nein|nein|nein|  
-|Feld|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|nein|nein|nein|  
-|Abfrageparameter|nein|Benutzerkontensteuerung|nein|nein|nein|nein|nein|  
-|Gruppierungsausdruck|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|Benutzerkontensteuerung|nein|nein|  
-|Sortierungsausdruck|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|Benutzerkontensteuerung|Benutzerkontensteuerung<br /><br /> Hinweis 5|nein|  
-|Filterausdruck|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|Benutzerkontensteuerung|Benutzerkontensteuerung<br /><br /> Hinweis 6|nein|  
-|Code|nein|Benutzerkontensteuerung<br /><br /> Hinweis 7|nein|nein|nein|nein|nein|  
-|Berichtssprache|nein|Benutzerkontensteuerung|nein|nein|nein|nein|nein|  
-|Variablen|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|Benutzerkontensteuerung|Aktueller oder enthaltener Bereich|nein|  
-|Aggregate|Benutzerkontensteuerung|Benutzerkontensteuerung|Nur in Seitenkopf/Seitenfuß|Nur in Berichtselementaggregaten|Benutzerkontensteuerung|nein|nein|  
-|Suchfunktionen|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|Benutzerkontensteuerung|nein|nein|  
+|Seitenheader<br /><br /> Seitenfuß|Ja|Ja|Höchstens eins<br /><br /> Hinweis 1|Ja|Ja|Ja|Ja|  
+|Text|Ja<br /><br /> Hinweis 2|Ja|Nur Elemente im aktuellen Bereich oder einem enthaltenen Bereich<br /><br /> Hinweis 3|Nein|Ja|Ja|Ja|  
+|Berichtsparameter|Nein|Nur Parameter am Anfang der Liste<br /><br /> Hinweis 4|Nein|Nein|Nein|Nein|Nein|  
+|Feld|Ja|Ja|Nein|Nein|Nein|Nein|Nein|  
+|Abfrageparameter|Nein|Ja|Nein|Nein|Nein|Nein|Nein|  
+|Gruppierungsausdruck|Ja|Ja|Nein|Nein|Ja|Nein|Nein|  
+|Sortierungsausdruck|Ja|Ja|Nein|Nein|Ja|Ja<br /><br /> Hinweis 5|Nein|  
+|Filterausdruck|Ja|Ja|Nein|Nein|Ja|Ja<br /><br /> Hinweis 6|Nein|  
+|Code|Nein|Ja<br /><br /> Hinweis 7|Nein|Nein|Nein|Nein|Nein|  
+|Berichtssprache|Nein|Ja|Nein|Nein|Nein|Nein|Nein|  
+|Variablen|Ja|Ja|Nein|Nein|Ja|Aktueller oder enthaltener Bereich|Nein|  
+|Aggregate|Ja|Ja|Nur in Seitenkopf/Seitenfuß|Nur in Berichtselementaggregaten|Ja|Nein|Nein|  
+|Suchfunktionen|Ja|Ja|Ja|Nein|Ja|Nein|Nein|  
   
 -   **Hinweis 1.** Berichtselemente müssen in der gerenderten Berichtsseite vorhanden sein, oder der Wert ist NULL. Wenn die Sichtbarkeit eines Berichtselements von einem Ausdruck abhängt, der False ergibt, ist das Berichtselement auf der Seite nicht vorhanden.  
   
@@ -107,13 +107,13 @@ ms.locfileid: "48194116"
   
 |Kontext|RunningValue|RowNumber|Erster<br /><br /> Letzter|Previous|Sum und andere Vorsortierungsfunktionen|ReportItem-Aggregate|Suchfunktionen|Aggregatfunktion|  
 |-------------|------------------|---------------|--------------------|--------------|-------------------------------------|---------------------------|----------------------|------------------------|  
-|Ausgeführter Wert|nein|nein|nein|nein|Benutzerkontensteuerung|nein|Benutzerkontensteuerung|nein|  
-|Erster<br /><br /> Letzter|nein|nein|nein|nein|Benutzerkontensteuerung|nein|nein|nein|  
-|Previous|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|Benutzerkontensteuerung|nein|Benutzerkontensteuerung|nein|  
-|Sum und andere Vorsortierungsfunktionen|nein|nein|nein|nein|Benutzerkontensteuerung|nein|Benutzerkontensteuerung|nein|  
-|ReportItem-Aggregate|nein|nein|nein|nein|nein|nein|nein|nein|  
-|Suchfunktionen|Benutzerkontensteuerung|Benutzerkontensteuerung<br /><br /> Hinweis 1|Benutzerkontensteuerung<br /><br /> Hinweis 1|Benutzerkontensteuerung<br /><br /> Hinweis 1|Benutzerkontensteuerung<br /><br /> Hinweis 1|Benutzerkontensteuerung<br /><br /> Hinweis 1|nein|nein|  
-|Aggregatfunktion|nein|nein|nein|nein|nein|nein|nein|nein|  
+|Ausgeführter Wert|Nein|Nein|Nein|Nein|Ja|Nein|Ja|Nein|  
+|Erster<br /><br /> Letzter|Nein|Nein|Nein|Nein|Ja|Nein|Nein|Nein|  
+|Previous|Ja|Ja|Ja|Nein|Ja|Nein|Ja|Nein|  
+|Sum und andere Vorsortierungsfunktionen|Nein|Nein|Nein|Nein|Ja|Nein|Ja|Nein|  
+|ReportItem-Aggregate|Nein|Nein|Nein|Nein|Nein|Nein|Nein|Nein|  
+|Suchfunktionen|Ja|Ja<br /><br /> Hinweis 1|Ja<br /><br /> Hinweis 1|Ja<br /><br /> Hinweis 1|Ja<br /><br /> Hinweis 1|Ja<br /><br /> Hinweis 1|Nein|Nein|  
+|Aggregatfunktion|Nein|Nein|Nein|Nein|Nein|Nein|Nein|Nein|  
   
 -   **Hinweis 1.** Aggregatfunktionen sind nur im *Source* -Ausdruck einer Suchfunktion zulässig, wenn die Suchfunktion nicht in einem Aggregat enthalten ist. Aggregatfunktionen sind im *Destination* -Ausdruck oder *Result* -Ausdruck einer Suchfunktion nicht zulässig.  
   
@@ -122,8 +122,8 @@ ms.locfileid: "48194116"
   
 |**Funktion**|**Beschreibung**|  
 |------------------|---------------------|  
-|[' RowNumber '](report-builder-functions-rownumber-function.md)|Gibt eine laufende Zählung der Zeilenanzahl für den angegebenen Bereich zurück. Die `RowNumber` -Funktion startet den Zähler bei 1, nicht bei 0 neu.|  
-|[' RunningValue '](report-builder-functions-runningvalue-function.md)|Gibt ein laufendes Aggregat aller numerischen Werte ungleich NULL aus dem angegebenen Ausdruck für den Kontext des angegebenen Bereichs ausgewertet zurück.|  
+|[RowNumber](report-builder-functions-rownumber-function.md)|Gibt eine laufende Zählung der Zeilenanzahl für den angegebenen Bereich zurück. Die `RowNumber`-Funktion startet den Zähler bei 1 neu und nicht bei 0.|  
+|[RunningValue](report-builder-functions-runningvalue-function.md)|Gibt ein laufendes Aggregat aller numerischen Werte ungleich NULL aus dem angegebenen Ausdruck für den Kontext des angegebenen Bereichs ausgewertet zurück.|  
   
 ##  <a name="RetrievingRowCounts"></a> Abrufen von Zeilenanzahlen  
  Die folgende integrierte Funktion berechnet die Anzahl von Zeilen im angegebenen Bereich. Verwenden Sie diese Funktion, um alle Zeilen zu zählen, einschließlich Zeilen mit NULL-Werten.  
@@ -142,7 +142,7 @@ ms.locfileid: "48194116"
 |[Multilookup-Funktion](report-builder-functions-multilookup-function.md)|Gibt den Satz der ersten übereinstimmenden Werte für einen Satz von Namen aus einem Dataset mit Name-Wert-Paaren zurück.|  
   
 ##  <a name="RetrievingPostsortValues"></a> Abrufen von sortierungsabhängigen Werten  
- Die folgenden integrierten Funktionen geben den ersten, letzten oder vorherigen Wert innerhalb eines gegebenen Bereichs zurück. Diese Funktionen hängen von der Sortierreihenfolge der Datenwerte ab. Verwenden Sie diese Funktionen, um beispielsweise den ersten und den letzten Wert auf einer Seite zu suchen, um Seitenkopfzeilen im Wörterbuchformat zu erstellen. Verwendung `Previous` einen Wert in einer Zeile mit der vorherigen Zeile Wert innerhalb eines bestimmten Bereichs, z. B. vergleichen, um jährliche Prozentwerte Werte für das Jahr in einer Tabelle zu finden.  
+ Die folgenden integrierten Funktionen geben den ersten, letzten oder vorherigen Wert innerhalb eines gegebenen Bereichs zurück. Diese Funktionen hängen von der Sortierreihenfolge der Datenwerte ab. Verwenden Sie diese Funktionen, um beispielsweise den ersten und den letzten Wert auf einer Seite zu suchen, um Seitenkopfzeilen im Wörterbuchformat zu erstellen. Verwenden Sie `Previous`, um einen Wert in einer Zeile mit dem Wert der vorherigen Zeile innerhalb eines bestimmten Bereichs zu vergleichen, beispielsweise, um jährliche Prozentwerte in einer Tabelle zu finden.  
   
 |**Funktion**|**Beschreibung**|  
 |------------------|---------------------|  
@@ -165,15 +165,15 @@ ms.locfileid: "48194116"
 |[InScope](report-builder-functions-inscope-function.md)|Gibt an, ob sich die aktuelle Instanz eines Elements innerhalb des angegebenen Bereichs befindet.|  
   
 ##  <a name="RetrievingRecursiveLevel"></a> Abrufen von rekursiven Ebenen  
- Die folgende integrierte Funktion ruft die aktuelle Ebene ab, wenn eine rekursive Hierarchie verarbeitet wird. Verwenden Sie das Ergebnis dieser Funktion mit dem `Padding` Eigenschaft in einem Textfeld, um eine visuelle Hierarchie für eine rekursive Gruppe die Einzugsebene zu steuern. Weitere Informationen finden Sie unter [Erstellen von rekursiven Hierarchiegruppen &#40;Berichts-Generator und SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
+ Die folgende integrierte Funktion ruft die aktuelle Ebene ab, wenn eine rekursive Hierarchie verarbeitet wird. Verwenden Sie das Ergebnis dieser Funktion mit der Eigenschaft `Padding` in einem Textfeld, um für eine rekursive Gruppe die Einzugsebene in einer visuellen Hierarchie zu steuern. Weitere Informationen finden Sie unter [Erstellen von rekursiven Hierarchiegruppen &#40;Berichts-Generator und SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
 |Funktion|Description|  
 |--------------|-----------------|  
-|[Level](report-builder-functions-level-function.md)|Gibt die aktuelle Ebene in einer rekursiven Hierarchie zurück.|  
+|[Ebene](report-builder-functions-level-function.md)|Gibt die aktuelle Ebene in einer rekursiven Hierarchie zurück.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

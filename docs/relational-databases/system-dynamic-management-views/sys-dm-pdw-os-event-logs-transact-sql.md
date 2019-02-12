@@ -3,9 +3,8 @@ title: Sys.dm_pdw_os_event_logs (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
-ms.prod_service: pdw
-ms.reviewer: ''
 ms.technology: system-objects
+ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -14,12 +13,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f778d8904e80aa8874c5ec346cb378f7c9355c03
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7365cf89d1f8bb69cefbbb13585a296a78bcd4b8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656468"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039121"
 ---
 # <a name="sysdmpdwoseventlogs-transact-sql"></a>sys.dm_pdw_os_event_logs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "51656468"
 |log_name|**nvarchar(255)**|Der Name der Windows-Ereignisprotokoll.<br /><br /> Pdw_node_id und Log_name bilden den Schlüssel für diese Ansicht ein.||  
 |log_source|**nvarchar(255)**|Quellname für Windows-Ereignisprotokoll.||  
 |event_id|**int**|Die ID des Ereignisses. Nicht eindeutig.||  
-|event_type|**nvarchar(255)**|Der Typ des Ereignisses, Schweregrad identifizieren.|"Information", "Warnung", "Error"|  
+|event_type|**nvarchar(255)**|Der Typ des Ereignisses, Schweregrad identifizieren.|'Information', 'Warning', 'Error'|  
 |event_message|**nvarchar(4000)**|Details des Ereignisses.||  
 |generate_time|**datetime**|Zeitpunkt, der das Ereignis erstellt wurde.||  
 |write_time|**datetime**|Zeitpunkt, der das Ereignis tatsächlich in das Protokoll geschrieben wurde.||  

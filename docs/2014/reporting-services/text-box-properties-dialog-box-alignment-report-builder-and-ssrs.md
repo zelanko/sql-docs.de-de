@@ -12,20 +12,20 @@ f1_keywords:
 - "10125"
 ms.assetid: 12a18ad3-a578-4ec2-813b-841b96c327b0
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b39bed7faeba38ff8275d61ae5bf3350a43bff28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: c87901e77de5ed975db5f9e05834f569f3923cc8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144666"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040531"
 ---
 # <a name="text-box-properties-dialog-box-alignment-report-builder-and-ssrs"></a>Textfeldeigenschaften (Dialogfeld), Ausrichtung (Berichts-Generator und SSRS)
   Wählen Sie die Option **Ausrichtung** im Dialogfeld **Textfeldeigenschaften** aus, um die Werte in eine ausgewählte Zelle oder einen Datenbereich einzufügen.  
   
-## <a name="options"></a>Tastatur  
- **Horizontale**  
+## <a name="options"></a>Optionen  
+ **Horizontal**  
  Geben Sie an, wie der Wert in einer ausgewählten Zelle oder in einem ausgewählten Datenbereich horizontal positioniert werden soll. Standardmäßig ist **Standard** ausgewählt. Der Wert für "Standard" ist **Allgemein**. Weitere Informationen zur Berechnung der allgemeinen Textausrichtung finden Sie unter [Formatieren von Text und Platzhaltern &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md). Klicken Sie auf die **Ausdrucksschaltfläche** (*fx*), um den Ausdruck zu bearbeiten.  
   
  **Vertikal**  
@@ -40,7 +40,7 @@ ms.locfileid: "48144666"
  **Top**  
  Geben Sie an, wie groß die Auffüllung zwischen dem oberen Rand einer Zelle und dem in der Zelle angezeigten Wert sein soll. Die Standardeinstellung ist 2 Punkt. Klicken Sie auf die **Ausdrucksschaltfläche** (*fx*), um den Ausdruck zu bearbeiten.  
   
- **nach unten**  
+ **Bottom**  
  Geben Sie an, wie groß die Auffüllung bzw. der Abstand zwischen dem unteren Rand einer Zelle und dem in der Zelle angezeigten Wert sein soll. Die Standardeinstellung ist 2 Punkt. Klicken Sie auf die **Ausdrucksschaltfläche** (*fx*), um den Ausdruck zu bearbeiten.  
   
 ## <a name="see-also"></a>Siehe auch  

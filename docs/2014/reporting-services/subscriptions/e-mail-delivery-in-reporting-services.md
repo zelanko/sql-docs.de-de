@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 173696f4f75d14cbb0ea1b78104b69db50af7a2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d7c74eb4f69bf40446a4f912ed6673b57890c64b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065560"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029551"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>E-Mail-Übermittlung in Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält eine E-Mail-Übermittlungserweiterung, mit der Sie einen Bericht per E-Mail an einzelne Benutzer oder Gruppen senden können. Die E-Mail-Übermittlungserweiterung wird mit dem Reporting Services-Konfigurations-Manager und durch Bearbeiten der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Konfigurationsdateien konfiguriert.  
@@ -55,7 +55,7 @@ ms.locfileid: "48065560"
 ## <a name="role-based-e-mail-settings"></a>Rollenbasierte E-Mail-Einstellungen  
  Wenn Sie einen Bericht abonnieren, stehen je nachdem, ob Ihre Rolle die Aufgabe "Einzelne Abonnements verwalten" oder "Alle Abonnements verwalten" enthält, unterschiedliche E-Mail-Übermittlungseinstellungen zur Verfügung.  
   
-|Task|Verfügbare Einstellungen|  
+|Aufgabe|Verfügbare Einstellungen|  
 |----------|------------------------|  
 |Einzelne Abonnements verwalten|Zeigt Felder an, mit denen ein Benutzer einen Bericht automatisieren und an sich übermitteln kann. In diesem Modus sind keine Felder vorhanden, die E-Mail-Aliasnamen akzeptieren.|  
 |Alle Abonnements verwalten|Zeigt Felder an, die eine breiter angelegte Verteilung unterstützen, einschließlich der Felder An, Cc, Bcc und Antwort an. Auf diese Weise stehen zusätzliche Möglichkeiten zur Verfügung, um einen Bericht an mehrere Abonnenten weiterzuleiten. Die Verfügbarkeit von E-Mail-Aliasfeldern wird durch Einstellungen in der Konfigurationsdatei RSReportServer definiert.|  
@@ -78,12 +78,12 @@ ms.locfileid: "48065560"
   
  Informationen zum Konfigurieren eines Berichtsservers im SharePoint-Modus finden Sie im folgenden Thema:  
   
--   [Konfigurieren von E-mail für eine Reporting-Dienstanwendung Services &#40;SharePoint 2010 und SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
+-   [Konfigurieren von E-Mail für eine Reporting Services-Dienstanwendung &#40;SharePoint 2010 und SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Aufgaben und Berechtigungen](../security/tasks-and-permissions.md)   
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Datengesteuerte Abonnements](data-driven-subscriptions.md)   
- [Role Assignments (Rollenzuweisungen)](../security/role-assignments.md)  
+ [Rollenzuweisungen](../security/role-assignments.md)  
   
   

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - operators [XQuery]
 - xml data type [SQL Server], XQuery
 ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5ba69530f6c9cb8451211a2dcec333d347062b74
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2786295b344cfc2df6ae613e42a39f71aee4d3d8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671859"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038891"
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>XQuery-Operatoren für den xml-Datentyp
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ WHERE  AdditionalContactInfo.value('
       'bit')= cast(1 as bit)  
 ```  
   
- Besteht eine weitere Möglichkeit, beachten Sie, wie die vorherige Abfrage funktioniert: jeder rufnummernwert abgerufen, die von der **AdditionalContactInfo** Spalte mit dem Satz von zwei Rufnummern verglichen wird. Wenn der Wert im Satz enthalten ist, wird der betreffende Kunde im Ergebnis zurückgegeben.  
+ Es ist eine weitere Möglichkeit, beachten Sie, wie die vorherige Abfrage funktioniert: Jeder rufnummernwert abgerufen, die von der **AdditionalContactInfo** Spalte mit dem Satz von zwei Rufnummern verglichen wird. Wenn der Wert im Satz enthalten ist, wird der betreffende Kunde im Ergebnis zurückgegeben.  
   
 ### <a name="b-using-a-numeric-operator"></a>B. Verwenden eines numerischen Operators  
  Der +-Operator in dieser Abfrage ist ein Wertoperator, weil er sich auf ein einzelnes Element bezieht. Der Wert 1 wird z. B. zu einer Chargengröße addiert, die von der Abfrage zurückgegeben wird:  

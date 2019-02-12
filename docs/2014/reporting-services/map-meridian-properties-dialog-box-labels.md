@@ -12,14 +12,14 @@ f1_keywords:
 - "10518"
 ms.assetid: 47650a82-3b0c-4e32-8565-e9332bdcf4d6
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6b41dd0e97f8a729d2c58b7fd6b8f0d443fe9c3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: b663f9cd95d055fe8736ee2232bbc273fe89798e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115757"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015015"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>Meridianeigenschaften von Karten (Dialogfeld), Bezeichnungen
   Verwenden der **MapMeridian Eigenschaften** im Dialogfeld Optionen für Bezeichnungen für das vertikale Raster im kartenviewport zu ändern. Ein Meridian stellt den folgenden Wert abhängig vom angegebenen Koordinatensystem für den Viewport dar:  
@@ -30,7 +30,7 @@ ms.locfileid: "48115757"
   
  Klicken Sie auf die Schaltfläche **Ausdruck** (*fx*), um einen Ausdruck zu bearbeiten, der den Wert der Option festlegt.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Intervall**  
  Geben Sie einen ganzzahligen Wert in Grad ein, der das Intervall zwischen Meridianen angibt. Standardmäßig ist **Automatisch** ausgewählt. **Automatisch** gibt an, dass der Wert automatisch aus räumlichen Daten bestimmt wird.  
   

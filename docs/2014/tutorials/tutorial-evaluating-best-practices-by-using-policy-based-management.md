@@ -16,17 +16,17 @@ helpviewer_keywords:
 - tutorials [Policy-Based Management]
 - Policy-Based Management, tutorials
 ms.assetid: c7867f9b-7acc-4fae-bde1-63808c403ebc
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 663fb563f5fa8b80945f70f7086262a56b059dea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 72d4d0863c516fed3a318aca45e8ec478af46a58
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206920"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013151"
 ---
-# <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>Lernprogramm: Auswerten von Best Practices mithilfe der richtlinienbasierten Verwaltung
+# <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>Lernprogramm: Auswerten von Best Practices mit der Richtlinie der richtlinienbasierten Verwaltung
   Willkommen beim Lernprogramm "Auswerten von Best Practices mithilfe der richtlinienbasierten Verwaltung". Dieses Lernprogramm richtet sich an Benutzer, die zwar mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], jedoch nicht mit der richtlinienbasierten Verwaltung vertraut sind. Die richtlinienbasierte Verwaltung ist ein System zum Definieren von Richtlinien, die zum Durchsetzen von Standards zur Websiteverwaltung verwendet werden können. Die richtlinienbasierte Verwaltung umfasst eine Reihe von Best Practices-Richtlinien, die Sie verwenden können, um eine Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu analysieren und zu bestimmen, ob die Instanz Richtlinien und Empfehlungen für Best Practices erfüllt.  
   
 ## <a name="what-you-will-learn"></a>Lernziele  
@@ -34,10 +34,10 @@ ms.locfileid: "48206920"
   
  Dieses Lernprogramm ist in zwei Lektionen aufgeteilt:  
   
- [Lektion 1: Bedarfsgesteuertes Auswerten von Best Practices](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
+ [Lektion 1: Auswerten von Best Practices für eine nur bei Bedarf](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
  In dieser Lektion führen Sie die bedarfsgesteuerte Auswertung der Richtlinien gegen mindestens eine Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] aus.  
   
- [Lektion 2: Auswerten von Best Practices-Richtlinien auf der Basis eines Zeitplans](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
+ [Lektion 2: Auswerten von Best Practices-Richtlinien auf Basis eines Zeitplans](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
  In dieser Lektion konfigurieren Sie Best Practices-Richtlinien für die zeitgesteuerte Ausführung. Die Lektion zeigt, wie Sie geplante Richtlinien für eine einzelne Instanz konfigurieren und geplante Richtlinien von einem zentralen Ort aus für mehrere Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bereitstellen.  
   
 ## <a name="requirements"></a>Anforderungen  
@@ -46,7 +46,7 @@ ms.locfileid: "48206920"
  Damit Sie dieses Lernprogramm verwenden können, muss auf dem Server [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] installiert sein.  
   
 ## <a name="start-the-tutorial"></a>Lernprogramm starten  
- [Lektion 1: Bedarfsgesteuertes Auswerten von Best Practices](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
+ [Lektion 1: Auswerten von Best Practices für eine nur bei Bedarf](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  

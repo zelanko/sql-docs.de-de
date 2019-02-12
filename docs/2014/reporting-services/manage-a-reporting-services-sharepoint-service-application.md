@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7b11c64fe270eeff5fad8631d8d75dfd3bd9c60b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 472582e7a365a3e9bb9e94e4cb26a1b923519544
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135144"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016261"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Verwalten einer Reporting Services-SharePoint-Dienstanwendung
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienstanwendungen werden über die SharePoint-Zentraladministration verwaltet. Die Seiten für die Verwaltung und Eigenschaften ermöglichen es Ihnen, die Konfiguration der Dienstanwendung sowie allgemeine Verwaltungsaufgaben zu aktualisieren.  
@@ -38,13 +38,13 @@ ms.locfileid: "48135144"
 -   [Abonnements und Warnungen bereitstellen](#bkmk_provisionsubscriptions)  
   
 ## <a name="to-open-service-application-properties-page"></a>So öffnen Sie die Eigenschaftenseite für Dienstanwendungen  
- Zum Öffnen der Eigenschaftenseite für eine [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Dienstanwendung gehen Sie wie folgt vor:  
+ Zum Öffnen der Eigenschaftenseite für eine [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienstanwendung gehen Sie wie folgt vor:  
   
 1.  Klicken Sie in der Zentraladministration in der Gruppe **Anwendungsverwaltung**auf Dienstanwendungen verwalten.  
   
 2.  Klicken Sie neben dem Namen der Dienstanwendung oder auf die Spalte **Typ** . Dadurch wird die gesamte Zeile ausgewählt. Klicken Sie anschließend im SharePoint-Menüband auf **Eigenschaften** .  
   
- Weitere Informationen zu Dienstanwendungseigenschaften finden Sie unter [Step 3: Create a Reporting Services Service Application](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication).  
+ Weitere Informationen zu dienstanwendungseigenschaften finden Sie unter [Schritt 3: Erstellen einer Reporting Services-Dienstanwendung](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication).  
   
 ##  <a name="bkmk_openpages"></a> So öffnen Sie Verwaltungsseiten für Dienstanwendungen  
  Zum Öffnen der Verwaltungsseiten für eine [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienstanwendung gehen Sie wie folgt vor:  
@@ -91,10 +91,10 @@ ms.locfileid: "48135144"
   
 |Einstellung|Kommentare|  
 |-------------|--------------|  
-|Protokollierung der Ausführung aktivieren|Der Standardwert ist TRUE.<br /><br /> Geben Sie an, ob der Berichtsserver Ablaufverfolgungsprotokolle generiert, und geben Sie die Anzahl von Tagen für die Beibehaltung der Protokolle an. auf Dienstanwendungen verwalten. Die Protokolle werden auf dem Berichtsservercomputer im Ordner \Microsoft SQL Server\MSSQL.n\ReportServer\Log gespeichert. Bei jedem Neustart des Diensts wird eine neue Protokolldatei begonnen. Weitere Informationen zu Protokolldateien finden Sie unter [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)|  
+|Protokollierung der Ausführung aktivieren|Der Standardwert ist TRUE.<br /><br /> Geben Sie an, ob der Berichtsserver Ablaufverfolgungsprotokolle generiert, und geben Sie die Anzahl von Tagen für die Beibehaltung der Protokolle an. auf Dienstanwendungen verwalten. Die Protokolle werden auf dem Berichtsservercomputer im Ordner \Microsoft SQL Server\MSSQL.n\ReportServer\Log gespeichert. Bei jedem Neustart des Diensts wird eine neue Protokolldatei begonnen. Weitere Informationen zu Protokolldateien finden Sie unter [Report Server Service Trace Log](report-server/report-server-service-trace-log.md).|  
 |Beibehaltungsdauer des Ausführungsprotokolls in Tagen|Der Standard ist 60 Tage.|  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] unterstützt die SharePoint-ULS-Protokollierung.  Weitere Informationen finden Sie unter [Gewusst wie: Aktivieren von Reporting Services-Ereignissen für das SharePoint-Ablaufverfolgungsprotokoll &#40;ULS&#41;](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md).  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] unterstützt die SharePoint-ULS-Protokollierung.  Weitere Informationen finden Sie unter [Aktivieren von Reporting Services-Ereignissen für das SharePoint-Ablaufverfolgungsprotokoll &#40;ULS&#41;](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
 ###  <a name="bkmk_security_settings_section"></a> Sicherheitseinstellungen  
   
@@ -128,9 +128,9 @@ ms.locfileid: "48135144"
   
 |Seite|Description|  
 |----------|-----------------|  
-|Sichern des Verschlüsselungsschlüssels|1.) Geben Sie in die Felder **Kennwort:** und **Kennwort bestätigen:** ein Kennwort ein, und klicken Sie auf **Exportieren**. Eine Warnung wird angezeigt, wenn das eingegebene Kennwort nicht den Komplexitätsanforderungen der Domänenrichtlinie entspricht.<br /><br /> 2.) Sie werden aufgefordert, einen Dateispeicherort zum Speichern der Schlüsseldatei anzugeben. Speichern die Schlüsseldatei auf einem separaten Computer als dem, auf denen ausgeführt wird, ist Sie ggf. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Der Standarddateiname entspricht dem Namen der Dienstanwendung.|  
+|Sichern des Verschlüsselungsschlüssels|1.) Geben Sie in die Felder **Kennwort:** und **Kennwort bestätigen:** ein Kennwort ein, und klicken Sie auf **Exportieren**. Eine Warnung wird angezeigt, wenn das eingegebene Kennwort nicht den Komplexitätsanforderungen der Domänenrichtlinie entspricht.<br /><br /> 2.) Sie werden aufgefordert, einen Dateispeicherort zum Speichern der Schlüsseldatei anzugeben. Speichern Sie ggf. die Schlüsseldatei auf einem separaten Computer und nicht auf dem Computer, auf dem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]ausgeführt wird. Der Standarddateiname entspricht dem Namen der Dienstanwendung.|  
 |Wiederherstellen von Verschlüsselungsschlüsseln|1.) Geben Sie den Speicherort der Schlüsseldatei in das Feld **Dateispeicherort** ein, oder navigieren Sie zum Speicherort.<br /><br /> 2.) Geben Sie im Feld **Kennwort** das Kennwort ein, mit dem die Verschlüsselungsdatei gesichert wurde.<br /><br /> 3.) Klicken Sie auf **OK**.|  
-|Ändern des Verschlüsselungsschlüssels|Dieser Vorgang erstellt einen neuen Schlüssel und verschlüsselt den verschlüsselten Inhalt erneut. Verfügen Sie über umfangreiche Inhalte, dauert dieser Vorgang u. U. mehrere Stunden.<br /><br /> Nach Abschluss der Änderung des Verschlüsselungsschlüssels wird empfohlen, eine Sicherung des neuen Schlüssels zu erstellen.|  
+|Ändern des Verschlüsselungsschlüssels|Dieser Vorgang erstellt einen neuen Schlüssel und verschlüsselt den verschlüsselten Inhalt erneut. Verfügen Sie über umfangreiche Inhalte, dauert dieser Vorgang u. U. mehrere Stunden.<br /><br /> Nach Abschluss der Änderung des Verschlüsselungsschlüssels wird empfohlen, eine Sicherung des neuen Schlüssels zu erstellen.|  
 |Gelöschter verschlüsselter Inhalt|Gelöschter Inhalt kann nicht wiederhergestellt werden.<br /><br /> **\*\* Wichtig \*\*** Das Löschen und Neuerstellen des symmetrischen Schlüssels kann nicht umgekehrt oder rückgängig gemacht werden. Das Löschen oder Neuerstellen des Schlüssels kann sich erheblich auf die aktuelle Installation auswirken. Wenn Sie den Schlüssel löschen, werden alle vorhandenen, durch den symmetrischen Schlüssel verschlüsselten Daten ebenfalls gelöscht. Zu den gelöschten Daten zählen Verbindungszeichenfolgen zu externen Berichtsdatenquellen, gespeicherte Verbindungszeichenfolgen und einige Abonnementinformationen.|  
   
 ##  <a name="bkmk_executionaccount"></a> Ausführungskonto  
@@ -154,9 +154,9 @@ ms.locfileid: "48135144"
 Get-SPRSServiceApplication | select typename, name, service, ueaccountname  
 ```  
   
- Weitere Informationen finden Sie unter [PowerShell-Cmdlets für Reporting Services SharePoint Mode](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+ Weitere Informationen finden Sie unter [PowerShell-Cmdlets für SharePoint-Modus von Reporting Services](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Ausführungskonto angeben**  
  Wählen Sie diese Option aus, um ein Konto anzugeben.  
   
@@ -172,7 +172,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 ##  <a name="bkmk_email"></a> E-Mail-Einstellungen  
  Verwenden Sie diese Seite, um die SMTP (Simple Mail Transport Protocol)-Einstellungen anzugeben, mit denen die E-Mail-Übermittlung des Berichtsservers aktiviert wird. Mit der E-Mail-Übermittlungserweiterung des Berichtsservers können Sie Berichte oder Benachrichtigungen über Berichtsverarbeitungen mithilfe von E-Mail-Abonnements verteilen. Für die Berichtsserver-E-Mail-Übermittlungserweiterung sind ein SMTP-Server und eine E-Mail-Adresse erforderlich, die im Feld "Von:" verwendet wird.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **SMTP-Server verwenden**  
  Gibt an, ob die Berichtsserver-E-Mail über einen SMTP-Server geleitet wird.  
   
@@ -192,7 +192,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
   
 2.  Ändern Sie auf der Seite Zuordnungen von Dienstanwendungen die Ansicht in **Dienstanwendungen**.  
   
-3.  Suchen, und klicken Sie auf den Namen der neuen [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -dienstanwendung. Sie können auch auf den Namen der Anwendungsproxygruppe **default** klicken, um den Proxy zur Standardgruppe hinzuzufügen, anstatt die folgenden Schritte auszuführen.  
+3.  Suchen und klicken Sie auf den Namen der neuen [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienstanwendung. Sie können auch auf den Namen der Anwendungsproxygruppe **default** klicken, um den Proxy zur Standardgruppe hinzuzufügen, anstatt die folgenden Schritte auszuführen.  
   
 4.  Wählen Sie im Auswahlfeld **Folgende Gruppe von Verbindungen bearbeiten** die Option **Benutzerdefiniert**.  
   

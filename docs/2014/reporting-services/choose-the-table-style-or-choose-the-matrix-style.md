@@ -11,17 +11,17 @@ f1_keywords:
 - sql12.rtp.rptwizard.choosetablestyle.f1
 ms.assetid: e0026583-5744-4863-afa2-6e1585f9e8f3
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 62088c91b0fc574490a3c7f2c8d1f442c5d53add
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 589962fbb1819fd4d8f69130dd6031a92ba172ff
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211380"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014521"
 ---
 # <a name="choose-the-table-style-or-choose-the-matrix-style"></a>Tabellenformat auswählen/Matrixstil auswählen
-  Mithilfe dieser Seiten des Berichts-Assistenten können Sie die Text- und Linienart des Berichts auswählen. Die Liste der Stile basiert auf einer konfigurierbaren Vorlage. Der Berichts-Designer stellt die folgenden vordefinierten Vorlagen bereit: Schiefer, Wald, Geschäftlich, Fett, Ozean und Generisch.  
+  Mithilfe dieser Seiten des Berichts-Assistenten können Sie die Text- und Linienart des Berichts auswählen. Die Liste der Stile basiert auf einer konfigurierbaren Vorlage. Berichts-Designer bietet die folgenden vordefinierten Vorlagen an: Slate-Objekt, Gesamtstruktur, Unternehmen, fett, Ozean und generische.  
   
  Darüber hinaus können Sie weitere Formatvorlagen hinzufügen.  
   

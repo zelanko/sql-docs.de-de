@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data sources
 ms.assetid: f417782c-b85a-4c4d-8a40-839176daba56
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1862d4d8a1437f223e688b0b2b95ad5b5768e6a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 97a619b1618c1e733a61e5cd9ea825e07efddcac
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224437"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031951"
 ---
 # <a name="embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs"></a>Eingebettete und freigegebene Datenverbindungen oder Datenquellen (Berichts-Generator und SSRS)
   Berichte rufen Daten für einen Bericht mithilfe von Datenverbindungen ab, wenn eine Abfrage ausgeführt oder der Bericht verarbeitet wird. Sie können aus einer Liste integrierter Datenverbindungstypen auswählen, um eine Verbindung mit einer relationalen Datenbank, einer mehrdimensionalen Datenbank, einem Webdienst oder einer anderen Datenquelle herzustellen. Beim Beschreiben von Datenverbindungen werden die folgenden Begriffe verwendet.  
@@ -45,11 +45,11 @@ ms.locfileid: "48224437"
 ## <a name="shared-data-sources"></a>Freigegebene Datenquellen  
  Freigegebene Datenquellen sind hilfreich, wenn bestimmte Datenquellen häufig verwendet werden. Es wird empfohlen, dass Sie so oft wie möglich freigegebene Datenquellen verwenden. Mit ihnen können Berichte und der Berichtszugriff einfacher verwaltet und Berichte und die Datenquellen, auf die sie zugreifen, sicherer gemacht werden. Wenn Sie eine freigegebene Datenquelle benötigen, wenden Sie sich an den Systemadministrator. Er erstellt eine freigegebene Datenquelle für Sie.  
   
- Freigegebene Datenquellen können nicht in Berichts-Generator erstellt werden. Sie können zum Berichtsserver wechseln und dort eine freigegebene Datenquelle auswählen. Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md).  
+ Freigegebene Datenquellen können nicht in Berichts-Generator erstellt werden. Sie können zum Berichtsserver wechseln und dort eine freigegebene Datenquelle auswählen. Weitere Informationen finden Sie unter [Data Connections, Data Sources, and Connection Strings in Report Builder](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
  In Berichts-Designer können Sie nicht zu einer freigegebenen Datenquelle auf dem Berichtsserver wechseln. Sie können freigegebene Datenquellen als Teil eines Projekts im Projektmappen-Explorer erstellen und auswählen, ob sie auf einem Berichtsserver bereitgestellt werden sollen. Sie können festlegen, sie wegen Unterschiede in vom Computer oder dem Berichtsserver erforderlichen Anmeldeinformationen nur lokal zu verwenden. Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
- Das folgende Symbol bezeichnet ein freigegebenes Datenquellenelement in der Ordnerhierarchie des Berichtsservers: ![Symbol für freigegebene Datenquelle](media/hlp-16datasource.png "Symbol für freigegebene Datenquelle")  
+ Das folgende Symbol bezeichnet ein freigegebenes Datenquellenelement in der Ordnerhierarchie des Berichtsservers: ![Symbol freigegebene Datenquelle](media/hlp-16datasource.png "Shared data source icon")  
   
 ## <a name="embedded-data-sources"></a>Eingebettete Datenquellen  
  Eine eingebettete Datenquellenverbindung ist eine Datenverbindung, die in der Berichtsdefinition gespeichert wird. Eingebettete Informationen für eine Datenquellenverbindung können nur in dem Bericht verwendet werden, in den die Informationen eingebettet wurden. Verwenden Sie das Dialogfeld **Datenquelleneigenschaften** , um eingebettete Datenquellen zu definieren und zu verwalten.  
@@ -70,7 +70,7 @@ ms.locfileid: "48224437"
   
 ## <a name="see-also"></a>Siehe auch  
  [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Berichtserstellungskonzepte &#40;Berichts-Generator und SSRS&#41;](report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Berichterstellungskonzepte &#40;Berichts-Generator und SSRS&#41;](report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Hinzufügen und Prüfen einer Datenverbindung oder Datenquelle &#40;Berichts-Generator und SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
  [Eingebettete und freigegebene Datasets &#40;Berichts-Generator und SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  

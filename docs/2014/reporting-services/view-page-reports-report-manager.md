@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4874ba29-429b-4dd4-a8cb-d4f087237dc2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8a2697af9ede2b6b72e7f08efd88822101c51d53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 057d2c4c75bbc0d7070992571a80907e811d354e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102800"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031631"
 ---
 # <a name="view-page-reports-report-manager"></a>Anzeigen (Seite, Berichte) (Berichts-Manager)
   Mithilfe der Seite Anzeigen für Berichte können Sie einen Bericht anzeigen. Wenn Sie einen Bericht erstmalig im Berichts-Manager öffnen, wird er in HTML formatiert. HTML-Berichte enthalten eine Berichtssymbolleiste, die oben im Bericht angezeigt wird, sodass Sie durch die Berichtsseiten navigieren, innerhalb eines Berichts suchen oder den Bericht in ein anderes Format exportieren können. Die folgende Abbildung zeigt die Berichtssymbolleiste.  

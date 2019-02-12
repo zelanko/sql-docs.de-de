@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3071399edd3a7138d4cee68a162f0c44cfca29ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d4540cdd9d0d8c196e9f304508fd60edd99f2174
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218230"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032971"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>Berichts-Generator-Optionen (Dialogfeld), Einstellungen (Berichts-Generator)
   Klicken Sie auf die **Berichts-Generator** Schaltfläche, und klicken Sie dann auf **Optionen** Festlegen von Optionen für die Anzeige der zuletzt verwendeten Dateien und Verbindungen. Sie können auch den Standardberichtsserver ändern oder gegebenenfalls einen Standardberichtsserver hinzufügen.  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: db1e01a18d755076585c64ee3518492c8f5de561
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1bfcb23c4ed497d2705ece469e2949c332cdfcdf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091140"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032321"
 ---
 # <a name="data-source-selection-page-report-manager"></a>Seite zur Datenquellenauswahl (Berichts-Manager)
   Mithilfe der Seite zur Datenquellenauswahl können Sie ein vorhandenes freigegebenes Datenquellenelement zur Verwendung in einem Bericht oder einem Berichtsmodell auswählen. Außerdem können Sie diese Seite verwenden, um eine andere Datenquelle auszuwählen. Um den Typ der Datenquelle oder deren Verbindungszeichenfolge anzuzeigen, müssen Sie zu der entsprechenden freigegebenen Datenquelle navigieren und deren Eigenschaftsseite öffnen.  
@@ -36,7 +36,7 @@ ms.locfileid: "48091140"
   
 5.  Wählen Sie im Eigenschaftenbereich **Eine freigegebene Datenquelle** aus, und klicken Sie dann auf **Durchsuchen**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Speicherort**  
  Geben Sie den vollständigen Pfad zum freigegebenen Datenquellenelement an, wobei Sie mit dem Namen des Stammordners beginnen. Sie können den Pfadnamen eingeben oder die Baumansicht verwenden, um zur gewünschten freigegebenen Datenquelle zu wechseln.  
   

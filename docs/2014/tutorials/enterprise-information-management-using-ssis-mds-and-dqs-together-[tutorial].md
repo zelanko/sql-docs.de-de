@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ba09b504-3007-4cb7-8ef8-f01adbf51646
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: b66cc1cb72e92670b345f0160727d306326208b6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: da1804ffec1ffd5e016590e83ac229c9e888ff97
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368562"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035401"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>Enterprise Information Management mit SSIS, MDS und DQS [Lernprogramm]
   Das Verwalten von Informationen in einem Unternehmen schließt in der Regel die Integration von Daten im gesamten Unternehmen und darüber hinaus ein, außerdem Bereinigen der Daten, Abgleichen der Daten zum Entfernen aller Duplikate, Standardisieren der Daten, Erweitern der Daten, Sicherstellen, dass die Daten gesetzliche und Kompatibilitätsanforderungen erfüllen, und Speichern der Daten an einem zentralen Ort mit allen erforderlichen Sicherheitseinstellungen.  
@@ -83,7 +80,7 @@ ms.locfileid: "53368562"
 |[Lektion 2: Bereinigung von Lieferantendaten mithilfe der Wissensdatenbank ' Suppliers '](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)|In dieser Lektion erstellen und führen Sie ein DQS-Projekt, um die Lieferantendaten in einer Excel-Datei mit bereinigen die **Lieferanten** Wissensdatenbank, die Sie in der ersten Lektion erstellt haben.|45|  
 |[Lektion 3: Abgleich von Daten zu entfernen, um Duplikate aus der Lieferantenliste](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)|In dieser Lektion erstellen Sie ein DQS-Projekt, um einen Abgleich auszuführen und so Duplikate in der bereinigten Lieferantenliste zu identifizieren und daraus zu entfernen.|45|  
 |[Lektion 4: Speichern von Lieferantendaten in MDS](../../2014/tutorials/lesson-4-storing-supplier-data-in-mds.md)|In dieser Lektion Sie die bereinigten und abgeglichenen Lieferantendaten zu Master Data Services (MDS) mit Hochladen der **MDS-Add-in für Excel**.|45|  
-|[Lektion 5: Automatisierung der Bereinigung und Abgleich mit SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)|In dieser Lektion erstellen Sie eine SSIS-Lösung, die Eingabedaten mithilfe von DQS bereinigt, die bereinigten Daten abgleicht, um Duplikate zu entfernen, und die bereinigten und abgeglichenen Daten automatisch in MDS speichert.|75|  
+|[Lesson 5: Automatisierung der Bereinigung und Abgleich mit SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)|In dieser Lektion erstellen Sie eine SSIS-Lösung, die Eingabedaten mithilfe von DQS bereinigt, die bereinigten Daten abgleicht, um Duplikate zu entfernen, und die bereinigten und abgeglichenen Daten automatisch in MDS speichert.|75|  
   
 ## <a name="next-steps"></a>Nächste Schritte  
  Um das Lernprogramm zu starten, fahren Sie mit der ersten Lektion fort: [Lektion 1: Erstellen der DQS-Wissensdatenbank ' Suppliers '](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md).  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 4bd25e15-9d9e-4528-b7bc-ccb856643aec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3d83e8034885d83056ea6258ede86072239f6e74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d2d0e73d1d9a4058ff63320552604b2bfa1bca8a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224476"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031681"
 ---
 # <a name="customizing-and-processing-the-forecasting-model-intermediate-data-mining-tutorial"></a>Anpassen und Verarbeiten des Forecasting-Modells (Data Mining-Lernprogramm für Fortgeschrittene)
   Der [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series-Algorithmus umfasst mehrere Parameter, die sich darauf auswirken, wie ein Modell angelegt und wie die Zeitdaten analysiert werden. Eine Änderung dieser Eigenschaften kann sich wesentlich auf die Methode auswirken, mit der das Miningmodell Vorhersagen trifft.  
@@ -25,7 +24,7 @@ ms.locfileid: "48224476"
   
 1.  Sie werden anpassen, wie das Modell Zeiträume behandelt, durch Hinzufügen eines neuen Werts für die *PERIODICITY_HINT* Parameter.  
   
-2.  Sie erfahren über zwei andere wichtige Parameter für den Microsoft Time Series-Algorithmus: FORECAST_METHOD, mit dem Sie die zur Prognoseerstellung verwendete Methode festlegen, und PREDICTION_SMOOTHING, mit dem Sie den Übergang von langfristigen und kurzfristigen Vorhersagen anpassen können.  
+2.  Lernen Sie zwei weitere wichtige Parameter für den Microsoft Time Series-Algorithmus ein: FORECAST_METHOD, mit dem Sie die zur prognoseerstellung verwendete Methode steuern können, und PREDICTION_SMOOTHING, mit dem Sie können anpassen, dem die Mischung der langfristigen und kurzfristigen Vorhersagen.  
   
 3.  Optional geben Sie dem Algorithmus an, wie fehlende Werte zugeschrieben werden sollen.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "48224476"
 ## <a name="handling-missing-data-optional"></a>Behandeln von unvollständigen Daten (optional)  
  Es kann häufig vorkommen, dass Verkaufsdaten unvollständig und mit NULL-Werten angegeben sind; auch kann es sein, dass die entsprechenden Daten nicht rechtzeitig von der Niederlassung gemeldet wurden und das Ende der Reihe eine leere Zelle aufweist. In derartigen Szenarien wird der folgende Fehler von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] generiert, und das Modell wird nicht verarbeitet.  
   
- "Fehler (Datamining): nicht synchronisierte Timestamps mit Reihen \<Reihenname >, des Miningmodells, \<Modellname >. Alle Zeitreihen müssen an der gleichen Zeitmarkierung enden und dürfen keine beliebig fehlenden Datenpunkte aufweisen. Wenn Sie den MISSING_VALUE_SUBSTITUTION-Parameter auf "Previous" oder auf eine numerische Konstante festlegen, werden nach Möglichkeit automatisch fehlende Datenpunkte ergänzt."  
+ "Fehler (Datamining): Nicht synchronisierte Timestamps mit Reihen \<Reihenname >, des Miningmodells, \<Modellname >. Alle Zeitreihen müssen an der gleichen Zeitmarkierung enden und dürfen keine beliebig fehlenden Datenpunkte aufweisen. Wenn Sie den MISSING_VALUE_SUBSTITUTION-Parameter auf "Previous" oder auf eine numerische Konstante festlegen, werden nach Möglichkeit automatisch fehlende Datenpunkte ergänzt."  
   
  Sie können diese Fehlermeldung umgehen, indem Sie angeben, dass fehlende Werte von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] automatisch mit einer der folgenden Methoden bereitgestellt werden:  
   
@@ -89,7 +88,7 @@ ms.locfileid: "48224476"
   
 #### <a name="to-process-the-forecasting-model"></a>So verarbeiten Sie das Prognosemodell  
   
-1.  Auf der **Miningmodell** Menü [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]Option **Miningstruktur verarbeiten und alle Modelle**.  
+1.  Klicken Sie im Menü **Miningmodell** von [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf **Miningstruktur und alle Modelle verarbeiten**.  
   
 2.  Klicken Sie in der Meldung mit der Frage, ob Sie das Projekt erstellen und bereitstellen möchten, auf **Ja**.  
   
@@ -105,8 +104,8 @@ ms.locfileid: "48224476"
  [Untersuchen des Planungserstellungsmodells &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/exploring-the-forecasting-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Technische Referenz für Microsoft Time Series-Algorithmus](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
+ [Technische Referenz für den Microsoft Time Series-Algorithmus](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [Microsoft Time Series-Algorithmus](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [Anforderungen und Überlegungen zur Verarbeitung &#40;Datamining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Anforderungen und Überlegungen zur Verarbeitung &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

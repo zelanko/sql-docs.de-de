@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 53d141d0-2185-466a-84dc-7b90d284da3d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d0ab2fc2b4411fa97f99b2888142ad7783d9b514
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cf4880c3f979bbafaa1591fb21d29501c581deb9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219440"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031351"
 ---
 # <a name="using-custom-assemblies-with-reports"></a>Verwenden benutzerdefinierter Assemblys mit Berichten
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] können Sie benutzerdefinierten Code für Werte, Formate und Formatierungen von Berichtselementen schreiben. Beispielsweise können Sie mit benutzerdefiniertem Code Währungen entsprechend einem Gebietsschema formatieren, bestimmte Werte mit speziellen Formatierungen belegen oder andere Geschäftsregeln anwenden, die in Ihrem Unternehmen praktiziert werden. Eine Möglichkeit, diesen Code in Berichte einzufügen, besteht in der Erstellung einer benutzerdefinierten Codeassembly unter Verwendung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], auf die Ihre Berichtsdefinitionsdateien verweisen können. Der Server ruft die Funktionen in Ihren benutzerdefinierten Assemblys auf, wenn ein Bericht ausgeführt wird. Mithilfe von benutzerdefinierten Assemblys können spezielle Funktionen abgerufen werden, die Sie in den Berichten verwenden möchten.  
@@ -45,7 +45,7 @@ ms.locfileid: "48219440"
  [Initializing Custom Assembly Objects (Initialisieren von Objekten benutzerdefinierter Assemblys)](initializing-custom-assembly-objects.md)  
  Beschreibt, wie Werte für benutzerdefinierte Assemblyobjekte initialisiert werden, die von einem Bericht aufgerufen werden.  
   
- [How to: Debug Custom Assemblies (Vorgehensweise: Debuggen von benutzerdefinierten Assemblys)](how-to-debug-custom-assemblies.md)  
+ [Vorgehensweise: Debuggen von benutzerdefinierten Assemblys](how-to-debug-custom-assemblies.md)  
  Beschreibt das Debuggen von benutzerdefiniertem Assemblycode.  
   
 ## <a name="see-also"></a>Siehe auch  

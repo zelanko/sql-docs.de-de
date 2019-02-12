@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ce835764cc8964fdd5b6dfb5a6cb19a383ea79b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0bd8ee198a2627d9caaba340c4357bb0de0f30aa
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088860"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014801"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Einstellungen der Reporting Services-Übermittlungserweiterungen
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verfügt über eine Übermittlungserweiterung für E-Mails und eine für die Dateifreigabe. Über die E-Mail-Übermittlung können Sie einen Bericht per E-Mail an einzelne Benutzer oder Gruppen senden. Über die Dateifreigabeübermittlung können Sie automatisch gerenderte Berichte versenden, die auf Ihrem Netzwerk freigegeben werden sollen. Sie können jede dieser unterstützten Übermittlungserweiterungen mit Standardabonnements oder datengesteuerten Abonnements verwenden. Sie leiten die Übermittlungseinstellungen, die spezifisch für den Typ der Übermittlungserweiterung sind, bei jedem Aufruf der Methoden <xref:ReportService2010.ReportingService2010.CreateSubscription%2A>, <xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>, <xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A> und <xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A> weiter. Um programmgesteuert eine Liste der Übermittlungseinstellungen abzurufen, verwenden Sie die <xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A>-Methode.  
@@ -40,15 +40,15 @@ ms.locfileid: "48088860"
 ## <a name="e-mail-delivery-settings"></a>Einstellungen für die E-Mail-Übermittlung  
  In der folgenden Tabelle werden die Einstellungen der E-Mail-Übermittlung für Abonnements aufgeführt, die Berichtsserver-E-Mail verwenden.  
   
-|Einstellung|value|  
+|Einstellung|Wert|  
 |-------------|-----------|  
 |**TO**|Die E-Mail-Adresse, die in der `To`-Zeile der E-Mail-Nachricht angezeigt wird. Mehrere E-Mail-Adressen werden durch Semikolon getrennt. Erforderlich.|  
-|**CC**|Die E-Mail-Adresse, die in der `Cc`-Zeile der E-Mail-Nachricht angezeigt wird. Mehrere E-Mail-Adressen werden durch Semikolon getrennt. Optional.|  
-|**BCC**|Die E-Mail-Adresse, die in der `Bcc`-Zeile der E-Mail-Nachricht angezeigt wird. Mehrere E-Mail-Adressen werden durch Semikolon getrennt. Optional.|  
-|**ReplyTo**|Die E-Mail-Adresse, die im `Reply-To`-Header der E-Mail-Nachricht angezeigt wird. Dieser Wert darf nur eine E-Mail-Adresse enthalten. Optional.|  
+|**CC**|Die E-Mail-Adresse, die in der `Cc`-Zeile der E-Mail-Nachricht angezeigt wird. Mehrere E-Mail-Adressen werden durch Semikolon getrennt. Dies ist optional.|  
+|**BCC**|Die E-Mail-Adresse, die in der `Bcc`-Zeile der E-Mail-Nachricht angezeigt wird. Mehrere E-Mail-Adressen werden durch Semikolon getrennt. Dies ist optional.|  
+|**ReplyTo**|Die E-Mail-Adresse, die im `Reply-To`-Header der E-Mail-Nachricht angezeigt wird. Dieser Wert darf nur eine E-Mail-Adresse enthalten. Dies ist optional.|  
 |`IncludeReport`|Ein Wert, der angibt, ob der Bericht in der E-Mail-Übermittlung enthalten sein soll. Der Wert `true` gibt an, dass der Bericht im Textkörper der E-Mail-Nachricht übermittelt wird.|  
 |**Renderformat**|Der Name der Renderingerweiterung, die zum Generieren des gerenderten Berichts verwendet werden soll. Der Name muss einer der sichtbaren Renderingerweiterungen entsprechen, die auf dem Berichtsserver installiert sind. Dieser Wert ist erforderlich, wenn die Einstellung `IncludeReport` auf den Wert `true` festgelegt ist.|  
-|**Priority**|Die Priorität, mit der die E-Mail gesendet wird. Gültige Werte sind `LOW`, `NORMAL`, und `HIGH`. Der Standardwert lautet `NORMAL`.|  
+|**Priority**|Die Priorität, mit der die E-Mail gesendet wird. Gültige Werte sind `LOW`, `NORMAL` und `HIGH`. Der Standardwert ist `NORMAL`.|  
 |**Subject**|Der Text in der Betreffzeile der E-Mail-Nachricht.|  
 |**Anmerkung**|Der im Textkörper der E-Mail-Nachricht enthaltene Text.|  
 |**IncludeLink**|Ein Wert, der angibt, ob ein Link zum Bericht im Textkörper der E-Mail enthalten sein soll.|  
@@ -56,7 +56,7 @@ ms.locfileid: "48088860"
 ## <a name="file-share-delivery-settings"></a>Einstellungen der Dateifreigabeübermittlung  
  In der folgenden Tabelle werden die Einstellungen der Dateifreigabeübermittlung für Abonnements aufgelistet.  
   
-|Einstellung|value|  
+|Einstellung|Wert|  
 |-------------|-----------|  
 |**FILENAME**|Der Name der Datei, die auf dem Datenträger gespeichert wird.|  
 |**FILEEXTN**|Gibt an, ob eine Dateierweiterung für den gerenderten Bericht enthalten sein soll. Der Wert lautet entweder `true` oder `false`.|  
@@ -64,7 +64,7 @@ ms.locfileid: "48088860"
 |**RENDER_FORMAT**|Das Format des Berichts, der auf dem Datenträger gespeichert wird.|  
 |**USERNAME**|Der Benutzername, der benötigt wird, um auf die Netzwerkressource oder den Datenträger zuzugreifen.|  
 |**PASSWORD**|Das Kennwort, das benötigt wird, um auf die Netzwerkressource oder den Datenträger zuzugreifen.|  
-|**WRITEMODE**|Der Schreibmodus, der zu verwenden ist, wenn Sie auf den Datenträger zugreifen. Gültige Werte sind `None`, `Overwrite`, und `AutoIncrement`.|  
+|**WRITEMODE**|Der Schreibmodus, der zu verwenden ist, wenn Sie auf den Datenträger zugreifen. Gültige Werte sind `None`, `Overwrite` und `AutoIncrement`.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Technische Referenz (SSRS)](../../technical-reference-ssrs.md)   

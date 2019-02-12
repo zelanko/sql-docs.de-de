@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 81faaac64b045911ca6b8cfc6dabaa5389ce8a5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bbd72a6eadac5f65d292b742885c1af957a637e1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159520"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039681"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>Definieren von Parametern im MDX-Abfrage-Designer für Analysis Services (Berichts-Generator und SSRS)
   Um eine MDX-Abfrage von einer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Datenquelle zu parametrisieren, müssen Sie der Abfrage einen Abfrageparameter hinzufügen. Im MDX-Abfrage-Designer können Sie im Entwurfsmodus und im Abfragemodus einen Abfrageparameter hinzufügen, indem Sie einen Filter angeben. Nachdem Sie die Abfrage mit einem Abfrageparameter definiert haben, erstellt Reporting Services automatisch einen Berichtsparameter und ein Dataset für die Bereitstellung der Liste mit gültigen Werten. Dies ermöglicht einem Benutzer, einen Wert anzugeben, der direkt an die Abfrage übergeben wird.  
@@ -32,7 +32,7 @@ ms.locfileid: "48159520"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-design-mode"></a>So definieren Sie in MDX im Entwurfsmodus einen Abfrageparameter  
   
-1.  Der berichtsdatenbereich mit der Maustaste auf ein Dataset erstellt, die von einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Quelltyp, und klicken Sie dann auf **Abfrage**. Der MDX-Abfrage-Designer wird im Entwurfsmodus geöffnet.  
+1.  Klicken Sie im Berichtsdatenbereich mit der rechten Maustaste auf ein Dataset, das aus dem Datenquellentyp [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] erstellt wurde, und klicken Sie dann auf **Abfrage**. Der MDX-Abfrage-Designer wird im Entwurfsmodus geöffnet.  
   
 2.  Ziehen Sie eine Dimension in den Filterbereich, und legen Sie sie in der ersten Zelle in der Spalte **Dimension** ab.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48159520"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-query-mode"></a>So definieren Sie einen Abfrageparameter in MDX im Abfragemodus  
   
-1.  Der berichtsdatenbereich mit der Maustaste auf ein Dataset erstellt, die von einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Quelltyp, und klicken Sie dann auf **Abfrage**. Der MDX-Abfrage-Designer wird im Entwurfsmodus geöffnet.  
+1.  Klicken Sie im Berichtsdatenbereich mit der rechten Maustaste auf ein Dataset, das aus dem Datenquellentyp [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] erstellt wurde, und klicken Sie dann auf **Abfrage**. Der MDX-Abfrage-Designer wird im Entwurfsmodus geöffnet.  
   
 2.  Klicken Sie auf der Symbolleiste auf **Entwurf** , um in den Abfragemodus zu wechseln.  
   
@@ -84,6 +84,6 @@ ms.locfileid: "48159520"
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services-Verbindungstyp für MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)   
- [Analysis Services MDX Query Designer User Interface (Benutzeroberfläche des MDX-Abfrage-Designers für Analysis Services)](analysis-services-mdx-query-designer-user-interface.md)  
+ [Benutzeroberfläche des MDX-Abfrage-Designers für Analysis Services](analysis-services-mdx-query-designer-user-interface.md)  
   
   

@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - RDL [Reporting Services], generating
 - RDL [Reporting Services], tutorials
 - RDL [Reporting Services], serializing
 ms.assetid: 8f81d48f-7ab9-4ef8-bce0-7d16d9a47fbd
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2f104892e3ee8a8c542c41bc07789a94ab8d0c4e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 313a5268b754089d4ca8964328d53cb23ec6edd1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349387"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014041"
 ---
 # <a name="updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial"></a>Aktualisieren von Berichten mithilfe von Klassen, die aus dem RDL-Schema generiert wurden (SSRS-Lernprogramm)
   Dieses Tutorial veranschaulicht, wie das XML Schema Definition Tool (Xsd.exe) Klassen generieren, mit denen Sie zum Serialisieren und Deserialisieren von Berichtsdefinitionsdateien (RDL- und RDLC) mit der [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer> Klasse.  
@@ -59,7 +58,7 @@ ms.locfileid: "53349387"
 > [!NOTE]  
 >  Die Beispiele werden nicht automatisch beim Setup installiert. Sie können sie jedoch jederzeit installieren. Weitere Informationen zu Beispielen finden Sie unter [SQL Server Product Samples](https://go.microsoft.com/fwlink/?LinkId=182887).  
   
- **Geschätzte Zeit bis zum Abschluss des Tutorials:** 30 Minuten  
+ **Ungefähre Dauer dieses Tutorials:** 30 Minuten  
   
 ## <a name="tasks"></a>Richtlinienübersicht  
  [Lektion 1: Erstellen Sie die Visual Studio-Projekt die RDL-Schema](../../2014/tutorials/lesson-1-create-the-rdl-schema-visual-studio-project.md)  
@@ -70,7 +69,7 @@ ms.locfileid: "53349387"
   
  [Lektion 4: Aktualisieren Sie die Berichtsdefinition programmgesteuert](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)  
   
- [Lektion 5: Veröffentlichen der Berichtsdefinition auf dem Berichtsserver](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)  
+ [Lesson 5: Veröffentlichen der Berichtsdefinition auf dem Berichtsserver](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)  
   
  [Lektion 6: Führen Sie die RDL-Schema-Anwendung &#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)  
   

@@ -27,13 +27,13 @@ helpviewer_keywords:
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bc8c6adf930df4d6eaf721db4782d5d1627439c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 84199b2bf01101a1bcc67b6e3d0870824a116860
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166270"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013591"
 ---
 # <a name="manage-a-running-process"></a>Verwalten eines ausgeführten Prozesses
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] überwacht den Status von Aufträgen, die auf dem Berichtsserver ausgeführt werden. Die in Bearbeitung befindlichen Aufträge werden in regelmäßigen Abständen vom Berichtsserver gescannt und die Statusinformationen in die Berichtsserver-Datenbank bzw. bei Verwendung des SharePoint-Modus in die Dienstanwendungs-Datenbanken geschrieben. Ein Auftrag wird verarbeitet, wenn alle folgenden Prozesse ausgeführt werden: Abfrageausführung auf einem Remote- oder auf einem lokalen Datenbankserver, Berichtsverarbeitung und Berichtsrendering.  
@@ -76,7 +76,7 @@ ms.locfileid: "48166270"
   
 ### <a name="how-to-cancel-report-processing-or-subscription"></a>So brechen Sie Berichtsverarbeitung oder -abonnements ab  
   
-1.  Stellen Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]eine Verbindung mit dem Berichtsserver her. Anweisungen hierzu finden Sie unter [Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../tools/connect-to-a-report-server-in-management-studio.md).  
+1.  Stellen Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]eine Verbindung mit dem Berichtsserver her. Anweisungen finden Sie unter [Herstellen einer Verbindung zu einem Berichtsserver in Management Studio](../tools/connect-to-a-report-server-in-management-studio.md).  
   
 2.  Öffnen Sie den Ordner **Aufträge** .  
   
@@ -86,20 +86,20 @@ ms.locfileid: "48166270"
   
 1.  Öffnen Sie die Datei RSReportServer.config in einem Text-Editor.  
   
-2.  Suchen `IsNotificationService`.  
+2.  Suchen Sie `IsNotificationService`.  
   
-3.  Legen Sie ihn auf `False`.  
+3.  Legen Sie hierfür `False` fest.  
   
 4.  Speichern Sie die Datei.  
   
 5.  Löschen Sie im Berichts-Manager das datengesteuerte Abonnement aus der Registerkarte Abonnements des Berichts oder aus **Meine Abonnements**.  
   
-6.  Suchen Sie nach dem Löschen des Abonnements, in der Datei "rsreportserver.config" `IsNotificationService` und legen ihn auf `True`.  
+6.  Nachdem Sie das Abonnement gelöscht haben, suchen Sie in der Datei RSReportServer.config `IsNotificationService`, und legen Sie dafür `True` fest.  
   
 7.  Speichern Sie die Datei.  
   
 ### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>Konfigurieren von Frequenzeinstellungen für den Abruf des Auftragsstatus  
- Ein Auftrag, der gerade ausgeführt wird, wird in der temporären Datenbank des Berichtsservers gespeichert. Durch Ändern der Konfigurationseinstellungen in der Datei RSReportServer.config können Sie steuern, wie oft der Berichtsserver nach Aufträgen, die verarbeitet werden, scannt, sowie das Intervall festlegen, nach dem der Status eines ausgeführten Auftrags von Neu in Wird ausgeführt geändert wird. Die `RunningRequestsDbCycle` Einstellung gibt an, wie oft der Berichtsserver nach ausgeführten Prozessen scannt. Standardmäßig werden die Statusinformationen alle 60 Sekunden aufgezeichnet. Die `RunningRequestsAge` Einstellung gibt an, das Intervall an, ein Auftrag ist aus Erfahrung mit ausgeführt wird.  
+ Ein Auftrag, der gerade ausgeführt wird, wird in der temporären Datenbank des Berichtsservers gespeichert. Durch Ändern der Konfigurationseinstellungen in der Datei RSReportServer.config können Sie steuern, wie oft der Berichtsserver nach Aufträgen, die verarbeitet werden, scannt, sowie das Intervall festlegen, nach dem der Status eines ausgeführten Auftrags von Neu in Wird ausgeführt geändert wird. Die Einstellung `RunningRequestsDbCycle` gibt an, wie oft der Berichtsserver nach ausgeführten Prozessen scannt. Standardmäßig werden die Statusinformationen alle 60 Sekunden aufgezeichnet. Die Einstellung `RunningRequestsAge` gibt das Intervall an, nach dem der Status eines Auftrags von "Neu" in "Wird ausgeführt" geändert wird.  
   
 ##  <a name="bkmk_sharepoint"></a> Anzeigen und Abbrechen von Aufträgen (SharePoint-Modus)  
  Die Verwaltung von Aufträgen in einer SharePoint-Modusbereitstellung wird für jede [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung abgeschlossen, indem die SharePoint-Zentraladministration verwendet wird.  
@@ -120,11 +120,11 @@ ms.locfileid: "48166270"
  Sie können Aufträge programmgesteuert oder mit einem Skript verwalten. Weitere Informationen finden Sie unter <xref:ReportService2010.ReportingService2010.ListJobs%2A>, <xref:ReportService2010.ReportingService2010.CancelJob%2A>verwalten.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Berichtsserveraufträge Abbrechen &#40;Management Studio&#41;](../tools/cancel-report-server-jobs-management-studio.md)   
- [Auftragseigenschaften (Management Studio)](../tools/job-properties-management-studio.md)   
+ [Berichtsserveraufträge abbrechen &#40;Management Studio&#41;](../tools/cancel-report-server-jobs-management-studio.md)   
+ [Auftragseigenschaften &#40;Management Studio&#41;](../tools/job-properties-management-studio.md)   
  [Ändern einer Reporting Services-Konfigurationsdatei &#40;RSreportserver.config&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [RSReportServer-Konfigurationsdatei](../report-server/rsreportserver-config-configuration-file.md)   
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md)   
- [Monitoring Report Server Performance (Überwachen der Leistung des Berichtsservers)](../report-server/monitoring-report-server-performance.md)  
+ [Überwachen der Leistung des Berichtsservers](../report-server/monitoring-report-server-performance.md)  
   
   

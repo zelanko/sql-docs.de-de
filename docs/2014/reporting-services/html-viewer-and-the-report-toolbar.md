@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ccabc5546cd61f7b685480cf2c2819d6594aee1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8d3abef04fd707681499d13246f050bc75eeda98
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182671"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015981"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML-Viewer und die Berichtssymbolleiste
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] stellt einen HTML-Viewer bereit, in dem die Berichte bedarfsgesteuert angezeigt werden können, so wie sie vom Berichtsserver angefordert werden. Der HTML-Viewer stellt ein Framework für das Anzeigen von Berichten in HTML zur Verfügung. Er enthält eine Berichtssymbolleiste, einen Parameterabschnitt, einen Abschnitt mit den Anmeldeinformationen und eine Dokumentstruktur. Die Berichtssymbolleiste im HTML-Viewer enthält Funktionen zum Bearbeiten von Berichten. Dazu zählen auch Exportoptionen, mit deren Hilfe ein Bericht in anderen Formaten als HTML angezeigt werden kann. Der Parameterabschnitt und die Dokumentstruktur werden nur angezeigt, wenn Sie Berichte öffnen, die zum Verwenden von Parametern und eines Dokumentstruktur-Steuerelements konfiguriert sind.  
   
 > [!NOTE]  
->  Zwar können Sie die Berichtssymbolleiste nicht ändern, jedoch können Sie die Parameter in einer Berichts-URL so konfigurieren, dass sie in einem Bericht ausgeblendet wird. Weitere Informationen zum Ausblenden der Berichtssymbolleiste finden Sie unter [URL Access Parameter Reference](url-access-parameter-reference.md).  
+>  Zwar können Sie die Berichtssymbolleiste nicht ändern, jedoch können Sie die Parameter in einer Berichts-URL so konfigurieren, dass sie in einem Bericht ausgeblendet wird. Weitere Informationen zum Ausblenden der Berichtssymbolleiste finden Sie unter [URL-Zugriffsparameterverweis](url-access-parameter-reference.md).  
   
 ## <a name="report-toolbar"></a>Berichtssymbolleiste  
  Die Berichtssymbolleiste bietet Funktionen zum Navigieren, Zoomen, Aktualisieren, Suchen, Exportieren, Drucken sowie Datenfeedfunktionen für Berichte, die in der HTML-Renderingerweiterung gerendert werden.  
@@ -34,17 +34,17 @@ ms.locfileid: "48182671"
   
  In der folgenden Abbildung ist die Berichtssymbolleiste dargestellt. Die tatsächlich angezeigte Berichtssymbolleiste kann Unterschiede zu dieser Abbildung aufweisen, da möglicherweise andere Berichtsfunktionen verwendet werden oder andere Renderingoptionen verfügbar sind.  
   
- ![Berichtssymbolleiste](media/htmlviewer-toolbar.gif "Report toolbar")  
+ ![Report toolbar](media/htmlviewer-toolbar.gif "Report toolbar")  
   
  In der folgenden Tabelle sind häufig verwendete Funktionen der Berichtssymbolleiste erläutert. Jede Funktion wird durch das Steuerelement identifiziert, das Sie für den Zugriff auf die entsprechende Funktion verwenden.  
   
 |Symbol oder Steuerelement||Aktion|  
 |------------------------------|-|--------|  
-|![Steuerelemente zur Seitennavigation](media/htmlviewer-pagenav.gif "Steuerelemente zur Seitennavigation")|**Steuerelemente für die Seitennavigation**|Öffnen der ersten oder letzten Seite eines Berichts, seitenweises Durchführen eines Bildlaufs durch einen Bericht und Öffnen einer bestimmten Seite in einem Bericht. Um eine bestimmte Seite anzuzeigen, geben Sie die Seitenzahl ein, und drücken Sie die EINGABETASTE.|  
+|![Steuerelemente für die Seitennavigation](media/htmlviewer-pagenav.gif "Steuerelemente für die Seitennavigation")|**Steuerelemente für die Seitennavigation**|Öffnen der ersten oder letzten Seite eines Berichts, seitenweises Durchführen eines Bildlaufs durch einen Bericht und Öffnen einer bestimmten Seite in einem Bericht. Um eine bestimmte Seite anzuzeigen, geben Sie die Seitenzahl ein, und drücken Sie die EINGABETASTE.|  
 |![Steuerelemente für die Seitenanzeige](media/htmlviewer-pagesize.gif "Steuerelemente für die Seitenanzeige")|**Steuerelemente für die Seitenanzeige**|Vergrößern oder Verkleinern der Berichtsseite. Sie können die Größe der Anzeige prozentual ändern oder mithilfe von **Seitenbreite** die horizontale Breite eines Berichts im Browserfenster anpassen bzw. mithilfe von **Gesamte Seite** die vertikale Länge eines Berichts im Browserfenster anpassen. Die Option **Zoom** wird von [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer ab Version 5.5 unterstützt.|  
-|![Suchen (Feld)](media/htmlviewer-search.gif "suchen (Feld)")|**Suchen (Feld)**|Suchen nach Inhalten im Bericht durch das Eingeben eines oder mehrerer Wörter, nach denen Sie suchen möchten (die maximale Länge beträgt 256 Zeichen). Bei der Suche wird die Groß- und Kleinschreibung beachtet, und sie beginnt bei der aktuell ausgewählten Seite oder beim aktuell markierten Abschnitt. Nur sichtbarer Inhalt wird in Suchvorgänge eingeschlossen. Wenn Sie nach weiteren Vorkommen desselben Wertes suchen möchten, klicken Sie auf **Weiter**.|  
+|![Suchen (Feld)](media/htmlviewer-search.gif "Suchen (Feld)")|**Suchen (Feld)**|Suchen nach Inhalten im Bericht durch das Eingeben eines oder mehrerer Wörter, nach denen Sie suchen möchten (die maximale Länge beträgt 256 Zeichen). Bei der Suche wird die Groß- und Kleinschreibung beachtet, und sie beginnt bei der aktuell ausgewählten Seite oder beim aktuell markierten Abschnitt. Nur sichtbarer Inhalt wird in Suchvorgänge eingeschlossen. Wenn Sie nach weiteren Vorkommen desselben Wertes suchen möchten, klicken Sie auf **Weiter**.|  
 |![Exportformate](media/htmlviewer-export.GIF "Exportformate")|**Exportformate**|Öffnen eines neuen Browserfensters und Rendern des Berichts im ausgewählten Format. Welche Formate verfügbar sind, ist durch die auf dem Berichtsserver installierten Renderingerweiterungen bestimmt. Das TIFF-Format wird zum Drucken empfohlen. Klicken Sie auf **Exportieren** , um den Bericht im ausgewählten Format anzuzeigen.|  
-|![Dokumentstruktur-Symbol](media/htmlviewer-docmap.GIF "Dokumentstruktur-Symbol")|**Dokumentstruktur (Symbol)**|Ein- oder Ausblenden des Dokumentstrukturbereichs in einem Bericht mit Dokumentstruktur. Eine Dokumentstruktur ist ein Steuerelement für die Berichtsnavigation, das mit dem Navigationsbereich auf einer Website vergleichbar ist. Sie können auf Elemente in der Dokumentstruktur klicken, um zu einer bestimmten Gruppe, Seite oder zu einem Unterbericht zu wechseln.|  
+|![Dokumentstruktur (Symbol)](media/htmlviewer-docmap.GIF "Dokumentstruktur (Symbol)")|**Dokumentstruktur (Symbol)**|Ein- oder Ausblenden des Dokumentstrukturbereichs in einem Bericht mit Dokumentstruktur. Eine Dokumentstruktur ist ein Steuerelement für die Berichtsnavigation, das mit dem Navigationsbereich auf einer Website vergleichbar ist. Sie können auf Elemente in der Dokumentstruktur klicken, um zu einer bestimmten Gruppe, Seite oder zu einem Unterbericht zu wechseln.|  
 |![Drucker (Symbol)](media/printer-icon.gif "Drucker (Symbol)")|**Drucker (Symbol)**|Öffnen des Dialogfelds Drucken, in dem Sie die Druckoptionen festlegen und einen Bericht drucken können. Bei der erstmaligen Verwendung werden Sie nach dem Klicken auf das Symbol aufgefordert, ein Steuerelement zum Drucken herunterzuladen.|  
 ||**Einblenden und Ausblenden (Symbole)**|Einblenden oder Ausblenden von Feldern mit Parameterwerten und der Schaltfläche **Bericht anzeigen** in einem Bericht mit Parametern.|  
 |![Schaltfläche zum Aktualisieren des Browers auf der Berichtssymbolleiste](media/htmlviewer-refresh.GIF "Browser refresh button on report toolbar")|**Bericht aktualisieren (Symbol)**|Aktualisieren des Berichts. Daten für Liveberichte werden aktualisiert. Zwischengespeicherte Berichte werden vom jeweiligen Speicherort neu geladen.|  

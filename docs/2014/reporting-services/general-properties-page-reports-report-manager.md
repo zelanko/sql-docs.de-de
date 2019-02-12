@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 66c99d28-ab41-45f0-bf02-ed560293595d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e8606f2ee9afeb0e5e3ab0663290471b0d2d4463
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 408d86a821d2596172570f513ee8398e43298f91
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206162"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030271"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>Allgemeine Eigenschaften (Seite) (Berichte, Berichts-Manager)
   Mithilfe der Seite Allgemeine Eigenschaften für Berichte können Sie eine Berichtsdefinition umbenennen, löschen, verschieben oder ersetzen. Zudem ist mit dieser Seite das Erstellen eines verknüpften Berichts möglich. Details zum Benutzer, der den Bericht erstellt oder geändert hat, und zum Zeitpunkt der Änderungen sind oben auf der Seite aufgeführt.  
@@ -32,9 +32,9 @@ ms.locfileid: "48206162"
   
 3.  Klicken Sie im Dropdownmenü auf **Verwalten**. Dadurch wird die Seite Allgemeine Eigenschaften für den Bericht geöffnet.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name**  
- Geben Sie einen Namen für den Bericht an. Der Name muss mindestens ein alphanumerisches Zeichen enthalten. Er kann auch Leerzeichen und bestimmte Sonderzeichen enthalten. Folgende Zeichen können nicht beim Angeben eines Namens verwendet werden: ; ? : \@ & = +, $ * \< >  
+ Geben Sie einen Namen für den Bericht an. Der Name muss mindestens ein alphanumerisches Zeichen enthalten. Er kann auch Leerzeichen und bestimmte Sonderzeichen enthalten. Folgende Zeichen können nicht beim Angeben eines Namens verwendet werden: ; ? : \@ & = + , $ * \< >  
   
  " oder /.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48206162"
   
  Die von Ihnen geöffnete Kopie ist mit der ursprünglichen Berichtsdefinition identisch, die auf dem Berichtsserver veröffentlicht wurde. Alle Eigenschaften, die für den Bericht nach dessen Veröffentlichung festgelegt wurden (wie Parameter und Datenquelleneigenschaften) sind nicht in der von Ihnen geöffneten Datei enthalten.  
   
- Die können die Berichtsdefinition ändern und als neue Datei in einem freigegebenen Ordner speichern. Dann können Sie die Berichtsdefinition als neues Element auf dem Berichtsserver hochladen. Änderungen, die Sie in der Berichtsdefinition vornehmen, während er im geöffnet ist [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (oder einer anderen Anwendung) nicht direkt auf dem Berichtsserver gespeichert sind. Sie müssen die Datei hochladen, um den veränderten Bericht auf dem Berichtsserver zu veröffentlichen.  
+ Die können die Berichtsdefinition ändern und als neue Datei in einem freigegebenen Ordner speichern. Dann können Sie die Berichtsdefinition als neues Element auf dem Berichtsserver hochladen. Die Änderungen, die Sie an der Berichtsdefinition vornehmen, während diese in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (oder einer anderen Anwendung) geöffnet ist, werden nicht direkt auf dem Berichtsserver gespeichert. Sie müssen die Datei hochladen, um den veränderten Bericht auf dem Berichtsserver zu veröffentlichen.  
   
  **Ersetzen**  
  Klicken Sie auf diese Schaltfläche, um die im aktuellen Bericht verwendete Berichtsdefinition durch eine andere aus einer RDL-Datei im Dateisystem zu ersetzen. Wenn Sie eine Berichtsdefinition aktualisieren, müssen Sie die Einstellungen zur Datenquelle nach Abschluss des Updates zurücksetzen.  

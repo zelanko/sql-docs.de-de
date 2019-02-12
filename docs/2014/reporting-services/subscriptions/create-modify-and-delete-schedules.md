@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 81ad874c4d7e3c417058b2403c1307893300feaa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 231fbf5211654d126f09ceb048501c7b2eacf0c3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118780"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039581"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   In diesem Hilfethema erhalten Sie Informationen zum Erstellen, Ändern und Löschen von Zeitplänen.  
@@ -129,7 +129,7 @@ ms.locfileid: "48118780"
   
 ##### <a name="to-create-or-modify-a-shared-schedule-report-manager"></a>So erstellen oder ändern Sie einen freigegebenen Zeitplan (Berichts-Manager)  
   
-1.  Starten Sie [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md).  
+1.  Starten Sie den [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md).  
   
 2.  Klicken Sie im Berichts-Manager auf der globalen Symbolleiste auf **Siteeinstellungen**.  
   
@@ -200,7 +200,7 @@ ms.locfileid: "48118780"
  Wenn Sie einen freigegebenen Zeitplan löschen, der von mehreren Berichten und Abonnements verwendet wird, erstellt der Berichtsserver für Berichte und Abonnements, die vorher den freigegebenen Zeitplan verwendet haben, eigene Zeitpläne. Jeder dieser neuen Zeitpläne enthält das Datum, die Zeit und die Wiederholungsoption, die in dem freigegebenen Zeitplan angegeben wurden. Beachten Sie, dass [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] keine zentrale Verwaltung für einzelne Zeitpläne bereitstellt. Wenn Sie einen freigegebenen Zeitplan löschen, müssen Sie jetzt die Zeitplaninformationen für jedes einzelne Element verwalten. Ermitteln Sie vor dem Löschen eines freigegebenen Zeitplans mit der [Seite Berichte](../tools/schedule-properties-reports-page.md) , welche Berichte derzeit mit einem freigegebenen Zeitplan arbeiten.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Zeitpläne](schedules.md)   
+ [Schedules](schedules.md)   
  [Anhalten und Fortsetzen von freigegebenen Zeitplänen](pause-and-resume-shared-schedules.md)   
  [Zwischenspeichern eines Berichts &#40;Berichts-Manager&#41;](../report-server/cache-a-report-report-manager.md)   
  [Hinzufügen einer Momentaufnahme zum Berichtsverlauf &#40;Berichts-Manager&#41;](../report-server/add-a-snapshot-to-report-history-report-manager.md)  

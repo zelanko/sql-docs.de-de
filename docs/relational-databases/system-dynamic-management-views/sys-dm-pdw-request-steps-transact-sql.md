@@ -2,8 +2,8 @@
 title: dm_pdw_request_steps (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/01/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8543933aa102a6962846164b7267fad7df222cdd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 63a39ab5ace1ec3666b3f5c70cc628268304ce92
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393594"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039051"
 ---
 # <a name="sysdmpdwrequeststeps-transact-sql"></a>sys.dm_pdw_request_steps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -29,9 +29,9 @@ ms.locfileid: "52393594"
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|Anforderungs-ID und Step_index stellen Sie den Schlüssel für diese Sicht.<br /><br /> Eindeutige numerische Id der Anforderung zugeordnet ist.|Finden Sie im Anforderungs-ID [dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|Anforderungs-ID und Step_index stellen Sie den Schlüssel für diese Sicht.<br /><br /> Die Position dieses Schritts in der Reihenfolge der Schritte, aus denen die Anforderung besteht.|0, um (n-1) für eine Anforderung mit n Schritten.|  
-|operation_type|**nvarchar(35)**|Typ des Vorgangs, der durch diesen Schritt dargestellt.|**DMS Query Plan Operations:** 'ReturnOperation', "PartitionMoveOperation", "MoveOperation", "BroadcastMoveOperation", "ShuffleMoveOperation", "TrimMoveOperation", "CopyOperation", "DistributeReplicatedTableMoveOperation"<br /><br /> **SQL-Abfrage-Plan-Vorgänge:** "OnOperation',"RemoteOperation"<br /><br /> **Andere Vorgänge für den Abfrage-Plan:** "MetaDataCreateOperation',"RandomIDOperation"<br /><br /> **Externe Vorgänge für Lesevorgänge:** "HadoopShuffleOperation', 'HadoopRoundRobinOperation',"HadoopBroadcastOperation"<br /><br /> **Externe für MapReduce-Vorgänge:** "HadoopJobOperation',"HdfsDeleteOperation"<br /><br /> **Externe Vorgänge für Schreibvorgänge:** "ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation',"ExternalExportControlOperation"<br /><br /> Weitere Informationen finden Sie unter "Grundlegendes zu Abfragepläne" in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].|  
-|distribution_type|**nvarchar(32)**|Die Art der Verteilung, die ausgeführt wird, dass Sie diesen Schritt.|"AllNodes", "AllDistributions", "AllComputeNodes", "ComputeNode", 'Distribution', "SubsetNodes", "SubsetDistributions", "Nicht angegeben"|  
-|location_type|**nvarchar(32)**|Gibt an, in dem der Schritt ausgeführt wird.|'Berechnen', 'Control', "DMS"|  
+|operation_type|**nvarchar(35)**|Typ des Vorgangs, der durch diesen Schritt dargestellt.|**DMS Query Plan Operations:** 'ReturnOperation', 'PartitionMoveOperation', 'MoveOperation', 'BroadcastMoveOperation', 'ShuffleMoveOperation', 'TrimMoveOperation', 'CopyOperation', 'DistributeReplicatedTableMoveOperation'<br /><br /> **SQL-Abfrage-Plan-Vorgänge:** 'OnOperation', 'RemoteOperation'<br /><br /> **Andere Vorgänge für den Abfrage-Plan:** 'MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **Externe Vorgänge für Lesevorgänge:** 'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **Externe für MapReduce-Vorgänge:** 'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **Externe Vorgänge für Schreibvorgänge:** 'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> Weitere Informationen finden Sie unter "Grundlegendes zu Abfragepläne" in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].|  
+|distribution_type|**nvarchar(32)**|Die Art der Verteilung, die ausgeführt wird, dass Sie diesen Schritt.|'AllNodes', 'AllDistributions', 'AllComputeNodes', 'ComputeNode', 'Distribution', 'SubsetNodes', 'SubsetDistributions', 'Unspecified'|  
+|location_type|**nvarchar(32)**|Gibt an, in dem der Schritt ausgeführt wird.|'Compute', 'Control', 'DMS'|  
 |status|**nvarchar(32)**|Der Status dieses Schritts.|Ausstehend "," wird ausgeführt, abgeschlossen, Fehler, UndoFailed, PendingCancel abgebrochen, rückgängig gemacht werden, wurde abgebrochen|  
 |error_id|**nvarchar(36)**|Eindeutige Id des Fehlers mit diesem Schritt verknüpft ist, sofern vorhanden.|Finden Sie unter Fehler-ID des [sys.dm_pdw_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md). NULL, wenn kein Fehler aufgetreten ist.|  
 |start_time|**datetime**|Zeitpunkt, zu dem der Schritt Ausführung begonnen hat.|Kleiner oder gleich der aktuellen Zeit und größer oder gleich End_compile_time der Abfrage zu der dieser Schritt gehört. Weitere Informationen zu Abfragen finden Sie unter [dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  

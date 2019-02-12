@@ -11,21 +11,21 @@ f1_keywords:
 - "10021"
 ms.assetid: 75c7e54a-3d20-4c9a-88da-ab36dce2ce42
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1dcbab871d5353d4f42183e89fadb6e83ed52e1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 14c65afb6cab1062dfe0a1d5ac3e23444f89d481
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116931"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011071"
 ---
 # <a name="dataset-properties-dialog-box-fields-report-builder"></a>Dataseteigenschaften (Dialogfeld), Felder (Berichts-Generator)
   Wählen Sie im Dialogfeld **Dataseteigenschaften** die Option **Felder** aus, um die Feldauflistung für das Berichtsdataset zu ändern. Die Felderliste wird automatisch aufgefüllt, Sie können jedoch mithilfe der Option **Felder** Abfragefelder und berechnete Felder hinzufügen, bearbeiten und löschen.  
   
  Berechnete Felder werden nur bei eingebetteten Datasets unterstützt. Weitere Informationen finden Sie unter [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Hinzufügen**  
  Fügt dem Dataset ein neues Abfragefeld oder berechnetes Feld hinzu.  
   

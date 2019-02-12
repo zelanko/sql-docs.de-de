@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 0fac7d5e-2670-4657-9439-331e7d93babb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5dd2ca31f890f0f16b3bbc68097572bb82d2bef2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b22e8d9e67e0c897aaab859dde097707d3272ec3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179160"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029062"
 ---
 # <a name="setsecureconnectionlevel-method-wmi-msreportserverconfigurationsetting"></a>SetSecureConnectionLevel-Methode (WMI: MSReportServer_ConfigurationSetting)
   Legt die sichere Verbindungsebene des Berichtsservers fest  
@@ -62,6 +62,6 @@ public void SetSecureConnectionLevel(Int32 Level,
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](msreportserver-configurationsetting-members.md)  
+ [MSReportServer_ConfigurationSetting-Member](msreportserver-configurationsetting-members.md)  
   
   

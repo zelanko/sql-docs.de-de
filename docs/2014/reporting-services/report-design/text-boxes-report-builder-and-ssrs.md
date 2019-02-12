@@ -15,13 +15,13 @@ f1_keywords:
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 19c2f599a00548ed85853720c0aad86d38950c74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 66dadc7a6163b8da7024818a9ecee16d5b3df696
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222520"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029301"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Textfelder (Berichts-Generator und SSRS)
   Wenn Sie an ein Textfeld denken, stellen Sie sich wahrscheinlich ein eigenständiges Feld mit Text vor, wie es zum Beispiel in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint verwendet wird. Im Berichts-Generator entsprechen einige Textfelder dieser Vorstellung und können eigentlichen Text für Titel, Beschreibungen und Beschriftungen oder dynamischen Text basierend auf Ausdrücken enthalten. Jede Zelle in einer Tabelle oder Matrix (einem Tablix-Datenbereich) enthält jedoch auch ein Textfeld, das auf dieselbe Weise formatiert werden kann wie eigenständige Textfelder in einem Bericht.  
@@ -41,7 +41,7 @@ ms.locfileid: "48222520"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ##  <a name="GrowShrinkTextBox"></a> Vergrößern und Verkleinern eines Textfelds  
- Standardmäßig haben Textfelder eine feste Größe. Sie können zulassen, dass ein Textfeld auf Grundlage seines Inhalts verkleinert oder vertikal erweitert wird. Weitere Informationen finden Sie unter [zulassen, dass Textfelder vergrößert oder verkleinert &#40;Berichts-Generator und SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md).  
+ Standardmäßig haben Textfelder eine feste Größe. Sie können zulassen, dass ein Textfeld auf Grundlage seines Inhalts verkleinert oder vertikal erweitert wird. Weitere Informationen finden Sie unter [Zulassen, dass Textfelder vergrößert oder verkleinert werden &#40;Berichts-Generator und SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md).  
   
 ## <a name="orienting-a-text-box"></a>Ausrichten eines Textfelds  
  Durch das Ausrichten von Textfeldern können Sie die Lesbarkeit von Berichten verbessern, gebietsschemaspezifische Textausrichtungen unterstützen, in einem gedruckten Bericht mit fester Seitengröße eine größere Spaltenanzahl unterbringen und grafisch ansprechendere Berichte erstellen. Ein Textfeld kann in verschiedene Richtungen ausgerichtet werden: horizontal, vertikal oder um 270 Grad gedreht. Die Option für die vertikale Ausrichtung wird am häufigsten für ostasiatische Sprachen verwendet, deren Schreibrichtung von oben nach unten verläuft. In den meisten Renderern wird die Eigenschaft für das Drehen von Symbolen durch die Option für die vertikale Ausrichtung behandelt, damit der Text von oben nach unten geschrieben wird, die Zeichen jedoch nicht auf der Seite liegen. Bei anderen Sprachen wird Text, auf den die Optionen für vertikale Ausrichtung und Drehung um 270 Grad angewendet werden, seitwärts geschrieben.  
@@ -54,16 +54,16 @@ ms.locfileid: "48222520"
   
  Die Ausrichtung wird für das Textfeld festgelegt und gilt für den gesamten Text im Textfeld. Sie können keine andere Ausrichtung für Teile des Textfelds angeben.  
   
- Zum schnellen Einstieg mit der Änderung der textausrichtung finden Sie im Abschnitt zum Drehen von Text in die [Tutorial: Formatieren von Text &#40;Berichts-Generator&#41;](../tutorial-format-text-report-builder.md). Weitere Informationen finden Sie unter [Festlegen der Textfeldausrichtung &#40;Berichts-Generator und SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md).  
+ Zum schnellen Einstieg mit der Änderung der textausrichtung finden Sie im Abschnitt zum Drehen von Text in die [Lernprogramm: Formatieren von Text &#40;Berichts-Generator&#41;](../tutorial-format-text-report-builder.md). Weitere Informationen finden Sie unter [Festlegen der Textfeldausrichtung &#40;Berichts-Generator und SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md).  
   
 ##  <a name="HowTo"></a> Themen zur Vorgehensweise  
- [Hinzufügen, verschieben oder Löschen von Textfeldern &#40;Berichts-Generator und SSRS&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
+ [Hinzufügen, Verschieben oder Löschen von Textfeldern &#40;Berichts-Generator und SSRS&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
   
  [Formatieren von Text in einem Textfeld &#40;Berichts-Generator und SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
  [Festlegen der Textfeldausrichtung &#40;Berichts-Generator und SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)  
   
- [Zulassen, dass Textfelder vergrößert oder verkleinert &#40;Berichts-Generator und SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
+ [Zulassen, dass Textfelder vergrößert oder verkleinert werden &#40;Berichts-Generator und SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Formatieren von Text und Platzhaltern &#40;Berichts-Generator und SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 277ee4ff416ad9710eecf501651b5a5143b0fa68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0ad789a8246479c16ed5ceba17c3e7d9cf19d6ea
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210206"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010891"
 ---
 # <a name="create-a-linked-report"></a>Erstellen eines verknüpften Berichts
   Ein verknüpfter Bericht ist ein Berichtsserverelement, das einen Zugriffspunkt auf einen vorhandenen Bericht bereitstellt. Grundsätzlich ist er mit einer Programmverknüpfung vergleichbar, die Sie verwenden, um ein Programm auszuführen oder eine Datei zu öffnen.  
@@ -35,7 +35,7 @@ ms.locfileid: "48210206"
   
 2.  Geben Sie einen Namen für den neuen verknüpften Bericht ein. Geben Sie optional eine Beschreibung ein.  
   
-3.  Um einen anderen Ordner für den Bericht auszuwählen, klicken Sie auf **Speicherort ändern**. Klicken Sie auf den Ordner, den Sie verwenden möchten, oder geben Sie den Ordnernamen im Feld **Speicherort** ein. [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Wenn Sie einen anderen Ordner nicht auswählen, wird der verknüpfte Bericht im aktuellen Ordner erstellt (in dem der Bericht, dem er basiert gespeichert ist).  
+3.  Um einen anderen Ordner für den Bericht auszuwählen, klicken Sie auf **Speicherort ändern**. Klicken Sie auf den Ordner, den Sie verwenden möchten, oder geben Sie den Ordnernamen im Feld **Speicherort** ein. [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Wenn Sie keinen anderen Ordner auswählen, wird der verknüpfte Bericht im aktuellen Ordner (in dem der Bericht, auf dem er basiert, gespeichert ist) erstellt.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Der verknüpfte Bericht wird geöffnet.  
   
@@ -45,10 +45,10 @@ ms.locfileid: "48210206"
   
 ## <a name="see-also"></a>Siehe auch  
  [Öffnen und Schließen eines Berichts &#40;Berichts-Manager&#41;](../reports/open-and-close-a-report-report-manager.md)   
- [Neuer verknüpfter Bericht (Seite) (Berichts-Manager)](../new-linked-report-page-report-manager.md)   
+ [Neuer verknüpfter Bericht (Seite) &#40;Berichts-Manager&#41;](../new-linked-report-page-report-manager.md)   
  [Speicherort für Elemente auswählen (Seite) (Berichts-Manager)](../choose-item-location-page-report-manager.md)   
  [Allgemeine Eigenschaften (Seite) (Berichte, Berichts-Manager)](../general-properties-page-reports-report-manager.md)   
  [Konzepte von Reporting Services (SSRS)](../reporting-services-concepts-ssrs.md)   
- [Berichts-Manager (einheitlicher SSRS-Modus)](../report-manager-ssrs-native-mode.md)  
+ [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md)  
   
   

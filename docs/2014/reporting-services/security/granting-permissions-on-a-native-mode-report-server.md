@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d0ea2e775edd95ec7a30dc6cbf9f9d04bc62a162
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 892349a6a4ce2bbdd51670a92231c626129ae53b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161470"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014561"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bestimmt mithilfe der rollenbasierten Autorisierung und eines Authentifizierungssubsystems, wer Vorgänge ausführen und auf Elemente auf einem Berichtsserver zugreifen kann. Die rollenbasierte Autorisierung teilt die Aktionen, die ein Benutzer oder eine Gruppe ausführen kann, in Rollen ein. Die Authentifizierung basiert auf der integrierten Windows-Authentifizierung oder auf einem von Ihnen bereitgestellten benutzerdefinierten Authentifizierungsmodul. Bei beiden Authentifizierungstypen können vordefinierte oder benutzerdefinierte Rollen verwendet werden.  
@@ -40,7 +40,7 @@ ms.locfileid: "48161470"
   
  Beachten Sie die folgenden Richtlinien, um den Zugriff auf Berichtsserverelemente und -vorgänge zu gewähren:  
   
-1.  Überprüfen Sie die vordefinierten Rollen, um zu ermitteln, ob Sie sie unverändert verwenden können. Wenn Sie die Aufgaben anpassen oder zusätzliche Rollen definieren müssen, sollte dies erfolgen, bevor Sie den einzelnen Rollen Benutzer zuweisen. Weitere Informationen zu den einzelnen Rollen finden Sie unter [vordefinierte Rollen](role-definitions-predefined-roles.md).  
+1.  Überprüfen Sie die vordefinierten Rollen, um zu ermitteln, ob Sie sie unverändert verwenden können. Wenn Sie die Aufgaben anpassen oder zusätzliche Rollen definieren müssen, sollte dies erfolgen, bevor Sie den einzelnen Rollen Benutzer zuweisen. Weitere Informationen zu den einzelnen Rollen finden Sie unter [Vordefinierte Rollen](role-definitions-predefined-roles.md).  
   
 2.  Identifizieren Sie, für welche Benutzer und Gruppen der Zugriff auf den Berichtsserver erforderlich ist und auf welcher Ebene. Die meisten Benutzer sollten der **Browser** -Rolle oder der **Berichts-Generator** -Rolle zugewiesen werden. Eine kleinere Anzahl von Benutzern sollte der **Verleger** -Rolle zugewiesen werden. **Inhalts-Manager**sollten nur sehr wenige Benutzer zugewiesen werden.  
   
@@ -66,17 +66,17 @@ ms.locfileid: "48161470"
 ## <a name="tasks-and-tools-for-managing-permissions"></a>Aufgaben und Tools zum Verwalten von Berechtigungen  
  Verwenden Sie die folgenden Tools, um Rollendefinitionen und -zuweisungen zu verwalten.  
   
-|Tool|Aufgaben|  
+|Tool|Richtlinienübersicht|  
 |----------|-----------|  
-|Management Studio - zum Anzeigen, Ändern, Erstellen und Löschen von Rollendefinitionen|[Erstellen, löschen oder Ändern einer Rolle &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)|  
+|Management Studio - zum Anzeigen, Ändern, Erstellen und Löschen von Rollendefinitionen|[Erstellen, Löschen oder Ändern einer Rolle &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)|  
 |Berichts-Manager - zum Zuweisen von Benutzern und Gruppen zu Rollen|[Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41;](grant-user-access-to-a-report-server.md)<br /><br /> [Ändern oder Löschen einer Rollenzuweisung &#40;Berichts-Manager&#41;](role-assignments-modify-or-delete.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Vordefinierte Rollen](role-definitions-predefined-roles.md)   
  [Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Authentifizierung mit dem Berichtsserver](authentication-with-the-report-server.md)   
- (erstellen-und-Verwaltung-Rolle-assignments.md)   
+ (create-and-manage-role-assignments.md)   
  [Sicherheit und Schutz für Reporting Services](reporting-services-security-and-protection.md)   
- [Berichtsserver Content Management (einheitlicher SSRS-Modus)](../report-server/report-server-content-management-ssrs-native-mode.md)  
+ [Verwalten von Berichtsserverinhalten &#40;einheitlicher SSRS-Modus&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

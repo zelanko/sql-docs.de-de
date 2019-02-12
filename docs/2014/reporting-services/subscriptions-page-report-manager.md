@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: cf3a6bd0-e0b2-4875-a532-63ef34cfa860
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9741f5e3234462e0793effd3ba5242f0ff272b3e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8ae3948d019467590b885c706e6b2c8d1c186da2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109923"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031541"
 ---
 # <a name="subscriptions-page-report-manager"></a>Abonnements (Seite) (Berichts-Manager)
   Mithilfe der Seite Abonnements können Sie alle Abonnements für den aktuellen Bericht oder die aktuelle freigegebene Datenquelle anzeigen. Wenn Sie über ausreichende Berechtigungen verfügen (wie sie durch den Task "Alle Abonnements verwalten" übertragen werden), können Sie die Abonnements aller Benutzer anzeigen. Ansonsten sind auf dieser Seite nur Ihre Abonnements aufgeführt.  
@@ -44,7 +44,7 @@ ms.locfileid: "48109923"
   
 4.  Wählen Sie die Registerkarte **Abonnements** aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Delete**  
  Klicken Sie auf diese Schaltfläche, um ein Abonnement zu löschen. Bevor Sie Abonnements löschen, aktivieren Sie das Kontrollkästchen neben den zu löschenden Abonnements.  
   

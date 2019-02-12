@@ -1,26 +1,23 @@
 ---
-title: 'Aufgabe 4 (Optional): Kombination, Abgleich und Veröffentlichung eines neuen Satz von Daten | Microsoft-Dokumentation'
+title: 'Task 4 (Optional): Kombination, Abgleich und Veröffentlichung eines neuen Satz von Daten | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 13a13f03-b307-4555-8e33-6d98c459d994
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 05c8785427b905138e513ab7134d56def7cdcf4d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 429608f066b0c99c9677a0e35f0b8925e58c7dff
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353075"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014278"
 ---
-# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Aufgabe 4 (Optional): Kombination, Abgleich und Veröffentlichung eines neuen Satz Daten
+# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Task 4 (Optional): Kombination, Abgleich und Veröffentlichung eines neuen Satz Daten
   Es ist möglich, dass Sie dem MDS-Repository im Laufe der Zeit weitere Daten hinzufügen möchten. Bevor Sie Daten hinzufügen, kann es hilfreich sein, die neuen Daten an die Daten verglichen werden soll, die bereits in MDS, um sicherzustellen, dass Sie keine doppelte oder ungenaue Daten hinzufügen, werden verwaltet wird. Im Master Data Services-Add-In für Excel können Sie Daten aus zwei Arbeitsblättern kombinieren und die Daten dann vergleichen, um Duplikate zu identifizieren und zu entfernen, bevor Sie die Daten in MDS veröffentlichen. Die Abgleichsfunktion des MDS-Add-Ins für Excel verwendet die DQS-Abgleichsfunktionalität, um Übereinstimmungen in den Daten zu identifizieren. In dieser Aufgabe kombinieren Sie Daten aus zwei Arbeitsblättern in einem Arbeitsblatt und führen dann die Abgleichsaktivität aus, um Duplikate zu identifizieren und zu entfernen, bevor Sie die Daten in MDS veröffentlichen. Finden Sie unter [Data Quality-Abgleich im MDS-Add-in für Excel](https://msdn.microsoft.com/library/hh548681.aspx) und [Kombinieren von Daten](https://msdn.microsoft.com/library/hh548680.aspx) Themen Weitere Informationen.  
   
 1.  Starten Sie die neue Instanz der **Excel**. Klicken Sie auf **starten**, zeigen Sie auf **ausführen**, Typ **Excel**, und klicken Sie auf **OK**.  

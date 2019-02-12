@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6a303135-c0ef-44cd-a423-1cea8df3dcf3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7f4722a2b338b0187bdd93cb9501e626c42acf02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4da46abbfb586a2968f92a04538f5a82e06898c6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166890"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031221"
 ---
 # <a name="connect-filter-or-documents-web-part-reporting-services-in-sharepoint-integrated-mode"></a>Verbinden eines Filters oder Dokumentwebparts (Reporting Services im integrierten SharePoint-Modus)
   Wenn Sie ein SharePoint-Produkt verwenden, können Sie ein Dashboard oder eine Webpartseite erstellen, die ein Filterwebpart oder ein Dokumentewebpart und ein Berichts-Viewer-Webpart enthält. Unterstützte Versionen sind [!INCLUDE[SPF2010](../includes/spf2010-md.md)] oder [!INCLUDE[SPS2010](../includes/sps2010-md.md)]. Ebenfalls unterstützt wird [!INCLUDE[winSPServ3](../includes/winspserv3-md.md)] oder [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007. Durch Verbinden eines Filterwebparts können Benutzer, die Filterwerte in einem Filterwebpart auswählen, den Wert an einen parametrisierten Bericht auf derselben Seite senden. Durch Verbinden eines Dokumentewebparts können Benutzer, die auf Berichte in der Bibliothek Dokumente klicken, den Bericht in einem zugehörigen Berichts-Viewer-Webpart anzeigen.  
@@ -77,8 +77,8 @@ ms.locfileid: "48166890"
 11. Checken Sie Ihre Änderungen ein, und speichern Sie die Seite.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Hinzufügen des Berichts-Viewer-Webparts zu einer Webseite &#40;integrierten Reporting Services im SharePoint-Modus&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)   
+ [Hinzufügen des Berichts-Viewer-Webparts zu einer Webseite &#40;Reporting Services im integrierten SharePoint-Modus&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)   
  [Berichts-Viewer-Webpart auf einer SharePoint-Website](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
- [Customize the Report Viewer Web Part (Anpassen des Berichts-Viewer-Webparts)](../../2014/reporting-services/customize-the-report-viewer-web-part.md)  
+ [Anpassen des Berichts-Viewer-Webparts](../../2014/reporting-services/customize-the-report-viewer-web-part.md)  
   
   
