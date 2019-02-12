@@ -12,14 +12,14 @@ f1_keywords:
 - sql12.rtp.rptdesigner.reportproperties.references.f1
 ms.assetid: 4639d368-9918-4bb1-9953-7a724ca78dea
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 628a94ec8e8c79ec88f8427fd2ea41f158ae6c38
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 1b50af41b3430e921002422dfc14a5752af4b4e5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539799"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029641"
 ---
 # <a name="report-properties-dialog-box-references"></a>Berichtseigenschaften (Dialogfeld), Verweise
   Wählen Sie die Registerkarte **Verweise** im Dialogfeld **Berichtseigenschaften** , um Verweise auf benutzerdefinierte oder andere externe Assemblys sowie benutzerdefinierte Klasseninstanzen hinzuzufügen oder zu entfernen, die von Ausdrücken in der Berichtsdefinition verwendet werden.  

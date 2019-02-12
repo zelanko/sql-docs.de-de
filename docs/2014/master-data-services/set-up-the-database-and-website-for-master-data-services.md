@@ -10,18 +10,18 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.general.f1
 ms.assetid: d50863e7-50d9-4ab8-aabb-fd68e2d132a1
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 158b1931a9862b8fa419479f024db0bfdbf80cbf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2d2d034424ac4564a66b40b1479acb7dc683d7c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205030"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027181"
 ---
 # <a name="set-up-the-database-and-website-for-master-data-services"></a>Einrichten von Datenbank und Website für Master Data Services
-  Verwenden der [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] zum Einrichten der Datenbank und Website für [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS)  
+  Verwenden Sie den [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] , um die Datenbank und Website für [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) einzurichten  
   
  Um die Datenbank und die Website einzurichten, führen Sie die folgenden Aufgaben aus.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "48205030"
   
      Weitere Informationen finden Sie unter [Webkonfiguration (Seite) &#40;Konfigurations-Manager für Master Data Services&#41; ](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md) und [Aktivieren von Data Quality Services-Integration mit Master Data Services](install-windows/enable-data-quality-services-integration-with-master-data-services.md).  
   
- Sie können auch [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] Einstellungen für die Web-Anwendungen und Dienste im Zusammenhang mit der MDS-Datenbank angeben. Beispielsweise können Sie festlegen, wie häufig Daten geladen werden oder wie oft Überprüfungs-E-Mails gesendet werden. Weitere Informationen finden Sie unter [Systemeinstellungen &#40;Master Data Services&#41;](../../2014/master-data-services/system-settings-master-data-services.md).  
+ Alternativ können Sie [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] verwenden, um Einstellungen für die der MDS-Datenbank zugeordneten Webanwendungen und -dienste festzulegen. Beispielsweise können Sie festlegen, wie häufig Daten geladen werden oder wie oft Überprüfungs-E-Mails gesendet werden. Weitere Informationen finden Sie unter [Systemeinstellungen &#40;Master Data Services&#41;](../../2014/master-data-services/system-settings-master-data-services.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Master Data Services-Datenbank](../../2014/master-data-services/master-data-services-database.md)   

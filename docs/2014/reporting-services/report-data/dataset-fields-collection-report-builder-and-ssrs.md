@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4c929542449ee5d88db7ab87e9b952f4a2c45ec8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: bdc0ea771c0767638a4ebd774023c1cab09a230b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351981"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020701"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Datasetfeldauflistung (Berichts-Generator und SSRS)
   Datasetfelder stellen die Daten aus einer Datenverbindung dar. Ein Feld kann entweder numerische oder nicht numerische Daten darstellen. Dazu zählen z. B. Umsätze, der Gesamtumsatz, Kundennamen, Datenbankbezeichner, URLs, Bilder, räumliche Daten und E-Mail-Adressen. Auf der Entwurfsoberfläche werden Felder als Ausdrücke in Berichtselementen wie z. B. Textfelder, Tabellen und Diagramme angezeigt.  

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: efb68eefbaff0f984c38393c9bf863f0654716fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 341a5ca0a25729acbf38e961f714f13aedc0dfd4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162570"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031204"
 ---
 # <a name="upload-files-to-a-folder"></a>Hochladen von Dateien in einen Ordner
   Sie können Dateien vom Dateisystem hochladen und in einer Berichtsserver-Datenbank als verwaltete Elemente speichern. Vom Dateityp hängt es ab, was beim Hochladen einer Datei passiert.  
@@ -63,6 +63,6 @@ allgemeines Ressourcensymbol
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;]... / Berichts-Manager-Ssrs-Native-mode.md)   
  [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](../security/granting-permissions-on-a-native-mode-report-server.md)   
  [Aufgaben und Berechtigungen](../security/tasks-and-permissions.md)   
- [Hochladen einer Datei oder eines Berichts (Berichts-Manager)](../reports/upload-a-file-or-report-report-manager.md)  
+ [Hochladen einer Datei oder eines Berichts &#40;Berichts-Manager&#41;](../reports/upload-a-file-or-report-report-manager.md)  
   
   

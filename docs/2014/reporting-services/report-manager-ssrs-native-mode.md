@@ -19,14 +19,14 @@ helpviewer_keywords:
 - components [Reporting Services], Report Manager
 ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c3a102af211ccaa8fad3d7792cf868653ca4797d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: e5d96e743587a0f4c00e7f5f7777b95667e1ea84
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176940"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036571"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>Berichts-Manager (einheitlicher SSRS-Modus)
   Der Berichts-Manager ist ein webbasiertes Zugriffs- und Verwaltungstool für Berichte. Dieses Tool kann verwendet werden, um eine einzelne Berichtsserverinstanz von einem Remotestandort aus über eine HTTP-Verbindung zu verwalten. Sie können ebenso die Berichts-Viewer- und Navigationsfunktionen des Berichts-Managers verwenden. In diesem Thema:  
@@ -48,7 +48,7 @@ ms.locfileid: "48176940"
   
 -   Konfigurieren von Berichtsausführungseigenschaften, dem Berichtsverlauf und Berichtsparameter.  
   
--   Erstellen von Berichtsmodellen, die verbinden und Abrufen von Daten aus einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Datenquelle oder eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] relationale Datenquelle.  
+-   Erstellen von Berichtsmodellen, mit denen eine Verbindung mit einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenquelle oder einer relationalen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenquelle hergestellt wird, um Daten abzurufen.  
   
 -   Festlegen der Modellelementsicherheit für den Zugriff auf bestimmte Entitäten im Modell bzw. Zuordnen von Entitäten zu vordefinierten Berichten mit Durchklicken, die Sie im Voraus erstellen.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48176940"
   
  Der Berichts-Manager wird nur für einen Berichtsserver verwendet, der im einheitlichen Modus ausgeführt wird. Er wird nicht für einen Berichtsserver unterstützt, den Sie für den integrierten Modus von SharePoint konfiguriert haben.  
   
- Einige Berichts-Manager-Features sind nur in bestimmten Editionen von verfügbar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Einige Berichts-Manager-Funktionen sind nur in bestimmten Editionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verfügbar. Weitere Informationen finden Sie unter [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  In einer neuen Installation verfügen nur lokale Administratoren über ausreichende Berechtigungen zum Verwenden des Inhalts und der Einstellungen. Wenn Sie anderen Benutzern Berechtigungen erteilen möchten, muss ein lokaler Administrator Rollenzuweisungen erstellen, die den Zugriff auf den Berichtsserver ermöglichen. Die Anwendungsseiten und Aufgaben, auf die ein Benutzer anschließend Zugriff erhält, sind von den Rollenzuweisungen für den Benutzer abhängig. Weitere Informationen finden Sie unter [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41;](security/grant-user-access-to-a-report-server.md).  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48176940"
   
 #### <a name="to-start-report-manager-from-a-browser"></a>So starten Sie den Berichts-Manager aus einem Browser  
   
-1.  Open [!INCLUDE[msCoName](../includes/msconame-md.md)] InternetExplorer 7.0 oder höher.  
+1.  Öffnen Sie [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 7.0 oder neuer.  
   
 2.  Geben Sie die URL des Berichts-Managers in die Adressleiste des Webbrowsers ein.  
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - monitoring activity
 - activity monitoring
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8478a3aa7f58072f2de3b7f4916846da33796907
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a44434be6f3908ebf7837a80b188affe226d88f3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545334"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035161"
 ---
 # <a name="monitor-dqs-activities"></a>Überwachen der DQS-Aktivitäten
   In diesem Thema wird beschrieben, wie die folgenden Aktivitäten in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) zentral überwacht werden: Wissensermittlung, Domänenverwaltung, Abgleichsrichtlinie, Datenbereinigung, Datenabgleich und SSIS-Bereinigung.  
@@ -52,7 +52,7 @@ ms.locfileid: "52545334"
     |-----------------|-----------------|  
     |**ID**|Ein ganzzahliger Wert. Eindeutige Aktivitätsnummer, die das System für die Aktivitätsüberwachung generiert.|  
     |**Name**|Der Name der Wissensdatenbank oder des Data Quality-Projekts, die bzw. das für diese Aktivität verwendet wird.|  
-    |**Ist aktiv**|Gibt an, ob die Aktivität derzeit aktiv ist. Die folgenden Werte sind möglich:<br /><br /> **Aktive**: Aktivität wird gerade ausgeführt.<br /><br /> **Beendet**: Aktivität wurde beendet.<br /><br /> **Beendet**: Aktivität wurde beendet mit Bildschirm aktivitätsüberwachung vom DQS-Administrator oder die Aktivität wurde vom Benutzer abgebrochen, während der Ausführung im entsprechenden Funktionsbereich in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].|  
+    |**Ist aktiv**|Gibt an, ob die Aktivität derzeit aktiv ist. Die folgenden Werte sind möglich:<br /><br /> **Aktive**: Aktivität wird gerade ausgeführt.<br /><br /> **beendet**: Aktivität wurde beendet.<br /><br /> **Beendet**: Aktivität wurde beendet mit Bildschirm aktivitätsüberwachung vom DQS-Administrator oder die Aktivität wurde vom Benutzer abgebrochen, während der Ausführung im entsprechenden Funktionsbereich in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].|  
     |**Typ**|Gibt den Typ der Aktivität an. Folgenden werden Aktivitätstypen überwacht: **Wissensverwaltung**, **DQ-Projekt**, und **SSIS-Bereinigung**.|  
     |**Untertyp**|Gibt den jeweiligen Workflow an, der für einen Aktivitätstyp ausgeführt wird.<br /><br /> Ein **Wissensverwaltung** Aktivität verfügt über die folgenden Workflows oder Untertypen: **Wissensermittlung**, **Domänenverwaltung**, und **Abgleichsrichtlinie**.<br /><br /> Ein **DQ-Projekt** Aktivität verfügt über die folgenden Workflows oder Untertypen: **Bereinigung** und **übereinstimmende**.<br /><br /> Der Aktivitätstyp **SSIS-Bereinigung** kann nur den Workflow oder Untertyp **Bereinigung** aufweisen.|  
     |**Aktueller Status**|Zeigt den aktuellen Status einer Aktivität an. Der Aktivitätsstatus wird durch den zuletzt durchgeführten Berechnungsprozess bestimmt. Die folgenden Werte sind möglich:<br /><br /> **Ausführung**: Der Berechnungsprozess wird ausgeführt.<br /><br /> **Erfolgreich**: Bevor ein Berechnungsprozess ausgeführt wird, wird der Status auf gesetzt **erfolgreich**. Nachdem der Berechnungsprozess erfolgreich beendet wurde, wird der Status erneut auf **Erfolgreich**festgelegt.<br /><br /> **Fehler bei**: Im Berechnungsprozess ist ein Fehler aufgetreten.<br /><br /> **Beendet**: Der Berechnungsprozess wurde beendet.<br /><br /> <br /><br /> Hinweis: So wie der Ermittlungsprozess (im Rahmen der Wissensermittlungsaktivität) kann auch der Berechnungsprozess für eine Aktivität mehrmals ausgeführt werden. Aus diesem Grund kann sich der Status während der Lebensdauer einer Aktivität mehrere Male ändern.|  

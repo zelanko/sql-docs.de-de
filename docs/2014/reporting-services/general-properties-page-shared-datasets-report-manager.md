@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 10798e41-24c3-4e69-893b-7ee6af7fc958
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 24e303409568f028ff57cf189cad4f1022111e82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 72bd3d617fa14e785b29b9c89e3d53d7d5dd3da4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202730"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032751"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>Allgemeine Eigenschaften (Seite), Freigegebene Datasets (Berichts-Manager)
   Verwenden Sie die Seite Freigegebenes Dataset, um Eigenschaften für ein freigegebenes Datasetelement anzuzeigen und zu verwalten.  
@@ -36,7 +36,7 @@ ms.locfileid: "48202730"
   
 3.  Klicken Sie in der Dropdownliste auf **Verwalten**. Die Eigenschaftenseite Allgemein wird geöffnet.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name**  
  Geben Sie einen Namen für das freigegebene Dataset ein, der zum Identifizieren des Elements innerhalb der Ordnerhierarchie des Berichtsservers verwendet wird.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48202730"
   
 ## <a name="see-also"></a>Siehe auch  
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Inhalt der Seite &#40;Berichts-Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Inhalt &#40;Seite, Berichts-Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Berichts-Manager-F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
  [Zwischenspeichern von Optionen zur Cacheaktualisierung &#40;Berichts-Manager&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)   
  [Zwischenspeichern (Seite), freigegebene Datasets &#40;Berichts-Manager&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 23eed41b-283a-49df-a3aa-062dde8d6354
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5b0ae98d40a6f5e1e2c830c2d5aca4cc1c99e230
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 122fb28e82050fc134b86c2dc79559dec8d02478
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181650"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032422"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>Allgemein (Eigenschaftenseite, Ressourcen) (Berichts-Manager)
   Mithilfe der Seite Allgemeine Eigenschaften für Ressourcen können Sie eine Ressource umbenennen, löschen, verschieben oder ersetzen. Informationen zum Benutzer, der die Ressource hinzugefügt oder ihre Eigenschaften geändert hat, werden oben auf der Seite angezeigt.  
@@ -34,7 +34,7 @@ ms.locfileid: "48181650"
   
 3.  Klicken Sie im Dropdownmenü auf **Verwalten**. Dadurch wird die Seite Allgemeine Eigenschaften für die Ressource geöffnet.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name**  
  Geben Sie einen Namen für die Ressource an. Der Name muss mindestens ein alphanumerisches Zeichen enthalten. Er kann auch Leerzeichen und Sonderzeichen enthalten. Folgende Zeichen können nicht beim Angeben eines Namens verwendet werden: ; ? : \@ & = +, $ / * \< > | "oder / beim Angeben eines Namens.  
   

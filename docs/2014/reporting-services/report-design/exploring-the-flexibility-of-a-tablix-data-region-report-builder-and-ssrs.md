@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: fef19359-a618-4d21-a7e4-e391cdefd4eb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 673dcead751bf5db8da326de5cfe8e3aa18288a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a18d86d6e67eb88e9ce0d63298cab86ade9a8bb2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114340"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038071"
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>Untersuchen der Flexibilität eines Tablix-Datenbereichs (Berichts-Generator und SSRS)
   Wenn Sie einen Tabellen-, Matrix- oder Listendatenbereich über die Registerkarte Einfügen des Menübands hinzufügen, starten Sie mit einer Ausgangsvorlage für einen Tablix-Datenbereich. Diese Vorlage stellt jedoch keine Beschränkung für Sie dar. Sie können die Datenanzeige weiterentwickeln, indem Sie Tablix-Datenbereichsfunktionen wie Gruppen, Zeilen und Spalten hinzufügen oder entfernen.  
   
- Wenn Sie eine Zeilen- oder Spaltengruppe löschen, können Sie auch die Zeilen und Spalten löschen, die für die Anzeige von Gruppenwerten verwendet werden. Außerdem können Sie manuell Zeilen und Spalten hinzufügen oder entfernen. Um zu verstehen, wie Zeilen und Spalten zum Anzeigen von Detail-und Gruppendaten verwendet werden, finden Sie unter [Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md).  
+ Wenn Sie eine Zeilen- oder Spaltengruppe löschen, können Sie auch die Zeilen und Spalten löschen, die für die Anzeige von Gruppenwerten verwendet werden. Außerdem können Sie manuell Zeilen und Spalten hinzufügen oder entfernen. Weitere Informationen zum Anzeigen von Detail- und Gruppendaten in Zeilen und Spalten finden Sie unter [Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md).  
   
  Nachdem Sie die Struktur des Tablix-Datenbereichs geändert haben, können Sie Eigenschaften festlegen, mit denen Sie steuern können, wie der Datenbereich im Bericht gerendert wird. Sie können z. B. Spaltenheader am Anfang jeder Seite wiederholen oder einen Gruppenkopf für die Gruppe beibehalten. Weitere Informationen finden Sie unter [Steuern der Tablix-Datenbereichsanzeige auf einer Berichtsseite &#40;Berichts-Generator und SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
@@ -50,6 +50,6 @@ ms.locfileid: "48114340"
  [Listen (Berichts-Generator und SSRS)](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Tabellen (Berichts-Generator und SSRS)](tables-report-builder-and-ssrs.md)   
  [Matrizen (Berichts-Generator und SSRS)](create-a-matrix-report-builder-and-ssrs.md)   
- [Listen (Berichts-Generator und SSRS)](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
+ [Listen &#40;Berichts-Generator und SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

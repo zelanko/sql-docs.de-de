@@ -12,19 +12,19 @@ f1_keywords:
 - "10506"
 ms.assetid: 642a06f5-293f-48e0-97a6-1489dbefa719
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 205471b262ae041858db72c5db8d9c603eb716b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 883f39c6d7db59fd02aea53096b3502c722dca54
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072030"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026175"
 ---
 # <a name="map-viewport-properties-dialog-box-center-and-zoom"></a>Eigenschaften des Kartenviewports (Dialogfeld), Zentrieren und zoomen
   Wählen Sie **Zentrieren und zoomen** aus, um im Dialogfeld **Viewporteigenschaften der Karte** die Mittelpunktsicht und den Zoomfaktor für eine Karte festzulegen. Nachdem Sie eine Kartendatenquelle und die Begrenzungen der Karte angegeben haben, die Sie in den Bericht einschließen möchten, können Sie den Ansichtmittelpunkt und den Zoomfaktor angeben, um die Kartenanzeige weiter zu steuern. Die Optionen hängen von der Methode ab, die Sie verwenden, um Werte für Mittelpunkt und Zoom anzugeben. Klicken Sie auf die Schaltfläche **Ausdruck** (*fx*), um einen Ausdruck zu bearbeiten, der den Wert der Option festlegt.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Festlegen eines ansichtmittelpunktes und die Zoomstufe**  
  Wählen Sie diese Option aus, um benutzerdefinierte Werte für den Ansichtmittelpunkt und die Zoomstufe anzugeben.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48072030"
  Wählen Sie eine Option aus, um den Ansichtmittelpunkt und die Zoomstufe anzugeben.  
   
  **Ansichtsmittelpunkt (X) %**  
- Die horizontale Koordinate. Der Standardwert beträgt 50 %. Er legt fest, dass die Ansicht in der Mitte zwischen dem minimalen und dem maximalen horizontalen Wert zentriert wird.  
+ Die horizontale Koordinate. Der Standardwert beträgt 50 %. Er legt fest, dass die Ansicht in der Mitte zwischen dem minimalen und dem maximalen horizontalen Wert zentriert wird.  
   
  **Ansichtsmittelpunkt (Y) %**  
  Die vertikale Koordinate. Der Standardwert ist 50 %. Er legt fest, dass die Ansicht in der Mitte zwischen dem minimalen und dem maximalen vertikalen Wert zentriert wird.  

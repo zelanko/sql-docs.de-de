@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: 74edd1fd-ab00-46f7-9e29-7ba3f1a446c5
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d238284bb53e4ce6acc5d482ae66c0b21a760da6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 449f86b80b93055bb23fe4cd32ace10e15724dbc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373792"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038341"
 ---
 # <a name="lesson-1-create-windows-azure-storage-objects"></a>Lektion 1: Erstellen von Windows Azure-Speicherobjekten
   Bevor Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Sicherungen im Cloudspeicher erstellen, müssen Sie zunächst ein Speicherkonto und dann einen BLOB-Container erstellen. Lektion 1 führt Sie durch die Schritte zur Protokollierung im Windows Azure-Verwaltungsportal. Dabei erstellen Sie ein Speicherkonto und einen BLOB-Container.  
@@ -26,7 +25,7 @@ ms.locfileid: "53373792"
   
 1.  Melden Sie sich unter Ihrem Konto beim Windows Azure-Verwaltungsportal an. Wenn Sie ein Windows Azure-Konto keine [finden Sie auf Windows Azure-3-Monats-Testversion](https://go.microsoft.com/fwlink/?LinkId=271927).  
   
-     ![Windows Azure-Anmeldebildschirm](../../2014/tutorials/media/windowazurelogin-backuptocloud.gif "Anmeldebildschirm für Windows Azure")  
+     ![Windows Azure Login Screen](../../2014/tutorials/media/windowazurelogin-backuptocloud.gif "Windows Azure Login Screen")  
   
 2.  Verwenden Sie die Schritt-für-Schritt-Anweisungen, die detaillierte [hier](https://go.microsoft.com/fwlink/?LinkId=271926), um ein Speicherkonto zu erstellen.  
   

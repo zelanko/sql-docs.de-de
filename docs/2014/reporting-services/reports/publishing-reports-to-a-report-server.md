@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7a3efdc60e34555aeb0cf706c7f8ab219fd64d7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4f028a70d2f1d26f18f7940f89364c23dc5050b8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182570"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021582"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Veröffentlichen von Berichten auf einem Berichtsserver
   Nachdem Sie entworfen und einen Bericht getestet haben oder Reihe von Berichten, Sie die integrierten Bereitstellungsfunktionen in können [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] um die Berichte auf einem Berichtsserver veröffentlichen. Sie können einzelne Berichte oder ein Berichtsserverprojekt veröffentlichen. Die einfachste Möglichkeit zum Veröffentlichen mehrerer Berichte ist die Veröffentlichung eines Berichtsserverprojekts. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] verwendet den Begriff *bereitstellen*, anstatt den Begriff *veröffentlichen*. Die beiden Begriffe sind austauschbar.  
@@ -61,6 +61,6 @@ ms.locfileid: "48182570"
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaftsseiten für Projekt (Dialogfeld)](../tools/project-property-pages-dialog-box.md)   
  [Verwalten von Berichtsserverinhalten &#40;einheitlicher SSRS-Modus&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
- [Upgrade Reports (Aktualisieren von Berichten)](../install-windows/upgrade-reports.md)  
+ [Aktualisieren von Berichten](../install-windows/upgrade-reports.md)  
   
   

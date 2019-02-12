@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - query designers, Analysis Services
 ms.assetid: 7e288eee-2d37-485e-a6a0-dbba5e041e26
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 7cb1fad6ffa7fcb8dcf1330079b12aa77f06705d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 0c43e1d35b390a85a6e8951e182ce5408c7dd60c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362762"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017871"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface-report-builder"></a>Benutzeroberfläche des MDX-Abfrage-Designers für Analysis Services (Berichts-Generator)
   Berichts-Generator stellt einen grafischen Abfrage-Designer für das Erstellen von MDX-Abfragen (Multidimensional Expression) für eine [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenquelle bereit. Der grafische MDX-Abfrage-Designer verfügt über zwei Modi: Entwurfsmodus und Abfragemodus. Jeder Modus stellt einen Metadatenbereich bereit, in dem Sie Elemente aus den ausgewählten Cubes ziehen können, um eine MDX-Abfrage zu erstellen, die beim Verarbeiten des Berichts Daten abruft.  

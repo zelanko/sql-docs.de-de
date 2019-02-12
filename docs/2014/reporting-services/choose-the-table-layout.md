@@ -11,19 +11,19 @@ f1_keywords:
 - sql12.rtp.rptwizard.choosetablelayout.f1
 ms.assetid: 370079eb-4a13-42f6-8f90-8fb8adf4d55e
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 7bdf0dfcaefa63b611a86a6bb5a10d58045c6602
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 167abcad8787ff3bdd0591696dbd6b365037d174
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053730"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020791"
 ---
 # <a name="choose-the-table-layout"></a>Auswählen des Tabellenlayouts
   Verwenden Sie die Seite Tabellenlayout auswählen des Berichts-Assistenten, um das Layout der Tabelle im Bericht auszuwählen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Abgestuft**  
  Erstellen Sie einen Bericht, der eine Spalte für jedes Feld enthält, wobei Gruppenfelder in Kopfzeilen von Gruppen auf der linken Seite der Detailfeldspalten angezeigt werden. Dieser Tabellentyp enthält keine Gruppenfußzeilen.  
   

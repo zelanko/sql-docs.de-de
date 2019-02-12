@@ -12,19 +12,19 @@ f1_keywords:
 - "10140"
 ms.assetid: e1367556-736e-4a6b-b9e7-10432a3e50b5
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b2300dc39ec07b25fe79586846929de3954b5631
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 5ef58bedad50c21b17c6ea5ace674480b58a5c2c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128402"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032902"
 ---
 # <a name="dataset-properties-dialog-box-fields"></a>Dataseteigenschaften (Dialogfeld), Felder
   Wählen Sie im Dialogfeld **Dataseteigenschaften** die Option **Felder** aus, um die Feldauflistung für das Berichtsdataset zu ändern. Die Felderliste wird automatisch aufgefüllt, Sie können jedoch mithilfe der Option **Felder** Abfragefelder und berechnete Felder hinzufügen, bearbeiten und löschen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Hinzufügen**  
  Fügt dem Dataset ein neues Abfragefeld oder berechnetes Feld hinzu.  
   

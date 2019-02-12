@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: eac372e9-d2a1-48a8-bbe5-09d101df16ea
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8d19f339b8cb8955ab33f73ea164f8bbfb2e7fce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 65fe3e4979e620b3f49af5def2266c84e77cc616
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205172"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017882"
 ---
 # <a name="caching-page-shared-datasets-report-manager"></a>Zwischenspeichern (Seite), Freigegebene Datasets (Berichts-Manager)
   Verwenden Sie die Eigenschaftenseite Zwischenspeichern, um die Cacheoptionen für ein freigegebenes Dataset festzulegen.  
@@ -37,7 +37,7 @@ ms.locfileid: "48205172"
   
 4.  Klicken Sie auf die Registerkarte **Zwischenspeichern** .  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Freigegebenes Dataset Zwischenspeichern**  
  Speichert eine temporäre Kopie der Daten in einem Cache, sobald ein Benutzer erstmalig einen Bericht öffnet, der das freigegebene Dataset verwendet. Nachfolgende Benutzer, die den Bericht innerhalb des Zeitraums der Zwischenspeicherung ausführen, erhalten die zwischengespeicherte Kopie der Daten. Die Zwischenspeicherung erhöht in der Regel die Leistung, da die Daten aus dem Cache zurückgegeben werden und die Datasetabfrage nicht erneut ausgeführt werden muss.  
   

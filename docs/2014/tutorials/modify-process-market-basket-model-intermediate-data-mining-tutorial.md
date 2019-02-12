@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b6019413-aebd-4ff7-831a-644572ad88b1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9c99945ad1e1d8c5027f7dfc63dcb725b0f0dac7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4987e3497b7d52ff11f8f52bc403105340f7f508
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204380"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035411"
 ---
 # <a name="modifying-and-processing-the-market-basket-model-intermediate-data-mining-tutorial"></a>Ändern und Verarbeiten des Market Basket-Modells (Data Mining-Lernprogramm für Fortgeschrittene)
-  Bevor Sie das von Ihnen erstellte Association-Miningmodell verarbeiten, müssen Sie die Standardwerte von zwei der Parameter ändern: *Support* und *Probability*.  
+  Bevor Sie das Association-Miningmodell, das Sie erstellt haben verarbeiten, müssen Sie die Standardwerte von zwei der Parameter ändern: *Unterstützung* und *Wahrscheinlichkeit*.  
   
 -   *Support* definiert den Prozentsatz von Fällen, in denen eine Regel vorhanden sein muss, um als gültig betrachtet zu werden. Geben Sie an, dass bei mindestens 1 Prozent der Fälle eine Regel vorhanden sein muss.  
   
@@ -45,7 +44,7 @@ ms.locfileid: "48204380"
   
 ### <a name="to-process-the-mining-model"></a>So wird das Miningmodell verarbeitet  
   
-1.  Auf der **Miningmodell** Menü [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Option **Miningstruktur verarbeiten und alle Modelle.**  
+1.  Klicken Sie im Menü **Miningmodell** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]auf **Miningstruktur und alle Modelle verarbeiten**.  
   
 2.  Klicken Sie in der Meldung mit der Frage, ob Sie das Projekt erstellen und bereitstellen möchten, auf **Ja**.  
   
@@ -63,6 +62,6 @@ ms.locfileid: "48204380"
  [Durchsuchen der Market Basket-Modellen &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/exploring-the-market-basket-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Anforderungen und Überlegungen zur Verarbeitung &#40;Datamining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Anforderungen und Überlegungen zur Verarbeitung &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

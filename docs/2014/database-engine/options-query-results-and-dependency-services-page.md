@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.DependencyServicesGeneral
 ms.assetid: dd7f6c31-7d7f-4972-854a-1419a2826dca
-author: mashamsft
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8f587ee792809f9612ca9fca1264794e843172a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c5c7afe44889dd380e9048044a34a94410213f8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118620"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035201"
 ---
 # <a name="options-query-results-and-dependency-services-page"></a>Optionen (Abfrageergebnisse und Seite „Abhängigkeitsdienste“)
   Geben Sie auf dieser Seite den Server an, mit dem eine Verbindung für Abhängigkeitsdienste hergestellt werden soll. Mithilfe von Abhängigkeitsdiensten können Sie Informationen zu Abhängigkeiten zwischen [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Objekten und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Objekten extrahieren, die auf anderen Servern gespeichert sind. Sie objektabhängigkeiten anzeigen, indem die **Objektabhängigkeiten** im Dialogfeld [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
@@ -37,7 +36,7 @@ ms.locfileid: "48118620"
   
 ##  <a name="options"></a> Konfigurieren der Optionen  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Dependency Services-server**  
  Geben Sie den Server an, auf dem die Abhängigkeitsdienste installiert sind.  
   
@@ -53,6 +52,4 @@ ms.locfileid: "48118620"
  Geben Sie ein Kennwort an, wenn Sie die SQL Server-Authentifizierung verwenden.  
   
  **Testen**  
- Klicken Sie auf die Option, um die Verbindung zu überprüfen.  
-  
-  
+ Klicken Sie auf die Option, um die Verbindung zu überprüfen.

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4de53c3c-c6fc-49ce-b692-3609fc0b3ec5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7bb8794920bc4e6eec0db9917c6c6f656b8333ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 827221a60598a6a9f4179a86783c05512072f5b0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159770"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026501"
 ---
 # <a name="add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs"></a>Hinzufügen oder Löschen einer Gruppe in einem Datenbereich (Berichts-Generator und SSRS)
   Fügen Sie einem Datenbereich eine Gruppe hinzu, wenn Sie Daten nach einem spezifischen Wert oder einer Reihe von Ausdrücken zu Anzeige- und Berechnungszwecken organisieren möchten. Eine Gruppe verfügt über einen Namen und einen Ausdruck, der angibt, welche Daten aus einem Dataset zur Gruppe gehören. Weitere Informationen zu Gruppen finden Sie unter [Grundlegendes zu Gruppen &#40;Berichts-Generator und SSRS&#41;](understanding-groups-report-builder-and-ssrs.md).  
@@ -25,7 +25,7 @@ ms.locfileid: "48159770"
   
  Klicken Sie in einem Diagrammdatenbereich in das Diagramm, um die Ablagezonen anzuzeigen. Erstellen Sie Gruppen, indem Sie Datasetfelder in die Ablagezonen für Kategorien und Reihen ziehen. Wenn Sie geschachtelte Gruppen hinzufügen möchten, fügen Sie der Ablagezone mehrere Felder hinzu.  
   
- In einem Messgerät sind standardmäßig keine Gruppen definiert. Das Standardverhalten des Messgeräts besteht darin, dass alle Werte im angegebenen Feld zu einem Wert aggregiert werden, der auf dem Messgerät angezeigt wird. Weitere Informationen finden Sie unter [Gauges &#40;Report Builder and SSRS&#41;](gauges-report-builder-and-ssrs.md).  
+ In einem Messgerät sind standardmäßig keine Gruppen definiert. Das Standardverhalten des Messgeräts besteht darin, dass alle Werte im angegebenen Feld zu einem Wert aggregiert werden, der auf dem Messgerät angezeigt wird. Weitere Informationen finden Sie unter [Messgeräte &#40;Berichts-Generator und SSRS&#41;](gauges-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

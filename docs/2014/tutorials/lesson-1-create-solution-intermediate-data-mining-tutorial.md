@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], tutorials
@@ -13,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: d8e3f89f-091c-434e-8f67-639f073edcdf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 970439430e0ddd4fa3759365dad1b96a32562c9b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3bb2f1dcabe17bb2c3e7258653602ac43615c706
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079080"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035801"
 ---
-# <a name="lesson-1-creating-the-intermediate-data-mining-solution-intermediate-data-mining-tutorial"></a>Lektion 1: Erstellen der Data Mining-Lösung für Fortgeschrittene (Data Mining-Lernprogramm für Fortgeschrittene)
-  Im Basic Data Mining-Tutorial: Erstellen einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Projekt mit einer einfachen Datamining-Lösung auf Basis der neuen [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] Datenbank.  
+# <a name="lesson-1-creating-the-intermediate-data-mining-solution-intermediate-data-mining-tutorial"></a>Lektion 1: Erstellen der mittleres Datamining-Lösung (mittleres Datamining-Lernprogramm)
+  Im Lernprogramm zu Data Mining-Grundlagen haben Sie ein [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt mit einer einfachen Data Mining-Lösung auf Basis der neuen [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] -Datenbank erstellt.  
   
- In diesem Tutorial erstellen Sie eine Separate [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Projekt, indem [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Erstellen Sie eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] die verwendete Datenquelle [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)], zur Unterstützung der Szenarien und Modelltypen dieser Datenquelle mehrere neue Datenquellensichten hinzu.  
+ Für dieses Lernprogramm erstellen Sie mit [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ein separates [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]-Projekt. Zur Unterstützung der Szenarien und Modelltypen erstellen Sie eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenquelle, die [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]verwendet, und fügen dieser Datenquelle mehrere neue Datenquellensichten hinzu.  
   
  Diese Lektion enthält die folgende Aufgabe:  
   
@@ -34,7 +33,7 @@ ms.locfileid: "48079080"
  [Lektion 2: Erstellen eines Planungserstellungsszenarios &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
 ## <a name="all-lessons"></a>Alle Lektionen  
- Lektion 1: Erstellen der Data Mining-Lösung für Fortgeschrittene  
+ Lektion 1: Erstellen der mittleres Datamining-Lösung  
   
  [Lektion 2: Erstellen eines Planungserstellungsszenarios &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
@@ -42,10 +41,10 @@ ms.locfileid: "48079080"
   
  [Lektion 4: Erstellen eines Sequenzclusterszenarios &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
   
- [Lektion 5: Erstellen von neuronalen Netzwerk- und logistischen Regressionsmodellen &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Lesson 5: Erstellen von neuronalen Netzwerk- und logistischen Regressionsmodellen &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Lernprogramm zu Datamining-Grundlagen](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [Erstellen und Abfragen von Datamining-Modellen mit DMX: Lernprogramme &#40;Analysis Services – Datamining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+ [Lernprogramm zu Data Mining-Grundlagen](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [Das Erstellen und Abfragen von Datamining-Modellen mit DMX: Lernprogramme &#40;Analysis Services – Datamining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
   

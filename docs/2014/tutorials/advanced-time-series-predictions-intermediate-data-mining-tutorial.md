@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b614ebdb-07ca-44af-a0ff-893364bd4b71
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6a45d0bf0878b472e4979c00a5a38e8b01974a22
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 3db82b977725bdcb615ec67bd66e530b38f385c5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544327"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032801"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>Erweiterte Zeitreihenvorhersagen (Data Mining-Lernprogramm für Fortgeschrittene)
   Bei der Untersuchung des Prognosemodells wurde gezeigt, dass die Verkäufe in den meisten Regionen einem ähnlichen Muster folgen. Einige Regionen und Modelle wie das Modell M200 im Pazifischen Raum weisen jedoch deutlich abweichende Trends auf. Dies ist wenig überraschend, da bekanntermaßen häufig regionale Unterschiede auftreten und durch zahlreiche Faktoren verursacht werden können, einschließlich Marketingaktionen, fehlerhafter Berichterstellung sowie politischer Faktoren.  

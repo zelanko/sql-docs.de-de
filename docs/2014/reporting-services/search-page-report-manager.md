@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 51ffdc07-e1b9-4ed7-acb3-dd98d7cce273
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f848f0f2f168304d5ceb9d3be92ed793b4579fe7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 51f062efce64d7e8f29e156c51b2972624f46d5e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206130"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037353"
 ---
 # <a name="search-page-report-manager"></a>Suchen (Seite) (Berichts-Manager)
   Mithilfe der Seite Suchergebnisse können Sie die Ergebnisse eines Suchvorgangs für einen Bericht, einen verknüpften Bericht, ein Berichtsmodell, eine freigegebene Datenquelle, einen Ordner oder eine Ressource anzeigen. Suchergebnisse sind in alphabetischer Reihenfolge aufgeführt. Sie können die Ergebnisse nach Typ, Name oder Beschreibung sortieren.  
@@ -34,7 +34,7 @@ ms.locfileid: "48206130"
   
 2.  Geben Sie oben auf der Seite im Feld **Suchen** die Suchkriterien ein. Drücken Sie dann die EINGABETASTE, oder klicken Sie auf den Suchpfeil.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Delete**  
  Klicken Sie auf diese Schaltfläche, um ein Element aus einer Berichtsserver-Datenbank zu löschen.  
   

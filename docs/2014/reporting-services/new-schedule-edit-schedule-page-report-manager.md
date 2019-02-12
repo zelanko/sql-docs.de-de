@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 52a4d250-e185-4116-a29c-d809940a00fb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7c69e1d2021e4c92dc87bd866ec851d0a3349fe1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 97af25216bd0f1e30531fcb43e182672cd299ac6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139460"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034546"
 ---
-# <a name="new-schedule-edit-schedule-page-report-manager"></a>Neuen Zeitplan: Bearbeiten der Zeitplanseite (Berichts-Manager)
+# <a name="new-schedule-edit-schedule-page-report-manager"></a>Neuen Zeitplan: Bearbeiten Sie die Zeitplanseite (Berichts-Manager)
   Verwenden Sie die Seite Neuer Zeitplan oder Zeitplan bearbeiten zum Erstellen eines Zeitplans für einen Bericht. Zeitpläne werden im Zusammenhang mit Abonnements, zum Aktualisieren zwischengespeicherter Berichte und zum Erstellen von Momentaufnahmen als eigenständige Elemente oder im Berichtsverlauf verwendet.  
   
 > [!NOTE]  
@@ -73,13 +73,13 @@ ms.locfileid: "48139460"
   
 5.  Klicken Sie unter **Optionen für die Abonnementverarbeitung**auf **Neuer Zeitplan**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Details zum Zeitplan**  
  Wählen Sie Optionen aus, um den Zeitpunkt und die Häufigkeit der Berichtsausführung zu bestimmen. Die Optionen für die Häufigkeit sind überlagernd. Die erste Gruppe von Optionen gibt eine Kategorie der Häufigkeit an (Stunde, Tag, Woche usw.). Die zweite Gruppe von Optionen, die angezeigt wird, basiert auf der ersten Auswahl.  
   
 -   Durch**Stunde** definieren Sie einen Zeitplan mit stündlicher Ausführung. Im Abschnitt **Anfangs- und Enddatum** können Sie den Tag angeben, an dem der Zeitplan ausgeführt werden soll.  
   
--   Durch**Tag** definieren Sie einen Zeitplan, der an den von Ihnen angegebenen Tagen zu einer bestimmten Uhrzeit (Stunde und Minute) ausgeführt wird. Auf folgende Weise die Tage anzugeben: alle \< *Tag*>, an jedem Arbeitstag und alle \< *Anzahl*> Tag. Wenn eine Option ausgewählt ist, stehen die anderen nicht zur Verfügung, auch wenn es so aussieht, als seien die anderen Tage ebenfalls ausgewählt.  
+-   Durch**Tag** definieren Sie einen Zeitplan, der an den von Ihnen angegebenen Tagen zu einer bestimmten Uhrzeit (Stunde und Minute) ausgeführt wird. Sie können Tage auf folgende Weise angeben: Jede \< *Tag*>, an jedem Arbeitstag und alle \< *Anzahl*> Tag. Wenn eine Option ausgewählt ist, stehen die anderen nicht zur Verfügung, auch wenn es so aussieht, als seien die anderen Tage ebenfalls ausgewählt.  
   
 -   Durch**Woche** definieren Sie einen Zeitplan, der zu der von Ihnen angegebenen Uhrzeit (Stunde und Minute) wöchentlich ausgeführt wird. Der Zeitabstand kann vollständige Wochen betragen (z. B. alle zwei Wochen) oder Tage innerhalb einer Woche.  
   

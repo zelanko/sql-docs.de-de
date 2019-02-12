@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 18b5d73d3ec4a6bc77a249d66af9b6d22c4e6be1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 47a2cc499c9361b8d68be107cd874bebdfe74861
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107100"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038111"
 ---
 # <a name="role-definitions"></a>Rollendefinitionen
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ist eine *Rollendefinition*** eine benannte Auflistung von Aufgaben, die die auf einem Berichtsserver verfügbaren Vorgänge definieren. Rollendefinitionen stellen die Regeln bereit, mit denen der Berichtsserver die Sicherheit erzwingt. Wenn ein Benutzer versucht, eine Aufgabe auszuführen, z. B. das Veröffentlichen eines Berichts in einem Ordner, überprüft der Berichtsserver die Rollenzuweisung des Benutzers, um zu bestimmen, ob die Aufgabe in der Rollendefinition enthalten ist. Falls die Aufgabe in der Rollendefinition enthalten ist, wird die Anforderung gesendet.  
@@ -39,14 +39,14 @@ ms.locfileid: "48107100"
   
 -   Systemadministrator und Systembenutzer sind Rollendefinitionen auf Systemebene, die Sie zum Autorisieren des Zugriffs auf Sitevorgänge verwenden können.  
   
- Weitere Informationen finden Sie unter [vordefinierte Rollen](role-definitions-predefined-roles.md).  
+ Weitere Informationen finden Sie unter [Vordefinierte Rollen](role-definitions-predefined-roles.md).  
   
 ## <a name="creating-a-role-definition"></a>Erstellen einer Rollendefinition  
  Um eine Rolle zu erstellen, geben Sie in Management Studio einen Namen und in ihr integrierte Aufgaben an. Sie müssen separate Rollendefinition für Element- und Systemaufgaben erstellen. Rollen können Aufgaben auf Element- oder auf Systemebene enthalten, aber keine Kombination aus beidem. Beim Erstellen einer Rolledefinition muss ein Name angegeben und eine Gruppe von Aufgaben für die Definition ausgewählt werden. Zum Erstellen einer Rollendefinition benötigen Sie die entsprechende Berechtigung. Diese Berechtigungen werden mit der Aufgabe "Die Sicherheit für einzelne Elemente festlegen" gewährt. Standardmäßig können Administratoren und Benutzer, die der vordefinierten **Inhalts-Manager** -Rolle zugewiesen sind, diese Aufgabe ausführen.  
   
- Für eine Rolle ist ein eindeutiger Name erforderlich. Eine gültige Rollendefinition muss mindestens eine Aufgabe enthalten. Weitere Informationen finden Sie unter [Aufgaben und Berechtigungen](tasks-and-permissions.md).  
+ Für eine Rolle ist ein eindeutiger Name erforderlich. Eine gültige Rollendefinition muss mindestens eine Aufgabe enthalten. Weitere Informationen finden Sie unter [Tasks and Permissions](tasks-and-permissions.md).  
   
- Verwenden Sie zum Erstellen einer Rollendefinition [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Weitere Informationen finden Sie unter [erstellen, löschen oder Ändern einer Rolle &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md).  
+ Verwenden Sie zum Erstellen einer Rollendefinition [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Weitere Informationen finden Sie unter [Erstellen, Löschen oder Ändern einer Rolle &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md).  
   
  Nachdem Sie eine Rollendefinition erstellt haben, können Sie diese verwenden, indem Sie sie in einer Rollenzuweisung auswählen. Weitere Informationen finden Sie unter [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41;](grant-user-access-to-a-report-server.md).  
   
@@ -56,11 +56,11 @@ ms.locfileid: "48107100"
  Sie können eine nicht mehr verwendete Rollendefinition löschen. Es ist nicht möglich, die Rollendefinition, die für die Funktion Meine Berichte ausgewählt ist, zu löschen, solange diese Funktion aktiviert ist. Zum Löschen der für Meine Berichte verwendeten Rollendefinition müssen Sie diese Funktion zunächst deaktivieren oder eine andere Rollendefinition dafür auswählen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Aufgaben und Berechtigungen](tasks-and-permissions.md)   
+ [Tasks and Permissions](tasks-and-permissions.md)   
  [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](granting-permissions-on-a-native-mode-report-server.md)   
  [Erstellen, Löschen oder Ändern einer Rolle &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)   
  [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41;](grant-user-access-to-a-report-server.md)   
  [Ändern oder Löschen einer Rollenzuweisung (Berichts-Manager)](role-assignments-modify-or-delete.md)   
- [Festlegen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website &#40;integrierten Reporting Services im SharePoint-Modus&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
+ [Festlegen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website &#40;Reporting Services im integrierten SharePoint-Modus&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
   

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: ed079327-0bb0-4245-adb5-e46a90cf3586
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 469f6b465fa9b29b80b3ee5ccc408b7c6fbd38c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8b2c40220cceb6c0edb92ed0649c2337bd0850b0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061700"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036861"
 ---
 # <a name="msreportserverinstance-methods"></a>MSReportServer_Instance-Methoden
   Die MSReportServer_Instance-Klasse stellt grundlegende Informationen bereit, die ein Client benötigt, um eine Verbindung mit einem installierten Berichtsserver herzustellen.  
@@ -33,9 +33,9 @@ ms.locfileid: "48061700"
   
 |||  
 |-|-|  
-|[GetReportServerUrls-Methode &#40;WMI: MSReportServer_Instance&#41;](msreportserver-instance-methods-getreportserverurls.md)|Listet die URLs auf, über die Benutzer auf den Berichtsserver und den Berichts-Manager zugreifen können|  
+|[GetReportServerUrls Method &#40;WMI MSReportServer_Instance&#41;](msreportserver-instance-methods-getreportserverurls.md)|Listet die URLs auf, über die Benutzer auf den Berichtsserver und den Berichts-Manager zugreifen können|  
   
 ## <a name="see-also"></a>Siehe auch  
- [MSReportServer_Instance Members (MSReportServer_Instance-Member)](msreportserver-instance-members.md)  
+ [MSReportServer_Instance-Member](msreportserver-instance-members.md)  
   
   

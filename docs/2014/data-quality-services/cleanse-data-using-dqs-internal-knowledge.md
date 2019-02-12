@@ -12,15 +12,15 @@ f1_keywords:
 - sql12.dqs.dqproject.correction.f1
 - sql12.dqs.dqproject.interactivecleansing.f1
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: ad4feee8fe6a47b82196f6684a9c56b663a42c71
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: aa900fc136729eace74af6ceaf8d6f26b7900f99
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392273"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038331"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Bereinigen von Daten mit (internem) DQS-Wissen
   In diesem Thema wird beschrieben, wie die Daten mithilfe eines Data Quality-Projekts in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) gereinigt werden. Die Datenbereinigung wird mithilfe einer Wissensdatenbank, die in DQS gegen ein hochwertiges Dataset erstellt wurde, für die Quelldaten ausgeführt. Weitere Informationen finden Sie unter [Aufbau einer Wissensdatenbank](../../2014/data-quality-services/building-a-knowledge-base.md).  
@@ -157,15 +157,15 @@ ms.locfileid: "52392273"
   
     -   **Informationen zu Daten und Bereinigung**: Klicken Sie auf das Optionsfeld, um die folgenden Daten für jede Domäne zu exportieren:  
   
-        -   **\<Domäne > _quelle**: Der ursprüngliche Wert in der Domäne.  
+        -   **\<Domain>_Source**: Der ursprüngliche Wert in der Domäne.  
   
-        -   **\<Domäne > _ausgabe**: Die bereinigten Werte in der Domäne.  
+        -   **\<Domain>_Output**: Die bereinigten Werte in der Domäne.  
   
-        -   **\<Domäne > _ursache**: Die für die Korrektur des Werts angegebene Ursache.  
+        -   **\<Domain>_Reason**: Die für die Korrektur des Werts angegebene Ursache.  
   
-        -   **\<Domäne > _vertrauen**: Der Vertrauensgrad für alle Begriffe, die korrigiert wurden. Der angezeigte Wert ist ein Dezimalwert, der dem Prozentwert entspricht. Ein Vertrauensgrad von 95 % wird z. B. als .9500000 angezeigt.  
+        -   **\<Domain>_Confidence**: Der Vertrauensgrad für alle Begriffe, die korrigiert wurden. Der angezeigte Wert ist ein Dezimalwert, der dem Prozentwert entspricht. Ein Vertrauensgrad von 95 % wird z. B. als .9500000 angezeigt.  
   
-        -   **\<Domäne > _Status**: Der Status des Domänenwerts nach der DatenBereinigung. Beispiele sind **Vorgeschlagen**, **Neu**, **Ungültig**, **Korrigiert**oder **Richtig**.  
+        -   **\<Domain>_Status**: Der Status des Domänenwerts nach der DatenBereinigung. Beispiele sind **Vorgeschlagen**, **Neu**, **Ungültig**, **Korrigiert**oder **Richtig**.  
   
         -   **Datensatzstatus**: Abgesehen von einem Statusfeld für jede zugeordnete Domäne **(\<Domänenname > _Status**), wird die **Datensatzstatus** Feld wird der Status eines Datensatzes angezeigt. Wenn einer der Statuswerte der Domäne im Datensatz *Neu* oder *Korrigiert* lautet, wird der **Datensatzstatus** auf *Richtig* festgelegt. Wenn einer der Statuswerte der Domäne im Datensatz *Vorgeschlagen*, *Ungültig* oder *Korrigiert* lautet, wird **Datensatzstatus** auf den entsprechenden Wert festgelegt. Wenn beispielsweise einer der Statuswerte der Domäne im Datensatz *Vorgeschlagen* lautet, wird der **Datensatzstatus** auf *Vorgeschlagen* festgelegt.  
   
@@ -201,7 +201,7 @@ ms.locfileid: "52392273"
   
 -   **Feld**: Name des Felds in den Quelldaten  
   
--   **Domäne**: Name der Domäne, die dem Feld zugeordnet ist.  
+-   **Domain**: Name der Domäne, die dem Feld zugeordnet ist.  
   
 -   **Korrigierte Werte**: Die Anzahl der Domänenwerte, die korrigiert wurden  
   

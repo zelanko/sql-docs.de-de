@@ -12,20 +12,20 @@ f1_keywords:
 ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c3d9abd6c84d6d6abe0d30eac06d113a81ebcd0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 26fbda6dacd20b3ec02061b41a7e1de2f3b2d1ff
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188670"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038271"
 ---
 # <a name="3d-bevel-and-other-effects-in-a-chart-report-builder-and-ssrs"></a>3D, Abschrägungen und andere Effekte in einem Diagramm (Berichts-Generator und SSRS)
   Dreidimensionale (3D-)Effekte können verwendet werden, um Tiefe zu vermitteln und dem Diagramm eine optische Wirkung zu verleihen. Wenn Sie beispielsweise in einem explodierten Kreisdiagramm ein bestimmtes Segment des Kreises hervorheben möchten, können Sie die Perspektive des Diagramms so drehen und ändern, dass den Benutzern dieses Segment zuerst ins Auge fällt. Wenn 3D-Effekte auf das Diagramm angewendet werden, werden der Farbverlauf und alle Schraffurstile deaktiviert.  
   
  Dreidimensionale Effekte können auf einzelne Diagramme angewendet werden. In einem Bericht können sowohl zwei- als auch dreidimensionale Diagramme angezeigt werden.  
   
- Für alle Diagrammtypen können Sie in einer Diagrammfläche des Dialogfelds **Diagrammflächeneigenschaften** dreidimensionale Effekte hinzufügen, indem Sie die Option **3D aktivieren**auswählen. Weitere Informationen finden Sie unter [Hinzufügen von 3D-Effekten zu einem Diagramm &#40;Berichts-Generator und SSRS&#41;](chart-effects-add-3d-effects-report-builder.md).  
+ Für alle Diagrammtypen können Sie in einer Diagrammfläche des Dialogfelds **Diagrammflächeneigenschaften** dreidimensionale Effekte hinzufügen, indem Sie die Option **3D aktivieren**auswählen. Weitere Informationen finden Sie unter [Hinzufügen von 3D-Effekten zu einem Diagramm &#40;Berichts-Generator und SSRS&#41;](chart-effects-add-3d-effects-report-builder.md)auswählen.  
   
  Eine andere Möglichkeit, Diagrammen visuelle Effekte hinzuzufügen, ist das Hinzufügen von Balken-, Säulen-, Ring- und Kreisdiagrammen Abschrägungen, Prägungen und Strukturarten. Weitere Informationen finden Sie unter [Hinzufügen einer Abschrägung, Prägung und Struktur zu einem Diagramm &#40;Berichts-Generator und SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
   
@@ -63,6 +63,6 @@ ms.locfileid: "48188670"
 ## <a name="see-also"></a>Siehe auch  
  [Formatieren von Achsenbezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Formatieren eines Diagramms &#40;Berichts-Generator und SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [Hinzufügen von 3D-Effekten zu einem Diagramm (Berichts-Generator und SSRS)](chart-effects-add-3d-effects-report-builder.md)  
+ [Hinzufügen von 3D-Effekten zu einem Diagramm &#40;Berichts-Generator und SSRS&#41;](chart-effects-add-3d-effects-report-builder.md)  
   
   

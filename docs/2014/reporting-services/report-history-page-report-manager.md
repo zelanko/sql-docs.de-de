@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4c64e58a-ed83-4e29-a422-9baaac2be4b8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0b5865ecbca2ea5577fccf0c28faeabf27b9573d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cb6d9de69656d40b3a5fd87c5353c6d0b8f0ef5f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053140"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033861"
 ---
 # <a name="report-history-page-report-manager"></a>Berichtsverlauf (Seite, Berichts-Manager)
   Mithilfe der Seite Berichtsverlauf können Sie die im Laufe der Zeit generierten und gespeicherten Berichtsmomentaufnahmen anzeigen. Abhängig von den für den Berichtsserver festgelegten Optionen enthält der Berichtsverlauf möglicherweise nur die neuesten Momentaufnahmen.  
@@ -41,7 +41,7 @@ ms.locfileid: "48053140"
   
 3.  Klicken Sie im Dropdownmenü auf **Berichtsverlauf anzeigen**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Delete**  
  Klicken Sie auf diese Schaltfläche, um eine oder mehrere Momentaufnahmen zu löschen. Bevor Sie auf **Löschen**klicken, aktivieren Sie das Kontrollkästchen neben den zu löschenden Momentaufnahmen.  
   

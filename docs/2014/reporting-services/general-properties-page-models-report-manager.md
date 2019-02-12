@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 7ad59850-8135-4c4d-95e9-6d705b6d77a8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3f3756fb68ba46b1ac7b34237753dbd57d0b6775
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bdc8abebbf713372caf31429082f9d3fda4cfc42
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146250"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018242"
 ---
 # <a name="general-properties-page-models-report-manager"></a>Allgemein (Eigenschaftenseite) (Modelle, Berichts-Manager)
   Auf der Seite Allgemeine Eigenschaften für Berichtsmodelle können Sie die Modelldefinitionsdatei (Dateinamenerweiterung SMDL) umbenennen, löschen, verschieben oder ersetzen. Einzelheiten zu dem Benutzer, der das Modell erstellt oder geändert hat, und zum Zeitpunkt der Änderungen sind oben auf der Seite aufgeführt.  
@@ -34,17 +34,17 @@ ms.locfileid: "48146250"
   
 3.  Klicken Sie im Dropdownmenü auf **Verwalten**. Dadurch wird die Seite Allgemeine Eigenschaften für das Modell geöffnet.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name**  
  Gibt den Namen des Modells an. Der Name muss mindestens ein alphanumerisches Zeichen enthalten. Er kann auch Leerzeichen und Sonderzeichen enthalten. Folgende Zeichen können beim Angeben eines Namens nicht verwendet werden:  
   
- ; ? : \@ & = +, $ / * \< > | " /  
+ ; ? : \@ & = + , $ / * \< > | " /  
   
  **Beschreibung**  
  Geben Sie eine Beschreibung des Modells ein. Diese Beschreibung wird für Benutzer, die über die Zugriffsberechtigung auf das Modell verfügen, auf der Seite Inhalt angezeigt.  
   
  **In Listenansicht ausblenden**  
- Aktivieren Sie dieses Kontrollkästchen, um das Element auszublenden, wenn der Ordner auf Listenansicht festgelegt ist. Die Listenansicht ist ein vom Berichts-Manager unterstützter Modus für die Anzeige von Ordnerinhalten. Legen Sie diese Option in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] definieren, wie dieses Element im Berichts-Manager angezeigt wird. Weitere Informationen zu den Ansichtsmodi im Berichts-Manager finden Sie unter [Inhalt (Seite) &#40;Berichts-Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md).  
+ Aktivieren Sie dieses Kontrollkästchen, um das Element auszublenden, wenn der Ordner auf Listenansicht festgelegt ist. Die Listenansicht ist ein vom Berichts-Manager unterstützter Modus für die Anzeige von Ordnerinhalten. Diese Option können Sie in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] festlegen, um zu definieren, wie das Element im Berichts-Manager angezeigt wird. Weitere Informationen zu den Ansichtsmodi im Berichts-Manager finden Sie unter [Inhalt (Seite) &#40;Berichts-Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md).  
   
  **Anwenden**  
  Klicken Sie auf diese Schaltfläche, um die Änderungen zu speichern.  
@@ -60,7 +60,7 @@ ms.locfileid: "48146250"
   
  Die von Ihnen geöffnete Kopie ist mit der ursprünglichen Modelldefinition identisch, die auf dem Berichtsserver veröffentlicht wurde. Alle Eigenschaften, die für das Modell nach dessen Veröffentlichung festgelegt wurden (wie Parameter und Datenquelleneigenschaften) sind nicht in der von Ihnen geöffneten Datei enthalten.  
   
- Sie können die Modelldefinition ändern und als neue Datei in einem freigegebenen Ordner speichern. Dann können Sie die Modelldefinition als neues Element auf den Berichtsserver hochladen. Änderungen, die Sie an der Modelldefinition vornehmen, während er im geöffnet ist [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (oder einer anderen Anwendung) nicht direkt auf dem Berichtsserver gespeichert sind. Sie müssen die Datei hochladen, um das geänderte Modell auf dem Berichtsserver zu veröffentlichen.  
+ Sie können die Modelldefinition ändern und als neue Datei in einem freigegebenen Ordner speichern. Dann können Sie die Modelldefinition als neues Element auf den Berichtsserver hochladen. Die Änderungen, die Sie an der Modelldefinition vornehmen, während sie in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (oder einer anderen Anwendung) geöffnet ist, werden nicht direkt auf dem Berichtsserver gespeichert. Sie müssen die Datei hochladen, um das geänderte Modell auf dem Berichtsserver zu veröffentlichen.  
   
  Wenn Sie das Berichtsmodell im Modell-Designer öffnen möchten, dann sollten Sie das Modell als SMDL-Datei speichern und diese Datei dann im Modell-Designer in ein Projekt einfügen.  
   

@@ -10,23 +10,23 @@ ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a4636dd2c129a6efad2bb9349082e5bcfe40fd9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a8600fd0e9da41644e99950a7d3df1d7d4764b99
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076725"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038451"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank (SSRS)
   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenverarbeitungserweiterung unterstützt erweiterte Feldeigenschaften. Erweiterte Feldeigenschaften sind zusätzlich zu den für die Datenquelle verfügbaren und von der Datenverarbeitungserweiterung unterstützten Feldeigenschaften `Value` und `IsMissing` vorhanden. Erweiterte Eigenschaften werden im Berichtsdatenbereich nicht als Teil der Feldauflistung für ein Berichtsdataset angezeigt. Sie können erweiterte feldeigenschaftswerte in den Bericht einschließen, indem Sie das Schreiben von Ausdrücken, die sie angeben, durch den Namen in der integrierten `Fields` Auflistung.  
   
- Erweiterte Eigenschaften umfassen vordefinierte Eigenschaften und benutzerdefinierte Eigenschaften. Vordefinierte Eigenschaften werden für mehrere Datenquellen, die bestimmten feldeigenschaftsnamen zugeordnet sind, und zugegriffen werden können, über die integrierte `Fields` Auflistung nach Namen. Benutzerdefinierte Eigenschaften werden spezifisch für jeden Datenanbieter definiert. Auf diese Eigenschaften kann über die integrierte `Fields`-Auflistung nur mithilfe von Syntax zugegriffen werden, in der der erweiterte Eigenschaftsname als Zeichenfolge verwendet wird.  
+ Erweiterte Eigenschaften umfassen vordefinierte Eigenschaften und benutzerdefinierte Eigenschaften. Vordefinierte Eigenschaften werden für mehrere Datenquellen gemeinsam verwendet und bestimmten Feldeigenschaftsnamen zugeordnet. Sie sind über die integrierte `Fields`-Auflistung nach Namen verfügbar. Benutzerdefinierte Eigenschaften werden spezifisch für jeden Datenanbieter definiert. Auf diese Eigenschaften kann über die integrierte `Fields`-Auflistung nur mithilfe von Syntax zugegriffen werden, in der der erweiterte Eigenschaftsname als Zeichenfolge verwendet wird.  
   
  Wenn Sie die Abfrage mit dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -MDX-Abfrage-Designer im grafischen Modus definieren, wird der MDX-Abfrage automatisch ein vordefinierter Satz von Zelleneigenschaften und Dimensionseigenschaften hinzugefügt. Sie können nur erweiterte Eigenschaften verwenden, die in der MDX-Abfrage im Bericht explizit aufgeführt werden. Je nach Bericht möchten Sie möglicherweise den MDX-Standardbefehlstext so ändern, dass weitere im Cube definierte Dimensions- oder benutzerdefinierte Eigenschaften aufgenommen werden. Weitere Informationen über erweiterte Felder in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenquellen, finden Sie unter [Erstellen und Verwenden von Eigenschaftswerten (MDX)](../../analysis-services/creating-and-using-property-values-mdx.md).  
   
 ## <a name="working-with-field-properties-in-a-report"></a>Arbeiten mit Feldeigenschaften in einem Bericht  
- Zu erweiterten Feldeigenschaften zählen vordefinierte Eigenschaften und datenanbieterspezifische Eigenschaften. Feldeigenschaften werden nicht in der Feldliste im **Berichtsdatenbereich** angezeigt, obwohl sie in der für ein Dataset erstellten Abfrage vorhanden sind. Deshalb können Sie keine Feldeigenschaften in Ihre Berichtsentwurfsoberfläche ziehen. Stattdessen ziehen Sie das Feld in den Bericht und ändern Sie dann die `Value` Eigenschaft des Felds, das die Eigenschaft, die Sie verwenden möchten. Wenn z.B. die Zelldaten aus einem Cube bereits formatiert sind, können Sie die FormattedValue-Feldeigenschaft mithilfe des folgenden Ausdrucks verwenden: `=Fields!FieldName.FormattedValue`.  
+ Zu erweiterten Feldeigenschaften zählen vordefinierte Eigenschaften und datenanbieterspezifische Eigenschaften. Feldeigenschaften werden nicht in der Feldliste im **Berichtsdatenbereich** angezeigt, obwohl sie in der für ein Dataset erstellten Abfrage vorhanden sind. Deshalb können Sie keine Feldeigenschaften in Ihre Berichtsentwurfsoberfläche ziehen. Stattdessen ziehen Sie das Feld in den Bericht und ändern anschließend die `Value`-Eigenschaft des Felds in die gewünschte Eigenschaft. Wenn z.B. die Zelldaten aus einem Cube bereits formatiert sind, können Sie die FormattedValue-Feldeigenschaft mithilfe des folgenden Ausdrucks verwenden: `=Fields!FieldName.FormattedValue`.  
   
  Verwenden Sie die folgende Syntax in einem Ausdruck, um auf eine erweiterte Eigenschaft zu verweisen, die nicht vordefiniert ist:  
   
@@ -141,7 +141,7 @@ CELL PROPERTIES
 |FONT_SIZE|(null)|  
 |FONT_FLAGS|(null)|  
   
- Wenn Sie mit dieser Abfrage ein Berichtsdataset erstellen und dieses an eine Tabelle binden, können Sie die VALUE-Standardeigenschaft für ein Feld anzeigen, z. B. `=Fields!Month_of_Year!Value`. Wenn Sie diesen Ausdruck als Sortierausdruck für die Tabelle festgelegt haben, werden die Ergebnisse auf die Tabelle alphabetisch nach Monat sortiert, da das Feld "Wert" verwendet eine `String` -Datentyp. Wenn die Tabelle in der Reihenfolge der Monate im Jahr sortiert werden soll, d. h. Januar zuerst und Dezember zuletzt, verwenden Sie den folgenden Ausdruck:  
+ Wenn Sie mit dieser Abfrage ein Berichtsdataset erstellen und dieses an eine Tabelle binden, können Sie die VALUE-Standardeigenschaft für ein Feld anzeigen, z. B. `=Fields!Month_of_Year!Value`. Wenn Sie diesen Ausdruck als Sortierausdruck für die Tabelle festgelegt haben, wird die Tabelle im Ergebnis alphabetisch nach Monat sortiert, da das Value-Feld den Datentyp `String` annimmt. Wenn die Tabelle in der Reihenfolge der Monate im Jahr sortiert werden soll, d. h. Januar zuerst und Dezember zuletzt, verwenden Sie den folgenden Ausdruck:  
   
 ```  
 =Fields!Month_of_Year("MEMBER_VALUE")  
@@ -151,7 +151,7 @@ CELL PROPERTIES
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
- [Integrierte Auflistungen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)   
+ [Integrierte Sammlungen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)   
  [Datasetfelder-Sammlung &#40;Berichts-Generator und SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
   
   

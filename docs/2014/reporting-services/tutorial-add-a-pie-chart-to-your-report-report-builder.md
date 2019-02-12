@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Lernprogramm: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,22 +10,22 @@ ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 12c567f91d526d3ac44485704f7c76fdfa345c11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 30966fc1ccc592539e543869aef03f555ca59b2d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202530"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020101"
 ---
-# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)
+# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)
   Kreis- und Ringdiagramme zeigen Daten als Teile des Ganzen an. Kreisdiagramme werden häufig verwendet, um Vergleiche zwischen Gruppen zu erstellen. Kreis- und Ringdiagramme Diagramme, zusammen mit Pyramiden-und Trichterdiagrammen, bilden eine Gruppe von Diagrammen als Formdiagrammen bezeichnet. Formdiagramme haben keine Achsen. Wenn ein numerisches Feld auf einem Formdiagramm abgelegt wird, berechnet das Diagramm den prozentualen Anteil jedes einzelnen Werts der Gesamtsumme.  
   
  Wenn in einem Kreisdiagramm zu viele Datenpunkte vorhanden sind, können die Datenpunktbezeichnungen zu überfüllt sein, um sie zu lesen. In diesem Fall sollten Sie die Verwendung eines Liniendiagramms erwägen. Verwenden Sie Kreisdiagramme möglichst nur, nachdem Sie die Daten bereits zu einer kleineren Anzahl von Datenpunkten aggregiert haben.  
   
  Die folgende Abbildung zeigt das Kreisdiagramm, das Sie erstellen.  
   
- ![Rs_TutorialPieChartConcave](../../2014/tutorials/media/rs-tutorialpiechartconcave.gif "Rs_TutorialPieChartConcave")  
+ ![rs_TutorialPieChartConcave](../../2014/tutorials/media/rs-tutorialpiechartconcave.gif "rs_TutorialPieChartConcave")  
   
 ##  <a name="BackToTop"></a> Lernziele  
  In diesem Tutorial lernen Sie Folgendes:  
@@ -45,7 +45,7 @@ ms.locfileid: "48202530"
 7.  [Speichern des Berichts](#Save)  
   
 > [!NOTE]  
->  In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst. Im ersten Tutorial dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, Hinzufügen einer Datenquelle und Hinzufügen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst. Schrittweise Anweisungen zum Navigieren zu einem Berichtsserver Hinzufügen einer Datenquelle, und fügen Sie ein Dataset, finden Sie im erste Lernprogramm dieser Reihe: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Ungefähre Dauer dieses Lernprogramms: 10 Minuten  
   
@@ -195,7 +195,7 @@ ms.locfileid: "48202530"
   
  Die folgende Abbildung zeigt das Kreisdiagramm mit weichen Kanten.  
   
- ![Rs_TutorialPieChartSoftEdge](../../2014/tutorials/media/rs-tutorialpiechartsoftedge.gif "Rs_TutorialPieChartSoftEdge")  
+ ![rs_TutorialPieChartSoftEdge](../../2014/tutorials/media/rs-tutorialpiechartsoftedge.gif "rs_TutorialPieChartSoftEdge")  
   
 ##  <a name="Title"></a> 6. Hinzufügen eines Berichtstitels  
   

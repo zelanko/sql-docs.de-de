@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 55f2863f-1ac1-4519-b512-e7f11c0ea5ea
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6f66f21b5c866688bd5c348f26788f4a869aca88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c9192e0845a5a6df9c7b848a3f91368dd15cfc60
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151950"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025061"
 ---
 # <a name="databaselogonaccount-property-wmi-msreportserverconfigurationsetting"></a>DatabaseLogonAccount-Eigenschaft (WMI: MSReportServer_ConfigurationSetting)
   Gibt das Anmeldekonto an, mit dem der Berichtsserver eine Verbindung mit der Berichtsserver-Datenbank herstellt. Schreibgeschützt.  
@@ -46,7 +46,7 @@ public string DatabaseLogonAccount;
  [MSReportServer_ConfigurationSetting Class (MSReportServer_ConfigurationSetting-Klasse)](msreportserver-configurationsetting-class.md)  
   
 ## <a name="remarks"></a>Hinweise  
- Gültige Werte für diese Eigenschaft variiert abhängig vom Wert der [DatabaseLogonType](configurationsetting-property-databaselogontype.md) Eigenschaft.  
+ Gültige Werte für diese Eigenschaft hängen vom Wert der [DatabaseLogonType](configurationsetting-property-databaselogontype.md) -Eigenschaft ab.  
   
  Diese Eigenschaft wird ignoriert, wenn die [DatabaseLogonType](configurationsetting-property-databaselogontype.md) -Eigenschaftensatz auf `2 (Service)`.  
   
@@ -54,6 +54,6 @@ public string DatabaseLogonAccount;
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](msreportserver-configurationsetting-members.md)  
+ [MSReportServer_ConfigurationSetting-Member](msreportserver-configurationsetting-members.md)  
   
   

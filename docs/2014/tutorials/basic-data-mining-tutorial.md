@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [Analysis Services], tutorials
@@ -14,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 6602edb6-d160-43fb-83c8-9df5dddfeb9c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 12581756e6ffa7d77ba7dc3339c3f38c96962d4e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: d434df95a26485d4d7795d3ab960b8d2457b8ff6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372906"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033681"
 ---
 # <a name="basic-data-mining-tutorial"></a>Lernprogramm zu Data Mining-Grundlagen
   Willkommen beim [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Lernprogramm zu Data Mining-Grundlagen. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Stellt eine integrierte Umgebung für Datamining-Modelle erstellen und Vorhersagen bereit. In diesem Lernprogramm führen Sie ein Szenario für eine zielgerichtete Mailingkampagne aus, indem Sie Computerlernverfahren verwenden, um das Kaufverhalten von Kunden zu analysieren und vorherzusagen. Im Lernprogramm wird die Verwendung von drei der wichtigsten Data Mining-Algorithmen veranschaulicht: Clustering, Entscheidungsstrukturen und Naive Bayes. Sie erfahren außerdem, wie Ergebnisse mit den Miningmodell-Viewern analysiert und Vorhersagen und Genauigkeitsdiagramme mit den in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]enthaltenen Data Mining-Tools erstellt werden. In allen Beispielen wird das fiktive Unternehmen [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]verwendet.  
@@ -61,7 +60,7 @@ ms.locfileid: "53372906"
  [Lektion 4: Untersuchen der Targeted Mailing-Modelle &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
  In dieser Lektion lernen Sie, die Ergebnisse der einzelnen Modelle mit Viewern zu untersuchen und zu interpretieren.  
   
- [Lektion 5: Testen von Modellen &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
+ [Lesson 5: Testen von Modellen &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
  In dieser Lektion erstellen Sie eine Kopie des Targeted Mailing-Modells, fügen einen Miningmodellfilter hinzu, um die Trainingsdaten auf eine bestimmte Kundengruppe zu beschränken und bewerten anschließend die Verwendbarkeit des Modells.  
   
  [Lektion 6: Erstellen und Verwenden von Vorhersagen &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  

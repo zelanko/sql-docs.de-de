@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 123b78a0-d6c9-4f78-b0e7-73b21854a250
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5d2b74428de2ae01b2b514309b0d825a6151b44c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d2bf3deb1614e586e38ce05f7016e92ec3f802e1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199561"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034771"
 ---
 # <a name="last-function-report-builder-and-ssrs"></a>Last-Funktion (Berichts-Generator und SSRS)
   Gibt den letzten Wert im festgelegten Bereich des angegebenen Ausdrucks zurück.  
@@ -33,7 +33,7 @@ Last(expression, scope)
   
 #### <a name="parameters"></a>Parameter  
  *expression*  
- (`Variant` oder `Binary`) der Ausdruck für den die Aggregation, z. B. ausgeführt `=Fields!Fieldname.Value`.  
+ (`Variant` oder `Binary`) Der Ausdruck, für den die Aggregation auszuführen ist. Beispiel: `=Fields!Fieldname.Value`.  
   
  *Bereich*  
  (`String`) (optional) Der Name eines Datasets, eines Datenbereichs oder einer Gruppe mit den Berichtselementen, auf die die Funktion anzuwenden ist. Wenn *scope* nicht angegeben ist, wird der aktuelle Bereich verwendet.  
@@ -44,9 +44,9 @@ Last(expression, scope)
 ## <a name="remarks"></a>Hinweise  
  Die `Last`-Funktion gibt den letzten Wert in einem Satz von Daten zurück, nachdem alle Sortierfunktionen und Filter im angegebenen Bereich angewendet wurden.  
   
- Die `Last` Funktion kann nicht in Gruppe-Filter-Ausdrücken mit beliebigen Domänen außer dem aktuellen (Standard-) Bereich verwendet werden.  
+ Die `Last`-Funktion kann nur in Gruppenfilterausdrücken mit dem aktuellen (Standard-) Bereich verwendet werden.  
   
- Sie können auch `Last` in einem Seitenkopf, um den letzten Wert zurückzugeben der `ReportItems` -Auflistung für eine Seite Überschriften im Wörterbuchformat zu erstellen, die den ersten und letzten Eintrag auf einer Seite anzeigen.  
+ Sie können die `Last`-Funktion auch in einem Seitenkopf verwenden, um den letzten Wert der `ReportItems`-Auflistung für eine Seite zurückzugeben und Überschriften im Wörterbuchformat zu erstellen, die den ersten und den letzten Eintrag auf einer Seite anzeigen.  
   
  Der Wert des *scope* -Objekts muss eine Zeichenfolgenkonstante sein und darf kein Ausdruck sein. Für äußere Aggregate oder Aggregate, die keine anderen Aggregate angeben, muss das *scope* -Objekt auf den aktuellen Bereich oder einen enthaltenen Bereich verweisen. Bei Aggregaten von Aggregaten können geschachtelte Aggregate einen untergeordneten Bereich angeben.  
   
@@ -75,6 +75,6 @@ Last(expression, scope)
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](expressions-report-builder-and-ssrs.md)   
- [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

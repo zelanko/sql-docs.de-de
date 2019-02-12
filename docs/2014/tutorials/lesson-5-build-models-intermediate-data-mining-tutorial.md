@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
@@ -16,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 42c3701a-1fd2-44ff-b7de-377345bbbd6b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1bbfd2344b46e015e26d2dba393aea689329949c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: daf554338a50a81f46d86a77bf04e770fcc2512e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108820"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035811"
 ---
-# <a name="lesson-5-building-neural-network-and-logistic-regression-models-intermediate-data-mining-tutorial"></a>Lektion 5: Erstellen von neuronalen Netzwerk- und logistischen Regressionsmodellen (Data Mining-Lernprogramm für Fortgeschrittene)
+# <a name="lesson-5-building-neural-network-and-logistic-regression-models-intermediate-data-mining-tutorial"></a>Lektion 5: Erstellen von neuronalen Netzwerk- und logistischen Regressionsmodellen (Datamining-Lernprogramm für fortgeschrittene)
   
   
- Der Operations-Abteilung [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] wird in einem Projekt aufgerufen, um die Zufriedenheit der Kunden mit Callcenters zu verbessern. Ein Drittanbieter wurde mit der Führung des Callcenters und der Erstellung von Berichten zu Metriken bezüglich der Effektivität des Callcenters beauftragt. Ihre Aufgabe ist es, einige vorläufige durch den Drittanbieter bereitgestellte Daten zu analysieren. Ihr Auftraggeber möchte wissen, ob es interessante Ergebnisse gibt. Insbesondere ist interessant, ob die Daten Rückschlüsse auf Probleme mit der Personalbesetzung zulassen oder Möglichkeiten aufzeigen, die Kundenzufriedenheit zu verbessern.  
+ Die Betriebsabteilung von [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] arbeitet daran, die Kundenzufriedenheit bezüglich des Callcenters zu verbessern. Ein Drittanbieter wurde mit der Führung des Callcenters und der Erstellung von Berichten zu Metriken bezüglich der Effektivität des Callcenters beauftragt. Ihre Aufgabe ist es, einige vorläufige durch den Drittanbieter bereitgestellte Daten zu analysieren. Ihr Auftraggeber möchte wissen, ob es interessante Ergebnisse gibt. Insbesondere ist interessant, ob die Daten Rückschlüsse auf Probleme mit der Personalbesetzung zulassen oder Möglichkeiten aufzeigen, die Kundenzufriedenheit zu verbessern.  
   
  Das Dataset ist klein und umfasst nur einen Zeitraum von 30 Tagen im Betrieb des Callcenters. Die Daten verfolgen die Anzahl der neuen und erfahrenen Operatoren in jeder Schicht, die Anzahl der eingehenden Aufrufe, die Anzahl von Bestellungen und zu lösenden Problemen sowie die durchschnittlich Wartezeit eines Kunden, bis ein Operator auf einen Aufruf reagiert. Die Daten enthalten zudem eine Dienstqualitätsmetrik auf Grundlage der *Abbruchrate*, die ein Indikator der Kundenfrustration ist.  
   
@@ -66,10 +65,10 @@ ms.locfileid: "48108820"
   
  [Lektion 4: Erstellen eines Sequenzclusterszenarios &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
   
- Lektion 5: Neuronale Netzwerk- und logistische Regressionsszenarios (Data Mining-Tutorial für Fortgeschrittene)  
+ Lektion 5: Neuronale Netzwerke und logistische Regressionsszenarios (Datamining-Lernprogramm für fortgeschrittene)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Lernprogramm zu Datamining-Grundlagen](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [Lernprogramm zu Data Mining-Grundlagen](../../2014/tutorials/basic-data-mining-tutorial.md)   
  [Datamining-Lernprogramm für fortgeschrittene &#40;Analysis Services – Datamining&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
   
   

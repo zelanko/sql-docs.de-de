@@ -3,7 +3,6 @@ title: value()-Methode (XML-Datentyp) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - value method
 - value() method
 ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c44abf761d2576dd0e73c7c88fb9e52a823d25eb
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 0a208baaf237987c9f3e544da4d02dca72b191f9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697908"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021451"
 ---
 # <a name="value-method-xml-data-type"></a>value()-Methode (xml-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -102,7 +101,7 @@ ORDER BY Result desc
 ```  
   
 ### <a name="c-using-the-value-and-exist-methods-to-retrieve-values-from-an-xml-type-column"></a>C. Verwenden der value()- und der exist()-Methode zum Abrufen von Werten aus einer Spalte vom Typ XML  
- Das folgende Beispiel veranschaulicht das Verwenden der beiden Methoden `value()` und [exist()](../../t-sql/xml/exist-method-xml-data-type.md) des **xml** -Datentyp sein. Die `value()` -Methode wird zum Abrufen von `ProductModelID` -Attributwerten aus der XML-Instanz verwendet. Mit der `exist()`-Methode in der `WHERE`-Klausel werden die Zeilen aus der Tabelle gefiltert.  
+ Das folgende Beispiel veranschaulicht das Verwenden der beiden Methoden `value()` und [exist()](../../t-sql/xml/exist-method-xml-data-type.md) des **xml** -Datentyp sein. Die `value()` -Methode wird zum Abrufen von `ProductModelID` -Attributwerten aus der XML-Instanz verwendet. Mit der `exist()` -Methode in der `WHERE` -Klausel werden die Zeilen aus der Tabelle gefiltert.  
   
  Mit der Abfrage werden Produktmodell-IDs aus XML-Instanzen mit Garantieinformationen (<`Warranty`>-Element) als eine der Funktionen abgerufen. Die Bedingung in der `WHERE` -Klausel verwendet die `exist()` -Methode, um nur solche Zeilen abzurufen, die diese Bedingung erfüllen.  
   
@@ -158,7 +157,7 @@ WHERE c3.exist( '/root[@a=sql:column("c1")]') = 1
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen von Namespaces zu Abfragen mit WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Erstellen von Instanzen der XML-Daten](../../relational-databases/xml/create-instances-of-xml-data.md)   

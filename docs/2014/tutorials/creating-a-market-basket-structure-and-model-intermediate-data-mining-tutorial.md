@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 659b7a4e-f687-44d9-a60a-86490ccbf90f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 983f5547f816785e592aa27c442db6a92b519cae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 207d82f740b7b5ff174e220e647d67d5bac7f9ea
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177427"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019451"
 ---
 # <a name="creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial"></a>Erstellen einer Warenkorbstruktur und eines Warenkorbmodells (Data Mining-Lernprogramm für Fortgeschrittene)
   Sie haben nun eine Datenquellensicht erstellt und erstellen mithilfe des Data Mining-Assistenten eine neue Miningstruktur. In dieser Aufgabe legen Sie eine Miningstruktur und ein Miningmodell an, die auf dem [!INCLUDE[msCoName](../includes/msconame-md.md)] Association-Algorithmus basieren.  
@@ -80,6 +79,6 @@ ms.locfileid: "48177427"
   
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Association-Algorithmus](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)   
- [Inhaltstypen &#40;Datamining&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)  
+ [Inhaltstypen &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)  
   
   

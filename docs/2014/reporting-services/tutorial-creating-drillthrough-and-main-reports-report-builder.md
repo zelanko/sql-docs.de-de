@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e12227fa9390b733ad28ec02a5b31c13a4204c26
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 1177dfb7260959940eb89a31dde740e290ab73f8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512554"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023752"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Lernprogramm: Erstellen von Drillthrough- und Hauptberichten (Berichts-Generator)
   In diesem Lernprogramm erfahren Sie, wie Sie zwei Berichtsarten erstellen: einen Drillthroughbericht und einen Hauptbericht. Die in diesen Berichten verwendeten Beispielvertriebsdaten werden aus einem Analysis Services-Cube abgerufen. Die folgende Abbildung zeigt die Berichte, die Sie erstellen.  
@@ -25,7 +25,7 @@ ms.locfileid: "52512554"
   
  Die folgende Abbildung zeigt, wie der Feldwert, Games and Toys, im Hauptbericht im Titel des des Drillthroughberichts zeigt. Die Daten im Drillthroughbericht beziehen sich auf die Produktkategorie "Games and Toys".  
   
- ![Rs_DrillthroughCubeTutorialParmExpr](../../2014/tutorials/media/rs-drillthroughcubetutorialparmexpr.gif "Rs_DrillthroughCubeTutorialParmExpr")  
+ ![rs_DrillthroughCubeTutorialParmExpr](../../2014/tutorials/media/rs-drillthroughcubetutorialparmexpr.gif "rs_DrillthroughCubeTutorialParmExpr")  
   
 ## <a name="what-you-will-learn"></a>Lernziele  
  **In den Drillthroughbericht lernen Sie, wie Sie:**  
@@ -98,7 +98,7 @@ ms.locfileid: "52512554"
   
 3.  Vergewissern Sie sich, dass im rechten Bereich **Tabellen- oder Matrix-Assistent** ausgewählt ist.  
   
-##  <a name="DConnection"></a> 1a: Angeben einer Datenverbindung  
+##  <a name="DConnection"></a> 1a. Angeben einer Datenverbindung  
  Eine Datenverbindung enthält die erforderlichen Informationen zum Herstellen einer Verbindung mit einer externen Datenquelle, z. B. einem Analysis Services-Cube oder einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank. Sie können zum Angeben einer Datenverbindung eine freigegebene Datenquelle vom Berichtsserver verwenden oder eine eingebettete Datenquelle erstellen, die nur in diesem Bericht verwendet wird. In diesem Lernprogramm verwenden Sie eine eingebettete Datenquelle. Weitere Informationen zur Verwendung von freigegebenen Datenquellen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung (Berichts-Generator)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 #### <a name="to-create-an-embedded-data-source"></a>So erstellen Sie eine eingebettete Datenquelle  
@@ -144,7 +144,7 @@ ms.locfileid: "52512554"
   
 14. Klicken Sie auf **Weiter**.  
   
-##  <a name="DMDXQuery"></a> 1 b. Erstellen einer MDX-Abfrage  
+##  <a name="DMDXQuery"></a> 1b. Erstellen einer MDX-Abfrage  
  In einem Bericht können Sie ein freigegebenes Dataset mit einer vordefinierten Abfrage verwenden oder ein eingebettetes Dataset erstellen, das nur in Ihrem Bericht verwendet wird. In diesem Lernprogramm erstellen Sie ein eingebettetes Dataset.  
   
 #### <a name="to-create-query-filters"></a>So erstellen Sie Abfragefilter  
@@ -239,7 +239,7 @@ ms.locfileid: "52512554"
   
 6.  Klicken Sie auf **Weiter**.  
   
-##  <a name="DTotals"></a> 1D. Hinzufügen von Teilergebnissen und Summen  
+##  <a name="DTotals"></a> 1d. Hinzufügen von Teilergebnissen und Summen  
  Nachdem Sie Gruppen erstellt haben, können Sie Zeilen hinzufügen und formatieren, in denen Aggregatwerte für die Felder angezeigt werden. Sie können auch auswählen, ob alle Daten angezeigt werden oder der Benutzer gruppierte Daten interaktiv erweitern und reduzieren kann.  
   
 #### <a name="to-add-subtotals-and-totals"></a>So fügen Sie Teilergebnisse und Summen hinzu  
@@ -399,7 +399,7 @@ ms.locfileid: "52512554"
   
 2.  Überprüfen Sie im Dialogfeld **Erste Schritte** , dass **Neuer Bericht** ausgewählt ist, und klicken Sie anschließend auf **Tabellen- oder Matrix-Assistent**.  
   
-##  <a name="MConnection"></a> 1a: Angeben einer Datenverbindung  
+##  <a name="MConnection"></a> 1a. Angeben einer Datenverbindung  
  Sie werden dem Hauptbericht eine eingebettete Datenquelle hinzufügen.  
   
 #### <a name="to-create-an-embedded-data-source"></a>So erstellen Sie eine eingebettete Datenquelle  
@@ -438,7 +438,7 @@ ms.locfileid: "52512554"
   
 14. Klicken Sie auf **Weiter**.  
   
-##  <a name="MMDXQuery"></a> 1 b. Erstellen einer MDX-Abfrage  
+##  <a name="MMDXQuery"></a> 1b. Erstellen einer MDX-Abfrage  
  Erstellen Sie als Nächstes ein eingebettetes Dataset. Hierzu erstellen Sie mit dem Abfrage-Designer Filter, Parameter und berechnete Elemente sowie das Dataset selbst.  
   
 #### <a name="to-create-query-filters"></a>So erstellen Sie Abfragefilter  
@@ -555,7 +555,7 @@ ms.locfileid: "52512554"
   
      In Schritt 3 und 4 werden die Daten angegeben, die in der Matrix angezeigt werden sollen.  
   
-##  <a name="MTotals"></a> 1D. Hinzufügen von Teilergebnissen und Summen  
+##  <a name="MTotals"></a> 1d. Hinzufügen von Teilergebnissen und Summen  
  Sie können in Berichten Teil- und Gesamtergebnisse anzeigen. Die Daten im Hauptbericht zeigen einen Indikator an; Sie werden die Gesamtsumme nach Abschluss des Assistenten entfernen.  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>So fügen Sie Teilergebnisse und Gesamtsummen hinzu  

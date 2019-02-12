@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.dqs.kb.kbmatchingmap.f1
 - sql12.dqs.kb.kbmatchingpolicy.f1
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 37a65dc6a237803822f2d3214e7209f60e89d6bb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b5fff7c8804feab436271d60f3e5542b372ada60
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539641"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025351"
 ---
 # <a name="create-a-matching-policy"></a>Erstellen einer Abgleichsrichtlinie
   In diesem Thema wird beschrieben, wie eine Abgleichsrichtlinie eine Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) erstellt wird. Sie bereiten den Abgleichsprozess in DQS vor, indem Sie die Abgleichsrichtlinienaktivität für Beispieldaten ausführen. In dieser Aktivität erstellen und testen Sie eine oder mehrere Abgleichsregeln in der Richtlinie und veröffentlichen dann die Wissensdatenbank, um die Abgleichsregeln zur Verwendung öffentlich verfügbar zu machen. Es kann nur eine Abgleichsrichtlinie in einer Wissensdatenbank geben, aber diese Richtlinie kann mehrere Abgleichsregeln enthalten.  
@@ -186,7 +186,7 @@ ms.locfileid: "52539641"
   
 9. Klicken Sie auf **Abbrechen** , um die Abgleichsrichtlinienaktivität abzubrechen, ohne die Ergebnisse zu speichern, und um zur DQS-Startseite zurückzukehren.  
   
-##  <a name="FollowUp"></a> Zur Nachverfolgung: Nach dem Erstellen einer Abgleichsrichtlinie  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Erstellen einer Abgleichsrichtlinie  
  Nachdem Sie eine Abgleichsrichtlinie erstellt haben, können Sie ein Abgleichsprojekt basierend auf der Wissensdatenbank, die die Abgleichsrichtlinie enthält, ausführen. Weitere Informationen finden Sie unter [Ausführen eines Abgleichsprojekts](../../2014/data-quality-services/run-a-matching-project.md).  
   
 ##  <a name="Tabs"></a> Profiler and Results Tabs  

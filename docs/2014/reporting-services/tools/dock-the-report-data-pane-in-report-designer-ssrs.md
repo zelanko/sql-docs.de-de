@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fb73ae268b088d27a96f7b24fbe8d0c7971b0c23
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7892e0699c9815cdf16b3f40e553f95d38ac51df
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210370"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036611"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Andocken des Berichtsdatenbereichs im Berichts-Designer (SSRS)
-  Im Berichts-Designer [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], berichtsdatenbereich zeigt eine hierarchische Ansicht der Objekte, die Sie verwenden können, der in einem Bericht, einschließlich Datenquellen, Datasets, Feldern, Parametern und Bilder. Datenquellen können in dieser Sicht eingebettet oder Verweise auf freigegebene Datenquellen sein, die im Projektmappen-Explorer angezeigt werden.  
+  Im Berichts-Designer wird in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]im Berichtsdatenbereich eine hierarchische Sicht von Datenobjekten angezeigt, die Sie in einem Bericht in Verbindung mit Datenquellen, Datasets, Feldern, Parametern und Bildern verwenden können. Datenquellen können in dieser Sicht eingebettet oder Verweise auf freigegebene Datenquellen sein, die im Projektmappen-Explorer angezeigt werden.  
   
 ### <a name="to-display-the-report-data-pane"></a>So zeigen Sie den Berichtsdatenbereich an  
   

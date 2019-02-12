@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 404b31d5-27f4-4875-bd60-7b2b8613eb1b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3e8418bf91dff36a512db57c45f1d19ad18fde02
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 4c244701d8a58765061ef3bde1f918c8be5a941d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369012"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025361"
 ---
 # <a name="intermediate-data-mining-tutorial-analysis-services---data-mining"></a>Data Mining-Lernprogramm für Fortgeschrittene (Analysis Services - Data Mining)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bietet eine integrierte Umgebung zum Erstellen und Arbeiten mit Datamining-Modellen. Sie können ohne Weiteres eine Bindung an Datenquellen herstellen, mehrere Modelle für die gleichen Daten erstellen und testen und Modelle für Vorhersageanalysen bereitstellen.  
@@ -59,7 +58,7 @@ ms.locfileid: "53369012"
  [Lektion 4: Erstellen eines Sequenzclusterszenarios &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
  In dieser Lektion lernen Sie, ein Miningmodell anzulegen, das in einem Sequenzclusterszenario verwendet werden kann. Sie lernen, wie Sie Miningmodelle prüfen, die mit dem [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering-Algorithmus erstellt wurden.  
   
- [Lektion 5: Erstellen von neuronalen Netzwerk- und logistischen Regressionsmodellen &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Lesson 5: Erstellen von neuronalen Netzwerk- und logistischen Regressionsmodellen &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
  In dieser Lektion erstellen Sie mehrere zugehörige Miningmodelle mithilfe der Microsoft Neural Network- und Microsoft Logistic Regression-Algorithmen. Sie erfahren zudem, wie Sie mithilfe von Datenquellensichten Daten untersuchen, die den Modellen zugrunde liegen.  
   
 ## <a name="requirements"></a>Anforderungen  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: d2327e7c-0d48-49e3-bcd9-3bba4e67a68b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ba1efc734b49f62b1f7b3b3876a8ea0db2732da7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 0e3248ab676386ad510639d782738915e9636193
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373352"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024461"
 ---
 # <a name="implementing-a-security-extension"></a>Implementieren von Sicherheitserweiterungen
   Die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Authentifizierung ist das primäre System zum Sichern von Berichten in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. In bestimmten Fällen kann es jedoch sein, dass Sie das [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Sicherheitssystem erweitern müssen, um benutzerdefinierte Sicherheitsfunktionen in Ihr Unternehmen zu integrieren. Hierzu verwenden Sie die Entwicklungsplattform, die von der [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-API zur Verfügung gestellt wird. In diesem Abschnitt finden Sie eine Übersicht der Sicherheitserweiterungen in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  

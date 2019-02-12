@@ -14,23 +14,23 @@ helpviewer_keywords:
 ms.assetid: 3af42de3-67ef-41c2-bc8a-7045baec6f63
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3cd097e0a59a51529ae3fa373ad1e7e8b84b6b9c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7d0ec49168e4a23a019eb91fc708e286bf0e1ac4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095896"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037041"
 ---
 # <a name="link-a-report-to-a-model-as-a-clickthrough-report"></a>Verknüpfen eines Berichts mit einem Modell als Bericht mit Durchklicken
-  Statt die Standardvorlagen für Berichte mit Durchklicken zu verwenden, können Sie einen Bericht im Berichts-Generator erstellen und dann mit einer bestimmten Entität im Berichtsmodell verknüpfen. Wenn ein Benutzer beim Anzeigen des Berichts auf die interaktiven Daten im Hauptbericht klickt, wird der Bericht als Bericht mit Durchklicken angezeigt. Um einen Bericht zu einer Entität verlinken, verwenden Sie [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Berichts-Manager.  
+  Statt die Standardvorlagen für Berichte mit Durchklicken zu verwenden, können Sie einen Bericht im Berichts-Generator erstellen und dann mit einer bestimmten Entität im Berichtsmodell verknüpfen. Wenn ein Benutzer beim Anzeigen des Berichts auf die interaktiven Daten im Hauptbericht klickt, wird der Bericht als Bericht mit Durchklicken angezeigt. Um einen Bericht mit einer Entität zu verknüpfen, verwenden Sie den [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichts-Manager.  
   
 > [!IMPORTANT]  
 >  Der Bericht muss mit der Entität verknüpft werden, die im Bericht als primäre oder Basisentität verwendet wird.  
   
 ### <a name="to-start-report-manager-from-a-browser"></a>So starten Sie den Berichts-Manager aus einem Browser  
   
-1.  Open [!INCLUDE[msCoName](../includes/msconame-md.md)] InternetExplorer 6.0 oder höher.  
+1.  Öffnen Sie [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 6.0 oder höher.  
   
 2.  Geben Sie die URL des Berichts-Managers in die Adressleiste des Webbrowsers ein. Standardmäßig lautet die URL http://\<*ComputerName*> / reports.  
   

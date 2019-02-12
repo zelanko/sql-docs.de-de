@@ -11,19 +11,19 @@ f1_keywords:
 - "10081"
 ms.assetid: 24a479e4-3084-4442-8692-889895f111ad
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b6c7b5f7239f480159f1ea75a11930aa0d4184e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: a2b67336419aca8dc1fc59910f6c273f7be891f0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175960"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017111"
 ---
 # <a name="report-properties-dialog-box-code-report-builder"></a>Berichtseigenschaften (Dialogfeld), Code (Berichts-Generator)
   Wählen Sie im Dialogfeld **Berichtseigenschaften** die Registerkarte **Code** , um benutzerdefinierten Code zu definieren, der von Ausdrücken im Bericht verwendet werden kann.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Benutzerdefinierter Code**  
  Geben Sie die Methoden ein, die im Bericht verwendet werden sollen. Der Code muss in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]geschrieben sein.  
   

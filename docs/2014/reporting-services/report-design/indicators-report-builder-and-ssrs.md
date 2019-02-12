@@ -17,13 +17,13 @@ f1_keywords:
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a6f13d8d76854c3fdf01dceeeb61c4d06f2a0e16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 042a81dc4850c592542ca0764842b45a7756468d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142460"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024141"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>Indikatoren (Berichts-Generator und SSRS)
   Indikatoren sind minimale Messgeräte, die den Zustand eines einzelnen Datenwerts auf einen Blick wiedergeben. Die Symbole zur Darstellung der Indikatoren und ihres Zustands sind einfach und auch in kleineren Größen optisch wirkungsvoll.  
@@ -44,7 +44,7 @@ ms.locfileid: "48142460"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält integrierte Indikatorsätze und Indikatorsymbole, die direkt verwendet werden können. Sie haben jedoch auch die Möglichkeit, einzelne Indikatorsymbole und Indikatorsätze an Ihre individuellen Anforderungen anzupassen.  
   
- Weitere Informationen zur Verwendung von Indikatoren als KPIs finden Sie unter [Tutorial: Hinzufügen eines KPIS zu einem Bericht &#40;Berichts-Generator&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Weitere Informationen zur Verwendung von Indikatoren als KPIs finden Sie unter [Lernprogramm: Hinzufügen eines KPIS zu einem Bericht &#40;Berichts-Generator&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
 >  Sie können Indikatoren in einem Bericht als Berichtsteile getrennt veröffentlichen. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -59,7 +59,7 @@ ms.locfileid: "48142460"
   
  ![rs_MessgerätBereichMitIndikator](../media/rs-gaugepanelwithindicator.gif "rs_GaugePanelWithIndicator")  
   
- Abhängig davon, wie Sie den Datenwert darstellen möchten, können Messgeräte sich als effektiver als Indikatoren erweisen. Weitere Informationen finden Sie unter [Gauges &#40;Report Builder and SSRS&#41;](gauges-report-builder-and-ssrs.md).  
+ Abhängig davon, wie Sie den Datenwert darstellen möchten, können Messgeräte sich als effektiver als Indikatoren erweisen. Weitere Informationen finden Sie unter [Messgeräte &#40;Berichts-Generator und SSRS&#41;](gauges-report-builder-and-ssrs.md).  
   
   
 ##  <a name="ChoosingIndicatorTypes"></a> Auswählen des zu verwendenden Indikatortyps  
@@ -104,7 +104,7 @@ ms.locfileid: "48142460"
   
  Wenn Sie einem Bericht zum ersten Mal einen Indikator hinzufügen, wird dieser mit den Standardwerten konfiguriert. Sie können die Werte dann ändern, damit der Indikator die Daten wie gewünscht darstellt. Sie können die Darstellung der Indikatorsymbole, die Methode, wie der Indikator das zu verwendende Symbol auswählt, und die von einem Indikatorsatz verwendeten Symbole ändern. Weitere Informationen finden Sie unter [Ändern von Indikatorsymbolen und Indikatorsätzen &#40;Berichts-Generator und SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md).  
   
- Standardmäßig werden Indikatoren so konfiguriert, dass Prozentsätze als Maßeinheit verwendet und der Minimal- sowie Maximalwert in den Daten automatisch erkannt wird. Jedes Symbol im Indikatorsatz entspricht einem Prozentbereich. Die Anzahl der Prozentbereiche hängt von der Anzahl der Symbole im Symbolsatz ab, die Bereiche haben allerdings die gleiche Größe und folgen sequenziell aufeinander. Wenn der Symbolsatz z. B. fünf Symbole aufweist, enthält er fünf Prozentbereiche mit einer Größe von jeweils 20 Prozent. Der erste Bereich beginnt bei 0 und endet bei 20, der zweite beginnt bei 20 und endet bei 40 usw. Für den Indikator im Bericht wird das Symbol aus dem Indikatorsatz verwendet, das dem Prozentbereich entspricht, in dem der Indikatordatenwert liegt. Sie können den Prozentbereich für jedes Symbol im Satz ändern. Die Minimal- und Maximalwerte können explizit festgelegt werden, indem ein Wert oder ein Ausdruck angegeben wird. Sie können die Maßeinheit stattdessen in einen numerischen Wert ändern. In diesem Fall geben Sie kein Minimum oder Maximum für die Daten an. Stattdessen geben Sie nur den Start- und Endwert für jedes vom Indikator verwendete Symbol an. Weitere Informationen finden Sie unter [Gruppe und Konfigurieren von Maßeinheiten &#40;Berichts-Generator und SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md).  
+ Standardmäßig werden Indikatoren so konfiguriert, dass Prozentsätze als Maßeinheit verwendet und der Minimal- sowie Maximalwert in den Daten automatisch erkannt wird. Jedes Symbol im Indikatorsatz entspricht einem Prozentbereich. Die Anzahl der Prozentbereiche hängt von der Anzahl der Symbole im Symbolsatz ab, die Bereiche haben allerdings die gleiche Größe und folgen sequenziell aufeinander. Wenn der Symbolsatz z. B. fünf Symbole aufweist, enthält er fünf Prozentbereiche mit einer Größe von jeweils 20 Prozent. Der erste Bereich beginnt bei 0 und endet bei 20, der zweite beginnt bei 20 und endet bei 40 usw. Für den Indikator im Bericht wird das Symbol aus dem Indikatorsatz verwendet, das dem Prozentbereich entspricht, in dem der Indikatordatenwert liegt. Sie können den Prozentbereich für jedes Symbol im Satz ändern. Die Minimal- und Maximalwerte können explizit festgelegt werden, indem ein Wert oder ein Ausdruck angegeben wird. Sie können die Maßeinheit stattdessen in einen numerischen Wert ändern. In diesem Fall geben Sie kein Minimum oder Maximum für die Daten an. Stattdessen geben Sie nur den Start- und Endwert für jedes vom Indikator verwendete Symbol an. Weitere Informationen finden Sie unter [Festlegen und Konfigurieren von Maßeinheiten &#40;Berichts-Generator und SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md).  
   
  Indikatoren übermitteln Datenwerte, indem sie Datenwerte von Indikatoren innerhalb eines angegebenen Bereichs synchronisieren. Standardmäßig ist der Bereich der übergeordnete Container des Indikators, z. B. die Tabelle oder die Matrix mit dem Indikator. Sie können die Synchronisierung des Indikators ändern, indem Sie abhängig vom Layout des Berichts einen anderen Bereich auswählen. Der Indikator kann die Synchronisierung überspringen. Weitere Informationen finden Sie unter [Festlegen des Synchronisierungsbereichs &#40;Berichts-Generator und SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md).  
   
@@ -116,7 +116,7 @@ ms.locfileid: "48142460"
 ##  <a name="SizingIndicatators"></a> Anpassen der Größe von Indikatoren für eine maximale visuelle Wirkung  
  Zusätzlich zu Farbe, Richtung und Form können Sie die Größe anpassen und damit die visuelle Wirkung von Indikatoren maximieren. Angenommen, ein Bericht verwendet Indikatoren, um die Zufriedenheit der Kunden mit unterschiedlichen Fahrradmodellen anzuzeigen. Das vom Indikator verwendete Symbol kann so konfiguriert werden, dass es je nach der Zufriedenheit der Kunden eine entsprechende Größe annimmt. Je größer die Zufriedenheit, desto größer ist auch das Symbol, das im Bericht angezeigt wird. Im folgenden Bild wird ein Bericht zu Fahrradverkäufen angezeigt, wobei die Größe des Symbols jeweils den Umsatz darstellt.  
   
- Die Größe der Sterne legen Sie mit Ausdrücken dynamisch fest. Dabei dienen die vom Indikator verwendeten Feldwerte als Grundlage. Weitere Informationen finden Sie unter [angeben der Größe eines Indikators mithilfe eines Ausdrucks &#40;Berichts-Generator und SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md).  
+ Die Größe der Sterne legen Sie mit Ausdrücken dynamisch fest. Dabei dienen die vom Indikator verwendeten Feldwerte als Grundlage. Weitere Informationen finden Sie unter [Angeben der Größe eines Indikators mithilfe eines Ausdrucks &#40;Berichts-Generator und SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md).  
   
  Weitere Informationen zum Schreiben und Verwenden von Ausdrücken finden Sie unter [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
@@ -196,14 +196,14 @@ ms.locfileid: "48142460"
   
 -   [Festlegen des Synchronisierungsbereichs &#40;Berichts-Generator und SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
   
--   [Geben Sie die Größe eines Indikators mithilfe eines Ausdrucks &#40;Berichts-Generator und SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)  
+-   [Angeben der Größe eines Indikators mithilfe eines Ausdrucks &#40;Berichts-Generator und SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)  
   
 -   [Aufnehmen von Indikatoren und Messgeräten in einen Messgerätbereich &#40;Berichts-Generator und SSRS&#41;](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)  
   
   
 ## <a name="see-also"></a>Siehe auch  
  [Messgeräte &#40;Berichts-Generator und SSRS&#41;](gauges-report-builder-and-ssrs.md)   
- [Sparklines und Datenbalken (Berichts-Generator und SSRS)](sparklines-and-data-bars-report-builder-and-ssrs.md)   
+ [Sparklines und Datenbalken &#40;Berichts-Generator und SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)   
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

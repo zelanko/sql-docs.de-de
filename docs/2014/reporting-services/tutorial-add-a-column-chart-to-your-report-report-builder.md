@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Lernprogramm: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ee60121e4356b8b54a943ab7373fafd504e5778f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 24c8e48ef26d3db2bc7662a36d40725c84b1bbc7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104131"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026771"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator)
   Ein Säulendiagramm zeigt eine Reihe als Satz vertikaler Balken an, die nach Kategorie gruppiert sind. Ein Säulendiagramm kann für folgende Zwecke verwendet werden:  
@@ -29,7 +29,7 @@ ms.locfileid: "48104131"
   
  In der folgenden Abbildung sehen Sie das zu erstellende Säulendiagramm mit einem gleitenden Durchschnitt:  
   
- ![Rs_TutorialColChartFinished](../../2014/tutorials/media/rs-tutorialcolchartfinished.gif "Rs_TutorialColChartFinished")  
+ ![rs_TutorialColChartFinished](../../2014/tutorials/media/rs-tutorialcolchartfinished.gif "rs_TutorialColChartFinished")  
   
 ##  <a name="BackToTop"></a> Lernziele  
  In diesem Lernprogramm lernen Sie Folgendes:  
@@ -53,9 +53,9 @@ ms.locfileid: "48104131"
 9. [Speichern des Berichts](#Save)  
   
 > [!NOTE]  
->  In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Im ersten Tutorial dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Auswählen einer Datenquelle sowie zum Erstellen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Schrittweise Anweisungen zum Navigieren zu einem Berichtsserver Auswählen einer Datenquelle, und erstellen Sie ein Dataset, finden Sie im erste Lernprogramm dieser Reihe: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
- Geschätzte Zeit zum Bearbeiten dieses Tutorials: 15 Minuten.  
+ Ungefähre Dauer dieses Lernprogramms: 15 Minuten.  
   
 ## <a name="requirements"></a>Anforderungen  
  Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).  
@@ -237,7 +237,7 @@ ms.locfileid: "48104131"
   
 9. Mit der rechten Maustaste in den Titel der vertikalen Achse auf der Seite des Diagramms, und klicken Sie auf **Achsentiteleigenschaften**.  
   
-10. Ersetzen Sie den Text in die **Titeltext** Feld mit dem folgenden Text: **Sales Total (in Tausend)**. Darüber hinaus können Sie das gewünschte Format für den Titel festlegen.  
+10. Ersetzen Sie den Text in die **Titeltext** Feld mit dem folgenden Text: **Gesamtumsatz (in Tausend)**. Darüber hinaus können Sie das gewünschte Format für den Titel festlegen.  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

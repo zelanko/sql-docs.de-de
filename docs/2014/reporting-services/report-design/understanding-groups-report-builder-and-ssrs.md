@@ -13,20 +13,20 @@ f1_keywords:
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3203d7e83d234afad54649860938fef65796b799
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9b21947a879517196bc2447ae9a0cde0db1be6a8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082980"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037398"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>Grundlegendes zu Gruppen (Berichts-Generator und SSRS)
   In Berichts-Generator ist eine Gruppe ein benannter Satz von Daten aus dem Berichtsdataset, der an einen Datenbereich gebunden ist. Im Grunde wird mit einer Gruppe eine Sicht eines Berichtsdatasets organisiert. Alle Gruppen in einem Datenbereich geben unterschiedliche Sichten desselben Berichtsdatasets an.  
   
  Zur besseren Veranschaulichung einer Gruppe betrachten Sie die folgende Abbildung, in der der Tablix-Datenbereich in der Vorschau dargestellt ist. In dieser Abbildung kategorisieren die Zeilengruppen das Dataset nach Produkttyp, und die Spaltengruppen kategorisieren das Dataset nach geografischer Region und Jahr.  
   
- ![Tablix-Datenbereiche](../media/rs-tablixareas.gif "Tablix-Datenbereiche")  
+ ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
   
  In den folgenden Abschnitten sind die verschiedenen Aspekte von Gruppen beschrieben.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "48082980"
  Eine Gruppe besitzt einen Namen und einen Satz von Gruppierungsausdrücken, den Sie festlegen. Der Satz von Gruppierungsausdrücken kann ein Verweis auf ein einzelnes Datasetfeld oder eine Kombination mehrerer Ausdrücke sein. Zur Laufzeit werden Gruppenausdrücke kombiniert, wenn die Gruppe mehrere Ausdrücke enthält, und für Daten in einer Gruppe angewendet. Angenommen, Sie verfügen über eine Gruppe, die die Daten im Datenbereich mithilfe eines Datumsfelds organisiert. Zur Laufzeit werden die Daten nach Datum angeordnet und dann mit dem Gesamtwerten anderer Datasetwerte für jedes Datum angezeigt.  
   
 ## <a name="when-do-i-create-groups"></a>Wann sollten Gruppen erstellt werden?  
- In den meisten Fällen erstellen Berichts-Generator und Berichts-Designer eine Gruppe automatisch, wenn Sie einen Datenbereich entwerfen. Für eine Tabelle, Matrix oder Liste werden Gruppen erstellt, wenn Sie Felder im Gruppierungsbereich ablegen. Für ein Diagramm werden Gruppen erstellt, wenn Sie Felder in den Diagrammablagezonen ablegen. Für ein Messgerät müssen Sie das Dialogfeld für die Messgeräteigenschaften verwenden. Für eine Tabelle, Matrix oder Liste können Sie eine Gruppe auch manuell erstellen. Weitere Informationen finden Sie unter [Hinzufügen oder Löschen einer Gruppe in einem Datenbereich &#40;Berichts-Generator und SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). Ein Beispiel zum Hinzufügen von Gruppen beim Erstellen eines Berichts finden Sie unter [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../tutorial-creating-a-basic-table-report-report-builder.md) oder unter [Erstellen eines einfachen Tabellenberichts (SSRS-Tutorial)](../create-a-basic-table-report-ssrs-tutorial.md).  
+ In den meisten Fällen erstellen Berichts-Generator und Berichts-Designer eine Gruppe automatisch, wenn Sie einen Datenbereich entwerfen. Für eine Tabelle, Matrix oder Liste werden Gruppen erstellt, wenn Sie Felder im Gruppierungsbereich ablegen. Für ein Diagramm werden Gruppen erstellt, wenn Sie Felder in den Diagrammablagezonen ablegen. Für ein Messgerät müssen Sie das Dialogfeld für die Messgeräteigenschaften verwenden. Für eine Tabelle, Matrix oder Liste können Sie eine Gruppe auch manuell erstellen. Weitere Informationen finden Sie unter [Hinzufügen oder Löschen einer Gruppe in einem Datenbereich &#40;Berichts-Generator und SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). Ein Beispiel dafür, wie beim Hinzufügen von Gruppen, wenn Sie einen Bericht erstellen, finden Sie unter [Lernprogramm: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41; ](../tutorial-creating-a-basic-table-report-report-builder.md) oder [erstellen ein einfachen Tabellenberichts &#40;SSRS-Tutorial&#41;](../create-a-basic-table-report-ssrs-tutorial.md).  
   
 ## <a name="how-can-i-modify-a-group"></a>Wie kann eine Gruppe geändert werden?  
  Wenn Sie eine Gruppe erstellt haben, können Sie die datenbereichsspezifischen Eigenschaften festlegen, z. B. Filter- und Sortierungsausdrücke, Seitenumbrüche und Gruppierungsvariablen für bereichsspezifische Daten. Weitere Informationen finden Sie unter [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md).  
@@ -64,7 +64,7 @@ ms.locfileid: "48082980"
 > [!NOTE]  
 >  Zwar besitzen Gruppen in unterschiedlichen Datenbereichen unterschiedliche Namen, doch sind die Prinzipien der Erstellung und Verwendung von Gruppen gleich. Wenn Sie eine Gruppe für einen Datenbereich erstellen, geben Sie eine Möglichkeit an, die Detaildaten aus dem mit dem Datenbereich verknüpften Dataset zu organisieren. Jeder Datenbereich unterstützt eine Gruppenstruktur, in der gruppierte Daten angezeigt werden können.  
   
-### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>Gruppen in einem Tablix-Datenbereich: Detail-, Zeilen- und Spaltengruppen  
+### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>Gruppen in einem Tablix-Datenbereich: Details, Zeilen- und Spaltengruppen  
  Wie in diesem Thema bereits dargestellt, ermöglichen es Tablix-Datenbereiche, Daten nach Zeilen oder Spalten in Gruppen zu organisieren. Zeilen- und Spaltengruppen sind jedoch nicht die einzigen in einem Tablix-Datenbereich verfügbaren Gruppen. Dieser Datenbereich kann die folgenden Typen von Gruppen aufweisen:  
   
 -   **Gruppe "Details"** Die Detailgruppe besteht aus sämtlichen Daten, die in einem Berichtsdataset enthalten sind, nachdem Dataset- und Datenbereichsfilter von Berichts-Generator oder Berichts-Designer angewendet wurden. Die Gruppe Details ist daher die einzige Gruppe, die keinen Gruppierungsausdruck besitzt.  
@@ -72,7 +72,7 @@ ms.locfileid: "48082980"
      Im Grunde gibt die Detailgruppe die Daten an, die angezeigt werden, wenn Sie in einem Abfrage-Designer eine Datasetabfrage ausführen. Angenommen, Sie verfügen über eine Abfrage, mit der alle Spalten in einer Tabelle mit Bestellungen abgerufen werden. Die Daten in dieser Detailgruppe enthalten dann sämtliche Werte für jede Zeile für alle Spalten in der Tabelle. Die Daten in dieser Detailgruppe enthalten außerdem die Werte für alle berechneten Datasetfelder, die Sie erstellt haben.  
   
     > [!NOTE]  
-    >  Die Daten in einer Detailgruppe können auch Serveraggregate enthalten, d. h. Aggregate, die für die Datenquelle berechnet und in der Abfrage abgerufen werden. Standardmäßig behandeln Berichts-Generator und Berichts-Designer Serveraggregate als Detaildaten, sofern der Bericht keinen Ausdruck enthält, für den die „Aggregate“-Funktion verwendet wird. Weitere Informationen finden Sie unter [aggregieren](report-builder-functions-aggregate-function.md).  
+    >  Die Daten in einer Detailgruppe können auch Serveraggregate enthalten, d. h. Aggregate, die für die Datenquelle berechnet und in der Abfrage abgerufen werden. Standardmäßig behandeln Berichts-Generator und Berichts-Designer Serveraggregate als Detaildaten, sofern der Bericht keinen Ausdruck enthält, für den die „Aggregate“-Funktion verwendet wird. Weitere Informationen finden Sie unter [Aggregat](report-builder-functions-aggregate-function.md).  
   
      Wenn Sie einem Bericht eine Tabelle oder Liste hinzufügen, erstellen Berichts-Generator und Berichts-Designer automatisch die Gruppe Details und fügen eine Zeile hinzu, in der die Detaildaten angezeigt werden. Wenn Sie Zellen in dieser Zeile Datasetfelder hinzufügen, werden standardmäßig einfache Ausdrücke für die Felder angezeigt, z. B. [Sales]. Wenn Sie den Datenbereich anzeigen, wird die Detailzeile für jeden Wert im Resultset einmal wiederholt.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48082980"
   
 ## <a name="see-also"></a>Siehe auch  
  [Hinzufügen oder Löschen einer Gruppe in einem Datenbereich &#40;Berichts-Generator und SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
- [Hinzufügen eines Gesamtergebnisses zu einer Gruppe oder einem Tablix-Datenbereich (Berichts-Generator und SSRS)](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
+ [Hinzufügen eines Gesamtergebnisses zu einer Gruppe oder einem Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
  [Sortieren von Daten in einem Datenbereich &#40;Berichts-Generator und SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [Drilldownaktion &#40;Berichts-Generator und SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
  [Listen (Berichts-Generator und SSRS)](tables-matrices-and-lists-report-builder-and-ssrs.md)  
