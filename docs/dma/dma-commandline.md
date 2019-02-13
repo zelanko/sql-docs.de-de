@@ -15,15 +15,15 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 7d02ead6a601c47ba68bd12ece8fa444ceee5a9e
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 7769edd1718881a01fe0f40ae2b7dc0e8b8ec78a
+ms.sourcegitcommit: 89a7bd9ccbcb19bb92a1f4ba75576243a58584e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226397"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56159765"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Ausführen von Data Migration Assistant über die Befehlszeile
-Mit der Version 2.1 und höher bei Installation von Data Migration Assistant, werden auch installiert dmacmd.exe in *%ProgramFiles%\\Microsoft Data Migration Assistant\\*. Verwenden Sie dmacmd.exe zu, um Ihre Datenbanken in einem unbeaufsichtigten Modus zu bewerten, und geben Sie das Ergebnis in JSON oder CSV-Datei. Diese Methode ist besonders nützlich, wenn mehrere Datenbanken oder große Datenbanken zu bewerten. 
+Mit der Version 2.1 und höher bei Installation von Data Migration Assistant, werden auch installiert dmacmd.exe in *%ProgramFiles%\\Microsoft Data Migration Assistant\\*. Verwenden Sie dmacmd.exe zu, um Ihre Datenbanken in einem unbeaufsichtigten Modus zu bewerten, und geben Sie das Ergebnis in JSON oder CSV-Datei. Diese Methode ist besonders nützlich, wenn mehrere Datenbanken oder große Datenbanken zu bewerten. 
 
 > [!NOTE]
 > Dmacmd.exe unterstützt das Ausführen von Bewertungen nur. Migrationen werden zu diesem Zeitpunkt nicht unterstützt.
@@ -52,7 +52,11 @@ DmaCmd.exe /AssessmentName="string"
 |`/AssessmentOverwriteResult`     | Überschreiben Sie die Ergebnisdatei    | N
 |`/AssessmentResultJson`     | Vollständiger Pfad in die JSON-Ergebnisdatei     | J <br> (Entweder AssessmentResultJson oder AssessmentResultCsv ist erforderlich)
 |`/AssessmentResultCsv`    | Vollständigen Pfad zu der CSV-Ergebnisdatei   | J <br>(Entweder AssessmentResultJson oder AssessmentResultCsv ist erforderlich)
-
+|`/Action`    | Mithilfe SkuRecommendation SKU-Empfehlungen zu erhalten, verwenden AssessTargetReadiness, zum Bewerten der Bereitschaft Ziel ausführen.   | N
+|`/SourceConnections`    | Leerzeichen getrennte Liste von Verbindungszeichenfolgen. Datenbanknamen (Anfangskatalog) ist optional. Wenn kein Datenbankname angegeben wird, werden dann alle Datenbanken auf dem Quellcomputer bewertet.   | J <br>(Bei Aktion "AssessTargetReadiness" ist erforderlich)
+|`/TargetReadinessConfiguration`    | Vollständiger Pfad der XML-Datei, die Werte für Name, datenquellenverbindungen und Ergebnisdatei beschreibt.   | J <br>(Entweder TargetReadinessConfiguration oder SourceConnections ist erforderlich)
+|`/FeatureDiscoveryReportJson`    | Pfad zur JSON-Bericht die Feature-Ermittlung. Wenn diese Datei generiert wird, klicken Sie dann es dienen bereitschaftstest für Ziel erneut ausführen, ohne eine Verbindung mit der Quelle.   | N
+|`/ImportFeatureDiscoveryReportJson`    | Pfad zu der Funktion JSON-ermittlungsbericht zuvor erstellt haben. Anstelle von datenquellenverbindungen wird diese Datei verwendet werden.   | N
 
 ## <a name="examples-of-assessments-using-the-cli"></a>Beispiele für Bewertungen, die mithilfe der Befehlszeilenschnittstelle
 
@@ -66,8 +70,8 @@ DmaCmd.exe /AssessmentName="string"
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
 /AssessmentDatabases="Server=SQLServerInstanceName;Initial
-Catalog=DatabaseName;***Integrated Security=true*"**
-***/AssessmentEvaluateCompatibilityIssues*** /AssessmentOverwriteResult
+Catalog=DatabaseName;Integrated Security=true"
+/AssessmentEvaluateCompatibilityIssues /AssessmentOverwriteResult
 /AssessmentResultJson="C:\\temp\\Results\\AssessmentReport.json"
 ```
 
@@ -76,8 +80,8 @@ Catalog=DatabaseName;***Integrated Security=true*"**
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
 /AssessmentDatabases="Server=SQLServerInstanceName;Initial
-Catalog=DatabaseName;***User Id=myUsername;Password=myPassword;***"
-***/AssessmentEvaluateRecommendations*** /AssessmentOverwriteResult
+Catalog=DatabaseName;User Id=myUsername;Password=myPassword;"
+/AssessmentEvaluateRecommendations /AssessmentOverwriteResult
 /AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 ```
 
@@ -87,22 +91,22 @@ Catalog=DatabaseName;***User Id=myUsername;Password=myPassword;***"
 DmaCmd.exe /AssessmentName="TestAssessment"
 /AssessmentDatabases="Server=SQLServerInstanceName;Initial
 Catalog=DatabaseName;Integrated Security=true"
-***/AssessmentTargetPlatform="SqlServer2012"***
+/AssessmentTargetPlatform="SqlServer2012"
 /AssessmentEvaluateRecommendations /AssessmentOverwriteResult
-***/AssessmentResultJson***="C:\\temp\\Results\\AssessmentReport.json"
-***/AssessmentResultCsv***="C:\\temp\\Results\\AssessmentReport.csv"
+/AssessmentResultJson="C:\\temp\\Results\\AssessmentReport.json"
+/AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 ```
 
 **Bewertung der einzelnen-Datenbank für die Zielplattform SQL Azure-Datenbank speichern die Ergebnisse in JSON und CSV-Datei**
 
 ```
-DmaCmd.exe /AssessmentName="TestAssessment" 
+DmaCmd.exe /AssessmentName="TestAssessment" 
 /AssessmentDatabases="Server=SQLServerInstanceName;Initial
 Catalog=DatabaseName;Integrated Security=true"
 /AssessmentTargetPlatform="AzureSqlDatabaseV12"
 /AssessmentEvaluateCompatibilityIssues /AssessmentEvaluateFeatureParity
-/AssessmentOverwriteResult 
-/AssessmentResultCsv="C:\\temp\\AssessmentReport.csv" 
+/AssessmentOverwriteResult 
+/AssessmentResultCsv="C:\\temp\\AssessmentReport.csv" 
 /AssessmentResultJson="C:\\temp\\AssessmentReport.json"
 ```
 
@@ -110,15 +114,103 @@ Catalog=DatabaseName;Integrated Security=true"
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
-***/AssessmentDatabases="Server=SQLServerInstanceName1;Initial
+/AssessmentDatabases="Server=SQLServerInstanceName1;Initial
 Catalog=DatabaseName1;Integrated Security=true"
 "Server=SQLServerInstanceName1;Initial Catalog=DatabaseName2;Integrated
 Security=true" "Server=SQLServerInstanceName2;Initial
-Catalog=DatabaseName3;Integrated Security=true"***
+Catalog=DatabaseName3;Integrated Security=true"
 /AssessmentTargetPlatform="SqlServer2016"
 /AssessmentEvaluateCompatibilityIssues /AssessmentOverwriteResult
 /AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 /AssessmentResultJson="C:\\Results\\test2016.json"
+```
+
+**Single-Database bereitschaftstest für Ziel mithilfe der Windows-Authentifizierung**
+
+```
+DmaCmd.exe /Action=AssessTargetReadiness 
+/AssessmentName="TestAssessment" 
+/SourceConnections="Server=SQLServerInstanceName;Initial Catalog=DatabaseName;Integrated Security=true" 
+/AssessmentOverwriteResult 
+/AssessmentResultJson="C:\temp\Results\AssessmentReport.json"
+```
+
+**Single-Database bereitschaftstest für Ziel mithilfe von SQL Server-Authentifizierung**
+
+```
+DmaCmd.exe /Action=AssessTargetReadiness 
+/AssessmentName="TestAssessment" 
+/SourceConnections="Server=SQLServerInstanceName;Initial Catalog=DatabaseName;User Id=myUsername;Password=myPassword;" /AssessmentEvaluateRecommendations 
+/AssessmentOverwriteResult 
+/AssessmentResultJson="C:\temp\Results\AssessmentReport.json" 
+
+```
+
+**Ziel-bereitschaftsbewertung mehreren Datenbanken**
+
+```
+DmaCmd.exe /Action=AssessTargetReadiness 
+/AssessmentName="TestAssessment" 
+/SourceConnections="Server=SQLServerInstanceName1;Initial Catalog=DatabaseName1;Integrated Security=true" "Server=SQLServerInstanceName1;Initial Catalog=DatabaseName2;Integrated Security=true" "Server=SQLServerInstanceName2;Initial Catalog=DatabaseName3;Integrated Security=true" 
+/AssessmentOverwriteResult  
+/AssessmentResultJson="C:\Results\test2016.json"
+
+```
+
+**Bereitschaftstest für das Ziel für alle Datenbanken auf einem Server mithilfe der Windows-Authentifizierung**
+
+```
+DmaCmd.exe /Action=AssessTargetReadiness 
+/AssessmentName="TestAssessment" 
+/SourceConnections="Server=SQLServerInstanceName;Integrated Security=true" 
+/AssessmentOverwriteResult 
+/AssessmentResultJson="C:\temp\Results\AssessmentReport.json"
+
+```
+
+**Bewerten der Bereitschaft durch das Importieren von Feature Discovery-Bericht, die zuvor erstellte Ziel**
+
+```
+DmaCmd.exe /Action=AssessTargetReadiness 
+/AssessmentName="TestAssessment" 
+/ImportFeatureDiscoveryReportJson="c:\temp\feature_report.json" 
+/AssessmentOverwriteResult 
+/AssessmentResultJson="C:\temp\Results\AssessmentReport.json"
+
+```
+
+**Bewerten der Bereitschaft Ziel durch die Bereitstellung der Konfigurationsdatei**
+
+```
+DmaCmd.exe /Action=AssessTargetReadiness 
+/TargetReadinessConfiguration=.\Config.xml
+
+```
+Inhalt der Konfigurationsdatei bei Verwendung von datenquellenverbindungen:
+```
+<?xml version="1.0" encoding="utf-8" ?>
+<TargetReadinessConfiguration xmlns="http://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
+  <AssessmentName>name</AssessmentName>
+  <SourceConnections>
+    <SourceConnection>connection string 1</SourceConnection>
+    <SourceConnection>connection string 2</SourceConnection>
+    <!-- ... -->
+    <SourceConnection>connection string n</SourceConnection>
+  </SourceConnections>
+  <AssessmentResultJson>path\to\file.json</AssessmentResultJson>
+  <FeatureDiscoveryReportJson>path\to\featurediscoveryreport.json</FeatureDiscoveryReportJson>
+  <OverwriteResult>true</OverwriteResult> <!-- or false -->
+</TargetReadinessConfiguration>
+```
+
+Inhalt der Konfigurationsdatei beim Feature Discovery-Bericht zu importieren:
+```
+<TargetReadinessConfiguration xmlns="http://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
+  <AssessmentName>name</AssessmentName>
+  <ImportFeatureDiscoveryReportJson>path\to\featurediscoveryfile.json</ImportFeatureDiscoveryReportJson>
+  <AssessmentResultJson>path\to\resultfile.json</AssessmentResultJson>
+  <OverwriteResult>true</OverwriteResult><!-- or false -->
+</TargetReadinessConfiguration>
 ```
 
 ## <a name="azure-sql-database-sku-recommendations-using-the-cli"></a>Azure SQL-Datenbank-SKU-Empfehlungen, die mithilfe der Befehlszeilenschnittstelle
@@ -140,9 +232,9 @@ Catalog=DatabaseName3;Integrated Security=true"***
 |`/SkuRecommendationJsonOutputResultsFilePath`  | Vollständiger Pfad in die JSON-Ergebnisdatei |   J <br>(Entweder "TSV" oder "JSON" oder "HTML-Dateipfad ist erforderlich)
 |`/SkuRecommendationHtmlResultsFilePath` |  Vollständiger Pfad in die HTML-Ergebnisdatei | J <br>(Entweder "TSV" oder "JSON" oder "HTML-Dateipfad ist erforderlich)
 |`/SkuRecommendationPreventPriceRefresh` |  Verhindert, dass die Preis-Aktualisierung auftreten. Verwenden Sie, wenn im offline-Modus ausgeführt wird. |    J <br>(Dieses Argument ist für statische Preise ausgewählt oder alle folgenden Argumente müssen ausgewählt werden, zum Abrufen der aktuellen Preis)
-|`/SkuRecommendationCurrencyCode` | Die Währung, in dem Preise angezeigt werden (z.B.) "US") | J <br>(Wenn Sie möchten die aktuellen Preisen zu erhalten.)
-|`/SkuRecommendationOfferName` |    Das Angebot benennen (z.B.) "MS-AZR - 0003P"). Weitere Informationen finden Sie unter den [Microsoft Azure-Angebotsdetails](https://azure.microsoft.com/support/legal/offer-details/) Seite. |   J <br>(Wenn Sie möchten die aktuellen Preisen zu erhalten.)
-|`/SkuRecommendationRegionName` |   Benennen Sie die Region (z.B.) "USA, Westen") |   J <br>(Wenn Sie möchten die aktuellen Preisen zu erhalten.)
+|`/SkuRecommendationCurrencyCode` | Die Währung, in dem Preise angezeigt werden (z.B.) "USD") | J <br>(Wenn Sie möchten die aktuellen Preisen zu erhalten.)
+|`/SkuRecommendationOfferName` |    Das Angebot benennen (z.B.) "MS-AZR-0003P"). Weitere Informationen finden Sie unter den [Microsoft Azure-Angebotsdetails](https://azure.microsoft.com/support/legal/offer-details/) Seite. |   J <br>(Wenn Sie möchten die aktuellen Preisen zu erhalten.)
+|`/SkuRecommendationRegionName` |   Benennen Sie die Region (z.B.) "WestUS") |   J <br>(Wenn Sie möchten die aktuellen Preisen zu erhalten.)
 |`/SkuRecommendationSubscriptionId` | Die Abonnement-ID. |    J <br>(Wenn Sie möchten die aktuellen Preisen zu erhalten.)
 |`/AzureAuthenticationTenantId` | Die Authentication-Mandant. |  J <br>(Wenn Sie möchten die aktuellen Preisen zu erhalten.)
 |`/AzureAuthenticationClientId` | Die Client-ID der AAD-app für die Authentifizierung verwendet werden soll. | J <br>(Wenn Sie möchten die aktuellen Preisen zu erhalten.)
