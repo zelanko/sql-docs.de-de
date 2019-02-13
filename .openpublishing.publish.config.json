@@ -88,7 +88,5 @@
   "need_generate_pdf_url_template": false,
   "targets": {},
   "need_generate_pdf": false,
-  "need_generate_intellisense": false,
-  "enable_branch_build_custom_validation": true,
-  "enable_pull_request_custom_validation": true,
+  "need_generate_intellisense": false
 }
