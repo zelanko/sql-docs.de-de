@@ -24,7 +24,7 @@ ms.locfileid: "56013001"
 ## <a name="sqlpackage-181"></a>sqlpackage 18.1
 
 Releasedatum: 1. Februar 2019  
-Build 15.0.4316.1 
+Build: 15.0.4316.1 
 
 Die Version enthält die folgenden Features und Fixes:
 
@@ -47,7 +47,7 @@ Diese Version enthält, Cross-Platform Preview-Builds von "Sqlpackage", die .NET
 ## <a name="sqlpackage-180"></a>sqlpackage 18.0
 
 Releasedatum: 24. Oktober 2018  
-Build 15.0.4200.1 
+Build: 15.0.4200.1 
 
 Die Version enthält die folgenden Features und Fixes:
 
@@ -64,8 +64,8 @@ Die Version enthält die folgenden Features und Fixes:
 
 ## <a name="sqlpackage-178"></a>sqlpackage 17.8
 
-Releasedatum: 22. Juni 2018  
-Build 14.0.4079.2  
+Veröffentlichungsdatum: 22. Juni 2018  
+Build: 14.0.4079.2  
 
 Die Version enthält die folgenden Updates:
 
@@ -77,7 +77,7 @@ Die Version enthält die folgenden Updates:
 ## <a name="sqlpackage-1741"></a>sqlpackage 17.4.1
 
 Releasedatum: 25 Januar 2018  
-Build 14.0.3917.1
+Build: 14.0.3917.1
 
 Die Version enthält die folgenden Updates:
 
@@ -89,8 +89,8 @@ Die Version enthält die folgenden Updates:
 
 ## <a name="sqlpackage-1740"></a>sqlpackage 17.4.0
 
-Releasedatum: 12. Dezember 2017  
-Build 14.0.3881.1
+Veröffentlichungsdatum: 12. Dezember 2017  
+Build: 14.0.3881.1
 
 Die Version enthält die folgenden Updates:
 
