@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3495d41028f72093b58f546d3da2139ff02b848d
-ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
+ms.openlocfilehash: 6873ee04323ffbc813553237d79e523023a48618
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898985"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231067"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Schnellstart: Bereitstellen von SQL Server-big Data-Cluster in Azure Kubernetes Service (AKS)
 
@@ -171,56 +171,7 @@ Wenn das Bereitstellungsskript abgeschlossen ist, benachrichtigt die Ausgabe Sie
 2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
 ```
 
-Die SQL Server-big Data-Cluster wird nun in AKS bereitgestellt. Sie können jetzt Studio für Azure Data verwenden, für die Verbindung für die master SQL Server-Instanz und die Verwendung von Azure Data Studio HDFS/Spark-Endpunkte.
-
-### <a id="master"></a> Master-Instanz
-
-Master SQL Server-Instanz ist eine herkömmliche SQL Server-Instanz, die mit der relationalen SQL Server-Datenbanken. Die folgenden Schritte beschreiben, Herstellen einer Verbindung mit der Verwendung von Azure Data Studio Masterinstanz.
-
-1. Suchen Sie über die Befehlszeile die IP-Adresse Ihrer master-Instanz mit dem folgenden Befehl aus:
-
-   ```
-   kubectl get svc endpoint-master-pool -n <your-cluster-name>
-   ```
-
-1. Drücken Sie in Azure Data Studio **F1** > **neue Verbindung**.
-
-1. In **Verbindungstyp**Option **Microsoft SQL Server**.
-
-1. Geben Sie die IP-Adresse in der SQL Server-Masterinstanz **Servernamen** (z. B.: **\<IP-Adresse\>, 31433**).
-
-1. Geben Sie einen SQL-Anmeldenamen **Benutzernamen** (`SA`) und **Kennwort** (das Kennwort, das Sie im Bereitstellungsskript eingegeben haben).
-
-1. Ändern Sie das Ziel **Datenbanknamen** eines relationalen Datenbanken.
-
-   ![Verbinden Sie mit der master-Instanz](./media/quickstart-big-data-cluster-deploy/connect-to-cluster.png)
-
-1. Drücken Sie **Connect**, und die **Serverdashboard** sollte angezeigt werden.
-
-### <a id="hdfs"></a> HDFS/Spark-gateway
-
-Die **HDFS/Spark-Gateway** ermöglicht es Ihnen, für die Arbeit mit dem HDFS-Speicher-Pool und zum Ausführen von Spark-Aufträgen zu verbinden. Die folgenden Schritte beschreiben, wie eine Verbindung mit Azure Data Studio herstellen.
-
-1. Finden Sie über die Befehlszeile die IP-Adresse Ihres HDFS/Spark-Gateways mit dem folgenden Befehl aus:
-
-   ```
-   kubectl get svc service-security-lb -n <your-cluster-name>
-   ```
- 
-1. Drücken Sie in Azure Data Studio **F1** > **neue Verbindung**.
-
-1. In **Verbindungstyp**Option **SQL Server-big Data-Cluster**.
-   
-   > [!TIP]
-   > Wenn Sie nicht sehen die **SQL Server-big Data-Cluster** Verbindung geben, stellen Sie sicher, dass Sie installiert haben die [2019 für SQL Server-Erweiterung](../azure-data-studio/sql-server-2019-extension.md) und dass Sie Azure Data Studio nach der Erweiterung abgeschlossen neu gestartet installieren.
-
-1. Geben Sie die IP-Adresse der big Data-Cluster in **Servernamen** (einen Port nicht angegeben).
-
-1. Geben Sie `root` für die **Benutzer** , und geben Sie die **Kennwort** auf Ihre big Data-Cluster, die Sie im Bereitstellungsskript eingegeben haben.
-
-   ![Verbinden Sie mit HDFS/Spark-gateway](./media/quickstart-big-data-cluster-deploy/connect-to-cluster-hdfs-spark.png)
-
-1. Drücken Sie **Connect**, und die **Serverdashboard** sollte angezeigt werden.
+Die SQL Server-big Data-Cluster wird nun in AKS bereitgestellt. Azure Data Studio können jetzt mit dem Cluster herstellen. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einer SQL Server big Data-cluster mit Azure Data Studio](connect-to-big-data-cluster.md).
 
 ## <a name="clean-up"></a>Bereinigen
 

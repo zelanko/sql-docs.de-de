@@ -5,20 +5,28 @@ description: Erfahren Sie, wie für die master SQL Server-Instanz und das HDFS/S
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/10/2018
+ms.date: 02/12/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9129b436f33092054a19b858fa5bcdb8aebadec2
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 103e02d456f1176c3bb49c1e67f84215399ab5cd
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241821"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231037"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Verbinden Sie mit einer SQL Server-big Data-Cluster mit Azure Data Studio
 
-In diesem Artikel wird beschrieben, wie aus Azure Data Studio eine Verbindung mit einer SQL Server-2019 big Data-Cluster (Vorschau) wird.
+In diesem Artikel wird beschrieben, wie aus Azure Data Studio eine Verbindung mit einer SQL Server-2019 big Data-Cluster (Vorschau) wird. Es gibt zwei Haupt-Endpunkte, die für die Interaktion mit einem big Data-Cluster verwendet werden:
+
+| Endpunkt | Description |
+|---|---|
+| Master für SQL Server-Instanz | Die SQL Server-Masterinstanz in den Cluster mit der relationalen SQL Server-Datenbanken. |
+| HDFS/Spark-gateway | Zugriff auf HDFS-Speicher im Cluster und die Möglichkeit, die Spark-Aufträge auszuführen. |
+
+> [!TIP]
+> Mit der Version Februar 2019 von Azure Data Studio stellt eine Verbindung mit der master SQL Server-Instanz automatisch Benutzeroberfläche Zugriff auf das HDFS/Spark-Gateway bereit.
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
@@ -26,17 +34,13 @@ In diesem Artikel wird beschrieben, wie aus Azure Data Studio eine Verbindung mi
 - [SQL Server-2019 big Data-Tools](deploy-big-data-tools.md):
    - **Azure Data Studio**
    - **SQL Server-2019-Erweiterung**
-   - **"kubectl"**
+   - **kubectl**
 
-## <a name="connect-to-the-cluster"></a>Verbinden mit dem cluster
+## <a id="master"></a> Verbinden mit dem cluster
 
-Wenn Sie mit einem big Data-Cluster verbinden, müssen Sie die Möglichkeit, mit der SQL Server-Masterinstanz oder das HDFS/Spark-Gateway verbinden. Die folgenden Abschnitte zeigen, Herstellen einer Verbindung mit jeder.
+Stellen Sie zum Verbinden mit einem big Data-Cluster mit Azure Data Studio eine neue Verbindung mit SQL Server-Instanz master im Cluster. Die folgenden Schritte beschreiben, Herstellen einer Verbindung mit der Verwendung von Azure Data Studio Masterinstanz.
 
-## <a id="master"></a> Master-Instanz
-
-Master SQL Server-Instanz ist eine herkömmliche SQL Server-Instanz, die mit der relationalen SQL Server-Datenbanken. Die folgenden Schritte beschreiben, Herstellen einer Verbindung mit der Verwendung von Azure Data Studio Masterinstanz.
-
-1. Suchen Sie über die Befehlszeile die IP-Adresse Ihrer master-Instanz mit dem folgenden Befehl aus:
+1. Finden Sie über die Befehlszeile die IP-Adresse Ihrer master-Instanz mit dem folgenden Befehl aus:
 
    ```
    kubectl get svc endpoint-master-pool -n <your-cluster-name>
@@ -59,9 +63,20 @@ Master SQL Server-Instanz ist eine herkömmliche SQL Server-Instanz, die mit der
 
 1. Drücken Sie **Connect**, und die **Serverdashboard** sollte angezeigt werden.
 
-## <a id="hdfs"></a> HDFS/Spark-gateway
+Mit der Version Februar 2019 von Azure Data Studio kann mit der SQL Server-Masterinstanz Sie auch für die Interaktion mit dem HDFS/Spark-Gateway. Dies bedeutet, dass Sie nicht benötigen, verwenden Sie eine separate Verbindung für HDFS und Spark, die im nächsten Abschnitt beschrieben.
 
-Die **HDFS/Spark-Gateway** ermöglicht es Ihnen, für die Arbeit mit dem HDFS-Speicher-Pool und zum Ausführen von Spark-Aufträgen zu verbinden. Die folgenden Schritte beschreiben, wie eine Verbindung mit Azure Data Studio herstellen.
+- Die Objekt-Explorer enthält nun ein neues **Datendienste** Knoten mit der rechten Maustaste-Unterstützung für big Data-Cluster Aufgaben wie erstellen neue Notebooks oder Spark-Aufträge übermitteln. 
+- Die **Datendienste** Knoten enthält auch eine **HDFS** Ordner für das HDFS-durchsuchen und Ausführen von Aktionen wie z. B. Create External Table, oder Analysieren im Notebook.
+- Die **Serverdashboard** für die Verbindung auch Registerkarten für enthält **SQL Server-Cluster für Big Data** und **SQL Server-2019 (Vorschau)** beim Installieren der Erweiterung.
+
+   ![Azure Data Services Studio Datenknoten](./media/connect-to-big-data-cluster/connect-data-services-node.png)
+
+> [!IMPORTANT]
+> Wenn dort **Unbekannter Fehler** in der Benutzeroberfläche möglicherweise zu [direkt an das HDFS/Spark-Gateway verbinden](#hdfs). Eine Ursache für diesen Fehler sind verschiedene Kennwörter für die master SQL Server-Instanz und das HDFS/Spark-Gateway. Azure Data Studio wird davon ausgegangen, dass für beide dasselbe Kennwort verwendet wird.
+  
+## <a id="hdfs"></a> Herstellen einer Verbindung das HDFS/Spark-Gateway mit
+
+In den meisten Fällen, Herstellen einer Verbindung mit der SQL Server-Masterinstanz erhalten Sie Zugriff auf das HDFS und Spark auch über die **Datendienste** Knoten. Allerdings können Sie weiterhin eine dedizierte Verbindung mit erstellen die **HDFS/Spark-Gateway** bei Bedarf. Die folgenden Schritte beschreiben, wie eine Verbindung mit Azure Data Studio herstellen.
 
 1. Finden Sie über die Befehlszeile die IP-Adresse Ihres HDFS/Spark-Gateways mit einem der folgenden Befehle aus.
    

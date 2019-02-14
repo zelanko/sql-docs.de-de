@@ -3,7 +3,7 @@ title: Anmerkungen zu dieser Version und das Änderungsprotokoll
 titleSuffix: Azure Data Studio
 description: Versionshinweise zu Azure Data Studio
 ms.custom: seodec18
-ms.date: 01/17/2019
+ms.date: 02/13/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,17 +11,34 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 163f5740626b0f4cb927272d46acddc79495e4c1
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: bd3151ae475f96b3e4df227bb4d312940c10bed0
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361680"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231127"
 ---
 # <a name="azure-data-studio-latest-release-notes-and-changelog"></a>Azure Data Studio neuesten Anmerkungen zu dieser Version und das Änderungsprotokoll
 
 **[Herunterladen Sie und installieren Sie die neueste Version.](download.md)**
 
+## <a name="february-2019-february-release"></a>Februar 2019 (Februar-Version)
+
+Veröffentlichungsdatum: 13 Februar 2019  
+version: 1.4.5
+
+- Hinzugefügt **Admin Pack für SQL Server** Erweiterungspaket zu erleichtern, Admin-bezogene SQL Server-Erweiterungen zu installieren. Dies schließt Folgendes ein:
+    - [SQL Server-Agent](https://docs.microsoft.com/sql/azure-data-studio/sql-server-agent-extension?view=sql-server-2017)
+    - [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension?view=sql-server-2017)
+    - [SQL Server-Import](https://docs.microsoft.com/sql/azure-data-studio/sql-server-import-extension?view=sql-server-2017)
+- Zusätzliche Unterstützung von nachrichtenfilterung erweiterte Ereignisse in der Profiler-Erweiterung
+- Hinzugefügte speichern als XML-Feature, das T-SQL-Ergebnisse als XML gespeichert werden können
+- Zusätzliche Verbesserungen der Datenebenen-Anwendungs-Assistent
+    - Hinzugefügte Skript Schaltfläche "generieren"
+    - Hinzugefügte Ansicht Warnungen eines möglichen Datenverlusts während der Bereitstellung zu gewähren
+- Updates für die [2019-Vorschau von SQL Server-Erweiterung](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+- Führt streaming standardmäßig aktiviert, lange Ausführung von Abfragen
+- Aufgelöst [Fehler und Probleme](https://github.com/Microsoft/azuredatastudio/milestone/23?closed=1).
 
 ## <a name="january-hotfix-2019-january-hotfix-release"></a>Hotfix für Januar 2019 (Januar-Hotfix-Version)
 

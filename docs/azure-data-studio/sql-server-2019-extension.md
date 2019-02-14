@@ -3,7 +3,7 @@ title: SQL Server-2019-Erweiterung (Vorschau)
 titleSuffix: Azure Data Studio
 description: 2019-Vorschau von SQL Server-Erweiterung für Azure Data Studio
 ms.custom: seodec18
-ms.date: 01/10/2019
+ms.date: 02/13/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -12,16 +12,16 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c41c2a08f0b8d608ef21cd44a60a2d63cdeb5fed
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: c90be7f91c4f3bb465e2cf29b8ee69e2f8d8b6e9
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143313"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231057"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server-2019-Erweiterung (Vorschau)
 
-Die SQL Server-2019-Erweiterung (Vorschau) bietet vorschauunterstützung für die neuen Features und Tools, die Unterstützung des Protokollversands [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Dies schließt die Unterstützung für die Vorschauversion [big Data-Cluster für SQL Server-2019](../big-data-cluster/big-data-cluster-overview.md), eine integrierte [notebookfeatures](../big-data-cluster/notebooks-guidance.md), einer PolyBase [Create External Table-Assistenten](../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json), und [Azure-Ressourcen-Explorer](azure-resource-explorer.md).
+Die SQL Server-2019-Erweiterung (Vorschau) bietet vorschauunterstützung für die neuen Features und Tools, die Unterstützung des Protokollversands [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Dies schließt die Unterstützung für die Vorschauversion [big Data-Cluster für SQL Server-2019](../big-data-cluster/big-data-cluster-overview.md), eine integrierte [notebookfeatures](../big-data-cluster/notebooks-guidance.md), und eine PolyBase [Create External Table-Assistenten](../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json).
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>Installieren der Erweiterung für SQL Server-2019 (Vorschau)
 
@@ -31,9 +31,9 @@ Klicken Sie zum Installieren der SQL Server-2019-Erweiterungs (Vorschauversion) 
 
    |Platform|Herunterladen|Veröffentlichungsdatum|Version
    |:---|:---|:---|:---|
-   |Windows|[VSIX](https://go.microsoft.com/fwlink/?linkid=2051167)|09 Januar 2019 |0.9.1
-   |macOS|[VSIX](https://go.microsoft.com/fwlink/?linkid=2051166)|09 Januar 2019 |0.9.1
-   |Linux|[VSIX](https://go.microsoft.com/fwlink/?linkid=2051165)|09 Januar 2019 |0.9.1
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072794)|13 Februar 2019 |0.10.2
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072793)|13 Februar 2019 |0.10.2
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072792)|13 Februar 2019 |0.10.2
 
 1. Wählen Sie in Azure Data Studio **Erweiterung aus der VSIX-Paket installieren** aus der **Datei** Menü, und wählen Sie die heruntergeladene VSIX-Datei.
 
@@ -44,6 +44,37 @@ Klicken Sie zum Installieren der SQL Server-2019-Erweiterungs (Vorschauversion) 
 1. Nach erneutem Laden, wird die Erweiterung Abhängigkeiten zu installieren. Sehen Sie den Fortschritt im Ausgabefenster angezeigt, und es kann einige Minuten dauern.
 
 1. Nach den Abhängigkeiten die abgeschlossen Sie Installation, schließen Sie und erneut öffnen Sie Studio für Azure Data. Die **SQL Server-big Data-Cluster** Verbindungstyp ist nicht verfügbar, solange Sie Azure Data Studio neu starten.
+
+## <a name="release-notes-v0102"></a>Anmerkungen zu dieser Version (v0.10.2)
+### <a name="sql-server-2019-support"></a>Unterstützung für SQL Server-2019
+Unterstützung für SQL Server-2019 wurde aktualisiert. Für das Herstellen einer Verbindung mit einer SQL Server für Big Data-Cluster-Instanz eine neue _Datendienste_ Ordner wird angezeigt, in der Explorer-Struktur. Dies hat Startpunkte für Aktionen wie z. B. ein neues Notebook für die Verbindung öffnen, Spark-Aufträge übermitteln und Arbeiten mit HDFS. Beachten Sie, dass bei einigen Aktionen wie z. B. _Create External Data_ über eine HDFS-Datei/Ordner, der _Vorschau von SQL Server-2019_ Erweiterung muss installiert sein.
+
+### <a name="notebook-support"></a>Notebook-Unterstützung
+Mit der Notebook-Benutzeroberfläche in dieser Version haben wir wichtige Aktualisierungen vorgenommen. Unser Fokus lag auf erleichtert, Notizbücher lesen, die für Sie freigegeben wurden. Dies bedeutete, entfernen alle Kontrollkästchen, um Zellen beschreiben, es sei denn, die ausgewählt oder gezeigt, Hover-Unterstützung hinzufügen, für leichte auf Zellenebene Aktionen ohne eine Zelle auswählen und Klarstellung Ausführungsstatus durch das Hinzufügen der Ausführungsanzahl, die einen animierten _Anhalten ausgeführt_ Schaltfläche und vieles mehr. Wir auch Tastenkombinationen für hinzugefügt _neues Notizbuch_ (`Ctrl+Shift+N`), _ausführen Zelle_ (`F5`), _neue Codezelle_ (`Ctrl+Shift+C`),  _Neue Textzelle_ (`Ctrl+Shift+T`). Die Zukunft streben wir damit alle wichtige startfähige Aktionen vom Kontextmenü also lassen Sie uns wissen, was Sie versäumt haben wird.
+
+Weitere Verbesserungen und Fehlerbehebungen enthalten:
+* Die _Vorschau von SQL Server-2019_ Erweiterung nun Anweisungen verwendet, wählen Sie ein Installationsverzeichnis ein, für die Python-Abhängigkeiten. Darüber hinaus nicht mehr enthält, Python, die in der `.vsix file`, Reduzieren der Gesamtgröße der Erweiterung. Die Python-Abhängigkeiten sind für die Spark- und Python3-Kernel, zu unterstützen, damit die Installation dieser Erweiterung erforderlich ist, um diese verwenden, erforderlich.
+* Unterstützung für das Starten eines neuen Notebooks über die Befehlszeile wurde hinzugefügt. Starten Sie mit den Argumenten `--command=notebook.command.new --server=myservername` sollte ein neues Notebook zu öffnen und eine Verbindung mit diesem Server herstellen.
+* Leistungskorrekturen für Notebooks, die mit einer großen Länge in Zellen. Wenn codezellen mehr als 250 Zeilen sind, müssen sie eine Bildlaufleiste hinzugefügt.
+* Verbesserte Unterstützung für ipynb-Datei. Version 3 oder höher wird jetzt unterstützt. Beachten Sie, dass zum Speichern von Dateien auf Version 4 oder höher aktualisiert werden.
+* Die `notebook.enabled` wurde von Benutzer-Einstellung entfernt jetzt die integrierten Viewer ist im Notebook stabil
+* Design "hoher Kontrast" wird jetzt in diesem Fall mit einer Zahl mit dem das Objektlayout unterstützt.
+* #3680 Ausgaben, in dem auch eine Anzahl von gezeigt festen `,,,` Zeichen falsch
+* Für Zellen festen #3602-Editor nicht mehr angezeigt wird, nach Azure Data Studio verlassen
+* Unterstützung für Raster-Ansichten verwenden hinzugefügt wurde die `application/vnd.dataresource+json` Ausgabe MIME-Typ. Dies bedeutet, dass viele Notebooks, die diese verwenden (z. B. durch Festlegen von `pd.options.display.html.table_schema` in einem Python-Notebook) müssen nützlicher tabellarische Ausgaben festen #3959 Azure Data Studio, Herunterfahren Notebook-Server, versucht zweimal nach dem Schließen des Notebooks
+
+#### <a name="known-issues"></a>Bekannte Probleme
+* Öffnen Sie ein Notebook wird das Dialogfeld "Python installieren" angezeigt. Abbrechen der Installation führt zu den Kernels und Anhängen an Dropdownlisten nicht angezeigt. erwartete Werte. Die problemumgehung besteht darin, die Python-Installation abzuschließen.
+* Wenn ein Notebook mit einem Kernel geöffnet wird, die nicht unterstützt wird, den Kernel und _Anfügen an_ Dropdownlisten führt dazu, dass Azure Data Studio nicht mehr reagiert. Sie müssen Azure Data Studio zu schließen, und stellen Sie sicher, Sie verwenden einen Kernel, die unterstützt wird (Python3, Spark | R, Spark | Scala, PySpark, PySpark3)
+* Spark-Benutzeroberfläche Link schlägt fehl, wenn PySpark3 oder andere Spark-Kernel für den SQL Server-Endpunkt verwenden. Als problemumgehung klicken Sie auf die Spark-Benutzeroberfläche, über das Dashboard und das Herstellen einer Verbindung mit der SQL Server big Data-Cluster-Verbindungstyp aus, wie dies mit den richtigen Link für Spark-Benutzeroberfläche hat
+
+### <a name="extensibility-improvements"></a>Verbesserungen der Erweiterbarkeit
+In dieser Version wurden eine Reihe von Verbesserungen, mit denen Extender hinzugefügt.
+* Ein neues `ObjectExplorerNodeProvider` -API können Sie Erweiterungen für die Ordner in SQL Server oder anderen Verbindungsknoten beitragen. Dies ist die `Data Services` Knoten unter 2019 für SQL Server-Instanzen hinzugefügt, aber verwendet werden, um die Überwachung oder eine andere Ordner einfach die Benutzeroberfläche hinzufügen.
+* Zwei neue Kontext Schlüsselwerte sind verfügbar, die ein-/ausblenden-Beiträge an das Dashboard zu unterstützen.
+  * `mssql:iscluster` Gibt an, ob dies eine SQL Server 2019 Big Data-Cluster
+  * `mssql:servermajorversion` hat die Server-Version (15 für SQL Server-2019, 14 für SQL Server 2017 und So weiter). Dies kann helfen, wenn Funktionen nur für SQL Server 2017 oder höher, z. B. angezeigt werden soll.
+
 
 ## <a name="release-notes-v080"></a>Anmerkungen zu dieser Version (Version 0.8.0)
 *Notebooks*:

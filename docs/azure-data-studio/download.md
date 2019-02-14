@@ -3,7 +3,7 @@ title: Zur Installation herunterladen können Sie
 titleSuffix: Azure Data Studio
 description: Herunterladen und installieren Sie Azure Data Studio für Windows, MacOS oder Linux
 ms.custom: seodec18
-ms.date: 01/17/2019
+ms.date: 02/13/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,33 +11,31 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 09e459b61350a100a64a788e0c7746d9a2ae623e
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 06aaaf90d9012d3f68c6b19c794a1d4de1ad13d9
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361610"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231117"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Herunterladen und Installieren von Azure Data Studio
 
   > [!div class="nextstepaction"]
-  > [Teilen Sie uns Ihr Feedback zu SQL-Dokumentation des Inhaltsverzeichnisses!](https://aka.ms/sqldocsurvey)
+  > [Senden Sie uns Ihr Feedback zum Inhaltsverzeichnis der SQL-Dokumentation!](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] auf Windows, MacOS und Linux ausgeführt wird.
 
 
-Herunterladen und installieren die neueste Version der *Release von Januar Hotfix*:
-
-Version 1.3.9 behebt einige Probleme, die in 1.3.8 ermittelt wurden. Weitere Informationen finden Sie unter [Hotfix-Release aus Januar](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1).
+Herunterladen und installieren die neueste Version der *Release von Februar*:
 
 > [!NOTE]
 > Wenn Sie über SQL Operations Studio aktualisieren und Ihre Einstellungen, Tastenkombinationen in Visual Studio oder Codeausschnitte beibehalten möchten, finden Sie unter [verschieben benutzereinstellungen](#move-user-settings).
 
 |Platform|Herunterladen|Veröffentlichungsdatum| Version |
 |:---|:---|:---|:---|
-|Windows|[Installationsprogramm für Benutzer (empfohlen)](https://go.microsoft.com/fwlink/?linkid=2049972)<br>[System-Installer](https://go.microsoft.com/fwlink/?linkid=2049975)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2050146)|16 Januar 2019 |1.3.9|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2049981)|16 Januar 2019 |1.3.9|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2050157)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2049989)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2049986)|16 Januar 2019 |1.3.9|
+|Windows|[Installationsprogramm für Benutzer (empfohlen)](https://go.microsoft.com/fwlink/?linkid=2072725)<br>[System-Installer](https://go.microsoft.com/fwlink/?linkid=2072728)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2072354)|13 Februar 2019 |1.4.5|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2072737)|13 Februar 2019 |1.4.5|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2072744)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2072741)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2072360)|13 Februar 2019 |1.4.5|
 
 Weitere Informationen über die neueste Version finden Sie unter den [Anmerkungen zu dieser Version](release-notes.md).
 
@@ -49,25 +47,25 @@ Diese Version von [!INCLUDE[name-sos](../includes/name-sos-short.md)] enthält e
 
 Das Installationsprogramm für Benutzer wird empfohlen, da es keine Administratorrechte verfügt, benötigt wird, die sowohl Installationen und Upgrades vereinfacht.
 
-1. Herunterladen und Ausführen der [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *Benutzer* Installer für Windows](https://go.microsoft.com/fwlink/?linkid=2049972).
+1. Herunterladen und Ausführen der [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *Benutzer* Installer für Windows](https://go.microsoft.com/fwlink/?linkid=2072725).
 2. Starten Sie den [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
 
 **System-Installer**
 
-1. Herunterladen und Ausführen der [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *System* Installer für Windows](https://go.microsoft.com/fwlink/?linkid=2049975).
+1. Herunterladen und Ausführen der [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *System* Installer für Windows](https://go.microsoft.com/fwlink/?linkid=2072728).
 2. Starten Sie den [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
 
 
 **zip-Datei**
 
-1. Herunterladen [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] ZIP für Windows](https://go.microsoft.com/fwlink/?linkid=2050146).
+1. Herunterladen [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] ZIP für Windows](https://go.microsoft.com/fwlink/?linkid=2072737).
 2. Suchen Sie die heruntergeladene Datei, und extrahieren Sie sie.
 3. Ausführen von `\azuredatastudio-windows\azuredatastudio.exe`
 
 
 ## <a name="get-azure-data-studio-for-macos"></a>Abrufen von Azure Data Studio für macOS
 
-1. Herunterladen [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] für MacOS](https://go.microsoft.com/fwlink/?linkid=2049981).
+1. Herunterladen [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] für MacOS](https://go.microsoft.com/fwlink/?linkid=2072737).
 2. Doppelklicken Sie darauf, um den Inhalt der ZIP-Datei zu erweitern.
 3. Vornehmen [!INCLUDE[name-sos](../includes/name-sos-short.md)] zur Verfügung, in der *Launchpad*, ziehen Sie *Azure Daten Studio.app* auf die *Anwendungen* Ordner.
 
@@ -75,9 +73,9 @@ Das Installationsprogramm für Benutzer wird empfohlen, da es keine Administrato
 ## <a name="get-azure-data-studio-for-linux"></a>Azure Data-Studio für Linux herunterladen
 
 1. Herunterladen [!INCLUDE[name-sos](../includes/name-sos-short.md)] für Linux mithilfe eines der Installationsprogramme oder das Archiv für die ".TAR.gz":
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2050157)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2049989)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2049986)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2072744)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2072741)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2072360)
 1. Extrahieren Sie die Datei, und starten Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)], öffnen Sie ein neues Terminalfenster, und geben Sie die folgenden Befehle:
 
    **Debian-Installation:**
