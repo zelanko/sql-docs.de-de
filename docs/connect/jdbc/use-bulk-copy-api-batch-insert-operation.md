@@ -1,7 +1,7 @@
 ---
 title: Die API für Massenkopieren für Batch-Insert-Vorgang für MSSQL-JDBC-Treiber mit | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/27/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b205e27f24693a2dfaa6fcff2245cf45288a12b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3d3c7cc4d8dd7beeb620a211b2f41a1d1105a04
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696560"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737101"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Verwenden der Massenkopierungs-API für den Batcheinfügungsvorgang
 
@@ -65,7 +65,7 @@ Es gibt derzeit diese Einschränkungen, die für dieses Feature gelten.
 * INSERT-Abfragen, die INSERT-SELECT-Ausdrücke enthalten (z. B. `INSERT INTO TABLE SELECT * FROM TABLE2`), werden nicht unterstützt.
 * INSERT-Abfragen, die mehrere Ausdrücke enthalten (z. B. `INSERT INTO TABLE VALUES (1, 2) (3, 4)`), werden nicht unterstützt.
 * Abfragen zum Einfügen, die gefolgt von der OPTION-Klausel, mit mehreren Tabellen verknüpft oder gefolgt von einer anderen Abfrage werden nicht unterstützt.
-* Aufgrund von Beschränkungen der API für Massenkopieren `DATETIME`, `SMALLDATETIME`,`GEOMETRY`, und `GEOGRAPHY` -Datentypen werden für diese Funktion nicht unterstützt.
+* Aufgrund von Beschränkungen der API für Massenkopieren `MONEY`, `SMALLMONEY`, `DATE`, `DATETIME`, `DATETIMEOFFSET`, `SMALLDATETIME`, `TIME`, `GEOMETRY`, und `GEOGRAPHY` -Datentypen werden derzeit nicht unterstützt für diesen -Funktion.
 
 Wenn die Abfrage schlägt, da nicht fehl "SQLServer" von Netzwerkfehlern, der Treiber protokolliert der Fehlermeldung und der Fallback mit der ursprünglichen Logik für das Batch-einfügen.
 
@@ -140,6 +140,6 @@ Starting batch operation using Bulk Copy API.
 Finished. Time taken : 1058 milliseconds.
 ```
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [Verbessern von Leistung und Zuverlässigkeit mit dem JDBC-Treiber](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)

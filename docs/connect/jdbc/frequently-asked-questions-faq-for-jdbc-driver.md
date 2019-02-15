@@ -1,7 +1,7 @@
 ---
 title: Häufig gestellte Fragen (FAQ) zum JDBC-Treiber | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/19/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc5b7200dba7ed17da0b6c48f64c83c48a38064f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: MTE75
+ms.openlocfilehash: cb77bd5ac3ccc2e12dd7fbf9aff956981b25bce3
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398263"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737051"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Häufig gestellte Fragen (FAQ) zum JDBC-Treiber
 
@@ -35,7 +35,14 @@ Detaillierte Informationen hierzu finden Sie auf der Seite [Supportmatrix für d
 **Was ist der Unterschied zwischen der JDBC-Treiberpakete, die auf dem Microsoft Download Center verfügbar und JDBC-Treiber auf GitHub verfügbar?**  
 JDBC-Treiber auf das GitHub-Repository für die verfügbaren Dateien des Microsoft JDBC-Treibers sind der Kern des JDBC-Treibers und unter der Open-Source-Lizenz, die im Repository aufgeführt sind. Die Treiberpakete aus, auf dem Microsoft Download Center enthalten zusätzliche Bibliotheken für die integrierte Windows-Authentifizierung und XA-Transaktionen mit dem JDBC-Treiber zu aktivieren. Diese zusätzliche Bibliotheken sind unter der Lizenz, die im herunterladbaren Paket.
 
-**Was sollte ich wissen, bevor ich meinen Treiber aktualisiere?**  
+**Was sollte ich wissen, bevor ich meinen Treiber aktualisiere?**
+Die Microsoft JDBC-Treiber 7.2 unterstützt der JDBC 4.2 und 4.3 (teilweise)-Spezifikationen und enthält zwei JAR-Klassenbibliotheken in das Installationspaket für das wie folgt:
+
+| JAR                        | JDBC-Spezifikation            | JDK-Version |
+| -------------------------- | ----------------------------- | ----------- |
+| mssql-jdbc-7.2.0.jre11.jar | JDBC 4.3 (teilweise) und 4.2 | JDK 11.0    |
+| mssql-jdbc-7.2.0.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+
  Der Microsoft JDBC-Treiber-7.0 unterstützt der JDBC 4.2 und 4.3 (teilweise)-Spezifikationen und enthält zwei JAR-Klassenbibliotheken in das Installationspaket für das wie folgt:
 
 | JAR                        | JDBC-Spezifikation            | JDK-Version |
@@ -55,8 +62,8 @@ Der Microsoft JDBC-Treiber 6.2 unterstützt die JDBC 4.0, 4.1 und 4.2-Spezifikat
 
 | JAR                       | JDBC-Spezifikation     | JDK-Version |
 | ------------------------- | ---------------------- | ----------- |
-| MSSQL-Jdbc-6.2.2.jre8.jar | JDBC 4.2, 4.1 und 4.0 | JDK 8.0     |
-| MSSQL-Jdbc-6.2.2.jre7.jar | JDBC 4.1 und 4.0       | JDK 7.0     |
+| mssql-jdbc-6.2.2.jre8.jar | JDBC 4.2, 4.1 und 4.0 | JDK 8.0     |
+| mssql-jdbc-6.2.2.jre7.jar | JDBC 4.1 und 4.0       | JDK 7.0     |
 
 Der Microsoft JDBC-Treiber 6.0 4.2 für SQL Server unterstützt die JDBC 4.0, 4.1 und 4.2-Spezifikationen und enthalten zwei JAR-Klassenbibliotheken in das Installationspaket für das wie folgt:
 
@@ -105,7 +112,7 @@ Die verfügbaren Authentifizierungsoptionen sind in der folgenden Tabelle aufgel
 Ja. Der Treiber unterstützt die Verwendung von IPv6-Adressen. Verwenden Sie die Verbindungseigenschaften und die Verbindungszeichenfolgen ServerName-Eigenschaft. Weitere Informationen finden Sie unter [Erstellen der Verbindungs-URL](../../connect/jdbc/building-the-connection-url.md).
 
 **Was ist die adaptive Pufferung?**  
-Die Adaptive Pufferung wurde erstmals in Microsoft SQL Server 2005 JDBC Driver, Version 1.2. Mit der adaptiven Pufferung können Daten mit einer großen Menge an Werten ohne den durch Servercursor verursachten Overhead abgerufen werden. Die adaptive Pufferung des Microsoft SQL Server JDBC Drivers stellt mit „responseBuffering“ eine Eigenschaft für Verbindungszeichenfolgen bereit, die auf „adaptive“ oder „full“ festgelegt werden kann. In Version 1.2 lautet der Puffermodus standardmäßig „full“, und die Anwendung muss den Modus für die adaptive Pufferung explizit festlegen. Ab Version 2.0 des JDBC-Treibers ist das Standardverhalten des Treibers „adaptive“. Daher muss Ihre Anwendung das adaptive Verhalten nicht explizit anfordern, um ein adaptives Pufferverhalten zu erzielen. Weitere Informationen finden Sie unter [Verwenden der adaptiven Pufferung](../../connect/jdbc/using-adaptive-buffering.md) und im Blogartikel [What is adaptive response buffering and why should I use it?](https://go.microsoft.com/fwlink/?LinkId=111575) (Was ist die adaptive Antwortpufferung und warum sollte ich sie verwenden?).
+Die Adaptive Pufferung wurde erstmals in Microsoft SQL Server 2005 JDBC Driver, Version 1.2. Mit der adaptiven Pufferung können Daten mit einer großen Menge an Werten ohne den durch Servercursor verursachten Overhead abgerufen werden. Die adaptive Pufferung des Microsoft SQL Server JDBC Drivers stellt mit „responseBuffering“ eine Eigenschaft für Verbindungszeichenfolgen bereit, die auf „adaptive“ oder „full“ festgelegt werden kann. In Version 1.2 lautet der Puffermodus standardmäßig „full“, und die Anwendung muss den Modus für die adaptive Pufferung explizit festlegen. Ab Version 2.0 des JDBC-Treibers ist das Standardverhalten des Treibers „adaptive“. Daher muss Ihre Anwendung das adaptive Verhalten nicht explizit anfordern, um ein adaptives Pufferverhalten zu erzielen. Weitere Informationen finden Sie unter [Using Adaptive Buffering (Verwenden der adaptiven Pufferung)](../../connect/jdbc/using-adaptive-buffering.md) und im Blogbeitrag [What is adaptive response buffering and why should I use it? (Was ist die adaptive Pufferung und warum sollte ich sie verwenden?)](https://go.microsoft.com/fwlink/?LinkId=111575).
 
 **Unterstützt der Treiber das Verbindungspooling?**  
 Der Treiber unterstützt das Verbindungspooling unter Java Platform, Enterprise Edition 5 (Java EE 5). Der Treiber implementiert die erforderlichen JDBC 3.0-Schnittstellen, damit er implementiertes Verbindungspooling von Anbietern für Anwendungsserver auf Middleware-Ebene nutzen kann. Der Treiber nutzt in diesen Umgebungen Verbindungspool. Weitere Informationen finden Sie unter [Using Connection Pooling](../../connect/jdbc/using-connection-pooling.md). Der Treiber bietet keine eigene Implementierung des Poolings, sondern es beruht auf Java-Anwendungsservern von Drittanbietern.
@@ -128,6 +135,6 @@ Kunden, die SAP-Produkte verwenden und die Unterstützung für JRE 14. benötige
 **Kann der Treiber mit durch FIPS validierten Algorithmen kommunizieren?**  
 Der Microsoft JDBC-Treiber enthält keine kryptografischen Algorithmen. Wenn ein Kunde Algorithmen für Betriebssysteme, Anwendungen und JVM verwendet, die entsprechend der Federal Information Processing Standards (FIPS) zulässig sind, und der Kunde den Treiber für die Verwendung dieser Algorithmen konfiguriert, dann verwendet der Treiber nur die festgelegten Algorithmen für die Kommunikation.
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [Overview of the JDBC Driver (Übersicht über den JDBC-Treiber)](../../connect/jdbc/overview-of-the-jdbc-driver.md)

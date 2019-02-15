@@ -1,7 +1,7 @@
 ---
 title: Mithilfe von erweiterten Datentypen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,18 +11,18 @@ ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b794a8c93fd7a9c83e783a04999cbeb8a9e58f48
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ddef588be6f7e15c8a3f7f8e981a44cfcb5c9076
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510500"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736821"
 ---
 # <a name="using-advanced-data-types"></a>Verwenden von erweiterten Datentypen
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] verwendet die erweiterten JDBC-Datentypen für die Konvertierung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen in ein Format, das von der Programmiersprache Java verarbeitet werden kann.  
+Der [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] verwendet die erweiterten JDBC-Datentypen für die Konvertierung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen in ein Format, das von der Programmiersprache Java verarbeitet werden kann.  
   
 ## <a name="remarks"></a>Remarks
 
@@ -32,10 +32,13 @@ Die folgende Tabelle enthält eine Liste der Standardzuordnungen zwischen den er
 |----------------------|-----------------------------------|-------------------------|  
 |varbinary(max)<br /><br /> image|LONGVARBINARY|byte[] \(default), Blob, InputStream, String|  
 |text<br /><br /> varchar(max)|LONGVARCHAR|String (Standard), Clob, InputStream|  
-|ntext<br /><br /> nvarchar(max)|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String (Standard), Clob, NClob (Java SE 6.0)|  
-|xml|LONGVARCHAR<br /><br /> SQLXML (Java SE 6.0)|String (default), InputStream, Clob, byte[], Blob, SQLXML (Java SE 6.0)|  
+|ntext<br /><br /> nvarchar(max)|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String (default), Clob, NClob|  
+|xml|LONGVARCHAR<br /><br /> SQLXML|String (default), InputStream, Clob, byte[], Blob, SQLXML|  
 |Udt<sup>1</sup>|VARBINARY|String (Standard), byte[], InputStream|  
-  
+|sqlvariant|SQLVARIANT|Objekt|  
+|Geometrie<br /><br /> geography|VARBINARY|byte[]|  
+
+
 <sup>1</sup> Der [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] unterstützt zwar das Senden und Abrufen von CLR-UDTs als binäre Daten, jedoch können CLR-Metadaten nicht bearbeitet werden.  
   
 Die folgenden Abschnitte enthalten Beispiele für die Verwendung des JDBC-Treibers und der erweiterten Datentypen.  
@@ -156,7 +159,7 @@ Die Implementierung des **XML**-Datentyps im JDBC-Treiber ermöglicht Folgendes:
   
 - Zugriff auf XML-Daten als Bytearray mit führender Bytereihenfolgemarke (Byte Order Mark, BOM) bei Codierung in UTF-16 für den Austausch mit anderen XML-Prozessoren und Datenträgerdateien  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setzt eine führende BOM für UTF-16-codierte XML-Daten voraus. Die Anwendung muss diese bereitstellen, wenn XML-Parameterwerte als Bytearrays angegeben werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt XML-Werte immer in Form von UTF-16-Zeichenfolgen ohne BOM oder eingebettete Kodierungsdeklaration aus. Wenn XML-Werte als "byte[]", "BinaryStream" oder "Blob" abgerufen werden, steht vor dem Wert ein UTF-16-BOM.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setzt eine führende BOM für UTF-16-codierte XML-Daten voraus. Die Anwendung muss diese bereitstellen, wenn XML-Parameterwerte als Bytearrays angegeben werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt XML-Werte immer in Form von UTF-16-Zeichenfolgen ohne BOM oder eingebettete Codierungsdeklaration aus. Wenn XML-Werte als "byte[]", "BinaryStream" oder "Blob" abgerufen werden, steht vor dem Wert ein UTF-16-BOM.  
   
 Weitere Informationen zum **XML**-Datentyp finden Sie in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation unter „XML-Datentyp“.  
   
@@ -168,6 +171,14 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann ein UDT als Sp
   
 Weitere Informationen zu benutzerdefinierten Datentypen finden Sie in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation unter „Verwenden und Ändern von Instanzen von benutzerdefinierten Typen“.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="sqlvariant-data-type"></a>Datentyp „Sql_variant“
+
+Weitere Informationen zu den Sql_variant-Datentyp, finden Sie unter [mithilfe von Sql_variant-Datentyp](../../connect/jdbc/using-sql-variant-datatype.md).  
+
+## <a name="spatial-data-types"></a>Räumliche Datentypen
+
+Weitere Informationen zu räumlichen Datentypen, finden Sie unter [räumliche Datentypen mithilfe von](../../connect/jdbc/use-spatial-datatypes.md).  
+
+## <a name="see-also"></a>Weitere Informationen
 
 [Grundlegendes zu den Datentypen in JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

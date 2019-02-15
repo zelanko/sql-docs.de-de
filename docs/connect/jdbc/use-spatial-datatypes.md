@@ -1,7 +1,7 @@
 ---
 title: Räumliche Datentypen mit | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/30/2018
+ms.date: 01/21/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a51d15875051fbe2a2a034526a95c16bed076db
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 4d00692b0b5872b1020f900587a24a3116aee9be
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460545"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737011"
 ---
 # <a name="using-spatial-datatypes"></a>Verwendung von räumlichen Datentypen
 
@@ -91,7 +91,7 @@ Hierbei handelt es sich um den neuen öffentlichen APIs, die mit folgender Ergä
 |Methode|und Beschreibung|
 |:------|:----------|
 |"void" SetGeometry (Int-n, Geometrie X)| Legt den angegebenen Parameter mit dem angegebenen microsoft.sql.Geometry Klassenobjekt.
-|"void" SetGeography (Int-n, Geography X)| Legt den angegebenen Parameter mit dem angegebenen microsoft.sql.Geography Klassenobjekt.
+|void setGeography(int n, Geography x)| Legt den angegebenen Parameter mit dem angegebenen microsoft.sql.Geography Klassenobjekt.
 
 ### <a name="sqlserverresultset"></a>SQLServerResultSet
 
@@ -107,22 +107,22 @@ Hierbei handelt es sich um den neuen öffentlichen APIs, die mit folgender Ergä
 |Methode|und Beschreibung|
 |:------|:----------|
 |Geometry STGeomFromText (Wkt String, Int SRID)| Konstruktor für eine Geometry-Instanz aus einer WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium), die um alle von der Instanz getragenen Z- und M-Werte (Höhe/Measure) erweitert wurde.
-|Geometry STGeomFromWKB (Byte [] Wkb)| Konstruktor für eine Geometry-Instanz aus einer Darstellung des Typs „Open Geospatial-Konsortium (OGC) Well-Known Binary (WKB)“.
+|Geometry STGeomFromWKB(byte[] wkb)| Konstruktor für eine Geometry-Instanz aus einer Darstellung des Typs „Open Geospatial-Konsortium (OGC) Well-Known Binary (WKB)“.
 |Geometrien Deserialisieren (Byte [] Wkb)| Konstruktor für eine Geometry-Instanz aus einem internen SQL Server-Format für räumliche Daten.
 |Geometry-Analyse (well-Zeichenfolge)| Konstruktor für eine Geometry-Instanz aus einer WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium). Räumliche Verweisbezeichner ist auf 0 eingestellt.
 |Geometry, Point (Double X "," double "y" Int SRID)| Konstruktor für eine Geometry-Instanz, die die X- und Y-Werte und eine Spatial Reference Identifier eine Point-Instanz darstellt.
 |Zeichenfolge STAsText()| Gibt die WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium) einer Geometry-Instanz zurück. Dieser Text enthält keine Z (Höhe)- oder M (Measure)-Werte, die von der Instanz getragen werden.
-|Byte [] STAsBinary()| Gibt die WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium) einer Geometry-Instanz zurück. Dieser Wert enthält keine Z- oder M-Werte, die von der Instanz getragen werden.
-|Byte [] serialize()| Gibt die Bytes zurück, die ein internes SQL Server-Format vom Geometry-Typ darstellen.
+|byte[] STAsBinary()| Gibt die WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium) einer Geometry-Instanz zurück. Dieser Wert enthält keine Z- oder M-Werte, die von der Instanz getragen werden.
+|byte[] serialize()| Gibt die Bytes zurück, die ein internes SQL Server-Format vom Geometry-Typ darstellen.
 |Boolesche hasM()| Gibt zurück, wenn das Objekt einen M (Measure)-Wert enthält.
 |Boolesche hasZ()| Gibt zurück, wenn das Objekt einen Z (Höhe)-Wert enthält.
 |Doppelte getX()| Gibt die X-Koordinatenwert zurück.
 |Doppelte getY()| Gibt die Y-Koordinatenwert zurück.
 |Doppelte getM()| Gibt den Wert M (Measure) des Objekts.
 |Doppelte getZ()| Gibt die Z-(Höhe)-Wert des Objekts zurück.
-|Int getSrid()| Gibt den Wert (SRID, Spatial Reference Identifier).
-|Boolesche isNull()| Gibt zurück, wenn das Geometry-Objekt auf null festgelegt ist.
-|Int STNumPoints()| Gibt die Anzahl der Punkte in der Geometry-Objekt zurück.
+|int getSrid()| Gibt den Wert (SRID, Spatial Reference Identifier).
+|boolean isNull()| Gibt zurück, wenn das Geometry-Objekt auf null festgelegt ist.
+|int STNumPoints()| Gibt die Anzahl der Punkte in der Geometry-Objekt zurück.
 |Zeichenfolge STGeometryType()| Gibt den durch eine geometry-Instanz dargestellten Open Geospatial Consortium (OGC)-Typnamen zurück.
 |Zeichenfolge asTextZM()| Gibt die Well-Known Text (WKT)-Darstellung der Geometry-Objekt zurück.
 |Zeichenfolge toString()| Gibt die Zeichenfolgendarstellung des Geometry-Objekts zurück.
@@ -132,22 +132,22 @@ Hierbei handelt es sich um den neuen öffentlichen APIs, die mit folgender Ergä
 |Methode|und Beschreibung|
 |:------|:----------|
 |Geography STGeomFromText (Wkt String, Int SRID)| Konstruktor für eine Geography-Instanz aus einer WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium), die um alle von der Instanz getragenen Z- und M-Werte (Höhe/Measure) erweitert wurde.
-|Geography STGeomFromWKB (Byte [] Wkb)| Konstruktor für eine Geography-Instanz aus einer Darstellung des Typs „Open Geospatial-Konsortium (OGC) Well-Known Binary (WKB)“.
+|Geography STGeomFromWKB(byte[] wkb)| Konstruktor für eine Geography-Instanz aus einer Darstellung des Typs „Open Geospatial-Konsortium (OGC) Well-Known Binary (WKB)“.
 |Geography Deserialisieren (Byte [] Wkb)| Konstruktor für eine Geography-Instanz aus einem internen SQL Server-Format für räumliche Daten.
 |Geography-Analyse (well-Zeichenfolge)| Konstruktor für eine Geography-Instanz aus WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium). Räumliche Verweisbezeichner ist auf 0 eingestellt.
-|Geografiepunkt (Lat, Lon double, Int SRID doppelte)| Konstruktor für eine Geography-Instanz, die mit Ihren Breitengrad- und Längengradwerten sowie mit einem Spatial Reference Identifier eine Point-Instanz darstellt.
+|Geografiepunkt (doppelte Lon, Lat double, Int SRID)| Konstruktor für eine Geography-Instanz, die mit Ihren Längen- und Breitengraden sowie mit einem Spatial Reference Identifier eine Point-Instanz darstellt.
 |Zeichenfolge STAsText()| Gibt die WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium) einer Geography-Instanz zurück. Dieser Text enthält keine Z (Höhe)- oder M (Measure)-Werte, die von der Instanz getragen werden.
-|Byte [] STAsBinary())| Gibt die WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium) einer Geography-Instanz zurück. Dieser Wert enthält keine Z- oder M-Werte, die von der Instanz getragen werden.
-|Byte [] serialize()| Gibt die Bytes zurück, die ein internes SQL Server-Format vom Geography-Typ darstellen.
+|byte[] STAsBinary())| Gibt die WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium) einer Geography-Instanz zurück. Dieser Wert enthält keine Z- oder M-Werte, die von der Instanz getragen werden.
+|byte[] serialize()| Gibt die Bytes zurück, die ein internes SQL Server-Format vom Geography-Typ darstellen.
 |Boolesche hasM()| Gibt zurück, wenn das Objekt einen M (Measure)-Wert enthält.
 |Boolesche hasZ()| Gibt zurück, wenn das Objekt einen Z (Höhe)-Wert enthält.
 |Doppelte getLatitude()| Der Breitengradwert zurückgegeben.
-|Doppelte getLongitude()| Gibt den Wert der geografische Länge zurück.
+|Double getLongitude()| Gibt den Wert der geografische Länge zurück.
 |Doppelte getM()| Gibt den Wert M (Measure) des Objekts.
 |Doppelte getZ()| Gibt die Z-(Höhe)-Wert des Objekts zurück.
-|Int getSrid()| Gibt den Wert (SRID, Spatial Reference Identifier).
-|Boolesche isNull()| Gibt zurück, wenn der Geography-Objekt auf null festgelegt ist.
-|Int STNumPoints()| Gibt die Anzahl der Punkte in der Geography-Objekt zurück.
+|int getSrid()| Gibt den Wert (SRID, Spatial Reference Identifier).
+|boolean isNull()| Gibt zurück, wenn der Geography-Objekt auf null festgelegt ist.
+|int STNumPoints()| Gibt die Anzahl der Punkte in der Geography-Objekt zurück.
 |Zeichenfolge STGeographyType()| Gibt den durch eine geography-Instanz dargestellten Open Geospatial Consortium (OGC)-Typnamen zurück.
 |Zeichenfolge asTextZM()| Gibt die Well-Known Text (WKT)-Darstellung der Geography-Objekt zurück.
 |Zeichenfolge toString()| Gibt die Zeichenfolgendarstellung des Geography-Objekts zurück.
@@ -160,6 +160,6 @@ Hierbei handelt es sich um den neuen öffentlichen APIs, die mit folgender Ergä
 
 3. Gespeicherte Prozeduren, BulkCopy und Tabellenwertparameter Vorgänge werden mit räumlichen Datentypen derzeit nicht unterstützt.
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [Beispiel für räumliche Datentypen (JDBC)](../../connect/jdbc/spatial-data-types-sample.md)

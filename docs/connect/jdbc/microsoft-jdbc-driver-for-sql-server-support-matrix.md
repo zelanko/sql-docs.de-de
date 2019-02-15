@@ -1,7 +1,7 @@
 ---
 title: Supportmatrix für den Microsoft JDBC-Treiber für SQL Server | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/19/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 955fc16232857d9c9f04b56d62985116ac3e6338
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
-ms.translationtype: MTE75
+ms.openlocfilehash: 9b086ca3912e8b8a308840a229c448edeb92b60f
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605800"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736925"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Supportmatrix für den Microsoft JDBC-Treiber für SQL Server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,9 +32,10 @@ ms.locfileid: "51605800"
   
 |Treibername|Version des Treiberpakets|Zutreffend JAR(s)|Ende des Mainstream-Support|
 |-|-|-|-|  
+|Microsoft JDBC-Treiber 7.2 für SQL Server|7.2|mssql-jdbc-7.2.0.jre11.jar<br> mssql-jdbc-7.2.0.jre8.jar|31 Jan 2024|
 |Microsoft JDBC-Treiber 7.0 für SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|31 Juli 2023|  
 |Microsoft JDBC-Treiber 6.4 für SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|27 Februar 2023|    
-|Microsoft JDBC-Treiber 6.2 für SQL Server|6.2|MSSQL-Jdbc-6.2.2.jre8.jar<br> MSSQL-Jdbc-6.2.2.jre7.jar|30 Juni 2022|    
+|Microsoft JDBC-Treiber 6.2 für SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|30. Juni 2022|    
 |Microsoft JDBC-Treiber 6.0 für SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|14 Juli 2021|    
 |Der Microsoft JDBC-Treiber 4.2 für SQL Server|4.2|sqljdbc42.jar<br>sqljdbc41.jar|24. August 2020|  
 |Microsoft JDBC-Treiber 4.1 für SQL Server|4.1|sqljdbc41.jar|12. Dezember 2019|  
@@ -55,6 +56,7 @@ ms.locfileid: "51605800"
   
 |Treiberversion|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL-Datenbank|PDW 2008R2 AU3<sup>4</sup>|SQLServer 2014|SQL Server 2016|SQL Server 2017|Verwaltete Azure SQL-Instanz (Erweiterte Private Vorschau)|  
 |-|-|-|-|-|-|-|-|-|-|
+|7.2|N|J|J|J|J|J|J|J|J|  
 |7.0|N|J|J|J|J|J|J|J|J|  
 |6.4|N|J|J|J|J|J|J|J|J|  
 |6.2|J|J|J|J|J|J|J|J|N|
@@ -84,7 +86,8 @@ ms.locfileid: "51605800"
   
 |Version des JDCB-Treibers|JRE-Version|JDBC-API-Version| 
 |-|-|-|  
-|7.0|1.8, 10|4.2, 4.3 (teilweise)|  
+|7.2|1.8, 11|4.2, 4.3 (teilweise)|
+|7.0|1.8, 10|4.2, 4.3 (teilweise)|
 |6.4|1.7, 1.8, 9|4.1, 4.2, 4.3 (teilweise)|  
 |6.2|1.7, 1.8|4.1, 4.2|  
 |6.1|1.7, 1.8|4.1, 4.2|  
