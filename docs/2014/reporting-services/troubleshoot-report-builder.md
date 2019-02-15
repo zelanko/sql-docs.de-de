@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3806fc48-56f8-44d1-a3c1-df8c33cce0a3
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 22eb90e4fc162d2805f760e8f0b3152c3791111f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 78f9232b45be9c70a8a244ff97af7d401419d49a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017691"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297168"
 ---
 # <a name="troubleshoot-report-builder"></a>Problembehandlung in Berichts-Generator
   Der Berichts-Generator ist ein [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichterstellungstool, mit dem Sie Berichte aus verschiedenen Datenquellen erstellen und die Berichte auf einem Berichtsserver oder einer SharePoint-Website veröffentlichen können. Die von Ihnen erstellten Berichte können in Berichts-Generator, einem Webbrowser oder über eine [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows-Anwendung oder eine SharePoint-Website angezeigt werden.  

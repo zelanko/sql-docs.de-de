@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.mapmeridianproperties.labels.f1
 - "10518"
 ms.assetid: 47650a82-3b0c-4e32-8565-e9332bdcf4d6
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: b663f9cd95d055fe8736ee2232bbc273fe89798e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4ecaf5c0ad58dcb3fbc60d9c6417ac969f85ca40
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015015"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296109"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>Meridianeigenschaften von Karten (Dialogfeld), Bezeichnungen
   Verwenden der **MapMeridian Eigenschaften** im Dialogfeld Optionen für Bezeichnungen für das vertikale Raster im kartenviewport zu ändern. Ein Meridian stellt den folgenden Wert abhängig vom angegebenen Koordinatensystem für den Viewport dar:  

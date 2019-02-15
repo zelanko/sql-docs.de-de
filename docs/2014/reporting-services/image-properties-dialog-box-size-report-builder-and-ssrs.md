@@ -11,15 +11,15 @@ f1_keywords:
 - "10054"
 - sql12.rtp.rptdesigner.pictureproperties.size.f1
 ms.assetid: 144a5da4-a3c3-4856-942e-7b7c60e2f6fa
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0d9610544543e88fd8e50e9d3ccc2fc64ecb84a5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cb37b9da0e0bd51d6fed187abfe870b26603f8e3
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016111"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287078"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>Bildeigenschaften (Dialogfeld), Größe (Berichts-Generator und SSRS)
   Wählen Sie im Dialogfeld **Bildeigenschaften** die Option **Größe** aus, um die Größe der in einem Feld oder im Entwurfsbereich angezeigten Bilder zu formatieren oder um den zusätzlichen Abstand zwischen dem Rand einer Zelle oder eines Textfelds und dem in der Zelle oder dem Textfeld enthaltenen Bild oder Textfeld zu ändern.  

@@ -11,15 +11,15 @@ f1_keywords:
 - "10130"
 - sql12.rtp.rptdesigner.datasetproperties.options.f1
 ms.assetid: 95299049-71ba-427f-b723-775cb696243f
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 502d3636998b6bdcebd8f3ac9044bd5df14bd66e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a41bec8c2a4b8cb621eff84249253d18df2c34a7
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029861"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296627"
 ---
 # <a name="dataset-properties-dialog-box-options"></a>Dataseteigenschaften (Dialogfeld), Optionen
   Wählen Sie **Optionen** auf die **Dataseteigenschaften** um Datenoptionen, wie Sortierungsoptionen und Teilergebnisse, für die Abfrage zu ändern. Weitere Informationen finden Sie unter [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  

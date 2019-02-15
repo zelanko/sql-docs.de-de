@@ -14,15 +14,15 @@ helpviewer_keywords:
 - deleting shared data sources
 - modifying shared data sources
 ms.assetid: cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 99e083439e49d522ddc84f1f32454b0c4777237b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 240799493cc113a0885b0b957849aea25f97593a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025871"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293738"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>Erstellen, Löschen oder Ändern einer freigegebenen Datenquelle (Berichts-Manager)
   Mit einer freigegebenen Datenquelle werden Verbindungseigenschaften für eine Datenquelle angegeben. Falls Sie über eine Datenquelle verfügen, die von einer großen Anzahl Berichte, Modelle oder datengesteuerter Abonnements verwendet wird, sollten Sie die Erstellung einer freigegebenen Datenquelle in Erwägung ziehen, um den Aufwand für die Pflege der Verbindungsinformationen an mehreren Stellen zu verringern.  
