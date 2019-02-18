@@ -1,7 +1,7 @@
 ---
 title: Herunterladen des SQL Server PowerShell-Moduls | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 10/08/2018
+ms.date: 01/31/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: scripting
@@ -12,12 +12,12 @@ ms.assetid: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40873fe63b897da52fc9a7d440a8568872431d72
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: f0f14a3cee050fff07c7fe5bc2467bcb8209a53c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851755"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037491"
 ---
 # <a name="install-sql-server-powershell-module"></a>Installieren des SQL Server PowerShell-Moduls
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,12 +25,13 @@ ms.locfileid: "48851755"
 Dieser Artikel enthält Anleitungen zur Installation des PowerShell-Moduls **SqlServer**.
 > [!NOTE]
 > Es gibt zwei SQL Server PowerShell-Module: 
-> * **SQLPS:** Dieses Modul ist zwar in der SQL Server-Installation (für die Abwärtskompatibilität) enthalten, wird jedoch nicht mehr aktualisiert. Das **SqlServer**-Modul ist das aktuellste PowerShell-Modul.
+> * **SQLPS:** Dieses Modul ist zwar in der SQL Server-Installation (für Abwärtskompatibilität) enthalten, wird jedoch nicht mehr aktualisiert. Das **SqlServer**-Modul ist das aktuellste PowerShell-Modul.
 > * **SqlServer:** Dieses Modul enthält neue Cmdlets zur Unterstützung der neuesten SQL-Funktionen. Das Modul enthält ebenso aktualisierte Versionen der Cmdlets in **SQLPS**. 
 
 Vorherige Versionen des **SqlServer**-Moduls *waren* in SQL Server Management Studio (SSMS) enthalten, allerdings nur in den Versionen 16.x. Das **SqlServer**-Modul muss über den [PowerShell-Katalog](https://www.powershellgallery.com/packages/Sqlserver) installiert werden, damit PowerShell mit SSMS 17.0 und höher verwendet werden kann.
-Die aktuelle Version des **SqlServer**-Moduls lautet 21.0.17279. Diese basiert auf der Version v140 von Microsoft.SQLServer.SMO.  
-Wenn Sie nach einer Modulversion suchen, die die nächste Version von SQL Server unterstützt (basierend auf Version v150 von Microsoft.SQLServer.SMO), lesen Sie im Abschnitt ganz unten auf dieser Seite die Informationen, wie Vorabversionen des Moduls abgerufen werden können. Die neueste Vorabversion des Moduls ist 21.1.18040-preview.
+Die aktuelle Version des **SqlServer**-Moduls lautet 21.1.18080. Diese basiert auf Microsoft.SQLServer.SMO v150 und unterstützt die nächste Version von SQL Server. Die letzte Version des Moduls, die auf Microsoft.SQLServer.SMO v140 basiert, ist 21.0.17279.
+
+Vorabversionen des Moduls werden vermutlich häufiger veröffentlicht. Im Abschnitt am Ende dieser Seite erfahren Sue, wie Sie diese Versionen erhalten können.
 
 Starten Sie eine **PowerShell**-Sitzung, und verwenden Sie folgende Befehle, um das [SqlServer](https://docs.microsoft.com/powershell/scripting/powershell-scripting)-Modul über den PowerShell-Katalog zu installieren. Wenn bei der Installation Probleme auftreten, finden Sie weitere Informationen unter [Install-Module documentation (Dokumentation zu „Install-Module“)](https://docs.microsoft.com/powershell/gallery/psget/module/psget_install-module) und [Install-Module reference (Referenz zu „Install-Module“)](https://docs.microsoft.com/powershell/module/powershellget/Install-Module).
 
@@ -56,7 +57,7 @@ So zeigen Sie die Versionen der installierten Module an:
 
 Wenn Sie eine spezifische Version des Moduls verwenden möchten, können Sie dieses folgendermaßen mit einer spezifischen Versionsnummer importieren:
 
-```Import-Module SqlServer -Version 21.0.17178```
+```Import-Module SqlServer -Version 21.1.18080```
 
 > [!NOTE]
 > Vorabversionen (oder „Preview“-Versionen) des Modul sind möglicherweise im PowerShell-Katalog verfügbar. Sie können über die aktualisierten Cmdlets *Find-Module* und *Install-Module*, die Teil des [PowerShellGet](https://www.powershellgallery.com/packages/PowerShellGet)-Moduls sind, ermittelt und installiert werden, indem der *-AllowPrerelease*-Switch übergeben wird.
