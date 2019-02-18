@@ -10,50 +10,53 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 00db3d0ca027a0f188831281bb2c844b5bc8462d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 41b14322d3c895e687add2236c2447d93df62586
+ms.sourcegitcommit: 1510d9fce125e5b13e181f8e32d6f6fbe6e7c7fe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202449"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55771336"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Offlinehilfe und Help Viewer für SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Sie können Help Viewer in SQL Server Management Studio (SSMS) oder Visual Studio (VS) verwenden, um Hilfepakete für SQL Server von Onlinequellen oder Datenträgern herunterzuladen und zu installieren, sodass Sie diese auch abrufen können, wenn Sie offline sind. In diesem Artikel werden Tools beschrieben, die Help Viewer installieren. Außerdem erhalten Sie eine Anleitung zum Installieren von Hilfeinhalt, der offline verfügbar ist, und es wird beschrieben, wie Sie Hilfe für [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)], SQL Server 2016 und SQL Server 2017 abrufen.
+Sie können Microsoft Help Viewer verwenden, um Hilfepakete für SQL Server von Onlinequellen oder Datenträgern herunterzuladen und zu installieren, sodass Sie diese auch abrufen können, wenn Sie offline sind. Help Viewer ist in die Installation von SQL Server Management Studio (SSMS) oder Visual Studio (VS) integriert. In diesem Artikel werden die Tools beschrieben, die Help Viewer installieren. Außerdem erhalten Sie eine Anleitung zum Installieren von Hilfeinhalt, der offline verfügbar ist, und es wird beschrieben, wie Sie Hilfe zu [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)], SQL Server 2016 und SQL Server 2017 erhalten können.
 
-Sobald der Inhalt auf ein System mit Internetzugang heruntergeladen wurde, können Sie den Inhalt auf ein System migrieren, das keinen Internetzugang hat. 
+Sie müssen mit dem Internet verbunden sein, um Help Viewer-Inhalte herunterladen zu können. Sie können die Inhalte dann auf einen Computer ohne Internetzugang migrieren.
 
 > [!NOTE]
 > Die Hilfe für SQL Server 2016 und SQL Server 2017 wird gemeinsam erläutert. Es wird darauf hingewiesen, wenn ein Thema nur für einzelne Versionen von Belang ist. Die meisten Themen gelten für beide Versionen.
 
 ## <a name="install-the-help-viewer"></a>Installieren von Help Viewer
 
-Es gibt zwei Versionen von Help Viewer: Version 2.x unterstützt Hilfe für SQL Server 2016 und SQL Server 2017, und Version 1.x unterstützt Hilfe für [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]. Der Help Viewer unterstützt Proxyeinstellungen und das ISO-Format nicht. 
+Es gibt zwei Versionen von Help Viewer.  Jede Version unterstützt verschiedene Versionen von SQL Server-Inhalten.  Das Format der offline verfügbaren Handbücher hat sich im Laufe der Zeit geändert. Ältere Versionen von Help Viewer unterstützen neuere Versionen der Handbücher nicht:
+- Version 2.x unterstützt die Hilfeinhalte für SQL Server 2016 und SQL Server 2017. 
+- Version 1.x unterstützt die Hilfeinhalte für [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]. Help Viewer unterstützt weder Proxyeinstellungen noch das ISO-Format.
 
-Help Viewer wird mithilfe der folgenden Tools installiert: 
 
-|**Tool, das Help Viewer installiert**|**Installierte Help Viewer-Version**|
+|**Tool**|**Installierte Help Viewer-Version**|
 |---------|---------|
-|[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)| v2.2|
-|[SQL Server Data Tools für Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)| v2.2|
-|Visual Studio 2017* | v2.3|
+|[Visual Studio 2017*](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017) | v2.3|
+|[SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) | v2.2|
+|[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) | v2.2|
+|[SQL Server Data Tools für Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) | v2.2|
 |Visual Studio 2015 | v2.2|
+|SQL Server 2016 | v1.x|
 |SQL Server 2014 Management Studio | v1.x|
 |Frühere Versionen von Visual Studio | v1.x|
-|SQL Server 2016 | v1.x|
+| | |
 
-\* Um Help Viewer mit Visual Studio 2017 zu installieren, klicken Sie auf die Registerkarte „Einzelne Komponenten“ im Visual Studio-Installer, wählen Sie unter „Codetools“ **Help Viewer** aus, und klicken Sie dann auf **Installieren**. 
+\* Um Help Viewer mit Visual Studio 2017 zu installieren, klicken Sie auf die Registerkarte „Einzelne Komponenten“ im Visual Studio-Installer, wählen Sie unter „Codetools“ **Help Viewer** aus, und klicken Sie dann auf **Installieren**.
 
 >[!NOTE]
 > - SQL Server 2016 installiert Help Viewer 1.1. Diese Version unterstützt allerdings nicht die Hilfe für SQL Server 2016. 
-> - Bei der Installation von SQL Server 2017 wird keine Help Viewer-Version installiert.
+> - Bei der Installation von SQL Server 2017 wird Help Viewer nicht installiert. Help Viewer ist nicht mehr in die Installation von SQL Server integriert.
 > - Help Viewer v2.x kann außerdem die Hilfe für [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] unterstützen, wenn Sie den Inhalt von einem Datenträger installieren.
 
 ## <a name="use-help-viewer-v2x"></a>Verwenden Sie Help Viewer v2.x
 
-SSMS 17.x und VS 2015 und 2017 verwenden Help Viewer 2.x. Diese Version unterstützt die Hilfe für SQL Server 2016 und 2017. 
+SSMS 17.x und VS 2015 und 2017 verwenden Help Viewer 2.x. Diese Version unterstützt die Hilfe für SQL Server 2016 und SQL Server 2017. 
 
 **Herunterladen und Installieren von offline verfügbarem Hilfeinhalt mit Help Viewer v2.x**
 
@@ -84,21 +87,25 @@ SSMS 17.x und VS 2015 und 2017 verwenden Help Viewer 2.x. Diese Version unterst�
 > [!NOTE]
 > Nicht alle Titel des höchsten Knotens im Inhaltsverzeichnis von SQL Server stimmen genau mit den Namen der jeweiligen Hilfebücher überein, die heruntergeladen werden können. Die Titel im Inhaltsverzeichnis werden den Buchnamen wie folgt zugeordnet:
 
-| Inhaltsbereich | SQL Server-Buch |
-|-----|-----|
-|Analysis Services-Sprachreferenz | Analysis Services-Sprachreferenz (MDX)|
-|DAX-Referenz (Data Analysis Expressions) | DAX-Referenz (Data Analysis Expressions)|
-|DMX-Referenz (Data Mining-Erweiterungen) | DMX-Referenz (Data Mining-Erweiterungen)|
-|Leitfäden für Entwickler für SQL Server | SQL Server Developer-Referenz|
-|Hier können Sie SQL Server Management Studio herunterladen. | SQL Server Management Studio|
-|Erste Schritte mit Machine Learning in SQL Server | Microsoft Machine Learning Services|
-|Power Query M-Referenz | Power Query M-Referenz|
-|SQL Server-Treiber | Treiber für die SQL Server-Verbindung|
-|SQL Server unter Linux | SQL Server unter Linux|
-|Technische Dokumentation zu SQL Server | Technische Dokumentation für SQL Server (SSIS, SSRS, Datenbank-Engine, Setup)|
-|Tools und Hilfsprogramme für Azure SQL-Datenbank | SQL Server-Tools|
-|Transact-SQL-Referenz (Datenbank-Engine) | Transact-SQL-Referenz|
-|XQuery-Sprachreferenz (SQL Server) | XQuery-Sprachreferenz (SQL Server)|
+Mit (*) wird angegeben, dass der Inhalt aus der ersten allgemein verfügbaren Version der Inhalte von SQL Server 2017 stammt und zudem ältere Inhalte von SQL Server 2016 enthält. Diese Handbücher werden entfernt, da die separaten und vollständigen Handbücher für SQL Server 2016 und SQL Server 2017 überarbeitete Inhalte enthalten (Stand: Januar 2019).  
+
+| | Inhaltsbereich | SQL Server-Buch |
+|-----|-----|-----|
+|*|Analysis Services-Sprachreferenz | Analysis Services-Sprachreferenz (MDX)|
+|*|DAX-Referenz (Data Analysis Expressions) | DAX-Referenz (Data Analysis Expressions)|
+|*|DMX-Referenz (Data Mining-Erweiterungen) | DMX-Referenz (Data Mining-Erweiterungen)|
+|*|Erste Schritte mit Machine Learning in SQL Server | Microsoft Machine Learning Services|
+|*|Power Query M-Referenz | Power Query M-Referenz|
+||Dokumentation zu SQL Server 2016 | Dokumentation zu SQL Server 2016|
+||Dokumentation zu SQL Server 2017| Dokumentation zu SQL Server 2017|
+|*|Leitfäden für Entwickler für SQL Server | SQL Server Developer-Referenz|
+|*|Hier können Sie SQL Server Management Studio herunterladen. | SQL Server Management Studio|
+|*|Startseite für das Programmieren von Clients in Microsoft SQL Server | Treiber für die SQL Server-Verbindung|
+|*|SQL Server unter Linux | SQL Server unter Linux|
+|*|Technische Dokumentation zu SQL Server | Technische Dokumentation für SQL Server (SSIS, SSRS, Datenbank-Engine, Setup)|
+|*|Tools und Hilfsprogramme für Azure SQL-Datenbank | SQL Server-Tools|
+|*|Transact-SQL-Referenz (Datenbank-Engine) | Transact-SQL-Referenz|
+|*|XQuery-Sprachreferenz (SQL Server) | XQuery-Sprachreferenz (SQL Server)|
 
 > [!NOTE]
 > Wenn Help Viewer beim Hinzufügen von Inhalt nicht mehr reagieren sollte, ändern Sie die Cachezeile „LastRefreshed=\<mm/dd/yyyy> 00:00:00“ in den Dateien „%LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings“ oder „HlpViewer_VisualStudiox_en-US.settings“ in ein Datum, das in der Zukunft liegt. Weitere Informationen zu diesem Problem finden Sie unter [Visual Studio Help Viewer friert beim Begrüßungsbildschirm ein](/visualstudio/welcome-to-visual-studio).
@@ -176,7 +183,7 @@ In der Onlinehilfe werden stets die aktuellsten Inhalte angezeigt.
 
 **Anzeigen der Onlinehilfe für SQL Server in SSMS 17.x**
 
-- Klicken Sie im Menü **Hilfe** auf **Hilfe anzeigen**. Die neueste Dokumentation zu SQL Server 2016 und SQL Server 2017 von [https://docs.microsoft.com/sql/ https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) wird in einem Browser angezeigt. 
+- Klicken Sie im Menü **Hilfe** auf **Hilfe anzeigen**. Die neueste Dokumentation zu SQL Server 2016 und SQL Server 2017 von [https://docs.microsoft.com/sql/https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) wird in einem Browser angezeigt. 
 
    ![Hilfe anzeigen](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
@@ -195,7 +202,7 @@ In der Onlinehilfe werden stets die aktuellsten Inhalte angezeigt.
 3. Klicken Sie auf **I want to use online help** (Ich möchte Onlinehilfe verwenden), dann auf **OK** und anschließend auf **Beenden**.  
    
    ![HelpLibraryManager_ChooseOnlineORLocalHelp_OnlineHelpSelected_dialog](../sql-server/media/sql-server-help-installation/helplibrarymanager-chooseonlineorlocalhelp-onlinehelpselected-dialog.png)
-   
+
 4. Öffnen Sie den Help Viewer zum Anzeigen des Inhalts, indem Sie im Menü **Hilfe** auf **Hilfe anzeigen** klicken. 
 
 ## <a name="view-f1-help"></a>Anzeigen der F1-Hilfe
@@ -204,28 +211,27 @@ Wenn Sie F1 drücken oder in einem Dialogfeld in SSMS oder Visual Studio auf **H
 
 **Anzeigen der F1-Hilfe**
 
-1. Zeigen Sie im Menü „Hilfe“ auf **Hilfeeinstellungen festlegen**, und wählen Sie entweder **In Browser starten** oder **In Help Viewer starten** aus. 
+1. Zeigen Sie im Menü „Hilfe“ auf **Hilfeeinstellungen festlegen**, und wählen Sie entweder **In Browser starten** oder **In Help Viewer starten** aus.
 2. Drücken Sie F1, oder klicken Sie in den Dialogfeldern auf **Hilfe** oder **?**, falls verfügbar, um Themen der kontextbezogenen Onlinehilfe in der ausgewählten Umgebung anzuzeigen.
 
 > [!NOTE]
->  Die F1-Hilfe funktioniert nur, wenn Sie online sind. Es sind keine Offlinequellen für F1-Hilfe verfügbar. 
+> Die F1-Hilfe funktioniert nur, wenn Sie online sind. Es sind keine Offlinequellen für F1-Hilfe verfügbar.
 
 ## <a name="systems-without-internet-access"></a>Systeme ohne Internetzugang
-Nachdem Sie die [zuvor beschriebenen Schritte](#use-help-viewer-v2x) zum Herunterladen von Offlineinhalten mit dem SQL Server Help Viewer auf ein System mit Internetzugang ausgeführt haben, können Sie diese Inhalte auf ein System migrieren, das keinen Internetzugang hat. Dies kann über die folgenden Schritte erfolgen. 
+Sobald Sie die offline verfügbaren Handbücher auf ein System mit Internetzugang heruntergeladen haben, können Sie den Inhalt mithilfe der folgenden Schritte auf ein System migrieren, das keinen Internetzugang hat.
 
   >[!NOTE]
-  >Software, die den Help Viewer unterstützt, wie z. B. SQL Server Management Studio, muss auf dem Offlinesystem installiert sein. 
+  >Software, die den Help Viewer unterstützt, wie z. B. SQL Server Management Studio, muss auf dem Offlinesystem installiert sein.
 
 1. Öffnen Sie den Help Viewer (STRG+ALT+F1).
-1. Wählen Sie die Dokumentation aus, die Sie interessiert. Filtern Sie beispielsweise nach SQL Server, und wählen Sie „Technische Dokumentation zu SQL Server“ aus. 
+1. Wählen Sie die Dokumentation aus, die Sie interessiert. Filtern Sie beispielsweise nach SQL Server, und wählen Sie „Technische Dokumentation zu SQL Server“ aus.
 1. Bestimmen Sie den physischen Pfad der Dateien auf dem Datenträger, der unter **Lokaler Speicherpfad** zu finden ist.
-1. Navigieren Sie im Dateisystem-Explorer zu diesem Speicherort. 
+1. Navigieren Sie im Dateisystem-Explorer zu diesem Speicherort.
     1.  Der Standardspeicherort lautet: `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\Extensions\Application`.
-1. Wählen Sie die drei Ordner **ContentStore**, **Incoming** und **IndexStore** aus, und kopieren Sie sie auf Ihrem Offlinesystem an den gleichen Speicherort. Sie müssen möglicherweise einen Wechseldatenträger wie einen USB-Stick oder eine CD verwenden. 
+1. Wählen Sie die drei Ordner **ContentStore**, **Incoming** und **IndexStore** aus, und kopieren Sie sie auf Ihrem Offlinesystem an den gleichen Speicherort. Sie müssen möglicherweise einen Wechseldatenträger wie einen USB-Stick oder eine CD verwenden.
 1. Sobald diese Dateien verschoben wurden, starten Sie den Help Viewer auf dem Offlinesystem, woraufhin die technische Dokumentation zu SQL Server verfügbar ist.
 
 ![physical-location-of-offline-content.png](media/sql-server-help-installation/physical-location-of-offline-content.png)
-   
 
 ## <a name="next-steps"></a>Nächste Schritte
 [Microsoft Help Viewer – Visual Studio](/visualstudio/ide/microsoft-help-viewer)  
