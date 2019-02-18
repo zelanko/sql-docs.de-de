@@ -46,13 +46,13 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@filtered_table**=] **"**_Filtered_table_**"**  
+ [ **@filtered_table** =] **"**_Filtered_table_**"**  
  Der Name einer gefilterten Tabelle. *Filtered_table* ist **nvarchar(400)**, hat keinen Standardwert.  
   
- [ **@join_table**=] **"**_Join_table_**"**  
+ [ **@join_table** =] **"**_Join_table_**"**  
  Der Name einer Tabelle, die zu verknüpfenden *Filtered_table*. *Join_table* ist **nvarchar(400)**, hat keinen Standardwert.  
   
- [ **@join_filterclause** =] **"**_Join_filterclause_**"**  
+ [ **@join_filterclause**  =] **"**_Join_filterclause_**"**  
  Die Joinfilterklausel, die getestet wird. *Join_filterclause* ist **nvarchar(1000)**, hat keinen Standardwert.  
   
 ## <a name="result-sets"></a>Resultsets  
