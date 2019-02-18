@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8f7de9a4f6e99c60b0bbe560d57f6e7adf397c2e
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: e3b3789b28a63d91dd11ce9238b9c3e4a35325be
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087909"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319381"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio – Änderungsprotokoll (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -557,7 +557,7 @@ Skripterstellung:
     
 SMO:
 
-- Das Problem, dass bei Verwendung von Table.Alter() ein Fehler auftritt, wenn eine Spalte mit einer DEFAULT-Einschränkung hinzugefügt wird und die Tabelle bereits Daten enthält, wurde behoben. Weitere Informationen finden Sie im Forenbeitrag zu der [in SQL Server Management Objects generierten DEFAULT-Inlineeinschränkung beim Hinzufügen einer Spalte zu einer Tabelle mit Daten](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895625).
+- Das Problem, dass bei Verwendung von Table.Alter() ein Fehler auftritt, wenn eine Spalte mit einer DEFAULT-Einschränkung hinzugefügt wird und die Tabelle bereits Daten enthält, wurde behoben. Einzelheiten finden Sie im Forenbeitrag zu der [in SQL Server Management Objects generierten DEFAULT-Inlineeinschränkung beim Hinzufügen einer Spalte zu einer Tabelle mit Daten](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895625).
     
 Always Encrypted:
 
@@ -623,7 +623,7 @@ Azure SQL-Datenbank:
 - Beheben eines Problems, bei dem der Benutzer den Kompatibilitätsgrad weder festlegen noch oder ändern konnte (die Dropdownliste war leer). Hinweis: Um den Kompatibilitätsgrad auf 150 festzulegen, muss der Benutzer weiterhin die Schaltfläche *Skript* verwenden und das Skript manuell bearbeiten. 
  
 SMO: 
-- Verfügbar gemachte Einstellung für Fehlerprotokollgröße in SMO. Ausführliche Informationen finden Sie unter [Set the Maximum Size of the SQL Server Error Logs (Einstellen der maximalen SQL Server-Fehlerprotokollgröße)](https://feedback.azure.com/forums/908035-sql-server/suggestions/33624115).  
+- Verfügbar gemachte Einstellung für Fehlerprotokollgröße in SMO. Ausführliche Informationen finden Sie unter [Set the Maximum Size of the SQL Server Error Logs](https://feedback.azure.com/forums/908035-sql-server/suggestions/33624115).  
 - Korrigieren von Zeilenvorschub bei der Skripterstellung in SMO unter Linux.
 - Verschiedene Leistungsverbesserungen für das Abrufen von selten verwendeten Eigenschaften.  
 
@@ -834,7 +834,7 @@ XE-Profiler:
 - Hinzugefügte Aktionen ‚database\_name‘ und ‚client\_hostname‘ zu den entsprechenden Ereignissen in XEvent Profiler-Sitzungen. Damit die Änderung wirksam wird, müssen Sie möglicherweise vorhandene QuickSessionStandard- oder QuickSessionTSQL-Instanzen auf den Servern löschen – [Connect 3142981](https://connect.microsoft.com/SQLServer/feedback/details/3142981)
 
 Befehlszeile:
-- Neue Befehlszeilenoption („-G“), die verwendet werden kann, um SSMS automatisch eine Verbindung mit einem Server/einer Datenbank mithilfe von Active Directory-Authentifizierung (wahlweise „Integrated“ oder „Password“) herstellen zu lassen. Weitere Informationen finden Sie unter [SSMS-Hilfsprogramm](ssms-utility.md).
+- Neue Befehlszeilenoption („-G“), die verwendet werden kann, um SSMS automatisch eine Verbindung mit einem Server/einer Datenbank mithilfe von Active Directory-Authentifizierung (wahlweise „Integrated“ oder „Password“) herstellen zu lassen. Weitere Informationen finden Sie unter [Ssms-Hilfsprogramm](ssms-utility.md).
 
 Assistent zum Importieren von Flatfiles:
 - Neue Möglichkeit zur Auswahl eines anderen als des Standardschemanamens („dbo“) beim Erstellen der Tabelle.

@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 11d0e5fcc8400f3272d07439adb4658ed46a9675
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 70d5030e0d406dd5078a94b9c7b2bee332546249
+ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702298"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240814"
 ---
 # <a name="create-an-alert-using-severity-level"></a>Create an Alert Using Severity Level
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ In diesem Thema wird beschrieben, wie eine Warnung des [!INCLUDE[msCoName](../..
   
     [Einschränkungen](#Restrictions)  
   
-    [Security](#Security)  
+    [Sicherheit](#Security)  
   
 -   **So erstellen Sie eine Warnung mithilfe von Schweregraden mit**  
   
@@ -94,20 +94,30 @@ Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** die P
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
   
     ```  
-    -- adds an alert (Test Alert) that runs the Back up
-    -- the AdventureWorks2012 Database job when fired   
-    -- assumes that the message 55001 and the Back up
-    -- the AdventureWorks2012 Database job already exist.  
+    -- Adds an alert (Test Alert) that notifies the
+    -- Alert Operator via email when an error with a 
+    -- severity of 23 is detected.
+    
+    -- Assumes that the Alert Operator already exists 
+    -- and that database mail is configured.
+    
     USE msdb ;  
     GO  
   
-    EXEC dbo.sp_add_alert  
-        @name = N'Test Alert',  
-        @message_id = 55001,   
-       @severity = 0,   
-       @notification_message = N'Error 55001 has occurred. The DB will be backed up...',   
-       @job_name = N'Back up the AdventureWorks2012 Database' ;  
-    GO  
+    EXEC dbo.sp_add_alert @name=N'Test Alert', 
+      @message_id = 0, 
+      @severity = 23, 
+      @enabled = 1, 
+      @include_event_description_in = 1
+    ;
+    GO
+    
+    EXEC dbo.sp_add_notification @alert_name=N'Test Alert',
+      @operator_name=N'Alert Operator',
+      @notification_method=1
+    ;
+    GO
+
     ```  
   
 Weitere Informationen finden Sie unter [sp_add_alert (Transact-SQL)](https://msdn.microsoft.com/d9b41853-e22d-4813-a79f-57efb4511f09).  
