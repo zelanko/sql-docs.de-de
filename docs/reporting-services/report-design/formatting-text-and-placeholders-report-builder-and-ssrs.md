@@ -13,14 +13,14 @@ f1_keywords:
 - "10132"
 - sql11.rtp.rptdesigner.textproperties.font.f1
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 3bf6533eb63e2c140750fc357f0f96f5477a550e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a3358a543c01622b6cb7b320399a914dc0d73682
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030889"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298518"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>Formatieren von Text und Platzhaltern (Berichts-Generator und SSRS)
   Ein Textfeld kann ein Berichtselement sein oder eine einzelne Zelle in einem Datenbereich mit Text, ein berechnetes Feld oder ein Zeiger auf ein Feld in einer Datenbank. Es kann sich auch um eine Kombination aus diesen drei Elementen handeln. Sie können Schriftarten und Farben kombinieren sowie Fett- und Kursivformatierungen hinzufügen; außerdem können Sie Absätze mithilfe von Ausrichtungen und Einzügen formatieren. Sie können ein vollständiges Textfeld formatieren, oder Sie können bestimmte Textelemente, Zahlen, Ausdrücke oder Felder in einem Textfeld formatieren.  
@@ -68,7 +68,7 @@ ms.locfileid: "50030889"
 ## <a name="aligning-horizontal-text-using-general"></a>Horizontales Ausrichten von Text  
  Im Dialogfeld **Textfeldeigenschaften** können Sie auf der Registerkarte **Ausrichtung** angeben, wie der Text horizontal ausgerichtet werden soll. Wenn Sie keinen Wert für die Ausrichtung angeben, wird der Standardwert **Standard**verwendet. Dies bedeutet, dass der Text auf Grundlage den Feldtyp für den Platzhalterwert ausgerichtet wird. Wenn Sie einen Ausdruck angeben, der nicht zu einem Zeichenfolgenwert ausgewertet wird (d. h. keine Zahl), wird der Text rechtsbündig ausgerichtet. Wird der Ausdruck zu einem Zeichenfolgenwert ausgewertet (z. B. eine Zahl), wird der Text linksbündig ausgerichtet.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Formatieren von Achsenbezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Formatieren von Skalen auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   

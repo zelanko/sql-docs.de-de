@@ -8,14 +8,14 @@ ms.topic: conceptual
 f1_keywords:
 - "10543"
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: adedbb3c4e173a1b27c0f1d911f847c5e69fe956
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9c536d94d9bbec76cb4b1887f46890680c26a116
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542219"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291288"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Berichtsteile (Berichts-Generator und SSRS)
   Berichtselemente wie Tabellen, Matrizen, Diagramme und Bilder können als *Berichtsteile*veröffentlicht werden. Berichtsteile sind Elemente paginierter Berichte, die separat auf einem Berichtsserver veröffentlicht wurden und in anderen paginierten Berichten wieder verwendet werden können. Berichtsteile besitzen die Dateierweiterung ".rsc".  
@@ -138,7 +138,7 @@ ms.locfileid: "52542219"
   
  [Suchen nach Updates oder Deaktivieren von Updates (Berichts-Generator und SSRS)](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichtsteile und Datasets in Berichts-Generator](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [Problembehandlung bei Berichtsteilen (Berichts-Generator und SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [Verwalten von Berichtsteilen](../../reporting-services/report-design/managing-report-parts.md)  

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 9318aaa40ae8dc8dc2689ff511afc95752b0b50c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 53c9e31720d331218e95edaa2081e5219f0bc674
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703788"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287308"
 ---
 # <a name="chart-effects---add-bevel-emboss-or-texture-report-builder"></a>Diagrammeffekte: Hinzufügen einer Abschrägung, eines Relief oder von Texturstilen (Berichts-Generator)
   Bei bestimmten Diagrammtypen können Sie einen Zeichnungseffekt angeben, um die visuelle Wirkung des Diagramms zu erhöhen. Diese Zeichnungseffekte werden nur für die Reihen des Diagramms übernommen. Sie haben keine Auswirkungen auf andere Diagrammelemente.  
@@ -57,7 +57,7 @@ ms.locfileid: "47703788"
   
  ![Balkendiagramm mit LightToDark-Zeichnungseffekt](../../reporting-services/report-design/media/rs-bardrawingeffects-lighttodark.gif "Bar chart with LightToDark drawing effect")  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Balkendiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   
  [Säulendiagramme (Berichts-Generator und SSRS)](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
  [Kreisdiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   

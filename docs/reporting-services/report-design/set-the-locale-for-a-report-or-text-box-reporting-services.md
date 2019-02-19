@@ -8,14 +8,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - locales [Reporting Services]
 ms.assetid: df115b01-184b-47f0-b5ec-0ad965ff9bee
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4d42e62b506f3c9d7c24007bf69bffae7916d474
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bf18cf81fde29830d07f8303cd023492aaf20817
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099921"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56284550"
 ---
 # <a name="set-the-locale-for-a-report-or-text-box-reporting-services"></a>Festlegen des Gebietsschemas für einen Bericht oder ein Textfeld (Reporting Services)
   Die **Language** -Eigenschaft eines Berichts oder eines Textfelds enthält das Gebietsschema, das die Standardformate zur Anzeige von Berichtsdaten festlegt, die je nach Land unterschiedlich sind, z. B. bei Datums-, Währungs- oder Zahlwerten. Die **Language** -Eigenschaft eines Textfelds hat Vorrang vor der **Language** -Eigenschaft des Berichts. Wenn für **Language**kein Wert angegeben wird, verwendet Reporting Services das Gebietsschema des Betriebssystems auf dem Berichtsserver für veröffentlichte Berichte oder auf dem Computer zur Berichterstellung für die Berichtsvorschau.  
@@ -48,7 +48,7 @@ ms.locfileid: "50099921"
   
     -   Wählen Sie für die **UnicodeBiDi** -Eigenschaft den bidirektionalen Einbettungsgrad aus, der für das Textfeld verwendet werden soll.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Überlegungen zu Lösungsentwürfen für mehrsprachige oder globale Bereitstellungen (Reporting Services)](https://msdn.microsoft.com/55630eca-d1e5-4ac6-93c7-9a3f15c0d08a)  
   

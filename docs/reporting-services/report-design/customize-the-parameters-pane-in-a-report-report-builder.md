@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 4ce9e8d5-911a-4422-928f-a8d005b79fc6
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: dc6445b64e323c3e5f8e5b0257d8573ec10d3af8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cf68ea627b69377827cd6e9e33afc70a2c76ef2b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681418"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294929"
 ---
 # <a name="customize-the-parameters-pane-in-a-report-report-builder"></a>Benutzerdefiniertes Anpassen des Parameterbereichs in einem Bericht (Berichts-Generator)
   Beim Erstellen von paginierten Berichten mit Parametern im Berichts-Generator können Sie den Parameterbereich anpassen. In der Berichtsentwurfsansicht können Sie einen Parameter zu einer bestimmten Spalte und Zeile im Parameterbereich ziehen. Sie können Spalten hinzufügen und entfernen, um das Layouts des Bereichs zu ändern.  
@@ -63,7 +63,7 @@ ms.locfileid: "47681418"
   
     -   Klicken Sie im Bereich **Berichtsdaten** mit der rechten Maustaste auf „Parameter“, und klicken Sie anschließend auf **Löschen**.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

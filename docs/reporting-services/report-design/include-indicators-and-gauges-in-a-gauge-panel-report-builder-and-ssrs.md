@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 4dff9b67-b483-4c51-a822-6dbe706a6840
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 1f5e493485df8346ca66da5f9125a0ff024addf6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c0b97a60f1d7090c82977fb9076253e0236c97bb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743908"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287028"
 ---
 # <a name="include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs"></a>Aufnehmen von Indikatoren und Messgeräten in einen Messgerätbereich (Berichts-Generator und SSRS)
   Der Messgerätbereich ist der Container der obersten Ebene, der mindestens ein Messgerät und/oder einen Indikator enthält. Indikatoren können in Messgeräte eingebettet werden oder neben ihnen im Messgerätbereich eingefügt werden.  
@@ -97,7 +97,7 @@ ms.locfileid: "47743908"
   
 18. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Indikatoren &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

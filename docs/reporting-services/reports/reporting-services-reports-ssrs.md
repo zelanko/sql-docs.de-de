@@ -8,14 +8,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, report creation
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 14540871ad8be2c59bc8eb899ccb30b06f0278f5
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 37a2fa01004fb3550422b44f48d83e1c79dc587b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030329"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291358"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services-Berichte (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichte (paginiert) sind XML-basierte Berichtsdefinitionen, die Berichtsdaten und Berichtslayoutelemente enthalten. Auf einem Clientdateisystem verfügen Berichtsdefinitionen über die Dateierweiterung ".rdl". Nachdem ein paginierter Bericht veröffentlicht wurde, wird er zu einem auf dem Berichtsserver oder der SharePoint-Website gespeicherten Berichtselement. Paginierte Berichte stellen einen Teil der von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]bereitgestellten serverbasierten Berichtsplattform dar. Sie haben außerdem die Möglichkeit zum [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
@@ -173,7 +173,7 @@ ms.locfileid: "50030329"
   
 -   **Stellen Sie fest, wo Sie zusätzliche Informationen erhalten.** Bei einem Berichtsentwurf, der Ausdrücke umfasst, erhalten Sie im Berichts-Designer beispielsweise ausführlichere Informationen zu Problemen bei der Ausdrucksauswertung als im Berichts-Generator. Bei Problemen mit der Berichtsverarbeitung finden Sie in den Protokolldateien ausführliche Informationen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Reporting Services-Tools](../../reporting-services/tools/reporting-services-tools.md)   
  [Erweiterungen &#40;SSRS&#41;](../../reporting-services/extensions-ssrs.md)   
  [Reporting Services-Berichtsserver](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  

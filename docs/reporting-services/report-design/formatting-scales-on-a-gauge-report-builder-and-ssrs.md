@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 3a53f97d83dfa65399064479820a1ac987e6b1f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ec55fc1c24424635c6dd504395c3a4a056fc50d1
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800248"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293779"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Formatieren von Skalen auf einem Messgerät (Berichts-Generator und SSRS)
   In einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht umfasst die Messgerätskala den durch einen Mindestwert und einen Höchstwert begrenzten Bereich von Zahlen, der auf dem Messgerät angezeigt wird. Typischerweise enthält eine Messgerätskala Messgerätbezeichnungen und Teilstriche, die das exakte Ablesen des Messgerätzeigers ermöglichen. Eine Messgerätskala ist generell mindestens einem Messgerätzeiger zugeordnet. Sie können mehrere Skalen auf einem Messgerät festlegen.  
@@ -65,7 +65,7 @@ ms.locfileid: "47800248"
   
  ![Skalierungsradius im Bezug auf Messgerätedurchmesser](../../reporting-services/report-design/media/scaleradiusdiagram.gif "Scale radius relative to gauge diameter")  
   
- Der Startwinkel ist der Drehwinkel (zwischen 0 und 360), bei dem die Skala beginnt. Die Nullposition (0) befindet sich unten im Messgerät, und der Startwinkel wird im Uhrzeigersinn gedreht. Bei einem Startwinkel von 90 Grad wird die Skala an der 9-Uhr-Position begonnen.  
+ Der Startwinkel ist der Drehwinkel (zwischen 0 und 360), bei dem die Skala beginnt. Die Nullposition (0) befindet sich unten im Messgerät, und der Startwinkel wird im Uhrzeigersinn gedreht. Bei einem Startwinkel von 90 Grad wird die Skala an der 9-Uhr-Position begonnen.  
   
  Der Mittelpunktswinkel entspricht der Gradzahl (zwischen 0 und 360), um die die Skala gedreht wird. Bei einem Mittelpunktswinkel von 360 Grad wird eine Skala erzeugt, die einen vollständigen Kreis darstellt. Dies ist hilfreich, wenn Sie ein Messgerät entwerfen möchten, das einer Uhr ähnelt.  
   
@@ -76,9 +76,9 @@ ms.locfileid: "47800248"
   
 -   1 % der Messgeräthöhe oder der Messgerätbreite (je nachdem, welcher Wert kleiner ist) auf einem linearen Messgerät  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Formatieren von Bereichen auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
- [Formatieren von Zeigern auf einem Messgerät (Berichts-Generator und SSRS)](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+ [Formatieren von Zeigern auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [Formatieren von Achsenbezeichnungen als Datumsangabe oder Währung (Berichts-Generator und SSRS)](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [Formatieren von Achsenbezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Messgeräte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: be9b19dc11917de04b00592d1dbfdb22b54cd742
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cba12c0524f3f6955a720f54322d220209c36b55
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790878"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294148"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>Hinzufügen oder Entfernen einer Seitenkopf- oder Seitenfußzeile (Berichts-Generator und SSRS)
   Sie können statischen Text, Bilder, Linien, Rechtecke und Rahmen zu Seitenköpfen und -füßen hinzufügen. Wenn Sie variable oder berechnete Daten in einem Seitenkopf oder -fuß verwenden möchten, können Sie Ausdrücke und datengebundene Bilder in einem Textfeld platzieren.  
@@ -60,7 +60,7 @@ ms.locfileid: "47790878"
 > [!NOTE]  
 >  Wenn Sie einen Seitenkopf oder -fuß entfernen, wird er aus dem Bericht gelöscht. Alle Elemente, die Sie zuvor zum Seitenkopf oder -fuß hinzugefügt haben, werden nicht erneut angezeigt, wenn Sie den Seitenkopf oder -fuß anschließend wieder hinzufügen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Seitenkopf- und Seitenfußzeilen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  
   
   

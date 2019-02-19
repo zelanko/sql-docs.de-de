@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 6a7aad9e50122a04f26d07d36f2384bc47625781
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1e8966ddbecc88b5bcf6d2a5024f0dd2228b4fc2
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255585"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286788"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportieren nach XML (Berichts-Generator und SSRS)
   Die XML-Renderingerweiterung gibt einen paginierten Bericht im XML-Format zurück. Das Schema der Bericht-XML-Ausgabe hängt vom jeweiligen Bericht ab und enthält nur Daten. Layoutinformationen werden von der XML-Renderingerweiterung nicht gerendert, und die Paginierung wird nicht beibehalten. Der von dieser Erweiterung generierte XML-Code kann in eine Datenbank importiert, als XML-Datennachricht verwendet oder an eine benutzerdefinierte Anwendung gesendet werden.  

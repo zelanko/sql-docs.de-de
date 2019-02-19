@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: ca0c5040-40bb-4cb7-bc2b-5bcbe73858bb
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: bc9275d45e9d72dd1cfdffdd8cc8b6b3d09022ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 029998941421d9ebe31f69e058d6acc14060ff80
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847118"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295592"
 ---
 # <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>Hinzufügen eines Rahmens zu einem Diagramm (Berichts-Generator und SSRS)
   Sie können die visuelle Wirkung eines Diagramms verbessern, indem Sie einen Rahmen um das Diagramm ziehen. Sie können einen Rahmen im Dialogfeld **Diagrammeigenschaften** oder im Bereich Eigenschaften auswählen. Die Diagrammrahmen können nicht für einen beliebigen anderen Datenbereich übernommen werden.  
@@ -43,9 +43,9 @@ ms.locfileid: "47847118"
   
 7.  (Optional) Wenn Sie einen Rahmentyp auswählen, geben Sie ein Format und eine Farbe für den Rahmen an. Die Liste **Framefüllfarbe** enthält allgemein verwendete Farben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Formatieren eines Diagramms &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Hinzufügen einer Abschrägung, Prägung und Struktur zu einem Diagramm (Berichts-Generator und SSRS)](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)  
+ [Hinzufügen einer Abschrägung, Prägung und Struktur zu einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)  
   
   

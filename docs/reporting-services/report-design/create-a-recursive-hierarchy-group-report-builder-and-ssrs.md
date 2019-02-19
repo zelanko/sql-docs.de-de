@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b1e2cf655389529c6211ad2ed29ba2e9a309dcfa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 577043b3994b5acdee3cd71c76040ec9de7c3481
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542471"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296668"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>Erstellen einer rekursiven Hierarchiegruppe (Berichts-Generator und SSRS)
 In paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichten organisiert eine rekursive Hierarchiegruppe Daten aus einem einzelnen Berichtsdataset, das mehrere hierarchische Ebenen aufweist, z.B. eine Berichtsstruktur für die Beziehung zwischen Managern und Mitarbeitern in der Hierarchie einer Organisation.  
@@ -60,7 +60,7 @@ In paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Be
   
      Führen Sie den Bericht aus. Der Bericht zeigt eine hierarchische Ansicht der gruppierten Daten an.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von rekursiven Hierarchiegruppen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
  [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   

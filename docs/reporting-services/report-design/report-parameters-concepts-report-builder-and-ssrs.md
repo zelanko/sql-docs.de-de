@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: b0aa2159-4e49-4713-8824-5ef9a9edbc62
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ba484b1d5c61d9fbb775f6cc99b918c6bb9e97c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d01b399ed7e19fb6015c5439442b27cfca88ea46
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783448"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285528"
 ---
 # <a name="report-parameters-concepts-report-builder-and-ssrs"></a>Berichtsparameterkonzepte (Berichts-Generator und SSRS)
   Sie können einem Bericht Parameter hinzufügen, um verknüpfte Berichte zu verknüpfen, die Berichtsdarstellung zu steuern, Berichtsdaten zu filtern oder den Bereich eines Berichts auf bestimmte Benutzer oder Orte einzugrenzen.  
@@ -41,9 +41,9 @@ ms.locfileid: "47783448"
   
  Wenn Sie vorhaben, Berichtsmomentaufnahmen, Verläufe oder Abonnements für einen veröffentlichten Bericht zu erstellen, müssen Sie die Auswirkungen von Berichtsparametern auf die Entwurfsanforderungen für den Bericht kennen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichterstellungskonzepte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Tutorial: Hinzufügen eines Parameters zum Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41; (Tutorial: Hinzufügen eines Parameters zu einem Bericht (Berichts-Generator))](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md).  
   
   

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: f3eafaec96e27d6e78521b0c4ef7580af103a12e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3d3e1eca43d386a11955eac7974baaf4a1d7282a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792248"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292580"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>Anzeigen derselben Daten in einer Matrix und einem Diagramm (Berichts-Generator)
   Wenn sie dieselben Daten in einer Matrix und einem Diagramm anzeigen möchten, müssen Sie für beide Datenbereiche Eigenschaften festlegen, um dasselbe Dataset anzugeben, und außerdem identische Ausdrücke für Filter, Gruppen, Sortierungen und Daten.  
@@ -93,7 +93,7 @@ ms.locfileid: "47792248"
   
 25. Zeigen Sie das Ergebnis als Vorschau an. In den Zeilen- und Spaltengruppen der Matrix werden dieselben Daten wie in den Reihen- und Kategoriegruppen des Diagramms angezeigt.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verknüpfen mehrerer Datenbereiche mit einem Dataset &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   

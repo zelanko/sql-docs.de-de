@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 717f817e7d318e4eae40e071f925264c42878a16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 384619d6b5e688ff5f1823872140ad5b1df7d283
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675848"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289298"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>Rendern von Berichtselementen (Berichts-Generator und SSRS)
   Die Zahl, die Größe und der Ort der Berichtselemente beeinflussen, wie die Renderer den Text des Berichts paginieren. Unten finden Sie eine Beschreibung zum Rendering verschiedener Berichtselemente.  
@@ -102,9 +102,9 @@ ms.locfileid: "47675848"
   
  Weitere Informationen zu Unterberichten finden Sie unter [Unterberichte (Berichts-Generator und SSRS)](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Renderingverhalten (Berichts-Generator und SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Renderingverhalten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   

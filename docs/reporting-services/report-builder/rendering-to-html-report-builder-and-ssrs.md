@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 2d184a787becf3e82df7f9051eb8ad576ec1efa1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 672633023578e309ca3e40fe48b9a5bcc2286b86
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644278"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296508"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Rendern in das HTML-Format (Berichts-Generator und SSRS)
   Die HTML-Renderingerweiterung rendert einen paginierten Bericht im HTML-Format. Die Renderingerweiterung kann außerdem vollständige HTML-Seiten oder HTML-Fragmente zum Einbetten in andere HTML-Seiten erstellen. HTML wird stets mit UTF-8-Codierung erstellt.  
@@ -89,9 +89,9 @@ ms.locfileid: "47644278"
  Sie können einige Standardeinstellungen für diesen Renderer ändern, einschließlich des Modus für das Rendern. Ändern Sie dazu die Geräteinformationseinstellungen. Weitere Informationen finden Sie unter [HTML Device Information Settings](../../reporting-services/html-device-information-settings.md).  
   
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Renderingverhalten (Berichts-Generator und SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Renderingverhalten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Rendern von Berichtselementen (Berichts-Generator und SSRS)](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  

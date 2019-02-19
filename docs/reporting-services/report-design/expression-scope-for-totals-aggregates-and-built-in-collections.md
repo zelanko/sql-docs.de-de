@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 92156defdf08b3828fde898c7043a941bbd7326b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9cb351a5627dd525dd1eeb7bbeb9b7a9be821bc0
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394013"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297478"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen
   Wenn Sie Ausdrücke schreiben, stellen Sie fest, dass der Begriff *Bereich* in mehreren Zusammenhängen verwendet wird. Ein Bereich kann die Daten angeben, die zum Auswerten eines Ausdrucks verwendet werden, oder den Satz von Textfeldern auf einer gerenderten Seite bzw. den Satz von Berichtselementen, die mithilfe einer Umschaltfläche ein- oder ausgeblendet werden können, bezeichnen. Sie finden den Begriff *Bereich* in Themen, die sich auf die Auswertung von Ausdrücken, Aggregatfunktionssyntax, und bedingte Sichtbarkeit beziehen, sowie in Fehlermeldungen im Zusammenhang mit diesen Bereichen. Mit den folgenden Beschreibungen können Sie feststellen, welche Bedeutung von *Bereich* zutrifft:  
@@ -157,7 +157,7 @@ ms.locfileid: "52394013"
  In zahlreichen Berichten kann bei Berechnungen für Gruppen eine Vielzahl an Zellen mit dem Wert 0 (null) oder NULL erstellt werden. Wenn Sie Ihren Bericht übersichtlicher gestalten möchten, können Sie einen Ausdruck zum Zurückgeben von Leerräumen hinzufügen, wenn der Aggregatwert 0 (null) ist. Weitere Informationen finden Sie unter „Beispiele zur Unterdrückung von NULL- oder 0-Werten“ in [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  
   
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Beispiele für Gruppierungsausdrücke (Berichts-Generator und SSRS)](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
  [Erstellen von rekursiven Hierarchiegruppen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   

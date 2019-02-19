@@ -9,14 +9,14 @@ f1_keywords:
 - "10157"
 - sql13.rtp.rptdesigner.chartareaproperties.alignment.f1
 ms.assetid: dc3c365b-c263-402a-bf6f-c2a7081db073
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d90c5b4fb77a496477e0e43adcfd3165a441dbea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 09af545e5268192c221d7d129ee39e52fbfdb0b2
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650438"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296838"
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>Angeben einer Diagrammfläche für eine Reihe (Berichts-Generator und SSRS)
   in paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten stellt das *Diagramm* den Container der obersten Ebene dar, der den äußeren Rahmen, den Diagrammtitel und die Legende enthält. Standardmäßig wird im Diagramm eine *Diagrammfläche*angezeigt. Die Diagrammfläche ist auf der Diagrammoberfläche nicht sichtbar. Sie können sich diese jedoch als Container vorstellen, der lediglich die Achsenbezeichnungen, den Achsentitel und den Zeichnungsbereich einer oder mehrerer Reihen umfasst. In der folgenden Abbildung wird das Konzept mehrerer Diagrammflächen in einem einzelnen Diagramm veranschaulicht.  
@@ -40,12 +40,12 @@ ms.locfileid: "47650438"
   
 4.  (Optional) Richten Sie die Diagrammflächen vertikal aus. Klicken Sie dazu mit der rechten Maustaste auf das Diagramm, und wählen Sie **Diagrammflächeneigenschaften**aus. Wählen Sie unter **Ausrichtung**eine andere Diagrammfläche aus, an der Sie die ausgewählte Diagrammfläche ausrichten möchten.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Mehrere Reihen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)   
  [Formatieren von Datenpunkten in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Definieren von Farben in einem Diagramm mit einer Palette (Berichts-Generator und SSRS)](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
- [Netzdiagramme (Berichts-Generator und SSRS)](../../reporting-services/report-design/polar-charts-report-builder-and-ssrs.md)   
- [Formdiagramme (Berichts-Generator und SSRS)](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)   
+ [Polardiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/polar-charts-report-builder-and-ssrs.md)   
+ [Formdiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)   
  [Kreisdiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)  
   
   

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 6beb41ffbf94f803887f5e72bfe7e527c7f6c8b2
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 14bf75b9dcb5be2a1853751874053c9075781619
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029879"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285899"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>Interaktive Sortierung, Dokumentstrukturen und Links (Berichts-Generator und SSRS)
   In webbasierten Umgebungen können Sie eine Reihe von Funktionen hinzufügen, über die Benutzer mit Berichten interagieren können. Die Benutzer können die Sortierreihenfolge der Werte im Bericht ändern, Elemente im Bericht anzeigen oder ausblenden oder auf Links klicken, die zu anderen Berichten oder Webseiten führen. Sie können auch ein Inhaltsverzeichnis oder eine Dokumentstruktur hinzufügen. Die Berichtsbenutzer können auf Elemente im Inhaltsverzeichnis oder in der Dokumentstruktur klicken, um zu Bereichen in einem Bericht zu springen.  
@@ -47,7 +47,7 @@ ms.locfileid: "50029879"
  [Hinzufügen eines Links zu einer URL &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
  Erläutert, wie ein Link aus dem Bericht einer URL hinzugefügt wird.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Drillthrough, Drilldown, Unterberichte und geschachtelte Datenbereiche &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: e9a01a74-2f51-4b35-be3a-a6138568f6cf
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 9651cbbc41a78400d9b7cdeab39ae3e48f4fced3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 23232d80433584635ce9bc751893366d76b29a41
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809658"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285858"
 ---
 # <a name="format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs"></a>Formatieren von Achsenbezeichnungen als Datumsangabe oder Währung (Berichts-Generator und SSRS)
 Wenn Sie ordnungsgemäß formatierte DateTime-Werte auf einer Achse in einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht anzeigen, zeigt ein Diagramm diese Werte automatisch als Tage an. Zum Festlegen eines Datums- oder Zeitintervalls für die x-Achse (z. B. ein Monats- oder Stundenintervall) müssen Sie die Achsenbezeichnungen formatieren und den Achsentyp auf ein gültiges Datums- oder Zeitintervall festlegen.  
@@ -55,7 +55,7 @@ Wenn Sie ordnungsgemäß formatierte DateTime-Werte auf einer Achse in einem pag
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Formatieren von Achsenbezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Formatieren eines Diagramms &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Angeben einer logarithmischen Skalierung (Berichts-Generator und SSRS)](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   

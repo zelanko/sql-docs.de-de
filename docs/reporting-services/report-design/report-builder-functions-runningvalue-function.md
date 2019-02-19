@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 221fde16d239fa304c6f8dccbd90720d24b4b36d
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1828388fd3079a6a59e840143c2db25d55f4072a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021514"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291308"
 ---
 # <a name="report-builder-functions---runningvalue-function"></a>Funktionen des Berichts-Generators: RunningValue-Funktion
   Gibt ein laufendes Aggregat aller numerischen Werte ungleich NULL aus dem angegebenen Ausdruck für den Kontext des angegebenen Bereichs ausgewertet zurück.  
@@ -85,7 +85,7 @@ RunningValue(expression, function, scope)
 =RunningValue(Fields!Traffic Charges.Value, Sum, Nothing)  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   

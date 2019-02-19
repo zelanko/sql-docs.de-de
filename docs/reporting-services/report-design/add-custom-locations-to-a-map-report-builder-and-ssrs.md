@@ -8,14 +8,14 @@ ms.topic: conceptual
 f1_keywords:
 - MICROSOFT.REPORTDESIGNER.MAPPOINT.POINTTEMPLATE
 ms.assetid: 7d36faae-5bcc-446a-9eba-f42349cafacb
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 5b3ab32ed1e5924a38b35bc2ad6664a23ff712a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a13e645117997c5a4e57ea5152f3154b5c4f3610
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724608"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289678"
 ---
 # <a name="add-custom-locations-to-a-map-report-builder-and-ssrs"></a>Hinzufügen benutzerdefinierter Orte zu einer Karte (Berichts-Generator und SSRS)
   Nachdem Sie einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht eine Karte hinzugefügt haben, können Sie eigene Punktpositionen hinzufügen.  
@@ -54,7 +54,7 @@ ms.locfileid: "47724608"
   
 3.  Klicken Sie auf die Seiten, und legen Sie die Anzeigeeigenschaften fest, die Sie auf diesen Punkt anwenden möchten.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
  [Unterschiedliche Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   

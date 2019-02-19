@@ -8,14 +8,14 @@ description: Hier erfahren Sie mehr über das Verwenden eines Textfelds, um aus 
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8279a0ea362cd6b85045f3ffe3d7ce0caf1ab013
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ff0e5bffdc0704894029a223c5d3c47d18d8ac80
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214851"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289478"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>Importieren von HTML in einen Bericht (Berichts-Generator und SSRS)
   Sie können ein Textfeld verwenden, um aus einem Feld im Dataset abgerufenen HTML-Text in den Bericht einzufügen. Der Text kann aus einem einfachen oder komplexen Ausdruck stammen, der zum ordnungsgemäß formatierten HTML evaluiert wird. Formatierter Text kann in allen unterstützten Ausgabeformaten einschließlich PDF gerendert werden.  

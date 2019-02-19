@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 7733d3d68e0c4888d865f34ecae243e803636526
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 255332399739b84a3f52446d97e6cf553c5c198b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612828"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286078"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page"></a>Steuern der Tablix-Datenbereichsanzeige auf einer Berichtsseite
 Erfahren Sie etwas über die Eigenschaften in einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht für einen Tabelle-, Matrix- oder Listendatenbereich, mit denen Sie seine Anzeige im Bericht ändern können.  
@@ -66,7 +66,7 @@ Tabellen-, Matrix- und Listendatenbereiche sind Beispiele für *Tablix* -Datenbe
   
  Weitere Informationen darüber, wie sich das Exportieren eines Berichts in unterschiedliche Formate auf das Rendern eines Tablix-Datenbereichs auf einer Seite auswirkt, finden Sie unter [Renderingverhalten (Berichts-Generator und SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verknüpfen mehrerer Datenbereiche mit einem Dataset &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [Geschachtelte Datenbereiche &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
  [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)   

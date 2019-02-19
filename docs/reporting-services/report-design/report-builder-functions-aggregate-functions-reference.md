@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b707897d5be5d85dc3a7442a777decbd43801a52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f51a83fca42e1f736a0e0295d2443193b17df5d3
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790318"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296938"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Funktionen des Berichts-Generators: Referenz zu Aggregatfunktionen
   Um aggregierte Werte in den Bericht einzuschließen, können Sie integrierte Aggregatfunktionen in Ausdrücken verwenden. Die Standardaggregatfunktion für numerische Felder ist SUM. Sie können den Ausdruck bearbeiten und eine andere integrierte Aggregatfunktion verwenden oder einen anderen Bereich angeben. Mit dem Bereich wird angegeben, welcher Satz an Daten für die Berechnung verwendet werden soll.  
@@ -71,19 +71,19 @@ ms.locfileid: "47790318"
   
 |Position im Bericht|Felder|Parameter|Berichtselemente|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> Dataset|Variablen|RenderFormat|  
 |------------------------|------------|----------------|-----------------|-------------------------------|----------------------------|---------------|------------------|  
-|Seitenheader<br /><br /> Seitenfuß|Benutzerkontensteuerung|Benutzerkontensteuerung|Höchstens eins<br /><br /> Hinweis 1|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|Body|Benutzerkontensteuerung<br /><br /> Hinweis 2|Benutzerkontensteuerung|Nur Elemente im aktuellen Bereich oder einem enthaltenen Bereich<br /><br /> Hinweis 3|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|Berichtsparameter|nein|Nur Parameter am Anfang der Liste<br /><br /> Hinweis 4|nein|nein|nein|nein|nein|  
-|Feld|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|nein|nein|nein|  
-|Abfrageparameter|nein|Benutzerkontensteuerung|nein|nein|nein|nein|nein|  
-|Gruppierungsausdruck|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|Benutzerkontensteuerung|nein|nein|  
-|Sortierungsausdruck|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|Benutzerkontensteuerung|Benutzerkontensteuerung<br /><br /> Hinweis 5|nein|  
-|Filterausdruck|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|Benutzerkontensteuerung|Benutzerkontensteuerung<br /><br /> Hinweis 6|nein|  
-|Code|nein|Benutzerkontensteuerung<br /><br /> Hinweis 7|nein|nein|nein|nein|nein|  
-|Berichtssprache|nein|Benutzerkontensteuerung|nein|nein|nein|nein|nein|  
-|Variablen|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|Benutzerkontensteuerung|Aktueller oder enthaltener Bereich|nein|  
-|Aggregate|Benutzerkontensteuerung|Benutzerkontensteuerung|Nur in Seitenkopf/Seitenfuß|Nur in Berichtselementaggregaten|Benutzerkontensteuerung|nein|nein|  
-|Suchfunktionen|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|Benutzerkontensteuerung|nein|nein|  
+|Seitenheader<br /><br /> Seitenfuß|Ja|Ja|Höchstens eins<br /><br /> Hinweis 1|Ja|Ja|Ja|Ja|  
+|Textkörper|Ja<br /><br /> Hinweis 2|Ja|Nur Elemente im aktuellen Bereich oder einem enthaltenen Bereich<br /><br /> Hinweis 3|Nein|Ja|Ja|Ja|  
+|Berichtsparameter|Nein|Nur Parameter am Anfang der Liste<br /><br /> Hinweis 4|Nein|Nein|Nein|Nein|Nein|  
+|Feld|Ja|Ja|Nein|Nein|Nein|Nein|Nein|  
+|Abfrageparameter|Nein|Ja|Nein|Nein|Nein|Nein|Nein|  
+|Gruppierungsausdruck|Ja|Ja|Nein|Nein|Ja|Nein|Nein|  
+|Sortierungsausdruck|Ja|Ja|Nein|Nein|Ja|Ja<br /><br /> Hinweis 5|Nein|  
+|Filterausdruck|Ja|Ja|Nein|Nein|Ja|Ja<br /><br /> Hinweis 6|Nein|  
+|Code|Nein|Ja<br /><br /> Hinweis 7|Nein|Nein|Nein|Nein|Nein|  
+|Berichtssprache|Nein|Ja|Nein|Nein|Nein|Nein|Nein|  
+|Variablen|Ja|Ja|Nein|Nein|Ja|Aktueller oder enthaltener Bereich|Nein|  
+|Aggregate|Ja|Ja|Nur in Seitenkopf/Seitenfuß|Nur in Berichtselementaggregaten|Ja|Nein|Nein|  
+|Suchfunktionen|Ja|Ja|Ja|Nein|Ja|Nein|Nein|  
   
 -   **Hinweis 1.** Berichtselemente müssen in der gerenderten Berichtsseite vorhanden sein, oder der Wert ist NULL. Wenn die Sichtbarkeit eines Berichtselements von einem Ausdruck abhängt, der False ergibt, ist das Berichtselement auf der Seite nicht vorhanden.  
   
@@ -108,13 +108,13 @@ ms.locfileid: "47790318"
   
 |Kontext|RunningValue|RowNumber|Erster<br /><br /> Letzter|Previous|Sum und andere Vorsortierungsfunktionen|ReportItem-Aggregate|Suchfunktionen|Aggregatfunktion|  
 |-------------|------------------|---------------|--------------------|--------------|-------------------------------------|---------------------------|----------------------|------------------------|  
-|Ausgeführter Wert|nein|nein|nein|nein|Benutzerkontensteuerung|nein|Benutzerkontensteuerung|nein|  
-|Erster<br /><br /> Letzter|nein|nein|nein|nein|Benutzerkontensteuerung|nein|nein|nein|  
-|Previous|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|Benutzerkontensteuerung|nein|Benutzerkontensteuerung|nein|  
-|Sum und andere Vorsortierungsfunktionen|nein|nein|nein|nein|Benutzerkontensteuerung|nein|Benutzerkontensteuerung|nein|  
-|ReportItem-Aggregate|nein|nein|nein|nein|nein|nein|nein|nein|  
-|Suchfunktionen|Benutzerkontensteuerung|Benutzerkontensteuerung<br /><br /> Hinweis 1|Benutzerkontensteuerung<br /><br /> Hinweis 1|Benutzerkontensteuerung<br /><br /> Hinweis 1|Benutzerkontensteuerung<br /><br /> Hinweis 1|Benutzerkontensteuerung<br /><br /> Hinweis 1|nein|nein|  
-|Aggregatfunktion|nein|nein|nein|nein|nein|nein|nein|nein|  
+|Ausgeführter Wert|Nein|Nein|Nein|Nein|Ja|Nein|Ja|Nein|  
+|Erster<br /><br /> Letzter|Nein|Nein|Nein|Nein|Ja|Nein|Nein|Nein|  
+|Previous|Ja|Ja|Ja|Nein|Ja|Nein|Ja|Nein|  
+|Sum und andere Vorsortierungsfunktionen|Nein|Nein|Nein|Nein|Ja|Nein|Ja|Nein|  
+|ReportItem-Aggregate|Nein|Nein|Nein|Nein|Nein|Nein|Nein|Nein|  
+|Suchfunktionen|Ja|Ja<br /><br /> Hinweis 1|Ja<br /><br /> Hinweis 1|Ja<br /><br /> Hinweis 1|Ja<br /><br /> Hinweis 1|Ja<br /><br /> Hinweis 1|Nein|Nein|  
+|Aggregatfunktion|Nein|Nein|Nein|Nein|Nein|Nein|Nein|Nein|  
   
 -   **Hinweis 1.** Aggregatfunktionen sind nur im *Source* -Ausdruck einer Suchfunktion zulässig, wenn die Suchfunktion nicht in einem Aggregat enthalten ist. Aggregatfunktionen sind im *Destination* -Ausdruck oder *Result* -Ausdruck einer Suchfunktion nicht zulässig.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "47790318"
   
  ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link")Zurück zum Anfang  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  

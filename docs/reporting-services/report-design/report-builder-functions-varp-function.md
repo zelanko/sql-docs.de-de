@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: e4f86ab3-bdb3-4e4a-9a9d-7ae7abdf4dc4
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 7aafa77a83aa59a2db5915040a1455c09c4714d7
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 062544e43b95a6e0e6143f5d44c89bda302900da
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031212"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291058"
 ---
 # <a name="report-builder-functions---varp-function"></a>Funktionen des Berichts-Generators: VarP-Funktion
   Gibt die Auffüllungsvarianz aller numerischen Werte ungleich NULL aus dem angegebenen Ausdruck im Kontext des angegebenen Bereichs ausgewertet zurück.  
@@ -67,7 +67,7 @@ VarP(expression, scope, recursive)
 =VarP(Fields!LineTotal.Value, "Order")  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: aebc5f3d-97d5-4d54-b525-753fed073a9a
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 887104ff6667844071e44e1933592e8238b124dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dd662580a2d9dc98beb3f416bdb3003a9b4c016a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674718"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296218"
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>Alternative Methoden zum Herstellen einer Datenverbindung (Berichts-Generator)
 Eine Datenverbindung enthält die Informationen zum Herstellen einer Verbindung mit einer externen Datenquelle, z. B. einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank. Normalerweise erhalten Sie die Verbindungsinformationen und den zu verwendenden Anmeldeinformationstyp vom Datenquellenbesitzer.  
@@ -69,7 +69,7 @@ Sie müssen zu einem Berichtsserver navigieren und eine freigegebene Datenquelle
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Berichtsdatasets &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)  
 [Lernprogramme für den Berichts-Generator](../reporting-services/report-builder-tutorials.md) 
   

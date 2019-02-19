@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 8dc4998b-a214-49b6-96e7-fbc179015209
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: fa58344c4543c04bd6c16647fd524252539937c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bb679941710f145d5a35aeaecc60996eaf69c607
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785298"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296888"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>Hinzufügen und Ändern einer Linie (Berichts-Generator und SSRS)
   Sie können einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht eine Linie hinzufügen, wenn die einzelnen Abschnitte des Berichts durch ein grafisches Element getrennt werden sollen. Sie können die Darstellung der Linie anpassen, indem Sie die Linieneigenschaften wie Farbe oder Stil bearbeiten. So können Sie z. B. Unternehmensfarben in den Bericht integrieren.    
@@ -34,7 +34,7 @@ ms.locfileid: "47785298"
     > [!NOTE]    
     >  Wenn Sie die Linienart auf **Doppelt** festlegen und die Linienstärke 1 1/2 pt oder geringer ist, wird die Linie möglicherweise nicht doppelt angezeigt, wenn Sie den Bericht im Berichts-Generator, Berichts-Designer oder einem [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Webportal ausführen. Sie wird doppelt angezeigt, wenn Sie den Bericht in andere Formate wie Microsoft Word oder Acrobat PDF exportieren.    
     
-## <a name="see-also"></a>Weitere Informationen finden Sie unter    
+## <a name="see-also"></a>Weitere Informationen    
  [Rechtecke und Linien &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)    
     
   

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d78d5bd802b1c194cb4b1cf09a81a1eecc9f54df
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6b4d2193730a07ff59ddfc8c74189663f74e804b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413696"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289468"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Seitenlayout und Rendering (Berichts-Generator und SSRS)
 Erfahren Sie mehr über [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Renderingerweiterungen für paginierte Berichte, damit der Bericht genau so aussieht, wie Sie es möchten – einschließlich Seitenlayout, Seitenumbrüchen und Papierformat. 
@@ -111,7 +111,7 @@ Ein Bericht kann auch Unterberichte enthalten.
  [Steuern von Seitenumbrüchen, Überschriften, Spalten und Zeilen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
  Stellt Informationen zum Verwenden von Seitenumbrüchen bereit.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   

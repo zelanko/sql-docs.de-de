@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a939770ba7b362e2601ecb45b126066341c7c34e
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 54036ccf8d8b47eedede1d2ddfe5d85b6dbee351
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030515"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407520"
 ---
 # <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>Erweitern Sie die Funktionalität durch das Erstellen von Azure Data Studio-Erweiterungen
 
@@ -35,11 +35,11 @@ Erweitern von Azure Data Studio haben, können Sie eine eigene Erweiterung erste
 
 Um eine Erweiterung entwickeln benötigen Sie Node.js installiert ist und in Ihre $PATH verfügbar. Node.js umfasst Npm, den Node.js-Paket-Manager, der verwendet wird, um den Generator für die Erweiterung zu installieren.
 
-Um die neue Erweiterung zu starten, können Sie den Studio-Erweiterung für Azure Data-Generator verwenden. Das Yeoman [Erweiterung Generator](https://www.npmjs.com/package/generator-sqlops) ist es sehr einfach, einfache Erweiterung Projekte zu erstellen. Um den Generator zu starten, geben Sie an einer Eingabeaufforderung Folgendes ein:
+Um die neue Erweiterung zu starten, können Sie den Studio-Erweiterung für Azure Data-Generator verwenden. Das Yeoman [Erweiterung Generator](https://www.npmjs.com/package/generator-azuredatastudio) ist es sehr einfach, einfache Erweiterung Projekte zu erstellen. Um den Generator zu starten, geben Sie an einer Eingabeaufforderung Folgendes ein:
 
-`npm install -g yo generator-sqlops`
+`npm install -g yo generator-azuredatastudio`
 
-`yo sqlops`
+`yo azuredatastudio`
 
 
 **Erweiterbarkeit Verweise**

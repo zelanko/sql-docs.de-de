@@ -12,16 +12,15 @@ helpviewer_keywords:
 - updating, alerts
 - creating, data alerts
 - creating, alerts
-ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 16688920d157a9f0fcbd68a12b3112418a81237e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0ccb69e17c55f9b808cf71a1728863d49365eca8
+ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511659"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331540"
 ---
 # <a name="data-alert-designer"></a>Datenwarnungs-Designer
 
@@ -211,7 +210,7 @@ Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen und be
   
 -   [Create a Data Alert in Data Alert Designer (Erstellen einer Datenwarnung im Datenwarnungs-Designer)](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [Reporting Services-Datenwarnungen](../reporting-services/reporting-services-data-alerts.md)   
 [Data Alert Manager for Alerting Administrators (Datenwarnungs-Manager für Warnungsadministratoren)](../reporting-services/data-alert-manager-for-alerting-administrators.md)  

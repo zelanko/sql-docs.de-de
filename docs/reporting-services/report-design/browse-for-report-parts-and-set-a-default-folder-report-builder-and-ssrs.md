@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 5cf38068-65d1-4fe8-81f3-a404d8fbc663
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 638d4ccecba36eec60561b7d0418273e258df6ba
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9c42d33ae4d5e979013db49bb2d46eb2ae92556b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099811"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293688"
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>Suchen nach Berichtsteilen und Festlegen eines Standardordners (Berichts-Generator und SSRS)
 Die einfachste Möglichkeit, einen paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht zu erstellen, besteht darin, vorhandene Berichtsteile wie Tabellen und Diagramme dem Bericht mithilfe des Berichtsteilkatalogs hinzuzufügen. Wenn Sie dem Bericht einen Berichtsteil hinzufügen, werden damit auch alle für die Verarbeitung erforderlichen Elemente hinzugefügt. Beispielsweise ist jeder Berichtsteil von einem Dataset (d. h., einer Abfrage und einer Verbindung zu einer Datenquelle) abhängig. Nachdem Sie dem Bericht den Berichtsteil hinzugefügt haben, können Sie diesen nach Bedarf ändern.  
@@ -60,7 +60,7 @@ Die einfachste Möglichkeit, einen paginierten [!INCLUDE[ssRSnoversion](../../in
   
  Sie müssen den Berichts-Generator nicht neu starten, damit diese Einstellung wirksam wird.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Suchen nach Updates oder Deaktivieren von Updates (Berichts-Generator und SSRS)](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)   
  [Berichtsteile &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
  [Berichtsteile und Datasets](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 41235402-bb9e-4cb7-b91e-431e77db19cf
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 9dfd17acaa01bd415c5fde547bb714f62936d09e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 239eb6d79be700a37a35f36270aea4e1839a69aa
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833878"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290308"
 ---
 # <a name="report-builder-functions---level-function"></a>Funktionen des Berichts-Generators: Dimensionsfunktion
   Gibt die aktuelle Ebene in einer rekursiven Hierarchie zurück.  
@@ -49,7 +49,7 @@ Level(scope)
 =Level("Employees")  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   

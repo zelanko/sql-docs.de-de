@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: b99e4398-1fba-4824-958f-5c75d10485ea
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 0ad5cd38b1ec69c0a54444e63462957094d47498
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d5e77dd2ff54fec6e79724c00dc30fa0f727150e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736658"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286028"
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>Mehrere Reihen in einem Diagramm (Berichts-Generator und SSRS)
   Wenn in einem Diagramm mehrere Reihen vorhanden sind, müssen Sie die optimale Möglichkeit zum Vergleichen der Reihen bestimmen. Sie können ein gestapeltes Diagramm verwenden, in dem die relativen Anteile der einzelnen Reihen angezeigt werden. Wenn Sie nur zwei Reihen vergleichen, die über eine gemeinsame Kategorieachse (X) verfügen, verwenden Sie die sekundäre Achse. Dies ist hilfreich, wenn zwei aufeinander bezogene Reihen von Daten angezeigt werden, z. B. Preis und Volumen oder Einkommen und Steuern. Wenn die Lesbarkeit des Diagramms beeinträchtigt wird, empfiehlt es sich, mehrere Diagrammflächen zu verwenden, um die einzelnen Reihen visuell stärker voneinander zu trennen.  
@@ -51,9 +51,9 @@ ms.locfileid: "47736658"
 ## <a name="using-range-charts"></a>Verwenden von Bereichsdiagrammen  
  Bereichsdiagramme weisen zwei Werte pro Datenpunkt auf. Wenn das Diagramm zwei Reihen aufweist, die dieselbe Kategorieachse (X) verwenden, können Sie mithilfe eines Bereichsdiagramms die Differenz zwischen den beiden Reihen anzeigen. Bereichsdiagramme eignen sich optimal für die Anzeige von Hoch-Tief-Daten und Öffnungs-Schluss-Daten. Wenn die erste Reihe beispielsweise den Höchstumsatz für jeden Tag im Januar enthält, während die zweite Reihe den geringsten Umsatz für jeden Tag im Januar enthält, können Sie mithilfe eines Bereichsdiagramms die Differenz zwischen dem Höchstumsatz und dem geringsten Umsatz für jeden Tag veranschaulichen. Weitere Informationen finden Sie unter [Bereichsdiagramme (Berichts-Generator und SSRS)](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Anzeigen einer Reihe mit mehreren Datenbereichen in einem Diagramm (Berichts-Generator und SSRS)](../../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
+ [Anzeigen einer Reihe mit mehreren Datenbereichen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
  [Diagrammtypen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)  
   
   

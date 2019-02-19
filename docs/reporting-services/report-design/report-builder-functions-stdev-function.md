@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: cb51e96e-a828-42f0-b67c-cee3f4d221e7
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 98f2445d65f4071b17cd9fac1fd3485418eaaa7f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 40cde95453f8e0107dcbf697057e5bd4e7f8c3fd
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028179"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287408"
 ---
 # <a name="report-builder-functions---stdev-function"></a>Funktionen des Berichts-Generators: StDev-Funktion
   Gibt die Standardabweichung aller numerischen Werte ungleich NULL aus dem angegebenen Ausdruck im Kontext des angegebenen Bereichs ausgewertet zurück.  
@@ -67,7 +67,7 @@ StDev(expression, scope, recursive)
 =StDev(Fields!LineTotal.Value, "Order")  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   

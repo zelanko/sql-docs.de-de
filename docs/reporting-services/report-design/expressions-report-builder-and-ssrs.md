@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 9790f320fe6f6ebe61eff665de625f9c9cfe77d2
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a32bb1fef21b41fae6ef30dd011b5b7260203c94
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205019"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285988"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Ausdrücke (Berichts-Generator und SSRS)
   Ausdrücke werden sehr häufig in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Berichten mit Seitenzahlen verwendet, um Daten abzurufen, zu berechnen, anzuzeigen, zu gruppieren, zu sortieren, zu filtern, zu parametrisieren oder zu formatieren. 

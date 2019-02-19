@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: ab0b86f1-4882-4258-a2b6-c612faecfa4b
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 6e932866c5f535dcde60a5191dc20913ecdf8ffe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5a6ded6b52da2105d324ba835f6a747eb024f97a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844458"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298628"
 ---
 # <a name="specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs"></a>Angeben der Größe eines Indikators mithilfe eines Ausdrucks (Berichts-Generator und SSRS)
   Zusätzlich zu Farbe, Richtung und Form können Sie die Größe anpassen und damit die visuelle Wirkung von Indikatoren maximieren.  
@@ -58,7 +58,7 @@ ms.locfileid: "47844458"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Indikatoren &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

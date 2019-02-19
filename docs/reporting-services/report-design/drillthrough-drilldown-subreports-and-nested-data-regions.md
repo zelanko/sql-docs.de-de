@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 20ef203c4fbb377c62eede7186cecf811aa942ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: da900964e69bc36828726e8874222e5e1e3f0541
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845728"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291618"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>Drillthrough, Drilldown, Unterberichte und geschachtelte Datenbereiche
   Daten können auf unterschiedliche Weise organisiert werden, um die Beziehungen allgemein oder detailliert anzuzeigen.  Sie können alle Daten in den Bericht einfügen, aber ausblenden, bis ein Benutzer die Details per Mausklick einblendet. Dies wird als *Drilldownaktion* bezeichnet. Sie können die Daten in einem Datenbereich (z. B. eine Tabelle oder ein Diagramm) anzeigen, der in einem anderen Datenbereich (z. B. eine Tabelle oder eine Matrix) *geschachtelt* ist. Sie können die Daten in einem *Unterbericht* anzeigen, der vollständig in einem Hauptbericht enthalten ist. Die Detaildaten können auch in *Drillthroughberichte* eingefügt werden. Hierbei handelt es sich um separate Berichte, die angezeigt werden, wenn ein Benutzer auf einen Link klickt.  
@@ -42,7 +42,7 @@ ms.locfileid: "47845728"
 |Abruf von Daten|Daten werden zur gleichen Zeit abgerufen wie der Hauptbericht.|Daten werden für jeweils einen Drillthroughbericht abgerufen.|Alle Daten werden zur gleichen Zeit abgerufen wie der Hauptbericht.|  
 |Verarbeitung und Rendern|Mit dem Hauptbericht|Beim Klicken auf den Link|Mit dem Hauptbericht|  
 |Leistung|Langsamer (ruft aber alle Daten mit dem Hauptbericht ab)|Schneller (ruft aber nicht alle Daten mit dem Hauptbericht ab)|Schneller (und ruft alle Daten mit dem Hauptbericht ab)|  
-|Verwendung von Parametern|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|Verwendung von Parametern|Ja|Ja|Nein|  
 |Wiederverwendbar|Als Bericht oder Unterbericht oder Drillthroughbericht in anderen Berichten|Als Bericht oder Unterbericht oder Drillthroughbericht in anderen Berichten|Kann nicht wiederverwendet werden.|  
 |Speicherort|Außerhalb des Hauptberichts, auf dem gleichem oder einem anderen Berichtsserver|Außerhalb des Hauptberichts, auf dem gleichem Berichtsserver|Im Hauptbericht|  
 |Anzeige|Im Hauptbericht|In einem anderen Bericht|Im Hauptbericht|  
@@ -93,7 +93,7 @@ ms.locfileid: "47845728"
  [Angeben von Pfaden zu externen Elementen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)  
  Erläutert, wie auf Elemente außerhalb der Berichtsdefinitionsdatei verwiesen wird.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

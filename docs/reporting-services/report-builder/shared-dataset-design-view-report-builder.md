@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 1be128dd301e5f545d1e008c8710c6e738063595
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4b00e626bf9823d45d7437bfa3219fb2b0afa8cc
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020465"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287947"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Freigegebene Datasetentwurfsansicht (Report Builder)
   In einem Bericht stellt ein Dataset Berichtsdaten dar, die als Ergebnis der Ausführung einer Abfrage für eine externe Datenquelle zurückgegeben werden. Freigegebene Datasets werden auf einem Berichtsserver veröffentlicht und können in mehreren Berichten verwendet werden. Sie können Datasets erstellen, um Sie für andere freizugeben. Im Fenster „Freigegebene Datasetentwurfsansicht“ wählen Sie eine freigegebene Datenquelle aus, geben Eigenschaften für das freigegebene Dataset an und erstellen im Abfrage-Designer eine Abfrage.  
@@ -23,7 +23,7 @@ ms.locfileid: "50020465"
  Weitere Informationen zum Arbeiten mit Daten in einem Bericht finden Sie unter [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
 ##  <a name="Ribbon"></a> Menüband  
- Das Menüband bietet schnellen Zugriff auf die Befehle, die Sie zur Ausführung einer Aufgabe benötigen. Die Befehle sind in den folgenden logischen Gruppen organisiert: Verbindung, Dataset und Abfrage-Designer.  
+ Das Menüband bietet schnellen Zugriff auf die Befehle, die Sie zur Ausführung einer Aufgabe benötigen. Befehle sind in die folgenden logischen Gruppen unterteilt: Verbindung, Dataset und Abfrage-Designer.  
   
 ### <a name="connection"></a>Verbindung  
  Verwenden Sie die Schaltfläche **Auswählen** in der Gruppe "Verbindung", um eine freigegebene Datenquelle im Bericht auszuwählen, oder navigieren Sie zu einer freigegebenen Datenquelle auf dem Berichtsserver.  
@@ -89,7 +89,7 @@ ms.locfileid: "50020465"
  Klicken Sie zum Speichern der erstellten Abfrage auf die Schaltfläche **Berichts-Generator** und anschließend auf **Speichern** oder **Speichern unter**. Navigieren Sie zum entsprechenden Ordner auf dem Berichtsserver, und speichern Sie die freigegebene Datasetdefinition. Das freigegebene Dataset steht anderen Benutzern erst zur Verfügung, wenn Sie es auf dem Berichtsserver speichern.  
   
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  

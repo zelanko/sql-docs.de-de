@@ -9,14 +9,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.embeddedimages.f1
 - "10060"
 ms.assetid: aed77345-5eeb-41f0-96c9-db6b4a11ec6f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d5949cac74f857b6a696faa51c58e614176824a5
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bef601ab368ed40d9d08cf3f8c12c85949369149
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021934"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290258"
 ---
 # <a name="embed-an-image-in-a-report-report-builder-and-ssrs"></a>Einbetten eines Bilds in einen Bericht (Berichts-Generator und SSRS)
   Ein Bericht kann ein eingebettetes Bild enthalten. Durch das Einbetten eines Bilds wird sichergestellt, dass das Bild immer für den Bericht verfügbar ist. Gleichzeitig nimmt allerdings die Größe der Berichtsdefinition zu; das ist die Datei, die den Bericht definiert. Die in einen Bericht eingebetteten Bilder werden im Berichtsdatenbereich aufgeführt.  
@@ -60,7 +60,7 @@ ms.locfileid: "50021934"
   
 3.  Klicken Sie auf das Textfeld neben der **MIMEType** -Eigenschaft, und wählen Sie in der Dropdownliste einen neuen MIME-Typ aus.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Bilder &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
  [Hinzufügen eines datengebundenen Bilds &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)   
  [Bildeigenschaften &#40;Dialogfeld, Allgemein, Berichts-Generator und SSRS&#41;](https://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  

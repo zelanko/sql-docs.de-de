@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: b9642af3-b3ae-4f78-b0be-8f96b79fc313
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8f60cd93baed4f1f3bd6aec837c6c9304729d061
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9e1698d581d920379b085290d646bca12ab5ff6a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612898"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289139"
 ---
 # <a name="insert-or-delete-a-row-report-builder-and-ssrs"></a>Einfügen oder Löschen einer Zeile (Berichts-Generator und SSRS)
 Sie können in einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht Zeilen einem Tablix-Datenbereich hinzufügen bzw. daraus entfernen. Der Tablix-Datenbereich kann eine Tabelle, eine Matrix oder eine Liste sein. Die folgenden Vorgehensweisen gelten nicht für Diagramm- und Messgerätdatenbereiche.  
@@ -27,7 +27,7 @@ Sie können in einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnov
   
 -   Klicken Sie in der Entwurfsansicht auf die obere linke Ecke des Tablix-Datenbereichs, sodass die Spalten- und Zeilenziehpunkte über und neben dem Datenbereich angezeigt werden.  
   
-     Weitere Informationen zu Datenbereichen finden Sie unter [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
+     Weitere Informationen zu Datenbereichen finden Sie unter [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
 ## <a name="to-insert-a-row-in-a-selected-data-region"></a>So fügen Sie eine Zeile in einen ausgewählten Datenbereich ein  
   
@@ -55,7 +55,7 @@ Sie können in einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnov
   
 -   Klicken Sie mit der rechten Maustaste auf eine Zeilengruppenzelle im Zeilengruppenbereich eines Tablix-Datenbereichs, aus dem Sie eine Zeile löschen möchten, und klicken Sie dann auf **Zeilen löschen**.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
  [Grundlegendes zu Gruppen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)   
  [Tabellen (Berichts-Generator und SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   

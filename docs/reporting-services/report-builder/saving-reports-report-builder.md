@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ea2e2b6ef177f4c11d7655f4a4a66c159d40961a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 42817b1524bd2bc0ada10e4b49bcd511c51dc549
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029049"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289489"
 ---
 # <a name="saving-reports-report-builder"></a>Speichern von Berichten (Berichts-Generator)
   Im Berichts-Generator können Sie einen Bericht mit Seitenzahlen auf einem [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Berichtsserver, in einer SharePoint-Bibliothek, in einer Dateifreigabe, für die Sie Schreibrechte haben, oder auf dem Computer speichern. 
@@ -60,7 +60,7 @@ Wenn Sie einen Bericht speichern, speichern Sie in Wirklichkeit die Berichtsdefi
   
 -   [Speichern eines Berichts in einer SharePoint-Bibliothek &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/save-a-report-to-a-sharepoint-library-report-builder.md)  
    
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichte, Berichtsteile und Berichtsdefinitionen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Installieren und Deinstallieren von Berichts-Generator](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
  [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   

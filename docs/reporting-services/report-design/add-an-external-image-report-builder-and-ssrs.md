@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 81fd4a1f-79a9-4967-86d6-6229413c0995
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4564b83e50f835d29a96d71cf91eb14aeafe12c2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8264dcb68687979588a709445885fdb50addf549
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505854"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295238"
 ---
 # <a name="add-an-external-image-report-builder-and-ssrs"></a>Hinzufügen eines externen Bilds (Berichts-Generator und SSRS)
   Externe Bilder können auf einem Berichtsserver im einheitlichen Modus bzw. im integrierten SharePoint-Modus oder auf einer beliebigen anderen Website gespeichert sein. Wenn Sie externe Bilder im Bericht verwenden, müssen Sie prüfen, ob das Bild vorhanden ist und ob der Leser des Berichts Zugriffsberechtigungen für das Bild hat. Weitere Informationen finden Sie unter [Bilder &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "52505854"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Einbetten eines Bilds in einen Bericht &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
  [Hinzufügen eines Hintergrundbilds &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-a-background-image-report-builder-and-ssrs.md)   
  [Bildeigenschaften (Dialogfeld), Allgemein (Berichts-Generator und SSRS)](https://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  

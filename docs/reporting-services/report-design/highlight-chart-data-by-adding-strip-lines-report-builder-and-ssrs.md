@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 94dba56cee823d5e8df68244b4d8d44fee5c98a2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e45240643a54464c4821250208d54d5f302ea52a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529770"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294068"
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>Hervorheben von Diagrammdaten durch Hinzufügen von Bereichsstreifen (Berichts-Generator und SSRS)
   Bereichsstreifen oder Streifen sind horizontale oder vertikale Bereiche, die den Hintergrund des Diagramms in regelmäßigen oder benutzerdefinierten Abständen schattieren. Mithilfe von Bereichsstreifen können Sie Folgendes tun:  
@@ -58,7 +58,7 @@ ms.locfileid: "52529770"
 > [!NOTE]  
 >  Standardmäßig wird die Eigenschaft „Interval“ auf „Auto“ festgelegt. Das bedeutet, dass das Diagramm kein Intervall für benutzerdefinierte Bereichsstreifen berechnet. Das Diagramm berechnet nur Intervalle für Bereichsstreifen, wenn ein Intervallwert festgelegt wird.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Formatieren von Achsenbezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Formatieren eines Diagramms &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Hinzufügen eines gleitenden Durchschnitts zu einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 88717ffe6cdb7711b1b9ca19a1f57edd5930b7e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 70a4aa215fa2ef743d260970cb44c4a7b144504b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664059"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288388"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>Bilder, Textfelder, Rechtecke und Linien (Berichts-Generator und SSRS)
   Neben Datenbereichen wie Tabellen, Matrizen und Diagrammen werden in paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten andere Berichtselemente wie Bilder, Textfelder und Rechtecke verwendet, um visuelle Effekte hinzuzufügen, wichtige Informationen hervorzuheben oder verwandte Informationen bereitzustellen. Sie können die Formatierung eines Berichtselements ändern. Sie können z. B. einen Rahmen oder eine Auffüllung hinzufügen, die ursprüngliche Sichtbarkeit oder Richtung ändern oder die genaue Größe oder Position des Elements angeben.  
@@ -35,7 +35,7 @@ ms.locfileid: "47664059"
  [Bilder &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)  
  Bilder zeigen binäre Bilddaten in einem Bericht an. Sie stellen die Quelle für das Bild bereit. Bei der Quelle kann es sich um einen URL-Verweis auf ein auf einem Webserver gespeichertes Bild, einen Verweis auf eingebettete Bilddaten oder einen Verweis auf binäre Bilddaten in einer Datenbank handeln. Berichts-Generator und Berichts-Designer unterstützen BMP-, JPEG-, GIF- und PNG-Dateien.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Formatieren von Berichtselementen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
   
   

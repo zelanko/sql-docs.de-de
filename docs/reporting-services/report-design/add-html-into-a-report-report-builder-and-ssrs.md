@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 30bd631a-f774-48e7-a13a-b6c2eb54d9bb
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 06d9181358ddd8a3e9709787f6fe254ed913ea08
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 54b48b4b204a5bc5d68ecdbb76dd706f6f6e5431
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50032109"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292038"
 ---
 # <a name="add-html-into-a-report-report-builder-and-ssrs"></a>Hinzufügen von HTML in einem Bericht (Berichts-Generator und SSRS)
   Mithilfe eines Platzhalters können Sie HTML aus einem Feld im Dataset in einen Bericht importieren. Standardmäßig steht ein Platzhalter für einfachen Text, daher müssen Sie den Markuptyp des Platzhalters zu HTML ändern. Weitere Informationen finden Sie unter [Importieren von HTML in einen Bericht (Berichts-Generator und SSRS)](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "50032109"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Formatieren von Zahlen und Datumsangaben &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Formatieren von Linien, Farben und Bildern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
  [Platzhaltereigenschaften (Dialogfeld), Allgemein (Berichts-Generator und SSRS)](https://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)  

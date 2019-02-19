@@ -15,14 +15,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.seriesgroupproperties.variables.f1
 - "10412"
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: a68f9d4f0eea662b143b6a37dd5d2e5d5faeb846
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5e23ffcae117f42770604ca60cd2fc2d313eb8a5
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673168"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286118"
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>Integrierte Auflistungen: Verweise auf Berichts- und Gruppenvariablen (Berichts-Generator)
   Bei komplexen Berechnungen, die in Ausdrücken eines Berichts mehrfach verwendet werden, empfiehlt sich das Erstellen einer Variable. Sie können eine Berichtsvariable oder eine Gruppenvariable erstellen. Variablennamen müssen im Bericht eindeutig sein.  
@@ -69,7 +69,7 @@ ms.locfileid: "47673168"
   
  Um auf die Variable in einem Ausdruck zu verweisen, verwenden Sie die globale Auflistungssyntax, z. B. `=Variables!GroupDescription.Value`. Auf der Entwurfsoberfläche wird der Wert in einem Textfeld als `<<Expr>>`angezeigt.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Integrierte Sammlungen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  

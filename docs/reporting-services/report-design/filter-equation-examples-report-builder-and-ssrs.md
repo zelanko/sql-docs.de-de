@@ -8,14 +8,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - filtering data [Reporting Services], filter equation examples
 ms.assetid: 66bec93d-7c3b-4d4a-8cb6-7a7bb2f34ec6
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 098cb82ec8271afd86cf5c86a55c11df3cc8ca2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6d63c013c01889941aed1804ebf5ebf2930209ea
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751078"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293488"
 ---
 # <a name="filter-equation-examples-report-builder-and-ssrs"></a>Beispiele für Filtergleichungen (Berichts-Generator und SSRS)
   Zum Erstellen eines Filters müssen Sie mindestens eine Filtergleichung angeben. Eine Filtergleichung schließt einen Ausdruck, einen Datentyp, einen Operator und einen Wert ein. Dieses Thema enthält Beispiele für häufig verwendete Filter.  
@@ -38,10 +38,10 @@ ms.locfileid: "47751078"
 |`[Territory]`|**Text**|**LIKE**|`%o%th*`|Alle Gebietsnamen, die mit "North" und "South" beginnen.|  
 |`=LEFT(Fields!Subcat.Value,1)`|**Text**|**IN**|`B, C, T`|Alle Unterkategoriewerte, die mit B, C oder T beginnen.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
- [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [Datentypen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   

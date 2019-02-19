@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 9435b891652c00391cd934cf739ba76ff20f4a82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d6d397d3c2f841bb98d49cfdf42d525f0d9b4fc2
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779414"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286048"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern
   In einem Bericht ist ein Filter Teil eines Datasets, eines Datenbereichs oder einer Datenbereichsgruppe, den Sie erstellen, um die im Bericht verwendeten Daten zu beschränken. Mithilfe von Filtern können Berichtsdaten gesteuert werden, wenn es nicht möglich ist, die Datasetabfrage zu ändern, z. B. bei Verwendung eines freigegebenen Datasets.  
@@ -96,7 +96,7 @@ ms.locfileid: "47779414"
   
  Zurück zum Anfang  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   

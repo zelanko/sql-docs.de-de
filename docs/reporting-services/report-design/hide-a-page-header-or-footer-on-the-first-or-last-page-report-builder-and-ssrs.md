@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: f87ce79b-00d7-4458-a17e-e253a20f720d
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 6291fa6f851116ed5c0010211ce7278e4cafee3c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9519e413c9ff80d0757457e7c1624f6f5ace1831
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678578"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287398"
 ---
 # <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>Ausblenden einer Seitenkopf- oder Seitenfußzeile auf der ersten oder letzten Seite (Berichts-Generator und SSRS)
   Ein Bericht kann eine Seitenkopf- und Seitenfußzeile enthalten, die am oberen bzw. unteren Rand jeder Seite verläuft. Nachdem Sie eine Kopf- bzw. Fußzeile hinzugefügt haben, können Sie sie selektiv auf der ersten und letzten Seite des Berichts ausblenden.  
@@ -45,7 +45,7 @@ ms.locfileid: "47678578"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Seitenkopf- und Seitenfußzeilen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Hinzufügen oder Entfernen einer Seitenkopf- oder Seitenfußzeile &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  

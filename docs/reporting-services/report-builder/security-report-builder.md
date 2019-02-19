@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ce603b38e1e210944cc27b7d25c9ee5df3c3c027
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bd51af5b1fe70d73d37f1bbefb07ada68d56cd4a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030099"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290808"
 ---
 # <a name="security-report-builder"></a>Sicherheit (Berichts-Generator)
   Berichts-Generator ist eine für die Verwendung mit einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver konzipierte Berichterstellungsclientanwendung. Der Berichtsserver kann im einheitlichen Modus als eigenständiger Server oder zur Unterstützung von Berichten auf einer SharePoint-Website im integrierten SharePoint-Modus konfiguriert werden.  
@@ -113,7 +113,7 @@ ms.locfileid: "50030099"
  Auf einem Berichtsserver veröffentlichte Elemente können vom Berichtsserveradministrator mithilfe der rollenbasierten Sicherheit oder der Sicherheit auf Ordner- und Elementebene geschützt werden. Weitere Informationen finden Sie unter [Sichere Berichte und Ressourcen](../../reporting-services/security/secure-reports-and-resources.md) in der Dokumentation zu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
   
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Installieren und Deinstallieren von Berichts-Generator](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
  [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   

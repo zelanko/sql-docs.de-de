@@ -9,14 +9,14 @@ f1_keywords:
 - "10093"
 - sql13.rtp.rptdesigner.subreportproperties.general.f1
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8425d664ea849d00b78c4f4e76fd01e54e990b33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 039cbf5c2fca53745f07d65e2de31696817f04fc
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664212"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287939"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>Hinzufügen eines Unterberichts und Hinzufügen von Parametern (Berichts-Generator und SSRS)
   Fügen Sie einem Bericht Unterberichte hinzu, wenn Sie einen Hauptbericht erstellen möchten, der mehrere verwandte Berichte enthält. Ein Unterbericht ist ein Verweis auf einen anderen Bericht. Um die Berichte über Datenwerte zu verbinden (z. B. damit mehrere Berichte Daten für denselben Kunden anzeigen), müssen Sie einen parametrisierten Bericht erstellen (z. B. einen Bericht, der die Details für einen bestimmten Kunden enthält). Wenn Sie dem Hauptbericht einen Unterbericht hinzufügen, können Sie Parameter angeben, die an den Unterbericht übergeben werden sollen.  
@@ -69,7 +69,7 @@ ms.locfileid: "47664212"
   
      Wenn Sie die Reihenfolge eines Unterberichtsparameters ändern, wirkt sich dies nicht auf die Verarbeitung des Unterberichts aus.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Unterberichte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)   
  [Renderingverhalten (Berichts-Generator und SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   

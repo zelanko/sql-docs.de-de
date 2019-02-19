@@ -16,14 +16,14 @@ f1_keywords:
 - "10536"
 - sql13.rtp.rptdesigner.maplinelayerproperties.widthrules.f1
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 177889602a291e4eb2d6596a0b1e91926deb1f1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3279ace83e7ed2e3dc2f9997c68331fd0ddbb645
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801579"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286399"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>Unterschiedliche Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten
   Die Anzeigeoptionen für Polygone, Linien und Punkte in einer Kartenebene werden gesteuert, indem Optionen für die Ebene sowie Regeln für die Kartenelemente in der Ebene festgelegt werden oder indem Optionen für bestimmte eingebettete Kartenelemente in einer Ebene überschrieben werden.  
@@ -100,9 +100,9 @@ ms.locfileid: "47801579"
   
  Nehmen Sie in der folgenden Liste an, dass Sie über drei Kartenelement und sechs verwandte analytische Werte verfügen, die zwischen 1 und 9999 liegen, und zwar: 1, 10, 200, 2000, 4777, 8999.  
   
--   **EqualInterval – Gleiches Intervall.** Erstellt Bereiche, die die Daten in gleiche Bereichsintervalle unterteilen. Im Beispiel sind die drei Bereiche 0-2999, 3000-5999, 6000-8999. Unterbereich 1: 1, 10, 200, 500. Unterbereich 2: 4777. Unterbereich 3: 8999. Diese Methode berücksichtigt nicht, wie die Daten verteilt sind. Sehr große Werte oder sehr kleine Werte können die Verteilungsergebnisse verzerren.  
+-   **EqualInterval – Gleiches Intervall.** Erstellt Bereiche, die die Daten in gleiche Bereichsintervalle unterteilen. Im Beispiel sind die drei Bereiche 0-2999, 3000-5999, 6000-8999. Teilbereich 1: 1, 10, 200, 500. Teilbereich 2: 4777. Teilbereich 3: 8999. Diese Methode berücksichtigt nicht, wie die Daten verteilt sind. Sehr große Werte oder sehr kleine Werte können die Verteilungsergebnisse verzerren.  
   
--   **EqualDistribution - Gleichmäßige Verteilung.** Erstellt Bereiche, die diese Daten so aufteilen, dass jeder Bereich eine gleiche Anzahl von Elementen enthält. In den Beispieldaten sind die drei Bereiche 0-10, 11-500, 501-8999. Unterbereich 1: 1. 10. Unterbereich 2: 200, 500. Unterbereich 3: 4777, 8999. Diese Methode kann die Verteilung verzerren, indem sie Unterteilungen erstellt, die sehr große oder sehr kleine Bereiche umfassen.  
+-   **EqualDistribution - Gleichmäßige Verteilung.** Erstellt Bereiche, die diese Daten so aufteilen, dass jeder Bereich eine gleiche Anzahl von Elementen enthält. In den Beispieldaten sind die drei Bereiche 0-10, 11-500, 501-8999. Teilbereich 1: 1, 10. Teilbereich 2: 200, 500. Teilbereich 3: 4777, 8999. Diese Methode kann die Verteilung verzerren, indem sie Unterteilungen erstellt, die sehr große oder sehr kleine Bereiche umfassen.  
   
 -   **Optimal** . Erstellt Bereiche, die automatisch die Verteilung so anpassen, dass ausgewogene Unterbereiche erstellt werden. Die Anzahl der Unterbereiche wird vom Algorithmus bestimmt.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "47801579"
 |`#TOVALUE`|Zeigt den tatsächlichen numerischen Wert des Datenfelds an.|10000|  
 |`#FROMVALUE{N0} - #TOVALUE{N0}`|Zeigt die tatsächlichen numerischen Werte des Anfangs und des Endes des Bereichs an.|10 - 790|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Ändern der Kartenlegenden, Farbskala und zugeordneten Regeln &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
  [Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
  [Karten-Assistent und Kartenebenen-Assistent &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  

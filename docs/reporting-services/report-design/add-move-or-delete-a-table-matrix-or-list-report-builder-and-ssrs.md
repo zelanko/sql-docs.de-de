@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 4b97c470-cde0-4bb1-a46e-5f5f5553feaa
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: a54558b4e7b104f7d33e33b14393bf845c576712
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4911bd9df522331c19388300d45557be35e9facd
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784958"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297178"
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>Hinzufügen, Verschieben oder Löschen einer Tabelle, Matrix oder Liste (Berichts-Generator und SSRS)
   In einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht zeigt ein Datenbereich Daten aus einem Berichtsdataset an. Zu den Datenbereichen gehören Tabelle, Matrix, Liste, Diagramm und Messgerät. Um einen Datenbereich in einen anderen Datenbereich zu schachteln, fügen Sie die Datenbereiche getrennt hinzu, und ziehen Sie dann den Datenbereich, den Sie schachteln möchten, auf den anderen Datenbereich.  
@@ -58,7 +58,7 @@ ms.locfileid: "47784958"
   
 -   Wählen Sie den Datenbereich aus, klicken Sie mit der rechten Maustaste in den Datenbereich, und klicken Sie anschließend auf **Löschen**.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   

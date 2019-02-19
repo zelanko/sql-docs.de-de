@@ -8,14 +8,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - searching reports
 ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d17541a43178f7ebe5161904266087096844b680
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ea304423f392815b2eeeca18580ad5a73f140751
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620988"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296918"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report"></a>Suchen von Text, Zahlen oder Datumswerten in einem Bericht
   Sie können einen Bericht durchsuchen, indem Sie das Wort bzw. den Satz eingeben, den Sie suchen (der Maximalwert eines Suchbegriffs beträgt 256 Zeichen). Bei der Suche handelt es sich um eine Navigationstechnik, die einen übereinstimmenden Wert im Bericht sucht und legt den Fokus auf den Teil des Berichts, der den entsprechenden Wert enthält.  
@@ -40,7 +40,7 @@ ms.locfileid: "47620988"
   
 4.  Wenn Sie nach weiteren Vorkommen desselben Wertes suchen möchten, klicken Sie auf **Weiter**.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen des Berichts-Viewer-Webparts zu einer Webseite &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
   
   

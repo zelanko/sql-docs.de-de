@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 author: mikeraymsft
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 91aedc290389f317a04263a1bbdde2bb086226a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: daf3ed025405b753116bba267ce6f4c50d350601
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062660"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407540"
 ---
 # <a name="sql-server-properties-alwayson-high-availability-tab"></a>SQL Server-Eigenschaften (Registerkarte Hohe Verfügbarkeit (immer aktiviert))
   Verwenden Sie die Registerkarte **Hohe Verfügbarkeit (immer aktiviert)** des Dialogfelds **SQL Server-Eigenschaften** im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager, um die Funktion AlwaysOn-Verfügbarkeitsgruppen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]zu aktivieren oder zu deaktivieren. Die Aktivierung von AlwaysOn-Verfügbarkeitsgruppen ist eine Voraussetzung dafür, dass eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz Verfügbarkeitsgruppen als Lösung für Hochverfügbarkeit und Notfallwiederherstellung verwenden kann.  

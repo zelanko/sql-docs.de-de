@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8ffbc6d38d8d63ea783c5b24534b4d1a34a16a5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 410529d8691474e3b10d8e1907282d91bbe6a68b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761010"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285548"
 ---
 # <a name="chart-legend---change-item-text-report-builder"></a>Diagrammlegende: Ändern von Elementtext (Berichts-Generator)
   Wenn Sie ein Feld im Wertebereich des Diagramms ablegen, wird automatisch ein Legendenelement mit dem Namen dieses Felds erstellt. Alle Legendenelemente im Diagramm sind mit jeweils einer Reihe verknüpft, mit Ausnahme von Formdiagrammen, bei denen die Legende stattdessen mit einzelnen Datenpunkten verknüpft ist.  
@@ -51,9 +51,9 @@ ms.locfileid: "47761010"
   
 2.  Klicken Sie auf **Legende** , und geben Sie im Feld **Benutzerdefinierter Legendentext** eine Legendenbezeichnung ein. Die Reihe wird mit dem Text aktualisiert.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Formatieren der Legende in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
  [Formatieren von Reihenfarben in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Ausblenden von Legendenelementen im Diagramm (Berichts-Generator und SSRS)](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)  
+ [Ausblenden von Legendenelementen im Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)  
   
   

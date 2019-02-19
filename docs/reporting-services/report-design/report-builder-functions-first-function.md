@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: d0914520-30c5-4d63-9b59-8d9342ed63b9
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 075d2253f8662786952e0057042dd04351296aac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a90f81948f7977d0ad2461ac794371cc57eb5d10
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632738"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287560"
 ---
 # <a name="report-builder-functions---first-function"></a>Funktionen des Berichts-Generators: First-Funktion
   Gibt den ersten Wert im festgelegten Bereich des angegebenen Ausdrucks zurück.  
@@ -68,7 +68,7 @@ First(expression, scope)
 =First(Fields!ProductNumber.Value, "Category")  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   

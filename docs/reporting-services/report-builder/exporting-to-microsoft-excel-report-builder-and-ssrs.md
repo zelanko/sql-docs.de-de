@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 71ba67e4abb97a0de9ed4143adcd072b2f3eef8a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9f57f685532ee11f960fe71243944b819ef0dbd5
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400024"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295158"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
   Die Excel-Renderingerweiterung von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] rendert einen paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht im [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] -Format (XLSX). Mit der Excel-Renderingerweiterung spiegelt die Breite von Spalten in Excel die Breite von Spalten in Berichten genauer wider.  
@@ -183,7 +183,7 @@ ms.locfileid: "52400024"
   
  Bilder, Diagramme, Sparklines, Datenbalken, Karten, Messgeräte, Indikatoren und Zeilen werden innerhalb einer Excel-Zelle positioniert, befinden sich jedoch eine Ebene über dem Zellenraster. Linien werden als Zellrahmen gerendert.  
   
- Diagramme, Sparklines, Datenbalken, Karten, Messgeräte und Indikatoren werden als Bilder exportiert. Die von ihnen dargestellten Daten, z. B. die Wert- und Elementbezeichnungen für ein Diagramm, werden nicht exportiert und sind nur in der Excel-Arbeitsmappe verfügbar, wenn sie in einer Spalte oder Zeile in einem Datenbereich innerhalb eines Berichts enthalten sind.  
+ Diagramme, Sparklines, Datenbalken, Karten, Messgeräte und Indikatoren werden als Bilder exportiert. Die von ihnen dargestellten Daten, z. B. die Wert- und Elementbezeichnungen für ein Diagramm, werden nicht exportiert und sind nur in der Excel-Arbeitsmappe verfügbar, wenn sie in einer Spalte oder Zeile in einem Datenbereich innerhalb eines Berichts enthalten sind.  
   
  Wenn Sie Diagramm-, Sparkline-, Datenbalken-, Karten-, Messgerät- und Indikatordaten verwenden möchten, exportieren Sie den Bericht in eine CSV-Datei oder generieren Atom-kompatible Datenfeeds aus dem Bericht. Weitere Informationen finden Sie unter [Exportieren als CSV-Datei (Berichts-Generator und SSRS)](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md) und [Generieren von Datenfeeds aus Berichten (Berichts-Generator und SSRS)](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
@@ -265,7 +265,7 @@ ms.locfileid: "52400024"
 ##  <a name="ConditionalFormat"></a> Ändern von Berichten zur Laufzeit  
  Wenn ein Bericht in mehrere Formate gerendert werden muss und kein Berichtslayout erstellt werden kann, das in allen erforderlichen Formaten wunschgemäß Rendervorgänge ausführt, verwenden Sie ggf. das integrierte globale Objekt von "RenderFormat", um die Darstellung des Berichts zur Laufzeit bedingt zu ändern. Dadurch können Berichtselemente abhängig vom verwendeten Renderer ausgeblendet oder angezeigt werden, um die besten Ergebnisse in den einzelnen Formaten zu erhalten. Weitere Informationen finden Sie unter [Integrierte globale Werte und Benutzerverweise &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Renderingverhalten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   

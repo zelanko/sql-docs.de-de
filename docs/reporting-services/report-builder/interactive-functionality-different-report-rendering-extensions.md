@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: c9e980b05432f9e7fdd54bbd45165d62bff88c4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 83398ce2bf9e12a6b16ef5495d63716d4f3b1903
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789078"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286578"
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bietet Funktionen für die Interaktion mit einem paginierten Bericht zur Laufzeit. Nicht alle Berichtsrenderingformate unterstützen die interaktiven Funktionen in vollem Umfang. In der folgenden Tabelle ist die Funktionsweise der einzelnen interaktiven Funktionen in bestimmten Formaten beschrieben.  
@@ -106,7 +106,7 @@ ms.locfileid: "47789078"
 |Wort|Der Berichtsserver exportiert den Bericht nach Word mithilfe der gefilterten Daten im aktuellen Bericht.|  
 |Andere|Der Berichtsserver exportiert den Bericht in andere Formate mithilfe der gefilterten Daten im aktuellen Bericht.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [Interaktive Sortierung, Dokumentstrukturen und Links &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
     

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 99f83b32-4b86-4d40-973c-9a328d23ac8b
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 10d60f74bc24f16ff82bef8131c75b80b4b0b506
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: edb8b0fd67611dfce4902e31720a20b1ec5463bb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595918"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295270"
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>Tablix-Datenbereich (Berichts-Generator und SSRS)
   Der Tablix-Datenbereich ist in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]ein Berichtselement mit verallgemeinertem Layout, in dem paginierte Berichtsdaten in Zellen angezeigt werden, die in Zeilen und Spalten organisiert sind. Bei den Berichtsdaten kann es sich um aus der Datenquelle abgerufene Detaildaten oder in benutzerdefinierten Gruppen organisierte aggregierte Detaildaten handeln. Jede Tablix-Zelle kann ein beliebiges Berichtselement enthalten, z. B. ein Textfeld, ein Bild oder einen anderen Datenbereich (z. B. einen Tablix-Bereich, ein Diagramm oder ein Messgerät). Wenn Sie einer Zelle mehrere Berichtselemente hinzufügen möchten, erstellen Sie zuerst ein Rechteck, das als Container fungiert. Anschließend fügen Sie dem Rechteck Berichtselemente hinzu.  
@@ -75,10 +75,10 @@ ms.locfileid: "47595918"
   
  Durch die Funktion Gesamtergebnis hinzufügen wird automatisch eine Zeile außerhalb der aktuellen Gruppe erstellt, in der Werte angezeigt werden, die im Bereich der Gruppe liegen. Sie können statische und dynamische Zeilen auch manuell hinzufügen. Anhand von visuellen Indikatoren können Sie statische Zeilen von dynamischen Zeilen unterscheiden. Weitere Informationen finden Sie unter [Zellen, Zeilen und Spalten des Tablix-Datenbereichs (Berichts-Generator und SSRS)](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verknüpfen mehrerer Datenbereiche mit einem Dataset &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [Steuern der Tablix-Datenbereichsanzeige auf einer Berichtsseite (Berichts-Generator und SSRS)](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
- [Untersuchen der Flexibilität eines Tablix-Datenbereichs (Berichts-Generator und SSRS)](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)   
+ [Untersuchen der Flexibilität eines Tablix-Datenbereichs &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

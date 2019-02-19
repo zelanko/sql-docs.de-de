@@ -11,14 +11,14 @@ helpviewer_keywords:
 - expressions [Reporting Services], adding
 - groups [Reporting Services], expressions
 ms.assetid: 34cd0249-fc74-4cf2-ba11-7b072992bfd2
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: cc7b23b28005ad6ba362704cd33c4c591ba380a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b80eb5028048c1b7b0a0776bc54c58e53330c186
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768944"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289828"
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>Beispiele für Gruppierungsausdrücke (Berichts-Generator und SSRS)
   In einem Datenbereich können Sie Daten nach einem einzelnen Feld gruppieren oder komplexe Ausdrücke erstellen, mit denen die Daten identifiziert werden, nach denen gruppiert wird. Komplexe Ausdrücke schließen Verweise auf mehrere Felder oder Parameter, Bedingungsanweisungen oder benutzerdefinierten Code ein. Wenn Sie für einen Datenbereich eine Gruppe definieren, fügen Sie diese Ausdrücke den **Gruppeneigenschaften** hinzu. Weitere Informationen finden Sie unter [Hinzufügen oder Löschen einer Gruppe in einem Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "47768944"
 |Gruppieren Sie nach drei separaten Altersgruppen:<br /><br /> "Unter 21", "Zwischen 21 und 50" und "Über 50".|`=IIF(First(Fields!Age.Value)<21,"Under 21",(IIF(First(Fields!Age.Value)>=21 AND First(Fields!Age.Value)<=50,"Between 21 and 50","Over 50")))`|  
 |Gruppieren Sie nach vielen Altersgruppen. In diesem Beispiel wird benutzerdefinierter Code veranschaulicht, der in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET geschrieben ist und der eine Zeichenfolge für die folgenden Bereiche zurückgibt:<br /><br /> 25 oder darunter<br /><br /> 26 bis 50<br /><br /> 51 bis 75<br /><br /> Über 75|`=Code.GetRangeValueByAge(Fields!Age.Value)`<br /><br /> Benutzerdefinierter Code:<br /><br /> `Function GetRangeValueByAge(ByVal age As Integer) As String`<br /><br /> `Select Case age`<br /><br /> `Case 0 To 25`<br /><br /> `GetRangeValueByByAge = "25 or Under"`<br /><br /> `Case 26 To 50`<br /><br /> `GetRangeValueByByAge = "26 to 50"`<br /><br /> `Case 51 to 75`<br /><br /> `GetRangeValueByByAge = "51 to 75"`<br /><br /> `Case Else`<br /><br /> `GetRangeValueByByAge = "Over 75"`<br /><br /> `End Select`<br /><br /> `Return GetRangeValueByByAge`<br /><br /> `End Function`|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)  

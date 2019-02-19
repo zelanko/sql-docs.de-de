@@ -9,14 +9,14 @@ f1_keywords:
 - "10121"
 - sql13.rtp.rptdesigner.textboxproperties.intrctvsort.f1
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 1c7c9ddd615ef5dda1bccd9a1e3d90cf54fdc993
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b0a742ce22f6d5683cacd84ffc6701c577b0966b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851428"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294378"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>Hinzufügen einer interaktiven Sortierung zu einer Tabelle oder Matrix (Berichts-Generator und SSRS)
   Sie können interaktive Sortierschaltflächen hinzufügen, um es Benutzern zu ermöglichen, die Sortierreihenfolge von Zeilen und Spalten in Tabellen und Matrizen zu ändern. Diese Funktion wird nur in Renderingformaten unterstützt, die Benutzeraktionen unterstützen, z. B. HTML.  
@@ -215,7 +215,7 @@ ms.locfileid: "47851428"
   
  ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#BackToTop)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Interaktive Sortierung (Berichts-Generator und SSRS)](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)   
  [Sortieren von Daten in einem Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   

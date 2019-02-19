@@ -19,14 +19,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.pagefooter.general.f1
 - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 6ff5c2e66580eabb29908dcec99b3eaa429d1d04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b03f701a40c97d5958e5e8b2146844f335d64724
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759794"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298638"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Seitenkopf- und Seitenfußzeilen (Berichts-Generator und SSRS)
   Ein Bericht kann eine Kopf- und Fußzeile enthalten, die am oberen bzw. unteren Rand jeder Seite verläuft. Kopf- und Fußzeilen können statischen Text, Bilder, Linien, Rechtecke, Rahmen, Hintergrundfarbe, Hintergrundbilder und Ausdrücke enthalten. Ausdrücke enthalten Verweise auf Datasetfelder für Berichte mit genau einem Dataset und Aggregatfunktionsaufrufen mit dem Dataset als Bereich.  
@@ -55,9 +55,9 @@ ms.locfileid: "47759794"
   
 |Unterstützt im Ausdruck|ReportItems-Aggregate|Dataset-Aggregate (Bereich muss Datasetname sein)|  
 |-----------------------------|----------------------------|----------------------------------------------------------|  
-|Textfelder im Berichtstext|Benutzerkontensteuerung|nein|  
-|&PageNumber|Benutzerkontensteuerung|nein|  
-|&TotalPages|Benutzerkontensteuerung|nein|  
+|Textfelder im Berichtstext|Ja|Nein|  
+|&PageNumber|Ja|Nein|  
+|&TotalPages|Ja|Nein|  
 |Aggregate-Funktion|Ja. Beispiel:<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|Ja. Beispiel:<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
 |Feldauflistung für Elemente auf der Seite|Indirekt. Beispiel:<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|Ja. Beispiel:<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
 |Datengebundenes Bild|Indirekt. Beispiel: `=ReportItems!TXT_Photo.Value`|Ja. Beispiel:<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
@@ -124,7 +124,7 @@ ms.locfileid: "47759794"
   
  Weitere Informationen finden Sie unter [Exportieren nach Microsoft Excel &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md) (Exportieren nach Microsoft Excel (Berichts-Generator und SSRS)).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Einbetten eines Bilds in einen Bericht &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
  [Rechtecke und Linien &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
   

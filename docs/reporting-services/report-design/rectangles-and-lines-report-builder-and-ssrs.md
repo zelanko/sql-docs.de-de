@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: d6226b0c-0398-4185-8565-96099876fc21
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: c113ab0ca99b2f63830782326fa4f61744682a1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bac5664c4fe6e0999f6766c817dd277f0360180d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678408"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298448"
 ---
 # <a name="rectangles-and-lines-report-builder-and-ssrs"></a>Rechtecke und Linien (Berichts-Generator und SSRS)
   Mit Rechtecken und Linien können visuelle Effekte in einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht erzeugt werden. Sie können Anzeigeeigenschaften für diese Berichtselemente im Abschnitt „Rahmen“ auf der Registerkarte „Home“ festlegen. Im Bereich „Eigenschaften“ können weitere Eigenschaften festgelegt werden. Sie können einem Rechteck Funktionen wie eine Hintergrundfarbe oder ein Bild, eine QuickInfo oder ein Lesezeichen hinzufügen.  
@@ -41,7 +41,7 @@ ms.locfileid: "47678408"
   
  [Hinzufügen und Ändern einer Linie &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-and-modify-a-line-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen eines Rechtecks oder Containers &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-a-rectangle-or-container-report-builder-and-ssrs.md)  
   
   

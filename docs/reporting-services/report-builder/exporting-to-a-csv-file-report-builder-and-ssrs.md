@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 697934ebe182f82e4f9c668439afb6ecf2bc5631
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f7f0033a5ed81cb21d7c77038cf95ec8123c3d64
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702598"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297603"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Exportieren als CSV-Datei (Berichts-Generator und SSRS)
   Die durch Trennzeichen getrennte CSV-Renderingerweiterung (Comma-Separated Value) rendert paginierte Berichte als vereinfachte Darstellung der Daten eines Berichts in einem standardisierten Nur-Text-Format, das leicht lesbar und mit anderen Anwendungen austauschbar ist.  
@@ -141,9 +141,9 @@ ms.locfileid: "47702598"
  Sie kännen einige Standardeinstellungen für diesen Renderer ändern, beispielsweise den Modus für das Rendern, die Zeichen, die als Trennzeichen verwendet werden können, und die Zeichen, die als Textqualifizierer für die Standardzeichenfolge verwendet werden können. Ändern Sie dazu die Geräteinformationseinstellungen. Weitere Informationen finden Sie unter [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md).  
   
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Renderingverhalten (Berichts-Generator und SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Renderingverhalten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Rendern von Berichtselementen (Berichts-Generator und SSRS)](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  

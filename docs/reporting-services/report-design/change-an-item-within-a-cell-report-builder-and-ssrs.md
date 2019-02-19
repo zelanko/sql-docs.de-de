@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 91a54778-8929-41f9-bb4c-826cec636be4
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 74de748df3d51495582085d9887d75e9828b1427
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 39a09934ba8ec087149a7cd8e35ed57b44bfdfbb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671758"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294488"
 ---
 # <a name="change-an-item-within-a-cell-report-builder-and-ssrs"></a>Ändern eines Elements in einer Zelle (Berichts-Generator und SSRS)
 In paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichten kann nur ein Nichtcontainerelement, z.B. ein Textfeld, eine Zeile oder ein Bild, durch ein neues Berichtselement ersetzt werden. Sie können beispielsweise eine Tabelle in ein Textfeld ziehen, um das Textfeld durch eine Tabelle zu ersetzen.  
@@ -32,7 +32,7 @@ In paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Be
 > [!NOTE]  
 >  Das Dialogfeld **Bildeigenschaften** wird geöffnet, wenn Sie ein Bildberichtselement in eine Zelle ziehen, in der Sie Eigenschaften wie die Quelle des Bilds festlegen können, bevor das Bild der Zelle hinzugefügt wird.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Bilder, Textfelder, Rechtecke und Linien &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   

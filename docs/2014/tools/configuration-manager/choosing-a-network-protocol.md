@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - shared memory [SQL Server]
@@ -24,12 +23,12 @@ ms.assetid: 6565fb7d-b076-4447-be90-e10d0dec359a
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 86a15b6617b85de2e0a44287344ef47c92546072
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c167994c7145bce348b6959a57533e398e1d6bb
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068564"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407550"
 ---
 # <a name="choosing-a-network-protocol"></a>Auswählen eines Netzwerkprotokolls
   Um eine Verbindung mit [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] herzustellen, müssen Sie ein aktiviertes Netzwerkprotokoll haben. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann Anforderungen für mehrere Protokolle gleichzeitig bedienen. Clients stellen eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über ein einzelnes Protokoll her. Wenn dem Clientprogramm nicht bekannt ist, auf welches Protokoll von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gelauscht wird, konfigurieren Sie den Client so, dass er nacheinander das Verwenden mehrerer Protokolle versucht. Verwenden Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager, um Netzwerkprotokolle zu aktivieren, zu deaktivieren oder zu konfigurieren.  
@@ -62,6 +61,6 @@ ms.locfileid: "48068564"
 ## <a name="enabling-the-protocol"></a>Aktivieren des Protokolls  
  Das Protokoll muss sowohl auf dem Client als auch dem Server aktiviert sein. Der Server kann gleichzeitig auf alle aktivierten Protokolle auf Anforderungen lauschen. Clientcomputer können ein Protokoll auswählen oder das Verwenden der Protokolle in der Reihenfolge versuchen, in der sie im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager angegeben sind.  
   
- Ein kurzes Lernprogramm zum Konfigurieren von Protokollen und zum Herstellen einer Verbindung mit [!INCLUDE[ssDE](../../includes/ssde-md.md)]finden Sie unter [Tutorial: Erste Schritte mit der Datenbank-Engine](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
+ Ein kurzes Tutorial zum Konfigurieren von Protokollen und zum Herstellen einer Verbindung mit [!INCLUDE[ssDE](../../includes/ssde-md.md)] finden Sie unter [Tutorial: Erste Schritte mit der Datenbank-Engine](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
   
   

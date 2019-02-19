@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: fef19359-a618-4d21-a7e4-e391cdefd4eb
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 5814c665ae8e815890068f7334097f54b7c399bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f70a913bce975ea9aa8832930857b3880cfc0b1b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628848"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298147"
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>Untersuchen der Flexibilität eines Tablix-Datenbereichs (Berichts-Generator und SSRS)
 Wenn Sie in einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht einen Tabellen-, Matrix- oder Listendatenbereich über die Registerkarte „Einfügen“ des Menübands hinzufügen, starten Sie mit einer Ausgangsvorlage für einen Tablix-Datenbereich. Diese Vorlage stellt jedoch keine Beschränkung für Sie dar. Sie können die Datenanzeige weiterentwickeln, indem Sie Tablix-Datenbereichsfunktionen wie Gruppen, Zeilen und Spalten hinzufügen oder entfernen.  
@@ -42,11 +42,11 @@ Wenn Sie in einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnovers
 ## <a name="adding-an-adjacent-details-group"></a>Hinzufügen einer angrenzenden Detailgruppe  
  Standardmäßig ist die Detailgruppe die innerste untergeordnete Gruppe in einer Gruppenhierarchie. Unter der Detailgruppe können keine Gruppen geschachtelt werden. Sie können weitere, angrenzende Detailgruppen erstellen, um beispielsweise die besten 5 Produkte und die schlechtesten 5 Produkte in Bezug auf den Umsatz anzuzeigen. Da Sie den einzelnen Gruppen Filter- und Sortierungsausdrücke hinzufügen können, können Sie in einem Tablix-Datenbereich zwei Ansichten von Detaildaten eines Datasets anzeigen. Weitere Informationen finden Sie unter [Grundlegendes zu Gruppen (Berichts-Generator und SSRS)](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md), [Hinzufügen oder Löschen einer Gruppe in einem Datenbereich (Berichts-Generator und SSRS)](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md) und [Hinzufügen eines Filters zu einem Dataset (Berichts-Generator und SSRS)](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Tabellen (Berichts-Generator und SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [Matrizen (Berichts-Generator und SSRS)](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [Listen (Berichts-Generator und SSRS)](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
   
   

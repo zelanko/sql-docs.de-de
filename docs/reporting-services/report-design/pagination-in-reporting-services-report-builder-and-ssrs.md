@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 34a916a39a152b1f62315df9db4028652fce3f97
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5e24d370b5f50c7b8689cab544c72f9cb245f484
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020496"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298227"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Paginierung in Reporting Services (Berichts-Generator und SSRS)
   Paginierung bezieht sich auf die Anzahl der Seiten in einem Bericht und wie Berichtselemente auf diesen Seiten angeordnet werden. Paginierung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ändert sich abhängig von der Renderingerweiterung, die Sie zum Anzeigen und Übermitteln des Berichts verwenden. Wenn Sie einen Bericht auf dem Berichtsserver erstellen, verwendet der Bericht den HTML-Renderer. Für HTML gilt ein bestimmter Satz von Paginierungsregeln. Wenn Sie den gleichen Bericht nach PDF exportieren, wird beispielsweise der PDF-Renderer verwendet, und es findet ein anderer Satz von Regeln Anwendung. Daher wird der Bericht unterschiedlich paginiert. Um einen übersichtlichen Bericht für Ihre Benutzer zu entwerfen, der für den Renderer, mit dem Sie den Bericht übermitteln möchten, optimiert ist, müssen Sie die Regeln zur Steuerung der Paginierung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]kennen.  
@@ -80,7 +80,7 @@ ms.locfileid: "50020496"
   
  Weitere Informationen zur Funktion dieser Eigenschaften beim Exportieren von Berichten nach Excel finden Sie unter [Exportieren nach Microsoft Excel (Berichts-Generator und SSRS)](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Seitenlayout und Rendering &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

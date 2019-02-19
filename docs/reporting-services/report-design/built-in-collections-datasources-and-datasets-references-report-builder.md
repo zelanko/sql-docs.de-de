@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d832ee2a79c41b99690f7176e423b5a237e77271
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1290f2813d11c53e91dc233c6ffa1c065a824f0f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763998"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295569"
 ---
 # <a name="built-in-collections---datasources-and-datasets-references-report-builder"></a>Integrierte Auflistungen: DataSources- und DataSets-Verweise (Berichts-Generator)
   Die **DataSources** -Auflistung enthält alle in einem Bericht verwendeten Datenquellen. Die **DataSets** -Auflistung enthält alle Datasets für alle Datenquellen in einem Bericht. Verwenden Sie den Bereich **Berichtsdaten** für eine hierarchische Sicht von Berichtsdatasets, die unter der Datenquelle organisiert werden, auf die sie verweisen. Wenn Sie Verweise auf diese Auflistungen einschließen, werden bei der Vorschau des Berichts keine Werte angezeigt. Die Auflistungen sind erst verfügbar, nachdem der Bericht auf einem Berichtsserver veröffentlicht wurde.  
@@ -40,7 +40,7 @@ ms.locfileid: "47763998"
 ### <a name="using-query-expressions"></a>Verwenden von Abfrageausdrücken  
  Mithilfe von Ausdrücken können Sie die in einem Dataset enthaltene Abfrage definieren. Auf diese Weise können Sie Berichte entwerfen, in denen die Abfrage abhängig von Benutzereingaben, Daten in anderen Datasets oder anderen Variablen geändert wird. Weitere Informationen zu Abfragen finden Sie unter [Eingebettete und freigegebene Datasets (Berichts-Generator und SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   

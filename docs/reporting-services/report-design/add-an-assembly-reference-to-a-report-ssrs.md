@@ -12,14 +12,14 @@ helpviewer_keywords:
 - adding assembly references
 - assemblies [Reporting Services], references
 ms.assetid: 0a03939e-48ce-4c30-b227-98533f2e0ccb
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: c926fc1c7c7e2b01efade00997b955a6de6328b1
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ee9ed66a1c9ae6c3adf014b34f38cd0344e4d834
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031479"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286868"
 ---
 # <a name="add-an-assembly-reference-to-a-report-ssrs"></a>Hinzufügen eines Assemblyverweises zu einem Bericht (SSRS)
   Wenn Sie benutzerdefinierten Code einbetten, der Verweise auf [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Klassen enthält, die sich nicht in <xref:System.Math> oder <xref:System.Convert>befinden, müssen Sie einen Assemblyverweis auf den Bericht bereitstellen, damit der Berichtsprozessor die Namen auflösen kann. Weitere Informationen finden Sie unter [Hinzufügen von Code zu einem Bericht &#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "50031479"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden benutzerdefinierter Assemblys mit Berichten](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
  [Berichtseigenschaften (Dialogfeld), Verweise](https://msdn.microsoft.com/library/4639d368-9918-4bb1-9953-7a724ca78dea)  
   

@@ -1,7 +1,7 @@
 ---
 title: Grundlegendes zur Java EE-Unterstützung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 02/06/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: da575f8c0fecd03e21bc2d24800cde05105a5a3c
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+ms.openlocfilehash: ae55a5bc677c70d2a1f998e235031ac9bafd5aba
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736926"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154615"
 ---
 # <a name="understanding-java-ee-support"></a>Grundlegendes zur Java EE-Unterstützung
 
@@ -36,7 +36,7 @@ Der Treiber ist für die JDBC-Treiber 6.4 in enthalten **Mssql-Jdbc-6.4.0.jre7.j
 
 Der Treiber ist für die JDBC-Treiber 7.0 in enthalten **Mssql-Jdbc-7.0.0.jre8.jar**, oder **Mssql-Jdbc-7.0.0.jre10.jar**.
 
-Der Treiber ist für die JDBC-Treiber 7.2, in enthalten **Mssql-Jdbc-7.2.0.jre8.jar**, oder **Mssql-Jdbc-7.2.0.jre11.jar**.
+Der Treiber ist für die JDBC-Treiber 7.2, in enthalten **Mssql-Jdbc-7.2.1.jre8.jar**, oder **Mssql-Jdbc-7.2.1.jre11.jar**.
   
 Der Klassenname wird immer dann verwendet, wenn Sie den Treiber mit der JDBC-Klasse „DriverManager“ laden. Er wird außerdem verwendet, wenn Sie den Klassennamen des Treibers in einer Treiberkonfiguration angeben müssen. Für das Konfigurieren einer Datenquelle in einem Java EE-Anwendungsserver kann es beispielsweise erforderlich sein, den Treiberklassennamen einzugeben.  
   

@@ -8,14 +8,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Reporting Services], about expressions
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: fc8b13d548aab60dd22cfc3adf6b1730445113cd
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b5b32e5131e460c359e6b16c3ae3ece058184e77
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100311"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294678"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Ausdrucksverwendungen in Berichten (Berichts-Generator und SSRS)
 In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten werden Ausdrücke innerhalb der gesamten Berichtsdefinition verwendet, um Werte für folgende Elemente anzugeben oder zu berechnen: Parameter, Abfragen, Filter, Berichtselementeigenschaften, Gruppierungs- und Sortierdefinitionen, Textfeldeigenschaften, Lesezeichen, Dokumentstrukturen, dynamischer Inhalt von Seitenkopf- und Seitenfußzeilen, Bilder und dynamische Datenquellendefinitionen. Dieses Hilfethema enthält Beispiele für die vielen Anwendungsmöglichkeiten, die Ausdrücke bieten, um den Inhalt oder die Darstellung eines Berichts zu variieren. Es handelt sich dabei aber nicht um eine vollständige Liste. Sie können für jede beliebige Eigenschaft einen Ausdruck in einem Dialogfeld festlegen, in dem die Ausdrucksschaltfläche (**fx**) angezeigt wird, oder in einer Dropdownliste, in der **\<Ausdruck...>** angezeigt wird.  
@@ -66,7 +66,7 @@ In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 
 |Angeben eines Datums, das für einen bestimmten Kulturkreis formatiert ist.|Wert für einen Platzhalter in einem Textfeld in einem Datenbereich. Dialogfeld **Textfeldeigenschaften, Allgemein**.|`=Fields!OrderDate.Value.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("de-DE"))`|  
 |Verketten einer Zeichenfolge und einer Zahl, die als Prozentsatz mit zwei Dezimalstellen formatiert ist.|Wert für einen Platzhalter in einem Textfeld in einem Datenbereich. Dialogfeld **Textfeldeigenschaften, Allgemein**.|`="Growth Percent: " & Format(Fields!Growth.Value,"p2")`|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: e0e9cb87260aa04deaa2e91e928f17b2a94261a3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 988d9436e6a5f3bda53126bebc2cc1aed5fe6806
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418131"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287458"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Exportieren als PDF-Datei (Berichts-Generator und SSRS)
   Die PDF-Renderingerweiterung rendert paginierte [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichte in einem Dateiformat, das in Adobe Acrobat und anderen PDF-Viewern von Drittanbietern geöffnet werden kann, die das Format PDF 1.3 unterstützen. Obwohl PDF 1.3 mit Adobe Acrobat 4.0 oder höheren Versionen kompatibel ist, wird Adobe Acrobat von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] erst ab Version 11.0 unterstützt. Die Renderingerweiterung erfordert keine Adobe-Software, um Berichte zu rendern. Zum Anzeigen oder Drucken von Berichten im PDF-Format sind allerdings PDF-Viewer wie Adobe Acrobat erforderlich.  
@@ -101,7 +101,7 @@ ms.locfileid: "52418131"
  Sie können einige Standardeinstellungen für diesen Renderer ändern, indem Sie die Geräteinformationseinstellungen ändern. Weitere Informationen finden Sie unter [PDF Device Information Settings](../../reporting-services/pdf-device-information-settings.md).  
   
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Renderingverhalten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   

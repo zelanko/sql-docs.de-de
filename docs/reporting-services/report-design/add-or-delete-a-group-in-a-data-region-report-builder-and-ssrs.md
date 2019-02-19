@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 4de53c3c-c6fc-49ce-b692-3609fc0b3ec5
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 989eadf2607854a725855b136ebd58462740aeab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6f23da8e4304f549183977d0962eebafaa7b9d05
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819578"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286248"
 ---
 # <a name="add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs"></a>Hinzufügen oder Löschen einer Gruppe in einem Datenbereich (Berichts-Generator und SSRS)
 Fügen Sie in einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht einem Datenbereich eine Gruppe hinzu, wenn Sie Daten nach einem spezifischen Wert oder einer Reihe von Ausdrücken zu Anzeige- und Berechnungszwecken organisieren möchten. Eine Gruppe verfügt über einen Namen und einen Ausdruck, der angibt, welche Daten aus einem Dataset zur Gruppe gehören. Weitere Informationen zu Gruppen finden Sie unter [Grundlegendes zu Gruppen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
@@ -115,7 +115,7 @@ Fügen Sie in einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnove
     > [!NOTE]  
     >  Vergewissern Sie sich nach dem Entfernen einer Detailzeile, dass mit dem Ausdruck in den jeweiligen Zellen ggf. ein Aggregatausdruck angegeben wird. Bearbeiten Sie ggf. den Ausdruck, sodass dieser die benötigten Aggregatfunktionen angibt.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verweise auf Berichts- und Gruppenvariablensammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)   
  [Beispiele für Gruppierungsausdrücke (Berichts-Generator und SSRS)](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
  [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   

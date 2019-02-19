@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: d52f68e9-2ba7-4bff-9053-4089e5164ab4
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 28716b24e66cdb4c410fe26bc00db48ee7436e8e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 38ff22fcfdb291c2ac3924985949142006eff812
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775913"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292188"
 ---
 # <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>Angeben von Farben, die für mehrere Formdiagramme konsistent sind (Berichts-Generator und SSRS)
   Bei anderen Diagrammen als Formdiagrammen in paginierten Berichten wählt [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] eine neue Farbe anhand des Indexes von Reihen im Diagramm aus. Beispielsweise wird die erste Reihe im Diagramm der ersten Farbe in der Palette zugeordnet. Formdiagramme weisen jedoch ein anderes Verhalten auf. Bei Formdiagrammen wird jede Farbe in der Palette einem Datenpunkt im Dataset zugeordnet. Beispielsweise wird Datenpunkt 1 der ersten Farbe in der Palette zugeordnet, Datenpunkt 2 wird der zweiten Farbe in der Palette zugeordnet usw.  
@@ -71,7 +71,7 @@ ms.locfileid: "47775913"
     =Code.GetColor(Fields!MyCategoryField)  
     ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Formatieren von Reihenfarben in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Hinzufügen einer Abschrägung, Prägung und Struktur zu einem Diagramm (Berichts-Generator und SSRS)](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
  [Definieren von Farben in einem Diagramm mit einer Palette (Berichts-Generator und SSRS)](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   

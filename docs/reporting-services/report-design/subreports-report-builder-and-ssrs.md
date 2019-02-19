@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: ab5bea3a-109e-4c25-92d9-494df7c52dd8
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: db4c5726d0bcfea62d9e5dad59cbce7771c3592b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 08368e7b8374938390f9667d6437dfc055ff7754
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756598"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288978"
 ---
 # <a name="subreports-report-builder-and-ssrs"></a>Unterberichte (Berichts-Generator und SSRS)
   Ein Unterbericht ist ein Berichtselement, das einen anderen Bericht innerhalb des Hauptteils eines Hauptberichts anzeigt. Grundsätzlich ist ein Unterbericht in einem Bericht mit einem Frame in einer Webseite vergleichbar. Er wird dazu verwendet, einen Bericht innerhalb eines Berichts einzubetten. Jeder Bericht kann als Unterbericht verwendet werden. Der als Unterbericht angezeigte Bericht wird auf einem Berichtsserver gespeichert, normalerweise im gleichen Ordner wie der übergeordnete Bericht. Sie können den übergeordneten Bericht zum Übergeben von Parametern an den Unterbericht einrichten. Ein Unterbericht kann innerhalb von Datenbereichen wiederholt werden. Dabei wird ein Parameter zum Filtern von Daten in jeder Instanz des Unterberichts verwendet.  
@@ -52,7 +52,7 @@ ms.locfileid: "47756598"
   
  Um im Berichts-Generator einen Unterbericht eines Hauptberichts in der Vorschau anzuzeigen, müssen beide Berichte auf demselben Berichtsserver gespeichert sein, oder Sie müssen einen vollständigen Pfad zum Unterbericht angeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Drillthrough, Drilldown, Unterberichte und geschachtelte Datenbereiche &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

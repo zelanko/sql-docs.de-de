@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 9d718ba8-d323-49fb-aac8-e7013a117b75
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 87860304b7d4ff235961046d0951032797a1da0b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: adae59f691c1bd29e6da28c7e2ad9f267a9f2d11
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687178"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292853"
 ---
 # <a name="report-builder-functions---rownumber-function"></a>Funktionen des Berichts-Generators: RowNumber-Funktion
   Gibt eine laufende Zählung der Zeilenanzahl für den angegebenen Bereich zurück.  
@@ -51,7 +51,7 @@ RowNumber(scope)
 =IIF(RowNumber("GroupbyCategory") Mod 2, "White", "PaleGreen")  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   

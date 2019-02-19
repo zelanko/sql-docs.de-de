@@ -12,12 +12,12 @@ ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 439967d45e74b0069d3064af64393151f9efc735
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 15f9bb429509f64909888883a718325b76efae27
+ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376602"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331500"
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>Datenbankoptimierung mithilfe der Arbeitsauslastung aus dem Abfragespeicher
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,6 +47,6 @@ Der Unterschied zwischen den Optionen „Abfragespeicher“ und „Plancache“ 
 
 ## <a name="see-also"></a>Weitere Informationen  
 [Datenbankoptimierungsratgeber](../../relational-databases/performance/database-engine-tuning-advisor.md)     
-[Tutorial: Database Engine Tuning Advisor (Tutorial: Datenbankoptimierungsratgeber)](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)     
+[Tutorial: Database Engine Tuning Advisor (Tutorial: Datenbankoptimierungsratgeber)](../../tools/dta/tutorial-database-engine-tuning-advisor.md)        
 [So werden Daten im Abfragespeicher gesammelt](../../relational-databases/performance/how-query-store-collects-data.md)     
 [Abfragespeicher, bewährte Methoden](../../relational-databases/performance/best-practice-with-the-query-store.md)
