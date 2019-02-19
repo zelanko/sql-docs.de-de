@@ -8,14 +8,14 @@ ms.technology: mobile-reports
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 51708fc41bb154fcf67ac3a21bd6680c69e2f2c2
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ce369a5652e2fe45335a49b6df3d3fc48dd9caf0
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213059"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295048"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>Erstellen und Veröffentlichen von mobilen Berichten mit dem Publisher für mobile Berichte von SQL Server
 Erfahren Sie mehr über mobile [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichte, die für mobile Geräte optimiert sind, mit lokalen Daten verbunden sind und über eine Sammlung von Datenvisualisierungen verfügen. 
@@ -37,7 +37,7 @@ Diese Artikel helfen Ihnen beim Einstieg.
 -  Download des [Publishers für mobile Berichte von SQL Server](https://go.microsoft.com/fwlink/?LinkID=733527)  
 -  [Create a Reporting Services mobile report (Erstellen eines mobilen Berichts in Reporting Services)](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md)  
 -  [End-to-end walkthrough: Create mobile reports and KPIs in SQL Server Reporting Services (Ausführliche exemplarische Vorgehensweise: Erstellen mobiler Berichte und KPIs in SQL Server Reporting Services)](https://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) (Blog von Christopher Finlan)  
-- [Beim Erstellen von mobilen Reporting Services-Berichten wahlweise mit Entwurf oder Daten beginnen](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md)  
+- [Beim Erstellen von mobilen Reporting Services-Berichten wahlweise mit Entwurf oder Daten beginnen  
 - [Daten für mobile Berichte von Reporting Services:](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md) Verwenden Sie Daten aus freigegebenen Datasets, oder bereiten Sie Daten aus Excel-Arbeitsmappen auf das Verwenden in Ihren mobilen Berichten vor.
 - [How data refresh works in mobile reports and KPIs in Reporting Services (Funktionsweise der Aktualisierung von Daten in mobilen Berichten und KPIs in Reporting Services)](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/) (Blog von Christopher Finlan): Informationen zum Einrichten der Zwischenspeicherung von freigegebenen Datasets für die Steuerung der Häufigkeit von Datenaktualisierungen und die Beschleunigung der Berichtsleistung.
 - [Visualisierungen in mobilen Berichten](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
