@@ -11,12 +11,12 @@ ms.topic: tutorial
 author: kevcunnane
 ms.author: kcunnane
 manager: craigg
-ms.openlocfilehash: 0a4e877a91cad978bb62747bd50e40adaa69ef1c
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 8389cbad7e5124c1c20c2e076df34fc97306d8ef
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030604"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407580"
 ---
 # <a name="tutorial-create-an-azure-data-studio-extension"></a>Lernprogramm: Erstellen Sie eine Azure Data Studio-Erweiterung
 
@@ -37,16 +37,15 @@ Azure Data Studio aufbaut, in demselben Framework als Visual Studio Code-Erweite
 
 - [Node.js](https://nodejs.org) installiert und kann in Ihrem `$PATH`. Von Node.js umfasst [Npm](https://www.npmjs.com/), den Node.js-Paket-Manager, die verwendet wird, um den Generator für die Erweiterung zu installieren.
 - [Visual Studio Code](https://code.visualstudio.com) zum Debuggen der Erweiterung.
-- Azure Data Studio [Debuggen Erweiterung](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug).
-- Stellen Sie sicher `sqlops` befindet sich in Ihrem Pfad. Für Windows, stellen Sie sicher, dass Sie auswählen, die `Add to Path` -Option in setup.exe. Führen Sie für Mac oder Linux, die *Installationsbefehl "Sqlops" im Pfad* Option.
-- Debuggen von SQL Operations Studio-Erweiterung (optional). Dadurch können Sie die Erweiterung ohne Packen und installieren Sie es in Azure Data Studio testen.
+- Azure Data Studio [Debuggen Erweiterung](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug) (optional). Dadurch können Sie die Erweiterung ohne Packen und installieren Sie es in Azure Data Studio testen.
+- Stellen Sie sicher `azuredatastudio` befindet sich in Ihrem Pfad. Für Windows, stellen Sie sicher, dass Sie auswählen, die `Add to Path` -Option in setup.exe. Führen Sie für Mac oder Linux, die *Installationsbefehl "Azuredatastudio" im Pfad* Option.
 
 
 ## <a name="install-the-extension-generator"></a>Installieren des Erweiterung-Generators
 
 Um den Prozess der Erstellung von Erweiterungen zu vereinfachen, haben wir erstellt eine [Erweiterung Generator](https://code.visualstudio.com/docs/extensions/yocode) mithilfe von Yeoman. Um es zu installieren, führen Sie Folgendes an der Eingabeaufforderung ein:
 
-`npm install -g yo generator-sqlops`
+`npm install -g yo generator-azuredatastudio`
 
 ## <a name="create-your-extension"></a>Erstellen Sie die Erweiterung
 
@@ -54,13 +53,13 @@ So erstellen Sie eine Erweiterung:
 
 1. Starten Sie den Generator Erweiterung mit dem folgenden Befehl ein:
 
-   `yo sqlops`
+   `yo azuredatastudio`
 
 2. Wählen Sie **neue Tastaturlayout** aus der Liste der Erweiterungstypen:
 
    ![Extension-generator](./media/tutorial-create-extension/extension-generator.png)
 
-3. Führen Sie die Schritte zum Ausfüllen der Name der Erweiterung (verwenden Sie für dieses Tutorial **Ssmskeymap**), und eine Beschreibung hinzufügen.
+3. Führen Sie die Schritte zum Ausfüllen der Name der Erweiterung (verwenden Sie für dieses Tutorial **ssmskeymap2**), und eine Beschreibung hinzufügen.
 
 Die vorherigen Schritte erstellt einen neuen Ordner. Öffnen der Ordner in Visual Studio Code, und Sie können nun Ihre eigenen tastenzuordnung-Erweiterung zu erstellen.
 
@@ -83,7 +82,7 @@ Es ist leicht zu finden und Ersetzen Sie diese tastaturzuordnungen. Führen Sie 
 
 ![Tastenkombinationen](./media/tutorial-create-extension/keyboard-shortcuts.png)
 
-![Erweiterung der Datei "KeyBindings.JSON"](./media/tutorial-create-extension/keybindings-json.png)
+![keybindings.json extension](./media/tutorial-create-extension/keybindings-json.png)
 
 
 **Schritt 2: Hinzufügen von Verknüpfungen mit der Erweiterung**

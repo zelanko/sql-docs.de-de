@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - TCP/IP [SQL Server], client protocols
@@ -14,17 +13,17 @@ ms.assetid: d04f1bce-069c-4a02-b561-c87c3282be36
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: d7686844144b43467c152907dfdff10a033005b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec3c433c1ce16e35f064910083e7ab9959e4c3bb
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165210"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407570"
 ---
 # <a name="client-protocols---tcp-and-ip-properties-protocol-tab"></a>Clientprotokolle – TCP- und IP-Eigenschaften (Registerkarte „Protokoll“)
   Verwenden Sie im Konfigurations-Manager von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Dialogfeld **Eigenschaften von TCP/IP** die Registerkarte **Protokoll** , um die folgenden Optionen anzuzeigen oder anzugeben. Zum Herstellen einer Verbindung mit einem anderen Port geben Sie die Portnummer im Dialogfeld **Standardport** ein. Weitere Informationen zu Verbindungszeichenfolgen finden Sie unter [Erstellen einer gültigen Verbindungszeichenfolge mithilfe von TCP/IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Standardport**  
  Gibt den Standardport an, der von der TCP/IP-Netzwerkbibliothek zum Herstellen einer Verbindung mit der Zielinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet wird. Der Standardport ist 1433.  
   
@@ -44,6 +43,6 @@ ms.locfileid: "48165210"
 ## <a name="see-also"></a>Siehe auch  
  [Auswählen eines Netzwerkprotokolls](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
  [Neuer Alias &#40;Registerkarte „Alias“&#41;](../../../2014/tools/configuration-manager/new-alias-alias-tab.md)   
- [&#60;Alias&#62; Eigenschaften &#40;Registerkarte "Alias"&#41;](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)  
+ [&#60;Alias&#62;-Eigenschaften &#40;Registerkarte „Alias“&#41;](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - connection strings [Database Engine], named pipes
@@ -17,12 +16,12 @@ ms.assetid: 90930ff2-143b-4651-8ae3-297103600e4f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 95c094282aa185f79f9399a26e3b6fe8049cc965
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12d5cb30217a0580d4da101d614b4930cfd8184b
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167580"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407590"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>Erstellen einer gültigen Verbindungszeichenfolge mithilfe von Named Pipes
   Wenn vom Benutzer geändert. wenn die Standardinstanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird lauscht der named Pipes-Protokoll, `\\.\pipe\sql\query` als Pipenamen. Der Punkt gibt an, dass der Computer der lokale Computer ist, `pipe` gibt an, dass die Verbindung eine Named Pipe ist, und `sql\query` ist der Name der Pipe. Zum Herstellen einer Verbindung mit der Standardpipe muss der Alias `\\<computer_name>\pipe\sql\query` als Pipename aufweisen. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Lauschen auf einer anderen Pipe konfiguriert worden ist, muss vom Pipenamen diese Pipe verwendet werden. Wenn beispielsweise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Pipe `\\.\pipe\unit\app` verwendet, muss der Alias als Pipenamen `\\<computer_name>\pipe\unit\app` verwenden.  
@@ -40,7 +39,7 @@ ms.locfileid: "48167580"
  Zum Zeitpunkt der Verbindung die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Komponente liest der Server, das Protokoll und Pipenamen aus der Registrierung für den angegebenen Aliasnamen, und erstellt ein Pipename im Format `np:\\<computer_name>\pipe\<pipename>` oder `np:\\<IPAddress>\pipe\<pipename>`. Für eine benannte Instanz lautet der standardpipename ist `\\<computer_name>\pipe\MSSQL$<instance_name>\sql\query`.  
   
 > [!NOTE]  
->  Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Firewall beendet standardmäßig über Port 445. Da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kommuniziert über Port 445, müssen Sie den Port öffnen, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Überprüfen eingehender Clientverbindungen mithilfe von named Pipes konfiguriert ist. Informationen zum Konfigurieren einer Firewall finden Sie unter "Vorgehensweise: Konfigurieren einer Firewall für SQL Server-Zugriff" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation, oder prüfen Sie Ihre Firewalldokumentation.  
+>  Der Port 445 wird von der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Firewall standardmäßig geschlossen. Da [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über den Port 445 kommuniziert, müssen Sie diesen Port erneut öffnen, falls [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Lauschen auf eingehende Clientverbindungen mithilfe von Named Pipes konfiguriert wurde. Informationen zum Konfigurieren einer Firewall finden Sie unter „Gewusst wie: Konfigurieren einer Firewall für SQL Server-Zugriff“ in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation oder in Ihrer Firewalldokumentation.  
   
 ## <a name="connecting-to-the-local-server"></a>Herstellen einer Verbindung mit dem lokalen Server  
  Beim Herstellen einer Verbindung zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], das auf dem gleichen Computer wie der Client ausgeführt wird, können Sie `(local)` als Servernamen verwenden. Aus Gründen der Mehrdeutigkeit wird das Verwenden von `(local)` nicht empfohlen, kann aber nützlich sein, wenn vom Client bekannt ist, dass er auf dem vorgesehenen Computer ausgeführt wird. Beim Erstellen einer Anwendung für mobile Benutzer mit getrennter Verbindung (beispielsweise für Verkaufspersonal, wobei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf Laptops ausgeführt und zum Speichern von Projektdaten verwendet wird) würde beispielsweise die Verbindung eines Clients zu (local) immer zu dem auf dem Laptop ausgeführten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hergestellt. Anstelle von `localhost` kann das Wort `(local)` oder ein Punkt (.) verwendet werden.  
@@ -117,10 +116,10 @@ Server             .
 ```  
   
 > [!NOTE]  
->  Angeben des Netzwerkprotokolls als eine **Sqlcmd** Parameter finden Sie unter "Vorgehensweise: Verbinden mit der Datenbank-Engine mithilfe von sqlcmd.exe" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+>  Angeben des Netzwerkprotokolls als einen **Sqlcmd** Parameter finden Sie unter "Vorgehensweise: Herstellen einer Verbindung mit der Datenbank-Engine mithilfe von sqlcmd.exe“ in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen einer gültigen Verbindungszeichenfolge mithilfe des Shared Memory-Protokoll](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
+ [Erstellen einer gültigen Verbindungszeichenfolge mithilfe des Shared Memory-Protokolls](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
  [Erstellen einer gültigen Verbindungszeichenfolge mithilfe von TCP/IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
  [Auswählen eines Netzwerkprotokolls](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)  
   

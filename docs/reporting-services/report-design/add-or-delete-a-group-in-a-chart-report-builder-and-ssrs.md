@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 0445b0ac-acae-4462-80fb-fe9735ac66db
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: fff523b7b6795546c9dcddc4906633be942c829f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3d095e1b064fdc8b53e9061cf7d1b6f9d3f84069
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816008"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296470"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>Hinzufügen oder Löschen einer Gruppe in einem Diagramm (Berichts-Generator und SSRS)
 Klicken Sie in paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichten in den Diagrammdatenbereich, um den Bereich **Diagrammdaten** anzuzeigen. Erstellen Sie Gruppen, indem Sie Datasetfelder zu den Bereichen **Kategoriegruppen** und **Reihengruppen** ziehen. Wenn Sie geschachtelte Gruppen hinzufügen möchten, fügen Sie dem Bereich mehrere Felder hinzu.  
@@ -53,7 +53,7 @@ Klicken Sie in paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion
   
 2.  Klicken Sie mit der rechten Maustaste auf die Gruppe im Bereich **Kategoriegruppen** oder **Reihengruppen** , und klicken Sie anschließend auf **Löschen**.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   
