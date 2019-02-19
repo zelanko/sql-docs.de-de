@@ -12,15 +12,15 @@ f1_keywords:
 - sql13.dqs.matchingproject.matching.f1
 - sql13.dqs.matchingproject.export.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 93ad673f1566d1045705c390b0b0064859ba18fd
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 72d0d4c0af1b09c8cad4ab6ab5ab6636fd302e4f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617950"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015431"
 ---
 # <a name="run-a-matching-project"></a>Ausführen eines Abgleichsprojekts
 
@@ -111,7 +111,7 @@ ms.locfileid: "52617950"
   
  Survivorship ist optional. Sie können die Ergebnisse auch ohne Ausführung von Survivorship exportieren. In diesem Fall verwendet DQS den Pivotdatensatz, der in der Abgleichsanalyse festgelegt wurde. Wenn zwei oder mehr Datensätze in einem Cluster die Survivorship-Regel erfüllen, wählt der Survivorship-Prozess die niedrigste Datensatz-ID in den konfliktverursachenden Datensätzen als Survivor aus. Sie können Survivor mit unterschiedlichen Survivorship-Regeln in verschiedene Dateien oder Tabellen exportieren.  
   
-1.  Wählen Sie auf der Seite **Exportieren** unter **Zieltyp**das ziel aus, in das die übereinstimmenden Daten exportiert werden sollen: **SQL Server**, **CSV-Datei**oder **Excel-Datei**.  
+1.  Wählen Sie auf der Seite **Exportieren** unter **Zieltyp** das Ziel aus, in das die übereinstimmenden Daten exportiert werden sollen: **SQL Server**, **CSV-Datei** oder **Excel-Datei**.  
   
     > [!IMPORTANT]  
     >  Wenn Sie die 64-Bit-Version von Excel verwenden, können Sie die übereinstimmenden Daten nicht in eine Excel-Datei exportieren; Sie können sie nur in eine SQL Server-Datenbank oder eine CSV-Datei exportieren.  
@@ -168,7 +168,7 @@ ms.locfileid: "52617950"
     > [!NOTE]  
     >  Wenn Sie ein Abgleichsprojekt beendet haben und es dann erneut verwenden, verwendet es die Wissensdatenbank in dem Zustand, als es veröffentlicht wurde. Es werden keine Änderungen berücksichtigt, die Sie seit Abschluss des Projekts an der Wissensdatenbank vorgenommen haben. Um die Änderungen oder eine neue Wissensdatenbank zu verwenden, müssen Sie ein neues Abgleichsprojekt erstellen. Wenn Sie jedoch ein Abgleichsprojekt erstellt, aber noch nicht abgeschlossen haben, werden alle an der Abgleichsrichtlinie vorgenommenen und veröffentlichten Änderungen beim Ausführen des Abgleichs in dem Projekt verwendet.  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Ausführen eines Abgleichsprojekts  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Ausführen eines Abgleichsprojekts  
  Nachdem Sie ein Abgleichsprojekt ausgeführt haben, können Sie die Abgleichsrichtlinie in der Wissensdatenbank ändern und ein anderes Abgleichsprojekt basierend auf der aktualisierten Abgleichsrichtlinie erstellen und ausführen. Weitere Informationen finden Sie unter [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Profiler"></a> Registerkarten „Profiler“ und „Ergebnisse“  
@@ -179,27 +179,27 @@ ms.locfileid: "52617950"
   
  Die Quelldatenbankstatistiken umfassen Folgendes:  
   
--   **Datensätze**: Die Gesamtzahl der Datensätze in der Datenbank  
+-   **Datensätze:** Die Gesamtzahl der Datensätze in der Datenbank  
   
--   **Gesamtwerte**: Die Gesamtzahl der Werte in den Feldern  
+-   **Gesamtwerte:** Die Gesamtzahl der Werte in den Feldern  
   
--   **Neue Werte**: Die Gesamtzahl der Werte, die seit der vorherigen Ausführung neu sind, und ihr prozentualer Anteil am Ganzen  
+-   **Neue Werte:** Die Gesamtzahl der Werte, die seit der vorherigen Ausführung neu sind, und ihr prozentualer Anteil am Ganzen  
   
--   **Eindeutige Werte**: Die Gesamtzahl der eindeutigen Werte in den Feldern und ihr prozentualer Anteil am Ganzen  
+-   **Eindeutige Werte:** Die Gesamtzahl der eindeutigen Werte in den Feldern und ihr prozentualer Anteil am Ganzen  
   
--   **Neue eindeutige Werte**: Die Gesamtzahl der eindeutigen Werte, die neu in den Feldern sind, und ihr prozentualer Anteil am Ganzen  
+-   **Neue eindeutige Werte:** Die Gesamtzahl der eindeutigen Werte, die neu in den Feldern sind, und ihr prozentualer Anteil am Ganzen  
   
  Die Feldstatistiken umfassen Folgendes:  
   
--   **Feld**: Name des Felds, das in die Zuordnungen eingeschlossen wurde  
+-   **Feld:** Name des Felds, das in die Zuordnungen eingeschlossen wurde  
   
--   **Domäne**: Name der Domäne, die dem Feld zugeordnet wurde  
+-   **Domäne:** Name der Domäne, die dem Feld zugeordnet wurde  
   
--   **Neu**: Die Anzahl der neuen Übereinstimmungen und ihr prozentualer Anteil am Gesamtwert  
+-   **Neu:** Die Anzahl der neuen Übereinstimmungen und ihr prozentualer Anteil am Ganzen  
   
--   **Eindeutig**: Die Gesamtzahl der eindeutigen Datensätze in den Feldern und ihr prozentualer Anteil am Ganzen  
+-   **Eindeutig:** Die Gesamtzahl der eindeutigen Datensätze im Feld und ihr prozentualer Anteil an den Gesamtwerten  
   
--   **Vollständigkeit**: Der Prozentsatz, zu dem die Regelausführung abgeschlossen wurde  
+-   **Vollständigkeit:** Der Prozentsatz, zu dem die Regelausführung abgeschlossen wurde  
   
 ### <a name="matching-policy-notifications"></a>Abgleichsrichtlinienbenachrichtigungen  
  Für die Abgleichsrichtlinienaktivität führen die folgenden Bedingungen zu Benachrichtigungen:  

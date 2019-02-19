@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.values.f1
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: e9a804f90b3e318c9cfd665502b8f3349bf16ce7
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 30624ce9283c9604af12497ffbd8d3e17979be8c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617590"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011901"
 ---
 # <a name="change-domain-values"></a>Ändern von Domänenwerten
 
@@ -76,45 +76,45 @@ ms.locfileid: "52617590"
   
     -   **Ausgewählte Domänenwerte als ungültig festlegen**: Wählen Sie zum Ändern des Status eines Werts von „Richtig“ oder „Fehler“ in „Ungültig“ den Wert aus, und klicken Sie anschließend nach Auswahl des Abwärtspfeils in der Symbolleiste oder in der Dropdownliste „Typ“ auf das Symbol **Ausgewählte Domänenwerte als ungültig festlegen** (Dreieck). Sie können eine Korrektur in die Spalte **Korrigieren in** eingeben oder diese leer lassen.  
   
-    -   **Korrigieren in**: Nachdem Sie einen Wert als fehlerhaft oderungültig festgelegt haben, geben Sie in die Spalte **Korrigieren in** einen neuen Wert ein. DQS fügt eine neue Zeile für den Ersatzwert hinzu, legt diesen als richtig fest und gruppiert dann die zwei Werte. Der neue Wert wird als führender Wert angezeigt. Dabei wird der führende Wert fett und der fehlerhafte oder ungültige Wert eingezogen dargestellt.  
+    -   **Korrigieren in**: Nachdem Sie einen Wert als Fehler oder als ungültig festgelegt haben, geben Sie in die Spalte **Korrigieren in** einen neuen Wert ein. DQS fügt eine neue Zeile für den Ersatzwert hinzu, legt diesen als richtig fest und gruppiert dann die zwei Werte. Der neue Wert wird als führender Wert angezeigt. Dabei wird der führende Wert fett und der fehlerhafte oder ungültige Wert eingezogen dargestellt.  
   
 6.  Um Werte als Gruppe von Synonymen festzulegen, wählen Sie mehrere richtige Werte aus, und gehen Sie dann wie folgt vor:  
   
-    -   **Ausgewählte Domänenwerte als Synonyme festlegen**: Wählen Sie zum Festlegen von Synonymen mehrere richtige Werte aus, und klicken Sie dann auf das Symbol **Ausgewählte Domänenwerte als Synonyme festlegen** . DQS gruppiert die Werte und legt einen der Werte als führenden Wert fest, durch den die anderen Werte ersetzt werden. Wenn zwei Werte gruppiert werden, aber einer der Werte in der Gruppe fehlerhaft oder ungültig ist, sind die Werte keine Synonyme.  
+    -   **Ausgewählte Domänenwerte als Synonyme festlegen**: Wählen Sie zum Festlegen von Synonymen mehrere richtige Werte aus, und klicken Sie dann auf das Symbol **Ausgewählte Domänenwerte als Synonyme festlegen**. DQS gruppiert die Werte und legt einen der Werte als führenden Wert fest, durch den die anderen Werte ersetzt werden. Wenn zwei Werte gruppiert werden, aber einer der Werte in der Gruppe fehlerhaft oder ungültig ist, sind die Werte keine Synonyme.  
   
         > [!NOTE]  
         >  Wenn Sie zwei oder mehr Werte in einer Gruppe und einen anderen Wert außerhalb der Gruppe auswählen und diese dann als Synonyme festlegen, erhalten Sie eine falsche Fehlermeldung. Die Werte werden ordnungsgemäß als Synonyme festgelegt, nachdem Sie die Fehlermeldung geschlossen haben.  
   
-    -   **Beziehung zwischen ausgewählten Synonymen aufheben**: Um die Synonymzuordnung zwischen zwei oder mehr Werten aufzuheben, wählen Sie die Werte aus, und klicken Sie dann auf das Symbol **Beziehung zwischen ausgewählten Synonymen aufheben** . Die Werte müssen gruppiert und beide korrekt sein, damit die Gruppierung als Synonyme aufzuheben.  
+    -   **Beziehung zwischen ausgewählten Synonymen aufheben**: Wählen Sie zum Aufheben der Synonymzuordnung zwischen zwei oder mehr Werten die Werte aus, und klicken Sie dann auf das Symbol **Beziehung zwischen ausgewählten Synonymen aufheben**. Die Werte müssen gruppiert und beide korrekt sein, damit die Gruppierung als Synonyme aufzuheben.  
   
-    -   **Ausgewählten Domänenwert als führenden Wert der zugehörigen Gruppe festlegen**: Um den führenden Wert der Gruppe zu ändern, wählen Sie einen Wert in der gruppe aus, der nicht als führender Wert festgelegt ist, und klicken Sie dann auf die Schaltfläche **Ausgewählten Domänenwert als führenden Wert der zugehörigen Gruppe festlegen** . Dies legt den führenden Wert als Ersatz für den anderen Wert fest. Dieser Vorgang kann nur verwendet werden, wenn Sie mindestens zwei gruppierte Werte festgelegt haben und Sie den von DQS festgelegten führenden Wert ändern möchten. Beachten Sie, dass der führende Wert durch eine blaue Zeile mit dem Wert in Fettdruck gekennzeichnet wird.  
+    -   **Ausgewählten Domänenwert als führenden Wert der zugehörigen Gruppe festlegen**: Wählen Sie zum Ändern des führenden Werts der Gruppe einen Wert in der Gruppe aus, der nicht als führender Wert festgelegt ist, und klicken Sie dann auf die Schaltfläche **Ausgewählten Domänenwert als führenden Wert der zugehörigen Gruppe festlegen**. Dies legt den führenden Wert als Ersatz für den anderen Wert fest. Dieser Vorgang kann nur verwendet werden, wenn Sie mindestens zwei gruppierte Werte festgelegt haben und Sie den von DQS festgelegten führenden Wert ändern möchten. Beachten Sie, dass der führende Wert durch eine blaue Zeile mit dem Wert in Fettdruck gekennzeichnet wird.  
   
-7.  **Rechtschreibprüfung**: Wenn ein Wert eine wellige rote Unterstreichung aufweist, schlägt die Rechtschreibprüfung eine Korrektur für den Wert vor. Klicken Sie mit der rechten Maustaste auf den unterstrichenen Wert, und wählen Sie eine Korrektur aus, sofern zutreffend. Als Werttyp wird „Fehler“ festgelegt (oder beibehalten), und die Korrektur wird zur Spalte **Korrigieren in** hinzugefügt. Klicken Sie auf den Abwärtspfeil, um weitere vorgeschlagene Korrekturen anzuzeigen. Geben Sie eine Korrektur manuell ein, um sie dem Rechtschreibprüfungswörterbuch hinzuzufügen und als Korrektur auswählen zu können. Weitere Informationen finden Sie unter [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) und [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
+7.  **Rechtschreibprüfung**: Wenn ein Wert eine wellige rote Unterstreichung aufweist, schlägt die Rechtschreibprüfung eine Korrektur für diesen Wert vor. Klicken Sie mit der rechten Maustaste auf den unterstrichenen Wert, und wählen Sie eine Korrektur aus, sofern zutreffend. Als Werttyp wird „Fehler“ festgelegt (oder beibehalten), und die Korrektur wird zur Spalte **Korrigieren in** hinzugefügt. Klicken Sie auf den Abwärtspfeil, um weitere vorgeschlagene Korrekturen anzuzeigen. Geben Sie eine Korrektur manuell ein, um sie dem Rechtschreibprüfungswörterbuch hinzuzufügen und als Korrektur auswählen zu können. Weitere Informationen finden Sie unter [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) und [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
   
     > [!NOTE]  
     >  Um die Rechtschreibprüfung zu verwenden, können Sie diese auf der Seite **Domäneneigenschaften** aktivieren. Wenn sie auf der Seite **Domäneneigenschaften** deaktiviert ist, können Sie auf das Symbol **Rechtschreibprüfung aktivieren/deaktivieren** auf der Seite **Domänenwerte** klicken, um sie auf dieser Seite zu aktivieren.  
   
-8.  **Neuen Domänenwert hinzufügen**: Klicken Sie hierauf, um am Ende der Tabelle eine Zeile hinzuzufügen. Nachdem Sie einen Wert eingegeben haben, wird die Zeile in alphabetischer Reihenfolge neu angeordnet und durch ein vorangestelltes Sternsymbol als neuer Eintrag gekennzeichnet.  
+8.  **Neuen Domänenwert hinzufügen**: Klicken Sie hier, um am Ende der Tabelle eine Zeile hinzuzufügen. Nachdem Sie einen Wert eingegeben haben, wird die Zeile in alphabetischer Reihenfolge neu angeordnet und durch ein vorangestelltes Sternsymbol als neuer Eintrag gekennzeichnet.  
   
-9. **Domänenwerte aus Excel importieren**: Um neue Werte aus einer Excel-Tabellenkalkulation hinzuzufügen, klicken Sie auf den Abwärtspfeil für das Symbol **Werte importieren** , und wählen Sie dann **Domänenwerte aus Excel importieren**aus. Geben Sie den Dateinamen ein, wählen Sie **Erste Zeile als Header verwenden** aus, sofern zutreffend, und klicken Sie dann auf **OK**. Weitere Informationen finden Sie unter [Importieren von Werten aus einer Excel-Datei in eine Domäne](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md).  
+9. **Domänenwerte aus Excel importieren**: Klicken Sie zum Hinzufügen neuer Werte aus einem Excel-Arbeitsblatt auf den Abwärtspfeil für das Symbol **Werte importieren**, und wählen Sie dann **Domänenwerte aus Excel importieren** aus. Geben Sie den Dateinamen ein, wählen Sie **Erste Zeile als Header verwenden** aus, sofern zutreffend, und klicken Sie dann auf **OK**. Weitere Informationen finden Sie unter [Importieren von Werten aus einer Excel-Datei in eine Domäne](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md).  
   
-10. **Projektwerte importieren**: Um neue Werte aus einem Data Quality-Projekt hinzuzufügen, klicken Sie auf den Abwärtspfeil für das Symbol **Werte importieren** , und wählen Sie dann **Projektwerte importieren**aus. Geben Sie den Dateinamen ein, wählen Sie **Erste Zeile als Header verwenden** aus, sofern zutreffend, und klicken Sie dann auf **OK**. Wählen Sie das Projekt aus, aus dem Sie Werte importieren möchten, und klicken Sie auf **OK**. Die importierten Werte werden angezeigt. Klicken Sie auf **Fertig stellen**. Weitere Informationen finden Sie unter „Importieren von Projektwerten in eine Domäne“.  
+10. **Projektwerte importieren**: Klicken Sie zum Hinzufügen neuer Werte aus einem Data Quality-Projekt auf den Abwärtspfeil für das Symbol **Werte importieren**, und wählen Sie dann **Projektwerte importieren** aus. Geben Sie den Dateinamen ein, wählen Sie **Erste Zeile als Header verwenden** aus, sofern zutreffend, und klicken Sie dann auf **OK**. Wählen Sie das Projekt aus, aus dem Sie Werte importieren möchten, und klicken Sie auf **OK**. Die importierten Werte werden angezeigt. Klicken Sie auf **Fertig stellen**. Weitere Informationen finden Sie unter „Importieren von Projektwerten in eine Domäne“.  
   
-11. **Ausgewählte Domänenwerte löschen**: Um zwei oder mehr vorhandene Werte aus einer Domäne zu löschen, wählen Sie diese in der Werttabelle aus, und klicken Sie dann auf das Symbol **Ausgewählte Domänenwerte löschen** . Ein Eintrag von DQS_NULL kann nicht gelöscht werden. Wenn Sie mehrere zu löschende Werte auswählen und einer davon DQS_NULL ist, schlägt der Vorgang daher fehl.  
+11. **Ausgewählte(n) Domänenwert(e) löschen**: Wählen Sie zum Löschen von zwei oder mehr vorhandenen Werten aus einer Domäne die Werte in der Wertetabelle aus, und klicken Sie dann auf das Symbol **Ausgewählte(n) Domänenwert(e) löschen**. Ein Eintrag von DQS_NULL kann nicht gelöscht werden. Wenn Sie mehrere zu löschende Werte auswählen und einer davon DQS_NULL ist, schlägt der Vorgang daher fehl.  
   
 12. Klicken Sie auf **Fertig stellen** , um die Domänenverwaltungsaktivität abzuschließen, wie in [Beenden der Domänenverwaltungsaktivität](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)beschrieben.  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Ändern von Domänenwerten  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Ändern von Domänenwerten  
  Nachdem Sie Domänenwerte geändert haben, können Sie andere Domänenverwaltungstasks in der Domäne ausführen, Sie können die Wissensermittlung durchführen, um der Domäne Wissen hinzuzufügen, oder Sie können der Domäne eine Abgleichsrichtlinie hinzufügen. Weitere Informationen finden Sie unter [Durchführen der Wissensermittlung](../data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../data-quality-services/managing-a-domain.md) oder [Erstellen einer Abgleichsrichtlinie](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Meaning"></a> Die Bedeutung von richtigen, fehlerhaften und ungültigen Werten  
  Jedem Wert in der Tabelle **Wert** der Seite **Domänenwerte** wird eine Einstellung für **Typ** von **Richtig**, **Fehler**oder **Ungültig**zugewiesen. Der Typ des Werts wird anfänglich von der Wissensermittlungsaktivität generiert, Sie können diesen jedoch nach Bedarf ändern. Der abschließende sowohl auf der Ermittlung als auch auf interaktiven Änderungen basierende Typ wird durch die Bereinigungsaktivität generiert. Diese Einstellungen haben die folgenden Bedeutungen:  
   
--   **Richtig:** Dieser Wert gehört zur Domäne und weist keine Syntaxfehler auf. Beispiel: „Chicago“ ist in einer Ortsdomäne richtig.  
+-   **Richtig**: Dieser Wert gehört zur Domäne und weist keine Syntaxfehler auf. Beispiel: „Chicago“ ist in einer Ortsdomäne richtig.  
   
--   **Fehler:** Dieser Wert gehört zur Domäne, ist aber fehlerhaft. Beispiel: „Shicago“ statt „Chicago“ ist in einer Ortsdomäne fehlerhaft. DQS kennzeichnet einen Wert als fehlerhaft, wenn ein Syntaxfehler und eine zugehörige Korrektur im Ermittlungsprozess erkannt wird. Syntaxfehler schließen auch orthographische Fehler ein.  
+-   **Fehler**: Dieser Wert gehört zur Domäne, ist aber fehlerhaft. Beispiel: „Shicago“ statt „Chicago“ ist in einer Ortsdomäne fehlerhaft. DQS kennzeichnet einen Wert als fehlerhaft, wenn ein Syntaxfehler und eine zugehörige Korrektur im Ermittlungsprozess erkannt wird. Syntaxfehler schließen auch orthographische Fehler ein.  
   
--   **Ungültig:** Dieser Wert gehört nicht zur Domäne, und es ist keine Korrektur vorhanden. Beispiel: Der Wert „12345“ in einer Ortsdomäne ist ungültig. DQS kennzeichnet einen Wert als ungültig, wenn er eine Domänenregel nicht erfüllt.  
+-   **Ungültig**: Dieser Wert gehört nicht zur Domäne, und es ist keine Korrektur vorhanden. Beispiel: Der Wert „12345“ in einer Ortsdomäne ist ungültig. DQS kennzeichnet einen Wert als ungültig, wenn er eine Domänenregel nicht erfüllt.  
   
  Sie können den Typ eines Werts manuell in einen der beiden anderen Werte ändern. DQS erzwingt bei manuellen Vorgängen keine Gültigkeits- und Fehlersemantik. Sie können eine Korrektur für einen ungültigen Wert eingeben, ohne den Status zu ändern. Sie können einen Wert als ungültig festlegen, auch wenn er keiner Domänenregel widerspricht. Sie können einen Wert als fehlerhaft festlegen, auch wenn der Ermittlungsprozess nicht angegeben hat, dass er einen Syntaxfehler aufweist. Sie können außerdem eine Korrektur eines fehlerhaften Werts entfernen, der als richtig markiert wurde, ohne den Status zu ändern.  
   

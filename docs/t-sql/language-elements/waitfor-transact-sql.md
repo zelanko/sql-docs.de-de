@@ -27,19 +27,19 @@ ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b4f4707f6f021d7395596bd1c1ab4af8230ac50d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5884c549160834cec6412e4524667a460344d66f
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595726"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807480"
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Blockiert die Ausführung eines Batches, einer gespeicherten Prozedur oder einer Transaktion bis zum Erreichen einer bestimmten Zeit oder eines bestimmten Zeitintervalls, oder bis eine angegebene Anweisung mindestens eine Zeile ändert oder zurückgibt.  
+  Blockiert die Ausführung eines Batches, einer gespeicherten Prozedur oder einer Transaktion, bis eine bestimmte Zeit oder ein bestimmtes Zeitintervall verstrichen ist oder bis eine angegebene Anweisung mindestens eine Zeile ändert oder zurückgibt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -59,13 +59,13 @@ WAITFOR
  Die angegebene Zeit bis maximal 24 Stunden, die verstreichen muss, bevor die Ausführung eines Batches, einer gespeicherten Prozedur oder einer Transaktion fortgesetzt wird.  
   
  '*time_to_pass*'  
- Der Zeitraum, für dessen Dauer gewartet werden soll. *time_to_pass* kann in einem der zulässigen Formate für **datetime**-Daten oder als lokale Variable angegeben werden. Es können keine Datumsangaben gemacht werden, daher ist der Datumsteil des **datetime**-Wertes nicht zulässig. Wird im Format hh:mm[[:ss].mss] angezeigt.
+ Der Zeitraum, für dessen Dauer gewartet werden soll. *time_to_pass* kann entweder im **datetime**-Format oder als lokale Variable definiert werden. Es können keine Datumsangaben gemacht werden, daher ist der Datumsteil des **datetime**-Werts nicht zulässig. *time_to_pass* wird im Format hh:mm[[:ss].mss] angezeigt.
   
  TIME  
  Die angegebene Zeit, zu der der Batch, die gespeicherte Prozedur oder die Transaktion ausgeführt wird.  
   
  '*time_to_execute*'  
- Die Zeit, zu der die WAITFOR-Anweisung beendet wird. *time_to_execute* kann in einem der zulässigen Formate für **datetime**-Daten oder als lokale Variable angegeben werden. Es können keine Datumsangaben gemacht werden, daher ist der Datumsteil des **datetime**-Wertes nicht zulässig. Wird im Format hh:mm[[:ss].mss] angezeigt, und kann optional auch das Datum als 1900-01-01 enthalten.
+ Die Zeit, zu der die WAITFOR-Anweisung beendet wird. *time_to_execute* kann im **datetime**-Format oder als lokale Variable definiert werden. Es können keine Datumsangaben gemacht werden, daher ist der Datumsteil des **datetime**-Werts nicht zulässig. *time_to_execute* wird im Format hh:mm[[:ss].mss] angezeigt und kann optional auch ein Datum im Format 1900-01-01 enthalten.
   
  *receive_statement*  
  Eine gültige RECEIVE-Anweisung.  
@@ -88,9 +88,9 @@ WAITFOR
 ## <a name="remarks"></a>Remarks  
  Während der Ausführung der WAITFOR-Anweisung ist die Transaktion im Gange, sodass keine weiteren Anforderungen für dieselbe Transaktion ausgeführt werden können.  
   
- Die tatsächliche Zeitverzögerung kann von der in *time_to_pass*, *time_to_execute* oder *timeout* angegebenen Zeit abweichen und hängt von der Aktivitätsstufe des Servers ab. Die Zeitzählung beginnt, wenn der der WAITFOR-Anweisung zugeordnete Thread geplant ist. Ist der Server ausgelastet, ist der Thread möglicherweise nicht sofort geplant. Daher kann die Zeitverzögerung länger sein als die angegebene Zeit.  
+ Die tatsächliche Zeitverzögerung kann von der in *time_to_pass*, *time_to_execute* oder *timeout* angegebenen Zeit abweichen und hängt von der Aktivitätsstufe des Servers ab. Die Zeitzählung beginnt, wenn die WAITFOR-Anweisung geplant ist. Wenn der Server ausgelastet ist, wird der Thread möglicherweise nicht sofort geplant. Daher kann die Zeitverzögerung länger als die angegebene Zeit sein.  
   
- WAITFOR nimmt keine Änderung an der Semantik einer Abfrage vor. Wenn die Abfrage keine Zeilen zurückgeben kann, hält die Wartezeit von WAITFOREVER endlos oder bis zum Erreichen von TIMEOUT (falls angegeben) an.  
+ WAITFOR nimmt keine Änderung an der Semantik einer Abfrage vor. Wenn die Abfrage keine Zeilen zurückgeben kann, hält die Wartezeit von WAITFOR endlos oder bis zum Erreichen von TIMEOUT (falls angegeben) an.  
   
  Cursor können nicht für WAITFOR-Anweisungen geöffnet werden.  
   
@@ -98,9 +98,9 @@ WAITFOR
   
  Falls die Abfrage die Option Abfragewartezeit überschreitet, kann das Argument der WAITFOR-Anweisung abgeschlossen werden, ohne dass es zur Ausführung kommt. Weitere Informationen zur Konfigurationsoption finden Sie unter [Konfigurieren der Serverkonfigurationsoption Abfragewartezeit](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md). Mit [sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md) zeigen Sie die aktiven und wartenden Prozesse an.  
   
- Jeder WAITFOR-Anweisung ist ein Thread zugeordnet. Wenn viele WAITFOR-Anweisungen auf demselben Server angegeben werden, können auch viele Threads durch das Warten auf die Ausführung dieser Anweisungen gebunden werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überwacht die Anzahl der für WAITFOR-Anweisungen zugeordneten Threads und beendet einige davon per Zufallsauswahl, sobald Threads des Servers nicht mehr auf die CPU zugreifen können.  
+ Jeder WAITFOR-Anweisung ist ein Thread zugeordnet. Wenn viele WAITFOR-Anweisungen auf demselben Server angegeben werden, können auch viele Threads durch das Warten auf die Ausführung dieser Anweisungen gebunden werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überwacht die Anzahl die Threads der WAITFOR-Anweisungen und beendet einige davon per Zufallsauswahl, sobald Threads des Servers nicht mehr auf die CPU zugreifen können.  
   
- Sie können einen Deadlock erstellen, indem Sie eine Abfrage mit WAITFOR innerhalb einer Transaktion ausführen, die auch Sperren zur Verhinderung von Änderungen am Rowset enthält, auf das die WAITFOR-Anweisung zuzugreifen versucht. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifiziert derartige Szenarien und gibt ein leeres Resultset zurück, wenn die Möglichkeit eines solchen Deadlocks vorhanden ist.  
+ Sie können einen Deadlock erstellen, indem Sie eine Abfrage mit WAITFOR innerhalb einer Transaktion ausführen, die auch Sperren zur Verhinderung von Änderungen an dem Rowset enthält, auf das die WAITFOR-Anweisung zugreift. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifiziert derartige Szenarien und gibt ein leeres Resultset zurück, wenn die Möglichkeit eines solchen Deadlocks vorhanden ist.  
   
 > [!CAUTION]  
 >  Durch das Einfügen von WAITFOR wird die Beendigung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozesses verlangsamt, was zu einer Timeoutmeldung in der Anwendung führen kann. Passen Sie die Timeouteinstellung für die Verbindung ggf. auf Anwendungsebene an.  
@@ -132,7 +132,7 @@ GO
 ```  
   
 ### <a name="c-using-waitfor-delay-with-a-local-variable"></a>C. Verwenden von WAITFOR DELAY mit einer lokalen Variablen  
- Das folgende Beispiel zeigt, wie Sie eine lokale Variable mit der Option `WAITFOR DELAY` verwenden. Es wird eine gespeicherte Prozedur erstellt, um einen variablen Zeitraum abzuwarten und dann Informationen bezüglich der verstrichenen Stunden, Minuten und Sekunden an den Benutzer zurückzugeben.  
+ Das folgende Beispiel zeigt, wie Sie eine lokale Variable mit der Option `WAITFOR DELAY` verwenden. Diese gespeicherte Prozedur wartet einen variablen Zeitraum ab und gibt dann Informationen bezüglich der verstrichenen Stunden, Minuten und Sekunden an den Benutzer zurück.  
   
 ```  
 IF OBJECT_ID('dbo.TimeDelay_hh_mm_ss','P') IS NOT NULL  
@@ -169,9 +169,8 @@ GO
   
  `A total time of 00:00:10, in hh:mm:ss, has elapsed. Your time is up.`  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Control-of-Flow Language &#40;Transact-SQL&#41; (Sprachkonstrukte zur Ablaufsteuerung (Transact-SQL))](~/t-sql/language-elements/control-of-flow.md)   
  [datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)   
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
-  
   

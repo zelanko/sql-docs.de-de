@@ -13,15 +13,15 @@ helpviewer_keywords:
 - monitoring activity
 - activity monitoring
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 84e084b6db8576f4bd1f7c7d020ac9fe908a0eec
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: a9bc3aa9f703cc53b50bc499f44ffc6b7971dcfd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617530"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020402"
 ---
 # <a name="monitor-dqs-activities"></a>Überwachen der DQS-Aktivitäten
 
@@ -52,19 +52,19 @@ ms.locfileid: "52617530"
   
 3.  Auf dem Bildschirm Aktivitätsüberwachung werden Informationen zu jeder Aktivität in einem Aktivitätsraster angezeigt. Das Aktivitätsraster zeigt die folgenden Informationen zu jeder DQS-Aktivität an:  
   
-     **ID**: Ein ganzzahliger Wert. Eindeutige Aktivitätsnummer, die das System für die Aktivitätsüberwachung generiert.  
+     **ID:**  Ein ganzzahliger Wert. Eindeutige Aktivitätsnummer, die das System für die Aktivitätsüberwachung generiert.  
   
      **Name**: Der Name der Wissensdatenbank oder des Data Quality-Projekts, die bzw. das für diese Aktivität verwendet wird.  
   
-     **Aktiv**: Gibt an, ob die Aktivität derzeit aktiv ist. Die folgenden Werte sind möglich:  
+     **Ist aktiv:** Gibt an, ob die Aktivität derzeit aktiv ist. Die folgenden Werte sind möglich:  
   
-    -   **Aktiv**: Aktivität wird gerade ausgeführt.  
+    -   **Aktiv:** Die Aktivität wird gerade ausgeführt.  
   
-    -   **Abgeschlossen**: Die Aktivität wurde beendet.  
+    -   **Abgeschlossen:** Die Aktivität wurde abgeschlossen.  
   
-    -   **Beendet**: Die Aktivität wurde vom DQS-Administrator im Bildschirm Aktivitätsüberwachung beendet oder während der Ausführung im entsprechenden Funktionsbereich in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]vom Benutzer abgebrochen.  
+    -   **Beendet:** Die Aktivität wurde vom DQS-Administrator im Bildschirm für die Aktivitätsüberwachung beendet oder während der Ausführung im entsprechenden Funktionsbereich in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]vom Benutzer abgebrochen.  
   
-     **Typ**: Gibt den Typ der Aktivität an. **Untertyp** gibt den jeweiligen Workflow an, der für einen Aktivitätstyp ausgeführt wird. Die folgenden Aktivitätstypen werden überwacht:  
+     **Typ:** Gibt den Typ der Aktivität an. **Untertyp** gibt den jeweiligen Workflow an, der für einen Aktivitätstyp ausgeführt wird. Die folgenden Aktivitätstypen werden überwacht:  
   
     -   Untertypen der**Wissensverwaltung** :  
   
@@ -84,36 +84,36 @@ ms.locfileid: "52617530"
   
         -   **Bereinigung**  
   
-     **Aktueller Status**: Zeigt den aktuellen Status einer Aktivität an. Der Aktivitätsstatus wird durch den zuletzt durchgeführten Berechnungsprozess bestimmt. So wie der Ermittlungsprozess (im Rahmen der Wissensermittlungsaktivität) kann auch der Berechnungsprozess für eine Aktivität mehrmals ausgeführt werden. Aus diesem Grund kann sich der Status während der Lebensdauer einer Aktivität mehrere Male ändern.  
+     **Aktueller Status:** Zeigt den aktuellen Status einer Aktivität an. Der Aktivitätsstatus wird durch den zuletzt durchgeführten Berechnungsprozess bestimmt. So wie der Ermittlungsprozess (im Rahmen der Wissensermittlungsaktivität) kann auch der Berechnungsprozess für eine Aktivität mehrmals ausgeführt werden. Aus diesem Grund kann sich der Status während der Lebensdauer einer Aktivität mehrere Male ändern.  
   
      **Aktueller Status** kann die folgenden Werte annehmen:  
   
-    -   **Wird ausgeführt**: Der Berechnungsprozess wird ausgeführt.  
+    -   **Wird ausgeführt:** Der Berechnungsprozess wird ausgeführt.  
   
-    -   **Erfolgreich**: Status vor Ausführung eines Berechnungsprozesses sowie nach dem erfolgreichen Abschluss eines Berechnungsprozesses.  
+    -   **Erfolg:** Dieser Status wird vor der Ausführung eines Berechnungsprozesses sowie nach dem erfolgreichen Abschluss eines Berechnungsprozesses festgelegt.  
   
-    -   **Fehler**: Im Berechnungsprozess ist ein Fehler aufgetreten.  
+    -   **Fehler:** Im Berechnungsprozess ist ein Fehler aufgetreten.  
   
-    -   **Beendet**: Der Berechnungsprozess wurde beendet.  
+    -   **Beendet:** Der Berechnungsprozess wurde beendet.  
   
-     **DQKB**: Name der Wissensdatenbank, die für die Aktivität verwendet wird.  
+     **DQKB:** Name der Wissensdatenbank, die für die Aktivität verwendet wird.  
   
-     **Benutzer**: Der Name des Benutzers, der die Aktivität initiiert hat, oder der letzte Benutzer, der die Aktivität verwendet hat (falls es sich dabei nicht um denselben Benutzer handelt).  
+     **Benutzer:** Der Name des Benutzers, der die Aktivität initiiert hat, oder der letzte Benutzer, der die Aktivität verwendet hat (falls es sich dabei nicht um denselben Benutzer handelt).  
   
-     **Startzeit der Aktivität**: Datum und Uhrzeit beim Start der Aktivität.  
+     **Startzeit der Aktivität:** Datum und Uhrzeit beim Start der Aktivität  
   
-     **Verstrichene Zeit**: Die verstrichene Zeit seit dem Start der Aktivität. Dies wird in der Schreibweise HH:MM:SS angezeigt.  
+     **Verstrichene Zeit:** Die verstrichene Zeit seit dem Start der Aktivität. Dies wird in der Schreibweise HH:MM:SS angezeigt.  
   
-     **Endzeit der Aktivität**: Datum und Uhrzeit bei der Beendigung der Aktivität.  
+     **Beendigungszeit der Aktivität:** Datum und Uhrzeit bei der Beendigung der Aktivität.  
   
 ##  <a name="Filter"></a> Filtern von DQS-Aktivitätsinformationen  
  Sie können im Filterbereich des Bildschirms Aktivitätsüberwachung (**Filtern nach**, **Wert**, **Ab Datum**und **Bis Datum**) die erforderlichen Aktivitäten nach bestimmten Kriterien filtern und anzeigen. So filtern Sie Aktivitätsdatensätze:  
   
 1.  Legen Sie das Filterkriterium fest: Sie können die Aktivitätsdatensätze basierend auf einem Wert in einer der Spalten im Aktivitätsraster (wertbasiert) und/oder basierend auf einem Datumsbereich filtern.  
   
-    1.  **Wertbasierter Filter**: Wählen Sie ein Filterkriterium in der Liste **Filtern nach** aus, und legen Sie den Wert, nach dem gefiltert werden soll, in der Liste **Wert** fest. Wenn Sie in der Liste **Filtern nach** eine Option ausgewählt haben, wird die Liste **Wert** mit den möglichen Werten aktualisiert. Sie können in den Aktivitätsdatensätzen nach den folgenden Feldern filtern: **Ist aktiv**, **Typ**, **Untertyp**, **Aktueller Status**und **DQKB**und **Benutzer**.  
+    1.  **Value-based filtering** (Wertbasierter Filter): Wählen Sie ein Filterkriterium in der Liste **Filtern nach** aus, und legen Sie den Wert, nach dem gefiltert werden soll, in der Liste **Wert** fest. Wenn Sie in der Liste **Filtern nach** eine Option ausgewählt haben, wird die Liste **Wert** mit den möglichen Werten aktualisiert. Sie können nach folgenden Feldern der Aktivitätsdatensätze filtern: **Ist aktiv**, **Typ**, **Untertyp**, **Aktueller Status**, **DQKB** und **Benutzer**.  
   
-    2.  **Datumsbereichbasierter Filter**: Wählen Sie die gewünschten Daten in den Datumssteuerelementen **Ab Datum** und **Bis Datum** aus. Standardmäßig liegt das im Feld **Ab Datum** angezeigte Datum zwei Tage vor dem aktuellen Datum, und in **Bis Datum** ist das aktuelle Datum angegeben. Die Filterung erfolgt nicht basierend auf den *Ab* - und *Bis* -Daten, sondern basierend auf dem Datumsbereich. Dies bedeutet, dass jede Aktivität, die während des ausgewählten Datumsbereichs ausgeführt wurde, angezeigt wird.  
+    2.  **Date range-based filtering** (Datumsbereichbasierter Filter): Wählen Sie die gewünschten Daten in den Datumssteuerelementen **From Date** (Von Datum) und **Bis Datum** aus. Standardmäßig liegt das im Feld **Ab Datum** angezeigte Datum zwei Tage vor dem aktuellen Datum, und in **Bis Datum** ist das aktuelle Datum angegeben. Die Filterung erfolgt nicht basierend auf den *Ab* - und *Bis* -Daten, sondern basierend auf dem Datumsbereich. Dies bedeutet, dass jede Aktivität, die während des ausgewählten Datumsbereichs ausgeführt wurde, angezeigt wird.  
   
 2.  Klicken Sie auf das Symbol **Aktivitätsliste aktualisieren** , um den Filter anzuwenden, und zeigen Sie nur die gefilterten DQS-Aktivitäten an.  
   
@@ -124,9 +124,9 @@ ms.locfileid: "52617530"
   
 2.  Im unteren Bereich werden die Aktivitätsdetails der ausgewählten Aktivität auf den beiden folgenden Registerkarten angezeigt:  
   
-    -   **Aktivitätsschritte**: Zeigt ein Raster mit den Berechnungsprozessen (Aktivitätsschritten) an, die der ausgewählten Aktivität zugeordnet sind. Auf dieser Registerkarte können mehrere Aktivitätsschritte für eine Aktivität angezeigt werden. Dies ist dann der Fall, wenn der gleiche Aktivitätsschritt innerhalb der Aktivität mehrere Male vom Benutzer ausgeführt wurde. Beispielsweise kann der Aktivitätsschritt beendet und wieder gestartet worden sein. Das Raster auf dieser Registerkarte zeigt die folgenden Informationen für jeden Aktivitätsschritt an, der dieser Aktivität zugeordnet ist: **Typ**, **Aktueller Status**, **Startzeit**, **Verstrichene Zeit**und **Beendigungszeit**.  
+    -   **Aktivitätsschritte:** Zeigt ein Raster mit den Berechnungsprozessen (Aktivitätsschritten) an, die der ausgewählten Aktivität zugeordnet sind. Auf dieser Registerkarte können mehrere Aktivitätsschritte für eine Aktivität angezeigt werden. Dies ist dann der Fall, wenn der gleiche Aktivitätsschritt innerhalb der Aktivität mehrere Male vom Benutzer ausgeführt wurde. Beispielsweise kann der Aktivitätsschritt beendet und wieder gestartet worden sein. Das Raster auf dieser Registerkarte zeigt die folgenden Informationen für jeden Aktivitätsschritt an, der dieser Aktivität zugeordnet ist: **Typ**, **Aktueller Status**, **Startzeit**, **Verstrichene Zeit**und **Endzeit**.  
   
-    -   **Profiler**: Zeigt die Informationen für die Profilerstellung für aktuelle und vergangene Aktivitäten an. Für aktuelle Aktivitäten werden die Informationen teilweise, jedoch konsistent, angezeigt. Die Profilerstellungsdaten einer Aktivität werden in eine Excel-Datei exportiert, wenn Sie die entsprechenden Aktivitätsdetails in eine Excel-Datei exportieren. Die Informationen sind in der exportierten Excel-Datei in den Arbeitsblättern **Profiler – Quelle** und **Profiler – Felder** verfügbar.  
+    -   **Profiler:** Zeigt die Informationen für die Profilerstellung für aktuelle und vergangene Aktivitäten an. Für aktuelle Aktivitäten werden die Informationen teilweise, jedoch konsistent, angezeigt. Die Profilerstellungsdaten einer Aktivität werden in eine Excel-Datei exportiert, wenn Sie die entsprechenden Aktivitätsdetails in eine Excel-Datei exportieren. Die Informationen sind in der exportierten Excel-Datei in den Arbeitsblättern **Profiler – Quelle** und **Profiler – Felder** verfügbar.  
   
 ##  <a name="Export"></a> Exportieren von DQS-Aktivitätsdetails  
  Sie können die Aktivitätseigenschaften, Aktivitätsprozesse und Profilerstellungsdaten einer Aktivität im Überwachungsbildschirm in eine Excel-Datei exportieren. Gehen Sie folgendermaßen vor:  
@@ -141,8 +141,8 @@ ms.locfileid: "52617530"
     |----------------|-----------------|  
     |Aktivität|Enthält Informationen (Spalten) zur Aktivität wie das Aktivitätsraster.|  
     |Prozesse|Enthält Informationen (Spalten) zu den Prozessen in der Aktivität wie die Registerkarte **Aktivitätsschritte** .|  
-    |Profiler – Quelle|Für den Untertyp **Bereinigung** sind die folgenden Informationen zur Aktivität enthalten: Datensätze, Richtige Datensätze, Korrigierte Datensätze und Ungültige Datensätze.<br /><br /> Für die Untertypen **Wissensermittlung**, **Domänenverwaltung**, **Abgleichsrichtlinie**und **Abgleich** sind die folgenden Informationen zur Aktivität enthalten: Datensätze, Gesamtwerte, Neue Werte, Eindeutige Werte und Neue eindeutige Werte.|  
-    |Profiler – Felder|Für die Untertypen **Bereinigung** und **SSIS-Bereinigung** sind die folgenden Informationen zur Aktivität enthalten: Feld, Domäne, Korrigierte Werte, Vorgeschlagene Werte, Vollständigkeit und Genauigkeit.<br /><br /> Für die Untertypen **Wissensermittlung**, **Domänenverwaltung**, **Abgleichsrichtlinie**und **Abgleich** sind die folgenden Informationen zur Aktivität enthalten: Feld, Domäne, Neu, Eindeutig, In Domäne gültig und Vollständigkeit.|  
+    |Profiler – Quelle|Enthält für den Untertyp **Bereinigung** folgende Informationen zur Aktivität:   Records, Correct Records, Corrected Records, and Invalid Records (Datensätze, Richtige Datensätze, Korrigierte Datensätze, Ungültige Datensätze).<br /><br /> Enthält für die Untertypen **Wissensermittlung**, **Domänenverwaltung**, **Abgleichsrichtlinie**und **Abgleich** folgende Informationen zur Aktivität:   Records, Total Values, New Values, Unique Values, and New Unique Values (Datensätze, Gesamtwerte, Neue Werte, Eindeutige Werte, Neue eindeutige Werte).|  
+    |Profiler – Felder|Enthält für die Untertypen **Bereinigung** und **SSIS-Bereinigung** folgende Informationen zur Aktivität:   Field, Domain, Corrected Values, Suggested Values, Completeness, and Accuracy (Feld, Domäne, Korrigierte Werte, Vorgeschlagene Werte, Vollständigkeit, Genauigkeit).<br /><br /> Enthält für die Untertypen **Wissensermittlung**, **Domänenverwaltung**, **Abgleichsrichtlinie**und **Abgleich** folgende Informationen zur Aktivität:   Field, Domain, New, Unique, Valid in Domain, and Completeness (Feld, Domäne, Neu, Eindeutig, In Domäne gültig, Vollständigkeit).|  
   
 ##  <a name="Terminate"></a> Beenden einer DQS-Aktivität  
  DQS-Administratoren (dqs_administrator-Rolle) können eine ausgeführte (aktive) Aktivität beenden, die nicht vom Typ **SSIS-Bereinigung**ist. Wenn eine Aktivität beendet wird, werden alle ausgeführten Prozesse in der Aktivität beendet und alle mit der Aktivität verbundenen Elemente entfernt. Dieser Vorgang kann nicht rückgängig gemacht werden. Das Beenden einer Aktivität im Bildschirm Aktivitätsüberwachung ist damit vergleichbar, die entsprechende Aktivität abzubrechen, indem Sie auf **Abbrechen** klicken, während die Aktivität im Funktionsbereich in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]ausgeführt wird. So beenden Sie eine Aktivität:  

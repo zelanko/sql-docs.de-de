@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dqs.dm.testcdrule.f1
 - sql13.dqs.dm.cdrules.f1
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: ca00ce6884ca1e36d25a7c593b0f65ac6b5c2809
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 226998dccce432a2203782d667c35285860fa926
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617400"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014222"
 ---
 # <a name="create-a-cross-domain-rule"></a>Erstellen einer domänenübergreifenden Regel
 
@@ -29,7 +29,7 @@ ms.locfileid: "52617400"
   
  Die If-Klausel und die Then-Klausel einer domänenübergreifenden Regel sind jeweils für eine der einzelnen Domänen in der Verbunddomäne definiert. Jede Klausel muss für eine andere einzelne Domäne definiert werden. Eine domänenübergreifende Regel muss sich auf mehrere einzelne Domänen beziehen; Sie können keine einfache Domänenregel (für nur eine einzelne Domäne) für eine Verbunddomäne definieren. Dies wäre der Fall, wenn Sie eine Domänenregel für eine einzelne Domäne definieren. Die If-Klausel und die Then-Klausel können jeweils eine oder mehrere Bedingungen enthalten.  
   
- Eine domänenübergreifende Regel, die definitive Bedingungen hat, übernimmt die Regellogik für Synonyme des Werts in den Bedingungen sowie die Werte selbst. Die definitiven Bedingungen für die If-Klausel und die Then-Klausel sind "Wert ist gleich", Wert ist ungleich", "Wert ist in" oder "Wert ist nicht in". Angenommen, Sie haben die folgende domänenübergreifende Regel für eine Verbunddomäne: „Falls für ‚Stadt‘ Wert ist gleich ‚Los Angeles‘ vorliegt, dann liegt für ‚Bundesland‘ Wert ist gleich ‚CA‘ vor“. Wenn „Los Angeles“ und „LA“ Synonyme sind, gibt diese Regel das richtige Ergebnis für „Los Angeles CA“ und „LA CA“ und einen Fehler für „Los Angeles WA“ und „LA WA“ zurück.  
+ Eine domänenübergreifende Regel, die definitive Bedingungen hat, übernimmt die Regellogik für Synonyme des Werts in den Bedingungen sowie die Werte selbst. Die definitiven Bedingungen für die If-Klausel und die Then-Klausel sind "Wert ist gleich", Wert ist ungleich", "Wert ist in" oder "Wert ist nicht in". Angenommen, Sie haben die folgende domänenübergreifende Regel für eine Verbunddomäne konfiguriert: "For 'City', if Value is equal to 'Los Angeles', then for 'State', Value is equal to 'CA'. (Wenn Wert für „City“ (Stadt) gleich „Los Angeles“ ist, dann ist Wert für „State“ (Staat) gleich „CA“.) Wenn „Los Angeles“ und „LA“ Synonyme sind, gibt diese Regel das richtige Ergebnis für „Los Angeles CA“ und „LA CA“ und einen Fehler für „Los Angeles WA“ und „LA WA“ zurück.  
   
  Abgesehen davon, dass erfahren, ob eine domänenübergreifenden Regel gültig ist, korrigiert die definitive *Then* -Klausel in einer domänenübergreifenden Regel **Wert ist gleich**auch die Daten während der Datenbereinigungsaktivität. Weitere Informationen finden Sie unter [Data Correction using Definitive Cross-Domain Rules](../data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) in [Cleanse Data in a Composite Domain](../data-quality-services/cleanse-data-in-a-composite-domain.md).  
   
@@ -98,7 +98,7 @@ ms.locfileid: "52617400"
   
 2.  Wenn Sie die domänenübergreifenden Regeln vervollständigt haben, klicken Sie auf **Fertig stellen** , um die Domänenverwaltungsaktivität abzuschließen, wie in [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)beschrieben.  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Erstellen einer domänenübergreifenden Regel  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Erstellen einer domänenübergreifenden Regel  
  Nachdem Sie eine übergreifende Regel erstellt haben, können Sie andere Domänenverwaltungstasks in der Domäne ausführen, Sie können die Wissensermittlung durchführen, um der Domäne Wissen hinzuzufügen, oder Sie können der Domäne eine Abgleichsrichtlinie hinzufügen. Weitere Informationen finden Sie unter [Durchführen der Wissensermittlung](../data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../data-quality-services/managing-a-domain.md) oder [Erstellen einer Abgleichsrichtlinie](../data-quality-services/create-a-matching-policy.md).  
   
   

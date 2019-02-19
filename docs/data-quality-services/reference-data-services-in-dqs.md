@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: a491ae673059d9373067428ef226d5819a7a34ad
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 92112b0211536bcb964d71e538a92311b2579117
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617700"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027131"
 ---
 # <a name="reference-data-services-in-dqs"></a>Reference Data Services in DQS
 
@@ -57,7 +57,7 @@ ms.locfileid: "52617700"
 ##  <a name="HowToCleanse"></a> So bereinigen Sie Daten mithilfe der Verweisdaten  
  Das Bereinigen der Daten in DQS mithilfe von Verweisdaten umfasst die folgenden drei Schritte:  
   
-1.  **Konfigurieren der Verweisdatenanbieterdetails in DQS**: Bevor Sie Verweisdaten in DQS verwenden können, müssen Sie Verweisdatendienstdetails in DQS konfigurieren.  
+1.  **Konfigurieren von Details der Verweisdatenanbieter in DQS**: Bevor Sie Verweisdaten in DQS verwenden können, müssen Sie die Dienstdetails der Verweisdaten in DQS konfigurieren.  
   
     1.  Wenn Sie Marketplace verwenden, stellen Sie einen gültigen Marketplace-Kontoschlüssel bereit, wechseln Sie im Marketplace zur Datenkategorie [Data Quality Services](https://go.microsoft.com/fwlink/?LinkId=227587) , und abonnieren Sie die erforderlichen Anbieter.  
   
@@ -65,9 +65,9 @@ ms.locfileid: "52617700"
   
      Das Konfigurieren der Verweisdatenanbieterdetails in DQS muss für jeden Datenanbieter nur ein Mal erfolgen. Nur DQS-Administratoren können Verweisdateneinstellungen in DQS konfigurieren.  
   
-2.  **Eine Domäne/Verbunddomäne in einer Wissensdatenbank dem Verweisdatendienst zuordnen**: Ordnen Sie eine Domäne/Verbunddomäne dem entsprechenden Verweisdatendienst zu, den Sie in Schritt 1 abonniert/hinzugefügt haben.  
+2.  **Zuordnen einer Domäne/Verbunddomäne in einer Wissensdatenbank zum Verweisdatendienst**: Ordnen Sie dem entsprechenden Verweisdatendienst, den Sie in Schritt 1 abonniert/hinzugefügt haben, eine Domäne/Verbunddomäne zu.  
   
-3.  **Die zugeordneten Domänen für die Bereinigungsaktivität in einem Data Quality-Projekt verwenden**: Wählen Sie während des Erstellens eines Data Quality-Projekts für die **Bereinigungsaktivität** die Wissensdatenbank aus, die Domänen/Verbunddomänen enthält, die in Schritt 2 Verweisdatendiensten zugeordnet wurden, und führen Sie die Bereinigungsaktivität aus.  
+3.  **Verwenden der zugeordneten Domänen für die Bereinigungsaktivität in einem Data Quality-Projekt**: Wählen Sie während des Erstellens eines Data Quality-Projekts für die **Bereinigungsaktivität** die Wissensdatenbank aus, die Domänen/Verbunddomänen enthält, die in Schritt 2 Verweisdatendiensten zugeordnet wurden, und führen Sie die Bereinigungsaktivität aus.  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

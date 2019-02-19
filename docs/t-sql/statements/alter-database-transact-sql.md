@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/28/2019
+ms.date: 02/06/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d393b8f634290069bfe12d3b69c1917fb6ac559f
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: b8d274e0d43f476d2e00b64dc4ea2188c79ae082
+ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421467"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55832142"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -309,68 +309,73 @@ Stellt die Syntax und weitere Informationen zum Ändern der Datenbankattribute m
 [ALTER DATABASE-Kompatibilitätsgrad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?&tabs=sqldbls)  
 Stellt die Syntax und weitere Informationen für die SET-Optionen von ALTER DATABASE bereit, die sich auf die Datenbank-Kompatibilitätsgrade beziehen.  
 
-## <a name="syntax"></a>Syntax 
+## <a name="syntax"></a>Syntax
 
-```  
+```
 -- Azure SQL Database Syntax  
 ALTER DATABASE { database_name | CURRENT }  
 {  
     MODIFY NAME = new_database_name  
-  | MODIFY ( <edition_options> [, ... n] ) 
-  | SET { <option_spec> [ ,... n ] WITH <termination>} 
-  | SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }   
+  | MODIFY ( <edition_options> [, ... n] )
+  | SET { <option_spec> [ ,... n ] WITH <termination>}
+  | SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }
   | ADD SECONDARY ON SERVER <partner_server_name>  
     [WITH ( <add-secondary-option>::= [, ... n] ) ]  
   | REMOVE SECONDARY ON SERVER <partner_server_name>  
   | FAILOVER  
   | FORCE_FAILOVER_ALLOW_DATA_LOSS  
 }  
-[;] 
+[;]
 
-<edition_options> ::= 
+<edition_options> ::=
 {  
 
   MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 ... 1024 ... 4096 GB }  
-  | EDITION = { 'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' 'Hyperscale'} 
-  | SERVICE_OBJECTIVE = 
+  | EDITION = { 'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' 'Hyperscale'}
+  | SERVICE_OBJECTIVE =
        {  <service-objective>
-       | { ELASTIC_POOL (name = <elastic_pool_name>) } 
+       | { ELASTIC_POOL (name = <elastic_pool_name>) }
        } 
 }  
 
 <add-secondary-option> ::=  
    {  
       ALLOW_CONNECTIONS = { ALL | NO }  
-     | SERVICE_OBJECTIVE = 
-       {  <service-objective> 
-       | { ELASTIC_POOL ( name = <elastic_pool_name>) } 
-       } 
+     | SERVICE_OBJECTIVE =
+       {  <service-objective>
+       | { ELASTIC_POOL ( name = <elastic_pool_name>) }
+       }
    }  
 
-<service-objective> ::=  { 'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
+<service-objective> ::=  { 'basic' |'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
        | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15'
-      | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_4' | 'GP_GEN4_8' | 'GP_GEN4_16' | 'GP_GEN4_24' |
-      | 'BC_GEN4_1' | 'BC_GEN4_2' | 'BC_GEN4_4' | 'BC_GEN4_8' | 'BC_GEN4_16' | 'BC_GEN4_24' |
-      | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24' |
-      | 'GP_GEN5_2' | 'GP_GEN5_4' | 'GP_GEN5_8' | 'GP_GEN5_16' | 'GP_GEN5_24' | 'GP_GEN5_32' | 'GP_GEN5_48' | 'GP_GEN5_80' |
-      | 'BC_GEN5_2' | 'BC_GEN5_4' | 'BC_GEN5_8' | 'BC_GEN5_16' | 'BC_GEN5_24' | 'BC_GEN5_32' | 'BC_GEN5_48' | 'BC_GEN5_80' |
-      | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80' |
+       | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_3' | 'GP_GEN4_4' | 'GP_GEN4_5' | 'GP_GEN4_6' |
+       | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24' |
+       | 'GP_Gen5_2' | 'GP_Gen5_4' | 'GP_Gen5_6' | 'GP_Gen5_8' | 'GP_Gen5_10' | 'GP_Gen5_12' | 'GP_Gen5_14' |
+       | 'GP_Gen5_16' | 'GP_Gen5_18' | 'GP_Gen5_20' | 'GP_Gen5_24' | 'GP_Gen5_32' | 'GP_Gen5_40' | 'GP_Gen5_80' |
+       | 'BC_Gen4_1' | 'BC_Gen4_2' | 'BC_Gen4_3' | 'BC_Gen4_4' | 'BC_Gen4_5' | 'BC_Gen4_6' |
+       | 'BC_Gen4_7' | 'BC_Gen4_8' | 'BC_Gen4_9' | 'BC_Gen4_10' | 'BC_Gen4_16' | 'BC_Gen4_24' |
+       | 'BC_Gen5_2' | 'BC_Gen5_4' | 'BC_Gen5_6' | 'BC_Gen5_8' | 'BC_Gen5_10' | 'BC_Gen5_12' | 'BC_Gen5_14' |
+       | 'BC_Gen5_16' | 'BC_Gen5_18' | 'BC_Gen5_20' | 'BC_Gen5_24' | 'BC_Gen5_32' | 'BC_Gen5_40' | 'BC_Gen5_80' |
+       | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24' |
+       | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80' |
+      | { ELASTIC_POOL(name = <elastic_pool_name>) } 
       }
 
-<option_spec> ::= 
+<option_spec> ::=
 {  
-    <auto_option> 
-  | <change_tracking_option> 
-  | <cursor_option> 
+    <auto_option>
+  | <change_tracking_option>
+  | <cursor_option>
   | <db_encryption_option>  
-  | <db_update_option> 
-  | <db_user_access_option> 
+  | <db_update_option>
+  | <db_user_access_option>
   | <delayed_durability_option>  
   | <parameterization_option>  
   | <query_store_options>  
   | <snapshot_option>  
   | <sql_option> 
-  | <target_recovery_time_option> 
+  | <target_recovery_time_option>
   | <termination>  
   | <temporal_history_retention>  
 }  
@@ -378,7 +383,7 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## <a name="arguments"></a>Argumente
 
-*database_name*  
+*database_name*
 
 Der Name der Datenbank, die geändert werden soll.  
   
@@ -388,21 +393,21 @@ Legt fest, dass die zurzeit verwendete Datenbank geändert werden soll.
   
 MODIFY NAME **=**_new_database_name_  
 
-Benennt die Datenbank in den angegebenen Namen *new_database_name* um. Im folgenden Beispiel wird der Name einer Datenbank von `db1` in `db2` geändert:   
+Benennt die Datenbank in den angegebenen Namen *new_database_name* um. Im folgenden Beispiel wird der Name einer Datenbank von `db1` in `db2` geändert:
 
-```sql  
+```sql
 ALTER DATABASE db1  
     MODIFY Name = db2 ;  
-```    
+```
 
-MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'])    
+MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'])
 
 Ändert die Dienstebene der Datenbank. 
 
 Im folgenden Beispiel wird die Edition in `premium` geändert:
 
 ```sql
-ALTER DATABASE current 
+ALTER DATABASE current
     MODIFY (EDITION = 'premium');
 ```
 
@@ -413,7 +418,7 @@ MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024...4096] GB)
 Gibt die maximale Größe der Datenbank an. Die maximale Größe muss dem gültigen Wertsatz für die EDITION-Eigenschaft der Datenbank entsprechen. Eine Änderung der maximalen Datenbankgröße kann auch dazu führen, dass die EDITION-Eigenschaft der Datenbank geändert wird. 
 
 > [!NOTE]
-> Das Argument **MAXSIZE** gilt nicht für Einzeldatenbanken im Diensttarif „Hyperscale“. Datenbanken im Tarif „Hyperscale“ können bei Bedarf auf bis zu 100 TB skaliert werden. Der SQL-Datenbank-Dienst fügt automatisch Speicher hinzu. Sie müssen keine maximale Größe festlegen.
+> Das Argument **MAXSIZE** gilt nicht für Einzeldatenbanken im Diensttarif „Hyperscale“. Datenbanken im Diensttarif „Hyperscale“ können bei Bedarf auf bis zu 100 TB skaliert werden. Der SQL-Datenbank-Dienst fügt automatisch Speicher hinzu. Sie müssen keine maximale Größe festlegen.
 
 **DTU-basiertes Modell**
 
@@ -444,32 +449,56 @@ Gibt die maximale Größe der Datenbank an. Die maximale Größe muss dem gülti
 \* P11 und P15 ermöglichen, dass die Größe von MAXSIZE bis zu 4 TB beträgt, wobei 1024 GB die Standardgröße darstellt.  P11 und P15 können bis zu 4 TB des enthaltenen Speichers ohne Aufpreis verwenden. Im Premium-Tarif ist MAXSIZE mit einer Größe von mehr als 1 TB derzeit in den folgenden Regionen verfügbar: USA, Osten 2; USA, Westen; US Gov Virginia; Europa, Westen; Deutschland, Mitte; Asien, Südosten; Japan, Osten; Australien, Osten; Kanada, Mitte und Kanada, Osten. Zusätzliche Informationen bezüglich der Ressourcenbeschränkungen für das DTU-basierte Modell finden Sie unter [DTU-basierte Ressourceneinschränkungen](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).  
 
 Der MAXSIZE-Wert für das DTU-basierte Modell muss – wenn angegeben –ein gültiger Wert sein, der in der Tabelle oben für die angegebene Dienstebene angezeigt wird.
- 
+
 **vCore-basiertes Modell**
 
-**Dienstebene „Universell“: Computeplattform der 4. Generation**
+**Dienstebene „Universell“: Computeplattform der 4. Generation (Teil 1)**
 
-|MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_4|GP_Gen4_8|GP_Gen4_16|GP4_24|
-|:--- | --: |--: |--: |--: |--: |--:|
-|Maximale Datengröße (GB)|1024|1024|1536|3072|4096|4096|
+|MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_3|GP_Gen4_4|GP_Gen4_5|GP_Gen4_6|
+|:----- | ------: |-------: |-------: |-------: |-------: |--------:|
+|Maximale Datengröße (GB)|1024|1024|1024|1536|1536|1536|
 
-**Dienstebene „Universell“: Computeplattform der 5. Generation**
+**Dienstebene „Universell“: Computeplattform der 4. Generation (Teil 2)**
 
-|MAXSIZE|GP_Gen5_2|GP_Gen5_4|GP_Gen5_8|GP_Gen5_16|GP_Gen5_24|GP_Gen5_32|GP_Gen5_48|GP_Gen5_80|
-|:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
-|Maximale Datengröße (GB)|1024|1024|1536|3072|4096|4096|4096|4096|
+|MAXSIZE|GP_Gen4_7|GP_Gen4_8|GP_Gen4_9|GP_Gen4_10|GP_Gen4_16|GP_Gen4_24
+|:----- | ------: |-------: |-------: |-------: |-------: |--------:|
+|Maximale Datengröße (GB)|1536|3072|3072|3072|4096|4096|
 
-**Dienstebene „Unternehmenskritisch“: Computeplattform der 4. Generation**
+**Dienstebene „Universell“: Computeplattform der 5. Generation (Teil 1)**
 
-|Leistungsebene|BC_Gen4_1|BC_Gen4_2|BC_Gen4_4|BC_Gen4_8|BC_Gen4_16|
-|:--- | --: |--: |--: |--: |--: |--: |
+|MAXSIZE|GP_Gen5_2|GP_Gen5_4|GP_Gen5_6|GP_Gen5_8|GP_Gen5_10|GP_Gen5_12|GP_Gen5_14|
+|:----- | ------: |-------: |-------: |-------: |--------: |---------:|--------: |
+|Maximale Datengröße (GB)|1024|1024|1024|1536|1536|1536|1536|
+
+**Dienstebene „Universell“: Computeplattform der 5. Generation (Teil 2)**
+
+|MAXSIZE|GP_Gen5_16|GP_Gen5_18|GP_Gen5_20|GP_Gen5_24|GP_Gen5_32|GP_Gen5_40|GP_Gen5_80|
+|:----- | ------: |-------: |-------: |-------: |--------: |---------:|--------: |
+|Maximale Datengröße (GB)|3072|3072|3072|4096|4096|4096|4096|
+
+**Dienstebene „Unternehmenskritisch“: Computeplattform der 4. Generation (Teil 1)**
+
+|Leistungsebene|BC_Gen4_1|BC_Gen4_2|BC_Gen4_3|BC_Gen4_4|BC_Gen4_5|BC_Gen4_6|
+|:--------------- | ------: |-------: |-------: |-------: |-------: |-------: |
 |Maximale Datengröße (GB)|1024|1024|1024|1024|1024|1024|
 
-**Dienstebene „Unternehmenskritisch“: Computeplattform der 5. Generation**
+**Dienstebene „Unternehmenskritisch“: Computeplattform der 4. Generation (Teil 2)**
 
-|MAXSIZE|BC_Gen5_2|BC_Gen5_4|BC_Gen5_8|BC_Gen5_16|BC_Gen5_24|BC_Gen5_32|BC_Gen5_48|BC_Gen5_80|
-|:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
-|Maximale Datengröße (GB)|1024|1024|1024|1024|2048|4096|4096|4096|
+|Leistungsebene|BC_Gen4_7|BC_Gen4_8|BC_Gen4_9|BC_Gen4_10|BC_Gen4_16|BC_Gen4_24|
+|:--------------- | ------: |-------: |-------: |--------: |--------: |--------: |
+|Maximale Datengröße (GB)|1024|1024|1024|1024|1024|1024|
+
+**Dienstebene „Unternehmenskritisch“: Computeplattform der 5. Generation (Teil 1)**
+
+|MAXSIZE|BC_Gen5_2|BC_Gen5_4|BC_Gen5_6|BC_Gen5_8|BC_Gen5_10|BC_Gen5_12|BC_Gen5_14|
+|:----- | ------: |-------: |-------: |-------: |---------: |--------:|--------: |
+|Maximale Datengröße (GB)|1024|1024|1024|1536|1536|1536|1536|
+
+**Dienstebene „Unternehmenskritisch“: Computeplattform der 5. Generation (Teil 2)**
+
+|MAXSIZE|BC_Gen5_16|BC_Gen5_18|BC_Gen5_20|BC_Gen5_24|BC_Gen5_32|BC_Gen5_40|BC_Gen5_80|
+|:----- | -------: |--------: |--------: |--------: |--------: |---------:|--------: |
+|Maximale Datengröße (GB)|3072|3072|3072|4096|4096|4096|4096|
 
 Wenn kein `MAXSIZE`-Wert bei Verwendung des vCore-Modells festgelegt ist, beträgt die Standardgröße 32 GB. Zusätzliche Informationen bezüglich der Ressourcenbeschränkungen für das V-Kern-basierte Modell finden Sie unter [V-Kern-basierte Ressourceneinschränkungen](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
   
@@ -488,9 +517,15 @@ ALTER DATABASE current
     MODIFY (SERVICE_OBJECTIVE = 'P6');
 ```  
 
-Gibt die Leistungsebene an. Verfügbare Werte für Dienstziele sind:  `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_8`, `GP_Gen5_16`, `GP_Gen5_24`,`GP_Gen5_32`, `GP_Gen5_48`, `GP_Gen5_80`, `BC_Gen5_2`,`BC_Gen5_4`,`BC_Gen5_8`,`BC_Gen5_16`,`BC_Gen5_24`,`BC_Gen5_32`,`BC_Gen5_48`,`BC_Gen5_80`, `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`,`HS_Gen5_4`,`HS_Gen5_8`,`HS_Gen5_16`,`HS_Gen5_24`,`HS_Gen5_32`,`HS_Gen5_48`,`HS_Gen5_80`.  
+- **Bei einzelnen und in einem Pool zusammengefassten Datenbanken**
 
-Dienstzielbeschreibungen und weitere Informationen zu Größe, Editionen und Dienstzielkombinationen finden Sie unter [Azure SQL Database Service Tiers and Performance Levels (Dienstebenen und Leistungsstufen von Azure SQL-Datenbank)](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [DTU-based resource limits (DTU-basierte Ressourcenbeschränkungen)](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) und [vCore-based resource limits (vCore-basierte Ressourcenbeschränkungen)](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits). Die Unterstützung für PRS-Dienstziele wurde entfernt. Wenn Sie Fragen haben, wenden Sie sich an den E-Mail-Alias premium-rs@microsoft.com. 
+  - Gibt die Leistungsebene an. Verfügbare Werte für Dienstziele sind: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`,`BC_Gen5_40`, `BC_Gen5_80`.
+
+  - **Bei einzelnen Datenbanken im Diensttarif „Hyperscale“**
+
+  Gibt die Leistungsebene an. Verfügbare Werte für Dienstziele sind: `HS_GEN4_1`, `HS_GEN4_2`, `HS_GEN4_4`, `HS_GEN4_8`, `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_8`, `HS_Gen5_16`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_48`, `HS_Gen5_80`.
+
+Dienstzielbeschreibungen und weitere Informationen zu Größe, Editionen und Dienstzielkombinationen finden Sie unter [Azure SQL Database Service Tiers and Performance Levels (Dienstebenen und Leistungsstufen von Azure SQL-Datenbank)](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [DTU-based resource limits (DTU-basierte Ressourcenbeschränkungen)](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) und [vCore-based resource limits (vCore-basierte Ressourcenbeschränkungen)](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits). Die Unterstützung für PRS-Dienstziele wurde entfernt. Wenn Sie Fragen haben, wenden Sie sich an den E-Mail-Alias premium-rs@microsoft.com.
   
 MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>)  
 
@@ -510,7 +545,7 @@ WITH ALLOW_CONNECTIONS { **ALL** | NO }
 
 Wenn ALLOW_CONNECTIONS nicht angegeben ist, wird es standardmäßig auf ALL festgelegt. Wenn ALL festgelegt ist, handelt es sich um eine schreibgeschützte Datenbank, zu der alle Anmeldenamen mit den entsprechenden Berechtigungen eine Verbindung herstellen dürfen.  
   
-WITH SERVICE_OBJECTIVE {  `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`,`GP_Gen5_4`,`GP_Gen5_8`,`GP_Gen5_16`,`GP_Gen5_24`,`GP_Gen5_32`,`GP_Gen5_48`,`GP_Gen5_80`, `BC_Gen5_2`,`BC_Gen5_4`,`BC_Gen5_8`,`BC_Gen5_16`,`BC_Gen5_24`,`BC_Gen5_32`,`BC_Gen5_48`,`BC_Gen5_80` }  
+WITH SERVICE_OBJECTIVE { `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`,`BC_Gen5_40`, `BC_Gen5_80` }  
 
 Wenn SERVICE_OBJECTIVE nicht angegeben ist, wird die sekundäre Datenbank auf derselben Dienstebene wie die primäre Datenbank erstellt. Wenn SERVICE_OBJECTIVE angegeben ist, wird die sekundäre Datenbank auf der angegebenen Ebene erstellt. Diese Option unterstützt die Erstellung georeplizierter sekundärer Datenbanken mit kostengünstigeren Servicelevels. Das angegebene SERVICE_OBJECTIVE muss sich in derselben Edition wie die Quelle befinden. So können Sie beispielsweise nicht „S0“ angeben, wenn es sich bei der Edition um eine Premium-Edition handelt.  
   
@@ -519,29 +554,29 @@ ELASTIC_POOL (name = \<elastic_pool_name>)
 Wenn ELASTIC_POOL nicht angegeben ist, wird die sekundäre Datenbank nicht in einem Pool für elastische Datenbanken erstellt. Wenn ELASTIC_POOL angegeben ist, wird die sekundäre Datenbank im angegebenen Pool erstellt.  
   
 > [!IMPORTANT]  
->  Der Benutzer, der den Befehl ADD SECONDARY ausführt, muss DBManager auf dem primären Server, db_owner-Mitglied in der lokalen Datenbank und DBManager auf dem sekundären Server sein.  
+> Der Benutzer, der den Befehl ADD SECONDARY ausführt, muss DBManager auf dem primären Server, db_owner-Mitglied in der lokalen Datenbank und DBManager auf dem sekundären Server sein.  
   
 REMOVE SECONDARY ON SERVER  \<partner_server_name>  
 
 Entfernt die angegebene georeplizierte sekundäre Datenbank vom angegebenen Server. Der Befehl wird in der Masterdatenbank auf dem Server ausgeführt, der Host der primären Datenbank ist.  
   
 > [!IMPORTANT]  
->  Der Benutzer, der den Befehl REMOVE SECONDARY ausführt, muss DBManager auf dem primären Server sein.  
+> Der Benutzer, der den Befehl REMOVE SECONDARY ausführt, muss DBManager auf dem primären Server sein.  
   
 FAILOVER  
 
 Stuft die sekundäre Datenbank in einer Partnerschaft für die Georeplikation hoch, für die der Befehl ausgeführt wird, damit sie zur primären Datenbank wird, und stuft die aktuelle primäre Datenbank tiefer, sodass diese zur neuen sekundären Datenbank wird. Im Rahmen dieses Prozesses wird der Georeplikationsmodus vorübergehend vom asynchronen in den synchronen Modus umgeschaltet. Während des Failoverprozesses:  
   
-1.  Die primäre Datenbank übernimmt keine neuen Transaktionen mehr.  
+1. Die primäre Datenbank übernimmt keine neuen Transaktionen mehr.  
   
-2.  Alle ausstehenden Transaktionen werden in der sekundären Datenbank geleert.  
+2. Alle ausstehenden Transaktionen werden in der sekundären Datenbank geleert.  
   
-3.  Die sekundäre Datenbank wird zur primären Datenbank und beginnt mit der asynchronen Replikation mit der alten primären/der neuen sekundären Datenbank.  
+3. Die sekundäre Datenbank wird zur primären Datenbank und beginnt mit der asynchronen Replikation mit der alten primären/der neuen sekundären Datenbank.  
   
 Durch diese Sequenz wird sichergestellt, dass keine Daten verloren gehen. Der Zeitraum, in dem keine der beiden Datenbanken verfügbar ist, umfasst 0 bis 25 Sekunden. In dieser Zeit werden die Rollen gewechselt. Der gesamte Vorgang sollte nicht mehr als einer Minute in Anspruch nehmen. Wenn die primäre Datenbank bei der Ausgabe dieses Befehls nicht verfügbar ist, schlägt der Befehl fehl, und es wird eine Fehlermeldung angezeigt, dass die primäre Datenbank nicht verfügbar ist. Wenn der Failoverprozess nicht abgeschlossen wird und ins Stocken geraten zu sein scheint, können Sie den Befehl zur Erzwingung des Failovers verwenden und einen Datenverlust in Kauf nehmen. Anschließend, wenn eine Wiederherstellung der verloren gegangenen Daten erforderlich sein sollte, können Sie DevOps (CSS) zur Wiederherstellung der verloren gegangenen Daten aufrufen.  
   
 > [!IMPORTANT]  
->  Der Benutzer, der den Befehl FAILOVER ausführt, muss DBManager auf dem primären und dem sekundären Server sein.  
+> Der Benutzer, der den Befehl FAILOVER ausführt, muss DBManager auf dem primären und dem sekundären Server sein.  
   
 FORCE_FAILOVER_ALLOW_DATA_LOSS  
 
@@ -558,9 +593,9 @@ Während eines erzwungenen Failovers:
 4. Wenn es weitere sekundäre Datenbanken gibt, werden diese automatisch so neu konfiguriert, dass sie zu den sekundären Datenbanken der neuen primären Datenbank werden. Dieser Vorgang ist asynchron. Bis zum Abschluss des Vorgangs kann es zu einer Verzögerung kommen. Bis zum Abschluss der Neukonfiguration sind die sekundären Datenbanken weiterhin die sekundären Datenbanken der ursprünglichen primären Datenbank.  
   
 > [!IMPORTANT]  
->  Der Benutzer, der den Befehl FORCE_FAILOVER_ALLOW_DATA_LOSS ausführt, muss DBManager auf dem primären und dem sekundären Server sein.  
+> Der Benutzer, der den Befehl FORCE_FAILOVER_ALLOW_DATA_LOSS ausführt, muss DBManager auf dem primären und dem sekundären Server sein.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks
 
 Verwenden Sie [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md), um eine Datenbank zu entfernen.  
 Verwenden Sie [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md), um die Größe einer Datenbank zu reduzieren.  
@@ -569,20 +604,20 @@ Die ALTER DATABASE-Anweisung muss im Autocommitmodus (dem Standardmodus für die
   
 Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. Für jeden geleerten Cachespeicher im Plancache enthält das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll folgende Meldung zur Information: „[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat für den "%2!s!"-Cachespeicher (Bestandteil des Plancache) %1!s! Leerungen des Cachespeichers gefunden, die von Datenbankwartungs- oder Neukonfigurierungsvorgängen ausgelöst wurden.“. Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.  
   
-Der Prozedurcache wird auch im folgenden Szenario geleert: Sie führen mehrere Abfragen für eine Datenbank aus, die über Standardoptionen verfügt. Anschließend wird die Datenbank gelöscht.    
+Der Prozedurcache wird auch im folgenden Szenario geleert: Sie führen mehrere Abfragen für eine Datenbank aus, die über Standardoptionen verfügt. Anschließend wird die Datenbank gelöscht.
   
-## <a name="viewing-database-information"></a>Anzeigen von Datenbankinformationen  
+## <a name="viewing-database-information"></a>Anzeigen von Datenbankinformationen
 
 Sie können Katalogsichten, Systemfunktionen und gespeicherte Systemprozeduren verwenden, um Informationen zu Datenbanken, Dateien und Dateigruppen zurückzugeben.  
   
-## <a name="permissions"></a>Berechtigungen  
+## <a name="permissions"></a>Berechtigungen
 
 Datenbanken können nur durch den Prinzipalanmeldenamen auf Serverebene (vom Bereitstellungsprozess erstellt) oder Mitglieder der Datenbankrolle `dbmanager` geändert werden.  
   
 > [!IMPORTANT]  
->  Der Datenbankbesitzer kann die Datenbank nur ändern, wenn er Mitglied der Rolle `dbmanager` ist.  
+> Der Datenbankbesitzer kann die Datenbank nur ändern, wenn er Mitglied der Rolle `dbmanager` ist.
   
-## <a name="examples"></a>Beispiele  
+## <a name="examples"></a>Beispiele
   
 ### <a name="a-check-the-edition-options-and-change-them"></a>A. Überprüfen Sie die Bearbeitungsoptionen und ändern Sie diese:
 
@@ -597,39 +632,47 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Premium', MAXSIZE = 1024 GB, SERVICE_OBJ
 ### <a name="b-moving-a-database-to-a-different-elastic-pool"></a>B. Verschieben einer Datenbank in einen anderen Pool für elastische Datenbanken  
 
 Verschiebt eine vorhandene Datenbank in einen Pool mit dem Namen pool1:  
-  
-```sql  
-ALTER DATABASE db1   
+
+```sql
+ALTER DATABASE db1
 MODIFY ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = pool1 ) ) ;  
-```  
-  
+```
+
 ### <a name="c-add-a-geo-replication-secondary"></a>C. Hinzufügen einer sekundären Datenbank für eine Georeplikation  
 
 Erstellt die lesbare sekundäre Datenbank db1 auf dem Server `secondaryserver` der Datenbank db1 auf dem lokalen Server.  
   
-```sql  
-ALTER DATABASE db1   
-ADD SECONDARY ON SERVER secondaryserver   
-WITH ( ALLOW_CONNECTIONS = ALL )  
-```  
-  
+```sql
+ALTER DATABASE db1
+ADD SECONDARY ON SERVER secondaryserver
+WITH ( ALLOW_CONNECTIONS = ALL )
+```
+
 ### <a name="d-remove-a-geo-replication-secondary"></a>D. Entfernen einer sekundären Datenbank für eine Georeplikation  
- 
+
 Entfernt die sekundäre Datenbank db1 auf dem Server `secondaryserver`.  
-  
-```sql  
-ALTER DATABASE db1   
-REMOVE SECONDARY ON SERVER testsecondaryserver   
-```  
-  
+
+```sql
+ALTER DATABASE db1
+REMOVE SECONDARY ON SERVER testsecondaryserver
+```
+
 ### <a name="e-failover-to-a-geo-replication-secondary"></a>E. Failover für eine sekundäre Datenbank für eine Georeplikation  
 
 Stuft die sekundäre Datenbank db1 auf dem Server `secondaryserver` höher, damit sie bei Ausführung auf dem Server `secondaryserver` zur neuen primären Datenbank wird.  
   
-```sql  
+```sql
 ALTER DATABASE db1 FAILOVER  
-```  
-  
+```
+
+### <a name="f-update-a-single-database-to-service-tier-s0-standard-edition-performance-level-0"></a>F. Aktualisieren einer einzelnen Datenbank auf Dienstebene S0 (Standard Edition, Leistungsebene 0)
+
+Aktualisiert eine einzelne Datenbank auf Standard Edition (Dienstebene) mit einer Leistungsebene von S0 und einer maximalen Größe von 250 GB.
+
+```sql
+ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJECTIVE = 'S0');
+```
+
 ## <a name="see-also"></a>Siehe auch
   
 [CREATE DATABASE (Azure SQL-Datenbank)](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldbls)   

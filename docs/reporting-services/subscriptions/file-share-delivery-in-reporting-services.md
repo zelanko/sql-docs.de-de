@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cc81cc930f901f162ff58dfe6a5615d557878cf6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9630c2ce992ae6e0ce2e662b32755a201d3f0ec4
+ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778118"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55889991"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Dateifreigabeübermittlung in Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält eine Dateifreigabe-Übermittlungserweiterung, mit deren Hilfe ein Bericht an einen Ordner übermittelt werden kann. Diese Erweiterung ist standardmäßig verfügbar und erfordert keine zusätzliche Konfiguration. Damit die Dateiübermittlung erfolgreich ist, müssen Sie Schreibberechtigungen für den freigegebenen Ordner erteilen. Das Konto, das Schreibberechtigungen erfordert, kann entweder mit Anmeldeinformationen im Abonnement oder mit einem **Dateifreigabekonto** für den Berichtsserver konfiguriert sein. Weitere Informationen zum Datenfreigabekonto finden Sie unter [Abonnementeinstellungen und ein Dateifreigabekonto &#40;Konfigurations-Manager&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Außerdem müssen Benutzer, die auf die Berichte zugreifen wollen, über Leseberechtigungen für den freigegebenen Ordner verfügen.  
@@ -74,12 +74,12 @@ ms.locfileid: "47778118"
   
  Ein andere Möglichkeit, eindeutige Dateinamen für jede Übermittlung zu erstellen, ist das Einschließen eines Timestamps in den Dateinamen. Dazu fügen Sie die **@timestamp** -Variable dem Dateinamen hinzu (z.B. *CompanySales@timestamp*). Auf diese Weise ist der Dateiname per definitionem eindeutig und wird daher niemals überschrieben.  
   
- Die folgende Abbildung zeigt ein Beispiel der Dateieinstellungen für ein Abonnement, das für die Dateifreigabeübermittlung konfiguriert wurde.  
+ Die folgende Abbildung zeigt ein Beispiel der Einstellungen für ein Abonnement, für das die Dateifreigabeübermittlung konfiguriert wurde.  
   
  ![Abonnement einer Dateifreigabe](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "file share subscription")  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [Abonnementeinstellungen und ein Dateifreigabekonto (Konfigurations-Manager)](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)  
+ [Abonnementeinstellungen und ein Dateifreigabekonto &#40;Konfigurations-Manager&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)  
   
   

@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dqs.kb.selectkb.f1
 - sql13.dqs.kb.newkb.f1
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3c4acd731faa13c10a0c32e8e99d2c557748b3d6
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: d247179577812aafbac84fd886f0a1ac0c9a1b67
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616340"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020119"
 ---
 # <a name="create-a-knowledge-base"></a>Erstellen einer Wissensdatenbank
 
@@ -63,7 +63,7 @@ ms.locfileid: "52616340"
   
 6.  Klicken Sie auf **Erstellen**.  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Erstellen einer Wissensdatenbank  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Erstellen einer Wissensdatenbank  
  Nachdem Sie eine Wissensdatenbank erstellt haben, werden ein Assistent für die Wissensermittlung, ein Assistent zum Erstellen einer Abgleichsrichtlinie oder Seiten für die Domänenverwaltung angezeigt. Weitere Informationen zu Wissensermittlung, Domänenverwaltung oder Abgleichsrichtlinien finden Sie unter [Durchführen der Wissensermittlung](../data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../data-quality-services/managing-a-domain.md) oder [Erstellen einer Abgleichsrichtlinie](../data-quality-services/create-a-matching-policy.md).  
   
   

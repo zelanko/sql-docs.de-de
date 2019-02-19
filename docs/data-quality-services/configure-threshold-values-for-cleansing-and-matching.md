@@ -14,15 +14,15 @@ helpviewer_keywords:
 - cleansing threshold values
 - matching,threshold value
 ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: dbb09e9aa932797a975f26de15e2b466101c4026
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: fdab2d77dddf565e2d94b27b2b7b46c70aafa4f0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616310"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010561"
 ---
 # <a name="configure-threshold-values-for-cleansing-and-matching"></a>Konfigurieren der Schwellenwerte für Bereinigung und Abgleich
 
@@ -47,9 +47,9 @@ ms.locfileid: "52616310"
   
 4.  Um Schwellenwerte für die Bereinigungsaktivität anzugeben, geben Sie entsprechende Werte in den folgenden Feldern im Bereich **Interaktive Bereinigung** an:  
   
-    -   **Mindestergebnis für Vorschläge**: Das minimale Ergebnis oder der Vertrauensgrad, der von DQS zum Vorschlagen von Ersetzungen für einen Wert während des computerunterstützten Bereinigungsprozesses verwendet wird. Geben Sie einen Wert in der Dezimalnotation des entsprechenden Prozentwerts ein. Geben Sie beispielsweise 0,75 für 75 % ein. Dieser Wert sollte kleiner oder gleich dem Wert sein, der im Feld **Mindestergebnis für automatische Korrekturen** angegeben wurde. Der Standardwert ist 0,7.  
+    -   **Mindestergebnis für Vorschläge:** Das Mindestergebnis oder der Vertrauensgrad, der von DQS zum Vorschlagen von Ersetzungen für einen Wert während des computerunterstützten Bereinigungsprozesses verwendet wird. Geben Sie einen Wert in der Dezimalnotation des entsprechenden Prozentwerts ein. Geben Sie beispielsweise 0,75 für 75 % ein. Dieser Wert sollte kleiner oder gleich dem Wert sein, der im Feld **Mindestergebnis für automatische Korrekturen** angegeben wurde. Der Standardwert ist 0,7.  
   
-    -   **Mindestergebnis für automatische Korrekturen**: Das minimale Ergebnis oder der Vertrauensgrad, der von DQS zum automatischen Korrigieren eines Werts während des computerunterstützten Bereinigungsprozesses verwendet wird. Geben Sie einen Wert in der Dezimalnotation des entsprechenden Prozentwerts ein. Geben Sie beispielsweise 0,9 für 90 % ein. Der Standardwert ist 0,8.  
+    -   **Mindestergebnis für automatische Korrekturen:** Das Mindestergebnis oder der Vertrauensgrad, der von DQS zum automatischen Korrigieren eines Werts während des computerunterstützten Bereinigungsprozesses verwendet wird. Geben Sie einen Wert in der Dezimalnotation des entsprechenden Prozentwerts ein. Geben Sie beispielsweise 0,9 für 90 % ein. Der Standardwert ist 0,8.  
   
 5.  Um einen Schwellenwert für die Abgleichsaktivität anzugeben, geben Sie einen Wert im Feld **Mindestergebnis für Datensätze** unter dem Bereich **Abgleich** an. Dieser Wert gibt das minimale Ergebnis für einen Datensatz an, das als Übereinstimmung mit einem anderen Datensatz betrachtet werden soll. Der Standardwert ist 80 %.  
   

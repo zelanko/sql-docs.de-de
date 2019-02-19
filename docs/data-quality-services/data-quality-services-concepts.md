@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: de96b2465dd1829e3104af3af7e506204969963b
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 8455bacf178bdc733312e172e1f8227a9485d008
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617114"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033440"
 ---
 # <a name="data-quality-services-concepts"></a>Konzepte der Data Quality Services
 
@@ -52,9 +52,9 @@ ms.locfileid: "52617114"
   
  Die Datenbereinigung in DQS wird auf Grundlage des Wissens in einer DQS-Wissensdatenbank ausgeführt. Die Datenbereinigung in DQS umfasst zwei Schritte:  
   
--   **Computergestützte Bereinigung**: DQS verwendet das Wissen in der ausgewählten Wissensdatenbank für das Bereinigungsprojekt, um Korrekturen/Vorschläge für die Werte in einer Datenquelle anzubieten.  
+-   **Computerunterstützte Bereinigung:** DQS verwendet das Wissen in der ausgewählten Wissensdatenbank für das Bereinigungsprojekt, um Korrekturen/Vorschläge für die Werte in einer Datenquelle anzubieten.  
   
--   **Interaktive Bereinigung**: Der Data Steward kann den interaktiven Bereinigungsprozess ausführen, um Datenkorrekturen, die vom computergestützten Datenbereinigungsprozess vorgeschlagen wurden, zu ändern oder zu erweitern. Der Data Steward verwendet dabei Vertrauensgrade und Statistiken, die vom Datenbereinigungsprozess identifiziert werden, oder eigene Änderungen, die manuell in das Projekt eingegeben werden.  
+-   **Interaktive Bereinigung:** Der Data Steward kann den interaktiven Bereinigungsprozess ausführen, um Datenkorrekturen zu ändern oder zu erweitern, die vom computergestützten Datenbereinigungsprozess vorgeschlagen wurden. Der Data Steward verwendet dabei Vertrauensgrade und Statistiken, die vom Datenbereinigungsprozess identifiziert werden, oder eigene Änderungen, die manuell in das Projekt eingegeben werden.  
   
  Der Data Steward kann die verarbeiteten Daten nach der Bereinigung in eine SQL Server-Datenbank, CSV- oder Excel-Datei exportieren. Weitere Informationen finden Sie unter [Data Cleansing](../data-quality-services/data-cleansing.md).  
   
@@ -93,7 +93,7 @@ ms.locfileid: "52617114"
   
  Weitere Informationen zur DQS-Verwaltung finden Sie unter [DQS Administration](../data-quality-services/dqs-administration.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Data Quality Services](../data-quality-services/data-quality-services.md)  
   
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: d15ecb6a7ef4c9db9ce10fd2fd51882c68883aaa
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 20968e8218eb2440873a60ed3f99ef746ff6f2d2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617270"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024671"
 ---
 # <a name="create-term-based-relations"></a>Erstellen von begriffsbasierten Beziehungen
 
@@ -28,7 +28,7 @@ ms.locfileid: "52617270"
   
  Um begriffsbasierte Beziehungen zu verwenden, erstellen Sie eine Liste mit Wert-/Ersetzungswertpaaren, z.B. „Inc.“ und „Incorporated“ oder „Senior“ und „Sr.“. Durch die Verwendung einer begriffsbasierten Beziehung können Sie einen Begriff in der gesamten Domäne ändern, ohne manuell einzelne Domänenwerte als Synonyme festzulegen. Sie können angeben, dass ein Wert korrigiert wird, auch wenn er nicht zuvor von der Wissensermittlung erkannt wurde. Wenn eine Transformation aufgrund einer begriffsbasierten Beziehung dazu führt, dass zwei Werte identisch sind, erstellt DQS zwischen ihnen eine Synonymbeziehung (in der Wissensermittlung), eine Korrekturbeziehung (in der Datenkorrektur) oder eine genaue Übereinstimmung (beim Abgleich).  
   
- Transformationen aufgrund einer begriffsbasierten Beziehung und Symboltransformationen (Sonderzeichen werden durch ein Leerzeichen oder einen NULL-Wert ersetzt) werden in einer Vorverarbeitungsphase vor der Analyse durchgeführt. Wenn eine Verbunddomänenanalyse angefordert wird, erfolgt diese vor den beiden Transformationen, da für die Trennzeichenanalyse Symbole erforderlich sind. Andere Vorgänge, z. B. Änderungen an Domänenregeln und Domänenwerten, werden nach den Transformationen ausgeführt. Beim Abgleich werden begriffsbasierte Beziehungen vor der Abgleichsaktivität auf die Quelldaten angewendet, unabhängig davon, ob die Bereinigung ausgeführt wird.  
+ Transformationen aufgrund einer begriffsbasierten Beziehung und Symboltransformationen (Sonderzeichen werden durch ein Leerzeichen oder einen NULL-Wert ersetzt) werden in einer Vorverarbeitungsphase vor der Analyse durchgeführt. Wenn eine Verbunddomänenanalyse angefordert wird, erfolgt diese vor den beiden Transformationen, da für die Trennzeichenanalyse Symbole erforderlich sind. Andere Vorgänge, z. B. Änderung an Domänenregeln und Domänenwerten, werden nach den Transformationen ausgeführt. Beim Abgleich werden begriffsbasierte Beziehungen vor der Abgleichsaktivität auf die Quelldaten angewendet, unabhängig davon, ob die Bereinigung ausgeführt wird.  
   
  **Begriffsbasierte Beziehungen und Domänenverwaltung**  
   
@@ -94,16 +94,16 @@ ms.locfileid: "52617270"
   
     6.  Suchen Sie einen Wert in der Tabelle Beziehungen, indem Sie eine oder mehrere Ziffern im Textfeld **Suchen** eingeben. Die gefundenen Werte für die Zeichenfolge werden hervorgehoben. Wechseln Sie mithilfe der NACH-OBEN- und NACH-UNTEN-TASTE zu verschiedenen Instanzen der Zeichenfolge in der Tabelle.  
   
-    7.  **Rechtschreibprüfung**: Wenn ein Wert in der Spalte **Wert** oder **Korrigieren in** eine wellige rote Unterstreichung aufweist, schlägt die Rechtschreibprüfung eine Korrektur für den Wert vor. Klicken Sie mit der rechten Maustaste auf den unterstrichenen Wert, und wählen Sie einen der von der Rechtschreibprüfung vorgeschlagenen Werte aus. Alternativ können Sie im Kontextmenü auf **Hinzufügen** klicken, um mit dem ursprünglichen Wert fortzufahren. Weitere Informationen finden Sie unter [Verwenden der DQS-Rechtschreibprüfung](../data-quality-services/use-the-dqs-speller.md) und [Domain-Eigenschaften festlegen](../data-quality-services/set-domain-properties.md).  
+    7.  **Rechtschreibprüfung:** Wenn ein Wert in der Spalte **Wert** oder **Korrigieren in** eine wellige rote Unterstreichung aufweist, schlägt die Rechtschreibprüfung eine Korrektur für den Wert vor. Klicken Sie mit der rechten Maustaste auf den unterstrichenen Wert, und wählen Sie einen der von der Rechtschreibprüfung vorgeschlagenen Werte aus. Alternativ können Sie im Kontextmenü auf **Hinzufügen** klicken, um mit dem ursprünglichen Wert fortzufahren. Weitere Informationen finden Sie unter [Verwenden der DQS-Rechtschreibprüfung](../data-quality-services/use-the-dqs-speller.md) und [Domain-Eigenschaften festlegen](../data-quality-services/set-domain-properties.md).  
   
         > [!NOTE]  
         >  Um die Rechtschreibprüfung zu verwenden, können Sie diese auf der Seite **Domäneneigenschaften** aktivieren. Wenn sie auf der Seite **Domäneneigenschaften** deaktiviert ist, können Sie auf das Symbol **Rechtschreibprüfung aktivieren/deaktivieren** auf der Seite **Begriffsbasierte Beziehungen** klicken, um sie auf dieser Seite zu aktivieren.  
   
 6.  Klicken Sie auf **Änderungen anwenden** , um die begriffsbasierten Beziehungen auf die Domäne anzuwenden.  
   
-7.  Klicken Sie auf **Fertig stellen** , um die Domänenverwaltungsaktivität abzuschließen, wie in [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)beschrieben.  
+7.  Klicken Sie auf **Fertig stellen** , um die Domänenverwaltungsaktivität abzuschließen, wie in [Beenden der Domänenverwaltungsaktivität](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)beschrieben.  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Erstellen von begriffsbasierten Beziehungen  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Erstellen von begriffsbasierten Beziehungen  
  Nachdem Sie die begriffsbasierten Beziehungen erstellt haben, können Sie andere Domänenverwaltungsaufgaben in der Domäne ausführen. Sie können die Wissensermittlung durchführen, um der Domäne Wissen hinzuzufügen, oder Sie können der Domäne eine Abgleichsrichtlinie hinzufügen. Weitere Informationen finden Sie unter [Durchführen der Wissensermittlung](../data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../data-quality-services/managing-a-domain.md) oder [Erstellen einer Abgleichsrichtlinie](../data-quality-services/create-a-matching-policy.md).  
   
   

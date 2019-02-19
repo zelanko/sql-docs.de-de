@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2ee52cac510d4166666d9f93fbb31da2bcde4fef
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 343a5ea33ed805cc3e5f2c4ce6e91b7546276e00
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616640"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015238"
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>Aktualisieren des DQS-Datenbankschemas nach der Installation eines SQL Server-Updates
 
@@ -31,7 +31,7 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
  Für das DQS-Datenbankschema ausgeführte Upgrades haben keine Auswirkungen auf vorhandene Daten in den DQS-Datenbanken (Wissensdatenbanken, Data Quality-Projekte und exportierte Ergebnisse in der DQS_STAGING_DATA-Datenbank). Sie müssen die DQS-Datenbanken jedoch sichern, bevor Sie das DQS-Datenbankschema aktualisieren, um versehentliche Datenverluste während des Schemaupgrades zu verhindern. Informationen zum Sichern von DQS-Datenbanken finden Sie unter [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
   
 > [!NOTE]  
->  Die meisten SQL Server-Updates erfordern ein Upgrade auf das DQS-Datenbankschema. Informationen zu den SQL Server-Updates, die ein Upgrade auf das DQS-Datenbankschema erfordern, finden Sie im Diagramm in Schritt 1.A unter [Aktualisieren von DQS: Installieren von kumulativen Updates oder Hotfixpatches für Data Quality Services](https://go.microsoft.com/fwlink/?LinkID=251565).  
+>  Die meisten SQL Server-Updates erfordern ein Upgrade auf das DQS-Datenbankschema. Informationen zu den SQL Server-Updates, die ein Upgrade auf das DQS-Datenbankschema erfordern, finden Sie im Diagramm in Schritt 1.A unter [Upgrade DQS: Installing Cumulative Updates or Hotfix Patches on Data Quality Services (Upgraden von DQS: Installieren von kumulativen Updates oder Hotfixpaketen für Data Quality Services)](https://go.microsoft.com/fwlink/?LinkID=251565).  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
   
@@ -64,9 +64,9 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
 ## <a name="next-steps"></a>Next Steps  
  Melden Sie sich in einer Data Quality-Clientanwendung beim aktualisierten Data Quality-Server an.  
   
- Weitere Informationen zum Aktualisieren des DQS-Datenbankschemas nach der Installation von SQL Server-Updates sowie Schritte zur Problembehandlung finden Sie unter [Aktualisieren von DQS: Installieren von kumulativen Updates oder Hotfixpatches für Data Quality Services](https://go.microsoft.com/fwlink/?LinkID=251565).  
+ Weitere Informationen zum Aktualisieren des DQS-Datenbankschemas nach der Installation von SQL Server-Updates sowie Schritte zur Problembehandlung finden Sie unter [Upgrade DQS: Installing Cumulative Updates or Hotfix Patches on Data Quality Services (Upgraden von DQS: Installieren von kumulativen Updates oder Hotfixpaketen für Data Quality Services)](https://go.microsoft.com/fwlink/?LinkID=251565).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Installieren von Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Aktualisieren der SQLCLR-Assemblys nach dem Aktualisieren von .NET Framework](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)  
   

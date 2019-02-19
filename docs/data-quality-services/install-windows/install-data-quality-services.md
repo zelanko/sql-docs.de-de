@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 273d0e9df4a5cd5a2649fcd8ada4fe9891393dcd
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 677432f74ac67ecdcc835520cf4cfc208cbc33de
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617940"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024721"
 ---
 # <a name="install-data-quality-services"></a>Installieren von Data Quality Services
 
@@ -38,11 +38,11 @@ ms.locfileid: "52617940"
   
  Die DQS-Installation besteht aus drei Teilen:  
   
--   [Installationsvorbereitung](#PreInstallationTasks): Überprüfen Sie die Systemanforderungen, bevor Sie DQS installieren.  
+-   [Vor der Installation:](#PreInstallationTasks) Überprüfen Sie die Systemanforderungen, bevor Sie DQS installieren.  
   
--   [Data Quality Services Installationstasks](#DQSInstallation): Installieren von DQS über SQL Server Setup.  
+-   [Data Quality Services-Installationstasks:](#DQSInstallation) Installieren Sie DQS mithilfe des SQL Server-Setups.  
   
--   [Installationsnachbereitung](#PostInstallationTasks): Führen Sie nach dem SQL Server-Setup diese Tasks aus, um die Installation von DQS abzuschließen.  
+-   [Nach der Installation:](#PostInstallationTasks) Führen Sie nach dem SQL Server-Setup diese Aktionen durch, um die Installation von DQS abzuschließen.  
   
 > [!NOTE]  
 >  Dieses Thema enthält keine Anweisungen zum Ausführen des Setups über die Befehlszeile. Informationen zu Befehlszeilenoptionen zum Installieren von [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] und Client finden Sie unter [Funktionsparameter](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Feature) im Artikel [Installieren von SQL Server von der Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
@@ -52,7 +52,7 @@ ms.locfileid: "52617940"
   
 |DQS-Komponente|Mindestsystemanforderungen|  
 |-------------------|---------------------------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|Arbeitsspeicher (RAM): Minimum: 2 GB/empfohlen: 4 GB oder mehr<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] Datenbank-Engine. Weitere Informationen finden Sie unter [Installieren der SQL Server-Datenbank-Engine](../../database-engine/install-windows/install-sql-server-database-engine.md).|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|Arbeitsspeicher (RAM): Minimum: 2 GB/Empfohlen: 4 GB oder mehr<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] Datenbank-Engine. Weitere Informationen finden Sie unter [Installieren der SQL Server-Datenbank-Engine](../../database-engine/install-windows/install-sql-server-database-engine.md).|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|.NET Framework 4.0 (wird mit dem [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] installiert, sofern nicht bereits installiert)<br /><br /> Internet Explorer 6.0 SP1 oder höher|  
   
 > [!IMPORTANT]  
@@ -115,8 +115,8 @@ ms.locfileid: "52617940"
      Weitere Informationen finden Sie unter  
                     [Zugriff auf Daten für DQS-Vorgänge](../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Video: Installieren und Konfigurieren von DQS](https://go.microsoft.com/fwlink/?LinkId=238241)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Video: Install and Configure DQS (Video: Installieren und Konfigurieren von DQS)](https://go.microsoft.com/fwlink/?LinkId=238241)   
  [Aktualisieren der SQLCLR-Assemblys nach dem Aktualisieren von .NET Framework](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
  [Export und Importieren von DQS-Wissensdatenbanken mit DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
  [Aktualisieren von Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)   

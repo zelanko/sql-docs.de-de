@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.domainproperties.f1
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: bbc9e37e328e917b02177d99846806c883d74944
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 27e16c4c353aecb14e29e590bf42241078e0cf11
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617220"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029981"
 ---
 # <a name="set-domain-properties"></a>Festlegen von Domäneneigenschaften
 
@@ -44,7 +44,7 @@ ms.locfileid: "52617220"
   
 3.  Klicken Sie auf **Fertig stellen** , um die Domänenverwaltungsaktivität abzuschließen, wie in [Beenden der Domänenverwaltungsaktivität](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)beschrieben.  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Festlegen von Domäneneigenschaften  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Festlegen von Domäneneigenschaften  
  Nachdem Sie Domäneneigenschaften festgelegt haben, können Sie andere Domänenverwaltungstasks in der Domäne ausführen, Sie können die Wissensermittlung durchführen, um der Domäne Wissen hinzuzufügen, oder Sie können der Domäne eine Abgleichsrichtlinie hinzufügen. Weitere Informationen finden Sie unter [Durchführen der Wissensermittlung](../data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../data-quality-services/managing-a-domain.md) oder [Erstellen einer Abgleichsrichtlinie](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Properties"></a> Domäneneigenschaften  
@@ -53,7 +53,7 @@ ms.locfileid: "52617220"
  Nachdem eine Domäne erstellt wurde, kann der Domänenname oder die Beschreibung geändert werden. Der Domänenname muss für die Wissensdatenbank eindeutig sein. Die Beschreibung kann bis zu 256 Zeichen enthalten.  
   
 ###  <a name="Type"></a> Datentyp  
- Wenn Sie die Domäne erstellen, wählen Sie einen der folgenden Datentypen für die Werte in der Domäne aus: **Zeichenfolge** (Standardeinstellung), **Datum**, **Ganze Zahl**oder **Dezimal**. Nachdem Sie die Domäne erstellt haben, können Sie den Datentyp anzeigen, jedoch nicht mehr ändern. Der für eine Domäne ausgewählte Datentyp definiert den Typ von Quelldaten, die der Domäne zugeordnet werden können. Informationen zu unterstützten Datentypen für jeden der vier Domänendatentypen in DQS finden Sie unter [Supported SQL Server and SSIS Data Types for DQS Domains (Unterstützte SQL Server- und SSIS-Datentypen für DQS-Domänen)](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+ Wenn Sie die Domäne erstellen, wählen Sie einen der folgenden Datentypen für die Werte in der Domäne aus: **String** (Standard), **Date**, **Integer** oder **Decimal**. Nachdem Sie die Domäne erstellt haben, können Sie den Datentyp anzeigen, jedoch nicht mehr ändern. Der für eine Domäne ausgewählte Datentyp definiert den Typ von Quelldaten, die der Domäne zugeordnet werden können. Informationen zu unterstützten Datentypen für jeden der vier Domänendatentypen in DQS finden Sie unter [Supported SQL Server and SSIS Data Types for DQS Domains (Unterstützte SQL Server- und SSIS-Datentypen für DQS-Domänen)](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
 ###  <a name="Leading"></a> Führende Werte verwenden  
  Aktivieren Sie dieses Kontrollkästchen, um anzugeben, dass der führende Wert in einer Gruppe von Synonymen statt eines Werts ausgegeben wird, der ein Synonym dafür ist. Deaktivieren Sie **Führende Werte verwenden** , um anzugeben, dass jeder Synonymwert in seinem richtigen oder korrigierten Format ausgegeben und nicht durch den führenden Wert für die zugehörige Gruppe ersetzt wird.  
@@ -63,7 +63,7 @@ ms.locfileid: "52617220"
   
  Das Ignorieren von Sonderzeichen in einem Zeichenfolgenwert kann die Abgleichgenauigkeit vergrößern. Das Ähnlichkeitsergebnis zwischen zwei Zeichenfolgen kann vergrößert werden, indem Sonderzeichen durch NULL oder ein Leerzeichen ersetzt werden. Satzzeichen oder andere Symbole können sich in zwei Zeichenfolgen unterscheiden. Durch internes Ersetzen von Sonderzeichen kann das Ergebnis den unteren Schwellenwert für die Übereinstimmung in DQS überschreiten, sodass zwei Zeichenfolgen als Übereinstimmung erkannt werden, was andernfalls nicht der Fall gewesen wäre. Ob Sie Sonderzeichen ignorieren, hängt jedoch auch von dem Datentyp ab, für den Sie den Abgleich ausführen. Wenn Sie z. B. Daten aus dem englischen Maßsystem verarbeiten, kann das Ignorieren von doppelten und einfachen Anführungszeichen in den Produktdaten Fehler verursachen, wenn ein doppeltes Anführungszeichen für Zoll oder ein einfaches Anführungszeichen für Fuß steht.  
   
- Die Normalisierung wird beim Laden und Indizieren der Daten in den Datenverarbeitungsphasen der Ermittlungs-, Abgleichsrichtlinien-, Abgleichsprojekt- und Bereinigungsprojektaktivitäten ausgeführt. Bei Aktivierung werden Normalisierung und begriffsbasierte Beziehungstransformation vor der Analyse in einer Vorverarbeitungsphase durchgeführt. Sie werden für jede Domäne ausgeführt, bevor Algorithmen zur Berechnung der Ähnlichkeit zwischen Zeichenfolgen angewendet werden. Wenn eine Verbunddomänenanalyse angefordert wird, erfolgt diese vor der Normalisierung und begriffsbasierter Beziehungstransformation, da für die Trennzeichenanalyse Symbole erforderlich sind. Andere Vorgänge, z. B. Änderung an Domänenregeln und Domänenwerten, werden nach den Transformationen ausgeführt. Die resultierenden Daten werden durch das interne Ersetzen der Sonderzeichen in DQS nicht geändert.  
+ Die Normalisierung wird beim Laden und Indizieren der Daten in den Datenverarbeitungsphasen der Ermittlungs-, Abgleichsrichtlinien-, Abgleichsprojekt- und Bereinigungsprojektaktivitäten ausgeführt. Bei Aktivierung werden Normalisierung und begriffsbasierte Beziehungstransformation vor der Analyse in einer Vorverarbeitungsphase durchgeführt. Sie werden für jede Domäne ausgeführt, bevor Algorithmen zur Berechnung der Ähnlichkeit zwischen Zeichenfolgen angewendet werden. Wenn eine Verbunddomänenanalyse angefordert wird, erfolgt diese vor der Normalisierung und begriffsbasierter Beziehungstransformation, da für die Trennzeichenanalyse Symbole erforderlich sind. Andere Vorgänge, z. B. Änderung an Domänenregeln und Domänenwerten, werden nach den Transformationen ausgeführt. Die resultierenden Daten werden durch das interne Ersetzen der Sonderzeichen in DQS nicht geändert.  
   
 ###  <a name="Format"></a> Formatausgabe  
  Wählen Sie die Formatierung aus, die beim Ausgeben der Datenwerte in der Domäne angewendet wird. Die Formatierung ist für den ausgewählten Datentyp spezifisch, wie in der folgenden Liste gezeigt. Bei Auswahl von **Keine** wird keines der Formate in der Liste angewendet.  

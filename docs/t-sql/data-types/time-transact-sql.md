@@ -1,7 +1,7 @@
 ---
 title: time (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 6/7/2017
+ms.date: 06/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ff303fd066e1a12ccbd33e1479648001fe5a389b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03f63929d54039399a292e086315c0b8d660f206
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762588"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079456"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47762588"
 |Syntax|**time** [ (*fractional second scale*) ]|  
 |Verwendung|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
 |*fractional seconds scale*|Definiert die Anzahl der Stellen für den Bruchteil der Sekunden.<br /><br /> Dies kann eine ganze Zahl zwischen 0 und 7 sein. Im Zusammenhang mit Informatica kann dies eine ganze Zahl zwischen 0 und 3 sein.<br /><br /> Der Standardwert für den Bruchteil beträgt 7 (100 ns).|  
-|Standardmäßiges Format der Zeichenfolgenliterale<br /><br /> (wird für Downlevelclients verwendet)|hh:mm:ss[.nnnnnnn] für Informatica)<br /><br /> Weitere Informationen finden Sie im nachfolgenden Abschnitt "Abwärtskompatibilität für Downlevelclients".|  
+|Standardmäßiges Format der Zeichenfolgenliterale<br /><br /> (wird für Downlevelclients verwendet)|hh:mm:ss[.nnnnnnn] für Informatica)<br /><br /> Weitere Informationen finden Sie im Abschnitt [Abwärtskompatibilität für Downlevelclient](#BackwardCompatibilityforDownlevelClients).|  
 |Bereich|00:00:00.0000000 bis 23:59:59.9999999 (00:00:00.000 bis 23:59:59.999 für Informatica)|  
 |Elementbereiche|Bei hh handelt es sich um zwei Ziffern im Bereich von 0 bis 23, die die Stunde darstellen.<br /><br /> Bei mm handelt es sich um zwei Ziffern im Bereich von 0 bis 59, die die Minute darstellen.<br /><br /> Bei ss handelt es sich um zwei Ziffern im Bereich von 0 bis 59, die die Sekunde darstellen.<br /><br /> Bei n\* handelt es sich um bis zu sieben Ziffern im Bereich von 0 bis 9999999, die die Sekundenbruchteile darstellen. Für Informatica umfasst n\* bis zu drei Ziffern im Bereich von 0 bis 999.|  
 |Zeichenlänge|Mindestens 8 Positionen (hh:mm:ss) bis maximal 16 Positionen (hh:mm:ss.nnnnnnn). Für Informatica sind es höchstens 12 Positionen (hh:mm:ss.nnn).|  
@@ -53,9 +53,9 @@ ms.locfileid: "47762588"
 |Speichergröße|Standardmäßig 5 Bytes fest, wobei die Standardgenauigkeit in Sekundenbruchteilen 100 ns beträgt. In Informatica sind es standardmäßig 4 Byte (fest), wobei die Standardgenauigkeit in Sekundenbruchteilen 1 ms beträgt.|  
 |Genauigkeit|100 ns (1 ms in Informatica)|  
 |Standardwert|00:00:00<br /><br /> Dieser Wert wird für den angefügten Datumsteil für eine implizite Konvertierung von **date** in **datetime2** oder **datetimeoffset** verwendet.|  
-|Benutzerdefinierte Genauigkeit in Sekundenbruchteilen|Benutzerkontensteuerung|  
-|Beachtung und Beibehaltung des Zeitzonenoffsets|nein|  
-|Beachtung der Sommerzeit|nein|  
+|Benutzerdefinierte Genauigkeit in Sekundenbruchteilen|Ja|  
+|Beachtung und Beibehaltung des Zeitzonenoffsets|Nein|  
+|Beachtung der Sommerzeit|Nein|  
   
 |Angegebene Dezimalstelle|Ergebnis (Genauigkeit, Dezimalstellen)|Spaltenlänge (in Bytes)|Bruchteil<br /><br /> Sekunden<br /><br /> precision|  
 |---------------------|---------------------------------|-----------------------------|------------------------------------------|  
@@ -121,8 +121,7 @@ SELECT @timeTo AS 'time(3)', @timeFrom AS 'time(4)';
 --(1 row(s) affected)  
 ```  
   
- Wenn eine Konvertierung in  
-                    **date** vorgenommen wird, schlägt die Konvertierung fehl, und die Fehlermeldung 206 "Operand type clash: date is incompatible with time." (Operandentypkollision: date ist inkompatibel mit time.) wird ausgegeben.  
+ Beim Konvertieren in **date** schlägt die Konvertierung fehl, und die Fehlermeldung 206 wird ausgegeben: „Operandentypkollision: date ist inkompatibel mit time.“  
   
  Wenn eine Konvertierung in **datetime** vorgenommen wird, werden die Werte für Stunden, Minuten und Sekunden kopiert, und die Datumskomponente wird auf 1900-01-01 festgelegt. Wenn die Genauigkeit des **time(n)**-Werts größer ist als drei Sekundenbruchteile, wird das **datetime**-Ergebnis gekürzt. Der folgende Code zeigt die Ergebnisse der Konvertierung eines `time(4)`-Werts in einen `datetime`-Wert.  
   
@@ -270,7 +269,7 @@ SELECT
 |'12:12:12.1234567'|**datetime2(7)**|1900-01-01 12:12:12.1234567|Wenn die Genauigkeit der Sekundenbruchteile den für die Spalte angegebenen Wert überschreitet, wird die Zeichenfolge abgeschnitten, ohne einen Fehler zu verursachen.|  
 |'12:12:12.1234567'|**datetimeoffset(7)**|1900-01-01 12:12:12.1234567 +00:00|Wenn die Genauigkeit der Sekundenbruchteile den für die Spalte angegebenen Wert überschreitet, wird die Zeichenfolge abgeschnitten, ohne einen Fehler zu verursachen.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   

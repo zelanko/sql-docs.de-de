@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 40757d069ce849b71f93d7f420247dddcc8d229a
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 231c1111dbdb6a56419c25d5f467c2813156780a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617890"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022086"
 ---
 # <a name="create-a-linked-domain"></a>Erstellen einer verknüpften Domäne
 
@@ -35,7 +35,7 @@ ms.locfileid: "52617890"
 ### <a name="controlling-data-flow-to-composite-domains"></a>Steuern des Datenflusses zu Verbunddomänen  
  Verknüpfte Domänen ermöglichen es Ihnen, den Datenfluss zwischen Felder und Verbunddomänen zu steuern. Sie können unterscheiden, wenn Daten von einem Feld in eine Verbunddomäne fließen und wenn Daten von einem anderen, sehr ähnlichen Feld nicht in die Verbunddomäne fließen. Dies erreichen Sie, indem Sie angeben, dass von zwei verknüpften Domänen eine Teil einer Verbunddomäne ist, die andere aber nicht. Aus Domänenperspektive sind verknüpfte Domänen identisch. Sie enthalten das gleiche Wissen. Aus Verbunddomänenperspektive unterscheiden sich verknüpfte Domänen allerdings voneinander. Die eine ist Teil der Verbunddomäne, die andere aber nicht.  
   
- Ein Beispiel ist ein Datensatz, der die folgenden Felder enthält: Kundenvorname, Kundennachname und Vorname des Vaters. Angenommen, Sie ordnen den Kundenvornamen und den Vornamen des Vaters einer Vornamendomäne zu und machen die Vornamendomäne und die Nachnamendomäne zu Teilen einer Verbunddomäne für vollständige Namen. Das Problem ist, dass der Vorname des Vaters zur Verbunddomäne ohne Nachname hinzugefügt wird. Wenn Sie allerdings die beiden Vornamenfelder mit einer Domäne verknüpfen und die beiden Domänen miteinander verknüpfen, können Sie die Kundenvornamendomäne zur Verbunddomäne für vollständige Namen hinzufügen und das Feld für den Vornamen des Vaters nicht zur Verbunddomäne hinzufügen. Dadurch verhindern Sie, dass der Vorname des Vaters zur Verbunddomäne hinzugefügt wird.  
+ Dies kann z.B. ein Datensatz sein, der die folgenden Felder enthält: Vorname des Kunden, Nachname des Kunden und Vorname des Vaters. Angenommen, Sie ordnen den Kundenvornamen und den Vornamen des Vaters einer Vornamendomäne zu und machen die Vornamendomäne und die Nachnamendomäne zu Teilen einer Verbunddomäne für vollständige Namen. Das Problem ist, dass der Vorname des Vaters zur Verbunddomäne ohne Nachname hinzugefügt wird. Wenn Sie allerdings die beiden Vornamenfelder mit einer Domäne verknüpfen und die beiden Domänen miteinander verknüpfen, können Sie die Kundenvornamendomäne zur Verbunddomäne für vollständige Namen hinzufügen und das Feld für den Vornamen des Vaters nicht zur Verbunddomäne hinzufügen. Dadurch verhindern Sie, dass der Vorname des Vaters zur Verbunddomäne hinzugefügt wird.  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
@@ -76,7 +76,7 @@ ms.locfileid: "52617890"
   
 4.  Geben Sie im Dialogfeld „Domäne erstellen“ einen Domänennamen und eine Beschreibung ein, und klicken Sie dann auf „OK“.  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Erstellen einer verknüpften Domäne  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Erstellen einer verknüpften Domäne  
  Nachdem Sie eine verknüpfte Domäne erstellt haben, können Sie andere Domänenverwaltungsaufgaben in der Domäne ausführen, Sie können die Wissensermittlung durchführen, um der Domäne Wissen hinzuzufügen, oder Sie können der Domäne eine Abgleichsrichtlinie hinzufügen. Weitere Informationen finden Sie unter [Durchführen der Wissensermittlung](../data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../data-quality-services/managing-a-domain.md) oder [Erstellen einer Abgleichsrichtlinie](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Behavior"></a> Verhalten einer verknüpften Domäne  

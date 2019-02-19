@@ -15,15 +15,15 @@ helpviewer_keywords:
 - data quality project,unlock
 - data quality project,open
 ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5ead34cab28f4988f649c6bc9dcfec5d282a08f1
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 72ac098f34438d35de4b0c1ac0ebef0ffc30a043
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617820"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039021"
 ---
 # <a name="open-unlock-rename-and-delete-a-data-quality-project"></a>Öffnen, Entsperren, Umbenennen und Löschen eines Data Quality-Projekts
 
@@ -63,9 +63,9 @@ ms.locfileid: "52617820"
   
 4.  Das Data Quality-Projekt wird mit demselben Aktivitätsstatus geöffnet, mit dem es zuletzt geschlossen wurde. Ein Data Quality-Projekt hat die folgenden Status:  
   
-    -   Für die **Bereinigungsaktivität** kann ein Data Quality-Projekt die folgenden Status haben: **Bereinigung – Zuordnen**, **Bereinigung – Bereinigen**, **Bereinigung – Ergebnisse verwalten und anzeigen** und **Bereinigung – Export**.  
+    -   Bei der **Bereinigung** kann ein Data Quality-Projekt die folgenden Status aufweisen: **Bereinigung - Zuordnen**, **Bereinigung - Bereinigen**, **Bereinigung - Ergebnisse verwalten und anzeigen**, **Bereinigung - Export**.  
   
-    -   Für die **Abgleichsaktivität** kann ein Data Quality-Projekt die folgenden Status haben: **Abgleich – Zuordnung**, **Abgleich – Übereinstimmung**, **Abgleich – Survivorship** und **Abgleich – Export**.  
+    -   Beim **Abgleichen** kann ein Data Quality-Projekt die folgenden Status aufweisen: **Abgleich - Zuordnung**, **Abgleich - Übereinstimmung**, **Abgleich - Survivorship**, **Abgleich - Export**.  
   
 ##  <a name="Unlock"></a> Entsperren eines Data Quality-Projekts  
  Wenn Sie ein Data Quality-Projekt erstellen, ist es gesperrt, um zu verhindern, dass es von anderen Benutzern verwendet oder geändert wird. Sie müssen das Data Quality-Projekt entsperren, nachdem Sie die Arbeit abgeschlossen haben, wenn Sie möchten, dass andere Benutzer am Data Quality-Projekt arbeiten können. Ein Schlosssymbol wird für gesperrte Projekte angezeigt.  

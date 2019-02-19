@@ -1,7 +1,7 @@
 ---
 title: sql_variant (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 9/12/2017
+ms.date: 09/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,19 +21,19 @@ ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 004562a308419d2be70afd13defa617c26c0b0d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4baff479bdd7145cc2fd65f07fd2c476a20311a5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785890"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013501"
 ---
 # <a name="sqlvariant-transact-sql"></a>sql_variant (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Ein Datentyp, der Werte verschiedener von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützter Datentypen speichert.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   

@@ -20,19 +20,19 @@ ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 773d575a65edaca18d76ba3e2109fe81bb20f88f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6b961d0390e7b327f24b70cdd5e780a7c13d895
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819478"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079376"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Diese Funktion verschlüsselt Daten mit einem asymmetrischen Schlüssel.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Artikellinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Article link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -78,7 +78,7 @@ aufweisen.
 **varbinary** mit einer maximalen Größe von 8.000 Byte.  
   
 ## <a name="remarks"></a>Remarks  
-Verschlüsselungs- und Entschlüsselungsvorgänge, die asymmetrische Schlüssel verwenden, verwenden viele Ressourcen und werden deshalb sehr aufwendig, verglichen mit der Verschlüsselung und Entschlüsselung mit einem symmetrischen Schlüssel. Es wird empfohlen, dass Entwickler asymmetrische Schlüssel für Verschlüsselungs- und Entschlüsselungsvorgänge auf großen Datasets vermeiden, z.B. bei Benutzerdaten in Datenbanktabellen. Stattdessen sollten Entwickler die Daten zunächst mit einem starken symmetrischen Schlüssel verschlüsseln und dann diesen symmetrischen Schlüssel mit einem asymmetrischen Schlüssel verschlüsseln.  
+Verschlüsselungs- und Entschlüsselungsvorgänge, die asymmetrische Schlüssel verwenden, verwenden viele Ressourcen und werden deshalb kostspielig, verglichen mit der Verschlüsselung und Entschlüsselung mit einem symmetrischen Schlüssel. Es wird empfohlen, dass Entwickler asymmetrische Schlüssel für Verschlüsselungs- und Entschlüsselungsvorgänge auf großen Datasets vermeiden, z.B. bei Benutzerdaten in Datenbanktabellen. Stattdessen sollten Entwickler die Daten zunächst mit einem starken symmetrischen Schlüssel verschlüsseln und dann diesen symmetrischen Schlüssel mit einem asymmetrischen Schlüssel verschlüsseln.  
   
 `ENCRYPTBYASYMKEY` gibt je nach Algorithmus **NULL** zurück, wenn die Eingabe eine bestimmte Anzahl von Bytes überschreitet. Die spezifischen Grenzwerte:
 
@@ -86,7 +86,7 @@ Verschlüsselungs- und Entschlüsselungsvorgänge, die asymmetrische Schlüssel 
 + Ein 1024-Bit-Schlüssel kann bis zu 117 Bytes verschlüsseln
 + Ein 2048-Bit-Schlüssel kann bis zu 245 Bytes verschlüsseln
 
-Beachten Sie, dass sowohl Zertifikate als auch asymmetrische Schlüssel in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Wrapper für RSA-Schlüssel dienen.  
+Sowohl Zertifikate als auch asymmetrische Schlüssel dienen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Wrapper für RSA-Schlüssel.  
   
 ## <a name="examples"></a>Beispiele  
 Im folgenden Beispiel wird der in `@cleartext` gespeicherte Text mit dem asymmetrischen Schlüssel `JanainaAsymKey02` verschlüsselt. Due Anweisung fügt die verschlüsselten Daten in die Tabelle `ProtectedData04` ein.  
@@ -98,9 +98,8 @@ INSERT INTO AdventureWorks2012.Sales.ProtectedData04
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [DECRYPTBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
   

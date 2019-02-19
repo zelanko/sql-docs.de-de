@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dqs.dm.refdata.f1
 - sql13.dqs.dm.refcatalog.f1
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 358b1779ebc24f17035cb50eda77c7249456ff9a
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 6b3b52b0fbdfcd5ccdd7c841bf1a7b73f54857b8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617081"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010721"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>Anfügen einer Domäne oder Verbunddomäne an Verweisdaten
 
@@ -35,7 +35,7 @@ ms.locfileid: "52617081"
   
  Das Schema eines Verweisdatendiensts kann über eine erforderliche Spalte verfügen, die mit der entsprechenden Domäne zugeordnet werden muss, wenn Sie einen Verweisdatendienst verwenden möchten. Die erforderliche Spalte in einem Verweisdatenschema wird mit einem „(M)“ im Spaltennamen gekennzeichnet. So ist **AddressLine** beispielsweise die erforderliche Schemaspalte in **Melissa Data (Adressdaten)**, und **CompanyName** ist die erforderliche Schemaspalte in **Digital Trowel Inc. (US-Unternehmen und professionelle Daten für SQL-Benutzer)**.  
   
- In diesem Thema erstellen wir vier Domänen: **Adresszeile**, **Ort**, **Bundesland** und **PLZ**, unter einer Verbunddomäne, **Adressüberprüfung**, fügen die Verbunddomäne an den Verweisdatendienst **Melissa Data (Adressüberprüfung)** an und ordnen die einzelnen Domänen innerhalb der Verbunddomäne anschließend den entsprechenden Spalten im Schema des Verweisdatendiensts zu.  
+ In diesem Artikel werden vier Domänen erstellt: **Adresszeile**, **Ort**, **Bundesland** und **PLZ**, unter einer Verbunddomäne, **Adressüberprüfung**, fügen die Verbunddomäne an den Reference Data Service **Melissa Data – Address Check** (Melissa Data (Adressüberprüfung)) an und ordnen die einzelnen Domänen innerhalb der Verbunddomäne anschließend den entsprechenden Spalten im Reference Data Service-Schema zu.  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
   
@@ -55,7 +55,7 @@ ms.locfileid: "52617081"
   
 3.  Geben Sie im Bildschirm **Neue Wissensdatenbank** einen Namen für die neue Wissensdatenbank ein, klicken Sie auf die Aktivität **Domänenverwaltung** , und klicken Sie auf **Erstellen**.  
   
-4.  Klicken Sie im Bildschirm **Domänenverwaltung** auf das Symbol **Domäne erstellen** , um eine Domäne zu erstellen. Erstellen Sie die folgenden vier Domänen: **Adresszeile**, **Ort**, **Bundesland**und **PLZ**.  
+4.  Klicken Sie im Bildschirm **Domänenverwaltung** auf das Symbol **Domäne erstellen** , um eine Domäne zu erstellen. Erstellen Sie die folgenden vier Domänen: **Adresszeile**, **Ort**, **Bundesland** und **PLZ**.  
   
 5.  Klicken Sie auf das Symbol **Verbunddomäne erstellen** , um eine Verbunddomäne zu erstellen. Geben Sie im Dialogfeld **Verbunddomäne erstellen** im Feld **Name der Verbunddomäne** den Text **Adressenüberprüfung** ein, und schließen Sie alle Domänen ein, die unter Schritt 3 in der Verbunddomäne erstellt wurden. Klicken Sie auf **OK**.  
   
@@ -78,20 +78,20 @@ ms.locfileid: "52617081"
   
 9. Sie kehren zur Registerkarte **Verweisdaten** zurück. Ändern Sie im Bereich **Anbietereinstellungen** ggf. die Werte in den folgenden Feldern:  
   
-    -   **Schwellenwert für Autokorrektur**: Korrekturen aus dem Verweisdatendienst mit einem Vertrauensgrad über den Schwellenwerten werden automatisch vorgenommen. Geben Sie einen Wert in der Dezimalnotation des entsprechenden Prozentwerts ein. Geben Sie beispielsweise 0,9 für 90 % ein.  
+    -   **Schwellenwert für Autokorrektur:** Korrekturen aus dem Reference Data Service mit einem Vertrauensgrad über den Schwellenwerten werden automatisch vorgenommen. Geben Sie einen Wert in der Dezimalnotation des entsprechenden Prozentwerts ein. Geben Sie beispielsweise 0,9 für 90 % ein.  
   
-    -   **Vorgeschlagene Kandidaten**: Anzahl der vorgeschlagenen Kandidaten aus dem Verweisdatendienst, die angezeigt werden sollen.  
+    -   **Vorgeschlagene Kandidaten:** Anzahl der vorgeschlagenen Kandidaten aus dem Reference Data Service, die angezeigt werden sollen.  
   
-    -   **Minimaler Vertrauensgrad**: Vorschläge aus dem Verweisdatendienst mit einem Vertrauensgrad, der niedriger als dieser Wert ist, werden ignoriert. Geben Sie einen Wert in der Dezimalnotation des entsprechenden Prozentwerts ein. Geben Sie beispielsweise 0,6 für 60 % an.  
+    -   **Minimaler Vertrauensgrad:** Vorschläge aus dem Reference Data Service mit einem Vertrauensgrad, der niedriger als dieser Wert ist, werden ignoriert. Geben Sie einen Wert in der Dezimalnotation des entsprechenden Prozentwerts ein. Geben Sie beispielsweise 0,6 für 60 % an.  
   
 10. Klicken Sie auf **Fertig stellen** , um die Wissensdatenbank zu veröffentlichen. Eine Bestätigungsmeldung wird angezeigt, nachdem die Wissensdatenbank erfolgreich veröffentlicht wurde.  
   
  Sie können diese Wissensdatenbank jetzt für Bereinigungsaktivitäten in einem Data Quality-Projekt verwenden, um US-Adressen in den Quelldaten basierend auf dem Wissen zu standardisieren und zu bereinigen, das von Melissa Data über den Windows Azure Marketplace bereitgestellt wird.  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Zuordnen einer Domäne zu Verweisdaten  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Zuordnen einer Domäne zu Verweisdaten  
  Erstellen Sie ein Data Quality-Projekt, und führen Sie die Bereinigungsaktivität für die Quelldaten aus, die US-Adressen enthalten, indem Sie diese mit der in diesem Thema erstellten Wissensdatenbank vergleichen. Siehe [Bereinigen von Daten mit Wissen über &#40;externe&#41; Verweisdaten](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md)   
  [Datenbereinigung](../data-quality-services/data-cleansing.md)  
   

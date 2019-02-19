@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: ca8a9b258275c0e8b2368519d8af7ca18aad70aa
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 850af4e77b1fcaf8ffdaa0ede7bcaeba79695adc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617460"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013421"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>Ausführen von DQSInstaller.exe zum Abschließen der Installation von Data Quality Server
 
@@ -36,11 +36,11 @@ ms.locfileid: "52617460"
   
 1.  Führen Sie auf dem Computer, auf dem Sie [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]installieren möchten, anhand einer der folgenden Methoden die Datei DQSInstaller.exe aus:  
   
-    -   **Startbildschirm**: Klicken Sie im **DQSInstaller.exe** auf **Data Quality-Server-Installationsprogramm**  
+    -   **Startbildschirm:** Klicken Sie auf dem **Startbildschirm** auf **Data Quality Server-Installationsprogramm**.  
   
-    -   **Startmenü**: Klicken Sie auf der Taskleiste auf **Start**, zeigen Sie auf **Alle Programme**, und klicken Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]. Klicken Sie unter [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]auf **Data Quality Services**und dann auf **Data Quality Server-Installationsprogramm**.  
+    -   **Startmenü:** Klicken Sie auf der Taskleiste auf **Start**, zeigen Sie auf **Alle Programme**, und klicken Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]. Klicken Sie unter [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]auf **Data Quality Services**und dann auf **Data Quality Server-Installationsprogramm**.  
   
-    -   **Windows-Explorer**: Suchen Sie die Datei „DQSInstaller.exe“. Wenn Sie z. B. die Standardinstanz von SQL Server installiert haben, steht die Datei DQSInstaller.exe in der Regel unter "C:\Programme\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn" zur Verfügung. Doppelklicken Sie auf die Datei DQSInstaller.exe.  
+    -   **Windows Explorer:** Navigieren Sie zur Datei DQSInstaller.exe. Wenn Sie z. B. die Standardinstanz von SQL Server installiert haben, steht die Datei DQSInstaller.exe in der Regel unter "C:\Programme\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn" zur Verfügung. Doppelklicken Sie auf die Datei DQSInstaller.exe.  
   
 2.  Ein Eingabeaufforderungsfenster wird angezeigt, in dem Sie den Fortschritt der Installation verfolgen können. Achten Sie dabei auf die drei folgenden Punkte:  
   
@@ -91,9 +91,9 @@ ms.locfileid: "52617460"
   
 3.  Führen Sie an der Eingabeaufforderung DQSInstaller.exe mit oder ohne Befehlszeilenparameter aus:  
   
-    -   **Ohne Befehlszeilenparameter**: Geben Sie `dqsinstaller.exe`ein, und drücken Sie anschließend die EINGABETASTE.  
+    -   **Ohne Befehlszeilenparameter:** Geben Sie `dqsinstaller.exe` ein, und drücken Sie dann die EINGABETASTE.  
   
-    -   **Mit Befehlszeilenparameter**: Geben Sie den erforderlichen Befehl wie in der oben erwähnten Tabelle ein, und drücken Sie anschließend die EINGABETASTE.  
+    -   **Mit Befehlszeilenparameter:** Geben Sie den erforderlichen Befehl wie in der oben erwähnten Tabelle ein, und drücken Sie anschließend die EINGABETASTE.  
   
 4.  Die erforderlichen Aktionen werden entsprechend des angegebenen Befehls ausgeführt. Wenn Sie [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ohne Befehlszeilenparameter installieren möchten, entsprechen die restlichen Schritte den Schritten 2 bis 6 im vorherigen Abschnitt, [Ausführen von „DQSInstaller.exe“ über den Startbildschirm, das Startmenü oder Windows-Explorer](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#WindowsExplorer).  
   
@@ -105,7 +105,7 @@ ms.locfileid: "52617460"
   
 -   Stellen Sie sicher, dass Sie auf die Quelldaten für die DQS-Vorgänge zugreifen können, und dass Sie die verarbeiteten Daten in eine Tabelle in einer Datenbank exportieren können. Siehe [Zugriff auf Daten für DQS-Vorgänge](../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Aktualisieren der SQLCLR-Assemblys nach dem Aktualisieren von .NET Framework](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
  [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)  

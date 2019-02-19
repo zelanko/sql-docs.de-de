@@ -53,12 +53,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6456a8ad03e4f0cb86c5299f1d817775688c1330
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d0a4fd0f249d65708c316a7cb5ada0b582bebf8d
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535595"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760083"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC-Skalarfunktionen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -69,15 +69,15 @@ ms.locfileid: "52535595"
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  
   
 ## <a name="functions"></a>Funktionen  
- In den folgenden Tabellen sind ODBC-Skalarfunktionen aufgelistet, die nicht in [!INCLUDE[tsql](../../includes/tsql-md.md)] dupliziert werden.  
+ In den folgenden Tabellen werden ODBC-Skalarfunktionen aufgelistet, die nicht in [!INCLUDE[tsql](../../includes/tsql-md.md)] dupliziert werden.  
   
 ### <a name="string-functions"></a>Zeichenfolgenfunktionen  
   
 |Funktion|und Beschreibung|  
 |--------------|-----------------|  
-|BIT_LENGTH( string_exp ) (ODBC 3.0)|Gibt die Länge des Zeichenfolgenausdrucks in Bits zurück.<br /><br /> Kann nicht nur für string-Datentypen verwendet werden. Konvertiert daher string_exp nicht implizit in eine Zeichenfolge, sondern gibt die (interne) Größe des jeweiligen angegebenen Datentyps zurück.|  
+|BIT_LENGTH( string_exp ) (ODBC 3.0)|Gibt die Länge des Zeichenfolgenausdrucks in Bits zurück.<br /><br /> Gibt die interne Größe des angegebenen Datentyps zurück, ohne „string_exp“ in „string“ zu konvertieren.|  
 |CONCAT( string_exp1,string_exp2) (ODBC 1.0)|Gibt eine Zeichenfolge zurück, die das Ergebnis der Verkettung von string_exp2 und string_exp1 darstellt. Die Ergebniszeichenfolge hängt vom DBMS ab. Wenn die durch string_exp1 dargestellte Spalte z. B. einen NULL-Wert enthält, wird DB2 NULL zurückgeben. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hingegen gibt eine Zeichenfolge ungleich NULL zurückgeben.|  
-|OCTET_LENGTH( string_exp ) (ODBC 3.0)|Gibt die Länge des Zeichenfolgenausdrucks in Bytes zurück. Das Ergebnis ist die kleinste ganze Zahl, die nicht kleiner ist als die Anzahl der Bits dividiert durch 8.<br /><br /> Kann nicht nur für string-Datentypen verwendet werden. Konvertiert daher string_exp nicht implizit in eine Zeichenfolge, sondern gibt die (interne) Größe des jeweiligen angegebenen Datentyps zurück.|  
+|OCTET_LENGTH( string_exp ) (ODBC 3.0)|Gibt die Länge des Zeichenfolgenausdrucks in Bytes zurück. Das Ergebnis ist die kleinste ganze Zahl, die nicht kleiner ist als die Anzahl der Bits dividiert durch 8.<br /><br /> Gibt die interne Größe des angegebenen Datentyps zurück, ohne „string_exp“ in „string“ zu konvertieren.|  
   
 ### <a name="numeric-function"></a>Numerische Funktion  
   
@@ -93,15 +93,15 @@ ms.locfileid: "52535595"
 |CURDATE( ) (ODBC 3.0)|Gibt das aktuelle Datum zurück.|  
 |CURRENT_TIME`[( time-precision )]` (ODBC 3.0)|Gibt die aktuelle lokale Zeit zurück. Das time-precision-Argument bestimmt die Genauigkeit des zurückgegebenen Werts bezüglich der Sekundenangaben.|  
 |CURTIME() (ODBC 3.0)|Gibt die aktuelle lokale Zeit zurück.|  
-|DAYNAME( date_exp ) (ODBC 2.0)|Gibt eine Zeichenfolge zurück, die den für die Datenquelle spezifischen Namen des Tages (z. B. Sonntag bis Samstag oder So. bis Sa. bei einer Datenquelle, die Deutsch verwendet, oder Sunday bis Saturday bei einer Datenquelle, die Englisch verwendet) für den Tagesteil von date_exp enthält.|  
-|DAYOFMONTH( date_exp ) (ODBC 1.0)|Gibt den Tag des Monats basierend auf dem Monatsfeld in date_exp als ganze Zahl im Bereich von 1 bis 31 zurück.|  
-|DAYOFWEEK( date_exp ) (ODBC 1.0)|Gibt den Wochentag basierend auf dem Wochenfeld in „date_exp“ als ganze Zahl im Bereich von 1 bis 7 zurück, wobei 1 den Sonntag darstellt.|  
-|HOUR( time_exp ) (ODBC 1.0)|Gibt die Stunde basierend auf dem Stundenfeld in „time_exp“ als ganze Zahl im Bereich von 0 bis 23 zurück.|  
-|MINUTE( time_exp ) (ODBC 1.0)|Gibt die Minute basierend auf dem Minutenfeld in „time_exp“ als ganze Zahl im Bereich von 0 bis 59 zurück.|  
-|SECOND( time_exp ) (ODBC 1.0)|Gibt die Sekunde basierend auf dem Sekundenfeld in „time_exp“ als ganze Zahl im Bereich von 0 bis 59 zurück.|  
-|MONTHNAME( date_exp ) (ODBC 2.0)|Gibt eine Zeichenfolge zurück, die den für die Datenquelle spezifischen Namen des Monats (z. B. January bis December bzw. Jan. bis Dec. für eine Datenquelle in englischer Sprache oder Januar bis Dezember für eine Datenquelle in deutscher Sprache) für den Monatsteil von „date_exp“ enthält.|  
+|DAYNAME( date_exp ) (ODBC 2.0)|Gibt eine Zeichenfolge zurück, die den für die Datenquelle spezifischen Namen des Tages aus „date_exp“ enthält. Der Name entspricht beispielsweise „Sunday through Saturday“ oder „Sun. through Sat.“ für eine Datenquelle, die Englisch als Sprache verwendet. Für eine Datenquelle, die Deutsch als Sprache verwendet, entspricht der Name beispielsweise „Sonntag through Samstag“.|
+|DAYOFMONTH( date_exp ) (ODBC 1.0)|Gibt den Tag des Monats basierend auf dem Monatsfeld in „date_exp“ als ganze Zahl zurück. Der Rückgabewert liegt im Bereich zwischen 1 und 31.|  
+|DAYOFWEEK( date_exp ) (ODBC 1.0)|Gibt den Tag der Woche basierend auf dem Wochenfeld in „date_exp“ als ganze Zahl zurück. Der Rückgabewert liegt im Bereich zwischen 1 und 7, wobei 1 für den Sonntag steht.|  
+|HOUR( time_exp ) (ODBC 1.0)|Gibt die Stunde basierend auf dem Stundenfeld in „time_exp“ als ganze Zahl im Bereich zwischen 0 und 23 zurück.|  
+|MINUTE( time_exp ) (ODBC 1.0)|Gibt die Minute basierend auf dem Minutenfeld in „time_exp“ als ganze Zahl im Bereich zwischen 0 und 59 zurück.|  
+|SECOND( time_exp ) (ODBC 1.0)|Gibt die Sekunde basierend auf dem Sekundenfeld in „time_exp“ als ganze Zahl im Bereich zwischen 0 und 59 zurück.|  
+|MONTHNAME( date_exp ) (ODBC 2.0)|Gibt eine Zeichenfolge zurück, die den für die Datenquelle spezifischen Namen des Monats aus „date_exp“ enthält. Der Name entspricht beispielsweise „January through December“ oder „Jan. through Dec.“ für eine Datenquelle, die Englisch als Sprache verwendet. Für eine Datenquelle, die Deutsch als Sprache verwendet, entspricht der Name beispielsweise „Januar through Dezember“.|  
 |QUARTER( date_exp ) (ODBC 1.0)|Gibt das Quartal in date_exp als ganze Zahl im Bereich von 1 bis 4 zurück, wobei 1 den Zeitraum vom 1. Januar bis 31. März darstellt.|  
-|WEEK( date_exp ) (ODBC 1.0)|Gibt die Woche des Jahres basierend auf dem Wochenfeld in „date_exp“ als ganze Zahl im Bereich von 1 bis 53 zurück.|  
+|WEEK( date_exp ) (ODBC 1.0)|Gibt die Kalenderwoche des Jahres basierend auf dem Wochenfeld in „date_exp“ als ganze Zahl im Bereich zwischen 1 und 53 zurück.|  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -249,10 +249,6 @@ SELECT {fn WEEK( @date_exp )};
 -- Returns 16  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
-  
-
-
-

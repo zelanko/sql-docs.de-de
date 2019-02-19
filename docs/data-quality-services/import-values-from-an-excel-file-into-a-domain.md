@@ -12,15 +12,15 @@ f1_keywords:
 - sql13.dqs.kb.importselect.f1
 - sql13.dqs.kb.failingvalues.f1
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 394fbfd149e9631148ca495675d93bda0ed652f1
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: dc7272c9dbc60054509a37646a0d097bce0e8c31
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616890"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017221"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Importieren von Werten aus einer Excel-Datei in eine Domäne
 
@@ -74,7 +74,7 @@ ms.locfileid: "52616890"
   
 14. Klicken Sie auf **Fertig stellen** , um der Wissensdatenbank die Werte hinzuzufügen.  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Importieren von Werten aus einer Excel-Datei in eine Domäne  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Importieren von Werten aus einer Excel-Datei in eine Domäne  
  Nachdem Sie Werte in eine Domäne importiert haben, können Sie andere Domänenverwaltungstasks in der Domäne ausführen, Sie können die Wissensermittlung durchführen, um der Domäne Wissen hinzuzufügen, oder Sie können der Domäne eine Abgleichsrichtlinie hinzufügen. Weitere Informationen finden Sie unter [Durchführen der Wissensermittlung](../data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../data-quality-services/managing-a-domain.md) oder [Erstellen einer Abgleichsrichtlinie](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Synonyms"></a> Importieren von Synonymen  

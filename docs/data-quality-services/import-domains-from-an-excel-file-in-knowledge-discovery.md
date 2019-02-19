@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: eafa0e4260548ed90f039bcee71daea8a5b7ac9a
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 08f18fb3c97bbbc5ee3ee4afcd2bb942ddbfef58
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617380"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016633"
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>Importieren von Domänen aus einer Excel-Datei in eine Wissensermittlung
 
@@ -71,7 +71,7 @@ ms.locfileid: "52617380"
   
 14. Überprüfen Sie, ob die Wissensdatenbank veröffentlicht wurde, und klicken Sie dann auf **OK**.  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Importieren von Domänen aus einer Excel-Datei  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Importieren von Domänen aus einer Excel-Datei  
  Nachdem Sie Domänen aus einer Excel-Datei importiert haben, können Sie den Domänen Wissen hinzufügen oder die Domänen in einem Bereinigungs- oder Abgleichsprojekt verwenden – je nach den Inhalten der Domänen. Weitere Informationen finden Sie unter [Durchführen der Wissensermittlung](../data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../data-quality-services/managing-a-domain.md), [Verwalten einer Verbunddomäne](../data-quality-services/managing-a-composite-domain.md), [Erstellen einer Abgleichsrichtlinie](../data-quality-services/create-a-matching-policy.md), [Datenbereinigung](../data-quality-services/data-cleansing.md) oder [Datenabgleich](../data-quality-services/data-matching.md).  
   
 ##  <a name="How"></a> How the import works  

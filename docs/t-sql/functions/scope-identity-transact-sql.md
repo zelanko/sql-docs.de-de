@@ -18,22 +18,22 @@ helpviewer_keywords:
 - last-inserted identity values
 - identity values [SQL Server], last-inserted
 ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 7daf2ac60021e75b98403dc5b2b1ef4098507a5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83d1ad7e793e7072345ad0b4ada34162d039ed45
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746178"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033031"
 ---
 # <a name="scopeidentity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt den letzten Identitätswert zurück, der in eine Identitätsspalte im selben Gültigkeitsbereich eingefügt wurde. Ein Gültigkeitsbereich ist ein Modul: eine gespeicherte Prozedur, ein Trigger, eine Funktion oder ein Batch. Wenn sich daher zwei Anweisungen in der selben gespeicherten Prozedur, in derselben Funktion oder im selben Batch befinden, bindenden sie sich im selben Gültigkeitsbereich.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -93,7 +93,7 @@ INSERT TY (Y_name)
   
 SELECT * FROM TY;  
 ```   
-Resultset: So sieht die TY aus:  
+Resultset: So sieht die Tabelle TY aus:  
 ```  
 Y_id  Y_name  
 ---------------  
@@ -176,7 +176,7 @@ GO
  89
  ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)  
   
   

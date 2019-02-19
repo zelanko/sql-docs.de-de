@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 37ef3f8bb8f1a39a9d1af06a8ee71735bf0cccbf
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 1c08c3ccfb637f00fef08b63bf1afc3cae8a0d34
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617910"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032241"
 ---
 # <a name="data-quality-projects-dqs"></a>Data Quality-Projekte (DQS)
 
@@ -32,7 +32,7 @@ ms.locfileid: "52617910"
   
 -   Stellt einen Assistenten bereit, um Sie durch die Bereinigungs- und Abgleichsaktivitäten zu führen und exportiert die Daten gemäß Ihrer Auswahl in eine SQL Server-Datenbank oder eine CSV-Datei. Der Data Steward kann das Data Quality-Projekt verwenden, um die computergestützten/interaktiven Schritte zum Bereinigen und Abgleichen von Daten auszuführen.  
   
-##  <a name="Cleansing"></a> Data Quality-Projekt: Bereinigungsaktivität  
+##  <a name="Cleansing"></a> Data Quality-Projekt: Bereinigung  
  Data Quality-Projekte ermöglichen es Ihnen, die Quelldaten basierend auf einer Wissensdatenbank zu bereinigen. Die Datenbereinigungsaktivität in DQS ist ein zwei Schritte umfassender Prozess:  
   
 1.  In einem *computergestützten* Datenbereinigungsprozess werden Quelldaten im Hinblick auf das Wissen in der Wissensdatenbank analysiert und Änderungen vorgeschlagen. Die verarbeiteten Daten werden von DQS kategorisiert (vorgeschlagen, neu, ungültig und richtig) und werden dem Benutzer zur weiteren Verarbeitung angezeigt.  
@@ -41,7 +41,7 @@ ms.locfileid: "52617910"
   
  Ausführliche Informationen zur Bereinigungsaktivität in einem Data Quality-Projekt finden Sie unter [Data Cleansing](../data-quality-services/data-cleansing.md).  
   
-##  <a name="Matching"></a> Data Quality-Projekt: Abgleichsaktivität  
+##  <a name="Matching"></a> Data Quality-Projekt: Abgleich  
  Ein Data Quality-Abgleichsprojekt ermöglicht es Ihnen, Abgleichsaktivitäten auf Grundlage der Abgleichsrichtlinie in einer Wissensdatenbank auszuführen, um Datenduplizierung durch das Identifizieren exakter und ungefährer Treffer zu verhindern und dadurch das Entfernen doppelter Daten zu ermöglichen. Es wird empfohlen, dass Sie die Daten bereinigen, bevor Sie entsprechende Abgleiche ausführen. Gehen Sie folgendermaßen vor:  
   
 1.  Erstellen Sie ein Data Quality-Projekt, wählen Sie die **Bereinigungsaktivität** aus, schließen Sie die Datenbereinigungsaktivität für die Quelldaten ab, und exportieren Sie sie dann in eine Tabelle in einer SQL Server-Datenbank.  
@@ -63,7 +63,7 @@ ms.locfileid: "52617910"
 |Beschreibt, wie ein Data Quality-Projekt geöffnet, entsperrt, umbenannt oder gelöscht wird.|[Öffnen, Entsperren, Umbenennen und Löschen eines Data Quality-Projekts](open-unlock-rename-and-delete-a-data-quality-project.md)|  
 |Beschreibt, wie ein Integration Services-Projekt in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]geöffnet wird.|[Öffnen von Integration Services-Projekten im Data Quality-Client](../data-quality-services/open-integration-services-projects-in-data-quality-client.md)|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [DQS-Wissensdatenbanken und -Domänen](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
   

@@ -10,12 +10,12 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1b9bb2a1744b7fdc8b734ab3435ef53e0710d8c8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 27e2a4939ebe376408aad64414503a8c9edd46ce
+ms.sourcegitcommit: 1510d9fce125e5b13e181f8e32d6f6fbe6e7c7fe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411517"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55771346"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Upgraden von Always On-Verfügbarkeitsgruppen-Replikatsinstanzen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,15 +28,15 @@ Wenn eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz, 
 ## <a name="prerequisites"></a>Voraussetzungen  
 Lesen Sie die folgenden wichtigen Informationen, bevor Sie beginnen:  
   
-- [Unterstützte Versions- und Editionsupgrades:](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md) Überprüfen Sie, ob Sie von Ihrer Version des Windows-Betriebssystems und Ihrer Version von SQL Server auf SQL Server 2016 upgraden können. Sie können beispielsweise nicht direkt von einer SQL Server 2005-Instanz auf [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]upgraden.  
+- [Unterstützte Versions- und Editionsupgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): Überprüfen Sie, ob ein Upgrade von Ihrer Version des Windows-Betriebssystems und Ihrer SQL Server-Version auf SQL Server 2016 möglich ist. Sie können beispielsweise nicht direkt von einer SQL Server 2005-Instanz auf [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]upgraden.  
   
-- [Auswählen einer Methode zum Upgraden der Datenbank-Engine:](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md) Wählen Sie die passende Upgrademethode und die passenden Schritte aus, die auf Ihrer Überprüfung der unterstützten Versions- und Editionsupgrades sowie auf den anderen Komponenten basieren, die in Ihrer Umgebung installiert sind, um das Upgrade in der richtigen Reihenfolge durchzuführen.  
+- [Auswählen einer Upgrademethode für die Datenbank-Engine](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): Wählen Sie basierend auf Ihrer Überprüfung der unterstützten Versions- und Editionsupgrades sowie basierend auf den anderen in Ihrer Umgebung installierten Komponenten die passende Upgrademethode und die passenden Upgradeschritte aus, um das Upgrade der Komponenten in der richtigen Reihenfolge durchzuführen.  
   
-- [Planen und Testen des Upgradeplans für die Datenbank-Engine:](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md) Überprüfen Sie die Anmerkungen zu dieser Version, die bekannten Upgradeprobleme und die Prüfliste vor dem Upgrade. Entwickeln und testen Sie dann den Upgradeplan.  
+- [Planen und Testen des Upgradeplans für die Datenbank-Engine](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): Überprüfen Sie die Anmerkungen zu dieser Version, die bekannten Upgradeprobleme und die Prüfliste vor dem Upgrade. Entwickeln und testen Sie dann den Upgradeplan.  
   
-- [Hardware- und Softwareanforderungen für die Installation von SQL Server:](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) Überprüfen Sie die Softwareanforderungen für die Installation von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Falls zusätzliche Software erforderlich ist, installieren Sie diese auf jedem Knoten, bevor Sie mit dem Upgradevorgang beginnen, um die Downtime zu minimieren.  
+- [Hardware- und Softwareanforderungen für die Installation von SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  Überprüfen Sie die Softwareanforderungen für die Installation von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Falls zusätzliche Software erforderlich ist, installieren Sie diese auf jedem Knoten, bevor Sie mit dem Upgradevorgang beginnen, um die Downtime zu minimieren.  
 
-- [Überprüfen, ob Change Data Capture oder die Replikation für Datenbanken in Verfügbarkeitsgruppen verwendet wird:](#special-steps-for-change-data-capture-or-replication) Wenn Datenbanken in der Verfügbarkeitsgruppe für Change Data Capture aktiviert sind, befolgen Sie diese [Anweisungen](#special-steps-for-change-data-capture-or-replication).
+- [Überprüfen, ob Change Data Capture oder Replikation für Datenbanken der Verfügbarkeitsgruppe verwendet wird](#special-steps-for-change-data-capture-or-replication): Wurden Datenbanken in der Verfügbarkeitsgruppe für Change Data Capture (CDC) aktiviert, befolgen Sie diese [Anweisungen](#special-steps-for-change-data-capture-or-replication).
 
 >[!NOTE]  
 >Das Kombinieren verschiedener Versionen von SQL Server-Instanzen in derselben Verfügbarkeitsgruppe wird nur bei einem parallelen Upgrade unterstützt, das ein Upgrade für die vorhandenen Replikate durchführt. Eine höhere Version einer SQL Server-Instanz kann also nicht als neues Replikat zu einer bestehenden Verfügbarkeitsgruppe hinzugefügt werden. Ein SQL Server 2017-Replikat kann beispielsweise nicht zu einer bestehenden SQL Server 2016-Verfügbarkeitsgruppe hinzugefügt werden. Die einzige unterstützte Methode zum Migrieren einer neuen Version der SQL Server-Instanz mithilfe von Verfügbarkeitsgruppen besteht im Verwenden einer verteilten Verfügbarkeitsgruppe in SQL Server 2016 Enterprise Edition oder höher.
@@ -67,6 +67,11 @@ Beachten Sie folgende Richtlinien, wenn Sie Serverupgrades oder -updates durchf�
 -   Führen Sie für die primäre Replikatinstanz kein Upgrade durch, bevor Sie nicht eine der anderen sekundären Replikatinstanzen upgegradet oder aktualisiert haben. Ein primäres Replikat, für das ein Upgrade ausgeführt wurde, kann keine Protokolle mehr an sekundäre Replikate versenden, deren [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] -Instanz noch nicht auf die gleiche Version aktualisiert wurde. Wenn eine Datenverschiebung zu einem sekundären Replikat angehalten wurde, kann für dieses Replikat kein automatisches Failover ausgeführt werden, und die Verfügbarkeitsdatenbanken sind anfällig für Datenverluste.  
   
 -   Bevor Sie ein Failover für eine Verfügbarkeitsgruppe ausführen, sollten Sie überprüfen, ob der Synchronisierungsstatus des Failoverziels SYNCHRONIZED lautet.  
+
+  > [!WARNING]
+  > Durch das Installieren einer neuen Instanz oder einer neuen Version von SQL Server auf einem Server mit einer älteren SQL Server-Version kann versehentlich ein **Ausfall aller Verfügbarkeitsgruppen verursacht werden, die von der älteren SQL Server-Version gehostet werden**. Dies liegt daran, dass während der Installation der Instanz oder Version von SQL Server das Hochverfügbarkeitsmodul von SQL Server (RHS.EXE) aktualisiert wird. Dadurch werden Ihre vorhandenen Verfügbarkeitsgruppen in der primären Rolle auf dem Server vorübergehend unterbrochen. Es wird daher dringend empfohlen, dass Sie einen der folgenden Schritte ausführen, wenn Sie eine neuere SQL Server-Version in einem System installieren möchten, das bereits eine ältere Version von SQL Server mit einer Verfügbarkeitsgruppe hostet:
+  > - Installieren der neuen Version von SQL Server während eines Wartungsfensters. 
+  > - Durchführen eines Failovers der Verfügbarkeitsgruppe auf ein sekundäres Replikat, damit sie während der Installation der neuen SQL Server-Instanz nicht in der primären Rolle ist. 
   
 ## <a name="rolling-upgrade-process"></a>Prozess des parallelen Upgrades  
  Die genauen Schritte hängen von Faktoren wie der Bereitstellungstopologie Ihrer Verfügbarkeitsgruppen und dem Commitmodus der einzelnen Replikate ab. Im einfachsten Szenario ist ein paralleles Upgrade jedoch ein mehrstufiger Prozess, der in seiner einfachsten Form aus den folgenden Schritten besteht:  
@@ -191,7 +196,7 @@ Wenn Sie ein paralleles Upgrade für eine verteilte Verfügbarkeitsgruppe durchf
 
 >[!IMPORTANT]
 >- Überprüfen Sie die Synchronisierung zwischen jedem Schritt. Bevor Sie mit dem nächsten Schritt fortfahren, sollten Sie sicherstellen, dass Ihre Replikate für synchronen Commit mit der Verfügbarkeitsgruppe synchronisiert sind und dass Ihr globales primäres Replikat mit der Weiterleitung in der verteilten Verfügbarkeitsgruppe synchronisiert ist. 
->- **Empfehlung:** Immer, wenn Sie die Synchronisierung überprüfen, sollten Sie den Datenbankknoten und den Knoten der verteilten Verfügbarkeitsgruppe in SQL Server Management Studio aktualisieren. Wenn alles synchronisiert wurde, sollten Sie einen Screenshot speichern, auf dem der Status jedes Replikats angezeigt wird. Dadurch können Sie nachverfolgen, in welchem Schritt Sie sich befinden und sichergehen, dass alle Komponenten vor dem nächsten Schritt ordnungsgemäß ausgeführt wurden. Wenn ein Fehler auftritt, können Sie den Screenshot zur Problembehandlung verwenden. 
+>- **Empfehlung**: Aktualisieren Sie den Datenbankknoten und den Knoten der verteilten Verfügbarkeitsgruppe in SQL Server Management Studio bei jeder Überprüfung der Synchronisierung. Wenn alles synchronisiert wurde, sollten Sie einen Screenshot speichern, auf dem der Status jedes Replikats angezeigt wird. Dadurch können Sie nachverfolgen, in welchem Schritt Sie sich befinden und sichergehen, dass alle Komponenten vor dem nächsten Schritt ordnungsgemäß ausgeführt wurden. Wenn ein Fehler auftritt, können Sie den Screenshot zur Problembehandlung verwenden. 
 
 
 ### <a name="diagram-example-for-a-rolling-upgrade-of-a-distributed-availability-group"></a>Beispieltabelle für ein paralleles Upgrade einer verteilten Verfügbarkeitsgruppe
@@ -223,7 +228,7 @@ Wenn ein drittes Replikat in jeder Verfügbarkeitsgruppe vorhanden wäre, würde
 
 >[!IMPORTANT]
 >- Überprüfen Sie die Synchronisierung zwischen jedem Schritt. Bevor Sie mit dem nächsten Schritt fortfahren, sollten Sie sicherstellen, dass Ihre Replikate für synchronen Commit mit der Verfügbarkeitsgruppe synchronisiert sind und dass Ihr globales primäres Replikat mit der Weiterleitung in der verteilten Verfügbarkeitsgruppe synchronisiert ist. 
->- Empfehlung: Immer, wenn Sie die Synchronisierung überprüfen, sollten Sie den Datenbankknoten und den Knoten der verteilten Verfügbarkeitsgruppe in SQL Server Management Studio aktualisieren. Wenn alles synchronisiert wurde, sollten Sie einen Screenshot speichern. Dadurch können Sie nachverfolgen, in welchem Schritt Sie sich befinden und sichergehen, dass alle Komponenten vor dem nächsten Schritt ordnungsgemäß ausgeführt wurden. Wenn ein Fehler auftritt, können Sie den Screenshot zur Problembehandlung verwenden. 
+>- Empfehlung: Aktualisieren Sie den Datenbankknoten und den Knoten der verteilten Verfügbarkeitsgruppe in SQL Server Management Studio bei jeder Überprüfung der Synchronisierung. Wenn alles synchronisiert wurde, sollten Sie einen Screenshot speichern. Dadurch können Sie nachverfolgen, in welchem Schritt Sie sich befinden und sichergehen, dass alle Komponenten vor dem nächsten Schritt ordnungsgemäß ausgeführt wurden. Wenn ein Fehler auftritt, können Sie den Screenshot zur Problembehandlung verwenden. 
 
 
 ## <a name="special-steps-for-change-data-capture-or-replication"></a>Spezielle Schritte für Change Data Capture oder die Replikation
@@ -248,7 +253,7 @@ Abhängig vom angewendeten Update können zusätzliche Schritte für Replikatdat
 Weitere Informationen finden Sie unter [CDC functionality may break after upgrading to the latest CU (Die CDC-Funktion funktioniert nach dem Upgrade auf das aktuelle kumulative Update nicht mehr)](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
 
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Aktualisieren auf SQL Server 2016 mithilfe des Installations-Assistenten &#40;Setup&#41;](../../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
 
  [Installieren von SQL Server 2016 von der Eingabeaufforderung](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  

@@ -26,19 +26,19 @@ ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 20099478d1d2dd047b1f17fe963c8fc45b1418fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f734607cffa14f9714a7c165add067600cfa3447
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670271"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760123"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Bewirkt, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Informationen zum Umfang der Datenträgeraktivitäten anzeigt, die durch [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen generiert werden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,16 +48,16 @@ SET STATISTICS IO { ON | OFF }
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Wenn STATISTICS IO auf ON festgelegt ist, werden statistische Informationen angezeigt. Bei OFF werden die Informationen nicht angezeigt.  
+ Wenn STATISTICS IO auf ON festgelegt ist, werden statistische Informationen angezeigt. Bei OFF werden die Informationen nicht angezeigt.   
   
- Wenn diese Option auf ON festgelegt wird, geben alle nachfolgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen so lange statistische Informationen zurück, bis die Option auf OFF festgelegt wird.  
+ Wenn diese Option auf ON festgelegt wird, geben alle [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen so lange statistische Informationen zurück, bis die Option auf OFF festgelegt wird.  
   
  Die folgende Tabelle enthält eine Auflistung der Ausgabeelemente sowie entsprechende Beschreibungen.  
   
 |Ausgabeelement|Bedeutung|  
 |-----------------|-------------|  
 |**Tabelle**|Der Name der Tabelle.|  
-|**Scananzahl**|Die Anzahl von Suchen/Scans, die nach Erreichen der Blattebene in beliebiger Richtung gestartet wurden, um alle Werte zum Erstellen des abschließende Datasets für die Ausgabe abzurufen.<br /><br /> Die Scananzahl beträgt 0, wenn der verwendete Index ein eindeutiger Index oder ein gruppierter Index für eine Primärschlüsselspalte ist und Sie nur einen Wert suchen. Beispiel: `WHERE Primary_Key_Column = <value>`.<br /><br /> Die Scananzahl beträgt 1, wenn Sie anhand eines nicht eindeutig gruppierten Index, der für eine Nicht-Primärschlüsselspalte definiert ist, nach einem Wert suchen. Auf diese Weise wird nach doppelten Werten eines Schlüsselwerts gesucht, der als Suchwert verwendet wird. Beispiel: `WHERE Clustered_Index_Key_Column = <value>`.<br /><br /> Die Scananzahl ist N, wenn N der Anzahl unterschiedlicher Suchen/Scans entspricht, die auf der Blattebene nach links oder rechts gestartet wurden, nachdem ein Schlüsselwert anhand des Indexschlüssels ermittelt wurde.|  
+|**Scananzahl**|Die Anzahl von Suchen oder Scans, die nach Erreichen der Blattebene in beliebiger Richtung gestartet wurden, um alle Werte zum Erstellen des letzten Datasets für die Ausgabe abzurufen.<br /><br /> Die Scananzahl beträgt „0“ (null), wenn der verwendete Index ein eindeutiger Index oder ein gruppierter Index für eine Primärschlüsselspalte ist und Sie nur einen Wert suchen. Beispiel: `WHERE Primary_Key_Column = <value>`.<br /><br /> Die Scananzahl beträgt „1“, wenn Sie anhand eines nicht eindeutig gruppierten Index, der für eine Nicht-Primärschlüsselspalte definiert ist, nach einem Wert suchen. Auf diese Weise wird nach doppelten Werten eines Schlüsselwerts gesucht, der als Suchwert verwendet wird. Beispiel: `WHERE Clustered_Index_Key_Column = <value>`.<br /><br /> Die Scananzahl ist „N“, wenn „N“ der Anzahl unterschiedlicher Suchen oder Scans entspricht, die auf der Blattebene nach links oder rechts gestartet wurden, nachdem ein Schlüsselwert anhand des Indexschlüssels ermittelt wurde.|  
 |**Logische Lesevorgänge**|Anzahl der aus dem Datencache gelesenen Seiten|  
 |**Physische Lesevorgänge**|Anzahl der vom Datenträger gelesenen Seiten|  
 |**Read-Ahead-Lesevorgänge**|Anzahl der Seiten, die für die Abfrage im Cache platziert wurden|  
@@ -97,7 +97,7 @@ reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0,
 lob read-ahead reads 0.  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SET-Anweisungen (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
  [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
  [SET STATISTICS TIME &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-time-transact-sql.md)  

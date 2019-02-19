@@ -16,21 +16,21 @@ ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 663733493bba7e96d8bb55519013128fd62a2eaf
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: bc02cf0c9076f036bb2b199e4eb0627103e4c03b
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072234"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807450"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Konvertiert einen *inputdate*-Wert in den entsprechenden *datetimeoffset*-Wert in der Zielzeitzone. Wenn *inputdate* ohne Offsetinformationen bereitgestellt wird, wendet die Funktion den Zeitzonenoffset an und setzt dabei voraus, dass der *inputdate*-Wert in der Zielzeitzone bereitgestellt wird. Wenn *inputdate* als *datetimeoffset*-Wert bereitgestellt wird, rechnet die **AT TIME ZONE**-Klausel den Wert mithilfe der Umrechnungsregeln der Zielzeitzone in die Zielzeitzone um.  
+  Konvertiert einen *inputdate*-Wert in den entsprechenden *datetimeoffset*-Wert in der Zielzeitzone. Wenn *inputdate* ohne Offsetinformationen bereitgestellt wird, wendet die Funktion den Zeitzonenoffset an und setzt dabei voraus, dass der Wert von *inputdate* sich in der Zielzeitzone befindet. Wenn *inputdate* als *datetimeoffset*-Wert bereitgestellt wird, konvertiert die **AT TIME ZONE**-Klausel den Wert mithilfe der Umrechnungsregeln der Zielzeitzone in die Zielzeitzone.  
   
  Die Implementierung von **AT TIME ZONE** hängt von einem Windows-Mechanismus zum Umrechnen von **datetime**-Werten in verschiedene Zeitzonen ab.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,7 +43,7 @@ inputdate AT TIME ZONE timezone
  Ein Ausdruck, der in einen der folgenden Werte aufgelöst werden kann: **smalldatetime**, **datetime**, **datetime2** oder **datetimeoffset**.  
   
  *timezone*  
- Name der Zielzeitzone. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] basiert auf in der Windows-Registrierung gespeicherten Zeitzonen. Alle auf dem Computer installierten Zeitzonen sind in der folgenden Registrierungsstruktur gespeichert: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**. Eine Liste der installierten Zeitzonen wird auch über die [sys.time_zone_info &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md)-Sicht angezeigt.  
+ Name der Zielzeitzone. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] basiert auf in der Windows-Registrierung gespeicherten Zeitzonen. Auf dem Computer installierte Zeitzonen werden in der folgenden Registrierungsstruktur gespeichert: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**. Eine Liste der installierten Zeitzonen wird auch über die [sys.time_zone_info &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md)-Sicht angezeigt.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  Gibt den Datentyp von **datetimeoffset** zurück.  
@@ -54,7 +54,7 @@ inputdate AT TIME ZONE timezone
 ## <a name="remarks"></a>Remarks  
  **AT TIME ZONE** wendet bestimmte Regeln für die Umrechnung von Eingabewerten in die Datentypen **smalldatetime**, **datetime** und **datetime2** an, die in einem Intervall liegen, das durch den Wechsel zur Sommerzeit bestimmt wird:  
   
--   Wenn die Uhr vorgestellt wird, entsteht in der Ortszeit eine Lücke, deren Dauer von der Uhrzeitanpassung abhängt (in der Regel eine Stunde, kann jedoch je nach Zeitzone auch 30 oder 45 Minuten betragen). In diesem Fall werden Zeitpunkte innerhalb dieser Lücke mit dem Offset *nach* dem Wechsel zur Sommerzeit umgerechnet.  
+-   Wenn die Uhr vorgestellt wird, entsteht eine Lücke in der Ortszeit, die dem Zeitraum für die Uhrzeitanpassung entspricht. Dieser Zeitraum entspricht in der Regel einer Stunde, kann je nach Zeitzone aber auch 30 oder 45 Minuten entsprechen. Zeitpunkte innerhalb dieser Lücke werden *nach* dem Wechsel zur Sommerzeit mithilfe des Offsets konvertiert.  
   
     ```  
     /*  
@@ -166,8 +166,7 @@ FROM  Person.Person_Temporal
 FOR SYSTEM_TIME AS OF @ASOF;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Datums- und Uhrzeittypen](../../t-sql/data-types/date-and-time-types.md)   
  [Date and Time Data Types and Functions &#40;Transact-SQL&#41; (Datums- und Uhrzeitdatentypen und zugehörige Funktionen (Transact-SQL))](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
-  
   

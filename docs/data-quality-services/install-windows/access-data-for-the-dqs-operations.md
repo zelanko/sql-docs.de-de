@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0f97176e1600ca741ddc20eed03aed639c945c76
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: b94f615ddcc2f1b3eb0c577130ee375cc0672848
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616430"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024591"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>Zugriff auf Daten für DQS-Vorgänge
 
@@ -44,20 +44,20 @@ ms.locfileid: "52616430"
   
 4.  Klicken Sie im Dialogfeld **Anmeldungseigenschaften** auf die Seite **Benutzerzuordnung** im linken Bereich.  
   
-5.  Aktivieren Sie im rechten Bereich in der Spalte **Zuordnen** das Kontrollkästchen für die **DQS_STAGING_DATA** -Datenbank, und wählen Sie anschließend im Bereich **Mitgliedschaft in Datenbankrolle für: DQS_STAGING_DATA** die folgenden Rollen aus:  
+5.  Aktivieren Sie im rechten Bereich in der Spalte **Map** (Zuordnung) das Kontrollkästchen für die **DQS_STAGING_DATA**-Datenbank, und wählen Sie anschließend im Bereich **Mitgliedschaft in Datenbankrolle für: DQS_STAGING_DATA** die folgenden Rollen aus:  
   
-    -   **db_datareader**: Lesen von Daten aus Tabellen/Sichten.  
+    -   **db_datareader:** Daten aus Tabellen/Ansichten lesen.  
   
-    -   **db_datawriter**: Hinzufügen, Löschen oder Ändern von Daten in Tabellen.  
+    -   **db_datawriter:** Daten in Tabellen hinzufügen, löschen oder ändern.  
   
-    -   **db_ddladmin**: Erstellen, Ändern oder Löschen von Tabellen/Sichten.  
+    -   **db_ddladmin:** Tabellen/Ansichten, erstellen, anpassen oder löschen.  
   
 6.  Klicken Sie im Dialogfeld **Anmeldungseigenschaften** auf **OK** , um die Änderungen zu übernehmen.  
   
 ## <a name="next-steps"></a>Next Steps  
  Versuchen Sie, DQS-Vorgänge auszuführen, die auf die Datenbank als Datenquelle für den DQS-Vorgang zugreifen, und exportieren Sie dann die verarbeiteten Daten in die Datenbank.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Installieren von Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)  
   
   

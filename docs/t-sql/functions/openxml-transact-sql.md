@@ -17,22 +17,22 @@ helpviewer_keywords:
 - rowsets [SQL Server], XML documents
 - XML [SQL Server], rowset views
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9aa7006233437922fc15ac4fe811cbde75dff59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c9e4de5e7255c43460c9566f089f416a1e36782
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618588"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011788"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   OPENXML stellt eine Rowsetsicht eines XML-Dokuments bereit. Da OPENXML ein Rowsetanbieter ist, kann OPENXML in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen überall dort verwendet werden, wo Rowsetanbieter, wie z. B. eine Tabelle, eine Sicht oder die OPENROWSET-Funktion, verwendet werden können.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -60,7 +60,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|Kann mit XML_ATTRIBUTES oder XML_ELEMENTS kombiniert werden (logisches OR). Im Abrufkontext zeigt dieses Flag an, dass die verwendeten Daten nicht in die Überlaufeigenschaft **\@mp:xmltext** kopiert werden sollen.|  
   
  _SchemaDeclaration_  
- Die Schemadefinition im folgenden Format: _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [**,**_ColNameColType_ [_ColPattern_ | _MetaProperty_]...].  
+ Die Schemadefinition im Format: _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [**,**_ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
   
  _ColName_  
  Der Name einer Spalte des Rowsets.  
@@ -245,7 +245,7 @@ EXEC sp_xml_removedocument @idoc;
   
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Beispiele: Verwenden von OPENXML](../../relational-databases/xml/examples-using-openxml.md)  
   
   

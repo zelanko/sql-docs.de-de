@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 39f3d82d65eb0dd05b8459742febd67d2bc56790
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.openlocfilehash: 481a2fe18c99621b8331ab204a99e1d7efd37f24
+ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53732027"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55889981"
 ---
 # <a name="query-profiling-infrastructure"></a>Profilerstellungsinfrastruktur für Abfragen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,12 @@ Wenn Sie eine erweiterte Ereignissitzung ausführen, die das Ereignis *query_thr
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 enthält eine überarbeitete Version der einfachen Profilerstellung mit minimalem Mehraufwand. Einfache Profilerstellung kann auch global über das [Ablaufverfolgungsflag 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) für die Versionen aktiviert werden, die oben unter *Gilt für* angegeben werden. Eine neue DMF [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) wurde eingeführt, um den Abfrageausführungsplan für In-Flight-Anforderungen zurückzugeben.
 
-Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 gilt Folgendes: Wenn einfache Profilerstellung nicht global aktiviert ist, kann das Argument **QUERY_PLAN_PROFILE** des neuen [USE HINT-Abfragehinweises](../../t-sql/queries/hints-transact-sql-query.md#use_hint) verwendet werden, um einfache Profilerstellung auf Abfrageebene für jede beliebige Sitzung zu aktivieren. Wenn eine Abfrage, die diesen neuen Hinweis enthält, abgeschlossen wird, wird auch ein neues erweitertes Ereignis ***query_plan_profile*** ausgegeben, das XML für einen tatsächlichen Ausführungsplan ähnlich dem erweiterten Ereignis *query_post_execution_showplan* bereitstellt. Eine Beispielsitzung mit diesem erweiterten Ereignis kann wie im folgenden Beispiel konfiguriert werden:
+Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 gilt Folgendes: Wenn einfache Profilerstellung nicht global aktiviert ist, kann das Argument **QUERY_PLAN_PROFILE** des neuen [USE HINT-Abfragehinweises](../../t-sql/queries/hints-transact-sql-query.md#use_hint) verwendet werden, um einfache Profilerstellung auf Abfrageebene für jede beliebige Sitzung zu aktivieren. Wenn eine Abfrage, die diesen neuen Hinweis enthält, abgeschlossen wird, wird auch ein neues erweitertes Ereignis ***query_plan_profile*** ausgegeben, das XML für einen tatsächlichen Ausführungsplan ähnlich dem erweiterten Ereignis *query_post_execution_showplan* bereitstellt. 
+
+> [!NOTE]
+> Das erweiterte Ereignis *query_plan_profile* nutzt zudem die einfache Profilerstellung, auch wenn der Abfragehinweis nicht verwendet wird. 
+
+Eine einfache Sitzung mit dem erweiterten Ereignis *query_plan_profile* kann wie im unten stehenden Beispiel konfiguriert werden:
 
 ```sql
 CREATE EVENT SESSION [PerfStats_LWP_Plan] ON SERVER

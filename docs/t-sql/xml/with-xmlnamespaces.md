@@ -3,7 +3,6 @@ title: WITH XMLNAMESPACES (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - WITH XMLNAMESPACES clause
 - declaring XML namespaces
 ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fbc0773b08ea682a9bc8e4803572b9ceae3d28d3
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: ee0c340ebc917d7ced83b453d1cfd6126ff42f2e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256175"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026601"
 ---
 # <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,11 +86,13 @@ DEFAULT <xml_namespace_uri>
 -   Das XML-Namespacepräfix `xml` kann nur mit dem URI `'http://www.w3.org/XML/1998/namespace'` des Namespaces überschrieben werden, und dieser URI kann keinem anderen Präfix zugeordnet werden.  
   
 -   Das XML-Namespacepräfix `xsi` kann nicht erneut deklariert werden, wenn die ELEMENTS XSINIL-Direktive für die Abfrage verwendet wird.  
-  
+
+-   http://www.w3.org/2001/XMLSchema-instance muss nicht deklariert werden, um den XSI-Standardnamespace zu verwenden. Dieser wird vom XML/XPATH-Prozessor implizit hinzugefügt, wenn er nicht angegeben wurde, und XPATH-Ausdrücke können das Präfix „xsi“ verwenden, solange das Schema http://www.w3.org/2001/XMLSchema-instance ordnungsgemäß im XML-Dokument deklariert wurde.
+
 -   URI-Zeichenfolgenwerte werden gemäß der aktuellen Datenbanksortierungs-Codepage verschlüsselt und intern in Unicode übersetzt.  
   
 -   Die Leerzeichen des XML-Namespace-URIs werden gemäß den für **xs:anyURI** verwendeten XSD-Leerzeichenreduzierungsregeln reduziert. Darüber hinaus werden keine Entitäten für XML-Namespace-URI-Werte ausgeführt oder aufgelöst.  
-  
+
 -   Der XML-Namespace-URI wird auf ungültige XML 1.0-Zeichen überprüft. Wird ein solches Zeichen gefunden, wird ein Fehler ausgelöst (z. B. U+0007).  
   
 -   Der XML-Namespace-URI (nach der Reduzierung aller Leerzeichen) kann keine leere Zeichenfolge sein, da sonst ein Fehler vom Typ "ungültiger leerer Namespace-URI" ausgelöst wird.  

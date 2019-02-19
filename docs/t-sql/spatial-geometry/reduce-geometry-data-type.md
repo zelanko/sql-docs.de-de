@@ -18,17 +18,17 @@ ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b3706237fdd673e4bcf42fbcc5e611e094fd1ebf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3177340b6944da812c93075f6b2fd5561192f33
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805618"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807420"
 ---
 # <a name="reduce-geometry-data-type"></a>Reduce (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Gibt einen Näherungswert der gegebenen **geometry** -Instanz zurück. Dieser Näherungswert wird unter Verwendung einer Erweiterung des Douglas-Peucker-Algorithmus mit der angegebenen Toleranz ermittelt.
+Gibt einen Näherungswert für die angegebene **geometry**-Instanz zurück. Dieser Näherungswert wird unter Verwendung einer Erweiterung des Douglas-Peucker-Algorithmus mit der angegebenen Toleranz ermittelt.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,15 +49,15 @@ Gibt einen Näherungswert der gegebenen **geometry** -Instanz zurück. Dieser N�
 ## <a name="remarks"></a>Remarks  
  Bei Auflistungstypen arbeitet dieser Algorithmus unabhängig für jeden **geometry** -Wert, der in der Instanz enthalten ist.  
   
- Dieser Algorithmus ändert keine **Point** -Instanzen.  
+ Dieser Algorithmus ändert keine **Point**-Instanzen.  
   
- Bei Instanzen von **LineString**, **CircularString**und **CompoundCurve** behält der Näherungsalgorithmus die ursprünglichen Anfangs- und Endpunkte der Instanz bei und fügt iterativ so lange die Punkte der ursprünglichen Instanz wieder ein, die am stärksten vom Ergebnis abweichen, bis kein weiterer Punkt stärker abweicht, als die angegebene Toleranz erlaubt.  
+ In den Instanzen **LineString**, **CircularString** und **CompoundCurve** werden die ursprünglichen Start- und Endpunkte der Instanz vom Näherungsalgorithmus beibehalten. Der Algorithmus rechnet anschließend iterativ den Punkt aus der ursprünglichen Instanz hinzu, der am meisten vom Ergebnis abweicht. Dieser Vorgang wird so lange fortgesetzt, bis kein Punkt mehr über die angegebene Toleranz hinaus abweicht.  
   
  `Reduce()` gibt eine **LineString**-, **CircularString**- oder **CompoundCurve**-Instanz für **CircularString**-Instanzen zurück.  `Reduce()` gibt eine **CompoundCurve**- oder **LineString**-Instanz für **CompoundCurve**-Instanzen zurück.  
   
- Auf **Polygon** -Instanzen wird der Näherungsalgorithmus unabhängig für jeden Ring angewendet. Die Methode erzeugt eine `FormatException` , wenn die zurückgegebene **Polygon** -Instanz ungültig ist. Eine ungültige **MultiPolygon** -Instanz wird beispielsweise dann erstellt, wenn `Reduce()` zur Vereinfachung jedes Rings in der Instanz angewendet wird, und sich die ergebenden Ringe überschneiden.  Bei Instanzen von **CurvePolygon** mit einem äußeren Ring und ohne innere Ringe wird von `Reduce()` gibt eine Instanz von **CurvePolygon**, **LineString**oder **Point** zurückgegeben.  Wenn **CurvePolygon** innere Ringe aufweist, wird eine Instanz von **CurvePolygon** oder eine Instanz von **MultiPoint** zurückgegeben.  
+ Auf **Polygon** -Instanzen wird der Näherungsalgorithmus unabhängig für jeden Ring angewendet. Die Methode erzeugt eine `FormatException`-Ausnahme, wenn die zurückgegebene **Polygon**-Instanz ungültig ist. Eine ungültige **MultiPolygon**-Instanz wird beispielsweise dann erstellt, wenn `Reduce()` zur Vereinfachung jedes Rings in der Instanz angewendet wird und sich die ergebenden Ringe überschneiden.  Bei Instanzen von **CurvePolygon** mit einem äußeren Ring und ohne innere Ringe wird von `Reduce()` eine Instanz von **CurvePolygon**, **LineString** oder **Point** zurückgegeben.  Wenn **CurvePolygon** innere Ringe aufweist, wird eine Instanz von **CurvePolygon** oder eine Instanz von **MultiPoint** zurückgegeben.  
   
- Wenn ein Kreisbogensegment gefunden wird, überprüft der Näherungsalgorithmus, ob eine näherungsweise Bestimmung des Bogens durch die Sehne innerhalb der Hälfte der angegebenen Toleranz möglich ist.  Wenn die Sehne diese Kriterien erfüllt, wird der Kreisbogen in den Berechnungen durch die Sehne ersetzt. Andernfalls wird der Kreisbogen beibehalten, und der Näherungsalgorithmus wird für die verbleibenden Segmente übernommen.  
+ Wenn ein Kreisbogensegment gefunden wird, überprüft der Näherungsalgorithmus, ob eine näherungsweise Bestimmung des Bogens durch die Sehne innerhalb der Hälfte der angegebenen Toleranz möglich ist. Wenn eine Sehne diese Kriterien erfüllt, wird der Kreisbogen in den Berechnungen durch die Sehne ersetzt. Wenn eine Sehne diese Kriterien nicht erfüllt, wird der Kreisbogen beibehalten, und der Näherungsalgorithmus wird für die verbleibenden Segmente übernommen.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -102,7 +102,7 @@ SELECT @g.Reduce(.75).ToString();
  Beachten Sie in diesem Beispiel, dass die zweite **SELECT** -Anweisung die **LineString** -Instanz mit drei Toleranzebenen verwendet: `LineString(0 0, 16 0)`.  
   
 ### <a name="showing-an-example-where-the-original-start-and-end-points-are-lost"></a>Anzeigen eines Beispiels mit verloren gegangenem Ausgangs- und Endpunkt  
- Im folgenden Beispiel wird gezeigt, dass der ursprüngliche Ausgangs- und Endpunkt von der resultierenden Instanz möglicherweise nicht beibehalten werden. Die Ursache hierfür liegt darin, dass andernfalls eine ungültige Instanz von **LineString** erzeugt würde.  
+ Im folgenden Beispiel wird veranschaulicht, dass der ursprüngliche Ausgangs- und Endpunkt von der resultierenden Instanz möglicherweise nicht beibehalten werden. Dieses Verhalten liegt darin begründet, dass andernfalls eine ungültige Instanz von **LineString** erzeugt würde.  
   
 ```  
 DECLARE @g geometry = 'LINESTRING(0 0, 4 0, 2 .01, 1 0)';  
@@ -111,8 +111,6 @@ SELECT @g.STIsValid() AS Valid
 SELECT @g.ToString() AS Original, @h.ToString() AS Reduced;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erweiterte statische geometry-Methoden](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
-  
-

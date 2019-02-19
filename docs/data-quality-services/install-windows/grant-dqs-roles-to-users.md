@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: dfc154bfb253542e5bdd633504f71e9987caa625
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 00246af5bd0b577d7f1c7aebf4711d58a9828865
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617150"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028441"
 ---
 # <a name="grant-dqs-roles-to-users"></a>Zuweisen von DQS-Rollen an Benutzer
 
@@ -42,7 +42,7 @@ ms.locfileid: "52617150"
   
 5.  Klicken Sie nach der Überprüfung des Benutzers auf die Seite **Benutzerzuordnung** im linken Bereich.  
   
-6.  Aktivieren Sie im rechten Bereich das Kontrollkästchen unter der Spalte **Zuordnen** für die **DQS_MAIN** -Datenbank, und aktivieren Sie dann das Kontrollkästchen **dqs_administrator**, **dqs_kb_editor**oder **dqs_kb_operator** im Bereich **Mitgliedschaft in Datenbankrolle für: DQS_MAIN** , je nachdem, welche Zugriffsebene für den Benutzer benötigt wird. Weitere Informationen zu den drei DQS-Rollen finden Sie unter [DQS-Sicherheit](../../data-quality-services/dqs-security.md).  
+6.  Aktivieren Sie im rechten Bereich das Kontrollkästchen unter der Spalte **Map** (Zuordnung) für die **DQS_MAIN**-Datenbank, und aktivieren Sie dann das Kontrollkästchen **dqs_administrator**, **dqs_kb_editor** oder **dqs_kb_operator** im Bereich **Mitgliedschaft in Datenbankrolle für: DQS_MAIN**, je nachdem, welche Zugriffsebene für den Benutzer benötigt wird. Weitere Informationen zu den drei DQS-Rollen finden Sie unter [DQS-Sicherheit](../../data-quality-services/dqs-security.md).  
   
 7.  Klicken Sie im Dialogfeld **Anmeldung – Neu** auf **OK**, um die Änderungen zu übernehmen.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "52617150"
 ## <a name="next-steps"></a>Next Steps  
  Melden Sie sich mit dem soeben erstellten Windows-Benutzerkonto, dem Sie die DQS-Rolle gewährt haben, beim [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] an.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Installieren von Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Erstellen eines Anmeldenamens](../../relational-databases/security/authentication-access/create-a-login.md)  
   

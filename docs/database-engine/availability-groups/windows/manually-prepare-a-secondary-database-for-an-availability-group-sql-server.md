@@ -19,12 +19,12 @@ ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 63af3d34937b221a50f7c6217ae9c73c41d1cbb6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: a9f6cc5a6ba2c63add3742602b89bbb627677286
+ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209299"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55832082"
 ---
 # <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>Vorbereiten einer sekundären Datenbank auf eine Always On-Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -194,36 +194,36 @@ In diesem Thema wird erläutert, wie eine Datenbank in [!INCLUDE[ssnoversion](..
         GO  
         ```  
   
-5.  Nach dem Wiederherstellen der vollständigen Sicherung müssen Sie eine Protokollsicherung für die primäre Datenbank erstellen. Beispielsweise wird das Protokoll mit der folgenden [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung in der Sicherungsdatei *E:\MyDB1_log.bak*gesichert:  
+5.  Nach dem Wiederherstellen der vollständigen Sicherung müssen Sie eine Protokollsicherung für die primäre Datenbank erstellen. Beispielsweise wird das Protokoll mit der folgenden [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisung in der Sicherungsdatei *E:\MyDB1_log.trn* gesichert:  
   
     ```  
     BACKUP LOG MyDB1   
-      TO DISK = 'E:\MyDB1_log.bak'   
+      TO DISK = 'E:\MyDB1_log.trn'   
     GO  
     ```  
   
 6.  Sie können die Datenbank erst mit dem sekundären Replikat verknüpfen, nachdem Sie die erforderliche Protokollsicherung (und alle nachfolgenden Protokollsicherungen) angewendet haben.  
   
-     So wird beispielsweise mit der folgenden [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung das erste Protokoll von *C:\MyDB1.bak*wiederhergestellt:  
+     So wird beispielsweise mit der folgenden [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisung das erste Protokoll von *C:\MyDB1.trn* wiederhergestellt:  
   
     ```  
     RESTORE LOG MyDB1   
-      FROM DISK = 'E:\MyDB1_log.bak'   
+      FROM DISK = 'E:\MyDB1_log.trn'   
         WITH FILE=1, NORECOVERY  
     GO  
     ```  
   
 7.  Wenn weitere Protokollsicherungen erfolgen, bevor die Datenbank mit dem sekundären Replikat verknüpft wird, müssen Sie mit RESTORE WITH NORECOVERY auch alle Protokollsicherungen nacheinander auf der Serverinstanz wiederherstellen, die das sekundäre Replikat hostet.  
   
-     So werden beispielsweise mit der folgenden [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung zwei zusätzliche Protokolle von *E:\MyDB1_log.bak*wiederhergestellt:  
+     So werden beispielsweise mit der folgenden [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisung zwei zusätzliche Protokolle von *E:\MyDB1_log.bak* wiederhergestellt:  
   
     ```  
     RESTORE LOG MyDB1   
-      FROM DISK = 'E:\MyDB1_log.bak'   
+      FROM DISK = 'E:\MyDB1_log.trn'   
         WITH FILE=2, NORECOVERY  
     GO  
     RESTORE LOG MyDB1   
-      FROM DISK = 'E:\MyDB1_log.bak'   
+      FROM DISK = 'E:\MyDB1_log.trn'   
         WITH FILE=3, NORECOVERY  
     GO  
     ```  

@@ -3,7 +3,6 @@ title: Richtlinien zum Verwenden von Methoden des xml-Datentyps | Microsoft-Doku
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
-ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], methods
 - methods [XML in SQL Server]
 ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5639083c4e1491adeaa78ec090c660e2faaa6c39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01e1471792a30cfccfe0e19f878929dc74bc8775
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643888"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022875"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>Richtlinien zum Verwenden von Methoden des xml-Datentyps
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +103,7 @@ FROM   T
   
  Diese Abfrage gibt den Wert des ersten `<last-name>`-Elements in jeder XML-Instanz zurück.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [xml Data Type Methods (xml-Datentypmethoden)](../../t-sql/xml/xml-data-type-methods.md)  
   
   

@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.dqs.kb.kbanalyze.f1
 - sql13.dqs.kb.kbmap.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 07db48d0c1dbac3d071dc1574295c9c471cfabb4
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 82713725dc8b4bf0d2214e2ba79121c2b330b697
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617830"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038321"
 ---
 # <a name="perform-knowledge-discovery"></a>Durchführen der Wissensermittlung
 
@@ -85,7 +85,7 @@ ms.locfileid: "52617830"
   
     -   Klicken Sie auf **Abbrechen** , um die Wissensermittlung abzubrechen, ohne die Ergebnisse zu speichern, und um zur DQS-Homepage zurückzukehren.  
   
-    -   Klicken Sie auf **Schließen** , um die Ergebnisse zu speichern und zur DQS-Homepage zurückzukehren. Die Wissensdatenbank wird für Sie gesperrt, und der Status der Wissensdatenbank wird in der Wissensdatenbanktabelle auf der Seite **Wissensdatenbank öffnen** als **Ermittlung – Zuordnung**angezeigt. Nachdem Sie auf **Schließen**geklickt haben, um die Domänenverwaltung durchzuführen, müssen Sie im Fenster **Wissensdatenbank öffnen** auf **Wissensermittlung** klicken, die Seite **Wissensdatenbank-Verwaltung: Domänenbegriffe verwalten** öffnen, auf **Fertig stellen**klicken und anschließend auf **Ja** (um die Wissensdatenbank zu veröffentlichen) oder **Nein** (um die Arbeit in der Wissensdatenbank zu speichern und zu beenden) klicken.  
+    -   Klicken Sie auf **Schließen** , um die Ergebnisse zu speichern und zur DQS-Homepage zurückzukehren. Die Wissensdatenbank wird für Sie gesperrt, und der Status der Wissensdatenbank wird in der Wissensdatenbanktabelle auf der Seite **Wissensdatenbank öffnen** als **Ermittlung – Zuordnung**angezeigt. Nachdem Sie zum Ausführen der Domänenverwaltungsaktivität auf **Schließen** geklickt haben, klicken Sie im Bildschirm **Wissensdatenbank öffnen** auf **Wissensermittlung**, wechseln Sie zum Bildschirm **Wissensdatenbank-Verwaltung: Domänenbegriffe verwalten**, und klicken Sie auf **Fertig stellen**. Klicken Sie anschließend entweder auf **Ja**, wenn Sie die Wissensdatenbank veröffentlichen möchten, oder auf **Nein**, um die Arbeit in der Wissensdatenbank zu speichern und zu beenden.  
   
 ##  <a name="Discover"></a> Ermittlungsphase  
   
@@ -94,7 +94,7 @@ ms.locfileid: "52617830"
     > [!NOTE]  
     >  Die Ermittlung wird für die Spalten ausgeführt, die auf der Seite **Zuordnen** in der Tabelle **Zuordnungen** eingegeben wurden. Die Domäne, die der jeweiligen Spalte zugeordnet ist, wird mit dem in der Ermittlung gewonnenen Wissen aufgefüllt. Wenn die Domäne eine Verbunddomäne ist, wird das Wissen den einzelnen Domänen hinzugefügt, aus denen die Verbunddomäne besteht.  
   
-2.  Während der Ermittlungsprozess ausgeführt wird, überprüfen Sie den Abschlussstatus, der für jeden Schritt der Ermittlung angezeigt wird: **Datensätze werden vorverarbeitet**, **Domänenregeln werden ausgeführt**und **Ermittlung wird ausgeführt**. Für jede dieser Phasen werden der prozentuale Anteil und der Abschlussstatus angezeigt.  
+2.  Während der Ermittlungsprozess ausgeführt wird, überprüfen Sie den Abschlussstatus, der für jeden Schritt der Ermittlung angezeigt wird: **Datensätze werden vorverarbeitet**, **Domänenregeln werden ausgeführt** und **Ermittlung wird ausführt**. Für jede dieser Phasen werden der prozentuale Anteil und der Abschlussstatus angezeigt.  
   
 3.  Wenn die Analyse abgeschlossen ist, überprüfen Sie, ob in der Statuszeile unter der Abschlussstatistik angegeben ist, dass sie erfolgreich abgeschlossen wurde.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "52617830"
   
     -   Klicken Sie auf **Abbrechen** , um die Wissensermittlung abzubrechen, ohne die Ergebnisse zu speichern, und um zur DQS-Homepage zurückzukehren.  
   
-    -   Klicken Sie auf **Schließen** , um die Ergebnisse zu speichern und zur DQS-Homepage zurückzukehren. Die Wissensdatenbank wird für Sie gesperrt, und der Status der Wissensdatenbank wird in der Wissensdatenbanktabelle auf der Seite **Wissensdatenbank öffnen** als **Ermittlung – Ermitteln**angezeigt. Nachdem Sie auf **Schließen**geklickt haben, um die Domänenverwaltung durchzuführen, müssen Sie im Fenster **Wissensdatenbank öffnen** auf **Wissensermittlung** klicken, die Seite **Wissensdatenbank-Verwaltung: Domänenbegriffe verwalten** öffnen, auf **Fertig stellen**klicken und anschließend auf **Ja** (um die Wissensdatenbank zu veröffentlichen) oder **Nein** (um die Arbeit in der Wissensdatenbank zu speichern und zu beenden) klicken.  
+    -   Klicken Sie auf **Schließen** , um die Ergebnisse zu speichern und zur DQS-Homepage zurückzukehren. Die Wissensdatenbank wird für Sie gesperrt, und der Status der Wissensdatenbank wird in der Wissensdatenbanktabelle auf der Seite **Wissensdatenbank öffnen** als **Ermittlung – Ermitteln**angezeigt. Nachdem Sie zum Ausführen der Domänenverwaltungsaktivität auf **Schließen** geklickt haben, klicken Sie im Bildschirm **Wissensdatenbank öffnen** auf **Wissensermittlung**, wechseln Sie zum Bildschirm **Wissensdatenbank-Verwaltung: Domänenbegriffe verwalten**, und klicken Sie auf **Fertig stellen**. Klicken Sie anschließend entweder auf **Ja**, wenn Sie die Wissensdatenbank veröffentlichen möchten, oder auf **Nein**, um die Arbeit in der Wissensdatenbank zu speichern und zu beenden.  
   
     -   Klicken Sie auf diese Schaltfläche, um zur Seite **Ermitteln** zurückzukehren.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "52617830"
   
 3.  Legen Sie **Filter** auf **Alle Werte** fest, und überprüfen Sie, ob der Status der Werte geeignet ist. Zum Ändern des Status eines Werts wählen Sie den Wert aus, und klicken Sie anschließend auf die Schaltfläche **Ausgewählte Domänenwerte als korrigiert festlegen** (Häkchen), die Schaltfläche **Ausgewählte Domänenwerte als Fehler festlegen** (Kreuz) oder auf die Schaltfläche **Ausgewählte Domänenwerte als ungültig festlegen** (Dreieck).  
   
-4.  Gehen Sie wie folgt vor, um den Status eines Werts zu ändern:  
+4.  Um den Status eines Werts zu ändern, gehen Sie wie folgt vor:  
   
     1.  **Ausgewählte Domänenwerte als korrigiert festlegen**: Wählen Sie zum Ändern des Status eines Werts von „Fehler“ oder „Ungültig“ in „Richtig“ den Wert aus, und klicken Sie anschließend nach Auswahl des Abwärtspfeils in der Symbolleiste oder in der Dropdownliste „Typ“ auf das Symbol **Ausgewählte Domänenwerte als korrigiert festlegen** (Häkchen). Wenn der fehlerhafte oder ungültige Wert mit einem richtigen Wert gruppiert ist, löschen Sie diesen Wert nach dem Vorgang.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "52617830"
   
     3.  **Ausgewählte Domänenwerte als ungültig festlegen**: Wählen Sie zum Ändern des Status eines Werts von „Richtig“ oder „Fehler“ in „Ungültig“ den Wert aus, und klicken Sie anschließend nach Auswahl des Abwärtspfeils in der Symbolleiste oder in der Dropdownliste „Typ“ auf das Symbol **Ausgewählte Domänenwerte als ungültig festlegen** (Dreieck). Sie können eine Korrektur in die Spalte **Korrigieren in** eingeben oder diese leer lassen.  
   
-    4.  **Korrigieren in**: Nachdem Sie einen Wert als fehlerhaft oderungültig festgelegt haben, geben Sie in die Spalte **Korrigieren in** einen neuen Wert ein. DQS fügt eine neue Zeile für den Ersatzwert hinzu, legt diesen als richtig fest und gruppiert dann die zwei Werte. Der neue Wert wird als führender Wert angezeigt. Dabei wird der führende Wert fett und der fehlerhafte oder ungültige Wert eingezogen dargestellt.  
+    4.  **Korrigieren in**: Nachdem Sie einen Wert als Fehler oder als ungültig festgelegt haben, geben Sie in die Spalte **Korrigieren in** einen neuen Wert ein. DQS fügt eine neue Zeile für den Ersatzwert hinzu, legt diesen als richtig fest und gruppiert dann die zwei Werte. Der neue Wert wird als führender Wert angezeigt. Dabei wird der führende Wert fett und der fehlerhafte oder ungültige Wert eingezogen dargestellt.  
   
 5.  Um Werte als Gruppe von Synonymen festzulegen, wählen Sie mehrere richtige Werte aus, und gehen Sie dann wie folgt vor:  
   
@@ -173,26 +173,26 @@ ms.locfileid: "52617830"
   
     -   **Beziehung zwischen ausgewählten Synonymen aufheben**: Klicken Sie auf diese Option, um die Synonymzuordnung rückgängig zu machen.  
   
-    -   **Ausgewählten Domänenwert als führenden Wert der zugehörigen Gruppe festlegen**: Ändern Sie den führenden Wert der Gruppe, indem Sie einen Wert in der Gruppe auswählen, der nicht als führender Wert festgelegt ist, und klicken Sie dann auf die Schaltfläche **Ausgewählten Domänenwert als führenden Wert der zugehörigen Gruppe festlegen** .  
+    -   **Ausgewählten Domänenwert als führenden Wert der zugehörigen Gruppe festlegen**: Wählen Sie zum Ändern des führenden Werts der Gruppe einen Wert in der Gruppe aus, der nicht als führender Wert festgelegt ist, und klicken Sie dann auf die Schaltfläche **Ausgewählten Domänenwert als führenden Wert der zugehörigen Gruppe festlegen**.  
   
-6.  **Rechtschreibprüfung**: Wenn Sie die Rechtschreibprüfung auf der Seite Domäneneigenschaften aktiviert haben, suchen Sie alle Werte mit einem welligen roten Unterstrich, da dadurch anzeigt wird, dass die Rechtschreibprüfung eine Korrektur vorschlägt. Klicken Sie mit der rechten Maustaste auf den unterstrichenen Wert, und wählen Sie eine Korrektur aus, sofern zutreffend. Als Werttyp wird „Fehler“ festgelegt (oder beibehalten), und die Korrektur wird zur Spalte **Korrigieren in** hinzugefügt. Klicken Sie auf den Abwärtspfeil, um weitere vorgeschlagene Korrekturen anzuzeigen. Geben Sie eine Korrektur manuell ein, um sie dem Rechtschreibprüfungswörterbuch hinzuzufügen und als Korrektur auswählen zu können. Weitere Informationen finden Sie unter [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) und [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
+6.  **Rechtschreibprüfung**: Wenn Sie die Rechtschreibprüfung auf der Seite „Domäneneigenschaften“ aktiviert haben, suchen Sie alle Werte mit einem welligen roten Unterstrich. Dieser zeigt an, dass die Rechtschreibprüfung eine Korrektur vorschlägt. Klicken Sie mit der rechten Maustaste auf den unterstrichenen Wert, und wählen Sie eine Korrektur aus, sofern zutreffend. Als Werttyp wird „Fehler“ festgelegt (oder beibehalten), und die Korrektur wird zur Spalte **Korrigieren in** hinzugefügt. Klicken Sie auf den Abwärtspfeil, um weitere vorgeschlagene Korrekturen anzuzeigen. Geben Sie eine Korrektur manuell ein, um sie dem Rechtschreibprüfungswörterbuch hinzuzufügen und als Korrektur auswählen zu können. Weitere Informationen finden Sie unter [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) und [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
   
     > [!NOTE]  
     >  Um die Rechtschreibprüfung zu verwenden, können Sie diese auf der Seite **Domäneneigenschaften** aktivieren. Wenn sie auf der Seite **Domäneneigenschaften** deaktiviert ist, können Sie auf der Seite **Datenermittlungsergebnisse verwalten** auf das Symbol **Rechtschreibprüfung aktivieren/deaktivieren** klicken, um sie auf dieser Seite zu aktivieren.  
   
 7.  **Neuen Domänenwert hinzufügen**: Fügen Sie einen neuen Wert zur Domäne hinzu, indem Sie auf die Schaltfläche **Neuen Domänenwert hinzufügen** klicken, um eine Zeile am Ende der Tabelle hinzuzufügen. Nachdem Sie einen Wert eingegeben haben, wird die Zeile in alphabetischer Reihenfolge neu angeordnet.  
   
-8.  **Domänenwerte aus Excel importieren**: Fügen Sie neue Werte aus einer Excel-Tabellenkalkulation hinzu, indem Sie auf den Abwärtspfeil für das Symbol **Werte importieren** klicken und dann **Domänenwerte aus Excel importieren**auswählen. Geben Sie den Dateinamen ein, wählen Sie **Erste Zeile als Header verwenden** aus, sofern zutreffend, und klicken Sie dann auf **OK**. Weitere Informationen finden Sie unter [Importieren von Werten aus einer Excel-Datei in eine Domäne](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md).  
+8.  **Domänenwerte aus Excel importieren**: Fügen Sie neue Werte aus einem Excel-Arbeitsblatt hinzu, indem Sie auf den Abwärtspfeil für das Symbol **Werte importieren** klicken und dann **Domänenwerte aus Excel importieren** auswählen. Geben Sie den Dateinamen ein, wählen Sie **Erste Zeile als Header verwenden** aus, sofern zutreffend, und klicken Sie dann auf **OK**. Weitere Informationen finden Sie unter [Importieren von Werten aus einer Excel-Datei in eine Domäne](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md).  
   
-9. **Projektwerte importieren**: Fügen Sie neue Werte aus einem Data Quality-Projekt hinzu, indem Sie auf den Abwärtspfeil für das Symbol **Werte importieren** klicken und dann **Projektwerte importieren**auswählen. Geben Sie den Dateinamen ein, wählen Sie **Erste Zeile als Header verwenden** aus, sofern zutreffend, und klicken Sie dann auf **OK**. Wählen Sie das Projekt aus, aus dem Sie Werte importieren möchten, und klicken Sie auf **OK**. Die importierten Werte werden angezeigt. Klicken Sie auf **Fertig stellen**. Weitere Informationen finden Sie unter „Importieren von Projektwerten in eine Domäne“.  
+9. **Projektwerte importieren**: Klicken Sie zum Hinzufügen neuer Werte aus einem Data Quality-Projekt auf den Abwärtspfeil für das Symbol **Werte importieren**, und wählen Sie dann **Projektwerte importieren** aus. Geben Sie den Dateinamen ein, wählen Sie **Erste Zeile als Header verwenden** aus, sofern zutreffend, und klicken Sie dann auf **OK**. Wählen Sie das Projekt aus, aus dem Sie Werte importieren möchten, und klicken Sie auf **OK**. Die importierten Werte werden angezeigt. Klicken Sie auf **Fertig stellen**. Weitere Informationen finden Sie unter „Importieren von Projektwerten in eine Domäne“.  
   
-10. **Ausgewählte Domänenwerte löschen**: Entfernen Sie einen oder mehrere vorhandene Werte aus einer Domäne, indem Sie die Werte auswählen und dann auf das Symbol **Ausgewählte Domänenwerte löschen** klicken. Ein Eintrag von DQS_NULL kann nicht gelöscht werden. Wenn Sie mehrere zu löschende Werte auswählen und einer davon DQS_NULL ist, schlägt der Vorgang daher fehl.  
+10. **Ausgewählte(n) Domänenwert(e) löschen**: Entfernen Sie einen oder mehr vorhandene Werte aus einer Domäne, indem Sie die Werte auswählen und dann auf die Schaltfläche **Ausgewählte(n) Domänenwert(e) löschen** klicken. Ein Eintrag von DQS_NULL kann nicht gelöscht werden. Wenn Sie mehrere zu löschende Werte auswählen und einer davon DQS_NULL ist, schlägt der Vorgang daher fehl.  
   
 11. Klicken Sie auf **Fertig stellen** , um den Wissensermittlungsaktivität abzuschließen. Ein Popupfenster wird angezeigt, wenn Sie nicht jede einzelne Domäne überprüft haben. Klicken Sie auf **Ja** , um weiterhin zu überprüfen, oder auf **Nein** , um fortzufahren. Wenn Sie auf Nein klicken, wird ein anderes Popupfenster mit den folgenden Optionen angezeigt:  
   
-    1.  **Veröffentlichen**: Die Wissensdatenbank wird veröffentlicht und kann vom aktuellen Benutzer oder von anderen Benutzern verwendet werden. Die Wissensdatenbank wird nicht gesperrt, der Status der Wissensdatenbank (in der Wissensdatenbanktabelle) wird auf leer festgelegt, und die Aktivitäten für die Domänenverwaltung sowie die Wissensermittlung sind verfügbar. Sie kehren zur Startseite zurück. Um den Prozess abzuschließen, klicken Sie auf **Ja** .  
+    1.  **Publish:** Die Wissensdatenbank wird veröffentlicht und kann vom aktuellen Benutzer oder von anderen Benutzern verwendet werden. Die Wissensdatenbank wird nicht gesperrt, der Status der Wissensdatenbank (in der Wissensdatenbanktabelle) wird auf leer festgelegt, und die Aktivitäten für die Domänenverwaltung sowie die Wissensermittlung sind verfügbar. Sie kehren zur Startseite zurück. Um den Prozess abzuschließen, klicken Sie auf **Ja** .  
   
-    2.  **Nein**: Ihre Arbeit wird gespeichert, die Wissensdatenbank bleibt gesperrt, und der Status der Wissensdatenbank wird auf "In Arbeit" festgelegt. Sowohl die Domänenverwaltungs- als auch die Wissensermittlungsaktivitäten sind verfügbar. Sie kehren zur Startseite zurück.  
+    2.  **Nein**: Ihre Arbeit wird gespeichert, die Wissensdatenbank bleibt gesperrt, und der Status der Wissensdatenbank wird auf „In Arbeit“ festgelegt. Sowohl die Domänenverwaltungs- als auch die Wissensermittlungsaktivitäten sind verfügbar. Sie kehren zur Startseite zurück.  
   
     3.  **Abbrechen**: Das Popupfenster wird geschlossen, und Sie kehren zum Fenster **Domänenwerte verwalten** zurück.  
   
@@ -202,19 +202,19 @@ ms.locfileid: "52617830"
   
     -   Klicken Sie auf**Schließen** , um die Ergebnisse zu speichern und zur DQS-Homepage zurückzukehren. Die Wissensdatenbank wird für Sie gesperrt, und als Status der Wissensdatenbank wird in der Wissensdatenbanktabelle auf der Seite **Wissensdatenbank öffnen** **Ermittlung – Werteverwaltung** angezeigt.  
   
-    -   Klicken Sie auf **Zurück** , um zur Seite **Ermitteln** zurückzukehren. Nachdem Sie auf **Schließen**geklickt haben, um die Domänenverwaltung durchzuführen, müssen Sie im Fenster **Wissensdatenbank öffnen** auf **Wissensermittlung** klicken, die Seite **Wissensdatenbank-Verwaltung: Domänenbegriffe verwalten** öffnen, auf **Fertig stellen**klicken und anschließend auf **Ja** (um die Wissensdatenbank zu veröffentlichen) oder **Nein** (um die Arbeit in der Wissensdatenbank zu speichern und zu beenden) klicken.  
+    -   Klicken Sie auf **Zurück** , um zur Seite **Ermitteln** zurückzukehren. Nachdem Sie zum Ausführen der Domänenverwaltungsaktivität auf **Schließen** geklickt haben, klicken Sie im Bildschirm **Wissensdatenbank öffnen** auf **Wissensermittlung**, wechseln Sie zum Bildschirm **Wissensdatenbank-Verwaltung: Domänenbegriffe verwalten**, und klicken Sie auf **Fertig stellen**. Klicken Sie anschließend entweder auf **Ja**, wenn Sie die Wissensdatenbank veröffentlichen möchten, oder auf **Nein**, um die Arbeit in der Wissensdatenbank zu speichern und zu beenden.  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Ausführen der Wissensermittlung  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Ausführen der Wissensermittlung  
  Nachdem Sie mithilfe des computergestützten Wissensermittlungsprozesses Wissen zur Wissensdatenbank hinzugefügt haben, können Sie die Wissensdatenbank sofort für ein Bereinigungsprojekt verwenden oder die Domänenverwaltung vor der Bereinigung durchführen. Weitere Informationen zur Datenbereinigung oder Domänenverwaltung finden Sie unter [Datenbereinigung](../data-quality-services/data-cleansing.md) oder [Verwalten einer Domäne](../data-quality-services/managing-a-domain.md).  
   
 ##  <a name="Meaning"></a> Die Bedeutung von richtigen, fehlerhaften und ungültigen Werten  
  Jedem Wert in der Tabelle **Wert** der Seite **Domänenwerte** wird eine Einstellung für **Typ** von **Richtig**, **Fehler**oder **Ungültig**zugewiesen. Der Typ des Werts wird anfänglich von der Wissensermittlungsaktivität generiert, Sie können diesen jedoch nach Bedarf ändern. Der abschließende sowohl auf der Ermittlung als auch auf interaktiven Änderungen basierende Typ wird durch die Bereinigungsaktivität generiert. Diese Einstellungen haben die folgenden Bedeutungen:  
   
--   **Richtig:** Dieser Wert gehört zur Domäne und weist keine Syntaxfehler auf. Beispiel: „Chicago“ ist in einer Ortsdomäne richtig.  
+-   **Richtig**: Dieser Wert gehört zur Domäne und weist keine Syntaxfehler auf. Beispiel: „Chicago“ ist in einer Ortsdomäne richtig.  
   
--   **Fehler:** Dieser Wert gehört zur Domäne, ist aber fehlerhaft. Beispiel: „Shicago“ statt „Chicago“ ist in einer Ortsdomäne fehlerhaft. DQS kennzeichnet einen Wert als fehlerhaft, wenn ein Syntaxfehler und eine zugehörige Korrektur im Ermittlungsprozess erkannt wird. Syntaxfehler schließen auch orthographische Fehler ein.  
+-   **Fehler**: Dieser Wert gehört zur Domäne, ist aber fehlerhaft. Beispiel: „Shicago“ statt „Chicago“ ist in einer Ortsdomäne fehlerhaft. DQS kennzeichnet einen Wert als fehlerhaft, wenn ein Syntaxfehler und eine zugehörige Korrektur im Ermittlungsprozess erkannt wird. Syntaxfehler schließen auch orthographische Fehler ein.  
   
--   **Ungültig:** Dieser Wert gehört nicht zur Domäne, und es ist keine Korrektur vorhanden. Beispiel: Der Wert „12345“ in einer Ortsdomäne ist ungültig. DQS kennzeichnet einen Wert als ungültig, wenn er eine Domänenregel nicht erfüllt.  
+-   **Ungültig**: Dieser Wert gehört nicht zur Domäne, und es ist keine Korrektur vorhanden. Beispiel: Der Wert „12345“ in einer Ortsdomäne ist ungültig. DQS kennzeichnet einen Wert als ungültig, wenn er eine Domänenregel nicht erfüllt.  
   
  Sie können den Typ eines Werts manuell in einen der beiden anderen Werte ändern. DQS erzwingt bei manuellen Vorgängen keine Gültigkeits- und Fehlersemantik. Sie können eine Korrektur für einen ungültigen Wert eingeben, ohne den Status zu ändern. Sie können einen Wert als ungültig festlegen, auch wenn er keiner Domänenregel widerspricht. Sie können einen Wert als fehlerhaft festlegen, auch wenn der Ermittlungsprozess nicht angegeben hat, dass er einen Syntaxfehler aufweist. Sie können außerdem eine Korrektur eines fehlerhaften Werts entfernen, der als richtig markiert wurde, ohne den Status zu ändern.  
   
@@ -254,17 +254,17 @@ ms.locfileid: "52617830"
   
  Die Feldstatistiken umfassen Folgendes:  
   
--   **Feld**: Name des Felds in den Quelldaten  
+-   **Feld**: Name des Felds in der Quelldatenbank.  
   
--   **Domäne**: Name der Domäne, die dem Feld zugeordnet ist  
+-   **Domäne**: Name der Domäne, die dem Feld zugeordnet ist.  
   
--   **Neu**: Die Anzahl der neuen Werte und der prozentuale Anteil neuer Werte im Vergleich zu vorhandenen Werten im Feld  
+-   **Neu**: Anzahl der neuen Werte und prozentualer Anteil der neuen Werte im Vergleich zu den vorhandenen Werten im Feld.  
   
--   **Eindeutig**: Die Gesamtzahl der eindeutigen Datensätze in den Feldern und ihr prozentualer Anteil am Ganzen  
+-   **Eindeutig**: Die Gesamtzahl der eindeutigen Datensätze im Feld und ihr prozentualer Anteil an den Gesamtwerten  
   
--   **In Domäne gültig**: Die Anzahl der gültigen Domänenwerte und ihr prozentualer Anteil am Gesamtwert  
+-   **In Domäne gültig**: Anzahl der gültigen Domänenwerte und ihr prozentualer Anteil an den Gesamtwerten.  
   
--   **Vollständigkeit**: Die Vollständigkeit jedes Quellfelds, das für den Abgleich zugeordnet ist  
+-   **Vollständigkeit**: Die Vollständigkeit der Quellfelder, die dem Abgleich zugeordnet sind  
   
  Die Profilerstellung bei der Wissensermittlung gibt Einblicke in die Vollständigkeit. Wenn die Profilerstellung Ihnen sagt, dass ein Feld relativ unvollständig ist, sollten Sie es aus der Wissensdatenbank eines Data Quality-Projekts entfernen. Die Profilerstellung kann keine zuverlässigen Vollständigkeitsstatistiken für Verbunddomänen bereitstellen. Wenn Sie Vollständigkeitsstatistiken benötigen, verwenden Sie Einzeldomänen anstatt Verbunddomänen. Wenn Sie Verbunddomänen verwenden möchten, sollten Sie eine Wissensdatenbank mit Einzeldomänen für die Profilerstellung erstellen, um die Vollständigkeit zu bestimmen, und eine weitere Domäne mit einer Verbunddomäne für den Bereinigungsprozess erstellen. Die Profilerstellung kann z. B. 95 % Vollständigkeit für Adressendatensätze anzeigen, die eine Verbunddomäne verwenden, aber es kann einen viel höheren Grad der Unvollständigkeit für eine der Spalten geben, z. B. für eine Postleitzahlspalte. In diesem Beispiel möchten Sie die Vollständigkeit der Postleitzahlspalte mit einer Einzeldomäne messen. Die Profilerstellung stellt wahrscheinlich zuverlässige Genauigkeitsstatistiken für Verbunddomänen bereit, da Sie die Genauigkeit für mehrere Spalten gemeinsam messen können. Der Wert dieser Daten liegt in der zusammengesetzten Aggregation, daher sollten Sie die Genauigkeit mit einer Verbunddomäne messen.  
   

@@ -1,7 +1,7 @@
 ---
 title: GetAncestor (Datenbank-Engine) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 7/22/2017
+ms.date: 07/22/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: b96a986f-d5e4-4034-8013-de7974594ee9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 89442e4d787c66ed76e6c2db3ff9539a14156782
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: bd3974aee87cc3a9f0549d51988d8b0e8886a1c6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699248"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026221"
 ---
 # <a name="getancestor-database-engine"></a>GetAncestor (Datenbank-Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ WHERE OrgNode.GetAncestor(1) = @CurrentEmployee ;
 ```  
   
 ### <a name="b-returning-the-grandchildren-of-a-parent"></a>B. Zurückgeben der untergeordneten Elemente zweiter Ordnung eines übergeordneten Elements  
-`GetAncestor(2)` gibt die Mitarbeiter zurück, die sich in der aktuellen Hierarchie zwei Ebenen unter dem aktuellen Knoten befinden. Dies sind die untergeordneten Knoten zweiter Ordnung des aktuellen Knotens. Im folgenden Beispiel wird `GetAncestor(2)` verwendet.
+`GetAncestor(2)` gibt die Mitarbeiter zurück, die sich in der aktuellen Hierarchie zwei Ebenen unter dem aktuellen Knoten befinden. Diese Mitarbeiter sind die untergeordneten Knoten zweiter Ordnung des aktuellen Knotens. Im folgenden Beispiel wird `GetAncestor(2)` verwendet.
   
 ```sql
 DECLARE @CurrentEmployee hierarchyid  
@@ -99,8 +99,8 @@ FROM HumanResources.EmployeeDemo
 WHERE OrgNode.GetAncestor(0) = @CurrentEmployee ;  
 ```  
   
-### <a name="d-returning-a-hierarchy-level-if-a-table-is-not-present"></a>D. Zurückgeben einer Hierarchieebene, wenn keine Tabelle vorhanden ist  
-`GetAncestor` gibt die ausgewählte Ebene in der Hierarchie zurück, auch wenn keine Tabelle vorhanden ist. Beispiel: Mit dem folgenden Code wird ein aktueller Mitarbeiter festgelegt, und die `hierarchyid` vom Vorgänger des aktuellen Mitarbeiters wird ohne Verweis auf eine Tabelle zurückgegeben.
+### <a name="d-returning-a-hierarchy-level-if-a-table-isnt-present"></a>D. Zurückgeben einer Hierarchieebene, wenn keine Tabelle vorhanden ist  
+`GetAncestor` gibt die ausgewählte Ebene in der Hierarchie zurück, auch wenn keine Tabelle vorhanden ist. Beispiel: Mit dem folgenden Code wird ein aktueller Mitarbeiter festgelegt, und das `hierarchyid`-Element des Vorgängers des aktuellen Mitarbeiters wird ohne Verweis auf eine Tabelle zurückgegeben.
   
 ```sql
 DECLARE @CurrentEmployee hierarchyid ;  
@@ -122,5 +122,4 @@ this.GetAncestor(1)
 [hierarchyid-Datentyp-Methodenverweis](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Hierarchische Daten &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
-  
   

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - create,data quality project
 - data quality project,create
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: c2b2adb2a1dc2c4c668bb094553f0961dc74439d
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: c63f6407548f3e46bb64a3b7dddffa741426d3a0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616811"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036461"
 ---
 # <a name="create-a-data-quality-project"></a>Erstellen eines Data Quality-Projekts
 
@@ -55,13 +55,13 @@ ms.locfileid: "52616811"
   
     4.  Klicken Sie im Bereich **Aktivität auswählen** auf eine Aktivität, die Sie mit diesem Data Quality-Projekt ausführen möchten:  
   
-        -   **Bereinigung**: Wählen Sie diese Aktivität, um die Quelldaten zu bereinigen.  
+        -   **Bereinigung:** Wählen Sie diese Aktivität, um die Quelldaten zu bereinigen.  
   
-        -   **Abgleich**: Wählen Sie diese Aktivität, um einen Abgleich durchzuführen. Diese Aktivität ist nur verfügbar, wenn die für das Data Quality-Projekt ausgewählte Wissensdatenbank eine Abgleichsrichtlinie umfasst.  
+        -   **Abgleich:** Wählen Sie diese Aktivität, um einen Abgleich durchzuführen. Diese Aktivität ist nur verfügbar, wenn die für das Data Quality-Projekt ausgewählte Wissensdatenbank eine Abgleichsrichtlinie umfasst.  
   
 4.  Klicken Sie auf **Erstellen** , um ein Data Quality-Projekt zu erstellen.  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Erstellen eines Data Quality-Projekts  
+##  <a name="FollowUp"></a>Nächster Schritt: Erstellen eines Data Quality-Projekts  
  Nachdem Sie ein Data Quality-Projekt erstellt haben, wird ein Assistent angezeigt, mit dem Sie die ausgewählte Aktivität – Bereinigung oder Abgleich – ausführen können. Weitere Informationen zu den Bereinigungs- und Abgleichsaktivitäten finden Sie unter [Datenbereinigung](../data-quality-services/data-cleansing.md) und [Datenabgleich](../data-quality-services/data-matching.md).  
   
   

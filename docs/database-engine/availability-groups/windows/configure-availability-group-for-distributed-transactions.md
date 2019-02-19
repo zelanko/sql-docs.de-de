@@ -2,7 +2,7 @@
 title: Konfigurieren von verteilten Transaktionen für Verfügbarkeitsgruppen
 description: 'In diesem Artikel wird beschrieben, wie Sie verteilte Transaktionen für Datenbanken in einer Always On-Verfügbarkeitsgruppe konfigurieren können. '
 ms.custom: seodec18
-ms.date: 05/22/2018
+ms.date: 02/06/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -17,12 +17,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3953e1d6a4b9382d1607765683c990c42432f7b4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f5b8e4848f42cbca03bb47c6cac2400068e54765
+ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215669"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55832112"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Konfigurieren von verteilten Transaktionen für Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ALTER AVAILABILITY GROUP MyaAG
 ```
 
 >[!NOTE]
->In [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] lassen sich Verfügbarkeitsgruppen für verteilte Transaktionen nicht ändern. Um die Einstellung zu ändern, verwerfen Sie die Gruppe und erstellen Sie sie neu. Verwenden Sie dabei die Einstellung `DTC_SUPPORT = PER_DB`. 
+>Ab [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 können Sie Verfügbarkeitsgruppen für verteilte Transaktionen ändern. Für [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)]-Versionen vor Service Pack 2 müssen Sie die Verfügbarkeitsgruppe löschen und dann mit der Einstellung `DTC_SUPPORT = PER_DB` erneut erstellen. 
 
 ## <a name="a-namedisttrandistributed-transactions---technical-concepts"></a><a name="distTran"/>Verteilte Transaktionen – Technisches Prinzip
 

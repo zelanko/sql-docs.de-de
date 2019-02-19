@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dqs.kb.createcd.f1
 - sql13.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 81173982e9c44b135a3ba98312839ac799461988
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 6aae15d10385a3668a247db8482615d0510155b8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616860"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026211"
 ---
 # <a name="create-a-composite-domain"></a>Erstellen einer Verbunddomäne
 
@@ -83,17 +83,17 @@ ms.locfileid: "52616860"
   
 4.  Wählen Sie für **Analysemethode**eine der folgenden Optionen aus:  
   
-    -   **Verweisdaten**: Analysieren Sie die Werte des Felds danach, wie die Daten vom Verweisdatendienst (Reference Data Service, RDS) formatiert werden. Data Quality Services sendet die Werte in der Verbunddomäne an den RDS, und der RDS gibt die gemäß der Domäne in der Verbunddomäne korrigierten und analysierten Daten zurück.  
+    -   **Verweisdaten:** Analysieren der Werte des Felds danach, wie die Daten vom Verweisdatendienst (Reference Data Service, RDS) formatiert werden. Data Quality Services sendet die Werte in der Verbunddomäne an den RDS, und der RDS gibt die gemäß der Domäne in der Verbunddomäne korrigierten und analysierten Daten zurück.  
   
-    -   **Reihenfolge**: Analysieren Sie die Werte des Felds nach der Reihenfolge der Domänen in der Verbunddomäne. Der erste Wert wird in der ersten Domäne eingeschlossen, der zweite Wert in der zweiten Domäne usw.  
+    -   **Reihenfolge:** Analysieren der Werte des Felds nach der Reihenfolge der Domänen in der Verbunddomäne. Der erste Wert wird in der ersten Domäne eingeschlossen, der zweite Wert in der zweiten Domäne usw.  
   
-    -   **Trennzeichen**: Analysieren Sie die Werte des Felds auf Grundlage des Trennzeichens, das aus den Optionsfeldern ausgewählt wurde, wenn „Trennzeichen“ ausgewählt wird. Kann **Tabulator**, **Semikolon**, **Komma**, **Leerzeichen**oder **Anderes**sein. Geben für **Anderes**den Wert ein, der als Trennzeichen dienen soll.  
+    -   **Trennzeichen:** Analysieren der Werte des Felds auf Grundlage des Trennzeichens, das aus den Optionsfeldern ausgewählt wurde, wenn „Delimiters“ (Trennzeichen) ausgewählt wird. Kann **Tabulator**, **Semikolon**, **Komma**, **Leerzeichen**oder **Anderes**sein. Geben für **Anderes**den Wert ein, der als Trennzeichen dienen soll.  
   
 5.  Wenn Sie **Trennzeichen** als Analysemethode ausgewählt haben, können Sie auch **Analyse der Wissensdatenbank verwenden**auswählen. Weitere Informationen finden Sie unter [Knowledge-Based Parsing](#KnowledgeBaseParsing).  
   
 6.  Klicken Sie auf **Fertig stellen** , um die Domänenverwaltungsaktivität abzuschließen, wie in [Beenden der Domänenverwaltungsaktivität](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)beschrieben.  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Erstellen einer Verbunddomäne  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Erstellen einer Verbunddomäne  
  Nachdem Sie eine Verbunddomäne erstellt haben, können Sie andere Domänenverwaltungstasks in der Domäne ausführen, Sie können die Wissensermittlung durchführen, um der Domäne Wissen hinzuzufügen, oder Sie können der Domäne eine Abgleichsrichtlinie hinzufügen. Weitere Informationen finden Sie unter [Durchführen der Wissensermittlung](../data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../data-quality-services/managing-a-domain.md) oder [Erstellen einer Abgleichsrichtlinie](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="KnowledgeBaseParsing"></a> Knowledge-Based Parsing  

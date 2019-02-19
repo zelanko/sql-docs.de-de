@@ -1,7 +1,7 @@
 ---
 title: Ändern des Datenbank-Kompatibilitätsgrads und Verwenden des Abfragespeichers | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/21/2017
+ms.date: 02/06/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: adf5a2daee8231746a3ed364619f511f05d011f6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 995679ad24d1be79849b6b586964a206d4c70d7d
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405225"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807396"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>Ändern des Datenbank-Kompatibilitätsgrads und Verwenden des Abfragespeichers
 
@@ -47,10 +47,12 @@ Der Upgradevorgang zum Aktivieren neuer Abfrageprozessorfunktionen steht im Zusa
 Der empfohlene Workflow für eine Aktualisierung des Abfrageprozessors auf die neueste Version des Codes ist in den „Verwendungsszenarien für den Abfragespeicher“ unter [Aufrechterhalten einer stabilen Leistung während des Upgrades auf das neuere SQL Server](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade) dokumentiert (siehe weiter unten).  
   
 ![Abfrage-Store-Nutzung-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5") 
+
+Ab [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 können Benutzer im Abfrageoptimierungs-Assistenten durch den empfohlenen Workflow geführt werden. Weitere Informationen finden Sie unter [Upgraden von Datenbanken mit dem Abfrageoptimierungs-Assistenten](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
  
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Anzeigen oder Ändern des Kompatibilitätsgrads einer Datenbank](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)     
 [Verwendungsszenarien für den Abfragespeicher](../../relational-databases/performance/query-store-usage-scenarios.md)     
-[ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
-    
+[ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)     
+[Upgraden von Datenbanken mit dem Abfrageoptimierungs-Assistenten](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)        
   

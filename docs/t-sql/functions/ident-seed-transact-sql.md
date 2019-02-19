@@ -20,19 +20,19 @@ ms.assetid: e4cb8eb8-affb-4810-a8a9-0110af3c247a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 336a961a07b7d1f1ce9be2e1abc751f1cbc787eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef3bfdbb21839bd7f4f60ba1a731e39ec1f42c1f
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711978"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079306"
 ---
 # <a name="identseed-transact-sql"></a>IDENT_SEED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt den ursprünglichen Ausgangswert (als **numeric**(**@@** MAXPRECISION,0)) zurück, der beim Erstellen einer Identitätsspalte in einer Tabelle oder Sicht angegeben wurde. Das Ändern des aktuellen Werts einer Identitätsspalte mit DBCC CHECKIDENT ändert nicht den Wert, der von dieser Funktion zurückgegeben wird.  
+  Gibt den ursprünglichen Ausgangswert (als **numeric**(**@@** MAXPRECISION,0)) zurück, der beim Erstellen einer Identitätsspalte in einer Tabelle oder Sicht festgelegt wurde. Das Ändern des aktuellen Werts einer Identitätsspalte mit DBCC CHECKIDENT ändert nicht den Wert, der von dieser Funktion zurückgegeben wird.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Artikellinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Article link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,9 +49,9 @@ IDENT_SEED ( 'table_or_view' )
  **numeric**  
   
 ## <a name="exceptions"></a>Ausnahmen  
- Gibt NULL bei einem Fehler zurück oder wenn ein Aufrufer nicht über Berechtigungen zum Anzeigen des Objekts verfügt.  
+ Gibt NULL zurück, wenn ein Fehler auftritt oder ein Aufrufer nicht über die Berechtigungen zum Anzeigen des Objekts verfügt.  
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann ein Benutzer nur die Metadaten sicherungsfähiger Elemente anzeigen, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Dies bedeutet, dass Metadaten ausgebende integrierte Funktionen, z. B. IDENT_SEED, möglicherweise NULL zurückgeben, wenn dem Benutzer für das Objekt keine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann ein Benutzer nur die Metadaten von sicherungsfähigen Entitäten anzeigen, die der Benutzer besitzt oder für die der Benutzer über Berechtigungen verfügt. Diese Sicherheit bedeutet, dass Metadaten ausgebende integrierte Funktionen, z. B. IDENT_SEED, möglicherweise NULL zurückgeben, wenn dem Benutzer keine Berechtigung für das Objekt erteilt wurde. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -92,12 +92,11 @@ Person             vAdditionalContactInfo                 1
 dbo                AWBuildVersion                         1
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Systemfunktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md)   
  [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
  [sys.identity_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
-  
   
