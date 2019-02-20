@@ -33,12 +33,12 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 31e280cd389bdfd7985bfa995aecbf8ed020417d
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: f00d147c5b9a3e6a2ec6137d72940cae9e67158d
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420225"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265397"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>Editionen und unterstützte Funktionen von SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +178,7 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |Resource Governor|Ja|Nein|Nein|Nein|Nein|  
 |Parallelverarbeitung für partitionierte Tabellen|Ja|Nein|Nein|Nein|Nein|
 |Mehrere FILESTREAM-Container|Ja|Ja <sup>2</sup>|Ja <sup>2</sup>|Ja <sup>2</sup>|Ja <sup>2</sup>|
-|NUMA-basierter und großer Arbeitsspeicher für umfangreiche Seiten und Zuordnung von Pufferarrays|Ja|Nein|Nein|Nein|Nein|
+|NUMA-basierter und großer Arbeitsspeicher für umfangreiche Seiten und Zuordnung von Pufferarrays|Ja|Nein <sup>4</sup>|Nein|Nein|Nein|
 |Pufferpoolerweiterung|Ja|Ja|Nein|Nein|Nein|
 |Ressourcenkontrolle für E/A-Vorgänge|Ja|Nein|Nein|Nein|Nein|  
 |Verzögerte Dauerhaftigkeit|Ja|Ja|Ja|Ja|Ja|
@@ -188,6 +188,8 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 <sup>2</sup> Gilt für [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1. 
 
 <sup>3</sup> Dieses Feature ist in der LocalDB-Installationsoption nicht enthalten.
+
+<sup>4</sup> Standard Edition und SQL Server + CAL-basierte Lizenzierung kann die Anzahl von Prozessoren einschränken, die von SQL Server Standard verwendet werden können, aber SQL Server Standard ist NUMA-fähig. 
 ##  <a name="RDBMSS"></a> RDBMS Security  
   
 |Funktion|Enterprise|Standard|Web|Express|Express mit Advanced Services|  
