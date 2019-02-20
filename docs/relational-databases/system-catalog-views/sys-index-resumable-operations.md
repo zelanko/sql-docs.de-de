@@ -1,7 +1,7 @@
 ---
-title: index_resumable_operations (Transact-SQL) | Microsoft-Dokumentation
+title: sys.index_resumable_operations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/10/2017
+ms.date: 01/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,17 +20,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df53ab01ecd535de0f742129cae56c44cd2d6221
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 780cffa17f6ee1af70d942545632c98c9d6dc1e7
+ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821775"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425775"
 ---
-# <a name="indexresumableoperations-transact-sql"></a>Index_resumable_operations (Transact-SQL)
+# <a name="indexresumableoperations-transact-sql"></a>index_resumable_operations (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 **index_resumable_operations** ist eine Systemansicht, die überwacht und überprüft den aktuellen Ausführungsstatus für die fortsetzbare indexneuerstellung.  
-**Gilt für**: SQL Server 2017 und Azure SQL-Datenbank 
+**Gilt für**: SQL Server 2017 und Azure SQL-Datenbank
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
@@ -46,25 +47,31 @@ ms.locfileid: "47821775"
 |**last_pause_time**|**datatime**| Der Indexvorgang zuletzt angehalten (NULL-Werte zulässt). NULL, wenn der Vorgang ausgeführt wird und nie angehalten wird.|
 |**total_execution_time**|**int**|Gesamte Ausführungszeit nach Startzeit in Minuten (nicht NULL zulassen)|
 |**percent_complete**|**real**|Index-Vorgang wird ausgeführt-Vervollständigung in % (keine NULL-Werte zulässt).|
-|**page_count**|**bigint**|Die Gesamtanzahl von Indexseiten, die von der indexerstellung für die neue und Zuordnung Indizes (nicht NULL-Werte zulässt) zugeordnet. 
+|**page_count**|**bigint**|Die Gesamtanzahl von Indexseiten, die von der indexerstellung für die neue und Zuordnung Indizes (nicht NULL-Werte zulässt) zugeordnet.
 
-## <a name="permissions"></a>Berechtigungen  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
-   
-## <a name="example"></a>Beispiel  
- Dient zum Listen Sie aller eines fortsetzbaren Index Rebuild-Vorgänge auf, die sich im Zustand "angehalten" befinden. 
-  
-```  
+## <a name="permissions"></a>Berechtigungen
+
+[!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+
+## <a name="example"></a>Beispiel
+
+ Dient zum Listen Sie aller eines fortsetzbaren Index Rebuild-Vorgänge auf, die sich im Zustand "angehalten" befinden.
+
+```sql
 SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;  
-```  
-  
-## <a name="see-also"></a>Siehe auch 
- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)    
- [Katalogsichten &#40;Transact-SQL&#41; ](catalog-views-transact-sql.md) [Objekt Katalogsichten &#40;Transact-SQL&#41; ](object-catalog-views-transact-sql.md) [sys.indexes &#40;Transact-SQL&#41; ](sys-xml-indexes-transact-sql.md) [index_columns &#40;Transact-SQL&#41;](sys-index-columns-transact-sql.md)   
- [sys.xml_indexes &#40;Transact-SQL&#41;](sys-xml-indexes-transact-sql.md)   
- [sys.objects &#40;Transact-SQL&#41;](sys-index-columns-transact-sql.md)   
- [sys.key_constraints &#40;Transact-SQL&#41;](sys-key-constraints-transact-sql.md)   
- [sys.filegroups &#40;Transact-SQL&#41;](sys-filegroups-transact-sql.md)   
- [sys.partition_schemes &#40;Transact-SQL&#41;](sys-partition-schemes-transact-sql.md)   
- [Häufig gestellte Fragen zu Abfragen des SQL Server-Systemkatalogs](querying-the-sql-server-system-catalog-faq.md)   
-  
+```
+
+## <a name="see-also"></a>Siehe auch
+
+- [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)
+- [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)
+- [Katalogsichten](catalog-views-transact-sql.md)
+- [Katalogsichten für Objekte](object-catalog-views-transact-sql.md)
+- [sys.indexes](sys-xml-indexes-transact-sql.md)
+- [sys.index_columns](sys-index-columns-transact-sql.md)
+- [sys.xml_indexes](sys-xml-indexes-transact-sql.md)
+- [sys.objects](sys-index-columns-transact-sql.md)
+- [sys.key_constraints](sys-key-constraints-transact-sql.md)
+- [sys.filegroups](sys-filegroups-transact-sql.md)
+- [sys.partition_schemes](sys-partition-schemes-transact-sql.md)
+- [Häufig gestellte Fragen zu Abfragen des SQL Server-Systemkatalogs](querying-the-sql-server-system-catalog-faq.md)
