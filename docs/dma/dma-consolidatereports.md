@@ -2,7 +2,7 @@
 title: Ein Unternehmen zu bewerten und Konsolidieren von assessmentberichten (SQL Server) | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie mit DMA ein Unternehmens zu bewerten und Konsolidieren von assessmentberichten vor dem Upgrade von SQL Server oder die Migration zu Azure SQL-Datenbank.
 ms.custom: ''
-ms.date: 10/22/2018
+ms.date: 02/20/20198
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: d26de5c86485e6e7a2c6a11b8528c55c8ce92229
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: cd3951aaddc19a7b96cc7645084166f19d41422b
+ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300087"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56464776"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Ein Unternehmen zu bewerten und Konsolidieren von assessmentberichten mit DMA
 
@@ -37,15 +37,15 @@ Die folgenden schrittweisen Anweisungen helfen Ihnen die im Data Migration Assis
     - [Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).
     - [Azure PowerShell-Module](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - Herunterladen und extrahieren:
-    - Die [DMA Berichte Power BI-Vorlage](https://msdnshared.blob.core.windows.net/media/2018/04/PowerBI-Reports1.zip).
-    - Die [LoadWarehouse Skript](https://msdnshared.blob.core.windows.net/media/2018/10/LoadWarehouse.zip).
+    - Die [DMA Berichte Power BI-Vorlage](https://msdnshared.blob.core.windows.net/media/2019/02/PowerBI-Reports1.zip).
+    - Die [LoadWarehouse Skript](https://msdnshared.blob.core.windows.net/media/2019/02/LoadWarehouse.zip).
 
 ## <a name="loading-the-powershell-modules"></a>Laden die PowerShell-Module
 Die PowerShell-Module in der PowerShell-Module-Verzeichnis zu speichern, können Sie rufen die Module, ohne dass sie vor der Verwendung explizit zu laden.
 
 Führen Sie die folgenden Schritte aus, um die Module zu laden:
 1. Navigieren Sie zu c:\Programme\Microsoft Files\WindowsPowerShell\Modules, und erstellen Sie einen Ordner mit dem Namen **DataMigrationAssistant**.
-2. Öffnen der [PowerShell-Module](https://msdnshared.blob.core.windows.net/media/2018/10/PowerShell-Modules.zip), und speichern Sie sie in den Ordner, die Sie erstellt haben.
+2. Öffnen der [PowerShell-Module](https://msdnshared.blob.core.windows.net/media/2019/02/PowerShell-Modules.zip), und speichern Sie sie in den Ordner, die Sie erstellt haben.
 
       ![PowerShell-Module](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 
@@ -97,13 +97,13 @@ Nach dem Laden die PowerShell-Module in das Modulverzeichnis, und erstellen eine
 
 Die Parameter der Funktion DmaDataCollector zugeordnet werden in der folgenden Tabelle beschrieben.
 
-|Parameter  |Description
+|Parameter  |Description |
 |---------|---------|
 |**getServerListFrom** | Ihr Inventar. Mögliche Werte sind **SqlServer** und **CSV**.<br/>Weitere Informationen finden Sie unter [Erstellung eines Inventars aus SQL Server-Instanzen](#create-inventory). |
 |**serverName** | Die Namen der SQL Server-Instanz des Bestands Verwendung **SqlServer** in die **GetServerListFrom** Parameter. |
 |**databaseName** | Die Datenbank, die die Bestandstabelle hosten. |
 |**%Assessmentname** | Der Name des der DMA-Bewertung. |
-|**TargetPlatform** | Der Zieltyp für die Bewertung, den Sie ausführen möchten.  Mögliche Werte sind **"azuresqldatabase"**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**,  **SQLServerLinux2017**, und **SQLServerWindows2017**. |
+|**TargetPlatform** | Der Zieltyp für die Bewertung, den Sie ausführen möchten.  Mögliche Werte sind **"azuresqldatabase"**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**,  **SQLServerLinux2017**, **SQLServerWindows2017**, und **ManagedSqlServer**. |
 |**AuthenticationMethod** | Die Authentifizierungsmethode für die Verbindung mit der SQL Server-Ziele, die Sie bewerten möchten. Mögliche Werte sind **SQLAuth** und **WindowsAuth**. |
 |**OutputLocation** | Das Verzeichnis, in dem die JSON-Speicherung Bewertung der Ausgabedatei. Abhängig von der Anzahl der Datenbanken, die bewertet wird und die Anzahl der Objekte in Datenbanken können die Bewertungen außergewöhnlich lange dauern. Nachdem alle Bewertungen abgeschlossen haben, wird die Datei geschrieben werden. |
 
@@ -119,9 +119,9 @@ Nach Abschluss der Bewertung können Sie sich nun um die Daten in SQL Server fü
 
 Die Parameter der Funktion DmaProcessor zugeordnet werden in der folgenden Tabelle beschrieben.
 
-|Parameter  |Description
+|Parameter  |Description |
 |---------|---------|
-|**processTo**  | Der Speicherort, zu dem die JSON-Datei verarbeitet werden. Mögliche Werte sind **SQLServer** und **"azuresqldatabase"**. |
+|**processTo** | Der Speicherort, zu dem die JSON-Datei verarbeitet werden. Mögliche Werte sind **SQLServer** und **"azuresqldatabase"**. |
 |**serverName** | Die SQL Server-Instanz, auf die Daten verarbeitet werden.  Bei Angabe von **"azuresqldatabase"** für die **ProcessTo** Parameter, fügen Sie dann nur die Namen der SQL Server (nicht enthalten. database.windows.net). Sie werden für zwei Anmeldungen aufgefordert werden, bei der Azure SQL-Datenbank als Ziel; die erste ist der Anmeldeinformationen Ihres Azure-Mandanten, während die zweite die administratoranmeldung für den Azure SQL-Server ist. |
 |**CreateDMAReporting** | Die Stagingdatenbank, für die Verarbeitung der JSON-Datei zu erstellen.  Wenn die Datenbank bereits vorhanden ist, und legen Sie diesen Parameter auf einen, klicken Sie dann Objekte nicht erstellt.  Dieser Parameter ist hilfreich für Sie neu erstellen ein einzelnes Objekt, das gelöscht wurde. |
 |**CreateDataWarehouse** | Erstellt die Datawarehouse, das von Power BI-Bericht verwendet wird. |
@@ -161,22 +161,43 @@ Sie können auch das LoadWarehouse-Skript verwenden, um die grundlegenden TSQL-A
 
    Nachdem der Bericht die Daten aktualisiert hat die **DMAWarehouse** Datenbank daraufhin mit einem Bericht, der dem folgenden ähnelt.
 
-   ![Ansicht "Bericht" DMAWarehouse](../dma/media//dma-consolidatereports/dma-DMAWarehouse-report.png)
+   ![Ansicht "Bericht" DMAWarehouse](../dma/media//dma-consolidatereports/dma-DMAWarehouse-report1.png)
 
    > [!TIP]
-   > Wenn Sie die Daten, die Sie erwartet, nicht angezeigt werden, versuchen Sie, die aktive Lesezeichen zu ändern.  Weitere Informationen finden Sie im Abschnitt Funktionalität.
+   > Wenn Sie die Daten, die Sie erwartet, nicht angezeigt werden, versuchen Sie, die aktive Lesezeichen zu ändern.  Weitere Informationen finden Sie unter der die Details im folgenden Abschnitt.
 
 ## <a name="working-with-dma-reports"></a>Arbeiten mit DMA-Berichten
-Um einen Bericht über DMA zu arbeiten, verwenden Sie Slicer zum Filtern nach:
+Um mit DMA-Berichten zu arbeiten, verwenden Sie Lesezeichen und Slicer zum Filtern nach:
+- Assessment-Typen (Azure SQL-Datenbank, Azure SQL-MI, SQL lokal) 
 - Der Instanzname.
 - Datenbankname
 - Teamname
 
-Sie können Lesezeichen auch verwenden, den reporting Kontext zwischen wechseln:
-- Cloud-Bewertungen
+Wählen Sie das Blatt "Lesezeichen" und "Filter" für den Zugriff auf das Filter-Lesezeichen auf der Seite Hauptbericht aus:
+
+![DMA Bericht Lesezeichen und Filter](../dma/media//dma-consolidatereports/dma-report-bookmarks-filters.png)
+
+Dadurch kann das folgende Blatt:
+
+![Berichtsansichten DMA-Blatt](../dma/media//dma-consolidatereports/dma-report-views-blade.png)
+
+Sie können Lesezeichen verwenden, den reporting Kontext zwischen wechseln:
+- Azure SQL-Datenbank-Cloud-Bewertungen
+- Azure SQL-MI-Cloud-Bewertungen
 - Lokale Bewertungen
 
-  ![DMA Bericht Lesezeichen](../dma/media//dma-consolidatereports/dma-report-bookmarks.png)
+  ![DMA-Berichtsansichten Lesezeichen](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)
+
+So blenden Sie das Blatt "Filter", STRG-Taste auf die Schaltfläche "zurück" aus:
+
+![Schaltfläche "zurück" DMA-Berichtsansichten](../dma/media//dma-consolidatereports/dma-report-bookmarks-back.png)
+
+Es gibt eine Eingabeaufforderung auf der unteren linken Ecke des der Berichtsseite angezeigt, ob auf eine der folgenden aktuell ein Filter angewendet wird:
+* FactAssessment – InstanceName
+* FactAssessment – DatabaseName
+* dimDBOwner - DBOwner
+
+![Angewendete Filter-Eingabeaufforderung](../dma/media//dma-consolidatereports/dma-filter-applied-prompt.png)
 
 > [!NOTE]
 > Wenn Sie nur eine Bewertung der Azure SQL-Datenbank ausführen, werden nur Cloud Berichte gefüllt. Wenn Sie nur eine lokale Bewertung durchführen, werden dagegen nur für lokale Berichte aufgefüllt. Aber wenn Sie sowohl Azure als auch eine lokale Bewertung führen und dann beide Bewertungen in das Warehouse laden, können Sie zwischen Cloud und lokale Berichte gedrückter STRG-Taste das entsprechende Symbol wechseln.
