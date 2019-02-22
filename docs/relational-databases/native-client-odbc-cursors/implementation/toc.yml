@@ -1,8 +1,0 @@
-- name: Implementieren von Cursorn
-  href: how-cursors-are-implemented.md
-- name: ODBC-Cursorbibliothek
-  href: odbc-cursor-library.md
-- name: Verwenden von Servercursorn
-  href: using-server-cursors.md
-- name: Verwenden von SQL Server-Standardresultsets
-  href: using-sql-server-default-result-sets.md

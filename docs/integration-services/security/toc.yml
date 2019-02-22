@@ -1,8 +1,0 @@
-- name: Übersicht
-  href: security-overview-integration-services.md
-- name: Zugriffssteuerung für vertrauliche Daten in Paketen
-  href: access-control-for-sensitive-data-in-packages.md
-- name: Identifizieren der Quelle von Paketen mit digitalen Signaturen
-  href: identify-the-source-of-packages-with-digital-signatures.md
-- name: Integration Services-Rollen (SSIS-Dienst)
-  href: integration-services-roles-ssis-service.md

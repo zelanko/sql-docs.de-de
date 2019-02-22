@@ -1,8 +1,0 @@
-- name: Cursoreigenschaften
-  href: cursor-properties.md
-- name: Cursorparallelität (ODBC)
-  href: cursor-concurrency-odbc.md
-- name: Cursorrowsetgröße
-  href: cursor-rowset-size.md
-- name: Transaktionsisolationsstufen von Cursorn
-  href: cursor-transaction-isolation-level.md

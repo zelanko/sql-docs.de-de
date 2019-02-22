@@ -1,8 +1,0 @@
-- name: Angeben eines Speicherortpfads (SQLXML 4.0)
-  href: specifying-a-location-path-sqlxml-4-0.md
-- name: Angeben eines Knotentests unter dem Speicherortpfad (SQLXML 4.0)
-  href: specifying-a-node-test-in-the-location-path-sqlxml-4-0.md
-- name: Angeben einer Achse (SQLXML 4.0)
-  href: specifying-an-axis-sqlxml-4-0.md
-- name: 'Angeben von Auswahlprädikaten im Speicherortpfad (SQLXML 4.0) '
-  href: specifying-selection-predicates-in-the-location-path-sqlxml-4-0.md
