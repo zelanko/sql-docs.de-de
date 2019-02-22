@@ -2,7 +2,7 @@
 title: Ein Unternehmen zu bewerten und Konsolidieren von assessmentberichten (SQL Server) | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie mit DMA ein Unternehmens zu bewerten und Konsolidieren von assessmentberichten vor dem Upgrade von SQL Server oder die Migration zu Azure SQL-Datenbank.
 ms.custom: ''
-ms.date: 02/20/20198
+ms.date: 02/21/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: cd3951aaddc19a7b96cc7645084166f19d41422b
-ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
+ms.openlocfilehash: 400876a2738c2ca791d3aee12da20c9af1db5b9f
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/21/2019
-ms.locfileid: "56464776"
+ms.locfileid: "56590345"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Ein Unternehmen zu bewerten und Konsolidieren von assessmentberichten mit DMA
 
@@ -186,7 +186,7 @@ Sie können Lesezeichen verwenden, den reporting Kontext zwischen wechseln:
 - Azure SQL-MI-Cloud-Bewertungen
 - Lokale Bewertungen
 
-  ![DMA-Berichtsansichten Lesezeichen](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)
+![DMA-Berichtsansichten Lesezeichen](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)
 
 So blenden Sie das Blatt "Filter", STRG-Taste auf die Schaltfläche "zurück" aus:
 
