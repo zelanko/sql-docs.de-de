@@ -13,12 +13,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 5f9392d0ba5b07a489caffdd2e496051e842b1c8
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
-ms.translationtype: MTE75
+ms.openlocfilehash: 6b9ea2618f51eb167f63232b79c61d9ecdc0e746
+ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52984061"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331610"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Installieren von Microsoft ODBC Driver for SQL Server unter Linux und macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -147,7 +147,7 @@ sudo apt-get install unixodbc-dev
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-brew install --no-sandbox msodbcsql17 mssql-tools
+brew install msodbcsql17 mssql-tools
 ```
 
 ## <a name="microsoft-odbc-driver-131-for-sql-server"></a>Microsoft ODBC Driver 13.1 for SQL Server 
@@ -169,7 +169,7 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 
-### <a name="redhat-enterprise-server-6"></a>Red Hat Enterprise Server 6
+### <a name="redhat-enterprise-server-6"></a>RedHat Enterprise Server 6
 ```
 sudo su
 curl https://packages.microsoft.com/config/rhel/6/prod.repo > /etc/yum.repos.d/mssql-release.repo
@@ -295,7 +295,7 @@ brew install --no-sandbox msodbcsql@13.1.9.2 mssql-tools@14.0.6.0
 
 ## <a name="microsoft-odbc-driver-13-for-sql-server"></a>Microsoft ODBC Driver 13 for SQL Server
 
-### <a name="redhat-enterprise-server-6"></a>Red Hat Enterprise Server 6
+### <a name="redhat-enterprise-server-6"></a>RedHat Enterprise Server 6
 ```
 sudo su
 curl https://packages.microsoft.com/config/rhel/6/prod.repo > /etc/yum.repos.d/mssql-release.repo
@@ -366,11 +366,11 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 
 ### <a name="offline-installation"></a>Offlineinstallation
 Wenn Sie lieber/erfordern die [!INCLUDE[msCoName](../../../includes/msconame_md.md)] Odbcdriver 13, die auf einem Computer ohne Internetverbindung installiert werden, Sie müssen paketabhängigkeiten manuell auflösen. Die [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 gelten die folgenden direkten Abhängigkeiten:
-- Ubuntu: libc6 (> = 2.21), Libstdc ++ 6 (> = 4.9), libkrb5-3 "," libcurl3 "," Openssl "," Debconf (> = 0,5), Unixodbc (> = 2.3.1-1)
+- Ubuntu: libc6 (>= 2.21), libstdc++6 (>= 4.9), libkrb5-3, libcurl3, openssl, debconf (>= 0.5), unixodbc (>= 2.3.1-1)
 - Red Hat: ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
 - SuSE: ```glibc, libuuid1, krb5, openssl, unixODBC```
 
-Jedes dieser Pakete hat wiederum eigene Abhängigkeiten auf, die nicht unbedingt auf dem System vorhanden. Eine allgemeine Lösung für dieses Problem finden Sie in der Dokumentation der Distribution-Paket-Manager: [RedHat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), und [SUSE](https://en.opensuse.org/Portal:Zypper)
+Jedes dieser Pakete hat wiederum eigene Abhängigkeiten auf, die nicht unbedingt auf dem System vorhanden. Eine allgemeine Lösung für dieses Problem, finden Sie in der Dokumentation der Distribution-Paket-Manager: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), und [SUSE](https://en.opensuse.org/Portal:Zypper)
 
 Es ist auch üblich, alle abhängigen Pakete manuell herunterladen platzieren Sie sie zusammen, auf dem Installationscomputer, und installieren jedes Paket manuell wiederum er abgeschlossen wird die [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13-Paket.
 
@@ -510,8 +510,8 @@ Der ODBC-Treiber unter Linux und MacOS umfasst die folgenden Komponenten:
 |---------------|-----------------|  
 |Libmsodbcsql-17. X.so.X.X oder Libmsodbcsql-13. X.so.X.X|Das freigegebene Objekt (`so`) der dynamischen Bibliotheksdatei, das die gesamte Funktionalität des Treibers enthält. Diese Datei wird im installiert `/opt/microsoft/msodbcsql17/lib64/` für den Treiber 17 und im `/opt/microsoft/msodbcsql/lib64/` für Driver 13.|  
 |`msodbcsqlr17.rll` oder `msodbcsqlr13.rll`|Die begleitende Ressourcendatei für die Treiberbibliothek. Diese Datei wird im installiert. `[driver .so directory]../share/resources/en_US/`| 
-|msodbcsql.h|Die Headerdatei, die alle erforderlichen neuen Definitionen für die Verwendung des Treibers enthält.<br /><br /> **Hinweis:**  Sie können nicht auf msodbcsql.h und odbcss.h im selben Programm verweisen.<br /><br /> "msodbcsql.h" wird im installiert `/opt/microsoft/msodbcsql17/include/` für Driver 17 und im `/opt/microsoft/msodbcsql/include/` für Driver 13. |
-|Dateien "License.txt"|Die Textdatei, die die Bedingungen des Endbenutzer-Lizenzvertrag enthält. Diese Datei befindet sich im `/usr/share/doc/msodbcsql17/` für Driver 17 und im `/usr/share/doc/msodbcsql/` für Driver 13.|
+|msodbcsql.h|Die Headerdatei, die alle erforderlichen neuen Definitionen für die Verwendung des Treibers enthält.<br /><br /> **Hinweis:**  Sie können nicht auf „msodbcsql.h“ und „odbcss.h“ im selben Programm verweisen.<br /><br /> "msodbcsql.h" wird im installiert `/opt/microsoft/msodbcsql17/include/` für Driver 17 und im `/opt/microsoft/msodbcsql/include/` für Driver 13. |
+|LICENSE.txt|Die Textdatei, die die Bedingungen des Endbenutzer-Lizenzvertrag enthält. Diese Datei befindet sich im `/usr/share/doc/msodbcsql17/` für Driver 17 und im `/usr/share/doc/msodbcsql/` für Driver 13.|
 |RELEASE_NOTES|Die Textdatei, die Anmerkungen zu dieser Version enthält. Diese Datei befindet sich im `/usr/share/doc/msodbcsql17/` für Driver 17 und im `/usr/share/doc/msodbcsql/` für Driver 13.|
 
 
@@ -521,8 +521,8 @@ Der ODBC-Treiber unter Linux und MacOS umfasst die folgenden Komponenten:
 |---------------|-----------------|  
 |libmsodbcsql.17.dylib oder libmsodbcsql.13.dylib|Die Datei (`dylib`) der dynamischen Bibliothek, die die gesamte Funktionalität des Treibers enthält. Diese Datei wird im installiert `/usr/local/lib/`.|  
 |`msodbcsqlr17.rll` oder `msodbcsqlr13.rll`|Die begleitende Ressourcendatei für die Treiberbibliothek. Diese Datei wird im installiert `[driver .dylib directory]../share/msodbcsql17/resources/en_US/` für Driver 17 und im `[driver .dylib directory]../share/msodbcsql/resources/en_US/` für Driver 13. | 
-|msodbcsql.h|Die Headerdatei, die alle erforderlichen neuen Definitionen für die Verwendung des Treibers enthält.<br /><br /> **Hinweis:**  Sie können nicht auf msodbcsql.h und odbcss.h im selben Programm verweisen.<br /><br /> "msodbcsql.h" wird im installiert `/usr/local/include/msodbcsql17/` für Driver 17 und im `/usr/local/include/msodbcsql/` für Driver 13. |
-|Dateien "License.txt"|Die Textdatei, die die Bedingungen des Endbenutzer-Lizenzvertrag enthält. Diese Datei befindet sich im `/usr/local/share/doc/msodbcsql17/` für Driver 17 und im `/usr/local/share/doc/msodbcsql/` für Driver 13. |
+|msodbcsql.h|Die Headerdatei, die alle erforderlichen neuen Definitionen für die Verwendung des Treibers enthält.<br /><br /> **Hinweis:**  Sie können nicht auf „msodbcsql.h“ und „odbcss.h“ im selben Programm verweisen.<br /><br /> "msodbcsql.h" wird im installiert `/usr/local/include/msodbcsql17/` für Driver 17 und im `/usr/local/include/msodbcsql/` für Driver 13. |
+|LICENSE.txt|Die Textdatei, die die Bedingungen des Endbenutzer-Lizenzvertrag enthält. Diese Datei befindet sich im `/usr/local/share/doc/msodbcsql17/` für Driver 17 und im `/usr/local/share/doc/msodbcsql/` für Driver 13. |
 |RELEASE_NOTES|Die Textdatei, die Anmerkungen zu dieser Version enthält. Diese Datei befindet sich im `/usr/local/share/doc/msodbcsql17/` für Driver 17 und im `/usr/local/share/doc/msodbcsql/` für Driver 13. |
 
 ## <a name="resource-file-loading"></a>Laden von Ressourcendateien
