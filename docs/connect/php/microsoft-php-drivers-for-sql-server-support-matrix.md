@@ -1,7 +1,7 @@
 ---
 title: Microsoft Drivers for PHP for SQLServer-Supportmatrix | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/20/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
 manager: ''
-ms.openlocfilehash: 82a8576365889d02381e3b18b622fd541b5b9235
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec5a151d79d9a66bfd65342336ad7aa3afcf567d
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728698"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744400"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Microsoft PHP-Treiber für SQL Server-Supportmatrix
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,7 +30,8 @@ ms.locfileid: "47728698"
  Die folgenden Microsoft PHP-Treiber werden bis zum angegebenen Supportende unterstützt.
 
 |Treibername|Version des Treiberpakets|Ende des Mainstream-Support|
-|-|-|-|
+|-|:-:|-|
+|Microsoft PHP-Treiber 5.6 für SQLServer|5.6|21 Februar 2024|
 |Microsoft PHP-Treiber 5.3 für SQLServer|5.3|20 Juli 2023|
 |Microsoft PHP-Treiber 5.2 für SQLServer|5.2|9 Februar 2023|
 |Microsoft PHP-Treiber 4.3 für SQLServer|4.3|6 Juli 2022|
@@ -41,7 +42,7 @@ ms.locfileid: "47728698"
  Die folgenden Microsoft PHP-Treiber werden nicht mehr unterstützt.
 
 |Treibername|Version des Treiberpakets|Ende des Mainstream-Support|
-|-|-|-|
+|-|:-:|-|
 |Microsoft PHP Drivers 3.0 for SQLServer|3.0|6. März 2017|
 |Microsoft PHP Drivers 2.0 for SQLServer|2.0|Am 10. August 2015|
 |Microsoft PHP-Treiber 1.0 für SQLServer|1,0|28. August 2014|
@@ -49,69 +50,75 @@ ms.locfileid: "47728698"
 ## <a name="sql-server-version-certified-compatibility"></a>SQL Server-Version, die Zertifizierung der Kompatibilität
  Die folgende Matrix enthält SQL Server-Versionen, die getestet und als kompatibel mit der entsprechenden Treiberversion zertifiziert wurden. Wir bemühen uns um die Abwärtskompatibilität mit vorherigen Treiberversionen, aber nur die neueste unterstützte Treiber wird getestet und zertifiziert mit neuen Versionen von SQL Server wie SQL Server veröffentlicht wird.
 
-|PHP für SQL Server-Treiberversion&#8594;<br />&#8595; SQL Server-Version|5.3 und 5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|3.0<br />&nbsp;|2.0<br />&nbsp;|
-|---|---|---|---|---|---|---|---|
-|Verwaltete Azure SQL-Instanz<br/> (Erweiterte Private Vorschau)|J|J| | | | | |
-|Azure SQL Data Warehouse|J|J| | | | | |
-|SQL Server 2017   |J|J| | | | | |
-|SQL Server 2016   |J|J|J| | | | |
-|SQLServer 2014   |J|J|J|J|J| | |
-|SQL Server 2012   |J|J|J|J|J|J| |
-|SQL Server 2008 R2|J|J|J|J|J|J|J|
-|SQL Server 2008   | | |J|J|J|J|J|
+|PHP für SQL Server-Treiberversion&#8594;<br />&#8595; SQL Server-Version|5.6|5.3|5.2|4.3|4.0|3.2|3.1|3.0|2.0|
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|Verwaltete Azure SQL-Instanz<br/> (Erweiterte Private Vorschau)|J|J|J|J| | | | | |
+|Azure SQL Data Warehouse|J|J|J|J| | | | | |
+|SQL Server 2017         |J|J|J|J| | | | | |
+|SQL Server 2016         |J|J|J|J|J| | | | |
+|SQLServer 2014         |J|J|J|J|J|J|J| | |
+|SQL Server 2012         |J|J|J|J|J|J|J|J| |
+|SQL Server 2008 R2      |J|J|J|J|J|J|J|J|J|
+|SQL Server 2008         | | | | |J|J|J|J|J|
 
 ## <a name="php-version-support"></a>Unterstützung von PHP-Versionen
  Die folgenden Versionen von PHP werden mit die aufgeführte Version von Microsoft PHP-Treiber unterstützt:
 
-|PHP für SQL Server-Treiberversion&#8594;<br />&#8595; PHP-Version|5.3 und 5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|3.0<br />&nbsp;|2.0<br />&nbsp;|
-|---|---|---|---|---|---|---|---|
-|7.2|7.2.1 und höher unter Windows<br/>7.2.0+ auf anderen Plattformen| | | | | | |
-|7.1|7.1.0+ |7.1.0+ |       |        |        |        |        |
-|7.0|7.0.0+ |7.0.0+ |7.0.0+ |        |        |        |        |
-|5.6|       |       |       |5.6.4 +  |        |        |        |
-|5.5|       |       |       |5.5.16 + |5.5.16 + |        |        |
-|5.4|       |       |       |5.4.32  |5.4.32  |5.4.32  |        |
-|5.3|       |       |       |        |        |5.3.0   |5.3.0   |
-|5.2|       |       |       |        |        |        |5.2.4<br />5.2.13|
+|PHP für SQL Server-Treiberversion&#8594;<br />&#8595; PHP-Version|5.6|5.3|5.2|4.3|4.0|3.2|3.1|3.0|2.0|
+|:---:|---|---|---|---|---|---|---|---|---|
+|7.3|7.3.0+          |                |                |       |       | | | | |
+|7.2|7.2+<sup>1</sup>|7.2+<sup>1</sup>|7.2+<sup>1</sup>|       |       | | | | |
+|7.1|7.1.0+          |7.1.0+          |7.1.0+          |7.1.0+ |       |        |        |        |        |
+|7.0|                |7.0.0+          |7.0.0+          |7.0.0+ |7.0.0+ |        |        |        |        |
+|5.6|                |                |                |       |       |5.6.4+  |        |        |        |
+|5.5|                |                |                |       |       |5.5.16+ |5.5.16+ |        |        |
+|5.4|                |                |                |       |       |5.4.32  |5.4.32  |5.4.32  |        |
+|5.3|                |                |                |       |       |        |        |5.3.0   |5.3.0   |
+|5.2|                |                |                |       |       |        |        |        |5.2.4<br />5.2.13|
+
+1. Versionen 7.2.1 und höher auf Windows, unterstützt werden, während Versionen 7.2.0 und höher unter Linux und MacOS unterstützt.
 
 ## <a name="supported-operating-systems"></a>Unterstützte Betriebssysteme
  Die folgenden Versionen des Windows-Betriebssystem werden mit die aufgeführte Version von Microsoft PHP-Treiber unterstützt:
 
-|PHP für SQL Server-Treiberversion&#8594;<br />&#8595; Betriebssystem|5.3 und 5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|3.0<br />&nbsp;|2.0<br />&nbsp;|
-|---|---|---|---|---|---|---|---|
-|Windows Server 2016                 |J  |J  |   |   |   |   |   |
-|Windows Server 2012 R2              |J  |J  |J  |J  |J  |   |   |
-|Windows Server 2012                 |J  |J  |J  |J  |J  |   |   |
-|Windows Server 2008 R2 SP1          |   |   |J  |J  |J  |J  |   |
-|Windows Server 2008 R2              |   |   |   |   |   |   |J  |
-|Windows Server 2008 SP2             |   |   |J  |J  |J  |J  |   |
-|Windows Server 2008                 |   |   |   |   |   |   |J  |
-|Windows Server 2003 SP1             |   |   |   |   |   |   |J  |
-|Windows 10                          |J  |J  |J  |   |   |   |   |
-|Windows 8.1                         |J  |J  |J  |J  |J  |   |   |
-|Windows 8                           |   |J  |J  |J  |J  |   |   |
-|Windows 7 SP1                       |   |   |J  |J  |J  |J  |   |
-|Windows Vista SP2                   |   |   |J  |J  |J  |J  |J  |
-|Windows XP SP3                      |   |   |   |   |   |   |J  |
+|PHP für SQL Server-Treiberversion&#8594;<br />&#8595; Betriebssystem|5.6|5.3|5.2|4.3|4.0|3.2|3.1|3.0|2.0|
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|Windows Server 2016                 |J  |J  |J  |J  |   |   |   |   |   |
+|Windows Server 2012 R2              |J  |J  |J  |J  |J  |J  |J  |   |   |
+|Windows Server 2012                 |J  |J  |J  |J  |J  |J  |J  |   |   |
+|Windows Server 2008 R2 SP1          |   |   |   |   |J  |J  |J  |J  |   |
+|Windows Server 2008 R2              |   |   |   |   |   |   |   |   |J  |
+|Windows Server 2008 SP2             |   |   |   |   |J  |J  |J  |J  |   |
+|Windows Server 2008                 |   |   |   |   |   |   |   |   |J  |
+|Windows Server 2003 SP1             |   |   |   |   |   |   |   |   |J  |
+|Windows 10                          |J  |J  |J  |J  |J  |   |   |   |   |
+|Windows 8.1                         |J  |J  |J  |J  |J  |J  |J  |   |   |
+|Windows 8                           |   |   |   |J  |J  |J  |J  |   |   |
+|Windows 7 SP1                       |   |   |   |   |J  |J  |J  |J  |   |
+|Windows Vista SP2                   |   |   |   |   |J  |J  |J  |J  |J  |
+|Windows XP SP3                      |   |   |   |   |   |   |   |   |J  |
 
  Die folgenden Linux und Mac-Betriebssystemversionen (nur 64-Bit) werden mit die aufgeführte Version von Microsoft PHP-Treiber unterstützt:
 
-|PHP für SQL Server-Treiberversion&#8594;<br />&#8595; Betriebssystem|5.3<br />&nbsp;|5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|3.0<br />&nbsp;|2.0<br />&nbsp;|
-|--|---|---|---|---|---|---|---|---|
-|Ubuntu 18.04 (64-Bit)               |J  |   |   |   |   |   |   |   |
-|Ubuntu 17.10 (64-Bit)               |J  |J  |   |   |   |   |   |   |
-|Ubuntu 16.04 (64-Bit)               |J  |J  |J  |J  |   |   |   |   |
-|Ubuntu 15.10 (64-Bit)               |   |   |J  |   |   |   |   |   |
-|Ubuntu 15.04 (64-Bit)               |   |   |   |J  |   |   |   |   |
-|Debian 9 (64-Bit)                   |J  |J  |   |   |   |   |   |   |
-|Debian 8 (64-Bit)                   |J  |J  |J  |   |   |   |   |   |
-|Red Hat Enterprise Linux 7 (64-Bit) |J  |J  |J  |J  |   |   |   |   |
-|SuSE Enterprise Linux 12 (64-Bit)   |J  |J  |   |   |   |   |   |   |
-|MacOS High Sierra (64-Bit)          |J  |   |   |   |   |   |   |   |
-|MacOS Sierra (64-Bit)               |J  |J  |J  |   |   |   |   |   |
-|MacOS El Capitan (64-Bit)           |J  |J  |J  |   |   |   |   |   |
+|PHP für SQL Server-Treiberversion&#8594;<br />&#8595; Betriebssystem|5.6|5.3|5.2|4.3|4.0|3.2|3.1|3.0|2.0|
+|--|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|Ubuntu 18.10 (64-bit)               |J  |   |   |   |   |   |   |   |   |
+|Ubuntu 18.04 (64-bit)               |J  |J  |   |   |   |   |   |   |   |
+|Ubuntu 17.10 (64-bit)               |   |J  |J  |   |   |   |   |   |   |
+|Ubuntu 16.04 (64-bit)               |J  |J  |J  |J  |J  |   |   |   |   |
+|Ubuntu 15.10 (64-bit)               |   |   |   |J  |   |   |   |   |   |
+|Ubuntu 15.04 (64-bit)               |   |   |   |   |J  |   |   |   |   |
+|Debian 9 (64-Bit)                   |J  |J  |J  |   |   |   |   |   |   |
+|Debian 8 (64-Bit)                   |J  |J  |J  |J  |   |   |   |   |   |
+|Red Hat Enterprise Linux 7 (64-Bit) |J  |J  |J  |J  |J  |   |   |   |   |
+|SuSE Enterprise Linux 15 (64-Bit)   |J  |   |   |   |   |   |   |   |   |
+|SuSE Enterprise Linux 12 (64-Bit)   |J  |J  |J  |   |   |   |   |   |   |
+|MacOS Mojave (64-Bit)               |J  |   |   |   |   |   |   |   |   |
+|MacOS High Sierra (64-Bit)          |J  |J  |   |   |   |   |   |   |   |
+|MacOS Sierra (64-Bit)               |J  |J  |J  |J  |   |   |   |   |   |
+|MacOS El Capitan (64-Bit)           |   |J  |J  |J  |   |   |   |   |   |
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Versionsanmerkungen](../../connect/php/release-notes-for-the-php-sql-driver.md)
 
 [Supportressourcen](../../connect/php/support-resources-for-the-php-sql-driver.md)

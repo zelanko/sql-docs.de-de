@@ -28,18 +28,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fbbf5a3ad4c3d6a667ae2622e5bf09ea5f39c911
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: bdea0473176e08c51931f1bb192462c5c45ee514
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300103"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802376"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [Teilen Sie uns Ihr Feedback zu SQL-Dokumentation des Inhaltsverzeichnisses!](https://aka.ms/sqldocsurvey)
 
 > SQL Server 2014 und niedriger, finden Sie unter [Hilfsprogramms "Sqlcmd"](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-2014
 > ).
@@ -55,7 +52,7 @@ ms.locfileid: "54300103"
 
 Das Hilfsprogramm verwendet ODBC, um Transact-SQL-Batches auszuführen.
 
-## <a name="download-the-latest-version-of-sqlcmd-utility"></a>Herunterladen der neuesten Version des Hilfsprogramms "Sqlcmd"
+## <a name="download-the-latest-version-of-sqlcmd-utility"></a>Herunterladen der aktuellen Version des bcp-Hilfsprogramms
 
 **[![Download](../ssdt/media/download.png) Microsoft Befehlszeilen-Hilfsprogramme 15.0.x für SQL Server (x64) herunterladen (2,4 MB)](https://go.microsoft.com/fwlink/?linkid=2043518)**
 <br>**[![Download](../ssdt/media/download.png) Microsoft Befehlszeilen-Hilfsprogramme 15.0.x für SQL Server (x86) herunterladen (2,2 MB)](https://go.microsoft.com/fwlink/?linkid=2043622)**
@@ -66,7 +63,7 @@ Die Befehlszeilentools sind allgemein verfügbar (GA-Version), sie werden jedoch
 
 Releasenummer: 15.0 <br>
 Buildnummer: 15.0.1000.34<br>
-Veröffentlichungsdatum 18. Oktober 2018
+Veröffentlichungsdatum: 18. Oktober 2018
 
 Die neue Version von SQLCMD unterstützt die Azure AD-Authentifizierung, einschließlich der Multi-Factor Authentication-Unterstützung (MFA) für SQL-Datenbank, SQL Data Warehouse und Always Encrypted-Features.
 Die neue BCP unterstützt die Azure AD-Authentifizierung, einschließlich der Multi-Factor Authentication-Unterstützung (MFA) für SQL-Datenbank und SQL Data Warehouse.
@@ -80,7 +77,7 @@ Um zu überprüfen, führen Sie die SQLCMD-Version `sqlcmd -?` -Befehl aus, und 
 > [!NOTE]
 > Sie benötigen Version 13.1 oder höher, um die Unterstützung von Always Encrypted (`-g`) und Azure Active Directory-Authentifizierung (`-G`). (Möglicherweise haben Sie mehrere Versionen von „sqlcmd.exe“ auf Ihrem Computer installiert. Achten Sie darauf, dass Sie die richtige Version verwenden. Um die Version zu bestimmen, führen Sie `sqlcmd -?`aus.)
 
-Sie können über Azure Cloud Shell mit dem Hilfsprogramm Sqlcmd versuchen, wie sie bereits standardmäßig installiert wird: [![Starten Sie Cloudshell](https://shell.azure.com/images/launchcloudshell.png "Cloudshell starten")](https://shell.azure.com)
+Über Azure Cloud Shell mit dem Hilfsprogramm Sqlcmd können Sie versuchen, wie sie bereits standardmäßig installiert wird: [ ![Cloud Shell starten](https://shell.azure.com/images/launchcloudshell.png "Cloud Shell starten")](https://shell.azure.com)
 
   Um sqlcmd-Anweisungen in SSMS auszuführen, wählen Sie in der Navigations-Dropdownliste oben im Menü „Abfrage“ den Befehl „SQLCMD-Modus“ aus.  
   
@@ -215,7 +212,7 @@ Legt „Column Encryption Setting“ auf `Enabled`fest. Weitere Informationen hi
 
    Geben Sie zum Aktivieren der interaktiven Authentifizierung die Option „-G“ nur mit dem Benutzernamen (-U) und ohne ein Kennwort an.
 
-   Im folgenden Beispiel werden Daten mithilfe des interaktiven Azure AD-Modus exportiert. Hierbei wird ein Benutzername angegeben, der ein AAD-Konto darstellt. Dies ist das gleiche Beispiel, das im vorherigen Abschnitt verwendet: *Azure Active Directory-Benutzername und -Kennwort:*  
+   Im folgenden Beispiel werden Daten mithilfe des interaktiven Azure AD-Modus exportiert. Hierbei wird ein Benutzername angegeben, der ein AAD-Konto darstellt. Dies ist das gleiche Beispiel, das im vorherigen Abschnitt verwendet: *Azure Active Directory-Benutzernamen und das Kennwort*.  
 
    Im interaktiven Modus muss ein Kennwort manuell eingegeben werden.Bei Konten mit mehrstufiger Authentifizierung müssen Sie Ihre konfigurierte MFA-Authentifizierungsmethode vervollständigen.
 
@@ -248,10 +245,10 @@ Legt „Column Encryption Setting“ auf `Enabled`fest. Weitere Informationen hi
 **-j** Zeigt unformatierte Fehlermeldungen auf dem Bildschirm an.
   
  **-K** _Anwendungszweck_  
- Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einem Server. Der einzige derzeit unterstützte Wert ist **ReadOnly**. Wenn **-K** nicht angegeben ist, unterstützt das sqlcmd-Hilfsprogramm keine Konnektivität mit einem sekundären Replikat in einer AlwaysOn-Verfügbarkeitsgruppe. Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Lesbare sekundäre Replikate (Always On-Verfügbarkeitsgruppen)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
+ Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einem Server. Der einzige derzeit unterstützte Wert ist **ReadOnly**. Wenn **-K** nicht angegeben ist, unterstützt das sqlcmd-Hilfsprogramm keine Konnektivität mit einem sekundären Replikat in einer AlwaysOn-Verfügbarkeitsgruppe. Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Lesbare sekundäre Replikate (AlwaysOn-Verfügbarkeitsgruppen)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
 **-M** _Multisubnetz-Failover_  
- Geben Sie immer **-M** an, wenn Sie eine Verbindung mit dem Verfügbarkeitsgruppenlistener einer SQL Server-Verfügbarkeitsgruppe oder einer SQL Server-Failoverclusterinstanz herstellen. **-M** gewährleistet eine schnellere Erkennung und Verbindung mit dem (gerade) aktiven Server. Wenn **-M** nicht angegeben ist, ist **-M** deaktiviert. Weitere Informationen finden Sie unter [Listener, Clientkonnektivität, Anwendungsfailover](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Erstellung und Konfiguration von Verfügbarkeitsgruppen &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failoverclustering und Always On-Verfügbarkeitsgruppen (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx) und [Aktive Sekundäre: Lesbare sekundäre Replikate (Always On-Verfügbarkeitsgruppen)](https://msdn.microsoft.com/library/ff878253.aspx). 
+ Geben Sie immer **-M** an, wenn Sie eine Verbindung mit dem Verfügbarkeitsgruppenlistener einer SQL Server-Verfügbarkeitsgruppe oder einer SQL Server-Failoverclusterinstanz herstellen. **-M** gewährleistet eine schnellere Erkennung und Verbindung mit dem (gerade) aktiven Server. Wenn **-M** nicht angegeben ist, ist **-M** deaktiviert. Weitere Informationen finden Sie unter [Listener, Clientkonnektivität, Anwendungsfailover](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Erstellung und Konfiguration von Verfügbarkeitsgruppen &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx) und [Aktive Sekundäre: Lesbare sekundäre Replikate (AlwaysOn-Verfügbarkeitsgruppen)](https://msdn.microsoft.com/library/ff878253.aspx). 
   
  **-N**  
  Dieser Schalter wird vom Client verwendet, um eine verschlüsselte Verbindung anzufordern.  
@@ -840,7 +837,7 @@ An der Sqlcmd-Eingabeaufforderung Folgendes:
 
 `GO`
 
-Wenn Sie die EINGABETASTE drücken, wird die folgende informationsmeldung ausgegeben: Der Datenbankkontext wurde auf 'AdventureWorks2012' geändert.  
+Wenn Sie die EINGABETASTE drücken, wird die folgende Informationsmeldung ausgegeben: "Der Datenbankkontext wurde auf 'AdventureWorks2012' geändert."  
   
 ### <a name="output-format-from-transact-sql-queries"></a>Ausgabeformat von Transact-SQL-Abfragen  
  **sqlcmd** gibt zuerst eine Spaltenüberschrift aus, die die in der SELECT-Liste angegebenen Spaltennamen enthält. Die Spaltennamen werden durch das SQLCMDCOLSEP-Zeichen getrennt. Standardmäßig handelt es sich hierbei um ein Leerzeichen. Wenn der Spaltenname kürzer als die Spaltenbreite ist, wird die Ausgabe bis zur nächsten Spalte mit Leerzeichen aufgefüllt.  

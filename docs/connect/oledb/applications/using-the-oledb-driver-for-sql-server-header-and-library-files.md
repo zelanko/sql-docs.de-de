@@ -2,7 +2,7 @@
 title: Verwenden des OLE DB-Treibers für SQL Server-Header- und -Bibliotheksdateien | Microsoft-Dokumentation
 description: Verwenden des OLE DB-Treibers für SQL Server-Header- und -Bibliotheksdateien
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 9cd6a50bec611b7068b3f79f3867f9e2a6242a70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 528f55ba4a95da2f7e68de47ad25f88eae3af668
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816038"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744420"
 ---
 # <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>Verwenden des OLE DB-Treibers für SQL Server-Header- und -Bibliotheksdateien
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,18 +37,18 @@ ms.locfileid: "47816038"
   
  Der OLE DB-Treiber für SQL Server-Header und Bibliotheksdateien werden am folgenden Speicherort installiert:  
   
- *%Program*\Microsoft SQL Server\Client SDK\OLEDB\181\SDK  
+ *%Program*\Microsoft SQL Server\Client SDK\OLEDB\182\SDK  
   
  Der OLE DB-Treiber für SQL Server-Headerdatei (msoledbsql.h) kann verwendet werden, um OLE DB-Treiber für SQL Server-Funktionen für den Datenzugriff auf Ihre benutzerdefinierten Anwendungen hinzuzufügen. Die Headerdatei des OLE DB-Treibers für SQL Server enthält alle Definitionen, Attribute, Eigenschaften und Schnittstellen, damit Sie die neuen, in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] eingeführten Funktionen nutzen können.  
   
- Zusätzlich zu den OLE DB-Treiber für SQL Server-Headerdatei ist auch eine msoledbsql.lib Library-Datei handelt es sich die Exportbibliothek für [OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) Funktionalität.  
+ Zusätzlich zu den OLE DB-Treiber für SQL Server-Headerdatei ist auch eine msoledbsql.lib-Bibliotheksdatei, die die Exportbibliothek für [OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) Funktionalität.  
   
  Die Headerdatei des OLE DB-Treibers für SQL Server ist abwärtskompatibel mit der mit Microsoft Data Access Components (MDAC) verwendeten Headerdatei „sqloledb.h“, enthält aber weder die CLSIDs für SQLOLEDB (den in MDAC enthaltenen OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) noch die Symbole für die XML-Funktionalität. Letztere wird nicht vom OLE DB-Treiber für SQL Server unterstützt.    
   
  OLE DB-Anwendungen, die der OLE DB-Treiber für SQL Server verwenden müssen sich nur auf msoledbsql.h verweisen. Wenn eine Anwendung MDAC (SQLOLEDB) und den OLE DB-Treiber für SQL Server verwendet, kann sowohl auf „sqloledb.h“ als auch auf „msoledbsql.h“ verwiesen werden, unter der Voraussetzung, dass „sqloledb.h“ zuerst angegeben wird.  
   
-## <a name="using-the-ole-db-driver-for-sql-server-header-file"></a>Mithilfe des OLE DB-Treibers für SQL Server-Headerdatei  
- Um den OLE DB-Treiber für SQL Server-Headerdatei verwenden zu können, müssen Sie verwenden eine **enthalten** Anweisung in Ihrem C-/C++-Code zu programmieren. In den folgenden Abschnitten wird beschrieben, wie Sie diese OLE DB-Anwendungen.  
+## <a name="using-the-ole-db-driver-for-sql-server-header-file"></a>Mithilfe der OLE DB-Treiber für SQL Server-Headerdatei  
+ Um den OLE DB-Treiber für SQL Server-Headerdatei verwenden zu können, müssen Sie verwenden eine **enthalten** Anweisung in Ihrem C-/C++-Code zu programmieren. In den folgenden Abschnitten wird beschrieben, wie Sie ihn in OLE DB-Anwendungen.  
   
 > [!NOTE]  
 >  Der OLE DB-Treiber für SQL Server-Header- und-Bibliotheksdateien können nur kompilierte mithilfe von Visual Studio C++ 2012 oder höher sein.  
@@ -80,7 +80,7 @@ include "msoledbsql.h";
   
  Weitere Informationen finden Sie unter Performing [Durchführen von Massenkopiervorgängen](../../oledb/features/performing-bulk-copy-operations.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von Anwendungen mit dem OLE DB-Treiber für SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
   
   

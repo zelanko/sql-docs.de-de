@@ -1,7 +1,7 @@
 ---
 title: Sqlsrv_prepare | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/22/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc82d2860bf5e927556103a6c508b1cd662e4b42
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: bae6521aa7348bcafca86a5efa54c605fc887a28
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602920"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676148"
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -70,9 +70,13 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 |Key|Unterstützte Werte|und Beschreibung|  
 |-------|--------------------|---------------|  
-|QueryTimeout|Ein positiver ganzzahliger Wert|Legt das Abfragetimeout in Sekunden fest. Standardmäßig wartet der Treiber unbegrenzt auf Ergebnisse.|  
-|SendStreamParamsAtExec|**WAHR** oder **FALSCH**<br /><br />Der Standardwert ist **true**.|Konfiguriert den Treiber, um alle Streamdaten bei der Ausführung zu senden (**TRUE**) oder Streamdaten in Blöcken (**FALSE**) zu senden. In der Standardeinstellung ist dieser Wert mit **true**festgelegt. Weitere Informationen finden Sie unter [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
+|ClientBufferMaxKBSize|Positive Ganzzahl|Konfiguriert die Größe des Puffers, der das Resultset für einen clientseitigen Cursor enthält.<br /><br />Die Standardeinstellung ist 10240 KB. Weitere Informationen finden Sie [angeben eines Cursortyps und Zeilenauswahl](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|
+|Dezimalstellenanzeige|Eine ganze Zahl zwischen 0 und 4 (inklusiv)|Gibt an, dass die Dezimalstellen, die beim Formatieren von Money-Werte abgerufen.<br /><br />Eine negative ganze Zahl oder Wert größer als 4 werden ignoriert.<br /><br />Diese Option funktioniert nur, wenn FormatDecimals ist **"true"**.|
+|FormatDecimals|**WAHR** oder **FALSCH**<br /><br />Der Standardwert ist **false**.|Gibt an, ob das Hinzufügen von führenden Nullen auf Dezimalzeichenfolgen bei Bedarf und ermöglicht die `DecimalPlaces` Option für die Formatierung von Money-Typen.<br /><br />Weitere Informationen finden Sie unter [Dezimalzeichenfolgen Formatierung und Währungswerten (SQLSRV-Treiber)](../../connect/php/formatting-decimals-sqlsrv-driver.md).|
+|QueryTimeout|Positive Ganzzahl|Legt das Abfragetimeout in Sekunden fest. Standardmäßig wartet der Treiber unbegrenzt auf Ergebnisse.|  
+|ReturnDatesAsStrings|**WAHR** oder **FALSCH**<br /><br />Der Standardwert ist **false**.|Konfiguriert die Anweisung zum Abrufen von Datums- und Uhrzeittypen als Zeichenfolgen (**"true"**). Weitere Informationen finden Sie unter [So wird's gemacht: Datums- und Uhrzeittypen mittels des SQLSRV-Treibers als Zeichenfolgen abrufen](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).
 |Bildlauffähigkeit|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|Weitere Informationen zu diesen Werten finden Sie unter [Festlegen eines Cursortyps und Zeilenauswahl](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|  
+|SendStreamParamsAtExec|**WAHR** oder **FALSCH**<br /><br />Der Standardwert ist **true**.|Konfiguriert den Treiber, um alle Streamdaten bei der Ausführung zu senden (**TRUE**) oder Streamdaten in Blöcken (**FALSE**) zu senden. In der Standardeinstellung ist dieser Wert mit **true**festgelegt. Weitere Informationen finden Sie unter [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
   
 ## <a name="return-value"></a>Rückgabewert  
 Eine Anweisungsressource. Wenn die Anweisungsressource nicht erstellt werden kann, wird **false** zurückgegeben.  
@@ -246,7 +250,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Gewusst wie: Ausführen von parametrisierten Abfragen](../../connect/php/how-to-perform-parameterized-queries.md)

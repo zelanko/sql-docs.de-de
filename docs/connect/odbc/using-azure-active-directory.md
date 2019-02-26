@@ -11,19 +11,19 @@ ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 98f7e0ac3667bc8546a7bf7ce2d8036341bb2650
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 789046b7df230b88ca1761d1d89cc147074e12a9
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206599"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56663116"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>Verwenden von Azure Active Directory mit dem ODBC Driver
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ## <a name="purpose"></a>Zweck
 
-Microsoft ODBC Driver für SQL Server Version 13.1 oder höher ermöglicht ODBC-Anwendungen für die Verbindung mit einer Instanz von SQL Azure mithilfe eines Identitätsverbunds in Azure Active Directory mit Benutzername/Kennwort, ein Zugriffstoken für den Azure Active Directory oder Windows Integrierte Authentifizierung (_nur die Windows-Treiber_). Für den ODBC-Treiber Version 13.1, den Azure Active Directory-Zugriff, die die Tokenauthentifizierung ist _Windows nur_. Der ODBC-Treiber, Version 17 und unterstützen Sie über diese Authentifizierung auf allen Plattformen (Windows, Linux und Mac). Eine neue interaktive Azure Active Directory-Authentifizierung mit Anmelde-ID wird für Windows ODBC Driver, Version 17.1 eingeführt. Alle diese werden durch die Verwendung von neuen DSN und Schlüsselwörter für Verbindungszeichenfolgen sowie die Verbindungsattribute durchgeführt.
+Microsoft ODBC Driver für SQL Server Version 13.1 oder höher ermöglicht ODBC-Anwendungen für die Verbindung mit einer Instanz von SQL Azure mithilfe eines Identitätsverbunds in Azure Active Directory mit Benutzername/Kennwort, ein Zugriffstoken für den Azure Active Directory, Azure Active Directory verwalteten Dienstidentität oder integrierte Windows-Authentifizierung (_nur die Windows-Treiber_). Für den ODBC-Treiber Version 13.1, den Azure Active Directory-Zugriff, die die Tokenauthentifizierung ist _Windows nur_. Der ODBC-Treiber, Version 17 und unterstützen Sie über diese Authentifizierung auf allen Plattformen (Windows, Linux und Mac). Eine neue interaktive Azure Active Directory-Authentifizierung mit Anmelde-ID wird für Windows ODBC Driver, Version 17.1 eingeführt. Eine neue Azure Active Directory-managed Service Identität Authentifizierungsmethode wurde in ODBC-Treiber Version 17.3.1.1 für beide vom System zugewiesene und vom Benutzer zugewiesene Identitäten hinzugefügt. Alle diese werden durch die Verwendung von neuen DSN und Schlüsselwörter für Verbindungszeichenfolgen sowie die Verbindungsattribute durchgeführt.
 
 > [!NOTE]
 > Der ODBC-Treiber unter Linux und MacOS wird die Active Directory Federation Services nicht unterstützt. Wenn Sie Azure Active Directory-Benutzername/Kennwort-Authentifizierung von einem Linux-verwenden oder MacOS-Client und der Active Directory-Konfiguration enthält Verbunddiensten, kann die Authentifizierung fehl.
@@ -34,7 +34,7 @@ Die `Authentication` -Schlüsselwort kann verwendet werden bei der Verbindung mi
 
 |Name|Werte|Default|und Beschreibung|
 |-|-|-|-|
-|`Authentication`|(nicht festgelegt), (leere Zeichenfolge), `SqlPassword`, `ActiveDirectoryPassword`, `ActiveDirectoryIntegrated`, `ActiveDirectoryInteractive`|(nicht festgelegt)|Steuert den Authentifizierungsmodus an.<table><tr><th>value<th>und Beschreibung<tr><td>(nicht festgelegt)<td>Authentifizierungsmodus, der bestimmt, indem andere Schlüsselwörter (vorhandene ältere Verbindungsoptionen.)<tr><td>(leere Zeichenfolge)<td>Verbindungszeichenfolge: "{0}" Außer Kraft setzen und die Festlegung einer `Authentication` Wert festgelegt, in der DSN.<tr><td>`SqlPassword`<td>Authentifizieren Sie direkt auf einer SQL Server-Instanz, die mithilfe von Benutzername und Kennwort.<tr><td>`ActiveDirectoryPassword`<td>Authentifizieren Sie mit einer Azure Active Directory-Identität mit einem Benutzernamen und Kennwort ein.<tr><td>`ActiveDirectoryIntegrated`<td>_Nur Windows-Treiber_. Mit einer Azure Active Directory-Identität, die mithilfe der integrierten Authentifizierung authentifizieren.<tr><td>`ActiveDirectoryInteractive`<td>_Nur Windows-Treiber_. Über eine interaktive Authentifizierung mit Azure Active Directory-Identität authentifiziert.</table>|
+|`Authentication`|(nicht festgelegt), (leere Zeichenfolge), `SqlPassword`, `ActiveDirectoryPassword`, `ActiveDirectoryIntegrated`, `ActiveDirectoryInteractive`, `ActiveDirectoryMsi` |(nicht festgelegt)|Steuert den Authentifizierungsmodus an.<table><tr><th>value<th>und Beschreibung<tr><td>(nicht festgelegt)<td>Authentifizierungsmodus, der bestimmt, indem andere Schlüsselwörter (vorhandene ältere Verbindungsoptionen.)<tr><td>(leere Zeichenfolge)<td>Verbindungszeichenfolge: "{0}" Außer Kraft setzen und die Festlegung einer `Authentication` Wert festgelegt, in der DSN.<tr><td>`SqlPassword`<td>Authentifizieren Sie direkt auf einer SQL Server-Instanz, die mithilfe von Benutzername und Kennwort.<tr><td>`ActiveDirectoryPassword`<td>Authentifizieren Sie mit einer Azure Active Directory-Identität mit einem Benutzernamen und Kennwort ein.<tr><td>`ActiveDirectoryIntegrated`<td>_Nur Windows-Treiber_. Mit einer Azure Active Directory-Identität, die mithilfe der integrierten Authentifizierung authentifizieren.<tr><td>`ActiveDirectoryInteractive`<td>_Nur Windows-Treiber_. Über eine interaktive Authentifizierung mit Azure Active Directory-Identität authentifiziert.<tr><td>`ActiveDirectoryMsi`<td>Authentifizieren Sie mit Azure Active Directory-Identität, die mithilfe der verwalteten dienstidentitätsauthentifizierung. Für vom Benutzer zugewiesene Identität wird die UID zu entfernende Identität wurde der Benutzer die Objekt-ID festgelegt.</table>|
 |`Encrypt`|(nicht festgelegt), `Yes`, `No`|(siehe Beschreibung)|Steuert die Verschlüsselung für eine Verbindung. Wenn das erforderliche Attribut-Wert, der die `Authentication` Einstellung ist nicht _keine_ in der Zeichenfolge DSN- oder Verbindungszeichenfolge, der Standardwert ist `Yes`. Andernfalls ist der Standardwert `No`. Wenn das Attribut `SQL_COPT_SS_AUTHENTICATION` überschreibt den Wert des Pre-Attributs `Authentication`explizit legen Sie den Wert der Verschlüsselung in die DSN- oder Verbindungszeichenfolge oder Verbindungsattribut. Der erforderliche Attributwert der Verschlüsselung ist `Yes` , wenn der Wert, um festgelegt ist `Yes` in entweder die DSN-oder Verbindungszeichenfolge.|
 
 ## <a name="new-andor-modified-connection-attributes"></a>Neue und/oder geänderte Verbindungsattribute
@@ -43,7 +43,7 @@ Die folgenden verbinden vorab Verbindung Attribute entweder eingeführt oder ge�
 
 |attribute|Typ|Werte|Default|und Beschreibung|
 |-|-|-|-|-|
-|`SQL_COPT_SS_AUTHENTICATION`|`SQL_IS_INTEGER`|`SQL_AU_NONE`, `SQL_AU_PASSWORD`, `SQL_AU_AD_INTEGRATED`, `SQL_AU_AD_PASSWORD`, `SQL_AU_AD_INTERACTIVE`, `SQL_AU_RESET`|(nicht festgelegt)|Finden Sie in der Beschreibung der `Authentication` Schlüsselwort oben. `SQL_AU_NONE` wird bereitgestellt, um eine Gruppe explizit überschreiben `Authentication` Wert in der Zeichenfolge DSN und/oder Verbindung während `SQL_AU_RESET` das Attribut, wenn er festgelegt wurde, sodass der Zeichenfolgenwert DSN- oder Verbindungszeichenfolge vorrangig ist, hebt die Festlegung.|
+|`SQL_COPT_SS_AUTHENTICATION`|`SQL_IS_INTEGER`|`SQL_AU_NONE`, `SQL_AU_PASSWORD`, `SQL_AU_AD_INTEGRATED`, `SQL_AU_AD_PASSWORD`, `SQL_AU_AD_INTERACTIVE`, `SQL_AU_AD_MSI`, `SQL_AU_RESET`|(nicht festgelegt)|Finden Sie in der Beschreibung der `Authentication` Schlüsselwort oben. `SQL_AU_NONE` wird bereitgestellt, um eine Gruppe explizit überschreiben `Authentication` Wert in der Zeichenfolge DSN und/oder Verbindung während `SQL_AU_RESET` das Attribut, wenn er festgelegt wurde, sodass der Zeichenfolgenwert DSN- oder Verbindungszeichenfolge vorrangig ist, hebt die Festlegung.|
 |`SQL_COPT_SS_ACCESS_TOKEN`|`SQL_IS_POINTER`|Zeiger auf `ACCESSTOKEN` oder NULL|NULL|Wenn nicht Null ist, gibt Sie an das Azure AD-Zugriffstoken verwendet. Es ist ein Fehler an ein Zugriffstoken sowie `UID`, `PWD`, `Trusted_Connection`, oder `Authentication` Verbindungszeichenfolgen-Schlüsselwörter oder deren entsprechende Attribute. <br> **Hinweis:** ODBC Driver, Version 13.1 unterstützt dies nur auf _Windows_.|
 |`SQL_COPT_SS_ENCRYPT`|`SQL_IS_INTEGER`|`SQL_EN_OFF`, `SQL_EN_ON`|(siehe Beschreibung)|Steuert die Verschlüsselung für eine Verbindung. `SQL_EN_OFF` und `SQL_EN_ON` deaktivieren und aktivieren Sie Verschlüsselung bzw. Wenn das erforderliche Attribut-Wert, der die `Authentication` Einstellung ist nicht _keine_ oder `SQL_COPT_SS_ACCESS_TOKEN` festgelegt ist, und `Encrypt` wurde nicht angegeben in entweder die DSN- oder Verbindungszeichenfolge-Zeichenfolge, die standardmäßig `SQL_EN_ON`. Andernfalls ist der Standardwert `SQL_EN_OFF`. Wenn das Verbindungsattribut `SQL_COPT_SS_AUTHENTICATION` nastaven NA hodnotu nicht _keine_, legen Sie explizit `SQL_COPT_SS_ENCRYPT` auf den gewünschten Wert Wenn `Encrypt` wurde nicht in der Zeichenfolge DSN- oder Verbindungszeichenfolge angegeben. Der effektive Wert der dieses Attribut steuert [gibt an, ob Verschlüsselung für die Verbindung verwendet wird.](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation)|
 |`SQL_COPT_SS_OLDPWD`|\-|\-|\-|Mit Azure Active Directory, unterstützt nicht, da kennwortänderungen an AAD-Prinzipalen nicht über eine ODBC-Verbindung erreicht werden können. <br><br>Der Ablauf von Kennwörtern bei der SQL Server-Authentifizierung wurde mit SQL Server 2005 eingeführt. Die `SQL_COPT_SS_OLDPWD` -Attribut wurde hinzugefügt, damit der Client sowohl das alte als auch das neue Kennwort für die Verbindung angeben kann. Wenn diese Eigenschaft festgelegt ist, verwendet der Anbieter für die erste Verbindung oder für nachfolgende Verbindungen keinen Verbindungspool, da die Verbindungszeichenfolge das "alte Kennwort" enthält, das inzwischen geändert wurde.|
@@ -105,6 +105,12 @@ Diese Optionen entsprechen den gleichen fünf in der DSN-Setup-Benutzeroberfläc
 
 ![WindowsAzureAuth.png](windows/WindowsAzureAuth.png)
 
+8. AAD Managed Service Identity-Authentifizierung verwendet, die vom System zugewiesene oder vom Benutzer zugewiesene Identität für die Authentifizierung, um die Verbindung einzurichten. Für die vom Benutzer zugewiesene Identität wird Benutzer-ID auf die Objekt-ID, der die Identität des Benutzers festgelegt.<br>
+Systemseitig zugewiesene Identität verwenden<br>
+`server=Server;database=Database;Authentication=ActiveDirectoryMsi;`<br>
+Für vom Benutzer zugewiesene Identität mit Objekt-ID MyObjectId entspricht,<br>
+`server=Server;database=Database;UID=myObjectId;Authentication=ActiveDirectoryMsi;`
+
 > [!NOTE] 
 >- Wenn Sie die Optionen für den neuen Active Directory mit der Windows-ODBC-Treiber verwenden, stellen Sie sicher, dass die [Active Directory-Authentifizierungsbibliothek für SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072) installiert wurde. Wenn Sie die Treiber für Linux und MacOS verwenden, stellen Sie sicher, dass `libcurl` installiert wurde. Treiber, Version 17.2 und spätere ist dies nicht explizite Abhängigkeit, da er nicht für die anderen Authentifizierungsmethoden oder ODBC-Vorgänge erforderlich ist.
 >- Zum Verbinden mit SQL Server-Konto-Benutzername und Kennwort jetzt können Sie die neue `SqlPassword` Option, die speziell für SQL Azure empfohlen, da diese Option sicherer Standardwerte für die Verbindung aktiviert.
@@ -161,6 +167,14 @@ Das folgende Beispiel zeigt den Code für die Verbindung mit SQL Server Access-t
 Folgendes ist eine Beispiel-Verbindungszeichenfolge für die Verwendung mit Azure Active Directory interaktive Authentifizierung. Beachten Sie, dass keine PWD-Feld enthalten sind, wie Sie das Kennwort eingegeben werden müssten, Bildschirm für Windows Azure-Authentifizierung verwenden.
 ~~~
 SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};UID=myuser;Authentication=ActiveDirectoryInteractive"
+~~~
+Folgendes ist eine Beispiel-Verbindungszeichenfolge für die Verwendung mit Azure Active Directory verwaltete Dienstidentitätsauthentifizierung. Beachten Sie, dass Benutzer-ID der Objekt-ID, der Identität des Benutzers für die vom Benutzer zugewiesene Identität festgelegt ist.
+~~~
+// For system-assigned identity,
+SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};Authentication=ActiveDirectoryMsi"
+...
+// For user-assigned identity with object ID equals to myObjectId
+SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};UID=myObjectId;Authentication=ActiveDirectoryMsi"
 ~~~
 
 ## <a name="see-also"></a>Weitere Informationen

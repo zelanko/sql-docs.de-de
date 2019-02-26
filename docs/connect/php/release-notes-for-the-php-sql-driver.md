@@ -1,7 +1,7 @@
 ---
 title: Anmerkungen zu dieser Version für die Microsoft-Treiber für PHP für SQL Server | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/20/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,17 +13,34 @@ ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a22e88aef13c86179dc4cea71ed1003eadfd8661
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c2e7377b1072c30e5c5ef038b93a88f0c222260
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624058"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744350"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Versionshinweise für die Microsoft-Treiber für PHP für SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Auf dieser Seite wird erläutert, was in jeder Version hinzugefügt wurde die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+
+## <a name="whats-new-in-version-56"></a>Neues in Version 5.6
+
+- Unterstützung für PHP 7.3
+- Unterstützung für Microsoft ODBC-Treiber 17.3 auf allen Plattformen
+- Unterstützung für MacOS Mojave (ODBC-Treiber 17.3 erfordert oder höher)
+- Unterstützung für 18.10 von Ubuntu und Suse Linux 15 (sowohl die ODBC-Treiber 17.3 erfordern oder höher)
+- Keine Unterstützung mehr für PHP 7.0
+- Unterstützung für die Ubuntu 17.10 Linux und MacOS El Capitan
+- Unterstützung für Azure AD-Zugriffstoken (in Linux und MacOS erfordert ODBC-Treiber 17.2 + und UnixODBC 2.3.6+)
+- Unterstützung für die Authentifizierung mit Azure AD mithilfe der verwalteten Dienstidentität für Azure-Ressourcen (ODBC-Treiber 17.3 + erforderlich)
+- Neue Fetch-Funktionen:
+  - Neue PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE-Flag für Pdo_sqlsrv "DateTime" als Objekte zurückgegeben.
+  - ReturnDatesAsStrings-Option auf Anweisungsebene für Sqlsrv hinzufügen
+  - Neue Optionen auf Verbindungs- und Ebenen für beide Treiber für die Formatierung der Dezimalwerte in die abgerufenen Ergebnisse
+- Unterstützung für statische Kompilierung von Treibern, wenn Benutzer sich entscheiden, die von der Quelle erstellen
+- Verbesserte Leistung durch Zwischenspeichern von Metadaten in Abrufvorgängen und Unicode-zeichenfolgenkonvertierungen beschleunigen
 
 ## <a name="whats-new-in-version-53"></a>Neues in Version 5.3
 
@@ -91,5 +108,5 @@ Auf dieser Seite wird erläutert, was in jeder Version hinzugefügt wurde die [!
 ## <a name="whats-new-in-version-20"></a>Neuerungen in Version 2.0  
 In Version 2.0 wurde Unterstützung für den PDO_SQLSRV-Treiber hinzugefügt. Weitere Informationen finden Sie in der [PDO_SQLSRV-Treiberreferenz](../../connect/php/pdo-sqlsrv-driver-reference.md).  
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Overview of the Microsoft Drivers for PHP for SQL Server (Übersicht über die Microsoft-Treiber für PHP für SQL Server)](../../connect/php/overview-of-the-php-sql-driver.md)
