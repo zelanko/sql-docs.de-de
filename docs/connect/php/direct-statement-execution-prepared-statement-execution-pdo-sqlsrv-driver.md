@@ -11,12 +11,12 @@ ms.assetid: 05544ca6-1e07-486c-bf03-e8c2c25b3024
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dba0e72f3575c0958ad142b6d27b7be410d6cec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 005a2c4b34c9aae2cfdfe4663cbfcbe06a68b81a
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658748"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676108"
 ---
 # <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdosqlsrv-driver"></a>Direkte Anweisungsausführung und vorbereitete Anweisungsausführung im PDO_SQLSRV-Treiber.
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,8 +34,11 @@ Nach dem Aufruf von [PDO:: Prepare](../../connect/php/pdo-prepare.md), der Wert 
   
 Wenn eine Abfrage den Kontext, der in einer vorherigen Abfrage festgelegt wurde erfordert, führen Sie dann Ihre Abfragen mit PDO:: sqlsrv_attr_direct_query auf "true" festgelegt ist. Wenn Sie temporäre Tabellen in Ihren Abfragen verwenden, muss z. B. PDO:: sqlsrv_attr_direct_query auf "true" festgelegt werden.  
   
-Das folgende Beispiel zeigt, dass wenn eine vorherige Anweisung Kontext erforderlich ist, Sie PDO:: sqlsrv_attr_direct_query auf "true" festlegen müssen.  Dieses Beispiel verwendet die temporäre Tabellen, die nur sind für nachfolgende Anweisungen in Ihrem Programm verfügbar, wenn Abfragen direkt ausgeführt werden.  
+Das folgende Beispiel zeigt, dass wenn eine vorherige Anweisung Kontext erforderlich ist, Sie PDO:: sqlsrv_attr_direct_query auf "true" festlegen müssen. Dieses Beispiel verwendet die temporäre Tabellen, die nur sind für nachfolgende Anweisungen in Ihrem Programm verfügbar, wenn Abfragen direkt ausgeführt werden.  
   
+> [!NOTE]
+> Wenn die Abfrage zum Aufrufen einer gespeicherten Prozedur ist und temporäre Tabellen werden in dieser gespeicherten Prozedur verwenden verwendet [PDO:: EXEC](../../connect/php/pdo-exec.md) stattdessen.
+
 ```  
 <?php  
    $conn = new PDO('sqlsrv:Server=(local)', '', '');  
@@ -66,6 +69,6 @@ Das folgende Beispiel zeigt, dass wenn eine vorherige Anweisung Kontext erforder
 ?>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Programmierhandbuch für den Microsoft-Treiber für PHP für SQLServer](../../connect/php/programming-guide-for-php-sql-driver.md)
   

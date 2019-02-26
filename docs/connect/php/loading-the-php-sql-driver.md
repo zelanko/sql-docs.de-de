@@ -1,7 +1,7 @@
 ---
 title: Laden der Microsoft-Treiber für PHP für SQL Server | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3dd99ffa39de48dbf8839cbe06a8bb236fffbdf3
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: e62fc14eff52fa64e9e9f9dc041cc3c8601230e5
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606200"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744610"
 ---
 # <a name="loading-the-microsoft-drivers-for-php-for-sql-server"></a>Laden von Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,6 +28,8 @@ Dieser Artikel enthält Anweisungen für das Laden der Microsoft-Treiber für PH
 Sie können die vordefinierten Treiber für Ihre Plattform aus der [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) Projektseite auf Github. Jedem Installationspaket enthält die SQLSRV- und PDO_SQLSRV-Treiber-Dateien in Threads und nicht-Thread-Varianten. Auf Windows sind sie auch in der 32-Bit und 64-Bit-Variante verfügbar. Finden Sie unter [Systemanforderungen für Microsoft Drivers for PHP for SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md) eine Liste der Treiberdateien abzurufen, die in den einzelnen Paketen enthalten sind. Die Treiberdatei muss es sich um die PHP-Version, Architektur und Threadedness Ihrer PHP-Umgebung übereinstimmen.
 
 Unter Linux und MacOS, die Treiber können auch mit installiert werden PECL, wie in der [Tutorial zur](../../connect/php/installation-tutorial-linux-mac.md).
+
+Sie können auch die Treiber aus der Quelle erstellen, wenn PHP entwickeln oder mithilfe von `phpize`. Wenn Sie die Treiber aus der Quelle erstellen möchten, haben die Möglichkeit, erstellen sie statisch in PHP statt erstellen sie freigegebene Erweiterungen durch Hinzufügen `--enable-sqlsrv=static --with-pdo_sqlsrv=static` (für Linux und MacOS) oder `--enable-sqlsrv=static --with-pdo-sqlsrv=static` (unter Windows), die `./configure` beim Befehl Erstellen von PHP aus. Weitere Informationen zu PHP-Buildsystem und `phpize`, finden Sie unter den [PHP-Dokumentation](http://php.net/manual/install.php).
   
 ## <a name="moving-the-driver-file-into-your-extension-directory"></a>Verschieben Sie die Treiberdatei in Ihr Erweiterungsverzeichnis  
 Die Treiberdatei muss in einem Verzeichnis befinden, in dem Sie die PHP-Laufzeit gefunden werden kann. Es ist am einfachsten, legen Sie die Treiberdatei in Ihrem PHP-Erweiterung Standardverzeichnis – um das Standardverzeichnis zu finden, führen Sie `php -i | sls extension_dir` auf Windows oder `php -i | grep extension_dir` unter Linux/MacOS. Wenn Sie das Standardverzeichnis für die Erweiterung nicht verwenden, geben Sie ein Verzeichnis, in der PHP-Konfigurationsdatei (php.ini) an, mit der **"extension_dir"** Option. Beispielsweise auf Windows, wenn Sie die Treiberdatei, in abgelegt haben Ihre `c:\php\ext` Verzeichnis, fügen Sie die folgende Zeile in "PHP.ini":
@@ -81,7 +83,7 @@ Beim Laden der SQLSRV-Treiber beim Starten von PHP verschieben Sie zunächst ein
   
 Weitere Informationen zu **php.ini**-Anweisungen finden Sie unter [Beschreibung der wichtigsten php.ini-Anweisungen](https://php.net/manual/en/ini.core.php).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Erste Schritte mit der Microsoft-Treiber für PHP für SQLServer](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [Systemanforderungen für Microsoft-Treiber für PHP für SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md)

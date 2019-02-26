@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 72ff999a4b88bff5d8b78f8e8b936da18b8a4e16
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 1ba94395acad1aec8717c570cc4b6e30ed7a12a4
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044947"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662854"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Verwenden von Always Encrypted mit ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -286,7 +286,7 @@ In diesem Abschnitt werden die integrierten Leistungsoptimierungen in ODBC Drive
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>Kontrollieren von Roundtrips zum Abrufen von Metadaten für Abfrageparameter
 
-Wenn Always Encrypted für eine Verbindung aktiviert ist, ruft der Treiber standardmäßig [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) für jede parametrisierte Abfrage auf, wobei die Abfrageanweisung (ohne Parameterwerte) an SQL Server übergeben wird. Diese gespeicherte Prozedur analysiert die Query-Anweisung, um herauszufinden, ob Parameter müssen verschlüsselt werden, und wenn Ja, gibt die verschlüsselungsbezogenen Informationen für jeden Parameter, um den Treiber verschlüsseln zu ermöglichen. Das oben beschriebene Verhalten stellt einen hohen Grad an Transparenz für die Clientanwendung sicher: Die Anwendung (und der Anwendungsentwickler) muss nicht beachten, welche Abfragen Zugriff auf verschlüsselte Spalten haben, so lange die auf verschlüsselte Spalten ausgerichteten Werte in Parametern an den Treiber übergeben werden.
+Wenn Always Encrypted für eine Verbindung aktiviert ist, ruft der Treiber standardmäßig [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) für jede parametrisierte Abfrage auf, wobei die Abfrageanweisung (ohne Parameterwerte) an SQL Server übergeben wird. Diese gespeicherte Prozedur analysiert die Query-Anweisung, um herauszufinden, ob Parameter müssen verschlüsselt werden, und wenn Ja, gibt die verschlüsselungsbezogenen Informationen für jeden Parameter, um den Treiber verschlüsseln zu ermöglichen. Das oben beschriebene Verhalten stellt sicher ein hohes Maß an Transparenz für die Client-Anwendung: die Anwendung (und der Anwendungsentwickler) muss nicht zu beachten, welche Abfragen Zugriff auf verschlüsselte Spalten, solange die Werte, die auf verschlüsselte Spalten ausgerichtet sind, übergeben werden der Treiber in-Parameter.
 
 ### <a name="per-statement-always-encrypted-behavior"></a>Always Encrypted Verhalten pro Anweisung
 
@@ -369,6 +369,8 @@ Der Treiber unterstützt die Authentifizierung bei Azure Key Vault mithilfe der 
 
 - Client-ID/Geheimnis - mit dieser Methode sind die Anmeldeinformationen ein Anwendungsclient-ID und einen geheimen Anwendungsschlüssel.
 
+- Verwaltete Dienstidentität - Anmeldeinformationen mit dieser Methode sind, vom System zugewiesener Identität oder vom Benutzer zugewiesene Identität. Für die vom Benutzer zugewiesene Identität wird Benutzer-ID auf die Objekt-ID, der die Identität des Benutzers festgelegt.
+
 Damit um den Treiber CMKs in AKV gespeichert werden, für die spaltenverschlüsselung verwenden zu können, verwenden Sie die folgenden Connection-String-only-Schlüsselwörter:
 
 |Anmeldeinformationen| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
@@ -386,7 +388,7 @@ Die folgenden Verbindungszeichenfolgen zeigen, wie Azure Key Vault mit den zwei 
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
-**Benutzername/Kennwort**
+**Benutzername/Kennwort**:
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
@@ -551,7 +553,7 @@ Verwenden der [Funktionen von SQL-Massenkopieren](../../relational-databases/nat
 
 - Zum Einfügen von Chiffretext 'varbinary(max)'-Format (z. B. im oben abgerufenen) legen Sie die `BCPMODIFYENCRYPTED` option auf "true", und führen Sie einen IN der BCP-Vorgang. Sicherstellen Sie in der Reihenfolge für die resultierenden Daten zu entschlüsselnden werden, dass das Ziel CEK mit der Spalte identisch, die von dem der verschlüsselte Text, die ursprünglich abgerufen wurde.
 
-Bei Verwendung der **Bcp** Hilfsprogramm: Steuern der `ColumnEncryption` festlegen, verwenden Sie die Option-d, und geben Sie einen DSN, der den gewünschten Wert enthält. Um verschlüsselte Text einzufügen, stellen Sie sicher die `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` des Benutzers aktiviert ist.
+Bei Verwendung der **Bcp** Dienstprogramm: Steuern der `ColumnEncryption` festlegen, verwenden Sie die Option-d, und geben Sie einen DSN, der den gewünschten Wert enthält. Um verschlüsselte Text einzufügen, stellen Sie sicher die `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` des Benutzers aktiviert ist.
 
 Die folgende Tabelle enthält eine Zusammenfassung der Aktionen, bei einer verschlüsselten Spalte:
 
@@ -577,7 +579,8 @@ Weitere Informationen finden Sie unter [Migrieren von durch Always Encrypted ges
 |`ColumnEncryption`|Gültige Werte sind `Enabled` / `Disabled`.<br>`Enabled`: aktiviert Always Encrypted-Funktionen für die Verbindung.<br>`Disabled`: deaktiviert Always Encrypted-Funktionen für die Verbindung. <br><br>Der Standardwert ist `Disabled`.|  
 |`KeyStoreAuthentication` | Gültige Werte: `KeyVaultPassword`, `KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | Wenn `KeyStoreAuthentication`  =  `KeyVaultPassword`, legen Sie diesen Wert in einen gültigen Namen der Azure Active Directory-Benutzer-Dienstprinzipal. <br>Wenn `KeyStoreAuthetication`  =  `KeyVaultClientSecret` legen diesen Wert auf einen gültigen Azure Active Directory-Anwendung Client-ID |
-|`KeyStoreSecret` | Wenn `KeyStoreAuthentication`  =  `KeyVaultPassword` legen Sie diesen Wert auf das Kennwort für den entsprechenden Benutzernamen. <br>Wenn `KeyStoreAuthentication`  =  `KeyVaultClientSecret` legen diesen Wert auf das Anwendungsgeheimnis, das mit einem gültigen Azure Active Directory-Anwendung Client-ID verknüpft ist|
+|`KeyStoreSecret` | Wenn `KeyStoreAuthentication`  =  `KeyVaultPassword` legen Sie diesen Wert auf das Kennwort für den entsprechenden Benutzernamen. <br>Wenn `KeyStoreAuthentication`  =  `KeyVaultClientSecret` legen diesen Wert auf das Anwendungsgeheimnis, das mit einem gültigen Azure Active Directory-Anwendung Client-ID verknüpft ist |
+
 
 ### <a name="connection-attributes"></a>Verbindungsattribute
 

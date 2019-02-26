@@ -20,17 +20,14 @@ ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8d1ef66f97683b24014661fb6a1e633ce6ce06ce
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 9183daa6e11e015bf484002fcf5857adab0ec087
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299917"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801974"
 ---
 # <a name="install-integration-services"></a>Installieren von Integration Services
-
-  > [!div class="nextstepaction"]
-  > [Senden Sie uns Ihr Feedback zum Inhaltsverzeichnis der SQL-Dokumentation!](https://aka.ms/sqldocsurvey)
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt ein einzelnes Setupprogramm bereit, mit dem eine oder alle Komponenten installiert werden können, einschließlich [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Verwenden Sie das Setup, um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mit oder ohne andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten auf einem einzelnen Computer installieren.    
     
