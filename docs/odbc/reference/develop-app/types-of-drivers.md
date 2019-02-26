@@ -45,7 +45,7 @@ ODBC-Treiber können wie folgt klassifiziert werden:
   
     -   Exportiert nur Funktionen, die in ODBC 3.0 minus sind veraltete Funktionen.  
   
-    -   Mit der ODBC 2. kann. *x* Verhalten oder die ODBC 3.0-Verhalten in Bezug auf Änderungen am Systemverhalten auf Grundlage des SQL_ATTR_APP_ODBC_VERSION umgebungsattributs.  
+    -   Mit der ODBC 2. kann.*x* Verhalten oder die ODBC 3.0-Verhalten in Bezug auf Änderungen am Systemverhalten auf Grundlage des SQL_ATTR_APP_ODBC_VERSION umgebungsattributs.  
   
 -   **ODBC-Treiber mit dem ANSI 3.5 (oder höher)** ein 32-Bit-Treiber, die:  
   
