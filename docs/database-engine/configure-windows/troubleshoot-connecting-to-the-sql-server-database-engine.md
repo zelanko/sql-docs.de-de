@@ -14,19 +14,16 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d70a08ac868aa28a38f3e32a9fb32024bc345193
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: fd08989eb41f5b5a2b1c3f677f8dcff64b25b6ea
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300467"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802754"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Beheben von Verbindungsfehlern mit der SQL Server-Datenbank-Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-
-  > [!div class="nextstepaction"]
-  > [Senden Sie uns Ihr Feedback zum Inhaltsverzeichnis der SQL-Dokumentation!](https://aka.ms/sqldocsurvey)
 
 Dies ist eine Liste der Problembehandlungstechniken, die verwendet werden, wenn Sie keine Verbindung mit der SQL Server-Datenbank-Engine herstellen können. Diese Schritte beginnen nicht mit den häufigsten Problemen, auf die Sie sicher schon geprüft haben. Stattdessen beginnen sie mit den grundlegendsten Problemen und arbeitet sich vor bis hin zu komplexeren Problemen. Diese Schritte sind in der Reihenfolge von den grundlegendsten Problemen bis hin zu den komplexeren. Diese Schritte setzen voraus, dass Sie von einem anderen Computer aus eine Verbindung mit SQL Server herstellen, indem Sie das TCP/IP-Protokoll verwenden was am weit verbreitetsten ist. Diese Schritte wurden für SQL Server 2016 geschrieben, wobei jeweils der SQL Server als auch die Clientanwendungen unter Windows 10 laufen. Jedoch können Sie die Schritte in der Regel mit anderen Versionen von SQL Server und anderen Betriebssystemen ausführen. Dafür sind nur kleine Änderungen notwendig.
 

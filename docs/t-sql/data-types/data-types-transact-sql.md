@@ -18,18 +18,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec7126848048350120592a325f5a5f593b38a7f3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f4d1f3ca61710f1e55d95b8942adc86fea736910
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028511"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802237"
 ---
 # <a name="data-types-transact-sql"></a>Datentypen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [Senden Sie uns Ihr Feedback zum Inhaltsverzeichnis der SQL-Dokumentation!](https://aka.ms/sqldocsurvey)
 
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügt jede Spalte, jede lokale Variable, jeder Ausdruck und jeder Parameter einen entsprechenden Datentyp. Ein Datentyp ist ein Attribut, das für das jeweilige Objekt angibt, welchen Typ von Daten ein Objekt aufnehmen kann: Ganzzahlige Daten, Zeichendaten, Währungsdaten, Datums- und Uhrzeitdaten, binäre Zeichenfolgen usw.
   
