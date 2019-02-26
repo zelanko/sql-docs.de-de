@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b11b3154162fafdfc717e9785fb65e59dc45799c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ba2ed69239313a7933840d7a99ccbf3ce0864bfd
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510818"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828420"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Konfigurieren von persistenten Speicher (PMEM) für SQL Server unter Linux
 
@@ -80,7 +80,7 @@ ndctl list
 
   Sobald das Gerät wurde mit Ndctl konfiguriert, formatiert und eingebunden wurde, können Sie Datenbankdateien darin platzieren. Sie können auch eine neue Datenbank erstellen. 
 
-1. Aktivieren Sie SQL Server-Datenbank, Datei Erleuchtung mithilfe von Ablaufverfolgungsflags 3979. Dieses Ablaufverfolgungsflag ist das Ablaufverfolgungsflag beim Start und muss daher mit dem Hilfsprogramm für die Mssql-Conf aktiviert werden.
+1. Da PMEM Geräte O_DIRECT sicher sind, aktivieren Sie das Ablaufverfolgungsflag 3979 erzwungenen leeren Mechanismus zu deaktivieren. Dieses Ablaufverfolgungsflag ist das Ablaufverfolgungsflag beim Start und muss daher mit dem Hilfsprogramm für die Mssql-Conf aktiviert werden. Bitte beachten Sie, dass dies eine serverweite konfigurationsänderung ist, und Sie dieses Ablaufverfolgungsflag nicht verwenden sollten, wenn Sie nicht kompatible Geräte O_DIRECT, die den erzwungenen leeren Mechanismus verfügen, um die Datenintegrität sicherzustellen. Weitere Informationen finden Sie unter https://support.microsoft.com/en-us/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux
 
 1. Starten Sie SQL Server neu.
 
