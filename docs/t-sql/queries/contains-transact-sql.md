@@ -35,18 +35,16 @@ ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dccf940867666cf9d3a6ca88c2e6980cc4db0dc7
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 10cb5b9b4e5083781f65766d97a810a1e5a7323b
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300257"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801554"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  > [!div class="nextstepaction"]
-  > [Senden Sie uns Ihr Feedback zum Inhaltsverzeichnis der SQL-Dokumentation!](https://aka.ms/sqldocsurvey)
 
   Sucht nach genauen oder ungenauen (Fuzzy-)Übereinstimmungen mit einzelnen Wörtern und Satzteilen, für innerhalb einer bestimmten Entfernung angrenzende Wörter sowie für gewichtete Übereinstimmungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CONTAINS ist ein Prädikat, das in der [WHERE](../../t-sql/queries/where-transact-sql.md)-Klausel einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-SELECT-Anweisung verwendet wird, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Volltextsuchvorgänge für volltextindizierte Spalten mit zeichenbasierten Datentypen durchzuführen.  
   

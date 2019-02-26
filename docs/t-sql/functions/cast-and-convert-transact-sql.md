@@ -36,18 +36,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ce80e0d5936c0a09eefc8abb09b35846bf5dc13
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 5020bfd6f7a17538130d5f701c7b2bbbe8ff766e
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55045019"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801834"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST und CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [Senden Sie uns Ihr Feedback zum Inhaltsverzeichnis der SQL-Dokumentation!](https://aka.ms/sqldocsurvey)
 
 Mit diesen Funktionen wird ein Ausdruck von einem Datentyp in einen anderen konvertiert.  
 
@@ -327,7 +324,7 @@ In der folgenden Tabelle werden die Formate aufgelistet, bei denen die Konvertie
   
 <sup>1</sup> Mit Ausnahme der Formate 20 und 21
 
-Weitere Informationen finden Sie unter [Nondeterministic conversion of literal date strings into DATE values (Nicht deterministische Konvertierung von Datumsliteralzeichenfolgen in DATE-Werte)](../data-types/nondeterministic-convert-date-literals.md).
+Weitere Informationen finden Sie unter [Nicht deterministische Konvertierung von Datumsliteralzeichenfolgen in DATE-Werte](../data-types/nondeterministic-convert-date-literals.md).
 
 ## <a name="supplementary-characters-surrogate-pairs"></a>Ergänzende Zeichen (Ersatzpaare)
 Wenn Sie in Versionen ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Sortierungen ergänzender Zeichen verwenden, wird ein CAST-Vorgang von **nchar** oder **nvarchar** zu einem **nchar**- oder **nvarchar**-Typ von geringerer Länge in einem Ersatzzeichenpaar nicht abgeschnitten. Stattdessen wird er vor dem ergänzenden Zeichen abgeschnitten. Im folgenden Codefragment wird `@x` z. B. weggelassen, sodass nur `'ab'` erhalten bleibt. Es ist nicht genügend Platz für das ergänzende Zeichen vorhanden.

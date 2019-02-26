@@ -2,7 +2,7 @@
 title: Ein Unternehmen zu bewerten und Konsolidieren von assessmentberichten (SQL Server) | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie mit DMA ein Unternehmens zu bewerten und Konsolidieren von assessmentberichten vor dem Upgrade von SQL Server oder die Migration zu Azure SQL-Datenbank.
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 02/23/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 400876a2738c2ca791d3aee12da20c9af1db5b9f
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: 4df3197ad4bb607d564c223087da62f17c74fa32
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590345"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801374"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Ein Unternehmen zu bewerten und Konsolidieren von assessmentberichten mit DMA
 
@@ -45,7 +45,7 @@ Die PowerShell-Module in der PowerShell-Module-Verzeichnis zu speichern, können
 
 Führen Sie die folgenden Schritte aus, um die Module zu laden:
 1. Navigieren Sie zu c:\Programme\Microsoft Files\WindowsPowerShell\Modules, und erstellen Sie einen Ordner mit dem Namen **DataMigrationAssistant**.
-2. Öffnen der [PowerShell-Module](https://msdnshared.blob.core.windows.net/media/2019/02/PowerShell-Modules.zip), und speichern Sie sie in den Ordner, die Sie erstellt haben.
+2. Öffnen der [PowerShell-Module](https://msdnshared.blob.core.windows.net/media/2019/02/PowerShell-Modules1.zip), und speichern Sie sie in den Ordner, die Sie erstellt haben.
 
       ![PowerShell-Module](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 

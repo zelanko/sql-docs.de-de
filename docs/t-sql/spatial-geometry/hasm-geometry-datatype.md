@@ -15,12 +15,12 @@ ms.assetid: 15540837-c4bf-4d18-b380-13ae31f3226f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c9062dbbbb5f650597f323b2c427b1b7825e7f7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab164bf204b7fa7d65e5a8a879422a95b208f0ec
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853808"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56800964"
 ---
 # <a name="hasm-geometry-datatype"></a>HasM (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -49,8 +49,7 @@ SELECT @p.HasM
 --Returns: 1 (true)  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erweiterte Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [M &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)  
-  
   
