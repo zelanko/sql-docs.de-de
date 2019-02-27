@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 22ee688f6ef1036c63cd3bf878ccf2fce869115f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b135362a9f64ac8e1bd0f696f88b8aa92d8af283
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401635"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852935"
 ---
 # <a name="lesson-2-add-data"></a>Lektion 2: Hinzufügen von Daten
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 In dieser Lektion verwenden Sie den Tabellenimport-Assistenten in SSDT mit der Beispieldatenbank AdventureWorksDW SQL, wählen Sie Daten, Vorschau anzeigen und Filtern Sie die Daten, und klicken Sie dann in den Modellarbeitsbereich zu importieren.  
   
-Mit dem Tabellenimport-Assistenten können Sie Daten aus einer Vielzahl relationaler Quellen importieren: Access, SQL, Oracle, Sybase, Informix, DB2, Teradata und mehr. Die Schritte zum Importieren von Daten aus jeder dieser relationalen Quellen sind sehr ähnlich und mit dem unten beschriebenen Vorgang vergleichbar. Daten können auch mithilfe einer gespeicherten Prozedur ausgewählt werden. Weitere Informationen finden Sie Informationen zum Importieren von Daten und die verschiedenen Typen von Datenquellen, die Sie aus importieren können, finden Sie unter [Datenquellen](../analysis-services/tabular-models/data-sources-ssas-tabular.md).  
+Mit dem Tabellenimport-Assistenten können Sie Daten aus einer Vielzahl relationaler Quellen importieren: Access, SQL, Oracle, Sybase, Informix, DB2, Teradata und mehr. Die Schritte zum Importieren von Daten aus jeder dieser relationalen Quellen sind sehr ähnlich und mit dem unten beschriebenen Vorgang vergleichbar. Daten können auch mithilfe einer gespeicherten Prozedur ausgewählt werden. Weitere Informationen finden Sie Informationen zum Importieren von Daten und die verschiedenen Typen von Datenquellen, die Sie aus importieren können, finden Sie unter [Datenquellen](../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md).  
   
 Geschätzte Zeit zum Bearbeiten dieser Lektion: **20 Minuten**  
   
@@ -48,7 +48,7 @@ Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der e
   
 5.  In der **Datenbanknamen** die Option **"AdventureWorksDW"**, und klicken Sie dann auf **Weiter**.  
   
-    ![als-tabellarische-lesson2-Tiw-name](../analysis-services/media/as-tabular-lesson2-tiw-name.png)
+    ![as-tabular-lesson2-tiw-name](../analysis-services/media/as-tabular-lesson2-tiw-name.png)
   
 6.  Auf der Seite **Identitätswechselinformationen** müssen Sie die Anmeldeinformationen angeben, mit denen Analysis Services eine Verbindung mit der Datenquelle herstellt, wenn Daten importiert und verarbeitet werden. Überprüfen Sie, ob **Bestimmter Windows-Benutzername und bestimmtes Kennwort** ausgewählt ist, geben Sie in den Feldern **Benutzername** und **Kennwort**Ihre Windows-Anmeldeinformationen ein, und klicken Sie anschließend auf **Weiter**.  
   
@@ -70,7 +70,7 @@ Die DimCustomer-Tabelle, die Sie aus der Beispieldatenbank importieren, enthält
   
 2.  Deaktivieren Sie das Kontrollkästchen am Anfang der folgenden Spalten: **SpanishEducation**, **FrenchEducation**, **SpanishOccupation**, **FrenchOccupation**. 
 
-    ![als tabellarische-lesson2-Tiw-klare](../analysis-services/media/as-tabular-lesson2-tiw-clear.png)
+    ![as-tabular-lesson2-tiw-clear](../analysis-services/media/as-tabular-lesson2-tiw-clear.png)
   
     Da die Werte für diese Spalten nicht relevant für die Analyse von Internetverkäufen sind, müssen die Spalten nicht importiert werden. Entfernen nicht erforderlicher Spalten wird Ihr Modell kleiner und effizienter machen.  
   
@@ -78,7 +78,7 @@ Die DimCustomer-Tabelle, die Sie aus der Beispieldatenbank importieren, enthält
   
     Beachten Sie, dass die Wörter **angewendete Filter** werden jetzt angezeigt, der **Filterdetails** -Spalte in der **DimCustomer** Zeile; Wenn Sie auf diesen Link klicken, Sie eine textbeschreibung sehen, der Filter, die Sie soeben angewendet.  
     
-    ![als-tabellarische-lesson2-angewendete-Filter](../analysis-services/media/as-tabular-lesson2-applied-filters.png)
+    ![as-tabular-lesson2-applied-filters](../analysis-services/media/as-tabular-lesson2-applied-filters.png)
     
   
 4.  Filtern Sie die verbleibenden Tabellen, indem Sie die Kontrollkästchen für die folgenden Spalten in jeder Tabelle deaktivieren:  
@@ -147,7 +147,7 @@ Nun, dass Sie in der Vorschau angezeigt und nicht benötigte Daten herausgefilte
   
     Während des Datenimports zeigt der Assistent an, wie viele Zeilen abgerufen wurden. Wenn alle Daten importiert wurden, wird in einer Meldung angezeigt, dass der Import erfolgreich abgeschlossen wurde.  
     
-    ![als tabellarische-lesson2-Erfolg](../analysis-services/media/as-tabular-lesson2-success.png) 
+    ![as-tabular-lesson2-success](../analysis-services/media/as-tabular-lesson2-success.png) 
   
     > [!TIP]  
     > Klicken Sie zum Anzeigen der Beziehungen, die automatisch zwischen den importierten Tabellen erstellt wurden, in der Zeile **Datenvorbereitung** auf **Details**. 

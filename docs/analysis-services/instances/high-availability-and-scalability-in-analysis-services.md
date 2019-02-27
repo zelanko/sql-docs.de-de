@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1135074768a630e6d46844017b9c9aecbbccbf26
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.openlocfilehash: 09fc0a9d9814a399d679b1391678fb5e11ad8a3f
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439502"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852925"
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Hohe Verfügbarkeit und Skalierbarkeit in Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  In diesem Artikel werden die am häufigsten verwendeten Techniken beschrieben, um Analysis Services-Datenbanken hoch verfügbar und skalierbar zu machen. Zwar lassen sich diese beiden Ziele separat behandeln, praktisch gehen sie jedoch oftmals Hand in Hand: Für eine skalierbaren Bereitstellung für umfangreiche Abfrage- oder Verarbeitungsauslastungen wird typischerweise auch Hochverfügbarkeit gefordert.  
+  Dieser Artikel beschreibt die am häufigsten verwendeten Techniken zur Verbesserung der hoch verfügbare und skalierbare Analysis Services-Datenbanken. Zwar lassen sich diese beiden Ziele separat behandeln, praktisch gehen sie jedoch oftmals Hand in Hand: Für eine skalierbaren Bereitstellung für umfangreiche Abfrage- oder Verarbeitungsauslastungen wird typischerweise auch Hochverfügbarkeit gefordert.  
   
  Der umgekehrte Fall trifft jedoch nicht immer zu. Hohe Verfügbarkeit ohne Skalierbarkeit kann das einzige Ziel sein, wenn bindende Vereinbarungen zum Service Level für unternehmenswichtige, aber mäßige Abfrageauslastungen getroffen wurden.  
   
