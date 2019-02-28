@@ -31,7 +31,7 @@ ODBC-Treiber können wie folgt klassifiziert werden:
   
     -   Exportiert nur die ODBC 2.*.x* Funktionen.  
   
-    -   Zeigt die ODBC-2. *x* Verhalten bei Änderungen am Verhalten.  
+    -   Zeigt die ODBC-2.*x* Verhalten bei Änderungen am Verhalten.  
   
 -   **ISO- und Open Group-kompatiblen Treiber** ein 32-Bit-Treiber, die:  
   
