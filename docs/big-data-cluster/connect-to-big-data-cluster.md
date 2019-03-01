@@ -5,16 +5,16 @@ description: Erfahren Sie, wie für die master SQL Server-Instanz und das HDFS/S
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/12/2019
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 103e02d456f1176c3bb49c1e67f84215399ab5cd
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: cb205f387fb326b1717ec65512a911b2ae244495
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56231037"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017706"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Verbinden Sie mit einer SQL Server-big Data-Cluster mit Azure Data Studio
 
@@ -79,17 +79,9 @@ Mit der Version Februar 2019 von Azure Data Studio kann mit der SQL Server-Maste
 In den meisten Fällen, Herstellen einer Verbindung mit der SQL Server-Masterinstanz erhalten Sie Zugriff auf das HDFS und Spark auch über die **Datendienste** Knoten. Allerdings können Sie weiterhin eine dedizierte Verbindung mit erstellen die **HDFS/Spark-Gateway** bei Bedarf. Die folgenden Schritte beschreiben, wie eine Verbindung mit Azure Data Studio herstellen.
 
 1. Finden Sie über die Befehlszeile die IP-Adresse Ihres HDFS/Spark-Gateways mit einem der folgenden Befehle aus.
-   
-   **AKS-Bereitstellungen:**
 
    ```
-   kubectl get svc service-security-lb -n <your-cluster-name>
-   ```
-
-   **Nicht-AKS-Bereitstellungen**:
-
-   ```
-   kubectl get svc service-security-nodeport -n <your-cluster-name>
+   kubectl get svc endpoint-security -n <your-cluster-name>
    ```
  
 1. Drücken Sie in Azure Data Studio **F1** > **neue Verbindung**.

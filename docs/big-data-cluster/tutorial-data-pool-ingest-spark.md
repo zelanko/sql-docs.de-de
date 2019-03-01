@@ -5,19 +5,19 @@ description: In diesem Tutorial wird veranschaulicht, wie Daten in den Datenpool
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 1e6f75f21a02b30a6f75d79a9da5be0320485c5b
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 28a151f00683455b582bb29a5d141a76f237caf1
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241681"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017736"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Lernprogramm: Erfassen von Daten in einen Pool des SQL Server-Daten mit Spark-Aufträgen
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Tutorial: Erfassen von Daten in einen Pool des SQL Server-Daten mit Spark-Aufträgen
 
 Dieses Tutorial veranschaulicht, wie Spark-Aufträgen zum Laden von Daten in die [Datenpool](concept-data-pool.md) von einer SQL Server-2019 big Data-Cluster (Vorschau). 
 
@@ -34,7 +34,7 @@ In diesem Tutorial erfahren Sie, wie Sie:
 ## <a id="prereqs"></a> Erforderliche Komponenten
 
 - [Big Data-tools](deploy-big-data-tools.md)
-   - **"kubectl"**
+   - **kubectl**
    - **Azure Data Studio**
    - **SQL Server-2019-Erweiterung**
 - [Laden Sie Beispieldaten in Ihre big Data-cluster](tutorial-load-sample-data.md)
@@ -64,7 +64,7 @@ Die folgenden Schritte Erstellen einer externen Tabelle, in dem Datenpool mit de
       );
    ```
   
-1. In der CTP-Version 2.2 die Erstellung des Pools Daten ist asynchron, aber es gibt keine Möglichkeit, um zu bestimmen, wenn er noch abgeschlossen ist. Warten Sie zwei Minuten lang, um sicherzustellen, dass die Datenpool erstellt wird, bevor Sie fortfahren.
+1. In CTP 2.3 von die Erstellung des Pools Daten ist asynchron, aber es gibt keine Möglichkeit, um zu bestimmen, wenn er noch abgeschlossen ist. Warten Sie zwei Minuten lang, um sicherzustellen, dass die Datenpool erstellt wird, bevor Sie fortfahren.
 
 ## <a name="start-a-spark-streaming-job"></a>Starten eines Streamingauftrags
 

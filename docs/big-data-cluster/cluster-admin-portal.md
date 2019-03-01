@@ -5,17 +5,17 @@ description: Erfahren Sie, wie das Verwaltungsportal für den Cluster zum Überw
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: b8f50b74f733647e8a24b58b04147937be58ba98
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 9048de9c5f1a1241a6d7049f8eeb15efef87cabb
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241571"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017856"
 ---
 # <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>Wie Sie das Cluster-Verwaltungsportal verwenden, um eine SQL Server-big Data-Cluster zu überwachen
 
@@ -32,10 +32,10 @@ Das Cluster-Verwaltungsportal können Sie:
 
 Führen Sie die [schnellstartanleitung aus, um Ihre big Data-Cluster bereitstellen](quickstart-big-data-cluster-deploy.md) bis Sie auf die **Cluster Verwaltungsportal** Abschnitt. Nachdem Sie die big Data-Cluster mit Mssqlctl ausgeführt haben, gehen Sie wie folgt vor:
 
-Sobald der Controller-Pod ausgeführt wird, können Sie das Cluster-Verwaltungsportal, zum Überwachen der Bereitstellung. Sie können den Portalzugriff mithilfe der externen IP-Adresse und den Port für die `service-proxy-lb` (z. B.: **https://\<Ip-Adresse\>: 30777/Portal**). Anmeldeinformationen für den Zugriff auf die Administratorportal die Werte sind `CONTROLLER_USERNAME` und `CONTROLLER_PASSWORD` oben angegebenen Umgebungsvariablen.
+Sobald der Controller-Pod ausgeführt wird, können Sie das Cluster-Verwaltungsportal, zum Überwachen der Bereitstellung. Sie können den Portalzugriff mithilfe der externen IP-Adresse und den Port für die `endpoint-service-proxy` (z. B.: **https://\<Ip-Adresse\>: 30777/Portal**). Anmeldeinformationen für den Zugriff auf die Administratorportal die Werte sind `CONTROLLER_USERNAME` und `CONTROLLER_PASSWORD` oben angegebenen Umgebungsvariablen.
 
 > [!NOTE]
-> Für CTP-Version 2.2 besteht eine sicherheitswarnung angezeigt, wenn die Webseite zugreifen, da sie automatisch generierte SSL-Zertifikate verwendet wird.
+> Für CTP 2.3 besteht eine sicherheitswarnung angezeigt, wenn die Webseite zugreifen, da sie automatisch generierte SSL-Zertifikate verwendet wird.
 
 ## <a name="overview"></a>Übersicht
 

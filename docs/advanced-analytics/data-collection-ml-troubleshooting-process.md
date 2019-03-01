@@ -2,17 +2,17 @@
 title: Problembehandlung bei der Datensammlung wird für Machine Learning – SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2723131e66cc149209e77884a3a9c160d4c27a0e
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: edfacb2e4d519d4f709d352f52645526cb341fad
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53644989"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017936"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Problembehandlung bei der Datensammlung für Machine learning
 
@@ -90,7 +90,7 @@ Um die R-Version und die RevoScaleR-Versionen zu erhalten, öffnen Sie eine R-Ei
   
   `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES\bin\x64\RGui.exe`
 
-Die R-Konsole zeigt die Versionsinformationen auf Start. Beispielsweise steht die folgende Version die Standardkonfiguration für SQL Server 2017 CTP 2.0:
+Die R-Konsole zeigt die Versionsinformationen auf Start. Beispielsweise steht die folgende Version die Standardkonfiguration für SQL Server 2017:
 
     *Microsoft R Open 3.3.3*
 
@@ -280,9 +280,9 @@ Für einzelne Benutzerkonten:
 3. Aktivieren Sie skriptausführung Rollen erstellen oder Hinzufügen von Benutzern zu den folgenden Rollen nach Bedarf:
 
    - Alle außer *Db_owner*: Erfordert EXTERNEN SKRIPTAUSFÜHRUNG.
-   - *Db_datawriter*: Um Ergebnisse aus R oder Python zu schreiben.
-   - *Db_ddladmin*: Neue Objekte zu erstellen.
-   - *Db_datareader*: Zum Lesen von Daten, die von R oder Python-Code verwendet wird.
+   - *db_datawriter*: Um Ergebnisse aus R oder Python zu schreiben.
+   - *db_ddladmin*: Neue Objekte zu erstellen.
+   - *db_datareader*: Zum Lesen von Daten, die von R oder Python-Code verwendet wird.
 4. Beachten Sie, ob Sie alle Standardkonten-Startup geändert, wenn Sie SQL Server 2016 installiert.
 5. Wenn ein Benutzer muss neue R-Pakete installieren oder verwenden Sie R-Pakete, die von anderen Benutzern installiert wurden, müssen Sie zum Aktivieren der paketverwaltung in der Instanz und dann zusätzliche Berechtigungen zuzuweisen. Weitere Informationen finden Sie unter [aktivieren oder Deaktivieren der R-paketverwaltung](r/r-package-how-to-enable-or-disable.md).
 

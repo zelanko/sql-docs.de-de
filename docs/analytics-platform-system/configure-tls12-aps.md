@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.date: 10/29/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 24e93c91c916272f71f137dd10bf402d693bbcd8
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 5b6ea2144fe333f87123abdf92e16aa7122e98b4
+ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52615980"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57007553"
 ---
 # <a name="configure-tls-12-in-aps"></a>Konfigurieren von TLS 1.2 in APS
 
-Zum Sichern von installiert wird, um nur TLS 1.2 zu verwenden, müssen Sie andere Protokoll auf allen physischen und virtuellen Hosts explizit zu deaktivieren. Deaktivieren der Protokolle erfordern registrierungsänderungen für die Einstellung.
+Zum Sichern von installiert wird, um nur TLS 1.2 zu verwenden, müssen Sie andere Protokoll auf allen physischen und virtuellen Hosts explizit zu deaktivieren. Deaktivieren der Protokolle erfordern registrierungsänderungen für die Einstellung. Registrierungsänderungen erfordern einen Neustart der virtuellen und physischen Hosts.
 
 > [!WARNING]
 > Dieser Abschnitt bzw. diese Methode oder Aufgabe enthält Schritte, in denen erläutert wird, wie die Registrierung geändert wird. Allerdings können schwerwiegende Probleme auftreten, wenn Sie die Registrierung ändern, nicht ordnungsgemäß, die dazu führen, dass Daten verloren gehen können, und benötigen die Neuinstallation des Betriebssystems. Wir empfehlen dringend sichern Sie die Registrierung, bevor Sie sie ändern. Auf diese Weise können Sie die Registrierung wiederherstellen, falls ein Problem auftritt. Weitere Informationen zum Sichern und Wiederherstellen der Registrierung klicken Sie auf die folgende Artikelnummer klicken, um den entsprechenden Artikel in der Microsoft Knowledge Base anzeigen:<br>

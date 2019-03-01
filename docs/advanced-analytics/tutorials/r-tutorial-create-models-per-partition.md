@@ -4,20 +4,20 @@ description: Informationen Sie zum Modellieren, Trainieren und Verwenden von par
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/02/2018
+ms.date: 02/28/2019
 ms.topic: tutorial
 ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4c60a50f5a0f1c1831a4831d1f93ddf7d81a11d9
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 550e31e0b064051cb75f0e8922c346c4e8a5e3e2
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596461"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017896"
 ---
-# <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Lernprogramm: Erstellen von Modellen partitionsbasierter in R in SQL Server
+# <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Tutorial: Erstellen von Modellen partitionsbasierter in R in SQL Server
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 In SQL Server-2019 ist die Partition-basierten Modellierung die Möglichkeit zum Erstellen und Trainieren von Modellen für partitionierte Daten. Für geschichteten Daten, die auf natürliche Weise in einem angegebenen Klassifizierungsschema - z. B. geografische Regionen, Datum und Uhrzeit, Alter oder Geschlecht - Segmente können Sie ausführen, Skript für den gesamten Daten, die Möglichkeit, modellieren, Trainieren und bewerten über Partitionen, die unverändert über alle diese Vorgänge. 
@@ -46,7 +46,7 @@ Für dieses Tutorial verwendet werden kann, müssen Sie über Folgendes verfüge
 
 + SQL Server-2019 Vorschau-Datenbank-Engine-Instanz, mit Machine Learning Services und R-Integration.
 
-Version überprüfen, indem Sie Ausführung **`SELECT @@Version`** als T-SQL-Abfrage in einem Abfragetool. Ausgabe muss "Microsoft SQL Server 2019 (CTP 2.0) - 15.0.x".
+Version überprüfen, indem Sie Ausführung **`SELECT @@Version`** als T-SQL-Abfrage in einem Abfragetool. Ausgabe muss "Microsoft SQL Server 2019 (CTP 2.3) - 15.0.x".
 
 Überprüfen der Verfügbarkeit von R-Paketen durch die Rückgabe einer gut formatierten Liste von alle R-Pakete, die derzeit mit der Datenbank-Engine-Instanz installiert:
 

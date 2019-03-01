@@ -5,17 +5,17 @@ description: Dieser Artikel beschreibt die SQL Server-Masterinstanz in einer SQL
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 778645079d2585bd86fc01c5d5e1130c564b0de5
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 67109dc6af3c03960435116c79e9f92ae79f595c
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242011"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017796"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-2019-big-data-cluster"></a>Was ist die Masterinstanz in einer SQL Server-2019 big Data-Cluster?
 
@@ -29,7 +29,7 @@ Master SQL Server-Instanz wird ein extern zugänglichen TDS-Endpunkt für den Cl
 
 ## <a name="scale-out-query-management"></a>Verwaltung von hochskalierungsabfragen
 
-Master SQL Server-Instanz enthält, die horizontale Skalierung-Abfrage-Engine, die verwendet wird, um Abfragen zu SQL Server-Instanzen auf Knoten im Verteilen der [compute Pool](concept-compute-pool.md). Die horizontale Skalierung-Abfrage-Engine bietet auch Zugriff über Transact-SQL auf alle Hive-Tabellen im Cluster ohne zusätzliche Konfiguration. (Unterstützung für Hive-Tabellen ist nicht in der CTP-Version 2.2)
+Master SQL Server-Instanz enthält, die horizontale Skalierung-Abfrage-Engine, die verwendet wird, um Abfragen zu SQL Server-Instanzen auf Knoten im Verteilen der [compute Pool](concept-compute-pool.md). Die horizontale Skalierung-Abfrage-Engine bietet auch Zugriff über Transact-SQL auf alle Hive-Tabellen im Cluster ohne zusätzliche Konfiguration. (Unterstützung für Hive-Tabellen ist nicht in CTP 2.3)
 
 ## <a name="metadata-and-user-databases"></a>Metadaten und Benutzerdatenbanken
 

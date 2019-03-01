@@ -2,17 +2,17 @@
 title: Bekannte Probleme für die Sprache R und Python-Integration – SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/13/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6dc02c56bda3cdf904e0c53115d4fbbfcfafe9fc
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: fd6f67e3095af0f1a53ed533ea9b763d52547e39
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645524"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018066"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Bekannte Probleme in Machine Learning-Dienste
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -83,7 +83,7 @@ Wenn Sie versuchen, SQL Server 2016 R Services oder SQL Server 2017-Machine Lear
 > 
 > *Mit der Identität wurde nicht gefunden.*
 > 
-> *Komponente-Fehlercode: 0 x 80131509*
+> *Komponente-Fehlercode: 0x80131509*
 
 Der Fehler tritt auf, weil, auf einem Domänencontroller, der Dienst die 20 lokalen Konten, die zum Ausführen von Machine Learning erforderlich nicht erstellt werden. Im Allgemeinen empfehlen wir nicht SQL Server auf einem Domänencontroller installieren. Weitere Informationen finden Sie unter [Unterstützung Bulletin 2032911](https://support.microsoft.com/help/2032911/you-may-encounter-problems-when-installing-sql-server-on-a-domain-cont).
 
@@ -178,7 +178,7 @@ Um das Problem zu beheben, empfehlen wir die Aktualisierung auf ein neueres Serv
 
 Wenn das Upgrade nicht möglich ist, dieses Problem zu umgehen, können Sie eine SQL-Anmeldung remote R-Aufträge ausführen, die eingebettete ODBC-Aufrufe möglicherweise.
 
-**Gilt für:** Express Edition von SQL Server 2016 R Services
+**Gilt für:** SQL Server 2016 R Services Express Edition
 
 ### <a name="11-performance-limits-when-libraries-used-by-sql-server-are-called-from-other-tools"></a>11. Leistungseinschränkungen, wenn Bibliotheken, die von SQL Server verwendet, die von anderen Tools aufgerufen werden
 
@@ -216,7 +216,7 @@ Weitere bekannte Probleme, die R-Lösungen auswirken, finden Sie unter den [Mach
 
 Wenn die Instanz von SQL Server wie z. B. an einen nicht standardmäßigen Speicherort installiert wurde außerhalb der `Program Files` Ordner, der die Warnung ACCESS_DENIED ausgelöst wird, wenn Sie versuchen, Skripts auszuführen, die ein Paket zu installieren. Zum Beispiel:
 
-> *In `normalizePath(path.expand(path), winslash, mustWork)` : Pfad [2] = "~ExternalLibraries/R/8/1": Zugriff wird verweigert.*
+> *In `normalizePath(path.expand(path), winslash, mustWork)` : path[2]="~ExternalLibraries/R/8/1": Zugriff wird verweigert.*
 
 Der Grund ist, dass eine R-Funktion versucht, den Pfad zu lesen, und schlägt fehl, wenn die integrierten Benutzergruppe **SQLRUserGroup**, hat keinen Lesezugriff. Die Warnung, die ausgelöst wird, blockiert die Ausführung der aktuellen R-Skripts nicht, aber die Warnung möglicherweise wiederholt wiederholt, wenn der Benutzer alle anderen R-Skript ausgeführt wird.
 

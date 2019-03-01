@@ -5,19 +5,19 @@ description: In diesem Tutorial wird veranschaulicht, wie zum Laden von Beispiel
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 01/17/2019
+ms.date: 02/28/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 207d2d01278d96456bcec44814efe76fdae70fdf
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+ms.openlocfilehash: 68fe779dbdc99bd3eca1870a4e8ff1ee0fa7d95f
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397509"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017846"
 ---
-# <a name="tutorial-load-sample-data-into-a-sql-server-2019-big-data-cluster"></a>Lernprogramm: Laden Sie Beispieldaten in eine SQL Server-2019 big Data-cluster
+# <a name="tutorial-load-sample-data-into-a-sql-server-2019-big-data-cluster"></a>Tutorial: Laden Sie Beispieldaten in eine SQL Server-2019 big Data-cluster
 
 In diesem Tutorial wird erläutert, wie Sie mithilfe eines Skripts zum Laden von Beispieldaten in eine SQL Server-2019 big Data-Cluster (Vorschau). Viele der anderen Lernprogramme in der Dokumentation verwenden diesen Beispieldaten.
 
@@ -69,7 +69,7 @@ Die folgenden Schritte beschreiben, wie Sie einen Windows-Client verwenden, um d
    | <KNOX_PASSWORD> | Das Kennwort für das HDFS/Spark-Gateway. |
 
    > [!TIP]
-   > Verwendung ["kubectl"](cluster-troubleshooting-commands.md) um die IP-Adressen für die SQL Server-Masterinstanz und Knox zu finden. Führen Sie `kubectl get svc -n <your-cluster-name>` und sehen Sie sich die externe IP-Adressen für die master-Instanz (**Endpunkt-Master-Pool**) und Knox (**Service-Sicherheit-lb** oder **Service-Sicherheit-Nodeport**).
+   > Verwendung ["kubectl"](cluster-troubleshooting-commands.md) um die IP-Adressen für die SQL Server-Masterinstanz und Knox zu finden. Führen Sie `kubectl get svc -n <your-cluster-name>` und sehen Sie sich die externe IP-Adressen für die master-Instanz (**Endpunkt-Master-Pool**) und Knox (**endpunktsicherheit**).
 
 1. Das bootstrap-Skript ausführen.
 
@@ -105,7 +105,7 @@ Die folgenden Schritte beschreiben, wie Sie einen Linux-Client verwenden, um die
    | <KNOX_PASSWORD> | Das Kennwort für das HDFS/Spark-Gateway. |
 
    > [!TIP]
-   > Verwendung ["kubectl"](cluster-troubleshooting-commands.md) um die IP-Adressen für die SQL Server-Masterinstanz und Knox zu finden. Führen Sie `kubectl get svc -n <your-cluster-name>` und sehen Sie sich die externe IP-Adressen für die master-Instanz (**Endpunkt-Master-Pool**) und Knox (**Service-Sicherheit-lb** oder **Service-Sicherheit-Nodeport**).
+   > Verwendung ["kubectl"](cluster-troubleshooting-commands.md) um die IP-Adressen für die SQL Server-Masterinstanz und Knox zu finden. Führen Sie `kubectl get svc -n <your-cluster-name>` und sehen Sie sich die externe IP-Adressen für die master-Instanz (**Endpunkt-Master-Pool**) und Knox (**endpunktsicherheit**).
 
 1. Das bootstrap-Skript ausführen.
 

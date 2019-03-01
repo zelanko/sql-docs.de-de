@@ -5,17 +5,17 @@ description: Dieser Artikel beschreibt den Controller von einem SQL Server-2019 
 author: mihaelablendea
 ms.author: mihaelab
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 84162981b68a309f4a21efc0c0610837be308ddb
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: e9fc73e9e95e2a69871d55e6ce00d14b8f29f0e6
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241281"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017866"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-2019-big-data-cluster"></a>Was ist der Controller auf einem SQL Server-2019 big Data-Cluster?
 
@@ -29,15 +29,15 @@ Der Controller-Dienst bietet die folgenden Kernfunktionen:
 - Machen Sie Überwachungstools, um zu beobachten, die Zustand des Clusters
 - Bereitstellen von Tools zur Problembehandlung, um zu erkennen und Reparieren unerwartete Probleme
 - Verwalten von Clustersicherheit: sichere Cluster-Endpunkte stellen Sie sicher, Benutzern und Rollen verwalten, konfigurieren Sie Anmeldeinformationen für die Kommunikation innerhalb des Clusters
-- Verwalten Sie den Workflow des Upgrades, damit sie problemlos implementiert werden (nicht verfügbar in der CTP-Version 2.2)
-- Verwalten von hochverfügbarkeit und Notfallwiederherstellung für zustandsbehaftete Dienste im Cluster (nicht verfügbar in der CTP-Version 2.2)
+- Verwalten Sie den Workflow des Upgrades, damit sie problemlos implementiert werden (nicht verfügbar in CTP 2.3)
+- Verwalten von hochverfügbarkeit und Notfallwiederherstellung für zustandsbehaftete Dienste im Cluster (nicht verfügbar in CTP 2.3)
 
 ## <a name="deploying-the-controller-service"></a>Bereitstellen des Controller-Diensts
 
 Der Controller wird bereitgestellt und gehostet werden, in der gleichen Kubernetes-Namespace, in denen der Kunde möchte eine big Data-Cluster erstellen. Dieser Dienst wird von einem Kubernetes-Administrator während der Cluster-Bootstrap, mit dem Befehlszeilenprogramm Mssqlctl installiert:
 
 ```bash
-mssqlctl create cluster <name of your cluster>
+mssqlctl cluster create --name <name of your cluster>
 ```
 
 Der war-Workflow wird Layout auf Kubernetes eine voll funktionsfähige SQL Server-big Data-Cluster, der alle Komponenten, die in beschriebenen enthält die [Übersicht](big-data-cluster-overview.md) Artikel. Der bootstrap-Workflow erstellt zunächst den Controller-Dienst, und nachdem dieser bereitgestellt wurde, wird der Controller-Dienst koordiniert, die Installation und Konfiguration von Rest, der den Teil "Dienste" Master "," Compute "," Daten "und" Storage Pools.

@@ -5,17 +5,17 @@ description: Erfahren Sie, wie Sie SQL Server-2019 big Data-Clustern (Vorschau) 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 422c09654f214d067b7d1ad7fd8bcca1dfe8f7e8
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: e92ae469c03f6b2b5547acb1f31baac334926edf
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087859"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018006"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Wie Sie SQL Server-big Data-Cluster in Kubernetes bereitstellen
 
@@ -84,10 +84,10 @@ Die Cluster-Konfiguration kann angepasst werden, mithilfe eines Satzes von Umgeb
 
 | Umgebungsvariable | Erforderlich | Standardwert | Description |
 |---|---|---|---|
-| **ACCEPT_EULA** | Ja | Nicht zutreffend | Akzeptieren Sie den SQL Server-Lizenzvertrag (z. B. "Y").  |
+| **ACCEPT_EULA** | Ja | Nicht zutreffend | Akzeptieren Sie den SQL Server-Lizenzvertrag (z. B. "Ja").  |
 | **CLUSTER_NAME** | Ja | Nicht zutreffend | Der Name des zu SQL Server bereitstellen, big Data-in Cluster, Kubernetes-Namespace. |
 | **CLUSTER_PLATFORM** | Ja | Nicht zutreffend | Die Plattform des Kubernetes-Clusters bereitgestellt wird. Kann `aks`, `minikube`, `kubernetes`|
-| **CLUSTER_COMPUTE_POOL_REPLICAS** | Nein | 1 | Die Anzahl der Compute-Pool Replikate zu erstellen. In der CTP-Version 2.2 nur Wert zulässig ist 1. |
+| **CLUSTER_COMPUTE_POOL_REPLICAS** | Nein | 1 | Die Anzahl der Compute-Pool Replikate zu erstellen. In CTP 2.3 nur Wert zulässig ist 1. |
 | **CLUSTER_DATA_POOL_REPLICAS** | Nein | 2 | Die Anzahl der Pools Replikate zu erstellen. |
 | **CLUSTER_STORAGE_POOL_REPLICAS** | Nein | 2 | Die Anzahl der Speicher-Pool Replikate zu erstellen. |
 | **DOCKER_REGISTRY** | Ja | TBD | Die private Registrierung, in dem die Bilder verwendet, um die Bereitstellung des Clusters gespeichert sind. |
@@ -189,7 +189,7 @@ Wenn Sie mit Kubeadm auf Ihren eigenen physischen oder virtuellen Computern bere
 Die Create-Cluster-API dient zum Initialisieren des Kubernetes-Namespaces und den anwendungspods in den Namespace bereitstellen. Führen Sie zum Bereitstellen von SQL Server-big Data-Cluster in Ihrem Kubernetes-Cluster den folgenden Befehl ein:
 
 ```bash
-mssqlctl create cluster <your-cluster-name>
+mssqlctl cluster create --name <your-cluster-name>
 ```
 
 Während der Cluster-Bootstrap gibt der Client-Befehlsfenster den Bereitstellungsstatus. Während der Bereitstellung sehen Sie eine Reihe von Nachrichten, in dem sie den Pod Controller wartet:
@@ -202,7 +202,7 @@ Nach 10 bis 20 Minuten sollten Sie eine Benachrichtigung über der Pod Controlle
 
 ```output
 2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
-2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.222.222.222:30080
+2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.111.111.111:30080
 ```
 
 > [!IMPORTANT]
@@ -215,21 +215,23 @@ Wenn die Bereitstellung abgeschlossen ist, benachrichtigt die Ausgabe Sie Erfolg
 2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
 ```
 
-## <a id="masterip"></a> Abrufen von Master für SQL Server-Instanz und SQL Server big Data-Cluster-IP-Adressen
+## <a id="masterip"></a> Abrufen von big Data-Cluster-Endpunkte
 
-Nachdem das Bereitstellungsskript erfolgreich abgeschlossen wurde, können Sie die IP-Adresse mithilfe der unten beschriebenen Schritte master SQL Server-Instanz abrufen. Verwenden Sie diese IP-Adresse und Port-Nummer 31433 für die Verbindung mit der master SQL Server-Instanz (z. B.:  **\<Ip-Adresse\>, 31433**). Auf ähnliche Weise für die SQL Server big Data-Cluster-IP. Alle clusterendpunkte werden auf der Registerkarte "Dienstendpunkte" im Cluster-Verwaltungsportal ebenfalls beschrieben. Sie können das Cluster-Verwaltungsportal verwenden, zum Überwachen der Bereitstellung. Sie können den Portalzugriff mithilfe der externen IP-Adresse und den Port für die `service-proxy-lb` (z. B.: **https://\<Ip-Adresse\>: 30777/Portal**). Anmeldeinformationen für den Zugriff auf die Administratorportal die Werte sind `CONTROLLER_USERNAME` und `CONTROLLER_PASSWORD` oben angegebenen Umgebungsvariablen.
+Nachdem das Bereitstellungsskript erfolgreich abgeschlossen wurde, können Sie die IP-Adresse mithilfe der unten beschriebenen Schritte master SQL Server-Instanz abrufen. Verwenden Sie diese IP-Adresse und Port-Nummer 31433 für die Verbindung mit der master SQL Server-Instanz (z. B.:  **\<ip-address-of-endpoint-master-pool\>, 31433**). Auf ähnliche Weise können Sie mit der SQL Server-IP-big Data-Cluster (HDFS/Spark-Gateway) zugeordnet Verbinden der **endpunktsicherheit** Service.
 
-### <a name="aks"></a>AKS
-
-Wenn Sie ACS verwenden, bietet Azure den Azure-LoadBalancer-Dienst. Führen Sie folgenden Befehl aus:
+Die folgenden Befehle aus "kubectl" abgerufen werden allgemeine Endpunkte für die big Data-Cluster:
 
 ```bash
 kubectl get svc endpoint-master-pool -n <your-cluster-name>
-kubectl get svc service-security-lb -n <your-cluster-name>
-kubectl get svc service-proxy-lb -n <your-cluster-name>
+kubectl get svc endpoint-security -n <your-cluster-name>
+kubectl get svc endpoint-service-proxy -n <your-cluster-name>
 ```
 
-Suchen Sie nach der **externe IP-** -Wert, der dem Dienst zugewiesen ist. Verbinden Sie anschließend mit der master SQL Server-Instanz, die mit der IP-Adresse über Port 31433 (Beispiel:  **\<Ip-Adresse\>, 31433**) und mit dem External-IP-Adresse für SQL Server-big Data-clusterendpunkt `service-security-lb` Service. 
+Suchen Sie nach der **externe IP-** Wert, der für jeden Dienst zugewiesen ist.
+
+Alle clusterendpunkte werden ebenfalls beschrieben, der **Dienstendpunkte** Registerkarte im Verwaltungsportal-Cluster. Sie können den Portalzugriff mithilfe der externen IP-Adresse und den Port für die `endpoint-service-proxy` (z. B.: **https://\<ip-address-of-endpoint-service-proxy\>: 30777/Portal**). Anmeldeinformationen für den Zugriff auf die Administratorportal die Werte sind `CONTROLLER_USERNAME` und `CONTROLLER_PASSWORD` oben angegebenen Umgebungsvariablen. Sie können auch das Verwaltungsportal für den Cluster zum Überwachen der Bereitstellung verwenden.
+
+Weitere Informationen zum Herstellen einer Verbindung finden Sie unter [Herstellen einer Verbindung mit einer SQL Server big Data-cluster mit Azure Data Studio](connect-to-big-data-cluster.md).
 
 ### <a name="minikube"></a>Minikube
 
@@ -253,8 +255,11 @@ Derzeit ist die einzige Möglichkeit, einen big Data-Cluster auf eine neue Versi
 1. Löschen Sie den alten Cluster mit der `mssqlctl delete cluster` Befehl.
 
    ```bash
-    mssqlctl delete cluster <old-cluster-name>
+    mssqlctl cluster delete --name <old-cluster-name>
    ```
+
+   > [!Important]
+   > Verwenden Sie die Version der **Mssqlctl** Ihres Clusters entspricht. Löschen Sie einen ältere Cluster mit der neueren Version von nicht **Mssqlctl**.
 
 1. Deinstallieren Sie alten Versionen von **Mssqlctl**.
 
@@ -270,13 +275,13 @@ Derzeit ist die einzige Möglichkeit, einen big Data-Cluster auf eine neue Versi
    **Windows:**
 
    ```powershell
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com
    ```
 
    **Linux:**
    
    ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com --user
    ```
 
    > [!IMPORTANT]
@@ -328,14 +333,11 @@ Verwenden Sie zum Überwachen und Problembehandlung bei einer Bereitstellung **"
    | Dienst | Description |
    |---|---|
    | **endpoint-master-pool** | Bietet Zugriff auf die master-Instanz.<br/>(**Externe IP-, 31433** und **SA** Benutzer) |
-   | **service-mssql-controller-lb**<br/>**service-mssql-controller-nodeport** | Unterstützt die Tools und Clients, die den Cluster zu verwalten. |
-   | **service-proxy-lb**<br/>**service-proxy-nodeport** | Ermöglicht den Zugriff auf die [Cluster Verwaltungsportal](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777/portal)|
-   | **service-security-lb**<br/>**service-security-nodeport** | Bietet Zugriff auf das HDFS/Spark-Gateway.<br/>(**Externe IP-** und **Stamm** Benutzer) |
+   | **endpoint-controller** | Unterstützt die Tools und Clients, die den Cluster zu verwalten. |
+   | **endpoint-service-proxy** | Ermöglicht den Zugriff auf die [Cluster Verwaltungsportal](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777/portal)|
+   | **endpoint-security** | Bietet Zugriff auf das HDFS/Spark-Gateway.<br/>(**Externe IP-** und **Stamm** Benutzer) |
 
-   > [!NOTE]
-   > Den Namen des Diensts können je nach Ihrer Kubernetes-Umgebung variieren. Wenn Sie auf der Azure Kubernetes Service (AKS) bereitstellen, den Namen des Diensts enden **-lb**. Für Bereitstellungen von Minikube und Kubeadm, den Namen des Diensts enden **- Nodeport**.
-
-1. Verwenden der [Cluster Verwaltungsportal](cluster-admin-portal.md) zum Überwachen der Bereitstellung auf die **Bereitstellung** Registerkarte. Müssen Sie warten, bis die **-Dienst-Proxy-lb** Dienst zu starten, bevor Sie den Zugriff auf dieses Portal, damit sie am Anfang einer Bereitstellungstyps nicht verfügbar sein werden.
+1. Verwenden der [Cluster Verwaltungsportal](cluster-admin-portal.md) zum Überwachen der Bereitstellung auf die **Bereitstellung** Registerkarte. Müssen Sie warten, bis die **Endpunkt-Dienst-Proxy** Dienst zu starten, bevor Sie den Zugriff auf dieses Portal, damit sie am Anfang einer Bereitstellungstyps nicht verfügbar sein werden.
 
 > [!TIP]
 > Weitere Informationen zur Problembehandlung des Clusters finden Sie unter ["kubectl"-Befehle zur Überwachung und Problembehandlung von SQL Server-big Data-Cluster](cluster-troubleshooting-commands.md).

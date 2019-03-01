@@ -4,18 +4,18 @@ description: Dieser Artikel beschreibt, wie Sie die Mssql-Conf-Tool zu verwenden
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/31/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 94d5aa81e6d9da31593f03b867a1f25b5ecc85b0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: bcebae572cb6704051712e44fd0dcf71a2eff5ea
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401895"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018076"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Konfigurieren von SQL Server unter Linux mit dem Mssql-Conf-tool
 
@@ -74,6 +74,7 @@ ms.locfileid: "52401895"
 | [Das Arbeitsspeicherlimit](#memorylimit) | Legen Sie das Arbeitsspeicherlimit für SQL Server. |
 | [Microsoft Distributed Transaction Coordinator](#msdtc) | Konfigurieren und Problembehandlung für MSDTC unter Linux. |
 | [MLServices EULAs](#mlservices-eula) | Akzeptieren Sie die R und Python-EULAs für Mlservices Pakete. Gilt nur für SQLServer 2019.|
+| [outboundnetworkaccess](#mlservices-outbound-access) |Aktivieren ausgehender Netzwerkzugriff für [Mlservices](sql-server-linux-setup-machine-learning.md) R, Python und Java-Erweiterungen.|
 | [TCP-port](#tcpport) | Ändern Sie den Port, der von SQL Server, in dem für Verbindungen überwacht. |
 | [TLS](#tls) | Konfigurieren Sie die Sicherheit auf Transportebene. |
 | [Ablaufverfolgungsflags](#traceflags) | Legen Sie die Ablaufverfolgungsflags, die der Dienst verwenden soll. |
@@ -396,7 +397,7 @@ Die erste Phase Aufzeichnung wird gesteuert, indem die **coredump.coredumptype**
 
     | Typ | Description |
     |-----|-----|
-    | **Mini** | Mini ist der kleinste Dump-Dateityp. Es verwendet die Linux-System-Informationen, um zu bestimmen, Threads und Module im Prozess. Das Speicherabbild enthält nur die Host-Umgebung Threadstapel und Module. Es enthält keine Speicherverweise indirekte oder globale Variablen. |
+    | **mini** | Mini ist der kleinste Dump-Dateityp. Es verwendet die Linux-System-Informationen, um zu bestimmen, Threads und Module im Prozess. Das Speicherabbild enthält nur die Host-Umgebung Threadstapel und Module. Es enthält keine Speicherverweise indirekte oder globale Variablen. |
     | **miniplus** | MiniPlus Mini ähnelt, aber sie zusätzlichen Arbeitsspeicher enthält. Es versteht die Interna der SQLPAL und der hostumgebung, die der Dump werden die folgenden Arbeitsspeicherbereiche hinzugefügt:</br></br> -Verschiedene globale Variablen</br> – Alle Arbeitsspeicher über 64TB</br> -Alle Regionen finden Sie im Namen **/proc/$ pid/Zuordnungen**</br> -Indirekte Arbeitsspeicher von Threads und Stapel</br> -Thread Informationen</br> -Verknüpft ist, die Teb und des Peb</br> -Module-Informationen</br> -VMM und VAD-Struktur |
     | **filtered** | Gefilterte verwendet ein Subtraktion basierende entwerfen, in dem gesamten Speicher im Prozess enthalten ist, es sei denn, Sie ausdrücklich ausgeschlossen. Der Entwurf versteht die Interna der SQLPAL und der hostumgebung, die bestimmten Regionen aus der Sicherung ausschließen.
     | **full** | Vollständige befindet sich vollständig prozessdump, die alle Bereiche im **/proc/$ pid/Zuordnungen**. Dies wird nicht durch gesteuert **coredump.captureminiandfull** festlegen. |
@@ -508,7 +509,7 @@ Sie müssen zusätzlich zum Festlegen dieser Werte können auch Konfigurieren de
 
 Es gibt verschiedene andere Einstellungen für die Mssql-Conf, die Sie verwenden können, Überwachung und Problembehandlung von MSDTC aus. Diese Einstellungen werden in die folgende Tabelle kurz beschrieben. Weitere Informationen zu deren Verwendung, finden Sie unter den Details in der Windows-Support-Artikel [Aktivieren von diagnoseablaufverfolgung für MS DTC](https://support.microsoft.com/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute).
 
-| MSSQL-Conf-Einstellung | Description |
+| mssql-conf setting | Description |
 |---|---|
 | distributedtransaction.allowonlysecurerpccalls | Konfigurieren Sie sicherer nur Rpc-Aufrufe für verteilte Transaktionen |
 | distributedtransaction.fallbacktounsecurerpcifnecessary | Konfigurieren Sie für verteilte Sicherheit nur Rpc-Aufrufe |Transaktionen
@@ -544,10 +545,10 @@ sudo /opt/mssql/bin/mssql-conf setup
 sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 
 # Alternative valid syntax
-# Add R or Python to an existing installation
+# Adds the EULA section to the INI and sets acceptulam to yes
 sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
 
-# Rescind EULA acceptance
+# Rescind EULA acceptance and removes the setting
 sudo /opt/mssql/bin/mssql-conf unset EULA accepteulaml
 ```
 
@@ -558,7 +559,34 @@ Sie können auch Zustimmung zu EULAS hinzufügen, direkt an die [mssql.conf Date
 accepteula = Y
 accepteulaml = Y
 ```
+:::moniker-end
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
+## <a id="mlservices-outbound-access"></a> Aktivieren ausgehender Netzwerkzugriff
+
+Ausgehender Netzwerkzugriff für R, Python und Java-Erweiterungen in der [SQL Server Machine Learning Services](sql-server-linux-setup-machine-learning.md) Feature ist standardmäßig deaktiviert. Um ausgehende Anforderungen zu aktivieren, legen Sie die "Outboundnetworkaccess"-boolesche Eigenschaft, die mit der Mssql-conf
+
+Nach dem Festlegen der Eigenschaft an, starten Sie SQL Server Launchpad-Dienst, um die aktualisierten Werte aus der INI-Datei zu lesen. Eine Neustart-Nachricht daran erinnert Sie jedes Mal, wenn eine Erweiterbarkeit Einstellung geändert wird.
+
+```bash
+# Adds the extensibility section and property.
+# Sets "outboundnetworkaccess" to true.
+# This setting is required if you want to access data or operations off the server.
+sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
+
+# Turns off network access but preserves the setting
+/opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 0
+
+# Removes the setting and rescinds network access
+sudo /opt/mssql/bin/mssql-conf unset extensibility.outboundnetworkaccess
+```
+
+Sie können auch "Outboundnetworkaccess" hinzufügen, direkt an die [mssql.conf Datei](#mssql-conf-format):
+
+```ini
+[extensibility]
+outboundnetworkaccess = 1
+```
 :::moniker-end
 
 ## <a id="tcpport"></a> Ändern Sie den TCP-port
@@ -593,7 +621,7 @@ Die folgenden Optionen konfigurieren TLS für eine Instanz von SQL Server unter 
 |**network.tlscert** |Der absolute Pfad zu dem Zertifikat-Datei, die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für TLS verwendet. Beispiel:   `/etc/ssl/certs/mssql.pem`  Die Zertifikatdatei muss den Mssql-Konto zugänglich sein. Microsoft empfiehlt die Beschränkung des Zugriffs auf die Datei mit `chown mssql:mssql <file>; chmod 400 <file>`. |
 |**network.tlskey** |Der absolute Pfad zum privaten Schlüssel der Datei, die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für TLS verwendet. Beispiel:  `/etc/ssl/private/mssql.key`  Die Zertifikatdatei muss den Mssql-Konto zugänglich sein. Microsoft empfiehlt die Beschränkung des Zugriffs auf die Datei mit `chown mssql:mssql <file>; chmod 400 <file>`. |
 |**network.tlsprotocols** |Eine durch Trennzeichen getrennte Liste der TLS-Protokolle von SQL Server zulässig sind. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] immer versucht, die höchste zulässige Protokoll ausgehandelt. Wenn ein Client keine zulässigen Protokolle und unterstützt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] den Verbindungsversuch abgelehnt.  Für die Kompatibilität sind alle unterstützten Protokolle (1.2, 1.1, 1.0) standardmäßig zulässig.  Wenn Ihre Clients TLS 1.2 unterstützen, empfiehlt Microsoft, sodass nur TLS 1.2. |
-|**Network.tlsciphers** |Gibt an, welche Verschlüsselungen zulässig sind [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für TLS. Diese Zeichenfolge muss formatiert werden, pro [Format für die OpenSSL-Verschlüsselungsverfahren](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html). Im Allgemeinen sollten Sie nicht diese Option ändern müssen. <br /> Standardmäßig sind die folgenden Chiffren zulässig: <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
+|**network.tlsciphers** |Gibt an, welche Verschlüsselungen zulässig sind [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für TLS. Diese Zeichenfolge muss formatiert werden, pro [Format für die OpenSSL-Verschlüsselungsverfahren](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html). Im Allgemeinen sollten Sie nicht diese Option ändern müssen. <br /> Standardmäßig sind die folgenden Chiffren zulässig: <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
 | **network.kerberoskeytabfile** |Pfad zu die Kerberos-schlüsseltabellendatei |
 
 Ein Beispiel für die TLS-Einstellungen verwenden, finden Sie unter [Verschlüsseln von Verbindungen zu SQL Server unter Linux](sql-server-linux-encrypted-connections.md).
@@ -653,7 +681,7 @@ sudo cat /var/opt/mssql/mssql.conf
 Beachten Sie, dass alle Einstellungen, die in dieser Datei nicht angezeigt. die Standardwerte verwenden. Der nächste Abschnitt enthält ein Beispiel für **mssql.conf** Datei.
 
 
-## <a id="mssql-conf-format"></a> MSSQL.conf-format
+## <a id="mssql-conf-format"></a> mssql.conf format
 
 Die folgenden **/var/opt/mssql/mssql.conf** Datei enthält ein Beispiel für jede Einstellung. Sie können dieses Format verwenden, manuell vornehmen von Änderungen an der **mssql.conf** Datei je nach Bedarf. Wenn Sie die Datei manuell ändern, müssen Sie SQL Server neu starten, bevor die Änderungen angewendet werden. Verwenden der **mssql.conf** Datei mit Docker benötigen Sie Docker [speichern Ihre Daten](sql-server-linux-configure-docker.md). Fügen Sie zunächst eine vollständige **mssql.conf** -Datei in Ihrem Hostverzeichnis ein, und führen Sie dann den Container. Es ist ein Beispiel hierfür in [Kundenfeedback](sql-server-linux-customer-feedback.md).
 

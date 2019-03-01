@@ -5,17 +5,17 @@ description: Exemplarische Vorgehensweise eine Bereitstellung von SQL Server-201
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/17/2018
+ms.date: 02/28/2019
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6873ee04323ffbc813553237d79e523023a48618
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: 28048a7d29089511eb0037bac47c3efdd543a6f2
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56231067"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017876"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Schnellstart: Bereitstellen von SQL Server-big Data-Cluster in Azure Kubernetes Service (AKS)
 
@@ -108,7 +108,7 @@ Nach 10 bis 20 Minuten sollten Sie eine Benachrichtigung über der Pod Controlle
 
 ```output
 2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
-2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.222.222.222:30080
+2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.111.111.111:30080
 ```
 
 > [!IMPORTANT]
@@ -151,16 +151,16 @@ Jederzeit während der Bereitstellung können Sie "kubectl" oder das Verwaltungs
 
 ### <a name="use-the-cluster-administration-portal"></a>Verwenden Sie das Cluster-Verwaltungsportal
 
-Sobald der Controller-Pod ausgeführt wird, können Sie auch das Verwaltungsportal für den Cluster zum Überwachen der Bereitstellung verwenden. Sie können den Portalzugriff mithilfe der externen IP-Adresse und den Port für die `service-proxy-lb` (z. B.: **https://\<Ip-Adresse\>: 30777/Portal**). Die Anmeldeinformationen verwendet, um sich beim Portal anmelden, entsprechen die Werte für **Controllerbenutzer** und **Kennwort** , die Sie im Bereitstellungsskript angegeben.
+Sobald der Controller-Pod ausgeführt wird, können Sie auch das Verwaltungsportal für den Cluster zum Überwachen der Bereitstellung verwenden. Sie können den Portalzugriff mithilfe der externen IP-Adresse und den Port für die `endpoint-service-proxy` (z. B.: **https://\<Ip-Adresse\>: 30777/Portal**). Die Anmeldeinformationen verwendet, um sich beim Portal anmelden, entsprechen die Werte für **Controllerbenutzer** und **Kennwort** , die Sie im Bereitstellungsskript angegeben.
 
-Erhalten Sie die IP-Adresse der **-Dienst-Proxy-lb** Dienst mit dem folgenden Befehl in einem nachfolgenden bash- oder Cmd-Fenster:
+Erhalten Sie die IP-Adresse der **Endpunkt-Dienst-Proxy** Dienst mit dem folgenden Befehl in einem nachfolgenden bash- oder Cmd-Fenster:
 
 ```bash
-kubectl get svc service-proxy-lb -n <your-cluster-name>
+kubectl get svc endpoint-service-proxy -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> In der CTP-Version 2.2 sehen eine sicherheitswarnung Sie beim Zugreifen auf die Webseite, da es sich bei big Data-Cluster derzeit automatisch generierte SSL-Zertifikate verwendet. In CTP-Version 2.2, ist es auch nicht den Status der SQL Server-Masterinstanz angezeigt.
+> In CTP 2.3 von sehen eine sicherheitswarnung Sie beim Zugreifen auf die Webseite, da es sich bei big Data-Cluster derzeit automatisch generierte SSL-Zertifikate verwendet. In CTP 2.3 wird es darüber hinaus nicht den Status der SQL Server-Masterinstanz angezeigt.
 
 ## <a name="connect-to-the-cluster"></a>Verbinden mit dem cluster
 

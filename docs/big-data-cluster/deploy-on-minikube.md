@@ -5,17 +5,17 @@ description: Informationen Sie zum Konfigurieren von Minikube für SQL Server-20
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/11/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 66a0e955c77d98e7c3a311047fa3b93dd299ce76
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: eb8cd26b903afff6c4ad7427a3d12f74c476205d
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241161"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017746"
 ---
 # <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>Konfigurieren von Minikube für SQL Server-2019 big Data-Cluster-Bereitstellungen
 
@@ -23,10 +23,9 @@ In diesem Artikel wird beschrieben, wie so konfigurieren Sie **Minikube** auf ei
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-- Um einem Minikube-Cluster für SQL Server-2019 (Vorschau) für big Data-Cluster ausführen zu können, empfiehlt es sich, dass es sich bei Ihrem Computer mindestens 32 GB RAM verfügen.
+- 32 GB RAM (empfohlene 64 GB).
 
-   > [!TIP] 
-   > Wenn der Computer nur die empfohlenen Arbeitsspeicher verfügt, konfigurieren Sie die Bereitstellung des Clusters auf nur 1 Compute-Pool-Instanz, 1-Data-Pool-Instanz und 1-Speicher-Pool-Instanz verfügen. Diese Konfiguration sollte nur für die Auswertung Umgebungen verwendet werden, ist die Dauerhaftigkeit und Verfügbarkeit der Daten unwichtig. Finden Sie unter den [Bereitstellungsdokumentation](deployment-guidance.md#env) für Weitere Informationen zu den Umgebungsvariablen festlegen, um die Anzahl der Replikate für Datenpools, die zu konfigurieren, Computeknoten, Pools und Speicherpools.
+- Wenn der Computer nur die empfohlenen Arbeitsspeicher verfügt, konfigurieren Sie die Bereitstellung des Clusters auf nur 1 Compute-Pool-Instanz, 1-Data-Pool-Instanz und 1-Speicher-Pool-Instanz verfügen. Diese Konfiguration sollte nur für die Auswertung Umgebungen verwendet werden, ist die Dauerhaftigkeit und Verfügbarkeit der Daten unwichtig. Finden Sie unter den [Bereitstellungsdokumentation](deployment-guidance.md#env) für Weitere Informationen zu den Umgebungsvariablen festlegen, um die Anzahl der Replikate für Datenpools, die zu konfigurieren, Computeknoten, Pools und Speicherpools.
 
 - VT-X- oder AMD-V-Virtualisierung muss im BIOS des Computers aktiviert werden.
 
