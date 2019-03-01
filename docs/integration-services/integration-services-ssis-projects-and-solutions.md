@@ -39,7 +39,7 @@ ms.locfileid: "47703248"
 > [!TIP]  
 >  Wenn Sie in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] ein neues Projekt erstellen, wird die Projektmappe standardmäßig nicht im Bereich **Projektmappen-Explorer** angezeigt. Um dieses Standardverhalten zu ändern, klicken Sie im Menü **Extras** auf **Optionen**. Erweitern Sie im Dialogfeld **Optionen** den Eintrag **Projekte und Projektmappen**, und klicken Sie dann auf **Allgemein**. Wählen Sie auf der Seite **Allgemein** die Option **Projektmappe immer anzeigen**aus.  
 
-## <a name="solutions-contain-projects"></a>Lösungen enthalten Projekte  
+## <a name="solutions-contain-projects"></a>Projektmappen enthalten Projekte  
  Eine Projektmappe ist ein Container, in dem die Projekte gruppiert und verwaltet werden, die Sie zum Entwickeln von End-to-End-Unternehmenslösungen verwenden. Mithilfe einer Projektmappe können Sie mehrere Projekte als Einheit verwalten und zusammenhängende Projekte für eine Unternehmenslösung zusammenbringen.  
   
  Projektmappen können unterschiedliche Projekttypen enthalten. Wenn Sie [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer zum Erstellen eines [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Pakets verwenden, arbeiten Sie in einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt in einer von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]bereitgestellten Projektmappe.  
