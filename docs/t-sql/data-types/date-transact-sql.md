@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc046c9e6f033dc77c85401b2007321c94e803e8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 076c4927ee5f3811b9c3415c1db30cc7cfa2a6a2
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018152"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287180"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,7 +42,7 @@ Definiert ein Datum in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 |Syntax|**Datum**|  
 |Verwendung|DECLARE \@MyDate **date**<br /><br /> CREATE TABLE Table1 ( Column1 **date** )|  
 |Standardmäßiges Format der Zeichenfolgenliterale<br /><br /> (wird für Downlevelclients verwendet)|YYYY-MM-DD<br /><br /> Weitere Informationen finden Sie im nachfolgenden Abschnitt „Abwärtskompatibilität für Downlevelclients“.|  
-|Bereich|0001-01-01 bis 9999-12-31 (1582-10-15 bis 9999-12-31 für Informatica)<br /><br /> 1. Januar 1 bis zum 31. Dezember 9999 (15. Oktober 1582 bis zum 31. Dezember 9999 für Informatica)|  
+|Bereich|0001-01-01 bis 9999-12-31 (1582-10-15 bis 9999-12-31 für Informatica)<br /><br /> 1. Januar, 1 CE (Common Era) bis 31. Dezember, 9999 CE (15. Oktober, 1582 CE bis 31. Dezember, 9999 CE für Informatica)|  
 |Elementbereiche|Bei YYYY handelt es sich um vier Ziffern von 0001 bis 9999, die ein Jahr darstellen. Für Informatica ist JJJJ auf den Bereich 1582 bis 9999 beschränkt.<br /><br /> Bei MM handelt es sich um zwei Ziffern von 01 bis 12, die im angegebenen Jahr einen Monat darstellen.<br /><br /> Bei DD handelt es sich um zwei Ziffern von 01 bis 31, die im angegebenen Monat einen Tag darstellen.|  
 |Zeichenlänge|10 Stellen|  
 |Genauigkeit, Dezimalstellen|10, 0|  
@@ -64,11 +64,11 @@ In den folgenden Tabellen werden die gültigen Formate der Zeichenfolgenliterale
   
 |Alphabetisch|und Beschreibung|  
 |------------------|-----------------|  
-|mon [dd][,] yyyy<br /><br /> mon dd[,] [yy]yy<br /><br /> mon yyyy [dd]<br /><br /> [dd] mon[,] yyyy<br /><br /> dd mon[,][yy]yy<br /><br /> dd [yy]yy mon<br /><br /> [dd] yyyy mon<br /><br /> yyyy mon [dd]<br /><br /> yyyy [dd] mon|**mon** stellt den vollständigen Monatsnamen oder die in der aktuellen Sprache angegebene Monatsabkürzung dar. Kommas sind optional, und die Großschreibung wird ignoriert.<br /><br /> Um Mehrdeutigkeiten zu vermeiden, sollten Sie vierstellige Jahreszahlen verwenden.<br /><br /> Wenn der Tag fehlt, wird der erste Tag des Monats angegeben.|  
+|mon [dd][,] yyyy<br /><br /> mon dd[,] [yy<br /><br /> mon yyyy [dd]<br /><br /> [dd] mon[,] yyyy<br /><br /> dd mon[,][yy]yy<br /><br /> dd [yy]yy mon<br /><br /> [dd] yyyy mon<br /><br /> yyyy mon [dd]<br /><br /> yyyy [dd] mon|**mon** stellt den vollständigen Monatsnamen oder die in der aktuellen Sprache angegebene Monatsabkürzung dar. Kommas sind optional, und die Großschreibung wird ignoriert.<br /><br /> Um Mehrdeutigkeiten zu vermeiden, sollten Sie vierstellige Jahreszahlen verwenden.<br /><br /> Wenn der Tag fehlt, wird der erste Tag des Monats angegeben.|  
   
 |ISO 8601|und Beschreibung|  
 |--------------|----------------|  
-|YYYY-MM-DD<br /><br /> YYYYMMDD|Identisch mit dem SQL-Standard. Dies ist das einzige Format, das als internationaler Standard definiert ist.|  
+|YYYY-MM-DD<br /><br /> YYYYMMDD|Identisch mit dem SQL-Standard. Dieses ist das einzige Format, das als internationaler Standard definiert ist.|  
   
 |Unstrukturiert|und Beschreibung|  
 |-----------------|-----------------|  
@@ -80,7 +80,7 @@ In den folgenden Tabellen werden die gültigen Formate der Zeichenfolgenliterale
   
 |W3C XML-Format|und Beschreibung|  
 |--------------------|-----------------|  
-|yyyy-mm-ddTZD|Speziell unterstützt für die XML/SOAP-Verwendung.<br /><br /> TZD ist der Zeitzonenkennzeichner (Z oder +hh:mm oder -hh:mm):<br /><br /> – Der Zeitzonenoffset wird durch hh:mm angegeben. Bei hh handelt es sich um zwei Ziffern im Bereich von 0 bis 14, die die Anzahl der Stunden im Zeitzonenoffset darstellen.<br />– Bei MM handelt es sich um zwei Ziffern im Bereich von 0 bis 59, die die Anzahl der zusätzlichen Minuten im Zeitzonenoffset darstellen.<br />– + (plus) oder - (minus) ist das erforderliche Zeichen des Zeitzonenoffsets. Dieses gibt an, ob der Zeitzonenoffset zu der koordinierten Weltzeit (Coordinated Universal Time, UTC) addiert oder von dieser subtrahiert wird, um die lokale Zeit zu erhalten. Der gültige Zeitzonenoffset liegt im Bereich von -14: 00 bis +14: 00.|  
+|yyyy-mm-ddTZD|Wird für die XML/SOAP-Verwendung unterstützt.<br /><br /> TZD ist der Zeitzonenkennzeichner (Z oder +hh:mm oder -hh:mm):<br /><br /> – Der Zeitzonenoffset wird durch hh:mm angegeben. Bei hh handelt es sich um zwei Ziffern im Bereich von 0 bis 14, die die Anzahl der Stunden im Zeitzonenoffset darstellen.<br />– Bei MM handelt es sich um zwei Ziffern im Bereich von 0 bis 59, die die Anzahl der zusätzlichen Minuten im Zeitzonenoffset darstellen.<br />– + (plus) oder - (minus) ist das erforderliche Zeichen des Zeitzonenoffsets. Dieses gibt an, ob der Zeitzonenoffset zu der koordinierten Weltzeit (Coordinated Universal Time, UTC) addiert oder von dieser subtrahiert wird, um die lokale Zeit zu erhalten. Der gültige Zeitzonenoffset liegt im Bereich von -14: 00 bis +14: 00.|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>Kompatibilität mit ANSI und ISO 8601  
 **date** ist mit der ANSI SQL-Standarddefinition für den gregorianischen Kalender kompatibel: „NOTE 85 - Datetime data types will allow dates in the Gregorian format to be stored in the date range 0001-01-01 CE through 9999–12–31 CE.“ („HINWEIS 85: datetime-Datentypen akzeptieren Datumsangaben im gregorianischen Format für die Speicherung im Datumsbereich 0001-01-01 CE – 9999-12-31 CE.“)
@@ -104,6 +104,7 @@ Einige Downlevelclients unterstützen nicht die Datentypen **time**, **date**, *
 Beim Konvertieren in date- und time-Datentypen lehnt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alle Werte ab, die nicht als Datum oder Uhrzeit erkannt werden. Informationen zur Verwendung der CAST-Funktion und der CONVERT-Funktion mit Datums- und Uhrzeitdaten finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 ### <a name="converting-date-to-other-date-and-time-types"></a>Konvertieren von date-Werten in andere Datums- und Uhrzeittypen
+
 Der folgende Abschnitt veranschaulicht die Abläufe bei der Konvertierung des **date**-Datentyps in andere Datums- und Uhrzeittypen.
   
 Beim Konvertieren in **time(n)** schlägt die Konvertierung fehl, und die Fehlermeldung 206 wird ausgegeben: „Operandentypkollision: date ist inkompatibel mit time.“

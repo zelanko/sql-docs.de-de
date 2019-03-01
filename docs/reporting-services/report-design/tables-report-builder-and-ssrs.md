@@ -6,21 +6,21 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8d64ad789bd1061541528ad6ff5e07797b6f9a04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f6d7b6081950e06af35852a2c9eeef1ca0827845
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759448"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287998"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>Tabellen (Berichts-Generator und SSRS)
  Sie können in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]eine Tabelle zum Anzeigen von Detaildaten oder gruppierten Daten verwenden, oder eine Kombination von beiden Daten in einem paginierten Bericht.   
    
  Sie können Daten nach einzelnen Feldern, mehreren Feldern oder unter Verwendung eigener Ausdrücke gruppieren. Sie können geschachtelte Gruppen oder unabhängige angrenzende Gruppen erstellen. Wenn Sie aggregierte Werte für gruppierte Daten anzeigen möchten, fügen Sie Gruppen Gesamtwerte hinzu. Formatieren Sie die Zeilen und Spalten, um die Daten zu markieren, die Sie hervorheben möchten. Sie können Detaildaten oder gruppierte Daten zunächst ausblenden und Benutzern mithilfe von Drilldownelementen eine interaktive Auswahl der anzuzeigenden Elemente ermöglichen.  
   
- Um schnell mit den Tabellen zu beginnen, gehen Sie zu [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md) oder [Erstellen eines einfachen Tabellenberichts &#40;SSRS-Tutorial&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
+ Eine schnelle Einführung zu Tabellen finden Sie unter [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md) oder [Erstellen eines einfachen Tabellenberichts &#40;SSRS-Tutorial&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
   
 > [!NOTE]  
 >  Sie können Tabellen in einem Bericht als Berichtsteile getrennt veröffentlichen. Erfahren Sie mehr über [Berichtsteile](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -42,7 +42,7 @@ ms.locfileid: "47759448"
   
  ![Markierte Tabellenvorlage auf Entwurfsoberfläche](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "Table template on design surface, selected")  
   
- Der Zeilenziehpunkt für die Datenzeile zeigt das Detailsymbol (![Zeilenziehpunkt mit drei parallelen Linien für Detailzeile](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "Row handle with 3 parallel lines for details row")). Ziehen Sie Felder aus dem Berichtsdatenbereich in die Zellen der Tabelle in der Kopf- oder Detailzeile, um Daten in diesen Zeilen anzuzeigen. Beide Zeilen werden gleichzeitig gefüllt. Ziehen Sie das Feld in die Tabelle, bis eine Einfügemarke angezeigt wird, um weitere Spalten hinzuzufügen. Nach dem Hinzufügen von Datasetfeldern zur Tabelle können Sie die Standardformate für Datum und Währung für die Anzeige im Bericht ändern. Das folgende Diagramm zeigt einen Tabellendatenbereich mit folgenden Feldern: Date, Order, Product, Qty und Line Total.  
+ Der Zeilenziehpunkt für die Datenzeile zeigt das Detailsymbol (![Zeilenziehpunkt mit drei parallelen Linien für Detailzeile](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "Row handle with 3 parallel lines for details row")). Ziehen Sie Felder aus dem Berichtsdatenbereich in die Zellen der Tabelle in der Kopf- oder Detailzeile, um Daten in diesen Zeilen anzuzeigen. Beide Zeilen werden gleichzeitig gefüllt. Ziehen Sie das Feld in die Tabelle, bis eine Einfügemarke angezeigt wird, um weitere Spalten hinzuzufügen. Nach dem Hinzufügen von Datasetfeldern zur Tabelle können Sie die Standardformate für Datum und Währung für die Anzeige im Bericht ändern. Das folgende Diagramm zeigt einen Datenbereich einer Tabelle mit folgenden Feldern: Date, Order, Product, Qty und Line Total.  
   
  ![Entwurf, Tabelle mit fett formatierten Spaltenüberschriften](../../reporting-services/report-design/media/rs-basictabledetailsformatteddesign.gif "Design, Table with column headers in Bold")  
   
@@ -111,7 +111,7 @@ ms.locfileid: "47759448"
   
  Weitere Informationen finden Sie unter [Hinzufügen einer Erweiterungs- oder Reduzieraktion zu einem Element &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   

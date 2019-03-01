@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 209e4ad60eb364a0cbc1ac873dd04af62fa986e3
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9a597a7cf808028127e6c04d991e20bf7b83bc51
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030839"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292318"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Hinzufügen von kaskadierenden Parametern zu einem Bericht (Berichts-Generator und SSRS)
   Kaskadierende Parameter ermöglichen das Verwalten großer Berichtsdatenmengen. Sie können einen Satz von abhängigen Parametern definieren, sodass die Liste der Werte für einen Parameter von dem Wert abhängt, der in einem anderen Parameter ausgewählt wurde. Der erste Parameter ist beispielsweise unabhängig und stellt eine Liste von Produktkategorien dar. Wenn der Benutzer eine Kategorie auswählt, hängt der zweite Parameter vom Wert des ersten Parameters ab. Seine Werte werden mit einer Liste von Unterkategorien innerhalb der ausgewählten Kategorie aktualisiert. Wenn der Benutzer den Bericht anzeigt, werden die Berichtsdaten mit den Parameterwerten für die Kategorie und die Unterkategorien gefiltert.  
@@ -151,10 +151,10 @@ ms.locfileid: "50030839"
   
 4.  Klicken Sie auf **Bericht anzeigen**. Die Anzeige des Berichts wird mit den ausgewählten Parametern aktualisiert.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen, Ändern oder Löschen von Berichtsparametern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Tutorial: Hinzufügen eines Parameters zum Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Tutorial: Hinzufügen eines Parameters zu einem Bericht (Berichts-Generator)](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Lernprogramme für den Berichts-Generator](../../reporting-services/report-builder-tutorials.md)   
  [Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

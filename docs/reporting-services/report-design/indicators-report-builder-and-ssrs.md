@@ -13,14 +13,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.indicatorproperties.validateandstates.f1
 - sql13.rtp.rptdesigner.indicatorproperties.general.f1
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d8bb40ecff48e048f38ce793203e70471f43f28e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bea364e4d2314f612ec102edbbab9f9e39e8940e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726348"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289268"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>Indikatoren (Berichts-Generator und SSRS)
   In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten sind Indikatoren kleine Messgeräte, die den Zustand eines einzelnen Datenwerts auf einen Blick wiedergeben. Die Symbole zur Darstellung der Indikatoren und ihres Zustands sind einfach und auch in kleineren Größen optisch wirkungsvoll.  
@@ -41,7 +41,7 @@ ms.locfileid: "47726348"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält integrierte Indikatorsätze und Indikatorsymbole, die direkt verwendet werden können. Sie haben auch die Möglichkeit, einzelne Indikatorsymbole und Indikatorsätze an Ihre individuellen Anforderungen anzupassen.  
   
- Weitere Informationen zur Verwendung von Indikatoren als KPIs finden Sie unter [Tutorial: Hinzufügen eines KPIS zu einem Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Weitere Informationen zur Verwendung von Indikatoren als KPIs finden Sie unter [Tutorial: Hinzufügen eines KPI zu einem Bericht (Berichts-Generator)](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
 >  Sie können Indikatoren in einem Bericht als Berichtsteile getrennt veröffentlichen. Erfahren Sie mehr über [Berichtsteile](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -187,9 +187,9 @@ ms.locfileid: "47726348"
   
 -   [Aufnehmen von Indikatoren und Messgeräten in einen Messgerätbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Messgeräte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
- [Sparklines und Datenbalken (Berichts-Generator und SSRS)](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
+ [Sparklines und Datenbalken &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   

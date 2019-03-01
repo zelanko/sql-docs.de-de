@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a7854b2419b3644c2f3c76cd96cccc06bfae2902
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 54cc66f79a8be279543fa57d987d2a8ecbac1190
+ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299617"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331570"
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ Ein Ausdruck eines beliebigen Zeichentyps (`nvarchar`, `varchar`, `nchar` oder `
 Gibt einen Zeichenausdruck mit einem Zeichenargumenttyp zurück, aus dem das Leerzeichen `char(32)` oder andere angegebene Zeichenfolgen auf beiden Seiten entfernt werden sollen. Gibt `NULL` zurück, wenn die Eingabezeichenfolge `NULL` ist.
 
 ## <a name="remarks"></a>Remarks   
-Standardmäßig entfernen `TRIM`-Funktionen das Leerzeichen `char(32)` auf beiden Seiten. Dieser entspricht `LTRIM(RTRIM(@string))`. Das Verhalten der `TRIM `-Funktion mit angegebenen Zeichen ist identisch mit dem Verhalten der `REPLACE`-Funktion, in dem Zeichen am Beginn oder Ende durch leere Zeichenfolgen ersetzt werden.
+Standardmäßig entfernen `TRIM`-Funktionen das Leerzeichen `char(32)` auf beiden Seiten. Dieses Verhalten entspricht `LTRIM(RTRIM(@string))`. Das Verhalten der `TRIM `-Funktion mit angegebenen Zeichen ist identisch mit dem Verhalten der `REPLACE`-Funktion, in dem Zeichen am Beginn oder Ende durch leere Zeichenfolgen ersetzt werden.
 
 
 ## <a name="examples"></a>Beispiele
@@ -84,4 +84,5 @@ SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
  [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
  [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
  [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
- [String Functions &#40;Transact-SQL&#41; (Zeichenfolgenfunktionen (Transact-SQL))](../../t-sql/functions/string-functions-transact-sql.md)   
+ [String Functions &#40;Transact-SQL&#41; (Zeichenfolgenfunktionen (Transact-SQL))](../../t-sql/functions/string-functions-transact-sql.md)  
+

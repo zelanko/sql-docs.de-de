@@ -19,14 +19,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.mapgroupproperties.variables.f1
 - "10507"
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8afb64d468c895e0cfa52e8c7380ab54501180ac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8e8d4b084b8c8f015cdc04c3d4f2ff208cd2388a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538740"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297604"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Anpassen der Daten und der Anzeige einer Karte oder einer Kartenebene (Berichts-Generator und SSRS)
   Nachdem Sie einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht mithilfe eines Assistenten eine Karte oder eine Kartenebene hinzugefügt haben, möchten Sie möglicherweise anpassen, wie die Karte im Bericht angezeigt wird. Sie können Verbesserungen vornehmen, indem Sie die folgenden Ideen beachten:  
@@ -121,7 +121,7 @@ ms.locfileid: "52538740"
   
  Der Gruppenausdruck gibt an, wie analytische Daten, die zu räumlichen Daten in einer Beziehung stehen, für jedes Kartenelement in der Ebene aggregiert werden. Standardmäßig ist der Gruppenausdruck der Satz von Übereinstimmungsfeldern, der für die Beziehung zwischen den räumlichen Daten und den analytischen Daten angegeben wurden. Beispielsweise enthalten für eine Blasendiagrammkarte, die Orte und Einwohnerzahlen für ein Land oder einen Bereich anzeigt, die Übereinstimmungsfelder Ortsnamen [City] und Bereichsnamen [Region], da es mehrere Orte mit dem gleichen Namen geben kann. Der entsprechende Gruppenausdruck schließt zwei Felder ein: [City] und [Region].  
   
- Weitere Informationen finden Sie unter [Map Tips: How To Import Shapefiles Into SQL Server and Aggregate Spatial Data](https://go.microsoft.com/fwlink/?LinkID=214991)(Kartentipps: Importieren von Shape-Dateien in SQL Server und Anpassen räumlicher Daten).  
+ Weitere Informationen finden Sie unter [ Map Tips: How To Import Shapefiles Into SQL Server and Aggregate Spatial Data](https://go.microsoft.com/fwlink/?LinkID=214991) (Kartentipps: Importieren von Shape-Dateien in SQL Server und Aggregieren von räumlichen Daten).  
   
 ##  <a name="MapElements"></a> Ändern von Optionen für die Kartenelemente auf der Ebene  
  Kartenelemente sind die Punkte, Linien oder Polygone auf einer Ebene, die auf den räumlichen Daten basieren. Für Kartenelemente können die folgenden Optionen festgelegt werden. Diese Optionen gelten für alle Kartenelemente auf der Ebene, egal ob sie eingebettet werden oder nicht:  
@@ -159,7 +159,7 @@ ms.locfileid: "52538740"
   
  Weitere Informationen finden Sie unter [Unterschiedliche Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Karten-Assistent und Kartenebenen-Assistent &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
  [Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   

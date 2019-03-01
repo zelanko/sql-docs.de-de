@@ -1,7 +1,7 @@
 ---
 title: Upgraden von Datenbanken mit dem Abfrageoptimierungs-Assistenten | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/21/2018
+ms.date: 02/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: f2df34057c02171701aefb878cfb79c56f97a699
-ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
+ms.openlocfilehash: ba3e358e897b35aadf68ce198c0a43ec8f24adef
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54317800"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295668"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Upgraden von Datenbanken mit dem Abfrageoptimierungs-Assistenten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ Diese Gatingfunktion, die durch den Datenbank-Kompatibilitätsgrad bereitgestell
 
 Diese Kontrolle über Upgrades wurde mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] weiter verbessert. In dieser Version wurde [Automatische Optimierung](../../relational-databases/automatic-tuning/automatic-tuning.md) eingeführt und die Automatisierung des letzten Schritts im oben empfohlenen Workflow ermöglicht.
 
-Beginnend mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 führt die neue Funktion **Abfrageoptimierungs-Assistent (Query Tuning Assistant, QTA)** Benutzer durch den empfohlenen Workflow, um die Leistungsstabilität bei Upgrades auf neuere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Versionen aufrecht zu erhalten, wie im Abschnitt *Aufrechterhalten einer stabilen Leistung während des Upgrades auf eine neuere Version von SQL Server* der [Szenarien für die Verwendung des Abfragespeichers](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade) beschrieben. 
+Beginnend mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 führt die neue Funktion **Abfrageoptimierungs-Assistent (Query Tuning Assistant, QTA)** Benutzer durch den empfohlenen Workflow, um die Leistungsstabilität bei Upgrades auf neuere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Versionen aufrecht zu erhalten, wie im Abschnitt *Aufrechterhalten einer stabilen Leistung während des Upgrades auf eine neuere Version von SQL Server* der [Szenarien für die Verwendung des Abfragespeichers](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade) beschrieben. QTA führt allerdings kein Rollback auf einen bekannten funktionierenden Plan aus, wie im letzten Schritt des empfohlenen Workflows zu sehen. Stattdessen verfolgt QTA alle Regressionen nach, die in der Ansicht [Abfragespeicher – **Zurückgestellte Abfragen**](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed) gefunden wurden, und durchläuft mögliche Permutationen von anwendbaren Variationen des Optimierungsmodells, sodass ein neuer, besserer Plan erstellt werden kann.
 
 > [!IMPORTANT]
 > QTA generiert keine Benutzerworkload. Wenn Sie QTA in einer Umgebung ausführen, die nicht von Ihren Anwendungen verwendet wird, stellen Sie sicher, dass Sie weiterhin repräsentative Testworkloads auf dem [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Ziel mit anderen Mitteln ausführen können. 
@@ -54,7 +54,7 @@ Als Ausgangspunkt geht QTA davon aus, dass eine Datenbank aus einer früheren Ve
 
 Weitere Informationen zum Anfügen einer Datenbank finden Sie unter [Anfügen und Trennen einer Datenbank](../../relational-databases/databases/database-detach-and-attach-sql-server.md#AttachDb).
 
-Im Folgenden erfahren Sie, wie QTA im Wesentlichen nur die letzten Schritte des empfohlenen Workflows zur Aktualisierung des Kompatibilitätsgrads mithilfe des Abfragespeichers wie oben beschrieben ändert. Anstatt nur die Option zu haben, zwischen dem zurzeit ineffizienten Ausführungsplan und dem letzten bekannten guten Ausführungsplan zu wählen, bietet QTA Optimierungsoptionen, die spezifisch für die ausgewählten zurückgestellten Abfragen sind, um einen neuen verbesserten Zustand mit optimierten Ausführungsplänen zu erstellen.
+Im Folgenden erfahren Sie, wie QTA im Wesentlichen nur die letzten Schritte des empfohlenen Workflows zur Aktualisierung des Kompatibilitätsgrads mithilfe des Abfragespeichers wie oben beschrieben ändert. QTA bietet nicht nur die Möglichkeit, zwischen dem zurzeit ineffizienten Ausführungsplan und dem letzten bekannten funktionierenden Ausführungsplan zu wählen, sondern auch Optimierungsoptionen speziell für die ausgewählten zurückgestellten Abfragen, um einen neuen verbesserten Zustand mit optimierten Ausführungsplänen zu erstellen.
 
 ![Empfohlener Datenbank-Upgradeworkflow mit QTA](../../relational-databases/performance/media/qta-usage.png "Empfohlener Datenbank-Upgradeworkflow mit QTA")
 
@@ -92,7 +92,7 @@ QTA ist eine sitzungsbasierte Funktion, die den Sitzungszustand im `msqta`-Schem
        ![Fenster für das Einrichten einer neuen Datenbank-Upgradesitzung](../../relational-databases/performance/media/qta-new-session-setup.png "Fenster für das Einrichten einer neuen Datenbank-Upgradesitzung")  
   
     2.  Im Fenster **Einstellungen** zeigen zwei Spalten den Status **Aktuell** des Abfragespeichers in der Zieldatenbank sowie die **empfohlenen** Einstellungen an. 
-        -  Die empfohlenen Einstellungen sind standardmäßig ausgewählt. Wenn Sie aber auf das Optionsfeld über der Spalte „Aktuell“ klicken, werden die aktuellen Einstellungen akzeptiert, und Sie können auch die aktuelle Konfiguration des Abfragedatenspeichers optimieren. 
+        -  Die empfohlenen Einstellungen sind standardmäßig ausgewählt. Wenn Sie jedoch auf das Optionsfeld über der Spalte „Aktuell“ klicken, werden die aktuellen Einstellungen akzeptiert, und Sie können auch die aktuelle Konfiguration des Abfragespeichers optimieren. 
         -  Die vorgeschlagene Einstellung *Schwellenwert für veraltete Abfragen* ist zwei Mal so groß wie die erwartete Workloaddauer in Tagen. Dies liegt daran, dass der Abfragespeicher Informationen zur Baselineworkload und zur Workload nach dem Datenbankupgrade speichern muss.
         Klicken Sie anschließend auf **Weiter**.
 
@@ -121,7 +121,7 @@ QTA ist eine sitzungsbasierte Funktion, die den Sitzungszustand im `msqta`-Schem
     Die Liste enthält die folgenden Informationen:
     -  **Sitzungs-ID**
     -  **Sitzungsname:** Vom System generierter Name, bestehend aus dem Namen der Datenbank sowie Datum und Uhrzeit der Sitzungserstellung.
-    -  **Status**: Status der Sitzung („Aktiv“ oder „Geschlossen“).
+    -  **Status:** Status der Sitzung („Aktiv“ oder „Geschlossen“).
     -  **Beschreibung**: Vom System generierte Beschreibung, bestehend aus dem vom Benutzer ausgewählten Kompatibilitätsgrad der Zieldatenbank und der Anzahl der Tage für die Geschäftszyklusworkload.
     -  **Startzeit:** Das Datum und die Uhrzeit der Sitzungserstellung.
 

@@ -20,19 +20,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1624ff7f1ea5f480b5e28741bccc50d8746a5f9a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ae6754923dcb22a64251b351f013069b3a681fb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747859"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291818"
 ---
 # <a name="percentiledisc-transact-sql"></a>PERCENTILE_DISC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Berechnet für sortierte Werte in einem gesamten Rowset oder innerhalb bestimmter Partitionen eines Rowsets in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein bestimmtes Quantil. Für den angegebenen Quantilwert *P* sortiert PERCENTILE_DISC die Werte des Ausdrucks in der ORDER BY-Klausel und gibt den Wert mit dem kleinsten CUME_DIST-Wert (in Bezug auf die gleiche Sortierspezifikation) zurück, der größer oder gleich *P* ist. Beispiel: PERCENTILE_DISC (0.5) berechnet das 50. Quantil (d. h. den Mittelwert) eines Ausdrucks. PERCENTILE_DISC berechnet das Quantil auf Grundlage einer diskreten Verteilung der Spaltenwerte. Das Ergebnis entspricht einem bestimmten Wert in der Spalte.  
+  Berechnet für sortierte Werte in einem gesamten Rowset oder innerhalb bestimmter Partitionen eines Rowsets in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein bestimmtes Quantil. Für den angegebenen Quantilwert sortiert *P*, PERCENTILE_DISC die Ausdruckswerte in der ORDER BY-Klausel. Es wird dann der Wert mit dem kleinsten angegebenen CUME_DIST-Wert (in Bezug auf die gleiche Sortierspezifikation) zurückgegeben, der größer oder gleich *P* ist. Beispiel: PERCENTILE_DISC (0.5) berechnet das 50. Quantil (d. h. den Mittelwert) eines Ausdrucks. PERCENTILE_DISC berechnet das Quantil auf Grundlage einer diskreten Verteilung der Spaltenwerte. Das Ergebnis entspricht einem bestimmten Wert in der Spalte.  
   
- ![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol zum Themenlink") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol zum Artikellink](../../database-engine/configure-windows/media/topic-link.gif "Symbol zum Themenlink") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,11 +45,11 @@ PERCENTILE_DISC ( numeric_literal ) WITHIN GROUP ( ORDER BY order_by_expression 
  *literal*  
  Das zu berechnende Quantil. Der Wert muss zwischen 0,0 und 1,0 liegen.  
   
- WITHIN GROUP **(** ORDER BY *order_by_expression* [ **ASC** | DESC ]**)**  
+ WITHIN GROUP **(** ORDER BY *order_by_expression* [ **ASC** | DESC)**  
  Gibt eine Liste von numerischen Werten für die Sortierung und Berechnung des Quantils an. Es ist nur ein *order_by_expression*-Element zulässig. Standardmäßig wird die Sortierung in aufsteigender Reihenfolge vorgenommen. Die Liste der Werte kann von einem beliebigen Datentyp sein, der für den Sortierungsvorgang gültig sein kann.  
   
- OVER **(** \<partition_by_clause> **)**  
- Teilt das von der FROM-Klausel erzeugte Resultset in Partitionen, auf die die Quantilfunktion angewendet wird. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md). Die \<ORDER BY-Klausel> und die \<Zeilen- oder Bereichsklausel> können nicht in einer PERCENTILE_DISC-Funktion angegeben werden.  
+ OVER **(** \<partition_by_clause>)**  
+ Teilt die Ergebnisse der FROM-Klausel in Partitionen. Die Quantilfunktion wird auf diese Partitionen angewendet. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md). Die \<ORDER BY-Klausel> und die \<Zeilen- oder Bereichsklausel> können nicht in einer PERCENTILE_DISC-Funktion angegeben werden.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  Der Rückgabetyp wird durch den *order_by_expression*-Typ bestimmt.  
@@ -64,8 +64,11 @@ PERCENTILE_DISC ( numeric_literal ) WITHIN GROUP ( ORDER BY order_by_expression 
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-basic-syntax-example"></a>A. Einfaches Syntaxbeispiel  
- Im folgenden Beispiel wird das durchschnittliche Mitarbeitergehalt in jeder Abteilung mithilfe von PERCENTILE_CONT und PERCENTILE_DISC ermittelt. Beachten Sie, dass diese Funktionen möglicherweise nicht den gleichen Wert zurückgeben. Ursache hierfür ist, dass PERCENTILE_CONT den geeigneten Wert interpoliert, unabhängig davon, ob dieser im Dataset vorhanden ist oder nicht, während PERCENTILE_DISC immer einen Istwert aus dem Dataset zurückgibt.  
+### <a name="basic-syntax-example"></a>Einfaches Syntaxbeispiel  
+
+ Im folgenden Beispiel wird das durchschnittliche Mitarbeitergehalt in jeder Abteilung mithilfe von PERCENTILE_CONT und PERCENTILE_DISC ermittelt. Sie geben möglicherweise nicht den gleichen Wert zurück:
+* PERCENTILE_CONT gibt den entsprechenden Wert zurück, auch wenn er im Datenset nicht vorhanden ist.
+* PERCENTILE_DISC gibt einen tatsächlich festgelegten Wert zurück.  
   
 ```  
 USE AdventureWorks2012;  
@@ -96,8 +99,11 @@ Human Resources        17.427850    16.5865
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="b-basic-syntax-example"></a>B. Einfaches Syntaxbeispiel  
- Im folgenden Beispiel wird das durchschnittliche Mitarbeitergehalt in jeder Abteilung mithilfe von PERCENTILE_CONT und PERCENTILE_DISC ermittelt. Beachten Sie, dass diese Funktionen möglicherweise nicht den gleichen Wert zurückgeben. Ursache hierfür ist, dass PERCENTILE_CONT den geeigneten Wert interpoliert, unabhängig davon, ob dieser im Dataset vorhanden ist oder nicht, während PERCENTILE_DISC immer einen Istwert aus dem Dataset zurückgibt.  
+### <a name="basic-syntax-example"></a>Einfaches Syntaxbeispiel  
+
+ Im folgenden Beispiel wird das durchschnittliche Mitarbeitergehalt in jeder Abteilung mithilfe von PERCENTILE_CONT und PERCENTILE_DISC ermittelt. Sie geben möglicherweise nicht den gleichen Wert zurück:
+* PERCENTILE_CONT gibt den entsprechenden Wert zurück, auch wenn er im Datenset nicht vorhanden ist. 
+* PERCENTILE_DISC gibt einen tatsächlich festgelegten Wert zurück.  
   
 ```  
 -- Uses AdventureWorks  
@@ -122,7 +128,7 @@ Human Resources        17.427850    16.5865
 Shipping and Receiving  9.250000     9.0000
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [PERCENTILE_CONT &#40;Transact-SQL&#41;](../../t-sql/functions/percentile-cont-transact-sql.md)  
   
   

@@ -29,12 +29,12 @@ ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: de18602606fb380bc8b87eb7dcb18b84febf658e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6225fee2ece7ce1af163804c50def198c00a43d8
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636278"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154862"
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47636278"
   Überprüft den aktuellen Identitätswert der angegebenen Tabelle in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und ändert ihn gegebenenfalls. Sie können DBCC CHECKIDENT auch verwenden, um manuell einen neuen aktuellen Identitätswert für die Identitätsspalte festzulegen.  
    
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -79,7 +79,7 @@ DBCC CHECKIDENT
 |-----------------------------|---------------------------------------------|  
 |DBCC CHECKIDENT ( *table_name*, NORESEED )|Der aktuelle Identitätswert wird nicht zurückgesetzt. DBCC CHECKIDENT gibt den aktuellen Identitätswert und den aktuellen maximalen Wert der Identitätsspalte zurück. Wenn die beiden Werte nicht gleich sind, sollten Sie den Identitätswert zurücksetzen, um mögliche Fehler oder Lücken in der Wertesequenz zu vermeiden.|  
 |DBCC CHECKIDENT ( *table_name* )<br /><br /> oder<br /><br /> DBCC CHECKIDENT ( *table_name*, RESEED )|Wenn der aktuelle Identitätswert für eine Tabelle kleiner ist als der maximale in der Identitätsspalte gespeicherte Identitätswert, wird er auf den maximalen Wert in der Identitätsspalte zurückgesetzt. Weitere Informationen finden Sie im Abschnitt "Ausnahmen" weiter unten.|  
-|DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|Der aktuelle Identitätswert wird auf *new_reseed_value* festgelegt. Wenn seit Erstellen der Tabelle keine Zeilen eingefügt worden sind, oder wenn alle Zeilen mittels der Anweisung TRUNCATE TABLE entfernt wurden, wird für die erste Zeile, die nach dem Ausführen von DBCC CHECKIDENT eingefügt wird, *new_reseed_value* als Identität verwendet.<br /><br /> Wenn die Tabelle aus Zeilen besteht, wird die nächste Zeile mit dem Wert *new_reseed_value* eingefügt. In Version [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] und früher verwendet die nächste Zeile, die eingefügt wird, die Werte *new_reseed_value* und [current increment](../../t-sql/functions/ident-incr-transact-sql.md).<br /><br /> Bei einer nicht leeren Tabelle kann das Festlegen des Identitätswertes auf eine Zahl, die kleiner ist als der maximale Wert in der Identitätsspalte, zu einer der folgenden Bedingungen führen:<br /><br /> Wenn eine PRIMARY KEY- oder UNIQUE-Einschränkung für die Identitätsspalte vorhanden ist, wird bei späteren Einfügungsvorgängen in die Tabelle die Fehlermeldung 2627 generiert, da ein Konflikt zwischen dem generierten Identitätswert und den vorhandenen Werten besteht.<br /><br /> Ist keine PRIMARY KEY- oder UNIQUE-Einschränkung vorhanden, führen spätere Einfügungsvorgänge zu doppelten Identitätswerten.|  
+|DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|Der aktuelle Identitätswert wird auf *new_reseed_value* festgelegt. Wenn seit Erstellen der Tabelle keine Zeilen eingefügt worden sind, oder wenn alle Zeilen mittels der Anweisung TRUNCATE TABLE entfernt wurden, wird für die erste Zeile, die nach dem Ausführen von DBCC CHECKIDENT eingefügt wird, *new_reseed_value* als Identität verwendet.<br /><br /> Wenn die Tabelle Zeilen enthält, wird die nächste Zeile mit dem Wert *new_reseed_value* plus dem [aktuellen Inkrement](../../t-sql/functions/ident-incr-transact-sql.md) eingefügt. In Version [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] und früher verwendet die nächste Zeile, die eingefügt wird, die Werte *new_reseed_value* und [current increment](../../t-sql/functions/ident-incr-transact-sql.md).<br /><br /> Bei einer nicht leeren Tabelle kann das Festlegen des Identitätswertes auf eine Zahl, die kleiner ist als der maximale Wert in der Identitätsspalte, zu einer der folgenden Bedingungen führen:<br /><br /> Wenn eine PRIMARY KEY- oder UNIQUE-Einschränkung für die Identitätsspalte vorhanden ist, wird bei späteren Einfügungsvorgängen in die Tabelle die Fehlermeldung 2627 generiert, da ein Konflikt zwischen dem generierten Identitätswert und den vorhandenen Werten besteht.<br /><br /> Ist keine PRIMARY KEY- oder UNIQUE-Einschränkung vorhanden, führen spätere Einfügungsvorgänge zu doppelten Identitätswerten.|  
   
 ## <a name="exceptions"></a>Ausnahmen  
  In der folgenden Tabelle sind Bedingungen aufgeführt, unter denen DBCC CHECKIDENT den aktuellen Identitätswert nicht automatisch zurücksetzt. Außerdem werden Methoden für das Zurücksetzen des Wertes bereitgestellt.  
@@ -158,7 +158,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  

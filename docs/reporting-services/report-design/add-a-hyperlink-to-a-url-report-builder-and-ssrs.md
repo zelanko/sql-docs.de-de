@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 30514478f54d71d88245ace385600cb2931101eb
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7dcd5d57b3b5452a9d14b8951cc8f8d6572f452d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814143"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288948"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Hinzufügen eines Links zu einer URL (Berichts-Generator und SSRS)
 Erfahren Sie, wie Sie Linkaktionen in paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  -Berichten zu Textfeldern, Bildern, Diagrammen und Messgeräten hinzufügen. Links können zu anderen Berichten, zu Lesezeichen in einem Bericht oder zu statischen oder dynamischen URLs führen. 
@@ -26,7 +26,7 @@ Erfahren Sie, wie Sie Linkaktionen in paginierten [!INCLUDE[ssRSnoversion_md](..
  
  *  Außerdem können Sie **ein Lesezeichen an einem bestimmten Ort** im selben Bericht hinzufügen. 
   
-Probieren Sie das Hinzufügen von Links mit Beispieldaten im [Tutorial: Format Text (Report VBuilder) (Tutorial: Formatieren von Text (Berichts-Generator))](../../reporting-services/tutorial-format-text-report-builder.md) aus.  
+Probieren Sie das Hinzufügen von Links mit Beispieldaten hier aus [Tutorial: Formatieren von Text &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  Links, die an Datasetfelder gebunden sind, sind unter Umständen anfällig für böswillige Manipulationen. Weitere Informationen finden Sie unter [Sichere Berichte und Ressourcen](../../reporting-services/security/secure-reports-and-resources.md).  
@@ -85,7 +85,7 @@ Sie können Links zu Lesezeichen für Positionen im aktuellen Bericht erstellen.
   
 7.  Klicken Sie zum Testen des Links auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen, und klicken Sie dann auf das Berichtselement, für das Sie den Link festgelegt haben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Interaktive Sortierung, Dokumentstrukturen und Links &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Erstellen einer Dokumentstruktur &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
   

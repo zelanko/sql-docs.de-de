@@ -18,21 +18,21 @@ ms.assetid: dee9d807-faad-45b8-b3f3-7e8aa7d07147
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2f53f6efd0e4c1dbcbbeaccc78fd25fdad0c093
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b81d00f3cb8e208cd2fa34792a2d61943ff1bca
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685368"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154935"
 ---
-# <a name="envelopecenter-geography-data-type-"></a>EnvelopeCenter (geography-Datentyp)
+# <a name="envelopecenter-geography-data-type"></a>EnvelopeCenter (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt einen Punkt zurück, der als Mittelpunkt eines umschließenden Kreises für die **geography** -Instanz verwendet werden kann.  
+Gibt einen Punkt zurück, den Sie als Mittelpunkt eines umschließenden Kreises für die **geography**-Instanz verwenden können.  
   
- Um den umschließenden Kreis festzulegen, wird jeder Punkt in der Instanz als ein Vektor vom Mittelpunkt der Erde zu dem Punkt auf der Erdoberfläche beschrieben. Der Mittelpunkt des umschließenden Kreises wird berechnet, indem der Durchschnitt aller Vektoren ermittelt wird. Für geschlossene Schleifen in einer **polygon** -Instanz oder einer **linestring** -Instanz werden der erste und letzte Punkt nur einmal verwendet.  
+Jeder Punkt in der Instanz wird als Vektor beschrieben. Um den umschließenden Kreis zu ermitteln, erstreckt sich der Vektor vom Erdmittelpunkt zu dem Punkt auf der Erdoberfläche. Der Mittelpunkt des umschließenden Kreises wird berechnet, indem der Durchschnitt aller Vektoren ermittelt wird. Für geschlossene Schleifen in einer **polygon**-Instanz oder **linestring**-Instanz werden der erste und letzte Punkt nur einmal verwendet.  
   
- Diese **geography** -Datentypmethode unterstützt Instanzen von **FullGlobe** oder räumliche Instanzen, die größer als eine Hemisphäre sind.  
+Diese **geography** -Datentypmethode unterstützt Instanzen von **FullGlobe** oder räumliche Instanzen, die größer als eine Hemisphäre sind.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,19 +42,19 @@ EnvelopeCenter( )
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geography**  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geography**  
   
- CLR-Rückgabetyp: **SqlGeography**  
+CLR-Rückgabetyp: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- Diese Methode gibt einen **point**zurück. Bei Verwendung mit `EnvelopeAngle()`gibt `EnvelopeCenter()` einen umschließenden Kreis einer **geography** -Instanz verwendet werden kann.  
+Diese Methode gibt einen **point**zurück. Bei Verwendung mit `EnvelopeAngle()`gibt `EnvelopeCenter()` einen umschließenden Kreis einer **geography** -Instanz verwendet werden kann.  
   
 > [!NOTE]  
 >  `EnvelopeCenter()`gibt einen umschließenden Kreis für eine **geography**-Instanz zurück. Es wird jedoch nicht garantiert, dass die Ergebnisse den minimalen umschließenden Kreis erstellen. Im Gegensatz dazu ist für die Methode **geometry** vom `STEnvelope()` -Datentyp garantiert, dass sie den minimalen Begrenzungsrahmen zurückgibt, wenn sie auf eine **geometry** -Instanz verwendet werden kann.  
   
- In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher wird der Mittelpunkt des Kreises zurückgegeben, der den Umschlag dieser Instanz als **point** darstellt. Für alle großen Objekte, wie von `EnvelopeAngle()` = 180 definiert, wird (90,0) von `EnvelopeCenter()` zurückgegeben.  
+In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher wird der Mittelpunkt des Kreises zurückgegeben, der den Umschlag dieser Instanz als **point** darstellt. Für alle großen Objekte, wie von `EnvelopeAngle()` = 180 definiert, wird (90,0) von `EnvelopeCenter()` zurückgegeben.  
   
- Diese Methode ist nicht exakt.  
+Diese Methode ist nicht exakt.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -63,8 +63,8 @@ DECLARE @g geography = 'LINESTRING(-120 45, -120 0, -90 0)';
 SELECT @g.EnvelopeCenter().ToString();  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Erweiterte Methoden für geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [EnvelopeAngle &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/envelopeangle-geography-data-type.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Erweiterte Methoden für geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+[EnvelopeAngle &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/envelopeangle-geography-data-type.md)  
   
   

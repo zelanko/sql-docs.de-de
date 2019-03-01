@@ -1,19 +1,19 @@
 ---
-title: 'Tutorial: Einführung in Ausdrücke | Microsoft-Dokumentation'
+title: 'Lernprogramm: Einführung in Ausdrücke | Microsoft-Dokumentation'
 ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a1dff1baf3d6a7cba7d1fc17f8febf6feeb68c3a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410707"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292218"
 ---
 # <a name="tutorial-introducing-expressions"></a>Lernprogramm: Einführung in Ausdrücke
 In diesem [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] -Tutorial verwenden Sie Ausdrücke mit allgemeinen Funktionen und Operatoren zum Erstellen von leistungsstarken und flexiblen [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginierten Berichten. 
@@ -26,7 +26,7 @@ Diese Abbildung zeigt einen Bericht, der mit dem Bericht vergleichbar ist, den S
   
 ![Berichts-Generator-Ausdruck-Tutorial-in-Browser](../reporting-services/media/report-builder-expression-tutorial-in-browser.png) 
   
-Geschätzte Zeit zum Bearbeiten dieses Lernprogramms: 30 Minuten  
+Ungefähre Dauer dieses Lernprogramms: 30 Minuten  
   
 ## <a name="requirements"></a>Anforderungen  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -89,7 +89,7 @@ In diesem Abschnitt erstellen Sie einen Tabellenbericht, eine Datenquelle und ei
     ```  
 
   
-10. Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** (**!**). Das Resultset umfasst 23 Datenzeilen in den folgenden Spalten: FirstName (Vorname), LastName (Nachname), StateProvince (Bundesstaat/Provinz), CountryRegionID (ID des Landes/der Region), Gender (Geschlecht), YTDPurchase (Käufe seit Jahresbeginn) und LastPurchase (Letzter Kauf).  
+10. Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** (**!**). Das Resultset zeigt 23 Datenzeilen mit den folgenden Spalten an: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase und LastPurchase.  
 
     ![Berichts-Generator-Ausdruck-Tutorial-Abfrage-als-Text](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
@@ -357,7 +357,7 @@ In diesem Abschnitt erstellen Sie das CountryRegion-Dataset und verwenden die **
   
 ### <a name="to-look-up-values-in-the-countryregion-dataset"></a>So schlagen Sie Werte im CountryRegion-Dataset nach  
   
-1.  Klicken Sie auf den Spaltenheader **Country Region ID** , und löschen Sie den Text **ID**, sodass dort nur noch **Country Region**steht.  
+1.  Klicken Sie auf den Spaltenheader **Country Region ID** und löschen Sie den Text **ID**, sodass nur noch **Country Region** angezeigt wird.  
   
 2.  Klicken Sie mit der rechten Maustaste in die Datenzelle der Spalte **Country Region** und klicken Sie auf **Ausdruck**.  
   
@@ -654,7 +654,7 @@ Die Leser Ihres Berichts können den Bericht nun im [!INCLUDE[ssRSnoversion_md](
 ![Berichts-Generator-Ausdruck-Tutorial-endgültige-Version-im-Browser](../reporting-services/media/report-builder-expression-tutorial-final-in-browser.png)
 
    
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
 [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
 [Indikatoren &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  

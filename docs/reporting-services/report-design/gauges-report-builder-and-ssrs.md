@@ -154,14 +154,14 @@ f1_keywords:
 - "10190"
 - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 083d03837cee77d02719d8053517f2f4541df1bd
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 57a871f330b3b3beae9ab371305b2d7887f955d8
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031279"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287378"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Messgeräte (Berichts-Generator und SSRS)
   In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten zeigt ein Messgerätdatenbereich einen einzelnen Wert aus Ihrem Dataset an. Einzelne Messgeräte werden stets in einem Messgerätbereich positioniert, dem untergeordnete oder benachbarte Messgeräte hinzugefügt werden können. Innerhalb eines einzelnen Messgerätbereichs können Sie mehrere Messgeräte mit einheitlichen Funktionen wie Filtern, Gruppieren oder Sortieren erstellen.  
@@ -178,7 +178,7 @@ ms.locfileid: "50031279"
   
  ![Diagramm mit Messgerätelementen](../../reporting-services/report-design/media/gauge-elements-diagram.gif "Gauge elements diagram")  
   
- Weitere Informationen zur Verwendung von Messgeräten als KPIs finden Sie unter [Tutorial: Hinzufügen eines KPIS zu einem Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Weitere Informationen zu Messgeräten als KPIs finden Sie unter [Tutorial: Hinzufügen eines KPI zu einem Bericht (Berichts-Generator)](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
 >  Sie können Messgeräten in einem Bericht als Berichtsteile getrennt veröffentlichen. Erfahren Sie mehr über [Berichtsteile](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -198,13 +198,13 @@ ms.locfileid: "50031279"
   
  ![rs_RundesMessgerät](../../reporting-services/report-design/media/rs-radialgauge.gif "rs_RadialGauge")  
   
- Optionen für radiale Messgeräte: "Radial", "Radial mit kleinem Messgerät", "Zwei Skalen", "90 Grad Nordost", "90 Grad Nordwest", "90 Grad Südwest", "90 Grad Südost", "180 Grad Nord", "180 Grad Süd", "180 Grad West", "180 Grad Ost" und "Messgerät".  
+ Optionen für radiale Messgeräte: „Radial“, „Radial mit kleinem Messgerät“, „Zwei Skalen“, „90 Grad Nordost“, „90 Grad Nordwest“, „90 Grad Südwest“, „90 Grad Südost“, „180 Grad Nord“, „180 Grad Süd“, „180 Grad West“, „180 Grad Ost“ und „Messgerät“.  
   
  **Lineares Messgerät**  
   
  ![rs_LinearesMessgerät](../../reporting-services/report-design/media/rs-lineargauge.gif "rs_LinearGauge")  
   
- Optionen für lineare Messgeräte: "Horizontal", "Vertikal", "Mehrere Balkenzeiger", "Zwei Skalen", "Drei Farbbereiche", "Logarithmisch", "Thermometer", "Thermometer Fahrenheit/Celsius" und "Lineardiagramm".  
+ Optionen für lineare Messgeräte: „Horizontal“, „Vertikal“, „Mehrere Balkenzeiger“, „Zwei Skalen“, „Drei Farbbereiche“, „Logarithmisch“, „Thermometer“, „Thermometer Fahrenheit/Celsius“ und „Lineardiagramm“.  
   
 ##  <a name="AddingData"></a> Hinzufügen von Daten zu einem Messgerät  
  Ziehen Sie nach dem Hinzufügen des Messgeräts zur Entwurfsoberfläche ein Datasetfeld in den Messgerätdatenbereich. Das Messgerät aggregiert standardmäßig Feldwerte in einen Wert, der auf dem Messgerät angezeigt wird. Dieser Wert wird mit der Value-Eigenschaft an den Zeiger angefügt. Abhängig vom Datentyp des Felds verwendet das Messgerät das SUM- oder COUNT-Aggregat. Wenn Sie numerische Daten verwenden, die zum Hinzufügen geeignet sind, verwendet das Messgerät die SUM-Funktion. Andernfalls verwendet es das COUNT-Aggregat. Der Wert des Zeigers kann ein anderes Aggregat oder kein Aggregat verwenden.  
@@ -296,7 +296,7 @@ ms.locfileid: "50031279"
 |[Formatieren von Zeigern auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|Stellt allgemeine Informationen zum Formatieren von Zeigern auf Messgeräten und ausführliche Informationen zu den Formatierungsoptionen für die verfügbaren Zeigerformate von radialen und linearen Messgeräten bereit.|  
 |[Formatieren von Bereichen auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|Stellt Informationen zum Formatieren von Bereichen auf Messgeräten bereit, um einen wichtigen Unterabschnitt der Werte im Messgerät anzugeben visuell anzuzeigen, wenn der Zeigerwert in eine bestimmte Wertespanne eintritt.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   

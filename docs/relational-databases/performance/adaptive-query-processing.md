@@ -2,7 +2,7 @@
 title: Adaptive Abfrageverarbeitung in SQL-Datenbanken von Microsoft | Microsoft-Dokumentation
 description: Funktionen zur adaptiven Abfrageverarbeitung, die die Abfrageleistung in SQL Server (2017 und höher) und in der Azure SQL-Datenbank verbessern
 ms.custom: ''
-ms.date: 11/15/2018
+ms.date: 02/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,18 +14,19 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4097e4c4a56e34f95282a400fb07ac454a3660dd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: aba4aa388cb9ffac518b09077d535b618206ab71
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207311"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319261"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Adaptive Abfrageverarbeitung in SQL-Datenbanken
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 In diesem Artikel werden die folgenden Features zur adaptiven Abfrageverarbeitung beschrieben, die Sie zur Verbesserung der Abfrageleistung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)] verwenden können:
 - Feedback zur Speicherzuweisung im Batchmodus
+- Feedback zur Speicherzuweisung im Zeilenmodus (öffentliche Vorschau unter Datenbank-Kompatibilitätsgrad 150)
 - Adaptiver Join im Batchmodus
 - Verschachtelte Ausführung
 
@@ -36,8 +37,6 @@ Prinzipiell führt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein
 Weitere Informationen zur Abfrageverarbeitung und den Ausführungsmodi in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie im [Handbuch zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md).
 
 Manchmal ist der vom Abfrageoptimierer ausgewählte Plan nicht optimal. Dies kann mehrere Gründe haben. Beispielsweise kann die Zahl der Reihen, die durch den Abfrageplan laufen, inkorrekt sein. Der geschätzte Aufwand hilft dabei, zu bestimmen, welcher Plan bei der Ausführung verwendet wird. Wenn die Kardinalitätsschätzungen inkorrekt sind, wird der ursprüngliche Plan trotz der schlechten ursprünglichen Schätzung verwendet.
-
-![Funktionen der adaptiven Abfrageverarbeitung](./media/1_AQPFeatures.png)
 
 ### <a name="how-to-enable-adaptive-query-processing"></a>So aktivieren Sie die adaptive Abfrageverarbeitung
 Sie können Workloads automatisch für die adaptive Abfrageverarbeitung zulassen, indem Sie den Kompatibilitätsgrad 140 für die Datenbank aktivieren.  Diesen können Sie mit Transact-SQL festlegen. Zum Beispiel:  
@@ -368,6 +367,7 @@ OPTION (USE HINT('DISABLE_INTERLEAVED_EXECUTION_TVF'));
 Ein USE HINT-Abfragehinweis hat Vorrang vor einer datenbankweit gültigen Konfiguration oder einer Ablaufverfolgungsflageinstellung.
 
 ## <a name="see-also"></a>Weitere Informationen
+[Intelligente Abfrageverarbeitung in SQL-Datenbanken](../../relational-databases/performance/intelligent-query-processing.md)   
 [Leistungscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [Leitfaden zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md)    
 [Referenz zu logischen und physischen Showplanoperatoren](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    

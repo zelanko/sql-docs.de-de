@@ -1,22 +1,22 @@
 ---
-title: 'Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Lernprogramm: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation'
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8e6855a7a6a47021a635e12b2c53515ed20aa6f4
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dce9cfd4ae9459ecdb4c2169a5fb6cb638792ab4
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712441"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296162"
 ---
-# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)
-In diesem Tutorial verwenden Sie einen Assistenten in [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , um ein Kreisdiagramm in einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht zu erstellen. Anschließend fügen Sie einen Filter hinzu und erweitern das Diagramm. 
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)
+In diesem Tutorial verwenden Sie einen Assistenten in [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)], um ein Kreisdiagramm in einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]-Bericht zu erstellen. Anschließend fügen Sie einen Filter hinzu und erweitern das Diagramm. 
 
 In einem Balkendiagramm werden Kategoriedaten horizontal angezeigt. Diese Darstellung bietet folgende Vorteile:  
   
@@ -30,9 +30,9 @@ Die folgende Abbildung zeigt das zu erstellende Balkendiagramm mit den Umsätzen
   
  
 > [!NOTE]  
-> In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Erstellen eines Datasets und zum Auswählen einer Datenquelle finden Sie im ersten Tutorial dieser Reihe unter [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Das erste Tutorial dieser Reihe enthält Schrittanleitungen zum Navigieren zu einem Berichtsserver, zum Erstellen eines Datasets und zum Auswählen einer Datenquelle: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Geschätzte Zeit zum Bearbeiten dieses Tutorials: 15 Minuten.  
+Ungefähre Dauer dieses Lernprogramms: 15 Minuten  
   
 ## <a name="requirements"></a>Anforderungen  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -93,7 +93,7 @@ Darin erstellen Sie ein eingebettetes Dataset, wählen eine freigegebene Datenqu
   
 2.  Klicken Sie auf **Balken**und anschließend auf **Weiter**.  
   
-    Auf der Seite **Diagrammfelder anordnen** stehen im Bereich **Verfügbare Felder** vier Felder zur Verfügung: „FirstName“, „LastName“, „SalesYear2015“ und „SalesYear2014“.  
+    Auf der Seite **Diagrammfelder anordnen** stehen im Bereich **Verfügbare Felder** vier Felder zur Verfügung: FirstName, LastName, SalesYear2015 und SalesYear2014.  
   
 3.  Ziehen Sie "LastName" in den Bereich "Kategorien".  
   
@@ -199,7 +199,7 @@ Um die Lesbarkeit der Diagrammwerte zu verbessern, können Sie gegebenenfalls di
   
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
   
-2.  Markieren Sie am oberen Diagrammrand den Text **Diagrammtitel** , und geben Sie anschließend den Text **Umsätze für 2014 und 2015**ein.  
+2.  Markieren Sie am oberen Diagrammrand den Text **Diagrammtitel**, und geben Sie anschließend Folgendes ein: **Umsätze für 2014 und 2015**.  
   
 3.  Legen Sie bei ausgewähltem Titel im Bereich „Eigenschaften“ folgende Werte fest: **Farbe** auf **Schwarz** und **Schriftgrad** auf **12 pt**. 
   
@@ -226,7 +226,7 @@ Standardmäßig werden die Werte auf der horizontalen Achse in einem allgemeinen
   
 7.  Geben Sie im Feld **Achsentitel** den Text **Sales in thousands** ein, und drücken Sie die EINGABETASTE.  
 
-    >**Hinweis:** Während Sie tippen, erscheint es so, als würde sich das Feld „Achsentitel“ auf der vertikalen Achse befinden. Wenn Sie jedoch die EINGABETASTE drücken, wird es zur horizontalen Achse verschoben.
+    >**Hinweis:** Während der Eingabe sieht es so aus, als würde sich das Feld „Achsentitel“ auf der vertikalen Achse befinden. Wenn Sie jedoch die EINGABETASTE drücken, wird es zur horizontalen Achse verschoben.
   
 9. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
@@ -296,7 +296,7 @@ Im Diagramm werden die Namen der fünf besten Vertriebsmitarbeiter gemäß den U
 ## <a name="next-steps"></a>Next Steps  
 Sie haben das Lernprogramm "Hinzufügen eines Balkendiagramms zu einem Bericht" erfolgreich abgeschlossen. Weitere Informationen zu Diagrammen finden Sie unter [Diagramme](../reporting-services/report-design/charts-report-builder-and-ssrs.md) und [Balkendiagramme](../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Lernprogramme für den Berichts-Generator](../reporting-services/report-builder-tutorials.md)  
 [Berichts-Generator in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   

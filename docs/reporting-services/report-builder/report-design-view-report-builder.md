@@ -17,14 +17,14 @@ helpviewer_keywords:
 - user interface
 - overview of Report Builder
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 42fdd43e7e535452d01701fd7d230484ae30fcae
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 74b2396d7e32e5f8b596e4dcb5abc84645e8fc84
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712161"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286038"
 ---
 # <a name="report-design-view-report-builder"></a>Berichtsentwurfsansicht (Berichts-Generator)
   Das Fenster des Berichts-Generators ist so aufgebaut, dass Sie Berichtsressourcen einfach anordnen und schnell die gewünschten paginierten Berichte erstellen können. Die Entwurfsoberfläche befindet sich in der Mitte des Fensters. Das Menüband und die Bereiche befinden sind um die Entwurfsoberfläche angeordnet. Auf der Entwurfsoberfläche können Sie die Berichtselemente hinzufügen und anordnen. Dieser Artikel erklärt die Bereiche, die Sie zum Hinzufügen, Auswählen und Organisieren Ihrer Berichtsressoucen und zum Verändern der Berichtselementeigenschaften verwenden.  
@@ -137,13 +137,13 @@ ms.locfileid: "52712161"
  Je nach Eigenschaft können Sie einen Eigenschaftswert aus einer Dropdownliste festlegen, den Wert eingeben oder auf `<Expression>` klicken, um einen Ausdruck zu erstellen.  
   
 ### <a name="changing-the-properties-pane-view"></a>Ändern der Eigenschaftenbereichsansicht  
- Standardmäßig sind die Eigenschaften, die im Eigenschaftenbereich angezeigt werden, in größere Kategorien unterteilt, wie Aktion, Rahmen, Ausfüllen, Schriftart und Allgemein. Mit jeder Kategorie ist eine Gruppe von Eigenschaften verknüpft. Beispiel: Die folgenden Eigenschaften werden in der Kategorie Schriftart aufgeführt: Color, FontFamily, FontSize, FontStyle, FontWeight, LineHeight und TextDecoration. Sie können alle Eigenschaften, die im Bereich aufgeführt werden, auch alphabetisieren. In diesem Fall werden die Kategorien entfernt. Alle Eigenschaften werden ungeachtet der Kategorie in alphabetischer Reihenfolge aufgeführt.  
+ Standardmäßig sind die Eigenschaften, die im Eigenschaftenbereich angezeigt werden, in größere Kategorien unterteilt, wie Aktion, Rahmen, Ausfüllen, Schriftart und Allgemein. Mit jeder Kategorie ist eine Gruppe von Eigenschaften verknüpft. Beispielsweise sind die folgenden Eigenschaften in der Kategorie „Font“ aufgeführt: Color, FontFamily, FontSize, FontStyle, FontWeight, LineHeight und TextDecoration. Sie können alle Eigenschaften, die im Bereich aufgeführt werden, auch alphabetisieren. In diesem Fall werden die Kategorien entfernt. Alle Eigenschaften werden ungeachtet der Kategorie in alphabetischer Reihenfolge aufgeführt.  
   
- Der Eigenschaftenbereich enthält drei Schaltflächen am oberen Rand: Kategorie, Alphabetisieren und Eigenschaftenseiten. Klicken Sie auf die Schaltfläche Kategorie und Alphabetisieren, um zwischen den Ansichten des Eigenschaftenbereichs zu wechseln. Klicken Sie auf die Schaltfläche **Eigenschaftenseiten** , um das Eigenschaftendialogfeld für ein ausgewähltes Berichtselement zu öffnen.  
+ Der Eigenschaftenbereich enthält drei Schaltflächen am oberen Rand: Category, Alphabetize, und Property Pages. Klicken Sie auf die Schaltfläche Kategorie und Alphabetisieren, um zwischen den Ansichten des Eigenschaftenbereichs zu wechseln. Klicken Sie auf die Schaltfläche **Eigenschaftenseiten** , um das Eigenschaftendialogfeld für ein ausgewähltes Berichtselement zu öffnen.  
   
   
 ##  <a name="GroupPane"></a> Gruppierung (Bereich in Berichts-Generator)  
- Gruppen werden verwendet, um die Berichtsdaten in einer visuellen Hierarchie zu organisieren und Ergebnisse zu berechnen. Sie können die Zeilen- und Spaltengruppen innerhalb eines Datenbereichs auf der Entwurfsoberflache und im Gruppierungsbereich anzeigen. Der Gruppierungsbereich enthält zwei Bereiche: Zeilengruppen und Spaltengruppen. Wenn Sie einen Datenbereich wählen, werden im Gruppierungsbereich alle Gruppen innerhalb dieses Datenbereichs in Form einer hierarchischen Liste angezeigt: Untergeordnete Gruppen werden eingerückt unter den übergeordneten Gruppen angezeigt.  
+ Gruppen werden verwendet, um die Berichtsdaten in einer visuellen Hierarchie zu organisieren und Ergebnisse zu berechnen. Sie können die Zeilen- und Spaltengruppen innerhalb eines Datenbereichs auf der Entwurfsoberflache und im Gruppierungsbereich anzeigen. Der Gruppierungsbereich hat zwei Bereiche: Row Groups und Column Groups. Wenn Sie einen Datenbereich wählen, werden im Gruppierungsbereich alle Gruppen innerhalb dieses Datenbereichs in Form einer hierarchischen Liste angezeigt: Untergeordnete Gruppen werden eingerückt unter den übergeordneten Gruppen angezeigt.  
   
  ![Berichts-Generator-Zeilengruppen](../../reporting-services/report-builder/media/ssrb-rowgroups.png "Report Builder Row Groups")  
   
@@ -168,7 +168,7 @@ ms.locfileid: "52712161"
  Wenn Sie im Ausführungsmodus einen Bericht in der Vorschau anzeigen, entspricht er einem in HTML erstellten Bericht. Die Vorschau ist kein HTML-Code, das Layout und die Paginierung des Berichts gleichen jedoch der HTML-Ausgabe. Sie können die Ansicht ändern und einen gedruckten Bericht darstellen, indem Sie zur Seitenansicht wechseln. Klicken Sie auf der Registerkarte **Ausführen** auf die Schaltfläche **Seitenansicht** . Der Bericht wird so angezeigt, wie er auf einer physischen Seite dargestellt werde würde. Diese Ansicht gleicht der Ausgabe durch die Bild- und PDF-Renderingerweiterung. Die Seitenansicht ist keine Bild- oder PDF-Datei, das Layout und die Paginierung des Berichts ähneln jedoch der Ausgabe in diesen Formaten.  
   
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Berichts-Generator in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   

@@ -15,17 +15,17 @@ ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5b2028b4cd7e59e207f0045e00ef8f3e9a346b24
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7c28685843884275261909cd54309a83e5d3d1e2
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026611"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154765"
 ---
 # <a name="query-method-xml-data-type"></a>query()-Methode (xml-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt eine XQuery für eine Instanz des **xml**-Datentyps an. Das Ergebnis ist vom Typ **xml**. Die Methode gibt eine Instanz nicht typisierten XMLs zurück.  
+Gibt eine XQuery für eine Instanz des **xml**-Datentyps an. Das Ergebnis ist vom Typ **xml**. Die Methode gibt eine Instanz nicht typisierten XMLs zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,16 +35,16 @@ query ('XQuery')
 ```  
   
 ## <a name="arguments"></a>Argumente  
- XQuery  
- Ist eine Zeichenfolge (ein XQuery-Ausdruck), die XML-Knoten wie z. B. element- und attribute-Knoten in einer XML-Instanz abfragt.  
+XQuery  
+Ist eine Zeichenfolge (ein XQuery-Ausdruck), die XML-Knoten wie z.B. element- und attribute-Knoten in einer XML-Instanz abfragt.  
   
 ## <a name="examples"></a>Beispiele  
- Dieser Abschnitt enthält Beispiele für das Verwenden der query()-Methode des **xml**-Datentyps.  
+Dieser Abschnitt enthält Beispiele für das Verwenden der query()-Methode des **xml**-Datentyps.  
   
 ### <a name="a-using-the-query-method-against-an-xml-type-variable"></a>A. Verwenden der query()-Methode mit einer Variablen vom Typ XML  
- Das folgende Beispiel deklariert eine Variable **@myDoc** vom Typ **xml** und weist dieser dann eine XML-Instanz zu. Die **query()**-Methode wird anschließend zum Angeben einer XQuery für das Dokument verwendet.  
+Das folgende Beispiel deklariert eine Variable **@myDoc** vom Typ **xml** und weist dieser dann eine XML-Instanz zu. Die **query()**-Methode wird anschließend zum Angeben einer XQuery für das Dokument verwendet.  
   
- Die Abfrage ruft das untergeordnete <`Features`>-Element des <`ProductDescription`>-Elements ab:  
+Die Abfrage ruft das untergeordnete <`Features`>-Element des <`ProductDescription`>-Elements ab:  
   
 ```  
 declare @myDoc xml  
@@ -59,7 +59,7 @@ set @myDoc = '<Root>
 SELECT @myDoc.query('/Root/ProductDescription/Features')  
 ```  
   
- Dies ist das Ergebnis:  
+Die folgende Ausgabe zeigt das Ergebnis:  
   
 ```  
 <Features>  
@@ -69,7 +69,7 @@ SELECT @myDoc.query('/Root/ProductDescription/Features')
 ```  
   
 ### <a name="b-using-the-query-method-against-an-xml-type-column"></a>B. Verwenden der query()-Methode für eine Spalte vom Typ XML  
- Im folgenden Beispiel wird die **query()**-Methode zum Angeben einer XQuery für die **CatalogDescription**-Spalte vom Typ **xml** in der **AdventureWorks**-Datenbank verwendet:  
+Im folgenden Beispiel wird die **query()**-Methode zum Angeben einer XQuery für die **CatalogDescription**-Spalte vom Typ **xml** in der **AdventureWorks**-Datenbank verwendet:  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -83,15 +83,15 @@ declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-
      /PD:ProductDescription/PD:Features/wm:Warranty ') = 1  
 ```  
   
- Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
+Beachten Sie hinsichtlich der vorherigen Abfrage folgende Punkte:  
   
--   Die CatalogDescription-Spalte ist eine typisierte **xml**-Spalte. Dies bedeutet, dass ihr eine Schemaauflistung zugeordnet wurde. Im [XQuery-Prolog](../../xquery/modules-and-prologs-xquery-prolog.md) wird das **namespace**-Schlüsselwort zum Definieren des Präfixes verwendet, das später im Abfragetext verwendet wird.  
+-   Die CatalogDescription-Spalte ist eine typisierte **xml**-Spalte, d.h., ihr ist eine Schemasammlung zugeordnet. Im [XQuery-Prolog](../../xquery/modules-and-prologs-xquery-prolog.md) definiert das **namespace**-Schlüsselwort das Präfix, das später im Abfragetext verwendet wird.  
   
 -   Die **query()**-Methode erstellt in XML ein <`Product`>-Element mit einem **ProductModelID**-Attribut, dessen **ProductModelID**-Attributwert aus der Datenbank abgerufen wird. Weitere Informationen zur XML-Konstruktion finden Sie unter [XML Construction &#40;XQuery&#41; (XML-Konstruktion (XQUERY))](../../xquery/xml-construction-xquery.md).  
   
--   Die [exist() Method (xml Data Type)](../../t-sql/xml/exist-method-xml-data-type.md) (exist()-Methode (XML-Datentyp)) in der WHERE-Klausel wird verwendet, um nur Zeilen zu suchen, die das <`Warranty`>-Element im XML-Code enthalten. Auch hier wird das **namespace**-Schlüsselwort zum Definieren von zwei Namespacepräfixen verwendet.  
+-   Die [exist()-Methode (XML-Datentyp)](../../t-sql/xml/exist-method-xml-data-type.md) in der WHERE-Klausel sucht nur Zeilen, die das <`Warranty`>-Element im XML-Code enthalten. Auch hier definiert das **namespace**-Schlüsselwort zwei Namespacepräfixe.  
   
- Dies ist das Teilergebnis:  
+Die folgende Ausgabe zeigt das Teilergebnis:  
   
 ```  
 <Product ProductModelID="19"/>   
@@ -99,7 +99,7 @@ declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-
 ...  
 ```  
   
- Beachten Sie, dass die query()- und exist()-Methoden beide das PD-Präfix deklarieren. In diesen Fällen können Sie WITH XMLNAMESPACES verwenden, um zuerst die Präfixe zu definieren und dann in der Abfrage zu verwenden.  
+Beachten Sie, dass sowohl die query()- als auch die exist()-Methode das PD-Präfix deklariert. In diesen Fällen können Sie WITH XMLNAMESPACES verwenden, um zuerst die Präfixe zu definieren und dann in der Abfrage zu verwenden.  
   
 ```  
 WITH XMLNAMESPACES 

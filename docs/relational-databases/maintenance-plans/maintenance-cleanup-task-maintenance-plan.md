@@ -15,12 +15,12 @@ ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cf6a87ac5c41a2bd28a528a7337d05cb8dcf8775
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5e54371d1877bbebfe566692aa02f7237593b43b
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532110"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154745"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>Task 'Wartungscleanup' (Wartungsplan)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "52532110"
 > [!NOTE]  
 >  Dateien in den Unterordnern des angegebenen Verzeichnisses werden vom Task Wartungscleanup nicht automatisch gelöscht. Diese Funktion reduziert die Möglichkeit eines bösartigen Angriffs, der den Task Wartungscleanup zum Löschen von Dateien verwendet. Wenn Sie Dateien in Unterordnern auf oberster Ebene löschen möchten, müssen Sie **Unterordner auf oberster Ebene einschließen**auswählen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Verbindung**  
  Zeigt die aktuelle Verbindung an.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "52532110"
  Pfad und Name des Ordners, in dem die zu löschenden Dateien enthalten sind.  
   
  **Dateierweiterung**  
- Geben Sie die Dateierweiterung der zu löschenden Dateien an.  
+ Geben Sie die Dateierweiterung der zu löschenden Datei an. Beziehen Sie keine anderen Zeichen vor oder nach der Erweiterung ein (z.B. nicht BAK oder TRN). 
   
  **Unterordner auf oberster Ebene einschließen**  
  Löscht Dateien mit der für **Dateierweiterung** angegebenen Erweiterung aus den Unterordnern der obersten Ebene unter **Ordner**.  
@@ -97,7 +97,7 @@ ms.locfileid: "52532110"
  **Kennwort**  
  Stellt ein Kennwort für den Gebrauch bei der Authentifizierung bereit. Diese Option ist nicht verfügbar.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Wartungspläne](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 907cd0278119351c9bfabf2c2c64e514a7840c7a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3d1d5699a32b62de823846e64757a1842a9337ad
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531542"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294448"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Erste Schritte mit Columnstore für operative Echtzeitanalyse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -203,7 +203,7 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
 -   **Einfüge-/Abfragearbeitsauslastung:** Wenn Ihre Arbeitsauslastung in erster Linie Daten einfügt und sie abfragt, stellt der Standardwert 0 für COMPRESSION_DELAY die empfohlene Option dar. Die neu eingefügten Zeilen werden komprimiert, sobald eine Million Zeilen in eine einzelne Deltazeilengruppe eingefügt wurden.  
     Beispiele für eine solche Arbeitsauslastung sind (a) traditionelle DW-Arbeitsauslastung (b) Klickdatenstrom-Analyse, bei der das Klickmuster in einer Webanwendung analysiert werden soll.  
   
--   **OLTP-Arbeitsauslastung:** Wenn die Arbeitsauslastung stark DML-lastig ist (also eine Mischung aus UPDATE, DELETE und INSERT), lässt sich die Fragmentierung des Columnstore-Index durch Untersuchen von DMV „sys. dm_db_column_store_row_group_physical_stats“ bestimmen. Wenn Sie dabei sehen, dass mehr als 10 % der Zeilen in kürzlich komprimierten Zeilengruppen als gelöscht markiert wurden, können Sie die Option COMPRESSION_DELAY verwenden, um eine Zeitverzögerung bis zur Qualifikation der Zeilen zur Komprimierung hinzuzufügen. Wenn bei Ihrer Arbeitsauslastung neu eingefügte Datensätze normalerweise für etwa 60 Minuten „heiß“ bleiben (d. h. in dieser Zeit mehrfach aktualisiert werden), sollten Sie COMPRESSION_DELAY auf 60 festlegen.  
+-   **OLTP-Workload:** Wenn die Workload stark DML-lastig ist (also eine Mischung aus UPDATE, DELETE und INSERT), lässt sich die Fragmentierung des Columnstore-Index durch Untersuchen von DMV „sys. dm_db_column_store_row_group_physical_stats“ bestimmen. Wenn Sie dabei sehen, dass mehr als 10 % der Zeilen in kürzlich komprimierten Zeilengruppen als gelöscht markiert wurden, können Sie die Option COMPRESSION_DELAY verwenden, um eine Zeitverzögerung bis zur Qualifikation der Zeilen zur Komprimierung hinzuzufügen. Wenn bei Ihrer Arbeitsauslastung neu eingefügte Datensätze normalerweise für etwa 60 Minuten „heiß“ bleiben (d. h. in dieser Zeit mehrfach aktualisiert werden), sollten Sie COMPRESSION_DELAY auf 60 festlegen.  
   
  Wir gehen davon aus, dass die meisten Kunden keine Anpassungen vornehmen müssen. Der Standardwert der Option COMPRESSION_DELAY sollte für ihren Fall funktionieren.  
 Fortgeschrittenen Benutzern empfehlen wir, die Abfrage unten auszuführen und den Prozentsatz der gelöschten Zeilen im Lauf der letzten 7 Tage zu bestimmen.  
@@ -220,7 +220,7 @@ ORDER BY created_time DESC
   
  Wenn die Anzahl der gelöschten Zeilen in komprimierten Zeilengruppen mehr als 20 % beträgt, mit einer Häufung in älteren Zeilengruppen mit weniger als 5 % Variation (die als „kalte“ Zeilengruppen bezeichnet werden), legen Sie COMPRESSION_DELAY = (Erstellungszeit_der_jüngsten_Zeilengruppe – aktuelle_Zeit) fest. Beachten Sie, dass dieser Ansatz sich besonders für eine stabile und relativ homogene Arbeitslast eignet.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Beschreibung von Columnstore-Indizes](../../relational-databases/indexes/columnstore-indexes-overview.md)   
  [Laden von Daten für Columnstore-Indizes](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Abfrageleistung für Columnstore-Indizes](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   

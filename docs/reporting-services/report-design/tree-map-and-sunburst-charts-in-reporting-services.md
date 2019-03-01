@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: c255369e8292aa2b7275a58d5e8375890153a5aa
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 012963436b26952cd730a82bbf407803ac600fe2
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814103"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295548"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Treemap- und Sunburst-Diagramme in Reporting Services
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -44,7 +44,7 @@ In der folgenden Abbildung eines Beispiel-Treemap-Diagramms ist das Gebiet „So
     * **Kategoriegruppen** (in der folgenden Reihenfolge):
         1. CategoryName
         2. SubcategoryName
-    * **Reihengruppen**: TerritoryName  
+    * **Seriengruppen**: TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -90,7 +90,7 @@ In einem Sunburst-Diagramm wird die Hierarchie durch eine Reihe von Kreisen darg
         1. CategoryName
         2. SubcategoryName
         3. SalesReasonName
-    * **Reihengruppen**: TerritoryName  
+    * **Seriengruppen**: TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -114,7 +114,7 @@ In einem Sunburst-Diagramm wird die Hierarchie durch eine Reihe von Kreisen darg
   
 1.  **Rufen Sie die Daten ab**.  
   
-     Die Abfrage in diesem Abschnitt basiert auf der AdventureWorks-Datenbank, die unter [AdventureWorks 2016 full database backup (Vollständige Datenbanksicherung von AdventureWorks 2016 )](https://github.com/Microsoft/sql-server-samples/releases) auf GitHub heruntergeladen werden kann.  
+     Die Abfrage in diesem Abschnitt basiert auf der AdventureWorks-Datenbank, die von GitHub heruntergeladen werden kann: [AdventureWorks 2016 full database backup](https://github.com/Microsoft/sql-server-samples/releases) (Vollständige Datenbanksicherung von AdventureWorks 2016).  
   
   
 2.  **Erstellen Sie eine Datenquelle**.  
@@ -177,7 +177,7 @@ In einem Sunburst-Diagramm wird die Hierarchie durch eine Reihe von Kreisen darg
 * [Shared dataset design view (Report Builder) (Entwurfsansicht für freigegebene Datasets (Berichts-Generator))](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
 * [Show ToolTips on a series (Report Builder and SSRS) (Anzeigen von QuickInfos für eine Reihe (Berichts-Generator und SSRS))](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)
 * [Tutorial: Treemaps in Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
-* [Treemap: Visualisierungs-Apps von Microsoft Research Data für Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)  
+* [Treemap: Microsoft Research Data Visualization Apps for Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)  
 <br>  
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 

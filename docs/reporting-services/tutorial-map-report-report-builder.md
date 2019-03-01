@@ -1,19 +1,19 @@
 ---
-title: 'Tutorial: Kartenbericht (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Lernprogramm: Kartenbericht (Berichts-Generator) | Microsoft-Dokumentation'
 ms.date: 08/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4db47bde02745ddc554f17e1f951c836c1542cc8
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 25f5dbcee0144b585fc3b328a699332c3346ce36
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712711"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298648"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Lernprogramm: Kartenbericht (Berichts-Generator)
 In diesem [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] -Tutorial erfahren Sie mehr über die Kartenfunktionen, mit denen Sie Daten vor einem geografischen Hintergrund in einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht anzeigen können. 
@@ -27,9 +27,9 @@ Geben Sie zum Verändern der Darstellung von Kartenelementen ein Feld mit Werten
 In diesem Tutorial erstellen Sie einen Kartenbericht, in dem Geschäftsstandorte in den Countys des Bundesstaats New York angezeigt werden.  
    
 > [!NOTE]  
-> In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst: ein Verfahren zum Erstellen des Datasets und ein Verfahren zum Erstellen einer Tabelle. Im ersten Tutorial dieser Reihe erhalten Sie ausführliche Anweisungen zum Navigieren zu einem Berichtsserver, Auswählen einer Datenquelle, Erstellen eines Datasets und Ausführen des Assistenten: [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst: ein Verfahren zum Erstellen des Datasets und ein Verfahren zum Erstellen einer Tabelle. Das erste Tutorial dieser Reihe enthält Schrittanleitungen zum Navigieren zu einem Berichtsserver, zum Auswählen einer Datenquelle, zum Erstellen eines Datasets und zum Ausführen des Assistenten: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Geschätzte Zeit zum Bearbeiten dieses Lernprogramms: 30 Minuten  
+Ungefähre Dauer dieses Lernprogramms: 30 Minuten  
   
 ## <a name="requirements"></a>Anforderungen  
 Der Berichtsserver muss für dieses Tutorial für die Unterstützung von Bing Maps als Hintergrund konfiguriert werden. Weitere Informationen finden Sie unter [Planen der Unterstützung für Kartenberichte](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19). 
@@ -169,13 +169,13 @@ In diesem Abschnitt fügen Sie mithilfe des Kartenebenen-Assistenten eine Punkte
 9. Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** (**!**).  
   
     Das Resultset enthält sieben Spalten mit einem Satz von Geschäften im Bundesstaat New York, die Verbrauchsgüter verkaufen. Im Folgenden finden Sie eine Liste mit Erklärungen für die Spalten, die nicht selbsterklärend sind: 
-    *   **StoreKey**: ein Geschäftsbezeichner  
+    *   **StoreKey**: ein Geschäftsbezeichner.  
     *   **StoreName**
-    *   **SellingArea**: die für eine Produktauslage zur Verfügung stehende Fläche, von 455 sq ft bis hin zu 1125 sq ft
+    *   **SellingArea**: die für eine Produktauslage zur Verfügung stehende Fläche, von 455 sq ft bis 1125 sq ft.
     *   **City**
     *   **County**
-    *   **Vertrieb**: Gesamtvertrieb 
-    *   **SpatialLocation**: Position in Längen- und Breitengraden 
+    *   **Sales**: Gesamtumsatz. 
+    *   **SpatialLocation**: Standort, angegeben in Längen- und Breitengrad. 
 
     ![Berichts-Generator-Abfrage-entwerfen](../reporting-services/media/report-builder-map-design-query.png) 
   
@@ -541,7 +541,7 @@ Damit ist die exemplarische Vorgehensweise für das Hinzufügen einer Karte zum 
   
 Weitere Informationen finden Sie unter [Karten &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Tutorials (Berichts-Generator)](../reporting-services/report-builder-tutorials.md)  
 [Berichts-Generator in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 [Karten-Assistent und Kartenebenen-Assistent &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  

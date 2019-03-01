@@ -6,16 +6,16 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: e4c4fe265b23b46ee6c283797d44335a636cb368
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 95e646fd442144ee00f36cd6fdf80440913ad0ac
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712361"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286948"
 ---
-# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines Parameters zum Bericht (Berichts-Generator)
+# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Parameters zum Bericht (Berichts-Generator)
 In diesem Tutorial fügen Sie einen Parameter zu einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht hinzu, sodass Leser des Berichts Berichtsdaten für einen Wert oder mehrere Werte filtern können. 
   
 ![Berichts-Generator-Parameter-Tutorial](../reporting-services/media/report-builder-parameter-tutorial.png)
@@ -23,7 +23,7 @@ In diesem Tutorial fügen Sie einen Parameter zu einem paginierten [!INCLUDE[ssR
 Berichtsparameter werden automatisch für jeden Abfrageparameter erstellt, den Sie in eine Datasetabfrage einschließen. Der Parameterdatentyp bestimmt, wie der Parameter auf der Symbolleiste der Berichtsansicht angezeigt wird. 
    
 > [!NOTE]  
-> In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Im ersten Tutorial dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Auswählen einer Datenquelle sowie zum Erstellen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Im ersten Lernprogramm dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Auswählen einer Datenquelle sowie zum Erstellen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Ungefähre Dauer dieses Lernprogramms: 25 Minuten.  
   
@@ -82,7 +82,7 @@ Erstellen Sie einen Matrixbericht, eine Datenquelle und ein Dataset.
   
 11. Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** (**!**), um die Daten anzuzeigen.   
   
-    Das Resultset enthält 11 Datenzeilen, in denen die Menge verkaufter Artikel in jeder Unterkategorie für vier Geschäfte angezeigt in folgenden Spalten angezeigt wird: „StoreID“, „Subcategory“ und „Quantity“. Der Geschäftsname ist nicht Teil des Resultsets. An späterer Stelle dieses Lernprogramms suchen Sie in einem separaten Dataset nach dem Namen des Geschäfts, das der Geschäfts-ID entspricht.  
+    Das Resultset enthält 11 Datenzeilen, in denen die Menge verkaufter Artikel in jeder Unterkategorie für vier Geschäfte angezeigt wird, und die folgenden Spalten: StoreID, Subcategory, Quantity. Der Geschäftsname ist nicht Teil des Resultsets. An späterer Stelle dieses Lernprogramms suchen Sie in einem separaten Dataset nach dem Namen des Geschäfts, das der Geschäfts-ID entspricht.  
   
     Diese Abfrage enthält keine Abfrageparameter. Abfrageparameter werden später in diesem Lernprogramm hinzugefügt.   
   
@@ -499,7 +499,7 @@ Der Bericht wird auf dem Berichtsserver gespeichert. Der Berichtsserver, mit dem
 ## <a name="next-steps"></a>Next Steps  
 Damit ist die exemplarische Vorgehensweise zum Hinzufügen eines Parameters zum Bericht abgeschlossen. Weitere Informationen zu Parametern finden Sie unter [Berichtsparameter (Berichts-Generator und Berichts-Designer)](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 * [Lernprogramme für den Berichts-Generator](../reporting-services/report-builder-tutorials.md)
 * [Berichts-Generator in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 *  [Lookup-Funktion](../reporting-services/report-design/report-builder-functions-lookup-function.md)   

@@ -1,12 +1,15 @@
 ---
 title: Power Query-Quelle | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie die Power Query-Quelle im SQL Server Integration Services-Datenfluss konfigurieren.
-ms.date: 02/02/2019
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
+- sql13.ssis.designer.powerqueryconnmgr.f1
+- sql13.ssis.designer.powerquerysource.queries.f1
+- sql13.ssis.designer.powerquerysource.connmgrs.f1
 - sql14.ssis.designer.powerqueryconnmgr.f1
 - sql14.ssis.designer.powerquerysource.queries.f1
 - sql14.ssis.designer.powerquerysource.connmgrs.f1
@@ -14,12 +17,12 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 00b24bdc5da2c717f43ca30e9159aa845faf171b
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: 072cf951eabd5d7d0ae2211427a66e63900cfb72
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570703"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319311"
 ---
 # <a name="power-query-source-preview"></a>Power Query-Quelle (Preview)
 
@@ -68,9 +71,6 @@ Im **Power Query-Verbindungs-Manager-Editor** müssen Sie **Datenquellenart**, *
 
 Einige dieser Quellen (**Oracle**, **DB2**, **MySQL**, **PostgreSQL**, **Teradata**, **Sybase**) erfordern zusätzliche Installationen von ADO.NET-Treibern, die Sie über den Artikel [Power Query-Voraussetzungen](https://support.office.com/article/data-source-prerequisites-power-query-6062cf52-c764-45d0-a1c6-fbf8fc05b05a) abrufen können. Sie können die Schnittstelle für benutzerdefinierte Installationen verwenden, um sie in Ihrer Azure-SSIS IR zu installieren. Siehe hierzu den Artikel [Anpassen von Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
 
-> [!NOTE]
-> Für die **Oracle**-Datenquelle kann der Oracle ADO.NET-Treiber zurzeit nicht in der Azure-SSIS IR installiert werden. Installieren Sie also stattdessen den Oracle ODBC-Treiber, und verwenden Sie vorerst die **ODBC**-Datenquelle, um eine Verbindung mit Oracle herzustellen. Siehe hierzu das **ORACLE STANDARD ODBC**-Beispiel in dem Artikel [Anpassen von Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
-
 Als **Datenquellenpfad** können Sie datenquellenspezifische Eigenschaften eingeben, die eine Verbindungszeichenfolge ohne die Authentifizierungsinformationen ergeben. Beispielsweise wird der den Pfad für die **SQL**-Datenquelle als `<Server>;<Database>` gebildet. Sie können die Schaltfläche **Bearbeiten** auswählen, um datenquellenspezifischen Eigenschaften Werte zuzuweisen, die den Pfad bilden.
 
 ![„Pfad“ im PQ-Quellen-Verbindungs-Manager-Editor](media/power-query-source/pq-source-connection-manager-editor-path.png)
@@ -78,6 +78,12 @@ Als **Datenquellenpfad** können Sie datenquellenspezifische Eigenschaften einge
 Schließlich können Sie als **Authentifizierungsart** **Anonym**/**Windows-Authentifizierung**/**Benutzername Kennwort**/**Schlüssel** aus dem Dropdownmenü auswählen, die entsprechenden Anmeldeinformationen eingeben und die Schaltfläche **Testverbindung** auswählen, um sicherzustellen, dass die Power Query Quelle ordnungsgemäß konfiguriert wurde.
 
 ![„Authentifizierung“ im PQ-Quellen-Verbindungs-Manager-Editor](media/power-query-source/pq-source-connection-manager-editor-authentication.png)
+
+### <a name="current-limitations"></a>Aktuelle Einschränkungen
+
+-   Die Datenquelle **Oracle** kann zurzeit nicht verwendet werden, da der Oracle ADO.NET-Treiber nicht in der Azure-SSIS IR installiert werden. Installieren Sie daher stattdessen den Oracle ODBC-Treiber, und verwenden Sie vorerst die **ODBC**-Datenquelle, um eine Verbindung mit Oracle herzustellen. Weitere Informationen finden Sie im **ORACLE STANDARD ODBC**-Beispiel in dem Artikel [Anpassen von Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
+
+-   Die Datenquelle **Web** kann zurzeit nicht mit einem benutzerdefinierten Setup in der Azure-SSIS IR verwendet werden, verwenden Sie diese daher vorerst ohne benutzerdefiniertes Setup in der Azure-SSIS IR.
 
 ## <a name="next-steps"></a>Nächste Schritte
 Erfahren Sie, wie Sie SSIS-Pakete in der Azure-SSIS IR als Aktivitäten erster Klasse in ADF-Pipelines ausführen. Siehe hierzu im Artikel [Ausführen der SSIS-Paket-Aktivitätslaufzeit](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).

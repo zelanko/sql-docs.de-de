@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b3fd0fc3530ec35da61e2314ef7a80a58d9bdd7d
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d3e35d889db2cbfa8eaead8f1f0e9a2015e007b5
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710701"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295202"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Erstellen eines mobilen Berichts in Reporting Services
 Mit dem Publisher für mobile Berichte von SQL Server können Sie schnell mobile Berichte für SQL Server Reporting Services erstellen, die sich problemlos an jede Bildschirmgröße anpassen. Das Tool bietet eine Entwurfsoberfläche mit anpassbaren Rasterzeilen und -spalten sowie flexible Elemente für mobile Berichte.  
@@ -42,9 +42,9 @@ Wenn Sie zum ersten Mal einen mobilen Bericht erstellen, können Sie den Publish
   
 6. Wählen Sie **Lokales Excel** oder **Berichtsserver**aus.  
   
-   >**Tipps**: Wenn Sie Daten aus Excel hinzufügen, stellen Sie sicher, dass:  
-    >* Sie [die Excel-Daten vorbereiten](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md) , damit diese in Ihrem mobilen Bericht funktionieren.  
-    >* Sie die Datei zuerst schließen.  
+   >**Tipps**: Wenn Sie Daten aus Excel hinzufügen, stellen Sie Folgendes sicher:  
+    >* [Bereiten Sie die Excel-Daten vor](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md), damit diese in Ihrem mobilen Bericht funktionieren.  
+    >* Schließen Sie die Datei zuerst.  
 7. Wählen Sie die gewünschten Arbeitsblätter und anschließend **Importieren**aus.   
    Sie können mehr als ein Arbeitsblatt aus einer Arbeitsmappe gleichzeitig hinzufügen.  
     

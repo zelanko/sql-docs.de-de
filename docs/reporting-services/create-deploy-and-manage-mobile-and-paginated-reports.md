@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Reporting Services
 - SQL Server Reporting Services
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 2d69df56647cb378bee2627344a8db09df2bfa57
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 08a71374d72a70e9bba6863eb9f6b5ac548d28f7
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712551"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297398"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>Was ist SQL Server Reporting Services (SSRS)?
 
@@ -63,7 +63,7 @@ Diese BI-Kernarbeitslast gibt es nach wie vor, weshalb wir sie modernisiert habe
 * Wir haben die Standardstile und -farbpaletten aktualisiert, d. h., Sie erstellen Berichte standardmäßig mit einem neuen minimalistischen Stil.
 * Wir haben den Bereich „Parameter“ aktualisiert, sodass Sie Parameter nach Wunsch beliebig anordnen können.
 * Sie können in neue Formate, etwa PowerPoint, exportieren. Reporting Services-Visualisierungen in PowerPoint sind lebendig und können bearbeitet werden, sie sind nicht einfach Screenshots.
-* Sie können eine hybride Power BI/Reporting Services-Umgebung erstellen: Statt Ihre lokalen Reporting Services-Berichte in Power BI neu zu erstellen, können Sie visuelle Objekte aus diesen Berichten an Ihre Power BI-Dashboards anheften. Anschließend können Sie alle Elemente an einem Ort in Ihrem Power BI-Dashboard überwachen.
+* Sie können eine Hybridumgebung mit Power BI und Reporting Services erstellen:  Statt Ihre lokalen Reporting Services-Berichte in Power BI neu zu erstellen, können Sie visuelle Objekte aus diesen Berichten an Ihre Power BI-Dashboards anheften. Anschließend können Sie alle Elemente an einem Ort in Ihrem Power BI-Dashboard überwachen.
 
 ## <a name="mobile-reports"></a>Mobile Berichte
 
@@ -83,9 +83,9 @@ Für Endbenutzer des einheitlichen Modus von Reporting Services ist die „Einga
 
 Sie können Ihr eigenes benutzerdefiniertes Branding auf Ihr Webportal anwenden. Und Sie können KPIs direkt im Webportal erstellen. KPIs können wichtige Geschäftsmetriken auf einen Blick im Browser zum Vorschein bringen, ohne dass ein Bericht geöffnet werden muss. 
 
-Das neue Webportal ist eine vollständig neu geschriebene Version des Berichts-Managers. Es ist nun eine auf Standards basierende Einzelseiten-HTML5-App, für die moderne Browser optimiert sind: Microsoft Edge, Internet Explorer 10 und 11, Chrome, Firefox, Safari und alle weiteren wichtigen Browser.
+Das neue Webportal ist eine vollständig neu geschriebene Version des Berichts-Managers. Es handelt sich jetzt um eine einseitige, standardbasierte HTML5-App, für die moderne Browser optimiert sind: Edge, Internet Explorer 10 und 11, Chrome, Firefox, Safari sowie alle anderen wichtigen Browser.
 
-Der Inhalt im Webportal wird nach Typ strukturiert: mobile und paginierte Reporting Services-Berichte und KPIs, Excel-Arbeitsmappen, freigegebene Datasets sowie freigegebene Datenquellen, die als Bausteine für Ihre Berichte verwendet werden können. Sie können die Berichte dort in der herkömmlichen Ordnerhierarchie sicher speichern und verwalten. Sie können Ihre Favoriten kennzeichnen, und Sie können den Inhalt verwalten, wenn Sie diese Rolle haben.
+Die Inhalte des Webportals sind nach Typ strukturiert: mobile und paginierte Reporting Services-Berichte und -KPIs, Excel-Arbeitsmappen, freigegebene Datasets sowie freigegebene Datenquellen, die Sie als Bausteine für Ihre Berichte verwenden können. Sie können die Berichte dort in der herkömmlichen Ordnerhierarchie sicher speichern und verwalten. Sie können Ihre Favoriten kennzeichnen, und Sie können den Inhalt verwalten, wenn Sie diese Rolle haben.
 
 Und Sie können im neuen Webportal weiterhin Berichtsverarbeitung planen, bei Bedarf auf Berichte zugreifen sowie veröffentlichte Berichte abonnieren.
 

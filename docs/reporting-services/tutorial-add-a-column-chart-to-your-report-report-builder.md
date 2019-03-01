@@ -1,19 +1,19 @@
 ---
-title: 'Tutorial: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Lernprogramm: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation'
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 55a74bcd165fd06d55eccd6afa718ccd775c7faf
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 509bce618c902ea06b3e64498b3e7445e0eaae4e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711483"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290658"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator)
 In diesem Tutorial erstellen Sie einen paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht mit einem Säulendiagramm, das eine Datenreihe in Form mehrerer nach Kategorie gruppierter Säulen erstellt. 
@@ -28,9 +28,9 @@ In der folgenden Abbildung sehen Sie das zu erstellende Säulendiagramm mit eine
   
 ![report-builder-column-chart-tutorial](../reporting-services/media/report-builder-column-chart-tutorial.png)    
 > [!NOTE]  
-> In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Im ersten Tutorial dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Auswählen einer Datenquelle sowie zum Erstellen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Im ersten Tutorial dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Auswählen einer Datenquelle sowie zum Erstellen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Geschätzte Zeit zum Bearbeiten dieses Tutorials: 15 Minuten.  
+Ungefähre Dauer dieses Lernprogramms: 15 Minuten  
   
 ## <a name="requirements"></a>Anforderungen  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -300,7 +300,7 @@ Im Diagramm wird eine Linie angezeigt, die den gleitenden Durchschnitt für den 
 ## <a name="next-steps"></a>Next Steps  
 Sie haben das Lernprogramm "Hinzufügen eines Säulendiagramms zu einem Bericht" erfolgreich abgeschlossen. Weitere Informationen zu Diagrammen finden Sie unter [Diagramme (Berichts-Generator und SSRS)](../reporting-services/report-design/charts-report-builder-and-ssrs.md) und [Sparklines und Datenbalken (Berichts-Generator und SSRS)](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 -    [Tutorials (Berichts-Generator)](../reporting-services/report-builder-tutorials.md) 
 -    [Berichts-Generator in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   

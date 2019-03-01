@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a03177d0b78a6347c4438b8fe1f67a7d00c057ad
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 38cdc41469112ed1bfab44e801e5e448b034a9c8
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522360"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265247"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Konfigurieren von PolyBase für den Zugriff auf externe Daten in Hadoop
 
@@ -125,7 +125,7 @@ Um die Daten in Ihrer Hadoop-Datenquelle abzufragen, müssen Sie eine externe Ta
    CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
          FORMAT_TYPE = DELIMITEDTEXT,
          FORMAT_OPTIONS (FIELD_TERMINATOR ='|',
-               USE_TYPE_DEFAULT = TRUE)  
+               USE_TYPE_DEFAULT = TRUE))
    ```
 
 4. Erstellen Sie mit [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) eine externe Tabelle, die auf in Hadoop gespeicherte Daten verweist. In diesem Beispiel handelt es sich bei den externen Daten um Kfz-Sensordaten.

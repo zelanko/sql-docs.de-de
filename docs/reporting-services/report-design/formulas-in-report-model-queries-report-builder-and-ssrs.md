@@ -8,14 +8,14 @@ ms.topic: conceptual
 f1_keywords:
 - "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 911cbda433727f48fa564364cc672f43ca4b6f4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0e078205cf705c9ea96a8cccc3811e8162a643f6
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607692"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298548"
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>Formeln in Berichtsmodellabfragen (Berichts-Generator und SSRS)
   Formeln sind Berechnungen, die für Werte in einem Bericht ausgeführt werden, die ein Berichtsmodell als Datenquelle verwenden. Formel werden im **Dialogfeld "Formeln definieren"** im Berichtsmodell-Abfrage-Designer definiert, wenn Sie eine Abfrage für eine Berichtsmodell-Datenquelle definieren. Eine Formel kann Funktionen, Operatoren, Konstanten und Verweise auf Felder oder Entitäten enthalten. Mithilfe von Formeln können Sie numerische und Textdaten kombinieren, aggregieren, filtern und auswerten. Sie können Formeln erstellen und als neue Felder speichern oder die Formeln vorhandener Felder ändern.  
@@ -48,7 +48,7 @@ ms.locfileid: "47607692"
  **Textverkettungsoperator.** Verwenden Sie das kaufmännische Und-Zeichen (&) zum Verknüpfen bzw. Verketten einer oder mehrerer Textzeichenfolgen, um ein einzelnes Stück Text zu erzeugen.  
   
 ##  <a name="Constants"></a> Konstanten  
- Eine Konstante ist ein Wert, der nicht berechnet wird und sich somit nicht ändert. Berichts-Generator verwendet die folgenden Konstanten: **True**, **False**und **Empty**. Diese Konstanten werden zur Auswertung boolescher Felder verwendet. Beispiel: Es gibt ein Feld mit dem Namen IsDiscontinued. Die einzigen gültigen Werte für dieses Feld sind True, False oder Empty (" ").  
+ Eine Konstante ist ein Wert, der nicht berechnet wird und sich somit nicht ändert. Berichts-Generator verwendet die folgenden Konstanten: **True**, **False** und **Empty**. Diese Konstanten werden zur Auswertung boolescher Felder verwendet. Beispiel: Es gibt ein Feld mit dem Namen IsDiscontinued. Die einzigen gültigen Werte für dieses Feld sind True, False oder Empty (" ").  
   
 ##  <a name="Functions"></a> Funktionen  
  Funktionen sind vordefinierte Formeln, die Berechnungen mithilfe bestimmter Werte ausführen. Diese so genannten *Argumente*werden in einer bestimmten Reihenfolge angegeben. Bei Argumenten kann es sich um Literalwerte oder Felder oder Kombinationen aus beiden handeln. Werden Felder in Formeln verwendet, stellt der Feldname die jeweilige Instanz des Felds dar. Handelt es sich bei dem Argument um einen Literalwert, müssen Sie u. U. mithilfe bestimmter Zeichen darauf hinweisen, dass es sich bei dem Argument um einen Literalwert handelt.  

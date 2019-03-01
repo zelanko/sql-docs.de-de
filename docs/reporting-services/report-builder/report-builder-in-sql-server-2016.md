@@ -11,14 +11,14 @@ helpviewer_keywords:
 - overview of Report Builder
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 381f0070a8e045aeec707c1f8dc9a6df9cd157d9
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f37319c07856f0e31abcb2afb047bdea2904063a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711418"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290298"
 ---
 # <a name="report-builder-in-sql-server"></a>Berichts-Generator in SQL Server
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] ist ein Tool zum Erstellen von paginierten Berichten, für Geschäftsbenutzer, die es bevorzugen, in einer eigenständigen Umgebung zu arbeiten, statt den Berichts-Designer in Visual Studio zu verwenden.  Wenn Sie einen paginierten Bericht erstellen, erstellen Sie Berichtsdefinitionen, die angeben, von woher die Daten abgerufen werden sollen, welche Daten abgerufen werden sollen und wie die Daten dargestellt werden sollen. Wenn Sie den Bericht ausführen lassen, nimmt der Berichtsprozessor die von Ihnen angegebene Berichtsdefinition, ruft die Daten ab und kombiniert sie mit dem Berichtslayout, um den Bericht zu erstellen. Sie können eine Vorschau des Berichts in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] anzeigen. Dann veröffentlichen Sie den Bericht auf einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichtsserver im einheitlichen Modus oder im integrierten SharePoint-Modus (2016 und frühere Versionen). Sie können einen paginierten Bericht auch im Power BI-Dienst veröffentlichen. Weitere Informationen finden Sie unter [paginierte Berichte in Power BI Premium](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi) (Vorschau).
@@ -66,14 +66,14 @@ ms.locfileid: "52711418"
 > [!NOTE]  
 >  Veröffentlichte Berichte werden auf einem Berichtsserver oder einem Berichtsserver im integrierten SharePoint-Modus von einem Berichtsserveradministrator verwaltet. Berichtsserveradministratoren können die Sicherheit definieren, Eigenschaften festlegen und Vorgänge planen, wie Berichtsverlauf und E-Mail-Übermittlung von Berichten. Sie können freigegebene Zeitpläne und freigegebene Datenquellen erstellen und zur allgemeinen Verwendung zur Verfügung stellen. Administratoren verwalten auch alle Berichtsserverordner. Welche Verwaltungsaufgaben ausgeführt werden können, hängt von den Berechtigungen des Benutzers ab.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
   [Start Report Builder (Starten des Berichts-Generators.)](../../reporting-services/report-builder/start-report-builder.md)  
   
   [Install Report Builder (Installieren des Berichts-Generators)](../../reporting-services/install-windows/install-report-builder.md)
 
   [Neues in SQL Server Reporting Services und beim Berichts-Generator](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
   Beschreibt die neuen Funktionen in dieser Version von [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] und [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], einschließlich Karten.   
-  [Lernprogramm: Erstellen eines Quick-Diagrammberichts offline](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+  [Tutorial: Erstellen eines Quick-Diagrammberichts offline](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  Bietet eine Einführung für [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] und die Assistenten, die zur Verfügung stehen, um Ihnen bei der Erstellung von Berichten zu helfen. Das Lernprogramm enthält eine Reihe von Daten, mit denen Sie arbeiten können, ohne eine Verbindung mit einer Datenquelle herstellen zu müssen.  
   
  [Planen eines Berichts &#40;Berichts-Generator&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)  

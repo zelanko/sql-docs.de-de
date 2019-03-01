@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 90440119ec21cbfe97096b439e61074c7e515e00
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1740846b348449cc1a2d4e072255a1339b96c478
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504564"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288548"
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>Hinzufügen von Messgeräten zu mobilen Berichten | Reporting Services
 Messgeräte sind die grundlegendsten und häufig genutzten visuellen Elemente in mobilen Berichten. Sie zeigen einen einzelnen Wert in einem Dataset an, nur den Wert oder den Wert im Vergleich mit einem Ziel.
@@ -58,7 +58,7 @@ Wenn der mobile Bericht über Navigatoren verfügt, können Sie ein Messgerät z
   
 Zusammen mit den Dateneigenschaften, die Messgerätelemente mit Datenfeldern verbinden, können Sie auch eine Reihe von funktionalen und visuellen Eigenschaften anpassen. 
 
-### <a name="set-value-direction-high-or-low-is-better"></a>Festlegen der Wertrichtung: Höher oder niedriger ist besser
+### <a name="set-value-direction-high-or-low-is-better"></a>Wertrichtung festlegen: Hohe oder niedrige Werte sind besser.
 * Wählen Sie ein Messgerät, und legen Sie auf der Registerkarte **Layout** im Bereich **Eigenschaften visueller Elemente** für **Wertrichtung** entweder **Höhere Werte sind besser** oder **Niedrigere Werte sind besser**fest. 
 
 **Höhere Werte sind besser** färbt höhere Werte grün, um eine erwünschte Änderung zum Besseren zu kennzeichnen, oder niedrigere Werte rot, um eine unerwünschte Änderung zum Schlechteren zu kennzeichnen. 

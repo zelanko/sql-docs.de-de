@@ -32,12 +32,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7d8bfaf8e2b07bd34843893a67a823e6841b6d6
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 796b54f85cb7f2bbcaade9d6c8948857b2be2ce7
+ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299987"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331550"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,9 +45,9 @@ ms.locfileid: "54299987"
   > [!div class="nextstepaction"]
   > [Senden Sie uns Ihr Feedback zum Inhaltsverzeichnis der SQL-Dokumentation!](https://aka.ms/sqldocsurvey)
 
-  Bestimmt, ob eine bestimmte Zeichenfolge mit einem angegebenen Muster übereinstimmt. Ein Muster kann normale Zeichen und Platzhalterzeichen einschließen. Bei einem Mustervergleich müssen normale Zeichen exakt mit den angegebenen Zeichen in der Zeichenfolge übereinstimmen. Platzhalterzeichen können jedoch mit beliebigen Teilen der Zeichenfolge übereinstimmen. Das Verwenden der Vergleichsoperatoren für Zeichenfolgen = und != ist nicht so flexibel wie das Verwenden von Platzhalterzeichen mit dem LIKE-Operator. Wenn eines der Argumente kein Zeichenfolgen-Datentyp ist, wird es ggf. von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in einen Zeichenfolgen-Datentyp konvertiert.  
+  Bestimmt, ob eine bestimmte Zeichenfolge mit einem angegebenen Muster übereinstimmt. Ein Muster kann normale Zeichen und Platzhalterzeichen einschließen. Bei einem Mustervergleich müssen normale Zeichen exakt mit den angegebenen Zeichen in der Zeichenfolge übereinstimmen. Platzhalterzeichen können jedoch mit beliebigen Teilen der Zeichenfolge übereinstimmen. Das Verwenden der Vergleichsoperatoren für Zeichenfolgen = und != ist nicht so flexibel wie das Verwenden von Platzhalterzeichen mit dem LIKE-Operator. Wenn eins der Argumente kein Zeichenfolgen-Datentyp ist, wird es von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in einen Zeichenfolgen-Datentyp konvertiert, sofern dies möglich ist.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Artikellinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Article link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -78,7 +78,7 @@ match_expression [ NOT ] LIKE pattern
 |[^]|Beliebiges einzelnes Zeichen, das sich nicht im angegebenen Bereich ([^a-f]) oder in der angegebenen Menge ([^abcdef]) befindet.|WHERE au_lname LIKE 'de[^l]%' findet alle Autorennachnamen, die mit 'de' beginnen und deren dritter Buchstabe nicht l ist.|  
   
  *escape_character*  
- Ist ein Zeichen, das vor einem Platzhalterzeichen eingefügt wird, um anzuzeigen, dass der Platzhalter als reguläres Zeichen und nicht als Platzhalter interpretiert werden soll. *excape_character* ist ein Zeichenausdruck ohne Standard und muss zu einem einzelnen Zeichen ausgewertet werden.  
+ Ist ein Zeichen, das vor einem Platzhalterzeichen eingefügt wird, um anzuzeigen, dass der Platzhalter als reguläres Zeichen und nicht als Platzhalter interpretiert wird. *excape_character* ist ein Zeichenausdruck ohne Standard und muss zu einem einzelnen Zeichen ausgewertet werden.  
   
 ## <a name="result-types"></a>Ergebnistypen  
  **Boolean**  
@@ -87,9 +87,9 @@ match_expression [ NOT ] LIKE pattern
  LIKE gibt TRUE zurück, wenn *match_expression* dem angegebenen *pattern* entspricht.  
   
 ## <a name="remarks"></a>Remarks  
- Bei Zeichenfolgenvergleichen mithilfe von LIKE werden alle Zeichen in der Musterzeichenfolge berücksichtigt. Dazu gehören alle vorhergehenden oder nachfolgenden Leerzeichen. Wenn in einer Abfrage LIKE 'abc ' (abc, gefolgt von einem Leerzeichen) verwendet wird, um Zeilen zurückzugeben, die dem Muster abc ähnlich sind, werden keine Zeilen zurückgegeben, die den Wert abc (abc ohne Leerzeichen) enthalten. Nachfolgende Leerzeichen in dem Ausdruck, der mit dem Muster verglichen wird, werden jedoch ignoriert. Wenn in einer Abfrage LIKE 'abc' (abc ohne Leerzeichen) verwendet wird, um Zeilen zurückzugeben, die dem Muster abc ähnlich sind, werden alle Zeilen zurückgegeben, die mit abc anfangen und null oder mehr nachfolgende Leerzeichen enthalten.  
+ Bei Zeichenfolgenvergleichen mithilfe von LIKE werden alle Zeichen in der Musterzeichenfolge berücksichtigt. Die zu berücksichtigenden Zeichen umfassen alle führenden oder nachfolgenden Leerzeichen. Wenn in einer Vergleichsabfrage LIKE 'abc ' (abc, gefolgt von einem Leerzeichen) verwendet wird, um Zeilen zurückzugeben, die dem Muster abc ähnlich sind, werden keine Zeilen zurückgegeben, die den Wert abc (abc ohne Leerzeichen) enthalten. Nachfolgende Leerzeichen in dem Ausdruck, der mit dem Muster verglichen wird, werden jedoch ignoriert. Wenn in einer Abfrage LIKE 'abc' (abc ohne Leerzeichen) verwendet wird, um Zeilen zurückzugeben, die dem Muster abc ähnlich sind, werden alle Zeilen zurückgegeben, die mit abc anfangen und null oder mehr nachfolgende Leerzeichen enthalten.  
   
- Ein Zeichenfolgenvergleich mithilfe eines Musters, das Daten der Typen **char** und **varchar** enthält, kann bei einem Vergleich mit dem LIKE-Operator aufgrund der Art der Datenspeicherung fehlschlagen. Verschaffen Sie sich eine Übersicht darüber, wie die einzelnen Datentypen gespeichert werden und wann ein Vergleich mit LIKE fehlschlagen kann. Im folgenden Beispiel wird eine lokale **char**-Variable an eine gespeicherte Prozedur übergeben. Mit einem Mustervergleich sollen dann alle Mitarbeiter gefunden werden, deren Nachnamen mit bestimmten Zeichen beginnen.  
+ Ein Zeichenfolgenvergleich mithilfe eines Musters, das Daten der Typen **char** und **varchar** enthält, ist bei Verwendung des LIKE-Operators möglicherweise aufgrund der Art und Weise, in der die Daten für jeden Datentyp gespeichert werden, nicht erfolgreich. Im folgenden Beispiel wird eine lokale **char**-Variable an eine gespeicherte Prozedur übergeben. Mit einem Mustervergleich sollen dann alle Mitarbeiter gefunden werden, deren Nachnamen mit den angegebenen Zeichen beginnen.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -133,7 +133,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
  ``` 
  
 ## Pattern Matching by Using LIKE  
- LIKE supports ASCII pattern matching and Unicode pattern matching. When all arguments (*match_expression*, *pattern*, and *escape_character*, if present) are ASCII character data types, ASCII pattern matching is performed. If any one of the arguments are of Unicode data type, all arguments are converted to Unicode and Unicode pattern matching is performed. When you use Unicode data (**nchar** or **nvarchar** data types) with LIKE, trailing blanks are significant; however, for non-Unicode data, trailing blanks are not significant. Unicode LIKE is compatible with the ISO standard. ASCII LIKE is compatible with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ LIKE supports ASCII pattern matching and Unicode pattern matching. When all arguments (*match_expression*, *pattern*, and *escape_character*, if present) are ASCII character data types, ASCII pattern matching is performed. If any one of the arguments are of Unicode data type, all arguments are converted to Unicode and Unicode pattern matching is performed. When you use Unicode data (**nchar** or **nvarchar** data types) with LIKE, trailing blanks are significant; however, for non-Unicode data, trailing blanks aren't significant. Unicode LIKE is compatible with the ISO standard. ASCII LIKE is compatible with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  The following is a series of examples that show the differences in rows returned between ASCII and Unicode LIKE pattern matching.  
   
@@ -177,9 +177,9 @@ WHERE Name LIKE 'dm%';
 GO  
 ```  
   
- Wenn Objekte angezeigt werden sollen, die keine dynamischen Verwaltungssichten sind, verwenden Sie `NOT LIKE 'dm%'`. Sind insgesamt 32 Objekte vorhanden und LIKE ermittelt 13 dieser Objekte, die dem Muster entsprechen, ermittelt NOT LIKE die 19 Objekte, die dem Muster nicht entsprechen.  
+ Wenn Objekte angezeigt werden sollen, bei denen es sich nicht um dynamische Verwaltungssichten handelt, verwenden Sie `NOT LIKE 'dm%'`. Sind insgesamt 32 Objekte vorhanden und LIKE findet 13 Namen, die dem Muster entsprechen, findet NOT LIKE die 19 Objekte, die dem Muster nicht entsprechen.  
   
- Mit einem Muster wie `LIKE '[^d][^m]%'` werden möglicherweise nicht immer die gleichen Namen gefunden. Statt 19 Namen werden möglicherweise nur 14 angezeigt, da Namen, die mit `d` beginnen oder deren zweiter Buchstabe `m` ist, aus dem Resultset ebenso entfernt werden wie die Namen der dynamischen Verwaltungssichten. Grund dafür ist die schrittweise Auswertung von Musterzeichenfolgen mit negativen Platzhalterzeichen, d. h., dass Platzhalter für Platzhalter ausgewertet wird. Wenn der Vergleich an einem beliebigen Punkt der Auswertung fehlschlägt, wird das entsprechende Objekt aus dem Resultset entfernt.  
+ Mit einem Muster wie `LIKE '[^d][^m]%'` werden möglicherweise nicht immer die gleichen Namen gefunden. Statt 19 Namen werden möglicherweise nur 14 angezeigt, da Namen, die mit `d` beginnen oder deren zweiter Buchstabe `m` ist, aus dem Resultset ebenso entfernt werden wie die Namen der dynamischen Verwaltungssichten. Grund für dieses Verhalten ist die sequentielle Auswertung von Musterzeichenfolgen mit negativen Platzhalterzeichen, es wird also ein Platzhalter nach dem anderen ausgewertet. Wenn der Vergleich an einem beliebigen Punkt der Auswertung fehlschlägt, wird das entsprechende Objekt entfernt.  
   
 ## <a name="using-wildcard-characters-as-literals"></a>Verwenden von Platzhalterzeichen als Literale  
  Platzhalterzeichen können auch als Literalzeichen verwendet werden. Um ein Platzhalterzeichen als Literalzeichen zu verwenden, schließen Sie das Platzhalterzeichen in Klammern ein. Die folgende Tabelle enthält einige Beispiele für die Verwendung des LIKE-Schlüsselworts und der [ ]-Platzhalterzeichen.  
@@ -198,9 +198,9 @@ GO
 ## <a name="pattern-matching-with-the-escape-clause"></a>Mustervergleich mit der ESCAPE-Klausel  
  Sie können nach Zeichenfolgen suchen, die ein oder mehrere Platzhalterzeichen enthalten. Die discounts-Tabelle in der customers-Datenbank kann beispielsweise Rabattwerte mit einem Prozentzeichen (%) speichern. Um nach dem Prozentzeichen als Zeichen und nicht als Platzhalterzeichen zu suchen, müssen das ESCAPE-Schlüsselwort und das Escapezeichen angegeben werden. Eine Beispieldatenbank enthält beispielsweise eine comment-Spalte, die den Text 30% enthält. Wenn Sie in den Zeilen der comment-Spalte nach der Zeichenfolge "30%" suchen, geben Sie eine WHERE-Klausel wie `WHERE comment LIKE '%30!%%' ESCAPE '!'` an. Werden ESCAPE und das Escapezeichen nicht angegeben, gibt [!INCLUDE[ssDE](../../includes/ssde-md.md)] alle Zeilen zurück, die die Zeichenfolge 30 enthalten.  
   
- Wenn im LIKE-Muster kein Zeichen auf ein Escapezeichen folgt, ist das Muster nicht gültig und das LIKE-Muster gibt FALSE zurück. Wenn es sich beim Zeichen nach einem Escapezeichen nicht um ein Platzhalterzeichen handelt, wird das Escapezeichen verworfen und das Zeichen, das auf das Escapezeichen folgt, als reguläres Zeichen im Muster behandelt. Dazu gehören die Platzhalterzeichen Prozent (%), Unterstrich (_) und linke Klammer ([), wenn sie in doppelte Klammern ([ ]) eingeschlossen sind. Innerhalb doppelter Klammern ([ ]) können Escapezeichen verwendet werden; dem Caretzeichen (^), dem Bindestrich (-) sowie der rechten Klammer (]) kann ein Escapezeichen vorangestellt werden.  
+ Wenn im LIKE-Muster auf ein Escapezeichen kein Zeichen folgt, ist das Muster nicht gültig, und das LIKE-Muster gibt FALSE zurück. Wenn es sich beim Zeichen nach einem Escapezeichen nicht um ein Platzhalterzeichen handelt, wird das Escapezeichen verworfen und das folgende Zeichen als reguläres Zeichen im Muster behandelt. Zu diesen Platzhalterzeichen gehören das Prozentzeichen (%), der Unterstrich (_) und die linke eckige Klammer ([), wenn sie in doppelte eckige Klammern ([ ]) eingeschlossen sind. Innerhalb doppelter eckiger Klammern ([ ]) können Escapezeichen verwendet werden; dem Caretzeichen (^), dem Bindestrich (-) sowie der rechten eckigen Klammer (]) kann ein Escapezeichen vorangestellt werden.  
   
- 0x0000 (**char(0)**) ist ein nicht definiertes Zeichen in Windows-Sortierungen und kann nicht in LIKE enthalten sein.  
+ 0x0000 (**char(0)**) ist ein nicht definiertes Zeichen in Windows-Sortierungen und darf in LIKE nicht enthalten sein.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -333,7 +333,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>F. Verwenden von NOT LIKE mit dem Platzhalterzeichen %  
- Im folgenden Beispiel werden alle Telefonnummern in der `DimEmployee`-Tabelle gefunden, die nicht mit `612` beginnen.  zugreifen.  
+ Das folgende Beispiel findet alle Telefonnummern in der `DimEmployee`-Tabelle, die nicht mit `612` beginnen.  zugreifen.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -345,7 +345,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="g-using-like-with-the--wildcard-character"></a>G. Verwenden von LIKE mit dem Platzhalterzeichen _  
- Im folgenden Beispiel werden alle Telefonnummern in der `DimEmployee`-Tabelle gefunden, die eine Vorwahl aufweisen, die mit `6` beginnt und mit `2` endet. Das Platzhalterzeichen % wurde am Ende des Suchmusters nicht eingefügt, da die Vorwahl der erste Teil der Telefonnummer ist und danach weitere Zeichen im Spaltenwert vorhanden sind.  
+ Im folgenden Beispiel werden alle Telefonnummern in der `DimEmployee`-Tabelle gefunden, die eine Vorwahl aufweisen, die mit `6` beginnt und mit `2` endet. Das Platzhalterzeichen % wird am Ende des Suchmusters eingefügt, um alle folgenden Zeichen im Spaltenwert für Telefonnummern abzugleichen.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -362,4 +362,3 @@ ORDER by LastName;
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
- 

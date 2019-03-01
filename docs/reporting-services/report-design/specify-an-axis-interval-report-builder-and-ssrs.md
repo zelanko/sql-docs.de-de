@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 05e0650c71c7f2ed8f9dc51bf01bbb33e325add5
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cdcd36d1e8de8c6765de0f07a9ecaf6263fd2366
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030179"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296588"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>Angeben eines Achsenintervalls (Berichts-Generator und SSRS)
 Erfahren Sie, wie Sie die Anzahl der Bezeichnungen und Teilstriche auf der Kategorieachse (X) in einem Diagramm ändern, indem Sie das Achsenintervalls in einem [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -paginierten Bericht festlegen.
@@ -22,7 +22,7 @@ Auf der Wertachse (in der Regel die Y-Achse) stellen die Achsenintervalle ein ko
 
 Ein automatisches Achsenintervall führt auf der Kategorieachse (in der Regel die X-Achse) manchmal zu Kategorien ohne Achsenbezeichnungen. Sie können die Anzahl der Intervalle in der Interval-Eigenschaft der Achse festlegen. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] berechnet die Anzahl der Intervalle zur Laufzeit basierend auf den Daten im Resultset. Weitere Informationen zum Berechnen von Achsenintervallen finden Sie unter [Formatieren von Achsenbezeichnungen in einem Diagramm](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
 
-Informationen zum Festlegen des Achsenintervalls mit Beispieldaten finden Sie unter [Tutorial: Hinzufügen eines Säulendiagramms zu einem Bericht](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md).
+Informationen zum Festlegen des Achsenintervalls mit Beispieldaten finden Sie unter [Tutorial: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator)](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md).
   
 > [!NOTE]  
 >  Die Kategorieachse ist normalerweise die horizontale Achse oder x-Achse. Bei Balkendiagrammen ist die Kategorieachse jedoch die vertikale Achse oder y-Achse.  
@@ -82,7 +82,7 @@ Standardmäßig wird das Achsenintervall von [!INCLUDE[ssRSnoversion](../../incl
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Formatieren eines Diagramms &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Formatieren von Datenpunkten in einem Diagramm (Berichts-Generator und SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Sortieren von Daten in einem Datenbereich (Berichts-Generator und SSRS)](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   

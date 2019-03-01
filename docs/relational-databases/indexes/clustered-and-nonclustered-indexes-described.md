@@ -1,7 +1,7 @@
 ---
 title: Beschreibung von gruppierten und nicht gruppierten Indizes | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/28/2017
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e8daf01c2676c72630beb80d7511e2fa84afe9c
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 0e05b2efa7be0bcd362de0ab4ed8f78b5033b149
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299267"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265217"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Beschreibung von gruppierten und nicht gruppierten Indizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,10 @@ ms.locfileid: "54299267"
  Zusätzliche Indextypen für besondere Zwecke finden Sie unter [Indexes](../../relational-databases/indexes/indexes.md) .  
   
 ## <a name="indexes-and-constraints"></a>Indizes und Einschränkungen  
- Indizes werden automatisch erstellt, wenn PRIMARY KEY- und UNIQUE-Einschränkungen für Tabellenspalten definiert werden. Wenn Sie z. B. eine Tabelle erstellen und eine bestimmte Spalte als Primärschlüssel angeben, erstellt [!INCLUDE[ssDE](../../includes/ssde-md.md)] automatisch eine PRIMARY KEY-Einschränkung und einen Index für die betreffende Spalte. Weitere Informationen finden Sie unter [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md) und [Create Unique Constraints](../../relational-databases/tables/create-unique-constraints.md).  
+
+Indizes werden automatisch erstellt, wenn PRIMARY KEY- und UNIQUE-Einschränkungen für Tabellenspalten definiert werden. Wenn Sie beispielsweise eine Tabelle mit einer UNIQUE-Einschränkung erstellen, erstellt die [!INCLUDE[ssDE](../../includes/ssde-md.md)] automatisch einen nicht gruppierten Index. Wenn Sie einen PRIMARY KEY konfigurieren, erstellt die [!INCLUDE[ssDE](../../includes/ssde-md.md)] automatisch einen gruppierten Index, falls noch kein gruppierter Index vorhanden ist. Wenn Sie versuchen, eine PRIMARY KEY-Einschränkung für eine vorhandene Tabelle zu erzwingen, und für die Tabelle bereits ein gruppierter Index vorhanden ist, erzwingt SQL Server den primären Schlüssel mit einem nicht gruppierten Index.
+
+Weitere Informationen finden Sie unter [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md) und [Create Unique Constraints](../../relational-databases/tables/create-unique-constraints.md).  
   
 ## <a name="how-indexes-are-used-by-the-query-optimizer"></a>Verwenden von Indizes durch den Abfrageoptimierer  
  Sorgfältig entworfene Indizes können die E/A-Operationen dem Datenträger verringern und weniger Systemressourcen belegen. Sie optimieren aus diesem Grund die Abfrageleistung. Indizes können bei einer Vielzahl von Abfragen hilfreich sein, die die Anweisungen SELECT, UPDATE, DELETE oder MERGE enthalten. Sehen Sie sich die `SELECT Title, HireDate FROM HumanResources.Employee WHERE EmployeeID = 250` -Abfrage in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank an. Wenn diese Abfrage ausgeführt wird, wertet der Abfrageoptimierer alle verfügbaren Methoden zum Abrufen der Daten aus und wählt dann die effizienteste Methode aus. Bei dieser Methode kann es sich um einen Tabellenscan oder möglicherweise um einen Scan eines Indexes oder mehrerer Indizes handeln, wenn Indizes vorhanden sind.  

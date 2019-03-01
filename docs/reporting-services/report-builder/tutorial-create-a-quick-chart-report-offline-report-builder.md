@@ -10,18 +10,18 @@ helpviewer_keywords:
 - tutorials, getting started
 - creating reports
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: bfb9b14f518b20cd318cd6a532ca96787bfbfe31
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ee949dd6af1e421ca59f5319a19506490cc9b809
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711359"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286068"
 ---
-# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Lernprogramm: Erstellen eines Quick-Diagrammberichts offline (Berichts-Generator)
+# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutorial: Erstellen eines Quick-Diagrammberichts offline (Berichts-Generator)
 
-  In diesem Tutorial verwenden Sie einen Assistenten, um ein Kreisdiagramm in einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht im [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]zu erstellen. Anschließend fügen Sie Prozentwerte hinzu und nehmen geringfügige Änderungen am Kreisdiagramm vor. 
+  In diesem Tutorial verwenden Sie einen Assistenten, um ein Kreisdiagramm in einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Bericht im [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] zu erstellen. Anschließend fügen Sie Prozentwerte hinzu und nehmen geringfügige Änderungen am Kreisdiagramm vor. 
   
 Dieses Lernprogramm kann auf zwei unterschiedliche Arten absolviert werden. Beide Methoden liefern das gleiche Ergebnis – ein Kreisdiagramm entsprechend der folgenden Abbildung:  
   

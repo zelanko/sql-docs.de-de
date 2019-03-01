@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 662c4b4fbd3eb754a971b0228e403c64e71b684b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 888f5e89b86d8fec157bf2f4c8c1893875ca048e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789928"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285508"
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>Integrierte Auflistungen: Verweise auf Datasetfeldauflistungen (Berichts-Generator)
   Jedes Dataset in einem Bericht enthält eine Fields-Sammlung. Bei der Fields-Sammlung handelt es sich um eine Gruppe von Feldern, die von der Datasetabfrage und zusätzlichen berechneten Feldern angegeben werden, die Sie erstellen. Nachdem Sie ein Dataset erstellt haben, wird die Feldauflistung im **Berichtsdatenbereich** angezeigt.  
@@ -88,7 +88,7 @@ End Function
   
  Wenn Sie eine Eigenschaft angeben, die für das Feld nicht unterstützt wird, wird der Verweis als **NULL** (**Nothing** in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) ausgewertet. Wenn ein Datenanbieter keine erweiterten Feldeigenschaften unterstützt oder wenn das Feld während des Ausführens der Abfrage nicht gefunden wird, entspricht der Wert für die Eigenschaft bei Eigenschaften vom Typ **Zeichenfolge** und**Objekt** [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]NULL **(** Nothing **in**), und bei Eigenschaften vom Typ **Integer**entspricht er Null (0). Für eine Datenverarbeitungserweiterung können die Vorteile der vordefinierten Eigenschaften genutzt werden, indem die Abfragen optimiert werden, die diese Syntax enthalten.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   

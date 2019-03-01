@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: bddefafa610718710a6b8a41d267ceb8e3b5515d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: faf7a9e3279d8a2a5606d21c359d6a4a2697cbeb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541798"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296474"
 ---
 # <a name="glossary-report-builder"></a>Glossar (Berichts-Generator)
   
@@ -166,7 +166,7 @@ ms.locfileid: "52541798"
 |Temperaturverteilungskarte|Ein Typ einer Kartendarstellung, bei der die Intensität der Farbe für jedes Polygon den verknüpften analytischen Daten entspricht. Beispielsweise werden niedrige Werte in einem Bereich blau (kalt) und hohe Werte rot (heiß) dargestellt.|  
 |Hierarchie (hierarchy)|Eine logische Baumstruktur, die die Elemente einer Dimension so anordnet, dass jedes Element ein übergeordnetes Element und null oder mehr untergeordnete Elemente aufweist.|  
 |Hochverfügbarkeit|Status einer Ressource, die die meiste Zeit funktionstüchtig ist, von Clients genutzt werden kann und dabei einen sehr geringen Prozentsatz an Fehlern aufweist, die den Dienst unterbrechen.|  
-|HTML|Siehe anderen Begriff: Hypertext Markup Language|  
+|HTML|Siehe anderen Begriff: Hypertext Markup Language (HTML)|  
 |HTML-Viewer|Eine Benutzeroberfläche, die aus einer Berichtssymbolleiste und anderen Steuerelementen zur Bearbeitung eines Berichts besteht.|  
 |Hypertext Markup Language (HTML)|Eine Textmarkupsprache, die zum Erstellen von Dokumenten für das Web verwendet wird. HTML definiert die Struktur und das Layout eines Webdokuments mittels verschiedener Tags und Attribute.|  
 |Bezeichner (identifier)|Der Name eines Objekts in einer Datenbank.|  
@@ -177,12 +177,12 @@ ms.locfileid: "52541798"
 |Instanz|1. Eine Kopie von SQL Server, die auf einem Computer ausgeführt wird. 2. Eine spezifische Kopie eines Berichtselements, z. B. eines Berichtsteils, Unterberichts, dynamischen Elements oder einer Gruppe.|  
 |integer|Eine numerische Datentypkategorie, zu der die Datentypen bigint, int, smallint und tinyint gehören.|  
 |Internetprotokollsicherheit|Regeln für Computer, die eine vertrauliche und sichere Kommunikation über IP-Netzwerke (IP, Internet Protocol) mittels kryptografischer Sicherheitsdienste sicherstellen.|  
-|IPsec|Siehe anderen Begriff: Internet Protocol Security (IPSec)|  
+|IPsec|Siehe anderen Begriff: Internetprotokollsicherheit|  
 |ISO|Eine von zwei internationalen Institutionen, die für die Entwicklung internationaler Datenübertragungsstandards verantwortlich sind. Die Internationale Organisation für Normung (International Organization for Standardization, ISO) arbeitet eng mit der Internationalen Elektrotechnischen Kommission (International Electrotechnical Commission, IEC) zusammen, um Standards für das Computing zu definieren. Gemeinsam haben sie den ISO/IEC SQL-92-Standard für SQL veröffentlicht.|  
 |Rollenzuweisung auf Elementebene|Eine Sicherheitsrichtlinie, die für ein Element im Berichtsserverordner gilt.|  
 |Rollendefinition auf Elementebene|Eine Sicherheitsvorlage, die eine Rolle definiert, mit der der Zugriff auf oder die Interaktion mit einem Element im Ordnernamespace des Berichtsservers gesteuert wird.|  
 |Key Performance Indicator|(KPI) Eine quantifizierbare, standardisierte Metrik, die eine wichtige Geschäftsvariable (z. B. den Marktanteil) in Abhängigkeit von der Zeit wiedergibt.|  
-|Schlüsselwort (keyword)|Ein reserviertes Wort in SQL Server, das eine bestimmte Funktion ausführt, z. B. das Definieren oder Ändern von Datenbankobjekten oder das Zugreifen auf Datenbankobjekte. Beispiel: SELECT, FROM und AND.|  
+|Schlüsselwort (keyword)|Ein reserviertes Wort in SQL Server, das eine bestimmte Funktion ausführt, z. B. das Definieren oder Ändern von Datenbankobjekten oder das Zugreifen auf Datenbankobjekte. Zum Beispiel: SELECT, FROM und AND.|  
 |KPI|Siehe anderen Begriff: Key Performance Indicator (KPI)|  
 |Bezeichnungsfeld (label field)|Ein Berichtsdataset-Feld, das eine Bezeichnung für ein entsprechendes Schlüsselfeld identifiziert. Die Bezeichnung für ein Schlüsselfeld kann anstelle des Werts in Parametern und Datenbereichen angezeigt werden.|  
 |latency|Die Zeit, die zwischen dem Abschluss einer Datenänderung auf einem Server und der Anzeige dieser Änderung auf einem anderen Server verstreicht.|  
@@ -192,7 +192,7 @@ ms.locfileid: "52541798"
 |Legende (legend)|Ein Element in einem Berichtsdiagramm, einer Karte oder einem Messgerätdatenbereich, das den Zusammenhang zwischen den dargestellten Daten und den zugrunde liegenden Datenwerten erläutert.|  
 |Linienebene|Eine Ebene in einem Kartenberichtselement, die räumliche Daten als Linien darstellt, z. B. für Wege oder Routen.|  
 |Verknüpfter Bericht (linked report)|Ein Bericht, der mittels unterschiedlicher Parameterwerte oder Eigenschaften auf eine vorhandene Berichtsdefinition verweist. Ein verknüpfter Bericht ist ein Berichtsserverelement, das einen Zugriffspunkt auf einen vorhandenen Bericht bereitstellt. Grundsätzlich ist er mit einer Programmverknüpfung vergleichbar, die Sie verwenden, um ein Programm auszuführen oder eine Datei zu öffnen.|  
-|Listendatenbereich (list data region)|Ein Datenbereich in einem Berichtslayout, der mit jeder Gruppe oder Zeile im Berichtsdataset wiederholt wird. Eine Liste kann verwendet werden, um Freiformberichte oder -formulare, z. B. Rechnungen, oder Berichte und Formulare in Verbindung mit anderen Datenbereichen zu erstellen.|  
+|Listendatenbereich (list data region)|Ein Datenbereich in einem Berichtslayout, der mit jeder Gruppe oder Zeile im Berichtsdataset wiederholt wird. Eine Liste kann verwendet werden, um Freiformberichte oder -formulare, z. B. Rechnungen, oder Berichte und Formulare in Verbindung mit anderen Datenbereichen zu erstellen.|  
 |Lokaler Server (local server)|1. Bei SQL Server-Verbindungen eine Instanz von SQL Server, die auf demselben Computer wie die Anwendung ausgeführt wird. <br />2. Beim Auflösen von Verweisen auf die Datenbankobjekte in einer Transact-SQL-Anweisung ist dies die Instanz von SQL Server, die die Anweisung ausführt. <br />3. Bei verteilten Abfragen von SQL Server ist dies die Instanz von SQL Server, die die verteilte Abfrage ausführt. Der lokale Server greift dann auf die Verbindungsserver zu, auf die in der Abfrage verwiesen wird.|  
 |Gebietsschema|Das Attribut des Windows-Betriebssystems, das bestimmte Verhaltensweisen im Zusammenhang mit der Sprache definiert.|  
 |Gebietsschema-ID (LCID) (locale identifier, LCID)|Eine Nummer, die ein Windows-basiertes Gebietsschema identifiziert.|  
@@ -210,7 +210,7 @@ ms.locfileid: "52541798"
 |Masterdatei|Die Datei, die mit früheren Versionen von SQL Server installiert wurde und zum Speichern von Systemdatenbanken und Transaktionsprotokollen des Typs "master", "model" und "tempdb" sowie der Beispieldatenbank und des Transaktionsprotokolls des Typs "pubs" dient.|  
 |Übereinstimmende Felder (match fields)|Ein Satz von Feldern, die werden verwendet, um eine Beziehung zwischen analytischen Daten und räumlichen Daten herzustellen.|  
 |Matrixdatenbereich|Ein Datenbereich in einem Berichtslayout, der ähnliche Funktionen wie Kreuztabellen- und PivotTable-Berichte bereitstellt. Wenn zur Laufzeit die Berichtsdaten und Datenbereiche kombiniert werden, wächst die Matrix auf der Seite horizontal und vertikal. Werte in Matrixzellen zeigen aggregierte Werte für die Schnittmenge der Zeilen- und Spaltengruppen, zu denen die Zelle gehört.|  
-|MDX|Siehe anderen Begriff: Mehrdimensionale Ausdrücke (MDX)|  
+|MDX|Siehe anderen Begriff: Multidimensional Expressions (MDX)|  
 |Mercator-Projektion (Mercator projection)|Eine zylindrische Kartenprojektion in einem Kartenberichtselement, die 1569 von Gerardus Mercator erfunden wurde.|  
 |Metadaten|Informationen zu den Eigenschaften von Daten, z. B. der Datentyp in einer Spalte (numerisch, Text usw.) oder die Länge der Spalte, Informationen zu einer Datei, z. B. Titel, Beschreibung, Erstellungsdatum und Datum der letzten Änderung, oder Informationen zur Struktur von Daten oder Informationen, die den Entwurf von Objekten angeben, z. B. Cubes oder Dimensionen.|  
 |Methode|Eine Funktion, die eine Aktion mithilfe eines COM-Objekts (Component Object Model) ausführt, wie z. B. in SQL-DMO, OLE DB und ActiveX-Datenobjekte (ADO).|  
@@ -261,7 +261,7 @@ ms.locfileid: "52541798"
 |Protokoll|Ein Satz von Standardformaten und -prozeduren, die Computern ermöglichen, Informationen auszutauschen.|  
 |Provider|1. Ein OLE DB-Anbieter. 2. Eine prozessinterne DLL (Dynamic Link Library), die den Zugriff auf eine Datenbank ermöglicht.|  
 |Abfrageparameter (query parameters)|Parameter, die in einer Datasetabfrage angegeben werden, z. B. einer Transact-SQL-Abfrage.|  
-|RDL|Siehe anderen Begriff: Berichtsdefinitionssprache (Report Definition Language, RDL)|  
+|RDL|Siehe anderen Begriff: Report Definition Language|  
 |Datensatz (record)|Eine Gruppe verwandter Felder (Spalten) mit Informationen, die als Einheit behandelt wird. In einer relationalen Datenbank wird ein Datensatz in der Regel als Zeile bezeichnet.|  
 |Rechteck|Ein Berichtselement, das als Container für mehrere Berichtselemente oder als grafisches Element in einem Bericht verwendet werden kann.|  
 |Rekursive Hierarchie|1. Eine Hierarchie von Daten aus einem Berichtsdataset, das mehrere hierarchische Ebenen in eine Hierarchiestruktur einschließt, zum Beispiel eine Berichtsstruktur für die Beziehung zwischen Managern und Mitarbeitern in der Hierarchie einer Organisation. 2. In Master Data Services eine abgeleitete Hierarchie, die eine rekursive Beziehung einschließt. Eine rekursive Beziehung liegt vor, wenn eine Entität über ein domänenbasiertes Attribut verfügt, das auf der Entität selbst basiert.|  
@@ -329,12 +329,12 @@ ms.locfileid: "52541798"
 |SKU|Eine Möglichkeit, andere Editionen eines Produkts zu identifizieren, auch das Akronym für Stock Keeping Unit (gebräuchliche Geschäftsterminologie).|  
 |Slice|Eine Teilmenge der Daten in einem Cube, die durch die Beschränkung mindestens einer Dimension durch Elemente der entsprechenden Dimension angegeben wird.|  
 |Smarttag (smart tag)|Ein Smarttag macht Schlüsselkonfigurationen direkt für die Entwurfsoberfläche verfügbar, um die allgemeine Entwurfszeit-Produktivität in Visual Studio 2005 zu optimieren.|  
-|SMDL (SDML)|Siehe anderen Begriff: Semantic Model Definition Language (SMDL)|  
+|SMDL (SDML)|Siehe anderen Begriff: Semantic Model Definition Language (SMDL) (Semantic Model Definition Language, SMDL)|  
 |Momentaufnahme|Siehe anderen Begriff: Berichtsmomentaufnahme|  
 |Sortierreihenfolge|Der Satz von Regeln in einer Sortierung, der definiert, wie Zeichen in Vergleichsvorgängen ausgewertet werden und in welcher Reihenfolge sie sortiert werden.|  
 |Räumliche Daten|Daten, die Positionen von Objekten auf einer ebenen oder gekrümmten Oberfläche angeben. Räumliche Daten können Punkte, Linien oder Polygone sein.|  
 |Räumliche Datentypen (spatial data types)|Gibt Daten an, die geometrische (planare) oder geografische (geodätische) Informationen darstellen.|  
-|SQL|Siehe anderen Begriff: Structured Query Language (SQL)|  
+|SQL|Siehe anderen Begriff: Structured Query Language (SQL) (Structured Query Language, SQL)|  
 |SQL-Abfrage (SQL query)|Eine SQL-Anweisung wie SELECT, INSERT, UPDATE, DELETE oder CREATE TABLE.|  
 |SQL Server-Authentifizierung|Der Mechanismus, mit dem eine Verbindungsherstellung mit einer Instanz von SQL Server überprüft wird, indem eine SQL Server-Anmelde-ID und ein Kennwort angegeben werden.|  
 |SQL Server-Anmeldung|Ein Konto, das in SQL Server gespeichert wird und über das Benutzer eine Verbindung mit SQL Server herstellen können.|  
@@ -367,7 +367,7 @@ ms.locfileid: "52541798"
 |x-Achse|Siehe anderen Begriff: Kategorieachse (x)|  
 |y-Achse (y-axis)|Siehe anderen Begriff: Wertachse (y)|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichterstellungskonzepte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

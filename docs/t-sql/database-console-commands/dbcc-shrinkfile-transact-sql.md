@@ -30,19 +30,19 @@ ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: ef14c1ab455776da142993dd4103cc5a42921848
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c63b735a5067f8ca1cd6b65f4f986c94e3614e21
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600820"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286478"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Reduziert die Größe der angegebenen Daten- oder Protokolldatei für die aktuelle Datenbank oder leert eine Datei, indem die Daten aus der angegebenen Datei in andere Dateien in derselben Dateigruppe verschoben werden, sodass die Datei aus der Datenbank entfernt werden kann. Sie können eine Datei auf eine Größe reduzieren, die kleiner ist als die bei der Erstellung angegebene Größe. Dadurch wird die Mindestdateigröße auf den neuen Wert zurückgesetzt.
+Reduziert die Größe der angegebenen Daten oder Protokolldateien der aktuellen Datenbank. Damit können Sie Daten von einer Datei in andere Dateien derselben Dateigruppe verschieben. So wird die Datei geleert und die Entfernung der Datenbank ermöglicht. Sie können eine Datei auf weniger als die Größe bei der Erstellung verkleinern, um die minimale Dateigröße auf den neuen Wert zurücksetzen.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Artikellinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -66,16 +66,16 @@ Der logische Name der Datei, die verkleinert werden soll.
 Die Datei-ID der Datei, die verkleinert werden soll. Verwenden Sie zum Ermitteln einer Datei-ID die [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md)-Systemfunktion, oder fragen Sie die [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)-Katalogsicht in der aktuellen Datenbank ab.
   
 *target_size*  
-Die Größe für die Datei in MB (als ganze Zahl). Wenn nichts angegeben wird, wird die Größe von DBCC SHRINKFILE auf die standardmäßige Dateigröße reduziert. Die Standardgröße ist die Größe, die beim Erstellen der Datei angegeben wurde.
+Ein Integer – die Größe der neuen Datei in Megabyte. Wenn nichts angegeben wird, wird die Größe von DBCC SHRINKFILE auf die Dateigröße bei der Erstellung reduziert.
   
 > [!NOTE]  
 >  Sie können die Standardgröße einer leeren Datei mit DBCC SHRINKFILE *target_size* verringern. Wenn Sie z. B. eine 5 MB große Datei erstellen und die Dateigröße dann auf 3 MB herabsetzen, während die Datei noch leer ist, wird die Standarddateigröße auf 3 MB festgelegt. Dies gilt nur für leere Dateien, die nie Daten enthalten haben.  
   
 Diese Option wird in FILESTREAM-Dateigruppencontainern nicht unterstützt.  
-Wenn *target_size* angegeben wird, versucht DBCC SHRINKFILE, die Datei auf die gewünschte Größe zu verkleinern. Bereits verwendete Seiten in dem Teil der Datei, der freigegeben werden soll, werden auf freien Speicherplatz in dem Teil der Datei verschoben, der beibehalten werden soll. Ist z.B. eine Datendatei mit einer Größe von 10 MB vorhanden, wird durch einen DBCC SHRINKFILE-Vorgang mit einem *target_size*-Wert von 8 veranlasst, dass alle verwendeten Seiten, die sich in den letzten 2 MB der Datei befinden, in nicht zugeordnete Seiten der ersten 8 MB dieser Datei verschoben werden. DBCC SHRINKFILE verkleinert die Datei nur so weit, dass der erforderliche Speicherplatz für die Daten unangetastet bleibt. Werden beispielsweise 7 MB einer 10 MB großen Datendatei verwendet, verkleinert eine DBCC SHRINKFILE-Anweisung mit einem *target_size*-Wert von 6 die Datei lediglich auf 7 MB statt auf 6 MB.
+Wenn angegeben, versucht DBCC SHRINKFILE, die Datei auf *target_size* zu verkleinern. Verwendete Seiten im Bereich der freizugebenden Datei werden auf freien Speicherplatz in den beibehalten Bereichen der Datei verschoben. Beispielsweise verschiebt ein DBCC SHRINKFILE-Vorgang mit einer 8 *target_size* bei einer 10-MB-Datendatei alle verwendeten Seiten in den letzten 2 MB der Datei in alle nicht zugeordneten Seiten in den ersten 8 MB der Datei. DBCC SHRINKFILE verkleinert eine Datei nicht über die erforderliche Speichergröße hinaus. Werden beispielsweise 7 MB einer 10 MB großen Datendatei verwendet, verkleinert eine DBCC SHRINKFILE-Anweisung mit einem *target_size*-Wert von 6 die Datei lediglich auf 7 MB statt auf 6 MB.
   
 EMPTYFILE  
-Verlagert alle Daten aus der angegebenen Datei in andere Dateien in **derselben Dateigruppe**. EMPTYFILE migriert die Daten also aus der angegebenen Datei zu anderen Dateien in derselben Dateigruppe. EMPTYFILE stellt sicher, dass der Datei keine neuen Daten hinzugefügt werden, obwohl sie nicht als schreibgeschützt markiert ist. Die Datei kann mithilfe der [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)-Anweisung entfernt werden. Wenn die Dateigröße mit der [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)-Anweisung geändert wird, wird das Flag „schreibgeschützt“ zurückgesetzt, und Daten können hinzugefügt werden.
+Verlagert alle Daten aus der angegebenen Datei in andere Dateien in **derselben Dateigruppe**. EMPTYFILE migriert die Daten also aus der angegebenen Datei zu anderen Dateien in derselben Dateigruppe. ENPTYFILE stellt sicher, dass keine neuen Daten zur Datei hinzugefügt werden, obwohl diese Datei nicht schreibgeschützt ist. Sie könne eine [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)-Anweisung verwenden, um eine Datei zu entfernen. Wenn zum Ändern der Dateigröße die [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)-Anweisung verwenden, wird das Flag „schreibgeschützt“ zurückgesetzt, und Daten können hinzugefügt werden.
 
 Die Datei kann aus FILESTREAM-Dateigruppencontainern erst dann mit ALTER DATABASE entfernt werden, nachdem der FILESTREAM-Garbage Collector ausgeführt und alle nicht benötigten Dateigruppen-Containerdateien gelöscht wurden, die von EMPTYFILE in einen anderen Container kopiert wurden. Weitere Informationen finden Sie unter [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md).
   
@@ -95,43 +95,50 @@ WITH NO_INFOMSGS
 Alle Informationsmeldungen werden unterdrückt.
   
 ## <a name="result-sets"></a>Resultsets  
-In der folgenden Tabelle werden die Spalten des Resultsets beschrieben:
+In der folgenden Tabelle sind die Resultsetspalten beschrieben.
   
 |Spaltenname|und Beschreibung|  
 |---|---|
 |**DbId**|Die Datenbank-ID der Datei, die das [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu verkleinern versuchte.|  
 |**FileId**|Die Datei-ID der Datei, die [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu verkleinern versuchte.|  
 |**CurrentSize**|Die Anzahl von 8-KB-Seiten, die die Datei derzeit belegt.|  
-|**MinimumSize**|Die Anzahl von 8-KB-Seiten, die die Datei minimal belegen könnte. Dies entspricht der Mindestgröße bzw. der ursprünglich erzeugten Dateigröße.|  
+|**MinimumSize**|Die Anzahl von 8-KB-Seiten, die die Datei minimal belegen könnte. Diese Zahl entspricht der Mindestgröße bzw. der ursprünglich erzeugten Dateigröße.|  
 |**UsedPages**|Die Anzahl von 8-KB-Seiten, die derzeit von der Datei verwendet werden.|  
 |**EstimatedPages**|Die Anzahl an 8-KB-Seiten, auf die die Datei wahrscheinlich vom [!INCLUDE[ssDE](../../includes/ssde-md.md)] verkleinert werden kann.|  
   
 ## <a name="remarks"></a>Remarks  
 DBCC SHRINKFILE gilt für die Dateien der aktuellen Datenbank. Weitere Informationen zum Ändern der aktuellen Datenbank finden Sie unter [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md).
   
-DBCC SHRINKFILE-Vorgänge können an jeder Stelle des Prozesses beendet werden, wobei der abgeschlossene Anteil erhalten bleibt. Wenn der EMPTYFILE-Parameter in einer Datei verwendet und der Vorgang unterbrochen wird, wird die Datei nicht markiert, um das Hinzufügen weiterer Daten zu verhindern.
+Sie können den DBCC SHRINKFILE-Vorgang jederzeit beenden, und alle abgeschlossenen Vorgänge bleiben erhalten. Wenn Sie den Parameter EMPTYFILE verwenden und den Vorgang abbrechen, wird die Datei nicht markiert, um zu verhindern, dass zusätzliche Daten hinzugefügt werden.
   
 Wenn ein DBCC SHRINKFILE-Vorgang fehlschlägt, wird ein Fehler ausgelöst.
   
- Die Datenbank, die verkleinert werden soll, muss sich nicht im Einzelbenutzermodus befinden. Andere Benutzer können während der Verkleinerung der Datei an der Datenbank arbeiten. Um die Systemdatenbanken zu verkleinern, muss auch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht im Einzelbenutzermodus ausgeführt werden.  
+ Andere Benutzer können während der Dateiverkleinerung in der Datenbank arbeiten – die Datenbank muss nicht im Einzelbenutzermodus sein. Um die Systemdatenbanken zu verkleinern, muss auch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht im Einzelbenutzermodus ausgeführt werden.  
   
 ## <a name="shrinking-a-log-file"></a>Verkleinern einer Protokolldatei  
-Bei Protokolldateien wird *target_size* von [!INCLUDE[ssDE](../../includes/ssde-md.md)] dazu verwendet, die Zielgröße der gesamten Protokolldatei zu berechnen, sodass *target_size* die Größe des freien Speicherplatzes in der Protokolldatei nach dem Verkleinern angibt. Die Zielgröße des gesamten Protokolls wird dann in die Zielgröße für jede Protokolldatei umgewandelt. DBCC SHRINKFILE versucht, jede physische Protokolldatei sofort auf ihre Zielgröße zu verkleinern. Wenn sich dagegen ein Teil des logischen Protokolls in den virtuellen Protokollen befindet, die außerhalb der Zielgröße liegen, gibt das [!INCLUDE[ssDE](../../includes/ssde-md.md)] so viel Speicherplatz frei wie möglich und gibt dann eine Informationsmeldung aus. Die Meldung beschreibt, welche Aktionen erforderlich sind, um das logische Protokoll aus den virtuellen Protokollen am Ende der Datei zu verschieben. Nachdem diese Aktionen ausgeführt wurden, kann der verbleibende Speicherplatz mit DBCC SHRINKFILE freigegeben werden.
+
+Für Protokolldateien verwendet [!INCLUDE[ssDE](../../includes/ssde-md.md)] *target_size*, um die Zielgröße des gesamten Protokolls zu berechnen. Daher ist *target_size* der freie Speicherplatz des Protokolls nach dem Verkleinern. Die Zielgröße des gesamten Protokolls wird dann in die Zielgröße der einzelnen Protokolldateien umgewandelt. DBCC SHRINKFILE versucht, jede physische Protokolldatei sofort auf ihre Zielgröße zu verkleinern. Wenn sich dagegen ein Teil des logischen Protokolls in den virtuellen Protokollen befindet, die außerhalb der Zielgröße liegen, gibt das [!INCLUDE[ssDE](../../includes/ssde-md.md)] so viel Speicherplatz frei wie möglich und gibt dann eine Informationsmeldung aus. Die Meldung beschreibt, welche Aktionen erforderlich sind, um das logische Protokoll aus den virtuellen Protokollen am Ende der Datei zu verschieben. Nachdem diese Aktionen ausgeführt wurden, kann der verbleibende Speicherplatz mit DBCC SHRINKFILE freigegeben werden.
   
-Da eine Protokolldatei nur auf eine Grenze einer virtuellen Protokolldatei verkleinert werden kann, ist eine Verkleinerung der Protokolldatei auf eine geringere Größe als die einer virtuellen Protokolldatei u. U. nicht möglich, selbst wenn die Protokolldatei nicht verwendet wird. Die Größe der virtuellen Protokolldatei wird dynamisch vom [!INCLUDE[ssDE](../../includes/ssde-md.md)] ausgewählt, wenn Protokolldateien erstellt oder erweitert werden.
+Da eine Protokolldatei nur auf eine Grenze einer virtuellen Protokolldatei verkleinert werden kann, ist eine Verkleinerung der Protokolldatei auf eine geringere Größe als die einer virtuellen Protokolldatei u. U. nicht möglich, selbst wenn die Protokolldatei nicht verwendet wird. [!INCLUDE[ssDE](../../includes/ssde-md.md)] wählt dynamisch die Größe des virtuellen Dateiprotokolls, wenn Protokolldateien erstellt oder erweitert werden.
   
-## <a name="best-practices"></a>Bewährte Methoden  
+## <a name="best-practices"></a>Bewährte Methoden 
+ 
 Berücksichtigen Sie die folgenden Informationen, wenn Sie eine Datei verkleinern möchten:
 -   Ein Verkleinerungsvorgang ist am effektivsten nach einem Vorgang, durch den umfangreicher nicht verwendeter Speicherplatz bereitgestellt wird, z. B. das Abschneiden oder Löschen einer Tabelle.  
--   Die meisten Datenbanken erfordern verfügbaren freien Speicherplatz für die normalen alltäglichen Vorgänge. Wenn Sie eine Datenbank wiederholt verkleinern und feststellen, dass die Datenbankgröße wieder zunimmt, deutet dies darauf hin, dass der verkleinerte Speicherplatz für regelmäßige Vorgänge benötigt wird. In diesem Fall ist das Verkleinern der Datenbank vergeblich.  
--   Bei einem Verkleinerungsvorgang bleibt der Fragmentierungszustand der Indizes in der Datenbank nicht erhalten. Im Allgemeinen wird die Fragmentierung zu einem gewissen Grad verstärkt. Dies ist ein weiterer Grund, die Datenbank nicht wiederholt zu verkleinern.  
--   Verkleinern Sie mehrere Dateien in der gleichen Datenbank sequenziell statt gleichzeitig. Konflikte bei Systemtabellen können aufgrund der Blockierung Verzögerungen verursachen.  
+
+-   Die meisten Datenbanken benötigen für die täglichen Routinevorgänge eine gewisse Menge an verfügbarem freiem Speicherplatz. Wenn Sie eine Datenbank wiederholt verkleinern und ihre Größe wieder zunimmt, dann ist es wahrscheinlich, dass normale Vorgänge den verkleinerten Platz benötigen. In diesem Fall ist das Verkleinern der Datenbank vergeblich.  
+
+-   Bei einem Verkleinerungsvorgang bleibt der Fragmentierungszustand der Indizes in der Datenbank nicht erhalten. Im Allgemeinen wird die Fragmentierung zu einem gewissen Grad verstärkt. Dies Fragmentierung ist ein weiterer Grund, die Datenbank nicht wiederholt zu verkleinern.  
+
+-   Verkleinern Sie mehrere Dateien in der gleichen Datenbank sequenziell statt gleichzeitig. Konflikte bei Systemtabellen können zu einer Blockierung führen und Verzögerungen verursachen.  
   
 ## <a name="troubleshooting"></a>Problembehandlung  
 In diesem Abschnitt wird beschrieben, wie Probleme, die beim Ausführen des DBCC SHRINKFILE-Befehls auftreten können, diagnostiziert und behoben werden.
   
-### <a name="the-file-does-not-shrink"></a>Die Datei wird nicht verkleinert  
-Wenn beim Verkleinerungsvorgang kein Fehler auftritt, die Dateigröße jedoch unverändert scheint, überprüfen Sie, ob die Datei über ausreichend freien zu entfernenden Speicherplatz verfügt. Führen Sie dazu eine der folgenden Aktionen aus:
+### <a name="the-file-doesnt-shrink"></a>Die Datei wird nicht verkleinert.
+  
+Wenn sich die Dateigröße nach einem fehlerfreien Verkleinerungsvorgang nicht ändert, versuchen Sie Folgendes, um sicherzustellen, dass die Datei über ausreichend freien Speicherplatz verfügt:
+
 - Führen Sie die folgende Abfrage aus.  
   
 ```sql
@@ -140,12 +147,14 @@ FROM sys.database_files;
 ```
 
 -   Führen Sie den Befehl [DBCC SQLPERF](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md) aus, um den vom Transaktionsprotokoll verwendeten Speicherplatz zurückzugeben.  
+
 Falls nicht ausreichend Speicherplatz verfügbar ist, kann die Dateigröße durch den Verkleinerungsvorgang nicht weiter reduziert werden.
   
-In der Regel ist es die Protokolldatei, die scheinbar nicht verkleinert wurde. Gewöhnlich liegt es daran, dass die Protokolldatei nicht abgeschnitten wurde. Sie können das Protokoll abschneiden, indem Sie das Wiederherstellungsmodell der Datenbank auf SIMPLE festlegen oder indem Sie das Protokoll sichern und dann den DBCC SHRINKFILE-Vorgang erneut ausführen.
+In der Regel ist es die Protokolldatei, die scheinbar nicht verkleinert wurde. Ist dies der Fall, liegt es gewöhnlich daran, dass die Protokolldatei nicht abgeschnitten wurde. Um das Protokoll abzuschneiden, können Sie das Datenbankwiederherstellungsmodell auf SIMPLE setzen, oder das Protokoll sichern und dann den DBCC SHRINKFILE-Vorgang erneut ausführen.
   
 ### <a name="the-shrink-operation-is-blocked"></a>Der Verkleinerungsvorgang ist blockiert  
-Es kann vorkommen, dass Verkleinerungsvorgänge durch eine Transaktion blockiert werden, die auf einer auf [Zeilenversionsverwaltung basierenden Isolationsstufe](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md) ausgeführt wird. Erfolgt z. B. während eines DBCC SHRINKDATABASE-Vorgangs gleichzeitig ein umfangreicher Löschvorgang, der auf einer auf Zeilenversionsverwaltung basierenden Isolationsstufe ausgeführt wird, wird auf den Abschluss des Löschvorgangs gewartet, bevor die Dateien verkleinert werden. Ist dies der Fall, geben DBCC SHRINKFILE- und DBCC SHRINKDATABASE-Vorgänge in der ersten Stunde alle fünf Minuten, danach jede Stunde eine Informationsmeldung in das SQL Server-Fehlerprotokoll (5202 für SHRINKDATABASE und 5203 für SHRINKFILE) aus. Wenn das Fehlerprotokoll beispielsweise folgende Fehlermeldung enthält, tritt folgender Fehler auf:
+
+Eine Transaktion, die unter einer [auf Zeilenversionsverwaltung basierenden Isolationsstufe](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md) ausgeführt wird, kann Verkleinerungsvorgänge blockieren. Erfolgt z. B. während eines DBCC SHRINKDATABASE-Vorgangs gleichzeitig ein umfangreicher Löschvorgang, der auf einer auf Zeilenversionsverwaltung basierenden Isolationsstufe ausgeführt wird, wird auf den Abschluss des Löschvorgangs gewartet, bevor die Dateien weiter verkleinert werden. Wenn diese Blockierung auftritt, wird von den DBCC SHRINKFILE- und DBCC SHRINKDATABASE-Vorgängen eine Informationsmeldung (5202 für SHRINKDATABASE und 5203 für SHRINKFILE) an das SQL Server-Fehlerprotokoll ausgegeben. Diese Meldung wird in der ersten Stunde alle fünf Minuten und dann jede Stunde protokolliert. Wenn das Fehlerprotokoll beispielsweise folgende Fehlermeldung enthält, tritt folgender Fehler auf:
   
 ```sql
 DBCC SHRINKFILE for file ID 1 is waiting for the snapshot   
@@ -153,7 +162,7 @@ transaction with timestamp 15 and other snapshot transactions linked to
 timestamp 15 or with timestamps older than 109 to finish.  
 ```  
   
-Dies bedeutet, dass der Verkleinerungsvorgang durch Momentaufnahmetransaktionen mit Zeitstempeln älter als 109 blockiert ist, was der letzten vom Verkleinerungsvorgang abgeschlossenen Transaktion entspricht. Außerdem zeigt es an, dass die **transaction_sequence_num**-Spalte oder die **first_snapshot_sequence_num**-Spalte in der dynamischen Verwaltungssicht [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) einen Wert von 15 enthält. Wenn die Spalte **transaction_sequence_num** oder **first_snapshot_sequence_num** in der Sicht eine Zahl enthält, die kleiner als die letzte durch einen Verkleinerungsvorgang abgeschlossene Transaktion ist (109), wird mit dem Verkleinerungsvorgang bis zum Abschluss dieser Transaktionen gewartet.
+Diese Meldung bedeutet, dass Momentaufnahmentransaktionen mit Zeitstempeln, die älter als 109 sind (die letzte Transaktion, die der Verkleinerungsvorgang abgeschlossen hat), den Verkleinerungsvorgang blockieren. Außerdem zeigt es an, dass die **transaction_sequence_num**-Spalte oder die **first_snapshot_sequence_num**-Spalte in der dynamischen Verwaltungssicht [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) einen Wert von 15 enthält. Wenn entweder die Ansichtsspalte **transaction_sequence_num** oder **first_snapshot_sequence_num** eine Zahl enthält, die kleiner ist als die zuletzt abgeschlossene Transaktion (109) eines Verkleinerungsvorgangs ist, wartet der Verkleinerungsvorgang darauf, dass diese Transaktionen abgeschlossen sind.
   
 Führen Sie eine der folgenden Aufgaben aus, um das Problem zu beheben:
 -   Beenden Sie die Transaktion, die den Verkleinerungsvorgang blockiert.
@@ -165,7 +174,7 @@ Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** oder der fes
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-shrinking-a-data-file-to-a-specified-target-size"></a>A. Verkleinern einer Datendatei auf eine angegebene Zielgröße  
+### <a name="shrinking-a-data-file-to-a-specified-target-size"></a>Verkleinern einer Datendatei auf eine angegebene Zielgröße  
 Im folgenden Beispiel wird die Größe der Datendatei `DataFile1` in der `UserDB`-Benutzerdatenbank auf 7 MB verkleinert.
   
 ```sql  
@@ -175,7 +184,7 @@ DBCC SHRINKFILE (DataFile1, 7);
 GO  
 ```  
   
-### <a name="b-shrinking-a-log-file-to-a-specified-target-size"></a>B. Verkleinern einer Protokolldatei auf eine angegebene Zielgröße  
+### <a name="shrinking-a-log-file-to-a-specified-target-size"></a>Verkleinern einer Protokolldatei auf eine angegebene Zielgröße  
 Im folgenden Beispiel wird die Protokolldatei in der `AdventureWorks`-Datenbank auf 1 MB verkleinert. Damit die Datei mit dem DBCC SHRINKFILE-Befehl verkleinert werden kann, wird die Datei zunächst abgeschnitten, indem das Wiederherstellungsmodell für die Datenbank auf SIMPLE festgelegt wird.
   
 ```sql  
@@ -207,7 +216,7 @@ DBCC SHRINKFILE (1, TRUNCATEONLY);
 ```  
   
 ### <a name="d-emptying-a-file"></a>D. Leeren einer Datei  
-Das folgende Beispiel veranschaulicht das Verfahren zum Leeren einer Datei, sodass sie aus der Datenbank entfernt werden kann. Für die Zwecke dieses Beispiels wird zunächst eine Datendatei erstellt, und es wird angenommen, dass die Datei Daten enthält.
+Das folgende Beispiel veranschaulicht das Leeren einer Datei, sodass sie aus der Datenbank entfernt werden kann. Für dieses Beispiel wird zunächst eine Datei mit Daten erstellt.
   
 ```sql  
 USE AdventureWorks2012;  
@@ -229,7 +238,7 @@ REMOVE FILE Test1data;
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)  

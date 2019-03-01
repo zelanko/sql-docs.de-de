@@ -10,14 +10,14 @@ f1_keywords:
 - "10542"
 - MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 1353356a4fb0116e4eed34ef79a8d7a0997db0bb
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6c624ba5df22bdd519b464677c154c1718beab3c
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813773"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294939"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Karten-Assistent und Kartenebenen-Assistent (Berichts-Generator und SSRS)
  In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten automatisieren der Karten-Assistent und der Kartenebenen-Assistent das Erstellen einer Karte, Hinzufügen einer Kartenebene oder Ändern der Kartenebenen auf einer vorhandenen Ebene.  
@@ -76,7 +76,7 @@ ms.locfileid: "51813773"
   
     -   Kartenvisualisierung auswählen: Punkte  
   
-4.  Auswählen einer Verbindung mit einer Datenquelle für „Kartenvisualisierung auswählen: Punkte“. Wählen Sie eine Datenquellenverbindung aus, oder erstellen Sie eine Verbindung zu einer externen Datenquelle mit analytischen Daten, die auf der Karte angezeigt werden sollen.  
+4.  Auswählen einer Verbindung mit einer Datenquelle für „Kartenvisualisierung auswählen: Punkte. Wählen Sie eine Datenquellenverbindung aus, oder erstellen Sie eine Verbindung zu einer externen Datenquelle mit analytischen Daten, die auf der Karte angezeigt werden sollen.  
   
 5.  Entwerfen Sie eine Abfrage. Erstellen Sie eine Abfrage, die die analytischen Daten angibt.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "51813773"
   
  Wenn Sie eine Karte oder eine Kartenebene hinzugefügt haben und den Bericht in der Vorschau anzeigen, können Sie Karten- und Kartenebenenoptionen ändern, die Sie in den Assistenten festgelegt haben. Weitere Informationen finden Sie unter [Anpassen der Daten und der Anzeige einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- Weitere Informationen über Karten finden Sie unter [Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md). Schritt-für-Schritt-Anweisungen zum Hinzufügen eines Bericht zu einer Karte finden Sie unter [Lernprogramm: Kartenbericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-map-report-report-builder.md).  
+ Weitere Informationen über Karten finden Sie unter [Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md). Schrittweise Anweisungen dazu, wie Sie einem Bericht eine Karte hinzufügen, finden Sie unter [ Tutorial: Kartenbericht (Berichts-Generator)](../../reporting-services/tutorial-map-report-report-builder.md).  
   
 ##  <a name="SpatialDataSource"></a> Quelle räumlicher Daten auswählen  
  Geben Sie auf dieser Seite die räumliche Datenquelle an, und legen Sie fest, welche räumlichen Daten eingeschlossen werden sollen. Räumliche Daten können aus dem Kartenkatalog, einer ESRI-Shape-Datei oder einer Datasetabfrage stammen, die räumliche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Daten aus einer Datenbank von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher angibt.  
@@ -247,9 +247,9 @@ ms.locfileid: "51813773"
   
  Der Berichtsprozessor wendet die festgelegten Regeln an und bestimmt automatisch die Liste der Elemente, die in einer Legende angezeigt werden sollen. Standardmäßig werden die Ergebnisse aller Regeln für alle Ebenen in der ersten Legende angezeigt. Sie können dies nach Abschließen des Assistenten anpassen. Weitere Informationen finden Sie unter [Unterschiedliche Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Problembehandlung bei Berichten: Kartenberichte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
- [Planen eines Kartenberichts &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
+ [Planen eines Kartenberichts (Berichts-Generator und SSRS)](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
  [Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   
   

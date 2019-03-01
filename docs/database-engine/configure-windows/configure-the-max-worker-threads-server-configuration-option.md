@@ -14,12 +14,12 @@ ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2522a2efa2edfb899d2693e6f4746edd85f2d7fe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c35aab2ebd2b31fbbe7067bc8049930f791543c3
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420401"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56230977"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Maximale Anzahl von Arbeitsthreads
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "52420401"
   
      [Empfehlungen](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So konfigurieren Sie die Option Maximale Anzahl von Arbeitsthreads mit:**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "52420401"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Nachverfolgung**  [Nach dem Konfigurieren der Option „Max. Anzahl von Arbeitsthreads“](#FollowUp)  
+-   **Nachverfolgung:**  [Nach dem Konfigurieren der Option „Max. Anzahl von Arbeitsthreads“](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
@@ -73,7 +73,8 @@ ms.locfileid: "52420401"
     |Anzahl von CPUs|32-Bit-Computer|64-Bit-Computer|  
     |------------|------------|------------| 
     |\<= 4 Prozessoren|256|512|
-    |\> 4 Prozessoren|256 + ((logische CPUs - 4) * 8)|512 + ((logische CPUs – 4) * 16)| 
+    |\> 4 Prozessoren und \< 64 Prozessoren|256 + ((logische CPUs - 4) * 8)|512 + ((logische CPUs – 4) * 16)|
+    |\> 64 Prozessoren|256 + ((logische CPUs – 4) * 32)|512 + ((logische CPUs – 4) * 32)|
   
     > [!NOTE]  
     > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann nicht mehr unter einem 32-Bit-Betriebssystem installiert werden. Werte für 32-Bit-Computer sind zur Unterstützung von Kunden aufgeführt, die [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und früher nutzen.   1024 ist der empfohlene Wert für die maximale Anzahl von Arbeitsthreads auf einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, die auf einem 32-Bit-Computer ausgeführt wird.  
@@ -142,10 +143,10 @@ RECONFIGURE;
 GO  
 ```  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Konfigurieren der Option Max. Anzahl von Arbeitsthreads  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Konfigurieren der Option Max. Anzahl von Arbeitsthreads  
  Die Änderung wird nach dem Ausführen von [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) sofort wirksam, ohne dass ein Neustart von [!INCLUDE[ssDE](../../includes/ssde-md.md)] erforderlich ist.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   

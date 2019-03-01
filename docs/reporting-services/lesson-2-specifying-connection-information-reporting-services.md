@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 381192f80128ca3bd2ebade55dc539137c4bc9bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: da47a0fd587d48dd9d932504d6a5cd45d0d54664
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805608"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294698"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lektion 2: Angeben von Verbindungsinformationen (Reporting Services)
 Nachdem Sie Ihrem Tutorial-Projekt in Lektion 1 einen paginierten Bericht von [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] hinzugefügt haben, müssen Sie eine *Datenquelle* erstellen. Bei dieser handelt es sich um Verbindungsinformationen, mit denen der Bericht auf Daten aus einer relationalen Datenbank, einer mehrdimensionalen Datenbank oder einer sonstigen Ressource zugreift.  
@@ -46,7 +46,7 @@ Zum Anzeigen des **Berichtsdatenbereichs** klicken Sie im Menü **Ansicht** auf 
     >  
     >`Data source=localhost\SQLEXPRESS; initial catalog=AdventureWorks2014`  
     >  
-    >Weitere Informationen zu Verbindungszeichenfolgen finden Sie unter: [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+    >Weitere Informationen zu Verbindungszeichenfolgen finden Sie unter: [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
      
   
 6.  Klicken Sie im linken Bereich auf **Anmeldeinformationen** , und klicken Sie auf **Windows-Authentifizierung verwenden (integrierte Sicherheit)**.  
@@ -54,9 +54,9 @@ Zum Anzeigen des **Berichtsdatenbereichs** klicken Sie im Menü **Ansicht** auf 
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)] Die Datenquelle **AdventureWorks2014** wird dem **Berichtsdatenbereich** hinzugefügt.  
 ![ssrs_adventureworks_datasource](../reporting-services/media/ssrs-adventureworks-datasource.png)  
 ## <a name="next-task"></a>Nächste Aufgabe  
-Sie haben erfolgreich eine Verbindung mit der [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] -Beispieldatenbank definiert. Als Nächstes erstellen Sie den Bericht. Weitere Informationen finden Sie unter [Lektion 3: Definieren eines Datasets für den Tabellenbericht (Reporting Services)](../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
+Sie haben erfolgreich eine Verbindung mit der [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] -Beispieldatenbank definiert. Als Nächstes erstellen Sie den Bericht. Siehe [Lektion 3: Definieren eines Datasets für den Tabellenbericht &#40;Reporting Services&#41;](../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

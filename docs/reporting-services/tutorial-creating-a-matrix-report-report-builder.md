@@ -1,19 +1,19 @@
 ---
-title: 'Tutorial: Erstellen eines Matrixberichts (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Lernprogramm: Erstellen eines Matrixberichts (Berichts-Generator) | Microsoft-Dokumentation'
 ms.date: 06/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 812885a0638c9acf56cc0fc91f4f47915d6455cb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712371"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291678"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Lernprogramm: Erstellen eines Matrixberichts (Berichts-Generator)
 Dieses Tutorial zeigt Ihnen die Erstellung eines [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginierten Berichts mit einer Matrix von Beispielumsatzdaten in geschachtelten Zeilen- und Spaltengruppen. 
@@ -49,7 +49,7 @@ In diesem Abschnitt wählen Sie eine freigegebene Datenquelle aus, erstellen ein
   
 5.  Klicken Sie auf **Weiter**.  
   
-6.  Wählen Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** eine vorhandene Datenquelle aus oder navigieren Sie zum Berichtsserver und wählen Sie eine Datenquelle aus. Falls keine Datenquelle verfügbar ist oder Sie über keinen Zugriff auf einen Berichtsserver verfügen, können Sie stattdessen eine eingebettete Datenquelle verwenden. Weitere Informationen zum Erstellen einer eingebetteten Datenquelle finden Sie unter [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Wählen Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** eine vorhandene Datenquelle aus oder navigieren Sie zum Berichtsserver und wählen Sie eine Datenquelle aus. Falls keine Datenquelle verfügbar ist oder Sie über keinen Zugriff auf einen Berichtsserver verfügen, können Sie stattdessen eine eingebettete Datenquelle verwenden. Weitere Informationen zum Erstellen einer eingebetteten Datenquelle und eines Datasets finden Sie unter [ Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Klicken Sie auf **Weiter**.  
   
@@ -133,7 +133,7 @@ Stellen Sie mithilfe des Assistenten einen Startentwurf für die Anzeige von Dat
   
 13. Klicken Sie auf **Fertig stellen**.  
   
-    Die Matrix wird der Entwurfsoberfläche hinzugefügt. Im Bereich Zeilengruppen werden zwei Zeilengruppen angezeigt: Territory und SalesDate. Im Bereich Spaltengruppen werden zwei Spaltengruppen angezeigt: Subcategory und Product. Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden.  
+    Die Matrix wird der Entwurfsoberfläche hinzugefügt. Im Zeilengruppenbereich werden zwei Zeilengruppen angezeigt: Territory und SalesDate. Im Bereich Spaltengruppen werden zwei Spaltengruppen angezeigt: SubCategory und Product. Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden.  
     
     ![Berichts-Generator-Zeilengruppen-und-Spaltengruppen](../reporting-services/media/report-builder-row-and-column-groups.png)
   
@@ -359,7 +359,7 @@ Hiermit ist das Lernprogramm für die Erstellung eines Matrixberichts abgeschlos
 -    [Zonen des Tablix-Datenbereichs](../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md) 
 -    [Zellen, Zeilen und Spalten des Tablix-Datenbereichs](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Lernprogramme für den Berichts-Generator](../reporting-services/report-builder-tutorials.md)  
 [Berichts-Generator in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   

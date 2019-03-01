@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 870792045a0281461362262fe81a831644ac06dd
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f933ea46def5dff7c6fb9cb5bc51b3c2f310d53a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021134"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292278"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>Operatoren in Ausdrücken (Berichts-Generator und SSRS)
   Ein Operator ist ein Symbol, das Aktionen darstellt, die auf einen oder mehrere Begriffe in einem Ausdruck angewendet werden. Die folgenden Operatorkategorien werden in einem Ausdruck unterstützt: Arithmetik, Vergleich, Verkettung, logisch oder bitweise und Bitverschiebung  
@@ -45,7 +45,7 @@ ms.locfileid: "50021134"
 |>=|Größer oder gleich.|  
 |=|Gleich.|  
 |<>|Ungleich.|  
-|Wie|Bestimmt, ob eine bestimmte Zeichenfolge mit einem angegebenen Muster übereinstimmt. Ein Muster kann normale Zeichen und Platzhalterzeichen einschließen. Bei einem Mustervergleich müssen normale Zeichen exakt mit den angegebenen Zeichen in der Zeichenfolge übereinstimmen. Platzhalterzeichen können jedoch mit beliebigen Teilen der Zeichenfolge übereinstimmen. Das Verwenden der Vergleichsoperatoren für Zeichenfolgen = und != ist nicht so flexibel wie das Verwenden von Platzhalterzeichen mit dem LIKE-Operator.<br /><br /> In der folgenden Tabelle werden die Zeichen aufgelistet, die als Platzhalterzeichen verwendet werden können:<br /><br /> %: Eine Zeichenfolge mit null oder mehr Zeichen.<br /><br /> _: Ein einzelnes Zeichen.<br /><br /> [ ]: Ein einzelnes Zeichen innerhalb des angegebenen Bereichs (z. B. [a-f]) oder der festgelegten Gruppe (z. B. [aeiou]).<br /><br /> [^]: Ein einzelnes Zeichen, das nicht innerhalb des angegebenen Bereichs (z. B. [^a-f]) oder der festgelegten Gruppe (z. B. [^aeiou]) liegt.|  
+|Wie|Bestimmt, ob eine bestimmte Zeichenfolge mit einem angegebenen Muster übereinstimmt. Ein Muster kann normale Zeichen und Platzhalterzeichen einschließen. Bei einem Mustervergleich müssen normale Zeichen exakt mit den angegebenen Zeichen in der Zeichenfolge übereinstimmen. Platzhalterzeichen können jedoch mit beliebigen Teilen der Zeichenfolge übereinstimmen. Das Verwenden der Vergleichsoperatoren für Zeichenfolgen = und != ist nicht so flexibel wie das Verwenden von Platzhalterzeichen mit dem LIKE-Operator.<br /><br /> In der folgenden Tabelle werden die Zeichen aufgelistet, die als Platzhalterzeichen verwendet werden können:<br /><br /> %: Eine Zeichenfolge aus null oder mehr Zeichen<br /><br /> _: Ein einzelnes Zeichen.<br /><br /> [ ]: Ein einzelnes Zeichen innerhalb des angegebenen Bereichs (z. B. [a-f]) oder der festgelegten Menge (z. B. [aeiou]).<br /><br /> [^]: Ein einzelnes Zeichen, das nicht innerhalb des angegebenen Bereichs (z. B. [^a-f]) oder der festgelegten Gruppe (z. B. [^aeiou]) liegt.|  
 |Is|Vergleicht zwei Objektverweise.|  
   
 ### <a name="string-concatenation"></a>Verketten von Zeichenfolgen  
@@ -76,7 +76,7 @@ ms.locfileid: "50021134"
 |<\<|Führt eine arithmetische Verschiebung nach links für ein Bitmuster aus.|  
 |>>|Führt eine arithmetische Verschiebung nach rechts für ein Bitmuster aus.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdruck (Dialogfeld)](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   

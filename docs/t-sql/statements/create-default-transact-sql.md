@@ -22,22 +22,22 @@ ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 27af02d973c048ca5be4dd5c28010b3bcde65314
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 230a87a1138bf2b97ece66246d86a8264341446c
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815188"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154705"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Erstellt ein Objekt, das als Standardwert bezeichnet wird. Wenn ein Standardwert an eine Spalte oder einen Aliasdatentyp gebunden ist, gibt er den Wert an, der in diese Spalte (oder im Fall eines Aliasdatentyps in alle Spalten) eingefügt werden soll, wenn beim Einfügen nicht explizit ein Wert angegeben ist.  
+Erstellt ein Objekt, das als Standardwert bezeichnet wird. Wenn ein Standardwert an eine Spalte oder einen Aliasdatentyp gebunden ist, gibt er den Wert an, der in diese Spalte (oder im Fall eines Aliasdatentyps in alle Spalten) eingefügt werden soll, wenn beim Einfügen nicht explizit ein Wert angegeben ist.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen Standarddefinitionen, die mithilfe des DEFAULT-Schlüsselworts von ALTER TABLE oder CREATE TABLE erstellt werden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,25 +48,25 @@ AS constant_expression [ ; ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *schema_name*  
+*schema_name*  
  Der Name des Schemas, zu dem der Standardwert gehört.  
   
- *default_name*  
+*default_name*  
  Der Name des Standardwerts. Namen für Standardwerte müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen. Das Angeben des Standardbesitzernamens ist optional.  
   
- *constant_expression*  
- Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der nur konstante Werte enthält (nicht zulässig sind Namen von Spalten oder anderen Datenbankobjekten). Es kann jede Konstante, jede integrierte Funktion oder jeder mathematische Ausdruck verwendet werden, außer solchen, die Aliasdatentypen enthalten. Benutzerdefinierte Funktionen können nicht verwendet werden. Setzen Sie Zeichen- und Datumskonstanten in einfache Anführungszeichen (**'**). Bei Integer-, Währungs- und Gleitkommakonstanten sind keine Anführungszeichen erforderlich. Binären Daten muss 0x vorangestellt werden, und Währungsdaten muss das Dollarzeichen ($) vorangestellt werden. Der Standardwert muss mit dem Datentyp der Spalte kompatibel sein.  
+*constant_expression*  
+Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der nur konstante Werte enthält (nicht zulässig sind Namen von Spalten oder anderen Datenbankobjekten). Sie können jede Konstante, jede integrierte Funktion oder jeden mathematischen Ausdruck verwenden, außer solchen, die Aliasdatentypen enthalten. Benutzerdefinierte Funktionen können nicht verwendet werden. Setzen Sie Zeichen- und Datumskonstanten in einfache Anführungszeichen (**'**). Bei Integer-, Währungs- und Gleitkommakonstanten sind keine Anführungszeichen erforderlich. Binären Daten muss 0x vorangestellt werden, und Währungsdaten muss das Dollarzeichen ($) vorangestellt werden. Der Standardwert muss mit dem Datentyp der Spalte kompatibel sein.  
   
 ## <a name="remarks"></a>Remarks  
- Der Name eines Standardwerts kann nur in der aktuellen Datenbank erstellt werden. Innerhalb einer Datenbank müssen die Namen für Standardwerte für jedes Schema eindeutig sein. Verwenden Sie nach dem Erstellen eines Standardwerts **sp_bindefault**, um diesen an eine Spalte oder einen Aliasdatentyp zu binden.  
+ Sie können den Namen eines Standardwerts nur in der aktuellen Datenbank erstellen. Innerhalb einer Datenbank müssen die Namen für Standardwerte für jedes Schema eindeutig sein. Wenn Sie einen Standardwert erstellen, binden Sie ihn mit **sp_bindefault** an eine Spalte oder einen Aliasdatentyp.  
   
- Falls der Standardwert inkompatibel mit dem Datentyp der Spalte ist, an die er gebunden ist, erzeugt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Versuch, den Standardwert einzufügen, eine Fehlermeldung. N/V kann z.B. nicht als Standardwert für **numeric**-Spalten verwendet werden.  
+ Falls der Standardwert mit der Spalte, an die er gebunden ist, nicht kompatibel ist, erzeugt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Versuch, den Standardwert einzufügen, eine Fehlermeldung. N/V kann z.B. nicht als Standardwert für **numeric**-Spalten verwendet werden.  
   
  Falls der Standardwert zu lang für die Spalte ist, an die er gebunden ist, wird er gekürzt.  
   
  CREATE DEFAULT-Anweisungen können nicht mit anderen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in einem einzelnen Batch kombiniert werden.  
   
- Der Standardwert muss gelöscht werden, bevor ein neuer Standardwert mit dem gleichen Namen erstellt werden kann. Außerdem muss seine Bindung durch Ausführen von **sp_unbindefault** aufgehoben werden, bevor dieser gelöscht werden kann.  
+ Ein Standardwert muss gelöscht werden, bevor Sie einen neuen mit gleichem Namen erstellen. Bevor der Standardwert gelöscht wird, muss seine Bindung durch Ausführen von **sp_unbindefault** aufgehoben werden.  
   
  Falls einer Spalte sowohl ein Standardwert als auch eine Regel zugeordnet ist, darf der Standardwert nicht diese Regel verletzen. Ein Standardwert, der gegen eine Regel verstößt, wird nicht eingefügt. Bei jedem Versuch, einen solchen Standardwert einzufügen, erzeugt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Fehlermeldung.  
   
@@ -76,7 +76,7 @@ AS constant_expression [ ; ]
   
 -   Das DEFAULT VALUES- oder DEFAULT-Schlüsselwort wird mit INSERT verwendet, um Standardwerte einzufügen.  
   
- Falls beim Erstellen einer Spalte NOT NULL angegeben und für die Spalte kein Standardwert erstellt ist, wird jedes Mal eine Fehlermeldung erzeugt, wenn ein Benutzer keinen Eintrag in dieser Spalte bereitstellt. In der folgenden Tabelle wird die Beziehung zwischen dem Vorhandensein eines Standardwerts und der Definition einer Spalte als NULL oder NOT NULL verdeutlicht. Das jeweilige Ergebnis geht aus den Einträgen in der Tabelle hervor.  
+ Falls Sie beim Erstellen einer Spalte NOT NULL angeben und keinen Standardwert für sie erstellen, wird jedes Mal eine Fehlermeldung erzeugt, wenn ein Benutzer keinen Eintrag in dieser Spalte vornimmt. In der folgenden Tabelle wird die Beziehung zwischen dem Vorhandensein eines Standardwerts und der Definition einer Spalte als NULL oder NOT NULL verdeutlicht. Das jeweilige Ergebnis geht aus den Einträgen in der Tabelle hervor.  
   
 |Spaltendefinition|Kein Eintrag, kein Standardwert|Kein Eintrag, Standardwert|Eingabe von NULL, kein Standardwert|Eingabe von NULL, Standardwert|  
 |-----------------------|--------------------------|-----------------------|----------------------------|-------------------------|  
@@ -86,7 +86,7 @@ AS constant_expression [ ; ]
  Um einen Standardwert umzubenennen, verwenden Sie **sp_rename**. Um einen Bericht über einen Standardwert zu erhalten, verwenden Sie **sp_help**.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Für die Ausführung von CREATE DEFAULT benötigt ein Benutzer zumindest die CREATE DEFAULT-Berechtigung für die aktuelle Datenbank sowie die ALTER-Berechtigung für das Schema, in dem der Standardwert erstellt wird.  
+ Zur Verwendung von CREATE DEFAULT benötigt ein Benutzer zumindest die CREATE DEFAULT-Berechtigung für die aktuelle Datenbank sowie die ALTER-Berechtigung für das Schema, in dem der Standardwert erstellt wird.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -100,9 +100,12 @@ CREATE DEFAULT phonedflt AS 'unknown';
 ```  
   
 ### <a name="b-binding-a-default"></a>B. Binden eines Standards  
- Im folgenden Beispiel wird der in Beispiel A erstellte Standardwert an eine Spalte gebunden. Der Standardwert tritt nur dann in Kraft, wenn kein Eintrag in der `Phone`-Spalte der `Contact`-Tabelle angegeben ist. Beachten Sie, dass sich das Auslassen eines Eintrags vom expliziten Angeben von NULL in einer INSERT-Anweisung unterscheidet.  
+ Im folgenden Beispiel wird der in Beispiel A erstellte Standardwert an eine Spalte gebunden. Der Standardwert tritt nur dann in Kraft, wenn kein Eintrag in der `Phone`-Spalte der `Contact`-Tabelle angegeben ist. 
+ 
+ > [!Note] 
+ >  Das Auslassen eines Eintrags unterscheidet sich vom expliziten Angeben von NULL in einer INSERT-Anweisung.  
   
- Da kein Standardwert namens `phonedflt` vorhanden ist, schlägt die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung fehl. Dieses Beispiel dient nur zur Veranschaulichung.  
+ Da kein Standardwert namens `phonedflt` vorhanden ist, tritt bei der folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung ein Fehler auf. Dieses Beispiel dient nur zur Veranschaulichung.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -110,7 +113,7 @@ GO
 sp_bindefault 'phonedflt', 'Person.PersonPhone.PhoneNumber';  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   

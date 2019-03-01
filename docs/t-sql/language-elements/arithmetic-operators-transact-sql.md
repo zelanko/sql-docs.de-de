@@ -18,17 +18,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5b124878e337473789665aeba9b8509be9732f8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80574014aa381744177369fbac9dd4f6b39fb44f
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783658"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154775"
 ---
 # <a name="arithmetic-operators-transact-sql"></a>Arithmetische Operatoren (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Arithmetische Operatoren führen mathematische Operationen an zwei Ausdrücken mit einem oder mehreren Datentypen der numerischen Datentypkategorie aus. Weitere Informationen zu Datentypkategorien finden Sie unter [Transact-SQL-Syntaxkonventionen (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+Arithmetische Operatoren führen mathematische Operationen für zwei Ausdrücke eines oder mehrerer Datentypen durch. Sie werden von der numerischen Datentypkategorie aus ausgeführt. Weitere Informationen zu Datentypkategorien finden Sie unter [Transact-SQL-Syntaxkonventionen (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 |Operator|Bedeutung|  
 |--------------|-------------|  
@@ -38,13 +38,13 @@ ms.locfileid: "47783658"
 |[/ (Dividieren)](../../t-sql/language-elements/divide-transact-sql.md)|Division|  
 |[% (Modulus)](../../t-sql/language-elements/modulo-transact-sql.md)|Gibt den ganzzahligen Rest einer Division zurück. Beispiel: 12 % 5 = 2 (der Rest von 12 geteilt durch 5 ist 2).|  
   
- Mit den Operatoren Plus (+) und Minus (-) können auch arithmetische Operationen für **datetime**- und **smalldatetime**-Werte ausgeführt werden.  
+Mit den Operatoren Plus (+) und Minus (-) können auch arithmetische Operationen für **datetime**- und **smalldatetime**-Werte ausgeführt werden.  
   
- Weitere Informationen zu Genauigkeit und Dezimalstellen im Ergebnis einer arithmetischen Operation finden Sie unter [Genauigkeit, Dezimalstellen und Länge &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
+Weitere Informationen zu Genauigkeit und Dezimalstellen im Ergebnis einer arithmetischen Operation finden Sie unter [Genauigkeit, Dezimalstellen und Länge &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Mathematische Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Mathematische Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
+[Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
+[Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
   
   

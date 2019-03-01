@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9e1e9c58b88e7edd48fe3a1390f56e313572adf
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3de7c69169198302535eb7ff5dc855faa4f44974
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418811"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319111"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>Abfragen von Daten in einer temporalen Tabelle mit Systemversionsverwaltung
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ FOR SYSTEM_TIME AS OF '2015-09-01 T10:00:00.7230011' ;
 Die ersten beiden Unterklauseln geben Zeilenversionen zurück, die sich mit einem bestimmten Zeitraum überschneiden (d.h. die Zeilenversionen, die vor dem angegebene Zeitraum begannen und danach beendeten), CONTAINED IN gibt dagegen nur die Zeilenversionen zurück, die innerhalb bestimmter Zeitraumgrenzen vorhanden waren.  
   
 > [!IMPORTANT]  
->  Wenn Sie nur nach nicht-aktuellen Zeilenversionen suchen, sollten Sie **CONTAINED IN** verwenden, da es nur mit der Verlaufstabelle funktioniert und die beste Abfrageleistung erzielt. Verwenden Sie **ALL** , wenn Sie aktuelle Daten und Verlaufsdaten ohne Einschränkungen abfragen müssen.  
+>  Wenn Sie nur nach nicht aktuellen Zeilenversionen suchen, empfiehlt es sich, die Verlaufstabelle direkt abzufragen, da Sie damit die beste Abfrageleistung erzielen. Verwenden Sie **ALL** , wenn Sie aktuelle Daten und Verlaufsdaten ohne Einschränkungen abfragen müssen.  
   
 ```  
 /* Query using BETWEEN...AND sub-clause*/  
@@ -134,7 +134,7 @@ ORDER BY [DeptID], [SysStartTime] Desc
   
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Temporal Tables](../../relational-databases/tables/temporal-tables.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
  [Erstellen einer temporalen Tabelle mit Systemversionsverwaltung](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)   

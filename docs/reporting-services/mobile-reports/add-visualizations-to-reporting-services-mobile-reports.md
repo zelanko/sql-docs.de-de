@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 42df96705e680643a9dacca3393e8c9c262c66c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cee144e7fed793cf08c246f3a83a4f9e213e80a4
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703338"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298418"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Hinzufügen von Visualisierungen zu mobilen Reporting Services-Berichten
 Diagramme sind ein wesentlicher Bestandteil der Visualisierung von Daten. Erfahren Sie mehr über die Diagramme, die Sie in mobilen [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten verwenden können, um eine große Bandbreite von Szenarien abzudecken. 
@@ -143,7 +143,7 @@ Treemap-Diagramme zeigen Metriken an, indem sie deren Werte in Flächen und Farb
 
      * Unter **Größe repräsentiert** ein numerisches Feld für die Größe der Kacheln aus.
      * Unter **Farbe repräsentiert** ein numerisches Feld für die Farbe der Kacheln aus. 
-     * [optional] **Benutzerdefinierter Mittenwert**: Sie können die Einstellung **Benutzerdefinierter Mittenwert** nur dann verwenden, wenn als Visualisierungstyp „Wärmebild mit benutzerdefiniertem Mittenwert“ ausgewählt wurde.
+     * [optional] **Benutzerdefinierter Mittenwert**: Sie können die Einstellung **Benutzerdefinierter Mittenwert** nur dann verwenden, wenn als Visualisierungstyp „HeatMapWithCustomCenterValue“ ausgewählt wurde.
      
          Der Mittenwert legt die Farbe einer Kachel fest. Je näher die Metrik dem Mittenwert kommt, desto grüner ist die Kachel. Je weiter die Metrik vom Mittenwert entfernt ist, desto röter ist die Kachel.
      

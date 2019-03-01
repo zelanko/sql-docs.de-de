@@ -9,14 +9,14 @@ f1_keywords:
 - "10248"
 - sql13.rtp.rptdesigner.serieslabelproperties.general.f1
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: a6ed0e02b12080389b12d0dabc9028de33e9cdb4
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e2ee94edec262fb9ddef64d64e90958e77cdf228
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021222"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296958"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Formatieren von Datenpunkten in einem Diagramm (Berichts-Generator und SSRS)
 In einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht stellt ein Datenpunkt die kleinste Entität im Diagramm dar. In Nicht-Formdiagrammen werden Datenpunkte entsprechend dem Diagrammtyp dargestellt. Eine Linienreihe besteht beispielsweise aus einem oder mehreren verbundenen Datenpunkten. In Formdiagrammen werden Datenpunkte durch einzelne Slices oder Segmente dargestellt, aus denen sich das gesamte Diagramm zusammensetzt. In einem Kreisdiagramm ist z. B. jedes Teil ein Datenpunkt. Weitere Informationen finden Sie unter [Diagrammtypen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md).  
@@ -41,7 +41,7 @@ In einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md
 ## <a name="positioning-data-point-labels-on-a-chart"></a>Positionieren von Datenpunktbezeichnungen in einem Diagramm  
  In allen Diagrammtypen können Sie Datenpunktbezeichnungen anzeigen, indem Sie mit der rechten Maustaste auf das Diagramm klicken und die Option **Datenbezeichnungen anzeigen**auswählen. Die Position der Datenpunktbezeichnungen wird entsprechend dem Diagrammtyp angegeben:  
   
--   In einem Balkendiagramm können Sie die Datenpunktbezeichnung mithilfe des benutzerdefinierten **BarLabelStyle** -Attributs neu positionieren. Es gibt vier mögliche Positionen: Außen, Links, Zentriert und Rechts. Wenn Sie die Balkenbezeichnungsart auf Außen festlegen, werden die Bezeichnungen außerhalb des Balkens platziert, sofern sie in den Diagrammbereich passen. Wenn die Bezeichnung nicht außerhalb des Balkens und im Diagrammbereich positioniert werden kann, wird sie im Balken positioniert.  
+-   In einem Balkendiagramm können Sie die Datenpunktbezeichnung mithilfe des benutzerdefinierten **BarLabelStyle** -Attributs neu positionieren. Es gibt vier mögliche Positionen: außen, links, Mitte und rechts. Wenn Sie die Balkenbezeichnungsart auf Außen festlegen, werden die Bezeichnungen außerhalb des Balkens platziert, sofern sie in den Diagrammbereich passen. Wenn die Bezeichnung nicht außerhalb des Balkens und im Diagrammbereich positioniert werden kann, wird sie im Balken positioniert.  
   
 -   In einem Kreisdiagramm können Sie die Datenpunktbezeichnung mithilfe des benutzerdefinierten **PieLabelStyle** -Attributs neu positionieren. Beim Positionieren von Datenpunktbezeichnungen um ein Kreisdiagramm sind viele Aspekte zu berücksichtigen, u. a. die Größe des Kreisdiagramms, der verfügbare Platz zwischen dem Kreisdiagramm und der entsprechenden Legende sowie die Größe der Bezeichnungen. Weitere Informationen finden Sie unter [Anzeigen von Datenpunktbezeichnungen außerhalb eines Kreisdiagramms &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md).  
   
@@ -93,12 +93,12 @@ In einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md
   
  [Anzeigen von Prozentwerten in einem Kreisdiagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Formatieren eines Diagramms &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Formatieren von Achsenbezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Formatieren von Achsenbezeichnungen als Datumsangabe oder Währung (Berichts-Generator und SSRS)](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   

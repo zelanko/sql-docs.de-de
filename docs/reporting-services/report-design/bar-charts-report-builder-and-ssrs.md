@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d08af2a5d42742dcb165aa2038b858ae1ae2b491
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 389cd439b1d7e32082e4ba8e561826d193346944
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028629"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294368"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Balkendiagramme (Berichts-Generator und SSRS)
   Ein Balkendiagramm zeigt Reihen als Sätze horizontaler Balken an. Das einfache Balkendiagramm ist eng mit dem Säulendiagramm und dem Bereichsbalkendiagramm verbunden. Das Säulendiagramm zeigt Reihen als Sätze vertikaler Balken an, während das Bereichsbalkendiagramm Reihen als Sätze horizontaler Balken mit verschiedenen Anfangs- und Endpunkten darstellt.  
@@ -55,7 +55,7 @@ ms.locfileid: "50028629"
   
 -   Wenn im Verhältnis zur Größe des Diagramms viele Datenpunkte im Dataset vorhanden sind, wird die Größe der Säulen oder Balken und der Abstand zwischen diesen verringert. Um die Breite der Säulen in einem Diagramm manuell festzulegen, ändern Sie deren Breite in Pixel, indem Sie die **PointWidth** -Eigenschaft ändern. Standardmäßig ist der Wert dieser Eigenschaft 0,8. Wenn Sie die Breite der Säulen oder Balken in einem Diagramm erhöhen, verringert sich der Abstand zwischen den einzelnen Säulen oder Balken.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Diagrammtypen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [Leere und NULL-Datenpunkte in Diagrammen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   

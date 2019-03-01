@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8668a88ef7e2375c0500fed68b1ffbc4a0494ba9
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7688e1c082c250933054a9c510c8f8ecf7be3423
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100391"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297279"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Problembehandlung bei Berichten: Kartenberichte (Berichts-Generator und SSRS)
   Probleme mit Karten in einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht können auftreten, wenn Sie dem Bericht eine Karte oder eine Kartenebene hinzufügen, wenn Sie im Bericht eine vorhandene Karte oder eine Kartenebene anpassen, wenn Sie eine Karte in einem Bericht in der Vorschau anzeigen oder wenn Sie einen Bericht mit einer Karte veröffentlichen. Dieses Thema soll Ihnen beim Behandeln der folgenden Probleme helfen.  
@@ -204,7 +204,7 @@ ms.locfileid: "50100391"
   
  Um Daten anzugeben, die sich auf räumliche Daten beziehen, die nicht Teil eines Berichtsdatasets sind, müssen Sie das Symbol # gefolgt von einer Bezeichnung verwenden, die den Namen der Daten angibt.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
  [Problembehandlung in Berichts-Generator](https://msdn.microsoft.com/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
   

@@ -20,19 +20,19 @@ ms.assetid: e13b491f-4f1f-4cb6-8b63-5084120f98cf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac2a77f861330686d618fdd13764d11f27d12e16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4dc06419f478af56648e312d8ea7bac7481787fa
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770919"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290988"
 ---
 # <a name="identincr-transact-sql"></a>IDENT_INCR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt den inkrementellen Wert (als **numeric** (**@@** MAXPRECISION,0)) zurück, der beim Erstellen einer Identitätsspalte in einer Tabelle oder Sicht mit Identitätsspalte angegeben wurde.  
+  Gibt den inkrementellen Wert (als **numeric**(**@@** MAXPRECISION,0)) zurück, der beim Erstellen einer Identitätsspalte in einer Tabelle oder Sicht festgelegt wurde.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Artikellinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,15 +43,15 @@ IDENT_INCR ( 'table_or_view' )
   
 ## <a name="arguments"></a>Argumente  
  **'** *table_or_view* **'**  
- Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der die Tabelle oder Sicht angibt, die auf einen gültigen inkrementellen Wert für die Identitätsspalte überprüft werden soll. *table_or_view* kann eine Zeichenfolgenkonstante in Anführungszeichen, eine Variable, eine Funktion oder ein Spaltenname sein. *table_or_view* ist vom Datentyp **char**, **nchar**, **varchar** oder **nvarchar**.  
+ Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der die Tabelle oder Sicht angibt, die auf einen gültigen inkrementellen Wert für die Identitätsspalte überprüft werden soll. *table_or_view* kann eine Zeichenfolgenkonstante in Anführungszeichen sein. Es kann auch eine Variable, eine Funktion oder ein Spaltenname sein. *table_or_view* ist vom Datentyp **char**, **nchar**, **varchar** oder **nvarchar**.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **numeric**  
   
 ## <a name="exceptions"></a>Ausnahmen  
- Gibt NULL bei einem Fehler zurück oder wenn ein Aufrufer nicht über Berechtigungen zum Anzeigen des Objekts verfügt.  
+ Gibt NULL zurück, wenn ein Fehler auftritt oder ein Aufrufer nicht über die Berechtigungen zum Anzeigen des Objekts verfügt.  
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann ein Benutzer nur die Metadaten sicherungsfähiger Elemente anzeigen, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Dies bedeutet, dass Metadaten ausgebende integrierte Funktionen, z. B. IDENT_INCR, möglicherweise NULL zurückgeben, wenn dem Benutzer für das Objekt keine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann ein Benutzer nur die Metadaten von sicherungsfähigen Elementen anzeigen, die er besitzt oder für die er Berechtigungen hat. Ohne Objektberechtigung des Benutzers kann eine Metadaten emittierende, eingebaute Funktion, wie z.B. IDENT_INCR, NULL zurückgeben. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -92,7 +92,7 @@ dbo                 AWBuildVersion                     1
 Production          BillOfMaterials                    1
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Systemfunktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md)   

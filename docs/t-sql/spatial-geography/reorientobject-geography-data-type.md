@@ -18,19 +18,19 @@ ms.assetid: e2a1a4f1-211b-4e82-abed-03fc7140a83c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0f14609b70d5984be8166e17a5388297fead4db0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cda6f09124127d04c8ded1773feab4e9ffbf2ba9
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800082"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265227"
 ---
 # <a name="reorientobject-geography-data-type"></a>ReorientObject (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Gibt eine **geography** -Instanz mit ausgetauschtem inneren und äußeren Bereich zurück.  
+Gibt eine **geography** -Instanz mit ausgetauschtem inneren und äußeren Bereich zurück.  
   
- Diese **geography** -Datentypmethode unterstützt Instanzen von **FullGlobe** oder räumliche Instanzen, die größer als eine Hemisphäre sind.  
+Diese **geography** -Datentypmethode unterstützt Instanzen von **FullGlobe** oder räumliche Instanzen, die größer als eine Hemisphäre sind.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,18 +40,18 @@ ms.locfileid: "47800082"
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *geography*  
- Eine andere Instanz von **geography** , für die `ReorientObject()` aufgerufen wird.  
+_geography_  
+Eine andere Instanz von **geography** , für die `ReorientObject()` aufgerufen wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geography**  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geography**  
   
- CLR-Rückgabetyp: **SqlGeography**  
+CLR-Rückgabetyp: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- Mit dieser Methode wird die Ringausrichtung aller **Polygons** in eine **GeometryCollection** geändert, ohne **Points** oder **Linestrings** in der angegebenen Auflistung zu ändern.  
+Mit dieser Methode wird die Ringausrichtung aller **Polygons** in eine **GeometryCollection** geändert, ohne **Points** oder **LineStrings** in der angegebenen Sammlung zu ändern.  
   
- Wenn eine **GeometryCollection** an die Methode übergeben wird, werden alle Instanzen in der Auflistung neu ausgerichtet, die Auflistung als Ganzes wird jedoch nicht neu ausgerichtet.  
+Wenn Sie eine **GeometryCollection** an die Methode übergeben, werden alle Instanzen in der Sammlung neu ausgerichtet, die Sammlung als Ganzes wird jedoch nicht neu ausgerichtet.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -61,7 +61,6 @@ SELECT @R.ReorientObject().STAsText();
 --Result: POLYGON ((10 10, -10 10, -10 -10, 10 -10, 10 10))  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Erweiterte Methoden für geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
-  
+## <a name="see-also"></a>Weitere Informationen  
+[Erweiterte Methoden für geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   

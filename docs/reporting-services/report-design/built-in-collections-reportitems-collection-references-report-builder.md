@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4318aeeb2f80078a71fe5924dae0364cfa380150
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e1c6a8dcf60de0e1d67666788d0c026af545f90f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804098"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289640"
 ---
 # <a name="built-in-collections---reportitems-collection-references-report-builder"></a>Integrierte Auflistungen: Verweise auf ReportItems-Auflistungen (Berichts-Generator)
   Die integrierte **ReportItems** -Sammlung besteht aus einem Satz von Textfeldern aus Berichtselementen, wie Zeilen eines Datenbereichs oder Textfelder auf der Berichtsentwurfsoberfläche. Die **ReportItems** -Auflistung umfasst Textfelder, die sich im aktuellen Bereich einer Seitenkopfzeile, einer Seitenfußzeile oder eines Berichtshauptteils befinden. Diese Auflistung wird vom Berichtsprozessor und vom Berichtsrenderer zur Laufzeit bestimmt. Der aktuelle Bereich wird geändert, wenn der Berichtsprozessor Berichtsdaten und die Layoutelemente des Berichtselements erfolgreich kombiniert, während der Benutzer Seiten eines Berichts anzeigt. Sie können die integrierte **ReportItems** -Sammlung verwenden, um Seitenkopfzeilen im Wörterbuchformat zu erstellen, die das erste und das letzte Element auf jeder Seite anzeigen.  
@@ -48,7 +48,7 @@ ms.locfileid: "47804098"
   
  Ein Textfeld in einer Zeile, die sich in einer übergeordneten Gruppe befindet, darf beispielsweise keinen Ausdruck enthalten, der auf den Namen eines Textfelds in einer Zeile einer untergeordneten Gruppe verweist. Ein solcher Ausdruck wird nicht in einen Wert des Berichts aufgelöst, da sich das Textfeld in der untergeordneten Zeile außerhalb des Bereichs befindet. Weitere Informationen finden Sie unter [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Integrierte Sammlungen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   

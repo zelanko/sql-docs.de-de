@@ -24,33 +24,30 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 029e026134f29f2aba56fd37566f384b8d35ccf5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 37c2ec562f0207edcf67cb8ef9a59c2710c921b8
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015496"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802019"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal und numeric (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [Senden Sie uns Ihr Feedback zum Inhaltsverzeichnis der SQL-Dokumentation!](https://aka.ms/sqldocsurvey)
 
 Numerische Datentypen mit fester Genauigkeit und fester Anzahl von Dezimalstellen. decimal und numeric sind Synonyme und können austauschbar verwendet werden.
   
 ## <a name="arguments"></a>Argumente  
 **decimal**[ **(**_p_[ **,**_s_] **)**] und **numeric**[ **(**_p_[ **,**_s_] **)**]  
-Zahlen mit fester Genauigkeit und mit fester Anzahl von Dezimalstellen. Wenn maximale Genauigkeit verwendet wird, liegen gültige Werte zwischen - 10^38 +1 und 10^38 - 1. Die ISO-Synonyme für **decimal** lauten **dec** und **dec(**_p_, _s_**)**. **numeric** ist die funktionelle Entsprechung von **decimal**.
+Zahlen mit fester Genauigkeit und mit fester Anzahl von Dezimalstellen. Wenn maximale Genauigkeit verwendet wird, liegen gültige Werte zwischen - 10^38 +1 und 10^38 - 1. Die ISO-Synonyme für **decimal** lauten **dec** und **dec(**_p_, _s_**)**. Die Funktion von **numeric** ist mit der von **decimal** identisch.
   
 p (Precision = Genauigkeit)  
-Die maximale Gesamtanzahl von Dezimalstellen, sowohl links als auch rechts vom Dezimalkomma, die gespeichert wird. Die Genauigkeit muss ein Wert zwischen 1 und der maximalen Genauigkeit von 38 sein. Die Standardgenauigkeit beträgt 18.
+Die maximale Gesamtanzahl der zu speichernden Dezimalstellen. Diese Zahl schließt die Ziffern links und rechts des Dezimaltrennzeichens ein. Die Genauigkeit muss ein Wert zwischen 1 und der maximalen Genauigkeit von 38 sein. Die Standardgenauigkeit beträgt 18.
   
 > [!NOTE]  
 >  Informatica unterstützt unabhängig von der angegebenen Präzision und dem Dezimalstellenwert nur 16 signifikante Ziffern.  
   
 *s* (Dezimalstellenwert)  
-Die Anzahl von Dezimalstellen rechts vom Dezimalkomma, die gespeichert wird. Diese Anzahl wird von *p* subtrahiert, um die maximale Anzahl der Stellen links von der Dezimalstelle zu bestimmen. Der Dezimalstellenwert muss in einem Bereich zwischen 0 und *p* liegen. Der Dezimalstellenwert kann nur angegeben werden, wenn eine Genauigkeit angegeben ist. Der Standardwert ist 0 (null). Daher gilt: 0 <= *s* \<= *p*. Die maximalen Speichergrößen variieren abhängig von der Genauigkeit.
+Die Anzahl von Dezimalstellen die rechts vom Dezimaltrennzeichen gespeichert werden. Diese Anzahl wird von *p* subtrahiert, um die maximale Anzahl der Stellen links von der Dezimalstelle zu bestimmen. Die Anzahl von Dezimalstellen muss ein Wert zwischen 0 und *p* sein und kann nur festgelegt werden, wenn die Genauigkeit angegeben wird. Der Standardwert ist 0; daher gilt: 0 <= *s* \<= *p*. Die maximalen Speichergrößen variieren abhängig von der Genauigkeit.
   
 |Genauigkeit|Speicherplatz in Bytes|  
 |---|---|
@@ -63,18 +60,18 @@ Die Anzahl von Dezimalstellen rechts vom Dezimalkomma, die gespeichert wird. Die
 >  Informatica (über den SQL Server PDW-Informatica-Connector verbunden) unterstützt unabhängig von der angegebenen Präzision und dem Dezimalstellenwert nur 16 signifikante Ziffern.  
   
 ## <a name="converting-decimal-and-numeric-data"></a>Konvertieren von decimal- und numeric-Daten
-Im Fall der Datentypen **decimal** und **numeric** sieht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] jede auftretende Kombination aus Genauigkeit und Anzahl der Dezimalstellen als einen anderen Datentyp an. **decimal(5,5)** und **decimal(5,0)** werden beispielsweise als unterschiedliche Datentypen erachtet.
+Im Fall der Datentypen **decimal** und **numeric** sieht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] jede Kombination aus Genauigkeit und Anzahl von Dezimalstellen als einen anderen Datentyp an. **decimal(5,5)** und **decimal(5,0)** werden beispielsweise als unterschiedliche Datentypen erachtet.
   
 In [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen wird eine Konstante mit einem Dezimaltrennzeichen automatisch in einen Wert des **numeric**-Datentyps konvertiert. Hierbei werden die mindestens erforderliche Genauigkeit und die Anzahl von Dezimalstellen verwendet. Die Konstante 12.345 wird z.B. in einen **numeric**-Wert mit einer Genauigkeit von 5 und 3 Dezimalstellen konvertiert.
   
 Wenn Sie eine Konvertierung von **decimal** oder **numeric** in **float** oder **real** vornehmen, kann ein gewisses Maß an Genauigkeit verloren gehen. Wenn Sie eine Konvertierung von **int**, **smallint**, **tinyint**, **float**, **real**, **money** oder **smallmoney** in **decimal** oder **numeric** vornehmen, kann es zu einem Überlauf kommen.
   
-Bei der Konvertierung einer Zahl in einen Wert des Typs **decimal** oder **numeric** mit einer geringeren Genauigkeit und einer geringeren Anzahl von Dezimalstellen wird der Wert standardmäßig von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerundet. Wenn allerdings die Option SET ARITHABORT auf ON festgelegt ist, löst [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bei Auftreten eines Überlaufs einen Fehler aus. Eine Verringerung der Genauigkeit und der Anzahl der Dezimalstellen reicht zum Auslösen eines Fehlers nicht aus.
+Bei der Konvertierung einer Zahl in einen Wert des Typs **decimal** oder **numeric** mit einer geringeren Genauigkeit und einer geringeren Anzahl von Dezimalstellen wird der Wert standardmäßig von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerundet. Wenn allerdings die Option SET ARITHABORT auf ON festgelegt ist, löst [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bei Auftreten eines Überlaufs einen Fehler aus. Eine Verringerung der Genauigkeit und der Anzahl von Dezimalstellen reicht zum Auslösen eines Fehlers nicht aus.
   
 Beim Konvertieren von float- oder real-Werten in decimal oder numeric umfasst der decimal-Wert nie mehr als 17 Dezimalstellen. float-Werte < 5E-18 werden immer in 0 konvertiert.
   
 ## <a name="examples"></a>Beispiele  
-Im folgenden Beispiel wird eine Tabelle mit **decimal**- und **numeric**-Datentypen erstellt.  Werte werden in jede Spalte eingefügt, und die Ergebnisse werden mithilfe einer SELECT-Anweisung zurückgegeben.
+Im folgenden Beispiel wird eine Tabelle mit **decimal**- und **numeric**-Datentypen erstellt.  Werte werden in den einzelnen Spalten eingefügt. Die Ergebnisse werden mithilfe einer SELECT-Anweisung zurückgegeben.
   
 ```sql
 CREATE TABLE dbo.MyTable  
@@ -110,5 +107,4 @@ MyDecimalColumn                         MyNumericColumn
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
-  
   

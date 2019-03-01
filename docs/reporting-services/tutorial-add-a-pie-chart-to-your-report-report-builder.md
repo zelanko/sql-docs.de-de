@@ -1,21 +1,21 @@
 ---
-title: 'Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Lernprogramm: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation'
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 10d17a596568fd706b696359ef43bc8f257afdf9
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710731"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293639"
 ---
-# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)
+# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)
 In diesem Tutorial erstellen Sie ein Kreisdiagramm in einem paginierten Reporting Services-Bericht. Sie fügen Prozentsätze hinzu und kombinieren kleine Slices zu einem einzelnen Slice.
 
 Kreis- und Ringdiagramme zeigen Daten als Teile des Ganzen an. Sie haben keine Achsen. Wenn Sie ein numerisches Feld zu einem Kreisdiagramm hinzufügen, berechnet das Diagramm den prozentualen Anteil jedes einzelnen Werts der Gesamtsumme.  
@@ -27,7 +27,7 @@ Diese Abbildung zeigt das Kreisdiagramm, das Sie erstellen.
 Wenn in einem Kreisdiagramm zu viele Datenpunkte vorhanden sind, können die Datenpunktbezeichnungen zu überfüllt sein, um sie zu lesen. Erwägen Sie in diesem Fall eine Anzahl von kleinen Slices zu einem größeren Slice zu kombinieren. Kreisdiagramme sind besser lesbar, wenn Sie die Daten bereits zu einer kleineren Anzahl von Datenpunkten aggregiert haben.  
  
 > [!NOTE]  
-> In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst. Im ersten Tutorial dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, Hinzufügen einer Datenquelle und Hinzufügen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst. Im ersten Lernprogramm dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, Hinzufügen einer Datenquelle und Hinzufügen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Ungefähre Dauer dieses Lernprogramms: 10 Minuten  
   
@@ -214,7 +214,7 @@ Der Bericht wird auf dem Berichtsserver gespeichert.
 ## <a name="next-steps"></a>Next Steps  
 Sie haben das Lernprogramm "Hinzufügen eines Kreisdiagramms zu einem Bericht" erfolgreich abgeschlossen. Weitere Informationen zu Diagrammen finden Sie unter [Diagramme (Berichts-Generator und SSRS)](../reporting-services/report-design/charts-report-builder-and-ssrs.md) und [Sparklines und Datenbalken (Berichts-Generator und SSRS)](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Lernprogramme für den Berichts-Generator](../reporting-services/report-builder-tutorials.md)  
 [Berichts-Generator in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   

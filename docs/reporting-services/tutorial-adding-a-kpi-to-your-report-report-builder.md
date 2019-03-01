@@ -1,22 +1,22 @@
 ---
-title: 'Tutorial: Hinzufügen einer KPI zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Lernprogramm: Hinzufügen einer KPI zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation'
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ee2333bc6d369bbc9908198d8cfa2fa18ce23065
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a19d1fee2e7e9fc1fd5efd8fe2c0007548bcaf2d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712641"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290718"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines KPIs zu einem Bericht (Berichts-Generator)
-In diesem [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] -Tutorial fügen Sie eine Leistungskennzahl (key performance indicator; KPI) zu einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht hinzu.  
+In diesem [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)]-Tutorial fügen Sie eine Leistungskennzahl (Key Performance Indicator; KPI) einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]-Bericht hinzu.  
 
 KPIs sind für Unternehmen bedeutende, messbare Werte. In diesem Szenario ist die Verkaufszusammenfassung nach Produktunterkategorien der KPI. Der aktuelle Status der KPI wird mithilfe von Farben, Messgeräten und Indikatoren angezeigt.
   
@@ -25,9 +25,9 @@ Die folgende Abbildung ähnelt dem Bericht, den Sie erstellen werden.
 ![Berichts-Generator-KPI-Bericht](../reporting-services/media/report-builder-kpi-report.png)
     
 > [!NOTE]  
-> In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst: ein Verfahren zum Erstellen des Datasets und ein Verfahren zum Erstellen einer Tabelle. Im ersten Tutorial dieser Reihe erhalten Sie ausführliche Anweisungen zum Navigieren zu einem Berichtsserver, Auswählen einer Datenquelle, Erstellen eines Datasets und Ausführen des Assistenten: [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst: ein Verfahren zum Erstellen des Datasets und ein Verfahren zum Erstellen einer Tabelle. Das erste Tutorial dieser Reihe enthält Schrittanleitungen zum Navigieren zu einem Berichtsserver, zum Auswählen einer Datenquelle, zum Erstellen eines Datasets und zum Ausführen des Assistenten: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Geschätzte Zeit zum Bearbeiten dieses Tutorials: 15 Minuten.  
+Ungefähre Dauer dieses Lernprogramms: 15 Minuten  
   
 ## <a name="requirements"></a>Anforderungen  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -51,7 +51,7 @@ In diesem Abschnitt wählen Sie eine freigegebene Datenquelle aus, erstellen ein
   
 5.  Klicken Sie auf **Weiter**.  
   
-6.  Wählen Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** eine vorhandene Datenquelle aus, oder navigieren Sie zum Berichtsserver, und wählen Sie eine Datenquelle aus. Falls dort keine Datenquelle verfügbar ist oder Sie keinen Zugriff auf einen Berichtsserver haben, können Sie stattdessen eine eingebettete Datenquelle verwenden. Weitere Informationen finden Sie unter [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Wählen Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** eine vorhandene Datenquelle aus, oder navigieren Sie zum Berichtsserver, und wählen Sie eine Datenquelle aus. Falls dort keine Datenquelle verfügbar ist oder Sie keinen Zugriff auf einen Berichtsserver haben, können Sie stattdessen eine eingebettete Datenquelle verwenden. Weitere Informationen finden Sie unter [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Klicken Sie auf **Weiter**.  
   
@@ -136,7 +136,7 @@ Der Tabellen- oder Matrix-Assistent stellt ein erstes Design für die Darstellun
   
 11. Klicken Sie auf **Fertig stellen**.  
   
-      Die Tabelle wird der Entwurfsoberfläche hinzugefügt. Die Tabelle enthält fünf Spalten und fünf Zeilen. Im Bereich "Zeilengruppen" werden drei Zeilengruppen angezeigt: "SalesDate", "Subcategory" und "Details". Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden. Der Bereich „Spaltengruppen“ ist leer.  
+      Die Tabelle wird der Entwurfsoberfläche hinzugefügt. Die Tabelle enthält fünf Spalten und fünf Zeilen. Der Bereich „Zeilengruppen“ umfasst drei Zeilengruppen: SalesDate, Subcategory und Details. Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden. Der Bereich „Spaltengruppen“ ist leer.  
       
       ![Berichts-Generator-KPI-Zeilengruppen](../reporting-services/media/report-builder-kpi-row-groups.png)
   
@@ -184,7 +184,7 @@ Hintergrundfarben können für einen Ausdruck festgelegt werden, der beim Ausfü
     
     ![Berichts-Generator-Textfeldeigenschaften](../reporting-services/media/report-builder-text-box-properties.png)
   
-2.  Klicken Sie auf der Registerkarte **Ausfüllen** auf die Schaltfläche **fx** neben der Option **Füllfarbe** , und geben Sie den folgenden Ausdruck in das Feld **Ausdruck festlegen für: BackgroundColor** ein:  
+2.  Klicken Sie auf der Registerkarte **Ausfüllen** auf die Schaltfläche **fx** neben der Option **Füllfarbe**, und geben Sie den folgenden Ausdruck in das Feld **Ausdruck festlegen für: BackgroundColor** ein:  
   
     `=IIF(Sum(Fields!Sales.Value) >= 5000 ,"Lime", IIF(Sum(Fields!Sales.Value) < 2500, "Red","Yellow"))`  
   
@@ -340,7 +340,7 @@ Sie haben das Lernprogramm "Hinzufügen eines KPI zu einem Bericht" erfolgreich 
 *  [Messgeräte](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
 * [Indikatoren](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 * [Lernprogramme für den Berichts-Generator](../reporting-services/report-builder-tutorials.md)
 * [Berichts-Generator in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   

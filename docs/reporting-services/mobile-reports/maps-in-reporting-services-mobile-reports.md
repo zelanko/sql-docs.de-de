@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 5b09c8aec100d877256f0d8d9b4b97530ecdf5c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c1fbb2ad5c2c652f5be04982ffaedb7eadea97be
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810989"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294778"
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Karten in mobilen Reporting Services-Berichten
 Karten sind eine hervorragende Möglichkeit, geografische Daten visuell darzustellen. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] bietet drei verschiedene Typen von Kartenvisualisierungen sowie integrierte Karten für Kontinente und eine Reihe von einzelnen Ländern. Sie können auch [benutzerdefinierte Karten hochladen und verwenden](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).   
@@ -65,7 +65,7 @@ Um echte Daten in Ihrer Karte anzuzeigen, müssen Sie Werte für mindestens zwei
   
 4. Wählen Sie in dieser Ansicht **Daten** im Bereich **Dateneigenschaften** unter **Schlüssel** im linken Feld die Tabelle mit den Kartendaten und im rechten Feld das Schlüsselfeld aus, das den Regionen in Ihrer Karte entspricht.  
   
-5. Unter **Werte** befindet sich dieselbe Tabelle bereits im linken Feld. Wählen Sie das numerische Feld, dessen Werte auf der Karte angezeigt werden sollen.   
+5. Unter **Werte**befindet sich dieselbe Tabelle bereits im linken Feld. Wählen Sie das numerische Feld, dessen Werte auf der Karte angezeigt werden sollen.   
   
 6. Wenn es sich um ein Wärmebild mit Verlauf handelt, befindet sich dieselbe Tabelle unter dem Feld **Ziele** im linken Feld. Wählen Sie im Feld auf der rechten Seite das numerische Feld aus, dessen Werte als Ziel dienen sollen.   
   

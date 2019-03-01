@@ -21,19 +21,19 @@ ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d95e76ebfc1bca5aa310d8c4e377592ec1670721
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 081425bf857be0a637159304facdcfb1aa625642
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753388"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287828"
 ---
 # <a name="getansinull-transact-sql"></a>GETANSINULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt die Standard-NULL-Zulässigkeit für die Datenbank für diese Sitzung zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Artikellinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,13 +44,13 @@ GETANSINULL ( [ 'database' ] )
   
 ## <a name="arguments"></a>Argumente  
  '*database*'  
- Der Name der Datenbank, für die Informationen zur NULL-Zulässigkeit zurückgegeben werden sollen. *database* ist entweder vom Datentyp **char** oder vom Datentyp **nchar**. Wenn es sich um **char** handelt, wird *database* implizit in **nchar** konvertiert.  
+ Der Name der Datenbank, für die Informationen zur NULL-Zulässigkeit zurückgegeben werden sollen. *“database“ ist entweder vom Datentyp **char** oder vom Datentyp **nchar**. Wenn es sich um **char** handelt, wird *database* implizit in **nchar** konvertiert.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
   
 ## <a name="remarks"></a>Remarks  
- Wenn die NULL-Zulässigkeit der angegebenen Datenbank NULL-Werte zulässt und die NULL-Zulässigkeit von Spalten oder Datentypen nicht explizit definiert wurde, gibt GETANSINULL den Wert 1 zurück. Dies ist der ANSI NULL-Standard.  
+GETANSINULL gibt 1 zurück, wenn die NULL-Zulässigkeit der Datenbank Nullwerte zulässt. Dieser Rückgabewert erfordert auch, dass die NULL-Zulässigkeit der Spalte oder des Datentyps nicht explizit definiert ist. Der ANSI NULL-Standardwert ist 1. 
   
  Zur Aktivierung des ANSI NULL-Standardverhaltens muss eine der folgenden Bedingungen festgelegt werden:  
   
@@ -79,7 +79,7 @@ GO
 (1 row(s) affected)
  ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Systemfunktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

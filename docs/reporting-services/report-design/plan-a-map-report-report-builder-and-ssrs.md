@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: c16950d0848e2999e3dee3991904eddeee8a0eee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d7a744233ace7e6c31bb2d00c5bdd888a4be371f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808728"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288048"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Planen eines Kartenberichts (Berichts-Generator und SSRS)
 Gute Berichte enthalten Informationen, die als Grundlage für Aktionen oder Verständniszugewinn dienen können. Um Analytische Daten, wie z. B. Gesamtumsätze oder demografische Daten, mit einem geografischen Hintergrund zu präsentieren, können Sie dem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht eine Karte hinzufügen. Eine Karte kann mehrere Ebenen enthalten, wobei jede Ebene Kartenelemente anzeigt, die von einem bestimmten Typ räumlicher Daten definiert werden: Punkte, die Positionen darstellen, Linien, die Routen darstellen, oder Polygone, die Flächen darstellen. Sie können den analytischen Daten auf jeder Ebene Kartenelemente zuordnen.  
@@ -148,7 +148,7 @@ Gute Berichte enthalten Informationen, die als Grundlage für Aktionen oder Vers
   
  Um dynamische räumliche Daten zu verwenden, muss sich die räumliche Datenquelle auf dem Berichtsserver befinden. Wenn Berichte in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]entworfen werden, können einem Projekt räumliche Datenquellen hinzugefügt werden und zusammen mit der Berichtsdefinition auf dem Berichtsserver veröffentlicht werden. Wenn Sie Berichte mithilfe des Berichts-Generators entwerfen, müssen Sie zuerst die räumlichen Daten auf den Berichtsserver hochladen, und dann im Assistenten oder in den Ebeneneigenschaften diese Quelle räumlicher Daten für die Kartenebene angeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Anpassen der Daten und der Anzeige einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [Tutorial: Kartenbericht (Berichts-Generator)](../../reporting-services/tutorial-map-report-report-builder.md)   
  [Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   

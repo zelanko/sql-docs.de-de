@@ -1,21 +1,21 @@
 ---
-title: 'Tutorial: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Lernprogramm: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator) | Microsoft-Dokumentation'
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a4ea0601aff712034a58f73953718bcd70514351
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711142"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298608"
 ---
-# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator)
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Lernprogramm: Lernprogramm: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator)
 
 In diesem [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)]-Tutorial erstellen Sie eine einfache Tabelle mit einem Sparkline-Diagramm in einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht.   
   
@@ -23,7 +23,7 @@ Sparklines und Datenbalken sind einfache, kleine Diagramme, die zahlreiche Infor
   
 ![Berichts-Generator-Sparkline-fertig](../reporting-services/media/report-builder-sparkline-final.png)  
      
-Geschätzte Zeit zum Bearbeiten dieses Lernprogramms: 30 Minuten  
+Ungefähre Dauer dieses Lernprogramms: 30 Minuten  
   
 ## <a name="requirements"></a>Anforderungen  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  

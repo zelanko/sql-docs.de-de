@@ -1,19 +1,19 @@
 ---
-title: 'Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Lernprogramm: Erstellen eines einfachen Tabellenberichts (Berichts-Generator) | Microsoft-Dokumentation'
 ms.date: 06/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3e41b40bceadec4c841aa5b464e2946915003b93
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712351"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298382"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Lernprogramm: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)
 In diesem Lernprogramm erfahren Sie, wie Sie auf Grundlage von Beispielumsatzdaten einen einfachen Tabellenbericht erstellen. Die folgende Abbildung zeigt den Bericht, den Sie erstellen.  
@@ -184,7 +184,7 @@ Nachdem Sie Gruppen erstellt haben, können Sie Zeilen hinzufügen und formatier
   
 4.  Klicken Sie auf **Weiter** , um eine Vorschau der Tabelle anzuzeigen, und anschließend auf **Fertig stellen**.  
   
-Die Tabelle wird der Entwurfsoberfläche hinzugefügt. Die Tabelle enthält 5 Spalten und 5 Zeilen. Im Bereich "Zeilengruppen" werden drei Zeilengruppen angezeigt: "SalesDate", "Subcategory" und "Details". Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden.  
+Die Tabelle wird der Entwurfsoberfläche hinzugefügt. Die Tabelle enthält 5 Spalten und 5 Zeilen. Der Bereich „Zeilengruppen“ umfasst drei Zeilengruppen: SalesDate, Subcategory und Details. Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden.  
   
 ## <a name="FormatCurrency"></a>2. Formatieren von Daten als Währung  
 Die Zusammenfassungsdaten für das Feld "Sales" werden standardmäßig als eine Zahl im Standardzahlenformat angezeigt. Formatieren Sie das Feld, um die Zahl als Währung anzuzeigen.   
@@ -353,7 +353,7 @@ In diesem Lernprogramm exportieren Sie den Bericht nach Excel, und Sie legen ein
 ## <a name="next-steps"></a>Next Steps  
 Damit ist die exemplarische Vorgehensweise für das Erstellen eines einfachen Tabellenberichts abgeschlossen. Weitere Informationen zu Tabellen finden Sie unter [Tabellen, Matrizen und Listen (Berichts-Generator und SSRS)](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Lernprogramme für den Berichts-Generator](../reporting-services/report-builder-tutorials.md)  
 [Berichts-Generator in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   

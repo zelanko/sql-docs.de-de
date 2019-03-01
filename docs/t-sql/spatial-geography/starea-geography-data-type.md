@@ -18,17 +18,17 @@ ms.assetid: cfc0b0e0-7fde-431a-863f-d13f3b1b1bef
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb8e33e7f27315871948c5fd7e6915242cc0a339
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 299ccb67b03a654a348492f81ea62f086229efab
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643878"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265277"
 ---
 # <a name="starea-geography-data-type"></a>STArea (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt die gesamte Oberfläche einer **geography**-Instanz zurück. Ergebnisse für STArea() werden als Quadrat der vom SRID (Spatial Reference Identifier) der **geography**-Instanz verwendeten Maßeinheit zurückgegeben. Wenn der SRID der Instanz beispielsweise 4326 lautet, gibt STAreal() Ergebnisse in Quadratmetern zurück.  
+Gibt die gesamte Oberfläche einer **geography**-Instanz zurück. Die Ergebnisse für STArea() sind die quadratische Maßeinheit, die von der räumlichen Referenz-ID der Instanz **geography** verwendet wird. Wenn beispielsweise die SRID der Instanz 4326 ist, gibt STArea() die Ergebnisse in Quadratmetern zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,18 +38,18 @@ ms.locfileid: "47643878"
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **float**  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **float**  
   
- CLR-Rückgabetyp: **SqlDouble**  
+CLR-Rückgabetyp: **SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
- STArea() gibt 0 (null) zurück, wenn eine **geography**-Instanz nur null- und eindimensionale Abbildungen enthält oder leer ist.  
+STArea() gibt 0 zurück, wenn eine **geography**-Instanz nur null- und eindimensionale Abbildungen enthält oder leer ist.  
   
 > [!NOTE]  
 >  Methoden für den **geography**-Datentyp, die einen metrischen Rückgabewert erzeugen, liefern unterschiedliche Ergebnisse, abhängig vom SRID der in der jeweiligen Methode verwendeten Instanz. Weitere Informationen über SRIDs finden Sie unter [SRIDs &#40;Spatial Reference Identifiers&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird mithilfe von `STArea()` eine `Polygon``geography`-Instanz erstellt und dann der Bereich des Polygons berechnet.  
+Im folgenden Beispiel wird mithilfe von `STArea()` eine `Polygon geography`-Instanz erstellt und dann der Bereich des Polygons berechnet.  
   
 ```  
 DECLARE @g geography;  
@@ -57,7 +57,6 @@ SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -
 SELECT @g.STArea();  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [OGC-Methoden für geography-Instanzen](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
-  
+## <a name="see-also"></a>Weitere Informationen  
+[OGC-Methoden für geography-Instanzen](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   

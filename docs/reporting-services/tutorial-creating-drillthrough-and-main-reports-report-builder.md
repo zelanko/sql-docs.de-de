@@ -6,23 +6,23 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 44480672cc835e455062c70943e87379a18a059e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4d1c367f530353991fca3f7b8301b8a1691f3833
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526183"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286928"
 ---
-# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Lernprogramm: Erstellen von Drillthrough- und Hauptberichten (Berichts-Generator)
+# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Erstellen von Drillthrough- und Hauptberichten (Berichts-Generator)
 In diesem Tutorial erfahren Sie, wie Sie zwei Arten von paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Berichten erstellen: einen Drillthroughbericht und einen Hauptbericht. Die in diesen Berichten verwendeten Beispielvertriebsdaten werden aus einem Analysis Services-Cube abgerufen. 
 
 Die folgende Abbildung zeigt die Berichte, die Sie erstellen werden und wie der Feldwert „Games and Toys“ aus dem Hauptbericht im Titel des Drillthroughberichts angezeigt wird. Die Daten im Drillthroughbericht beziehen sich auf die Produktkategorie „Games and Toys!“.  
   
 ![rs_DrillthroughCubeTutorial](../reporting-services/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
    
-Geschätzte Zeit zum Bearbeiten dieses Lernprogramms: 30 Minuten  
+Ungefähre Dauer dieses Lernprogramms: 30 Minuten  
   
 ## <a name="requirements"></a>Anforderungen  
 Das Tutorial erfordert Zugriff auf den Contoso Sales-Cube jeweils für den Drillthrough- und den Hauptbericht. Dieses Dataset umfasst das Data Warehouse „ContosoDW“ und die OLAP -Datenbank (Online Analytical Processing) „Contoso_Retail“. Die Berichte, die Sie in diesem Lernprogramm erstellen, rufen Berichtsdaten aus dem Contoso Sales-Cube ab. Die OLAP-Datenbank Contoso_Retail kann vom [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=191575)heruntergeladen werden. Sie brauchen lediglich die Datei ContosoBIdemoABF.exe herunterzuladen. Diese Datei enthält die OLAP-Datenbank.  
@@ -511,7 +511,7 @@ Sie können in Berichten Teil- und Gesamtergebnisse anzeigen. Die Daten im Haupt
   
 1.  Vergewissern Sie sich auf der Seite **Layout auswählen** , dass unter **Optionen**die Option **Teil- und Gesamtergebnisse anzeigen** ausgewählt ist.  
   
-    Im Vorschaubereich des Assistenten wird eine Matrix mit vier Zeilen angezeigt.  Wenn Sie den Bericht ausführen, wird jede Zeile folgendermaßen angezeigt: Die erste Zeile ist die Spaltengruppe, die zweite Zeile enthält die Spaltenüberschriften, die dritte Zeile enthält die Produktkategoriedaten (`[Sum(Net_ QTY)]` und `[Sum(Net_Sales)]`), und die vierte Zeile enthält die Ergebnisse.  
+    Im Vorschaubereich des Assistenten wird eine Matrix mit vier Zeilen angezeigt.  Bei der Ausführung des Berichts wird jede Zeile wie folgt angezeigt: Die erste Zeile ist die Spaltengruppe, die zweite Zeile enthält die Spaltenüberschriften, die dritte Zeile enthält die Produktkategoriedaten (`[Sum(Net_ QTY)]` und `[Sum(Net_Sales)]`), und die vierte Zeile enthält die Ergebnisse.  
   
 2.  Klicken Sie auf **Weiter**.  
   
@@ -627,7 +627,7 @@ Hinzufügen eines Titels zum Hauptbericht
   
 1.  Klicken Sie auf der Entwurfsoberfläche auf **Zum Hinzufügen eines Titels klicken**.  
   
-2.  Geben Sie **2009 Product Category Sales: Online and Reseller Category:** ein.  
+2.  Geben Sie **Umsatz in 2009 in Produktkategorie: Online und Wiederverkäufer:**.  
   
 3.  Wählen Sie den eingegebenen Text aus.  
   
@@ -680,6 +680,6 @@ Führen Sie den Hauptbericht aus, und klicken Sie dann auf Werte in der Produktk
   
 5.  Sie können sich auch andere Produktkategorien ansehen, indem Sie auf deren Namen klicken.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Tutorials (Berichts-Generator)](../reporting-services/report-builder-tutorials.md)  
   

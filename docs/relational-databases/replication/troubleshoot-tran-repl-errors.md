@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 022c63e58d212c5b45f18fcfc60b169dae9be81d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e25498f1d9d3b1ec3c24b7c2f34031fab9e4341f
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675899"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154885"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Problembehandlung: Suchen von Fehlern bei SQL Server-Transaktionsreplikationen 
 Die Problembehandlung von Replikationsfehlern kann ohne grundlegende Kenntnisse der Transaktionsreplikation frustrierend sein. Der erste Schritt beim Erstellen einer Veröffentlichung besteht darin, den Momentaufnahmen-Agent eine Momentaufnahme erstellen zu lassen und diese im Ordner für Momentaufnahmen zu speichern. Anschließend wendet der Verteilungs-Agent die Momentaufnahme auf den Abonnenten an. 
@@ -45,7 +45,7 @@ In jedem Schritt dieses Vorgangs können Fehler auftreten. Diese zu finden kann 
 1. Verwenden Sie den Replikationsmonitor, um zu ermitteln, an welchem Punkt (d.h. bei welchem Agent) ein Fehler bei der Replikation auftritt:
    - Wenn Fehler im Abschnitt **Verleger zu Verteiler** auftreten, tritt der Fehler im Protokolllese-Agent auf: 
    - Wenn Fehler im Abschnitt **Verteiler zu Abonnent** auftreten, tritt der Fehler im Verteilungs-Agent auf:  
-2. Durchsuchen Sie den Auftragsverlauf dieses Agents im Auftragsaktivitätsmonitor, um die Details des Fehlers zu ermitteln. Wenn der Auftragsverlauf nicht genügend Details anzeigt, können Sie für diesen Agent die [ausführliche Protokollierung](#enable-verbose-logging) aktivieren.
+2. Durchsuchen Sie den Auftragsverlauf dieses Agents im Auftragsaktivitätsmonitor, um die Details des Fehlers zu ermitteln. Wenn der Auftragsverlauf nicht genügend Details anzeigt, können Sie für diesen Agent die [ausführliche Protokollierung](#enable-verbose-logging-on-any-agent) aktivieren.
 3. Versuchen Sie, eine Lösung für den Fehler zu ermitteln.
 
 
