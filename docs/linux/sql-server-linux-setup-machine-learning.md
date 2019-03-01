@@ -1,21 +1,21 @@
 ---
 title: Installieren von SQL Server Machine Learning-Dienste (R, Python, Java) unter Linux | Microsoft-Dokumentation
-description: Dieser Artikel beschreibt, wie zum Installieren von SQL Server Machine Learning Services (R, Python, Java) auf Red Hat und Ubuntu.
+description: Erfahren Sie, wie zum Installieren von SQL Server Machine Learning Services (R, Python, Java) auf Red Hat und Ubuntu.
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 01/18/2019
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7e140a4eeb8fe6481b52be378c6ad9569160e9e3
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+ms.openlocfilehash: b27c2f897f3a96003eefe879aba4f1d5dba7512d
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397659"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018056"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-java-on-linux"></a>Installieren von SQL Server 2019 Machine Learning-Diensten (R, Python, Java) unter Linux
 
@@ -27,7 +27,7 @@ Speicherort des Pakets für die R, Python und Java-Erweiterungen sind in den SQL
 
 ## <a name="uninstall-previous-ctp"></a>Deinstallieren der vorherigen CTP-Version
 
-Die Liste der Pakete hat sich über die letzten CTP-Version Versionen, was zu weniger Pakete geändert werden. Es wird empfohlen, deinstallieren CTP 2.0 oder 2.1, um alle früheren Pakete zu entfernen, vor der Installation der CTP-Version 2.2 oder höher. Seite-an-Seite Installation mehrerer Versionen wird nicht unterstützt.
+Die Liste der Pakete hat sich über die letzten CTP-Version Versionen, was zu weniger Pakete geändert werden. Es wird empfohlen, deinstallieren CTP 2.x So entfernen Sie alle früheren Pakete vor der Installation von CTP 2.3. Seite-an-Seite Installation mehrerer Versionen wird nicht unterstützt.
 
 ### <a name="1-confirm-package-installation"></a>1. Paketinstallation bestätigen
 
@@ -61,7 +61,7 @@ Befehle zum Löschen von Paketen, die in der folgenden Tabelle angezeigt werden.
 > microsoft-r-open-mro-3.4.4
 > ```
 
-### <a name="3-proceed-with-ctp-22-install"></a>3. CTP 2.2-Installation nicht fortsetzen
+### <a name="3-proceed-with-ctp-23-install"></a>3. CTP 2.3-Installation nicht fortsetzen
 
 Auf der höchsten Paketebene, die mithilfe der Anweisungen in diesem Artikel für Ihr Betriebssystem installieren.
 
@@ -298,42 +298,50 @@ Zusätzliche Konfiguration ist in erster Linie durch die [Mssql-Conf-Tool](sql-s
 
 1. Fügen Sie der Mssql-Benutzerkonto zum Ausführen von SQL Server-Dienst hinzu. Dies ist erforderlich, wenn Sie das Setup nicht zuvor ausgeführt haben.
 
-  ```bash
-  sudo /opt/mssql/bin/mssql-conf setup
-  ```
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf setup
+   ```
 
 2. Akzeptieren Sie die Lizenzbedingungen für Open-Source-R und Python. Es gibt mehrere Möglichkeiten zur Verfügung. Wenn Sie zuvor, SQL Server-Lizenzierung akzeptiert und nun die R- oder Python-Erweiterungen hinzufügen, ist der folgende Befehl Ihre Zustimmung zu seinen Bedingungen:
 
-  ```bash
-  # Run as SUDO or root
-  # Use set + EULA 
-    sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
-  ```
+   ```bash
+   # Run as SUDO or root
+   # Use set + EULA 
+   sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
+   ```
 
-  Eine alternative Workflows ist, dass wenn Sie die SQL Server-Datenbank-Engine, die lizenzveREINBARUNG noch nicht akzeptiert haben, Setup die Mssql-Mlservices-Pakete und die Aufforderung zur Zustimmung zu EULAS erkennt beim `mssql-conf setup` ausgeführt wird. Weitere Informationen zu Endbenutzer-Lizenzvertrag-Parameter, finden Sie unter [SQL-Server konfigurieren, mit der Mssql-Conf-Tool](sql-server-linux-configure-mssql-conf.md#mlservices-eula).
+   Eine alternative Workflows ist, dass wenn Sie die SQL Server-Datenbank-Engine, die lizenzveREINBARUNG noch nicht akzeptiert haben, Setup die Mssql-Mlservices-Pakete und die Aufforderung zur Zustimmung zu EULAS erkennt beim `mssql-conf setup` ausgeführt wird. Weitere Informationen zu Endbenutzer-Lizenzvertrag-Parameter, finden Sie unter [SQL-Server konfigurieren, mit der Mssql-Conf-Tool](sql-server-linux-configure-mssql-conf.md#mlservices-eula).
 
-3. Für R feature Integration nur, legen die **MKL_CBWR** -Umgebungsvariable so fest, [sicherstellen von konsistenten Ausgabe](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) von Intel Math Kernel Library (MKL) Berechnungen.
+3. Aktivieren Sie ausgehender Netzwerkzugriff. Ausgehender Netzwerkzugriff ist standardmäßig deaktiviert. Um ausgehende Anforderungen zu aktivieren, legen Sie die "Outboundnetworkaccess" boolesche Eigenschaft, die mit dem Mssql-Conf-Tool. Weitere Informationen finden Sie unter [Konfigurieren von SQL Server unter Linux mit Mssql-Conf](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access).
 
-  + Bearbeiten oder erstellen Sie eine Datei namens **bash_profile** durch Hinzufügen der Zeile, in Ihrem Basisverzeichnis des Benutzers, `export MKL_CBWR="AUTO"` in die Datei.
+   ```bash
+   # Run as SUDO or root
+   # Enable outbound requests over the network
+   sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
+   ```
 
-  + Führen Sie die Datei durch Eingabe `source .bash_profile` in einer Bash-Eingabeaufforderung.
+4. Für R feature Integration nur, legen die **MKL_CBWR** -Umgebungsvariable so fest, [sicherstellen von konsistenten Ausgabe](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) von Intel Math Kernel Library (MKL) Berechnungen.
 
-4. Starten der SQL Server Launchpad-Dienst und die Datenbank-Engine-Instanz neu. 
+   + Bearbeiten oder erstellen Sie eine Datei namens **bash_profile** durch Hinzufügen der Zeile, in Ihrem Basisverzeichnis des Benutzers, `export MKL_CBWR="AUTO"` in die Datei.
 
-  ```bash
-  systemctl restart mssql-launchpadd
+   + Führen Sie die Datei durch Eingabe `source .bash_profile` in einer Bash-Eingabeaufforderung.
 
-  systemctl restart mssql-server.service
-  ```
+5. Neustart der SQL Server Launchpad-Dienst und der Datenbank-Engine-Instanz, um die aktualisierten Werte aus der INI-Datei zu lesen. Eine Neustart-Nachricht daran erinnert Sie jedes Mal, wenn eine Erweiterbarkeit Einstellung geändert wird.  
 
-5. Aktivieren Sie die Ausführung des externen Skripts mithilfe von Azure Data Studio oder einem anderen Tool wie SQL Server Management Studio (nur Windows), die Transact-SQL ausgeführt wird. 
+   ```bash
+   systemctl restart mssql-launchpadd
 
-  ```bash
-  EXEC sp_configure 'external scripts enabled', 1 
-  RECONFIGURE WITH OVERRIDE 
-  ```
+   systemctl restart mssql-server.service
+   ```
 
-6. Starten Sie den Launchpad-Dienst neu.
+6. Aktivieren Sie die Ausführung des externen Skripts mithilfe von Azure Data Studio oder einem anderen Tool wie SQL Server Management Studio (nur Windows), die Transact-SQL ausgeführt wird. 
+
+   ```bash
+   EXEC sp_configure 'external scripts enabled', 1 
+   RECONFIGURE WITH OVERRIDE 
+   ```
+
+7. Starten Sie den Launchpad-Dienst neu.
 
 ## <a name="verify-installation"></a>Überprüfen der Installation
 

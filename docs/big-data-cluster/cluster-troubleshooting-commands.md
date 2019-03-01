@@ -5,17 +5,17 @@ description: In diesem Artikel bieten nützliche Kubectl-Befehle für die Überw
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: f6556d271426157424bbc5f5dcbf1abbb4ffdc01
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 624c4ad4f53c0ad78cf5b972c976aadc57fd35d3
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242001"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017906"
 ---
 # <a name="kubectl-commands-for-monitoring-and-troubleshooting-sql-server-big-data-clusters"></a>"Kubectl"-Befehle zur Überwachung und Problembehandlung von SQL Server-big Data-Cluster
 
@@ -39,7 +39,7 @@ kubectl get pods --all-namespaces
 
 ### <a name="show-status-of-all-pods-in-the-sql-server-big-data-cluster"></a>Status alle Pods in der SQL Server-big Data-Cluster anzeigen
 
-Verwenden der `-n` Parameter, um einen bestimmten Namespace anzugeben. Beachten Sie, dass es sich bei den Namen des Clusters im angegebenen SQL Server-Pods für big Data-Cluster, in einem neuen Namespace, die zum Zeitpunkt der bootstrap erstellt erstellt werden anhand der `mssqlctl create cluster <cluster_name>` Befehl.
+Verwenden der `-n` Parameter, um einen bestimmten Namespace anzugeben. Beachten Sie, dass es sich bei den Namen des Clusters im angegebenen SQL Server-Pods für big Data-Cluster, in einem neuen Namespace, die zum Zeitpunkt der bootstrap erstellt erstellt werden anhand der `mssqlctl cluster create --name <cluster_name>` Befehl.
 
 ```bash
 kubectl get pods -n <namespace_name>
@@ -67,7 +67,7 @@ kubectl describe pod  mssql-data-pool-master-0 -n big_data_cluster
 
 ## <a name="get-status-of-services"></a>Abrufen des Status von Diensten
 
-Führen Sie den folgenden Befehl zum Abrufen von Details für die big Data-Clusterdienste. Zu diesen Details zählen, deren Typ aus, und die IP-Adressen, die mit der jeweiligen Dienste und Ports verknüpft ist. Beachten Sie, dass SQL Server-big Data-Cluster-Dienste, in einem neuen Namespace, die zum Zeitpunkt bootstrap basierend auf den Namen des Clusters im angegebenen erstellt erstellt werden die `mssqlctl create cluster <cluster_name>` Befehl.
+Führen Sie den folgenden Befehl zum Abrufen von Details für die big Data-Clusterdienste. Zu diesen Details zählen, deren Typ aus, und die IP-Adressen, die mit der jeweiligen Dienste und Ports verknüpft ist. Beachten Sie, dass SQL Server-big Data-Cluster-Dienste, in einem neuen Namespace, die zum Zeitpunkt bootstrap basierend auf den Namen des Clusters im angegebenen erstellt erstellt werden die `mssqlctl cluster create --name <cluster_name>` Befehl.
 
 ```bash
 kubectl get svc -n <namespace_name>
