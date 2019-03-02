@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 28048a7d29089511eb0037bac47c3efdd543a6f2
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: d3567b3bc82a97c831abac252bebd0c523ed3fac
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017876"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227113"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Schnellstart: Bereitstellen von SQL Server-big Data-Cluster in Azure Kubernetes Service (AKS)
 
@@ -85,7 +85,7 @@ Verwenden Sie die folgenden Schritte aus, um das Ausführen des Bereitstellungss
    | **Benutzerkonten** | Benutzername für den Controllerbenutzer (Standard: **Admin**). |
 
    > [!IMPORTANT]
-   > Der Standardwert **Standard_L4s** Größe für den Computer möglicherweise nicht verfügbar in jeder Azure-Region. Wenn Sie eine andere computergröße auswählen, stellen Sie sicher, dass die Gesamtzahl von Datenträgern, die auf die Knoten im Cluster angefügt werden, kann größer als oder gleich 21. Jeder Anspruch persistentes Volume im Cluster erfordert einen angeschlossenen Datenträger. Big Data-Cluster erfordert derzeit 21 persistentes Volume Ansprüche. Z. B. die [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) VM-Größe unterstützt 16 angefügte Datenträgern, damit die drei Knoten bedeutet, dass 48 Datenträger angefügt werden können.
+   > Der Standardwert **Standard_L4s** Größe für den Computer möglicherweise nicht verfügbar in jeder Azure-Region. Wenn Sie eine andere computergröße auswählen, stellen Sie sicher, dass die Gesamtzahl von Datenträgern, die auf die Knoten im Cluster angefügt werden, kann größer als oder gleich 24. Jeder Anspruch persistentes Volume im Cluster erfordert einen angeschlossenen Datenträger. Big Data-Cluster erfordert derzeit 24 persistentes Volume Ansprüche. Z. B. die [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) VM-Größe unterstützt 16 angefügte Datenträgern, damit die drei Knoten bedeutet, dass 48 Datenträger angefügt werden können.
 
    > [!NOTE]
    > Die `sa` Konto ist ein Systemadministrator für die master SQL Server-Instanz, die während des Setups erstellt wird. Nach dem Erstellen der Bereitstellung der `MSSQL_SA_PASSWORD` Umgebungsvariable ist mit sichtbaren `echo $MSSQL_SA_PASSWORD` im Container Masterinstanz. Aus Sicherheitsgründen ändern Ihre `sa` Kennwort für die master-Instanz nach der Bereitstellung. Weitere Informationen finden Sie unter [Ändern des Systemadministratorkennworts](../linux/quickstart-install-connect-docker.md#sapassword).
@@ -160,7 +160,7 @@ kubectl get svc endpoint-service-proxy -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> In CTP 2.3 von sehen eine sicherheitswarnung Sie beim Zugreifen auf die Webseite, da es sich bei big Data-Cluster derzeit automatisch generierte SSL-Zertifikate verwendet. In CTP 2.3 wird es darüber hinaus nicht den Status der SQL Server-Masterinstanz angezeigt.
+> In CTP 2.3 von sehen eine sicherheitswarnung Sie beim Zugreifen auf die Webseite, da es sich bei big Data-Cluster derzeit automatisch generierte SSL-Zertifikate verwendet.
 
 ## <a name="connect-to-the-cluster"></a>Verbinden mit dem cluster
 

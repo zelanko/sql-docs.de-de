@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a6f40d4f113942fe774665358d8f1202ba8c4632
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: e7de0c9dafe7c5c8f8a4b2a2dc709105218fb2fc
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017946"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227212"
 ---
 # <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>Anmerkungen zu dieser Version für SQL Server-2019 big Data-Cluster
 
@@ -41,6 +41,7 @@ Die folgenden Abschnitte beschreiben die neuen Features und bekannten Probleme f
 - [VS Code-Erweiterung zum Bereitstellen von Anwendungen für SQL Server-big Data-Cluster](app-deployment-extension.md).
 - Neuer Parameter, die Reihenfolge für die **Mssqlctl** Tool.
 - [Verwenden Sie Sparklyr in SQL Server 2019 Big Data-Cluster](sparklyr-from-RStudio.md).
+- Binden Sie externe HDFS-kompatiblen Speicher in big Data-Cluster mit [HDFS tiering](hdfs-tiering.md).
 - Neue einheitliche Verbindungsschnittstelle für die [master SQL Server-Instanz und das HDFS/Spark-Gateway](connect-to-big-data-cluster.md).
 - Löschen eines Clusters mit **Mssqlctl Cluster löschen** jetzt löscht nur die Objekte im Namespace, die Teil der big Data-Cluster waren behält jedoch den Namespace. Zuvor gelöscht mit diesem Befehl den gesamten Namespace.
 - Endpunktnamen dürfen wurden geändert und zusammengefasst, die in dieser Version:
@@ -74,14 +75,6 @@ Die folgenden Abschnitte enthalten bekannte Probleme für big Data-Cluster in CT
 
 - Wenn es sich bei eine Clusterbereitstellung mit big Data ein Fehler auftritt, wird der zugeordnete Namespace nicht entfernt werden. Dies kann in einem verwaiste-Namespace im Cluster führen. Eine problemumgehung besteht darin, den Namespace manuell zu löschen, bevor die Bereitstellung eines Clusters mit dem gleichen Namen.
 
-#### <a name="cluster-administration-portal"></a>Cluster-Verwaltungsportal
-
-Das Verwaltungsportal für den Cluster wird den Endpunkt für die master-SQL Server-Instanz nicht angezeigt. Um die IP-Adresse und den Port für die master-Instanz ermitteln möchten, verwenden Sie die folgenden **"kubectl"** Befehl:
-
-```
-kubectl get svc endpoint-master-pool -n <your-cluster-name>
-```
-
 #### <a name="external-tables"></a>Externe Tabellen
 
 - Es ist möglich, eine externen Pool Datentabelle für eine Tabelle zu erstellen, die Spaltentypen nicht unterstützt wird. Wenn Sie auf die externe Tabelle Abfragen, erhalten Sie eine Meldung ähnlich der folgenden:
@@ -91,6 +84,8 @@ kubectl get svc endpoint-master-pool -n <your-cluster-name>
 - Wenn Sie eine externe Speicher-Pool-Tabelle Abfragen, können Sie eine Fehlermeldung, wenn gleichzeitig die zugrunde liegende Datei in HDFS kopiert wird.
 
    `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+- Bei der Erstellung einer externen Tabelle, Oracle, die Zeichen-Datentypen zu verwenden, interpretiert der Studio für Azure Data Virtualization-Assistent diese Spalten als VARCHAR in der Definition der externen Tabelle an. Dies bewirkt einen Fehler in der DDL für externe Tabellen. Ändern Sie entweder das Oracle-Schema, um verwenden Sie den Typ NVARCHAR2 oder EXTERNAL TABLE-Anweisungen manuell erstellen, und geben NVARCHAR, statt mit dem Assistenten.
 
 #### <a name="spark-and-notebooks"></a>Spark und notebooks
 
