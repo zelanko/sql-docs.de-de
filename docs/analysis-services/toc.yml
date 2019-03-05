@@ -1,6 +1,6 @@
 items:
-- name: Inhaltsverzeichnis zum SQL Server-Stamm +
-  href: /sql/sql-server/sql-server-technical-documentation
+- name: Inhaltsverzeichnis zum SQL Server-Stamm ++
+  href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
 - name: Grundlegendes zu SQL Server Analysis Services
   href: ../analysis-services/analysis-services.md
 - name: Übersicht
@@ -34,6 +34,8 @@ items:
       href: ../analysis-services/globalization-tips-and-best-practices-analysis-services.md
 - name: Lernprogramme
   items:
+  - name: Analysis Services-Lernprogramme – Übersicht
+    href: ../analysis-services/analysis-services-tutorials-ssas.md
   - name: Tabellarische Modellierung (Kompatibilitätsgrad 1400)
     href: ../analysis-services/tutorial-tabular-1400/as-adventure-works-tutorial.md
     items:
@@ -1328,6 +1330,8 @@ items:
     items:
     - name: Übersicht über die SQL Server Analysis Services-Serververwaltung
       href: ../analysis-services/instances/analysis-services-instance-management.md
+    - name: Hohe Verfügbarkeit und Skalierbarkeit
+      href: ../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md
     - name: Servereigenschaften
       items:
       - name: Übersicht über Servereigenschaften
@@ -1381,6 +1385,16 @@ items:
       href: ../analysis-services/instances/clear-the-analysis-services-caches.md
     - name: Database Consistency Checker (DBCC)
       href: ../analysis-services/instances/database-consistency-checker-dbcc-for-analysis-services.md
+    - name: Analysis Services-Skriptprojekte in SSMS
+      href: ../analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio.md
+    - name: Erstellen von Analysis Services-Skripts in SSMS
+      href: ../analysis-services/instances/create-analysis-services-scripts-in-management-studio.md
+    - name: Planen von administrativen Aufgaben mit SQL Server-Agent
+      href: ../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md
+    - name: Verwenden von Analysis Services-Vorlagen in SSMS
+      href: ../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md
+    - name: Automatisieren von Analysis Services-Verwaltungsaufgaben mit SSIS
+      href: ../analysis-services/instances/automate-analysis-services-administrative-tasks-with-ssis.md
   - name: Verbinden
     items:
     - name: Herstellen einer Verbindung mit dem Server (Übersicht)
@@ -1421,10 +1435,15 @@ items:
       items:
       - name: Programmieren von tabellarischen Modellen für Kompatibilitätsgrad 1103 und niedriger
         href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md
-      - name: Konzeptionelle Schemadefinitionssprache (Conceptual Schema Definition Language, CSDL) +
-        href: /bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
-      - name: IMDEmbeddedData-Schnittstelle
-        href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/imdembeddeddata-interface.md
+      - name: CSDL-Anmerkungen für Business Intelligence (CSDLBI)
+        href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md
+        items:
+        - name: CSDLBI-Attribute für Berichtsentwurf
+          href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdlbi-attributes-for-report-design.md
+        - name: CSDLBI-Konzepte
+          href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdlbi-concepts.md
+        - name: Referenz zur konzeptionellen Schemadefinitionssprache (Conceptual Schema Definition Language, CSDL) +
+          href: /bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
       - name: Darstellung
         items:
         - name: Verbindungsdarstellung (tabellarisch)
@@ -1451,58 +1470,70 @@ items:
           href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-representation-tabular.md
         - name: Grundlegendes zum tabellarischen Objektmodell auf Ebenen 1050 bis 1103
           href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md
+      - name: IMDEmbeddedData-Schnittstelle
+        href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/imdembeddeddata-interface.md
   - name: Mehrdimensionale Modelle
     items:
     - name: Mehrdimensionale Modellprogrammierung
       href: ../analysis-services/multidimensional-models/multidimensional-model-programming.md
     - name: Analysis Management Objects (AMO) +
       href: /bi-reference/amo/developing-with-analysis-management-objects-amo
-    - name: ASSL-Objekte und -Objekteigenschaften
-      href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
-    - name: Sichern, Wiederherstellen und Synchronisieren von Datenbanken (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md
-    - name: Abbrechen von Befehlen (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/canceling-commands-xmla.md
-    - name: Erstellen und Ändern von Objekten (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/creating-and-altering-objects-xmla.md
-    - name: Definieren und Identifizieren von Objekten (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md
-    - name: Entwerfen von Aggregationen (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md
-    - name: Entwickeln mit XMLA in Analysis Services
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md
-    - name: Behandeln von Fehlern und Warnungen (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/handling-errors-and-warnings-xmla.md
-    - name: Einfügen, Aktualisieren und Löschen von Elementen (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md
-    - name: Sperren und Entsperren von Datenbanken (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/locking-and-unlocking-databases-xmla.md
-    - name: Verwalten von Caches (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-caches-xmla.md
-    - name: Verwalten von Verbindungen und Sitzungen (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md
-    - name: Verwalten von Transaktionen (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-transactions-xmla.md
-    - name: Zusammenführen von Partitionen (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md
-    - name: Überwachen von Ablaufverfolgungen (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/monitoring-traces-xmla.md
-    - name: Ausführen von Batchvorgängen (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md
-    - name: Verarbeiten von Objekten (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md
-    - name: Aktualisieren von Zellen (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md
-    - name: XML-Konventionen in ASSL
-      href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-xml-conventions.md
     - name: Entwickeln mit Analysis Services Scripting Language (ASSL)
       href: ../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md
+      items:
+      - name: Referenz zur Analysis Services Scripting Language (ASSL für XMLA) +
+        href: /bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
+      - name: ASSL-Objekte und -Objekteigenschaften
+        href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
+      - name: Sichern, Wiederherstellen und Synchronisieren von Datenbanken (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md
+      - name: Abbrechen von Befehlen (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/canceling-commands-xmla.md
+      - name: Erstellen und Ändern von Objekten (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/creating-and-altering-objects-xmla.md
+      - name: Definieren und Identifizieren von Objekten (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md
+      - name: Entwerfen von Aggregationen (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md
+      - name: Entwickeln mit XMLA in Analysis Services
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md
+      - name: Behandeln von Fehlern und Warnungen (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/handling-errors-and-warnings-xmla.md
+      - name: Einfügen, Aktualisieren und Löschen von Elementen (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md
+      - name: Sperren und Entsperren von Datenbanken (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/locking-and-unlocking-databases-xmla.md
+      - name: Verwalten von Caches (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-caches-xmla.md
+      - name: Verwalten von Verbindungen und Sitzungen (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md
+      - name: Verwalten von Transaktionen (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-transactions-xmla.md
+      - name: Zusammenführen von Partitionen (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md
+      - name: Überwachen von Ablaufverfolgungen (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/monitoring-traces-xmla.md
+      - name: Ausführen von Batchvorgängen (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md
+      - name: Verarbeiten von Objekten (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md
+      - name: Aktualisieren von Zellen (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md
+      - name: XML-Konventionen in ASSL
+        href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-xml-conventions.md
     - name: XML for Analysis (XMLA) +
       href: /bi-reference/xmla/xml-for-analysis-xmla-reference
-    - name: ADOMD.NET +
-      href: /bi-reference/adomd/developing-with-adomd-net
-    - name: Analysis Services Scripting Language (ASSL für XMLA) +
-      href: /bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
+    - name: ADOMD.NET-Serverprogrammierung
+      href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md
+      items:
+      - name: ADOMD.NET-Serverfunktionalität
+        href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-functionality.md
+      - name: ADOMD.NET-Serverobjektarchitektur
+        href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture.md
+      - name: Benutzerdefinierte Funktionen und gespeicherte Prozeduren
+        href: ../analysis-services/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md
+      - name: ADOMD.NET – Referenz +
+        href: /bi-reference/adomd/developing-with-adomd-net
     - name: Datenbankobjekte (Analysis Services - Mehrdimensionale Daten)
       href: ../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md
     - name: Attributbeziehungen
@@ -2453,9 +2484,9 @@ items:
     href: /bi-reference/schema-rowsets/analysis-services-schema-rowsets
   - name: Ablaufverfolgungsereignisse +
     href: /bi-reference/trace-events/analysis-services-trace-events
-ms.openlocfilehash: a9359b578b321f76e62483f2ed08887dc73d18c8
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+ms.openlocfilehash: 9d0f4813ece4aeadb0e33733b8fed21d096650c6
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676218"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852975"
