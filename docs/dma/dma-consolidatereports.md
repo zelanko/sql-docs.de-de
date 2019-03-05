@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: adfb1663d9ec1b86abf38c46c0056622105b80d5
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: 252e162b78f93b156adcea045bc869e618176331
+ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56956031"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305358"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Ein Unternehmen zu bewerten und Konsolidieren von assessmentberichten mit DMA
 
@@ -71,6 +71,9 @@ Diese Inventur kann eine von zwei Formen aufweisen:
 - SQL Server-Tabelle
 
 ### <a name="if-using-a-csv-file"></a>Wenn Sie eine CSV-Datei verwenden.
+> [!IMPORTANT]
+> Stellen Sie sicher, dass die Inventory-Datei als durch Trennzeichen getrennte Datei (CSV) gespeichert wird.
+
 Verwendung von Csv-Datei zum Importieren der Daten sicherzustellen, dass nur zwei Spalten mit Daten per Push – **Instanzname** und **Datenbanknamen**, und dass die Spalten keine Kopfzeilen enthalten.
  
  ![Inhalt der CSV-Datei](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
@@ -153,10 +156,7 @@ Sie können auch das LoadWarehouse-Skript verwenden, um die grundlegenden TSQL-A
 
 1. Öffnen Sie die DMA-Berichte Power BI-Vorlage in Power BI Desktop.
 2. Geben Sie die Serverdetails, die auf Ihre **DMAWarehouse** Datenbank, und wählen Sie dann **Load**.
-
-    > [!IMPORTANT]
-    > Drücken Sie EINGABETASTE, um akzeptiert die Werte nicht.
-
+   
       ![Geladene DMA Berichte Power BI-Vorlage](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
 
    Nachdem der Bericht die Daten aktualisiert hat die **DMAWarehouse** Datenbank daraufhin mit einem Bericht, der dem folgenden ähnelt.

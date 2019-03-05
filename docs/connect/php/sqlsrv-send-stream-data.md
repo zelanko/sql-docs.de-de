@@ -1,7 +1,7 @@
 ---
 title: Sqlsrv_send_stream_data | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 02/28/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 826c2d45-694f-42b8-b12b-cd4523a31883
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c1ce0db099046fb243151a7977823ab0fcf458ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99bdc51c54850927aa51b32318ff2b859ead49e3
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790608"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227322"
 ---
 # <a name="sqlsrvsendstreamdata"></a>sqlsrv_send_stream_data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +47,7 @@ sqlsrv_send_stream_data( resource $stmt)
 Boolescher Wert: **true** wenn weitere Daten gesendet werden sollen. Andernfalls lautet der Wert **false**.  
   
 ## <a name="example"></a>Beispiel  
-Im folgenden Beispiel wird eine Produktprüfung als Stream geöffnet und an den Server gesendet. Das Standardverhalten, alle Streamdaten zum Zeitpunkt der Ausführung zu senden, ist deaktiviert. Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
+Im folgenden Beispiel wird eine Produktprüfung als Stream geöffnet und an den Server gesendet. Das Standardverhalten, alle Streamdaten zum Zeitpunkt der Ausführung zu senden, ist deaktiviert. Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks-Datenbank](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
 ```  
 <?php  
@@ -56,26 +56,26 @@ specify the AdventureWorks database as the database in use. */
 $serverName = "(local)";  
 $connectionInfo = array( "Database"=>"AdventureWorks");  
 $conn = sqlsrv_connect( $serverName, $connectionInfo);  
-if( $conn === false )  
-{  
+if ($conn === false) {
      echo "Could not connect.\n";  
      die( print_r( sqlsrv_errors(), true));  
 }  
   
 /* Define the query. */  
 $tsql = "UPDATE Production.ProductReview   
-         SET Comments = ( ?)   
+         SET Comments = (?)   
          WHERE ProductReviewID = 3";  
   
-/* Open parameter data as a stream and put it in the $params array. */  
-$comment = fopen( "data://text/plain,[ Insert lengthy comment.]", "r");  
-$params = array( &$comment);  
+/* Open parameter data as a stream and put it in the $params array. */
+$data = 'Insert any lengthy comment here.';
+$comment = fopen('data:text/plain,'.urlencode($data), 'r');
+$params = array(&$comment);
   
 /* Prepare the statement. Use the $options array to turn off the  
 default behavior, which is to send all stream data at the time of query  
 execution. */  
 $options = array("SendStreamParamsAtExec"=>0);  
-$stmt = sqlsrv_prepare( $conn, $tsql, $params, $options);  
+$stmt = sqlsrv_prepare($conn, $tsql, $params, $options);
   
 /* Execute the statement. */  
 sqlsrv_execute( $stmt);  
@@ -83,8 +83,7 @@ sqlsrv_execute( $stmt);
 /* Send up to 8K of parameter data to the server with each call to  
 sqlsrv_send_stream_data. Count the calls. */  
 $i = 1;  
-while( sqlsrv_send_stream_data( $stmt))   
-{  
+while (sqlsrv_send_stream_data($stmt)) {
       echo "$i call(s) made.\n";  
       $i++;  
 }  
@@ -95,7 +94,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [Aktualisieren von Daten &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  

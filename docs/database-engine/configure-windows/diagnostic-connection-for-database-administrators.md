@@ -1,7 +1,7 @@
 ---
 title: Diagnoseverbindung für Datenbankadministratoren | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 10/16/2015
+ms.date: 02/27/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -21,15 +21,15 @@ ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c51655426d892c4d6e233bc72b7388d200bbce8a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 7cdcffb40c1c0e15a1be56a4484edade6b5f1463
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589395"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955981"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Diagnoseverbindung für Datenbankadministratoren
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt eine spezielle Diagnoseverbindung für Administratoren bereit, wenn Standardverbindungen zum Server nicht möglich sind. Mit dieser Diagnoseverbindung kann ein Administrator auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugreifen, um Diagnoseabfragen auszuführen und Probleme zu behandeln, auch wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf Anforderungen von Standardverbindungen nicht antwortet.  
   
  Diese dedizierte Administratorverbindung unterstützt die Verschlüsselung und andere Sicherheitsfunktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die DAC lässt den Wechsel des Benutzerkontexts ausschließlich in den eines anderen Administrators zu.  

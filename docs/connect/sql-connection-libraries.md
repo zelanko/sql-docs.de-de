@@ -8,18 +8,18 @@ ms.custom: ''
 ms.topic: article
 ms.date: 06/18/2018
 ms.author: genemi
-ms.openlocfilehash: 4286a9a1fcc2eff3becd483d658b371bb6452032
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 7f759dbe9022cff557461d900a35b3ccc91d2c4b
+ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600370"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57007573"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Verbindungs-Modulen für Microsoft SQL-Datenbanken
 
 Dieser Artikel enthält Links zum Herunterladen der Verbindung Modulen oder *Treiber* , die Ihre Clientprogramme verwenden können, für die Interaktion mit [Microsoft SQL Server](../relational-databases/database-features.md), und klicken Sie mit seinem zwilling in der Cloud [Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/). Treiber stehen für eine Vielzahl von Programmiersprachen, die unter den folgenden Betriebssystemen unterstützt:
 
-- Linux (Ubuntu)
+- Linux
 - macOS
 - Windows
 

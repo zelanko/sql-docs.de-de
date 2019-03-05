@@ -18,29 +18,29 @@ ms.assetid: e752e97f-1619-437d-b962-48c188b4e94c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b5da9f9b70489a87d93521f85dbdb6b708f79066
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ece3c57981f52b1359f40d59487c464b6c5a230
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679448"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852855"
 ---
 # <a name="hasm-geography-data-type"></a>HasM (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Gibt 1 (true) zurück, wenn ein räumliches Objekt mindestens einen M-Wert enthält. Andernfalls wird 0 (false) zurückgegeben.  
+Gibt 1 (true) zurück, wenn ein räumliches Objekt mindestens einen M-Wert enthält. Andernfalls wird 0 (false) zurückgegeben.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```sql  
   
 .HasM  
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **bit**  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **bit**  
   
- CLR-Rückgabetyp: **Boolean**  
+CLR-Rückgabetyp: **Boolean**  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -52,7 +52,7 @@ SELECT @p.HasM
 --Returns: 1 (true)  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erweiterte Methoden für geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [M &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/m-geography-data-type.md)  
   

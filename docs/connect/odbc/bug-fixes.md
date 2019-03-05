@@ -13,16 +13,22 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 3c0b2b86bee4cccd9e8074529362b7e9c8ff6b20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9dba11c0130dc3b969a9fcec46b631abd7d62fe8
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725768"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56956051"
 ---
 # <a name="list-of-bugs-fixed"></a>Liste der behobenen Fehler
 
 Diese Seite enthält eine Auflistung der behobenen Probleme in jeder Version, beginnend mit [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd"></a>Fehlerkorrekturen in der [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC-Treiber 17.3 für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Feste TCP Send Notification-Ereignis Handle Speicherverlust
+- Feste Neudefinition-Ausgabe des Enum-_SQL_FILESTREAM_DESIRED_ACCESS in "msodbcsql.h"-Header-Datei
+- Feste fehlende ACCESS_TOKEN und die Authentifizierung bezogene-Definition in der Headerdatei "msodbcsql.h" für Linux
 
 ### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd"></a>Fehlerkorrekturen in der [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC-Treiber 17.2 für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

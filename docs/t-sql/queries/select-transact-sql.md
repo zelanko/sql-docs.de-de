@@ -22,16 +22,16 @@ helpviewer_keywords:
 - row retrieval [SQL Server]
 - queries [SQL Server], results
 ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6eff1de488818894b39796430e23804066f266f7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6b92d260901efdec91add2d785774bfd826c8b46
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417361"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334687"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "52417361"
   
  Die Operatoren UNION, EXCEPT und INTERSECT können zwischen Abfragen verwendet werden, um deren Ergebnisse in einem Resultset zu kombinieren oder zu vergleichen.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -117,7 +117,7 @@ SELECT <select_criteria>
   
  SELECT-Anweisungen sind in benutzerdefinierten Funktionen nur dann zulässig, wenn die Auswahllisten dieser Anweisungen Ausdrücke enthalten, die lokalen Variablen der Funktionen Werte zuweisen.  
   
- Ein mit der OPENDATASOURCE-Funktion als Servername konstruierter vierteiliger Name kann als Tabellenquelle überall dort verwendet werden, wo ein Tabellenname in einer SELECT-Anweisung vorkommen kann. Ein vierteiliger Name kann für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] nicht angegeben werden.  
+ Ein mit der OPENDATASOURCE-Funktion als Servername konstruierter vierteiliger Name kann als Tabellenquelle überall dort verwendet werden, wo ein Tabellenname in einer SELECT-Anweisung vorkommen kann. Für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] kann kein vierteiliger Name angegeben werden.  
   
  Für SELECT-Anweisungen, die Remotetabellen einbeziehen, gelten einige Syntaxeinschränkungen.  
   
@@ -264,7 +264,7 @@ HAVING OrderDateKey > 20010000
 ORDER BY OrderDateKey;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SELECT-Beispiele &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)  
  [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)
   

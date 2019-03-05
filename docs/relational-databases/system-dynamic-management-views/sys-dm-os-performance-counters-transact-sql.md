@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 002003864c61dae1b55f7fdfab10ff18ec97f68f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: dcfe7869767bc9178f9241c3ffa82d166685d7ac
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669679"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334707"
 ---
 # <a name="sysdmosperformancecounters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "51669679"
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**object_name**|**NCHAR(128)**|Kategorie, zu der dieser Leistungsindikator gehört.|  
-|**counter_name**|**NCHAR(128)**|Name des Leistungsindikators. Um weitere Informationen über einen Indikator zu erhalten, die dies ist der Name des Themas, wählen Sie aus der Liste der Leistungsindikatoren in [verwenden SQL Server-Objekten](../../relational-databases/performance-monitor/use-sql-server-objects.md). |  
-|**instance_name**|**NCHAR(128)**|Name der spezifischen Instanz des Leistungsindikators. Enthält oft den Datenbanknamen.|  
-|**cntr_value**|**bigint**|Aktueller Wert des Leistungsindikators.<br /><br /> **Hinweis:** für Leistungsindikatoren pro Sekunde, ist dieser Wert kumulativ. Der Ratenwert muss durch Stichproben des Werts zu diskreten Zeitintervallen berechnet werden. Der Unterschied zwischen zwei aufeinander folgenden Werten ist gleich der Rate für das verwendete Zeitintervall.|  
-|**cntr_type**|**int**|Typ des Leistungsindikators, wie von der Windows-Leistungsarchitektur definiert. Finden Sie unter [WMI Performance Counter Types](https://msdn2.microsoft.com/library/aa394569.aspx) auf MSDN oder der Windows Server-Dokumentation für Weitere Informationen zu Leistungsindikatortypen.|  
+|**object_name**|**nchar(128)**|Kategorie, zu der dieser Leistungsindikator gehört.|  
+|**counter_name**|**nchar(128)**|Name des Leistungsindikators. Um weitere Informationen über einen Indikator zu erhalten, die dies ist der Name des Themas, wählen Sie aus der Liste der Leistungsindikatoren in [verwenden SQL Server-Objekten](../../relational-databases/performance-monitor/use-sql-server-objects.md). |  
+|**instance_name**|**nchar(128)**|Name der spezifischen Instanz des Leistungsindikators. Enthält oft den Datenbanknamen.|  
+|**cntr_value**|**bigint**|Aktueller Wert des Leistungsindikators.<br /><br /> **Hinweis**: Für Leistungsindikatoren, die Werte pro Sekunde angeben, ist dieser Wert kumulativ. Der Ratenwert muss durch Stichproben des Werts zu diskreten Zeitintervallen berechnet werden. Der Unterschied zwischen zwei aufeinander folgenden Werten ist gleich der Rate für das verwendete Zeitintervall.|  
+|**cntr_type**|**int**|Typ des Leistungsindikators, wie von der Windows-Leistungsarchitektur definiert. Finden Sie unter [WMI Performance Counter Types](https://docs.microsoft.com/windows/desktop/WmiSdk/wmi-performance-counter-types) auf-Dokumentation oder in der Windows Server-Dokumentation für Weitere Informationen zu Leistungsindikatortypen.|  
 |**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
   
 ## <a name="remarks"></a>Hinweise  

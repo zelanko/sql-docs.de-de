@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 1ba94395acad1aec8717c570cc4b6e30ed7a12a4
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: dd6037cbc40c9cf422c38827d5c96115db33db73
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662854"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56956061"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Verwenden von Always Encrypted mit ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -538,7 +538,7 @@ Während der ODBC-Treiber die Verwendung von kann [asynchrone Vorgänge](../../r
 Bevor ODBC Driver 17 for SQL Server, verschlüsselt werden nicht Zeichen- und Binärspalten in Teilen mit SQLGetData abgerufen. Nur ein Aufruf von SQLGetData kann vorgenommen werden, mit einem Puffer von ausreichender Größe die gesamte Spalte Daten enthalten.
 
 ### <a name="send-data-in-parts-with-sqlputdata"></a>Senden von Daten in Webparts mit SQLPutData
-Daten einfügen oder Vergleich können nicht in Teile mit SQLPutData gesendet werden. Nur einen Aufruf von SQLPutData kann vorgenommen werden, mit einem Puffer, der die gesamten Daten enthält. Verwenden Sie zum Einfügen von long-Daten in verschlüsselte Spalten ein, die API für Massenkopieren, im nächsten Abschnitt beschrieben, mit einer Eingabedaten-Datei ein.
+Bevor Sie ODBC-Treiber 17.3 für SQL Server können Daten für die Einfügung oder Vergleich in Teilen mit SQLPutData gesendet werden. Nur einen Aufruf von SQLPutData kann vorgenommen werden, mit einem Puffer, der die gesamten Daten enthält. Verwenden Sie zum Einfügen von long-Daten in verschlüsselte Spalten ein, die API für Massenkopieren, im nächsten Abschnitt beschrieben, mit einer Eingabedaten-Datei ein.
 
 ### <a name="encrypted-money-and-smallmoney"></a>Verschlüsselte Money und smallmoney
 Verschlüsselt **Geld** oder **Smallmoney** Spalten können nicht durch Parameter angewendet werden, da es ist nicht spezifisch ODBC-Datentyp der Zuordnungen, die diese Typen, was zu Fehlern Operanden Typ in Konflikt stehen.

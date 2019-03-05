@@ -5,17 +5,17 @@ description: Dieser Artikel beschreibt die neuesten Updates und bekannte Problem
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: e7de0c9dafe7c5c8f8a4b2a2dc709105218fb2fc
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: dced44806927f7b41957c2eb8374688e8be88f1f
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227212"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334747"
 ---
 # <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>Anmerkungen zu dieser Version für SQL Server-2019 big Data-Cluster
 
@@ -39,7 +39,7 @@ Die folgenden Abschnitte beschreiben die neuen Features und bekannten Probleme f
 - [Übermitteln von Spark-Aufträgen in SQL Server-Clustern in Big Data in IntelliJ](spark-submit-job-intellij-tool-plugin.md).
 - [Allgemeine CLI für die Bereitstellung und -Cluster-anwendungsverwaltung](big-data-cluster-create-apps.md).
 - [VS Code-Erweiterung zum Bereitstellen von Anwendungen für SQL Server-big Data-Cluster](app-deployment-extension.md).
-- Neuer Parameter, die Reihenfolge für die **Mssqlctl** Tool.
+- [Änderungen an der **Mssqlctl** tool zur Verwendung des Befehls](#mssqlctlctp23).
 - [Verwenden Sie Sparklyr in SQL Server 2019 Big Data-Cluster](sparklyr-from-RStudio.md).
 - Binden Sie externe HDFS-kompatiblen Speicher in big Data-Cluster mit [HDFS tiering](hdfs-tiering.md).
 - Neue einheitliche Verbindungsschnittstelle für die [master SQL Server-Instanz und das HDFS/Spark-Gateway](connect-to-big-data-cluster.md).
@@ -74,6 +74,18 @@ Die folgenden Abschnitte enthalten bekannte Probleme für big Data-Cluster in CT
    `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
 
 - Wenn es sich bei eine Clusterbereitstellung mit big Data ein Fehler auftritt, wird der zugeordnete Namespace nicht entfernt werden. Dies kann in einem verwaiste-Namespace im Cluster führen. Eine problemumgehung besteht darin, den Namespace manuell zu löschen, bevor die Bereitstellung eines Clusters mit dem gleichen Namen.
+
+#### <a id="mssqlctlctp23"></a> mssqlctl
+
+- Die **Mssqlctl** Tool geändert werden, von einem Verb-Nomen-Befehl, der Sortierung auf eine Bestellung Substantiv-Verb. Z. B. `mssqlctl create cluster` ist jetzt `mssqlctl cluster create`.
+
+- Die `--name` -Parameter ist jetzt erforderlich, beim Erstellen eines Clusters mit `mssqlctl cluster create`.
+
+   ```bash
+   mssqlctl cluster create --name <cluster_name>
+   ```
+
+- Wichtige Informationen zum Upgrade auf die neueste Version von big Data-Cluster und **Mssqlctl**, finden Sie unter [ein Upgrade auf ein neues Release](deployment-guidance.md#upgrade).
 
 #### <a name="external-tables"></a>Externe Tabellen
 
