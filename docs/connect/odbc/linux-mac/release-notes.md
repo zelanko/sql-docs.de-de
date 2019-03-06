@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 12f45cd1014a312eec7854685d8c7fe2e64b9714
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
-ms.translationtype: HT
+ms.openlocfilehash: d67b8bba1449cce473baa5313762c4933a72e250
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662754"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955861"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Versionshinweise zu Microsoft ODBC Driver for SQL Server unter Linux und macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "56662754"
 
 **Funktionen, die hinzugefügt**:
 
-- Azure Active Directory verwalteten Dienstidentität (System und Benutzer zugewiesen) den Authentifizierungsmodus
-- AE-Eingabeparameter streaming
-- XA DTC
+- Azure Active Directory verwalteten Dienstidentität (System und Benutzer zugewiesene)-Authentifizierungsmodus, Weitere Informationen finden Sie unter [mithilfe von Azure Active Directory mit dem ODBC-Treiber](../using-azure-active-directory.md)
+- Möglichkeit zum Streamen von Eingabeparametern für Always Encrypted-Spalten, Weitere Informationen finden Sie unter [Einschränkungen des ODBC-Treibers bei Verwendung von Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted)
+- Für verteilte XA-Transaktionen, für die Weitere Informationen finden Sie unter [mithilfe der XA-Transaktionen](../use-xa-with-dtc.md)
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd-on-linux-and-macos"></a>Neuigkeiten in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.2 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter Linux und macOS
 

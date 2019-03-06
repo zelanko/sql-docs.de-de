@@ -13,12 +13,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 6b9ea2618f51eb167f63232b79c61d9ecdc0e746
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
-ms.translationtype: HT
+ms.openlocfilehash: a9e02676c12cf3257ba509dbee46cf46f5e0f876
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331610"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56956041"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Installieren von Microsoft ODBC Driver for SQL Server unter Linux und macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -56,7 +56,7 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 
-### <a name="redhat-enterprise-server-6-and-7"></a>Red Hat Enterprise Server 6 und 7
+### <a name="redhat-enterprise-server-6-and-7"></a>RedHat Enterprise Server 6 und 7
 ```
 sudo su
 
@@ -81,7 +81,7 @@ source ~/.bashrc
 sudo yum install unixODBC-devel
 ```
 
-### <a name="suse-linux-enterprise-server-11sp4-and-12"></a>SUSE Linux Enterprise Server 11 SP4 und 12
+### <a name="suse-linux-enterprise-server-11sp4-12-and-15"></a>SUSE Linux Enterprise Server 11SP4, 12 und 15
 
 ```
 sudo su
@@ -94,6 +94,10 @@ zypper ar https://packages.microsoft.com/config/sles/11/prod.repo
 
 #SUSE Linux Enterprise Server 12
 zypper ar https://packages.microsoft.com/config/sles/12/prod.repo
+
+#SUSE Linux Enterprise Server 15
+zypper ar https://packages.microsoft.com/config/sles/15/prod.repo
+SUSEConnect -p sle-module-legacy/15/x86_64
 
 exit
 sudo ACCEPT_EULA=Y zypper install msodbcsql17
@@ -120,11 +124,11 @@ curl https://packages.microsoft.com/config/ubuntu/14.04/prod.list > /etc/apt/sou
 #Ubuntu 16.04
 curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
-#Ubuntu 17.10
-curl https://packages.microsoft.com/config/ubuntu/17.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
-
 #Ubuntu 18.04
 curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+
+#Ubuntu 18.10
+curl https://packages.microsoft.com/config/ubuntu/18.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
 exit
 sudo apt-get update
@@ -139,9 +143,9 @@ sudo apt-get install unixodbc-dev
 ```
 > [!NOTE]
 > - Driver, Version 17.2 oder höher ist für Ubuntu 18.04-Unterstützung erforderlich.
-> - 2.3.1 des Unixodbc-Dev-Pakets ist nicht verfügbar, auf Ubuntu 14.04.   
+> - Driver, Version 17.3 oder höher ist für Ubuntu 18.10-Unterstützung erforderlich.   
 
-### <a name="os-x-1011-el-capitan-macos-1012-sierra-and-macos-1013-high-sierra"></a>OS X 10.11 (El Capitan), MacOS 10.12 (Sierra) und MacOS 10.13 (High Sierra)
+### <a name="os-x-1011-el-capitan-macos-1012-sierra-macos-1013-high-sierra-and-macos-1014-mojave"></a>OS X 10.11 (El Capitan), die MacOS 10.12 (Sierra), MacOS 10.13 (High Sierra) und MacOS 10.14 (Mojave)
 
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -185,7 +189,7 @@ source ~/.bashrc
 sudo yum install unixODBC-devel
 ```
 
-### <a name="redhat-enterprise-server-7"></a>Red Hat Enterprise 7-Server
+### <a name="redhat-enterprise-server-7"></a>RedHat Enterprise Server 7
 ```
 sudo su
 curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
@@ -290,7 +294,7 @@ sudo apt-get install unixodbc-dev
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-brew install --no-sandbox msodbcsql@13.1.9.2 mssql-tools@14.0.6.0
+brew install msodbcsql@13.1.9.2 mssql-tools@14.0.6.0
 ```
 
 ## <a name="microsoft-odbc-driver-13-for-sql-server"></a>Microsoft ODBC Driver 13 for SQL Server
@@ -309,7 +313,7 @@ ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd
 ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ```
 
-### <a name="redhat-enterprise-server-7"></a>Red Hat Enterprise 7-Server
+### <a name="redhat-enterprise-server-7"></a>RedHat Enterprise Server 7
 ```
 sudo su
 curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
