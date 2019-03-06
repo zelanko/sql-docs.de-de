@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
-ms.openlocfilehash: eaa93142b7a00f581d90dcb0a7be4a94a4ae6477
-ms.sourcegitcommit: ee76381cfb1c16e0a063315c9c7005f10e98cfe6
+ms.openlocfilehash: 26b11ac46da7239f2fef98ef838e2e7c6f775aef
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55072855"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56803155"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Problembehandlung: PolyBase-Kerberos-Konnektivität
 
@@ -32,7 +32,7 @@ Dieser Artikel dient als Hilfestellung beim Debuggingprozess solcher Probleme mi
 
 ## <a name="introduction"></a>Einführung
 
-Diese bietet allgemeine Informationen, um sich mit dem Kerberos-Protokoll vertraut zu machen. Es sind drei Akteure beteiligt:
+Diese bietet allgemeine Informationen, um sich mit dem Kerberos-Protokoll vertraut zu machen. Daran sind drei Akteure beteiligt:
 
 1. der Kerberos-Client (SQL Server)
 1. gesicherte Ressourcen (HDFS, MR2, YARN, Auftragsverlauf, usw.)
@@ -68,7 +68,7 @@ Diese Dateien befinden sich unter:
 
 Der Standardwert für SQL Server 2016 lautet z.B. `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf`.
 
-Zum Aktualisieren von  **core-site.xml** fügen Sie die drei untenstehenden Eigenschaften hinzu. Legen Sie die Werte passend zur Umgebung fest:
+Zum Aktualisieren von **core-site.xml** fügen Sie die drei untenstehenden Eigenschaften hinzu. Legen Sie die Werte passend zur Umgebung fest:
 
 ```xml
 <property>
@@ -212,7 +212,7 @@ Wenn das Tool ausgeführt wurde und die Eigenschaften den Zielpfads *nicht* ausg
 
 ### <a name="mit-kdc"></a>KDC von MIT  
 
-Alle im KDC registrierten SPN, einschließlich Administratoren, können angezeigt werden, indem Sie  **kadmin.local** > (admin login) >  **listprincs**  im Host des KDC oder einem beliebigen KDC-Client ausführen. Wenn Kerberos auf dem Hadoop-Cluster richtig konfiguriert ist, sollte es für jeden der im Cluster verfügbaren Dienste eine SPN geben (z.B.: `nn`, `dn`, `rm`, `yarn`, `spnego` usw.). Die entsprechenden Schlüsseltabellendatei (Kennwortersatz) wird standardmäßig unter  **/etc/security/keytabs** angezeigt. Sie werden mit dem privaten Schlüssel des KDC verschlüsselt.  
+Alle im KDC registrierten SPN, einschließlich Administratoren, können angezeigt werden, indem Sie  **kadmin.local** > (admin login) >  **listprincs**  im Host des KDC oder einem beliebigen KDC-Client ausführen. Wenn Kerberos auf dem Hadoop-Cluster richtig konfiguriert ist, sollte es für jeden der im Cluster verfügbaren Dienste eine SPN geben (z.B.: `nn`, `dn`, `rm`, `yarn`, `spnego` usw.). Die entsprechenden Schlüsseltabellendateien (Kennwortersatz) werden standardmäßig unter  **/etc/security/keytabs** angezeigt. Sie werden mit dem privaten Schlüssel des KDC verschlüsselt.  
 
 Ziehen Sie auch in Betracht, [`kinit`](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) zu verwenden, um die Administratoranmeldeinformationen lokal im KDC zu überprüfen. Es kann z. B. so verwendet werden:  `kinit identity@MYREALM.COM`. Wenn Sie nach einem Kennwort gefragt werden, zeigt dies an, dass die Identität existiert.  Die Protokolle des KDC stehen standardmäßig unter  **/var/log/krb5kdc.log** zur Verfügung. Dazu gehören auch alle Ticketanforderungen, einschließlich der Client-IP, von der die Anforderung ausgegangen ist. Es sollten zwei Anforderungen von der IP des Computers mit SQL Server angezeigt werden, auf dem das Tool ausgeführt wurde: die erste vom authentifizierender Server als  **AS\_REQ** und die zweite  **TGS\_REQ** für das Dienstticket vom Ticket-Granting-Server.
 

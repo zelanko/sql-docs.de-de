@@ -18,17 +18,17 @@ ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6f96840516b160a7fef7fd97454250131695fc7f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4bca90e100baf2a7509636966ee1391645827bb9
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033051"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662784"
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue (Datenbank-Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Gibt den Knoten zurück, dessen Pfad im Stamm der Pfad zu *newRoot* gefolgt von dem Pfad von *oldRoot* zu *this* ist.
+Gibt einen Knoten zurück, dessen Pfad vom Stamm der Pfad zu _newRoot_ gefolgt vom Pfad von _oldRoot_ ist.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,11 +43,11 @@ SqlHierarchyId GetReparentedValue ( SqlHierarchyId oldRoot , SqlHierarchyId newR
 ```  
   
 ## <a name="arguments"></a>Argumente  
-*oldRoot*  
+_oldRoot_  
 Ein **hierarchyid**-Wert, der den Knoten der zu ändernden Hierarchieebene angibt.
   
-*newRoot*  
-Ein **hierarchyid**-Wert, der den Knoten angibt, der den *oldRoot*-Abschnitt des aktuellen Knotens zur Verschiebung des Knotens ersetzt.
+_newRoot_  
+Ein **hierarchyid**-Wert, der den Knoten darstellt. Ersetzen Sie den _OldRoot_ Abschnitt des aktuellen Knotens, um den Knoten zu verschieben.
   
 ## <a name="return-types"></a>Rückgabetypen  
 **SQL Server-Rückgabetyp: hierarchyid**
@@ -55,12 +55,12 @@ Ein **hierarchyid**-Wert, der den Knoten angibt, der den *oldRoot*-Abschnitt des
 **CLR-Rückgabetyp: SqlHierarchyId**
   
 ## <a name="remarks"></a>Remarks  
-Kann verwendet werden, um die Struktur durch Verschieben von Knoten von *oldRoot* nach *newRoot* zu ändern. Mit GetReparentedValue können Sie einen Knoten einer Hierarchie an eine neue Position in der Hierarchie verschieben. Der **hierarchyid**-Datentyp stellt die hierarchische Struktur dar, setzt sie jedoch nicht durch. Benutzer müssen sicherstellen, dass der hierarchyid-Wert für die neue Position angemessen strukturiert ist. Mit einem eindeutigen Index für den **hierarchyid**-Datentyp können Sie doppelte Einträge vermeiden. Ein Beispiel für die Verschiebung einer vollständigen Teilstruktur finden Sie unter [Hierarchische Daten &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).
+Wird verwendet, um die Struktur durch Verschieben von Knoten von _oldRoot_ nach _newRoot_ zu ändern. „GetReparentedValue“ wird zum Verschieben eines Hierarchieknotens an eine neue Position in der Hierarchie verwendet. Der **hierarchyid**-Datentyp stellt die hierarchische Struktur dar, setzt sie jedoch nicht durch. Benutzer müssen sicherstellen, dass der hierarchyid-Wert für die neue Position angemessen strukturiert ist. Mit einem eindeutigen Index für den **hierarchyid**-Datentyp können Sie doppelte Einträge vermeiden. Ein Beispiel für die Verschiebung einer vollständigen Teilstruktur finden Sie unter [Hierarchische Daten &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-comparing-two-node-locations"></a>A. Vergleichen von zwei Knotenpositionen  
-Im folgenden Beispiel wird der aktuelle hierarchyid-Wert eines Knotens gezeigt. Des Weiteren wird der **hierarchyid**-Wert gezeigt, den der Knoten aufweist, wenn er an die Position des Nachfolgers des **@NewParent**-Knotens verschoben wird. Zur Darstellung der hierarchischen Beziehungen wird die `ToString()`-Methode verwendet.
+Im folgenden Beispiel wird der aktuelle hierarchyid-Wert eines Knotens gezeigt. Des Weiteren wird der **hierarchyid**-Wert gezeigt, den der Knoten aufweist, wenn Sie ihn an die Position des Nachfolgers des **@NewParent**-Knotens verschieben. Zur Darstellung der hierarchischen Beziehungen wird die `ToString()`-Methode verwendet.
   
 ```sql
 DECLARE @SubjectEmployee hierarchyid , @OldParent hierarchyid, @NewParent hierarchyid  

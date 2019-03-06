@@ -16,17 +16,17 @@ ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0f61e3417e44fad0ce25796e5e888bcfc2781206
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 816f1983723b119d7092013fad6296668621fe75
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204279"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662814"
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Entspricht einem speziellen Datentyp, der verwendet werden kann, um ein Resultset für die Verarbeitung zu einem späteren Zeitpunkt zu speichern. **table** wird hauptsächlich für die temporäre Speicherung von einem Zeilensatz verwendet, der als Resultset einer Tabellenwertfunktion zurückgegeben wurde. Für Funktionen und Variablen kann der Typ **table** angegeben werden. **table**-Variablen können in Funktionen, gespeicherten Prozeduren und Batches verwendet werden. Verwenden Sie zum Deklarieren von Variablen des **table**-Typs die Anweisung [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md).
+Entspricht einem speziellen Datentyp, der zum Speichern eines Resultsets für die Verarbeitung zu einem späteren Zeitpunkt verwendet wird. **table** wird hauptsächlich für die temporäre Speicherung eines Zeilensatzes verwendet, der als Resultset einer Tabellenwertfunktion zurückgegeben wird. Für Funktionen und Variablen kann der Typ **table** angegeben werden. **table**-Variablen können in Funktionen, gespeicherten Prozeduren und Batches verwendet werden. Verwenden Sie zum Deklarieren von Variablen des **table**-Typs die Anweisung [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md).
   
 
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -67,7 +67,7 @@ Weitere Informationen zur Syntax finden Sie unter [CREATE TABLE &#40;Transact-SQ
 Die Sortierung einer Spalte, die aus einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Gebietsschema und einer Vergleichsart, einem Windows-Gebietsschema und der Binärschreibweise oder einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sortierung besteht. Wenn *collation_definition* nicht angegeben ist, erbt die Spalte die Sortierung der aktuellen Datenbank. Wenn die Spalte als CLR-benutzerdefinierter Typ (Common Language Runtime) definiert ist, erbt die Spalte die Sortierung des benutzerdefinierten Typs.
   
 ## <a name="remarks"></a>Remarks  
-Auf Variablen vom Typ **table** kann anhand des Namens in der FROM-Klausel eines Batches verwiesen werden, wie im folgenden Beispiel gezeigt wird:
+**table** verweist anhand des Namens in der FROM-Klausel eines Batches auf Variablen, wie im folgenden Beispiel gezeigt:
   
 ```sql
 SELECT Employee_ID, Department_ID FROM @MyTableVar;  
@@ -83,7 +83,7 @@ JOIN Employee on (m.EmployeeID =Employee.EmployeeID AND
 ```  
   
 **table**-Variablen bieten die folgenden Vorteile für Abfragen mit kleinerem Umfang, die über Abfragepläne verfügen, die sich nicht ändern (gilt auch für Szenarios mit vorwiegend vorhandenen Neukompilierungsaspekten):
--   Eine **table**-Variable verhält sich wie eine lokale Variable. Sie hat einen fest definierten Bereich. Dies ist die Funktion, die gespeicherte Prozedur oder der Batch, in der bzw. dem sie deklariert ist.  
+-   Eine **table**-Variable verhält sich wie eine lokale Variable. Sie hat einen fest definierten Bereich. Diese Variable ist die Funktion, die gespeicherte Prozedur oder der Batch, in der bzw. dem sie deklariert ist.  
      Innerhalb dieses Bereichs kann eine **table**-Variable wie eine reguläre Tabelle verwendet werden. Sie kann überall angewendet werden, wo eine Tabelle oder ein Tabellenausdruck in SELECT-, INSERT-, UPDATE- und DELETE-Anweisungen verwendet wird. **table** kann jedoch nicht in der folgenden Anweisung verwendet werden:  
   
 ```sql
@@ -92,15 +92,15 @@ SELECT select_list INTO table_variable;
   
 Für **table**-Variablen wird automatisch am Ende der Funktion, der gespeicherten Prozedur oder des Batches, in der bzw. dem sie definiert sind, ein Cleanup ausgeführt.
   
--   In gespeicherten Prozeduren verwendete **table**-Variablen verursachen weniger Neukompilierungen der gespeicherten Prozeduren als im Fall der Verwendung von temporären Tabellen, wenn keine kostenbasierten Optionen vorhanden sind, die die Leistung beeinflussen.  
+-   In gespeicherten Prozeduren verwendete **table**-Variablen verursachen weniger Neukompilierungen der gespeicherten Prozeduren als bei Verwendung temporärer Tabellen, wenn keine kostenbasierten Optionen vorhanden sind, welche die Leistung beeinflussen.  
 -   Transaktionen, an denen **table**-Variablen beteiligt sind, dauern nur so lange wie das Update der **table**-Variablen. Daher sind für **table**-Variablen weniger Sperr- und Protokollierungsressourcen erforderlich.  
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen
-**table**-Variablen verfügen über keine Verteilungsstatistiken und lösen kein erneutes Kompilieren aus. Daher erstellt der Optimierer in vielen Fällen einen Abfrageplan unter der Annahme, dass die Tabellenvariable keine Zeilen enthält. Aus diesem Grund sollten Sie Tabellenvariablen mit Vorsicht verwenden, wenn Sie von einer großen Anzahl von Zeilen (mehr als 100) ausgehen. Für solche Fälle sind temporäre Tabellen möglicherweise die bessere Lösung. Sie können bei Abfragen, die einen Join der Tabelle mit anderen Tabellen ausführen, auch den RECOMPILE-Hinweis verwenden. Dieser führt dazu, dass der Optimierer die korrekte Kardinalität für die Tabellenvariable verwendet.
+**table**-Variablen haben keine Verteilungsstatistiken. Sie lösen keine Neukompilierungen aus. Daher erstellt der Optimierer in vielen Fällen einen Abfrageplan unter der Annahme, dass die „table“-Variable keine Zeilen enthält. Aus diesem Grund sollten Sie Tabellenvariablen mit Vorsicht verwenden, wenn Sie von einer großen Anzahl von Zeilen (mehr als 100) ausgehen. Für solche Fälle sind temporäre Tabellen möglicherweise die bessere Lösung. Verwenden Sie bei Abfragen, die einen Join der Tabelle mit anderen Tabellen ausführen, auch den RECOMPILE-Hinweis. Dieser führt dazu, dass der Optimierer die korrekte Kardinalität für die „table“-Variable verwendet.
   
-**table**-Variablen werden im kostenbasierten Ansatzmodell des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Optimierers nicht unterstützt. Daher sollten sie nicht verwendet werden, wenn kostenbasierte Optionen erforderlich sind, um einen effizienten Abfrageplan zu erzielen. Temporäre Tabellen werden bevorzugt, wenn kostenbasierte Optionen erforderlich sind. Dies schließt in der Regel Abfragen mit Joins, Parallelverarbeitungsentscheidungen und Indexauswahloptionen ein.
+**table**-Variablen werden im kostenbasierten Ansatzmodell des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Optimierers nicht unterstützt. Daher sollten sie nicht verwendet werden, wenn kostenbasierte Optionen erforderlich sind, um einen effizienten Abfrageplan zu erzielen. Temporäre Tabellen werden bevorzugt, wenn kostenbasierte Optionen erforderlich sind. Dieser Plan schließt in der Regel Abfragen mit Joins, Parallelverarbeitungsentscheidungen und Indexauswahloptionen ein.
   
-Abfragen, die **table**-Variablen ändern, generieren keine Pläne für die parallele Abfrageausführung. Die Leistung kann beeinträchtigt sein, wenn sehr große **table**-Variablen oder **table**-Variablen in komplexen Abfragen geändert werden. Erwägen Sie in vergleichbaren Situationen stattdessen die Verwendung temporärer Tabellen. Weitere Informationen finden Sie unter [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md). Abfragen, die **table**-Variablen lesen, ohne sie zu ändern, können weiterhin parallelisiert werden.
+Abfragen, die **table**-Variablen ändern, generieren keine Pläne für die parallele Abfrageausführung. Die Leistung kann beeinträchtigt sein, wenn große **table**-Variablen oder **table**-Variablen in komplexen Abfragen geändert werden. Erwägen Sie daher in Situationen, in denen **table**-Variablen geändert werden, die Verwendung von temporären Tabellen. Weitere Informationen finden Sie unter [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md). Abfragen, die **table**-Variablen lesen, ohne sie zu ändern, können weiterhin parallelisiert werden.
   
 Die explizite Erstellung von Indizes für **table**-Variablen ist nicht möglich, zudem werden für **table**-Variablen keine Statistiken geführt. Mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] wurde eine neue Syntax eingeführt, die es erlaubt, bestimmte Indextypen inline mit der Tabellendefinition zu erstellen.  Mit dieser neuen Syntax können Sie Indizes für **table**-Variablen als Teil der Tabellendefinition erstellen. In einigen Fällen kann die Leistung verbessert werden, indem stattdessen temporäre Tabellen verwendet werden, die eine vollständige Unterstützung für Indizes und Statistiken bieten. Weitere Informationen zu temporären Tabellen und der Inlineerstellung von Indizes finden Sie unter [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).
 
@@ -108,40 +108,40 @@ CHECK-Einschränkungen, DEFAULT-Werte und berechnete Spalten in der **table**-Ty
   
 Zuweisungsvorgänge zwischen **table**-Variablen werden nicht unterstützt.
   
-Transaktionsrollbacks wirken sich nicht auf **table**-Variablen aus, da diese Variablen einen beschränkten Bereich haben und kein Teil der permanenten Datenbank sind.
+Transaktionsrollbacks wirken sich nicht auf **table**-Variablen aus, da diese Variablen einen eingeschränkten Bereich haben und kein Teil der permanenten Datenbank sind.
   
-Tabellenvariablen können nicht geändert werden, nachdem sie erstellt wurden.
+„table“-Variablen können nach ihrer Erstellung nicht mehr geändert werden.
 
 ## <a name="table-variable-deferred-compilation"></a>Verzögerte Kompilierung von Tabellenvariablen
-Die **verzögerte Kompilierung von Tabellenvariablen** verbessert die Qualität des Abfrageplans und die Gesamtleistung für Abfragen mit Verweisen auf Tabellenvariablen. Während der Optimierung und der ersten Kompilierung des Plans verteilt diese Funktion Kardinalitätsschätzungen, die auf tatsächlichen Tabellenvariablen-Zeilenzahlen basieren. Diese genauen Zeilenzahlinformationen werden dann für die Optimierung der nachgelagerten Planvorgänge verwendet.
+Die **verzögerte Kompilierung von Tabellenvariablen** verbessert die Qualität des Abfrageplans und die Gesamtleistung für Abfragen mit Verweisen auf Tabellenvariablen. Während der Optimierung und der ersten Kompilierung des Plans verteilt diese Funktion Kardinalitätsschätzungen, die auf tatsächlichen Tabellenvariablen-Zeilenzahlen basieren. Diese Informationen zur genauen Zeilenzahl werden dann zur Optimierung der nachgelagerten Planvorgänge verwendet.
 
 > [!NOTE]
 > Die verzögerte Kompilierung von Tabellenvariablen ist in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ein Feature in der öffentlichen Preview.
 
-Bei der verzögerten Kompilierung von Tabellenvariablen wird die Kompilierung einer Anweisung, die auf eine Tabellenvariable verweist, bis zur ersten tatsächlichen Ausführung der Anweisung verzögert. Dieses verzögerte Kompilierungsverhalten ist identisch mit dem Verhalten von temporären Tabellen, und diese Änderung führt zur Verwendung der tatsächlichen Kardinalität anstelle der ursprünglichen einzeiligen Schätzung. 
+Bei der verzögerten Kompilierung von Tabellenvariablen wird die Kompilierung einer Anweisung, die auf eine Tabellenvariable verweist, bis zur ersten tatsächlichen Ausführung der Anweisung verzögert. Dieses Verhalten der verzögerten Kompilierung ist identisch mit dem von temporären Tabellen. Diese Änderung führt dazu, dass anstelle des ursprünglichen einreihigen Schätzwertes die tatsächliche Kardinalität verwendet wird. 
 
 Um die öffentliche Vorschau der verzögerten Kompilierung von Tabellenvariablen zu aktivieren, aktivieren Sie Datenbank-Kompatibilitätsgrad 150 für die Datenbank, mit der Sie beim Ausführen der Abfrage verbunden sind.
 
 Die verzögerte Kompilierung von Tabellenvariablen führt **nicht** zu Änderungen an anderen Merkmalen von Tabellenvariablen. Beispielsweise wird durch dieses Feature keine Spaltenstatistik zu Tabellenvariablen hinzugefügt.
 
-Die verzögerte Kompilierung von Tabellenvariablen **führt nicht zu einer häufigeren Neukompilierung**.  Stattdessen wird der Zeitpunkt der ersten Kompilierung verschoben. Der resultierende zwischengespeicherte Plan wird basierend auf der anfänglichen Zeilenanzahl für die verzögerte Kompilierung von Tabellenvariablen generiert. Der zwischengespeicherte Plan wird bei nachfolgenden Abfragen wiederverwendet, bis der Plan entfernt oder neu kompiliert wird. 
+Die verzögerte Kompilierung von Tabellenvariablen **führt nicht zu einer häufigeren Neukompilierung**. Stattdessen wird der Zeitpunkt der ersten Kompilierung verschoben. Der resultierende zwischengespeicherte Plan wird basierend auf der anfänglichen Zeilenanzahl für die verzögerte Kompilierung von Tabellenvariablen generiert. Der zwischengespeicherte Plan wird von nachfolgenden Abfragen wiederverwendet. Es wird solange wiederverwendet, bis der Plan entfernt oder erneut kompiliert wird. 
 
-Wenn die Zeilenanzahl für Tabellenvariablen für die anfängliche Plankompilierung einen typischen Wert darstellt, der erheblich von einem geschätzten Festwert für die Zeilenanzahl abweicht, sind Downstreamvorgänge vorteilhaft.  Weicht die Zeilenanzahl für Tabellenvariablen für alle durchgeführten Ausführungen erheblich ab, kann die Leistung durch dieses Feature möglicherweise nicht verbessert werden.
+Die Zeilenanzahl für Tabellenvariablen, die für die anfängliche Plankompilierung verwendet wird, stellt einen typischen Wert dar, der von einem geschätzten Festwert für die Zeilenanzahl abweichen kann. Bei Abweichungen profitieren Downstreamvorgänge. Weicht die Zeilenanzahl für Tabellenvariablen für alle durchgeführten Ausführungen erheblich ab, wird die Leistung durch dieses Feature möglicherweise nicht verbessert.
 
 ### <a name="disabling-table-variable-deferred-compilation-without-changing-the-compatibility-level"></a>Deaktivieren der verzögerten Kompilierung von Tabellenvariablen ohne Änderung des Kompatibilitätsgrads
-Die verzögerte Kompilierung von Tabellenvariablen kann im Datenbank- oder Anweisungsbereich deaktiviert werden, während der Datenbankkompatibilitätsgrad weiterhin bei 150 und höher bleibt. Um die verzögerte Kompilierung von Tabellenvariablen für alle Abfrageausführungen zu deaktivieren, die aus der Datenbank stammen, führen Sie die folgende Anweisung im Kontext der betroffenen Datenbank aus:
+Deaktivieren Sie die verzögerte Kompilierung von Tabellenvariablen im Datenbank- oder Anweisungsbereich, während Sie den Datenbankkompatibilitätsgrad bei 150 und höher beibehalten. Um die verzögerte Kompilierung von Tabellenvariablen für alle Abfrageausführungen zu deaktivieren, die aus der Datenbank stammen, führen Sie das folgende Beispiel im Kontext der betroffenen Datenbank aus:
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = OFF;
 ```
 
-Um die verzögerte Kompilierung von Tabellenvariablen für alle Abfrageausführungen erneut zu aktivieren, die aus der Datenbank stammen, führen Sie die folgende Anweisung im Kontext der betroffenen Datenbank aus:
+Um die verzögerte Kompilierung von Tabellenvariablen für alle Abfrageausführungen, die aus der Datenbank stammen, erneut zu aktivieren, führen Sie das folgende Beispiel im Kontext der betroffenen Datenbank aus:
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = ON;
 ```
 
-Sie können die verzögerte Kompilierung von Tabellenvariablen auch für eine bestimmte Abfrage deaktivieren, indem Sie DISABLE_DEFERRED_COMPILATION_TV als USE HINT-Abfragehinweis festlegen.  Zum Beispiel:
+Sie können die verzögerte Kompilierung von Tabellenvariablen auch für eine bestimmte Abfrage deaktivieren, indem Sie DISABLE_DEFERRED_COMPILATION_TV als USE HINT-Abfragehinweis zuweisen.  Zum Beispiel:
 
 ```sql
 DECLARE @LINEITEMS TABLE 
@@ -170,7 +170,7 @@ OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-declaring-a-variable-of-type-table"></a>A. Deklarieren einer Variablen vom Typ "table"  
-Im folgenden Beispiel wird eine `table`-Variable erstellt, die die in der OUTPUT-Klausel der UPDATE-Anweisung angegebenen Werte speichert. Es folgen zwei `SELECT`-Anweisungen, die die Werte in `@MyTableVar` und die Ergebnisse des Updatevorgangs in der `Employee`-Tabelle zurückgeben. Beachten Sie, dass sich die Ergebnisse in der `INSERTED.ModifiedDate`-Spalte von den Werten in der `ModifiedDate`-Spalte in der `Employee`-Tabelle unterscheiden. Der Grund dafür ist, dass der `AFTER UPDATE`-Trigger, der den Wert von `ModifiedDate` auf das aktuelle Datum aktualisiert, in der `Employee`-Tabelle definiert wird. Die von `OUTPUT` zurückgegebenen Spalten spiegeln jedoch die Daten wider, bevor Trigger ausgelöst werden. Weitere Informationen finden Sie unter [OUTPUT-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).
+Im folgenden Beispiel wird eine `table`-Variable erstellt, die die in der OUTPUT-Klausel der UPDATE-Anweisung angegebenen Werte speichert. Es folgen zwei `SELECT`-Anweisungen, die die Werte in `@MyTableVar` und die Ergebnisse des Updatevorgangs in der `Employee`-Tabelle zurückgeben. Die Ergebnisse in der `INSERTED.ModifiedDate`-Spalte weichen von den Werten in der `ModifiedDate`-Spalte in der `Employee`-Tabelle ab. Der Grund für die Abweichung ist, dass der `AFTER UPDATE`-Trigger, der den Wert von `ModifiedDate` auf das aktuelle Datum aktualisiert, in der `Employee`-Tabelle definiert ist. Die von `OUTPUT` zurückgegebenen Spalten spiegeln jedoch die Daten wider, bevor Trigger ausgelöst werden. Weitere Informationen finden Sie unter [OUTPUT-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).
   
 ```sql
 USE AdventureWorks2012;  

@@ -1,7 +1,7 @@
 ---
 title: Handbuch zur Architektur der Abfrageverarbeitung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/15/2018
+ms.date: 02/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 743c12fe1ec749c597655f249c1ba6fbfe1b0b4e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: ee8109bc7d6499352b2d1caf47381faa3df9cf3a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591884"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802406"
 ---
 # <a name="query-processing-architecture-guide"></a>Handbuch zur Architektur der Abfrageverarbeitung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,6 @@ Weitere Informationen zu Columnstore-Indizes finden Sie unter [Columnstore-Indiz
 Die Verarbeitung einer einzelnen [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung ist das grundlegendste Verfahren, nach dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SQL-Anweisungen ausführt. Die Schritte, die zur Verarbeitung einer einzelnen `SELECT` -Anweisung verwendet werden, die nur auf lokale Basistabellen verweist (keine Sichten oder Remotetabellen), sollen das zugrunde liegende Verfahren veranschaulichen.
 
 ### <a name="logical-operator-precedence"></a>Rangfolge logischer Operatoren
-
 Wenn mehr als ein logischer Operator in einer Anweisung verwendet wird, wird `NOT` zuerst ausgewertet, dann `AND` und schließlich `OR`. Arithmetische (und bitweise) Operatoren werden vor logischen Operatoren verarbeitet. Weitere Informationen finden Sie unter [Operator Precedence (Operatorrangfolge)](../t-sql/language-elements/operator-precedence-transact-sql.md).
 
 Im folgenden Beispiel ist die Color-Bedingung nur für ProductModel 21 anwendbar und nicht für ProductModel 20, weil `AND` Vorrang gegenüber `OR` hat.
@@ -88,7 +87,6 @@ GO
 ```
 
 ### <a name="optimizing-select-statements"></a>Optimieren von SELECT-Anweisungen
-
 Eine `SELECT` -Anweisung ist nicht prozedural; sie gibt nicht die genauen Schritte vor, die der Datenbankserver verwenden soll, um die angeforderten Daten abzurufen. Dies bedeutet, dass der Datenbankserver die Anweisung analysieren muss, um das effizienteste Verfahren zum Extrahieren der angeforderten Daten zu ermitteln. Dieser Vorgang wird als Optimieren der `SELECT` -Anweisung bezeichnet. Die Komponente, die ihn durchführt, wird als Abfrageoptimierer bezeichnet. Die Eingaben für den Abfrageoptimierer bestehen aus der Abfrage, dem Datenbankschema (Tabellen- und Indexdefinitionen) und den Datenbankstatistiken. Die Ausgabe des Abfrageoptimierers ist ein Abfrageausführungsplan, der manchmal auch als Abfrageplan oder einfach nur als Plan bezeichnet wird. Der Inhalt eines Abfrageplans wird ausführlicher an späterer Stelle in diesem Thema beschrieben.
 
 Die Ein- und Ausgaben des Abfrageoptimierers während der Optimierung einer einzelnen `SELECT`-Anweisung werden in folgendem Diagramm dargestellt:
@@ -126,7 +124,6 @@ Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer st�
 Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer ist deshalb so wichtig, weil er es dem Datenbankserver ermöglicht, dynamische Anpassungen an geänderte Bedingungen in der Datenbank vorzunehmen, ohne dass eine Eingabe durch einen Programmierer oder Datenbankadministrator erforderlich ist. Programmierer können sich somit darauf konzentrieren, das endgültige Ergebnis der Abfrage zu beschreiben. Sie können sich darauf verlassen, dass der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer bei jeder Ausführung der Anweisung einen effizienten Ausführungsplan auf der Basis des aktuellen Status der Datenbank erstellt.
 
 ### <a name="processing-a-select-statement"></a>Verarbeiten einer SELECT-Anweisung
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] führt zur Verarbeitung einer einzelnen SELECT-Anweisung die folgenden grundlegenden Schritte aus: 
 
 1. Der Parser scannt die `SELECT` -Anweisung und spaltet sie in ihre logischen Einheiten auf, wie z.B. Schlüsselwörter, Ausdrücke, Operatoren und Bezeichner.
@@ -135,18 +132,97 @@ Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer ist
 4. Die relationale Engine beginnt mit der Ausführung des Ausführungsplans. Während der Verarbeitung von Schritten, für die Daten aus den Basistabellen erforderlich sind, fordert die relationale Engine an, dass die Speicher-Engine die Daten aus den Rowsets übergibt, die durch die relationale Engine angefordert wurden.
 5. Die relationale Engine transformiert die Daten, die von der Speicher-Engine zurückgegeben werden, in das für das Resultset definierte Format und gibt das Resultset an den Client zurück.
 
-### <a name="processing-other-statements"></a>Verarbeiten anderer Anweisungen
+### <a name="ConstantFolding"></a> Reduktion konstanter Ausdrücke und Auswertung von Ausdrücken 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wertet bestimmte konstante Ausdrücke frühzeitig aus, um die Abfrageleistung zu steigern. Dies wird als Reduktion konstanter Ausdrücke bezeichnet. Eine Konstante ist ein [!INCLUDE[tsql](../includes/tsql-md.md)]-Literal, z. B. 3, „ABC“, „2005-12-31“, 1.0e3 oder 0x12345678.
 
-Die zuvor beschriebenen grundlegenden Schritte für die Verarbeitung einer `SELECT` -Anweisung gelten ebenfalls für andere SQL-Anweisungen, wie z.B. `INSERT`, `UPDATE`und `DELETE`. `UPDATE` - und `DELETE` -Anweisungen müssen sich auf die Gruppe von Zeilen beziehen, die geändert bzw. gelöscht werden soll. Der Vorgang zum Identifizieren dieser Zeilen ist der gleiche Vorgang, der zum Identifizieren der Quellzeilen verwendet wird, die einen Beitrag zum Resultset einer `SELECT` -Anweisung leisten. `UPDATE` - und `INSERT` -Anweisungen können eingebettete SELECT-Anweisungen enthalten, die die Datenwerte bereitstellen, die aktualisiert oder eingefügt werden sollen.
+#### <a name="foldable-expressions"></a>Zur Kompilierzeit reduzierbare Ausdrücke
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet die Reduktion konstanter Ausdrücke mit den folgenden Ausdruckstypen:
+- Arithmetische Ausdrücke wie 1+1, 5/3*2, die nur Konstanten enthalten.
+- Logische Ausdrücke wie 1=1 und 1>2 AND 3>4, die nur Konstanten enthalten.
+- Integrierte Funktionen, die von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zur Kompilierzeit reduziert werden können, einschließlich `CAST` und `CONVERT`. Im Allgemeinen gilt eine systeminterne Funktion als zur Kompilierzeit reduzierbar, wenn sie ausschließlich aus Eingaben besteht – ohne weitere kontextbezogene Informationen wie SET-Optionen, Spracheinstellungen, Datenbankoptionen oder Verschlüsselungsschlüssel. Nicht deterministische Funktionen sind nicht zur Kompilierzeit reduzierbar. Deterministische integrierte Funktionen sind bis auf einige Ausnahmen zur Kompilierzeit reduzierbar.
+
+> [!NOTE] 
+> Eine Ausnahme sind große Objekte. Wenn der Ausgabetyp des Reduktionsprozesses ein großes Objekt (text, image, nvarchar(max), varchar(max) oder varbinary(max)) ist, reduziert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] den Ausdruck nicht zur Kompilierzeit.
+
+#### <a name="nonfoldable-expressions"></a>Nicht zur Kompilierzeit reduzierbare Ausdrücke
+Alle anderen Ausdruckstypen können nicht zur Kompilierzeit reduziert werden. Dabei handelt es sich insbesondere um folgende Ausdrücke:
+- Nicht konstante Ausdrücke, wie z. B. Ausdrücke, deren Ergebnisse vom Wert einer Spalte abhängig sind.
+- Ausdrücke, deren Ergebnisse von einer lokalen Variable bzw. einem lokalen Parameter abhängig sind, wie z. B. @x.
+- Nicht deterministische Funktionen.
+- Benutzerdefinierte Funktionen ([!INCLUDE[tsql](../includes/tsql-md.md)] und CLR).
+- Ausdrücke, deren Ergebnisse von Spracheinstellungen abhängig sind.
+- Ausdrücke, deren Ergebnisse von SET-Optionen abhängig sind.
+- Ausdrücke, deren Ergebnisse von Serverkonfigurationsoptionen abhängig sind.
+
+#### <a name="examples-of-foldable-and-nonfoldable-constant-expressions"></a>Beispiele für zur Kompilierzeit reduzierbare und nicht zur Kompilierzeit reduzierbare konstante Ausdrücke
+Betrachten Sie die folgende Abfrage:
+
+```sql
+SELECT *
+FROM Sales.SalesOrderHeader AS s 
+INNER JOIN Sales.SalesOrderDetail AS d 
+ON s.SalesOrderID = d.SalesOrderID
+WHERE TotalDue > 117.00 + 1000.00;
+```
+
+Wird für diese Abfrage die `PARAMETERIZATION`-Datenbankoption nicht auf `FORCED`festgelegt, wird der Ausdruck `117.00 + 1000.00` ausgewertet und durch sein Ergebnis (`1117.00`) ersetzt, bevor die Abfrage kompiliert wird. Die Vorteile dieser Reduktion des konstanten Ausdrucks sind folgende:
+- Der Ausdruck muss zur Laufzeit nicht mehrmals ausgewertet werden.
+- Der durch die Auswertung des Ausdrucks erhaltene Wert wird vom Abfrageoptimierer verwendet, um die Größe des Resultsets der Teilabfrage `TotalDue > 117.00 + 1000.00` zu schätzen.
+
+Wenn `dbo.f` jedoch eine skalare benutzerdefinierte Funktion ist, wird der Ausdruck  `dbo.f(100)` nicht zur Kompilierzeit reduziert, da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] keine benutzerdefinierten Funktionen zur Kompilierzeit reduziert, auch wenn sie deterministisch sind. Weitere Informationen zur Parametrisierung finden Sie unter [Erzwungene Parametrisierung](#ForcedParam) weiter unten in diesem Artikel.
+
+#### <a name="ExpressionEval"></a>Auswertung von Ausdrücken 
+Außerdem werden bestimmte Ausdrücke, die zwar nicht zur Kompilierzeit ausgewertet werden, deren Argumente jedoch zur Kompilierzeit bekannt sind – unabhängig davon, ob es sich bei den Argumenten um Parameter oder Konstanten handelt – hinsichtlich der Größe ihrer Resultsets (Kardinalität) geschätzt. Dieser Vorgang ist ein Bestandteil des Abfrageoptimierers.
+
+Insbesondere werden folgende integrierte Funktionen und spezielle Operatoren zur Kompilierzeit ausgewertet, wenn alle diesbezüglichen Eingaben bekannt sind: `UPPER`, `LOWER`, `RTRIM`, `DATEPART( YY only )`, `GETDATE`, `CAST` und `CONVERT`. Die folgenden Operatoren werden ebenfalls zur Kompilierzeit ausgewertet, wenn alle diesbezüglichen Eingaben bekannt sind:
+- Arithmetische Operatoren: +, -, \*, /, unär -
+- Logische Operatoren: `AND`, `OR` und `NOT`
+- Vergleichsoperatoren: <, >, <=, >=, <>, `LIKE`, `IS NULL`, `IS NOT NULL`
+
+Während der Kardinalitätsschätzung wertet der Abfrageoptimierer keine anderen Funktionen oder Operatoren aus.
+
+#### <a name="examples-of-compile-time-expression-evaluation"></a>Beispiele für die Ausdrucksauswertung zur Kompilierzeit
+Sehen Sie sich diese gespeicherte Prozedur an:
+
+```sql
+USE AdventureWorks2014;
+GO
+CREATE PROCEDURE MyProc( @d datetime )
+AS
+SELECT COUNT(*)
+FROM Sales.SalesOrderHeader
+WHERE OrderDate > @d+1;
+```
+
+Während der Optimierung der `SELECT`-Anweisung der Prozedur versucht der Abfrageoptimierer, die erwartete Kardinalität des Resultsets für die Bedingung `OrderDate > @d+1` auszuwerten. Der Ausdruck `@d+1` kann nicht zur Kompilierzeit reduziert werden, da `@d` ein Parameter ist. Zum Zeitpunkt der Optimierung ist der Wert dieses Parameters jedoch bekannt. Dadurch kann der Abfrageoptimierer die Größe des Resultsets genau schätzen, was zur Auswahl des optimalen Abfrageplans beiträgt.
+
+Betrachten Sie nun ein ähnliches Beispiel, in dem jedoch `@d2` durch eine lokale Variable, `@d+1`, ersetzt wird, und der Ausdruck statt in einer Abfrage in einer SET-Anweisung ausgewertet wird.
+
+```sql 
+USE AdventureWorks2014;
+GO
+CREATE PROCEDURE MyProc2( @d datetime )
+AS
+BEGIN
+DECLARE @d2 datetime
+SET @d2 = @d+1
+SELECT COUNT(*)
+FROM Sales.SalesOrderHeader
+WHERE OrderDate > @d2
+END;
+```
+
+Wenn die `SELECT`-Anweisung in *MyProc2* in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] optimiert wird, ist der Wert von `@d2` nicht bekannt. Daher verwendet der Abfrageoptimierer eine Standardschätzung für die Selektivität von `OrderDate > @d2` (in diesem Fall 30 Prozent).
+
+### <a name="processing-other-statements"></a>Verarbeiten anderer Anweisungen
+Die zuvor beschriebenen grundlegenden Schritte für die Verarbeitung einer `SELECT` -Anweisung gelten ebenfalls für andere SQL-Anweisungen, wie z.B. `INSERT`, `UPDATE`und `DELETE`. `UPDATE` - und `DELETE` -Anweisungen müssen sich auf die Gruppe von Zeilen beziehen, die geändert bzw. gelöscht werden soll. Der Vorgang zum Identifizieren dieser Zeilen ist der gleiche Vorgang, der zum Identifizieren der Quellzeilen verwendet wird, die einen Beitrag zum Resultset einer `SELECT` -Anweisung leisten. Die `UPDATE`- und `INSERT`-Anweisung können eingebettete `SELECT`-Anweisungen enthalten, welche die Datenwerte bereitstellen, die aktualisiert oder eingefügt werden sollen.
 
 Sogar DDL-Anweisungen (Data Definition Language, Datendefinitionssprache), wie z.B. `CREATE PROCEDURE` oder `ALTER TABLE`, werden letztendlich in eine Folge relationaler Operationen aufgelöst, die für die Systemkatalogtabellen und manchmal (wie bei `ALTER TABLE ADD COLUMN`) auch für die Datentabellen ausgeführt werden.
 
 ### <a name="worktables"></a>Arbeitstabellen
-
 Um eine logische Operation ausführen zu können, die in einer SQL-Anweisung angegeben wurde, muss die relationale Engine ggf. eine Arbeitstabelle erstellen. Arbeitstabellen sind interne Tabellen, die zum Speichern von Zwischenergebnissen verwendet werden. Arbeitstabellen werden für bestimmte `GROUP BY`-, `ORDER BY`- oder `UNION` -Abfragen generiert. Wenn z.B. eine `ORDER BY`-Klausel auf Spalten verweist, die nicht durch Indizes erfasst werden, muss die relationale Engine eventuell eine Arbeitstabelle generieren, um das Resultset in der angeforderten Reihenfolge sortieren zu können. Arbeitstabellen werden mitunter auch als Spool-Speicher verwendet, die vorübergehend das Ergebnis der Ausführung eines Teils eines Abfrageplans aufnehmen. Arbeitstabellen werden in tempdb erstellt und automatisch wieder gelöscht, sobald sie nicht mehr benötigt werden.
 
 ### <a name="view-resolution"></a>Sichtauflösung
-
 Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageprozessor behandelt indizierte und nicht indizierte Sichten unterschiedlich: 
 
 * Die Zeilen einer indizierten Sicht werden in der Datenbank in demselben Format wie eine Tabelle gespeichert. Wenn sich der Abfrageoptimierer entscheidet, eine indizierte Sicht in einem Abfrageplan zu verwenden, wird die indizierte Sicht auf die gleiche Weise wie eine Basistabelle behandelt.
@@ -192,7 +268,6 @@ WHERE OrderDate > '20020531';
 Durch die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio-Showplanfunktion wird deutlich, dass die relationale Engine für beide `SELECT`-Anweisungen denselben Ausführungsplan erstellt.
 
 ### <a name="using-hints-with-views"></a>Verwenden von Hinweisen mit Sichten
-
 Hinweise, die für Sichten in einer Abfrage gespeichert werden, können zu Konflikten mit anderen Hinweisen führen, die beim Erweitern der Sicht für den Zugriff auf ihre Basistabellen erkannt werden. Wenn das passiert, gibt die Abfrage einen Fehler zurück. Angenommen, die folgende Sicht enthält einen Tabellenhinweis in ihrer Definition:
 
 ```sql
@@ -455,7 +530,7 @@ Die Ausführungspläne für diese Abfragen unterscheiden sich lediglich hinsicht
 
 Wenn Sie Konstanten mithilfe von Parametern von den SQL-Anweisungen trennen, unterstützen Sie die relationale Engine dabei, doppelte Pläne zu erkennen. Es gibt folgende Möglichkeiten, um Parameter zu verwenden: 
 
-* Verwenden Sie in Transact-SQL `sp_executesql`: 
+* Verwenden Sie `sp_executesql` in [!INCLUDE[tsql](../includes/tsql-md.md)]: 
 
    ```sql
    DECLARE @MyIntParm INT
@@ -468,7 +543,7 @@ Wenn Sie Konstanten mithilfe von Parametern von den SQL-Anweisungen trennen, unt
      @MyIntParm
    ```
 
-   Diese Methode wird für Transact-SQL-Skripts, gespeicherte Prozeduren oder Trigger empfohlen, die SQL-Anweisungen dynamisch generieren. 
+   Diese Methode wird für [!INCLUDE[tsql](../includes/tsql-md.md)]-Skripts, gespeicherte Prozeduren oder Trigger empfohlen, die SQL-Anweisungen dynamisch generieren. 
 
 * ADO, OLE DB und ODBC verwenden Parametermarkierungen. Parametermarkierungen sind Fragezeichen (?), die eine Konstante in einer SQL-Anweisung ersetzen und an eine Programmvariable gebunden sind. Beispielsweise können Sie in einer ODBC-Anwendung folgende Aktionen ausführen: 
 

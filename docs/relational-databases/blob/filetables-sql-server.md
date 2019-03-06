@@ -16,12 +16,12 @@ ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 93461858c1318b65d3fd75160e06785847c265a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 178d926dbcbfc6e599a57207369bf61e603468a9
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598287"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828450"
 ---
 # <a name="filetables-sql-server"></a>FileTables (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,6 +83,8 @@ ms.locfileid: "47598287"
 -   Windows-API-Vorgänge sind von ihrem Wesen her nicht transaktional und sind nicht Benutzertransaktionen zugeordnet. Transaktionszugriff auf FILESTREAM-Daten, die in einer FileTable gespeichert sind, wird jedoch vollständig unterstützt, wie dies auch bei FILESTREAM-Spalten in einer regulären Tabelle der Fall ist.  
   
 -   FileTables können auch über den normalen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Zugriff abgefragt und aktualisiert werden. Sie werden auch in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verwaltungstools und -funktionen, z. B. die Sicherung, integriert.  
+
+-   Sie können keine E-Mail-Anforderung über dbmail senden und keine Datei aus einem FILESTREAM-Verzeichnis (daher FileTable) anfügen. Der Dateisystemfilter-Treiber RsFx0420 untersucht eingehende E/A-Anforderungen für den FILESTREAM-Ordner. Wenn die Anforderung nicht sowohl von der ausführbaren SQL Server-Datei als auch dem FILESTREAM-Code stammt, ist sie explizit nicht zulässig.
   
 ##  <a name="additional"></a> Weitere Überlegungen zum Verwenden von FileTables  
   
@@ -134,7 +136,7 @@ ms.locfileid: "47598287"
  [FileTable-DDL, Funktionen, gespeicherte Prozeduren und Sichten](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
  Listet die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankobjekte auf, die zur Unterstützung der FileTable-Funktion hinzugefügt oder geändert wurden.  
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 [Dynamische Verwaltungssichten für Filestream und FileTable (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
 <br>[Katalogsichten für Filestream und FileTable (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
 <br>[Gespeicherte Systemprozeduren für Filestream und FileTable (Transact-SQL)](../system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)

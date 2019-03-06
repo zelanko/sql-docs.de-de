@@ -1,7 +1,7 @@
 ---
 title: Kardinalitätsschätzung (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/06/2017
+ms.date: 02/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,17 +16,37 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f827b1de0a9cba06a17fc2b84724277e9daab22
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: ca1168e0e101f8d8d8c5ae75636f2923faf7e2a1
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328850"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828020"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Kardinalitätsschätzung (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Dieser Artikel veranschaulicht, wie Sie die beste Konfiguration für die Kardinalitätsschätzung (Cardinality Estimation, CE) für Ihr SQL-System bewerten und auswählen. Die meisten Systeme profitieren von der neuesten Kardinalitätsschätzung, da sie die genaueste ist. Die Kardinalitätsschätzung sagt vorher, wie viele Zeilen eine Abfrage wahrscheinlich zurückgibt. Die Vorhersage der Kardinalität wird vom Abfrageoptimierer verwendet, um einen optimalen Abfrageplan zu generieren. Mit genaueren Schätzungen kann der Abfrageoptimierer in der Regel einen besseren Abfrageplan erzeugen.  
+Der Abfrageoptimierer von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arbeitet kostenorientiert. Das bedeutet, dass er die Abfragepläne zur Ausführung auswählt, die die niedrigsten geschätzten Verarbeitungskosten aufweisen. Der Abfrageoptimierer bestimmt die Kosten für die Ausführung eines Abfrageplans anhand zweier Hauptfaktoren:
+
+- Die Gesamtanzahl der Zeilen, die auf den jeweiligen Stufen eines Abfrageplans verarbeitet werden. Wird als Kardinalität des Plans bezeichnet.
+- Das Kostenmodell des Algorithmus, der von den in der Abfrage verwendeten Operatoren vorgeschrieben wird.
+
+Der erste Faktor, die Kardinalität, wird als Eingabeparameter für den zweiten Faktor, das Kostenmodell, verwendet. Aus diesem Grund führt eine verbesserte Kardinalität zu verbesserten geschätzten Kosten und wiederum zu schnelleren Ausführungsplänen.
+
+Die Kardinalitätsschätzung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erfolgt in erster Linie mithilfe von Histogrammen, die gleichzeitig mit Indizes oder Statistiken erstellt werden. Der Vorgang kann entweder manuell oder automatisch ausgeführt werden. In manchen Fällen verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auch Einschränkungsinformationen und logische Umschreibungen von Abfragen, um die Kardinalität zu bestimmen.
+
+In den folgenden Fällen kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Kardinalitätswerte nicht genau berechnen. Dies führt zu ungenauen Kostenberechnungen, die wiederum nicht optimale Abfragepläne zur Folge haben. Die Vermeidung dieser Konstrukte in Abfragen kann die Abfrageleistung verbessern. In manchen Fällen sind alternative Abfrageformulierungen oder andere Maßnahmen möglich, die nachstehend angegeben sind:
+
+- Abfragen mit Prädikaten, die Vergleichsoperatoren zwischen verschiedenen Spalten derselben Tabelle verwenden.
+- Abfragen mit Prädikaten, die Operatoren verwenden, und für die eine der folgenden Voraussetzungen zutrifft:
+  - Es liegen keine Statistiken zu den beteiligten Spalten auf beiden Seiten der Operatoren vor.
+  - Die Verteilung der Werte in den Statistiken ist nicht einheitlich, die Abfrage sucht jedoch eine sehr gezielte Wertegruppe. Dieser Umstand tritt besonders dann ein, wenn ein anderer Operator als der equality-Operator (=) verwendet wird.
+  - Das Prädikat verwendet den Ungleich-Vergleichsoperator (!=) oder den logischen Operator `NOT`.
+- Abfragen, die eine der integrierten SQL Server-Funktionen oder eine benutzerdefinierte Skalarwertfunktion verwenden, deren Argument kein konstanter Wert ist.
+- Abfragen, bei denen Spalten durch arithmetische Operatoren oder Zeichenfolgenverkettungsoperatoren verknüpft werden.
+- Abfragen, die Variablen vergleichen, deren Werte zum Zeitpunkt der Kompilierung oder Optimierung nicht bekannt sind.
+
+Dieser Artikel veranschaulicht, wie Sie die beste Konfiguration für die Kardinalitätsschätzung für Ihr System bewerten und auswählen. Die meisten Systeme profitieren von der neuesten Kardinalitätsschätzung, da sie die genaueste ist. Die Kardinalitätsschätzung sagt vorher, wie viele Zeilen eine Abfrage wahrscheinlich zurückgibt. Die Vorhersage der Kardinalität wird vom Abfrageoptimierer verwendet, um einen optimalen Abfrageplan zu generieren. Mit genaueren Schätzungen kann der Abfrageoptimierer in der Regel einen besseren Abfrageplan erzeugen.  
   
 Möglicherweise existiert in Ihrem Anwendungssystem eine wichtige Abfrage, deren Plan während einer neuen Kardinalitätsschätzung in einen langsameren Plan geändert wird. Hier einige Beispiele für eine solche Abfrage:  
   

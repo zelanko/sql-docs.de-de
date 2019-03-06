@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22ea90a5876c6c824f7e80683503f1f8bf863675
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 374a32ab01e201a093702469a4e03445045203d9
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017071"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662774"
 ---
 # <a name="binary-and-varbinary-transact-sql"></a>binary und varbinary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,12 +35,12 @@ ms.locfileid: "56017071"
 Binäre Datentypen mit fester Länge bzw. mit variabler Länge.
   
 ## <a name="arguments"></a>Argumente  
-**binary** [ ( *n* ) ] Binärdaten mit einer festen Länge von *n* Bytes, wobei *n* einen Wert von 1 bis 8000 aufweisen kann. Die Speichergröße beträgt *n* Byte.
+**binary** [ ( _n_ ) ] Binärdaten mit einer festen Länge von _n_ Bytes, wobei _n_ einen Wert von 1 bis 8000 aufweisen kann. Die Speichergröße beträgt _n_ Byte.
   
-**varbinary** [ ( *n* | **max**) ] Binärdaten variabler Länge. *n* kann einen Wert von 1 bis 8000 aufweisen. **max** gibt an, dass die maximale Speichergröße 2^31-1 Byte beträgt. Die Speicherplatzgröße ist die tatsächliche Länge der eingegebenen Daten + 2 Byte. Die eingegebenen Daten können 0 Byte lang sein. Das ANSI SQL-Synonym für **varbinary** ist **binary varying**.
+**varbinary** [ ( _n_ | **max**) ] Binärdaten variabler Länge. _n_ kann einen Wert von 1 bis 8000 aufweisen. **max** gibt an, dass die maximale Speichergröße 2^31-1 Byte beträgt. Die Speicherplatzgröße ist die tatsächliche Länge der eingegebenen Daten + 2 Byte. Die eingegebenen Daten können 0 Byte lang sein. Das ANSI SQL-Synonym für **varbinary** ist **binary varying**.
   
 ## <a name="remarks"></a>Remarks  
-Wenn *n* in einer Datendefinitions- oder Variablendeklarationsanweisung nicht angegeben ist, beträgt die Standardlänge 1. Wenn *n* in der CAST-Funktion nicht angegeben ist, beträgt die Standardlänge 30.
+Die Standardlänge beträgt 1, wenn _n_ in einer Datendefinitions- oder Variablendeklarationsanweisung nicht angegeben ist. Wenn _n_ in der CAST-Funktion nicht angegeben ist, beträgt die Standardlänge 30.
 
 | Datentyp | Verwenden Sie |
 | --- | --- |
@@ -50,11 +50,23 @@ Wenn *n* in einer Datendefinitions- oder Variablendeklarationsanweisung nicht an
 
 
 ## <a name="converting-binary-and-varbinary-data"></a>Konvertieren von binary- und varbinary-Daten
-Wenn Daten von einem Zeichenfolgendatentyp (**char**, **varchar**, **nchar**, **nvarchar**, **binary**, **varbinary**, **text**, **ntext** oder **image**) in einen **binary**- oder **varbinary**-Datentyp anderer Länge konvertiert werden, füllt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Daten nach rechts auf oder schneidet sie rechts ab. Bei der Konvertierung anderer Datentypen in **binary** oder **varbinary** werden die Daten nach links aufgefüllt oder links abgeschnitten. Für die Auffüllung werden hexadezimale Nullen verwendet.
+Wenn Daten von einem string-Datentyp in einen **binary**- oder **varbinary**-Datentyp anderer Länge konvertiert werden, füllt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Daten nach rechts auf oder schneidet sie rechts ab. Zu diesen String-Datentypen zählen:
+
+* **char** 
+* **varchar**
+* **nchar**
+* **nvarchar**
+* **binary**
+* **varbinary**
+* **text**
+* **ntext**
+* **image**
+
+Bei der Konvertierung anderer Datentypen in **binary** oder **varbinary** werden die Daten nach links aufgefüllt oder links abgeschnitten. Für die Auffüllung werden hexadezimale Nullen verwendet.
   
-Das Konvertieren von Daten in die Datentypen **binary** und **varbinary** ist hilfreich, wenn **binary**-Daten die einfachste Möglichkeit zum Verschieben von Daten darstellen. Beim Konvertieren aller Werte eines beliebigen Datentyps in einen ausreichend großen binären Wert und dem anschließenden Konvertieren in den ursprünglichen Datentyp ergibt sich stets derselbe Wert, wenn beide Konvertierungen mit der gleichen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt werden. Die binäre Darstellung eines Werts kann sich zwischen den Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ändern.
+Das Konvertieren von Daten in die Datentypen **binary** und **varbinary** ist hilfreich, wenn **binary**-Daten die einfachste Möglichkeit zum Verschieben von Daten darstellen. Irgendwann konvertieren Sie möglicherweise einen Werttyp in einen binären Wert mit ausreichender Größe und konvertieren den Wert dann wieder zurück. Diese Konvertierung ergibt stets denselben Wert, wenn beide Konvertierungen mit der gleichen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt werden. Die binäre Darstellung eines Werts kann sich zwischen den Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ändern.
   
-Sie können die Datentypen **int**, **smallint** und **tinyint** in die Datentypen **binary** oder **varbinary** konvertieren. Wenn Sie allerdings den **binary**-Wert wieder zurück in einen ganzzahligen Wert konvertieren, kann das Ergebnis von der ursprünglichen ganzen Zahl abweichen, falls der Wert abgeschnitten wurde. Die folgende SELECT-Anweisung zeigt beispielsweise, dass der ganzzahlige Wert `123456` in der Regel als binärer Wert `0x0001e240` gespeichert wird:
+Sie können die Datentypen **int**, **smallint** und **tinyint** in die Datentypen **binary** oder **varbinary** konvertieren. Wenn Sie allerdings den **binary**-Wert wieder zurück in einen ganzzahligen Wert konvertieren, kann das Ergebnis von der ursprünglichen Ganzzahl abweichen, falls der Wert abgeschnitten wurde. Die folgende SELECT-Anweisung zeigt beispielsweise, dass der ganzzahlige Wert `123456` als binärer Wert `0x0001e240` gespeichert wird:
   
 ```sql
 SELECT CAST( 123456 AS BINARY(4) );  

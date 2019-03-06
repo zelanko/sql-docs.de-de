@@ -22,22 +22,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 111d7cb0790bd0cbdb9c9bb17a6ebcb78ac3b04a
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: ab19d51f1032ad251cb1867cbe2326652d174f29
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54298607"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802197"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  > [!div class="nextstepaction"]
-  > [Senden Sie uns Ihr Feedback zum Inhaltsverzeichnis der SQL-Dokumentation!](https://aka.ms/sqldocsurvey)
-
 Wertet die Argumente in der vorliegenden Reihenfolge aus und gibt den aktuellen Wert des ersten Ausdrucks zurück, der anfangs nicht `NULL` ergibt. `SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');` gibt beispielsweise den dritten Wert zurück, weil der dritte der erste Wert ist, der nicht NULL ist. 
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,30 +43,30 @@ COALESCE ( expression [ ,...n ] )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *expression*  
- Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) beliebigen Typs.  
+_expression_  
+Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) beliebigen Typs.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- Gibt den Datentyp des *expression*-Ausdrucks zurück, der in der Datentyprangfolge am höchsten steht. Falls für alle Ausdrücke NULL nicht zulässig ist, wird das Ergebnis entsprechend eingegeben.  
+Gibt den Datentyp des _expression_-Ausdrucks zurück, der in der Datentyprangfolge am höchsten steht. Falls für alle Ausdrücke NULL nicht zulässig ist, wird das Ergebnis entsprechend eingegeben.  
   
 ## <a name="remarks"></a>Remarks  
- `COALESCE` gibt `NULL` zurück, wenn alle Argumente `NULL` sind. Mindestens einer der NULL-Werte muss ein typisierter `NULL`-Wert sein.  
+`COALESCE` gibt `NULL` zurück, wenn alle Argumente `NULL` sind. Mindestens einer der NULL-Werte muss ein typisierter `NULL`-Wert sein.  
   
 ## <a name="comparing-coalesce-and-case"></a>Vergleich zwischen COALESCE und CASE  
- Der `COALESCE`-Ausdruck ist eine syntaktische Kurzform für den `CASE`-Ausdruck.  Dies bedeutet, dass der Code `COALESCE`(*expression1*,*...n*) vom Abfrageoptimierer in den folgenden `CASE`-Ausdruck umgeschrieben wird:  
+Der `COALESCE`-Ausdruck ist eine syntaktische Kurzform für den `CASE`-Ausdruck.  Dies bedeutet, dass der Code `COALESCE`(_expression1_,_...n_) vom Abfrageoptimierer in den folgenden `CASE`-Ausdruck umgeschrieben wird:  
   
- ```sql  
- CASE  
- WHEN (expression1 IS NOT NULL) THEN expression1  
- WHEN (expression2 IS NOT NULL) THEN expression2  
- ...  
- ELSE expressionN  
- END  
- ```  
+```sql  
+CASE  
+WHEN (expression1 IS NOT NULL) THEN expression1  
+WHEN (expression2 IS NOT NULL) THEN expression2  
+...  
+ELSE expressionN  
+END  
+```  
   
- Das bedeutet, dass die Eingabewerte (*expression1*, *expression2*, *expressionN* usw.) mehrmals ausgewertet werden. Außerdem wird ein Wertausdruck, der eine Unterabfrage enthält, gemäß dem SQL-Standard als nicht deterministisch angesehen und die Unterabfrage zweimal ausgewertet. In beiden Fällen können zwischen der ersten Auswertung und nachfolgenden Auswertungen unterschiedliche Ergebnisse zurückgegeben werden.  
+Daher werden die Eingabewerte (_expression1_, _expression2_, _expressionN_ usw.) mehrmals ausgewertet. Außerdem wird ein Wertausdruck, der eine Unterabfrage enthält, als nicht deterministisch angesehen, und die Unterabfrage wird zweimal ausgewertet. Dieses Ergebnis entspricht dem SQL-Standard. In beiden Fällen können zwischen der ersten Auswertung und kommenden Auswertungen unterschiedliche Ergebnisse zurückgegeben werden.  
   
- Beispiel: Wenn der Code `COALESCE((subquery), 1)` ausgeführt wird, wird die Unterabfrage zweimal ausgewertet. Folglich können Sie abhängig von der Isolationsstufe der Abfrage unterschiedliche Ergebnisse erhalten. Beispielsweise kann der Code auf der `READ COMMITTED`-Isolationsstufe in einer Mehrbenutzerumgebung `NULL` zurückgeben. Um sicherzustellen, dass beständige Ergebnisse zurückgegeben werden, verwenden Sie die `SNAPSHOT ISOLATION`-Isolationsstufe oder ersetzen `COALESCE` durch die `ISNULL`-Funktion. Alternativ können Sie die Abfrage umschreiben, um die Unterabfrage wie im folgenden Beispiel gezeigt in eine untergeordnete SELECT-Anweisung zu verschieben.  
+Beispiel: Wenn der Code `COALESCE((subquery), 1)` ausgeführt wird, wird die Unterabfrage zweimal ausgewertet. Folglich können Sie abhängig von der Isolationsstufe der Abfrage unterschiedliche Ergebnisse erhalten. Beispielsweise kann der Code auf der `READ COMMITTED`-Isolationsstufe in einer Mehrbenutzerumgebung `NULL` zurückgeben. Um sicherzustellen, dass beständige Ergebnisse zurückgegeben werden, verwenden Sie die `SNAPSHOT ISOLATION`-Isolationsstufe oder ersetzen `COALESCE` durch die `ISNULL`-Funktion. Alternativ können Sie die Abfrage neu schreiben, um die Unterabfrage in eine untergeordnete SELECT-Anweisung zu verschieben, wie im folgenden Beispiel gezeigt:  
   
 ```sql  
 SELECT CASE WHEN x IS NOT NULL THEN x ELSE 1 END  
@@ -81,13 +78,13 @@ SELECT (SELECT Nullable FROM Demo WHERE SomeCol = 1) AS x
 ```  
   
 ## <a name="comparing-coalesce-and-isnull"></a>Vergleich zwischen COALESCE und ISNULL  
- Die `ISNULL`-Funktion und der `COALESCE`-Ausdruck dienen einem ähnlichen Zweck, können jedoch ein unterschiedliches Verhalten aufweisen.  
+Die `ISNULL`-Funktion und der `COALESCE`-Ausdruck dienen einem ähnlichen Zweck, können jedoch ein unterschiedliches Verhalten aufweisen.  
   
 1.  Da `ISNULL` eine Funktion ist, wird sie nur einmal ausgewertet.  Die Eingabewerte können wie oben beschrieben für den `COALESCE`-Ausdruck mehrmals ausgewertet werden.  
   
 2.  Die Datentypen des resultierenden Ausdrucks werden auf unterschiedliche Weise bestimmt. `ISNULL` verwendet den Datentyp des ersten Parameters, während bei `COALESCE` die Regeln des `CASE`-Ausdrucks befolgt werden und der Datentyp des Werts mit der höchsten Rangfolge zurückgegeben wird.  
   
-3.  Die NULL-Zulässigkeit des Ergebnisausdrucks ist bei `ISNULL` und `COALESCE` unterschiedlich. Beim `ISNULL`-Rückgabewert wird (in der Annahme, dass er keine NULL-Werte zulässt) immer davon ausgegangen, dass er NOT NULL ist, während `COALESCE` mit Parametern ungleich NULL als `NULL` betrachtet wird. Daher weisen der `ISNULL(NULL, 1)`-Ausdruck und der `COALESCE(NULL, 1)`-Ausdruck unterschiedliche Werte für die NULL-Zulässigkeit auf, obwohl sie äquivalent sind. Dieser Unterschied macht sich bemerkbar, wenn Sie die Ausdrücke in berechneten Spalten verwenden, Schlüsseleinschränkungen erstellen oder den Rückgabewert einer Skalar-UDF als deterministisch festlegen, sodass er wie im folgenden Beispiel veranschaulicht indiziert werden kann:  
+3.  Die NULL-Zulässigkeit des Ergebnisausdrucks ist bei `ISNULL` und `COALESCE` unterschiedlich. Beim `ISNULL`-Rückgabewert wird (in der Annahme, dass er keine NULL-Werte zulässt) immer davon ausgegangen, dass er NOT NULL ist. Im Gegensatz dazu wird `COALESCE` mit Parametern ungleich NULL als `NULL` betrachtet. Daher weisen der `ISNULL(NULL, 1)`-Ausdruck und der `COALESCE(NULL, 1)`-Ausdruck unterschiedliche Werte für die NULL-Zulässigkeit auf, obwohl sie gleich sind. Diese Werte verhalten sich unterschiedlich, wenn Sie die Ausdrücke in berechneten Spalten verwenden, Schlüsseleinschränkungen erstellen oder den Rückgabewert einer Skalar-UDF als deterministisch festlegen, sodass die Indizierung wie im folgenden Beispiel erfolgen kann:  
   
     ```sql  
     USE tempdb;  
@@ -115,12 +112,12 @@ SELECT (SELECT Nullable FROM Demo WHERE SomeCol = 1) AS x
   
 4.  Überprüfungen für `ISNULL` und `COALESCE` sind ebenfalls unterschiedlich. Beispielsweise wird ein `NULL`-Wert für `ISNULL` in **int** konvertiert, während Sie für `COALESCE` einen Datentyp angeben müssen.  
   
-5.  `ISNULL` akzeptiert nur zwei Parameter, während für `COALESCE` eine beliebige Anzahl von Parametern verwendet werden kann.  
+5.  `ISNULL` verwendet nur zwei Parameter. Im Gegensatz dazu ist bei `COALESCE` die Parameteranzahl variabel.  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-running-a-simple-example"></a>A. Ausführen eines einfachen Beispiels  
- Im folgenden Beispiel wird veranschaulicht, wie `COALESCE` die Daten aus der ersten Spalte auswählt, die einen Wert ungleich NULL aufweist. In diesem Beispiel wird die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank verwendet.  
+Im folgenden Beispiel wird veranschaulicht, wie `COALESCE` die Daten aus der ersten Spalte auswählt, die einen Wert ungleich NULL aufweist. In diesem Beispiel wird die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank verwendet.  
   
 ```sql  
 SELECT Name, Class, Color, ProductNumber,  
@@ -129,7 +126,7 @@ FROM Production.Product;
 ```  
   
 ### <a name="b-running-a-complex-example"></a>B. Ausführen eines komplexen Beispiels  
- Im folgenden Beispiel enthält die `wages`-Tabelle drei Spalten mit Informationen zu den Jahresgehältern der Angestellten: den Stundensatz, das Gehalt und die Provision. Allerdings wird ein Angestellter nur nach einem dieser Gehaltstypen bezahlt. Um die Gesamtsumme aller Auszahlungen an die Angestellten zu bestimmen, verwenden Sie `COALESCE`, damit Sie nur die Werte ungleich NULL in den Spalten `hourly_wage`, `salary` und `commission` erhalten.  
+Im folgenden Beispiel enthält die `wages`-Tabelle drei Spalten mit Informationen zu den Jahresgehältern der Angestellten: den Stundensatz, das Gehalt und die Provision. Allerdings wird ein Angestellter nur nach einem dieser Gehaltstypen bezahlt. Um die Gesamtsumme aller Auszahlungen an die Angestellten zu bestimmen, verwenden Sie `COALESCE`, damit Sie nur die Werte ungleich NULL in den Spalten `hourly_wage`, `salary` und `commission` erhalten.  
   
 ```sql  
 SET NOCOUNT ON;  
@@ -172,59 +169,59 @@ ORDER BY 'Total Salary';
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```   
- Total Salary  
- ------------  
- 10000.00  
- 20000.00  
- 20800.00  
- 30000.00  
- 40000.00  
- 41600.00  
- 45000.00  
- 50000.00  
- 56000.00  
- 62400.00  
- 83200.00  
- 120000.00  
+```   
+Total Salary  
+------------  
+10000.00  
+20000.00  
+20800.00  
+30000.00  
+40000.00  
+41600.00  
+45000.00  
+50000.00  
+56000.00  
+62400.00  
+83200.00  
+120000.00  
   
- (12 row(s) affected)
- ```  
+(12 row(s) affected)
+```  
   
 ### <a name="c-simple-example"></a>C: Einfaches Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie `COALESCE` die Daten aus der ersten Spalte auswählt, die einen Wert ungleich NULL aufweist. In diesem Beispiel wird angenommen, dass die `Products`-Tabelle die folgenden Daten enthält:  
+Im folgenden Beispiel wird veranschaulicht, wie `COALESCE` die Daten aus der ersten Spalte auswählt, die einen Wert ungleich NULL aufweist. In diesem Beispiel wird angenommen, dass die `Products`-Tabelle die folgenden Daten enthält:  
   
- ```  
- Name         Color      ProductNumber  
- ------------ ---------- -------------  
- Socks, Mens  NULL       PN1278  
- Socks, Mens  Blue       PN1965  
- NULL         White      PN9876
- ```  
-  
- Wir führen anschließend die folgende COALESCE-Abfrage aus:  
+```  
+Name         Color      ProductNumber  
+------------ ---------- -------------  
+Socks, Mens  NULL       PN1278  
+Socks, Mens  Blue       PN1965  
+NULL         White      PN9876
+```  
+ 
+Wir führen anschließend die folgende COALESCE-Abfrage aus:  
   
 ```sql  
 SELECT Name, Color, ProductNumber, COALESCE(Color, ProductNumber) AS FirstNotNull   
 FROM Products ;  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```  
- Name         Color      ProductNumber  FirstNotNull  
- ------------ ---------- -------------  ------------  
- Socks, Mens  NULL       PN1278         PN1278  
- Socks, Mens  Blue       PN1965         Blue  
- NULL         White      PN9876         White
- ```  
+```  
+Name         Color      ProductNumber  FirstNotNull  
+------------ ---------- -------------  ------------  
+Socks, Mens  NULL       PN1278         PN1278  
+Socks, Mens  Blue       PN1965         Blue  
+NULL         White      PN9876         White
+```  
   
- Beachten Sie, dass der `FirstNotNull`-Wert in der ersten Zeile `PN1278`, nicht `Socks, Mens` ist. Grund hierfür ist, dass die `Name`-Spalte im Beispiel nicht als Parameter für `COALESCE` angegeben wurde.  
+Beachten Sie, dass der `FirstNotNull`-Wert in der ersten Zeile `PN1278`, nicht `Socks, Mens` ist. Grund hierfür ist, dass die `Name`-Spalte im Beispiel nicht als Parameter für `COALESCE` angegeben wurde.  
   
 ### <a name="d-complex-example"></a>D: Komplexes Beispiel  
- Im folgenden Beispiel werden die Werte in drei Spalten mit `COALESCE` verglichen und nur die Werte ungleich NULL zurückgegeben, die in den Spalten gefunden wurden.  
+Im folgenden Beispiel werden die Werte in drei Spalten mit `COALESCE` verglichen und nur die Werte ungleich NULL zurückgegeben, die in den Spalten gefunden wurden.  
   
 ```sql  
 CREATE TABLE dbo.wages  
@@ -278,27 +275,27 @@ FROM dbo.wages
 ORDER BY TotalSalary;  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
- Total Salary  
- ------------  
- 10000.00  
- 20000.00  
- 20800.00  
- 30000.00  
- 40000.00  
- 41600.00  
- 45000.00  
- 50000.00  
- 56000.00  
- 62400.00  
- 83200.00  
- 120000.00
- ```  
+```
+Total Salary  
+------------  
+10000.00  
+20000.00  
+20800.00  
+30000.00  
+40000.00  
+41600.00  
+45000.00  
+50000.00  
+56000.00  
+62400.00  
+83200.00  
+120000.00
+```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [ISNULL &#40;Transact-SQL&#41;](../../t-sql/functions/isnull-transact-sql.md)   
- [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)  
+[ISNULL &#40;Transact-SQL&#41;](../../t-sql/functions/isnull-transact-sql.md)   
+[CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)  
   
   

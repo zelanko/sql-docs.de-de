@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2d89750c6ddac45af82824b2449c9e415561814
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d44e6621e4d5f9535752cf8b6f74c4dbcd404d8a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031000"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802257"
 ---
 # <a name="smalldatetime-transact-sql"></a>smalldatetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,7 @@ Definiert ein Datum, das mit einer Uhrzeit kombiniert wird. Die Uhrzeit basiert 
 |Standardmäßige Formate der Zeichenfolgenliterale<br /><br /> (wird für Downlevelclients verwendet)|Nicht verfügbar|  
 |Datumsbereich|1900-01-01 bis 2079-06-06<br /><br /> Zwischen dem 1. Januar 1900 und dem 6. Juni 2079|  
 |Uhrzeitbereich|00:00:00 bis 23:59:59<br /><br /> 2007-05-09 23:59:59 wird aufgerundet auf<br /><br /> 2007-05-10 00:00:00|  
-|Elementbereiche|Bei YYYY handelt es sich um vier Ziffern im Berich von 1900 bis 2079, die ein Jahr darstellen.<br /><br /> Bei MM handelt es sich um zwei Ziffern im Bereich von 01 bis 12, die im angegebenen Jahr einen Monat darstellen.<br /><br /> Bei DD handelt es sich um zwei Ziffern im Bereich von 01 bis 31, die im angegebenen Monat einen Tag darstellen.<br /><br /> Bei hh handelt es sich um zwei Ziffern im Bereich von 00 bis 23, die die Stunde darstellen.<br /><br /> Bei mm handelt es sich um zwei Ziffern im Bereich von 00 bis 59, die die Minute darstellen.<br /><br /> Bei ss handelt es sich um zwei Ziffern im Bereich von 00 bis 59, die die Sekunde darstellen. Werte, die kleiner oder gleich 29,998 Sekunden sind, werden auf die nächste Minute abgerundet; Werte, die größer oder gleich 29,999 Sekunden sind, werden auf die nächste Minute aufgerundet.|  
+|Elementbereiche|Bei YYYY handelt es sich um vier Ziffern im Berich von 1900 bis 2079, die ein Jahr darstellen.<br /><br /> Bei MM handelt es sich um zwei Ziffern im Bereich von 01 bis 12, die im angegebenen Jahr einen Monat darstellen.<br /><br /> Bei DD handelt es sich um zwei Ziffern im Bereich von 01 bis 31, die im angegebenen Monat einen Tag darstellen.<br /><br /> Bei hh handelt es sich um zwei Ziffern im Bereich von 00 bis 23, die die Stunde darstellen.<br /><br /> Bei mm handelt es sich um zwei Ziffern im Bereich von 00 bis 59, die die Minute darstellen.<br /><br /> Bei ss handelt es sich um zwei Ziffern im Bereich von 00 bis 59, die die Sekunde darstellen. Werte, die kleiner oder gleich 29.998 Sekunden sind, werden auf die nächste Minute abgerundet. Werte, die gleich oder größer 29.999 Sekunden sind, werden auf die nächste Minute aufgerundet.|  
 |Zeichenlänge|Maximal 19 Positionen|  
 |Speichergröße|4 Bytes, feste Größe|  
 |Genauigkeit|Eine Minute|  
@@ -58,10 +58,10 @@ Definiert ein Datum, das mit einer Uhrzeit kombiniert wird. Die Uhrzeit basiert 
 |Beachtung der Sommerzeit|Nein|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>Kompatibilität mit ANSI und ISO 8601  
-**smalldatetime** ist nicht mit ANSI oder ISO 8601 kompatibel.
+**smalldatetime** ist nicht konform mit ANSI oder ISO 8601.
   
 ## <a name="converting-date-and-time-data"></a>Konvertieren von Datums- und Uhrzeitdaten
-Beim Konvertieren in date- und time-Datentypen lehnt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alle Werte ab, die nicht als Datum oder Uhrzeit erkannt werden. Informationen zur Verwendung der CAST-Funktion und der CONVERT-Funktion mit Datums- und Uhrzeitdaten finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
+Beim Konvertieren in Datums- und Zeitdatentypen lehnt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alle Werte ab, die nicht als Datum oder Uhrzeit erkannt werden. Informationen zur Verwendung der CAST-Funktion und der CONVERT-Funktion mit Datums- und Uhrzeitdaten finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
   
 ### <a name="converting-smalldatetime-to-other-date-and-time-types"></a>Konvertieren von smalldatetime-Werten in andere Datums- und Uhrzeittypen
 Der folgende Abschnitt veranschaulicht die Abläufe bei der Konvertierung des **smalldatetime**-Datentyps in andere Datums- und Uhrzeitdatentypen.
@@ -191,5 +191,4 @@ SELECT
   
 ## <a name="see-also"></a>Siehe auch
 [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
-  
   

@@ -12,12 +12,12 @@ ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a293914cad908b8c4d7fc295bf1e0846446dc2ec
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: eddf09ca0ff3f07f058b439c49a69eea366add85
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991823"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590405"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>Change Data Capture und andere SQL Server-Funktionen
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "53991823"
   
 2.  Erstellen Sie den Erfassungs- und Cleanupauftrag in der neuen Prinzipaldatenbank (der vorherigen Spiegeldatenbank). Verwenden Sie zum Erstellen der Aufträge die gespeicherte [sp_cdc_add_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md) -Prozedur.  
   
- Um die aktuelle Konfiguration eines Cleanup- oder Erfassungsauftrags anzuzeigen, verwenden Sie die gespeicherte [sys.sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md) -Prozedur in der neuen Prinzipalserverinstanz. Für eine gegebene Datenbank heißt der (Capture-Auftrag) cdc.*Datenbankname*_capture und der Cleanupauftrag cdc.*Datenbankname*_cleanup wobei *Datenbankname* der Name der entsprechenden Datenbank ist.  
+ Um die aktuelle Konfiguration eines Cleanup- oder Erfassungsauftrags anzuzeigen, verwenden Sie die gespeicherte [sys.sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md) -Prozedur in der neuen Prinzipalserverinstanz. Für eine gegebene Datenbank heißt der Erfassungsauftrag cdc.*Datenbank\_name*\_capture und der Cleanupauftrag cdc.*Datenbank\_name*\_cleanup wobei *Datenbank_name* der Name der entsprechenden Datenbank ist.  
   
- Um die Konfiguration eines Auftrags zu ändern, verwenden Sie die gespeicherte [sys.sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md)-Prozedur.  
+ Um die Konfiguration eines Auftrags zu ändern, verwenden Sie die gespeicherte [sys.sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md) -Prozedur.  
   
  Informationen zur Datenbankspiegelung finden Sie unter [ Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
