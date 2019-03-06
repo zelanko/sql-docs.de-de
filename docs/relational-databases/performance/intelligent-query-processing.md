@@ -2,7 +2,7 @@
 title: Intelligente Abfrageverarbeitung in SQL-Datenbanken von Microsoft | Microsoft-Dokumentation
 description: Features zur intelligenten Abfrageverarbeitung, die die Abfrageleistung in SQL Server und in Azure SQL-Datenbank verbessern
 ms.custom: ''
-ms.date: 02/14/2019
+ms.date: 02/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dc47ad30edc0eb4092aa1f92fef703c95cb34593
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1b92bc15079fcc85212ea3d1b51be64a3348a4b1
+ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291658"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305368"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Intelligente Abfrageverarbeitung in SQL-Datenbanken
 
@@ -29,13 +29,14 @@ Die Featurefamilie für die intelligente Abfrageverarbeitung (QP) umfasst Funkti
 | **IQP-Feature** | **Unterstützt in Azure SQL-Datenbank** | **Unterstützt in SQL Server** |
 | --- | --- | --- |
 | [Adaptive Joins (Batchmodus)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/adaptive-query-processing?view=sql-server-2017#batch-mode-adaptive-joins) | Ja, unter Kompatibilitätsgrad 140| Ja,ab SQL Server 2017 unter Kompatibilitätsgrad 140|
+| [Approximate Count Distinct](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#approximate-query-processing) | Ja, öffentliche Vorschauversion| Ja, ab SQL Server 2019 CTP 2.0, öffentliche Vorschauversion|
+| [Batchmodus bei Rowstore](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | Ja, unter Kompatibilitätsgrad 150, öffentliche Vorschauversion| Ja,ab SQL Server 2019 CTP 2.0 unter Kompatibilitätsgrad 150, öffentliche Vorschauversion|
 | [Verschachtelte Ausführung](https://docs.microsoft.com/en-us/sql/relational-databases/performance/adaptive-query-processing?view=sql-server-2017#interleaved-execution-for-multi-statement-table-valued-functions) | Ja, unter Kompatibilitätsgrad 140| Ja,ab SQL Server 2017 unter Kompatibilitätsgrad 140|
 | [Feedback zur Speicherzuweisung (Batchmodus)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/adaptive-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | Ja, unter Kompatibilitätsgrad 140| Ja,ab SQL Server 2017 unter Kompatibilitätsgrad 140|
 | [Feedback zur Speicherzuweisung (Zeilenmodus)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/adaptive-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | Ja, unter Kompatibilitätsgrad 150, öffentliche Vorschauversion| Ja,ab SQL Server 2019 CTP 2.0 unter Kompatibilitätsgrad 150, öffentliche Vorschauversion|
-| [Approximate Count Distinct](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#approximate-query-processing) | Ja, öffentliche Vorschauversion| Ja, ab SQL Server 2019 CTP 2.0, öffentliche Vorschauversion|
-| [Verzögerte Kompilierung von Tabellenvariablen](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | Ja, unter Kompatibilitätsgrad 150, öffentliche Vorschauversion| Ja,ab SQL Server 2019 CTP 2.0 unter Kompatibilitätsgrad 150, öffentliche Vorschauversion|
-| [Batchmodus bei Rowstore](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | Ja, unter Kompatibilitätsgrad 150, öffentliche Vorschauversion| Ja,ab SQL Server 2019 CTP 2.0 unter Kompatibilitätsgrad 150, öffentliche Vorschauversion|
 | [Inlining benutzerdefinierter Skalarfunktionen](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | Nein, aber für ein zukünftiges Update geplant | Ja,ab SQL Server 2019 CTP 2.1 unter Kompatibilitätsgrad 150, öffentliche Vorschauversion|
+| [Verzögerte Kompilierung von Tabellenvariablen](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | Ja, unter Kompatibilitätsgrad 150, öffentliche Vorschauversion| Ja,ab SQL Server 2019 CTP 2.0 unter Kompatibilitätsgrad 150, öffentliche Vorschauversion|
+
 
 
 ## <a name="adaptive-query-processing"></a>Adaptive Abfrageverarbeitung
@@ -101,6 +102,8 @@ Weitere Informationen finden Sie unter [APPROX_COUNT_DISTINCT (Transact-SQL)](..
 
 > [!NOTE]
 > Batchmodus bei Rowstore ist eine öffentliche Previewfunktion.  
+
+Batchmodus bei Rowstore ermöglicht die Ausführung im Batchmodus für Analyseworkloads, die keine Columnstore-Indizes erfordern.  Dieses Feature unterstützt die Ausführung im Batchmodus und Bitmapfilter für On-Disk-Heaps und B-Struktur-Indizes. Batchmodus bei Rowstore ermöglicht die Unterstützung aller vorhandenen batchmodusfähigen Operatoren.
 
 ### <a name="background"></a>Hintergrund
 
