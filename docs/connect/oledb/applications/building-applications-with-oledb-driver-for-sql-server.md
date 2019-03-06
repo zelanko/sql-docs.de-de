@@ -2,7 +2,7 @@
 title: Erstellen von Anwendungen mit dem OLE DB-Treiber für SQL Server | Microsoft-Dokumentation
 description: Erstellen von Anwendungen mit dem OLE DB-Treiber für SQL Server
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 8be648639f3b345f6d6eb16c6f51c58064d9270a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2e9b88c12a4abb25fed87c8f273a9949b85c4ee
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691785"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744410"
 ---
 # <a name="building-applications-with-ole-db-driver-for-sql-server"></a>Erstellen von Anwendungen mit dem OLE DB-Treiber für SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,10 +40,10 @@ ms.locfileid: "47691785"
  [Verwenden von Verbindungszeichenfolgen-Schlüsselwörtern mit dem OLE DB-Treiber für SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)  
  Erläutert die verschiedenen Verbindungszeichenfolgen, die beim Herstellen einer Verbindung zu einer Datenbank mit dem OLE DB-Treiber für SQL Server verwendet werden können.  
 
- [Verwenden des OLE DB-Treiber für SQL Server-Headers und der -Bibliotheksdateien](../../oledb/applications/using-the-oledb-driver-for-sql-server-header-and-library-files.md)  
+ [Verwenden des OLE DB-Treibers für SQL Server-Header- und -Bibliotheksdateien](../../oledb/applications/using-the-oledb-driver-for-sql-server-header-and-library-files.md)  
  Erläutert, wie der OLE DB-Treiber für SQL Server-Header und Bibliotheksdateien innerhalb einer Anwendung.  
 
- [Aktualisieren einer Anwendung auf OLE DB-Treiber für SQL Server über MDAC](../../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)  
+ [Aktualisieren einer Anwendung auf den OLE DB-Treiber für SQL Server über MDAC](../../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)  
  Erläutert die Unterschiede zwischen OLE DB-Treiber für SQL Server und MDAC und Probleme, die beim Aktualisieren von MDAC auf OLE DB-Treiber für SQL Server berücksichtigt werden sollten.  
 
  [Aktualisieren einer Anwendung von SQL Server 2005 Native Client](../../oledb/applications/updating-an-application-from-sql-server-2005-native-client.md)  
@@ -55,6 +55,6 @@ ms.locfileid: "47691785"
  [Unterstützungsrichtlinien des OLE DB-Treibers für SQL Server](../../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md)  
  Erläutert die Verwendung verschiedener Datenzugriffskomponenten mit verschiedenen Versionen des OLE DB-Treiber für SQL Server verwendet werden können.  
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [OLE DB-Treiber für SQL Server](../../oledb/oledb-driver-for-sql-server.md)     
  [Vorgehensweisen für OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  

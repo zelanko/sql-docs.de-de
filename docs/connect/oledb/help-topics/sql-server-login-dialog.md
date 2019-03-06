@@ -1,6 +1,6 @@
 ---
 title: SQL Server-Anmeldedialogfeld (OLE DB) | Microsoft-Dokumentation
-description: Dialogfeld „SQL Server-Anmeldung“ (ODBC)
+description: Verwenden des Dialogfelds „SQL Server-Anmeldung“
 ms.custom: ''
 ms.date: 01/21/2019
 ms.prod: sql
@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 02/23/2019
 ms.locfileid: "56744832"
 ---
-# <a name="sql-server-login-dialog-box"></a>SQL Server-Anmeldedialogfeld
+# <a name="sql-server-login-dialog-box"></a>Dialogfeld „SQL Server-Anmeldung“
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
@@ -43,12 +43,12 @@ Wenn Sie versuchen, eine Verbindung herstellen, ohne ausreichende Informationen 
 |Ändern des Kennworts|Wenn dieses Kontrollkästchen aktiviert, können **neues Kennwort** und **neues Kennwort bestätigen** Textfelder.|
 |Neues Kennwort|Gibt das neue Kennwort an.|
 |Neues Kennwort bestätigen|Gibt das neue Kennwort zur Bestätigung ein zweites Mal an.|
-|Datenbank|Gibt die Standarddatenbank an, die für die Verbindung verwendet werden soll. Diese Einstellung überschreibt die für die Anmeldung auf dem Server festgelegte Standarddatenbank. Wenn keine Datenbank angegeben ist, wird für die Verbindung die Standarddatenbank verwendet, die für die Anmeldung auf dem Server angegeben ist.|
+|Datenbank|Wählen Sie die Standarddatenbank aus, die für die Verbindung verwendet werden soll, oder geben Sie sie ein. Diese Einstellung überschreibt die für die Anmeldung auf dem Server festgelegte Standarddatenbank. Wenn keine Datenbank angegeben ist, wird für die Verbindung die Standarddatenbank verwendet, die für die Anmeldung auf dem Server angegeben ist.|
 |Spiegelserver|Gibt den Namen des Failoverpartners der zu spiegelnden Datenbank an.|
 |Spiegelserver-SPN|Optional können Sie einen SPN für den Spiegelserver angeben. Der SPN für den Spiegelserver wird zur gegenseitigen Authentifizierung zwischen Client und Server verwendet.|
 |Sprache|Gibt die Landessprache an, die für SQL Server-Systemmeldungen verwendet werden soll. Auf dem Computer, auf dem SQL Server ausgeführt wird, muss dies Sprache installiert sein. Diese Einstellung überschreibt die für die Anmeldung auf dem Server festgelegte Standardsprache. Wenn keine Sprache angegeben ist, wird für die Verbindung die Standardsprache verwendet, die für die Anmeldung auf dem Server angegeben ist.|
-|ApplicationName|(Optional) Gibt den Anwendungsnamen an, der in der Spalte **program_name** in der Zeile für diese Verbindung in **sys.sysprocesses** gespeichert werden soll.|
-|Workstation ID|(Optional) Gibt die Workstation ID an, die in der Spalte **hostname** in der Zeile für diese Verbindung in **sys.sysprocesses** gespeichert werden soll.|
+|ApplicationName|Gibt den Anwendungsnamen an, der in der Spalte **program_name** in der Zeile für diese Verbindung in **sys.sysprocesses** gespeichert werden soll.|
+|Workstation ID|Gibt die Arbeitsstations-ID an, die in der Spalte **hostname** in der Zeile für diese Verbindung in **sys.sysprocesses** gespeichert werden soll.|
 |Starke Verschlüsselung für Daten verwenden|Wenn diese Option aktiviert ist, werden Daten, die über die Verbindung übergeben wird verschlüsselt.|
 |Serverzertifikat vertrauen|Wenn diese Option aktiviert ist, wird das Zertifikat des Servers überprüft werden. Zertifikat des Servers muss der richtige Hostname des Servers und von einer vertrauenswürdigen Zertifizierungsstelle ausgestellt.|
 

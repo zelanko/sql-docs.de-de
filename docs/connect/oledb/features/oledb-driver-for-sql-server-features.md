@@ -2,7 +2,7 @@
 title: OLE DB-Treiber für SQL Server-Funktionen | Microsoft-Dokumentation
 description: OLE DB-Treiber für SQL Server-Features
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: fa0fcda394142cd8ac2b3df5b91f5f8c4ad25739
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c8458d6293aec1180e547a80649c302015e9a521
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840908"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744460"
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>OLE DB-Treiber für SQL Server-Features
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,10 @@ ms.locfileid: "47840908"
   
  [Ausführen asynchroner Vorgänge](../../oledb/features/performing-asynchronous-operations.md)  
  Erläutert, auf welche Weise der OLE DB-Treiber für SQL Server asynchrone Vorgänge unterstützt. Das ist die Fähigkeit, Rückgaben unverzüglich zu übermitteln, ohne den aufrufenden Thread zu blockieren.  
-  
+
+[Verwendung von Azure Active Directory](using-azure-active-directory.md)  
+Erläutert die neue, eingeführt in OLE DB-Treiber 18.2.1 Authentifizierungsmethoden, die mehr Sicherheit die Standardeinstellungen, und ermöglichen, Herstellen einer Verbindung mit einer Instanz von Azure SQL-Datenbank, die eine Verbundidentität verwenden.
+
  [Verwenden von Multiple Active Result Sets &#40;MARS&#41;](../../oledb/features/using-multiple-active-result-sets-mars.md)  
  Erläutert, wie OLE DB-Treiber für SQL Server für mehrere aktive Resultsets (MARS) unterstützt. MARS ermöglichen es Ihnen, mehrere Resultsets mithilfe einer einzigen Datenbankverbindung auszuführen und zu empfangen.  
   
@@ -86,6 +89,9 @@ ms.locfileid: "47840908"
   
  [UTF-16-Unterstützung im OLE DB-Treiber für SQL Server (OLE DB)](../../oledb/features/utf-16-support-in-oledb-driver-for-sql-server.md)  
  Erläutert eine mit [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] eingeführte Verhaltensänderung. Wenn Sie einen Puffer mit fester Länge beim Binden eines Spaltenergebnisses oder eines Ausgabeparameters angeben, wenn das Zeichen **wchar**, das vor dem abschließenden Zeichen in den Puffer geschrieben wird, ein hoher Codepunkt eines Ersatzzeichenpaars ist, und wenn das nächste Zeichen **wchar** ein niedriger Codepunkt ist, fügt der OLE DB-Treiber für SQL Server den hohen Codepunkt nicht zum Puffer hinzu.  
+ 
+ [UTF-8-Unterstützung im OLE DB-Treiber für SQL Server](../../oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)  
+ Erläutert die Unterstützung für UTF-8-Server-Codierung und die Konfiguration-Vorsichtsmaßnahmen, die Benutzer ausführen sollte, bei der Arbeit mit UTF-8-codierte Daten.
   
  [OLE DB-Treiber für SQL Server-Unterstützung für Hochverfügbarkeit, Notfallwiederherstellung](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)  
  Erläutert, wie die Anwendung konfiguriert werden kann, um von den Funktionen für Hochverfügbarkeit und Notfallwiederherstellung zu profitieren, die in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] hinzugefügt wurden.  
@@ -96,7 +102,7 @@ ms.locfileid: "47840908"
  [OLE DB-Treiber für SQL Server-Unterstützung für LocalDB](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)  
  Erläutert, OLE DB-Treiber für SQL Server-Unterstützung für die LocalDB-Funktion.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [OLE DB-Treiber für SQL Server](../../oledb/oledb-driver-for-sql-server.md)      
  [Vorgehensweisen für OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)   
  [Installation des OLE DB-Treibers für SQL Server](../../oledb/applications/installing-oledb-driver-for-sql-server.md)  

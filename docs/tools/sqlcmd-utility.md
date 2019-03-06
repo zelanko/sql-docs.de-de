@@ -52,7 +52,7 @@ ms.locfileid: "56802376"
 
 Das Hilfsprogramm verwendet ODBC, um Transact-SQL-Batches auszuführen.
 
-## <a name="download-the-latest-version-of-sqlcmd-utility"></a>Herunterladen der aktuellen Version des bcp-Hilfsprogramms
+## <a name="download-the-latest-version-of-sqlcmd-utility"></a>Herunterladen der aktuellen Version des sqlcmd-Hilfsprogramms
 
 **[![Download](../ssdt/media/download.png) Microsoft Befehlszeilen-Hilfsprogramme 15.0.x für SQL Server (x64) herunterladen (2,4 MB)](https://go.microsoft.com/fwlink/?linkid=2043518)**
 <br>**[![Download](../ssdt/media/download.png) Microsoft Befehlszeilen-Hilfsprogramme 15.0.x für SQL Server (x86) herunterladen (2,2 MB)](https://go.microsoft.com/fwlink/?linkid=2043622)**
@@ -212,7 +212,7 @@ Legt „Column Encryption Setting“ auf `Enabled`fest. Weitere Informationen hi
 
    Geben Sie zum Aktivieren der interaktiven Authentifizierung die Option „-G“ nur mit dem Benutzernamen (-U) und ohne ein Kennwort an.
 
-   Im folgenden Beispiel werden Daten mithilfe des interaktiven Azure AD-Modus exportiert. Hierbei wird ein Benutzername angegeben, der ein AAD-Konto darstellt. Dies ist das gleiche Beispiel, das im vorherigen Abschnitt verwendet: *Azure Active Directory-Benutzernamen und das Kennwort*.  
+   Im folgenden Beispiel werden Daten mithilfe des interaktiven Azure AD-Modus exportiert. Hierbei wird ein Benutzername angegeben, der ein AAD-Konto darstellt. Dies ist das gleiche Beispiel, das im vorherigen Abschnitt verwendet wurde: *Azure Active Directory-Benutzername und -Kennwort*.  
 
    Im interaktiven Modus muss ein Kennwort manuell eingegeben werden.Bei Konten mit mehrstufiger Authentifizierung müssen Sie Ihre konfigurierte MFA-Authentifizierungsmethode vervollständigen.
 

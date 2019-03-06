@@ -106,7 +106,7 @@ Diese Optionen entsprechen den gleichen fünf in der DSN-Setup-Benutzeroberfläc
 ![WindowsAzureAuth.png](windows/WindowsAzureAuth.png)
 
 8. AAD Managed Service Identity-Authentifizierung verwendet, die vom System zugewiesene oder vom Benutzer zugewiesene Identität für die Authentifizierung, um die Verbindung einzurichten. Für die vom Benutzer zugewiesene Identität wird Benutzer-ID auf die Objekt-ID, der die Identität des Benutzers festgelegt.<br>
-Systemseitig zugewiesene Identität verwenden<br>
+Für systemseitig zugewiesene Identität:<br>
 `server=Server;database=Database;Authentication=ActiveDirectoryMsi;`<br>
 Für vom Benutzer zugewiesene Identität mit Objekt-ID MyObjectId entspricht,<br>
 `server=Server;database=Database;UID=myObjectId;Authentication=ActiveDirectoryMsi;`

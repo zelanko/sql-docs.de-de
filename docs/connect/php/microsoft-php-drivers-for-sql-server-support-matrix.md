@@ -102,12 +102,12 @@ ms.locfileid: "56744400"
 
 |PHP für SQL Server-Treiberversion&#8594;<br />&#8595; Betriebssystem|5.6|5.3|5.2|4.3|4.0|3.2|3.1|3.0|2.0|
 |--|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Ubuntu 18.10 (64-bit)               |J  |   |   |   |   |   |   |   |   |
-|Ubuntu 18.04 (64-bit)               |J  |J  |   |   |   |   |   |   |   |
-|Ubuntu 17.10 (64-bit)               |   |J  |J  |   |   |   |   |   |   |
-|Ubuntu 16.04 (64-bit)               |J  |J  |J  |J  |J  |   |   |   |   |
-|Ubuntu 15.10 (64-bit)               |   |   |   |J  |   |   |   |   |   |
-|Ubuntu 15.04 (64-bit)               |   |   |   |   |J  |   |   |   |   |
+|Ubuntu 18.10 (64 Bit)               |J  |   |   |   |   |   |   |   |   |
+|Ubuntu 18.04 (64 Bit)               |J  |J  |   |   |   |   |   |   |   |
+|Ubuntu 17.10 (64 Bit)               |   |J  |J  |   |   |   |   |   |   |
+|Ubuntu 16.04 (64 Bit)               |J  |J  |J  |J  |J  |   |   |   |   |
+|Ubuntu 15.10 (64 Bit)               |   |   |   |J  |   |   |   |   |   |
+|Ubuntu 15.04 (64 Bit)               |   |   |   |   |J  |   |   |   |   |
 |Debian 9 (64-Bit)                   |J  |J  |J  |   |   |   |   |   |   |
 |Debian 8 (64-Bit)                   |J  |J  |J  |J  |   |   |   |   |   |
 |Red Hat Enterprise Linux 7 (64-Bit) |J  |J  |J  |J  |J  |   |   |   |   |

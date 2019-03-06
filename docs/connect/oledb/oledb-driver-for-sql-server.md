@@ -2,7 +2,7 @@
 title: Microsoft OLE DB-Treiber für SQL Server | Microsoft-Dokumentation
 description: Microsoft OLE DB-Treiber für SQL Server
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: befcc84662b2273f81faaded76045d4d44b03e98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00be1d87dbc8ba071403722b7e575e5ab1c7a215
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687868"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744570"
 ---
 # <a name="microsoft-ole-db-driver-for-sql-server"></a>Microsoft OLE DB-Treiber für SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ Die neue OLE DB-Anbieter wird der Microsoft OLE DB-Treiber für SQL Server (MSOL
 [Verwendung des OLE DB-Treibers für SQL Server](../oledb/when-to-use-oledb-driver-for-sql-server.md)  
  In diesem Artikel wird erläutert, welche Rolle der OLE DB-Treiber für SQL Server unter den Datenzugriffstechnologien von Microsoft spielt und welche Unterschiede gegenüber Windows DAC und ADO.NET bestehen. Sie erhalten Entscheidungshilfen für die Auswahl einer Datenzugriffstechnologie.  
   
- [OLE DB-Treiber für SQL Server-Features](../oledb/features/oledb-driver-for-sql-server-features.md )  
+ [Features des OLE DB-Treibers für SQL Server](../oledb/features/oledb-driver-for-sql-server-features.md )  
  Beschreibt die Funktionen von OLE DB-Treiber für SQL Server unterstützt.  
   
  [Erstellen von Anwendungen mit dem OLE DB-Treiber für SQL Server](../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
@@ -86,7 +86,7 @@ Die neue OLE DB-Anbieter wird der Microsoft OLE DB-Treiber für SQL Server (MSOL
  Stellt zusätzliche Ressourcen zu OLE DB-Treiber für SQL Server, einschließlich Links zu externen Ressourcen und zum Abrufen weiterer Hilfe bereit.  
   
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Aktualisieren einer Anwendung von SQL Server 2005 Native Client](../oledb/applications/updating-an-application-from-sql-server-2005-native-client.md)    
  [Vorgehensweisen für OLE DB](../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   

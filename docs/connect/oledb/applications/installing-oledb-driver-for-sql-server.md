@@ -52,7 +52,7 @@ Wenn Sie „msoledbsql.msi“ aufrufen, werden nur die Clientkomponenten standar
 
 `msiexec /i msoledbsql.msi ADDLOCAL=ALL`  
 
-## <a name="silent-install"></a>Installation ohne Eingreifen  
+## <a name="silent-install"></a>Automatische Installation  
  Wenn Sie die Optionen „/passive“, „/qn“, „/qb“ oder „/qr“ mit „msiexec“ verwenden, müssen Sie auch IACCEPTSQLNCLILICENSETERMS=YES angeben, um explizit anzuzeigen, dass Sie den Lizenzbedingungen zustimmen. Diese Option muss in Großbuchstaben angegeben werden.  
 
 ## <a name="installing-ole-db-driver-for-sql-server-as-a-dependency"></a>Installieren des OLE DB-Treiber für SQL Server als Abhängigkeit  

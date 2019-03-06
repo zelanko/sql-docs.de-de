@@ -1,5 +1,5 @@
 ---
-title: Anmerkungen zu dieser Version (OLE DB-Treiber für SQL Server) | Microsoft-Dokumentation
+title: Versionshinweise (OLE DB-Treiber für SQL Server) | Microsoft-Dokumentation
 ms.date: 02/12/2019
 ms.prod: sql
 ms.technology: connectivity
@@ -25,7 +25,7 @@ Auf dieser Seite wird erläutert, was in den einzelnen Versionen des Microsoft O
 **Funktionen, die hinzugefügt werden:**
 
 * Unterstützung für UTF-8-Codierung-Server. Weitere Informationen finden Sie unter: [UTF-8-Unterstützung im OLE DB-Treiber für SQL Server](features/utf-8-support-in-oledb-driver-for-sql-server.md).
-* Azure Active Directory-Authentifizierung Weitere Informationen finden Sie unter [Was ist Azure Active Directory?](features/using-azure-active-directory.md).
+* Unterstützung für die Azure Active Directory-Authentifizierung. Weitere Informationen finden Sie unter [Verwenden von Azure Active Directory](features/using-azure-active-directory.md).
 
 ## <a name="whats-new-in-version-1810"></a>Neues in Version 18.1.0
 

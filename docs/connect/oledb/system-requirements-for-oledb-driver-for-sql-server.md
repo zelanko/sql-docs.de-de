@@ -2,7 +2,7 @@
 title: Systemanforderungen für den OLE DB-Treiber für SQL Server | Microsoft-Dokumentation
 description: Anforderungen für den OLE DB-Treiber für SQL Server
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: a2ff38f4322209c7ed6eb46a5ba97f360ca3650b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6462901ba1e3e73ca8c0a4ca448d8bc689bd8868
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821028"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744430"
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>Systemanforderungen für den OLE DB-Treiber für SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,12 +38,16 @@ ms.locfileid: "47821028"
 >  Melden Sie sich vor der Installation dieser Software mit Administratorberechtigungen an.  
 
 ## <a name="operating-system-requirements"></a>Betriebssystemanforderungen  
- Eine Liste der Betriebssysteme, die OLE DB-Treiber für SQL Server zu unterstützen, finden Sie unter [für OLE DB-Treiber für SQL Server-Richtlinien unterstützen](../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md).  
+ Eine Liste der Betriebssysteme, die OLE DB-Treiber für SQL Server zu unterstützen, finden Sie unter [Richtlinien zur Unterstützung für OLE DB-Treiber für SQL Server](../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md).  
+
+ ## <a name="azure-active-directory-authentication-requirements"></a>Azure Active Directory-Authentifizierungsanforderungen  
+ Wenn Sie Azure Active Directory-Authentifizierungsmethoden mit dem OLE DB-Treiber verwenden, stellen Sie sicher, dass die [Active Directory-Authentifizierungsbibliothek für SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072) installiert wurde. ADAL nicht für die anderen Authentifizierungsmethoden oder OLE DB-Vorgänge erforderlich.
+Weitere Informationen finden Sie unter [Verwenden von Azure Active Directory](features/using-azure-active-directory.md).
 
 ## <a name="sql-server-requirements"></a>SQL Server-Anforderungen  
  Verwenden von OLE DB-Treiber für SQL Server für den Datenzugriff in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbanken, benötigen Sie eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert.  
 
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] unterstützt Verbindungen von allen Versionen von MDAC, Windows Data Access Components sowie alle Versionen des OLE DB-Treibers für SQL Server. Wenn eine ältere Clientversion eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellt, werden Serverdatentypen, die dem Client nicht bekannt sind, Typen zugeordnet, die mit der Clientversion kompatibel sind. Weitere Informationen finden Sie unter „Datentypkompatibilität für Clientversionen“ später in diesem Thema.  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] unterstützt Verbindungen von allen Versionen von MDAC, Windows Data Access Components sowie alle Versionen des OLE DB-Treibers für SQL Server. Wenn eine ältere Clientversion eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellt, werden Serverdatentypen, die dem Client nicht bekannt sind, Typen zugeordnet, die mit der Clientversion kompatibel sind. Weitere Informationen finden Sie unter [Datentypkompatibilität für Clientversionen](#data-type-compatibility-for-client-versions).  
 
 ## <a name="cross-language-requirements"></a>Anforderungen an die sprachübergreifende Unterstützung  
  Die englische Version des OLE DB-Treiber für SQL Server wird unter allen lokalisierten Versionen unterstützter Betriebssysteme unterstützt. Lokalisierte Versionen des OLE DB-Treiber für SQL Server werden auf lokalisierten Betriebssystemen unterstützt, die der Sprache der lokalisierten OLE DB-Treiber für SQL Server-Version sind. Lokalisierte Versionen des OLE DB-Treibers für SQL Server werden auch in englischsprachigen Versionen von unterstützten Betriebssystemen unterstützt, vorausgesetzt die entsprechenden Spracheinstellungen sind installiert.  
@@ -68,17 +72,17 @@ ms.locfileid: "47821028"
 
 |Datentyp|SQL Server Native Client<br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|OLE DB-Treiber für SQL Server|Windows Data Access Components, MDAC und<br /><br /> OLE DB-Treiber für SQL Server-OLE DB-Anwendungen mit DataTypeCompatibility = 80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
-|CLR UDT (\<= 8 KB)|udt|udt|udt|Varbinary|  
+|CLR-UDT (\<= 8 Kb)|udt|udt|udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|varbinary|image|  
 |varchar(max)|varchar|varchar|varchar|Textmodus|  
 |nvarchar(max)|NVARCHAR|NVARCHAR|NVARCHAR|Ntext|  
 |xml|xml|xml|xml|Ntext|  
-|CLR UDT (> 8Kb)|varbinary|udt|udt|image|  
+|CLR-UDTS (> 8 Kb)|varbinary|udt|udt|image|  
 |date|varchar|date|date|Varchar|  
 |datetime2|varchar|datetime2|datetime2|Varchar|  
 |datetimeoffset|varchar|datetimeoffset|datetimeoffset|Varchar|  
 |Uhrzeit|varchar|Uhrzeit|Uhrzeit|Varchar|  
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [OLE DB-Treiber für SQL Server](../oledb/oledb-driver-for-sql-server.md)   
  [Installation des OLE DB-Treibers für SQL Server](../oledb/applications/installing-oledb-driver-for-sql-server.md)  

@@ -98,12 +98,12 @@ Unterstützte Betriebssysteme für jede Version des Treibers lauten wie folgt au
 |Windows 8                           |   |   |   |J  |J  |J  |J  |
 |Windows 7 SP1                       |   |   |   |   |J  |J  |J  |
 |Windows Vista SP2                   |   |   |   |   |J  |J  |J  |
-|Ubuntu 18.10 (64-bit)               |J  |   |   |   |   |   |   |
-|Ubuntu 18.04 (64-bit)               |J  |J  |   |   |   |   |   |
-|Ubuntu 17.10 (64-bit)               |   |J  |J  |   |   |   |   |
-|Ubuntu 16.04 (64-bit)               |J  |J  |J  |J  |J  |   |   |
-|Ubuntu 15.10 (64-bit)               |   |   |   |J  |   |   |   |
-|Ubuntu 15.04 (64-bit)               |   |   |   |   |J  |   |   |
+|Ubuntu 18.10 (64 Bit)               |J  |   |   |   |   |   |   |
+|Ubuntu 18.04 (64 Bit)               |J  |J  |   |   |   |   |   |
+|Ubuntu 17.10 (64 Bit)               |   |J  |J  |   |   |   |   |
+|Ubuntu 16.04 (64 Bit)               |J  |J  |J  |J  |J  |   |   |
+|Ubuntu 15.10 (64 Bit)               |   |   |   |J  |   |   |   |
+|Ubuntu 15.04 (64 Bit)               |   |   |   |   |J  |   |   |
 |Debian 9 (64-Bit)                   |J  |J  |J  |   |   |   |   |
 |Debian 8 (64-Bit)                   |J  |J  |J  |J  |   |   |   |
 |Red Hat Enterprise Linux 7 (64-Bit) |J  |J  |J  |J  |J  |   |   |
@@ -119,16 +119,16 @@ Dieser Abschnitt enthält die Treiberdateien, die mit jeder Version von enthalte
 
 Auf unterstützten Versionen von Linux und MacOS, die richtigen Treiber installiert werden können mithilfe von PHP PECL-Paket-System nach dem [Installationshinweise für Linux und MacOS](../../connect/php/installation-tutorial-linux-mac.md). Alternativ können Sie vorab erstellte Binärdateien herunterladen, für Ihre Plattform aus der [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) Projektseite auf Github – die folgenden Tabellen enthalten die vordefinierten Pakete für die binären Dateien.
 
-**Microsoft-Treiber 5.6 für PHP für SQL Server**  
+**Microsoft-Treiber 5.6 für PHP für SQL Server:**  
 
 Auf Windows dazu gehören die folgenden Versionen des Treibers:
 
 |Treiberdatei|PHP-Version|Threadsicher?|Zu verwendende PHP .dll|  
 |---------------|:---------------:|:----------------:|---------------------|  
-|32-Bit-php_sqlsrv_71_nts.dll<br />32-bit php_pdo_sqlsrv_71_nts.dll|7.1|nein |32-Bit-php7.dll|  
-|32-Bit-php_sqlsrv_71_ts.dll <br />32-bit php_pdo_sqlsrv_71_ts.dll |7.1|ja|32-Bit-php7ts.dll|  
-|64-Bit-php_sqlsrv_71_nts.dll<br />64-bit php_pdo_sqlsrv_71_nts.dll|7.1|nein |64-Bit-php7.dll|  
-|64-Bit-php_sqlsrv_71_ts.dll <br />64-bit php_pdo_sqlsrv_71_ts.dll |7.1|ja|64-Bit-php7ts.dll|   
+|32-Bit-php_sqlsrv_71_nts.dll<br />32-Bit-Version von „php_pdo_sqlsrv_71_nts.dll“|7.1|nein |32-Bit-php7.dll|  
+|32-Bit-php_sqlsrv_71_ts.dll <br />32-Bit-Version von „php_pdo_sqlsrv_71_ts.dll“ |7.1|ja|32-Bit-php7ts.dll|  
+|64-Bit-php_sqlsrv_71_nts.dll<br />64-Bit-Version von „php_pdo_sqlsrv_71_nts.dll“|7.1|nein |64-Bit-php7.dll|  
+|64-Bit-php_sqlsrv_71_ts.dll <br />64-Bit-Version von „php_pdo_sqlsrv_71_ts.dll“ |7.1|ja|64-Bit-php7ts.dll|   
 |32-Bit-php_sqlsrv_72_nts.dll<br />32-Bit-php_pdo_sqlsrv_72_nts.dll|7.2|nein |32-Bit-php7.dll|  
 |32-Bit-php_sqlsrv_72_ts.dll <br />32-Bit-php_pdo_sqlsrv_72_ts.dll |7.2|ja|32-Bit-php7ts.dll|  
 |64-Bit-php_sqlsrv_72_nts.dll<br />64-Bit-php_pdo_sqlsrv_72_nts.dll|7.2|nein |64-Bit-php7.dll|  
@@ -159,10 +159,10 @@ Auf Windows dazu gehören die folgenden Versionen des Treibers:
 |32-Bit-php_sqlsrv_7_ts.dll  <br />32-Bit-php_pdo_sqlsrv_7_ts.dll  |7.0|ja|32-Bit-php7ts.dll|
 |64-Bit-php_sqlsrv_7_nts.dll <br />64-Bit-php_pdo_sqlsrv_7_nts.dll |7.0|nein |64-Bit-php7.dll|  
 |64-Bit-php_sqlsrv_7_ts.dll  <br />64-Bit-php_pdo_sqlsrv_7_ts.dll  |7.0|ja|64-Bit-php7ts.dll|
-|32-Bit-php_sqlsrv_71_nts.dll<br />32-bit php_pdo_sqlsrv_71_nts.dll|7.1|nein |32-Bit-php7.dll|  
-|32-Bit-php_sqlsrv_71_ts.dll <br />32-bit php_pdo_sqlsrv_71_ts.dll |7.1|ja|32-Bit-php7ts.dll|  
-|64-Bit-php_sqlsrv_71_nts.dll<br />64-bit php_pdo_sqlsrv_71_nts.dll|7.1|nein |64-Bit-php7.dll|  
-|64-Bit-php_sqlsrv_71_ts.dll <br />64-bit php_pdo_sqlsrv_71_ts.dll |7.1|ja|64-Bit-php7ts.dll|   
+|32-Bit-php_sqlsrv_71_nts.dll<br />32-Bit-Version von „php_pdo_sqlsrv_71_nts.dll“|7.1|nein |32-Bit-php7.dll|  
+|32-Bit-php_sqlsrv_71_ts.dll <br />32-Bit-Version von „php_pdo_sqlsrv_71_ts.dll“ |7.1|ja|32-Bit-php7ts.dll|  
+|64-Bit-php_sqlsrv_71_nts.dll<br />64-Bit-Version von „php_pdo_sqlsrv_71_nts.dll“|7.1|nein |64-Bit-php7.dll|  
+|64-Bit-php_sqlsrv_71_ts.dll <br />64-Bit-Version von „php_pdo_sqlsrv_71_ts.dll“ |7.1|ja|64-Bit-php7ts.dll|   
 |32-Bit-php_sqlsrv_72_nts.dll<br />32-Bit-php_pdo_sqlsrv_72_nts.dll|7.2|nein |32-Bit-php7.dll|  
 |32-Bit-php_sqlsrv_72_ts.dll <br />32-Bit-php_pdo_sqlsrv_72_ts.dll |7.2|ja|32-Bit-php7ts.dll|  
 |64-Bit-php_sqlsrv_72_nts.dll<br />64-Bit-php_pdo_sqlsrv_72_nts.dll|7.2|nein |64-Bit-php7.dll|  
@@ -189,10 +189,10 @@ Auf Windows dazu gehören die folgenden Versionen des Treibers:
 |32-Bit-php_sqlsrv_7_ts.dll  <br />32-Bit-php_pdo_sqlsrv_7_ts.dll  |7.0|ja|32-Bit-php7ts.dll|
 |64-Bit-php_sqlsrv_7_nts.dll <br />64-Bit-php_pdo_sqlsrv_7_nts.dll |7.0|nein |64-Bit-php7.dll|  
 |64-Bit-php_sqlsrv_7_ts.dll  <br />64-Bit-php_pdo_sqlsrv_7_ts.dll  |7.0|ja|64-Bit-php7ts.dll|
-|32-Bit-php_sqlsrv_71_nts.dll<br />32-bit php_pdo_sqlsrv_71_nts.dll|7.1|nein |32-Bit-php7.dll|  
-|32-Bit-php_sqlsrv_71_ts.dll <br />32-bit php_pdo_sqlsrv_71_ts.dll |7.1|ja|32-Bit-php7ts.dll|  
-|64-Bit-php_sqlsrv_71_nts.dll<br />64-bit php_pdo_sqlsrv_71_nts.dll|7.1|nein |64-Bit-php7.dll|  
-|64-Bit-php_sqlsrv_71_ts.dll <br />64-bit php_pdo_sqlsrv_71_ts.dll |7.1|ja|64-Bit-php7ts.dll|   
+|32-Bit-php_sqlsrv_71_nts.dll<br />32-Bit-Version von „php_pdo_sqlsrv_71_nts.dll“|7.1|nein |32-Bit-php7.dll|  
+|32-Bit-php_sqlsrv_71_ts.dll <br />32-Bit-Version von „php_pdo_sqlsrv_71_ts.dll“ |7.1|ja|32-Bit-php7ts.dll|  
+|64-Bit-php_sqlsrv_71_nts.dll<br />64-Bit-Version von „php_pdo_sqlsrv_71_nts.dll“|7.1|nein |64-Bit-php7.dll|  
+|64-Bit-php_sqlsrv_71_ts.dll <br />64-Bit-Version von „php_pdo_sqlsrv_71_ts.dll“ |7.1|ja|64-Bit-php7ts.dll|   
 |32-Bit-php_sqlsrv_72_nts.dll<br />32-Bit-php_pdo_sqlsrv_72_nts.dll|7.2|nein |32-Bit-php7.dll|  
 |32-Bit-php_sqlsrv_72_ts.dll <br />32-Bit-php_pdo_sqlsrv_72_ts.dll |7.2|ja|32-Bit-php7ts.dll|  
 |64-Bit-php_sqlsrv_72_nts.dll<br />64-Bit-php_pdo_sqlsrv_72_nts.dll|7.2|nein |64-Bit-php7.dll|  
@@ -219,10 +219,10 @@ Auf Windows dazu gehören die folgenden Versionen des Treibers:
 |32-Bit-php_sqlsrv_7_ts.dll  <br />32-Bit-php_pdo_sqlsrv_7_ts.dll  |7.0|ja|32-Bit-php7ts.dll|
 |64-Bit-php_sqlsrv_7_nts.dll <br />64-Bit-php_pdo_sqlsrv_7_nts.dll |7.0|nein |64-Bit-php7.dll|  
 |64-Bit-php_sqlsrv_7_ts.dll  <br />64-Bit-php_pdo_sqlsrv_7_ts.dll  |7.0|ja|64-Bit-php7ts.dll|
-|32-Bit-php_sqlsrv_71_nts.dll<br />32-bit php_pdo_sqlsrv_71_nts.dll|7.1|nein |32-Bit-php7.dll|  
-|32-Bit-php_sqlsrv_71_ts.dll <br />32-bit php_pdo_sqlsrv_71_ts.dll |7.1|ja|32-Bit-php7ts.dll|  
-|64-Bit-php_sqlsrv_71_nts.dll<br />64-bit php_pdo_sqlsrv_71_nts.dll|7.1|nein |64-Bit-php7.dll|  
-|64-Bit-php_sqlsrv_71_ts.dll <br />64-bit php_pdo_sqlsrv_71_ts.dll |7.1|ja|64-Bit-php7ts.dll|   
+|32-Bit-php_sqlsrv_71_nts.dll<br />32-Bit-Version von „php_pdo_sqlsrv_71_nts.dll“|7.1|nein |32-Bit-php7.dll|  
+|32-Bit-php_sqlsrv_71_ts.dll <br />32-Bit-Version von „php_pdo_sqlsrv_71_ts.dll“ |7.1|ja|32-Bit-php7ts.dll|  
+|64-Bit-php_sqlsrv_71_nts.dll<br />64-Bit-Version von „php_pdo_sqlsrv_71_nts.dll“|7.1|nein |64-Bit-php7.dll|  
+|64-Bit-php_sqlsrv_71_ts.dll <br />64-Bit-Version von „php_pdo_sqlsrv_71_ts.dll“ |7.1|ja|64-Bit-php7ts.dll|   
 
 Unter Linux sind die folgenden Versionen des Treibers enthalten:
 
