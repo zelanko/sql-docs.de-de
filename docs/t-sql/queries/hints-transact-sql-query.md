@@ -1,8 +1,8 @@
 ---
 title: Abfragehinweise (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 02/04/2019
-ms.prod: sqll
+ms.date: 02/21/2019
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
@@ -53,15 +53,15 @@ helpviewer_keywords:
 - USE HINT query hint
 - QUERY_PLAN_PROFILE query hint
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1d5dc400cde1ded385d3050a6d6dc120cf430fbb
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.openlocfilehash: 953fcb26527f709abd9679da3a3f061976d3ef74
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265377"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334797"
 ---
 # <a name="hints-transact-sql---query"></a>Hinweise (Transact-SQL) – Abfrage
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -289,6 +289,12 @@ Die folgenden Hinweisnamen werden unterstützt:
    Dieser Hinweisname entspricht [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138.
 *  'DISABLE_PARAMETER_SNIFFING'      
    Weist den Abfrageoptimierer an, die durchschnittliche Datenverteilung zu verwenden, während er eine Abfrage mit einem oder mehreren Parametern kompiliert. Diese Anweisung macht den Abfrageplan unabhängig von dem Parameterwert, der beim Kompilieren der Abfrage zuerst verwendet wurde. Dieser Hinweisname entspricht dem [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 oder der Einstellung PARAMETER_SNIFFING=OFF für die [Datenbankweit gültige Konfiguration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+* 'DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'    
+  Deaktiviert das Feedback zur Speicherzuweisung im Zeilenmodus. Weitere Informationen finden Sie unter [Feedback zur Speicherzuweisung im Zeilenmodus](../../relational-databases/performance/adaptive-query-processing.md#row-mode-memory-grant-feedback).
+* 'DISABLE_TSQL_SCALAR_UDF_INLINING'    
+  Deaktiviert das Inlining benutzerdefinierter Skalarfunktionen. Weitere Informationen finden Sie unter [Scalar UDF Inlining (Inlining benutzerdefinierter Skalarfunktionen)](../../relational-databases/user-defined-functions/scalar-udf-inlining.md).
+* 'DISALLOW_BATCH_MODE'    
+  Deaktiviert die Batchmodusausführung. Weitere Informationen finden Sie unter [Ausführungsmodi](../../relational-databases/query-processing-architecture-guide.md#execution-modes).
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'      
    Aktiviert automatisch generierte Schnellstatistiken (Histogrammzusatz) für alle führenden Indexspalten, für welche die Kardinalitätsschätzung erforderlich ist. Das für die Kardinalitätsschätzung verwendete Histogramm wird zum Zeitpunkt der Abfragekompilierung angepasst, damit der tatsächliche Höchst- und Mindestwert in dieser Spalte berücksichtigt werden. Dieser Hinweisname entspricht [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
 *  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'     
