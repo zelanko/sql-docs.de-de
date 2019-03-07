@@ -18,40 +18,39 @@ ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee8240f506c11bec768eb6a9510871b3ff1deaa8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4958921d446e4678ce09eeb4c16f8faf5809dd2a
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035291"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590235"
 ---
 # <a name="replace-value-of-xml-dml"></a>replace value of (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Aktualisiert den Wert eines Knotens im Dokument.  
+Aktualisiert den Wert eines Knotens im Dokument.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
-  
+```sql
 replace value of Expression1   
 with Expression2  
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Expression1*  
- Gibt einen Knoten an, dessen Wert aktualisiert werden soll. Der Ausdruck darf nur einen einzelnen Knoten angeben. Das heißt, *Expression1* muss ein statisches Singleton sein. Wenn das XML typisiert ist, muss der Typ des Knotens ein simple-Typ sein. Wenn mehrere Knoten ausgewählt werden, wird ein Fehler ausgelöst. Wenn *Expression1* eine leere Sequenz zurückgibt, tritt keine Wertersetzung auf, und es werden keine Fehler zurückgegeben. *Expression1* muss ein einzelnes Element zurückgeben, das einfach typisierten Inhalt besitzt (list- oder atomic-Typen) oder ein Textknoten bzw. ein Attributknoten ist. *Expression1* kann nicht dem union-Typ bzw. einem komplexen Typ angehören oder eine Verarbeitungsanweisung, ein Dokumentknoten oder ein Kommentarknoten sein. Anderenfalls wird ein Fehler zurückgegeben.  
+*Expression1*  
+Gibt einen Knoten an, dessen Wert aktualisiert werden soll. Der Ausdruck darf nur einen einzelnen Knoten angeben. Das heißt, *Expression1* muss ein statisches Singleton sein. Wenn das XML typisiert ist, muss der Typ des Knotens ein simple-Typ sein. Wenn mehrere Knoten ausgewählt werden, wird ein Fehler ausgelöst. Wenn *Expression1* eine leere Sequenz zurückgibt, tritt keine Wertersetzung auf, und es werden keine Fehler zurückgegeben. *Expression1* muss ein einzelnes Element zurückgeben, das einfachen Typinhalt hat (wie bei den Typen „list“ und „atomic“) oder ein Textknoten bzw. ein Attributknoten ist. *Expression1* kann nicht den Typ „union“ bzw. einem komplexen Typ haben oder eine Verarbeitungsanweisung, ein Dokumentknoten oder ein Kommentarknoten sein. Andernfalls wird ein Fehler zurückgegeben.  
   
- *Expression2*  
- Gibt den neuen Wert des Knotens an. Dabei kann es sich um einen Ausdruck handeln, der einen einfach typisierten Knoten zurückgibt, weil **data()** implizit verwendet wird. Wenn der Wert eine Werteliste ist, ersetzt die **update** -Anweisung den alten Wert durch die Liste. Beim Ändern einer typisierten XML-Instanz muss *Expression2* den gleichen Typ wie *Expression*1 aufweisen oder ein Untertyp davon sein. Ansonsten wird ein Fehler zurückgegeben. Beim Ändern einer nicht typisierten XML-Instanz muss *Expression2* ein Ausdruck sein, der atomisiert werden kann. Ansonsten wird ein Fehler zurückgegeben.  
+*Expression2*  
+Gibt den neuen Wert des Knotens an. Dabei kann es sich um einen Ausdruck handeln, der einen einfachen Typknoten zurückgibt, weil **data()** implizit verwendet wird. Wenn der Wert eine Werteliste ist, ersetzt die **update** -Anweisung den alten Wert durch die Liste. Beim Ändern einer typisierten XML-Instanz muss *Expression2* den gleichen Typ wie *Expression*1 aufweisen oder ein Untertyp davon sein. Ansonsten wird ein Fehler zurückgegeben. Beim Ändern einer nicht typisierten XML-Instanz muss *Expression2* ein Ausdruck sein, der atomisiert werden kann. Ansonsten wird ein Fehler zurückgegeben.  
   
 ## <a name="examples"></a>Beispiele  
- Die folgenden Beispiele der XML DML **replace value of** -Anweisung zeigen, wie Knoten in einem XML-Dokument aktualisiert werden.  
+Die folgenden Beispiele der XML DML **replace value of** -Anweisung zeigen, wie Knoten in einem XML-Dokument aktualisiert werden.  
   
 ### <a name="a-replacing-values-in-an-xml-instance"></a>A. Ersetzen von Werten in einer XML-Instanz  
- Im folgenden Beispiel wird eine Dokumentinstanz zuerst einer Variablen des Typs **xml** zugewiesen. Anschließend aktualisieren XML DML **replace value of** -Anweisungen die Werte im Dokument.  
+Im folgenden Beispiel wird eine Dokumentinstanz zuerst einer Variablen des Typs **xml** zugewiesen. Anschließend aktualisieren XML DML **replace value of** -Anweisungen die Werte im Dokument.  
   
-```  
+```sql
 DECLARE @myDoc xml;  
 SET @myDoc = '<Root>  
 <Location LocationID="10"   
@@ -77,12 +76,12 @@ SET @myDoc.modify('
 SELECT @myDoc;  
 ```  
   
- Beachten Sie, dass das zu aktualisierende Ziel höchstens ein Knoten sein darf, der explizit im path-Ausdruck durch Hinzufügen von "[1]" am Ende des Ausdrucks angegeben wird.  
+Das zu aktualisierende Ziel darf höchstens ein Knoten sein, der explizit im „path“-Ausdruck durch Hinzufügen von „[1]“ am Ende des Ausdrucks angegeben wird.  
   
 ### <a name="b-using-the-if-expression-to-determine-replacement-value"></a>B. Verwenden des if-Ausdrucks zum Bestimmen des Ersetzungswerts  
- Sie können den **if** -Ausdruck in Expression2 der **XML DML replace value of** -Anweisung angeben, wie im folgenden Beispiel gezeigt wird. Expression1 gibt an, dass das LaborHours-Attribut aus dem ersten Arbeitsplatz aktualisiert werden soll. Expression2 verwendet einen **if** -Ausdruck zum Bestimmen des neuen Werts des LaborHours-Attributs.  
+Sie können den **if** -Ausdruck in Expression2 der **XML DML replace value of** -Anweisung angeben, wie im folgenden Beispiel gezeigt wird. Expression1 gibt an, dass das „LaborHours“-Attribut aus dem ersten Arbeitsplatz aktualisiert werden soll. Expression2 verwendet einen **if** -Ausdruck zum Bestimmen des neuen Werts des LaborHours-Attributs.  
   
-```  
+```sql
 DECLARE @myDoc xml  
 SET @myDoc = '<Root>  
 <Location LocationID="10"   
@@ -107,9 +106,9 @@ SELECT @myDoc
 ```  
   
 ### <a name="c-updating-xml-stored-in-an-untyped-xml-column"></a>C. Aktualisieren von XML, das in einer nicht typisierten XML-Spalte gespeichert ist  
- Das folgende Beispiel aktualisiert in einer Spalte gespeichertes XML:  
+Das folgende Beispiel aktualisiert in einer Spalte gespeichertes XML:  
   
-```  
+```sql
 drop table T  
 go  
 CREATE TABLE T (i int, x xml)  
@@ -137,11 +136,11 @@ FROM T
 ```  
   
 ### <a name="d-updating-xml-stored-in-a-typed-xml-column"></a>D. Aktualisieren von XML, das in einer typisierten XML-Spalte gespeichert ist  
- Dieses Beispiel ersetzt Werte in einem Dokument mit Fertigungsanweisungen, das in einer typisierten XML-Spalte gespeichert ist.  
+Dieses Beispiel ersetzt Werte in einem Dokument mit Fertigungsanweisungen, das in einer typisierten XML-Spalte gespeichert ist.  
   
- In diesem Beispiel erstellen Sie zuerst eine Tabelle (T) mit einer typisierten XML-Spalte in der AdventureWorks-Datenbank. Anschließend kopieren Sie eine XML-Instanz mit Fertigungsanweisungen aus der Instructions-Spalte in der ProductModel-Tabelle in Tabelle T. Die Einfügungen werden dann am XML in Tabelle T vorgenommen.  
+In diesem Beispiel erstellen Sie zuerst eine Tabelle (T) mit einer typisierten XML-Spalte in der AdventureWorks-Datenbank. Anschließend kopieren Sie eine XML-Instanz mit Fertigungsanweisungen aus der Instructions-Spalte in der ProductModel-Tabelle in Tabelle T. Die Einfügungen werden dann am XML in Tabelle T vorgenommen.  
   
-```  
+```sql
 use AdventureWorks  
 go  
 drop table T  
@@ -190,12 +189,12 @@ select Instructions
 from T  
 ```  
   
- Beachten Sie die Verwendung von **cast** beim Ersetzen des LotSize-Werts. Dies ist erforderlich, wenn der Wert einem bestimmten Typ angehören muss. In diesem Beispiel ist eine explizite Umwandlung nicht erforderlich, wenn der Wert 500 lautet.  
+Beachten Sie die Verwendung von **cast** beim Ersetzen des LotSize-Werts. Dies ist erforderlich, wenn der Wert einem bestimmten Typ angehören muss. In diesem Beispiel ist eine explizite Umwandlung nicht erforderlich, wenn der Wert 500 lautet.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Vergleichen von typisiertem XML mit nicht typisiertem XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [Erstellen von Instanzen der XML-Daten](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [XML-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md)   
- [XML DML &#40;Data Modification Language&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+[Vergleichen von typisiertem XML mit nicht typisiertem XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
+[Erstellen von Instanzen der XML-Daten](../../relational-databases/xml/create-instances-of-xml-data.md)   
+[XML-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md)   
+[XML DML &#40;Data Modification Language&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   
