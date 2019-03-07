@@ -18,12 +18,12 @@ ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b408b3f4d71f80bb2317a58ddd0ff0f578807946
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3737c5dabc8b88970a24cbadcc9617457cf862eb
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202809"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828130"
 ---
 # <a name="connect-to-server-database-engine"></a>Verbindung mit Server herstellen (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,9 @@ Wählen Sie die Serverinstanz aus, mit der eine Verbindung hergestellt werden so
   
 > [!NOTE]  
 > Um eine Verbindung mit einer aktiven Benutzerinstanz von [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] mit dem Named Pipes-Protokoll herzustellen, geben Sie den Pipenamen an, z.B. `np:\\.\pipe\3C3DF6B1-2262-47\tsql\query`. Weitere Informationen finden Sie in der Dokumentation zu [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)].  
-  
+> [!NOTE]  
+> Verbindungen werden in der Regel im Verlauf „Zuletzt verwendet“ (Most Recently Used, MRU) gespeichert. Wenn Sie Einträge aus dem MRU-Verlauf entfernen möchten, klicken Sie einfach auf das Kombinationsfeld **Servername**, wählen Sie den Namen des zu entfernenden Servers aus, und drücken Sie dann die**ENTF**-Taste.  
+   
 **Authentifizierung**  
 Die aktuelle Version von SSMS stellt fünf verschiedene Authentifizierungsmodi beim Verbinden mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde_md.md)] bereit. Wenn das Authentifizierungsdialogfeld nicht mit der folgenden Liste übereinstimmt, laden Sie die aktuellste Version von SSMS unter [Herunterladen von SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md) herunter.  
 

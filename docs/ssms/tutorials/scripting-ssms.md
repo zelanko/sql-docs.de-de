@@ -5,7 +5,7 @@ keywords: SQL Server, SSMS, SQL Server Management Studio, Skripts, Skripterstell
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/13/2018
-ms.topic: Tutorial
+ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: d2ebf81dcab52be193d1472f5f1dc4f4495aba50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce0ffdaa26e0ca48eef710f8368b8cb2b0c92191
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711228"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662824"
 ---
-# <a name="tutorial-script-objects-in-sql-server-management-studio"></a>Tutorial: Erstellen von Skripts für Objekte in SQL Server Management Studio
+# <a name="tutorial-script-objects-in-sql-server-management-studio"></a>Lernprogramm: Erstellen von Skripts für Objekte in SQL Server Management Studio
 In diesem Tutorial erfahren Sie, wie Sie T-SQL-Skripts (Transact-SQL) für verschiedene Objekte in SQL Server Management Studio (SSMS) erstellen können. Dabei wird die Skripterstellung für die folgenden Objekte beschrieben:
 
 > [!div class="checklist"]
@@ -47,7 +47,7 @@ Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio, 
 - Installieren Sie die [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Laden Sie die [AdventureWorks 2016-Beispieldatenbank](https://github.com/Microsoft/sql-server-samples/releases) herunter.
 
-Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Restore a Database (Wiederherstellen einer Datenbank)](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie unter [Wiederherstellen einer Datenbank](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 
 ## <a name="script-queries-from-the-gui"></a>Erstellen von Skripts für Abfragen über die grafische Benutzeroberfläche

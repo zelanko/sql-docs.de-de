@@ -22,34 +22,34 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 39c9a070150b3353270463e362d89f4fe70db705
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b82e7c10426f1d263a5154658d6f017de227fbb
+ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601189"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425805"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Begrenzt die zurückgegebenen Zeilen in einem Abfrageresultset auf die in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] angegebene Anzahl bzw. den darin angegebenen diesbezüglichen Prozentwert. Wenn TOP in Verbindung mit der ORDER BY-Klausel verwendet wird, ist das Resultset auf die ersten *n* sortierten Zeilen beschränkt; andernfalls werden die ersten *n* Zeilen in zufälliger Reihenfolge zurückgegeben. Mit dieser Klausel können Sie die Anzahl der Zeilen angeben, die von einer SELECT-Anweisung zurückgegeben werden oder von einer INSERT-, UPDATE-, MERGE- oder DELETE-Anweisung betroffen sind.   
+Begrenzt die zurückgegebenen Zeilen in einem Abfrageresultset auf die in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] angegebene Anzahl bzw. den darin angegebenen diesbezüglichen Prozentwert. Wenn TOP in Verbindung mit der ORDER BY-Klausel verwendet wird, ist das Resultset auf die ersten *N* sortierten Zeilen beschränkt. Andernfalls gibt TOP die ersten *N* Zeilen in zufälliger Reihenfolge zurück. Verwenden Sie diese Klausel, um die Anzahl der von einer SELECT-Anweisung zurückgegebenen Zeilen anzugeben. Oder verwenden Sie TOP, um die Zeilen anzugeben, die von einer INSERT-, UPDATE-, MERGE- oder DELETE-Anweisung betroffen sind.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
-  
-```  
--- Syntax for SQL Server and Azure SQL Database  
-  
+ 
+ Die folgende Syntax gilt für SQL Server und Azure SQL-Datenbank:
+
+```sql  
 [   
     TOP (expression) [PERCENT]  
     [ WITH TIES ]  
 ]  
 ```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
+
+Die folgende Syntax gilt für Azure SQL Data Warehouse und Parallel Data Warehouse:
+
+```sql  
 [   
     TOP ( expression )   
     [ WITH TIES ]  
@@ -57,37 +57,37 @@ ms.locfileid: "47601189"
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *expression*  
- Der numerische Ausdruck, der angibt, dass eine Anzahl von Zeilen zurückgegeben wird. *expression* wird implizit in einen **float**-Wert konvertiert, wenn PERCENT angegeben ist. Andernfalls wird der Ausdruck in **bigint** konvertiert.  
+*expression*  
+Der numerische Ausdruck, der die Anzahl der zurückzugebenden Zeilen angibt. *expression* wird implizit in einen **float**-Wert konvertiert, wenn PERCENT angegeben ist. Andernfalls wird *expression* in **bigint** konvertiert.  
   
- PERCENT  
- Gibt an, dass die Abfrage nur die ersten *expression* Prozent der Zeilen aus dem Resultset zurückgibt. Bruchwerte werden auf den nächsten ganzzahligen Wert aufgerundet.  
+PERCENT  
+Gibt an, dass die Abfrage nur die ersten *expression* Prozent der Zeilen aus dem Resultset zurückgibt. Bruchwerte werden auf den nächsten ganzzahligen Wert aufgerundet.  
   
- WITH TIES  
- Wird verwendet, wenn Sie mindestens zwei Zeilen zurückgeben möchten, die zeitgleich den letzten Platz im beschränkten Resultset belegen. Muss mit der **ORDER BY**-Klausel verwendet werden. Durch **WITH TIES** werden möglicherweise mehr Zeilen zurückgegeben, als der Wert in *expression* angibt. Angenommen, *expression* ist auf den Wert 5 festgelegt, und zwei weitere Zeilen entsprechen den Werten der **ORDER BY**-Spalten in Zeile 5. In diesem Fall enthält das Resultset sieben Zeilen.  
+WITH TIES  
+Gibt mindestens zwei Zeilen zurück, die zeitgleich den letzten Platz im beschränkten Resultset belegen. Sie müssen dieses Argument mit der **ORDER BY**-Klausel verwenden. Durch **WITH TIES** werden möglicherweise mehr Zeilen zurückgegeben, als der Wert in *expression* angibt. Wenn beispielsweise *expression* auf den Wert „5“ festgelegt ist, aber zwei weitere Zeilen den Werten der **ORDER BY**-Spalten in Zeile 5 entsprechen, enthält das Resultset sieben Zeilen.  
   
- TOP...WITH TIES kann nur in SELECT-Anweisungen angegeben werden und nur dann, wenn eine ORDER BY-Klausel angegeben wurde. Die zurückgegebene Reihenfolge beim Binden von Datensätzen ist willkürlich. ORDER BY wirkt sich nicht auf diese Regel aus.  
+Sie können die TOP-Klausel mit dem WITH TIES-Argument nur in SELECT-Anweisungen und nur dann angeben, wenn Sie auch die ORDER BY-Klausel angegeben haben. Die zurückgegebene Reihenfolge beim Binden von Datensätzen ist willkürlich. ORDER BY wirkt sich nicht auf diese Regel aus.  
   
 ## <a name="best-practices"></a>Bewährte Methoden  
- Verwenden Sie in einer SELECT-Anweisung immer eine ORDER BY-Klausel mit einer TOP-Klausel. Dies ist die einzige Möglichkeit, zuverlässig anzugeben, welche Zeilen von TOP betroffen sind.  
+Verwenden Sie in einer SELECT-Anweisung immer eine ORDER BY-Klausel mit einer TOP-Klausel. Denn dies ist die einzige Möglichkeit, zuverlässig anzugeben, welche Zeilen von TOP betroffen sind.  
   
- Verwenden Sie OFFSET und FETCH in der ORDER BY-Klausel anstelle der TOP-Klausel, um eine Abfrageauslagerung zu implementieren. Eine Abfrageauslagerung (d. h. das Senden von Abschnitten oder "Seiten" von Daten an den Client) kann leichter mit OFFSET- und FETCH-Klauseln implementiert werden. Weitere Informationen finden Sie unter [ORDER BY-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md).  
+Verwenden Sie OFFSET und FETCH in der ORDER BY-Klausel anstelle der TOP-Klausel, um eine Abfrageauslagerung zu implementieren. Eine Abfrageauslagerung (d. h. das Senden von Abschnitten oder "Seiten" von Daten an den Client) kann leichter mit OFFSET- und FETCH-Klauseln implementiert werden. Weitere Informationen finden Sie unter [ORDER BY-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md).  
   
- Schränken Sie die Anzahl der zurückgegebenen Zeilen mithilfe von TOP (oder OFFSET und FETCH) anstelle von SET ROWCOUNT ein. Diese Methoden werden SET ROWCOUNT aus folgenden Gründen vorgezogen:  
+Schränken Sie die Anzahl der zurückgegebenen Zeilen mithilfe von TOP (oder OFFSET und FETCH) anstelle von SET ROWCOUNT ein. Diese Methoden werden SET ROWCOUNT aus folgenden Gründen vorgezogen:  
   
 -   Im Rahmen einer SELECT-Anweisung kann der Wert von *expression* in der TOP- oder der FETCH-Klausel vom Abfrageoptimierer während der Abfrageoptimierung berücksichtigt werden. Da SET ROWCOUNT außerhalb einer Anweisung verwendet wird, die eine Abfrage ausführt, kann ihr Wert nicht in einem Abfrageplan berücksichtigt werden.  
   
 ## <a name="compatibility-support"></a>Kompatibilitätsunterstützung  
- Aus Gründen der Abwärtskompatibilität sind die Klammern in SELECT-Anweisungen optional. Aus Gründen der Konsistenz wird jedoch empfohlen, TOP-Ausdrücke in SELECT-Anweisungen stets in Klammern einzuschließen, da diese in INSERT-, UPDATE-, MERGE- und DELETE-Anweisungen obligatorisch sind.  
+Aus Gründen der Abwärtskompatibilität sind die Klammern in SELECT-Anweisungen optional. Aus Gründen der Konsistenz wird jedoch empfohlen, TOP-Ausdrücke in SELECT-Anweisungen immer in Klammern einzuschließen, weil diese in INSERT-, UPDATE-, MERGE- und DELETE-Anweisungen obligatorisch sind. 
   
 ## <a name="interoperability"></a>Interoperabilität  
- Der TOP-Ausdruck wirkt sich nicht auf Anweisungen aus, die möglicherweise wegen eines Triggers ausgeführt werden. Die Tabellen **inserted** und **deleted** in den Triggern geben nur die Zeilen zurück, die tatsächlich von den INSERT-, UPDATE- MERGE- oder DELETE-Anweisungen betroffen sind. Beispiel: Ein INSERT TRIGGER der aufgrund einer INSERT-Anweisung mit einer TOP-Klausel ausgelöst wird.  
+Der TOP-Ausdruck wirkt sich nicht auf Anweisungen aus, die möglicherweise wegen eines Triggers ausgeführt werden. Die Tabellen **inserted** und **deleted** in den Triggern geben nur die Zeilen zurück, die tatsächlich von den INSERT-, UPDATE- MERGE- oder DELETE-Anweisungen betroffen sind. Beispiel: Ein INSERT TRIGGER, der aufgrund einer INSERT-Anweisung mit einer TOP-Klausel ausgelöst wird.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht das Aktualisieren von Zeilen über Sichten. Da die TOP-Klausel in der Sichtdefinition enthalten sein kann, können bestimmte Zeilen bei einem Update u. U. verschwinden, falls die Zeilen nicht länger die Anforderungen des TOP-Ausdrucks erfüllen.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht das Aktualisieren von Zeilen über Sichten. Weil die TOP-Klausel in die Sichtdefinition einbezogen werden kann, werden bestimmte Zeilen aufgrund eines Updates möglicherweise nicht mehr in der Sicht angezeigt, wenn die Zeilen die Anforderungen des TOP-Ausdrucks nicht mehr erfüllen.  
   
- Wenn dies in der MERGE-Anweisung angegeben ist, wird die TOP-Klausel angewendet, *nachdem* die gesamte Quelltabelle und die gesamte Zieltabelle verknüpft wurden und die verknüpften Zeilen, auf die keine INSERT-, UPDATE- oder DELETE-Aktion angewendet wird, entfernt wurden. Die TOP-Klausel verringert zudem die Anzahl der verknüpften Zeilen auf den angegebenen Wert, und die INSERT-, UPDATE- oder DELETE-Aktionen werden ungeordnet auf die verbliebenen verknüpften Zeilen angewendet. Dies bedeutet, dass für die Verteilung der Zeilen auf die in den WHEN-Klauseln definierten Aktionen keine bestimmte Reihenfolge gilt. Wenn beispielsweise TOP (10) angegeben wird, sind zehn Zeilen betroffen. Von diesen Zeilen können sieben aktualisiert und drei eingefügt werden, oder eine Zeile kann gelöscht, fünf können aktualisiert und vier eingefügt werden usw. Da die MERGE-Anweisung einen vollständigen Tabellenscan der Quell- und der Zieltabelle ausführt, kann die E/A-Leistung beeinträchtigt werden, wenn mit der TOP-Klausel eine große Tabelle durch Erstellen mehrerer Batches geändert wird. In diesem Szenario muss unbedingt sichergestellt werden, dass alle aufeinanderfolgenden Batches auf neue Zeilen ausgerichtet sind.  
+Bei Angabe in der MERGE-Anweisung wird die TOP-Klausel angewendet, *nachdem* die gesamte Quelltabelle und die gesamte Zieltabelle verknüpft wurden. Und die verknüpften Zeilen, die nicht für eine INSERT-, UPDATE- oder DELETE-Aktion infrage kommen, werden entfernt. Die TOP-Klausel verringert zudem die Anzahl der verknüpften Zeilen auf den angegebenen Wert, und die INSERT-, UPDATE- oder DELETE-Aktionen werden ungeordnet auf die verbliebenen verknüpften Zeilen angewendet. Dies bedeutet, dass für die Verteilung der Zeilen auf die in den WHEN-Klauseln definierten Aktionen keine bestimmte Reihenfolge gilt. Wenn beispielsweise TOP (10) angegeben wird, sind 10 Zeilen betroffen, von denen sieben aktualisiert und drei eingefügt werden können. Oder eine Zeile kann gelöscht, fünf können aktualisiert und vier eingefügt werden usw. Da die MERGE-Anweisung einen vollständigen Tabellenscan der Quell- und der Zieltabelle ausführt, kann die E/A-Leistung beeinträchtigt werden, wenn Sie mit der TOP-Klausel eine große Tabelle durch Erstellen mehrerer Batches ändern. In diesem Szenario muss unbedingt sichergestellt werden, dass alle aufeinanderfolgenden Batches auf neue Zeilen ausgerichtet sind.  
   
- Geben Sie die TOP-Klausel in einer Abfrage mit einem UNION-, UNION ALL-, EXCEPT- oder INTERSECT-Operator mit Bedacht. Es ist denkbar, dass eine Abfrage geschrieben wird, die unerwartete Ergebnisse zurückgibt, weil die Reihenfolge der logischen Verarbeitung für die TOP-Klausel und die ORDER BY-Klausel nicht immer intuitiv ist, wenn diese Operatoren in einem SELECT-Vorgang verwendet werden. Beispiel: Für die folgende Tabelle und die darin enthaltenen Daten sollen das günstigste rote Auto sowie das günstigste blaue Auto zurückgeben werden. Dies sind der rote PKW und der blaue LKW.  
+Geben Sie die TOP-Klausel in einer Abfrage mit einem UNION-, UNION ALL-, EXCEPT- oder INTERSECT-Operator mit Bedacht an. Es ist denkbar, dass eine Abfrage geschrieben wird, die unerwartete Ergebnisse zurückgibt, weil die Reihenfolge der logischen Verarbeitung für die TOP-Klausel und die ORDER BY-Klausel nicht immer intuitiv ist, wenn diese Operatoren in einem SELECT-Vorgang verwendet werden. Beispiel: Für die folgende Tabelle und die darin enthaltenen Daten sollen das günstigste rote Auto sowie das günstigste blaue Auto zurückgeben werden. Dies sind der rote PKW und der blaue LKW.  
   
 ```sql  
 CREATE TABLE dbo.Cars(Model varchar(15), Price money, Color varchar(10));  
@@ -96,7 +96,7 @@ INSERT dbo.Cars VALUES
     ('coupe', 20000, 'red'), ('van', 8000, 'blue');  
 ```  
   
- Um diese Ergebnisse zu erreichen, können Sie die folgende Abfrage schreiben:  
+Um diese Ergebnisse zu erreichen, können Sie die folgende Abfrage schreiben:  
   
 ```sql  
 SELECT TOP(1) Model, Color, Price  
@@ -110,7 +110,7 @@ ORDER BY Price ASC;
 GO    
 ```  
   
- Im Folgenden finden Sie das Resultset.  
+Nachfolgend ist das Resultset dargestellt.  
   
  ```
  Model         Color      Price  
@@ -119,7 +119,7 @@ GO
  convertible   blue       15000.00
  ```  
   
- Die unerwarteten Ergebnisse werden zurückgegeben, da die logische Ausführung der TOP-Klausel der logischen Ausführung der ORDER BY-Klausel vorangeht, mit der die Ergebnisse des Operators (hier: UNION ALL) sortiert werden. Aus diesem Grund werden von der vorstehenden Abfrage ein beliebiges rotes und ein beliebiges blaues Auto zurückgegeben, und das Ergebnis dieser Union wird nach dem Preis sortiert. Im folgenden Beispiel wird veranschaulicht, wie eine Abfrage geschrieben wird, um das gewünschte Ergebnis zu erzielen.  
+Die unerwarteten Ergebnisse werden zurückgegeben, weil die logische Ausführung der TOP-Klausel vor der logischen Ausführung der ORDER BY-Klausel erfolgt, mit der die Ergebnisse des Operators (in diesem Fall UNION ALL) sortiert werden. So werden von der vorherigen Abfrage ein beliebiges rotes und ein beliebiges blaues Auto zurückgegeben, und dann wird das Ergebnis dieser Union nach dem Preis sortiert. Im folgenden Beispiel wird veranschaulicht, wie eine Abfrage geschrieben wird, um das gewünschte Ergebnis zu erzielen.  
   
 ```sql  
 SELECT Model, Color, Price  
@@ -136,7 +136,7 @@ FROM (SELECT TOP(1) Model, Color, Price
 GO    
 ```  
   
- Durch die Verwendung von TOP und ORDER BY in einem untergeordneten SELECT-Vorgang stellen Sie sicher, dass die Ergebnisse der ORDER BY-Klausel auf die TOP-Klausel angewendet werden und damit nicht das Ergebnis des UNION-Vorgangs sortiert wird.  
+Durch die Verwendung von TOP und ORDER BY in einem untergeordneten SELECT-Vorgang stellen Sie sicher, dass die Ergebnisse der ORDER BY-Klausel auf die TOP-Klausel angewendet werden und damit nicht das Ergebnis des UNION-Vorgangs sortiert wird.  
   
  Im Folgenden finden Sie das Resultset.  
   
@@ -148,11 +148,11 @@ GO
  ```  
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
- Wenn TOP mit INSERT, UPDATE, MERGE oder DELETE verwendet wird, werden die Zeilen, auf die verwiesen wird, nicht auf bestimmte Weise angeordnet, und die ORDER BY-Klausel kann in diesen Anweisungen nicht direkt angegeben werden. Wenn Sie die TOP-Klausel verwenden müssen, um Zeilen in einer sinnvollen Reihenfolge einzufügen, zu löschen oder zu bearbeiten, müssen Sie sie zusammen mit einer ORDER BY-Klausel in einer untergeordneten SELECT-Anweisung verwenden. Weitere Informationen finden Sie im Abschnitt "Beispiele" in diesem Thema.  
+Wenn Sie TOP mit INSERT, UPDATE, MERGE oder DELETE verwenden, werden die Zeilen, auf die verwiesen wird, nicht in einer bestimmten Reihenfolge angeordnet, und Sie können die ORDER BY-Klausel in diesen Anweisungen nicht direkt angeben. Wenn Sie die TOP-Klausel verwenden müssen, um Zeilen in einer sinnvollen Reihenfolge einzufügen, zu löschen oder zu bearbeiten, verwenden Sie TOP mit einer ORDER BY-Klausel in einer untergeordneten SELECT-Anweisung. Beachten Sie in diesem Zusammenhang den folgenden Abschnitt „Beispiele“ in diesem Artikel.  
   
- TOP kann nicht in UPDATE- und DELETE-Anweisungen für partitionierte Sichten verwendet werden.  
+TOP kann nicht in UPDATE- und DELETE-Anweisungen für partitionierte Sichten verwendet werden.  
   
- TOP kann nicht mit OFFSET und FETCH im gleichen Abfrageausdruck (im gleichen Abfragebereich) kombiniert werden. Weitere Informationen finden Sie unter [ORDER BY-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md).  
+TOP kann nicht mit OFFSET und FETCH im gleichen Abfrageausdruck (im gleichen Abfragebereich) kombiniert werden. Weitere Informationen finden Sie unter [ORDER BY-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md).  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -163,10 +163,10 @@ GO
 |[Beschränken der von DELETE, INSERT oder UPDATE betroffenen Zeilen](#DML)|DELETE • INSERT • UPDATE|  
   
 ###  <a name="BasicSyntax"></a> Grundlegende Syntax  
- Anhand von Beispielen in diesem Abschnitt wird die grundlegende Funktion der ORDER BY-Klausel mithilfe der mindestens erforderlichen Syntax veranschaulicht.  
+Anhand von Beispielen in diesem Abschnitt wird die grundlegende Funktion der ORDER BY-Klausel mithilfe der mindestens erforderlichen Syntax veranschaulicht.  
   
 #### <a name="a-using-top-with-a-constant-value"></a>A. Verwenden von TOP mit einem konstanten Wert  
- In den folgenden Beispielen wird die Anzahl der Mitarbeiter, die in einem Abfrageresultset zurückgegeben werden, mit einem konstanten Wert angegeben. Im ersten Beispiel werden die ersten 10 nicht definierten Zeilen zurückgegeben, da keine ORDER BY-Klausel verwendet wird. Im zweiten Beispiel wird eine ORDER BY-Klausel verwendet, um die ersten 10 Mitarbeiter zurückzugeben, die kürzlich eingestellt wurden.  
+In den folgenden Beispielen wird die Anzahl der Mitarbeiter, die in einem Abfrageresultset zurückgegeben werden, mit einem konstanten Wert angegeben. Im ersten Beispiel werden die ersten 10 nicht definierten Zeilen zurückgegeben, weil keine ORDER BY-Klausel verwendet wird. Im zweiten Beispiel wird eine ORDER BY-Klausel verwendet, um die ersten 10 Mitarbeiter zurückzugeben, die kürzlich eingestellt wurden.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -183,7 +183,7 @@ GO
 ```  
   
 #### <a name="b-using-top-with-a-variable"></a>B. Verwenden von TOP mit einer Variablen  
- Im folgenden Beispiel wird die Anzahl der Mitarbeiter, die im Abfrageresultset zurückgegeben werden, mit einer Variablen angegeben.  
+Im folgenden Beispiel wird die Anzahl der Mitarbeiter, die im Abfrageresultset zurückgegeben werden, mit einer Variablen angegeben.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -196,7 +196,7 @@ GO
 ```  
   
 #### <a name="c-specifying-a-percentage"></a>C. Angeben eines Prozentsatzes  
- Im folgenden Beispiel wird die Anzahl der Mitarbeiter, die im Abfrageresultset zurückgegeben werden, mit PERCENT angegeben. Die Tabelle `HumanResources.Employee` enthält 290 Mitarbeiter. Da 5 Prozent von 290 ein Dezimalstellenwert ist, wird der Wert auf die nächste ganze Zahl aufgerundet.  
+Im folgenden Beispiel wird die Anzahl der Mitarbeiter, die im Abfrageresultset zurückgegeben werden, mit PERCENT angegeben. Die Tabelle `HumanResources.Employee` enthält 290 Mitarbeiter. Da fünf Prozent von 290 ein Dezimalstellenwert ist, wird der Wert auf die nächste ganze Zahl aufgerundet.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -210,7 +210,7 @@ GO
 ###  <a name="tie"></a> Einschließen von gleichwertigen Werten  
   
 #### <a name="a-using-with-ties-to-include-rows-that-match-the-values-in-the-last-row"></a>A. Einschließen von Zeilen mit identischen Werten wie vorangehende Zeilen mit WITH TIES  
- Im folgenden Beispiel werden die obersten `10` Prozent aller Mitarbeiter mit dem höchsten Gehalt abgerufen und in absteigender Reihenfolge nach der Höhe des Gehalts zurückgegeben. Durch Angeben von `WITH TIES` wird sichergestellt, dass alle Mitarbeiter mit einem Gehalt, das dem niedrigsten zurückgegebenen Gehalt (letzte Zeile) entspricht, ebenfalls im Resultset enthalten sind, auch wenn dadurch `10` Prozent der Mitarbeiter überschritten werden.  
+Im folgenden Beispiel werden die obersten `10` Prozent aller Mitarbeiter mit dem höchsten Gehalt abgerufen und in absteigender Reihenfolge nach der Höhe des Gehalts zurückgegeben. Durch Angeben von `WITH TIES` wird sichergestellt, dass alle Mitarbeiter mit einem Gehalt, das dem niedrigsten zurückgegebenen Gehalt (der letzten Zeile) entspricht, ebenfalls im Resultset enthalten sind, auch wenn dadurch `10` Prozent der Mitarbeiter überschritten werden.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -229,7 +229,7 @@ GO
 ###  <a name="DML"></a> Beschränken der von DELETE, INSERT oder UPDATE betroffenen Zeilen  
   
 #### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>A. Verwenden von TOP, um die Anzahl der zu löschenden Zeilen einzuschränken  
- Wenn eine TOP (*n*)-Klausel zusammen mit DELETE verwendet wird, wird der Löschvorgang für eine nicht definierte Auswahl von *n* Zeilen ausgeführt. Das heißt, die DELETE-Anweisung wählt eine beliebige Anzahl (*n*) von Zeilen aus, die die in der WHERE-Klausel definierten Kriterien erfüllen. Im folgenden Beispiel löscht `20` Zeilen mit Fälligkeitsdaten vor dem 1. Juli 2002 aus der `PurchaseOrderDetail`-Tabelle.  
+Wenn Sie eine TOP (*n*)-Klausel mit DELETE verwenden, wird der Löschvorgang für eine nicht definierte Auswahl von *n* Zeilen ausgeführt. Das heißt, die DELETE-Anweisung wählt eine beliebige Anzahl (*n*) von Zeilen aus, die die in der WHERE-Klausel definierten Kriterien erfüllen. Im folgenden Beispiel werden `20` Zeilen mit einem Fälligkeitsdatum vor dem 1. Juli 2002 aus der Tabelle `PurchaseOrderDetail` gelöscht.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -240,7 +240,7 @@ WHERE DueDate < '20020701';
 GO  
 ```  
   
- Wenn Sie die TOP-Klausel verwenden müssen, um Zeilen in einer sinnvollen Reihenfolge zu löschen, müssen Sie sie zusammen mit ORDER BY in einer untergeordneten SELECT-Anweisung verwenden. Die folgende Abfrage löscht die zehn Zeilen der `PurchaseOrderDetail` -Tabelle mit den frühesten Fälligkeitsdaten. Die in der untergeordneten SELECT-Anweisung angegebene Spalte (`PurchaseOrderID`) ist der Primärschlüssel der Tabelle, um sicherzustellen, dass nur 10 Zeilen gelöscht werden. Wird in der untergeordneten SELECT-Anweisung eine Nichtschlüsselspalte verwendet, werden möglicherweise mehr als 10 Zeilen gelöscht, wenn die angegebene Spalte doppelte Werte enthält.  
+Wenn Sie die TOP-Klausel verwenden möchten, um Zeilen in einer sinnvollen Reihenfolge zu löschen, verwenden Sie TOP mit ORDER BY in einer untergeordneten SELECT-Anweisung. Die folgende Abfrage löscht die zehn Zeilen der `PurchaseOrderDetail` -Tabelle mit den frühesten Fälligkeitsdaten. Die in der untergeordneten SELECT-Anweisung angegebene Spalte (`PurchaseOrderID`) ist der Primärschlüssel der Tabelle, um sicherzustellen, dass nur 10 Zeilen gelöscht werden. Wird in der untergeordneten SELECT-Anweisung eine Nichtschlüsselspalte verwendet, werden möglicherweise mehr als 10 Zeilen gelöscht, wenn die angegebene Spalte doppelte Werte enthält.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -254,7 +254,7 @@ GO
 ```  
   
 #### <a name="b-using-top-to-limit-the-number-of-rows-inserted"></a>B. Einschränken der Anzahl eingefügter Zeilen mit TOP  
- Im folgenden Beispiel wird die `EmployeeSales`-Tabelle erstellt, und der Name und die Verkaufszahlen des laufenden Jahres für die ersten 5 Mitarbeiter aus der `HumanResources.Employee`-Tabelle werden eingefügt. Die INSERT-Anweisung wählt beliebige 5 Zeilen aus, die von der `SELECT`-Anweisung zurückgegeben werden, die die in der WHERE-Klausel definierten Kriterien erfüllen.  Mit der OUTPUT-Klausel werden die Zeilen angezeigt, die in die `EmployeeSales`-Tabelle eingefügt werden. Beachten Sie, dass die ersten 5 Mitarbeiter in der SELECT-Anweisung nicht mit der ORDER BY-Klausel ermittelt werden.  
+Im folgenden Beispiel wird die Tabelle `EmployeeSales` erstellt, und der Name und die Verkaufszahlen des laufenden Jahres für die ersten fünf Mitarbeiter aus der Tabelle `HumanResources.Employee` werden eingefügt. Die INSERT-Anweisung wählt fünf Zeilen aus, die von der `SELECT`-Anweisung zurückgegeben werden, die die in der WHERE-Klausel definierten Kriterien erfüllen. Mit der OUTPUT-Klausel werden die Zeilen angezeigt, die in die `EmployeeSales`-Tabelle eingefügt werden. Beachten Sie, dass die ORDER BY-Klausel in der SELECT-Anweisung nicht zum Ermitteln der ersten fünf Mitarbeiter verwendet wird.  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -280,7 +280,7 @@ INSERT TOP(5)INTO dbo.EmployeeSales
 GO    
 ```  
   
- Wenn Sie die TOP-Klausel verwenden müssen, um Zeilen in einer sinnvollen Reihenfolge einzufügen, müssen Sie sie zusammen mit einer ORDER BY-Klausel in einer untergeordneten SELECT-Anweisung verwenden, wie im folgenden Beispiel veranschaulicht. Mit der OUTPUT-Klausel werden die Zeilen angezeigt, die in die `EmployeeSales`-Tabelle eingefügt werden. Beachten Sie, dass die ersten 5 Mitarbeiter jetzt anhand der Ergebnisse der ORDER BY-Klausel und nicht anhand nicht definierter Zeilen eingefügt werden.  
+Wenn Sie die TOP-Klausel verwenden möchten, um Zeilen in einer sinnvollen Reihenfolge einzufügen, verwenden Sie TOP mit ORDER BY in einer untergeordneten SELECT-Anweisung. Dies wird im folgenden Beispiel veranschaulicht. Mit der OUTPUT-Klausel werden die Zeilen angezeigt, die in die `EmployeeSales`-Tabelle eingefügt werden. Beachten Sie, dass die ersten fünf Mitarbeiter jetzt basierend auf den Ergebnissen der ORDER BY-Klausel und nicht anhand nicht definierter Zeilen eingefügt werden.  
   
 ```sql  
 INSERT INTO dbo.EmployeeSales  
@@ -295,7 +295,7 @@ GO
 ```  
   
 #### <a name="c-using-top-to-limit-the-number-of-rows-updated"></a>C. Einschränken der Anzahl aktualisierter Zeilen mit TOP  
- Im folgenden Beispiel wird die TOP-Klausel zur Aktualisierung von Zeilen in einer Tabelle verwendet. Wenn eine TOP (*n*)-Klausel zusammen mit UPDATE verwendet wird, wird der Updatevorgang für eine nicht definierte Anzahl von Zeilen ausgeführt. Das heißt, die UPDATE-Anweisung wählt eine beliebige Anzahl (*n*) von Zeilen aus, die die in der WHERE-Klausel definierten Kriterien erfüllen. Im folgenden Beispiel werden 10 Kunden von einem Vertriebsmitarbeiter zu einem anderen zugewiesen.  
+Im folgenden Beispiel wird die TOP-Klausel zur Aktualisierung von Zeilen in einer Tabelle verwendet. Wenn Sie eine TOP (*n*)-Klausel mit UPDATE verwenden, wird der Updatevorgang für eine nicht definierte Anzahl von Zeilen ausgeführt. Das heißt, die UPDATE-Anweisung wählt eine beliebige Anzahl (*n*) von Zeilen aus, die die in der WHERE-Klausel definierten Kriterien erfüllen. Im folgenden Beispiel werden 10 Kunden von einem Vertriebsmitarbeiter zu einem anderen zugewiesen.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -305,7 +305,7 @@ WHERE SalesPersonID = 275;
 GO  
 ```  
   
- Wenn TOP verwendet werden muss, um Updates in einer sinnvollen Abfolge anzuwenden, muss in einer untergeordneten SELECT-Anweisung TOP gemeinsam mit ORDER BY verwendet werden. Mit dem nachfolgenden Beispiel werden die Urlaubsstunden der 10 Mitarbeiter mit dem frühesten Einstellungsdatum aktualisiert.  
+Wenn TOP verwendet werden muss, um Updates in einer sinnvollen Abfolge anzuwenden, muss in einer untergeordneten SELECT-Anweisung TOP gemeinsam mit ORDER BY verwendet werden. Mit dem nachfolgenden Beispiel werden die Urlaubsstunden der 10 Mitarbeiter mit dem frühesten Einstellungsdatum aktualisiert.  
   
 ```sql  
 UPDATE HumanResources.Employee  
@@ -317,27 +317,27 @@ GO
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
- Im folgenden Beispiel werden die obersten 31 Zeilen zurückgegeben, die den Abfragekriterien entsprechen. Die **ORDER BY**-Klausel wird verwendet, um sicherzustellen, dass es sich bei den 31 zurückgegebenen Zeilen um die ersten 31 Zeilen (basierend auf einer alphabetischen Sortierung der `LastName`-Spalte) handelt.  
+Im folgenden Beispiel werden die obersten 31 Zeilen zurückgegeben, die den Abfragekriterien entsprechen. Mit der **ORDER BY**-Klausel wird sichergestellt, dass es sich bei den 31 zurückgegebenen Zeilen um die ersten 31 Zeilen (basierend auf einer alphabetischen Sortierung der Spalte `LastName`) handelt.  
   
- Verwenden Sie **TOP**, ohne WITH TIES anzugeben.  
+Verwenden Sie **TOP**, ohne WITH TIES anzugeben.  
   
 ```sql  
 SELECT TOP (31) FirstName, LastName   
 FROM DimEmployee ORDER BY LastName;  
 ```  
   
- Ergebnis: 31 Zeilen werden zurückgegeben.  
+Ergebnis: 31 Zeilen werden zurückgegeben.  
   
- Verwenden Sie TOP mit Angabe von WITH TIES.  
+Verwenden Sie TOP mit Angabe von WITH TIES.  
   
 ```sql  
 SELECT TOP (31) WITH TIES FirstName, LastName   
 FROM DimEmployee ORDER BY LastName;  
 ```  
   
- Ergebnis: 33 Zeilen werden zurückgegeben, da drei Mitarbeiter namens „Brown“ in der 31. Zeile vorhanden sind.  
+Ergebnis: 33 Zeilen werden zurückgegeben, da drei Mitarbeiter namens „Brown“ in der 31. Zeile vorhanden sind.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   

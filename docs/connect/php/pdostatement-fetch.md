@@ -31,7 +31,7 @@ mixed PDOStatement::fetch ([ $fetch_style[, $cursor_orientation[, $cursor_offset
 ```  
   
 #### <a name="parameters"></a>Parameter  
-$*fetch_style:* Ein optionales ganzzahliges Symbol, das das Format der Zeilendaten angibt. Eine Liste der möglichen Werte für $*fetch_style* finden Sie im Abschnitt „Anmerkungen“. Der Standardwert ist PDO::FETCH_BOTH. $*fetch_style* in der Abrufmethode überschreibt die Angabe von $*fetch_style* in der PDO::query-Methode.  
+$*fetch_style:* Ein optionales ganzzahliges Symbol, das das Format der Zeilendaten angibt. Eine Liste der möglichen Werte für $*fetch_style* finden Sie im Abschnitt „Anmerkungen“. Der Standardwert ist PDO::FETCH_BOTH. $*fetch\_style* in der Abrufmethode überschreibt die Angabe von $*fetch\_style* in der PDO::query-Methode.  
   
 $*cursor_orientation:* Ein optionales ganzzahliges Symbol, das die Zeile angibt, die abgerufen werden soll, wenn die prepare-Anweisung `PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL` angibt. Eine Liste der möglichen Werte für $*cursor_orientation* finden Sie im Abschnitt „Anmerkungen“. Ein Beispiel mit einem bildlauffähigen Cursor finden Sie unter [PDO::prepare](../../connect/php/pdo-prepare.md) .  
   

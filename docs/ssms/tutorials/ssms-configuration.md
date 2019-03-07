@@ -5,20 +5,20 @@ keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/16/2018
-ms.topic: Tutorial
+ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: f37ea9b96748e660894aed98a4bc37c7fd710aac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 173123f180047c35ce93a64928770f55525f651b
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661328"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662684"
 ---
-# <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>Tutorial: SQL Server Management Studio-Komponenten und -Konfiguration
+# <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>Lernprogramm: SQL Server Management Studio-Komponenten und -Konfiguration
 In diesem Tutorial werden die verschiedenen Fensterkomponenten in SQL Server Management Studio (SSMS) und einige grundlegende Konfigurationsoptionen für Ihren Arbeitsbereich erläutert. In diesem Artikel lernen Sie Folgendes: 
 
 > [!div class="checklist"]
@@ -42,14 +42,14 @@ In diesem Abschnitt werden die verschiedenen Fensterkomponenten beschrieben, die
 
     ![Das Menü „Ansicht“](media/ssms-configuration/viewmenu.png)
 
-- **Objekt-Explorer** (F8): Objekt-Explorer enthält eine Strukturansicht aller Datenbankobjekte eines Servers. Diese Ansicht enthält die Datenbanken von SQL Server-Datenbank-Engine, SQL Server Analysis Services, SQL Server Reporting Services und SQL Server Integration Services. Der Objekt-Explorer umfasst Informationen zu allen Servern, mit denen eine Verbindung besteht. 
+- **Objekt-Explorer** (F8): Der Objekt-Explorer enthält eine Strukturansicht aller Datenbankobjekte eines Servers. Diese Ansicht enthält die Datenbanken von SQL Server-Datenbank-Engine, SQL Server Analysis Services, SQL Server Reporting Services und SQL Server Integration Services. Der Objekt-Explorer umfasst Informationen zu allen Servern, mit denen eine Verbindung besteht. 
     
     ![Objekt-Explorer](media/ssms-configuration/objectexplorer.png)
-- **Abfragefenster** (STRG+N): Geben Sie Ihre Transact-SQL-Abfragen (T-SQL) in dem Fenster ein, das geöffnet wird, wenn Sie auf die Schaltfläche **Neue Abfrage** klicken. Die Ergebnisse Ihrer Abfrage werden hier ebenfalls angezeigt.
+- **Abfragefenster** (STRG+N): Geben Sie nach dem Auswählen von **Neue Abfrage** Ihre Transact-SQL-Abfragen (T-SQL-Abfragen) in diesem Fenster ein. Die Ergebnisse Ihrer Abfrage werden hier ebenfalls angezeigt.
     
     ![Fenster „Neue Abfrage“](media/ssms-configuration/newquery.png)
 
-- **Eigenschaften** (F4): Die Ansicht „Eigenschaften“ wird angezeigt, wenn das Abfragefenster geöffnet wurde. Die Ansicht zeigt die grundlegenden Eigenschaften der Abfrage an. Es werden beispielsweise der Startzeitpunkt einer Abfrage, die Anzahl zurückgegebener Zeilen und Verbindungsdetails angezeigt.  
+- **Eigenschaften** (F4): Die Ansicht „Eigenschaften“ wird angezeigt, wenn das Abfragefenster geöffnet ist. Die Ansicht zeigt die grundlegenden Eigenschaften der Abfrage an. Es werden beispielsweise der Startzeitpunkt einer Abfrage, die Anzahl zurückgegebener Zeilen und Verbindungsdetails angezeigt.  
 
     ![Eigenschaften](media/ssms-configuration/properties.png)
 
