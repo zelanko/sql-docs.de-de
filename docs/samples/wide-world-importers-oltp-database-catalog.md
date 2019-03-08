@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d98e87d18d76162e5bf9dcb4779a8bc7fec74385
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: e26299f221facfc6828369e1c75225f206937eb4
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617624"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579580"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Datenbankkatalog "wideworldimporters"
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ Details von Lieferanten und aktieneintrag Käufe.
 |Suppliers|Main Entitätstabelle für Lieferanten (Organisationen)|
 |SupplierCategories|Kategorien für Lieferanten (z. B. Novelties, Toys, clothing, Verpacken, usw.)|
 |SupplierTransactions|Alle finanzielle Transaktionen, die Lieferanten-bezogene (Rechnungen, Zahlungen)|
-|Aufträge|Details des Lieferanten Bestellungen|
+|PurchaseOrders|Details des Lieferanten Bestellungen|
 |PurchaseOrderLines|Bestelldetailzeilen vom Lieferanten Bestellungen|
 
  
@@ -202,7 +202,7 @@ Diese Prozeduren werden verwendet, zum Konfigurieren des Beispiels. Sie werden v
 |Configuration_ApplyAuditing|Bietet die Überwachung. Server-Überwachung wird für standard Edition-Datenbanken übernommen. zusätzliche datenbanküberwachung ist für die Enterprise Edition hinzugefügt.|
 |Configuration_ApplyColumnstoreIndexing|Columnstore-Indizierung auf gilt `Sales.OrderLines` und `Sales.InvoiceLines` und wird von entsprechend neu indiziert.|
 |Configuration_ApplyFullTextIndexing|Wendet die Volltextindizes auf `Application.People`, `Sales.Customers`, `Purchasing.Suppliers`, und `Warehouse.StockItems`. Ersetzt `Website.SearchForPeople`, `Website.SearchForSuppliers`, `Website.SearchForCustomers`, `Website.SearchForStockItems`, `Website.SearchForStockItemsByTags` mit Beschreibungen der austauschvorgehensweisen, die die Volltextindizierung verwenden.|
-|Configuration_ApplyPartitioning|Wendet die Tabellenpartitionierung zu `Sales.CustomerTransactions and `Purchasing.SupplierTransactions und ordnet die Indizes entsprechend anpassen.|
+|Configuration_ApplyPartitioning|Wendet die Tabellenpartitionierung zu `Sales.CustomerTransactions` und `Purchasing.SupplierTransactions`, und die Indizes entsprechend sortiert.|
 |Configuration_ApplyRowLevelSecurity|Zum Anwenden von Sicherheit auf Zeilenebene für Filter Kunden von Sales Territory-bezogenen Rollen.|
 |Configuration_ConfigureForEnterpriseEdition|Gilt, columnstore-Indizierung, Volltextsuche, im Arbeitsspeicher, Polybase und Partitionierung.|
 |Configuration_EnableInMemory|Fügt eine speicheroptimierten Dateigruppe, (wenn nicht in Azure funktioniert), ersetzt `Warehouse.ColdRoomTemperatures`, `Warehouse.VehicleTemperatures` durch InMemory-Entsprechungen und migriert die Daten, erstellt die `Website.OrderIDList`, `Website.OrderList`, `Website.OrderLineList`, `Website.SensorDataList` Tabellentypen mit Speicheroptimierte Entsprechungen, löscht und neu erstellt die Prozeduren `Website.InvoiceCustomerOrders`, `Website.InsertCustomerOrders`, und `Website.RecordColdRoomTemperatures` , verwendet dieser Tabellentypen.|

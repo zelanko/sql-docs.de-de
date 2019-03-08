@@ -15,12 +15,12 @@ ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1b3bf1b9c7b43a2196f2bc2c09422feb43cbc7c4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134090"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579320"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Replikation, Änderungsnachverfolgung, Change Data Capture und AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikation, Change Data Capture (CDC) und Änderungsnachverfolgung (CT) werden unter [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]unterstützt. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] bietet Hochverfügbarkeit und zusätzliche Funktionen zur Datenbankwiederherstellung.  
@@ -204,7 +204,7 @@ ms.locfileid: "54134090"
   
 |||||  
 |-|-|-|-|  
-||**Verleger**|**Verteiler** <sup>3</sup>|**Abonnent**|  
+||**Verleger**|**Distributor** <sup>3</sup>|**Abonnent**|  
 |**Transaktion**|Ja<sup>1</sup>|Nein|Ja<sup>2</sup>|  
 |**P2P**|Nein|Nein|Nein|  
 |**Merge**|Ja|Nein|Ja<sup>2</sup>|  
@@ -218,7 +218,7 @@ ms.locfileid: "54134090"
   
 ### <a name="considerations"></a>Weitere Überlegungen  
   
--   Die Verteilerdatenbank wird für die Verwendung mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] oder der Datenbankspiegelung nicht unterstützt. Die Replikationskonfiguration ist mit der SQL Server-Instanz verknüpft, auf der der Verteiler konfiguriert wird. Daher kann die Verteilungsdatenbank nicht gespiegelt oder repliziert werden. Verwenden Sie einen SQL Server-Failovercluster, um Hochverfügbarkeit für den Verteiler bereitzustellen. Weitere Informationen finden Sie unter [ AlwaysOn-Failoverclusterinstanzen (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+-   Die Verteilerdatenbank wird für die Verwendung mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] oder der Datenbankspiegelung nicht unterstützt. Die Replikationskonfiguration ist mit der SQL Server-Instanz verknüpft, auf der der Verteiler konfiguriert wird. Daher kann die Verteilungsdatenbank nicht gespiegelt oder repliziert werden. Verwenden Sie einen SQL Server-Failovercluster, um Hochverfügbarkeit für den Verteiler bereitzustellen. Weitere Informationen finden Sie unter [ Always On-Failoverclusterinstanzen (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
 -   Das Abonnentenfailover zu einer sekundären Datenbank wird unterstützt, ist jedoch eine relativ komplexe manuelle Prozedur. Die Prozedur ist im Wesentlichen identisch mit der Methode zum Ausführen des Failovers einer gespiegelten Abonnentendatenbank identisch. Abonnenten müssen [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] oder höher ausführen, um an einer Verfügbarkeitsgruppe teilzunehmen.  
   
@@ -231,7 +231,7 @@ ms.locfileid: "54134090"
   
 -   [Warten einer AlwaysOn-Veröffentlichungsdatenbank &#40;SQLServer&#41;](maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [Replikationsverwaltung – häufig gestellte Fragen](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
+-   [Häufig gestellte Fragen für Replikationsadministratoren](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
  **Change data capture**  
   
@@ -253,7 +253,7 @@ ms.locfileid: "54134090"
  [Replikationsabonnenten und AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [AlwaysOn-Verfügbarkeitsgruppen: Interoperabilität (SQLServer)](always-on-availability-groups-interoperability-sql-server.md) [ AlwaysOn-Failoverclusterinstanzen (SQLServer)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
+ [AlwaysOn-Verfügbarkeitsgruppen: Interoperabilität (SQLServer)](always-on-availability-groups-interoperability-sql-server.md) [AlwaysOn-Failoverclusterinstanzen (SQLServer)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [Über Change Data Capture &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Informationen zur Änderungsnachverfolgung &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [SQL Server-Replikation](../../../relational-databases/replication/sql-server-replication.md)   

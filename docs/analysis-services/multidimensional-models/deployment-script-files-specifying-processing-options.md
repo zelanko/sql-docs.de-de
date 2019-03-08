@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 37ca9200dc142f1a1bb2f673b3b772644385d8ba
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 54be969446b9c1b234860ce2a68c1208634246ce
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537365"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572773"
 ---
 # <a name="deployment-script-files---specifying-processing-options"></a>Bereitstellungsskriptdateien – angeben von Verarbeitungsoptionen
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -26,12 +26,13 @@ ms.locfileid: "52537365"
   
 -   **Verarbeitungsmethode** Diese Einstellung steuert, ob die bereitgestellten Objekte nach der Bereitstellung verarbeitet werden und welche Art von Verarbeitung ausgeführt wird. Es stehen drei Verarbeitungsoptionen zur Verfügung:  
   
-    -   Standardverarbeitung (Standardeinstellung)  
+    -   Standardverarbeitung (Standardeinstellung) erkennt den Verarbeitungsstatus von Datenbankobjekten und führt die Verarbeitung, die nicht verarbeitete oder teilweise verarbeitete Objekte in den Status vollständig verarbeitet bringt.
   
-    -   Vollständige Verarbeitung  
+    -   Vollständige Verarbeitung verarbeitet ein Objekt und alle darin enthaltenen Objekte. Wenn "Vollständig verarbeiten" für ein bereits verarbeitetes Objekt ausgeführt wird, werden alle Objektdaten von Analysis Services gelöscht, und das Objekt wird anschließend verarbeitet. 
   
-    -   None  
-  
+    -   Ohne bedeutet, dass keine Verarbeitung durchgeführt wird.
+
+
 -   **Optionen für die Rückschreibetabelle** Wenn im [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt Rückschreiben aktiviert ist, wird mit dieser Einstellung die Ausführung dieses Vorgangs definiert. Es sind drei Rückschreibetabellenoptionen verfügbar:  
   
     -   Wenn eine Rückschreibetabelle vorhanden ist, wird diese standardmäßig verwendet. Ist keine Rückschreibetabelle vorhanden, wird eine neue Rückschreibetabelle erstellt.  

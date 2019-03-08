@@ -17,12 +17,12 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 57acb73332f90f4084243184f480edf0a1395a7b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 26d0c84194f6f2aafb8bc499ff5404a1438ee577
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124820"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578840"
 ---
 # <a name="what39s-new-in-sql-server-2014"></a>Was&#39;Neues in SQLServer 2014
   Dieses Thema fasst zusammen, detaillierten Links zu neuen Funktionen in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] und Service Packs für Informationen [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
@@ -43,7 +43,7 @@ ms.locfileid: "54124820"
   
 ## <a name="includesssql14includessssql14-mdmd-service-pack-1-sp1"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Service Pack 1 (SP1)
 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] (SP1) nicht wichtige neue Features eingeführt.
--  [SQL Server 2014 Service Pack 1-Versionsinformationen ](https://support.microsoft.com/en-us/kb/3058865).
+-  [SQL Server 2014 Service Pack 1-Versionsinformationen](https://support.microsoft.com/en-us/kb/3058865).
 -  [![Laden Sie Servicepack 1 für Microsoft?? SqlServer? 2014](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=46694) [Laden Sie Servicepack 1 für Microsoft?? SqlServer? 2014](https://www.microsoft.com/en-us/download/details.aspx?id=46694).
 
 
@@ -86,8 +86,8 @@ ms.locfileid: "54124820"
   
  [SQL Server 2014 Release Notes](https://go.microsoft.com/fwlink/p/?linkID=296445)  
   
- [SQL Server 2014-Ressourcencenter](https://msdn.microsoft.com/sqlserver/dn135309)  
+ [SQL Server 2014 Resource Center](https://msdn.microsoft.com/sqlserver/dn135309)  
   
- [SQLCat-Website](https://go.microsoft.com/fwlink/p/?linkID=220963)  
+ [SQLCat Web Site](https://go.microsoft.com/fwlink/p/?linkID=220963)  
   
   

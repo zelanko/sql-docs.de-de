@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 569b3d2fbd11cc978f1a810bab6b30ec1d33d2b5
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: c61275d1a52a3e248e2c1f551d30ece20c92b7fb
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046530"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579559"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>Richten Sie eine Data Science-Client für die Python-Entwicklung für SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -284,9 +284,9 @@ Wenn man [Python in Visual Studio](https://code.visualstudio.com/docs/languages/
 
 | Konfigurationseinstellung | Wert |
 |-----------------------|-------|
-| **Präfixpfad** | C:\Programme\Microsoft Files\Microsoft\PyForMLS |
-| **Cesta k interpretu** | C:\Programme\Microsoft Files\Microsoft\PyForMLS\python.exe |
-| **Fenstermodus-interpreter** | C:\Programme\Microsoft Files\Microsoft\PyForMLS\pythonw.exe |
+| **Präfixpfad** | C:\Program Files\Microsoft\PyForMLS |
+| **Cesta k interpretu** | C:\Program Files\Microsoft\PyForMLS\python.exe |
+| **Fenstermodus-interpreter** | C:\Program Files\Microsoft\PyForMLS\pythonw.exe |
 
 Hilfe zum Konfigurieren einer Python-Umgebung finden Sie [Verwalten von Python-Umgebungen in Visual Studio](https://docs.microsoft.com/visualstudio/python/managing-python-environments-in-visual-studio).
 
@@ -305,4 +305,4 @@ Sie können nun importieren **Revoscalepy**, **Microsoftml**, oder **Azureml** M
 Nun, da Sie Tools und eine funktionierende Verbindung mit SQL Server haben, erweitern Sie Ihre Kenntnisse mit über die Python-Schnellstarts mit [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 > [!div class="nextstepaction"]
-> [Schnellstart: Stellen Sie sicher, dass Python in SQL Server vorhanden ist. ](../tutorials/quickstart-python-verify.md)
+> [Schnellstart: Stellen Sie sicher, dass Python in SQL Server vorhanden ist.](../tutorials/quickstart-python-verify.md)

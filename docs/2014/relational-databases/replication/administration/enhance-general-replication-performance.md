@@ -21,12 +21,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 71bd15f01cc69371765c4af17fb184ce28481f65
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: ebe4126d0fb64cceea5bc0c9dbfd5be83f9fc165
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129280"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579370"
 ---
 # <a name="enhance-general-replication-performance"></a>Verbessern der allgemeinen Replikationsleistung
   Wenn Sie die Hinweise in diesem Thema beachten, können Sie die allgemeine Leistung aller Replikationstypen in der Anwendung und im Netzwerk verbessern.  
@@ -76,7 +76,7 @@ ms.locfileid: "54129280"
   
     -   Für die Mergereplikation kann es effizienter sein, Geschäftslogikhandler zu verwenden. Weitere Informationen finden Sie unter [Ausführen von Geschäftslogik während der Mergesynchronisierung](../merge/execute-business-logic-during-merge-synchronization.md).  
   
-     Wenn Sie zur Wahrung der referenziellen Integrität Trigger in Tabellen verwenden, die für die Mergereplikation veröffentlicht werden, geben Sie die Verarbeitungsreihenfolge der Tabellen an. Auf diese Weise reduzieren Sie die Zahl der Wiederholungsversuche für den Merge-Agent. Weitere Informationen finden Sie unter [Mergereplikation geben Eigenschaften](../publish/specify-merge-replication-properties.md).  
+     Wenn Sie zur Wahrung der referenziellen Integrität Trigger in Tabellen verwenden, die für die Mergereplikation veröffentlicht werden, geben Sie die Verarbeitungsreihenfolge der Tabellen an. Auf diese Weise reduzieren Sie die Zahl der Wiederholungsversuche für den Merge-Agent. Weitere Informationen finden Sie unter [Specify Merge Replication properties (Angeben von Mergereplikationseigenschaften)](../publish/specify-merge-replication-properties.md).  
   
 -   Schränken Sie die Verwendung des LOB-Datentyps (Large OBjects) ein.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "54129280"
   
      Wenn umfangreiche Änderungen an Abonnenten gesendet werden müssen, kann die Neuinitialisierung mit einer neuen Momentaufnahme schneller sein als das Verwenden der Replikation zum Verschieben der einzelnen Änderungen. Weitere Informationen finden Sie unter [Erneutes Initialisieren von Abonnements](../reinitialize-subscriptions.md).  
   
-     Bei der Transaktionsreplikation zeigt der Replikationsmonitor folgende Informationen auf der Registerkarte **Nicht verteilte Befehle** an: die Anzahl der Transaktionen in der Verteilungsdatenbank, die noch nicht an einen Abonnenten verteilt wurden; und die geschätzte Zeit für das Verteilen dieser Transaktionen. Weitere Informationen finden Sie unter [ Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikationsmonitors](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     Bei der Transaktionsreplikation zeigt der Replikationsmonitor folgende Informationen auf der Registerkarte **Nicht verteilte Befehle** an: die Anzahl der Transaktionen in der Verteilungsdatenbank, die noch nicht an einen Abonnenten verteilt wurden; und die geschätzte Zeit für das Verteilen dieser Transaktionen. Weitere Informationen finden Sie unter [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="snapshot-considerations"></a>Überlegungen zu Momentaufnahmen  
   

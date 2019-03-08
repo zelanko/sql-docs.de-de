@@ -14,12 +14,12 @@ ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 28198abe0fe417ea29d5a10409e141a7a2ee2f1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9583ae760a53e3d3ab68f69b21317b370df726b7
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150570"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579310"
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>Mögliche Fehler bei Sitzungen zwischen Verfügbarkeitsreplikaten (SQL Server)
   Physische, Betriebssystem- oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Probleme können einen Fehler in einer Sitzung zwischen zwei Verfügbarkeitsreplikaten verursachen. Ein Verfügbarkeitsreplikat überprüft Komponenten, auf denen Sqlservr.exe beruht, nicht regelmäßig, um festzustellen, ob sie ordnungsgemäß ausgeführt werden oder nicht. Bei einigen Fehlertypen meldet die betroffene Komponente der Sqlservr.exe jedoch einen Fehler. Ein von einer anderen Komponente gemeldeter Fehler wird als *schwerwiegender Fehler*bezeichnet. Um andere Fehler zu erkennen, die andernfalls unbemerkt blieben, implementiert [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] einen eigenen Sitzungstimeoutmechanismus. Gibt den Zeitraum für das Sitzungstimeout in Sekunden an. Dieser Timeoutzeitraum ist die maximale Wartezeit einer Serverinstanz auf den Erhalt einer PING-Meldung von einer anderen Instanz, bevor sie annimmt, dass keine Verbindung zur anderen Instanz besteht. Wenn ein Sitzungstimeout zwischen zwei Verfügbarkeitsreplikaten auftritt, gehen die Verfügbarkeitsreplikate davon aus, dass ein Fehler aufgetreten ist, und deklarieren einen *Softwarefehler*.  
@@ -82,14 +82,14 @@ ms.locfileid: "48150570"
 -   Unzureichende Verarbeitungsressourcen, wie z. B. Überlastung der CPU oder des Datenträgers, volles Transaktionsprotokoll oder unzureichender Arbeitsspeicher oder nicht genügend Threads. In diesen Fällen müssen Sie den Timeoutzeitraum erhöhen, die Arbeitsauslastung reduzieren oder die Hardware an die Arbeitsauslastung anpassen.  
   
 ### <a name="the-session-timeout-mechanism"></a>Der Sitzungstimeoutmechanismus  
- Da Softwarefehler von einer Serverinstanz nicht direkt erkannt werden können, kann ein Softwarefehler bewirken, dass ein Verfügbarkeitsreplikat in einer Sitzung unbegrenzt auf eine Antwort vom anderen Verfügbarkeitsreplikat wartet. Um dies zu verhindern, implementiert [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] einen Sitzungstimeoutmechanismus, der darauf basiert, dass die verbundenen Verfügbarkeitsreplikate in regelmäßigen Intervallen einen Pingbefehl über alle geöffneten Verbindungen senden. Durch den Empfang eines Pings innerhalb des Timeoutzeitraums wird angezeigt, dass die Verbindung weiterhin offen ist und dass die Serverinstanzen über diese Verbindung kommunizieren. Ein Replikat setzt nach dem Empfangen eines Pings den Timeoutzähler dieser Verbindung wieder zurück. Weitere Informationen zur Beziehung zwischen Verfügbarkeitsmodus und Sitzungstimeouts finden Sie unter [ Verfügbarkeitsmodi (AlwaysOn-Verfügbarkeitsgruppen)](availability-modes-always-on-availability-groups.md).  
+ Da Softwarefehler von einer Serverinstanz nicht direkt erkannt werden können, kann ein Softwarefehler bewirken, dass ein Verfügbarkeitsreplikat in einer Sitzung unbegrenzt auf eine Antwort vom anderen Verfügbarkeitsreplikat wartet. Um dies zu verhindern, implementiert [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] einen Sitzungstimeoutmechanismus, der darauf basiert, dass die verbundenen Verfügbarkeitsreplikate in regelmäßigen Intervallen einen Pingbefehl über alle geöffneten Verbindungen senden. Durch den Empfang eines Pings innerhalb des Timeoutzeitraums wird angezeigt, dass die Verbindung weiterhin offen ist und dass die Serverinstanzen über diese Verbindung kommunizieren. Ein Replikat setzt nach dem Empfangen eines Pings den Timeoutzähler dieser Verbindung wieder zurück. Weitere Informationen zur Beziehung zwischen Verfügbarkeitsmodus und Sitzungstimeouts finden Sie unter [Verfügbarkeitsmodi (AlwaysOn-Verfügbarkeitsgruppen)](availability-modes-always-on-availability-groups.md).  
   
  Die primären und sekundären Replikate signalisieren einander mithilfe von Pingbefehlen, dass sie noch aktiv sind, und eine Sitzungstimeoutgrenze verhindert, dass eines der Replikate unbegrenzt auf ein Ping vom anderen Replikat wartet. Die Sitzungstimeoutgrenze ist eine vom Benutzer konfigurierbare Replikateigenschaft mit einem Standardwert von 10 Sekunden. Durch den Empfang eines Pings innerhalb des Timeoutzeitraums wird angezeigt, dass die Verbindung weiterhin offen ist und dass die Serverinstanzen über diese Verbindung kommunizieren. Beim Empfang eines Pings setzt ein Verfügbarkeitsreplikat seinen Timeoutzähler für diese Verbindung zurück.  
   
  Wenn innerhalb des Zeitraums für das Sitzungstimeout kein Ping vom anderen Replikat empfangen wird, tritt für die Verbindung ein Timeout ein. Die Verbindung wird geschlossen, und der Status des Replikats mit dem Timeout ändert sich in DISCONNECTED. Auch wenn ein nicht verbundenes Replikat für den Modus für synchrone Commits konfiguriert ist, warten Transaktionen nicht darauf, dass dieses Replikat erneut verbunden und synchronisiert wird.  
   
 ## <a name="responding-to-an-error"></a>Reagieren auf Fehler  
- Ungeachtet des Fehlertyps reagiert eine Serverinstanz, die einen Fehler erkennt, abhängig von ihrer Rolle, dem Verfügbarkeitsmodus der Sitzung und dem Status der anderen Verbindungen in der Sitzung. Informationen darüber, was beim Verlust eines Partners geschieht, finden Sie unter [ Verfügbarkeitsmodi (AlwaysOn-Verfügbarkeitsgruppen)](availability-modes-always-on-availability-groups.md).  
+ Ungeachtet des Fehlertyps reagiert eine Serverinstanz, die einen Fehler erkennt, abhängig von ihrer Rolle, dem Verfügbarkeitsmodus der Sitzung und dem Status der anderen Verbindungen in der Sitzung. Informationen darüber, was beim Verlust eines Partners geschieht, finden Sie unter [Verfügbarkeitsmodi (AlwaysOn-Verfügbarkeitsgruppen)](availability-modes-always-on-availability-groups.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
  **So ändern Sie den Timeoutwert (nur Verfügbarkeitsmodus mit synchronem Commit)**  

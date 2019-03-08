@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.openlocfilehash: c6327ae25e9e0b22310e810cd33f7176ecc1349d
-ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
+ms.openlocfilehash: 878eda9c8816e400c873154f1c1cf3d613f8fea3
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55760053"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579050"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Beispiel: Für die unbeaufsichtigte Installation-SQL Server-Skript für Ubuntu
 
@@ -176,7 +176,7 @@ So führen Sie das Skript aus
    ```
 
 ### <a name="understanding-the-script"></a>Dem Skript vertraut
-Im ersten Schritt wird das Bash-Skript wird einige Variablen festgelegt. Diese kann entweder "Skriptvariablen, wie im Beispiel" oder "Umgebungsvariablen. Die Variable ``` MSSQL_SA_PASSWORD ``` ist **erforderlichen** von SQL Server-Installation, die die anderen sind benutzerdefinierte Variablen, die für das Skript erstellt wurde. Das Beispielskript führt die folgenden Schritte aus:
+Im ersten Schritt wird das Bash-Skript wird einige Variablen festgelegt. Diese kann entweder "Skriptvariablen, wie im Beispiel" oder "Umgebungsvariablen. Die Variable `MSSQL_SA_PASSWORD` ist **erforderlichen** von SQL Server-Installation, die die anderen sind benutzerdefinierte Variablen, die für das Skript erstellt wurde. Das Beispielskript führt die folgenden Schritte aus:
 
 1. Importieren Sie die öffentlichen Microsoft GPG-Schlüssel.
 

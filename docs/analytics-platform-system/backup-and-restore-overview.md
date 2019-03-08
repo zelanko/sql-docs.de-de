@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4bb0ee8ad06d217cd6441527a1505311dac8e926
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 0b95d18eb38bbe0012235304747ca80b3dc19a79
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044397"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579180"
 ---
 # <a name="backup-and-restore"></a>Sichern und Wiederherstellen
 
@@ -120,7 +120,7 @@ Beim Wiederherstellen von Daten erkennt die Appliance die Anzahl der Compute-Kno
   
 5.  Jeder Compute-Knoten stellt wieder her, die Teil der Benutzerdatenbank. Wenn keines der Wiederherstellung nicht erfolgreich abgeschlossen werden, alle Datenbanken entfernt, und die Wiederherstellung abgeschlossen werden konnte.  
   
-## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>Wiederherstellen auf einer Appliance mit einer größeren Anzahl von Compute-Knoten  
+## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>Wiederherstellen auf einer Appliance mit einer größeren Anzahl von Computeknoten  
   
 Beim Wiederherstellen einer Sicherung auf einer Appliance mit einer größeren Anzahl von Computeknoten wächst die Größe der zugeordneten Datenbank entsprechend der Anzahl der Computeknoten.  
   
@@ -132,7 +132,7 @@ Nach der Umverteilung enthält jeder Computeknoten weniger tatsächliche Daten u
   
 |Backup- und Restore-Aufgabe|Description|  
 |---------------------------|---------------|  
-|Bereiten Sie einen Server als Sicherungsserver.|[Abrufen und die Konfiguration eines Sicherungsservers ](acquire-and-configure-backup-server.md)|  
+|Bereiten Sie einen Server als Sicherungsserver.|[Erwerb und Konfiguration eines Sicherungsservers](acquire-and-configure-backup-server.md)|  
 |Sichern einer Datenbank.|[DATENBANK SICHERN](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  
 |Wiederherstellen einer Datenbank.|[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
 

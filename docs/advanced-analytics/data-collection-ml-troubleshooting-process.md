@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: edfacb2e4d519d4f709d352f52645526cb341fad
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: a4fdd31cddaba1c46cc14ae6dbdeeb6ad92449da
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017936"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579130"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Problembehandlung bei der Datensammlung für Machine learning
 
@@ -121,7 +121,7 @@ with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue
 
 Wenn es sich bei Machine Learning-Dienste nicht ausgeführt wird, können Sie die installierten Python-Version bestimmen, anhand der pythonlauncher.config-Datei. Es wird empfohlen, und öffnen eine Kopie der Datei, sodass Sie nicht versehentlich alle Eigenschaften ändern.
 
-1. Nur für SQLServer 2017: `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config `
+1. Nur für SQLServer 2017: `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config`
 2. Rufen Sie den Wert für **PYTHONHOME**.
 3. Ruft den Wert des aktuellen Arbeitsverzeichnisses.
 
@@ -209,7 +209,7 @@ Sie können diese Protokolle von den folgenden standardmäßigen Speicherorten a
 
 * SQL Server 2017
   
-  `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog `
+  `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog`
 
 > [!NOTE]
 > Der genauen Ordnernamen variiert abhängig von den Namen der Instanz. Je nach Konfiguration kann der Ordner auf einem anderen Laufwerk sein.

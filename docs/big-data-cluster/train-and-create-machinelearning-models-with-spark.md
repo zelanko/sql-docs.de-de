@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c9bcc5ba99736a6bb65bde4aff20e220d70303d4
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 1ef8f66d220561407c0bcafedde8a402f871924a
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242021"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578110"
 ---
 # <a name="train-and-create-machine-learning-models-with-spark"></a>Trainieren und Erstellen von Machine Learning-Modellen mit Spark
 
@@ -88,7 +88,7 @@ data = data_all.select(select_cols)
 
 ## <a name="step-4---split-as-training-and-test-set"></a>Schritt 4: als Trainings- und Testsätze aufteilen
 
-Verwenden von 75 % der Zeilen trainiert das Modell und die restlichen 25 %, um die das Modell zu bewerten. Darüber hinaus das Trainieren beibehalten und testdatasets in den HDFS-Speicher. Der Schritt ist nicht erforderlich, aber zur Veranschaulichung gezeigt speichern und Laden von ORC-Format. Andere Formate, z. B. `Parquet `kann ebenfalls verwendet werden.
+Verwenden von 75 % der Zeilen trainiert das Modell und die restlichen 25 %, um die das Modell zu bewerten. Darüber hinaus das Trainieren beibehalten und testdatasets in den HDFS-Speicher. Der Schritt ist nicht erforderlich, aber zur Veranschaulichung gezeigt speichern und Laden von ORC-Format. Andere Formate, z. B. `Parquet` kann ebenfalls verwendet werden.
 
 Veröffentlichen Sie diesen Schritt sehen Sie zwei Verzeichnisse, die mit dem Namen AdultCensusIncomeTrain und die AdultCensusIncomeTest erstellt
 

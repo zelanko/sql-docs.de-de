@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.openlocfilehash: 91ff8bfa90fd691d4314e56e751d3ebde1079180
-ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
+ms.openlocfilehash: 0e61b42cb7a0d0f0262a4ac4a38c413bf4c4b512
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759953"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579703"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>Beispiel: Für die unbeaufsichtigte Installation-SQL Server-Skript für SUSE Linux Enterprise Server
 
@@ -178,7 +178,7 @@ So führen Sie das Skript aus
    ```
 
 ### <a name="understanding-the-script"></a>Dem Skript vertraut
-Im ersten Schritt wird das Bash-Skript wird einige Variablen festgelegt. Diese kann entweder "Skriptvariablen, wie im Beispiel" oder "Umgebungsvariablen. Die Variable ``` MSSQL_SA_PASSWORD ``` ist **erforderlichen** von SQL Server-Installation, die die anderen sind benutzerdefinierte Variablen, die für das Skript erstellt wurde. Das Beispielskript führt die folgenden Schritte aus:
+Im ersten Schritt wird das Bash-Skript wird einige Variablen festgelegt. Diese kann entweder "Skriptvariablen, wie im Beispiel" oder "Umgebungsvariablen. Die Variable `MSSQL_SA_PASSWORD` ist **erforderlichen** von SQL Server-Installation, die die anderen sind benutzerdefinierte Variablen, die für das Skript erstellt wurde. Das Beispielskript führt die folgenden Schritte aus:
 
 1. Importieren Sie die öffentlichen Microsoft GPG-Schlüssel.
 

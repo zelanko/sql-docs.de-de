@@ -13,12 +13,12 @@ ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9c2e9c5b1a0bf136e6b21f5b3ad6f12107d1f9b9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: be03754ea8eeb61d838357667da6e37e1be6bc31
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126070"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578320"
 ---
 # <a name="sql-server-replication"></a>SQL Server-Replikation
   Bei der Replikation handelt es sich um eine Reihe von Technologien zum Kopieren und Verteilen von Daten und Datenbankobjekten aus einer Datenbank in eine andere und das anschließende Synchronisieren zwischen den Datenbanken, um die Konsistenz der Daten sicherzustellen. Mithilfe von Replikation können Sie Daten an verschiedene Standorte, an Remotebenutzer oder mobile Benutzer über lokale Netzwerke und WANs (Wide Area Network), über DFÜ-Verbindungen, Funkverbindungen oder über das Internet verteilen.  
@@ -29,10 +29,10 @@ ms.locfileid: "54126070"
   
 
 ## <a name="whats-new"></a>Neues 
-- SQL Server 2017 wurden wichtige neue Features nicht in SQL Server-Replikation. 
-- SQL Server 2016 wurde nicht wichtige neue Features in SQL Server-Replikation eingeführt. 
+- Durch SQL Server 2017 wurde der Funktionsumfang der SQL Server-Replikation nicht wesentlich erweitert. 
+- Durch SQL Server 2016 wurde der Funktionsumfang der SQL Server-Replikation nicht wesentlich erweitert. 
 
-Informationen finden Sie Abwärtskompatibilität [Abwärtskompatibilität von Replikationen](replication-backward-compatibility.md) 
+Informationen zur Abwärtskompatibilität finden Sie unter [Abwärtskompatibilität von Replikationen](replication-backward-compatibility.md). 
 
 
  ## <a name="replication-security"></a>Replikationssicherheit
@@ -46,7 +46,7 @@ Informationen finden Sie Abwärtskompatibilität [Abwärtskompatibilität von Re
 -   [Anzeigen und Ändern von Veröffentlichungseigenschaften](publish/view-and-modify-publication-properties.md)   
 -   [Deaktivieren der Veröffentlichung und Verteilung](disable-publishing-and-distribution.md)  
   
-## <a name="publications-and-articles"></a>Veröffentlichungen und Artikeln 
+## <a name="publications-and-articles"></a>Veröffentlichungen und Artikel 
   
 -   [Create a Publication](publish/create-a-publication.md)    
 -   [Definieren eines Artikels](publish/define-an-article.md)   
@@ -82,7 +82,7 @@ Informationen finden Sie Abwärtskompatibilität [Abwärtskompatibilität von Re
 ### <a name="merge-replication-options"></a>Mergereplikationsoptionen  
   
 -   [Definieren einer logische Datensatzbeziehung zwischen Mergetabellenartikeln](publish/define-a-logical-record-relationship-between-merge-table-articles.md)    
--   [Geben Sie Merge Replication-Eigenschaften](publish/specify-merge-replication-properties.md)    
+-   [Specify Merge Replication properties (Angeben von Mergereplikationseigenschaften)](publish/specify-merge-replication-properties.md)    
 -   [Angeben eines Mergeartikelkonfliktlösers](publish/specify-a-merge-article-resolver.md)    
 
   
@@ -126,13 +126,13 @@ Informationen finden Sie Abwärtskompatibilität [Abwärtskompatibilität von Re
 -   [Verwalten einer Peer-zu-Peer-Topologie](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)    
 -   [Versetzen einer Replikationstopologie](administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)    
 -   [Konfigurieren des Transaktionssatz-Auftrags für einen Oracle-Verleger](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
--   [Aktualisieren von Replikationsskripts ](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
+-   [Aktualisieren von Replikationsskripts](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
   
 ## <a name="monitor"></a>Monitor
   
 -   [Zulassen, dass Nichtadministratoren den Replikationsmonitor verwenden](monitor/allow-non-administrators-to-use-replication-monitor.md)    
 -   [Programmgesteuertes Überwachen der Replikation](monitor/programmatically-monitor-replication.md)    
--   [Anzeigen replizierter Befehle und anderer Informationen in der Verteilungsdatenbank ](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
--   [Anzeigen von Konfliktinformationen für Mergepublikationen ](view-conflict-information-for-merge-publications.md) 
+-   [Anzeigen replizierter Befehle und anderer Informationen in der Verteilungsdatenbank](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
+-   [Anzeigen von Konfliktinformationen für Mergepublikationen](view-conflict-information-for-merge-publications.md) 
 -   [Messen der Latenzzeit und Überprüfen der Verbindungen bei Transaktionsreplikationen](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   

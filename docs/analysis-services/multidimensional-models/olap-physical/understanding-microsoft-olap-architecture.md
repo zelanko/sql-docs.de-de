@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d5f6c7eaff4ecced0d2244d9c12b13a0059344fb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fd0d28a37a8080bcd44c521b2fc3b83192f61837
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525048"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578850"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Grundlegendes zur Microsoft OLAP-Architektur
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -47,6 +47,6 @@ ms.locfileid: "52525048"
  [Globalisierungsszenarien für Analysis Services](../../../analysis-services/globalization-scenarios-for-analysis-services.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Technische Referenz ](../../../analysis-services/powershell/technical-reference-ssas.md)  
+ [Technische Referenz](../../../analysis-services/powershell/technical-reference-ssas.md)  
   
   

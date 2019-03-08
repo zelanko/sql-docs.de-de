@@ -19,19 +19,19 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: eae4ddb70dceccaa4956322dbf74cd84df3a83cc
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+ms.openlocfilehash: 991cbedc74567688aaae8e196ef4fb3356406517
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397559"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578671"
 ---
 # <a name="books-online-for-sql-server-2014"></a>Onlinedokumentation für SQLServer 2014
 
   Willkommen bei der [!INCLUDE[msCoName](../includes/msconame-md.md)]®-Onlinedokumentation für [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. Die Onlinedokumentation enthält die Taskbeschreibungen und die Referenzdokumentation, die die Ausführung von Datenverwaltungs- und Business Intelligence-Arbeiten mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]beschreiben.  
   
  **Probieren Sie es aus:**  
- ![Azure Virtual Machine (klein)](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Haben Sie ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** , um einen virtuellen Computer zu starten, auf dem SQL Server 2014 Service Pack 1 (SP1) bereits installiert ist. Weitere Informationen zu SQL Server 2014 (SP1) finden Sie in den [Versionsinformationen zu SQL Server 2014 Service Pack 1](https://support.microsoft.com/en-us/kb/3058865). 
+ ![Azure Virtual Machine (klein)](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Haben Sie ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** , um einen virtuellen Computer zu starten, auf dem SQL Server 2014 Service Pack 1 (SP1) bereits installiert ist. Weitere Informationen zu SQL Server 2014 (SP1), finden Sie unter [SQL Server 2014 Service Pack 1-Versionsinformationen](https://support.microsoft.com/en-us/kb/3058865). 
   
 ## <a name="sql-server-technologies"></a>SQL Server-Technologien  
 

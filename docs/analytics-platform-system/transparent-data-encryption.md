@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ea15a8fc5eaf066b5a64cf73192f64dd0078434e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e9067416365e56dccf9c09f2e826c01fb3ecfa3c
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534082"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578490"
 ---
 # <a name="transparent-data-encryption"></a>Transparente Datenverschlüsselung
 Sie können verschiedene Vorsichtsmaßnahmen treffen, um eine Datenbank abzusichern, beispielsweise ein sicheres System entwerfen, vertrauliche Datenbestände verschlüsseln oder eine Firewall für die Datenbankserver einrichten. Allerdings für ein Szenario, in dem die physischen Medien (z. B. Festplatten oder Sicherungsbänder) gestohlen werden, kann eine böswillige Partei nur wiederherstellen oder Anfügen der Datenbank und die Daten durchsuchen. Eine Lösung dieses Problems besteht darin, die sensiblen Daten in der Datenbank zu verschlüsseln, und den für die Verschlüsselung der Daten verwendeten Schlüssel mit einem Zertifikat zu schützen. Dadurch kann niemand die Daten verwenden, der nicht im Besitz der Schlüssel ist. Diese Art des Schutzes muss jedoch im Voraus geplant werden.  
@@ -123,7 +123,7 @@ Die folgende Tabelle bietet Links und Erläuterungen zu den Befehlen und Funktio
 |[VERSCHLÜSSELUNGSSCHLÜSSEL FÜR DATENBANK ERSTELLEN](../t-sql/statements/create-database-encryption-key-transact-sql.md)|Erstellt einen Schlüssel, der verwendet wird, um eine Datenbank zu verschlüsseln.|  
 |[ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|Ändert den Schlüssel, der verwendet wird, um eine Datenbank zu verschlüsseln.|  
 |[DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|Entfernt den Schlüssel, der verwendet wurde, um eine Datenbank zu verschlüsseln.|  
-|[DATENBANK ÄNDERN](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|Erklärt die **ALTER DATABASE** -Option, mit der TDE aktiviert wird.|  
+|[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|Erklärt die **ALTER DATABASE** -Option, mit der TDE aktiviert wird.|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>Katalogsichten und dynamische Verwaltungssichten  
 In der folgenden Tabelle werden die Katalogsichten und die dynamischen Verwaltungssichten von TDE erläutert.  
@@ -238,15 +238,15 @@ Wenn ein Datenbank-Hauptschlüssel auf dem Gerät vorhanden ist, auf dem Upgrade
   
 Beispiel: der Upgradeaktion. Ersetzen Sie dies `**********` mit Ihrem Kennwort Datenbank-Hauptschlüssel.  
   
-`setup.exe /Action=ProvisionUpgrade ... DMKPassword='**********'  `  
+`setup.exe /Action=ProvisionUpgrade ... DMKPassword='**********'`  
   
 Beispiel für die Aktion, die einen virtuellen Computer zu ersetzen.  
   
-`setup.exe /Action=ReplaceVM ... DMKPassword='**********'  `  
+`setup.exe /Action=ReplaceVM ... DMKPassword='**********'`  
   
 Während des Upgrades fehl, wenn eine Benutzerdatenbank wird verschlüsselt, und das Kennwort des Datenbank-Hauptschlüssel nicht angegeben wird, die Upgradeaktion. Beim Ersetzen Sie dies Wenn das korrekte Kennwort nicht angegeben wird, wenn ein Datenbank-Hauptschlüssel vorhanden ist, wird der Vorgang den Datenbank-Hauptschlüssel Recovery Schritt überspringen. Alle anderen Schritte werden am Ende die Replace-VM-Vorgänge abgeschlossen werden, aber die Aktion Fehler am Ende melden wird, um anzugeben, dass zusätzliche Schritte erforderlich sind. In die Setupprotokolle (befindet sich in **\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup\\< Zeitstempel > \Detail-Setup**), die folgende Warnung wird im unteren Bereich angezeigt.  
   
-`*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!  `
+`*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!`
   
 Führen Sie diese Anweisung manuell in PDW, und starten Sie danach Gerät neu, um die Datenbank-Hauptschlüssel wiederherstellen:  
   
@@ -278,7 +278,7 @@ Die folgenden Links enthalten allgemeine Informationen dazu, wie Verschlüsselun
 
   
 ## <a name="see-also"></a>Siehe auch  
-[DATENBANK ÄNDERN](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
+[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
 [CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)  
 [VERSCHLÜSSELUNGSSCHLÜSSEL FÜR DATENBANK ERSTELLEN](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
 [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)  

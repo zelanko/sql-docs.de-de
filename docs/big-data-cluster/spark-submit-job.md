@@ -9,12 +9,12 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c7d37843aff49f27ec05cdcf7b89febd86c72fbf
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: c1d439c13b06b305c814813eeca7cb9bf8aa53c5
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241582"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578240"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Übermitteln von Spark-Aufträgen in SQL Server-big Data-Clustern in Azure Data Studio
 
@@ -25,7 +25,7 @@ Eines der Hauptszenarien für big Data-Cluster ist die Möglichkeit zum Übermit
 - [SQL Server-2019 big Data-Tools](deploy-big-data-tools.md):
    - **Azure Data Studio**
    - **SQL Server-2019-Erweiterung**
-   - **"kubectl"**
+   - **kubectl**
 
 - [Herstellen einer Verbindung des Gateways HDFS/Spark Ihrer big Data-Cluster mit Azure Data Studio](connect-to-big-data-cluster.md).
 
@@ -34,7 +34,7 @@ Es gibt mehrere Methoden zum Öffnen des Dialogfelds "Senden" der Spark-Auftrag.
 
 + Klicken Sie auf **neue Spark-Auftrag** im Dashboard, um das Dialogfeld "Spark Job Submission" zu öffnen.
 
-    ![Übermitteln Sie im Menü durch Klicken auf dashboard ](./media/submit-spark-job/new-spark-job.png)
+    ![Übermitteln Sie im Menü durch Klicken auf dashboard](./media/submit-spark-job/new-spark-job.png)
  
 + Mit der rechten Maustaste auf den Cluster im Objekt-Explorer, und wählen Sie **Submit Spark Job** aus dem Kontextmenü. Spark-Auftrag-Dialogfelds "Senden" wird geöffnet.  
  

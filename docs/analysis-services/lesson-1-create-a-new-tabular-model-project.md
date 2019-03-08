@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6b0c376c6ab8625d2f31e6ad6ea132842315b1e1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 988a091fa7d536386cadd2ed3412213a2e608564
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410776"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579430"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Lektion 1: Erstellen eines neuen Tabellenmodellprojekts
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -46,7 +46,7 @@ Dieses Thema stellt die erste Lektion in einem Lernprogramm zur Tabellenmodeller
       
 6.  Überprüfen Sie im Listenfeld **Kompatibilitätsgrad**, ob **SQL Server 2016 (1200)** ausgewählt ist, und klicken Sie anschließend auf **OK**.   
  
-    ![als-tabellarische – Lektion 1-tmd](../analysis-services/media/as-tabular-lesson1-tmd.png)
+    ![as-tabular-lesson1-tmd](../analysis-services/media/as-tabular-lesson1-tmd.png)
       
     Wenn Sie SQL Server 2016 RTM (1200) im Kompatibilitätsgrad-Listenfeld nicht angezeigt wird, verwenden Sie nicht die neueste Version von SQL Server Data Tools. Sie können die neueste Version unter [Installieren von SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)herunterladen.  
 
@@ -59,15 +59,15 @@ Nun, dass Sie ein neues tabellarisches Modellprojekt erstellt haben, werfen wir 
   
 Nachdem das Projekt erstellt wurde, werden sie in SSDT geöffnet. Klicken Sie auf der rechten Seite in **tabellarischer Modell-Explorer**, sehen Sie eine Strukturansicht der Objekte in Ihrem Modell. Da Sie noch Daten importiert haben, werden der Ordner leer sein. Sie können einen Objekt-Ordner, um Aktionen ausführen, auf der Menüleiste ähnlich wie mit der Maustaste. Während Sie in diesem Tutorial durchlaufen, verwenden Sie das tabellarische Modell-Explorer, um die verschiedenen Objekte in Ihrem Modellprojekt zu navigieren.
 
-![als-tabellarische – Lektion 1-tme](../analysis-services/media/as-tabular-lesson1-tme.png)
+![as-tabular-lesson1-tme](../analysis-services/media/as-tabular-lesson1-tme.png)
 
 Klicken Sie auf die **Projektmappen-Explorer** Registerkarte. Hier sehen Sie Ihre **Model.bim** Datei. Wenn Sie nicht in das Designer-Fenster auf der linken Seite (das leere Fenster mit der Registerkarte Model.bim), sehen **Projektmappen-Explorer**unter **AW Internet-Verkaufsprojekt**, doppelklicken Sie auf die **Model.bim** Datei. Die Datei "Model.bim" enthält alle Metadaten für Ihr Modellprojekt. 
 
-![als-tabellarische – Lektion 1-se](../analysis-services/media/as-tabular-lesson1-se.png)
+![as-tabular-lesson1-se](../analysis-services/media/as-tabular-lesson1-se.png)
   
 Wir sehen uns die Modelleigenschaften. Klicken Sie auf **Model.bim**. In der **Eigenschaften** Fenster sehen Sie die [Modelleigenschaften](../analysis-services/tabular-models/model-properties-ssas-tabular.md)wichtigste davon ist die **DirectQuery-Modus** Eigenschaft. Diese Eigenschaft gibt an, ob das Modell im InMemory-Modus (Aus) oder im DirectQuery-Modus (Ein) bereitgestellt wird. In diesem Lernprogramm wird das Modell im InMemory-Modus erstellt und bereitgestellt.
 
-![als tabellarische – Lektion 1-Eigenschaften](../analysis-services/media/as-tabular-lesson1-properties.png)
+![as-tabular-lesson1-properties](../analysis-services/media/as-tabular-lesson1-properties.png)
   
 Wenn Sie ein neues Modell erstellen, bestimmte Modelleigenschaften gemäß den datenmodellierungseinstellungen, die in angegeben werden können automatisch festgelegt sind das **Tools** > **Optionen** Dialogfeld. Die Eigenschaften für die Datensicherung, Beibehaltung des Arbeitsbereichs und den Arbeitsbereichsserver geben an, wie und wo die Arbeitsbereichsdatenbank (Datenbank zur Modellerstellung) gesichert, speicherintern beibehalten und erstellt wird. Sie können diese Einstellungen ggf. später ändern. Lassen Sie sie jedoch vorerst unverändert.  
 
@@ -83,7 +83,7 @@ Erkunden Sie einige der Dialogfelder und Positionen für verschiedene Funktionen
 
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
-Mehr über die verschiedenen Typen von tabellenmodellprojekten finden Sie unter [Projekte für tabellarische Modelle](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md). Weitere Informationen zu der Umgebung für die tabellenmodellerstellung finden Sie unter [Designer für tabellarische Modelle ](../analysis-services/tabular-models/tabular-model-designer-ssas.md).  
+Mehr über die verschiedenen Typen von tabellenmodellprojekten finden Sie unter [Projekte für tabellarische Modelle](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md). Weitere Informationen zu der Umgebung für die tabellenmodellerstellung finden Sie unter [Designer für tabellarische Modelle](../analysis-services/tabular-models/tabular-model-designer-ssas.md).  
   
 
 ## <a name="whats-next"></a>Wie geht es weiter?
