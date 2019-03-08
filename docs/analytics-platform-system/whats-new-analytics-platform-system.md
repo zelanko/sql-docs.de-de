@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3731f60047e22da7209b6c131ab93b28a20a99c2
-ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
+ms.openlocfilehash: cc64fdd430e64f7ad1b152234c2a203f453745c8
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652589"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579412"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Neuerungen in Analytics Platform System, das ein horizontales MPP Datawarehouse
 Finden Sie unter Neues in den neuesten Appliance Updates für Microsoft Analytics Platform System (APS). APS ist es sich um eine horizontale Skalierung auf lokale Anwendung, die MPP SQL Server Parallel Data Warehouse hostet. 
@@ -120,7 +120,7 @@ APS-AU7 erstellt und Statistics wird standardmäßig automatisch aktualisiert. U
 ### <a name="t-sql"></a>T-SQL
 Wählen Sie @var wird jetzt unterstützt. Weitere Informationen finden Sie unter [wählen Sie die lokale Variable](/sql/t-sql/language-elements/select-local-variable-transact-sql) 
 
-Abfragehinweise HASH "und" ORDER GROUP werden jetzt unterstützt. Weitere Informationen finden Sie unter [Hints(Transact-SQL) - Abfrage ](/sql/t-sql/queries/hints-transact-sql-query)
+Abfragehinweise HASH "und" ORDER GROUP werden jetzt unterstützt. Weitere Informationen finden Sie unter [Hints(Transact-SQL) - Abfrage](/sql/t-sql/queries/hints-transact-sql-query)
 
 ### <a name="feature-switch"></a>Feature-Switch
 APS-AU7 führt Feature-Switch in [Configuration Manager](launch-the-configuration-manager.md). AutoStatsEnabled und DmsProcessStopMessageTimeoutInSeconds werden nun konfigurierbare Optionen, die von Administratoren geändert werden können.

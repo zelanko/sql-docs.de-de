@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0421361cf1718d6ee280269f9da125c148aa3afd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9e52e3962fa1928d7f7680a750d6c1efe5201c6f
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518272"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579400"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Konfigurieren von InfiniBand-Netzwerkadapter für Analytics Platform System
 Beschreibt, wie die InfiniBand-Netzwerkadapter auf einem Clientserver nicht zur Appliance gehört-für die Verbindung mit dem Steuerungsknoten auf Parallel Data Warehouse (PDW) zu konfigurieren. Verwenden Sie diese Anweisungen für eine hohe Verfügbarkeit und Konnektivität, sodass laden, Sicherung und andere Prozesse automatisch mit dem aktiven InfiniBand-Netzwerk zu verbinden.  
@@ -182,5 +182,5 @@ Um Ihre eigenen geschäftlichen Anforderungen zu erfüllen, können Sie die Clie
     -   MyPDW-SQLCTL01  
   
 ## <a name="see-also"></a>Siehe auch  
-[Abrufen und Konfigurieren eines ladenden Servers ](acquire-and-configure-loading-server.md)  
+[Abrufen und Konfigurieren eines ladenden Servers](acquire-and-configure-loading-server.md)  
   
