@@ -1,6 +1,6 @@
 ---
-title: 'Analysis Services Tutorial ergänzende Lektion: unregelmäßige Hierarchien | Microsoft-Dokumentation'
-ms.date: 08/27/2018
+title: 'Analysis Services Tutorial ergänzende Lektion: Unregelmäßige Hierarchien | Microsoft-Dokumentation'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1aa9b8b0e456bb4f4aeff0a2a8e03d4938a46399
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 39f8bcc63b7e5344f70a6d4a3b6c44ae3e69e108
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43074830"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685397"
 ---
 # <a name="supplemental-lesson---ragged-hierarchies"></a>Ergänzende Lektion: unregelmäßige Hierarchien
 
@@ -22,7 +23,7 @@ ms.locfileid: "43074830"
 
 In dieser ergänzenden Lektion beheben Sie ein häufiges Problem beim Pivotieren von Hierarchien, die leere Werte (Member) auf verschiedenen Ebenen enthalten. Beispielsweise muss eine Organisation, in dem eine hochrangigen Führungskraft sowohl Abteilungsleiter als auch ohne Führungskompetenzen unterstellt ist. Oder geografische Hierarchien bestehen Country-Region-Stadt, in denen einige Städte ein Bundesland / Kanton untergeordnet, z. B. Washington d. c., Vatikanstadt fehlt. Wenn eine Hierarchie leere Member aufweist, verzweigt es häufig zu anderen oder unregelmäßigen Ebenen.
 
-![As-Lesson-Detail-ragged-hierarchies-Table](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-table.png)
+![as-lesson-detail-ragged-hierarchies-table](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-table.png)
 
 Tabellarische Modelle mit Kompatibilitätsgrad 1400 verfügen über eine zusätzliche **Member ausblenden** -Eigenschaft für Hierarchien. Die **Standard** Einstellung wird vorausgesetzt, es sind keine leeren Mitglieder auf jeder Ebene. Die **leere Member ausblenden** Einstellung schließt leere Member aus der Hierarchie, wenn eine PivotTable oder ein Bericht hinzugefügt.  
   
@@ -47,11 +48,11 @@ Wenn Sie das AW Internet Sales-Projekt als Teil des Tutorials erstellt haben, Ih
 
     | Tabelle 1           | Spalte       | Filterrichtung   | Tabelle 2     | Spalte      | Active |
     |-------------------|--------------|--------------------|-------------|-------------|--------|
-    | FactResellerSales | OrderDateKey | Default            | DimDate     | date        | Benutzerkontensteuerung    |
-    | FactResellerSales | DueDate      | Default            | DimDate     | date        | nein     |
-    | FactResellerSales | ShipDateKey  | Default            | DimDate     | date        | nein     |
-    | FactResellerSales | ProductKey   | Default            | DimProduct  | ProductKey  | Benutzerkontensteuerung    |
-    | FactResellerSales | EmployeeKey  | Für beide Tabellen | "Dimemployee" | EmployeeKey | Benutzerkontensteuerung    |
+    | FactResellerSales | OrderDateKey | Standard            | DimDate     | date        | Ja    |
+    | FactResellerSales | DueDate      | Standard            | DimDate     | date        | Nein     |
+    | FactResellerSales | ShipDateKey  | Standard            | DimDate     | date        | Nein     |
+    | FactResellerSales | ProductKey   | Standard            | DimProduct  | ProductKey  | Ja    |
+    | FactResellerSales | EmployeeKey  | Für beide Tabellen | DimEmployee | EmployeeKey | Ja    |
 
 5. In der **DimEmployee** Tabelle, erstellen Sie die folgende [berechnete Spalten](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md): 
 
@@ -60,7 +61,7 @@ Wenn Sie das AW Internet Sales-Projekt als Teil des Tutorials erstellt haben, Ih
     =PATH([EmployeeKey],[ParentEmployeeKey])
     ```
 
-    **"FullName"** 
+    **FullName** 
     ```
     =[FirstName] & " " & [MiddleName] & " " & [LastName]
     ```
@@ -80,17 +81,17 @@ Wenn Sie das AW Internet Sales-Projekt als Teil des Tutorials erstellt haben, Ih
     =LOOKUPVALUE(DimEmployee[FullName],DimEmployee[EmployeeKey],PATHITEM([Path],3,1)) 
     ```
 
-    **"Level4"** 
+    **Level4** 
     ```
     =LOOKUPVALUE(DimEmployee[FullName],DimEmployee[EmployeeKey],PATHITEM([Path],4,1)) 
     ```
 
-    **Ebene5** 
+    **Level5** 
     ```
     =LOOKUPVALUE(DimEmployee[FullName],DimEmployee[EmployeeKey],PATHITEM([Path],5,1)) 
     ```
 
-6.  In der **DimEmployee** Tabelle, erstellen Sie eine [Hierarchie](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md) mit dem Namen **Organisation**. Fügen Sie die folgenden Spalten in dieser Reihenfolge hinzu: **Level1**, **Level2**, **Level3**, **"Level4"**, **ebene5**.
+6.  In der **DimEmployee** Tabelle, erstellen Sie eine [Hierarchie](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md) mit dem Namen **Organisation**. Fügen Sie die folgenden Spalten in dieser Reihenfolge hinzu: **Level1**, **Level2**, **Level3**, **Level4**, **Level5**.
 
 7.  In der **FactResellerSales** Tabelle, erstellen Sie die folgende [Measure](../tutorial-tabular-1400/as-lesson-6-create-measures.md):
 
@@ -102,7 +103,7 @@ Wenn Sie das AW Internet Sales-Projekt als Teil des Tutorials erstellt haben, Ih
 
 9.  In **PivotTable Fields**, Hinzufügen der **Organisation** -Hierarchie aus der **DimEmployee** Tabelle **Zeilen**, und die  **ResellerTotalSales** measure aus der **FactResellerSales** Tabelle **Werte**.
 
-    ![As-Lesson-Detail-ragged-hierarchies-PivotTable](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-pivottable.png)
+    ![as-lesson-detail-ragged-hierarchies-pivottable](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-pivottable.png)
 
     Wie Sie in der PivotTable sehen, zeigt die Hierarchie unregelmäßige Zeilen an. Es gibt viele Zeilen, in denen leere Member angezeigt werden.
 
@@ -116,11 +117,11 @@ Wenn Sie das AW Internet Sales-Projekt als Teil des Tutorials erstellt haben, Ih
 
 3.  Aktualisieren Sie die PivotTable in Excel. 
 
-    ![As-Lesson-Detail-ragged-hierarchies-PivotTable-Refresh](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-pivottable-refresh.png)
+    ![as-lesson-detail-ragged-hierarchies-pivottable-refresh](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-pivottable-refresh.png)
 
     Das sieht doch sehr viel besser!
 
 ## <a name="see-also"></a>Siehe auch   
-[Lesson 9: Create hierarchies (Lektion 9: Erstellen von Hierarchien)](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)  
+[Lektion 9: Erstellen von Hierarchien](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)  
 [Ergänzende Lektion – dynamische Sicherheit](../tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md)  
 [Ergänzende Lektion – Detailzeilen](../tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md)  

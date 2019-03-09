@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services-Tutorial – Lektion 6: Erstellen von Measures | Microsoft-Dokumentation'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f9b466a703dd04a53c6ebf7c6fac624476abcc52
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: f3592f1494661fa603e6dc252d3cd2e10093c24e
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43093963"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685647"
 ---
 # <a name="create-measures"></a>Erstellen von Measures
 
@@ -32,7 +33,7 @@ Geschätzte Zeit zum Bearbeiten dieser Lektion: **30 Minuten**
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
 
-Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Reihenfolge absolviert werden sollte. Vor dem Ausführen der Aufgaben in dieser Lektion an, Sie sollten die vorherige Lektion abgeschlossen haben: [Lektion 5: Erstellen von berechneten Spalten](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md).  
+Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Reihenfolge absolviert werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lesson 5: Erstellen von berechneten Spalten](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md).  
   
 ## <a name="create-measures"></a>Erstellen von Measures  
   
@@ -89,13 +90,13 @@ Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Rei
     |Spalte|Measurename|AutoSumme (∑)|Formel|  
     |----------------|----------|-----------------|-----------|  
     |SalesOrderLineNumber|InternetOrderLinesCount|Count|=COUNTA([SalesOrderLineNumber])|  
-    |OrderQuantity|InternetTotalUnits|SUM|=SUM([OrderQuantity])|  
-    |DiscountAmount|InternetTotalDiscountAmount|SUM|=SUM([DiscountAmount])|  
-    |TotalProductCost|InternetTotalProductCost|SUM|=SUM([TotalProductCost])|  
-    |SalesAmount|"Internettotalsales" an|SUM|=SUM([SalesAmount])|  
-    |Margin|InternetTotalMargin|SUM|=SUM([Margin])|  
-    |TaxAmt|InternetTotalTaxAmt|SUM|=SUM([TaxAmt])|  
-    |Freight|InternetTotalFreight|SUM|=SUM([Freight])|  
+    |OrderQuantity|InternetTotalUnits|Summe|=SUM([OrderQuantity])|  
+    |DiscountAmount|InternetTotalDiscountAmount|Summe|=SUM([DiscountAmount])|  
+    |TotalProductCost|InternetTotalProductCost|Summe|=SUM([TotalProductCost])|  
+    |SalesAmount|InternetTotalSales|Summe|=SUM([SalesAmount])|  
+    |Margin|InternetTotalMargin|Summe|=SUM([Margin])|  
+    |TaxAmt|InternetTotalTaxAmt|Summe|=SUM([TaxAmt])|  
+    |Freight|InternetTotalFreight|Summe|=SUM([Freight])|  
   
 2.  Erstellen Sie durch Klicken auf eine leere Zelle im measureraster, und mithilfe der Bearbeitungsleiste, die folgenden benutzerdefinierten Measures in der Reihenfolge:  
   

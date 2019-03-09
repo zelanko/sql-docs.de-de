@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services-Tutorial – Lektion 5: Erstellen von berechneten Spalten | Microsoft-Dokumentation'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 58a7f38dbbe7a68668418db4d1bef16e08784a08
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: d1e2c4df54313ecc66e5e49904bdc40393c410f7
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43063859"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685557"
 ---
 # <a name="create-calculated-columns"></a>Erstellen von berechneten Spalten
 
@@ -30,7 +31,7 @@ Geschätzte Zeit zum Bearbeiten dieser Lektion: **15 Minuten**
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
 
-Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Reihenfolge absolviert werden sollte. Vor dem Ausführen der Aufgaben in dieser Lektion an, Sie sollten die vorherige Lektion abgeschlossen haben: [Lektion 4: Erstellen von Beziehungen](../tutorial-tabular-1400/as-lesson-4-create-relationships.md). 
+Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Reihenfolge absolviert werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lektion 4: Erstellen von Beziehungen](../tutorial-tabular-1400/as-lesson-4-create-relationships.md). 
   
 ## <a name="create-calculated-columns"></a>Erstellen von berechneten Spalten  
   
@@ -46,7 +47,7 @@ Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Rei
   
     Eine neue Spalte mit dem Namen **Calculated Column 1** wird links von der Spalte **Calendar Quarter** eingefügt.  
   
-4.  Geben Sie in der Bearbeitungsleiste über der Tabelle die folgende DAX-Formel: AutoVervollständigen unterstützt Sie beim Geben Sie den vollqualifizierten Namens von Spalten und Tabellen und listet die Funktionen, die verfügbar sind.  
+4.  Geben Sie in der Bearbeitungsleiste über der Tabelle die folgende DAX-Formel ein: Mit der AutoVervollständigen-Funktion können Sie die vollqualifizierten Namen von Spalten und Tabellen auf einfache Weise eingeben und die verfügbaren Funktionen auflisten.  
   
     ```  
     =RIGHT(" " & FORMAT([MonthNumberOfYear],"#0"), 2) & " - " & [EnglishMonthName]  
@@ -124,7 +125,7 @@ Die berechnete Spalte "productcategoryname" wird verwendet, um eine Hierarchie i
 
 4.  Benennen Sie die Spalte in **Margin**um.  
  
-      ![als lesson5 newmargin](../tutorial-tabular-1400/media/as-lesson5-newmargin.png)
+      ![as-lesson5-newmargin](../tutorial-tabular-1400/media/as-lesson5-newmargin.png)
       
     Die berechnete Margin-Spalte wird verwendet, um die Analyse von Gewinnspannen für jeden Verkauf.  
   

@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services-Tutorial – Lektion 7: Erstellen von Key Performance Indicators | Microsoft-Dokumentation'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e0cd1cfa0c468f28b5cadfc9757671f18206d2cd
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 348a012b5915c6b02f04481673fc33128001ff73
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43087565"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685407"
 ---
 # <a name="create-key-performance-indicators"></a>Erstellen von Leistungskennzahlen
 
@@ -26,7 +27,7 @@ Geschätzte Zeit zum Bearbeiten dieser Lektion: **15 Minuten**
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
 
-Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Reihenfolge absolviert werden sollte. Vor dem Ausführen der Aufgaben in dieser Lektion an, Sie sollten die vorherige Lektion abgeschlossen haben: [Lektion 6: Erstellen von Measures](../tutorial-tabular-1400/as-lesson-6-create-measures.md).   
+Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Reihenfolge absolviert werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lektion 6: Erstellen von Measures](../tutorial-tabular-1400/as-lesson-6-create-measures.md).   
   
 ## <a name="create-key-performance-indicators"></a>Erstellen von Leistungskennzahlen  
   

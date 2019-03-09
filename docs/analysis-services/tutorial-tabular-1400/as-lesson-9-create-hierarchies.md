@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services-Tutorial – Lektion 9: Erstellen von Hierarchien | Microsoft-Dokumentation'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfiles"
-ms.openlocfilehash: 0261da590a30e077db8332aca35ed32dcc5656c6
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: cdb9f571e7bc1630ce12c0d0a4b7f57df8961907
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43071813"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685417"
 ---
 # <a name="create-hierarchies"></a>Erstellen von Hierarchien
 
@@ -28,7 +29,7 @@ Geschätzte Zeit zum Bearbeiten dieser Lektion: **20 Minuten**
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
 
-Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Reihenfolge absolviert werden sollte. Vor dem Ausführen der Aufgaben in dieser Lektion an, Sie sollten die vorherige Lektion abgeschlossen haben: [Lektion 8: Erstellen von Perspektiven](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md).  
+Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Reihenfolge absolviert werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lektion 8: Erstellen von Perspektiven](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md).  
   
 ## <a name="create-hierarchies"></a>Erstellen von Hierarchien  
   
@@ -49,7 +50,7 @@ Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Rei
 
 6.  Fügen Sie abschließend **EnglishProductName** der Kategoriehierarchie. Benennen Sie sie **Produkt**.  
 
-    ![als-lesson9-Kategorie](../tutorial-tabular-1400/media/as-lesson9-category.png)
+    ![as-lesson9-category](../tutorial-tabular-1400/media/as-lesson9-category.png)
   
 #### <a name="to-create-hierarchies-in-the-dimdate-table"></a>So erstellen Sie Hierarchien in der DimDate-Tabelle  
   

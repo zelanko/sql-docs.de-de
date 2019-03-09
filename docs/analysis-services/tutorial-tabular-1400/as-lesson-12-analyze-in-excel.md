@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services-Tutorial – Lektion 12: Analysieren in Excel | Microsoft-Dokumentation'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4b4531183c890e43158f2d9c0f9f4b18f5d303be
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: efd71653e723344e9175d9ab1529fafd610901df
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084453"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685428"
 ---
 # <a name="analyze-in-excel"></a>In Excel analysieren
 
@@ -28,7 +29,7 @@ Geschätzte Zeit zum Bearbeiten dieser Lektion: **5 Minuten**
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
 
-Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Reihenfolge absolviert werden sollte. Vor dem Ausführen der Aufgaben in dieser Lektion an, Sie sollten die vorherige Lektion abgeschlossen haben: [Lektion 11: Erstellen von Rollen](../tutorial-tabular-1400/as-lesson-11-create-roles.md).  
+Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Reihenfolge absolviert werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lektion 11: Erstellen von Rollen](../tutorial-tabular-1400/as-lesson-11-create-roles.md).  
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>Durchsuchen mit der Standardperspektive und der Internet Sales-Perspektive  
 
@@ -52,11 +53,11 @@ In dieser ersten Aufgaben durchsuchen Sie Ihr Modell unter Verwendung der Standa
   
 2.  Lassen Sie im Dialogfeld **In Excel analysieren** die Option **Aktueller Windows-Benutzer** aktiviert, wählen Sie im Dropdownlistenfeld **Perspektive** den Eintrag **Internet Sales**aus, und klicken Sie anschließend auf **OK**. 
     
-    ![als Lektion 12-Perspektive](../tutorial-tabular-1400/media/as-lesson12-perspective.png)
+    ![as-lesson12-perspective](../tutorial-tabular-1400/media/as-lesson12-perspective.png)
     
 3.  In Excel in **PivotTable Fields**, beachten Sie, dass die DimCustomer-Tabelle aus der Feldliste ausgeschlossen ist.  
     
-    ![Felder als Lektion 12](../tutorial-tabular-1400/media/as-lesson12-fields.png)
+    ![as-lesson12-fields](../tutorial-tabular-1400/media/as-lesson12-fields.png)
     
 4.  Schließen Sie Excel, ohne die Arbeitsmappe zu speichern.  
   

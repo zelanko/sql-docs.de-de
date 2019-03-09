@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services-Tutorial – Lektion 10: Erstellen von Partitionen | Microsoft-Dokumentation'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile"
-ms.openlocfilehash: f7b6e5bfd4c533028758f553e5d8c9b2ca21e6f2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 705705410a69c4fa0eff507c97747f55b72b1250
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401143"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685697"
 ---
 # <a name="create-partitions"></a>Erstellen von Partitionen
 
@@ -42,11 +43,11 @@ Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Rei
 
 5.  Klicken Sie in der Vorschau auf den Pfeil nach unten in der **OrderDate** Spaltenüberschrift, und klicken Sie dann auf **Datums-/Zeitfilter** > **zwischen**.
 
-    ![als lesson10-Abfrage-editor](../tutorial-tabular-1400/media/as-lesson10-query-editor.png)
+    ![as-lesson10-query-editor](../tutorial-tabular-1400/media/as-lesson10-query-editor.png)
 
 6.  Klicken Sie im Dialogfeld Filtern von Zeilen in **Zeilen anzeigen: OrderDate**, lassen Sie **ist nach oder gleich**, und geben Sie in der Date-Felds **1/1/2010**. Lassen Sie die **und** Operator ausgewählt ist, wählen Sie dann **ist, bevor Sie**, geben Sie im Datumsfeld **1/1/2011**, und klicken Sie dann auf **OK**.
 
-    ![als-lesson10-Filter-rows](../tutorial-tabular-1400/media/as-lesson10-filter-rows.png)
+    ![as-lesson10-filter-rows](../tutorial-tabular-1400/media/as-lesson10-filter-rows.png)
     
     Beachten Sie, dass im Abfrage-Editor bei ANGEWENDETE Schritte ein weiterer Schritt mit dem Namen gefilterte-Zeilen angezeigt. Diese Filter werden nur Bestelldaten aus 2010 ausgewählt.
 
@@ -54,7 +55,7 @@ Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Rei
 
     Beachten Sie im Partitions-Manager, dass jetzt der Abfrageausdruck eine zusätzliche gefilterte-Zeilen-Klausel verfügt.
 
-    ![als lesson10-Abfrage](../tutorial-tabular-1400/media/as-lesson10-query.png)
+    ![as-lesson10-query](../tutorial-tabular-1400/media/as-lesson10-query.png)
   
     Diese Anweisung gibt an, dass diese Partition nur die Daten der Zeilen beinhalten soll, in denen OrderDate im Kalenderjahr 2010 als in der gefilterte-Zeilen-Klausel angegeben.  
   
@@ -107,13 +108,13 @@ Beachten Sie, dass im Partitions-Manager die **zuletzt verarbeitet** Spalte für
   
 4.  Aktivieren Sie das Kontrollkästchen in der Spalte **Verarbeiten** für jede der fünf von Ihnen erstellten Partitionen, und klicken Sie anschließend auf **OK**.  
 
-    ![als-lesson10--Partitionen verarbeiten](../tutorial-tabular-1400/media/as-lesson10-process-partitions.png)
+    ![as-lesson10-process-partitions](../tutorial-tabular-1400/media/as-lesson10-process-partitions.png)
   
     Wenn Sie für den Identitätswechsel-Anmeldeinformationen aufgefordert werden, geben Sie den Windows-Benutzernamen und das Kennwort, die Sie in Lektion 2 angegeben.  
   
     Das Dialogfeld **Datenverarbeitung** wird daraufhin angezeigt. Es zeigt die Verarbeitungsdetails für jede Partition an. Beachten Sie, dass eine unterschiedliche Anzahl an Zeilen für jede Partition übertragen wird. Jede Partition enthält nur die Zeilen für das Jahr in der WHERE-Klausel in der SQL-Anweisung angegeben. Wenn die Verarbeitung abgeschlossen ist, fahren Sie fort und schließen Sie das Dialogfeld „Datenverarbeitung“.  
   
-    ![als lesson10-Prozess-Vervollständigung](../tutorial-tabular-1400/media/as-lesson10-process-complete.png)
+    ![as-lesson10-process-complete](../tutorial-tabular-1400/media/as-lesson10-process-complete.png)
   
  ## <a name="whats-next"></a>Wie geht es weiter?
 

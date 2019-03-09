@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services-Tutorial – Lektion 11: Erstellen von Rollen | Microsoft-Dokumentation'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfiles"
-ms.openlocfilehash: ee28eb36fcd9e14210bc2a1411460100156f4a2f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: e75f1b9f838b09bbe4ab219aacd2616e04328238
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544352"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685457"
 ---
 # <a name="create-roles"></a>Erstellen von Rollen
 
@@ -72,7 +73,7 @@ Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Rei
     ```
     
     Eine Zeilenfilterformel muss in einen booleschen Wert (TRUE/FALSE) aufgelöst werden. Mit dieser Formel geben Sie an, dass nur Zeilen mit dem Wert der Länder-/ Regionscode "US" für den Benutzer sichtbar sind.  
-    ![als-lesson11-Rolle-filter](../tutorial-tabular-1400/media/as-lesson11-role-filter.png) 
+    ![as-lesson11-role-filter](../tutorial-tabular-1400/media/as-lesson11-role-filter.png) 
   
 6.  Optional: Klicken Sie auf die **Mitglieder** Registerkarte, und klicken Sie dann auf **hinzufügen**. Geben Sie im Dialogfeld **Benutzer oder Gruppen auswählen** die Windows-Benutzer oder -Gruppen in Ihrer Organisation ein, die Sie der Rolle hinzufügen möchten.  
   

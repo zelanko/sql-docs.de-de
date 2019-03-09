@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services Tutorial ergänzende Lektion: Detailzeilen | Microsoft-Dokumentation'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 28c5124508cedca026d262e34257bf48518580fb
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 20f5f32d4cca8b69d94410296e3653a92a1d6d46
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43078653"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685241"
 ---
 # <a name="supplemental-lesson---detail-rows"></a>Ergänzende Lektion: Detailzeilen
 
@@ -36,11 +37,11 @@ Betrachten Sie die Details des Measure "internettotalsales" an, bevor Sie einen 
   
 2.  In **PivotTable Fields**, Hinzufügen der **"internettotalsales" an** Measure aus der Tabelle "factinternetsales", um **Werte**, **"calendaryear"** aus der DimDate-Tabelle zu **Spalten**, und **EnglishCountryRegionName** zu **Zeilen**. Die PivotTable zeigt nun ein aggregiertes Ergebnis aus dem Measure "internettotalsales" nach Region und Jahr an. 
 
-    ![als-Lektion-Detail-Zeilen-pivottable](../tutorial-tabular-1400/media/as-lesson-detail-rows-pivottable.png)
+    ![as-lesson-detail-rows-pivottable](../tutorial-tabular-1400/media/as-lesson-detail-rows-pivottable.png)
 
 3. Doppelklicken Sie auf einen aggregierten Wert für ein Jahr und einen Regionsnamen, in der PivotTable. Hier doppelklicken Sie den Wert für Australien und das Jahr 2014. Ein neues Blatt wird geöffnet, mit Daten, aber nicht wirklich hilfreich sind.
 
-    ![als-Lektion-Detail-Zeilen-pivottable](../tutorial-tabular-1400/media/as-lesson-detail-rows-sheet.png)
+    ![as-lesson-detail-rows-pivottable](../tutorial-tabular-1400/media/as-lesson-detail-rows-sheet.png)
   
 Was wir hier ist eine Tabelle mit Spalten und Zeilen mit Daten, die zum aggregierten Ergebnis des Measure "internettotalsales" an beitragen möchten. Zu diesem Zweck können Sie einen Detailzeilenausdruck als Eigenschaft des Measure hinzufügen.
 
@@ -52,7 +53,7 @@ Was wir hier ist eine Tabelle mit Spalten und Zeilen mit Daten, die zum aggregie
 
 2. In **Eigenschaften** > **Detailzeilenausdruck**, klicken Sie auf die Schaltfläche "Editor", um den DAX-Editor zu öffnen.
 
-    ![als-Lektion-Detail-Zeilen-ellipse](../tutorial-tabular-1400/media/as-lesson-detail-rows-ellipse.png)
+    ![as-lesson-detail-rows-ellipse](../tutorial-tabular-1400/media/as-lesson-detail-rows-ellipse.png)
 
 3. Geben Sie im DAX-Editor den folgenden Ausdruck ein:
 

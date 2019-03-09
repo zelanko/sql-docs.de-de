@@ -11,6 +11,7 @@ apiname:
 - SQLBrowseConnect
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLBrowseConnect
@@ -20,12 +21,12 @@ ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe1b9c7d3d93604e2f19de754ff25517ef23cb07
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 96d46f8aaf2ab051255c1f75bcd2c4547c922cdc
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211710"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683610"
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect-Funktion
 **Übereinstimmung mit Standards**  
@@ -112,10 +113,10 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="inconnectionstring-argument"></a>InConnectionString-Argument  
  Eine Verbindungszeichenfolge der durchsuchen-Anforderung hat die folgende Syntax:  
   
- *Verbindungszeichenfolge* :: = *Attribut*[`;`] &#124; *Attribut* `;` *Verbindungszeichenfolge*;<br>
- *Attribut* :: = *-Schlüsselwort*`=`*Attribut / Wert* &#124; `DRIVER=`[`{`]*Attribut / Wert-*[`}`]<br>
- *Attribut-Schlüsselwort* :: = `DSN` &#124; `UID` &#124; `PWD` &#124; *-Treiber-definierten-Attribut-Schlüsselwort*<br>
- *Attribut-Wert* :: = *-Zeichenfolge*<br>
+ *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*;<br>
+ *attribute* ::= *attribute-keyword*`=`*attribute-value* &#124; `DRIVER=`[`{`]*attribute-value*[`}`]<br>
+ *attribute-keyword* ::= `DSN` &#124; `UID` &#124; `PWD` &#124; *driver-defined-attribute-keyword*<br>
+ *attribute-value* ::= *character-string*<br>
  *Treiber-definierten-Attribut-Schlüsselwort* :: = *Bezeichner*<br>
   
  in denen *zechenfolgen* ist NULL oder mehr Zeichen *Bezeichner* verfügt über eine oder mehrere Zeichen *-Schlüsselwort* wird nicht beachtet; *Attribut / Wert* möglicherweise beachtet werden soll; und der Wert von der **DSN** Schlüsselwort besteht nicht ausschließlich aus Leerzeichen. Aufgrund Verbindung und Initialisierungsdateien Datei Grammatik, Schlüsselwörter und Attribut Werte, die die Zeichen enthalten **[]{}();? \*=! @** sollte vermieden werden. Aufgrund der Grammatik in den Systeminformationen, Schlüsselwörter und Namen von Datenquellen können nicht den umgekehrten Schrägstrich enthalten (\\) Zeichen. Für eine ODBC-2. *x* Treiber, geschweifte Klammern sind erforderlich, um den Attributwert für das DRIVER-Schlüsselwort.  
@@ -127,9 +128,9 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="outconnectionstring-argument"></a>OutConnectionString-Argument  
  Die Verbindungszeichenfolge der durchsuchen-Ergebnis ist eine Liste der Verbindungsattribute. Ein Verbindungsattribut besteht aus einem Attribut-Schlüsselwort und Wert eines entsprechenden. Die Verbindungszeichenfolge der durchsuchen-Ergebnis weist die folgende Syntax:  
   
- *Verbindungszeichenfolge* :: = *Attribut*[`;`] &#124; *Attribut* `;` *Verbindungszeichenfolgen*<br>
+ *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*<br>
  *Attribut* :: = [`*`]*-Schlüsselwort*`=`*Attribut / Wert*<br>
- *Attribut-Schlüsselwort* :: = *ODBC-Attribut-Schlüsselwort* &#124; *-Treiber-definierten-Attribut-Schlüsselwort*<br>
+ *attribute-keyword* ::= *ODBC-attribute-keyword* &#124; *driver-defined-attribute-keyword*<br>
  *ODBC-Attribut-Schlüsselwort* = {`UID` &#124; `PWD`} [`:`*lokalisierter Bezeichner*] *-definierten-Attribut-Schlüsselwort Driver* :: = *Bezeichner*[`:`*lokalisierter Bezeichner*] *Attribut / Wert* :: = `{` *Attribut-Wert-Liste* `}` &#124; `?` (Die geschweiften Klammern sind literal; sie werden vom Treiber zurückgegebene.)<br>
  *attribute-value-list* ::= *character-string* [`:`*localized-character string*] &#124; *character-string* [`:`*localized-character string*] `,` *attribute-value-list*<br>
   

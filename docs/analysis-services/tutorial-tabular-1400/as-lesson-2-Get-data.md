@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services-Tutorial – Lektion 2: Abrufen von Daten | Microsoft-Dokumentation'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ad1f5bc8fb59be05f10d476ccb3a66ea1c1747b9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 01bf31c3d4f89b77ebdceae2e69d4054a578b03f
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43062211"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685317"
 ---
 # <a name="get-data"></a>Abrufen von Daten
 
@@ -31,7 +32,7 @@ Geschätzte Zeit zum Bearbeiten dieser Lektion: **10 Minuten**
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
 
-Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Reihenfolge absolviert werden sollte. Vor dem Ausführen der Aufgaben in dieser Lektion an, Sie sollten die vorherige Lektion abgeschlossen haben: [Lektion 1: erstellen ein neuen tabellarischen modellprojekts](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md).  
+Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Reihenfolge absolviert werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lektion 1: Erstellen ein neuen tabellarischen modellprojekts](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md).  
   
 ## <a name="create-a-connection"></a>Erstellen einer Verbindung  
   
@@ -41,7 +42,7 @@ Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Rei
   
     Dadurch wird **Datenabruf**, dort werden Sie durch Herstellen einer Verbindung mit einer Datenquelle. Wenn Sie nicht im tabellarischen Modell-Explorer sehen **Projektmappen-Explorer**, doppelklicken Sie auf **Model.bim** um das Modell im Designer zu öffnen. 
     
-    ![Getdata als lesson2](../tutorial-tabular-1400/media/as-lesson2-getdata.png)
+    ![as-lesson2-getdata](../tutorial-tabular-1400/media/as-lesson2-getdata.png)
   
 2.  Abrufen der Daten, klicken Sie auf **Datenbank** > **SQL Server-Datenbank** > **Connect**.  
   
@@ -49,16 +50,16 @@ Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Rei
 
 4.  Wenn Sie aufgefordert, Anmeldeinformationen einzugeben, müssen Sie die Anmeldeinformationen angeben, die Analysis Services für die Verbindung mit der Datenquelle beim Importieren und Verarbeiten von Daten verwendet. In **Identitätswechselmodus**Option **Identität des Kontos**, geben Sie dann die Anmeldeinformationen ein, und klicken Sie dann auf **Connect**. Es wird empfohlen, dass Sie ein Konto verwenden, in dem das Kennwort nicht abläuft.
 
-    ![als-lesson2-Konto](../tutorial-tabular-1400/media/as-lesson2-account.png)
+    ![as-lesson2-account](../tutorial-tabular-1400/media/as-lesson2-account.png)
   
     > [!NOTE]  
     > Die Verwendung eines Windows-Benutzerkontos und -Kennworts stellt die sicherste Methode für das Herstellen einer Verbindung mit einer Datenquelle dar.
   
 5.  Wählen Sie im Navigator die **"AdventureWorksDW"** Datenbank, und klicken Sie dann auf **OK**. Dadurch wird die Verbindung mit der Datenbank erstellt. 
   
-6.  Wählen Sie im Navigator das Kontrollkästchen für die folgenden Tabellen: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**,  **DimProductCategory**, **DimProductSubcategory**, und **"factinternetsales"**.  
+6.  Wählen Sie im Navigator das Kontrollkästchen für die folgenden Tabellen: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**,  **DimProductSubcategory**, und **"factinternetsales"**.  
 
-    ![als – Lektion 2-Select-Tabellen](../tutorial-tabular-1400/media/as-lesson2-select-tables.png)
+    ![as-lesson2-select-tables](../tutorial-tabular-1400/media/as-lesson2-select-tables.png)
   
 Nachdem Sie auf "OK" klicken, wird die Abfrage-Editor geöffnet. Im nächsten Abschnitt wählen Sie nur die Daten, die Sie importieren möchten.
 
@@ -73,14 +74,14 @@ Tabellen in der AdventureWorksDW-Beispieldatenbank haben Daten, die nicht in das
   
 2.  Mehrfachauswahl (Strg + Klick) **SpanishEducation**, **FrenchEducation**, **SpanishOccupation**, **FrenchOccupation**, klicken Sie dann mit der rechten Maustaste, und klicken Sie dann auf **Spalten entfernen**. 
 
-    ![als-lesson2--Spalten entfernen](../tutorial-tabular-1400/media/as-lesson2-remove-columns.png)
+    ![as-lesson2-remove-columns](../tutorial-tabular-1400/media/as-lesson2-remove-columns.png)
   
     Da die Werte für diese Spalten nicht relevant für die Analyse von Internetverkäufen sind, müssen die Spalten nicht importiert werden. Entfernen nicht erforderlicher Spalten wird das Modell kleiner und effizienter.  
 
     > [!TIP]
     > Wenn Sie einen Fehler machen, können Sie sichern, indem Sie einen Schritt in löschen **ANGEWENDETE Schritte**.   
     
-    ![als-lesson2--Spalten entfernen](../tutorial-tabular-1400/media/as-lesson2-remove-step.png)
+    ![as-lesson2-remove-columns](../tutorial-tabular-1400/media/as-lesson2-remove-step.png)
 
   
 4.  Filtern Sie die verbleibenden Tabellen um, indem Sie die folgenden Spalten in jeder Tabelle entfernen:  
@@ -159,7 +160,7 @@ Es ist wichtig, um das Modellprojekt häufig zu speichern.
   
 ## <a name="whats-next"></a>Wie geht es weiter?
 
-[Lektion 3: Markieren als Datumstabelle](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md).
+[Lektion 3: Als Datumstabelle markieren](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md).
 
   
   

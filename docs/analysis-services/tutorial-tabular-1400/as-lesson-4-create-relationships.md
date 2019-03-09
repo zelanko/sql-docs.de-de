@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services-Tutorial – Lektion 4: Erstellen von Beziehungen | Microsoft-Dokumentation'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a39978dc461bd660d932e13561ed4d00c4041e0e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 16fcf8e5f85464dbba7666f0f4ebebba829405af
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394519"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685611"
 ---
 # <a name="create-relationships"></a>Erstellen von Beziehungen
 
@@ -62,8 +63,8 @@ Bevor Sie mit der Erstellung Ihres Modells fortfahren, sollten Sie überprüfen,
     |Ja|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
     |Ja|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  
     |Ja|**DimProductSubcategory [ProductCategoryKey]**|**DimProductCategory [ProductCategoryKey]**|  
-    |Ja|**"Factinternetsales" [CustomerKey]**|**DimCustomer [CustomerKey]**|  
-    |Ja|**"Factinternetsales" [ProductKey]**|**DimProduct [ProductKey]**|  
+    |Ja|**FactInternetSales [CustomerKey]**|**DimCustomer [CustomerKey]**|  
+    |Ja|**FactInternetSales [ProductKey]**|**DimProduct [ProductKey]**|  
   
     Wenn einige dieser Beziehungen fehlen, überprüfen Sie, ob Ihr Modell in den folgenden Tabellen enthält: DimCustomer, DimDate, DimGeography, DimProduct, DimProductCategory, DimProductSubcategory und FactInternetSales. Wenn Tabellen aus derselben datenquellenverbindung zu unterschiedlichen Zeitpunkten, Beziehungen zwischen importiert werden diese Tabellen werden nicht erstellt werden, und müssen manuell erstellt werden. Wenn keine Beziehungen angezeigt werden, bedeutet dies, dass in der Datenquelle keine Beziehungen vorhanden sind. Sie können diese manuell im Datenmodell erstellen.
 
@@ -75,7 +76,7 @@ Beachten Sie in der Diagrammsicht einen Pfeil, ein Sternchen und eine Zahl auf d
 
 Der Pfeil zeigt die filterrichtung. Das Sternchen zeigt an, diese Tabelle ist die *viele* -Seite in der Kardinalität der Beziehung, und der wird diese Tabelle ist die *eine* Seite der Beziehung. Wenn Sie eine Beziehung bearbeiten müssen. z. B. ändern Sie die Beziehung die filterrichtung oder Kardinalität zu, doppelklicken Sie auf die Beziehungslinie, um das Dialogfeld "Beziehung bearbeiten" zu öffnen.
 
-![als lesson4 bearbeiten](../tutorial-tabular-1400/media/as-lesson4-edit.png)
+![as-lesson4-edit](../tutorial-tabular-1400/media/as-lesson4-edit.png)
 
 Diese Features sind nur für den erweiterten datenmodellierung und befinden sich außerhalb des Bereichs in diesem Tutorial. Weitere Informationen finden Sie unter [bidirektionale kreuzfilter für tabellarische Modelle in Analysis Services](../tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md).
 
@@ -102,7 +103,7 @@ In einigen Fällen müssen Sie möglicherweise zusätzliche Beziehungen zwischen
   
 ## <a name="whats-next"></a>Wie geht es weiter?
 
-[Lektion 5: Erstellen von berechneten Spalten](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md).
+[Lesson 5: Erstellen von berechneten Spalten](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md).
   
   
   

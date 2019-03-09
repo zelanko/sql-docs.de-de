@@ -1,6 +1,6 @@
 ---
 title: Abwärtskompatibilität der SQL Server 2017 Analysis Services | Microsoft-Dokumentation
-ms.date: 01/09/2019
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 411fa78bada76c79d4a869d68c94abf752b8466a
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: e7903de787a1b63627bca8da23369fbee9014c6e
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185076"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685737"
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Analysis Services-Abwärtskompatibilität (SQL 2017)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]

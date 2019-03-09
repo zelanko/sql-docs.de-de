@@ -1,6 +1,6 @@
 ---
-title: 'Analysis Services-Tutorial – Lektion 13: Bereitstellen | Microsoft-Dokumentation'
-ms.date: 08/27/2018
+title: 'Analysis Services-Tutorial – Lektion 13: Bereitstellen von | Microsoft-Dokumentation'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bad6f58800e6a023fe5014462fbe6bbaf76bfe8e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: ab561b096c4436349580201eec3b3ea10a8aaa75
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43090432"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685307"
 ---
 # <a name="deploy"></a>Bereitstellen
 
@@ -26,7 +27,7 @@ Geschätzte Zeit zum Bearbeiten dieser Lektion: **5 Minuten**
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
 
-Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Reihenfolge absolviert werden sollte. Vor dem Ausführen der Aufgaben in dieser Lektion an, Sie sollten die vorherige Lektion abgeschlossen haben: [Lektion 12: Analysieren in Excel](../tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md).  
+Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Reihenfolge absolviert werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lektion 12: In Excel analysieren](../tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md).  
 
 > [!IMPORTANT]  
 > Wenn Sie mit Azure Analysis Services bereitstellen zu können, benötigen Sie [Administratorberechtigungen](https://docs.microsoft.com/azure/analysis-services/analysis-services-server-admins) auf dem Server.  
@@ -43,7 +44,7 @@ Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Rei
   
 2.  In der **Eigenschaftenseiten des AW Internet Sales** Dialogfeld **Bereitstellungsserver**in die **Server** -Eigenschaft, geben Sie den vollständigen Servernamen. Wenn Sie eine Verbindung mit Azure Analysis Services herstellen möchten, muss Servernamen enthalten die vollständige URL an.
 
-    ![als lesson13-bereitstellen-Eigenschaft](../tutorial-tabular-1400/media/as-lesson13-deploy-property.png)
+    ![as-lesson13-deploy-property](../tutorial-tabular-1400/media/as-lesson13-deploy-property.png)
   
 3.  In der **Datenbank** Eigenschaft **Adventure Works Internet Sales**.  
   
@@ -61,15 +62,15 @@ Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Rei
   
     Das Dialogfeld "Deploy" wird angezeigt und zeigt den Bereitstellungsstatus der Metadaten und jede im Modell enthaltene Tabelle an.  
     
-    ![als-lesson13-bereitstellen-status](../tutorial-tabular-1400/media/as-lesson13-deploy-status.png)
+    ![as-lesson13-deploy-status](../tutorial-tabular-1400/media/as-lesson13-deploy-status.png)
   
 3. Wenn die Bereitstellung erfolgreich abgeschlossen wurde, fahren Sie fort, und klicken Sie auf **Schließen**.  
   
 
 In dieser Lektion wird die am häufigsten verwendete und einfachste Methode zum Bereitstellen eines tabellarischen Modells über SSDT beschrieben. Erweiterte Bereitstellungsoptionen wie etwa der Bereitstellungs-Assistent oder die Automatisierung mit XMLA und AMO bieten größere Flexibilität, Konsistenz und geplante Bereitstellungen. Weitere Informationen finden Sie unter [Bereitstellung von tabellenmodelllösungen](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md).
 
-## <a name="conclusion"></a>Fazit  
-Gratulation! Sie sind fertig, Erstellung und Bereitstellung Ihres ersten tabellarischen Analysis Services-Modells. Mit diesem Lernprogramm wurden Sie durch die häufigsten Aufgaben zur Erstellung eines Tabellenmodells geführt. Nach der Bereitstellung des Adventure Works-Internetverkaufsmodells können Sie nun mit SQL Server Management Studio das Modell verwalten und Prozessskripts sowie einen Sicherungsplan erstellen. Benutzer können jetzt auch mit dem Modell mithilfe einer Clientanwendung zur berichtserstellung wie Microsoft Excel oder Power BI eine Verbindung herstellen.  
+## <a name="conclusion"></a>Schlussbemerkung  
+Herzlichen Glückwunsch! Sie sind fertig, Erstellung und Bereitstellung Ihres ersten tabellarischen Analysis Services-Modells. Mit diesem Lernprogramm wurden Sie durch die häufigsten Aufgaben zur Erstellung eines Tabellenmodells geführt. Nach der Bereitstellung des Adventure Works-Internetverkaufsmodells können Sie nun mit SQL Server Management Studio das Modell verwalten und Prozessskripts sowie einen Sicherungsplan erstellen. Benutzer können jetzt auch mit dem Modell mithilfe einer Clientanwendung zur berichtserstellung wie Microsoft Excel oder Power BI eine Verbindung herstellen.  
 
 ![Ssms als lesson13](../tutorial-tabular-1400/media/as-lesson13-ssms.png)
   
