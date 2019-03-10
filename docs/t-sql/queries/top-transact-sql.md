@@ -18,16 +18,16 @@ helpviewer_keywords:
 - TOP clause, about TOP clause
 - queries [SQL Server], results
 ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b82e7c10426f1d263a5154658d6f017de227fbb
-ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
+ms.openlocfilehash: 70102127d7d48160c5320e02a97113cdd903fb0b
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56425805"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334647"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -78,14 +78,14 @@ Schränken Sie die Anzahl der zurückgegebenen Zeilen mithilfe von TOP (oder OFF
 -   Im Rahmen einer SELECT-Anweisung kann der Wert von *expression* in der TOP- oder der FETCH-Klausel vom Abfrageoptimierer während der Abfrageoptimierung berücksichtigt werden. Da SET ROWCOUNT außerhalb einer Anweisung verwendet wird, die eine Abfrage ausführt, kann ihr Wert nicht in einem Abfrageplan berücksichtigt werden.  
   
 ## <a name="compatibility-support"></a>Kompatibilitätsunterstützung  
-Aus Gründen der Abwärtskompatibilität sind die Klammern in SELECT-Anweisungen optional. Aus Gründen der Konsistenz wird jedoch empfohlen, TOP-Ausdrücke in SELECT-Anweisungen immer in Klammern einzuschließen, weil diese in INSERT-, UPDATE-, MERGE- und DELETE-Anweisungen obligatorisch sind. 
+Aus Gründen der Abwärtskompatibilität sind die Klammern in SELECT-Anweisungen optional. Es empfiehlt sich, in SELECT-Anweisungen immer Klammern für TOP zu verwenden. Damit erzielen Sie Konsistenz mit der erforderlichen Verwendung in INSERT-, UPDATE-, MERGE- und DELETE-Anweisungen. 
   
 ## <a name="interoperability"></a>Interoperabilität  
 Der TOP-Ausdruck wirkt sich nicht auf Anweisungen aus, die möglicherweise wegen eines Triggers ausgeführt werden. Die Tabellen **inserted** und **deleted** in den Triggern geben nur die Zeilen zurück, die tatsächlich von den INSERT-, UPDATE- MERGE- oder DELETE-Anweisungen betroffen sind. Beispiel: Ein INSERT TRIGGER, der aufgrund einer INSERT-Anweisung mit einer TOP-Klausel ausgelöst wird.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht das Aktualisieren von Zeilen über Sichten. Weil die TOP-Klausel in die Sichtdefinition einbezogen werden kann, werden bestimmte Zeilen aufgrund eines Updates möglicherweise nicht mehr in der Sicht angezeigt, wenn die Zeilen die Anforderungen des TOP-Ausdrucks nicht mehr erfüllen.  
   
-Bei Angabe in der MERGE-Anweisung wird die TOP-Klausel angewendet, *nachdem* die gesamte Quelltabelle und die gesamte Zieltabelle verknüpft wurden. Und die verknüpften Zeilen, die nicht für eine INSERT-, UPDATE- oder DELETE-Aktion infrage kommen, werden entfernt. Die TOP-Klausel verringert zudem die Anzahl der verknüpften Zeilen auf den angegebenen Wert, und die INSERT-, UPDATE- oder DELETE-Aktionen werden ungeordnet auf die verbliebenen verknüpften Zeilen angewendet. Dies bedeutet, dass für die Verteilung der Zeilen auf die in den WHEN-Klauseln definierten Aktionen keine bestimmte Reihenfolge gilt. Wenn beispielsweise TOP (10) angegeben wird, sind 10 Zeilen betroffen, von denen sieben aktualisiert und drei eingefügt werden können. Oder eine Zeile kann gelöscht, fünf können aktualisiert und vier eingefügt werden usw. Da die MERGE-Anweisung einen vollständigen Tabellenscan der Quell- und der Zieltabelle ausführt, kann die E/A-Leistung beeinträchtigt werden, wenn Sie mit der TOP-Klausel eine große Tabelle durch Erstellen mehrerer Batches ändern. In diesem Szenario muss unbedingt sichergestellt werden, dass alle aufeinanderfolgenden Batches auf neue Zeilen ausgerichtet sind.  
+Bei Angabe in der MERGE-Anweisung wird die TOP-Klausel angewendet, *nachdem* die gesamte Quelltabelle und die gesamte Zieltabelle verknüpft wurden. Und die verknüpften Zeilen, die nicht für eine INSERT-, UPDATE- oder DELETE-Aktion infrage kommen, werden entfernt. Die TOP-Klausel verringert zudem die Anzahl der verknüpften Zeilen auf den angegebenen Wert, und die INSERT-, UPDATE- oder DELETE-Aktionen werden ungeordnet auf die verbliebenen verknüpften Zeilen angewendet. Dies bedeutet, dass für die Verteilung der Zeilen auf die in den WHEN-Klauseln definierten Aktionen keine bestimmte Reihenfolge gilt. Wenn beispielsweise die Angabe von „TOP (10)“ 10 Zeilen betrifft, werden sieben davon aktualisiert und drei eingefügt. Möglicherweise werden auch fünf Zeilen aktualisiert, vier eingefügt und eine gelöscht usw. Da die MERGE-Anweisung einen vollständigen Tabellenscan der Quell- und der Zieltabelle ausführt, kann die E/A-Leistung beeinträchtigt werden, wenn Sie mit der TOP-Klausel eine große Tabelle durch Erstellen mehrerer Batches ändern. In diesem Szenario muss unbedingt sichergestellt werden, dass alle aufeinanderfolgenden Batches auf neue Zeilen ausgerichtet sind.  
   
 Geben Sie die TOP-Klausel in einer Abfrage mit einem UNION-, UNION ALL-, EXCEPT- oder INTERSECT-Operator mit Bedacht an. Es ist denkbar, dass eine Abfrage geschrieben wird, die unerwartete Ergebnisse zurückgibt, weil die Reihenfolge der logischen Verarbeitung für die TOP-Klausel und die ORDER BY-Klausel nicht immer intuitiv ist, wenn diese Operatoren in einem SELECT-Vorgang verwendet werden. Beispiel: Für die folgende Tabelle und die darin enthaltenen Daten sollen das günstigste rote Auto sowie das günstigste blaue Auto zurückgeben werden. Dies sind der rote PKW und der blaue LKW.  
   
@@ -148,7 +148,7 @@ Durch die Verwendung von TOP und ORDER BY in einem untergeordneten SELECT-Vorgan
  ```  
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
-Wenn Sie TOP mit INSERT, UPDATE, MERGE oder DELETE verwenden, werden die Zeilen, auf die verwiesen wird, nicht in einer bestimmten Reihenfolge angeordnet, und Sie können die ORDER BY-Klausel in diesen Anweisungen nicht direkt angeben. Wenn Sie die TOP-Klausel verwenden müssen, um Zeilen in einer sinnvollen Reihenfolge einzufügen, zu löschen oder zu bearbeiten, verwenden Sie TOP mit einer ORDER BY-Klausel in einer untergeordneten SELECT-Anweisung. Beachten Sie in diesem Zusammenhang den folgenden Abschnitt „Beispiele“ in diesem Artikel.  
+Wenn Sie TOP mit INSERT, UPDATE, MERGE oder DELETE verwenden, werden die referenzierten Zeilen in keiner bestimmten Reihenfolge angeordnet. Und Sie können die ORDER BY-Klausel nicht direkt in diesen Anweisungen angeben. Wenn Sie die TOP-Klausel verwenden müssen, um Zeilen in einer sinnvollen Reihenfolge einzufügen, zu löschen oder zu bearbeiten, verwenden Sie TOP mit einer ORDER BY-Klausel in einer untergeordneten SELECT-Anweisung. Beachten Sie in diesem Zusammenhang den folgenden Abschnitt „Beispiele“ in diesem Artikel.  
   
 TOP kann nicht in UPDATE- und DELETE-Anweisungen für partitionierte Sichten verwendet werden.  
   
