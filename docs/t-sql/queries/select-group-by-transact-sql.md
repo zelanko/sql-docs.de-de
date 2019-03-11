@@ -1,7 +1,7 @@
 ---
 title: GROUP BY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/03/2017
+ms.date: 03/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -33,12 +33,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3aafd6afb6e619cb9d4112fe5c7fcd1c1775d84b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 536283eb15d0b2f40e896520ab5d73327320bf56
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509051"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227192"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT – GROUP BY – Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -91,6 +91,7 @@ GROUP BY
 GROUP BY {
       column-name [ WITH (DISTRIBUTED_AGG) ]  
     | column-expression
+    | ROLLUP ( <group_by_expression> [ ,...n ] ) 
 } [ ,...n ]
 
 ```  
@@ -264,7 +265,7 @@ GROUP BY GROUPING SETS ( Country, () );
 
 ### <a name="group-by--all--column-expression--n-"></a>GROUP BY [ ALL ] column-expression [ ,...n ] 
 
-Gilt für: SQL Server und Azure SQL-Datenbank
+Betrifft: SQL Server und Azure SQL-Datenbank
 
 HINWEIS: Diese Syntax wird nur aus Gründen der Abwärtskompatibilität bereitgestellt. Sie wird in einer zukünftigen Version entfernt. Vermeiden Sie die Verwendung dieser Syntax bei neuen Entwicklungen, und planen Sie die Änderung von Anwendungen, in denen diese Syntax zurzeit verwendet wird.
 
@@ -275,7 +276,7 @@ GROUP BY ALL:
 - Diese Funktion scheitert bei Spalten, die über das FILESTREAM-Attribut verfügen.
   
 ### <a name="with-distributedagg"></a>WITH (DISTRIBUTED_AGG)
-Gilt für: SQL Data Warehouse und Parallel Data Warehouse
+Betrifft: Azure SQL Data Warehouse und Parallel Data Warehouse
 
 Der Abfragehinweis DISTRIBUTED_AGG zwingt das MPP-System (Massively Parallel Processing), eine Tabelle in einer bestimmten Spalte neu zu verteilen, bevor eine Aggregation durchgeführt wird. Nur eine Spalte in der GROUP BY-Klausel kann über einen DISTRIBUTED_AGG-Abfragehinweis verfügen. Nachdem die Abfrage abgeschlossen ist, wird die neu verteilte Tabelle gelöscht. Die ursprüngliche Tabelle wird nicht geändert.  
 
@@ -302,7 +303,7 @@ NULL-Werte:
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen
 
-Gilt für: SQL Server (ab 2008), und Azure SQL Data Warehouse
+Betrifft: SQL Server (ab 2008) und Azure SQL Data Warehouse
 
 ### <a name="maximum-capacity"></a>Maximale Kapazität
 
@@ -344,7 +345,7 @@ Die GROUP BY-Klausel unterstützt alle GROUP BY-Features, die in SQL 2006-Standa
 |Funktion|SQL Server Integration Services|SQL Server, Kompatibilitätsgrad 100 oder höher|SQL Server 2008 oder höher, mit Kompatibilitätsgrad 90.|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |DISTINCT-Aggregate|Nicht unterstützt für WITH CUBE oder WITH ROLLUP.|Unterstützt für WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE oder ROLLUP.|Wie bei Kompatibilitätsgrad 100|  
-|Benutzerdefinierte Funktion mit CUBE- oder ROLLUP-Namen in der GROUP BY-Klausel|Die benutzerdefinierte Funktion **dbo.cube(**_arg1_**,**_...argN_**)** oder **dbo.rollup(**_arg1_**,**..._argN_**)** in der GROUP BY-Klausel ist zulässig.<br /><br /> Beispiel: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|Die benutzerdefinierte Funktion **dbo.cube(**_arg1_**,**...argN **)** oder **dbo.rollup(** arg1 **,**_...argN_**)** in der GROUP BY-Klausel ist nicht zulässig.<br /><br /> Beispiel: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Es wird folgende Fehlermeldung zurückgegeben: "Incorrect syntax near the keyword 'cube'&#124;'rollup'." (Falsche Syntax in der Nähe des 'cube'&#124;'rollup'-Schlüsselworts.).<br /><br /> Ersetzen Sie `dbo.cube` durch `[dbo].[cube]` oder `dbo.rollup` durch `[dbo].[rollup]`, um dieses Problem zu vermeiden.<br /><br /> Das folgende Beispiel ist zulässig: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|Die benutzerdefinierte Funktion **dbo.cube(**_arg1_**,**_...argN_) oder **dbo.rollup(**_arg1_**,**_...argN_**)** in der GROUP BY-Klausel ist zulässig.<br /><br /> Beispiel: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|Benutzerdefinierte Funktion mit CUBE- oder ROLLUP-Namen in der GROUP BY-Klausel|Die benutzerdefinierte Funktion **dbo.cube(**_arg1_**,**_...argN_**)** oder **dbo.rollup(**_arg1_**,**..._argN_**)** in der GROUP BY-Klausel ist zulässig.<br /><br /> Beispiel: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|Die benutzerdefinierte Funktion **dbo.cube(**_arg1_**,**...argN **)** oder **dbo.rollup(** arg1 **,**_...argN_**)** in der GROUP BY-Klausel ist nicht zulässig.<br /><br /> Beispiel: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Die folgende Fehlermeldung wird zurückgegeben: „Incorrect syntax near the keyword 'cube'&#124;'rollup'.“ (Falsche Syntax in der Nähe des Schlüsselworts ‚cube‘&#124;‚rollup‘.)<br /><br /> Ersetzen Sie `dbo.cube` durch `[dbo].[cube]` oder `dbo.rollup` durch `[dbo].[rollup]`, um dieses Problem zu vermeiden.<br /><br /> Das folgende Beispiel ist zulässig: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|Die benutzerdefinierte Funktion **dbo.cube(**_arg1_**,**_...argN_) oder **dbo.rollup(**_arg1_**,**_...argN_**)** in der GROUP BY-Klausel ist zulässig.<br /><br /> Beispiel: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|Nicht unterstützt|Supported|Supported|  
 |CUBE|Nicht unterstützt|Supported|Nicht unterstützt|  
 |ROLLUP|Nicht unterstützt|Supported|Nicht unterstützt|  
@@ -465,7 +466,7 @@ HAVING OrderDateKey > 20040000
 ORDER BY OrderDateKey;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [GROUPING_ID &#40;Transact-SQL&#41;](~/t-sql/functions/grouping-id-transact-sql.md)   
  [GROUPING &#40;Transact-SQL&#41;](~/t-sql/functions/grouping-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)   
