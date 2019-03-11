@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 37fe6d7b3dfe92e2cdf53e7a7b26ab363a567510
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9ebd016ba06c24d742c099f346076111bd98751b
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409163"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334517"
 ---
 # <a name="stopping-system-versioning-on-a-system-versioned-temporal-table"></a>Beenden der Versionsverwaltung auf einer versionsverwalteten temporalen Tabelle
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -33,8 +33,8 @@ Legen Sie zu diesem Zweck die **SYSTEM_VERSIONING** -Klausel, um **OFF**fest.
 -   Verlaufstabelle als normale Tabelle  
   
 ### <a name="important-remarks"></a>Wichtige Hinweise  
-  
--   Kein Datenverlust tritt auf, wenn Sie  **SYSTEM_VERSIONING = OFF** festlegen oder den Zeitraum **SYSTEM_TIME** löschen.  
+-   Die Verlaufstabelle **beendet** die Aufnahme der Updates solange **SySTEM_VERSIONING = OFF** festgelegt ist.
+-   Für die **temporären Tabelle** tritt kein Datenverlust, wenn Sie **SYSTEM_VERSIONING = OFF** festlegen oder den Zeitraum **SYSTEM_TIME** löschen.
   
 -   Wenn Sie **SYSTEM_VERSIONING = OFF** festlegen und den **SYSTEM_TIME** -Zeitraum nicht löschen, wird das System die Aktualisierung der Zeitraumspalten für jeden Einfüge- und Aktualisierungsvorgang fortsetzen. Löschungen in der aktuellen Tabelle sind endgültig.  
   
@@ -64,7 +64,10 @@ DROP PERIOD FOR SYSTEM_TIME;
   
 -   Partition **SWITCH IN** in die Verlaufstabelle  
   
- In diesem Beispiel wird SYSTEM_VERSIONING vorübergehend beendet, um bestimmte Wartungsvorgänge zu erlauben. Wenn Sie Versionsverwaltung als Voraussetzung für die Tabellenwartung vorübergehend beenden, empfehlen wir nachdrücklich, dies für die Datenkonsistenz innerhalb einer Transaktion durchzuführen.  
+ In diesem Beispiel wird SYSTEM_VERSIONING vorübergehend beendet, um bestimmte Wartungsvorgänge zu erlauben. Wenn Sie Versionsverwaltung als Voraussetzung für die Tabellenwartung vorübergehend beenden, empfehlen wir nachdrücklich, dies für die Datenkonsistenz innerhalb einer Transaktion durchzuführen.
+ 
+> [!NOTE]  
+>  Wenn Sie die Systemversionsverwaltung wieder aktivieren, vergessen Sie nicht, das Argument HISTORY_TABLE anzugeben.  Andernfalls wird eine neue Verlaufstabelle erstellt und der aktuellen Tabelle zugeordnet.  Die ursprüngliche Verlaufstabelle existiert dann weiterhin als normale Tabelle, wird der aktuellen Tabelle aber nicht zugeordnet.  
   
 ```  
 BEGIN TRAN   
@@ -79,7 +82,7 @@ COMMIT ;
   
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Temporale Tabellen](../../relational-databases/tables/temporal-tables.md)   
  [Erste Schritte mit temporalen Tabellen mit Systemversionsverwaltung](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Verwalten der Beibehaltung von Verlaufsdaten in temporalen Tabellen mit Systemversionsverwaltung](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)   

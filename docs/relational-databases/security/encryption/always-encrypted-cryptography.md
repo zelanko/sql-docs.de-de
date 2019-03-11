@@ -13,12 +13,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f7e80b878583932976c85f7fa390ed546a67587
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1cd361a27a07c7b7750046d9664d77fd6d3fdc04
+ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401123"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57007583"
 ---
 # <a name="always-encrypted-cryptography"></a>Always Encrypted-Kryptografie
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "52401123"
   Dieses Dokument beschreibt Verschlüsselungsalgorithmen und -mechanismen zum Ableiten von kryptografischem Material, das in der Funktion [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]verwendet wird.  
   
 ## <a name="keys-key-stores-and-key-encryption-algorithms"></a>Schlüssel, Schlüsselspeicher und Algorithmen für die Schlüsselverschlüsselung  
- Always Encrypted verwendet zwei Schlüsseltypen: Spaltenhauptschlüssel und Spaltenverschlüsselungsschlüssel.  
+ Always Encrypted nutzt zwei Arten von Schlüsseln: Spaltenhauptschlüssel und Spaltenverschlüsselungsschlüssel.  
   
  Ein Spaltenhauptschlüssel (column master key; CMK) ist ein Schlüsselverschlüsselungsschlüssel (d.h. ein Schlüssel zum Verschlüsseln anderer Schlüssel), der immer vom Client gesteuert wird und in einem externen Schlüsselspeicher gespeichert ist. Ein Clienttreiber, der für Always Encrypted aktiviert ist, interagiert mit dem Schlüsselspeicher über einen CMK-Speicheranbieter, der entweder Teil der Treiberbibliothek (ein [!INCLUDE[msCoName](../../../includes/msconame-md.md)]-/Systemanbieter) oder Teil der Clientanwendung (ein benutzerdefinierter Anbieter) ist. Clienttreiberbibliotheken umfassen derzeit [!INCLUDE[msCoName](../../../includes/msconame-md.md)]-Schlüsselspeicheranbieter für [Windows-Zertifikatspeicher](/windows/desktop/SecCrypto/using-certificate-stores) und Hardwaresicherheitsmodule (HSMs).  Eine aktuelle Liste der Anbieter finden Sie unter [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md). Ein Anwendungsentwickler kann einen benutzerdefinierten Anbieter für einen beliebigen Speicher angeben.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "52401123"
   
  **AEAD_AES_256_CBC_HMAC_SHA_256** berechnet einen Chiffretextwert für einen angegebenen Klartextwert mithilfe der folgenden Schritte.  
   
-### <a name="step-1-generating-the-initialization-vector-iv"></a>Schritt 1: Generieren des Initialisierungsvektors (IV)  
+### <a name="step-1-generating-the-initialization-vector-iv"></a>Schritt 1: Generieren des Initialisierungsvektors (IV)  
  Always Encrypted unterstützt zwei Variationen von **AEAD_AES_256_CBC_HMAC_SHA_256**:  
   
 -   Zufällig  
@@ -86,7 +86,7 @@ aes_256_cbc_ciphertext = AES-CBC-256(enc_key, IV, cell_data) with PKCS7 padding.
 enc_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell encryption key" + algorithm + CEK_length )  
 ```  
   
-### <a name="step-3-computing-mac"></a>Schritt 3: Berechnen des MAC  
+### <a name="step-3-computing-mac"></a>Schritt 3: Berechnen des MAC  
  Anschließend wird der MAC mithilfe des folgenden Algorithmus berechnet:  
   
 ```  
@@ -100,7 +100,7 @@ versionbyte = 0x01 and versionbyte_length = 1
 mac_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell MAC key" + algorithm + CEK_length)  
 ```  
   
-### <a name="step-4-concatenation"></a>Schritt 4: Verkettung  
+### <a name="step-4-concatenation"></a>Schritt 4: Concatenation  
  Schließlich wird der verschlüsselte Wert erzeugt, indem einfach das Algorithmusversionsbyte, der MAC, der IV und der Chiffretext „AES_256_CBC“ verkettet werden:  
   
 ```  
@@ -178,7 +178,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 ## <a name="net-reference"></a>.NET-Referenz  
  Weitere Informationen zu den in diesem Dokument beschriebenen Algorithmen finden Sie in den Dateien **SqlAeadAes256CbcHmac256Algorithm.cs** und **SqlColumnEncryptionCertificateStoreProvider.cs** in der [.NET-Referenz](https://referencesource.microsoft.com/).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Always Encrypted &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Always Encrypted &#40;Cliententwicklung&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   

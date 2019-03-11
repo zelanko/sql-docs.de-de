@@ -1,5 +1,5 @@
 ---
-title: Kombinieren von Failoverclustering mit Verfügbarkeitsgruppen
+title: Kombinieren einer Failoverclusterinstanz mit Verfügbarkeitsgruppen
 description: Verbessern Sie Ihre Hochverfügbarkeit und Notfallwiederherstellbarkeit, indem Sie die Funktionen einer SQL Server-Failoverclusterinstanz und einer Always On-Verfügbarkeitsgruppe kombinieren.
 ms.custom: seodec18
 ms.date: 07/02/2017
@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0db7b259158d9d7404230405c3e72bf78e93b822
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 8257490dfae7e46cdca2a5ad4c0339da857a2e34
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213039"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56956081"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
 
@@ -37,21 +37,21 @@ ms.locfileid: "53213039"
   
   
 ##  <a name="WSFC"></a> Windows Server Failover Clustering und Verfügbarkeitsgruppen  
- Für die Bereitstellung von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ist ein WSFC-Cluster (Windows Server-Failoverclustering) erforderlich. Um für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]aktiviert werden zu können, muss eine Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in einem WSFC-Knoten befinden, und der WSFC-Cluster und -Knoten müssen online sein. Zudem muss sich jedes Verfügbarkeitsreplikat einer bestimmten Verfügbarkeitsgruppe in einem anderen Knoten desselben WSFC-Clusters befinden. Die einzige Ausnahme besteht darin, dass sich eine Verfügbarkeitsgruppe während der Migration zu einem anderen WSFC-Cluster vorübergehend auf zwei Cluster erstrecken kann.  
+ Für die Bereitstellung von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ist ein Windows Server-Failovercluster (WSFC) erforderlich. Um für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] aktiviert werden zu können, muss sich eine Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf einem WSFC-Knoten befinden, und der WSFC sowie der WSFC-Knoten müssen online sein. Zudem muss sich jedes Verfügbarkeitsreplikat einer bestimmten Verfügbarkeitsgruppe auf einem anderen Knoten desselben WSFC befinden. Die einzige Ausnahme besteht darin, dass sich eine Verfügbarkeitsgruppe während der Migration zu einem anderen WSFC vorübergehend auf zwei Cluster erstrecken kann.  
   
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] basiert zur Überwachung und Verwaltung der aktuellen Rollen der Verfügbarkeitsreplikate, die zu einer gegebenen Verfügbarkeitsgruppe gehören, auf dem Windows-Failoverclustering (WSFC)-Cluster und bestimmt, wie sich ein Failoverereignis auf die Verfügbarkeitsreplikate auswirkt. Für jede erstellte Verfügbarkeitsgruppe wird eine WSFC-Ressourcengruppe erstellt. Der WSFC-Cluster überwacht diese Ressourcengruppe, um den Zustand des primären Replikats auszuwerten.  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] basiert zur Überwachung und Verwaltung der aktuellen Rollen der Verfügbarkeitsreplikate, die zu einer gegebenen Verfügbarkeitsgruppe gehören, auf dem Windows-Failovercluster (WSFC) und bestimmt, wie sich ein Failoverereignis auf die Verfügbarkeitsreplikate auswirkt. Für jede erstellte Verfügbarkeitsgruppe wird eine WSFC-Ressourcengruppe erstellt. Der WSFC überwacht diese Ressourcengruppe, um die Integrität des primären Replikats auszuwerten.  
   
- Das Quorum für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] basiert unabhängig davon, ob ein bestimmter Clusterknoten Verfügbarkeitsreplikate hostet, auf allen Knoten des WSFC-Clusters. Im Gegensatz zur Datenbankspiegelung ist in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] keine Zeugenrolle verfügbar.  
+ Das Quorum für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] basiert unabhängig davon, ob ein bestimmter Clusterknoten Verfügbarkeitsreplikate hostet, auf allen Knoten des WSFC. Im Gegensatz zur Datenbankspiegelung ist in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] keine Zeugenrolle verfügbar.  
   
- Die allgemeine Integrität des WSFC-Clusters wird von den Abstimmungen eines Quorums der Clusterknoten bestimmt. Wird der WSFC-Cluster wegen eines nicht geplanten Notfalls oder aufgrund eines persistenten Hardware- oder Kommunikationsfehlers offline geschaltet, ist manueller Eingriff durch den Administrator erforderlich. Ein Windows Server- oder WSFC-Clusteradministrator muss ein Quorum erzwingen und dann die überdauernden Clusterknoten in einer nicht fehlertolerante Konfiguration wieder online schalten.  
+ Die allgemeine Integrität des WSFC wird von den Abstimmungen eines Quorums der Clusterknoten bestimmt. Wird der WSFC wegen eines nicht geplanten Notfalls oder aufgrund eines persistenten Hardware- oder Kommunikationsfehlers offline geschaltet, ist manueller Eingriff durch den Administrator erforderlich. Ein Windows Server- oder WSFC-Administrator muss ein Quorum erzwingen und dann die überdauernden Clusterknoten in einer nicht fehlertoleranten Konfiguration wieder online schalten.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Registrierungsschlüssel sind Unterschlüssel des WSFC-Clusters. Wenn Sie einen WSFC-Cluster löschen und neu erstellen, müssen Sie die Funktion [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] für jede Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deaktivieren und erneut aktivieren, auf der auf dem ursprünglichen WSFC-Cluster ein Verfügbarkeitsreplikat gehostet wurde.  
+>  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Registrierungsschlüssel sind Unterschlüssel des WSFC. Wenn Sie einen WSFC löschen und neu erstellen, müssen Sie das Feature [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] für jede Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deaktivieren und erneut aktivieren, auf der auf dem ursprünglichen WSFC ein Verfügbarkeitsreplikat gehostet wurde.  
   
- Informationen zum Ausführen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf Windows Server-Failoverclustering (WSFC)-Knoten sowie zum WSFC-Quorum finden Sie unter [Windows Server-Failoverclustering &#40;WSFC&#41; mit SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
+ Informationen zum Ausführen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf WSFC-Knoten sowie zum WSFC-Quorum finden Sie unter [Windows Server-Failoverclustering &#40;WSFC&#41; mit SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
   
 ##  <a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failoverclusterinstanzen (FCIs) und Verfügbarkeitsgruppen  
- Sie können auf Serverinstanzebene eine zweite Failoverebene einrichten, indem Sie das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclustering zusammen mit dem WSFC-Cluster implementieren. Ein Verfügbarkeitsreplikat kann von einer eigenständigen Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder einer FCI-Instanz gehostet werden. Ein Replikat für eine Verfügbarkeitsgruppe kann jeweils nur von einem FCI-Partner gehostet werden. Bei Ausführung eines Verfügbarkeitsreplikats in einer FCI enthält die Liste möglicher Besitzer für die Verfügbarkeitsgruppe nur den aktiven FCI-Knoten.  
+ Sie können auf Serverinstanzebene eine zweite Failoverebene einrichten, indem Sie eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-FCI zusammen mit dem WSFC implementieren. Ein Verfügbarkeitsreplikat kann von einer eigenständigen Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder einer FCI-Instanz gehostet werden. Ein Replikat für eine Verfügbarkeitsgruppe kann jeweils nur von einem FCI-Partner gehostet werden. Bei Ausführung eines Verfügbarkeitsreplikats in einer FCI enthält die Liste möglicher Besitzer für die Verfügbarkeitsgruppe nur den aktiven FCI-Knoten.  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] hängt von keiner Form eines gemeinsam verwendeten Speichers ab. Falls Sie jedoch eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanz (FCI) zum Hosten von mindestens einem Verfügbarkeitsreplikats verwenden, ist für all diese FCIs der standardmäßigen Installation der SQL Server-Failoverclusterinstanz entsprechend gemeinsam verwendeter Speicher erforderlich.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "53213039"
   
 ||Knoten in einer FCI|Replikate in einer Verfügbarkeitsgruppe|  
 |-|-------------------------|-------------------------------------------|  
-|**Verwendet WSFC-Cluster**|Ja|Ja|  
+|**Verwendet WSFC**|Ja|Ja|  
 |**Schutzebene**|Instanz|Datenbank|  
 |**Speichertyp**|Shared|Nicht freigegeben<br /><br /> Obwohl die Replikate in einer Verfügbarkeitsgruppe keinen Speicher gemeinsam verwenden, verwendet ein Replikat, das von einer FCI gehostet wird, gemäß der Anforderung dieser FCI eine gemeinsame Speicherlösung. Die Speicherlösung wird nur von Knoten in dieser FCI verwendet und nicht zwischen den Replikaten der Verfügbarkeitsgruppe.|  
 |**Speicherlösungen**|Direkt angefügt, SAN, Einbindungspunkte, SMB|Hängt von Knotentyp ab|  
@@ -75,7 +75,7 @@ ms.locfileid: "53213039"
  **Failoverrichtlinieneinstellungen für die Verfügbarkeitsgruppe gelten für alle Replikate, unabhängig davon, ob sie in einer eigenständigen Instanz oder einer FCI-Instanz gehostet werden.  
   
 > [!NOTE]  
->  Weitere Informationen zur **Anzahl der Knoten** innerhalb des Failoverclusterings sowie zu **Always On-Verfügbarkeitsgruppen** für verschiedene [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Editionen finden Sie unter [Von den SQL Server 2012-Editionen unterstützte Features](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)).  
+>  Weitere Informationen zur **Anzahl der Knoten** innerhalb von FCIs sowie zu **Always On-Verfügbarkeitsgruppen** für verschiedene [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Editionen finden Sie unter [Features Supported by the Editions of SQL Server 2012 (Von den SQL Server 2012-Editionen unterstützte Features)](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)).  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>Überlegungen zum Hosten eines Verfügbarkeitsreplikats auf einer FCI  
   
@@ -84,19 +84,19 @@ ms.locfileid: "53213039"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failoverclusterinstanzen (FCIs) unterstützen kein automatisches AlwaysOn-Failover durch Verfügbarkeitsgruppen. Daher können die Verfügbarkeitsreplikate, die von einer FCI gehostet werden, nur für manuelles Failover konfiguriert werden.  
   
- Möglicherweise muss ein Windows Server Failover Clustering (WSFC)-Cluster so konfiguriert werden, dass er freigegebene Datenträger enthält, die nicht auf allen Knoten verfügbar sind. Denken Sie beispielsweise an ein WSFC-Cluster über zwei Datenzentren mit drei Knoten. Zwei der Knoten hosten im primären Rechenzentrum eine SQL Server-Failoverclusteringinstanz (FCI) und haben Zugriff auf dieselben freigegebenen Datenträger. Der dritte Knoten hostet eine eigenständige Instanz von SQL Server in einem anderen Rechenzentrum und verfügt nicht über Zugriff auf die freigegebenen Datenträger vom primären Rechenzentrum. Diese WSFC-Clusterkonfiguration unterstützt die Bereitstellung einer Verfügbarkeitsgruppe, wenn die FCI das primäre Replikat hostet und die eigenständige Instanz das sekundäre Replikat hostet.  
+ Möglicherweise muss ein WSFC so konfiguriert werden, dass er freigegebene Datenträger enthält, die nicht auf allen Knoten verfügbar sind. Denken Sie beispielsweise an ein WSFC über zwei Rechenzentren mit drei Knoten. Zwei der Knoten hosten im primären Rechenzentrum eine SQL Server-Failoverclusterinstanz (FCI) und haben Zugriff auf dieselben freigegebenen Datenträger. Der dritte Knoten hostet eine eigenständige Instanz von SQL Server in einem anderen Rechenzentrum und verfügt nicht über Zugriff auf die freigegebenen Datenträger vom primären Rechenzentrum. Diese WSFC-Konfiguration unterstützt die Bereitstellung einer Verfügbarkeitsgruppe, wenn die FCI das primäre Replikat hostet, und die eigenständige Instanz das sekundäre Replikat hostet.  
   
  Bei Auswahl einer FCI zum Hosten eines Verfügbarkeitsreplikats für eine angegebene Verfügbarkeitsgruppe muss gewährleistet sein, dass ein FCI-Failover nicht möglicherweise bewirkt, dass ein einzelner WSFC-Knoten versucht, zwei Verfügbarkeitsreplikate für dieselbe Verfügbarkeitsgruppe zu hosten.  
   
  Im folgenden Beispielszenario wird veranschaulicht, wie diese Konfiguration zu Problemen führen könnte:  
   
- Marcel konfiguriert einen WSFC-Cluster mit zwei Knoten, `NODE01` und `NODE02`. Er installiert eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanz, `fciInstance1`, auf `NODE01` und `NODE02` , wobei `NODE01` der aktuelle Besitzer für `fciInstance1`ist.  
+ Marcel konfiguriert einen WSFC mit zwei Knoten, `NODE01` und `NODE02`. Er installiert eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanz, `fciInstance1`, auf `NODE01` und `NODE02` , wobei `NODE01` der aktuelle Besitzer für `fciInstance1`ist.  
  Auf `NODE02`installiert Marcel eine andere Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], `Instance3`, die eine eigenständige Instanz ist.  
  Auf `NODE01`aktiviert Marcel fciInstance1 für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Auf `NODE02`aktiviert er `Instance3` für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Dann richtet er eine Verfügbarkeitsgruppe ein, für die `fciInstance1` das primäre Replikat hostet, und `Instance3` hostet das sekundäre Replikat.  
- An einen bestimmten Punkt ist `fciInstance1` auf `NODE01`nicht mehr verfügbar, und der WSFC-Cluster verursacht einen Failover von `fciInstance1` auf `NODE02`. Nach dem Failover ist `fciInstance1` eine [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]-fähige Instanz, die unter der primären Rolle auf `NODE02`ausgeführt wird. `Instance3` befindet sich jetzt jedoch auf demselben WSFC-Knoten wie `fciInstance1`. Dies verstößt gegen die [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Einschränkung.  
- Um das Problem in diesem Szenario zu beheben, muss sich die eigenständige Instanz, `Instance3`, auf einem anderen Knoten im selben WSFC-Cluster wie `NODE01` und `NODE02`befinden.  
+ An einen bestimmten Punkt ist `fciInstance1` auf `NODE01`nicht mehr verfügbar, und der WSFC verursacht einen Failover von `fciInstance1` auf `NODE02`. Nach dem Failover ist `fciInstance1` eine [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]-fähige Instanz, die unter der primären Rolle auf `NODE02`ausgeführt wird. `Instance3` befindet sich jetzt jedoch auf demselben WSFC-Knoten wie `fciInstance1`. Dies verstößt gegen die [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Einschränkung.  
+ Um das Problem in diesem Szenario zu beheben, muss sich die eigenständige Instanz, `Instance3`, auf einem anderen Knoten im selben WSFC wie `NODE01` und `NODE02`befinden.  
   
- Weitere Informationen zur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failover-Clusterunterstützung finden Sie unter [AlwaysOn-Failoverclusterinstanzen &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+ Weitere Informationen zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-FCIs finden Sie unter [Always On-Failoverclusterinstanzen (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
 ##  <a name="FCMrestrictions"></a> Einschränkungen bei Verwendung des WSFC-Failovercluster-Managers für Verfügbarkeitsgruppen  
  Verwenden Sie den Failovercluster-Manager nicht zum Bearbeiten von Verfügbarkeitsgruppen, beispielsweise:  

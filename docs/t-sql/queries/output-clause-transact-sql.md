@@ -28,15 +28,15 @@ helpviewer_keywords:
 - displaying deleted rows
 - UPDATE statement [SQL Server], OUTPUT clause
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b4bef219ec0e9bd4526b8f7c015a1800d9753656
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b9058fcb7ffff72620c6560fbe81df6f33fa327d
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529873"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334737"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT-Klausel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "52529873"
   
  [MERGE](../../t-sql/statements/merge-transact-sql.md)  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -134,10 +134,10 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- Ist ein expliziter Spaltenverweis. Alle Verweise auf die Tabelle, die geändert wird, müssen entweder durch das INSERTED- oder das DELETED-Präfix ordnungsgemäß gekennzeichnet werden, z.B. INSERTED **.**_Spaltenname_.  
+ Ist ein expliziter Spaltenverweis. Alle Verweise auf die Tabelle, die geändert wird, müssen entweder durch das INSERTED- oder das DELETED-Präfix richtig gekennzeichnet werden, INSERTED **.**_column\_name_.  
   
  $action  
- Ist verfügbar nur für die MERGE-Anweisung. Gibt in der OUTPUT-Klausel in einer MERGE-Anweisung, die einen der drei folgenden Werte für jede Zeile zurückgibt, eine Spalte des Typs **nvarchar(10)** an: 'INSERT', 'UPDATE' oder 'DELETE'. Der zurückgegebene Wert hängt von der für diese Zeile ausgeführten Aktion ab.  
+ Ist verfügbar nur für die MERGE-Anweisung. Gibt in der OUTPUT-Klausel in einer MERGE-Anweisung, die einen der drei folgenden Werte für jede Zeile zurückgibt, eine Spalte des Typs **nvarchar(10)** an: 'INSERT', 'UPDATE' oder 'DELETE', je nach der für diese Zeile ausgeführten Aktion.  
   
 ## <a name="remarks"></a>Remarks  
  Die OUTPUT \<dml_select_list>-Klausel und die OUTPUT \<dml_select_list> INTO { **\@**_table\_variable_ | _output\_table_ }-Klausel können in einer einzelnen INSERT-, UPDATE-, DELETE- oder MERGE-Anweisung definiert werden.  
@@ -664,7 +664,7 @@ SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;
   
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   

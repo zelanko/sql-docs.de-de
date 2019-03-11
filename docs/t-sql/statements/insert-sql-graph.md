@@ -18,27 +18,27 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c0a22547436f8a511a5a61db35ec99a919d84e4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc6b596f6cd55fbd0642768a3323fddb611033ba
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644028"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852865"
 ---
 # <a name="insert-sql-graph"></a>INSERT (SQL-Graph)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-  Fügt einer `node`- oder `edge`-Tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mindestens eine Zeile hinzu. 
+Fügt einer `node`- oder `edge`-Tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mindestens eine Zeile hinzu. 
 
 > [!NOTE]   
 >  Standard Transact-SQL-Anweisungen finden Sie unter [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Artikellinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Article link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="insert-into-node-table-syntax"></a>INSERT INTO – Syntax für Knotentabellen 
 Die Syntax für das Einfügen in eine Knotentabelle entspricht der einer regulären Tabelle. 
 
-```  
+```sql
 [ WITH <common_table_expression> [ ,...n ] ]  
 INSERT   
 {  
@@ -102,19 +102,19 @@ INSERT
   
  
 ## <a name="arguments"></a>Argumente  
- In diesem Dokument werden Argumente für SQL-Graph beschrieben. Eine vollständige Liste und Beschreibung der unterstützten Argumente in der INSERT-Anweisung finden Sie unter [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).
+In diesem Artikel werden Argumente für SQL-Graph beschrieben. Eine vollständige Liste und Beschreibung der unterstützten Argumente in der INSERT-Anweisung finden Sie unter [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).
 
- INTO  
- Ein optionales Schlüsselwort, das zwischen `INSERT` und der Zieltabelle verwendet werden kann.  
+INTO  
+Ein optionales Schlüsselwort, das zwischen `INSERT` und der Zieltabelle verwendet werden kann.  
   
- *search_condition_with_match*   
- Die `MATCH`-Klausel kann während des Einfügens in eine Knoten- oder Edgetabelle in einer geschachtelten Abfrage verwendet werden. Die `MATCH`-Abfragesyntax finden Sie unter [GRAPH MATCH (Transact-SQL)](../../t-sql/queries/match-sql-graph.md).
+*search_condition_with_match*   
+Die `MATCH`-Klausel kann während des Einfügens in eine Knoten- oder Edgetabelle in einer geschachtelten Abfrage verwendet werden. Die `MATCH`-Abfragesyntax finden Sie unter [GRAPH MATCH (Transact-SQL)](../../t-sql/queries/match-sql-graph.md).
 
- *graph_search_pattern*   
- Suchmuster, das der `MATCH`-Klausel als Teil des Graph-Prädikats bereitgestellt wird.
+*graph_search_pattern*   
+Suchmuster, das der `MATCH`-Klausel als Teil des Graph-Prädikats bereitgestellt wird.
 
- *edge_table_column_list*   
- Benutzer müssen Werte für `$from_id` und `$to_id` angeben, wenn sie etwas in eine Edgetabelle einfügen. Wenn ein Wert nicht angegeben oder in eine dieser Spalten NULL eingefügt wird, wird ein Fehler zurückgegeben. 
+*edge_table_column_list*   
+Benutzer müssen Werte für `$from_id` und `$to_id` angeben, wenn sie etwas in eine Edgetabelle einfügen. Wenn kein Wert angegeben oder NULL in eine dieser Spalten eingefügt wird, wird ein Fehler zurückgegeben. 
   
 
 ## <a name="remarks"></a>Remarks  
@@ -128,42 +128,42 @@ Vor der Masseneinfügung in eine Edgetabelle müssen die Knotentabellen importie
 
   
 ### <a name="permissions"></a>Berechtigungen  
- Die INSERT-Berechtigung ist für die Zieltabelle erforderlich.  
+Die INSERT-Berechtigung ist für die Zieltabelle erforderlich.  
   
- Mitglieder der festen Serverrolle **sysadmin**, der festen Datenbankrollen **db_owner** und **db_datawriter** und der Tabellenbesitzer erhalten standardmäßig INSERT-Berechtigungen. Mitglieder der Rollen **sysadmin**, **db_owner** und **db_securityadmin** sowie der Tabellenbesitzer können Berechtigungen an andere Benutzer übertragen.  
+Mitglieder der festen Serverrolle **sysadmin**, der festen Datenbankrollen **db_owner** und **db_datawriter** und der Tabellenbesitzer erhalten standardmäßig INSERT-Berechtigungen. Mitglieder der Rollen **sysadmin**, **db_owner** und **db_securityadmin** sowie der Tabellenbesitzer können Berechtigungen an andere Benutzer übertragen.  
   
- Zum Ausführen von INSERT mit der Option BULK der OPENROWSET-Funktion müssen Sie Mitglied der festen Serverrolle **sysadmin** oder der festen Serverrolle **bulkadmin** sein.  
+Zum Ausführen von INSERT mit der Option BULK der OPENROWSET-Funktion müssen Sie Mitglied der festen Serverrolle **sysadmin** oder der festen Serverrolle **bulkadmin** sein.  
   
 
 ## <a name="examples"></a>Beispiele  
   
 #### <a name="a--insert-into-node-table"></a>A.  Einfügen in Knotentabellen  
- Im folgenden Beispiel wird eine Knotentabelle für Personen erstellt, und es werden zwei Reihen in diese Tabelle eingefügt.
+Im folgenden Beispiel wird eine Knotentabelle für Personen erstellt, und es werden zwei Reihen in diese Tabelle eingefügt.
 
- ```
- -- Create person node table
- CREATE TABLE dbo.Person (ID integer PRIMARY KEY, name varchar(50)) AS NODE;
+```sql
+-- Create person node table
+CREATE TABLE dbo.Person (ID integer PRIMARY KEY, name varchar(50)) AS NODE;
  
- -- Insert records for Alice and John
- INSERT INTO dbo.Person VALUES (1, 'Alice');
- INSERT INTO dbo.Person VALUES (2,'John');
- ```
+-- Insert records for Alice and John
+INSERT INTO dbo.Person VALUES (1, 'Alice');
+INSERT INTO dbo.Person VALUES (2,'John');
+```
   
 #### <a name="b--insert-into-edge-table"></a>B.  Einfügen in Edgetabellen  
- Im folgenden Beispiel wird eine Edgetabelle für Freunde erstellt und ein Edge in diese Tabelle eingefügt.
+Im folgenden Beispiel wird eine Edgetabelle für Freunde erstellt und ein Edge in diese Tabelle eingefügt.
 
- ```
- -- Create friend edge table
- CREATE TABLE dbo.friend (start_date DATE) AS EDGE;
+```sql
+-- Create friend edge table
+CREATE TABLE dbo.friend (start_date DATE) AS EDGE;
 
- -- Create a friend edge, that connect Alice and John
- INSERT INTO dbo.friend VALUES ((SELECT $node_id FROM dbo.Person WHERE name = 'Alice'),
+-- Create a friend edge, that connect Alice and John
+INSERT INTO dbo.friend VALUES ((SELECT $node_id FROM dbo.Person WHERE name = 'Alice'),
         (SELECT $node_id FROM dbo.Person WHERE name = 'John'), '9/15/2011');
- ```
+```
 
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [INSERT TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [Graph Processing with SQL Server 2017 (Graph-Verarbeitung mit SQL Server-2017)](../../relational-databases/graphs/sql-graph-overview.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[INSERT TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+[Graph Processing with SQL Server 2017 (Graph-Verarbeitung mit SQL Server-2017)](../../relational-databases/graphs/sql-graph-overview.md)  
 
 

@@ -20,17 +20,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2da642b1b380e45ffdde2ac48bd37764a12b2dd
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: a1bb91e4b5429e6b101d6cdb0ffa73c9953ab198
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980426"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955741"
 ---
 # <a name="cumedist-transact-sql"></a>CUME_DIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] berechnet diese Funktion die kumulierte Verteilung eines Werts innerhalb einer Gruppe von Werten. Das heißt, `CUME_DIST` berechnet die relative Position eines angegebenen Werts in einer Gruppe von Werten. Ausgehend von aufsteigender Sortierreihenfolge ist der `CUME_DIST`-Wert eines Werts in Zeile *r* definiert als die Anzahl der Zeilen mit Werten kleiner oder gleich dem Wert in Zeile *r*, geteilt durch die Anzahl der ausgewerteten Zeilen in der Partition oder dem Resultset der Abfrage. `CUME_DIST` ähnelt der `PERCENT_RANK`-Funktion.
+Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] berechnet diese Funktion die kumulierte Verteilung eines Werts innerhalb einer Gruppe von Werten. Das heißt, `CUME_DIST` berechnet die relative Position eines angegebenen Werts in einer Gruppe von Werten. Ausgehend von aufsteigender Sortierreihenfolge ist der `CUME_DIST`-Wert eines Werts in Zeile _r_ definiert als die Anzahl der Zeilen mit Werten kleiner oder gleich dem Wert in Zeile _r_, geteilt durch die Anzahl der ausgewerteten Zeilen in der Partition oder dem Resultset der Abfrage. `CUME_DIST` ähnelt der `PERCENT_RANK`-Funktion.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -43,9 +43,9 @@ CUME_DIST( )
 ```  
   
 ## <a name="arguments"></a>Argumente  
-OVER **(** [ *partition_by_clause* ] *order_by_clause)*  
+OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_)  
 
-Das Argument *partition_by_clause* unterteilt das Resultset der FROM-Klausel in Partitionen, auf die die Funktion angewendet wird. Wenn das Argument *partition_by_clause* nicht angegeben wird, behandelt `CUME_DIST` alle Zeilen von Resultsets von Abfragen als eine einzelne Gruppe. *order_by_clause* bestimmt die logische Reihenfolge, in der der Vorgang ausgeführt wird. Für `CUME_DIST` ist *order_by_clause* erforderlich. `CUME_DIST` akzeptiert die \<Zeilen- oder Bereichsklausel> der OVER-Syntax nicht. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
+Das Argument _partition\_by\_clause_ unterteilt das Resultset der FROM-Klausel in Partitionen, auf die die Funktion angewendet wird. Wenn das Argument _partition\_by\_clause_ nicht angegeben wird, behandelt `CUME_DIST` alle Zeilen von Resultsets von Abfragen als eine einzelne Gruppe. _order\_by\_clause_ bestimmt die logische Reihenfolge, in der der Vorgang ausgeführt wird. Für `CUME_DIST` ist _order\_by\_clause_ erforderlich. `CUME_DIST` akzeptiert die \<Zeilen- oder Bereichsklausel> der OVER-Syntax nicht. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
   
 ## <a name="return-types"></a>Rückgabetypen
 **float(53)**
@@ -53,10 +53,10 @@ Das Argument *partition_by_clause* unterteilt das Resultset der FROM-Klausel in 
 ## <a name="remarks"></a>Remarks  
 `CUME_DIST` gibt einen Bereich von Werten größer als 0 und kleiner als oder gleich 1 zurück. Gleichwertige Werte ergeben immer den gleichen kumulierten Verteilungswert. `CUME_DIST` schließt standardmäßig NULL-Werte ein und behandelt diese Werte als die niedrigsten möglichen Werte.
   
-`CUME_DIST` ist nicht deterministisch. Weitere Informationen finden Sie unter [Deterministische und nicht deterministische Funktionen](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
+`CUME_DIST` ist nicht deterministisch. Weitere Informationen finden Sie unter [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
   
 ## <a name="examples"></a>Beispiele  
-Das folgende Beispiel verwendet die `CUME_DIST`-Funktion, um das Gehaltsquantil für jeden Mitarbeiter innerhalb einer angegebenen Abteilung zu berechnen. Die `CUME_DIST`-Funktion gibt einen Wert zurück, der den Prozentsatz der Mitarbeiter darstellt, deren Gehalt kleiner oder gleich dem des aktuellen Mitarbeiters in der gleichen Abteilung ist. Die `PERCENT_RANK`-Funktion berechnet den prozentualen Rang des Gehalts des Mitarbeiters innerhalb einer Abteilung. Um die Zeilen im Resultset nach Abteilung zu partitionieren, gibt das Beispiel den *partition_by_clause*-Wert an. Die ORDER BY-Klausel der OVER-Klausel sortiert die Zeilen in jeder Partition logisch. Die ORDER BY-Klausel der SELECT-Anweisung bestimmt die Anzeigereihenfolge des Resultsets.
+Das folgende Beispiel verwendet die `CUME_DIST`-Funktion, um das Gehaltsquantil für jeden Mitarbeiter innerhalb einer angegebenen Abteilung zu berechnen. Die `CUME_DIST`-Funktion gibt einen Wert zurück, der den Prozentsatz der Mitarbeiter darstellt, deren Gehalt kleiner oder gleich dem des aktuellen Mitarbeiters in der gleichen Abteilung ist. Die `PERCENT_RANK`-Funktion berechnet den prozentualen Rang des Gehalts des Mitarbeiters innerhalb einer Abteilung. Um die Zeilen im Resultset nach Abteilung zu partitionieren, gibt das Beispiel den _partition\_by\_clause_-Wert an. Die ORDER BY-Klausel der OVER-Klausel sortiert die Zeilen in jeder Partition logisch. Die ORDER BY-Klausel der SELECT-Anweisung bestimmt die Anzeigereihenfolge des Resultsets.
   
 ```sql
 USE AdventureWorks2012;  

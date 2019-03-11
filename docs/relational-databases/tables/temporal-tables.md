@@ -12,17 +12,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 967605ee7a4857347b4f1f7ca8ffc62ea0451d91
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c7967740fc56efab93129aa6846d70f7eb55c7de
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403645"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017916"
 ---
 # <a name="temporal-tables"></a>Temporale Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  SQL Server 2016 führte die Unterstützung von temporalen Tabellen mit Systemversionsverwaltung als Datenbankfeature ein, das integrierte Unterstützung für das Bereitstellen von Informationen zu den zu jedem Zeitpunkt in der Tabelle gespeicherten Daten mit sich bringt, anstatt nur die aktuell in einer Tabelle gespeicherten Daten zu unterstützen. Temporal ist ein Datenbankfeature, das zusammen mit ANSI SQL 2011 eingeführt wurde.  
+  In SQL Server 2016 wurde die Unterstützung von temporäre Tabellen (auch als temporäre Tabellen mit Systemversionsverwaltung bezeichnet) als Datenbankfeature eingeführt, das integrierte Unterstützung für das Bereitstellen von Informationen zu den zu jedem Zeitpunkt in der Tabelle gespeicherten Daten zur Verfügung stellt, anstatt nur die aktuell in einer Tabelle gespeicherten Daten zu unterstützen. Temporal ist ein Datenbankfeature, das zusammen mit ANSI SQL 2011 eingeführt wurde.  
   
  **Schnellstart**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "52403645"
   
     -   [Abfragen von Daten in einer temporalen Tabelle mit Systemversionsverwaltung](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)  
   
-    -   **Herunterladen der Adventure Works-Beispieldatenbank:** Laden Sie zum Einstieg in temporale Tabellen die [AdventureWorks-Datenbank für SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502) mit Skriptbeispielen herunter, und führen Sie die Anweisungen im Ordner „Temporal“ aus.  
+    -   **AdventureWorks-Beispieldatenbank herunterladen:** Laden Sie zum Einstieg in temporäre Tabellen die [AdventureWorks-Datenbank für SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502) mit Skriptbeispielen herunter, und führen Sie die Anweisungen im Ordner „Temporal“ aus.  
   
 -   **Syntax:**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "52403645"
   
     -   [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
--   **Video:** Eine 20-minütige Erörterung des Temporal-Features finden Sie unter [Temporal in SQL Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016).  
+-   **Video:** Eine 20-minütige Erörterung des Features für temporäre Tabellen finden Sie im Video [Temporal in SQL Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016).  
   
 ## <a name="what-is-a-system-versioned-temporal-table"></a>Was ist eine temporale Tabelle mit Versionsverwaltung durch das System?  
  Eine temporale Tabelle mit Systemversionsverwaltung ist ein Benutzertabellentyp, der darauf ausgelegt ist, den Verlauf aller Datenänderungen lückenlos zu speichern und einfache Zeitpunktanalysen zu ermöglichen. Bei diesem Typ von temporaler Tabelle spricht man von Versionsverwaltung durch das System, da die Gültigkeitsdauer für jede Zeile vom System (d.h. von der Datenbank-Engine) verwaltet wird.  
@@ -81,9 +81,9 @@ ms.locfileid: "52403645"
 ## <a name="how-does-temporal-work"></a>Wie funktioniert temporal?  
  Die Versionsverwaltung durch das System für eine Tabelle wird in Form eines Tabellenpaars implementiert, von denen eine die aktuelle und die andere eine Verlaufstabelle ist. Innerhalb jeder dieser Tabellen werden die zwei folgenden zusätzlichen **datetime2** -Spalten verwendet, um den Gültigkeitszeitraum für jede Zeile zu definieren:  
   
--   Spalte des Systemzeitraumstarts: Das System zeichnet die Anfangszeit für die Zeile in dieser Spalte auf, normalerweise als **SysStartTime** -Spalte bezeichnet.  
+-   Spalte mit Systemstartzeit: Das System zeichnet die Startzeit für die Zeile in dieser Spalte auf, normalerweise als **SysStartTime**-Spalte bezeichnet.  
   
--   Spalte des Systemzeitraumendes: Das System zeichnet die Endzeit für die Zeile in dieser Spalte auf, normalerweise als **SysEndTime** -Spalte bezeichnet.  
+-   Spalte mit Systemendzeitpunkt: Das System zeichnet den Endzeitpunkt für die Zeile in dieser Spalte auf, normalerweise als **SysEndTime**-Spalte bezeichnet.  
   
  Die aktuelle Tabelle enthält den aktuellen Wert für jede Zeile. Die Verlaufstabelle enthält jeden früheren Wert für jede Zeile, falls vorhanden, sowie die Anfangszeit und Endzeit für den Zeitraum, für den er gültig war.  
   
@@ -107,13 +107,13 @@ CREATE TABLE dbo.Employee
  WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.EmployeeHistory));  
 ```  
   
- **INSERTS:** Bei einem **INSERT**legt das System den Wert für die **SysStartTime** -Spalte basierend auf der Systemzeit auf den Anfangszeitpunkt der aktuellen Transaktion (in der UTC-Zeitzone) fest und weist der **SysEndTime** -Spalte den Maximalwert von 9999-12-31 als Wert zu. Dadurch wird die Zeile als offen gekennzeichnet.  
+ **INSERT-Vorgänge:** Bei einem **INSERT**-Vorgang legt das System den Wert für die **SysStartTime**-Spalte basierend auf der Systemzeit auf die Startzeit der aktuellen Transaktion (in der UTC-Zeitzone) fest und weist der **SysEndTime**-Spalte den Maximalwert von 9999-12-31 zu. Dadurch wird die Zeile als offen gekennzeichnet.  
   
- **UPDATES:** Bei einem **UPDATE**speichert das System den vorhergehenden Wert der Zeile in der Verlaufstabelle und legt den Wert für die **SysEndTime** -Spalte basierend auf der Systemzeit auf den Anfangszeitpunkt der aktuellen Transaktion (in der UTC-Zeitzone) fest. Dadurch wird die Zeile als geschlossen mit einem aufgezeichneten Zeitraum gekennzeichnet, zu dem die Zeile gültig war. In der aktuellen Tabelle wird die Zeile mit dem neuen Wert aktualisiert, und das System legt den Wert für die **SysStartTime** -Spalte basierend auf der Systemzeit auf den Anfangszeitpunkt der Transaktion (in der UTC-Zeitzone) fest. Der Wert für die **SysEndTime** -Spalte für die aktualisierte Zeile verbleibt in der aktuellen Tabelle auf dem Maximalwert von 9999-12-31.  
+ **UPDATE-Vorgänge:** Bei einem **UPDATE**-Vorgang speichert das System den vorhergehenden Wert der Zeile in der Verlaufstabelle und legt den Wert für die **SysEndTime**-Spalte basierend auf der Systemzeit auf die Startzeit der aktuellen Transaktion (in der UTC-Zeitzone) fest. Dadurch wird die Zeile als geschlossen gekennzeichnet. Zudem wird der Zeitraum vermerkt, zu dem die Zeile gültig war. In der aktuellen Tabelle wird die Zeile mit dem neuen Wert aktualisiert, und das System legt den Wert für die **SysStartTime** -Spalte basierend auf der Systemzeit auf den Anfangszeitpunkt der Transaktion (in der UTC-Zeitzone) fest. Der Wert für die **SysEndTime** -Spalte für die aktualisierte Zeile verbleibt in der aktuellen Tabelle auf dem Maximalwert von 9999-12-31.  
   
- **DELETES:** Bei einem **DELETE**speichert das System den vorhergehenden Wert der Zeile in der Verlaufstabelle und legt den Wert für die **SysEndTime** -Spalte basierend auf der Systemzeit auf den Anfangszeitpunkt der aktuellen Transaktion (in der UTC-Zeitzone) fest. Dadurch wird die Zeile als geschlossen mit einem aufgezeichneten Zeitraum gekennzeichnet, zu dem die vorhergehende Zeile gültig war. In der aktuellen Tabelle wird die Zeile entfernt. Bei Abfragen der aktuellen Tabelle wird die Zeile nicht zurückgegeben. Nur bei Abfragen von Verlaufsdaten werden Daten zurückgegeben, für die eine Zeile geschlossen ist.  
+ **DELETE-Vorgänge:** Bei einem **DELETE**-Vorgang speichert das System den vorhergehenden Wert der Zeile in der Verlaufstabelle und legt den Wert für die **SysEndTime**-Spalte basierend auf der Systemzeit auf die Startzeit der aktuellen Transaktion (in der UTC-Zeitzone) fest. Dadurch wird die Zeile als geschlossen gekennzeichnet. Zudem wird der Zeitraum vermerkt, zu dem die vorhergehende Zeile gültig war. In der aktuellen Tabelle wird die Zeile entfernt. Bei Abfragen der aktuellen Tabelle wird die Zeile nicht zurückgegeben. Nur bei Abfragen von Verlaufsdaten werden Daten zurückgegeben, für die eine Zeile geschlossen ist.  
   
- **MERGE:** Bei einem **MERGE**verläuft der Vorgang so, als würden bis zu drei Anweisungen ausgeführt (ein **INSERT**, ein **UPDATE**und/oder ein **DELETE**), je nachdem, welche Aktionen in der **MERGE** -Anweisung angegeben sind.  
+ **MERGE-Vorgänge:** Bei einem **MERGE**-Vorgang verläuft der Vorgang so, als würden bis zu drei Anweisungen ausgeführt (**INSERT**, **UPDATE** und/oder **DELETE**), je nachdem, welche Aktionen in der **MERGE**-Anweisung angegeben sind.  
   
 > [!IMPORTANT]  
 >  Die in den datetime2-Spalten des Systems aufgezeichneten Zeiten basieren auf dem Anfangszeitpunkt der Transaktion selbst. Beispielsweise wird für alle Zeilen, die innerhalb einer einzelnen Transaktion eingefügt werden, in der Spalte, die dem Beginn des **SYSTEM_TIME** -Zeitraums entspricht, die gleiche UTC-Zeit aufgezeichnet.  
@@ -151,7 +151,7 @@ SELECT * FROM Employee
 > [!NOTE]  
 >  Optional können Sie diese Zeitraumspalten ausblenden, sodass sie von Abfragen, die nicht explizit auf diese Zeitraumspalten verweisen, nicht zurückgegeben werden (Szenario **SELECT \* FROM**_\<Tabelle\>_). Um eine ausgeblendete Spalte zurückzugeben, verweisen Sie einfach in der Abfrage explizit auf die ausgeblendete Spalte. Analog dazu verhalten sich **INSERT** und **BULK INSERT** -Anweisungen, als ob diese neuen Zeitraumspalten nicht vorhanden wären (und die Spaltenwerte werden automatisch aufgefüllt). Weitere Informationen zur Verwendung der **HIDDEN** -Klausel finden Sie unter [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) und [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)unterstützt wird.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erste Schritte mit temporalen Tabellen mit Systemversionsverwaltung](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Temporale Tabellen mit Systemversionsverwaltung und speicheroptimierten Tabellen](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
  [Verwendungsszenarien für temporale Tabellen](../../relational-databases/tables/temporal-table-usage-scenarios.md)   

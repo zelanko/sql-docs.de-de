@@ -1,7 +1,7 @@
 ---
 title: table_constraint (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/11/2018
+ms.date: 03/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,12 +17,12 @@ ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ef0833709d409e7393d71a402b823375b895fb2a
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: bcab3eb3b41cf0dbbcb46a48a612d35bde66de14
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327391"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227152"
 ---
 # <a name="alter-table-tableconstraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "54327391"
           [ , {node_table TO node_table }]
           [ , ...n ]
         )
-        [ ON DELETE NO ACTION]
+        [ ON DELETE { NO ACTION | CASCADE } ]
     | DEFAULT constant_expression FOR column [ WITH VALUES ]   
     | CHECK [ NOT FOR REPLICATION ] ( logical_expression )  
 }  
@@ -163,7 +163,7 @@ ms.locfileid: "54327391"
   
  Kann für FOREIGN KEY- und CHECK-Einschränkungen festgelegt werden. Wenn diese Klausel für eine Einschränkung angegeben wird, wird die Einschränkung nicht erzwungen, wenn Replikations-Agents Einfüge-, Update- oder Löschvorgänge ausführen.  
 
- CONNECTION: Gibt das Paar von Knotentabellen an, das die angegebene Edgeeinschränkung verbinden darf.  
+ CONNECTION: Gibt das Paar von Knotentabellen an, das die angegebene Edgeeinschränkung verbinden darf. ON DELETE: legt fest, was mit den Zeilen in der Edgetabelle geschieht, wenn die Knoten, die in dieser Edgetabelle über einen Edge verbunden waren, gelöscht werden. 
  
  DEFAULT  
  Gibt den Standardwert für die Spalte an. DEFAULT-Definitionen können verwendet werden, um Werte für eine neue Spalte in den vorhandenen Datenzeilen bereitzustellen. DEFAULT-Definitionen können nicht zu Spalten mit **timestamp**-Datentyp, IDENTITY-Eigenschaft, vorhandener DEFAULT-Definition oder gebundenem Standardwert hinzugefügt werden. Wenn die Spalte bereits einen Standardwert hat, muss dieser gelöscht werden, bevor der neue Standardwert hinzugefügt werden kann. Wenn ein Standardwert für einen benutzerdefinierten Spaltentyp angegeben wird, sollte dieser Typ eine implizite Konvertierung von *constant_expression* in den benutzerdefinierten Typ unterstützen. Um die Kompatibilität mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufrechtzuerhalten, ist es möglich, einer DEFAULT-Definition einen Einschränkungsnamen zuzuweisen.  

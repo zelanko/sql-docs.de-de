@@ -1,7 +1,7 @@
 ---
 title: ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/05/2018
+ms.date: 02/28/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -13,16 +13,16 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - ALTER EXTERNAL LIBRARY
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6243f4b6fe34197e476c38dde9e2b4c717192944
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc590bb618f9a95a0fbe7b0a9c173a64698cdf1e
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686758"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017966"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -30,7 +30,48 @@ ms.locfileid: "47686758"
 
 Ändert den Inhalt einer vorhandenen externen Paketbibliothek.
 
-## <a name="syntax"></a>Syntax
+> [!NOTE]
+> In SQL Server 2017 werden die R-Sprache und die Windows-Plattform unterstützt. R. Python und Java werden für die Windows-Plattform in SQL Server 2019 CTP 2.3 unterstützt. Die Unterstützung für Linux ist für ein späteres Release eingeplant.
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+## <a name="syntax-for-sql-server-2019"></a>Syntax für SQL Server 2019
+
+```text
+ALTER EXTERNAL LIBRARY library_name
+[ AUTHORIZATION owner_name ]
+SET <file_spec>
+WITH ( LANGUAGE = <language> )
+[ ; ]
+
+<file_spec> ::=
+{
+    (CONTENT = { <client_library_specifier> | <library_bits> | NONE}
+    [, PLATFORM = WINDOWS )
+}
+
+<client_library_specifier> :: =
+{
+      '[\\computer_name\]share_name\[path\]manifest_file_name'
+    | '[local_path\]manifest_file_name'
+    | '<relative_path_in_external_data_source>'
+}
+
+<library_bits> :: =
+{ 
+      varbinary_literal 
+    | varbinary_expression 
+}
+
+<language> :: = 
+{
+      'R'
+    | 'Python'
+    | 'Java'
+}
+```
+::: moniker-end
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+## <a name="syntax-for-sql-server-2017"></a>Syntax für SQL Server 2017
 
 ```text
 ALTER EXTERNAL LIBRARY library_name
@@ -41,18 +82,24 @@ WITH ( LANGUAGE = 'R' )
 
 <file_spec> ::=
 {
-(CONTENT = { <client_library_specifier> | <library_bits> | NONE}
-[, PLATFORM = WINDOWS )
+    (CONTENT = { <client_library_specifier> | <library_bits> | NONE}
+    [, PLATFORM = WINDOWS )
 }
 
 <client_library_specifier> :: =
-  '[\\computer_name\]share_name\[path\]manifest_file_name'
-| '[local_path\]manifest_file_name'
-| '<relative_path_in_external_data_source>'
+{
+      '[\\computer_name\]share_name\[path\]manifest_file_name'
+    | '[local_path\]manifest_file_name'
+    | '<relative_path_in_external_data_source>'
+}
 
 <library_bits> :: =
-{ varbinary_literal | varbinary_expression }
+{ 
+      varbinary_literal 
+    | varbinary_expression 
+}
 ```
+::: moniker-end
 
 ### <a name="arguments"></a>Argumente
 
@@ -86,9 +133,19 @@ Stattdessen können Sie den Paketinhalt als Variable im Binärformat übergeben.
 
 Gibt die Plattform für den Inhalt der Bibliothek an. Dieser Wert ist erforderlich, wenn eine vorhandene Bibliothek geändert wird, um eine andere Plattform hinzuzufügen. Windows ist die einzige unterstützte Plattform.
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+**language**
+
+gibt die Sprache des Pakets an. Mögliche Werte sind: **R**, **Python** oder **Java**.
+::: moniker-end
+
 ## <a name="remarks"></a>Remarks
 
 Bei der R-Sprache müssen Pakete in Form von gezippten Archivdateien mit der Dateiendung .zip für Windows vorbereitet werden. Derzeit wird nur die Windows-Plattform unterstützt.  
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Für Python muss das Paket in einer WHL- oder ZIP-Datei als ZIP-Archivdatei vorbereitet werden. Wenn das Paket bereits eine ZIP-Datei ist, muss es in eine neue ZIP-Datei eingefügt werden. Der direkte Upload einer WHL- oder ZIP-Datei wird derzeit nicht unterstützt.
+::: moniker-end
 
 Die `ALTER EXTERNAL LIBRARY`-Anweisung lädt nur die Bibliothekbits in die Datenbank hoch. Die geänderte Bibliothek wird installiert, wenn ein Benutzer Code in [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) ausführt, der die Bibliothek aufruft.
 
@@ -120,6 +177,9 @@ EXEC sp_execute_external_script
 ;
 ```
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Das Beispiel funktioniert auch für Python in SQL Server 2019, wenn Sie `'R'` durch `'Python'` ersetzen.
+::: moniker-end
 ### <a name="b-alter-an-existing-library-using-a-byte-stream"></a>B. Ändern einer vorhandenen Bibliothek mithilfe eines Bytedatenstroms
 
 Im folgenden Beispiel wird die vorhandene Bibliothek geändert, indem die neuen Bits als ein Hexadezimalliteral übergeben werden.
@@ -128,6 +188,10 @@ Im folgenden Beispiel wird die vorhandene Bibliothek geändert, indem die neuen 
 ALTER EXTERNAL LIBRARY customLibrary 
 SET (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Das Beispiel funktioniert auch für Python in SQL Server 2019, wenn Sie `'R'` durch `'Python'` ersetzen.
+::: moniker-end
 
 > [!NOTE]
 > Dieses Codebeispiel zeigt nur die Syntax; der Binärwert in `CONTENT =` wurde zur besseren Lesbarkeit gekürzt und erstellt keine funktionierende Bibliothek. Der tatsächliche Inhalt der binären Variable wäre wesentlich länger.

@@ -25,46 +25,53 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a552fccb69476e5c8fc0f0d19f75071cfa6c3383
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74b302ba4dcf4637acdcfebaf8c33f1b338cb36a
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804538"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56853015"
 ---
 # <a name="set-numericroundabort-transact-sql"></a>SET NUMERIC_ROUNDABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Gibt an, welche Fehlerberichtsstufe generiert wird, wenn beim Runden in einem Ausdruck Genauigkeitsverluste entstehen.  
+Gibt an, welche Fehlerberichtsstufe generiert wird, wenn beim Runden in einem Ausdruck Genauigkeitsverluste entstehen.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Artikellinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Article link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## <a name="syntax"></a>Syntax
 
-```
+```sql
 
 SET NUMERIC_ROUNDABORT { ON | OFF }
 ```
   
 ## <a name="remarks"></a>Remarks  
- Wenn SET NUMERIC_ROUNDABORT auf ON festgelegt ist, wird ein Fehler generiert, wenn ein Genauigkeitsverlust in einem Ausdruck aufgetreten ist. Bei der Einstellung OFF werden bei Genauigkeitsverlusten keine Fehlermeldungen generiert, und das Ergebnis wird auf die Genauigkeit der Spalte oder Variablen gerundet, die das Ergebnis speichert.  
+Wenn SET NUMERIC_ROUNDABORT auf ON festgelegt ist, wird ein Fehler generiert, wenn ein Genauigkeitsverlust in einem Ausdruck aufgetreten ist. Wenn OFF festgelegt ist, werden keine Fehlermeldungen generiert, wenn ein Genauigkeitsverlust auftritt. Das Ergebnis wird auf die Genauigkeit der Spalte oder Variable gerundet, die das Ergebnis speichert.  
   
- Ein Genauigkeitsverlust entsteht, wenn ein Wert mit fester Genauigkeit in einer Spalte oder Variablen mit geringerer Genauigkeit gespeichert wird.  
+Ein Genauigkeitsverlust entsteht, wenn Sie versuchen einen Wert mit fester Genauigkeit in einer Spalte oder Variablen mit geringerer Genauigkeit zu speichern.  
   
- Wenn SET NUMERIC_ROUNDABORT auf ON festgelegt ist, bestimmt SET ARITHABORT den Schweregrad des generierten Fehlers. Die folgende Tabelle zeigt die Auswirkungen dieser beiden Einstellungen im Falle eines Genauigkeitsverlusts.  
+Wenn SET NUMERIC_ROUNDABORT auf ON festgelegt ist, bestimmt SET ARITHABORT den Schweregrad des generierten Fehlers. Die folgende Tabelle zeigt die Auswirkungen dieser beiden Einstellungen im Falle eines Genauigkeitsverlusts.  
   
 |Einstellung|SET NUMERIC_ROUNDABORT ON|SET NUMERIC_ROUNDABORT OFF|
 |-------------|--------------------------------|---------------------------------|
-|SET ARITHABORT ON|Fehler wird generiert; es wird kein Resultset zurückgegeben.|Keine Fehler oder Warnungen, Ergebnis wird gerundet.|  
+|SET ARITHABORT ON|Fehler wird generiert; es werden keine Ergebnisse zurückgegeben.|Keine Fehler oder Warnungen, Ergebnis wird gerundet.|  
 |SET ARITHABORT OFF|Warnung wird zurückgegeben; Ausdruck gibt NULL zurück.|Keine Fehler oder Warnungen, Ergebnis wird gerundet.|  
 
- Die Einstellung von SET NUMERIC_ROUNDABORT wird zur Ausführungszeit und nicht zur Analysezeit festgelegt.
+Die Einstellung von SET NUMERIC_ROUNDABORT wird zur Ausführungszeit und nicht zur Analysezeit festgelegt.
 
- SET NUMERIC_ROUNDABORT muss beim Erstellen oder Ändern von Indizes für berechneten Spalten oder indizierte Sichten auf OFF festgelegt sein. Wenn SET NUMERIC_ROUNDABORT auf ON festgelegt ist, schlagen die CREATE-, UPDATE-, INSERT- und DELETE-Anweisungen in Tabellen mit Indizes für berechnete Spalten oder indizierte Sicht fehl. Weitere Informationen zu den erforderlichen Einstellungen der SET-Option mit indizierten Sichten und Indizes für berechnete Spalten finden Sie in den Überlegungen zum Verwenden der SET-Anweisungen unter [SET-Anweisungen &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md).
+SET NUMERIC_ROUNDABORT muss beim Erstellen oder Ändern von Indizes für berechnete Spalten oder indizierte Sichten auf OFF festgelegt sein. Wenn SET NUMERIC_ROUNDABORT auf ON festgelegt ist, schlagen die folgenden Anweisungen in Tabellen mit Indizes für berechnete Spalten oder indizierte Sicht fehl:
+
+- CREATE 
+- UPDATE 
+- INSERT 
+- Delete 
+
+Weitere Informationen zu den erforderlichen Einstellungen der SET-Option mit indizierten Sichten und Indizes für berechnete Spalten finden Sie in den [Überlegungen zum Verwenden von SET-Anweisungen](../../t-sql/statements/set-statements-transact-sql.md#considerations-when-you-use-the-set-statements).
   
- Um die aktuelle Einstellung anzuzeigen, führen Sie die folgende Abfrage aus:
+Um die aktuelle Einstellung anzuzeigen, führen Sie die folgende Abfrage aus:
   
-```  
+```sql
 DECLARE @NUMERIC_ROUNDABORT VARCHAR(3) = 'OFF';  
 IF ( (8192 & @@OPTIONS) = 8192 ) SET @NUMERIC_ROUNDABORT = 'ON';  
 SELECT @NUMERIC_ROUNDABORT AS NUMERIC_ROUNDABORT;  
@@ -72,12 +79,12 @@ SELECT @NUMERIC_ROUNDABORT AS NUMERIC_ROUNDABORT;
 ```  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **public** -Rolle.  
+Erfordert die Mitgliedschaft in der **public** -Rolle.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel werden zwei Werte mit einer Genauigkeit von vier Dezimalstellen addiert und in einer Variablen mit einer Genauigkeit von zwei Dezimalstellen gespeichert. Die Ausdrücke zeigen die Auswirkungen der unterschiedlichen `SET NUMERIC_ROUNDABORT`- und `SET ARITHABORT`-Einstellungen.  
+Im folgenden Beispiel werden zwei Werte gezeigt, die auf vier Dezimalstellen genau sind. Diese werden zu einer Variablen hinzugefügt und in dieser gespeichert, die auf zwei Dezimalstellen genau ist. Die Ausdrücke zeigen die Auswirkungen der unterschiedlichen `SET NUMERIC_ROUNDABORT`- und `SET ARITHABORT`-Einstellungen.  
   
-```  
+```sql
 -- SET NOCOUNT to ON,   
 -- SET NUMERIC_ROUNDABORT to ON, and SET ARITHABORT to ON.  
 SET NOCOUNT ON;  
@@ -141,9 +148,9 @@ SELECT @result;
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [SET-Anweisungen (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
+[SET-Anweisungen (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
+[SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md)  
   
   

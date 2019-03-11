@@ -31,23 +31,23 @@ helpviewer_keywords:
 - UPDATE statement [SQL Server], FROM clause
 - derived tables
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c36325e68fbf9692c9f8f057e5aa215de2ad49b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 85e55be31f3f32316e8d9f841a34a7fcff3a3e97
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408807"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334787"
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Legt die Tabellen, Sichten, abgeleiteten Tabellen und verknüpften Tabellen in DELETE-, SELECT- und UPDATE-Anweisungen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fest. Die FROM-Klausel wird in der SELECT-Anweisung immer benötigt, es sei denn, die Auswahlliste enthält nur Konstanten, Variablen und arithmetische Ausdrücke (keine Spaltennamen).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -230,7 +230,7 @@ FROM { <table_source> [ ,...n ] }
  Gibt an, dass eine bestimmte Version von Daten aus der angegebenen temporalen Tabelle und die verknüpfte Verlaufstabelle mit Systemversionsverwaltung zurückgegeben werden.  
   
 ### <a name="tablesample-clause"></a>TABLESAMPLE-Klausel
-**Gilt für:** SQL Server und SQL-Datenbank 
+**Gilt für:** SQL Server, SQL-Datenbank 
  
  Gibt an, dass Beispieldaten aus der Tabelle zurückgegeben werden. Die Beispieldaten können ungefähr sein. Diese Klausel kann für eine primäre oder verknüpfte Tabelle in einer SELECT- oder UPDATE-Anweisung verwendet werden. TABLESAMPLE kann nicht für Sichten angegeben werden.  
   
@@ -878,7 +878,7 @@ SELECT *
 FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
 ```
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   

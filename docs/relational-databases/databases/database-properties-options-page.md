@@ -13,12 +13,12 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 49e6357f4f108b05b0f28442d0e526445a5a5ad7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ce814d567aa695be417fa4fa92d988938dfec6bf
+ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659369"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57007593"
 ---
 # <a name="database-properties-options-page"></a>Datenbankeigenschaften (Seite Optionen)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51659369"
  Geben Sie die Sortierung der Datenbank durch eine Auswahl aus der Liste an. Weitere Informationen finden Sie unter [Festlegen oder Ändern der Datenbanksortierung](../../relational-databases/collations/set-or-change-the-database-collation.md).  
   
  **Wiederherstellungsmodell**  
- Geben Sie eines der folgenden Modelle für die Wiederherstellung der Datenbank an: **Vollständig**, **Massenprotokolliert**oder **Einfach**. Weitere Informationen zu Wiederherstellungsmodellen finden Sie unter [Wiederherstellungsmodelle &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
+ Geben Sie eines der folgenden Modelle für die Wiederherstellung der Datenbank an: **Full** (Vollständig), **Bulk-Logged** (Massenprotokolliert) oder **Simple** (Einfach). Weitere Informationen zu Wiederherstellungsmodellen finden Sie unter [Wiederherstellungsmodelle &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
  **Kompatibilitätsgrad**  
  Geben Sie die letzte Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, die von der Datenbank unterstützt wird. Mögliche Werte finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Wenn eine SQL Server-Datenbank aktualisiert wird, wird der Kompatibilitätsgrad für diese Datenbank nach Möglichkeit beibehalten oder wird auf den mindestens erforderlichen Grad geändert, der von der neuen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt wird. 
@@ -44,7 +44,7 @@ ms.locfileid: "51659369"
 ## <a name="automatic"></a>Automatic  
  **Automatisch schließen**  
  Gibt an, ob die Datenbank ordnungsgemäß heruntergefahren wird und Ressourcen freigegeben werden, nachdem der letzte Benutzer die Anwendung beendet hat. Mögliche Werte sind **True** und **False**. Ist der Wert **True**, dann wird die Datenbank ordnungsgemäß heruntergefahren, und die Ressourcen werden freigegeben, nachdem sich der letzte Benutzer abgemeldet hat.  
-  
+
  **Inkrementelle Statistiken automatisch erstellen**  
  Gibt an, ob die Option INCREMENTAL beim Erstellen von Statistiken für einzelne Partitionen verwendet werden soll. Weitere Informationen zu inkrementellen Statistiken finden Sie unter [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
   
@@ -63,6 +63,15 @@ ms.locfileid: "51659369"
  Ist der Wert **False**, warten Abfragen, die ein automatisches Update veralteter Statistiken initiieren, bis die aktualisierten Statistiken im Abfrageoptimierungsplan verwendet werden können.  
   
  Wenn diese Option auf **True** festgelegt wird, hat dies keine Auswirkungen, es sei denn, die Option **Statistiken automatisch aktualisieren** ist ebenfalls auf **True**festgelegt.  
+
+## <a name="azure"></a>Azure
+Wenn Sie eine Verbindung mit Azure SQL-Datenbank hergestellt haben, finden Sie in diesem Abschnitt Einstellungen, mit denen Sie das Servicelevelziel (Service Level Objective, SLO) bestimmen können. Das Standard-SLO für eine neue Datenbank ist Standard S2.
+
+  **Current Service Level Objective** (Aktuelles Servicelevelziel): Das zu verwendende SLO. Gültige Werte hängen von der ausgewählten Edition ab. Wenn Ihr gewünschter SLO-Wert nicht in der Liste zu finden ist, können Sie den Wert eingeben.
+
+  **Edition**: Die zu verwendende Azure SQL-Datenbank-Edition, z.B. Basic oder Premium. Wenn Ihr gewünschter Wert nicht in der Liste zu finden ist, können Sie den Wert eingeben. Dieser Wert muss mit dem Wert in den Azure-REST-APIs übereinstimmen.
+  
+  **Max Size** (Maximale Größe): Gibt die maximale Größe der Datenbank an. Wenn Ihr gewünschter Wert nicht in der Liste zu finden ist, können Sie den Wert eingeben. Wenn Sie keinen Wert eingeben, wird die Standardgröße und das Standard-SLO für die jeweilige Edition verwendet.
   
 ## <a name="containment"></a>Containment  
  In einer eigenständigen Datenbank können einige Einstellungen, die normalerweise auf Serverebene konfiguriert werden, auf Datenbankebene konfiguriert werden.  
@@ -123,7 +132,7 @@ ms.locfileid: "51659369"
  Geben Sie den Verzeichnisnamen für die FILESTREAM-Daten an, die der ausgewählten Datenbank zugeordnet sind.  
   
  **Nicht transaktionsgebundener FILESTREAM-Zugriff**  
- Geben Sie eine der folgenden Optionen für nicht transaktionalen Zugriff über das Dateisystem auf FILESTREAM-Daten an, die in FileTables gespeichert sind: **OFF**, **READ_ONLY**oder **FULL**. Wenn FILESTREAM nicht auf dem Server aktiviert ist, wird dieser Wert auf OFF festgelegt und deaktiviert. Weitere Informationen finden Sie unter [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
+ Geben Sie eine der folgenden Optionen für nicht transaktionalen Zugriff über das Dateisystem auf FILESTREAM-Daten an, die in Dateitabellen gespeichert sind: **OFF**, **READ_ONLY** oder **FULL**. Wenn FILESTREAM nicht auf dem Server aktiviert ist, wird dieser Wert auf OFF festgelegt und deaktiviert. Weitere Informationen finden Sie unter [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
   
 ## <a name="miscellaneous"></a>Sonstiges  
 **Zulassen der Momentaufnahmeisolation**  
@@ -235,7 +244,7 @@ Schreibgeschützter Bezeichner.
   
 
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   

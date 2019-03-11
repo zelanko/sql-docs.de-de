@@ -2,7 +2,7 @@
 title: Inlining benutzerdefinierter Skalarfunktionen in Datenbanken von Microsoft SQL Server | Microsoft-Dokumentation
 description: In diesem Artikel wird das Inlining benutzerdefinierter Skalarfunktionen erläutert, um die Leistung von Abfragen zu verbessern, die benutzerdefinierte Skalarfunktionen in SQL Server (2018 und höher) und Azure SQL-Datenbank aufrufen.
 ms.custom: ''
-ms.date: 11/06/2018
+ms.date: 02/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: s-r-k
 ms.author: karam
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 709f4a25ec4536c9ff1ba10cdaddd2ef8c104db2
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: 0c2ed03ea43643aa8aaecd3e1600ee3e258929ed
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51222083"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017926"
 ---
 # <a name="scalar-udf-inlining"></a>Inlining benutzerdefinierter Skalarfunktionen
 
@@ -146,11 +146,12 @@ Für eine benutzerdefinierte T-SQL-Skalarfunktion kann ein Inlining durchgeführ
     - `IF`/`ELSE`: Verzweigung mit beliebigen Schachtelungsebenen
     - `RETURN`: eine oder mehrere RETURN-Anweisungen
     - `UDF`: geschachtelte bzw. rekursive Funktionsaufrufe<sup>2</sup>
-    - Sonstige: relationale Operatoren wie `EXISTS`, `ISNULL`
+    - Sonstige: relationale Vorgänge wie `EXISTS`, `ISNULL`
 - Die benutzerdefinierte Funktion ruft keine intrinsische Funktion auf, die zeitabhängig ist (wie `GETDATE()`) oder Nebeneffekte<sup>3</sup> hat (wie `NEWSEQUENTIALID()`).
 - Die benutzerdefinierte Funktion verwendet die `EXECUTE AS CALLER`-Klausel (Standardverhalten, wenn die `EXECUTE AS`-Klausel nicht angegeben wurde).
 - Die benutzerdefinierte Funktion verweist nicht auf Tabellenvariablen oder Tabellenwertparameter.
 - Die Abfrage, die eine benutzerdefinierte Skalarfunktion aufruft, verweist in der `GROUP BY`-Klausel nicht auf einen Aufruf einer benutzerdefinierten Skalarfunktion.
+- Die Abfrage, die eine benutzerdefinierte Skalarfunktion in der Auswahlliste mit der `DISTINCT`-Klausel aufruft, verweist in der `ORDER BY`-Klausel nicht auf einen Aufruf einer benutzerdefinierten Skalarfunktion.
 - Die benutzerdefinierte Funktion wird nicht nativ kompiliert (Interop wird unterstützt).
 - Die benutzerdefinierte Funktion wird nicht in einer berechneten Spalte oder in der Definition einer CHECK-Einschränkung verwendet.
 - Die benutzerdefinierte Funktion verweist nicht auf benutzerdefinierte Typen.
@@ -252,7 +253,7 @@ Wie in diesem Artikel beschrieben wurde, wird beim Inlining einer benutzerdefini
 1. Durch das Inlining benutzerdefinierter Funktionen kann das Verhalten der [dynamischen Datenmaskierung](../security/dynamic-data-masking.md) sich ändern. In bestimmten Situationen (je nach Logik in der benutzerdefinierten Funktion) in Bezug auf das Maskieren von Ausgabespalten einen konservativeren Ansatz dar. In Szenarios, bei denen es sich bei den Spalten, auf die in einer benutzerdefinierten Funktion verwiesen wird, nicht um Ausgabespalten handelt, werden diese nicht maskiert. 
 1. Wenn eine benutzerdefinierte Funktion auf integrierte Funktionen wie `SCOPE_IDENTITY()` verweist, ändert sich der Wert, der von der integrierten Funktion zurückgegeben wird, durch das Inlining. Diese Änderung im Verhalten geht darauf zurück, dass das Inlining den Bereich der Anweisungen in der benutzerdefinierten Funktion ändert.
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [Leistungscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
 

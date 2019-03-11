@@ -26,23 +26,23 @@ helpviewer_keywords:
 - clauses [SQL Server], INTO
 - row additions [SQL Server], INTO clause
 ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f8d40fed1b2183bc82b85b5d82ac1895ca118f2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4246ac153e28393db2bfaefd443f85235e8cf6db
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509015"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334537"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO-Klausel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Mit SELECT…INTO wird eine neue Tabelle in der Standarddateigruppe erstellt, und die Ergebniszeilen aus der Abfrage werden darin eingefügt. Die vollständige SELECT-Syntax finden Sie unter [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -64,7 +64,7 @@ Mit SELECT…INTO wird eine neue Tabelle in der Standarddateigruppe erstellt, un
  *filegroup*    
  Gibt den Namen der Dateigruppe an, in der die neue Tabelle erstellt wird. Die angegebene Dateigruppe muss in der Datenbank vorhanden sein, andernfalls löst die SQL Server-Engine einen Fehler aus.   
  
- **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+ **Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ## <a name="data-types"></a>Datentypen  
  Beim FILESTREAM-Attribut werden keine Daten in die neue Tabelle übertragen. FILESTREAM-BLOBs werden kopiert und in der neuen Tabelle als **varbinary(max)**-BLOBs gespeichert. Ohne das FILESTREAM-Attribut verfügt der **varbinary(max)**-Datentyp über eine Einschränkung von 2 GB. Wenn ein FILESTREAM-BLOB diesen Wert überschreitet, wird Fehler 7119 ausgelöst, und die Anweisung wird beendet.  
@@ -82,6 +82,9 @@ Mit SELECT…INTO wird eine neue Tabelle in der Standarddateigruppe erstellt, un
 -   Die Identitätsspalte stammt aus einer Remotedatenquelle.  
   
 Falls eine dieser Bedingungen erfüllt ist, wird die Spalte mit NOT NULL erstellt, anstatt die IDENTITY-Eigenschaft zu erben. Wenn eine Identitätsspalte in der neuen Tabelle erforderlich, aber nicht verfügbar ist oder wenn Sie einen Ausgangs- oder Inkrementwert benötigen, der sich von der Quellidentitätsspalte unterscheidet, definieren Sie die Spalte in der Auswahlliste mithilfe der IDENTITY-Funktion. Weitere Informationen finden Sie unter "Erstellen einer Identitätsspalte mithilfe der IDENTITY-Funktion" im Abschnitt mit den Beispielen unten.  
+
+## <a name="remarks"></a>Remarks  
+Die `SELECT...INTO`-Anweisung wird in zwei Schritten ausgeführt: Zunächst wird die neue Tabelle erstellt, dann werden die Zeilen eingefügt.  Das bedeutet, dass ein Rollback ausgeführt wird, wenn die Einfügevorgänge fehlschlagen; die neue (leere) Tabelle bleibt jedoch bestehen.  Wenn der gesamte Vorgang als Ganzes erfolgreich sein oder fehlschlagen muss, verwenden Sie eine [explizite Transaktion](../language-elements/begin-transaction-transact-sql.md).
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
  Tabellenvariablen und Tabellenwertparameter können nicht als neue Tabelle angegeben werden.  
@@ -229,7 +232,7 @@ ORDER BY YearlyIncome;
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. Erstellen einer neuen Tabelle als Kopie einer anderen Tabelle und Laden der Tabelle in eine angegebene Dateigruppe
 Das folgende Beispiel zeigt, wie eine neue Tabelle als Kopie einer anderen Tabelle erstellt und in eine angegebene Dateigruppe geladen wird, bei der es sich nicht um die Standarddateigruppe des Benutzers handelt.
 
- **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+ **Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
@@ -244,7 +247,7 @@ GO
 SELECT * INTO [dbo].[FactResellerSalesXL] ON FG2 FROM [dbo].[FactResellerSales];
 ```
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [Beispiele für SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
