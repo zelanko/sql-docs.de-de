@@ -156,6 +156,32 @@ items:
         href: ../big-data-cluster/spark-submit-job-intellij-tool-plugin.md
       - name: Verwenden von erweiterten Spark-Verlaufsservern
         href: ../big-data-cluster/spark-history-server.md
+  - name: Verweis
+    items:
+    - name: Referenz zu mssqlctl
+      items:
+      - name: mssqlctl
+        href: ../big-data-cluster/reference-mssqlctl.md
+      - name: App-Bereitstellung
+        items:
+        - name: mssqlctl-App
+          href: ../big-data-cluster/reference-mssqlctl-app.md
+        - name: mssqlctl-App-Vorlage
+          href: ../big-data-cluster/reference-mssqlctl-app-template.md
+      - name: Cluster
+        items:
+        - name: mssqlctl-Cluster
+          href: ../big-data-cluster/reference-mssqlctl-cluster.md
+        - name: Konfiguration des mssqlctl-Clusters
+          href: ../big-data-cluster/reference-mssqlctl-cluster-config.md
+        - name: Debuggen des mssqlctl-Clusters
+          href: ../big-data-cluster/reference-mssqlctl-cluster-debug.md
+      - name: Speicherung
+        items:
+        - name: mssqlctl-Speicher
+          href: ../big-data-cluster/reference-mssqlctl-storage.md
+        - name: mssqlctl-Speicherbereitstellung
+          href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
 - name: Geschäftskontinuität
   href: redirectfrom-business-continuity-10.md
   items:
@@ -6847,8 +6873,6 @@ items:
             href: ../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md
   - name: Optimieren
     items:
-    - name: Adaptive Abfrageverarbeitung
-      href: ../relational-databases/performance/adaptive-query-processing.md
     - name: Automatische Optimierung
       href: ../relational-databases/automatic-tuning/automatic-tuning.md
     - name: Kardinalitätsschätzung
@@ -7988,7 +8012,7 @@ items:
     - name: Install
       href: ../azure-data-studio/download.md
     - name: Versionshinweise
-      href: ../azure-data-studio/release-notes.md
+      href: ../azure-data-studio/release-notes-azure-data-studio.md
     - name: Schnellstarts
       items:
       - name: Herstellen einer Verbindung mit und Abfragen von SQL Server
@@ -9367,7 +9391,7 @@ items:
           href: ../ssms/solution/view-project-properties.md
         - name: Entfernen oder Löschen eines Elements oder Projekts
           href: ../ssms/solution/remove-or-delete-an-item-or-project.md
-        - name: sonstige Dateien
+        - name: Sonstige Dateien
           href: ../ssms/solution/miscellaneous-files.md
         - name: Ändern des Standardspeicherorts für Projekte
           href: ../ssms/solution/change-the-default-location-for-projects.md
@@ -17159,9 +17183,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: Handhabung von Namespaces in XQuery
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: 085652bdfcac1b7bea33c7e9307da37d749a65ea
-ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
+ms.openlocfilehash: c1bcf717605ff5c3cd1cf5722154fe518721c9e6
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57401972"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579790"

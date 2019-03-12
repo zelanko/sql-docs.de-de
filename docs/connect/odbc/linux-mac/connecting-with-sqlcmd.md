@@ -13,12 +13,12 @@ ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 21021402a10494306a3b667c5f7b83977dc7d205
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d436072e81212203aff568feba1d764b07c31b8a
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512541"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579260"
 ---
 # <a name="connecting-with-sqlcmd"></a>Herstellen einer Verbindung mit sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -46,7 +46,7 @@ Im aktuellen Release sind die folgenden Optionen verfügbar:
   
 - -C Vertrauenswürdiges Serverzertifikat.  
 
-- -d *Database_name* Problem eine `USE ` *Database_name* -Anweisung, wenn Sie starten `sqlcmd`.  
+- -d *Database_name* Problem eine `USE` *Database_name* -Anweisung, wenn Sie starten `sqlcmd`.  
 
 - -D Bewirkt, dass der Wert, der an die Option -S von `sqlcmd` übergeben wird, als Datenquellenname (Data Source Name, DSN) interpretiert wird. Weitere Informationen finden Sie unter „DSN-Unterstützung in `sqlcmd` und `bcp`“ am Ende dieses Themas.  
   
@@ -64,7 +64,7 @@ Im aktuellen Release sind die folgenden Optionen verfügbar:
   
 - -k Entfernt oder ersetzt Steuerzeichen.  
   
-- **-K**_Anwendung\_Absicht_  
+- **-K**_anwendungszweck_  
 Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einem Server. Der einzige derzeit unterstützte Wert ist **ReadOnly**. Wenn **-K** nicht angegeben wird, unterstützt `sqlcmd` keine Konnektivität mit einem sekundären Replikat in einer AlwaysOn-Verfügbarkeitsgruppe. Weitere Informationen finden Sie unter [ODBC-Treiber unter Linux und MacOS – hohe Verfügbarkeit und Notfallwiederherstellung](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
@@ -74,7 +74,7 @@ Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbind
 
 - -m *error_level* Steuert, welche Fehlernachrichten an stdout gesendet werden.  
   
-- **-M**_einem multisubnetz\_Failover_  
+- **-M**_multisubnetz\_failover_  
 Geben Sie immer **-M** an, wenn Sie eine Verbindung mit dem Verfügbarkeitsgruppenlistener einer [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]-Verfügbarkeitsgruppe oder einer [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]-Failoverclusterinstanz herstellen. **-M** gewährleistet eine schnellere Erkennung von Failovers und Verbindung mit dem (gerade) aktiven Server. Wenn **-M** nicht angegeben ist, ist **-M** deaktiviert. Weitere Informationen zu [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], finden Sie unter [ODBC-Treiber unter Linux und MacOS – hohe Verfügbarkeit und Notfallwiederherstellung](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
@@ -216,7 +216,7 @@ Die folgenden Einträge werden in einem DSN unter Linux oder macOS unterstützt:
   
 -   **MultiSubnetFailover=Yes**  
   
--   **Server =**_Server\_Namen\_oder\_IP\_Adresse_  
+-   **Server=**_servername\_oder\_IP\_adresse_  
   
 -   **Trusted_Connection=yes**|**no**  
   
@@ -226,6 +226,6 @@ Wenn diese Option sowohl im DSN als auch in der `sqlcmd`- oder `bcp`-Befehlszeil
 
 Vorhandene Skripts, die `isql` aufrufen, können geändert werden, um `sqlcmd` zu verwenden, indem der folgende Alias definiert wird: `alias isql="sqlcmd -D"`.  
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Herstellen einer Verbindung mit **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md)  
  
