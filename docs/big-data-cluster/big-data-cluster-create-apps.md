@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6d0f5fba93b74aa5751635c9a10f320c85036bbb
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 8d784b82c56ca99027491bf257c90dddf4eb9b6b
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017826"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756635"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>Gewusst wie: Bereitstellen einer app auf SQL Server-2019 big Data-Cluster (Vorschau)
 
 Dieser Artikel beschreibt das Bereitstellen und Verwalten von R und Python-Skript als eine Anwendung in einer SQL Server-2019 big Data-Cluster (Vorschau).
- 
-## <a name="whats-new-and-improved"></a>Was ist, neue und verbesserte 
+
+## <a name="whats-new-and-improved"></a>Was ist, neue und verbesserte
 
 - Ein einzelnes Befehlszeilen-Hilfsprogramm zum Verwalten von Cluster und die app.
 - Vereinfachte anwendungsbereitstellung und bietet gleichzeitig eine präzise Kontrolle über die Spec-Dateien.
@@ -80,13 +80,12 @@ Wenn Sie ACS verwenden, müssen Sie den folgenden Befehl zum Abrufen der IP-Adre
 kubectl get svc endpoint-service-proxy -n <name of your cluster>
 ```
 
-
 ## <a name="kubeadm-or-minikube"></a>Kubeadm oder Minikube
 
 Wenn Sie Kubeadm oder Minikube führen Sie den folgenden Befehl verwenden, um die IP-Adresse zur Anmeldung beim Cluster abrufen
 
 ```bash
-kubectl get node --selector='node-role.kubernetes.io/master' 
+kubectl get node --selector='node-role.kubernetes.io/master'
 ```
 
 ## <a name="create-an-app"></a>Erstellen einer app
@@ -101,16 +100,17 @@ mssqlctl app create -n <app_name> -v <version_number> --spec <directory containi
 
 Der folgende Befehl zeigt ein Beispiel für diesen Befehl könnte folgendermaßen aussehen:
 
-Dabei wird davon ausgegangen, dass Sie die Datei mit dem Namen haben `spec.yaml` innerhalb der `addpy` Ordner. Die `addpy` Ordner enthält die `add.py` und `spec.yaml` der `spec.yaml` Spezifikationsdatei ist eine für die `add.py` app.
+Dabei wird davon ausgegangen, dass Sie die Datei mit dem Namen haben `spec.yaml` innerhalb der `addpy` Ordner.
+Die `addpy` Ordner enthält die `add.py` und `spec.yaml` der `spec.yaml` Spezifikationsdatei ist eine für die `add.py` app.
 
 
-`add.py` Die folgende Python-app wird erstellt: 
+`add.py` Die folgende Python-app wird erstellt:
 
 ```py
 #add.py
 def add(x,y):
         result = x+y
-        return result;
+        return result
 result=add(x,y)
 ```
 
@@ -119,9 +119,9 @@ Das folgende Skript ist ein Beispiel für die Inhalte für `spec.yaml`:
 ```yaml
 #spec.yaml
 name: add-app #name of your python script
-version: v1  #version of the app 
-runtime: Python #the languge this app uses (R or Python)
-src: ./add.py #full path to the loction of the app
+version: v1  #version of the app
+runtime: Python #the language this app uses (R or Python)
+src: ./add.py #full path to the location of the app
 entrypoint: add #the function that will be called upon execution
 replicas: 1  #number of replicas needed
 poolsize: 1  #the pool size that you need your app to scale
@@ -144,13 +144,13 @@ Sie können überprüfen, ob die app bereitgestellt wurde, mithilfe des List-Bef
 mssqlctl app list
 ```
 
-Wenn die Bereitstellung nicht abgeschlossen ist. Daraufhin sollte die `state` anzeigen `WaitingforCreate` wie im folgenden Beispiel: 
+Wenn die Bereitstellung nicht abgeschlossen ist. Daraufhin sollte die `state` anzeigen `WaitingforCreate` wie im folgenden Beispiel:
 
-```
+```json
 [
   {
     "name": "add-app",
-    `state`: "WaitingforCreate",
+    "state": "WaitingforCreate",
     "version": "v1"
   }
 ]
@@ -158,11 +158,11 @@ Wenn die Bereitstellung nicht abgeschlossen ist. Daraufhin sollte die `state` an
 
 Wenn die Bereitstellung abgeschlossen ist, sollte die `state` ändern in `Ready` Status:
 
-```
+```json
 [
   {
     "name": "add-app",
-    `state`: `Ready`,
+    "state": "Ready",
     "version": "v1"
   }
 ]
@@ -192,11 +192,11 @@ mssqlctl app list --name add-app --version v1
 
 Daraufhin sollte eine Ausgabe ähnlich dem folgenden Beispiel:
 
-```
+```json
 [
   {
     "name": "add-app",
-    `state`: `Ready`,
+    "state": "Ready",
     "version": "v1"
   }
 ]
@@ -218,7 +218,7 @@ mssqlctl app run --name add-app --version v1 --inputs x=1,y=2
 
 Wenn die Ausführung erfolgreich war, sehen Sie die Ausgabe angegeben wird, wenn Sie die app erstellt. Im Folgenden finden Sie ein Beispiel.
 
-```
+```json
 {
   "changedFiles": [],
   "consoleOutput": "",
@@ -233,13 +233,13 @@ Wenn die Ausführung erfolgreich war, sehen Sie die Ausgabe angegeben wird, wenn
 
 ## <a name="create-an-app-skeleton"></a>Erstellen Sie ein app-Gerüst
 
-Der Init-Befehl bietet es sich um ein Gerüst, mit der relevanten Artefakte, die zum Bereitstellen einer app erforderlich ist. Das folgende Beispiel erstellt die Hello, die Sie dies tun können, indem Sie den folgenden Befehl ausführen.
+Der Init-Befehl bietet es sich um ein Gerüst mit den entsprechenden Elementen, die zum Bereitstellen einer app erforderlich ist. Das folgende Beispiel erstellt die Hello, die Sie dies tun können, indem Sie den folgenden Befehl ausführen.
 
-```
+```bash
 mssqlctl app init --name hello --version v1 --template python
 ```
 
-Dadurch wird einen Ordner namens Hello erstellt.  Können Sie die cd in das Verzeichnis, und überprüfen Sie die generierten Dateien im Ordner. spec.yaml definiert die app, wie z. B. Name, Version und Quellcode. Sie können die Spezifikation zum Ändern von Name, Version, Eingaben und Ausgaben bearbeiten.
+Dadurch wird einen Ordner namens Hello erstellt.  Sie können `cd` in das Verzeichnis, und überprüfen Sie die generierten Dateien im Ordner "". spec.yaml definiert die app, wie z. B. Name, Version und Quellcode. Sie können die Spezifikation zum Ändern von Name, Version, Eingaben und Ausgaben bearbeiten.
 
 Hier ist eine Beispielausgabe aus der Init-Befehl, den in den Ordner angezeigt werden
 
@@ -255,7 +255,7 @@ spec.yaml
 
 Der Befehl für die Beschreibung bietet ausführliche Informationen über die app, einschließlich der Endpunkt in Ihrem Cluster. Dies wird normalerweise durch ein app-Entwickler verwendet, zum Erstellen einer app mithilfe des Swagger-Clients und mithilfe des Webdiensts für die Interaktion mit der app RESTful-basiert.
 
-```
+```json
 {
   "input_param_defs": [
     {
@@ -278,10 +278,9 @@ Der Befehl für die Beschreibung bietet ausführliche Informationen über die ap
       "type": "int"
     }
   ],
-  `state`: `Ready`,
+  "state": "Ready",
   "version": "v1"
 }
-
 ```
 
 ## <a name="delete-an-app"></a>Löschen einer app

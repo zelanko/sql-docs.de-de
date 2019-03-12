@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82df9a4dc4a7abce935e87e515cf63f71af0e4b7
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: d3f9c16399b47af10a882e61c9f04278479748cb
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256785"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579010"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>Auslassen eines Datenfelds mithilfe einer Formatdatei (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -105,7 +105,7 @@ Vergleichen Sie die vorgenommenen Änderungen:
 
 Die geänderte Formatdatei entspricht nun Folgendem:
 * 4 Datenfelder
-* Das erste Datenfeld in `myTestSkipField.bcp` ist der ersten Spalte zugeordnet, ` myTestSkipField.. PersonID`
+* Das erste Datenfeld in `myTestSkipField.bcp` ist der ersten Spalte zugeordnet, `myTestSkipField.. PersonID`
 * Das zweite Datenfeld in `myTestSkipField.bcp` ist keiner Spalte zugeordnet.
 * Das dritte Datenfeld in `myTestSkipField.bcp` ist der zweiten Spalte zugeordnet, `myTestSkipField.. FirstName`
 * Das vierte Datenfeld in `myTestSkipField.bcp` ist der dritten Spalte zugeordnet, `myTestSkipField.. LastName`

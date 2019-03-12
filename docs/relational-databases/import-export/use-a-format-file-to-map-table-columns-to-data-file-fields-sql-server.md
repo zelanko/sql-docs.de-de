@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df69488ebf433257ba4b1af7c13ec1c299afa831
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 04681d455fe4589135cd0b112c310e2dd0a027b3
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256375"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579100"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Verwenden einer Formatdatei zum Zuordnen von Tabellenspalten zu Datendateifeldern (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -102,10 +102,10 @@ Vergleichen Sie die Änderungen:
 
 ```
 Die geänderte Formatdatei entspricht nun Folgendem:
-* Das erste Datenfeld in `myRemap.bcp` wird der ersten Spalte zugeordnet, ` myRemap.. PersonID`
+* Das erste Datenfeld in `myRemap.bcp` wird der ersten Spalte zugeordnet, `myRemap.. PersonID`
 * Das zweite Datenfeld in `myRemap.bcp` wird der dritten Spalte zugeordnet, `myRemap.. LastName`
 * Das dritte Datenfeld in `myRemap.bcp` wird der zweiten Spalte zugeordnet, `myRemap.. FirstName`
-* Das vierte Datenfeld in `myRemap.bcp` wird der vierten Spalte zugeordnet, ` myRemap.. Gender`
+* Das vierte Datenfeld in `myRemap.bcp` wird der vierten Spalte zugeordnet, `myRemap.. Gender`
 
 ### Erstellen einer XML-Formatdatei <a name="xml_format_file"></a>  
 Ausführliche Informationen finden Sie unter [XML-Formatdateien (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md) .  Im folgenden Befehl wird das [bcp-Hilfsprogramm](../../tools/bcp-utility.md) verwendet, um die XML-Formatdatei `myRemap.xml`zu erstellen, die auf dem Schema von `myRemap`basiert.  Außerdem wird der Qualifizierer `c` verwendet, um Zeichendaten anzugeben, wird `t,` verwendet, um ein Komma als Feldabschlusszeichen anzugeben, und wird `T` verwendet, um eine vertrauenswürdige Verbindung anzugeben, für die integrierte Sicherheit verwendet wird.  Der `x` -Qualifizierer muss verwendet werden, um eine XML-basierte Formatdatei zu generieren.  Geben Sie folgenden Befehl an der Eingabeaufforderung ein:

@@ -21,19 +21,19 @@ ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 02cc6ae014dc52df01e08c13b9610be5ffa50c6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1a252e56d7e625632fdb2d8cb929056daa14815
+ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720318"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736771"
 ---
 # <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Diese Funktion gibt ein **varbinary**-Bitmuster zurück, das die eingefügten oder aktualisierten Spalten der Tabelle oder Ansicht anzeigt. `COLUMNS_UPDATED` wird im Text eines INSERT- oder UPDATE-Triggers von [!INCLUDE[tsql](../../includes/tsql-md.md)] verwendet, um zu testen, ob der Trigger bestimmte Aktionen ausführen soll.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,7 +49,7 @@ COLUMNS_UPDATED ( )
   
 `COLUMNS_UPDATED` gibt mindestens ein Byte in der Reihenfolge von links nach rechts zurück. Das äußere rechte Bit stellt in jedem Byte das niederwertigste Bit dar. Das äußere rechte Bit im Byte ganz links stellt die erste Tabellenspalte in der Tabelle dar. Das nächste Bit links davon stellt die zweite Spalte dar usw. `COLUMNS_UPDATED` gibt mehrere Bytes zurück, falls die Tabelle, für die der Trigger erstellt wird, mehr als acht Spalten enthält, wobei das niederwertigste Byte ganz links steht. `COLUMNS_UPDATED` gibt für alle Spalten in INSERT-Aktionen TRUE zurück, weil in die Spalten entweder explizite oder implizite Werte (NULL) eingefügt wurden.
   
-Verwenden Sie zum Testen, ob in bestimmten Spalten Updates oder Einfügungen vorgenommen wurden, die Syntax mit einem bitweisen Operator und einer ganzzahligen Bitmaske der getesteten Spalten. Die Tabelle **t1** enthält beispielsweise die Spalten **C1**, **C2**, **C3**, **C4**und **C5**. Wenn Sie überprüfen möchten, ob die Spalten **C2**, **C3** und **C4** alle erfolgreich aktualisiert wurden (die Tabelle **t1** weist dabei einen UPDATE-Trigger auf), verwenden Sie die Syntax mit **& 14**. Geben Sie **& 2** ein, um zu testen, ob nur die Spalte **C2** aktualisiert wurde. Tatsächliche Beispiele finden Sie unter [Beispiel A](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/t-sql/functions/columns-updated-transact-sql.md#a-using-columns_updated-to-test-the-first-eight-columns-of-a-table) und [Beispiel B](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/t-sql/functions/columns-updated-transact-sql.md#b-using-columns_updated-to-test-more-than-eight-columns).
+Verwenden Sie zum Testen, ob in bestimmten Spalten Updates oder Einfügungen vorgenommen wurden, die Syntax mit einem bitweisen Operator und einer ganzzahligen Bitmaske der getesteten Spalten. Die Tabelle **t1** enthält beispielsweise die Spalten **C1**, **C2**, **C3**, **C4**und **C5**. Wenn Sie überprüfen möchten, ob die Spalten **C2**, **C3** und **C4** alle erfolgreich aktualisiert wurden (die Tabelle **t1** weist dabei einen UPDATE-Trigger auf), verwenden Sie die Syntax mit **& 14**. Geben Sie **& 2** ein, um zu testen, ob nur die Spalte **C2** aktualisiert wurde. Tatsächliche Beispiele finden Sie unter [Beispiel A](#a-using-columns_updated-to-test-the-first-eight-columns-of-a-table) und [Beispiel B](#b-using-columns_updated-to-test-more-than-eight-columns).
   
 Verwenden Sie `COLUMNS_UPDATED` überall innerhalb eines INSERT- oder UPDATE-Triggers von [!INCLUDE[tsql](../../includes/tsql-md.md)].
   

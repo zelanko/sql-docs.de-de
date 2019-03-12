@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft-Dokumentation
 description: Erstellen von Datenbanksyntax für SQL Server, Azure SQL-Datenbank, Azure SQL Data Warehouse und Analytics Platform System
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 03/08/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3bcbd86b04acf394bc9909369968f552e08a0c22
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 81464ed0bdb3246b805a0c44f17baa9fdeaf59e5
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828220"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683690"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -285,7 +285,7 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden alle Volltex
 
 Wenn Sie einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz eine Datenbank anfügen, die eine FILESTREAM-Option von Verzeichnisnamen enthält, überprüft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ob der Database_Directory-Name eindeutig ist. Ist dies nicht der Fall, schlägt der Anfügevorgang mit folgendem Fehler fehl: "FILESTREAM Database_Directory name \<name> is not unique in this SQL Server instance." (FILESTREAM Database_Directory-Name <name> ist auf dieser SQL Server-Instanz nicht eindeutig.). Um diesen Fehler zu vermeiden, sollte der optionale Parameter *directory_name* in diesem Vorgang übergeben werden.
 
-FOR ATTACH kann nicht in einer Datenbankmomentaufnahme angegeben werden.
+FOR ATTACH kann nicht in einer Datenbank-Momentaufnahme angegeben werden.
 
 FOR ATTACH kann die RESTRICTED_USER-Option angeben. RESTRICTED_USER ermöglicht nur Mitgliedern der festen Datenbankrolle db_owner und der festen Serverrollen dbcreator und sysadmin eine Verbindung mit der Datenbank, begrenzt jedoch nicht deren Anzahl. Versuche von nicht qualifizierten Benutzern werden abgelehnt.
 
@@ -330,7 +330,7 @@ Für FOR ATTACH_REBUILD_LOG ist Folgendes erforderlich:
 
 In der Regel wird FOR ATTACH_REBUILD_LOG verwendet, wenn Sie eine Datenbank mit Lese-/Schreibzugriff mit einem großen Protokoll auf einen anderen Server kopieren, auf dem die Kopie hauptsächlich oder ausschließlich für Lesevorgänge verwendet wird und deshalb weniger Speicherplatz für das Protokoll benötigt wird, als bei der ursprünglichen Datenbank.
 
-FOR ATTACH_REBUILD_LOG kann nicht auf einer Datenbankmomentaufnahme angegeben werden.
+FOR ATTACH_REBUILD_LOG kann nicht auf einer Datenbank-Momentaufnahme angegeben werden.
 
 Weitere Informationen zum Anfügen und Trennen von Datenbanken finden Sie unter [Anfügen und Trennen von Datenbanken](../../relational-databases/databases/database-detach-and-attach-sql-server.md).
 
@@ -453,9 +453,9 @@ Wenn Sie eine Datenbank erstellen, sollten die Datendateien möglichst groß sei
 
 Wir empfehlen, dass Sie ein Storage Area Network (SAN), ein Netzwerk auf iSCSI-Basis oder einen lokal zugeordneten Datenträger für die Speicherung Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankdateien verwenden, da bei dieser Konfiguration die Leistung und Zuverlässigkeit von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] optimiert werden.
 
-## <a name="database-snapshots"></a>Datenbankmomentaufnahmen
+## <a name="database-snapshots"></a>Datenbank-Momentaufnahmen
 
-Sie können die CREATE DATABASE-Anweisung verwenden, um eine schreibgeschützte statische Sicht (eine *Datenbankmomentaufnahme*) der *Quelldatenbank* zu erstellen. Ein Datenbankmomentaufnahme ist im Hinblick auf Transaktionen konsistent mit der Quelldatenbank zu dem Zeitpunkt, an dem die Momentaufnahme erstellt wurde. Für eine Quelldatenbank kann es mehrere Momentaufnahmen geben.
+Sie können die CREATE DATABASE-Anweisung verwenden, um eine schreibgeschützte statische Sicht (eine *Datenbankmomentaufnahme*) der *Quelldatenbank* zu erstellen. Ein Datenbank-Momentaufnahme ist im Hinblick auf Transaktionen konsistent mit der Quelldatenbank zu dem Zeitpunkt, an dem die Momentaufnahme erstellt wurde. Für eine Quelldatenbank kann es mehrere Momentaufnahmen geben.
 
 > [!NOTE]
 > Wenn Sie eine Datenbankmomentaufnahme erstellen, kann die CREATE DATABASE-Anweisung nicht auf Protokolldateien, Offlinedateien, Wiederherstellungsdateien und außer Kraft gesetzte Dateien verweisen.
@@ -843,7 +843,7 @@ GO
 - [sp_changedbowner](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)
 - [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)
 - [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)
-- [Datenbankmomentaufnahmen](../../relational-databases/databases/database-snapshots-sql-server.md)
+- [Datenbank-Momentaufnahmen](../../relational-databases/databases/database-snapshots-sql-server.md)
 - [Verschieben von Datenbankdateien](../../relational-databases/databases/move-database-files.md)
 - [Datenbanken](../../relational-databases/databases/databases.md)
 - [Binary Large Object-Daten – Blob](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)
@@ -1258,7 +1258,7 @@ Für das Erstellen einer Datenbank muss das Konto des Benutzers einem der Folgen
 
 - Dem Prinzipalkonto auf Serverebene
 - Dem Azure AD-Administrator für den lokalen Azure SQL-Server
-- Einem Konto, das Mitglied der `dbmanager`-Datenbankrolle ist
+- Einem Konto, das Mitglied der `dbcreator`-Datenbankrolle ist
 
 ## <a name="examples"></a>Beispiele
 

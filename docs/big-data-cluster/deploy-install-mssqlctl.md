@@ -9,12 +9,12 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c0805eabcdeefc8827a55e2469cb4d77b26347c5
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: a355d8281acf02919f559f8ce9d4f33c923f5168
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227292"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756625"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-2019-big-data-clusters"></a>Installieren Sie Mssqlctl zum Verwalten von SQL Server-2019 big Data-Cluster
 
@@ -36,10 +36,15 @@ In diesem Artikel wird beschrieben, wie zum Installieren der **Mssqlctl** Tool u
 
 1. Wenn Sie alle früheren Versionen von haben **Mssqlctl** installiert, es ist wichtig, deinstallieren Sie **Mssqlctl** vor der Installation der neuesten Version.
 
+   Wenn Sie Unisntalling Mssqlctl sind, CTP-Version entspricht Version 2.2 oder niedriger ausführen:
    ```powershell
    pip3 uninstall mssqlctl
    ```
-
+   
+   Für CTP 2.3 oder höher ausführen:
+   ```powershell
+   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
+   ```
 1. Installieren Sie **Mssqlctl** mit den folgenden Befehl aus:
 
    ```powershell
@@ -66,8 +71,14 @@ Unter Linux müssen Sie Python 3.5 zu installieren und aktualisieren Sie Pip. Da
 
 1. Wenn Sie alle früheren Versionen von haben **Mssqlctl** installiert, es ist wichtig, deinstallieren Sie **Mssqlctl** vor der Installation der neuesten Version.
 
+   Wenn Sie Unisntalling Mssqlctl sind, CTP-Version entspricht Version 2.2 oder niedriger ausführen:
    ```bash
    pip3 uninstall mssqlctl
+   ```
+   
+   Für CTP 2.3 oder höher ausführen:
+   ```bash
+   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
    ```
 
 1. Installieren Sie **Mssqlctl** mit den folgenden Befehl aus:

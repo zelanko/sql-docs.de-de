@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 252e162b78f93b156adcea045bc869e618176331
-ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
+ms.openlocfilehash: 6c41910b17744a0ff0c86e41c321fae67d59d3a1
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305358"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756715"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Ein Unternehmen zu bewerten und Konsolidieren von assessmentberichten mit DMA
 
@@ -103,6 +103,7 @@ Die Parameter der Funktion DmaDataCollector zugeordnet werden in der folgenden T
 |Parameter  |Description |
 |---------|---------|
 |**getServerListFrom** | Ihr Inventar. Mögliche Werte sind **SqlServer** und **CSV**.<br/>Weitere Informationen finden Sie unter [Erstellung eines Inventars aus SQL Server-Instanzen](#create-inventory). |
+|**csvPath** | Der Pfad in Ihrem Inventar CSV-Datei.  Verwendet nur, wenn **GetServerListFrom** nastaven NA hodnotu **CSV**. |
 |**serverName** | Die Namen der SQL Server-Instanz des Bestands Verwendung **SqlServer** in die **GetServerListFrom** Parameter. |
 |**databaseName** | Die Datenbank, die die Bestandstabelle hosten. |
 |**%Assessmentname** | Der Name des der DMA-Bewertung. |

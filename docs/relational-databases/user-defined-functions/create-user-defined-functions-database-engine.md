@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6b2ff8188f2733fd0467ac39266bc9f0510de621
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b8c69ac0361f29c81341831b25e3591716484902
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515481"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579716"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>Erstellen von benutzerdefinierten Funktionen (Datenbank-Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -200,12 +200,12 @@ Ein Verknüpfen mit einer Tabellenwertfunktion mit mehreren Anweisungen in einer
 > [!IMPORTANT]
 > Die festgelegte Kardinalitätsschätzung von Tabellenwertfunktionen mit mehreren Anweisungen beträgt ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] „100“ und in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] „1“.    
 > Ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] kann beim Optimieren eines Ausführungsplans, der Tabellenwertfunktionen mit mehreren Anweisungen verwendet, eine verschachtelte Ausführung genutzt werden, was dazu führt, dass die tatsächliche Kardinalität anstelle der oben genannten Heuristik verwendet wird.     
-> Weitere Informationen finden Sie unter [Verschachtelte Ausführung mit Tabellenwertfunktionen mit mehreren Anweisungen](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
+> Weitere Informationen finden Sie unter [Verschachtelte Ausführung mit Tabellenwertfunktionen mit mehreren Anweisungen](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs).
 
 > [!NOTE]  
 > ANSI_WARNINGS wird bei der Übergabe von Parametern in einer gespeicherten Prozedur oder in einer benutzerdefinierten Funktion oder beim Deklarieren und Festlegen von Variablen in einer Batchanweisung nicht berücksichtigt. Wird beispielsweise eine Variable als **char(3)** definiert und dann auf einen Wert festgelegt, der länger als drei Zeichen ist, werden die Daten auf die definierte Größe abgeschnitten, und die Anweisung `INSERT` oder `UPDATE` wird erfolgreich ausgeführt.
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Benutzerdefinierte Funktionen](../../relational-databases/user-defined-functions/user-defined-functions.md)     
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)    
  [ALTER FUNCTION &#40;Transact-SQL&#41;](../../tools/sql-server-profiler/start-sql-server-profiler.md)    
