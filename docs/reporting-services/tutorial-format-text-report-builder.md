@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: Formatieren von Text (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Tutorial: Formatieren von Text (Berichts-Generator) | Microsoft-Dokumentation'
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ddc7aefa65f87e5647186358e0f7ae0019964ff0
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+ms.openlocfilehash: 42d55cf53d282b2c092769cf4435fd240ba0cbce
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289638"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579340"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Lernprogramm: Formatieren von Text (Berichts-Generator)
 
@@ -67,7 +67,7 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen fü
   
 2.  Vergewissern Sie sich, dass die Datenquelle **TextDataSource**ist.  
   
-3.  Geben Sie im Feld **Name** Folgendes ein: **TextDataset.**  
+3.  Geben Sie im Feld **Name** Folgendes ein: **TextDataset**.  
   
 4.  Überprüfen Sie, ob der Abfragetyp **Text** ausgewählt ist, und klicken Sie anschließend auf **Abfrage-Designer**.  
   
@@ -355,7 +355,7 @@ Der Bericht wird auf dem Berichtsserver gespeichert. Der Name des Berichtsserver
 
 ## <a name="next-steps"></a>Next Steps
 
-Es gibt in Berichts-Generator viele Möglichkeiten, um Text zu formatieren. [Tutorial: Erstellen eines Freiformberichts](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) enthält weitere Beispiele.  
+Es gibt in Berichts-Generator viele Möglichkeiten, um Text zu formatieren. Das [Tutorial: Erstellen eines Freiformberichts](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) enthält weitere Beispiele.  
 
 [Tutorials für den Bericht-Generator](../reporting-services/report-builder-tutorials.md) 
 [Formatieren von Berichtselementen](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

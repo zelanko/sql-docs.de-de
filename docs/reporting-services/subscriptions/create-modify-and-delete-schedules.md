@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 346b348f2df1ccb6cd6373dad130b10c71ea1bcb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 4ecb639dd907367a033ef48e15c86828fc908a6b
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679788"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578140"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   In diesem Hilfethema erhalten Sie Informationen zum Erstellen, Ändern und Löschen von freigegebenen [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Zeitplänen.  Freigegebene Zeitpläne für den einheitlichen Modus werden auf der Seite „Zeitpläne“ im Webportal oder im Ordner „Freigegebene Zeitpläne“ in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]verwaltet. Verwenden Sie für den SharePoint-Modus die Verwaltungsseiten für die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung.  
@@ -136,7 +136,7 @@ Klicken Sie auf **Abbrechen**.
 4.  Wählen Sie den Zeitplan aus, und klicken Sie auf **Löschen**.  
  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Schedules](../../reporting-services/subscriptions/schedules.md)   
  [Anhalten und Fortsetzen von freigegebenen Zeitplänen](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)   
  [Zwischenspeichern eines Berichts &#40;Berichts-Manager&#41;](../../reporting-services/report-server/cache-a-report-report-manager.md)   
