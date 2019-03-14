@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa6df6038d13ffae258a2b71baaaa9b3415ebbc1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 335e923b802e98545ab6cb100d292dfe695202b0
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695808"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572833"
 ---
 # <a name="lead-transact-sql"></a>LEAD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -49,7 +49,7 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
  Die Anzahl der Zeilen nach der aktuellen Zeile, aus der ein Wert abgerufen werden soll. Wenn nichts angegeben ist, wird der Standardwert 1 verwendet. *offset* kann eine Spalte, eine Unterabfrage oder ein anderer Ausdruck sein, der eine positive ganze Zahl ergibt, kann aber auch implizit in einen Wert vom Typ **bigint** konvertiert werden. *offset* darf kein negativer Wert bzw. keine analytische Funktion sein.  
   
  *default*  
- Der zurückzugebende Wert, wenn *scalar_expression* bei *offset* NULL ist. Wenn kein Standardwert angegeben ist, wird NULL zurückgegeben. *default* kann eine Spalte, eine Unterabfrage oder ein anderer Ausdruck sein, jedoch keine analytische Funktion. *default* muss mit *scalar_expression* typkompatibel sein.  
+ Der Wert, der zurückgegeben wird, wenn sich *offset* außerhalb des Partitionsbereichs befindet. Wenn kein Standardwert angegeben ist, wird NULL zurückgegeben. *default* kann eine Spalte, eine Unterabfrage oder ein anderer Ausdruck sein, jedoch keine analytische Funktion. *default* muss mit *scalar_expression* typkompatibel sein.
   
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
  *partition_by_clause* unterteilt das von der FROM-Klausel erzeugte Resultset in Partitionen, auf die die Funktion angewendet wird. Wird dies nicht angegeben, verarbeitet die Funktion alle Zeilen des Abfrageresultsets als einzelne Gruppe. *order_by_clause* bestimmt die Reihenfolge der Daten, bevor die Funktion angewendet wird. Wenn *partition_by_clause* angegeben wird, wird hierdurch die Reihenfolge der Daten in jeder Partition bestimmt. *order_by_clause* ist erforderlich. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
@@ -167,7 +167,7 @@ Year Quarter  SalesQuota  NextQuota  Diff
 2002 4       154000.0000      0.0000  154000.0000
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [LAG &#40;Transact-SQL&#41;](../../t-sql/functions/lag-transact-sql.md)  
   
   

@@ -20,12 +20,12 @@ ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: d99971c4672413a7845c8ec3bdb4d9949a3b978f
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: dcbf57bfed8a22c957487f82f4f4d0b2086cce89
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380831"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579504"
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>Leistungscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "53380831"
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **Optimierung des Abfrageoptimierers**|[ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)<br />[Abfragehinweis „USE HINT“](../../t-sql/queries/hints-transact-sql-query.md#use_hint)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Statistik](../../relational-databases/statistics/statistics.md)**|[Zeitpunkt des Statistikupdates](../statistics/statistics.md)<br />[Statistikaktualisierung](../../relational-databases/statistics/update-statistics.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)**|[Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)<br />[Nativ kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)<br />[Erstellen von und Zugreifen auf Tabellen in TempDB aus nativ kompilierten gespeicherten Prozeduren](../../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md)<br />[Problembehandlung für häufige Leistungsprobleme bei speicheroptimierten Hashindizes](https://msdn.microsoft.com/library/1954a997-7585-4713-81fd-76d429b8d095)<br />[Demo: Leistungsverbesserungen von In-Memory OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)|
-|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[Intelligente Abfrageverarbeitung](../../relational-databases/performance/intelligent-query-processing.md)**|[Adaptive Abfrageverarbeitung](../../relational-databases/performance/adaptive-query-processing.md)|
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[Intelligente Abfrageverarbeitung](../../relational-databases/performance/intelligent-query-processing.md)**|[Intelligente Abfrageverarbeitung](../../relational-databases/performance/intelligent-query-processing.md)|
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Überwachen und Optimieren der Leistung](../../relational-databases/performance/monitor-and-tune-for-performance.md)   

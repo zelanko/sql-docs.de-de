@@ -1,7 +1,7 @@
 ---
 title: DBCC CHECKIDENT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/10/2018
+ms.date: 03/07/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - identity values [SQL Server], reseeding
 - reporting current identity values
 ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: c59313042ca91b1cf192ab140eb372ca7a0cf5c1
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 89545e2bb480dc038219a3724f500c43d4b01319
+ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56800994"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736776"
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -79,7 +79,7 @@ DBCC CHECKIDENT
 |-----------------------------|---------------------------------------------|  
 |DBCC CHECKIDENT ( *table_name*, NORESEED )|Der aktuelle Identitätswert wird nicht zurückgesetzt. DBCC CHECKIDENT gibt den aktuellen Identitätswert und den aktuellen maximalen Wert der Identitätsspalte zurück. Wenn die beiden Werte nicht gleich sind, sollten Sie den Identitätswert zurücksetzen, um mögliche Fehler oder Lücken in der Wertesequenz zu vermeiden.|  
 |DBCC CHECKIDENT ( *table_name* )<br /><br /> oder<br /><br /> DBCC CHECKIDENT ( *table_name*, RESEED )|Wenn der aktuelle Identitätswert für eine Tabelle kleiner ist als der maximale in der Identitätsspalte gespeicherte Identitätswert, wird er auf den maximalen Wert in der Identitätsspalte zurückgesetzt. Weitere Informationen finden Sie im Abschnitt "Ausnahmen" weiter unten.|  
-|DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|Der aktuelle Identitätswert wird auf *new_reseed_value* festgelegt. Wenn seit Erstellen der Tabelle keine Zeilen eingefügt wurden, oder wenn alle Zeilen mittels der Anweisung TRUNCATE TABLE entfernt wurden, wird für die erste Zeile, die nach dem Ausführen von DBCC CHECKIDENT eingefügt wird, *new_reseed_value* als Identität verwendet.<br /><br /> Wenn die Tabelle Zeilen enthält, wird die nächste Zeile mit dem Wert *new_reseed_value* plus dem [aktuellen Inkrement](../../t-sql/functions/ident-incr-transact-sql.md) eingefügt. In Version [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] und früher verwendet die nächste Zeile, die eingefügt wird, die Werte *new_reseed_value* und [current increment](../../t-sql/functions/ident-incr-transact-sql.md).<br /><br /> Bei einer nicht leeren Tabelle kann das Festlegen des Identitätswertes auf eine Zahl, die kleiner ist als der maximale Wert in der Identitätsspalte, zu einer der folgenden Bedingungen führen:<br /><br /> Wenn eine PRIMARY KEY- oder UNIQUE-Einschränkung für die Identitätsspalte vorhanden ist, wird bei späteren Einfügungsvorgängen in die Tabelle die Fehlermeldung 2627 generiert. Dieser Fehler besagt, dass ein Konflikt zwischen dem generierten Identitätswert und den vorhandenen Werten besteht.<br /><br /> Ist keine PRIMARY KEY- oder UNIQUE-Einschränkung vorhanden, führen spätere Einfügungsvorgänge zu doppelten Identitätswerten.|  
+|DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|Der aktuelle Identitätswert wird auf *new_reseed_value* festgelegt. Wenn seit Erstellen der Tabelle keine Zeilen eingefügt worden sind, oder wenn alle Zeilen mittels der Anweisung TRUNCATE TABLE entfernt wurden, wird für die erste Zeile, die nach dem Ausführen von DBCC CHECKIDENT eingefügt wird, *new_reseed_value* als Identität verwendet.<br /><br /> Wenn es in der Tabelle Zeilen gibt, oder wenn alle Zeilen mithilfe der DELETE-Anweisung entfernt wurden, verwendet die Zeile, die als Nächstes eingefügt wird, *new_reseed_value* und den [aktuellen inkrementellen Wert](../../t-sql/functions/ident-incr-transact-sql.md).<br /><br /> Bei einer nicht leeren Tabelle kann das Festlegen des Identitätswertes auf eine Zahl, die kleiner ist als der maximale Wert in der Identitätsspalte, zu einer der folgenden Bedingungen führen:<br /><br /> Wenn eine PRIMARY KEY- oder UNIQUE-Einschränkung für die Identitätsspalte vorhanden ist, wird bei späteren Einfügungsvorgängen in die Tabelle die Fehlermeldung 2627 generiert, da ein Konflikt zwischen dem generierten Identitätswert und den vorhandenen Werten besteht.<br /><br /> Ist keine PRIMARY KEY- oder UNIQUE-Einschränkung vorhanden, führen spätere Einfügungsvorgänge zu doppelten Identitätswerten.|  
   
 ## <a name="exceptions"></a>Ausnahmen  
  In der folgenden Tabelle sind Bedingungen aufgeführt, unter denen DBCC CHECKIDENT den aktuellen Identitätswert nicht automatisch zurücksetzt. Außerdem werden Methoden für das Zurücksetzen des Wertes bereitgestellt.  
@@ -136,8 +136,8 @@ GO
 ```  
   
 ### <a name="c-forcing-the-current-identity-value-to-a-new-value"></a>C. Festlegen des aktuellen Identitätswertes auf einen neuen Wert  
- Im folgenden Beispiel wird der aktuelle Identitätswert in der Spalte `AddressTypeID` in der Tabelle `AddressType` auf den Wert 10 festgelegt. Da die Tabelle vorhandene Zeilen hat, verwendet die nächste eingefügte Zeile 11 als Wert, also den neuen, aktuellen inkrementellen Wert, der für den Spaltenwert plus 1 definiert ist.  
-  
+ Im folgenden Beispiel wird der aktuelle Identitätswert in der Spalte `AddressTypeID` in der Tabelle `AddressType` auf den Wert 10 festgelegt. Da die Tabelle vorhandene Zeilen hat, verwendet die nächste eingefügte Zeile 11 als Wert, das heißt, den neuen aktuellen Identitätswert, der für die Spalte definiert wurde, plus 1, also den Inkrementwert der Spalte.  
+
 ```  
 USE AdventureWorks2012;  
 GO  
@@ -167,4 +167,5 @@ GO
 [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  
 [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)  
 [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)  
+
   

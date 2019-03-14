@@ -22,23 +22,23 @@ helpviewer_keywords:
 - removing buffers
 - DBCC DROPCLEANBUFFERS statement
 ms.assetid: a4121927-f2ce-4926-aa2c-9b1519dac048
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ac58dec08cd70a051062fdd08118d321e87ae2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc5f75e1ee5ed661fc0c5a5558edb265b619bb7c
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722218"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685337"
 ---
 # <a name="dbcc-dropcleanbuffers-transact-sql"></a>DBCC DROPCLEANBUFFERS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
 Entfernt alle leeren Puffer aus dem Pufferpool und alle Columnstore-Objekte aus dem Columnstore-Objektpool.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax
 Syntax für SQL Server: 
@@ -75,15 +75,15 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 ## <a name="permissions"></a>Berechtigungen  
 
-Gilt für: SQL Server, Parallel Data Warehouse 
+Betrifft: SQL Server Parallel Data Warehouse 
 
 - Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
 
-Gilt für: Azure SQL Data Warehouse
+Betrifft: Azure SQL Data Warehouse
 
 - Erfordert die Mitgliedschaft in der festen Serverrolle DB_OWNER.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)  
   

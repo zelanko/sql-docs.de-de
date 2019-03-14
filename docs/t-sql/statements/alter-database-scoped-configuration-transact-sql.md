@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d8d0a557640795462f4da21345f07df9db96be97
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 5ac0dbfdc3a4acd94a7892372ddb336a3bb70642
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421317"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579678"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -223,31 +223,31 @@ DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }
 
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren der verschachtelten Ausführung für Tabellenwertfunktionen mit mehreren Anweisungen im Datenbank- oder Anweisungsbereich. Dabei kann ein Datenbank-Kompatibilitätsgrad von mindestens 140 beibehalten werden. Verschachtelte Funktionen stellen ein Feature der adaptiven Abfrageverarbeitung in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] dar. Weitere Informationen finden Sie unter [Adaptive Abfrageverarbeitung](../../relational-databases/performance/adaptive-query-processing.md).
+Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren der verschachtelten Ausführung für Tabellenwertfunktionen mit mehreren Anweisungen im Datenbank- oder Anweisungsbereich. Dabei kann ein Datenbank-Kompatibilitätsgrad von mindestens 140 beibehalten werden. Verschachtelte Funktionen stellen ein Feature der adaptiven Abfrageverarbeitung in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] dar. Weitere Informationen finden Sie unter [Intelligente Abfrageverarbeitung in SQL-Datenbanken](../../relational-databases/performance/intelligent-query-processing.md).
 
 DISABLE_BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
 
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren von adaptiven Joins im Datenbank- oder Anweisungsbereich. Dabei kann ein Datenbank-Kompatibilitätsgrad von mindestens 140 beibehalten werden. Adaptive Joins sind ein Feature der [adaptiven Abfrageverarbeitung](../../relational-databases/performance/adaptive-query-processing.md), die in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] eingeführt wurde.
+Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren von adaptiven Joins im Datenbank- oder Anweisungsbereich. Dabei kann ein Datenbank-Kompatibilitätsgrad von mindestens 140 beibehalten werden. Adaptive Joins sind ein Feature der [intelligenten Abfrageverarbeitung](../../relational-databases/performance/intelligent-query-processing.md), die in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] eingeführt wurde.
 
 ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 **Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (das Feature befindet sich in der öffentlichen Vorschau)
 
-Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren von Feedback zur Speicherzuweisung im Zeilenmodus im Datenbankbereich. Dabei kann ein Datenbank-Kompatibilitätsgrad von mindestens 150 beibehalten werden. Das Feedback zur Speicherzuweisung im Zeilenmodus stellt einen Bestandteil der [adaptiven Abfrageverarbeitung](../../relational-databases/performance/adaptive-query-processing.md) dar, die in SQL Server 2017 eingeführt wurde (der Zeilenmodus wird in SQL Server 2019 und Azure SQL-Datenbank unterstützt).
+Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren von Feedback zur Speicherzuweisung im Zeilenmodus im Datenbankbereich. Dabei kann ein Datenbank-Kompatibilitätsgrad von mindestens 150 beibehalten werden. Das Feedback zur Speicherzuweisung im Zeilenmodus stellt einen Bestandteil der [intelligenten Abfrageverarbeitung](../../relational-databases/performance/intelligent-query-processing.md) dar, die in SQL Server 2017 eingeführt wurde (der Zeilenmodus wird in SQL Server 2019 und Azure SQL-Datenbank unterstützt).
 
 BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 **Gilt für** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
 
-Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren von Feedback zur Speicherzuweisung im Batchmodus im Datenbankbereich. Dabei kann ein Datenbank-Kompatibilitätsgrad von mindestens 140 beibehalten werden. Das Feedback zur Speicherzuweisung im Batchmodus stellt einen Bestandteil der [adaptiven Abfrageverarbeitung](../../relational-databases/performance/adaptive-query-processing.md) dar, die in SQL Server 2017 eingeführt wurde.
+Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren von Feedback zur Speicherzuweisung im Batchmodus im Datenbankbereich. Dabei kann ein Datenbank-Kompatibilitätsgrad von mindestens 140 beibehalten werden. Das Feedback zur Speicherzuweisung im Batchmodus stellt einen Bestandteil der [intelligenten Abfrageverarbeitung](../../relational-databases/performance/intelligent-query-processing.md) dar, die in SQL Server 2017 eingeführt wurde.
 
 BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF}
 
 **Gilt für** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
 
-Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren von adaptiven Joins im Batchmodus im Datenbankbereich. Dabei kann ein Datenbank-Kompatibilitätsgrad von mindestens 140 beibehalten werden. Adaptive Joins im Batchmodus stellen einen Bestandteil der [adaptiven Abfrageverarbeitung](../../relational-databases/performance/adaptive-query-processing.md) dar, die in SQL Server 2017 eingeführt wurde.
+Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren von adaptiven Joins im Batchmodus im Datenbankbereich. Dabei kann ein Datenbank-Kompatibilitätsgrad von mindestens 140 beibehalten werden. Adaptive Joins im Batchmodus stellen einen Bestandteil der [intelligenten Abfrageverarbeitung](../../relational-databases/performance/intelligent-query-processing.md) dar, die in SQL Server 2017 eingeführt wurde.
 
 BATCH_MODE_ON_ROWSTORE = { ON | OFF}
 

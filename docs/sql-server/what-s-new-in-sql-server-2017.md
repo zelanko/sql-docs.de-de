@@ -11,18 +11,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: cfe10c3f5c3db33a5e9e0e417477cf2e36a2f035
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6a8e2aabc262eae4f25bf1cc5056955b58b874d0
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406447"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579360"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Neues in SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 SQL Server 2017 stellt einen wichtigen Schritt dar, um SQL Server zu einer Plattform zu machen, auf der Sie verschiedene Wahlmöglichkeiten haben: Wählen Sie zwischen verschiedenen Entwicklungssprachen und Datentypen, zwischen lokaler Ausführung oder Ausführung in der Cloud sowie zwischen verschiedenen Betriebssystemen, indem die Leistungsfähigkeit von SQL Server für Linux, Linux-basierte Docker-Container und Windows bereitgestellt wird. Im Folgenden werden die Neuerungen für bestimmte Funktionsbereiche zusammengefasst und Links mit zusätzlichen Details zur Verfügung gestellt. Weitere Informationen zu SQL Server für Linux finden Sie in der Dokumentation zu [SQL Server für Linux](https://docs.microsoft.com/sql/linux/).
 
-[![Download aus dem Evaluierungscenter](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **Probieren Sie es aus:** [Laden Sie die aktuellste Version von SQL Server 2017 herunter: Oktober 2017](https://go.microsoft.com/fwlink/?LinkID=829477).
+[![Download aus dem Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **Jetzt ausprobieren:** [Download von SQL Server 2017 Release – Oktober 2017:](https://go.microsoft.com/fwlink/?LinkID=829477).
 
 > [!NOTE]
 > Zusätzlich zu den nachfolgenden Änderungen werden kumulative Updates in regelmäßigen Abständen nach dem allgemein verfügbaren Release veröffentlicht. Diese kumulativen Updates enthalten viele Verbesserungen und Fehlerbehebungen. Weitere Informationen zu den aktuellen kumulativen Updates finden Sie unter [SQL Server 2017 Cumulative updates (Kumulative Updates für SQL Server 2017)](https://aka.ms/sql2017cu).
@@ -33,7 +33,7 @@ SQL Server-2017 umfasst viele neue Datenbank-Engine-Funktionen, Verbesserungen u
 - **CLR-Assemblys** können jetzt einer Positivliste hinzugefügt werden, als Problemumgehung für die in CTP 2.0 beschriebene Funktion `clr strict security`. [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) und [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) wurden hinzugefügt, um die Positivliste von vertrauenswürdigen Assemblys zu unterstützen (RC1).  
 - **Fortsetzbare Online-Indexneuerstellung** setzt den Vorgang einer Online-Indexneuerstellung dort fort, wo es nach einem Fehler aufgehört hat (z.B. einem Failover in einem Replikat oder nicht genügend Speicherplatz), oder es pausiert und der Vorgang einer Online-Indexneuerstellung wird später fortgeführt. Finden Sie unter [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) und [Richtlinien für Onlineindexvorgänge](../relational-databases/indexes/guidelines-for-online-index-operations.md). (CTP 2.0)
 - Mit der Option **IDENTITY_CACHE** für ALTER DATABASE SCOPED CONFIGURATION können Sie Lücken in den Werten von Identitätsspalten vermeiden, wenn ein Server unerwartet neu startet oder ein Failover zu einem sekundären Server ausführt. Finden Sie unter [ALTER ausgelegte DATENBANKKONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). (CTP 2.0)
-- Eine neue Generation von Verbesserungen bei der Abfrageverarbeitung, durch die Optimierungsstrategien auf die Laufzeitbedingungen Ihrer Anwendungsworkload angewendet werden. In dieser ersten Version der Featurefamilie für die **adaptive Abfrageverarbeitung** gibt es drei neue Verbesserungen: **Adaptive Joins im Batchmodus**, **Feedback zur Speicherzuweisung im Batchmodus** und **überlappende Ausführung** für Tabellenwertfunktionen mit mehreren Anweisungen.  Weitere Informationen finden Sie unter [Adaptive Abfrageverarbeitung in SQL-Datenbanken](../relational-databases/performance/adaptive-query-processing.md).
+- Eine neue Generation von Verbesserungen bei der Abfrageverarbeitung, durch die Optimierungsstrategien auf die Laufzeitbedingungen Ihrer Anwendungsworkload angewendet werden. In dieser ersten Version der Featurefamilie für die **adaptive Abfrageverarbeitung** gibt es drei neue Verbesserungen: **Adaptive Joins im Batchmodus**, **Feedback zur Speicherzuweisung im Batchmodus** und **überlappende Ausführung** für Tabellenwertfunktionen mit mehreren Anweisungen.  Weitere Informationen finden Sie unter [Intelligente Abfrageverarbeitung in SQL-Datenbanken](../relational-databases/performance/intelligent-query-processing.md).
 - Die **Automatische Datenbankoptimierung** bietet einen Einblick in die potentiellen Abfrageleistungsprobleme, empfiehlt Lösungen und kann identifizierte Probleme automatisch beheben. Weitere Informationen finden Sie unter [Automatische Optimierung](../relational-databases/automatic-tuning/automatic-tuning.md). (CTP 2.0)
 - Neue **Graph-Datenbankfunktionen** für das Modellieren von m:n-Beziehungen beinhalten die Syntax [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) zum Erstellen von Knoten und Edge-Tabellen und das Schlüsselwort [MATCH](../t-sql/queries/match-sql-graph.md) für Abfragen. Weitere Informationen finden Sie unter [Graph Processing with SQL Server 2017 (Graph-Verarbeitung mit SQL Server-2017)](../relational-databases/graphs/sql-graph-overview.md). (CTP 2.0)
 - Eine Option sp_configure mit dem Namen `clr strict security` ist standardmäßig aktiviert, um die Sicherheit der CLR-Assemblys zu verbessern. Weitere Informationen finden Sie unter [CLR strict security (strikte Sicherheit der CLR)](../database-engine/configure-windows/clr-strict-security.md). (CTP 2.0)

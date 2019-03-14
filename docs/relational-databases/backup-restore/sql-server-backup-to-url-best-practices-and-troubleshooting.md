@@ -11,12 +11,12 @@ ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d2d0f3ffdb4c8c026ce12f2f347cbeae0548ede7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 12716c1250d60cd59b9b8786c8f88dae7982473a
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672779"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578520"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server-URL-Sicherung – bewährte Methoden und Problembehandlung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "51672779"
   
 -   [SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [Lernprogramm: SQL Server-Sicherung und -Wiederherstellung im Windows Azure-BLOB-Speicherdienst](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service (Lernprogramm: SQL Server-Sicherung und-Wiederherstellung im Microsoft Azure-BLOB-Speicherdienst)](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="managing-backups"></a>Verwalten von Sicherungen  
  Die folgende Liste enthält allgemeine Empfehlungen zur Verwaltung von Sicherungen:  
@@ -115,7 +115,7 @@ ms.locfileid: "51672779"
   
         Führen Sie die **RESTORE**-Anweisung erneut aus, und geben Sie dabei **BLOCKSIZE = 65536** an, um diesen Fehler zu beheben.  
   
--   Sicherungsfehler aufgrund von BLOBs, die über eine aktive Leasedauer verfügen: Fehlerhafte Sicherungsaktivitäten können dazu führen, dass BLOBs eine aktive Leasedauer aufweisen.  
+-   Fehler während der Sicherung aufgrund von Blobs mit aktiver Lease: Eine fehlerhafte Sicherungsaktivität kann zu Blobs mit aktiven Leases führen.  
   
      Wenn die BACKUP-Anweisung erneut ausgeführt wird, kann ein Sicherungsvorgang einen Fehler mit etwa folgendem Wortlaut verursachen:  
   
@@ -152,7 +152,7 @@ BackupIoRequest::ReportIoError: write failure on backup device https://storageac
   
 Wenn Sie die ausführliche Protokollierung mit Ablaufverfolgungsflag 3051 aktivieren, können auch folgende Meldungen in den Protokollen angezeigt werden:  
   
-`HTTP status code 502, HTTP Status Message Proxy Error (The number of HTTP requests per minute exceeded the configured limit. Contact your ISA Server administrator.) ` 
+`HTTP status code 502, HTTP Status Message Proxy Error (The number of HTTP requests per minute exceeded the configured limit. Contact your ISA Server administrator.)` 
   
  **Standardproxyeinstellungen wurden nicht abgerufen:**  
   
@@ -177,7 +177,7 @@ Um dieses Problem zu beheben, erstellen Sie mithilfe folgender Schritte eine Kon
   
 2.  Speichern Sie die Konfigurationsdatei im Ordner „Binn“ der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz. Beispiel: Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem Computer auf Laufwerk C installiert ist, legen Sie die Konfigurationsdatei im Ordner `C:\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\Binn` ab.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Wiederherstellen von in Microsoft Azure gespeicherten Sicherungen](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)

@@ -16,12 +16,12 @@ ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8c1be5887e4d3b6ff4af02e12e8af26a456987e2
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c6d416be5087d9aa9c55f069940aecee568442f8
+ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125425"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57527123"
 ---
 # <a name="enable-or-disable-always-on-availability-group-feature"></a>Aktivieren oder Deaktivieren des Features für Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -128,9 +128,9 @@ ms.locfileid: "54125425"
 -   [PowerShell](#PScmd2Procedure)  
   
 ###  <a name="SQLCM2Procedure"></a> Verwenden des SQL Server-Konfigurations-Managers  
- **So aktivieren Sie AlwaysOn-Verfügbarkeitsgruppen**  
+ **So aktivieren Sie Always On-Verfügbarkeitsgruppen**  
   
-1.  Stellen Sie eine Verbindung mit dem Windows Server Failover Clustering (WSFC)-Knoten her, auf dem die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz gehostet wird, auf der Sie AlwaysOn-Verfügbarkeitsgruppen aktivieren möchten.  
+1.  Stellen Sie eine Verbindung mit dem WSFC-Knoten (Windows Server Failover Cluster) her, auf dem die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz gehostet wird, auf der Sie Always On-Verfügbarkeitsgruppen aktivieren möchten.  
   
 2.  Zeigen Sie im Menü **Start** auf **Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], zeigen Sie auf **Konfigurationstools**, und klicken Sie dann auf **SQL Server Konfigurations-Manager**.  
   
@@ -194,7 +194,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
 ###  <a name="SQLCM3Procedure"></a> Verwenden des SQL Server-Konfigurations-Managers  
  **So deaktivieren Sie AlwaysOn**  
   
-1.  Stellen Sie eine Verbindung mit dem Windows Server Failover Clustering (WSFC)-Knoten her, auf dem die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz gehostet wird, auf der Sie AlwaysOn-Verfügbarkeitsgruppen deaktivieren möchten.  
+1.  Stellen Sie eine Verbindung mit dem WSFC-Knoten (Windows Server Failover Cluster)her, auf dem die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz gehostet wird, auf der Sie Always On-Verfügbarkeitsgruppen deaktivieren möchten.  
   
 2.  Zeigen Sie im Menü **Start** auf **Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], zeigen Sie auf **Konfigurationstools**, und klicken Sie dann auf **SQL Server-Konfigurations-Manager**.  
   
@@ -243,7 +243,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 1.  Wenn Sie die lokalen Verfügbarkeitsreplikate nicht vor dem Deaktivieren von AlwaysOn entfernt haben, löschen Sie jede Verfügbarkeitsgruppe, für die die Serverinstanz ein Verfügbarkeitsreplikat hostet. Informationen zum Löschen einer Verfügbarkeitsgruppe finden Sie unter [Entfernen einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md).  
   
-2.  Um die zurückgelassenen Metadaten zu entfernen, löschen Sie jede betroffene Verfügbarkeitsgruppe auf einer Serverinstanz, die Teil des ursprünglichen WSFC-Clusters ist.  
+2.  Um die zurückgelassenen Metadaten zu entfernen, löschen Sie jede betroffene Verfügbarkeitsgruppe auf einer Serverinstanz, die Teil des ursprünglichen WSFC ist.  
   
 3.  Auf die primären Datenbanken kann weiterhin anhand aller Verbindungen außer der Datensynchronisierung zwischen der primären und der sekundären Datenbank zugegriffen werden.  
   

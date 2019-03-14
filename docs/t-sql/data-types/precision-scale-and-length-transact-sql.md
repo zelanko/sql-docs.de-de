@@ -22,12 +22,12 @@ ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4a5023afdfe6b1ebe4267c0bff9741f6651e4bde
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a27c434bb10b863459b138f98b9974b4d25794c3
+ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020421"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57401792"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>Genauigkeit, Dezimalstellen und Länge (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ Die folgende Tabelle definiert, wie Genauigkeit und Dezimalstellen des Ergebniss
 -   Beide Ausdrücke sind vom Datentyp **decimal**.  
 -   Ein Ausdruck ist vom Datentyp **decimal**, und der andere Ausdruck ist von einem Datentyp mit einer niedrigeren Rangfolge als **decimal**.  
   
-Die Operandenausdrücke werden als Ausdruck e1 mit der Genauigkeit p1 und der Dezimalstellenanzahl s1 und Ausdruck e2 mit der Genauigkeit p2 und der Dezimalstellenanzahl s2 bezeichnet. Die Genauigkeit und Dezimalstellenanzahl für einen Ausdruck, der nicht vom Datentyp **decimal** ist, entspricht der für den Datentyp des Ausdrucks definierten Genauigkeit und Dezimalstellenanzahl.
+Die Operandenausdrücke werden als Ausdruck e1 mit der Genauigkeit p1 und der Dezimalstellenanzahl s1 und Ausdruck e2 mit der Genauigkeit p2 und der Dezimalstellenanzahl s2 bezeichnet. Die Genauigkeit und Dezimalstellenanzahl für einen Ausdruck, der nicht vom Datentyp **decimal** ist, entspricht der für den Datentyp des Ausdrucks definierten Genauigkeit und Dezimalstellenanzahl. Die Funktion max(a,b) bedeutet Folgendes: Verwende den größeren Wert von „a“ oder „b“. Entsprechend bedeutet die Funktion min(a,b): Verwende den kleineren Wert von „a“ oder „b“.
   
 |Vorgang|Genauigkeit des Ergebnisses|Dezimalstellen des Ergebnisses *|  
 |---|---|---|

@@ -11,19 +11,19 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: d9e89edc1deb8e16dc69c58a7f959db74c1e6024
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1d74f0569e2add7d9c8b72a86871540bef146f5e
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017061"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579640"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Anmerkungen zu dieser Version von SQL Server 2012 Service Pack
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 Dieses Thema enthält die aggregierten Versionsanmerkungen zu den vier Service Packs für SQL Server 2012. Jedes Service Pack baut auf den vorherigen Service Packs auf.
 
 Die Service Packs sind ausschließlich online und nicht auf dem Installationsmedium verfügbar, Sie können sie wie folgt herunterladen:
-- [SQL Server 2012 SP4 ](https://go.microsoft.com/fwlink/?linkid=846937)
+- [SQL Server 2012 SP4](https://go.microsoft.com/fwlink/?linkid=846937)
 - [SQL Server 2012 SP3](https://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information)
 - [SQL Server 2012 SP2](https://support.microsoft.com/KB/2958429)
 - [SQL Server 2012 SP1](https://go.microsoft.com/fwlink/p/?LinkID=268158)

@@ -11,14 +11,14 @@ ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 678f9da12655cc733dcdf95aca5f61e5aa1cd45e
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: 88f5919c1bd36b912c2205da2032413ec39150f1
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158622"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579529"
 ---
-# <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Lektion 1: Erstellen und Anwenden einer Richtlinie 'Standardmäßig aus'
+# <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Lektion 1: Erstellen und Anwenden der Richtlinie „Standardmäßig deaktiviert“
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Mit richtlinienbasierten Verwaltungsrichtlinien können Sie ein oder mehrere Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ein oder mehrere Instanzobjekte, Serverinstanzen, ein oder mehrere Datenbanken oder ein oder mehrere Datenbankobjekte verwalten. Als Datenbankadministrator möchten Sie sicherstellen, dass auf bestimmten Servern keine Datenbank-E-Mail aktiviert ist. In dieser Lektion erstellen Sie eine Bedingung und eine Richtlinie, durch die diese Serveroption festgelegt wird. Sie testen den Server, um zu sehen, ob er die Richtlinie einhält. Anschließend verwenden Sie die Richtlinie, um den Server neu zu konfigurieren, sodass der Server die Richtlinie einhält.  
 
@@ -79,7 +79,7 @@ Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio u
   
 6.  Im Bereich **Zieldetails** werden weitere Informationen in der Spalte **Meldung** angezeigt, wenn ein Fehler auftritt. Klicken Sie in der Spalte **Meldung** auf **Anzeigen** , um einen Bericht anzuzeigen, der die Überprüfungsergebnisse für jede überprüfte Facet-Eigenschaft enthält. 
 
-    ![Anzeigen der Ergebnisse einer Richtlinienauswertung ](Media/lesson-1-create-and-apply-an-off-by-default-policy/view-results-of-policy-evaluation.png)
+    ![Anzeigen der Ergebnisse einer Richtlinienauswertung](Media/lesson-1-create-and-apply-an-off-by-default-policy/view-results-of-policy-evaluation.png)
   
 7.  Die Richtlinienbeschreibung wird unten auf der Seite angezeigt, und im Abschnitt **Zusätzliche Hilfe** wird der Link angezeigt, den Sie für die Richtlinie konfiguriert haben. Klicken Sie auf den Meldungslink, um die Webseite zu öffnen, die Sie beim Erstellen der Richtlinie angegeben haben.   
 

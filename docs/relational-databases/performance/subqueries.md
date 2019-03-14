@@ -17,12 +17,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2ac6f2a1692d72eecbcd97dbc3536dcebd6f2ec
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c9c0d51046b7ac30cbf1f2a608c51c34974b75d9
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356026"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579390"
 ---
 # <a name="subqueries-sql-server"></a>Unterabfragen (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -490,7 +490,7 @@ GO
 Diese Anweisung kann nicht in einen Join konvertiert werden. Der analoge Ungleichjoin hat eine andere Bedeutung: Er sucht die Namen von Produkten, die sich in einer Unterkategorie befinden und bei denen es sich nicht um fertige Fahrräder handelt.      
 
 ### <a name="upsert"></a> Unterabfragen in den Anweisungen UPDATE, DELETE und INSERT
-Unterabfragen können in den Anweisungen `UPDATE`, `DELETE`, `INSERT` und `SELECT ` der Datenbearbeitungssprache (DML, Data Manipulation Language) geschachtelt werden.    
+Unterabfragen können in den Anweisungen `UPDATE`, `DELETE`, `INSERT` und `SELECT` der Datenbearbeitungssprache (Data Manipulation Language, DML) geschachtelt werden.    
 
 Das folgende Beispiel verdoppelt den Wert in der *ListPrice*-Spalte der *Production.Product*-Tabelle. Die Unterabfrage in der `WHERE`-Klausel verweist auf die *Purchasing.ProductVendor*-Tabelle, um die in der *Product*-Tabelle aktualisierten Zeilen auf die zu beschränken, die von *BusinessEntity* 1540 angegeben wurden.
 

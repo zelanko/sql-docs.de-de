@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d953127249bb6f82626dfff647b15dc40aba859
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 048e3b88ff45147e30121c3b754527b71d30ea7b
+ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334837"
+ms.locfileid: "57401932"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio – Änderungsprotokoll (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -115,7 +115,7 @@ Sind die Bezeichnungen *Preview 5*, *Preview 6* oder *Preview 7* nicht vorhanden
   - Geringere Downloadgröße
     - Die aktuelle Größe des Pakets ist um mehr als die Hälfte kleiner als SSMS 17.x (ca. 400 MB). Die Größe wird noch etwas zunehmen, sobald die IS-Komponenten (Integration Services) wieder SSMS hinzugefügt werden, das Paket wird insgesamt jedoch kleiner sein als bisher.
   - SSMS basiert auf der neuen Visual Studio 2017 Shell (Isoliert).
-    - Dies ist eine moderne Shell (eingeführt in Version 15.6.4 von Visual Studio 2107). Mit der neuen Shell werden alle Programmkorrekturen für die Barrierefreiheit bereitgestellt, die sowohl in SSMS als auch in Visual Studio eingeführt wurden.
+    - Dies ist eine moderne Shell (eingeführt in Version 15.6.4 von Visual Studio 2017). Mit der neuen Shell werden alle Programmkorrekturen für die Barrierefreiheit bereitgestellt, die sowohl in SSMS als auch in Visual Studio eingeführt wurden.
   - Verbesserungen für die Barrierefreiheit in SSMS
     - Es wurde sehr viel Arbeit in die Problembehebung für Barrierefreiheit in allen Tools (SSMS, DTA und Profiler) gesteckt.
   - SSMS kann in einem benutzerdefinierten Ordner installiert werden.

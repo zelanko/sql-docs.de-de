@@ -11,12 +11,12 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7e213eb323de92abf048bdd94e8e2463f42f5cb3
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: cf64e248d8fb9cb727114521cac9b6444fc1f710
+ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591424"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57401882"
 ---
 # <a name="dtexec-utility"></a>dtexec (Hilfsprogramm)
   Das Befehlszeilen-Hilfsprogramm **dtexec** dient zum Konfigurieren und Ausführen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen. Das Hilfsprogramm **dtexec** ermöglicht den Zugriff auf alle Features zur Paketkonfiguration und -ausführung, z.B. Parameter, Verbindungen, Eigenschaften, Variablen und Statusanzeigen. Das Hilfsprogramm **dtexec** ermöglicht das Laden von Paketen aus diesen Quellen: dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server, einer ISPAC-Projektdatei, einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank, dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher und dem Dateisystem.  
@@ -38,6 +38,8 @@ ms.locfileid: "53591424"
 -   [Syntaxregeln](#syntaxRules)  
   
 -   [Aufrufen von dtexec mit xp_cmdshell](#cmdshell)  
+
+-   [Verwenden von dtexec von Bash](#bash)
   
 -   [Syntax](#syntax)  
   
@@ -139,7 +141,15 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
 ```  
   
 > **WICHTIG!** In [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist die Option **xp_cmdshell** für neue Installationen standardmäßig deaktiviert. Die Option kann durch Ausführen der gespeicherten Systemprozedur **sp_configure** aktiviert werden. Weitere Informationen finden Sie unter [xp_cmdshell (Serverkonfigurationsoption)](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
-  
+
+##  <a name="bash"></a> Verwenden von dtexec von Bash
+
+Die **Bash**-Shell ist eine beliebte Shell für Linux. Sie kann aber auch unter Windows verwendet werden. Sie können dtexec über die Bash-Eingabeaufforderung ausführen. Beachten Sie, dass ein Semikolon (`;`) in Bash ein Befehlstrennzeichenoperator ist. Dies ist besonders dann von Bedeutung, wenn mithilfe der Optionen `/Conn[ection]`, `/Par[arameter]` oder `/Set`Werte an das Paket übergeben werden, da diese das Semikolon verwenden, um den Namen und den Wert des bereitgestellten Elements zu trennen. Im folgenden Beispiel sehen Sie, wie Sie das Semikolon und andere Elemente bei der Verwendung von Bash und bei der Übergabe von Werten an ein Paket entsprechend vermeiden:
+
+```bash
+dtexec /F MyPackage.dtsx /CONN "MyConnection"\;"\"MyConnectionString\""
+```
+
 ##  <a name="syntax"></a> Syntax  
   
 ```  
@@ -176,7 +186,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Cons[oleLog]** [[*displayoptions*];[*list_options*;*src_name_or_guid*]...]: (Optional). Zeigt während der Paketausführung bestimmte Protokolleinträge an der Konsole an. Wenn die Option nicht angegeben wird, werden keine Protokolleinträge an der Konsole angezeigt. Wenn die Option ohne Parameter zur Begrenzung der Anzeige angegeben wird, werden alle Protokolleinträge angezeigt. Wenn Sie die an der Konsole angezeigten Einträge begrenzen möchten, können Sie die anzuzeigenden Spalten mithilfe des *Anzeigeoptionen* -Parameters angeben und die Protokolleintragstypen mithilfe des *Listenoptionen* -Parameters begrenzen.  
   
-    > **HINWEIS:**  Beim Ausführen eines Pakets auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Server mithilfe des **/ISSERVER[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Parameters ist die Konsolenausgabe begrenzt, und die meisten der **/Cons[oleLog]**-Optionen sind nicht anwendbar. Alle Ausführungsprotokolle können in den verwandten Sichten vom Server oder über Standardberichte in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angezeigt werden. Weitere Informationen zu den Berichten finden Sie unter [Berichte für den Integration Services-Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).  
+    > **HINWEIS:**  Beim Ausführen eines Pakets auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Server mithilfe des **/ISSERVER**-Parameters ist die Konsolenausgabe begrenzt, und die meisten der **/Cons[oleLog]**-Optionen sind nicht anwendbar. Alle Ausführungsprotokolle können in den verwandten Sichten vom Server oder über Standardberichte in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angezeigt werden. Weitere Informationen zu den Berichten finden Sie unter [Berichte für den Integration Services-Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).  
   
      Die *Anzeigeoptionen* -Werte lauten wie folgt:  
   
@@ -449,7 +459,7 @@ dtexec /option [value] [/option [value]]...
   
     > **WICHTIG!** Wenn Sie die Überprüfung der Signatur des Pakets konfiguriert haben, prüft [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] lediglich, ob die digitale Signatur vorhanden und gültig ist und ob die Quelle vertrauenswürdig ist. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] überprüft nicht, ob Änderungen am Paket vorgenommen wurden.  
   
-    > **HINWEIS:** Der optionale Registrierungswert **BlockedSignatureStates** kann eine Einstellung angeben, die restriktiver ist als die Option für die digitale Signatur, die in ** oder in der **dtexec**-Befehlszeile festgelegt wurde. In dieser Situation überschreibt die restriktivere Registrierungseinstellung die andere Einstellung.  
+    > **HINWEIS:** Der optionale Registrierungswert **BlockedSignatureStates** kann eine Einstellung angeben, die restriktiver ist als die Option für die digitale Signatur, die in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] oder in der **dtexec**-Befehlszeile festgelegt wurde. In dieser Situation überschreibt die restriktivere Registrierungseinstellung die andere Einstellung.  
   
 -   **/VerifyV[ersionID]** _versionID_: (Optional). Überprüft die Versions-GUID eines auszuführenden Pakets; diese wird mit dem Wert verglichen, der während der Paketüberprüfungsphase im *Versions-ID* -Argument angegeben wurde.  
   

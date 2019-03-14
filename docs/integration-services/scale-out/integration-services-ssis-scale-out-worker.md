@@ -11,19 +11,19 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 1612e35dc2b586825d47979b6baa1a002b0d9895
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: b9a699ba1764af5728f7731626dc94400dc4d246
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419815"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578810"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Worker für horizontales Hochskalieren von Integration Services (SSIS)
 
 Der Scale Out-Worker führt den Scale Out-Workerdienst aus, um Ausführungsaufgaben aus dem Scale Out-Master zu entfernen. Daraufhin führt der Worker die Pakete lokal mit `ISServerExec.exe` aus.
 
 ## <a name="configure-the-scale-out-worker-service"></a>Konfigurieren des Scale Out-Workerdiensts
-Sie können den Scale Out-Workerdienst mithilfe der ` \<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`-Datei konfigurieren. Der Dienst muss nach dem Aktualisieren der Konfigurationsdatei neu gestartet werden.
+Sie können den Scale Out-Workerdienst mithilfe der `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`-Datei konfigurieren. Der Dienst muss nach dem Aktualisieren der Konfigurationsdatei neu gestartet werden.
 
 |Konfiguration  |und Beschreibung  |Standardwert|
 |---------|---------|---------|
@@ -36,16 +36,16 @@ Sie können den Scale Out-Workerdienst mithilfe der ` \<drive\>:\Program Files\M
 |StoreName|Der Name des Speichers, in dem sich das Workerzertifikat befindet|My|
 |AgentHeartbeatInterval|Das Zeitintervall für den Takt für Worker für horizontales Hochskalieren|00:01:00|
 |TaskHeartbeatInterval|Das Zeitintervall für den Status des Berichtstasks für Worker für horizontales Hochskalieren|00:00:10|
-|HeartbeatErrorTollerance|Nach diesem Zeitraum ab dem letzten erfolgreichen Tasktakt wird der Task beendet, wenn eine Fehlerantwort des Takts empfangen wird.|00:10:00|
+|HeartbeatErrorTolerance|Nach diesem Zeitraum ab dem letzten erfolgreichen Tasktakt wird der Task beendet, wenn eine Fehlerantwort des Takts empfangen wird.|00:10:00|
 |TaskRequestMaxCPU|Die Obergrenze bezüglich CPU für Worker für horizontales Hochskalieren, um Tasks anzufordern.|70.0|
 |TaskRequestMinMemory|Die Mindestmenge von Arbeitsspeicher in MB für Worker für horizontales Hochskalieren, um Tasks anzufordern.|100.0|
 |MaxTaskCount|Die maximale Anzahl von Tasks, die der Worker für horizontales Hochskalieren aufnehmen kann|10|
-|LeaseInternval|Das Leaseintervall einer Taskaufbewahrung durch den Worker für horizontales Hochskalieren|00:01:00|
+|LeaseInterval|Das Leaseintervall einer Taskaufbewahrung durch den Worker für horizontales Hochskalieren|00:01:00|
 |TasksRootFolder|Der Ordner für die Taskprotokolle. Wenn der Wert leer ist, wird der Ordnerpfad `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Tasks` verwendet. [Konto] ist das Konto, unter dem der Dienst für Worker für horizontales Hochskalieren ausgeführt wird. Standardmäßig ist dies das Konto SSISScaleOutWorker140.|Empty|
 |TaskLogLevel|Die Taskprotokollebene für den Worker für horizontales Hochskalieren. (Ausführlich 0x01, Informationen 0x02, Warnung 0x04, Fehler 0x08, Status 0x10, schwerwiegender Fehler 0x20, Überwachung 0x40)|126 (Informationen, Warnung, Fehler, Status, schwerwiegender Fehler, Überwachung)|
 |TaskLogSegment|Die Zeitspanne einer Taskprotokolldatei|00:00:00|
 |TaskLogEnabled|Gibt an, ob das Taskprotokoll aktiviert ist.|true|
-|ExecutionLogCacheFolder|Der Ordner, in dem das Paketausführungsprotokoll zwischengespeichert wird. Wenn der Wert leer ist, wird der Ordnerpfad ` \<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Agent\ELogCache` verwendet. [Konto] ist das Konto, unter dem der Dienst für Worker für horizontales Hochskalieren ausgeführt wird. Standardmäßig ist dies das Konto SSISScaleOutWorker140.|Empty|
+|ExecutionLogCacheFolder|Der Ordner, in dem das Paketausführungsprotokoll zwischengespeichert wird. Wenn der Wert leer ist, wird der Ordnerpfad `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Agent\ELogCache` verwendet. [Konto] ist das Konto, unter dem der Dienst für Worker für horizontales Hochskalieren ausgeführt wird. Standardmäßig ist dies das Konto SSISScaleOutWorker140.|Empty|
 |ExecutionLogMaxBufferLogCount|Die maximale Anzahl von Ausführungsprotokollen, die in einem Ausführungsprotokollpuffer im Arbeitsspeicher zwischengespeichert werden|10000|
 |ExecutionLogMaxInMemoryBufferCount|Die maximale Anzahl von Ausführungsprotokollpuffern im Arbeitsspeicher für Ausführungsprotokolle|10|
 |ExecutionLogRetryCount|Die Anzahl von Wiederholungsversuchen, wenn bei der Ausführungsprotokollierung ein Fehler auftritt|3|

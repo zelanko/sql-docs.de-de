@@ -1,7 +1,7 @@
 ---
 title: Name der Windows-Sortierung (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 03/06/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b871541215597d82d1ccda81cebe1b9cbe3a433
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 49f84b9e41116dd235f219a0487b48770ef4f81f
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56827990"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572843"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Name der Windows-Sortierung (Transact-SQL)
 
@@ -42,7 +42,7 @@ Gibt den Namen der Windows-Sortierung in der COLLATE-Klausel in [!INCLUDE[ssNoVe
 CollationDesignator_<ComparisonStyle>
 
 <ComparisonStyle> :: =
-{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ]
+{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ]
 }
 | { _BIN | _BIN2 }
 ```
@@ -51,41 +51,53 @@ CollationDesignator_<ComparisonStyle>
 
 *CollationDesignator* Gibt die grundlegenden für die Windows-Sortierung verwendeten Sortierungsregeln an. Zu den grundlegenden Sortierungsregeln zählen:
 
-- Die Sortierregeln, die angewendet werden, wenn Wörterbuchsortierung angegeben wird. Sortierregeln basieren auf Alphabet oder Sprache.
-- Die Codepage, die zum Speichern von Nichtunicode-Zeichendaten verwendet wird.
+- Die Sortier- und Vergleichsregeln, die angewendet werden, wenn Wörterbuchsortierung angegeben wird. Sortierregeln basieren auf Alphabet oder Sprache.
+- Die Codepage, die verwendet wird, um **varchar**-Daten zu speichern.
 
 Im Folgenden finden Sie einige Beispiele:
 
-- Latin1_General oder French: Beide verwenden Codepage 1252.
+- Latin1\_General oder French: Beide verwenden Codepage 1252.
 - Turkish: verwendet die Codepage 1254.
 
-*CaseSensitivity*
+*CaseSensitivity*  
 **CI** gibt keine Unterscheidung nach Groß-/Kleinschreibung an. Bei **CS** erfolgt eine Unterscheidung.
 
-*AccentSensitivity*
+*AccentSensitivity*  
 **AI** gibt keine Unterscheidung nach Akzent an. Bei **AS** erfolgt eine Unterscheidung.
 
-*KanatypeSensitive*
+*KanatypeSensitive*  
 **Omitted** gibt keine Unterscheidung nach Kanatyp an. Bei **KS** erfolgt eine Unterscheidung.
 
-*WidthSensitivity*
+*WidthSensitivity*  
 **Omitted** gibt keine Unterscheidung nach Breite an. Bei **WS** erfolgt eine Unterscheidung.
 
-**BIN** Gibt die zu verwendende abwärtskompatible binäre Sortierreihenfolge an.
+*VariationSelectorSensitivity*  
+**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
-**BIN2** Gibt die binäre Sortierreihenfolge an, die die Semantik für den Codepunktvergleich verwendet.
+**Bei Auslassung** wird keine Unterscheidung nach Variantenselektor angegeben. Bei **VSS** erfolgt eine Unterscheidung.
+
+**BIN**  
+Gibt die zu verwendende abwärtskompatible binäre Sortierreihenfolge an.
+
+**BIN2**  
+Gibt die binäre Sortierreihenfolge an, die die Semantik für den Codepunktvergleich verwendet.
 
 ## <a name="remarks"></a>Remarks
 
- Je nach Version der Sortierungen sind einige Codepunkte möglicherweise nicht definiert. Vergleichen Sie beispielsweise:
+Je nach Sortierungsversion sind für manche Codeelemente möglicherweise keine Gewichtungen und/oder Großschreibung/Kleinschreibung-Mappings angegeben. Vergleichen Sie z.B. die Ausgabe der `LOWER`-Funktion bei gleichem Zeichen, aber unterschiedlichen Versionen derselben Sortierung:
 
 ```sql
-SELECT LOWER(nchar(504) COLLATE Latin1_General_CI_AS);
-SELECT LOWER (nchar(504) COLLATE Latin1_General_100_CI_AS);
-GO
+SELECT NCHAR(504) COLLATE Latin1_General_CI_AS AS [Uppercase],
+       NCHAR(505) COLLATE Latin1_General_CI_AS AS [Lowercase];
+-- Ǹ    ǹ
+
+
+SELECT LOWER(NCHAR(504) COLLATE Latin1_General_CI_AS) AS [Version80Collation],
+       LOWER(NCHAR(504) COLLATE Latin1_General_100_CI_AS) AS [Version100Collation];
+-- Ǹ    ǹ
 ```
 
-Die erste Zeile gibt einen Großbuchstaben zurück, wenn die Sortierung Latin1_General_CI_AS lautet, da dieser Codepunkt in dieser Sortierung nicht definiert ist.
+Für die erste Anweisung werden in der älteren Sortierung sowohl die groß- als auch die kleingeschriebene Form des Zeichens angezeigt (die Sortierung hat keinen Einfluss auf die Verfügbarkeit von Zeichen, wenn mit Unicode-Daten gearbeitet wird). Für die zweite Anweisung wird jedoch ein großgeschriebenes Zeichen ausgegeben, wenn die Sortierung auf Latin1\_General\_CI\_AS festgelegt wurde, da in dieser Sortierung kein kleingeschriebenes Mapping für dieses Codeelement angegeben wurde.
 
 Bei der Arbeit mit bestimmten Sprachen kann es entscheidend sein, die älteren Sortierungen zu vermeiden. Das gilt beispielsweise für Telegu.
 
@@ -95,24 +107,24 @@ In einigen Fällen können Windows-Sortierungen und [!INCLUDE[ssNoVersion](../..
 
 Im Folgenden finden Sie einige Beispiele für Namen der Windows-Sortierung:
 
-- **Latin1_General_100_**
+- **Latin1\_General\_100\_CI\_AS**
 
-  Die Sortierung verwendet die Latin1 General-Wörterbuch-Sortierungsregeln, Codepage 1252. Es erfolgt keine Unterscheidung nach Groß-/Kleinschreibung, aber eine Unterscheidung nach Akzenten. Die Sortierung verwendet die Latin1 General-Wörterbuch-Sortierungsregeln und ist der Codepage 1252 zugeordnet. Zeigt die Versionsnummer der Sortierung an, falls es sich um eine Windows-Sortierung handelt: _90 oder _100. Es erfolgt keine Unterscheidung nach Groß-/Kleinschreibung (CI), aber eine Unterscheidung nach Akzenten (AS).
+  Die Sortierung verwendet die Latin1 General-Wörterbuch-Sortierungsregeln und ist der Codepage 1252 zugeordnet. Es handelt sich um eine Sortierungsversion \_100, und es erfolgt keine Unterscheidung nach Groß-/Kleinschreibung (CI), aber eine Unterscheidung nach Akzenten (AS).
 
-- **Estonian_CS_AS**
+- **Estonian\_CS\_AS**
 
-  Sortierung verwendet die estnischen Wörterbuchsortierregeln, Codepage 1257. Es erfolgt eine Unterscheidung nach Groß-/Kleinschreibung und nach Akzenten.
+  Die Sortierung verwendet die estnischen Wörterbuchsortierregeln und -mappings, Codepage 1257. Es handelt sich um eine Sortierungsversion \_80 (angezeigt durch Name ohne Versionsnummer), und es erfolgt eine Unterscheidung nach Groß-/Kleinschreibung (CS) und eine Unterscheidung nach Akzenten.
 
-- **Latin1_General_BIN**
+- **Japanese\_Bushu\_Kakusu\_140\_BIN2**
 
-  Die Sortierung verwendet Codepage 1252 und binäre Sortierungsregeln. Die Latin1 General-Wörterbuch-Sortierungsregeln werden ignoriert.
+  Die Sortierung verwendet binäre Codeelementsortierregeln und -mappings, Codepage 932. Es handelt sich um eine Sortierungsversion \_140, und die japanischen Bushu- und Kakusu-Wörterbuchsortierregeln werden ignoriert.
 
 ## <a name="windows-collations"></a>Windows-Sortierreihenfolgen
 
 Führen Sie die folgende Abfrage aus, um die von Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz unterstützten Windows-Sortierungen aufzulisten.
 
 ```sql
-SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
+SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 ```
 
 In der folgenden Tabelle werden alle Windows-Sortierungen aufgelistet, die in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt werden.

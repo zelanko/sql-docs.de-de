@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 71e394c613f40b56fee354101410aa422d918e86
-ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
+ms.openlocfilehash: 52628b3742574bc4e3079750526a5424d65012fe
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56464786"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579666"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -162,7 +162,7 @@ Erstellt eine oder mehrere Tabellenpartitionen. Diese Partitionen sind horizonta
  Informationen hierzu finden Sie unter [Erstellen einer partitionierten Tabelle](#PartitionedTable) im Abschnitt mit den Beispielen.
 
 ### <a name="DataTypes"></a> Datentypen
-[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] unterstützt die am häufigsten verwendeten Datentypen. Im Folgenden finden Sie eine Liste der unterstützten Datentypen mit entsprechenden Informationen und Angaben zum Speicherplatz in Byte. Ausführlichere Informationen zu Datentypen und deren Verwendung finden Sie unter [Leitfaden zum Definieren von Datentypen für Tabellen in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types).
+[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] unterstützt die am häufigsten verwendeten Datentypen. Im Folgenden finden Sie eine Liste der unterstützten Datentypen mit entsprechenden Informationen und Angaben zum Speicherplatz in Byte. Ausführlichere Informationen zu Datentypen und deren Verwendung finden Sie unter [Tabellendatentypen in Azure SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types).
 
 Eine Tabelle mit Datentypkonvertierungen finden Sie im Abschnitt über implizite Konvertierungen unter [CAST und CONVERT (Transact-SQL)](https://msdn.microsoft.com/library/ms187928/).
 

@@ -1,7 +1,7 @@
 ---
 title: Ablaufverfolgungsflags (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/15/2019
+ms.date: 03/10/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: d4d3d7488e60c95766c64d2b9d0ec3646b978c63
-ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
+ms.openlocfilehash: e75de200f8a55b57ba417e2f08bf875eda88a88e
+ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652599"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736833"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON – Ablaufverfolgungsflags
 
@@ -136,7 +136,7 @@ In der folgenden Tabelle werden die in [!INCLUDE[ssNoVersion](../../includes/ssn
 |**9347**|Deaktiviert den Batchmodus für den Sort-Operator. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] führt für den Batchmodus einen neuen Sortier-Operator ein, der die Leistung vieler Analyseabfragen steigert. Weitere Informationen finden Sie im folgenden [Microsoft Support-Artikel](https://support.microsoft.com/kb/3172787).<br /><br />**Bereich:** global oder Sitzung oder Abfrage|
 |**9349**|Deaktiviert den Batchmodus für den Top N Sort-Operator. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] führt einen neuen Sortier-Operator für TOP N-Abfragen im Batchmodus ein, der die Leistung vieler Analyseabfragen steigert.<br /><br />**Bereich:** global oder Sitzung oder Abfrage|
 |**9389**|Aktiviert die zusätzliche dynamische Speicherzuweisung für Batchmodusoperatoren. Wenn eine Abfrage nicht den Arbeitsspeicher erhält, den sie benötigt, kommt es zu einem Datenüberlauf zu tempdb, was zusätzliche E/A erzeugt und Auswirkungen auf die Abfrageleistung haben kann. Wenn das Ablaufverfolgungsflag der dynamische Speicherzuweisung aktiviert ist, kann ein Batchmodusoperator zusätzlichen Arbeitsspeicher anfordern und Überläufe zu tempdb verhindern, wenn zusätzlicher Speicher verfügbar ist. Weitere Informationen finden Sie im Abschnitt *Auswirkungen von minimalen Arbeitsspeicher pro Abfrage* im [Handbuch zur Architektur der Speicherverwaltung](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-memory-per-query).<br /><br />**Bereich:** global oder Sitzung| 
-|**9398**|Deaktiviert den Operator für einen [adaptiven Join](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins). Durch diesen können Sie wählen, ob eine Methode für [Hashjoins oder Joins geschachtelter Schleifen](../../relational-databases/performance/joins.md) zurückgestellt wird, nachdem die erste Eingabe überprüft wurde. Dies wurde in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] eingeführt. Weitere Informationen finden Sie im folgenden [Microsoft Support-Artikel](https://support.microsoft.com/kb/4099126).<br /><br />**Hinweis:** Stellen Sie sicher, dass Sie diese Option ausgiebig testen, bevor Sie sie in einer Produktionsumgebung bereitstellen.<br /><br />**Bereich:** global, Sitzung und Abfrage|
+|**9398**|Deaktiviert den Operator für einen [adaptiven Join](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins). Durch diesen können Sie wählen, ob eine Methode für [Hashjoins oder Joins geschachtelter Schleifen](../../relational-databases/performance/joins.md) zurückgestellt wird, nachdem die erste Eingabe überprüft wurde. Dies wurde in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] eingeführt. Weitere Informationen finden Sie im folgenden [Microsoft Support-Artikel](https://support.microsoft.com/kb/4099126).<br /><br />**Hinweis:** Stellen Sie sicher, dass Sie diese Option ausgiebig testen, bevor Sie sie in einer Produktionsumgebung bereitstellen.<br /><br />**Bereich:** global, Sitzung und Abfrage|
 |**9453**|Deaktiviert die Batchmodusausführung. Weitere Informationen finden Sie im folgenden [Microsoft Support-Artikel](https://support.microsoft.com/help/4016902).<br /><br />**Hinweis:** Stellen Sie sicher, dass Sie diese Option ausgiebig testen, bevor Sie sie in einer Produktionsumgebung bereitstellen.<br /><br />**Bereich:** global, Sitzung und Abfrage|
 |**9471**|Bewirkt, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter dem Kardinalitätsschätzungsmodell für den Abfrageoptimierer der Versionen [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] einen Plan mithilfe minimaler Selektivität für einzelne Tabellenfilter generiert.<br /><br />Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 können Sie den [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md) ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES statt des Ablaufverfolgungsflags verwenden, um dies auf Abfrageebene zu erreichen.<br /><br />**Hinweis:** Stellen Sie sicher, dass Sie diese Option ausgiebig testen, bevor Sie sie in einer Produktionsumgebung bereitstellen.<br /><br />**Hinweis:** Dieses Ablaufverfolgungsflag gilt nicht für Version 70 der Kardinalitätsschätzung oder höher. Verwenden Sie stattdessen das Ablaufverfolgungsflag 4137.<br /><br />**Bereich:** global oder Sitzung oder Abfrage| 
 |**9476**|Bewirkt, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter dem Kardinalitätsschätzungsmodell für den Abfrageoptimierer der Versionen [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] einen Plan mithilfe der Simple-Containment-Annahme, statt mit der Base-Containment-Annahme generiert. Weitere Informationen finden Sie im folgenden [Microsoft Support-Artikel](https://support.microsoft.com/kb/3189675).<br /><br />Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 können Sie den [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md) USE HINT 'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS' statt des Ablaufverfolgungsflags verwenden, um dies auf Abfrageebene zu erreichen.<br /><br />**Hinweis:** Stellen Sie sicher, dass Sie diese Option ausgiebig testen, bevor Sie sie in einer Produktionsumgebung bereitstellen.<br /><br />**Bereich:** global oder Sitzung oder Abfrage| 
@@ -167,7 +167,7 @@ Ablaufverfolgungsflags werden mithilfe einer der folgenden Methoden auf on oder 
      Um das Ablaufverfolgungsflag 2528 global zu aktivieren, verwenden Sie [DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md) mit dem Argument -1: `DBCC TRACEON (2528, -1)`. Die Auswirkungen der Aktivierung eines globalen Ablaufverfolgungsflags mit DBCC TRACEON gehen beim Serverneustart verloren. Um das globale Ablaufverfolgungsflag zu deaktivieren, verwenden Sie [DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md) mit dem Argument -1.  
 -   Mithilfe der Startoption **-T** können Sie angeben, dass das Ablaufverfolgungsflag beim Start aktiviert werden soll.  
      Durch die Startoption **-T** wird ein Ablaufverfolgungsflag global aktiviert. Ablaufverfolgungsflags auf Sitzungsebene können nicht mit einer Startoption aktiviert werden. Dadurch wird sichergestellt, dass das Ablaufverfolgungsflag nach dem Neustart eines Servers aktiv bleibt. Weitere Informationen finden Sie unter [Startoptionen für den Datenbank-Engine-Dienst](../../database-engine/configure-windows/database-engine-service-startup-options.md).
--   Auf Abfrageebene mithilfe des [Abfragehinweises](https://support.microsoft.com/kb/2801413) QUERYTRACEON.
+-   Auf Abfrageebene mithilfe des [Abfragehinweises](https://support.microsoft.com/kb/2801413) QUERYTRACEON. Die Option „QUERYTRACEON“ wird nur für Ablaufverfolgungsflags der in der obigen Tabelle erläuterten Abfrageoptimierer unterstützt.
   
 Mithilfe des Befehls `DBCC TRACESTATUS` lässt sich bestimmen, welche Ablaufverfolgungsflags zurzeit aktiv sind.
   

@@ -11,12 +11,12 @@ ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c9ed2d231414ca36bef186a8d2e70d491a469fb4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51ca1188b8954564fc929dd0cdc34715466aee8b
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605688"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756675"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>Lektion 1-4: Hinzufügen von Paketkonfigurationen
 In diesem Schritt fügen Sie jedem Paket eine Konfiguration hinzu. Konfigurationen aktualisieren die Werte von Paketeigenschaften und Paketobjekten zur Laufzeit.  
@@ -32,6 +32,8 @@ Sie erstellen die beiden Konfigurationsdateien DataTransferConfig.dtsConfig und 
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] erkennt, dass DataTransferConfig.dtsConfig und LoadXMLData.dtsConfig Abhängigkeiten der DataTransfer- und LoadXMLData-Pakete darstellen und fügt automatisch die Konfigurationsdateien ein, wenn Sie in der folgenden Lektion das Bereitstellungspaket erstellen.  
   
 ### <a name="to-create-indirect-configuration-for-the-datatransfer-package"></a>So erstellen Sie eine indirekte Konfiguration für das DataTransfer-Paket  
+
+Überprüfen Sie das aktuelle Bereitstellungsmodell des Projekts, und legen Sie es bei Bedarf auf **Paketbereitstellungsmodell** fest. Klicken Sie im Menü **Projekt**auf **In Paketbereitstellungsmodell konvertieren**.
   
 1.  Doppelklicken Sie im Projektmappen-Explorer auf DataTransfer.dtsx.  
   
@@ -132,7 +134,7 @@ Sie erstellen die beiden Konfigurationsdateien DataTransferConfig.dtsConfig und 
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Schritt 5: Testen der aktualisierten Pakete](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Paketkonfigurationen](../integration-services/packages/package-configurations.md)  
 [Erstellen von Paketkonfigurationen](../integration-services/packages/create-package-configurations.md)  
 [Zugriff auf Dateien, die von Paketen verwendet werden](../integration-services/security/security-overview-integration-services.md#files)  
