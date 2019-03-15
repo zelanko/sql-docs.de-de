@@ -103,13 +103,13 @@ Speicheroptimierte Tabelle, bestehend aus Indizes und Zeilen.
   
  Somit ergeben sie folgende Ketten für den Hashindex für Namen:  
   
--   Erste Bucket: (John, Beijing (Peking)); (John, Paris); (Jane, Prag)  
+-   Erste Bucket: (John, Peking (Beijing)); (John, Paris); (Jane, Prag)  
   
 -   Zweiter Bucket: (Susan, Bogota)  
   
  Die Ketten für den Index für die Stadt lauten wie folgt:  
   
--   Erste Bucket: (John, Beijing (Peking)), (Susan, Bogota)  
+-   Erste Bucket: (John, Peking (Beijing)), (Susan, Bogota)  
   
 -   Zweiter Bucket: (John, Paris), (Jane, Prag)  
   
