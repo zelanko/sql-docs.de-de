@@ -2,7 +2,7 @@
 title: Ausführen von Data Migration Assistant von der Befehlszeile aus (SQL Server) | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie Data Migration Assistant ausführen, über die Befehlszeile, um SQL Server-Datenbanken für die Migration zu bewerten.
 ms.custom: ''
-ms.date: 01/11/2019
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Command Line
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 505ea8d199ee2fe666d65c474e7f11dfaadcf18f
-ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
+ms.openlocfilehash: 575c456736242bebfe23544c430efe414d5097d2
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56464726"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57974179"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Ausführen von Data Migration Assistant über die Befehlszeile
 Mit der Version 2.1 und höher bei Installation von Data Migration Assistant, werden auch installiert dmacmd.exe in *%ProgramFiles%\\Microsoft Data Migration Assistant\\*. Verwenden Sie dmacmd.exe zu, um Ihre Datenbanken in einem unbeaufsichtigten Modus zu bewerten, und geben Sie das Ergebnis in JSON oder CSV-Datei. Diese Methode ist besonders nützlich, wenn mehrere Datenbanken oder große Datenbanken zu bewerten. 
@@ -34,6 +34,7 @@ Mit der Version 2.1 und höher bei Installation von Data Migration Assistant, we
 ```
 DmaCmd.exe /AssessmentName="string"
 /AssessmentDatabases="connectionString1" \["connectionString2"\]
+\[/AssessmentSourcePlatform="SourcePlatform"]
 \[/AssessmentTargetPlatform="TargetPlatform"\]
 /AssessmentEvaluateRecommendations|/AssessmentEvaluateCompatibilityIssues
 \[/AssessmentOverwriteResult\]
@@ -45,8 +46,9 @@ DmaCmd.exe /AssessmentName="string"
 | `/help or /?`     | Wie Sie mit der dmacmd.exe-Hilfetext        | N
 |`/AssessmentName`     |   Name des Bewertungsprojekts   | J
 |`/AssessmentDatabases`     | Leerzeichen getrennte Liste von Verbindungszeichenfolgen. Datenbanknamen (Anfangskatalog) wird die Groß-/Kleinschreibung beachtet. | J
-|`/AssessmentTargetPlatform`     | Die Zielplattform für die Bewertung, unterstützte Werte: "Azuresqldatabase", ManagedSqlServer, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 und SqlServerWindows2017. Der Standardwert ist SqlServerWindows2017   | N
-|`/AssessmentEvaluateFeatureParity`  | Featureparitätsregeln auszuführen  | N
+|`/AssessmentSourcePlatform`     | Source-Plattform für die Bewertung, unterstützte Werte: SqlOnPrem, RdsSqlServer. Bereitschaftstest für Ziel auch unterstützt als Source-Plattform Cassandra. Der Standardwert ist SqlOnPrem   | N
+|`/AssessmentTargetPlatform`     | Die Zielplattform für die Bewertung, unterstützte Werte: "Azuresqldatabase", ManagedSqlServer, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 und SqlServerWindows2017. Bereitschaftstest für die Ziel auch unterstützt als Zielplattform COSMOS DB. Der Standardwert ist SqlServerWindows2017   | N
+|`/AssessmentEvaluateFeatureParity`  | Featureparitätsregeln auszuführen. Wenn Source-Plattform RdsSqlServer ist, wird-featureevaluierung Parität für die Zielplattform "azuresqldatabase" nicht unterstützt  | N
 |`/AssessmentEvaluateCompatibilityIssues`     | Führen Sie Kompatibilitätsregeln  | J <br> (Entweder AssessmentEvaluateCompatibilityIssues oder AssessmentEvaluateRecommendations ist erforderlich.)
 |`/AssessmentEvaluateRecommendations`     | Führen Sie die Vorschläge zu Features        | J <br> (AssessmentEvaluateCompatibilityIssues oder AssessmentEvaluateRecommendationsis erforderlich)
 |`/AssessmentOverwriteResult`     | Überschreiben Sie die Ergebnisdatei    | N
@@ -146,15 +148,33 @@ DmaCmd.exe /Action=AssessTargetReadiness
 
 ```
 
+**Bewertung der einzelnen-Datenbank für die Zielplattform SQL Azure-Datenbank speichern die Ergebnisse in JSON und CSV-Datei**
+
+```
+DmaCmd.exe /AssessmentName="TestAssessment" 
+/AssessmentDatabases="Server=SQLServerInstanceName;Initial
+Catalog=DatabaseName;Integrated Security=true"
+/AssessmentSourcePlatform="SqlOnPrem"
+/AssessmentTargetPlatform="AzureSqlDatabase"
+/AssessmentEvaluateCompatibilityIssues /AssessmentEvaluateFeatureParity
+/AssessmentOverwriteResult 
+/AssessmentResultCsv="C:\\temp\\AssessmentReport.csv" 
+/AssessmentResultJson="C:\\temp\\AssessmentReport.json"
+
+```
+
 **Ziel-bereitschaftsbewertung mehreren Datenbanken**
 
 ```
 DmaCmd.exe /Action=AssessTargetReadiness 
 /AssessmentName="TestAssessment" 
+/AssessmentSourcePlatform=SourcePlatform
+/AssessmentTargetPlatform=TargetPlatform
 /SourceConnections="Server=SQLServerInstanceName1;Initial Catalog=DatabaseName1;Integrated Security=true" "Server=SQLServerInstanceName1;Initial Catalog=DatabaseName2;Integrated Security=true" "Server=SQLServerInstanceName2;Initial Catalog=DatabaseName3;Integrated Security=true" 
 /AssessmentOverwriteResult  
 /AssessmentResultJson="C:\Results\test2016.json"
 
+(/AssessmentSourcePlatform and /AssessmentTargetPlatform are optional.)
 ```
 
 **Bereitschaftstest für das Ziel für alle Datenbanken auf einem Server mithilfe der Windows-Authentifizierung**
@@ -191,6 +211,8 @@ Inhalt der Konfigurationsdatei bei Verwendung von datenquellenverbindungen:
 <?xml version="1.0" encoding="utf-8" ?>
 <TargetReadinessConfiguration xmlns="http://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
   <AssessmentName>name</AssessmentName>
+  <SourcePlatform>Source Platform</SourcePlatform> <!-- Optional. The default is SqlOnPrem -->
+  <TargetPlatform>TargetPlatform</TargetPlatform> <!-- Optional. The default is ManagedSqlServer -->
   <SourceConnections>
     <SourceConnection>connection string 1</SourceConnection>
     <SourceConnection>connection string 2</SourceConnection>

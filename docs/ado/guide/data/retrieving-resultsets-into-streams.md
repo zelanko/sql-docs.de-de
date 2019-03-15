@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/20/2017
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 45ba231b1523a74ac8b2c09f55e19c3dc287ef20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ad9c21deb365428a6642f3ee9b7f48396d7c4f9
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734958"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973499"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>Abrufen von Resultsets in Datenströme
 Anstatt die Ergebnisse der herkömmlichen empfängt **Recordset** Objekt ADO kann stattdessen die Abfrageergebnisse abzurufen, in einen Stream. Das ADO **Stream** Objekt (oder andere Objekte, die die COM unterstützt **IStream** Schnittstelle, z. B. die ASP **anfordern** und **Antwort** Objekte ) kann verwendet werden, um diese Ergebnisse enthalten. Eine Verwendung für diese Funktion ist zum Abrufen von Ergebnissen im XML-Format. Mit SQL Server können z. B. XML-Ergebnisse auf verschiedene Weise, wie z. B. mithilfe der FOR XML-Klausel mit einer SQL-SELECT-Abfrage oder eine XPath-Abfrage zurückgegeben.  
@@ -30,7 +30,7 @@ Anstatt die Ergebnisse der herkömmlichen empfängt **Recordset** Objekt ADO kan
 ## <a name="for-xml-query-example"></a>Beispiel für FOR XML-Abfrage  
  Im folgende Beispiel wird mit der Datenbank Northwind in VBScript geschrieben:  
   
-```  
+```html
 <!-- BeginRecordAndStreamVBS -->  
 <%@ LANGUAGE = VBScript %>  
 <%  Option Explicit      %>  
@@ -145,7 +145,7 @@ Anstatt die Ergebnisse der herkömmlichen empfängt **Recordset** Objekt ADO kan
   
 ### <a name="for-xml-syntax"></a>XML-Syntax  
   
-```  
+```syntax
 FOR XML [RAW|AUTO|EXPLICIT]  
 ```  
   
@@ -153,7 +153,7 @@ FOR XML [RAW|AUTO|EXPLICIT]
   
  Beispielsweise SQL SELECT FOR XML-Anweisung wie folgt:  
   
-```  
+```sql
 SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO  
 ```  
   
@@ -161,19 +161,19 @@ SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO
   
  Als XML-Vorlage-Abfrage folgt die FOR XML-Abfrage wie:  
   
-```  
+```xml
 <sql:query> SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO </sql:query>  
 ```  
   
  In diesem Beispiel wird die ASP **Antwort** -Objekt für die **Output Stream** Eigenschaft:  
   
-```  
+```vb
 adoCmd.Properties("Output Stream") = Response  
 ```  
   
  Geben Sie als Nächstes **AdExecuteStream** Parameter **Execute**. In diesem Beispiel dient als Wrapper für den Datenstrom im XML-Tags, um eine XML-Dateninsel zu erstellen:  
   
-```  
+```vb
 Response.write "<XML ID=MyDataIsle>"  
 adoCmd.Execute , , adExecuteStream  
 Response.write "</XML>"  

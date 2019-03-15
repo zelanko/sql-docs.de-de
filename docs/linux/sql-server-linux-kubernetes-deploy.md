@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4b42f0a70765744147a44c8b4d274b87cc00ca43
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3a5bc7dfcfd36c16b6f281db8eb57e74e97601b6
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215424"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57974149"
 ---
 # <a name="deploy-a-sql-server-always-on-availability-group-on-a-kubernetes-cluster"></a>Bereitstellen einer SQL Server Always On-verfügbarkeitsgruppe in einem Kubernetes-cluster
 
@@ -29,17 +29,20 @@ In Kubernetes, umfasst die Bereitstellung eine SQL Server-Operator, der SQL Serv
 
 ## <a name="requirements"></a>Anforderungen
 
-- Ein Kubernetes-cluster
-- Kubernetes-Version 1.11.0 oder höher
+- Eine ACS-Kubernetes-Cluster mit der neuesten version
 - Mindestens drei Knoten
-- ["kubectl"](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+- [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 - Der Zugriff auf die [Sql Server Samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files) GitHub-Repository
 
 > [!NOTE]
 > Sie können jede Art von Kubernetes-Cluster verwenden. Um einen Kubernetes-Cluster in Azure Kubernetes Service (AKS) zu erstellen, finden Sie unter [Erstellen eines AKS-Clusters](https://docs.microsoft.com/azure/aks/create-cluster).
-> Das folgende Skript erstellt einen Kubernetes-Cluster mit vier Knoten in Azure.
+>
+> Verwenden Sie die neueste Version von Kubernetes. Die spezifische Version hängt von Ihrem Abonnement und Region ab. Finden Sie unter [unterstützt Kubernetes-Versionen in AKS](https://docs.microsoft.com/en-us/azure/aks/supported-kubernetes-versions).  
+>
+> Das folgende Skript erstellt einen Kubernetes-Cluster mit vier Knoten in Azure. Vor dem Ausführen des Skripts ersetzt `<latest version>` mit den neuesten verfügbaren Version. Beispiel: `1.12.5`.
+>
 > ```azure-cli
-> az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.3 --generate-ssh-keys
+> az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version <latest version> --generate-ssh-keys
 > ```
 
 ## <a name="deploy-the-operator-sql-server-containers-and-load-balancing-services"></a>Bereitstellen der Operator, SQL Server-Container und Dienste des Lastenausgleichs

@@ -3,17 +3,17 @@ title: Eingabeaufforderungs-Installation von R und Python-Komponenten – SQL Se
 description: Führen Sie SQL Server-Setup-Befehlszeile zum Hinzufügen von R-Sprache und die Integration von Python auf SQL Server-Datenbank-Engine-Instanz.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/21/2018
+ms.date: 03/13/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8e3c101eae8e02446a9e47b17255e2ca2b501774
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 3f78447054d96f1552ae09c62f3b8a2f18bc58bf
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645522"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57976350"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Installieren von SQL Server-Machine learning-R und Python-Komponenten über die Befehlszeile
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -50,14 +50,14 @@ Wenn Sie über die Eingabeaufforderung installieren, unterstützt [!INCLUDE[ssNo
 |-----------|-------------|
 | / FEATURES = AdvancedAnalytics | Die in der Datenbank-Version installiert: SQL Server 2017-Machine-Learning-Services (Datenbankintern) oder SQL Server 2016 R Services (Datenbankintern).  |
 | /FEATURES = SQL_INST_MR | Gilt nur für SQLServer 2017. Koppeln Sie dies mit AdvancedAnalytics. Installiert die (In-Database) R-Funktion, einschließlich Microsoft R Open und proprietären R-Pakete. Das SQL Server 2016 R Services-Feature ist R nur, damit kein Parameter für diese Version vorhanden ist.|
-| / FEATURES = SQL_INST_MPY | Gilt nur für SQLServer 2017. Koppeln Sie dies mit AdvancedAnalytics. Installiert die (In-Database) Python-Funktion, einschließlich Anaconda und den proprietären Python-Paketen. |
+| /FEATURES = SQL_INST_MPY | Gilt nur für SQLServer 2017. Koppeln Sie dies mit AdvancedAnalytics. Installiert die (In-Database) Python-Funktion, einschließlich Anaconda und den proprietären Python-Paketen. |
 | /FEATURES = SQL_SHARED_MR | Die R-Funktion für die eigenständige Version wird installiert: SQL Server 2017-Machine-Learning-Server (eigenständig) oder SQL Server 2016 R Server (eigenständig). Ein eigenständigen Server ist eine "freigegebene Funktion" nicht an eine Datenbank-Engine-Instanz gebunden.|
-| / FEATURES = SQL_SHARED_MPY | Gilt nur für SQLServer 2017. Die Python-Funktion für die eigenständige Version wird installiert: SQL Server 2017 Machine Learning Server (eigenständig). Ein eigenständigen Server ist eine "freigegebene Funktion" nicht an eine Datenbank-Engine-Instanz gebunden.|
+| /FEATURES = SQL_SHARED_MPY | Gilt nur für SQLServer 2017. Die Python-Funktion für die eigenständige Version wird installiert: SQL Server 2017 Machine Learning Server (eigenständig). Ein eigenständigen Server ist eine "freigegebene Funktion" nicht an eine Datenbank-Engine-Instanz gebunden.|
 | /IACCEPTROPENLICENSETERMS  | Gibt an, dass Sie die Lizenzbedingungen für die Verwendung der open-Source-R-Komponenten akzeptiert haben. |
 | /IACCEPTPYTHONLICENSETERMS | Gibt an, dass Sie die Lizenzbedingungen für die Verwendung der Python-Komponenten akzeptiert haben. |
 | /IACCEPTSQLSERVERLICENSETERMS | Gibt an, dass Sie die für die Verwendung von SQL Server-Lizenzbedingungen akzeptiert haben.|
-| / MRCACHEDIRECTORY | Für offline-Setup festgelegt den, enthält die CAB-Dateien der R-Komponenten. |
-| /MPYCACHEDIRECTORY | Für offline-Setup festgelegt den, die die Python-Komponenten-CAB-Dateien enthält. |
+| /MRCACHEDIRECTORY | Für offline-Setup festgelegt den, enthält die CAB-Dateien der R-Komponenten. |
+| /MPYCACHEDIRECTORY | Zur künftigen Verwendung reserviert. Verwenden Sie % Temp%, um die CAB-Dateien der Python-Komponenten für die Installation auf Computern zu speichern, die nicht über eine Internetverbindung verfügen. |
 
 
 ## <a name="indb"></a> In-Database-Instanzen
@@ -132,13 +132,13 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER
 
 ## <a name="silent"></a> Unbeaufsichtigte Installation
 
-Eine automatische Installation unterdrückt die Prüfung auf Speicherorte für CAB-Datei. Aus diesem Grund müssen Sie den Speicherort angeben, in dem CAB-Dateien werden entpackt. Sie können das temporäre Verzeichnis für diese.
+Eine automatische Installation unterdrückt die Prüfung auf Speicherorte für CAB-Datei. Aus diesem Grund müssen Sie den Speicherort angeben, in dem CAB-Dateien werden entpackt. Für Python müssen die CAB-Dateien im % TEMP * befinden. Für R, können Sie den Ordner festlegen berichtspfaden, Sie können das temporäre Verzeichnis für diese.
  
 ```cmd  
 Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY 
 /INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<username>" 
 /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS 
-/MRCACHEDIRECTORY=%temp% /MPYCACHEDIRECTORY=%temp%
+/MRCACHEDIRECTORY=%temp% 
 ```
 
 ## <a name="shared-feature"></a> Eigenständige Serverinstallationen
@@ -179,7 +179,7 @@ Versuchen Sie diese benutzerdefinierten Berichte, um den Installationsstatus der
 
 R-Entwickler können mit einigen einfachen Beispielen beginnen, und die Grundlagen der Funktionsweise von R mit SQL Server. Der nächste Schritt ist finden Sie in den folgenden Links:
 
-+ [Tutorial: Führen Sie R in T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [Tutorial: Run R in T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
 + [Tutorial: Datenbankinterne Analysen für R-Entwickler](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Python-Entwickler erfahren, wie Python mit SQL Server verwenden, indem Sie die folgenden in diesen Tutorials:

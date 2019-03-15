@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f148c4cee111febc5d1e0203cc5eb484ec556d4f
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 16f3ffbbd1435e9006bcbc26c86fb53dfca9bf65
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801345"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973130"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Herunterladen und Installieren von Azure Data Studio
 
@@ -38,11 +38,12 @@ Weitere Informationen über die neueste Version finden Sie unter den [Anmerkunge
 
 ## <a name="get-azure-data-studio-for-windows"></a>Azure Data-Studio für Windows herunterladen
 
-Diese Version von [!INCLUDE[name-sos](../includes/name-sos-short.md)] enthält eine standardmäßige Windows Installer-Erfahrung und ZIP-Datei:
+Diese Version von [!INCLUDE[name-sos](../includes/name-sos-short.md)] enthält eine standardmäßige Windows Installer-Erfahrung und eine ZIP-Datei.
+
+Die *Installationsprogramm Benutzer* wird empfohlen, da es keine Administratorrechte verfügt, benötigt wird, die sowohl Installationen und Upgrades vereinfacht. Der Benutzer-Installer erfordert keine Administratorberechtigungen, wie der Speicherort befindet sich im lokalen AppData (LOCALAPPDATA) Benutzerordners. Der Benutzer-Installer bietet auch einen möglichst reibungslosen Ablauf der Hintergrund-Update. Weitere Informationen finden Sie unter [benutzereinrichtung für Windows](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows).
+
 
 **Installationsprogramm Benutzer** (empfohlen)
-
-Das Installationsprogramm für Benutzer wird empfohlen, da es keine Administratorrechte verfügt, benötigt wird, die sowohl Installationen und Upgrades vereinfacht.
 
 1. Herunterladen und Ausführen der [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *Benutzer* Installer für Windows](https://go.microsoft.com/fwlink/?linkid=2072725).
 2. Starten Sie den [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.

@@ -2,7 +2,7 @@
 title: Identifizieren Sie die richtige Azure SQL-Datenbank-SKU für Ihre lokale Datenbank (Data Migration Assistant) | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie Data Migration Assistant mit um der rechten Seite Azure SQL-Datenbank-SKU für Ihre lokale Datenbank zu identifizieren.
 ms.custom: ''
-ms.date: 01/11/2019
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 002a9fc587d742c235aedb0f773864296bdf645b
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 578e6ac47e84ad764cb050112eae768ff21444f3
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226497"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973822"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>Identifizieren Sie die richtige Azure SQL-Datenbank-SKU für Ihre lokale Datenbank
 
@@ -75,22 +75,22 @@ Verwenden Sie die Leistung Leistungsindikatoren-Ausgabedatei aus dem vorherigen 
 
 Führen Sie die dmacmd.exe mit den folgenden Argumenten:
 
-- **/ Action = SkuRecommendation**: Geben Sie dieses Argument zum Ausführen von SKU-Bewertungen.
-- **/ SkuRecommendationInputDataFilePath**: Der Pfad zur Leistungsindikatordatei erfasst, im vorherigen Abschnitt.
-- **/ SkuRecommendationTsvOutputResultsFilePath**: Der Pfad zu die Ausgeben von Ergebnissen im TSV-Format zu schreiben.
-- **/ SkuRecommendationJsonOutputResultsFilePath**: Der Pfad zu die Ausgabeergebnisse im JSON-Format zu schreiben.
-- **/ SkuRecommendationHtmlResultsFilePath**: Pfad zu die Ausgeben von Ergebnissen im HTML-Format zu schreiben.
+- **/Action=SkuRecommendation**: Geben Sie dieses Argument zum Ausführen von SKU-Bewertungen.
+- **/SkuRecommendationInputDataFilePath**: Der Pfad zur Leistungsindikatordatei erfasst, im vorherigen Abschnitt.
+- **/SkuRecommendationTsvOutputResultsFilePath**: Der Pfad zu die Ausgeben von Ergebnissen im TSV-Format zu schreiben.
+- **/SkuRecommendationJsonOutputResultsFilePath**: Der Pfad zu die Ausgabeergebnisse im JSON-Format zu schreiben.
+- **/SkuRecommendationHtmlResultsFilePath**: Pfad zu die Ausgeben von Ergebnissen im HTML-Format zu schreiben.
 
 Darüber hinaus müssen Sie eines der folgenden Argumente auswählen:
 - Zu verhindern, dass Price-Aktualisierung
-    - **/ SkuRecommendationPreventPriceRefresh**: Verhindert, dass die Preis-Aktualisierung auftreten. Verwenden Sie, wenn im offline-Modus ausgeführt wird.
+    - **/SkuRecommendationPreventPriceRefresh**: Verhindert, dass die Preis-Aktualisierung auftreten. Verwenden Sie, wenn im offline-Modus ausgeführt wird.
 - Die aktuellen Preisen zu erhalten 
-    - **/ SkuRecommendationCurrencyCode**: Die Währung, in dem Preise angezeigt werden (z.B.) "US").
-    - **/ SkuRecommendationOfferName**: Das Angebot benennen (z.B.) "MS-AZR - 0003P"). Weitere Informationen finden Sie unter den [Microsoft Azure-Angebotsdetails](https://azure.microsoft.com/support/legal/offer-details/) Seite.
-    - **/ SkuRecommendationRegionName**: Benennen Sie die Region (z.B.) "USA, Westen").
-    - **/ SkuRecommendationSubscriptionId**: Die Abonnement-ID.
-    - **/ AzureAuthenticationTenantId**: Die Authentication-Mandant.
-    - **/ AzureAuthenticationClientId**: Die Client-ID der AAD-app für die Authentifizierung verwendet werden soll.
+    - **/SkuRecommendationCurrencyCode**: Die Währung, in dem Preise angezeigt werden (z.B.) "USD").
+    - **/SkuRecommendationOfferName**: Das Angebot benennen (z.B.) "MS-AZR-0003P"). Weitere Informationen finden Sie unter den [Microsoft Azure-Angebotsdetails](https://azure.microsoft.com/support/legal/offer-details/) Seite.
+    - **/SkuRecommendationRegionName**: Benennen Sie die Region (z.B.) "WestUS").
+    - **/SkuRecommendationSubscriptionId**: Die Abonnement-ID.
+    - **/AzureAuthenticationTenantId**: Die Authentication-Mandant.
+    - **/AzureAuthenticationClientId**: Die Client-ID der AAD-app für die Authentifizierung verwendet werden soll.
     - Eine der folgenden Authentifizierungsoptionen:
         - Interaktiv
             - **AzureAuthenticationInteractiveAuthentication**: Auf "true" für ein Popupfenster Authentifizierung festgelegt ist.

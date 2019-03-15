@@ -2,7 +2,7 @@
 title: Bewährte Methoden für den Data Migration Assistant (SQL Server) | Microsoft-Dokumentation
 description: Erlernen Sie bewährte Methoden für die Migration von SQL Server-Datenbanken mit Data Migration Assistant
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Best Practices
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 79eade425e87da3784221686b7ccdc99e85b96bc
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: cb355cbe1e32c97e59d61eb55ca70023b03acd6b
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643828"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973669"
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>Bewährte Methoden für die Ausführung von Data Migration Assistant
 Dieser Artikel enthält einige Informationen zu bewährten Methoden für die Installation, Bewertung und Migration.
@@ -41,4 +41,4 @@ Nicht installieren Sie, und führen Sie den Data Migration Assistant, direkt auf
 
 - Verbindung verschlüsseln aktivieren, bei der Verbindung von Quell-und Ziel. Mithilfe von SSL-Verschlüsselung erhöht die Sicherheit der Daten, die netzwerkübergreifend zwischen Data Migration Assistant und SQL Server-Instanz, die von Vorteil ist insbesondere bei der Migration von SQL-Anmeldungen. Wenn SSL-Verschlüsselung wird nicht verwendet, und das Netzwerk von einem Angreifer gefährdet ist, wird die SQL-Anmeldungen, die zu migrierenden abgefangen abrufen konnte bzw. auf dynamisch durch den Angreifer geändert.
 
-    Wenn sich aber der gesamte Zugriff innerhalb einer sicheren Intranetkonfiguration abspielt, ist eine Verschlüsselung möglicherweise nicht erforderlich. Aktivieren der Verschlüsselung beeinträchtigen die Leistung, da es sich bei den Mehraufwand, der zum Verschlüsseln und Entschlüsseln von Paketen erforderlich ist. Weitere Informationen finden Sie in [Verschlüsseln von Verbindungen zu SQL Server](https://go.microsoft.com/fwlink/?linkid=832513).
+    Wenn sich aber der gesamte Zugriff innerhalb einer sicheren Intranetkonfiguration abspielt, ist eine Verschlüsselung möglicherweise nicht erforderlich. Aktivieren der Verschlüsselung beeinträchtigen die Leistung, da es sich bei den Mehraufwand, der zum Verschlüsseln und Entschlüsseln von Paketen erforderlich ist. Weitere Informationen finden Sie in [Verschlüsseln von Verbindungen zu SQL Server](https://go.microsoft.com/fwlink/?linkid=832513).

@@ -2,7 +2,7 @@
 title: Übersicht über Data Migration Assistant (SQLServer) | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie mit Data Migration Assistant zum Migrieren von SQL Server-Datenbanken zu anderen SQL Server oder Azure-Datenbanken
 ms.custom: ''
-ms.date: 11/26/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, overview
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 7ea185bd40dc9477b00b91069fa0ce8d93986aa5
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+ms.openlocfilehash: 0bb91177a204f93bd141d57b90420678dcd0b722
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321616"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973789"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Übersicht über Data Migration Assistant
 Die Data Migration Assistant (DMA) können, die Sie ein upgrade auf eine moderne Datenplattform durch das Erkennen von Kompatibilitätsproblemen, die Datenbankfunktionalität in die neue Version der SQL Server oder Azure SQL-Datenbank beeinflussen können. DMA empfiehlt, zuverlässigkeitverbesserungen der Leistung und für Ihre zielumgebung und ermöglicht es Ihnen, Ihr Schema, Daten und nicht enthaltene Objekte vom Quellserver zum Zielserver zu verschieben.
@@ -68,7 +68,7 @@ DMA ersetzt alle frühere Versionen von SQL Server Upgrade Advisor und für Upgr
 **Datenquellen**
 - SQL Server 2005
 - SQL Server 2008
-- SQL Server 2008 R2
+- SQL Server 2008 R2
 - SQL Server 2012 
 - SQLServer 2014
 - SQL Server 2016

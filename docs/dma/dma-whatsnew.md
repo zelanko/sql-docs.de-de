@@ -1,7 +1,7 @@
 ---
 title: Neues in den Data Migration Assistant (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -11,20 +11,20 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, new features
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 60145b2433d7b9d2b6cda4453e2d91599b865a86
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ac3f4b2ab00b7a2c792788d6e778857c7d563f66
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410407"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973209"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Neuerungen im Datenmigrations-Assistenten
 Dieser Artikel beschreibt die Ergänzungen in jeder Version von Data Migration Assistant (DMA).
 
-## <a name="dma-v41"></a>DMA v4. 1
+## <a name="dma-v41"></a>DMA v4.1
 Die v4. 1-Version von DMA führt die Unterstützung für die umfassende Bewertung der lokalen SQL Server-Datenbanken, die Migration zu Azure verwaltete SQL-Datenbankinstanz.
 
 Der Workflow für die Bewertung können Sie die folgenden Probleme zu erkennen, die die Migration zu Azure verwaltete SQL-Datenbankinstanz auswirken können:
@@ -39,7 +39,7 @@ Der Workflow für die Bewertung können Sie die folgenden Probleme zu erkennen, 
 
 Nachdem die Bewertung abgeschlossen ist, verwenden Sie unsere [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) (DMS) zum Durchführen der Migration von SQL Server-Datenbanken zu Azure SQL-Datenbank verwaltete Instanz.  DMS unterstützt beide [offline](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) (einmalig) und [online](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) (minimaler Ausfallzeit) datenbankmigrationen zu Azure verwaltete SQL-Datenbankinstanz.
 
-## <a name="dma-v40"></a>DMA v4. 0
+## <a name="dma-v40"></a>DMA v4.0
 Die v4. 0-Version von DMA wird eingeführt, die Azure SQL-Datenbank-SKU-Empfehlungen-Funktion, die Benutzern ermöglicht, identifizieren Sie die empfohlenen Azure SQL-Datenbank-SKU basierend auf Leistungsindikatoren erfasst, die von den Computern, auf dem Ihre Datenbanken gehostet werden. Dieses Feature bietet Empfehlungen in Bezug auf Preise, Ebenen, computeebene, maximale Datengröße, sowie und geschätzte Kosten pro Monat. Darüber hinaus die Möglichkeit, alle Datenbanken in Azure in einer Massenoperation bereitzustellen.
 
 > [!NOTE]
@@ -59,7 +59,7 @@ DMA führt automatische Schema-Konvertierung für die Objekte, die durch die auf
 
 DMA verwendet Microsoft Programm Sprachsynthese (Text)-Technologie wird empfohlen, dass der Code repariert. Erfahren Sie mehr über [PROSE](https://microsoft.github.io/prose/).
 
-## <a name="dma-v35"></a>DMA v3. 5
+## <a name="dma-v35"></a>DMA v3.5
 Die v3. 5-Version von DMA umfasst die folgenden Ergänzungen:
 - Beträchtliche Leistungssteigerungen für die Migration zu Azure SQL-Datenbank (Benchmark-Tests anzugeben, dass der Vorgang viermal schneller als mit früheren Versionen der DMA ist).
 - Der Speicherbedarf wird weiter optimiert, um die Stabilität des Workflow bei der Migration zu verbessern.
@@ -86,34 +86,34 @@ Wenn Sie die physische Datei für die Sicherung auf einem Computer ausgeführt w
 ### <a name="migrating-windows-logins"></a>Migrieren von Windows-Anmeldungen
 Während die Migration von Active Directory (AD) Anmeldenamen offiziell von SQL Server 2017 unter Linux unterstützt wird, erfordert es eine zusätzliche Konfiguration erfolgreich ausgeführt. Finden Sie im Artikel [Active Directory-Authentifizierung mit SQL Server unter Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-authentication) ausführliche Informationen über das Einrichten von Active Directory-Anmeldungen in SQL Server 2017 unter Linux. Nach dem Ausführen der erforderlichen Konfigurations an, das Setup abgeschlossen ist, und können Sie die Active Directory-Anmeldung wie gewohnt migrieren. Standard-SQL-Authentifizierung funktioniert wie erwartet, ohne eine zusätzliche einzurichten.
 
-## <a name="dma-v32"></a>DMA v3. 2
+## <a name="dma-v32"></a>DMA v3.2
 Die v3. 2-Version von DMA umfasst die folgenden Ergänzungen:
 
 - Schema- und Datenmigration aktiviert aus einem lokalen SQL Server-Datenbanken in Azure SQL-Datenbank ein neuer Migrationsworkflow für die.
 - Während der schemamigration zu Azure SQL-Datenbank DMA Skripts Datenbankobjekte für die Quelle enthält Anleitungen, potenzielle Kompatibilitätsprobleme zu beheben, und klicken Sie dann Ihr Schema in Azure bereitgestellt.
 
-## <a name="dma-v31"></a>DMA v3. 1
+## <a name="dma-v31"></a>DMA v3.1
 Die v3. 1-Version von DMA umfasst die folgenden Ergänzungen:
 
 - Verbesserte Assessment-Empfehlungen für Azure SQL-Datenbanken in Bezug auf die datenbanksortierungen verwenden, der nicht unterstützten gespeicherten Systemprozeduren und CLR-Objekte.
 - Assessment-Leitfaden für Kompatibilitätsgrad 130, 120, 110 zu 100 bei der Migration zu Azure SQL-Datenbanken.
 
-## <a name="dma-v30"></a>DMA v3. 0
+## <a name="dma-v30"></a>DMA v3.0
 Die v3. 0-Version von DMA erweitert die Azure SQL-datenbankbewertung durch, um umfassende Empfehlungen zum Beheben von Problemen im Zusammenhang mit:
 
 - Migration von Blockierungsproblemen.
 - Teilweise oder nicht unterstützte Features und Funktionen.
 
-## <a name="dma-v21"></a>DMA v2. 1
+## <a name="dma-v21"></a>DMA v2.1
 Die v2. 1-Version von DMA umfasst die folgenden Ergänzungen:
 - Befehlszeilenunterstützung für das Ausführen von Bewertungen in einem unbeaufsichtigten Modus aus, die Ihnen hilft, Bewertungen ausgeführt und skaliert. Weitere Informationen finden Sie im Artikel [ausführen Data Migration Assistant über die Befehlszeile](dma-commandline.md).
 - Leistungsverbesserungen beim Starten von Benutzern und DMA schließen.
 - Die Fähigkeit zum Konfigurieren von SQL-Verbindungstimeout. Weitere Informationen finden Sie im Artikel [Konfigurationseinstellungen für den Data Migration Assistant](dma-configurationsettings.md).
 
-## <a name="dma-v20"></a>DMA v2. 0
+## <a name="dma-v20"></a>DMA v2.0
 Die v2. 0-Version von DMA enthält verbesserte Stretch-Datenbank featureempfehlungen ordnungsgemäße priorisierte Tabellen angeben, die die Storage-einsparungen zu maximieren.
 
-## <a name="dma-v10"></a>DMA-v1. 0
+## <a name="dma-v10"></a>DMA v1.0
 Die v1. 0-Version von DMA ist die erste Version, und bietet für:
 - Ermittlung von Problemen, die ein Upgrade auf eine lokale Version von SQL Server auswirken können. Alle Ergebnisse werden als Kompatibilitätsprobleme beschrieben, und sie können die folgenden Bereiche unterteilt:
     - Wichtige Änderungen

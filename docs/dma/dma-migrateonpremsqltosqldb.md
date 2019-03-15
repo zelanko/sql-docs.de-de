@@ -2,7 +2,7 @@
 title: Migrieren einer lokalen SQLServer oder SQL Server auf virtuellen Azure-Computern in Azure SQL-Datenbank mit den Data Migration Assistant | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie mit Data Migration Assistant zum Migrieren von einer lokalen SQL Server zu Azure SQL-Datenbank
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,21 +12,21 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: db4b48d736b46c0381749943916272e763a077c7
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: d807396f7c8bd334de38cdc1744f6bee90d619e0
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643848"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57974060"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Migrieren von lokalen SQLServer oder SQL Server auf virtuellen Azure-Computern in Azure SQL-Datenbank, die über den Data Migration Assistant
 
 Im Data Migration Assistant bietet nahtlose Bewertungen von einer lokalen SQL Server und -Upgrades auf höhere Versionen von SQL Server oder Migration zu SQL Server auf virtuellen Azure-Computern oder Azure SQL-Datenbank.
 
-Dieser Artikel enthält schrittweise Anleitungen zum Migrieren von SQL Server auf einer lokalen Umgebung in Azure SQL-Datenbank mit den Data Migration Assistant.   
+Dieser Artikel enthält schrittweise Anleitungen zum Migrieren von SQL Server auf einer lokalen Umgebung in Azure SQL-Datenbank mit den Data Migration Assistant.   
 
 ## <a name="create-a-new-migration-project"></a>Erstellen eines neuen Migrationsprojekts
 
@@ -122,5 +122,5 @@ Die letzte Bildschirm zeigt den Gesamtstatus.
 ## <a name="see-also"></a>Siehe auch
 
 - [Data Migration Assistant (DMA)](../dma/dma-overview.md)
-- [Data Migration Assistant: Konfigurationseinstellungen für](../dma/dma-configurationsettings.md)
+- [Data Migration Assistant: Konfigurationseinstellungen](../dma/dma-configurationsettings.md)
 - [Data Migration Assistant: Bewährte Methoden](../dma/dma-bestpractices.md)
