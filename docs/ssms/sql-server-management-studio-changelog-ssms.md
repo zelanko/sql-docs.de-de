@@ -113,7 +113,7 @@ Sind die Bezeichnungen *Preview 5*, *Preview 6* oder *Preview 7* nicht vorhanden
 
 - **SSMS**
   - Geringere Downloadgröße
-    - Die aktuelle Größe des Pakets ist um mehr als die Hälfte kleiner als SSMS 17.x (ca. 400 MB). Die Größe wird noch etwas zunehmen, sobald die IS-Komponenten (Integration Services) wieder SSMS hinzugefügt werden, das Paket wird insgesamt jedoch kleiner sein als bisher.
+    - Die aktuelle Größe des Pakets ist um mehr als die Hälfte kleiner als SSMS 17.x (ca. 400 MB). Die Größe wird noch etwas zunehmen, sobald die Integration Services-Komponenten wieder SSMS hinzugefügt werden, das Paket wird insgesamt jedoch kleiner sein als bisher.
   - SSMS basiert auf der neuen Visual Studio 2017 Shell (Isoliert).
     - Dies ist eine moderne Shell (eingeführt in Version 15.6.4 von Visual Studio 2017). Mit der neuen Shell werden alle Programmkorrekturen für die Barrierefreiheit bereitgestellt, die sowohl in SSMS als auch in Visual Studio eingeführt wurden.
   - Verbesserungen für die Barrierefreiheit in SSMS
