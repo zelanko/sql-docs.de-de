@@ -21,34 +21,39 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1efc815873a3018f8f8350e2bf24440ca0204fa9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1312312718a082aaf5b7f6a1e798d29db83a8bb8
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733783"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072184"
 ---
 # <a name="sysdmexeccachedplandependentobjects-transact-sql"></a>sys.dm_exec_cached_plan_dependent_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt eine Zeile für jeden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Ausführungsplan, CLR-Ausführungsplan (Common Language Runtime) und einem Plan zugeordneten Cursor zurück.  
+  Gibt eine Zeile für jeden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Ausführungsplan, CLR-Ausführungsplan (Common Language Runtime) und einem Plan zugeordneten Cursor zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-dm_exec_cached_plan_dependent_objects(plan_handle)  
+sys.dm_exec_cached_plan_dependent_objects(plan_handle)  
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *plan_handle*  
- Führt eine eindeutige Identifizierung eines Abfrageausführungsplans für einen ausgeführten Batch aus, dessen Plan sich im Plancache befindet. *plan_handle* ist vom Datentyp **varbinary(64)**. *plan_handle* kann aus den folgenden dynamischen Verwaltungsobjekten abgerufen werden:  
+*plan_handle*  
+Führt eine eindeutige Identifizierung eines Abfrageausführungsplans für einen ausgeführten Batch aus, dessen Plan sich im Plancache befindet. *plan_handle* ist vom Datentyp **varbinary(64)**.   
+
+*plan_handle* kann aus den folgenden dynamischen Verwaltungsobjekten abgerufen werden:  
   
 -   [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
 -   [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
 -   [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+
+-   [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+
+-   [sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   

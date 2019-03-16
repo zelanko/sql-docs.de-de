@@ -21,17 +21,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8df3c13b42df1b842d784fedd1720d2e9bfc258
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 04d221372a0d91ed45ba339c1077ea1be68542df
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626389"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072354"
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt die zusammengefasste Leistungsstatistik für zwischengespeicherte Abfragepläne in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zurück. Diese Sicht enthält eine Zeile pro Abfrageanweisung innerhalb des zwischengespeicherten Plans, und die Lebensdauer der Zeilen ist an den Plan selbst gebunden. Wenn ein Plan aus dem Cache entfernt wird, werden die entsprechenden Zeilen aus dieser Sicht entfernt.  
+Gibt die zusammengefasste Leistungsstatistik für zwischengespeicherte Abfragepläne in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zurück. Diese Sicht enthält eine Zeile pro Abfrageanweisung innerhalb des zwischengespeicherten Plans, und die Lebensdauer der Zeilen ist an den Plan selbst gebunden. Wenn ein Plan aus dem Cache entfernt wird, werden die entsprechenden Zeilen aus dieser Sicht entfernt.  
   
 > [!NOTE]
 > Erste Abfrage von **Sys. dm_exec_query_stats** kann zu ungenauen Ergebnissen führen, wenn eine arbeitsauslastung, die gerade ausgeführt wird, auf dem Server vorhanden ist. Erneutes Ausführen der Abfrage liefert unter Umständen genauere Ergebnisse.  
@@ -41,11 +41,11 @@ ms.locfileid: "53626389"
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**sql_handle**|**varbinary(64)**  |Ein Token, das auf den Batch oder die gespeicherte Prozedur verweist, dem bzw. der die Abfrage angehört.<br /><br /> **Sql_handle**zusammen mit **Statement_start_offset** und **Statement_end_offset**, können verwendet werden, um den SQL-Text der Abfrage abzurufen, indem die **sys.dm_exec_sql_ Text** dynamische Verwaltungsfunktion.|  
+|**sql_handle**|**varbinary(64)**  |Ist ein Token, das den Batch eindeutig identifiziert oder die gespeicherte Prozedur, die die Abfrage angehört.<br /><br /> **Sql_handle**zusammen mit **Statement_start_offset** und **Statement_end_offset**, können verwendet werden, um den SQL-Text der Abfrage abzurufen, indem die **sys.dm_exec_sql_ Text** dynamische Verwaltungsfunktion.|  
 |**statement_start_offset**|**int**|Gibt die Startposition der Abfrage, die in der Zeile beschrieben wird, beginnend mit 0 im Text des zugehörigen persistenten Objekts oder Batchobjekts an (in Bytes).|  
 |**statement_end_offset**|**int**|Gibt die Endposition der Abfrage, die in der Zeile beschrieben wird, beginnend mit 0 im Text des zugehörigen persistenten Objekts oder Batchobjekts an (in Bytes). Für Versionen vor [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], der Wert-1 gibt das Ende des Batches. Nachfolgende Kommentare sind nicht mehr enthalten.|  
 |**plan_generation_num**|**bigint**|Eine Sequenznummer, anhand der nach einer Neukompilierung zwischen einzelnen Instanzen von Plänen unterschieden werden kann.|  
-|**plan_handle**|**varbinary(64)**|Ein Token, das auf den kompilierten Plan verweist, dem die Abfrage angehört. Dieser Wert kann an übergeben werden die [Sys. dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) dynamische Verwaltungsfunktion, um den Abfrageplan abzurufen.<br /><br /> Ist immer 0x000, wenn eine systemintern kompilierte gespeicherte Prozedur eine speicheroptimierte Tabelle abfragt.|  
+|**plan_handle**|**varbinary(64)**|Ist ein Token, die eindeutig einen Abfrageplan für die Ausführung für einen Batch, die ausgeführt wurde und der Plan im Plancache befindet, oder wird gerade ausgeführt. Dieser Wert kann an übergeben werden die [Sys. dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) dynamische Verwaltungsfunktion, um den Abfrageplan abzurufen.<br /><br /> Ist immer 0x000, wenn eine systemintern kompilierte gespeicherte Prozedur eine speicheroptimierte Tabelle abfragt.|  
 |**creation_time**|**datetime**|Der Zeitpunkt, zu dem der Plan kompiliert wurde.|  
 |**last_execution_time**|**datetime**|Der Zeitpunkt, zu dem die Ausführung des Plans zuletzt gestartet wurde.|  
 |**execution_count**|**bigint**|Die Anzahl von Planausführungen seit der letzten Kompilierung.|  
@@ -78,7 +78,7 @@ ms.locfileid: "53626389"
 |**total_rows**|**bigint**|Die Gesamtanzahl der von der Abfrage zurückgegebenen Zeilen. Lässt keine NULL-Werte zu.<br /><br /> Ist immer 0, wenn eine systemintern kompilierte gespeicherte Prozedur eine speicheroptimierte Tabelle abfragt.|  
 |**last_rows**|**bigint**|Die Anzahl der bei der letzten Ausführung der Abfrage zurückgegebenen Zeilen. Lässt keine NULL-Werte zu.<br /><br /> Ist immer 0, wenn eine systemintern kompilierte gespeicherte Prozedur eine speicheroptimierte Tabelle abfragt.|  
 |**min_rows**|**bigint**|Minimale Anzahl von einmal während einer Ausführung der Abfrage zurückgegebenen Zeilen. Lässt keine NULL-Werte zu.<br /><br /> Ist immer 0, wenn eine systemintern kompilierte gespeicherte Prozedur eine speicheroptimierte Tabelle abfragt.|  
-|**Max_Rows**|**bigint**|Maximale Anzahl von einmal während einer Ausführung der Abfrage zurückgegebenen Zeilen. Lässt keine NULL-Werte zu.<br /><br /> Ist immer 0, wenn eine systemintern kompilierte gespeicherte Prozedur eine speicheroptimierte Tabelle abfragt.|  
+|**max_rows**|**bigint**|Maximale Anzahl von einmal während einer Ausführung der Abfrage zurückgegebenen Zeilen. Lässt keine NULL-Werte zu.<br /><br /> Ist immer 0, wenn eine systemintern kompilierte gespeicherte Prozedur eine speicheroptimierte Tabelle abfragt.|  
 |**statement_sql_handle**|**varbinary(64)**|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Mit nicht-NULL-Werte nur aufgefüllt, wenn Query Store aktiviert ist, und Sammeln von Statistiken für diese bestimmte Abfrage.|  
 |**statement_context_id**|**bigint**|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Mit nicht-NULL-Werte nur aufgefüllt, wenn Query Store aktiviert ist, und Sammeln von Statistiken für diese bestimmte Abfrage.|  
 |**total_dop**|**bigint**|Gesamtsumme der Grad an Parallelität verwendet dieses Plans seit der Kompilierung. Es wird immer 0 für die Abfrage einer speicheroptimierten Tabelle sein.<br /><br /> **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  

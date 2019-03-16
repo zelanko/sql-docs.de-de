@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 936bc010838b3869c567117a9e87cdc2c4ce6d52
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 1c98f6110aa6cc0bbb86f04a685211d7dc58447a
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596124"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072154"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Szenarios für Data Science und Lösungsvorlagen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,7 +56,7 @@ Jede Lösung enthält Beispieldaten, R-Code oder Python-Code und SQL gespeichert
 
 ## <a name="customer-churn"></a>Kundenabwanderung
 
-[Kundenabwanderung Vorhersagen Debitorenvorlage (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/Churn/Introduction.md)
+[Kundenabwanderung Vorhersagen Debitorenvorlage (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/Churn/README.md)
 
 **Was:** Analysieren und Vorhersagen von kundenabwanderung ist wichtig für jede Branche, in denen der Verlust von Kunden an Wettbewerber verwaltet und verhindert werden muss: Banking, Telekommunikation und im Einzelhandel, um nur einige zu nennen. Das Ziel der Abwanderungsanalyse ist es, zu identifizieren, welche Kunden möglicherweise abwandern und anschließend angemessene Maßnahmen einzuleiten, um diese Kunden zu behalten und weiterhin Geschäfte mit ihnen zu machen.
 
@@ -64,7 +64,7 @@ Jede Lösung enthält Beispieldaten, R-Code oder Python-Code und SQL gespeichert
   
 ## <a name="predictive-maintenance"></a>Vorbeugende Wartung
 
-[Vorlage zur vorbeugenden Wartung (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/Introduction.md)
+[Vorlage zur vorbeugenden Wartung (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/README.md)
 
 **Was:** Vorbeugende Wartung zielt darauf ab, erhöhen Sie die Effizienz von Wartungstasks, indem der Vergangenheit aufgetretene Fehler gesammelt, und verwenden diese Informationen, um vorherzusagen, wann oder wo bei einem Gerät möglicherweise Fehler auftreten. Die Möglichkeit Veraltung von Geräten vorherzusagen, ist besonders nützlich für Anwendungen, die auf verteilten Daten oder Sensoren basieren. Diese Methode kann auch zum Überwachen oder Vorhersagen Fehler in IoT (Internet of Things)-Geräte angewendet werden.
 
@@ -97,7 +97,7 @@ Zum Herunterladen der Dateien in den einzelnen Vorlagen können Sie GitHub-Befeh
   
 -   **R**: Enthält alle Entwicklungscodes von, die Sie für die Lösung benötigen. Die Projektmappe benötigt die Bibliotheken, die von Microsoft R Server bereitgestellt werden, doch sie kann in jeder beliebigen R-IDE geöffnet und bearbeitet werden. Der R-Code wurde optimiert, sodass Berechnungen „datenbankintern“ durch Festlegen des Computekontexts auf eine SQL Server-Instanz ausgeführt werden.
   
--   **"SQLR"**: Enthält mehrere SQL-Dateien, die Sie z. B. in einer SQL-Umgebung ausführen können [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] um die gespeicherten Prozeduren zu erstellen, die Aufgaben im Zusammenhang mit wie Datenverarbeitung, Featureentwicklung und modellbereitstellung.
+-   **SQLR**: Enthält mehrere SQL-Dateien, die Sie z. B. in einer SQL-Umgebung ausführen können [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] um die gespeicherten Prozeduren zu erstellen, die Aufgaben im Zusammenhang mit wie Datenverarbeitung, Featureentwicklung und modellbereitstellung.
   
     Der Ordner enthält außerdem ein PowerShell-Skript, das Sie ausführen können, um alle Skripts aufzurufen und die Ende-zu-Ende-Umgebung zu erstellen. Denken Sie daran, das Skript an Ihre Umgebung anzupassen.
 

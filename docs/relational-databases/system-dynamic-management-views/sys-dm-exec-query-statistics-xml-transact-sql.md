@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 8bb66c5bb9b4f69b32efd7761ae08677ee243fee
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 63e1d22670929448110083c31e9900e462d576bc
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044626"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072304"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -58,23 +58,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 ## <a name="remarks"></a>Hinweise
 Dieser Systemfunktion steht ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1. Finden Sie im KB [3190871](https://support.microsoft.com/en-us/help/3190871)
 
-Dieser Systemfunktion funktioniert sowohl **standard** und **einfache** abfrageausführungsstatistik profilerstellungsinfrastruktur.  
-  
-**Standard** profilerstellungsinfrastruktur Statistics kann mithilfe von aktiviert werden:
-  -  [SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md)
-  -  [SET STATISTICS PROFILE AUF](../../t-sql/statements/set-statistics-profile-transact-sql.md)
-  -  die `query_post_execution_showplan` erweiterte Ereignisse.  
-  
-**Lightweight** profilerstellungsinfrastruktur Statistiken finden Sie im [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 und kann aktiviert werden:
-  -  Global mit Trace flag 7412.
-  -  Mithilfe der [ *Query_thread_profile* ](https://support.microsoft.com/kb/3170113) erweiterte Ereignisse.
-  
-> [!NOTE]
-> Nach der Aktivierung von Ablaufverfolgungsflags 7412 lightweight-profilerstellung wird aktiviert werden, um alle Consumer von den Statistiken zur abfrageausführung profilerstellungsinfrastruktur anstelle der standard-profilerstellung, z. B. die DMV [dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md).
-> Standard-profilerstellung wird jedoch immer noch verwendet für die SET STATISTICS XML *Istplan enthalten* Aktion [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], und `query_post_execution_showplan` xEvent.
-
-> [!IMPORTANT]
-> In TPC-C wie workloadtests Fügt einen 1,5 bis 2 Prozent Mehraufwand hinzu, wenn Sie die einfache profilerstellung statistikinfrastruktur zu aktivieren. Im Gegensatz dazu kann die standardmäßigen profilerstellung statistikinfrastruktur bis zu 90 Prozent Mehraufwand für das gleiche Szenario für die Workload hinzufügen.
+Dieser Systemfunktion funktioniert sowohl **standard** und **einfache** abfrageausführungsstatistik profilerstellungsinfrastruktur. Weitere Informationen finden Sie unter [Profilerstellungsinfrastruktur für Abfragen](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md).  
 
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die `VIEW SERVER STATE`-Berechtigung auf dem Server.  

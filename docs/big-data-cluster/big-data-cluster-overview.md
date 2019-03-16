@@ -5,23 +5,23 @@ description: Informationen Sie zu SQL Server-2019 big Data-Clustern (Vorschau), 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 12/07/2018
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4e5f45d51e80753bb65e5fa1d620ca105af28344
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 996913979669aa85088d6d640436b5610293eb35
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241991"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072125"
 ---
 # <a name="what-are-sql-server-2019-big-data-clusters"></a>Was sind SQL Server-2019 big Data-Cluster?
 
 Beginnend mit [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], SQL Server-big Data-Cluster können Sie skalierbare HDFS, Spark und SQL Server-Container unter Kubernetes-Cluster bereitstellen. Diese Komponenten werden parallel ausgeführt, lesen, schreiben und Verarbeiten von big Data aus Transact-SQL oder Spark, kombinieren und analysieren Sie Ihre wertvollen relationale Daten mit hohem Volumen, big Data leicht zu können.
 
-Weitere Informationen zu neuen Features und bekannten Probleme für die neueste Version finden Sie unter den [Anmerkungen zu dieser Version](big-data-cluster-release-notes.md).
+Weitere Informationen zu neuen Features und bekannten Probleme für die neueste Version finden Sie unter den [Anmerkungen zu dieser Version](release-notes-big-data-cluster.md).
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -75,10 +75,11 @@ Eine SQL Server-big Data-Cluster ist ein Cluster mit Linux-Container, die von or
 Kubernetes ist ein open-Source-containerorchestrator, die containerbereitstellungen je nach Anforderungen skaliert werden kann. In der folgende Tabelle werden einige wichtige Begriffe für Kubernetes definiert:
 
 |||
-|--|--|
+|:--|:--|
 | **Cluster** | Ein Kubernetes-Cluster ist eine Gruppe von Computern, die als Knoten bezeichnet. Ein Knoten den Cluster steuert und ist den Masterknoten festgelegt; die verbleibenden Knoten sind Worker-Knoten. Der Kubernetes-Master ist verantwortlich für die Verteilung von Arbeit zwischen den Workern sicherzustellen und für die Überwachung der Integrität des Clusters. |
 | **Node** | Ein Knoten wird die Anwendungen in Containern ausgeführt. Es kann entweder auf einem physischen Computer oder auf einem virtuellen Computer sein. Ein Kubernetes-Cluster kann es sich um eine Mischung aus physischen Computer und VM-Knoten enthalten. |
 | **Pod** | Ein Pod-Typ ist der atomare Bereitstellungseinheit von Kubernetes. Ein Pod-Typ ist eine logische Gruppe von einem oder mehreren Containern – und die zugehörigen Ressourcen zum Ausführen einer Anwendung benötigt. Jedem Pod auf einem Knoten ausgeführt wird; ein Knoten kann einem oder mehreren Pods ausgeführt. Der Kubernetes-Master wird der Knoten im Cluster automatisch Pods zugewiesen. |
+| &nbsp; ||
 
 In SQL Server-big Data-Cluster ist Kubernetes verantwortlich für den Status der SQL Server-big Data-Cluster. Kubernetes erstellt und konfiguriert die Clusterknoten, weist der Pods zu Knoten und überwacht die Integrität des Clusters.
 

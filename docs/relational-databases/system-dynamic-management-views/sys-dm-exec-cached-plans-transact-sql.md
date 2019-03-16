@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f366e091cccad7dbc317093f090bf2547f95b1df
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8d23ba5a1fbb88bd430c1422019087a5df70c884
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411527"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072334"
 ---
 # <a name="sysdmexeccachedplans-transact-sql"></a>sys.dm_exec_cached_plans (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "52411527"
 |size_in_bytes|**int**|Anzahl von Bytes, die vom Cacheobjekt belegt werden.|  
 |memory_object_address|**varbinary(8)**|Speicheradresse des zwischengespeicherten Eintrags. Dieser Wert kann verwendet werden, mit [Sys. dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) zum Abrufen des zwischengespeicherten Plans und mit der arbeitsspeicheraufteilung [Sys. dm_os_memory_cache_entries](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)speicheraufteilung, um die Kosten für das Zwischenspeichern des Eintrags abzurufen.|  
 |cacheobjtype|**nvarchar(34)**|Typ des Objekts im Cache. Die folgenden Werte sind möglich:<br /><br /> Kompilierter Plan<br /><br /> Stub des kompilierten Plans<br /><br /> Analysestruktur<br /><br /> Erweiterte Prozedur<br /><br /> Kompilierte CLR-Funktion<br /><br /> Kompilierte CLR-Prozedur|  
-|objtype|**nvarchar(16)**|Typ des Objekts. Im folgenden sind die möglichen Werte und die entsprechenden Beschreibungen.<br /><br /> Proc: Gespeicherte Prozedur<br />Vorbereitet: Vorbereitete Anweisung<br />Ad-hoc: Ad-hoc-Abfrage. Bezieht sich auf [!INCLUDE[tsql](../../includes/tsql-md.md)] als Sprachereignisse mithilfe von gesendete **Osql** oder **Sqlcmd** anstatt als Remoteprozeduraufrufe.<br />ReplProc: Replikationsfilterprozedur<br />Trigger: Trigger<br />Ansicht "Allgemein" Sicht<br />Standard: Standard<br />UsrTab: Benutzertabelle<br />SysTab: Systemtabelle<br />Überprüfen: CHECK-Einschränkung<br />Regel: Rule|  
+|objtype|**nvarchar(16)**|Typ des Objekts. Im folgenden sind die möglichen Werte und die entsprechenden Beschreibungen.<br /><br /> Proc: Gespeicherte Prozedur<br />Vorbereitet: Vorbereitete Anweisung<br />Adhoc: Ad-hoc-Abfrage. Bezieht sich auf [!INCLUDE[tsql](../../includes/tsql-md.md)] als Sprachereignisse mithilfe von gesendete **Osql** oder **Sqlcmd** anstatt als Remoteprozeduraufrufe.<br />ReplProc: Replikationsfilterprozedur<br />Trigger: Trigger<br />Ansicht "Allgemein" Sicht<br />Standard: Standard<br />UsrTab: Benutzertabelle<br />SysTab: Systemtabelle<br />Überprüfen: CHECK-Einschränkung<br />Regel: Rule|  
 |plan_handle|**varbinary(64)**|Bezeichner für den speicherinternen Plan. Dieser Bezeichner ist vorübergehend und bleibt nur für die Dauer der Speicherung des Plans im Cache konstant. Dieser Wert kann mit den folgenden dynamischen Verwaltungsfunktionen verwendet werden:<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
 |pool_id|**int**|Die ID des Ressourcenpools, auf die sich diese Planspeicherauslastung bezieht.|  
 |pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
@@ -63,7 +63,7 @@ Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABA
 ### <a name="a-returning-the-batch-text-of-cached-entries-that-are-reused"></a>A. Zurückgeben des Batchtexts von zwischengespeicherten Einträgen, die wiederverwendet werden  
  Im folgenden Beispiel wird der SQL-Text aller zwischengespeicherten Einträge zurückgegeben, die mehr als einmal verwendet wurden.  
   
-```  
+```sql  
 SELECT usecounts, cacheobjtype, objtype, text   
 FROM sys.dm_exec_cached_plans   
 CROSS APPLY sys.dm_exec_sql_text(plan_handle)   
@@ -75,7 +75,7 @@ GO
 ### <a name="b-returning-query-plans-for-all-cached-triggers"></a>B. Zurückgeben von Abfrageplänen für alle zwischengespeicherten Trigger  
  Im folgenden Beispiel werden die Abfragepläne für alle zwischengespeicherten Trigger zurückgegeben.  
   
-```  
+```sql  
 SELECT plan_handle, query_plan, objtype   
 FROM sys.dm_exec_cached_plans   
 CROSS APPLY sys.dm_exec_query_plan(plan_handle)   
@@ -86,7 +86,7 @@ GO
 ### <a name="c-returning-the-set-options-with-which-the-plan-was-compiled"></a>C. Zurückgeben der SET-Optionen, mit denen der Plan kompiliert wurde  
  Im folgenden Beispiel werden die SET-Optionen zurückgegeben, mit denen der Plan kompiliert wurde. Die `sql_handle` für den Plan wird ebenfalls zurückgegeben. PIVOT-Operator wird verwendet, um die Ausgabe der `set_options` und `sql_handle` Attribute, die als Spalten und nicht als Zeilen. Weitere Informationen zu den zurückgegebenen Wert `set_options`, finden Sie unter [dm_exec_plan_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md).  
   
-```  
+```sql  
 SELECT plan_handle, pvt.set_options, pvt.sql_handle  
 FROM (  
       SELECT plan_handle, epa.attribute, epa.value   
@@ -101,7 +101,7 @@ GO
 ### <a name="d-returning-the-memory-breakdown-of-all-cached-compiled-plans"></a>D. Zurückgeben der Arbeitsspeicheraufteilung aller zwischengespeicherter kompilierter Pläne  
  Im folgenden Beispiel wird die Aufteilung des Arbeitsspeichers zurückgegeben, der von allen kompilierten Plänen im Zwischenspeicher verwendet wird.  
   
-```  
+```sql  
 SELECT plan_handle, ecp.memory_object_address AS CompiledPlan_MemoryObject,   
     omo.memory_object_address, type, page_size_in_bytes   
 FROM sys.dm_exec_cached_plans AS ecp   
@@ -119,7 +119,7 @@ GO
  [sys.dm_exec_plan_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)   
  [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
  [sys.dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)   
- [Sys. dm_os_memory_cache_entries &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)   
+ [sys.dm_os_memory_cache_entries &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
   
