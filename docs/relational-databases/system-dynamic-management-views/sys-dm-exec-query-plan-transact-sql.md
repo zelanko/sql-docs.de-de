@@ -19,40 +19,43 @@ ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fe063150263b5611c9920ee1a4fb3a3bd8c85b2f
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: cb77a386ac0c7aa4fe6246b04723227b68ffa455
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56956011"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58080252"
 ---
 # <a name="sysdmexecqueryplan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt für den vom Planhandle angegebenen Batch den Showplan im XML-Format zurück. Der vom Planhandle angegebene Plan ist möglicherweise zwischengespeichert oder wird gerade ausgeführt.  
+Gibt für den vom Planhandle angegebenen Batch den Showplan im XML-Format zurück. Der vom Planhandle angegebene Plan ist möglicherweise zwischengespeichert oder wird gerade ausgeführt.  
   
- Das XML-Schema für den Showplan ist veröffentlicht und auf [dieser Microsoft-Website](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)verfügbar. Es ist auch in dem Verzeichnis verfügbar, in dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist.  
+Das XML-Schema für den Showplan ist veröffentlicht und auf [dieser Microsoft-Website](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)verfügbar. Es ist auch in dem Verzeichnis verfügbar, in dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-sys.dm_exec_query_plan ( plan_handle )  
+sys.dm_exec_query_plan(plan_handle)  
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *plan_handle*  
- Identifiziert eindeutig einen Abfrageplan für einen Batch, der zwischengespeichert ist oder gerade ausgeführt wird.  
+*plan_handle*  
+Ist ein Token, die eindeutig einen Abfrageplan für die Ausführung für einen Batch, die ausgeführt wurde und der Plan im Plancache befindet, oder wird gerade ausgeführt. *plan_handle* ist **varbinary(64)**   
+
+*plan_handle* kann aus den folgenden dynamischen Verwaltungsobjekten abgerufen werden:
   
- *plan_handle* ist **varbinary(64)** *plan_handle* kann von den folgenden dynamischen Verwaltungsobjekten abgerufen werden:  
+-   [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
- [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
+-   [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
- [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
-  
- [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+-   [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+
+-   [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+
+-   [sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
@@ -78,7 +81,7 @@ sys.dm_exec_query_plan ( plan_handle )
  Aufgrund einer Beschränkung der im **xml** -Datentyp zulässigen Anzahl geschachtelter Ebenen kann **sys.dm_exec_query_plan** keine Abfragepläne zurückgeben, die 128 oder mehr Ebenen geschachtelter Elemente aufweisen. In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verhinderte diese Bedingung das Zurückgeben des Abfrageplans, wobei der Fehler 6335 generiert wurde. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 und höheren Versionen gibt die **query_plan** -Spalte NULL zurück. Sie können die [Sys. dm_exec_text_query_plan &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md) dynamische Verwaltungsfunktion, um die Ausgabe des Abfrageplans im Textformat zurückgeben.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Zum Ausführen von **sys.dm_exec_query_plan**muss ein Benutzer Mitglied der festen Serverrolle **sysadmin** sein oder über die VIEW SERVER STATE-Berechtigung auf dem Server verfügen.  
+ Auszuführende **Sys. dm_exec_query_plan**, ein Benutzer muss ein Mitglied der **Sysadmin** festen Serverrolle oder über die `VIEW SERVER STATE` Berechtigung auf dem Server.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die Verwendung der dynamischen Verwaltungssicht **sys.dm_exec_query_plan** gezeigt.  
@@ -95,7 +98,7 @@ sys.dm_exec_query_plan ( plan_handle )
   
  Rufen Sie zunächst die Serverprozess-ID (SPID) für den Prozess ab, der die Abfrage oder den Batch ausführt, indem Sie die gespeicherte Prozedur `sp_who` verwenden:  
   
-```  
+```sql  
 USE master;  
 GO  
 exec sp_who;  
@@ -104,7 +107,7 @@ GO
   
  Das von `sp_who` zurückgegebene Resultset gibt die SPID `54`an. Verwenden Sie die SPID nun mit der dynamischen Verwaltungssicht `sys.dm_exec_requests` , um das Planhandle mithilfe der folgenden Abfrage abzurufen:  
   
-```  
+```sql  
 USE master;  
 GO  
 SELECT * FROM sys.dm_exec_requests  
@@ -114,39 +117,44 @@ GO
   
  In der von **sys.dm_exec_requests** zurückgegebenen Tabelle wird angezeigt, dass das Planhandle für die langsam ausgeführte Abfrage oder den Batch `0x06000100A27E7C1FA821B10600`lautet. Geben Sie diesen Wert als *plan_handle* -Argument mit `sys.dm_exec_query_plan` an, um den Ausführungsplan im XML-Format wie folgt abzurufen. Der Ausführungsplan im XML-Format für die langsam ausgeführte Abfrage oder den Batch ist in der **query_plan** -Spalte der von `sys.dm_exec_query_plan`zurückgegebenen Tabelle enthalten.  
   
-```  
+```sql  
 USE master;  
 GO  
-SELECT * FROM sys.dm_exec_query_plan (0x06000100A27E7C1FA821B10600);  
+SELECT * 
+FROM sys.dm_exec_query_plan (0x06000100A27E7C1FA821B10600);  
 GO  
 ```  
   
 ### <a name="b-retrieve-every-query-plan-from-the-plan-cache"></a>B. Abrufen jedes einzelnen Abfrageplans aus dem Plancache  
  Wenn Sie eine Momentaufnahme aller im Plancache gespeicherten Abfragen abrufen möchten, rufen Sie die Planhandles aller Abfragepläne im Cache ab, indem Sie die dynamische Verwaltungssicht `sys.dm_exec_cached_plans` abfragen. Die Planhandles sind in der `plan_handle` -Spalte von `sys.dm_exec_cached_plans`gespeichert. Verwenden Sie dann den CROSS APPLY-Operator, um die Planhandles wie folgt an `sys.dm_exec_query_plan` zu übergeben. Die XML-Showplanausgabe für jeden aktuell im Plancache gespeicherten Plan wird in der `query_plan` -Spalte der zurückgegebenen Tabelle angezeigt.  
   
-```  
+```sql  
 USE master;  
 GO  
-SELECT * FROM sys.dm_exec_cached_plans cp CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle);  
+SELECT * 
+FROM sys.dm_exec_cached_plans AS cp 
+CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle);  
 GO  
 ```  
   
 ### <a name="c-retrieve-every-query-plan-for-which-the-server-has-gathered-query-statistics-from-the-plan-cache"></a>C. Abrufen jedes einzelnen Abfrageplans aus dem Plancache, für den der Server eine Abfragestatistik erfasst hat  
  Wenn Sie eine Momentaufnahme aller im Plancache gespeicherten Abfragen abrufen möchten, für die der Server eine Statistik erfasst hat, rufen Sie die Planhandles dieser Pläne im Cache ab, indem Sie die dynamische Verwaltungssicht `sys.dm_exec_query_stats` abfragen. Die Planhandles sind in der `plan_handle` -Spalte von `sys.dm_exec_query_stats`gespeichert. Verwenden Sie dann den CROSS APPLY-Operator, um die Planhandles wie folgt an `sys.dm_exec_query_plan` zu übergeben. Die XML-Showplanausgabe für jeden aktuell im Plancache gespeicherten Plan, für den der Server eine Statistik erfasst hat, wird in der `query_plan` -Spalte der zurückgegebenen Tabelle angezeigt.  
   
-```  
+```sql  
 USE master;  
 GO  
-SELECT * FROM sys.dm_exec_query_stats qs CROSS APPLY sys.dm_exec_query_plan(qs.plan_handle);  
+SELECT * 
+FROM sys.dm_exec_query_stats AS qs 
+CROSS APPLY sys.dm_exec_query_plan(qs.plan_handle);  
 GO  
 ```  
   
 ### <a name="d-retrieve-information-about-the-top-five-queries-by-average-cpu-time"></a>D. Abrufen von Informationen zu den fünf Abfragen mit dem höchsten durchschnittlichen CPU-Zeitaufwand  
  Im folgenden Beispiel werden die Pläne und die durchschnittliche CPU-Zeit für die fünf Abfragen mit der höchsten durchschnittlichen CPU-Zeit zurückgegeben.  
   
-```  
+```sql  
 SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
-Plan_handle, query_plan   
+   plan_handle, query_plan   
 FROM sys.dm_exec_query_stats AS qs  
 CROSS APPLY sys.dm_exec_query_plan(qs.plan_handle)  
 ORDER BY total_worker_time/execution_count DESC;  
@@ -163,4 +171,3 @@ GO
  [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
   
   
-
