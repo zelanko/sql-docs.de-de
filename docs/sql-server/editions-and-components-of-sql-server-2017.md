@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 79280cd1e9499cf9a76f50c6aad255dbd3db81ef
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: db8b22746702fa0df86478dadee700938cd63c40
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556172"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974499"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Editionen und unterstützten Funktionen von SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -195,6 +195,8 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |NUMA-basierter und großer Arbeitsspeicher für umfangreiche Seiten und Zuordnung von Pufferarrays|Ja|Nein|Nein|Nein|Nein|
 |Pufferpoolerweiterung|Ja|Ja|Nein|Nein|Nein|
 |Ressourcenkontrolle für E/A-Vorgänge|Ja|Nein|Nein|Nein|Nein|  
+|Vorauslesen (Read-Ahead)|Ja|Nein|Nein|Nein|Nein|
+|Erweitertes Scannen|Ja|Nein|Nein|Nein|Nein|
 |Verzögerte Dauerhaftigkeit|Ja|Ja|Ja|Ja|Ja|
 |Automatische Optimierung|Ja|Nein|Nein|Nein|Nein|
 |Adaptive Joins im Batchmodus|Ja|Nein|Nein|Nein|Nein|
@@ -407,7 +409,3 @@ Informationen über die Business Intelligence-Clientfeatures, die von den einzel
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
-
-
-
-Dies ist ein Test.

@@ -33,12 +33,12 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 78a5b1462316f859339f5922a0fa9aa098c6e854
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: a5c0b2714637068f72aa9e8caf7f7213c865131f
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803285"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974479"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>Editionen und unterstützte Funktionen von SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,9 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |Mehrere FILESTREAM-Container|Ja|Ja <sup>2</sup>|Ja <sup>2</sup>|Ja <sup>2</sup>|Ja <sup>2</sup>|
 |NUMA-basierter und großer Arbeitsspeicher für umfangreiche Seiten und Zuordnung von Pufferarrays|Ja|Nein <sup>4</sup>|Nein|Nein|Nein|
 |Pufferpoolerweiterung|Ja|Ja|Nein|Nein|Nein|
-|Ressourcenkontrolle für E/A-Vorgänge|Ja|Nein|Nein|Nein|Nein|  
+|Ressourcenkontrolle für E/A-Vorgänge|Ja|Nein|Nein|Nein|Nein|
+|Vorauslesen (Read-Ahead)|Ja|Nein|Nein|Nein|Nein|
+|Erweitertes Scannen|Ja|Nein|Nein|Nein|Nein|
 |Verzögerte Dauerhaftigkeit|Ja|Ja|Ja|Ja|Ja|
 
 <sup>1</sup> Die Größe der In-Memory OLTP-Daten und des Columnstore-Segmentcaches sind auf die Größe des Arbeitsspeichers beschränkt, die von der Edition im Bereich Kapazitätsgrenzen festgelegt wird. Den maximale Grad an Parallelität ist beschränkt. Der Grad an Prozessparallelität (Degree of Parallelism, DOP) für eine Indexerstellung ist auf 2 DOP für die Standard Edition und auf 1 DOP für die Web und die Express Edition beschränkt. Dies gilt für Columnstore-Indizes, die über datenträgerbasierte Tabellen und speicheroptimierte Tabellen erstellt wurden.
