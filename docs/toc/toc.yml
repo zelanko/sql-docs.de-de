@@ -50,7 +50,7 @@ items:
       href: ../big-data-cluster/big-data-cluster-overview.md
     - name: Versionshinweise
       href: ../big-data-cluster/big-data-cluster-release-notes.md
-  - name: Install
+  - name: Installieren
     items:
     - name: Installieren von Tools
       items:
@@ -825,7 +825,7 @@ items:
       items:
       - name: Konfiguration
         items:
-        - name: UPGRADE
+        - name: Aktualisieren
           href: ../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md
         - name: Quorummodi und Abstimmungen
           href: ../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md
@@ -877,7 +877,7 @@ items:
               href: ../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md
             - name: 'Beispiel: Konfiguration mit Zertifikaten (T-SQL)'
               href: ../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md
-          - name: UPGRADE
+          - name: Aktualisieren
             href: ../database-engine/database-mirroring/upgrading-mirrored-instances.md
           - name: Entfernen der Spiegelung
             href: ../database-engine/database-mirroring/remove-database-mirroring-sql-server.md
@@ -2117,7 +2117,7 @@ items:
         href: ../relational-databases/extended-stored-procedures-programming/creating-extended-stored-procedures.md
       - name: Ausführungsmerkmale
         href: ../relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md
-      - name: Dataseteigenschaften
+      - name: Abfrage
         href: ../relational-databases/extended-stored-procedures-programming/querying-extended-stored-procedures-installed-in-sql-server.md
       - name: Entfernen
         href: ../relational-databases/extended-stored-procedures-programming/removing-an-extended-stored-procedure-from-sql-server.md
@@ -2419,7 +2419,7 @@ items:
         href: ../relational-databases/native-client/applications/connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md
       - name: Funktion „ConnectionValidSharedMemory“ in dbmslpcn.dll von Shared Memory
         href: ../relational-databases/native-client/applications/connectionvalidsharedmemory-function-in-dbmslpcn-dll-shared-memory.md
-      - name: Install
+      - name: Installieren
         href: ../relational-databases/native-client/applications/installing-sql-server-native-client.md
       - name: Richtlinien zur Unterstützung
         href: ../relational-databases/native-client/applications/support-policies-for-sql-server-native-client.md
@@ -3940,6 +3940,11 @@ items:
     href: ../relational-databases/sql-server-index-design-guide.md
   - name: Architektur von Seiten und Erweiterungen
     href: ../relational-databases/pages-and-extents-architecture-guide.md
+    items:
+    - name: Lesen von Seiten
+      href: ../relational-databases/reading-pages.md
+    - name: Schreiben von Seiten
+      href: ../relational-databases/writing-pages.md
   - name: Überprüfung und Optimierung nach der Migration
     href: ../relational-databases/post-migration-validation-and-optimization-guide.md
   - name: Architektur der Abfrageverarbeitung
@@ -3952,11 +3957,6 @@ items:
     href: ../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
   - name: Architektur der Speicherverwaltung
     href: ../relational-databases/memory-management-architecture-guide.md
-    items:
-    - name: Lesen von Seiten
-      href: ../relational-databases/reading-pages.md
-    - name: Schreiben von Seiten
-      href: ../relational-databases/writing-pages.md
 - name: Installation
   href: redirectfrom-installation-10.md
   items:
@@ -4012,7 +4012,7 @@ items:
       href: ../database-engine/install-windows/install-sql-server-database-engine.md
     - name: SQL Server-Replikation
       href: ../database-engine/install-windows/install-sql-server-replication.md
-    - name: SQL Server-PowerShell
+    - name: SQL Server PowerShell
       href: ../database-engine/install-windows/install-sql-server-powershell.md
     - name: SQL Server mit SMB-Dateifreigabe als Speicheroption
       href: ../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md
@@ -4397,6 +4397,7 @@ items:
       - name: Seite „Erweitert“
         href: ../database-engine/configure-windows/server-properties-advanced-page.md
 - name: Migrieren und Laden von Daten
+  href: ../toc/sectionfor-migrate-load-data-overall-sql-server.md
   items:
   - name: SQL Server Integration Services (SSIS) ++
     href: ../integration-services/index.md
@@ -6717,7 +6718,7 @@ items:
     - name: Abfragespeicher
       href: ../relational-databases/performance/monitoring-performance-by-using-the-query-store.md
       items:
-      - name: In-Memory OLTP
+      - name: In-Memory-OLTP
         href: ../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md
       - name: Bewährte Methoden
         href: ../relational-databases/performance/best-practice-with-the-query-store.md
@@ -7203,7 +7204,7 @@ items:
         href: ../relational-databases/polybase/polybase-scale-out-groups.md
     - name: Anleitungen
       items:
-      - name: Install
+      - name: Installieren
         items:
         - name: Install on Windows (Unter Windows installieren)
           href: ../relational-databases/polybase/polybase-installation.md
@@ -7219,7 +7220,7 @@ items:
             href: ../relational-databases/polybase/polybase-configuration.md
         - name: Azure Blob Storage
           href: ../relational-databases/polybase/polybase-configure-azure-blob-storage.md
-        - name: SQL Server
+        - name: SQL Server
           href: ../relational-databases/polybase/polybase-configure-sql-server.md
         - name: Oracle
           href: ../relational-databases/polybase/polybase-configure-oracle.md
@@ -7277,7 +7278,7 @@ items:
         href: ../relational-databases/search/get-started-with-full-text-search.md
       - name: Veraltete Features in SQL Server 2016
         href: ../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md
-    - name: Dataseteigenschaften
+    - name: Abfrage
       href: ../relational-databases/search/query-with-full-text-search.md
       items:
       - name: Suchen von Wörtern in der Nähe eines anderen Worts mit NEAR
@@ -7959,7 +7960,7 @@ items:
       items:
       - name: Hierarchy
         href: ../relational-databases/security/encryption/encryption-hierarchy.md
-      - name: Transparente Datenverschlüsselung (TDE)
+      - name: TDE (Transparent Data Encryption)
         href: ../relational-databases/security/encryption/transparent-data-encryption.md
       - name: TDE mit Azure SQL-Datenbank +
         href: /azure/sql-database/transparent-data-encryption-azure-sql
@@ -8009,7 +8010,7 @@ items:
   - name: Azure Data Studio
     href: ../azure-data-studio/what-is.md
     items:
-    - name: Install
+    - name: Installieren
       href: ../azure-data-studio/download.md
     - name: Versionshinweise
       href: ../azure-data-studio/release-notes-azure-data-studio.md
@@ -8211,12 +8212,12 @@ items:
   - name: Distributed Replay
     href: ../tools/distributed-replay/sql-server-distributed-replay.md
     items:
-    - name: Install
+    - name: Installieren
       href: ../tools/distributed-replay/install-distributed-replay-overview.md
       items:
       - name: Anforderungen
         href: ../tools/distributed-replay/distributed-replay-requirements.md
-      - name: Install
+      - name: Installieren
         href: ../tools/distributed-replay/install-distributed-replay.md
       - name: Ausführen der Schritte nach der Installation
         href: ../tools/distributed-replay/complete-the-post-installation-steps.md
@@ -8420,22 +8421,14 @@ items:
     items:
     - name: Herunterladen von SSDT
       href: ../ssdt/download-sql-server-data-tools-ssdt.md
-    - name: Übersicht
-      items:
-      - name: Änderungsprotokoll für SSDT
-        href: ../ssdt/changelog-for-sql-server-data-tools-ssdt.md
-      - name: Data-Tier Application Framework – Lizenzbedingungen
-        href: ../ssdt/data-tier-application-framework-license-terms.md
-      - name: Frühere Versionen von SSDT und SSDT-BI
-        href: ../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
-      - name: Azure Active Directory-Support
-        href: ../ssdt/azure-active-directory.md
-      - name: SQL Server-Tools
-        href: ../ssdt/sql-server-tools.md
-      - name: Lizenzbedingungen – SSDT
-        href: ../ssdt/sql-server-data-tools-license-terms.md
-      - name: Lizenzbedingungen – SSDT (VS 2017)
-        href: ../ssdt/sql-server-data-tools-license-terms-vs2017.md
+    - name: Änderungsprotokoll für SSDT
+      href: ../ssdt/changelog-for-sql-server-data-tools-ssdt.md
+    - name: Frühere Versionen von SSDT und SSDT-BI
+      href: ../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
+    - name: Azure Active Directory-Support
+      href: ../ssdt/azure-active-directory.md
+    - name: SQL Server-Tools
+      href: ../ssdt/sql-server-tools.md
     - name: Projektorientierte Offlinedatenbankentwicklung
       href: ../ssdt/project-oriented-offline-database-development.md
       items:
@@ -9775,8 +9768,6 @@ items:
           href: ../ssms/visual-db-tools/print-query-results-visual-database-tools.md
     - name: Ressourcen
       items:
-      - name: Lizenzbedingungen
-        href: ../ssms/sql-server-management-studio-license-terms.md
       - name: Benutzerhilfe in SSMS
         href: ../ssms/user-assistance-in-sql-server-management-studio.md
       - name: Anonyme Nutzungsdaten
@@ -9918,7 +9909,7 @@ items:
       href: ../relational-databases/sqltoolsvsnativehelpers-framewindowvisible.md
 - name: Lernprogramme
   items:
-  - name: SQL Server
+  - name: SQL Server
     href: ../sql-server/tutorials-for-sql-server-2016.md
   - name: Datenbank-Engine
     href: ../relational-databases/database-engine-tutorials.md
@@ -10009,7 +10000,7 @@ items:
       href: ../linux/sql-server-linux-replication-tutorial-tsql.md
   - name: Konzepte
     items:
-    - name: Install
+    - name: Installieren
       items:
       - name: Installieren von SQL Server
         href: ../linux/sql-server-linux-setup.md
@@ -11322,10 +11313,6 @@ items:
         href: ../powershell/encode-and-decode-sql-server-identifiers.md
       - name: Escape-Bezeichner für SQL Server
         href: ../powershell/escape-sql-server-identifiers.md
-    - name: Ressourcen
-      items:
-      - name: Lizenzbedingungen für SQL Server PowerShell
-        href: ../powershell/sql-server-powershell-license-terms.md
     - name: Cmdlet-Referenz
       items:
       - name: SqlServer-Cmdlets
@@ -11961,6 +11948,10 @@ items:
         href: ../relational-databases/system-catalog-views/sys-pdw-table-distribution-properties-transact-sql.md
       - name: sys.pdw_table_mappings
         href: ../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md
+      - name: sys.workload-management-workload-classifier-details
+        href: ../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md
+      - name: sys.workload-management-workload-classifiers
+        href: ../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md
     - name: Stretch Database
       items:
       - name: sys.remote_data_archive_databases
@@ -12072,7 +12063,7 @@ items:
   - name: Dynamische Systemverwaltungssichten
     href: ../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md
     items:
-    - name: AlwaysOn-Verfügbarkeitsgruppen
+    - name: Always On-Verfügbarkeitsgruppen
       href: ../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md
       items:
       - name: sys.dm_hadr_auto_page_repair
@@ -12651,7 +12642,7 @@ items:
   - name: Systemfunktionen
     href: ../relational-databases/system-functions/system-functions-for-transact-sql.md
     items:
-    - name: AlwaysOn-Verfügbarkeitsgruppen
+    - name: Always On-Verfügbarkeitsgruppen
       href: ../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md
       items:
       - name: sys.fn_hadr_is_primary_replica
@@ -16301,7 +16292,7 @@ items:
         items:
         - name: Join
           href: ../t-sql/queries/hints-transact-sql-join.md
-        - name: Dataseteigenschaften
+        - name: Abfrage
           href: ../t-sql/queries/hints-transact-sql-query.md
         - name: Hinweise –Tabelle
           href: ../t-sql/queries/hints-transact-sql-table.md
@@ -16639,6 +16630,8 @@ items:
           href: ../t-sql/statements/create-user-transact-sql.md
         - name: VIEW
           href: ../t-sql/statements/create-view-transact-sql.md
+        - name: WORKLOAD CLASSIFIER
+          href: ../t-sql/statements/create-workload-classifier-transact-sql.md
         - name: WORKLOAD GROUP
           href: ../t-sql/statements/create-workload-group-transact-sql.md
         - name: XML INDEX
@@ -16781,6 +16774,8 @@ items:
           href: ../t-sql/statements/drop-user-transact-sql.md
         - name: VIEW
           href: ../t-sql/statements/drop-view-transact-sql.md
+        - name: WORKLOAD CLASSIFIER
+          href: ../t-sql/statements/drop-workload-classifier-transact-sql.md
         - name: WORKLOAD GROUP
           href: ../t-sql/statements/drop-workload-group-transact-sql.md
         - name: XML SCHEMA COLLECTION
@@ -17183,9 +17178,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: Handhabung von Namespaces in XQuery
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: c1bcf717605ff5c3cd1cf5722154fe518721c9e6
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: d658d240d44697d6d3632142b1d4034468ffc91f
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579790"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57974569"

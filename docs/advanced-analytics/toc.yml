@@ -23,7 +23,7 @@ items:
     href: ../advanced-analytics/java/java-first-sample.md
   - name: Java- und SQL-Datentypen
     href: ../advanced-analytics/java/java-sql-datatypes.md
-- name: Install
+- name: Installieren
   items:
   - name: Unterschiede in SQL Server 2019
     href: ../advanced-analytics/install/sql-machine-learning-services-ver15.md
@@ -228,6 +228,10 @@ items:
       href: ../advanced-analytics/r/creating-multiple-models-using-rxexecby.md
   - name: Bereitstellen
     items:
+    - name: Operationalisieren mithilfe von gespeicherten Prozeduren
+      href: ../advanced-analytics/r/operationalizing-your-r-code.md
+    - name: Erstellen von SSIS- und SSRS-Workflows mit R
+      href: ../advanced-analytics/r/creating-workflows-that-use-r-in-sql-server.md
     - name: Konvertieren von R-Code für SQL Server
       href: ../advanced-analytics/r/converting-r-code-for-use-in-sql-server.md
     - name: Erstellen einer gespeicherten Prozedur mithilfe von sqlrutils
@@ -315,23 +319,9 @@ items:
       href: ../advanced-analytics/common-issues-external-script-execution.md
     - name: Skripterstellungsfehler in R
       href: ../advanced-analytics/r-script-execution-errors.md
-  - name: Blogs
-    items:
-    - name: SQL Server +
-      href: https://blogs.technet.microsoft.com/dataplatforminsider/
-    - name: R Server +
-      href: https://blogs.msdn.microsoft.com/microsoftrservertigerteam/
-    - name: Machine Learning +
-      href: https://blogs.technet.microsoft.com/machinelearning/
-  - name: Foren
-    items:
-    - name: SQL Server +
-      href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
-    - name: Machine Learning Server +
-      href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=MicrosoftR
-ms.openlocfilehash: 643bd99806e6af28c115a5de087d5719adcf152f
-ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
+ms.openlocfilehash: e442194899dcae6fd9c30d57af763bb67791c20f
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57401802"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57976360"
