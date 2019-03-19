@@ -11,16 +11,47 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b481151636db4f54212c96b0ea21f989afb917d3
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 746f3d97ed0157f6b97128dbfdf1b88a5276062c
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57581671"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161627"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Anmerkungen zu dieser Version für Azure Data Studio
 
 **[Herunterladen Sie und installieren Sie die neueste Version.](download.md)**
+
+## <a name="march-2019"></a>März 2019
+
+18 März 2019 &nbsp;  /  &nbsp; Version: 1.5.1
+
+&nbsp;
+
+| Ändern | Details |
+| :----- | :------ |
+| Hinzugefügt [PostgreSQL-Erweiterung für Azure Data Studio](postgres-extension.md) | Unterstützte Funktionen: <br/>&bull; &nbsp; Dialogfeld "Verbindung" <br/>&bull; &nbsp; Objekt-Explorer <br/>&bull; &nbsp; Abfrage-Editor <br/>&bull; &nbsp; Diagrammerstellung <br/>&bull; &nbsp; Dashboards <br/>&bull; &nbsp; Codeausschnitte <br/>&bull; &nbsp; Bearbeiten von Daten <br/>&bull; &nbsp; Notebooks |
+| Zusätzliche SQL-Notebooks | SQL-Kernel-Unterstützung für integrierte Notebook Anzeige hinzugefügt: <br/>&bull; &nbsp; Unterstützt die T-SQL <br/>&bull; &nbsp; Support PGSQL |
+| Zusätzliche PowerShell-Erweiterung  | Bietet über die [PowerShell-Erweiterung](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) von Visual Studio Code auftreten.  |
+| Hinzugefügte SQL Server-Erweiterung DACPAC-Datei  | Entfernt Datenebenen-Anwendungs-Assistent von SQL Server-Import-Erweiterung in eine neue Erweiterung an.  |
+| Hinzugefügte Community Extensions QueryPlan.show | Integration unterstützt, um Abfragepläne zu visualisieren.  |
+| Aktualisierte 2019-Vorschau von SQL Server-Erweiterung | &bull; &nbsp; Unterstützung für Jupyter-Notebook, insbesondere Python3 und Spark-Kernel, wurden in der Core-Studio für Azure Data-Tool verschoben. <br/>&bull; &nbsp; Fehlerbehebungen für den Assistenten für externe Daten  |
+| Behobene Fehler und Probleme. | Finden Sie unter [Fehlern und Problemen, die auf GitHub](https://github.com/Microsoft/azuredatastudio/milestone/25?closed=1). |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Bekannte Probleme
+- [#4427](https://github.com/Microsoft/azuredatastudio/issues/4427): Klicken auf die Zelle vor der Kernel bereit ist für die Spark-Ergebnisse in Schwerwiegender Fehler **dieses Problem zu umgehen:** Warten Sie, bis der Kernel geladen werden, bis alle Zellen ausführen
+- [#4493](https://github.com/Microsoft/azuredatastudio/issues/4493): ANZEIGEN, die aus SSMS mit der SQL-Auth - eingabeaufforderungen Benutzer das Kennwort gestartet **dieses Problem zu umgehen:** Verwenden Sie jetzt Windows-Authentifizierung. 
+- [#4494](https://github.com/Microsoft/azuredatastudio/issues/4494): Kann nicht zum Installieren von SQL-Notebook-Funktion <br/>
+**Problemumgehung:** Führen Sie die Schritte zur problemumgehung [hier](https://github.com/Microsoft/azuredatastudio/issues/4494#issuecomment-473043832). 
+- [#4503](https://github.com/Microsoft/azuredatastudio/issues/4503): Azure Data Studio darf nicht direkt geöffnet, aus dem Ordner "Downloads" (Mac) sein. <br />
+**Problemumgehung:** Starten Sie Computer nach dem Entpacken der app neu. Wird untersucht werden. 
+- [#4539](https://github.com/Microsoft/azuredatastudio/issues/4539):  Verliert Notebooks speichern als Verbindungskontext <br />
+**Problemumgehung:** Wird in der nächsten Version behoben werden. 
+- [#4458](https://github.com/Microsoft/azuredatastudio/issues/4458): Extrahieren der DACPAC-Datei abstürzt SqlToolsService, wenn ungültige Version verwendet wird <br/>
+**Problemumgehung:** Starten Sie Studio für Azure Data, und stellen Sie sicher, dass die richtige Version verwendet wird.
+- Neue Symbole für Notebooks und Notizbuch öffnen verloren. <br/> 
+**Problemumgehung:** Die legacy-Verbindungstyp ist veraltet. Es wird empfohlen, eine Verbindung mit der SQL Server-Endpunkt, und erhalten Sie alle Aktionen (neues Notizbuch, Spark-Auftrag) wie erwartet. 
 
 ## <a name="february-2019"></a>Februar 2019
 
