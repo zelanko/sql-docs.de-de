@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 11/28/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: jrasnick
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
@@ -18,14 +18,16 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0eae7da31570855ac60552aa95a8f1f3d7864cd0
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: 1c2fe6751662ece91fac02f026f36f1733f0d612
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801534"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57988796"
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 Eine Tabellenwertfunktion, die eine Zeichenfolge basierend auf einem angegebenen Trennzeichen in Zeilen mit Teilzeichenfolgen unterteilt.
@@ -39,12 +41,13 @@ Unter [Anzeigen oder Ändern des Kompatibilitätsgrads einer Datenbank](../../re
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
-  
-```  
+
+```sql
 STRING_SPLIT ( string , separator )  
-```  
-  
-## <a name="arguments"></a>Argumente  
+```
+
+## <a name="arguments"></a>Argumente
+
  *Zeichenfolge*  
  Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines beliebigen Zeichentyps (z.B. **nvarchar**, **varchar**, **nchar** oder **char**).  
   
@@ -82,20 +85,22 @@ Bei einer praktischen Ausführung hat die vorstehende SELECT-Anweisung die folge
 
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-split-comma-separated-value-string"></a>A. Teilen einer Zeichenfolge mit durch Trennzeichen getrennten Werten (CSV)  
+### <a name="a-split-comma-separated-value-string"></a>A. Teilen einer Zeichenfolge mit durch Trennzeichen getrennten Werten (CSV)
+
 Analysieren einer durch Komma getrennten Liste von Werten und Zurückgeben aller nicht leeren Token:  
-  
-```sql  
+
+```sql
 DECLARE @tags NVARCHAR(400) = 'clothing,road,,touring,bike'  
   
 SELECT value  
 FROM STRING_SPLIT(@tags, ',')  
-WHERE RTRIM(value) <> '';  
-```  
-  
+WHERE RTRIM(value) <> '';
+```
+
 STRING_SPLIT gibt eine leere Zeichenfolge zurück, wenn zwischen dem Trennzeichen nichts vorhanden ist. Die Bedingung RTRIM(value) <> '' entfernt leere Token.  
   
-### <a name="b-split-comma-separated-value-string-in-a-column"></a>B. Teilen einer Zeichenfolge mit durch Trennzeichen getrennten Werten in einer Spalte  
+### <a name="b-split-comma-separated-value-string-in-a-column"></a>B. Teilen einer Zeichenfolge mit durch Trennzeichen getrennten Werten in einer Spalte
+
 Die Produkttabelle verfügt über eine Spalte mit einer durch Komma getrennte Liste von Tags, wie in diesem Beispiel dargestellt wird:  
   
 |ProductId|Name|Tags|  
@@ -105,13 +110,13 @@ Die Produkttabelle verfügt über eine Spalte mit einer durch Komma getrennte Li
 |3|HL Mountain Frame|bike,mountain|  
   
 Die folgende Abfrage wandelt jede Tagliste um und verknüpft sie mit der ursprünglichen Zeile:  
-  
+
 ```sql  
 SELECT ProductId, Name, value  
 FROM Product  
     CROSS APPLY STRING_SPLIT(Tags, ',');  
-```  
-  
+```
+
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 |ProductId|Name|Wert|  
@@ -127,9 +132,10 @@ FROM Product
   >[!NOTE]
   > Die Reihenfolge der Ausgabe kann abweichen, da diese _nicht_ zwangsläufig mit der Reihenfolge der Teilzeichenfolgen in der Eingabezeichenfolge übereinstimmt.
   
-### <a name="c-aggregation-by-values"></a>C. Aggregation nach Werten  
+### <a name="c-aggregation-by-values"></a>C. Aggregation nach Werten
+
 Benutzer müssen einen Bericht erstellen, der die Anzahl der Produkte pro Tag anzeigt, die nach der Anzahl der Produkte geordnet ist, und sie dürfen nur die Tags mit mehr als zwei Produkten filtern.  
-  
+
 ```sql  
 SELECT value as tag, COUNT(*) AS [Number of articles]  
 FROM Product  
@@ -137,36 +143,38 @@ FROM Product
 GROUP BY value  
 HAVING COUNT(*) > 2  
 ORDER BY COUNT(*) DESC;  
-```  
-  
-### <a name="d-search-by-tag-value"></a>D. Nach Tagwert suchen  
+```
+
+### <a name="d-search-by-tag-value"></a>D. Nach Tagwert suchen
+
 Entwickler müssen Abfragen erstellen, die Artikel nach Schlüsselwörtern finden. Sie können folgende Abfragen verwenden:  
   
 Um Produkte mit einem einzelnen Tag zu finden (clothing):  
-  
-```sql  
+
+```sql
 SELECT ProductId, Name, Tags  
 FROM Product  
 WHERE 'clothing' IN (SELECT value FROM STRING_SPLIT(Tags, ','));  
-```  
-  
+```
+
 Produkte mit zwei angegebenen Tags finden (clothing und road):  
-  
+
 ```sql  
 SELECT ProductId, Name, Tags  
 FROM Product  
 WHERE EXISTS (SELECT *  
     FROM STRING_SPLIT(Tags, ',')  
     WHERE value IN ('clothing', 'road'));  
-```  
-  
-### <a name="e-find-rows-by-list-of-values"></a>E. Suchen nach Zeilen nach einer Liste von Werten  
+```
+
+### <a name="e-find-rows-by-list-of-values"></a>E. Suchen nach Zeilen nach einer Liste von Werten
+
 Entwickler müssen eine Abfrage erstellen, die Artikel nach einer Liste von IDs sucht. Sie können die folgende Abfrage verwenden:  
-  
+
 ```sql  
 SELECT ProductId, Name, Tags  
 FROM Product  
-JOIN STRING_SPLIT('1,2,3',',')   
+JOIN STRING_SPLIT('1,2,3',',')
     ON value = ProductId;  
 ```  
 
@@ -176,15 +184,14 @@ Die vorhergehende Verwendung von STRING_SPLIT ist ein Ersatz für ein gängiges 
 SELECT ProductId, Name, Tags  
 FROM Product  
 WHERE ',1,2,3,' LIKE '%,' + CAST(ProductId AS VARCHAR(20)) + ',%';  
-```  
-  
-## <a name="see-also"></a>Weitere Informationen  
-[LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)     
-[LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)     
-[RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)    
-[RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)     
-[SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)     
-[TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)     
-[String Functions &#40;Transact-SQL&#41; (Zeichenfolgenfunktionen &#40;Transact-SQL&#41;)](../../t-sql/functions/string-functions-transact-sql.md)      
-  
-  
+```
+
+## <a name="see-also"></a>Weitere Informationen
+
+[LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)<br />
+[LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)<br />
+[RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)<br />
+[RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)<br />
+[SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)<br />
+[TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)<br />
+[Zeichenfolgenfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)

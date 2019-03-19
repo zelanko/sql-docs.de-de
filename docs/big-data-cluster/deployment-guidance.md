@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4aba7c8bbe7af361dc118111c8502546c83dd61c
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: 817ffcc1ea17a8526304b4bc9064c1becfff90f9
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227202"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161641"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Wie Sie SQL Server-big Data-Cluster in Kubernetes bereitstellen
 
@@ -94,6 +94,7 @@ Die Cluster-Konfiguration kann angepasst werden, mithilfe eines Satzes von Umgeb
 | **DOCKER_REPOSITORY** | Ja | TBD | Das private Repository in der oben genannten Registrierung, in dem Bilder gespeichert sind.  Es ist erforderlich, für die Dauer der geschlossene öffentliche Vorschauversion. |
 | **DOCKER_USERNAME** | Ja | Nicht zutreffend | Der Benutzername für die containerimages zugreifen, falls sie in einem privaten Repository gespeichert sind. Es ist erforderlich, für die Dauer der geschlossene öffentliche Vorschauversion. |
 | **DOCKER_PASSWORD** | Ja | Nicht zutreffend | Das Kennwort für den Zugriff auf das obige privaten Repository. Es ist erforderlich, für die Dauer der geschlossene öffentliche Vorschauversion.|
+| **DOCKER_EMAIL** | Ja | Nicht zutreffend | Ihre e-Mail-Adresse. |
 | **DOCKER_IMAGE_TAG** | Nein | Neueste | Die Bezeichnung, die Bilder zu kennzeichnen. |
 | **DOCKER_IMAGE_POLICY** | Nein | Always | Erzwingt immer einen Abruf der Bilder.  |
 | **DOCKER_PRIVATE_REGISTRY** | Ja | Nicht zutreffend | Für den Zeitrahmen für die geschlossene öffentliche Vorschauversion werden soll müssen Sie diesen Wert auf "1" festlegen. |
@@ -139,7 +140,8 @@ SET DOCKER_REGISTRY=private-repo.microsoft.com
 SET DOCKER_REPOSITORY=mssql-private-preview
 SET DOCKER_USERNAME=<your username, credentials provided by Microsoft>
 SET DOCKER_PASSWORD=<your password, credentials provided by Microsoft>
-SET DOCKER_PRIVATE_REGISTRY="1"
+SET DOCKER_EMAIL=<your email address>
+SET DOCKER_PRIVATE_REGISTRY=1
 ```
 
 ### <a name="linux"></a>Linux
@@ -147,8 +149,8 @@ SET DOCKER_PRIVATE_REGISTRY="1"
 Die folgenden Umgebungsvariablen zu initialisieren. In bash bleibt können Sie jeden Wert in Anführungszeichen.
 
 ```bash
-export ACCEPT_EULA=yes
-export CLUSTER_PLATFORM=<minikube or aks or kubernetes>
+export ACCEPT_EULA="yes"
+export CLUSTER_PLATFORM="<minikube or aks or kubernetes>"
 
 export CONTROLLER_USERNAME="<controller_admin_name - can be anything>"
 export CONTROLLER_PASSWORD="<controller_admin_password - can be anything, password complexity compliant>"
@@ -159,6 +161,7 @@ export DOCKER_REGISTRY="private-repo.microsoft.com"
 export DOCKER_REPOSITORY="mssql-private-preview"
 export DOCKER_USERNAME="<your username, credentials provided by Microsoft>"
 export DOCKER_PASSWORD="<your password, credentials provided by Microsoft>"
+export DOCKER_EMAIL="<your email address>"
 export DOCKER_PRIVATE_REGISTRY="1"
 ```
 

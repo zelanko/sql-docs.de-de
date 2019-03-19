@@ -15,12 +15,12 @@ ms.assetid: 3fd983ad-e206-45db-9054-417c9b5bb815
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d66ff87e4ae7a18234a4a1a9dfc6b41e2590a1cd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: cc43b3c285e8fc528ea1687a6804c0162d1707c1
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212149"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58072194"
 ---
 # <a name="heterogeneous-database-replication"></a>Heterogene Datenbankreplikation  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,6 +30,7 @@ ms.locfileid: "53212149"
 -   Veröffentlichen von Daten aus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] an Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten.  
 
 -   Beim Veröffentlichen von Daten an und von Oracle bestehen folgende Einschränkungen:  
+
   | |2016 oder früher |2017 oder höher |
   |-------|-------|--------|
   |Replikation von Oracle |Wird nur für Oracle 10g oder früher unterstützt |Wird nur für Oracle 10g oder früher unterstützt |

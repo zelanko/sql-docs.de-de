@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 283f39efa34721aea7613ac1a9cba115dc3311a8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fb98f2dad8f16ac7f9e06920d56bd225962dca7b
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032951"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161847"
 ---
 # <a name="machine-learning-services-r-python-in-sql-server-2017"></a>Machine Learning-Dienste (R, Python), in SQLServer 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +24,16 @@ Wenn Sie zuvor [SQL Server 2016 R Services](r/sql-server-r-services.md), Machine
 
 In Azure SQL-Datenbank [Machine Learning Services (mit R)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview) befindet sich derzeit in der öffentlichen Vorschau.
 
-Der entscheidenden Wertbeiträge von Machine Learning Services ist die Potenz Enterprise R und Python-Pakete, um erweiterte Analysen und Berechnungen und Verarbeitung an, in denen die Daten befinden, bieten die Möglichkeit zu übermitteln und Sie müssen Daten in das Netzwerk.
+## <a name="bring-compute-power-to-the-data"></a>Schalten Sie die computeleistung auf die Daten
+
+Der entscheidenden Wertbeiträge von Machine Learning Services ist die Potenz Enterprise R und Python-Pakete, um erweiterte Analysen und Berechnungen und Verarbeitung an, in denen die Daten befinden, bieten die Möglichkeit zu übermitteln und Sie müssen Daten in das Netzwerk. Dies bietet mehrere Vorteile:
+
++ Datensicherheit. Bringen R- und Python werden Ausführung näher an der Quelle der Daten unnötiger oder unsicherer Datentransfer vermieden.
++ Geschwindigkeit. Datenbanken sind für setbasierte Vorgänge optimiert. Aktuelle Innovationen in Datenbanken, z.B. in-Memory-Tabellen stellen Zusammenfassungen und Aggregationen der Daten extrem, und es sind eine perfekte Ergänzung für die Data Science.
++ Einfache Bereitstellung und Integration. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ist der zentrale Punkt von Vorgängen für viele Verwaltungsaufgaben von Daten und Anwendungen. Verwenden Sie die Daten, die in der Datenbank oder ein berichterstellungs-Warehouse befinden, stellen Sie sicher, dass die Daten, die von Machine learning-Lösungen verwendet konsistent und aktuell ist. 
++ Effizienz im gesamten Cloud und lokal. Anstatt Verarbeiten von Daten in R oder Python-Sitzungen können Sie eine verlassen auf Datenpipelines des Unternehmens einschließlich [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] und Azure Data Factory. Das Berichten von Ergebnissen oder Analysen ist über Power BI oder [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]einfach.
+
+Durch die Verwendung der richtigen Kombination von SQL und R für verschiedene Datenverarbeitungstasks und analytische Tasks, können Datenanalysten und Entwickler produktiver sein.
 
 <a name="components"></a>
 

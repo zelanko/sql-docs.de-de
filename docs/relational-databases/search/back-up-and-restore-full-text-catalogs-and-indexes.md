@@ -1,10 +1,8 @@
 ---
 title: Sichern und Wiederherstellen von Volltextkatalogen und Indizes | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,15 +13,16 @@ helpviewer_keywords:
 - full-text indexes [SQL Server], restoring
 - restore operations [full-text search]
 ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: cafc3297727c53ba6134f74f0cb5291b4e14baea
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e9b4477827dc782c99b8017bcf56d35a471b1577
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675549"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973279"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>Sichern und Wiederherstellen von Volltextkatalogen und Indizes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +101,7 @@ GO
 -   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten und Überwachen der Volltextsuche auf einer Serverinstanz](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)   
  [Upgrade der Volltextsuche](../../relational-databases/search/upgrade-full-text-search.md)  
   

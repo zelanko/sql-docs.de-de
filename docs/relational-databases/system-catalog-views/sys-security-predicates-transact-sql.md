@@ -21,16 +21,16 @@ ms.assetid: c7a2f28c-98da-463d-8b8a-8e5619e2c6a6
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0a3c0ee5cffc362f1442315c50ff738bee99b0cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 48505a7e33d8d691314216846ee054d6625b7cf4
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670808"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161797"
 ---
-# <a name="syssecuritypredicates-transact-sql"></a>Sys. security_predicates (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+# <a name="syssecuritypredicates-transact-sql"></a>sys.security_predicates (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Gibt eine Zeile für jedes sicherheitsprädikat in der Datenbank zurück.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "47670808"
 |object_id|**int**|Die ID der Sicherheitsrichtlinie, die das Prädikat enthält.|  
 |security_predicate_id|**int**|Prädikat-ID innerhalb dieser Richtlinie.|  
 |target_object_id|**int**|Die ID des Objekts, an das das Sicherheitsprädikat gebunden ist.|  
-|predicate_definition|**nvarchar(max)**|Der vollqualifizierte Name der Funktion, die als Sicherheitsprädikat verwendet wird, einschließlich der Argumente. Beachten Sie, dass die `schema.function` Namen (d. h. durch Escapezeichen ersetzt) normalisiert werden kann sowie alle anderen Elemente in den Text für Konsistenz. Zum Beispiel:<br /><br /> `[dbo].[fn_securitypredicate]([wing], [startTime], [endTime])`|  
+|predicate_definition|**nvarchar(max)**|Der vollqualifizierte Name der Funktion, die als Sicherheitsprädikat verwendet wird, einschließlich der Argumente. Beachten Sie, dass der Name der `schema.function` sowie alle anderen Elemente im Text (aus Konsistenzgründen) u. U. normalisiert (d. h. durch Escapezeichen ersetzt) werden. Zum Beispiel:<br /><br /> `[dbo].[fn_securitypredicate]([wing], [startTime], [endTime])`|  
 |predicate_type|**int**|Der Typ des Prädikats, die von der Sicherheitsrichtlinie verwendet werden soll:<br /><br /> 0 = FILTERPRÄDIKAT<br /><br /> 1 = BLOCK-PRÄDIKAT|  
 |predicate_type_desc|**nvarchar(60)**|Der Typ des Prädikats, die von der Sicherheitsrichtlinie verwendet werden soll:<br /><br /> FILTER<br /><br /> BLOCK|  
 |Vorgang|**int**|Der Typ des Vorgangs für das Prädikat angegeben:<br /><br /> NULL = alle anwendbaren Vorgänge<br /><br /> 1 = AFTER INSERT<br /><br /> 2 = NACH UPDATE<br /><br /> 3 = VOR DER AKTUALISIERUNG<br /><br /> 4 = VOR DEM LÖSCHEN|  

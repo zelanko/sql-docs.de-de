@@ -1,6 +1,5 @@
 ---
 title: Sp_rxPredict | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 08/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,13 +15,13 @@ helpviewer_keywords:
 - sp_rxPredict procedure
 author: HeidiSteen
 ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: addca46cd1ebf05212b0e8721d1799eefbad3bb0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: craigg
+ms.openlocfilehash: 50e25162f88c42c0728f951702d304975fb7091b
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842928"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161597"
 ---
 # <a name="sprxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,6 @@ Generiert einen vorhergesagten Wert für eine angegebene Eingabe bestehend aus e
 Stellt die Bewertung auf R und Python Machine Learning-Modelle in nahezu in Echtzeit. `sp_rxPredict` ist eine gespeicherte Prozedur bereitgestellt, die als Wrapper für die `rxPredict` R-Funktion im [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) und [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package), und die [Rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) Python-Funktion in [Revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) und [Microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package). Es ist in C++ geschrieben und ist speziell für die Bewertung der Vorgänge optimiert wird.
 
 Obwohl das Modell erstellt werden muss, mithilfe von R oder Python, sobald sie serialisiert und in einem binären Format in eine Ziel-Datenbank-Engine-Instanz gespeichert, kann er von dieser Datenbank-Engine-Instanz genutzt werden, auch wenn die Integration von R oder Python nicht installiert ist. Weitere Informationen finden Sie unter [echtzeitbewertung mit Sp_rxPredict](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring).
-
 
 ## <a name="syntax"></a>Syntax
 
@@ -64,11 +62,9 @@ Um die Verwendung der gespeicherten Prozedur zu aktivieren, muss die SQLCLR für
 
 Die benutzeranforderungen `EXECUTE` Berechtigung für die Datenbank.
 
-
 ### <a name="supported-algorithms"></a>Unterstützte Algorithmen
 
 Zum Erstellen und Trainieren des Modells verwenden einen der unterstützten Algorithmen für R oder Python, gebotenen [SQL Server 2016 R Services](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services?view=sql-server-2017), [SQL Server 2016 R Server (eigenständig)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2016), [Computer mit SQL Server 2017 Learning-Dienste (R oder Python)](https://docs.microsoft.com//sql/advanced-analytics/what-is-sql-server-machine-learning?view=sql-server-2017), oder [SQL Server 2017-Server (eigenständig) (R oder Python)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2017).
-
 
 #### <a name="r-revoscaler-models"></a>R: RevoScaleR-Modelle
 
@@ -87,7 +83,7 @@ Zum Erstellen und Trainieren des Modells verwenden einen der unterstützten Algo
   + [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet)
   + [rxFastLinear](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastlinear)
 
-#### <a name="r-transformations-supplied-by-microsoftml"></a>R MicrosoftML vom-Transformationen
+#### <a name="r-transformations-supplied-by-microsoftml"></a>R: Transformationen vom MicrosoftML
 
   + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
   + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
@@ -113,7 +109,7 @@ Zum Erstellen und Trainieren des Modells verwenden einen der unterstützten Algo
   + [rx_neural_network](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-neural-network)
   + [rx_fast_linear](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-linear)
 
-#### <a name="python-transformations-supplied-by-microsoftml"></a>Python: Transformationen, die vom microsoftml
+#### <a name="python-transformations-supplied-by-microsoftml"></a>Python: Transformationen vom microsoftml
 
   + [featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
   + [concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)

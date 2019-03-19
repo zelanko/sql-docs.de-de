@@ -13,12 +13,12 @@ ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2eb19a9d8524a88436e0c3080f852f770aca6986
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3190fba7fd3e09e19236340659e4a43bf252f4ab
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214801"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973059"
 ---
 # <a name="administration-of-an-availability-group"></a>Verwalten einer Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +117,7 @@ ms.locfileid: "53214801"
 -   **Whitepaper:**  
   
      [Microsoft White Papers for SQL Server 2012 (Microsoft-Whitepapers zu SQL Server 2012)](https://msdn.microsoft.com/library/hh403491.aspx)    
-     [Whitepapers des SQL Server-Kundenberatungsteams](https://sqlcat.com/)  
+     [Whitepapers des SQL Server-Kundenberatungsteams](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   

@@ -3,7 +3,7 @@ title: SQL Server-2019-Erweiterung (Vorschau)
 titleSuffix: Azure Data Studio
 description: 2019-Vorschau von SQL Server-Erweiterung für Azure Data Studio
 ms.custom: seodec18
-ms.date: 02/13/2019
+ms.date: 03/18/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,13 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c90be7f91c4f3bb465e2cf29b8ee69e2f8d8b6e9
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: dfa49b1611c7fd9b196e57ea08575388aa90329b
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56231057"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161548"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server-2019-Erweiterung (Vorschau)
 
@@ -31,9 +30,9 @@ Klicken Sie zum Installieren der SQL Server-2019-Erweiterungs (Vorschauversion) 
 
    |Platform|Herunterladen|Veröffentlichungsdatum|Version
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072794)|13 Februar 2019 |0.10.2
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072793)|13 Februar 2019 |0.10.2
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072792)|13 Februar 2019 |0.10.2
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083220)|18 März 2019 |0.11.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083219)|18 März 2019 |0.11.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083218)|18 März 2019 |0.11.0
 
 1. Wählen Sie in Azure Data Studio **Erweiterung aus der VSIX-Paket installieren** aus der **Datei** Menü, und wählen Sie die heruntergeladene VSIX-Datei.
 
@@ -44,6 +43,14 @@ Klicken Sie zum Installieren der SQL Server-2019-Erweiterungs (Vorschauversion) 
 1. Nach erneutem Laden, wird die Erweiterung Abhängigkeiten zu installieren. Sehen Sie den Fortschritt im Ausgabefenster angezeigt, und es kann einige Minuten dauern.
 
 1. Nach den Abhängigkeiten die abgeschlossen Sie Installation, schließen Sie und erneut öffnen Sie Studio für Azure Data. Die **SQL Server-big Data-Cluster** Verbindungstyp ist nicht verfügbar, solange Sie Azure Data Studio neu starten.
+
+## <a name="release-notes-v0110"></a>Anmerkungen zu dieser Version (v0.11.0)
+  * Unterstützung für Jupyter-Notebook, insbesondere Unterstützung für die Python3 und Spark-Kernel wurde in Azure Data Studio verschoben. Diese Erweiterung ist nicht mehr erforderlich, um die Notebooks verwenden.
+  * Mehrere Fehlerbehebungen in den Assistenten für die externen Daten:
+    * Oracle-datentypzuordnungen wurden Änderungen, die im Lieferumfang von SQL Server 2019 CTP 2.3 entsprechend aktualisiert.
+    * Ein Problem behoben, in denen wurden neue Schemas, die in die Table-Steuerelemente Zuordnung eingegeben verloren gehen.
+    * Ein Problem behoben, in dem einen Datenbankknoten in der tabellenzuordnungen überprüfen nicht alle Tabellen und Sichten, die zu überprüfende führten.
+
 
 ## <a name="release-notes-v0102"></a>Anmerkungen zu dieser Version (v0.10.2)
 ### <a name="sql-server-2019-support"></a>Unterstützung für SQL Server-2019

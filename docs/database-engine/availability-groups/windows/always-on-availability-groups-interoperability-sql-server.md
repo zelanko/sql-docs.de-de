@@ -14,12 +14,12 @@ ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e593e7ce4de4ad4535bf59868e01419e74e2bf8b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 34d019792a898290c65371e32f83b49911cb27a3
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591284"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973830"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Always On-Verfügbarkeitsgruppen: Interoperabilität (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ Die folgenden Features wirken mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.
   [Migration Guide: Migrating to Always On Availability Groups from Prior Deployments Combining Database Mirroring and Log Shipping (Leitfaden: Migrieren zu Always On-Verfügbarkeitsgruppen von vorherigen Bereitstellungen mit Datenbankspiegelung und Protokollversand)](https://msdn.microsoft.com/library/jj635217)
   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Leitfaden zu Always On-Lösungen für Microsoft SQL Server zur Bereitstellung von Hochverfügbarkeit und Notfallwiederherstellung)](https://go.microsoft.com/fwlink/?LinkId=227600)
   [Microsoft White Papers for SQL Server 2012 (Microsoft-Whitepapers zu SQL Server 2012)](https://msdn.microsoft.com/library/hh403491.aspx)
-  [SQL Server Customer Advisory Team Whitepapers (Whitepapers des Beratungsteams für SQL Server)](https://sqlcat.com/)
+  [SQL Server Customer Advisory Team Whitepapers (Whitepapers des Beratungsteams für SQL Server)](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)
 
 ## <a name="see-also"></a>Weitere Informationen
 

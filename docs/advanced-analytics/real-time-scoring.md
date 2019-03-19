@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: def60a6de7d5a6f3641a6de88410543e9e592ba4
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: ed1fbe8be63cd184fd49b1e76f94583bd50cf380
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645159"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161517"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>Echtzeitbewertung mit Sp_rxPredict in SQL Server-Machine learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +22,7 @@ Echtzeitbewertung verwendet die [Sp_rxPredict](https://docs.microsoft.com//sql/r
 
 ## <a name="how-real-time-scoring-works"></a>Wie echtzeitbewertung funktioniert
 
-Echtzeitbewertung wird in SQL Server 2017 und SQL Server 2016 auf unterstützt [Modelltypen unterstützt](#bkmk_py_supported_algos) für lineare und logistische Regression und Decision Tree Modellierung. Es verwendet die systemeigene C++-Bibliotheken zum Generieren von Bewertungen, die auf Grundlage der Benutzereingabe bereitgestellt, um ein Machine learning-Modell in einem speziellen binären Format gespeichert.
+Echtzeitbewertung in SQL Server 2016 und SQL Server 2017 unterstützt wird, für bestimmte Modelltypen, z. B. anhand von RevoScaleR oder MicrosoftML Functions [RxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[RxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). Es verwendet die systemeigene C++-Bibliotheken zum Generieren von Bewertungen, die auf Grundlage der Benutzereingabe bereitgestellt, um ein Machine learning-Modell in einem speziellen binären Format gespeichert.
 
 Da ein trainiertes Modell verwendet werden kann, für die Bewertung, ohne eine externe Sprachlaufzeit aufrufen zu müssen, wird der Aufwand von mehreren Prozessen reduziert. Dadurch wird eine schnellere vorhersageleistung für die Produktion, die Bewertung von Szenarien unterstützt. Da die Daten nicht SQL Server verlässt, können Ergebnisse generiert und in eine neue Tabelle ohne jegliche Übersetzung Daten zwischen R und SQL eingefügt werden.
 
