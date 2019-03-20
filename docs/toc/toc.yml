@@ -44,12 +44,12 @@ items:
 - name: Big Data-Cluster
   href: ../toc/redirectfrom-big-data-cluster.md
   items:
-  - name: Übersicht
+  - name: Übersicht über Big Data-Cluster
     items:
     - name: Was sind SQL Server-Big Data-Cluster?
       href: ../big-data-cluster/big-data-cluster-overview.md
     - name: Versionshinweise
-      href: ../big-data-cluster/big-data-cluster-release-notes.md
+      href: ../big-data-cluster/release-notes-big-data-cluster.md
   - name: Installieren
     items:
     - name: Installieren von Tools
@@ -118,12 +118,14 @@ items:
         href: ../big-data-cluster/data-ingestion-curl.md
       - name: Wiederherstellen einer Datenbank
         href: ../big-data-cluster/data-ingestion-restore-database.md
-    - name: Bereitstellen von Apps
+    - name: Bereitstellen und Nutzen von Apps
       items:
-      - name: Verwenden von mssqlctl
+      - name: Bereitstellen mit mssqlctl
         href: ../big-data-cluster/big-data-cluster-create-apps.md
-      - name: Verwenden von VS-Code
+      - name: Bereitstellen mit Visual Studio Code
         href: ../big-data-cluster/app-deployment-extension.md
+      - name: Nutzen von Apps
+        href: ../big-data-cluster/big-data-cluster-consume-apps.md
     - name: Big Data/Machine Learning
       items:
       - name: Data Wrangling mithilfe von PROSE Code Accelerator
@@ -134,6 +136,8 @@ items:
         href: ../big-data-cluster/export-model-with-spark-mleap.md
       - name: Verwenden von Sparklyr von RStudio
         href: ../big-data-cluster/sparklyr-from-RStudio.md
+      - name: GPU-Unterstützung und TensorFlow
+        href: ../big-data-cluster/spark-gpu-tensorflow.md
     - name: Verwalten von SQL Server-Big Data-Clustern
       items:
       - name: Herstellen einer Verbindung mit einem Big Data-Cluster
@@ -8022,6 +8026,8 @@ items:
         href: ../azure-data-studio/quickstart-sql-database.md
       - name: Herstellen einer Verbindung mit und Abfragen von Azure SQL Data Warehouse
         href: ../azure-data-studio/quickstart-sql-dw.md
+      - name: Herstellen einer Verbindung mit PostgreSQL und Abfragen von Daten mit PostgreSQL
+        href: ../azure-data-studio/quickstart-postgres.md
     - name: Lernprogramme
       items:
       - name: T-SQL-Editor
@@ -8046,6 +8052,8 @@ items:
         href: ../azure-data-studio/keyboard-shortcuts.md
       - name: Erkunden von Azure SQL-Ressourcen
         href: ../azure-data-studio/azure-resource-explorer.md
+      - name: SQL-Notebooks
+        href: ../azure-data-studio/sql-notebooks.md
       - name: Servergruppen
         href: ../azure-data-studio/server-groups.md
       - name: Quellcodeverwaltung
@@ -8059,10 +8067,14 @@ items:
     - name: Erweiterungen
       href: ../azure-data-studio/extensions.md
       items:
+      - name: PostgreSQL-Erweiterung (Vorschauversion)
+        href: ../azure-data-studio/postgres-extension.md
       - name: SQL Server 2019 (Vorschau)
         href: ../azure-data-studio/sql-server-2019-extension.md
       - name: SQL Server-Agent (Vorschau)
         href: ../azure-data-studio/sql-server-agent-extension.md
+      - name: DACPAC-Erweiterung für SQL Server (Vorschauversion)
+        href: ../azure-data-studio/sql-server-dacpac-extension.md
       - name: SQL Server-Import (Vorschau)
         href: ../azure-data-studio/sql-server-import-extension.md
       - name: SQL Server Profiler (Vorschau)
@@ -11252,6 +11264,35 @@ items:
       - name: SP:StmtStarting-Ereignisklasse
         href: ../relational-databases/event-classes/sp-stmtstarting-event-class.md
     - name: Transaktionen-Ereigniskategorie
+      href: ../relational-databases/event-classes/transactions-event-category.md
+      items:
+      - name: DTCTransaction-Ereignisklasse
+        href: ../relational-databases/event-classes/dtctransaction-event-class.md
+      - name: SQLTransaction (Ereignisklasse)
+        href: ../relational-databases/event-classes/sqltransaction-event-class.md
+      - name: 'TM: Begin Tran Completed (Ereignisklasse)'
+        href: ../relational-databases/event-classes/tm-begin-tran-completed-event-class.md
+      - name: 'TM: Begin Tran Starting (Ereignisklasse)'
+        href: ../relational-databases/event-classes/tm-begin-tran-starting-event-class.md
+      - name: 'TM: Commit Tran Completed (Ereignisklasse)'
+        href: ../relational-databases/event-classes/tm-commit-tran-completed-event-class.md
+      - name: 'TM: Commit Tran Starting (Ereignisklasse)'
+        href: ../relational-databases/event-classes/tm-commit-tran-starting-event-class.md
+      - name: 'TM: Promote Tran Completed (Ereignisklasse)'
+        href: ../relational-databases/event-classes/tm-promote-tran-completed-event-class.md
+      - name: 'TM: Promote Tran Starting (Ereignisklasse)'
+        href: ../relational-databases/event-classes/tm-promote-tran-starting-event-class.md
+      - name: 'TM: Rollback Tran Completed (Ereignisklasse)'
+        href: ../relational-databases/event-classes/tm-rollback-tran-completed-event-class.md
+      - name: 'TM: Rollback Tran Starting (Ereignisklasse)'
+        href: ../relational-databases/event-classes/tm-rollback-tran-starting-event-class.md
+      - name: 'TM: Save Tran Completed (Ereignisklasse)'
+        href: ../relational-databases/event-classes/tm-save-tran-completed-event-class.md
+      - name: 'TM: Save Tran Starting (Ereignisklasse)'
+        href: ../relational-databases/event-classes/tm-save-tran-starting-event-class.md
+      - name: TransactionLog-Ereignisklasse
+        href: ../relational-databases/event-classes/transactionlog-event-class.md
+    - name: T-SQL-Ereigniskategorie
       href: ../relational-databases/event-classes/tsql-event-category.md
       items:
       - name: Exec Prepared SQL (Ereignisklasse)
@@ -17178,9 +17219,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: Handhabung von Namespaces in XQuery
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: d658d240d44697d6d3632142b1d4034468ffc91f
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: 3f19b93765528f26054042199d3e33b5098d205e
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974569"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222184"
