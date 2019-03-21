@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: linux
 ms.custom: sql-linux, seodec18
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 03e3b5d578c8fee68098674e9b82501a290bafda
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: dce4418dee10ff356d5c922350cd2fda29b44795
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579241"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277307"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Schnellstart: Installieren von SQL Server, und erstellen Sie eine Datenbank auf Red Hat
 
@@ -25,7 +25,7 @@ ms.locfileid: "57579241"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-In dieser schnellstartanleitung installieren Sie SQL Server 2017 oder SQL Server-2019 an, zu für die Red Hat Enterprise Linux (RHEL) 7.3 und höher. Verbinden Sie Sie dann mit **Sqlcmd** Erstellen Ihrer ersten Datenbank Abfragen und ausführen.
+In dieser schnellstartanleitung installieren Sie SQL Server 2017 oder SQL Server-2019 an, zu auf Red Hat Enterprise Linux (RHEL). Verbinden Sie Sie dann mit **Sqlcmd** Erstellen Ihrer ersten Datenbank Abfragen und ausführen.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
@@ -40,7 +40,7 @@ In dieser schnellstartanleitung installieren Sie SQL Server-2019 Vorschau auf di
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-Sie benötigen eine RHEL 7.3 oder 7.4 Computer mit **mindestens 2 GB** des Arbeitsspeichers.
+Sie benötigen einen Computer RHEL 7.3, 7.4, 7.5 oder 7.6 mit **mindestens 2 GB** des Arbeitsspeichers.
 
 Wechseln Sie zu Red Hat Enterprise Linux auf Ihrem eigenen Computer installieren, [ https://access.redhat.com/products/red-hat-enterprise-linux/evaluation ](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). Sie können auch RHEL-VMs in Azure erstellen. Finden Sie unter [erstellen und Verwalten von virtuellen Linux-Computern mit der Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm), und verwenden Sie `--image RHEL` im Aufruf von `az vm create`.
 

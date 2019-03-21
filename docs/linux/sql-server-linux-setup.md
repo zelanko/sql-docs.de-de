@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: 4e4de2fbb87fb7716ccde8de52924cd2402424fc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e400d73137750bda913003aed1717793634cfd41
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675459"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280624"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Installationsanleitung für SQL Server unter Linux
 
@@ -27,7 +27,7 @@ Dieser Artikel enthält Anleitungen für die Installation, Aktualisierung und De
 > Dieses Handbuch coves verschiedene Bereitstellungsszenarien. Wenn Sie nur ausführliche installationsanweisungen suchen, wechseln Sie auf einen der Schnellstarts:
 > - [RHEL-Schnellstart](quickstart-install-connect-red-hat.md)
 > - [SLES-Schnellstart](quickstart-install-connect-suse.md)
-> - [Ubuntu-Schnellstart](quickstart-install-connect-ubuntu.md)
+> - [Ubuntu quickstart](quickstart-install-connect-ubuntu.md)
 > - [Schnellstartanleitung für docker](quickstart-install-connect-docker.md)
 
 Antworten auf häufig gestellte Fragen finden Sie unter den [SQL Server unter Linux – häufig gestellte Fragen](../linux/sql-server-linux-faq.md).
@@ -38,9 +38,9 @@ SQL Server 2017 wird unter Ubuntu, SUSE Linux Enterprise Server (SLES) und Red H
 
 | Platform | Unterstützte Versionen | Herunterladen
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3 oder 7.4 | [Abrufen von RHEL 7.4](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6 | [RHEL 7.6 abrufen](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2 | [SLES v12 SP2-Download](https://www.suse.com/products/server)
-| **Ubuntu** | 16.04 | [Abrufen von Ubuntu 16.04](https://www.ubuntu.com/download/server)
+| **Ubuntu** | 16.04 | [Get Ubuntu 16.04](https://www.ubuntu.com/download/server)
 | **Docker-Engine** | 1.8+ | [Docker abrufen](https://www.docker.com/products/overview)
 
 Microsoft unterstützt auch bereitstellen und Verwalten von SQL Server-Containern mit OpenShift und Kubernetes.
@@ -105,7 +105,7 @@ Diese Befehle Laden Sie das neueste Paket herunter, und Ersetzen Sie die Binärd
 > [!TIP]
 > Wenn Sie ersten [ändern Sie Ihr Repository konfigurierten](sql-server-linux-change-repo.md), es ist möglich, dass die **aktualisieren** Befehl aus, um Ihre Version von SQL Server zu aktualisieren. Dies ist nur für den Fall, wenn der Upgradepfad zwischen den beiden Repositories unterstützt wird.
 
-## <a id="rollback"></a> Rollback-SQL-Server
+## <a id="rollback"></a> Rollback SQL Server
 
 Verwenden Sie zum Zurücksetzen oder Herabstufen von SQL Server auf einer früheren Version die folgenden Schritte aus:
 
@@ -193,7 +193,7 @@ Wenn Ihr Linux-Computer Zugriff auf die onlinerepositorys verwendet keinen der [
     > [!NOTE]
     > Sie können auch die RPM-Pakete (RHEL und SLES) installieren, mit der `rpm -ivh` -Befehl, aber die Befehle in der vorherigen Tabelle installieren Abhängigkeiten automatisch, wenn verfügbar, über Repositorys genehmigt.
 
-1. **Beheben Sie fehlende Abhängigkeiten**: Sie müssen möglicherweise fehlende Abhängigkeiten an diesem Punkt. Wenn dies nicht der Fall ist, können Sie diesen Schritt überspringen. Unter Ubuntu, wenn Sie Zugriff auf genehmigte Repositorys, die mit diesen Abhängigkeiten, haben die einfachste Lösung ist die Verwendung der `apt-get -f install` Befehl. Dieser Befehl schließt auch die Installation von SQL Server. Um Abhängigkeiten manuell zu überprüfen, verwenden Sie die folgenden Befehle aus:
+1. **Beheben Sie fehlende Abhängigkeiten**: Möglicherweise müssen Sie Abhängigkeiten an diesem Punkt fehlt. Wenn dies nicht der Fall ist, können Sie diesen Schritt überspringen. Unter Ubuntu, wenn Sie Zugriff auf genehmigte Repositorys, die mit diesen Abhängigkeiten, haben die einfachste Lösung ist die Verwendung der `apt-get -f install` Befehl. Dieser Befehl schließt auch die Installation von SQL Server. Um Abhängigkeiten manuell zu überprüfen, verwenden Sie die folgenden Befehle aus:
 
    | Platform | Abhängigkeiten auflisten (Befehl) |
    |-----|-----|
