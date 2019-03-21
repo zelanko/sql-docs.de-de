@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49f84b9e41116dd235f219a0487b48770ef4f81f
-ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
+ms.openlocfilehash: 1816363425276ec532e5cc04433630e8e6b9bcac
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57572843"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974349"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Name der Windows-Sortierung (Transact-SQL)
 
@@ -42,8 +42,9 @@ Gibt den Namen der Windows-Sortierung in der COLLATE-Klausel in [!INCLUDE[ssNoVe
 CollationDesignator_<ComparisonStyle>
 
 <ComparisonStyle> :: =
-{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ]
+{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ] 
 }
+| { _UTF8 }
 | { _BIN | _BIN2 }
 ```
 
@@ -72,9 +73,14 @@ Im Folgenden finden Sie einige Beispiele:
 **Omitted** gibt keine Unterscheidung nach Breite an. Bei **WS** erfolgt eine Unterscheidung.
 
 *VariationSelectorSensitivity*  
-**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+**Gilt für**: Seit [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
 **Bei Auslassung** wird keine Unterscheidung nach Variantenselektor angegeben. Bei **VSS** erfolgt eine Unterscheidung.
+
+**UTF8**  
+**Gilt für**: Seit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
+
+Gibt UTF-8-Codierung an, die für geeignete Datentypen verwendet werden soll. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
 
 **BIN**  
 Gibt die zu verwendende abwärtskompatible binäre Sortierreihenfolge an.
@@ -83,7 +89,6 @@ Gibt die zu verwendende abwärtskompatible binäre Sortierreihenfolge an.
 Gibt die binäre Sortierreihenfolge an, die die Semantik für den Codepunktvergleich verwendet.
 
 ## <a name="remarks"></a>Remarks
-
 Je nach Sortierungsversion sind für manche Codeelemente möglicherweise keine Gewichtungen und/oder Großschreibung/Kleinschreibung-Mappings angegeben. Vergleichen Sie z.B. die Ausgabe der `LOWER`-Funktion bei gleichem Zeichen, aber unterschiedlichen Versionen derselben Sortierung:
 
 ```sql

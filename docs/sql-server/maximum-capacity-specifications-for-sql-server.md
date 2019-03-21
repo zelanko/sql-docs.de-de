@@ -21,12 +21,12 @@ ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6cb5b9ecbcc187a059747e9d3121ac50611a0418
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: b92410945bd9d123b103272943a663b87b8adec8
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319401"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973809"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Spezifikationen der maximalen Kapazität für SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "56319401"
 |Bytes pro Indexschlüssel für speicheroptimierte Tabellen||2500 Bytes für einen nicht gruppierten Index. Für einen Hashindex gilt keine Beschränkung, vorausgesetzt dass alle Indexschlüssel in Zeilen passen.|Ein nicht gruppierter Index darf bei speicheroptimierten Tabellen keine Schlüsselspalten enthalten, deren maximale deklarierte Größe 2500 Bytes überschreiten. Dabei ist es unerheblich, ob die tatsächlich in den Spalten vorhandenen Daten kürzer sind als die maximale deklarierte Größe.<br /><br /> Für einen Hashindexschlüssel gibt es keinen festen Grenzwert für die Größe.<br /><br /> Für Indizes von speicheroptimierten Tabellen ist das Konzept der eingeschlossenen Spalten hinfällig, da alle Indizes grundsätzlich alle Spalten abdecken.<br /><br /> Obwohl die Zeilenlänge bei speicheroptimierten Tabellen 8060 Bytes beträgt, können einige Spalten mit variabler Länge physisch außerhalb dieser 8060 Bytes gespeichert werden. Allerdings müssen die maximale deklarierte Größe aller Schlüsselspalten für alle Indizes einer Tabelle sowie alle zusätzlichen Spalten mit fester Länge in der Tabelle in die 8060 Bytes passen.|  
 |Bytes pro Fremdschlüssel||900||  
 |Bytes pro Primärschlüssel||900||  
-|Bytes pro Zeile||8.060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt die Zeilenüberlaufspeicherung, sodass Spalten variabler Länge aus der Zeile verschoben werden können. Für Spalten variabler Länge, die aus der Zeile verschoben wurden, wird im Hauptdatensatz nur ein 24-Byte-Stamm gespeichert. Aus diesem Grund ist das tatsächlich gültige Zeilenlimit höher als in früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter "Zeilenüberlauf bei Daten über 8 KB" in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation.|  
+|Bytes pro Zeile||8.060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt die Zeilenüberlaufspeicherung, sodass Spalten variabler Länge aus der Zeile verschoben werden können. Für Spalten variabler Länge, die aus der Zeile verschoben wurden, wird im Hauptdatensatz nur ein 24-Byte-Stamm gespeichert. Aus diesem Grund ist das tatsächlich gültige Zeilenlimit höher als in früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [Unterstützung von umfangreichen Zeilen](../relational-databases/pages-and-extents-architecture-guide.md#large-row-support).|  
 |Bytes pro Zeile in speicheroptimierten Tabellen||8.060|Ab [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] unterstützen speicheroptimierte Tabellen das Speichern außerhalb von Zeilen. Spalten mit variabler Länge werden aus der Zeile verschoben, wenn die maximale Größe aller Spalten in der Tabelle 8060 Bytes überschreitet. Diese Entscheidung fällt bei der Kompilierung. Für Spalten, die außerhalb der Zeile gespeichert wurden, wird in der Zeile nur eine 8-Byte-Referenz gespeichert. Weitere Informationen finden Sie unter [Tabellen- und Zeilengröße in speicheroptimierten Tabellen](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md).|  
 |Bytes im Quelltext einer gespeicherten Prozedur||Kleiner als Batchgröße oder 250 MB||  
 |Bytes pro **varchar(max)**-, **varbinary(max)**-, **xml**-, **text**-, oder **image** -Spalte||2^31-1||  

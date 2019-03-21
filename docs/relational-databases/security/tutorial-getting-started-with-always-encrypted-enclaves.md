@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a4d833d132a0b4928d021beaa4cd9fcdd695d6c6
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 14b086c18dab363ca1c9afe7816d802d5a5262f3
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046580"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58072314"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Lernprogramm: Erste Schritte mit Always Encrypted mit Secure Enclaves mithilfe von SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -139,11 +139,11 @@ Wenn andere Fehler auftreten, führen Sie „Clear-HgsClientHostKey“ aus, und 
 In diesem Schritt aktivieren Sie die Funktionen von Always Encrypted mithilfe von Enclaves in Ihrer SQL Server-Instanz.
 
 1. Öffnen Sie SSMS, stellen Sie als „sysadmin“ eine Verbindung mit Ihrer SQL Server-Instanz her, und öffnen Sie ein neues Abfragefenster.
-2. Konfigurieren Sie den Secure Enclave-Typ als VBS.
+2. Wählen Sie Secure Enclave als Typ für virtualisierungsbasierte Sicherheit (Virtualization Based Security, VBS) aus.
 
    ```sql
-   EXEC sys.sp_configure 'column encryption enclave type', 1
-   RECONFIGURE
+   EXEC sys.sp_configure 'column encryption enclave type', 1;
+   RECONFIGURE;
    ```
 
 3. Starten Sie Ihre SQL Server-Instanz neu, damit die vorherige Änderung übernommen wird. Sie können die Instanz in SSMS neu starten, indem Sie im Objekt-Explorer mit der rechten Maustaste darauf klicken und „Neustart“ auswählen. Stellen Sie nach dem Neustart der Instanz eine neue Verbindung her.
@@ -152,10 +152,10 @@ In diesem Schritt aktivieren Sie die Funktionen von Always Encrypted mithilfe vo
 
    ```sql
    SELECT [name], [value], [value_in_use] FROM sys.configurations
-   WHERE [name] = 'column encryption enclave type'
+   WHERE [name] = 'column encryption enclave type';
    ```
 
-    Die Abfrage sollte eine Zeile zurückgeben, die wie folgt aussieht:  
+    Die Abfrage sollte folgendes Ergebnis haben:  
 
     | NAME                           | Wert | value_in_use |
     | ------------------------------ | ----- | -------------- |
@@ -164,7 +164,7 @@ In diesem Schritt aktivieren Sie die Funktionen von Always Encrypted mithilfe vo
 5. Um umfangreiche Berechnungen mit verschlüsselten Spalten zu aktivieren, führen Sie die folgende Abfrage aus:
 
    ```sql
-   DBCC traceon(127,-1)
+   DBCC traceon(127,-1);
    ```
 
     > [!NOTE]
@@ -177,7 +177,7 @@ In diesem Schritt erstellen Sie eine Datenbank mit einigen Beispieldaten, die Si
 2. Erstellen Sie eine neue Datenbank mit dem Namen „ContosoHR“.
 
     ```sql
-    CREATE DATABASE [ContosoHR] COLLATE Latin1_General_BIN2
+    CREATE DATABASE [ContosoHR];
     ```
 
 3. Vergewissern Sie sich, dass Sie mit der neu erstellten Datenbank verbunden sind. Erstellen Sie eine neue Tabelle mit dem Namen „Employees“.
@@ -190,8 +190,7 @@ In diesem Schritt erstellen Sie eine Datenbank mit einigen Beispieldaten, die Si
         [FirstName] [nvarchar](50) NOT NULL,
         [LastName] [nvarchar](50) NOT NULL,
         [Salary] [money] NOT NULL
-    ) ON [PRIMARY]
-    GO
+    ) ON [PRIMARY];
     ```
 
 4. Fügen Sie der Tabelle „Employees“ einige Mitarbeiterdatensätze hinzu.
@@ -206,9 +205,8 @@ In diesem Schritt erstellen Sie eine Datenbank mit einigen Beispieldaten, die Si
             ('795-73-9838'
             , N'Catherine'
             , N'Abel'
-            , $31692)
-    GO
-
+            , $31692);
+ 
     INSERT INTO [dbo].[Employees]
             ([SSN]
             ,[FirstName]
@@ -218,8 +216,7 @@ In diesem Schritt erstellen Sie eine Datenbank mit einigen Beispieldaten, die Si
             ('990-00-6818'
             , N'Kim'
             , N'Abercrombie'
-            , $55415)
-    GO
+            , $55415);
     ```
 
 ## <a name="step-5-provision-enclave-enabled-keys"></a>Schritt 5: Bereitstellen Enclave-fähiger Schlüssel
@@ -238,7 +235,7 @@ In diesem Schritt erstellen Sie einen Spaltenhauptschlüssel und einen Spaltenve
     7. Wählen Sie **OK**.
 
         ![Enclave-Berechnungen zulassen](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
-
+    
 4. Erstellen Sie einen neuen Enclave-fähigen Spaltenverschlüsselungsschlüssel:
 
     1. Klicken Sie mit der rechten Maustaste auf **Always Encrypted-Schlüssel**, und wählen Sie **Neuer Spaltenverschlüsselungsschlüssel**.
@@ -254,40 +251,40 @@ In diesem Schritt verschlüsseln Sie die in den Spalten „SSN“ und „Salary�
     1. Öffnen Sie in SSMS ein neues Abfragefenster.
     2. Klicken Sie im neuen Abfragefenster mit der rechten Maustaste auf eine beliebige Stelle.
     3. Wählen Sie „Verbindung“ \> „Verbindung ändern“ aus.
-    4. Wählen Sie **Optionen** aus. Navigieren Sie zur Registerkarte **Always Encrypted**, wählen Sie **Always Encrypted aktivieren**, und geben Sie die Enclave-Nachweis-URL an.
+    4. Wählen Sie **Optionen** aus. Navigieren Sie zur Registerkarte **Always Encrypted**, wählen Sie **Enable Always Encrypted** (Always Encrypted aktivieren) aus, und geben Sie die Enclave-Nachweis-URL an, z. B. ht<span>tp://</span>hgs.bastion.local/Attestation.
     5. Wählen Sie **Verbinden**.
-2. Konfigurieren Sie in SSMS ein weiteres Abfragefenster mit deaktiviertem Always Encrypted für die Datenbankverbindung.
+    6. Stellen Sie den Datenbankkontext auf die ContosoHR-Datenbank um.
+1. Konfigurieren Sie in SSMS ein weiteres Abfragefenster mit deaktiviertem Always Encrypted für die Datenbankverbindung.
     1. Öffnen Sie in SSMS ein neues Abfragefenster.
     2. Klicken Sie im neuen Abfragefenster mit der rechten Maustaste auf eine beliebige Stelle.
     3. Wählen Sie „Verbindung“ \> „Verbindung ändern“ aus.
     4. Wählen Sie **Optionen** aus. Navigieren Sie zur Registerkarte **Always Encrypted**, und vergewissern Sie sich, dass **Always Encrypted aktivieren** nicht ausgewählt ist.
     5. Wählen Sie **Verbinden**.
-3. Verschlüsseln Sie die Spalten „SSN“ und „Salary“. Fügen Sie im Abfragefenster mit aktiviertem Always Encrypted die folgenden Anweisungen ein, und führen Sie diese aus:
+    6. Stellen Sie den Datenbankkontext auf die ContosoHR-Datenbank um.
+1. Verschlüsseln Sie die Spalten „SSN“ und „Salary“. Fügen Sie im Abfragefenster mit aktiviertem Always Encrypted das folgende Skript ein, und führen Sie es aus:
 
     ```sql
     ALTER TABLE [dbo].[Employees]
-    ALTER COLUMN [SSN] [char] (11)
+    ALTER COLUMN [SSN] [char] (11) COLLATE Latin1_General_BIN2
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
-    (ONLINE = ON)
-    GO
-    DBCC FREEPROCCACHE
-    GO
-
+    (ONLINE = ON);
+     
     ALTER TABLE [dbo].[Employees]
     ALTER COLUMN [Salary] [money]
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
-    (ONLINE = ON)
-    GO
-    DBCC FREEPROCCACHE
-    GO
+    (ONLINE = ON);
+ 
+    ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
     ```
+    > [!NOTE]
+    > Achten Sie auf die ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE-Anweisung, die den Abfrageplancache für die Datenbank im obigen Skript löscht. Nachdem Sie die Tabelle bearbeitet haben, müssen Sie die Pläne für alle Batches und gespeicherten Prozeduren leeren, die Zugriff auf die Tabelle haben, um die Informationen für die Parameterverschlüsselung zu aktualisieren. 
 
 4. Um zu überprüfen, ob die Spalten „SSN“ und „Salary“ jetzt verschlüsselt sind, fügen Sie die folgende Anweisung im Abfragefenster mit deaktiviertem Always Encrypted ein, und führen Sie die Anweisung aus. Das Abfragefenster sollte verschlüsselte Werte in den Spalten „SSN“ und „Salary“ zurückgeben. Testen Sie im Abfragefenster mit aktiviertem Always Encrypted die gleiche Abfrage, um die Daten entschlüsselt anzuzeigen.
 
     ```sql
-    SELECT * FROM [dbo].[Employees]
+    SELECT * FROM [dbo].[Employees];
     ```
 
 ## <a name="step-7-run-rich-queries-against-encrypted-columns"></a>Schritt 7: Ausführen umfangreicher Abfragen für verschlüsselte Spalten
@@ -298,13 +295,13 @@ Sie können nun umfangreiche Abfragen für verschlüsselte Spalten ausführen. E
     1. Wählen Sie im Hauptmenü von SSMS die Option **Abfrage** aus.
     2. Wählen Sie **Abfrageoptionen...** aus.
     3. Navigieren Sie zu **Ausführung** > **Erweitert**.
-    4. Aktivieren oder deaktivieren Sie „Parametrisierung für Always Encrypted aktivieren“.
-    5. Wählen Sie „OK“ aus.
+    4. Wählen Sie **Parametrisierung für Always Encrypted aktivieren** aus.
+    5. Wählen Sie **OK**.
 2. Fügen Sie im Abfragefenster mit aktiviertem Always Encrypted die folgende Abfrage ein, und führen Sie sie aus. Die Abfrage sollte Klartextwerte und Zeilen zurückgeben, die den angegebenen Suchkriterien entsprechen.
 
     ```sql
-    DECLARE @SSNPattern [char](11) = '%6818'
-    DECLARE @MinSalary [money] = $1000
+    DECLARE @SSNPattern [char](11) = '%6818';
+    DECLARE @MinSalary [money] = $1000;
     SELECT * FROM [dbo].[Employees]
     WHERE SSN LIKE @SSNPattern AND [Salary] >= @MinSalary;
     ```

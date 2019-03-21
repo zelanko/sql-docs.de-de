@@ -4,21 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], enabling
 ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: 502403eab1376679471b6825fb6b58333947c47f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f9ac78de3ea95d7cace9a32001db1fddda9bab50
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522314"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973569"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Aktivieren der semantischen Suche in Tabellen und Spalten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "52522314"
   
 -   Sie können einen semantischen Index für Spalten erstellen, die einen der für Volltextindizierung unterstützten Datentypen aufweisen. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Volltextindizes](../../relational-databases/search/create-and-manage-full-text-indexes.md).  
   
--   Sie können einen beliebigen Dokumenttyp angeben, der für Volltextindizierung für **varbinary(max)** -Spalten unterstützt wird. Weitere Informationen finden Sie unter [Vorgehensweise: Ermitteln, welche Dokumenttypen indiziert werden können](#doctypes) .  
+-   Sie können einen beliebigen Dokumenttyp angeben, der für Volltextindizierung für **varbinary(max)** -Spalten unterstützt wird. Weitere Informationen finden Sie weiter unten in diesem Thema im Abschnitt [Ermitteln, welche Dokumenttypen indiziert werden können](#doctypes).  
   
 -   Bei der semantischen Indizierung werden zwei Typen von Indizes für die ausgewählten Spalten erstellt: ein Index mit Schlüsselausdrücken und ein Index für Dokumentähnlichkeit. Wenn Sie die semantische Indizierung aktivieren, können Sie nur einen Indextyp auswählen. Sie können diese beiden Indizes jedoch unabhängig voneinander abfragen. Weitere Informationen finden Sie unter [Suchen von Schlüsselausdrücken in Dokumenten mit der semantischen Suche](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md) und [Suchen von ähnlichen und verwandten Dokumenten mit semantischer Suche](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
   
@@ -275,7 +275,7 @@ GO
   
  Wenn der zu indizierende Dokumenttyp nicht in der Liste der unterstützten Typen aufgeführt wird, müssen Sie möglicherweise zusätzliche Filter suchen, herunterladen und installieren. Weitere Informationen finden Sie unter [anzeigen oder Ändern von registrierten filtern und Wörtertrennungen](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
   
-##  <a name="BestPracticeFilegroup"></a> Bewährte Methode: erwägen Sie eine separate Dateigruppe für die Volltext- und semantischen Indizes erstellen  
+##  <a name="BestPracticeFilegroup"></a> Bewährte Methode: Erwägen Sie die Erstellung einer separaten Dateigruppe für die Volltext- und semantischen Indizes  
  Erwägen Sie, eine separate Dateigruppe für den Volltext- und den semantischen Index zu erstellen, wenn Sie Bedenken im Hinblick auf die Speicherplatzzuordnung haben. Die semantischen Indizes werden in derselben Dateigruppe wie der Volltextindex erstellt. Ein vollständig aufgefüllter semantischer Index kann eine große Datenmenge enthalten.  
  
 ##  <a name="IssueNoResults"></a> Problem: Das Durchsuchen einer bestimmten Spalte gibt keine Ergebnisse zurück  

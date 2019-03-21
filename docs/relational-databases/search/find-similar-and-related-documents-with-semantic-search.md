@@ -1,24 +1,23 @@
 ---
 title: Suchen von ähnlichen und verwandten Dokumenten mit semantischer Suche | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], document similarity queries
 ms.assetid: 9f527883-031b-442f-8e95-24bc0151ecbf
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: 48deccb166167afb600611035454cb34ab22da6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 544cdd40ead8f34cc734fd0ba4104cc3350e0cbc
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627128"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973549"
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>Suchen von ähnlichen und verwandten Dokumenten mit semantischer Suche
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47627128"
 > [!IMPORTANT]  
 >  Für die Spalten, auf die Sie abzielen, muss die Volltext- und die semantische Indizierung aktiviert sein.  
   
-###  <a name="HowToIdentifySimilar"></a> Example: Find the top documents that are similar to another document  
+###  <a name="HowToIdentifySimilar"></a> Beispiel: Suchen der Dokumente, die anderen Dokumenten am ähnlichsten sind  
  Im folgenden Beispiel werden die ersten zehn Kandidaten abgerufen, die dem mit *@CandidateID* angegebenen Kandidaten aus der HumanResources.JobCandidate-Tabelle in der AdventureWorks2012-Beispieldatenbank ähneln.  
   
 ```scr  
@@ -61,7 +60,7 @@ GO
 > [!IMPORTANT]  
 >  Für die Spalten, auf die Sie abzielen, muss die Volltext- und die semantische Indizierung aktiviert sein.  
   
-###  <a name="HowToSimilarPhrases"></a> Example: Find the top key phrases that are similar between documents  
+###  <a name="HowToSimilarPhrases"></a> Beispiel: Suchen der häufigsten Schlüsselausdrücke, die dokumentenübergreifend ähnlich sind  
  Im folgenden Beispiel werden die fünf Schlüsselausdrücke mit der größten Ähnlichkeit zwischen den in der **HumanResources.JobCandidate** -Tabelle angegebenen Kandidaten der AdventureWorks2012-Beispieldatenbank abgerufen.  
   
 ```sql  

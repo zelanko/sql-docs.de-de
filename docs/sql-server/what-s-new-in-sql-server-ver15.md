@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8f7302384bbf264061c73b79a919855aa762994f
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: a69835d1952a860bebe36aaf6793c548e09a5743
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579770"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974449"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Neues in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -209,13 +209,15 @@ Vollständige Unterstützung für die weit verbreitete Zeichencodierung UTF-8 al
 
 Beispiel: `LATIN1_GENERAL_100_CI_AS_SC` in `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. Die in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] eingeführte UTF-8-Codierung ist nur für Windows-Sortierungen verfügbar, die Sonderzeichen unterstützen. `NCHAR` und `NVARCHAR` lassen nur die UTF-16-Codierung zu und bleiben unverändert.
 
-Dieses Feature kann abhängig von dem verwendeten Zeichensatz beträchtliche Speichereinsparungen ermöglichen. Die Änderung eines vorhandenen Spaltendatentyps mit lateinischen Zeichen von `NCHAR(10)` in `CHAR(10)` mit einer UTF-8-fähigen Sortierung führt beispielsweise zu einer Verringerung der Speicheranforderungen um 50 %. Diese Verringerung ist darauf zurückzuführen, dass `NCHAR(10)` 20 Byte für den Speicher erfordert, wohingegen `CHAR(10)` 10 Byte für die gleiche Unicode-Zeichenfolge erfordert.
+Dieses Feature kann abhängig von dem verwendeten Zeichensatz beträchtliche Speichereinsparungen ermöglichen. Die Änderung eines vorhandenen Spaltendatentyps mit ASCII-Zeichen (lateinisch) von `NCHAR(10)` in `CHAR(10)` mit einer UTF-8-fähigen Sortierung führt beispielsweise zu einer Verringerung der Speicheranforderungen um 50 %. Diese Verringerung ist darauf zurückzuführen, dass `NCHAR(10)` 20 Byte für den Speicher erfordert, wohingegen `CHAR(10)` 10 Byte für die gleiche Unicode-Zeichenfolge erfordert.
 
 Weitere Informationen finden Sie unter [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).
 
-CTP 2.1 unterstützt nun die Auswahl der UTF-8-Sortierung als Standard während des [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]-Setups.
+**CTP 2.1** unterstützt nun die Auswahl der UTF-8-Sortierung als Standard während des [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]-Setups.
 
-CTP 2.2 unterstützt nun die Verwendung von UTF-8-Zeichencodierung mit SQL Server-Replikation.
+**CTP 2.2** unterstützt nun die Verwendung von UTF-8-Zeichencodierung mit SQL Server-Replikation.
+
+**CTP 2.3** unterstützt nun die Verwendung von UTF-8-Zeichencodierung mit BIN2-Sortierung (UTF8_BIN2).
 
 ### <a name="resumable-online-index-create-ctp-20"></a>Erstellung fortsetzbarer Onlineinidizes (CTP 2.0)
 
@@ -383,6 +385,8 @@ Weitere Informationen finden Sie unter [Neuigkeiten zu SQL Server Machine Learni
 Die LWP-Abfrageinfrastruktur (Lightweight Profiling) stellt Abfrageleistungsdaten effizienter bereit als standardmäßige Profilerstellungsmechanismen. Lightweight Profiling ist ab sofort standardmäßig aktiviert. Diese Infrastruktur wurde in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 eingeführt. Lightweight Profiling bietet eine Methode zur Sammlung von Statistiken zur Abfrageausführung mit einem erwarteten CPU-Overhead von 2 % im Vergleich zu einem CPU-Overhead von bis zu 75 % für die Standardmethode zur Abfrageprofilerstellung. In älteren Versionen war diese Option standardmäßig deaktiviert. Datenbankadministratoren konnten diese mit dem [Ablaufverfolgungsflag 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) aktivieren. 
 
 Weitere Informationen zu LWP finden Sie unter [Profilerstellungsinfrastruktur für Abfragen](../relational-databases/performance/query-profiling-infrastructure.md).
+
+**CTP 2.3** Eine neue datenbankbezogene Konfiguration (`LIGHTWEIGHT_QUERY_PROFILING`) wird eingeführt, um die einfache Profilerstellungsinfrastruktur für Abfragen zu aktivieren oder deaktivieren.
 
 ### <a id="polybase"></a>Neue PolyBase-Connectors
 

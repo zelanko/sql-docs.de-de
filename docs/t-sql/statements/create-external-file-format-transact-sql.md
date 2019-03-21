@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d86628ead47e1862c1fa1a3aea0e0c32f17f7700
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f9759e2d623e2d9eca94ba7b5d17b7990c96366b
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014841"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161642"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -234,7 +234,7 @@ Hinweise zur Tabelle:
  TRUE  
  Speichern Sie beim Abrufen von Daten aus der Textdatei jeden fehlenden Wert, indem Sie den Standardwert für den Datentyp der entsprechenden Spalte in der externen Tabellendefinition verwenden. Ersetzen Sie einen fehlenden Wert beispielsweise durch:  
   
--   0, wenn die Spalte als numerische Spalte definiert ist.
+-   0, wenn die Spalte als numerische Spalte definiert ist. Dezimalspalten werden nicht unterstützt und führen zu einem Fehler.
   
 -   Leere Zeichenfolge „“, wenn die Spalte eine Zeichenfolgenspalte ist.
   

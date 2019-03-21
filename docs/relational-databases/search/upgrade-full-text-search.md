@@ -1,10 +1,8 @@
 ---
 title: Upgrade der Volltextsuche | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,16 +12,17 @@ helpviewer_keywords:
 - installing Full-Text Search
 - full-text search [SQL Server], upgrading
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c73ac14c951e1db5c7e7c96fc88f6d9cb1818fe
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d83049bccf49fda6b4ca8d0ea6f0578415374eb1
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665529"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974299"
 ---
 # <a name="upgrade-full-text-search"></a>Upgrade der Volltextsuche
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -125,7 +124,7 @@ Wenn eine Datenbank von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] au
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Verwenden Sie die **upgrade\_option**-Aktion von [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** Verwenden Sie im Dialogfeld **Servereigenschaften** die **Volltextupgrade-Option** . Weitere Informationen finden Sie unter [Verwalten und Überwachen der Volltextsuche auf einer Serverinstanz](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** Verwenden Sie im Dialogfeld **Servereigenschaften** die **Volltextupgrade-Option**. Weitere Informationen finden Sie unter [Verwalten und Überwachen der Volltextsuche auf einer Serverinstanz](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
 ##  <a name="Considerations_for_Restore"></a> Überlegungen zum Wiederherstellen eines [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Volltextkatalogs auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Eine Möglichkeit zum Aktualisieren der Volltextdaten einer [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Datenbank auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] besteht darin, eine vollständige Datenbanksicherung für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]wiederherzustellen.  

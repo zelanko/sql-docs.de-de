@@ -1,6 +1,5 @@
 ---
 title: Installieren von SQL Server mithilfe einer Konfigurationsdatei | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/07/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +10,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 1c52536b52fa63b61b24247f9df3854b712d86c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c5127fd5aec582db4f8e574f29cab5cec3809252
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672258"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58072212"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>Installieren von SQL Server mithilfe einer Konfigurationsdatei
 
@@ -24,7 +23,7 @@ ms.locfileid: "47672258"
  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup bietet die Möglichkeit, eine Konfigurationsdatei auf der Grundlage von Systemstandards und Laufzeiteingaben zu generieren. Sie können die Konfigurationsdatei verwenden, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im gesamten Unternehmen mit der gleichen Konfiguration bereitzustellen. Außerdem können manuelle Installationen über das gesamte Unternehmen hinweg standardisiert werden, indem eine Batchdatei erstellt wird, die Setup.exe startet. 
  
-Dieser Artikel wird speziell für SQL Server 2016 und SQL Server 2017 aktualisiert. Weitere Informationen zu älteren Versionen von SQL Server finden Sie unter [Install SQL Server 2014 Using a Configuration File (Installieren von SQL Server 2014 mithilfe einer Konfigurationsdatei)](install-sql-server-2016-using-a-configuration-file.md).
+Dieser Artikel wird für SQL Server 2016-Versionen und höher verwaltet. Weitere Informationen zu älteren Versionen von SQL Server finden Sie unter [Install SQL Server 2014 Using a Configuration File (Installieren von SQL Server 2014 mithilfe einer Konfigurationsdatei)](/../../2014/database-engine/install-windows/install-sql-server-using-a-configuration-file.md).
  
 Setup unterstützt die Verwendung der Konfigurationsdatei nur über die Eingabeaufforderung. Die Verarbeitungsreihenfolge der Parameter während der Verwendung der Konfigurationsdatei wird im Folgenden erläutert:  
   

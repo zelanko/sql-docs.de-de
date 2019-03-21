@@ -1,10 +1,8 @@
 ---
 title: Einschränken von Suchergebnissen mit RANK | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,20 +14,21 @@ helpviewer_keywords:
 - rankings [full-text search]
 - per-row rank values [full-text search]
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b6d92770fd91231bb2f491f38b6c3dc4563d08a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bb7d238a3ff475fe47dbe652adab3cc49ca3a3b2
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521001"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973689"
 ---
 # <a name="limit-search-results-with-rank"></a>Einschränken von Suchergebnissen mit RANK
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Die Funktionen [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) und [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) geben eine Spalte mit dem Namen RANK zurück, die Ordinalwerte zwischen 0 und 1000 (Rangwerte) enthält. Diese Werte werden verwendet, um die Rangfolge der zurückgegebenen Zeilen gemäß ihrer Übereinstimmung mit den Auswahlkriterien festzulegen. Die Rangwerte geben lediglich eine relative Relevanzreihenfolge der Zeilen im Resultset an, wobei ein niedrigerer Wert eine niedrigere Relevanz anzeigt. Die tatsächlichen Werte sind nicht von Bedeutung und unterscheiden sich i. d. R. bei jeder Ausführung der Abfrage.  
+  Die Funktionen [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) und [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) geben eine Spalte mit dem Namen RANK zurück, die Ordinalwerte zwischen 0 und 1000 (Rangwerte) enthält. Diese Werte werden verwendet, um die Rangfolge der zurückgegebenen Zeilen gemäß ihrer Übereinstimmung mit den Auswahlkriterien festzulegen. Die Rangwerte geben lediglich eine relative Relevanzreihenfolge der Zeilen im Resultset an, wobei ein niedrigerer Wert eine niedrigere Relevanz anzeigt. Die tatsächlichen Werte sind nicht von Bedeutung und unterscheiden sich i. d. R. bei jeder Ausführung der Abfrage.  
   
 > [!NOTE]  
 >  Die CONTAINS- und FREETEXT-Prädikate geben keine Rangwerte zurück.  
@@ -40,8 +39,8 @@ ms.locfileid: "52521001"
   
 ##  <a name="examples"></a> Beispiele zur Verwendung von RANK zum Einschränken der Suchergebnisse  
   
-### <a name="example-a-searching-for-only-the-top-three-matches"></a>Beispiel A: Suchen nach ausschließlich den obersten drei Übereinstimmungen  
- Im folgenden Beispiel werden mit CONTAINSTABLE nur die obersten drei Übereinstimmungen zurückgegeben.  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>Beispiel A: Ausschließliches Suchen nach den drei häufigsten Übereinstimmungen  
+ Im folgenden Beispiel werden mit CONTAINSTABLE nur die obersten drei Übereinstimmungen zurückgegeben.  
   
 ```  
 USE AdventureWorks2012  
@@ -71,7 +70,7 @@ RANK        Address                          City
 ```  
   
   
-### <a name="example-b-searching-for-the-top-ten-matches"></a>Beispiel B: Suchen nach ausschließlich den obersten zehn Übereinstimmungen  
+### <a name="example-b-searching-for-the-top-ten-matches"></a>Beispiel B: Ausschließliches Suchen nach den zehn häufigsten Übereinstimmungen  
  Im folgenden Beispiel wird CONTAINSTABLE verwendet, um die Beschreibung der ersten 5 Produkte zurückzugeben, bei denen die `Description` -Spalte das Wort "aluminium" in der Nähe des Worts "light" oder "lightweight" enthält.  
   
 ```  
@@ -138,7 +137,7 @@ GO
  Das größte in einem Volltextkatalog gespeicherte Vorkommen für eine bestimmte Eigenschaft in einer Zeile.  
   
  MaxQueryRank  
- Der maximale Rang, 1000, der von der Volltext-Engine zurückgegeben wird.  
+ Der maximale Rang, 1000, der von der Volltextsuch-Engine zurückgegeben wird.  
   
   
 ### <a name="rank-computation-issues"></a>Gesichtspunkte bei der Rangberechnung  
@@ -206,7 +205,7 @@ qtf is the frequency of the term in the query.
 ```  
   
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Abfragen mit Volltextsuche](../../relational-databases/search/query-with-full-text-search.md)  
   
   

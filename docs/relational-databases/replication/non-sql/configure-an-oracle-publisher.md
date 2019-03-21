@@ -13,12 +13,12 @@ ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0489d3d1486cb447a16b9658a17c0e6f4d9f41f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b91e4f912de3eff2d64e7cbbf35aad56cbccbcd
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825188"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58072224"
 ---
 # <a name="configure-an-oracle-publisher"></a>Konfigurieren eines Oracle-Verlegers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,6 +37,7 @@ ms.locfileid: "47825188"
 -   Veröffentlichen von Daten aus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] an Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten.  
 
 -   Beim Veröffentlichen von Daten an und von Oracle bestehen folgende Einschränkungen:  
+
   | |2016 oder früher |2017 oder höher |
   |-------|-------|--------|
   |Replikation von Oracle |Wird nur für Oracle 10g oder früher unterstützt |Wird nur für Oracle 10g oder früher unterstützt |
@@ -143,7 +144,7 @@ ms.locfileid: "47825188"
   
  Informationen zum Konfigurieren eines Oracle-Verlegers und zum Erstellen einer Veröffentlichung finden Sie unter [Create a Publication from an Oracle Database](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Überlegungen zu administrativen Aufgaben bei Oracle-Verlegern](../../../relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md)   
  [Datentypzuordnung für Oracle-Verleger](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
  [Begriffe im Zusammenhang mit dem Veröffentlichen von Oracle-Daten](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   

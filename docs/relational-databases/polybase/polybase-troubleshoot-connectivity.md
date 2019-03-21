@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
-ms.openlocfilehash: 26b11ac46da7239f2fef98ef838e2e7c6f775aef
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 980bbb179c92e95d0386e672ed0b62d7ac8cc968
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803155"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57976330"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Problembehandlung: PolyBase-Kerberos-Konnektivität
 
@@ -38,7 +38,7 @@ Diese bietet allgemeine Informationen, um sich mit dem Kerberos-Protokoll vertra
 1. gesicherte Ressourcen (HDFS, MR2, YARN, Auftragsverlauf, usw.)
 1. das Schlüsselverteilungscenter (in Active Directory als Domänencontroller bezeichnet)
 
-Jede gesicherte Ressource von Hadoop wird im  **Schlüsselverteilungscenter (Key Distribution Center, KDC)**  mit einem eindeutigen  **Dienstprinzipalnamen (Service Principal Name, SPN)** registriert, wenn Kerberos für den Hadoop-Cluster konfiguriert wird. Ziel ist es, dass der Client ein temporäres Benutzerticket, ein sogenanntes  **Ticket Granting Ticket (TGT)**, erhält, um ein weiteres temporäres Ticket, ein sogenanntes  **Dienstticket (Service Ticket, ST)** vom KDC mit dem gegebenen SPN anfordern zu können.  
+Jede von Hadoop gesicherte Ressource wird im **Schlüsselverteilungscenter (Key Distribution Center, KDC)** mit einem eindeutigen **Dienstprinzipalnamen (Service Principal Name, SPN)** registriert, wenn Kerberos für den Hadoop-Cluster konfiguriert wird. Ziel ist es, dass der Client ein temporäres Benutzerticket, ein sogenanntes **Ticket Granting Ticket (TGT)**, erhält, um ein weiteres temporäres Ticket, ein sogenanntes **Dienstticket (Service Ticket, ST)** vom KDC mit dem gegebenen SPN anfordern zu können.  
 
 Wenn in PolyBase die Authentifizierung mit einer durch Kerberos gesicherten Ressource angefordert wird, kommt es zu folgendem Handshake aus vier Zyklen:
 
@@ -102,7 +102,7 @@ Das Tool wird unabhängig von SQL Server ausgeführt. Dies bedeutet, dass es wed
 | *Namenknotenport* | Der Port des Namensknotens. Verweist auf das „LOCATION“-Argument Ihrer T-SQL „CREATE EXTERNAL DATA SOURCE“. Zum Beispiel „8020“. |
 | *Dienstprinzipal* | Der Administratordienstprinzipal Ihres KDC. Entspricht dem „IDENTITY“-Argument in Ihrer T-SQL-Klausel „`CREATE DATABASE SCOPED CREDENTIAL`“.|
 | *Dienstkennwort* | Statt Ihr Kennwort in der Konsole einzugeben, speichern Sie dieses in einer Datei und geben Sie hier den Dateipfad ein. Die Inhalte Ihrer Datei sollten dem „SECRET“-Argument in Ihrer T-SQL-Klausel „`CREATE DATABASE SCOPED CREDENTIAL`“ entsprechen. |
-| *Remoter HDFS-Dateipfad (Hadoop Distributed File System) (optional) * | Der Pfad einer vorhandenen Datei, auf die zugegriffen werden soll. Wenn nicht angegeben, wird der Stamm „/“ verwendet. |
+| *Remoter HDFS-Dateipfad (optional)* | Der Pfad einer vorhandenen Datei, auf die zugegriffen werden soll. Wenn nicht angegeben, wird der Stamm „/“ verwendet. |
 
 ## <a name="example"></a>Beispiel
 
@@ -210,11 +210,12 @@ Wenn das Tool ausgeführt wurde und die Eigenschaften den Zielpfads *nicht* ausg
 
 ## <a name="debugging-tips"></a>Tipps zum Debuggen
 
-### <a name="mit-kdc"></a>KDC von MIT  
+### <a name="mit-kdc"></a>KDC von MIT  
 
-Alle im KDC registrierten SPN, einschließlich Administratoren, können angezeigt werden, indem Sie  **kadmin.local** > (admin login) >  **listprincs**  im Host des KDC oder einem beliebigen KDC-Client ausführen. Wenn Kerberos auf dem Hadoop-Cluster richtig konfiguriert ist, sollte es für jeden der im Cluster verfügbaren Dienste eine SPN geben (z.B.: `nn`, `dn`, `rm`, `yarn`, `spnego` usw.). Die entsprechenden Schlüsseltabellendateien (Kennwortersatz) werden standardmäßig unter  **/etc/security/keytabs** angezeigt. Sie werden mit dem privaten Schlüssel des KDC verschlüsselt.  
+Alle im KDC registrierten SPN, einschließlich Administratoren, können angezeigt werden, indem Sie **kadmin.local** > (admin login) > **listprincs** im Host des KDC oder einem beliebigen KDC-Client ausführen. Wenn Kerberos auf dem Hadoop-Cluster richtig konfiguriert ist, sollte es für jeden der im Cluster verfügbaren Dienste eine SPN geben (z.B.: `nn`, `dn`, `rm`, `yarn`, `spnego` usw.). Die entsprechenden Schlüsseltabellendateien (Kennwortersatz) werden standardmäßig unter **/etc/security/keytabs** angezeigt. Sie werden mit dem privaten Schlüssel des KDC verschlüsselt.  
 
-Ziehen Sie auch in Betracht, [`kinit`](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) zu verwenden, um die Administratoranmeldeinformationen lokal im KDC zu überprüfen. Es kann z. B. so verwendet werden:  `kinit identity@MYREALM.COM`. Wenn Sie nach einem Kennwort gefragt werden, zeigt dies an, dass die Identität existiert.  Die Protokolle des KDC stehen standardmäßig unter  **/var/log/krb5kdc.log** zur Verfügung. Dazu gehören auch alle Ticketanforderungen, einschließlich der Client-IP, von der die Anforderung ausgegangen ist. Es sollten zwei Anforderungen von der IP des Computers mit SQL Server angezeigt werden, auf dem das Tool ausgeführt wurde: die erste vom authentifizierender Server als  **AS\_REQ** und die zweite  **TGS\_REQ** für das Dienstticket vom Ticket-Granting-Server.
+Ziehen Sie auch in Betracht, [`kinit`](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) zu verwenden, um die Administratoranmeldeinformationen lokal im KDC zu überprüfen. Es kann z. B. so verwendet werden: `kinit identity@MYREALM.COM`. Wenn Sie nach einem Kennwort gefragt werden, zeigt dies an, dass die Identität existiert.  
+Die Protokolle des KDC stehen standardmäßig unter **/var/log/krb5kdc.log** zur Verfügung. Dazu gehören auch alle Ticketanforderungen, einschließlich der Client-IP, von der die Anforderung ausgegangen ist. Es sollten zwei Anforderungen von der IP des Computers mit SQL Server angezeigt werden, auf dem das Tool ausgeführt wurde: die erste vom authentifizierender Server als **AS\_REQ** und die zweite **TGS\_REQ** für das Dienstticket vom Ticket-Granting-Server.
 
 ```bash
  [root@MY-KDC log]# tail -2 /var/log/krb5kdc.log 
@@ -224,7 +225,7 @@ Ziehen Sie auch in Betracht, [`kinit`](https://web.mit.edu/kerberos/krb5-1.12/do
 
 ### <a name="active-directory"></a>Active Directory 
 
-In Active Directory können Sie sich die SPN ansehen, indem Sie an die folgende Stelle navigieren: Einstellungen > Active Directory-Benutzer und -Computer > *MyRealm* > *MyOrganizationUnit* (MeinBereich > MeineOrganisationeinheit). Wenn Kerberos auf dem Hadoop-Cluster richtig konfiguriert ist, gibt es für jeden der verfügbaren Dienste eine SPN (z. B.: `nn`, `dn`, `rm`, `yarn`, `spnego` usw.).
+In Active Directory können Sie sich die SPN anschauen, indem Sie an die folgende Stelle navigieren: Einstellungen > Active Directory-Benutzer und -Computer > *MyRealm*  > *MyOrganizationUnit* (MeinBereich > MeineOrganisationeinheit). Wenn Kerberos auf dem Hadoop-Cluster richtig konfiguriert ist, gibt es für jeden der verfügbaren Dienste eine SPN (z. B.: `nn`, `dn`, `rm`, `yarn`, `spnego` usw.).
 
 ### <a name="general-debugging-tips"></a>Allgemeine Tipps zum Debuggen
 

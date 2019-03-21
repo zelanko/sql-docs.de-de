@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 881949902c2c198db4f03b2741a822d9c2b2e13e
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 08da724047b89ef31c8f9cc06a4a2da36e6b5eaa
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579730"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161687"
 ---
 # <a name="query-processing-architecture-guide"></a>Handbuch zur Architektur der Abfrageverarbeitung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "57579730"
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verarbeitet Abfragen für verschiedene Datenspeicherungsarchitekturen, z.B. lokale Tabellen, partitionierte Tabellen und serverübergreifend verteilte Tabellen. In den folgenden Themen wird erläutert, wie mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Abfragen verarbeitet werden und die Wiederverwendung von Abfragen mithilfe des Zwischenspeicherns von Ausführungsplänen optimiert wird.
 
 ## <a name="execution-modes"></a>Ausführungsmodi
-Das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] kann SQL-Anweisungen mit zwei verschiedenen Verarbeitungsmodi verarbeiten:
+Das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] kann [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen mit zwei verschiedenen Verarbeitungsmodi verarbeiten:
 - Zeilenmodusausführung
 - Batchmodusausführung
 
@@ -51,7 +51,7 @@ Weitere Informationen zu Columnstore-Indizes finden Sie unter [Columnstore-Indiz
 > Die Batchmodusausführung ist in Data Warehousing-Szenarios, bei denen große Datenmengen gelesen und aggregiert werden, sehr effizient.
 
 ## <a name="sql-statement-processing"></a>Verarbeiten von SQL-Anweisungen
-Die Verarbeitung einer einzelnen [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung ist das grundlegendste Verfahren, nach dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SQL-Anweisungen ausführt. Die Schritte, die zur Verarbeitung einer einzelnen `SELECT` -Anweisung verwendet werden, die nur auf lokale Basistabellen verweist (keine Sichten oder Remotetabellen), sollen das zugrunde liegende Verfahren veranschaulichen.
+Die Verarbeitung einer einzelnen [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung ist das grundlegendste Verfahren, nach dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen ausführt. Die Schritte, die zur Verarbeitung einer einzelnen `SELECT` -Anweisung verwendet werden, die nur auf lokale Basistabellen verweist (keine Sichten oder Remotetabellen), sollen das zugrunde liegende Verfahren veranschaulichen.
 
 ### <a name="logical-operator-precedence"></a>Rangfolge logischer Operatoren
 Wenn mehr als ein logischer Operator in einer Anweisung verwendet wird, wird `NOT` zuerst ausgewertet, dann `AND` und schließlich `OR`. Arithmetische (und bitweise) Operatoren werden vor logischen Operatoren verarbeitet. Weitere Informationen finden Sie unter [Operator Precedence (Operatorrangfolge)](../t-sql/language-elements/operator-precedence-transact-sql.md).
@@ -215,22 +215,22 @@ END;
 Wenn die `SELECT`-Anweisung in *MyProc2* in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] optimiert wird, ist der Wert von `@d2` nicht bekannt. Daher verwendet der Abfrageoptimierer eine Standardschätzung für die Selektivität von `OrderDate > @d2` (in diesem Fall 30 Prozent).
 
 ### <a name="processing-other-statements"></a>Verarbeiten anderer Anweisungen
-Die zuvor beschriebenen grundlegenden Schritte für die Verarbeitung einer `SELECT` -Anweisung gelten ebenfalls für andere SQL-Anweisungen, wie z.B. `INSERT`, `UPDATE`und `DELETE`. `UPDATE` - und `DELETE` -Anweisungen müssen sich auf die Gruppe von Zeilen beziehen, die geändert bzw. gelöscht werden soll. Der Vorgang zum Identifizieren dieser Zeilen ist der gleiche Vorgang, der zum Identifizieren der Quellzeilen verwendet wird, die einen Beitrag zum Resultset einer `SELECT` -Anweisung leisten. Die `UPDATE`- und `INSERT`-Anweisung können eingebettete `SELECT`-Anweisungen enthalten, welche die Datenwerte bereitstellen, die aktualisiert oder eingefügt werden sollen.
+Die zuvor beschriebenen grundlegenden Schritte für die Verarbeitung einer `SELECT`-Anweisung gelten ebenfalls für andere [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen, z. B. `INSERT`, `UPDATE` und `DELETE`. `UPDATE` - und `DELETE` -Anweisungen müssen sich auf die Gruppe von Zeilen beziehen, die geändert bzw. gelöscht werden soll. Der Vorgang zum Identifizieren dieser Zeilen ist der gleiche Vorgang, der zum Identifizieren der Quellzeilen verwendet wird, die einen Beitrag zum Resultset einer `SELECT` -Anweisung leisten. Die `UPDATE`- und `INSERT`-Anweisung können eingebettete `SELECT`-Anweisungen enthalten, welche die Datenwerte bereitstellen, die aktualisiert oder eingefügt werden sollen.
 
 Sogar DDL-Anweisungen (Data Definition Language, Datendefinitionssprache), wie z.B. `CREATE PROCEDURE` oder `ALTER TABLE`, werden letztendlich in eine Folge relationaler Operationen aufgelöst, die für die Systemkatalogtabellen und manchmal (wie bei `ALTER TABLE ADD COLUMN`) auch für die Datentabellen ausgeführt werden.
 
 ### <a name="worktables"></a>Arbeitstabellen
-Um eine logische Operation ausführen zu können, die in einer SQL-Anweisung angegeben wurde, muss die relationale Engine ggf. eine Arbeitstabelle erstellen. Arbeitstabellen sind interne Tabellen, die zum Speichern von Zwischenergebnissen verwendet werden. Arbeitstabellen werden für bestimmte `GROUP BY`-, `ORDER BY`- oder `UNION` -Abfragen generiert. Wenn z.B. eine `ORDER BY`-Klausel auf Spalten verweist, die nicht durch Indizes erfasst werden, muss die relationale Engine eventuell eine Arbeitstabelle generieren, um das Resultset in der angeforderten Reihenfolge sortieren zu können. Arbeitstabellen werden mitunter auch als Spool-Speicher verwendet, die vorübergehend das Ergebnis der Ausführung eines Teils eines Abfrageplans aufnehmen. Arbeitstabellen werden in tempdb erstellt und automatisch wieder gelöscht, sobald sie nicht mehr benötigt werden.
+Soll eine logische Operation ausgeführt werden, die in einer [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung angegeben wurde, muss die relationale Engine ggf. eine Arbeitstabelle erstellen. Arbeitstabellen sind interne Tabellen, die zum Speichern von Zwischenergebnissen verwendet werden. Arbeitstabellen werden für bestimmte `GROUP BY`-, `ORDER BY`- oder `UNION` -Abfragen generiert. Wenn z.B. eine `ORDER BY`-Klausel auf Spalten verweist, die nicht durch Indizes erfasst werden, muss die relationale Engine eventuell eine Arbeitstabelle generieren, um das Resultset in der angeforderten Reihenfolge sortieren zu können. Arbeitstabellen werden mitunter auch als Spool-Speicher verwendet, die vorübergehend das Ergebnis der Ausführung eines Teils eines Abfrageplans aufnehmen. Arbeitstabellen werden in tempdb erstellt und automatisch wieder gelöscht, sobald sie nicht mehr benötigt werden.
 
 ### <a name="view-resolution"></a>Sichtauflösung
 Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageprozessor behandelt indizierte und nicht indizierte Sichten unterschiedlich: 
 
 * Die Zeilen einer indizierten Sicht werden in der Datenbank in demselben Format wie eine Tabelle gespeichert. Wenn sich der Abfrageoptimierer entscheidet, eine indizierte Sicht in einem Abfrageplan zu verwenden, wird die indizierte Sicht auf die gleiche Weise wie eine Basistabelle behandelt.
-* Nur die Definition einer nicht indizierten Sicht wird gespeichert, nicht die Zeilen der Sicht. Der Abfrageoptimierer nimmt die Logik aus der Sichtdefinition in den Ausführungsplan auf, den er für die SQL-Anweisung erstellt, die auf die nicht indizierte Sicht verweist. 
+* Nur die Definition einer nicht indizierten Sicht wird gespeichert, nicht die Zeilen der Sicht. Der Abfrageoptimierer nimmt die Logik aus der Sichtdefinition in den Ausführungsplan auf, den er für die [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung erstellt, die auf die nicht indizierte Sicht verweist. 
 
-Die Logik, anhand derer der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer entscheidet, wann eine indizierte Sicht verwendet werden soll, ist mit der Logik vergleichbar, anhand derer ermittelt wird, wann ein Index für eine Tabelle verwendet wird. Wenn die Daten in der indizierten Sicht die gesamte oder einen Teil der SQL-Anweisung erfüllen und der Abfrageoptimierer ermittelt, dass ein Index für die Sicht der Zugriffspfad mit den geringsten Kosten ist, wählt der Abfrageoptimierer den Index unabhängig davon aus, ob im Namen der Abfrage auf die Sicht verwiesen wird.
+Die Logik, anhand derer der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer entscheidet, wann eine indizierte Sicht verwendet werden soll, ist mit der Logik vergleichbar, anhand derer ermittelt wird, wann ein Index für eine Tabelle verwendet wird. Wenn die Daten in der indizierten Sicht die gesamte oder einen Teil der [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung erfüllen und der Abfrageoptimierer ermittelt, dass ein Index für die Sicht der Zugriffspfad mit den geringsten Kosten ist, wählt der Abfrageoptimierer den Index unabhängig davon aus, ob im Namen der Abfrage auf die Sicht verwiesen wird.
 
-Wenn eine SQL-Anweisung auf eine nicht indizierte Sicht verweist, analysieren der Parser und der Abfrageoptimierer die Quelle sowohl der SQL-Anweisung als auch der Sicht und lösen sie dann zu einem einzigen Ausführungsplan auf. Es gibt nicht einen Plan für die SQL-Anweisung und einen weiteren Plan für die Sicht.
+Wenn eine [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung auf eine nicht indizierte Sicht verweist, analysieren der Parser und der Abfrageoptimierer die Quelle sowohl der [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung als auch der Sicht und lösen sie dann zu einem einzigen Ausführungsplan auf. Es gibt nicht einen Plan für die [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung und einen weiteren Plan für die Sicht.
 
 Nehmen Sie z. B. an, dass die folgende Sicht verwendet wird:
 
@@ -245,7 +245,7 @@ ON h.BusinessEntityID = p.BusinessEntityID;
 GO
 ```
 
-Von dieser Sicht ausgehend führen die beiden folgenden SQL-Anweisungen die gleichen Vorgänge für die Basistabellen aus und erzeugen identische Ergebnisse:
+Von dieser Sicht ausgehend führen die beiden folgenden [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen die gleichen Vorgänge für die Basistabellen aus und erzeugen identische Ergebnisse:
 
 ```sql
 /* SELECT referencing the EmployeeName view. */
@@ -371,7 +371,7 @@ Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageprozessor opti
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] erstellt intelligente, dynamische Pläne, in denen verteilte Abfragen effizient für den Zugriff auf Daten in Remotemitgliedstabellen verwendet werden: 
 
 * Zunächst verwendet der Abfrageprozessor OLE DB, um die Definitionen der CHECK-Einschränkungen aus jeder Mitgliedstabelle abzurufen. Dadurch kann der Abfrageprozessor die Verteilung der Schlüsselwerte auf die Mitgliedstabellen zuordnen.
-* The Query Processor compares the key ranges specified in an SQL statement `WHERE` -Klausel einer SQL-Anweisung angegebenen Schlüsselbereiche mit der Zuordnung, die die Verteilung der Zeilen in den Mitgliedstabellen anzeigt. Anschließend erstellt der Abfrageprozessor einen Abfrageausführungsplan, der mithilfe von verteilten Abfragen nur die Remotezeilen abruft, die zum Ausführen der SQL-Anweisung erforderlich sind. Darüber hinaus wird der Ausführungsplan so erstellt, dass alle Zugriffe auf Remotemitgliedstabellen, entweder für Daten oder Metadaten, so lange verzögert werden, bis die Informationen benötigt werden.
+* Der Abfrageprozessor vergleicht die Schlüsselbereiche, die in der `WHERE`-Klausel einer [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung angegeben sind, mit der Zuordnung, die die Verteilung der Zeilen in den Mitgliedstabellen anzeigt. Anschließend erstellt der Abfrageprozessor einen Abfrageausführungsplan, der mithilfe von verteilten Abfragen nur die Remotezeilen abruft, die zum Ausführen der [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung erforderlich sind. Darüber hinaus wird der Ausführungsplan so erstellt, dass alle Zugriffe auf Remotemitgliedstabellen, entweder für Daten oder Metadaten, so lange verzögert werden, bis die Informationen benötigt werden.
 
 Stellen Sie sich z.B. ein System vor, in dem eine Kundentabelle über Server1 (`CustomerID` von 1 bis 3299999), Server2 (`CustomerID` von 3300000 bis 6599999) und Server3 (`CustomerID` von 6600000 bis 9999999) partitioniert ist.
 
@@ -385,7 +385,7 @@ WHERE CustomerID BETWEEN 3200000 AND 3400000;
 
 Der Ausführungsplan für diese Abfrage extrahiert die Zeilen mit `CustomerID` -Schlüsselwerten von 3200000 bis 3299999 aus der lokalen Mitgliedstabelle und gibt eine verteilte Abfrage aus, um die Zeilen mit Schlüsselwerten von 3300000 bis 3400000 von Server2 abzurufen.
 
-Der Abfrageprozessor von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kann zudem eine dynamische Logik in die Abfrageausführungspläne für SQL-Anweisungen integrieren, bei denen die Schlüsselwerte nicht bekannt sind, wenn der Plan erstellt werden muss. Sehen Sie sich z.B. diese gespeicherte Prozedur an:
+Der Abfrageprozessor von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kann zudem eine dynamische Logik in die Abfrageausführungspläne für [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen integrieren, bei denen die Schlüsselwerte nicht bekannt sind, wenn der Plan erstellt werden muss. Sehen Sie sich z.B. diese gespeicherte Prozedur an:
 
 ```sql
 CREATE PROCEDURE GetCustomer @CustomerIDParameter INT
@@ -410,7 +410,7 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 
 ## <a name="stored-procedure-and-trigger-execution"></a>Ausführung von gespeicherten Prozeduren und Triggern
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] speichert nur die Quelle für gespeicherte Prozeduren und Trigger. Wenn eine gespeicherte Prozedur oder ein Trigger das erste Mal ausgeführt wird, wird die Quelle zu einem Ausführungsplan kompiliert. Wenn die gespeicherte Prozedur oder der Trigger erneut ausgeführt wird, bevor der Ausführungsplan aus dem Arbeitsspeicher entfernt wurde, erkennt die relationale Engine den vorhandenen Plan und verwendet ihn erneut. Wenn der Plan aus dem Arbeitsspeicher entfernt wurde, wird ein neuer Plan erstellt. Dieser Vorgang ist mit dem Verfahren vergleichbar, das [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für alle SQL-Anweisungen anwendet. Der wesentliche Leistungsvorteil, den gespeicherte Prozeduren und Trigger in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] im Vergleich zu Batch- oder dynamischem SQL besitzen, besteht darin, dass ihre SQL-Anweisungen immer identisch sind. Aus diesem Grund können sie durch die relationale Engine auf einfache Weise vorhandenen Ausführungsplänen zugeordnet werden. Pläne für gespeicherte Prozeduren und Trigger können einfach erneut verwendet werden.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] speichert nur die Quelle für gespeicherte Prozeduren und Trigger. Wenn eine gespeicherte Prozedur oder ein Trigger das erste Mal ausgeführt wird, wird die Quelle zu einem Ausführungsplan kompiliert. Wenn die gespeicherte Prozedur oder der Trigger erneut ausgeführt wird, bevor der Ausführungsplan aus dem Arbeitsspeicher entfernt wurde, erkennt die relationale Engine den vorhandenen Plan und verwendet ihn erneut. Wenn der Plan aus dem Arbeitsspeicher entfernt wurde, wird ein neuer Plan erstellt. Dieser Vorgang ist mit dem Verfahren vergleichbar, das [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für alle [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen anwendet. Der wesentliche Leistungsvorteil, den gespeicherte Prozeduren und Trigger in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] im Vergleich zu Batches dynamischer [!INCLUDE[tsql](../includes/tsql-md.md)] besitzen, besteht darin, dass ihre [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen immer identisch sind. Aus diesem Grund können sie durch die relationale Engine auf einfache Weise vorhandenen Ausführungsplänen zugeordnet werden. Pläne für gespeicherte Prozeduren und Trigger können einfach erneut verwendet werden.
 
 Der Ausführungsplan für gespeicherte Prozeduren und Trigger wird getrennt von dem Ausführungsplan für den Batch ausgeführt, der die gespeicherte Prozedur aufruft oder den Trigger auslöst. Dadurch können die Ausführungspläne für gespeicherte Prozeduren und Trigger mehrmals erneut verwendet werden.
 
@@ -420,16 +420,21 @@ Der Ausführungsplan für gespeicherte Prozeduren und Trigger wird getrennt von 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Ausführungspläne weisen die folgenden Hauptkomponenten auf: 
 
-* Abfrageausführungsplan: Bei dem größten Teil des Ausführungsplans handelt es sich um eine eintrittsinvariante, schreibgeschützte Datenstruktur, die von einer beliebigen Anzahl von Benutzern verwendet werden kann. Man bezeichnet diesen Teil als Abfrageplan. Im Abfrageplan wird kein Benutzerkontext gespeichert. Im Arbeitsspeicher befinden sich immer nur eine oder zwei Kopien des Abfrageplans: eine Kopie für alle seriellen Ausführungen und eine weitere für alle parallelen Ausführungen. Die parallele Kopie deckt alle parallelen Ausführungen ab, und zwar unabhängig von ihrem Grad an Parallelität. 
-* Ausführungskontext: Jeder Benutzer, der die Abfrage zurzeit ausführt, verfügt über eine Datenstruktur mit den Daten, die für diese Ausführung spezifisch sind, z.B. Parameterwerte. Diese Datenstruktur wird als Ausführungskontext bezeichnet. Die Datenstrukturen des Ausführungskontexts werden wiederverwendet. Wenn ein Benutzer eine Abfrage ausführt und eine der Strukturen nicht verwendet wird, wird diese Struktur erneut initialisiert, und zwar diesmal mit dem Kontext für den neuen Benutzer. 
+- **Abfrageausführungsplan**     
+  Bei dem größten Teil des Ausführungsplans handelt es sich um eine eintrittsinvariante, schreibgeschützte Datenstruktur, die von einer beliebigen Anzahl von Benutzern verwendet werden kann. Man bezeichnet diesen Teil als Abfrageplan. Im Abfrageplan wird kein Benutzerkontext gespeichert. Im Arbeitsspeicher befinden sich immer nur eine oder zwei Kopien des Abfrageplans: eine Kopie für alle seriellen Ausführungen und eine weitere für alle parallelen Ausführungen. Die parallele Kopie deckt alle parallelen Ausführungen ab, und zwar unabhängig von ihrem Grad an Parallelität. 
+- **Ausführungskontext**     
+  Jeder Benutzer, der die Abfrage zurzeit ausführt, verfügt über eine Datenstruktur mit den Daten, die für diese Ausführung spezifisch sind, z. B. Parameterwerte. Diese Datenstruktur wird als Ausführungskontext bezeichnet. Die Datenstrukturen des Ausführungskontexts werden wiederverwendet. Wenn ein Benutzer eine Abfrage ausführt und eine der Strukturen nicht verwendet wird, wird diese Struktur erneut initialisiert, und zwar diesmal mit dem Kontext für den neuen Benutzer. 
 
 ![execution_context](../relational-databases/media/execution-context.gif)
 
-Wenn eine SQL-Anweisung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgeführt wird, durchsucht die relationale Engine zunächst den Plancache, um zu überprüfen, ob ein vorhandener Ausführungsplan für die SQL-Anweisung vorhanden ist. Die SQL-Anweisung wird dann als vorhanden qualifiziert, wenn sie mit einer zuvor ausgeführten SQL-­Anweisung mit einem zwischengespeicherten Plan Zeichen für Zeichen genau übereinstimmt. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet sämtliche vorhandenen Pläne, die hierbei gefunden werden, wieder und spart somit den Aufwand für das erneute Kompilieren der SQL-Anweisung ein. Wenn kein Ausführungsplan vorhanden ist, generiert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] einen neuen Ausführungsplan für die Abfrage.
+Wenn eine [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgeführt wird, durchsucht die relationale Engine zunächst den Plancache, um zu überprüfen, ob ein vorhandener Ausführungsplan für dieselbe [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung vorhanden ist. Die [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung wird dann als vorhanden qualifiziert, wenn sie mit einer zuvor ausgeführten [!INCLUDE[tsql](../includes/tsql-md.md)]-­Anweisung mit einem zwischengespeicherten Plan Zeichen für Zeichen übereinstimmt. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet sämtliche vorhandenen Pläne wieder, die hierbei gefunden werden, und spart sich somit den Aufwand für das erneute Kompilieren der [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung. Wenn kein Ausführungsplan vorhanden ist, generiert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] einen neuen Ausführungsplan für die Abfrage.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet einen effizienten Algorithmus, um vorhandene Ausführungspläne für bestimmte SQL-Anweisungen zu suchen. In den meisten Systemen können durch das erneute Verwenden vorhandener Pläne anstelle des erneuten Kompilierens jeder SQL-Anweisung mehr Ressourcen eingespart werden, als für den Scan nach vorhandenen Plänen benötigt werden.
+> [!NOTE]
+> Einige [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen werden nicht zwischengespeichert. Beispiele hierfür sind Anweisungen für Massenvorgänge, die auf Zeilenspeicher ausgeführt werden, oder Anweisungen mit Zeichenfolgenliteralen, die größer als 8 KB sind.
 
-Die Algorithmen, die SQL-Anweisungen mit vorhandenen, nicht verwendeten Ausführungsplänen im Cache vergleichen, erfordern, dass alle Objektverweise vollqualifiziert sind. Angenommen, `Person` ist das Standardschema für den Benutzer, der die unten angegebenen `SELECT`-Anweisungen ausführt. Da es in diesem Beispiel nicht erforderlich ist, dass die Tabelle `Person` zum Ausführen vollqualifiziert ist, bedeutet dies, dass die zweite Anweisung nicht mit einem vorhandenen Plan verglichen wird, aber die dritte Anweisung:
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet einen effizienten Algorithmus, um vorhandene Ausführungspläne für bestimmte [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen zu suchen. In den meisten Systemen können durch das erneute Verwenden vorhandener Pläne anstelle des erneuten Kompilierens jeder [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung mehr Ressourcen eingespart werden, als für den Scan nach vorhandenen Plänen benötigt werden.
+
+Die Algorithmen, die [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen mit vorhandenen, nicht verwendeten Ausführungsplänen im Cache vergleichen, erfordern, dass alle Objektverweise vollqualifiziert sind. Angenommen, `Person` ist das Standardschema für den Benutzer, der die unten angegebenen `SELECT`-Anweisungen ausführt. Da es in diesem Beispiel nicht erforderlich ist, dass die Tabelle `Person` zum Ausführen vollqualifiziert ist, bedeutet dies, dass die zweite Anweisung nicht mit einem vorhandenen Plan verglichen wird, aber die dritte Anweisung:
 
 ```sql
 SELECT * FROM Person;
@@ -499,8 +504,8 @@ Die `recompile_cause`-Spalte von `sql_statement_recompile` xEvent enthält einen
 
 > [!NOTE]
 > In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Versionen, in denen xEvents nicht verfügbar sind, kann die [SP:Recompile](../relational-databases/event-classes/sp-recompile-event-class.md)-Ablaufverfolgung des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Profiler auch zur Berichterstellung von Neukompilierungen auf Anweisungsebene verwendet werden.
-> Das Ablaufereignis [SQL:StmtRecompile](../relational-databases/event-classes/sql-stmtrecompile-event-class.md) meldet ebenfalls Neukompilierungen, und dieses Ablaufereignis kann auch zum Nachverfolgen und Debuggen von Neukompilierungen verwendet werden. Während „SP:Recompile“ nur für gespeicherte Prozeduren und Trigger generiert wird, wird „SQL:StmtRecompile“ für gespeicherte Prozeduren, Trigger, Ad-hoc-Batches, Batches, die mithilfe von `sp_executesql` ausgeführt werden, vorbereitete Abfragen sowie für die dynamische SQL generiert.
-> Die *EventSubClass*-Spalte von „SP:Recompile“ und „SQL:StmtRecompile“ enthält einen ganzzahligen Code, der den Grund für die Neukompilierung angibt. Die Codes sind [hier](../relational-databases/event-classes/sql-stmtrecompile-event-class.md) beschrieben.
+> Das Ablaufereignis [SQL:StmtRecompile](../relational-databases/event-classes/sql-stmtrecompile-event-class.md) meldet ebenfalls Neukompilierungen, und dieses Ablaufereignis kann auch zum Nachverfolgen und Debuggen von Neukompilierungen verwendet werden. Während „SP:Recompile“ nur für gespeicherte Prozeduren und Trigger generiert wird, wird `SQL:StmtRecompile` für gespeicherte Prozeduren, Trigger, Ad-hoc-Batches, Batches, die mithilfe von `sp_executesql` ausgeführt werden, vorbereitete Abfragen sowie für dynamisches SQL generiert.
+> Die *EventSubClass*-Spalte von `SP:Recompile` und `SQL:StmtRecompile` enthält einen ganzzahligen Code, der den Grund für die Neukompilierung angibt. Die Codes sind [hier](../relational-databases/event-classes/sql-stmtrecompile-event-class.md) beschrieben.
 
 > [!NOTE]
 > Wenn die Datenbankoption `AUTO_UPDATE_STATISTICS` auf `ON` festgelegt wird, werden Abfragen neu kompiliert, wenn sie Tabellen oder indizierte Sichten betreffen, deren Statistiken aktualisiert wurden oder deren Kardinalitäten sich seit der letzten Ausführung signifikant geändert haben. Dieses Verhalten gilt für standardmäßige benutzerdefinierte Tabellen, temporäre Tabellen und die durch DML-Trigger erstellten eingefügten und gelöschten Tabellen. Wenn sich sehr viele Neukompilierungen auf die Abfrageleistung auswirken, können Sie diese Einstellung in `OFF`ändern. Wenn die `AUTO_UPDATE_STATISTICS`-Datenbankoption auf `OFF` festgelegt wird, werden auf der Grundlage von Statistiken oder wegen Änderungen der Kardinalität keine Neukompilierungen durchgeführt, mit Ausnahme der durch DML `INSTEAD OF`-Trigger erstellten eingefügten und gelöschten Tabellen. Da diese Tabellen in „tempdb“ erstellt wurden, hängt die Neukompilierung von Abfragen, die auf diese Tabellen zugreifen, von der `AUTO_UPDATE_STATISTICS` -Einstellung in „tempdb“ ab. Beachten Sie, dass, auch wenn diese Einstellung auf `OFF` festgelegt ist, Abfragen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 weiterhin auf der Grundlage der Kardinalitätsänderungen in den durch DML-Trigger eingefügten und gelöschten Tabellen erneut kompiliert werden.
@@ -526,9 +531,9 @@ FROM AdventureWorks2014.Production.Product
 WHERE ProductSubcategoryID = 4;
 ```
 
-Die Ausführungspläne für diese Abfragen unterscheiden sich lediglich hinsichtlich des Werts, der für den Vergleich mit der `ProductSubcategoryID` -Spalte gespeichert wird. Das Ziel von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], stets zu erkennen, wenn Anweisungen im Prinzip den gleichen Plan generieren, und diesen Plan dann wiederzuverwenden, kann von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in komplexen SQL-Anweisungen manchmal nicht erfüllt werden.
+Die Ausführungspläne für diese Abfragen unterscheiden sich lediglich hinsichtlich des Werts, der für den Vergleich mit der `ProductSubcategoryID` -Spalte gespeichert wird. Das Ziel von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], stets zu erkennen, wenn Anweisungen im Prinzip den gleichen Plan generieren, und diesen Plan dann wiederzuverwenden, kann von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in komplexen [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen manchmal nicht erkannt werden.
 
-Wenn Sie Konstanten mithilfe von Parametern von den SQL-Anweisungen trennen, unterstützen Sie die relationale Engine dabei, doppelte Pläne zu erkennen. Es gibt folgende Möglichkeiten, um Parameter zu verwenden: 
+Wenn Sie Konstanten mithilfe von Parametern von den [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen trennen, unterstützen Sie die relationale Engine dabei, doppelte Pläne zu erkennen. Es gibt folgende Möglichkeiten, um Parameter zu verwenden: 
 
 * Verwenden Sie `sp_executesql` in [!INCLUDE[tsql](../includes/tsql-md.md)]: 
 
@@ -576,12 +581,12 @@ Sie kann jedoch nach den Regeln der einfachen Parametrisierung parametrisiert we
 
 ### <a name="SimpleParam"></a> Einfache Parametrisierung
 
-In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird durch das Verwenden von Parametern oder Parametermarkierungen in Transact-SQL-Anweisungen die Fähigkeit der relationalen Engine verbessert, neue SQL-Anweisungen vorhandenen, zuvor kompilierten Ausführungsplänen zuzuordnen.
+In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird durch das Verwenden von Parametern oder Parametermarkierungen in Transact-SQL-Anweisungen die Fähigkeit der relationalen Engine verbessert, neue [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen vorhandenen, zuvor kompilierten Ausführungsplänen zuzuordnen.
 
 > [!WARNING] 
 > Es ist sicherer, Parameter oder Parametermarkierungen zu verwenden, die vom Endbenutzer eingegebene Werte enthalten, als die Werte in einer Zeichenfolge zu verketten, die dann mithilfe einer API-Datenzugriffsmethode, einer `EXECUTE` -Anweisung oder einer gespeicherten `sp_executesql` -Prozedur ausgeführt werden.
 
-Wenn eine SQL-Anweisung ohne Parameter ausgeführt wird, parametrisiert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Anweisung intern, um die Wahrscheinlichkeit zu erhöhen, dass ein übereinstimmender Ausführungsplan gefunden wird. Dieser Prozess wird als einfache Parametrisierung bezeichnet. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 wurde dieser Prozess als Auto-Parametrisierung bezeichnet.
+Wenn eine [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung ohne Parameter ausgeführt wird, parametrisiert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Anweisung intern, um die Wahrscheinlichkeit zu erhöhen, dass ein übereinstimmender Ausführungsplan gefunden wird. Dieser Prozess wird als einfache Parametrisierung bezeichnet. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 wurde dieser Prozess als Auto-Parametrisierung bezeichnet.
 
 Angenommen, die folgende Anweisung wird ausgeführt:
 
@@ -601,7 +606,7 @@ SELECT * FROM AdventureWorks2014.Production.Product
 WHERE ProductSubcategoryID = 4;
 ```
 
-Bei der Verarbeitung komplexer SQL-Anweisungen können für die relationale Engine eventuell Schwierigkeiten bei der Bestimmung der Ausdrücke auftreten, die parametrisiert werden können. Um die Wahrscheinlichkeit zu erhöhen, dass die relationale Engine Übereinstimmungen zwischen komplexen SQL-Anweisungen und vorhandenen, nicht verwendeten Ausführungsplänen erkennt, sollten Sie die Parameter explizit mithilfe von „sp_executesql“ oder Parametermarkierungen angeben. 
+Bei der Verarbeitung komplexer [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen können für die relationale Engine eventuell Schwierigkeiten bei der Bestimmung der Ausdrücke auftreten, die parametrisiert werden können. Soll die Wahrscheinlichkeit erhöht werden, dass die relationale Engine Übereinstimmungen zwischen komplexen [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen und vorhandenen, nicht verwendeten Ausführungsplänen erkennt, sollten Sie die Parameter explizit mithilfe von „sp_executesql“ oder Parametermarkierungen angeben. 
 
 > [!NOTE]
 > Wenn die arithmetischen Operatoren +, –, \*, / oder % zur impliziten oder expliziten Konvertierung von Konstantenwerten der Datentypen „int“, „smallint“, „tinyint“ oder „bigint“ in die Datentypen „float“, „real“, „decimal“ oder „numeric“ verwendet werden, wendet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] spezielle Regeln an, um den Typ und die Genauigkeit der Ausdrucksergebnisse zu berechnen. Allerdings unterscheiden sich diese Regeln in Abhängigkeit davon, ob die Abfrage parametrisiert ist oder nicht. Daher können gleiche Ausdrücke in Abfragen in einigen Fällen zu unterschiedlichen Ergebnissen führen.
@@ -620,7 +625,7 @@ Wenn die `PARAMETERIZATION` -Option auf `FORCED`festgelegt ist, werden während 
 * Anweisungen innerhalb des Hauptteils von gespeicherten Prozeduren, Triggern oder benutzerdefinierten Funktionen. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] werden bereits Abfragepläne für diese Routinen wiederverwendet.
 * Vorbereitete Anweisungen, die bereits in der clientbasierten Anwendung parametrisiert wurden.
 * Anweisungen, die XQuery-Methodenaufrufe enthalten, wo die Methode in einem Kontext angezeigt wird, in dem ihre Argumente normalerweise parametrisiert werden, wie beispielsweise die `WHERE` -Klausel. Wenn die Methode in einem Kontext angezeigt wird, in dem ihre Argumente normalerweise nicht parametrisiert werden, wird der Rest der Anweisung parametrisiert.
-* Anweisungen in einem Transact-SQL-Cursor. (`SELECT` -Anweisungen innerhalb von API-Cursorn werden parametrisiert.)
+* Anweisungen innerhalb eines [!INCLUDE[tsql](../includes/tsql-md.md)]-Cursors. (`SELECT` -Anweisungen innerhalb von API-Cursorn werden parametrisiert.)
 * Als veraltet markierte Abfragekonstrukte.
 * Eine Anweisung, die im Kontext von `ANSI_PADDING` oder `ANSI_NULLS` mit der Einstellung `OFF`ausgeführt wird.
 * Anweisungen mit mehr als 2.097 parametrisierbaren Literalwerten.
@@ -644,7 +649,7 @@ Außerdem werden die folgenden Abfrageklauseln nicht parametrisiert. Beachten Si
   * Der Ausdruck enthält eine `CASE` -Klausel.  
 * Argumente von Abfragehinweisklauseln. Zu diesen gehören das `number_of_rows` -Argument des `FAST` -Abfragehinweises, das `number_of_processors` -Argument des `MAXDOP` -Abfragehinweises sowie das number-Argument des `MAXRECURSION` -Abfragehinweises.
 
-Die Parametrisierung wird auf der Ebene der einzelnen Transact-SQL-Anweisungen ausgeführt, d. h. die Anweisungen werden nacheinander batchweise parametrisiert. Nach dem Kompilieren wird eine parametrisierte Abfrage ausgeführt – in dem Kontext des Batches, in dem die Abfrage ursprünglich übermittelt wurde. Wenn ein Ausführungsplan für eine Abfrage zwischengespeichert wird, können Sie anhand der sql-Spalte der dynamischen Verwaltungssicht sys.syscacheobjects ermitteln, ob die Abfrage parametrisiert wurde. Wenn eine Abfrage parametrisiert wird, stehen die Namen und Datentypen der Parameter vor dem Text des übergebenen Batches in dieser Spalte, z. B. (\@1 tinyint).
+Die Parametrisierung wird auf der Ebene der einzelnen [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen ausgeführt, d. h. die Anweisungen werden nacheinander batchweise parametrisiert. Nach dem Kompilieren wird eine parametrisierte Abfrage ausgeführt – in dem Kontext des Batches, in dem die Abfrage ursprünglich übermittelt wurde. Wenn ein Ausführungsplan für eine Abfrage zwischengespeichert wird, können Sie anhand der sql-Spalte der dynamischen Verwaltungssicht sys.syscacheobjects ermitteln, ob die Abfrage parametrisiert wurde. Wenn eine Abfrage parametrisiert wird, stehen die Namen und Datentypen der Parameter vor dem Text des übergebenen Batches in dieser Spalte, z. B. (\@1 tinyint).
 
 > [!NOTE]
 > Parameternamen sind willkürlich. Benutzer bzw. Anwendungen sollten sich nicht auf eine bestimmte Namensreihenfolge verlassen. Darüber hinaus kann sich zwischen verschiedenen Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und Service Pack-Upgrades Folgendes ändern: Parameternamen, die Auswahl der parametrisierten Literale und der Abstand im parametrisierten Text.
@@ -678,15 +683,15 @@ Sie können das Verhalten der erzwungenen Parametrisierung überschreiben, indem
 
 ### <a name="preparing-sql-statements"></a>Vorbereiten von SQL-Anweisungen
 
-Die relationale Engine von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bietet vollständige Unterstützung für die Vorbereitung von SQL-Anweisungen vor ihrer Ausführung. Wenn eine Anwendung eine SQL-Anweisung mehrfach ausführen muss, kann mithilfe der Datenbank-API Folgendes erreicht werden: 
+Die relationale Engine von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bietet vollständige Unterstützung für die Vorbereitung von [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen vor ihrer Ausführung. Wenn eine Anwendung eine [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung mehrfach ausführen muss, kann mithilfe der Datenbank-API Folgendes erreicht werden: 
 
-* Einmaliges Vorbereiten der Anweisung. Mit diesem Schritt wird die SQL-Anweisung zu einem Ausführungsplan kompiliert.
-* Ausführen des vorkompilierten Ausführungsplans immer dann, wenn die Anweisung ausgeführt werden muss. Auf diese Weise muss die SQL-Anweisung nach der ersten Ausführung nicht jedes Mal erneut kompiliert werden.   
-  Das Vorbereiten und Ausführen von Anweisungen wird durch API-Funktionen und -Methoden gesteuert. Es ist nicht Teil der Transact-SQL-Sprache. Das Vorbereiten/Ausführen-Modell für die Ausführung von SQL-Anweisungen wird von dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieter und dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber unterstützt. Bei einer Vorbereitungsanforderung sendet der Anbieter oder der Treiber die Anweisung zusammen mit der Anforderung zur Vorbereitung der Anweisung an [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird ein Ausführungsplan kompiliert und ein Handle für diesen Plan an den Anbieter oder Treiber zurückgegeben. Bei einer Ausführungsanforderung sendet der Anbieter bzw. Treiber eine Anforderung an den Server, den dem Handle zugeordneten Plan auszuführen. 
+* Einmaliges Vorbereiten der Anweisung. Mit diesem Schritt wird die [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung zu einem Ausführungsplan kompiliert.
+* Ausführen des vorkompilierten Ausführungsplans immer dann, wenn die Anweisung ausgeführt werden muss. Auf diese Weise muss die [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung nach der ersten Ausführung nicht jedes Mal erneut kompiliert werden.   
+  Das Vorbereiten und Ausführen von Anweisungen wird durch API-Funktionen und -Methoden gesteuert. Es ist kein Teil der [!INCLUDE[tsql](../includes/tsql-md.md)]-Sprache. Das Vorbereiten/Ausführen-Modell für die Ausführung von [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen wird von dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieter und dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber unterstützt. Bei einer Vorbereitungsanforderung sendet der Anbieter oder der Treiber die Anweisung zusammen mit der Anforderung zur Vorbereitung der Anweisung an [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird ein Ausführungsplan kompiliert und ein Handle für diesen Plan an den Anbieter oder Treiber zurückgegeben. Bei einer Ausführungsanforderung sendet der Anbieter bzw. Treiber eine Anforderung an den Server, den dem Handle zugeordneten Plan auszuführen. 
 
 Vorbereitete Anweisungen können nicht zum Erstellen von temporären Objekten in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet werden. Vorbereitete Anweisungen können nicht auf gespeicherte Systemprozeduren verweisen, die temporäre Objekte, wie z. B. temporäre Tabellen, erstellen. Diese Prozeduren müssen direkt ausgeführt werden.
 
-Durch übermäßige Verwendung des Vorbereiten/Ausführen-Modells kann die Leistung beeinträchtigt werden. Wenn eine Anweisung nur ein Mal ausgeführt wird, wird durch eine direkte Ausführung nur ein Netzwerkroundtrip zum Server benötigt. Das Vorbereiten und Ausführen einer SQL-Anweisung, die nur ein Mal ausgeführt wird, erfordert einen zusätzlichen Netzwerkroundtrip: einen Trip zur Vorbereitung und einen Trip zur Ausführung der Anweisung.
+Durch übermäßige Verwendung des Vorbereiten/Ausführen-Modells kann die Leistung beeinträchtigt werden. Wenn eine Anweisung nur ein Mal ausgeführt wird, wird durch eine direkte Ausführung nur ein Netzwerkroundtrip zum Server benötigt. Das Vorbereiten und Ausführen einer [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung, die nur ein Mal ausgeführt wird, erfordert einen zusätzlichen Netzwerkroundtrip: einen Trip zur Vorbereitung und einen Trip zur Ausführung der Anweisung.
 
 Das Vorbereiten einer Anweisung ist effizienter, wenn Parametermarkierungen verwendet werden. Nehmen Sie z.B. an, eine Anwendung soll gelegentlich Produktinformationen aus der `AdventureWorks` -Beispieldatenbank abrufen. Es gibt zwei Möglichkeiten, wie die Anwendung diese Aufgabe ausführen kann. 
 
@@ -709,9 +714,9 @@ Die zweite Möglichkeit umfasst folgende Schritte:
 
 Die zweite Methode ist effizienter, sobald die Anweisung mehr als drei Mal ausgeführt wird.
 
-In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bietet das Vorbereiten/Ausführen-Modell aufgrund der Art und Weise, wie Ausführungspläne von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wiederverwendet werden, keine erheblichen Leistungsvorteile gegenüber der direkten Ausführung. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] besitzt effiziente Algorithmen zur Ermittlung von Übereinstimmungen zwischen aktuellen SQL-Anweisungen und Ausführungsplänen, die für vorhergehende Ausführungen derselben SQL-Anweisung generiert wurden. Wenn eine Anwendung eine SQL-Anweisung mit Parametermarkierungen mehrfach ausführt, verwendet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] den Ausführungsplan der ersten Ausführung für die zweite und alle folgenden Ausführungen erneut (es sei denn, der Plan wird aus dem Plancache entfernt). Das Vorbereiten/Ausführen-Modell bietet jedoch weiterhin die folgenden Vorteile: 
+In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bietet das Vorbereiten/Ausführen-Modell aufgrund der Art und Weise, wie Ausführungspläne von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wiederverwendet werden, keine erheblichen Leistungsvorteile gegenüber der direkten Ausführung. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] besitzt effiziente Algorithmen zur Ermittlung von Übereinstimmungen zwischen aktuellen [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen und Ausführungsplänen, die für vorhergehende Ausführungen derselben [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung generiert wurden. Wenn eine Anwendung eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Anweisung mit Parametermarkierungen mehrfach ausführt, verwendet [!INCLUDE[tsql](../includes/tsql-md.md)] den Ausführungsplan der ersten Ausführung für die zweite und alle folgenden Ausführungen erneut (es sei denn, der Plan wird aus dem Plancache entfernt). Das Vorbereiten/Ausführen-Modell bietet jedoch weiterhin die folgenden Vorteile: 
 
-* Das Suchen eines Ausführungsplans anhand eines identifizierenden Handles ist effizienter als die Algorithmen, die für das Ermitteln einer übereinstimmenden SQL-Anweisung mit vorhandenen Ausführungsplänen verwendet werden.
+* Das Suchen eines Ausführungsplans anhand eines identifizierenden Handles ist effizienter als die Algorithmen, die für das Ermitteln einer übereinstimmenden [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung mit vorhandenen Ausführungsplänen verwendet werden.
 * Die Anwendung kann steuern, wann der Ausführungsplan erstellt, und wann er wiederverwendet werden soll.
 * Das Vorbereiten/Ausführen-Modell kann auf andere Datenbanken portiert werden, einschließlich früherer Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
@@ -908,20 +913,20 @@ Einzelne `CREATE TABLE` - oder `ALTER TABLE` -Anweisungen können über mehrere 
 
 ## <a name="distributed-query-architecture"></a>Architektur verteilter Abfragen
 
-Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt zwei Methoden, um auf heterogene OLE DB-Datenquellen in Transact-SQL-Anweisungen zu verweisen:
+Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt zwei Methoden, um auf heterogene OLE DB-Datenquellen in [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen zu verweisen:
 
 * Verbindungsservernamen  
-  Mithilfe der gespeicherten Systemprozeduren `sp_addlinkedserver` und `sp_addlinkedsrvlogin` kann einer OLE DB-Datenquelle ein Servername zugewiesen werden. Auf Objekte in diesen Verbindungsservern kann in Transact-SQL-Anweisungen mithilfe von aus vier Teilen bestehenden Namen verwiesen werden. Wenn z.B. der Verbindungsservername `DeptSQLSrvr` für eine andere Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] definiert wird, verweist die folgende Anweisung auf eine Tabelle auf diesem Server: 
+  Mithilfe der gespeicherten Systemprozeduren `sp_addlinkedserver` und `sp_addlinkedsrvlogin` kann einer OLE DB-Datenquelle ein Servername zugewiesen werden. Auf Objekte in diesen Verbindungsservern kann in [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen mithilfe von aus vier Teilen bestehenden Namen verwiesen werden. Wenn z.B. der Verbindungsservername `DeptSQLSrvr` für eine andere Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] definiert wird, verweist die folgende Anweisung auf eine Tabelle auf diesem Server: 
   
   ```sql
   SELECT JobTitle, HireDate 
   FROM DeptSQLSrvr.AdventureWorks2014.HumanResources.Employee;
   ```
 
-   Der Verbindungsservername kann auch in einer `OPENQUERY` -Anweisung angegeben werden, um ein Rowset aus einer OLE DB-Datenquelle zu öffnen. In Transact-SQL-Anweisungen kann dann auf dieses Rowset wie auf eine Tabelle verwiesen werden. 
+   Der Verbindungsservername kann auch in einer `OPENQUERY` -Anweisung angegeben werden, um ein Rowset aus einer OLE DB-Datenquelle zu öffnen. In [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen kann dann auf dieses Rowset wie auf eine Tabelle verwiesen werden. 
 
 * Ad-hoc-Konnektornamen  
-  Für seltene Verweise auf eine Datenquelle wird die `OPENROWSET` - oder `OPENDATASOURCE` -Funktion zusammen mit den Informationen angegeben, die zum Herstellen einer Verbindung mit dem Verbindungsserver erforderlich sind. Auf das Rowset kann dann auf die gleiche Weise verwiesen werden, wie auf eine Tabelle in Transact-SQL-Anweisungen verwiesen wird: 
+  Für seltene Verweise auf eine Datenquelle wird die `OPENROWSET` - oder `OPENDATASOURCE` -Funktion zusammen mit den Informationen angegeben, die zum Herstellen einer Verbindung mit dem Verbindungsserver erforderlich sind. Auf das Rowset kann dann auf die gleiche Weise verwiesen werden, wie auf eine Tabelle in [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen verwiesen wird: 
   
   ```sql
   SELECT *
@@ -930,19 +935,19 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt zw
         Employees);
   ```
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet OLE DB für die Kommunikation zwischen der relationalen Engine und der Speicher-Engine. Die relationale Engine zerlegt jede Transact-SQL-Anweisung in eine Reihe von Vorgängen für einfache OLE DB-Rowsets, die durch die Speicher-Engine aus den Basistabellen geöffnet werden. Dies bedeutet, dass die relationale Engine einfache OLE DB-Rowsets auch für jede OLE DB-Datenquelle öffnen kann.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet OLE DB für die Kommunikation zwischen der relationalen Engine und der Speicher-Engine. Die relationale Engine zerlegt jede [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung in eine Reihe von Vorgängen für einfache OLE DB-Rowsets, die durch die Speicher-Engine aus den Basistabellen geöffnet werden. Dies bedeutet, dass die relationale Engine einfache OLE DB-Rowsets auch für jede OLE DB-Datenquelle öffnen kann.  
 ![oledb_storage](../relational-databases/media/oledb-storage.gif)  
 Die relationale Engine verwendet die OLE DB-API (Application Programming Interface), um die Rowsets auf Verbindungsservern zu öffnen, die Zeilen abzurufen und Transaktionen zu verwalten.
 
-Auf dem Server, auf dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgeführt wird, muss für jede OLE DB-Datenquelle, auf die als Verbindungsserver zugegriffen wird, ein OLE DB-Anbieter vorhanden sein. Die Reihe von Transact-SQL-Vorgängen, die für eine bestimmte OLE DB-Datenquelle angewendet werden können, wird durch die Funktionalität des OLE DB-Anbieters bestimmt.
+Auf dem Server, auf dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgeführt wird, muss für jede OLE DB-Datenquelle, auf die als Verbindungsserver zugegriffen wird, ein OLE DB-Anbieter vorhanden sein. Der Reihe von [!INCLUDE[tsql](../includes/tsql-md.md)]-Vorgängen, die für eine bestimmte OLE DB-Datenquelle angewendet werden können, wird durch die Funktionalität des OLE DB-Anbieters bestimmt.
 
-Mitglieder der festen Serverrolle `sysadmin` können mithilfe der `DisallowAdhocAccess`-Eigenschaft in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Ad-hoc-Konnektornamen für einen OLE DB-Anbieter in jeder Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] aktivieren oder deaktivieren. Bei aktiviertem Ad-hoc-Zugriff kann ein beliebiger Benutzer, der bei der Instanz angemeldet ist, SQL-Anweisungen mit Ad-hoc-Konnektornamen ausführen, die auf eine beliebige Datenquelle im Netzwerk verweisen, und mithilfe dieses OLE DB-Anbieters auf diese Datenquellen zugreifen. Mitglieder der `sysadmin` -Rolle können zum Steuern des Zugriffs auf Datenquellen den Ad-hoc-Zugriff auf diesen OLE DB-Anbieter deaktivieren. Auf diese Weise können Benutzer lediglich auf diejenigen Datenquellen zugreifen, auf die mit den von den Administratoren definierten Verbindungsservernamen verwiesen wird. Standardmäßig ist der Ad-hoc-Zugriff für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-OLE DB-Anbieter aktiviert und für alle anderen OLE DB-Anbieter deaktiviert.
+Mitglieder der festen Serverrolle `sysadmin` können mithilfe der `DisallowAdhocAccess`-Eigenschaft in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Ad-hoc-Konnektornamen für einen OLE DB-Anbieter in jeder Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] aktivieren oder deaktivieren. Bei aktiviertem Ad-hoc-Zugriff kann ein beliebiger Benutzer, der bei der Instanz angemeldet ist, [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen mit Ad-hoc-Konnektornamen ausführen, die auf eine beliebige Datenquelle im Netzwerk verweisen, und mithilfe dieses OLE DB-Anbieters auf diese Datenquellen zugreifen. Mitglieder der `sysadmin` -Rolle können zum Steuern des Zugriffs auf Datenquellen den Ad-hoc-Zugriff auf diesen OLE DB-Anbieter deaktivieren. Auf diese Weise können Benutzer lediglich auf diejenigen Datenquellen zugreifen, auf die mit den von den Administratoren definierten Verbindungsservernamen verwiesen wird. Standardmäßig ist der Ad-hoc-Zugriff für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-OLE DB-Anbieter aktiviert und für alle anderen OLE DB-Anbieter deaktiviert.
 
 Mithilfe von verteilten Abfragen kann Benutzern der Zugriff auf andere Datenquellen gewährt werden (z.B. auf Dateien, nicht relationale Datenquellen wie Active Directory usw.). Dies geschieht innerhalb des Sicherheitskontexts des Microsoft Windows-Kontos, mit dem der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Dienst ausgeführt wird. Bei Windows-Anmeldungen nimmt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Identität der Anmeldung ordnungsgemäß an; dies ist jedoch bei [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Anmeldungen nicht möglich. Auf diese Weise ist es einem Benutzer, der verteilte Abfragen ausführt, potenziell möglich, auf eine andere Datenquelle zuzugreifen, für die er selbst keine Berechtigungen hat, wohl aber das Konto, unter dem der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Dienst ausgeführt wird. Verwenden Sie `sp_addlinkedsrvlogin` , um spezifische Anmeldungen mit Zugriffsrechten für die entsprechenden Verbindungsserver zu definieren. Diese Steuerung ist nicht für Ad-hoc-Namen verfügbar. Sie sollten daher sehr sorgfältig beim Aktivieren eines OLE DB-Anbieters für den Ad-hoc-Zugriff sein.
 
 Wenn möglich, verlagert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] relationale Vorgänge wie Joins, Einschränkungen, Projektionen, Sortierungen und Gruppierungen auf die OLE DB-Datenquelle. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] liest die Basistabellen nicht standardmäßig in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ein, um die relationalen Vorgänge selbst durchzuführen. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fragt den OLE DB-Anbieter ab, um zu ermitteln, welche Ebene der SQL-Grammatik er unterstützt, und sendet auf der Grundlage dieser Informationen so viele relationale Vorgänge wie möglich an den Anbieter. 
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gibt einen Mechanismus an, mit dem ein OLE DB-Anbieter Statistiken zur Verteilung von Schlüsselwerten innerhalb der OLE DB-Datenquelle zurückgibt. So kann der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer das Datenmuster in der Datenquelle im Hinblick auf die Anforderungen jeder SQL-Anweisung besser analysieren, wodurch der Abfrageoptimierer besser in der Lage ist, optimale Ausführungspläne zu generieren. 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gibt einen Mechanismus an, mit dem ein OLE DB-Anbieter Statistiken zur Verteilung von Schlüsselwerten innerhalb der OLE DB-Datenquelle zurückgibt. So kann der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer das Datenmuster in der Datenquelle im Hinblick auf die Anforderungen jeder [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung besser analysieren, wodurch der Abfrageoptimierer besser in der Lage ist, optimale Ausführungspläne zu generieren. 
 
 ## <a name="query-processing-enhancements-on-partitioned-tables-and-indexes"></a>Verbesserte Abfrageverarbeitung bei partitionierten Tabellen und Indizes
 
@@ -977,7 +982,7 @@ Die folgende Abbildung ist eine logische Darstellung des Skip-Scan-Vorgangs. Sie
 
 ### <a name="displaying-partitioning-information-in-query-execution-plans"></a>Anzeigen von Partitionierungsinformationen in Abfrageausführungsplänen
 
-Sie können die Ausführungspläne für Abfragen in partitionierten Tabellen und Indizes überprüfen, indem Sie die Transact-SQL `SET`-Anweisung `SET SHOWPLAN_XML` bzw. `SET STATISTICS XML` ausführen oder den in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio ausgegebenen grafischen Ausführungsplan verwenden. So können Sie zum Beispiel den Ausführungsplan für die Kompilierzeit anzeigen, indem Sie auf der Abfrage-Editor-Symbolleiste auf *Geschätzten Ausführungsplan anzeigen* klicken, und den Laufzeitplan, indem Sie auf *Tatsächlichen Ausführungsplan einschließen*klicken. 
+Sie können die Ausführungspläne für Abfragen in partitionierten Tabellen und Indizes überprüfen, indem Sie die [!INCLUDE[tsql](../includes/tsql-md.md)] `SET`-Anweisungen `SET SHOWPLAN_XML` bzw. `SET STATISTICS XML` ausführen oder den in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio ausgegebenen grafischen Ausführungsplan verwenden. So können Sie zum Beispiel den Ausführungsplan für die Kompilierzeit anzeigen, indem Sie auf der Abfrage-Editor-Symbolleiste auf *Geschätzten Ausführungsplan anzeigen* klicken, und den Laufzeitplan, indem Sie auf *Tatsächlichen Ausführungsplan einschließen*klicken. 
 
 Mit diesen Tools können Sie die folgenden Informationen abrufen:
 

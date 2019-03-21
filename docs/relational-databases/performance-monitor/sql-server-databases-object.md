@@ -16,12 +16,12 @@ ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 668fe6a825be365aa605febaaea7aafdd71ddf7d
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: ac844c8155202270dc9661c256259dd67d5f60ab
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997572"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973429"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, Datenbanken-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "53997572"
 |**Protokollpool – Gesamtgröße des aktiven Protokolls**|Aktuelle Gesamtgröße des im freigegebenen Cachepuffer-Manager gespeicherten aktiven Protokolls in Byte.|
 |**Protokollpool – Gesamtgröße des freigegebenen Pools**|Aktuelle gesamte Speicherauslastung des freigegebenen Cachepuffer-Managers in Byte.|
 |**Protokollverkleinerungen**|Gesamtanzahl der Protokollverkleinerungen für diese Datenbank.|  
-|**Protokollkürzungen**|Die Anzahl, wie oft das Transaktionsprotokoll verkleinert wurde.|  
+|**Protokollkürzungen**|Gesamtanzahl an Kürzungen des Transaktionsprotokolls (im einfachen Wiederherstellungsmodell).|  
 |**Protokoll verwendet (Prozent)**|Der prozentuale Anteil des Speicherplatzes im Protokoll, der verwendet wird.|  
 |**Replikations Replikationstransaktionen**|Anzahl von Transaktionen im Transaktionsprotokoll der Veröffentlichungsdatenbank, die für die Replikation gekennzeichnet sind, jedoch noch nicht an die Verteilungsdatenbank übermittelt wurden.|  
 |**Replikations Trans. Zins**|Anzahl von Transaktionen, die pro Sekunde aus dem Transaktionsprotokoll der Veröffentlichungsdatenbank ausgelesen und an die Verteilungsdatenbank übermittelt wurden.|  

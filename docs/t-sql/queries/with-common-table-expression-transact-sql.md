@@ -28,12 +28,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24de325c1845c73c082a0e525cc9282bd38c40dd
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: de761d6ffe58f757b933c8235a8c82d13bda1cc0
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334597"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161817"
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -68,25 +68,25 @@ Ein gültiger Bezeichner für den allgemeinen Tabellenausdruck. *expression_name
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="guidelines-for-creating-and-using-common-table-expressions"></a>Richtlinien zum Erstellen und Verwenden allgemeiner Tabellenausdrücke  
- Die folgenden Richtlinien gelten für nicht rekursive allgemeine Tabellenausdrücke. Informationen zu Richtlinien für rekursive allgemeine Tabellenausdrücke finden Sie unter "Richtlinien zum Definieren und Verwenden rekursiver allgemeiner Tabellenausdrücke" weiter unten.  
+Die folgenden Richtlinien gelten für nicht rekursive allgemeine Tabellenausdrücke. Informationen zu Richtlinien für rekursive allgemeine Tabellenausdrücke finden Sie weiter unten im Abschnitt [Richtlinien zum Definieren und Verwenden rekursiver allgemeiner Tabellenausdrücke](#guidelines-for-defining-and-using-recursive-common-table-expressions).  
   
--   Auf einen allgemeinen Tabellenausdruck muss eine einzelne SELECT-, INSERT-, UPDATE- oder DELETE-Anweisung folgen, die auf eine oder alle Spalten mit einem allgemeinen Tabellenausdruck verweist. Ein allgemeiner Tabellenausdruck kann auch in einer CREATE VIEW-Anweisung als Teil der definierenden SELECT-Anweisung der Sicht verwendet werden.  
+-   Auf einen allgemeinen Tabellenausdruck muss eine einzelne `SELECT`-, `INSERT`-, `UPDATE`- oder `DELETE`-Anweisung folgen, die auf eine oder alle Spalten mit einem allgemeinen Tabellenausdruck verweist. Ein allgemeiner Tabellenausdruck kann auch in einer `CREATE VIEW`-Anweisung als Teil der definierenden `SELECT`-Anweisung der Sicht angegeben werden.  
   
--   In einem nicht rekursiven allgemeinen Tabellenausdruck können mehrere Abfragedefinitionen für allgemeine Tabellenausdrücke definiert werden. Die Definitionen müssen durch einen der folgenden Mengenoperatoren verbunden werden: UNION ALL, UNION, INTERSECT oder EXCEPT.  
+-   In einem nicht rekursiven allgemeinen Tabellenausdruck können mehrere Abfragedefinitionen für allgemeine Tabellenausdrücke definiert werden. Die Definitionen müssen durch einen der folgenden Mengenoperatoren verbunden werden: `UNION ALL`, `UNION`, `INTERSECT` oder `EXCEPT`.  
   
--   Ein allgemeiner Tabellenausdruck kann in einer WITH-Klausel auf sich selbst und auf vorher definierte allgemeine Tabellenausdrücke verweisen. Ein Vorwärtsverweis ist nicht zulässig.  
+-   Ein allgemeiner Tabellenausdruck kann in einer `WITH`-Klausel auf sich selbst und auf vorher definierte allgemeine Tabellenausdrücke verweisen. Ein Vorwärtsverweis ist nicht zulässig.  
   
 -   Die Angabe mehrerer WITH-Klauseln in einem allgemeinen Tabellenausdruck ist nicht zulässig. Wenn *CTE_query_definition* beispielsweise eine Unterabfrage enthält, darf diese Unterabfrage keine geschachtelte WITH-Klausel enthalten, die einen weiteren allgemeinen Tabellenausdruck definiert.  
   
 -   Die folgenden Klauseln dürfen in *CTE_query_definition* nicht verwendet werden:  
   
-    -   ORDER BY (Ausnahme: wenn eine TOP-Klausel angegeben ist)  
+    -   `ORDER BY` (Ausnahme: wenn eine `TOP`-Klausel angegeben ist)  
   
-    -   INTO  
+    -   `INTO`  
   
-    -   OPTION-Klausel mit Abfragehinweisen  
+    -   `OPTION`-Klausel mit Abfragehinweisen  
   
-    -   FOR BROWSE  
+    -   `FOR BROWSE`  
   
 -   Wird ein allgemeiner Tabellenausdruck in einer Anweisung verwendet, die zu einem Batch gehört, muss auf die vorangehende Anweisung ein Semikolon folgen.  
   
@@ -111,19 +111,19 @@ Ein gültiger Bezeichner für den allgemeinen Tabellenausdruck. *expression_name
   
 -   Die folgenden Elemente sind in *CTE_query_definition* eines rekursiven Elements nicht zulässig:  
   
-    -   SELECT DISTINCT  
+    -   `SELECT DISTINCT`  
   
-    -   GROUP BY  
+    -   `GROUP BY`  
   
-    -   PIVOT (Wenn der Datenbank-Kompatibilitätsgrad 110 oder höher ist. Siehe [Fehlerhafte Änderungen an Features der Datenbank-Engine in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).)  
+    -   `PIVOT` (Wenn der Datenbank-Kompatibilitätsgrad 110 oder höher ist. Siehe [Fehlerhafte Änderungen an Features der Datenbank-Engine in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).)  
   
-    -   HAVING  
+    -   `HAVING`  
   
     -   Skalare Aggregation  
   
-    -   TOP  
+    -   `TOP`  
   
-    -   LEFT, RIGHT, OUTER JOIN (INNER JOIN ist zulässig)  
+    -   `LEFT`, `RIGHT`, `OUTER JOIN` (`INNER JOIN` ist erlaubt)  
   
     -   Unterabfragen  
   
@@ -131,30 +131,30 @@ Ein gültiger Bezeichner für den allgemeinen Tabellenausdruck. *expression_name
   
  Die folgenden Richtlinien gelten für die Verwendung rekursiver allgemeiner Tabellenausdrücke:  
   
--   Alle Spalten, die vom rekursiven allgemeinen Tabellenausdruck zurückgegeben werden, lassen NULL zu, unabhängig davon, ob die Spalten, die von den beteiligten SELECT-Anweisungen zurückgegeben werden, NULL zulassen.  
+-   Alle Spalten, die vom rekursiven allgemeinen Tabellenausdruck zurückgegeben werden, lassen NULL zu, unabhängig davon, ob die Spalten, die von den beteiligten `SELECT`-Anweisungen zurückgegeben werden, NULL zulassen.  
   
--   Ist ein rekursiver allgemeiner Tabellenausdruck falsch zusammengesetzt, kann dies zu einer Endlosschleife führen. Wenn beispielsweise die Abfragedefinition des rekursiven Elements für übergeordnete und untergeordnete Spalten die gleichen Werte zurückgibt, entsteht eine Endlosschleife. Um eine Endlosschleife zu verhindern, können Sie die Anzahl der für eine bestimmte Anweisung zulässigen Rekursionsebenen einschränken. Dazu verwenden Sie den MAXRECURSION-Hinweis und einen Wert zwischen 0 und 32.767 in der OPTION-Klausel der INSERT-, UPDATE-, DELETE- oder SELECT-Anweisung. Somit können Sie die Ausführung der Anweisung steuern, bis das Codeproblem behoben wurde, das die Schleife verursacht. Der serverweite Standardwert ist 100. Wenn 0 angegeben wird, wird keine Beschränkung angewendet. Pro Anweisung kann nur ein Wert für MAXRECURSION angegeben werden. Weitere Informationen finden Sie unter [Abfragehinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
+-   Ist ein rekursiver allgemeiner Tabellenausdruck falsch zusammengesetzt, kann dies zu einer Endlosschleife führen. Wenn beispielsweise die Abfragedefinition des rekursiven Elements für übergeordnete und untergeordnete Spalten die gleichen Werte zurückgibt, entsteht eine Endlosschleife. Sie können die Anzahl der für eine bestimmte Anweisung zulässigen Rekursionsebenen einschränken, um eine Endlosschleife zu verhindern. Dazu verwenden Sie den `MAXRECURSION`-Hinweis und einen Wert zwischen 0 und 32.767 in der OPTION-Klausel der `INSERT`-, `UPDATE`-, `DELETE`- oder `SELECT`-Anweisung. Somit können Sie die Ausführung der Anweisung steuern, bis das Codeproblem behoben wurde, das die Schleife verursacht. Der serverweite Standardwert ist 100. Wenn 0 angegeben wird, wird keine Beschränkung angewendet. Pro Anweisung kann nur ein `MAXRECURSION`-Wert angegeben werden. Weitere Informationen finden Sie unter [Abfragehinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 -   Eine Sicht, die einen rekursiven allgemeinen Tabellenausdruck enthält, kann nicht zum Aktualisieren von Daten verwendet werden.  
   
 -   Cursor können für Abfragen definiert werden, die allgemeine Tabellenausdrücke verwenden. Der allgemeine Tabellenausdruck ist das *select_statement*-Argument, welches das Resultset des Cursors definiert. Für rekursive allgemeine Tabellenausdrücke sind nur schnelle Vorwärtscursor und statische (Momentaufnahme-)Cursor zulässig. Wird in einem rekursiven allgemeinen Tabellenausdruck ein anderer Cursortyp angegeben, wird der Cursortyp in einen statischen Typ konvertiert.  
   
--   Im allgemeinen Tabellenausdruck kann auf Tabellen auf Remoteservern verwiesen werden. Wenn im rekursiven Element des allgemeinen Tabellenausdrucks auf den Remoteserver verwiesen wird, wird für jede Remotetabelle ein Spoolvorgang erstellt, sodass auf die Tabellen wiederholt lokal zugegriffen werden kann. Wenn es sich um eine Abfrage für einen allgemeinen Tabellenausdruck handelt, wird im Abfrageplan Index Spool/Lazy Spool mit dem zusätzlichen WITH STACK-Prädikat angezeigt. Dies ist eine Möglichkeit, um eine ordnungsgemäße Rekursion zu gewährleisten.  
+-   Im allgemeinen Tabellenausdruck kann auf Tabellen auf Remoteservern verwiesen werden. Wenn im rekursiven Element des allgemeinen Tabellenausdrucks auf den Remoteserver verwiesen wird, wird für jede Remotetabelle ein Spoolvorgang erstellt, sodass auf die Tabellen wiederholt lokal zugegriffen werden kann. Wenn es sich um eine Abfrage für einen allgemeinen Tabellenausdruck handelt, wird im Abfrageplan Index Spool/Lazy Spool mit dem zusätzlichen `WITH STACK`-Prädikat angezeigt. Dies ist eine Möglichkeit, um eine ordnungsgemäße Rekursion zu gewährleisten.  
   
--   Analyse- und Aggregatfunktionen im rekursiven Teil des allgemeinen Tabellenausdrucks werden auf die Menge für die aktuelle Rekursionsebene und nicht auf die Menge für den allgemeinen Tabellenausdruck angewendet. Funktionen wie ROW_NUMBER werden nur für die von der aktuellen Rekursionsebene übergebene Teilmenge von Daten und nicht für die an den rekursiven Teil des allgemeinen Tabellenausdrucks übergebene gesamte Datenmenge ausgeführt. Weitere Informationen finden Sie weiter unten im Beispiel K.: „Verwenden von Analysefunktionen in einem rekursiven allgemeinen Tabellenausdruck“.  
+-   Analyse- und Aggregatfunktionen im rekursiven Teil des allgemeinen Tabellenausdrucks werden auf die Menge für die aktuelle Rekursionsebene und nicht auf die Menge für den allgemeinen Tabellenausdruck angewendet. Funktionen wie `ROW_NUMBER` werden nur für die von der aktuellen Rekursionsebene übergebene Teilmenge von Daten und nicht für die an den rekursiven Teil des allgemeinen Tabellenausdrucks übergebene gesamte Datenmenge ausgeführt. Weitere Informationen finden Sie weiter unten im Beispiel K.: „Verwenden von Analysefunktionen in einem rekursiven allgemeinen Tabellenausdruck“.  
   
 ## <a name="features-and-limitations-of-common-table-expressions-in-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Features und Einschränkungen allgemeiner Tabellenausdrücke in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Die aktuelle Implementierung allgemeiner Tabellenausdrücke in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] weist folgende Features und Einschränkungen auf:  
   
--   Ein allgemeiner Tabellenausdruck kann in einer **SELECT**-Anweisung angegeben werden.  
+-   Ein allgemeiner Tabellenausdruck kann in einer `SELECT`-Anweisung angegeben werden.  
   
--   Ein allgemeiner Tabellenausdruck kann in einer **CREATE VIEW**-Anweisung angegeben werden.  
+-   Ein allgemeiner Tabellenausdruck kann in einer `CREATE VIEW`-Anweisung angegeben werden.  
   
--   Ein allgemeiner Tabellenausdruck kann in einer **CTAS**-Anweisung (CTAS = CREATE TABLE AS SELECT) angegeben werden.  
+-   Ein allgemeiner Tabellenausdruck kann in einer `CREATE TABLE AS SELECT`-Anweisung (CTAS) angegeben werden.  
   
--   Ein allgemeiner Tabellenausdruck kann in einer **CRTAS**-Anweisung (CRTAS = CREATE REMOTE TABLE AS SELECT) angegeben werden.  
+-   Ein allgemeiner Tabellenausdruck kann in einer `CREATE REMOTE TABLE AS SELECT`-Anweisung (CRTAS) angegeben werden.  
   
--   Ein allgemeiner Tabellenausdruck kann in einer **CETAS**-Anweisung (CETAS = CREATE EXTERNAL TABLE AS SELECT) angegeben werden.  
+-   Ein allgemeiner Tabellenausdruck kann in einer `CREATE EXTERNAL TABLE AS SELECT`-Anweisung (CETAS) angegeben werden.  
   
 -   Ein allgemeiner Tabellenausdruck kann auf eine Remotetabelle verweisen.  
   
@@ -162,25 +162,24 @@ Ein gültiger Bezeichner für den allgemeinen Tabellenausdruck. *expression_name
   
 -   In einem allgemeinen Tabellenausdruck können mehrere Abfragedefinitionen für allgemeine Tabellenausdrücke definiert werden.  
   
--   Einem allgemeinen Tabellenausdruck muss eine einzelne **SELECT**-Anweisung folgen. Die Anweisungen **INSERT**, **UPDATE**, **DELETE** und **MERGE** werden nicht unterstützt.  
+-   Einem allgemeinen Tabellenausdruck muss eine einzelne `SELECT`-Anweisung folgen. `INSERT`-, `UPDATE`-, `DELETE`- und `MERGE`-Anweisungen werden nicht unterstützt.  
   
 -   Ein allgemeiner Tabellenausdruck, der Verweise auf sich selbst (ein rekursiver allgemeiner Tabellenausdruck) enthält, wird nicht unterstützt.  
   
--   Die Angabe mehrerer **WITH**-Klauseln in einem allgemeinen Tabellenausdruck ist nicht zulässig. Wenn eine „CTE_query_definition“ beispielsweise eine Unterabfrage enthält, darf diese Unterabfrage keine geschachtelte **WITH**-Klausel enthalten, die einen weiteren allgemeinen Tabellenausdruck definiert.  
+-   Die Angabe mehrerer `WITH`-Klauseln in einem allgemeinen Tabellenausdruck ist nicht zulässig. Wenn die Abfragedefinition eines allgemeinen Tabellenausdrucks beispielsweise eine Unterabfrage enthält, darf diese Unterabfrage keine geschachtelte `WITH`-Klausel enthalten, die einen weiteren allgemeinen Tabellenausdruck definiert.  
   
--   Eine **ORDER BY**-Klausel darf in der „CTE_query_definition“ nicht verwendet werden. Eine Ausnahme gilt, wenn eine **TOP**-Klausel angegeben ist.  
+-   Eine `ORDER BY`-Klausel darf in der „CTE_query_definition“ nicht verwendet werden. Eine Ausnahme gilt, wenn eine `TOP`-Klausel angegeben ist.  
   
 -   Wird ein allgemeiner Tabellenausdruck in einer Anweisung verwendet, die zu einem Batch gehört, muss auf die vorangehende Anweisung ein Semikolon folgen.  
   
--   Wenn allgemeine Tabellenausdrücke in von **sp_prepare** vorbereiteten Anweisungen verwendet werden, verhalten sie sich wie andere **SELECT**-Anweisungen in PDW. Wenn allgemeine Tabellenausdrücke jedoch in von **sp_prepare** vorbereiteten CETAS-Anweisungen verwendet werden, kann das Verhalten aufgrund der Art und Weise, wie die Bindung für **sp_prepare** implementiert wird, von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und anderen PDW-Anweisungen abweichen. Wenn in einer **SELECT**-Anweisung, die auf einen allgemeinen Tabellenausdruck verweist, eine falsche, im allgemeinen Tabellenausdruck nicht vorhandene Spalte verwendet wird, wird **sp_prepare** ohne Erkennung des Fehlers durchlaufen. Stattdessen wird der Fehler jedoch während **sp_execute** ausgelöst.  
+-   Wenn allgemeine Tabellenausdrücke in von `sp_prepare` vorbereiteten Anweisungen verwendet werden, verhalten sie sich wie andere `SELECT`-Anweisungen in PDW. Wenn allgemeine Tabellenausdrücke jedoch in von `sp_prepare` vorbereiteten CETAS-Anweisungen verwendet werden, kann das Verhalten aufgrund der Art und Weise, wie die Bindung für `sp_prepare` implementiert wird, von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und anderen PDW-Anweisungen abweichen. Wenn in einer `SELECT`-Anweisung, die auf einen allgemeinen Tabellenausdruck verweist, eine falsche, im allgemeinen Tabellenausdruck nicht vorhandene Spalte verwendet wird, wird `sp_prepare` ohne Erkennung des Fehlers durchlaufen. Stattdessen wird der Fehler jedoch während `sp_execute` ausgelöst.  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-creating-a-simple-common-table-expression"></a>A. Erstellen eines einfachen allgemeinen Tabellenausdrucks  
  Im folgenden Beispiel wird die Gesamtanzahl der Aufträge pro Jahr für jeden Vertriebsmitarbeiter von [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] angezeigt.  
   
-```  
-  
+```sql   
 -- Define the CTE expression name and column list.  
 WITH Sales_CTE (SalesPersonID, SalesOrderID, SalesYear)  
 AS  
@@ -195,14 +194,12 @@ SELECT SalesPersonID, COUNT(SalesOrderID) AS TotalSales, SalesYear
 FROM Sales_CTE  
 GROUP BY SalesYear, SalesPersonID  
 ORDER BY SalesPersonID, SalesYear;  
-GO  
-  
 ```  
   
 ### <a name="b-using-a-common-table-expression-to-limit-counts-and-report-averages"></a>B. Verwenden eines allgemeinen Tabellenausdrucks zum Einschränken von Anzahlen und Wiedergeben von Durchschnittswerten  
  Im folgenden Beispiel wird die durchschnittliche Anzahl der Verkaufsaufträge der Vertriebsmitarbeiter für alle Jahre veranschaulicht.  
   
-```  
+```sql  
 WITH Sales_CTE (SalesPersonID, NumberOfOrders)  
 AS  
 (  
@@ -213,14 +210,12 @@ AS
 )  
 SELECT AVG(NumberOfOrders) AS "Average Sales Per Person"  
 FROM Sales_CTE;  
-GO  
 ```  
   
 ### <a name="c-using-multiple-cte-definitions-in-a-single-query"></a>C. Verwenden mehrerer Definitionen für allgemeine Tabellenausdrücke in einer einzelnen Abfrage  
  Im folgenden Beispiel wird veranschaulicht, wie mehrere allgemeine Tabellenausdrücke in einer einzelnen Abfrage definiert werden. Die Abfragedefinitionen für allgemeine Tabellenausdrücke werden durch ein Komma voneinander getrennt. Die FORMAT-Funktion, die verwendet wird, um die Geldbeträge in einem Währungsformat anzuzeigen, ist in SQL Server 2012 und höher verfügbar.  
   
-```  
-  
+```sql  
 WITH Sales_CTE (SalesPersonID, TotalSales, SalesYear)  
 AS  
 -- Define the first CTE query.  
@@ -252,29 +247,24 @@ SELECT SalesPersonID
 FROM Sales_CTE  
 JOIN Sales_Quota_CTE ON Sales_Quota_CTE.BusinessEntityID = Sales_CTE.SalesPersonID  
                     AND Sales_CTE.SalesYear = Sales_Quota_CTE.SalesQuotaYear  
-ORDER BY SalesPersonID, SalesYear;  
-GO  
-  
+ORDER BY SalesPersonID, SalesYear;    
 ```  
   
- Dies ist ein Auszug aus dem Resultset.  
+Dies ist ein Auszug aus dem Resultset.  
   
 ```  
-  
 SalesPersonID SalesYear   TotalSales    SalesQuotaYear SalesQuota  Amt_Above_or_Below_Quota  
 ------------- ---------   -----------   -------------- ---------- ----------------------------------   
-  
 274           2005        $32,567.92    2005           $35,000.00  ($2,432.08)  
 274           2006        $406,620.07   2006           $455,000.00 ($48,379.93)  
 274           2007        $515,622.91   2007           $544,000.00 ($28,377.09)  
 274           2008        $281,123.55   2008           $271,000.00  $10,123.55  
-  
 ```  
   
 ### <a name="d-using-a-recursive-common-table-expression-to-display-multiple-levels-of-recursion"></a>D. Verwenden eines rekursiven allgemeinen Tabellenausdrucks, um mehrere Rekursionsebenen anzuzeigen  
  Im folgenden Beispiel werden Vorgesetzte in einer Hierarchieliste sowie die Mitarbeiter angezeigt, die diesen unterstellt sind. In diesem Beispiel wird zunächst die `dbo.MyEmployees`-Tabelle erstellt und aufgefüllt.  
   
-```  
+```sql  
 -- Create an Employee table.  
 CREATE TABLE dbo.MyEmployees  
 (  
@@ -299,7 +289,7 @@ INSERT INTO dbo.MyEmployees VALUES
 ,(23,  N'Mary', N'Gibson', N'Marketing Specialist', 4, 16);  
 ```  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 WITH DirectReports(ManagerID, EmployeeID, Title, EmployeeLevel) AS   
@@ -315,14 +305,13 @@ WITH DirectReports(ManagerID, EmployeeID, Title, EmployeeLevel) AS
 )  
 SELECT ManagerID, EmployeeID, Title, EmployeeLevel   
 FROM DirectReports  
-ORDER BY ManagerID;  
-GO  
+ORDER BY ManagerID;   
 ```  
   
 ### <a name="e-using-a-recursive-common-table-expression-to-display-two-levels-of-recursion"></a>E. Verwenden eines rekursiven allgemeinen Tabellenausdrucks, um zwei Rekursionsebenen anzuzeigen  
  Im folgenden Beispiel werden Vorgesetzte sowie die Mitarbeiter angezeigt, die diesen unterstellt sind. Die Anzahl der zurückgegebenen Ebenen wird auf zwei Ebenen eingeschränkt.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 WITH DirectReports(ManagerID, EmployeeID, Title, EmployeeLevel) AS   
@@ -339,14 +328,12 @@ WITH DirectReports(ManagerID, EmployeeID, Title, EmployeeLevel) AS
 SELECT ManagerID, EmployeeID, Title, EmployeeLevel   
 FROM DirectReports  
 WHERE EmployeeLevel <= 2 ;  
-GO  
-  
 ```  
   
 ### <a name="f-using-a-recursive-common-table-expression-to-display-a-hierarchical-list"></a>F. Verwenden eines rekursiven allgemeinen Tabellenausdrucks, um eine Hierarchieliste anzuzeigen  
  Das folgende Beispiel baut auf Beispiel D auf, indem die Namen der Vorgesetzten und Mitarbeiter und deren Titel hinzugefügt werden. Die Hierarchieebenen von Vorgesetzten und Mitarbeitern werden zusätzlich hervorgehoben, indem die einzelnen Ebenen jeweils eingerückt werden.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 WITH DirectReports(Name, Title, EmployeeID, EmployeeLevel, Sort)  
@@ -371,13 +358,12 @@ AS (SELECT CONVERT(varchar(255), e.FirstName + ' ' + e.LastName),
 SELECT EmployeeID, Name, Title, EmployeeLevel  
 FROM DirectReports   
 ORDER BY Sort;  
-GO  
 ```  
   
 ### <a name="g-using-maxrecursion-to-cancel-a-statement"></a>G. Verwenden von MAXRECURSION zum Abbrechen einer Anweisung  
  Mit `MAXRECURSION` kann verhindert werden, dass ein rekursiver allgemeiner Tabellenausdruck, der fehlerhaft formuliert ist, in eine Endlosschleife gerät. Im folgenden Beispiel wird absichtlich eine Endlosschleife erstellt. Außerdem wird `MAXRECURSION` verwendet, um die Anzahl der Rekursionsebenen auf zwei zu beschränken.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 --Creates an infinite loop  
@@ -396,12 +382,11 @@ WITH cte (EmployeeID, ManagerID, Title) as
 SELECT EmployeeID, ManagerID, Title  
 FROM cte  
 OPTION (MAXRECURSION 2);  
-GO  
 ```  
   
  Sobald der Fehler im Code behoben wurde, wird MAXRECURSION nicht mehr benötigt. Das folgende Beispiel zeigt den korrigierten Code.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 WITH cte (EmployeeID, ManagerID, Title)  
@@ -417,13 +402,12 @@ AS
 )  
 SELECT EmployeeID, ManagerID, Title  
 FROM cte;  
-GO  
 ```  
   
 ### <a name="h-using-a-common-table-expression-to-selectively-step-through-a-recursive-relationship-in-a-select-statement"></a>H. Verwenden eines allgemeinen Tabellenausdrucks, um eine rekursive Beziehung in einer SELECT-Anweisung selektiv zu durchlaufen  
  Im folgenden Beispiel wird die Hierarchie von Produktgruppen und Komponenten gezeigt, die erforderlich sind, um das Fahrrad für `ProductAssemblyID = 800` zu montieren.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 WITH Parts(AssemblyID, ComponentID, PerAssemblyQty, EndDate, ComponentLevel) AS  
@@ -447,13 +431,12 @@ FROM Parts AS p
     INNER JOIN Production.Product AS pr  
     ON p.ComponentID = pr.ProductID  
 ORDER BY ComponentLevel, AssemblyID, ComponentID;  
-GO  
 ```  
   
 ### <a name="i-using-a-recursive-cte-in-an-update-statement"></a>I. Verwenden eines rekursiven allgemeinen Tabellenausdrucks in einer UPDATE-Anweisung  
  Im folgenden Beispiel wird der Wert `PerAssemblyQty` für alle Teile aktualisiert, die zur Erstellung des Produkts "Road-550-W Yellow, 44" `(ProductAssemblyID``800` verwendet werden. Der allgemeine Tabellenausdruck gibt eine hierarchische Liste mit Teilen zurück, die zum Erstellen der `ProductAssemblyID 800` verwendet werden, sowie mit Komponenten, die zum Erstellen dieser Teile verwendet werden, usw. Nur die Zeilen, die vom allgemeinen Tabellenausdruck zurückgegeben werden, werden geändert.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 WITH Parts(AssemblyID, ComponentID, PerAssemblyQty, EndDate, ComponentLevel) AS  
@@ -481,7 +464,7 @@ WHERE d.ComponentLevel = 0;
 ### <a name="j-using-multiple-anchor-and-recursive-members"></a>J. Verwenden mehrerer Ankerelemente und rekursiver Elemente  
  Im folgenden Beispiel werden mehrere Ankerelemente und rekursive Elemente verwendet, um alle Vorfahren einer bestimmten Person zurückzugeben. Eine Tabelle wird erstellt und mit Werten aufgefüllt, um den Familienstammbaum zu erstellen, der vom rekursiven allgemeinen Tabellenausdruck zurückgegeben wird.  
   
-```  
+```sql  
 -- Genealogy table  
 IF OBJECT_ID('dbo.Person','U') IS NOT NULL DROP TABLE dbo.Person;  
 GO  
@@ -528,7 +511,7 @@ GO
 ###  <a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a> K. Verwenden von Analysefunktionen in einem rekursiven allgemeinen Tabellenausdruck  
  Im folgenden Beispiel wird ein Fehler gezeigt, der beim Verwenden einer Analyse- oder Aggregatfunktion im rekursiven Teil eines allgemeinen Tabellenausdrucks auftreten kann.  
   
-```  
+```sql  
 DECLARE @t1 TABLE (itmID int, itmIDComp int);  
 INSERT @t1 VALUES (1,10), (2,10);   
   
@@ -566,7 +549,7 @@ FROM r
 SELECT Lvl, N FROM r;  
 ```  
   
- Die folgenden Ergebnisse sind die erwarteten Ergebnisse für die Abfrage.  
+Die folgenden Ergebnisse sind die erwarteten Ergebnisse für die Abfrage.  
   
 ```  
 Lvl  N  
@@ -580,7 +563,7 @@ Lvl  N
 2    1  
 ```  
   
- Die folgenden Ergebnisse sind die tatsächlichen Ergebnisse für die Abfrage.  
+Die folgenden Ergebnisse sind die tatsächlichen Ergebnisse für die Abfrage.  
   
 ```  
 Lvl  N  
@@ -601,9 +584,9 @@ Lvl  N
 ### <a name="l-using-a-common-table-expression-within-a-ctas-statement"></a>L. Verwenden eines allgemeinen Tabellenausdrucks in einer CTAS-Anweisung  
  Im folgenden Beispiel wird eine neue Tabelle mit der Gesamtanzahl der Verkäufe pro Jahr für jeden Vertriebsmitarbeiter von [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] angezeigt.  
   
-```  
--- Uses AdventureWorks  
-  
+```sql  
+USE AdventureWorks2012;  
+GO   
 CREATE TABLE SalesOrdersPerYear  
 WITH  
 (  
@@ -630,9 +613,9 @@ GO
 ### <a name="m-using-a-common-table-expression-within-a-cetas-statement"></a>M. Verwenden eines allgemeinen Tabellenausdrucks in einer CETAS-Anweisung  
  Im folgenden Beispiel wird eine neue externe Tabelle mit der Gesamtanzahl der Verkäufe pro Jahr für jeden Vertriebsmitarbeiter von [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] angezeigt.  
   
-```  
--- Uses AdventureWorks  
-  
+```sql  
+USE AdventureWorks2012;  
+GO    
 CREATE EXTERNAL TABLE SalesOrdersPerYear  
 WITH  
 (  
@@ -660,7 +643,7 @@ GO
 ### <a name="n-using-multiple-comma-separated-ctes-in-a-statement"></a>N. Verwenden mehrerer, durch Kommas getrennter allgemeiner Tabellenausdrücke in einer Anweisung  
  Im folgenden Beispiel wird veranschaulicht, wie zwei allgemeine Tabellenausdrücke in eine einzige Anweisung eingeschlossen werden. Die allgemeinen Tabellenausdrücke dürfen nicht verschachtelt werden (keine Rekursion).  
   
-```  
+```sql  
 WITH   
  CountDate (TotalCount, TableName) AS  
     (  
@@ -683,4 +666,4 @@ SELECT TableName, TotalAvg FROM CountCustomer;
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  
   
-  
+ 

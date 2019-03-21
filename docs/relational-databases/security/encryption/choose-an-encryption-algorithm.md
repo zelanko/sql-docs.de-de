@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 52336c3ec3ab0565177f94400fb8320808bc8c90
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 399143bffbe2f49c4cb3a3f5c846caf4657ab74a
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671710"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974009"
 ---
 # <a name="choose-an-encryption-algorithm"></a>Auswählen eines Verschlüsselungsalgorithmus
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "51671710"
   
 -   Lange, komplexe Kennwörter sind stärker als kurze Kennwörter.  
 
--   Symmetrische Verschlüsselung wird generell empfohlen, wenn der Schlüssel nur lokal gespeichert wird. Asymmetrische Verschlüsselung wird empfohlen, wenn Schlüssel über ein Netzwerk verteilt werden müssen.
+-   Die symmetrische Verschlüsselung wird generell empfohlen, wenn der Schlüssel nur lokal gespeichert wird. Die asymmetrische Verschlüsselung wird empfohlen, wenn Schlüssel über ein Netzwerk verteilt werden müssen.
   
 -   Falls Sie viele Daten verschlüsseln, sollten Sie die Daten mithilfe eines symmetrischen Schlüssels verschlüsseln und den symmetrischen Schlüssel mit einem asymmetrischen Schlüssel verschlüsseln.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "51671710"
 |Verschlüsseln von Datenbankdateien mit transparenter Datenverschlüsselung|[Transparente Datenverschlüsselung &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)|  
 |So verschlüsseln sie eine Tabellenspalte|[Verschlüsseln einer Datenspalte](../../../relational-databases/security/encryption/encrypt-a-column-of-data.md)|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server-Verschlüsselung](../../../relational-databases/security/encryption/sql-server-encryption.md)   
  [Verschlüsselungshierarchie](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

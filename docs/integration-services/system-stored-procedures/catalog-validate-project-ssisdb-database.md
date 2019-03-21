@@ -11,12 +11,12 @@ ms.assetid: 5270689a-46d4-4847-b41f-3bed1899e955
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1f2b44f49f7fb439472028a220392723529f68b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e937a9fa9d3eba7c766192c83d69a514054f762a
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819788"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973019"
 ---
 # <a name="catalogvalidateproject-ssisdb-database"></a>catalog.validate_project (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ catalog.validate_project [ @folder_name = ] folder_name
     , [ @validate_type = ] validate_type  
     , [ @validation_id = ] validation_id OUTPUT  
  [  , [ @use32bitruntime = ] use32bitruntime ]  
- [  , [ @target_environment = ] target_environment ]  
+ [  , [ @environment_scope = ] environment_scope ]  
  [  , [ @reference_id = ] reference_id ]  
 ```  
   
@@ -43,7 +43,7 @@ catalog.validate_project [ @folder_name = ] folder_name
  Der Name des Projekts. Der *project_name* ist **nvarchar(128)**.  
   
  [ @validate_type = ] *validate_type*  
- Gibt den Typ der auszuführenden Überprüfung an. Führen Sie mithilfe des Zeichens `F` eine vollständige Überprüfung aus. Das Argument *value_type* ist vom Typ **char(1)**.  
+ Gibt den Typ der auszuführenden Überprüfung an. Führen Sie mithilfe des Zeichens `F` eine vollständige Überprüfung aus. Dieser Parameter ist optional. Das Zeichen `F` wird standardmäßig verwendet. Das Argument *value_type* ist vom Typ **char(1)**.  
   
  [ @validation_id = ] *validation_id*  
  Gibt den eindeutigen Bezeichner (ID) der Überprüfung zurück. Das Argument *validation_id* ist vom Typ **bigint**.  

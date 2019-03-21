@@ -1,23 +1,22 @@
 ---
 title: Verbessern der Leistung von Volltextabfragen | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 0658dc74-25eb-4486-bbd6-e85c1f92c272
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bff25614ff82a274e5c98bc62cc25a6f1003a1b5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a618f039e4a882318f8be00ebd0a05aef9d80efb
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677359"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973419"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>Verbessern der Leistung von Volltextabfragen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,9 +50,9 @@ ms.locfileid: "51677359"
 -   Bei Anwendungen, die Prädikate mit selektiver Beziehung enthalten, funktionieren Abfragen, die selektive relationale Prädikate und nicht selektive Volltextprädikate verwenden, ggf. am besten, wenn sie für die Verwendung des Abfrageoptimierers geschrieben werden. Dann kann der Abfrageoptimierer entscheiden, ob ein Prädikats- oder Bereichs-Pushdown verwendet werden kann, um einen effektiven Abfrageplan aufzustellen. Dieser Ansatz ist einfacher und häufig auch effizienter als das Indizieren von relationalen Daten als Volltextdaten.  
   
 ## <a name="related-resources"></a>Verwandte Ressourcen  
- [SQL Server 2008-Volltextsuche: Internes und Erweiterungen](https://go.microsoft.com/fwlink/?LinkId=129544)  
+ [SQL Server 2008 Full-Text Search: Internals and Enhancements (SQL Server 2008: Volltextsuche: Interne Komponenten und Erweiterungen)](https://go.microsoft.com/fwlink/?LinkId=129544)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)   
  [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql.md)  
   

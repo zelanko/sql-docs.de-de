@@ -1,7 +1,7 @@
 ---
 title: Handbuch zur Architektur von Seiten und Blöcken | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/23/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f5dcb8899b64a7dc21367b5deda5aa6bd473a65
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 95748a37b656c1ab203ed0cff354c5a641a9c7ed
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748482"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974369"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Handbuch zur Architektur von Seiten und Blöcken
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,6 +64,18 @@ Zeilen können sich nicht über mehrere Seiten erstrecken, Teile der Zeile könn
 Diese Einschränkung wurde für Tabellen gelockert, die varchar-, nvarchar-, varbinary- oder sql_variant-Spalten enthalten. Wenn die Gesamtzeilengröße aller festen und variablen Spalten in einer Tabelle den Grenzwert von 8.060 Bytes übersteigt, verschiebt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eine oder mehrere Spalten variabler Länge dynamisch auf Seiten in der ROW_OVERFLOW_DATA-Zuordnungseinheit. Dabei wird mit der Spalte mit der größten Breite begonnen. 
 
 Dieser Vorgang wird immer ausgeführt, wenn die Gesamtgröße der Zeile durch einen Einfüge- oder Updatevorgang den Maximalwert von 8.060 Byte übersteigt. Wenn eine Spalte auf eine Seite in der ROW_OVERFLOW_DATA-Zuordnungseinheit verschoben wird, wird ein 24-Byte-Zeiger auf die ursprüngliche Seite in der IN_ROW_DATA-Zuordnungseinheit verwaltet. Falls eine nachfolgende Operation die Spaltengröße verringert, verschiebt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Spalten dynamisch zurück auf die ursprüngliche Datenseite. 
+
+##### <a name="row-overflow-considerations"></a>Überlegungen zum Zeilenüberlauf 
+
+Wenn Sie Spalten der Datentypen „varchar“, „nvarchar“, „nvarchar“, „sql_variant“ oder Spalten mit CLR-benutzerdefinierten Datentypen miteinander kombinieren, die pro Zeile 8.060 Bytes überschreiten, muss Folgendes berücksichtigt werden: 
+-  Das Verschieben großer Datensätze zu einer anderen Seite geschieht dynamisch, wenn die Datensätze im Ergebnis von Updatevorgängen verlängert wurden. Updatevorgänge, die zu einer Verkürzung von Datensätzen führen, können hingegen bewirken, dass Datensätze wieder zurück zur ursprünglichen Seite in der IN_ROW_DATA-Zuordnungseinheit verschoben werden. Abfragen und andere Auswahlvorgänge, wie z. B. Sortierungen oder Joins von großen Datensätzen mit Daten, bei denen Zeilenüberlauf vorkommt, bewirken eine Herabsetzung der Verarbeitungsgeschwindigkeit, weil diese Datensätze nicht asynchron, sondern synchron verarbeitet werden.   
+   Deshalb sollten Sie beim Entwerfen einer Tabelle mit mehreren Spalten der Datentypen „varchar“, „nvarchar“, „varbinary“, „sql_variant“ oder mit CLR-benutzerdefinierten Datentypen auf den Prozentsatz der Zeilen achten, bei denen es wahrscheinlich zum Überlauf kommt. Außerdem sollten Sie die Häufigkeit berücksichtigen, mit der diese Überlaufdaten wahrscheinlich abgefragt werden. Wenn es wahrscheinlich häufig zu Abfragen von vielen Zeilen mit überlaufenden Daten kommt, sollten Sie eine Normalisierung der Tabelle in Betracht ziehen, damit einige Spalten in eine andere Tabelle verschoben werden. Diese können dann in einer asynchronen JOIN-Operation abgefragt werden. 
+-  Die Länge der einzelnen Spalten muss bei den Datentypen „varchar“, „nvarchar“, „varbinary“, „sql_variant“ und CLR-benutzerdefinierten Datentypen weiterhin innerhalb des 8.000-Byte-Limits liegen. Lediglich ihre kombinierten Längen dürfen das Zeilenlimit von 8.060 Byte einer Tabelle überschreiten.
+-  Die Summe der Spalten mit anderen Datentypen, wie „char“- und „nchar“-Daten, dürfen das Zeilenlimit von 8.060 Byte nicht übersteigen. Große Objektdaten sind ebenfalls vom 8.060-Byte-Zeilenlimit ausgenommen. 
+-  Der Indexschlüssel eines gruppierten Indexes kann keine Spalten des Datentyps „varchar“ enthalten, bei denen Daten in der Zuordnungseinheit ROW_OVERFLOW_DATA vorhanden sind. Wird ein gruppierter Index für eine „varchar“-Spalte erstellt, bei der in der Zuordnungseinheit IN_ROW_DATA Daten vorhanden sind, erzeugen alle nachfolgenden Einfügungen und Updates der Spalte einen Fehler, bei der diese Daten aus der Zeile entfernt werden. Weitere Informationen zu Zuordnungseinheiten finden Sie unter „Organisationsstruktur von Tabellen und Indizes“.
+-  Sie können Spalten, die Daten mit Zeilenüberlauf enthalten, als Schlüssel- oder Nichtschlüsselspalten eines nicht gruppierten Index einbeziehen.
+-  Die Datensatzgrößenbeschränkung für Tabellen, die Sparsespalten verwenden, beträgt 8.018 Byte. Wenn die konvertierten Daten zusammen mit den vorhandenen Datensatzdaten 8.018 Byte überschreiten, wird [MSSQLSERVER ERROR 576](../relational-databases/errors-events/database-engine-events-and-errors.md) zurückgegeben. Wenn Spalten zwischen Typen mit geringer Dichte und anderen Typen konvertiert werden, behält die Datenbank-Engine eine Kopie der aktuellen Datensatzdaten bei. Dies verdoppelt vorübergehend den Speicher, der für den Datensatz erforderlich ist.
+-  Zum Abrufen von Informationen zu Tabellen oder Indizes, die ggf. Daten mit Zeilenüberlauf enthalten, verwenden Sie die dynamische Verwaltungsfunktion [sys.dm_db_index_physical_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).
 
 ### <a name="extents"></a>Extents 
 
@@ -177,4 +189,6 @@ Der Abstand zwischen DCM-Seiten und BCM-Seiten ist derselbe Abstand wie zwischen
 
 ## <a name="see-also"></a>Weitere Informationen
 [sys.allocation_units &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
-[Heaps &#40;Tabellen ohne gruppierte Indizes&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)    
+[Heaps &#40;Tabellen ohne gruppierte Indizes&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)       
+[Lesen von Seiten](../relational-databases/reading-pages.md)   
+[Schreiben von Seiten](../relational-databases/writing-pages.md)   
