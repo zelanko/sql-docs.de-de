@@ -5,18 +5,18 @@ description: Lernen Sie verfügbarkeitsclustern für die Gruppe, bei der Red Hat
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 06/14/2017
+ms.date: 03/12/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: c498a9ef5422f82671000d6c0e82756df85947cb
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 44d39a44597a789c031ee10b862bffa2af6da883
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160598"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305629"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Konfigurieren Sie die RHEL-Cluster für SQL Server-Verfügbarkeitsgruppe
 
@@ -34,7 +34,7 @@ Weitere Informationen zu Clusterkonfiguration, Optionen für Agents und Manageme
 
 Die folgenden Abschnitte führen die Schritte zum Einrichten eines Pacemaker-Clusters ein, und fügen einer verfügbarkeitsgruppe als Ressource im Cluster für hohe Verfügbarkeit.
 
-## <a name="roadmap"></a>Roadmap für die
+## <a name="roadmap"></a>Roadmap
 
 Die Schritte zum Erstellen einer verfügbarkeitsgruppe auf Linux-Servern für hochverfügbarkeit unterscheiden sich von den Schritten in einem Windows Server-Failovercluster. Die folgende Liste beschreibt die allgemeinen Schritte: 
 
@@ -89,7 +89,7 @@ Jeder Knoten im Cluster muss ein entsprechendes Abonnement für RHEL und hoher V
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
    ```
 
-Weitere Informationen finden Sie unter [Pacemaker - der Open-Source-Cluster mit hoher Verfügbarkeit](https://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/). 
+Weitere Informationen finden Sie unter [Pacemaker - der Open-Source-Cluster mit hoher Verfügbarkeit](https://clusterlabs.org/pacemaker/). 
 
 Nachdem Sie das Abonnement konfiguriert haben, führen Sie die folgenden Schritte aus, um Pacemaker zu konfigurieren:
 
@@ -111,7 +111,7 @@ Ebene Umgrenzung Knoten wird sichergestellt, dass alle Ressourcen von ein Knoten
 
 Informationen zu STONITH und Umgrenzung finden Sie unter den folgenden Artikeln:
 
-* [Pacemaker-Cluster von Grund auf neu](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
+* [Pacemaker-Cluster von Grund auf neu](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/index.html)
 * [Umgrenzung und STONITH](https://clusterlabs.org/doc/crm_fencing.html)
 * [Hohe Verfügbarkeit ein Add-On mit Pacemaker unter Red Hat: Für das umgrenzen der](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
 
@@ -143,10 +143,10 @@ Aktualisieren Sie den Eigenschaftswert an `true` ausführen:
 sudo pcs property set start-failure-is-fatal=true
 ```
 
-Beim Aktualisieren der `ag1` Ressourceneigenschaft `failure-timeout` zu `60s` ausführen:
+Beim Aktualisieren der `ag_cluster` Ressourceneigenschaft `failure-timeout` zu `60s` ausführen:
 
 ```bash
-pcs resource update ag1 meta failure-timeout=60s
+pcs resource update ag_cluster meta failure-timeout=60s
 ```
 
 

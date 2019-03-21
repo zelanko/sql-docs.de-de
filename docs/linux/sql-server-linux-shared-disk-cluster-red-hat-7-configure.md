@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: b5ffda90f0d4b2b85ed29af65da5ea12592e4423
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 1801551b179cf7040f1eb5cbaa05d8eb3bebc564
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979916"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306038"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Konfigurieren Sie Red Hat Enterprise Linux Cluster mit freigegebenen Datenträgern werden für SQL Server.
 
@@ -203,7 +203,7 @@ Weitere Informationen zur Verwendung von NFS finden Sie unter den folgenden Ress
 
 * [NFS-Servern und Firewalld | Stack Exchange](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
 * [Bereitstellen von einem NFS-Volume | Linux-Netzwerk – Administratorhandbuch](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
-* [NFS-Serverkonfiguration](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/3/html/Reference_Guide/s1-nfs-server-export.html)
+* [NFS-Serverkonfiguration | Red Hat-Kundenportal](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
 
 ### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>Bereitstellen der Datenbank-Dateiverzeichnis auf dem freigegebenen Speicher verweisen
 
@@ -334,9 +334,9 @@ An diesem Punkt sind beide Instanzen von SQL Server für die Ausführung mit den
    - **Floating-IP-Ressourcennamen**: Ein Name für die virtuelle IP-Adressressource.
    - **IP-Adresse**: Die IP-Adresse, die Clients verwenden, um an der gruppierten Instanz von SQL Server eine Verbindung herstellen. 
    - **File System-Ressourcenname**: Ein Name für die Dateisystem-Ressource.
-   - **Gerät**: Pfad für die NFS-Freigabe
-   - **Gerät**: Der lokale Pfad, dass sie auf die Freigabe eingebunden ist
-   - **FsType**: Dateityp (z. B. Nfs) freigeben
+   - **device**: Pfad für die NFS-Freigabe
+   - **device**: Der lokale Pfad, dass sie auf die Freigabe eingebunden ist
+   - **fstype**: Dateityp (z. B. Nfs) freigeben
 
    Aktualisieren Sie die Werte aus dem folgenden Skript für Ihre Umgebung. Führen Sie auf einem Knoten zum Konfigurieren und starten den Clusterdienst.  
 

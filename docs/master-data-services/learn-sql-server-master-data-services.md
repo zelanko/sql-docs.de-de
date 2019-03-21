@@ -13,12 +13,12 @@ ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c38c1ee94399023fd3ac529a1f7d9cf914f5130f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 6c32d4cf8fe16ec52d8af3ade01cea82badd40cd
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809442"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305838"
 ---
 # <a name="learn-sql-server-master-data-services"></a>Erlernen von SQL Server Master Data Services
 
@@ -27,13 +27,13 @@ ms.locfileid: "52809442"
   
   
 ## <a name="training"></a>Training  
-* Absolvieren Sie diese [**virtuelle TechNet-Übungseinheit**](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23113&lod=true), um die neuen Features und Funktionen in [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] zu kennenzulernen. Dazu müssen Sie bei Ihrem Microsoft-Konto angemeldet sein.  
-* Absolvieren Sie diese [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] virtuelle TechNet-Übungseinheit [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)], um mithilfe des Add-In für Excel und des [**s eine**](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23112&lod=true)-Lösung zum Speichern und Verwalten von Masterlisten mit geografischen Daten zu entwickeln. Erstellen Sie Entitäten und Hierarchien, und verwenden Sie [!INCLUDE[ssIS_md](../includes/ssis-md.md)] zum Auffüllen einer Dimensionstabelle.  
+* Untersuchen Sie die neuen Features und Funktionen in [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], probieren Sie eine [Self-Paced-Lab](https://www.microsoft.com/handsonlabs/selfpacedlabs) (Melden Sie sich mit Ihrem Microsoft-Konto erforderlich ist).  
+* Entwickeln einer [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] -Lösung zum Speichern und Verwalten von masterlisten mit geografischen Daten, die mit dem Add-in für Excel und die [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)], probieren Sie eine [Self-Paced-Lab](https://www.microsoft.com/handsonlabs/selfpacedlabs). Erstellen Sie Entitäten und Hierarchien, und verwenden Sie [!INCLUDE[ssIS_md](../includes/ssis-md.md)] zum Auffüllen einer Dimensionstabelle.  
   
 ## <a name="videos"></a>Videos  
 * Um einen Einblick in die neuen Funktionen der [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] -Version von [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]zu erhalten, [**ehen Sie sich dieses Video an**](https://www.youtube.com/watch?v=cKA72FpOVxI).  
   
-## <a name="samples"></a>Beispiele  
+## <a name="samples"></a>Proben  
 * Sehen Sie sich die Beispielmodelle an, die mit [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] installiert werden, um mehr über Hierarchien und darüber zu erfahren, wie Sie Daten in [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]mithilfe von Modellen strukturieren können. Eine Anleitung zum Bereitstellen der Beispiele finden Sie unter [Bereitstellen von Beispielmodellen und Daten](../master-data-services/master-data-services-installation-and-configuration.md#deploySample).   
   
     Informationen zu den [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)]-Updates für die Beispielmodelle finden Sie unter [SQL Server-Beispiele: Modellbereitstellungspakete](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  

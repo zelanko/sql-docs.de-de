@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3af3d6ba14e4a9f3e2948c910e4282e33c032d3e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4a66d4665af9980822f5ce4c41ed0b94964fa8c5
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214310"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305988"
 ---
 # <a name="languages-and-collations-analysis-services"></a>Sprachen und Sortierungen (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "53214310"
   
 -   0x0416 oder 1046 für **Portugiesisch (Brasilien)**  
   
- Eine längere Liste finden Sie unter [Von Microsoft zugewiesene Gebietsschema-IDs](http://msdn.microsoft.com/goglobal/bb964664.aspx). Weitere Informationen finden Sie unter [Codierung und Codepages](http://msdn.microsoft.com/goglobal/bb688114.aspx).  
+ Eine längere Liste finden Sie unter [Von Microsoft zugewiesene Gebietsschema-IDs](http://msdn.microsoft.com/goglobal/bb964664.aspx). Weitere Informationen finden Sie unter [Codierung und Codepages](/globalization/encoding/encoding-overview).  
   
 > [!NOTE]  
 >  Die **Language** -Eigenschaft bestimmt nicht die Sprache für die Rückgabe von Systemmeldungen oder die in der Benutzeroberfläche angezeigten Zeichenfolgen. Fehler, Warnungen und Meldungen sind in allen von Office und Office 365 unterstützten Sprachen lokalisiert und werden automatisch verwendet, wenn die Clientverbindung eines der unterstützten Gebietsschemas angibt.  

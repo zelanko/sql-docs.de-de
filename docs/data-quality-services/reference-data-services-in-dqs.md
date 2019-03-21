@@ -11,12 +11,12 @@ ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 92112b0211536bcb964d71e538a92311b2579117
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 98801ffe8ea0066bc425622a0f62e7306a217ff2
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027131"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305938"
 ---
 # <a name="reference-data-services-in-dqs"></a>Reference Data Services in DQS
 
@@ -59,7 +59,7 @@ ms.locfileid: "56027131"
   
 1.  **Konfigurieren von Details der Verweisdatenanbieter in DQS**: Bevor Sie Verweisdaten in DQS verwenden können, müssen Sie die Dienstdetails der Verweisdaten in DQS konfigurieren.  
   
-    1.  Wenn Sie Marketplace verwenden, stellen Sie einen gültigen Marketplace-Kontoschlüssel bereit, wechseln Sie im Marketplace zur Datenkategorie [Data Quality Services](https://go.microsoft.com/fwlink/?LinkId=227587) , und abonnieren Sie die erforderlichen Anbieter.  
+    1.  Wenn Sie Marketplace verwenden, geben Sie einen gültigen Marketplace-kontoschlüssel, wechseln Sie zu der [Datendienste](https://azuremarketplace.microsoft.com/marketplace/apps/category/azure-active-directory-apps?page=1&subcategories=data-services) Datenkategorie im Marketplace, und abonnieren Sie die erforderlichen Anbieter.  
   
     2.  Wenn Sie einen direkten Onlineverweisdatenanbieter verwenden, müssen Sie direkte Verweisdatenanbieterdetails in DQS hinzufügen, bevor Sie den Anbieter verwenden können.  
   
