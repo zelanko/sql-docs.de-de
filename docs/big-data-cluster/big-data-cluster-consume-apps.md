@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.reviewer: rothja
-ms.openlocfilehash: 3ebebd290788511682098f2300d41dc0e9908517
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: bc55e90ad8aced555858008bc77715299a064b2a
+ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222256"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58342836"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>Nutzen einer app, die auf SQL Server-big Data-Cluster mit einem RESTful-Webdienst bereitgestellt
 
@@ -67,8 +67,8 @@ mssqlctl app describe --name addpy --version v1
     }
   ],
   "links": {
-    "app": "https://10.1.1.3:30777/api/app/add-app/v1",
-    "swagger": "https://10.1.1.3:30777/api/app/add-app/v1/swagger.json"
+    "app": "https://10.1.1.3:30777/api/app/addpy/v1",
+    "swagger": "https://10.1.1.3:30777/api/app/addpy/v1/swagger.json"
   },
   "name": "add-app",
   "output_param_defs": [
@@ -86,7 +86,7 @@ Beachten Sie die IP-Adresse (`10.1.1.3` in diesem Beispiel) und die Portnummer (
 
 ## <a name="generate-a-jwt-access-token"></a>Generieren Sie ein JWT-Zugriffstoken
 
-Um RESTful-Webdienst für die app zugreifen, Sie bereitgestellt haben, öffnen Sie die folgende URL in Ihrem Browser: `https://[IP]:[PORT]/api/docs/swagger.json` mithilfe die IP-Adresse und den Port, die Sie ausführen abgerufen haben die `describe` obigen Befehl. Müssen Sie die Anmeldung mit der gleichen Anmeldeinformationen für die Verwendung `mssqlctl login`.
+Um den Zugriff auf die RESTful-Web-Dienst für die app haben Sie Sie zunächst zum Generieren eines JWT-Zugriffstokens bereitgestellt. Öffnen Sie die folgende URL in Ihrem Browser: `https://[IP]:[PORT]/api/docs/swagger.json` mithilfe die IP-Adresse und den Port, die Sie ausführen abgerufen haben die `describe` obigen Befehl. Müssen Sie die Anmeldung mit der gleichen Anmeldeinformationen für die Verwendung `mssqlctl login`.
 
 Fügen Sie den Inhalt der `swagger.json` in der [Swagger Editor](https://editor.swagger.io) zu verstehen, welche Methoden zur Verfügung stehen:
 
@@ -101,9 +101,9 @@ Das Ergebnis dieser Anforderung erhalten Sie ein JWT `access_token`, die Sie ben
 ## <a name="execute-the-app-using-the-restful-web-service"></a>Führen Sie die app mithilfe von RESTful-Webdienst
 
 > [!NOTE]
-> Wenn Sie möchten, können Sie öffnen die URL für die `swagger` , die zurückgegeben wurde, bei der Ausführung `mssqlctl app describe --name addpy --version [version]` in Ihrem Browser. Müssen Sie die Anmeldung mit der gleichen Anmeldeinformationen für die Verwendung `mssqlctl login`. Den Inhalt der `swagger.json` können Sie in einfügen [Swagger Editor](https://editor.swagger.io). Sie sehen, dass der Webdienst stellt die `run` Methode.
+> Wenn Sie möchten, können Sie öffnen die URL für die `swagger` , die zurückgegeben wurde, bei der Ausführung `mssqlctl app describe --name [appname] --version [version]` in Ihrem Browser, sein sollte ähnlich wie `https://[IP]:[PORT]/api/app/[appname]/[version]/swagger.json`. Müssen Sie die Anmeldung mit der gleichen Anmeldeinformationen für die Verwendung `mssqlctl login`. Den Inhalt der `swagger.json` können Sie in einfügen [Swagger Editor](https://editor.swagger.io). Sie sehen, dass der Webdienst stellt die `run` Methode.
 
-Sie können Ihr bevorzugte Tool verwenden, zum Aufrufen der `run` Methode (`https://[IP]:[PORT]/api/app/addpy/[version]/run`), und übergeben Sie die Parameter im Text der POST-Anforderung im JSON-Format. In diesem Beispiel verwenden wir [Postman](https://www.getpostman.com/). Vor dem Aufruf aus, Sie benötigen, legen Sie die `Authorization` zu `Bearer Token` und fügen Sie in das Token, die Sie zuvor abgerufen haben. Dadurch wird einen Header bei der Anforderung festgelegt. Sehen Sie sich hierzu folgendes Bildschirmfoto an.
+Sie können Ihr bevorzugte Tool verwenden, zum Aufrufen der `run` Methode (`https://[IP]:[PORT]/api/app/[appname]/[version]/run`), und übergeben Sie die Parameter im Text der POST-Anforderung im JSON-Format. In diesem Beispiel verwenden wir [Postman](https://www.getpostman.com/). Vor dem Aufruf aus, Sie benötigen, legen Sie die `Authorization` zu `Bearer Token` und fügen Sie in das Token, die Sie zuvor abgerufen haben. Dadurch wird einen Header bei der Anforderung festgelegt. Sehen Sie sich hierzu folgendes Bildschirmfoto an.
 
 ![Führen Sie Postman Header](media/big-data-cluster-consume-apps/postman_run_1.png)
 
