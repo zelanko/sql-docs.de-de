@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8d784b82c56ca99027491bf257c90dddf4eb9b6b
-ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
+ms.openlocfilehash: 8f661acacf17a8977f437abdcefcd3763305229b
+ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57756635"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58222058"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>Gewusst wie: Bereitstellen einer app auf SQL Server-2019 big Data-Cluster (Vorschau)
 
@@ -253,7 +253,7 @@ spec.yaml
 
 ## <a name="describe-an-app"></a>Beschreiben Sie eine app
 
-Der Befehl für die Beschreibung bietet ausführliche Informationen über die app, einschließlich der Endpunkt in Ihrem Cluster. Dies wird normalerweise durch ein app-Entwickler verwendet, zum Erstellen einer app mithilfe des Swagger-Clients und mithilfe des Webdiensts für die Interaktion mit der app RESTful-basiert.
+Der Befehl für die Beschreibung bietet ausführliche Informationen über die app, einschließlich der Endpunkt in Ihrem Cluster. Dies wird normalerweise durch ein app-Entwickler verwendet, zum Erstellen einer app mithilfe des Swagger-Clients und mithilfe des Webdiensts für die Interaktion mit der app RESTful-basiert. Finden Sie unter [Anwendungen für big Data-Cluster nutzen](big-data-cluster-consume-apps.md) für Weitere Informationen.
 
 ```json
 {
@@ -293,6 +293,6 @@ mssqlctl app delete --name add-app --version v1
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Sie können auch zusätzliche Beispiele Auschecken [Beispiele für das Bereitstellen von Apps](https://aka.ms/sql-app-deploy).
+Informationen zur Integration von apps, die auf SQL Server, die in Ihren eigenen Anwendungen auf big Data-Cluster bereitgestellten [Anwendungen für big Data-Cluster nutzen](big-data-cluster-consume-apps.md) für Weitere Informationen. Sie können auch zusätzliche Beispiele Auschecken [Beispiele für das Bereitstellen von Apps](https://aka.ms/sql-app-deploy).
 
 Weitere Informationen zu SQL Server-big Data-Clustern, finden Sie unter [was SQL Server-2019 big Data-Cluster sind?](big-data-cluster-overview.md).
