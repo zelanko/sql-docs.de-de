@@ -14,15 +14,15 @@ helpviewer_keywords:
 - logs [Integration Services], tutorials
 - walkthroughs [Integration Services]
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2a99169168eb21f0a7d42f133e7e882141c776e6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e25c90b3baa4e718f40dc3a3f84b6dc221d54c33
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357916"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379948"
 ---
 # <a name="ssis-tutorial-creating-a-simple-etl-package"></a>SSIS-Tutorials: Erstellen eines einfachen ETL-Pakets
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) ist eine Plattform zum Erstellen leistungsfähiger datenintegrationslösungen, z. B. extrahieren, Transformieren und laden (ETL)-Paketen für Data Warehouses. SSIS enthält grafische Tools und Assistenten zum Erstellen und Debuggen von Paketen; Tasks zum Ausführen von Workflowfunktionen wie z. B. FTP-Vorgänge, Ausführen von SQL-Anweisungen und Senden von E-Mails; Datenquellen und Ziele zum Extrahieren und Laden von Daten; Transformationen zum Bereinigen, Aggregieren, Zusammenführen und Kopieren von Daten; einen Verwaltungsdienst, den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst zum Verwalten der Paketausführung und -speicherung; und Anwendungsprogrammierschnittstellen (APIs, Application Programming Interfaces) zum Programmieren des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Objektmodells.  
@@ -67,7 +67,7 @@ ms.locfileid: "53357916"
  [Lektion 4: Hinzufügen von Fehlerflussumleitungen](lesson-4-add-error-flow-redirection-with-ssis.md)  
  In dieser Lektion erweitern Sie das von Ihnen in Lektion 3 erstellte Paket, um die Vorteile der neuen Fehlerausgabekonfigurationen zu nutzen.  
   
- [Lektion 5: Hinzufügen von Paketkonfigurationen für das Paketbereitstellungsmodell](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
+ [Lesson 5: Hinzufügen von Paketkonfigurationen für das Paketbereitstellungsmodell](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
  In dieser Lektion erweitern Sie das von Ihnen in Lektion 4 erstellte Paket, um die Vorteile der neuen Paketkonfigurationsoptionen zu nutzen.  
   
  [Lektion 6: Verwenden von Parametern mit dem Projektbereitstellungsmodell](lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  

@@ -10,22 +10,22 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.forloopcontainer.f1
 ms.assetid: c4db9df6-d2f4-44da-9f4d-628893e86956
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b27f4fc4d938f9b82ca3a4ad126f0cda6d75d8d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da5e5c2a748a2bd38d0337b70e9d2a3da312df43
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123370"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382064"
 ---
 # <a name="for-loop-editor"></a>For-Schleifen-Editor
   Mithilfe der Seite **For-Schleife** des Dialogfelds **For-Schleifen-Editor** können Sie eine Schleife konfigurieren, durch die ein Workflow wiederholt wird, bis eine bestimmte Bedingung mit False ausgewertet wird.  
   
  Weitere Informationen zum For-Schleifencontainer und zu dessen Verwendung in Paketen finden Sie unter [For Loop Container](control-flow/for-loop-container.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **InitExpression**  
  Gibt optional einen Ausdruck zum Initialisieren von Werten an, die durch die Schleife verwendet werden.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48123370"
  Geben Sie eine Beschreibung des For-Schleifencontainers an.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Seite Ausdrücke](expressions/expressions-page.md)   
  [Foreach Loop Container](control-flow/foreach-loop-container.md)  (Foreach-Schleifencontainer)  
  [Konfigurieren eines For-Schleifencontainers](../../2014/integration-services/configure-a-for-loop-container.md)  

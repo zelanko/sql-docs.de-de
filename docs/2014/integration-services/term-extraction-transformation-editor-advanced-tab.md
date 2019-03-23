@@ -12,22 +12,22 @@ f1_keywords:
 helpviewer_keywords:
 - Term Extraction Transformation Editor
 ms.assetid: 87118281-6e3c-499e-bac4-fa4c24bb12c6
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ce44e2709013a6d56d47ad30c90ecf5d92825503
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea6582aacefc7c17450e59689bec29c260a38d07
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185330"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385038"
 ---
 # <a name="term-extraction-transformation-editor-advanced-tab"></a>Transformations-Editor für Ausdrucksextrahierung (Registerkarte Erweitert)
   Auf der Registerkarte **Erweitert** des Dialogfelds **Transformations-Editor für Ausdrucksextrahierung** können Sie Eigenschaften für die Extrahierung angeben, wie z. B. Häufigkeit, Länge und ob Wörter oder Ausdrücke extrahiert werden sollen.  
   
  Weitere Informationen zur Transformation für Ausdrucksextrahierung finden Sie unter [Term Extraction Transformation](data-flow/transformations/term-extraction-transformation.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Nomen**  
  Gibt an, dass durch die Transformation nur einzelne Nomen extrahiert werden.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48185330"
  Gibt an, dass es sich bei dem Ergebnis um die Häufigkeit des Begriffs handelt.  
   
  **TFIDF**  
- Gibt an, dass es sich bei dem Ergebnis um den TFIDF-Wert des Begriffs handelt. Das TFIDF-Ergebnis ist das Produkt von Ausdruckshäufigkeit und umgekehrter Dokumenthäufigkeit, definiert als: TFIDF des Ausdrucks T = (Häufigkeit von T) * log((Anz. Zeilen in der Eingabe)/(Anz. Zeilen mit T))  
+ Gibt an, dass es sich bei dem Ergebnis um den TFIDF-Wert des Begriffs handelt. Das TFIDF-Ergebnis ist das Produkt von Ausdruckshäufigkeit und umgekehrter Dokumenthäufigkeit, definiert als: TFIDF des Ausdrucks T = (Häufigkeit von T) * Log ((#rows in der Eingabe) / (#rows mit T))  
   
  **Schwellenwert für Häufigkeit**  
  Gibt in Form eines Zahlenwertes an, wie oft ein Wort oder ein Ausdruck vorkommen muss, bevor die Extrahierung erfolgt. Der Standardwert ist 2.  
@@ -56,9 +56,9 @@ ms.locfileid: "48185330"
  Geben Sie mit dem Dialogfeld [Fehlerausgabe konfigurieren](../../2014/integration-services/configure-error-output.md) die Fehlerbehandlung für Zeilen an, die Fehler verursachen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Transformations-Editor für Ausdrucksextrahierung Begriff &#40;Registerkarte Ausdrucksextrahierung&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
- [Transformations-Editor für Ausdrucksextrahierung Begriff &#40;Registerkarte "Ausschluss"&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
+ [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Transformations-Editor für Ausdrucksextrahierung &#40;Registerkarte „Ausdrucksextrahierung“&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
+ [Transformations-Editor für Ausdrucksextrahierung &#40;Registerkarte „Ausschluss“&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
  [Transformation für Ausdruckssuche](data-flow/transformations/lookup-transformation.md)  
   
   
