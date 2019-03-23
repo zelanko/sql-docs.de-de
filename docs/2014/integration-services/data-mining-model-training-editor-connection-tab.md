@@ -12,22 +12,22 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Model Training Editor
 ms.assetid: 098fbb1a-2a26-4288-9f68-d6233cb388ad
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 635e98ed9ad3f365f30f96653ad77a906ca0d81a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b88616b096557f0c27255669d4f5fab1f646f5f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201291"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390198"
 ---
 # <a name="data-mining-model-training-editor-connection-tab"></a>Trainings-Editor für Data Mining-Modelle (Registerkarte Verbindung)
   Wählen Sie auf der Seite **Verbindung** des Dialogfelds **Trainings-Editor für Data Mining-Modelle** ein Mining-Modell zum Trainieren aus.  
   
  Weitere Informationen zum Ziel des Data Mining-Modelltrainings finden Sie unter [Data Mining Model Training Destination](data-flow/data-mining-model-training-destination.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Verbindungs-Manager**  
  Wählen Sie eine Verbindung aus der Liste der vorhandenen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Verbindungen aus, oder erstellen Sie wie im Folgenden beschrieben über die Schaltfläche [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Neu **eine neue** -Verbindung.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48201291"
  Zeigt die Liste der mit der ausgewählten Miningstruktur verknüpften Miningmodelle an.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Trainings-Editor für Data Mining-Modelle &#40;Registerkarte "Spalten"&#41;](../../2014/integration-services/data-mining-model-training-editor-columns-tab.md)  
+ [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Trainings-Editor für Data Mining-Modelle &#40;Registerkarte Spalten&#41;](../../2014/integration-services/data-mining-model-training-editor-columns-tab.md)  
   
   

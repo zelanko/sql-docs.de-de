@@ -12,22 +12,22 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: de47ea98-135e-4730-900e-dac629848798
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0368fefac4c927ee1f1483ba433feb13b3c1dc5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5069000307f1cc677437cd1313e493015a774664
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125180"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377148"
 ---
 # <a name="flat-file-connection-manager-editor-preview-page"></a>Verbindungs-Manager-Editor für Flatfiles (Vorschauseite)
   Über den Knoten **Vorschau** im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** können Sie den Inhalt der Quelldatei im Tabellenformat anzeigen.  
   
  Weitere Informationen zum Verbindungs-Manager für Flatfiles finden Sie unter [Flat File Connection Manager](connection-manager/file-connection-manager.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name des Verbindungs-Managers**  
  Geben Sie einen eindeutigen Namen für die Flatfile-Verbindung im Workflow an. Der angegebene Name wird im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer angezeigt.  
   
@@ -44,9 +44,9 @@ ms.locfileid: "48125180"
  Zeigen Sie Beispieldaten in der Flatfile an, die entsprechend der von Ihnen gewählten Option in Spalten und Zeilen unterteilt sind.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Dateiverbindungs-Manager-Editor für Flatfiles &#40;Seite "Allgemein"&#41;](general-page-of-integration-services-designers-options.md)   
- [Dateiverbindungs-Manager-Editor für Flatfiles &#40;Seite "Spalten"&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
- [Verbindungs-Manager-Editor für Flatfiles &#40;Seite Erweitert&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
+ [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Verbindungs-Manager-Editor für Flatfiles &#40;Seite „Allgemein“&#41;](general-page-of-integration-services-designers-options.md)   
+ [Verbindungs-Manager-Editor für Flatfiles &#40;Seite „Spalten“&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
+ [Verbindungs-Manager-Editor für Flatfiles &#40;Seite „Erweitert“&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
   
   

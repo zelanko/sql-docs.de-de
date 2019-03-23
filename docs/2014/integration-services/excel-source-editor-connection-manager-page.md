@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 428e04e0-ad98-45d0-8345-12ec1b67b2eb
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a247233157dbf83fe29089eff9c67442e00b8809
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1f2389946ac8780fb15fb5708138883ac0219369
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157730"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388063"
 ---
 # <a name="excel-source-editor-connection-manager-page"></a>Quellen-Editor für Excel (Seite Verbindungs-Manager)
   Mithilfe des Knotens **Verbindungs-Manager** im Dialogfeld **Quellen-Editor für Excel** können Sie eine [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] -Arbeitsmappe für die Quelle auswählen. Die Excel-Quelle liest Daten aus einem Arbeitsblatt oder dem benannten Bereich einer vorhandenen Arbeitsmappe.  
@@ -40,10 +40,10 @@ ms.locfileid: "48157730"
  **Datenzugriffsmodus**  
  Geben Sie die Methode für die Auswahl von Daten aus der Quelle an.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |Tabelle oder Sicht|Ruft Daten aus einem Arbeitsblatt oder dem benannten Bereich einer Excel-Datei ab.|  
-|Variable für Tabellenname oder Sichtname|Geben Sie den Namen des Arbeitsblatts oder Bereichs in einer Variablen an.<br /><br /> **Relevante Informationen:** [Verwenden von Variablen in Paketen](../../2014/integration-services/use-variables-in-packages.md)|  
+|Variable für Tabellenname oder Sichtname|Geben Sie den Namen des Arbeitsblatts oder Bereichs in einer Variablen an.<br /><br /> **Verwandte Informationen:** [Verwenden von Variablen in Paketen](../../2014/integration-services/use-variables-in-packages.md)|  
 |SQL-Befehl|Ruft mithilfe einer SQL-Abfrage Daten aus einer Excel-Datei ab. Informationen zur Abfragesyntax finden Sie unter [Excel Source](data-flow/excel-source.md).|  
 |SQL-Befehl aus Variable|Gibt den SQL-Abfragetext in einer Variablen an.|  
   
@@ -81,9 +81,9 @@ ms.locfileid: "48157730"
  Wählen Sie die Variable aus, die den Text für die SQL-Abfrage enthält.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Quellen-Editor für Excel &#40;Seite "Spalten"&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
- [Quellen-Editor für Excel &#40;Seite "Fehlerausgabe"&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
+ [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Quellen-Editor für Excel &#40;Seite Spalten&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
+ [Quellen-Editor für Excel &#40;Seite Fehlerausgabe&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
  [Excel-Verbindungs-Manager](connection-manager/excel-connection-manager.md)   
  [Schleife durch Excel-Dateien und Tabellen mit einem Foreach-Schleifencontainer](control-flow/foreach-loop-container.md)  
   

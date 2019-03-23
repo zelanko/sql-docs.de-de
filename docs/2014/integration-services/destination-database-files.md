@@ -10,22 +10,22 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.destdbfiles.f1
 ms.assetid: f6f90417-86fb-4b8c-a790-0b215c344ef6
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fb6f834ab26fb6d5cc7535d217745af92e97c2a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4911084929f3ff69657a6d5e51c557f35929b45b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135274"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379918"
 ---
 # <a name="destination-database-files"></a>Zieldatenbankdateien
   Verwenden Sie das Dialogfeld **Zieldatenbankdateien** , um die Namen und Speicherorte der Datenbankdateien auf dem Zielserver anzuzeigen oder um für den Task "Datenbanken übertragen" eine Dateifreigabe auf dem Netzwerk anzugeben. Weitere Informationen zu diesem Task finden Sie unter [Datenbanken übertragen (Task)](control-flow/transfer-database-task.md).  
   
  Um dieses Dialogfeld automatisch mit den Datenbankdateinamen und -speicherorten des Quellservers aufzufüllen, geben Sie zuerst auf der Seite **Datenbanken**des Dialogfelds **Editor für den Task 'Datenbanken übertragen'** die Parameter **SourceConnection** , **SourceDatabaseName** und **SourceDatabaseFiles** an.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Zieldatei**  
  Namen der übertragenen Datenbankdateien auf dem Zielserver.  
   
@@ -44,8 +44,8 @@ ms.locfileid: "48135274"
  Beim Übertragen einer Datenbank im Offlinemodus werden die Datenbankdateien zunächst in den als **Netzwerkdateifreigabe** angegebenen Speicherort kopiert, bevor sie in den als **Zielordner** gekennzeichneten Speicherort übertragen werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor für den Task Datenbanken übertragen &#40;Seite "Allgemein"&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor für den Task Datenbanken übertragen &#40;Seite Datenbanken&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
+ [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor für den Task „Datenbanken übertragen“ &#40;Seite „Allgemein“&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor für den Task „Datenbanken übertragen“ &#40;Seite „Datenbanken“&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
   
   

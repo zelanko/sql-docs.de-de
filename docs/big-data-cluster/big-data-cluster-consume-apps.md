@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.reviewer: rothja
-ms.openlocfilehash: 40ce93e9232d0492bd693e7920b62dc9805aa7ac
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
-ms.translationtype: HT
+ms.openlocfilehash: a9ef02cae7899a1deb5ce6d84b10dac2297b9d2f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356403"
+ms.locfileid: "58389958"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>Nutzen einer app, die auf SQL Server-big Data-Cluster mit einem RESTful-Webdienst bereitgestellt
 
@@ -101,9 +101,9 @@ Das Ergebnis dieser Anforderung erhalten Sie ein JWT `access_token`, die Sie ben
 ## <a name="execute-the-app-using-the-restful-web-service"></a>Führen Sie die app mithilfe von RESTful-Webdienst
 
 > [!NOTE]
-> Wenn Sie möchten, können Sie öffnen die URL für die `swagger` , die zurückgegeben wurde, bei der Ausführung `mssqlctl app describe --name [appname] --version [version]` in Ihrem Browser, sein sollte ähnlich wie `https://[IP]:[PORT]/api/app/[appname]/[version]/swagger.json`. Müssen Sie die Anmeldung mit der gleichen Anmeldeinformationen für die Verwendung `mssqlctl login`. Den Inhalt der `swagger.json` können Sie in einfügen [Swagger Editor](https://editor.swagger.io). Sie sehen, dass der Webdienst stellt die `run` Methode.
+> Wenn Sie möchten, können Sie öffnen die URL für die `swagger` , die zurückgegeben wurde, bei der Ausführung `mssqlctl app describe --name [appname] --version [version]` in Ihrem Browser, sein sollte ähnlich wie `https://[IP]:[PORT]/api/app/[appname]/[version]/swagger.json`. Müssen Sie die Anmeldung mit der gleichen Anmeldeinformationen für die Verwendung `mssqlctl login`. Den Inhalt der `swagger.json` können Sie in einfügen [Swagger Editor](https://editor.swagger.io). Sie sehen, dass der Webdienst stellt die `run` Methode. Beachten Sie auch die Basis-URL, die am oberen Rand angezeigt.
 
-Sie können Ihr bevorzugte Tool verwenden, zum Aufrufen der `run` Methode (`https://[IP]:[PORT]/api/app/[appname]/[version]/run`), und übergeben Sie die Parameter im Text der POST-Anforderung im JSON-Format. In diesem Beispiel verwenden wir [Postman](https://www.getpostman.com/). Vor dem Aufruf aus, Sie benötigen, legen Sie die `Authorization` zu `Bearer Token` und fügen Sie in das Token, die Sie zuvor abgerufen haben. Dadurch wird einen Header bei der Anforderung festgelegt. Sehen Sie sich hierzu folgendes Bildschirmfoto an.
+Sie können Ihr bevorzugte Tool verwenden, zum Aufrufen der `run` Methode (`https://[IP]:30778/api/app/[appname]/[version]/run`), und übergeben Sie die Parameter im Text der POST-Anforderung im JSON-Format. In diesem Beispiel verwenden wir [Postman](https://www.getpostman.com/). Vor dem Aufruf aus, Sie benötigen, legen Sie die `Authorization` zu `Bearer Token` und fügen Sie in das Token, die Sie zuvor abgerufen haben. Dadurch wird einen Header bei der Anforderung festgelegt. Sehen Sie sich hierzu folgendes Bildschirmfoto an.
 
 ![Führen Sie Postman Header](media/big-data-cluster-consume-apps/postman_run_1.png)
 

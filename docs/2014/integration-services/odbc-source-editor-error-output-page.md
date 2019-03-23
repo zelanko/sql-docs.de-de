@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.errorhandling.f1
 ms.assetid: b2f6866c-db07-4cb3-9f38-889f8d2b03e6
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1bf6d22a2cbe6111f9cce1a3be446c507969ca82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 804431fea189d0dbe8e236591453571a5546cd5c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158420"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394498"
 ---
 # <a name="odbc-source-editor-error-output-page"></a>Quellen-Editor für ODBC (Seite Fehlerausgabe)
   Auf der Seite **Fehlerausgabe** des Dialogfelds **Quellen-Editor für ODBC** können Sie Optionen für die Fehlerbehandlung auswählen.  
@@ -34,7 +34,7 @@ ms.locfileid: "48158420"
   
 -   Klicken Sie im **Quellen-Editor für ODBC**auf **Fehlerausgabe**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 ### <a name="inputoutput"></a>Eingabe/Ausgabe  
  Zeigt den Namen der Datenquelle an.  
@@ -71,6 +71,6 @@ ms.locfileid: "48158420"
   
 ## <a name="see-also"></a>Siehe auch  
  [Quellen-Editor für ODBC &#40;Seite Verbindungs-Manager&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
- [Quellen-Editor für ODBC &#40;Seite "Spalten"&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)  
+ [Quellen-Editor für ODBC &#40;Seite „Spalten“&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)  
   
   

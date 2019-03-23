@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.treeview.f1
 ms.assetid: fdcd93fc-fe9a-40ec-bac3-5f303cd83eaf
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6bde5e70821f6db956d1018e08bae02e4f7091ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a20d1bf52e623112f96ee2890e75e8d3ce0416ff
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185400"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377098"
 ---
 # <a name="ssis-package-explorer-tab"></a>Registerkarte 'Paket-Explorer' im SSIS-Designer
   Auf der Registerkarte **Paket-Explorer** des [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designers wird eine hierarchische Ansicht aller in einem Paket enthaltenen Elemente angezeigt: Konfigurationen, Verbindungen, Ereignishandler, ausführbare Objekte wie Tasks und Container, Protokollanbieter, Rangfolgeneinschränkungen und Variablen. Wenn das Paket einen Datenflusstask enthält, befindet sich auf der Registerkarte **Paket-Explorer** ein Knoten, der eine hierarchische Sicht der Datenflusskomponenten enthält.  

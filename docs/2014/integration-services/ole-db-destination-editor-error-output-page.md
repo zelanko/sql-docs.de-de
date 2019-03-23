@@ -12,22 +12,22 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Destination Editor
 ms.assetid: 3c01f480-16c9-49eb-b40c-13cbc90b019d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 35627cefd3bbdf4bec280baaa9dcdb1b43391e05
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a24a8b6eb8c0f6cde72a6760270873c05c5de44a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176840"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390078"
 ---
 # <a name="ole-db-destination-editor-error-output-page"></a>Ziel-Editor für OLE DB (Seite Fehlerausgabe)
   Auf der Seite **Fehlerausgabe** des Dialogfelds **Ziel-Editor für OLE DB** geben Sie Optionen für die Fehlerbehandlung an.  
   
  Weitere Informationen zum OLE DB-Ziel finden Sie unter [OLE DB Destination](data-flow/ole-db-destination.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Eingabe an.  
   
@@ -52,9 +52,9 @@ ms.locfileid: "48176840"
  Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Ziel-Editor für OLE DB &#40;Seite Verbindungs-Manager&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
- [Ziel-Editor für OLE DB &#40;Seite "Zuordnungen"&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
+ [Ziel-Editor für OLE DB &#40;Seite Zuordnungen&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
  [Laden von Daten mithilfe des OLE DB-Ziels](data-flow/load-data-by-using-the-ole-db-destination.md)  
   
   

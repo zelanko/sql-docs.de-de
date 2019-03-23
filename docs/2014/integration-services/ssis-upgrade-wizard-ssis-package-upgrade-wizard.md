@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.ssisupgradewizard.f1
 ms.assetid: a8698217-4793-40fd-85a0-ef4dad1c139f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c4b494bb112aec4a1bac96a84c733af9932cc194
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43481553088a1ca7ce32ab0f8b86eeb9869a5cb1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187220"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393868"
 ---
 # <a name="ssis-upgrade-wizard-ssis-package-upgrade-wizard"></a>SSIS Upgrade-Assistent (SSIS Paketupgrade-Assistent)
   Verwenden Sie den [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paketupgrade-Assistenten, um Pakete, die in [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] und [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] entwickelt wurden, in das von der aktuellen Version von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] verwendete Paketformat zu migrieren.  
@@ -27,7 +27,7 @@ ms.locfileid: "48187220"
   
 -   [Aktualisieren von Integration Services-Paketen mit dem SSIS-Paketupgrade-Assistenten](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Diese Seite nicht mehr anzeigen.**  
  Lassen Sie die Willkommensseite beim nächsten Öffnen des Assistenten aus.  
   

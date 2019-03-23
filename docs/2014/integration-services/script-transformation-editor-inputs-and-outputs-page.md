@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: 9659d2d2-5d73-4470-9768-e07b77142fc9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d015b637a2823b0551fec82fbe761e586cf1ccd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0d15b3979209e4dba6983a845ae1752d3e136fb7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084520"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392088"
 ---
 # <a name="script-transformation-editor-inputs-and-outputs-page"></a>Transformations-Editor für Skripterstellung (Seiten Eingaben und Ausgaben)
   Auf der Seite **Eingaben und Ausgaben** des Dialogfelds **Transformations-Editor für Skripterstellung** können Sie Ein- und Ausgaben für die Skripterstellung hinzufügen, entfernen oder konfigurieren.  
@@ -51,11 +51,11 @@ ms.locfileid: "48084520"
  Wählen Sie eine Spalte aus, und entfernen Sie sie dann, indem Sie auf **Spalte entfernen**klicken.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Skriptkomponententyp auswählen](../../2014/integration-services/select-script-component-type.md)   
- [Transformations-Editor &#40;Geben Sie die Seite "Spalten"&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
- [Transformations-Editor &#40;Seite "Skript"&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
- [Transformations-Editor &#40;Verbindungsseite-Manager&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
+ [Transformations-Editor für Skripterstellung &#40;Seite Eingabespalten&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
+ [Transformations-Editor für Skripterstellung &#40;Seite Skript&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
+ [Transformations-Editor für Skripterstellung &#40;Seite Verbindungs-Manager&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
  [Zusätzliche Skriptkomponentenbeispiele](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

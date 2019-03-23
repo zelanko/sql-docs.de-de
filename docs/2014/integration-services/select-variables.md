@@ -12,20 +12,20 @@ f1_keywords:
 helpviewer_keywords:
 - Select Variables dialog box
 ms.assetid: 7069a82b-905b-47a5-aee4-6fba24204979
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b25d629c510e6220ee361643502a2e178a7ae172
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: afae34484d4513c9ef6a33435fb023dbb8190fd4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176140"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390808"
 ---
 # <a name="select-variables"></a>Variablen auswählen
   Mithilfe des Dialogfelds **Variablen auswählen** geben Sie die Variablen an, die beim Vorgang des Sendens einer Nachricht im Task Nachrichtenwarteschlange verwendet werden. Die Liste **Verfügbare Variablen** enthält Systemvariablen und benutzerdefinierte Variablen, die sich auf den Task „Nachrichtenwarteschlange“ oder dessen übergeordneten Container beziehen. Der Task verwendet die Variablen der Liste **Ausgewählte Variablen** .  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Verfügbare Variablen**  
  Wählen Sie eine oder mehrere Variablen aus.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48176140"
  **Neue Variable**  
  Erstellt eine neue Variable.  
   
- **Verwandte Themen:** [Variable hinzufügen](../../2014/integration-services/add-variable.md)  
+ **Verwandte Themen:** [Hinzufügen von Variablen](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Nachrichtenwarteschlange (Task)](control-flow/message-queue-task.md)  

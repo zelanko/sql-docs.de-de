@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5d9e677f-b872-497d-9cde-472184a214ab
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 058010d0e32fb26cf4c12e720342af04bd784768
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fd64fe5cad5f85c41830d25dce279ba09915626b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804782"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391528"
 ---
 # <a name="how-to-manage-a-cdc-instance"></a>How to Manage a CDC Instance
   In diesem Verfahren wird beschrieben, wie Sie die CDC Designer Console zum Verwalten von CDC-Instanzvorgängen zur Laufzeit verwenden.  
@@ -34,13 +34,13 @@ ms.locfileid: "52804782"
   
      Sie können die folgenden Tasks ausführen:  
   
-    -   **Starten Sie**: Starten Sie die Aufzeichnung der Änderungen.  
+    -   **Start**: Starten Sie die Aufzeichnung der Änderungen.  
   
     -   **Beenden Sie**: Zum Beenden der Aufzeichnung der Änderungen  
   
     -   **Zurücksetzen**: Klicken Sie auf **Zurücksetzen** , um die CDC-Instanz auf ihren ursprünglichen (leeren) Zustand zurückzusetzen. Diese Option ist verfügbar, wenn die CDC-Instanz beendet wurde. Alle Änderungen in den Änderungstabellen und der interne Status der CDC-Instanz werden gelöscht. Wenn die CDC-Instanz später dann gestartet wird, beginnt die Änderungsaufzeichnung ab diesem Zeitpunkt und schließt nur Transaktionen ein, die nach dem Starten der CDC-Instanz gestartet wurden.  
   
-    -   **Löschen Sie**: So löschen Sie die CDC-Instanz.  
+    -   **Löschen:** So löschen Sie die CDC-Instanz.  
   
     -   **Oracle-Protokollierungsskript**: Klicken Sie auf **Oracle Logging Script** um das entsprechende Dialogfeld mit dem Oracle-protokollierungsskript anzuzeigen. Informationen zu den Schritten, die Sie in diesem Dialogfeld ausführen können, finden Sie unter [Oracle Supplemental Logging Script](oracle-supplemental-logging-script.md).  
   

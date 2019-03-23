@@ -11,15 +11,15 @@ helpviewer_keywords:
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: edcc54e1915e0fe78ace560c0d7db7d52509e2c5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372522"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394588"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Fehler- und Meldungsreferenz von Integration Services
   In den folgenden Tabellen sind vordefinierte Fehler-, Warn- und Informationsmeldungen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in aufsteigender numerischer Reihenfolge innerhalb jeder Kategorie aufgeführt, inklusive der jeweiligen numerischen Codes und symbolischen Namen. Jeder dieser Fehler ist als Feld der Klasse <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> im Namespace <xref:Microsoft.SqlServer.Dts.Runtime> definiert.  
@@ -358,7 +358,7 @@ ms.locfileid: "53372522"
 |0xC001F206|-1073614330|DTS_E_DTSNAME_BEGINSWITHALPHA|Der Objektname „%1“ ist ungültig. Der Name muss mit einem Buchstaben beginnen.|  
 |0xC001F207|-1073614329|DTS_E_DTSNAME_BEGINSWITHALPHAUNDERBAR|Der Objektname „%1“ ist ungültig. Der Name muss mit einem Buchstaben oder einem Unterstrich "_" beginnen.|  
 |0xC001F208|-1073614328|DTS_E_DTSNAME_ALPHADIGITUNDERBAR|Der Objektname „%1“ ist ungültig. Der Name darf nur alphanumerische Zeichen und Unterstriche "_" enthalten.|  
-|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|Der Objektname „%1“ ist ungültig. Der Name darf keines der folgenden Zeichen enthalten: / \ : ? " \< >&#124;|  
+|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|Der Objektname „%1“ ist ungültig. Der Name darf keines der folgenden Zeichen enthalten: / \ : ? " \< > &#124;|  
 |0xC001F420|-1073613792|DTS_E_FAILLOADINGPROPERTY|Fehler beim Laden der Werteigenschaft "%1" mit Standardpersistenz.|  
 |0xC001F422|-1073613790|DTS_E_NODELISTENUM_INVALIDCONNMGRTYPE|Der Verbindungs-Manager „%1“ ist nicht vom Typ „%2“.|  
 |0xC001F423|-1073613789|DTS_E_NODELISTENUM_XPATHISEMPTY|"%1" ist ohne Eintrag|  
@@ -1113,7 +1113,7 @@ ms.locfileid: "53372522"
 |0xC00470F4|-1073450764|DTS_E_EXPREVALINVALIDNULLSCALE|Der Wert %1!d! , der für den scale-Parameter der NULL-Funktion mit dem %2-Datentyp angegeben ist, liegt außerhalb des zulässigen Bereichs. Der Wert für die Dezimalstellen muss zwischen %3!d! und „%4!d!“ liegen. Der Wert für die Dezimalstellen darf die Genauigkeit nicht überschreiten und darf nicht negativ sein.|  
 |0xC00470F5|-1073450763|DTS_E_EXPREVALINVALIDNULLLENGTH|Der Wert %1!d! , der für den length-Parameter der NULL-Funktion mit dem %2-Datentyp angegeben ist, ist negativ und deshalb ungültig. Der Wert für die Länge muss positiv sein.|  
 |0xC00470F6|-1073450762|DTS_E_NEGATIVESNOTALLOWED|%1 kann kein negativer Wert zugewiesen werden.|  
-|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|Die benutzerdefinierte Eigenschaft "%1" für "%2" darf nicht auf True festgelegt werden.  Datentyp der Spalte muss eine der folgenden sein:  DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4, DT_UI8, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAMPOFFSET, DT_DATE, DT_DBDATE, DT_DBTIME, DT_DBTIME2 oder DT_FILETIME.|  
+|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|Die benutzerdefinierte Eigenschaft "%1" für "%2" darf nicht auf True festgelegt werden.  Datentyp der Spalte muss eine der folgenden sein:  DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4, DT_UI8, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAMPOFFSET, DT_DATE, DT_DBDATE, DT_DBTIME, DT_DBTIME2, or DT_FILETIME.|  
 |0xC00470F8|-1073450760|DTS_E_CANNOTREATTACHPATH|"%1" kann nicht erneut angefügt werden. Löschen Sie den Pfad, fügen Sie einen neuen Pfad hinzu, und fügen Sie das Objekt an.|  
 |0xC00470F9|-1073450759|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSPLURALSINGULAR|Die %1-Funktion erfordert %2!d!-Parameter, nicht %3!d!-Parameter . Der Funktionsname wurde erkannt, aber die Parameteranzahl ist ungültig.|  
 |0xC00470FA|-1073450758|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSSINGULARPLURAL|Die %1-Funktion erfordert %2!d!-Parameter, Parameter, und nicht %3!d! Parameter auf. Der Funktionsname wurde erkannt, aber die Parameteranzahl ist ungültig.|  

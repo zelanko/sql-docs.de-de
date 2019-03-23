@@ -12,25 +12,25 @@ f1_keywords:
 helpviewer_keywords:
 - Precedence Constraint Editor dialog box
 ms.assetid: b10d4330-6e35-4037-b309-ef56efcd60c5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c321d7a3850cf91b996262265492b88a6773f446
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 639436ec39301189ae172ce9cb7f58ea96c9cc11
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217300"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388308"
 ---
 # <a name="precedence-constraint-editor"></a>Rangfolgeneinschränkungs-Editor
   Verwenden Sie das Dialogfeld **Rangfolgeneinschränkungs-Editor** , um Rangfolgeneinschränkungen zu konfigurieren.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Auswertungsvorgang**  
- Geben Sie den Auswertungsvorgang an, den die Rangfolgeneinschränkung verwendet. Dazu zählen die folgenden Vorgänge: **Einschränkung**, **Ausdruck**, **Ausdruck und Einschränkung**und **Ausdruck oder Einschränkung**.  
+ Geben Sie den Auswertungsvorgang an, den die Rangfolgeneinschränkung verwendet. Die Vorgänge sind: **Einschränkung**, **Ausdruck**, **Ausdruck und Einschränkung**, und **Ausdruck oder Einschränkung**.  
   
  **Wert**  
- Geben Sie den Einschränkungswert an: **Erfolg**, **Fehler**oder **Beendigung**.  
+ Geben Sie den Einschränkungswert an: **Erfolg**, **Fehler**, oder **Abschluss**.  
   
 > [!NOTE]  
 >  Die Rangfolgeneinschränkungslinie wird bei **Erfolg**grün, bei einem **Fehler**hervorgehoben und bei **Beendigung**blau dargestellt.  
@@ -42,13 +42,13 @@ ms.locfileid: "48217300"
  Überprüfen Sie den Ausdruck.  
   
  **Logisches AND**  
- Damit geben Sie an, dass für die ausführbare Datei mehrere Rangfolgeneinschränkungen gemeinsam überprüft werden müssen. Alle Einschränkungen müssen ergeben `True`.  
+ Damit geben Sie an, dass für die ausführbare Datei mehrere Rangfolgeneinschränkungen gemeinsam überprüft werden müssen. Sämtliche Einschränkungen müssen mit `True` ausgewertet werden.  
   
 > [!NOTE]  
 >  Dieser Typ der Rangfolgeneinschränkung wird als durchgehende grüne, hervorgehobene oder blaue Linie dargestellt.  
   
  **Logisches OR**  
- Damit geben Sie an, dass für die ausführbare Datei mehrere Rangfolgeneinschränkungen gemeinsam überprüft werden müssen. Mindestens eine Einschränkung muss zu ausgewertet `True`.  
+ Damit geben Sie an, dass für die ausführbare Datei mehrere Rangfolgeneinschränkungen gemeinsam überprüft werden müssen. Mindestens eine Einschränkung muss mit `True` ausgewertet werden.  
   
 > [!NOTE]  
 >  Dieser Typ der Rangfolgeneinschränkung wird als gepunktete grüne, hervorgehobene oder blaue Linie dargestellt.  

@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dd6980bd66e4aeca0672fd4c8c1bffb95e09b9ae
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9de91ba98533e82fbf63376ed6d9c56ad73a000c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770962"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379234"
 ---
 # <a name="odbc-destination"></a>ODBC-Ziel
   Das ODBC-Ziel führt für die Daten einen Massenladevorgang in Datenbanktabellen mit ODBC-Unterstützung durch. Das ODBC-Ziel verwendet einen ODBC-Verbindungs-Manager, um eine Verbindung mit der Datenquelle herzustellen.  

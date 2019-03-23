@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 244efd95d67f36ae77efb15a6fa62684606db746
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 2478f1605b7fb67d8328be905956cbaae8e3c243
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369767"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394309"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services-Protokollierung (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält Protokollanbieter, mit denen Sie die Protokollierung in Paketen, Containern und Tasks implementieren können. Mit der Protokollierung können Sie Laufzeitinformationen zu einem Paket aufzeichnen, damit Sie ein Paket bei jeder Ausführung überwachen und Probleme behandeln können. Beispielsweise können in einem Protokoll der Name des Operators, der das Paket ausgeführt hat, und der Zeitpunkt, zu dem die Paketausführung begann und endete, aufgezeichnet werden.  
@@ -66,7 +66,7 @@ ms.locfileid: "53369767"
 |------------------|------------|-------------|--------------|  
 |Textdatei|DTS.LogProviderTextFile|{0A039101-ACC1-4E06-943F-279948323883}|Der vom Protokollanbieter verwendete Dateiverbindungs-Manager gibt den Pfad der Textdatei an.|  
 |SQL Server Profiler|DTS.LogProviderSQLProfiler|{E93F6300-AE0C-4916-A7BF-A8D0CE12C77A}|Der vom Protokollanbieter verwendete Dateiverbindungs-Manager gibt den Pfad der von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]verwendeten Textdatei an.|  
-|SQL Server|DTS.LogProviderSQLServer|{94150B25-6AEB-4C0D-996D-D37D1C4FDEDA}|Der vom Protokollanbieter verwendete OLE DB-Verbindungs-Manager gibt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank an, die die sysssislog-Tabelle mit den Protokolleinträgen enthält.|  
+|SQL Server|DTS.LogProviderSQLServer|{94150B25-6AEB-4C0D-996D-D37D1C4FDEDA}|Der vom Protokollanbieter verwendete OLE DB-Verbindungs-Manager gibt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank an, die die sysssislog-Tabelle mit den Protokolleinträgen enthält.|  
 |Windows-Ereignisprotokoll|DTS.LogProviderEventLog|{071CC8EB-C343-4CFF-8D58-564B92FCA3CF}|Das Anwendungsprotokoll der Windows-Ereignisanzeige enthält die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Protokollinformationen.|  
 |XML-Datei|DTS.LogProviderXMLFile|{440945A4-2A22-4F19-B577-EAF5FDDC5F7A}|Der vom Protokollanbieter verwendete Dateiverbindungs-Manager gibt den Pfad der XML-Datei an.|  
   

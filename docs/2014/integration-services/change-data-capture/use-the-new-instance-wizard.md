@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: dfc09f71-7037-4cd5-a3cd-c79f8c714e22
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1b2c11bff78526f63e01b14dbea2d52e5c0b2df1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 854336885617ac9f3bea98880433a7ce870c4844
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756414"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393794"
 ---
 # <a name="use-the-new-instance-wizard"></a>Verwenden des Assistenten für neue Instanzen
   Der Assistent für neue Instanzen wird verwendet, um für einen CDC-Dienst eine neue Instanz zu erstellen. Sie öffnen den Assistenten zum Erstellen einer Oracle CDC-Instanz über die CDC Designer Console. Im Assistenten für neue Instanzen können Sie die folgenden Schritte ausführen.  

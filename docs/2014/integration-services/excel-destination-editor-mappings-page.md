@@ -12,22 +12,22 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: ad44268b-d705-422c-a0c2-d532812502e1
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ff6e51c15678d50b6ebb39614441419dd13ad3f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 39c766acdd171db17c2b3f5ba0623b57a36ca145
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047571"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387798"
 ---
 # <a name="excel-destination-editor-mappings-page"></a>Ziel-Editor für Excel (Seite Zuordnungen)
   Auf der Seite **Zuordnungen** des Dialogfelds **Ziel-Editor für Excel** können Sie eine Zuordnung von Eingabe- zu Zielspalten vornehmen.  
   
  Weitere Informationen zum Excel-Ziel finden Sie unter [Excel Destination](data-flow/excel-destination.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Eingabespalten in der Tabelle Zielspalten zuordnen.  
   
@@ -41,9 +41,9 @@ ms.locfileid: "48047571"
  Zeigt alle verfügbaren Zielspalten an, und ob sie zugeordnet sind.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Ziel-Editor für Excel &#40;Seite Verbindungs-Manager&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
- [Ziel-Editor für Excel &#40;Seite "Fehlerausgabe"&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
+ [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Ziel-Editor für Excel &#40;Seite „Verbindungs-Manager“&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
+ [Ziel-Editor für Excel &#40;Seite „Fehlerausgabe“&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
  [Schleife durch Excel-Dateien und Tabellen mit einem Foreach-Schleifencontainer](control-flow/foreach-loop-container.md)  
   
   

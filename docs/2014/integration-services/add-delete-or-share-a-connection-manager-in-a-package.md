@@ -11,15 +11,15 @@ helpviewer_keywords:
 - connection managers [Integration Services], adding
 - adding connection managers
 ms.assetid: 6f2ba4ea-10be-4c40-9e80-7efcf6ee9655
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fdbea022082e2606fe991176524127a615464a98
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fdcc6285ba1a75827f91f856319d296c0cbbff5d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533380"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391688"
 ---
 # <a name="add-delete-or-share-a-connection-manager-in-a-package"></a>Hinzufügen, Löschen oder Freigeben eines Verbindungs-Managers in einem Paket
   In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ist eine Vielzahl an Verbindungs-Managern zum Herstellen von Verbindungen mit verschiedenen Datenquellen enthalten, beispielsweise mit relationalen Datenbanken, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenbanken und Dateien im CSV- und XML-Format. Ein Verbindungs-Manager kann auf Paketebene oder auf Projektebene erstellt werden. Ein auf Projektebene erstellter Verbindungs-Manager ist für alle Pakete im Projekt verfügbar. Ein auf Paketebene erstellter Verbindungs-Manager ist nur für das betreffende Paket verfügbar.  

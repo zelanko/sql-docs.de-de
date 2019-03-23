@@ -10,20 +10,20 @@ ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.erroroutput.f1
 ms.assetid: 9a81e2ce-aee6-4c4c-8495-6501d715aca2
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 998124711ec5bfe4a9da8b4737c357cb07bcbde2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76a14639eb57645849deab4a11ef13a80cad2648
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075616"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390991"
 ---
 # <a name="odata-source-editor-error-output-page"></a>Quellen-Editor für OData (Seite 'Fehlerausgabe')
   Mithilfe der Seite **Fehlerausgabe** des Dialogfelds **Quellen-Editor für OData** können Sie Fehlerbehandlungsoptionen auswählen und Eigenschaften für Fehlerausgabespalten festlegen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Datenquelle an.  
   
@@ -48,8 +48,8 @@ ms.locfileid: "48075616"
  Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Quellen-Editor für OData &#40;Seite "Verbindung"&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
- [Quellen-Editor für OData &#40;Seite "Spalten"&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
+ [Quellen-Editor für OData &#40;Seite „Verbindung“&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
+ [Quellen-Editor für OData &#40;Seite „Spalten“&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
  [OData-Quelle](data-flow/odata-source.md)   
  [OData-Verbindungs-Manager](connection-manager/odata-connection-manager.md)  
   

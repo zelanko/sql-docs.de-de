@@ -12,15 +12,15 @@ helpviewer_keywords:
 - variables [Integration Services], use scenarios
 - system variables [Integration Services]
 ms.assetid: 7742e92d-46c5-4cc4-b9a3-45b688ddb787
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e309a50dcc47ff4e05335222f9bac6532658ffdd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 910d1699c8cd88f9f29d22b7f08a80337a25473d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145600"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388378"
 ---
 # <a name="use-variables-in-packages"></a>Verwenden von Variablen in Paketen
   Variablen sind eine nützliche und flexible Erweiterung für [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Pakete. Sie können die Kommunikation zwischen Objekten innerhalb des Pakets und zwischen übergeordneten und untergeordneten Paketen ermöglichen. Variablen können außerdem in Ausdrücken und Skripts verwendet werden.  
@@ -30,7 +30,7 @@ ms.locfileid: "48145600"
   
  Sie können benutzerdefinierte Variablen erstellen und diese in Paketen verwenden. Benutzerdefinierte Variablen können in [!INCLUDE[ssIS](../includes/ssis-md.md)]auf vielfältige Weise verwendet werden: in Skripts, in den von Rangfolgeeinschränkungen, vom For-Schleifencontainer, von der Transformation für abgeleitete Spalten und von der Transformation für bedingtes Teilen verwendeten Ausdrücken sowie in den Eigenschaftsausdrücken, die zum Aktualisieren von Eigenschaftswerten verwendet werden.  
   
- So können Sie z. B. eine benutzerdefinierte Variable in der Auswertungsbedingung für den For-Schleifen-Container verwenden. Sie können auch den Enumeratorauflistungswert in einem Foreach-Schleifen-Container einer Variablen zuordnen, und wenn ein Task "SQL ausführen" eine parametrisierte SQL-Anweisung verwendet, können Sie die Parameter für die Anweisung Variablen zuordnen. Weitere Informationen finden Sie unter [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  
+ So können Sie z. B. eine benutzerdefinierte Variable in der Auswertungsbedingung für den For-Schleifen-Container verwenden. Sie können auch den Enumeratorauflistungswert in einem Foreach-Schleifen-Container einer Variablen zuordnen, und wenn ein Task "SQL ausführen" eine parametrisierte SQL-Anweisung verwendet, können Sie die Parameter für die Anweisung Variablen zuordnen. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md).  
   
 ## <a name="variables-usage-scenarios"></a>Verwendungsszenarien für Variablen  
  Variablen werden auf verschiedene Weisen in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paketen verwendet. Sie werden möglicherweise der Meinung sein, dass die Paketentwicklung nicht voranschreitet, bis Sie die benutzerdefinierten Variablen einem Paket hinzugefügt haben, um die benötigte Flexibilität und Verwaltbarkeit der Lösung zu implementieren. Abhängig von dem Szenario, werden die Systemvariablen gemeinsam verwendet.  
@@ -43,7 +43,7 @@ ms.locfileid: "48145600"
   
  **Parameter und Rückgabecode** Stellt Eingabeparametern Werte bereit oder speichert die Ausgabeparameter und den Rückgabecode. Dies erfolgt durch Zuordnen der Variablen zu Parametern und Rückgabewerten. Wenn sie beispielsweise die `varProductId` -Variable auf 23 festlegen und die `SELECT * from Production.Product WHERE ProductID = ?`-SQL-Anweisung ausführen, ruft die Abfrage das Produkt mit einer `ProductID` von 23 ab. Weitere Informationen finden Sie unter [SQL ausführen (Task)](control-flow/execute-sql-task.md) und [Parameter und Rückgabecodes im Task „SQL ausführen“](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
   
- **For-Schleifenausdrücke** Stellt Werte bereit, die bei der Initialisierung, bei der Auswertung und bei der Zuordnung von Ausdrücken für die For-Schleife verwendet werden. Wenn der Wert für die `varCount` -Variable beispielsweise 2 und der Wert für `varMaxCount` 10, der Initialisierungsausdruck `@varCount`, der Auswertungsausdruck  `@varCount < @varMaxCount`und der Zuordnungsausdruck `@varCount =@varCount +1`lautet, dann wiederholt sich die Schleife acht Mal. Weitere Informationen finden Sie unter [For Loop Container](control-flow/for-loop-container.md).  
+ **For-Schleifenausdrücke** Stellt Werte bereit, die bei der Initialisierung, bei der Auswertung und bei der Zuordnung von Ausdrücken für die For-Schleife verwendet werden. Wenn der Wert für die `varCount` -Variable beispielsweise 2 und der Wert für `varMaxCount` 10, der Initialisierungsausdruck `@varCount`, der Auswertungsausdruck  `@varCount < @varMaxCount`und der Zuordnungsausdruck `@varCount =@varCount +1`lautet, dann wiederholt sich die Schleife acht Mal. Weitere Informationen finden Sie unter [For-Schleifencontainer](control-flow/for-loop-container.md)ausgewertet wird.  
   
  **Variablenkonfiguration für übergeordnete Pakete** Übergibt Werte von übergeordneten Paketen an untergeordnete Paketen. Untergeordnete Pakete können auf Variablen in übergeordneten Paketen mithilfe der Variablenkonfiguration für übergeordnete Pakete zugreifen. Wenn beispielsweise ein untergeordnetes Paket die gleichen Daten wie das übergeordnete Paket verwenden muss, kann das untergeordnete Paket eine Variablenkonfiguration definieren, die eine Variable angibt, die durch die GETDATE-Funktion in dem übergeordneten Paket festgelegt wurde. Weitere Informationen finden Sie unter [Execute Package Task](control-flow/execute-package-task.md) und [Package Configurations](../../2014/integration-services/package-configurations.md).  
   

@@ -12,22 +12,22 @@ f1_keywords:
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: b6eb576f-7a56-4fa0-a97c-5f7ab9d0f44d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1eff4034dfb3f7bf7120ec5976a398427d0cd207
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12f4cd15127d1b4adef4439d7d6081d8bcd15a97
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152770"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392649"
 ---
 # <a name="bulk-insert-task-editor-general-page"></a>Masseneinfügungstask-Editor (Seite Allgemein)
   Auf der Seite **Allgemein** des Dialogfelds **Masseneinfügungstask-Editor** können Sie einen Namen und eine Beschreibung für den Masseneinfügungstask angeben.  
   
  Informationen, um sich mit diesem Thema vertraut zu machen, finden Sie unter [Bulk Insert Task](control-flow/bulk-insert-task.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Masseneinfügungstask an. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
   
@@ -38,9 +38,9 @@ ms.locfileid: "48152770"
  Geben Sie eine Beschreibung des Masseneinfügungstasks ein.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Massenimport von Insert-Task-Editor &#40;Seite "Verbindung"&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
- [Massenimport von Insert-Task-Editor &#40;Seite "Optionen"&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
+ [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Masseneinfügungstask-Editor &#40;Seite „Verbindung“&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
+ [Masseneinfügungstask-Editor &#40;Seite „Optionen“&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
  [Seite Ausdrücke](expressions/expressions-page.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [Ablaufsteuerung](control-flow/control-flow.md)  

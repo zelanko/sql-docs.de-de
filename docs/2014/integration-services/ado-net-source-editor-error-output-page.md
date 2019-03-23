@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.erroroutput.f1
 ms.assetid: 4dd9d129-a95c-4d3a-bbbf-e84a39089950
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9440400dde3605bbd60049290bc6546eb47ea3e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d033401c87b2cd4e9fe7047ab7a19f474a3ae156
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191260"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388698"
 ---
 # <a name="ado-net-source-editor-error-output-page"></a>ADO.NET-Quellen-Editor (Seite 'Fehlerausgabe')
   Mithilfe der Seite **Fehlerausgabe** des Dialogfelds **ADO.NET-Quellen-Editor** können Sie Fehlerbehandlungsoptionen auswählen und Eigenschaften für Fehlerausgabespalten festlegen.  
@@ -33,7 +33,7 @@ ms.locfileid: "48191260"
   
 3.  Klicken Sie im **ADO.NET-Quellen-Editor**auf **Fehlerausgabe**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Datenquelle an.  
   
@@ -58,8 +58,8 @@ ms.locfileid: "48191260"
  Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
 ## <a name="see-also"></a>Siehe auch  
- [ADO.NET-Quellen-Editor &#40;Seite Verbindungs-Manager&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
- [ADO.NET-Quellen-Editor &#40;Seite "Spalten"&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
+ [ADO.NET-Quellen-Editor &#40;Seite „Verbindungs-Manager“&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
+ [ADO.NET-Quellen-Editor &#40;Seite „Spalten“&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
  [ADO.NET-Verbindungs-Manager](connection-manager/ado-net-connection-manager.md)  
   
   

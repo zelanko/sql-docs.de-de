@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.connection.f1
 ms.assetid: e2c8dc83-6394-4d6c-9232-97e94be72431
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 17cb397a383df0618b9abc9e2eef6ba5094ed82a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aaf49a9894e5b2f3f35687b8575c35b5f19ebe81
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129550"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378588"
 ---
 # <a name="odbc-source-editor-connection-manager-page"></a>Quellen-Editor für ODBC (Seite Verbindungs-Manager)
   Auf der Seite **Verbindungs-Manager** des Dialogfelds **Quellen-Editor für ODBC** können Sie den ODBC-Verbindungs-Manager für die Quelle auswählen. Außerdem können Sie auf dieser Seite eine Tabelle oder Sicht aus der Datenbank auswählen.  
@@ -32,7 +32,7 @@ ms.locfileid: "48129550"
   
 -   Doppelklicken Sie auf der Registerkarte **Datenfluss** auf die ODBC-Quelle.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 ### <a name="connection-manager"></a>Ziel-Editor für Dimensionsverarbeitung  
  Wählen Sie in der Liste einen vorhandenen ODBC-Verbindungs-Manager aus, oder klicken Sie auf **Neu** , um eine neue Verbindung zu erstellen. Sie können eine Verbindung mit jeder von ODBC unterstützten Datenbank erstellen.  
@@ -46,7 +46,7 @@ ms.locfileid: "48129550"
 |Option|Description|  
 |------------|-----------------|  
 |Tabellenname|Ruft Daten aus einer Tabelle oder Sicht in der ODBC-Datenquelle ab. Bei Auswahl dieser Option wählen Sie einen der folgenden Werte in der Liste aus:|  
-||**Name der Tabelle oder Sicht**: Wählen Sie in der Liste eine verfügbare Tabelle oder Sicht aus, oder geben Sie einen regulären Ausdruck ein, um die Tabelle zu identifizieren.|  
+||**Name der Tabelle oder Sicht**: Wählen Sie aus der Liste eine verfügbare Tabelle oder Sicht, oder geben Sie einen regulären Ausdruck zum Identifizieren der Tabelle.|  
 ||Diese Liste enthält nur die ersten 1000 Tabellen. Wenn die Datenbank mehr als 1000 Tabellen enthält, können Sie den Anfang eines Tabellennamens eingeben oder das Platzhalterzeichen (*) verwenden, um einen beliebigen Teil des Namens einzugeben und die gewünschten Tabellen anzuzeigen.|  
 |SQL-Befehl|Ruft mit einer SQL-Abfrage Daten aus der ODBC-Datenquelle ab. Die Abfrage sollte in der Syntax der verwendeten Quelldatenbank geschrieben werden. Bei Auswahl dieser Option geben Sie anhand einer der folgenden Methoden eine Abfrage ein:|  
 ||Geben Sie den Text der SQL-Abfrage im Feld **SQL-Befehlstext** ein.|  
@@ -59,6 +59,6 @@ ms.locfileid: "48129550"
 ## <a name="see-also"></a>Siehe auch  
  [Benutzerdefinierte Eigenschaften der ODBC-Quelle](data-flow/odbc-source-custom-properties.md)   
  [Quellen-Editor für ODBC &#40;Seite „Spalten“&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)   
- [Quellen-Editor für ODBC &#40;Seite "Fehlerausgabe"&#41;](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
+ [Quellen-Editor für ODBC &#40;Seite „Fehlerausgabe“&#41;](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
   
   

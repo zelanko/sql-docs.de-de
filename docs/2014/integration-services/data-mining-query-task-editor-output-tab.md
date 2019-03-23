@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 62f9e015-6fe0-4396-ad90-3ad51bf00025
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6e87ebbf69eaaee40c42344a8334a0309300ddd6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7be72475f5aa6db32b65d4a9f542cd9fe82756c0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203750"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393598"
 ---
 # <a name="data-mining-query-task-editor-output-tab"></a>Editor für Data Mining-Abfragetasks (Registerkarte Ausgabe)
   Mithilfe der Registerkarte **Ausgabe** des Dialogfelds **Editor für Data Mining-Abfragetasks** können Sie das Ziel der Vorhersageabfrage angeben.  
@@ -51,9 +51,9 @@ ms.locfileid: "48203750"
  Gibt an, ob die Vorhersageabfrage den Inhalt in der Zieltabelle überschreiben soll, indem die Tabelle gelöscht und anschließend erneut erstellt wird.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor für Data Mining-Abfragetasks &#40;Mining-Registerkarte "Modell"&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
- [Editor für Data Mining-Abfragetasks &#40;Abfrage (Registerkarte)&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
+ [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor für Data Mining-Abfragetasks &#40;Registerkarte Miningmodell&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
+ [Editor für Data Mining-Abfragetasks &#40;Registerkarte Abfrage&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
  [Data Mining-Designer](../analysis-services/data-mining/data-mining-designer.md)  
   
   

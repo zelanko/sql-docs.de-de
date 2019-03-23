@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ac3a7fd31f13ec513c1590d265b1984969ae8e12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 361c1c06afb8c599e983751ea7d7deef656631e6
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193060"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377228"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>Editor für Data Mining-Abfragetasks (Registerkarte Abfrage)
   Mithilfe der Registerkarte **Abfrage** des Dialogfelds **Data Mining-Abfragetask** können Sie Vorhersageabfragen auf der Grundlage eines Miningmodells erstellen. In diesem Dialogfeld können Sie auch Parameter und Resultsets an Variablen anbinden.  
@@ -41,12 +41,12 @@ ms.locfileid: "48193060"
  **Data Mining-Abfrage**  
  Geben Sie eine Data Mining-Abfrage ein.  
   
- **Verwandte Themen:** [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](/sql/dmx/data-mining-extensions-dmx-reference)  
+ **Verwandte Themen:**  [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](/sql/dmx/data-mining-extensions-dmx-reference)  
   
  **Neue Abfrage erstellen**  
  Erstellt die Data Mining-Abfrage mithilfe eines grafischen Tools.  
   
- **Verwandte Themen:** [Data Mining Query](control-flow/data-mining-query.md)  
+ **Verwandte Themen:** [Datamining-Abfrage](control-flow/data-mining-query.md)  
   
 ## <a name="parameter-mapping-tab-options"></a>Optionen der Registerkarte Parameterzuordnung  
  **Parametername**  
@@ -80,8 +80,8 @@ ms.locfileid: "48193060"
  Wählen Sie ein Ergebnis aus, und klicken Sie anschließen auf **Entfernen**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor für Data Mining-Abfragetasks &#40;Mining-Registerkarte "Modell"&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
+ [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor für Data Mining-Abfragetasks &#40;Registerkarte Miningmodell&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
  [Editor für Data Mining-Abfragetasks &#40;Registerkarte Ausgabe&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
  [Data Mining-Designer](../analysis-services/data-mining/data-mining-designer.md)  
   

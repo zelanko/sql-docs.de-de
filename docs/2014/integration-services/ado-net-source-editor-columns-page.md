@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.columns.f1
 ms.assetid: fbc205b9-2001-4737-a76b-1ba777344bd9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7489a23fdf7b9501b4b7bc0a41967b0407558a22
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a5fbff347c6b06d500f3baebe3dd980000f0bd2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106439"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58383217"
 ---
 # <a name="ado-net-source-editor-columns-page"></a>ADO.NET-Quellen-Editor (Seite 'Spalten')
   Mithilfe der Seite **Spalten** des Dialogfelds **ADO.NET-Quellen-Editor** können Sie jeder externen (Quell-)Spalte eine Ausgabespalte zuordnen.  
@@ -33,7 +33,7 @@ ms.locfileid: "48106439"
   
 3.  Klicken Sie im **ADO.NET-Quellen-Editor**auf **Spalten**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Verfügbare externe Spalten**  
  Zeigt die Liste der in der Datenquelle verfügbaren externen Spalten an. Mit der Tabelle können keine Spalten hinzugefügt oder gelöscht werden.  
   
@@ -44,8 +44,8 @@ ms.locfileid: "48106439"
  Geben Sie für jede Ausgabespalte einen eindeutigen Namen an. Standardmäßig wird der Name der ausgewählten externen (Quell-)Spalte verwendet. Sie können jedoch auch einen beschreibenden Namen angeben, sofern dieser eindeutig ist. Der bereitgestellte Name wird im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer angezeigt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [ADO.NET-Quellen-Editor &#40;Seite Verbindungs-Manager&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
- [ADO.NET-Quellen-Editor &#40;Seite "Fehlerausgabe"&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
+ [Quellen-Editor für ADO.NET &#40;Seite „Verbindungs-Manager“&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
+ [Quellen-Editor für ADO.NET &#40;Seite „Fehlerausgabe“&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
  [ADO.NET-Verbindungs-Manager](connection-manager/ado-net-connection-manager.md)  
   
   

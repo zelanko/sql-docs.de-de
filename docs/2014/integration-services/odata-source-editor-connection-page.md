@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.connection.f1
 ms.assetid: 20bcd347-4547-4fad-b182-9571030101df
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 98ec9c8960696a2a933d9c2358d35df32c716999
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85ac46b918918f7e9dac715e11909ffeb9c46a29
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203970"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390465"
 ---
 # <a name="odata-source-editor-connection-page"></a>Quellen-Editor für OData (Seite 'Verbindung')
   Auf der Seite **Verbindung** des Dialogfelds **Quellen-Editor für OData** wählen Sie den OData-Verbindungs-Manager für die OData-Quelle aus. Auf dieser Seite können Sie außerdem eine Auflistung oder einen Ressourcenpfad sowie beliebige Abfrageoptionen angeben, mit denen die aus der OData-Quelle abzurufenden Daten bestimmt werden. Weitere Informationen zur OData-Quelle finden Sie unter [OData Source](data-flow/odata-source.md).  
@@ -55,11 +55,11 @@ ms.locfileid: "48203970"
   
 ### <a name="use-collection-or-resource-path--resource-path"></a>Auflistung oder Ressourcenpfad verwenden = Ressourcenpfad  
  **Resource path**  
- Geben Sie einen Ressourcenpfad ein. Beispiel: Mitarbeiter  
+ Geben Sie einen Ressourcenpfad ein. Zum Beispiel: Employees  
   
 ## <a name="see-also"></a>Siehe auch  
- [Quellen-Editor für OData &#40;Seite "Spalten"&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
- [Quellen-Editor für OData &#40;Seite "Fehlerausgabe"&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
- [OData-Verbindungs-Manager](connection-manager/odata-connection-manager.md)  
+ [Quellen-Editor für OData &#40;Seite „Spalten“&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
+ [Quellen-Editor für OData &#40;Seite „Fehlerausgabe“&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
+ [OData Connection Manager](connection-manager/odata-connection-manager.md)  
   
   

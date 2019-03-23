@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: 709f048e-0b8b-46c3-9dde-3e912361157f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ed1cd92ee057ce9a6901bab931d1986237ff7384
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9d83a1a0c8cc9493b2c0703824d7ec02bd840d91
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081370"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58383179"
 ---
 # <a name="script-transformation-editor-connection-managers-page"></a>Transformations-Editor für Skripterstellung (Seite Verbindungs-Manager)
   Auf der Seite **Verbindungs-Manager** von **Transformations-Editor für Skripterstellung** können Sie Verbindungen angeben, die vom Skript verwendet werden.  
@@ -47,11 +47,11 @@ ms.locfileid: "48081370"
  Entfernen Sie die ausgewählte Verbindung aus der Liste **Verbindungs-Manager** .  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Skriptkomponententyp auswählen](../../2014/integration-services/select-script-component-type.md)   
- [Transformations-Editor &#40;Geben Sie die Seite "Spalten"&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
- [Transformations-Editor &#40;Eingaben und Ausgaben Seite&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
- [Transformations-Editor &#40;Seite "Skript"&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
+ [Transformations-Editor für Skripterstellung &#40;Seite Eingabespalten&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
+ [Transformations-Editor für Skripterstellung &#40;Seite „Eingaben“ und „Ausgaben“&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
+ [Transformations-Editor für Skripterstellung &#40;Seite Skript&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
  [Zusätzliche Skriptkomponentenbeispiele](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

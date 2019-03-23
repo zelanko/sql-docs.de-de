@@ -13,21 +13,21 @@ helpviewer_keywords:
 - default precedence constraints
 - containers [Integration Services], precedence constraints
 ms.assetid: 8f31f15f-98ff-4c35-b41f-8b8cfd148d75
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0c61c5db632121f99f8c22c8dd474d5597cb547
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a900b6c2bb6e55d57bcf32aff0ac6ea4667bdd7f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221540"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389238"
 ---
 # <a name="connect-tasks-and-containers-by-using-a-default-precedence-constraint"></a>Verbinden von Tasks und Containern mithilfe einer Standardrangfolgeneinschränkung
   Mit Rangfolgeneinschränkungen werden zwei ausführbare Dateien miteinander verbunden. Bei einer ausführbaren Datei kann es sich um einen Task oder einen For-Schleifencontainer, einen Foreach-Schleifencontainer oder einen Sequenzcontainer handeln. In diesem Verfahren wird beschrieben, wie Sie das Standardverhalten für Rangfolgeneinschränkungen festlegen, und wie Sie ausführbare Dateien mithilfe der Standardrangfolgeneinschränkungen verbinden.  
   
 ## <a name="creating-default-precedence-constraints"></a>Erstellen von Standardrangfolgeneinschränkungen  
- Bei der ersten Verwendung [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer, der Standardwert einer rangfolgeneinschränkung ist `Success`. Führen Sie die folgenden Schritte aus, um für den [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer einen anderen Standardwert für Rangfolgeneinschränkungen zu konfigurieren.  
+ Wenn Sie den [!INCLUDE[ssIS](../includes/ssis-md.md)]-Designer zum ersten Mal verwenden, lautet der Standardwert einer Rangfolgeneinschränkung `Success`. Führen Sie die folgenden Schritte aus, um für den [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer einen anderen Standardwert für Rangfolgeneinschränkungen zu konfigurieren.  
   
 #### <a name="to-set-the-default-value-for-precedence-constraints"></a>So legen Sie den Standardwert für Rangfolgeneinschränkungen fest  
   

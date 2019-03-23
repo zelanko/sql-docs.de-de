@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Merge Join Transformation Editor
 ms.assetid: ac06f419-30b3-42aa-8b34-42000bec4285
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6f6f584d49bfa238a5eda76b18f0dccb59db303f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0eff54a87d3b38f1cf027d272d75c36d2e15316
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186830"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380888"
 ---
 # <a name="merge-join-transformation-editor"></a>Transformations-Editor für Zusammenführungsjoin
   Im Dialogfeld **Transformations-Editor für Zusammenführungsjoin** geben Sie den Jointyp, die Joinspalten und die Ausgabespalten für zwei Eingaben an, die durch einen Join zusammengeführt werden.  
@@ -30,7 +30,7 @@ ms.locfileid: "48186830"
   
  Weitere Informationen zur Transformation für Zusammenführungsjoins finden Sie unter [Merge Join Transformation](data-flow/transformations/merge-join-transformation.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Jointyp**  
  Geben Sie an, ob Sie einen inneren Join, einen linken äußeren Join oder einen vollständigen Join verwenden möchten.  
   
@@ -49,10 +49,10 @@ ms.locfileid: "48186830"
  Geben Sie einen Alias für jede Spalte ein. Standardmäßig wird der Name der Eingabespalte verwendet. Sie können jedoch auch einen beschreibenden Namen angeben, sofern dieser eindeutig ist.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Sortieren von Daten für die Mergereplikation und Join von Transformationen für zusammenführen](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
- [Erweitern eines Datasets mithilfe der Transformation für Zusammenführungsjoin](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
- [Transformation für zusammenführen](data-flow/transformations/merge-transformation.md)   
+ [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
+ [Erweitern eines Datasets mithilfe der Transformation für Zusammenführungsjoins](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
+ [Transformation für Zusammenführen](data-flow/transformations/merge-transformation.md)   
  [Transformation für UNION ALL](data-flow/transformations/union-all-transformation.md)  
   
   

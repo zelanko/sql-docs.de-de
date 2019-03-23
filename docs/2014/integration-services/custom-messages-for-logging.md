@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SSIS packages, logs
 - custom messages for logging [Integration Services]
 ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f55c99ad60dd449a3f5b591adf09f325127258b6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c479c8e7026e549c33b838c39017c9063894b607
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366572"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389498"
 ---
 # <a name="custom-messages-for-logging"></a>Benutzerdefinierte Meldungen für die Protokollierung
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt einen umfangreichen Satz an benutzerdefinierten Ereignissen zum Schreiben von Protokolleinträgen für Pakete und für mehrere Tasks bereit. Sie können diese Einträge verwenden, um detaillierte Informationen zum Fortschritt sowie über die Ergebnisse und Probleme der Ausführung zu speichern, indem Sie vordefinierte Ereignisse bzw. benutzerdefinierte Meldungen für die spätere Analyse erfassen. Sie können beispielsweise Beginn und Ende eines Masseneinfügungsvorgangs erfassen, um Leistungsprobleme beim Ausführen des Pakets zu identifizieren.  

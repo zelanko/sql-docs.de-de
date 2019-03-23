@@ -12,22 +12,22 @@ f1_keywords:
 helpviewer_keywords:
 - Union All Transformation Editor
 ms.assetid: 32fbc1c1-da83-4684-9479-31fc3e2df98c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f34b73358bf9a268e4a2eef14f51800b0c9fea94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: def728a5b32970553d8bf639f58d4cfba96fc31e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138800"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391108"
 ---
 # <a name="union-all-transformation-editor"></a>Transformations-Editor für UNION ALL
   Mithilfe des Dialogfelds **Transformations-Editor für UNION ALL** können Sie mehrere Eingaberowsets zu einem einzigen Ausgaberowset zusammenführen. Durch das Einschließen der Transformation für UNION ALL in einen Datenfluss können Sie Daten aus mehreren Datenflüssen zusammenführen, komplexe Datasets durch Verschachteln der Transformationen für UNION ALL erstellen und Zeilen erneut zusammenführen, nachdem Sie Fehler in den Daten korrigiert haben.  
   
  Weitere Informationen zur Transformation für UNION ALL finden Sie unter [Union All Transformation](data-flow/transformations/union-all-transformation.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name der Ausgabespalte**  
  Geben Sie einen Alias für jede Spalte ein. Standardmäßig wird der Name der Eingabespalte von der ersten (Referenz-)Eingabe verwendet. Sie können jedoch auch einen beschreibenden Namen angeben, sofern dieser eindeutig ist.  
   
@@ -38,9 +38,9 @@ ms.locfileid: "48138800"
  Wählen Sie eine Eingabespalte aus der Liste der verfügbaren Eingabespalten in den folgenden Eingaben aus. Die Metadaten der zugeordneten Spalten müssen übereinstimmen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Zusammenführen von Daten mithilfe der Union All-Transformation](data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)   
- [Transformation für zusammenführen](data-flow/transformations/merge-transformation.md)   
+ [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Zusammenführen von Daten mithilfe der Transformation für UNION ALL](data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)   
+ [Transformation für Zusammenführen](data-flow/transformations/merge-transformation.md)   
  [Transformation für Zusammenführungsjoin](data-flow/transformations/merge-join-transformation.md)  
   
   

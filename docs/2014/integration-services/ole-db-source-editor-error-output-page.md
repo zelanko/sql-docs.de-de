@@ -12,22 +12,22 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: 7737c6ae-c16b-4856-aa6e-5882640093b7
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 05ba0c0d3ac25a30bbc823fb23e8f09f3cdf5d93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df4932604a6de27c2205ad0f619939587d02b916
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185000"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393857"
 ---
 # <a name="ole-db-source-editor-error-output-page"></a>Quellen-Editor für OLE DB (Seite Fehlerausgabe)
   Mithilfe der Seite **Fehlerausgabe** des Dialogfelds **Quellen-Editor für OLE DB** können Sie Fehlerbehandlungsoptionen auswählen und Eigenschaften für Fehlerausgabespalten festlegen.  
   
  Weitere Informationen zur OLE DB-Quelle finden Sie unter [OLE DB Source](data-flow/ole-db-source.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Datenquelle an.  
   
@@ -52,9 +52,9 @@ ms.locfileid: "48185000"
  Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Quellen-Editor für OLE DB &#40;Seite Verbindungs-Manager&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
- [Quellen-Editor für OLE DB &#40;Seite "Spalten"&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
+ [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Quellen-Editor für OLE DB &#40;Seite „Verbindungs-Manager“&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
+ [Quellen-Editor für OLE DB &#40;Seite „Spalten“&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
  [Extrahieren von Daten mithilfe der OLE DB-Quelle](data-flow/extract-data-by-using-the-ole-db-source.md)   
  [OLE DB-Verbindungs-Manager](connection-manager/ole-db-connection-manager.md)  
   

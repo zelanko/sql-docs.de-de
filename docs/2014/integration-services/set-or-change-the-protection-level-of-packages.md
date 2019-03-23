@@ -13,25 +13,25 @@ helpviewer_keywords:
 - security [Integration Services],protection levels
 - protection level for packages [Integration Services]
 ms.assetid: 904a5580-82ba-4a26-b0c5-d1c989975f61
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 766a0c03bc47527d27fec6e50f2525284a6bdd0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e700eed316e9dce3e5d87f6014913505376f535f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204150"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388108"
 ---
 # <a name="set-or-change-the-protection-level-of-packages"></a>Festlegen oder Ändern der Schutzebene von Paketen
   Wenn der Zugriff auf den Inhalt von Paketen und die darin enthaltenen vertraulichen Werte, z. B. Kennwörter, gesteuert werden soll, legen Sie den Wert der `ProtectionLevel`-Eigenschaft fest. Zum Erstellen des Projekts müssen die in einem Projekt enthaltenen Pakete die gleiche Schutzebene wie das Projekt aufweisen. Wenn Sie die `ProtectionLevel`-Eigenschafteneinstellung für das Projekt ändern, müssen Sie die Eigenschafteneinstellung für die Pakete manuell aktualisieren.  
   
  Informationen zum Ermitteln der `ProtectionLevel` Einstellungen, die in verschiedenen Phasen des Lebenszyklus der Paket für Ihre Pakete geeignet sind, finden Sie unter [Zugriffssteuerung für vertrauliche Daten in Paketen](security/access-control-for-sensitive-data-in-packages.md). Eine Übersicht über die Sicherheitsfeatures in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] finden Sie unter [Sicherheitsübersicht &#40;Integration Services&#41;](security/security-overview-integration-services.md).  
   
- Die Verfahren in diesem Thema wird beschrieben, wie die Verwendung [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] oder das Dtutil-eingabeaufforderungs-Hilfsprogramm so ändern Sie die `ProtectionLevel` Eigenschaft.  
+ In den Verfahren in diesem Thema wird die Verwendung des [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]-Befehlszeilen-Hilfsprogramms oder dtutil-Befehlszeilen-Hilfsprogramms zum Ändern der `ProtectionLevel`-Eigenschaft beschrieben.  
   
 > [!NOTE]  
->  Zusätzlich zu den Prozeduren in diesem Thema können Sie in der Regel festlegen oder Ändern der `ProtectionLevel` Eigenschaft eines Pakets, wenn Sie importieren oder exportieren das Paket. Sie können die `ProtectionLevel`-Eigenschaft eines Pakets auch ändern, wenn Sie ein Paket mit dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Import/Export-Assistenten speichern.  
+>  Neben dem Verfahren in diesem Thema gibt es normalerweise die Möglichkeit, die `ProtectionLevel`-Eigenschaft eines Pakets festzulegen oder zu ändern, wenn Sie das Paket importieren oder exportieren. Sie können die `ProtectionLevel`-Eigenschaft eines Pakets auch ändern, wenn Sie ein Paket mit dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Import/Export-Assistenten speichern.  
   
 ### <a name="to-set-or-change-the-protection-level-of-a-package-in-sql-server-data-tools"></a>So legen Sie die Schutzebene eines Pakets in SQL Server-Datentools fest oder ändern sie  
   
@@ -57,13 +57,13 @@ ms.locfileid: "48204150"
   
 3.  Öffnen Sie ein Eingabeaufforderungsfenster.  
   
-4.  Navigieren Sie zu dem Ordner mit der bzw. die Pakete, die für die Sie festlegen möchten, an der Eingabeaufforderung die `ProtectionLevel` Eigenschaft.  
+4.  Navigieren Sie an der Eingabeaufforderung zu dem Ordner mit den Paketen, für die Sie die `ProtectionLevel`-Eigenschaft festlegen möchten.  
   
      In den Syntaxbeispielen im folgenden Schritt wird davon ausgegangen, dass dieser Ordner der aktuelle Ordner ist.  
   
 5.  Verwenden Sie zum Festlegen oder Ändern der Schutzebene für die Pakete einen Befehl wie in einem der folgenden Beispiele:  
   
-    -   Der folgende Befehl legt die `ProtectionLevel` Eigenschaft eines einzelnen Pakets im Dateisystem auf Ebene 2, "Encrypt sensible Daten mit einem Kennwort", mit dem Kennwort "strongpassword festgelegt":  
+    -   Mit dem folgenden Befehl wird die `ProtectionLevel`-Eigenschaft eines einzelnen Pakets im Dateisystem auf Ebene 2 ("Sensible Daten mit einem Kennwort verschlüsseln") mit dem Kennwort "strongpassword" festgelegt:  
   
          `dtutil.exe /file "C:\Package.dtsx" /encrypt file;"C:\Package.dtsx";2;strongpassword`  
   
@@ -74,6 +74,6 @@ ms.locfileid: "48204150"
          Wenn Sie einen ähnlichen Befehl in einer Batchdatei verwenden, geben Sie den Dateiplatzhalter "%f" in der Batchdatei als "%%f" ein.  
   
 ## <a name="see-also"></a>Siehe auch  
- [dtutil (Hilfsprogramm)](dtutil-utility.md)  
+ [dtutil Utility](dtutil-utility.md)  
   
   

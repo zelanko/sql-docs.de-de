@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - manIns
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e4a563a47500a329a79513afb83aff4f93ebda7e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3215f28615511f3c35fcc6cc3ea80209c7c44d41
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748262"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378818"
 ---
 # <a name="manage-a-cdc-instance"></a>Verwalten einer CDC-Instanz
   Sie können die CDC Designer Console zum Anzeigen von Informationen zu den erstellten Instanzen und zum Verwalten des Betriebs der Instanzen verwenden.  
@@ -65,14 +65,14 @@ ms.locfileid: "52748262"
  **Status**  
  Diese Registerkarte enthält Informationen und Statistiken zum aktuellen Status der CDC-Instanz. Sie liefert die folgenden Informationen.  
   
--   **Status**: Ein Symbol, das den aktuellen Status für die CDC-Instanz angibt. Die Status sind unten beschrieben.  
+-   **Status:** Ein Symbol, das den aktuellen Status für die CDC-Instanz angibt. Die Status sind unten beschrieben.  
   
     |||  
     |-|-|  
     |![Fehler](../media/error.gif "Fehler")|**Fehler**: Die Oracle CDC-Instanz wird nicht ausgeführt, da ein nicht wiederholbarer Fehler aufgetreten ist. Die folgenden Unterstatus sind verfügbar:<br /><br /> **Falsch konfigurierte**: Ein Konfigurationsfehler aufgetreten ist, die manuellen Eingriff erfordert.<br /><br /> **Erforderliche Kennwort**: Für die Oracle CDC-Instanz wurde kein Kennwort festgelegt, oder das Kennwort ist ungültig.<br /><br /> **Unerwartet**: Alle anderen nicht behebbaren Fehler.|  
-    |![OK](../media/okay.gif "OK")|**Ausführung**: Die CDC-Instanz wird ausgeführt und verarbeitet Änderungsdatensätze. Die folgenden Unterstatus sind verfügbar.<br /><br /> **Im Leerlauf**: Alle Änderungsdatensätze wurden verarbeitet und in den zieländerungstabellen gespeichert. Es sind keine aktiven Transaktionen mehr vorhanden.<br /><br /> **Verarbeiten von**: Es gibt wird der Prozess Änderungsdatensätze, die noch nicht in die Änderungstabellen geschrieben wurden.|  
-    |![Beenden](../media/stop.gif "Beenden")|**Beendet**: Die CDC-Instanz wird nicht ausgeführt. Der Status Beendet gibt an, dass die CDC-Instanz auf normale Weise beendet wurde.|  
-    |![Angehalten](../media/paused.gif "Angehalten")|**Angehalten**: Die CDC-Instanz ausgeführt wird, aber Verarbeitung wurde aufgrund eines wiederholbaren Fehlers angehalten. Die folgenden Unterstatus sind verfügbar:<br /><br /> **Die Verbindung getrennt**: Die Verbindung mit Oracle-Quelldatenbank kann nicht hergestellt werden. Die Verarbeitung wird fortgesetzt, nachdem die Verbindung wiederhergestellt wurde.<br /><br /> **Storage**: Der Speicher ist voll. Die Verarbeitung wird fortgesetzt, wenn zusätzlicher Speicher verfügbar wird.<br /><br /> **Protokollierung**: Die Protokollierung ist mit Oracle verbunden, aber die Oracle-Transaktionsprotokolle aufgrund eines vorübergehenden Problems kann nicht gelesen werden, z. B. ein erforderliches Transaktionsprotokoll nicht verfügbar.|  
+    |![OK](../media/okay.gif "OK")|**Wird ausgeführt:** Die CDC-Instanz wird ausgeführt und verarbeitet Änderungsdatensätze. Die folgenden Unterstatus sind verfügbar.<br /><br /> **Idle**: Alle Änderungsdatensätze wurden verarbeitet und in den zieländerungstabellen gespeichert. Es sind keine aktiven Transaktionen mehr vorhanden.<br /><br /> **Verarbeiten von**: Es gibt wird der Prozess Änderungsdatensätze, die noch nicht in die Änderungstabellen geschrieben wurden.|  
+    |![Beenden](../media/stop.gif "Beenden")|**Beendet:** Die CDC-Instanz wird nicht ausgeführt. Der Status Beendet gibt an, dass die CDC-Instanz auf normale Weise beendet wurde.|  
+    |![Angehalten](../media/paused.gif "Angehalten")|**Angehalten**: Die CDC-Instanz ausgeführt wird, aber Verarbeitung wurde aufgrund eines wiederholbaren Fehlers angehalten. Die folgenden Unterstatus sind verfügbar:<br /><br /> **Die Verbindung getrennt**: Die Verbindung mit Oracle-Quelldatenbank kann nicht hergestellt werden. Die Verarbeitung wird fortgesetzt, nachdem die Verbindung wiederhergestellt wurde.<br /><br /> **Storage**: Der Speicher ist voll. Die Verarbeitung wird fortgesetzt, wenn zusätzlicher Speicher verfügbar wird.<br /><br /> **Logger**: Die Protokollierung ist mit Oracle verbunden, aber die Oracle-Transaktionsprotokolle aufgrund eines vorübergehenden Problems kann nicht gelesen werden, z. B. ein erforderliches Transaktionsprotokoll nicht verfügbar.|  
   
 -   **Detaillierter Status der**: Der aktuelle Unterstatus.  
   

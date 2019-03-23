@@ -11,15 +11,15 @@ helpviewer_keywords:
 - behavior changes [Integration Services]
 - Integration Services, backward compatibility
 ms.assetid: 611d22fa-5ac7-485e-9a40-7131e852f794
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 586ef428e404f8faa608e0697a6a7a284e16baaf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ebb9a4424c3aab4f3d65c14d9a3befed64dfa21a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212550"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388188"
 ---
 # <a name="behavior-changes-to-integration-services-features-in-sql-server-2014"></a>Verhaltensänderungen von Integration Services-Features in SQL Server 2014
   In diesem Thema werden Änderungen im Verhalten von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]beschrieben. Verhaltensänderungen beeinflussen die Funktion und das in der aktuellen Version der Interaktion von Funktionen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] im Vergleich zu früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

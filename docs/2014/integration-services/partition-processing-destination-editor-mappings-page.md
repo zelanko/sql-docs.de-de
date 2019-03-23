@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Partition Processing Destination Editor
 ms.assetid: e75b766c-85ba-453e-9576-4a1a34f91ecc
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b17a415b2ba28237453ac94f12f8706f6b4d7d20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: edcb36cc38ea1ca89ded11dd0ef4dadd3116c6a2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212596"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379024"
 ---
 # <a name="partition-processing-destination-editor-mappings-page"></a>Ziel-Editor für Partitionsverarbeitung (Seite Zuordnungen)
   Auf der Seite **Zuordnungen** des Dialogfelds **Ziel-Editor für Partitionsverarbeitung** können Sie Eingabespalten Partitionsspalten zuordnen.  
@@ -30,7 +30,7 @@ ms.locfileid: "48212596"
 > [!NOTE]  
 >  Hier beschriebene Tasks gelten nicht für tabellarische Analysis Services-Modelle.  Sie können Partitionsspalten für tabellarische Modelle keine Eingabespalten zuordnen. Sie können stattdessen den Analysis Services-Task "DDL ausführen" [Analysis Services Execute DDL Task](control-flow/analysis-services-execute-ddl-task.md) verwenden, um die Partition zu verarbeiten.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Eingabespalten in der Tabelle Zielspalten zuordnen.  
   
@@ -44,8 +44,8 @@ ms.locfileid: "48212596"
  Zeigt alle verfügbaren Zielspalten an, und ob sie zugeordnet sind.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Ziel-Editor für Partition &#40;Seite Verbindungs-Manager&#41;](../../2014/integration-services/partition-processing-destination-editor-connection-manager-page.md)   
- [Ziel-Editor für Partition &#40;Seite "Erweitert"&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
+ [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Ziel-Editor für Partitionsverarbeitung &#40;Seite „Verbindungs-Manager“&#41;](../../2014/integration-services/partition-processing-destination-editor-connection-manager-page.md)   
+ [Ziel-Editor für Partitionsverarbeitung &#40;Seite „Erweitert“&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
   
   

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - expressions [Integration Services], syntax
 - syntax [Integration Services]
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 809ce46e388dcc96a407e70cf5eb33c4e5afa44f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 79939ea5addd97833faaf1d955b72ae17e487ceb
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351006"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389848"
 ---
 # <a name="syntax-ssis"></a>Syntax (SSIS)
   Die Ausdruckssyntax von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ähnelt der von den Sprachen C und C# verwendeten Syntax. Ausdrücke schließen Elemente ein, wie z. B. Bezeichner (Spalten und Variablen), Literale, Operatoren und Funktionen. Dieses Thema enthält eine Zusammenfassung der speziellen Anforderungen der Ausdrucksauswertungssyntax für die verschiedenen Ausdruckselemente.  

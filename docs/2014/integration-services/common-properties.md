@@ -17,22 +17,22 @@ helpviewer_keywords:
 - input properties [Integration Services]
 - component properties [Integration Services]
 ms.assetid: 51973502-5cc6-4125-9fce-e60fa1b7b796
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5d9d641ccb2a0e261ea899f4fc086d4ad8de0643
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ab92e158fe5da6312959cc0797ff48e1c44e0080
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160642"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378878"
 ---
 # <a name="common-properties"></a>Allgemeine Eigenschaften
   Die Datenflussobjekte im [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Objektmodell verfügen über allgemeine Eigenschaften und benutzerdefinierte Eigenschaften auf der Komponentenebene, der Eingabe- und Ausgabeebene und der Ebene der Eingabe- und Ausgabespalten. Viele Eigenschaften verfügen über schreibgeschützte Werte, für die zur Laufzeit eine Zuweisung über die Datenfluss-Engine erfolgt.  
   
  In diesem Thema werden die allgemeinen Eigenschaften von Datenflussobjekten aufgelistet und beschrieben.  
   
--   [Komponenten](#components)  
+-   [Components](#components)  
   
 -   [Eingaben](#inputs)  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48160642"
 |ComponentClassID|Zeichenfolge|Die CLSID der Komponente.|  
 |ContactInfo|Zeichenfolge|Kontaktinformationen für den Entwickler einer Komponente.|  
 |Description|Zeichenfolge|Die Beschreibung der Datenflusskomponente. Der Standardwert dieser Eigenschaft entspricht dem Namen der Datenflusskomponente.|  
-|im Elementknoten &lt;Customer ID="1"|Integer|Ein Wert, der diese Instanz der Komponente eindeutig identifiziert.|  
+|ID|Integer|Ein Wert, der diese Instanz der Komponente eindeutig identifiziert.|  
 |IdentificationString|Zeichenfolge|Identifiziert die Komponente.|  
 |IsDefaultLocale|Boolean|Gibt an, ob die Komponente das Gebietsschema des Datenflusstasks verwendet, zu dem es gehört.|  
 |LocaleID|Integer|Das Gebietsschema, das die Datenflusskomponente verwendet, wenn das Paket ausgeführt wird. Alle Windows-Gebietsschemas sind zur Verwendung in Datenflusskomponenten verfügbar.|  
@@ -109,14 +109,14 @@ ms.locfileid: "48160642"
 |--------------|---------------|-----------------|  
 |Description|Zeichenfolge|Die Beschreibung der Eingabe.|  
 |ErrorOrTruncationOperation|Zeichenfolge|Eine optionale Zeichenfolge, die die Fehlertypen oder abgeschnittene Daten angibt, die bei der Verarbeitung einer Zeile auftreten können.|  
-|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der die Behandlung von Fehlern angibt. Die Werte sind `Fail component`, `Ignore failure`, und `Redirect row`.|  
+|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der die Behandlung von Fehlern angibt. Mögliche Werte sind `Fail component`, `Ignore failure` und `Redirect row`.|  
 |HasSideEffects|Boolean|Gibt an, ob eine Komponente aus dem Ausführungsplan des Datenflusses entfernt werden kann, wenn diese nicht an eine downstreamkomponente angefügt ist und wenn `RunInOptimizedMode` ist `true`.|  
-|im Elementknoten &lt;Customer ID="1"|Integer|Ein Wert, der die Eingabe eindeutig identifiziert.|  
+|ID|Integer|Ein Wert, der die Eingabe eindeutig identifiziert.|  
 |IdentificationString|Zeichenfolge|Eine Zeichenfolge, die die Eingabe identifiziert.|  
 |IsSorted|Boolean|Gibt an, ob die Daten in der Eingabe sortiert werden.|  
 |Name|Zeichenfolge|Der Name der Eingabe.|  
 |SourceLocale|Integer|Die Gebietsschema-ID (Locale ID, LCID) der Eingabedaten.|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der bestimmt, wie die Komponente das Abschneiden von Daten behandelt, das bei der Verarbeitung von Zeilen auftritt. . Die Werte sind `Fail component`, `Ignore failure`, und `Redirect row`.|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der bestimmt, wie die Komponente das Abschneiden von Daten behandelt, das bei der Verarbeitung von Zeilen auftritt. . Mögliche Werte sind `Fail component`, `Ignore failure` und `Redirect row`.|  
   
  Ziele und einige Transformationen unterstützen keine Fehlerausgaben, und die Eigenschaften ErrorRowDisposition und TruncationRowDisposition dieser Komponenten sind schreibgeschützt.  
   
@@ -130,14 +130,14 @@ ms.locfileid: "48160642"
 |ComparisonFlags|Integer|Eine Gruppe von Flags, die den Vergleich von Spalten angeben, die über einen Zeichendatentyp verfügen. Weitere Informationen finden Sie unter [Comparing String Data](data-flow/comparing-string-data.md).|  
 |Description|Zeichenfolge|Beschreibt die Eingabespalte.|  
 |ErrorOrTruncationOperation|Zeichenfolge|Eine optionale Zeichenfolge, die die Fehlertypen oder abgeschnittene Daten angibt, die bei der Verarbeitung einer Zeile auftreten können.|  
-|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der die Behandlung von Fehlern angibt. Die Werte sind `Fail component`, `Ignore failure`, und `Redirect row`.|  
+|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der die Behandlung von Fehlern angibt. Mögliche Werte sind `Fail component`, `Ignore failure` und `Redirect row`.|  
 |ExternalMetadataColumnID|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>|Die ID der externen Metadatenspalte, die einer Eingabespalte zugewiesen ist.|  
-|im Elementknoten &lt;Customer ID="1"|Integer|Ein Wert, der die Eingabespalte eindeutig identifiziert.|  
+|ID|Integer|Ein Wert, der die Eingabespalte eindeutig identifiziert.|  
 |IdentificationString|Zeichenfolge|Eine Zeichenfolge, die die Eingabespalte identifiziert.|  
 |LineageID|Integer|Die ID der Upstreamspalte.|  
 |Name|Zeichenfolge|Der Name der Eingabespalte.|  
 |SortKeyPosition|Integer|Ein Wert, der anzeigt, ob eine Spalte sortiert ist, und der die zugehörige Sortierreihenfolge und die Reihenfolge, in der mehrere Spalten sortiert werden, angibt. Der Wert **0** weist darauf hin, dass die Spalte nicht sortiert ist.  Weitere Informationen finden Sie unter [Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der bestimmt, wie die Komponente das Abschneiden von Daten behandelt, das bei der Verarbeitung von Zeilen auftritt. Die Werte sind `Fail component`, `Ignore failure`, und `Redirect row`.|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der bestimmt, wie die Komponente das Abschneiden von Daten behandelt, das bei der Verarbeitung von Zeilen auftritt. Mögliche Werte sind `Fail component`, `Ignore failure` und `Redirect row`.|  
 |UpstreamComponentName|Zeichenfolge|Der Name der Upstreamkomponente.|  
 |UsageType|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType>|Ein Wert, der bestimmt, wie eine Eingabespalte von der Komponente verwendet wird.|  
   
@@ -153,16 +153,16 @@ ms.locfileid: "48160642"
 |DeleteOutputOnPathDetached|Boolean|Ein Wert, der bestimmt, ob eine Datenfluss-Engine die Ausgabe löscht, wenn sie von einem Pfad getrennt wird.|  
 |Description|Zeichenfolge|Beschreibt die Ausgabe.|  
 |ErrorOrTruncationOperation|Zeichenfolge|Eine optionale Zeichenfolge, die die Fehlertypen oder abgeschnittene Daten angibt, die bei der Verarbeitung einer Zeile auftreten können.|  
-|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der die Behandlung von Fehlern angibt. Die Werte sind `Fail component`, `Ignore failure`, und `Redirect row`.|  
+|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der die Behandlung von Fehlern angibt. Mögliche Werte sind `Fail component`, `Ignore failure` und `Redirect row`.|  
 |ExclusionGroup|Integer|Ein Wert, der eine Gruppe sich gegenseitig ausschließender Ausgaben identifiziert.|  
 |HasSideEffects|Boolean|Ein Wert, der angibt, ob eine Komponente aus dem Ausführungsplan des Datenflusses entfernt werden kann, wenn diese nicht an eine Upstreamkomponente angefügt ist und `RunInOptimizedMode` auf `true` gesetzt ist.|  
-|im Elementknoten &lt;Customer ID="1"|Integer|Ein Wert, der die Ausgabe eindeutig identifiziert.|  
+|ID|Integer|Ein Wert, der die Ausgabe eindeutig identifiziert.|  
 |IdentificationString|Zeichenfolge|Eine Zeichenfolge, die die Ausgabe identifiziert.|  
 |IsErrorOut|Boolean|Gibt an, ob es sich bei der Ausgabe um eine Fehlerausgabe handelt.|  
-|IsSorted|Boolean|Gibt an, ob die Ausgabe sortiert wird. Der Standardwert lautet `False`.<br /><br /> **\*\* Wichtige \* \***  Festlegung des Werts für die `IsSorted` Eigenschaft `True` werden die Daten nicht sortiert. Diese Eigenschaft ist lediglich ein Hinweis für die Downstreamkomponenten, dass die Daten vorher sortiert wurden. Weitere Informationen finden Sie unter [Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
+|IsSorted|Boolean|Gibt an, ob die Ausgabe sortiert wird. Der Standardwert ist `False`.<br /><br /> **\*\* Wichtige \* \***  Festlegung des Werts für die `IsSorted` Eigenschaft `True` werden die Daten nicht sortiert. Diese Eigenschaft ist lediglich ein Hinweis für die Downstreamkomponenten, dass die Daten vorher sortiert wurden. Weitere Informationen finden Sie unter [Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |Name|Zeichenfolge|Der Name der Ausgabe.|  
 |SynchronousInputID|Integer|Die ID einer Eingabe, die zur Ausgabe synchron ist.|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der bestimmt, wie die Komponente das Abschneiden von Daten behandelt, das bei der Verarbeitung von Zeilen auftritt. Die Werte sind `Fail component`, `Ignore failure`, und `Redirect row`.|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der bestimmt, wie die Komponente das Abschneiden von Daten behandelt, das bei der Verarbeitung von Zeilen auftritt. Mögliche Werte sind `Fail component`, `Ignore failure` und `Redirect row`.|  
   
 ###  <a name="outputcolumns"></a> Eigenschaften der Ausgabespalten  
  Im [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Objektmodell enthält eine Ausgabe eine Auflistung von Ausgabespalten. Eine Ausgabespalte einer Komponente im Datenfluss implementiert die Schnittstelle <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100>.  
@@ -174,15 +174,15 @@ ms.locfileid: "48160642"
 |ComparisonFlags|Integer|Eine Gruppe von Flags, die den Vergleich von Spalten angeben, die über einen Zeichendatentyp verfügen. Weitere Informationen finden Sie unter [Comparing String Data](data-flow/comparing-string-data.md).|  
 |Description|Zeichenfolge|Beschreibt die Ausgabespalte.|  
 |ErrorOrTruncationOperation|Zeichenfolge|Eine optionale Zeichenfolge, die die Fehlertypen oder abgeschnittene Daten angibt, die bei der Verarbeitung einer Zeile auftreten können.|  
-|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der die Behandlung von Fehlern angibt. Die Werte sind `Fail component`, `Ignore failure`, und `Redirect row`. Der Standardwert lautet `Fail component`.|  
+|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der die Behandlung von Fehlern angibt. Mögliche Werte sind `Fail component`, `Ignore failure` und `Redirect row`. Der Standardwert ist `Fail component`.|  
 |ExternalMetadataColumnID|Integer|Die ID der externen Metadatenspalte, die einer Eingabespalte zugewiesen ist.|  
-|im Elementknoten &lt;Customer ID="1"|Integer|Ein Wert, der die Ausgabespalte eindeutig identifiziert.|  
+|ID|Integer|Ein Wert, der die Ausgabespalte eindeutig identifiziert.|  
 |IdentificationString|Zeichenfolge|Eine Zeichenfolge, die die Ausgabespalte identifiziert.|  
 |LineageID|Integer|Die ID der Ausgabespalte. Downstreamkomponenten verweisen auf die Spalte, indem sie diesen Wert verwenden.|  
 |Name|Zeichenfolge|Der Name der Ausgabespalte.|  
 |SortKeyPosition|Integer|Ein Wert, der anzeigt, ob eine Spalte sortiert ist, und der die zugehörige Sortierreihenfolge und die Reihenfolge, in der mehrere Spalten sortiert werden, angibt. Der Wert **0** weist darauf hin, dass die Spalte nicht sortiert ist. Weitere Informationen finden Sie unter [Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |SpecialFlags|Integer|Ein Wert, der die speziellen Flags der Ausgabespalte enthält.|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der bestimmt, wie die Komponente das Abschneiden von Daten behandelt, das bei der Verarbeitung von Zeilen auftritt. Die Werte sind `Fail component`, `Ignore failure`, und `Redirect row`. Der Standardwert lautet `Fail component`.|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der bestimmt, wie die Komponente das Abschneiden von Daten behandelt, das bei der Verarbeitung von Zeilen auftritt. Mögliche Werte sind `Fail component`, `Ignore failure` und `Redirect row`. Der Standardwert ist `Fail component`.|  
   
  Ausgabespalten schließen auch eine Gruppe von Datentypeigenschaften ein.  
   
@@ -194,7 +194,7 @@ ms.locfileid: "48160642"
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
 |Description|Zeichenfolge|Beschreibt die externe Spalte.|  
-|im Elementknoten &lt;Customer ID="1"|Integer|Ein Wert, der die Spalte eindeutig identifiziert.|  
+|ID|Integer|Ein Wert, der die Spalte eindeutig identifiziert.|  
 |IdentificationString|Zeichenfolge|Eine Zeichenfolge, die die Spalte identifiziert.|  
 |Name|Zeichenfolge|Der Name der externen Spalte.|  
   

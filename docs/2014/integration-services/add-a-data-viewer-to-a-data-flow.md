@@ -12,15 +12,15 @@ helpviewer_keywords:
 - data flow [Integration Services], data viewers
 - adding data viewers
 ms.assetid: 5e573274-a170-4132-bfc8-a8ff3a8411e4
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ab1e8476a7ddb05ff129417ba0493aae90a12852
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40e4b4bdab9772f5af95de8f23053b4b060ffdcc
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059930"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382716"
 ---
 # <a name="add-a-data-viewer-to-a-data-flow"></a>Hinzufügen eines Daten-Viewers zu einem Datenfluss
   In diesem Thema wird beschrieben, wie ein Daten-Viewer in einem Datenfluss hinzugefügt und konfiguriert wird. Ein Daten-Viewer zeigt Daten an, die sich zwischen zwei Datenflusskomponenten bewegen. Ein Daten-Viewer kann z. B. die Daten anzeigen, die von einer Datenquelle extrahiert werden, bevor die Daten von einer Transformation im Datenfluss geändert werden.  
@@ -55,7 +55,7 @@ ms.locfileid: "48059930"
 10. Klicken Sie auf **OK**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Integration Services-Transformationen](data-flow/transformations/integration-services-transformations.md)   
+ [SQL Server Integration Services-Transformationen](data-flow/transformations/integration-services-transformations.md)   
  [SQL Server Integration Services-Pfade](data-flow/integration-services-paths.md)   
  [Datenfluss](data-flow/data-flow.md)   
  [Debuggen des Datenflusses](troubleshooting/debugging-data-flow.md)  

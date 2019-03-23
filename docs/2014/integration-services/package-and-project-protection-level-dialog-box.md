@@ -13,22 +13,22 @@ f1_keywords:
 helpviewer_keywords:
 - Package Protection Level dialog box
 ms.assetid: 023af8d3-aea0-45a9-ac32-554634bf4b9a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7a43cbed2f9cef449bee1b0a971f5edd7f1044f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: effe6c8e07ea9303bb77842934afebb7c2e6bec1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084900"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386769"
 ---
 # <a name="package-and-project-protection-level-dialog-box"></a>Dialogfeld "Paket- und Projektschutzebene"
   Verwenden Sie das Dialogfeld **Paketschutzebene** , um die Schutzebene eines Pakets zu aktualisieren. Die Schutzebene bestimmt die Methode, das Kennwort oder den Benutzerschlüssel und den Bereich des Paketschutzes. Der Schutz kann alle Daten oder nur vertrauliche Daten einschließen.  
   
  Informationen zum besseren Verständnis der Anforderungen und Optionen für die Paketsicherheit finden Sie unter [Zugriffssteuerung für vertrauliche Daten in Paketen](security/access-control-for-sensitive-data-in-packages.md) und [Sicherheitsübersicht &#40;Integration Services&#41;](security/security-overview-integration-services.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Package protection level**  
  Wählen Sie eine Schutzebene aus der Liste aus.  
   
@@ -39,6 +39,6 @@ ms.locfileid: "48084900"
  Geben Sie das Kennwort erneut ein.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Integration Services &#40;SSIS&#41; Packages](../../2014/integration-services/integration-services-ssis-packages.md) (Integration Services-Pakete [SSIS])  
+ [Integration Services-Pakete &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)  
   
   

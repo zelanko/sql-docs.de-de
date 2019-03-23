@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data flow components [Integration Services], validating
 - validation [Integration Services]
 ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6e3e842eab648e865c7db4e64a522e08d666dccb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: f7d2d611ab4292f96db13305571e8b3fa16d4702
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350833"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380618"
 ---
 # <a name="validating-a-data-flow-component"></a>Überprüfen einer Datenflusskomponente
   Die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A>-Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>-Basisklasse wird bereitgestellt, um die Ausführung einer Komponente zu verhindern, die nicht korrekt konfiguriert wurde. Verwenden Sie diese Methode, wenn Sie überprüfen wollen, ob eine Komponente die erwartete Anzahl an Eingabe- und Ausgabeobjekten aufweist, die Werte der benutzerdefinierten Eigenschaften der Komponente zulässig sind, und Verbindungen, falls erforderlich, angegeben sind. Sie können diese Methode auch verwenden, um zu überprüfen, ob die Spalten in der Eingabe- und Ausgabeauflistung die korrekten Datentypen enthalten und der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType> jeder Spalte ordnungsgemäß für die Komponente festgelegt wurde. Durch die Basisklassenimplementierung wird der Überprüfungsprozess unterstützt, indem die Eingabespaltenauflistung der Komponente überprüft und sichergestellt wird, dass jede Spalte in der Auflistung auf eine Spalte in <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100> der Upstreamkomponente verweist.  
