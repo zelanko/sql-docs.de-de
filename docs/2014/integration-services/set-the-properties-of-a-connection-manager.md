@@ -11,15 +11,15 @@ helpviewer_keywords:
 - connection managers [Integration Services], modifying
 - modifying connection managers
 ms.assetid: 54793114-2198-4d80-8091-e241d5a5d13c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0148cca6701db9f28ed6dd7abccb1a1f00269510
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92ac3366a2473fb92fe33dcf884d3806c65e8609
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111860"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388258"
 ---
 # <a name="set-the-properties-of-a-connection-manager"></a>Festlegen der Eigenschaften eines Verbindungs-Managers
   Alle Verbindungs-Manager können im Fenster **Eigenschaften** konfiguriert werden.  
@@ -52,7 +52,7 @@ ms.locfileid: "48111860"
   
 4.  Doppelklicken Sie im Bereich **Verbindungs-Manager** auf den Verbindungs-Manager, um das Dialogfeld **Verbindungs-Manager** zu öffnen. Informationen über bestimmte Verbindungs-Manager-Typen und die für jeden Typ verfügbaren Optionen finden Sie in der folgenden Tabelle.  
   
-    |Ziel-Editor für Dimensionsverarbeitung|Tastatur|  
+    |Ziel-Editor für Dimensionsverarbeitung|Optionen|  
     |------------------------|-------------|  
     |[ADO-Verbindungs-Manager](connection-manager/ado-connection-manager.md)|[Konfigurieren des OLE DB-Verbindungs-Managers](configure-ole-db-connection-manager.md)|  
     |[ADO.NET-Verbindungs-Manager](connection-manager/ado-net-connection-manager.md)|[ADO.NET-Verbindungs-Manager konfigurieren](configure-ado-net-connection-manager.md)|  
@@ -60,16 +60,16 @@ ms.locfileid: "48111860"
     |[Excel-Verbindungs-Manager](connection-manager/excel-connection-manager.md)|[Verbindungs-Manager-Editor für Excel](../../2014/integration-services/excel-connection-manager-editor.md)|  
     |[Dateiverbindungs-Manager](connection-manager/file-connection-manager.md)|[Dateiverbindungs-Manager-Editor](../../2014/integration-services/file-connection-manager-editor.md)|  
     |[Verbindungs-Manager für mehrere Dateien](connection-manager/multiple-files-connection-manager.md)|[Referenz zur Benutzeroberfläche des Dialogfelds „Dateiverbindungs-Manager hinzufügen“](connection-manager/add-file-connection-manager-dialog-box-ui-reference.md)|  
-    |[Verbindungs-Manager für Flatfiles](connection-manager/flat-file-connection-manager.md)|[Verbindungs-Manager-Editor für Flatfiles &#40;Seite Allgemein&#41;](general-page-of-integration-services-designers-options.md)<br /><br /> [Verbindungs-Manager-Editor für Flatfiles &#40;Seite Spalten&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)<br /><br /> [Verbindungs-Manager-Editor für Flatfiles &#40;Seite Erweitert&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)<br /><br /> [Verbindungs-Manager-Editor für Flatfiles &#40;Seite Vorschau&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)|  
-    |[Verbindungs-Manager für mehrere Flatfiles](connection-manager/multiple-flat-files-connection-manager.md)|[Verbindungs-Manager-Editor für mehrere Flatfiles &#40;Seite "Allgemein"&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [Verbindungs-Manager-Editor für mehrere Flatfiles &#40;Seite "Spalten"&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [Verbindungs-Manager-Editor für mehrere Flatfiles &#40;Seite "Erweitert"&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [Verbindungs-Manager-Editor für mehrere Flatfiles &#40;für Preview&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)|  
+    |[Verbindungs-Manager für Flatfiles](connection-manager/flat-file-connection-manager.md)|[Verbindungs-Manager-Editor für Flatfiles &#40;Seite „Allgemein“&#41;](general-page-of-integration-services-designers-options.md)<br /><br /> [Verbindungs-Manager-Editor für Flatfiles &#40;Seite Spalten&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)<br /><br /> [Verbindungs-Manager-Editor für Flatfiles &#40;Seite Erweitert&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)<br /><br /> [Verbindungs-Manager-Editor für Flatfiles &#40;Seite „Vorschau“&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)|  
+    |[Verbindungs-Manager für mehrere Flatfiles](connection-manager/multiple-flat-files-connection-manager.md)|[Verbindungs-Manager-Editor für mehrere Flatfiles &#40;Seite „Allgemein“&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [Verbindungs-Manager-Editor für mehrere Flatfiles &#40;Seite „Spalten“&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [Verbindungs-Manager-Editor für mehrere Flatfiles &#40;Seite „Erweitert“&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [Verbindungs-Manager-Editor für mehrere Flatfiles &#40;Seite „Vorschau“&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)|  
     |[FTP-Verbindungs-Manager](connection-manager/ftp-connection-manager.md)|[FTP-Verbindungs-Manager-Editor](../../2014/integration-services/ftp-connection-manager-editor.md)|  
-    |[HTTP-Verbindungs-Manager](connection-manager/http-connection-manager.md)|[HTTP-Verbindungs-Manager-Editor &#40;Serverseite&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)<br /><br /> [HTTP-Verbindungs-Manager-Editor &#40;Seite "Proxy"&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)|  
+    |[HTTP-Verbindungs-Manager](connection-manager/http-connection-manager.md)|[HTTP-Verbindungs-Manager-Editor &#40;Seite „Server“&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)<br /><br /> [HTTP-Verbindungs-Manager-Editor &#40;Seite „Proxy“&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)|  
     |[MSMQ-Verbindungs-Manager](connection-manager/msmq-connection-manager.md)|[MSMQ-Verbindungs-Manager-Editor](../../2014/integration-services/msmq-connection-manager-editor.md)|  
     |[ODBC-Verbindungs-Manager](connection-manager/odbc-connection-manager.md)|[ODBC-Verbindungs-Manager: Referenz zur Benutzeroberfläche](../../2014/integration-services/odbc-connection-manager-ui-reference.md)|  
     |[OLE DB-Verbindungs-Manager](connection-manager/ole-db-connection-manager.md)|[Konfigurieren des OLE DB-Verbindungs-Managers](configure-ole-db-connection-manager.md)|  
     |[SMO-Verbindungs-Manager](connection-manager/smo-connection-manager.md)|[SMO-Verbindungs-Manager-Editor](../../2014/integration-services/smo-connection-manager-editor.md)|  
     |[SMTP-Verbindungs-Manager](connection-manager/smtp-connection-manager.md)|[SMTP-Verbindungs-Manager-Editor](../../2014/integration-services/smtp-connection-manager-editor.md)|  
-    |[SQL Server Compact Edition-Verbindungs-Manager](connection-manager/sql-server-compact-edition-connection-manager.md)|[Für SQLServer Compact Edition-Verbindungs-Manager-Editor &#40;Seite "Verbindung"&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [Für SQLServer Compact Edition-Verbindungs-Manager-Editor &#40;Seite "alle"&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
+    |[SQL Server Compact Edition-Verbindungs-Manager](connection-manager/sql-server-compact-edition-connection-manager.md)|[Verbindungs-Manager-Editor für SQL Server Compact Edition &#40;Seite „Verbindung“&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [Verbindungs-Manager-Editor für SQL Server Compact Edition &#40;Seite „Alle“&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
     |[WMI-Verbindungs-Manager](connection-manager/wmi-connection-manager.md)|[WMI-Verbindungs-Manager-Editor](../../2014/integration-services/wmi-connection-manager-editor.md)|  
   
 5.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  

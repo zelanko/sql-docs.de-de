@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cacheconnection.f1
 ms.assetid: 0d8f9324-0c35-4eea-b06d-da3cc2426d2c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0b9ede014f68d06f84132664ee3f4e1413f715e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af7696c1d5194af721b6ff803736193db0285b8b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130830"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385048"
 ---
 # <a name="cache-connection-manager-editor"></a>Editor für den Cacheverbindungs-Manager
   Der Cacheverbindungs-Manager liest ein Verweisdataset aus der Cachetransformation oder einer Cachedatei (.caw) und kann die Daten in einer Cachedatei speichern. Die Daten werden immer im Arbeitsspeicher abgelegt.  
@@ -39,7 +39,7 @@ ms.locfileid: "48130830"
 ##  <a name="generaltab"></a> Registerkarte Allgemein  
  Geben Sie auf der Registerkarte **Allgemein** des Dialogfelds **Editor für den Cacheverbindungs-Manager** an, ob der Cache aus einer Datei gelesen werden soll oder ob der Cache in einer Datei gespeichert werden soll.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Name des Verbindungs-Managers**  
  Geben Sie einen eindeutigen Namen für die Cacheverbindung im Workflow an. Der angegebene Name wird im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer angezeigt.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48130830"
 ##  <a name="columnstab"></a> Registerkarte 'Spalten'  
  Auf der Registerkarte **Spalten** des Dialogfelds **Editor für den Cacheverbindungs-Manager** können Sie die Eigenschaften jeder Spalte im Cache konfigurieren.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Column**  
  Geben Sie den Spaltennamen an.  
   
@@ -88,18 +88,18 @@ ms.locfileid: "48130830"
  Geben Sie den Datentyp der Spalte an.  
   
  `Length`  
- Gibt den Datentyp der Spalte an. Wenn für den Datentyp zutreffend, können Sie aktualisieren `Length`.  
+ Gibt den Datentyp der Spalte an. Wenn für den Datentyp zutreffend, können Sie den Wert von `Length` aktualisieren.  
   
  `Precision`  
- Gibt die Genauigkeit für bestimmte Spaltendatentypen an. Genauigkeit gibt die Anzahl der Ziffern einer Zahl an. Wenn für den Datentyp zutreffend, können Sie aktualisieren `Precision`.  
+ Gibt die Genauigkeit für bestimmte Spaltendatentypen an. Genauigkeit gibt die Anzahl der Ziffern einer Zahl an. Wenn für den Datentyp zutreffend, können Sie den Wert von `Precision` aktualisieren.  
   
  `Scale`  
- Gibt die Dezimalstellen für bestimmte Spaltendatentypen an. Dezimalstellen gibt die Anzahl der Nachkommastellen an. Wenn für den Datentyp zutreffend, können Sie aktualisieren `Scale`.  
+ Gibt die Dezimalstellen für bestimmte Spaltendatentypen an. Dezimalstellen gibt die Anzahl der Nachkommastellen an. Wenn für den Datentyp zutreffend, können Sie den Wert von `Scale` aktualisieren.  
   
  `Code Page`  
- Gibt die Codepage für den Spaltentyp an. Wenn für den Datentyp zutreffend, können Sie aktualisieren `Code Page`.  
+ Gibt die Codepage für den Spaltentyp an. Wenn für den Datentyp zutreffend, können Sie den Wert von `Code Page` aktualisieren.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Transformation für Suche](data-flow/transformations/lookup-transformation.md)  
+ [Lookup Transformation](data-flow/transformations/lookup-transformation.md)  
   
   

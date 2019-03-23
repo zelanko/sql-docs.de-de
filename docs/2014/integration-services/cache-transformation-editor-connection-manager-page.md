@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cachetranscon.f1
 ms.assetid: cec4f3d8-a767-41cb-af67-166d5cdde783
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 91c6b0b4e81f9535ad3aa8313dd9202da388b172
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e023624402d965aed6629d42ef97204413432e5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183242"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392748"
 ---
 # <a name="cache-transformation-editor-connection-manager-page"></a>Cachetransformations-Editor (Seite 'Verbindungs-Manager')
   Mithilfe der Registerkarte **Verbindungs-Manager** des Dialogfelds **Cachetransformations-Editor** können Sie einen vorhandenen Cacheverbindungs-Manager auswählen oder einen neuen erstellen.  
@@ -27,7 +27,7 @@ ms.locfileid: "48183242"
   
  Weitere Informationen zum Cacheverbindungs-Manager finden Sie unter [Cache Connection Manager](connection-manager/cache-connection-manager.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Cache connection manager**  
  Wählen Sie einen vorhandenen Cacheverbindungs-Manager aus dem Listenfeld aus, oder erstellen Sie mithilfe der Schaltfläche **Neu** eine neue Verbindung.  
   
@@ -38,6 +38,6 @@ ms.locfileid: "48183242"
  Ändern einer vorhandenen Verbindung.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Cachetransformations-Editor &#40;Seite "Zuordnungen"&#41;](../../2014/integration-services/cache-transformation-editor-mappings-page.md)  
+ [Cachetransformations-Editor &#40;Seite „Zuordnungen“&#41;](../../2014/integration-services/cache-transformation-editor-mappings-page.md)  
   
   

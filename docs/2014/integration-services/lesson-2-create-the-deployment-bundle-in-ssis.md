@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0824811762ff693a55fa67750be5a654f27ea5e7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8ec7519a4ea203693e6520eee569639a3259215f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375552"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385400"
 ---
 # <a name="lesson-2-creating-the-deployment-bundle"></a>Lektion 2: Erstellen des Bereitstellungspakets
   In [Lektion 1: Vorbereiten der Erstellung des Bereitstellungspakets](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md), erstellte das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Projekt mit dem Namen Deployment Tutorial, das Pakete und Unterstützungsdateien hinzugefügt und Konfigurationen in Paketen implementiert.  

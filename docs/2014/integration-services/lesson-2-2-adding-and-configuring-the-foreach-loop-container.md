@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 2: Hinzufügen und Konfigurieren des Foreach-Schleifencontainer | Microsoft-Dokumentation'
+title: 'Schritt 2: Hinzufügen und Konfigurieren des Foreach-Schleifencontainers | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2aa42ac9ab25c9765aac2afa10abdd50f2df4cb7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 0e07d71e77fc3de250ca01bb4e7fb2fb0bf15817
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360113"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378858"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>Schritt 2: Hinzufügen und Konfigurieren des Foreach-Schleifencontainers
   In dieser Aufgabe fügen Sie die Möglichkeit zum Schleifendurchlauf für einen Ordner von Flatfiles hinzu und wenden die auch in Lektion 1 verwendete Datenflusstransformation auf jede dieser Flatfiles an. Dies geschieht durch das Hinzufügen eines Foreach-Schleifencontainers zur Ablaufsteuerung und dessen Konfigurierung.  
@@ -24,7 +24,7 @@ ms.locfileid: "53360113"
   
  Zurzeit wird vom Flatfile-Verbindungs-Manager aus der Lektion 1 nur eine Verbindung mit einer bestimmten Flatfile hergestellt. Um iterativ Verbindungen mit jedem Flatfile im Ordner herzustellen, müssen Sie sowohl den Foreach-Schleifencontainer als auch den Flatfile-Verbindungs-Manager wie folgt konfigurieren:  
   
--   **Foreach-Schleifen-Container:** Sie ordnen den aufgeführten Wert des Containers einer benutzerdefinierten Paketvariable. Vom Container wird dann diese benutzerdefinierte Variable verwendet, um die `ConnectionString`-Eigenschaft des Flatfile-Verbindungs-Managers dynamisch zu ändern und iterativ Verbindungen mit jeder Flatfile im Ordner herzustellen.  
+-   **Foreach-Schleifencontainer:** Sie ordnen den aufgezählten Wert des Containers einer benutzerdefinierten Paketvariablen zu. Vom Container wird dann diese benutzerdefinierte Variable verwendet, um die `ConnectionString`-Eigenschaft des Flatfile-Verbindungs-Managers dynamisch zu ändern und iterativ Verbindungen mit jeder Flatfile im Ordner herzustellen.  
   
 -   **Verbindungs-Manager für Flatfiles:** Ändern Sie den Verbindungs-Manager, der in Lektion 1 erstellt wurde, eine benutzerdefinierte Variable zum Auffüllen der Verbindungs-Manager mit `ConnectionString` Eigenschaft.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "53360113"
 -   Ziehen Sie die **Extract Sample Currency Data** -Datenflusstask zum Foreach-Schleifencontainer umbenannt `Foreach File in Folder`.  
   
 ## <a name="next-lesson-task"></a>Aufgabe in der nächsten Lektion  
- [Schritt 3: Ändern die Flat File Connection Manager](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+ [Schritt 3: Ändern des Flatfile-Verbindungs-Managers](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren eines Foreach-Schleifencontainers](control-flow/foreach-loop-container.md)   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8ff1883c8940e791d35dfe97c33acc1fe4f4a0e8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 77812ef81d77be668a449af6c79e833ffc4d81aa
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359369"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390148"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>Lektion 1: Erstellen des Projekts und Basispakets
   In dieser Lektion erstellen Sie ein einfaches ETL-Paket, durch das Daten aus einer einzelnen Flatfilequelle extrahiert, Daten mithilfe zweier Transformationskomponenten für die Suche transformiert und diese Daten in die **FactCurrency** -Faktentabelle in **AdventureWorksDW2012**geschrieben werden. Als Teil dieser Lektion lernen Sie das Erstellen neuer Pakete, das Hinzufügen und Konfigurieren von Datenquellen- und Datenzielverbindungen sowie das Arbeiten mit neuen Ablaufsteuerungs- und Datenflusskomponenten.  
@@ -82,7 +82,7 @@ ms.locfileid: "53359369"
   
 -   [Schritt 1: Erstellen eines neuen Integration Services-Projekts](lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [Schritt 2: Hinzufügen und konfigurieren ein Flat File Connection Manager](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+-   [Schritt 2: Hinzufügen und Konfigurieren eines Verbindungs-Managers für Flatfiles](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
 -   [Schritt 3: Hinzufügen und konfigurieren einen OLE DB-Verbindungs-Manager](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
@@ -94,7 +94,7 @@ ms.locfileid: "53359369"
   
 -   [Schritt 7: Hinzufügen und Konfigurieren des OLE DB-Ziels](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [Schritt 8: Vereinfachen des Pakets aus Lektion 1 zu verstehen](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [Step 8: Vereinfachen des Pakets aus Lektion 1 zu verstehen](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
 -   [Schritt 9: Testen des Lektion 1-Lernprogrammpakets](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   

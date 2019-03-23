@@ -17,22 +17,22 @@ helpviewer_keywords:
 - SSIS packages, property expressions
 - property expressions [Integration Services]
 ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d561840bfe2c10d7b269bb952b934d22dd957d32
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2fd6b938d13e880f7ec8d48d3e4ca9665ee9cd65
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135200"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378598"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Data Flow-Eigenschaften, die mithilfe von Ausdrücken festgelegt werden können
   Die Werte mancher Eigenschaften von Datenflussobjekten können mithilfe von Eigenschaftsausdrücken festgelegt werden, die im Datenflusstask-Container verfügbar sind.  
   
  Weitere Informationen zum Verwenden von Eigenschaftsausdrücken finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](expressions/use-property-expressions-in-packages.md).  
   
- Sie können Eigenschaftsausdrücke dazu verwenden, Konfigurationen für jede bereitgestellte Instanz eines Pakets anzupassen. Sie können Eigenschaftsausdrücke auch zur Festlegung von Laufzeiteinschränkungen für ein Paket nutzen, indem Sie die Option **/set** mit dem Eingabeaufforderungshilfsprogramm **dtexec** verwenden. Beispielsweise können Sie einschränken der `MaximumThreads` , die von der Transformation für Sortierung verwendet oder die `MaxMemoryUsage` der Transformationen für Fuzzygruppierung und Fuzzysuche. Wenn keine Einschränkungen bestehen, legen diese Transformationen möglicherweise große Datenmengen im Arbeitsspeicher ab.  
+ Sie können Eigenschaftsausdrücke dazu verwenden, Konfigurationen für jede bereitgestellte Instanz eines Pakets anzupassen. Sie können Eigenschaftsausdrücke auch zur Festlegung von Laufzeiteinschränkungen für ein Paket nutzen, indem Sie die Option **/set** mit dem Eingabeaufforderungshilfsprogramm **dtexec** verwenden. Sie können z. B. die von der Transformation für Sortierung verwendeten `MaximumThreads` oder die `MaxMemoryUsage` der Transformationen für die Fuzzygruppierung und die Fuzzysuche einschränken. Wenn keine Einschränkungen bestehen, legen diese Transformationen möglicherweise große Datenmengen im Arbeitsspeicher ab.  
   
  Um einen Eigenschaftsausdruck für eine der Eigenschaften eines unter diesem Thema aufgelisteten Datenflussobjekts festzulegen, zeigen Sie das Fenster **Eigenschaften** für den Datenflusstask an, indem Sie den Datenflusstask auf der Oberfläche **Ablaufsteuerung** des Designers auswählen oder indem Sie die Registerkarte **Datenfluss** des Designers auswählen, ohne eine individuelle Komponente oder einen Pfad auszuwählen. Wählen Sie die **Ausdrücke** -Eigenschaft aus, und klicken Sie auf die Schaltfläche mit den drei Punkten, um das Dialogfeld **Eigenschaftsausdrucks-Editor** anzuzeigen. Öffnen Sie die Dropdownliste **Eigenschaft** , um eine Eigenschaft auszuwählen, und geben Sie dann einen Ausdruck in das Textfeld **Ausdruck** ein, oder klicken Sie auf die Schaltfläche mit den drei Punkten, um das Dialogfeld **Ausdrucks-Generator** anzuzeigen.  
   

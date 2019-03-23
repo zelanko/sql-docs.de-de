@@ -17,15 +17,15 @@ helpviewer_keywords:
 - files [Integration Services], security
 - SQL Server Integration Services packages, security
 ms.assetid: 2e3ddea9-5289-4289-a70e-11c018f34977
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6b6e78e04a64f9bddeeb4f24ba2f90919b9d228c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eed6f09197585e7eb8575c43146ed730497af8a0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214990"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378488"
 ---
 # <a name="access-to-files-used-by-packages"></a>Zugriff auf Dateien, die von Paketen verwendet werden
   Die Paketschutzebene bietet für Dateien, die außerhalb des Pakets gespeichert wurden, keinen Schutz. Hierzu gehören die folgenden Dateien:  
@@ -39,7 +39,7 @@ ms.locfileid: "48214990"
  Diese Dateien müssen separat geschützt werden. Dies gilt insbesondere dann, wenn sie vertrauliche Informationen beinhalten.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
- Wenn in einer Konfiguration vertrauliche Informationen enthalten sind, wie z.B. der Anmeldename und das Kennwort, sollten Sie die Konfiguration in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]speichern oder eine Zugriffssteuerungsliste (ACL, Access Control List) verwenden, um den Zugriff auf den Speicherort bzw. auf den Ordner, in dem die Dateien gespeichert sind, zu beschränken und den Zugriff nur bestimmten Konten zu gewähren. In der Regel wird den Konten Zugriff gewährt, denen die Berechtigung zum Ausführen von Paketen erteilt wird, und den Konten, die Pakete verwalten und Probleme bei Paketen beheben. Hierzu gehört z. B. das Überprüfen der Inhalte der Konfiguration, des Prüfpunkts und der Protokolldateien. Der in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bereitgestellte Speicher ist sicherer, da er Schutz auf Server- und Datenbankebene bietet. Verwenden Sie zum Speichern der Konfigurationen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurationstyp. Verwenden Sie zum Speichern im Dateisystem den XML-Konfigurationstyp.  
+ Wenn in einer Konfiguration vertrauliche Informationen enthalten sind, wie z.B. der Anmeldename und das Kennwort, sollten Sie die Konfiguration in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]speichern oder eine Zugriffssteuerungsliste (ACL, Access Control List) verwenden, um den Zugriff auf den Speicherort bzw. auf den Ordner, in dem die Dateien gespeichert sind, zu beschränken und den Zugriff nur bestimmten Konten zu gewähren. In der Regel wird den Konten Zugriff gewährt, denen die Berechtigung zum Ausführen von Paketen erteilt wird, und den Konten, die Pakete verwalten und Probleme bei Paketen beheben. Hierzu gehört z. B. das Überprüfen der Inhalte der Konfiguration, des Prüfpunkts und der Protokolldateien. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bereitgestellte Speicher ist sicherer, da er Schutz auf Server- und Datenbankebene bietet. Verwenden Sie zum Speichern der Konfigurationen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurationstyp. Verwenden Sie zum Speichern im Dateisystem den XML-Konfigurationstyp.  
   
  Weitere Informationen finden Sie unter [Paketkonfigurationen](../../2014/integration-services/package-configurations.md), [Erstellen von Paketkonfigurationen](../../2014/integration-services/create-package-configurations.md)und [Überlegungen zur Sicherheit bei SQL Server-Installationen](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   

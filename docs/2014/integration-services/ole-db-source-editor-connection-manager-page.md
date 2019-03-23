@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: 53699902-8699-4547-b56b-a5b2079e98b6
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c25e36d44b4b088bb2874039d4c292d76759da73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65d762ffb798d6ec3826a41ff06c73c2011543ab
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172980"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384487"
 ---
 # <a name="ole-db-source-editor-connection-manager-page"></a>Quellen-Editor für OLE DB (Seite Verbindungs-Manager)
   Auf der Seite **Verbindungs-Manager** des Dialogfelds **Quellen-Editor für OLE DB** wählen Sie den OLE DB-Verbindungs-Manager für die Quelle aus. Außerdem können Sie auf dieser Seite eine Tabelle oder Sicht aus der Datenbank auswählen.  
@@ -97,9 +97,9 @@ ms.locfileid: "48172980"
  Wählen Sie die Variable aus, die den Text für die SQL-Abfrage enthält.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Quellen-Editor für OLE DB &#40;Seite "Spalten"&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
- [Quellen-Editor für OLE DB &#40;Seite "Fehlerausgabe"&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
+ [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Quellen-Editor für OLE DB &#40;Seite „Spalten“&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
+ [Quellen-Editor für OLE DB &#40;Seite „Fehlerausgabe“&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
  [Extrahieren von Daten mithilfe der OLE DB-Quelle](data-flow/extract-data-by-using-the-ole-db-source.md)   
  [OLE DB-Verbindungs-Manager](connection-manager/ole-db-connection-manager.md)  
   

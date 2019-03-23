@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 6e9402f4-4d50-49ff-820d-65a77829c4a5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2f3f982eeee9abc016575b8acd068b8ef2e7450f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 76c3c915224af50fce1265f733082054e0eeaa98
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408177"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386628"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Deploy Projects to Integration Services Server
   In der aktuellen Version von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]können Sie Projekte auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Server bereitstellen. Der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Server ermöglicht es Ihnen, Pakete zu verwalten und auszuführen sowie mit Umgebungen Laufzeitwerte für Pakete zu konfigurieren.  
@@ -30,7 +30,7 @@ ms.locfileid: "52408177"
   
 1.  Erstellen Sie einen SSISDB-Katalog, falls noch nicht geschehen. Weitere Informationen finden Sie unter [Erstellen des SSIS-Katalogs](catalog/ssis-catalog.md).  
   
-2.  Konvertieren Sie das Projekt mit dem **Assistenten für die Konvertierung von Integration Services-Projekten** ins Projektbereitstellungsmodell. Weitere Informationen finden Sie unter den folgenden Anweisungen: [Um ein Projekt in das projektbereitstellungsmodell zu konvertieren.](#convert)  
+2.  Konvertieren Sie das Projekt mit dem **Assistenten für die Konvertierung von Integration Services-Projekten** ins Projektbereitstellungsmodell. Weitere Informationen finden Sie in den folgenden Anweisungen: [So konvertieren Sie ein Projekt in das Projektbereitstellungsmodell](#convert)  
   
     -   Wenn Sie das Projekt in [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]erstellt haben, verwendet das Projekt standardmäßig das Projektbereitstellungsmodell.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "52408177"
   
      Weitere Informationen zum Upgraden von Paketen finden Sie unter [Upgraden von Integration Services-Paketen](install-windows/upgrade-integration-services-packages.md) und [Upgraden von Integration Services-Paketen mit dem SSIS-Paketupgrade-Assistenten](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
-3.  Stellen Sie das Projekt auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Server bereit. Weitere Informationen finden Sie unter den folgenden Anweisungen: [Ein Projekt auf dem Integration Services-Server bereitstellen](#deploy).  
+3.  Stellen Sie das Projekt auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Server bereit. Weitere Informationen finden Sie in den folgenden Anweisungen: [So stellen Sie ein Projekt auf dem Integration Services-Server bereit](#deploy)  
   
 4.  (Optional) Erstellen Sie eine Umgebung für das bereitgestellte Projekt. Weitere Informationen finden Sie unter [Erstellen und Zuordnen einer Serverumgebung](../../2014/integration-services/create-and-map-a-server-environment.md).  
   

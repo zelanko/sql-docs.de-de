@@ -11,15 +11,15 @@ helpviewer_keywords:
 - deploying packages [Integration Services], deployment utility
 - deployment utility [Integration Services]
 ms.assetid: 354322a4-ae8c-4d92-8e71-42d29dbd0614
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fe7bd725bc7fc9be7289c4834a3df8f44e36c41b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c725218ac66be169d59f2b32f42e156361b13a51
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102200"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392862"
 ---
 # <a name="create-a-deployment-utility"></a>Create a Deployment Utility
   Der erste Schritt beim Bereitstellen von Paketen besteht im Erstellen eines Bereitstellungshilfsprogramms für ein [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt. Das Bereitstellungshilfsprogramm ist ein Ordner, der die Dateien enthält, die Sie zum Bereitstellen der in einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt enthaltenen Pakete auf einem anderen Server benötigen. Das Bereitstellungshilfsprogramm wird auf dem Computer erstellt, auf dem das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt gespeichert ist.  
@@ -50,7 +50,7 @@ ms.locfileid: "48102200"
   
 4.  Um Paketkonfigurationen aktualisieren, wenn Pakete bereitgestellt werden, legen **AllowConfigurationChanges** zu `True`.  
   
-5.  Legen Sie `CreateDeploymentUtility` zu `True`.  
+5.  Legen Sie `CreateDeploymentUtility` auf `True` fest.  
   
 6.  Aktualisieren Sie bei Bedarf den Speicherort des Bereitstellungshilfsprogramms, in dem Sie die `DeploymentOutputPath`-Eigenschaft ändern.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48102200"
 ## <a name="see-also"></a>Siehe auch  
  [Paketkonfigurationen](../../2014/integration-services/package-configurations.md)   
  [Erstellen von Paketkonfigurationen](../../2014/integration-services/create-package-configurations.md)   
- [Bereitstellen von Paketen mithilfe des Bereitstellungs-Hilfsprogramms](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)   
+ [Bereitstellen von Paketen mithilfe des Bereitstellungshilfsprogramms](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)   
  [Paketbereitstellung &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
   
   

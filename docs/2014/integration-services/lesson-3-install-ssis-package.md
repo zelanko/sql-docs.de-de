@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 87bc4d82-39d8-424f-886f-98cf1e4bb07a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e9b1bc021ba009ffe00805c0479a6fa9d91416d2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: da763e2385c64a09279c9dd6ff537993c2cd6a30
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361792"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379072"
 ---
 # <a name="lesson-3-installing-packages"></a>Lektion 3: Installieren von Paketen
   In [Lektion 2: Erstellen des Bereitstellungspakets](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md), ein Bereitstellungsprogramm und das Bereitstellungspaket erstellt, enthält die Elemente müssen Sie die Pakete auf einem anderen Computer installieren. Sie haben außerdem die Dateiliste im Bereitstellungspaket überprüft und den Inhalt der Manifestdatei untersucht, die beim Erstellen des Bereitstellungshilfsprogramms erstellt wurde.  

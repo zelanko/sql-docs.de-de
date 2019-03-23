@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1bb292712111a478260edc31a562ed7db4c0ac95
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a542b2828a2ea6803a6b4174396e57c7e9d3af4e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361762"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385298"
 ---
 # <a name="lesson-2-adding-looping"></a>Lektion 2: Hinzufügen von Schleifen
   In [Lektion 1: Erstellen des Projekts und Basispakets](lesson-1-create-a-project-and-basic-package-with-ssis.md), Erstellung ein Pakets, das Daten aus einer einzelnen Flatfilequelle extrahiert, mithilfe der Suchtransformationen transformiert und schließlich laden die Daten in die **FactCurrency** Faktentabelle der der **AdventureWorksDW2012** -Beispieldatenbank.  
@@ -56,7 +56,7 @@ ms.locfileid: "53361762"
   
 -   [Schritt 2: Hinzufügen und konfigurieren den Foreach-Schleifen-Container](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
--   [Schritt 3: Ändern die Flat File Connection Manager](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+-   [Schritt 3: Ändern des Flatfile-Verbindungs-Managers](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 -   [Schritt 4: Testen des Lektion 2-Tutorialpakets](lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   

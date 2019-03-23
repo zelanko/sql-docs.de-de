@@ -12,22 +12,22 @@ f1_keywords:
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: 5162c400-b2fc-4711-af0f-609132fbaaad
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b22b2c8690e7c680c0087c3a44766cde16f96878
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c0d986d9093b85b701660bf1fd262c412a28cb3e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063690"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382028"
 ---
 # <a name="xml-source-editor-columns-page"></a>Quellen-Editor für XML (Seite Spalten)
   Mithilfe des Knotens **Spalten** im Dialogfeld **Quellen-Editor für XML** können Sie einer externen (Quell-)Spalte eine Ausgabespalte zuordnen.  
   
  Weitere Informationen zur XML-Quelle finden Sie unter [XML Source](data-flow/xml-source.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Verfügbare externe Spalten**  
  Zeigt die Liste der in der Datenquelle verfügbaren externen Spalten an. Mit der Tabelle können keine Spalten hinzugefügt oder gelöscht werden.  
   
@@ -38,9 +38,9 @@ ms.locfileid: "48063690"
  Geben Sie für jede Ausgabespalte einen eindeutigen Namen an. Standardmäßig wird der Name der ausgewählten externen (Quell-)Spalte verwendet. Sie können jedoch auch einen beschreibenden Namen angeben, sofern dieser eindeutig ist. Der angegebene Name wird im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer angezeigt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Quellen-Editor für XML &#40;Seite Verbindungs-Manager&#41;](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
- [Quellen-Editor für XML &#40;Seite "Fehlerausgabe"&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
+ [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Quellen-Editor für XML &#40;Seite „Verbindungs-Manager“&#41;](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
+ [Quellen-Editor für XML &#40;Seite „Fehlerausgabe“&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
  [Extrahieren von Daten mithilfe der XML-Quelle](data-flow/extract-data-by-using-the-xml-source.md)  
   
   

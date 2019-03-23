@@ -3,7 +3,7 @@ title: Versionshinweise
 titleSuffix: Azure Data Studio
 description: Versionshinweise zu Azure Data Studio
 ms.custom: seodec18
-ms.date: 03/06/2019
+ms.date: 03/22/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,16 +11,27 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 746f3d97ed0157f6b97128dbfdf1b88a5276062c
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: 359723a1e2d75b7cbbd3a88c9a0ba7ee89fdf420
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161627"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381588"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Anmerkungen zu dieser Version für Azure Data Studio
 
 **[Herunterladen Sie und installieren Sie die neueste Version.](download.md)**
+
+## <a name="march-2019-hotfix"></a>März 2019 (Hotfix)
+
+22 März 2019 &nbsp;  /  &nbsp; Version: 1.5.2 &nbsp;  /  &nbsp; Hotfix-Version
+
+&nbsp;
+
+| Ändern | Details |
+| :----- | :------ |
+| Einige Probleme, die in den Wert "1.5.1" ermittelt wurden behoben. | Finden Sie unter [März Hotfix-Version auf GitHub](https://github.com/Microsoft/azuredatastudio/milestone/28).<br/> <br/>&bull; &nbsp; Problem behoben, in dem Benutzer nicht Notizbuch, die von der Aufgabe "Notizbuch öffnen" im Dashboard geöffnet schließen konnte <br/>&bull; &nbsp; Problem behoben wurde, in dem Notebook JSON zusätzliche} nach dem Speichern <br/>&bull; &nbsp; Problem behoben, wenn der Notebook-Raster nicht zu Designänderungen reagiert wurden <br/>&bull; &nbsp; Korrigiert: Problem, in denen vollständige Notebook-Pfad in der Registerkartenheader angezeigt wurde. Jetzt wird nur der Dateiname angezeigt. |
+| &nbsp; | &nbsp; |
 
 ## <a name="march-2019"></a>März 2019
 

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 0ede9b86-be27-471e-b012-22a65adce579
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7cb49325f8ead610840b8d14213ccbf630813daf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 722f7990076882f5f9c3db29fdeb165728f5fc48
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114390"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387338"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>Editor für Data Mining-Abfragetasks (Registerkarte Miningmodell)
   Mithilfe der Registerkarte **Miningmodell** des Dialogfelds **Editor für Data Mining-Abfragetasks** können Sie die zu verwendende Miningstruktur sowie das Miningmodell angeben.  
@@ -46,7 +46,7 @@ ms.locfileid: "48114390"
  **Neu**  
  Erstellt einen neuen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Verbindungs-Manager.  
   
- **Verwandte Themen:** [Referenz zur Benutzeroberfläche des Dialogfelds Analysis Services-Verbindungs-Manager hinzufügen](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **Verwandte Themen:** [Referenz zur Benutzeroberfläche des Dialogfelds „Analysis Services-Verbindungs-Manager hinzufügen“](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Miningstruktur**  
  Wählt eine Miningstruktur in der Liste aus.  
@@ -55,8 +55,8 @@ ms.locfileid: "48114390"
  Wählt ein auf der ausgewählten Miningstruktur aufgebautes Miningmodell aus.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor für Data Mining-Abfragetasks &#40;Abfrage (Registerkarte)&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
+ [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor für Data Mining-Abfragetasks &#40;Registerkarte Abfrage&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
  [Editor für Data Mining-Abfragetasks &#40;Registerkarte Ausgabe&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
  [Data Mining-Designer](../analysis-services/data-mining/data-mining-designer.md)  
   

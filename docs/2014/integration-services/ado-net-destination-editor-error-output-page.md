@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.erroroutput.f1
 ms.assetid: 1a56c3cf-fb6a-416d-a62c-bb19fe441ae5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5ebae86f0973da25b47c86f1be66181bc7b26ff2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8939bd266085dc34222184c624d3115d02c320d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213440"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380058"
 ---
 # <a name="ado-net-destination-editor-error-output-page"></a>ADO.NET-Ziel-Editor (Seite 'Fehlerausgabe')
   Auf der Seite **Fehlerausgabe** des Dialogfelds **ADO.NET-Ziel-Editor** geben Sie Optionen für die Fehlerbehandlung an.  
@@ -33,7 +33,7 @@ ms.locfileid: "48213440"
   
 3.  Klicken Sie im **ADO.NET-Ziel-Editor**auf **Fehlerausgabe**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Eingabe oder Ausgabe**  
  Zeigt den Namen der Eingabe an.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48213440"
  Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
 ## <a name="see-also"></a>Siehe auch  
- [ADO.NET-Ziel-Editor &#40;Seite Verbindungs-Manager&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
- [ADO.NET-Ziel-Editor &#40;Seite "Zuordnungen"&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
+ [ADO.NET-Ziel-Editor &#40;Seite „Verbindungs-Manager“&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
+ [ADO.NET-Ziel-Editor &#40;Seite „Zuordnungen“&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
   
   

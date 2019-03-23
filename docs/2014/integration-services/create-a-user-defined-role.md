@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: c4128993-2333-48c7-84b1-e51cdcea393d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ac839255a5c065d312852de582607de4ae0c2949
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 255d805d9fa7a36203f6791da3b01d93174d4268
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199186"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392159"
 ---
 # <a name="create-a-user-defined-role"></a>Erstellen einer benutzerdefinierten Rolle
     
@@ -28,7 +28,7 @@ ms.locfileid: "48199186"
   
 3.  Klicken Sie auf der Symbolleiste des Objekt-Explorers auf **Verbinden**, und klicken Sie dann auf **Datenbank-Engine**.  
   
-4.  Geben Sie im Dialogfeld **Verbindung mit Server herstellen** einen Servernamen ein, und wählen Sie einen Authentifizierungsmodus aus. Sie können einen Punkt (.), (local) verwenden oder `localhost` zum Angeben des lokalen Servers.  
+4.  Geben Sie im Dialogfeld **Verbindung mit Server herstellen** einen Servernamen ein, und wählen Sie einen Authentifizierungsmodus aus. Sie können einen Punkt (.), (local) oder `localhost` zum Angeben des lokalen Servers verwenden.  
   
 5.  Klicken Sie auf **Verbinden**.  
   

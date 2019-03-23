@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.custom: ''
 ms.technology: integration-services
 ms.topic: conceptual
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 90accbf1e7d5cc683b862707e0688c5b32d86242
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e2092ef7f755b9980ee29ee3d7080774d78a0094
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778312"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381388"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS)
 
@@ -41,7 +41,7 @@ Dieser Artikel enthält Informationen, die Sie benötigen, um Excel erfolgreich 
 
 Bevor Sie Daten aus Excel importieren oder in Excel exportieren können, müssen Sie möglicherweise die Konnektivitätskomponenten für Excel herunterladen, sofern diese nicht bereits installiert sind. Die Konnektivitätskomponenten für Excel sind nicht standardmäßig installiert.
 
-Laden Sie hier die neueste Version der Konnektivitätskomponenten für Excel: [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).
+Laden Sie die neueste Version der Konnektivitätskomponenten für Excel hier herunter: [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).
   
 Die aktuelle Version der Komponenten dient zum Öffnen von Dateien, die in früheren Versionen von Excel erstellt wurden.
 
@@ -53,7 +53,7 @@ Wenn Sie über ein Office 365-Abonnement verfügen, wird möglicherweise eine Fe
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-Wenn Sie Probleme beim Installieren der weitervertreibbaren Komponente 2016 haben, installieren Sie von hier aus die weitervertreibbare Komponente 2010: [Microsoft Access-Datenbank-Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255). (Es gibt keine weitervertreibbare Komponente für Excel 2013.)
+Wenn Sie Probleme beim Installieren der weitervertreibbaren Komponente von Version 2016 haben, installieren Sie die weitervertreibbare Komponente für Version 2010: [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255). (Es gibt keine weitervertreibbare Komponente für Excel 2013.)
 
 ## <a name="specify-excel"></a> Angeben von Excel
 

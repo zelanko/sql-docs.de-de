@@ -12,22 +12,22 @@ f1_keywords:
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 7f60ff18-9ad6-4169-af62-edcb04525b0e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 98194dfc8ac2bfcfecc1d60e14f8bacd17c45113
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc1fc6573b977a0f959aef51c960182904f660d0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144470"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385899"
 ---
 # <a name="configure-data-viewer-general-tab"></a>Daten-Viewer konfigurieren (Registerkarte Allgemein)
   Ein Daten-Viewer zeigt die Daten beim Durchlaufen des Pfads während der Paketausführung an, der zwei Datenflusskomponenten verbindet.  
   
  Verwenden Sie die Registerkarte **Allgemein** des Dialogfelds **Daten-Viewer konfigurieren** , um den Daten-Viewer zu benennen und den Diagrammtyp anzugeben, in dem die Daten angezeigt werden sollen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Daten-Viewer an.  
   
