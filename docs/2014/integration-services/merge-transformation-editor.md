@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Merge Transformation Editor
 ms.assetid: 7f5c0b26-9c68-4955-aa95-eb1a8fb7f87f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bb2d0f8b08b605c192f1069a20f8e02919c2c229
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c8de19a7497a1caa8322f25632e22b875e4cbad
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185850"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377988"
 ---
 # <a name="merge-transformation-editor"></a>Transformations-Editor für Zusammenführen
   Mithilfe von **Transformations-Editor für Zusammenführen** können Sie angeben, dass Spalten aus zwei sortierten Datensätzen zusammengeführt werden sollen.  
@@ -30,7 +30,7 @@ ms.locfileid: "48185850"
   
  Weitere Informationen zur Transformation für Zusammenführen finden Sie unter [Merge Transformation](data-flow/transformations/merge-transformation.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name der Ausgabespalte**  
  Geben Sie den Namen der Ausgabespalte an.  
   
@@ -41,8 +41,8 @@ ms.locfileid: "48185850"
  Wählen Sie die Spalte aus, die als Eingabe 2 für Zusammenführen zusammengeführt werden soll.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Sortieren von Daten für die Mergereplikation und Join von Transformationen für zusammenführen](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
+ [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
  [Transformation für Zusammenführungsjoin](data-flow/transformations/merge-join-transformation.md)   
  [Transformation für UNION ALL](data-flow/transformations/union-all-transformation.md)  
   

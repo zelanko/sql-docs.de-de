@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SSIS packages, properties
 - SQL Server Integration Services packages, properties
 ms.assetid: 0d20346e-475c-412f-b3ff-7bce25242b7a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9aa4740db5d0dcc0668ec59efd99ec20f5724a53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0937c9edb1ebf2acf61119f5a34f81b1c1251b28
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111762"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374548"
 ---
 # <a name="set-the-properties-of-a-package"></a>Festlegen der Eigenschaften eines Pakets
   In diesem Verfahren wird das Konfigurieren von Paketeigenschaften mithilfe des Fensters **Eigenschaften** beschrieben.  
@@ -47,7 +47,7 @@ ms.locfileid: "48111762"
 5.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Integrationsdienste &#40;SSIS&#41; Pakete](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Integration Services-Pakete &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Festlegen von Paketeigenschaften](set-package-properties.md)  
   
   
