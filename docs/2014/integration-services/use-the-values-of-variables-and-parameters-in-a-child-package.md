@@ -13,15 +13,15 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 - variables [Integration Services], adding
 ms.assetid: 9b939edb-4e17-48e5-8428-855beb10049c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 99194829b63bfbc41caa4ef1e400eb37cf6de64d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1e942df4681595be19f31aa6a9d7c6fd3a6dd12
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055634"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374960"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>Verwenden der Werte von Variablen und Parametern in einem untergeordneten Paket
   In diesem Verfahren wird das Erstellen einer Paketkonfiguration beschrieben, die den Konfigurationstyp der übergeordneten Variablen verwendet. Durch diesen Konfigurationstyp kann ein untergeordnetes Paket, das von einem übergeordneten Paket ausgeführt wird, auf eine Variable im übergeordneten Element zugreifen.  
@@ -107,7 +107,7 @@ ms.locfileid: "48055634"
 ## <a name="see-also"></a>Siehe auch  
  [Paketkonfigurationen](../../2014/integration-services/package-configurations.md)   
  [Erstellen von Paketkonfigurationen](../../2014/integration-services/create-package-configurations.md)   
- [Integrationsdienste &#40;SSIS&#41; Variablen](integration-services-ssis-variables.md)   
+ [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md)   
  [Verwenden von Variablen in Paketen](../../2014/integration-services/use-variables-in-packages.md)  
   
   
