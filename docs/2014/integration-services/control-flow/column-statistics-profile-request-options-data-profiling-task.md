@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 87205984-507a-49f3-b27c-36a0075c234d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 046e1c9d97cf7f508fa69e67bfe7369e7186e137
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e07bd6ead9ce0dfc20249f5db50a8b0b78ba242a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768462"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378098"
 ---
 # <a name="column-statistics-profile-request-options-data-profiling-task"></a>Optionen für die Anforderung für Spaltenstatistikprofil (Datenprofilerstellungs-Task)
   Verwenden Sie den Bereich **Anforderungseigenschaften** der Seite **Profilanforderungen** , um die Optionen für die im Anforderungsbereich ausgewählte **Anforderung für Spaltenstatistikprofil** festzulegen. Ein Spaltenstatistikprofil meldet Statistiken, wie minimale, maximale, durchschnittliche und standardmäßige Abweichung für numerische Spalten und den Mindest- und Höchstwert für `datetime`-Spalten. Dieses Profil hilft Ihnen, Probleme mit den Daten zu identifizieren, z. B. ungültige Datumsangaben. Beispiel: Sie erstellen ein Profil einer Spalte mit historischen Daten und entdecken einen Maximalwert, der in der Zukunft liegt.  
@@ -52,7 +52,7 @@ ms.locfileid: "52768462"
  **Schema**  
  Gibt das Schema an, zu dem die ausgewählte Tabelle gehört. Diese Option ist schreibgeschützt.  
   
- **Tabelle**  
+ **Table**  
  Zeigt den Namen der ausgewählten Tabelle an. Diese Option ist schreibgeschützt.  
   
 #### <a name="column-options"></a>Spaltenoptionen  

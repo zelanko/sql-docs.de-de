@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.ssis.ssms.iscatalogprop.general.f1
 - sql12.ssis.ssms.iscreatecatalog.f1
 ms.assetid: 3e2fcf11-e010-41c6-bc26-e4b281c0bfbc
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ca73310cbbb45097eeb5a130364ee1f2580e8059
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 849346f33a3118029a46241644d7f1cce6dc7481
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156940"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374468"
 ---
 # <a name="catalog-properties-dialog-box"></a>Katalogeigenschaften (Dialogfeld)
   Verwenden Sie das Dialogfeld Katalogeigenschaften, um den SSISDB-Katalog zu konfigurieren. Die Katalogeigenschaften definieren, wie sensible Daten verschlüsselt werden, wie Vorgänge und Versionsdaten für Projekte beibehalten werden und zu welchem Zeitpunkt für Überprüfungsvorgänge ein Timeout erfolgt. Der SSISDB-Katalog ist ein zentraler Speicher- und Verwaltungspunkt für Projekte, Pakete, Parameter und Umgebungen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -36,7 +36,7 @@ ms.locfileid: "48156940"
   
 ##  <a name="open_dialog"></a> Öffnen des Dialogfelds "Katalogeigenschaften"  
   
-1.  Open [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
+1.  Öffnen Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
 2.  Stellen Sie eine Verbindung mit einer Microsoft SQL Server-Datenbank-Engine her.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48156940"
   
 ##  <a name="options"></a> Konfigurieren der Optionen  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  In der folgenden Tabelle werden spezifische Eigenschaften in dem Dialogfeld und die entsprechenden Eigenschaften in der catalog.catalog_property-Sicht beschrieben.  
   
 |Eigenschaftsname (Dialogfeld Katalogeigenschaften)|Eigenschaftsname (catalog.catalog_property-Sicht)|Description|  

@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 367835aa-9855-4791-a989-b3d08402ad4c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0bd0382906d3ee56055cc026036816af64b55dc6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: fc6d8cfe6d77bd773317d2eae2ac98a9e200c70a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408966"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376518"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>Konfigurieren des Integration Services-Diensts als Clusterressource
   Kunden, für die die Vorteile der Konfiguration des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Diensts als Clusterressource die Nachteile überwiegen, finden in diesem Abschnitt alle erforderlichen Konfigurationsanweisungen. [!INCLUDE[msCoName](../includes/msconame-md.md)] rät dennoch von einer Konfiguration des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Diensts als Clusterressource ab.  

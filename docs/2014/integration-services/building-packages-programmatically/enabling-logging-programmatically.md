@@ -20,15 +20,15 @@ helpviewer_keywords:
 - LogProvider object
 - packages [Integration Services], logs
 ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b6af1a257079b2fe1d4fb441b30e6a4bb2c22fca
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8b83f5842ebb2bb97ebd58142ef69d3a3d153f51
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374912"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377128"
 ---
 # <a name="enabling-logging-programmatically"></a>Programmgesteuertes Aktivieren der Protokollierung
   Die Runtime-Engine stellt eine Auflistung von <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider>-Objekten bereit, mit deren Hilfe ereignisspezifische Informationen während der Paketüberprüfung und -ausführung aufgezeichnet werden können. <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider>-Objekte sind für <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer>-Objekte verfügbar; hierzu zählen auch die Objekte <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>, <xref:Microsoft.SqlServer.Dts.Runtime.Package>, <xref:Microsoft.SqlServer.Dts.Runtime.ForLoop> und <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop>. Die Protokollierung wird für einzelne Container oder das gesamte Paket aktiviert.  
@@ -46,7 +46,7 @@ ms.locfileid: "53374912"
 |Anbieter|Description|ConfigString-Eigenschaft|  
 |--------------|-----------------|---------------------------|  
 |SQL Server Profiler|Generiert SQL-Ablaufverfolgungen, die aufgezeichnet und im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Profiler angezeigt werden können. Die standardmäßige Dateinamenerweiterung für diesen Anbieter ist TRC.|Es ist keine Konfiguration erforderlich.|  
-|SQL Server|Schreibt in allen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken Ereignisprotokolleinträge in die **sysssislog**-Tabelle.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anbieter erfordert eine angegebene Verbindung zur Datenbank sowie den Namen der Zieldatenbank.|  
+|SQL Server|Schreibt in allen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken Ereignisprotokolleinträge in die **sysssislog**-Tabelle.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anbieter erfordert eine angegebene Verbindung zur Datenbank sowie den Namen der Zieldatenbank.|  
 |Textdatei|Schreibt Ereignisprotokolleinträge im durch Trennzeichen getrennten CSV-Format in ASCII-Textdateien. Die standardmäßige Dateinamenerweiterung für diesen Anbieter ist LOG.|Der Name eines Dateiverbindungs-Managers.|  
 |Windows-Ereignisprotokoll|Schreibt Protokolle in das Anwendungsprotokoll im standardmäßigen Windows-Ereignisprotokoll auf dem lokalen Computer.|Es ist keine Konfiguration erforderlich.|  
 |XML-Datei|Schreibt Ereignisprotokolleinträge in Dateien im XML-Format. Die standardmäßige Dateinamenerweiterung für diesen Anbieter ist XML.|Der Name eines Dateiverbindungs-Managers.|  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - copying columns
 - Copy Column transformation
 ms.assetid: 1c72a313-9026-46bc-a57f-c6b3f47346f8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c8fa6132b9b9dbf439a6b177e6f7d18214e9df1c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7ebdcc68c4fe8c4782251e2f4e5896e4557e23e6
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818026"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374347"
 ---
 # <a name="copy-column-transformation"></a>Spalten-Kopieren-Transformation
   Die Transformation für das Kopieren von Spalten erstellt neue Spalten, indem Eingabespalten kopiert und der Transformationsausgabe die neuen Spalten hinzugefügt werden. Später können im Datenfluss verschiedene Transformationen auf die Spaltenkopien angewendet werden. Beispielsweise können Sie mit der Transformation für das Kopieren von Spalten eine Kopie einer Spalte erstellen und anschließend mithilfe der Transformation zum Zuordnen der Zeichen die kopierten Daten in Großbuchstaben konvertieren. Sie könnten aber auch mithilfe der Transformation für das Aggregieren Aggregationen auf die neue Spalte anwenden.  

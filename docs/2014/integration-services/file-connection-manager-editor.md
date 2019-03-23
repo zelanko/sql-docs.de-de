@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - File Connection Manager Editor
 ms.assetid: 051c48e5-3d86-49af-b554-ff62e3de3622
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fe362603d36c1ae9115ca201838b68a936ae5077
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24793c3edc681ac40ca37c36a1540f3c404b7191
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140280"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374828"
 ---
 # <a name="file-connection-manager-editor"></a>Dateiverbindungs-Manager-Editor
   Im Dialogfeld **Dateiverbindungs-Manager-Editor** werden die Eigenschaften angegeben, die zum Herstellen einer Verbindung zu einer Datei oder einem Ordner verwendet werden.  
@@ -30,11 +30,11 @@ ms.locfileid: "48140280"
   
  Weitere Informationen zum Dateiverbindungs-Manager finden Sie unter [File Connection Manager](connection-manager/file-connection-manager.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Verwendungstyp**  
  Geben Sie an, ob die Verbindung vom **Dateiverbindungs-Manager** zu einer vorhandenen Datei oder einem vorhandenen Ordner hergestellt werden soll, oder ob dafür eine neue Datei oder ein neuer Ordner erstellt werden soll.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |Datei erstellen|Erstellen Sie zur Laufzeit eine neue Datei.|  
 |Vorhandene Datei|Verwenden Sie eine vorhandene Datei.|  

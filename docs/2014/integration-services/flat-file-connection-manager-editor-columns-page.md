@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 40ce7537-abd0-4973-97fd-6ccb90fddfa0
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a7aed741e639fe76fe1565c10e203e0871929863
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3dec5abe4cee6165b0bf9cecb99e26552b5854b3
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123881"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374647"
 ---
 # <a name="flat-file-connection-manager-editor-columns-page"></a>Verbindungs-Manager-Editor für Flatfiles (Seite Spalten)
   Verwenden Sie die Seite **Spalten** im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** , um die Zeilen- und Spalteninformationen anzugeben und eine Vorschau der Datei anzuzeigen.  
@@ -40,7 +40,7 @@ ms.locfileid: "48123881"
  **Zeilentrennzeichen**  
  Wählen Sie aus der Liste verfügbarer Zeilentrennzeichen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**{CR}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf.|  
@@ -54,7 +54,7 @@ ms.locfileid: "48123881"
  **Spaltentrennzeichen**  
  Wählen Sie aus der Liste verfügbarer Spaltentrennzeichen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Als Trennzeichen für Spalten dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**{CR}**|Als Trennzeichen für Spalten dient ein Wagenrücklauf.|  
@@ -101,7 +101,7 @@ ms.locfileid: "48123881"
  **Zeilentrennzeichen**  
  Wählen Sie aus der Liste verfügbarer Zeilentrennzeichen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**{CR}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf.|  
@@ -116,9 +116,9 @@ ms.locfileid: "48123881"
  Entfernt alle bis auf die ursprünglichen Spalten, wenn Sie auf **Spalten zurücksetzen**klicken.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Dateiverbindungs-Manager-Editor für Flatfiles &#40;Seite "Allgemein"&#41;](general-page-of-integration-services-designers-options.md)   
- [Dateiverbindungs-Manager-Editor für Flatfiles &#40;Seite "Erweitert"&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)   
- [Verbindungs-Manager-Editor für Flatfiles &#40;Seite Vorschau&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)  
+ [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Verbindungs-Manager-Editor für Flatfiles &#40;Seite „Allgemein“&#41;](general-page-of-integration-services-designers-options.md)   
+ [Verbindungs-Manager-Editor für Flatfiles &#40;Seite „Erweitert“&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)   
+ [Verbindungs-Manager-Editor für Flatfiles &#40;Seite „Vorschau“&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)  
   
   

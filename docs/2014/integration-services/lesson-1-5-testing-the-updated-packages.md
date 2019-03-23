@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 683e52e5-1c7e-49ab-9ffe-6a450a1c5776
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 52892e170d9825379dd21a0fdcedfedcaacd6ff7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 979c2b792d7c56dcdb9fadde112c7e6bff789c15
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371992"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374848"
 ---
 # <a name="step-5-testing-the-updated-packages"></a>Schritt 5: Testen des aktualisierten Pakets
   Bevor Sie mit der nächsten Lektion fortfahren, in der Sie das Bereitstellungspaket erstellen, das bei der Installation der Lernprogrammpakete auf dem Zielcomputer verwendet werden soll, sollten Sie die Pakete testen. In dieser Aufgabe führen Sie die Pakete DataTransfer.dtsx und LoadXMLData aus, die Sie dem Deployment Tutorial-Projekt hinzugefügt und dann mit Konfigurationen erweitert haben.  

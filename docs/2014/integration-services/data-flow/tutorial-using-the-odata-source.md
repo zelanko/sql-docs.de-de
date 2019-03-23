@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: Verwenden der OData-Quelle [SSIS] | Microsoft-Dokumentation'
+title: 'Tutorial: Verwenden der OData-Quelle [SSIS] | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 693eb9b33c753f1d87b4b5635e47de82ca7e4b59
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7a799707dc57e07528afb29c135a5ee394c56354
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805152"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377019"
 ---
-# <a name="tutorial-using-the-odata-source-ssis"></a>Lernprogramm: Verwenden der OData-Quelle [SSIS]
+# <a name="tutorial-using-the-odata-source-ssis"></a>Tutorial: Verwenden der OData-Quelle [SSIS]
   Dieses Tutorial führt Sie schrittweise durch den Prozess, bei dem die Sammlung **Employees** aus dem OData-Beispieldienst **Northwind** (http://services.odata.org/V3/Northwind/Northwind.svc/) extrahiert und anschließend in eine Flatfile geladen wird.  
   
 ## <a name="1-create-an-integration-services-project"></a>1. Erstellen eines Integration Services-Projekts  

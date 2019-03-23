@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 09ec22504cce0439d6d3f23360586fb0b41ee0c8
-ms.sourcegitcommit: f8fced37f3fe5c45b2b97219d378137afd68cf76
+ms.openlocfilehash: 3ab6f627c096326ce5c56828777bb9baf386e81a
+ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58198189"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356453"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -40,7 +40,7 @@ ms.locfileid: "58198189"
 |error_id|**nvarchar(36)**|Eindeutige ID des Fehlers der Anforderung zugeordnet ist, falls vorhanden.|Finden Sie unter [sys.dm_pdw_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md); auf NULL festgelegt werden, wenn kein Fehler aufgetreten ist.|  
 |database_id|**int**|Der Bezeichner der Datenbank, die durch explizite Kontext (z. B. Verwendung DB_X) verwendet.|Finden Sie unter-ID in [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |Befehl|**nvarchar(4000)**|Enthält den vollständigen Text der Anforderung durch den Benutzer gesendet.|Alle gültigen Abfrage oder einen Anforderung-Text. Abfragen, die länger als 4.000 Byte sind, werden abgeschnitten.|  
-|resource_class|**nvarchar(20)**|Die Ressourcenklasse für diese Anforderung. Finden Sie im Zusammenhang **Concurrency_slots_used** in [sys.dm_pdw_resource_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md).  Weitere Informationen zu Ressourcenklassen, finden Sie unter [ressourcenverwaltung Ressourcenklassen und workloadverwaltung](https://docs.microsoft.com/azure/sql-data-warehouse/resource-classes-for-workload-management) |Statische Ressourcenklassen</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br></br>Dynamische Ressourcenklassen</br>"Smallrc"</br>MediumRC</br>LargeRC</br>XLargeRC|
+|resource_class|**nvarchar(20)**|Die Ressourcenklasse für diese Anforderung. Finden Sie im Zusammenhang **Concurrency_slots_used** in [sys.dm_pdw_resource_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md).  Weitere Informationen zu Ressourcenklassen, finden Sie unter [ressourcenverwaltung Ressourcenklassen und workloadverwaltung](https://docs.microsoft.com/azure/sql-data-warehouse/resource-classes-for-workload-management) |Statische Ressourcenklassen</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Dynamische Ressourcenklassen</br>"Smallrc"</br>MediumRC</br>LargeRC</br>XLargeRC|
 |Wichtigkeit (Vorschau für SQL Data Warehouse Gen2)|**nvarchar(32)**|Die Bedeutung die Anforderung festlegen eingereicht wurde. Anforderungen mit einer niedrigeren Wichtigkeit werden in der Warteschlange unterbrochenen Zustand verbleiben, wenn höhere Wichtigkeit-Anforderungen gesendet werden.  Anforderungen und einer höheren Priorität werden vor niedriger Wichtigkeit Anforderungen ausgeführt werden, die zuvor gesendet wurden.  Weitere Informationen zu Wichtigkeit, finden Sie unter [Workload Wichtigkeit](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance).  |NULL</br>low</br>below_normal</br>– Normal</br>above_normal</br>high|
   
  Informationen zu den maximalen Zeilen, die von dieser Sicht beibehalten, finden Sie unter "Minimum und Maximum Values" in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  

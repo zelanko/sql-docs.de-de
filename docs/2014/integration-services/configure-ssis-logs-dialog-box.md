@@ -14,15 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Configure SSIS Logs dialog box
 ms.assetid: 4b980275-cd9a-4943-8c36-727d51f9a484
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4730b52983c778fd71f778412552913d2ee6cbef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dbba1b7712bcbdccc821e419b3101065c3164913
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120567"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375212"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>SSIS-Protokolle konfigurieren (Dialogfeld)
   Verwenden Sie das Dialogfeld **SSIS-Protokolle konfigurieren** , um Protokollierungsoptionen für ein Paket zu definieren.  
@@ -45,7 +45,7 @@ ms.locfileid: "48120567"
 ##  <a name="container"></a> Konfigurieren Sie die Optionen im Bereich "Container".  
  Mithilfe des **Container** -Bereichs des Dialogfelds **SSIS-Protokolle konfigurieren** können Sie das Paket und seine Container für das Protokollieren aktivieren.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Container**  
  Aktivieren Sie die Kontrollkästchen in der hierarchischen Sicht, um das Paket und seine Container für die Protokollierung zu aktivieren:  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48120567"
 ##  <a name="provider"></a> Konfigurieren Sie die Optionen auf der Registerkarte "Anbieter und Protokolle".  
  Verwenden Sie die Registerkarte **Anbieter und Protokolle** des Dialogfelds **SSIS-Protokolle konfigurieren** , um Protokolle für das Aufzeichnen von Laufzeitereignissen zu erstellen und zu konfigurieren.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Anbietertyp**  
  Wählen Sie einen Protokollanbietertyp aus der Liste aus.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48120567"
  **Configuration**  
  Wählen Sie einen vorhandenen Verbindungs-Manager aus der Liste aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen. Abhängig vom Typ des Protokollanbieters können Sie einen OLE DB-Verbindungs-Manager oder einen Dateiverbindungs-Manager konfigurieren. Der [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows-Ereignisprotokollanbieter erfordert keine Verbindung.  
   
- Verwandte Themen: [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md) , [File Connection Manager](connection-manager/file-connection-manager.md)  
+ Verwandte Themen: , . [OLE DB-Verbindungs-Manager](connection-manager/ole-db-connection-manager.md) Manager [Dateiverbindungs-Manager](connection-manager/file-connection-manager.md)  
   
  **Delete**  
  Wählen Sie einen Protokollanbieter aus, und klicken Sie auf **Löschen**.  
@@ -84,7 +84,7 @@ ms.locfileid: "48120567"
 ##  <a name="detail"></a> Konfigurieren Sie die Optionen auf der Registerkarte "Details".  
  Auf der Registerkarte **Details** des Dialogfelds **SSIS-Protokolle konfigurieren** können Sie die Ereignisse für das Protokollieren sowie die zu protokollierenden Informationsdetails aktivieren. Die Informationen, die Sie auswählen, gelten für alle Protokollanbieter im Paket. Sie können z. B. nicht einige Informationen in die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz und andere Informationen in eine Textdatei schreiben.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Ereignisse**  
  Aktivieren oder Deaktivieren von Ereignissen für die Protokollierung.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48120567"
  **Erweitert**  
  Auswählen oder Löschen zu protokollierender Ereignisse und Auswählen oder Löschen von Informationen, die für jedes Ereignis protokolliert werden sollen. Klicken Sie auf **Standard** , um alle Protokollierungsdetails mit Ausnahme der Liste der Ereignisse auszublenden. Die folgenden Informationen sind für die Protokollierung verfügbar:  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**Computer**|Der Name des Computers, auf dem das protokollierte Ereignis aufgetreten ist.|  
 |**Operator**|Der Benutzername der Person, die das Paket gestartet hat.|  

@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: cfe0e5dc-5be3-4222-b721-fe83665edd94
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3df60e0708ae86cf1aa5bde48e8a734140c38789
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 3b7288952ce9b57b0825f20d1a93fcbcd20d3c37
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366422"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374399"
 ---
 # <a name="ssis-package-format"></a>SSIS-Paketformat
   In der aktuellen Version von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]wurden wichtige Änderungen am Paketformat (DTSX-Datei) vorgenommen, um das Format besser lesbar zu machen und Pakete besser vergleichen zu können. Sie können auch Zusammenführen von Paketen, die keine in Konflikt stehenden Änderungen oder im Binärformat gespeicherte Änderungen enthalten.  

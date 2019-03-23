@@ -12,22 +12,22 @@ helpviewer_keywords:
 - components [Integration Services], connections
 - connections [Integration Services], data flow components
 ms.assetid: 05633e4c-1370-4b05-802b-f36b07dd71c8
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 43b975d5eeb7177e417f385c3b4de89f75030704
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 776e3d8c8b8731fb56d51213ffe085c857066cd7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069949"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374357"
 ---
 # <a name="connect-components-with-paths"></a>Verbinden von Komponenten mit Pfaden
   Den Datenfluss in einem Paket erstellen Sie auf der Entwurfsoberfläche der Registerkarte **Datenfluss** im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer. Falls ein Datenfluss zwei Datenflusskomponenten enthält, können Sie diese verbinden, indem Sie die Ausgabe einer Quelle oder Transformation mit der Eingabe einer Transformation oder eines Zieles verbinden. Der Konnektor zwischen den beiden Datenflusskomponenten wird als Pfad bezeichnet.  
   
  Im folgenden Diagramm wird ein einfacher Datenfluss mit einer Quellkomponente, zwei Transformationen, einer Zielkomponente und den Pfaden, die diese verbinden, angezeigt.  
   
- ![Datenfluss](media/mw-dts-08.gif "-Datenfluss")  
+ ![Data flow](media/mw-dts-08.gif "Data flow")  
   
  Wenn zwei Komponenten verbunden sind, können Sie die Metadaten der Daten, die über den Pfad verschoben werden, und die Eigenschaften des Pfades in **Datenflusspfad-Editor**anzeigen. Weitere Informationen finden Sie unter [Integration Services Paths](data-flow/integration-services-paths.md).  
   

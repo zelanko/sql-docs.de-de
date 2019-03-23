@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.reviewer: rothja
-ms.openlocfilehash: bc55e90ad8aced555858008bc77715299a064b2a
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
-ms.translationtype: MT
+ms.openlocfilehash: 40ce93e9232d0492bd693e7920b62dc9805aa7ac
+ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342836"
+ms.locfileid: "58356403"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>Nutzen einer app, die auf SQL Server-big Data-Cluster mit einem RESTful-Webdienst bereitgestellt
 
@@ -86,7 +86,7 @@ Beachten Sie die IP-Adresse (`10.1.1.3` in diesem Beispiel) und die Portnummer (
 
 ## <a name="generate-a-jwt-access-token"></a>Generieren Sie ein JWT-Zugriffstoken
 
-Um den Zugriff auf die RESTful-Web-Dienst für die app haben Sie Sie zunächst zum Generieren eines JWT-Zugriffstokens bereitgestellt. Öffnen Sie die folgende URL in Ihrem Browser: `https://[IP]:[PORT]/api/docs/swagger.json` mithilfe die IP-Adresse und den Port, die Sie ausführen abgerufen haben die `describe` obigen Befehl. Müssen Sie die Anmeldung mit der gleichen Anmeldeinformationen für die Verwendung `mssqlctl login`.
+Um den RESTful-Web-Dienst für die app zugreifen, die Sie bereitgestellt haben müssen Sie zuerst ein JWT-Zugriffstoken zu generieren. Öffnen Sie die folgende URL in Ihrem Browser: `https://[IP]:[PORT]/api/docs/swagger.json` mithilfe die IP-Adresse und den Port, die Sie ausführen abgerufen haben die `describe` obigen Befehl. Müssen Sie die Anmeldung mit der gleichen Anmeldeinformationen für die Verwendung `mssqlctl login`.
 
 Fügen Sie den Inhalt der `swagger.json` in der [Swagger Editor](https://editor.swagger.io) zu verstehen, welche Methoden zur Verfügung stehen:
 

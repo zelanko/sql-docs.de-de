@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Integration Services service, configuring
 - services [Integration Services], configuring
 ms.assetid: 45554117-a0df-4830-b41c-5ebb33b764a5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d6b8ea946def4811332e6783e881e968c5a91f4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f6251ac85fe76d775fd84b6463d20532615d28c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193400"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375128"
 ---
 # <a name="manage-the-integration-services-service"></a>Verwalten des Integration Services-Diensts
     
@@ -33,7 +33,7 @@ ms.locfileid: "48193400"
   
  Es kann nur eine einzige Instanz des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Dienstes auf einem Computer installiert werden. Der Dienst ist nicht spezifisch für eine bestimmte Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)]. Sie melden sich beim Dienst mit dem Namen des Computers an, auf dem er ausgeführt wird.  
   
- Sie können den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Dienst mithilfe eines der folgenden Snap-Ins für Microsoft Management Console (MMC) verwalten: SQL Server-Konfigurations-Manager oder -Dienste. Bevor Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]Pakete verwalten können, muss der Dienst gestartet werden.  
+ Sie können den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Dienst mithilfe eines der folgenden MMC-Snap-Ins (Microsoft Management Console) verwalten: SQL Server-Konfigurations-Manager oder SQL Server Integration Services. Bevor Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]Pakete verwalten können, muss der Dienst gestartet werden.  
   
  Standardmäßig wird der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Dienst für die Verwaltung von Paketen in der msdb-Datenbank der Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] konfiguriert, die zur selben Zeit wie [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] installiert wird. Wenn eine Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] nicht zur selben Zeit installiert wird, wird der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Dienst so konfiguriert, dass Pakete in der msdb-Datenbank der lokalen Standardinstanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] verwaltet werden. Zur Verwaltung von Paketen, die in einer benannten Instanz oder einer Remoteinstanz von [!INCLUDE[ssDE](../includes/ssde-md.md)]bzw. in mehreren Instanzen von [!INCLUDE[ssDE](../includes/ssde-md.md)]gespeichert sind, müssen Sie die Konfigurationsdatei ändern. Weitere Informationen finden Sie unter [Konfigurieren des Integration Services-Diensts &#40;SSIS-Dienst&#41;](service/integration-services-service-ssis-service.md).  
   
@@ -55,8 +55,8 @@ ms.locfileid: "48193400"
   
 ## <a name="see-also"></a>Siehe auch  
  [Integration Services-Dienst &#40;SSIS-Dienst&#41;](service/integration-services-service-ssis-service.md)   
- [Konfigurieren der Integration Services-Dienst &#40;SSIS-Dienst&#41;](configuring-the-integration-services-service-ssis-service.md)   
- [SQL Server-Import / Export-Assistent](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
+ [Konfigurieren des Integration Services-Diensts &#40;SSIS-Dienst&#41;](configuring-the-integration-services-service-ssis-service.md)   
+ [SQL Server-Import/Export-Assistent](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
  [dtexec (Hilfsprogramm)](packages/dtexec-utility.md)   
  [Ausführung von Projekten und Paketen](packages/run-integration-services-ssis-packages.md)  
   

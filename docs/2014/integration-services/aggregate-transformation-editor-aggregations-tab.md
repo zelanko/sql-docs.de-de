@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4aaf14095eab05110845178f4115fc87ea19947a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db633e9afa480d03b31cf02a84db2813b1e30516
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224460"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378034"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>Transformations-Editor für Aggregieren (Registerkarte Aggregationen)
   Auf der Registerkarte **Aggregationen** des Dialogfelds **Transformations-Editor für Aggregieren** können Sie die Spalten für Aggregationen und Aggregationseigenschaften angeben. Sie können mehrere Aggregationen anwenden. Durch diese Transformation wird keine Fehlerausgabe generiert.  
@@ -32,7 +32,7 @@ ms.locfileid: "48224460"
   
  Weitere Informationen zur Transformation für das Aggregieren finden Sie unter [Aggregate Transformation](data-flow/transformations/aggregate-transformation.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Erweitert/Standard**  
  Blenden Sie die Optionen ein oder aus, um mehrere Aggregationen für mehrere Ausgaben zu konfigurieren. Die erweiterten Optionen sind standardmäßig ausgeblendet.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48224460"
  **Schlüsselskala**  
  Geben Sie in der erweiterten Anzeige optional die ungefähre Anzahl der Schlüssel an, die durch die Aggregation geschrieben werden können. Der Standardwert für diese Option ist **Keine Angabe**. Wenn die Eigenschaften **Schlüsselskala** und **Schlüssel** festgelegt sind, wird der Wert von **Schlüssel** vorrangig behandelt.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |Keine Angabe|Die Eigenschaft Schlüsselskala wird nicht verwendet.|  
 |Low|Die Aggregation kann ungefähr 500.000 Schlüssel schreiben.|  
@@ -83,9 +83,9 @@ ms.locfileid: "48224460"
  **Count Distinct Scale**  
  Gibt optional die ungefähre Anzahl unterschiedlicher Werte an, die durch die Aggregation geschrieben werden können. Der Standardwert für diese Option ist **Keine Angabe**. Wenn beide `CountDistinctScale` und **CountDistinctKeys** angegeben sind, **CountDistinctKeys** hat Vorrang vor.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
-|Keine Angabe|Die `CountDistinctScale` Eigenschaft wird nicht verwendet.|  
+|Keine Angabe|Die `CountDistinctScale`-Eigenschaft wird nicht verwendet.|  
 |Low|Die Aggregation kann ungefähr 500.000 unterschiedliche Werte schreiben.|  
 |Medium|Die Aggregation kann ungefähr 5.000.000 unterschiedliche Werte schreiben.|  
 |High|Die Aggregation kann mehr als 25.000.000 unterschiedliche Werte schreiben.|  
@@ -94,8 +94,8 @@ ms.locfileid: "48224460"
  Gibt optional die genaue Anzahl unterschiedlicher Werte an, die durch die Aggregation geschrieben werden können. Wenn beide `CountDistinctScale` und **CountDistinctKeys** angegeben sind, **CountDistinctKeys** hat Vorrang vor.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Transformations-Editor für aggregieren &#40;Registerkarte "Erweitert"&#41;](../../2014/integration-services/aggregate-transformation-editor-advanced-tab.md)   
+ [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Transformations-Editor für Aggregieren &#40;Registerkarte Erweitert&#41;](../../2014/integration-services/aggregate-transformation-editor-advanced-tab.md)   
  [Aggregieren von Werten in einem Dataset mithilfe der Transformation für das Aggregieren](data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - connection managers [Integration Services], creating
 - SQL Server Integration Services packages, connections
 ms.assetid: 6ca317b8-0061-4d9d-b830-ee8c21268345
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 807241aec9544c8a6366b8d12c0aaddb4b0d228a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef2ea7fa43556f0c4f12ee41101aedf396a23382
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074462"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374088"
 ---
 # <a name="create-connection-managers"></a>Erstellen von Verbindungs-Managern
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] enthält eine Reihe von Verbindungs-Managern für Tasks, mit denen eine Verbindung mit verschiedenen Server- und Datenquellentypen hergestellt wird. Verbindungs-Manager werden von den Datenflusskomponenten verwendet, die Daten in verschiedenen Arten von Datenspeichern extrahieren und laden, und von den Protokollanbietern, die Protokolle auf einen Server, in eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Tabelle oder eine Datei schreiben. Beispielsweise verwendet ein Paket mit einem Task Mail senden einen SMTP-Verbindungs-Manager, um eine Verbindung mit einem SMTP-Server (Simple Mail Transfer Protocol) herzustellen. Ein Paket mit einem Task SQL ausführen kann einen OLE DB-Verbindungs-Manager zum Herstellen einer Verbindung mit einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank verwenden. Weitere Informationen finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md).  
@@ -58,6 +58,6 @@ ms.locfileid: "48074462"
 ## <a name="see-also"></a>Siehe auch  
  [Ablaufsteuerung](control-flow/control-flow.md)   
  [Datenfluss](data-flow/data-flow.md)   
- [Integrationsdienste &#40;SSIS&#41; -Ereignishandler](integration-services-ssis-event-handlers.md)  
+ [Integration Services-Ereignishandler &#40;SSIS&#41;](integration-services-ssis-event-handlers.md)  
   
   

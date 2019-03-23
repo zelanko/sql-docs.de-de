@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 2d847adf-4b3d-4949-a195-ef43de275077
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4e807fad8929ccb087b9ba55615b235a2950cdb1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 171bb649f5e4f91df947ed2a0a3113786755efe4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376782"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378128"
 ---
 # <a name="data-flow-taps"></a>Datenflussabzweigungen
   In [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] wird eine neue Funktion eingeführt, über die Sie dem Datenflusspfad eines Pakets zur Laufzeit eine Datenabzweigung hinzufügen und die Ausgabe von der Datenabzweigung an eine externe Datei weiterleiten können. Um diese Funktion verwenden zu können, müssen Sie das SSIS-Projekt mithilfe des Projektbereitstellungsmodells auf einem SSIS-Server bereitstellen. Nachdem Sie das Paket auf dem Server bereitgestellt haben, müssen Sie T-SQL-Skripts für die SSISDB-Datenbank ausführen, um vor der Paketausführung Datenabzweigungen hinzuzufügen. Beispielszenario:  

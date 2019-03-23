@@ -11,25 +11,25 @@ f1_keywords:
 - sql12.dts.designer.packagepassword.f1
 - sql12.ssis.bids.projectpassword.f1
 ms.assetid: 090277a5-4659-461d-944c-eb9b26167720
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6b09f7787bddf1eafe219e55e72bb4a4d1dc5331
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f53b9972bfc9207bb7b9b06b7438e5fb8039ffd
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189080"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374528"
 ---
 # <a name="package-and-project-password"></a>Paket- und Projektkennwort
   Verwenden Sie das Dialogfeld **Paketkennwort** , um ein Kennwort für ein verschlüsseltes Paket bereitzustellen. Sie müssen ein Kennwort bereitstellen, wenn das Paket die Schutzebene **Sensible Daten mit einem Kennwort verschlüsseln**oder **Alle Daten mit einem Kennwort verschlüsseln** verwendet.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Kennwort**  
  Geben Sie das Kennwort ein.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Sicherheit &#40;Integrationsdienste&#41;](security/security-overview-integration-services.md)   
- [Dialogfeld „Paket- und Projektschutzebene“](../../2014/integration-services/package-and-project-protection-level-dialog-box.md)  
+ [Sicherheitsübersicht &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
+ [Dialogfeld "Paket- und Projektschutzebene"](../../2014/integration-services/package-and-project-protection-level-dialog-box.md)  
   
   

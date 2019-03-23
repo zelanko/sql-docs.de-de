@@ -13,15 +13,15 @@ helpviewer_keywords:
 - expressions [Integration Services], packages
 - SSIS packages, expressions
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f2a8dba54a8e638da5777456341321d38abbb01f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 2a9d7fe2f1f65f0a698e727e5bad6df392c91546
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352320"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376239"
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services-Ausdrücke (SSIS)
   Ein Ausdruck ist eine Kombination aus Symbolen (Bezeichner, Literale, Funktionen und Operatoren), die einen einzelnen Datenwert ergeben. Einfache Ausdrücke können aus einer einzelnen Konstante, Variable oder Funktion bestehen. Meist sind Ausdrücke jedoch komplex, verwenden mehrere Operatoren und Funktionen und verweisen auf mehrere Spalten und Variablen. In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]können Ausdrücke zum Definieren von Bedingungen für CASE-Anweisungen, Erstellen und Aktualisieren von Werten in Datenspalten, Zuweisen von Werten zu Variablen, Aktualisieren oder Auffüllen von Eigenschaften zur Laufzeit, Definieren von Einschränkungen in Rangfolgeneinschränkungen sowie zum Bereitstellen von Ausdrücken für den For-Schleifencontainer verwendet werden.  

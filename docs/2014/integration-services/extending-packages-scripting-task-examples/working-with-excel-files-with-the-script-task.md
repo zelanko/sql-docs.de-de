@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Excel [Integration Services]
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dbd4f546a6e09d771577cd5d297e6f1a58175469
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 10fcf850a770296a81c99bc9b8168857b443df41
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369912"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376089"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Arbeiten mit Excel-Dateien mit dem Skripttask
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt den Excel-Verbindungs-Manager, die Excel-Quelle und das Excel-Ziel zum Arbeiten mit den in Kalkulationstabellen gespeicherten Daten im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel-Dateiformat bereit. Die in diesem Thema beschriebenen Verfahren verwenden den Skripttask zum Abrufen von Informationen über verfügbare Excel-Datenbanken (Arbeitsmappendateien) und -Tabellen (Arbeitsmappen und benannte Bereiche). Diese Beispiele können leicht geändert werden, um mit einer der anderen vom [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB-Anbieter unterstützten dateibasierten Datenquellen zu arbeiten.  

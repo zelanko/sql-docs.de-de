@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
 - Data Profiling task [Integration Services], viewer
 ms.assetid: 3469c60a-8f4f-46ba-999a-cb9070197fea
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8b91e91d726123a057ba6aa8850633d4d3656354
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4806d8117e2c28a18fe1ba3252334fd5fa495849
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065140"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377518"
 ---
 # <a name="data-profile-viewer-f1-help"></a>Datenprofil-Viewer (F1-Hilfe)
   Verwenden Sie den Datenprofil-Viewer, um die Ausgabe des Datenprofilerstellungs-Tasks anzuzeigen.  
@@ -55,10 +55,10 @@ ms.locfileid: "48065140"
  Zeigt die maximale Länge der Werte in dieser Spalte an.  
   
  **Führende Leerstellen ignorieren**  
- Zeigt an, ob dieses Profil mit berechnet wurde ein `IgnoreLeadingSpaces` Wert "true" oder "false". Diese Eigenschaft wurde auf der Seite **Profilanforderungen** vom Editor für den Datenprofilerstellungs-Task festgelegt.  
+ Zeigt an, ob dieses Profil mit einem `IgnoreLeadingSpaces`-Wert von True oder False berechnet wurde. Diese Eigenschaft wurde auf der Seite **Profilanforderungen** vom Editor für den Datenprofilerstellungs-Task festgelegt.  
   
  **Nachfolgende Leerzeichen ignorieren**  
- Zeigt an, ob dieses Profil mit berechnet wurde ein `IgnoreTrailingSpaces` Wert "true" oder "false". Diese Eigenschaft wurde auf der Seite **Profilanforderungen** vom Editor für den Datenprofilerstellungs-Task festgelegt.  
+ Zeigt an, ob dieses Profil mit einem `IgnoreTrailingSpaces`-Wert von True oder False berechnet wurde. Diese Eigenschaft wurde auf der Seite **Profilanforderungen** vom Editor für den Datenprofilerstellungs-Task festgelegt.  
   
  **Zeilenanzahl**  
  Zeigt die Anzahl der Zeilen in der Tabelle oder Sicht an.  
@@ -139,7 +139,7 @@ ms.locfileid: "48065140"
  Zeigt die Spalten an, die als Kandidatenschlüssel für die Profilerstellung ausgewählt wurden.  
   
  **Schlüsselstärke**  
- Zeigt die Stärke (als Prozentsatz) der Kandidatenschlüsselspalte oder Kombination von Spalten an. Eine Schlüsselstärke von weniger als 100 % gibt an, dass doppelte Werte vorhanden sind.  
+ Zeigt die Stärke (als Prozentsatz) der Kandidatenschlüsselspalte oder Kombination von Spalten an. Eine Schlüsselstärke von weniger als 100 % gibt an, dass doppelte Werte vorhanden sind.  
   
 #### <a name="key-violations-pane"></a>Bereich 'Schlüsselverletzungen'  
  **\<Spalte1>, \<Spalte2> usw.**  
