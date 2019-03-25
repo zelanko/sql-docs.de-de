@@ -22,15 +22,15 @@ helpviewer_keywords:
 - removing packages
 - relocating packages
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cb9f243d05b741fcc803f29f5703c1e02a6244d3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1d0660fba12f2c83cd7e97b80ac863d8d05eda18
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353704"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380178"
 ---
 # <a name="dtutil-utility"></a>dtutil Utility
   Das Eingabeaufforderungs-Hilfsprogramm **dtutil** dient zum Verwalten von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paketen. Mit dem Hilfsprogramm kann ein Paket kopiert, verschoben oder gelöscht und das Vorhandensein eines Pakets überprüft werden. Diese Aktionen können für jedes [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paket ausgeführt werden, das sich an einem der drei folgenden Speicherorte befindet: in einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank, im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paketspeicher oder im Dateisystem. Falls das Hilfsprogramm auf ein Paket zugreift, das in **msdb**gespeichert ist, werden Sie möglicherweise zur Eingabe eines Benutzernamens und eines Kennworts aufgefordert. Wenn die Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung verwendet, ist sowohl ein Benutzername als auch ein Kennwort erforderlich. Falls der Benutzername fehlt, versucht **dtutil** sich bei [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mit der Windows-Authentifizierung anzumelden. Der Speichertyp des Pakets wird durch die Optionen `/SQL`, `/FILE` und `/DTS` identifiziert.  
