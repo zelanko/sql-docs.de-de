@@ -11,12 +11,12 @@ ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a8eb48a0c3147b61eb57b6a8035765ed73850efa
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: fde8f649921ebd1410b8b19d8f4883502e56f640
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143590"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305958"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Exemplarische Vorgehensweise: Erstellen und Ausführen eines SQL Server-Komponententests
 In dieser exemplarischen Vorgehensweise erstellen Sie einen SQL Server-Komponententest, mit dem das Verhalten mehrerer gespeicherter Prozeduren überprüft wird. Mithilfe von SQL Server-Komponententests können Codefehler, die u.U. ein fehlerhaftes Anwendungsverhalten verursachen, leichter identifiziert werden. SQL Server-Komponententests und -Anwendungstests können im Rahmen einer automatisierten Testreihe ausgeführt werden.  
@@ -968,7 +968,7 @@ Zum Erstellen und Überprüfen eines negativen Tests führen Sie folgende Aufgab
     Sie geben an, dass Sie eine bestimmte Ausnahme erwarten. Optional können Sie eine bestimmte Fehlernummer angeben. Wenn Sie dieses Attribut nicht hinzufügen, schlägt der Komponententest fehl, und im Fenster "Testergebnisse" wird eine Meldung angezeigt.  
   
     > [!IMPORTANT]  
-    > Derzeit wird das ExpectedSqlException-Attribut in Visual Studio 2012 nicht unterstützt. Wie Sie dieses Problem umgehen können, erfahren Sie unter [Datenbankkomponententest "Erwarteter Fehler" kann nicht ausgeführt werden](https://social.msdn.microsoft.com/Forums/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345)(möglicherweise nur in englischer Sprache).  
+    > Derzeit wird das ExpectedSqlException-Attribut in Visual Studio 2012 nicht unterstützt. Wie Sie dieses Problem umgehen können, erfahren Sie unter [Datenbankkomponententest "Erwarteter Fehler" kann nicht ausgeführt werden](https://social.msdn.microsoft.com/Forums/en-US/e74e06ad-e3c9-4cb0-97ad-a6f235a52345/unable-to-run-quotexpected-failurequot-database-unit-test)(möglicherweise nur in englischer Sprache).  
   
 3.  Klicken Sie im Menü „Datei“ auf „SqlServerUnitTests1.cs“ speichern.  
   

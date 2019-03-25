@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6a8e2aabc262eae4f25bf1cc5056955b58b874d0
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 3d2881dfbb1e8b764c28e0ee9e5cd35ab6ba2087
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579360"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306048"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Neues in SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ SQL Server Analysis Services 2017 führt zahlreiche Verbesserungen für tabellar
 - DAX-Editor für SSDT. (CTP 2.0)
 - Codierungshinweise, eine erweiterte Funktion für die Optimierung der Datenaktualisierung von großen tabellarischen In-Memory-Modellen. (CTP 1.3)
 - Unterstützung für den **1400 Kompatibilitätsgrad** für tabellarische Modelle. Um neue Tabellenmodellprojekte zu erstellen oder vorhandene Projekte auf den Kompatibilitätsgrad 1400 zu aktualisieren, müssen Sie [SQL Server Data Tools (SSDT) 17.0 RC2](https://go.microsoft.com/fwlink?LinkId=837939) herunterladen und installieren. (CTP 1.1)
-- Eine moderne **Get Data**-Erfahrung für tabellarische Modelle mit dem Kompatibilitätsgrad 1400. Weitere Informationen finden Sie unter [Analysis Services-Teamblog](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-2017-on-windows-ctp-1-1-for-analysis-services/). (CTP 1.1)
+- Eine moderne **Get Data**-Erfahrung für tabellarische Modelle mit dem Kompatibilitätsgrad 1400. Weitere Informationen finden Sie unter [Analysis Services-Teamblog](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-vnext-on-windows-ctp-1-1-for-analysis-services/). (CTP 1.1)
 - Eigenschaft **Elemente ausblenden**, um leere Elemente in unregelmäßigen Hierarchien auszublenden. (CTP 1.1)
 - Neue **Detailzeilen**-Endbenutzeraktion, um für aggregierte Informationen **Details anzeigen** zu können. Die Funktionen [SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) und **DETAILROWS** zum Erstellen von Detailzeilenausdrücken. (CTP 1.1)
 - Der Operator DAX **IN** für die Angabe mehrerer Werte. (CTP 1.1)
