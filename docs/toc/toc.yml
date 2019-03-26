@@ -6644,17 +6644,21 @@ items:
           href: ../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md
         - name: Hinzufügen eines Sammelelements zu einem Sammlungssatz (T-SQL)
           href: ../relational-databases/data-collection/add-a-collection-item-to-a-collection-set-transact-sql.md
-    - name: Erweiterte Ereignisse
+    - name: Übersicht über erweiterte Ereignisse (XEvents)
       href: ../relational-databases/extended-events/extended-events.md
       items:
-      - name: 'Schnellstart: Erweiterte Ereignisse in SQL Server'
-        href: ../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
-      - name: Konfigurieren
+      - name: Schnellstarts
         items:
-        - name: Verwalten von Ereignissitzungen
-          href: ../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md
-        - name: Erweiterte Ansicht von Zieldaten
+        - name: 'Schnellstart: Erweiterte Ereignisse in SQL Server'
+          href: ../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
+      - name: Lernprogramme
+        items:
+        - name: Erweiterte Ansicht von Zieldaten aus XEvents
           href: ../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md
+        - name: Konvertieren eines SQL-Ablaufverfolgungsskripts in eine Sitzung
+          href: ../relational-databases/extended-events/convert-an-existing-sql-trace-script-to-an-extended-events-session.md
+      - name: Konzepte
+        items:
         - name: Pakete
           href: ../relational-databases/extended-events/sql-server-extended-events-packages.md
         - name: Ziele
@@ -6665,29 +6669,32 @@ items:
           href: ../relational-databases/extended-events/sql-server-extended-events-engine.md
         - name: Sitzungen
           href: ../relational-databases/extended-events/sql-server-extended-events-sessions.md
+        - name: XEvents-Äquivalente zu Ereignisklassen für die SQL-Ablaufverfolgung
+          href: ../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md
+        - name: Tools
+          href: ../relational-databases/extended-events/extended-events-tools.md
+      - name: Anleitungen
+        items:
+        - name: XEvent-Sitzungen verwalten
+          href: ../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md
         - name: Ändern einer Sitzung
           href: ../relational-databases/extended-events/alter-an-extended-events-session.md
         - name: SELECT und JOIN von Systemsichten
           href: ../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md
-        - name: Äquivalente zu erweiterten Ereignissen für SQL-Ablaufverfolgungsklassen
-          href: ../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md
-        - name: Konvertieren eines SQL-Ablaufverfolgungsskript in eine Sitzung
-          href: ../relational-databases/extended-events/convert-an-existing-sql-trace-script-to-an-extended-events-session.md
-        - name: Feststellen, welche Abfragen Sperren enthalten
+        - name: Ermitteln von Abfragen mit Sperren
           href: ../relational-databases/extended-events/determine-which-queries-are-holding-locks.md
         - name: Suchen von Objekten mit Sperren
           href: ../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md
         - name: Überwachen der Systemaktivität
           href: ../relational-databases/extended-events/monitor-system-activity-using-extended-events.md
-      - name: Tools
-        href: ../relational-databases/extended-events/extended-events-tools.md
-        items:
         - name: Verwenden des SSMS XEvent Profilers
           href: ../relational-databases/extended-events/use-the-ssms-xe-profiler.md
         - name: Verwenden der system_health-Sitzung
           href: ../relational-databases/extended-events/use-the-system-health-session.md
-        - name: Verwenden des PowerShell-Anbieters für erweiterte Ereignisse
+        - name: Verwenden des PowerShell-Anbieters für XEvents
           href: ../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md
+      - name: References
+        href: ../relational-databases/extended-events/xevents-references-system-objects.md
     - name: SQL-Ablaufverfolgung
       href: ../relational-databases/sql-trace/sql-trace.md
       items:
@@ -8433,8 +8440,8 @@ items:
     items:
     - name: Herunterladen von SSDT
       href: ../ssdt/download-sql-server-data-tools-ssdt.md
-    - name: Änderungsprotokoll für SSDT
-      href: ../ssdt/changelog-for-sql-server-data-tools-ssdt.md
+    - name: Versionshinweise für SSDT
+      href: ../ssdt/release-notes-ssdt.md
     - name: Frühere Versionen von SSDT und SSDT-BI
       href: ../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
     - name: Azure Active Directory-Support
@@ -17219,9 +17226,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: Handhabung von Namespaces in XQuery
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: bde69d4b13a3ab5bf680d3816c47364b07e093a7
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.openlocfilehash: 8efef6d8d30133dff4c5ca71d37a753e0168a4e5
+ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356543"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417232"
