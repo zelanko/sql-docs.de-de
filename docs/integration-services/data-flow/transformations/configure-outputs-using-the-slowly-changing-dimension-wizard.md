@@ -12,15 +12,15 @@ helpviewer_keywords:
 - slowly changing dimensions
 - Slowly Changing Dimension Wizard
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 529553265adc0045fa9a52a9303d1c3b24998065
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74f1d8df75ae85367f57de01e9f8a60bab902242
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752208"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274310"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>Konfiguration von Ausgaben mithilfe des Assistenten für langsam veränderliche Dimensionen
   Der Assistent für langsam veränderliche Dimensionen dient als Editor für die Transformation für langsam veränderliche Dimensionen. Das Erstellen und Konfigurieren des Datenflusses für langsam veränderliche Dimensionen kann eine komplexe Aufgabe sein. Der Assistent für langsam veränderliche Dimensionen bietet die einfachste Methode zum Erstellen des Datenflusses für die Ausgaben der Transformation für langsam veränderliche Dimensionen und führt durch die Schritte zum Zuordnen von Spalten, Auswählen von Geschäftsschlüsselspalten, Festlegen von Spaltenänderungsattributen und Konfigurieren der Unterstützung für abgeleitete Dimensionselemente.  
@@ -80,7 +80,7 @@ ms.locfileid: "47752208"
 ## <a name="updating-slowly-changing-dimension-outputs"></a>Aktualisieren von Ausgaben für die Transformation für langsam veränderliche Dimensionen  
  Die einfachste Methode, um die Konfiguration von Ausgaben für die Transformation für langsam veränderliche Dimensionen zu aktualisieren, ist die erneute Ausführung des Assistenten für langsam veränderliche Dimensionen und das Ändern der Eigenschaften auf den Seiten des Assistenten. Sie können die Transformation für langsam veränderliche Dimensionen auch im Dialogfeld **Erweiterter Editor** oder programmgesteuert aktualisieren.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
   
   

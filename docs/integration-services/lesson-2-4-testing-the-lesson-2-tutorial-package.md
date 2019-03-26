@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2c17b7679a10d9273578c74dfa452b120ae2d87b
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 7524010d42675b2eb503f8b8f43205a7ef2705b6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143200"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272210"
 ---
 # <a name="lesson-2-4-test-the-lesson-2-tutorial-package"></a>Lektion 2.4: Testen des Tutorialpakets aus Lektion 2
 
@@ -48,7 +48,7 @@ Bevor Sie das Paket testen, überprüfen Sie, ob Ablaufsteuerung und Datenfluss 
 [Lektion 3: Hinzufügen der Protokollierung mit SSIS](../integration-services/lesson-3-add-logging-with-ssis.md)  
   
 ## <a name="see-also"></a>Siehe auch  
-[Ausführung von Projekten und Paketen](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)  
+[Ausführen von Projekten und Paketen](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)  
   
   
   

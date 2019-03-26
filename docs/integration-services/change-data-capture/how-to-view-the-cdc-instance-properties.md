@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 4bce9b82-7bbd-41df-b3f4-4b40b8bad474
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cdd6241b498a8d23f26a146644e2b302cddd9f5f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 663131afa6741e1e8addc9809080bed1e1fda67c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765558"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290266"
 ---
 # <a name="how-to-view-the-cdc-instance-properties"></a>Anzeigen der CDC-Instanzeigenschaften
   In diesem Verfahren wird beschrieben, wie Sie die CDC Designer Console zum Anzeigen von Informationen zu den Instanzen verwenden, die Sie im Rahmen der Verwaltung des Betriebs der Instanzen erstellen.  

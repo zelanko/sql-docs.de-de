@@ -6,15 +6,15 @@ ms.prod: sql
 ms.prod_service: integration-services
 ms.custom: ''
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 084a1e3db36188939542ac578cee327cbc1d62f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 101c0656aa8720743906e1f9e71075764942b7f3
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848088"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282534"
 ---
 # <a name="run-an-ssis-package-with-powershell"></a>Ausführen eines SSIS-Pakets mit PowerShell
 In diesem Schnellstart wird dargestellt, wie Sie mit einem PowerShell-Skript eine Verbindung zu einem Datenbankserver herstellen und ein SSIS-Paket ausführen.

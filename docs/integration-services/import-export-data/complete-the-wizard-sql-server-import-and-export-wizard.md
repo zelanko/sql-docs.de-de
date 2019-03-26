@@ -3,22 +3,21 @@ title: Assistenten abschließen (SQL Server-Import/Export-Assistent) | Microsoft
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.completewizard.f1
 ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b7d417f2887c58e88e1bbb52c7fc171eba24030c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8a3624eeae89d520fb9e97e50af1d32de6dab55
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710128"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222044"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>Assistenten abschließen (SQL Server-Import/Export-Assistent)
 Nachdem Sie angegeben haben, ob der Kopiervorgang sofort ausgeführt werden soll, und nachdem Sie optional auch das Paket gespeichert haben, das der Assistent erstellt hat, zeigt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Import/Export-Assistent die Seite **Assistenten abschließen** an. Auf dieser Seite überprüfen Sie die im Assistenten ausgewählten Optionen und klicken dann auf **Fertig stellen** , um den Kopiervorgang zu starten.

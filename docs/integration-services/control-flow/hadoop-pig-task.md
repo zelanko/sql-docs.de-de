@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hadooppigtask.f1
 ms.assetid: 90646316-9822-48aa-9900-295a33750780
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ea94918ce0c09033ed716d12026151c410d7d1f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88b9871a3e89ab1f21c6c37344ed26e19fc5dca7
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805408"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271720"
 ---
 # <a name="hadoop-pig-task"></a>Hadoop Pig-Task
   Mithilfe eines Hadoop Pig-Tasks können Sie ein Pig-Skript in einem Hadoop-Cluster ausführen.  
@@ -27,7 +27,7 @@ ms.locfileid: "47805408"
   
  ![Editor für den Pig-Task](../../integration-services/control-flow/media/hadoop-pig-task.png "Editor für den Pig-Task")  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  Konfigurieren Sie die folgenden Optionen im Hadoop-Dialogfeld **Editor für den Pig-Task** .  
   
 |Feld|und Beschreibung|  
@@ -38,7 +38,7 @@ ms.locfileid: "47805408"
 |**HadoopScriptFilePath**|Wenn der Wert von **SourceType** **ScriptFile**ist, geben Sie den Pfad der Skriptdatei auf Hadoop an.|  
 |**TimeoutInMinutes**|Geben Sie einen Timeoutwert in Minuten an. Wenn der Hadoop-Job vor Ablauf des Timeouts nicht abgeschlossen wurde, wird er abgebrochen. Geben Sie 0 ein, wenn der Hadoop-Job asynchron ausgeführt werden soll.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Hadoop-Verbindungs-Manager](../../integration-services/connection-manager/hadoop-connection-manager.md)  
   
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bd08837dffff9fb77ff8dd0f43d3b558fc6af2d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ac20c9f13bbf39bc4ffd46cb6b036c8314684ca
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688788"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274948"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>Optionen für die Anforderung für funktionales Abhängigkeitsprofil (Datenprofilerstellungs-Task)
   Verwenden Sie den Bereich **Anforderungseigenschaften** im Fenster **Profilanforderungen** , um die Optionen für die im Anforderungsbereich ausgewählte **Anforderung für funktionales Abhängigkeitsprofil** festzulegen. Ein funktionales Abhängigkeitsprofil dokumentiert das Ausmaß, in dem die Werte in einer Spalte (der abhängigen Spalte) von den Werten in einer anderen Spalte oder einer Gruppe von Spalten (der determinanten Spalte) abhängen. Dieses Profil hilft Ihnen auch, Probleme mit den Daten zu identifizieren, z. B. ungültige Werte. Beispiel: Sie erstellen ein Profil der Abhängigkeit zwischen einer Spalte, die Postleitzahlen enthält, und einer Spalte mit US-amerikanischen Bundesstaaten. In diesem Profil sollte dieselbe Postleitzahl immer denselben Bundesstaat aufweisen, doch das Profil entdeckt Verstöße gegen das Abhängigkeitsverhältnis.  
@@ -110,7 +110,7 @@ ms.locfileid: "47688788"
   
 |value|und Beschreibung|  
 |-----------|-----------------|  
-|**Keine**|Gibt keinen Schwellenwert an. Die funktionale Abhängigkeitsstärke wird unabhängig vom Wert gemeldet.|  
+|**None**|Gibt keinen Schwellenwert an. Die funktionale Abhängigkeitsstärke wird unabhängig vom Wert gemeldet.|  
 |**Specified**|Verwenden Sie den Schwellenwert, der in **FDStrengthThreshold**angegeben ist. Die funktionale Abhängigkeitsstärke wird nur gemeldet, wenn sie größer als der Schwellenwert ist.|  
 |**Exact**|Gibt keinen Schwellenwert an. Die funktionale Abhängigkeitsstärke wird nur gemeldet, wenn eine genaue funktionale Abhängigkeit zwischen den ausgewählten Spalten besteht.|  
   
@@ -120,7 +120,7 @@ ms.locfileid: "47688788"
  **MaxNumberOfViolations**  
  Geben Sie die maximale Anzahl von funktionale Abhängigkeitsverstößen an, die in der Ausgabe dokumentiert werden sollen. Der Standardwert dieser Eigenschaft ist 100. Diese Option ist deaktiviert, wenn **Exact** als **ThresholdSetting**ausgewählt wird.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Editor für den Datenprofilerstellungs-Task &#40;Seite "Allgemein"&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [Schnellprofilformular für eine einzelne Tabelle &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   

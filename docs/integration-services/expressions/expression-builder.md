@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Expression Builder dialog box
 ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9898ec238e8548f55f07b27bdca1fc512c55a413
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 199c6a433523fed4a4cb164669529b2426df37f7
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804314"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275193"
 ---
 # <a name="expression-builder"></a>Ausdrucks-Generator
   Verwenden Sie das Dialogfeld **Ausdrucks-Generator** , um mithilfe einer grafischen Benutzeroberfläche einen Eigenschaftsausdruck zu erstellen und zu bearbeiten oder den Ausdruck zu schreiben, der den Wert einer Variablen festlegt. Diese grafische Benutzeroberfläche bietet Listen von Variablen sowie integrierte Verweise auf Funktionen, Typumwandlungen und Operatoren der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Ausdruckssprache.  
@@ -37,7 +37,7 @@ ms.locfileid: "47804314"
   
  Weitere Informationen zu Eigenschaftenausdrücken und zum Schreiben von Ausdrücken finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](../../integration-services/expressions/use-property-expressions-in-packages.md) und [Integration Services-Ausdrücke &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
   
 |Begriff|Definition|  
 |----------|----------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "47804314"
 |**Ausgewerteter Wert**|Listet das Ergebnis der Ausdrucksauswertung auf.|  
 |**Ausdruck auswerten**|Klicken Sie auf **Ausdruck auswerten** , um das Auswertungsergebnis des Ausdrucks anzuzeigen.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Seite Ausdrücke](../../integration-services/expressions/expressions-page.md)   
  [Eigenschaftsausdrucks-Editor](../../integration-services/expressions/property-expressions-editor.md)   
  [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   

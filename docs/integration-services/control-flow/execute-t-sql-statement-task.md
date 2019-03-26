@@ -14,15 +14,15 @@ helpviewer_keywords:
 - statements [Integration Services]
 - Execute T-SQL Statement task [Integration Services]
 ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c620b8da5b94e3437ecbf17f889c8caa518e743a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 89643620c85dcd453d86a972f46156f11137ce3a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640187"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290756"
 ---
 # <a name="execute-t-sql-statement-task"></a>T-SQL-Anweisung ausführen (Task)
   Mit dem Task T-SQL-Anweisung ausführen werden Transact-SQL-Anweisungen ausgeführt. Weitere Informationen finden Sie unter [Transact-SQL-Referenz &amp;#40;Datenbank-Engine&amp;#41;](../../t-sql/transact-sql-reference-database-engine.md) und [Integration Services-Abfragen &amp;#40;SSIS&amp;#41;](../../integration-services/integration-services-ssis-queries.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "51640187"
   
 -   [Festlegen der Eigenschaften eines Tasks oder Containers](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Integration Services-Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Ablaufsteuerung](../../integration-services/control-flow/control-flow.md)   
  [MERGE in Integration Services-Paketen](../../integration-services/control-flow/merge-in-integration-services-packages.md)  

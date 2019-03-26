@@ -12,15 +12,15 @@ helpviewer_keywords:
 - deploying cache files for Lookup transformation
 - Lookup transformation cache files
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9305cba0aa7fd1057812c12288a39a9ec2c30990
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 375f733438f1a1d6b0a085f6f46f434894a37e65
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824678"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275592"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>Erstellen und Bereitstellen eines Cache für die Transformation für Suche
   Sie können eine Cachedatei (.caw) erstellen und für die Transformation zur Suche bereitstellen. Das Verweisdataset wird in der Cachedatei gespeichert.  
@@ -91,7 +91,7 @@ ms.locfileid: "47824678"
   
 5.  Stellen Sie das Paket für das Dateisystem bereit. Weitere Informationen finden Sie unter [Deploy Packages by Using the Deployment Utility](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Create a Deployment Utility](../../../integration-services/packages/create-a-deployment-utility.md)  
   
   

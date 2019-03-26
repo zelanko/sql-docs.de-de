@@ -3,22 +3,21 @@ title: Flatfileziel konfigurieren (SQL Server-Import/Export-Assistent) | Microso
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.configureflatfiledest.f1
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f8dd326b588880ca2f095c83c6a2d9ad8f02ac32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23acf4037b9e759fe60847c4d3791528770f89b9
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694148"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222034"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Flatfileziel konfigurieren (SQL Server-Import/Export-Assistent)
   Wenn Sie ein Flatfile-Ziel ausgewählt haben, zeigt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Import/Export-Assistent **Flatfileziel konfigurieren** an, nachdem Sie angegeben haben, dass Sie eine Tabelle kopieren möchten, oder nachdem Sie eine Abfrage bereitgestellt haben. Auf dieser Seite geben Sie Formatierungsoptionen für das Flatfileziel an. Optional können Sie die Zuordnung einzelner Spalten überprüfen und eine Vorschau von Beispieldaten anzeigen.  

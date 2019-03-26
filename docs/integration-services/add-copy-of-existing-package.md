@@ -12,20 +12,20 @@ f1_keywords:
 helpviewer_keywords:
 - Add Copy of Existing Package dialog box
 ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8df0a074741f135d9c445a65c31b796f02bb5782
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e8602665ef47ec206c1a6c751b9c3e3ffb0aa74e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523517"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280904"
 ---
 # <a name="add-copy-of-existing-package"></a>Kopie des vorhandenen Pakets hinzufügen
   Verwenden Sie das Dialogfeld **Kopie des vorhandenen Pakets hinzufügen** , um einem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Projekt eine Kopie eines Pakets hinzuzufügen, das in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , im Dateisystem oder im SSIS-Paketspeicher gespeichert ist.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Paketspeicherort**  
  Wählen Sie den Typ des Speicherortes aus, aus dem das Paket kopiert werden soll.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "52523517"
  **Paketpfad**  
  Geben Sie den Paketpfad ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(…)**, um das zu kopierende Paket zu suchen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Kopie des Pakets speichern](https://msdn.microsoft.com/library/7b44c0d7-d8fa-4491-8836-0899f621d3a8)   
  [Speichern von Paketen](../integration-services/save-packages.md)   
  [Integration Services-Dienst &#40;SSIS-Dienst&#41;](../integration-services/service/integration-services-service-ssis-service.md)

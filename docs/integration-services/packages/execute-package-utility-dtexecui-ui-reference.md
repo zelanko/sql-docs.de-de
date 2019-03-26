@@ -21,15 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bb2f54dde0e73733a4fd129c2d2a4d081942af52
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 38745dc80686129b73d087a2977231558c3904b7
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132250"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272575"
 ---
 # <a name="execute-package-utility-dtexecui"></a>Paketausführungsprogramm (dtexecui)
   Verwenden Sie das **Paketausführungshilfsprogramm** , um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete auszuführen. Das Hilfsprogramm führt Pakete aus, die an einem von drei Speicherorten gespeichert wurden: in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank, im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher und im Dateisystem. Diese Benutzeroberfläche, die über [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder durch Eingeben von **dtexecui** an der Eingabeaufforderung geöffnet werden kann, stellt eine Alternative zum Ausführen von Paketen mithilfe des Eingabeaufforderungstools **DTExec** dar.  
@@ -103,7 +103,7 @@ ms.locfileid: "54132250"
   
 #### <a name="package-source--file-system"></a>Package Source = File System  
  **Paket**  
- Geben Sie den Namen des Pakets ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)**, um das Paket mithilfe des Dialogfelds „Öffnen“ zu suchen. In dem Dialogfeld werden standardmäßig nur Dateien mit der Erweiterung .dtsx aufgelistet.  
+ Geben Sie den Namen des Pakets ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)**, um das Paket mithilfe des Dialogfelds „Öffnen“ zu suchen. In dem Dialogfeld werden standardmäßig nur Dateien mit der Erweiterung *.dtsx aufgelistet.  
   
 #### <a name="package-source--ssis-package-store"></a>Package Source = SSIS Package Store  
  **Server**  
@@ -228,7 +228,7 @@ ms.locfileid: "54132250"
  **Konsolenereignisse**  
  Geben Sie die Ereignisse und Meldungstypen an, die gemeldet werden sollen.  
   
- **Keine**  
+ **None**  
  Wählen Sie diese Option aus, um keinerlei Informationen zu melden.  
   
  **Fehler**  

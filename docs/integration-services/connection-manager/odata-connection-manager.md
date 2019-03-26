@@ -11,15 +11,15 @@ ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
 f1_keywords:
 - sql13.dts.designer.odatasource.connectionmanager.f1
 - sql13.dts.designer.odataconnectionmanager.f1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aa18c7b1a6aeaccb448c7006e8d4430d436a2516
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 20421d29832aab8fdeb9532c335c689a1314ad2e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511265"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276204"
 ---
 # <a name="odata-connection-manager"></a>OData-Verbindungs-Manager
  Stellen Sie eine Verbindung mit einer OData-Quelle mit einem OData-Verbindungs-Manager her. Eine OData-Quellkomponente stellt über einen OData-Verbindungs-Manager eine Verbindung mit einer OData-Quelle her und verwendet die Daten des Diensts. Weitere Informationen finden Sie unter [OData Source](../../integration-services/data-flow/odata-source.md).  
@@ -69,7 +69,7 @@ Sie können die **Microsoft Online Services**-Authentifizierungsoption nicht ver
 ## <a name="odata-connection-manager-editor"></a>OData-Verbindungs-Manager-Editor
   Verwenden Sie das Dialogfeld **OData-Verbindungs-Manager-Editor**, um eine Verbindung hinzufügen oder eine vorhandene Verbindung mit einer OData-Datenquelle zu bearbeiten.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Name des Verbindungs-Managers**  
  Name des Verbindungs-Managers.  
   

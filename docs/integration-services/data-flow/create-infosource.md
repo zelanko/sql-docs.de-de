@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7db233b-5464-43de-9d26-6dd24c7ac1b7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cc55d148beba271181a700eedd9de90f95abe549
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a69f86f7eccbf7a105fa67e3572ddc46615468f
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705328"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271249"
 ---
 # <a name="create-infosource"></a>InfoSource erstellen
   Verwenden Sie das Dialogfeld **InfoSource erstellen** , um eine neue InfoSource zu erstellen. Zum Erstellen der neuen InfoSource verwenden Sie entweder das Dialogfeld **InfoSource für Transaktionsdaten erstellen** oder **InfoSource für Masterdaten erstellen** .  
@@ -36,7 +36,7 @@ ms.locfileid: "47705328"
   
 4.  Wählen Sie auf der Seite **Verbindungs-Manager** im Gruppenfeld **SAP BW-Objekte erstellen** die Option **InfoSource**aus, und klicken Sie dann auf **Erstellen**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Transaktionsdaten**  
  Erstellen Sie eine neue InfoSource für Transaktionsdaten.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "47705328"
   
  Wenn Sie diese Option auswählen, wird auch das Dialogfeld **InfoSource für Masterdaten erstellen** geöffnet. Sie verwenden das Dialogfeld **InfoSource für Masterdaten erstellen** , um die neue InfoSource zu erstellen. Weitere Informationen zu diesem Dialogfeld finden Sie unter [Create InfoSource for Master Data](../../integration-services/data-flow/create-infosource-for-master-data.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [F1-Hilfe zum Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

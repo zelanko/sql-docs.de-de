@@ -8,20 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 90144dc6169de000f94c2a07fa45893925ead915
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6068cb284bc0ff8d29f9a4c4da5b5bf3174ce5cd
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659692"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274493"
 ---
 # <a name="catalogstartexecution-ssisdb-database"></a>catalog.start_execution (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Startet eine Instanz der Ausführung im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog.  
+  Startet eine Instanz der Ausführung im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,7 +40,7 @@ catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry
  Eine Ausführung wird verwendet, um die Parameterwerte anzugeben, die von einem Paket während einer einzelnen Instanz der Paketausführung verwendet werden. Nachdem eine Instanz der Ausführung erstellt wurde, wird möglicherweise das entsprechende Projekt erneut bereitgestellt, bevor die Instanz gestartet wurde. In diesem Fall verweist die Instanz der Ausführung auf ein veraltetes Projekt. Dieser ungültige Verweis führt dazu, dass bei der gespeicherten Prozedur ein Fehler auftritt.  
   
 > [!NOTE]  
->  Ausführungen können nur einmal gestartet werden. Um eine Instanz der Ausführung zu starten, muss sie den Zustand „Erstellt“ (ein Wert `1` in der Spalte **status** der Sicht [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md)) aufweisen.  
+>  Ausführungen können nur einmal gestartet werden. Um eine Instanz der Ausführung zu starten, muss sie den Status "Erstellt" (der Wert `1` in der Spalte **status** der [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) -Sicht) aufweisen.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird catalog.create_execution aufgerufen, um eine Ausführungsinstanz für das Paket Child1.dtsx zu erstellen. Das Paket ist in Integration Services Projekt1 enthalten. Im Beispiel wird catalog.set_execution_parameter_value aufgerufen, um Werte für die Parameter Parameter1, Parameter2 und LOGGING_LEVEL festzulegen. Im Beispiel wird catalog.start_execution aufgerufen, um eine Instanz der Ausführung zu starten.  

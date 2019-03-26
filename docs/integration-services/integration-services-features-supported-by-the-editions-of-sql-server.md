@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 35c0b050c760540988ff366f91a7884b7b5fd56b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d1b99431f48d9bbf9b53bb57f1b0bcf2291a6c1
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819778"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276221"
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>Von den SQL Server-Editionen unterstützte Integration Services-Funktionen
  Dieses Thema bietet detaillierte Informationen zu den von den verschiedenen [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]-Editionen unterstützten SQL Server Integration Services-Funktionen (SSIS).  
@@ -38,9 +38,9 @@ Die SQL Server Evaluation Edition steht für einen Testzeitraum von 180 Tagen zu
   
 |Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Scale Out-Master|Benutzerkontensteuerung|||||
-|Scale Out-Worker|Benutzerkontensteuerung|Ja <sup>1</sup>|TBD|TBD|TBD|
-|Unterstützung für Microsoft Dynamics AX und Microsoft Dynamics CRM in OData-Komponenten <sup>2</sup>|Benutzerkontensteuerung|Benutzerkontensteuerung||||
+|Scale Out-Master|Ja|||||
+|Scale Out-Worker|Ja|Ja <sup>1</sup>|TBD|TBD|TBD|
+|Unterstützung für Microsoft Dynamics AX und Microsoft Dynamics CRM in OData-Komponenten <sup>2</sup>|Ja|Ja||||
 
 <sup>1</sup> Wenn Sie Pakete ausführen, für die nur Enterprise-Funktionen in Scale Out erforderlich ist, müssen die Scale Out-Worker ebenfalls auf Instanzen von SQL Server Enterprise ausgeführt werden.
 
@@ -50,37 +50,37 @@ Die SQL Server Evaluation Edition steht für einen Testzeitraum von 180 Tagen zu
 
 |Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|SQL Server-Import/Export-Assistent|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|SQL Server-Import/Export-Assistent|Ja|Ja|Ja|Ja|Ja|  
 
 ## <a name="IS"></a> Integration Services  
   
 |Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Integrierte Datenquellenkonnektoren|Benutzerkontensteuerung|Benutzerkontensteuerung|||| 
-|Integrierte Tasks und Transformationen|Benutzerkontensteuerung|Benutzerkontensteuerung||||  
-|ODBC-Quelle und -Ziel |Benutzerkontensteuerung|Benutzerkontensteuerung|||| 
-|Azure-Datenquellenkonnektoren und Tasks|Benutzerkontensteuerung|Benutzerkontensteuerung||||  
-|Hadoop-/HDFS-Connectors und -Tasks|Benutzerkontensteuerung|Benutzerkontensteuerung||||  
-|Grundlegende Datenprofilerstellungs-Tools|Benutzerkontensteuerung|Benutzerkontensteuerung|||| 
+|Integrierte Datenquellenkonnektoren|Ja|Ja|||| 
+|Integrierte Tasks und Transformationen|Ja|Ja||||  
+|ODBC-Quelle und -Ziel |Ja|Ja|||| 
+|Azure-Datenquellenkonnektoren und Tasks|Ja|Ja||||  
+|Hadoop-/HDFS-Connectors und -Tasks|Ja|Ja||||  
+|Grundlegende Datenprofilerstellungs-Tools|Ja|Ja|||| 
 
 ## <a name="ISAA"></a>Integration Services – Erweiterte Quellen und Ziele  
   
 |Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Oracle-Quelle und -Ziel für eine leistungsstarke Ausführung von Attunity|Benutzerkontensteuerung|||||  
-|Teradata-Quelle und -Ziel für eine leistungsstarke Ausführung von Attunity|Benutzerkontensteuerung|||||  
-|SAP BW-Quelle und -Ziel|Benutzerkontensteuerung|||||  
-|Ziel für Data Mining-Modelltraining|Benutzerkontensteuerung|||||  
-|Ziel für Dimensionsverarbeitung|Benutzerkontensteuerung|||||  
-|Ziel für Partitionsverarbeitung|Benutzerkontensteuerung|||||  
+|Oracle-Quelle und -Ziel für eine leistungsstarke Ausführung von Attunity|Ja|||||  
+|Teradata-Quelle und -Ziel für eine leistungsstarke Ausführung von Attunity|Ja|||||  
+|SAP BW-Quelle und -Ziel|Ja|||||  
+|Ziel für Data Mining-Modelltraining|Ja|||||  
+|Ziel für Dimensionsverarbeitung|Ja|||||  
+|Ziel für Partitionsverarbeitung|Ja|||||  
   
 ## <a name="ISAT"></a> Integration Services – Erweiterte Tasks und Transformationen  
   
 |Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Change Data Capture-Komponenten von Attunity <sup>1</sup>|Benutzerkontensteuerung|||||  
-|Transformation für Data Mining-Abfragen|Benutzerkontensteuerung|||||  
-|Transformationen für Fuzzygruppierung und Fuzzysuche|Benutzerkontensteuerung|||||  
-|Transformationen für Ausdrucksextrahierung und Ausdruckssuche|Benutzerkontensteuerung|||||  
+|Change Data Capture-Komponenten von Attunity <sup>1</sup>|Ja|||||  
+|Transformation für Data Mining-Abfragen|Ja|||||  
+|Transformationen für Fuzzygruppierung und Fuzzysuche|Ja|||||  
+|Transformationen für Ausdrucksextrahierung und Ausdruckssuche|Ja|||||  
 
 <sup>1</sup> Für die Change Data Capture-Komponenten von Attunity ist Enterprise Edition erforderlich. Die Enterprise Edition ist jedoch nicht für den Change Data Capture Service und Change Data Capture-Designer notwendig. Sie können den Designer und den Dienst auf einem Computer verwenden, auf dem SSIS nicht installiert ist.

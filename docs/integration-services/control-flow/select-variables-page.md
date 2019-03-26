@@ -13,22 +13,22 @@ helpviewer_keywords:
 - Select variables
 - Variable selection
 ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d75e66a4641ae5624a99b6c4bea88d14f93bbc1a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7e28a0043cef8fc26dc5b98c255d516c5dd523b0
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528206"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270462"
 ---
 # <a name="select-variables-page"></a>Variablen auswählen (Seite)
   Mithilfe des Dialogfelds **Variablen auswählen** können Sie bei der Konfiguration eines Skripttasks oder einer Skriptkomponente eine oder mehrere Variablen für die Eigenschaften **ReadOnlyVariables** und **ReadWriteVariables** auswählen.  
   
  Um das Dialogfeld **Variablen auswählen** zu öffnen, suchen Sie im Dialogfeld **Transformations-Editor für Skripterstellung** auf der Seite **Skript** unter **Benutzerdefinierte Eigenschaften** entweder nach der **ReadOnlyVariables**-Eigenschaft oder nach der **ReadWriteVariables**-Eigenschaft, und klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten (...), die dieser Eigenschaft zugeordnet ist.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  Auswahlfeld  
  Wählt eine bestimmte Variable aus, wählt alle Variablen aus, oder hebt die Auswahl aller Variablen auf.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "52528206"
  **Typ**  
  Gibt den Datentyp einer Variablen an.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Skripttask-Editor &#40;Seite „Skript“&#41;](../../integration-services/control-flow/script-task-editor-script-page.md)  
   
   

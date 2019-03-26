@@ -13,15 +13,15 @@ helpviewer_keywords:
 - uppercase characters [Integration Services]
 - lowercase characters
 ms.assetid: 109328e1-5604-40ff-895e-f2e7c13fff41
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3f37e7d7f047b66a4beae544aeb5ae0b4cbde040
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 17c536592b2ea50436d817773e4006526e342fe2
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690068"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274273"
 ---
 # <a name="lower-ssis-expression"></a>LOWER (SSIS-Ausdruck)
   Gibt einen Zeichenausdruck zurück, nachdem Großbuchstaben in Kleinbuchstaben konvertiert wurden.  
@@ -64,7 +64,7 @@ LOWER(SUBSTRING(Color, 2, 15))
 LOWER(@CityName)  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [UPPER &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/upper-ssis-expression.md)   
  [Funktionen &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   

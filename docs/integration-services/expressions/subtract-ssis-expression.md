@@ -11,15 +11,15 @@ helpviewer_keywords:
 - '- (subtract)'
 - subtract operator (-)
 ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e544a284cca78a48835af719fe881a995ee87580
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0abad5caf128ac49a3d764684716436f54a14322
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506126"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271071"
 ---
 # <a name="--subtract-ssis-expression"></a>- (Subtrahieren) (SSIS-Ausdruck)
   Subtrahiert den zweiten numerischen Ausdruck vom ersten.  
@@ -64,7 +64,7 @@ ListPrice - StandardCost
 ListPrice - (ListPrice * @[Discount%])  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Operatorenrangfolge und -assoziativität](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Operatoren &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   

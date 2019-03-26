@@ -20,15 +20,15 @@ helpviewer_keywords:
 - data flow [Integration Services], errors
 - expressions [Integration Services], errors
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c08e1b617755d50b49de7c9286e6f5a512039527
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 3a60ec842c22f5c11972b9765f230a00c672ca0e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641831"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277188"
 ---
 # <a name="error-handling-in-data"></a>Fehlerbehandlung in Daten
   Wenn eine Datenflusskomponente eine Transformation auf Spaltendaten anwendet, Daten aus Quellen extrahiert oder Daten in Ziele lädt, können Fehler auftreten. Fehler treten häufig aufgrund unerwarteter Datenwerte auf. Beispielsweise tritt bei einer Datenkonvertierung ein Fehler auf, weil eine Spalte eine Zeichenfolge anstelle einer Zahl enthält. Beim Einfügen in eine Datenbankspalte kann ein Fehler auftreten, weil die Daten einen date-Datentyp und die Spalte einen numeric-Datentyp aufweist. Ein Ausdruck kann nicht ausgewertet werden, weil ein Spaltenwert Null ist, wodurch sich eine ungültige mathematische Operation ergibt.  
@@ -59,7 +59,7 @@ Mithilfe des Dialogfelds **Fehlerausgabe konfigurieren** können Sie die Fehlerb
   
  Weitere Informationen zum Arbeiten mit Fehlerausgaben finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Eingabe oder Ausgabe**  
  Zeigen Sie den Namen der Ausgabe an.  
   
@@ -145,7 +145,7 @@ Mithilfe des Dialogfelds **Fehlerausgabe konfigurieren** können Sie die Fehlerb
   
      Sie können die Skriptkomponente dem Fehlersegment des Datenflusses an einem beliebigen Ort unterhalb der Datenflusskomponenten hinzufügen, deren Fehler Sie erfassen möchten. In der Regel setzen Sie die Skriptkomponente unmittelbar bevor die Fehlerzeilen in ein Ziel geschrieben werden. Auf diese Weise sucht das Skript nur nach Beschreibungen für geschriebene Fehlerzeilen. Das Fehlersegment des Datenflusses korrigiert u.U. einige Fehler und schreibt diese Zeilen nicht in ein Fehlerziel.  
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenfluss](../../integration-services/data-flow/data-flow.md)   
  [Transformieren von Daten mit Transformationen](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
  [Verbinden von Komponenten mit Pfaden](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   

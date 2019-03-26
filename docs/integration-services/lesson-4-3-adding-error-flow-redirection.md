@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0f5d292a7fa1f4097de300fc1f7e8c1a579f541a
-ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
+ms.openlocfilehash: f926f1c1cb9c730401c220120c04ee679d005745
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54211061"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272008"
 ---
 # <a name="lesson-4-3-add-error-flow-redirection"></a>Lektion 4.3: Hinzufügen der Fehlerflussumleitung
 
@@ -42,7 +42,7 @@ Standardmäßig enthalten die beiden zusätzlichen Spalten **ErrorCode** und **E
   
 5.  Klicken Sie auf der **Datenfluss**-Entwurfsoberfläche in der neu hinzugefügten **Skriptkomponente** auf den Namen **Skriptkomponente**, und ändern Sie den Namen in **Fehlerbeschreibung abrufen**.  
   
-6.  Doppelklicken Sie auf die **Fehlerbeschreibung abrufen**-Transformation.  
+6.  Doppelklicken Sie auf die **Get Error Description** -Transformation.  
   
 7.  Wählen Sie im Dialogfeld **Transformations-Editor für Skripterstellung** auf der Seite **Eingabespalten** die **ErrorCode** -Spalte aus.  
   

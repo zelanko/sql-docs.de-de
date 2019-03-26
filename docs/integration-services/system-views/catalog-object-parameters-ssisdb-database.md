@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: d7b04903-2d61-4159-9456-475942d1f732
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0afd8f494474c54eaf911f6cd7b8f74c9ec1a287
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0488d886afdeaac9fe43da22d8a3e9d3c85ff8fd
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729558"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274746"
 ---
 # <a name="catalogobjectparameters-ssisdb-database"></a>catalog.object_parameters (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47729558"
 |value_set|**bit**|Wenn der Wert `1`ist, wurde der Parameterwert zugewiesen. Wenn der Wert `0`ist, wurde der Parameterwert nicht zugewiesen.|  
 |referenced_variable_name|**nvarchar(128)**|Der Name der Umgebungsvariablen, die dem Wert des Parameters zugewiesen wird. Der Standardwert ist **NULL**.|  
 |validation_status|**char(1)**|Nur für Informationszwecke identifiziert. Wird in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nicht verwendet.|  
-|last_validation_time|**datetimeoffset(7)**|Nur für Informationszwecke identifiziert. Wird in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nicht verwendet.|  
+|last_validation_time|**datetimeoffset(7)**|Nur für Informationszwecke identifiziert. Wird in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]nicht verwendet.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Zum Anzeigen von Zeilen in dieser Sicht benötigten Sie eine der folgenden Berechtigungen:  
