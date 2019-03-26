@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8f661acacf17a8977f437abdcefcd3763305229b
-ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
+ms.openlocfilehash: 83dc07ed6336c637aaf17fdcfc1075854fe542b7
+ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58222058"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58434431"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>Gewusst wie: Bereitstellen einer app auf SQL Server-2019 big Data-Cluster (Vorschau)
 
@@ -137,6 +137,9 @@ Um dies auszuprobieren, kopieren Sie die oben genannten Codezeilen in zwei Datei
 ```bash
 mssqlctl app create --spec ./addpy
 ```
+
+> [!NOTE]
+> Die `spec.yaml` -Datei gibt sowohl eine `poolsize` und eine Reihe von `replicas`. Die Anzahl der `replicas` gibt an, die Anzahl von Kopien des Diensts bereitgestellt werden muss. Die `poolsize` gibt die Anzahl der Pools pro Replikat erstellt werden soll. Diese Einstellungen haben Auswirkungen auf die Menge der Anforderungen, die die Bereitstellung parallel verarbeiten kann. Die maximale Anzahl von Anforderungen zu einem bestimmten Zeitpunkt ist gleich `replicas` Zeiten `poolsize`, d.h. Wenn Sie über 5 Replikate und 2 Pools pro Replikat verfügen kann die Bereitstellung auf 10 Anforderungen parallel verarbeiten. Die Abbildung unten für eine grafische Darstellung der `replicas` und `poolsize`: ![Poolgröße und Replikate](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
 
 Sie können überprüfen, ob die app bereitgestellt wurde, mithilfe des List-Befehls:
 
