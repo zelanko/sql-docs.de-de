@@ -12,15 +12,15 @@ f1_keywords:
 - sql13.dts.designer.toolbox.F1
 - sql13.dts.designer.toolboxcommon.F1
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 96ad709b12fc8bcbdb588fc1abb511b4b4ee081e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f1ae0a9f644234a7e887758cf56ebcbc89593ee4
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640827"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289636"
 ---
 # <a name="ssis-toolbox"></a>SSIS-Toolbox
   Alle auf dem lokalen Computer installierten Komponenten werden automatisch in der **SSIS-Toolbox** angezeigt. Wenn Sie zusätzliche Komponenten installieren, klicken mit der rechten Maustaste in die Toolbox und dann auf **Toolbox aktualisieren** , um die Komponenten hinzuzufügen.  
@@ -38,7 +38,7 @@ Um auf weitere Informationen zu einer Komponente in der Toolbox zuzugreifen, kli
 ## <a name="toolbox-categories"></a>Toolbox-Kategorien
  In der **SSIS-Toolbox**werden Ablaufsteuerungs- und Datenflusskomponenten in Kategorien organisiert.  Sie können Kategorien erweitern und ausblenden sowie Komponenten neu anordnen.  Stellen Sie die Standardorganisation wieder her, indem Sie mit der rechten Maustaste in die Toolbox klicken und dann auf **Toolbox-Standardwerte wiederherstellen** klicken.  
   
- Die Kategorien **Favoriten** und **Allgemein** werden in der Toolbox angezeigt, wenn Sie die Registerkarten **Ablaufsteuerung**, **Datenfluss**und **Ereignishandlern** auswählen. Die Kategorie **Weitere Tasks** wird in der Toolbox angezeigt, wenn Sie die Registerkarte **Ablaufsteuerung** oder die Registerkarte **Ereignishandler** auswählen. Die Kategorien Weitere Transformationen, **Weitere Quellen**und **Weitere Ziele** werden in der Toolbox angezeigt, wenn Sie die Registerkarte **Datenfluss** auswählen.  
+ Die Kategorien **Favoriten** und **Allgemein** werden in der Toolbox angezeigt, wenn Sie die Registerkarten **Ablaufsteuerung**, **Datenfluss**und **Ereignishandlern** auswählen. Die Kategorie **Weitere Tasks** wird in der Toolbox angezeigt, wenn Sie die Registerkarte **Ablaufsteuerung** oder die Registerkarte **Ereignishandler** auswählen. Die Kategorien **Weitere Transformationen**, **Weitere Quellen**und **Weitere Ziele** werden in der Toolbox angezeigt, wenn Sie die Registerkarte **Datenfluss** auswählen.  
 
  ## <a name="add-azure-components-to-the-toolbox"></a>Hinzufügen von Azure-Komponenten zur Toolbox  
  Das Azure Feature Pack für Integration Service enthält Verbindungs-Manager für Verbindungen zu Azure-Datenquellen und Tasks für allgemeine Azure-Vorgänge. Installieren Sie das Feature Pack, um diese Elemente der Toolbox hinzufügen. Weitere Informationen finden Sie unter [Azure Feature Pack für Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
