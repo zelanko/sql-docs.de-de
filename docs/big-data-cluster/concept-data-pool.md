@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c3df07da100bf0bbfc0b2238cb4154b4c3a363e3
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 906b27c186668518702c7ab3a757e6eeb4e5b278
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241611"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478225"
 ---
 # <a name="what-are-data-pools-in-a-sql-server-2019-big-data-cluster"></a>Was sind Datenpools in eine SQL Server-2019 big Data-Cluster?
 
@@ -33,6 +33,7 @@ Datenpools ermöglichen die Erstellung von horizontaler Datamarts, in denen exte
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu den SQL Server-big Data-Clustern finden Sie unter der Übersicht über die folgenden:
+Weitere Informationen zu den SQL Server-big Data-Clustern finden Sie unter den folgenden Ressourcen:
 
 - [Was sind SQL Server-2019 big Data-Cluster?](big-data-cluster-overview.md)
+- [Workshop: Microsoft SQL Server-big Data-Cluster Architektur](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c89ddc5d155af4542b5101e9a6e394effc5d9fd3
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 7dfb89103bb83fc77c590e5c5b5984cbd96b197d
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241521"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477925"
 ---
 # <a name="what-is-the-storage-pool-sql-server-2019-big-data-clusters"></a>Was ist der Speicherpool (SQL Server-2019 big Data-Cluster)?
 
@@ -37,6 +37,7 @@ Storage-Knoten dienen:
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu den SQL Server-big Data-Clustern finden Sie unter der Übersicht über die folgenden:
+Weitere Informationen zu den SQL Server-big Data-Clustern finden Sie unter den folgenden Ressourcen:
 
 - [Was sind SQL Server-2019 big Data-Cluster?](big-data-cluster-overview.md)
+- [Workshop: Microsoft SQL Server-big Data-Cluster Architektur](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

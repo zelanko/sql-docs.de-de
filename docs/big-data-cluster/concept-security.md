@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8ad12de9456fef0d4803ae83479e615bffa0edcc
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 5e440a3502e5062013ac5e3b716036f107a13c6a
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241421"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477985"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>Schlüsselbegriffe der Sicherheit für SQL Server-big Data-Cluster
 
@@ -81,7 +81,7 @@ Kommunikation mit nicht-SQL-Dienste in der big Data-Cluster, z.B. Livy Spark ode
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu den SQL Server-big Data-Clustern finden Sie unter den folgenden Artikeln:
+Weitere Informationen zu den SQL Server-big Data-Clustern finden Sie unter den folgenden Ressourcen:
 
 - [Was sind SQL Server-2019 big Data-Cluster?](big-data-cluster-overview.md)
-- [Schnellstart: Bereitstellen von SQL Server-big Data-Cluster in Kubernetes](quickstart-big-data-cluster-deploy.md)
+- [Workshop: Microsoft SQL Server-big Data-Cluster Architektur](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

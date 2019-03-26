@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 817ffcc1ea17a8526304b4bc9064c1becfff90f9
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: fb09a5b13adc7f673c83a91635451435e4a8c945
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161641"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477695"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Wie Sie SQL Server-big Data-Cluster in Kubernetes bereitstellen
 
@@ -347,4 +347,7 @@ Verwenden Sie zum Überwachen und Problembehandlung bei einer Bereitstellung **"
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Probieren Sie einige der neuen Funktionen, und erfahren Sie, [Verwendung von Notebooks in der Vorschau von SQL Server-2019](notebooks-guidance.md).
+Weitere Informationen zu den SQL Server-big Data-Clustern finden Sie unter den folgenden Ressourcen:
+
+- [Was sind SQL Server-2019 big Data-Cluster?](big-data-cluster-overview.md)
+- [Workshop: Microsoft SQL Server-big Data-Cluster Architektur](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

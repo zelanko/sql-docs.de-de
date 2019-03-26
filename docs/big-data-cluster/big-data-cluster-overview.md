@@ -10,12 +10,12 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 996913979669aa85088d6d640436b5610293eb35
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: 20ee32b445a7509967b18c51a8e661527585f291
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072125"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477645"
 ---
 # <a name="what-are-sql-server-2019-big-data-clusters"></a>Was sind SQL Server-2019 big Data-Cluster?
 
@@ -100,6 +100,9 @@ Die Compute-Ebene enthält die Compute-Ressourcen für den Cluster. Knoten mit S
 ### <a id="dataplane"></a> Datenebene
 
 Die Datenebene wird für Dauerhaftigkeit von Daten und Zwischenspeichern verwendet. Es enthält die SQL Datenpool und Speicherpool.  Pool für die SQL-Daten bestehen aus einem oder mehreren Pods, die SQL Server unter Linux ausgeführt wird. Es wird zum Erfassen von Daten aus SQL-Abfragen oder Spark-Aufträgen. SQL Server-big Data-cluster Daten, die im Pool Data Marts beibehalten werden. Der Speicherpool besteht aus Storage Pool Pods bestehend aus SQL Server unter Linux, Spark und HDFS. Alle Speicherknoten in einer SQL Server-big Data-Cluster sind Mitglieder eines Clusters von HDFS.
+
+> [!TIP]
+> Einen detaillierten Einblick in die big Data-Cluster-Architektur und die Installation, finden Sie unter [Workshop: Microsoft SQL Server-big Data-Architektur Clustern](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters).
 
 ## <a name="next-steps"></a>Nächste Schritte
 
