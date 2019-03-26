@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9eefa5a7120f64f5dc6f621a2a74956a461619d9
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 86da716e81c9bcf499c09d28a55c92e3b6f6eebd
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394026"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305968"
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -64,7 +64,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  Die Anzahl der zu persistierenden Ereignisse in einer Sicht. Wenn beispielsweise 100 angegeben wird, werden die 100 aktuellsten Ereignisse, die den Filterkriterien entsprechen, in der Diagnosesitzung persistiert. Wenn weniger als 100 übereinstimmende Ereignisse gefunden werden, enthält die Diagnosesitzung weniger als 100 Ereignisse. *max_item_count_num* muss mindestens einen Wert von 100 und darf maximal den Wert 100.000 aufweisen.  
   
  *event_name*  
- Definiert die tatsächlichen Ereignisse, die in der Diagnosesitzung gesammelt werden sollen.  *event_name* ist eines der Ereignisse, die in [sys.pdw_diag_events](https://msdn.microsoft.com/d813aac0-cea1-4f53-b8e8-d26824bc2587) aufgelistet sind, wobei Folgendes gilt: `sys.pdw_diag_events.is_enabled='True'`.  
+ Definiert die tatsächlichen Ereignisse, die in der Diagnosesitzung gesammelt werden sollen.  *event_name* ist eines der Ereignisse, die in [sys.pdw_diag_events](../../relational-databases/system-catalog-views/sys-pdw-diag-events-transact-sql.md) aufgelistet sind, wobei Folgendes gilt: `sys.pdw_diag_events.is_enabled='True'`.  
   
  *filter_property_name*  
  Der Name der Eigenschaft, auf die Ergebnisse beschränkt werden sollen. Wenn Sie beispielsweise eine Einschränkung basierend auf der Sitzungs-ID vornehmen möchten, muss für *filter_property_name* *SessionId* angegeben werden. Eine Liste mit möglichen Werten für *filter_property_name* finden Sie unter *property_name* weiter unten.  
@@ -90,7 +90,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 |SPID|Die Prozess-ID des Diensts.|  
   
 ## <a name="remarks"></a>Remarks  
- Pro Benutzer sind maximal 10 Diagnosesitzungen gleichzeitig erlaubt. Eine Liste Ihrer aktuellen Sitzungen finden Sie unter [sys.pdw_diag_sessions](https://msdn.microsoft.com/ca111ddc-2787-4205-baf0-1a242c0257a9). Dort können Sie nicht benötigte Sitzungen mithilfe von `DROP DIAGNOSTICS SESSION` löschen.  
+ Pro Benutzer sind maximal 10 Diagnosesitzungen gleichzeitig erlaubt. Eine Liste Ihrer aktuellen Sitzungen finden Sie unter [sys.pdw_diag_sessions](../../relational-databases/system-catalog-views/sys-pdw-diag-sessions-transact-sql.md). Dort können Sie nicht benötigte Sitzungen mithilfe von `DROP DIAGNOSTICS SESSION` löschen.  
   
  Diagnosesitzungen sammeln weiter Metadaten, bis sie gelöscht werden.  
   

@@ -21,15 +21,15 @@ helpviewer_keywords:
 - connections [Integration Services]
 - SQL Server Integration Services packages, connections
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4efe82fa71303bdaf4f8615c80ce45ae3dfda857
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4764ae6b782ea1f7f8187a4d76ce89ea320b145f
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514129"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275856"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services-Verbindungen (SSIS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete verwenden Verbindungen zum Ausführen verschiedener Tasks und zum Implementieren von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Funktionen.  
@@ -165,7 +165,7 @@ Ein Verbindungs-Manager kann auf Paketebene oder auf Projektebene erstellt werde
   
      Das benutzerdefinierte Dialogfeld für den ausgewählten Verbindungs-Manager-Typ wird aufgerufen. Weitere Informationen zu den Verbindungs-Manager-Typen und den verfügbaren Optionen finden Sie in der folgenden Optionentabelle.  
   
-    |Ziel-Editor für Dimensionsverarbeitung|Tastatur|  
+    |Ziel-Editor für Dimensionsverarbeitung|enthalten|  
     |------------------------|-------------|  
     |[ADO-Verbindungs-Manager](../../integration-services/connection-manager/ado-connection-manager.md)|[Konfigurieren des OLE DB-Verbindungs-Managers](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[ADO.NET-Verbindungs-Manager](../../integration-services/connection-manager/ado-net-connection-manager.md)|[ADO.NET-Verbindungs-Manager konfigurieren](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
@@ -201,7 +201,7 @@ Ein Verbindungs-Manager kann auf Paketebene oder auf Projektebene erstellt werde
   
      Das benutzerdefinierte Dialogfeld für den ausgewählten Verbindungs-Manager-Typ wird aufgerufen. Weitere Informationen zu den Verbindungs-Manager-Typen und den verfügbaren Optionen finden Sie in der folgenden Optionentabelle.  
   
-    |Ziel-Editor für Dimensionsverarbeitung|Tastatur|  
+    |Ziel-Editor für Dimensionsverarbeitung|enthalten|  
     |------------------------|-------------|  
     |[ADO-Verbindungs-Manager](../../integration-services/connection-manager/ado-connection-manager.md)|[Konfigurieren des OLE DB-Verbindungs-Managers](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[ADO.NET-Verbindungs-Manager](../../integration-services/connection-manager/ado-net-connection-manager.md)|[ADO.NET-Verbindungs-Manager konfigurieren](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
@@ -233,7 +233,7 @@ Im Dialogfeld **SSIS-Verbindungs-Manager hinzufügen** können Sie den Verbindun
   
  Weitere Informationen zu Verbindungs-Managern finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
-#### <a name="options"></a>Tastatur  
+#### <a name="options"></a>enthalten  
  **Typ des Verbindungs-Managers**  
  Wählen Sie einen Verbindungstyp aus, und klicken Sie anschließend auf **Hinzufügen**, oder doppelklicken Sie auf einen Verbindungstyp, um mithilfe des Editors für den jeweiligen Verbindungstyp die Eigenschaften der Verbindung anzugeben.  
   
@@ -310,7 +310,7 @@ Alle Verbindungs-Manager können im Fenster **Eigenschaften** konfiguriert werde
   
 4.  Doppelklicken Sie im Bereich **Verbindungs-Manager** auf den Verbindungs-Manager, um das Dialogfeld **Verbindungs-Manager** zu öffnen. Informationen über bestimmte Verbindungs-Manager-Typen und die für jeden Typ verfügbaren Optionen finden Sie in der folgenden Tabelle.  
   
-    |Ziel-Editor für Dimensionsverarbeitung|Tastatur|  
+    |Ziel-Editor für Dimensionsverarbeitung|enthalten|  
     |------------------------|-------------|  
     |[ADO-Verbindungs-Manager](../../integration-services/connection-manager/ado-connection-manager.md)|[Konfigurieren des OLE DB-Verbindungs-Managers](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[ADO.NET-Verbindungs-Manager](../../integration-services/connection-manager/ado-net-connection-manager.md)|[ADO.NET-Verbindungs-Manager konfigurieren](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  

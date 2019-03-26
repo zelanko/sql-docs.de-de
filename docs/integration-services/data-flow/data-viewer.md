@@ -12,20 +12,20 @@ f1_keywords:
 helpviewer_keywords:
 - Data Viewer dialog box
 ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c186241a51a0d3c282e8ae12e7ef4ff6737497d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d2232235b1d89384f269edb3a1632f8ff9db067
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662968"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290826"
 ---
 # <a name="data-viewer"></a>Daten-Viewer
   Wenn ein Pfad zu einem Daten-Viewer konfiguriert ist, zeigt dieser Daten-Viewer die Daten pufferweise an, während sie zwischen zwei Datenflusskomponenten fließen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Grüner Pfeil**  
  Klicken Sie auf den Pfeil, um die Daten des nächsten Puffers anzuzeigen. Wenn die Daten in einem einzigen Puffer verschoben werden können, ist diese Option nicht verfügbar.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "47662968"
  **Daten kopieren**  
  Kopiert die Daten des aktuellen Puffers in die Zwischenablage.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Debuggen des Datenflusses](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
   

@@ -14,15 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer SQL Server Objects task [Integration Services]
 ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a7e699eb44ac381fa6cfe5c7dbca857010806753
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 911aa8f873f43245e92b4524c1633a4e55e82a72
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640787"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277289"
 ---
 # <a name="transfer-sql-server-objects-task"></a>SQL Server-Objekte kopieren (Task)
   Mit dem Task „ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekte übertragen“ wird mindestens ein Typ von Objekten in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank zwischen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]übertragen. Der Task kann z. B. Tabellen und gespeicherte Prozeduren kopieren. Je nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Version, die als Quelle verwendet wird, stehen verschiedene Objekttypen zum Kopieren zur Verfügung. Nur eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank enthält z.B. Schemas und benutzerdefinierte Aggregate.  
@@ -127,7 +127,7 @@ ms.locfileid: "51640787"
 > [!NOTE]  
 >  Der Benutzer, der den Task „ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekte übertragen“ erstellt, benötigt die Berechtigung, die Quellserverobjekte zum Kopieren auszuwählen sowie die Berechtigung, auf die Datenbank des Zielservers zuzugreifen, auf den die Objekte übertragen werden.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Name**  
  Geben Sie für den Task [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekte übertragen einen eindeutigen Namen ein. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
   
@@ -324,7 +324,7 @@ ms.locfileid: "51640787"
  **XmlSchemaCollectionsList**  
  Klicken Sie auf diese Option, um das Dialogfeld **XML-Schemaauflistungen** auswählen zu öffnen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services-Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Editor für den Task SQL Server-Objekte übertragen &#40;Seite „Allgemein“&#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   

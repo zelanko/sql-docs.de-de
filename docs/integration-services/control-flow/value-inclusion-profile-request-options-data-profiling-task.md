@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: da5839c81489a278c3e013886ae7b1eeba6834f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b523b3653e7fff1ffba694c49056debaa6d64ec
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793529"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278089"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>Optionen für Anforderung für Wertinklusionsprofil (Datenprofilerstellungs-Task)
   Verwenden Sie den Bereich **Anforderungseigenschaften** der Seite **Profilanforderungen** , um die Optionen für die im Anforderungsbereich ausgewählte **Anforderung für Wertinklusionsprofil** festzulegen. Ein Wertinklusionsprofil berechnet die Überschneidung in den Werten zwischen zwei Spalten oder Gruppen von Spalten. Dieses Profil kann auch ermitteln, ob eine Spalte oder eine Gruppe von Spalten geeignet ist, um als Fremdschlüssel zwischen den ausgewählten Tabellen zu fungieren. Dieses Profil hilft Ihnen auch, Probleme mit den Daten zu identifizieren, z. B. ungültige Werte. Zum Beispiel verwenden Sie ein Wertinklusionsprofil, um ein Profil für die Spalte ProductID einer Vertriebstabelle zu erstellen. Das Profil erkennt, dass die Spalte Werte enthält, die nicht in der Spalte ProductID der Products-Tabelle enthalten sind.  
@@ -122,13 +122,13 @@ ms.locfileid: "47793529"
  **RequestID**  
  Geben Sie einen beschreibenden Namen ein, um diese Profilanforderung zu kennzeichnen. In der Regel müssen Sie den automatisch generierten Wert nicht ändern.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Keine**  
  Wählen Sie die Schwellenwerteinstellung aus, um die Ausgabe des Profils zu verfeinern. Der Standardwert dieser Eigenschaft ist **Specified**. Weitere Informationen finden Sie im Abschnitt "Grundlegendes zu Schwellenwerteinstellungen" in diesem Thema.  
   
 |value|und Beschreibung|  
 |-----------|-----------------|  
-|**Keine**|Gibt keinen Schwellenwert an. Die Schlüsselstärke wird unabhängig vom Wert gemeldet.|  
+|**None**|Gibt keinen Schwellenwert an. Die Schlüsselstärke wird unabhängig vom Wert gemeldet.|  
 |**Specified**|Verwenden Sie den Schwellenwert, der in **InclusionStrengthThreshold**angegeben ist. Die Inklusionsstärke wird nur gemeldet, wenn sie größer als der Schwellenwert ist.|  
 |**Exact**|Gibt keinen Schwellenwert an. Die Inklusionsstärke wird nur gemeldet, wenn die untergeordneten Werte vollständig in den übergeordneten Werten enthalten sind.|  
   
@@ -142,7 +142,7 @@ ms.locfileid: "47793529"
   
 |value|und Beschreibung|  
 |-----------|-----------------|  
-|**Keine**|Gibt keinen Schwellenwert an. Die Inklusionsstärke wird unabhängig von der Schlüsselstärke der übergeordneten Spalte gemeldet.|  
+|**None**|Gibt keinen Schwellenwert an. Die Inklusionsstärke wird unabhängig von der Schlüsselstärke der übergeordneten Spalte gemeldet.|  
 |**Specified**|Verwenden Sie den Schwellenwert, der in **SupersetColumnsKeyThreshold**angegeben ist. Die Inklusionsstärke wird nur gemeldet, wenn die Schlüsselstärke der übergeordneten Spalte größer als der Schwellenwert ist.|  
 |**Exact**|Gibt keinen Schwellenwert an. Die Inklusionsstärke wird nur gemeldet, wenn die übergeordneten Spalten ein genauer Schlüssel in der übergeordneten Tabelle sind.|  
   
@@ -154,7 +154,7 @@ ms.locfileid: "47793529"
  **MaxNumberOfViolations**  
  Geben Sie die maximale Anzahl von Inklusionsverstößen an, die in der Ausgabe dokumentiert werden sollen. Der Standardwert dieser Eigenschaft ist 100. Diese Option ist deaktiviert, wenn **Exact** als **InclusionThresholdSetting**ausgewählt wird.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Editor für den Datenprofilerstellungs-Task &#40;Seite "Allgemein"&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [Schnellprofilformular für eine einzelne Tabelle &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - copying columns
 - Copy Column transformation
 ms.assetid: 1c72a313-9026-46bc-a57f-c6b3f47346f8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 79d0137ece0db79720f032cd596a174154ad39b0
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 6023db6e91b7d689afe621b23b6b0654ff70d985
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641857"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290426"
 ---
 # <a name="copy-column-transformation"></a>Spalten-Kopieren-Transformation
   Die Transformation für das Kopieren von Spalten erstellt neue Spalten, indem Eingabespalten kopiert und der Transformationsausgabe die neuen Spalten hinzugefügt werden. Später können im Datenfluss verschiedene Transformationen auf die Spaltenkopien angewendet werden. Beispielsweise können Sie mit der Transformation für das Kopieren von Spalten eine Kopie einer Spalte erstellen und anschließend mithilfe der Transformation zum Zuordnen der Zeichen die kopierten Daten in Großbuchstaben konvertieren. Sie könnten aber auch mithilfe der Transformation für das Aggregieren Aggregationen auf die neue Spalte anwenden.  
@@ -49,7 +49,7 @@ ms.locfileid: "51641857"
 > [!NOTE]  
 >  Wenn Sie einfach alle Quelldaten in ein Ziel kopieren, ist die Verwendung der Transformation für das Kopieren von Spalten möglicherweise nicht erforderlich. In einigen Szenarien können Sie eine Quelle direkt mit einem Ziel verbinden, wenn keine Datentransformation erforderlich ist. In solchen Fällen ist zum Erstellen des Pakets häufig die Verwendung des SQL Server-Import/Export-Assistenten zu bevorzugen. Sie können das Paket je nach Bedarf zu einem späteren Zeitpunkt erweitern und neu konfigurieren. Weitere Informationen finden Sie unter [SQL Server Import and Export Wizard](~/integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md).  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Verfügbare Eingabespalten**  
  Wählen Sie mithilfe der Kontrollkästchen die zu kopierenden Spalten aus. Durch Ihre Auswahl werden der nachfolgenden Tabelle Eingabespalten hinzugefügt.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "51641857"
  **Ausgabealias**  
  Geben Sie einen Alias für jede neue Ausgabespalte ein. Der Standard lautet **Kopie von**, gefolgt von dem Namen der Eingabespalte. Sie können jedoch auch einen eindeutigen, beschreibenden Namen auswählen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenfluss](../../../integration-services/data-flow/data-flow.md)   
  [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

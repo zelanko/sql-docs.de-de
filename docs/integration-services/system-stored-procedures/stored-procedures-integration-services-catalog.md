@@ -10,15 +10,15 @@ ms.topic: language-reference
 helpviewer_keywords:
 - stored procedures [Integration Services]
 ms.assetid: a6ccd884-108f-4fb6-95ad-00b9cb65d5d6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d5afc269f3f0d2fb3226cfb563e42eb2bbdba854
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1065b6ce1d57bd52ed306a54b166334df998d6e8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793788"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280824"
 ---
 # <a name="stored-procedures-integration-services-catalog"></a>Gespeicherte Prozeduren (Integration Services-Katalog)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47793788"
  Löscht den Wert eines Parameters für ein vorhandenes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt oder -Paket, das auf dem Server gespeichert wird.  
   
  [catalog.configure_catalog &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md)  
- Konfiguriert den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog durch das Festlegen einer Katalogeigenschaft auf einen angegebenen Wert.  
+ Konfiguriert den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog durch das Festlegen einer Katalogeigenschaft auf einen angegebenen Wert.  
   
  [catalog.create_environment &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-create-environment-ssisdb-database.md)  
  Erstellt eine Umgebung im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog.  
@@ -57,22 +57,22 @@ ms.locfileid: "47793788"
  Erstellt eine Umgebungsvariable im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog.  
   
  [catalog.create_execution &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)  
- Erstellt eine Instanz der Ausführung im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog.  
+ Erstellt eine Instanz der Ausführung im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog.  
   
  [catalog.create_execution_dump](../../integration-services/system-stored-procedures/catalog-create-execution-dump.md)  
  Hält ein aktuell ausgeführtes Paket an und erzeugt eine Dumpdatei.  
   
  [catalog.create_folder &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-create-folder-ssisdb-database.md)  
- Erstellt einen Ordner im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog.  
+ Erstellt einen Ordner im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog.  
   
  [catalog.delete_environment &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-delete-environment-ssisdb-database.md)  
- Löscht eine Umgebung aus einem Ordner im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog.  
+ Löscht eine Umgebung aus einem Ordner im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog.  
   
  [catalog.delete_environment_reference &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-delete-environment-reference-ssisdb-database.md)  
  Löscht einen Umgebungsverweis aus einem Projekt im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog.  
   
  [catalog.delete_environment_variable &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-delete-environment-variable-ssisdb-database.md)  
- Löscht eine Umgebungsvariable aus einer Umgebung im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog.  
+ Löscht eine Umgebungsvariable aus einer Umgebung im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog.  
   
  [catalog.delete_folder &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-delete-folder-ssisdb-database.md)  
  Löscht einen Ordner aus dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog.  
@@ -81,16 +81,16 @@ ms.locfileid: "47793788"
  Löscht ein vorhandenes Projekt aus einem Ordner im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog.  
   
  [catalog.deny_permission &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database.md)  
- Verweigert eine Berechtigung für ein sicherungsfähiges Objekt im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog.  
+ Verweigert eine Berechtigung für ein sicherungsfähiges Objekt im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog.  
   
  [catalog.deploy_project &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md)  
- Stellt ein Projekt in einem Ordner im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog bereit oder aktualisiert ein vorhandenes Projekt, das zuvor bereitgestellt wurde.  
+ Stellt ein Projekt in einem Ordner im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog bereit oder aktualisiert ein vorhandenes Projekt, das zuvor bereitgestellt wurde.  
   
  [catalog.get_parameter_values &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md)  
  Ermittelt die Standardparameterwerte und ruft diese aus einem Projekt und den entsprechenden Paketen im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog ab.  
   
  [catalog.get_project &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md)  
- Ruft die Eigenschaften eines vorhandenen Projekts im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog ab.  
+ Ruft die Eigenschaften eines vorhandenen Projekts im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog ab.  
   
  [catalog.grant_permission &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)  
  Gewährt eine Berechtigung für ein sicherungsfähiges Objekt im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog.  
@@ -105,7 +105,7 @@ ms.locfileid: "47793788"
  Entfernt eine Datenabzweigung aus einer Komponentenausgabe, die aktuell ausgeführt wird.  
   
  [catalog.rename_environment &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-rename-environment-ssisdb-database.md)  
- Benennt eine Umgebung im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog um.  
+ Benennt eine Umgebung im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog um.  
   
  [catalog.rename_folder &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-rename-folder-ssisdb-database.md)  
  Benennt einen Ordner im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog um.  
@@ -129,22 +129,22 @@ ms.locfileid: "47793788"
  Legt das Vertraulichkeitsbit einer Umgebungsvariablen im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog fest.  
   
  [catalog.set_environment_variable_value &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-set-environment-variable-value-ssisdb-database.md)  
- Legt den Wert einer Umgebungsvariablen im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog fest.  
+ Legt den Wert einer Umgebungsvariablen im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog fest.  
   
  [catalog.set_execution_parameter_value &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
- Legt den Wert eines Parameters für eine Instanz der Ausführung im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog fest.  
+ Legt den Wert eines Parameters für eine Instanz der Ausführung im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog fest.  
   
  [catalog.set_execution_property_override_value](../../integration-services/system-stored-procedures/catalog-set-execution-property-override-value.md)  
- Legt den Wert einer Eigenschaft für eine Instanz der Ausführung im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog fest.  
+ Legt den Wert einer Eigenschaft für eine Instanz der Ausführung im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog fest.  
   
  [catalog.set_folder_description &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-set-folder-description-ssisdb-database.md)  
- Legt die Beschreibung eines Ordners im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog fest.  
+ Legt die Beschreibung eines Ordners im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog fest.  
   
  [catalog.set_object_parameter_value &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md)  
- Legt den Wert eines Parameters im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog fest. Ordnet einer Umgebungsvariablen den Wert zu oder weist einen Literalwert zu, der standardmäßig verwendet wird, wenn keine anderen Werte zugewiesen werden.  
+ Legt den Wert eines Parameters im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog fest. Ordnet einer Umgebungsvariablen den Wert zu oder weist einen Literalwert zu, der standardmäßig verwendet wird, wenn keine anderen Werte zugewiesen werden.  
   
  [catalog.start_execution &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)  
- Startet eine Instanz der Ausführung im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog.  
+ Startet eine Instanz der Ausführung im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog.  
   
  [catalog.startup](../../integration-services/system-stored-procedures/catalog-startup.md)  
  Führt eine Wartung des Status von Vorgängen für den SSISDB-Katalog aus.  
@@ -153,7 +153,7 @@ ms.locfileid: "47793788"
  Beendet eine Überprüfung oder eine Ausführungsinstanz im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog.  
   
  [catalog.validate_package &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-validate-package-ssisdb-database.md)  
- Überprüft asynchron ein Paket im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog.  
+ Überprüft asynchron ein Paket im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog.  
   
  [catalog.validate_project &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-validate-project-ssisdb-database.md)  
  Überprüft asynchron ein Projekt im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog.  

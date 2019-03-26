@@ -14,15 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Cache transform
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1b53839079c2a5cfc1e09788d44b955f5da3da7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a65a8be5dd71b6c1400dc325b34016e9df7f8192
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857278"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275532"
 ---
 # <a name="cache-transform"></a>Cachetransformation
   Die Transformation für Cachetransformation generiert ein Verweisdataset für die Transformation für Suche, indem Daten aus einer verbundenen Datenquelle im Datenfluss in einen Cacheverbindungs-Manager geschrieben werden. Die Transformation für Suche führt Suchvorgänge aus, indem Daten in Eingabespalten aus einer verbundenen Datenquelle mit Spalten in der Verweisdatenbank verknüpft werden.  
@@ -63,7 +63,7 @@ ms.locfileid: "47857278"
   
  Weitere Informationen zum Cacheverbindungs-Manager finden Sie unter [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Cache connection manager**  
  Wählen Sie einen vorhandenen Cacheverbindungs-Manager aus dem Listenfeld aus, oder erstellen Sie mithilfe der Schaltfläche **Neu** eine neue Verbindung.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "47857278"
  **Bearbeiten**  
  Ändern einer vorhandenen Verbindung.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Datenfluss](../../../integration-services/data-flow/data-flow.md)  
   

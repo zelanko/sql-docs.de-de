@@ -3,22 +3,21 @@ title: Datentypzuordnung überprüfen (SQL Server-Import/Export-Assistent) | Mic
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.reviewissues.f1
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5ef44f25a923471eadbc14abcfb6586606638dd3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5805f1c9f7455423bf4fab43c6092e880e62448
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637918"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281524"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Datentypzuordnung überprüfen (SQL Server-Import/Export-Assistent)
 Wenn Sie eine Datentypzuordnung festgelegt haben, die nicht erfolgreich in die **Zuordnungungsliste** im Dialogfeld **Spaltenzuordnungen** übernommen werden konnte, zeigt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistent die Seite **Datentypzuordnung überprüfen** an. Überprüfen Sie auf dieser Seite die detaillierten Informationen über Datentypkonvertierungen, die der Assistent ausführen muss, damit die Quelldaten mit den Zieldaten kompatibel sind. Diese Informationen enthalten visuelle Hinweise, um Datentypkonvertierungen, die voraussichtlich fehlerfrei ablaufen, von Konvertierungen zu unterscheiden, die zu Fehlern oder Kürzungen führen könnten. Sie entscheiden für jede Konvertierung, ob Sie die vom Assistenten vorgeschlagene Konvertierung übernehmen möchten. Außerdem geben Sie an, wie mit möglicherweise auftretenden Fehlern verfahren werden soll.   

@@ -11,12 +11,12 @@ ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d948e4a790933e6f703232e3f642241395bbb410
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+ms.openlocfilehash: e120762a84929ed58d163efb26faa6f28eb50dc3
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736981"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306128"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Herstellen einer Verbindung mit einer Azure SQL-Datenbank
 
@@ -33,7 +33,7 @@ In diesem Artikel werden Probleme behandelt, die auftreten können, wenn über d
 ## <a name="details"></a>Details
 
 Beim Herstellen einer Verbindung mit einem [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], Sie müssen den eine Verbindung mit der master-Datenbank aufrufen **SQLServerDatabaseMetaData.getCatalogs**.  
-Die Rückgabe sämtlicher Kataloge aus einer Benutzerdatenbank wird von [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] nicht unterstützt. **SQLServerDatabaseMetaData.getCatalogs** Ansicht "sys.databases" verwenden, um die Kataloge abzurufen. Finden Sie in der Diskussion zu Berechtigungen in [sys.databases (SQL Azure-Datenbank)](https://go.microsoft.com/fwlink/?LinkId=217396) zu **SQLServerDatabaseMetaData.getCatalogs** Verhalten auf ein [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
+Die Rückgabe sämtlicher Kataloge aus einer Benutzerdatenbank wird von [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] nicht unterstützt. **SQLServerDatabaseMetaData.getCatalogs** Ansicht "sys.databases" verwenden, um die Kataloge abzurufen. Finden Sie in der Diskussion zu Berechtigungen in [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) zu **SQLServerDatabaseMetaData.getCatalogs** Verhalten auf ein [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
   
 ## <a name="connections-dropped"></a>Getrennte Verbindungen
 

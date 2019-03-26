@@ -14,15 +14,15 @@ helpviewer_keywords:
 - connections [Integration Services], FTP
 - connection managers [Integration Services], FTP
 ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7749ca5009a0334fe555a66dc2e06afa3278f922
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20461216a802bde79005d7539ce2d09cd032c771
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653080"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290646"
 ---
 # <a name="ftp-connection-manager"></a>FTP-Verbindungs-Manager
   Mit einem FTP-Verbindungs-Manager kann ein Paket eine Verbindung mit einem FTP-Server (File Transfer Protocol) herstellen. Der FTP-Task von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwendet diesen Verbindungs-Manager.  
@@ -68,7 +68,7 @@ ms.locfileid: "47653080"
   
  Weitere Informationen zum FTP-Verbindungs-Manager finden Sie unter [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md).  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Servername**  
  Geben Sie den Namen des FTP-Servers an.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "47653080"
  **Verbindung testen**  
  Nachdem die Konfiguration des FTP-Verbindungs-Managers abgeschlossen ist, bestätigen Sie die Gültigkeit der Verbindung, indem Sie auf **Verbindung testen**klicken.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [FTP-Task](../../integration-services/control-flow/ftp-task.md)   
  [Integration Services-Verbindungen &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   

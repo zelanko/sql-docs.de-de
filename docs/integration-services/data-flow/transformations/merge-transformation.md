@@ -17,15 +17,15 @@ helpviewer_keywords:
 - combining datasets
 - datasets [Integration Services], merging
 ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8be5561838f5a2072ad330c907d4fac49f8a96e5
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 224c5e74a1f6019404faa45eed3c5a02f18943bb
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638214"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276751"
 ---
 # <a name="merge-transformation"></a>Transformation für Zusammenführen
   Die Transformation für Zusammenführen fasst zwei sortierte Datasets zu einem Dataset zusammen. Die Zeilen aus jedem Dataset werden basierend auf Werten in den Schlüsselspalten in die Ausgabe eingefügt.  
@@ -77,7 +77,7 @@ ms.locfileid: "51638214"
 > [!IMPORTANT]  
 >  Die Transformation für Zusammenführen erfordert als Eingabe sortierte Daten. Weitere Informationen zu dieser wichtigen Anforderung finden Sie unter [Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Name der Ausgabespalte**  
  Geben Sie den Namen der Ausgabespalte an.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "51638214"
  **Eingabe 2 für Zusammenführen**  
  Wählen Sie die Spalte aus, die als Eingabe 2 für Zusammenführen zusammengeführt werden soll.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Transformation für Zusammenführungsjoin](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [Transformation für UNION ALL](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Datenfluss](../../../integration-services/data-flow/data-flow.md)   

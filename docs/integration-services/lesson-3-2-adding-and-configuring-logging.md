@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b20d5ec3a67bfe744d39e8c3a4fad8d5c0e5be0e
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: a6ba2488aff0efdb6ed0d1c4ae03ec46ba6a6a25
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143348"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277909"
 ---
 # <a name="lesson-3-2-add-and-configure-logging"></a>Lektion 3.2: Hinzufügen und Konfigurieren der Protokollierung
 
@@ -55,7 +55,7 @@ In dieser Aufgabe aktivieren Sie die Protokollierung für den Datenfluss im Pake
   
 12. Klicken Sie auf **Basic** (Einfach), um die Informationskategorien auszublenden.  
   
-13. Wählen Sie auf der Registerkarte **Anbieter und Protokolle** in der **Name** -Spalte **Protokolldatei für Lektion 3**aus. Nach dem Erstellen eines Protokollanbieters für Ihr Paket können Sie diesen optional deaktivieren, um die Protokollierung zu deaktivieren, ohne dass Sie einen Protokollanbieter löschen und dann neu erstellen müssen.  
+13. Wählen Sie auf der Registerkarte **Anbieter und Protokolle** in der **Name** -Spalte **Lesson 3 Log File**aus. Nach dem Erstellen eines Protokollanbieters für Ihr Paket können Sie diesen optional deaktivieren, um die Protokollierung zu deaktivieren, ohne dass Sie einen Protokollanbieter löschen und dann neu erstellen müssen.  
   
 14. Wählen Sie **OK**.  
   

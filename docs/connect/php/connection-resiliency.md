@@ -9,17 +9,17 @@ ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: 6afbf85f5e141736ac4a78dc381205228bd5ddaa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a2361c8a2e8cbc709d50a9139678a08e2e850e2d
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527103"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305918"
 ---
 # <a name="idle-connection-resiliency"></a>Resilienz von Verbindungen im Leerlauf
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Verbindungsresilienz](https://msdn.microsoft.com/library/dn632678.aspx) geht es darum, eine unterbrochene Verbindung des im Leerlauf, bestimmte Einschränkungen erneut hergestellt werden kann. Wenn Sie eine Verbindung mit Microsoft SQL Server ein Fehler auftritt, kann resilienz von Verbindungen der Client automatisch versuchen, die Verbindung wiederherzustellen. Resilienz von Verbindungen ist eine Eigenschaft der Datenquelle. nur SQLServer 2014 und höher und Azure SQL-Datenbank unterstützen die resilienz von Verbindungen.
+[Verbindungsresilienz](../odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) geht es darum, eine unterbrochene Verbindung des im Leerlauf, bestimmte Einschränkungen erneut hergestellt werden kann. Wenn Sie eine Verbindung mit Microsoft SQL Server ein Fehler auftritt, kann resilienz von Verbindungen der Client automatisch versuchen, die Verbindung wiederherzustellen. Resilienz von Verbindungen ist eine Eigenschaft der Datenquelle. nur SQLServer 2014 und höher und Azure SQL-Datenbank unterstützen die resilienz von Verbindungen.
 
 Verbindungsresilienz wird implementiert, mit zwei Verbindungsschlüsselwörter, die Verbindungszeichenfolgen hinzugefügt werden können: **ConnectRetryCount** und **ConnectRetryInterval**.
 
@@ -130,5 +130,5 @@ Statement 2 successful.
 16 rows in result set.
 ```
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
-[Verbindungsresilienz im Windows ODBC-Treiber](https://docs.microsoft.com/sql/connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver)
+## <a name="see-also"></a>Weitere Informationen
+[Verbindungsresilienz im Windows ODBC-Treiber](../odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)

@@ -14,12 +14,12 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fd08989eb41f5b5a2b1c3f677f8dcff64b25b6ea
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 34f57edd8b58476a7077f601692086c80c89d0c0
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802754"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305998"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Beheben von Verbindungsfehlern mit der SQL Server-Datenbank-Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ Das Herstellen einer Verbindung mit SQL Server über TCP/IP erfordert, dass Wind
 Wenn Sie zu diesem Zeitpunkt eine Fehlermeldung erhalten, müssen Sie den Fehler beheben, bevor Sie fortfahren. Viele Dinge könnten ein Problem darstellen. Ihr Anmeldename ist möglicherweise nicht autorisiert, eine Verbindung herzustellen. Möglicherweise ist Ihre Standarddatenbank nicht vorhanden.
 
 > [!NOTE]
->    Einige Fehlermeldungen, die absichtlich an den Client übergeben wurden, stellen nicht genügend Informationen bereit, wie das Problem behoben werden kann. Dies ist eine Sicherheitsfunktion, die verhindern soll, dass Informationen über SQL Server an einen Angreifer übermittelt werden. Sehen Sie sich das SQL Server-Fehlerprotokoll an, um alle Informationen über den Fehler anzuzeigen. Dort finden Sie die Einzelheiten. Wenn Sie den Fehler **18456 Fehler bei der Anmeldung für den Benutzer**erhalten, sehen Sie sich das Thema [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) in der Onlinedokumentation an, um weitere Informationen über Fehlercodes zu erhalten. Auf Aaron Bertrands Blog unter [Troubleshooting Error 18456](https://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx)(Problembehandlung von Error 18456) finden Sie ebenso eine umfangreiche Liste mit Fehlercodes. Sie können das Fehlerprotokoll mit SSMS (falls Sie eine Verbindung herstellen können) im Abschnitt „Verwaltung“ des Objekt-Explorers anzeigen. Andernfalls können Sie das Fehlerprotokoll mit dem Windows-Editor anzeigen. Der standardmäßige Speicherort variiert je nach Version und kann während des Setups geändert werden. Der Standardspeicherort für [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] ist `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`.  
+>    Einige Fehlermeldungen, die absichtlich an den Client übergeben wurden, stellen nicht genügend Informationen bereit, wie das Problem behoben werden kann. Dies ist eine Sicherheitsfunktion, die verhindern soll, dass Informationen über SQL Server an einen Angreifer übermittelt werden. Sehen Sie sich das SQL Server-Fehlerprotokoll an, um alle Informationen über den Fehler anzuzeigen. Dort finden Sie die Einzelheiten. Wenn Sie den Fehler **18456 Fehler bei der Anmeldung für den Benutzer**erhalten, sehen Sie sich das Thema [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) in der Onlinedokumentation an, um weitere Informationen über Fehlercodes zu erhalten. Auf Aaron Bertrands Blog unter [Troubleshooting Error 18456](https://sqlblog.org/2011/01/14/troubleshooting-error-18456)(Problembehandlung von Error 18456) finden Sie ebenso eine umfangreiche Liste mit Fehlercodes. Sie können das Fehlerprotokoll mit SSMS (falls Sie eine Verbindung herstellen können) im Abschnitt „Verwaltung“ des Objekt-Explorers anzeigen. Andernfalls können Sie das Fehlerprotokoll mit dem Windows-Editor anzeigen. Der standardmäßige Speicherort variiert je nach Version und kann während des Setups geändert werden. Der Standardspeicherort für [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] ist `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`.  
 
 4.   Wenn Sie keine Verbindung mithilfe von Shared Memory herstellen können, versuchen Sie eine Verbindung mithilfe von TCP herzustellen. Sie können eine TCP-Verbindung durch Angabe von **tcp:** vor dem Namen erzwingen. Zum Beispiel:
 

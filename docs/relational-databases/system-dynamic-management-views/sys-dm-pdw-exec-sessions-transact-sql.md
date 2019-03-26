@@ -1,7 +1,7 @@
 ---
 title: dm_pdw_exec_sessions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/07/2017
+ms.date: 03/22/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 41042d1dff7a64a8a2d2fe093276f61ab254da56
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fac2105011440cbabd3ed7eedebdaeb5cba37346
+ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039861"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417172"
 ---
 # <a name="sysdmpdwexecsessions-transact-sql"></a>sys.dm_pdw_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "56039861"
 |app_name|**nvarchar(255)**|Erfasst Informationen zum Anwendungsnamen im Rahmen des Verbindungsprozesses optional festlegen.|Eine beliebige gültige Zeichenfolge.|  
 |sql_spid|**int**|Die ID der SPID. Verwenden der `session_id` in dieser Sitzung. Verwenden der `sql_spid` Spalte hinzufügen **sys.dm_pdw_nodes_exec_sessions**.<br /><br /> **\*\* Warnung \* \***  enthält diese Spalte geschlossene SPIDs.||  
   
- Informationen, die maximale Anzahl Zeilen, die von dieser Sicht beibehalten können, finden Sie im Abschnitt "maximale Systemwerte anzeigen" in der [Mindest- und Höchstwerte (SQL Server PDW)](https://msdn.microsoft.com/5243f018-2713-45e3-9b61-39b2a57401b9) Thema.  
+ Informationen, die maximale Anzahl Zeilen, die von dieser Sicht beibehalten können, finden Sie im Abschnitt "Metadaten" in der [Kapazitätsgrenzen](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) Thema.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die `VIEW SERVER STATE`-Berechtigung.  

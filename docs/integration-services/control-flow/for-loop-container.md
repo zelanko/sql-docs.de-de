@@ -15,15 +15,15 @@ helpviewer_keywords:
 - containers [Integration Services], For Loop
 - For Loop containers
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 914a8eab85e26e97c1f36f95b75366d6fdd98bce
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 47c0bd557cede1a7ecc3fe287960267112293cd4
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640497"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276319"
 ---
 # <a name="for-loop-container"></a>For-Schleifencontainer
   Der For-Schleifencontainer definiert die Wiederholung einer Ablaufsteuerung in einem Paket. Die Schleifenimplementierung ist mit der **For** -Schleifenstruktur in Programmiersprachen zu vergleichen. Bei jeder Wiederholung der Schleife wertet der For-Schleifencontainer einen Ausdruck aus und wiederholt dessen Workflow, bis der Ausdruck zu **False**ausgewertet wird.  
@@ -94,7 +94,7 @@ Mithilfe der Seite **For-Schleife** des Dialogfelds **For-Schleifen-Editor** kö
   
  Weitere Informationen zum For-Schleifencontainer und zu dessen Verwendung in Paketen finden Sie unter [For Loop Container](../../integration-services/control-flow/for-loop-container.md).  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **InitExpression**  
  Gibt optional einen Ausdruck zum Initialisieren von Werten an, die durch die Schleife verwendet werden.  
   
@@ -125,7 +125,7 @@ Mithilfe der Seite **For-Schleife** des Dialogfelds **For-Schleifen-Editor** kö
  Die Ausdrucksgrammatik von [!INCLUDE[ssIS](../../includes/ssis-md.md)] stellt umfangreiche Operatoren und Funktionen zum Implementieren komplexer Ausdrücke bereit, die zum Auswerten, Initialisieren oder Zuweisen verwendet werden. Weitere Informationen finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)ausgewertet wird.  
   
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Ablaufsteuerung](../../integration-services/control-flow/control-flow.md)   
  [Integration Services-Ausdrücke &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)  
   

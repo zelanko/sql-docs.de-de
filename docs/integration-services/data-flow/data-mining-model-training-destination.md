@@ -17,15 +17,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], training
 - training mining models
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fda41af4bbf9f6e0b98de5c543af99e732966d53
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 113d73aa309e874f026c10d0a9f580c08af45ebb
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640487"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279324"
 ---
 # <a name="data-mining-model-training-destination"></a>Ziel des Data Mining-Modelltrainings
   Das Ziel des Data Mining-Modelltrainings trainiert Data Mining-Modelle, indem die Daten, die vom Ziel empfangen werden, über Data Mining-Modellalgorithmen übergeben werden. Mehrere Data Mining-Modelle können von einem Ziel trainiert werden, falls die Modelle mit der gleichen Data Mining-Struktur erstellt wurden. Weitere Informationen finden Sie unter [Mining Structure Columns](../../analysis-services/data-mining/mining-structure-columns.md) und [Mining Model Columns](../../analysis-services/data-mining/mining-model-columns.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "51640487"
 ## <a name="data-mining-model-training-editor-connection-tab"></a>Trainings-Editor für Data Mining-Modelle (Registerkarte Verbindung)
   Wählen Sie auf der Seite **Verbindung** des Dialogfelds **Trainings-Editor für Data Mining-Modelle** ein Mining-Modell zum Trainieren aus.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Verbindungs-Manager**  
  Wählen Sie eine Verbindung aus der Liste der vorhandenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Verbindungen aus, oder erstellen Sie wie im Folgenden beschrieben über die Schaltfläche [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Neu **eine neue** -Verbindung.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "51640487"
 ## <a name="data-mining-model-training-editor-columns-tab"></a>Trainings-Editor für Data Mining-Modelle (Registerkarte Spalten)
   Mithilfe der Seite **Spalten** des Dialogfelds **Trainings-Editor für Data Mining-Modelle** können Sie Eingabespalten Spalten in der Miningstruktur zuordnen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Ziehen Sie Eingabespalten, um sie Miningstrukturspalten zuzuordnen.  
   

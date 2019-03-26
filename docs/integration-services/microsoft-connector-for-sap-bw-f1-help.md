@@ -10,15 +10,15 @@ ms.topic: reference
 f1_keywords:
 - sql13.dts.designer.sapbw.f1
 ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b5df50add8b380d922ea26277b8b261c9c4e2c6d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 314e6895b4a4888970ae09fb29851446b3d6859c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651613"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273216"
 ---
 # <a name="microsoft-connector-for-sap-bw-f1-help"></a>F1-Hilfe zum Microsoft Connector for SAP BW
   Dieser Abschnitt enthält die F1-Hilfethemen für die drei Komponenten von [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW. Diese Themen können auch über die Benutzeroberfläche abgerufen werden, indem Sie die F1-TASTE drücken oder in den Seiten des Assistenten sowie in den Dialogfeldern auf Hilfe klicken.  
@@ -79,7 +79,7 @@ ms.locfileid: "47651613"
   
 -   [InfoPackage erstellen](../integration-services/data-flow/create-infopackage.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Komponenten von Microsoft Connector for SAP BW](../integration-services/microsoft-connector-for-sap-bw-components.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Microsoft Connector for SAP BW Components](../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

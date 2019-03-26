@@ -19,15 +19,15 @@ helpviewer_keywords:
 - .NET Framework [Integration Services]
 - DataReader source
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 125caa4360df6b789bd9f8f61b12d85552b4983e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 327585d0cdf0644a7beaddc83aba3d7451c812bd
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638767"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290576"
 ---
 # <a name="ado-net-source"></a>ADO NET-Quelle
   Die ADO NET-Quelle verwendet Daten von einem .NET-Anbieter und stellt sie dem Datenfluss zur Verfügung.  
@@ -152,7 +152,7 @@ ms.locfileid: "51638767"
   
 3.  Klicken Sie im **ADO.NET-Quellen-Editor**auf **Spalten**.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Verfügbare externe Spalten**  
  Zeigt die Liste der in der Datenquelle verfügbaren externen Spalten an. Mit der Tabelle können keine Spalten hinzugefügt oder gelöscht werden.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "51638767"
   
 3.  Klicken Sie im **ADO.NET-Quellen-Editor**auf **Fehlerausgabe**.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Datenquelle an.  
   
@@ -199,7 +199,7 @@ ms.locfileid: "51638767"
  **Anwenden**  
  Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [DataReader-Ziel](../../integration-services/data-flow/datareader-destination.md)   
  [ADO NET-Ziel](../../integration-services/data-flow/ado-net-destination.md)   
  [Datenfluss](../../integration-services/data-flow/data-flow.md)  

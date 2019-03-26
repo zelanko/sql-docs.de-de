@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Cache connection manager
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 81c0f330803b5e073425ff4540f20bdd08caf8c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f68d68c9302bccd55ef01b104a592a0462fbe669
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837778"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289936"
 ---
 # <a name="cache-connection-manager"></a>Cacheverbindungs-Manager
   Der Cacheverbindungs-Manager liest Daten aus der Cachetransformation oder einer Cachedatei (.caw) und kann die Daten in einer Cachedatei speichern. Unabhängig davon, ob der Cacheverbindungs-Manager für die Verwendung einer Cachedatei konfiguriert ist, werden die Daten stets im Arbeitsspeicher gespeichert.  
@@ -67,7 +67,7 @@ ms.locfileid: "47837778"
 ###  <a name="generaltab"></a> Registerkarte Allgemein  
  Geben Sie auf der Registerkarte **Allgemein** des Dialogfelds **Editor für den Cacheverbindungs-Manager** an, ob der Cache aus einer Datei gelesen werden soll oder ob der Cache in einer Datei gespeichert werden soll.  
   
-#### <a name="options"></a>Tastatur  
+#### <a name="options"></a>enthalten  
  **Name des Verbindungs-Managers**  
  Geben Sie einen eindeutigen Namen für die Cacheverbindung im Workflow an. Der angegebene Name wird im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer angezeigt.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "47837778"
 ###  <a name="columnstab"></a> Registerkarte 'Spalten'  
  Auf der Registerkarte **Spalten** des Dialogfelds **Editor für den Cacheverbindungs-Manager** können Sie die Eigenschaften jeder Spalte im Cache konfigurieren.  
   
-#### <a name="options"></a>Tastatur  
+#### <a name="options"></a>enthalten  
  **Column**  
  Geben Sie den Spaltennamen an.  
   
@@ -128,6 +128,6 @@ ms.locfileid: "47837778"
  Gibt die Codepage für den Spaltentyp an. Wenn für den Datentyp zutreffend, können Sie den Wert von **Code Page**aktualisieren.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Implementieren einer Suchtransformation im Vollcachemodus mit der Transformation für Cacheverbindungs-Manager](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+ [Implementieren einer Suchtransformation im Vollcachemodus mit dem Cacheverbindungs-Manager](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
   

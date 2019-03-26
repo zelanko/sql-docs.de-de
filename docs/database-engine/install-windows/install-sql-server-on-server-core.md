@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 932f2384b24b55a6516fe84cd16f608a1a8e2d0e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c8cc018a1c9fddd35c80f73ce4f141b0b526ad4f
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533339"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306218"
 ---
 # <a name="install-sql-server-on-server-core"></a>Installieren von SQL Server unter Server Core
 
@@ -42,26 +42,26 @@ Die Server Core-Installationsoption stellt eine minimale Umgebung zum Ausführen
   
 |Funktion|Supported|Zusätzliche Informationen|  
 |-------------|---------------|----------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] -Dienste|Benutzerkontensteuerung||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikation|Benutzerkontensteuerung||  
-|Volltextsuche|Benutzerkontensteuerung||  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Benutzerkontensteuerung||  
-|[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]|Benutzerkontensteuerung||  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|nein||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|nein||  
-|Konnektivität der Clienttools|Benutzerkontensteuerung||  
-|Integration Services-Server|Benutzerkontensteuerung||  
-|Clienttools-Abwärtskompatibilität|nein||  
-|Clienttools SDK|nein||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation|nein||  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] -Dienste|Ja||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikation|Ja||  
+|Volltextsuche|Ja||  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Ja||  
+|[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]|Ja||  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Nein||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|Nein||  
+|Konnektivität der Clienttools|Ja||  
+|Integration Services-Server|Ja||  
+|Clienttools-Abwärtskompatibilität|Nein||  
+|Clienttools SDK|Nein||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation|Nein||  
 |Verwaltungstools - Einfach|Ausschließlich remote|Die Installation dieser Funktionen unter Server Core wird nicht unterstützt. Diese Komponenten können auf einem anderen Server installiert werden, der nicht Server Core ist und nicht mit den auf Server Core installierten [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Diensten verbunden ist.|  
 |Verwaltungstools – Vollständig|Ausschließlich remote|Die Installation dieser Funktionen unter Server Core wird nicht unterstützt. Diese Komponenten können auf einem anderen Server installiert werden, der nicht Server Core ist und nicht mit den auf Server Core installierten [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Diensten verbunden ist.|  
-|Distributed Replay Controller|nein||  
+|Distributed Replay Controller|Nein||  
 |Distributed Replay Client|Ausschließlich remote|Die Installation dieser Funktionen unter Server Core wird nicht unterstützt. Diese Komponenten können auf einem anderen Server installiert werden, der nicht Server Core ist und nicht mit den auf Server Core installierten [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Diensten verbunden ist.|  
-|SQL Client Connectivity SDK|Benutzerkontensteuerung||  
-|Microsoft Sync Framework|Benutzerkontensteuerung|Microsoft Sync Framework ist im Installationspaket von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nicht enthalten. Sie können die geeignete Sync Framework-Version aus dem [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=221788) (https://go.microsoft.com/fwlink/?LinkId=221788)) herunterladen und auf einem Computer mit Server Core installieren.|  
-|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|nein||  
-|[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|nein||  
+|SQL Client Connectivity SDK|Ja||  
+|Microsoft Sync Framework|Ja|Microsoft Sync Framework ist im Installationspaket von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nicht enthalten. Sie können die geeignete Sync Framework-Version aus dem [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=221788) (https://go.microsoft.com/fwlink/?LinkId=221788)) herunterladen und auf einem Computer mit Server Core installieren.|  
+|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|Nein||  
+|[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|Nein||  
   
 ## <a name="supported-scenarios"></a>Unterstützte Szenarios  
  In der folgenden Tabelle wird die Matrix unterstützter Szenarios zum Installieren von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auf einer Server Core-Installation veranschaulicht.  
@@ -73,7 +73,7 @@ Die Server Core-Installationsoption stellt eine minimale Umgebung zum Ausführen
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sprache auf Betriebssystem Sprache/Gebietsschema (Kombination)|ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf JPN (Japanisch) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf GER (Deutsch) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf CHS (Chinesisch-China) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf ARA (Arabisch (SA)) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf THA (Thai) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf TRK (Türkisch) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf pt-PT (Portugiesisch Portugal) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf ENG (Englisch) Windows|  
 |Windows-Edition|[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation|  
   
-## <a name="upgrade"></a>UPGRADE 
+## <a name="upgrade"></a>Aktualisieren 
  In Server Core-Installationen werden Upgrades von [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] auf [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] unterstützt.  
   
 ## <a name="install"></a>Install  
@@ -333,7 +333,7 @@ Wenn Sie die Eingabeaufforderung unbeabsichtigt schließen, können Sie eine neu
  [Editionen und unterstützten Funktionen von SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)   
  [Installation von Server Core](https://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)   
  [Konfigurieren einer Server Core-Installation von Windows Server 2016 R2 mit sconfig.cmd](https://technet.microsoft.com/windows-server-docs/get-started/sconfig-on-ws2016)   
- [Failovercluster-Cmdlets in Windows PowerShell](https://technet.microsoft.com/itpro/powershell/windows/failover-clusters/index)   
+ [Failovercluster-Cmdlets in Windows PowerShell](/powershell/module/failoverclusters/)
 
   
   

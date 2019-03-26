@@ -19,15 +19,15 @@ helpviewer_keywords:
 - datasets [Integration Services], sample
 - training mining models
 ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: db2feb442aceb42d24757e59245914351e5100dc
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 98bd158b4b83a9d1fdef3911b7a2b3105aca28d2
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638077"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275282"
 ---
 # <a name="percentage-sampling-transformation"></a>Transformation für Prozentwert-Stichproben
   Die Transformation für Prozentwert-Stichproben erstellt ein Stichprobendataset, indem ein Prozentwert der Transformationseingabezeilen ausgewählt wird. Das Stichprobendataset ist eine zufällige Auswahl von Zeilen aus der Transformationseingabe, damit die Stichprobe für die Eingabe repräsentativ ist.  
@@ -61,7 +61,7 @@ ms.locfileid: "51638077"
 ## <a name="percentage-sampling-transformation-editor"></a>Transformations-Editor für Prozentwertstichprobe
   Im Dialogfeld **Transformations-Editor für Prozentwertstichprobe** können Sie einen Teil der Eingabe mithilfe des angegebenen Prozentsatzes von Zeilen als Stichprobe entnehmen. Durch diese Transformation wird die Eingabe in zwei getrennte Ausgaben geteilt.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Prozentsatz der Zeilen**  
  Geben Sie den Prozentsatz der Zeilen in der Eingabe an, die als Stichprobe verwendet werden sollen.  
   

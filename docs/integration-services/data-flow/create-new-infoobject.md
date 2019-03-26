@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 91460ffacc5712daecac31073434dcd6a11225a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e5d0ac61e65618527d5da8c7a8bcf2b5808b143
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753514"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290766"
 ---
 # <a name="create-new-infoobject"></a>Neues InfoObject erstellen
   Verwenden Sie das Dialogfeld **Neues InfoObject erstellen** , um ein neues InfoObject im SAP NetWeaver BW-System zu erstellen.  
@@ -153,7 +153,7 @@ ms.locfileid: "47753514"
  **Entfernen**  
  Entfernt das ausgewählte InfoObject aus der Liste **Attribute** .  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [InfoCube für Transaktionsdaten erstellen](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [InfoSource erstellen](../../integration-services/data-flow/create-infosource.md)   
  [InfoSource für Transaktionsdaten erstellen](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - text file writing [Integration Services]
 - destinations [Integration Services], Flat File
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6e6fa3edeeff19f7ddf9fde79114586ba7588324
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 96badece6d707558fa9fcda87bdf9f71af64255e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641317"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290436"
 ---
 # <a name="flat-file-destination"></a>Flatfileziel
   Das Flatfileziel schreibt Daten in eine Textdatei. Die Textdatei kann in verschiedenen Formaten vorliegen: mit Trennzeichen, mit fester Breite, mit fester Breite mit Zeilentrennzeichen oder mit rechtem Flatterrand.  
@@ -57,7 +57,7 @@ ms.locfileid: "51641317"
 ## <a name="flat-file-destination-editor-connection-manager-page"></a>Ziel-Editor für Flatfiles (Seite Verbindungs-Manager)
   Mithilfe der Seite **Verbindungs-Manager** des Dialogfelds **Ziel-Editor für Flatfiles** können Sie die Flatfile-Verbindung für das Ziel auswählen und angeben, ob die vorhandene Zieldatei überschrieben werden soll oder ob die Daten an die vorhandene Datei angehängt werden sollen. Das Flatfileziel schreibt Daten in eine Textdatei. Als Format für diese Textdatei können Trennzeichen, feste Breite, feste Breite mit Zeilentrennzeichen oder rechter Flatterrand gewählt werden.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Verbindungs-Manager für Flatfiles**  
  Wählen Sie einen vorhandenen Verbindungs-Manager aus dem Listenfeld aus, oder erstellen Sie durch Klicken auf **Neu**eine neue Verbindung.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "51641317"
 ## <a name="flat-file-destination-editor-mappings-page"></a>Ziel-Editor für Flatfiles (Seite Zuordnungen)
   Auf der Seite **Zuordnungen** des Dialogfelds **Ziel-Editor für Flatfiles** können Sie eine Zuordnung von Eingabe- zu Zielspalten vornehmen.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Eingabespalten den Zielspalten zuordnen.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "51641317"
  **Zielspalte**  
  Zeigt alle verfügbaren Zielspalten an, und ob sie zugeordnet sind.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Flatfilequelle](../../integration-services/data-flow/flat-file-source.md)   
  [Datenfluss](../../integration-services/data-flow/data-flow.md)  
   

@@ -13,12 +13,12 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 24fce778851f514d680a2701cc9c4dcc9ccb277c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2ffaf0e89e1fdbd0a1722ad038ad9e360decf237
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419071"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305888"
 ---
 # <a name="using-integrated-authentication"></a>Nutzung der Integrierten Authentifizierung
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -67,7 +67,7 @@ Beim Anmelden in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wi
   
 Zur Überwachung von Aktivitäten in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter einer anderen Identität als dem Systemkonto muss die Anwendung [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE AS** verwenden.  
   
-Zum Verbessern der Anwendungsleistung kann eine Anwendung Verbindungspooling mit integrierten Authentifizierung und Überwachung verwenden. Das Kombinieren von Verbindungspooling, integrierter Authentifizierung und Überwachung stellt jedoch ein Sicherheitsrisiko dar, da der UnixODBC-Treiber-Manager unterschiedlichen Benutzern ermöglicht, gepoolte Verbindungen wiederzuverwenden. Weitere Informationen finden Sie unter [ODBC-Verbindungspooling](https://www.unixodbc.org/doc/conn_pool.html).  
+Zum Verbessern der Anwendungsleistung kann eine Anwendung Verbindungspooling mit integrierten Authentifizierung und Überwachung verwenden. Das Kombinieren von Verbindungspooling, integrierter Authentifizierung und Überwachung stellt jedoch ein Sicherheitsrisiko dar, da der UnixODBC-Treiber-Manager unterschiedlichen Benutzern ermöglicht, gepoolte Verbindungen wiederzuverwenden. Weitere Informationen finden Sie unter [ODBC-Verbindungspooling](http://www.unixodbc.org/doc/conn_pool.html).  
 
 Vor der Wiederverwendung muss eine Anwendung gepoolte Verbindungen durch Ausführen von `sp_reset_connection` zurücksetzen.  
 
@@ -83,7 +83,7 @@ Entwickler können eine Anwendung bereitstellen, die einen Verbindungsserver ode
   
 -   Der Anwendungsserver ist mit anderem Datenbanknamen authentifiziert und stellt eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] her.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentifiziert sich gegenüber einer anderen Datenbank ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) als Datenbankbenutzer.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ist als Datenbankbenutzer bei einer anderen Datenbank ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) authentifiziert.  
   
 Nachdem die integrierte Authentifizierung konfiguriert ist, werden Anmeldeinformationen für den Verbindungsserver übergeben.  
   
@@ -128,7 +128,7 @@ Wenn die Kerberos-Authentifizierung fehlschlägt, verwendet der ODBC-Treiber unt
 
 Weitere Informationen zum Authentifizieren von Linux oder MacOS-Computer mit Active Directory finden Sie unter [Linux-Clients mit Active Directory authentifizieren](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) und [bewährte Methoden für die Integration von OS X in Active Directory](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Weitere Informationen zum Konfigurieren von Kerberos finden Sie unter den [MIT Kerberos-Dokumentation](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Programmierrichtlinien](../../../connect/odbc/linux-mac/programming-guidelines.md)
 
 [Versionsanmerkungen](../../../connect/odbc/linux-mac/release-notes.md)

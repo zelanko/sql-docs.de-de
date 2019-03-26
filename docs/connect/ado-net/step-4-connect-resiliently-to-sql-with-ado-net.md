@@ -13,12 +13,12 @@ ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 483c7f84d171b34135d16fd6f392b6f5f180d217
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: fceeefd7c9dd0d3bd7df761273f69355c4e6024a
+ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607100"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58342866"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>Schritt 4: Herstellen stabiler SQL-Verbindungen mit ADO.NET
 
@@ -68,7 +68,7 @@ Dann müssen Sie die Zeichenfolgen für die Servername, Kennwort und So weiter b
 Hinweis: Die Verbindungszeichenfolge für den Servernamen ist zugeschnitten Azure SQL-Datenbank, da sie das Präfix aus vier Zeichen des enthält **Tcp:**. Aber Sie können anpassen, dass die serverzeichenfolge, die mit Microsoft SQL Server herstellen.  
   
   
-```CSharp  
+```csharp
     using System;  // C#  
     using CG = System.Collections.Generic;  
     using QC = System.Data.SqlClient;  

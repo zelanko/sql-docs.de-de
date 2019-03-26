@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Add File Connection Manager
 ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b238ff33975944483906f91fa360159eacd05b71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54dc72a80f2ad6d49353662ded956608d7eadd66
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783494"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282464"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>Referenz zur Benutzeroberfläche des Dialogfelds Dateiverbindungs-Manager hinzufügen
   Mithilfe des Dialogfelds **Dateiverbindungs-Manager hinzufügen** können Sie eine Verbindung zu einer Gruppe von Dateien oder Ordnern definieren.  
@@ -30,7 +30,7 @@ ms.locfileid: "47783494"
 > [!NOTE]  
 >  Die integrierten Tasks und Datenflusskomponenten in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwenden keinen Verbindungs-Manager für mehrere Dateien. Sie können den Verbindungs-Manager jedoch im Skripttask oder in der Skriptkomponente verwenden.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Verwendungstyp**  
  Geben Sie den Dateityp an, der vom Verbindungs-Manager für mehrere Dateien verwendet werden soll.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "47783494"
  **Pfeilschaltflächen**  
  Wählen Sie eine Datei oder einen Ordner aus, und verschieben Sie das Objekt dann mit den Pfeilschaltflächen nach oben oder unten, um die Reihenfolge des Zugriffs festzulegen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../integration-services/integration-services-error-and-message-reference.md)  
   
   

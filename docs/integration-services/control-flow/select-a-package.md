@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Select a Package dialog box
 ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6d269e2e18c7c098e5f4149f4083d81a228b89da
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f9919b376a6487ea87ef193c7a577feeeb01a160
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527928"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276718"
 ---
 # <a name="select-a-package"></a>Paket auswählen
   Mithilfe des Dialogfelds **Paket auswählen** können Sie das Paket angeben, von dem der Task Nachrichtenwarteschlange Nachrichten empfangen kann.  
@@ -59,7 +59,7 @@ ms.locfileid: "52527928"
  **Dateiname**  
  Geben Sie den Pfad eines Pakets an, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(…)**, um das Paket zu suchen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Nachrichtenwarteschlange (Task)](../../integration-services/control-flow/message-queue-task.md)  
   
   

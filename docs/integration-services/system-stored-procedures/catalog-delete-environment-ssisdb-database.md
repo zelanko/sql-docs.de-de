@@ -8,20 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: d44b765f-9523-4e6a-bb17-37846d5e5334
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ccb60c64fe2ec06e2db17b214babd993f896674f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2fbed8331faae48739ba3740fc755d64421e9277
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746138"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282314"
 ---
 # <a name="catalogdeleteenvironment-ssisdb-database"></a>catalog.delete_environment (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Löscht eine Umgebung aus einem Ordner im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog.  
+  Löscht eine Umgebung aus einem Ordner im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog.  
   
 ## <a name="syntax"></a>Syntax  
   

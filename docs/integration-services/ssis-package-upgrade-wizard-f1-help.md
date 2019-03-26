@@ -16,15 +16,15 @@ f1_keywords:
 - sql13.is.upgradewizard.completewizard.f1
 - sql13.is.upgradewizard.upgradingpackage.f1
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4c1d1da13379b9a273ca3b5e0c1809434c7ed165
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e51589ee33e03fca23167357f7022d817f808981
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829488"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289996"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS Paketupgrade-Assistent (F1-Hilfe)
   Verwenden Sie den SSIS-Paketupgrade-Assistenten, um ein Upgrade für die mit früheren Versionen erstellten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Pakete auf das für die aktuelle Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]verwendete Paketformat durchzuführen.  
@@ -35,7 +35,7 @@ ms.locfileid: "47829488"
 
 ## <a name="ssis-upgrade-wizard"></a>SSIS-Paketupgrade-Assistent
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Diese Seite nicht mehr anzeigen.**  
  Lassen Sie die Willkommensseite beim nächsten Öffnen des Assistenten aus.  
  
@@ -142,7 +142,7 @@ ms.locfileid: "47829488"
   
 -   [Aktualisieren von Integration Services-Paketen mit dem SSIS-Paketupgrade-Assistenten](../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Verbindungszeichenfolgen zum Verwenden neuer Anbieternamen aktualisieren**  
  Aktualisieren Sie die Verbindungszeichenfolgen, um für die aktuelle Version von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]die Namen für die folgenden Anbieter zu verwenden:  
   
@@ -191,7 +191,7 @@ ms.locfileid: "47829488"
 ## <a name="select-packages-page"></a>Seite „Pakete auswählen“
   Verwenden Sie die Seite **Pakete auswählen** , um die Pakete für das Upgrade auszuwählen. Auf dieser Seite werden die Pakete aufgelistet, die am auf der Seite **Quellspeicherort auswählen** des Assistenten ausgewählten Speicherort gespeichert sind.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Vorhandener Paketname**  
  Wählen Sie ein oder mehrere Pakete für das Upgrade aus.  
   
@@ -210,14 +210,14 @@ ms.locfileid: "47829488"
 ## <a name="complete-the-wizard-page"></a>Seite „Assistenten abschließen“
   Verwenden Sie die Seite **Assistenten abschließen** , um die Paketupgradeoptionen zu überprüfen und zu bestätigen, die Sie ausgewählt haben. Dies ist die letzte Seite des Assistenten, auf der Sie zurückgehen und die Optionen für diese Sitzung des Assistenten ändern können.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Zusammenfassungsoptionen**  
  Überprüfen Sie die Upgradeoptionen, die Sie im Assistenten ausgewählt haben. Um Optionen zu ändern, klicken Sie auf **Zurück** , um zu den vorherigen Assistentenseiten zurückzukehren.
  
 ## <a name="upgrading-the-packages-page"></a>Seite „Pakete werden aktualisiert“
   Verwenden Sie die Seite **Pakete werden aktualisiert** , um den Status der Paketaktualisierung anzuzeigen und um den Aktualisierungsprozess unterbrechen. Der [!INCLUDE[ssIS](../includes/ssis-md.md)] Paketaktualisierungs-Assistent aktualisiert die ausgewählten Pakete nacheinander.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Bereich „Meldung“**  
  Zeigt während der Aktualisierung Statusmeldungen und Zusammenfassungsinformationen an.  
   
@@ -253,7 +253,7 @@ Stellen Sie in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]im Objekt-E
   
 Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]im Projektmappen-Explorer das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt, und erweitern Sie dann den Knoten **SSIS-Pakete** , um die aktualisierten Pakete anzuzeigen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Aktualisieren von Integration Services-Paketen](../integration-services/install-windows/upgrade-integration-services-packages.md)  
   
   

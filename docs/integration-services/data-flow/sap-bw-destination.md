@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6abb029f20becaac0e3c874202e1788e7bfb3722
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 24e34745d8562f5e990855f1e67526684d171383
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642087"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280924"
 ---
 # <a name="sap-bw-destination"></a>SAP BW-Ziel
   Das SAP BW-Ziel ist die Zielkomponente von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Folglich lädt das SAP BW-Ziel Daten aus dem Datenfluss in ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket im SAP NetWeaver BW-System, Version 7.  
@@ -115,7 +115,7 @@ ms.locfileid: "51642087"
   
 -   [InfoPackage erstellen](../../integration-services/data-flow/create-infopackage.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Microsoft Connector for SAP BW Components](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

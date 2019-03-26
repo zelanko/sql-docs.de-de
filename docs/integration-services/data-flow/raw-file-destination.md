@@ -18,15 +18,15 @@ helpviewer_keywords:
 - writing raw data
 - Raw File destination
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 15fbcd91b9b2604b0ce7faef4d129101c0fb6f40
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c89496fabad28d3491d9b2f648d6355ae404685b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393613"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282303"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
   Das Rohdatendatei-Ziel schreibt Rohdaten in eine Datei. Die Daten liegen im systemeigenen Zielformat vor, sodass die Daten nicht übersetzt und kaum analysiert werden müssen. Dies bedeutet, dass das Rohdatendatei-Ziel Daten schneller als andere Ziele, wie z. B. Flatfile- und OLE DB-Ziele, schreiben kann.  
@@ -219,7 +219,7 @@ ms.locfileid: "52393613"
  **Ausgabealias**  
  Geben Sie einen anderen Namen an, der für die Ausgabespalte verwendet werden soll.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Rohdatendatei-Quelle](../../integration-services/data-flow/raw-file-source.md)   
  [Datenfluss](../../integration-services/data-flow/data-flow.md)  
   

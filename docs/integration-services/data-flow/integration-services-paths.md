@@ -18,15 +18,15 @@ helpviewer_keywords:
 - destinations [Integration Services], paths
 - sources [Integration Services], paths
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a5fcda8f88d1e16dc39bd4de431239a30cfd218d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3aa227c82d9481863c6cca360fdac41cec3ace13
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658620"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282454"
 ---
 # <a name="integration-services-paths"></a>SQL Server Integration Services-Pfade
   Ein Pfad verbindet zwei Komponenten in einem Datenfluss, indem die Ausgabe einer Datenflusskomponente mit der Eingabe einer anderen Komponente verbunden wird. Ein Pfad weist eine Quelle und ein Ziel auf. Wenn z. B. ein Pfad eine Verbindung mit einer OLE DB-Quelle und einer Transformation zum Sortieren herstellt, ist die OLE DB-Quelle die Quelle des Pfads, und die Transformation zum Sortieren ist das Ziel des Pfads. Die Quelle ist die Komponente, wo der Pfad beginnt, und das Ziel ist die Komponente, wo der Pfad endet.  
@@ -62,7 +62,7 @@ Mithilfe des Dialogfelds **Datenflusspfad-Editor** legen Sie Pfadeigenschaften f
   
  Mit dem Knoten **Allgemein** des Dialogfelds **Datenflusspfad-Editor** werden der Pfad benannt und beschrieben und die Optionen für die Pfadanmerkungen angegeben.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Pfad an.  
   
@@ -87,7 +87,7 @@ Mithilfe des Dialogfelds **Datenflusspfad-Editor** legen Sie Pfadeigenschaften f
 ## <a name="metadata-page---data-flow-path-editor"></a>Seite „Metadaten“ – Datenflusspfad-Editor
 Verwenden Sie die Seite **Metadaten** im Dialogfeld **Datenflusspfad-Editor** , um die Metadaten der Pfadspalten anzuzeigen.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Pfadmetadaten**  
  Listet die Spaltenmetadaten auf. Klicken Sie auf die Spaltenüberschriften, um die Spaltendaten zu sortieren.  
   
@@ -127,7 +127,7 @@ Verwenden Sie die Seite **Metadaten** im Dialogfeld **Datenflusspfad-Editor** , 
 ## <a name="data-viewers-page---data-flow-path-editor"></a>Seite „Daten-Viewer“ – Datenflusspfad-Editor
 Verwenden Sie die Seite **Daten-Viewer** des Dialogfelds **Datenflusspfad-Editor** , um die Daten-Viewer zu verwalten, die dem Pfad zugeordnet sind.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Name**  
  Listet die Daten-Viewer auf.  
   

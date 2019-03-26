@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0eb2d790181b73f948e04a0e25f9d9702c6c62e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db93ad1d3f838e82c03b3512ea25c39c0dc1e2de
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761888"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289226"
 ---
 # <a name="cdc-control-task-custom-properties"></a>Benutzerdefinierte Eigenschaften des CDC-Steuerungstasks
   In der folgenden Tabelle werden die benutzerdefinierten Eigenschaften des CDC-Steuerungstasks beschrieben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
@@ -33,7 +33,7 @@ ms.locfileid: "47761888"
 |StateTable|Zeichenfolge|Gibt den Namen der Tabelle an, in der der CDC-Kontextstatus gespeichert ist. Auf diese Tabelle muss der Zugriff mit der für diese Komponente konfigurierten Verbindung möglich sein. Diese Tabelle muss varchar-Spalten mit den Namen **name** und **state**enthalten. (Die Spalte **state** muss mindestens 256 Zeichen aufweisen.)<br /><br /> Diese Eigenschaft gilt nur, wenn **AutomaticStatePersistence** auf **true**festgelegt ist.|  
 |CommandTimeout|integer|Dieser Wert gibt beim Kommunizieren mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank das Timeout (in Sekunden) an. Dieser Wert wird verwendet, wenn die Antwortzeit der Datenbank sehr langsam ist und der Standardwert (30 Sekunden) nicht ausreicht.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)   
  [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md)  
   

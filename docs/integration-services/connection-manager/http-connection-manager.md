@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Web server connections [Integration Services]
 - connections [Integration Services], HTTP
 ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 84303bf8084f745a052e4057351fa29a231d6dc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bde008098dee9b48004b6ee036df4832d83f3ff2
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824703"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282444"
 ---
 # <a name="http-connection-manager"></a>HTTP-Verbindungs-Manager
   Eine HTTP-Verbindung ermöglicht Paketen den Zugriff auf einen Webserver, indem zum Senden und Empfangen von Dateien HTTP verwendet wird. Der Task Webdienst von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwendet diesen Verbindungs-Manager.  
@@ -60,7 +60,7 @@ ms.locfileid: "47824703"
   
  Weitere Informationen zum HTTP-Verbindungs-Manager finden Sie unter [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md). Weitere Informationen zu einem allgemeinen Verwendungsszenario für den HTTP-Verbindungs-Manager finden Sie unter [Web Service Task](../../integration-services/control-flow/web-service-task.md).  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Server-URL**  
  Geben Sie die URL für den Server ein.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "47824703"
   
  Weitere Informationen zum HTTP-Verbindungs-Manager finden Sie unter [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md). Weitere Informationen zu einem allgemeinen Verwendungsszenario für den HTTP-Verbindungs-Manager finden Sie unter [Web Service Task](../../integration-services/control-flow/web-service-task.md).  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Proxy verwenden**  
  Gibt an, ob der HTTP-Verbindungs-Manager Verbindungen über einen Proxyserver herstellen soll.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "47824703"
  **Entfernen**  
  Wählen Sie eine Adresse aus, und entfernen Sie sie dann, indem Sie auf **Entfernen**klicken.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Webdienst (Task)](../../integration-services/control-flow/web-service-task.md)   
  [Integration Services-Verbindungen &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   

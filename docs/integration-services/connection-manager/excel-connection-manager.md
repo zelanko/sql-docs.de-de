@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - connection managers [Integration Services], Excel
 ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1da4be7553134528a9f02e61726818afee0ce2de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 67b3b3446cc6890a802e972e9c12a93b3e58c6b0
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817048"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282354"
 ---
 # <a name="excel-connection-manager"></a>Excel-Verbindungs-Manager
   Mit einem Excel-Verbindungs-Manager kann ein Paket eine Verbindung mit einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel-Arbeitsmappendatei herstellen. Die Excel-Quelle und das Excel-Ziel von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwenden den Excel-Verbindungs-Manager.  
@@ -53,7 +53,7 @@ ms.locfileid: "47817048"
 ## <a name="excel-connection-manager-editor"></a>Verbindungs-Manager-Editor für Excel
   Mithilfe des Dialogfelds **Verbindungs-Manager-Editor für Excel** können Sie einer vorhandenen oder neuen [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] -Arbeitsmappendatei eine Verbindung hinzufügen.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Excel-Dateipfad**  
  Geben Sie den Pfad und den Dateinamen einer vorhandenen oder neuen Excel-Arbeitsmappendatei ein.  
    

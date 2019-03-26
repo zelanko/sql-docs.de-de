@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9f24cd7679891d8dd5da42d0df02c416b9741267
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f9f23826d6d56b4a1ca52b4552538c9a5af5ef11
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842318"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279414"
 ---
 # <a name="odbc-flow-components"></a>ODBC-Flusskomponenten
   In diesem Thema werden die erforderlichen Begriffe der Erstellung eines ODBC-Datenflusses mit [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
@@ -88,7 +88,7 @@ ms.locfileid: "47842318"
   
 -   Erstellen Sie in [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] ein neues [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
   
--   Erstellen Sie einen ODBC-Verbindungs-Manager, der einen lokal installierten Sybase ODBC-Treiber mit einem DSN verwendet, der auf eine lokale Sybase-Datenbank oder Sybase-Remotedatenbank verweist. Die Daten werden in diese Datenbank extrahiert.  
+-   Erstellen Sie einen ODBC-Verbindungs-Manager, der einen lokal installierten Sybase ODBC-Treiber mit einem DSN verwendet, der auf eine lokale Sybase-Datenbank oder Sybase-Remotedatenbank verweist. Die Daten werden in diese Datenbank extrahiert.  
   
 -   Erstellen Sie einen OLE DB-Verbindungs-Manager, der eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank herstellt, in die Sie die Daten laden möchten.  
   

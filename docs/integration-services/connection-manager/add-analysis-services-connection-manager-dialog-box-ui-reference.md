@@ -12,22 +12,22 @@ f1_keywords:
 helpviewer_keywords:
 - Add Analysis Services Connection Manager
 ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f7372a68fb108b1ebccbc8354f338f17ef207a6c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f5aadd19858a0936ea4356efcd73226a63e2d095
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609128"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282914"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>Referenz zur Benutzeroberfläche des Dialogfelds Analysis Services-Verbindungs-Manager hinzufügen
   Mithilfe des Dialogfelds **Analysis Services-Verbindungs-Manager hinzufügen** können Sie eine Verbindung mit einem Server herstellen, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ausgeführt wird, oder die Verbindungseigenschaften ändern.  
   
  Weitere Informationen zum Analysis Services-Verbindungs-Manager finden Sie unter [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Verbindung mit einem Computer mit Analysis Services herstellen**  
  Verwenden Sie die Standardverbindung mit einem Server, auf dem eine Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ausgeführt wird, oder erstellen Sie eine neue Verbindung, indem Sie auf **Bearbeiten**klicken.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "47609128"
  **Analysis Services-Projekt**  
  Wählen Sie ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt aus der Liste aus.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services-Verbindungen &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   

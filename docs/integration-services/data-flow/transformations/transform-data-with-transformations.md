@@ -12,15 +12,15 @@ helpviewer_keywords:
 - transformations [Integration Services], about transformations
 - transforming data [Integration Services]
 ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9ddbce6d12a8a3697b473eccaf9d8cd89dccd1a1
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 3c6167895a35781d0adf91869a4bcdc3ab4d79a5
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640257"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275262"
 ---
 # <a name="transform-data-with-transformations"></a>Transformieren von Daten mit Transformationen
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] schließt drei verschiedene Arten von Datenflusskomponenten ein: Quellen, Transformationen und Ziele.  
@@ -59,7 +59,7 @@ ms.locfileid: "51640257"
   
 -   [Festlegen der Eigenschaften einer Datenflusskomponente](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenflusstask](../../../integration-services/control-flow/data-flow-task.md)   
  [Datenfluss](../../../integration-services/data-flow/data-flow.md)   
  [Verbinden von Komponenten mit Pfaden](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
