@@ -4,18 +4,18 @@ description: Erfahren Sie, wie zum Installieren von SQL Server Machine Learning 
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 833c6f2083d9532ecc4120e5f65be81a75a86d24
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: f1ca66c5e376704737a092f21fd25401d20bbdbb
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579523"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493872"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-java-on-linux"></a>Installieren von SQL Server 2019 Machine Learning-Diensten (R, Python, Java) unter Linux
 
@@ -25,9 +25,11 @@ Machine learning und Programmieren von Erweiterungen sind ein Add-on für die Da
 
 Speicherort des Pakets für die R, Python und Java-Erweiterungen sind in den SQL Server Linux-Quell-Repositorys. Wenn Sie bereits über Quellcode-Repositorys für die Datenbank-Engine-Installation konfiguriert, können Sie Ausführen den **Mssql-Mlservices** Paket Befehle zur Installation über die gleichen Repository-Registrierung.
 
+Machine Learning-Dienste wird auch auf Linux-Container unterstützt. Mit Machine Learning-Diensten keine vordefinierten Container bereitgestellt, aber erstellen Sie einen aus der SQL Server-Containern unter Verwendung von [eine Beispielvorlage auf GitHub verfügbar](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
+
 ## <a name="uninstall-previous-ctp"></a>Deinstallieren der vorherigen CTP-Version
 
-Die Liste der Pakete hat sich über die letzten CTP-Version Versionen, was zu weniger Pakete geändert werden. Es wird empfohlen, deinstallieren CTP 2.x So entfernen Sie alle früheren Pakete vor der Installation von CTP 2.3. Seite-an-Seite Installation mehrerer Versionen wird nicht unterstützt.
+Die Liste der Pakete hat sich über die letzten CTP-Version Versionen, was zu weniger Pakete geändert werden. Es wird empfohlen, deinstallieren CTP 2.x So entfernen Sie alle früheren Pakete vor der Installation der CTP-Version 2.4. Seite-an-Seite Installation mehrerer Versionen wird nicht unterstützt.
 
 ### <a name="1-confirm-package-installation"></a>1. Paketinstallation bestätigen
 
@@ -37,7 +39,7 @@ Sie möchten möglicherweise prüfen, ob das Vorhandensein einer früheren Insta
 ls /opt/microsoft/mssql/bin
 ```
 
-### <a name="2-uninstall-ctp-20-or-21-packages"></a>2. Deinstallieren von CTP-Version 2.0 oder 2.1-Pakete
+### <a name="2-uninstall-previous-ctp-2x-packages"></a>2. Deinstallieren der vorherigen CTP-Version 2.x-Pakete
 
 Deinstallieren Sie auf der untersten Paketebene. Alle abhängigen für ein Paket auf niedrigerer Ebene upstreampaket wird automatisch deinstalliert.
 
@@ -61,7 +63,7 @@ Befehle zum Löschen von Paketen, die in der folgenden Tabelle angezeigt werden.
 > microsoft-r-open-mro-3.4.4
 > ```
 
-### <a name="3-proceed-with-ctp-23-install"></a>3. CTP 2.3-Installation nicht fortsetzen
+### <a name="3-proceed-with-ctp-24-install"></a>3. CTP 2.4-Installation nicht fortsetzen
 
 Auf der höchsten Paketebene, die mithilfe der Anweisungen in diesem Artikel für Ihr Betriebssystem installieren.
 
@@ -73,7 +75,7 @@ Für jeden Satz betriebssystemspezifischen Anweisungen zur Installation *höchst
 
    + [RedHat](#RHEL)
    + [Ubuntu](#ubuntu)
-   + [SUSE](#SUSE)
+   + [SUSE](#suse)
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
