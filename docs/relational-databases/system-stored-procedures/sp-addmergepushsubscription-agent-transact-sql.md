@@ -16,12 +16,12 @@ ms.assetid: 808a1925-be46-4999-8d69-b3a83010ec81
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1e05be91125586b17dcd9fde84dbf6fa93ae9a4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 73f8b43a39f30720c6e9c8e4a4969ba350ebd8a0
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823329"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494292"
 ---
 # <a name="spaddmergepushsubscriptionagent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,53 +63,40 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publication =** ] **'***publication***'**  
- Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@subscriber =** ] **"***Abonnenten***"**  
- Der Name des Abonnenten. *Abonnenten* ist **Sysname**, hat den Standardwert NULL.  
+`[ @subscriber = ] 'subscriber'` Ist der Name des Abonnenten. *Abonnenten* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@subscriber_db =** ] **"***Subscriber_db***"**  
- Ist der Name der Abonnementdatenbank. *Subscriber_db* ist **Sysname**, hat den Standardwert NULL.  
+`[ @subscriber_db = ] 'subscriber_db'` Ist der Name der Abonnementdatenbank. *Subscriber_db* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@subscriber_security_mode =** ] *Subscriber_security_mode*  
- Der Sicherheitsmodus, der beim Synchronisieren zum Herstellen der Verbindung mit einem Abonnenten verwendet wird. *Subscriber_security_mode* ist **Int**, hat den Standardwert 1. Wenn **0**, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. Wenn **1**, gibt die Windows-Authentifizierung.  
+`[ @subscriber_security_mode = ] subscriber_security_mode` Ist der Sicherheitsmodus, verwenden Sie beim Herstellen einer Verbindung an einen Abonnenten, bei der Synchronisierung. *Subscriber_security_mode* ist **Int**, hat den Standardwert 1. Wenn **0**, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. Wenn **1**, gibt die Windows-Authentifizierung.  
   
- [  **@subscriber_login =** ] **"***Subscriber_login***"**  
- Ist der Anmeldename des Abonnenten beim Herstellen einer Verbindung an einen Abonnenten, bei der Synchronisierung verwendet. *Subscriber_login* ist erforderlich, wenn *Subscriber_security_mode* nastaven NA hodnotu **0**. *Subscriber_login* ist **Sysname**, hat den Standardwert NULL.  
+`[ @subscriber_login = ] 'subscriber_login'` Ist der Anmeldename des Abonnenten beim Herstellen einer Verbindung an einen Abonnenten, bei der Synchronisierung verwendet. *Subscriber_login* ist erforderlich, wenn *Subscriber_security_mode* nastaven NA hodnotu **0**. *Subscriber_login* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@subscriber_password =** ] **"***Subscriber_password***"**  
- Entspricht dem Abonnentenkennwort für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung. *Subscriber_password* ist erforderlich, wenn *Subscriber_security_mode* nastaven NA hodnotu **0**. *Subscriber_password* ist **Sysname**, hat den Standardwert NULL. Bei Verwendung eines Abonnentenkennworts wird dieses automatisch verschlüsselt.  
+`[ @subscriber_password = ] 'subscriber_password'` Entspricht dem abonnentenkennwort für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. *Subscriber_password* ist erforderlich, wenn *Subscriber_security_mode* nastaven NA hodnotu **0**. *Subscriber_password* ist **Sysname**, hat den Standardwert NULL. Bei Verwendung eines Abonnentenkennworts wird dieses automatisch verschlüsselt.  
   
 > [!IMPORTANT]  
 >  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden müssen, muss die Datei an einem sicheren Ort gespeichert werden, um unberechtigten Zugriff zu vermeiden.  
   
- [  **@publisher_security_mode =** ] *Publisher_security_mode*  
- Der Sicherheitsmodus, der beim Synchronisieren zum Herstellen der Verbindung mit einem Verleger verwendet wird. *Publisher_security_mode* ist **Int**, hat den Standardwert 1. Wenn **0**, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. Wenn **1**, gibt die Windows-Authentifizierung.  
+`[ @publisher_security_mode = ] publisher_security_mode` Ist der Sicherheitsmodus, verwenden Sie beim Herstellen einer Verbindung mit einem Verleger, bei der Synchronisierung. *Publisher_security_mode* ist **Int**, hat den Standardwert 1. Wenn **0**, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. Wenn **1**, gibt die Windows-Authentifizierung.  
   
- [  **@publisher_login =** ] **"***Publisher_login***"**  
- Der Anmeldename, der beim Synchronisieren zum Herstellen der Verbindung mit einem Verleger verwendet wird. *Publisher_login* ist **Sysname**, hat den Standardwert NULL.  
+`[ @publisher_login = ] 'publisher_login'` Ist die Anmeldung beim Herstellen einer Verbindung mit einem Verleger, bei der Synchronisierung verwendet. *Publisher_login* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@publisher_password =** ] **"***Publisher_password***"**  
- Das Kennwort, das beim Herstellen der Verbindung mit dem Verleger verwendet wird. *Publisher_password* ist **Sysname**, hat den Standardwert NULL.  
+`[ @publisher_password = ] 'publisher_password'` Das Kennwort wird verwendet werden, wenn eine Verbindung mit dem Verleger herstellen. *Publisher_password* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!IMPORTANT]  
 >  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden müssen, muss die Datei an einem sicheren Ort gespeichert werden, um unberechtigten Zugriff zu vermeiden.  
   
- [  **@job_login =** ] **"***Job_login***"**  
- Der Anmeldename für das Windows-Konto, unter dem der Agent ausgeführt wird. *Job_login* ist **nvarchar(257)**, hat den Standardwert NULL. Dieses Windows-Konto wird immer für Agentverbindungen mit dem Verteiler und für Verbindungen mit dem Abonnenten und Verleger verwendet, wenn die integrierte Windows-Authentifizierung verwendet wird.  
+`[ @job_login = ] 'job_login'` Ist der Anmeldename für das Windows-Konto, unter dem der Agent ausgeführt wird. *Job_login* ist **nvarchar(257)**, hat den Standardwert NULL. Dieses Windows-Konto wird immer für Agentverbindungen mit dem Verteiler und für Verbindungen mit dem Abonnenten und Verleger verwendet, wenn die integrierte Windows-Authentifizierung verwendet wird.  
   
- [  **@job_password =** ] **"***Job_password***"**  
- Das Kennwort für das Windows-Konto, unter dem der Agent ausgeführt wird. *Job_password* ist **Sysname**, hat keinen Standardwert.  
+`[ @job_password = ] 'job_password'` Ist das Kennwort für das Windows-Konto, unter dem der Agent ausgeführt wird. *Job_password* ist **Sysname**, hat keinen Standardwert.  
   
 > [!IMPORTANT]  
 >  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden müssen, muss die Datei an einem sicheren Ort gespeichert werden, um unberechtigten Zugriff zu vermeiden.  
   
- [  **@job_name =** ] **"***Job_name***"**  
- Der Name eines vorhandenen Agentauftrags. *Job_name* ist **Sysname**, hat den Standardwert NULL. Dieser Parameter wird nur angegeben, wenn das Abonnement nicht mit einem neu erstellten Auftrag (Standard), sondern mit einem vorhandenen Auftrag synchronisiert wird. Wenn Sie nicht Mitglied der sind die **Sysadmin** festen Serverrolle an, Sie müssen angeben, *Job_login* und *Job_password* beim Angeben von *Job_name*.  
+`[ @job_name = ] 'job_name'` Ist der Name eines vorhandenen Agent-Auftrags. *Job_name* ist **Sysname**, hat den Standardwert NULL. Dieser Parameter wird nur angegeben, wenn das Abonnement nicht mit einem neu erstellten Auftrag (Standard), sondern mit einem vorhandenen Auftrag synchronisiert wird. Wenn Sie nicht Mitglied der sind die **Sysadmin** festen Serverrolle an, Sie müssen angeben, *Job_login* und *Job_password* beim Angeben von *Job_name*.  
   
- [  **@frequency_type =** ] *Frequency_type*  
- Die Häufigkeit für die Zeitplanung des Merge-Agents. *Frequency_type* ist **Int**, und kann einen der folgenden Werte.  
+`[ @frequency_type = ] frequency_type` Ist die Häufigkeit, mit dem der Merge-Agent zu planen. *Frequency_type* ist **Int**, und kann einen der folgenden Werte.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -126,8 +113,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 > [!NOTE]  
 >  Geben Sie einen Wert **64** bewirkt, dass der Merge-Agent im fortlaufenden Modus ausgeführt. Dies entspricht dem Festlegen der **-Continuous** Parameter für den Agent. Weitere Informationen finden Sie unter [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
   
- [  **@frequency_interval =** ] *Frequency_interval*  
- Die Tage, die der Merge-Agent ausgeführt wird. *Frequency_interval* ist **Int**, und kann einen der folgenden Werte.  
+`[ @frequency_interval = ] frequency_interval` Die Tage, die der Merge-Agent ausgeführt wird. *Frequency_interval* ist **Int**, und kann einen der folgenden Werte.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -143,8 +129,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |**10**|Wochenendtage|  
 |NULL (Standard)||  
   
- [  **@frequency_relative_interval =** ] *Frequency_relative_interval*  
- Das Datum des Merge-Agents. Dieser Parameter wird verwendet, wenn *Frequency_type* nastaven NA hodnotu **32** (mit relativem Monatsintervall). *Frequency_relative_interval* ist **Int**, und kann einen der folgenden Werte.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Ist das Datum des Merge-Agents. Dieser Parameter wird verwendet, wenn *Frequency_type* nastaven NA hodnotu **32** (mit relativem Monatsintervall). *Frequency_relative_interval* ist **Int**, und kann einen der folgenden Werte.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -155,11 +140,9 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |**16**|Letzter|  
 |NULL (Standard)||  
   
- [  **@frequency_recurrence_factor =** ] *Frequency_recurrence_factor*  
- Wird von verwendete Wiederholungsfaktor *Frequency_type*. *Frequency_recurrence_factor* ist **Int**, hat den Standardwert NULL.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Wird von verwendete Wiederholungsfaktor *Frequency_type*. *Frequency_recurrence_factor* ist **Int**, hat den Standardwert NULL.  
   
- [  **@frequency_subday =** ] *Frequency_subday*  
- Die Häufigkeit für die erneute geplante Ausführung während des definierten Zeitraums. *Frequency_subday* ist **Int**, und kann einen der folgenden Werte.  
+`[ @frequency_subday = ] frequency_subday` Ist die Häufigkeit für die erneute geplante Ausführung während des definierten Zeitraums. *Frequency_subday* ist **Int**, und kann einen der folgenden Werte.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -169,23 +152,17 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |**8**|Hour|  
 |NULL (Standard)||  
   
- [  **@frequency_subday_interval =** ] *Frequency_subday_interval*  
- Das Intervall für *Frequency_subday*. *Frequency_subday_interval* ist **Int**, hat den Standardwert NULL.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Das Intervall für *Frequency_subday*. *Frequency_subday_interval* ist **Int**, hat den Standardwert NULL.  
   
- [  **@active_start_time_of_day =** ] *Active_start_time_of_day*  
- Die Tageszeit, zu der der Merge-Agent zum ersten Mal geplant ist. Dabei wird das Format HHMMSS verwendet. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert NULL.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Die Tageszeit aus, wenn der Merge-Agent zuerst ist, wird geplant HHMMSS. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert NULL.  
   
- [  **@active_end_time_of_day =** ] *Active_end_time_of_day*  
- Die Tageszeit, ab der der Merge-Agent nicht mehr geplant ist. Dabei wird das Format HHMMSS verwendet. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert NULL.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Die Tageszeit, ab der Merge-Agent nicht mehr, wird geplant ist HHMMSS verwendet. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert NULL.  
   
- [ **@active_start_date =** ] *active_start_date*  
- Das Datum, an dem der Merge-Agent zum ersten Mal geplant ist. Dabei wird das Format JJJJMMTT verwendet. *Active_start_date* ist **Int**, hat den Standardwert NULL.  
+`[ @active_start_date = ] active_start_date` Das Datum, an den Merge-Agent zuerst ist geplant Format: YYYYMMDD. *Active_start_date* ist **Int**, hat den Standardwert NULL.  
   
- [ **@active_end_date =** ] *active_end_date*  
- Das Datum, ab dem der Merge-Agent nicht mehr geplant ist. Dabei wird das Format JJJJMMTT verwendet. *Active_end_date* ist **Int**, hat den Standardwert NULL.  
+`[ @active_end_date = ] active_end_date` Ist das Datum, ab der Merge-Agent nicht mehr, geplant JJJJMMTT. *Active_end_date* ist **Int**, hat den Standardwert NULL.  
   
- [  **@enabled_for_syncmgr =** ] **"***Enabled_for_syncmgr***"**  
- Gibt an, ob das Abonnement über Windows Synchronization Manager synchronisiert werden kann. *Enabled_for_syncmgr* ist **nvarchar(5)**, hat den Standardwert "false". Wenn **"false"**, das Abonnement ist nicht mit der Synchronisierungsverwaltung registriert. Wenn **"true"**, das Abonnement mit der Synchronisierungsverwaltung registriert und kann synchronisiert werden, ohne Starten des [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Gibt an, ob das Abonnement über Windows Synchronization Manager synchronisiert werden kann. *Enabled_for_syncmgr* ist **nvarchar(5)**, hat den Standardwert "false". Wenn **"false"**, das Abonnement ist nicht mit der Synchronisierungsverwaltung registriert. Wenn **"true"**, das Abonnement mit der Synchronisierungsverwaltung registriert und kann synchronisiert werden, ohne Starten des [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -202,9 +179,9 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 ## <a name="see-also"></a>Siehe auch  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Abonnieren von Veröffentlichungen](../../relational-databases/replication/subscribe-to-publications.md)   
- [Sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [Sp_changemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [Sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
- [Sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
+ [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [sp_changemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
   
   

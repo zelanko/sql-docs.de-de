@@ -16,12 +16,12 @@ ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ac79494bfb0d08503be6e138bce748596eb8165
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3b37e09147652e856ac0c4c8160c1d7d3caf6f6d
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819066"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493952"
 ---
 # <a name="spchangemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,20 +43,15 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication=**] **"**_Veröffentlichung_**"**  
- Der Name der Veröffentlichung, die geändert werden soll. *Veröffentlichung* ist **Sysname**, hat den Standardwert NULL. Die Veröffentlichung muss bereits vorhanden sein und den Regeln für Bezeichner entsprechen.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung, zu ändern. *Veröffentlichung* ist **Sysname**, hat den Standardwert NULL. Die Veröffentlichung muss bereits vorhanden sein und den Regeln für Bezeichner entsprechen.  
   
- [  **@subscriber=**] **"**_Abonnenten_**"**  
- Der Name des Abonnenten. *Abonnenten* ist **Sysname**, hat den Standardwert NULL.  
+`[ @subscriber = ] 'subscriber'` Ist der Name des Abonnenten. *Abonnenten* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@subscriber_db=**] **"**_Subscriber_db_**"**  
- Ist der Name der Abonnementdatenbank. *Subscriber_db*ist **Sysname**, hat den Standardwert NULL.  
+`[ @subscriber_db = ] 'subscriber_db'` Ist der Name der Abonnementdatenbank. *Subscriber_db*ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@property=**] **"**_Eigenschaft_**"**  
- Ist die Eigenschaft, die für die angegebene Veröffentlichung geändert. *Eigenschaft* ist **Sysname**, und kann einen der Werte in der Tabelle.  
+`[ @property = ] 'property'` Ist die Eigenschaft, die für die angegebene Veröffentlichung geändert. *Eigenschaft* ist **Sysname**, und kann einen der Werte in der Tabelle.  
   
- [  **@value=**] **"**_Wert_**"**  
- Der neue Wert für den angegebenen *Eigenschaft*. *Wert* ist **nvarchar(255)**, und kann einen der Werte in der Tabelle.  
+`[ @value = ] 'value'` Der neue Wert für den angegebenen *Eigenschaft*. *Wert* ist **nvarchar(255)**, und kann einen der Werte in der Tabelle.  
   
 |Eigenschaft|Wert|Description|  
 |--------------|-----------|-----------------|  
@@ -72,7 +67,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ||**0**|Verwendung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung für die Verbindung mit dem Abonnenten.|  
 |**subscriber_login**||Anmeldename auf dem Abonnenten.|  
 |**subscriber_password**||Sicheres Kennwort für den angegebenen Anmeldenamen auf dem Abonnenten.|  
-|**sync_type**|**Automatisch**|Das Schema und die Ausgangsdaten für veröffentlichte Tabellen werden zuerst an den Abonnenten übertragen.|  
+|**sync_type**|**automatic**|Das Schema und die Ausgangsdaten für veröffentlichte Tabellen werden zuerst an den Abonnenten übertragen.|  
 ||**Keine**|Der Abonnent verfügt bereits über das Schema und die Ausgangsdaten für veröffentlichte Tabellen; Systemtabellen und Daten werden immer übertragen.|  
 |**use_interactive_resolver**|**true**|Ermöglicht das interaktive Lösen von Konflikten für alle Artikel, die eine interaktive Auflösung zulassen.|  
 ||**false**|Konflikte werden automatisch mithilfe eines Standardkonfliktlösers oder eines benutzerdefinierten Konfliktlösers gelöst.|  
@@ -90,9 +85,9 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
  Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_changemergesubscription**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [Sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
- [Sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)   
+ [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

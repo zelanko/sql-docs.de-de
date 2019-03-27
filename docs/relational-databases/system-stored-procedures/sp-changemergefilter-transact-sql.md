@@ -16,12 +16,12 @@ ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c199af62d7cd5cb95c382b412182bb24c957bf89
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 32facb58645e0fbb3750ca02da0d3a22b320fc67
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127080"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493082"
 ---
 # <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,20 +44,15 @@ sp_changemergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication=** ] **"**_Veröffentlichung_**"**  
- Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@article=** ] **"**_Artikel_**"**  
- Der Name des Artikels. *Artikel* ist **Sysname**, hat keinen Standardwert.  
+`[ @article = ] 'article'` Ist der Name des Artikels. *Artikel* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@filtername=** ] **"**_Filtername_**"**  
- Der aktuelle Name des Filters. *Filtername* ist **Sysname**, hat keinen Standardwert.  
+`[ @filtername = ] 'filtername'` Ist der aktuelle Name des Filters. *Filtername* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@property=** ] **"**_Eigenschaft_**"**  
- Der Name der zu ändernden Eigenschaft. *Eigenschaft* ist **Sysname**, hat keinen Standardwert.  
+`[ @property = ] 'property'` Ist der Name des zu ändernden Eigenschaft. *Eigenschaft* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@value=**] **"**_Wert_**"**  
- Ist der neue Wert für die angegebene Eigenschaft. *Wert*ist **nvarchar(1000)**, hat keinen Standardwert.  
+`[ @value = ] 'value'` Ist der neue Wert für die angegebene Eigenschaft. *Wert*ist **nvarchar(1000)**, hat keinen Standardwert.  
   
  Diese Tabelle beschreibt die Eigenschaften von Artikeln und die Werte für diese Eigenschaften.  
   
@@ -66,21 +61,19 @@ sp_changemergefilter [ @publication= ] 'publication'
 |**filter_type**|**1**|Joinfilter.<br /><br /> Diese Option ist erforderlich, um [!INCLUDE[ssEW](../../includes/ssew-md.md)]-Abonnenten zu unterstützen.|  
 ||**2**|Logische Datensatzbeziehung.|  
 ||**3**|Ein Joinfilter ist ebenfalls eine logische Datensatzbeziehung.|  
-|**Filtername**||Name des Filters.|  
+|**filtername**||Name des Filters.|  
 |**join_articlename**||Name des Join-Artikels.|  
 |**join_filterclause**||Filterklausel|  
 |**join_unique_key**|**true**|Der Join betrifft einen eindeutigen Schlüssel.|  
 ||**false**|Der Join betrifft nicht einen eindeutigen Schlüssel.|  
   
- [ **@force_invalidate_snapshot =** ] *Force_invalidate_snapshot*  
- Bestätigt, dass durch die von dieser gespeicherten Prozedur ausgeführte Aktion möglicherweise eine vorhandene Momentaufnahme ungültig wird. *Force_invalidate_snapshot* ist eine **Bit**, hat den Standardwert **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion eine vorhandene Momentaufnahme für ungültig erklären kann. *Force_invalidate_snapshot* ist eine **Bit**, hat den Standardwert **0**.  
   
  **0** gibt an, dass Änderungen am Mergeartikel bewirken nicht, die Momentaufnahme ungültig wird. Wenn die gespeicherte Prozedur erkennt, dass die Änderungen eine neue Momentaufnahme erfordern, tritt ein Fehler auf und es werden keine Änderungen vorgenommen.  
   
  **1** bedeutet, dass Änderungen am Mergeartikel die Momentaufnahme ungültig werden können, und es sind Abonnements vorhanden, die eine neue Momentaufnahme erfordern würden, können Sie über die Berechtigung für die vorhandene Momentaufnahme als veraltet zu markieren und eine neue Momentaufnahme zu generieren.  
   
- [  **@force_reinit_subscription =** ] *Force_reinit_subscription*  
- Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion die erneute Initialisierung vorhandener Abonnements erfordern kann. *Force_reinit_subscription* ist eine **Bit** hat den Standardwert **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion die erneute Initialisierung vorhandener Abonnements erfordern kann. *Force_reinit_subscription* ist eine **Bit** hat den Standardwert **0**.  
   
  **0** gibt an, dass Änderungen am Mergeartikel bewirken nicht, das Abonnement erneut initialisiert werden. Wenn die gespeicherte Prozedur erkennt, dass die Änderung die Neuinitialisierung vorhandener Abonnements erfordert, tritt ein Fehler auf, und es werden keine Änderungen durchgeführt.  
   
@@ -103,7 +96,7 @@ sp_changemergefilter [ @publication= ] 'publication'
  [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_dropmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
- [Sp_helpmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
+ [sp_helpmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

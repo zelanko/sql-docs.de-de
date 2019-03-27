@@ -18,12 +18,12 @@ ms.assetid: b41ca3a5-7222-4c22-a012-e66a577a82f6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 525af6370b7e1af1591162109382005adbbf0bac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b170d26aa67be39c6e41af37033de3c6a90dc582
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505650"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493442"
 ---
 # <a name="spaddlogfilerecoversuspectdb-transact-sql"></a>sp_add_log_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,25 +45,19 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@dbName =** ] **"**_Datenbank_**"**  
- Der Name der Datenbank. *Datenbank* ist **Sysname**, hat keinen Standardwert.  
+`[ @dbName = ] 'database'` Ist der Name der Datenbank. *Datenbank* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@name=** ] **"**_Logical_file_name_**"**  
- Ist der Name in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verweisen auf die Datei. Der Name muss auf dem Server eindeutig sein. *Logical_file_name* ist **nvarchar(260)**, hat keinen Standardwert.  
+`[ @name = ] 'logical_file_name'` Ist der Name in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verweisen auf die Datei. Der Name muss auf dem Server eindeutig sein. *Logical_file_name* ist **nvarchar(260)**, hat keinen Standardwert.  
   
- [  **@filename =** ] **"**_Os_file_name_**"**  
- Der Pfad und der Dateiname, die vom Betriebssystem für die Datei verwendet werden. Die Datei muss sich auf dem Server befinden, auf dem [!INCLUDE[ssDE](../../includes/ssde-md.md)] installiert ist. *Os_file_name* ist **nvarchar(260)**, hat keinen Standardwert.  
+`[ @filename = ] 'os_file_name'` Der Pfad und Dateiname wird vom Betriebssystem für die Datei verwendet werden. Die Datei muss sich auf dem Server befinden, auf dem [!INCLUDE[ssDE](../../includes/ssde-md.md)] installiert ist. *Os_file_name* ist **nvarchar(260)**, hat keinen Standardwert.  
   
- [  **@size=** ] **"**_Größe_ **"**  
- Die Anfangsgröße der Datei. *Größe* ist **nvarchar(20)**, hat den Standardwert NULL. Geben Sie eine ganze Zahl (ohne Dezimalstellen) an. Die Suffixe MB und KB können verwendet werden, um Megabyte bzw. Kilobyte als Einheit anzugeben. Die Standardeinheit ist MB. Der Mindestwert ist 512 KB. Wenn *Größe* nicht angegeben ist, wird der Standardwert ist 1 MB.  
+`[ @size = ] 'size_ '` Ist die Anfangsgröße der Datei an. *Größe* ist **nvarchar(20)**, hat den Standardwert NULL. Geben Sie eine ganze Zahl (ohne Dezimalstellen) an. Die Suffixe MB und KB können verwendet werden, um Megabyte bzw. Kilobyte als Einheit anzugeben. Die Standardeinheit ist MB. Der Mindestwert ist 512 KB. Wenn *Größe* nicht angegeben ist, wird der Standardwert ist 1 MB.  
   
- [  **@maxsize=** ] **"**_Max_size_ **"**  
- Die maximale Größe, auf die die Datei vergrößert werden kann. *Max_size* ist **nvarchar(20)**, hat den Standardwert NULL. Geben Sie eine ganze Zahl (ohne Dezimalstellen) an. Die Suffixe MB und KB können verwendet werden, um Megabyte bzw. Kilobyte als Einheit anzugeben. Die Standardeinheit ist MB.  
+`[ @maxsize = ] 'max_size_ '` Ist die maximale Größe, die auf der die Datei vergrößert werden kann. *Max_size* ist **nvarchar(20)**, hat den Standardwert NULL. Geben Sie eine ganze Zahl (ohne Dezimalstellen) an. Die Suffixe MB und KB können verwendet werden, um Megabyte bzw. Kilobyte als Einheit anzugeben. Die Standardeinheit ist MB.  
   
  Wenn *Max_size* nicht angegeben ist, wird die Datei wird vergrößert, bis der Datenträger voll ist. Das Anwendungsprotokoll von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows warnt den Administrator, bevor der Speicherplatz auf einem Datenträger erschöpft ist.  
   
- [  **@filegrowth=** ] **"**_Growth_increment_ **"**  
- Die Menge an Speicherplatz, die der Datei jedes Mal dann hinzugefügt wird, wenn neuer Speicherplatz erforderlich wird. *Growth_increment* ist **nvarchar(20)**, hat den Standardwert NULL. Durch den Wert 0 wird angezeigt, dass die Datei nicht vergrößert wird. Geben Sie eine ganze Zahl (ohne Dezimalstellen) an. Der Wert kann in MB, KB oder Prozent (%) angegeben werden. Wenn der Wert in Prozent angegeben wird, ist growth increment der angegebene Prozentsatz der Dateigröße zum Zeitpunkt der Vergrößerung. Bei Zahlen ohne Angabe von MB, KB oder % wird standardmäßig MB verwendet.  
+`[ @filegrowth = ] 'growth_increment_ '` Ist die Menge des Speicherplatzes der Datei jedes Mal, wenn neuer Speicherplatz erforderlich wird hinzugefügt. *Growth_increment* ist **nvarchar(20)**, hat den Standardwert NULL. Durch den Wert 0 wird angezeigt, dass die Datei nicht vergrößert wird. Geben Sie eine ganze Zahl (ohne Dezimalstellen) an. Der Wert kann in MB, KB oder Prozent (%) angegeben werden. Wenn der Wert in Prozent angegeben wird, ist growth increment der angegebene Prozentsatz der Dateigröße zum Zeitpunkt der Vergrößerung. Bei Zahlen ohne Angabe von MB, KB oder % wird standardmäßig MB verwendet.  
   
  Wenn *Growth_increment* NULL ist, der Standardwert ist 10 % und der Wert für die minimale Größe beträgt 64 KB. Die angegebene Größe wird auf den nächsten durch 64 KB teilbaren Wert gerundet.  
   

@@ -18,12 +18,12 @@ ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f04aefa642e21901a3070d71164f50f01cbc2ec7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4102c272fe9d880e6213917091b6078a413aebf8
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732840"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494302"
 ---
 # <a name="spattachschedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,20 +43,16 @@ sp_attach_schedule
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@job_id=** ] *job_id*  
- Die Auftrags-ID des Auftrags, dem der Zeitplan hinzugefügt wird. *Job_id*ist **Uniqueidentifier**, hat den Standardwert NULL.  
+`[ @job_id = ] job_id` Die Auftrags-ID des Auftrags, dem der Zeitplan hinzugefügt wird. *Job_id*ist **Uniqueidentifier**, hat den Standardwert NULL.  
   
- [  **@job_name =** ] **"***Job_name***"**  
- Der Name des Auftrags, dem der Zeitplan hinzugefügt wird. *Job_name*ist **Sysname**, hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags, dem der Zeitplan hinzugefügt wird. *Job_name*ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
- [ **@schedule_id =** ] *schedule_id*  
- Die Zeitplan-ID des für den Auftrag festgelegten Zeitplans. *Schedule_id*ist **Int**, hat den Standardwert NULL.  
+`[ @schedule_id = ] schedule_id` Die Zeitplan-ID des Zeitplans, der für den Auftrag festgelegt werden soll. *Schedule_id*ist **Int**, hat den Standardwert NULL.  
   
- [ **@schedule_name =** ] **'***schedule_name***'**  
- Der Name des für den Auftrag festzulegenden Zeitplans. *Schedule_name*ist **Sysname**, hat den Standardwert NULL.  
+`[ @schedule_name = ] 'schedule_name'` Der Name des Zeitplans, für den Auftrag festgelegt wird. *Schedule_name*ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Entweder *Schedule_id* oder *Schedule_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  

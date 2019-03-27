@@ -16,12 +16,12 @@ ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c326a8e3a5fa2bd95f536d434ff9782952ba70d3
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: e44891f5a16625cb6c3176fac8188fa568822add
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590895"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493183"
 ---
 # <a name="spaddqueuedartinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,29 +50,22 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@artid=** ] **"**_Artid_**"**  
- Entspricht dem Namen der Artikel-ID. *Artid* ist **Int**, hat keinen Standardwert  
+`[ @artid = ] 'artid'` Der Name der Artikel-ID. *Artid* ist **Int**, hat keinen Standardwert  
   
- [  **@article=**] **"**_Artikel_**"**  
- Der Name des Artikels, für den ein Skript erstellt werden soll. *Artikel* ist **Sysname**, hat keinen Standardwert  
+`[ @article = ] 'article'` Ist der Name des Artikels geschrieben werden sollen. *Artikel* ist **Sysname**, hat keinen Standardwert  
   
- [  **@publisher=**] **"**_Verleger_**"**  
- Entspricht dem Namen des Verlegerservers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher = ] 'publisher'` Ist der Name des Verlegerservers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@publisher_db=**] **"**_Publisher_db_**"**  
- Der Name der Verlegerdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher_db = ] 'publisher_db'` Ist der Name der Verlegerdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@publication=**] **"**_Veröffentlichung_**"**  
- Der Name der Veröffentlichung, für die ein Skript erstellt werden soll. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung, die ein Skript erstellt werden. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@dest_table=** ] _' Dest_table_**"**  
- Entspricht dem Namen der Zieltabelle. *Dest_table* ist **Sysname**, hat keinen Standardwert.  
+`[ @dest_table = ] _'dest_table'` Ist der Name der Zieltabelle. *Dest_table* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@owner =** ] **"**_Besitzer_**"**  
+ [**@owner =** ] **'**_owner_**'**  
  Entspricht dem Eigentümer des Abonnements. *Besitzer* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@cft_table=** ] **"**_Cft_table_**"**  
- Entspricht dem Namen der in die Warteschlange aufgenommenen Konflikttabelle für diesen Artikel, die derzeit aktualisiert wird. *Cft_table*ist **Sysname**, hat keinen Standardwert.  
+`[ @cft_table = ] 'cft_table'` Der Name des der Konflikttabelle mit verzögertem Update für diesen Artikel. *Cft_table*ist **Sysname**, hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -87,7 +80,7 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
   
 ## <a name="see-also"></a>Siehe auch  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [Sp_script_synctran_commands &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
+ [sp_script_synctran_commands &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
  [MSsubscription_articles &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

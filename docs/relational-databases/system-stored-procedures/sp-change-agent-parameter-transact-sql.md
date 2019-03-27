@@ -16,12 +16,12 @@ ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30b9216b2c33998b45a07c0b16d58f1b9c1139be
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 16de7ceaae80a2aebcf2ed40d2b06b9a6ccf0dc4
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819114"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493462"
 ---
 # <a name="spchangeagentparameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +38,9 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@profile_id=**] *Profile_id*,  
- Die ID des Profils. *Profile_id* ist **Int**, hat keinen Standardwert.  
+`[ @profile_id = ] profile_id,` Ist die ID des Profils. *Profile_id* ist **Int**, hat keinen Standardwert.  
   
- [  **@parameter_name=**] **"***Parameter_name***"**  
- Ist der Name des Parameters. *Parameter_name* ist **Sysname**, hat keinen Standardwert. Bei Systemprofilen hängen die veränderbaren Parameter vom Typ der Momentaufnahme ab. Um herauszufinden, welche von Agent dies Art *Profile_id* darstellt, suchen die *Profile_id* -Spalte in der **Msagent_profiles** Tabelle, und beachten die *agent_type-Wert*  Wert.  
+`[ @parameter_name = ] 'parameter_name'` Ist der Name des Parameters. *Parameter_name* ist **Sysname**, hat keinen Standardwert. Bei Systemprofilen hängen die veränderbaren Parameter vom Typ der Momentaufnahme ab. Um herauszufinden, welche von Agent dies Art *Profile_id* darstellt, suchen die *Profile_id* -Spalte in der **Msagent_profiles** Tabelle, und beachten die *agent_type-Wert*  Wert.  
   
 > [!NOTE]  
 >  Wenn für ein Parameter unterstützt wird eine bestimmte *Agent_type*, aber im Agentprofil nicht definiert wurde ein Fehler zurückgegeben. Zum Hinzufügen eines Parameters zu einem Agentprofil Sie ausführen müssen, [Sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
@@ -55,7 +53,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **HistoryVerboseLevel**  
   
--   **Anmeldungstimeout**  
+-   **LoginTimeout**  
   
 -   **MaxBcpThreads**  
   
@@ -77,9 +75,9 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **HistoryVerboseLevel**  
   
--   **Anmeldungstimeout**  
+-   **LoginTimeout**  
   
--   **Meldungsintervall**  
+-   **MessageInterval**  
   
 -   **Ausgabe**  
   
@@ -109,13 +107,13 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **KeepAliveMessageInterval**  
   
--   **Anmeldungstimeout**  
+-   **LoginTimeout**  
   
 -   **MaxBcpThreads**  
   
 -   **MaxDeliveredTransactions**  
   
--   **Meldungsintervall**  
+-   **MessageInterval**  
   
 -   **Ausgabe**  
   
@@ -127,7 +125,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **QueryTimeout**  
   
--   **"QuotedIdentifier"**  
+-   **QuotedIdentifier**  
   
 -   **SkipErrors**  
   
@@ -169,7 +167,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **KeepAliveMessageInterval**  
   
--   **Anmeldungstimeout**  
+-   **LoginTimeout**  
   
 -   **MaxBcpThreads**  
   
@@ -221,13 +219,13 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **Überprüfen**  
   
--   **ValidateInterval darstellt**  
+-   **ValidateInterval**  
   
  Für einen Warteschlangenlese-Agent (*Agent_type*=**9**), in das Profil definiert, die folgenden Eigenschaften können geändert werden:  
   
 -   **HistoryVerboseLevel**  
   
--   **Anmeldungstimeout**  
+-   **LoginTimeout**  
   
 -   **Ausgabe**  
   
@@ -243,8 +241,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
  Um festzustellen, welche Parameter für ein bestimmtes Profil definiert wurden, führen Sie **Sp_help_agent_profile** und notieren Sie sich die *Profile_name* zugeordneten der *Profile_id*. Mit dem entsprechenden *Profile_id*, führen Sie anschließend **Sp_help_agent_parameters** verwenden, die *Profile_id* , die dem Profil zugeordneten Parameter anzuzeigen. Parameter können einem Profil hinzugefügt werden, durch Ausführen [Sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
   
- [  **@parameter_value=**] **"***Parameter_value***"**  
- Der neue Wert des Parameters. *Parameter_value* ist **nvarchar(255)**, hat keinen Standardwert.  
+`[ @parameter_value = ] 'parameter_value'` Ist der neue Wert des Parameters. *Parameter_value* ist **nvarchar(255)**, hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -262,9 +259,9 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
  [Replikationsmerge-Agent](../../relational-databases/replication/agents/replication-merge-agent.md)   
  [Warteschlangenlese-Agent der Microsoft SQL Server-Replikation](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
  [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)   
- [Sp_add_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
- [Sp_drop_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
- [Sp_help_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
+ [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
+ [sp_drop_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
+ [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

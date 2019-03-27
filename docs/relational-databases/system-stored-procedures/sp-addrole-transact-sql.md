@@ -18,12 +18,12 @@ ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f51d462e46a86a3c824a7e37aeb1f30ba28d987b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: a1cc9a65d1d4b6baba4d457d28ee36f0ac6156a1
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212919"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492192"
 ---
 # <a name="spaddrole-transact-sql"></a>sp_addrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@rolename =** ] **"***Rolle***"**  
- Der Name der neuen Datenbankrolle. *role* ist vom Datentyp **sysname**und hat keinen Standardwert. *Rolle* muss ein gültiger Bezeichner (ID) sein und muss nicht in der aktuellen Datenbank bereits vorhanden.  
+`[ @rolename = ] 'role'` Ist der Name der neuen Datenbankrolle. *role* ist vom Datentyp **sysname**und hat keinen Standardwert. *Rolle* muss ein gültiger Bezeichner (ID) sein und muss nicht in der aktuellen Datenbank bereits vorhanden.  
   
- [  **@ownername =**] **"***Besitzer***"**  
- Der Besitzer der neuen Datenbankrolle. *Besitzer* ist eine **Sysname**, hat den Standardwert des aktuellen Benutzers ausgeführt. *Besitzer* ein Datenbankbenutzer oder eine Datenbankrolle in der aktuellen Datenbank sein.  
+`[ @ownername = ] 'owner'` Ist der Besitzer der neuen Datenbankrolle. *Besitzer* ist eine **Sysname**, hat den Standardwert des aktuellen Benutzers ausgeführt. *Besitzer* ein Datenbankbenutzer oder eine Datenbankrolle in der aktuellen Datenbank sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

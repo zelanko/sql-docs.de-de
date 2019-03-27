@@ -18,12 +18,12 @@ ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: be80ed76713788f81704609c4828e0a871ffdc7d
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: b4ff861015fc669defee69fece5c26ee45d66eaa
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590104"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493910"
 ---
 # <a name="spaddlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,31 +45,24 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@server=** ] **"**_Server_**"**  
- Der Name des zu erstellenden Verbindungsservers. *server* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @server = ] 'server'` Ist der Name des verknüpften Servers erstellen. *server* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
- [  **@srvproduct=** ] **"**_Product_name_**"**  
- Der Produktname der OLE DB-Datenquelle, die als Verbindungsserver hinzugefügt werden soll. *Product_name* ist **Nvarchar (** 128 **)**, hat den Standardwert NULL. Wenn **SQL Server**, *Provider_name*, *Data_source*, *Speicherort*, *Provider_string*, und *Katalog* müssen nicht angegeben werden.  
+`[ @srvproduct = ] 'product_name'` Ist der Produktname der OLE DB-Datenquelle als Verbindungsserver hinzufügen. *Product_name* ist **Nvarchar (** 128 **)**, hat den Standardwert NULL. Wenn **SQL Server**, *Provider_name*, *Data_source*, *Speicherort*, *Provider_string*, und *Katalog* müssen nicht angegeben werden.  
   
- [  **@provider=** ] **"**_Provider_name_**"**  
- Der eindeutige Programmbezeichner (Programmatic Identifier, PROGID) des OLE DB-Anbieters, der dieser Datenquelle entspricht. *Provider_name* muss eindeutig für den angegebenen OLE DB-Anbieter auf dem aktuellen Computer installiert sein. *Provider_name* ist **Nvarchar (** 128 **)**, hat den Standardwert NULL; aber wenn *Provider_name* wird weggelassen, wird SQLNCLI verwendet. (Wenn Sie SQLNCLI verwenden, leitet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zur neuesten Version des OLE DB-Anbieters von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client um.) Es wird vorausgesetzt, dass der OLE DB-Anbieter mit der angegebenen PROGID in der Registrierung registriert ist.  
+`[ @provider = ] 'provider_name'` Ist der eindeutige Programmbezeichner (PROGID) des OLE DB-Anbieters, der dieser Datenquelle entspricht. *Provider_name* muss eindeutig für den angegebenen OLE DB-Anbieter auf dem aktuellen Computer installiert sein. *Provider_name* ist **Nvarchar (** 128 **)**, hat den Standardwert NULL; aber wenn *Provider_name* wird weggelassen, wird SQLNCLI verwendet. (Wenn Sie SQLNCLI verwenden, leitet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zur neuesten Version des OLE DB-Anbieters von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client um.) Es wird vorausgesetzt, dass der OLE DB-Anbieter mit der angegebenen PROGID in der Registrierung registriert ist.  
   
- [  **@datasrc=** ] **"**_Data_source_**"**  
- Ist der Name der Datenquelle an, wie er vom OLE DB-Anbieter interpretiert. *Data_source* ist **Nvarchar (** 4000 **)**. *Data_source* wird als DBPROP_INIT_DATASOURCE-Eigenschaft zum Initialisieren des OLE DB-Anbieters übergeben.  
+`[ @datasrc = ] 'data_source'` Ist der Name der Datenquelle an, wie er vom OLE DB-Anbieter interpretiert. *Data_source* ist **Nvarchar (** 4000 **)**. *Data_source* wird als DBPROP_INIT_DATASOURCE-Eigenschaft zum Initialisieren des OLE DB-Anbieters übergeben.  
   
- [  **@location=** ] **"**_Speicherort_**"**  
- Der Speicherort der Datenbank im vom OLE DB-Anbieter unterstützten Format. *Speicherort* ist **Nvarchar (** 4000 **)**, hat den Standardwert NULL. *Speicherort* wird als DBPROP_INIT_LOCATION-Eigenschaft zum Initialisieren des OLE DB-Anbieters übergeben.  
+`[ @location = ] 'location'` Ist der Speicherort der Datenbank an, wie er vom OLE DB-Anbieter interpretiert. *Speicherort* ist **Nvarchar (** 4000 **)**, hat den Standardwert NULL. *Speicherort* wird als DBPROP_INIT_LOCATION-Eigenschaft zum Initialisieren des OLE DB-Anbieters übergeben.  
   
- [  **@provstr=** ] **"**_Provider_string_**"**  
- Die für den OLE DB-Anbieter spezifische Verbindungszeichenfolge, die eine eindeutige Datenquelle identifiziert. *Provider_string* ist **Nvarchar (** 4000 **)**, hat den Standardwert NULL. *Standard* entweder an die IDataInitialize übergeben oder als DBPROP_INIT_PROVIDERSTRING-Eigenschaft festgelegt wird, um den OLE DB-Anbieter zu initialisieren.  
+`[ @provstr = ] 'provider_string'` Ist die OLE DB-Anbieter-spezifischen Verbindungsdaten-Zeichenfolge, die eine eindeutige Datenquelle identifiziert. *Provider_string* ist **Nvarchar (** 4000 **)**, hat den Standardwert NULL. *Standard* entweder an die IDataInitialize übergeben oder als DBPROP_INIT_PROVIDERSTRING-Eigenschaft festgelegt wird, um den OLE DB-Anbieter zu initialisieren.  
   
  Wenn der Verbindungsserver erstellt wird, für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter, die Instanz kann angegeben werden, mit dem SERVER-Schlüsselwort als SERVER =*Servername*\\*Instancename*an einer bestimmten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Servername* ist der Name des Computers, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, und *Instancename* ist der Name der bestimmten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit dem der Benutzer verbunden wird.  
   
 > [!NOTE]
 >  Der Zugriff auf eine gespiegelte Datenbank ist nur dann möglich, wenn eine Verbindungszeichenfolge den Datenbanknamen enthält. Dieser Name ist notwendig, um Failoverversuche des Datenzugriffsanbieters zu ermöglichen. Die Datenbank kann angegeben werden, der **@provstr** oder **@catalog** Parameter. Optional kann in der Verbindungszeichenfolge auch ein Failoverpartnername angegeben werden.  
   
- [  **@catalog=** ] **"**_Katalog_**"**  
- Ist der Katalog verwendet werden, wenn eine Verbindung mit der OLE DB-Anbieter hergestellt wird. *Katalog* ist **Sysname**, hat den Standardwert NULL. *Katalog* wird als DBPROP_INIT_CATALOG-Eigenschaft zum Initialisieren des OLE DB-Anbieters übergeben. Wenn der Verbindungsserver für eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definiert wird, verweist catalog auf die Standarddatenbank, der der Verbindungsserver zugeordnet ist.  
+`[ @catalog = ] 'catalog'` Ist der Katalog verwendet werden, wenn eine Verbindung mit der OLE DB-Anbieter hergestellt wird. *Katalog* ist **Sysname**, hat den Standardwert NULL. *Katalog* wird als DBPROP_INIT_CATALOG-Eigenschaft zum Initialisieren des OLE DB-Anbieters übergeben. Wenn der Verbindungsserver für eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definiert wird, verweist catalog auf die Standarddatenbank, der der Verbindungsserver zugeordnet ist.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -310,7 +303,7 @@ select * from myLinkedServer.myDatabase.dbo.myTable
  [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
  [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
- [Sp_setnetname &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)   
+ [sp_setnetname &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Systemtabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   

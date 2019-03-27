@@ -16,12 +16,12 @@ ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5356ebc173e435595315badf9a3c2abe224d186b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7918e257428fd85ddb54867ee5144f45a3bf89f1
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802382"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493842"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,29 +45,21 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@xact_seqno_start =**] **"**_Xact_seqno_start_**"**  
- Gibt die niedrigste genaue Sequenznummer an, die zurückgegeben werden soll. *Xact_seqno_start* ist **nchar(22)**, hat den Standardwert 0 x 00000000000000000000.  
+`[ @xact_seqno_start = ] 'xact_seqno_start'` Gibt die niedrigste genaue Sequenznummer zurückgegeben. *Xact_seqno_start* ist **nchar(22)**, hat den Standardwert 0 x 00000000000000000000.  
   
- [  **@xact_seqno_end =**] **"**_Xact_seqno_end_**"**  
- Gibt die höchste genaue Sequenznummer an, die zurückgegeben werden soll. *Xact_seqno_end* ist **nchar(22)**, hat den Standardwert 0xffffffffffffffffffff.  
+`[ @xact_seqno_end = ] 'xact_seqno_end'` Gibt die höchste genaue Sequenznummer zurückgegeben. *Xact_seqno_end* ist **nchar(22)**, hat den Standardwert 0xffffffffffffffffffff.  
   
- [  **@originator_id =**] **"**_Originator_id_**"**  
- Gibt an, ob Befehle mit dem angegebenen *Originator_id* zurückgegeben werden. *Originator_id* ist **Int**, hat den Standardwert NULL.  
+`[ @originator_id = ] 'originator_id'` Gibt an, ob Befehle mit dem angegebenen *Originator_id* zurückgegeben werden. *Originator_id* ist **Int**, hat den Standardwert NULL.  
   
- [  **@publisher_database_id =**] **"**_Publisher_database_id_**"**  
- Gibt an, ob Befehle mit dem angegebenen *Publisher_database_id* zurückgegeben werden. *Publisher_database_id* ist **Int**, hat den Standardwert NULL.  
+`[ @publisher_database_id = ] 'publisher_database_id'` Gibt an, ob Befehle mit dem angegebenen *Publisher_database_id* zurückgegeben werden. *Publisher_database_id* ist **Int**, hat den Standardwert NULL.  
   
- [  **@article_id =**] **"**_Article_id_**"**  
- Gibt an, ob Befehle mit dem angegebenen *Article_id* zurückgegeben werden. *Article_id* ist **Int**, hat den Standardwert NULL.  
+`[ @article_id = ] 'article_id'` Gibt an, ob Befehle mit dem angegebenen *Article_id* zurückgegeben werden. *Article_id* ist **Int**, hat den Standardwert NULL.  
   
- [  **@command_id =**] *Command_id*  
- Ist der Speicherort des Befehls in [MSrepl_commands &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) decodiert werden muss. *Command_id* ist **Int**, hat den Standardwert NULL. Wenn angegeben, alle anderen Parameter müssen angegeben werden darüber hinaus und *Xact_seqno_start*muss identisch mit *Xact_seqno_end*.  
+`[ @command_id = ] command_id` Ist der Speicherort des Befehls in [MSrepl_commands &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) decodiert werden muss. *Command_id* ist **Int**, hat den Standardwert NULL. Wenn angegeben, alle anderen Parameter müssen angegeben werden darüber hinaus und *Xact_seqno_start*muss identisch mit *Xact_seqno_end*.  
   
- [  **@agent_id =**] *agent_id-Wert*  
- Gibt an, dass nur Befehle für einen bestimmten Replikations-Agent zurückgegeben werden. *Agent_id* ist **Int**, hat den Standardwert NULL.  
+`[ @agent_id = ] agent_id` Gibt an, dass nur Befehle für einen bestimmten Replikations-Agent zurückgegeben werden. *Agent_id* ist **Int**, hat den Standardwert NULL.  
   
- [  **@compatibility_level =**] *Compatibility_level*  
- Ist die Version des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem die *Compatibility_level* ist **Int**, hat den Standardwert 9000000.  
+`[ @compatibility_level = ] compatibility_level` Ist die Version des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem die *Compatibility_level* ist **Int**, hat den Standardwert 9000000.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -81,8 +73,8 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**originator_db**|**sysname**|Datenbank, von der die Transaktion stammt|  
 |**article_id**|**int**|ID des Artikels.|  
 |**type**|**int**|Der Typ des Befehls.|  
-|**verbleiben**|**bit**|Zeigt an, ob dies ein Teilbefehl ist.|  
-|**Hashkey**|**int**|Nur interne Verwendung.|  
+|**partial_command**|**bit**|Zeigt an, ob dies ein Teilbefehl ist.|  
+|**hashkey**|**int**|Nur interne Verwendung.|  
 |**originator_publication_id**|**int**|ID der Veröffentlichung, von der die Transaktion stammt|  
 |**originator_db_version**|**int**|Version der Datenbank, von der die Transaktion stammt|  
 |**originator_lsn**|**varbinary(16)**|Identifiziert die Protokollfolgenummer (LSN, Log Sequence Number) für den Befehl in der ursprünglichen Veröffentlichung Peer-zu-Peer-Transaktionsreplikation verwendet.|  
@@ -99,7 +91,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
 ## <a name="see-also"></a>Siehe auch  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [Sp_replshowcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
+ [sp_replshowcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

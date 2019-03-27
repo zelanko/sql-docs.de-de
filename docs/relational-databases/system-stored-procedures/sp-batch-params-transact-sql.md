@@ -18,12 +18,12 @@ ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a759490fdd2306d7fecfd34484708e5c24970217
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: b66e8b2d1b0d397a24c4ff5c702c00aff14988d4
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126840"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492812"
 ---
 # <a name="spbatchparams-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@tsqlbatch =**] **"**_Tsqlbatch_**"**  
- Ist eine Unicodezeichenfolge mit einem [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung bzw. der Batch, die für die Parameterwerte Informationen sind, werden sollen. *TSqlBatch* ist **nvarchar(max)** oder implizit in **nvarchar(max)**.  
+`[ @tsqlbatch = ] 'tsqlbatch'` Ist eine Unicodezeichenfolge mit einem [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung bzw. der Batch, die für die Parameterwerte Informationen sind, werden sollen. *TSqlBatch* ist **nvarchar(max)** oder implizit in **nvarchar(max)**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  None  
@@ -50,15 +49,15 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**PARAMETERNAME**|**sysname**|Name des Parameters, den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Batch gefunden hat|  
+|**PARAMETER_NAME**|**sysname**|Name des Parameters, den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Batch gefunden hat|  
 |**COLUMN_TYPE**|**smallint**|Dieses Feld gibt einen der folgenden Werte zurück:<br /><br /> 0 = SQL_PARAM_TYPE_UNKNOWN<br /><br /> 1 = SQL_PARAM_TYPE_INPUT<br /><br /> 2 = SQL_PARAM_TYPE_OUTPUT<br /><br /> 3 = SQL_RESULT_COL<br /><br /> 4 = SQL_PARAM_OUTPUT<br /><br /> 5 = SQL_RETURN_VALUE<br /><br /> Diese Spalte hat immer den Wert 0.|  
 |**DATA_TYPE**|**smallint**|Der Datentyp des Parameters (ein ganzzahliger Code für einen ODBC-Datentyp). Wenn dieser Datentyp keinem ISO-Datentyp zugeordnet werden kann, lautet der Wert NULL. Der Typname der systemeigenen Daten wird zurückgegeben, der **TYPE_NAME** Spalte. Dieser Wert ist immer NULL.|  
 |**TYPE_NAME**|**sysname**|Die Zeichenfolgendarstellung des Datentyps gemäß der Darstellung durch das zugrunde liegende DBMS. Dieser Wert ist NULL.|  
 |**PRECISION**|**int**|Die Anzahl von signifikanten Stellen. Der Rückgabewert für die **Genauigkeit** Spalte befindet sich in der Basis 10.|  
 |**LENGTH**|**int**|Die Übertragungsgröße der Daten. Dieser Wert ist NULL.|  
 |**SKALIEREN**|**smallint**|Die Anzahl der Ziffern rechts vom Dezimalzeichen Dieser Wert ist NULL.|  
-|**BASIS**|**smallint**|Die Basis für die Darstellung numerischer Datentypen. Dieser Wert ist NULL.|  
-|**NULL-WERTE ZULÄSST**|**smallint**|Gibt die NULL-Zulässigkeit an:<br /><br /> 1 = Parameterdatentyp mit NULL-Werten ist zulässig.<br /><br /> 0 = NULL-Werte sind nicht zulässig.<br /><br /> Dieser Wert ist NULL.|  
+|**RADIX**|**smallint**|Die Basis für die Darstellung numerischer Datentypen. Dieser Wert ist NULL.|  
+|**NULLABLE**|**smallint**|Gibt die NULL-Zulässigkeit an:<br /><br /> 1 = Parameterdatentyp mit NULL-Werten ist zulässig.<br /><br /> 0 = NULL-Werte sind nicht zulässig.<br /><br /> Dieser Wert ist NULL.|  
 |**SQL_DATA_TYPE**|**smallint**|Der Wert des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Systemdatentyps, wie er im TYPE-Feld des Deskriptors angezeigt wird. Diese Spalte entspricht der **DATA_TYPE**-Spalte mit Ausnahme der **datetime**- und ISO-**interval**-Datentypen. Diese Spalte gibt immer einen Wert zurück. Dieser Wert ist NULL.|  
 |**SQL_DATETIME_SUB**|**smallint**|Die **"DateTime"** oder ISO **Intervall** subcode, wenn der Wert des **SQL_DATA_TYPE** SQL_DATETIME oder SQL_INTERVAL. Bei allen Datentypen außer **"DateTime"** und ISO **Intervall**, diese Spalte ist NULL. Dieser Wert ist NULL.|  
 |**CHAR_OCTET_LENGTH**|**int**|Maximale Länge in Bytes, der eine **Zeichen** oder **binäre** Parameters vom Datentyp. Bei allen anderen Datentypen gibt diese Spalte einen NULL-Wert zurück. Dieser Wert ist immer NULL.|  

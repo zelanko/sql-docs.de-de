@@ -16,12 +16,12 @@ ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 21d0ea34f3521333976ce00a3f5b823c3fcb816a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: efbf4195294ce8bc279a2ed995ce09a5f384a82c
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129300"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58491974"
 ---
 # <a name="spaddmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,32 +46,23 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publisher=**] **"**_Verleger_**"**  
- Der Name des Verlegers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher = ] 'publisher'` Ist der Name des Verlegers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@publisher_db=**] **"**_Publisher_db_**"**  
- Der Name der Veröffentlichungsdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher_db = ] 'publisher_db'` Ist der Name der Veröffentlichungsdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@publication=**] **"**_Veröffentlichung_**"**  
- Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@alternate_publisher=**] **"**_Alternate_synchronization_partner_**"**  
- Der Name des alternativen Verlegers. *Alternate_synchronization_partner* ist **Sysname**, hat keinen Standardwert.  
+`[ @alternate_publisher = ] 'alternate_synchronization_partner'` Ist der Name des alternativen Verlegers. *Alternate_synchronization_partner* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@alternate_publisher_db=**] **"**_Alternate_publisher_db_**"**  
- Der Name der Veröffentlichungsdatenbank auf dem alternativen Verleger. *Alternate_publisher_db* ist **Sysname**, hat keinen Standardwert.  
+`[ @alternate_publisher_db = ] 'alternate_publisher_db'` Ist der Name der Veröffentlichungsdatenbank auf dem alternativen Verleger. *Alternate_publisher_db* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@alternate_publication=**] **"**_Alternate_synchronization_partner_**"**  
- Der Name der Veröffentlichung auf dem alternativen Synchronisierungspartner. *Alternate_synchronization_partner* ist **Sysname**, hat keinen Standardwert.  
+`[ @alternate_publication = ] 'alternate_synchronization_partner'` Ist der Name der Veröffentlichung auf dem alternativen Synchronisierungspartner. *Alternate_synchronization_partner* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@alternate_distributor=**] **"**_Alternate_distributor_**"**  
- Der Name des Verteilers für den alternativen Synchronisierungspartner. *Alternate_distributor* ist **Sysname**, hat keinen Standardwert.  
+`[ @alternate_distributor = ] 'alternate_distributor'` Ist der Name des Verteilers für die alternativen Synchronisierungspartner. *Alternate_distributor* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@friendly_name=**] **"**_friendly_name wurde_**"**  
- Ein Anzeigename, durch den die Zuordnung von Verleger, Veröffentlichung und Verteiler, aus denen ein alternativer Synchronisierungspartner besteht, identifiziert werden kann. *friendly_name wurde* ist **nvarchar(255)**, hat den Standardwert NULL.  
+`[ @friendly_name = ] 'friendly_name'` Ist ein Anzeigename, der durch den die Zuordnung von Verleger, Veröffentlichung und Verteiler, aus denen ein alternativer Synchronisierungspartner besteht, identifiziert werden kann. *friendly_name wurde* ist **nvarchar(255)**, hat den Standardwert NULL.  
   
- [  **@reserved=**] **"**_reservierte_**"**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -83,7 +74,7 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
  Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_addmergealternatepublisher**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_dropmergealternatepublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergealternatepublisher-transact-sql.md)   
+ [sp_dropmergealternatepublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergealternatepublisher-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

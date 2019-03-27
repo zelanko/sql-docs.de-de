@@ -16,12 +16,12 @@ ms.assetid: a6225033-5c3b-452f-ae52-79890a3590ed
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 86965fca878f07a93833fe04be9df702dea3050c
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7d9c899f5ae956f9e434bb7374d95aaa186a2923
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204217"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493791"
 ---
 # <a name="spaddsubscriberschedule-transact-sql"></a>sp_addsubscriber_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,19 +50,16 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@subscriber =** ] **"***Abonnenten***"**  
- Der Name des Abonnenten. *Abonnenten* ist **Sysname**. Der Name des Abonnenten muss innerhalb der Datenbank eindeutig sein und darf nicht bereits vorhanden sein. Außerdem darf er nicht gleich NULL sein.  
+`[ @subscriber = ] 'subscriber'` Ist der Name des Abonnenten. *Abonnenten* ist **Sysname**. Der Name des Abonnenten muss innerhalb der Datenbank eindeutig sein und darf nicht bereits vorhanden sein. Außerdem darf er nicht gleich NULL sein.  
   
- [  **@agent_type =** ] *agent_type-Wert*  
- Der Typ des Agents. *Agent_type* ist **Smallint**, und kann einen der folgenden Werte sein.  
+`[ @agent_type = ] agent_type` Ist der Typ des Agents. *Agent_type* ist **Smallint**, und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
 |**0** (Standardwert)|Verteilungs-Agent|  
 |**1**|Merge-Agent|  
   
- [  **@frequency_type =** ] *Frequency_type*  
- Die Häufigkeit für die Zeitplanung des Verteilungs-Agents. *Frequency_type* ist **Int**, und kann einen der folgenden Werte sein.  
+`[ @frequency_type = ] frequency_type` Kann die Häufigkeit, mit denen der Verteilungs-Agent zu planen. *Frequency_type* ist **Int**, und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -75,11 +72,9 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**64** (Standard)|Autostart|  
 |**128**|Wiederholt|  
   
- [  **@frequency_interval =** ] *Frequency_interval*  
- Ist der Wert der Häufigkeit festgelegt, die durch Anwenden *Frequency_type*. *Frequency_interval* ist **Int**, hat den Standardwert **1**.  
+`[ @frequency_interval = ] frequency_interval` Ist der Wert der Häufigkeit festgelegt, die durch Anwenden *Frequency_type*. *Frequency_interval* ist **Int**, hat den Standardwert **1**.  
   
- [  **@frequency_relative_interval =** ] *Frequency_relative_interval*  
- Das Datum des Verteilungs-Agents. Dieser Parameter wird verwendet, wenn *Frequency_type* nastaven NA hodnotu **32** (mit relativem Monatsintervall). *Frequency_relative_interval* ist **Int**, und kann einen der folgenden Werte sein.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Ist das Datum des Verteilungs-Agents. Dieser Parameter wird verwendet, wenn *Frequency_type* nastaven NA hodnotu **32** (mit relativem Monatsintervall). *Frequency_relative_interval* ist **Int**, und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -89,11 +84,9 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**8**|Vierter|  
 |**16**|Letzter|  
   
- [  **@frequency_recurrence_factor =** ] *Frequency_recurrence_factor*  
- Wird von verwendete Wiederholungsfaktor *Frequency_type*. *Frequency_recurrence_factor* ist **Int**, hat den Standardwert **0**.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Wird von verwendete Wiederholungsfaktor *Frequency_type*. *Frequency_recurrence_factor* ist **Int**, hat den Standardwert **0**.  
   
- [  **@frequency_subday =** ] *Frequency_subday*  
- Die Häufigkeit für die erneute geplante Ausführung während des definierten Zeitraums. *Frequency_subday* ist **Int**, und kann einen der folgenden Werte sein.  
+`[ @frequency_subday = ] frequency_subday` Ist die Häufigkeit für die erneute geplante Ausführung während des definierten Zeitraums. *Frequency_subday* ist **Int**, und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -102,23 +95,17 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**4** (Standard)|Minute|  
 |**8**|Hour|  
   
- [  **@frequency_subday_interval =** ] *Frequency_subday_interval*  
- Das Intervall für *Frequency_subday*. *Frequency_subday_interval* ist **Int**, hat den Standardwert **5**.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Das Intervall für *Frequency_subday*. *Frequency_subday_interval* ist **Int**, hat den Standardwert **5**.  
   
- [  **@active_start_time_of_day =** ] *Active_start_time_of_day*  
- Die Tageszeit, zu der der Verteilungs-Agent zum ersten Mal geplant ist. Dabei wird das Format HHMMSS verwendet. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert **0**.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Die Tageszeit aus, wenn der erste der Verteilungs-Agent ist, erfolgt Format: HHMMSS. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert **0**.  
   
- [  **@active_end_time_of_day =** ] *Active_end_time_of_day*  
- Die Tageszeit, ab der der Verteilungs-Agent nicht mehr geplant ist. Dabei wird das Format HHMMSS verwendet. *das Format HHMMSS verwendet*ist **Int**, hat den Standardwert 235959, womit 23:59:59 Uhr auf dem 24-Stunden-Format an.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Die Tageszeit, ab der Verteilungs-Agent nicht mehr, wird geplant ist HHMMSS verwendet. *das Format HHMMSS verwendet*ist **Int**, hat den Standardwert 235959, womit 23:59:59 Uhr auf dem 24-Stunden-Format an.  
   
- [ **@active_start_date =** ] *active_start_date*  
- Das Datum, an dem der Verteilungs-Agent zum ersten Mal geplant ist. Dabei wird das Format JJJJMMTT verwendet. *Active_start_date* ist **Int**, hat den Standardwert **0**.  
+`[ @active_start_date = ] active_start_date` Das Datum, an den Verteilungs-Agent zuerst ist geplant Format: YYYYMMDD. *Active_start_date* ist **Int**, hat den Standardwert **0**.  
   
- [ **@active_end_date =** ] *active_end_date*  
- Das Datum, ab dem der Verteilungs-Agent nicht mehr geplant ist. Dabei wird das Format JJJJMMTT verwendet. *Active_end_date* ist **Int**, hat den Standardwert 99991231, womit der 31. Dezember 9999.  
+`[ @active_end_date = ] active_end_date` Ist das Datum, ab der Verteilungs-Agent nicht mehr, geplant JJJJMMTT. *Active_end_date* ist **Int**, hat den Standardwert 99991231, womit der 31. Dezember 9999.  
   
- [  **@publisher =** ] **"***Verleger***"**  
- Gibt einen nicht- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Gibt einen nicht- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  *Publisher* sollte nicht angegeben werden, für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger.  
@@ -133,7 +120,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
  Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_addsubscriber_schedule**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_changesubscriber_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-schedule-transact-sql.md)   
+ [sp_changesubscriber_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-schedule-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

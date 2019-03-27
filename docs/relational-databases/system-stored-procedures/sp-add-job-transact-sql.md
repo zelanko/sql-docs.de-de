@@ -18,12 +18,12 @@ ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c6ac15a78e8689e76fc9687a6cd8784eb1fc4dd2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eb371603230c0c3b6fbee0012c89ce402711fb6e
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537868"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493232"
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,29 +55,21 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@job_name =** ] **"**_Job_name_**"**  
- Der Name des Auftrags. Der Name muss eindeutig sein und darf nicht die Prozentzeichen enthalten (**%**) Zeichen. *Job_name*ist **vom Datentyp nvarchar(128)**, hat keinen Standardwert.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags. Der Name muss eindeutig sein und darf nicht die Prozentzeichen enthalten (**%**) Zeichen. *Job_name*ist **vom Datentyp nvarchar(128)**, hat keinen Standardwert.  
   
- [ **@enabled =** ] *enabled*  
- Gibt den Status des hinzugefügten Auftrags an. *aktiviert*ist **Tinyint**, hat den Standardwert 1 (aktiviert). Wenn **0**, der Auftrag nicht aktiviert ist und nicht gemäß dem Zeitplan ausgeführt, aber es kann manuell ausgeführt werden.  
+`[ @enabled = ] enabled` Gibt den Status des hinzugefügten Auftrags an. *aktiviert*ist **Tinyint**, hat den Standardwert 1 (aktiviert). Wenn **0**, der Auftrag nicht aktiviert ist und nicht gemäß dem Zeitplan ausgeführt, aber es kann manuell ausgeführt werden.  
   
- [  **@description =** ] **"**_Beschreibung_**"**  
- Die Beschreibung des Auftrags. *Beschreibung* ist **nvarchar(512)**, hat den Standardwert NULL. Wenn *Beschreibung* wird weggelassen, wird "Keine Beschreibung verfügbar" verwendet.  
+`[ @description = ] 'description'` Die Beschreibung des Auftrags. *Beschreibung* ist **nvarchar(512)**, hat den Standardwert NULL. Wenn *Beschreibung* wird weggelassen, wird "Keine Beschreibung verfügbar" verwendet.  
   
- [ **@start_step_id =** ] *step_id*  
- Die ID des ersten Schritts zum Ausführen des Auftrags. *Step_id*ist **Int**, hat den Standardwert 1.  
+`[ @start_step_id = ] step_id` Die ID des ersten Schritts zum Ausführen des Auftrags. *Step_id*ist **Int**, hat den Standardwert 1.  
   
- [  **@category_name =** ] **"**_Kategorie_**"**  
- Die Kategorie für den Auftrag. *Kategorie*ist **Sysname**, hat den Standardwert NULL.  
+`[ @category_name = ] 'category'` Die Kategorie für den Auftrag. *Kategorie*ist **Sysname**, hat den Standardwert NULL.  
   
- [ **@category_id =** ] *category_id*  
- Ein sprachenunabhängiger Mechanismus zum Angeben einer Auftragskategorie. *Category_id*ist **Int**, hat den Standardwert NULL.  
+`[ @category_id = ] category_id` Ein sprachunabhängiger Mechanismus zum Angeben einer Auftragskategorie. *Category_id*ist **Int**, hat den Standardwert NULL.  
   
- [  **@owner_login_name =** ] **"**_Anmeldung_**"**  
- Der Name der Anmeldung, die im Besitz des Auftrags ist. *Anmeldung*ist **Sysname**, hat den Standardwert NULL, der als der aktuelle Anmeldename interpretiert wird. Nur Mitglieder der **Sysadmin** Serverrolle festlegen oder ändern Sie den Wert für **@owner_login_name**. Wenn Benutzer, die keine Mitglieder sind von der **Sysadmin** Rolle festlegen oder ändern Sie den Wert der **@owner_login_name**, Ausführung dieser gespeicherten Prozedur ein Fehler auftritt und ein Fehler zurückgegeben.  
+`[ @owner_login_name = ] 'login'` Der Name der Anmeldung, die den Auftrag besitzt. *Anmeldung*ist **Sysname**, hat den Standardwert NULL, der als der aktuelle Anmeldename interpretiert wird. Nur Mitglieder der **Sysadmin** Serverrolle festlegen oder ändern Sie den Wert für **@owner_login_name**. Wenn Benutzer, die keine Mitglieder sind von der **Sysadmin** Rolle festlegen oder ändern Sie den Wert der **@owner_login_name**, Ausführung dieser gespeicherten Prozedur ein Fehler auftritt und ein Fehler zurückgegeben.  
   
- [ **@notify_level_eventlog =** ] *eventlog_level*  
- Ein Wert, der angibt, wann im Microsoft Windows-Anwendungsprotokoll ein Eintrag für diesen Auftrag hinzugefügt werden soll. *ist NULL*ist **Int**, und kann einen der folgenden Werte sein.  
+`[ @notify_level_eventlog = ] eventlog_level` Ein Wert, der angibt, wann einen Eintrag im Microsoft Windows-Anwendungsprotokoll für diesen Auftrag. *ist NULL*ist **Int**, und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -86,32 +78,24 @@ sp_add_job [ @job_name = ] 'job_name'
 |**2** (Standardwert)|Bei einem Fehler|  
 |**3**|Always|  
   
- [ **@notify_level_email =** ] *email_level*  
- Ein Wert, der angibt, wann nach dem Abschluss dieses Auftrags eine E-Mail gesendet werden soll. *Email_level*ist **Int**, hat den Standardwert **0**, die nie angibt. *Email_level*verwendet die gleichen Werte wie *ist NULL*.  
+`[ @notify_level_email = ] email_level` Ein Wert, der wann nach Abschluss dieses Auftrags eine E-mail gesendet werden soll. *Email_level*ist **Int**, hat den Standardwert **0**, die nie angibt. *Email_level*verwendet die gleichen Werte wie *ist NULL*.  
   
- [ **@notify_level_netsend =** ] *netsend_level*  
- Ein Wert, der angibt, wann nach dem Abschluss dieses Auftrags eine Netzwerknachricht gesendet werden soll. *Netsend_level*ist **Int**, hat den Standardwert **0**, die nie angibt. *Netsend_level* verwendet die gleichen Werte wie *ist NULL*.  
+`[ @notify_level_netsend = ] netsend_level` Ein Wert, der beim Senden eine Netzwerknachricht nach dem Abschluss des Auftrags angibt. *Netsend_level*ist **Int**, hat den Standardwert **0**, die nie angibt. *Netsend_level* verwendet die gleichen Werte wie *ist NULL*.  
   
- [ **@notify_level_page =** ] *page_level*  
- Ein Wert, der angibt, wann nach dem Abschluss dieses Auftrags eine Pagernachricht gesendet werden soll. *Page_level*ist **Int**, hat den Standardwert **0**, die nie angibt. *Page_level*verwendet die gleichen Werte wie *ist NULL*.  
+`[ @notify_level_page = ] page_level` Ein Wert, der wann nach Abschluss dieses Auftrags eine Seite gesendet werden soll. *Page_level*ist **Int**, hat den Standardwert **0**, die nie angibt. *Page_level*verwendet die gleichen Werte wie *ist NULL*.  
   
- [  **@notify_email_operator_name =** ] **"**_e-Mail-Name_**"**  
- Der e-Mail-Name der Person zum Senden von E-mail, wenn *Email_level* erreicht ist. *e-Mail-Name* ist **Sysname**, hat den Standardwert NULL.  
+`[ @notify_email_operator_name = ] 'email_name'` Der e-Mail-Name der Person zum Senden von E-mail, wenn *Email_level* erreicht ist. *e-Mail-Name* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@notify_netsend_operator_name =** ] **"**_Netsend_name_**"**  
- Der Name des Operators, an den nach dem Abschluss dieses Auftrags die Netzwerknachricht gesendet wird. *Netsend_name*ist **Sysname**, hat den Standardwert NULL.  
+`[ @notify_netsend_operator_name = ] 'netsend_name'` Der Name des Operators, an den die Netzwerknachricht, nach Abschluss des Auftrags gesendet wird. *Netsend_name*ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@notify_page_operator_name =** ] **"**_Seitenname_**"**  
- Der Name der Person, die nach dem Abschluss dieses Auftrags per Pager benachrichtigt werden soll. *Seitenname*ist **Sysname**, hat den Standardwert NULL.  
+`[ @notify_page_operator_name = ] 'page_name'` Der Name des Operators, der nach Abschluss des Auftrags. *Seitenname*ist **Sysname**, hat den Standardwert NULL.  
   
- [ **@delete_level =** ] *delete_level*  
- Ein Wert, der angibt, wann der Auftrag gelöscht werden soll. *delete_level*ist **Int**, hat den Standardwert 0, womit nie. *Auftrag nie gelöscht*verwendet die gleichen Werte wie *ist NULL*.  
+`[ @delete_level = ] delete_level` Ein Wert, der beim Löschen des Auftrags angibt. *delete_level*ist **Int**, hat den Standardwert 0, womit nie. *Auftrag nie gelöscht*verwendet die gleichen Werte wie *ist NULL*.  
   
 > [!NOTE]  
 >  Wenn *Auftrag nie gelöscht* ist **3**, dem der Auftrag nur einmal ausgeführt wird, unabhängig davon, alle Zeitpläne für den Auftrag definierten. Darüber hinaus wird, wenn sich ein Auftrag selbst löscht, auch der gesamte Verlauf für diesen Auftrag gelöscht.  
   
- [  **@job_id =** ] _Job_id_**Ausgabe**  
- Die Auftrags-ID, die dem Auftrag zugewiesen wird, wenn er erfolgreich erstellt wurde. *Job_id*ist eine Ausgabevariable vom Typ **Uniqueidentifier**, hat den Standardwert NULL.  
+`[ @job_id = ] _job_idOUTPUT` Die Auftrags-ID, der dem Auftrag zugewiesen wird, wenn erfolgreich erstellt. *Job_id*ist eine Ausgabevariable vom Typ **Uniqueidentifier**, hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

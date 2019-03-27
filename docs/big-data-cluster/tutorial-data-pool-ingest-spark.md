@@ -5,17 +5,17 @@ description: In diesem Tutorial wird veranschaulicht, wie Daten in den Datenpool
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 28a151f00683455b582bb29a5d141a76f237caf1
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 1611a8b0513e8f1a9e50d3cc612b114c88698df5
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017736"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58491903"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Tutorial: Erfassen von Daten in einen Pool des SQL Server-Daten mit Spark-Aufträgen
 
@@ -49,7 +49,15 @@ Die folgenden Schritte Erstellen einer externen Tabelle, in dem Datenpool mit de
 
    ![SQL Server-Masterinstanz-Abfrage](./media/tutorial-data-pool-ingest-spark/sql-server-master-instance-query.png)
 
-1. Erstellen einer externen Tabelle, die mit dem Namen **Web_clickstreams_spark_results** im Datenpool. Die `SqlDataPool` Datenquelle ist eine spezielle Datenquellentyp, die von der Masterinstanz von alle big Data-Cluster verwendet werden kann.
+1. Erstellen Sie eine externe Datenquelle für den Datenpool aus, wenn nicht bereits vorhanden.
+
+   ```sql
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+     CREATE EXTERNAL DATA SOURCE SqlDataPool
+     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+   ```
+
+1. Erstellen einer externen Tabelle, die mit dem Namen **Web_clickstreams_spark_results** im Datenpool.
 
    ```sql
    USE Sales
@@ -64,7 +72,7 @@ Die folgenden Schritte Erstellen einer externen Tabelle, in dem Datenpool mit de
       );
    ```
   
-1. In CTP 2.3 von die Erstellung des Pools Daten ist asynchron, aber es gibt keine Möglichkeit, um zu bestimmen, wenn er noch abgeschlossen ist. Warten Sie zwei Minuten lang, um sicherzustellen, dass die Datenpool erstellt wird, bevor Sie fortfahren.
+1. In der CTP-Version 2.4 die Erstellung des Pools Daten ist asynchron, aber es gibt keine Möglichkeit, um zu bestimmen, wenn er noch abgeschlossen ist. Warten Sie zwei Minuten lang, um sicherzustellen, dass die Datenpool erstellt wird, bevor Sie fortfahren.
 
 ## <a name="start-a-spark-streaming-job"></a>Starten eines Streamingauftrags
 

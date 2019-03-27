@@ -18,12 +18,12 @@ ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bb19049185ab79178213b1dc042a1c23f8978374
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7c6e4531597faf9cacb883cf3ea3432b6e8ff9f
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704598"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492520"
 ---
 # <a name="spaddnotification-transact-sql"></a>sp_add_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,16 +41,13 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@alert_name=** ] **'***alert***'**  
- Die Warnung für diese Benachrichtigung. *Warnung* ist **Sysname**, hat keinen Standardwert.  
+`[ @alert_name = ] 'alert'` Die Warnung für diese Benachrichtigung. *Warnung* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@operator_name=** ] **'***operator***'**  
- Der Operator, der benachrichtigt werden soll, wenn die Warnung auftritt. *Operator* ist **Sysname**, hat keinen Standardwert.  
+`[ @operator_name = ] 'operator'` Der Operator benachrichtigt werden, wenn die Warnung auftritt. *Operator* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@notification_method=** ] *Notification_method*  
- Die Methode, durch die der Operator benachrichtigt wird. *Notification_method* ist **Tinyint**, hat keinen Standardwert. *Notification_method* einer oder mehrere der folgenden Werte, die in Kombination mit einem **OR** logischer Operator.  
+`[ @notification_method = ] notification_method` Die Methode, mit der der Operator benachrichtigt wird. *Notification_method* ist **Tinyint**, hat keinen Standardwert. *Notification_method* einer oder mehrere der folgenden Werte, die in Kombination mit einem **OR** logischer Operator.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**1**|E-Mail|  
 |**2**|Pager|  
@@ -77,7 +74,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine E-Mail-Benachrichtigung für die angegebene Warnung (`Test Alert`) hinzugefügt.  
   
-> **Hinweis:** in diesem Beispiel wird vorausgesetzt, dass `Test Alert` bereits vorhanden ist und dass `François Ajenstat` ist ein gültiger Operatorname.  
+> **HINWEIS:** Im Rahmen dieses Beispiels wird davon ausgegangen, dass `Test Alert` bereits vorhanden ist und `François Ajenstat` ein gültiger Operatorname ist.  
   
 ```  
 USE msdb ;  

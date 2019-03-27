@@ -18,19 +18,19 @@ ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d2586f1ad5f7be9b5916caea7699ca9c90f22db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97964286b3281eee4e5b6850065c85034628bfdc
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691408"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493254"
 ---
 # <a name="spcertifyremovable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Überprüft, ob eine Datenbank für die Verteilung auf austauschbaren Medien ordnungsgemäß konfiguriert ist, und meldet dem Benutzer alle Probleme.  
   
-> **WICHTIG!** [! UMFASSEN[SsNoteDepFutureAvoid](../../t-sql/statements/create-database-sql-server-transact-sql.md) stattdessen.  
+> **WICHTIG!** [!INCLUDE[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-sql-server-transact-sql.md) instead.  
   
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -44,11 +44,9 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@dbname=**] **'***dbname***'**  
- Gibt die Datenbank an, die überprüft werden soll. *Dbname* ist **Sysname**.  
+`[ @dbname = ] 'dbname'` Gibt die Datenbank überprüft werden. *Dbname* ist **Sysname**.  
   
- [ **@autofix=**] **'auto'**  
- Überträgt den Besitz der Datenbank und aller Datenbankobjekte an den Systemadministrator und löscht alle vom Benutzer erstellten Datenbankbenutzer und nicht standardmäßigen Berechtigungen. *automatische* ist **nvarchar(4)**, hat den Standardwert NULL.  
+`[ @autofix = ] 'auto'` Überträgt den Besitz der Datenbank und aller Datenbankobjekte an den Systemadministrator und löscht alle vom Benutzer erstellten Datenbankbenutzer und nicht standardmäßigen Berechtigungen. *automatische* ist **nvarchar(4)**, hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

@@ -16,12 +16,12 @@ ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ad6e8fe499e3ffe57a745cfb924bdc792938dd9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 991ee7139ae4a323a1d426d1882e4f6b3a4df871
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810942"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493512"
 ---
 # <a name="spaddtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@table_name=**] **"**_Table_name_**"**  
- Ist der Name der Tabelle. *TABLE_NAME* ist **Sysname**, hat keinen Standardwert.  
+`[ @table_name = ] 'table_name'` Ist der Name der Tabelle. *TABLE_NAME* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@owner_name=**] **"**_Owner_name_**"**  
- Der Name des Besitzers der Tabelle. *Owner_name* ist **Sysname**, hat den Standardwert NULL.  
+`[ @owner_name = ] 'owner_name'` Ist der Name des Besitzers der Tabelle. *Owner_name* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@filter_clause=** ] **"**_Filter_clause_**"**  
- Gibt eine Filterklausel an, die steuert, welche Zeilen der neu geladenen Daten den Mergenachverfolgungstabellen hinzugefügt werden sollen. *Filter_clause* ist **nvarchar(4000)**, hat den Standardwert NULL. Wenn *Filter_clause* ist **null**, alle in einem Massenvorgang geladenen Zeilen hinzugefügt.  
+`[ @filter_clause = ] 'filter_clause'` Gibt eine Filterklausel, die steuert, welche Zeilen der neu geladenen Daten den Mergenachverfolgungstabellen hinzugefügt werden sollen. *Filter_clause* ist **nvarchar(4000)**, hat den Standardwert NULL. Wenn *Filter_clause* ist **null**, alle in einem Massenvorgang geladenen Zeilen hinzugefügt.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

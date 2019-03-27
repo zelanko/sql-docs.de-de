@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d628f2b5dffc976e32b15bea08407c5d0740c297
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 6264266f85edc1cae0821bbcf81c8c0993dba151
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123991"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492341"
 ---
 # <a name="spautostats-transact-sql"></a>sp_autostats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,11 +45,9 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@tblname=** ] **"**_Table_or_indexed_view_name_**"**  
- Der Name der Tabelle oder indizierten Sicht, für die die AUTO_UPDATE_STATISTICS-Option angezeigt werden soll. *Table_or_indexed_view_name* ist **nvarchar(776)**, hat keinen Standardwert.  
+`[ @tblname = ] 'table_or_indexed_view_name'` Der Name der Tabelle oder indizierten Sicht, für die AUTO_UPDATE_STATISTICS-Option angezeigt werden soll. *Table_or_indexed_view_name* ist **nvarchar(776)**, hat keinen Standardwert.  
   
- [  **@flagc=** ] **"**_Stats_value_**"**  
- Aktualisiert die AUTO_UPDATE_STATISTICS-Option auf einen dieser Werte:  
+`[ @flagc = ] 'stats_value'` Aktualisiert die AUTO_UPDATE_STATISTICS-Option auf einen der folgenden Werte an:  
   
  **ON** = ON  
   
@@ -57,8 +55,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  Wenn *Stats_flag* ist nicht angegeben wird, die die aktuelle AUTO_UPDATE_STATISTICS-Einstellung angezeigt. *Stats_value* ist **varchar(10)**, hat den Standardwert NULL.  
   
- [  **@indname=** ] **"**_Statistics_name_**"**  
- Der Name der Statistik, für die die AUTO_UPDATE_STATISTICS-Option angezeigt oder aktualisiert werden soll. Um die Statistik für einen Index anzuzeigen, können Sie den Namen des Indexes verwenden. Ein Index und das dazugehörige Statistikobjekt verfügen über den gleichen Namen.  
+`[ @indname = ] 'statistics_name'` Ist der Name der Statistik zum Anzeigen oder aktualisieren die AUTO_UPDATE_STATISTICS-Option auf. Um die Statistik für einen Index anzuzeigen, können Sie den Namen des Indexes verwenden. Ein Index und das dazugehörige Statistikobjekt verfügen über den gleichen Namen.  
   
  *Statistics_name* ist **Sysname**, hat den Standardwert NULL.  
   

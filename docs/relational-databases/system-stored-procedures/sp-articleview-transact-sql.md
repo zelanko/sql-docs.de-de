@@ -16,12 +16,12 @@ ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b06d348358a141771816230179ca7deae4e4353a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 10c46ac2ff35d73453976a91276246d3e810e425
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132860"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492832"
 ---
 # <a name="sparticleview-transact-sql"></a>sp_articleview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,50 +47,40 @@ sp_articleview [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication=**] **"**_Veröffentlichung_**"**  
- Der Name der Veröffentlichung, die den Artikel enthält. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung, die der Artikel enthält. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@article=**] **"**_Artikel_**"**  
- Der Name des Artikels. *Artikel* ist **Sysname**, hat keinen Standardwert.  
+`[ @article = ] 'article'` Ist der Name des Artikels. *Artikel* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@view_name=**] **"**_View_name_**"**  
- Der Name der Sicht, die den veröffentlichten Artikel definiert. *View_name* ist **nvarchar(386)**, hat den Standardwert NULL.  
+`[ @view_name = ] 'view_name'` Ist der Name der Sicht, die den veröffentlichten Artikel definiert. *View_name* ist **nvarchar(386)**, hat den Standardwert NULL.  
   
- [  **@filter_clause=**] **"**_Filter_clause_**"**  
- Eine Einschränkungsklausel (WHERE), die einen horizontalen Filter definiert. Wenn Sie die Einschränkungsklausel eingeben, lassen Sie das Schlüsselwort WHERE weg. *Filter_clause* ist **Ntext**, hat den Standardwert NULL.  
+`[ @filter_clause = ] 'filter_clause'` Ist eine Einschränkung (WHERE)-Klausel, die einen horizontalen Filter definiert. Wenn Sie die Einschränkungsklausel eingeben, lassen Sie das Schlüsselwort WHERE weg. *Filter_clause* ist **Ntext**, hat den Standardwert NULL.  
   
- [  **@change_active =** ] *Change_active*  
- Ermöglicht das Ändern der Spalten in Veröffentlichungen, für die Abonnements vorhanden sind. *Change_active* ist ein **Int**, hat den Standardwert **0**. Wenn **0**, Spalten nicht geändert. Wenn **1**, Sichten erstellt oder für aktive Artikel, die Abonnements neu erstellt werden können.  
+`[ @change_active = ] change_active` Ermöglicht das Ändern von Spalten in Veröffentlichungen, die Abonnements aufweisen. *Change_active* ist ein **Int**, hat den Standardwert **0**. Wenn **0**, Spalten nicht geändert. Wenn **1**, Sichten erstellt oder für aktive Artikel, die Abonnements neu erstellt werden können.  
   
- [ **@force_invalidate_snapshot =** ] *Force_invalidate_snapshot*  
- Bestätigt, dass durch die von dieser gespeicherten Prozedur ausgeführte Aktion möglicherweise eine vorhandene Momentaufnahme ungültig wird. *Force_invalidate_snapshot* ist eine **Bit**, hat den Standardwert **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion eine vorhandene Momentaufnahme für ungültig erklären kann. *Force_invalidate_snapshot* ist eine **Bit**, hat den Standardwert **0**.  
   
  **0** gibt an, dass Änderungen am Artikel bewirken nicht, die Momentaufnahme ungültig wird. Wenn die gespeicherte Prozedur erkennt, dass die Änderungen eine neue Momentaufnahme erfordern, tritt ein Fehler auf und es werden keine Änderungen vorgenommen.  
   
  **1** gibt an, dass Änderungen am Artikel kann dazu führen, dass die Momentaufnahme ungültig wird, und wenn es sind Abonnements vorhanden, die eine neue Momentaufnahme erfordern würden Berechtigung erteilt, die vorhandene Momentaufnahme als veraltet zu markieren und eine neue Momentaufnahme zu generieren.  
   
- [  **@force_reinit_subscription =]** _Force_reinit_subscription_  
- Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion die erneute Initialisierung vorhandener Abonnements erfordern kann. *Force_reinit_subscription* ist eine **Bit** hat den Standardwert **0**.  
+`[ @force_reinit_subscription = ] _force_reinit_subscription_` Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion die erneute Initialisierung vorhandener Abonnements erfordern kann. *Force_reinit_subscription* ist eine **Bit** hat den Standardwert **0**.  
   
  **0** gibt an, dass Änderungen am Artikel bewirken nicht, das Abonnement erneut initialisiert werden. Wenn die gespeicherte Prozedur erkennt, dass die Änderung die erneute Initialisierung von Abonnements erfordert, wird ein Fehler auftritt und keine Änderungen vorgenommen werden.  
   
  **1** gibt an, dass Änderungen am Artikel bewirkt, dass vorhandene Abonnements erneut initialisiert werden, und erteilt die Berechtigung für die Initialisierung des Abonnements erfolgen.  
   
- [ **@publisher**=] **"**_Verleger_**"**  
- Gibt einen nicht- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Gibt einen nicht- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  *Publisher* sollte nicht verwendet werden, wenn eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger.  
   
- [ **@refreshsynctranprocs** =] *Refreshsynctranprocs*  
- Gibt an, ob die gespeicherten Prozeduren, die zum Synchronisieren der Replikation verwendet werden, automatisch neu erstellt werden. *Refreshsynctranprocs* ist **Bit**, hat den Standardwert 1.  
+`[ @refreshsynctranprocs = ] refreshsynctranprocs` Ist, wenn die zur replikationssynchronisierung verwendeten gespeicherten Prozeduren automatisch erneut erstellt werden. *Refreshsynctranprocs* ist **Bit**, hat den Standardwert 1.  
   
  **1** bedeutet, dass die gespeicherten Prozeduren neu erstellt werden.  
   
  **0** bedeutet, dass die gespeicherten Prozeduren nicht neu erstellt werden.  
   
- [ **@internal**=] *interne*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @internal = ] internal` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

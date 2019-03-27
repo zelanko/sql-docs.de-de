@@ -18,12 +18,12 @@ ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bbf909004f6b3d809babfb99b1787728194bd140
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 63d206e6b6f32aeb12e2e04b9edc2ef1d84599b2
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100857"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494232"
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,26 +43,20 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **\@Msgnum =** ] *Msg_id*  
- Die ID der Meldung. *Msg_id* ist **Int** hat den Standardwert NULL. *Msg_id* für benutzerdefinierte Fehler Nachrichten können eine ganze Zahl zwischen 50.001 und 2.147.483.647 sein. Die Kombination von *Msg_id* und *Sprache* muss eindeutig sein; wenn die ID für die angegebene Sprache bereits vorhanden ist, wird ein Fehler zurückgegeben.  
+`[ \@msgnum = ] msg_id` Ist die ID der Nachricht. *Msg_id* ist **Int** hat den Standardwert NULL. *Msg_id* für benutzerdefinierte Fehler Nachrichten können eine ganze Zahl zwischen 50.001 und 2.147.483.647 sein. Die Kombination von *Msg_id* und *Sprache* muss eindeutig sein; wenn die ID für die angegebene Sprache bereits vorhanden ist, wird ein Fehler zurückgegeben.  
   
- [  **\@Schweregrad =** ]*Schweregrad*  
- Ist der Schweregrad des Fehlers an. *Schweregrad* ist **Smallint** hat den Standardwert NULL. Die gültigen Werte reichen von 1 bis 25. Weitere Informationen zu den Schweregraden finden Sie unter [Schweregrade von Datenbank-Engine-Fehlern](../../relational-databases/errors-events/database-engine-error-severities.md).  
+`[ \@severity = ]severity` Ist der Schweregrad des Fehlers an. *Schweregrad* ist **Smallint** hat den Standardwert NULL. Die gültigen Werte reichen von 1 bis 25. Weitere Informationen zu den Schweregraden finden Sie unter [Schweregrade von Datenbank-Engine-Fehlern](../../relational-databases/errors-events/database-engine-error-severities.md).  
   
- [  **\@Msgtext =** ] **"**_msg_**"**  
- Ist der Text der Fehlermeldung. *msg* ist **nvarchar(255)** hat den Standardwert NULL.  
+`[ \@msgtext = ] 'msg'` Ist der Text der Fehlermeldung. *msg* ist **nvarchar(255)** hat den Standardwert NULL.  
   
- [  **\@Lang =** ] **"**_Sprache_**"**  
- Die Sprache für diese Meldung. *Sprache* ist **Sysname** hat den Standardwert NULL. Da mehrere Sprachen können, auf dem gleichen Server installiert werden *Sprache* gibt die Sprache, die in der jede Nachricht geschrieben wird. Wenn *Sprache* wird ausgelassen, die Sprache ist die Standardsprache für die Sitzung.  
+`[ \@lang = ] 'language'` Ist die Sprache für diese Nachricht. *Sprache* ist **Sysname** hat den Standardwert NULL. Da mehrere Sprachen können, auf dem gleichen Server installiert werden *Sprache* gibt die Sprache, die in der jede Nachricht geschrieben wird. Wenn *Sprache* wird ausgelassen, die Sprache ist die Standardsprache für die Sitzung.  
   
- [  **\@With_log =** ] { **"**" true "**"** | **'FALSE'** }  
- Gibt an, ob die Meldung beim Auftreten des Fehlers in das Windows-Anwendungsprotokoll geschrieben werden soll. **\@WITH_LOG** ist **varchar(5)** hat den Standardwert "false". Bei TRUE wird der Fehler immer in das Windows-Anwendungsprotokoll geschrieben. Bei FALSE wird der Fehler nicht immer in das Windows-Anwendungsprotokoll geschrieben, sondern in Abhängigkeit davon, wie er ausgelöst wurde. Nur Mitglieder der **Sysadmin** -Serverrolle kann diese Option verwenden.  
+`[ \@with_log = ] { 'TRUE' | 'FALSE' }` Ist, ob die Nachricht in das Windows-Anwendungsprotokoll geschrieben werden, wenn diese auftritt. **\@WITH_LOG** ist **varchar(5)** hat den Standardwert "false". Bei TRUE wird der Fehler immer in das Windows-Anwendungsprotokoll geschrieben. Bei FALSE wird der Fehler nicht immer in das Windows-Anwendungsprotokoll geschrieben, sondern in Abhängigkeit davon, wie er ausgelöst wurde. Nur Mitglieder der **Sysadmin** -Serverrolle kann diese Option verwenden.  
   
 > [!NOTE]  
 >  Wenn eine Meldung in das Windows-Anwendungsprotokoll geschrieben wird, wird sie auch in die [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Fehlerprotokolldatei geschrieben.  
   
- [  **\@ersetzen =** ] **"**_ersetzen_**"**  
- Wenn als Zeichenfolge angegeben *ersetzen*, wird eine vorhandene Fehlermeldung mit neuen Meldung und Schweregrad überschrieben. *Ersetzen Sie dies* ist **vom Datentyp varchar(7)** hat den Standardwert NULL. Diese Option muss angegeben werden, wenn *Msg_id* ist bereits vorhanden. Wenn eine englischsprachige Meldung (USA) Englischsprachige Meldung, die den Schweregrad wird für alle Nachrichten in allen anderen Sprachen, die die gleichen ersetzt *Msg_id*.  
+`[ \@replace = ] 'replace'` Wenn als Zeichenfolge angegeben *ersetzen*, wird eine vorhandene Fehlermeldung mit neuen Meldung und Schweregrad überschrieben. *Ersetzen Sie dies* ist **vom Datentyp varchar(7)** hat den Standardwert NULL. Diese Option muss angegeben werden, wenn *Msg_id* ist bereits vorhanden. Wenn eine englischsprachige Meldung (USA) Englischsprachige Meldung, die den Schweregrad wird für alle Nachrichten in allen anderen Sprachen, die die gleichen ersetzt *Msg_id*.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -77,7 +71,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
   
 |Originalmeldung|Lokalisierte Meldung|  
 |----------------------|-----------------------|  
-|'Originalmeldung Parameter 1: %s,<br /><br /> Parameter 2: %d'|'Lokalisierte Meldung Parameter 1:<br /><br /> Parameter 2: %2! "|  
+|'Originalmeldung Parameter 1: %s,<br /><br /> Parameter 2: %d'|'Lokalisierte Meldung Parameter 1:<br /><br /> param 2: %2!'|  
   
  Wegen Unterschieden in der Sprachsyntax weisen die Parameternummern in der lokalisierten Meldung möglicherweise eine andere Reihenfolge als in der Originalmeldung auf.  
   

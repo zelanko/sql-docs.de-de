@@ -5,17 +5,17 @@ description: Erfahren Sie mehr über die Funktionsweise der Dauerhaftigkeit von 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: bcb5ee903ab2e5c24cdc2bc705d9b29a4299ba1b
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 1dcf390fe87239cde45e8c7fda1bc5cebd10f0ed
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017956"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494162"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Dauerhaftigkeit von Daten mit SQL Server-big Data-Cluster in Kubernetes
 
@@ -26,7 +26,7 @@ ms.locfileid: "57017956"
 Die Möglichkeit, SQL Server-big Data-Cluster diese persistenten Volumes verwendet, ist die Verwendung [Speicherklassen](https://kubernetes.io/docs/concepts/storage/storage-classes/). Sie können unterschiedliche Speicherklassen für unterschiedliche Arten von Speicher zu erstellen, und geben sie zur Bereitstellungszeit big Data-Cluster. Sie können die Speicherklasse zu verwenden, für welche Zwecke (Pool) konfigurieren. SQL Server-big Data-Cluster erstellt [persistentes Volume Ansprüche](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) mit dem angegebenen Speicherkonto Klassennamen für die einzelnen Pods, die persistente Volumes erforderlich sind. Sie bindet dann die entsprechenden persistenten Volumes in den Pod.
 
 > [!NOTE]
-> Für CTP 2.3, nur `ReadWriteOnce` den Zugriffsmodus für das gesamte Cluster wird unterstützt.
+> Für CTP-Version 2.4, nur `ReadWriteOnce` den Zugriffsmodus für das gesamte Cluster wird unterstützt.
 
 ## <a name="deployment-settings"></a>Bereitstellungseinstellungen
 

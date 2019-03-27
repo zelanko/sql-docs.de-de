@@ -4,18 +4,18 @@ description: Informationen Sie zum Modellieren, Trainieren und Verwenden von par
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: tutorial
 ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 550e31e0b064051cb75f0e8922c346c4e8a5e3e2
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: abe7dbe193cc4e5f90095e7764f35aa1dc0cd9bf
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017896"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493332"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Tutorial: Erstellen von Modellen partitionsbasierter in R in SQL Server
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -46,7 +46,7 @@ Für dieses Tutorial verwendet werden kann, müssen Sie über Folgendes verfüge
 
 + SQL Server-2019 Vorschau-Datenbank-Engine-Instanz, mit Machine Learning Services und R-Integration.
 
-Version überprüfen, indem Sie Ausführung **`SELECT @@Version`** als T-SQL-Abfrage in einem Abfragetool. Ausgabe muss "Microsoft SQL Server 2019 (CTP 2.3) - 15.0.x".
+Version überprüfen, indem Sie Ausführung **`SELECT @@Version`** als T-SQL-Abfrage in einem Abfragetool. Ausgabe muss "Microsoft SQL Server 2019 (CTP 2.4) - 15.0.x".
 
 Überprüfen der Verfügbarkeit von R-Paketen durch die Rückgabe einer gut formatierten Liste von alle R-Pakete, die derzeit mit der Datenbank-Engine-Instanz installiert:
 

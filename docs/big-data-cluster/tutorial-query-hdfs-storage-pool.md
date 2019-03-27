@@ -5,19 +5,19 @@ description: Dieses Tutorial veranschaulicht, wie Sie HDFS-Daten in eine SQL Ser
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 03/27/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: bb0a028f45567e967f80f11425865098265ab35a
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: a8752f4879f4b03f89378e4f30c44c10dc272694
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241671"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494402"
 ---
-# <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Lernprogramm: HDFS-Abfrage in einer SQL Server-big Data-cluster
+# <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Tutorial: HDFS-Abfrage in einer SQL Server-big Data-cluster
 
 Dieses Tutorial veranschaulicht, wie Sie HDFS-Daten in eine SQL Server-2019 big Data-Cluster (Vorschau) Abfragen.
 
@@ -33,7 +33,7 @@ In diesem Tutorial erfahren Sie, wie Sie:
 ## <a id="prereqs"></a> Erforderliche Komponenten
 
 - [Big Data-tools](deploy-big-data-tools.md)
-   - **"kubectl"**
+   - **kubectl**
    - **Azure Data Studio**
    - **SQL Server-2019-Erweiterung**
 - [Laden Sie Beispieldaten in Ihre big Data-cluster](tutorial-load-sample-data.md)
@@ -44,18 +44,18 @@ Der Speicherpool enthält Web Clickstream-Daten in eine CSV-Datei in HDFS gespei
 
 1. Verbinden Sie in Azure Data Studio mit der SQL Server-Masterinstanz von Ihrer big Data-Cluster. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit der SQL Server-Masterinstanz](connect-to-big-data-cluster.md#master).
 
-2. Doppelklicken Sie auf die Verbindung in der **Server** Fenster im Server-Dashboard für die master-SQL Server-Instanz angezeigt wird. Wählen Sie **neue Abfrage**.
+1. Doppelklicken Sie auf die Verbindung in der **Server** Fenster im Server-Dashboard für die master-SQL Server-Instanz angezeigt wird. Wählen Sie **neue Abfrage**.
 
    ![SQL Server-Masterinstanz-Abfrage](./media/tutorial-query-hdfs-storage-pool/sql-server-master-instance-query.png)
 
-3. Führen Sie den folgenden Transact-SQL-Befehl, um den Kontext zum Ändern der **Sales** Datenbank in der master-Instanz.
+1. Führen Sie den folgenden Transact-SQL-Befehl, um den Kontext zum Ändern der **Sales** Datenbank in der master-Instanz.
 
    ```sql
    USE Sales
    GO
    ```
 
-4. Definieren Sie das Format der CSV-Datei zum Lesen aus HDFS. Drücken Sie F5, um die Anweisung auszuführen.
+1. Definieren Sie das Format der CSV-Datei zum Lesen aus HDFS. Drücken Sie F5, um die Anweisung auszuführen.
 
    ```sql
    CREATE EXTERNAL FILE FORMAT csv_file
@@ -69,7 +69,15 @@ Der Speicherpool enthält Web Clickstream-Daten in eine CSV-Datei in HDFS gespei
    );
    ```
 
-5. Erstellen einer externen Tabelle, die gelesen wird, kann die `/clickstream_data` aus dem Speicherpool. Die **SqlStoragePool** wird von der Masterinstanz von big Data-Cluster zugegriffen werden kann.
+1. Erstellen Sie eine externe Datenquelle für den Speicherpool aus, wenn es nicht bereits vorhanden ist.
+
+   ```sql
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+     CREATE EXTERNAL DATA SOURCE SqlStoragePool
+     WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+   ```
+
+1. Erstellen einer externen Tabelle, die gelesen wird, kann die `/clickstream_data` aus dem Speicherpool. Die **SqlStoragePool** wird von der Masterinstanz von big Data-Cluster zugegriffen werden kann.
 
    ```sql
    CREATE EXTERNAL TABLE [web_clickstreams_hdfs]

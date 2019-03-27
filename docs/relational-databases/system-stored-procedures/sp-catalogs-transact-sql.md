@@ -18,12 +18,12 @@ ms.assetid: ebb29ee2-be65-4e09-9c53-e3c6d12633e1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 25aae75151ada9ac38b35324f7c82d98f77d580b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 78a7dc76bb4d37558b061b6b13b2aef16ab26166
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535787"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494192"
 ---
 # <a name="spcatalogs-transact-sql"></a>sp_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,15 +40,14 @@ sp_catalogs [ @server_name = ] 'linked_svr'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@server_name =**] **"**_Linked_svr_**"**  
- Der Name eines Verbindungsservers. *Linked_svr* ist **Sysname**, hat keinen Standardwert.  
+`[ @server_name = ] 'linked_svr'` Ist der Name eines Verbindungsservers. *Linked_svr* ist **Sysname**, hat keinen Standardwert.  
   
 ## <a name="result-sets"></a>Resultsets  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**Catalog_name**|**Nvarchar (** 128 **)**|Name des Katalogs|  
-|**Beschreibung**|**Nvarchar (** 4000 **)**|Eine Beschreibung des Katalogs.|  
+|**Catalog_name**|**nvarchar(** 128 **)**|Name des Katalogs|  
+|**Beschreibung**|**nvarchar(** 4000 **)**|Eine Beschreibung des Katalogs.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert SELECT-Berechtigung für das Schema.  
@@ -67,14 +66,14 @@ EXEC sp_catalogs 'OLE DB ODBC Linked Server #3';
   
 ## <a name="see-also"></a>Siehe auch  
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [Sp_columns_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)   
- [Sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
- [Sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
- [Sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
+ [sp_columns_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)   
+ [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
+ [sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
+ [sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
  [sp_linkedservers (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
- [Sp_primarykeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
- [Sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
- [Sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
+ [sp_primarykeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
+ [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
+ [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

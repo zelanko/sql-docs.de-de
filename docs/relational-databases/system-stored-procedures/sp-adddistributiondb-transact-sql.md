@@ -16,12 +16,12 @@ ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6c55e0f8d7c2e102b18f7c17fb263c8f76658ede
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 61425d2af597299e3f34186c4555d324278d8cbf
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765802"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492553"
 ---
 # <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,47 +54,33 @@ sp_adddistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@database=**] *Datenbank '*  
- Entspricht dem Namen der zu erstellenden Verteilungsdatenbank. *Datenbank* ist **Sysname**, hat keinen Standardwert. Wenn die angegebene Datenbank bereits vorhanden und noch nicht als Verteilungsdatenbank gekennzeichnet ist, werden die zum Aktivieren der Verteilung erforderlichen Objekte installiert, und die Datenbank wird als Verteilungsdatenbank gekennzeichnet. Wenn die angegebene Datenbank bereits als Verteilungsdatenbank aktiviert wurde, wird ein Fehler zurückgegeben.  
+`[ @database = ] database'` Ist der Name der Verteilungsdatenbank erstellt werden. *Datenbank* ist **Sysname**, hat keinen Standardwert. Wenn die angegebene Datenbank bereits vorhanden und noch nicht als Verteilungsdatenbank gekennzeichnet ist, werden die zum Aktivieren der Verteilung erforderlichen Objekte installiert, und die Datenbank wird als Verteilungsdatenbank gekennzeichnet. Wenn die angegebene Datenbank bereits als Verteilungsdatenbank aktiviert wurde, wird ein Fehler zurückgegeben.  
   
- [  **@data_folder=**] **"**_Data_folder"_  
- Entspricht dem Namen des Verzeichnisses zum Speichern der Datendatei für die Verteilungsdatenbank. *Data_folder* ist **nvarchar(255)**, hat den Standardwert NULL. Bei NULL wird das Datenverzeichnis für diese Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, beispielsweise `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`.  
+`[ @data_folder = ] 'data_folder'_` Ist der Name des Verzeichnisses zum Speichern von Daten der Verteilungs-Datenbankdatei verwendet. *Data_folder* ist **nvarchar(255)**, hat den Standardwert NULL. Bei NULL wird das Datenverzeichnis für diese Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, beispielsweise `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`.  
   
- [  **@data_file=**] **"**_Data_file_**"**  
- Entspricht dem Namen der Datenbankdatei. *Data_file* ist **nvarchar(255)**, hat den Standardwert **Datenbank**. Bei NULL erstellt die gespeicherte Prozedur einen Dateinamen mithilfe des Datenbanknamens.  
+`[ @data_file = ] 'data_file'` Ist der Name der Datenbankdatei. *Data_file* ist **nvarchar(255)**, hat den Standardwert **Datenbank**. Bei NULL erstellt die gespeicherte Prozedur einen Dateinamen mithilfe des Datenbanknamens.  
   
- [  **@data_file_size=**] *Data_file_size*  
- Ist die ursprüngliche Datendateigröße in Megabytes (MB). *Data_file_size ich*s **Int**, hat den Standardwert 5 MB.  
+`[ @data_file_size = ] data_file_size` Ist die ursprüngliche Datendateigröße in Megabytes (MB) an. *Data_file_size ich*s **Int**, hat den Standardwert 5 MB.  
   
- [  **@log_folder=**] **"**_Log_folder_**"**  
- Entspricht dem Namen des Verzeichnisses für die Datenbankprotokolldatei. *Log_folder* ist **nvarchar(255)**, hat den Standardwert NULL. Bei NULL wird das Datenverzeichnis für diese Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet (beispielsweise `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`).  
+`[ @log_folder = ] 'log_folder'` Ist der Name des Verzeichnisses für die Datenbank-Protokolldatei. *Log_folder* ist **nvarchar(255)**, hat den Standardwert NULL. Bei NULL wird das Datenverzeichnis für diese Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet (beispielsweise `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`).  
   
- [  **@log_file=**] **"**_Log_file_**"**  
- Entspricht dem Namen der Protokolldatei. *Log_file* ist **nvarchar(255)**, hat den Standardwert NULL. Bei NULL erstellt die gespeicherte Prozedur einen Dateinamen mithilfe des Datenbanknamens.  
+`[ @log_file = ] 'log_file'` Ist der Name der Protokolldatei. *Log_file* ist **nvarchar(255)**, hat den Standardwert NULL. Bei NULL erstellt die gespeicherte Prozedur einen Dateinamen mithilfe des Datenbanknamens.  
   
- [  **@log_file_size=**] *Log_file_size*  
- Ist die ursprüngliche Protokolldateigröße in Megabytes (MB). *Log_file_size* ist **Int**, hat den Standardwert 0 MB, d. h. die Dateigröße erstellt wird, mit der kleinsten zugelassenen Protokolldateigröße von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+`[ @log_file_size = ] log_file_size` Ist die ursprüngliche Protokolldateigröße in Megabyte (MB) an. *Log_file_size* ist **Int**, hat den Standardwert 0 MB, d. h. die Dateigröße erstellt wird, mit der kleinsten zugelassenen Protokolldateigröße von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [  **@min_distretention=**] *Min_distretention*  
- Entspricht der minimalen Beibehaltungsdauer in Stunden, bevor Transaktionen aus der Verteilungsdatenbank gelöscht werden. *Min_distretention* ist **Int**, hat den Standardwert 0 Stunden.  
+`[ @min_distretention = ] min_distretention` Ist die minimale Beibehaltungsdauer in Stunden, bevor Transaktionen aus der Verteilungsdatenbank gelöscht werden. *Min_distretention* ist **Int**, hat den Standardwert 0 Stunden.  
   
- [  **@max_distretention=**] *Max_distretention*  
- Ist die maximale Beibehaltungsdauer in Stunden, bevor Transaktionen gelöscht werden. *Max_distretention* ist **Int**, hat den Standardwert von 72 Stunden. Abonnements, die keine replizierten Befehle empfangen haben, die älter sind als die maximale Beibehaltungsdauer der Verteilung, werden als inaktiv markiert und müssen erneut initialisiert werden. RAISERROR 21011 wird für jedes inaktive Abonnement ausgegeben. Der Wert **0** bedeutet, die replizierte Transaktionen werden nicht in der Verteilungsdatenbank gespeichert.  
+`[ @max_distretention = ] max_distretention` Ist die maximale Beibehaltungsdauer in Stunden, bevor Transaktionen gelöscht werden. *Max_distretention* ist **Int**, hat den Standardwert von 72 Stunden. Abonnements, die keine replizierten Befehle empfangen haben, die älter sind als die maximale Beibehaltungsdauer der Verteilung, werden als inaktiv markiert und müssen erneut initialisiert werden. RAISERROR 21011 wird für jedes inaktive Abonnement ausgegeben. Der Wert **0** bedeutet, die replizierte Transaktionen werden nicht in der Verteilungsdatenbank gespeichert.  
   
- [  **@history_retention=**] *History_retention*  
- Ist die Anzahl an Stunden der Beibehaltung des Verlaufs. *History_retention* ist **Int**, hat den Standardwert von 48 Stunden.  
+`[ @history_retention = ] history_retention` Ist die Anzahl der Stunden, für den Verlauf erhalten bleibt. *History_retention* ist **Int**, hat den Standardwert von 48 Stunden.  
   
- [  **@security_mode=**] *Security_mode*  
- Der Sicherheitsmodus, der zum Herstellen der Verbindung mit einem Verteiler verwendet wird. *Security_mode* ist **Int**, hat den Standardwert 1. **0** gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung; **1** gibt die integrierte Windows-Authentifizierung.  
+`[ @security_mode = ] security_mode` Ist der Sicherheitsmodus, der beim Verbinden mit dem Verteiler verwenden. *Security_mode* ist **Int**, hat den Standardwert 1. **0** gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung; **1** gibt die integrierte Windows-Authentifizierung.  
   
- [  **@login=**] **"**_Anmeldung_**"**  
- Der Anmeldename, der bei der Verbindungsherstellung zum Verteiler für die Erstellung der Verteilungsdatenbank verwendet wird. Dies ist erforderlich, wenn *Security_mode* nastaven NA hodnotu **0**. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
+`[ @login = ] 'login'` Der Anmeldename wird verwendet, wenn der verbindungsherstellung zum Verteiler die Verteilungsdatenbank zu erstellen. Dies ist erforderlich, wenn *Security_mode* nastaven NA hodnotu **0**. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
- [  **@password=**] **"**_Kennwort_**"**  
- Das Kennwort, das bei der Verbindungsherstellung zum Verteiler verwendet wird. Dies ist erforderlich, wenn *Security_mode* nastaven NA hodnotu **0**. *Kennwort* ist **Sysname**, hat den Standardwert NULL.  
+`[ @password = ] 'password'` Das Kennwort wird verwendet werden, wenn es sich bei der verbindungsherstellung zum Verteiler. Dies ist erforderlich, wenn *Security_mode* nastaven NA hodnotu **0**. *Kennwort* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@createmode=**] *Createmode*  
- *Createmode* ist **Int**, hat den Standardwert 1, und kann einen der folgenden Werte.  
+`[ @createmode = ] createmode` *Createmode* ist **Int**, hat den Standardwert 1, und kann einen der folgenden Werte.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -102,14 +88,11 @@ sp_adddistributiondb [ @database= ] 'database'
 |**1** (Standard)|CREATE DATABASE oder Verwenden einer vorhandenen Datenbank und anschließendes Anwenden **instdist.sql** Datei, um Replikationsobjekte in der Verteilungsdatenbank zu erstellen.|  
 |**2**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
- [  **@from_scripting =** ] *From_scripting*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
  
- [  **@deletebatchsize_xact=**] *Deletebatchsize_xact*  
- Gibt die Batchgröße, die während der Bereinigung der abgelaufene Transaktionen aus der MSRepl_Transactions-Tabellen verwendet werden. *Deletebatchsize_xact* ist **Int**, hat den Standardwert von 5000. Dieser Parameter wurde erstmals in SQL Server 2017, gefolgt von Versionen in SQL Server 2012 SP4 und SQL Server 2016 SP2 eingeführt.  
+`[ @deletebatchsize_xact = ] deletebatchsize_xact` Gibt die Batchgröße, die während der Bereinigung der abgelaufene Transaktionen aus der MSRepl_Transactions-Tabellen verwendet werden. *Deletebatchsize_xact* ist **Int**, hat den Standardwert von 5000. Dieser Parameter wurde erstmals in SQL Server 2017, gefolgt von Versionen in SQL Server 2012 SP4 und SQL Server 2016 SP2 eingeführt.  
 
- [  **@deletebatchsize_cmd=**] *Deletebatchsize_cmd*  
- Gibt die Batchgröße, die während der Bereinigung abgelaufener Befehle über die MSRepl_Commands-Tabellen verwendet werden. *Deletebatchsize_cmd* ist **Int**, hat den Standardwert 2000. Dieser Parameter wurde erstmals in SQL Server 2017, gefolgt von Versionen in SQL Server 2012 SP4 und SQL Server 2016 SP2 eingeführt. 
+`[ @deletebatchsize_cmd = ] deletebatchsize_cmd` Gibt die Batchgröße, die während der Bereinigung abgelaufener Befehle über die MSRepl_Commands-Tabellen verwendet werden. *Deletebatchsize_cmd* ist **Int**, hat den Standardwert 2000. Dieser Parameter wurde erstmals in SQL Server 2017, gefolgt von Versionen in SQL Server 2012 SP4 und SQL Server 2016 SP2 eingeführt. 
  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -183,8 +166,8 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren der Veröffentlichung und der Verteilung](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [Sp_changedistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
- [Sp_dropdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
+ [sp_changedistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
+ [sp_dropdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
  [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Verteilung konfigurieren](../../relational-databases/replication/configure-distribution.md)  

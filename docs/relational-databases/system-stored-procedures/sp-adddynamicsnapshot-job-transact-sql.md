@@ -16,12 +16,12 @@ ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 26026329ec092c769d545b4dbe99bd317b095bbe
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0fc4df3d84e2652c8ee328d0dbe79a71c068994a
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134060"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493352"
 ---
 # <a name="spadddynamicsnapshotjob-transact-sql"></a>sp_adddynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,17 +57,13 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publication=**] **'***publication***'**  
- Der Name der Veröffentlichung, der der Auftrag für die Momentaufnahme gefilterter Daten hinzugefügt wird. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung, die der gefilterten datenmomentaufnahmeauftrag hinzugefügt wird. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@suser_sname**=] **"***Suser_sname***"**  
- Ist der Wert, der verwendet wird, wenn eine Momentaufnahme gefilterter Daten für ein Abonnement erstellen, die durch den Wert gefiltert wird die [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) -Funktion beim Abonnenten. *SUSER_SNAME* ist **Sysname**, hat keinen Standardwert. *SUSER_SNAME* sollte NULL sein, wenn diese Funktion nicht verwendet wird, um die Veröffentlichung dynamisch zu filtern.  
+`[ @suser_sname = ] 'suser_sname'` Ist der Wert, der verwendet wird, wenn eine Momentaufnahme gefilterter Daten für ein Abonnement erstellen, die durch den Wert gefiltert wird die [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) -Funktion beim Abonnenten. *SUSER_SNAME* ist **Sysname**, hat keinen Standardwert. *SUSER_SNAME* sollte NULL sein, wenn diese Funktion nicht verwendet wird, um die Veröffentlichung dynamisch zu filtern.  
   
- [ **@host_name**=] **"***Host_name***"**  
- Ist der Wert, der verwendet wird, wenn eine Momentaufnahme gefilterter Daten für ein Abonnement erstellen, die durch den Wert gefiltert wird die [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) -Funktion beim Abonnenten. *HOST_NAME* ist **Sysname**, hat keinen Standardwert. *HOST_NAME* sollte NULL sein, wenn diese Funktion nicht verwendet wird, um die Veröffentlichung dynamisch zu filtern.  
+`[ @host_name = ] 'host_name'` Ist der Wert, der verwendet wird, wenn eine Momentaufnahme gefilterter Daten für ein Abonnement erstellen, die durch den Wert gefiltert wird die [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) -Funktion beim Abonnenten. *HOST_NAME* ist **Sysname**, hat keinen Standardwert. *HOST_NAME* sollte NULL sein, wenn diese Funktion nicht verwendet wird, um die Veröffentlichung dynamisch zu filtern.  
   
- [ **@dynamic_snapshot_jobname**=] **"***Dynamic_snapshot_jobname***"**  
- Der Name des erstellten Auftrags für eine Momentaufnahme gefilterter Daten. *Dynamic_snapshot_jobname* ist **Sysname**, mit dem Standardwert NULL und ist ein optionaler OUTPUT-Parameter. Wenn angegeben, *Dynamic_snapshot_jobname* muss in einem eindeutigen Auftrag auf dem Verteiler aufgelöst werden. Wird das Argument nicht angegeben, wird automatisch ein Auftragsname generiert und im Resultset zurückgegeben, wo der Name folgendermaßen erstellt wird:  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` Ist der Name des momentaufnahmeauftrags gefilterter Daten erstellt. *Dynamic_snapshot_jobname* ist **Sysname**, mit dem Standardwert NULL und ist ein optionaler OUTPUT-Parameter. Wenn angegeben, *Dynamic_snapshot_jobname* muss in einem eindeutigen Auftrag auf dem Verteiler aufgelöst werden. Wird das Argument nicht angegeben, wird automatisch ein Auftragsname generiert und im Resultset zurückgegeben, wo der Name folgendermaßen erstellt wird:  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
@@ -76,11 +72,9 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 > [!NOTE]  
 >  Wenn Sie den Namen des Auftrags für eine dynamische Momentaufnahme generieren, können Sie den Namen des Auftrags für eine Standardmomentaufnahme abschneiden.  
   
- [ **@dynamic_snapshot_jobid**=] **"***Dynamic_snapshot_jobid***"**  
- Ein Bezeichner des erstellten Auftrags für die Momentaufnahme gefilterter Daten. *Dynamic_snapshot_jobid* ist **Uniqueidentifier**, mit dem Standardwert NULL und ist ein optionaler OUTPUT-Parameter.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` Ist ein Bezeichner für den gefilterten datenmomentaufnahmeauftrag erstellt. *Dynamic_snapshot_jobid* ist **Uniqueidentifier**, mit dem Standardwert NULL und ist ein optionaler OUTPUT-Parameter.  
   
- [  **@frequency_type=**] *Frequency_type*  
- Die Häufigkeit, mit der der Auftrag für die Momentaufnahme gefilterter Daten geplant werden soll. *Frequency_type* ist **Int**, und kann einen der folgenden Werte sein.  
+`[ @frequency_type = ] frequency_type` Kann die Häufigkeit für die Planung der gefilterten datenmomentaufnahmeauftrags. *Frequency_type* ist **Int**, und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -93,8 +87,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**64**|Autostart|  
 |**128**|Wiederholt|  
   
- [  **@frequency_interval =** ] *Frequency_interval*  
- Der Zeitraum (in Tagen) der Ausführung des Auftrags für die Momentaufnahme gefilterter Daten. *Frequency_interval* ist **Int**, hat den Standardwert von 1 und hängt vom Wert der *Frequency_type*.  
+`[ @frequency_interval = ] frequency_interval` Ist der Zeitraum (in Tagen), wenn der gefilterten datenmomentaufnahmeauftrag ausgeführt wird. *Frequency_interval* ist **Int**, hat den Standardwert von 1 und hängt vom Wert der *Frequency_type*.  
   
 |Wert von *Frequency_type*|Auswirkung auf *Frequency_interval*|  
 |--------------------------------|-------------------------------------|  
@@ -106,8 +99,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**64**|*Frequency_interval* wird nicht verwendet.|  
 |**128**|*Frequency_interval* wird nicht verwendet.|  
   
- [  **@frequency_subday=**] *Frequency_subday*  
- Gibt die Einheiten für *Frequency_subday_interval*. *Frequency_subday* ist **Int**, und kann einen der folgenden Werte sein.  
+`[ @frequency_subday = ] frequency_subday` Gibt die Einheiten für *Frequency_subday_interval*. *Frequency_subday* ist **Int**, und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -116,11 +108,9 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**4** (Standard)|Minute|  
 |**8**|Hour|  
   
- [  **@frequency_subday_interval=**] *Frequency_subday_interval*  
- Die Anzahl der *Frequency_subday* Zeiträume, die zwischen den Ausführungsinstanzen des Auftrags auftreten. *Frequency_subday_interval* ist **Int**, hat den Standardwert 5.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Die Anzahl der *Frequency_subday* Zeiträume, die zwischen den Ausführungsinstanzen des Auftrags auftreten. *Frequency_subday_interval* ist **Int**, hat den Standardwert 5.  
   
- [  **@frequency_relative_interval=**] *Frequency_relative_interval*  
- Das Auftreten des Auftrags für eine Momentaufnahme gefilterter Daten in jedem Monat. Dieser Parameter wird verwendet, wenn *Frequency_type* nastaven NA hodnotu **32** (mit relativem Monatsintervall). *Frequency_relative_interval* ist **Int**, und kann einen der folgenden Werte sein.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Ist das Vorkommen des Auftrags die Momentaufnahme gefilterter Daten in jedem Monat. Dieser Parameter wird verwendet, wenn *Frequency_type* nastaven NA hodnotu **32** (mit relativem Monatsintervall). *Frequency_relative_interval* ist **Int**, und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -130,20 +120,15 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**8**|Vierter|  
 |**16**|Letzter|  
   
- [  **@frequency_recurrence_factor=**] *Frequency_recurrence_factor*  
- Wird von verwendete Wiederholungsfaktor *Frequency_type*. *Frequency_recurrence_factor* ist **Int**, hat den Standardwert 0.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Wird von verwendete Wiederholungsfaktor *Frequency_type*. *Frequency_recurrence_factor* ist **Int**, hat den Standardwert 0.  
   
- [  **@active_start_date=**] *Active_start_date*  
- Das Datum, an dem der Auftrag für die Momentaufnahme gefilterter Daten zum ersten Mal geplant ist. Dabei wird das Format JJJJMMTT verwendet. *Active_start_date* ist **Int**, hat den Standardwert NULL.  
+`[ @active_start_date = ] active_start_date` Das Datum, der gefilterten datenmomentaufnahmeauftrag erste ist geplant Format: YYYYMMDD. *Active_start_date* ist **Int**, hat den Standardwert NULL.  
   
- [  **@active_end_date=**] *Active_end_date*  
- Das Datum, ab dem der Auftrag für die Momentaufnahme gefilterter Daten nicht mehr geplant ist. Dabei wird das Format JJJJMMTT verwendet. *Active_end_date* ist **Int**, hat den Standardwert NULL.  
+`[ @active_end_date = ] active_end_date` Ist das Datum, die die gefilterten Daten Auftrag beendet wird Momentaufnahme, geplant Format: YYYYMMDD verwendet. *Active_end_date* ist **Int**, hat den Standardwert NULL.  
   
- [  **@active_start_time_of_day=**] *Active_start_time_of_day*  
- Die Tageszeit, zu der der Auftrag für die Momentaufnahme gefilterter Daten zum ersten Mal geplant ist. Dabei wird das Format HHMMSS verwendet. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert NULL.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Ist, dass die Tageszeit aus, wenn die gefilterten Daten Auftrag für die Momentaufnahme, zum ersten Mal geplant ist, Format: HHMMSS. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert NULL.  
   
- [  **@active_end_time_of_day=**] *Active_end_time_of_day*  
- Die Tageszeit, ab der der Auftrag für die Momentaufnahme gefilterter Daten nicht mehr geplant ist. Dabei wird das Format HHMMSS verwendet. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert NULL.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Wird die Tageszeit aus, wenn dem Momentaufnahme gefilterter Daten beendet, geplant Format: HHMMSS, verwendet. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert NULL.  
   
 ## <a name="result-set"></a>Resultset  
   
@@ -168,7 +153,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen einer Momentaufnahme für eine Mergeveröffentlichung mit parametrisierten Filtern](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
- [Sp_dropdynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md)   
- [Sp_helpdynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md)  
+ [sp_dropdynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md)   
+ [sp_helpdynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md)  
   
   

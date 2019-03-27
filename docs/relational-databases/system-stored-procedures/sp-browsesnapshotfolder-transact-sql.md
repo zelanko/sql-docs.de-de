@@ -16,12 +16,12 @@ ms.assetid: 0872edf2-4038-4bc1-a68d-05ebfad434d2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1bd85e4d3e76df8cf5fe0b30350fb1a02959516f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: a2ace8d02997b7c0647be0b7abe26ff098849905
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591154"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494002"
 ---
 # <a name="spbrowsesnapshotfolder-transact-sql"></a>sp_browsesnapshotfolder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_browsesnapshotfolder [@publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication=**] **"**_Veröffentlichung_**"**  
- Der Name der Veröffentlichung, die den Artikel enthält. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung, die der Artikel enthält. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@subscriber=**] **"**_Abonnenten_**"**  
- Der Name des Abonnenten. *Abonnenten* ist **Sysname**, hat den Standardwert NULL.  
+`[ @subscriber = ] 'subscriber'` Ist der Name des Abonnenten. *Abonnenten* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@subscriber_db=**] **"**_Subscriber_db_**"**  
- Ist der Name der Abonnementdatenbank. *Subscriber_db* ist **Sysname**, hat den Standardwert NULL.  
+`[ @subscriber_db = ] 'subscriber_db'` Ist der Name der Abonnementdatenbank. *Subscriber_db* ist **Sysname**, hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

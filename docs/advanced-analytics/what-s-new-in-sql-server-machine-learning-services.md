@@ -1,7 +1,7 @@
 ---
 title: SQL Server-Machine Learning-Dienste - Neuigkeiten | Microsoft-Dokumentation
 description: Ankündigungen neuer Merkmale für jede Version von SQL Server 2016 R Services, R Server, SQL Server 2017-Machine Learning Services.
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -10,12 +10,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 64e98073dabd490965fb5d582102a6eb962c5a13
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: be7ecb1f4a1a42c4018e6a549a7ad2ea76b04ef5
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161828"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494132"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Neuerungen in SQL Server Machine Learning Services
 
@@ -30,6 +30,8 @@ Diese Version bietet die am häufigsten gewünschten Features für R- und Python
 
 | Release | Featureupdate |
 |---------|----------------|
+| CTP 2.4 | Linux-Unterstützung für [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) für R, Python und Java. |
+| | Die Umgebungsvariable aus, der angibt, den Speicherort der Java-Interpreter geändert hat `JAVA_HOME` zu `JRE_HOME`. |
 | CTP 2.3 | Neuen unterstützten [Java-Datentypen](java/java-sql-datatypes.md). |
 | | Auf Windows nur Java-Code erfolgen kann in eine externe Bibliothek mit den [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) Anweisung. Entsprechende Funktionalität wird unter Linux in einer zukünftigen CTP verfügbar sein. Weitere Informationen: [Gewusst wie: Aufrufen von Java aus SQL Server](java/howto-call-java-from-sql.md). |
 | | Python-Code kann auf Windows nur in eine externe Bibliothek mit zugegriffen werden die [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) Anweisung. Entsprechende Funktionalität wird unter Linux in einer zukünftigen CTP verfügbar sein. |

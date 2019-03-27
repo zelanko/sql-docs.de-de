@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f14b269b65b6a6c30e7ac8de25aebafa7b7c38be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 715387bcb15e27b0d53a7f000b0f97c2be5a4bbe
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835668"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494252"
 ---
 # <a name="spbindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,19 +46,16 @@ sp_bindefault [ @defname = ] 'default' ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@defname=** ] **'***default***'**  
- Der Name des Standards, der von CREATE DEFAULT erstellt wird. *standardmäßige* ist **nvarchar(776)**, hat keinen Standardwert.  
+`[ @defname = ] 'default'` Ist der Name des Standards, der von CREATE DEFAULT erstellt wird. *standardmäßige* ist **nvarchar(776)**, hat keinen Standardwert.  
   
- [  **@objname=** ] **"***Object_name***"**  
- Der Name der Tabelle und der Spalte, oder der Aliasdatentyp, an den der Standardwert gebunden werden soll. *Object_name* ist **nvarchar(776)** hat keinen Standardwert. *Object_name* kann nicht definiert werden, mit der **varchar(max)**, **nvarchar(max)**, **'varbinary(max)'**, **Xml**, oder CLR Benutzerdefinierte Typen.  
+`[ @objname = ] 'object_name'` Ist der Name der Tabelle und Spalte oder der Aliasdatentyp, ist der Standardwert gebunden werden soll. *Object_name* ist **nvarchar(776)** hat keinen Standardwert. *Object_name* kann nicht definiert werden, mit der **varchar(max)**, **nvarchar(max)**, **'varbinary(max)'**, **Xml**, oder CLR Benutzerdefinierte Typen.  
   
  Wenn *Object_name* ist ein einteiliger Name, wird er als einen Aliasdatentyp aufgelöst. Wenn es sich um einen - oder dreiteiliger Namen handelt, wird es zunächst als Tabelle und Spalte aufgelöst wurde, andernfalls und wenn die Auflösung fehlschlägt, wird es als einen Aliasdatentyp aufgelöst. Vorhandene Spalten des aliasdatentyps erben standardmäßig *Standard*, es sei denn, Sie direkt auf die Spalte ein Standardwert gebunden wurde. Ein Standard kann nicht gebunden werden, um eine **Text**, **Ntext**, **Image**, **varchar(max)**, **nvarchar(max)**, **'varbinary(max)'**, **Xml**, **Zeitstempel**, oder CLR UDT-Spalte, eine Spalte mit der IDENTITY-Eigenschaft, eine berechnete Spalte oder eine Spalte, die besitzt bereits eine DEFAULT-Einschränkung.  
   
 > [!NOTE]  
 >  *Object_name* können Klammern enthalten **[]** als Begrenzungsbezeichner. Weitere Informationen finden Sie unter [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md).  
   
- [ **@futureonly=** ] **'***futureonly_flag***'**  
- Wird nur beim Binden eines Standardwerts an einen Aliasdatentyp verwendet. *Futureonly_flag* ist **varchar(15)** hat den Standardwert NULL. Wenn dieser Parameter auf festgelegt ist **Futureonly**, vorhandene Spalten dieses Datentyps können nicht den neuen Standard nicht erben. Dieser Parameter wird nie beim Binden eines Standards an eine Spalte verwendet. Wenn *Futureonly_flag* NULL ist, wird der neue Standard an alle Spalten des aliasdatentyps, die aktuell keinen Standard aufweisen oder die den vorhandenen Standard des aliasdatentyps, gebunden.  
+`[ @futureonly = ] 'futureonly_flag'` Wird nur beim Binden eines Standards an einen Aliasdatentyp verwendet. *Futureonly_flag* ist **varchar(15)** hat den Standardwert NULL. Wenn dieser Parameter auf festgelegt ist **Futureonly**, vorhandene Spalten dieses Datentyps können nicht den neuen Standard nicht erben. Dieser Parameter wird nie beim Binden eines Standards an eine Spalte verwendet. Wenn *Futureonly_flag* NULL ist, wird der neue Standard an alle Spalten des aliasdatentyps, die aktuell keinen Standard aufweisen oder die den vorhandenen Standard des aliasdatentyps, gebunden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

@@ -16,12 +16,12 @@ ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 81f6b1ca0ea65068851756dc2a1b91cb84c52227
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 06a0e5e2edb793a94e8d8542ca17734f23824121
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128231"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494023"
 ---
 # <a name="spchangedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publisher=** ] **"**_Verleger_**"**  
- Der Name des Verlegers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher = ] 'publisher'` Ist der Name des Verlegers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@property=** ] **"**_Eigenschaft_**"**  
- Eine Eigenschaft, die für den angegebenen Verleger geändert werden soll. *Eigenschaft* ist **Sysname** und kann einen der folgenden Werte sein.  
+`[ @property = ] 'property'` Ist eine Eigenschaft, die für den angegebenen Verleger geändert. *Eigenschaft* ist **Sysname** und kann einen der folgenden Werte sein.  
   
- [ **@value=** ] **'**_value_**'**  
- Der Wert für die angegebene Eigenschaft. *Wert* ist **nvarchar(255)**, hat den Standardwert NULL.  
+`[ @value = ] 'value'` Ist der Wert für die angegebene Eigenschaft. *Wert* ist **nvarchar(255)**, hat den Standardwert NULL.  
   
- [  **@storage_connection_string =**] **"**_Storage_connection_string_**"**  
- Erforderlich für die verwaltete SQL-Datenbank-Instanz ist, sollte den Zugriffsschlüssel für das Speichervolume für Azure SQL-Datenbank übereinstimmen. 
+`[ @storage_connection_string = ] 'storage_connection_string'` Erforderlich für die verwaltete SQL-Datenbank-Instanz ist, sollte den Zugriffsschlüssel für das Speichervolume für Azure SQL-Datenbank übereinstimmen. 
 
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
@@ -60,7 +56,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 |Eigenschaft|Werte|Description|  
 |--------------|------------|-----------------|  
-|**aktiv**|**true**|Aktiviert den Verleger|  
+|**active**|**true**|Aktiviert den Verleger|  
 ||**false**|Deaktiviert den Verleger|  
 |**distribution_db**||Der Name der Verteilungsdatenbank.|  
 |**login**||Benutzername|  
@@ -82,8 +78,8 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [Sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
- [Sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
+ [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

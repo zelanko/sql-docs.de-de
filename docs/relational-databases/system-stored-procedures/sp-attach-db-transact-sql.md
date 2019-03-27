@@ -18,12 +18,12 @@ ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1b0a6fdf71643f438201aae39010f25d2e43d15c
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: cc0ab6b4dc44d14b375b13da971c0849eb42b0b3
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588834"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494352"
 ---
 # <a name="spattachdb-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +48,9 @@ sp_attach_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@dbname=** ] **"**_Dbnam_ **"**  
- Der Name der Datenbank, die an den Server angefügt werden soll. Der Name muss eindeutig sein. *Dbname* ist **Sysname**, hat den Standardwert NULL.  
+`[ @dbname = ] 'dbnam_ '` Ist der Name der Datenbank, die an den Server angefügt werden. Der Name muss eindeutig sein. *Dbname* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@filename1=** ] **"**_Filename_n_**"**  
- Der physische Name der Datenbankdatei, einschließlich des Pfads. *Filename_n* ist **nvarchar(260)**, hat den Standardwert NULL. Sie können bis zu 16 Dateinamen angeben. Die Parameternamen beginnen mit **@filename1** und werden bis **@filename16**. Die Liste der Dateinamen muss mindestens die primäre Datei einschließen. Die primäre Datei enthält die Systemtabellen, die auf andere Dateien in der Datenbank zeigen. Die Liste muss außerdem alle Dateien enthalten, die nach dem Trennen der Datenbank verschoben wurden.  
+`[ @filename1 = ] 'filename_n'` Ist der physische Name, einschließlich des Pfads einer Datenbankdatei an. *Filename_n* ist **nvarchar(260)**, hat den Standardwert NULL. Sie können bis zu 16 Dateinamen angeben. Die Parameternamen beginnen mit **@filename1** und werden bis **@filename16**. Die Liste der Dateinamen muss mindestens die primäre Datei einschließen. Die primäre Datei enthält die Systemtabellen, die auf andere Dateien in der Datenbank zeigen. Die Liste muss außerdem alle Dateien enthalten, die nach dem Trennen der Datenbank verschoben wurden.  
   
 > [!NOTE]  
 >  Dieses Argument entspricht dem FILENAME-Parameter der CREATE DATABASE-Anweisung. Weitere Informationen finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  

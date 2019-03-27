@@ -18,12 +18,12 @@ ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f361039f611a6b7a383649fb18a4af155a0c2b28
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a713687d41c21a3c99c30d6b7192d7c59e41505
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710608"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492722"
 ---
 # <a name="spchangelogshippingprimarydatabase-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,20 +51,15 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@database =** ] '*Datenbank*"  
- Der Name der Datenbank auf dem primären Server. *primary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @database = ] 'database'` Ist der Name der Datenbank auf dem primären Server. *primary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
- [  **@backup_directory =** ] '*Backup_directory*"  
- Der Pfad zum Sicherungsordner auf dem primären Server. *Backup_directory* ist **nvarchar(500)**, hat keinen Standardwert und darf nicht NULL sein.  
+`[ @backup_directory = ] 'backup_directory'` Ist der Pfad zum Sicherungsordner auf dem primären Server. *Backup_directory* ist **nvarchar(500)**, hat keinen Standardwert und darf nicht NULL sein.  
   
- [  **@backup_share =** ] '*Backup_share*"  
- Der Netzwerkpfad zum Sicherungsverzeichnis auf dem primären Server. *Backup_share* ist **nvarchar(500)**, hat keinen Standardwert und darf nicht NULL sein.  
+`[ @backup_share = ] 'backup_share'` Ist Sie der Netzwerkpfad zum Sicherungsverzeichnis auf dem primären Server. *Backup_share* ist **nvarchar(500)**, hat keinen Standardwert und darf nicht NULL sein.  
   
- [  **@backup_retention_period =** ] '*Backup_retention_period*"  
- Die Zeitdauer (in Minuten), für die die Protokollsicherungsdatei im Sicherungsverzeichnis auf dem primären Server gespeichert wird. *Backup_retention_period* ist **Int**, hat keinen Standardwert und darf nicht NULL sein.  
+`[ @backup_retention_period = ] 'backup_retention_period'` Ist die Zeitdauer in Minuten, die Protokollsicherungsdatei im Sicherungsverzeichnis auf dem primären Server beibehalten werden sollen. *Backup_retention_period* ist **Int**, hat keinen Standardwert und darf nicht NULL sein.  
   
- [  **@monitor_server_security_mode =** ] '*Monitor_server_security_mode*"  
- Der Sicherheitsmodus, der zum Herstellen einer Verbindung mit dem Überwachungsserver verwendet wird.  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` Der Sicherheitsmodus, der für die Verbindung mit dem Überwachungsserver verwendet wird.  
   
  1 = Windows-Authentifizierung  
   
@@ -72,20 +67,15 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
  *monitor_server_security_mode* ist vom Datentyp **bit** und darf nicht NULL sein.  
   
- [  **@monitor_server_login =** ] '*Monitor_server_login*"  
- Der Benutzername für das Konto, das zum Zugreifen auf den Überwachungsserver verwendet wird.  
+`[ @monitor_server_login = ] 'monitor_server_login'` Ist der Benutzername des Kontos, auf dem Überwachungsserver verwendet.  
   
- [  **@monitor_server_password =** ] '*Monitor_server_password*"  
- Das Kennwort des Kontos, das zum Zugreifen auf den Überwachungsserver verwendet wird.  
+`[ @monitor_server_password = ] 'monitor_server_password'` Ist das Kennwort des Kontos, auf dem Überwachungsserver verwendet.  
   
- [  **@backup_threshold =** ] '*Backup_threshold*"  
- Die Länge der Zeit in Minuten, nach der letzten Sicherung, bevor eine *Threshold_alert* Fehler ausgelöst. *Backup_threshold* ist **Int**, hat den Standardwert von 60 Minuten.  
+`[ @backup_threshold = ] 'backup_threshold'` Die Länge der Zeit in Minuten, nach der letzten Sicherung, bevor eine *Threshold_alert* Fehler ausgelöst. *Backup_threshold* ist **Int**, hat den Standardwert von 60 Minuten.  
   
- [  **@threshold_alert =** ] '*Threshold_alert*"  
- Die Warnung, die bei Überschreiten des Sicherungsschwellenwertes ausgelöst wird. *Threshold_alert* ist **Int** und darf nicht NULL sein.  
+`[ @threshold_alert = ] 'threshold_alert'` Warnung, die bei Überschreitung des sicherungsschwellenwerts ausgelöst werden. *Threshold_alert* ist **Int** und darf nicht NULL sein.  
   
- [  **@threshold_alert_enabled =** ] '*Threshold_alert_enabled*"  
- Gibt an, ob eine Warnung ausgelöst wird, wenn *Backup_threshold* überschritten wird.  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` Gibt an, ob eine Warnung ausgelöst wird, wenn *Backup_threshold* überschritten wird.  
   
  1 = aktiviert.  
   
@@ -93,11 +83,9 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
  *Threshold_alert_enabled* ist **Bit** und darf nicht NULL sein.  
   
- [  **@history_retention_period =** ] '*History_retention_period*"  
- Die Zeitdauer (in Minuten), für die der Verlauf beibehalten wird. *History_retention_period* ist **Int**. Falls nichts angegeben wird, wird ein Wert von 14420 verwendet.  
+`[ @history_retention_period = ] 'history_retention_period'` Ist die Zeitdauer in Minuten, die in denen der Verlauf beibehalten wird. *History_retention_period* ist **Int**. Falls nichts angegeben wird, wird ein Wert von 14420 verwendet.  
   
- [ **@backup_compression**=] *Backup_compression_option*  
- Gibt an, ob eine Protokollversandkonfiguration verwendet [sicherungskomprimierung](../../relational-databases/backup-restore/backup-compression-sql-server.md). Dieser Parameter wird nur in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (oder einer höheren Version) unterstützt.  
+`[ @backup_compression = ] backup_compression_option` Gibt an, ob eine Protokollversandkonfiguration verwendet [sicherungskomprimierung](../../relational-databases/backup-restore/backup-compression-sql-server.md). Dieser Parameter wird nur in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (oder einer höheren Version) unterstützt.  
   
  0 = Deaktiviert. Protokollsicherungen nie komprimieren.  
   
@@ -143,6 +131,6 @@ EXEC master.dbo.sp_change_log_shipping_primary_database
 ## <a name="see-also"></a>Siehe auch  
  [Über den Protokollversand &#40;SQLServer&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Log_shipping_primary_databases &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
+ [log_shipping_primary_databases &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
   
   

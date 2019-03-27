@@ -18,12 +18,12 @@ ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1583f6de4938451b03eabfb7c9425120fa37f2fc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f293e906d647d318bca5d730d0164b75cc88fc6f
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537835"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494092"
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,18 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@job_id =**] *job_id*  
- Die ID des Auftrags, der für die angegebenen Zielserver oder Zielservergruppen ausgeführt werden sollen. *Job_id* ist **Uniqueidentifier**, hat den Standardwert NULL.  
+`[ @job_id = ] job_id` Die Auftrags-ID des Auftrags, der auf die angegebenen Zielserver oder Zielservergruppen angewendet werden soll. *Job_id* ist **Uniqueidentifier**, hat den Standardwert NULL.  
   
- [  **@job_name =**] **"**_Job_name_**"**  
- Der Name des Auftrags, der für die angegebenen Zielserver oder Zielservergruppen ausgeführt werden sollen. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags, gelten für den angegebenen Zielserver oder Zielservergruppen ausgeführt werden sollen. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
- [  **@target_server_groups =**] **"**_Target_server_groups_**"**  
- Eine durch Trennzeichen getrennte Liste von Zielservergruppen, für die der angegebene Auftrag ausgeführt werden soll. *Target_server_groups* ist **nvarchar(2048)**, hat den Standardwert NULL.  
+`[ @target_server_groups = ] 'target_server_groups'` Eine durch Trennzeichen getrennte Liste der Zielservergruppen, für die der angegebene Auftrag angewendet wird. *Target_server_groups* ist **nvarchar(2048)**, hat den Standardwert NULL.  
   
- [  **@target_servers=** ] **"**_target_server_**"**  
- Eine durch Trennzeichen getrennte Liste von Zielservern, für die der angegebene Auftrag ausgeführt werden soll. *target_server*ist **nvarchar(2048)**, hat den Standardwert NULL.  
+`[ @target_servers = ] 'target_servers'` Eine durch Trennzeichen getrennte Liste von Zielservern auf die der angegebene Auftrag angewendet werden. *target_server*ist **nvarchar(2048)**, hat den Standardwert NULL.  
   
- [  **@operation=** ] **"**_Vorgang_**"**  
- Gibt an, ob der angegebene Auftrag für die genannten Zielserver oder Zielservergruppen ausgeführt oder davon entfernt werden soll. *Vorgang*ist **vom Datentyp varchar(7)**, hat den Standardwert übernehmen. Gültige Vorgänge sind **übernehmen** und **entfernen**.  
+`[ @operation = ] 'operation'` Ist Sie, ob der angegebene Auftrag angewendet oder aus dem angegebenen Zielserver oder Zielservergruppen entfernt werden sollten. *Vorgang*ist **vom Datentyp varchar(7)**, hat den Standardwert übernehmen. Gültige Vorgänge sind **übernehmen** und **entfernen**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

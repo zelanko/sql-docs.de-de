@@ -16,12 +16,12 @@ ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc01fcc8e614235894b46813da3162064e1c28d3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ee80fbdac31d58cdb4b4b4b60c61be01670ad65a
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783272"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492238"
 ---
 # <a name="spchangeagentprofile-transact-sql"></a>sp_change_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_change_agent_profile [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@profile_id=** ] *profile_id*  
- Die ID des Profils. *Profile_id* ist **Int**, hat keinen Standardwert.  
+`[ @profile_id = ] profile_id` Ist die ID des Profils. *Profile_id* ist **Int**, hat keinen Standardwert.  
   
- [  **@property=** ] **"***Eigenschaft***"**  
- Ist der Name der Eigenschaft. *Eigenschaft* ist **Sysname**, hat keinen Standardwert.  
+`[ @property = ] 'property'` Ist der Name der Eigenschaft. *Eigenschaft* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@value=** ] **'***Wert***'**  
- Ist der neue Wert der Eigenschaft. *Wert* ist **nvarchar(3000)**, hat keinen Standardwert.  
+`[ @value = ] 'value'` Ist der neue Wert der Eigenschaft. *Wert* ist **nvarchar(3000)**, hat keinen Standardwert.  
   
  In dieser Tabelle werden die Profileigenschaften beschrieben, die geändert werden können.  
   
@@ -65,9 +62,9 @@ sp_change_agent_profile [ @profile_id = ] profile_id
  Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_change_agent_profile**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_add_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
- [Sp_drop_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
- [Sp_help_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)   
+ [sp_add_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
+ [sp_drop_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
+ [sp_help_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

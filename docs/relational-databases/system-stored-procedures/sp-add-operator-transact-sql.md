@@ -18,12 +18,12 @@ ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 147269759746e143897757aab5518b784e705915
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1a6a9e45b1640a82cd15074373f162a97d9a0a6
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751578"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494078"
 ---
 # <a name="spaddoperator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,14 +53,11 @@ sp_add_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@name=** ] **'***name***'**  
- Der Name eines Operators (Benachrichtigungsempfänger). Dieser Name muss eindeutig sein und darf nicht die Prozentzeichen enthalten (**%**) Zeichen. *Namen* ist **Sysname**, hat keinen Standardwert.  
+`[ @name = ] 'name'` Der Name eines Operators (Benachrichtigungsempfänger). Dieser Name muss eindeutig sein und darf nicht die Prozentzeichen enthalten (**%**) Zeichen. *Namen* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@enabled=** ] *enabled*  
- Gibt den aktuellen Status des Operators an. *aktiviert* ist **Tinyint**, hat den Standardwert **1** (aktiviert). Wenn **0**, der Operator ist nicht aktiviert und empfängt keine Benachrichtigungen.  
+`[ @enabled = ] enabled` Gibt den aktuellen Status des Operators an. *aktiviert* ist **Tinyint**, hat den Standardwert **1** (aktiviert). Wenn **0**, der Operator ist nicht aktiviert und empfängt keine Benachrichtigungen.  
   
- [ **@email_address=** ] **'***email_address***'**  
- Die E-Mail-Adresse des Operators. Diese Zeichenfolge wird direkt an das E-Mail-System übergeben. *Email_address* ist **nvarchar(100)**, hat den Standardwert NULL.  
+`[ @email_address = ] 'email_address'` Die e-Mail-Adresse des Operators. Diese Zeichenfolge wird direkt an das E-Mail-System übergeben. *Email_address* ist **nvarchar(100)**, hat den Standardwert NULL.  
   
  Sie können angeben, entweder eine physische e-Mail-Adresse oder einen Alias für *Email_address*. Zum Beispiel:  
   
@@ -69,31 +66,23 @@ sp_add_operator [ @name = ] 'name'
 > [!NOTE]  
 >  Für Datenbank-E-Mail muss die E-Mail-Adresse verwendet werden.  
   
- [ **@pager_address=** ] **'***pager_address***'**  
- Gibt die Pageradresse des Operators an. Diese Zeichenfolge wird direkt an das E-Mail-System übergeben. *Pager_address* ist **narchar(100)**, hat den Standardwert NULL.  
+`[ @pager_address = ] 'pager_address'` Die Pageradresse des Operators. Diese Zeichenfolge wird direkt an das E-Mail-System übergeben. *Pager_address* ist **narchar(100)**, hat den Standardwert NULL.  
   
- [  **@weekday_pager_start_time=** ] *Weekday_pager_start_time*  
- Die Angabe der Uhrzeit, nach der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent von Montag bis Freitag Pagerbenachrichtigungen an den angegebenen Operator sendet. *Weekday_pager_start_time*ist **Int**, hat den Standardwert **090000**, womit 9:00 Uhr im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
+`[ @weekday_pager_start_time = ] weekday_pager_start_time` Die Uhrzeit, nach der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent sendet Pagerbenachrichtigungen an den angegebenen Operator an Wochentagen, von Montag bis Freitag. *Weekday_pager_start_time*ist **Int**, hat den Standardwert **090000**, womit 9:00 Uhr im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
   
- [  **@weekday_pager_end_time=** ] *Weekday_pager_end_time*  
- Die Uhrzeit, nach der **SQLServerAgent** Dienst nicht mehr sendet Pagerbenachrichtigungen an den angegebenen Operator an Wochentagen, von Montag bis Freitag. *Weekday_pager_end_time*ist **Int**, hat den Standardwert 180000, womit 18:00 Uhr im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
+`[ @weekday_pager_end_time = ] weekday_pager_end_time` Die Uhrzeit, nach der **SQLServerAgent** Dienst nicht mehr sendet Pagerbenachrichtigungen an den angegebenen Operator an Wochentagen, von Montag bis Freitag. *Weekday_pager_end_time*ist **Int**, hat den Standardwert 180000, womit 18:00 Uhr im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
   
- [  **@saturday_pager_start_time =**] *Saturday_pager_start_time*  
- Die Uhrzeit, nach der **SQLServerAgent** -Dienst samstags Pagerbenachrichtigungen an den angegebenen Operator sendet. *Saturday_pager_start_time* ist **Int**, hat den Standardwert 090000, womit 9:00 Uhr im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
+`[ @saturday_pager_start_time = ] saturday_pager_start_time` Die Uhrzeit, nach der **SQLServerAgent** -Dienst samstags Pagerbenachrichtigungen an den angegebenen Operator sendet. *Saturday_pager_start_time* ist **Int**, hat den Standardwert 090000, womit 9:00 Uhr im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
   
- [  **@saturday_pager_end_time=** ] *Saturday_pager_end_time*  
- Die Uhrzeit, nach der **SQLServerAgent** Dienst sendet nicht mehr Pagerbenachrichtigungen an den angegebenen Operator an Samstagen am stärksten. *Saturday_pager_end_time*ist **Int**, hat den Standardwert **180000**, womit 18:00 Uhr im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
+`[ @saturday_pager_end_time = ] saturday_pager_end_time` Die Uhrzeit, nach der **SQLServerAgent** Dienst sendet nicht mehr Pagerbenachrichtigungen an den angegebenen Operator an Samstagen am stärksten. *Saturday_pager_end_time*ist **Int**, hat den Standardwert **180000**, womit 18:00 Uhr im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
   
- [  **@sunday_pager_start_time=** ] *Sunday_pager_start_time*  
- Die Uhrzeit, nach der **SQLServerAgent** -Dienst an Sonntagen Pagerbenachrichtigungen an den angegebenen Operator sendet. *Sunday_pager_start_time*ist **Int**, hat den Standardwert **090000**, womit 9:00 Uhr im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
+`[ @sunday_pager_start_time = ] sunday_pager_start_time` Die Uhrzeit, nach der **SQLServerAgent** -Dienst an Sonntagen Pagerbenachrichtigungen an den angegebenen Operator sendet. *Sunday_pager_start_time*ist **Int**, hat den Standardwert **090000**, womit 9:00 Uhr im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
   
- [  **@sunday_pager_end_time =**] *Sunday_pager_end_time*  
- Die Uhrzeit, nach der **SQLServerAgent** Dienst sendet nicht mehr Pagerbenachrichtigungen an den angegebenen Operator an Sonntagen. *Sunday_pager_end_time*ist **Int**, hat den Standardwert **180000**, womit 18:00 Uhr im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
+`[ @sunday_pager_end_time = ] sunday_pager_end_time` Die Uhrzeit, nach der **SQLServerAgent** Dienst sendet nicht mehr Pagerbenachrichtigungen an den angegebenen Operator an Sonntagen. *Sunday_pager_end_time*ist **Int**, hat den Standardwert **180000**, womit 18:00 Uhr im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
   
- [  **@pager_days=** ] *Pager_days*  
- Eine Zahl, die die Tage angibt, an denen der Operator für Pagerbenachrichtigungen verfügbar ist (entsprechend der angegebenen Anfangs-/Endzeit). *Pager_days*ist **Tinyint**, hat den Standardwert **0** , der angibt, des Operators kann nie eine Seite angezeigt. Gültige Werte reichen von **0** über **127**. *Pager_days*wird durch Addition der einzelnen Werte für die erforderlichen Tage berechnet. Beispielsweise wird von Montag bis Freitag **2**+**4**+**8**+**16** + **32** = **62**. In der folgenden Tabelle werden die Werte für die einzelnen Wochentage aufgelistet.  
+`[ @pager_days = ] pager_days` Ist eine Zahl, die die Tage, an denen der Operator für Pagerbenachrichtigungen (je nach den angegebenen Start-und Endzeit) verfügbar ist. *Pager_days*ist **Tinyint**, hat den Standardwert **0** , der angibt, des Operators kann nie eine Seite angezeigt. Gültige Werte reichen von **0** über **127**. *Pager_days*wird durch Addition der einzelnen Werte für die erforderlichen Tage berechnet. Beispielsweise wird von Montag bis Freitag **2**+**4**+**8**+**16** + **32** = **62**. In der folgenden Tabelle werden die Werte für die einzelnen Wochentage aufgelistet.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**1**|Sonntag|  
 |**2**|Montag|  
@@ -103,11 +92,9 @@ sp_add_operator [ @name = ] 'name'
 |**32**|Freitag|  
 |**64**|Samstag|  
   
- [ **@netsend_address=** ] **'***netsend_address***'**  
- Die Netzwerkadresse des Operators, an die die Netzwerknachricht gesendet wird. *Netsend_address*ist **nvarchar(100)**, hat den Standardwert NULL.  
+`[ @netsend_address = ] 'netsend_address'` Die Netzwerkadresse des Operators, an den die Netzwerknachricht gesendet wird. *Netsend_address*ist **nvarchar(100)**, hat den Standardwert NULL.  
   
- [ **@category_name=** ] **'***category***'**  
- Der Name der Kategorie für diesen Operator. *Kategorie* ist **Sysname**, hat den Standardwert NULL.  
+`[ @category_name = ] 'category'` Der Name der Kategorie für diesen Operator. *Kategorie* ist **Sysname**, hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

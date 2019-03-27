@@ -16,12 +16,12 @@ ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad13c4904270d3162dac8791b7724533e8da6656
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: cd59aae098a91a47e1137bd55cd97cf1066b02bf
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211749"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493372"
 ---
 # <a name="spaddsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,11 +61,9 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@subscriber=**] **"***Abonnenten***"**  
- Der Name des Servers, der den Veröffentlichungen auf diesem Server als gültiger Abonnent hinzugefügt werden soll. *Abonnenten* ist **Sysname**, hat keinen Standardwert.  
+`[ @subscriber = ] 'subscriber'` Ist der Name des Servers, der den Veröffentlichungen auf diesem Server als gültiger Abonnent hinzugefügt werden soll. *Abonnenten* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@type=**] *Typ*  
- Der Typ des Abonnenten. *Typ* ist **Tinyint**, und kann einen der folgenden Werte sein.  
+`[ @type = ] type` Ist der Typ des Abonnenten. *Typ* ist **Tinyint**, und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -74,14 +72,12 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet-Datenbank|  
 |**3**|OLE DB-Anbieter|  
   
- [  **@login=**] **"***Anmeldung***"**  
- Ist die Anmelde-ID für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
+`[ @login = ] 'login'` Ist die Anmelde-ID für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, beim Ausführen [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
   
- [  **@password=**] **"***Kennwort***"**  
- Das Kennwort für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. *Kennwort* ist **nvarchar(524)**, hat den Standardwert NULL.  
+`[ @password = ] 'password'` Das Kennwort für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. *Kennwort* ist **nvarchar(524)**, hat den Standardwert NULL.  
   
 > [!IMPORTANT]  
 >  Verwenden Sie kein leeres Kennwort. Verwenden Sie ein sicheres Kennwort.  
@@ -89,26 +85,22 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, beim Ausführen [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
   
- [  **@commit_batch_size=**] *Commit_batch_size*  
- Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten.  
+`[ @commit_batch_size = ] commit_batch_size` Dieser Parameter ist veraltet und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten.  
   
 > [!NOTE]  
 >  Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
   
- [  **@status_batch_size=**] *Status_batch_size*  
- Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten.  
+`[ @status_batch_size = ] status_batch_size` Dieser Parameter ist veraltet und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten.  
   
 > [!NOTE]  
 >  Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
   
- [  **@flush_frequency=**] *Flush_frequency*  
- Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten.  
+`[ @flush_frequency = ] flush_frequency` Dieser Parameter ist veraltet und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten.  
   
 > [!NOTE]  
 >  Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
   
- [  **@frequency_type=**] *Frequency_type*  
- Die Häufigkeit für die Zeitplanung des Replikations-Agents. *Frequency_type* ist **Int**, und kann einen der folgenden Werte sein.  
+`[ @frequency_type = ] frequency_type` Kann die Häufigkeit für die Planung des Replikations-Agents. *Frequency_type* ist **Int**, und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -130,8 +122,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, beim Ausführen [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
   
- [  **@frequency_relative_interval=**] *Frequency_relative_interval*  
- Das Datum des Replikations-Agents. Dieser Parameter wird verwendet, wenn *Frequency_type* nastaven NA hodnotu **32** (mit relativem Monatsintervall). *Frequency_relative_interval* ist **Int**, und kann einen der folgenden Werte sein.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Ist das Datum des Replikations-Agents. Dieser Parameter wird verwendet, wenn *Frequency_type* nastaven NA hodnotu **32** (mit relativem Monatsintervall). *Frequency_relative_interval* ist **Int**, und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -144,14 +135,12 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, beim Ausführen [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
   
- [  **@frequency_recurrence_factor=**] *Frequency_recurrence_factor*  
- Wird von verwendete Wiederholungsfaktor *Frequency_type*. *Frequency_recurrence_factor* ist **Int**, hat den Standardwert **0**.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Wird von verwendete Wiederholungsfaktor *Frequency_type*. *Frequency_recurrence_factor* ist **Int**, hat den Standardwert **0**.  
   
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, beim Ausführen [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
   
- [  **@frequency_subday=**] *Frequency_subday*  
- Die Häufigkeit für die erneute geplante Ausführung während des definierten Zeitraums. *Frequency_subday* ist **Int**, und kann einen der folgenden Werte sein.  
+`[ @frequency_subday = ] frequency_subday` Ist die Häufigkeit für die erneute geplante Ausführung während des definierten Zeitraums. *Frequency_subday* ist **Int**, und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -163,50 +152,41 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, beim Ausführen [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
   
- [  **@frequency_subday_interval=**] *Frequency_subday_interval*  
- Das Intervall für *Frequency_subday*. *Frequency_subday_interval* ist **Int**, hat den Standardwert **5**.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Das Intervall für *Frequency_subday*. *Frequency_subday_interval* ist **Int**, hat den Standardwert **5**.  
   
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, beim Ausführen [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
   
- [  **@active_start_time_of_day=**] *Active_start_time_of_day*  
- Die Tageszeit, zu der der Replikations-Agent zum ersten Mal geplant ist. Dabei wird das Format HHMMSS verwendet. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert **0**.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Die Tageszeit aus, wenn der erste der Replikations-Agent ist, erfolgt Format: HHMMSS. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert **0**.  
   
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, beim Ausführen [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
   
- [  **@active_end_time_of_day=**] *Active_end_time_of_day*  
- Die Tageszeit, ab der der Replikations-Agent nicht mehr geplant ist. Dabei wird das Format HHMMSS verwendet. *das Format HHMMSS verwendet*ist **Int**, hat den Standardwert 235959, womit 23:59:59 Uhr auf dem 24-Stunden-Format an.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Die Tageszeit, ab der Replikations-Agent nicht mehr, wird geplant ist HHMMSS verwendet. *das Format HHMMSS verwendet*ist **Int**, hat den Standardwert 235959, womit 23:59:59 Uhr auf dem 24-Stunden-Format an.  
   
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, beim Ausführen [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
   
- [  **@active_start_date=**] *Active_start_date*  
- Das Datum, an dem der Replikations-Agent zum ersten Mal geplant ist. Dabei wird das Format JJJJMMTT verwendet. *Active_start_date* ist **Int**, hat den Standardwert 0.  
+`[ @active_start_date = ] active_start_date` Das Datum, an der Replikations-Agent zuerst ist geplant Format: YYYYMMDD. *Active_start_date* ist **Int**, hat den Standardwert 0.  
   
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, beim Ausführen [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
   
- [  **@active_end_date=**] *Active_end_date*  
- Das Datum, ab dem der Replikations-Agent nicht mehr geplant ist. Dabei wird das Format JJJJMMTT verwendet. *Active_end_date* ist **Int**, hat den Standardwert 99991231, womit der 31. Dezember 9999.  
+`[ @active_end_date = ] active_end_date` Ist das Datum, ab der Replikations-Agent nicht mehr, geplant ist JJJJMMTT. *Active_end_date* ist **Int**, hat den Standardwert 99991231, womit der 31. Dezember 9999.  
   
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, beim Ausführen [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
   
- [  **@description=**] **"***Beschreibung***"**  
- Eine Textbeschreibung des Abonnenten. *Beschreibung* ist **nvarchar(255)**, hat den Standardwert NULL.  
+`[ @description = ] 'description'` Ist eine textbeschreibung des Abonnenten. *Beschreibung* ist **nvarchar(255)**, hat den Standardwert NULL.  
   
- [  **@security_mode=**] *Security_mode*  
- Der implementierte Sicherheitsmodus. *Security_mode* ist **Int**, hat den Standardwert 1. **0** gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. **1** gibt die Windows-Authentifizierung.  
+`[ @security_mode = ] security_mode` Ist der implementierte Sicherheitsmodus. *Security_mode* ist **Int**, hat den Standardwert 1. **0** gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. **1** gibt die Windows-Authentifizierung.  
   
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, beim Ausführen [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
   
- [  **@encrypted_password=**] *Encrypted_password*  
- Dieser Parameter ist veraltet und wird zur Abwärtskompatibilität bereitgestellt, nur das Festlegen von *Encrypted_password* auf einen beliebigen Wert aber **0** führt zu einem Fehler.  
+`[ @encrypted_password = ] encrypted_password` Dieser Parameter ist veraltet und wird zur Abwärtskompatibilität bereitgestellt, nur das Festlegen von *Encrypted_password* auf einen beliebigen Wert aber **0** führt zu einem Fehler.  
   
- [ **@publisher**=] **"***Verleger***"**  
- Gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  *Publisher* sollte nicht verwendet werden, wenn eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger.  
@@ -226,9 +206,9 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 ## <a name="see-also"></a>Siehe auch  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Sp_changesubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
- [Sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
- [Sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)  
+ [Erstellen eines Pullabonnements](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [sp_changesubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
+ [sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
+ [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)  
   
   

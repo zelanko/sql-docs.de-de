@@ -18,12 +18,12 @@ ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 73859064fc8a56a53fd5ea6cb1295d81ed0e4150
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46b1548f1eb587aa62c0d0427661d97d97bf3cc7
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766528"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492938"
 ---
 # <a name="spadduser-transact-sql"></a>sp_adduser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47766528"
   Fügt der aktuellen Datenbank einen neuen Benutzer hinzu.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwendung [CREATE USER](../../t-sql/statements/create-user-transact-sql.md) stattdessen.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen [CREATE USER](../../t-sql/statements/create-user-transact-sql.md) .  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,14 +45,11 @@ sp_adduser [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@loginame =** ] **'***login***'**  
- Der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung oder Windows-Anmeldung. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. *Anmeldung* muss einer vorhandenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung oder Windows-Anmeldung.  
+`[ @loginame = ] 'login'` Der Name des der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung oder Windows-Anmeldung. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. *Anmeldung* muss einer vorhandenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung oder Windows-Anmeldung.  
   
- [  **@name_in_db =** ] **"***Benutzer***"**  
- Der Name für den neuen Datenbankbenutzer. *Benutzer* ist eine **Sysname**, hat den Standardwert NULL. Wenn *Benutzer* nicht angegeben ist, der Namen des neuen Datenbankbenutzers standardmäßig die *Anmeldung* Name. Angeben von *Benutzer* benennt dem neuen Benutzer mit einem Namen in der Datenbank, die den Anmeldenamen auf Serverebene unterscheidet.  
+`[ @name_in_db = ] 'user'` Ist der Name für den neuen Datenbankbenutzer. *Benutzer* ist eine **Sysname**, hat den Standardwert NULL. Wenn *Benutzer* nicht angegeben ist, der Namen des neuen Datenbankbenutzers standardmäßig die *Anmeldung* Name. Angeben von *Benutzer* benennt dem neuen Benutzer mit einem Namen in der Datenbank, die den Anmeldenamen auf Serverebene unterscheidet.  
   
- [  **@grpname =** ] **"***Rolle***"**  
- Die Datenbankrolle, deren Mitglied der neue Benutzer wird. *role* ist vom Datentyp **sysname**und hat den Standardwert NULL. *Rolle* muss eine gültige Datenbankrolle in der aktuellen Datenbank sein.  
+`[ @grpname = ] 'role'` Ist die Datenbankrolle, die Mitglied der neue Benutzer wird. *role* ist vom Datentyp **sysname**und hat den Standardwert NULL. *Rolle* muss eine gültige Datenbankrolle in der aktuellen Datenbank sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

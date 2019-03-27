@@ -5,17 +5,17 @@ description: Dieser Artikel beschreibt den Controller von einem SQL Server-2019 
 author: mihaelablendea
 ms.author: mihaelab
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8f9a8a82315f98f6013f70a7bc7aa38443849edc
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 25afe48d2191bf77301331ed30850bf0af0baff0
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478052"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58491793"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-2019-big-data-cluster"></a>Was ist der Controller auf einem SQL Server-2019 big Data-Cluster?
 
@@ -29,8 +29,8 @@ Der Controller-Dienst bietet die folgenden Kernfunktionen:
 - Machen Sie Überwachungstools, um zu beobachten, die Zustand des Clusters
 - Bereitstellen von Tools zur Problembehandlung, um zu erkennen und Reparieren unerwartete Probleme
 - Verwalten von Clustersicherheit: sichere Cluster-Endpunkte stellen Sie sicher, Benutzern und Rollen verwalten, konfigurieren Sie Anmeldeinformationen für die Kommunikation innerhalb des Clusters
-- Verwalten Sie den Workflow des Upgrades, damit sie problemlos implementiert werden (nicht verfügbar in CTP 2.3)
-- Verwalten von hochverfügbarkeit und Notfallwiederherstellung für zustandsbehaftete Dienste im Cluster (nicht verfügbar in CTP 2.3)
+- Verwalten Sie den Workflow des Upgrades, damit sie problemlos implementiert werden (in CTP 2.4 nicht verfügbar)
+- Verwalten von hochverfügbarkeit und Notfallwiederherstellung für zustandsbehaftete Dienste im Cluster (in CTP 2.4 nicht verfügbar)
 
 ## <a name="deploying-the-controller-service"></a>Bereitstellen des Controller-Diensts
 

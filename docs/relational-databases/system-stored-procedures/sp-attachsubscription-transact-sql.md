@@ -16,12 +16,12 @@ ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9cd00d75a8afd2fae06868fd4b44320865f239f2
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 47e1eec1aaa8162565f481b2d82982781e1a3c8c
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126370"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493593"
 ---
 # <a name="spattachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,65 +54,51 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@dbname=** ] **'***dbname***'**  
- Die Zeichenfolge, die die Ziel-Abonnementdatenbank namentlich angibt. *Dbname* ist **Sysname**, hat keinen Standardwert.  
+`[ @dbname = ] 'dbname'` Ist die Zeichenfolge, die die Ziel-Abonnementdatenbank namentlich angibt. *Dbname* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@filename=** ] **"***Filename***"**  
- Der Name und physische Speicherort der primären MDF-Datei (**master** Datendatei). *FileName* ist **nvarchar(260)**, hat keinen Standardwert.  
+`[ @filename = ] 'filename'` Der Name und physische Speicherort der primären MDF-Datei (**master** Datendatei). *FileName* ist **nvarchar(260)**, hat keinen Standardwert.  
   
- [  **@subscriber_security_mode=** ] **"***Subscriber_security_mode***"**  
- Der Sicherheitsmodus des Abonnenten, der beim Herstellen der Verbindung mit einem Abonnenten verwendet werden soll. *Subscriber_security_mode* ist **Int**, hat den Standardwert NULL.  
+`[ @subscriber_security_mode = ] 'subscriber_security_mode'` Ist der Sicherheitsmodus des Abonnenten beim Herstellen einer Verbindung an einen Abonnenten, bei der Synchronisierung verwendet. *Subscriber_security_mode* ist **Int**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Die Windows-Authentifizierung muss verwendet werden. Wenn *Subscriber_security_mode* nicht **1** (Windows-Authentifizierung), wird ein Fehler zurückgegeben.  
   
- [  **@subscriber_login=** ] **"***Subscriber_login***"**  
- Der Anmeldename des Abonnenten, der beim Synchronisieren zum Herstellen der Verbindung mit einem Abonnenten verwendet wird. *Subscriber_login* ist **Sysname**, hat den Standardwert NULL.  
+`[ @subscriber_login = ] 'subscriber_login'` Ist der Anmeldename des Abonnenten beim Herstellen einer Verbindung an einen Abonnenten, bei der Synchronisierung verwendet. *Subscriber_login* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird nur aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Wenn *Subscriber_security_mode* nicht **1** und *Subscriber_login* wird angegeben, wird ein Fehler zurückgegeben.  
   
- [  **@subscriber_password=** ] **"***Subscriber_password***"**  
- Das Kennwort des Abonnenten. *Subscriber_password* ist **Sysname**, hat den Standardwert NULL.  
+`[ @subscriber_password = ] 'subscriber_password'` Ist das Kennwort des Abonnenten. *Subscriber_password* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird nur aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Wenn *Subscriber_security_mode* nicht **1** und *Subscriber_password* wird angegeben, wird ein Fehler zurückgegeben.  
   
- [  **@distributor_security_mode=** ] *Distributor_security_mode*  
- Der Sicherheitsmodus, der beim Synchronisieren zum Herstellen der Verbindung mit einem Verteiler verwendet wird. *Distributor_security_mode* ist **Int**, hat den Standardwert **0**. **0** gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. **1** gibt die Windows-Authentifizierung. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @distributor_security_mode = ] distributor_security_mode` Ist der Sicherheitsmodus, verwenden Sie beim Herstellen einer Verbindung mit einem Verteiler, bei der Synchronisierung. *Distributor_security_mode* ist **Int**, hat den Standardwert **0**. **0** gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. **1** gibt die Windows-Authentifizierung. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [  **@distributor_login=** ] **"***Distributor_login***"**  
- Der Verteileranmeldename, der beim Synchronisieren zum Herstellen der Verbindung mit einem Verteiler verwendet wird. *Distributor_login* ist erforderlich, wenn *Distributor_security_mode* nastaven NA hodnotu **0**. *Distributor_login* ist **Sysname**, hat den Standardwert NULL.  
+`[ @distributor_login = ] 'distributor_login'` Ist der Anmeldename des Verteilers beim Verbinden mit einem Verteiler, bei der Synchronisierung verwendet. *Distributor_login* ist erforderlich, wenn *Distributor_security_mode* nastaven NA hodnotu **0**. *Distributor_login* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@distributor_password=** ] **"***Distributor_password***"**  
- Das Verteilerkennwort. *Distributor_password* ist erforderlich, wenn *Distributor_security_mode* nastaven NA hodnotu **0**. *Distributor_password* ist **Sysname**, hat den Standardwert NULL. Der Wert des *Distributor_password* muss weniger als 120 Unicode-Zeichen sein.  
+`[ @distributor_password = ] 'distributor_password'` Ist das Verteilerkennwort. *Distributor_password* ist erforderlich, wenn *Distributor_security_mode* nastaven NA hodnotu **0**. *Distributor_password* ist **Sysname**, hat den Standardwert NULL. Der Wert des *Distributor_password* muss weniger als 120 Unicode-Zeichen sein.  
   
 > [!IMPORTANT]  
 >  Verwenden Sie kein leeres Kennwort. Verwenden Sie ein sicheres Kennwort. Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden müssen, muss die Datei an einem sicheren Ort gespeichert werden, um unberechtigten Zugriff zu vermeiden.  
   
- [  **@publisher_security_mode=** ] *Publisher_security_mode*  
- Der Sicherheitsmodus, der beim Synchronisieren zum Herstellen der Verbindung mit einem Verleger verwendet wird. *Publisher_security_mode* ist **Int**, hat den Standardwert **1**. Wenn **0**, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. Wenn **1**, gibt die Windows-Authentifizierung. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode` Ist der Sicherheitsmodus, verwenden Sie beim Herstellen einer Verbindung mit einem Verleger, bei der Synchronisierung. *Publisher_security_mode* ist **Int**, hat den Standardwert **1**. Wenn **0**, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. Wenn **1**, gibt die Windows-Authentifizierung. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [  **@publisher_login=** ] **"***Publisher_login***"**  
- Der Anmeldename, der beim Synchronisieren zum Herstellen der Verbindung mit einem Verleger verwendet wird. *Publisher_login* ist **Sysname**, hat den Standardwert NULL.  
+`[ @publisher_login = ] 'publisher_login'` Ist die Anmeldung beim Herstellen einer Verbindung mit einem Verleger, bei der Synchronisierung verwendet. *Publisher_login* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@publisher_password=** ] **"***Publisher_password***"**  
- Das Kennwort, das beim Herstellen der Verbindung mit dem Verleger verwendet wird. *Publisher_password* ist **Sysname**, hat den Standardwert NULL. Der Wert des *Publisher_password* muss weniger als 120 Unicode-Zeichen sein.  
+`[ @publisher_password = ] 'publisher_password'` Das Kennwort wird verwendet werden, wenn eine Verbindung mit dem Verleger herstellen. *Publisher_password* ist **Sysname**, hat den Standardwert NULL. Der Wert des *Publisher_password* muss weniger als 120 Unicode-Zeichen sein.  
   
 > [!IMPORTANT]  
 >  Verwenden Sie kein leeres Kennwort. Verwenden Sie ein sicheres Kennwort. Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden müssen, muss die Datei an einem sicheren Ort gespeichert werden, um unberechtigten Zugriff zu vermeiden.  
   
- [  **@job_login=** ] **"***Job_login***"**  
- Der Anmeldename für das Windows-Konto, unter dem der Agent ausgeführt wird. *Job_login* ist **nvarchar(257)**, hat keinen Standardwert. Das Windows-Konto wird stets für Agent-Verbindungen mit dem Verteiler verwendet.  
+`[ @job_login = ] 'job_login'` Ist der Anmeldename für das Windows-Konto, unter dem der Agent ausgeführt wird. *Job_login* ist **nvarchar(257)**, hat keinen Standardwert. Das Windows-Konto wird stets für Agent-Verbindungen mit dem Verteiler verwendet.  
   
- [  **@job_password=** ] **"***Job_password***"**  
- Das Kennwort für das Windows-Konto, unter dem der Agent ausgeführt wird. *Job_password* ist **Sysname**, hat keinen Standardwert. Der Wert des *Job_password* muss weniger als 120 Unicode-Zeichen sein.  
+`[ @job_password = ] 'job_password'` Ist das Kennwort für das Windows-Konto, unter dem der Agent ausgeführt wird. *Job_password* ist **Sysname**, hat keinen Standardwert. Der Wert des *Job_password* muss weniger als 120 Unicode-Zeichen sein.  
   
 > [!IMPORTANT]  
 >  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden müssen, muss die Datei an einem sicheren Ort gespeichert werden, um unberechtigten Zugriff zu vermeiden.  
   
- [  **@db_master_key_password=** ] **"***Db_master_key_password***"**  
- Das Kennwort eines benutzerdefinierten Datenbank-Hauptschlüssels. *Db_master_key_password* ist **nvarchar(524)**, hat den Standardwert NULL. Wenn *Db_master_key_password* nicht angegeben ist, wird eine vorhandene Datenbank-Hauptschlüssel gelöscht und neu erstellt werden.  
+`[ @db_master_key_password = ] 'db_master_key_password'` Ist das Kennwort von einer benutzerdefinierten Datenbank-Hauptschlüssel. *Db_master_key_password* ist **nvarchar(524)**, hat den Standardwert NULL. Wenn *Db_master_key_password* nicht angegeben ist, wird eine vorhandene Datenbank-Hauptschlüssel gelöscht und neu erstellt werden.  
   
 > [!IMPORTANT]  
 >  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden müssen, muss die Datei an einem sicheren Ort gespeichert werden, um unberechtigten Zugriff zu vermeiden.  

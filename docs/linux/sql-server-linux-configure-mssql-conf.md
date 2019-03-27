@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: bcebae572cb6704051712e44fd0dcf71a2eff5ea
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 4db08a718f834d03ddef103b2a4dc16a2c3733b8
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018076"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494392"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Konfigurieren von SQL Server unter Linux mit dem Mssql-Conf-tool
 
@@ -511,8 +511,8 @@ Es gibt verschiedene andere Einstellungen für die Mssql-Conf, die Sie verwenden
 
 | mssql-conf setting | Description |
 |---|---|
-| distributedtransaction.allowonlysecurerpccalls | Konfigurieren Sie sicherer nur Rpc-Aufrufe für verteilte Transaktionen |
-| distributedtransaction.fallbacktounsecurerpcifnecessary | Konfigurieren Sie für verteilte Sicherheit nur Rpc-Aufrufe |Transaktionen
+| distributedtransaction.allowonlysecurerpccalls | Konfigurieren von sicheren nur RPC-Aufrufe für verteilte Transaktionen |
+| distributedtransaction.fallbacktounsecurerpcifnecessary | Konfigurieren Sie für verteilte Sicherheit nur RPC-Aufrufe |Transaktionen
 | distributedtransaction.maxlogsize | DTC Transaktionsprotokollgröße der Protokolldatei in MB. Der Standardwert ist 64MB |
 | distributedtransaction.memorybuffersize | Zirkulärer Puffer-Größe, die in der ablaufverfolgungen gespeichert sind. Diese Größe ist in MB und der Standardwert ist 10MB |
 | distributedtransaction.servertcpport | MSDTC RPC-Server-port |
@@ -664,7 +664,7 @@ Wieder entfernen eine Einstellung vorgenommen, mit `mssql-conf set`, rufen Sie *
    sudo /opt/mssql/bin/mssql-conf unset network.tcpport
    ```
 
-1. Starten Sie SQL Server-Dienst neu.
+1. Starten Sie den SQL Server-Dienst neu.
 
    ```bash
    sudo systemctl restart mssql-server

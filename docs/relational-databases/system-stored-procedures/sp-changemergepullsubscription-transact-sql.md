@@ -16,12 +16,12 @@ ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9b7c8e0bd544815b7a26afaccd308d6898e3bc95
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: cf650c095e27fe3a270ad9610e959bd6f5f1a6a3
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136130"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493112"
 ---
 # <a name="spchangemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,26 +42,21 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication=**] **"**_Veröffentlichung_**"**  
- Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert %.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert %.  
   
- [  **@publisher=**] **"**_Verleger_**"**  
- Der Name des Verlegers. *Publisher*ist **Sysname**, hat den Standardwert %.  
+`[ @publisher = ] 'publisher'` Ist der Name des Verlegers. *Publisher*ist **Sysname**, hat den Standardwert %.  
   
- [  **@publisher_db=**] **"**_Publisher_db_**"**  
- Der Name der Verlegerdatenbank. *Publisher_db*ist **Sysname**, hat den Standardwert %.  
+`[ @publisher_db = ] 'publisher_db'` Ist der Name der Verlegerdatenbank. *Publisher_db*ist **Sysname**, hat den Standardwert %.  
   
- [  **@property=**] **"**_Eigenschaft_**"**  
- Der Name der zu ändernden Eigenschaft. *Eigenschaft* ist **Sysname**, und kann einen der Werte in der Tabelle.  
+`[ @property = ] 'property'` Ist der Name des zu ändernden Eigenschaft. *Eigenschaft* ist **Sysname**, und kann einen der Werte in der Tabelle.  
   
- [  **@value=**] **"**_Wert_**"**  
- Ist der neue Wert für die angegebene Eigenschaft. *Wert*ist **nvarchar(255)**, und kann einen der Werte in der Tabelle.  
+`[ @value = ] 'value'` Ist der neue Wert für die angegebene Eigenschaft. *Wert*ist **nvarchar(255)**, und kann einen der Werte in der Tabelle.  
   
 |Eigenschaft|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Speicherort des momentaufnahmeordners ist der Speicherort nur oder darüber hinaus am Standardspeicherort.|  
 |**description**||Die Beschreibung dieses Mergepullabonnements.|  
-|**Verteiler**||Name des Verteilers.|  
+|**distributor**||Name des Verteilers.|  
 |**distributor_login**||Die Anmelde-ID, die auf dem Verteiler für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwendet wird.|  
 |**distributor_password**||Kennwort (verschlüsselt) verwendet, auf dem Verteiler für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung.|  
 |**distributor_security_mode**|**1**|Verwendet die Windows-Authentifizierung beim Herstellen der Verbindung mit dem Verteiler.|  
@@ -71,8 +66,8 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**ftp_login**||Nur aus Gründen der Abwärtskompatibilität verfügbar. Der Benutzername wird für die Verbindung mit dem FTP-Dienst verwendet werden.|  
 |**ftp_password**||Nur aus Gründen der Abwärtskompatibilität verfügbar. Das Benutzerkennwort, mit dem eine Verbindung zum FTP-Dienst hergestellt wird.|  
 |**ftp_port**||Nur aus Gründen der Abwärtskompatibilität verfügbar. Die Anschlussnummer des FTP-Diensts für den Verteiler.|  
-|**Hostname**||Gibt einen Wert für HOST_NAME() an, wenn diese Funktion in der WHERE-Klausel eines Joinfilters oder einer logischen Datensatzbeziehung verwendet wird.|  
-|**sich**||Der Anmeldename, der vom Merge-Agent zum Herstellen einer Verbindung mit dem Webserver verwendet wird, der die Websynchronisierung mithilfe der Standardauthentifizierung hostet.|  
+|**hostname**||Gibt einen Wert für HOST_NAME() an, wenn diese Funktion in der WHERE-Klausel eines Joinfilters oder einer logischen Datensatzbeziehung verwendet wird.|  
+|**internet_login**||Der Anmeldename, der vom Merge-Agent zum Herstellen einer Verbindung mit dem Webserver verwendet wird, der die Websynchronisierung mithilfe der Standardauthentifizierung hostet.|  
 |**internet_password**||Das Kennwort für den Anmeldenamen, der vom Merge-Agent zum Herstellen einer Verbindung mit dem Webserver verwendet wird, der die Websynchronisierung mithilfe der Standardauthentifizierung hostet.|  
 |**internet_security_mode**|**1**|Verwendet die Windows-Authentifizierung, wenn eine Verbindung mit dem Webserver hergestellt wird, der die Websynchronisierung hostet.|  
 ||**0**|Verwendet die Standardauthentifizierung, wenn eine Verbindung mit dem Webserver hergestellt wird, der die Websynchronisierung hostet.|  
@@ -86,7 +81,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**publisher_security_mode**|**0**|Verwendung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung für die Verbindung mit dem Verleger.|  
 ||**1**|Verwendung der Windows-Authentifizierung für die Verbindung mit dem Verleger.|  
 ||**2**|Synchronisierungstrigger verwenden einen statischen **Sysservers** Eintrag zu den Remoteprozeduraufruf (RPC), und der Verleger muss definiert werden, der **Sysservers** -Tabelle als Remoteserver oder Verbindungsserver.|  
-|**sync_type**|**Automatisch**|Das Schema und die Ausgangsdaten für veröffentlichte Tabellen werden zuerst an den Abonnenten übertragen.|  
+|**sync_type**|**automatic**|Das Schema und die Ausgangsdaten für veröffentlichte Tabellen werden zuerst an den Abonnenten übertragen.|  
 ||**Keine**|Der Abonnent verfügt bereits über das Schema und die Ausgangsdaten für veröffentlichte Tabellen; Systemtabellen und Daten werden immer übertragen.|  
 |**use_ftp**|**true**|FTP wird anstelle des normalen Protokolls zum Abrufen von Momentaufnahmen verwendet.|  
 ||**false**|Das normale Protokoll wird zum Abrufen von Momentaufnahmen verwendet.|  
@@ -112,9 +107,9 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
   
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen und Ändern der Eigenschaften von Pullabonnements](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
- [Sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [Sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
- [Sp_helpmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
+ [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
+ [sp_helpmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

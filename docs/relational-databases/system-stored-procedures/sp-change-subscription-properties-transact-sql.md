@@ -16,12 +16,12 @@ ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c87a0968f2541507c59384bfad82780377301dc7
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 7f783b86757cbc54fe47671f75082228d8ddc1e0
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128220"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493062"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,17 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publisher=**] **"**_Verleger_**"**  
- Der Name des Verlegers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher = ] 'publisher'` Ist der Name des Verlegers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@publisher_db=**] **"**_Publisher_db_**"**  
- Der Name der Verlegerdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher_db = ] 'publisher_db'` Ist der Name der Verlegerdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@publication=**] **"**_Veröffentlichung_**"**  
- Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@property=**] **"**_Eigenschaft_**"**  
- Die Eigenschaft, die geändert werden soll. *Eigenschaft* ist **Sysname**.  
+`[ @property = ] 'property'` Ist die Eigenschaft geändert werden. *Eigenschaft* ist **Sysname**.  
   
- [  **@value=**] **"**_Wert_**"**  
- Ist der neue Wert der Eigenschaft. *Wert* ist **nvarchar(1000)**, hat keinen Standardwert.  
+`[ @value = ] 'value'` Ist der neue Wert der Eigenschaft. *Wert* ist **nvarchar(1000)**, hat keinen Standardwert.  
   
- [  **@publication_type =** ] *Publication_type*  
- Gibt den Replikationstyp der Veröffentlichung an. *Publication_type* ist **Int**, und kann einen der folgenden Werte sein.  
+`[ @publication_type = ] publication_type` Gibt den Replikationstyp der Veröffentlichung an. *Publication_type* ist **Int**, und kann einen der folgenden Werte sein.  
   
 |Wert|Veröffentlichungstyp|  
 |-----------|----------------------|  
@@ -87,8 +81,8 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**ftp_login**||Nur aus Gründen der Abwärtskompatibilität beibehalten|  
 |**ftp_password**||Nur aus Gründen der Abwärtskompatibilität beibehalten|  
 |**ftp_port**||Nur aus Gründen der Abwärtskompatibilität beibehalten|  
-|**Hostname**||Hostname, der beim Herstellen der Verbindung mit dem Verleger verwendet wird.|  
-|**sich**||Der Anmeldename, der vom Merge-Agent zum Herstellen einer Verbindung mit dem Webserver verwendet wird, der die Websynchronisierung mithilfe der Standardauthentifizierung hostet.|  
+|**hostname**||Hostname, der beim Herstellen der Verbindung mit dem Verleger verwendet wird.|  
+|**internet_login**||Der Anmeldename, der vom Merge-Agent zum Herstellen einer Verbindung mit dem Webserver verwendet wird, der die Websynchronisierung mithilfe der Standardauthentifizierung hostet.|  
 |**internet_password**||Das vom Merge-Agent verwendete Kennwort für die Herstellung einer Verbindung mit dem Webserver, der die Websynchronisierung hostet, wobei die Verbindung über die Standardauthentifizierung erfolgt.|  
 |**internet_security_mode**|**1**|Verwendet für die Websynchronisierung die integrierte Windows-Authentifizierung. Wir empfehlen, bei der Websynchronisierung die Standardauthentifizierung zu verwenden. Weitere Informationen finden Sie unter [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).|  
 ||**0**|Verwendet für die Websynchronisierung die Standardauthentifizierung.<br /><br /> Hinweis: Für die Websynchronisierung ist eine SSL-Verbindung mit dem Webserver erforderlich.|  
@@ -121,10 +115,10 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen und Ändern der Eigenschaften von Pullabonnements](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
- [Sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [Sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
- [Sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [Sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
+ [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
+ [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

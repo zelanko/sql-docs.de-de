@@ -18,12 +18,12 @@ ms.assetid: dd95d96e-8963-4aa9-bdcc-3e4b1bc002d3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1f383540c9fe7a83187bad55e62ed83933d872c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c654f8e76a25c0588011afecc632d3f85a33455
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689668"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492918"
 ---
 # <a name="spaddlogshippingalertjob-transact-sql"></a>sp_add_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_add_log_shipping_alert_job
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@alert_job_id =** ] *Alert_job_id* Ausgabe  
- Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Auftrags-ID des warnungsauftrags für den Protokollversand.  
+`[ @alert_job_id = ] alert_job_id OUTPUT` Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Auftrags-ID des warnungsauftrags für den Protokollversand.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

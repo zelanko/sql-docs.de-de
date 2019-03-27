@@ -18,12 +18,12 @@ ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fc2bf117e78f897102f85a7cab43295b079db12b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1dcd5257aa80ca431faf3725fe20a444f1339004
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824738"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494332"
 ---
 # <a name="spaddlogshippingsecondaryprimary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,32 +54,23 @@ sp_add_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@primary_server** =] '*Primary_server*"  
- Der Name der primären Instanz von der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in der Protokollversandkonfiguration. *primary_server* ist vom Datentyp **sysname** und darf nicht NULL sein.  
+`[ @primary_server = ] 'primary_server'` Der Name der primären Instanz von der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in der Protokollversandkonfiguration. *primary_server* ist vom Datentyp **sysname** und darf nicht NULL sein.  
   
- [ **@primary_database** =] '*Primary_database*"  
- Der Name der Datenbank auf dem primären Server. *primary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @primary_database = ] 'primary_database'` Ist der Name der Datenbank auf dem primären Server. *primary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
- [ **@backup_source_directory** =] '*Backup_source_directory*"  
- Das Verzeichnis, in dem die Dateien der Transaktionsprotokollsicherung gespeichert werden. *backup_source_directory* ist vom Datentyp **nvarchar(500)** und darf nicht NULL sein.  
+`[ @backup_source_directory = ] 'backup_source_directory'` Das Verzeichnis, in dem Sicherungsdateien des Transaktionsprotokolls vom primären Server gespeichert sind. *backup_source_directory* ist vom Datentyp **nvarchar(500)** und darf nicht NULL sein.  
   
- [ **@backup_destination_directory** =] '*Backup_destination_directory*"  
- Das Verzeichnis auf dem sekundären Server, in das Sicherungsdateien kopiert werden *backup_destination_directory* ist vom Datentyp **nvarchar(500)** und darf nicht NULL sein.  
+`[ @backup_destination_directory = ] 'backup_destination_directory'` Das Verzeichnis auf dem sekundären Server, in dem Sicherungsdateien kopiert werden. *backup_destination_directory* ist vom Datentyp **nvarchar(500)** und darf nicht NULL sein.  
   
- [ **@copy_job_name** =] '*Copy_job_name*"  
- Der Name für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agentauftrag, der erstellt wird, um Transaktionsprotokollsicherungen auf den sekundären Server zu kopieren. *Copy_job_name* ist **Sysname** und darf nicht NULL sein.  
+`[ @copy_job_name = ] 'copy_job_name'` Der Name für die Verwendung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag zum Kopieren von transaktionsprotokollsicherungen auf den sekundären Server erstellt wird. *Copy_job_name* ist **Sysname** und darf nicht NULL sein.  
   
- [ **@restore_job_name** =] '*Restore_job_name*"  
- Der Name des der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag auf dem sekundären Server, der die Sicherungen in der sekundären Datenbank wiederherstellt. *Restore_job_name* ist **Sysname** und darf nicht NULL sein.  
+`[ @restore_job_name = ] 'restore_job_name'` Der Name des der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag auf dem sekundären Server, der die Sicherungen in der sekundären Datenbank wiederherstellt. *Restore_job_name* ist **Sysname** und darf nicht NULL sein.  
   
- [ **@file_retention_period** =] '*File_retention_period*"  
- Die Zeitdauer in Minuten an, die in eine Sicherungsdatei, auf dem sekundären Server in den vom angegebenen Pfad beibehalten wird die @backup_destination_directory Parameter, bevor Sie gelöscht werden. *history_retention_period* ist vom Datentyp **int**. Der Standardwert ist NULL. Der Wert 14420 wird verwendet, falls kein anderer Wert angegeben wird.  
+`[ @file_retention_period = ] 'file_retention_period'` Die Zeitdauer in Minuten an, die in eine Sicherungsdatei, auf dem sekundären Server in den vom angegebenen Pfad beibehalten wird die @backup_destination_directory Parameter, bevor Sie gelöscht werden. *history_retention_period* ist vom Datentyp **int**. Der Standardwert ist NULL. Der Wert 14420 wird verwendet, falls kein anderer Wert angegeben wird.  
   
- [ **@monitor_server** =] '*Monitor_server*"  
- Der Name des Überwachungsservers. *Monitor_server* ist **Sysname**, hat keinen Standardwert und darf nicht NULL sein.  
+`[ @monitor_server = ] 'monitor_server'` Ist der Name des Überwachungsservers. *Monitor_server* ist **Sysname**, hat keinen Standardwert und darf nicht NULL sein.  
   
- [ **@monitor_server_security_mode** =] '*Monitor_server_security_mode*"  
- Der Sicherheitsmodus, der zum Herstellen einer Verbindung mit dem Überwachungsserver verwendet wird.  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` Der Sicherheitsmodus, der für die Verbindung mit dem Überwachungsserver verwendet wird.  
   
  1 = Windows-Authentifizierung  
   
@@ -87,20 +78,15 @@ sp_add_log_shipping_secondary_primary
   
  *monitor_server_security_mode* ist vom Datentyp **bit** und darf nicht NULL sein.  
   
- [ **@monitor_server_login** =] '*Monitor_server_login*"  
- Der Benutzername für das Konto, das zum Zugreifen auf den Überwachungsserver verwendet wird.  
+`[ @monitor_server_login = ] 'monitor_server_login'` Ist der Benutzername des Kontos, auf dem Überwachungsserver verwendet.  
   
- [ **@monitor_server_password** =] '*Monitor_server_password*"  
- Das Kennwort des Kontos, das zum Zugreifen auf den Überwachungsserver verwendet wird.  
+`[ @monitor_server_password = ] 'monitor_server_password'` Ist das Kennwort des Kontos, auf dem Überwachungsserver verwendet.  
   
- [ **@copy_job_id** =] '*Copy_job_id*' Ausgabe  
- Die dem Kopierauftrag zugeordnete ID auf dem sekundären Server *Copy_job_id* ist **Uniqueidentifier** und darf nicht NULL sein.  
+`[ @copy_job_id = ] 'copy_job_id' OUTPUT` Die ID, die dem Kopierauftrag auf dem sekundären Server zugeordnet. *Copy_job_id* ist **Uniqueidentifier** und darf nicht NULL sein.  
   
- [ **@restore_job_id** =] '*Restore_job_id*' Ausgabe  
- Die dem Wiederherstellungsauftrag zugeordnete ID auf dem sekundären Server *Restore_job_id* ist **Uniqueidentifier** und darf nicht NULL sein.  
+`[ @restore_job_id = ] 'restore_job_id' OUTPUT` Die ID der Wiederherstellungsauftrag auf dem sekundären Server zugeordnet ist. *Restore_job_id* ist **Uniqueidentifier** und darf nicht NULL sein.  
   
- [ **@secondary_id** =] '*Secondary_id*' Ausgabe  
- Die ID für den sekundären Server in der Protokollversandkonfiguration. *Secondary_id* ist **Uniqueidentifier** und darf nicht NULL sein.  
+`[ @secondary_id = ] 'secondary_id' OUTPUT` Die ID für den sekundären Server in der Protokollversandkonfiguration. *Secondary_id* ist **Uniqueidentifier** und darf nicht NULL sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

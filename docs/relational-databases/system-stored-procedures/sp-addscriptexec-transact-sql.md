@@ -16,12 +16,12 @@ ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 00c5b4b94bc0a4347991944ccaa7898e75f244f0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 97e6d74a619bc19571dda69a63ac8b3caf27f6d3
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130690"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492948"
 ---
 # <a name="spaddscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,21 +41,17 @@ sp_addscriptexec [ @publication = ] publication
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication=** ] **"**_Veröffentlichung_**"**  
- Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@scriptfile=** ] **"**_Scriptfile_**"**  
- Der vollständige Pfad zur SQL-Skriptdatei. *ScriptFile* ist **nvarchar(4000)**, hat keinen Standardwert.  
+`[ @scriptfile = ] 'scriptfile'` Ist der vollständige Pfad zur SQL-Skriptdatei. *ScriptFile* ist **nvarchar(4000)**, hat keinen Standardwert.  
   
- [  **@skiperror=** ] **"**_Skiperror_**"**  
- Zeigt an, ob der Verteilungs- oder Merge-Agent beendet werden soll, wenn ein Fehler bei der Skriptausführung festgestellt wird. *SkipError* ist **Bit**, hat den Standardwert 0.  
+`[ @skiperror = ] 'skiperror'` Gibt an, ob der Verteilungs-Agent oder Merge-Agent beendet werden soll, wenn ein Fehler bei der skriptausführung auftritt. *SkipError* ist **Bit**, hat den Standardwert 0.  
   
  **0** = der Agent beendet.  
   
  **1** = der Agent das Skript weiterhin und ignoriert den Fehler.  
   
- [  **@publisher=** ] **"**_Verleger_**"**  
- Gibt einen nicht- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Gibt einen nicht- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  *Publisher* sollte nicht verwendet werden, wenn eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger.  

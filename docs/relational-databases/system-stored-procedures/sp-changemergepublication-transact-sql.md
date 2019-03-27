@@ -16,12 +16,12 @@ ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9eb6d52d72dec4efab7e744fd4eafd2d9a5eb612
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6ca4142ca78d0842b535036e99464b9a1b7dc2c9
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788482"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493264"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_changemergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publication=**] **'***publication***'**  
- Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@property=**] **"***Eigenschaft***"**  
- Die Eigenschaft, die für die angegebene Veröffentlichung geändert werden soll. *Eigenschaft* ist **Sysname**, und kann einen der Werte im aufgeführt, die folgende Tabelle.  
+`[ @property = ] 'property'` Die Eigenschaft, für die angegebene Veröffentlichung geändert werden soll. *Eigenschaft* ist **Sysname**, und kann einen der Werte im aufgeführt, die folgende Tabelle.  
   
- [  **@value=**] **"***Wert***"**  
- Der neue Wert für die angegebene Eigenschaft. *Wert* ist **nvarchar(255)**, und kann einen der Werte im aufgeführt, die folgende Tabelle.  
+`[ @value = ] 'value'` Der neue Wert für die angegebene Eigenschaft. *Wert* ist **nvarchar(255)**, und kann einen der Werte im aufgeführt, die folgende Tabelle.  
   
  Diese Tabelle beschreibt die Eigenschaften der Veröffentlichung, die geändert werden kann, und werden Einschränkungen für die Werte für diese Eigenschaften beschrieben.  
   
@@ -105,7 +102,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|Entfernt die Veröffentlichungsinformationen aus Active Directory.|  
 |**replicate_ddl**|**1**|Anweisungen von Data Definition Language (DDL), die auf dem Verleger ausgeführt werden, werden repliziert.|  
 ||**0**|DDL-Anweisungen werden nicht repliziert.|  
-|**Beibehaltungsdauer**||Dies ist ein **Int** , die die Anzahl der *Retention_period_unit* Einheiten für die Änderungen für die angegebene Veröffentlichung gespeichert werden. Wenn das Abonnement nicht innerhalb der Beibehaltungsdauer synchronisiert wird und die ausstehenden Änderungen von einem Cleanupvorgang auf dem Verteiler entfernt wurden, läuft das Abonnement ab und muss erneut initialisiert werden. Die maximal zulässige Beibehaltungsdauer entspricht der Anzahl von Tagen zwischen dem 31. Dezember 9999 und dem aktuellen Datum.<br /><br /> Hinweis: Für die Beibehaltungsdauer von Mergeveröffentlichungen gilt eine Kulanzfrist von 24 Stunden, um Abonnenten in verschiedenen Zeitzonen zu unterstützen.|  
+|**retention**||Dies ist ein **Int** , die die Anzahl der *Retention_period_unit* Einheiten für die Änderungen für die angegebene Veröffentlichung gespeichert werden. Wenn das Abonnement nicht innerhalb der Beibehaltungsdauer synchronisiert wird und die ausstehenden Änderungen von einem Cleanupvorgang auf dem Verteiler entfernt wurden, läuft das Abonnement ab und muss erneut initialisiert werden. Die maximal zulässige Beibehaltungsdauer entspricht der Anzahl von Tagen zwischen dem 31. Dezember 9999 und dem aktuellen Datum.<br /><br /> Hinweis: Für die Beibehaltungsdauer von Mergeveröffentlichungen gilt eine Kulanzfrist von 24 Stunden, um Abonnenten in verschiedenen Zeitzonen zu unterstützen.|  
 |**retention_period_unit**|**day**|Die Beibehaltungsdauer wird in Tagen angegeben.|  
 ||**week**|Die Beibehaltungsdauer wird in Wochen angegeben.|  
 ||**month**|Die Beibehaltungsdauer wird in Monaten angegeben.|  
@@ -114,8 +111,8 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|Momentaufnahmedateien werden gespeichert, in den alternativen Speicherort, der von angegebene *Alt_snapshot_folder*. Diese Kombination gibt an, dass die Momentaufnahmedateien sowohl im Standardspeicherort als auch in alternativen Speicherorten gespeichert werden.|  
 |**snapshot_ready**|**true**|Die Momentaufnahme für die Veröffentlichung ist verfügbar.|  
 ||**false**|Die Momentaufnahme für die Veröffentlichung ist nicht verfügbar.|  
-|**status**|**aktiv**|Die Veröffentlichung weist einen aktiven Status auf.|  
-||**inaktiv**|Die Veröffentlichung weist einen inaktiven Status auf.|  
+|**status**|**active**|Die Veröffentlichung weist einen aktiven Status auf.|  
+||**inactive**|Die Veröffentlichung weist einen inaktiven Status auf.|  
 |**sync_mode**|**Native** oder<br /><br /> **systemeigene bcp**|Massenkopierprogramm-Ausgabe aller Tabellen im einheitlichen Modus wird für die Anfangsmomentaufnahme verwendet.|  
 ||**character**<br /><br /> oder **Bcp-Zeichen**|Massenkopierprogramm-Ausgabe aller Tabellen im Zeichenmodus wird für die Anfangsmomentaufnahme verwendet. Dies ist für alle Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten erforderlich.|  
 |**use_partition_groups**<br /><br /> Hinweis: Nach der Verwendung von Partition_groups, wenn Sie wieder in den mit **Setupbelongs**, und legen Sie **Use_partition_groups = "false"** in **Changemergearticle**, dies ist möglicherweise nicht ordnungsgemäß übernommen, nachdem eine Momentaufnahme erstellt wurde. Die Trigger, die von der Momentaufnahme generiert werden, sind mit Partitionsgruppen kompatibel.<br /><br /> Die problemumgehung für dieses Szenario besteht darin, den Status auf inaktiv festlegen, ändern Sie die **Use_partition_groups**, und legen Sie dann in den aktiven Status.|**true**|Die Veröffentlichung verwendet vorausberechnete Partitionen.|  
@@ -124,8 +121,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**web_synchronization_url**||Der Standardwert für die Internet-URL, die für die Websynchronisierung verwendet wird.|  
 |NULL (Standard)||Gibt die Liste der unterstützten Werte für *Eigenschaft*.|  
   
- [ **@force_invalidate_snapshot =** ] *Force_invalidate_snapshot*  
- Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion eine vorhandene Momentaufnahme für ungültig erklären kann. *Force_invalidate_snapshot* ist eine **Bit**, hat den Standardwert **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion eine vorhandene Momentaufnahme für ungültig erklären kann. *Force_invalidate_snapshot* ist eine **Bit**, hat den Standardwert **0**.  
   
  **0** gibt an, dass Änderungen an der Veröffentlichung nicht die Momentaufnahme ungültig wird. Wenn die gespeicherte Prozedur erkennt, dass die Änderungen eine neue Momentaufnahme erfordern, tritt ein Fehler auf und es werden keine Änderungen vorgenommen.  
   
@@ -133,8 +129,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
  Weitere Informationen zu den Eigenschaften, bei deren Änderung die Generierung einer neuen Momentaufnahme erforderlich ist, finden Sie im Abschnitt mit den Hinweisen.  
   
- [  **@force_reinit_subscription =** ] *Force_reinit_subscription*  
- Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion möglicherweise das erneute Initialisieren von vorhandenen Abonnements erfordert. *Force_reinit_subscription* ist eine **Bit** hat den Standardwert **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion möglicherweise eine erneute Initialisierung vorhandener Abonnements erfordern. *Force_reinit_subscription* ist eine **Bit** hat den Standardwert **0**.  
   
  **0** gibt an, dass Änderungen an der Veröffentlichung nicht erfordert, dass Abonnements erneut initialisiert werden. Wenn die gespeicherte Prozedur erkennt, dass die Änderung die Neuinitialisierung vorhandener Abonnements erfordert, tritt ein Fehler auf, und es werden keine Änderungen durchgeführt.  
   
@@ -195,8 +190,8 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [Sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
- [Sp_dropmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
+ [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [sp_dropmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

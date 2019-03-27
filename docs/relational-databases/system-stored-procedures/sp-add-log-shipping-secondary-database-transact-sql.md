@@ -18,12 +18,12 @@ ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 35bd51c2c2d1d9e3ed82cd06cd4a4524b9f7e422
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c7dab148af9d8c3db8a9b1503ad33975c790120
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635908"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493222"
 ---
 # <a name="spaddlogshippingsecondarydatabase-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,23 +54,17 @@ sp_add_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@secondary_database** =] '*Secondary_database*"  
- Der Name der sekundären Datenbank. *secondary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @secondary_database = ] 'secondary_database'` Ist der Name der sekundären Datenbank. *secondary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
- [ **@primary_server** =] '*Primary_server*"  
- Der Name der primären Instanz von der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in der Protokollversandkonfiguration. *primary_server* ist vom Datentyp **sysname** und darf nicht NULL sein.  
+`[ @primary_server = ] 'primary_server'` Der Name der primären Instanz von der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in der Protokollversandkonfiguration. *primary_server* ist vom Datentyp **sysname** und darf nicht NULL sein.  
   
- [ **@primary_database** =] '*Primary_database*"  
- Der Name der Datenbank auf dem primären Server. *primary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @primary_database = ] 'primary_database'` Ist der Name der Datenbank auf dem primären Server. *primary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
- [ **@restore_delay** =] '*Restore_delay*"  
- Die Zeit in Minuten, die der sekundäre Server vor dem Wiederherstellen einer bestimmten Sicherungsdatei wartet. *Restore_delay* ist **Int** und darf nicht NULL sein. Der Standardwert ist 0.  
+`[ @restore_delay = ] 'restore_delay'` Die Zeitspanne in Minuten, die der sekundäre Server vor dem Wiederherstellen einer bestimmten Sicherungsdatei wartet. *Restore_delay* ist **Int** und darf nicht NULL sein. Der Standardwert ist 0.  
   
- [ **@restore_all** =] '*Restore_all*"  
- Falls 1, stellt der sekundäre Server bei Ausführung des Wiederherstellungsauftrags alle verfügbaren Sicherungen des Transaktionsprotokolls wieder her. Andernfalls wird der Vorgang nach der Wiederherstellung einer Datei beendet. *Restore_all* ist **Bit** und darf nicht NULL sein.  
+`[ @restore_all = ] 'restore_all'` Wenn der Wert gleich 1, der sekundäre Server alle verfügbaren Sicherungen des Transaktionsprotokolls wiederhergestellt, wenn der Wiederherstellungsauftrag ausgeführt wird. Andernfalls wird der Vorgang nach der Wiederherstellung einer Datei beendet. *Restore_all* ist **Bit** und darf nicht NULL sein.  
   
- [ **@restore_mode** = ] '*restore_mode*'  
- Der Wiederherstellungsmodus für die sekundäre Datenbank.  
+`[ @restore_mode = ] 'restore_mode'` Der Wiederherstellungsmodus für die sekundäre Datenbank.  
   
  0 = Das Protokoll wird mit NORECOVERY wiederhergestellt.  
   
@@ -78,29 +72,21 @@ sp_add_log_shipping_secondary_database
   
  *Wiederherstellen* ist **Bit** und darf nicht NULL sein.  
   
- [ **@disconnect_users** =] '*Disconnect_users*"  
- Falls 1, werden Benutzer beim Ausführen eines Wiederherstellungsvorgangs von der sekundären Datenbank getrennt. Standard = 0. *Trennen Sie* Benutzer **Bit** und darf nicht NULL sein.  
+`[ @disconnect_users = ] 'disconnect_users'` Wenn auf 1 festgelegt, Benutzer von der sekundären Datenbank getrennt werden, wenn ein Wiederherstellungsvorgang ausgeführt wird. Standard = 0. *Trennen Sie* Benutzer **Bit** und darf nicht NULL sein.  
   
- [ **@block_size** =] '*Block_size*"  
- Die Größe in Bytes, die als Blockgröße für das Sicherungsmedium verwendet wird. *Block_size* ist **Int** hat den Standardwert 1.  
+`[ @block_size = ] 'block_size'` Die Größe in Bytes, die als Blockgröße für das Sicherungsmedium verwendet wird. *Block_size* ist **Int** hat den Standardwert 1.  
   
- [ **@buffer_count** =] '*Buffer_count*"  
- Die Gesamtanzahl der beim Sicherungs- oder Wiederherstellungsvorgang verwendeten Puffer. *Buffer_count* ist **Int** hat den Standardwert 1.  
+`[ @buffer_count = ] 'buffer_count'` Die Gesamtanzahl von Puffern, die von des Backup- oder Restore-Vorgangs verwendet werden soll. *Buffer_count* ist **Int** hat den Standardwert 1.  
   
- [ **@max_transfer_size** =] '*Max_transfer_size*"  
- Die Größe der maximalen Eingabe- oder Ausgabeanforderung in Bytes, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an das Sicherungsmedium ausgegeben wird. *Max_transfersize* ist **Int** und kann NULL sein.  
+`[ @max_transfer_size = ] 'max_transfer_size'` Die Größe in Bytes, der maximalen Eingabe- oder ausgabeanforderung ausgestellt hat [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf das Sicherungsmedium. *Max_transfersize* ist **Int** und kann NULL sein.  
   
- [ **@restore_threshold** =] '*Restore_threshold*"  
- Die Anzahl der zulässigen Minuten zwischen Wiederherstellungsvorgängen, bevor eine Warnung generiert wird. *Restore_threshold* ist **Int** und darf nicht NULL sein.  
+`[ @restore_threshold = ] 'restore_threshold'` Die Anzahl der Minuten zwischen Wiederherstellungsvorgängen verstreichen darf, bevor eine Warnung generiert wird, Wiederherstellungsvorgänge an. *Restore_threshold* ist **Int** und darf nicht NULL sein.  
   
- [ **@threshold_alert** =] '*Threshold_alert*"  
- Die Warnung, die bei Überschreiten des Sicherungsschwellenwerts ausgelöst wird. *Threshold_alert* ist **Int**, hat den Standardwert 14,420.  
+`[ @threshold_alert = ] 'threshold_alert'` Ist die Warnung, die bei Überschreitung des sicherungsschwellenwerts ausgelöst werden. *Threshold_alert* ist **Int**, hat den Standardwert 14,420.  
   
- [ **@threshold_alert_enabled** =] '*Threshold_alert_enabled*"  
- Gibt an, ob eine Warnung ausgelöst wird, wenn *Backup_threshold* überschritten wird. Der Standardwert 1 bedeutet, dass die Warnung ausgelöst wird. *Threshold_alert_enabled* ist **Bit**.  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` Gibt an, ob eine Warnung ausgelöst wird, wenn *Backup_threshold* überschritten wird. Der Standardwert 1 bedeutet, dass die Warnung ausgelöst wird. *Threshold_alert_enabled* ist **Bit**.  
   
- [ **@history_retention_period** =] '*History_retention_period*"  
- Die Zeitdauer (in Minuten), für die der Verlauf beibehalten wird. *history_retention_period* ist vom Datentyp **int**. Der Standardwert ist NULL. Falls nichts angegeben wird, wird ein Wert von 14420 verwendet.  
+`[ @history_retention_period = ] 'history_retention_period'` Ist die Zeitdauer in Minuten, die in denen der Verlauf beibehalten wird. *history_retention_period* ist vom Datentyp **int**. Der Standardwert ist NULL. Falls nichts angegeben wird, wird ein Wert von 14420 verwendet.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

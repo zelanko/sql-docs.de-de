@@ -5,17 +5,17 @@ description: Eine Python- oder R-Skript als eine Anwendung auf SQL Server-2019 b
 author: TheBharath
 ms.author: bharaths
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 9666192d667a5a2592ab32f346338d1b9963fa3d
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: acd7bef7219827eb7a4666d33d6e8477a522e268
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477655"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492802"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>Gewusst wie: Bereitstellen einer app auf SQL Server-2019 big Data-Cluster (Vorschau)
 
@@ -42,7 +42,7 @@ Die folgenden Arten von apps werden unterstützt:
 
 ## <a name="capabilities"></a>Funktionen
 
-In SQL Server 2019 (Vorschau) CTP 2.3 Sie erstellen, löschen, zu beschreiben, initialisiert werden können, Liste ausgeführt, und aktualisieren Sie Ihre Anwendung. Die folgende Tabelle beschreibt die Befehle der Anwendung-Bereitstellung, mit denen Sie mit **Mssqlctl**.
+In SQL Server 2019 (Vorschau) CTP 2.4 Sie erstellen, löschen, zu beschreiben, initialisiert werden können, Liste ausgeführt, und aktualisieren Sie Ihre Anwendung. Die folgende Tabelle beschreibt die Befehle der Anwendung-Bereitstellung, mit denen Sie mit **Mssqlctl**.
 
 |Befehl |Description |
 |:---|:---|

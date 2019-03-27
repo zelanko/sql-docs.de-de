@@ -16,12 +16,12 @@ ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12ba78e62b0441a76cea2b10ebaf13caec767443
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0c637755741332800a1c3eca2b80c9c001b550d3
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133900"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492682"
 ---
 # <a name="spchangedistributorproperty-transact-sql"></a>sp_changedistributor_property (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,16 +39,14 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@property=**] **"**_Eigenschaft_**"**  
- Die Eigenschaft für einen angegebenen Verteiler. *Eigenschaft* ist **Sysname**, und kann einen der folgenden Werte sein.  
+`[ @property = ] 'property'` Ist die Eigenschaft für einen bestimmten Verteiler. *Eigenschaft* ist **Sysname**, und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
 |**heartbeat_interval**|Maximale Anzahl von Minuten an, denen ein Agent ohne Protokollierung einer verlaufsmeldung ausgeführt werden kann.|  
 |NULL (Standard)|Alle verfügbaren *Eigenschaft* Werte ausgegeben werden.|  
   
- [  **@value=**] **"**_Wert_**"**  
- Der Wert für die angegebene Verteilereigenschaft. *Wert* ist **varchar(255)**, hat den Standardwert NULL.  
+`[ @value = ] 'value'` Ist der Wert für die angegebene Verteilereigenschaft. *Wert* ist **varchar(255)**, hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -64,8 +62,8 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
   
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [Sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
- [Sp_dropdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   
+ [sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
+ [sp_dropdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   
  [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

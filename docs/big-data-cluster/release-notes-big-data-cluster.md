@@ -5,17 +5,17 @@ description: Dieser Artikel beschreibt die neuesten Updates und bekannte Problem
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/05/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4c178c5868789bec2dc80a4b68558f12afbc90d2
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: 2adf081f68ec0941b287102f515da2cabbfbbe18
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58073226"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494182"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Anmerkungen zu dieser Version für big Data-Cluster in SQL Server
 
@@ -23,37 +23,28 @@ Dieser Artikel führt die Updates und bekannte Probleme für die neuesten Versio
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a id="ctp23"></a> CTP 2.3 (SQL 2019)
+## <a id="ctp24"></a> CTP-Version 2.4 (März)
 
-February 2019 &nbsp; &nbsp; / &nbsp; &nbsp; SQL Server 2019 &nbsp; &nbsp; / &nbsp; &nbsp; CTP2.3
+Die folgenden Abschnitte beschreiben die neuen Features und bekannten Probleme für big Data-Cluster in SQL Server 2019 CTP 2.4.
 
-### <a name="new-features"></a>Neue Funktionen
+### <a name="whats-new"></a>Neues
 
-| Neues feature | Details |
-| :---------- | :------ |
-| [Übermitteln von Spark-Aufträgen in SQL Server-Clustern in Big Data in IntelliJ](spark-submit-job-intellij-tool-plugin.md). | &nbsp; |
-| [Allgemeine CLI für die Bereitstellung und -Cluster-anwendungsverwaltung](big-data-cluster-create-apps.md). | &nbsp; |
-| [VS Code-Erweiterung zum Bereitstellen von Anwendungen für SQL Server-big Data-Cluster](app-deployment-extension.md). | &nbsp; |
-| [Änderungen an der **Mssqlctl** tool zur Verwendung des Befehls](#mssqlctlctp23). | &nbsp; |
-| [Verwenden Sie Sparklyr in SQL Server 2019 Big Data-Cluster](sparklyr-from-RStudio.md). | &nbsp; |
-| Binden Sie externe HDFS-kompatiblen Speicher in big Data-Cluster mit **HDFS tiering**. | Finden Sie unter [HDFS tiering](hdfs-tiering.md). |
-| Neue einheitliche Verbindungsschnittstelle für SQL Server-Instanz master und das HDFS/Spark-Gateway. | Finden Sie unter [master SQL Server-Instanz und das HDFS/Spark-Gateway](connect-to-big-data-cluster.md). |
-| Löschen eines Clusters mit **Mssqlctl Cluster löschen** jetzt löscht nur die Objekte im Namespace, die Teil der big Data-Cluster waren. | Der Namespace wird nicht gelöscht werden. In früheren Versionen mit diesem Befehl jedoch den gesamten Namespace löschen. |
-| _Sicherheit_ Endpunktnamen wurden geändert und zusammengefasst. | _Vorherige Endpunkte:_<br/> &nbsp; &nbsp; &nbsp; &bull; &nbsp; **service-security-lb**<br/> &nbsp; &nbsp; &nbsp; &bull; &nbsp; **service-security-nodeport**<br/><br/>_Neuer Endpunkt:_<br/> &nbsp; &nbsp; &nbsp; &bull; &nbsp; **endpoint-security** |
-| _Proxy_ Endpunktnamen wurden geändert und zusammengefasst. | _Vorherige Endpunkte:_<br/> &nbsp; &nbsp; &nbsp; &bull; &nbsp; **service-proxy-lb**<br/> &nbsp; &nbsp; &nbsp; &bull; &nbsp; **service-proxy-nodeport**<br/><br/>_Neuer Endpunkt:_<br/> &nbsp; &nbsp; &nbsp; &bull; &nbsp; **endpoint-service-proxy** |
-| _Controller_ Endpunktnamen wurden geändert und zusammengefasst. | _Vorherige Endpunkte:_<br/> &nbsp; &nbsp; &nbsp; &bull; &nbsp; **service-mssql-controller-lb**<br/> &nbsp; &nbsp; &nbsp; &bull; &nbsp; **service-mssql-controller-nodeport**<br/><br/>_Neuer Endpunkt:_<br/> &nbsp; &nbsp; &nbsp; &bull; &nbsp; **endpoint-controller** |
-| &nbsp; | &nbsp; |
+| Neue Features/aktualisieren | Details |
+|:---|:---|
+| Anleitung zur GPU unterstützt für die Ausführung von deep learning mit TensorFlow in Spark. | [Bereitstellen eines big Data-Clusters mit GPU-Unterstützung, und führen Sie TensorFlow](spark-gpu-tensorflow.md) |
+| **SqlDataPool** und **SqlStoragePool** Datenquellen werden nicht mehr standardmäßig erstellt. | Erstellen Sie diese manuell nach Bedarf. Finden Sie unter den [bekannte Probleme](#externaltablesctp24). |
+| Spark-Runtime-Upgrade für Spark 2.4. | |
 
-### <a name="known-issues-deployment"></a>Bekannte Probleme: Bereitstellung
+### <a name="known-issues"></a>Bekannte Probleme
+
+In den folgenden Abschnitten werden die bekannten Probleme und Einschränkungen im Zusammenhang mit dieser Version beschrieben.
+
+#### <a name="deployment"></a>Bereitstellung
 
 - Upgrade von eines big Data-Clusters für Daten aus einer früheren Version wird nicht unterstützt.
 
    > [!IMPORTANT]
    > Müssen Sie Ihre Daten sichern und löschen Sie Ihre vorhandenen big Data-Cluster (mit der früheren Version von **Mssqlctl**) vor der Bereitstellung der neuesten Version. Weitere Informationen finden Sie unter [ein Upgrade auf ein neues Release](deployment-guidance.md#upgrade).
-
-- Die **ACCEPT_EULA** -Umgebungsvariable muss "yes" oder "Ja", um den Endbenutzer-Lizenzvertrag zu akzeptieren. Vorgängerversionen zulässig, "y" und "Y", aber diese sind nicht mehr akzeptiert und führt dazu, dass die Bereitstellung nicht ausgeführt werden.
-
-- Die **CLUSTER_PLATFORM** Umgebungsvariablen besitzt keinen Standardwert, wie in früheren Versionen.
 
 - Nach dem Bereitstellen in AKS können Sie die folgenden zwei Warning-Ereignisse aus der Bereitstellung möglicherweise. Diese beiden Ereignisse finden Sie bekannte Probleme, aber sie verhindern nicht, dass Sie erfolgreiche Bereitstellung von big Data-Cluster in AKS.
 
@@ -63,7 +54,7 @@ February 2019 &nbsp; &nbsp; / &nbsp; &nbsp; SQL Server 2019 &nbsp; &nbsp; / &nbs
 
 - Wenn es sich bei eine Clusterbereitstellung mit big Data ein Fehler auftritt, wird der zugeordnete Namespace nicht entfernt werden. Dies kann in einem verwaiste-Namespace im Cluster führen. Eine problemumgehung besteht darin, den Namespace manuell zu löschen, bevor die Bereitstellung eines Clusters mit dem gleichen Namen.
 
-### <a name="known-issues-kubeadm-deployments"></a>Bekannte Probleme: Kubeadm-Bereitstellungen
+#### <a name="kubeadm-deployments"></a>Kubeadm-Bereitstellungen
 
 Wenn Sie Kubeadm zum Bereitstellen von Kubernetes auf mehreren Computern verwenden, wird das Cluster-Verwaltungsportal die Verbindung mit der big Data-Cluster erforderlichen Endpunkte nicht richtig angezeigt. Wenn Sie dieses Problem auftreten, verwenden Sie das folgende startbefehlsskript, um die IP-Adressen der Dienstendpunkte zu ermitteln:
 
@@ -89,19 +80,20 @@ Wenn Sie Kubeadm zum Bereitstellen von Kubernetes auf mehreren Computern verwend
       KubeDNS is running at https://172.30.243.91:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
       ```
 
-### <a id="mssqlctlctp23"></a> Bekannte Probleme: Mssqlctl
+#### <a id="externaltablesctp24"></a> Externe Tabellen
 
-- Die **Mssqlctl** Tool geändert werden, von einem Verb-Nomen-Befehl, der Sortierung auf eine Bestellung Substantiv-Verb. Z. B. `mssqlctl create cluster` ist jetzt `mssqlctl cluster create`.
+- Bereitstellung von Big Data-Cluster werden nicht mehr erstellt die **SqlDataPool** und **SqlStoragePool** Daten aus externen Quellen. Sie können diese Datenquellen manuell, um Daten bei den Daten-Pools und den Speicherpool Virtualisierungsunterstützung erstellen.
 
-- Die `--name` -Parameter ist jetzt erforderlich, beim Erstellen eines Clusters mit `mssqlctl cluster create`.
+   ```sql
+   -- Create data sources for SQL Big Data Cluster
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+     CREATE EXTERNAL DATA SOURCE SqlDataPool
+     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
 
-   ```bash
-   mssqlctl cluster create --name <cluster_name>
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+     CREATE EXTERNAL DATA SOURCE SqlStoragePool
+     WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
    ```
-
-- Wichtige Informationen zum Upgrade auf die neueste Version von big Data-Cluster und **Mssqlctl**, finden Sie unter [ein Upgrade auf ein neues Release](deployment-guidance.md#upgrade).
-
-### <a name="known-issues-external-tables"></a>Bekannte Probleme: Externe Tabellen
 
 - Es ist möglich, eine externen Pool Datentabelle für eine Tabelle zu erstellen, die Spaltentypen nicht unterstützt wird. Wenn Sie auf die externe Tabelle Abfragen, erhalten Sie eine Meldung ähnlich der folgenden:
 
@@ -113,11 +105,11 @@ Wenn Sie Kubeadm zum Bereitstellen von Kubernetes auf mehreren Computern verwend
 
 - Bei der Erstellung einer externen Tabelle, Oracle, die Zeichen-Datentypen zu verwenden, interpretiert der Studio für Azure Data Virtualization-Assistent diese Spalten als VARCHAR in der Definition der externen Tabelle an. Dies bewirkt einen Fehler in der DDL für externe Tabellen. Ändern Sie entweder das Oracle-Schema, um verwenden Sie den Typ NVARCHAR2 oder EXTERNAL TABLE-Anweisungen manuell erstellen, und geben NVARCHAR, statt mit dem Assistenten.
 
-### <a name="known-issues-application-deployment"></a>Bekannte Probleme: Anwendungsbereitstellung
+#### <a name="application-deployment"></a>Anwendungsbereitstellung
 
 - Bei eine Anwendung von R, Python oder MLeap von RESTful-API aufrufen, tritt ein Timeout für der Aufruf innerhalb von 5 Minuten.
 
-### <a name="known-issues-spark-and-notebooks"></a>Bekannte Probleme: Spark und notebooks
+#### <a name="spark-and-notebooks"></a>Spark und notebooks
 
 - In der Kubernetes-Umgebung können als PODs Neustarts POD-IP-Adressen ändern. In dem Szenario, in dem für die Master-Pod neu gestartet wird, kann die Spark-Sitzung mit fehlschlagen `NoRoteToHostException`. Dies wird verursacht durch JVM-Caches, die mit der neuen IP-Adresse aktualisiert nicht behandelt.
 
@@ -125,7 +117,7 @@ Wenn Sie Kubeadm zum Bereitstellen von Kubernetes auf mehreren Computern verwend
 
 - In einem Notizbuch, wenn Sie auf die **Text hinzufügen** Befehl, die Textzelle im Bearbeitungsmodus befindet, anstatt im Vorschaumodus hinzugefügt wird. Klicken Sie auf das vorschausymbol klicken zum umschalten, um den Bearbeitungsmodus, und Bearbeiten der Zelle.
 
-### <a name="known-issues-hdfs"></a>Bekannte Probleme: HDFS
+#### <a name="hdfs"></a>HDFS
 
 - Wenn Sie mit der rechten Maustaste auf eine Datei in HDFS diesen in der Vorschau, können Sie die folgende Fehlermeldung angezeigt:
 
@@ -135,7 +127,129 @@ Wenn Sie Kubeadm zum Bereitstellen von Kubernetes auf mehreren Computern verwend
 
 - Änderungen an der Konfiguration in HDFS, bei denen Änderungen an "Hdfs-Site.xml" werden nicht unterstützt.
 
-### <a name="known-issues-security"></a>Bekannte Probleme: Sicherheit
+#### <a name="security"></a>Sicherheit
+
+- Die SA_PASSWORD ist Teil der Umgebung "und" ermittelt (z. B. in einer Dumpdatei "Cord"). Sie müssen die SA_PASSWORD für die master-Instanz nach der Bereitstellung zurücksetzen. Dies ist nicht auf, einen Fehler, aber eine Sicherheitsschritt. Weitere Informationen zum Ändern der SA_PASSWORD in einem Linux-Container finden Sie unter [Ändern des Systemadministratorkennworts](../linux/quickstart-install-connect-docker.md#sapassword).
+
+- AKS-Protokolle können das SA-Kennwort für big Data-Cluster-Bereitstellungen enthalten.
+
+## <a id="ctp23"></a> CTP 2.3 (Februar)
+
+Die folgenden Abschnitte beschreiben die neuen Features und bekannten Probleme für big Data-Cluster in CTP 2.3 von SQL Server 2019.
+
+### <a name="new-features"></a>Neue Funktionen
+
+| Neues feature | Details |
+| :---------- | :------ |
+| Übermitteln von Spark-Aufträgen im big Data-Cluster in IntelliJ. | [Übermitteln von Spark-Aufträgen in SQL Server-big Data-Clustern in IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
+| Allgemeine CLI für die Bereitstellung und -Cluster-Verwaltung von Anwendungen. | [Gewusst wie: Bereitstellen einer app auf SQL Server-2019 big Data-Cluster (Vorschau)](big-data-cluster-create-apps.md) |
+| VS Code-Erweiterung zum Bereitstellen von Anwendungen in einem big Data-Cluster. | [Gewusst wie: Verwenden Sie Visual Studio Code zum Bereitstellen von Anwendungen auf SQL Server-big Data-Cluster](app-deployment-extension.md) |
+| Änderungen an der **Mssqlctl** tool zur Verwendung des Befehls. | Weitere Informationen finden Sie die [bekannte Probleme bei Mssqlctl](#mssqlctlctp23). |
+| Verwenden Sie Sparklyr in big Data-cluster | [Verwenden Sie Sparklyr in SQL Server-2019 big Data-cluster](sparklyr-from-RStudio.md) |
+| Binden Sie externe HDFS-kompatiblen Speicher in big Data-Cluster mit **HDFS tiering**. | Finden Sie unter [HDFS tiering](hdfs-tiering.md). |
+| Neue einheitliche Verbindungsschnittstelle für SQL Server-Instanz master und das HDFS/Spark-Gateway. | Finden Sie unter [master SQL Server-Instanz und das HDFS/Spark-Gateway](connect-to-big-data-cluster.md). |
+| Löschen eines Clusters mit **Mssqlctl Cluster löschen** jetzt löscht nur die Objekte im Namespace, die Teil der big Data-Cluster waren. | Der Namespace wird nicht gelöscht werden. In früheren Versionen mit diesem Befehl jedoch den gesamten Namespace löschen. |
+| _Sicherheit_ Endpunktnamen wurden geändert und zusammengefasst. | **Dienst-Security-lb** und **Service-Sicherheit-Nodeport** wurden zusammengeführt, in der **endpunktsicherheit** Endpunkt. |
+| _Proxy_ Endpunktnamen wurden geändert und zusammengefasst. | **Dienst-Proxy-lb** und **-Dienst-Proxy-Nodeport** wurden zusammengeführt, in der **Endpunkt-Dienst-Proxy** Endpunkt. |
+| _Controller_ Endpunktnamen wurden geändert und zusammengefasst. | **Dienst-Mssql-Controller-lb** und **-Dienst-Mssql-Controller-Nodeport** wurden zusammengeführt, in der **Endpunkt-Controller** Endpunkt. |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Bekannte Probleme
+
+In den folgenden Abschnitten werden die bekannten Probleme und Einschränkungen im Zusammenhang mit dieser Version beschrieben.
+
+#### <a name="deployment"></a>Bereitstellung
+
+- Upgrade von eines big Data-Clusters für Daten aus einer früheren Version wird nicht unterstützt.
+
+   > [!IMPORTANT]
+   > Müssen Sie Ihre Daten sichern und löschen Sie Ihre vorhandenen big Data-Cluster (mit der früheren Version von **Mssqlctl**) vor der Bereitstellung der neuesten Version. Weitere Informationen finden Sie unter [ein Upgrade auf ein neues Release](deployment-guidance.md#upgrade).
+
+- Die **ACCEPT_EULA** -Umgebungsvariable muss "yes" oder "Ja", um den Endbenutzer-Lizenzvertrag zu akzeptieren. Vorgängerversionen zulässig, "y" und "Y", aber diese sind nicht mehr akzeptiert und führt dazu, dass die Bereitstellung nicht ausgeführt werden.
+
+- Die **CLUSTER_PLATFORM** Umgebungsvariablen besitzt keinen Standardwert, wie in früheren Versionen.
+
+- Nach dem Bereitstellen in AKS können Sie die folgenden zwei Warning-Ereignisse aus der Bereitstellung möglicherweise. Diese beiden Ereignisse finden Sie bekannte Probleme, aber sie verhindern nicht, dass Sie erfolgreiche Bereitstellung von big Data-Cluster in AKS.
+
+   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
+
+   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
+
+- Wenn es sich bei eine Clusterbereitstellung mit big Data ein Fehler auftritt, wird der zugeordnete Namespace nicht entfernt werden. Dies kann in einem verwaiste-Namespace im Cluster führen. Eine problemumgehung besteht darin, den Namespace manuell zu löschen, bevor die Bereitstellung eines Clusters mit dem gleichen Namen.
+
+#### <a name="kubeadm-deployments"></a>Kubeadm-Bereitstellungen
+
+Wenn Sie Kubeadm zum Bereitstellen von Kubernetes auf mehreren Computern verwenden, wird das Cluster-Verwaltungsportal die Verbindung mit der big Data-Cluster erforderlichen Endpunkte nicht richtig angezeigt. Wenn Sie dieses Problem auftreten, verwenden Sie das folgende startbefehlsskript, um die IP-Adressen der Dienstendpunkte zu ermitteln:
+
+- Wenn Sie von innerhalb des Clusters verbinden, Fragen Sie Kubernetes für die Dienst-IP für den Endpunkt, dem für die Verbindung verwendet werden sollen. Beispielsweise die folgenden **"kubectl"** Befehl zeigt die IP-Adresse der master SQL Server-Instanz:
+
+   ```bash
+   kubectl get service endpoint-master-pool -n <clusterName> -o=custom-columns="IP:.spec.clusterIP,PORT:.spec.ports[*].nodePort"
+   ```
+
+- Wenn Sie von außerhalb des Clusters herstellen, verwenden Sie die folgenden Schritte aus, eine Verbindung herstellen:
+
+   1. Rufen Sie die IP-Adresse des Knotens master SQL Server-Instanz ausgeführt wird: `kubectl get pod mssql-master-pool-0 -o jsonpath="Name: {.metadata.name} Status: {.status.hostIP}" -n <clusterName>`.
+
+   1. Verbinden Sie mit SQL Server-Masterinstanz über diese IP-Adresse.
+
+   1. Abfrage der **Cluster_endpoint_table** in master-Datenbank für andere externe Endpunkte.
+
+      Wenn dies ein Timeout auftritt, ist es möglich, die der entsprechende Knoten durch eine Firewall geleitet wird. In diesem Fall müssen Sie wenden Sie sich an den Administrator der Kubernetes-Cluster und stellen Sie für die Knoten-IP, die extern verfügbar gemacht wird. Dies kann einen beliebigen Knoten sein. Sie können diese IP-Adresse und den entsprechenden Port klicken Sie dann verwenden, für die Verbindung auf verschiedene Dienste, die im Cluster ausgeführt. Beispielsweise kann der Administrator diese IP-Adresse mit finden:
+
+      ```
+      [root@m12hn01 config]# kubectl cluster-info
+      Kubernetes master is running at https://172.50.253.99:6443
+      KubeDNS is running at https://172.30.243.91:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+      ```
+
+#### <a id="mssqlctlctp23"></a> mssqlctl
+
+- Die **Mssqlctl** Tool geändert werden, von einem Verb-Nomen-Befehl, der Sortierung auf eine Bestellung Substantiv-Verb. Z. B. `mssqlctl create cluster` ist jetzt `mssqlctl cluster create`.
+
+- Die `--name` -Parameter ist jetzt erforderlich, beim Erstellen eines Clusters mit `mssqlctl cluster create`.
+
+   ```bash
+   mssqlctl cluster create --name <cluster_name>
+   ```
+
+- Wichtige Informationen zum Upgrade auf die neueste Version von big Data-Cluster und **Mssqlctl**, finden Sie unter [ein Upgrade auf ein neues Release](deployment-guidance.md#upgrade).
+
+#### <a name="external-tables"></a>Externe Tabellen
+
+- Es ist möglich, eine externen Pool Datentabelle für eine Tabelle zu erstellen, die Spaltentypen nicht unterstützt wird. Wenn Sie auf die externe Tabelle Abfragen, erhalten Sie eine Meldung ähnlich der folgenden:
+
+   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
+
+- Wenn Sie eine externe Speicher-Pool-Tabelle Abfragen, können Sie eine Fehlermeldung, wenn gleichzeitig die zugrunde liegende Datei in HDFS kopiert wird.
+
+   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+- Bei der Erstellung einer externen Tabelle, Oracle, die Zeichen-Datentypen zu verwenden, interpretiert der Studio für Azure Data Virtualization-Assistent diese Spalten als VARCHAR in der Definition der externen Tabelle an. Dies bewirkt einen Fehler in der DDL für externe Tabellen. Ändern Sie entweder das Oracle-Schema, um verwenden Sie den Typ NVARCHAR2 oder EXTERNAL TABLE-Anweisungen manuell erstellen, und geben NVARCHAR, statt mit dem Assistenten.
+
+#### <a name="application-deployment"></a>Anwendungsbereitstellung
+
+- Bei eine Anwendung von R, Python oder MLeap von RESTful-API aufrufen, tritt ein Timeout für der Aufruf innerhalb von 5 Minuten.
+
+#### <a name="spark-and-notebooks"></a>Spark und notebooks
+
+- In der Kubernetes-Umgebung können als PODs Neustarts POD-IP-Adressen ändern. In dem Szenario, in dem für die Master-Pod neu gestartet wird, kann die Spark-Sitzung mit fehlschlagen `NoRoteToHostException`. Dies wird verursacht durch JVM-Caches, die mit der neuen IP-Adresse aktualisiert nicht behandelt.
+
+- Wenn Sie Jupyter, die bereits installiert haben, und ein separaten Python für Windows, Spark-Notebooks schlägt möglicherweise fehl. Um dieses Problem zu umgehen, aktualisieren Sie Jupyter, auf die neueste Version.
+
+- In einem Notizbuch, wenn Sie auf die **Text hinzufügen** Befehl, die Textzelle im Bearbeitungsmodus befindet, anstatt im Vorschaumodus hinzugefügt wird. Klicken Sie auf das vorschausymbol klicken zum umschalten, um den Bearbeitungsmodus, und Bearbeiten der Zelle.
+
+#### <a name="hdfs"></a>HDFS
+
+- Wenn Sie mit der rechten Maustaste auf eine Datei in HDFS diesen in der Vorschau, können Sie die folgende Fehlermeldung angezeigt:
+
+   `Error previewing file: File exceeds max size of 30MB`
+
+   Zurzeit besteht keine Möglichkeit, Dateien, die größer als 30 MB in Azure Data Studio Vorschau anzeigen.
+
+- Änderungen an der Konfiguration in HDFS, bei denen Änderungen an "Hdfs-Site.xml" werden nicht unterstützt.
+
+#### <a name="security"></a>Sicherheit
 
 - Die SA_PASSWORD ist Teil der Umgebung "und" ermittelt (z. B. in einer Dumpdatei "Cord"). Sie müssen die SA_PASSWORD für die master-Instanz nach der Bereitstellung zurücksetzen. Dies ist nicht auf, einen Fehler, aber eine Sicherheitsschritt. Weitere Informationen zum Ändern der SA_PASSWORD in einem Linux-Container finden Sie unter [Ändern des Systemadministratorkennworts](../linux/quickstart-install-connect-docker.md#sapassword).
 
@@ -145,7 +259,7 @@ Wenn Sie Kubeadm zum Bereitstellen von Kubernetes auf mehreren Computern verwend
 
 Die folgenden Abschnitte beschreiben die neuen Features und bekannten Probleme für big Data-Cluster in SQL Server 2019 CTP 2.2.
 
-### <a name="whats-in-the-ctp-22-release"></a>Was ist in der Version CTP 2.2?
+### <a name="new-features"></a>Neue Funktionen
 
 - Cluster-Verwaltungsportal Zugriff mit `/portal` (**https://\<Ip-Adresse\>: 30777/Portal**).
 - Master-Dienst-Poolname geändert `service-master-pool-lb` und `service-master-pool-nodeport` zu `endpoint-master-pool`.
@@ -154,7 +268,7 @@ Die folgenden Abschnitte beschreiben die neuen Features und bekannten Probleme f
 
 ### <a name="known-issues"></a>Bekannte Probleme
 
-Die folgenden Abschnitte enthalten bekannte Probleme für SQL Server-big Data-Cluster in der CTP-Version 2.2.
+In den folgenden Abschnitten werden die bekannten Probleme und Einschränkungen im Zusammenhang mit dieser Version beschrieben.
 
 #### <a name="deployment"></a>Bereitstellung
 
@@ -214,7 +328,7 @@ kubectl get svc endpoint-master-pool -n <your-cluster-name>
 
 Die folgenden Abschnitte beschreiben die neuen Features und bekannten Probleme für big Data-Cluster in SQL Server CTP 2.1 an 2019.
 
-### <a name="whats-in-the-ctp-21-release"></a>Was ist in der Version CTP 2.1?
+### <a name="new-features"></a>Neue Funktionen
 
 - [Bereitstellen von Python und R-apps](big-data-cluster-create-apps.md) in einer big Data-Cluster.
 - Neue Version des **Mssqlctl** und Images aktualisiert. 
@@ -278,7 +392,7 @@ Die folgenden Abschnitte enthalten bekannte Probleme für SQL Server-big Data-Cl
 
 Die folgenden Abschnitte beschreiben die neuen Features und bekannten Probleme für big Data-Cluster in SQL Server 2019 CTP-Version 2.0.
 
-### <a name="whats-in-the-ctp-20-release"></a>Was ist in der Version CTP 2.0?
+### <a name="new-features"></a>Neue Funktionen
 
 - Einfache bereitstellungserfahrung, die mithilfe des Verwaltungstools mssqlctl
 - Native Notebook-Benutzeroberfläche in Azure Data Studio

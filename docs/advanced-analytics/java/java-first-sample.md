@@ -3,18 +3,18 @@ title: Java-Beispiel und Tutorials für SQL Server-2019 – SQL Server Machine L
 description: Führen Sie Java-Beispielcode für SQL Server-2019 zu Schritten für SQL Server-Daten mit der Erweiterung der Java-Sprache vertraut zu machen.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 86a379191033f49ab6a5d06ceda2d1ed7a747c12
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: a2fd078d0b9c61678a83cc1b3b5da70adbd69779
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018036"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493425"
 ---
 # <a name="sql-server-java-sample-walkthrough"></a>Exemplarische Vorgehensweise zum SQL Server-Java
 
@@ -205,9 +205,22 @@ Weitere Informationen zu den Klassenpfad, finden Sie unter [legen Sie CLASSPATH]
 
 Wenn Sie Ihre Klassen und Abhängigkeiten in JAR-Dateien packen möchten, geben Sie den vollständigen Pfad zu der JAR-Datei im Sp_execute_external_script CLASSPATH-Parameter. Z. B. wenn die JAR-Datei "ngram.jar" aufgerufen wird, der KLASSENPFAD wird "/ home/myclasspath/ngram.jar" unter Linux.
 
-## <a name="6---set-permissions"></a>6: Festlegen von Berechtigungen
+## <a name="6---create-external-library"></a>6: Erstellen Sie die externe Bibliothek
 
-Ausführung des Skripts ist nur erfolgreich, wenn die Prozess-Identitäten Zugriff auf Ihren Code haben. 
+Erstellen Sie eine externe Bibliothek, SQL Server haben automatisch Zugriff auf die JAR-Datei, und Sie müssen nicht den Klassenpfad keine besonderen Berechtigungen fest.
+
+```sql 
+CREATE EXTERNAL LIBRARY ngram
+FROM (CONTENT = '<path>/ngram.jar') 
+WITH (LANGUAGE = 'Java'); 
+GO
+```
+
+## <a name="7---set-permissions-skip-if-you-performed-step-6"></a>7: Festlegen von Berechtigungen (überspringen Sie diese Option, wenn Sie mit Schritt 6 ausgeführt)
+
+Dieser Schritt ist nicht erforderlich, wenn Sie externe Bibliotheken verwenden. Als empfohlene Vorgehensweise ist, um eine externe Bibliothek aus der Sie JAR-Datei zu erstellen. 
+
+Wenn Sie keine externe Bibliotheken verwenden möchten, müssen Sie die erforderlichen Berechtigungen festgelegt haben. Ausführung des Skripts ist nur erfolgreich, wenn die Prozess-Identitäten Zugriff auf Ihren Code haben. 
 
 ### <a name="on-linux"></a>On Linux
 
@@ -232,7 +245,7 @@ Stellen Sie sicher, dass beide Sicherheitsidentitäten "Lese-und Ausführungsber
 
 <a name="call-method"></a>
 
-## <a name="7---call-getngrams"></a>7 - Aufruf *getNgrams()*
+## <a name="8---call-getngrams"></a>8 - Aufruf *getNgrams()*
 
 Geben Sie die Java-Methode, um den Code von SQL Server aufzurufen, **getNgrams()** im "Script"-Parameter von Sp_execute_external_script. Diese Methode gehört zu einem Paket namens "Pkg" und eine neue Klassendatei namens **Ngram.java**.
 
@@ -246,8 +259,6 @@ Dieses Beispiel übergibt die CLASSPATH-Parameter, um den Pfad für die Java-Dat
 DECLARE @myClassPath nvarchar(50)
 DECLARE @n int 
 --This is where you store your classes or jars.
---Update this to your own classpath
-SET @myClassPath = N'/home/myclasspath/'
 --This is the size of the ngram
 SET @n = 3
 EXEC sp_execute_external_script
@@ -255,8 +266,7 @@ EXEC sp_execute_external_script
 , @script = N'pkg.Ngram.getNGrams'
 , @input_data_1 = N'SELECT id, text FROM reviews'
 , @parallel = 0
-, @params = N'@CLASSPATH nvarchar(30), @param1 INT'
-, @CLASSPATH = @myClassPath
+, @params = N'@param1 INT'
 , @param1 = @n
 with result sets ((ID int, ngram varchar(20)))
 GO
@@ -270,11 +280,7 @@ Nach dem Ausführen des Aufrufs, erhalten Sie ein Resultset mit zwei Spalten:
 
 ### <a name="if-you-get-an-error"></a>Wenn Sie eine Fehlermeldung erhalten
 
-Regel, die Sie alle Probleme im Zusammenhang mit den Klassenpfad. 
-
-+ CLASSPATH muss den übergeordneten Ordner und Unterordner, aber nicht auf den Unterordner "Pkg" bestehen. Während der Pkg-Unterordner vorhanden sein muss, sollte es nicht in Classpath-Wert in der gespeicherten Prozedur angegeben werden.
-
-+ Der Unterordner "Pkg" sollte den kompilierten Code für alle drei Klassen enthalten.
++ Beim Kompilieren Ihrer Klassen sollte der Unterordner "Pkg" den kompilierten Code für alle drei Klassen enthalten.
 
 + Classpath darf nicht länger als die deklarierten Wert (`DECLARE @myClassPath nvarchar(50)`). Wenn dies der Fall ist, der Pfad auf die ersten 50 Zeichen abgeschnitten, und der kompilierte Code wird nicht geladen werden. Sie erreichen eine `SELECT @myClassPath` um den Wert überprüfen. Erhöhen Sie die Länge, wenn es sich bei 50 Zeichen ist nicht ausreichend. 
 

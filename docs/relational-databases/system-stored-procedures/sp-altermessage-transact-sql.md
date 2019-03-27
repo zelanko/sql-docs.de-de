@@ -18,12 +18,12 @@ ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f41f7b31f928a60342deefcc85a8f71bc707dba
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: df2bab593e0e945e854e310a394abbc93f75efa4
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168860"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493122"
 ---
 # <a name="spaltermessage-transact-sql"></a>sp_altermessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +42,15 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@message_id =** ] *Message_number*  
+ [**@message_id =** ] *message_number*  
  Ist die Fehlernummer der Meldung zu ändernden **sys.messages**. *Message_number* ist **Int** hat keinen Standardwert.  
   
- [  **@parameter =** ] **"**_schreiben\_zu\_Log_"  
- Wird zusammen mit **@parameter_value** , um anzugeben, dass die Nachricht an die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anwendungsprotokoll. *Write_to_log* ist **Sysname** hat keinen Standardwert. *Write_to_log* muss auf WITH_LOG oder NULL festgelegt werden. Wenn *Write_to_log* nastaven NA hodnotu WITH_LOG oder NULL, und der Wert für **@parameter_value** ist **"true"**, wird die Meldung in das Windows-Anwendungsprotokoll geschrieben. Wenn *Write_to_log* nastaven NA hodnotu WITH_LOG oder NULL, und der Wert für **@parameter_value** ist **"false"**, die Nachricht nicht immer in das Windows-Anwendungsprotokoll geschrieben, aber möglicherweise geschrieben, je nachdem wie der Fehler ausgelöst wurde. Wenn *Write_to_log* angegeben ist, den Wert für **@parameter_value** muss auch angegeben werden.  
+`[ @parameter = ] 'write\_to\_log_'` Wird zusammen mit **@parameter_value** , um anzugeben, dass die Nachricht an die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anwendungsprotokoll. *Write_to_log* ist **Sysname** hat keinen Standardwert. *Write_to_log* muss auf WITH_LOG oder NULL festgelegt werden. Wenn *Write_to_log* nastaven NA hodnotu WITH_LOG oder NULL, und der Wert für **@parameter_value** ist **"true"**, wird die Meldung in das Windows-Anwendungsprotokoll geschrieben. Wenn *Write_to_log* nastaven NA hodnotu WITH_LOG oder NULL, und der Wert für **@parameter_value** ist **"false"**, die Nachricht nicht immer in das Windows-Anwendungsprotokoll geschrieben, aber möglicherweise geschrieben, je nachdem wie der Fehler ausgelöst wurde. Wenn *Write_to_log* angegeben ist, den Wert für **@parameter_value** muss auch angegeben werden.  
   
 > [!NOTE]  
 >  Wenn eine Meldung in das Windows-Anwendungsprotokoll geschrieben wird, wird sie auch in die [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Fehlerprotokolldatei geschrieben.  
   
- [  **@parameter_value =** ]**"**_Wert_"  
- Wird zusammen mit **@parameter** , um anzugeben, dass der Fehler an die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anwendungsprotokoll. *Wert* ist **varchar(5)**, hat keinen Standardwert. Wenn **"true"**, der Fehler wird immer in das Windows-Anwendungsprotokoll geschrieben. Wenn **"false"**, der Fehler nicht immer in das Windows-Anwendungsprotokoll geschrieben, sondern kann geschrieben werden, je nachdem wie der Fehler ausgelöst wurde. Wenn *Wert* angegeben wird, *Write_to_log* für **@parameter** muss auch angegeben werden.  
+`[ @parameter_value = ]'value_'` Wird zusammen mit **@parameter** , um anzugeben, dass der Fehler an die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anwendungsprotokoll. *Wert* ist **varchar(5)**, hat keinen Standardwert. Wenn **"true"**, der Fehler wird immer in das Windows-Anwendungsprotokoll geschrieben. Wenn **"false"**, der Fehler nicht immer in das Windows-Anwendungsprotokoll geschrieben, sondern kann geschrieben werden, je nachdem wie der Fehler ausgelöst wurde. Wenn *Wert* angegeben wird, *Write_to_log* für **@parameter** muss auch angegeben werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

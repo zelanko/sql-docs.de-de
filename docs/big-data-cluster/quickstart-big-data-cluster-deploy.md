@@ -5,17 +5,17 @@ description: Exemplarische Vorgehensweise eine Bereitstellung von SQL Server-201
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d3567b3bc82a97c831abac252bebd0c523ed3fac
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: b89ec7cd24ed61f08cf44f934066a9b0fc619434
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227113"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493553"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Schnellstart: Bereitstellen von SQL Server-big Data-Cluster in Azure Kubernetes Service (AKS)
 
@@ -160,7 +160,7 @@ kubectl get svc endpoint-service-proxy -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> In CTP 2.3 von sehen eine sicherheitswarnung Sie beim Zugreifen auf die Webseite, da es sich bei big Data-Cluster derzeit automatisch generierte SSL-Zertifikate verwendet.
+> In der CTP-Version 2.4 sehen eine sicherheitswarnung Sie beim Zugreifen auf die Webseite, da es sich bei big Data-Cluster derzeit automatisch generierte SSL-Zertifikate verwendet.
 
 ## <a name="connect-to-the-cluster"></a>Verbinden mit dem cluster
 

@@ -5,17 +5,17 @@ description: In diesem Tutorial wird veranschaulicht, wie zum Erfassen von Daten
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 086db0838eb02b0e83ffbb2f00b92d39e1e4d202
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 0a3e39e5eb38f44c439dabd9e4fc3bdcb23d283a
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017668"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493812"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Tutorial: Erfassen von Daten in einen Pool des SQL Server-Daten mit Transact-SQL
 
@@ -69,7 +69,7 @@ Die folgenden Schritte Erstellen einer externen Tabelle, in dem Datenpool mit de
       );
    ```
   
-1. In CTP 2.3 von die Erstellung des Pools Daten ist asynchron, aber es gibt keine Möglichkeit, um zu bestimmen, wenn er noch abgeschlossen ist. Warten Sie zwei Minuten lang, um sicherzustellen, dass die Datenpool erstellt wird, bevor Sie fortfahren.
+1. In der CTP-Version 2.4 die Erstellung des Pools Daten ist asynchron, aber es gibt keine Möglichkeit, um zu bestimmen, wenn er noch abgeschlossen ist. Warten Sie zwei Minuten lang, um sicherzustellen, dass die Datenpool erstellt wird, bevor Sie fortfahren.
 
 ## <a name="load-data"></a>Laden von Daten
 

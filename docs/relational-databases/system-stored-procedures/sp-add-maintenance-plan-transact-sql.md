@@ -18,12 +18,12 @@ ms.assetid: 01ab1834-6260-47cb-a1b7-20722217b062
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 18467e53e2edec21ab91e91a0fe912e9382b35d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dea1ce298f9c032b785ced601a0d50d52fbb6f96
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642394"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492902"
 ---
 # <a name="spaddmaintenanceplan-transact-sql"></a>sp_add_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47642394"
   Fügt einen Wartungsplan hinzu und gibt seine Plan-ID zurück.  
   
 > [!NOTE]  
->  Diese gespeicherte Prozedur wird mit Datenbankwartungsplänen verwendet. Diese Funktion wurde durch Wartungspläne ersetzt, die nicht diese gespeicherte Prozedur verwenden. Verwenden Sie diese Prozedur, um Datenbankwartungspläne für Installationen bereitzustellen, die von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktualisiert wurden.  
+>  Diese gespeicherte Prozedur wird mit Datenbankwartungsplänen verwendet. Diese Funktion wurde durch Wartungspläne ersetzt, die nicht diese gespeicherte Prozedur verwenden. Verwenden Sie diese Prozedur, um Datenbankwartungspläne für Installationen bereitzustellen, die von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aktualisiert wurden.  
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
@@ -46,10 +46,9 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@plan_name =**] **"***Plan_name***"**  
- Gibt den Namen des Wartungsplans an, der hinzugefügt werden soll. *Plan_name* ist **varchar(128)**.  
+`[ @plan_name = ] 'plan_name'` Gibt den Namen des Wartungsplans hinzugefügt werden. *Plan_name* ist **varchar(128)**.  
   
- **@plan_id = '** *Plan_id* **"**  
+ **@plan_id = '** *plan_id* **'**  
  Gibt die ID des Wartungsplans an. *Plan_id* ist **Uniqueidentifier**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

@@ -16,12 +16,12 @@ ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 508eaa25657393dba0d84e0bda6eb0582b3f90fb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 399fe5322cb8cb5c3d20a486aac3baa810439ce7
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822074"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492353"
 ---
 # <a name="spadjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publication=**] **'***publication***'**  
- Der Name der Veröffentlichung, in der neue Identitätsbereiche erneut zugeordnet werden. *Veröffentlichung* ist **Sysname**, hat den Standardwert NULL.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung, in der neue Identitätsbereiche erneut zugeordnet werden. *Veröffentlichung* ist **Sysname**, hat den Standardwert NULL.  
   
- [ **@table_name=**] **'***table_name***'**  
- Der Name der Tabelle, in der neue Identitätsbereiche erneut zugeordnet werden. *TABLE_NAME* ist **Sysname**, hat den Standardwert NULL.  
+`[ @table_name = ] 'table_name'` Ist der Name der Tabelle in der neue Identitätsbereiche erneut zugeordnet werden. *TABLE_NAME* ist **Sysname**, hat den Standardwert NULL.  
   
- [ **@table_owner=**] **'***table_owner***'**  
- Der Besitzer der Tabelle beim Verleger. *Table_owner* ist **Sysname**, hat den Standardwert NULL. Wenn *Table_owner* nicht angegeben ist, wird der Name des aktuellen Benutzers verwendet.  
+`[ @table_owner = ] 'table_owner'` Ist der Besitzer der Tabelle auf dem Verleger. *Table_owner* ist **Sysname**, hat den Standardwert NULL. Wenn *Table_owner* nicht angegeben ist, wird der Name des aktuellen Benutzers verwendet.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

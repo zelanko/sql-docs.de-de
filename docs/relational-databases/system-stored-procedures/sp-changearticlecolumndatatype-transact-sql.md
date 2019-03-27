@@ -16,12 +16,12 @@ ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07213247345280e992c2fbd5552d5cdfb96747ab
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 31895afacaee167bccf5144f1ab94e344a36be5f
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133560"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492470"
 ---
 # <a name="spchangearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,26 +48,19 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication=** ] **"**_Veröffentlichung_**"**  
- Der Name der Oracle-Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Ist der Name der Oracle-Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@article =** ] **"**_Artikel_**"**  
- Der Name des Artikels. *Artikel* ist **Sysname**, hat keinen Standardwert.  
+`[ @article = ] 'article'` Ist der Name des Artikels. *Artikel* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@column**=] **"**_Spalte_**"**  
- Der Name der Spalte, für die die Datentypzuordnung geändert werden soll. *Spalte* ist **Sysname**, hat keinen Standardwert.  
+`[ @column = ] 'column'` Der Name der Spalte, für die so ändern Sie den Datentyp zuordnen. *Spalte* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@type** =] **"**_Typ_**"**  
- Der Name des der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp in der Zielspalte. *Typ* ist **Sysname**, hat den Standardwert NULL.  
+`[ @type = ] 'type'` Der Name des der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp in der Zielspalte. *Typ* ist **Sysname**, hat den Standardwert NULL.  
   
- [ **@length** =] *Länge*  
- Die Länge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyps in der Zielspalte. *Länge* ist **Bigint**, hat den Standardwert NULL.  
+`[ @length = ] length` Die Länge der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp in der Zielspalte. *Länge* ist **Bigint**, hat den Standardwert NULL.  
   
- [ **@precision**=] *mit einfacher Genauigkeit*  
- Die Genauigkeit des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyps in der Zielspalte. *Genauigkeit* ist **Bigint**, hat den Standardwert NULL.  
+`[ @precision = ] precision` Die Genauigkeit des der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp in der Zielspalte. *Genauigkeit* ist **Bigint**, hat den Standardwert NULL.  
   
- [ **@publisher**=] **"**_Verleger_**"**  
- Gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

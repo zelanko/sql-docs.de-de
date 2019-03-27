@@ -18,12 +18,12 @@ ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eefd9b73f4e249df57aa03ef0453a864eab2fd77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ead23c8feb428772fcde5bcdb59f19e1a23b6cd9
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838848"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492842"
 ---
 # <a name="spaddtype-transact-sql"></a>sp_addtype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +45,9 @@ sp_addtype [ @typename = ] type,
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@typename=** ] *Typ*  
- Der Name des Aliasdatentyps. Namen müssen den Regeln für Alias entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md) und muss in jeder Datenbank eindeutig sein. *Typ* ist **Sysname**, hat keinen Standardwert.  
+`[ @typename = ] type` Ist der Name des aliasdatentyps. Namen müssen den Regeln für Alias entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md) und muss in jeder Datenbank eindeutig sein. *Typ* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@phystype=**] *System_data_type*  
- Der physische oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitgestellte Datentyp, die auf dem der Aliasdatentyp basiert. *System_data_type* ist **Sysname**und hat keinen Standardwert und kann diese Werte sind möglich:  
+`[ @phystype = ] system_data_type` Der physische oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitgestellte Datentyp, die auf dem der Aliasdatentyp basiert. *System_data_type* ist **Sysname**und hat keinen Standardwert und kann diese Werte sind möglich:  
   
 ||||  
 |-|-|-|  
@@ -70,11 +68,10 @@ sp_addtype [ @typename = ] type,
  *P*  
  Eine nicht negative ganze Zahl, die die maximale Anzahl der Dezimalstellen angibt, die vor und nach dem Dezimalzeichen gespeichert werden können. Weitere Informationen finden Sie unter [decimal und numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
- *S*  
+ *s*  
  Eine nicht negative ganze Zahl, die die maximale Anzahl der Dezimalstellen angibt, die nach dem Dezimalzeichen gespeichert werden können. Diese Zahl muss kleiner oder gleich der Gesamtzahl der Stellen sein. Weitere Informationen finden Sie unter [decimal und numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
- [  **@nulltype =** ] **"***Null_type***"**  
- Gibt an, wie der Aliasdatentyp NULL-Werte behandelt. *Null_type* ist **Varchar (** 8 **)**, hat den Standardwert NULL und muss in einfache Anführungszeichen ('NULL', 'NOT NULL' oder 'NONULL') eingeschlossen werden. Wenn *Null_type* nicht explizit durch definiert **Sp_addtype**, wird er auf die aktuelle Standard-NULL-Zulässigkeit festgelegt. Verwenden Sie die GETANSINULL-Systemfunktion, um die aktuelle Standard-NULL-Zulässigkeit zu ermitteln. Diese kann mithilfe der SET-Anweisung oder ALTER DATABASE angepasst werden. Die NULL-Zulässigkeit sollte explizit definiert werden. Wenn **@phystype** ist **Bit**, und **@nulltype** nicht angegeben ist, wird der Standardwert ist NULL.  
+`[ @nulltype = ] 'null_type'` Gibt an, wie der Aliasdatentyp null-Werte behandelt. *Null_type* ist **Varchar (** 8 **)**, hat den Standardwert NULL und muss in einfache Anführungszeichen ('NULL', 'NOT NULL' oder 'NONULL') eingeschlossen werden. Wenn *Null_type* nicht explizit durch definiert **Sp_addtype**, wird er auf die aktuelle Standard-NULL-Zulässigkeit festgelegt. Verwenden Sie die GETANSINULL-Systemfunktion, um die aktuelle Standard-NULL-Zulässigkeit zu ermitteln. Diese kann mithilfe der SET-Anweisung oder ALTER DATABASE angepasst werden. Die NULL-Zulässigkeit sollte explizit definiert werden. Wenn **@phystype** ist **Bit**, und **@nulltype** nicht angegeben ist, wird der Standardwert ist NULL.  
   
 > [!NOTE]  
 >  Die *Null_type* -Parameter definiert nur die standardmäßige NULL-Zulässigkeit für diesen Datentyp. Wenn der Aliasdatentyp beim Erstellen der Tabelle verwendet und die NULL-Zulässigkeit explizit definiert wurde, hat diese Vorrang vor der definierten NULL-Zulässigkeit. Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md) und [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
@@ -142,7 +139,7 @@ GO
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
  [sp_bindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
  [sp_bindrule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
- [Sp_droptype &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droptype-transact-sql.md)   
+ [sp_droptype &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droptype-transact-sql.md)   
  [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
  [sp_unbindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
  [sp_unbindrule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   

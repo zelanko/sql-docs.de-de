@@ -16,12 +16,12 @@ ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 31ada2bfb184e24011ee91dde82fc9abfb319320
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6f2843456f4f95d1019b51f82082d59977ce14d5
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777912"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493695"
 ---
 # <a name="spaddmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,43 +46,34 @@ sp_addmergefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication=** ] **"**_Veröffentlichung_**"**  
- Der Name der Veröffentlichung, in der der Mergefilter hinzugefügt wird. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung, in der der Mergefilter hinzugefügt wird. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@article=** ] **"**_Artikel_**"**  
- Der Name des Artikels, für den der Mergefilter hinzugefügt wird. *Artikel* ist **Sysname**, hat keinen Standardwert.  
+`[ @article = ] 'article'` Ist der Name des Artikels auf der der Mergefilter hinzugefügt wird. *Artikel* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@filtername=** ] **"**_Filtername_**"**  
- Der Name des Filters. *Filtername* ist ein erforderlicher Parameter. *Filtername*ist **Sysname**, hat keinen Standardwert.  
+`[ @filtername = ] 'filtername'` Ist der Name des Filters. *Filtername* ist ein erforderlicher Parameter. *Filtername*ist **Sysname**, hat keinen Standardwert.  
   
- [  **@join_articlename=** ] **"**_Join_articlename_**"**  
- Ist der übergeordnete Artikel, der gemäß der untergeordneten Artikel, *Artikel*, muss hinzugefügt werden, mithilfe der Join-Klausel, die anhand des *Join_filterclause*, um die Zeilen im untergeordneten Artikel zu bestimmen, die erfüllen das Filterkriterium des Mergefilters. *Join_articlename* ist **Sysname**, hat keinen Standardwert. Der Artikel muss sich in der Veröffentlichung, die vom *Veröffentlichung*.  
+`[ @join_articlename = ] 'join_articlename'` Ist der übergeordnete Artikel, der gemäß der untergeordneten Artikel, *Artikel*, muss hinzugefügt werden, mithilfe der Join-Klausel, die anhand des *Join_filterclause*, um die Zeilen im untergeordneten Artikel zu bestimmen, die erfüllen das Filterkriterium des Mergefilters. *Join_articlename* ist **Sysname**, hat keinen Standardwert. Der Artikel muss sich in der Veröffentlichung, die vom *Veröffentlichung*.  
   
- [  **@join_filterclause=** ] *Join_filterclause*  
- Die Join-Klausel, die verwendet werden muss, um die angegebenen untergeordneten Artikels zu verknüpfen *Artikel*und vom angegebenen übergeordneten Artikels *Join_article*, um zu ermitteln, die Zeilen mit dem Kriterium des Mergefilters erfüllen. *Join_filterclause* ist **nvarchar(1000)**.  
+`[ @join_filterclause = ] join_filterclause` Die Join-Klausel, die verwendet werden muss, um die angegebenen untergeordneten Artikels zu verknüpfen *Artikel*und vom angegebenen übergeordneten Artikels *Join_article*, um zu ermitteln, die Zeilen mit dem Kriterium des Mergefilters erfüllen. *Join_filterclause* ist **nvarchar(1000)**.  
   
- [  **@join_unique_key=** ] *Join_unique_key*  
- Gibt an, ob der Join zwischen dem untergeordneten Artikel *Artikel*und dem übergeordneten Artikel *Join_article*ist 1: n, 1: 1, n: 1- oder m: n. *Join_unique_key* ist **Int**, hat den Standardwert 0. **0** gibt einen n: 1- oder m: n Join. **1** gibt einen 1: 1- oder 1: n Join. Dieser Wert ist **1** Wenn bilden die zu verknüpfenden Spalten einen eindeutigen Schlüssel in *Join_article*, oder wenn *Join_filterclause* zwischen einem Fremdschlüssel in *Artikel* und einen Primärschlüssel in *Join_article*.  
+`[ @join_unique_key = ] join_unique_key` Gibt an, ob der Join zwischen dem untergeordneten Artikel *Artikel*und dem übergeordneten Artikel *Join_article*ist 1: n, 1: 1, n: 1- oder m: n. *Join_unique_key* ist **Int**, hat den Standardwert 0. **0** gibt einen n: 1- oder m: n Join. **1** gibt einen 1: 1- oder 1: n Join. Dieser Wert ist **1** Wenn bilden die zu verknüpfenden Spalten einen eindeutigen Schlüssel in *Join_article*, oder wenn *Join_filterclause* zwischen einem Fremdschlüssel in *Artikel* und einen Primärschlüssel in *Join_article*.  
   
 > [!CAUTION]  
 >  Legen Sie diesen Parameter nur auf **1** , wenn Sie eine Einschränkung für die verknüpfte Spalte in der zugrunde liegenden Tabelle für den übergeordneten Artikel vorliegt, die die Eindeutigkeit sicherstellt. Wenn *Join_unique_key* nastaven NA hodnotu **1** fälschlicherweise eine mangelnde Konvergenz der Daten auftreten.  
   
- [  **@force_invalidate_snapshot=** ] *Force_invalidate_snapshot*  
- Bestätigt, dass durch die von dieser gespeicherten Prozedur ausgeführte Aktion möglicherweise eine vorhandene Momentaufnahme ungültig wird. *Force_invalidate_snapshot* ist eine **Bit**, hat den Standardwert **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion eine vorhandene Momentaufnahme für ungültig erklären kann. *Force_invalidate_snapshot* ist eine **Bit**, hat den Standardwert **0**.  
   
  **0** gibt an, dass Änderungen am Mergeartikel nicht die Momentaufnahme ungültig werden. Wenn die gespeicherte Prozedur erkennt, dass die Änderung eine neue Momentaufnahme erforderlich ist, tritt ein Fehler auf, und werden keine Änderungen vorgenommen.  
   
  **1** gibt an, dass Änderungen am Mergeartikel kann dazu führen, dass die Momentaufnahme ungültig wird, und wenn es sind Abonnements vorhanden, die eine neue Momentaufnahme erfordern würden Berechtigung erteilt, die vorhandene Momentaufnahme als veraltet zu markieren und eine neue Momentaufnahme generiert.  
   
- [  **@force_reinit_subscription=** ] *Force_reinit_subscription*  
- Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion die erneute Initialisierung vorhandener Abonnements erfordern kann. *Force_reinit_subscription* ist eine **Bit**, hat den Standardwert 0.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion die erneute Initialisierung vorhandener Abonnements erfordern kann. *Force_reinit_subscription* ist eine **Bit**, hat den Standardwert 0.  
   
  **0** gibt an, dass Änderungen am Mergeartikel nicht werden dazu, dass das Abonnement erneut initialisiert werden. Wenn die gespeicherte Prozedur erkennt, dass die Änderung die erneute Initialisierung von Abonnements erfordert, tritt ein Fehler auf, und es werden keine Änderungen durchgeführt.  
   
  **1** gibt an, dass Änderungen am Mergeartikel vorhandene Abonnements erneut initialisiert werden, bewirken und erteilt die Berechtigung für die Initialisierung des Abonnements erfolgen.  
   
- [  **@filter_type=** ] *Filter_type*  
- Gibt den Typ des Filters an, der hinzugefügt wird. *Filter_type* ist **Tinyint**, und kann einen der folgenden Werte.  
+`[ @filter_type = ] filter_type` Gibt den Typ des Filters, der hinzugefügt wird. *Filter_type* ist **Tinyint**, und kann einen der folgenden Werte.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -122,7 +113,7 @@ sp_addmergefilter [ @publication = ] 'publication'
  [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [sp_changemergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
  [sp_dropmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
- [Sp_helpmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
+ [sp_helpmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

@@ -18,12 +18,12 @@ ms.assetid: 5bcb4df7-6df3-4f2b-9207-b97b5addf2a6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: df800e141a922250cea37eee1aeee5af6f373f7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a84ed0105558772752f4d9871ad28a5bffde6bec
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650228"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493072"
 ---
 # <a name="spchangelogshippingsecondaryprimary-transact-sql"></a>sp_change_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,33 +48,25 @@ sp_change_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@primary_server** =] '*Primary_server*"  
- Der Name der primären Instanz von der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in der Protokollversandkonfiguration. *primary_server* ist vom Datentyp **sysname** und darf nicht NULL sein.  
+`[ @primary_server = ] 'primary_server'` Der Name der primären Instanz von der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in der Protokollversandkonfiguration. *primary_server* ist vom Datentyp **sysname** und darf nicht NULL sein.  
   
- [ **@primary_database** =] '*Primary_database*"  
- Der Name der Datenbank auf dem primären Server. *primary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @primary_database = ] 'primary_database'` Ist der Name der Datenbank auf dem primären Server. *primary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
- [ **@backup_source_directory** =] '*Backup_source_directory*"  
- Das Verzeichnis, in dem die Dateien der Transaktionsprotokollsicherung gespeichert werden. *backup_source_directory* ist vom Datentyp **nvarchar(500)** und darf nicht NULL sein.  
+`[ @backup_source_directory = ] 'backup_source_directory'` Das Verzeichnis, in dem Sicherungsdateien des Transaktionsprotokolls vom primären Server gespeichert sind. *backup_source_directory* ist vom Datentyp **nvarchar(500)** und darf nicht NULL sein.  
   
- [ **@backup_destination_directory** =] '*Backup_destination_directory*"  
- Das Verzeichnis auf dem sekundären Server, in das Sicherungsdateien kopiert werden *backup_destination_directory* ist vom Datentyp **nvarchar(500)** und darf nicht NULL sein.  
+`[ @backup_destination_directory = ] 'backup_destination_directory'` Das Verzeichnis auf dem sekundären Server, in dem Sicherungsdateien kopiert werden. *backup_destination_directory* ist vom Datentyp **nvarchar(500)** und darf nicht NULL sein.  
   
- [ **@file_retention_period** =] '*File_retention_period*"  
- Der Zeitraum (in Minuten), für den der Verlauf beibehalten wird. *history_retention_period* ist vom Datentyp **int**. Der Standardwert ist NULL. Der Wert 14420 wird verwendet, falls kein anderer Wert angegeben wird.  
+`[ @file_retention_period = ] 'file_retention_period'` Ist die Zeitdauer in Minuten, die in denen der Verlauf beibehalten werden. *history_retention_period* ist vom Datentyp **int**. Der Standardwert ist NULL. Der Wert 14420 wird verwendet, falls kein anderer Wert angegeben wird.  
   
- [ **@monitor_server_security_mode** =] '*Monitor_server_security_mode*"  
- Der Sicherheitsmodus, der zum Herstellen einer Verbindung mit dem Überwachungsserver verwendet wird.  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` Der Sicherheitsmodus, der für die Verbindung mit dem Überwachungsserver verwendet wird.  
   
  1 = Windows-Authentifizierung;  
   
  0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. *monitor_server_security_mode* ist vom Datentyp **bit** und darf nicht NULL sein.  
   
- [ **@monitor_server_login** =] '*Monitor_server_login*"  
- Der Benutzername für das Konto, das zum Zugreifen auf den Überwachungsserver verwendet wird.  
+`[ @monitor_server_login = ] 'monitor_server_login'` Ist der Benutzername des Kontos, auf dem Überwachungsserver verwendet.  
   
- [ **@monitor_server_password** =] '*Monitor_server_password*"  
- Das Kennwort des Kontos, das zum Zugreifen auf den Überwachungsserver verwendet wird.  
+`[ @monitor_server_password = ] 'monitor_server_password'` Ist das Kennwort des Kontos, auf dem Überwachungsserver verwendet.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

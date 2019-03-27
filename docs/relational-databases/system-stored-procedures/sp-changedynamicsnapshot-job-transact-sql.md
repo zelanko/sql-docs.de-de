@@ -16,12 +16,12 @@ ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f699a4f7dcf333301889211a0db45248935acdce
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8ab11ccb8853c00439583162f33e76d0e14622a1
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130200"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493142"
 ---
 # <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,17 +52,13 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publication =** ] **'***publication***'**  
- Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@dynamic_snapshot_jobname =** ] **'***dynamic_snapshot_jobname***'**  
- Der Name des Momentaufnahmeauftrags, der geändert wird. *Dynamic_snapshot_jobname*ist **Sysname**, Standardwert N '% s'. Wenn *Dynamic_snapshot_jobid* wird angegeben, muss den Standardwert für *Dynamic_snapshot_jobname*.  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` Der Name des momentaufnahmeauftrags, der geändert wird. *Dynamic_snapshot_jobname*ist **Sysname**, Standardwert N '% s'. Wenn *Dynamic_snapshot_jobid* wird angegeben, muss den Standardwert für *Dynamic_snapshot_jobname*.  
   
- [ **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
- Die ID des Momentaufnahmeauftrags, der geändert wird. *Dynamic_snapshot_jobid* ist **Uniqueidentifier**, mit dem Standardwert NULL. Wenn *Dynamic_snapshot_jobname*wird angegeben, muss den Standardwert für *Dynamic_snapshot_jobid*.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` Die ID des momentaufnahmeauftrags, der geändert wird. *Dynamic_snapshot_jobid* ist **Uniqueidentifier**, mit dem Standardwert NULL. Wenn *Dynamic_snapshot_jobname*wird angegeben, muss den Standardwert für *Dynamic_snapshot_jobid*.  
   
- [  **@frequency_type =** ] *Frequency_type*  
- Die Häufigkeit für die Zeitplanung des Agents. *Frequency_type* ist **Int**, und kann einen der folgenden Werte.  
+`[ @frequency_type = ] frequency_type` Ist die Häufigkeit, mit dem Planen des Agents. *Frequency_type* ist **Int**, und kann einen der folgenden Werte.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -76,8 +72,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**128**|Wiederholt|  
 |NULL (Standard)||  
   
- [  **@frequency_interval =** ] *Frequency_interval*  
- Die Tage, an denen der Agent ausgeführt wird. *Frequency_interval* ist **Int**, und kann einen der folgenden Werte.  
+`[ @frequency_interval = ] frequency_interval` Die Tage, die der Agent ausgeführt wird. *Frequency_interval* ist **Int**, und kann einen der folgenden Werte.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -93,8 +88,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**10**|Wochenendtage|  
 |NULL (Standard)||  
   
- [  **@frequency_subday =** ] *Frequency_subday*  
- Die Häufigkeit für die erneute geplante Ausführung während des definierten Zeitraums. *Frequency_subday* ist **Int**, und kann einen der folgenden Werte.  
+`[ @frequency_subday = ] frequency_subday` Ist die Häufigkeit für die erneute geplante Ausführung während des definierten Zeitraums. *Frequency_subday* ist **Int**, und kann einen der folgenden Werte.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -104,11 +98,9 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**8**|Hour|  
 |NULL (Standard)||  
   
- [  **@frequency_subday_interval =** ] *Frequency_subday_interval*  
- Das Intervall für *Frequency_subday*. *Frequency_subday_interval* ist **Int**, hat den Standardwert NULL.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Das Intervall für *Frequency_subday*. *Frequency_subday_interval* ist **Int**, hat den Standardwert NULL.  
   
- [  **@frequency_relative_interval =** ] *Frequency_relative_interval*  
- Das Datum, an dem der Merge-Agent ausgeführt wird. Dieser Parameter wird verwendet, wenn *Frequency_type* nastaven NA hodnotu **32** (mit relativem Monatsintervall). *Frequency_relative_interval* ist **Int**, und kann einen der folgenden Werte.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Ist das Datum, das der Merge-Agent ausgeführt wird. Dieser Parameter wird verwendet, wenn *Frequency_type* nastaven NA hodnotu **32** (mit relativem Monatsintervall). *Frequency_relative_interval* ist **Int**, und kann einen der folgenden Werte.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -119,26 +111,19 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**16**|Letzter|  
 |NULL (Standard)||  
   
- [  **@frequency_recurrence_factor =** ] *Frequency_recurrence_factor*  
- Wird von verwendete Wiederholungsfaktor *Frequency_type*. *Frequency_recurrence_factor* ist **Int**, hat den Standardwert NULL.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Wird von verwendete Wiederholungsfaktor *Frequency_type*. *Frequency_recurrence_factor* ist **Int**, hat den Standardwert NULL.  
   
- [ **@active_start_date =** ] *active_start_date*  
- Das Datum, an dem der Merge-Agent zum ersten Mal geplant ist. Dabei wird das Format JJJJMMTT verwendet. *Active_start_date* ist **Int**, hat den Standardwert NULL.  
+`[ @active_start_date = ] active_start_date` Das Datum, an den Merge-Agent zuerst ist geplant Format: YYYYMMDD. *Active_start_date* ist **Int**, hat den Standardwert NULL.  
   
- [ **@active_end_date =** ] *active_end_date*  
- Das Datum, ab dem der Merge-Agent nicht mehr geplant ist. Dabei wird das Format JJJJMMTT verwendet. *Active_end_date* ist **Int**, hat den Standardwert NULL.  
+`[ @active_end_date = ] active_end_date` Ist das Datum, ab der Merge-Agent nicht mehr, geplant JJJJMMTT. *Active_end_date* ist **Int**, hat den Standardwert NULL.  
   
- [  **@active_start_time_of_day =** ] *Active_start_time_of_day*  
- Die Tageszeit, zu der der Merge-Agent zum ersten Mal geplant ist. Dabei wird das Format HHMMSS verwendet. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert NULL.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Die Tageszeit aus, wenn der Merge-Agent zuerst ist, wird geplant HHMMSS. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert NULL.  
   
- [  **@active_end_time_of_day =** ] *Active_end_time_of_day*  
- Die Tageszeit, ab der der Merge-Agent nicht mehr geplant ist. Dabei wird das Format HHMMSS verwendet. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert NULL.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Die Tageszeit, ab der Merge-Agent nicht mehr, wird geplant ist HHMMSS verwendet. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert NULL.  
   
- [  **@job_login=** ] **"***Job_login***"**  
- Das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto, unter dem der Momentaufnahme-Agent ausgeführt wird, wenn mit einem parametrisierten Zeilenfilter die Momentaufnahme für ein Abonnement generiert wird. *Job_login* ist **nvarchar(257)**, hat den Standardwert NULL.  
+`[ @job_login = ] 'job_login'` Ist die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto, unter dem der Momentaufnahme-Agent ausgeführt wird, wenn die Momentaufnahme für ein Abonnement mit einem parametrisierten Zeilenfilter generiert. *Job_login* ist **nvarchar(257)**, hat den Standardwert NULL.  
   
- [  **@job_password=** ] **"***Job_password***"**  
- Das Kennwort für das Windows-Konto, unter dem der Momentaufnahme-Agent ausgeführt wird, wenn mit einem parametrisierten Zeilenfilter die Momentaufnahme für ein Abonnement generiert wird. *Job_password* ist **nvarchar(257)**, hat den Standardwert NULL.  
+`[ @job_password = ] 'job_password'` Das Kennwort für das Windows-Konto, unter dem der Momentaufnahme-Agent ausgeführt wird, wenn die Momentaufnahme für ein Abonnement generiert, wird einen parametrisierter Zeilenfilter verwendet werden. *Job_password* ist **nvarchar(257)**, hat den Standardwert NULL.  
   
 > [!IMPORTANT]  
 >  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden müssen, muss die Datei an einem sicheren Ort gespeichert werden, um unberechtigten Zugriff zu vermeiden.  

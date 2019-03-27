@@ -6,20 +6,20 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: craigg
-ms.date: 02/29/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 04f493109997d4b673a6a308de5c9ebee6eac7e4
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: 1199d8d522df83c626f04f30c8937b57a5359f5c
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57239127"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493773"
 ---
 # <a name="configure-hdfs-tiering-on-sql-server-2019-big-data-clusters"></a>Konfigurieren von HDFS cloudtiering auf SQL Server-2019 big Data-Cluster
 
-HDFS-Tiering bietet die Möglichkeit zum Bereitstellen von externen, HDFS-kompatiblen Dateisystem in HDFS. In diesem Artikel wird erläutert, wie HDFS, die Staffelung für SQL Server-2019 big Data-Clustern (Vorschau) zu konfigurieren. Zu diesem Zeitpunkt unterstützt CTP 2.3 nur die Verbindung mit Azure Data Lake-Speicher Gen2, die den Schwerpunkt dieses Artikels ist.
+HDFS-Tiering bietet die Möglichkeit zum Bereitstellen von externen, HDFS-kompatiblen Dateisystem in HDFS. In diesem Artikel wird erläutert, wie HDFS, die Staffelung für SQL Server-2019 big Data-Clustern (Vorschau) zu konfigurieren. Zu diesem Zeitpunkt unterstützt CTP 2.4 nur die Verbindung mit Azure Data Lake-Speicher Gen2, die den Schwerpunkt dieses Artikels ist.
 
 ## <a name="hdfs-tiering-overview"></a>HDFS-tiering-Übersicht
 
@@ -78,7 +78,7 @@ Die folgenden Schritte stellen remote HDFS-Speicher in Azure Data Lake in den lo
 1. Bereitstellen der remote-HDFS-Speicher in Azure mithilfe **Mssqlctl Speicher bereitstellen erstellen**. Ersetzen Sie die Platzhalter-Werte, bevor Sie den folgenden Befehl ausführen:
 
    ```bash
-   mssqlctl storage mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --local-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
+   mssqlctl storage mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
    ```
 
    > [!NOTE]
@@ -97,7 +97,7 @@ mssqlctl storage mount status
 Um den Status einer Bereitstellung in einem bestimmten Pfad in HDFS aufzulisten, verwenden Sie den folgenden Befehl aus:
 
 ```bash
-mssqlctl storage mount status --local-path <mount-path-in-hdfs>
+mssqlctl storage mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> Löschen Sie die Bereitstellung
@@ -105,7 +105,7 @@ mssqlctl storage mount status --local-path <mount-path-in-hdfs>
 Verwenden Sie zum Löschen der Bereitstellung der **Mssqlctl Speicher bereitstellen löschen** Befehl aus, und geben Sie den Bereitstellungspfad in HDFS:
 
 ```bash
-mssqlctl storage mount delete --local-path <mount-path-in-hdfs>
+mssqlctl storage mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="issues"></a> Bekannte Probleme und Einschränkungen

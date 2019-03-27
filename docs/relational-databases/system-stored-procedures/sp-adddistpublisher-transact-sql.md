@@ -16,12 +16,12 @@ ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 079e2591323b60ea86f93c3cbaedc423cc85d420
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c01d00362dc55deb1fa9da8df49beebdaf82b170
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135041"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492772"
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -48,55 +48,44 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publisher=**] **"**_Verleger_**"**  
- Der Name des Verlegers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher = ] 'publisher'` Ist der Name des Verlegers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@distribution_db=**] **"**_Distribution_db_**"**  
- Ist der Name der Verteilungsdatenbank. *Distributor_db* ist **Sysname**, hat keinen Standardwert. Dieser Parameter wird von Replikations-Agents zum Herstellen einer Verbindung zum Verleger verwendet.  
+`[ @distribution_db = ] 'distribution_db'` Ist der Name der Verteilungsdatenbank. *Distributor_db* ist **Sysname**, hat keinen Standardwert. Dieser Parameter wird von Replikations-Agents zum Herstellen einer Verbindung zum Verleger verwendet.  
   
- [  **@security_mode=**] *Security_mode*  
- Der implementierte Sicherheitsmodus. Dieser Parameter wird nur von Replikations-Agents verwendet, für die Verbindung mit dem Verleger für Abonnements mit verzögertem Aktualisieren oder mit einer nicht - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Security_mode* ist **Int**, und kann einen der folgenden Werte sein.  
+`[ @security_mode = ] security_mode` Ist der implementierte Sicherheitsmodus. Dieser Parameter wird nur von Replikations-Agents verwendet, für die Verbindung mit dem Verleger für Abonnements mit verzögertem Aktualisieren oder mit einer nicht - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Security_mode* ist **Int**, und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
 |**0**|Replikations-Agents auf dem Verteiler verwenden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung zum Herstellen einer Verbindung mit dem Verleger.|  
 |**1** (Standard)|Replikations-Agents auf dem Verteiler verwenden die Windows-Authentifizierung beim Herstellen einer Verbindung zum Verleger.|  
   
- [  **@login=**] **"**_Anmeldung_**"**  
- Ist die Anmeldung. Dieser Parameter ist erforderlich, wenn *Security_mode* ist **0**. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL. Dieser Parameter wird von Replikations-Agents zum Herstellen einer Verbindung zum Verleger verwendet.  
+`[ @login = ] 'login'` Ist die Anmeldung. Dieser Parameter ist erforderlich, wenn *Security_mode* ist **0**. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL. Dieser Parameter wird von Replikations-Agents zum Herstellen einer Verbindung zum Verleger verwendet.  
   
- [  **@password=**] **"**_Kennwort_**"**]  
- Ist das Kennwort. *Kennwort* ist **Sysname**, hat den Standardwert NULL. Dieser Parameter wird von Replikations-Agents zum Herstellen einer Verbindung zum Verleger verwendet.  
+`[ @password = ] 'password']` Ist das Kennwort. *Kennwort* ist **Sysname**, hat den Standardwert NULL. Dieser Parameter wird von Replikations-Agents zum Herstellen einer Verbindung zum Verleger verwendet.  
   
 > [!IMPORTANT]  
 >  Verwenden Sie kein leeres Kennwort. Verwenden Sie ein sicheres Kennwort.  
   
- [  **@working_directory=**] **"**_Working_directory_**"**  
- Der Name des Arbeitsverzeichnisses, das zum Speichern von Daten- und Schemadateien für die Veröffentlichung verwendet wird. *Working_directory* ist **nvarchar(255)**, und der Standardwert ist der Ordner ReplData für diese Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], z. B. `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`. Dieser Name sollte im UNC-Format angegeben werden.  
+`[ @working_directory = ] 'working_directory'` Ist der Name des Arbeitsverzeichnisses zum Speichern von Daten- und Schemadateien für die Veröffentlichung verwendet. *Working_directory* ist **nvarchar(255)**, und der Standardwert ist der Ordner ReplData für diese Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], z. B. `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`. Dieser Name sollte im UNC-Format angegeben werden.  
 
  Verwenden Sie für Azure SQL-Datenbank `\\<storage_account>.file.core.windows.net\<share>`.
 
- [  **@storage_connection_string =**] **"**_Storage_connection_string_**"**  
- Für SQL-Datenbank ist erforderlich. Verwenden Sie den Zugriffsschlüssel aus dem Azure-Portal unter Storage > Einstellungen.
+`[ @storage_connection_string = ] 'storage_connection_string'` Für SQL-Datenbank ist erforderlich. Verwenden Sie den Zugriffsschlüssel aus dem Azure-Portal unter Storage > Einstellungen.
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
 
- [  **@trusted=**] **"**_vertrauenswürdigen_**"**  
- Dieser Parameter wurde als veraltet markiert und steht nur aus Gründen der Abwärtskompatibilität zur Verfügung. *vertrauenswürdige* ist **nvarchar(5)**, und wenn diese Option auf einen anderen Wert **"false"** führt zu einem Fehler.  
+`[ @trusted = ] 'trusted'` Dieser Parameter ist veraltet und wird nur zur Abwärtskompatibilität bereitgestellt. *vertrauenswürdige* ist **nvarchar(5)**, und wenn diese Option auf einen anderen Wert **"false"** führt zu einem Fehler.  
   
- [  **@encrypted_password=**] *Encrypted_password*  
- Festlegen von *Encrypted_password* wird nicht mehr unterstützt. Es wird versucht, diese festgelegt **Bit** Parameter **1** führt zu einem Fehler.  
+`[ @encrypted_password = ] encrypted_password` Festlegen von *Encrypted_password* wird nicht mehr unterstützt. Es wird versucht, diese festgelegt **Bit** Parameter **1** führt zu einem Fehler.  
   
- [  **@thirdparty_flag =**] *Thirdparty_flag*  
- Gibt an, ob der Verleger ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger ist. *Thirdparty_flag* ist **Bit**, und kann einen der folgenden Werte.  
+`[ @thirdparty_flag = ] thirdparty_flag` Wenn der Verleger ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Thirdparty_flag* ist **Bit**, und kann einen der folgenden Werte.  
   
 |Wert|Description|  
 |-----------|-----------------|  
 |**0** (Standardwert)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
 |**1**|Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
   
- [ **@publisher_type**=] **"**_Publisher_type_**"**  
- Gibt den Verlegertyp an, wann der Verleger kein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger ist. *Publisher_type* ist vom Datentyp Sysname und kann einen der folgenden Werte sein.  
+`[ @publisher_type = ] 'publisher_type'` Gibt den verlegertyp an, beim Verleger nicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Publisher_type* ist vom Datentyp Sysname und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -121,7 +110,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren der Veröffentlichung und der Verteilung](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [sp_changedistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
- [Sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
+ [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Verteilung konfigurieren](../../relational-databases/replication/configure-distribution.md)  
