@@ -11,16 +11,16 @@ ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3f38de8f15e6e14d3822254812f98364104ea603
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80ef78038cad742dbe2105b6999d021ec41e8a3a
+ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603968"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58342892"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>Schritt 3: Proof of Concept für Verbindungen mit SQL mithilfe von ADO.NET
 
-- Vorherigen Artikel:&nbsp;&nbsp;&nbsp;[Schritt2: Erstellen einer SQL-Datenbank für die ADO.NET-Entwicklung](step-2-create-a-sql-database-for-ado-net-development.md)  
+- Vorheriger Artikel:&nbsp;&nbsp;&nbsp;[Schritt 2: Erstellen einer SQL-Datenbank für die ADO.NET-Entwicklung](step-2-create-a-sql-database-for-ado-net-development.md)  
 - Nächster Artikel:&nbsp;&nbsp;&nbsp;[Schritt 4: Herstellen stabiler SQL-Verbindungen mit ADO.NET](step-4-connect-resiliently-to-sql-with-ado-net.md)  
 
   
@@ -31,7 +31,7 @@ Dieses C#-Codebeispiel sollten einen Proof of Concept nur berücksichtigt werden
 Die Methode **SqlConnection.Open** wird verwendet, um eine Verbindung zur SQL-Datenbank herstellen.  
 
 
-```CSharp  
+```csharp
     // C# , ADO.NET  
     using System;
     using QC = System.Data.SqlClient;  // System.Data.dll  
@@ -74,7 +74,7 @@ Die SqlCommand.ExecuteReader-Methode:
   
   
   
-```CSharp  
+```csharp
     using System;  // C# , ADO.NET  
     using DT = System.Data;            // System.Data.dll  
     using QC = System.Data.SqlClient;  // System.Data.dll  
@@ -162,7 +162,7 @@ In diesem Beispiel wird veranschaulicht, wie Sie:
   
   
   
-```CSharp  
+```csharp
     using System;  // C# , ADO.NET  
     using DT = System.Data;            // System.Data.dll  
     using QC = System.Data.SqlClient;  // System.Data.dll  

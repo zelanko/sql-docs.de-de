@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2a6762f20c05a66c597474d33bd98e9bb8f2c5f4
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 88e309d5a7d2f0b1464298ebd1ded5ae31139e78
+ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589994"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356463"
 ---
 # <a name="osql-utility"></a>osql (Hilfsprogramm)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -262,7 +262,7 @@ osql -E -i titles.qry -o titles.res
 >  Wenn Sie **osql**verwenden, behandelt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] das Batchtrennzeichen GO als Syntaxfehler, falls es in einer SQL-Skriptdatei verwendet wird.  
   
 ## <a name="inserting-comments"></a>Einfügen von Kommentaren  
- Sie können Kommentare in eine Transact-SQL-Anweisung einschließen, die von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] osql **an**gesendet wird. Für Kommentare sind die beiden folgenden Formate zulässig: -- und /*...\*/.  
+ Sie können Kommentare in eine Transact-SQL-Anweisung einschließen, die von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] osql **an**gesendet wird. Für Kommentare sind die beiden folgenden Formate zulässig: `--` und `/*...*/`.  
   
 ## <a name="using-exit-to-return-results-in-osql"></a>Verwenden von EXIT zum Zurückgeben von Ergebnissen in "osql"  
  Sie können das Ergebnis einer SELECT-Anweisung als Rückgabewert von **osql**verwenden. Wenn numerisch, wird die letzte Spalte der letzten Ergebniszeile in eine 4 Byte lange ganze Zahl (Long) konvertiert. MS-DOS übergibt das niedrige Byte an den übergeordneten Prozess oder an die Fehlerebene des Betriebssystems. Windows übergibt die gesamte 4 Byte lange ganze Zahl. Die Syntax ist:  
