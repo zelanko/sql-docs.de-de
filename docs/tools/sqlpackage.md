@@ -2,19 +2,19 @@
 title: SqlPackage.exe | Microsoft-Dokumentation
 ms.prod: sql
 ms.technology: ssdt
-ms.date: 06/27/2018
+ms.date: 06/28/2018
 ms.reviewer: alayu; sstein
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: d9a3dc9088c833b3448927c1455052c40f185ec7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1204b3a4aabf4a170901154c656b5f84d05fda82
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033602"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527592"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -22,21 +22,21 @@ ms.locfileid: "56033602"
   
 - [Extract:](#help-for-the-extract-action) Erstellt eine Datenbankmomentaufnahme (DACPAC-Datei) von einer SQL Server- oder Azure SQL-Livedatenbank.  
   
-- [Publish:](#publish-parameters-properties-and-sqlcmd-variables) Aktualisiert ein Datenbankschema inkrementell, sodass dieses dem Schema einer DACPAC-Quelldatei entspricht Wenn die Datenbank auf dem Server nicht vorhanden ist, wird sie durch den Veröffentlichungsvorgang erstellt. Andernfalls wird eine vorhandene Datenbank aktualisiert.  
+- [Publish:](#publish-parameters-properties-and-sqlcmd-variables) Aktualisiert ein Datenbankschema inkrementell, sodass dieses dem Schema einer DACPAC-Quelldatei entspricht. Wenn die Datenbank auf dem Server nicht vorhanden ist, wird sie durch den Veröffentlichungsvorgang erstellt. Andernfalls wird eine vorhandene Datenbank aktualisiert.  
   
-- [Export](#export-parameters-and-properties): Exportiert eine Livedatenbank – einschließlich des Datenbankschemas und der Benutzerdaten – aus SQL Server oder Azure SQL-Datenbank in ein BACPAC-Paket (BACPAC-Datei).  
+- [Export:](#export-parameters-and-properties) Exportiert eine Livedatenbank – einschließlich des Datenbankschemas und der Benutzerdaten – aus SQL Server oder Azure SQL-Datenbank in ein BACPAC-Paket (BACPAC-Datei).  
   
-- [Import](#import-parameters-and-properties): Importiert das Schema und die Tabellendaten aus einem BACPAC-Paket in eine neue Benutzerdatenbank einer Instanz von SQL Server oder Azure SQL-Datenbank.  
+- [Import:](#import-parameters-and-properties) Importiert das Schema und die Tabellendaten aus einem BACPAC-Paket in eine neue Benutzerdatenbank einer Instanz von SQL Server oder Azure SQL-Datenbank.  
   
-- [DeployReport:](#deployreport-parameters-and-properties) Erstellt einen XML-Bericht der Änderungen, die durch eine Veröffentlichungsaktion vorgenommen würden  
+- [DeployReport:](#deployreport-parameters-and-properties) Erstellt einen XML-Bericht der Änderungen, die durch eine Veröffentlichung vorgenommen würden.  
   
-- [DriftReport](#driftreport-parameters): Erstellt einen XML-Bericht der Änderungen, die seit der letzten Registrierung an einer registrierten Datenbank vorgenommen wurden.  
+- [DriftReport:](#driftreport-parameters) Erstellt einen XML-Bericht der Änderungen, die seit der letzten Registrierung an einer registrierten Datenbank vorgenommen wurden.  
   
 - [Script:](#script-parameters-and-properties) Erstellt ein inkrementelles Transact-SQL-Updateskript, durch das das Schema eines Ziels aktualisiert wird, sodass es dem Schema einer Quelle entspricht.  
   
 In der Befehlszeile von **SqlPackage.exe** können diese Aktionen zusammen mit aktionsspezifischen Parametern und Eigenschaften angegeben werden.  
 
-**[Aktuelle Version herunterladen](sqlpackage-download.md)** Weitere Informationen über die neueste Version finden Sie unter den [Anmerkungen zu dieser Version](sqlpackage-release-notes.md).
+**[Aktuelle Version herunterladen](sqlpackage-download.md)** Weitere Informationen über die neueste Version finden Sie unter den [Anmerkungen zu dieser Version](release-notes-sqlpackage.md).
   
 ## <a name="command-line-syntax"></a>Befehlszeilensyntax
 
@@ -211,7 +211,7 @@ Eine Veröffentlichungsaktion von "SqlPackage.exe" aktualisiert inkrementell das
 |**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|Gibt an, dass eine Assembly bei einer Abweichung von der Veröffentlichungsaktion immer gelöscht und neu erstellt werden soll, anstatt eine ALTER ASSEMBLY-Anweisung auszugeben.|
 |**/p:**|PopulateFilesOnFileGroups = (BOOLESCHE "True")|Gibt an, ob beim Erstellen einer neuen FileGroup in der Zieldatenbank ebenfalls eine neue Datei erstellt wird.|
 |**/p:**|RegisterDataTierApplication=(BOOLEAN)|Gibt an, ob das Schema beim Datenbankserver registriert wird.|
-|**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|Gibt an, ob DeploymentPlanExecutor-Mitwirkende ausgeführt werden sollen, wenn andere Vorgänge ausgeführt werden.|
+|**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|Gibt an, ob DeploymentPlanExecutor-Contributors ausgeführt werden sollen, wenn andere Vorgänge ausgeführt werden.|
 |**/p:**|ScriptDatabaseCollation=(BOOLEAN)|Gibt an, ob Unterschiede in der Datenbanksortierung beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen.|
 |**/p:**|ScriptDatabaseCompatibility=(BOOLEAN)|Gibt an, ob Unterschiede in der Datenbankkompatibilität beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen.|
 |**/p:**|ScriptDatabaseOptions = (BOOLESCHE "True")|Gibt an, ob die Eigenschaften der Zieldatenbank als Teil des Veröffentlichungsvorgangs festgelegt oder aktualisiert werden sollen.|
@@ -428,7 +428,7 @@ Durch eine **SqlPackage.exe**-Berichtsaktion wird ein XML-Bericht der Änderunge
  |**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|Gibt an, dass eine Assembly bei einer Abweichung von der Veröffentlichungsaktion immer gelöscht und neu erstellt werden soll, anstatt eine ALTER ASSEMBLY-Anweisung auszugeben. |
 |**/p:**|PopulateFilesOnFileGroups = (BOOLESCHE "True")|Gibt an, ob beim Erstellen einer neuen FileGroup in der Zieldatenbank ebenfalls eine neue Datei erstellt wird. |
 |**/p:**|RegisterDataTierApplication=(BOOLEAN)|Gibt an, ob das Schema beim Datenbankserver registriert wird. 
-|**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|Gibt an, ob DeploymentPlanExecutor-Mitwirkende ausgeführt werden sollen, wenn andere Vorgänge ausgeführt werden.|
+|**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|Gibt an, ob DeploymentPlanExecutor-Contributors ausgeführt werden sollen, wenn andere Vorgänge ausgeführt werden.|
 |**/p:**|ScriptDatabaseCollation=(BOOLEAN)|Gibt an, ob Unterschiede in der Datenbanksortierung beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen. |
 |**/p:**|ScriptDatabaseCompatibility=(BOOLEAN)|Gibt an, ob Unterschiede in der Datenbankkompatibilität beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen. |
 |**/p:**|ScriptDatabaseOptions = (BOOLESCHE "True")|Gibt an, ob die Eigenschaften der Zieldatenbank als Teil des Veröffentlichungsvorgangs festgelegt oder aktualisiert werden sollen. |
@@ -589,7 +589,7 @@ Durch eine **SqlPackage.exe**-Skriptaktion wird ein inkrementelles Transact-SQL-
 |**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|Gibt an, dass eine Assembly bei einer Abweichung von der Veröffentlichungsaktion immer gelöscht und neu erstellt werden soll, anstatt eine ALTER ASSEMBLY-Anweisung auszugeben.|
 |**/p:**|PopulateFilesOnFileGroups = (BOOLESCHE "True")|Gibt an, ob beim Erstellen einer neuen FileGroup in der Zieldatenbank ebenfalls eine neue Datei erstellt wird.|
 |**/p:**|RegisterDataTierApplication=(BOOLEAN)|Gibt an, ob das Schema beim Datenbankserver registriert wird.|
-|**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|Gibt an, ob DeploymentPlanExecutor-Mitwirkende ausgeführt werden sollen, wenn andere Vorgänge ausgeführt werden.|
+|**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|Gibt an, ob DeploymentPlanExecutor-Contributors ausgeführt werden sollen, wenn andere Vorgänge ausgeführt werden.|
 |**/p:**|ScriptDatabaseCollation=(BOOLEAN)|Gibt an, ob Unterschiede in der Datenbanksortierung beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen.|
 |**/p:**|ScriptDatabaseCompatibility=(BOOLEAN)|Gibt an, ob Unterschiede in der Datenbankkompatibilität beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen.|
 |**/p:**|ScriptDatabaseOptions = (BOOLESCHE "True")|Gibt an, ob die Eigenschaften der Zieldatenbank als Teil des Veröffentlichungsvorgangs festgelegt oder aktualisiert werden sollen.|
