@@ -18,12 +18,12 @@ ms.assetid: 178a38d9-9b19-4648-95d7-e1397110d14c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c73ad5d550244306d2672120cfa32c9a3ed37bf6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 59a58e143809848640db7d92d912e3eac619d0b5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755768"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533522"
 ---
 # <a name="spdeletetargetsvrgrpmember-transact-sql"></a>sp_delete_targetsvrgrp_member (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sp_delete_targetsvrgrp_member [ @group_name = ] 'group_name' , [ server_name = ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@group_name=** ] **"***Gruppenname***"**  
- Der Name der Gruppe. *Gruppenname* ist **Sysname**, hat keinen Standardwert.  
+`[ @group_name = ] 'group_name'` Der Name der Gruppe. *Gruppenname* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@server_name=** ] **"***Server_name***"**  
- Der Name des Servers, der aus der angegebenen Gruppe entfernt werden soll. *Server_name* ist **nvarchar(30)**, hat keinen Standardwert.  
+`[ @server_name = ] 'server_name'` Der Name des Servers, der aus der angegebenen Gruppe entfernt. *Server_name* ist **nvarchar(30)**, hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

@@ -18,12 +18,12 @@ ms.assetid: bc0044b4-7831-4ff9-8856-825c76aa9893
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0ab6ac64b027c953317db23e19784cc2ef5b2022
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c249564821f40bcd70bcfe367c4970727a5a01a0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780288"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531532"
 ---
 # <a name="sphelplogshippingprimarysecondary-transact-sql"></a>sp_help_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_help_log_shipping_primary_secondary
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@primary_database =** ] '*Primary_database*"  
- Der Name der Datenbank auf dem primären Server. *primary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @primary_database = ] 'primary_database'` Ist der Name der Datenbank auf dem primären Server. *primary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -51,7 +50,7 @@ sp_help_log_shipping_primary_secondary
   
 |Spaltenname|Description|  
 |-----------------|-----------------|  
-|**secondary_server**|Der Name der sekundären Instanz von der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in der Protokollversandkonfiguration.|  
+|**secondary_server**|Der Name der sekundären Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in der Protokollversandkonfiguration.|  
 |**secondary_database**|Der Name der sekundären Datenbank in der Protokollversandkonfiguration.|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -61,7 +60,7 @@ sp_help_log_shipping_primary_secondary
  Nur Mitglieder der festen Serverrolle **sysadmin** können diese Prozedur ausführen.  
   
 ## <a name="examples"></a>Beispiele  
- In diesem Beispiel wird die Verwendung **Sp_help_log_shipping_primary_secondary** zum Abrufen einer Liste von sekundären Datenbanken, die mit der primären Datenbank zuordnen [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ In diesem Beispiel wird gezeigt, wie **sp_help_log_shipping_primary_secondary** verwendet wird, um eine Liste sekundärer Datenbanken abzurufen, die der primären [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank zugeordnet sind.  
   
 ```  
 EXECUTE master.dbo.sp_help_log_shipping_primary_secondary @primary_database=N'AdventureWorks';  

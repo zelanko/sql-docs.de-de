@@ -10,12 +10,12 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2d63ed7db1cb1f2f201100a8d75c764cca194d4b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514242"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527142"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Unterstützte Konstrukte in systemintern kompilierten gespeicherten Prozeduren
   Dieses Thema enthält eine Liste der unterstützten Funktionen für systemintern kompilierte gespeicherte Prozeduren ([CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
@@ -120,7 +120,7 @@ ms.locfileid: "52514242"
   
 -   INSERT VALUES (eine Zeile pro Anweisung) und INSERT SELECT  
   
--   SORTIERT NACH DEM <sup>1</sup>  
+-   ORDER BY <sup>1</sup>  
   
 -   Prädikate, die nicht auf eine Spalte verweisen.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "52514242"
   
      Sie können Ergebnisse erhalten, die größer als 8.192 sind, indem Sie die Anzahl von Zeilen in einer Variablen speichern:  
   
-    ```tsql  
+    ```sql  
     DECLARE @v INT = 9000  
     SELECT TOP (@v) ... FROM ... ORDER BY ...  
     ```  
@@ -180,7 +180,7 @@ ms.locfileid: "52514242"
   
  Beispiel mit TOP N = 8192: Wird kompiliert  
   
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -193,7 +193,7 @@ GO
   
  Beispiel mit TOP N > 8192: Kann nicht kompiliert werden.  
   
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -208,7 +208,7 @@ GO
   
  Beispiel mit einer Variablen: Wird kompiliert  
   
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  

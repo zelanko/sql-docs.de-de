@@ -18,12 +18,12 @@ ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5223c0d48d1baacdd8660a4fcc006d13115f1f4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6ec60d6b11f9d17a6f5446e2840688fd1e4cb75
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732218"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536832"
 ---
 # <a name="spremovejobfromtargets-transact-sql"></a>sp_remove_job_from_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +43,13 @@ sp_remove_job_from_targets [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@job_id =**] *job_id*  
- Die Auftrags-ID des Auftrags, aus dem die angegebenen Zielserver oder Zielservergruppen entfernt werden sollen. Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich. *Job_id* ist **Uniqueidentifier**, hat den Standardwert NULL.  
+`[ @job_id = ] job_id` Die Auftrags-ID des Auftrags, aus der die angegebenen Zielserver oder Zielservergruppen entfernt werden sollen. Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich. *Job_id* ist **Uniqueidentifier**, hat den Standardwert NULL.  
   
- [ **@job_name =**] **'***job_name***'**  
- Der Name des Auftrags, aus dem die angegebenen Zielserver oder Zielservergruppen entfernt werden sollen. Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags, aus der die angegebenen Zielserver oder Zielservergruppen entfernt werden sollen. Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
   
- [ **@target_server_groups =**] **'***target_server_groups***'**  
- Eine durch Trennzeichen getrennte Liste der Zielservergruppen, die aus dem angegebenen Auftrag entfernt werden sollen. *Target_server_groups* ist **nvarchar(1024)**, hat den Standardwert NULL.  
+`[ @target_server_groups = ] 'target_server_groups'` Eine durch Trennzeichen getrennte Liste der Zielservergruppen, die aus dem angegebenen Auftrag entfernt werden. *Target_server_groups* ist **nvarchar(1024)**, hat den Standardwert NULL.  
   
- [ **@target_servers =**] **'***target_servers***'**  
- Eine durch Trennzeichen getrennte Liste der Zielserver, die aus dem angegebenen Auftrag entfernt werden sollen. *target_server* ist **nvarchar(1024)**, hat den Standardwert NULL.  
+`[ @target_servers = ] 'target_servers'` Eine durch Trennzeichen getrennte Liste von Zielservern aus dem angegebenen Auftrag entfernt werden soll. *target_server* ist **nvarchar(1024)**, hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

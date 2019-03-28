@@ -6894,6 +6894,7 @@ items:
     - name: Gesichtspunkte bei der Verwendung von Testservern
       href: ../relational-databases/performance/considerations-for-using-test-servers.md
     - name: Intelligente Abfrageverarbeitung
+      displayName: adaptive
       href: ../relational-databases/performance/intelligent-query-processing.md
     - name: Leistungscenter
       href: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
@@ -9791,12 +9792,12 @@ items:
         href: ../ssms/user-assistance-in-sql-server-management-studio.md
       - name: Anonyme Nutzungsdaten
         href: ../ssms/sql-server-management-studio-telemetry-ssms.md
-  - name: sqlpackage
+  - name: SqlPackage.exe
     items:
     - name: Installieren von sqlpackage
       href: ../tools/sqlpackage-download.md
     - name: Versionshinweise
-      href: ../tools/sqlpackage-release-notes.md
+      href: ../tools/release-notes-sqlpackage.md
     - name: Referenz zu sqlpackage
       href: ../tools/sqlpackage.md
   - name: SQL Server Profiler
@@ -15879,7 +15880,7 @@ items:
           href: ../t-sql/functions/len-transact-sql.md
         - name: LOWER
           href: ../t-sql/functions/lower-transact-sql.md
-        - name: LTRIM
+        - name: LSCHNEIDEN
           href: ../t-sql/functions/ltrim-transact-sql.md
         - name: NCHAR
           href: ../t-sql/functions/nchar-transact-sql.md
@@ -16182,19 +16183,19 @@ items:
             href: ../t-sql/language-elements/equals-transact-sql.md
           - name: '> (Größer als)'
             href: ../t-sql/language-elements/greater-than-transact-sql.md
-          - name: < (kleiner als)
+          - name: < (Kleiner als)
             href: ../t-sql/language-elements/less-than-transact-sql.md
           - name: '>= (Größer als oder gleich)'
             href: ../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md
-          - name: <= (kleiner als oder gleich)
+          - name: <= (Kleiner als oder gleich)
             href: ../t-sql/language-elements/less-than-or-equal-to-transact-sql.md
           - name: <> (Ungleich)
             href: ../t-sql/language-elements/not-equal-to-transact-sql-traditional.md
-          - name: '!< (nicht kleiner als)'
+          - name: '!< (Nicht kleiner als)'
             href: ../t-sql/language-elements/not-less-than-transact-sql.md
           - name: '!= (Ungleich)'
             href: ../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md
-          - name: '!> (nicht größer als)'
+          - name: '!> (Nicht größer als)'
             href: ../t-sql/language-elements/not-greater-than-transact-sql.md
         - name: Verbund
           href: ../t-sql/language-elements/compound-operators-transact-sql.md
@@ -17226,9 +17227,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: Handhabung von Namespaces in XQuery
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: 8efef6d8d30133dff4c5ca71d37a753e0168a4e5
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: 31c97681d909e7179c9376e187cabea94afe20d3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417232"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538682"

@@ -18,12 +18,12 @@ ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8914ce54d85e99213d923d7bebc186f61f928cf9
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 8980ab1f968bcc842fdd17a6095a9945fcc26b42
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100480"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526822"
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +46,9 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@objname =** ] **"**_Objekt_**"**  
- Der Name einer vorhandenen Tabelle, Sicht, benutzerdefinierten Funktion oder gespeicherter Prozedur in der aktuellen Datenbank. *Objekt* ist ein **nvarchar(776)**, hat keinen Standardwert. *Objekt* kann qualifiziert werden, mit dem Besitzer des vorhandenen Objekts, in der Form _existing_owner.Object_**.** _Objekt_ , wenn das Schema und der schemabesitzer den gleichen Namen haben.  
+`[ @objname = ] 'object'` Ist der Name, der eine vorhandene Tabelle, Sicht, eine benutzerdefinierte Funktion oder gespeicherte Prozedur in der aktuellen Datenbank. *Objekt* ist ein **nvarchar(776)**, hat keinen Standardwert. *Objekt* kann qualifiziert werden, mit dem Besitzer des vorhandenen Objekts, in der Form _existing_owner.Object_**.** _Objekt_ , wenn das Schema und der schemabesitzer den gleichen Namen haben.  
   
- [  **@newowner=**] **"**_Besitzer_ **"**  
- Der Name des Sicherheitskontos, das den neuen Besitzer des Objekts darstellt. *Besitzer* ist **Sysname**, hat keinen Standardwert. *Besitzer* muss ein gültiger Datenbankbenutzer, eine Serverrolle [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldename oder Windows-Gruppe mit Zugriff auf die aktuelle Datenbank. Wenn es sich beim neuen Besitzer um einen Windows-Benutzer oder eine Windows-Gruppe handelt, für den bzw. die kein entsprechender Datenbankprinzipal vorhanden ist, wird ein Datenbankbenutzer erstellt.  
+`[ @newowner = ] 'owner_ '` Ist der Name des Sicherheitskontos, das den neuen des Objekts Besitzer. *Besitzer* ist **Sysname**, hat keinen Standardwert. *Besitzer* muss ein gültiger Datenbankbenutzer, eine Serverrolle [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldename oder Windows-Gruppe mit Zugriff auf die aktuelle Datenbank. Wenn es sich beim neuen Besitzer um einen Windows-Benutzer oder eine Windows-Gruppe handelt, für den bzw. die kein entsprechender Datenbankprinzipal vorhanden ist, wird ein Datenbankbenutzer erstellt.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

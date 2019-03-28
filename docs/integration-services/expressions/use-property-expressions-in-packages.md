@@ -17,15 +17,15 @@ helpviewer_keywords:
 - expressions [Integration Services], property expressions
 - property expressions [Integration Services]
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b55b675cf28bd0e61dd74b011aad9c50cd8325fa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 273199612b1cf358ff82192c126b33c3fd2a94fd
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531610"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277659"
 ---
 # <a name="use-property-expressions-in-packages"></a>Verwenden von Eigenschaftsausdrücken in Paketen
   Ein Eigenschaftsausdruck ist ein einer Eigenschaft zugewiesener Ausdruck, um das dynamische Aktualisieren der Eigenschaft zur Laufzeit zu ermöglichen. So kann ein Eigenschaftsausdruck z. B. die An-Zeile aktualisieren, die ein Task des Typs "Mail senden" verwendet, indem eine in einer Variablen gespeicherte E-Mail-Adresse eingefügt wird.  
@@ -172,7 +172,7 @@ ms.locfileid: "52531610"
   
 -   Technischer Artikel, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), auf social.technet.microsoft.com  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden von Variablen in Paketen](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   

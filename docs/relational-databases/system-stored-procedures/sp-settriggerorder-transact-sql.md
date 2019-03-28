@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: acbdb4b406d3ec0c2820e2be7988c32af249379c
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: b9dca1aca3883b16b13f4e0abdb842deaf5bbfdd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590314"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537902"
 ---
 # <a name="spsettriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,23 +44,20 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@triggername=** ] **"**[ _Triggerschema_**.**] _Triggername_**"**  
- Der Name des Triggers, dessen Reihenfolge ggf. festgelegt oder geändert wird, und das Schema, zu dem er gehört. [_Triggerschema_**.**] *Triggername* ist **Sysname**. Wenn der Name keinem Trigger entspricht oder wenn der Name dem INSTEAD OF-Trigger entspricht, gibt die Prozedur einen Fehler zurück. *Triggerschema* kann nicht für DDL- oder Logon-Trigger angegeben werden.  
+`[ @triggername = ] '[ _triggerschema.] _triggername'` Der Name des Triggers und das Schema zu der er, sofern zutreffend, gehört, deren Reihenfolge festgelegt oder geändert wird. [_Triggerschema_**.**] *Triggername* ist **Sysname**. Wenn der Name keinem Trigger entspricht oder wenn der Name dem INSTEAD OF-Trigger entspricht, gibt die Prozedur einen Fehler zurück. *Triggerschema* kann nicht für DDL- oder Logon-Trigger angegeben werden.  
   
- [ **@order=** ] **'**_value_**'**  
- Die Einstellung für die neue Reihenfolge des Triggers. *Wert* ist **varchar(10)** und eine der folgenden Werte sind möglich.  
+`[ @order = ] 'value'` Ist die Einstellung für die neue Reihenfolge des Triggers. *Wert* ist **varchar(10)** und eine der folgenden Werte sind möglich.  
   
 > [!IMPORTANT]  
 >  Die **erste** und **letzten** Trigger müssen zwei unterschiedliche Trigger sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
-|**Erster**|Trigger wird zuerst ausgelöst|  
-|**Letzter**|Trigger wird zuletzt ausgelöst|  
+|**First**|Trigger wird zuerst ausgelöst|  
+|**Last**|Trigger wird zuletzt ausgelöst|  
 |**Keine**|Trigger wird in nicht definierter Reihenfolge ausgelöst|  
   
- [  **@stmttype=** ] **"**_Statement_type_**"**  
- Gibt die SQL-Anweisung an, die den Trigger auslöst. *Statement_type* ist **varchar(50)-Spalte** möglich INSERT-, Update-, DELETE-, LOGON oder alle [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungsereignis in aufgeführten [DDL-Ereignisse](../../relational-databases/triggers/ddl-events.md). Ereignisgruppen können nicht angegeben werden.  
+`[ @stmttype = ] 'statement_type'` Gibt die SQL-Anweisung, die der Trigger ausgelöst wird. *Statement_type* ist **varchar(50)-Spalte** möglich INSERT-, Update-, DELETE-, LOGON oder alle [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungsereignis in aufgeführten [DDL-Ereignisse](../../relational-databases/triggers/ddl-events.md). Ereignisgruppen können nicht angegeben werden.  
   
  Ein Trigger kann gekennzeichnet werden, als die **erste** oder **letzten** Trigger für einen Anweisungstyp erst nach diesen Trigger als Trigger für diesen Anweisungstyp definiert wurde. Beispielsweise auslösen **TR1** kann festgelegt werden, **erste** Einfügung in Tabelle **T1** Wenn **TR1** als einen INSERT-Trigger definiert ist. Die [!INCLUDE[ssDE](../../includes/ssde-md.md)] gibt einen Fehler zurück, wenn **TR1**, die nur als INSERT-Trigger definiert wurde, wird als festgelegt ein **erste**, oder **letzten**,-Trigger für eine UPDATE-Anweisung. Weitere Informationen finden Sie im Abschnitt mit Hinweisen.  
   

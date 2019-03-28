@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8194c74acb14a78482cc1e1de8fae38682699d3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a35880dd299cc9eff81643dd5d955101c5eec68
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679633"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532482"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_describe_undeclared_parameters
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **\@Tsql =** ] **"**_Transact-SQL\_Batch_**"**  
- Eine oder mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen. *Transact-SQL_batch* möglicherweise **Nvarchar (**_n_**)** oder **nvarchar(max)**.  
+`[ \@tsql = ] 'Transact-SQL\_batch'` Eine oder mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen. *Transact-SQL_batch* möglicherweise **Nvarchar (**_n_**)** oder **nvarchar(max)**.  
   
- [  **\@Params =** ] **N'**_Parameter_**"**  
- \@Params stellt eine deklarationszeichenfolge für Parameter für die [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch, ähnlich wie mit der Funktionsweise von Sp_executesql funktioniert. *Parameter* möglicherweise **Nvarchar (**_n_**)** oder **nvarchar(max)**.  
+`[ \@params = ] N'parameters'` \@Params stellt eine deklarationszeichenfolge für Parameter für die [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch, ähnlich wie mit der Funktionsweise von Sp_executesql funktioniert. *Parameter* möglicherweise **Nvarchar (**_n_**)** oder **nvarchar(max)**.  
   
  Eine Zeichenfolge, die die Definitionen aller Parameter enthält, die eingebetteten *Transact-SQL_batch*. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. Dabei ist n ein Platzhalter für zusätzlicher Parameterdefinitionen. Wenn die Transact-SQL-Anweisung oder den Batch in der Anweisung keine Parameter enthält \@"Params" ist nicht erforderlich. Der Standardwert für diesen Parameter ist NULL.  
   

@@ -22,12 +22,12 @@ ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e31562dcec495013b96dd772db2ae85c7702796
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: cede3c4419f4e11d2110e7c3f735c3dec2474ec4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783282"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531482"
 ---
 # <a name="sphelpdynamicsnapshotjob-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,18 +46,15 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publication =** ] **'***publication***'**  
- Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert **%**, Informationen über alle momentaufnahmeaufträge für gefilterten Daten, die mit der angegebenen Zeichenfolge zurückgegeben *Dynamic_ Snapshot_jobid*und *Dynamic_snapshot_jobname*für alle Veröffentlichungen.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert **%**, Informationen über alle momentaufnahmeaufträge für gefilterten Daten, die mit der angegebenen Zeichenfolge zurückgegeben *Dynamic_ Snapshot_jobid*und *Dynamic_snapshot_jobname*für alle Veröffentlichungen.  
   
- [ **@dynamic_snapshot_jobname =** ] **'***dynamic_snapshot_jobname***'**  
- Der Name eines Auftrags für eine Momentaufnahme gefilterter Daten. *Dynamic_snapshot_jobname*ist **Sysname**, Standardwert **%**", womit alle dynamischen Aufträge für eine Veröffentlichung mit dem angegebenen *Dynamic_ Snapshot_jobid*. Wenn beim Erstellen des Auftrags kein expliziter Auftragsname angegeben wurde, hat der Auftragsname folgendes Format:  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` Ist der Name des Auftrags für eine Momentaufnahme gefilterter Daten. *Dynamic_snapshot_jobname*ist **Sysname**, Standardwert **%**", womit alle dynamischen Aufträge für eine Veröffentlichung mit dem angegebenen *Dynamic_ Snapshot_jobid*. Wenn beim Erstellen des Auftrags kein expliziter Auftragsname angegeben wurde, hat der Auftragsname folgendes Format:  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
 ```  
   
- [ **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
- Ein Bezeichner eines Auftrags für eine Momentaufnahme gefilterter Daten. *Dynamic_snapshot_jobid*ist **Uniqueidentifier**, mit dem Standardwert NULL, womit alle momentaufnahmeaufträge, die mit der angegebenen Zeichenfolge *Dynamic_snapshot_jobname*.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` Ist ein Bezeichner für einen gefilterten datenmomentaufnahmeauftrags. *Dynamic_snapshot_jobid*ist **Uniqueidentifier**, mit dem Standardwert NULL, womit alle momentaufnahmeaufträge, die mit der angegebenen Zeichenfolge *Dynamic_snapshot_jobname*.  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -70,10 +67,10 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 |**dynamic_filter_hostname**|**sysname**|Wert, der zum Auswerten von der [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) -Funktion in einem parametrisierten Zeilenfilter gefiltert, die für die Veröffentlichung definiert.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|Der Pfad zu dem Ordner, aus dem die Momentaufnahmedateien gelesen werden, wenn ein parametrisierter Zeilenfilter verwendet wird.|  
 |**frequency_type**|**int**|Die Häufigkeit, mit der der Agent planmäßig ausgeführt wird. Die folgenden Werte sind möglich:<br /><br /> **1** = einmalige Ausführung<br /><br /> **2** = bedarfsgesteuert<br /><br /> **4** = täglich<br /><br /> **8** = wöchentlich<br /><br /> **16** = monatlich<br /><br /> **32** = mit relativem Monatsintervall<br /><br /> **64** = Autostart<br /><br /> **128** = wiederholt|  
-|**frequency_interval**|**int**|Die Tage, an denen der Agent ausgeführt wird. Die folgenden Werte sind möglich.<br /><br /> **1** = Sonntag<br /><br /> **2** = Montag<br /><br /> **3** = Dienstag<br /><br /> **4** = Mittwoch<br /><br /> **5** = Donnerstag<br /><br /> **6** = Freitag<br /><br /> **7** = Samstag<br /><br /> **8** = Tag<br /><br /> **9** = Arbeitstage<br /><br /> **10** = Wochenendtage|  
+|**frequency_interval**|**int**|Die Tage, an denen der Agent ausgeführt wird. Die folgenden Werte sind möglich.<br /><br /> **1** = Sonntag<br /><br /> **2** = Montag<br /><br /> **3** = Dienstag<br /><br /> **4** = Mittwoch<br /><br /> **5** = Thursday<br /><br /> **6** = Freitag<br /><br /> **7** = Samstag<br /><br /> **8** = Tag<br /><br /> **9** = Arbeitstage<br /><br /> **10** = Wochenendtage|  
 |**frequency_subday_type**|**int**|Ist der Typ, der definiert, wie oft der Agent ausgeführt wird, wenn *Frequency_type* ist **4** (täglich), und kann einen der folgenden Werte sein.<br /><br /> **1** = zum angegebenen Zeitpunkt<br /><br /> **2** = Sekunden<br /><br /> **4** = Minuten<br /><br /> **8** = Stunden|  
 |**frequency_subday_interval**|**int**|Anzahl der Intervalle von *Frequency_subday_type* , die zwischen der geplanten Ausführung des Agents auftreten.|  
-|**frequency_relative_interval**|**int**|Ist der Woche, an dem der Agent in einem bestimmten Monat ausgeführt wird. wenn *Frequency_type* ist **32** (mit relativem Monatsintervall) und kann einen der folgenden Werte sein.<br /><br /> **1** = erster<br /><br /> **2** = Sekunde<br /><br /> **4** = Dritter<br /><br /> **8** = vierter<br /><br /> **16** = letzter|  
+|**frequency_relative_interval**|**int**|Ist der Woche, an dem der Agent in einem bestimmten Monat ausgeführt wird. wenn *Frequency_type* ist **32** (mit relativem Monatsintervall) und kann einen der folgenden Werte sein.<br /><br /> **1** = erster<br /><br /> **2** = Sekunde<br /><br /> **4** = Dritter<br /><br /> **8** = vierter<br /><br /> **16** = Last|  
 |**frequency_recurrence_factor**|**int**|Anzahl der Wochen oder Monate zwischen der geplanten Ausführung der Momentaufnahme.|  
 |**active_start_date**|**int**|Datum, an dem die Ausführung der Momentaufnahme zum ersten Mal geplant ist (Format: YYYYMMDD).|  
 |**active_end_date**|**int**|Datum, an dem die Ausführung der Momentaufnahme zum letzten Mal geplant ist (Format: YYYYMMDD).|  
