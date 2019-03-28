@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 864e98d7f137a4d642f11e741bfac6d27c5ed55e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd4f4adc566a3bef283c1c8e5757279df64966a3
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795988"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274552"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>Extrahieren von Daten mithilfe der ODBC-Quelle
   In diesem Verfahren wird beschrieben, wie Sie Daten mithilfe einer ODBC-Quelle extrahieren. Um eine ODBC-Quelle hinzuzufügen und zu konfigurieren, muss das Paket bereits mindestens einen Datenflusstask enthalten.  
@@ -37,7 +37,7 @@ ms.locfileid: "47795988"
   
          Diese Liste enthält nur die ersten 1000 Tabellen. Wenn die Datenbank mehr als 1000 Tabellen enthält, können Sie den Anfang eines Tabellennamens eingeben oder das Platzhalterzeichen (*) verwenden, um einen beliebigen Teil des Namens einzugeben und die gewünschten Tabellen anzuzeigen.  
   
-    -   **SQL-Befehl**: Geben Sie einen SQL-Befehl ein, oder klicken Sie auf **Durchsuchen** , um die SQL-Abfrage aus einer Textdatei zu laden.  
+    -   **SQL-Befehl**: Geben Sie einen SQL-Befehl ein, oder klicken Sie auf **Durchsuchen**, um die SQL-Abfrage aus einer Textdatei zu laden.  
   
 6.  Sie können auf **Vorschau** klicken, um bis zu 200 Datenzeilen anzuzeigen, die von der ODBC-Quelle extrahiert werden.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "47795988"
   
 11. Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Quellen-Editor für ODBC &#40;Seite Verbindungs-Manager&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)   
- [Quellen-Editor für ODBC &#40;Seite „Spalten“&#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)   
+ [Quellen-Editor für ODBC &#40;Seite Spalten&#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)   
  [Quellen-Editor für ODBC &#40;Seite „Fehlerausgabe“&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
   
   

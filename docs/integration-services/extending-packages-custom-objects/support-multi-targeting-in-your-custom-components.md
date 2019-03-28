@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 49252f4743f3235275c93f504b44f4419941029d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 67005532329ebdda27f0c86985604fb8a63babe1
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797468"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273551"
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>Unterstützen von mehreren Zielversionen in benutzerdefinierten Komponenten
  Sie können nun den SSIS-Designer in SQL Server Data Tools (SSDT) verwenden, um Pakete zu erstellen, zu verwalten und auszuführen, die auf SQL Server 2016, SQL Server 2014 oder SQL Server 2012 ausgerichtet sind. SSDT für Visual Studio 2015 können Sie unter [Download Latest SQL Server Data Tools (Herunterladen der aktuellen Version von SQL Server Data Tools)](../../ssdt/download-sql-server-data-tools-ssdt.md) herunterladen. 

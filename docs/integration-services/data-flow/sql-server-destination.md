@@ -19,15 +19,15 @@ helpviewer_keywords:
 - inserting data
 - bulk load [Integration Services]
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3b165b4579497f28ad1b7dc2cb930daf5162941a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 19fe20d882810488e077ed1158b79c3399cc12f8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503296"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290586"
 ---
 # <a name="sql-server-destination"></a>SQL Server-Ziel
   Das SQL Server-Ziel stellt eine Verbindung mit einer lokalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank her und kopiert Daten per Massenladen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellen und -Sichten. Sie können das SQL Server-Ziel nicht in Paketen verwenden, die auf eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank auf einem Remoteserver zugreifen. Die Pakete sollten stattdessen ein OLE DB-Ziel verwenden. Weitere Informationen finden Sie unter [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "52503296"
  Benutzer, die Pakete ausführen, die das SQL Server-Ziel einschließen, müssen über die Berechtigung "Erstellen globaler Objekte" verfügen. Sie können diese Berechtigung Benutzern erteilen, indem Sie das Tool Lokale Sicherheitsrichtlinie im Menü **Verwaltung** verwenden. Wenn Sie beim Ausführen eines Pakets, das das SQL Server-Ziel verwendet, eine Fehlermeldung erhalten, sollten Sie sicherstellen, dass das Konto, mit dem das Paket ausgeführt wird, über die Berechtigung "Erstellen globaler Objekte" verfügt.  
   
 ## <a name="bulk-inserts"></a>Masseneinfügungen  
- Wenn Sie versuchen, das SQL Server-Ziel zum Massenladen von Daten in eine Remote-Datenbank von SQL Server zu verwenden, wird eine Fehlermeldung der folgenden Form angezeigt: "Ein OLE DB-Datensatz ist verfügbar." Quelle: "Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client" Hresult: 0x80040E14 Beschreibung: "Massenladen war nicht möglich, weil das SSIS-Dateizuordnungsobjekt 'Global\DTSQLIMPORT' nicht geöffnet werden konnte. Betriebssystemfehlercode 2 (Die angegebene Datei wurde nicht gefunden.). Stellen Sie sicher, dass Sie auf einen lokalen Server mit der Windows-Sicherheit zugreifen.""  
+ Wenn Sie versuchen, das SQL Server-Ziel zum Massenladen von Daten in eine Remote-Datenbank von SQL Server zu verwenden, wird eine Fehlermeldung der folgenden Form angezeigt: "Ein OLE DB-Datensatz ist verfügbar. Quelle: "Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client" Hresult: 0x80040E14 Beschreibung: „Massenladen war nicht möglich, weil das SSIS-Dateizuordnungsobjekt 'Global\DTSQLIMPORT' nicht geöffnet werden konnte. Betriebssystemfehlercode 2 (Die angegebene Datei wurde nicht gefunden.). Stellen Sie sicher, dass Sie auf einen lokalen Server mit der Windows-Sicherheit zugreifen.""  
   
  Das SQL Server-Ziel bietet das gleiche Hochgeschwindigkeitseinfügen von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wie der Masseneinfügungstask. Mit dem SQL Server-Ziel kann jedoch ein Paket Transformationen auf Spaltendaten anwenden, bevor die Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geladen werden.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "52503296"
 ## <a name="sql-destination-editor-connection-manager-page"></a>Ziel-Editor für SQL (Seite Verbindungs-Manager)
   Mithilfe der Seite **Verbindungs-Manager** des Dialogfelds **Ziel-Editor für SQL** können Sie Informationen zur Datenquelle angeben und eine Vorschau der Ergebnisse anzeigen. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ziel lädt die Daten in die Tabellen oder Sichten einer Datenbank in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Teilcache**  
  Wählen Sie eine vorhandene Verbindung aus der Liste aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "52503296"
 ## <a name="sql-destination-editor-mappings-page"></a>Ziel-Editor für SQL (Seite Zuordnungen)
   Auf der Seite **Zuordnungen** des Dialogfelds **Ziel-Editor für SQL** können Sie eine Zuordnung von Eingabe- zu Zielspalten vornehmen.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Eingabespalten in der Tabelle Zielspalten zuordnen.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "52503296"
 ## <a name="sql-destination-editor-advanced-page"></a>Ziel-Editor für SQL (Seite Erweitert)
   Auf der Seite **Erweitert** des Dialogfelds **Ziel-Editor für SQL** können Sie Optionen für die erweiterte Masseneinfügung angeben.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Identität beibehalten**  
  Gibt an, ob der Task Werte in Identitätsspalten einfügen soll. Der Standardwert dieser Eigenschaft ist **False**.  
   
@@ -200,7 +200,7 @@ ms.locfileid: "52503296"
  **Spalten sortieren**  
  Geben Sie die Namen der zu sortierenden Spalten an. Jede Spalte kann in auf- oder absteigender Reihenfolge sortiert werden. Wenn Sie mehrere Spalten verwenden, nach denen sortiert werden soll, trennen Sie die Namen in der Liste mit Kommas.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenfluss](../../integration-services/data-flow/data-flow.md)  
   
   

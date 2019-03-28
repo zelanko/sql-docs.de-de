@@ -11,15 +11,15 @@ helpviewer_keywords:
 - <= (less than or equal to operator)
 - less than or equal to operator (<=)
 ms.assetid: 946c5630-dccf-4dae-9cfd-6ea823641ab2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 514d9e976fc74d99aea555cc681f1dfc1fab4016
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54e4796f4a4c97dad255dd2e047f184fb8b0b879
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847838"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279294"
 ---
 # <a name="lt-less-than-or-equal-to-ssis-expression"></a>&lt;= (Kleiner als oder gleich) (SSIS-Ausdruck)
   Führt einen Vergleich aus, um zu ermitteln, ob der erste Ausdruck kleiner oder gleich dem zweiten Ausdruck ist. Die Ausdrucksauswertung konvertiert viele Datentypen automatisch vor dem Vergleich.  
@@ -59,7 +59,7 @@ expression1 <= expression2
     > [!NOTE]  
     >  Bei Zeichenfolgenvergleichen wird nach Groß-/Kleinschreibung, Akzent, Kana und Breite unterschieden.  
   
--   **Datum, Uhrzeit oder Datum/Uhrzeit** Sowohl *expression1* als auch *expression2* müssen zu einem der folgenden Datentypen ausgewertet werden: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET oder DT_FILETIME.  
+-   **Date, Time oder Date/Time** Sowohl *expression1* als auch *expression2* muss in einen der folgenden Datentypen ausgewertet werden: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET oder DT_FILETIME.  
   
     > [!NOTE]  
     >  Das System unterstützt keine Vergleiche zwischen einem Ausdruck, der zu einem Uhrzeitdatentyp ausgewertet wird, und einem Ausdruck, der entweder zu einem Datums- oder zu einem Datums-/Uhrzeitdatentyp ausgewertet wird. In diesem Fall wird ein Fehler generiert.  
@@ -103,10 +103,10 @@ ListPrice <= 500
 @LPrice <= 500  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [&#62; &#40;Größer als&#41; &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/greater-than-ssis-expression.md)   
  [&#60; &#40;Kleiner als&#41; &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/less-than-ssis-expression.md)   
- [&#62;= &#40;Größer als oder gleich&#41; &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)   
+ [&#62;= &#40;Größer oder gleich&#41; &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)   
  [Operatorenrangfolge und -assoziativität](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Operatoren &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   

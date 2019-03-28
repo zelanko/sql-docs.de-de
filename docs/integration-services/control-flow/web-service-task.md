@@ -15,15 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f6dde11eba11acc7e0136c34025e74fead99f9e1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c59a55f8ccb713024394ecf611299f71a5cf733c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502609"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271967"
 ---
 # <a name="web-service-task"></a>Webdienst (Task)
   Der Task "Webdienst" führt eine Webdienstmethode aus. Der Task "Webdienst" kann für folgende Zwecke verwendet werden:  
@@ -82,14 +82,14 @@ ms.locfileid: "52502609"
 ## <a name="web-service-task-editor-general-page"></a>Editor für den Task 'Webdienst' (Seite Allgemein)
   Auf der Seite **Allgemein** des Dialogfelds **Editor für den Task 'Webdienst'** können Sie einen HTTP-Verbindungs-Manager und den Speicherort der WSDL-Datei (Web Services Description Language) angeben, die der Task „Webdienst“ verwendet, den Task „Webdienst“ beschreiben und die WSDL-Datei herunterladen.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **HTTPConnection**  
  Wählen Sie in der Liste einen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
 > [!IMPORTANT]  
 >  Der HTTP-Verbindungs-Manager unterstützt nur die anonyme Authentifizierung und die Standardauthentifizierung. Er unterstützt keine Windows-Authentifizierung.  
   
- **Verwandte Themen:** [HTTP-Verbindungs-Manager](../../integration-services/connection-manager/http-connection-manager.md), [HTTP-Verbindungs-Manager-Editor &#40;Seite Server&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
+ **Verwandte Themen:**  [HTTP-Verbindungs-Manager](../../integration-services/connection-manager/http-connection-manager.md), [HTTP-Verbindungs-Manager-Editor &#40;Seite „Server“&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
  Geben Sie den vollqualifizierten Pfad der auf dem Computer lokalen WSDL-Datei an, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(…)**, um nach dieser Datei zu suchen.  
@@ -129,7 +129,7 @@ ms.locfileid: "52502609"
 ## <a name="web-service-task-editor-input-page"></a>Editor für den Task 'Webdienst' (Seite Eingabe)
   Mithilfe der Seite **Eingabe** des Dialogfelds **Editor für den Task 'Webdienst'** können Sie den Webdienst, die Webmethode sowie die Werte angeben, die der Webmethode als Eingabe zur Verfügung gestellt werden sollen. Die Werte können entweder durch Eingeben von Zeichenfolgen direkt in die Wert-Spalte oder durch Auswählen von Variablen in der Wert-Spalte bereitgestellt werden.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Dienst**  
  Wählen Sie aus der Liste einen Webdienst aus, der zum Ausführen der Webmethode verwendet werden soll.  
   
@@ -172,13 +172,13 @@ ms.locfileid: "52502609"
  **File**  
  Wählen Sie in der Liste einen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
- **Verwandte Themen:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Verwandte Themen:** [Dateiverbindungs-Manager](../../integration-services/connection-manager/file-connection-manager.md), [Dateiverbindungs-Manager-Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="outputtype--variable"></a>OutputType = Variable  
  **Variable**  
  Wählen Sie in der Liste eine Variable aus, oder klicken Sie auf \<**Neue Variable…**>, um eine neue Variable zu erstellen.  
   
- **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Hinzufügen von Variablen](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Verwandte Themen:**  [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Hinzufügen von Variablen](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- Video [Vorgehensweise: Aufrufen eines Webdiensts mit dem Task 'Webdienst' (SQL Server-Video)](https://go.microsoft.com/fwlink/?LinkId=259642)auf technet.microsoft.com.  
+ Video, [Vorgehensweise: Aufrufen eines Webdiensts mit dem Task „Webdienst“ (SQL Server-Video)](https://go.microsoft.com/fwlink/?LinkId=259642) auf technet.microsoft.com.  

@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/08/2019
+ms.date: 03/21/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f1ce25ad1f6ac2a84b391a50e1be6014dae23c5b
-ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
+ms.openlocfilehash: a9d870d766d7c2080b177270156cfa2428c21fc7
+ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57683700"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417242"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -55,7 +55,7 @@ Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meiste
 
 &nbsp;
 
-## <a name="overview-sql-server"></a>Übersicht: SQL Server
+## <a name="overview-sql-server"></a>Übersicht: SQL Server
 
 Diese Anweisung ändert in SQL Server eine Datenbank bzw. die zu dieser Datenbank gehörenden Dateien und Dateigruppen. Fügt einer Datenbank Dateien und Dateigruppen hinzu oder entfernt diese, ändert die Attribute einer Datenbank oder ihrer Dateien und Dateigruppen, ändert die Datenbanksortierung und legt Datenbankoptionen fest. Datenbankmomentaufnahmen können nicht geändert werden. Verwenden Sie zum Ändern von Datenbankoptionen für die Replikation [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).
 
@@ -120,18 +120,22 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## <a name="arguments"></a>Argumente
 
-*database_name* Der Name der Datenbank, die geändert werden soll.
+*database_name*     
+Der Name der Datenbank, die geändert werden soll.
 
 > [!NOTE]
 > Diese Option ist in einer eigenständigen Datenbank nicht verfügbar.
 
-CURRENT **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+CURRENT     
+**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
 Legt fest, dass die zurzeit verwendete Datenbank geändert werden soll.
 
-MODIFY NAME **=**_new_database_name_Benennt die Datenbank in den angegebenen Namen *new_database_name* um.
+MODIFY NAME **=**_new_database_name_     
+Benennt die Datenbank in den angegebenen Namen *new_database_name* um.
 
-COLLATE *collation_name* Gibt die Sortierung für die Datenbank an. *collation_name* kann entweder der Name einer Windows-Sortierreihenfolge oder ein SQL-Sortierungsname sein. Wenn keine Sortierung angegeben ist, wird der Datenbank die Sortierung der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugewiesen.
+COLLATE *collation_name*    
+Gibt die Sortierung für die Datenbank an. *collation_name* kann entweder der Name einer Windows-Sortierreihenfolge oder ein SQL-Sortierungsname sein. Wenn keine Sortierung angegeben ist, wird der Datenbank die Sortierung der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugewiesen.
 
 > [!NOTE]
 > Sobald die Datenbank einmal in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] erstellt wurde, kann sie nicht mehr geändert werden.
@@ -140,24 +144,24 @@ Beim Erstellen von Datenbanken mit einer von der Standardsortierung abweichenden
 
 Weitere Informationen zu den Namen von Windows- und SQL-Sortierungen finden Sie unter [COLLATE](~/t-sql/statements/collations.md).
 
-**\<delayed_durability_option> ::=**
+**\<delayed_durability_option> ::=**      
 **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
 Weitere Informationen finden Sie unter [ALTER DATABASE SET-Optionen](../../t-sql/statements/alter-database-transact-sql-set-options.md) und [Steuern der Transaktionsdauerhaftigkeit](../../relational-databases/logs/control-transaction-durability.md).
 
-**\<file_and_filegroup_options>::=** Weitere Informationen finden Sie unter [ALTER DATABASE-Optionen FILE und FILEGROUP](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
+**\<file_and_filegroup_options>::=**     
+Weitere Informationen finden Sie unter [ALTER DATABASE-Optionen für Dateien und Dateigruppen](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
 ## <a name="remarks"></a>Remarks
-
 Verwenden Sie [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md), um eine Datenbank zu entfernen.
 
 Verwenden Sie [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md), um die Größe einer Datenbank zu reduzieren.
 
-Die ALTER DATABASE-Anweisung muss im Autocommitmodus (dem Standardmodus für die Transaktionsverwaltung) ausgeführt werden und ist in einer expliziten oder impliziten Transaktion nicht zugelassen.
+Die `ALTER DATABASE`-Anweisung muss im Autocommitmodus (dem Standardmodus für die Transaktionsverwaltung) ausgeführt werden und ist in einer expliziten oder impliziten Transaktion nicht zugelassen.
 
-Der Status einer Datenbankdatei (z. B. online oder offline) wird unabhängig vom Status der Datenbank verwaltet. Weitere Informationen finden Sie im Abschnitt [Dateistatus](../../relational-databases/databases/file-states.md). Der Status der Dateien in einer Dateigruppe bestimmt die Verfügbarkeit der gesamten Dateigruppe. Damit eine Dateigruppe verfügbar ist, müssen alle Dateien in der Dateigruppe online sein. Ist eine Dateigruppe offline, verursacht jeder Versuch, über eine SQL-Anweisung auf die Dateigruppe zuzugreifen, einen Fehler. Wenn Sie Abfragepläne für SELECT-Anweisungen erstellen, vermeidet der Abfrageoptimierer nicht gruppierte Indizes und indizierte Sichten, die sich in Offlinedateigruppen befinden. Dadurch wird ein erfolgreiches Ausführen der Anweisungen ermöglicht. Enthält die Offlinedateigruppe jedoch den Heap oder gruppierten Index der Zieltabelle, schlagen die SELECT-Anweisungen fehl. Auch alle INSERT-, UPDATE- oder DELETE-Anweisungen, die eine Tabelle mit einem Index in einer Offlinedateigruppe ändern, schlagen fehl.
+Der Status einer Datenbankdatei (z. B. online oder offline) wird unabhängig vom Status der Datenbank verwaltet. Weitere Informationen finden Sie im Abschnitt [Dateistatus](../../relational-databases/databases/file-states.md). Der Status der Dateien in einer Dateigruppe bestimmt die Verfügbarkeit der gesamten Dateigruppe. Damit eine Dateigruppe verfügbar ist, müssen alle Dateien in der Dateigruppe online sein. Ist eine Dateigruppe offline, verursacht jeder Versuch, über eine SQL-Anweisung auf die Dateigruppe zuzugreifen, einen Fehler. Wenn Sie Abfragepläne für SELECT-Anweisungen erstellen, vermeidet der Abfrageoptimierer nicht gruppierte Indizes und indizierte Sichten, die sich in Offlinedateigruppen befinden. Dadurch wird ein erfolgreiches Ausführen der Anweisungen ermöglicht. Enthält die Offlinedateigruppe jedoch den Heap oder gruppierten Index der Zieltabelle, schlagen die SELECT-Anweisungen fehl. Auch alle `INSERT`-, `UPDATE`- oder `DELETE`-Anweisungen, die eine Tabelle mit einem Index in einer Offlinedateigruppe ändern, schlagen fehl.
 
-Wenn eine Datenbank sich im Status RESTORING befindet, erzeugen die meisten ALTER DATABASE-Anweisungen einen Fehler. Eine Ausnahme bildet das Festlegen von Datenbank-Spiegelungsoptionen. Eine Datenbank kann den Status RESTORING aufweisen, während ein Wiederherstellungsvorgang aktiv ist oder wenn ein Wiederherstellungsvorgang einer Datenbank oder Protokolldatei aufgrund einer beschädigten Sicherungsdatei fehlschlägt.
+Wenn eine Datenbank sich im Status RESTORING befindet, erzeugen die meisten `ALTER DATABASE`-Anweisungen einen Fehler. Eine Ausnahme bildet das Festlegen von Datenbank-Spiegelungsoptionen. Eine Datenbank kann den Status RESTORING aufweisen, während ein Wiederherstellungsvorgang aktiv ist oder wenn ein Wiederherstellungsvorgang einer Datenbank oder Protokolldatei aufgrund einer beschädigten Sicherungsdatei fehlschlägt.
 
 Der Plancache für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird gelöscht, indem eine der folgenden Optionen festgelegt wird.
 
@@ -169,11 +173,11 @@ Der Plancache für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnover
 |COLLATE|MODIFY FILEGROUP READ_ONLY|
 |READ_ONLY|PAGE_VERIFY|
 
-Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. Für jeden geleerten Cachespeicher im Plancache enthält das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll folgende Meldung zur Information: „[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat für den "%2!s!"-Cachespeicher (Bestandteil des Plancache) %1!s! Leerungen des Cachespeichers gefunden, die von Datenbankwartungs- oder Neukonfigurierungsvorgängen ausgelöst wurden.“. Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.
+Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll enthält für jeden geleerten Cachespeicher im Plancache folgende informative Meldung: `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`. Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.
 
-Der Prozedurcache wird in den folgenden Situationen ebenfalls geleert:
+Der Plancache wird auch in den folgenden Szenarien geleert:
 
-- Die AUTO_CLOSE-Datenbankoption ist für eine Datenbank auf ON festgelegt. Wenn die Datenbank von keiner Benutzerverbindung verwendet wird bzw. keine Benutzerverbindung darauf verweist, versucht der Hintergrundtask, die Datenbank automatisch zu schließen und herunterzufahren.
+- Die Datenbankoption `AUTO_CLOSE` ist für eine Datenbank auf ON festgelegt. Wenn die Datenbank von keiner Benutzerverbindung verwendet wird bzw. keine Benutzerverbindung darauf verweist, versucht der Hintergrundtask, die Datenbank automatisch zu schließen und herunterzufahren.
 - Sie führen mehrere Abfragen für eine Datenbank aus, die über Standardoptionen verfügt. Anschließend wird die Datenbank gelöscht.
 - Eine Datenbank-Momentaufnahme für eine Quelldatenbank wird gelöscht.
 - Sie erstellen das Transaktionsprotokoll für eine Datenbank erfolgreich neu.
@@ -187,17 +191,16 @@ Bevor Sie auf eine Datenbank eine andere Sortierung anwenden, stellen Sie sicher
 - Die Datenbank wird derzeit nur von Ihnen verwendet.
 - Von der Sortierung der Datenbank hängt kein schemagebundenes Objekt ab.
 
-  Wenn die folgenden Objekte, die von der Datenbanksortierung abhängen, in der Datenbank vorhanden sind, schlägt die ALTER DATABASE*database_name*COLLATE-Anweisung fehl. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt eine Fehlermeldung für jedes Objekt zurück, das die ALTER-Aktion blockiert:
+Wenn die folgenden Objekte, die von der Datenbanksortierung abhängen, in der Datenbank vorhanden sind, schlägt die ALTER DATABASE*database_name*COLLATE-Anweisung fehl. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt eine Fehlermeldung für jedes Objekt zurück, das die Aktion `ALTER` blockiert:
 
   - Benutzerdefinierte Funktionen und Sichten, die mit SCHEMABINDING erstellt wurden
   - Berechnete Spalten
   - CHECK-Einschränkungen
   - Tabellenwertfunktionen, die Tabellen mit Zeichenspalten zurückgeben, deren Sortierungen von der Standardsortierung der Datenbank geerbt wurden
   
-    Abhängigkeitsinformationen für nicht schemagebundene Entitäten werden automatisch aktualisiert, wenn die Sortierung der Datenbank geändert wird.
+Abhängigkeitsinformationen für nicht schemagebundene Entitäten werden automatisch aktualisiert, wenn die Sortierung der Datenbank geändert wird.
 
 Durch das Ändern der Sortierung der Datenbank werden keine Duplikate von Systemnamen für die Datenbankobjekte erstellt. Wenn durch die geänderte Sortierung doppelte Namen entstehen, verursachen die folgenden Namespaces möglicherweise einen Fehler bei der Änderung der Datenbanksortierung:
-
 - Objektnamen wie z.B. der Name einer Prozedur, Tabelle, Sicht oder eines Triggers
 - Schemanamen
 - Prinzipale wie z.B. eine Gruppe, Rolle oder ein Benutzer
@@ -214,7 +217,7 @@ Sie können Katalogsichten, Systemfunktionen und gespeicherte Systemprozeduren v
 
 ## <a name="permissions"></a>Berechtigungen
 
-Erfordert die ALTER-Berechtigung für die Datenbank.
+Erfordert die `ALTER`-Berechtigung für die Datenbank.
 
 ## <a name="examples"></a>Beispiele
 
@@ -282,11 +285,14 @@ Verwenden Sie diese Anweisung in Azure SQL-Datenbank, um eine Datenbank in einem
 
 Aufgrund ihrer Länge wird die ALTER DATABASE-Syntax in mehrere Artikel aufgeteilt.
 
-ALTER DATABASE Der aktuelle Artikel behandelt die Syntax und weitere Informationen zum Ändern des Namens und der Sortierung einer Datenbank.
+ALTER DATABASE     
+Der aktuelle Artikel behandelt die Syntax und weitere Informationen zum Ändern des Namens und der Sortierung einer Datenbank.
 
-[ALTER DATABASE SET-Optionen](../../t-sql/statements/alter-database-transact-sql-set-options.md?view=azuresqldb-currentls) stellt die Syntax und weitere Informationen zum Ändern der Datenbankattribute mithilfe der SET-Optionen von ALTER DATABASE bereit.
+[ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md?view=azuresqldb-currentls)      
+Stellt die Syntax und weitere Informationen zum Ändern der Datenbankattribute mithilfe der SET-Optionen von ALTER DATABASE bereit.
 
-[ALTER DATABASE-Kompatibilitätsgrad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?view=azuresqldb-currentls) stellt die Syntax und weitere Informationen für die SET-Optionen von ALTER DATABASE bereit, die sich auf die Datenbank-Kompatibilitätsgrade beziehen.
+[ALTER DATABASE-Kompatibilitätsgrad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?view=azuresqldb-currentls)       
+Stellt die Syntax und weitere Informationen für die SET-Optionen von ALTER DATABASE bereit, die sich auf die Datenbank-Kompatibilitätsgrade beziehen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -362,16 +368,13 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## <a name="arguments"></a>Argumente
 
-*database_name*
-
+*database_name*      
 Der Name der Datenbank, die geändert werden soll.
 
-CURRENT
-
+CURRENT        
 Legt fest, dass die zurzeit verwendete Datenbank geändert werden soll.
 
-MODIFY NAME **=**_new_database_name_
-
+MODIFY NAME **=**_new_database_name_      
 Benennt die Datenbank in den angegebenen Namen *new_database_name* um. Im folgenden Beispiel wird der Name einer Datenbank von `db1` in `db2` geändert:
 
 ```sql
@@ -379,8 +382,7 @@ ALTER DATABASE db1
     MODIFY Name = db2 ;
 ```
 
-MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'])
-
+MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'])      
 Ändert die Dienstebene der Datenbank.
 
 Im folgenden Beispiel wird die Edition in `premium` geändert:
@@ -390,10 +392,10 @@ ALTER DATABASE current
     MODIFY (EDITION = 'premium');
 ```
 
-Wenn die MAXSIZE-Eigenschaft für die Datenbank auf einen Wert außerhalb des gültigen, von der jeweiligen Edition unterstützten Bereichs festgelegt wird, schlägt die Änderung der EDITION-Eigenschaft fehl.
+> [!IMPORTANT]
+> Wenn die MAXSIZE-Eigenschaft für die Datenbank auf einen Wert außerhalb des gültigen, von der jeweiligen Edition unterstützten Bereichs festgelegt wird, schlägt die Änderung der EDITION-Eigenschaft fehl.
 
-MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024...4096] GB)
-
+MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024...4096] GB)       
 Gibt die maximale Größe der Datenbank an. Die maximale Größe muss dem gültigen Wertsatz für die EDITION-Eigenschaft der Datenbank entsprechen. Eine Änderung der maximalen Datenbankgröße kann auch dazu führen, dass die EDITION-Eigenschaft der Datenbank geändert wird.
 
 > [!NOTE]
@@ -486,8 +488,7 @@ Die folgenden Regeln gelten für das MAXSIZE-Argument und das EDITION-Argument:
 - Wenn EDITION angegeben ist, MAXSIZE jedoch nicht, wird der Standardwert für die Edition verwendet. Wenn EDITION beispielsweise auf die Standard Edition festgelegt und MAXSIZE nicht angegeben ist, wird MAXSIZE automatisch auf 500 MB festgelegt.
 - Wenn weder MAXSIZE noch EDITION angegeben sind, wird EDITION auf „Standard“ (S0) und MAXSIZE auf 250 GB festgelegt.
 
-MODIFY (SERVICE_OBJECTIVE = \<service-objective>)
-
+MODIFY (SERVICE_OBJECTIVE = \<service-objective>)      
 Gibt die Leistungsebene an. Im folgenden Beispiel wird das Dienstziel einer Premium-Datenbank in `P6` geändert:
 
 ```sql
@@ -505,8 +506,7 @@ ALTER DATABASE current
 
 Dienstzielbeschreibungen und weitere Informationen zu Größe, Editionen und Dienstzielkombinationen finden Sie unter [Azure SQL Database Service Tiers and Performance Levels (Dienstebenen und Leistungsstufen von Azure SQL-Datenbank)](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [DTU-based resource limits (DTU-basierte Ressourcenbeschränkungen)](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) und [vCore-based resource limits (vCore-basierte Ressourcenbeschränkungen)](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits). Die Unterstützung für PRS-Dienstziele wurde entfernt. Wenn Sie Fragen haben, wenden Sie sich an den E-Mail-Alias premium-rs@microsoft.com.
 
-MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>)
-
+MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>)       
 Wenn Sie eine vorhandene Datenbank zu einem Pool für elastische Datenbanken hinzufügen möchten, müssen Sie das SERVICE_OBJECTIVE der Datenbank auf ELASTIC_POOL festlegen und den Namen des Pools für elastische Datenbanken angeben. Sie können mit dieser Option auch die Datenbank in einen anderen Pool für elastische Datenbanken innerhalb desselben Servers ändern. Weitere Informationen finden Sie unter [Erstellen und Verwalten eines Pools für elastische Datenbanken von SQL-Database](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/). Wenn Sie eine Datenbank aus einem Pool für elastische Datenbanken entfernen möchten, legen Sie mithilfe von ALTER DATABASE das SERVICE_OBJECTIVE-Objekt auf eine einzelne Leistungsebene der Datenbank fest.
 
 > [!NOTE]
@@ -519,36 +519,30 @@ Erstellt eine georeplizierte sekundäre Datenbank mit dem gleichen Namen auf ein
 > [!IMPORTANT]
 > Der Diensttarif „Hyperscale“ unterstützt derzeit keine Georeplikation.
 
-WITH ALLOW_CONNECTIONS { **ALL** | NO }
-
+WITH ALLOW_CONNECTIONS { **ALL** | NO }     
 Wenn ALLOW_CONNECTIONS nicht angegeben ist, wird es standardmäßig auf ALL festgelegt. Wenn ALL festgelegt ist, handelt es sich um eine schreibgeschützte Datenbank, zu der alle Anmeldenamen mit den entsprechenden Berechtigungen eine Verbindung herstellen dürfen.
 
 WITH SERVICE_OBJECTIVE { `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`,`BC_Gen5_40`, `BC_Gen5_80` }
 
 Wenn SERVICE_OBJECTIVE nicht angegeben ist, wird die sekundäre Datenbank auf derselben Dienstebene wie die primäre Datenbank erstellt. Wenn SERVICE_OBJECTIVE angegeben ist, wird die sekundäre Datenbank auf der angegebenen Ebene erstellt. Diese Option unterstützt die Erstellung georeplizierter sekundärer Datenbanken mit kostengünstigeren Servicelevels. Das angegebene SERVICE_OBJECTIVE muss sich in derselben Edition wie die Quelle befinden. So können Sie beispielsweise nicht „S0“ angeben, wenn es sich bei der Edition um eine Premium-Edition handelt.
 
-ELASTIC_POOL (name = \<elastic_pool_name>)
-
+ELASTIC_POOL (name = \<elastic_pool_name>)      
 Wenn ELASTIC_POOL nicht angegeben ist, wird die sekundäre Datenbank nicht in einem Pool für elastische Datenbanken erstellt. Wenn ELASTIC_POOL angegeben ist, wird die sekundäre Datenbank im angegebenen Pool erstellt.
 
 > [!IMPORTANT]
 > Der Benutzer, der den Befehl ADD SECONDARY ausführt, muss DBManager auf dem primären Server, db_owner-Mitglied in der lokalen Datenbank und DBManager auf dem sekundären Server sein.
 
-REMOVE SECONDARY ON SERVER \<partner_server_name>
-
+REMOVE SECONDARY ON SERVER \<partner_server_name>     
 Entfernt die angegebene georeplizierte sekundäre Datenbank vom angegebenen Server. Der Befehl wird in der Masterdatenbank auf dem Server ausgeführt, der Host der primären Datenbank ist.
 
 > [!IMPORTANT]
 > Der Benutzer, der den Befehl REMOVE SECONDARY ausführt, muss DBManager auf dem primären Server sein.
 
-FAILOVER
-
+FAILOVER      
 Stuft die sekundäre Datenbank in einer Partnerschaft für die Georeplikation hoch, für die der Befehl ausgeführt wird, damit sie zur primären Datenbank wird, und stuft die aktuelle primäre Datenbank tiefer, sodass diese zur neuen sekundären Datenbank wird. Im Rahmen dieses Prozesses wird der Georeplikationsmodus vorübergehend vom asynchronen in den synchronen Modus umgeschaltet. Während des Failoverprozesses:
 
 1. Die primäre Datenbank übernimmt keine neuen Transaktionen mehr.
-
 2. Alle ausstehenden Transaktionen werden in der sekundären Datenbank geleert.
-
 3. Die sekundäre Datenbank wird zur primären Datenbank und beginnt mit der asynchronen Replikation mit der alten primären/der neuen sekundären Datenbank.
 
 Durch diese Sequenz wird sichergestellt, dass keine Daten verloren gehen. Der Zeitraum, in dem keine der beiden Datenbanken verfügbar ist, umfasst 0 bis 25 Sekunden. In dieser Zeit werden die Rollen gewechselt. Der gesamte Vorgang sollte nicht mehr als einer Minute in Anspruch nehmen. Wenn die primäre Datenbank bei der Ausgabe dieses Befehls nicht verfügbar ist, schlägt der Befehl fehl, und es wird eine Fehlermeldung angezeigt, dass die primäre Datenbank nicht verfügbar ist. Wenn der Failoverprozess nicht abgeschlossen wird und ins Stocken geraten zu sein scheint, können Sie den Befehl zur Erzwingung des Failovers verwenden und einen Datenverlust in Kauf nehmen. Anschließend, wenn eine Wiederherstellung der verloren gegangenen Daten erforderlich sein sollte, können Sie DevOps (CSS) zur Wiederherstellung der verloren gegangenen Daten aufrufen.
@@ -556,46 +550,40 @@ Durch diese Sequenz wird sichergestellt, dass keine Daten verloren gehen. Der Ze
 > [!IMPORTANT]
 > Der Benutzer, der den Befehl FAILOVER ausführt, muss DBManager auf dem primären und dem sekundären Server sein.
 
-FORCE_FAILOVER_ALLOW_DATA_LOSS
-
+FORCE_FAILOVER_ALLOW_DATA_LOSS      
 Stuft die sekundäre Datenbank in einer Partnerschaft für die Georeplikation hoch, für die der Befehl ausgeführt wird, damit sie zur primären Datenbank wird, und stuft die aktuelle primäre Datenbank tiefer, sodass diese zur neuen sekundären Datenbank wird. Verwenden Sie diesen Befehl nur dann, wenn die aktuelle primäre Datenbank nicht mehr verfügbar ist. Er wurde nur für die Notfallwiederherstellung erstellt, wenn die Wiederherstellung der Verfügbarkeit wesentlich und ein Datenverlust akzeptabel ist.
 
 Während eines erzwungenen Failovers:
-
 1. Die angegebene sekundäre Datenbank wird sofort zur primären Datenbank und beginnt, neue Transaktionen zu akzeptieren.
 2. Wenn die ursprüngliche primäre Datenbank eine Verbindung zur neuen primären Datenbank wiederherstellen kann, wird eine inkrementelle Sicherung von der ursprünglichen primären Datenbank erstellt. Die ursprüngliche primäre Datenbank wird dann zu einer neuen sekundären Datenbank.
 3. Zur Wiederherstellung der Daten aus dieser inkrementellen Sicherung der ursprünglichen primären Datenbank bindet der Benutzer DevOps/CSS ein.
 4. Wenn es weitere sekundäre Datenbanken gibt, werden diese automatisch so neu konfiguriert, dass sie zu den sekundären Datenbanken der neuen primären Datenbank werden. Dieser Vorgang ist asynchron. Bis zum Abschluss des Vorgangs kann es zu einer Verzögerung kommen. Bis zum Abschluss der Neukonfiguration sind die sekundären Datenbanken weiterhin die sekundären Datenbanken der ursprünglichen primären Datenbank.
 
 > [!IMPORTANT]
-> Der Benutzer, der den Befehl FORCE_FAILOVER_ALLOW_DATA_LOSS ausführt, muss DBManager auf dem primären und dem sekundären Server sein.
+> Der Benutzer, der den Befehl `FORCE_FAILOVER_ALLOW_DATA_LOSS` ausführt, muss auf dem primären und sekundären Server die Rolle `dbmanager` inne haben.
 
 ## <a name="remarks"></a>Remarks
-
 Verwenden Sie [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md), um eine Datenbank zu entfernen.
 Verwenden Sie [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md), um die Größe einer Datenbank zu reduzieren.
 
-Die ALTER DATABASE-Anweisung muss im Autocommitmodus (dem Standardmodus für die Transaktionsverwaltung) ausgeführt werden und ist in einer expliziten oder impliziten Transaktion nicht zugelassen.
+Die `ALTER DATABASE`-Anweisung muss im Autocommitmodus (dem Standardmodus für die Transaktionsverwaltung) ausgeführt werden und ist in einer expliziten oder impliziten Transaktion nicht zugelassen.
 
-Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. Für jeden geleerten Cachespeicher im Plancache enthält das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll folgende Meldung zur Information: „[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat für den "%2!s!"-Cachespeicher (Bestandteil des Plancache) %1!s! Leerungen des Cachespeichers gefunden, die von Datenbankwartungs- oder Neukonfigurierungsvorgängen ausgelöst wurden.“. Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.
+Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll enthält für jeden geleerten Cachespeicher im Plancache folgende informative Meldung: `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`. Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.
 
 Der Prozedurcache wird auch im folgenden Szenario geleert: Sie führen mehrere Abfragen für eine Datenbank aus, die über Standardoptionen verfügt. Anschließend wird die Datenbank gelöscht.
 
 ## <a name="viewing-database-information"></a>Anzeigen von Datenbankinformationen
-
 Sie können Katalogsichten, Systemfunktionen und gespeicherte Systemprozeduren verwenden, um Informationen zu Datenbanken, Dateien und Dateigruppen zurückzugeben.
 
 ## <a name="permissions"></a>Berechtigungen
-
 Datenbanken können nur durch den Prinzipalanmeldenamen auf Serverebene (vom Bereitstellungsprozess erstellt) oder Mitglieder der Datenbankrolle `dbmanager` geändert werden.
 
 > [!IMPORTANT]
 > Der Datenbankbesitzer kann die Datenbank nur ändern, wenn er Mitglied der Rolle `dbmanager` ist.
 
 ## <a name="examples"></a>Beispiele
-
 ### <a name="a-check-the-edition-options-and-change-them"></a>A. Überprüfen Sie die Bearbeitungsoptionen, und ändern Sie diese
-
+Legt eine Edition und maximale Größe für die Datenbank db1 fest:
 ```sql
 SELECT Edition = DATABASEPROPERTYEX('db1', 'EDITION'),
         ServiceObjective = DATABASEPROPERTYEX('db1', 'ServiceObjective'),
@@ -605,7 +593,6 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Premium', MAXSIZE = 1024 GB, SERVICE_OBJ
 ```
 
 ### <a name="b-moving-a-database-to-a-different-elastic-pool"></a>B. Verschieben einer Datenbank in einen anderen Pool für elastische Datenbanken
-
 Verschiebt eine vorhandene Datenbank in einen Pool mit dem Namen pool1:
 
 ```sql
@@ -614,7 +601,6 @@ MODIFY ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = pool1 ) ) ;
 ```
 
 ### <a name="c-add-a-geo-replication-secondary"></a>C. Hinzufügen einer sekundären Datenbank für eine Georeplikation
-
 Erstellt die lesbare sekundäre Datenbank db1 auf dem Server `secondaryserver` der Datenbank db1 auf dem lokalen Server.
 
 ```sql
@@ -624,7 +610,6 @@ WITH ( ALLOW_CONNECTIONS = ALL )
 ```
 
 ### <a name="d-remove-a-geo-replication-secondary"></a>D. Entfernen einer sekundären Datenbank für eine Georeplikation
-
 Entfernt die sekundäre Datenbank db1 auf dem Server `secondaryserver`.
 
 ```sql
@@ -633,7 +618,6 @@ REMOVE SECONDARY ON SERVER testsecondaryserver
 ```
 
 ### <a name="e-failover-to-a-geo-replication-secondary"></a>E. Failover für eine sekundäre Datenbank für eine Georeplikation
-
 Stuft die sekundäre Datenbank db1 auf dem Server `secondaryserver` höher, damit sie bei Ausführung auf dem Server `secondaryserver` zur neuen primären Datenbank wird.
 
 ```sql
@@ -641,7 +625,6 @@ ALTER DATABASE db1 FAILOVER
 ```
 
 ### <a name="f-update-a-single-database-to-service-tier-s0-standard-edition-performance-level-0"></a>F. Aktualisieren einer einzelnen Datenbank auf Dienstebene S0 (Standard Edition, Leistungsebene 0)
-
 Aktualisiert eine einzelne Datenbank auf Standard Edition (Dienstebene) mit einer Leistungsebene von S0 und einer maximalen Größe von 250 GB.
 
 ```sql
@@ -681,14 +664,17 @@ In einer verwalteten Azure SQL-Datenbank-Instanz verwenden Sie diese Anweisung, 
 
 Aufgrund ihrer Länge wird die ALTER DATABASE-Syntax in mehrere Artikel aufgeteilt.
 
-ALTER DATABASE  
+ALTER DATABASE    
 Der aktuelle Artikel umfasst die Syntax und weitere Informationen zum Festlegen von Datei- und Dateigruppenoptionen, von Datenbankoptionen und des Datenbank-Kompatibilitätsgrads.  
   
-[ALTER DATABASE-Optionen für Dateien und Dateigruppen](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md?&tabs=sqldbmi) stellt die Syntax und weitere Informationen zum Hinzufügen und Entfernen von Dateien und Dateigruppen in einer Datenbank sowie zum Ändern der Datei- und Dateigruppenattribute bereit.  
+[ALTER DATABASE-Optionen für Dateien und Dateigruppen](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md?&tabs=sqldbmi)     
+Stellt die Syntax und weitere Informationen zum Hinzufügen und Entfernen von Dateien und Dateigruppen in einer Datenbank sowie zum Ändern der Datei- und Dateigruppenattribute bereit.  
   
-[ALTER DATABASE SET-Optionen](../../t-sql/statements/alter-database-transact-sql-set-options.md?&tabs=sqldbmi) stellt die Syntax und weitere Informationen zum Ändern der Datenbankattribute mithilfe der SET-Optionen von ALTER DATABASE bereit.  
+[ALTER DATABASE SET-Optionen](../../t-sql/statements/alter-database-transact-sql-set-options.md?&tabs=sqldbmi)    
+Stellt die Syntax und weitere Informationen zum Ändern der Datenbankattribute mithilfe der SET-Optionen von ALTER DATABASE bereit.  
   
-[ALTER DATABASE-Kompatibilitätsgrad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?&tabs=sqldbmi) stellt die Syntax und weitere Informationen für die SET-Optionen von ALTER DATABASE bereit, die sich auf die Datenbank-Kompatibilitätsgrade beziehen.  
+[ALTER DATABASE-Kompatibilitätsgrad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?&tabs=sqldbmi)   
+Stellt die Syntax und weitere Informationen für die SET-Optionen von ALTER DATABASE bereit, die sich auf die Datenbank-Kompatibilitätsgrade beziehen.  
 
 ## <a name="syntax"></a>Syntax
 
@@ -730,38 +716,32 @@ ALTER DATABASE { database_name | CURRENT }
 ```
 ## <a name="arguments"></a>Argumente
 
-*database_name*
-
+*database_name*      
 Der Name der Datenbank, die geändert werden soll.
 
-CURRENT
-
+CURRENT     
 Legt fest, dass die zurzeit verwendete Datenbank geändert werden soll.
 
 ## <a name="remarks"></a>Remarks
-
 Verwenden Sie [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md), um eine Datenbank zu entfernen.
 Verwenden Sie [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md), um die Größe einer Datenbank zu reduzieren.
 
-Die ALTER DATABASE-Anweisung muss im Autocommitmodus (dem Standardmodus für die Transaktionsverwaltung) ausgeführt werden und ist in einer expliziten oder impliziten Transaktion nicht zugelassen.
+Die `ALTER DATABASE`-Anweisung muss im Autocommitmodus (dem Standardmodus für die Transaktionsverwaltung) ausgeführt werden und ist in einer expliziten oder impliziten Transaktion nicht zugelassen.
 
 Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. Für jeden geleerten Cachespeicher im Plancache enthält das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll folgende Meldung zur Information: „[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat für den "%2!s!"-Cachespeicher (Bestandteil des Plancache) %1!s! Leerungen des Cachespeichers gefunden, die von Datenbankwartungs- oder Neukonfigurierungsvorgängen ausgelöst wurden.“. Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.
 
-Der Prozedurcache wird auch im folgenden Szenario geleert: Sie führen mehrere Abfragen für eine Datenbank aus, die über Standardoptionen verfügt. Anschließend wird die Datenbank gelöscht.
+Der Plancache wird auch dann geleert, wenn mehrere Abfragen auf eine Datenbank angewendet werden, die Standardoptionen aufweist. Anschließend wird die Datenbank gelöscht.
 
 ## <a name="viewing-database-information"></a>Anzeigen von Datenbankinformationen
-
 Sie können Katalogsichten, Systemfunktionen und gespeicherte Systemprozeduren verwenden, um Informationen zu Datenbanken, Dateien und Dateigruppen zurückzugeben.
 
 ## <a name="permissions"></a>Berechtigungen
-
 Datenbanken können nur durch den Prinzipalanmeldenamen auf Serverebene (vom Bereitstellungsprozess erstellt) oder Mitglieder der Datenbankrolle `dbcreator` geändert werden.
 
 > [!IMPORTANT]
 > Der Datenbankbesitzer kann die Datenbank nur ändern, wenn er Mitglied der Rolle `dbcreator` ist.
 
 ## <a name="examples"></a>Beispiele
-
 Die folgenden Beispiele zeigen, wie die automatische Optimierung festgelegt wird und wie eine Datei in einer verwalteten Instanz hinzugefügt wird.
 
 ```sql
@@ -819,29 +799,33 @@ ALTER DATABASE database_name
       | SERVICE_OBJECTIVE = {
             'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500'
           | 'DW600' | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000'
-          | 'DW3000' | 'DW6000' | 'DW1000c' | 'DW1500c' | 'DW2000c'
-          | 'DW2500c' | 'DW3000c' | 'DW5000c' | 'DW6000c' | 'DW7500c'
-          | 'DW10000c' | 'DW15000c' | 'DW30000c'
+          | 'DW3000' | 'DW6000' | 'DW500c' | 'DW1000c' | 'DW1500c'
+          | 'DW2000c' | 'DW2500c' | 'DW3000c' | 'DW5000c' | 'DW6000c'
+          | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
       }
 ```
 
 ## <a name="arguments"></a>Argumente
 
-*database_name* Gibt den Namen der zu ändernden Datenbank an.
+*database_name*     
+Gibt den Namen der zu ändernden Datenbank an.
 
-MODIFY NAME *new_database_name* Benennt die Datenbank in den angegebenen Namen *new_database_name* um.
+MODIFY NAME = *new_database_name*    
+Benennt die Datenbank in den angegebenen Namen *new_database_name* um.
 
-MAXSIZE Der Standardwert ist 245.760 GB (240 TB).
+MAXSIZE    
+Der Standardwert ist 245.760 GB (240 TB).
 
-**Gilt für:** Optimiert für Elastizitätsleistungsstufe
+**Gilt für:** Optimiert für Compute Gen1
 
 Der Wert für die maximal zulässige Größe der Datenbank Die Datenbank kann nicht größer sein als MAXSIZE.
 
-**Gilt für:** Optimiert für Computeleistungsstufe
+**Gilt für:** Optimiert für Compute Gen2
 
 Die maximal zulässige Größe für Rowstore-Daten in der Datenbank Daten, die in Rowstore-Tabellen, dem Deltastore eines Columnstore-Index oder einem nicht gruppierten Index für einen gruppierten Columnstore-Index gespeichert sind, können MAXSIZE nicht übersteigen. Daten, die im Columnstore-Format komprimiert sind, haben kein Größenlimit und werden nicht durch MAXSIZE beschränkt.
 
-SERVICE_OBJECTIVE Gibt die Leistungsebene an. Weitere Informationen zu Dienstzielen für [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] finden Sie unter [Leistungsstufen](https://azure.microsoft.com/documentation/articles/performance-tiers/).
+SERVICE_OBJECTIVE      
+Gibt die Leistungsebene an. Weitere Informationen zu Dienstzielen für SQL Data Warehouse finden Sie unter [Data Warehouse-Einheiten (DWUs)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
 
 ## <a name="permissions"></a>Berechtigungen
 
@@ -858,15 +842,13 @@ Bei der aktuellen Datenbank muss es sich um eine andere Datenbank als die handel
 
 SQL Data Warehouse ist auf COMPATIBILITY_LEVEL 130 festgelegt und kann nicht verändert werden. Weitere Informationen finden Sie unter [Verbesserte Abfrageleistung mit Kompatibilitätsgrad 130 in Azure SQL-Datenbank](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/).
 
-Verwenden Sie [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md), um die Größe einer Datenbank zu reduzieren.
-
 ## <a name="limitations-and-restrictions"></a>Einschränkungen
 
-Für die Ausführung von ALTER DATABASE muss die Datenbank online sein und darf sich nicht im angehaltenen Zustand befinden.
+Für die Ausführung von `ALTER DATABASE` muss die Datenbank online sein und darf sich nicht im angehaltenen Zustand befinden.
 
-Die ALTER DATABASE-Anweisung muss im Autocommitmodus ausgeführt werden. Dabei handelt es sich um den Standardmodus für die Transaktionsverwaltung. Dies wird in den Verbindungseinstellungen festgelegt.
+Die Anweisung `ALTER DATABASE` muss im Autocommitmodus ausgeführt werden. Dabei handelt es sich um den Standardmodus für die Transaktionsverwaltung. Dies wird in den Verbindungseinstellungen festgelegt.
 
-Die ALTER DATABASE-Anweisung darf nicht Teil einer benutzerdefinierten Transaktion sein.
+Die Anweisung `ALTER DATABASE` darf nicht Teil einer benutzerdefinierten Transaktion sein.
 
 Sie können die Datenbanksortierung nicht ändern.
 
@@ -943,50 +925,56 @@ ALTER DATABASE database_name
 
 ## <a name="arguments"></a>Argumente
 
-*database_name* Der Name der Datenbank, die geändert werden soll. Um eine Liste von Datenbanken auf dem Gerät anzuzeigen, verwenden Sie [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
+*database_name*        
+Der Name der Datenbank, die geändert werden soll. Um eine Liste von Datenbanken auf dem Gerät anzuzeigen, verwenden Sie [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
-AUTOGROW = { ON | OFF } Aktualisiert die Option AUTOGROW. Wenn AUTOGROW ON ist, erhöht [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] automatisch den zugeordneten Speicherplatz für replizierte Tabellen und verteilte Tabellen sowie das Transaktionsprotokoll nach Bedarf, um den gesteigerten Speicheranforderungen gerecht zu werden. Wenn AUTOGROW OFF ist, gibt [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] einen Fehler zurück, wenn replizierte Tabellen, verteilte Tabellen oder das Transaktionsprotokoll die Einstellung für die maximale Größe überschreiten.
+AUTOGROW = { ON | OFF }        
+Aktualisiert die Option AUTOGROW. Wenn AUTOGROW ON ist, erhöht [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] automatisch den zugeordneten Speicherplatz für replizierte Tabellen und verteilte Tabellen sowie das Transaktionsprotokoll nach Bedarf, um den gesteigerten Speicheranforderungen gerecht zu werden. Wenn AUTOGROW OFF ist, gibt [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] einen Fehler zurück, wenn replizierte Tabellen, verteilte Tabellen oder das Transaktionsprotokoll die Einstellung für die maximale Größe überschreiten.
 
-REPLICATED_SIZE = *size* [GB] Gibt die neue maximale Anzahl von Gigabyte pro Computeknoten für die Speicherung aller replizierten Tabellen in der Datenbank an, die geändert werden. Wenn Sie Appliancespeicherplatz planen, müssen Sie REPLICATED_SIZE mit der Anzahl der Computeknoten in der Appliance multiplizieren.
+REPLICATED_SIZE = *size* [GB]         
+Gibt die neue maximale Anzahl von Gigabyte pro Computeknoten für die Speicherung aller replizierten Tabellen in der Datenbank an, die geändert werden. Wenn Sie Appliancespeicherplatz planen, müssen Sie REPLICATED_SIZE mit der Anzahl der Computeknoten in der Appliance multiplizieren.
 
-DISTRIBUTED_SIZE = *size* [GB] Gibt die neue maximale Anzahl von Gigabyte pro Datenbank für die Speicherung aller verteilten Tabellen in der Datenbank an, die geändert werden. Die Größe wird auf alle Computeknoten der Appliance verteilt.
+DISTRIBUTED_SIZE = *size* [GB]        
+Gibt die neue maximale Anzahl von Gigabyte pro Datenbank für die Speicherung aller verteilten Tabellen in der Datenbank an, die geändert werden. Die Größe wird auf alle Computeknoten der Appliance verteilt.
 
-LOG_SIZE = *size* [GB] Gibt die neue maximale Anzahl von Gigabyte pro Datenbank für die Speicherung aller Transaktionsprotokolle in der Datenbank an, die geändert werden. Die Größe wird auf alle Computeknoten der Appliance verteilt.
+LOG_SIZE = *size* [GB]         
+Gibt die neue maximale Anzahl von Gigabyte pro Datenbank für die Speicherung aller Transaktionsprotokolle in der Datenbank an, die geändert werden. Die Größe wird auf alle Computeknoten der Appliance verteilt.
 
-ENCRYPTION { ON | OFF } Legt fest, ob die Datenbank verschlüsselt (ON) oder nicht verschlüsselt (OFF) werden soll. Die Verschlüsselung kann nur für [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] konfiguriert werden, wenn [sp_pdw_database_encryption](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md) auf **1** festgelegt wurde. Ein Datenbank-Verschlüsselungsschlüssel muss erstellt werden, bevor Transparent Data Encryption konfiguriert werden kann. Weitere Informationen zur Datenbankverschlüsselung finden Sie unter [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md).
+ENCRYPTION { ON | OFF }         
+Legt fest, ob die Datenbank verschlüsselt (ON) oder nicht verschlüsselt (OFF) werden soll. Die Verschlüsselung kann nur für [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] konfiguriert werden, wenn [sp_pdw_database_encryption](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md) auf **1** festgelegt wurde. Ein Datenbank-Verschlüsselungsschlüssel muss erstellt werden, bevor Transparent Data Encryption konfiguriert werden kann. Weitere Informationen zur Datenbankverschlüsselung finden Sie unter [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md).
 
-SET AUTO_CREATE_STATISTICS { ON | OFF } Wenn die Option zum automatischen Erstellen von Statistiken, AUTO_CREATE_STATISTICS, auf ON festgelegt ist, erstellt der Abfrageoptimierer nach Bedarf Statistiken für einzelne Spalten im Abfrageprädikat, um Kardinalitätsschätzungen für den Abfrageplan zu verbessern. Diese Statistiken für einzelne Spalten werden für Spalten erstellt, die noch nicht über ein Histogramm in einem vorhandenen Statistikobjekt verfügen.
+SET AUTO_CREATE_STATISTICS { ON | OFF }        
+Ist die Option AUTO_CREATE_STATISTICS zum automatischen Erstellen von Statistiken aktiviert, erstellt der Abfrageoptimierer nach Bedarf Statistiken für einzelne Spalten im Abfrageprädikat, um Kardinalitätsschätzungen für den Abfrageplan zu verbessern. Diese Statistiken für einzelne Spalten werden für Spalten erstellt, die noch nicht über ein Histogramm in einem vorhandenen Statistikobjekt verfügen.
 
 Bei neuen Datenbanken, die nach dem Upgrade auf AU7 erstellt wurden, ist die Option standardmäßig auf ON festgelegt. Bei Datenbanken, die vor dem Upgrade erstellt wurden, ist die Option standardmäßig auf OFF festgelegt.
 
 Weitere Informationen zu Statistiken finden Sie unter [Statistik](../../relational-databases/statistics/statistics.md)
 
-SET AUTO_UPDATE_STATISTICS { ON | OFF } Wenn die Option zum automatischen Aktualisieren von Statistiken, AUTO_UPDATE_STATISTICS, auf ON festgelegt ist, stellt der Abfrageoptimierer fest, wann Statistiken möglicherweise veraltet sind, und aktualisiert diese Statistiken, sobald sie von einer Abfrage verwendet werden. Statistiken sind veraltet, wenn die Datenverteilung in der Tabelle oder indizierten Sicht durch die Vorgänge INSERT, UPDATE, DELETE oder MERGE geändert wurde. Der Abfrageoptimierer stellt fest, wann Statistiken veraltet sein könnten, indem er die Anzahl der Datenänderungen seit des letzten Statistikupdates ermittelt und sie mit einem Schwellenwert vergleicht. Der Schwellenwert basiert auf der Anzahl von Zeilen in der Tabelle oder indizierten Sicht.
+SET AUTO_UPDATE_STATISTICS { ON | OFF }       
+Wenn die Option AUTO_UPDATE_STATISTICS zum automatischen Update von Statistiken aktiviert ist, stellt der Abfrageoptimierer fest, wann Statistiken veraltet sein könnten, und aktualisiert diese Statistiken, sobald sie von einer Abfrage verwendet werden. Statistiken sind veraltet, wenn die Datenverteilung in der Tabelle oder indizierten Sicht durch die Vorgänge INSERT, UPDATE, DELETE oder MERGE geändert wurde. Der Abfrageoptimierer stellt fest, wann Statistiken veraltet sein könnten, indem er die Anzahl der Datenänderungen seit des letzten Statistikupdates ermittelt und sie mit einem Schwellenwert vergleicht. Der Schwellenwert basiert auf der Anzahl von Zeilen in der Tabelle oder indizierten Sicht.
 
 Bei neuen Datenbanken, die nach dem Upgrade auf AU7 erstellt wurden, ist die Option standardmäßig auf ON festgelegt. Bei Datenbanken, die vor dem Upgrade erstellt wurden, ist die Option standardmäßig auf OFF festgelegt.
 
 Weitere Informationen zu Statistiken finden Sie unter [Statistik](../../relational-databases/statistics/statistics.md).
 
-SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } Mit der Option für asynchrone Statistikupdates, AUTO_UPDATE_STATISTICS_ASYNC, wird festgelegt, ob der Abfrageoptimierer das synchrone oder asynchrone Statistikupdate verwendet. Die Option AUTO_UPDATE_STATISTICS_ASYNC gilt für Statistikobjekte, die für Indizes, einzelne Spalten in Abfrageprädikaten und mit der CREATE STATISTICS-Anweisung generierte Statistiken erstellt wurden.
+SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }        
+Mit der AUTO_UPDATE_STATISTICS_ASYNC-Option für die asynchrone Statistikaktualisierung wird festgelegt, ob der Abfrageoptimierer die synchrone oder asynchrone Statistikaktualisierung verwendet. Die Option AUTO_UPDATE_STATISTICS_ASYNC gilt für Statistikobjekte, die für Indizes, einzelne Spalten in Abfrageprädikaten und mit der CREATE STATISTICS-Anweisung generierte Statistiken erstellt wurden.
 
 Bei neuen Datenbanken, die nach dem Upgrade auf AU7 erstellt wurden, ist die Option standardmäßig auf ON festgelegt. Bei Datenbanken, die vor dem Upgrade erstellt wurden, ist die Option standardmäßig auf OFF festgelegt.
 
 Weitere Informationen zu Statistiken finden Sie unter [Statistik](/sql/relational-databases/statistics/statistics).
 
 ## <a name="permissions"></a>Berechtigungen
-
-Erfordert die ALTER-Berechtigung für die Datenbank.
+Erfordert die Berechtigung `ALTER` für die Datenbank.
 
 ## <a name="error-messages"></a>Fehlermeldungen
 
-Wenn „auto-stats“ deaktiviert ist und Sie versuchen, die Statistikeinstellungen zu ändern, gibt PDW folgende Fehlermeldung aus: „This option is not supported in PDW“ (Diese Option wird in PDW nicht unterstützt.). Der Systemadministrator kann „auto-stats“ aktivieren, indem er den Featureschalter [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md) aktiviert.
+Wenn „auto-stats“ deaktiviert ist und Sie versuchen, die Statistikeinstellungen zu ändern, gibt PDW die Fehlermeldung `This option is not supported in PDW` aus. Der Systemadministrator kann „auto-stats“ aktivieren, indem er den Featureschalter [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md) aktiviert.
 
 ## <a name="general-remarks"></a>Allgemeine Hinweise
-
-Die Werte für REPLICATED_SIZE, DISTRIBUTED_SIZE und LOG_SIZE können größer, gleich oder kleiner als die aktuellen Werte für die Datenbank sein.
+Die Werte für `REPLICATED_SIZE`, `DISTRIBUTED_SIZE` und `LOG_SIZE` können größer, gleich oder kleiner als die aktuellen Werte für die Datenbank sein.
 
 ## <a name="limitations-and-restrictions"></a>Einschränkungen
-
 Vergrößerungs- und Verkleinerungsvorgänge sind ungenau. Die resultierenden tatsächlichen Größen können von den Größenparametern abweichen.
 
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] führt die ALTER DATABASE-Anweisung nicht als unteilbaren Vorgang aus. Wenn die Anweisung während der Ausführung abgebrochen wird, bleiben Änderungen, die bereits durchgeführt wurden, erhalten.
@@ -994,15 +982,12 @@ Vergrößerungs- und Verkleinerungsvorgänge sind ungenau. Die resultierenden ta
 Die Statistikeinstellungen funktionieren nur, wenn der Administrator „auto-stats“ aktiviert hat. Wenn Sie Administrator sind, aktivieren oder deaktivieren Sie „auto-stats“ mithilfe des Featureschalters [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md).
 
 ## <a name="locking-behavior"></a>Sperrverhalten
-
 Führt eine gemeinsame Sperre für das DATABASE-Objekt durch. Sie können eine Datenbank, die von einem anderen Benutzer im Lese- oder Schreibmodus verwendet wird, nicht ändern. Dies schließt auch Sitzungen ein, die eine [USE](../language-elements/use-transact-sql.md)-Anweisung für die Datenbank ausgeführt haben.
 
 ## <a name="performance"></a>Leistung
-
 Das Verkleinern einer Datenbank kann, abhängig von der Größe der tatsächlichen Daten innerhalb der Datenbank und der Menge der Fragmentierung auf dem Datenträger, viel Zeit und viele Systemressourcen in Anspruch nehmen. Das Verkleinern einer Datenbank könnte beispielsweise mehrere Stunden oder noch länger dauern.
 
 ## <a name="determining-encryption-progress"></a>Bestimmen des Verschlüsselungsfortschritts
-
 Verwenden Sie die folgende Abfrage, um den Fortschritt der transparenten Datenverschlüsselung für die Datenbank als Prozentsatz zu bestimmen:
 
 ```sql

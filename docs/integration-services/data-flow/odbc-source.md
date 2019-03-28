@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.ssis.designer.odbcsource.columns.f1
 - sql13.ssis.designer.odbcsource.errorhandling.f1
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e291d13b6fb9d7f83bef22783baebccf6b713ee4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0518701a8f776fbe625fa77d35bfcc4f961973b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694509"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289836"
 ---
 # <a name="odbc-source"></a>ODBC-Quelle
   Die ODBC-Quelle extrahiert Daten mithilfe einer Datenbanktabelle, Sicht oder SQL-Anweisung aus einer Datenbank mit ODBC-Unterstützung.  
@@ -41,9 +41,9 @@ ms.locfileid: "47694509"
 ## <a name="error-handling"></a>Fehlerbehandlung  
  Die ODBC-Quelle verfügt über eine Fehlerausgabe. Die Komponentenfehlerausgabe enthält die folgenden Ausgabespalten:  
   
--   **Fehlercode**: Ruft die Zahl ab, die dem aktuellen Fehler entspricht. Eine Liste der Fehler finden Sie in der Dokumentation zur Datenbank mit ODBC-Unterstützung. Eine Liste der SSIS-Fehlercodes finden Sie in der SSIS-Fehler- und Meldungsreferenz.  
+-   **Fehlercode**: Der Wert, der dem aktuellen Fehler entspricht. Eine Liste der Fehler finden Sie in der Dokumentation zur Datenbank mit ODBC-Unterstützung. Eine Liste der SSIS-Fehlercodes finden Sie in der SSIS-Fehler- und Meldungsreferenz.  
   
--   **Fehlerspalte**: Die Quellspalte, die den Fehler verursacht (für Konvertierungsfehler).  
+-   **Fehlerspalte**: Die Quellspalte, die den Fehler verursacht (bei Konvertierungsfehlern).  
   
 -   Die Spalten mit den Standardausgabedaten.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "47694509"
   
 -   Doppelklicken Sie auf der Registerkarte **Datenfluss** auf die ODBC-Quelle.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
   
 #### <a name="connection-manager"></a>Ziel-Editor für Dimensionsverarbeitung  
  Wählen Sie in der Liste einen vorhandenen ODBC-Verbindungs-Manager aus, oder klicken Sie auf **Neu** , um eine neue Verbindung zu erstellen. Sie können eine Verbindung mit jeder von ODBC unterstützten Datenbank erstellen.  
@@ -132,7 +132,7 @@ ms.locfileid: "47694509"
   
 3.  Klicken Sie im **Quellen-Editor für ODBC**auf **Spalten**.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
   
 #### <a name="available-external-columns"></a>Verfügbare externe Spalten  
  Eine Liste der in der Datenquelle verfügbaren externen Spalten. Mit der Tabelle können keine Spalten hinzugefügt oder gelöscht werden. Wählen Sie die zu verwendenden Spalten aus der Datenquelle aus. Die ausgewählten Spalten werden der Liste **Externe Spalte** in der Reihenfolge hinzugefügt, in der Sie sie auswählen.  
@@ -157,7 +157,7 @@ ms.locfileid: "47694509"
   
 -   Klicken Sie im **Quellen-Editor für ODBC**auf **Fehlerausgabe**.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
   
 #### <a name="inputoutput"></a>Eingabe/Ausgabe  
  Zeigt den Namen der Datenquelle an.  

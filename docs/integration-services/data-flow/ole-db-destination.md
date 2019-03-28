@@ -21,15 +21,15 @@ helpviewer_keywords:
 - fast load data access mode [Integration Services]
 - inserting data
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e9eccb240bbce57f16442092996698dc619f5fab
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d2fceae5ca3eacd9d84faf86e034353cbc84368a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525317"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283084"
 ---
 # <a name="ole-db-destination"></a>OLE DB-Ziel
   Das OLE DB-Ziel lädt Daten mithilfe einer Datenbanktabelle, einer Sicht oder eines SQL-Befehls in eine Reihe von OLE DB-kompatible Datenbanken. Beispielsweise können aus der OLE DB-Quelle Daten in Tabellen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access- und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken geladen werden.  
@@ -52,7 +52,7 @@ ms.locfileid: "52525317"
 > [!NOTE]  
 >  Vom OLE DB-Ziel werden keine Parameter unterstützt. Wenn Sie eine parametrisierte INSERT-Anweisung ausführen müssen, ziehen Sie die Transformation für den OLE DB-Befehl in Betracht. Weitere Informationen finden Sie unter [OLE DB Command Transformation](../../integration-services/data-flow/transformations/ole-db-command-transformation.md).  
   
- Wenn das OLE DB-Ziel Daten lädt, die einen Doppelbyte-Zeichensatz (Double-Byte Character Set, DBCS) verwenden, werden die Daten möglicherweise beschädigt, falls der Datenzugriffsmodus nicht die Option für schnelles Laden verwendet und falls der OLE DB-Verbindungs-Manager den [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB) verwendet. Um die Integrität von Doppelbyte-Zeichensatzdaten sicherzustellen, sollten Sie für den OLE DB-Verbindungs-Manager die Verwendung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client konfigurieren oder einen der Zugriffsmodi für das schnelle Laden verwenden: **Tabelle oder Sicht – schnelles Laden** oder **Variable für Tabellenname oder Sichtname – schnelles Laden**. Beide Optionen sind im Dialogfeld **Ziel-Editor für OLE DB** verfügbar. Bei der Programmierung des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Objektmodells sollten Sie die AccessMode-Eigenschaft auf **OpenRowset Using FastLoad**oder **OpenRowset mit Using FastLoad From Variable**festlegen.  
+ Wenn das OLE DB-Ziel Daten lädt, die einen Doppelbyte-Zeichensatz (Double-Byte Character Set, DBCS) verwenden, werden die Daten möglicherweise beschädigt, falls der Datenzugriffsmodus nicht die Option für schnelles Laden verwendet und falls der OLE DB-Verbindungs-Manager den [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB) verwendet. Um die Integrität von Doppelbyte-Zeichensatzdaten sicherzustellen, sollten Sie für den OLE DB-Verbindungs-Manager die Verwendung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client konfigurieren oder einen der Zugriffsmodi für schnelles Laden verwenden: **Tabelle oder Sicht – schnelles Laden** oder **Variable für Tabellenname oder Sichtname – schnelles Laden**. Beide Optionen sind im Dialogfeld **Ziel-Editor für OLE DB** verfügbar. Bei der Programmierung des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Objektmodells sollten Sie die AccessMode-Eigenschaft auf **OpenRowset Using FastLoad**oder **OpenRowset mit Using FastLoad From Variable**festlegen.  
   
 > [!NOTE]  
 >  Wenn Sie mithilfe des Dialogfelds **Ziel-Editor für OLE DB** im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer die Zieltabelle erstellen, in die das OLE DB-Ziel Daten einfügt, müssen Sie möglicherweise die neu erstellte Tabelle manuell auswählen. Die manuelle Auswahl ist erforderlich, wenn ein OLE DB-Anbieter, wie z. B. der OLE DB-Anbieter für DB2, dem Tabellennamen automatisch Schemabezeichner hinzufügt.  
@@ -141,7 +141,7 @@ ms.locfileid: "52525317"
 |------------|-----------------|  
 |Tabelle oder Sicht|Lädt Daten in eine Tabelle oder Sicht im OLE DB-Ziel.|  
 |Tabelle oder Sicht - schnelles Laden|Lädt Daten in eine Tabelle oder Sicht im OLE DB-Ziel und verwendet die Option für das schnelle Laden. Weitere Informationen zu Datenzugriffsmodi für schnelles Laden, die für Masseneinfügungen optimiert sind, finden Sie unter [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).|  
-|Variable für Tabellenname oder Sichtname|Gibt den Namen der Tabelle oder Sicht in einer Variablen an.<br /><br /> **Verwandte Informationen:** [Verwenden von Variablen in Paketen](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Variable für Tabellenname oder Sichtname|Gibt den Namen der Tabelle oder Sicht in einer Variablen an.<br /><br /> **Verwandte Informationen**: [Verwenden von Variablen in Paketen](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |Variable für Tabellenname oder Sichtname - schnelles Laden|Gibt den Namen der Tabelle oder Sicht in einer Variablen an und verwendet zum Laden der Daten die Option für das schnelle Laden. Weitere Informationen zu Datenzugriffsmodi für schnelles Laden, die für Masseneinfügungen optimiert sind, finden Sie unter [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).|  
 |SQL-Befehl|Lädt Daten mithilfe einer SQL-Abfrage in das OLE DB-Ziel.|  
   
@@ -257,7 +257,7 @@ ms.locfileid: "52525317"
 ## <a name="ole-db-destination-editor-mappings-page"></a>Ziel-Editor für OLE DB (Seite Zuordnungen)
   Auf der Seite **Zuordnungen** des Dialogfelds **Ziel-Editor für OLE DB** können Sie eine Zuordnung von Eingabe- zu Zielspalten vornehmen.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Eingabespalten in der Tabelle Zielspalten zuordnen.  
   
@@ -273,7 +273,7 @@ ms.locfileid: "52525317"
 ## <a name="ole-db-destination-editor-error-output-page"></a>Ziel-Editor für OLE DB (Seite Fehlerausgabe)
   Auf der Seite **Fehlerausgabe** des Dialogfelds **Ziel-Editor für OLE DB** geben Sie Optionen für die Fehlerbehandlung an.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Eingabe an.  
   

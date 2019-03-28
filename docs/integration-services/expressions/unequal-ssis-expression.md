@@ -11,15 +11,15 @@ helpviewer_keywords:
 - unequal operator (!=)
 - '!= (not equal to)'
 ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fe51d32dee641ddd465ba5c0674900be79a12460
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f8f00f51ee6db4b93ba56211755e067c008898c4
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847388"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271388"
 ---
 # <a name="-unequal-ssis-expression"></a>!= (Ungleich) (SSIS-Ausdruck)
   Führt einen Vergleich aus, um zu ermitteln, ob zwei Ausdrücke mit kompatiblen Datentypen ungleich sind. Die Ausdrucksauswertung konvertiert viele Datentypen automatisch vor dem Vergleich.  
@@ -53,7 +53,7 @@ expression1 != expression2
     > [!NOTE]  
     >  Bei Zeichenfolgenvergleichen wird nach Groß-/Kleinschreibung, Akzent, Kana und Breite unterschieden.  
   
--   **Datum, Uhrzeit oder Datum/Uhrzeit** Sowohl *expression1* als auch *expression2* müssen zu einem der folgenden Datentypen ausgewertet werden: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET oder DT_FILETIME.  
+-   **Date, Time oder Date/Time** Sowohl *expression1* als auch *expression2* muss in einen der folgenden Datentypen ausgewertet werden: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET oder DT_FILETIME.  
   
     > [!NOTE]  
     >  Das System unterstützt keine Vergleiche zwischen einem Ausdruck, der zu einem Uhrzeitdatentyp ausgewertet wird, und einem Ausdruck, der entweder zu einem Datums- oder zu einem Datums-/Uhrzeitdatentyp ausgewertet wird. In diesem Fall wird ein Fehler generiert.  
@@ -82,7 +82,7 @@ expression1 != expression2
   
 -   **Binary:** *expression1* und *expression2* müssen zum Datentyp DT_BYTES ausgewertet werden.  
   
--   **BLOB:** *expression1* und *expression2* müssen zum gleichen BLOB-Datentyp (Binary Large Object Block) ausgewertet werden: DT_TEXT, DT_NTEXT oder DT_IMAGE.  
+-   **BLOB:** *expression1* und *expression2* müssen in den gleichen BLOB-Datentyp (Binary Large Object Block) ausgewertet werden: DT_TEXT, DT_NTEXT oder DT_IMAGE.  
   
  Weitere Informationen zu Datentypen finden Sie unter [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
@@ -105,7 +105,7 @@ ListPrice != 500
 @LPrice != 500  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [== &#40;Gleich, SSIS-Ausdruck&#41;](../../integration-services/expressions/equal-ssis-expression.md)   
  [Operatorenrangfolge und -assoziativität](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Operatoren &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/operators-ssis-expression.md)  

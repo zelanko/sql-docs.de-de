@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0a346d55b84b115a7a128d02fdedd1ff7f6b800d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 740b85a52908437d2cdbca5e47e0797c1e0ba08b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527143"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290286"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>Lektion 3-2: Ausführen des Paketinstallations-Assistenten
 In diesem Schritt führen Sie den Paketinstallations-Assistenten aus, um die Pakete aus dem Deployment Tutorial-Projekt auf einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]bereitzustellen. In der sysssispackages-Tabelle der msdb-Datenbank von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] können nur Pakete installiert werden. Die unterstützenden Dateien, die das Bereitstellungspaket enthält, werden im Dateisystem bereitgestellt.  
@@ -82,11 +82,11 @@ In einer früheren Lektion haben Sie die Pakete des Lernprogramms so geändert, 
   
     Da die Werte der Umgebungsvariablen auf dem Zielcomputer von den Werten der Umgebungsvariablen auf dem Entwicklungscomputer abweichen, werden auf der Seite zur Paketüberprüfung mehrere Warnungen angezeigt. Vier Warnungen sollten angezeigt werden:  
   
-    -   Der Konfigurationsdateiname "C:\DeploymentTutorial\DataTransferConfig.dtsConfig" ist ungültig. Überprüfen Sie den Konfigurationsdateinamen.  
+    -   Die Konfigurationsdatei: „C:\DeploymentTutorial\DataTransferConfig.dtsConfig“ ist ungültig. Überprüfen Sie den Konfigurationsdateinamen.  
   
     -   Fehler beim Laden von mindestens einem Konfigurationseintrag für das Paket. Überprüfen Sie die Konfigurationseinträge und vorherige Warnungen, um festzustellen, bei welcher Konfiguration der Fehler aufgetreten ist.  
   
-    -   Der Konfigurationsdateiname "C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig" ist ungültig. Überprüfen Sie den Konfigurationsdateinamen.  
+    -   Die Konfigurationsdatei: „C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig“ ist ungültig. Überprüfen Sie den Konfigurationsdateinamen.  
   
     -   Fehler beim Laden von mindestens einem Konfigurationseintrag für das Paket. Überprüfen Sie die Konfigurationseinträge und vorherige Warnungen, um festzustellen, bei welcher Konfiguration der Fehler aufgetreten ist.  
   
@@ -100,7 +100,7 @@ In einer früheren Lektion haben Sie die Pakete des Lernprogramms so geändert, 
     > Es wird eine temporäre Protokolldatei erstellt, die für die Paketüberprüfung verwendet wird. Diese Datei wird bei der Ausführung des Pakets nicht verwendet.  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
-[Schritt 3: Testen der bereitgestellten Pakete](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
+[Schritt 3: Testen des bereitgestellten Pakets](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Integration Services-Dienst &#40;SSIS-Dienst&#41;](../integration-services/service/integration-services-service-ssis-service.md)  

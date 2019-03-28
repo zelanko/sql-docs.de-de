@@ -1,5 +1,5 @@
 ---
-title: '? : (Bedingt) (SSIS-Ausdruck) | Microsoft-Dokumentation'
+title: '? decodiert werden: (Bedingt) (SSIS-Ausdruck) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - conditional operator (?:)
 - '?: (conditional operator)'
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cd01f26f7c57ebe5b2c17b342b77ffc5add7e150
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43ba631d4b93e3f748afa0c64ff95d42609bd545
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626018"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272099"
 ---
-# <a name="--conditional-ssis-expression"></a>? : (Bedingt) (SSIS-Ausdruck)
+# <a name="--conditional-ssis-expression"></a>? decodiert werden: (Bedingt) (SSIS-Ausdruck)
   Gibt einen von zwei Ausdrücken basierend auf der Auswertung eines booleschen Ausdrucks zurück. Falls der boolesche Ausdruck zu TRUE ausgewertet wird, wird der erste Ausdruck ausgewertet, und das Ergebnis ist das Ausdrucksergebnis. Falls der boolesche Ausdruck zu FALSE ausgewertet wird, wird der zweite Ausdruck ausgewertet, und das Ergebnis ist das Ausdrucksergebnis.  
   
 ## <a name="syntax"></a>Syntax  
@@ -58,9 +58,9 @@ boolean_expression?expression1:expression2
   
 -   **Numerisch**   *expression1* und *expression2* müssen einen numerischen Datentyp aufweisen. Die Schnittmenge der Datentypen muss ein numerischer Datentyp gemäß den Regeln zu den impliziten numerischen Konvertierungen sein, die die Ausdrucksauswertung ausführt. Die Schnittmenge der beiden numerischen Datentypen darf nicht NULL sein. Weitere Informationen finden Sie unter [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
--   **Zeichenfolge:** *expression1* und *expression2* müssen einen Zeichenfolgen-Datentyp aufweisen, d.h. DT_STR oder DT_WSTR. Die beiden Ausdrücke können zu verschiedenen Zeichenfolgen-Datentypen ausgewertet werden. Das Ergebnis weist den DT_WSTR-Datentyp und die Länge des längeren Arguments auf.  
+-   **Zeichenfolge** *expression1* und *expression2* müssen einen Zeichenfolgen-Datentyp aufweisen: DT_STR oder DT_WSTR. Die beiden Ausdrücke können zu verschiedenen Zeichenfolgen-Datentypen ausgewertet werden. Das Ergebnis weist den DT_WSTR-Datentyp und die Länge des längeren Arguments auf.  
   
--   **Datum, Uhrzeit oder Datum/Uhrzeit:** Sowohl *expression1* als auch *expression2* müssen zu einem der folgenden Datentypen ausgewertet werden: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET oder DT_FILETIME.  
+-   **Date, Time oder Date/Time** Sowohl *expression1* als auch *expression2* muss in einen der folgenden Datentypen ausgewertet werden: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET oder DT_FILETIME.  
   
     > [!NOTE]  
     >  Das System unterstützt keine Vergleiche zwischen einem Ausdruck, der zu einem Uhrzeitdatentyp ausgewertet wird, und einem Ausdruck, der entweder zu einem Datums- oder zu einem Datums-/Uhrzeitdatentyp ausgewertet wird. In diesem Fall wird ein Fehler generiert.  
@@ -98,7 +98,7 @@ boolean_expression?expression1:expression2
 ListPrice < 350.00 ? ListPrice * .2 : ListPrice * .1  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Operatorenrangfolge und -assoziativität](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Operatoren &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   

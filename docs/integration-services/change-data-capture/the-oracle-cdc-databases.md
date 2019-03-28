@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2dc364cc2665d800e311625d754716e4582b6b65
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1f41ef937dd3045be524eeb71274ce3f46f85653
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392863"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282676"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC-Datenbanken
   Eine Oracle CDC-Instanz wird einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank mit dem gleichen Namen auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zielinstanz zugeordnet. Diese Datenbank wird als Oracle CDC-Datenbank (oder kurz CDC-Datenbank) bezeichnet.  
@@ -99,7 +99,7 @@ ms.locfileid: "52392863"
 |----------|-----------------|  
 |version|Hiermit wird die Version der CDC-Instanzkonfiguration verfolgt. Sie wird bei jeder Aktualisierung der Tabelle und bei jeder Hinzufügung einer neuen Aufzeichnungsinstanz oder Entfernung einer vorhandenen Aufzeichnungsinstanz aktualisiert.|  
 |connect_string|Eine Oracle-Verbindungszeichenfolge. Ein grundlegendes Beispiel ist:<br /><br /> `<server>:<port>/<instance>` (z. B. `erp.contoso.com:1521/orcl`).<br /><br /> In der Verbindungszeichenfolge kann auch ein Oracle Net-Verbindungsdeskriptor angegeben werden, z. B. `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`.<br /><br /> Wenn Sie einen Verzeichnisserver oder tnsnames verwenden, kann die Verbindungszeichenfolge der Name der Verbindung sein.<br /><br /> Weitere Informationen zu Oracle-Verbindungszeichenfolgen finden Sie unter [https://go.microsoft.com/fwlink/?LinkId=231153](https://go.microsoft.com/fwlink/?LinkId=231153). Sie erhalten dort ausführliche Informationen zu Verbindungszeichenfolgen der Oracle-Datenbank für den Oracle Instant Client, der von Oracle CDC Service verwendet wird.|  
-|use_windows_authentication|Ein boolescher Wert, der die folgenden Werte haben kann:<br /><br /> **0**: Ein Oracle-Benutzername und ein dazugehöriges Kennwort werden zur Authentifizierung bereitgestellt (Standardeinstellung).<br /><br /> **1**: Zum Herstellen einer Verbindung mit der Oracle-Datenbank wird die Windows-Authentifizierung verwendet. Sie können diese Option nur verwenden, wenn die Oracle-Datenbank für die Nutzung der Windows-Authentifizierung konfiguriert ist.|  
+|use_windows_authentication|Ein boolescher Wert, der die folgenden Werte haben kann:<br /><br /> **0**: Ein Oracle-Benutzername und dazugehöriges Kennwort werden zur Authentifizierung bereitgestellt (Standardeinstellung).<br /><br /> **1**: Zum Herstellen einer Verbindung mit der Oracle-Datenbank wird die Windows-Authentifizierung verwendet. Sie können diese Option nur verwenden, wenn die Oracle-Datenbank für die Nutzung der Windows-Authentifizierung konfiguriert ist.|  
 |username|Der Name des Oracle-Datenbankbenutzers mit Log Mining-Berechtigung. Diese Angabe ist nur obligatorisch, wenn Folgendes gilt: **use_windows_authentication = 0**.|  
 |Kennwort|Das Kennwort für den Oracle Datenbankbenutzer mit Log Mining-Berechtigung. Diese Angabe ist nur obligatorisch, wenn Folgendes gilt: **use_windows_authentication = 0**.|  
 |transaction_staging_timeout|Der Zeitraum in Sekunden, während dessen eine nicht mit Commit bestätigte Oracle-Transaktion im Arbeitsspeicher verbleibt, bevor sie in die Tabelle **cdc.xdbcdc_staged_transactions** geschrieben wird. Der Standardwert ist 120 Sekunden.|  
@@ -143,7 +143,7 @@ ms.locfileid: "52392863"
 |status|Der aktuelle Statuscode für die aktuelle Oracle CDC-Instanz. Der Status beschreibt den aktuellen Zustand für die CDC.|  
 |sub_status|Status der zweiten Ebene, der zusätzliche Informationen zum aktuellen Status liefert.|  
 |active|Ein boolescher Wert, der die folgenden Werte haben kann:<br /><br /> **0**: Der Oracle CDC-Instanzprozess ist nicht aktiv.<br /><br /> **1**: Der Oracle CDC-Instanzprozess ist aktiv.|  
-|Fehler|Ein boolescher Wert, der die folgenden Werte haben kann:<br /><br /> **0**: Der Oracle CDC-Instanzprozess befindet sich nicht in einem Fehlerzustand.<br /><br /> **1**: Die Oracle CDC-Instanz befindet sich in einem Fehlerzustand.|  
+|Fehler|Ein boolescher Wert, der die folgenden Werte haben kann:<br /><br /> **0**: Der Oracle CDC-Instanzprozess hat keinen Fehlerzustand.<br /><br /> **1**: Die Oracle CDC-Instanz hat einen Fehlerzustand.|  
 |status_message|Eine Zeichenfolge, die eine Beschreibung des Fehlers oder des Status darstellt.|  
 |timestamp|Der Zeitstempel mit der Uhrzeit (UTC), zu der der Aufzeichnungsstatus zuletzt aktualisiert wurde.|  
 |active_capture_node|Der Name des Hosts (der Host kann ein Knoten auf einem Cluster sein), auf dem momentan der Oracle CDC Service und die Oracle CDC-Instanz (auf der die Oracle-Transaktionsprotokolle verarbeitet werden) ausgeführt werden.|  
@@ -186,7 +186,7 @@ ms.locfileid: "52392863"
 |data_end_cn|Die Änderungsnummer (CN) für die letzte Änderung der Daten in dieser Zeile.|  
 |data|Die bereitgestellten Änderungen für die Transaktion in BLOB-Form.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Change Data Capture Designer für Oracle von Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  
   
   

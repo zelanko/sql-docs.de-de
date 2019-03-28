@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - selOraTabDia
 ms.assetid: 2e295dc8-999d-4c4d-96cc-1519674b47a4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c4078dd31ec70008803149835276d22835f26424
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 232837ed4d42fe7c61036bcb5e4b2a80ec688b64
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753998"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273295"
 ---
 # <a name="select-oracle-tables-for-capturing-changes"></a>Auswählen von Oracle-Tabellen zum Aufzeichnen von Änderungen
   Verwenden Sie dieses Dialogfeld, um die Tabellen auszuwählen, die in der CDC-Instanz enthalten sind. Die ausgewählten Tabellen werden im Assistenten für neue Instanzen der Liste auf der Seite **Select Tables and Columns** hinzugefügt. In diesem Dialogfeld können Sie die folgenden Schritte ausführen.  
@@ -35,7 +35,7 @@ ms.locfileid: "47753998"
 > [!NOTE]  
 >  Sie können Kriterien in eines der Felder oder beide Felder eingeben.  
   
--   **Display first 1000 matching tables**: Dieses Kontrollkästchen ist standardmäßig aktiviert. Diese Option beschränkt die Anzeige auf die ersten 1000 übereinstimmenden Tabellen. Wenn Sie das Kontrollkästchen deaktivieren, werden alle Tabellen angezeigt, die zu einer Übereinstimmung führen. Falls eine große Anzahl von Tabellen vorhanden ist, kann es relativ lange dauern, bis die Liste angezeigt wird.  
+-   **Display first 1000 matching tables**: Standardmäßig ist dieses Kontrollkästchen aktiviert. Diese Option beschränkt die Anzeige auf die ersten 1000 übereinstimmenden Tabellen. Wenn Sie das Kontrollkästchen deaktivieren, werden alle Tabellen angezeigt, die zu einer Übereinstimmung führen. Falls eine große Anzahl von Tabellen vorhanden ist, kann es relativ lange dauern, bis die Liste angezeigt wird.  
   
  **So wählen Sie die Tabellen aus, die in die CDC-Instanz eingeschlossen werden sollen**  
  Aktivieren Sie das Kontrollkästchen neben einer beliebigen Tabelle, die Sie einschließen möchten, und klicken Sie dann auf **Hinzufügen**. Die Tabellen werden im Assistenten für neue Instanzen der Liste auf der Seite **Select Tables and Columns** hinzugefügt.  
@@ -45,7 +45,7 @@ ms.locfileid: "47753998"
 > [!NOTE]  
 >  Wenn Sie eine Tabelle auswählen, die einen nicht unterstützten Datentyp enthält, wird eine Fehlermeldung angezeigt, und die Tabelle wird nicht eingeschlossen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen der Instanz für die SQL Server-Änderungsdatenbank](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [Auswählen von Oracle-Tabellen und -Spalten](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
   

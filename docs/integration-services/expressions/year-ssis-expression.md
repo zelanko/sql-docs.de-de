@@ -11,15 +11,15 @@ helpviewer_keywords:
 - dates [Integration Services], YEAR
 - YEAR function
 ms.assetid: 9d88dead-ace8-44b9-b8e2-916c1842e155
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 515a7818263105664d4f33be241e0a10c7be07a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0781278539a1c01be5aec69dd86e4d0f93e65dde
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657021"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271818"
 ---
 # <a name="year-ssis-expression"></a>YEAR (SSIS-Ausdruck)
   Gibt eine ganze Zahl zurück, die den datepart-Wert für die Jahresangabe in einem Datum darstellt.  
@@ -44,7 +44,7 @@ YEAR(date)
  Ein Datumsliteral muss explizit in einen der date-Datentypen umgewandelt werden. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  
   
 > [!NOTE]  
->  Der Ausdruck wird nicht überprüft, wenn ein Datumsliteral explizit in einen der folgenden Datumsdatentypen umgewandelt wird: DT_DBTIMESTAMPOFFSET oder DT_DBTIMESTAMP2.  
+>  Der Ausdruck wird nicht überprüft, wenn ein Datumsliteral explizit in einen der folgenden Datumsdatentypen umgewandelt wird: DT_DBTIMESTAMPOFFSET und DT_DBTIMESTAMP2.  
   
  Die YEAR-Funktion entspricht bezüglich der Verwendung der DATEPART("Year", date)-Funktion, ist jedoch schneller.  
   
@@ -67,7 +67,7 @@ YEAR(ModifiedDate)
 YEAR(GETDATE())  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [DATEADD &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
  [DATEDIFF &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
  [DATEPART &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/datepart-ssis-expression.md)   

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: a25ebcc7-535e-4619-adf6-4e2b5a62ba37
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4d9c2725fbb4e237e065a7cfdd7c79ffe83d968a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f1f9edd63a9855bf87b653c0b4cbbdfffc5b70db
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642117"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280764"
 ---
 # <a name="catalogadddatatap"></a>catalog.add_data_tap
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -123,9 +123,9 @@ Exec SSISDB.Catalog.start_execution @execution_id
 ## <a name="requirements"></a>Anforderungen  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
- Blogeintrag [SSIS 2012: A Peek to Data Taps](https://go.microsoft.com/fwlink/?LinkId=239983) (SSIS 2012: Ein kurzer Blick auf Datenabzweigungen) auf rafael-salas.com.  
+ Blogeintrag, [SSIS 2012: A Peek to Data Taps](https://go.microsoft.com/fwlink/?LinkId=239983) (SSIS 2012: Ein kurzer Blick auf Datenabzweigungen) auf rafael-salas.com.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)  
   
   

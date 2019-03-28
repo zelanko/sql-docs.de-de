@@ -14,15 +14,15 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4aca92b322d3eb0a3b987300d88a877d29cf3cda
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: e0ee84933cf0644ac4759639c5ce6e2b3f183f04
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639027"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290126"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Behandlung von Problemen mit Paketausführungstools
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält Funktionen und Tools, die Sie zur Behandlung von Problemen beim Ausführen von Paketen nach deren Fertigstellung und Bereitstellung verwenden können.  
@@ -82,7 +82,7 @@ ms.locfileid: "51639027"
   
     3.  **Erwägen der Aufzeichnung von Zeilenanzahldaten**. Erwägen Sie, eine separate Tabelle mit Informationen zur Zeilenanzahl zu erstellen, in der jede Paketausführungsinstanz über ihre ExecutionID identifiziert wird. Verwenden Sie die Transformation für Zeilenanzahl, um an wichtigen Stellen im Datenfluss die Zeilenanzahl in einer Reihe von Variablen zu speichern. Verwenden Sie den Task 'SQL ausführen', um nach Beendigung des Datenflusses die Variablenreihe zur späteren Analyse und Berichterstattung in eine Zeile der Tabelle einzufügen.  
   
-     Weitere Informationen zu dieser Methode finden Sie im Abschnitt „ETL Auditing and Logging“ im [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Whitepaper [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602).  
+     Weitere Informationen zu dieser Methode finden Sie im Abschnitt „ETL Auditing and Logging“ im [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Whitepaper [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602).  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>Behandlung von Problemen bei der Paketausführung mithilfe von Debugdumpdateien  
  In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]können Sie Debugdumpdateien erstellen, die Informationen über die Ausführung eines Pakets enthalten. Weitere Informationen finden Sie unter [Generieren von Dumpdateien für die Paketausführung](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).  

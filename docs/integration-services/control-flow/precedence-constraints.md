@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 23753d15f1113b5a11a00e768c836f8860db96ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6df83cd3a7609097a6e27bd92c59daf24458548
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733658"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283059"
 ---
 # <a name="precedence-constraints"></a>Rangfolgeneinschränkungen
   Rangfolgeneinschränkungen verknüpfen ausführbare Dateien, Container und Tasks in Paketen in einer Ablaufsteuerung und geben Bedingungen an, die bestimmen, ob ausführbare Dateien ausgeführt werden. Bei einer ausführbaren Datei kann es sich um einen For-Schleifencontainer, einen Foreach-Schleifencontainer, einen Task oder einen Ereignishandler handeln. Ereignishandler verwenden Rangfolgeneinschränkungen zum Verlinken der ausführbaren Dateien zu einer Ablaufsteuerung.  
@@ -109,9 +109,9 @@ ms.locfileid: "47733658"
 ## <a name="precedence-constraint-editor"></a>Rangfolgeneinschränkungs-Editor
 Verwenden Sie das Dialogfeld **Rangfolgeneinschränkungs-Editor** , um Rangfolgeneinschränkungen zu konfigurieren.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Auswertungsvorgang**  
- Geben Sie den Auswertungsvorgang an, den die Rangfolgeneinschränkung verwendet. Dazu zählen die folgenden Vorgänge: **Einschränkung**, **Ausdruck**, **Ausdruck und Einschränkung**und **Ausdruck oder Einschränkung**.  
+ Geben Sie den Auswertungsvorgang an, den die Rangfolgeneinschränkung verwendet. Folgende Vorgänge sind möglich: **Einschränkung**, **Ausdruck**, **Ausdruck und Einschränkung**und **Ausdruck oder Einschränkung**.  
   
  **ReplTest1**  
  Geben Sie den Einschränkungswert an: **Erfolg**, **Fehler**oder **Beendigung**.  
@@ -218,7 +218,7 @@ Verwenden Sie das Dialogfeld **Rangfolgeneinschränkungs-Editor** , um Rangfolge
 |expression|–|Wahr|Wahr|  
 |expression|–|False|False|  
 |Einschränkung und Ausdruck|Wahr|Wahr|Wahr|  
-|Einschränkung und Ausdruck|Wahr|Falsch|False|  
+|Einschränkung und Ausdruck|Wahr|False|False|  
 |Einschränkung und Ausdruck|False|Wahr|False|  
 |Einschränkung und Ausdruck|False|False|False|  
 |Einschränkung oder Ausdruck|Wahr|Wahr|Wahr|  
@@ -237,7 +237,7 @@ Eine Rangfolgeneinschränkung verbindet zwei ausführbare Dateien: zwei Tasks, z
 ### <a name="logicaland-property"></a>LogicalAnd-Eigenschaft  
  Falls ein Task oder ein Container mehrere Einschränkungen aufweist, gibt die **LogicalAnd** -Eigenschaft an, ob eine Rangfolgeneinschränkung einzeln oder zusammen mit anderen Einschränkungen ausgewertet wird.  
   
- Sie können die **LogicalAnd**-Eigenschaft mithilfe des **Rangfolgeneinschränkungs-Editors** im [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer oder im Eigenschaftenfenster von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] festlegen.  
+ Sie können die **LogicalAnd** -Eigenschaft mithilfe des **Rangfolgeneinschränkungs-Editors** im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder im Eigenschaftenfenster von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] festlegen.  
 
 ## <a name="set-the-default-value-for-precedence-constraints"></a>Festlegen des Standardwerts für Rangfolgeneinschränkungen  
 Wenn Sie den [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer zum ersten Mal verwenden, lautet der Standardwert einer Rangfolgeneinschränkung **Erfolg**. Führen Sie die folgenden Schritte aus, um für den [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer einen anderen Standardwert für Rangfolgeneinschränkungen zu konfigurieren.

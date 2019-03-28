@@ -12,15 +12,15 @@ helpviewer_keywords:
 - OLE DB destination [Integration Services]
 - destinations [Integration Services], OLE DB
 ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 74f6cb8c09525b998d5e864124eff0e5bb0aa509
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd23184f25ff8083bdfffbb46ef8c5b5f5f91eae
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807378"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281234"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>Laden von Daten mithilfe des OLE DB-Ziels
   Das Paket muss bereits mindestens einen Datenflusstask und eine Quelle enthalten, damit Sie ein OLE DB-Ziel hinzufügen und konfigurieren können.  
@@ -43,7 +43,7 @@ ms.locfileid: "47807378"
   
     -   **Tabelle oder Sicht** Wählen Sie eine Tabelle oder Sicht in der Datenbank aus, die die Daten enthält.  
   
-    -   **Tabelle oder Sicht – schnelles Laden** Wählen Sie eine Tabelle oder Sicht in der Datenbank aus, die die Daten enthält, und legen Sie dann die Optionen für schnelles Laden fest: **Identität beibehalten**, **NULL-Werte beibehalten**, **Tabellensperre**, **Einschränkungen überprüfen**, **Zeilen pro Batch**oder **Maximale Einfügungscommitgröße**.  
+    -   **Tabelle oder Sicht – schnelles Laden** Wählen Sie eine Tabelle oder Sicht in der Datenbank aus, die die Daten enthält, und legen Sie dann Optionen für schnelles Laden fest: **Identität beibehalten**, **NULL-Werte beibehalten**, **Tabellensperre**, **CHECK-Einschränkung**, **Zeilen pro Batch** oder **Maximale Einfügungscommitgröße**.  
   
     -   **Variable für Tabellenname oder Sichtname** Wählen Sie die benutzerdefinierte Variable aus, die den Namen einer Tabelle oder Sicht in der Datenbank enthält.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "47807378"
   
 11. Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [OLE DB-Ziel](../../integration-services/data-flow/ole-db-destination.md)   
  [SQL Server Integration Services-Transformationen](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [SQL Server Integration Services-Pfade](../../integration-services/data-flow/integration-services-paths.md)   

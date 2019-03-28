@@ -27,15 +27,15 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c3843517e906cd2a1e6eaa7bcfe80d029525a902
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6ce4c2955896be6fc90063c220d2a33bd78901ee
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542890"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277509"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services-Protokollierung (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält Protokollanbieter, mit denen Sie die Protokollierung in Paketen, Containern und Tasks implementieren können. Mit der Protokollierung können Sie Laufzeitinformationen zu einem Paket aufzeichnen, damit Sie ein Paket bei jeder Ausführung überwachen und Probleme behandeln können. Beispielsweise können in einem Protokoll der Name des Operators, der das Paket ausgeführt hat, und der Zeitpunkt, zu dem die Paketausführung begann und endete, aufgezeichnet werden.  
@@ -72,7 +72,7 @@ ms.locfileid: "52542890"
 |------------------|------------|-------------|--------------|  
 |Textdatei|DTS.LogProviderTextFile|{0A039101-ACC1-4E06-943F-279948323883}|Der vom Protokollanbieter verwendete Dateiverbindungs-Manager gibt den Pfad der Textdatei an.|  
 |SQL Server Profiler|DTS.LogProviderSQLProfiler|{E93F6300-AE0C-4916-A7BF-A8D0CE12C77A}|Der vom Protokollanbieter verwendete Dateiverbindungs-Manager gibt den Pfad der von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]verwendeten Textdatei an.|  
-|SQL Server|DTS.LogProviderSQLServer|{94150B25-6AEB-4C0D-996D-D37D1C4FDEDA}|Der vom Protokollanbieter verwendete OLE DB-Verbindungs-Manager gibt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank an, die die sysssislog-Tabelle mit den Protokolleinträgen enthält.|  
+|SQL Server|DTS.LogProviderSQLServer|{94150B25-6AEB-4C0D-996D-D37D1C4FDEDA}|Der vom Protokollanbieter verwendete OLE DB-Verbindungs-Manager gibt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank an, die die sysssislog-Tabelle mit den Protokolleinträgen enthält.|  
 |Windows-Ereignisprotokoll|DTS.LogProviderEventLog|{071CC8EB-C343-4CFF-8D58-564B92FCA3CF}|Das Anwendungsprotokoll der Windows-Ereignisanzeige enthält die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Protokollinformationen.|  
 |XML-Datei|DTS.LogProviderXMLFile|{440945A4-2A22-4F19-B577-EAF5FDDC5F7A}|Der vom Protokollanbieter verwendete Dateiverbindungs-Manager gibt den Pfad der XML-Datei an.|  
   
@@ -134,7 +134,7 @@ ms.locfileid: "52542890"
 |**OnVariableValueChanged**|Schreibt einen Protokolleintrag, wenn sich der Wert einer Variablen ändert.|  
 |**OnWarning**|Schreibt einen Protokolleintrag, wenn eine Warnung auftritt.|  
 |**PipelineComponentTime**|Schreibt für jede Datenflusskomponente einen Protokolleintrag für jede Phase der Überprüfung und der Ausführung. Der Protokolleintrag gibt die Verarbeitungszeit für jede Phase an.|  
-|**Diagnostic**<br /><br /> **DiagnosticEx**|Schreibt einen Protokolleintrag, der Diagnoseinformationen enthält.<br /><br /> Sie können zum Beispiel vor und nach jedem Aufruf eines externen Datenanbieters eine Meldung protokollieren. Weitere Informationen finden Sie unter [Behandlung von Problemen mit Paketausführungstools](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).<br /><br /> Protokollieren Sie das **DiagnosticEx** -Ereignis, wenn Sie die Spaltennamen für Spalten im Datenfluss finden möchten, die Fehler enthalten. Dieses Ereignis schreibt eine Herkunftszuordnung für den Datenfluss in das Protokoll. Sie können den Spaltennamen dann in dieser Herkunftszuordnung nachschlagen, und zwar anhand des von einer Fehlerausgabe erfassten Spaltenbezeichners. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).<br /><br /> Beachten Sie, dass Leerraum in der XML-Ausgabe beim **DiagnosticEx** -Ereignis nicht beibehalten wird, um die Größe des Protokolls zu verringern. Kopieren Sie das Protokoll in einen XML-Editor wie z.B. Visual Studio, der XML-Formatierung und Syntaxhervorhebung unterstützt, um die Lesbarkeit zu verbessern.<br /><br /> Hinweis: Wenn Sie das **DiagnosticEx** -Ereignis mit dem SQL Server-Protokollanbieter protokollieren, wird die Ausgabe möglicherweise abgeschnitten. Das **message** -Feld des SQL Server-Protokollanbieters ist vom Typ „nvarchar(2048)“. Verwenden Sie beim Protokollieren des **DiagnosticEx** -Ereignisses einen anderen Protokollanbieter, um eine abgeschnittene Ausgabe zu vermeiden.|  
+|**Diagnostic**<br /><br /> **DiagnosticEx**|Schreibt einen Protokolleintrag, der Diagnoseinformationen enthält.<br /><br /> Sie können zum Beispiel vor und nach jedem Aufruf eines externen Datenanbieters eine Meldung protokollieren. Weitere Informationen finden Sie unter [Behandlung von Problemen mit Paketausführungstools](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).<br /><br /> Protokollieren Sie das **DiagnosticEx** -Ereignis, wenn Sie die Spaltennamen für Spalten im Datenfluss finden möchten, die Fehler enthalten. Dieses Ereignis schreibt eine Herkunftszuordnung für den Datenfluss in das Protokoll. Sie können den Spaltennamen dann in dieser Herkunftszuordnung nachschlagen, und zwar anhand des von einer Fehlerausgabe erfassten Spaltenbezeichners. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).<br /><br /> Beachten Sie, dass Leerraum in der XML-Ausgabe beim **DiagnosticEx** -Ereignis nicht beibehalten wird, um die Größe des Protokolls zu verringern. Kopieren Sie das Protokoll in einen XML-Editor wie z.B. Visual Studio, der XML-Formatierung und Syntaxhervorhebung unterstützt, um die Lesbarkeit zu verbessern.<br /><br /> Hinweis: Wenn Sie das **DiagnosticEx**-Ereignis mit dem SQL Server-Protokollanbieter protokollieren, wird die Ausgabe möglicherweise abgeschnitten. Das **message** -Feld des SQL Server-Protokollanbieters ist vom Typ „nvarchar(2048)“. Verwenden Sie beim Protokollieren des **DiagnosticEx** -Ereignisses einen anderen Protokollanbieter, um eine abgeschnittene Ausgabe zu vermeiden.|  
   
  Das Paket und viele Tasks verfügen über benutzerdefinierte Protokolleinträge, die für die Protokollierung aktiviert werden können. Der Task „Mail senden“ stellt z.B. den benutzerdefinierten Protokolleintrag **SendMailTaskBegin** bereit, mit dem im Zeitraum zwischen dem Beginn der Ausführung des Tasks „Mail senden“ und dem Senden einer E-Mail-Nachricht Informationen protokolliert werden. Weitere Informationen finden Sie unter [Custom Messages for Logging](#custom_messages).  
   
@@ -280,7 +280,7 @@ ms.locfileid: "52542890"
 ###  <a name="container"></a> Konfigurieren Sie die Optionen im Bereich "Container".  
  Mithilfe des **Container** -Bereichs des Dialogfelds **SSIS-Protokolle konfigurieren** können Sie das Paket und seine Container für das Protokollieren aktivieren.  
   
-#### <a name="options"></a>Tastatur  
+#### <a name="options"></a>enthalten  
  **Container**  
  Aktivieren Sie die Kontrollkästchen in der hierarchischen Sicht, um das Paket und seine Container für die Protokollierung zu aktivieren:  
   
@@ -295,7 +295,7 @@ ms.locfileid: "52542890"
 ###  <a name="provider"></a> Konfigurieren Sie die Optionen auf der Registerkarte "Anbieter und Protokolle".  
  Verwenden Sie die Registerkarte **Anbieter und Protokolle** des Dialogfelds **SSIS-Protokolle konfigurieren** , um Protokolle für das Aufzeichnen von Laufzeitereignissen zu erstellen und zu konfigurieren.  
   
-#### <a name="options"></a>Tastatur  
+#### <a name="options"></a>enthalten  
  **Anbietertyp**  
  Wählen Sie einen Protokollanbietertyp aus der Liste aus.  
   
@@ -311,7 +311,7 @@ ms.locfileid: "52542890"
  **Configuration**  
  Wählen Sie einen vorhandenen Verbindungs-Manager aus der Liste aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen. Abhängig vom Typ des Protokollanbieters können Sie einen OLE DB-Verbindungs-Manager oder einen Dateiverbindungs-Manager konfigurieren. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Ereignisprotokollanbieter erfordert keine Verbindung.  
   
- Verwandte Themen: [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) , [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
+ Verwandte Themen: , . [OLE DB-Verbindungs-Manager](../../integration-services/connection-manager/ole-db-connection-manager.md), [Dateiverbindungs-Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
  **Delete**  
  Wählen Sie einen Protokollanbieter aus, und klicken Sie auf **Löschen**.  
@@ -319,7 +319,7 @@ ms.locfileid: "52542890"
 ###  <a name="detail"></a> Konfigurieren Sie die Optionen auf der Registerkarte "Details".  
  Auf der Registerkarte **Details** des Dialogfelds **SSIS-Protokolle konfigurieren** können Sie die Ereignisse für das Protokollieren sowie die zu protokollierenden Informationsdetails aktivieren. Die Informationen, die Sie auswählen, gelten für alle Protokollanbieter im Paket. Sie können z. B. nicht einige Informationen in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz und andere Informationen in eine Textdatei schreiben.  
   
-#### <a name="options"></a>Tastatur  
+#### <a name="options"></a>enthalten  
  **Ereignisse**  
  Aktivieren oder Deaktivieren von Ereignissen für die Protokollierung.  
   

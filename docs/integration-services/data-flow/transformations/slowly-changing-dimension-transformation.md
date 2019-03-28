@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SCD transformation
 - updating slowly changing dimensions
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9aeb16eff9632fe5a6859985f70e8aefddd0fea4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cbd69e8674d7e2672502bfafe6550b83bc4e0362
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414537"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271111"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>Transformation für langsam veränderliche Dimensionen
   Die Transformation für langsam veränderliche Dimensionen koordiniert das Aktualisieren und Einfügen von Datensätzen in Data Warehouse-Dimensionstabellen. Beispielsweise können Sie mit dieser Transformation die Transformationsausgaben konfigurieren, die Datensätze in der DimProduct-Tabelle der [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] -Datenbank mit Daten aus der Production.Products-Tabelle in der AdventureWorks-OLTP-Datenbank aktualisieren und ersetzen.  
@@ -47,7 +47,7 @@ ms.locfileid: "52414537"
   
 -   Veränderliches Attribut überschreibt vorhandene Datensätze. Diese Art von Änderung ist mit einer Änderung vom Typ 1 identisch. Die Transformation für langsam veränderliche Dimensionen leitet diese Zeilen an die Ausgabe **Ausgabe: Updates von veränderlichen Attributen**weiter.  
   
--   Verlaufsattribut erstellt neue Datensätze, statt vorhandene Datensätze zu aktualisieren. Als einzige Änderung in einem vorhandenen Datensatz ist das Update einer Spalte zulässig, die angibt, ob der Datensatz aktuell oder abgelaufen ist. Diese Art von Änderung ist mit einer Änderung vom Typ 2 identisch. Die Transformation für langsam veränderliche Dimensionen leitet diese Zeilen an zwei Ausgaben weiter: **Ausgabe der Einfügevorgänge im Verlaufsattribut** und **Neue Ausgabe**.  
+-   Verlaufsattribut erstellt neue Datensätze, statt vorhandene Datensätze zu aktualisieren. Als einzige Änderung in einem vorhandenen Datensatz ist das Update einer Spalte zulässig, die angibt, ob der Datensatz aktuell oder abgelaufen ist. Diese Art von Änderung ist mit einer Änderung vom Typ 2 identisch. Die Transformation für langsam veränderliche Dimensionen leitet diese Zeilen an diese beiden Ausgaben weiter: **Ausgabe der Einfügevorgänge im Verlaufsattribut** und **Neue Ausgabe**.  
   
 -   Festes Attribut gibt an, dass der Spaltenwert nicht geändert werden darf. Die Transformation für langsam veränderliche Dimensionen erkennt Änderungen und kann die Zeilen mit Änderungen an die Ausgabe **Ausgabe des festen Attributs**weiterleiten.  
   

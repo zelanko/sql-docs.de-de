@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - MERGE statement [SQL Server]
 ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1e8a7300f2b3a006ade820831f682eb379e9e200
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 95a771a7eb5f8f77f7ee7e869c0a434b1b604d26
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393973"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282394"
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE in Integration Services-Paketen
   In der aktuellen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]kann die SQL-Anweisung in einem Task „SQL ausführen“ eine MERGE-Anweisung enthalten. Diese MERGE-Anweisung ermöglicht es Ihnen, in einer einzelnen Anweisung mehrere INSERT-, UPDATE- und DELETE-Vorgänge auszuführen.  
@@ -51,12 +51,12 @@ ms.locfileid: "52393973"
  Die FactBuyingHabits-Tabelle im Data Warehouse erfasst das letzte Datum, an dem ein Kunde ein bestimmtes Produkt gekauft hat. Die Tabelle besteht aus den Spalten ProductID, CustomerID und PurchaseDate. Jede Woche generiert die Transaktionsdatenbank eine PurchaseRecords-Tabelle, in der die während dieser Woche getätigten Käufe enthalten sind. Das Ziel ist, mit einer einzigen MERGE-Anweisung die Informationen der PurchaseRecords-Tabelle in die FactBuyingHabits-Tabelle einzufügen. Für Produkt/Kunde-Paare, die nicht vorhanden sind, fügt die MERGE-Anweisung neue Zeilen ein. Für Produkt/Kunde-Paare, die vorhanden sind, aktualisiert die MERGE-Anweisung das letzte Kaufdatum.  
   
 ###### <a name="track-price-history"></a>Nachverfolgen der Preisentwicklung  
- Die DimBook-Tabelle repräsentiert die Liste der Bücher im Bestand eines Buchhändlers und identifiziert die Preisentwicklung für jedes Buch. Diese Tabelle enthält folgende Spalten: ISBN, ProductID, Price, Shelf und IsCurrent. Außerdem enthält die Tabelle eine Zeile für jeden Preis des Buchs in der Vergangenheit. Eine dieser Zeilen enthält den aktuellen Preis. Um anzugeben, welche Zeile den aktuellen Preis enthält, wird der Wert der "IsCurrent"-Spalte für diese Zeile auf 1 gesetzt.  
+ Die DimBook-Tabelle repräsentiert die Liste der Bücher im Bestand eines Buchhändlers und identifiziert die Preisentwicklung für jedes Buch. Diese Tabelle hat folgende Spalten: ISBN, ProductID, Price, Shelf und IsCurrent. Außerdem enthält die Tabelle eine Zeile für jeden Preis des Buchs in der Vergangenheit. Eine dieser Zeilen enthält den aktuellen Preis. Um anzugeben, welche Zeile den aktuellen Preis enthält, wird der Wert der "IsCurrent"-Spalte für diese Zeile auf 1 gesetzt.  
   
  Jede Woche generiert die Datenbank eine WeeklyChanges-Tabelle, in der Preisänderungen und neue Bücher, die während der Woche in den Bestand aufgenommen wurden, enthalten sind. Mit einer einzigen MERGE-Anweisung können Sie die Änderungen der WeeklyChanges-Tabelle in die DimBook-Tabelle übernehmen. Die MERGE-Anweisung fügt neue Zeilen für neu hinzugefügte Bücher hinzu und aktualisiert die IsCurrent-Spalte für Zeilen vorhandener Bücher, deren Preis sich geändert hat, auf 0. Außerdem fügt die MERGE-Anweisung neue Zeilen für Bücher hinzu, deren Preis sich geändert hat, und legt den Wert der IsCurrent-Spalte für diese neuen Zeilen auf 1 fest.  
   
 ### <a name="merge-a-table-with-new-data-against-the-old-table"></a>Zusammenführen einer Tabelle mit neuen Daten aus der alten Tabelle  
- Die Datenbank formt die Eigenschaften eines Objekts mit einem „offenen Schema“, das heißt, eine Tabelle enthält Name/Wert-Paare für jede Eigenschaft. Die Properties-Tabelle enthält drei Spalten: EntityID,  PropertyID und Value. Eine NewProperties-Tabelle, bei der es sich um eine neuere Version der Tabelle handelt, muss mit der Properties-Tabelle synchronisiert werden. Um diese beiden Tabellen zu synchronisieren, können Sie eine einzelne MERGE-Anweisung verwenden, um die folgenden Vorgänge auszuführen:  
+ Die Datenbank formt die Eigenschaften eines Objekts mit einem „offenen Schema“, das heißt, eine Tabelle enthält Name/Wert-Paare für jede Eigenschaft. Die Tabelle „Properties“ hat drei Spalten: EntityID, PropertyID und Value. Eine NewProperties-Tabelle, bei der es sich um eine neuere Version der Tabelle handelt, muss mit der Properties-Tabelle synchronisiert werden. Um diese beiden Tabellen zu synchronisieren, können Sie eine einzelne MERGE-Anweisung verwenden, um die folgenden Vorgänge auszuführen:  
   
 -   Löschen Sie Eigenschaften aus der Properties-Tabelle, wenn sie in der NewProperties-Tabelle fehlen.  
   

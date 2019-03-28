@@ -8,18 +8,18 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a7513169dbff655d185c130b320075f0e2f2d855
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5058fb2f654ad7aa0325e53e045179688885abc
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715138"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279234"
 ---
-# <a name="lesson-2-create-the-deployment-bundle-in-ssis"></a>Lesson 2: Create the Deployment Bundle in SSIS
-In [Lektion 1: Vorbereiten der Erstellung des Bereitstellungspakets](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)haben Sie das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt mit Namen „Deployment Tutorial“ erstellt, diesem die Pakete und Unterstützungsdateien hinzugefügt und Konfigurationen in Paketen implementiert.  
+# <a name="lesson-2-create-the-deployment-bundle-in-ssis"></a>Lektion 2: Erstellen des Bereitstellungspakets in SSIS
+In [Lektion 1: Vorbereiten der Erstellung des Bereitstellungspakets](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md) haben Sie das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt mit Namen „Deployment Tutorial“ erstellt, diesem die Pakete und Unterstützungsdateien hinzugefügt und Konfigurationen in Paketen implementiert.  
   
 In dieser Lektion erstellen Sie das Bereitstellungspaket. Dabei handelt es sich um einen Ordner, der die Elemente enthält, die Sie benötigen, um Pakete auf einem anderen Computer zu installieren. Das Bereitstellungspaket enthält ein Bereitstellungsmanifest, Kopien der Pakete und Kopien der Unterstützungsdateien aus dem Deployment Tutorial-Projekt. Im Bereitstellungsmanifest werden die Pakete, verschiedene Dateien und Konfigurationen im Bereitstellungspaket aufgelistet.  
   
@@ -35,7 +35,7 @@ Diese Lektion enthält die folgenden Aufgaben:
 -   [Schritt 2: Überprüfen des Bereitstellungspakets](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
 ## <a name="start-the-lesson"></a>Lektion beginnen  
-[Schritt 1: Erstellen des Bereitstellungs-Hilfsprogramms](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
+[Schritt 1: Erstellen des Bereitstellungshilfsprogramms](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
   
   
   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - deployment utility [Integration Services]
 - deploying packages [Integration Services], configurations
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2c92d803dd38015950123501743d6a0e0cdfa8fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6238c07e4da7aa9b19a5264282a1c7c2733ecad
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739608"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277279"
 ---
 # <a name="deploy-packages-with-ssis"></a>Bereitstellen von Paketen mit SSIS
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] bietet Tools zum einfachen Bereitstellen von Paketen auf anderen Computern. Von den Bereitstellungstools werden auch mögliche Abhängigkeiten wie vom Paket benötigte Konfigurationen und Dateien verwaltet. In diesem Lernprogramm lernen Sie, wie Sie diese Tools verwenden, um Pakete und ihre Abhängigkeiten auf einem Zielrechner zu installieren.    
@@ -49,7 +49,7 @@ Es ist Ziel dieses Lernprogramms, die Komplexität von Bereitstellungsproblemen 
 Die beste Möglichkeit, den Umgang mit den neuen Tools, Steuerelementen und Funktionen von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] zu üben, besteht in ihrer Verwendung. Dieses Lernprogramm führt Sie schrittweise durch die Erstellung eines [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekts und das anschließende Hinzufügen der Pakete und weiterer erforderlicher Dateien zum Projekt. Wenn das Projekt vollständig ist, erstellen Sie ein Bereitstellungspaket, kopieren es zum Zielcomputer und installieren dann die Pakete auf dem Zielcomputer.    
     
 ## <a name="prerequisites"></a>Voraussetzungen    
-Dieses Tutorial wendet sich an Benutzer, die bereits mit grundlegenden Dateisystemvorgängen vertraut sind, aber nur über begrenzte Kenntnisse in Bezug auf die neuen Funktionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]verfügen. Um die grundlegenden [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Konzepte besser zu verstehen, deren Sie sich in diesem Tutorial bedienen, sollten Sie zuerst die folgenden [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Tutorials ausführen: [SSIS-Tutorials: Erstellen eines einfachen ETL-Pakets](../integration-services/ssis-how-to-create-an-etl-package.md).    
+Dieses Tutorial wendet sich an Benutzer, die bereits mit grundlegenden Dateisystemvorgängen vertraut sind, aber nur über begrenzte Kenntnisse in Bezug auf die neuen Funktionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]verfügen. Um die grundlegenden [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Konzepte besser zu verstehen, deren Sie sich in diesem Lernprogramm bedienen, sollten Sie zuerst das folgende [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Tutorial durchgehen: [SSIS: Erstellen eines einfachen ETL-Pakets](../integration-services/ssis-how-to-create-an-etl-package.md).    
     
 ### <a name="on-the-source-computer"></a>Auf dem Quellcomputer
 

@@ -28,15 +28,15 @@ helpviewer_keywords:
 - foreach enumerators [Integration Services]
 - containers [Integration Services], Foreach Loop
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 12f91e676983cea041d966a0306fb1faf636019b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 981d659d05517b1e1b54244cbea22d52ccf964f2
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505927"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271316"
 ---
 # <a name="foreach-loop-container"></a>Foreach-Schleifencontainer
   Der Foreach-Schleifencontainer definiert die Wiederholung einer Ablaufsteuerung in einem Paket. Die Schleifenimplementierung ist mit der **Foreach** -Schleifenstruktur in Programmiersprachen zu vergleichen. In einem Paket wird die Schleife mithilfe eines Foreach-Enumerators ermöglicht.  Der Foreach-Schleifencontainer wiederholt die Ablaufsteuerung für jedes Mitglied eines angegebenen Enumerators.  
@@ -180,7 +180,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
   
  Weitere Informationen für Foreach-Schleifencontainer und wie diese zu konfigurieren sind, finden Sie unter [Foreach-Schleifencontainer](../../integration-services/control-flow/foreach-loop-container.md) und [Konfigurieren eines Foreach-Schleifencontainers](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Foreach-Schleifencontainer an. Dieser Name wird als Bezeichnung des Tasksymbols und in Protokollen verwendet.  
   
@@ -215,7 +215,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  **Ausdrücke**  
  Klicken Sie auf die Option **Ausdrücke** , oder erweitern Sie diese, um die Liste der vorhandenen Eigenschaftsausdrücke anzuzeigen. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)**, um einen Eigenschaftsausdruck zu einer Enumeratoreigenschaft hinzuzufügen, oder um einen vorhandenen Eigenschaftsausdruck zu bearbeiten und auszuwerten.  
   
- **Verwandte Themen:** [Integration Services-Ausdrücke &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md), [Eigenschaftsausdrucks-Editor](../../integration-services/expressions/property-expressions-editor.md), [Ausdrucks-Generator](../../integration-services/expressions/expression-builder.md)  
+ **Verwandte Themen:**  [Integration Services-Ausdrücke &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md), [Eigenschaftsausdrucks-Editor](../../integration-services/expressions/property-expressions-editor.md), [Ausdrucks-Generator](../../integration-services/expressions/expression-builder.md)  
   
 ### <a name="enumerator-dynamic-options"></a>Enumerator (dynamische Optionen)  
   
@@ -281,7 +281,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  **Spalten**  
  Klicken Sie auf diese Option, um den Datentyp der Spalten im Element zu konfigurieren.  
   
- **Verwandte Themen:** [ForEach-Elementspalten (Dialogfeld, Referenz zur Benutzeroberfläche)](https://msdn.microsoft.com/library/ea76aae0-8798-4677-8ab8-4a579de4957c)  
+ **Verwandte Themen:** [Foreach-Elementspalten (Dialogfeld, Referenz zur Benutzeroberfläche)](https://msdn.microsoft.com/library/ea76aae0-8798-4677-8ab8-4a579de4957c)  
   
 #### <a name="enumerator--foreach-ado-enumerator"></a>Enumerator = Foreach-ADO-Enumerator  
  Mithilfe des Foreach-ADO-Enumerators werden Zeilen oder Tabellen in einem in einer Variablen gespeicherten ADO- oder ADO.NET-Objekt aufgezählt. Wenn die Foreach-Schleife z. B. einen Skripttask enthält, mit dem ein Dataset in eine Variable geschrieben wird, können Sie mithilfe des Foreach-ADO-Enumerators die Zeilen im Dataset aufzählen. Wenn die Variable ein ADO.NET-Dataset enthält, kann der Enumerator zum Aufzählen von Zeilen in mehreren Tabellen oder zum Aufzählen von Tabellen konfiguriert werden.  
@@ -312,7 +312,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
 > [!IMPORTANT]  
 >  Der ADO.NET-Verbindungs-Manager muss einen .NET-Anbieter für OLE DB verwenden. Wenn Sie eine Verbindung mit SQL Server herstellen, ist der empfohlene Anbieter der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, der im Dialogfeld **Verbindungs-Manager** im Abschnitt **.Net-Anbieter für OleDb** aufgeführt ist.  
   
- **Verwandte Themen:** [ADO Connection Manager](../../integration-services/connection-manager/ado-connection-manager.md), [Configure ADO.NET Connection Manager](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
+ **Verwandte Themen:** [ADO-Verbindungs-Manager](../../integration-services/connection-manager/ado-connection-manager.md), [Konfigurieren von ADO.NET-Verbindungs-Manager](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   
  **Schema**  
  Wählen Sie das aufzuzählende Schema aus.  
@@ -351,7 +351,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
   
  Wenn **DocumentSourceType** auf **Dateiverbindung** festgelegt ist, wählen Sie einen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
- **Verwandte Themen:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Verwandte Themen:** [Dateiverbindungs-Manager](../../integration-services/connection-manager/file-connection-manager.md), [Dateiverbindungs-Manager-Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  Wenn **DocumentSourceType** auf **Variable** festgelegt ist, wählen Sie eine vorhandene Variable aus, oder klicken Sie auf \<**Neue Variable...**>, um eine neue Variable zu erstellen.  
   
@@ -381,7 +381,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
   
  Wenn **OuterXPathStringSourceType** auf **Dateiverbindung** festgelegt ist, wählen Sie einen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
- **Verwandte Themen:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Verwandte Themen:** [Dateiverbindungs-Manager](../../integration-services/connection-manager/file-connection-manager.md), [Dateiverbindungs-Manager-Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  Wenn **OuterXPathStringSourceType** auf **Variable** festgelegt ist, wählen Sie eine vorhandene Variable aus, oder klicken Sie auf \<**Neue Variable...**>, um eine neue Variable zu erstellen.  
   
@@ -404,7 +404,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
   
  Wenn **InnerXPathStringSourceType** auf **Dateiverbindung** festgelegt ist, wählen Sie einen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
- **Verwandte Themen:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Verwandte Themen:** [Dateiverbindungs-Manager](../../integration-services/connection-manager/file-connection-manager.md), [Dateiverbindungs-Manager-Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  Wenn **InnerXPathStringSourceType** auf **Variable** festgelegt ist, wählen Sie eine vorhandene Variable aus, oder klicken Sie auf \<**Neue Variable...**>, um eine neue Variable zu erstellen.  
   
@@ -416,7 +416,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  **Verbindung**  
  Wählen Sie einen vorhandenen ADO.NET-Verbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung…**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
- Verwandte Themen: [ADO.NET Connection Manager](../../integration-services/connection-manager/ado-net-connection-manager.md), [Configure ADO.NET Connection Manager](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
+ Verwandte Themen: , . [ADONET-Verbindungs-Manager](../../integration-services/connection-manager/ado-net-connection-manager.md), [Konfigurieren von ADO.NET-Verbindungs-Manager](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   
  **Aufzählen**  
  Geben Sie das aufzuzählende SMO-Objekt an.  
@@ -458,7 +458,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  **Azure Storage-Verbindungs-Manager**  
  Wählen Sie einen vorhandenen Azure Storage-Verbindungs-Manager aus, oder erstellen Sie einen neuen, der auf ein Azure Storage-Konto verweist.  
   
- Verwandte Themen: [Azure Storage Connection Manager](../../integration-services/connection-manager/azure-storage-connection-manager.md).  
+ Verwandte Themen: , . [Azure Storage-Verbindungs-Manager](../../integration-services/connection-manager/azure-storage-connection-manager.md).  
   
  **Blob-Containername**  
  Geben Sie den Namen des Blob-Containers an, der die aufzuzählenden Blob-Dateien enthält.
@@ -494,7 +494,7 @@ Gibt an, ob im angegebenen Verzeichnis rekursiv gesucht werden soll.
   
  Das Lernprogramm für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] zum Erstellen eines einfachen ETL-Pakets enthält eine Lektion, die Ihnen zeigt, wie Sie eine Foreach-Schleife hinzufügen und konfigurieren können.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Variable**  
  Wählen Sie eine vorhandene Variable aus, oder klicken Sie auf **Neue Variable...**, um eine neue Variable zu erstellen.  
   
@@ -515,7 +515,7 @@ Gibt an, ob im angegebenen Verzeichnis rekursiv gesucht werden soll.
 ## <a name="schema-restrictions-dialog-box-adonet"></a>Dialogfeld „Schemaeinschränkungen“ (ADO.NET)
 Mit dem Dialogfeld **Schemaeinschränkungen** legen Sie die Schemaeinschränkungen fest, die für den Enumerator für das Foreach-ADO.NET-Schemarowset gelten.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Einschränkungen**  
  Wählen Sie die Einschränkungen aus, die für das Schema gelten.  
   
@@ -530,7 +530,7 @@ Mit dem Dialogfeld **Schemaeinschränkungen** legen Sie die Schemaeinschränkung
 ## <a name="for-each-item-columns-dialog-box"></a>ForEach-Elementspalten (Dialogfeld)
 Mithilfe des Dialogfelds **ForEach-Elementspalten** definieren Sie Spalten, die in den Elementen des ForEach-Elementenumerators enthalten sind.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Column**  
  Listet die Spalten auf.  
   
@@ -546,7 +546,7 @@ Mithilfe des Dialogfelds **ForEach-Elementspalten** definieren Sie Spalten, die 
  ## <a name="select-smo-enumeration-dialog-box"></a>SMO-Enumeration auswählen (Dialogfeld)
 Verwenden Sie das Dialogfeld **SMO-Enumeration auswählen** , um das aufzuzählende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects-Objekt (SMO-Objekt) für die angegebene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz anzugeben und den Enumerationstyp auszuwählen.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Aufzählen**  
  Erweitern des Servers und Auswählen eines SMO-Objekts.  
   
@@ -572,7 +572,7 @@ Verwenden Sie das Dialogfeld **SMO-Enumeration auswählen** , um das aufzuzähle
   
  Das Paket sollte so konfiguriert sein, dass jeweils nur eine ausführbare Datei ausgeführt wird, um in der Schleife negative Auswirkungen einer unbestimmten Zeitvorgabe der parallelen Taskausführung zu vermeiden. Wenn beispielsweise ein Paket mehrere Tasks gleichzeitig ausführen kann, können bei einem Foreach-Schleifencontainer, der im Ordner vorhandene Dateien aufzählt, die Dateinamen abruft und dann mithilfe eines Tasks "SQL ausführen" die Dateinamen in eine Tabelle einfügt, Schreibkonflikte auftreten, falls zwei Instanzen des Tasks "SQL ausführen" versuchen, zur selben Zeit zu schreiben. Weitere Informationen finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](../../integration-services/expressions/use-property-expressions-in-packages.md).  
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Ablaufsteuerung](../../integration-services/control-flow/control-flow.md)   
  [SQL Server Integration Services-Container](../../integration-services/control-flow/integration-services-containers.md)  
   

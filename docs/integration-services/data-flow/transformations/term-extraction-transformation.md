@@ -26,15 +26,15 @@ helpviewer_keywords:
 - term extractions [Integration Services]
 - stemming words [Integration Services]
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 85a35b34610982ac4418e0e8ab05d3e1b188b968
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3ea9c1c590b9f09f1bd31b491d9b0170f59f8406
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507473"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282574"
 ---
 # <a name="term-extraction-transformation"></a>Transformation für Ausdrucksextrahierung
   Die Transformation für Ausdrucksextrahierung extrahiert Ausdrücke aus Text in einer Transformationseingabespalte und schreibt die Ausdrücke dann in eine Transformationsausgabespalte. Diese Transformation ist nur mit englischem Text kompatibel und verwendet ein eigenes englisches Wörterbuch und linguistische Informationen für Englisch.  
@@ -186,7 +186,7 @@ ms.locfileid: "52507473"
 ## <a name="term-extraction-transformation-editor-term-extraction-tab"></a>Transformations-Editor für Ausdrucksextrahierung (Registerkarte Ausdrucksextrahierung)
   Auf der Registerkarte **Ausdrucksextrahierung** des Dialogfelds **Transformations-Editor für Ausdrucksextrahierung** können Sie eine Textspalte mit dem zu extrahierenden Text angeben.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Verfügbare Eingabespalten**  
  Wählen Sie mithilfe der Kontrollkästchen eine einzelne Textspalte aus, die für die Ausdrucksextrahierung verwendet wird.  
   
@@ -202,7 +202,7 @@ ms.locfileid: "52507473"
 ## <a name="term-extraction-transformation-editor-exclusion-tab"></a>Transformations-Editor für Ausdrucksextrahierung (Registerkarte Ausschluss)
   Auf der Registerkarte **Ausschluss** des Dialogfelds **Transformations-Editor für Ausdrucksextrahierung** können Sie eine Verbindung mit einer Ausschlusstabelle einrichten und die Spalten mit den Ausschlussausdrücken angeben.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Ausschlussausdrücke verwenden**  
  Geben Sie an, ob bei der Ausdrucksextrahierung bestimmte Ausdrücke ausgeschlossen werden sollen, indem eine Spalte mit Ausschlussausdrücken angegeben wird. Wenn Sie bestimmte Ausdrücke ausschließen möchten, müssen Sie folgende Quelleigenschaften angeben.  
   
@@ -224,7 +224,7 @@ ms.locfileid: "52507473"
 ## <a name="term-extraction-transformation-editor-advanced-tab"></a>Transformations-Editor für Ausdrucksextrahierung (Registerkarte Erweitert)
   Auf der Registerkarte **Erweitert** des Dialogfelds **Transformations-Editor für Ausdrucksextrahierung** können Sie Eigenschaften für die Extrahierung angeben, wie z. B. Häufigkeit, Länge und ob Wörter oder Ausdrücke extrahiert werden sollen.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Nomen**  
  Gibt an, dass durch die Transformation nur einzelne Nomen extrahiert werden.  
   
@@ -238,7 +238,7 @@ ms.locfileid: "52507473"
  Gibt an, dass es sich bei dem Ergebnis um die Häufigkeit des Begriffs handelt.  
   
  **TFIDF**  
- Gibt an, dass es sich bei dem Ergebnis um den TFIDF-Wert des Begriffs handelt. Das TFIDF-Ergebnis ist das Produkt von Ausdruckshäufigkeit und umgekehrter Dokumenthäufigkeit, definiert als: TFIDF des Ausdrucks T = (Häufigkeit von T) * log((Anz. Zeilen in der Eingabe)/(Anz. Zeilen mit T))  
+ Gibt an, dass es sich bei dem Ergebnis um den TFIDF-Wert des Begriffs handelt. Das TFIDF-Ergebnis ist das Produkt von Ausdruckshäufigkeit und umgekehrter Dokumenthäufigkeit, definiert als: TFIDF des Ausdrucks T = (Häufigkeit von T) * log( (Anz. Zeilen in der Eingabe) / (Anz. Zeilen mit T) )  
   
  **Schwellenwert für Häufigkeit**  
  Gibt in Form eines Zahlenwertes an, wie oft ein Wort oder ein Ausdruck vorkommen muss, bevor die Extrahierung erfolgt. Der Standardwert ist 2.  
@@ -252,7 +252,7 @@ ms.locfileid: "52507473"
  **Fehlerausgabe konfigurieren**  
  Geben Sie mit dem Dialogfeld [Fehlerausgabe konfigurieren](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) die Fehlerbehandlung für Zeilen an, die Fehler verursachen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
  [Transformation für Ausdruckssuche](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
 

@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 14b086c18dab363ca1c9afe7816d802d5a5262f3
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: a24f7577a5ac01b3bc035bd68056de3a95fa156c
+ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58072314"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417152"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Lernprogramm: Erste Schritte mit Always Encrypted mit Secure Enclaves mithilfe von SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -92,18 +92,19 @@ In diesem Schritt konfigurieren Sie den SQL Server-Computer als überwachten Hos
 >[!NOTE]
 >Der Hostschlüsselnachweis wird nur zur Verwendung in Testumgebungen empfohlen. Für Produktionsumgebungen sollten Sie den TPM-Nachweis verwenden.
 
-1. Melden Sie sich beim SQL Server-Computer als Administrator an, öffnen Sie eine Windows PowerShell-Konsole mit erhöhten Rechten, und installieren Sie die Funktion für überwachten Host, mit der auch Hyper-V installiert wird (sofern nicht bereits installiert).
+1. Melden Sie sich beim SQL Server-Computer als Administrator an. Öffnen Sie eine Windows PowerShell-Konsole mit erhöhten Rechten, und rufen Sie den Namen Ihres Computers durch Zugreifen auf die Variable „computername“ ab.
+
+   ```powershell
+   $env:computername 
+   ```
+
+2. Installieren Sie die Funktion für überwachten Host, mit der auch Hyper-V installiert wird (sofern nicht bereits erfolgt).
 
    ```powershell
    Enable-WindowsOptionalFeature -Online -FeatureName HostGuardian -All
    ```
 
-2. Starten Sie den SQL Server-Computer bei Aufforderung erneut, um die Installation von Hyper-V abzuschließen.
-3. Rufen Sie den Wert der folgenden Variablen ab, um den Namen Ihres SQL Server-Computers zu bestimmen.
-
-   ```powershell
-   $env:computername 
-   ```
+3. Starten Sie den SQL Server-Computer bei Aufforderung erneut, um die Installation von Hyper-V abzuschließen.
 
 4. Melden Sie sich erneut beim SQL Server-Computer als Administrator an, öffnen Sie eine Windows PowerShell-Konsole mit erhöhten Rechten, generieren Sie einen eindeutigen Hostschlüssel, und exportieren Sie den resultierenden öffentlichen Schlüssel in eine Datei.
 
@@ -112,14 +113,15 @@ In diesem Schritt konfigurieren Sie den SQL Server-Computer als überwachten Hos
    Get-HgsClientHostKey -Path $HOME\Desktop\hostkey.cer
    ```
 
-5. Kopieren Sie die Hostschlüsseldatei, die im vorherigen Schritt generiert wurde, auf den HGS-Computer. Bei den folgenden Anweisungen wird davon ausgegangen, dass der Dateiname „hostkey.cer“ lautet und Sie diese Datei auf Ihren Desktop auf dem HGS-Computer kopieren.
+5. Kopieren Sie manuell die Hostschlüsseldatei, die im vorherigen Schritt generiert wurde, auf den HGS-Computer. Bei den folgenden Anweisungen wird davon ausgegangen, dass der Dateiname „hostkey.cer“ lautet und Sie diese Datei auf Ihren Desktop auf dem HGS-Computer kopieren.
+
 6. Öffnen Sie auf dem HGS-Computer eine Windows PowerShell-Konsole mit erhöhten Rechten, und registrieren Sie den Hostschlüssel Ihres SQL Server-Computers beim Host-Überwachungsdienst:
 
    ```powershell
    Add-HgsAttestationHostKey -Name <your SQL Server computer name> -Path $HOME\Desktop\hostkey.cer
    ```
 
-7. Führen Sie auf dem SQL Server-Computer den folgenden Befehl in einer Windows PowerShell-Konsole mit erhöhten Rechten aus, um dem SQL Server-Computer den Ort für den Nachweis anzugeben. Vergewissern Sie sich, dass Sie die IP-Adresse oder den DNS-Namen des HSG-Computers angeben. 
+7. Führen Sie auf dem SQL Server-Computer den folgenden Befehl in einer Windows PowerShell-Konsole mit erhöhten Rechten aus, um dem SQL Server-Computer den Ort für den Nachweis anzugeben. Vergewissern Sie sich, dass Sie die IP-Adresse oder den DNS-Namen des HSG-Computers an beiden Adressstellen angeben. 
 
    ```powershell
    # use http, and not https
@@ -183,6 +185,9 @@ In diesem Schritt erstellen Sie eine Datenbank mit einigen Beispieldaten, die Si
 3. Vergewissern Sie sich, dass Sie mit der neu erstellten Datenbank verbunden sind. Erstellen Sie eine neue Tabelle mit dem Namen „Employees“.
 
     ```sql
+    USE [ContosoHR];
+    GO
+    
     CREATE TABLE [dbo].[Employees]
     (
         [EmployeeID] [int] IDENTITY(1,1) NOT NULL,
@@ -305,6 +310,7 @@ Sie können nun umfangreiche Abfragen für verschlüsselte Spalten ausführen. E
     SELECT * FROM [dbo].[Employees]
     WHERE SSN LIKE @SSNPattern AND [Salary] >= @MinSalary;
     ```
+3. Versuchen Sie dieselbe Abfrage erneut im Abfragefenster, in dem Always Encrypted nicht aktiviert ist, und notieren Sie den auftretenden Fehler.
 
 ## <a name="next-steps"></a>Next Steps
 Informationen zu weiteren Anwendungsfällen finden Sie unter [Konfigurieren von Always Encrypted mit Secure Enclaves](encryption/configure-always-encrypted-enclaves.md). Sie können auch Folgendes ausprobieren:

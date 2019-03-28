@@ -1,22 +1,21 @@
 ---
 title: 'Schritt 6: Hinzufügen und Konfigurieren von Suchtransformationen | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 01/03/2019
+ms.date: 03/19/2019
 ms.prod: sql
-ms.prod_service: integration-services
-ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 82db40d3b3fd61129823b3e745d097b47bd6973b
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.reviewer: ''
+ms.openlocfilehash: b64cddbe6c786e488c1ba9b9d289e9e48f786cf3
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143376"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221958"
 ---
 # <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>Lektion 1.6: Hinzufügen und Konfigurieren von Suchtransformationen
 
@@ -98,7 +97,7 @@ In beiden Fällen wird von der Suchtransformation der OLE DB-Verbindungs-Manager
   
 8.  Wählen Sie auf der Seite **Spalten** die folgenden Optionen aus:  
   
-    1.  Ziehen Sie aus dem Bereich **Verfügbare Eingabespalten** den Spaltennamen **CurrencyDate** in den Bereich **Verfügbare Suchspalten** auf **FullDateAlternateKey**.  
+    1.  Ziehen Sie aus dem Bereich **Verfügbare Eingabespalten** den Spaltennamen **CurrencyDate** in den Bereich **Verfügbare Suchspalten** auf **FullDateAlternateKey**.  Wenn Sie eine Meldung erhalten, die auf eine fehlende Übereinstimmung zwischen den Datentypen hinweist, ändern Sie den Datentyp von „CurrencyDate“ in [DT_DBDATE].
   
     2.  Aktivieren Sie in der Liste **Verfügbare Suchspalten** das Kontrollkästchen links neben **DateKey**.  
   
@@ -115,6 +114,3 @@ In beiden Fällen wird von der Suchtransformation der OLE DB-Verbindungs-Manager
   
 ## <a name="see-also"></a>Siehe auch  
 [Lookup transformation (Suchtransformation)](../integration-services/data-flow/transformations/lookup-transformation.md)  
-  
-  
-  

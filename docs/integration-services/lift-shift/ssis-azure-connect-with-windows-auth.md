@@ -1,7 +1,7 @@
 ---
-title: Herstellen einer Verbindung mit Datenquellen und Dateifreigaben mit der Windows-Authentifizierung | Microsoft-Dokumentation
-description: In diesem Artikel erfahren Sie, wie Sie den SSIS-Katalog in Azure SQL-Datenbank und die Azure SSIS Integration Runtime so konfigurieren, dass er Pakete ausführt, die die Windows-Authentifizierung verwenden, um eine Verbindung mit Datenquellen und Dateifreigaben herzustellen.
-ms.date: 10/11/2018
+title: Zugreifen auf Datenspeicher und Dateifreigaben mit Windows-Authentifizierung | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie den SSIS-Katalog in Azure SQL-Datenbank und die Azure-SSIS Integration Runtime in Azure Data Factory so konfigurieren, dass dieser Pakete ausführt, die die Windows-Authentifizierung verwenden, um auf Datenspeicher und Dateifreigaben zuzugreifen.
+ms.date: 3/22/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -11,50 +11,51 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 61d4d29b0dfc7fe67097c6cb61547c1c65dd79f1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2fe0248f455cc95c14486373af6f9374edaebc97
+ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411877"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356443"
 ---
-# <a name="connect-to-data-sources-and-file-shares-with-windows-authentication-from-ssis-packages-in-azure"></a>Herstellen einer Verbindung mit Datenquellen und Dateifreigaben mit der Windows-Authentifizierung über SSIS-Pakete in Azure
-Sie können sowohl lokal als auch auf Azure-VMs und in Azure Files die Windows-Authentifizierung verwenden, um eine Verbindung mit Datenquellen und Dateifreigaben im selben virtuellen Netzwerk herzustellen, in dem Ihre Azure SSIS Integration Runtime (IR) ausgeführt wird. Es gibt drei Methoden, um eine Verbindung mit Datenquellen und Dateifreigaben mit der Windows-Authentifizierung über SSIS-Pakete herzustellen, die in der Azure SSIS IR ausgeführt werden:
+# <a name="access-data-stores-and-file-shares-with-windows-authentication-from-ssis-packages-in-azure"></a>Zugreifen auf Datenspeicher und Dateifreigaben mit Windows-Authentifizierung in SSIS-Paketen in Azure
+Sie können die Windows-Authentifizierung verwenden, um auf Datenspeicher wie SQL Server-Instanzen, Dateifreigaben, Azure-Dateien usw. in SSIS-Paketen zuzugreifen, die in Ihrer Azure-SSIS Integration Runtime (IR) in Azure Data Factory (ADF) ausgeführt werden. Ihre Datenspeicher können sich lokal befinden, auf Azure Virtual Machines (VMs) gehostet werden oder als verwaltete Dienste in Azure ausgeführt werden. Wenn sie lokal sind, müssen Sie Ihre Azure-SSIS IR mit einem virtuellen Netzwerk (VNet) verbinden, das mit Ihrem lokalen Netzwerk verbunden ist, siehe [Verknüpfen der Azure-SSIS-IR mit einem virtuellen Netzwerk](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network). Es gibt vier Methoden für den Zugriff auf Datenspeicher mit Windows-Authentifizierung in SSIS-Paketen, die in Ihrer Azure-SSIS IR ausgeführt werden:
 
 | Verbindungsmethode | Effektiver Geltungsbereich | Schritt zum Einrichten | Zugriffsmethode in Paketen | Anzahl der Anmeldeinformationssätze und verbundenen Ressourcen | Typ der verbundenen Ressourcen | 
 |---|---|---|---|---|---|
-| Speicherung von Anmeldeinformationen mit dem Befehl `cmdkey` | Pro Azure SSIS IR | Führen Sie bei der Bereitstellung bzw. Neukonfiguration der Azure SSIS IR (z.B. `cmdkey /add:fileshareserver /user:xxx /pass:yyy`) den Befehl `cmdkey` in einem benutzerdefinierten Setupskript (`main.cmd`) aus.<br/><br/> Weitere Informationen finden Sie unter [Anpassen des Setups für die Azure SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup). | Zugriff auf Ressourcen direkt in Paketen über einen UNC-Pfad (z.B. `\\fileshareserver\folder`) | Unterstützung für mehrere Anmeldeinformationssätze für verschiedene verbundene Ressourcen | – Lokale Dateifreigaben oder Dateifreigaben von Azure-VMs<br/><br/> – Azure Files (siehe [Einbinden einer Azure-Dateifreigabe und Zugreifen auf die Freigabe unter Windows](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows)) <br/><br/> – SQL Server mit der Windows-Authentifizierung<br/><br/> – Andere Ressourcen mit der Windows-Authentifizierung |
-| Einrichten eines Ausführungskontexts auf Katalogebene | Pro Azure SSIS IR | Führen Sie die gespeicherte SSISDB-Prozedur `catalog.set_execution_credential` aus, um einen Kontext für „Ausführung als“ einzurichten.<br/><br/> Weitere Informationen finden Sie nachfolgend im weiteren Verlauf dieses Artikels. | Zugriff auf Ressourcen direkt in Paketen | Unterstützung nur für einen Anmeldeinformationssatz für alle verbundenen Ressourcen | – Lokale Dateifreigaben oder Dateifreigaben von Azure-VMs<br/><br/> – Azure Files (siehe [Einbinden einer Azure-Dateifreigabe und Zugreifen auf die Freigabe unter Windows](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows)) <br/><br/> – SQL Server mit der Windows-Authentifizierung<br/><br/> – Andere Ressourcen mit der Windows-Authentifizierung | 
-| Einbinden von Laufwerken zur Paketausführungszeit (ohne Persistenz) | Pro Paket | Führen Sie den Befehl `net use` im Task „Prozess ausführen“ aus, der zu Beginn der Ablaufsteuerung in Ihren Paketen (z.B. `net use D: \\fileshareserver\sharename`) hinzugefügt wird. | Zugriff auf Dateifreigaben über zugeordnete Laufwerke | Unterstützung für mehrere Laufwerke für verschiedene Dateifreigaben | – Lokale Dateifreigaben oder Dateifreigaben von Azure-VMs<br/><br/> – Azure Files (siehe [Einbinden einer Azure-Dateifreigabe und Zugreifen auf die Freigabe unter Windows](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows)) |
+| Einrichten eines Ausführungskontexts auf Aktivitätsebene | Pro Aktivität „SSIS-Paket ausführen“ | Konfigurieren Sie die Eigenschaft **Windows-Authentifizierung**, um einen Kontext des Typs „Ausführung/Ausführen als“ einzurichten, wenn Sie SSIS-Pakete mit der Aktivität „SSIS-Paket ausführen“ in ADF-Pipelines ausführen.<br/><br/> Weitere Informationen finden Sie unter [Ausführen eines SSIS-Pakets mit der Aktivität „SSIS-Paket ausführen“ in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity). | Sie können über den UNC-Pfad direkt auf Ressourcen in Paketen zugreifen, z.B. wenn Sie Dateifreigaben oder Azure-Dateien verwenden: `\\YourFileShareServerName\YourFolderName` oder `\\YourAzureStorageAccountName.file.core.windows.net\YourFolderName`. | Unterstützung nur für einen Anmeldeinformationssatz für alle verbundenen Ressourcen | – Lokale Dateifreigaben oder Dateifreigaben von Azure-VMs<br/><br/> – Azure Files (siehe [Einbinden einer Azure-Dateifreigabe und Zugreifen auf die Freigabe unter Windows](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows)) <br/><br/> – lokale SQL Server-Instanzen/Azure-VMs mit Windows-Authentifizierung<br/><br/> – Andere Ressourcen mit Windows-Authentifizierung |
+| Einrichten eines Ausführungskontexts auf Katalogebene | Pro Azure-SSIS IR, wird aber überschrieben, wenn auch ein Ausführungskontext auf Aktivitätsebene eingerichtet wird (siehe oben) | Führen Sie die gespeicherte SSISDB-Prozedur `catalog.set_execution_credential` aus, um einen Kontext für „Ausführung/Ausführen als“ einzurichten.<br/><br/> Weitere Informationen finden Sie nachfolgend im weiteren Verlauf dieses Artikels. | Sie können über den UNC-Pfad direkt auf Ressourcen in Paketen zugreifen, z.B. wenn Sie Dateifreigaben oder Azure-Dateien verwenden: `\\YourFileShareServerName\YourFolderName` oder `\\YourAzureStorageAccountName.file.core.windows.net\YourFolderName`. | Unterstützung nur für einen Anmeldeinformationssatz für alle verbundenen Ressourcen | – Lokale Dateifreigaben oder Dateifreigaben von Azure-VMs<br/><br/> – Azure Files (siehe [Einbinden einer Azure-Dateifreigabe und Zugreifen auf die Freigabe unter Windows](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows)) <br/><br/> – lokale SQL Server-Instanzen/Azure-VMs mit Windows-Authentifizierung<br/><br/> – Andere Ressourcen mit Windows-Authentifizierung |
+| Speicherung von Anmeldeinformationen mit dem Befehl `cmdkey` | Pro Azure-SSIS IR, wird aber überschrieben, wenn auch ein Ausführungskontext auf Aktivitäts-/Katalogebene eingerichtet wird (siehe oben) | Führen Sie bei der Bereitstellung bzw. Neukonfiguration der Azure-SSIS IR den Befehl `cmdkey` in einem benutzerdefinierten Setupskript (`main.cmd`) aus, z.B. wenn Sie Dateifreigaben oder Azure Files verwenden: `cmdkey /add:YourFileShareServerName /user:YourDomainName\YourUsername /pass:YourPassword` oder `cmdkey /add:YourAzureStorageAccountName.file.core.windows.net /user:azure\YourAzureStorageAccountName /pass:YourAccessKey`.<br/><br/> Weitere Informationen finden Sie unter [Anpassen des Setups für die Azure SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup). | Sie können über den UNC-Pfad direkt auf Ressourcen in Paketen zugreifen, z.B. wenn Sie Dateifreigaben oder Azure-Dateien verwenden: `\\YourFileShareServerName\YourFolderName` oder `\\YourAzureStorageAccountName.file.core.windows.net\YourFolderName`. | Unterstützung für mehrere Anmeldeinformationssätze für verschiedene verbundene Ressourcen | – Lokale Dateifreigaben oder Dateifreigaben von Azure-VMs<br/><br/> – Azure Files (siehe [Einbinden einer Azure-Dateifreigabe und Zugreifen auf die Freigabe unter Windows](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows)) <br/><br/> – lokale SQL Server-Instanzen/Azure-VMs mit Windows-Authentifizierung<br/><br/> – Andere Ressourcen mit Windows-Authentifizierung |
+| Einbinden von Laufwerken zur Paketausführungszeit (ohne Persistenz) | Pro Paket | Führen Sie den Befehl `net use` im Task „Prozess ausführen“ aus, der zu Beginn der Ablaufsteuerung in Ihren Paketen (z.B. `net use D: \\YourFileShareServerName\YourFolderName`) hinzugefügt wird. | Zugriff auf Dateifreigaben über zugeordnete Laufwerke | Unterstützung für mehrere Laufwerke für verschiedene Dateifreigaben | – Lokale Dateifreigaben oder Dateifreigaben von Azure-VMs<br/><br/> – Azure Files (siehe [Einbinden einer Azure-Dateifreigabe und Zugreifen auf die Freigabe unter Windows](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows)) |
 |||||||
 
 > [!WARNING]
-> Wenn Sie keine der oben genannten Methoden verwenden, um eine Verbindung mit Datenquellen und Dateifreigaben herzustellen, können Pakete, die von der Windows-Authentifizierung abhängig sind, keine Verbindung mit diesen herstellen. Zur Laufzeit tritt dann ein Fehler auf. 
+> Wenn Sie keine der oben genannten Methoden verwenden, um mit Windows-Authentifizierung auf Datenspeicher zuzugreifen, können Ihre Pakete, die von der Windows-Authentifizierung abhängen, nicht auf diese zugreifen und schlagen zur Laufzeit fehl. 
 
-Im weiteren Verlauf dieses Artikels wird beschrieben, wie Sie den SSIS-Katalog in Azure SQL-Datenbank zum Ausführen von Paketen konfigurieren, die die Windows-Authentifizierung verwenden, um eine Verbindung mit Datenquellen und Dateifreigaben herzustellen. 
+Im weiteren Verlauf dieses Artikels wird beschrieben, wie Sie den SSIS-Katalog (SSISDB) konfigurieren, der in der Azure SQL-Datenbank-Instanz bzw. verwalteten Instanz gehostet wird, um Pakete in der Azure-SSIS IR auszuführen, die die Windows-Authentifizierung für den Zugriff auf Datenspeicher verwenden. 
 
 ## <a name="you-can-only-use-one-set-of-credentials"></a>Sie können nur einen Satz Anmeldeinformationen verwenden
-Wenn Sie Windows-Authentifizierung in einem SSIS-Paket verwenden, können Sie in einem Paket nur einen Satz Anmeldeinformationen verwenden. Die Anmeldeinformationen für die Domäne, die Sie beim Ausführen der in diesem Artikel dargestellten Schritte angeben, gelten solange für alle (interaktiven oder geplanten) Paketausführungen in Ihrer Azure SSIS IR, bis Sie die Anmeldeinformationen ändern oder entfernen. Wenn Ihr Paket eine Verbindung mit mehreren Datenquellen und Dateifreigaben mit verschiedenen Sätzen von Anmeldeinformationen herstellen muss, sollten Sie möglicherweise die oben genannten alternativen Methoden anwenden.
+Wenn Sie die Windows-Authentifizierung in einem SSIS-Paket verwenden, können Sie nur einen Satz Anmeldeinformationen verwenden. Die Domänenanmeldeinformationen, die Sie beim Ausführen der in diesem Artikel beschriebenen Schritte angeben, gelten solange für alle (interaktiven oder geplanten) Paketausführungen in Ihrer Azure-SSIS IR, bis Sie sie ändern oder entfernen. Wenn Ihr Paket mit unterschiedlichen Anmeldeinformationen eine Verbindung mit mehreren Datenspeichern herstellen muss, sollten Sie die oben genannten alternativen Methoden in Betracht ziehen.
 
 ## <a name="provide-domain-credentials-for-windows-authentication"></a>Angeben von Domänenanmeldeinformationen für die Windows-Authentifizierung
-Führen Sie die folgenden Schritte durch, um Anmeldeinformationen für die Domäne anzugeben, durch die Pakete anhand der Windows-Authentifizierung eine Verbindung mit lokalen Datenquellen oder Dateifreigaben herstellen können:
+Um Domänenanmeldeinformationen bereitzustellen, die es Paketen ermöglichen, mit der Windows-Authentifizierung auf lokale Datenspeicher zuzugreifen, gehen Sie wie folgt vor:
 
-1.  Stellen Sie mit SQL Server Management Studio (SSMS) oder einem anderen Tool eine Verbindung mit der SQL-Datenbank her, die die SSIS-Katalogdatenbank (SSISDB) hostet. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit der SSIS-Katalogdatenbank (SSISDB) in Azure](ssis-azure-connect-to-catalog-database.md).
+1.  Stellen Sie mit SQL Server Management Studio (SSMS) oder einem anderen Tool eine Verbindung mit dem Azure SQL-Datenbank-Server bzw. der verwalteten Instanz her, die SSISDB hostet. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SSISDB in Azure](ssis-azure-connect-to-catalog-database.md).
 
 2.  Öffnen Sie ein Abfragefragefenster mit SSISDB als aktuelle Datenbank.
 
-3.  Führen Sie die folgenden gespeicherten Prozeduren aus, und stellen Sie passende Anmeldeinformationen für die Domäne bereit:
+3.  Führen Sie die folgenden gespeicherten Prozeduren aus, und geben Sie passende Domänenanmeldeinformationen an:
 
     ```sql
     catalog.set_execution_credential @user='<your user name>', @domain='<your domain name>', @password='<your password>'
     ```
 
-4.  Führen Sie die SSIS-Pakete aus. Die Pakete verwenden die Anmeldeinformationen, die Sie angegeben haben, um eine Verbindung mit den lokalen Datenquellen oder Dateifreigaben mithilfe der Windows-Authentifizierung herzustellen.
+4.  Führen Sie die SSIS-Pakete aus. Die Pakete verwenden die Anmeldeinformationen, die Sie für den Zugriff auf lokale Datenspeicher mit Windows-Authentifizierung angegeben haben.
 
 ### <a name="view-domain-credentials"></a>Anzeigen von Anmeldeinformationen für eine Domäne
 Führen Sie die folgenden Schritte aus, um die aktiven Anmeldeinformationen einer Domäne anzuzeigen:
 
-1.  Stellen Sie mit SQL Server Management Studio (SSMS) oder einem anderen Tool eine Verbindung mit der SQL-Datenbank her, die die SSIS-Katalogdatenbank (SSISDB) hostet.
+1.  Stellen Sie mit SSMS oder einem anderen Tool eine Verbindung mit dem Azure SQL-Datenbank-Server bzw. der verwalteten Instanz her, die SSISDB hostet. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SSISDB in Azure](ssis-azure-connect-to-catalog-database.md).
 
 2.  Öffnen Sie ein Abfragefragefenster mit SSISDB als aktuelle Datenbank.
 
@@ -69,7 +70,7 @@ Führen Sie die folgenden Schritte aus, um die aktiven Anmeldeinformationen eine
 ### <a name="clear-domain-credentials"></a>Löschen von Anmeldeinformationen für eine Domäne
 Führen Sie die folgenden Schritte aus, um die Anmeldeinformationen, die Sie angegeben haben, wie in diesem Artikel beschrieben, zu löschen und zu entfernen:
 
-1.  Stellen Sie mit SQL Server Management Studio (SSMS) oder einem anderen Tool eine Verbindung mit der SQL-Datenbank her, die die SSIS-Katalogdatenbank (SSISDB) hostet.
+1.  Stellen Sie mit SSMS oder einem anderen Tool eine Verbindung mit dem Azure SQL-Datenbank-Server bzw. der verwalteten Instanz her, die SSISDB hostet. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SSISDB in Azure](ssis-azure-connect-to-catalog-database.md).
 
 2.  Öffnen Sie ein Abfragefragefenster mit SSISDB als aktuelle Datenbank.
 
@@ -79,48 +80,56 @@ Führen Sie die folgenden Schritte aus, um die Anmeldeinformationen, die Sie ang
     catalog.set_execution_credential @user='', @domain='', @password=''
     ```
 
-## <a name="connect-to-an-on-premises-sql-server"></a>Herstellen einer Verbindung zu einer lokalen SQL Server-Instanz
-Führen Sie folgende Schritte aus, um zu überprüfen, ob Sie eine Verbindung mit einem lokalen SQL Server herstellen können:
+## <a name="connect-to-a-sql-server-on-premises"></a>Herstellen einer lokalen Verbindung mit SQL Server 
+Um zu überprüfen, ob Sie sich lokal mit einer SQL Server-Instanz verbinden können, gehen Sie wie folgt vor:
 
 1.  Suchen Sie einen Computer, der nicht in eine Domäne eingebunden ist, um diesen Test auszuführen.
 
-2.  Führen Sie auf dem Computer, der nicht in eine Domäne eingebunden ist, folgenden Befehl aus, um SQL Server Management Studio (SSMS) mit den Anmeldeinformationen für die Domäne zu starten, die Sie verwenden möchten:
+2.  Führen Sie auf dem Computer, der nicht in eine Domäne eingebunden ist, folgenden Befehl aus, um SSMS mit den Domänenanmeldeinformationen zu starten, die Sie verwenden möchten:
 
     ```cmd
     runas.exe /netonly /user:<domain>\<username> SSMS.exe
     ```
 
-3.  Überprüfen Sie über SSMS, ob Sie eine Verbindung mit dem lokalen SQL Server herstellen können, den Sie verwenden möchten.
+3.  Überprüfen Sie in SSMS, ob Sie sich lokal mit der SQL Server-Instanz verbinden können.
 
 ### <a name="prerequisites"></a>Voraussetzungen
-Um eine Verbindung mit einer lokalen SQL Server-Instanz von einem Paket aus herzustellen, das unter Azure ausgeführt wird, müssen Sie die folgenden Voraussetzungen erfüllen:
+Um in Azure ausgeführten Paketen auf eine lokale SQL Server-Instanz zuzugreifen, gehen Sie wie folgt vor:
 
-1.  Aktivieren Sie in SQL Server-Konfigurations-Manager das TCP/IP-Protokoll.
-2.  Lassen Sie den Zugriff über die Windows-Firewall zu. Weitere Informationen finden Sie unter [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](https://docs.microsoft.com/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access).
-3.  Stellen Sie sicher, dass Ihre Azure SSIS IR zu einem virtuellen Netzwerk gehört, das auch die lokale Instanz von SQL Server enthält, um eine Verbindung mit der Windows-Authentifizierung herzustellen.  Weitere Informationen finden Sie unter [Verknüpfen einer Azure SSIS Integration Runtime mit einem virtuellen Netzwerk](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network). Verwenden Sie dann `catalog.set_execution_credential`, um Anmeldeinformationen wie in diesem Artikel beschrieben bereitzustellen.
+1.  Aktivieren Sie im SQL Server-Konfigurations-Manager das Protokoll TCP/IP.
+2.  Lassen Sie den Zugriff über die Windows-Firewall zu. Weitere Informationen finden Sie unter [Konfigurieren der Windows-Firewall für den Zugriff auf SQL Server](https://docs.microsoft.com/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access).
+3.  Verknüpfen Sie Ihre Azure-SSIS IR mit einem VNet, das mit der lokalen SQL Server-Instanz verbunden ist.  Weitere Informationen finden Sie unter [Verknüpfen von Azure-SSIS IR mit einem VNet](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network).
+4.  Verwenden Sie dann die gespeicherte SSISDB-Prozedur `catalog.set_execution_credential`, um Anmeldeinformationen wie in diesem Artikel beschrieben bereitzustellen.
 
-## <a name="connect-to-an-on-premises-file-share"></a>Herstellen einer Verbindung zu einer lokalen Dateifreigabe
-Führen Sie die folgenden Schritte durch, um zu testen, ob Sie eine Verbindung mit einer lokalen Dateifreigabe herstellen können:
+## <a name="connect-to-a-file-share-on-premises"></a>Herstellen einer lokalen Verbindung mit einer Dateifreigabe 
+Führen Sie die folgenden Schritte durch, um zu überprüfen, ob Sie eine Verbindung mit einer lokalen Dateifreigabe herstellen können:
 
 1.  Suchen Sie einen Computer, der nicht in eine Domäne eingebunden ist, um diesen Test auszuführen.
 
-2.  Führen Sie den folgenden Befehl auf dem Computer aus, der nicht in eine Domäne eingebunden ist. Über diesen Befehl öffnen Sie zunächst ein Eingabeaufforderungsfenster mit den Anmeldeinformationen der Domäne, die Sie verwenden möchten, und testen dann die Konnektivität mit der Dateifreigabe, indem Sie eine Verzeichnisliste abrufen.
+2.  Führen Sie auf dem Computer, der nicht in eine Domäne eingebunden ist, die folgenden Befehle aus. Über diese Befehle öffnen Sie zunächst ein Eingabeaufforderungsfenster mit den Domänenanmeldeinformationen, die Sie verwenden möchten, und testen dann die Konnektivität mit der lokalen Dateifreigabe, indem Sie eine Verzeichnisliste abrufen.
 
     ```cmd
     runas.exe /netonly /user:<domain>\<username> cmd.exe
     dir \\fileshare
     ```
 
-3.  Überprüfen Sie, ob die Verzeichnisliste für die lokale Dateifreigabe zurückgegeben wird, die Sie verwenden möchten.
+3.  Prüfen Sie, ob die Verzeichnisliste für die lokale Dateifreigabe zurückgegeben wird.
 
-## <a name="connect-to-a-file-share-on-an-azure-vm"></a>Herstellen einer Verbindung zu einer Dateifreigabe auf einer Azure-VM
-Führen Sie die folgenden Schritte durch, um eine Verbindung mit einer Dateifreigabe auf einer Azure-VM herzustellen:
+### <a name="prerequisites"></a>Voraussetzungen
+Um in Azure ausgeführten Paketen auf eine lokale Dateifreigabe zuzugreifen, gehen Sie wie folgt vor:
 
-1.  Stellen Sie mit SQL Server Management Studio (SSMS) oder einem anderen Tool eine Verbindung mit der SQL-Datenbank her, die die SSIS-Katalogdatenbank (SSISDB) hostet.
+1.  Lassen Sie den Zugriff über die Windows-Firewall zu.
+2.  Verknüpfen Sie Ihre Azure-SSIS IR mit einem VNet, das mit der lokalen Dateifreigabe verbunden ist.  Weitere Informationen finden Sie unter [Verknüpfen von Azure-SSIS IR mit einem VNet](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network).
+3.  Verwenden Sie dann die gespeicherte SSISDB-Prozedur `catalog.set_execution_credential`, um Anmeldeinformationen wie in diesem Artikel beschrieben bereitzustellen.
+
+## <a name="connect-to-a-file-share-on-azure-vm"></a>Herstellen einer Verbindung mit einer Dateifreigabe auf einer Azure-VM
+Um in Azure ausgeführten Paketen auf eine Dateifreigabe auf einer Azure-VM zuzugreifen, gehen Sie wie folgt vor:
+
+1.  Stellen Sie mit SSMS oder einem anderen Tool eine Verbindung mit dem Azure SQL-Datenbank-Server bzw. der verwalteten Instanz her, die SSISDB hostet. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SSISDB in Azure](ssis-azure-connect-to-catalog-database.md).
 
 2.  Öffnen Sie ein Abfragefragefenster mit SSISDB als aktuelle Datenbank.
 
-3.  Führen Sie die gespeicherte Prozedur `catalog.set_execution_credential` aus, wie in den folgenden Optionen beschrieben:
+3.  Führen Sie die folgenden gespeicherten Prozeduren aus, und geben Sie passende Domänenanmeldeinformationen an:
 
     ```sql
     catalog.set_execution_credential @domain = N'.', @user = N'username of local account on Azure virtual machine', @password = N'password'
@@ -129,19 +138,19 @@ Führen Sie die folgenden Schritte durch, um eine Verbindung mit einer Dateifrei
 ## <a name="connect-to-a-file-share-in-azure-files"></a>Herstellen einer Verbindung mit einer Dateifreigabe in Azure Files
 Weitere Informationen zu Azure Files finden Sie unter [Azure Files](https://azure.microsoft.com/services/storage/files/).
 
-Führen Sie die folgenden Schritte durch, um eine Verbindung mit einer Dateifreigabe in Azure Files herzustellen:
+Um in Azure ausgeführten Paketen auf eine Dateifreigabe in Azure Files zuzugreifen, gehen Sie wie folgt vor:
 
-1.  Stellen Sie mit SQL Server Management Studio (SSMS) oder einem anderen Tool eine Verbindung mit der SQL-Datenbank her, die die SSIS-Katalogdatenbank (SSISDB) hostet.
+1.  Stellen Sie mit SSMS oder einem anderen Tool eine Verbindung mit dem Azure SQL-Datenbank-Server bzw. der verwalteten Instanz her, die SSISDB hostet. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SSISDB in Azure](ssis-azure-connect-to-catalog-database.md).
 
 2.  Öffnen Sie ein Abfragefragefenster mit SSISDB als aktuelle Datenbank.
 
-3.  Führen Sie die gespeicherte Prozedur `catalog.set_execution_credential` aus, wie in den folgenden Optionen beschrieben:
+3.  Führen Sie die folgenden gespeicherten Prozeduren aus, und geben Sie passende Domänenanmeldeinformationen an:
 
     ```sql
     catalog.set_execution_credential @domain = N'Azure', @user = N'<storage-account-name>', @password = N'<storage-account-key>'
     ```
 
 ## <a name="next-steps"></a>Nächste Schritte
-- Stellen Sie ein Paket bereit. Weitere Informationen finden Sie unter [Deploy an SSIS project with SQL Server Management Studio (SSMS) (Bereitstellen eines SSIS-Projekts mit SQL Server Management Studio (SSMS))](../ssis-quickstart-deploy-ssms.md).
-- Führen Sie ein Paket aus. Weitere Informationen finden Sie unter [Run an SSIS package with SQL Server Management Studio (SSMS) (Ausführen eines SSIS-Pakets mit SQL Server Management Studio (SSMS))](../ssis-quickstart-run-ssms.md).
-- Planen Sie ein Paket. Weitere Informationen finden Sie unter [Planen der Ausführung eines SSIS-Pakets in Azure](ssis-azure-schedule-packages.md).
+- Stellen Sie Ihre Pakete bereit. Weitere Informationen finden Sie unter [Bereitstellen eines SSIS-Projekts mit SQL Server Management Studio (SSMS)](../ssis-quickstart-deploy-ssms.md).
+- Führen Sie Ihre Pakete aus. Weitere Informationen finden Sie unter [Ausführen von SSIS-Paketen in Azure mit SSMS](../ssis-quickstart-run-ssms.md).
+- Bestimmen Sie einen Zeitplan für Ihre Pakete. Weitere Informationen finden Sie unter [Planen der Ausführung eines SSIS-Pakets in Azure](ssis-azure-schedule-packages.md).

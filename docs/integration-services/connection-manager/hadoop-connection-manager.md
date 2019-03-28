@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hadoopconn.f1
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0d7544f30f065b9acbef3efc55ac7165b58da2e6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2aa8b928d9bfc7c8c76672b4de5387cad96c6b19
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417916"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281434"
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop-Verbindungs-Manager
   Der Hadoop-Verbindungs-Manager ermöglicht die Verbindung eines SSIS-Pakets (SQL Server Integration Services) mit einem Hadoop-Cluster mithilfe der Werte, die Sie für die Eigenschaften angeben.  

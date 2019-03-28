@@ -39,15 +39,15 @@ helpviewer_keywords:
 - Copy Column transformation custom properties [Integration Services]
 - Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 69dda6d5c0fbe7f8b66bf453b5f240588ad878ac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7b9f8b3c7a4a4b6b2abf8cd0711ac0e6cec259c6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507707"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277449"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
   Neben den Eigenschaften, die die meisten Datenflussobjekte im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Objektmodell aufweisen, verfügen zahlreiche Datenflussobjekte über benutzerdefinierte objektspezifische Eigenschaften. Diese benutzerdefinierten Eigenschaften sind nur zur Laufzeit verfügbar und sind nicht in der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Managed Programming Referenz-Dokumentation dokumentiert.  
@@ -71,7 +71,7 @@ ms.locfileid: "52507707"
 |[Abgeleitete Spalte](#derived)|[Pivotieren](#pivot)||  
   
 ### <a name="transformations-without-custom-properties"></a>Transformationen ohne benutzerdefinierte Eigenschaften  
- Die folgenden Transformationen verfügen nicht über benutzerdefinierte Eigenschaften auf Komponenten-, Eingabe- oder Ausgabeebene: [Merge Transformation](../../../integration-services/data-flow/transformations/merge-transformation.md), [Multicast Transformation](../../../integration-services/data-flow/transformations/multicast-transformation.md)und [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md). Sie verwenden nur die Eigenschaften, die allen Datenflusskomponenten gemeinsam sind.  
+ Die folgenden Transformationen verfügen nicht über benutzerdefinierte Eigenschaften auf Komponenten-, Eingabe- oder Ausgabeebene: [Merge Transformation](../../../integration-services/data-flow/transformations/merge-transformation.md), [Multicast Transformation](../../../integration-services/data-flow/transformations/multicast-transformation.md) und [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md). Sie verwenden nur die Eigenschaften, die allen Datenflusskomponenten gemeinsam sind.  
   
 ##  <a name="aggregate"></a> Benutzerdefinierte Eigenschaften der Transformation für das Aggregieren  
  Die Transformation für das Aggregieren verfügt sowohl über benutzerdefinierte Eigenschaften als auch über die Eigenschaften, die allen Datenflusskomponenten gemeinsam sind.  
@@ -524,7 +524,7 @@ ms.locfileid: "52507707"
   
 |Eigenschaft|Datentyp|und Beschreibung|  
 |--------------|---------------|-----------------|  
-|ColumnType|Ganze Zahl (Enumeration)|Der Updatetyp der Spalte. Die Werte sind: **Veränderliches Attribut** (2), **Festes Attribut** (4), **Verlaufsattribut** (3) **Schlüssel** (1) und **Andere** (0).|  
+|ColumnType|Ganze Zahl (Enumeration)|Der Updatetyp der Spalte. Folgende Werte sind möglich: **Veränderliches Attribut** (2), **Festes Attribut** (4), **Verlaufsattribut** (3) **Schlüssel** (1) und **Andere** (0).|  
   
  Die Eingabe, die Ausgaben und die Ausgabespalten der Transformation für langsam veränderliche Dimensionen verfügen nicht über benutzerdefinierte Eigenschaften.  
   
@@ -627,7 +627,7 @@ ms.locfileid: "52507707"
   
  Weitere Informationen finden Sie unter [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
  [Pfadeigenschaften](https://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   

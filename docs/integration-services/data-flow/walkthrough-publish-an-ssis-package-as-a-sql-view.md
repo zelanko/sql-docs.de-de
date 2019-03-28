@@ -10,18 +10,18 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.packagepublishwizard.f1
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 968ae6356d2f9d9b84b8cf2d5bf6b012b000b7b2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0096e6ff64267e6568abd22729f250a4c76adc03
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521230"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281864"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Exemplarische Vorgehensweise: Veröffentlichen eines SSIS-Pakets als eine SQL-Ansicht
-  Diese exemplarische Vorgehensweise enthält detaillierte Schritte zum Veröffentlichen eines SSIS-Pakets als SQL-Ansicht in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.  
+  Diese exemplarische Vorgehensweise enthält detaillierte Schritte zum Veröffentlichen eines SSIS-Pakets als SQL-Ansicht in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank.  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
  Die folgende Software muss auf Ihrem Computer installiert sein, bevor Sie diese exemplarische Vorgehensweise durchführen können.  
@@ -30,7 +30,7 @@ ms.locfileid: "52521230"
   
 2.  [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).  
   
-## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>Schritt 1: Erstellen und Bereitstellen des SSIS-Projekts im SSIS-Katalog  
+## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>Schritt 1: Erstellen und Bereitstellen des SSIS-Projekts im SSIS-Katalog  
  In diesem Schritt erstellen Sie ein SSIS-Paket, das Daten aus einer von SSIS unterstützten Datenquelle extrahiert (in diesem Beispiel verwenden wir eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank) und die Daten mithilfe einer Datenstreamingziel-Komponente ausgibt. Dann erstellen Sie das SSIS-Projekt und stellen es im SSIS-Katalog bereit.  
   
 1.  Starten Sie **SQL Server Data Tools**. Zeigen Sie im Menü **Start** auf **Alle Programme**, dann auf **Microsoft SQL Server**, und klicken Sie auf **SQL Server Data Tools**.  
@@ -82,7 +82,7 @@ ms.locfileid: "52521230"
   
     2.  Befolgen Sie im Assistenten die Anweisungen, um das Projekt im SSIS-Katalog auf dem lokalen Datenbankserver bereitzustellen. Im folgenden Beispiel wird **Power BI** als Ordnername und **SSISPackagePublishing** als Projektname im SSIS-Katalog verwendet.  
   
-## <a name="step-2-use-the-ssis-data-feed-publishing-wizard-to-publish-ssis-package-as-a-sql-view"></a>Schritt 2: Verwenden des SSIS-Datenfeedveröffentlichungs-Assistent zum Veröffentlichen des SSIS-Pakets als eine SQL-Ansicht  
+## <a name="step-2-use-the-ssis-data-feed-publishing-wizard-to-publish-ssis-package-as-a-sql-view"></a>Schritt 2: Verwenden des SSIS-Datenfeedveröffentlichungs-Assistenten zum Veröffentlichen des SSIS-Pakets als eine SQL-Ansicht  
  In diesem Schritt verwenden Sie den SSIS-Datenfeedveröffentlichungs-Assistent (SQL Server Integration Services), um das SSIS-Paket als Sicht in einer SQL Server-Datenbank zu veröffentlichen. Die Ausgabedaten des Pakets können durch Abfragen dieser Sicht genutzt werden.  
   
  Der SSIS-Datenfeedveröffentlichungs-Assistent erstellt einen Verbindungsserver mithilfe des OLE DB-Anbieters für SSIS (SSISOLEDB) und anschließend eine SQL-Ansicht, die aus einer Abfrage auf den Verbindungsserver besteht. Diese Abfrage umfasst den Ordnernamen, den Projektnamen und den Paketnamen im SSIS-Katalog.  
@@ -101,7 +101,7 @@ ms.locfileid: "52521230"
   
          ![Datenfeedveröffentlichungs-Assistent – Seite „Paketeinstellungen“](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "Datenfeedveröffentlichungs-Assistent – Seite „Paketeinstellungen“")  
   
-    2.  Klicken Sie neben dem Pfadfeld auf **Durchsuchen** , durchsuchen Sie den SSIS-Katalog, wählen Sie das zu veröffentlichende SSIS-Paket aus (Beispiel: **SSISDB**->**SSISPackagePublishing**->**Package.dtsx**), und klicken Sie dann auf **OK**.  
+    2.  Klicken Sie neben dem Pfadfeld auf **Durchsuchen**, durchsuchen Sie den SSIS-Katalog, wählen Sie das zu veröffentlichende SSIS-Paket aus (Beispiel: **SSISDB**->**SSISPackagePublishing**->**Package.dtsx**), und klicken Sie dann auf **OK**.  
   
          ![Datenfeedveröffentlichungs-Assistent – Suchen nach Paket](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "Datenfeedveröffentlichungs-Assistent – Suchen nach Paket")  
   
@@ -147,7 +147,7 @@ ms.locfileid: "52521230"
   
      ![Datenfeedveröffentlichungs-Assistent – Seite „Zusammenfassung“](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "Datenfeedveröffentlichungs-Assistent – Seite „Zusammenfassung“")  
   
-     Die Ausgabedaten des Pakets können jetzt durch Ausführen der folgenden SQL-Anweisung für die TestDB-Datenbank abgefragt werden: SELECT * FROM [SSISPackageView].  
+     Die Ausgabedaten des Pakets können jetzt durch Ausführen der folgenden SQL-Anweisung für die Datenbank „TestDB“ abgefragt werden: SELECT * FROM [SSISPackageView].  
   
 9. Klicken Sie auf **Bericht speichern**, um diesen Bericht als XML-Datei zu speichern.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "52521230"
     > [!NOTE]  
     >  Die folgenden Datentypen werden nicht unterstützt: text, ntext, image, nvarchar(max), varchar(max) und varbinary(max).  
   
-## <a name="step-3-test-the-sql-view"></a>Schritt 3: Testen der SQL-Ansicht  
+## <a name="step-3-test-the-sql-view"></a>Schritt 3: Testen der SQL-Ansicht  
  In diesem Schritt führen Sie die vom SSIS-Datenfeedveröffentlichungs-Assistenten erstellte SQL-Ansicht aus.  
   
 1.  Starten Sie SQL Server Management Studio.  
@@ -266,7 +266,7 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
   
  Schrägstrich (\\): Jeder in der Abfrageklausel verwendete Schrägstrich (\) muss mit Escapezeichen versehen werden. Beispiel: \\\ wird in der Abfrageklausel als \ ausgewertet.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenstreamingziel](../../integration-services/data-flow/data-streaming-destination.md)   
  [Konfigurieren des Datenstreamingziels](../../integration-services/data-flow/configure-data-streaming-destination.md)  
   

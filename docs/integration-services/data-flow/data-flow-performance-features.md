@@ -21,15 +21,15 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8b172eb0635c54bf6b9e0289ac220676eb08fd9c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b20f9d2d48452d95ff0c219f7c291a2a5b1cd887
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411987"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275502"
 ---
 # <a name="data-flow-performance-features"></a>Funktionen für die Datenflussleistung
   Dieses Thema bietet Vorschläge, wie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete entworfen werden müssen, damit allgemeine Leistungsprobleme vermieden werden. Dieses Thema enthält zudem Informationen zu Funktionen und Tools, die Sie verwenden können, um Leistungsprobleme von Paketen zu beheben.  
@@ -148,7 +148,7 @@ ms.locfileid: "52411987"
   
  In der Regel sind die langsamsten Komponenten in der Transformation für langsam veränderliche Dimensionen die Transformationen für OLE DB-Befehl, die UPDATEs für jeweils eine Zeile ausführen. Daher ist die effizienteste Methode zur Verbesserung der Leistung der Transformation für langsam veränderliche Dimensionen das Ersetzen der Transformationen für OLE DB-Befehl. Sie können diese Transformationen durch Zielkomponenten ersetzen, die alle zu aktualisierenden Zeilen in eine Stagingtabelle speichern. Sie können dann einen Task "SQL ausführen" hinzufügen, der für alle Zeilen gleichzeitig ein einzelnes setbasiertes Transact-SQL-UPDATE ausführt.  
   
- Fortgeschrittene Benutzer können für die Verarbeitung von langsam veränderlichen Dimensionen einen benutzerdefinierten Datenfluss entwerfen, der für große Dimensionen optimiert ist. Eine Erläuterung und ein Beispiel dieses Ansatzes finden Sie im Abschnitt "Unique dimension scenario" im Whitepaper [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602)(in Englisch).  
+ Fortgeschrittene Benutzer können für die Verarbeitung von langsam veränderlichen Dimensionen einen benutzerdefinierten Datenfluss entwerfen, der für große Dimensionen optimiert ist. Eine Erläuterung und ein Beispiel dieses Ansatzes finden Sie im Abschnitt „Unique dimension scenario“ im Whitepaper [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602).  
   
 ### <a name="destinations"></a>Ziele  
  Wenn Sie die Leistung von Zielen erhöhen möchten, sollten Sie ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ziel verwenden und die Leistung des Ziels testen.  
@@ -171,9 +171,9 @@ ms.locfileid: "52411987"
 ## <a name="related-content"></a>Verwandte Inhalte  
  **Artikel und Blogbeiträge**  
   
--   Technischer Artikel [SQL Server 2005 Integration Services: Eine Leistungsstrategie](https://go.microsoft.com/fwlink/?LinkId=98899)auf technet.microsoft.com  
+-   Technischer Artikel, [SQL Server 2005 Integration Services: Eine Leistungsstrategie](https://go.microsoft.com/fwlink/?LinkId=98899), auf technet.microsoft.com  
   
--   Technischer Artikel [Integration Services: Leistungsoptimierungstechniken](https://go.microsoft.com/fwlink/?LinkId=98900)auf technet.microsoft.com  
+-   Technischer Artikel, [Integration Services: Leistungsoptimierungstechniken](https://go.microsoft.com/fwlink/?LinkId=98900), auf technet.microsoft.com  
   
 -   Technischer Artikel [Erhöhen des Durchsatzes von Pipelines durch Aufteilen synchroner Transformationen in mehrere Tasks](https://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)auf sqlcat.com  
   
@@ -201,7 +201,7 @@ ms.locfileid: "52411987"
   
 -   Video [Ausgeglichener Datenverteiler](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)auf technet.microsoft.com  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Tools zur Problembehandlung für die Paketentwicklung](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
  [Behandlung von Problemen mit Paketausführungstools](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 1: Erstellen des Bereitstellungs-Hilfsprogramms | Microsoft-Dokumentation'
+title: 'Schritt 1: Erstellen des Bereitstellungshilfsprogramms | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 24aeaa696a55feb7ad4e60889e2853a71f81f08b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6655e4fcf33b66e4bef4025f69c91ec3c13bc79e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677658"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280894"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>Lektion 2-1: Erstellen des Bereitstellungshilfsprogramms
 In dieser Aufgabe konfigurieren und erstellen Sie ein Bereitstellungsprogramm für das Deployment Tutorial-Projekt.  
@@ -49,7 +49,7 @@ Vor dem Erstellen des Bereitstellungshilfsprogramms müssen Sie die Eigenschafte
   
 4.  Überprüfen Sie im Ausgabefenster die folgenden Informationen:  
   
-    Erstellung gestartet: SQL Integration Services-Projekt: Inkrementell ...  
+    Build started: SQL Integration Services project: Incremental ...  
   
     Bereitstellungshilfsprogramm wird erstellt...  
   
@@ -57,14 +57,14 @@ Vor dem Erstellen des Bereitstellungshilfsprogramms müssen Sie die Eigenschafte
   
     Erstellung abgeschlossen -- 0 Fehler, 0 Warnungen  
   
-    ========== Erstellen: 0 erfolgreich, Fehler bei 0, 1 aktuell, 0 übersprungen ==========  
+    ========== Build: 0 succeeded, 0 failed, 1 up-to-date, 0 skipped ==========  
   
 5.  Klicken Sie im Menü **Datei** auf **Beenden**. Wenn Sie zum Speichern der Änderungen an Deployment Tutorial-Elementen aufgefordert werden, klicken Sie auf **Ja**.  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Schritt 2: Überprüfen des Bereitstellungspakets](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Erstellen eines Bereitstellungs-Hilfsprogramms](../integration-services/packages/create-a-deployment-utility.md)  
   
   

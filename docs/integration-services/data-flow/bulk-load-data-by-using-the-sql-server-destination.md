@@ -14,15 +14,15 @@ helpviewer_keywords:
 - inserting data
 - bulk load [Integration Services]
 ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d7e6535428eefaf4e0f2a84d1de40c5d8c7f4989
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68902b0249fc40e8aa48a0bd6fc6f6eef47d4caa
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669498"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274356"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>Massenladen von Daten mithilfe des SQL Server-Ziels
   Das Paket muss bereits mindestens einen Datenflusstask und eine Datenquelle enthalten, damit Sie ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ziel hinzufügen und konfigurieren können.  
@@ -55,7 +55,7 @@ ms.locfileid: "47669498"
     > [!NOTE]  
     >  Vom Ziel werden automatisch gleichnamige Spalten zugeordnet.  
   
-9. Klicken Sie auf **Erweitert** , und legen Sie die Optionen für das Massenladen fest: **Identität beibehalten**, **NULL-Werte beibehalten**, **Tabellensperre**, **Einschränkungen überprüfen**und **Trigger auslösen**.  
+9. Klicken Sie auf **Erweitert**, und legen Sie die Optionen für das Massenladen fest: **Identität beibehalten**, **NULL-Werte beibehalten**, **Tabellensperre**, **Einschränkungen überprüfen**und **Trigger auslösen**.  
   
      Optional können Sie die erste und letzte einzufügende Eingabezeile, die maximal zulässige Anzahl von Fehlern, nach der der Einfügevorgang beendet wird, sowie die Spalten, nach der der Einfügevorgang sortiert wird, angeben.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "47669498"
   
 11. Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Destination](../../integration-services/data-flow/sql-server-destination.md)   
  [SQL Server Integration Services-Transformationen](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [SQL Server Integration Services-Pfade](../../integration-services/data-flow/integration-services-paths.md)   

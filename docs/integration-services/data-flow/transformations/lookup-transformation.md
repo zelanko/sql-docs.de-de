@@ -21,15 +21,15 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b7f269e0cbbc3e5f98667e49b7db6987c692c881
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4e3de21943f0bdd50e05cb30a1d9b1774f41ab37
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639657"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273292"
 ---
 # <a name="lookup-transformation"></a>Transformation für Suche
   Die Transformation für die Suche führt Suchvorgänge aus, indem Daten in Eingabespalten mit Spalten in einem Verweisdataset verknüpft werden. Mithilfe der Transformation für Suche können Sie auf zusätzliche Informationen in einer zugehörigen Tabelle zugreifen, die auf Werten in gemeinsamen Spalten basiert.  
@@ -131,11 +131,11 @@ ms.locfileid: "51639657"
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   Video [How to: Implement a Lookup Transformation in Full Cache Mode](https://go.microsoft.com/fwlink/?LinkId=131031)(Vorgehensweise: Implementieren einer Suchtransformation im Vollcachemodus) unter msdn.microsoft.com  
+-   Video, [Vorgehensweise: Implement a Lookup Transformation in Full Cache Mode](https://go.microsoft.com/fwlink/?LinkId=131031)(Vorgehensweise: Implementieren einer Suchtransformation im Vollcachemodus) auf msdn.microsoft.com  
   
 -   Blog-Artikel [Best Practices for Using the Lookup Transformation Cache Modes](https://go.microsoft.com/fwlink/?LinkId=146623)(Bewährte Vorgehensweisen für die Verwendung des Cachemodus der Transformation für Suche) unter blogs.msdn.com  
   
--   Blogeintrag [Suchmuster: Keine Beachtung von Groß-/Kleinschreibung](https://go.microsoft.com/fwlink/?LinkId=157782)auf blogs.msdn.com.  
+-   Blogeintrag, [Suchmuster: Keine Beachtung von Groß-/Kleinschreibung](https://go.microsoft.com/fwlink/?LinkId=157782) auf blogs.msdn.com  
   
 -   Beispiel [Transformation für Suche](https://go.microsoft.com/fwlink/?LinkId=267528)auf msftisprodsamples.codeplex.com.  
   

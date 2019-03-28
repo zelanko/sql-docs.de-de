@@ -21,15 +21,15 @@ helpviewer_keywords:
 - JPEG format [Integration Services]
 - .jpeg files
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: de5aa91ae884b8aef977c47a2fa288f179a086fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dee6d377d6b099a89dcbc2b12e93dc4aa7d86874
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595709"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270594"
 ---
 # <a name="working-with-images-with-the-script-task"></a>Arbeiten mit Bildern mithilfe des Skripttasks
   Datenbanken von Produkten oder Benutzern enthalten häufig neben Text und numerischen Daten auch Bilder. Der **System.Drawing**-Namespace in Microsoft .NET Framework stellt Klassen zum Bearbeiten von Bildern bereit.  
@@ -41,7 +41,7 @@ ms.locfileid: "47595709"
 > [!NOTE]  
 >  Wenn Sie einen Task erstellen möchten, den Sie einfacher in mehreren Paketen wiederverwenden können, empfiehlt es sich, den Code in diesem Skripttaskbeispiel als Ausgangspunkt für einen benutzerdefinierten Task zu verwenden. Weitere Informationen finden Sie unter [Entwickeln eines benutzerdefinierten Tasks](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-##  <a name="example1"></a> Beschreibung zu Beispiel 1: Konvertieren von Bildern in das JPEG-Format  
+##  <a name="example1"></a> Beschreibung von Beispiel 1: Konvertieren von Bildern in das JPEG-Format  
  Im folgenden Beispiel wird eine Bilddatei, die durch eine Variable definiert ist, geöffnet und mithilfe eines Encoders als komprimierte JPEG-Datei gespeichert. Der Code zum Abrufen der Encoderinformationen wird in einer privaten Funktion gekapselt.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>So konfigurieren Sie dieses Skripttaskbeispiel zur Verwendung mit einer einzelnen Bilddatei  
@@ -150,7 +150,7 @@ End Function
   
 ```  
   
-##  <a name="example2"></a> Beschreibung zu Beispiel 2: Erstellen und Speichern von Miniaturbildern  
+##  <a name="example2"></a> Beschreibung von Beispiel 2: Erstellen und Speichern von Miniaturbildern  
  Im folgenden Beispiel wird eine Bilddatei, die durch eine Variable definiert ist, geöffnet, ein Miniaturbild dieses Bilds mit gleichem Seitenverhältnis erstellt und das Miniaturbild mit geändertem Dateinamen gespeichert. Der Code, der Höhe und Breite des Miniaturbilds berechnet und dabei das Seitenverhältnis beibehält, wird in einer privaten Unterroutine gekapselt.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>So konfigurieren Sie dieses Skripttaskbeispiel zur Verwendung mit einer einzelnen Bilddatei  

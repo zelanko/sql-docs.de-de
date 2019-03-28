@@ -1,7 +1,7 @@
 ---
 title: XML-Schemaauflistungen (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c8a69b903fefb85b30ee6cd0a0019466c279fd0e
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: d1b1110877d4735dee8606805f78a891c4a4b950
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255715"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375288"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML-Schemaauflistungen (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "54255715"
   
  Angenommen, das folgende Schema liegt vor:  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             targetNamespace="uri:Cust_Orders2"  
@@ -130,6 +130,7 @@ ms.locfileid: "54255715"
 |**blockDefault**|Das **block** -Attribut, das für alle Elementdeklarationen und Typdefinitionen angewendet wird, die dieses Attribut noch nicht enthalten. Der Wert wird auf den Wert des **blockDefault** -Attributs festgelegt.|  
 |**finalDefault**|Das **final** -Attribut, das für alle Elementdeklarationen und Typdefinitionen angewendet wird, die dieses Attribut noch nicht enthalten. Der Wert wird auf den Wert des **finalDefault** -Attributs festgelegt.|  
 |**targetNamespace**|Zum Zielnamespace gehörende Informationen zu den Komponenten werden in den Metadaten gespeichert.|  
+| &nbsp; | &nbsp; |
   
 ##  <a name="perms"></a> Berechtigungen für eine XML-Schemaauflistung  
  Sie müssen über die entsprechenden Berechtigungen verfügen, um die folgenden Aufgaben durchführen zu können:  
@@ -163,7 +164,7 @@ ms.locfileid: "54255715"
 ##  <a name="info"></a> Abrufen von Informationen zu XML-Schemas und -Schemaauflistungen  
  XML-Schemaauflistungen sind in der Katalogsicht sys.xml_schema_collections aufgeführt. Die XML-Schemaauflistung "sys" wird durch das System definiert. Sie enthält die vordefinierten Namespaces, die in allen benutzerdefinierten XML-Schemaauflistungen verwendet werden können, ohne dass sie explizit geladen werden müssen. Diese Auflistung enthält die Namespaces für xml, xs, xsi, fn und xdt. Zwei weitere Katalogsichten sind sys.xml_schema_namespaces, die alle Namespaces innerhalb jeder Schemaauflistung aufführt, und sys.xml_components, die alle XML-Schemakomponenten innerhalb jedes XML-Schemas aufführt.  
   
- Die integrierte Funktion **XML_SCHEMA_NAMESPACE**, *schemaName, XmlSchemacollectionName, namespace-uri*, ergibt eine **xml** -Datentypinstanz. Diese Instanz enthält XML-Schemafragmente für Schemas, die in einer XML-Schemaauflistung enthalten sind, mit Ausnahme der vordefinierten XML-Schemas.  
+ Die integrierte Funktion **XML_SCHEMA_NAMESPACE**, *schemaName, XmlSchemacollectionName, namespace-uri*, ergibt eine **xml**-Datentypinstanz. Diese Instanz enthält XML-Schemafragmente für Schemas, die in einer XML-Schemaauflistung enthalten sind, mit Ausnahme der vordefinierten XML-Schemas.  
   
  Es gibt folgende Möglichkeiten, um den Inhalt einer XML-Schemaauflistung aufzuführen:  
   
@@ -176,7 +177,7 @@ ms.locfileid: "54255715"
 ### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Beispiel: Enumeration der XML-Namespaces in einer XML-Schemaauflistung  
  Verwenden Sie die folgende Abfrage für die XML-Schemaauflistung "myCollection":  
   
-```  
+```sql
 SELECT XSN.name  
 FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN  
     ON (XSC.xml_collection_id = XSN.xml_collection_id)  
@@ -186,18 +187,18 @@ WHERE    XSC.name = 'myCollection'
 ### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>Beispiel: Enumeration des Inhalts einer XML-Schemaauflistung  
  Mit der folgenden Anweisung wird der Inhalt der XML-Schemaauflistung "myCollection" innerhalb des relationalen Schemas dbo aufgeführt.  
   
-```  
+```sql
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
  Einzelne XML-Schemas innerhalb der Auflistung können als **xml** -Datentypinstanzen abgerufen werden, indem der Zielnamespace als drittes Argument für **XML_SCHEMA_NAMESPACE()** angegeben wird. Dies wird im folgenden Beispiel gezeigt.  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Beispiel: Ausgeben eines angegebenen Schemas für eine XML-Schemaauflistung  
- Mit der folgenden Anweisung wird das XML-Schema mit dem Zielnamespace <https://www.microsoft.com/books> aus der XML-Schemaauflistung „myCollection“ innerhalb des relationalen Schemas „dbo“ ausgegeben.  
+ Mit der folgenden Anweisung wird das XML-Schema mit dem _pretend_-Zielnamespace http:/\/www.microsoft.com/was-books aus der XML-Schemaauflistung „myCollection“ innerhalb des relationalen Schemas „dbo“ ausgegeben.  
   
-```  
+```sql
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',   
-N'https://www.microsoft.com/books')  
+N'https://www.microsoft.com/was-books')  
 ```  
   
 ### <a name="querying-xml-schemas"></a>Abfragen von XML-Schemas  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b44eaab3266d75663458572af238f5a15bd35b5e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c30fcacb779a9656b70edad79e976bde575537de
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642287"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290596"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>Suchtransformation im Vollcachemodus – Cacheverbindungs-Manager
   Sie können die Transformation für Suche so konfigurieren, dass der Vollcachemodus und ein Cacheverbindungs-Manager verwendet werden. Im Vollcachemodus wird das Verweisdataset in den Cache geladen, bevor die Transformation für Suche ausgeführt wird.  
@@ -62,7 +62,7 @@ ms.locfileid: "51642287"
   
 -   [Sequenzcontainer](../../integration-services/control-flow/sequence-container.md)  
   
- Ein Video zur Veranschaulichung der Implementierung einer Transformation für Suche im Vollcachemodus mithilfe des Cacheverbindungs-Managers finden Sie unter [Gewusst wie: Implementieren einer Suchtransformation im Vollcachemodus (SQL Server-Video)](https://go.microsoft.com/fwlink/?LinkId=131031).  
+ Ein Video zur Veranschaulichung der Implementierung einer Transformation für Suche im Vollcachemodus mithilfe des Cacheverbindungs-Managers finden Sie unter [Vorgehensweise: Implementieren einer Suchtransformation im Vollcachemodus (SQL Server-Video)](https://go.microsoft.com/fwlink/?LinkId=131031).  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>So implementieren Sie eine Transformation für Suche im Vollcachemodus in einem Paket mit dem Cacheverbindungs-Manager und einer Datenquelle im Datenfluss  
   
@@ -280,7 +280,7 @@ ms.locfileid: "51642287"
   
 9. Führen Sie das Paket aus.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Implementieren einer Suchtransformation im Vollcachemodus mit dem OLE DB-Verbindungs-Manager](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [Implementieren einer Suche im Modus „Kein Cache“ oder „Teilcache“](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [SQL Server Integration Services-Transformationen](../../integration-services/data-flow/transformations/integration-services-transformations.md)  

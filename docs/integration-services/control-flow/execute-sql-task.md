@@ -18,15 +18,15 @@ helpviewer_keywords:
 - batches [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 674dd31df5acbe93fd48ad9b0b3ab504cebbc98a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ff217e16fb9d153872d00074ff2f5d672be056d0
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504074"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273906"
 ---
 # <a name="execute-sql-task"></a>SQL ausführen (Task)
   Mit dem Task SQL ausführen werden SQL-Anweisungen oder gespeicherte Prozeduren aus einem Paket ausgeführt. Dieser Task kann eine oder mehrere SQL-Anweisungen enthalten, die sequenziell ausgeführt werden. Der Task SQL ausführen kann für folgende Zwecke verwendet werden:  
@@ -189,7 +189,7 @@ Weitere Informationen zur Transact-SQL-Abfragesprache finden Sie unter [Transact
  **FileConnection**  
  Wählen Sie einen vorhandenen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
- **Verwandte Themen:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Verwandte Themen:** [Dateiverbindungs-Manager](../../integration-services/connection-manager/file-connection-manager.md), [Dateiverbindungs-Manager-Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="sqlsourcetype--variable"></a>SQLSourceType = Variable  
  **SourceVariable**  
@@ -200,7 +200,7 @@ Weitere Informationen zur Transact-SQL-Abfragesprache finden Sie unter [Transact
 ## <a name="parameter-mapping-page---execute-sql-task-editor"></a>Seite „Parameterzuordnung“ – Editor für den Task „SQL ausführen“
 Mithilfe der Seite **Parameterzuordnung** des Dialogfelds **Editor für den Task 'SQL ausführen'** können Sie Parametern in der SQL-Anweisung Variablen zuordnen.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Variablenname**  
  Nachdem Sie auf **Hinzufügen** geklickt und damit eine neue Parameterzuordnung hinzugefügt haben, wählen Sie in der Liste eine Systemvariable oder eine benutzerdefinierte Variable aus, oder klicken Sie auf \<**Neue Variable...**>, um mithilfe des Dialogfelds **Variable hinzufügen** eine neue Variable hinzuzufügen.  
   
@@ -231,7 +231,7 @@ Mithilfe der Seite **Parameterzuordnung** des Dialogfelds **Editor für den Task
 ## <a name="result-set-page---execute-sql-task-editor"></a>Seite „Resultset“ – Editor für den Task „SQL ausführen“
 Mithilfe der Seite **Resultset** des Dialogfelds **Editor für den Task 'SQL ausführen'** können Sie das Ergebnis der SQL-Anweisung neuen oder vorhandenen Variablen zuordnen. Die Optionen in diesem Dialogfeld sind deaktiviert, wenn auf der Seite Allgemein für **ResultSet** der Wert **Keine**festgelegt ist.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Ergebnisname**  
  Nachdem Sie durch Klicken auf **Hinzufügen**eine Resultsetzuordnung hinzugefügt haben, geben Sie einen Namen für das Ergebnis an. Je nach Resultsettyp müssen Sie bestimmte Ergebnisnamen verwenden.  
   

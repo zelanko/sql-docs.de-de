@@ -15,15 +15,15 @@ helpviewer_keywords:
 - literals [Integration Services]
 - mapping literals [Integration Services]
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d8ece192518501869f9d4d8d11934fc4dbaaaf78
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d4b6dec2cd9698d347ca247e26f4b931cb6ab56d
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728168"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279164"
 ---
 # <a name="numeric-string-and-boolean-literals"></a>Numerische, Zeichenfolgen- und boolesche Literale
  Ausdrücke können numerische und boolesche Literale sowie Zeichenfolgenliterale einschließen. Die Ausdrucksauswertung unterstützt eine Reihe von numerischen Literalen, wie z. B. ganze Zahlen, Dezimalzeichen und Gleitkommakonstanten. Außerdem unterstützt die Ausdrucksauswertung die long- und float-Suffixe, die die Behandlung von Werten durch die Ausdrucksauswertung angeben, sowie die wissenschaftliche Schreibweise bei numerischen Literalen.  
@@ -60,7 +60,7 @@ ms.locfileid: "47728168"
 |{D}*"."{D}+{E}?{FS}|Ein nicht integrales numerisches Literal mit einer Dezimalstelle, einem Dezimalbruch mit mindestens einer Ziffer (D), einem optionalen Exponenten (E) und einem float- oder einem long-Bezeichner (FS). Dieses numerische Literal weist den Datentyp DT_R4 oder DT_R8 auf.  Beispiele: 6,45E3f, 0,89E-2l und 1,05E+7F.|  
 |{D}+"."{D}*{E}?{FS}|Ein nicht integrales numerisches Literal mit mindestens einer signifikanten Ziffer (D), einer Dezimalstelle, einem Exponenten (E) und einem float- oder einem long-Bezeichner (FS). Dieses numerische Literal weist den Datentyp DT_R4 oder DT_R8 auf.  Beispiele: 1,E-4f, 4,6E6L und 8,365E+2f.|  
 |{D}*.{D}+|Ein nicht integrales numerisches Literal mit Genauigkeit und Dezimalstellenanzahl. Es weist eine Dezimalstelle und einen Dezimalbruch mit mindestens einer Ziffer (D) auf. Dieses numerische Literal weist den Datentyp DT_NUMERIC auf.  Beispiele: 0,9, 5,8 und 0,346.|  
-|{D}+.{D}*|Ein nicht integrales numerisches Literal mit Genauigkeit und Dezimalstellenanzahl. Es weist mindestens eine signifikante Ziffer (D) und eine Dezimalstelle auf. Dieses numerische Literal weist den Datentyp DT_NUMERIC auf.  Beispiele: 6,0, 0,2 und 8,0.|  
+|{D}+.{D}*|Ein nicht integrales numerisches Literal mit Genauigkeit und Dezimalstellenanzahl. Es weist mindestens eine signifikante Ziffer (D) und eine Dezimalstelle auf. Dieses numerische Literal weist den Datentyp DT_NUMERIC auf.  Beispiele: 6,, 0,2 und 8,0.|  
 |#{D}+|Ein Herkunftsbezeichner. Er besteht aus dem Nummernzeichen (#) und mindestens einer Ziffer (D). Beispiele: #123.|  
 |0[xX]{H}+{uU}|Ein numerisches Literal im Hexadezimalformat. Es schließt eine Null, ein x (Groß- oder Kleinbuchstabe), mindestens ein H (Großbuchstabe) und optional das unsigned-Suffix ein. Beispiele: 0xFF0A und 0X000010000U.|  
   

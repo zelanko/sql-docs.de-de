@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.ssis.designer.cdcsource.columns.f1
 - sql13.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d99085d1f743177a24c7902daebf584455f38a79
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c487852af232224304e0d746f0ab32bf0fe90dbe
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642235"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290536"
 ---
 # <a name="cdc-source"></a>CDC-Quelle
   Die CDC-Quelle liest einen Bereich mit Änderungsdaten aus [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Änderungstabellen und übermittelt die Änderungen an die anderen SSIS-Downstreamkomponenten.  
@@ -49,9 +49,9 @@ ms.locfileid: "51642235"
 ## <a name="error-handling"></a>Fehlerbehandlung  
  Die CDC-Quelle verfügt über eine Fehlerausgabe. Die Komponentenfehlerausgabe enthält die folgenden Ausgabespalten:  
   
--   **Fehlercode**: Der Wert beträgt immer -1.  
+-   **Fehlercode**: Der Wert lautet immer -1.  
   
--   **Fehlerspalte**: Die Quellspalte, die den Fehler verursacht (für Konvertierungsfehler).  
+-   **Fehlerspalte**: Die Quellspalte, die den Fehler verursacht (bei Konvertierungsfehlern).  
   
 -   **Fehlerzeilenspalten**: Die Datensatzdaten, die den Fehler verursachen.  
   
@@ -135,7 +135,7 @@ use <cdc-enabled-database-name>
   
 3.  Klicken Sie im **Quellen-Editor für CDC**auf **Verbindungs-Manager**.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **ADO.NET-Verbindungs-Manager**  
  Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder klicken Sie auf **Neu** , um eine neue Verbindung zu erstellen. Die Verbindung muss zu einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank hergestellt werden, die für CDC aktiviert ist und in der sich die ausgewählte Änderungstabelle befindet.  
   
@@ -153,15 +153,15 @@ use <cdc-enabled-database-name>
  **CDC Processing Mode**  
  Wählen Sie den Verarbeitungsmodus aus, der sich für die Behandlung Ihrer Verarbeitungsanforderungen am besten eignet. Folgende Optionen sind möglich:  
   
--   **All**: Gibt die Änderungen im aktuellen CDC-Bereich ohne **Vor Update** -Werte zurück.  
+-   **All**: Gibt die Änderungen im aktuellen CDC-Bereich ohne **Vor Update**-Werte zurück.  
   
--   **All with old values:** Gibt die Änderungen im aktuellen CDC-Verarbeitungsbereich unter Einbeziehung der alten Werte (**Vor Update**) zurück. Für jeden Updatevorgang gibt es zwei Zeilen, eine mit den Werten vor dem Update und eine mit den Werten nach dem Update.  
+-   **All with old values**: Gibt die Änderungen im aktuellen CDC-Verarbeitungsbereich unter Einbeziehung der alten Werte (**Vor Update**) zurück. Für jeden Updatevorgang gibt es zwei Zeilen, eine mit den Werten vor dem Update und eine mit den Werten nach dem Update.  
   
 -   **Net**: Gibt nur eine Änderungszeile pro Quellzeile zurück, die im aktuellen CDC-Verarbeitungsbereich geändert wurde. Wenn eine Quellzeile mehrmals aktualisiert wurde, wird die kombinierte Änderung erzeugt (Beispiel: Einfügen+Update wird als einzelner Updatevorgang und Update+Löschen als einzelner Löschvorgang erzeugt). Beim Arbeiten im Änderungsverarbeitungsmodus Net ist es möglich, die Änderungen auf Lösch-, Einfüge- und Updatevorgänge aufzuteilen und parallel zu behandeln, da die einzelne Quellzeile in mehr als einer Ausgabe vorhanden ist.  
   
--   **Net with update mask:** Dieser Modus ähnelt dem normalen Net-Modus, aber es werden außerdem boolesche Spalten mit dem Namensmuster **__$\<Spaltenname>\___Changed** hinzugefügt, die auf geänderte Spalten in der aktuellen Änderungszeile hinweisen.  
+-   **Net with update mask**: Dieser Modus ähnelt dem normalen Net-Modus, aber es werden außerdem boolesche Spalten mit dem Namensmuster **__$\<Spaltenname>\___Changed** hinzugefügt, die auf geänderte Spalten in der aktuellen Änderungszeile hinweisen.  
   
--   **Net with merge:** Dieser Modus ähnelt dem normalen Net-Modus, aber hierbei sind Einfüge- und Updatevorgänge zu einem einzelnen Mergevorgang (UPSERT) zusammengeführt.  
+-   **Net with merge**: Dieser Modus ähnelt dem normalen Net-Modus, aber hierbei sind Einfüge- und Updatevorgänge zu einem einzelnen Mergevorgang (UPSERT) zusammengeführt.  
   
 > [!NOTE]  
 >  Für alle Nettoänderungsoptionen muss die Quelltabelle über einen Primärschlüssel oder einen eindeutigen Index verfügen. Für Tabellen ohne Primärschlüssel oder eindeutigen Index muss die Option **All** verwendet werden.  
@@ -188,7 +188,7 @@ use <cdc-enabled-database-name>
   
 3.  Klicken Sie im **Quellen-Editor für CDC**auf **Spalten**.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Verfügbare externe Spalten**  
  Eine Liste der in der Datenquelle verfügbaren externen Spalten. Mit der Tabelle können keine Spalten hinzugefügt oder gelöscht werden. Wählen Sie die zu verwendenden Spalten in der Datenquelle aus. Die ausgewählten Spalten werden der Liste **Externe Spalte** in der Reihenfolge hinzugefügt, in der Sie sie auswählen.  
   
@@ -210,7 +210,7 @@ use <cdc-enabled-database-name>
   
 3.  Klicken Sie im **Quellen-Editor für CDC**auf **Fehlerausgabe**.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Datenquelle an.  
   

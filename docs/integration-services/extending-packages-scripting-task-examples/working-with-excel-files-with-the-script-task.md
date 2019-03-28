@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Excel [Integration Services]
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 69771260dbffe33583e300942548a69fd21a5258
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e39c96672016f19ecc6506d48266da70e0edf1b5
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529597"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274883"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Arbeiten mit Excel-Dateien mit dem Skripttask
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt den Excel-Verbindungs-Manager, die Excel-Quelle und das Excel-Ziel zum Arbeiten mit den in Kalkulationstabellen gespeicherten Daten im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel-Dateiformat bereit. Die in diesem Thema beschriebenen Verfahren verwenden den Skripttask zum Abrufen von Informationen über verfügbare Excel-Datenbanken (Arbeitsmappendateien) und -Tabellen (Arbeitsmappen und benannte Bereiche).
@@ -66,7 +66,7 @@ ms.locfileid: "52529597"
   
 5.  Verwenden Sie im Dialogfeld **Optionen** auf der Seite **Allgemein** die Option **Skriptsprache**, um die Standardskriptsprache für die Skriptkomponente festzulegen. Weitere Informationen finden Sie unter [General Page](../general-page-of-integration-services-designers-options.md).  
   
-##  <a name="example1"></a> Beschreibung zu Beispiel 1: Überprüfen, ob eine Excel-Datei vorhanden ist  
+##  <a name="example1"></a> Beschreibung von Beispiel 1: Überprüfen, ob eine Excel-Datei vorhanden ist  
  In diesem Beispiel wird überprüft, ob die von der `ExcelFile`-Variable angegebene Excel-Arbeitsmappendatei vorhanden ist. Daraufhin wird der boolesche Wert der `ExcelFileExists`-Variable auf das Ergebnis festgelegt. Sie können diesen booleschen Wert im Workflow des Pakets zur Verzweigung verwenden.  
   
 ### <a name="to-configure-this-script-task-example"></a>So konfigurieren Sie dieses Skripttaskbeispiel  
@@ -136,7 +136,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example2"></a> Beschreibung zu Beispiel 2: Überprüfen, ob eine Excel-Tabelle vorhanden ist  
+##  <a name="example2"></a> Beschreibung von Beispiel 2: Überprüfen, ob eine Excel-Tabelle vorhanden ist  
  In diesem Beispiel wird überprüft, ob das in der `ExcelTable`-Variable angegebene Excel-Arbeitsblatt bzw. der benannte Bereich in der Excel-Arbeitsmappendatei vorhanden ist, die in der `ExcelFile`-Variable angegeben wurde. Daraufhin wird der boolesche Wert der `ExcelTableExists`-Variable auf das Ergebnis festgelegt. Sie können diesen booleschen Wert im Workflow des Pakets zur Verzweigung verwenden.  
   
 ### <a name="to-configure-this-script-task-example"></a>So konfigurieren Sie dieses Skripttaskbeispiel  
@@ -145,7 +145,7 @@ public class ScriptMain
   
 2.  Klicken Sie im **Skripttask-Editor** auf der Registerkarte **Skript** auf **ReadOnlyVariables**, und geben Sie den Eigenschaftswert mit einer der folgenden Methoden ein:  
   
-    -   Geben Sie durch Trennzeichen getrennt **ExcelTable** und **ExcelFile** ein.  
+    -   Geben Sie durch Trennzeichen getrennt **ExcelTable** und **ExcelFile** ein **.**  
   
          -oder-  
   
@@ -243,7 +243,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example3"></a> Beschreibung zu Beispiel 3: Abrufen einer Liste der Excel-Dateien in einem Ordner  
+##  <a name="example3"></a> Beschreibung von Beispiel 3: Abrufen einer Liste der Excel-Dateien in einem Ordner  
  In diesem Beispiel wird ein Array mit der Liste der Excel-Dateien aus dem Ordner gefüllt, der im Wert der `ExcelFolder`-Variable angegeben wurde. Das Array wird daraufhin in die `ExcelFiles`-Variable kopiert. Mithilfe des Foreach-Enumerators für Daten aus Variablen können die Dateien in dem Array durchlaufen werden.  
   
 ### <a name="to-configure-this-script-task-example"></a>So konfigurieren Sie dieses Skripttaskbeispiel  
@@ -315,7 +315,7 @@ public class ScriptMain
 ### <a name="alternate-solution"></a>Alternative Lösung  
  Anstelle eines Skripttasks können Sie zum Sammeln einer Liste von Excel-Arbeitsmappen in einem Array auch den Foreach-Dateienumerator verwenden, um alle Excel-Dateien in einem Ordner zu durchlaufen. Weitere Informationen finden Sie unter [Loop through Excel Files and Tables by Using a Foreach Loop Container (Schleife durch Excel-Dateien und Tabellen mit einem Foreach-Schleifencontainer)](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md).  
   
-##  <a name="example4"></a> Beschreibung zu Beispiel 4: Abrufen einer Liste der Tabellen in einer Excel-Datei  
+##  <a name="example4"></a> Beschreibung von Beispiel 4: Abrufen einer Liste der Tabellen in einer Excel-Datei  
  In diesem Beispiel wird ein Array mit der Liste der Arbeitsmappen und benannten Bereiche in der Excel-Arbeitsmappendatei gefüllt, der im Wert der `ExcelFile`-Variable angegeben wurde. Das Array wird daraufhin in die `ExcelTables`-Variable kopiert. Mithilfe des Foreach-Enumerators für Daten aus Variablen können die Tabellen in dem Array durchlaufen werden.  
   
 > [!NOTE]  
@@ -533,7 +533,7 @@ public class ScriptMain
 }  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Load data from or to Excel with SQL Server Integration Services (SSIS) (Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS))](../load-data-to-from-excel-with-ssis.md)  
  [Schleife durch Excel-Dateien und Tabellen mit einem Foreach-Schleifencontainer](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   

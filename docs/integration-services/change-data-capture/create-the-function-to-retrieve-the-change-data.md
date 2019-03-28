@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fc5fb2da6ab1d276ac4a5397b8ea9832878b1c5a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 49c4e75641056db17faabcc937ee1ec76fd470d5
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418031"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280334"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Erstellen der Funktion zum Abrufen der Änderungsdaten
   Nach Abschluss der Ablaufsteuerung für ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket, das ein inkrementelles Laden von Änderungsdaten ausführt, ist der nächste Task die Erstellung einer Tabellenwertfunktion, mit der die Änderungsdaten abgerufen werden. Sie müssen diese Funktion nur einmal vor dem ersten inkrementellen Laden erstellen.  
@@ -133,7 +133,7 @@ deallocate #hfunctions
   
 -   Alle angeforderten Spalten der Änderungsdaten  
   
--   Eine Spalte mit dem Namen __CDC_OPERATION, die ein Feld mit einem oder zwei Zeichen verwendet, um den der Zeile zugeordneten Vorgang zu kennzeichnen. Folgende Werte sind für dieses Feld gültig: „I“ für insert (einfügen), „D“ für delete (löschen), „UO“ für update old values (alte Werte aktualisieren) und „UN“ für update new values (neue Werte aktualisieren).  
+-   Eine Spalte mit dem Namen __CDC_OPERATION, die ein Feld mit einem oder zwei Zeichen verwendet, um den der Zeile zugeordneten Vorgang zu kennzeichnen. Folgende Werte sind für dieses Feld gültig: „I“ für „insert“ (einfügen), „D“ für delete (löschen), „UO“ für „update old values“ (alte Werte aktualisieren) und „UN“ für „update new values“ (neue Werte aktualisieren).  
   
 -   Updateflags, wenn Sie diese anfordern, die als bit-Spalten hinter dem Vorgangscode in der vom *@update_flag_list* -Parameter festgelegten Reihenfolge angezeigt werden. Diese Spalten werden bezeichnet, indem „_uflag“ an den zugeordneten Spaltennamen angehängt wird.  
   
@@ -220,6 +220,6 @@ go
 ## <a name="next-step"></a>Nächster Schritt  
  Nach dem Erstellen der Tabellenwertfunktion, mit der Änderungsdaten abgefragt werden, ist der nächste Schritt der Entwurf des Datenflusses im Paket.  
   
- **Nächstes Thema**[Abrufen und Verstehen der Änderungsdaten](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
+ **Nächstes Thema:** [Abrufen und Verstehen der Änderungsdaten](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
   
   

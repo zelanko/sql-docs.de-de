@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5880f74a5cb7296197e1d5ced383fa2c48aaf84a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 05aca45bdfc8a6f45ce32b4a6ac328ae5acc0ad5
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400643"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280004"
 ---
 # <a name="error-handling"></a>Fehlerbehandlung
   Eine Oracle CDC-Instanz führt das Mining für Änderungen einer einzelnen Oracle-Quelldatenbank durch (ein Oracle RAC-Cluster wird als einzelne Datenbank angesehen) und schreibt die Änderungen mit ausgeführtem Commit in Änderungstabellen in einer CDC-Datenbank auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zielinstanz.  
@@ -41,7 +41,7 @@ ms.locfileid: "52400643"
 |Fehler|0|1|Die Oracle CDC-Instanz wird nicht ausgeführt. Der Status ERROR gibt an, dass die CDC-Instanz ACTIVE war und dann ein Fehler aufgetreten ist, der nicht behebbar ist, sodass die Instanz sich selbst deaktiviert hat.|MISCONFIGURED: Ein nicht behebbarer Konfigurationsfehler wurde erkannt.<br /><br /> PASSWORD-REQUIRED: Für den Change Data Capture Designer für Oracle von Attunity ist kein Kennwort festgelegt, oder das konfigurierte Kennwort ist nicht gültig. Der Grund kann eine Änderung des Kennworts für den asymmetrischen Schlüssel des Diensts sein.|  
 |RUNNING|1|0|Die CDC-Instanz wird ausgeführt und verarbeitet Änderungsdatensätze.|IDLE: Alle Änderungsdatensätze wurden verarbeitet und in den Zielsteuertabellen (**_CT**) gespeichert. Es ist keine aktive Transaktion in Verbindung mit den Steuertabellen vorhanden.<br /><br /> PROCESSING: Es werden Änderungsdatensätze verarbeitet, die noch nicht in die Steuertabellen (**_CT**) geschrieben wurden.|  
 |STOPPED|0|0|Die CDC-Instanz wird nicht ausgeführt.|Der Unterstatus STOP gibt an, dass die CDC-Instanz ACTIVE war und dann ordnungsgemäß beendet wurde.|  
-|SUSPENDED|1|1|Die CDC-Instanz wird ausgeführt, aber die Verarbeitung wurde aufgrund eines behebbaren Fehlers angehalten.|DISCONNECTED: Die Verbindung zur Oracle-Quelldatenbank kann nicht hergestellt werden. Die Verarbeitung wird fortgesetzt, nachdem die Verbindung wiederhergestellt wurde.<br /><br /> STORAGE: Der Speicher ist voll. Die Verarbeitung wird fortgesetzt, wenn Speicher verfügbar wird. In einigen Fällen wird dieser Status möglicherweise nicht angezeigt, weil die Statustabelle nicht aktualisiert werden kann.<br /><br /> LOGGER: Die Protokollierung verfügt über eine Verbindung mit Oracle, kann aber aufgrund eines vorübergehenden Problems die Oracle-Transaktionsprotokolle nicht lesen.|  
+|SUSPENDED|1|1|Die CDC-Instanz wird ausgeführt, aber die Verarbeitung wurde aufgrund eines behebbaren Fehlers angehalten.|DISCONNECTED: Die Verbindung mit der Oracle-Quelldatenbank kann nicht hergestellt werden. Die Verarbeitung wird fortgesetzt, nachdem die Verbindung wiederhergestellt wurde.<br /><br /> STORAGE: Der Speicher ist voll. Die Verarbeitung wird fortgesetzt, wenn Speicher verfügbar wird. In einigen Fällen wird dieser Status möglicherweise nicht angezeigt, weil die Statustabelle nicht aktualisiert werden kann.<br /><br /> LOGGER: Die Protokollierung verfügt über eine Verbindung mit Oracle, kann aber aufgrund eines vorübergehenden Problems die Oracle-Transaktionsprotokolle nicht lesen.|  
 |DATAERROR|x|x|Dieser Statuscode wird nur für die Tabelle **xdbcdc_trace** verwendet. Er wird nicht in der Tabelle **xdbcdc_state** angezeigt. Ablaufverfolgungsdatensätze mit diesem Status weisen auf ein Problem mit einem Oracle-Protokolldatensatz hin. Der fehlerhafte Protokolldatensatz wird in der Spalte **data** als BLOB gespeichert.|BADRECORD: Der angefügte Protokolldatensatz konnte nicht analysiert werden.<br /><br /> CONVERT-ERROR: Die Daten in einigen Spalten konnten nicht in die Zielspalten in der Aufzeichnungstabelle konvertiert werden. Dieser Status wird nur angezeigt, wenn in der Konfiguration angegeben ist, dass Konvertierungsfehler zu Ablaufverfolgungsdatensätzen führen sollen.|  
   
  Da der Status des Oracle CDC Service in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gespeichert wird, kann es vorkommen, dass der Statuswert in der Datenbank nicht den tatsächlichen Status des Diensts widerspiegelt. Am häufigsten tritt der Fall auf, bei dem der Dienst seine Verbindung zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verliert und diese nicht wiederherstellen kann (aus einem beliebigen Grund). In diesem Fall ist der in **cdc.xdbcdc_state** gespeicherte Status veraltet. Wenn der Zeitstempel der letzten Aktualisierung (UTC) mehr als eine Minute alt ist, ist der Status wahrscheinlich veraltet. Verwenden Sie in diesem Fall die Windows-Ereignisanzeige, um nach weiteren Informationen zum Status des Diensts zu suchen.  
@@ -113,7 +113,7 @@ ms.locfileid: "52400643"
 ### <a name="handling-unexpected-oracle-cdc-instance-failures"></a>Behandeln von unerwarteten Oracle CDC-Instanzfehlern  
  Der Oracle CDC Service überwacht seine Unterprozesse der CDC-Instanz. Wenn ein Unterprozess der CDC-Instanz abgebrochen wird, deaktiviert der CDC Service diesen in der Tabelle MSXDBCDC.dbo.xdbcdc_databases und aktualisiert seinen cdc.xdbcdc_state-Status auf ABORTED. In diesem Fall wird das standardmäßige Dialogfeld Windows-Fehlerberichterstattung verwendet, um diesen Fehler zur weiteren Analyse zu melden.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Change Data Capture Designer für Oracle von Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
  [Oracle CDC-Instanz](../../integration-services/change-data-capture/the-oracle-cdc-instance.md)  
   

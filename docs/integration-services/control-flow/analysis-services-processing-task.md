@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Analysis Services Processing task
 - processing objects [Integration Services]
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: babc48270415cdd4485dd75b43b052904824ebe5
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 2f1c260b97c60fd6b60a9a8c0ecf6e8fbd696fee
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641777"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271063"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services-Verarbeitungstask
   Der Verarbeitungstask [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verarbeitet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte, beispielsweise tabellarische Modelle, Cubes, Dimensionen und Miningmodelle.  
@@ -83,7 +83,7 @@ ms.locfileid: "51641777"
 ## <a name="analysis-services-processing-task-editor-general-page"></a>Editor für den Analysis Services-Verarbeitungstask (Seite Allgemein)
   Mithilfe der Seite **Allgemein** des Dialogfelds **Editor für den Analysis Services-Verarbeitungstask** können Sie den Analysis Services-Verarbeitungstask benennen und beschreiben.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Analysis Services-Verarbeitungstask an. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
   
@@ -106,14 +106,14 @@ ms.locfileid: "51641777"
   
 4.  Batcheinstellungen werden für tabellarische Modelle ignoriert.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Analysis Services-Verbindungs-Manager**  
  Wählen Sie einen vorhandenen Analysis Services-Verbindungs-Manager aus der Liste aus, oder klicken Sie auf **Neu** , um einen neuen Verbindungs-Manager zu erstellen.  
   
  **Neu**  
  Erstellen Sie einen neuen Analysis Services-Verbindungs-Manager.  
   
- **Verwandte Themen:** [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Referenz zur Benutzeroberfläche des Dialogfelds „Analysis Services-Verbindungs-Manager hinzufügen“](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **Verwandte Themen:** [Analysis Services-Verbindungs-Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Referenz zur Benutzeroberfläche des Dialogfelds Analysis Services-Verbindungs-Manager hinzufügen](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Objektliste**  
  |Eigenschaft|und Beschreibung|  

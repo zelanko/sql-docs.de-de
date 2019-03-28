@@ -11,18 +11,18 @@ f1_keywords:
 - sql13.dts.designer.afpsubscrconn.f1
 - sql14.dts.designer.afpsubscrconn.f1
 ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 36ded1687894433f5539e2b28f174729112407ec
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1256bec97be65752d63b9d05c78e068e7d83d420
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506679"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270565"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure-Abonnementverbindungs-Manager
-  Der **Azure HDInsight-Verbindungs-Manager** ermöglicht die Verbindung eines SSIS-Pakets mit einem Azure-Abonnement, indem die Werte verwendet werden, die Sie für die folgenden Eigenschaften angeben: Azure-Abonnement-ID und das Verwaltungszertifikat.  
+  Der **Verbindungs-Manager für Azure-Abonnements** ermöglicht es, eine Verbindung zwischen einem SSIS-Paket und einem Azure-Abonnement mithilfe der Werte zu erstellen, die Sie für die folgenden Eigenschaften angeben: „Azure-Abonnement-ID“ und „Verwaltungszertifikat“.  
   
  Der **Azure-Abonnement-Verbindungs-Manager** ist eine Komponente des [SQL Server Integration Services-Feature Packs (SSIS) für Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
   
