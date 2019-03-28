@@ -12,17 +12,17 @@ ms.assetid: 16ef63a4-367a-46ac-917d-9eebc81ab29b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 514b6c8fedb50417b8c4060cb45e73bfa88fdddb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094362"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527952"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>Richtlinien für die Verwendung von Indizes für speicheroptimierte Tabellen
   Indizes werden für den effizienten Datenzugriff in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Tabellen verwendet. Die Auswahl der richtigen Indizes kann die Abfrageleistung deutlich verbessern. Stellen Sie sich beispielsweise die folgende Abfrage vor:  
   
-```tsql  
+```sql  
 SELECT c1, c2 FROM t WHERE c1 = 1;  
 ```  
   
@@ -69,11 +69,11 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
 |Vorgang|Speicheroptimierter, nicht gruppierter Hashindex|Speicheroptimierter, nicht gruppierter Index|Datenträgerbasierter Index|  
 |---------------|-------------------------------------------------|------------------------------------------|-----------------------|  
-|Indexscan, alle Tabellenzeilen abrufen.|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|Indexsuche auf Gleichheitsprädikaten (=).|Benutzerkontensteuerung<br /><br /> (Vollständiger Schlüssel erforderlich.)|Ja <sup>1</sup>|Benutzerkontensteuerung|  
-|Indexsuche auf ungleichheitsprädikaten (>, <, \<=, > =, BETWEEN).|Nein (führt zu einem Indexscan)|Ja <sup>1</sup>|Benutzerkontensteuerung|  
-|Abrufen der Zeilen in einer Sortierreihenfolge, die der Indexdefinition entspricht.|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|Abrufen der Zeilen in einer Sortierreihenfolge, die der Umkehrung der Indexdefinition entspricht.|nein|nein|Benutzerkontensteuerung|  
+|Indexscan, alle Tabellenzeilen abrufen.|Ja|Ja|Ja|  
+|Indexsuche auf Gleichheitsprädikaten (=).|Ja<br /><br /> (Vollständiger Schlüssel erforderlich.)|Ja <sup>1</sup>|Ja|  
+|Indexsuche auf ungleichheitsprädikaten (>, <, \<=, > =, BETWEEN).|Nein (führt zu einem Indexscan)|Ja <sup>1</sup>|Ja|  
+|Abrufen der Zeilen in einer Sortierreihenfolge, die der Indexdefinition entspricht.|Nein|Ja|Ja|  
+|Abrufen der Zeilen in einer Sortierreihenfolge, die der Umkehrung der Indexdefinition entspricht.|Nein|Nein|Ja|  
   
  In dieser Tabelle bedeutet "Ja", dass der Index die Anforderung adäquat bedienen kann, und "Nein" bedeutet, dass der Index nicht erfolgreich zum Erfüllen der Anforderung verwendet werden kann.  
   
@@ -93,7 +93,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
 ## <a name="creating-a-memory-optimized-index-code-samples"></a>Erstellen eines speicheroptimierten Indexes: Codebeispiele  
  Spaltenebenen-Hashindex:  
   
-```tsql  
+```sql  
 CREATE TABLE t1   
    (c1 INT NOT NULL INDEX idx HASH WITH (BUCKET_COUNT = 100))   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_ONLY)  
@@ -101,7 +101,7 @@ CREATE TABLE t1
   
  Tabellenebenen-Hashindex:  
   
-```tsql  
+```sql  
 CREATE TABLE t1_1   
    (c1 INT NOT NULL,   
    INDEX IDX HASH (c1) WITH (BUCKET_COUNT = 100))   
@@ -110,7 +110,7 @@ CREATE TABLE t1_1
   
  Hashindex des primären Schlüssels auf Spaltenebene:  
   
-```tsql  
+```sql  
 CREATE TABLE t2   
    (c1 INT NOT NULL PRIMARY KEY NONCLUSTERED HASH WITH (BUCKET_COUNT = 100))   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_AND_DATA)  
@@ -118,7 +118,7 @@ CREATE TABLE t2
   
  Hashindex des primären Schlüssels auf Tabellenebene:  
   
-```tsql  
+```sql  
 CREATE TABLE t2_2   
    (c1 INT NOT NULL,   
    PRIMARY KEY NONCLUSTERED HASH (c1) WITH (BUCKET_COUNT = 100))   
@@ -127,7 +127,7 @@ CREATE TABLE t2_2
   
  Nicht gruppierter Index auf Spaltenebene:  
   
-```tsql  
+```sql  
 CREATE TABLE t3   
    (c1 INT NOT NULL INDEX ID)   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_ONLY)  
@@ -135,7 +135,7 @@ CREATE TABLE t3
   
  Nicht gruppierter Index auf Tabellenebene:  
   
-```tsql  
+```sql  
 CREATE TABLE t3_3   
    (c1 INT NOT NULL,   
    INDEX IDX NONCLUSTERED (c1))   
@@ -144,7 +144,7 @@ CREATE TABLE t3_3
   
  Nicht gruppierter Index des primären Schlüssels auf Spaltenebene:  
   
-```tsql  
+```sql  
 CREATE TABLE t4   
    (c1 INT NOT NULL PRIMARY KEY NONCLUSTERED)   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_AND_DATA)  
@@ -152,7 +152,7 @@ CREATE TABLE t4
   
  Nicht gruppierter Index des primären Schlüssels auf Tabellenebene:  
   
-```tsql  
+```sql  
 CREATE TABLE t4_4   
    (c1 INT NOT NULL,   
    PRIMARY KEY NONCLUSTERED (c1))   
@@ -161,7 +161,7 @@ CREATE TABLE t4_4
   
  Nach Definition der Spalten definierter mehrspaltiger Index:  
   
-```tsql  
+```sql  
 create table t (  
        a int not null constraint ta primary key nonclustered,  
        b int not null,  

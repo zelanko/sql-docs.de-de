@@ -18,12 +18,12 @@ ms.assetid: 421ede8e-ad57-474a-9fb9-92f70a3e77e3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9408fe7939b5a34a18ecde2b1a98f68ac19e49a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84b1e2840240d0d02a3193ecc592a13331719c7a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628539"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527822"
 ---
 # <a name="spdeletejobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,16 +42,13 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@job_id=** ] *job_id*  
- Der ID des Auftrags, aus dem der Schritt entfernt wird. *Job_id*ist **Uniqueidentifier**, hat den Standardwert NULL.  
+`[ @job_id = ] job_id` Die ID des Auftrags, aus dem der Schritt entfernt werden soll. *Job_id*ist **Uniqueidentifier**, hat den Standardwert NULL.  
   
- [  **@job_name=** ] **"***Job_name***"**  
- Der Name des Auftrags, aus dem der Schritt entfernt wird. *Job_name*ist **Sysname**, hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags, aus dem der Schritt entfernt werden soll. *Job_name*ist **Sysname**, hat den Standardwert NULL.  
   
-> **Hinweis:** entweder *Job_id* oder *Job_name* muss angegeben werden; können nicht gleichzeitig angegeben werden.  
+> **HINWEIS:** Entweder *Job_id* oder *Job_name* muss angegeben werden; können nicht gleichzeitig angegeben werden.  
   
- [  **@step_id=** ] *Step_id*  
- Die ID des Schritts, der entfernt wird. *Step_id*ist **Int**, hat keinen Standardwert.  
+`[ @step_id = ] step_id` Die ID des Schritts entfernt wird. *Step_id*ist **Int**, hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -64,7 +61,7 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
  Führen Sie für Weitere Informationen zu den Schritten, die einem bestimmten Auftrag zugeordneten **Sp_help_jobstep**.  
   
-> **Hinweis:** Aufrufen **Sp_delete_jobstep** mit einem *Step_id* Wert 0 (null) werden alle Auftragsschritte für den Auftrag gelöscht.  
+> **HINWEIS:** Aufrufen von **Sp_delete_jobstep** mit einem *Step_id* Wert 0 (null) werden alle Auftragsschritte für den Auftrag gelöscht.  
   
  Mit Microsoft SQL Server Management Studio lassen sich Aufträge auf einfache Weise über eine grafische Oberfläche verwalten. Dies ist die empfohlene Vorgehensweise, um die Auftragsinfrastruktur zu erstellen und zu verwalten.  
   

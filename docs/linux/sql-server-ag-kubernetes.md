@@ -11,16 +11,16 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d4c460b272650874fd3b8b4d390879abf5a8fcc3
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 4b3d01538df675149a3cc7f555774c8d27bf4e14
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160578"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511067"
 ---
 # <a name="always-on-availability-groups-for-sql-server-containers"></a>Always On-Verfügbarkeitsgruppen für SQL Server-Container
 
-SQL Server-2019 unterstützt Verfügbarkeitsgruppen für in einem Kubernetes-Container. Bereitstellen von SQL Server für Verfügbarkeitsgruppen [Kubernetes-Operator](https://coreos.com/blog/introducing-operators.html) in Ihrem Kubernetes-Cluster. Der Operator packen, bereitstellen und verwalten die verfügbarkeitsgruppe in einem Cluster.
+SQL Server-2019 unterstützt Verfügbarkeitsgruppen für Container in einem Kubernetes-Cluster. Bereitstellen von SQL Server für Verfügbarkeitsgruppen [Kubernetes-Operator](https://coreos.com/blog/introducing-operators.html) in Ihrem Kubernetes-Cluster. Der Operator packen, bereitstellen und verwalten die verfügbarkeitsgruppe in einem Cluster.
 
 ![Verfügbarkeitsgruppe im Kubernetes-Container](media/tutorial-sql-server-ag-containers-kubernetes/KubernetesCluster.png)
 
@@ -67,9 +67,9 @@ Nachdem Sie den Operator bereitgestellt haben, registriert er eine benutzerdefin
 
 Die StatfulSet enthält:
 
-* MSSQL-Server-container
+* mssql-server container
 
-* MSSQL-ha-Supervisor-container
+* mssql-ha-supervisor container
 
 Der Code für den Operator, hohe Verfügbarkeit Supervisor und SQL Server wird in ein Docker-Image namens verpackt `mcr.microsoft.com/mssql/ha`. Dieses Image enthält die folgenden Binärdateien:
 

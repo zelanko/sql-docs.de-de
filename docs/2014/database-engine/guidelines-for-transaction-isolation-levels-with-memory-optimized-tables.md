@@ -10,12 +10,12 @@ ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aced288e62fefe46777993fd46130b8dd65e8d1b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 26f0193d40a01858bc3fe651a23b389a4ffcb6ea
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510023"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527792"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>Richtlinien für Transaktionsisolationsstufen mit speicheroptimierten Tabellen
   In vielen Szenarien müssen Sie die Transaktionsisolationsstufe angeben. Transaktionsisolation für speicheroptimierte Tabellen unterscheidet sich von Transaktionsisolation für datenträgerbasierte Tabellen.  
@@ -62,7 +62,7 @@ ms.locfileid: "52510023"
   
  Das folgende Beispiel für eine Autocommittransaktion zeigt einen Join zwischen einer speicheroptimierten Tabelle [Customers] und einer normalen Tabelle [Order History] als Teil eines Ad-hoc-Batches:  
   
-```tsql  
+```sql  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
 GO  
 SELECT *   
@@ -73,7 +73,7 @@ LEFT JOIN dbo.[Order History] AS oh
   
  Das folgende Beispiel für explizite oder implizite Transaktionen zeigt den gleichen Join, dieses Mal aber in einer expliziten Benutzertransaktion. Auf die speicheroptimierte Tabelle [Customers] wird unter der SNAPSHOT-Isolation zugegriffen, wie durch den Tabellenhinweis WITH (SNAPSHOT) angegeben, und auf die normale Tabelle [Order History] wird unter der READ COMMITTED-Isolation zugegriffen:  
   
-```tsql  
+```sql  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED  
 GO  
 BEGIN TRAN  
@@ -105,7 +105,7 @@ COMMIT
   
  Beachten Sie, dass die Abruflogik außerhalb des Bereichs der Transaktion liegen muss, da sie die Momentaufnahmeisolation verwendet, um auf Tabelle t1 zuzugreifen. Wenn die Abruflogik innerhalb des Bereichs einer Transaktion verwendet wird, würde das zu einer Transaktion mit langer Laufzeit führen, was nicht empfohlen wird.  
   
-```tsql  
+```sql  
 -- poll table  
 WHILE NOT EXISTS (SELECT 1 FROM dbo.t1)  
 BEGIN   

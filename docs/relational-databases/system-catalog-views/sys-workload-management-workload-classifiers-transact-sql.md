@@ -12,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 7f655c94d0c77747a4e64c93bf7ad880419aacb4
-ms.sourcegitcommit: 05bb10710489bef16bb2c53b3803e9b8eea1429a
+ms.openlocfilehash: f3ce2327034a9c7197e754dac01dfb9e6f9dc3e5
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57988750"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58509587"
 ---
 # <a name="sysworkloadmanagementworkloadclassifiers-transact-sql-preview"></a>Sys.workload_management_workload_classifiers (Transact-SQL) (Vorschau)
 
@@ -28,7 +28,7 @@ ms.locfileid: "57988750"
 |Spaltenname|Datentyp|Description|Bereich|  
 |-----------------|---------------|-----------------|-----------|
 |classifier_id|**int**|Eindeutige ID der Klassifizierung. Lässt keine NULL-Werte zu.||
-group_name|**sysname**|Name der Arbeitsauslastungsgruppe des Klassifizierers zugewiesen ist. Lässt keine NULL-Werte zu. |Statische Ressourcenklassen</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80 </br>Dynamische Ressourcenklassen</br>"smallrc"</br>mediumrc</br>"Largerc"</br>xlargerc|
+group_name|**sysname**|Name der Arbeitsauslastungsgruppe des Klassifizierers zugewiesen ist. Lässt keine NULL-Werte zu. |Statische Ressourcenklassen</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80 </br> </br>Dynamische Ressourcenklassen</br>smallrc</br>mediumrc</br>largerc</br>xlargerc|
 NAME|**sysname**|Der Name der Klassifizierung. Muss auf die Instanz eindeutig sein. Lässt keine NULL-Werte zu.||
 |importance|**sysname**|Ist die relative Wichtigkeit einer Anforderung in dieser Arbeitsauslastungsgruppe und für Arbeitsauslastungsgruppen für freigegebene Ressourcen.  Wichtigkeit in der Klassifizierung überschreibt die Wichtigkeit der Arbeitsauslastungsgruppe festgelegt.|low, below_normal, normal, above_normal, high |
 |create_time|**datetime**|Zeitpunkt, zu der Klassifizierer erstellt wurde. Lässt keine NULL-Werte zu.||

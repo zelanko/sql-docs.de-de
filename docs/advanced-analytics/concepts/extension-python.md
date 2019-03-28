@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/05/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 6bbce3d58f016b26618413ef0647995d0914a237
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: c0284577d8e30871b354607cf9af978e6d53df63
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432323"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512217"
 ---
 # <a name="python-language-extension-in-sql-server"></a>Erweiterung der Sprache Python in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +36,7 @@ Python-Pakete, die von Microsoft für parallelen und verteilten Workloads hinzug
 
 | Bibliothek | Description |
 |---------|-------------|
-| [**die revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | Unterstützt von Datenquellenobjekten und Durchsuchen von Daten, Manipulation, Transformation und Visualisierung. Es unterstützt die Erstellung von remotecomputekontexte sowie verschiedene skalierbare Machine Learning-Modellen wie z. B. **RxLinMod**. Weitere Informationen finden Sie unter [Revoscalepy-Modul mit SQL Server](../python/ref-py-revoscalepy.md).  |
+| [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | Unterstützt von Datenquellenobjekten und Durchsuchen von Daten, Manipulation, Transformation und Visualisierung. Es unterstützt die Erstellung von remotecomputekontexte sowie verschiedene skalierbare Machine Learning-Modellen wie z. B. **RxLinMod**. Weitere Informationen finden Sie unter [Revoscalepy-Modul mit SQL Server](../python/ref-py-revoscalepy.md).  |
 | [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | Enthält die Machine Learning-Algorithmen, die wurden optimiert Geschwindigkeit und Genauigkeit als auch Inline-Transformationen für die Arbeit mit Text und Bilder. Weitere Informationen finden Sie unter [Microsoftml-Modul mit SQL Server](../python/ref-py-microsoftml.md). |
 
 Microsoftml "und" Revoscalepy sind eng verknüpft; in Microsoftml verwendete Datenquellen werden als Revoscalepy-Objekte definiert. Kontext-Einschränkungen in Revoscalepy-Übertragung in Microsoftml zu berechnen. Nämlich alle Funktionen sind für lokale Vorgänge verfügbar, aber das Wechseln zu einem remotecomputekontext erfordert RxInSqlServer.
@@ -61,7 +61,7 @@ Wenn Sie Python "in" SQL Server ausführen, muss das Python-Skript in einer spez
 
 Nachdem das Skript in der gespeicherten Prozedur eingebettet wurde, kann jede Anwendung, die eine gespeicherte Prozedur aufrufen können Ausführung von Python-Code initiieren.  SQL Server verwaltet danach Ausführung von Code wie im folgenden Diagramm zusammengefasst.
 
-![Skript-in-Db-python](../../advanced-analytics/python/media/script-in-db-python2.png)
+![script-in-db-python](../../advanced-analytics/python/media/script-in-db-python2.png)
 
 1. Eine Anforderung für die Python-Laufzeit wird angegeben, durch den Parameter `@language='Python'` an die gespeicherte Prozedur übergeben. SQL-Server sendet diese Anforderung an den Launchpad-Dienst.
 2. Der Launchpad-Dienst startet das entsprechende Startprogramm; In diesem Fall PythonLauncher.
@@ -80,7 +80,7 @@ Sie können Python-Skripts von einem Remotecomputer, z. B. einem Laptop ausgefü
 
 Das folgende Diagramm fasst den gesamten Workflow aus, wenn Skripts von einem Remotecomputer gesendet werden.
 
-![Remote-Sqlcc-aus-python](../../advanced-analytics/python/media/remote-sqlcc-from-python3.png)
+![remote-sqlcc-from-python](../../advanced-analytics/python/media/remote-sqlcc-from-python3.png)
 
 1. Für Funktionen, die in Microsoft Intune **Revoscalepy**, die Python-Laufzeit ruft eine Verknüpfungsfunktion auf, die wiederum BxlServer aufruft.
 2. BxlServer ist im Lieferumfang von Machine Learning Services (Datenbankintern) und in einem separaten Prozess ausgeführt wird, aus der Python-Laufzeit.

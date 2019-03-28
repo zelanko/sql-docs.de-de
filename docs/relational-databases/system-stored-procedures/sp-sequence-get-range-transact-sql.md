@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03d79ee58cdaf1237581bd59fbd696325e9e3f80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66ec81fdc6ebdbecf83791c6fffa5735a37723bc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700728"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527942"
 ---
 # <a name="spsequencegetrange-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -52,29 +52,21 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@sequence_name** =] **N**"*Sequenz*"  
- Der Name des Sequenzobjekts. Das Schema ist optional. *Sequence_name* ist **nvarchar(776)**.  
+`[ @sequence_name = ] N'sequence'` Der Name des Sequenzobjekts. Das Schema ist optional. *Sequence_name* ist **nvarchar(776)**.  
   
- [ **@range_size** = ] *range_size*  
- Die Anzahl der Werte, die aus der Sequenz abgerufen werden sollen. **@range_size** ist **Bigint**.  
+`[ @range_size = ] range_size` Die Anzahl der Werte aus der Sequenz abgerufen werden soll. **@range_size** ist **Bigint**.  
   
- [ **@range_first_value** =] *Range_first_value*  
- Der Ausgabeparameter gibt den ersten Wert (Minimal- oder Maximalwert) des Sequenzobjekts zurück, mit dem der angeforderte Bereich berechnet wurde. **@range_first_value** ist **Sql_variant** mit demselben Basistyp wie für das Sequenzobjekt, das in der Anforderung verwendet.  
+`[ @range_first_value = ] range_first_value` Output-Parameter gibt den ersten (Minimal- oder Maximalwert) Wert des Sequenzobjekts zum Berechnen des angeforderten Bereichs zurück. **@range_first_value** ist **Sql_variant** mit demselben Basistyp wie für das Sequenzobjekt, das in der Anforderung verwendet.  
   
- [ **@range_last_value** =] *Range_last_value*  
- Der optionale Ausgabeparameter gibt den letzten Wert des angeforderten Bereichs zurück. **@range_last_value** ist **Sql_variant** mit demselben Basistyp wie für das Sequenzobjekt, das in der Anforderung verwendet.  
+`[ @range_last_value = ] range_last_value` Der optionale Ausgabeparameter gibt den letzten Wert des angeforderten Bereichs zurück. **@range_last_value** ist **Sql_variant** mit demselben Basistyp wie für das Sequenzobjekt, das in der Anforderung verwendet.  
   
- [ **@range_cycle_count** =] Range_cycle_count  
- Der optionale Ausgabeparameter gibt die Anzahl der Durchläufe für das Sequenzobjekt zur Rückgabe des angeforderten Bereichs zurück. **@range_cycle_count** ist **Int**.  
+`[ @range_cycle_count = ] range_cycle_count` Der optionale Ausgabeparameter gibt die Anzahl der Fälle, in denen das Sequenzobjekt, um den angeforderten Bereich zurück. **@range_cycle_count** ist **Int**.  
   
- [ **@sequence_increment** =] *Sequence_increment*  
- Der optionaler Ausgabeparameter gibt den inkrementellen Wert des Sequenzobjekts zurück, mit dem der angeforderte Bereich berechnet wird. **@sequence_increment** ist **Sql_variant** mit demselben Basistyp wie für das Sequenzobjekt, das in der Anforderung verwendet.  
+`[ @sequence_increment = ] sequence_increment` Der optionale Ausgabeparameter gibt die Schrittweite für das Sequenzobjekt, das zum Berechnen des angeforderten Bereichs zurück. **@sequence_increment** ist **Sql_variant** mit demselben Basistyp wie für das Sequenzobjekt, das in der Anforderung verwendet.  
   
- [ **@sequence_min_value** = ] *sequence_min_value*  
- Der optionale Ausgabeparameter gibt den Minimalwert des Sequenzobjekts zurück. **@sequence_min_value** ist **Sql_variant** mit demselben Basistyp wie für das Sequenzobjekt, das in der Anforderung verwendet.  
+`[ @sequence_min_value = ] sequence_min_value` Der optionale Ausgabeparameter gibt den Mindestwert des Sequenzobjekts zurück. **@sequence_min_value** ist **Sql_variant** mit demselben Basistyp wie für das Sequenzobjekt, das in der Anforderung verwendet.  
   
- [ **@sequence_max_value** =] *Sequence_max_value*  
- Der optionale Ausgabeparameter gibt den Maximalwert des Sequenzobjekts zurück. **@sequence_max_value** ist **Sql_variant** mit demselben Basistyp wie für das Sequenzobjekt, das in der Anforderung verwendet.  
+`[ @sequence_max_value = ] sequence_max_value` Der optionale Ausgabeparameter gibt den Maximalwert des Sequenzobjekts zurück. **@sequence_max_value** ist **Sql_variant** mit demselben Basistyp wie für das Sequenzobjekt, das in der Anforderung verwendet.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

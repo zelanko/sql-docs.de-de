@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ecf9b63dda28bd65912d606a69b1e188af713be9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 340d50725a13da4993ade63d890f2300ba38763b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594360"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527192"
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47594360"
   Markiert eine Tabelle für die Volltextindizierung oder hebt die Markierung auf.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwendung [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md), und [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) stattdessen.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)und [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) .  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,13 +50,11 @@ sp_fulltext_table
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@tabname=**] **"***Qualified_table_name***"**  
- Ein ein- oder zweiteiliger Tabellenname. Die Tabelle muss in der aktuellen Datenbank vorhanden sein. *qualified_table_name* weist den Datentyp **nvarchar(517)** auf und hat keinen Standardwert.  
+`[ @tabname = ] 'qualified_table_name'` Ist eine ein- oder zweiteilige Tabellenname. Die Tabelle muss in der aktuellen Datenbank vorhanden sein. *qualified_table_name* weist den Datentyp **nvarchar(517)** auf und hat keinen Standardwert.  
   
- [ **@action=**] **'***action***'**  
- Die Aktion, die ausgeführt werden soll. *action* ist vom Datentyp **nvarchar(50)** und hat keinen Standardwert. Die folgenden Werte sind möglich:  
+`[ @action = ] 'action'` Ist die Aktion ausgeführt werden. *action* ist vom Datentyp **nvarchar(50)** und hat keinen Standardwert. Die folgenden Werte sind möglich:  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**Erstellen**|Erstellt die Metadaten für einen Volltextindex für die Tabelle, auf die durch *qualified_table_name* verwiesen wird. Darüber hinaus wird angegeben, dass der Volltextindex für diese Tabelle in *fulltext_catalog_name*gespeichert werden soll. Diese Aktion legt außerdem die Verwendung von *unique_index_name* als Volltextschlüsselspalte fest. Dieser eindeutige Index muss bereits vorhanden sein und muss für eine Spalte der Tabelle definiert sein.<br /><br /> Eine Volltextsuche für diese Tabelle kann erst durchgeführt werden, wenn der Volltextkatalog aufgefüllt ist.|  
 |**Drop**|Löscht die Metadaten für den Volltextindex für *qualified_table_name*. Ist der Volltextindex aktiviert, wird er vor dem Löschen automatisch deaktiviert. Es ist nicht erforderlich, Spalten zu entfernen, bevor der Volltextindex gelöscht wird.|  
@@ -71,11 +69,9 @@ sp_fulltext_table
 |**start_incremental**|Startet eine inkrementelle Auffüllung des Volltextindexes für die Tabelle.|  
 |**Beenden**|Beendet das vollständige oder inkrementelle Auffüllen.|  
   
- [  **@ftcat=**] **"***Fulltext_catalog_name***"**  
- Bei einer **create** -Aktion ein gültiger, vorhandener Volltextkatalogname. Bei allen anderen Aktionen muss dieser Parameter NULL sein. *fulltext_catalog_name* ist vom Datentyp **sysname**. Der Standardwert ist NULL.  
+`[ @ftcat = ] 'fulltext_catalog_name'` Ist ein gültiger, vorhandener Volltext-Katalognamen für eine **erstellen** Aktion. Bei allen anderen Aktionen muss dieser Parameter NULL sein. *fulltext_catalog_name* ist vom Datentyp **sysname**. Der Standardwert ist NULL.  
   
- [  **@keyname=**] **"***Unique_index_name***"**  
- Bei einer **create** *qualified_table_name* -Aktion ein gültiger, einspaltiger und eindeutiger Index ungleich NULL für. Bei allen anderen Aktionen muss dieser Parameter NULL sein. *unique_index_name* ist vom Datentyp **sysname**. Der Standardwert ist NULL.  
+`[ @keyname = ] 'unique_index_name'` Ist ein gültiger einzelne eine Schlüsselspalte, eindeutige einspaltiger Index *Qualified_table_name* für eine **erstellen** Aktion. Bei allen anderen Aktionen muss dieser Parameter NULL sein. *unique_index_name* ist vom Datentyp **sysname**. Der Standardwert ist NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -84,11 +80,11 @@ sp_fulltext_table
  None  
   
 ## <a name="remarks"></a>Hinweise  
- Nachdem ein Volltextindex für eine bestimmte Tabelle deaktiviert wurde, bleibt der vorhandene Volltextindex bis zum nächsten vollständigen Auffüllen; Allerdings dieser Index wird nicht verwendet, da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abfragen für deaktivierte Tabellen blockiert.  
+ Nachdem ein Volltextindex für eine bestimmte Tabelle deaktiviert wurde, bleibt der vorhandene Volltextindex bis zum nächsten vollständigen Auffüllen vorhanden. Dieser Index wird jedoch nicht verwendet, da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abfragen für deaktivierte Tabellen blockiert.  
   
  Wenn die Tabelle erneut aktiviert, der Index jedoch nicht erneut aufgefüllt wird, ist der alte Index weiterhin für Abfragen für verbleibende, aber nicht für neue, volltextfähige Spalten verfügbar. Für Daten aus gelöschten Spalten werden Übereinstimmungen in Abfragen gefunden, für die eine umfassende Volltextspaltensuche angegeben ist.  
   
- Nach der Definition einer Tabelle für die Volltextindizierung kann das Ändern des Datentyps der Volltextspalte für den eindeutigen Schlüssel, durch Ändern des Datentyps dieser Spalte oder durch Ändern der Volltextspalte für den eindeutigen Schlüssel, ohne ein vollständiges erneutes Auffüllen bei einer nachfolgenden Abfrage zu einem Fehler führen, wobei die folgende Fehlermeldung zurückgegeben wird: "Fehler beim Konvertieren des Volltextsuchschlüssel-Werts *data_type* in den Datentyp *key_value*." Um dies zu verhindern, löschen Sie die Volltextdefinition für diese Tabelle mithilfe der **drop** -Aktion von **sp_fulltext_table** , und definieren Sie sie neu mithilfe von **sp_fulltext_table** und **sp_fulltext_column**.  
+ Nach der Definition einer Tabelle für die Volltextindizierung kann das Ändern des Datentyps der Volltextspalte für den eindeutigen Schlüssel, durch Ändern des Datentyps dieser Spalte oder durch Ändern der Volltextspalte für den eindeutigen Schlüssel, ohne ein vollständiges erneutes Auffüllen bei einer nachfolgenden Abfrage zu einem Fehler führen, wobei die folgende Fehlermeldung zurückgegeben wird: "Konvertierung in den Typ *Data_type* Fehler bei der für die Volltext-Suchdienst-Schlüsselwert *Key_value*." Um dies zu verhindern, löschen Sie die Volltextdefinition für diese Tabelle mithilfe der **drop** -Aktion von **sp_fulltext_table** , und definieren Sie sie neu mithilfe von **sp_fulltext_table** und **sp_fulltext_column**.  
   
  Die Volltextschlüsselspalte muss mit einer Größe von maximal 900 Byte definiert sein. Aus Gründen der Leistung sollte die Schlüsselspalte so klein wie möglich sein.  
   
@@ -136,7 +132,7 @@ GO
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
  [sp_help_fulltext_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
- [Sp_help_fulltext_tables_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
+ [sp_help_fulltext_tables_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
  [sp_helpindex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Volltextsuche und semantische Suche von gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  

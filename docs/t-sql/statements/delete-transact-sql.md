@@ -27,19 +27,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8e9090e92baba8f67ee7ad0303103f41c66ace9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0aa6dbd766f842b4c923d98702fd2780fc2652fb
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532170"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306228"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Entfernt mindestens eine Zeile aus einer Tabelle oder Sicht in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -138,7 +138,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  Diese Erweiterung, die einen Join angibt, kann anstelle einer Unterabfrage in der WHERE-Klausel verwendet werden, um zu entfernende Zeilen zu identifizieren.  
   
- Weitere Informationen finden Sie unter [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
+ Weitere Informationen finden Sie unter [FROM &#40;Transact-SQL &#41;](../../t-sql/queries/from-transact-sql.md).  
   
  WHERE  
  Gibt die Bedingungen an, die zur Beschränkung der Anzahl der gelöschten Zeilen verwendet werden. Wird keine WHERE-Klausel angegeben, werden mit DELETE alle Zeilen aus der Tabelle entfernt.  
@@ -205,7 +205,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 -   Erstellen Sie einen gruppierten Index für den Heap, bevor Sie die Zeilen löschen. Nach dem Löschen der Zeilen können Sie den gruppierten Index löschen. Diese Methode ist zeitaufwändiger als die vorherigen Methoden und beansprucht mehr temporäre Ressourcen.  
   
 > [!NOTE]  
->  Leere Seiten können zu jeder Zeit mithilfe der `ALTER TABLE <table_name> REBUILD`-Anweisung aus einem Heap gelöscht werden.  
+>  Leere Seiten können zu jeder Zeit mithilfe der Anweisung `ALTER TABLE <table_name> REBUILD` aus einem Heap gelöscht werden.  
   
 ## <a name="logging-behavior"></a>Protokollierungsverhalten  
  Die DELETE-Anweisung wird immer vollständig protokolliert.  
@@ -324,7 +324,7 @@ WHERE DueDate < '20020701';
 GO  
 ```  
   
- Wenn Sie die TOP-Klausel verwenden müssen, um Zeilen in einer sinnvollen Reihenfolge zu löschen, müssen Sie sie zusammen mit ORDER BY in einer untergeordneten SELECT-Anweisung verwenden. Die folgende Abfrage löscht die zehn Zeilen der `PurchaseOrderDetail`-Tabelle mit den frühesten Fälligkeitsdaten. Die in der untergeordneten SELECT-Anweisung angegebene Spalte (`PurchaseOrderID`) ist der Primärschlüssel der Tabelle, um sicherzustellen, dass nur 10 Zeilen gelöscht werden. Wird in der untergeordneten SELECT-Anweisung eine Nichtschlüsselspalte verwendet, werden möglicherweise mehr als 10 Zeilen gelöscht, wenn die angegebene Spalte doppelte Werte enthält.  
+ Wenn Sie die TOP-Klausel verwenden müssen, um Zeilen in einer sinnvollen Reihenfolge zu löschen, müssen Sie sie zusammen mit ORDER BY in einer untergeordneten SELECT-Anweisung verwenden. Die folgende Abfrage löscht die zehn Zeilen der `PurchaseOrderDetail` -Tabelle mit den frühesten Fälligkeitsdaten. Die in der untergeordneten SELECT-Anweisung angegebene Spalte (`PurchaseOrderID`) ist der Primärschlüssel der Tabelle, um sicherzustellen, dass nur 10 Zeilen gelöscht werden. Wird in der untergeordneten SELECT-Anweisung eine Nichtschlüsselspalte verwendet, werden möglicherweise mehr als 10 Zeilen gelöscht, wenn die angegebene Spalte doppelte Werte enthält.  
   
 ```sql
 DELETE FROM Purchasing.PurchaseOrderDetail  
@@ -404,7 +404,7 @@ GO
 ```  
   
 #### <a name="j-using-output-with-fromtablename-in-a-delete-statement"></a>J. Verwenden von OUTPUT mit <from_table_name> in einer DELETE-Anweisung  
- Im folgenden Beispiel werden Zeilen in der `ProductProductPhoto`-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank basierend auf Suchkriterien gelöscht, die in der `FROM`-Klausel der `DELETE`-Anweisung definiert wurden. Die `OUTPUT` -Klausel gibt die Spalten aus der zu löschenden Tabelle, `DELETED.ProductID`und `DELETED.ProductPhotoID`, sowie Spalten aus der `Product` -Tabelle zurück. Diese werden in der `FROM` -Klausel verwendet, um die zu löschenden Zeilen anzugeben.  
+ Im folgenden Beispiel werden Zeilen in der Tabelle `ProductProductPhoto` aus der Datenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] basierend auf Suchkriterien gelöscht, die in der Klausel `FROM` der Anweisung `DELETE` definiert wurden. Die `OUTPUT` -Klausel gibt die Spalten aus der zu löschenden Tabelle, `DELETED.ProductID`und `DELETED.ProductPhotoID`, sowie Spalten aus der `Product` -Tabelle zurück. Diese werden in der `FROM` -Klausel verwendet, um die zu löschenden Zeilen anzugeben.  
   
 ```sql
 DECLARE @MyTableVar table (  
@@ -458,7 +458,7 @@ OPTION ( LABEL = N'label1' );
 ```  
   
 ### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>N. Verwenden einer Bezeichnung und eines Abfragehinweises mit der Anweisung DELETE  
- Diese Abfrage zeigt die grundlegende Syntax für die Verwendung eines Join-Abfragehinweises mit der DELETE-Anweisung. Weitere Informationen zu Joinhinweisen und der Verwendung der OPTION-Klausel finden Sie unter [OPTION (SQL Server PDW)](https://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc).  
+ Diese Abfrage zeigt die grundlegende Syntax für die Verwendung eines Join-Abfragehinweises mit der DELETE-Anweisung. Weitere Informationen zu Join-Abfragehinweisen und zur Verwendung der OPTION-Klausel finden Sie unter [OPTION-Klausel (Transact-SQL)](../queries/option-clause-transact-sql.md).
   
 ```sql
 -- Uses AdventureWorks  
@@ -472,7 +472,7 @@ WHERE ProductKey IN (
 OPTION ( LABEL = N'CustomJoin', HASH JOIN ) ;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

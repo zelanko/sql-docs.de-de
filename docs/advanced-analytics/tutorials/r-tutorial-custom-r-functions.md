@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 90790c2b96843ea1821b8b4ed05052a7611cdf74
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 5773641f442fe844657e6aabd6b9dcea24f4475b
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596441"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58509907"
 ---
 # <a name="run-custom-r-functions-on-sql-server-using-rxexec"></a>Ausführen von benutzerdefinierten R-Funktionen in SQL Server mithilfe von rxExec
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +36,7 @@ Die R-Distribution auf der Clientarbeitsstation bietet eine integrierte **Rgui**
 
 ## <a name="create-the-remote-compute-context"></a>Erstellen Sie im remotecomputekontext
 
-Führen Sie die folgenden R-Befehle auf einer Clientarbeitsstation ein. Verwenden Sie z. B. **Rgui**, starten Sie ihn von diesem Speicherort: C:\Programme\Microsoft Files\Microsoft\R Client\R_SERVER\bin\x64\.
+Führen Sie die folgenden R-Befehle auf einer Clientarbeitsstation ein. Verwenden Sie z. B. **Rgui**, starten Sie ihn von diesem Speicherort: C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64\.
 
 1. Geben Sie die Verbindungszeichenfolge für SQL Server-Instanz, in dem Berechnungen ausgeführt werden. Der Server muss für die R-Integration konfiguriert werden. Der Name der Datenbank wird in dieser Übung nicht verwendet, aber die Verbindungszeichenfolge muss eine. Wenn Sie eine Test- oder Sample-Datenbank verfügen, können Sie, die verwenden.
 

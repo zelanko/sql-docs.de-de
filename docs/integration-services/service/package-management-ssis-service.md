@@ -25,15 +25,15 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 141810965960031cf004f9c9999943760bc6c810
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 00ed915265b9b3c19e7bafdcf7d6c41208e8319a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532085"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280464"
 ---
 # <a name="package-management-ssis-service"></a>Paketverwaltung (SSIS-Dienst)
   Die Paketverwaltung umfasst das Überwachen, Verwalten, Importieren und Exportieren von Paketen.  
@@ -192,7 +192,7 @@ Sie können ein ausgeführtes Paket im Ordner **Ausgeführte Pakete** beenden, i
 ## <a name="import-package-dialog-box-ui-reference"></a>Referenz zur Benutzeroberfläche für Dialogfeld "Paket importieren"
   Verwenden Sie das in **verfügbare Dialogfeld** Paket importieren [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], um ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket zu importieren und die Schutzebene des Pakets festzulegen oder zu ändern.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Paketspeicherort**  
  Wählen Sie den Typ des Speicherortes, an den das Paket importiert werden soll. Die folgenden Optionen stehen zur Verfügung:  
   
@@ -232,7 +232,7 @@ Sie können ein ausgeführtes Paket im Ordner **Ausgeführte Pakete** beenden, i
 ## <a name="export-package-dialog-box-ui-reference"></a>Referenz zur Benutzeroberfläche des Dialogfelds Paket exportieren
   Verwenden Sie das in **verfügbare Dialogfeld** Paket exportieren [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], um ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket an einen anderen Speicherort zu exportieren und optional die Schutzebene zu ändern.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>enthalten  
  **Paketspeicherort**  
  Wählen Sie den Speichertyp aus, in den das Paket exportiert werden soll. Die folgenden Optionen stehen zur Verfügung:  
   
@@ -284,7 +284,7 @@ Sie können ein ausgeführtes Paket im Ordner **Ausgeführte Pakete** beenden, i
 ### <a name="packages-stored-in-the-file-system"></a>Im Dateisystem gespeicherte Pakete  
  Die im Dateisystem gespeicherte Sicherung von Paketen sollte in den Sicherungsplan einbezogen werden, mit dem das Dateisystem des Servers gesichert wird. Die Konfigurationsdatei des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Diensts, deren Standardname MsDtsSrvr.ini.xml lautet, enthält eine Aufstellung der Ordner auf dem Server, die vom Dienst überwacht werden. Sie sollten sicherstellen, dass diese Ordner gesichert werden. Außerdem können Pakete in anderen Ordnern auf dem Server gespeichert werden. Sie sollten sicherstellen, dass diese Ordner in den Sicherungsprozess einbezogen werden.  
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Integration Services-Dienst &#40;SSIS-Dienst&#41;](../../integration-services/service/integration-services-service-ssis-service.md)  
   
   

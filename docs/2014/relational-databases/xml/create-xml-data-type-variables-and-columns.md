@@ -10,15 +10,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], variables
 - xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 27f4458299fd82a1afe74122edba3cbf886d9425
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3fe1414131991a35b316a50da730f42e8b02d462
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114100"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527292"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Erstellen von Variablen und Spalten des XML-Datentyps
   Die `xml` Datentyp ist ein integrierter Datentyp in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und ähnelt ein wenig anderen integrierten Typen wie z. B. `int` und `varchar`. Wie andere integrierte Typen können Sie die `xml` -Datentyp als Spaltentyp, bei der Erstellung einer Tabelle, als Variablentyp, als Parametertyp, eine funktionsrückgabestyp oder in [CAST und CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql).  
@@ -53,7 +53,7 @@ CREATE PROCEDURE SampleProc(@XmlDoc xml) AS ...
 ## <a name="assigning-defaults"></a>Zuweisen von Standardeinstellungen  
  Sie können einer Spalte vom Typ `xml` in einer Tabelle eine standardmäßige XML-Instanz zuweisen. Sie können das Standard-XML auf zweierlei Weise bereitstellen: durch Verwenden einer XML-Konstante oder durch Verwenden einer expliziten Umwandlung in den `xml`-Typ.  
   
- Um das Standard-XML als XML-Konstante bereitzustellen, verwenden Sie die im folgenden Beispiel gezeigte Syntax. Beachten Sie, die die Zeichenfolge implizit in UMGEWANDELT wird `xml` Typ.  
+ Um das Standard-XML als XML-Konstante bereitzustellen, verwenden Sie die im folgenden Beispiel gezeigte Syntax. Beachten Sie, dass die Zeichenfolge implizit in den `xml`-Typ umgewandelt wird (durch CAST).  
   
 ```  
 CREATE TABLE T (XmlColumn xml default N'<element1/><element2/>')  
@@ -91,7 +91,7 @@ CREATE TABLE T (XmlColumn xml NOT NULL)
   
 -   RULE  
   
- Eine Alternative zur Verwendung von Einschränkungen ist zum Erstellen eines Wrappers, einer benutzerdefinierten Funktion, um umschließen der `xml` Daten Methode, und geben Sie eine benutzerdefinierte Funktion in der Check-Einschränkung, wie im folgenden Beispiel gezeigt.  
+ Eine Alternative zur Verwendung von Einschränkungen ist die Erstellung eines Wrappers, einer benutzerdefinierten Funktion, um die Methode des `xml`-Datentyps einzubinden und die benutzerdefinierte Funktion in der CHECK-Einschränkung anzugeben, wie im folgenden Beispiel zu sehen ist.  
   
  Im folgenden Beispiel gibt die Einschränkung für `Col2` an, dass jede der in dieser Spalte gespeicherten XML-Instanzen ein `<ProductDescription>` -Element aufweisen muss, das ein `ProductID` -Attribut enthält. Diese Einschränkung wird durch folgende benutzerdefinierte Funktion erzwungen:  
   
@@ -135,9 +135,9 @@ INSERT INTO T values(1,'<Product />')
   
 -   Sie möchten einen XML-Index für die `xml`-Datentypspalte erstellen, und der Primärschlüssel der Haupttabelle ist derselbe wie ihr Gruppierungsschlüssel. Weitere Informationen finden Sie unter [XML-Indizes &#40;SQL Server&#41;](xml-indexes-sql-server.md).  
   
- Erstellen der `xml` -Datentypspalte in einer getrennten Tabelle, wenn die folgenden Bedingungen erfüllt sind:  
+ Erstellen Sie die `xml`-Datentypspalte in einer getrennten Tabelle, wenn die folgenden Bedingungen zutreffen:  
   
--   Sie möchten einen XML-Index zu erstellen, auf die `xml` -Datentypspalte, aber den Primärschlüssel der Haupttabelle unterscheidet sich von ihrem Gruppierungsschlüssel, oder die Haupttabelle verfügt nicht über einen Primärschlüssel oder die Haupttabelle ist ein Heap (kein Gruppierungsschlüssel). Das kann der Fall sein, wenn die Haupttabelle bereits vorhanden ist.  
+-   Sie möchten einen XML-Index für die `xml`-Datentypspalte erstellen, der Primärschlüssel der Haupttabelle unterscheidet sich jedoch von ihrem Gruppierungsschlüssel, oder die Haupttabelle besitzt keinen Primärschlüssel, oder die Haupttabelle ist ein Heap (kein Gruppierungsschlüssel). Das kann der Fall sein, wenn die Haupttabelle bereits vorhanden ist.  
   
 -   Sie wollen vermeiden, dass Tabellenscans verlangsamt werden, weil die XML-Spalte in der Tabelle vorhanden ist. Dies beansprucht Speicherplatz, unabhängig davon, ob die Speicherung innerhalb oder außerhalb der Zeile erfolgt.  
   

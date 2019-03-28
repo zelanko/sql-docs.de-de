@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 3: Testen der bereitgestellten Pakete | Microsoft-Dokumentation'
+title: 'Schritt 3: Testen der bereitgestellten Pakete | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f3461277f86e7d8aa8466b5d56cce7a54ed82852
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 751480be76b38ff10f0c71fbde12bcc6765e6ef6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836228"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277253"
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>Lektion 3-3: Testen der bereitgestellten Pakete
 In dieser Aufgabe testen Sie die Pakete, die Sie auf einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]bereitgestellt haben.  
@@ -104,7 +104,7 @@ Die Ordner auf der obersten Ebene innerhalb des Ordners Gespeicherte Pakete sind
   
     Die Abfrage gibt 21 Datenzeilen zurück. Das Ergebnis besteht aus den Zeilen der XML-Datendatei orders.xml. Die einzelnen Zeilen sind Zusammenfassungen nach Land bzw. Region. In der Zeile werden der Name eines Landes bzw. einer Region, die Anzahl der Aufträge für jedes Land bzw. für jede Region und die Datumswerte der neuesten und ältesten Aufträge aufgelistet.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [dtexec (Hilfsprogramm)](../integration-services/packages/dtexec-utility.md)  
   
   

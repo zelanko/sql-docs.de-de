@@ -18,12 +18,12 @@ ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2252fe0339a13a6d75c43a09351b95b17b7abd7b
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 44db86eef5231fde337a9521cb76ca5e03f28db9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168760"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527502"
 ---
 # <a name="spdeletebackuphistory-transact-sql"></a>sp_delete_backuphistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@oldest_date=** ] **"**_ältesten\_Datum_**"**  
- Ist das älteste in den Sicherungs- und Wiederherstellungsverlaufstabellen beibehaltene Datum. *Oldest_date* ist **"DateTime"**, hat keinen Standardwert.  
+`[ @oldest_date = ] 'oldest\_date'` Die am weitesten zurückliegende Datum wird in den sicherungs- und Verlaufstabellen beibehalten werden. *Oldest_date* ist **"DateTime"**, hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -86,7 +85,7 @@ EXEC sp_delete_backuphistory @oldest_date = '01/14/2010';
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_delete_database_backuphistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-backuphistory-transact-sql.md)   
+ [sp_delete_database_backuphistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-backuphistory-transact-sql.md)   
  [Sicherungsverlauf und Headerinformationen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   

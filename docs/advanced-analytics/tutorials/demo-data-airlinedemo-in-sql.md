@@ -1,19 +1,19 @@
 ---
 title: 'Flight Demo einer Fluggesellschaft für SQL Server Python und R-Tutorials: SQL Server-Machine Learning'
-Description: Create a database containing the Airline dataset from R and Python. This dataset is used in exercises showing how to wrap R language or Python code in a SQL Server stored procedure.
+Description: Erstellen Sie eine Datenbank mit das Fluglinien-Dataset über R und Python. Dieses Dataset wird in Übungen, die mit der Sprache R oder Python-Code in einer SQL Server gespeicherten Prozedur Umschließen von verwendet werden.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/22/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 10d2f013c103dee3de02335ca2acf82d4320b623
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 69f95876a880684ee09b83ad32341a781bc4f5cf
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596981"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510187"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>Fluggesellschaft Eingang Demo Flugdaten für SQL Server Python und R-tutorials
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/04/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 37f52a5ac891ab1d52a9b6335a62fdf2789df9b1
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 73d9dcf56c0eb5e69704adf169946f6aa28a432c
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645309"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512257"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML (R-Bibliothek in SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -76,7 +76,7 @@ Dieser Abschnitt listet die Funktionen nach Kategorie, erhalten Sie einen Überb
 |[categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalhash) | Konvertiert die kategorischen Wert in ein indikatorarray durch Ausführen einer Hashfunktion. |
 |[featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizetext) | Erstellt eine Sammlung der Anzahl der Sequenzen von aufeinander folgenden Wörtern, die n-gramme, aus einem angegebenen Textkorpus aufgerufen. Es bietet sprachenerkennung, Tokenisierung, Stoppwörter entfernen, Text-Normalisierung und Generieren von Funktionen.  |
 |[getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | Natürlicher Sprachtext bewertet, und erstellt eine Spalte, die Wahrscheinlichkeiten enthält die stimmungen in den Text nicht sicher sind.|
-|[NGRAM](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/ngram) | ermöglicht das Festlegen von Argumenten für die merkmalsextraktion Count based und Hash-basierte.|
+|[ngram](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/ngram) | ermöglicht das Festlegen von Argumenten für die merkmalsextraktion Count based und Hash-basierte.|
 |[selectColumns](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectcolumns) | Wählt einen Satz von Spalten erneut trainieren möchten, löschen alle anderen aus. |
 |[selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectfeatures) | Wählt Features aus der angegebenen Variablen mithilfe eines angegebenen Modus.|
 |[loadImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loadimage) | Lädt Daten von Bildern.|
@@ -126,7 +126,7 @@ Dieser Abschnitt listet die Funktionen nach Kategorie, erhalten Sie einen Überb
 
 | Funktionsname | Description |
 |---------------|-------------|
-|[Abfrageoptimierer](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/optimizer) | Gibt die Algorithmen für die [RxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet) Machine Learning-Algorithmus.|
+|[optimizer](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/optimizer) | Gibt die Algorithmen für die [RxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet) Machine Learning-Algorithmus.|
 
 
 ## <a name="8-package-state-functions"></a>Status des 8 Funktionen

@@ -10,12 +10,12 @@ ms.assetid: bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c2adbcc07134b80e78dbc73691e275d56b6f90c6
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: e347d942bf6541de9c16f34075e2d66817c3e347
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356571"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527802"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>Implementieren von LOB-Spalten in einer speicheroptimierten Tabelle
   Speicheroptimierte Tabellen keine außerhalb von Zeilen große Objekte (LOB)-Speicher (diese Einschränkung wurde entfernt wurde, in SQL Server 2016 und höher – Siehe [unterstützte Datentypen für In-Memory OLTP](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)), und die maximale Zeilengröße ist auf 8060 Bytes. Das Speichern von Zeichenfolgenwerten oder großen binären Werten kann auf zwei Arten durchgeführt werden:  
@@ -80,7 +80,7 @@ go</code></pre>
   
  Alternativ können Sie eine datenträgerbasierte Tabelle für LOB-Spalten definieren. Jede Zeile in der speicheroptimierten Tabelle verfügt dann über eine entsprechende Zeile in der datenträgerbasierten Tabelle mit allen LOB-Werten für diese Zeile. Im folgenden Beispiel werden die Mitarbeiterdaten in einer speicheroptimierten Tabelle und die Fotos der Mitarbeiter in einer datenträgerbasierten Tabelle gespeichert.  
   
-```tsql  
+```sql  
 CREATE TABLE EmployeePhoto (  
 EmployeeId int NOT NULL PRIMARY KEY CLUSTERED,  
 Photo varbinary(max))  

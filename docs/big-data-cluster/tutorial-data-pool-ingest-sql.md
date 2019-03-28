@@ -1,7 +1,7 @@
 ---
 title: Erfassen von Daten in einem Pool der SQL Server-Daten
 titleSuffix: SQL Server 2019 big data clusters
-description: In diesem Tutorial wird veranschaulicht, wie zum Erfassen von Daten in den Datenpool von einer SQL Server-2019 big Data-Cluster (Vorschau) mit der Sp_data_pool_table_insert_data, die gespeicherte Prozedur wird.
+description: In diesem Tutorial wird veranschaulicht, wie zum Erfassen von Daten in den Datenpool von einer SQL Server-2019 big Data-Cluster (Vorschau) verwendet wird.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 0a3e39e5eb38f44c439dabd9e4fc3bdcb23d283a
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 5ae0777c2bc98e99c83bca35fa2aab8efc8b57a5
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493812"
+ms.locfileid: "58509937"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Tutorial: Erfassen von Daten in einen Pool des SQL Server-Daten mit Transact-SQL
 
@@ -56,7 +56,15 @@ Die folgenden Schritte Erstellen einer externen Tabelle, in dem Datenpool mit de
    GO
    ```
 
-1. Erstellen einer externen Tabelle, die mit dem Namen **Web_clickstream_clicks_data_pool** im Datenpool. Die `SqlDataPool` Datenquelle ist eine spezielle Datenquellentyp, die von der Masterinstanz von alle big Data-Cluster verwendet werden kann.
+1. Erstellen Sie eine externe Datenquelle für den Datenpool aus, wenn nicht bereits vorhanden.
+
+   ```sql
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+     CREATE EXTERNAL DATA SOURCE SqlDataPool
+     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+   ```
+
+1. Erstellen einer externen Tabelle, die mit dem Namen **Web_clickstream_clicks_data_pool** im Datenpool.
 
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_tables WHERE name = 'web_clickstream_clicks_data_pool')
@@ -75,21 +83,35 @@ Die folgenden Schritte Erstellen einer externen Tabelle, in dem Datenpool mit de
 
 Die folgenden Schritte aus erfassungs-Beispiel-Web-Websites Clickstream-Daten in den Datenpool mit der externen Tabelle, die in den vorherigen Schritten erstellt haben.
 
-1. Definieren Sie Variablen für die Abfrage, die Sie zum Einfügen von Daten in den Datenpool für verwenden möchten. Verwenden Sie dann die **Modell... Sp_data_pool_table_insert_data** gespeicherte Prozedur zum Einfügen von der Ergebnis aus der Abfrage in der Datenpool (die **Web_clickstream_clicks_data_pool** externe Tabelle).
+1. Definieren Sie Variablen für die Abfrage, die Sie zum Einfügen von Daten in den Datenpool für verwenden möchten. Für CTP 2.3 oder früher die **Modell... Sp_data_pool_table_insert_data** gespeicherte Prozedur ist erforderlich. Für CTP 2.4 und höher können Sie eine `INSERT INTO` Anweisung, um die Ergebnisse der Abfrage in den Datenpool für einzufügen (die **Web_clickstream_clicks_data_pool** externe Tabelle).
 
    ```sql
-   DECLARE @db_name SYSNAME = 'Sales'
-   DECLARE @schema_name SYSNAME = 'dbo'
-   DECLARE @table_name SYSNAME = 'web_clickstream_clicks_data_pool'
-   DECLARE @query NVARCHAR(MAX) = '
-   SELECT wcs_user_sk, i_category_id, COUNT_BIG(*) as clicks
-   FROM sales.dbo.web_clickstreams
-   INNER JOIN sales.dbo.item it ON (wcs_item_sk = i_item_sk
-      AND wcs_user_sk IS NOT NULL)
-   GROUP BY wcs_user_sk, i_category_id
-   HAVING COUNT_BIG(*) > 100;'
+   IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
+   BEGIN
+      INSERT INTO web_clickstream_clicks_data_pool
+      SELECT wcs_user_sk, i_category_id, COUNT_BIG(*) as clicks
+        FROM sales.dbo.web_clickstreams_hdfs_parquet
+      INNER JOIN sales.dbo.item it ON (wcs_item_sk = i_item_sk
+                              AND wcs_user_sk IS NOT NULL)
+      GROUP BY wcs_user_sk, i_category_id
+      HAVING COUNT_BIG(*) > 100;
+   END
 
-   EXEC model..sp_data_pool_table_insert_data @db_name, @schema_name, @table_name, @query
+   ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
+   BEGIN
+      DECLARE @db_name SYSNAME = 'Sales'
+      DECLARE @schema_name SYSNAME = 'dbo'
+      DECLARE @table_name SYSNAME = 'web_clickstream_clicks_data_pool'
+      DECLARE @query NVARCHAR(MAX) = '
+      SELECT wcs_user_sk, i_category_id, COUNT_BIG(*) as clicks
+      FROM sales.dbo.web_clickstreams
+      INNER JOIN sales.dbo.item it ON (wcs_item_sk = i_item_sk
+         AND wcs_user_sk IS NOT NULL)
+      GROUP BY wcs_user_sk, i_category_id
+      HAVING COUNT_BIG(*) > 100;'
+
+      EXEC model..sp_data_pool_table_insert_data @db_name, @schema_name, @table_name, @query
+   END
    ```
 
 1. Überprüfen Sie die eingefügten Daten mit zwei SELECT-Abfragen.

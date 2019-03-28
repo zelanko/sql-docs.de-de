@@ -18,12 +18,12 @@ ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e8ada6daf4fc7e545856b52b163a2ff8f9e40db
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: c2574cdb06b82c6ebc89c54b70ade59694f5811e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168660"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526072"
 ---
 # <a name="spdeletecategory-transact-sql"></a>sp_delete_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,15 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@class =**] **"**_Klasse_**"**  
- Die Klasse der Kategorie. *Klasse* ist **varchar(8)** und hat keinen Standardwert und muss einen der folgenden Werte aufweisen.  
+`[ @class = ] 'class'` Die Klasse der Kategorie. *Klasse* ist **varchar(8)** und hat keinen Standardwert und muss einen der folgenden Werte aufweisen.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**JOB**|Löscht eine Auftragskategorie|  
-|**WARNUNG**|Löscht eine Warnungskategorie|  
+|**ALERT**|Löscht eine Warnungskategorie|  
 |**OPERATOR**|Löscht eine Operatorkategorie|  
   
- [  **@name =**] **"**_Namen_**"**  
- Der Name der zu entfernenden Kategorie. *Namen* ist **Sysname**, hat keinen Standardwert.  
+`[ @name = ] 'name'` Der Name der Kategorie, die entfernt werden soll. *Namen* ist **Sysname**, hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

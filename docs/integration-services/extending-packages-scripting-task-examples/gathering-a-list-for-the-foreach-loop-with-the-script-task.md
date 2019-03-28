@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - SSIS Script task, Foreach loops
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: be748729eeb9a50a5e206a5778e20420f4137177
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 82856b272e4799fc06929fe4f2d153320f879f0e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640047"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270781"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Erfassen einer Liste für die ForEach-Schleife mit dem Skripttask
   Der Foreach-Enumerator für Daten aus Variable führt die Elemente in einer Liste auf, die ihm in einer Variablen übergeben wird, und führt für alle Elemente dieselben Aufgaben aus. Sie können benutzerdefinierten Code in einem Skripttask verwenden, um eine Liste für diesen Zweck zu erstellen. Weitere Informationen zum Enumerator finden Sie unter [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md) (Foreach-Schleifencontainer).  
@@ -33,7 +33,7 @@ ms.locfileid: "51640047"
  Im folgenden Beispiel werden Methoden des **System.IO**-Namespace verwendet, um eine Liste von Excel-Arbeitsmappen auf dem Computer zu sammeln, die älter oder neuer als eine vom Benutzer in der Variablen definierte Anzahl von Tagen sind. Verzeichnisse des Laufwerks C werden rekursiv nach Dateien durchsucht, die eine .xls-Erweiterung aufweisen. Anschließend wird das Datum der letzten Änderung der Datei überprüft, um festzustellen, ob die Datei in die Liste gehört. Geeignete Dateien werden einer **ArrayList** hinzugefügt, und die **ArrayList** wird für die spätere Verwendung in einem Foreach-Schleifencontainer in einer Variablen gespeichert. Der Foreach-Schleifencontainer wird für die Verwendung des Foreach-Enumerators für Daten aus Variable konfiguriert.  
   
 > [!NOTE]  
->  Variablen, die Sie mit dem Foreach-Enumerator für Daten aus Variable verwenden, müssen den Typ **Object** aufweisen. Das Objekt, das Sie in der Variablen platzieren, muss eine der folgenden Schnittstellen implementieren: **System.Collections.IEnumerable**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System.ComponentModel IListSource** oder **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**. Ein **Array** oder eine **ArrayList** wird häufig verwendet. Die **ArrayList** erfordert einen Verweis und eine **Imports**-Anweisung für den **System.Collections**-Namespace.  
+>  Variablen, die Sie mit dem Foreach-Enumerator für Daten aus Variable verwenden, müssen den Typ **Object** aufweisen. Objekte, die Sie in den Variablen platzieren, müssen eine der folgenden Schnittstellen implementieren: **System.Collections.IEnumerable**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System.ComponentModel IListSource** oder **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**. Ein **Array** oder eine **ArrayList** wird häufig verwendet. Die **ArrayList** erfordert einen Verweis und eine **Imports**-Anweisung für den **System.Collections**-Namespace.  
   
  Sie können mit diesem Task experimentieren, indem Sie verschiedene positive und negative Werte für die Paketvariable `FileAge` einsetzen. Sie können z. B. den Wert 5 eingeben, um nach Dateien zu suchen, die in den letzten fünf Tagen erstellt wurden, oder den Wert -3 für Dateien, die vor mehr als drei Tagen angelegt wurden. Diese Aufgabe kann bei Laufwerken, die viele zu durchsuchende Ordner enthalten, ein bis zwei Minuten in Anspruch nehmen.  
   
@@ -246,7 +246,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
     }  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md)  (Foreach-Schleifencontainer)  
  [Konfigurieren eines Foreach-Schleifencontainers](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
   

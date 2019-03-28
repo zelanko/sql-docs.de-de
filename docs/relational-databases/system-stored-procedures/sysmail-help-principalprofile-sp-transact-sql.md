@@ -18,12 +18,12 @@ ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d96a4c72996ab34b03706cc71f6b406344164685
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: f37fc61b294cc460fe1d1e41b301ac2c7b1c1077
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591624"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527462"
 ---
 # <a name="sysmailhelpprincipalprofilesp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +42,13 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@principal_id=** ] *principal_id*  
- Die ID des Datenbankbenutzers oder der Rolle in der **Msdb** -Datenbank für die Zuordnung, die aufgelistet. *principal_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es kann entweder *principal_id* oder *principal_name* angegeben werden.  
+`[ @principal_id = ] principal_id` Die ID des Datenbankbenutzers oder der Rolle in der **Msdb** -Datenbank für die Zuordnung, die aufgelistet. *principal_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es kann entweder *principal_id* oder *principal_name* angegeben werden.  
   
- [  **@principal_name=** ] **"**_Principal_name_**"**  
- Der Name des Datenbankbenutzers oder der Rolle in der **Msdb** -Datenbank für die Zuordnung, die aufgelistet. *principal_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es kann entweder *principal_id* oder *principal_name* angegeben werden.  
+`[ @principal_name = ] 'principal_name'` Der Name des Datenbankbenutzers oder der Rolle in der **Msdb** -Datenbank für die Zuordnung, die aufgelistet. *principal_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es kann entweder *principal_id* oder *principal_name* angegeben werden.  
   
- [ **@profile_id=** ] *profile_id*  
- Die ID des Profils für die Zuordnung, die aufgelistet werden soll. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL. Entweder *Profile_id* oder *Profile_name* kann angegeben werden.  
+`[ @profile_id = ] profile_id` Ist die ID des Profils für die Zuordnung, die aufgelistet. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL. Entweder *Profile_id* oder *Profile_name* kann angegeben werden.  
   
- [  **@profile_name=** ] **"**_Profile_name_**"**  
- Der Name des Profils für die Zuordnung, die aufgelistet werden soll. *profile_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Entweder *Profile_id* oder *Profile_name* kann angegeben werden.  
+`[ @profile_name = ] 'profile_name'` Ist der Name des Profils für die Zuordnung zur Liste. *profile_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Entweder *Profile_id* oder *Profile_name* kann angegeben werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

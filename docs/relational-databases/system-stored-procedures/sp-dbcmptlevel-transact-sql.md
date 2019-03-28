@@ -18,12 +18,12 @@ ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 094235cd508f4265a68861de60e9e4c2d35ee4b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96bd1aa87dba90963588db74935294c0dcdd8f0b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841789"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527425"
 ---
 # <a name="spdbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@dbname=** ] *Name*  
- Der Name der Datenbank, deren Kompatibilitätsgrad geändert werden soll. Datenbanknamen müssen den Regeln für Bezeichner entsprechen. *name* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
+`[ @dbname = ] name` Ist der Name der Datenbank, für die der Kompatibilitätsgrad geändert werden. Datenbanknamen müssen den Regeln für Bezeichner entsprechen. *name* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
- [  **@new_cmptlevel=** ] *Version*  
- Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version, mit der die Datenbank kompatibel sein soll. *Version* ist **Tinyint**, hat den Standardwert NULL. Folgende Werte sind zulässig:  
+`[ @new_cmptlevel = ] version` Ist die Version des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit der die Datenbank kompatibel gemacht werden. *Version* ist **Tinyint**, hat den Standardwert NULL. Folgende Werte sind zulässig:  
   
  **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   

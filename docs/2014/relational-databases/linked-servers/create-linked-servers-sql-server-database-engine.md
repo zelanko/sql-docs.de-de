@@ -17,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eebda510e90c499a0bae774d1288d3b886896d25
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a288f5c9f42e282694b864e4493d02dcd6cfa3a3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766612"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527844"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Erstellen von Verbindungsservern (SQL Server-Datenbank-Engine)
   In diesem Thema wird die Erstellung eines Verbindungsservers und das Zugreifen auf Daten von einem anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]erläutert. Durch Erstellen eines Verbindungsservers können Sie mit Daten aus mehreren Quellen arbeiten. Der Verbindungsserver muss keine weitere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sein, allerdings ist dies ein gängiges Szenario.  
@@ -44,7 +44,7 @@ ms.locfileid: "52766612"
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+###  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-sql-server-management-studio"></a>So erstellen Sie einen Verbindungsserver für eine andere Instanz von SQL Server anhand von SQL Server Management Studio  
   
@@ -199,7 +199,7 @@ ms.locfileid: "52766612"
   
 1.  Geben Sie im Abfrage-Editor folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Befehl ein, um eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit dem Namen `SRVR002\ACCTG`zu verknüpfen:  
   
-    ```tsql  
+    ```sql  
     USE [master]  
     GO  
     EXEC master.dbo.sp_addlinkedserver   
@@ -211,7 +211,7 @@ ms.locfileid: "52766612"
   
 2.  Führen Sie folgenden Code aus, um den Verbindungsserver zur Verwendung der Domänenanmeldeinformationen des Anmeldenamens zu konfigurieren, der den Verbindungsserver verwendet.  
   
-    ```tsql  
+    ```sql  
     EXEC master.dbo.sp_addlinkedsrvlogin   
         @rmtsrvname = N'SRVR002\ACCTG',   
         @locallogin = NULL ,   
@@ -220,13 +220,13 @@ ms.locfileid: "52766612"
   
     ```  
   
-##  <a name="FollowUp"></a> Zur Nachverfolgung: Nach der Erstellung eines Verbindungsservers zu unternehmende Schritte  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach der Erstellung eines Verbindungsservers zu unternehmende Schritte  
   
 #### <a name="to-test-the-linked-server"></a>So testen Sie den Verbindungsserver  
   
 -   Führen Sie folgenden Code aus, um die Verbindung mit dem Verbindungsserver zu testen. Das Beispiel gibt die Namen der Datenbanken auf dem Verbindungsserver zurück.  
   
-    ```tsql  
+    ```sql  
     SELECT name FROM [SRVR002\ACCTG].master.sys.databases ;  
     GO  
   
@@ -236,7 +236,7 @@ ms.locfileid: "52766612"
   
 -   Verwenden Sie vierteilige Namen, um auf ein Objekt auf einem Verbindungsserver zu verweisen. Führen Sie folgenden Code aus, um eine Liste aller Anmeldenamen auf dem lokalen Server und die entsprechenden Anmeldenamen auf dem Verbindungsserver zurückzugeben.  
   
-    ```tsql  
+    ```sql  
     SELECT local.name AS LocalLogins, linked.name AS LinkedLogins  
     FROM master.sys.server_principals AS local  
     LEFT JOIN [SRVR002\ACCTG].master.sys.server_principals AS linked  
@@ -247,7 +247,8 @@ ms.locfileid: "52766612"
      Wenn für den Anmeldenamen vom Verbindungsserver NULL zurückgegeben wird, zeigt dies an, dass der Anmeldename auf dem Verbindungsserver nicht vorhanden ist. Von diesen Anmeldenamen kann der Verbindungsserver erst verwendet werden, wenn der Verbindungsserver so konfiguriert wird, dass ein anderer Sicherheitskontext weitergegeben wird oder der Verbindungsserver anonyme Verbindungen akzeptiert.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verbindungsserver &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](linked-servers-database-engine.md)   
+ 
+  [Verbindungsserver &#40;Datenbank-Engine&#41;](linked-servers-database-engine.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)   
  [sp_serveroption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-serveroption-transact-sql)  
   

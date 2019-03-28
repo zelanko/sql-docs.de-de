@@ -10,15 +10,15 @@ helpviewer_keywords:
 - indexes [XML in SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3685674df21d909d88779d1aa82030b8ee3cc283
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7da89810a92c14f5b59ebcd546c4fb4cfa256f02
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142720"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527517"
 ---
 # <a name="create-xml-indexes"></a>Erstellen von XML-Indizes
   In diesem Thema wird beschrieben, wie primäre und sekundäre XML-Indizes erstellt werden.  
@@ -46,7 +46,7 @@ ms.locfileid: "48142720"
   
  Sie können für ein XML-Index erstellen eine `xml` Geben Sie die Spalte in einer Sicht, auf eine **Tabelle** wertvariable mit `xml` Spalten vom Typ oder `xml` Variablen des Typs.  
   
--   So ändern Sie eine `xml` Typspalte aus nicht typisiertem in typisiertes XML oder umgekehrt, durch die Verwendung der ALTER TABLE ALTER COLUMN-Option keine XML-Index für die Spalte muss vorhanden sein. Wenn ein XML-Index vorhanden ist, muss dieser gelöscht werden, bevor der Änderungsversuch des Spaltentyps unternommen wird.  
+-   Wenn Sie eine Spalte vom Typ `xml` mithilfe der Option ALTER TABLE ALTER COLUMN aus nicht typisiertem in typisiertes XML oder umgekehrt ändern möchten, sollte kein XML-Index für die Spalte vorhanden sein. Wenn ein XML-Index vorhanden ist, muss dieser gelöscht werden, bevor der Änderungsversuch des Spaltentyps unternommen wird.  
   
 -   Die Option ARITHABORT muss auf ON festgelegt werden, wenn ein XML-Index erstellt wird. Zum Abfragen, Einfügen, Löschen oder Aktualisieren von Werten in der XML-Spalte mithilfe der Methoden des XML-Datentyps muss die gleiche Option für die Verbindung festgelegt werden. Wenn dies nicht der Fall ist, schlagen die Methoden des XML-Datentyps fehl.  
   
@@ -99,7 +99,7 @@ FROM    sys.xml_indexes;
   
  Der zurückgegebene Wert in der **secondary_type_desc** -Spalte kann NULL, PATH, VALUE oder PROPERTY sein. Für den primären Index lautet der zurückgegebene Wert NULL.  
   
-### <a name="example-creating-secondary-xml-indexes"></a>Beispiel: Erstellen sekundärer XML-Indizes  
+### <a name="example-creating-secondary-xml-indexes"></a>Beispiel: Erstellen von sekundären XML-Indizes  
  Das folgende Beispiel zeigt, wie sekundäre XML-Indizes erstellt werden. Im Beispiel werden außerdem Informationen zu den von Ihnen erstellten XML-Indizes bereitgestellt.  
   
 ```  

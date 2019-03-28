@@ -16,12 +16,12 @@ ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fc4c808b60e91faa4c08750b4c48f470ddcb6ee6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9b639f692da326390808376eadfd0ab74aa706ab
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782912"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526202"
 ---
 # <a name="sprequestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publication**=] **"***Veröffentlichung***"**  
- Der Name der Veröffentlichung in einer Peer-zu-Peer-Topologie, für die der Status überprüft wird. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung in einer Peer-zu-Peer-Topologie, die für die der Status überprüft wird. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@description**=] **"***Beschreibung***"**  
- Benutzerdefinierte Informationen, mit denen einzelne Statusanforderungen identifiziert werden können. *Beschreibung* ist **nvarchar(4000)**, hat den Standardwert NULL.  
+`[ @description = ] 'description'` Benutzerdefinierte Informationen, die zum Identifizieren einzelner statusanforderungen verwendet werden kann. *Beschreibung* ist **nvarchar(4000)**, hat den Standardwert NULL.  
   
- [ **@request_id** =] *Anforderungs-ID*  
- Gibt die ID der neuen Anforderung zurück. *Request_id* ist **Int** und ein OUTPUT-Parameter ist. Dieser Wert kann verwendet werden, bei der Ausführung [Sp_helppeerresponses &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) um alle Antworten auf eine statusanforderung anzuzeigen.  
+`[ @request_id = ] request_id` Gibt die ID der neuen Anforderung zurück. *Request_id* ist **Int** und ein OUTPUT-Parameter ist. Dieser Wert kann verwendet werden, bei der Ausführung [Sp_helppeerresponses &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) um alle Antworten auf eine statusanforderung anzuzeigen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -63,7 +60,7 @@ sp_requestpeerresponse [ @publication = ] 'publication'
  Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_requestpeerresponse**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_deletepeerrequesthistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
- [Sp_helppeerrequests &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
+ [sp_deletepeerrequesthistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
+ [sp_helppeerrequests &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
   
   

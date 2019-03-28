@@ -18,12 +18,12 @@ ms.assetid: 8fc14700-e17a-4073-9a96-7fc23e775c69
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c292ba89a3b79dc19ca038672cf5cc587a55ed4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae63fabdca36e70daa6da28daa136a5dfcec8e1f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673178"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527782"
 ---
 # <a name="sysmaildeleteprincipalprofilesp-transact-sql"></a>sysmail_delete_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@principal_id** =] *Principal_id*  
- Die ID des Datenbankbenutzers oder der Rolle in der **Msdb** -Datenbank für die Zuordnung zu löschen. *principal_id* ist vom Datentyp **int**und hat den Standardwert NULL. Um ein öffentliches Profil in ein privates Profil zu um vereinfachen, geben die Prinzipal-ID **0** oder den Prinzipalnamen **'public'**. Es muss entweder *principal_id* oder *principal_name* angegeben werden.  
+`[ @principal_id = ] principal_id` Die ID des Datenbankbenutzers oder der Rolle in der **Msdb** -Datenbank für die Zuordnung zu löschen. *principal_id* ist vom Datentyp **int**und hat den Standardwert NULL. Um ein öffentliches Profil in ein privates Profil zu um vereinfachen, geben die Prinzipal-ID **0** oder den Prinzipalnamen **'public'**. Es muss entweder *principal_id* oder *principal_name* angegeben werden.  
   
- [ **@principal_name** =] **"***Principal_name***"**  
- Der Name des Datenbankbenutzers oder der Rolle in der **Msdb** -Datenbank für die Zuordnung zu löschen. *principal_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Um ein öffentliches Profil in ein privates Profil zu um vereinfachen, geben die Prinzipal-ID **0** oder den Prinzipalnamen **'public'**. Es muss entweder *principal_id* oder *principal_name* angegeben werden.  
+`[ @principal_name = ] 'principal_name'` Der Name des Datenbankbenutzers oder der Rolle in der **Msdb** -Datenbank für die Zuordnung zu löschen. *principal_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Um ein öffentliches Profil in ein privates Profil zu um vereinfachen, geben die Prinzipal-ID **0** oder den Prinzipalnamen **'public'**. Es muss entweder *principal_id* oder *principal_name* angegeben werden.  
   
- [ **@profile_id** =] *Profile_id*  
- Die ID des Profils für die Zuordnung, die gelöscht werden soll. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
+`[ @profile_id = ] profile_id` Ist die ID des Profils für die Zuordnung zu löschen. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
   
- [ **@profile_name** =] **"***Profile_name***"**  
- Der Name des Profils für die Zuordnung, die gelöscht werden soll. *profile_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
+`[ @profile_name = ] 'profile_name'` Ist der Name des Profils für die Zuordnung zu löschen. *profile_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

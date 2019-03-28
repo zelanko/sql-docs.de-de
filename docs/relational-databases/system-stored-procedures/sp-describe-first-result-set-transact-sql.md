@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62abd4d684c809e9dbf3f2863091f1f103808d87
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1063facd150c6dfd6273f1fd78b6f507d062788e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400633"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528162"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -43,16 +43,13 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **\@Tsql =** ] **"***Transact-SQL_batch***"**  
- Eine oder mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen. *Transact-SQL_batch* möglicherweise **Nvarchar (***n***)** oder **nvarchar(max)**.  
+`[ \@tsql = ] 'Transact-SQL_batch'` Eine oder mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen. *Transact-SQL_batch* möglicherweise **Nvarchar (***n***)** oder **nvarchar(max)**.  
   
- [  **\@Params =** ] **N'***Parameter***"**  
- \@Params stellt eine deklarationszeichenfolge für Parameter für die [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch, die analog zu Sp_executesql ist. Parameter können ggf. werden **nvarchar (n)** oder **nvarchar(max)**.  
+`[ \@params = ] N'parameters'` \@Params stellt eine deklarationszeichenfolge für Parameter für die [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch, die analog zu Sp_executesql ist. Parameter können ggf. werden **nvarchar (n)** oder **nvarchar(max)**.  
   
  Eine Zeichenfolge, die die Definitionen aller Parameter enthält, die in eingebettet wurden die [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. *n* ist ein Platzhalter, der zusätzliche Parameterdefinitionen. Jeder in Parameter in der Anweisung muss definiert werden, \@Params. Wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung oder der Batch in der Anweisung keine Parameter, \@"Params" ist nicht erforderlich. NULL, ist der Standardwert für diesen Parameter.  
   
- [  **\@Browse_information_mode =** ] *Tinyint*  
- Gibt an, ob zusätzliche Schlüsselspalten und Quelltabelleninformationen zurückgegeben werden. Wenn der Wert gleich 1, jede Abfrage analysiert, als ob es sich um eine FOR BROWSE-Option für die Abfrage enthält. Zusätzliche Schlüsselspalten und Quelltabelleninformationen werden zurückgegeben.  
+`[ \@browse_information_mode = ] tinyint` Gibt an, ob zusätzliche Schlüsselspalten und quelltabelleninformationen zurückgegeben werden. Wenn der Wert gleich 1, jede Abfrage analysiert, als ob es sich um eine FOR BROWSE-Option für die Abfrage enthält. Zusätzliche Schlüsselspalten und Quelltabelleninformationen werden zurückgegeben.  
   
 -   Bei 0 werden keine Informationen zurückgegeben.  
   
@@ -151,7 +148,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
     -   **varbinary(a)** zu **varbinary(a')** , in denen ein "> ein.  
   
-    -   **varbinary(a)** zu **varbinary(max)**  
+    -   **varbinary(a)** to **varbinary(max)**  
   
  **Sp_describe_first_result_set** unterstützt keine Indirekte Rekursion.  
   

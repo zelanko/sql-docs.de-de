@@ -11,18 +11,18 @@ f1_keywords:
 - sql13.dts.designer.afpblobdest.f1
 - sql14.dts.designer.afpblobdest.f1
 ms.assetid: 820a1e7a-7182-4c7b-ab56-5b4097a7e042
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7f4eec23b199a9d88b32377762bcaddb65251b9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8bc17975628068266c31bde014e6645dd6c61c7c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773538"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279254"
 ---
 # <a name="azure-blob-destination"></a>Azure-BLOB-Ziel
- Die Komponente **Azure-Blobziel** ermöglicht einem SSIS-Paket das Schreiben von Daten in ein Azure-Blob. Die unterstützten Dateiformate sind CSV und AVRO. 
+ Die Komponente **Azure-Blobziel** ermöglicht einem SSIS-Paket das Schreiben von Daten in ein Azure-Blob. Die folgenden Dateiformate werden unterstützt: CSV und AVRO. 
    
  Ziehen Sie das **Azure Blobziel** auf den Datenfluss-Designer, und doppelklicken Sie darauf, um den Code-Editor aufzurufen.  
   

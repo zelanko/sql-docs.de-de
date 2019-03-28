@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/01/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a0991f43ed7446cc9b86325d4f536a0787b8dcc1
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 2e0505cf847a091a5650b392aab56f486cee16aa
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645171"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511247"
 ---
 # <a name="train-and-save-a-python-model-using-t-sql"></a>Trainieren und Speichern eines Python-Modells mit T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -121,7 +121,7 @@ Zum erneuten Trainieren des Modells auf neue Daten zu erleichtern, stellen Sie d
 
 3. Öffnen Sie die Tabelle *nyc\_Taxi_models*. Sie können sehen, dass eine neue Zeile hinzugefügt wurde, die das serialisierte Modell in der Spalte _model_enthält.
 
-    *SciKit_model* *0x800363736B6C6561726E2E6C696E6561...*
+    *SciKit_model* *0x800363736B6C6561726E2E6C696E6561....*
 
 ### <a name="traintippredictionmodelrxpy"></a>TrainTipPredictionModelRxPy
 
@@ -185,7 +185,7 @@ Mithilfe von **Revoscalepy**, können Sie remotecomputekontexte erstellen, Versc
 
 3. Öffnen Sie die Tabelle *nyc_taxi_models*. Sie können sehen, dass eine neue Zeile hinzugefügt wurde, die das serialisierte Modell in der Spalte _model_enthält.
 
-    *Revoscalepy_model* *0x8003637265766F7363616c...*
+    *revoscalepy_model* *0x8003637265766F7363616c....*
 
 Im nächsten Schritt verwenden Sie die trainierten Modelle zum Erstellen von Vorhersagen.
 

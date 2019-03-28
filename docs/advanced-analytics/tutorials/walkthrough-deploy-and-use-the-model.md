@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/26/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 7b14b70fc5ba8ac39535d9dd6dedbfa1bd309aa4
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: f1c684aff9c4b31049a04add04e8def642dca1d2
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645195"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510597"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Bereitstellen Sie das R-Modell und verwenden Sie sie in SQL Server (Exemplarische Vorgehensweise)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -228,5 +228,5 @@ Möglicherweise möchten Sie auch diese Beispiele und Ressourcen zu untersuchen:
 
 + [Szenarien für Data Science und Lösungsvorlagen](data-science-scenarios-and-solution-templates.md)
 + [Datenbankinterne Advanced Analytics](sqldev-in-database-r-for-sql-developers.md)
-+ [Microsoft R: Eintauchen in die Datenanalyse](https://msdn.microsoft.com/microsoft-r/data-analysis-in-microsoft-r)
-+ [Zusätzliche Ressourcen](https://msdn.microsoft.com/microsoft-r/microsoft-r-more-resources)
++ [Machine Learning Server Gewusst-wie-führt.](https://docs.microsoft.com/machine-learning-server/r/how-to-introduction)
++ [Machine Learning-Server zusätzliche Ressourcen](https://docs.microsoft.com//machine-learning-server/resources-more)

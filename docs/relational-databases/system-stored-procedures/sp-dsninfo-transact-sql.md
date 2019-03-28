@@ -16,12 +16,12 @@ ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2836db0eef25c21861ec7b2d766f1195d250f20
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e6eacb453fc2f66f4b87790770fa50916916a27c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817732"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527428"
 ---
 # <a name="spdsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_dsninfo [ @dsn =] 'dsn'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@dsn =**] **"***Dsn***"**  
- Der ODBC-Datenquellenname (Data Source Name, DSN) oder der Name des OLE DB-Verbindungsservers. *DSN* ist **varchar(128)**, hat keinen Standardwert.  
+`[ @dsn = ] 'dsn'` Ist der Name des ODBC-DSN oder OLE DB-Verbindungsservers. *DSN* ist **varchar(128)**, hat keinen Standardwert.  
   
- [  **@infotype =**] **"***Infotyp***"**  
- Ist der Typ der zurückzugebenden Informationen. Wenn *Infotyp* nicht angegeben ist oder wenn NULL angegeben wird, werden alle Informationstypen zurückgegeben. *Infotyp* ist **varchar(128)**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
+`[ @infotype = ] 'info_type'` Ist der Typ der zurückzugebenden Informationen. Wenn *Infotyp* nicht angegeben ist oder wenn NULL angegeben wird, werden alle Informationstypen zurückgegeben. *Infotyp* ist **varchar(128)**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -55,14 +53,11 @@ sp_dsninfo [ @dsn =] 'dsn'
 |**DATABASE_NAME**|Gibt den Datenbanknamen an.|  
 |**SQL_SUBSCRIBER**|Gibt an, dass die Datenquelle ein Abonnent sein kann.|  
   
- [ **@login =**] **'***login***'**  
- Der Anmeldename für die Datenquelle. Wenn die Datenquelle einen Anmeldenamen aufweist, geben Sie NULL an, oder lassen Sie den Parameter weg. *Anmeldung*ist **varchar(128)**, hat den Standardwert NULL.  
+`[ @login = ] 'login'` Ist der Anmeldename für die Datenquelle. Wenn die Datenquelle einen Anmeldenamen aufweist, geben Sie NULL an, oder lassen Sie den Parameter weg. *Anmeldung*ist **varchar(128)**, hat den Standardwert NULL.  
   
- [  **@password =**] **"***Kennwort***"**  
- Das Kennwort für die Anmeldung. Wenn die Datenquelle einen Anmeldenamen aufweist, geben Sie NULL an, oder lassen Sie den Parameter weg. *Kennwort*ist **varchar(128)**, hat den Standardwert NULL.  
+`[ @password = ] 'password'` Ist das Kennwort für die Anmeldung. Wenn die Datenquelle einen Anmeldenamen aufweist, geben Sie NULL an, oder lassen Sie den Parameter weg. *Kennwort*ist **varchar(128)**, hat den Standardwert NULL.  
   
- [  **@dso_type=**] *Dso_type*  
- Der Datenquellentyp. *Dso_type* ist **Int**, und kann einen der folgenden Werte sein.  
+`[ @dso_type = ] dso_type` Ist der Datenquellentyp. *Dso_type* ist **Int**, und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -76,7 +71,7 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**Informationstyp**|**Nvarchar(64)**|Informationstypen, wie z. B. DBMS_NAME, DBMS_VERSION, DATABASE_NAME, SQL_SUBSCRIBER.|  
+|**Informationstyp**|**nvarchar(64)**|Informationstypen, wie z. B. DBMS_NAME, DBMS_VERSION, DATABASE_NAME, SQL_SUBSCRIBER.|  
 |**Wert**|**nvarchar(512)**|Der Wert der verknüpften Informationstypen.|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -88,7 +83,7 @@ sp_dsninfo [ @dsn =] 'dsn'
  Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_dsninfo**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_enumdsn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumdsn-transact-sql.md)   
+ [sp_enumdsn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumdsn-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -21,12 +21,12 @@ ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d3e6ad6a0cf8ed5c84279b621badc939b1e97a8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ee22bbf5028959d0aab178924d38465c9d98b432
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791712"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527452"
 ---
 # <a name="spchecksubsetfilter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,11 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@filtered_table**=] **"***Filtered_table***"**  
- Der Name einer gefilterten Tabelle. *Filtered_table* ist **nvarchar(400)**, hat keinen Standardwert.  
+`[ @filtered_table = ] 'filtered_table'` Ist der Name einer gefilterten Tabelle. *Filtered_table* ist **nvarchar(400)**, hat keinen Standardwert.  
   
- [ **@subset_filterclause** =] **"***Subset_filterclause***"**  
- Die Filterklausel, die getestet wird. *Subset_filterclause* ist **nvarchar(1000)**, hat keinen Standardwert.  
+`[ @subset_filterclause = ] 'subset_filterclause'` Wird die Filterklausel getestet wird. *Subset_filterclause* ist **nvarchar(1000)**, hat keinen Standardwert.  
   
- [ **@has_dynamic_filters**=] *Has_dynamic_filters*  
- Gibt an, ob die Filterklausel einen parametrisierten Zeilenfilter festlegt. *Has_dynamic_filters* ist **Bit**, hat den Standardwert NULL und ist ein Output-Parameter. Gibt einen Wert von **1** Wenn die Filterklausel ein parametrisierter Zeilenfilter ist.  
+`[ @has_dynamic_filters = ] has_dynamic_filters` Ist, wenn die Filterklausel ein parametrisierter Zeilenfilter ist. *Has_dynamic_filters* ist **Bit**, hat den Standardwert NULL und ist ein Output-Parameter. Gibt einen Wert von **1** Wenn die Filterklausel ein parametrisierter Zeilenfilter ist.  
   
 ## <a name="result-sets"></a>Resultsets  
   

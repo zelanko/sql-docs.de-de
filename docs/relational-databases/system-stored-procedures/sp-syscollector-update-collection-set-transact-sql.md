@@ -19,12 +19,12 @@ ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9e7ba855bde4caa04efea0411857705eb4bf976
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d77ec36f36260226a78136b46656b1e2e8187e5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702738"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527176"
 ---
 # <a name="spsyscollectorupdatecollectionset-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,20 +56,15 @@ sp_syscollector_update_collection_set
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@collection_set_id =** ] *Collection_set_id*  
- Der eindeutige lokale Bezeichner für den Sammlungssatz. *Collection_set_id* ist **Int** und muss einen Wert aufweisen, wenn *Namen* ist NULL.  
+`[ @collection_set_id = ] collection_set_id` Ist der eindeutige lokale Bezeichner für den Sammlungssatz an. *Collection_set_id* ist **Int** und muss einen Wert aufweisen, wenn *Namen* ist NULL.  
   
- [  **@name =** ] '*Namen*"  
- Ist der Name des Sammlungssatzes. *Namen* ist **Sysname** und muss einen Wert aufweisen, wenn *Collection_set_id* ist NULL.  
+`[ @name = ] 'name'` Ist der Name des Sammlungssatzes. *Namen* ist **Sysname** und muss einen Wert aufweisen, wenn *Collection_set_id* ist NULL.  
   
- [  **@new_name =** ] '*New_name*"  
- Entspricht dem neuen Namen des Sammlungssatzes. *New_name* ist **Sysname**, und wenn verwendet, darf keine leere Zeichenfolge sein. *New_name* muss eindeutig sein. Wenn Sie eine Liste der aktuellen Namen von Sammlungssätzen abrufen möchten, fragen Sie die syscollector_collection_sets-Systemsicht ab.  
+`[ @new_name = ] 'new_name'` Ist der neue Name für den Sammlungssatz. *New_name* ist **Sysname**, und wenn verwendet, darf keine leere Zeichenfolge sein. *New_name* muss eindeutig sein. Wenn Sie eine Liste der aktuellen Namen von Sammlungssätzen abrufen möchten, fragen Sie die syscollector_collection_sets-Systemsicht ab.  
   
- [  **@target =** ] '*Ziel*"  
- Zur künftigen Verwendung reserviert.  
+`[ @target = ] 'target'` Für die zukünftige Verwendung reserviert.  
   
- [ **@collection_mode =** ] *collection_mode*  
- Entspricht dem Typ der zu verwendenden Datenauflistung. *Collection_mode* ist **Smallint** und kann einen der folgenden Werte aufweisen:  
+`[ @collection_mode = ] collection_mode` Ist der Typ des zu verwendenden datenauflistung. *Collection_mode* ist **Smallint** und kann einen der folgenden Werte aufweisen:  
   
  0 - Modus mit Zwischenspeicherung. Für Datensammlung und -upload werden separate Zeitpläne verwendet. Geben Sie den Modus mit Zwischenspeicherung für eine fortlaufende Sammlung an.  
   
@@ -77,27 +72,21 @@ sp_syscollector_update_collection_set
   
  Wenn von nicht zwischengespeicherte Modus mit Zwischenspeicherung (0) zu ändern, müssen Sie auch angeben entweder *Schedule_uid* oder *Schedule_name*.  
   
- [ **@days_until_expiration=** ] *days_until_expiration*  
- Ist die Anzahl der Tage, die gesammelten Daten im Verwaltungs-Datawarehouse gespeichert werden. *Days_until_expiration* ist **Smallint**. *Days_until_expiration* muss 0 oder eine positive ganze Zahl sein.  
+`[ @days_until_expiration = ] days_until_expiration` Ist die Anzahl der Tage, die gesammelten Daten im Verwaltungs-Datawarehouse gespeichert werden. *Days_until_expiration* ist **Smallint**. *Days_until_expiration* muss 0 oder eine positive ganze Zahl sein.  
   
- [ **@proxy_id =** ] *proxy_id*  
- Ist der eindeutige Bezeichner für ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Proxykonto. *Proxy_id* ist **Int**.  
+`[ @proxy_id = ] proxy_id` Ist der eindeutige Bezeichner für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxykonto ein. *Proxy_id* ist **Int**.  
   
- [  **@proxy_name =** ] '*Proxy_name*"  
- Ist der Name des Proxys. *Proxy_name* ist **Sysname** und NULL-Werte zulässt.  
+`[ @proxy_name = ] 'proxy_name'` Ist der Name des Proxys. *Proxy_name* ist **Sysname** und NULL-Werte zulässt.  
   
- [ **@schedule_uid** =] '*Schedule_uid*"  
- Entspricht dem GUID, der auf einen Zeitplan zeigt. *Wert für schedule_uid an* ist **Uniqueidentifier**.  
+`[ @schedule_uid = ] 'schedule_uid'` Ist die GUID, die auf einen Zeitplan zeigt. *Wert für schedule_uid an* ist **Uniqueidentifier**.  
   
  Zum Abrufen *Schedule_uid*, Fragen Sie die Sysschedules-Systemtabelle.  
   
  Wenn *Collection_mode* ist auf 0 festgelegt, *Schedule_uid* oder *Schedule_name* muss angegeben werden. Wenn *Collection_mode* ist auf 1 festgelegt, *Schedule_uid* oder *Schedule_name* wird ignoriert, wenn angegeben.  
   
- [  **@schedule_name =** ] '*Schedule_name*"  
- Ist der Name des Zeitplans. *Schedule_name* ist **Sysname** und NULL-Werte zulässt. Wenn angegeben, *Schedule_uid* muss NULL sein. Zum Abrufen *Schedule_name*, Fragen Sie die Sysschedules-Systemtabelle.  
+`[ @schedule_name = ] 'schedule_name'` Ist der Name des Zeitplans. *Schedule_name* ist **Sysname** und NULL-Werte zulässt. Wenn angegeben, *Schedule_uid* muss NULL sein. Zum Abrufen *Schedule_name*, Fragen Sie die Sysschedules-Systemtabelle.  
   
- [  **@logging_level =** ] *Logging_level*  
- Entspricht dem Protokolliergrad. *Logging_level* ist **Smallint** mit einem der folgenden Werte:  
+`[ @logging_level = ] logging_level` Ist der Protokolliergrad. *Logging_level* ist **Smallint** mit einem der folgenden Werte:  
   
  0 - Informationen zur Protokollausführung und zu den [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Ereignissen, die Folgendes nachverfolgen:  
   
@@ -119,8 +108,7 @@ sp_syscollector_update_collection_set
   
  Der Standardwert für *Logging_level* ist 1.  
   
- [  **@description =** ] '*Beschreibung*"  
- Die Beschreibung für den Sammlungssatz. *Beschreibung* ist **nvarchar(4000)**.  
+`[ @description = ] 'description'` Ist die Beschreibung des Sammlungssatzes. *Beschreibung* ist **nvarchar(4000)**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

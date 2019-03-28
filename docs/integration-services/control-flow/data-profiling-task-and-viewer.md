@@ -12,15 +12,15 @@ helpviewer_keywords:
 - data profiling
 - profiling data
 ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c91b162bfd64b8fb7a2408c796c384981cea917e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6a340ece64bc69b012919bb57afd1b80690f3a59
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517213"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273047"
 ---
 # <a name="data-profiling-task-and-viewer"></a>Datenprofilerstellungs-Task und -Viewer
   Der Datenprofilerstellungs-Task bietet Funktionen zur Datenprofilerstellung beim Extrahieren, Transformieren und Laden von Daten. Mit dem Datenprofilerstellungs-Task können Sie die folgenden Vorteile erzielen:  
@@ -59,12 +59,12 @@ ms.locfileid: "52517213"
  **Schritt 1: Einrichten des Datenprofilerstellungs-Tasks**  
  Der Datenprofilerstellungs-Task ist ein Task, den Sie verwenden können, um die Profile zu konfigurieren, die Sie berechnen möchten. Sie führen dann das Paket aus, das den Datenprofilerstellungs-Task enthält, um die Profile zu berechnen. Der Task speichert die Profilausgabe im XML-Format in einer Datei oder Paketvariablen.  
   
- **Weitere Informationen finden Sie unter:** [Einrichten von Datenprofilerstellungs-Tasks](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)  
+ **Weitere Informationen:** [Einrichten von Datenprofilerstellungs-Tasks](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)  
   
  **Schritt 2: Überprüfen der Profile, die der Datenprofilerstellungs-Task berechnet**  
  Wenn Sie die vom Datenprofilerstellungs-Task berechneten Datenprofile anzeigen möchten, senden Sie die Ausgabe an eine Datei, und verwenden Sie dann den Datenprofil-Viewer. Dieser Viewer ist ein eigenständiges Hilfsprogramm, das die Profilausgabe im Zusammenfassungs- und Detailformat mit optionaler Drilldownfunktion anzeigt.  
   
- **Weitere Informationen finden Sie unter:** [Datenprofil-Viewer](../../integration-services/control-flow/data-profile-viewer.md)  
+ **Weitere Informationen:** [Datenprofil-Viewer](../../integration-services/control-flow/data-profile-viewer.md)  
   
 ### <a name="addition-of-conditional-logic-to-the-data-profiling-workflow"></a>Hinzufügen von Bedingungslogik zum Datenprofilerstellungs-Workflow  
  Der Datenprofilerstellungs-Task verfügt über keine integrierten Funktionen, die eine Verwendung von Bedingungslogik ermöglichen, um diesen Task auf der Grundlage der Profilausgabe mit Downstream-Tasks zu verbinden. Mit minimalem Programmieraufwand können Sie diese Logik jedoch problemlos einem Skripttask hinzufügen. Der Skripttask könnte beispielsweise eine XPath-Abfrage für die Ausgabedatei des Datenprofilerstellungs-Tasks ausführen. Durch die Abfrage könnte bestimmt werden, ob der Prozentwert von NULL-Werten in einer bestimmten Spalte einen bestimmten Schwellenwert überschreitet. Wenn der Prozentwert den Schwellenwert überschreitet, könnten Sie das Paket unterbrechen und das Problem in den Quelldaten vor dem Fortsetzen beheben. Weitere Informationen finden Sie unter [Einschließen eines Datenprofilerstellungs-Tasks in den Paketworkflow](../../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md).  

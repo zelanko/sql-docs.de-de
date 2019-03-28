@@ -16,12 +16,12 @@ ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ee9596b578396786da8562f2ecf73c3b85f0241
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 182f13347a1fdf4dc06e6d3276e481ce54f01e45
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588034"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527972"
 ---
 # <a name="sphelpagentdefault-transact-sql"></a>sp_help_agent_default (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@profile_id=**] _Profile_id_**Ausgabe**  
- Die ID der Standardkonfiguration für den Typ des Agents. *Profile_id* ist **Int**, hat keinen Standardwert. *Profile_id* ist auch ein OUTPUT-Parameter und gibt die ID der Standardkonfiguration für den Typ des Agents zurück.  
+`[ @profile_id = ] _profile_idOUTPUT` Ist die ID der Standardkonfiguration für den Typ des Agents. *Profile_id* ist **Int**, hat keinen Standardwert. *Profile_id* ist auch ein OUTPUT-Parameter und gibt die ID der Standardkonfiguration für den Typ des Agents zurück.  
   
- [  **@agent_type=**] **"**_Agent_type_**"**  
- Der Typ des Agents. *Agent_type* ist **Int**und hat keinen Standardwert und kann einen der folgenden Werte sein.  
+`[ @agent_type = ] 'agent_type'` Ist der Typ des Agents. *Agent_type* ist **Int**und hat keinen Standardwert und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  

@@ -16,12 +16,12 @@ ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bf771f02ec63260dcda1f8b7fa633f9fb6bf9a07
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bb4874233f85a2565c3d30546749fa9bffe79ebb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817772"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58525772"
 ---
 # <a name="spmergedummyupdate-transact-sql"></a>sp_mergedummyupdate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +38,9 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@source_object=**] **"***Source_object***"**  
- Der Name des Quellobjekts. *Source_object*ist **nvarchar(386)**, hat keinen Standardwert.  
+`[ @source_object = ] 'source_object'` Ist der Name des Quellobjekts. *Source_object*ist **nvarchar(386)**, hat keinen Standardwert.  
   
- [  **@rowguid=**] **"***Rowguid***"**  
- Die Zeilen-ID. *ROWGUID* ist **Uniqueidentifier**, hat keinen Standardwert.  
+`[ @rowguid = ] 'rowguid'` Ist der Zeilenbezeichner. *ROWGUID* ist **Uniqueidentifier**, hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

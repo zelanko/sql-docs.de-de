@@ -5,17 +5,17 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/26/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4b3beca0f9e9a8c714e60bde7a2e7ff067e2265e
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: 0b1820e15975ca027af7b51e809ba920af3ffc82
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405730"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511301"
 ---
-# <a name="tutorial-sql-development-for-r-data-scientists"></a>Lernprogramm: SQL-Datenbankentwicklung R Data scientists die Aufgabe
+# <a name="tutorial-sql-development-for-r-data-scientists"></a>Tutorial: SQL-Datenbankentwicklung R Data scientists die Aufgabe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Erfahren Sie in diesem Tutorial für Data Scientists, wie zum Erstellen von End-to-End-Lösung für die vorhersagemodellierung basierend auf der Unterstützung von R-Funktionen in SQL Server 2016 oder SQL Server 2017. Dieses Tutorial verwendet ein [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) Datenbank auf SQL Server. 

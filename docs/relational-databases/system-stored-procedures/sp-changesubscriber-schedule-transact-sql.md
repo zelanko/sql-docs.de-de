@@ -16,12 +16,12 @@ ms.assetid: ff84e8e2-d496-482c-b23e-38a6626596e6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 83edeb0c94276e10528b05bc5a1cd8d9474d07aa
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 54098c536fa368c4a2b58d387911e646db15a4d4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127910"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526802"
 ---
 # <a name="spchangesubscriberschedule-transact-sql"></a>sp_changesubscriber_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,44 +49,31 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@subscriber=**] **"**_Abonnenten_**"**  
- Der Name des Abonnenten. *Abonnenten* ist **Sysname**. Der Name des Abonnenten muss innerhalb der Datenbank eindeutig sein und darf nicht bereits vorhanden sein. Außerdem darf er nicht gleich NULL sein.  
+`[ @subscriber = ] 'subscriber'` Ist der Name des Abonnenten. *Abonnenten* ist **Sysname**. Der Name des Abonnenten muss innerhalb der Datenbank eindeutig sein und darf nicht bereits vorhanden sein. Außerdem darf er nicht gleich NULL sein.  
   
- [  **@agent_type=**] *Typ*  
- Der Typ des Agents. *Typ* ist **Smallint**, hat den Standardwert **0**. **0** zeigt einen Verteilungs-Agent. **1** zeigt einen Merge-Agent.  
+`[ @agent_type = ] type` Ist der Typ des Agents. *Typ* ist **Smallint**, hat den Standardwert **0**. **0** zeigt einen Verteilungs-Agent. **1** zeigt einen Merge-Agent.  
   
- [  **@frequency_type=**] *Frequency_type*  
- Die Häufigkeit für die Zeitplanung des Verteilungstasks. *Frequency_type* ist **Int**, hat den Standardwert **64**. Es gibt 10 Zeitplanspalten.  
+`[ @frequency_type = ] frequency_type` Kann die Häufigkeit, mit denen des Verteilungstasks. *Frequency_type* ist **Int**, hat den Standardwert **64**. Es gibt 10 Zeitplanspalten.  
   
- [  **@frequency_interval=**] *Frequency_interval*  
- Ist der Wert der Häufigkeit festgelegt angewendet *Frequency_type*. *Frequency_interval* ist **Int**, hat den Standardwert **1**.  
+`[ @frequency_interval = ] frequency_interval` Ist der Wert der Häufigkeit festgelegt angewendet *Frequency_type*. *Frequency_interval* ist **Int**, hat den Standardwert **1**.  
   
- [  **@frequency_relative_interval=**] *Frequency_relative_interval*  
- Das Datum des Verteilungstasks. *Frequency_relative_interval* ist **Int**, hat den Standardwert **1**.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Ist das Datum des Verteilungstasks. *Frequency_relative_interval* ist **Int**, hat den Standardwert **1**.  
   
- [  **@frequency_recurrence_factor=**] *Frequency_recurrence_factor*  
- Wird von verwendete Wiederholungsfaktor *Frequency_type*. *Frequency_recurrence_factor* ist **Int**, hat den Standardwert **0**.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Wird von verwendete Wiederholungsfaktor *Frequency_type*. *Frequency_recurrence_factor* ist **Int**, hat den Standardwert **0**.  
   
- [  **@frequency_subday=**] *Frequency_subday*  
- Die Häufigkeit (in Minuten) für die erneute geplante Ausführung während des definierten Zeitraums. *Frequency_subday* ist **Int**, hat den Standardwert **4**.  
+`[ @frequency_subday = ] frequency_subday` Wie oft ist, in Minuten, für die erneute geplante Ausführung während des definierten Zeitraums. *Frequency_subday* ist **Int**, hat den Standardwert **4**.  
   
- [  **@frequency_subday_interval=**] *Frequency_subday_interval*  
- Das Intervall für *Frequency_subday*. *Frequency_subday_interval* ist **Int**, hat den Standardwert **5**.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Das Intervall für *Frequency_subday*. *Frequency_subday_interval* ist **Int**, hat den Standardwert **5**.  
   
- [  **@active_start_time_of_day=**] *Active_start_time_of_day*  
- Die Tageszeit, zu der der Verteilungstask zum ersten Mal geplant ist. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert **0**.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Ist die Zeit des Tages, bei der Verteilungstask zum ersten Mal geplant ist. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert **0**.  
   
- [  **@active_end_time_of_day=**] *Active_end_time_of_day*  
- Die Tageszeit, ab der der Verteilungstask nicht mehr geplant ist. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert **235959**, womit 23:59:59 Uhr im 24-Stunden-Format).  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Ist die Tageszeit, ab der Verteilungstask nicht mehr geplant. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert **235959**, womit 23:59:59 Uhr im 24-Stunden-Format).  
   
- [  **@active_start_date=**] *Active_start_date*  
- Das Datum, an dem der Verteilungstask zum ersten Mal geplant ist. Dabei wird das Format JJJJMMTT verwendet. *Active_start_date* ist **Int**, hat den Standardwert **0**.  
+`[ @active_start_date = ] active_start_date` Das Datum, an der Verteilungstask erste ist geplant Format: YYYYMMDD. *Active_start_date* ist **Int**, hat den Standardwert **0**.  
   
- [  **@active_end_date=**] *Active_end_date*  
- Das Datum, ab dem der Verteilungstask nicht mehr geplant ist. Dabei wird das Format JJJJMMTT verwendet. *Active_end_date* ist **Int**, hat den Standardwert **99991231**, womit der 31. Dezember 9999.  
+`[ @active_end_date = ] active_end_date` Ist das Datum, ab der Verteilungstask nicht mehr, geplant ist JJJJMMTT. *Active_end_date* ist **Int**, hat den Standardwert **99991231**, womit der 31. Dezember 9999.  
   
- [ **@publisher**=] **"**_Verleger_**"**  
- Gibt einen nicht- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Gibt einen nicht- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  *Publisher* sollte nicht verwendet werden, beim Ändern von Artikeleigenschaften auf einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger.  
@@ -101,7 +88,7 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
  Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_changesubscriber_schedule**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_addsubscriber_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-schedule-transact-sql.md)   
+ [sp_addsubscriber_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-schedule-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data flow [Integration Services], Data Flow task
 - Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 27976be0f3b6091450650f2bf3a73d1afbe42d20
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cca0fb51c67bf4cba471b10c30267d535d83d159
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518473"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274079"
 ---
 # <a name="data-flow-task"></a>Datenflusstask
   Der Datenflusstask kapselt die Datenfluss-Engine, mit dem Daten zwischen Quellen und Zielen verschoben werden, und ermöglicht dem Benutzer das Transformieren, Bereinigen und Ändern von Daten beim Verschieben. Durch das Hinzufügen eines Datenflusstasks zu einer Paketablaufsteuerung kann das Paket Daten extrahieren, transformieren und laden.  
@@ -87,7 +87,7 @@ ms.locfileid: "52518473"
   
  Bei vielen Protokollereignissen werden mehrere Einträge in das Protokoll geschrieben, und die Meldungen für eine Reihe von Protokolleinträgen enthalten komplexe Daten. Damit es einfacher wird, den Inhalt komplexer Meldungen zu verstehen und zu kommunizieren, können Sie den Meldungstext analysieren. Je nach Speicherort des Protokolls können Sie Transact-SQL-Anweisungen oder Skriptkomponenten verwenden, um den komplexen Text in Spalten oder andere zweckmäßigere Formate zu zerlegen.  
   
- Die folgende Tabelle enthält z. B. die als Spalten analysierte Meldung "Die Zeilen wurden als Eingabe für eine Datenflusskomponente bereitgestellt. :  : 1185 : Ausgabe der OLE DB-Quelle : 1180 : Sort : 1181 : Sortiereingabe : 76". Die Meldung wurde vom **OnPipelineRowsSent** -Ereignis geschrieben, als Zeilen von der OLE DB-Quelle an die Transformation zum Sortieren gesendet wurden.  
+ Die folgende Tabelle enthält z. B. die als Spalten analysierte Meldung "Die Zeilen wurden als Eingabe für eine Datenflusskomponente bereitgestellt. :  : 1185 : OLE DB Source Output : 1180 : Sort : 1181 : Sort Input : 76", in Spalten analysiert. Die Meldung wurde vom **OnPipelineRowsSent** -Ereignis geschrieben, als Zeilen von der OLE DB-Quelle an die Transformation zum Sortieren gesendet wurden.  
   
 |Spalte|und Beschreibung|value|  
 |------------|-----------------|-----------|  

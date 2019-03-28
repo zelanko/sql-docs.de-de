@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 506987635969a1f9a6b6484e7deeda02712f9eb6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1d4e6174317c2588a0c12b4ef6f1f2d0b1d09e44
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398003"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290846"
 ---
 # <a name="user-roles"></a>Benutzerrollen
   In diesem Abschnitt werden die Benutzerrollen für den Change Data Capture Service für Oracle von Attunity beschrieben. Die beschriebenen Rollen sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankrollen, Windows-Rollen und Oracle-Datenbankrollen.  

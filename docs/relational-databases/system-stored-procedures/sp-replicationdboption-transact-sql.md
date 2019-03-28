@@ -16,12 +16,12 @@ ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a3228fc41c571aae60d6609131680162400a310f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 153c2e2b8c75c21451dca3b673129a059d78e3a6
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747802"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527332"
 ---
 # <a name="spreplicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,24 +45,21 @@ sp_replicationdboption [ @dbname= ] 'db_name'
  [**@dbname=**] **"***Dbname***"**  
  Die Datenbank, für die die Replikationsdatenbankoption festgelegt wird. *Db_name* ist **Sysname**, hat keinen Standardwert.  
   
- [**@optname=**] **"***Optname***"**  
+ [**@optname=**] **'***optname***'**  
  Die Replikationsdatenbankoption, die aktiviert oder deaktiviert werden soll. *Optname* ist **Sysname**, und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
 |**Veröffentlichen von Merge**|Die Datenbank kann für die Mergeveröffentlichung verwendet werden.|  
-|**Veröffentlichen**|Die Datenbank kann für andere Veröffentlichungstypen verwendet werden.|  
-|**Abonnieren**|Die Datenbank ist eine Abonnementdatenbank.|  
+|**publish**|Die Datenbank kann für andere Veröffentlichungstypen verwendet werden.|  
+|**subscribe**|Die Datenbank ist eine Abonnementdatenbank.|  
 |**Synchronisieren Sie mit der Sicherung**|Die Datenbank ist für eine koordinierte Sicherung aktiviert. Weitere Informationen finden Sie unter [aktivieren koordinierter Sicherungen für die Transaktionsreplikation &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
   
- [  **@value=**] **"***Wert***"**  
- Gibt an, ob die angegebene Replikationsdatenbankoption aktiviert oder deaktiviert wird. *Wert* ist **Sysname**, und kann **"true"** oder **"false"**. Wenn dieser Wert ist **"false"** und *Optname* ist **Merge veröffentlichen**, Abonnements für die Datenbank mit Mergeveröffentlichung werden ebenfalls gelöscht.  
+`[ @value = ] 'value'` Ist Sie, ob aktiviert oder deaktiviert die angegebene Replikationsdatenbankoption. *Wert* ist **Sysname**, und kann **"true"** oder **"false"**. Wenn dieser Wert ist **"false"** und *Optname* ist **Merge veröffentlichen**, Abonnements für die Datenbank mit Mergeveröffentlichung werden ebenfalls gelöscht.  
   
- [  **@ignore_distributor=**] *Ignore_distributor*  
- Gibt an, ob diese gespeicherte Prozedur ausgeführt wird, ohne eine Verbindung mit dem Verteiler herzustellen. *Ignore_distributor* ist **Bit**, hat den Standardwert **0**, der Verteiler sollte verbunden und mit den neuen Status der Verlegerdatenbank aktualisiert werden. Der Wert **1** sollte nur angegeben werden, wenn der Verteiler nicht zugegriffen werden kann und **Sp_replicationdboption** wird verwendet, um die Veröffentlichung deaktivieren.  
+`[ @ignore_distributor = ] ignore_distributor` Gibt an, ob diese gespeicherte Prozedur ohne Herstellen einer Verbindung mit dem Verteiler ausgeführt wird. *Ignore_distributor* ist **Bit**, hat den Standardwert **0**, der Verteiler sollte verbunden und mit den neuen Status der Verlegerdatenbank aktualisiert werden. Der Wert **1** sollte nur angegeben werden, wenn der Verteiler nicht zugegriffen werden kann und **Sp_replicationdboption** wird verwendet, um die Veröffentlichung deaktivieren.  
   
- [  **@from_scripting=**] *From_scripting*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -82,7 +79,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Löschen einer Veröffentlichung](../../relational-databases/replication/publish/delete-a-publication.md)   
  [Deaktivieren der Veröffentlichung und Verteilung](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [Sys.sysdatabases &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)   
+ [sys.sysdatabases &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   
