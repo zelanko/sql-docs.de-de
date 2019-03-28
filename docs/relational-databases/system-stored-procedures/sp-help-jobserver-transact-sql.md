@@ -18,12 +18,12 @@ ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18408265b75503bc73905eb561f118e4ea950fa8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba2120b4c48ac9df9cc901b4ee789d95f9fc0357
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729898"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533292"
 ---
 # <a name="sphelpjobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +43,14 @@ sp_help_jobserver
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@job_id=** ] *job_id*  
- Die ID des Auftrags, zu dem Informationen zurückgegeben werden sollen. *Job_id* ist **Uniqueidentifier**, hat den Standardwert NULL.  
+`[ @job_id = ] job_id` Die Auftrags-ID für den Informationen zurückgegeben werden soll. *Job_id* ist **Uniqueidentifier**, hat den Standardwert NULL.  
   
- [  **@job_name=** ] **"***Job_name***"**  
- Der Name des Auftrags, für den Informationen zurückgegeben werden sollen. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'` Der Auftragsname, für die Informationen zurückgegeben werden soll. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
- [  **@show_last_run_details=** ] *Show_last_run_details*  
- Gibt an, ob die Informationen der letzten Ausführung Teil des Resultsets sind. *Show_last_run_details* ist **Tinyint**, hat den Standardwert **0**. **0** enthält keine Informationen zur letzten Ausführung, und **1** ist.  
+`[ @show_last_run_details = ] show_last_run_details` Ist, ob die Informationen der letzten Ausführung Teil des Resultsets. *Show_last_run_details* ist **Tinyint**, hat den Standardwert **0**. **0** enthält keine Informationen zur letzten Ausführung, und **1** ist.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

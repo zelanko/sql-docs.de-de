@@ -18,12 +18,12 @@ ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 78cf616c0b09d1404f0c7e7fe5f3b382f08d59a8
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: c18aa6fefb23bb3d388069773aa1633c29859e90
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168811"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533532"
 ---
 # <a name="spsetapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 
@@ -46,11 +46,9 @@ sp_setapprole [ @rolename = ] 'role',
 
 ## <a name="arguments"></a>Argumente
 
- [  **@rolename =** ] **"***Rolle***"**  
- Der Name der Anwendungsrolle, die in der aktuellen Datenbank definiert ist. *Rolle* ist **Sysname**, hat keinen Standardwert. *role* muss in der aktuellen Datenbank vorhanden sein.  
+`[ @rolename = ] 'role'` Ist der Name der Anwendungsrolle in der aktuellen Datenbank definiert. *Rolle* ist **Sysname**, hat keinen Standardwert. *role* muss in der aktuellen Datenbank vorhanden sein.  
   
- [  **@password =** ] **{verschlüsseln N'***Kennwort***'}**  
- Das für die Aktivierung der Anwendungsrolle erforderliche Kennwort. *Kennwort* ist **Sysname**, hat keinen Standardwert. *Kennwort* können mithilfe der ODBC verborgen werden **verschlüsseln** Funktion. Bei Verwendung der **verschlüsseln** -Funktion, das Kennwort muss in eine Unicode-Zeichenfolge konvertiert werden, indem platzieren **N** vor dem ersten Anführungszeichen.  
+`[ @password = ] { encrypt N'password' }` Wird zum Aktivieren der Anwendungsrolle erforderliche Kennwort. *Kennwort* ist **Sysname**, hat keinen Standardwert. *Kennwort* können mithilfe der ODBC verborgen werden **verschlüsseln** Funktion. Bei Verwendung der **verschlüsseln** -Funktion, das Kennwort muss in eine Unicode-Zeichenfolge konvertiert werden, indem platzieren **N** vor dem ersten Anführungszeichen.  
   
  Die Encrypt-Option wird für Verbindungen, verwendet wird, nicht unterstützt **SqlClient**.  
   
@@ -60,14 +58,12 @@ sp_setapprole [ @rolename = ] 'role',
  **@encrypt = 'none'**  
  Gibt an, dass keine Verbergung verwendet wird. Das Kennwort wird als Nur-Text an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] übergeben. Dies ist die Standardeinstellung.  
   
- **@encrypt= 'Odbc'**  
+ **@encrypt= 'odbc'**  
  Gibt an, dass ODBC das Kennwort mithilfe der ODBC verbirgt **verschlüsseln** Funktion vor dem Senden des Kennworts für die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Dies ist nur mit einem ODBC-Client oder dem OLE DB-Anbieter für SQL Server möglich.  
   
- [  **@fCreateCookie =** ] **"true"** | **"false"**  
- Gibt an, ob ein Cookie erstellt werden soll. **"true"** wird implizit in 1 konvertiert. **"false"** wird implizit in 0 konvertiert.  
+`[ @fCreateCookie = ] true | false` Gibt an, ob ein Cookie erstellt werden. **"true"** wird implizit in 1 konvertiert. **"false"** wird implizit in 0 konvertiert.  
   
- [  **@cookie =** ]  **@cookie AUSGABE**  
- Gibt einen Ausgabeparameter an, in dem das Cookie enthalten sein soll. Das Cookie wird nur generiert, wenn der Wert des **@fCreateCookie** ist **"true"**. **varbinary(8000)**  
+`[ @cookie = ] @cookie OUTPUT` Gibt einen Output-Parameter, um das Cookie enthalten. Das Cookie wird nur generiert, wenn der Wert des **@fCreateCookie** ist **"true"**. **varbinary(8000)**  
   
 > [!NOTE]  
 > Der **OUTPUT** -Cookieparameter für **sp_setapprole** ist zurzeit als **varbinary(8000)** dokumentiert, was der korrekten maximalen Länge entspricht. Die aktuelle Implementierung gibt jedoch **varbinary(50)** zurück. Anwendungen müssen weiterhin **varbinary(8000)** reservieren, damit die Anwendung weiterhin ordnungsgemäß ausgeführt wird, falls die Rückgabegröße des Cookies in einer zukünftigen Version erhöht wird.

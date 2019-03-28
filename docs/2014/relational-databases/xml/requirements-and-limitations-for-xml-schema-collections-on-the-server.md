@@ -21,18 +21,18 @@ helpviewer_keywords:
 - schema collections [SQL Server], guidelines
 - lexical representation
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 79bff5e280731a52681c36ec4935e8935d460071
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 245b844872070ee16104a90ecc0734462bdad3b5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073150"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533481"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Anforderungen und Einschränkungen für XML-Schemaauflistungen auf dem Server
-  Die Validierung von XML-Schema Definition Language (XSD) weist einige Einschränkungen für SQL-Spalten, mit denen die `xml` -Datentyp. Die folgende Tabelle liefert Einzelheiten zu diesen Einschränkungen und stellt außerdem Richtlinien zum Ändern des XSD-Schemas für die Verwendung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bereit. Die Themen in diesem Abschnitt enthalten zusätzliche Informationen über bestimmte Einschränkungen sowie eine Anleitung zur Arbeit mit ihnen.  
+  Die Überprüfung mit der XML-Schemadefinitionssprache (XSD) weist einige Einschränkungen für SQL-Spalten auf, die den `xml`-Datentyp verwenden. Die folgende Tabelle liefert Einzelheiten zu diesen Einschränkungen und stellt außerdem Richtlinien zum Ändern des XSD-Schemas für die Verwendung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bereit. Die Themen in diesem Abschnitt enthalten zusätzliche Informationen über bestimmte Einschränkungen sowie eine Anleitung zur Arbeit mit ihnen.  
   
 |Element|Einschränkung|  
 |----------|----------------|  
@@ -41,7 +41,7 @@ ms.locfileid: "48073150"
 |**\<xsd:include>**|Zurzeit unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dieses Element nicht. XML-Schemas, die dieses Element enthalten, werden vom Server zurückgewiesen.<br /><br /> Als Lösung können XML-Schemas, die die **\<<xsd:include>**-Direktive enthalten, so vorverarbeitet werden, dass die Inhalte aller enthaltenen Schemas kopiert und in einem einzigen Schema für den Upload auf den Server zusammengeführt werden. Weitere Informationen finden Sie unter [Vorverarbeiten eines Schemas zum Zusammenführen eingeschlossener Schemas](preprocess-a-schema-to-merge-included-schemas.md).|  
 |**\<xsd:key>**,  **\<xsd: keyref>** und **\<xsd: unique>**|Zurzeit unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diese XSD-basierten Einschränkungen zum Erzwingen der Eindeutigkeit oder zum Einrichten von Schlüsseln oder Schlüsselverweisen nicht. XML-Schemas, die diese Elemente enthalten, können nicht registriert werden.|  
 |**\<xsd:redefine>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dieses Element nicht. Informationen über eine andere Möglichkeit, Schemas zu aktualisieren, finden Sie unter [Das &#60;xsd:redefine&#62;-Element](the-xsd-redefine-element.md)bereit.|  
-|**\<xsd:simpleType>**-Werte|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt nur millisekundengenauigkeit für simple-Datentypen, die sekundenkomponenten `xs:time` und `xs:dateTime`, sowie eine Genauigkeit von 100 Nanosekunden für `xs:time` und `xs:dateTime`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] legt Einschränkungen für alle erkannten XSD-Enumerationen des einfachen Typs fest.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt nicht den „NaN“-Wert in **\<xsd:simpleType>**-Deklarationen.<br /><br /> Weitere Informationen finden Sie unter[Werte für &#60;xsd:simpleType&#62;-Deklarationen](values-for-xsd-simpletype-declarations.md)bereit.|  
+|**\<xsd:simpleType>**-Werte|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt nur Millisekundengenauigkeit für simple-Datentypen, die Sekundenkomponenten besitzen (mit Ausnahme von `xs:time` und `xs:dateTime`), und 100-Nanosekundengenauigkeit für `xs:time` und `xs:dateTime`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] legt Einschränkungen für alle erkannten XSD-Enumerationen des einfachen Typs fest.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt nicht den „NaN“-Wert in **\<xsd:simpleType>**-Deklarationen.<br /><br /> Weitere Informationen finden Sie unter[Werte für &#60;xsd:simpleType&#62;-Deklarationen](values-for-xsd-simpletype-declarations.md)bereit.|  
 |**xsi:schemaLocation** und **xsi:noNamespaceSchemaLocation**|In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden diese Attribute ignoriert, wenn sie in den XML-Instanzdaten vorhanden sind, die in eine Spalte oder Variable des `xml`-Datentyps eingefügt werden.|  
 |**xs:QName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt keine von **xs:QName** abgeleiteten Typen, die ein Beschränkungselement des XML-Schemas verwenden.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt keine union-Typen, die **xs:QName** als Memberelement besitzen.<br /><br /> Weitere Informationen finden Sie unter [Der xs:QName-Typ](the-xs-qname-type.md).|  
 |Hinzufügen von Elementen zu einer vorhandenen Ersetzungsgruppe|Das Hinzufügen von Elementen zu einer vorhandenen Ersetzungsgruppe in einer XML-Schemaauflistung wird nicht unterstützt. Eine Ersetzungsgruppe in einem XML-Schema ist insofern eingeschränkt, als das Headelement und alle seine Memberelemente in der gleichen {CREATE &#124; ALTER} XML SCHEMA COLLECTION-Anweisung definiert werden müssen.|  
@@ -56,7 +56,7 @@ ms.locfileid: "48073150"
 |Bedingungen des Typs Nicht genügend Arbeitsspeicher|Wenn Sie mit großen XML-Schemaauflistungen arbeiten, kann es vorkommen, dass nicht genügend Arbeitsspeicher verfügbar ist. Lösungen für dieses Problem finden Sie unter [Große XML-Schemasammlungen und Bedingungen des Typs „Nicht genügend Arbeitsspeicher“](large-xml-schema-collections-and-out-of-memory-conditions.md).|  
 |Wiederholte Werte|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weist Schemas zurück, in denen das block- oder final-Attribut wiederholte Werte aufweist, z.B. „restriction restriction“ oder „extension extension“.|  
 |Schemakomponentenbezeichner|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beschränkt Bezeichner von Schemakomponenten auf eine maximale Länge von 1000 Unicode-Zeichen. Außerdem werden keine Ersatzzeichenpaare mit Bezeichnern unterstützt.|  
-|Zeitzoneninformationen|In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höheren Versionen werden Zeitzoneninformationen wird für vollständig unterstützt `xs:date`, `xs:time`, und `xs:dateTime` Werte für die XML-Schema-Validierung. Im [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Abwärtskompatibilitätsmodus werden Zeitzoneninformationen immer zu koordinierter Weltzeit (Greenwich Mean Time) normalisiert. Für Elemente des `dateTime`-Datentyps konvertiert der Server die bereitgestellte Zeit mithilfe des Offsetwerts ("-05:00") in GMT und gibt die entsprechende GMT-Zeit zurück.|  
+|Zeitzoneninformationen|In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höheren Versionen werden Zeitzoneninformationen für `xs:date`-, `xs:time`- und `xs:dateTime`-Werte zur XML-Schemaüberprüfung voll unterstützt. Im [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Abwärtskompatibilitätsmodus werden Zeitzoneninformationen immer zu koordinierter Weltzeit (Greenwich Mean Time) normalisiert. Für Elemente des `dateTime`-Datentyps konvertiert der Server die bereitgestellte Zeit mithilfe des Offsetwerts ("-05:00") in GMT und gibt die entsprechende GMT-Zeit zurück.|  
 |Union-Datentypen|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt keine Einschränkungen aus union-Datentypen.|  
 |Variable Genauigkeitsdezimalwerte|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt keine variablen Genauigkeitsdezimalwerte. Der **xs:decimal** -Datentyp stellt Dezimalzahlen mit variabler Genauigkeit dar. Für minimal konforme XML-Prozessoren müssen Dezimalzahlen mit mindestens `totalDigits=18`unterstützt werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt `totalDigits=38,` , die Dezimalstellen sind jedoch auf 10 beschränkt. Alle durch **xs:decimal** instanziierten Werte werden intern durch den Server mithilfe des SQL-Datentyps „numeric (38, 10)“ dargestellt.|  
   

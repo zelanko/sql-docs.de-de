@@ -18,12 +18,12 @@ ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d4ee1eb7770f9d2c9fe3ab8ed58f59c7d05302a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3344ad65a2445a8d39451f6a048f057b7158d135
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833714"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533402"
 ---
 # <a name="sptracecreate-transact-sql"></a>sp_trace_create (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +48,9 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@traceid=** ] *Trace_id*  
- Die Anzahl von zugewiesene [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in die neue Ablaufverfolgung. Benutzereingaben werden ignoriert. *Trace_id* ist **Int**, hat den Standardwert NULL. Der Benutzer verwendet die *Trace_id* zu identifizieren, ändern und Steuern der Ablaufverfolgung, die von dieser gespeicherten Prozedur definierten Wert.  
+`[ @traceid = ] trace_id` Die Anzahl von zugewiesene [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in die neue Ablaufverfolgung. Benutzereingaben werden ignoriert. *Trace_id* ist **Int**, hat den Standardwert NULL. Der Benutzer verwendet die *Trace_id* zu identifizieren, ändern und Steuern der Ablaufverfolgung, die von dieser gespeicherten Prozedur definierten Wert.  
   
- [ **@options=** ] *option_value*  
- Gibt die für die Ablaufverfolgung festgelegten Optionen an. *Option_value* ist **Int**, hat keinen Standardwert. Benutzer können eine Kombination dieser Optionen wählen, indem sie den Summenwert der gewünschten Optionen angeben. Um die Optionen TRACE_FILE_ROLLOVER und SHUTDOWN_ON_ERROR zu aktivieren, geben Sie z. B. **6** für *Option_value*.  
+`[ @options = ] option_value` Gibt die für die Ablaufverfolgung festgelegten Optionen. *Option_value* ist **Int**, hat keinen Standardwert. Benutzer können eine Kombination dieser Optionen wählen, indem sie den Summenwert der gewünschten Optionen angeben. Um die Optionen TRACE_FILE_ROLLOVER und SHUTDOWN_ON_ERROR zu aktivieren, geben Sie z. B. **6** für *Option_value*.  
   
  In der folgenden Tabelle werden die Optionen, Beschreibungen und die zugehörigen Werte aufgeführt.  
   
@@ -62,8 +60,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 |SHUTDOWN_ON_ERROR|**4**|Gibt an, dass SQL Server heruntergefahren wird, wenn die Ablaufverfolgung nicht in die Datei geschrieben werden kann, unabhängig vom Grund. Diese Option ist beim Ausführen von Ablaufverfolgungen zur Sicherheitsüberwachung hilfreich.|  
 |TRACE_PRODUCE_BLACKBOX|**8**|Gibt an, dass eine Aufzeichnung der letzten 5 MB der Ablaufverfolgungsinformationen, die vom Server erzeugt wurden, von diesem Server gespeichert werden. TRACE_PRODUCE_BLACKBOX ist mit keiner der anderen Optionen kompatibel.|  
   
- [ **@tracefile=** ] *'**trace_file**'*  
- Gibt den Speicherort und den Dateinamen zum Schreiben der Ablaufverfolgung an. *Trace_file* ist **nvarchar(245)** hat keinen Standardwert. *Trace_file* kann entweder ein lokales Verzeichnis (beispielsweise N 'C:\MSSQL\Trace\trace.trc') oder einen UNC-Pfad für eine Freigabe oder ein Pfad sein (N'\\\\*Servername*\\*Sharename* \\ *Directory*\trace.trc').  
+`[ @tracefile = ] 'trace_file'` Gibt den Speicherort und Dateinamen, der die Ablaufverfolgung geschrieben wird. *Trace_file* ist **nvarchar(245)** hat keinen Standardwert. *Trace_file* kann entweder ein lokales Verzeichnis (beispielsweise N 'C:\MSSQL\Trace\trace.trc') oder einen UNC-Pfad für eine Freigabe oder ein Pfad sein (N'\\\\*Servername*\\*Sharename* \\ *Directory*\trace.trc').  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fügt eine **trc** Erweiterung für alle Namen von Ablaufverfolgungsdateien. Wenn die Option TRACE_FILE_ROLLOVER und ein *Max_file_size* angegeben sind, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine neue Ablaufverfolgungsdatei erstellt, wenn die maximale Größe die ursprünglichen Ablaufverfolgungsdatei erreicht. Die neue Datei hat den gleichen Namen wie die ursprüngliche Datei, aber __*n* angefügt wird, um anzugeben, die Reihenfolge, beginnend mit **1**. Wenn die erste Datei heißt beispielsweise **filename.trc**, ist die zweite Datei mit dem Namen **filename_1.trc**.  
   
@@ -78,18 +75,15 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  *Trace_file* kann nicht angegeben werden, wenn die Option TRACE_PRODUCE_BLACKBOX verwendet wird.  
   
- [  **@maxfilesize=** ] *Max_file_size*  
- Gibt die Maximalgröße in Megabyte (MB) an, auf die eine Ablaufverfolgungsdatei vergrößert werden kann. *Max_file_size* ist **Bigint**, hat den Standardwert des **5**.  
+`[ @maxfilesize = ] max_file_size` Gibt an, dass die maximale Größe in Megabyte (MB) eine Ablaufverfolgungsdatei vergrößert werden kann. *Max_file_size* ist **Bigint**, hat den Standardwert des **5**.  
   
  Wenn dieser Parameter ohne die Option TRACE_FILE_ROLLOVER angegeben wird, beendet die Ablaufverfolgung Aufzeichnung in der Datei an, wenn der verwendete Speicherplatz den Wert überschreitet *Max_file_size*.  
   
- [ **@stoptime=** ] **'***stop_time***'**  
- Gibt das Datum und die Uhrzeit an, zu denen die Ablaufverfolgung beendet wird. *Stop_time* ist **"DateTime"**, hat den Standardwert NULL. Beim Wert NULL wird die Ablaufverfolgung so lange ausgeführt, bis sie manuell beendet oder der Server heruntergefahren wird.  
+`[ @stoptime = ] 'stop_time'` Gibt an, das Datum und die Uhrzeit, die die Ablaufverfolgung beendet wird. *Stop_time* ist **"DateTime"**, hat den Standardwert NULL. Beim Wert NULL wird die Ablaufverfolgung so lange ausgeführt, bis sie manuell beendet oder der Server heruntergefahren wird.  
   
  Wenn beide *Stop_time* und *Max_file_size* angegeben sind, TRACE_FILE_ROLLOVER ist nicht angegeben, die Ablaufverfolgung beendet wird, wenn entweder die angegebene Beendigungszeit oder die maximale Dateigröße erreicht ist. Wenn *Stop_time*, *Max_file_size*, und TRACE_FILE_ROLLOVER angegeben sind, wird die Ablaufverfolgung beendet wird an die angegebene Beendigungszeit, sofern die Ablaufverfolgung gänzlich nicht auf dem Laufwerk.  
   
- [  **@filecount=** ] **"***Max_rollover_files***"**  
- Gibt die maximale Anzahl von Ablaufverfolgungsdateien an, die mit dem gleichen Basisdateinamen verwaltet werden sollen. *MAX_ROLLOVER_FILES* ist **Int**, größer als 1. Dieser Parameter ist nur dann gültig, wenn die Option TRACE_FILE_ROLLOVER angegeben wird. Wenn *Max_rollover_files* angegeben wird, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht, die keine Verwaltung mehr als *Max_rollover_files* Ablaufverfolgungsdateien, indem die älteste Ablaufverfolgungsdatei gelöscht wird, bevor Sie eine neue Ablaufverfolgungsdatei öffnen. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird das Alter von Ablaufverfolgungsdateien durch das Anfügen einer Nummer an den Basisdateinamen nachverfolgt.  
+`[ @filecount = ] 'max_rollover_files'` Gibt die maximale Anzahl von Ablaufverfolgungsdateien an, die mit dem gleichen Basisdateinamen verwaltet werden. *MAX_ROLLOVER_FILES* ist **Int**, größer als 1. Dieser Parameter ist nur dann gültig, wenn die Option TRACE_FILE_ROLLOVER angegeben wird. Wenn *Max_rollover_files* angegeben wird, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht, die keine Verwaltung mehr als *Max_rollover_files* Ablaufverfolgungsdateien, indem die älteste Ablaufverfolgungsdatei gelöscht wird, bevor Sie eine neue Ablaufverfolgungsdatei öffnen. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird das Alter von Ablaufverfolgungsdateien durch das Anfügen einer Nummer an den Basisdateinamen nachverfolgt.  
   
  Z. B., wenn die *Trace_file* -Parameter angegeben wird als "c:\mytrace", eine Datei mit dem Namen "c:\mytrace_123.trc" älter als eine Datei mit dem Namen "c:\mytrace_124.trc". Wenn *Max_rollover_files* und SQL Server die Datei "c:\mytrace_123.trc" löscht dann vor dem Erstellen der Ablaufverfolgungsdatei "c:\mytrace_125.trc" ist auf 2 festgelegt.  
   
@@ -134,7 +128,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
 -   Der Standardwert *File_size* wie bei anderen ablaufverfolgungen 5 MB ist und geändert werden kann.  
   
--   Es kann kein Dateiname angegeben werden. Die Datei wird als gespeichert werden: **N'%SQLDIR%\MSSQL\DATA\blackbox.trc "**  
+-   Es kann kein Dateiname angegeben werden. Die Datei wird gespeichert als: **N'%SQLDIR%\MSSQL\DATA\blackbox.trc'**  
   
 -   Nur die folgenden Ereignisse und deren Spalten sind in der Ablaufverfolgung enthalten:  
   
