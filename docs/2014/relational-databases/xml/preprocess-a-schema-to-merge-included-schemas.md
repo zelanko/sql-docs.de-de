@@ -16,15 +16,15 @@ helpviewer_keywords:
 - preprocessor tool [XML schemas]
 - XML schemas [SQL Server]
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78405d434ee32270363821077ca436702cb7c797
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f878c64620ab0cd3f0bc439164ef86b54ab3b78e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161250"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526352"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>Vorverarbeiten eines Schemas zum Zusammenführen eingeschlossener Schemas
   Das W3C XSD **include** -Element stellt Unterstützung für Schemamodularität zur Verfügung, in dem ein XML-Schema in mehrere physische Dateien partitioniert werden kann. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt dieses Element zurzeit nicht. XML-Schemas, die dieses Element enthalten, werden vom Server zurückgewiesen.  

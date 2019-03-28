@@ -16,12 +16,12 @@ ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 673baf1b41e3ffcceaa635191352af376008313e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ddf87e08b113d3512a8d824ff4abdf1359476e32
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779352"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530155"
 ---
 # <a name="sphelpmergepartition-transact-sql"></a>sp_helpmergepartition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,17 +40,14 @@ sp_helpmergepartition [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication=** ] **"***Veröffentlichung***"**  
- Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@suser_sname=** ] **"***Suser_sname***"**  
- Der SUSER_SNAME-Wert, mit dem eine Partition definiert wird. *SUSER_SNAME* ist **Sysname**, hat den Standardwert NULL. Geben Sie diesen Parameter an, um das Resultset auf die Partitionen einzuschränken, bei denen SUSER_SNAME zu dem angegebenen Wert aufgelöst wird.  
+`[ @suser_sname = ] 'suser_sname'` SUSER_SNAME-Wert, der zum Definieren einer Partitions verwendet wird. *SUSER_SNAME* ist **Sysname**, hat den Standardwert NULL. Geben Sie diesen Parameter an, um das Resultset auf die Partitionen einzuschränken, bei denen SUSER_SNAME zu dem angegebenen Wert aufgelöst wird.  
   
 > [!NOTE]  
 >  Wenn *Suser_sname* angegeben wird, *Host_name* darf NULL sein.  
   
- [  **@host_name=** ] **"***Host_name***"**  
- Der HOST_NAME-Wert, mit dem eine Partition definiert wird. *HOST_NAME* ist **Sysname**, hat den Standardwert NULL. Geben Sie diesen Parameter an, um das Resultset auf die Partitionen einzuschränken, bei denen HOST_NAME zu dem angegebenen Wert aufgelöst wird.  
+`[ @host_name = ] 'host_name'` Der HOST_NAME-Wert wird zum Definieren einer Partitions verwendet werden. *HOST_NAME* ist **Sysname**, hat den Standardwert NULL. Geben Sie diesen Parameter an, um das Resultset auf die Partitionen einzuschränken, bei denen HOST_NAME zu dem angegebenen Wert aufgelöst wird.  
   
 > [!NOTE]  
 >  Wenn *Suser_sname* angegeben wird, *Host_name* darf NULL sein.  
@@ -59,9 +56,9 @@ sp_helpmergepartition [ @publication= ] 'publication'
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**Partition**|**int**|Identifiziert die Abonnentenpartition.|  
-|**HOST_NAME**|**sysname**|Verwendete Wert beim Erstellen der Partition für ein Abonnement, den Wert des gefiltert wird die [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) -Funktion beim Abonnenten.|  
-|**SUSER_SNAME**|**sysname**|Verwendete Wert beim Erstellen der Partition für ein Abonnement, den Wert des gefiltert wird die [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) -Funktion beim Abonnenten.|  
+|**partition**|**int**|Identifiziert die Abonnentenpartition.|  
+|**host_name**|**sysname**|Verwendete Wert beim Erstellen der Partition für ein Abonnement, den Wert des gefiltert wird die [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) -Funktion beim Abonnenten.|  
+|**suser_sname**|**sysname**|Verwendete Wert beim Erstellen der Partition für ein Abonnement, den Wert des gefiltert wird die [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) -Funktion beim Abonnenten.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|Speicherort der gefilterten Datenmomentaufnahme für die Abonnentenpartition.|  
 |**date_refreshed**|**datetime**|Das Datum, an dem der Momentaufnahmeauftrag zuletzt ausgeführt wurde, um eine gefilterte Datenmomentaufnahme für die Partition zu generieren.|  
 |**dynamic_snapshot_jobid**|**uniqueidentifier**|Identifiziert den Auftrag, der die gefilterte Datenmomentaufnahme für eine Partition erstellt.|  
@@ -77,6 +74,6 @@ sp_helpmergepartition [ @publication= ] 'publication'
   
 ## <a name="see-also"></a>Siehe auch  
  [sp_addmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
- [Sp_dropmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md)  
+ [sp_dropmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md)  
   
   

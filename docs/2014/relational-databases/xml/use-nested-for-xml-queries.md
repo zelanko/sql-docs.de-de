@@ -11,15 +11,15 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested FOR XML
 - nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a804585f215b7328890d2f0400c77307af7b1b4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7a06d30f25f5c78236fe30f148b254ee817dfc0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211140"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528471"
 ---
 # <a name="use-nested-for-xml-queries"></a>Verwenden von geschachtelten FOR XML-Abfragen
   Die `xml` -Datentyp und die [TYPE-Direktive in FOR XML-Abfragen](type-directive-in-for-xml-queries.md) ermöglichen von FOR XML-Abfragen zurückgegebene XML-Code sowohl auf dem Server als auch auf dem Client verarbeitet werden.  
@@ -39,7 +39,7 @@ SELECT @x
 --<row ProductModelID="119" Name="Bike Wash" />  
 ```  
   
- Sie können außerdem verarbeiten den XML-Code in der Variablen zurückgegeben `@x`, mithilfe einer der der `xml` -Datentypmethoden. So können Sie z. B. den Attributwert von `ProductModelID` mithilfe der [value()-Methode](/sql/t-sql/xml/value-method-xml-data-type)abrufen.  
+ Sie können den in der Variablen `@x` zurückgegebenen XML-Code zusätzlich verarbeiten, indem Sie eine der `xml`-Datentypmethoden verwenden. So können Sie z. B. den Attributwert von `ProductModelID` mithilfe der [value()-Methode](/sql/t-sql/xml/value-method-xml-data-type)abrufen.  
   
 ```  
 DECLARE @i int;  
@@ -66,7 +66,7 @@ FOR XML RAW, TYPE,ROOT('myRoot');
 </myRoot>  
 ```  
   
- Da das Ergebnis `xml` Typ, Sie können einen der angeben der `xml` -Datentypmethoden direkt für diesen XML-Code, wie in der folgenden Abfrage gezeigt. In der Abfrage wird die [query()-Methode (XML-Datentyp)](/sql/t-sql/xml/query-method-xml-data-type) verwendet, um das erste untergeordnete <`row`>-Element des Elements <`myRoot`> abzurufen.  
+ Da das Ergebnis dem `xml`-Typ entspricht, können Sie eine der `xml`-Datentypmethoden direkt für diesen XML-Code angeben, wie es in der folgenden Abfrage gezeigt wird. In der Abfrage wird die [query()-Methode (XML-Datentyp)](/sql/t-sql/xml/query-method-xml-data-type) verwendet, um das erste untergeordnete <`row`>-Element des Elements <`myRoot`> abzurufen.  
   
 ```  
 SELECT  (SELECT ProductModelID, Name  
@@ -83,7 +83,7 @@ SELECT  (SELECT ProductModelID, Name
 ```  
   
 ## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>Zurückgeben von Ergebnissen innerer FOR XML-Abfragen als XML-Typinstanzen an äußere Abfragen  
- Sie können geschachtelte schreiben `FOR XML` Abfragen, in dem das Ergebnis der inneren Abfrage, als zurückgegeben wird, ein `xml` Typ für die äußere Abfrage. Zum Beispiel:  
+ Sie können geschachtelte `FOR XML`-Abfragen schreiben, bei denen das Ergebnis der inneren Abfrage als `xml`-Typ an die äußere Abfrage zurückgegeben wird. Zum Beispiel:  
   
 ```  
 SELECT Col1,   

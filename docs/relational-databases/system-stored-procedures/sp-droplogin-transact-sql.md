@@ -18,20 +18,20 @@ ms.assetid: e58684d1-c394-48de-906e-da6ee91100c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 05adcc690b1fdb869f8de4d306e989e74d831cf8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: adaa563fa7142375d357e50d86ad0e33a8ea62e7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659738"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527252"
 ---
 # <a name="spdroplogin-transact-sql"></a>sp_droplogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Entfernt einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen. Dadurch wird der Zugriff auf eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter diesem Anmeldenamen verhindert.  
+  Entfernt einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamen. Dadurch wird der Zugriff auf eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter diesem Anmeldenamen verhindert.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwendung [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md) stattdessen.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md) .  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,8 +43,7 @@ sp_droplogin [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@loginame =** ] **'***login***'**  
- Der Anmeldename, der entfernt werden soll. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. *Anmeldung* muss bereits vorhanden sein, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+`[ @loginame = ] 'login'` Ist die Anmeldung entfernt werden soll. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. *Anmeldung* muss bereits vorhanden sein, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -58,7 +57,7 @@ sp_droplogin [ @loginame = ] 'login'
  Erfordert die ALTER ANY LOGIN-Berechtigung auf dem Server.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird mithilfe von `DROP LOGIN` der Anmeldename `Victoria` aus einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt. Dies ist die bevorzugte Methode.  
+ Im folgenden Beispiel wird mithilfe von `DROP LOGIN` der Anmeldename `Victoria` aus einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Dies ist die bevorzugte Methode.  
   
 ```  
 DROP LOGIN Victoria;  

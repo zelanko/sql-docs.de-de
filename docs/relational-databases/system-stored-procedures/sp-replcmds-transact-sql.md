@@ -16,12 +16,12 @@ ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c868fe69df1f3fd34fe0c1f550507e7db7b6c944
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 42d64a5a62fd1d1371604c7d8311ba42dabf7861
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823424"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529712"
 ---
 # <a name="spreplcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,15 +41,14 @@ sp_replcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@maxtrans=**] *Maxtrans*  
- Die Anzahl der Transaktionen, zu denen Informationen zurückgegeben werden sollen. *Maxtrans* ist **Int**, hat den Standardwert **1**, die angibt, dass der nächsten Transaktions, die Verteilung wartet.  
+`[ @maxtrans = ] maxtrans` Ist die Anzahl von Transaktionen, die Informationen zurückgegeben werden sollen. *Maxtrans* ist **Int**, hat den Standardwert **1**, die angibt, dass der nächsten Transaktions, die Verteilung wartet.  
   
 ## <a name="result-sets"></a>Resultsets  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**Artikel-id**|**int**|Die ID des Artikels.|  
-|**verbleiben**|**bit**|Gibt an, ob es sich um einen Teilbefehl handelt.|  
+|**partial_command**|**bit**|Gibt an, ob es sich um einen Teilbefehl handelt.|  
 |**Befehl**|**varbinary(1024)**|Der Befehlswert.|  
 |**xactid**|**binary(10)**|Transaktions-ID|  
 |**xact_seqno**|**varbinary(16)**|Die Transaktionssequenznummer.|  
@@ -82,9 +81,9 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
 ## <a name="see-also"></a>Siehe auch  
  [Fehlermeldungen](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
- [Sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
- [Sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
- [Sp_repltrans &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
+ [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
+ [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [sp_repltrans &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

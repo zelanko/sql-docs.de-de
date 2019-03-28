@@ -16,12 +16,12 @@ ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18ccbda41c5b7683c33bc0258a05738ab227ec69
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e73b67cce73005b7a992c09a436dbda1db5c4e52
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813316"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526612"
 ---
 # <a name="spreplshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@maxtrans** =] *Maxtrans*  
- Die Anzahl der Transaktionen, über die Informationen zurückgegeben werden sollen. *Maxtrans* ist **Int**, hat den Standardwert **1**, der angibt, dass der maximalen Anzahl von Transaktionen mit ausstehender Replikation für die **Sp_replshowcmds** Gibt Informationen zurück.  
+`[ @maxtrans = ] maxtrans` Ist die Anzahl der Transaktionen, um Informationen zurückzugeben. *Maxtrans* ist **Int**, hat den Standardwert **1**, der angibt, dass der maximalen Anzahl von Transaktionen mit ausstehender Replikation für die **Sp_replshowcmds** Gibt Informationen zurück.  
   
 ## <a name="result-sets"></a>Resultsets  
  **Sp_replshowcmds** ist eine Diagnoseprozedur, die Informationen zur Veröffentlichungsdatenbank zurückgibt, von dem sie ausgeführt wird.  
@@ -71,9 +70,9 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 ## <a name="see-also"></a>Siehe auch  
  [Fehlermeldungen](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [Sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
- [Sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
- [Sp_repltrans &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
+ [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
+ [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [sp_repltrans &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

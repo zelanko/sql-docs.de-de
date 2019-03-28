@@ -10,12 +10,12 @@ ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 22530fafb9c41ec7bee87c43589f6eaba0fa3f70
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 9525ef65973baa38ae19ba4681e4a93f949c004a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712461"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531132"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>Erstellen systemintern kompilierter gespeicherter Prozeduren
   Von systemintern kompilierten gespeicherten Prozeduren wird nicht die vollständige [!INCLUDE[tsql](../../includes/tsql-md.md)] -Programmier- und -Abfrageoberfläche implementiert. Es gibt bestimmte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Konstrukte, die innerhalb systemintern kompilierter gespeicherter Prozeduren nicht verwendet werden können. Weitere Informationen finden Sie unter [unterstützte Konstrukte in systemintern kompilierten gespeicherten Prozeduren](../in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "52712461"
   
  Systemintern kompilierte gespeicherte Prozeduren werden mithilfe von [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql) erstellt. Das folgende Beispiel zeigt eine speicheroptimierte Tabelle und eine systemintern kompilierte gespeicherte Prozedur, die zum Einfügen von Zeilen in die Tabelle verwendet wird.  
   
-```tsql  
+```sql  
 create table dbo.Ord  
 (OrdNo integer not null primary key nonclustered,   
  OrdDate datetime not null,   
@@ -98,7 +98,7 @@ go
   
      Verwenden Sie eine gespeicherte Wrapperprozedur (datenträgerbasiert), und ändern Sie diese Prozedur, sodass sie auf SP_Vnew zeigt. Der Nachteil bei dieser Vorgehensweise sind die Leistungsverluste durch die Dereferenzierung.  
   
-    ```tsql  
+    ```sql  
     ALTER PROCEDURE dbo.SP p1,...,pn  
     AS  
       EXEC dbo.SP_Vnew p1,...,pn  

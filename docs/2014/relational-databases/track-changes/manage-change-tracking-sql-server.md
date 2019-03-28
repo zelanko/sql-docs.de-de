@@ -15,12 +15,12 @@ ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: be3f9c61d3c035959def4a46f91eff605e475569
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c9d0deb3567daa64afb46c96a4e93c9da9c0972a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808802"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528252"
 ---
 # <a name="manage-change-tracking-sql-server"></a>Verwalten der Änderungsnachverfolgung (SQL Server)
   In diesem Thema wird beschrieben, wie die Änderungsnachverfolgung verwaltet wird. Außerdem werden die Vorgehensweisen zum Konfigurieren der Sicherheit und zum Ermitteln der Auswirkungen der Änderungsnachverfolgung auf Speicherung und Leistung beschrieben.  
@@ -96,7 +96,7 @@ ms.locfileid: "52808802"
   
  Wie bei anderen internen Tabellen auch können Sie den für die Änderungsnachverfolgungstabelle verwendeten Speicher mit der gespeicherten Prozedur [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) festlegen. Die Namen der internen Tabellen können mit der [sys.internal_tables](/sql/relational-databases/system-catalog-views/sys-internal-tables-transact-sql) -Katalogsicht abgerufen werden, wie im nachfolgenden Beispiel dargestellt.  
   
-```tsql  
+```sql  
 sp_spaceused 'sys.change_tracking_309576141'  
 sp_spaceused 'sys.syscommittab'  
 ```  

@@ -16,12 +16,12 @@ ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da8e0d9ab1959251bf5e41e35e4b3d647e072d8a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b9d03099ae48bf463df82d1392e97d4729ec518a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207331"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528782"
 ---
 # <a name="spreinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,32 +45,24 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publication=**] **'***publication***'**  
- Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert all.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert all.  
   
- [  **@article=**] **"***Artikel***"**  
- Der Name des Artikels. *Artikel* ist **Sysname**, hat den Standardwert all. Für eine sofort aktualisierbare Veröffentlichung *Artikel* muss **alle**ist, andernfalls die gespeicherte Prozedur überspringt die Veröffentlichung und meldet einen Fehler.  
+`[ @article = ] 'article'` Ist der Name des Artikels. *Artikel* ist **Sysname**, hat den Standardwert all. Für eine sofort aktualisierbare Veröffentlichung *Artikel* muss **alle**ist, andernfalls die gespeicherte Prozedur überspringt die Veröffentlichung und meldet einen Fehler.  
   
- [  **@subscriber=**] **"***Abonnenten***"**  
- Der Name des Abonnenten. *Abonnenten* ist **Sysname**, hat keinen Standardwert.  
+`[ @subscriber = ] 'subscriber'` Ist der Name des Abonnenten. *Abonnenten* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@destination_db=**] **"***Destination_db***"**  
- Der Name der Zieldatenbank. *Destination_db* ist **Sysname**, hat den Standardwert all.  
+`[ @destination_db = ] 'destination_db'` Ist der Name der Zieldatenbank. *Destination_db* ist **Sysname**, hat den Standardwert all.  
   
- [  **@for_schema_change=**] **"***For_schema_change***"**  
- Gibt an, ob eine Schemaänderung in der Veröffentlichungsdatenbank eine erneute Initialisierung verursacht. *For_schema_change* ist **Bit**, hat den Standardwert 0. Wenn **0**, aktive Abonnements für Veröffentlichungen, die sofortiges Aktualisieren zulassen, werden erneut aktiviert werden, solange die gesamte Veröffentlichung, nicht nur einige Artikel darin, erneut initialisiert werden. Die erneute Initialisierung wird demnach als Ergebnis von Schemaänderungen initiiert. Wenn **1**, aktive Abonnements werden nicht erneut aktiviert, bis der Momentaufnahme-Agent ausgeführt wird.  
+`[ @for_schema_change = ] 'for_schema_change'` Gibt an, ob eine erneute Initialisierung als Ergebnis einer schemaänderung in der Veröffentlichungsdatenbank. *For_schema_change* ist **Bit**, hat den Standardwert 0. Wenn **0**, aktive Abonnements für Veröffentlichungen, die sofortiges Aktualisieren zulassen, werden erneut aktiviert werden, solange die gesamte Veröffentlichung, nicht nur einige Artikel darin, erneut initialisiert werden. Die erneute Initialisierung wird demnach als Ergebnis von Schemaänderungen initiiert. Wenn **1**, aktive Abonnements werden nicht erneut aktiviert, bis der Momentaufnahme-Agent ausgeführt wird.  
   
- [  **@publisher=** ] **"***Verleger***"**  
- Gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  *Publisher* sollte nicht verwendet werden, für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herausgeber.  
   
- [  **@ignore_distributor_failure=** ] *Ignore_distributor_failure*  
- Lässt die erneute Initialisierung zu, auch wenn der Verteiler nicht vorhanden oder offline ist. *Ignore_distributor_failure* ist **Bit**, hat den Standardwert 0. Wenn **0**, erneute Initialisierung erfolglos, wenn der Verteiler nicht vorhanden ist oder offline ist.  
+`[ @ignore_distributor_failure = ] ignore_distributor_failure` Lässt die erneute Initialisierung auch, wenn der Verteiler nicht vorhanden ist oder offline ist. *Ignore_distributor_failure* ist **Bit**, hat den Standardwert 0. Wenn **0**, erneute Initialisierung erfolglos, wenn der Verteiler nicht vorhanden ist oder offline ist.  
   
- [  **@invalidate_snapshot=** ] *Invalidate_snapshot*  
- Erklärt die vorhandene Veröffentlichungsmomentaufnahme für ungültig. *Invalidate_snapshot* ist **Bit**, hat den Standardwert 0. Wenn **1**, eine neue Momentaufnahme für die Veröffentlichung generiert wird.  
+`[ @invalidate_snapshot = ] invalidate_snapshot` Erklärt die vorhandene veröffentlichungsmomentaufnahme für ungültig. *Invalidate_snapshot* ist **Bit**, hat den Standardwert 0. Wenn **1**, eine neue Momentaufnahme für die Veröffentlichung generiert wird.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

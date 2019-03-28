@@ -16,12 +16,12 @@ ms.assetid: 01c8bc21-939e-490d-8cc8-219c068be31e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f98790bbf68309eef561662a6eb0be9f1da34971
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5cae5cfd4c047041437180ced7bf93c4a75cce00
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818802"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526052"
 ---
 # <a name="sphelpsubscriptionerrors-transact-sql"></a>sp_helpsubscriptionerrors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,15 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publisher=** ] **"***Verleger***"**  
- Der Name des Verlegers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher = ] 'publisher'` Ist der Name des Verlegers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@publisher_db=** ] **"***Publisher_db***"**  
- Der Name der Veröffentlichungsdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher_db = ] 'publisher_db'` Ist der Name der Veröffentlichungsdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@publication=** ] **"***Veröffentlichung***"**  
- Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@subscriber=** ] **"***Abonnenten***"**  
- Der Name des Abonnenten. *Abonnenten* ist **Sysname**, hat keinen Standardwert.  
+`[ @subscriber = ] 'subscriber'` Ist der Name des Abonnenten. *Abonnenten* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@subscriber_db=** ] **"***Subscriber_db***"**  
- Ist der Name der Abonnementdatenbank. *Subscriber_db* ist **Sysname**, hat keinen Standardwert.  
+`[ @subscriber_db = ] 'subscriber_db'` Ist der Name der Abonnementdatenbank. *Subscriber_db* ist **Sysname**, hat keinen Standardwert.  
   
 ## <a name="result-set"></a>Resultset  
   
@@ -67,7 +62,7 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
 |**source_type_id**|**int**|Typ-ID der Fehlerquelle.|  
 |**source_name**|**nvarchar(100)**|Name der Fehlerquelle.|  
 |**error_code**|**sysname**|Fehlercode.|  
-|**Fehlertext**|**ntext**|Fehlermeldung.|  
+|**error_text**|**ntext**|Fehlermeldung.|  
 |**xact_seqno**|**varbinary(16)**|Transaktions-Protokollfolgenummer der ersten Transaktion des bei der Ausführung fehlerhaften Batches. Wird nur von Verteilungs-Agents verwendet und ist die Transaktions-Protokollfolgenummer der ersten Transaktion des bei der Ausführung fehlerhaften Batches.|  
 |**command_id**|**int**|Befehls-ID des bei der Ausführung fehlerhaften Batches. Wird nur von Verteilungs-Agents verwendet und ist die Befehls-ID des ersten Befehls des Batches, der bei der Ausführung einen Fehler erzeugt hat.|  
 |**session_id**|**int**|ID der Agentsitzung, in der der Fehler aufgetreten ist.|  

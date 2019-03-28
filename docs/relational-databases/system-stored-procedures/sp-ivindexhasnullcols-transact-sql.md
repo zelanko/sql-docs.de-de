@@ -16,12 +16,12 @@ ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e9ab98dc5beb4f2e07ac7fa62386f9fd44703ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 77a0e3f1795545e553347ae699e719af2ad506b4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823328"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531575"
 ---
 # <a name="spivindexhasnullcols-transact-sql"></a>sp_ivindexhasnullcols (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@viewname**=] **"***View_name***"**  
- Der Name der Sicht, die überprüft werden soll. *View_name* ist **Sysname**, hat keinen Standardwert.  
+`[ @viewname = ] 'view_name'` Ist der Name der Ansicht um zu überprüfen. *View_name* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@fhasnullcols**=] *Field_has_null_columns* Ausgabe  
- Das Flag, das angibt, ob der Sichtindex Spalten enthält, die NULL zulassen. *View_name* ist **Sysname**, hat keinen Standardwert. Gibt einen Wert von **1** , wenn der Sichtindex über Spalten verfügt, die NULL zulassen. Gibt einen Wert von **0** , wenn die Sicht keine Spalten enthält, die NULL-Werte zulassen.  
+`[ @fhasnullcols = ] field_has_null_columns OUTPUT` Das Flag, das angibt, ob der Sichtindex über Spalten verfügt, die NULL zulassen. *View_name* ist **Sysname**, hat keinen Standardwert. Gibt einen Wert von **1** , wenn der Sichtindex über Spalten verfügt, die NULL zulassen. Gibt einen Wert von **0** , wenn die Sicht keine Spalten enthält, die NULL-Werte zulassen.  
   
 > [!NOTE]  
 >  Wenn die gespeicherte Prozedur selbst einen Rückgabecode zurückgibt **1**, d. h. die Ausführung der gespeicherten Prozedur fehl, ist dieser Wert ist **0** und sollte ignoriert werden.  

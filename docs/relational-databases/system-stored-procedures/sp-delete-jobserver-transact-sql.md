@@ -18,12 +18,12 @@ ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 886f63ad94921451ca7136064f2148b46eeaba17
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04874761ce88069f35c75d5e2ac3b6354a5af5fe
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729722"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531323"
 ---
 # <a name="spdeletejobserver-transact-sql"></a>sp_delete_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,14 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@job_id=** ] *job_id*  
- Die ID des Auftrags, aus dem der angegebene Zielserver entfernt wird. *Job_id* ist **Uniqueidentifier**, hat den Standardwert NULL.  
+`[ @job_id = ] job_id` Die ID des Auftrags, aus dem der angegebene Zielserver entfernt werden wird. *Job_id* ist **Uniqueidentifier**, hat den Standardwert NULL.  
   
- [  **@job_name=** ] **"***Job_name***"**  
- Der Name des Auftrags, aus dem der angegebene Zielserver entfernt wird. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags, aus dem der angegebene Zielserver entfernt werden wird. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Entweder *Job_id* oder *Job_name* muss angegeben werden; können nicht gleichzeitig angegeben werden.  
   
- [  **@server_name=** ] **"***Server***"**  
- Der Name des Zielservers, der aus dem angegebenen Auftrag entfernt werden soll. *Server* ist **nvarchar(30)**, hat keinen Standardwert. *Server* kann **(LOCAL)** oder den Namen eines Remotezielservers.  
+`[ @server_name = ] 'server'` Der Name des Zielservers, der aus dem angegebenen Auftrag entfernt. *Server* ist **nvarchar(30)**, hat keinen Standardwert. *Server* kann **(LOCAL)** oder den Namen eines Remotezielservers.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

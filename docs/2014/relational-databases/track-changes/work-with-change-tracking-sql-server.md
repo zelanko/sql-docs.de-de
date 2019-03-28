@@ -21,12 +21,12 @@ ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ffde1cb7b803c82896b894aa05cb0679459297c5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5ed0a510a6b74e3c33e9cb7ed9d789ad8242a499
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811522"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530925"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Verwenden der Änderungsnachverfolgung (SQL Server)
   Anwendungen, die die Änderungsnachverfolgung verwenden, müssen in der Lage sein,  Überarbeitungen abzurufen, diese auf einen anderen Datenspeicher anzuwenden und die Quelldatenbank zu aktualisieren. In diesem Thema wird beschrieben, wie diese Tasks ausgeführt werden. Zudem wird beschrieben, welche Rolle die Änderungsnachverfolgung spielt, wenn ein Failover auftritt und eine Datenbank von einer Sicherung wiederhergestellt werden muss.  
@@ -61,7 +61,7 @@ ms.locfileid: "52811522"
   
  Das folgende Beispiel zeigt, wie die Anfangsversion der Synchronisierung und das Anfangsdataset abgerufen werden.  
   
-```tsql  
+```sql  
     -- Obtain the current synchronization version. This will be used next time that changes are obtained.  
     SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION();  
   
@@ -75,7 +75,7 @@ ms.locfileid: "52811522"
 ### <a name="using-the-change-tracking-functions-to-obtain-changes"></a>Verwenden der Änderungsnachverfolgungsfunktionen zum Abrufen von Änderungen  
  Verwenden Sie die Funktion CHANGETABLE(CHANGES ...), um die geänderten Zeilen einer Tabelle und die zugehörigen Änderungsinformationen abzurufen. Beispielsweise werden mit der folgenden Abfrage die Änderungen für die `SalesLT.Product` -Tabelle abgerufen.  
   
-```tsql  
+```sql  
 SELECT  
     CT.ProductID, CT.SYS_CHANGE_OPERATION,  
     CT.SYS_CHANGE_COLUMNS, CT.SYS_CHANGE_CONTEXT  
@@ -86,7 +86,7 @@ FROM
   
  In der Regel möchte ein Client nicht nur die Primärschlüssel, sondern die neuesten Daten für eine Zeile abrufen. In diesem Fall führt eine Anwendung die Ergebnisse der CHANGETABLE(CHANGES ...)-Funktion mit den Daten in der Benutzertabelle zusammen. Beispiel: Bei der folgenden Abfrage wird die Funktion mit der `SalesLT.Product` -Tabelle verknüpft, um die Werte der `Name` -Spalte und der `ListPrice` -Spalte abzurufen. Beachten Sie, dass `OUTER JOIN`verwendet wird. Dies ist erforderlich, um sicherzustellen, dass die Änderungsinformationen für die Zeilen zurückgegeben werden, die aus der Benutzertabelle gelöscht wurden.  
   
-```tsql  
+```sql  
 SELECT  
     CT.ProductID, P.Name, P.ListPrice,  
     CT.SYS_CHANGE_OPERATION, CT.SYS_CHANGE_COLUMNS,  
@@ -101,13 +101,13 @@ ON
   
  Verwenden Sie die CHANGE_TRACKING_CURRENT_VERSION()-Funktion wie im folgenden Beispiel gezeigt, um die in der nächsten Änderungsenumeration zu verwendende Version abzurufen.  
   
-```tsql  
+```sql  
 SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION()  
 ```  
   
  Beim Abrufen von Änderungen muss eine Anwendung sowohl CHANGETABLE(CHANGES ...) als auch CHANGE_TRACKING_CURRENT_VERSION() verwenden, wie im folgenden Beispiel gezeigt.  
   
-```tsql  
+```sql  
 -- Obtain the current synchronization version. This will be used the next time CHANGETABLE(CHANGES...) is called.  
 SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION();  
   
@@ -134,7 +134,7 @@ ON
   
  Im folgenden Beispiel wird gezeigt, wie die Gültigkeit des `last_synchronization_version` -Werts für die einzelnen Tabellen überprüft wird.  
   
-```tsql  
+```sql  
 -- Check individual table.  
 IF (@last_synchronization_version < CHANGE_TRACKING_MIN_VALID_VERSION(  
                                    OBJECT_ID('SalesLT.Product')))  
@@ -146,7 +146,7 @@ END
   
  Wie im folgenden Beispiel gezeigt, kann die Gültigkeit des `last_synchronization_version` -Werts für alle Tabellen in der Datenbank überprüft werden.  
   
-```tsql  
+```sql  
 -- Check all tables with change tracking enabled  
 IF EXISTS (  
   SELECT COUNT(*) FROM sys.change_tracking_tables  
@@ -166,7 +166,7 @@ END
   
  Im folgenden Beispiel wird für die Spalte `CT_ThumbnailPhoto` der Wert `NULL` zurückgegeben, wenn diese nicht geändert wurde. Der Wert dieser Spalte kann jedoch auch `NULL` lauten, da sie in `NULL` geändert werden kann. In diesem Fall kann die Anwendung mit der Spalte `CT_ThumbNailPhoto_Changed` angeben, ob die Spalte geändert wurde.  
   
-```tsql  
+```sql  
 DECLARE @PhotoColumnId int = COLUMNPROPERTY(  
     OBJECT_ID('SalesLT.Product'),'ThumbNailPhoto', 'ColumnId')  
   
@@ -244,7 +244,7 @@ ON
   
  Das folgende Beispiel zeigt, wie die Momentaufnahmeisolation für eine Datenbank aktiviert wird.  
   
-```tsql  
+```sql  
 -- The database must be configured to enable snapshot isolation.  
 ALTER DATABASE AdventureWorksLT  
     SET ALLOW_SNAPSHOT_ISOLATION ON;  
@@ -252,7 +252,7 @@ ALTER DATABASE AdventureWorksLT
   
  Eine Momentaufnahmetransaktion wird wie folgt verwendet:  
   
-```tsql  
+```sql  
 SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
 BEGIN TRAN  
   -- Verify that version of the previous synchronization is valid.  
@@ -313,7 +313,7 @@ COMMIT TRAN
   
  Das folgende Beispiel zeigt, wie die Überprüfung auf Konflikte mit der CHANGETABLE(VERSION ...)-Funktion effizient und ohne separate Abfrage ausgeführt wird. Im Beispiel wird von `CHANGETABLE(VERSION ...)` die `SYS_CHANGE_VERSION` für die von `@product id`bestimmte Zeile angegeben. `CHANGETABLE(CHANGES ...)` kann die gleichen Informationen abrufen, aber das wäre weniger effizient. Wenn der Wert von `SYS_CHANGE_VERSION` für die Zeile größer ist als der Wert von `@last_sync_version`, liegt ein Konflikt vor. Wenn ein Konflikt vorliegt, wird die Zeile nicht aktualisiert. Die `ISNULL()` -Prüfung ist erforderlich, da möglicherweise keine Änderungsinformationen für die Zeile verfügbar sind. Es sind keine Änderungsinformationen vorhanden, wenn die Zeile seit der Aktivierung der Änderungsverfolgung oder seit der Bereinigung der Änderungsinformationen nicht aktualisiert wurde.  
   
-```tsql  
+```sql  
 -- Assumption: @last_sync_version has been validated.  
   
 UPDATE  
@@ -333,7 +333,7 @@ WHERE
   
  Mit dem folgenden Code kann die Anzahl der aktualisierten Zeilen überprüft werden, und es können weitere Informationen über den Konflikt ermittelt werden.  
   
-```tsql  
+```sql  
 -- If the change cannot be made, find out more information.  
 IF (@@ROWCOUNT = 0)  
 BEGIN  
@@ -359,7 +359,7 @@ END
   
  Kontextinformationen werden in der Regel verwendet, um die Quelle der Änderungen zu identifizieren. Wenn die Quelle einer Änderung identifiziert werden kann, können diese Informationen von einem Datenspeicher verwendet werden, um das Abrufen von Änderungen bei der nächsten Synchronisierung zu vermeiden.  
   
-```tsql  
+```sql  
   -- Try to update the row and check for a conflict.  
   WITH CHANGE_TRACKING_CONTEXT (@source_id)  
   UPDATE  
@@ -382,7 +382,7 @@ END
 > [!IMPORTANT]  
 >  Wir empfehlen die Verwendung der Momentaufnahmeisolation und das Vornehmen der Änderungen in einer Momentaufnahmetransaktion.  
   
-```tsql  
+```sql  
 -- Prerequisite is to ensure ALLOW_SNAPSHOT_ISOLATION is ON for the database.  
   
 SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df5d06478e5e48de00efcbdb7b872a7a1907eec0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 755685601bb97f7e0b8980024df07e27967f3cd3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370002"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530822"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML-Datentyp und -Spalten (SQL Server)
   In diesem Thema wird erläutert, die Vorteile und Einschränkungen von der `xml` -Datentyp in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und hilft Ihnen, wie XML-Daten gespeichert werden sollen.  
@@ -113,7 +113,7 @@ ms.locfileid: "53370002"
   
  Die systemeigene XML-Speicherung ist nützlich, wenn Sie über XML-Dokumente mit vielfältigen Strukturen verfügen oder wenn Sie über XML-Dokumente verfügen, die verschiedenen oder komplexen Schemas entsprechen, sodass sie keinen relationalen Strukturen zugeordnet werden können.  
   
-#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>Beispiel: Modellieren von XML-Daten mithilfe der Xml-Datentyp  
+#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>Beispiel: Modellieren von XML-Daten mit dem XML-Datentyp  
  Stellen wir uns ein Produkthandbuch im XML-Format vor, das aus einem getrennten Kapitel für jedes Thema besteht und bei dem jedes Kapitel wiederum mehrere Abschnitte umfasst. Ein Abschnitt kann jeweils Unterabschnitte enthalten. Deshalb ist \<section> (Abschnitt) ein rekursives Element. Produkthandbücher enthalten eine riesige Menge gemischter Inhalte, Diagramme und technischer Materialien; die Daten sind deshalb halbstrukturiert. Benutzer wollen möglicherweise eine Kontextsuche nach Themen von Interesse durchführen. So könnten sie z. B. nach dem Abschnitt zum Thema "gruppierter Index" innerhalb des Kapitels zum Thema "Indizieren" suchen und technische Mengen abfragen.  
   
  Ein geeignetes Speichermodell für die XML-Dokumente ist eine `xml`-Datentypspalte. Dabei bleibt der InfoSet-Inhalt Ihrer XML-Daten erhalten. Durch Indizieren der XML-Spalte wird die Abfrageleistung gesteigert.  
@@ -142,7 +142,7 @@ ms.locfileid: "53370002"
   
  Zu den Beispielen zählen relationale Daten, die als XML zum Datenaustausch und für Webdienste zugänglich gemacht werden, sowie XML-Daten mit festem Schema. Weitere Informationen finden Sie in der [MSDN-Onlinebibliothek](https://go.microsoft.com/fwlink/?linkid=31174).  
   
-#### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>Beispiel: Modellieren von Daten mithilfe eines mit Anmerkungen versehene XML-Schemas (AXSD)  
+#### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>Beispiel: Modellieren von Daten mithilfe eines XML-Schemas mit Anmerkungen (AXSD)  
  Zur Veranschaulichung nehmen wir an, dass Sie über relationale Daten (z. B. zu Kunden, Bestellungen und Einzelposten) verfügen, die Sie als XML handhaben möchten. Definieren Sie eine XML-Sicht, indem Sie AXDS auf die relationalen Daten anwenden. Die XML-Sicht ermöglicht Ihnen, einen Massenladevorgang der XML-Daten in Ihren Tabellen durchzuführen und die relationalen Daten mithilfe der XML-Sicht abzufragen und zu aktualisieren. Dieses Modell ist nützlich, wenn Sie Daten, die XML-Markups enthalten, mit anderen Anwendungen austauschen müssen, während Ihre SQL-Anwendungen ununterbrochen weiterarbeiten.  
   
 ### <a name="hybrid-model"></a>Hybridmodell  

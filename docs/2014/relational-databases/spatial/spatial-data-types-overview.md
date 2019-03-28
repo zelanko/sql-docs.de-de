@@ -14,12 +14,12 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8f792d128d8d75bdf39a2b04b104b827d74c7b63
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 135541d4474ab68fc8bdbc294663c8d9bcbc7c14
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376422"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526682"
 ---
 # <a name="spatial-data-types-overview"></a>Übersicht über räumliche Datentypen
   Es gibt zwei Typen von räumlichen Daten. Der `geometry`-Datentyp unterstützt planare bzw. euklidische Daten. Der `geometry`-Datentyp entspricht der Open Geospatial Consortium (OGC) Simple Features for SQL Specification Version 1.1.0. und ist auch mit SQL MM (ISO-Standard) kompatibel.  
@@ -123,7 +123,7 @@ ms.locfileid: "53376422"
   
  In diesem Beispiel wird gezeigt, wie die oben erwähnten gleichschenkligen Dreiecke mit einer `LineString`-Instanz und einer `CircularString`-Instanz gespeichert werden:  
   
-```tsql  
+```sql  
 DECLARE @g1 geometry;  
 DECLARE @g2 geometry;  
 SET @g1 = geometry::STGeomFromText('LINESTRING(1 1, 5 1, 3 5, 1 1)', 0);  
@@ -139,7 +139,7 @@ IF @g1.STIsValid() = 1 AND @g2.STIsValid() = 1
   
  Sehen Sie sich den folgenden Codeausschnitt an:  
   
-```tsql  
+```sql  
 SET @g1 = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 4 0)', 0);  
 SET @g2 = geometry::STGeomFromText('CIRCULARSTRING(0 0, 2 2, 4 0)', 0);  
 SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];  
@@ -154,14 +154,14 @@ LS LengthCS Length
   
  Die folgende Abbildung zeigt, wie die einzelnen Typen gespeichert werden (rote Linie stellt `LineString``@g1`, die blaue Linie stellt `CircularString``@g2`):  
   
- ![](../../database-engine/media/e52157b5-5160-4a4b-8560-50cdcf905b76.png "e52157b5-5160-4A4B-8560-50cdcf905b76")  
+ ![](../../database-engine/media/e52157b5-5160-4a4b-8560-50cdcf905b76.png "e52157b5-5160-4a4b-8560-50cdcf905b76")  
   
  Wie die obige Abbildung zeigt, verwenden `CircularString`-Instanzen weniger Punkte, um Kurvenbegrenzungen mit größerer Genauigkeit zu speichern, als `LineString`-Instanzen. `CircularString`-Instanzen sind hilfreich für das Speichern von Kreisbegrenzungen, z. B. ein Suchradius von zwanzig Kilometern von einem bestimmten Punkt aus. `LineString`-Instanzen eignen sich für das Speichern von linearen Grenzen, z. B. ein Häuserblock.  
   
 ### <a name="linestring-and-compoundcurve-comparison"></a>Vergleich von LineString und CompoundCurve  
  In den folgenden Codebeispielen ist dargestellt, wie die gleiche Abbildung mit `LineString`- und `CompoundCurve`-Instanzen gespeichert wird:  
   
-```tsql  
+```sql  
 SET @g = geometry::Parse('LINESTRING(2 2, 4 2, 4 4, 2 4, 2 2)');  
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2), (4 2, 4 4), (4 4, 2 4), (2 4, 2 2))');  
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');  
@@ -171,7 +171,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');
   
  In den obigen Beispielen könnte die Abbildung entweder mit einer `LineString`-Instanz oder einer `CompoundCurve`-Instanz gespeichert werden.  Im nächsten Beispiel wird ein Kreisslice mithilfe eines `CompoundCurve` gespeichert:  
   
-```tsql  
+```sql  
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0, 2 2))');  
 ```  
   
@@ -180,7 +180,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0,
 ### <a name="circularstring-and-compoundcurve-comparison"></a>Vergleich von CircularString und CompoundCurve  
  Im folgenden Codebeispiel wird gezeigt, wie der Kreisslice in einer `CircularString`-Instanz gespeichert werden kann:  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)');  
 SELECT @g.ToString(), @g.STLength();  
@@ -188,13 +188,13 @@ SELECT @g.ToString(), @g.STLength();
   
  Zum Speichern des Kreisslices mit einer `CircularString`-Instanz müssen drei Punkte für jedes Liniensegment verwendet werden.  Wenn ein Zwischenpunkt nicht bekannt wird, muss er entweder berechnet werden, oder der Endpunkt des Liniensegments muss verdoppelt werden, wie im folgenden Codeausschnitt dargestellt:  
   
-```tsql  
+```sql  
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');  
 ```  
   
  In `CompoundCurve`-Instanzen sind sowohl `LineString`- als auch `CircularString`-Komponenten zulässig, sodass nur zwei Punkte der Liniensegmente des Kreisslices bekannt sein müssen.  In diesem Codebeispiel wird gezeigt, wie ein `CompoundCurve` verwendet wird, um die gleiche Abbildung zu speichern:  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING( 3 6.3246, 0 7, -3 6.3246), (-3 6.3246, 0 0, 3 6.3246))');  
 SELECT @g.ToString(), @g.STLength();  

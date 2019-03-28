@@ -16,12 +16,12 @@ ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 93124cff94bdf9df97cc1cbb0cf55c40414f1819
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8acc73e057ff8b91987406e74a28563fecfc9278
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127556"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526452"
 ---
 # <a name="spdropdistpublisher-transact-sql"></a>sp_dropdistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,18 +40,15 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publisher=** ] **"**_Verleger_**"**  
- Der Verleger, der gelöscht werden soll. *Publisher* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher = ] 'publisher'` Ist der Verleger gelöscht. *Publisher* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@no_checks=** ] *No_checks*  
- Gibt an, ob **Sp_dropdistpublisher** stellt sicher, dass der Verleger den Server als Verteiler deinstalliert hat. *No_checks* ist **Bit**, hat den Standardwert **0**.  
+`[ @no_checks = ] no_checks` Gibt an, ob **Sp_dropdistpublisher** stellt sicher, dass der Verleger den Server als Verteiler deinstalliert hat. *No_checks* ist **Bit**, hat den Standardwert **0**.  
   
  Wenn **0**, Replikation stellt sicher, dass der Remoteverleger den lokalen Server als Verteiler deinstalliert hat. Wenn es sich beim Verleger um einen lokalen Verleger handelt, überprüft die Replikation, ob sich auf dem lokalen Server keine Veröffentlichungs- oder Verteilungsobjekte mehr befinden.  
   
  Wenn **1**, alle dem Verteilungsverleger zugeordneten Replikationsobjekte gelöscht, selbst wenn ein Remoteverleger nicht erreicht werden kann. Nach dem auf diese Weise muss der Remoteverleger deinstallieren, mithilfe von Replikation [Sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) mit **@ignore_distributor**  =  **1**.  
   
- [  **@ignore_distributor=** ] *Ignore_distributor*  
- Gibt an, ob Verteilungsobjekte auf dem Verteiler bleiben, wenn der Verleger entfernt wird. *Ignore_distributor* ist **Bit** und kann einen der folgenden Werte:  
+`[ @ignore_distributor = ] ignore_distributor` Gibt an, ob Verteilungsobjekte auf dem Verteiler bleiben, wenn der Verleger entfernt wird. *Ignore_distributor* ist **Bit** und kann einen der folgenden Werte:  
   
  **1** = für Verteilungsobjekte, die zu gehören die *Verleger* verbleiben auf dem Verteiler.  
   
@@ -73,7 +70,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
   
 ## <a name="see-also"></a>Siehe auch  
  [Deaktivieren der Veröffentlichung und Verteilung](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [Sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_changedistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [sp_helpdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

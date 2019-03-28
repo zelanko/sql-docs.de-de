@@ -10,20 +10,20 @@ helpviewer_keywords:
 - XML [SQL Server]
 - XML [SQL Server], about XML
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9c07abd9f7c9ce9ed03bb571a4dc25a77b3c497
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da462979ee21e09a55015f9c9d30d72edd1ce67d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226404"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530232"
 ---
 # <a name="xml-data-sql-server"></a>XML-Daten (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet eine leistungsstarke Plattform zum Entwickeln umfassender Anwendungen zur Verwaltung halbstrukturierter Daten. Alle Komponenten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bieten XML-Unterstützung in folgenden Punkten:  
   
--   Die `xml` -Datentyp. XML-Werte können systemeigen in einer `xml`-Datentypspalte gespeichert werden, die gemäß einer Auflistung von XML-Schemas typisiert oder nicht typisiert werden kann. Sie können die XML-Spalte indizieren.  
+-   Der `xml`-Datentyp. XML-Werte können systemeigen in einer `xml`-Datentypspalte gespeichert werden, die gemäß einer Auflistung von XML-Schemas typisiert oder nicht typisiert werden kann. Sie können die XML-Spalte indizieren.  
   
 -   Die Möglichkeit, XQuery-Abfragen für in Spalten und Variablen gespeicherte XML-Daten vom `xml`-Typ anzugeben.  
   

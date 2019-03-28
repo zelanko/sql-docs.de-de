@@ -18,12 +18,12 @@ ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 86de9f970713d84fec0722a4cc3c29b0b307098f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 09af9a0190b8ba3b01c72cfa29e0647ad6d6b74d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589946"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528432"
 ---
 # <a name="sysmailupdateaccountsp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,47 +53,33 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@account_id** =] *Account_id*  
- Die ID des Kontos, das aktualisiert werden soll. *account_id* ist vom Datentyp **int**und hat den Standardwert NULL. Mindestens eine der *Account_id* oder *Account_name* muss angegeben werden. Wenn beide Argumente angegeben werden, ändert die Prozedur den Namen des Kontos.  
+`[ @account_id = ] account_id` Die Konto-ID aktualisieren. *account_id* ist vom Datentyp **int**und hat den Standardwert NULL. Mindestens eine der *Account_id* oder *Account_name* muss angegeben werden. Wenn beide Argumente angegeben werden, ändert die Prozedur den Namen des Kontos.  
   
- [ **@account_name** =] **"**_Account_name_**"**  
- Der Name des zu aktualisierenden Kontos. *account_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Mindestens eine der *Account_id* oder *Account_name* muss angegeben werden. Wenn beide Argumente angegeben werden, ändert die Prozedur den Namen des Kontos.  
+`[ @account_name = ] 'account_name'` Der Name des zu aktualisierenden Kontos. *account_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Mindestens eine der *Account_id* oder *Account_name* muss angegeben werden. Wenn beide Argumente angegeben werden, ändert die Prozedur den Namen des Kontos.  
   
- [ **@email_address** =] **"**_Email_address_**"**  
- Die neue E-Mail-Adresse, von der die Nachricht gesendet werden soll. Bei dieser Adresse muss es sich um eine Internet-E-Mail-Adresse handeln. Der Servername ist die Adresse des Servers, der von Datenbank-E-Mail zum Senden von E-Mails von diesem Konto verwendet wird. *Email_address* ist **vom Datentyp nvarchar(128)**, hat den Standardwert NULL.  
+`[ @email_address = ] 'email_address'` Die neue e-Mail-Adresse zum Senden der Nachricht aus. Bei dieser Adresse muss es sich um eine Internet-E-Mail-Adresse handeln. Der Servername ist die Adresse des Servers, der von Datenbank-E-Mail zum Senden von E-Mails von diesem Konto verwendet wird. *Email_address* ist **vom Datentyp nvarchar(128)**, hat den Standardwert NULL.  
   
- [ **@display_name** =] **"**_Display_name_**"**  
- Der neue Anzeigename, der in E-Mail-Nachrichten verwendet werden soll, die von diesem Konto gesendet werden. *Display_name* ist **vom Datentyp nvarchar(128)**, hat keinen Standardwert.  
+`[ @display_name = ] 'display_name'` Der neue Anzeigename, e-Mail-Nachrichten von diesem Konto verwendet wird. *Display_name* ist **vom Datentyp nvarchar(128)**, hat keinen Standardwert.  
   
- [ **@replyto_address** =] **"**_Replyto_address_**"**  
- Die neue Adresse, die im Antwortheader von E-Mail-Nachrichten verwendet werden soll, die von diesem Konto gesendet werden. *Replyto_address* ist **vom Datentyp nvarchar(128)**, hat keinen Standardwert.  
+`[ @replyto_address = ] 'replyto_address'` Die neue Adresse in der Antwortheader von e-Mail-Nachrichten von diesem Konto verwendet werden soll. *Replyto_address* ist **vom Datentyp nvarchar(128)**, hat keinen Standardwert.  
   
- [ **@description** =] **"**_Beschreibung_**"**  
- Die neue Beschreibung des Kontos. *Beschreibung* ist **nvarchar(256)**, hat den Standardwert NULL.  
+`[ @description = ] 'description'` Die neue Beschreibung für das Konto. *Beschreibung* ist **nvarchar(256)**, hat den Standardwert NULL.  
   
- [ **@mailserver_name** =] **"**_Server_name_**"**  
- Der neue Name des SMTP-Mailservers, der für dieses Konto verwendet werden soll. Der Computer mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] müssen aufgelöst werden können die *Server_name* einer IP-Adresse. *Server_name* ist **Sysname**, hat keinen Standardwert.  
+`[ @mailserver_name = ] 'server_name'` Der neue Name des SMTP-Mailservers, der für dieses Konto verwendet werden soll. Der Computer mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] müssen aufgelöst werden können die *Server_name* einer IP-Adresse. *Server_name* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@mailserver_type** =] **"**_Server_type_**"**  
- Der neue Typ des E-Mail-Servers. *Server_type* ist **Sysname**, hat keinen Standardwert. Nur der Wert **'SMTP'** wird unterstützt.  
+`[ @mailserver_type = ] 'server_type'` Der neue Typ des Mailservers. *Server_type* ist **Sysname**, hat keinen Standardwert. Nur der Wert **'SMTP'** wird unterstützt.  
   
- [ **@port** =] *Port_number*  
- Die neue Portnummer des E-Mail-Servers. *Port_number* ist **Int**, hat keinen Standardwert.  
+`[ @port = ] port_number` Die neue Portnummer des Mailservers. *Port_number* ist **Int**, hat keinen Standardwert.  
   
- [ **@timeout** =] **"**_Timeout_**"**  
- Timeoutparameter für SmtpClient. Senden einer einzelnen E-Mail-Nachricht. *Timeout* ist **Int** in Sekunden und hat keinen Standardwert.  
+`[ @timeout = ] 'timeout'` Timeoutparameter für SmtpClient einer einzelnen e-Mail-Nachricht. *Timeout* ist **Int** in Sekunden und hat keinen Standardwert.  
   
- [ **@username** =] **"**_Benutzername_**"**  
- Der neue Benutzername, der für die Anmeldung beim E-Mail-Server verwendet werden soll. *Benutzername* ist **Sysname**, hat keinen Standardwert.  
+`[ @username = ] 'username'` Der neue Benutzername, mit der e-Mail-Server anmelden. *Benutzername* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@password** =] **"**_Kennwort_**"**  
- Das neue Kennwort, das für die Anmeldung beim E-Mail-Server verwendet werden soll. *Kennwort* ist **Sysname**, hat keinen Standardwert.  
+`[ @password = ] 'password'` Das neue Kennwort zu verwenden, um den e-Mail-Server anzumelden. *Kennwort* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@use_default_credentials** =] Use_default_credentials  
- Gibt an, ob E-Mail mit den Anmeldeinformationen des [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Diensts an den SMTP-Server gesendet werden soll. **use_default_credentials** ist vom Datentyp bit und hat keinen Standardwert. Wenn dieser Parameter 1 ist, verwendet Datenbank-E-Mail die Anmeldeinformationen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Wenn dieser Parameter 0 ist, verwendet Datenbank-e-Mails der **@username** und **@password** für die Authentifizierung auf dem SMTP-Server. Wenn **@username** und **@password** NULL sind, und klicken Sie dann die anonyme Authentifizierung verwendet. Besprechen Sie die geeignete Angabe für diesen Parameter mit Ihrem SMTP-Administrator.  
+`[ @use_default_credentials = ] use_default_credentials` Gibt an, ob zum Senden der e-Mail mit den Anmeldeinformationen des SMTP-Server die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Service. **use_default_credentials** ist vom Datentyp bit und hat keinen Standardwert. Wenn dieser Parameter 1 ist, verwendet Datenbank-E-Mail die Anmeldeinformationen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Wenn dieser Parameter 0 ist, verwendet Datenbank-e-Mails der **@username** und **@password** für die Authentifizierung auf dem SMTP-Server. Wenn **@username** und **@password** NULL sind, und klicken Sie dann die anonyme Authentifizierung verwendet. Besprechen Sie die geeignete Angabe für diesen Parameter mit Ihrem SMTP-Administrator.  
   
- [ **@enable_ssl** =] Enable_ssl  
- Gibt an, ob Datenbank-E-Mail die Kommunikation mithilfe von SSL (Secure Sockets Layer) verschlüsselt. Verwenden Sie diese Option, wenn auf dem SMTP-Server SSL erforderlich ist. **enable_ssl** ist vom Datentyp bit und hat keinen Standardwert.  
+`[ @enable_ssl = ] enable_ssl` Gibt an, ob Datenbank-e-Mails Kommunikation mit Secure Sockets Layer (SSL) verschlüsselt. Verwenden Sie diese Option, wenn auf dem SMTP-Server SSL erforderlich ist. **enable_ssl** ist vom Datentyp bit und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

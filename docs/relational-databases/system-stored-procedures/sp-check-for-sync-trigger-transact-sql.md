@@ -16,12 +16,12 @@ ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ac0fe99f835dae638cb65b24e569857fb77b098
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ef51624f3d14ef12be1c37b17727b70f5f31df10
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759958"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526422"
 ---
 # <a name="spcheckforsynctrigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,12 +49,11 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 |Wert|Description|  
 |-----------|-----------------|  
 |**Ins**|INSERT-Trigger|  
-|**Benutzerprofil-Datenträger**|UPDATE-Trigger|  
+|**Upd**|UPDATE-Trigger|  
 |**Del**|DELETE-Trigger|  
 |NULL (Standard)||  
   
- [  **@fonpublisher =** ] *Fonpublisher*  
- Gibt die Position an, an der die gespeicherte Prozedur ausgeführt wird. *Fonpublisher* ist **Bit**, hat den Standardwert 0. Bei 0 findet die Ausführung auf dem Abonnenten und bei 1 auf dem Verleger statt.  
+`[ @fonpublisher = ] fonpublisher` Gibt den Speicherort, in dem die gespeicherte Prozedur ausgeführt wird. *Fonpublisher* ist **Bit**, hat den Standardwert 0. Bei 0 findet die Ausführung auf dem Abonnenten und bei 1 auf dem Verleger statt.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 zeigt an, dass die gespeicherte Prozedur nicht im Kontext eines sofort aktualisierbaren Triggers aufgerufen wird. 1 gibt an, dass es im Kontext eines sofort aktualisierbaren Triggers aufgerufen wird, ist der Typ des Triggers, der zurückgegeben wird *@trigger_op*.  

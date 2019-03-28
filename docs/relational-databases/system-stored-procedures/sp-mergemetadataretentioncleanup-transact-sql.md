@@ -16,12 +16,12 @@ ms.assetid: 4e8d6343-2a38-421d-a3f3-c37d437a0f88
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d9158521710ec866955f5b028a2338f9c6f6ff0b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1797200ce5369f49035f1a950d606e34e584edc2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823154"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526222"
 ---
 # <a name="spmergemetadataretentioncleanup-transact-sql"></a>sp_mergemetadataretentioncleanup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@num_genhistory_rows=** ] *Num_genhistory_rows* Ausgabe  
- Gibt die Anzahl der Zeilen bereinigt aus dem [MSmerge_genhistory](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md) Tabelle. *Num_genhistory_rows* ist **Int**, hat den Standardwert **0**.  
+`[ @num_genhistory_rows = ] num_genhistory_rows OUTPUT` Gibt die Anzahl der Zeilen bereinigt aus dem [MSmerge_genhistory](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md) Tabelle. *Num_genhistory_rows* ist **Int**, hat den Standardwert **0**.  
   
- [  **@num_contents_rows=** ] *Num_contents_rows* Ausgabe  
- Gibt die Anzahl der Zeilen bereinigt aus dem [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) Tabelle. *Num_contents_rows* ist **Int**, hat den Standardwert **0**.  
+`[ @num_contents_rows = ] num_contents_rows OUTPUT` Gibt die Anzahl der Zeilen bereinigt aus dem [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) Tabelle. *Num_contents_rows* ist **Int**, hat den Standardwert **0**.  
   
- [  **@num_tombstone_rows=** ] *Num_tombstone_rows* Ausgabe  
- Gibt die Anzahl der Zeilen bereinigt aus dem [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) Tabelle. *Num_tombstone_rows* ist **Int**, hat den Standardwert **0**.  
+`[ @num_tombstone_rows = ] num_tombstone_rows OUTPUT` Gibt die Anzahl der Zeilen bereinigt aus dem [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) Tabelle. *Num_tombstone_rows* ist **Int**, hat den Standardwert **0**.  
   
- [  **@aggressive_cleanup_only=** ] *Aggressive_cleanup_only*  
- Nur interne Verwendung.  
+`[ @aggressive_cleanup_only = ] aggressive_cleanup_only` Nur interne Verwendung.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

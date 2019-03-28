@@ -16,12 +16,12 @@ ms.assetid: b99e65ff-9cca-4dce-a2ce-2968de23a76a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bd8c367f3fecd0c9951b577fdcdf31cf77ac589e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7abf2a3c2e9eebcd21a60beb72e650ad534cc80d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821944"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528614"
 ---
 # <a name="spdropagentparameter-transact-sql"></a>sp_drop_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@profile_id=**] *Profile_id*  
- Die ID des Profils, für die ein Parameter gelöscht werden soll. *Profile_id* ist **Int**, hat keinen Standardwert.  
+`[ @profile_id = ] profile_id` Ist die ID des Profils, für die ein Parameter gelöscht werden soll. *Profile_id* ist **Int**, hat keinen Standardwert.  
   
- [  **@parameter_name=**] **"***Parameter_name***"**  
- Der Name des zu löschenden Parameters. *Parameter_name* ist **Sysname**, hat den Standardwert **%**. Wenn **%**, werden alle Parameter für das angegebene Profil gelöscht.  
+`[ @parameter_name = ] 'parameter_name'` Ist der Name des Parameters, der gelöscht werden. *Parameter_name* ist **Sysname**, hat den Standardwert **%**. Wenn **%**, werden alle Parameter für das angegebene Profil gelöscht.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -55,8 +53,8 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
  Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_drop_agent_parameter**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_add_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
- [Sp_help_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
+ [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
+ [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

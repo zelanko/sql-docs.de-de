@@ -15,12 +15,12 @@ ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ccd9e2be26c8d514e17a4aa03af422cd648fe426
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 31afdbb14229fa7c0eaf13f1b3a215e31356945f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666599"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528812"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Räumlicher Index gespeicherte Prozeduren – Argumente und Eigenschaften
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -32,25 +32,22 @@ ms.locfileid: "51666599"
 ## <a name="syntax"></a>Syntax  
  Die Syntax bestimmter gespeicherter Prozeduren für Räumlichkeitsindizes finden Sie in den folgenden Themen:  
   
--   [Sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
+-   [sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
   
--   [Sp_help_spatial_geometry_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geometry_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
   
--   [Sp_help_spatial_geography_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
+-   [sp_help_spatial_geography_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
   
--   [Sp_help_spatial_geography_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geography_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="arguments"></a>Argumente  
- [  **@tabname =**] **"***Tabname***"**  
- Der qualifizierte oder nicht qualifizierte Name der Tabelle, für die der Räumlichkeitsindex angegeben wurde.  
+`[ @tabname = ] 'tabname'` Ist der qualifizierte oder nicht qualifizierte Name der Tabelle für die der räumlichkeitsindex angegeben wurde.  
   
  Anführungszeichen sind nur dann erforderlich, wenn eine qualifizierte Tabelle angegeben wird. Bei Angabe eines vollqualifizierten Namens, einschließlich eines Datenbanknamens, muss es sich bei dem Datenbanknamen um den Namen der aktuellen Datenbank handeln. *Tabname* ist **Nvarchar**(776) und hat keinen Standardwert.  
   
- [  **@indexname =** ] **"***Indexname***"**  
- Der Name des angegebenen räumlichen Indexes. *Indexname* ist **Sysname** hat keinen Standardwert.  
+`[ @indexname = ] 'indexname'` Ist der Name des räumlichen Index angegeben. *Indexname* ist **Sysname** hat keinen Standardwert.  
   
- [  **@verboseoutput =** ] **"***Verboseoutput***"**  
- Der Bereich von Eigenschaftsnamen und Werten, die zurückgegeben werden sollen.  
+`[ @verboseoutput = ] 'verboseoutput'` Ist der Bereich von Eigenschaftennamen und Werte zurückgegeben werden.  
   
  0 = Haupteigenschaften  
   
@@ -58,11 +55,9 @@ ms.locfileid: "51666599"
   
  *Verboseoutput* ist **Tinyint** hat keinen Standardwert.  
   
- [  **@query_sample =** ] **"***Abfragebeispiel***"**  
- Ein repräsentatives Abfragebeispiel, das verwendet werden kann, um die Nützlichkeit des Indexes zu testen. Dabei kann es sich um ein repräsentatives Objekt oder ein Abfragefenster handeln. *Abfragebeispiel* ist **Geometrie** hat keinen Standardwert.  
+`[ @query_sample = ] 'query_sample'` Ist ein repräsentatives Abfragebeispiel, das verwendet werden kann, um die Nützlichkeit des Indexes zu testen. Dabei kann es sich um ein repräsentatives Objekt oder ein Abfragefenster handeln. *Abfragebeispiel* ist **Geometrie** hat keinen Standardwert.  
   
- [  **@xml_output =** ] **"***XML***"**  
- Ein Ausgabeparameter, der das Resultset in einem XML-Fragment zurückgibt. *XML* ist **Xml** hat keinen Standardwert.  
+`[ @xml_output = ] 'xml_output'` In einem XML-Fragment ist ein Output-Parameter, der das Ergebnis zurückgibt festgelegt werden. *XML* ist **Xml** hat keinen Standardwert.  
   
 ## <a name="properties"></a>Eigenschaften  
  Legen Sie **@verboseoutput** = 0, um Kerneigenschaften wie in der folgenden Tabelle gezeigt. **@verboseoutput** > 0, um alle Eigenschaften des räumlichen Indexes zurückzugeben.  
@@ -70,7 +65,7 @@ ms.locfileid: "51666599"
  **Base_Table_Rows**  
  Anzahl der Zeilen in der Basistabelle. Wert ist **Bigint**.  
   
- **Spalten Bounding_Box_xmin**  
+ **Bounding_Box_xmin**  
  X-Minimum-Eigenschaften des räumlichen Index für umgebenden Felds **Geometrie** Typ. Wert dieser Eigenschaft ist NULL für **Geography**Typ. Wert ist **"float"**.  
   
  **Bounding_Box_ymin**  
@@ -312,19 +307,19 @@ ms.locfileid: "51666599"
 ## <a name="examples"></a>Beispiele  
  Beispiele finden Sie in den folgenden Themen:  
   
--   [Sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
+-   [sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
   
--   [Sp_help_spatial_geometry_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geometry_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
   
--   [Sp_help_spatial_geography_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
+-   [sp_help_spatial_geography_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
   
--   [Sp_help_spatial_geography_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geography_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="requirements"></a>Anforderungen  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Prozeduren für Räumlichkeitsindizes &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
- [Sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
+ [sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [XQuery-Grundlagen](../../xquery/xquery-basics.md)   
  [XQuery-Sprachreferenz &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  

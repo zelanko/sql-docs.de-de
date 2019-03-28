@@ -16,12 +16,12 @@ ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b28b574dcbe26796b6fc561b209425f023f0178f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5fcd3d72ef3e716cd640d35505b82df459eb37b7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108160"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531452"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Einschränken der CPU-Nutzung durch die Sicherungskomprimierung mithilfe der Ressourcenkontrolle (Transact-SQL)
   Standardmäßig steigt die CPU-Nutzung durch die Sicherung mit Komprimierung erheblich, und die bei der Komprimierung zusätzlich benötigten CPU-Ressourcen können sich negativ auf gleichzeitig ausgeführte Vorgänge auswirken. Daher ist es u.U. sinnvoll, in einer Sitzung, bei der die CPU-Nutzung durch den[Resource Governor](../resource-governor/resource-governor.md) eingeschränkt ist, eine komprimierte Sicherung mit niedriger Priorität zu erstellen, wenn CPU-Konflikte bestehen. In diesem Thema wird ein Szenario dargestellt, in dem die Sitzungen eines bestimmten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Benutzers klassifiziert werden, indem diese einer Arbeitsauslastungsgruppe der Ressourcenkontrolle zugeordnet werden, die die CPU-Nutzung in solchen Fällen einschränkt.  
@@ -42,7 +42,7 @@ ms.locfileid: "48108160"
 ##  <a name="setup_login_and_user"></a> Einrichten einer Anmeldung und eines Benutzers für Vorgänge mit niedriger Priorität  
  Für das Szenario in diesem Thema sind eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung und ein zugehöriger Benutzer für Vorgänge mit niedriger Priorität erforderlich. Mithilfe des Benutzernamens werden die in der Anmeldung ausgeführten Sitzungen klassifiziert und an eine Arbeitsauslastungsgruppe der Ressourcenkontrolle weitergeleitet, die die CPU-Nutzung einschränkt.  
   
- Im folgenden Verfahren werden die Schritte zum Einrichten einer Anmeldung und eines Benutzers zu diesem Zweck beschrieben. Darauf folgt das [!INCLUDE[tsql](../../includes/tsql-md.md)] -Beispiel "Beispiel A: Einrichten einer Anmeldung und eines Benutzers (Transact-SQL)".  
+ Im folgenden Verfahren werden die Schritte zum Einrichten einer Anmeldung und eines Benutzers zu diesem Zweck beschrieben. Darauf folgt das [!INCLUDE[tsql](../../includes/tsql-md.md)]-Beispiel „Beispiel A: Einrichten einer Anmeldung und eines Benutzers (Transact-SQL).“  
   
 ### <a name="to-set-up-a-login-and-database-user-for-classifying-sessions"></a>So richten Sie eine Anmeldung und einen Datenbankbenutzer zum Klassifizieren von Sitzungen ein  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48108160"
   
  In diesem Beispiel wird eine Anmeldung für das Windows-Konto *domain_name*`\MAX_CPU` erstellt, und dieser wird anschließend die VIEW SERVER STATE-Berechtigung erteilt. Mit dieser Berechtigung können Sie die Klassifizierung der Sitzungen der Anmeldung durch die Ressourcenkontrolle überprüfen. Im Beispiel wird anschließend ein Benutzer für *domain_name*`\MAX_CPU` erstellt, und dieser wird der festen Datenbankrolle db_backupoperator für die [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] -Beispieldatenbank hinzugefügt. Dieser Benutzername wird von der Klassifizierungsfunktion der Ressourcenkontrolle verwendet.  
   
-```tsql  
+```sql  
 -- Create a SQL Server login for low-priority operations  
 USE master;  
 CREATE LOGIN [domain_name\MAX_CPU] FROM WINDOWS;  
@@ -183,7 +183,7 @@ GO
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     ```  
   
-### <a name="example-b-configuring-resource-governor-transact-sql"></a>Beispiel B: Konfigurieren der Ressourcenkontrolle (Transact-SQL)  
+### <a name="example-b-configuring-resource-governor-transact-sql"></a>Beispiel B: Konfigurieren des Resource Governor (Transact-SQL)  
  Im folgenden Beispiel werden die folgenden Schritte in einer einzelnen Transaktion ausgeführt:  
   
 1.  Der `pMAX_CPU_PERCENT_20` -Ressourcenpool wird erstellt.  
@@ -197,9 +197,9 @@ GO
  Nachdem für die Transaktion ein Commit ausgeführt wurde, werden im Beispiel alle Konfigurationsänderungen angewendet, die in der ALTER WORKLOAD GROUP-Anweisung oder der ALTER RESOURCE POOL-Anweisung angefordert wurden.  
   
 > [!IMPORTANT]  
->  Im folgenden Beispiel wird der Benutzername des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Beispielbenutzers *domain_name*`\MAX_CPU`verwendet, der unter "Beispiel A: Einrichten einer Anmeldung und eines Benutzers (Transact-SQL)" erstellt wurde. Ersetzen Sie diesen durch den Namen des Benutzers der Anmeldung, die zum Erstellen komprimierter Sicherungen mit niedriger Priorität verwendet werden soll.  
+>  Im folgenden Beispiel wird der Benutzername des Beispiel-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Benutzers verwendet, der unter „Beispiel A: Einrichten einer Anmeldung und eines Benutzers (Transact-SQL)“ als *domain_name*`\MAX_CPU` erstellt wurde. Ersetzen Sie diesen durch den Namen des Benutzers der Anmeldung, die zum Erstellen komprimierter Sicherungen mit niedriger Priorität verwendet werden soll.  
   
-```tsql  
+```sql  
 -- Configure Resource Governor.  
 BEGIN TRAN  
 USE master;  
@@ -241,7 +241,7 @@ GO
 ##  <a name="verifying"></a> Überprüfen der Klassifizierung der aktuellen Sitzung (Transact-SQL)  
  Melden Sie sich optional als der Benutzer an, den Sie in der Klassifizierungsfunktion angegeben haben, und überprüfen Sie die Sitzungsklassifizierung durch Ausgeben der folgenden [SELECT](/sql/t-sql/queries/select-transact-sql) -Anweisung im Objekt-Explorer:  
   
-```tsql  
+```sql  
 USE master;  
 SELECT sess.session_id, sess.login_name, sess.group_id, grps.name   
 FROM sys.dm_exec_sessions AS sess   
@@ -264,7 +264,7 @@ GO
 ### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Beispiel C: Erstellen einer komprimierten Sicherung (Transact-SQL)  
  Im folgenden [BACKUP](/sql/t-sql/statements/backup-transact-sql) -Beispiel wird eine komprimierte, vollständige Sicherung der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] -Datenbank in der neu formatierten Sicherungsdatei `Z:\SQLServerBackups\AdvWorksData.bak`erstellt.  
   
-```tsql  
+```sql  
 --Run backup statement in the gBackup session.  
 BACKUP DATABASE AdventureWorks2012 TO DISK='Z:\SQLServerBackups\AdvWorksData.bak'   
 WITH   

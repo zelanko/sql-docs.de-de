@@ -18,12 +18,12 @@ ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b811fd8b1bb6be9c63794006888db253a8c341e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16e523bc26b8469f3ee7306f3e6fd2902ef727bb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843348"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528532"
 ---
 # <a name="spmsxdefect-transact-sql"></a>sp_msx_defect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_msx_defect [@forced_defection =] forced_defection
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@forced_defection =**] *Forced_defection*  
- Gibt an, ob den Austritt eintritt, wenn der Master SQLServerAgent dauerhaft aufgrund einer beschädigten unwiderruflich verloren wurde erzwungen **Msdb** -Datenbank oder keine **Msdb** datenbanksicherung. *Forced_defection*ist **Bit**, hat den Standardwert **0**, was bedeutet, dass kein Austritt erzwungen werden soll. Der Wert **1** wird der Austritt erzwungen.  
+`[ @forced_defection = ] forced_defection` Gibt an, ob den Austritt eintritt, wenn der Master SQLServerAgent dauerhaft aufgrund einer beschädigten unwiderruflich verloren wurde erzwungen **Msdb** -Datenbank oder keine **Msdb** datenbanksicherung. *Forced_defection*ist **Bit**, hat den Standardwert **0**, was bedeutet, dass kein Austritt erzwungen werden soll. Der Wert **1** wird der Austritt erzwungen.  
   
  Nach dem erzwingen Sie einen Austritt durch Ausführen des **Sp_msx_defect**, ein Mitglied der **Sysadmin** -Serverrolle auf dem Master-SQLServerAgent muss führen Sie den folgenden Befehl aus, um den Austritt abzuschließen:  
   

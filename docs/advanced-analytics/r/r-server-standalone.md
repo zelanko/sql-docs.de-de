@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/18/2018
 ms.topic: overview
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: f1cbc4a7c02597c6c8bece8c47976fabdb4959e7
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.openlocfilehash: 47edd434445d57c5ca25373b5dc15fa328f94019
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53731977"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58513237"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server (eigenständig) "und" Machine Learning Server (eigenständig) in SQLServer
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -53,7 +53,7 @@ Als Ergänzung zum SQL Server ist ein eigenständiger Server auch als eine leist
 
 Mit dem Setup starten Sie, fügen Sie die Binärdateien an Ihrem bevorzugten Entwicklungstool und Schreiben Sie das erste Skript.
 
-### <a name="step-1-install-the-software"></a>Schritt 1: Installieren der software
+### <a name="step-1-install-the-software"></a>Schritt 1: Installieren der software
 
 Installieren Sie entweder eine dieser Versionen:
 

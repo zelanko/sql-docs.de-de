@@ -16,12 +16,12 @@ ms.assetid: a96e365f-5967-4580-9d79-5bacf2d12211
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0ff0acfc4e3eff25b4281637d1f707ce925a7df
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c00e7c26a429836f0d350e60530d2dc1db8c2a61
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802252"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526412"
 ---
 # <a name="sphelpmergealternatepublisher-transact-sql"></a>sp_helpmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,14 +38,11 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publisher=**] **'***publisher***'**  
- Ist der Name des alternativen Verlegers. *Verleger* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher = ] 'publisher'` Ist der Name des alternativen Verlegers. *Verleger* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
- Ist der Name der Veröffentlichungsdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher_db = ] 'publisher_db'` Ist der Name der Veröffentlichungsdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@publication=**] **'***publication***'**  
- Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -55,8 +52,8 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
 |**alternate_publisher_db**|**sysname**|Der Name der Veröffentlichungsdatenbank.|  
 |**alternate_publication**|**sysname**|Name der Veröffentlichung.|  
 |**alternate_distributor**|**sysname**|Der Name des Verteilers.|  
-|**friendly_name wurde**|**nvarchar(255)**|Die Beschreibung des alternativen Verlegers.|  
-|**aktiviert**|**bit**|Gibt an, ob der Server ein alternativer Verleger ist. **1** gibt an, dass der Verleger als alternativer Verleger aktiviert ist. **0** gibt an, dass sie nicht aktiviert ist.|  
+|**friendly_name**|**nvarchar(255)**|Die Beschreibung des alternativen Verlegers.|  
+|**enabled**|**bit**|Gibt an, ob der Server ein alternativer Verleger ist. **1** gibt an, dass der Verleger als alternativer Verleger aktiviert ist. **0** gibt an, dass sie nicht aktiviert ist.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

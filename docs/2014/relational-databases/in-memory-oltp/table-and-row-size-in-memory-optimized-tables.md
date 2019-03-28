@@ -10,12 +10,12 @@ ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7d89fefdf575cdb7961df0ceae811184ca31fc51
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b4d8fc3b59d3296a2996d37a190dc5c8e075744a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822534"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530342"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Tabellen- und Zeilengröße in speicheroptimierten Tabellen
   Eine speicheroptimierte Tabelle besteht aus einer Auflistung von Zeilen und Indizes, die Zeiger auf die Zeilen enthalten. In einer speicheroptimierten Tabelle dürfen Zeilen eine maximale Länge von 8.060 Bytes aufweisen. Wenn Sie eine Vorstellung von der Größe einer speicheroptimierten Tabelle haben, können Sie besser einschätzen, ob Ihr Computer über genügend Arbeitsspeicher verfügt.  
@@ -72,7 +72,7 @@ Speicheroptimierte Tabelle, bestehend aus Indizes und Zeilen.
   
 |Abschnitt|Größe|Kommentare|  
 |-------------|----------|--------------|  
-|Spalten flacher Typen|SUM([size of shallow types])<br /><br /> **Größe der einzelnen Typen lautet wie folgt aus:**<br /><br /> Bit: 1<br /><br /> Tinyint: 1<br /><br /> Smallint: 2<br /><br /> Int: 4<br /><br /> Real: 4<br /><br /> Smalldatetime: 4<br /><br /> Smallmoney: 4<br /><br /> Bigint: 8<br /><br /> Datetime: 8<br /><br /> Datetime2: 8<br /><br /> Float: 8<br /><br /> Money: 8<br /><br /> Numeric (Genauigkeit < = 18) &#124; 8<br /><br /> Time: 8<br /><br /> Numeric(Precision>18) &#124; 16<br /><br /> Uniqueidentifier: 16||  
+|Spalten flacher Typen|SUM([size of shallow types])<br /><br /> **Größe der einzelnen Typen lautet wie folgt aus:**<br /><br /> Bit: 1<br /><br /> Tinyint: 1<br /><br /> Smallint: 2<br /><br /> Int: 4<br /><br /> Real: 4<br /><br /> Smalldatetime: 4<br /><br /> Smallmoney: 4<br /><br /> Bigint: 8<br /><br /> Datetime: 8<br /><br /> Datetime2: 8<br /><br /> Float: 8<br /><br /> Money: 8<br /><br /> Numeric (Genauigkeit < = 18) &#124; 8<br /><br /> Time: 8<br /><br /> Numeric(precision>18) &#124; 16<br /><br /> Uniqueidentifier: 16||  
 |Auffüllung flacher Spalten|Dabei sind folgende Werte möglich:<br /><br /> 1, wenn Spalten tiefer Typen vorhanden sind und die gesamte Datengröße der flachen Spalten eine ungerade Zahl darstellt.<br /><br /> 0 andernfalls|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
 |Offsetarray für Spalten tiefer Typen|Dabei sind folgende Werte möglich:<br /><br /> 0, wenn keine Spalten tiefer Typen vorhanden sind<br /><br /> 2 + 2 * [number of deep type columns] andernfalls|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
 |NULL-Array|[number of nullable columns] / 8, aufgerundet auf vollständige Bytes.|Das Array verfügt über ein Bit pro Spalte, die NULL zulässt. Dies wird auf vollständige Bytes aufgerundet.|  
@@ -135,7 +135,7 @@ Speicheroptimierte Tabelle, bestehend aus Indizes und Zeilen.
   
  Betrachten Sie eine Orders-Tabelle mit folgender Definition:  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.Orders (  
      OrderID int NOT NULL   
            PRIMARY KEY NONCLUSTERED,  
@@ -217,7 +217,7 @@ GO
   
  Der tatsächliche Arbeitsspeicher, der dieser Tabelle zugeordnet ist und von ihr und den zugehörigen Indizes verwendet wird, kann über die folgende Abfrage abgerufen werden:  
   
-```tsql  
+```sql  
 select * from sys.dm_db_xtp_table_memory_stats  
 where object_id = object_id('dbo.Orders')  
 ```  

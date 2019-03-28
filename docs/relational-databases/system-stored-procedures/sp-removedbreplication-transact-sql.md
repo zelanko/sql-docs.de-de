@@ -16,12 +16,12 @@ ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0965c656c5c6b0cef690bb3fbaa7bbc2a7965104
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4b9f9c6c8c39355ec2c381c7fa4efa340da3addf
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747692"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528662"
 ---
 # <a name="spremovedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,16 +42,14 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@dbname=**] **'***dbname***'**  
- Der Name der Datenbank. *dbname* ist vom Datentyp **sysname**. Der Standardwert ist NULL. Bei NULL wird die aktuelle Datenbank verwendet.  
+`[ @dbname = ] 'dbname'` Ist der Name der Datenbank. *dbname* ist vom Datentyp **sysname**. Der Standardwert ist NULL. Bei NULL wird die aktuelle Datenbank verwendet.  
   
- [ **@type** =] *Typ*  
- Der Typ der Replikation, für den Datenbankobjekte entfernt werden. *type* ist vom Datentyp **nvarchar(5)** . Die folgenden Werte sind möglich:  
+`[ @type = ] type` Ist der Typ der Replikation für die Datenbank Objekte entfernt werden. *type* ist vom Datentyp **nvarchar(5)** . Die folgenden Werte sind möglich:  
   
 |||  
 |-|-|  
-|**TRAN**|Entfernt Transaktionsreplikations-Veröffentlichungsobjekte.|  
-|**Zusammenführen**|Entfernt Mergereplikations-Veröffentlichungsobjekte.|  
+|**tran**|Entfernt Transaktionsreplikations-Veröffentlichungsobjekte.|  
+|**merge**|Entfernt Mergereplikations-Veröffentlichungsobjekte.|  
 |**both** (Standard)|Entfernt alle Replikationsveröffentlichungsobjekte.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

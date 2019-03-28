@@ -16,12 +16,12 @@ ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d9c6a12ae648ab11fbdf28f04e6c29733fad8ce0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fb281923e5b6d48a23cb6aa3f60bf36bbe9764da
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786367"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531872"
 ---
 # <a name="sphelppublicationaccess-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_help_publication_access [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publication=**] **'***publication***'**  
- Der Name der Veröffentlichung, auf die zugegriffen werden soll. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung, die Zugriff auf. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@return_granted=**] **"***Return_granted***"**  
- Die Login-ID *Return_granted* ist **Bit**, hat den Standardwert 1. Wenn **0** angegeben ist und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwendet wird, werden die verfügbaren Anmeldungen, die auf dem Verleger aber nicht auf dem Verteiler angezeigt werden zurückgegeben. Wenn **0** angegeben ist und Windows-Authentifizierung verwendet wird, die Anmeldungen nicht explizit verweigert wurde Zugriff auf den Verleger oder Verteiler zurückgegeben werden.  
+`[ @return_granted = ] 'return_granted'` Die Login-ID *Return_granted* ist **Bit**, hat den Standardwert 1. Wenn **0** angegeben ist und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwendet wird, werden die verfügbaren Anmeldungen, die auf dem Verleger aber nicht auf dem Verteiler angezeigt werden zurückgegeben. Wenn **0** angegeben ist und Windows-Authentifizierung verwendet wird, die Anmeldungen nicht explizit verweigert wurde Zugriff auf den Verleger oder Verteiler zurückgegeben werden.  
   
- [  **@login=**] **"***Anmeldung***"**  
- Die Standardsicherheits-Anmelde-ID. *Anmeldung* ist **Sysname**, hat den Standardwert **%**.  
+`[ @login = ] 'login'` Ist die standardmäßige Sicherheits-Anmelde-ID. *Anmeldung* ist **Sysname**, hat den Standardwert **%**.  
   
- [  **@initial_list =**] *Initial_list*  
- Gibt an, ob alle Elemente mit Veröffentlichungszugriff zurückgegeben werden oder nur die Elemente, die Zugriff hatten, bevor der Liste neue Elemente hinzugefügt wurden. *Initial_list* bit und hat den Standardwert **0**.  
+`[ @initial_list = ] initial_list` Gibt an, ob alle Elemente mit veröffentlichungszugriff oder nur diejenigen Zugriff hatten, bevor der Liste neue Elemente hinzugefügt wurden zurückgegeben werden soll. *Initial_list* bit und hat den Standardwert **0**.  
   
  **1** gibt Informationen für alle Mitglieder der **Sysadmin** Serverrolle mit gültigen Anmeldenamen auf dem Verteiler, die vorhanden waren, wenn die Veröffentlichung erstellt wurde, sowie die aktuelle Anmeldung.  
   
@@ -61,9 +57,9 @@ sp_help_publication_access [ @publication = ] 'publication'
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**LoginName**|**nvarchar(256)**|Tatsächlicher Anmeldename|  
-|**isntname**|**int**|**0** = Anmeldename ist kein Windows-Benutzer.<br /><br /> **1** = Anmeldename ist ein Windows-Benutzer.|  
-|**isntgroup**|**int**|**0** = Anmeldename ist nicht mit einer Windows-Gruppe.<br /><br /> **1** = Anmeldename ist eine Windows-Gruppe.|  
+|**Loginname**|**nvarchar(256)**|Tatsächlicher Anmeldename|  
+|**Isntname**|**int**|**0** = Anmeldename ist kein Windows-Benutzer.<br /><br /> **1** = Anmeldename ist ein Windows-Benutzer.|  
+|**Isntgroup**|**int**|**0** = Anmeldename ist nicht mit einer Windows-Gruppe.<br /><br /> **1** = Anmeldename ist eine Windows-Gruppe.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -77,8 +73,8 @@ sp_help_publication_access [ @publication = ] 'publication'
  Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_help_publication_access**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_grant_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
- [Sp_revoke_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
+ [sp_grant_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
+ [sp_revoke_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

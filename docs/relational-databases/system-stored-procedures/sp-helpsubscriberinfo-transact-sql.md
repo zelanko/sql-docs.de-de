@@ -16,12 +16,12 @@ ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14ab67bb9d69272960bbce3e1a7cfa059c609e3f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 18a1de1e3b7dc1f312094a9023e0af9df014214b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589804"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526372"
 ---
 # <a name="sphelpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@subscriber =** ] **"**_Abonnenten_**"**  
- Der Name des Abonnenten. *Abonnenten* ist **Sysname**, hat den Standardwert **%**, womit alle Informationen zurückgegeben.  
+`[ @subscriber = ] 'subscriber'` Ist der Name des Abonnenten. *Abonnenten* ist **Sysname**, hat den Standardwert **%**, womit alle Informationen zurückgegeben.  
   
- [  **@publisher =** ] **"**_Verleger_**"**  
- Der Name des Verlegers. *Publisher* ist **Sysname**, und der Standardwert ist der Name des aktuellen Servers.  
+`[ @publisher = ] 'publisher'` Ist der Name des Verlegers. *Publisher* ist **Sysname**, und der Standardwert ist der Name des aktuellen Servers.  
   
 > [!NOTE]  
 >  *Publisher* sollte nicht angegeben werden, es sei denn, sie einen Oracle-Verleger.  
@@ -62,21 +60,21 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**flush_frequency**|**int**|Wird nicht unterstützt.|  
 |**frequency_type**|**int**|Häufigkeit, mit der der Verteilungs-Agent ausgeführt wird:<br /><br /> **1** = einmalige Ausführung<br /><br /> **2** = bedarfsgesteuert<br /><br /> **4** = täglich<br /><br /> **8** = wöchentlich<br /><br /> **16** = monatlich<br /><br /> **32** = mit relativem Monatsintervall<br /><br /> **64** = Autostart<br /><br /> **128** = wiederholt|  
 |**frequency_interval**|**int**|Wert der Häufigkeit festgelegt angewendet *Frequency_type*.|  
-|**frequency_relative_interval**|**int**|Datum des Verteilungs-Agents verwendet wird, wenn *Frequency_type* nastaven NA hodnotu **32** (mit relativem Monatsintervall):<br /><br /> **1** = erster<br /><br /> **2** = Sekunde<br /><br /> **4** = Dritter<br /><br /> **8** = vierter<br /><br /> **16** = letzter|  
+|**frequency_relative_interval**|**int**|Datum des Verteilungs-Agents verwendet wird, wenn *Frequency_type* nastaven NA hodnotu **32** (mit relativem Monatsintervall):<br /><br /> **1** = erster<br /><br /> **2** = Sekunde<br /><br /> **4** = Dritter<br /><br /> **8** = vierter<br /><br /> **16** = Last|  
 |**frequency_recurrence_factor**|**int**|Von verwendete Wiederholungsfaktor *Frequency_type*.|  
 |**frequency_subday**|**int**|Häufigkeit der erneuten Planung während des definierten Zeitraumes:<br /><br /> **1** = einmal<br /><br /> **2** = Sekunde<br /><br /> **4** = Minute<br /><br /> **8** = Stunde|  
 |**frequency_subday_interval**|**int**|Intervall für die *Frequency_subday*.|  
-|**das Format HHMMSS verwendet**|**int**|Zeitpunkt, zu dem der Einsatz des Verteilungs-Agents zum ersten Mal geplant wird (Format: HHMMSS).|  
-|**das Format HHMMSS verwendet**|**int**|Zeitpunkt, zu dem die Planung des Einsatzes des Verteilungs-Agents beendet wird (Format: HHMMSS).|  
+|**active_start_time_of_day**|**int**|Zeitpunkt, zu dem der Einsatz des Verteilungs-Agents zum ersten Mal geplant wird (Format: HHMMSS).|  
+|**active_end_time_of_day**|**int**|Zeitpunkt, zu dem die Planung des Einsatzes des Verteilungs-Agents beendet wird (Format: HHMMSS).|  
 |**active_start_date**|**int**|Datum, an dem der Einsatz des Verteilungs-Agents zum ersten Mal geplant wird (Format: YYYYMMDD).|  
 |**active_end_date**|**int**|Datum, an dem die Planung des Einsatzes des Verteilungs-Agents beendet wird (Format: YYYYMMDD).|  
 |**retryattempt**|**int**|Wird nicht unterstützt.|  
-|**"retryDelay"**|**int**|Wird nicht unterstützt.|  
+|**retrydelay**|**int**|Wird nicht unterstützt.|  
 |**description**|**nvarchar(255)**|Beschreibungstext des Abonnenten.|  
 |**security_mode**|**int**|Implementierter Sicherheitsmodus:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Authentifizierung|  
 |**frequency_type2**|**int**|Häufigkeit, mit der der Merge-Agent ausgeführt wird:<br /><br /> **1** = einmalige Ausführung<br /><br /> **2** = bedarfsgesteuert<br /><br /> **4** = täglich<br /><br /> **8** = wöchentlich<br /><br /> **16** = monatlich<br /><br /> **32** = mit relativem Monatsintervall<br /><br /> **64** = Autostart<br /><br /> **128** = wiederholt|  
 |**frequency_interval2**|**int**|Wert der Häufigkeit festgelegt angewendet *Frequency_type*.|  
-|**frequency_relative_interval2**|**int**|Datum des Merge-Agents verwendet wird, wenn *Frequency_type* auf 32 (monatlich, relativ) festgelegt wird:<br /><br /> **1** = erster<br /><br /> **2** = Sekunde<br /><br /> **4** = Dritter<br /><br /> **8** = vierter<br /><br /> **16** = letzter|  
+|**frequency_relative_interval2**|**int**|Datum des Merge-Agents verwendet wird, wenn *Frequency_type* auf 32 (monatlich, relativ) festgelegt wird:<br /><br /> **1** = erster<br /><br /> **2** = Sekunde<br /><br /> **4** = Dritter<br /><br /> **8** = vierter<br /><br /> **16** = Last|  
 |**frequency_recurrence_factor2**|**int**|Von verwendete Wiederholungsfaktor *Frequency_type **.*|  
 |**frequency_subday2**|**int**|Häufigkeit der erneuten Planung während des definierten Zeitraumes:<br /><br /> **1** = einmal<br /><br /> **2** = Sekunde<br /><br /> **4** = Minute<br /><br /> **8** = Stunde|  
 |**frequency_subday_interval2**|**int**|Intervall für die *Frequency_subday*.|  
@@ -95,10 +93,10 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
  Nur Mitglieder der der **Sysadmin** festen Serverrolle, die **Db_owner** feste Datenbankrolle oder der veröffentlichungszugriffsliste für die Veröffentlichung kann ausführen **Sp_helpsubscriberinfo**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
- [Sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [Sp_changesubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
- [Sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
+ [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_changesubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
+ [sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
  [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [sp_helpserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -18,12 +18,12 @@ ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 525a66fa00981c4360295ee9c704102cd1224220
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 703b6464d035d06583193aedaa330257fc38fe34
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591464"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530372"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_OAMethod objecttoken , methodname
  *objecttoken*  
  Das Objekttoken eines zuvor mit **sp_OACreate**erstellten OLE-Objekts.  
   
- *Methodenname*  
+ *methodname*  
  Der Name der Methode des OLE-Objekts, das aufgerufen wird.  
   
  _ReturnValue_**Ausgabe**  
@@ -65,8 +65,7 @@ sp_OAMethod objecttoken , methodname
   
 -   Die Methode gibt ein Array als Ausgabeparameter zurück.  
   
- [ _@parametername_ **=** ] *Parameter*[ **Ausgabe** ]  
- Ein Parameter der Methode. Wenn angegeben, *Parameter* muss ein Wert, der den entsprechenden Datentyp sein.  
+`[ _@parametername = ] parameter[ OUTPUT ]` Ist ein Methodenparameter. Wenn angegeben, *Parameter* muss ein Wert, der den entsprechenden Datentyp sein.  
   
  Zum Abrufen des Rückgabewert eines Ausgabeparameters *Parameter* muss eine lokale Variable vom entsprechenden Datentyp zurück, und **Ausgabe** muss angegeben werden. Wenn Sie ein konstanter Parameter angegeben wird oder wenn **Ausgabe** nicht angegeben ist, Rückgabewert Wert aus einer Output-Parameter wird ignoriert.  
   

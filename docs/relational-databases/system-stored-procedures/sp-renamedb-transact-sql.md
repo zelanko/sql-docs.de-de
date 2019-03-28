@@ -18,12 +18,12 @@ ms.assetid: 7dd9d4ff-20e1-4857-9a8e-a5bff767cf76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f61002319606a199354022a3fc33ce13a170539d
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: dd46309ebd44bdd16da132b9aef1c903ad1f4b78
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590245"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528342"
 ---
 # <a name="sprenamedb-transact-sql"></a>sp_renamedb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@dbname=**] **'***old_name***'**  
- Der aktuelle Name der Datenbank. *Old_name* ist **Sysname**, hat keinen Standardwert.  
+`[ @dbname = ] 'old_name'` Ist der aktuelle Name der Datenbank. *Old_name* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@newname=**] **'***new_name***'**  
- Ist der neue Name der Datenbank. *New_name* müssen den Regeln für Bezeichner entsprechen. *New_name* ist **Sysname**, hat keinen Standardwert.  
+`[ @newname = ] 'new_name'` Ist der neue Name der Datenbank. *New_name* müssen den Regeln für Bezeichner entsprechen. *New_name* ist **Sysname**, hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder eine Zahl ungleich Null (Fehler)  

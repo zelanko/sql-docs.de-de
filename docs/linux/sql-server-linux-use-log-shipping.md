@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: f4acb72fe8ac0a5f8a85427fbcec5e1a657a1788
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 0db8a92539f83e543623f28067d0408b476c37a6
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032327"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531282"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Erste Schritte mit Protokollversand unter Linux
 
@@ -115,12 +115,12 @@ Wie beschrieben in diesem Bild ist, wird eine protokollversandsitzung umfasst di
 
 - Führen Sie dieses Skript aus dem primären server
 
-    ```tsql
+    ```sql
     BACKUP DATABASE SampleDB
     TO DISK = '/var/opt/mssql/tlogs/SampleDB.bak'
     GO
     ```
-    ```tsql
+    ```sql
     DECLARE @LS_BackupJobId AS uniqueidentifier 
     DECLARE @LS_PrimaryId   AS uniqueidentifier 
     DECLARE @SP_Add_RetCode As int 
@@ -181,12 +181,12 @@ Wie beschrieben in diesem Bild ist, wird eine protokollversandsitzung umfasst di
 
 - Führen Sie dieses Skript aus dem sekundären server
 
-    ```tsql
+    ```sql
     RESTORE DATABASE SampleDB FROM DISK = '/var/opt/mssql/tlogs/SampleDB.bak'
     WITH NORECOVERY;
     ```
     
-    ```tsql
+    ```sql
     DECLARE @LS_Secondary__CopyJobId    AS uniqueidentifier 
     DECLARE @LS_Secondary__RestoreJobId AS uniqueidentifier 
     DECLARE @LS_Secondary__SecondaryId  AS uniqueidentifier 
@@ -289,7 +289,7 @@ Wie beschrieben in diesem Bild ist, wird eine protokollversandsitzung umfasst di
 
 - Überprüfen der Funktionsfähigkeit des Protokollversands von der folgende Auftrag wird gestartet, auf dem primären server
 
-    ```tsql
+    ```sql
     USE msdb ;  
     GO  
 
@@ -299,7 +299,7 @@ Wie beschrieben in diesem Bild ist, wird eine protokollversandsitzung umfasst di
 
 - Überprüfen der Funktionsfähigkeit des Protokollversands von der folgende Auftrag wird gestartet, auf dem sekundären server
  
-    ```tsql
+    ```sql
     USE msdb ;  
     GO  
 

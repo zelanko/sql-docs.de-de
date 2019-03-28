@@ -16,12 +16,12 @@ ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 51b5b2aa6c6f815f1b2f5f37c9093698955ffd3b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0d009b05fea2a2c587f97dc4b2416588932ad0bc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136110"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530362"
 ---
 # <a name="spshowrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@ownername**=] **"***Ownername***"**  
- Der Name des Tabellenbesitzers. *Ownername* ist **Sysname**, hat den Standardwert NULL. Dieser Parameter ist hilfreich für differenzierte Tabellen, wenn eine Datenbank mehrere Tabellen mit dem gleichen Namen enthält, aber jede Tabelle einen unterschiedlichen Besitzer aufweist.  
+`[ @ownername = ] 'ownername'` Ist der Name des Besitzers der Tabelle. *Ownername* ist **Sysname**, hat den Standardwert NULL. Dieser Parameter ist hilfreich für differenzierte Tabellen, wenn eine Datenbank mehrere Tabellen mit dem gleichen Namen enthält, aber jede Tabelle einen unterschiedlichen Besitzer aufweist.  
   
- [  **@tablename =**] **"***Tablename***"**  
- Der Name der Tabelle, die die Zeile enthält, für die die Informationen zurückgegeben werden. *TableName* ist **Sysname**, hat den Standardwert NULL.  
+`[ @tablename = ] 'tablename'` Ist der Name der Tabelle, die die Zeile enthält, für die die Informationen zurückgegeben werden. *TableName* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@rowguid =**] *Rowguid*  
- Der eindeutige Bezeichner der Zeile. *ROWGUID* ist **Uniqueidentifier**, hat keinen Standardwert.  
+`[ @rowguid = ] rowguid` Ist der eindeutige Bezeichner der Zeile an. *ROWGUID* ist **Uniqueidentifier**, hat keinen Standardwert.  
   
- [ **@show**=] **"***anzeigen***"**  
- Bestimmt den Umfang der Informationen, die im Resultset zurückgegeben werden sollen. *anzeigen* ist **nvarchar(20)** hat den Standardwert von beiden. Wenn **Zeile**, nur Zeilenversionsinformationen zurückgegeben. Wenn **Spalten**, nur spaltenversionsinformationen zurückgegeben. Wenn **sowohl**, sowohl Zeilen-als auch spaltenversionsinformationen zurückgegeben.  
+`[ @show = ] 'show'` Bestimmt die Menge der Informationen, die im Resultset zurückgegeben. *anzeigen* ist **nvarchar(20)** hat den Standardwert von beiden. Wenn **Zeile**, nur Zeilenversionsinformationen zurückgegeben. Wenn **Spalten**, nur spaltenversionsinformationen zurückgegeben. Wenn **sowohl**, sowohl Zeilen-als auch spaltenversionsinformationen zurückgegeben.  
   
 ## <a name="result-sets-for-row-information"></a>Resultsets für Zeileninformationen  
   
@@ -59,11 +55,11 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |-----------------|---------------|-----------------|  
 |**server_name**|**sysname**|Name des Servers mit der Datenbank, in der der Eintrag der Zeilenversion vorgenommen wurde.|  
 |**db_name**|**sysname**|Name der Datenbank, in der dieser Eintrag vorgenommen wurde.|  
-|**db_nickname**|**Binary(6)**|Spitzname der Datenbank, in der dieser Eintrag vorgenommen wurde.|  
+|**db_nickname**|**binary(6)**|Spitzname der Datenbank, in der dieser Eintrag vorgenommen wurde.|  
 |**version**|**int**|Version des Eintrags.|  
-|**current_state**|**vom Datentyp nvarchar(9)**|Gibt Informationen zum aktuellen Status der Zeile zurück.<br /><br /> **y** -Daten der Zeile den aktuellen Zustand der Zeile darstellt.<br /><br /> **n** -Zeilendaten stellt nicht den aktuellen Zustand der Zeile dar.<br /><br /> **\<n/a >** - nicht anwendbar.<br /><br /> **\<Unbekannter >** -aktuellen Zustand nicht bestimmt werden kann.|  
-|**rowversion_table**|**NCHAR(17)**|Gibt an, ob die Zeilenversionen im rowsetcache der [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) Tabelle oder die [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) Tabelle.|  
-|**Kommentar**|**nvarchar(255)**|Zusätzliche Informationen zu diesem Zeilenversionseintrag. Normalerweise ist dieses Feld leer.|  
+|**current_state**|**nvarchar(9)**|Gibt Informationen zum aktuellen Status der Zeile zurück.<br /><br /> **y** -Daten der Zeile den aktuellen Zustand der Zeile darstellt.<br /><br /> **n** -Zeilendaten stellt nicht den aktuellen Zustand der Zeile dar.<br /><br /> **\<n/a >** - nicht anwendbar.<br /><br /> **\<Unbekannter >** -aktuellen Zustand nicht bestimmt werden kann.|  
+|**rowversion_table**|**nchar(17)**|Gibt an, ob die Zeilenversionen im rowsetcache der [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) Tabelle oder die [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) Tabelle.|  
+|**comment**|**nvarchar(255)**|Zusätzliche Informationen zu diesem Zeilenversionseintrag. Normalerweise ist dieses Feld leer.|  
   
 ## <a name="result-sets-for-column-information"></a>Resultsets für Spalteninformationen  
   
@@ -71,10 +67,10 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |-----------------|---------------|-----------------|  
 |**server_name**|**sysname**|Name des Servers mit der Datenbank, in der Eintrag der Spaltenversion vorgenommen wurde.|  
 |**db_name**|**sysname**|Name der Datenbank, in der dieser Eintrag vorgenommen wurde.|  
-|**db_nickname**|**Binary(6)**|Spitzname der Datenbank, in der dieser Eintrag vorgenommen wurde.|  
+|**db_nickname**|**binary(6)**|Spitzname der Datenbank, in der dieser Eintrag vorgenommen wurde.|  
 |**version**|**int**|Version des Eintrags.|  
 |**colname**|**sysname**|Name der Artikelspalte, die der Eintrag der Spaltenversion darstellt.|  
-|**Kommentar**|**nvarchar(255)**|Zusätzliche Informationen zu diesem Spaltenversionseintrag. Normalerweise ist dieses Feld leer.|  
+|**comment**|**nvarchar(255)**|Zusätzliche Informationen zu diesem Spaltenversionseintrag. Normalerweise ist dieses Feld leer.|  
   
 ## <a name="result-set-for-both"></a>Resultset für beide  
  Wenn der Wert **sowohl** wird ausgewählt, für die *anzeigen*, wird sowohl die Zeilen- und Resultsets zurückgegeben.  

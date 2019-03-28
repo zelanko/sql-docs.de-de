@@ -12,12 +12,12 @@ ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2efe03bcff016070c9017068c62e823dd36d497a
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 543e248f19e76b0d2caca3ee595778fe430334ea
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018475"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531882"
 ---
 # <a name="linestring"></a>LineString
   Ein `LineString` ist ein eindimensionales Objekt, das eine Sequenz aus Punkten und die sie verbindenden Liniensegmente darstellt.  
@@ -48,7 +48,7 @@ DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';
   
  `@g3` zeigt, dass eine `LineString`-Instanz zwar akzeptiert werden kann, dass sie möglicherweise jedoch nicht gültig ist.  
   
- Die folgende `LineString`-Instanz wird nicht akzeptiert. Sie löst eine `System.FormatException` aus.  
+ Die folgende `LineString`-Instanz wird nicht akzeptiert. Sie löst eine `System.FormatException`aus.  
   
 ```  
 DECLARE @g geometry = 'LINESTRING(1 1)';  
@@ -102,7 +102,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(1 1 NULL 0, 2 4 NULL 12.3, 3 9 NUL
   
  Im folgenden Beispiel wird veranschaulicht, wie eine `geometry LineString` -Instanz mit zwei Punkten erstellt wird, die identisch sind. Ein Aufruf von `IsValid` gibt an, dass die `LineString`-Instanz nicht gültig ist, und durch einen Aufruf von `MakeValid` wird die `LineString`-Instanz in einen `Point` konvertiert.  
   
-```tsql  
+```sql  
 DECLARE @g geometry  
 SET @g = geometry::STGeomFromText('LINESTRING(1 3, 1 3)',0);  
 IF @g.STIsValid() = 1  

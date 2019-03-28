@@ -16,12 +16,12 @@ ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af247734b941a0d9fd7010d4699f9ddb296c890e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 1de46c12b0e05b592489e557a80138996ad9767f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589164"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528792"
 ---
 # <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,15 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication=**] **"**_Veröffentlichung_**"**  
- Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert **%**. Wenn die Veröffentlichung angegeben wird, werden alle Konflikte dieser Veröffentlichung zurückgegeben. Z. B. wenn die **MSmerge_conflict_Customers** Tabelle hat Konfliktzeilen für die **WA** und **Zertifizierungsstelle** Publications, übergeben einen Namen für die Veröffentlichung **Zertifizierungsstelle**  ruft Konflikte für die **Zertifizierungsstelle** Veröffentlichung.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert **%**. Wenn die Veröffentlichung angegeben wird, werden alle Konflikte dieser Veröffentlichung zurückgegeben. Z. B. wenn die **MSmerge_conflict_Customers** Tabelle hat Konfliktzeilen für die **WA** und **Zertifizierungsstelle** Publications, übergeben einen Namen für die Veröffentlichung **Zertifizierungsstelle**  ruft Konflikte für die **Zertifizierungsstelle** Veröffentlichung.  
   
- [  **@conflict_table=**] **"**_Conflict_table_**"**  
- Der Name der Konflikttabelle. *Conflict_table* ist **Sysname**, hat keinen Standardwert. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen werden Konflikttabellen heißen mithilfe der Formatnamen mit **MSmerge_conflict\__Veröffentlichung\_Artikel_**, mit eine Tabelle pro veröffentlichtem Artikel.  
+`[ @conflict_table = ] 'conflict_table'` Ist der Name der Konflikttabelle. *Conflict_table* ist **Sysname**, hat keinen Standardwert. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen werden Konflikttabellen heißen mithilfe der Formatnamen mit **MSmerge_conflict\__Veröffentlichung\_Artikel_**, mit eine Tabelle pro veröffentlichtem Artikel.  
   
- [  **@publisher=**] **"**_Verleger_**"**  
- Der Name des Verlegers. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Ist der Name des Verlegers. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@publisher_db=**] **"**_Publisher_db_**"**  
- Ist der Name der Verlegerdatenbank. *Publisher_db* ist **Sysname**, hat den Standardwert NULL.  
+`[ @publisher_db = ] 'publisher_db'` Ist der Name der Verlegerdatenbank. *Publisher_db* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@logical_record_conflicts=** ] *Logical_record_conflicts*  
- Gibt an, ob das Resultset Informationen zu Konflikten in logischen Datensätzen enthält. *Logical_record_conflicts* ist **Int**, hat den Standardwert 0. **1** bedeutet, dass Informationen zu Konflikten logischer Datensätze zurückgegeben werden.  
+`[ @logical_record_conflicts = ] logical_record_conflicts` Gibt an, ob das Resultset Informationen zu Konflikten in logischen Datensätzen enthält. *Logical_record_conflicts* ist **Int**, hat den Standardwert 0. **1** bedeutet, dass Informationen zu Konflikten logischer Datensätze zurückgegeben werden.  
   
 ## <a name="result-sets"></a>Resultsets  
  **Sp_helpmergeconflictrows** gibt ein Resultset aus der Basistabellenstruktur und diese zusätzlichen Spalten besteht.  

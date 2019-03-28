@@ -18,12 +18,12 @@ ms.assetid: d0769566-8f5c-4c8a-84d3-ee17ea6e0cb4
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 496515aaf8abc1e9f5eec313655199e97b5a5bcb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a5e3db87aedd9a13ac7af90284362bb82ab3a13
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658958"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526702"
 ---
 # <a name="spsyspolicyupdatepolicycategorysubscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,19 +43,15 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
- Der Bezeichner des Richtlinienkategorieabonnements, das Sie aktualisieren möchten. *Policy_category_subscription_id* ist **Int**, und es ist erforderlich.  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` Ist der Bezeichner für das Abonnement einer Richtlinienkategorie, das Sie aktualisieren möchten. *Policy_category_subscription_id* ist **Int**, und es ist erforderlich.  
   
- [ **@target_type=** ] **'** target_type **'**  
- Der Zieltyp des Kategorieabonnements. *Target_type* ist **Sysname**, hat den Standardwert NULL.  
+`[ @target_type = ] 'target_type'` Ist der Zieltyp des kategorieabonnements. *Target_type* ist **Sysname**, hat den Standardwert NULL.  
   
  Bei Angabe von *Target_type*, der Wert muss auf 'DATABASE' festgelegt werden.  
   
- [  **@target_object=** ] **"** Target_object **"**  
- Ist der Name der Datenbank, die die Richtlinienkategorie abonniert. *Target_object* ist **Sysname**, hat den Standardwert NULL.  
+`[ @target_object = ] 'target_object'` Ist der Name der Datenbank, die die Richtlinienkategorie abonniert. *Target_object* ist **Sysname**, hat den Standardwert NULL.  
   
- [ **@policy_category=** ] **'** policy_category **'**  
- Der Name der Richtlinienkategorie, die die Datenbank abonnieren soll. *Policy_category* ist **Sysname**, hat den Standardwert NULL.  
+`[ @policy_category = ] 'policy_category'` Ist der Name der Richtlinienkategorie, die die Datenbank abonnieren soll. *Policy_category* ist **Sysname**, hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -77,7 +73,7 @@ ON a.policy_category_id = b.policy_category_id;
  Erfordert die Mitgliedschaft in der festen Datenbankrolle PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Mögliche Erweiterung der Anmeldeinformationen: Benutzer mit der Rolle PolicyAdministratorRole können Servertrigger erstellen und die Ausführung von Richtlinien planen. Dies kann sich auf die Arbeitsweise der [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz auswirken. Ein Benutzer mit der Rolle PolicyAdministratorRole kann beispielsweise eine Richtlinie erstellen, durch die das Erstellen der meisten Objekte in [!INCLUDE[ssDE](../../includes/ssde-md.md)] verhindert wird. Aufgrund dieser möglichen Erweiterung der Anmeldeinformationen, sollte die PolicyAdministratorRole-Rolle gewährt werden nur für Benutzer, die mit der Kontrolle der Konfiguration von vertrauenswürdigen sind die [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Mögliche Erweiterung der Anmeldeinformationen: Benutzer der Rolle PolicyAdministratorRole können Servertrigger erstellen und Ausführung von Richtlinien planen, die den Betrieb der Instanz von beeinflussen, können die [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Ein Benutzer mit der Rolle PolicyAdministratorRole kann beispielsweise eine Richtlinie erstellen, durch die das Erstellen der meisten Objekte in [!INCLUDE[ssDE](../../includes/ssde-md.md)] verhindert wird. Aufgrund dieser möglichen Erweiterung der Anmeldeinformationen, sollte die PolicyAdministratorRole-Rolle gewährt werden nur für Benutzer, die mit der Kontrolle der Konfiguration von vertrauenswürdigen sind die [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird ein vorhandenes Richtlinienkategorieabonnement aktualisiert, damit die AdventureWorks2012-Datenbank die Richtlinienkategorie "Finance" abonniert.  
@@ -92,7 +88,7 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Prozeduren für Richtlinie der richtlinienbasierten Verwaltung &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [Sp_syspolicy_add_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
- [Sp_syspolicy_delete_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-subscription-transact-sql.md)  
+ [sp_syspolicy_add_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
+ [sp_syspolicy_delete_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-subscription-transact-sql.md)  
   
   

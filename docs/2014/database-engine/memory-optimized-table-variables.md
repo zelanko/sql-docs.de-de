@@ -10,15 +10,15 @@ ms.assetid: bd102e95-53e2-4da6-9b8b-0e4f02d286d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c2035a5fba0d5ab37f0a545701551d5e7dfe80d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065790"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530742"
 ---
 # <a name="memory-optimized-table-variables"></a>Speicheroptimierte Tabellenvariablen
-  Zusätzlich zu den speicheroptimierten Tabellen (für den effizienten Datenzugriff) und systemintern kompilierten gespeicherte Prozeduren (für effiziente abfrageverarbeitung und Ausführung von Geschäftslogik) [!INCLUDE[hek_2](../includes/hek-2-md.md)] eine dritte Objektart eingeführt: der Typ einer speicheroptimierten Tabelle. Eine Tabellenvariable, die mithilfe eines speicheroptimierten Tabellentyps erstellt wird, ist eine speicheroptimierte Tabellenvariable.  
+  Zusätzlich zu speicheroptimierten Tabellen (für den effizienten Datenzugriff) und nativ kompilierten gespeicherten Prozeduren (für effiziente Abfrageverarbeitung und Ausführung von Geschäftslogik) wird mit [!INCLUDE[hek_2](../includes/hek-2-md.md)] eine dritte Objektart eingeführt: speicheroptimierte Tabellentypen. Eine Tabellenvariable, die mithilfe eines speicheroptimierten Tabellentyps erstellt wird, ist eine speicheroptimierte Tabellenvariable.  
   
  Speicheroptimierte Tabellenvariablen bieten im Vergleich zu datenträgerbasierten Tabellenvariablen die folgenden Vorteile:  
   
@@ -36,11 +36,11 @@ ms.locfileid: "48065790"
   
 -   Tabellenvariablen können zum Simulieren von Cursorn in systemintern kompilierten gespeicherten Prozeduren verwendet werden, um Einschränkungen der Oberfläche in systemintern kompilierten gespeicherten Prozeduren zu umgehen.  
   
- Wie Speicheroptimierte Tabellen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] generiert eine DLL für jeden Typ eine Speicheroptimierte Tabelle. (Die Kompilierung wird aufgerufen, wenn der speicheroptimierte Tabellentyp erstellt wird und nicht, wenn er zum Erstellen von speicheroptimierten Tabellenvariablen verwendet wird.) Diese DLL beinhaltet die Funktionen für den Zugriff auf Indizes und das Abrufen von Daten aus den Tabellenvariablen. Wenn eine speicheroptimierte Tabellenvariable basierend auf dem Tabellentyp deklariert wird, wird in der Benutzersitzung eine Instanz der Tabelle und der Indexstrukturen entsprechend dem Tabellentyp erstellt. Die Tabellenvariable kann anschließend auf dieselbe Weise wie datenträgerbasierte Tabellenvariablen verwendet werden. Sie können in der Tabellenvariablen Zeilen einfügen, aktualisieren und löschen, und Sie können die Variablen in [!INCLUDE[tsql](../includes/tsql-md.md)]-Abfragen verwenden. Sie können die Variablen auch als Tabellenwertparameter (TVPs) an systemintern kompilierte und interpretierte gespeicherte Prozeduren übergeben.  
+ Wie bei speicheroptimierten Tabellen erstellt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eine DLL für jeden speicheroptimierten Tabellentyp. (Die Kompilierung wird aufgerufen, wenn der speicheroptimierte Tabellentyp erstellt wird und nicht, wenn er zum Erstellen von speicheroptimierten Tabellenvariablen verwendet wird.) Diese DLL beinhaltet die Funktionen für den Zugriff auf Indizes und das Abrufen von Daten aus den Tabellenvariablen. Wenn eine speicheroptimierte Tabellenvariable basierend auf dem Tabellentyp deklariert wird, wird in der Benutzersitzung eine Instanz der Tabelle und der Indexstrukturen entsprechend dem Tabellentyp erstellt. Die Tabellenvariable kann anschließend auf dieselbe Weise wie datenträgerbasierte Tabellenvariablen verwendet werden. Sie können in der Tabellenvariablen Zeilen einfügen, aktualisieren und löschen, und Sie können die Variablen in [!INCLUDE[tsql](../includes/tsql-md.md)] -Abfragen verwenden. Sie können die Variablen auch als Tabellenwertparameter (TVPs) an systemintern kompilierte und interpretierte gespeicherte Prozeduren übergeben.  
   
  Das folgende Beispiel zeigt einen speicheroptimierten Tabellentyp aus dem AdventureWorks-basierten In-Memory-OLTP-Beispiel ([Beispiel zu SQL Server 2014 In-Memory OLTP](https://msftdbprodsamples.codeplex.com/releases/view/114491)).  
   
-```tsql
+```sql
 CREATE TYPE Sales.SalesOrderDetailType_inmem
    AS TABLE
 (
@@ -81,7 +81,7 @@ WITH ( MEMORY_OPTIMIZED = ON );
 ## <a name="table-valued-parameters"></a>Tabellenwertparameter  
  Im folgenden Beispielskript wird die Deklaration einer Tabellenvariablen als speicheroptimierter Tabellentyp `Sales.SalesOrderDetailType_inmem`, das Einfügen von drei Zeilen in die Variable und das Übergeben der Variablen als TVP an `Sales.usp_InsertSalesOrder_inmem` gezeigt.  
   
-```tsql  
+```sql  
 DECLARE @od Sales.SalesOrderDetailType_inmem,  
   @SalesOrderID uniqueidentifier,  
   @DueDate datetime2 = SYSDATETIME()  
@@ -103,7 +103,7 @@ EXEC Sales.usp_InsertSalesOrder_inmem
 ## <a name="temp-table-replacement"></a>Ersatz für #temp-Tabellen  
  Im folgenden Beispiel werden speicheroptimierte Tabellentypen und Tabellenvariablen als Ersatz für lokale #temp-Tabellen einer gespeicherten Prozedur verwendet.  
   
-```tsql  
+```sql  
 -- Using SQL procedure and temp table  
 CREATE TABLE #tempTable (c INT NOT NULL PRIMARY KEY NONCLUSTERED)  
   
@@ -139,7 +139,7 @@ GO
 ## <a name="creating-a-single-result-set"></a>Erstellen eines einzelnen Resultsets  
  Im folgenden Beispiel wird gezeigt, wie Zwischenergebnisse gespeichert und einzelne Resultsets basierend auf mehreren Abfragen in systemintern kompilierten gespeicherten Prozeduren erstellt werden. Im Beispiel wird die Vereinigung `SELECT c1 FROM dbo.t1 UNION SELECT c1 FROM dbo.t2` berechnet.  
   
-```tsql  
+```sql  
 CREATE DATABASE hk  
 GO  
 ALTER DATABASE hk ADD FILEGROUP hk_mod CONTAINS MEMORY_OPTIMIZED_DATA  

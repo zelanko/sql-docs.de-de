@@ -21,12 +21,12 @@ ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7f054808a5432c7be95eeb419308012603f46069
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d1536592d7a5463dc1e15df20aee4fe188323cf5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369312"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531722"
 ---
 # <a name="logging-in-to-sql-server"></a>Anmelden an SQL Server
   Sie können sich mithilfe eines beliebigen grafischen Administrationstools oder von der Eingabeaufforderung aus bei einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anmelden.  
@@ -71,7 +71,7 @@ ms.locfileid: "53369312"
 ## <a name="verifying-your-connection-protocol"></a>Überprüfen Ihres Verbindungsprotokolls  
  Bei einer Verbindung mit [!INCLUDE[ssDE](../../includes/ssde-md.md)]gibt die folgende Abfrage das für die aktuelle Verbindung verwendete Protokoll sowie die Authentifizierungsmethode (NTLM oder Kerberos) zurück und gibt an, ob es sich um eine verschlüsselte Verbindung handelt:  
   
-```tsql  
+```sql  
 SELECT net_transport, auth_scheme, encrypt_option   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  

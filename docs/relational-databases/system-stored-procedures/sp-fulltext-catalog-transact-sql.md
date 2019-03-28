@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ab482a70374c9a11256719811db02dd4eb1586e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f97a1f480b360270d803c502dd40a6e1653b3935
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663238"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526442"
 ---
 # <a name="spfulltextcatalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,16 +46,14 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@ftcat=**] **"***Fulltext_catalog_name***"**  
- Der Name des Volltextkatalogs. Katalognamen müssen für jede Datenbank eindeutig sein. *Fulltext_catalog_name* ist **Sysname**.  
+`[ @ftcat = ] 'fulltext_catalog_name'` Ist der Name der Volltext-Katalog. Katalognamen müssen für jede Datenbank eindeutig sein. *Fulltext_catalog_name* ist **Sysname**.  
   
- [ **@action=**] **'***action***'**  
- Die Aktion, die ausgeführt werden soll. *Aktion* ist **varchar(20)**, und kann einen der folgenden Werte sein.  
+`[ @action = ] 'action'` Ist die Aktion ausgeführt werden. *action* ist vom Datentyp **varchar(20)**. Die folgenden Werte sind möglich:  
   
 > [!NOTE]  
 >  Volltextkataloge können bei Bedarf erstellt, gelöscht und geändert werden. Vermeiden Sie es jedoch, Schemaänderungen an mehreren Katalogen gleichzeitig auszuführen. Diese Aktionen können ausgeführt werden, mithilfe der **Sp_fulltext_table** gespeicherte Prozedur, die die empfohlene Methode ist.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**Erstellen**|Erstellt einen leeren, neuen Volltextkatalog im Dateisystem und fügt eine entsprechende Zeile in **Sysfulltextcatalogs** mit der *Fulltext_catalog_name* und *Root_directory*, Wenn Sie vorhanden ist, Werte. *Fulltext_catalog_name* muss innerhalb der Datenbank eindeutig sein.|  
 |**Drop**|Löscht *Fulltext_catalog_name* aus dem Dateisystem entfernt wird, und löschen die zugehörige Zeile in **Sysfulltextcatalogs**. Diese Aktion schlägt fehl, wenn der Katalog Indizes für eine oder mehrere Tabellen enthält. **Sp_fulltext_table** "*Table_name*', 'drop' sollte ausgeführt werden, um die Tabellen aus dem Katalog zu löschen.<br /><br /> Wenn der Katalog nicht vorhanden ist, wird ein Fehler gemeldet.|  
@@ -64,8 +62,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 |**Beenden**|Beendet eine indexauffüllung für *Fulltext_catalog_name*. Wenn der Katalog nicht vorhanden ist, wird ein Fehler gemeldet. Wenn das Auffüllen bereits beendet wurde, wird keine Warnung angezeigt.|  
 |**Neu erstellen**|Neu *Fulltext_catalog_name*. Bei der Neuerstellung eines Katalogs wird der vorhandene Katalog gelöscht und an seiner Stelle ein neuer Katalog erstellt. Alle Tabellen, in denen Referenzen für die Volltextindizierung vorhanden sind, werden dem neuen Katalog zugeordnet. Durch das erneute Erstellen werden die Volltextmetadaten in den Datenbanksystemtabellen zurückgesetzt.<br /><br /> Wenn die Änderungsnachverfolgung OFF ist, wird durch das erneute Erstellen keine Neuauffüllung des neu erstellten Volltextkatalogs verursacht. In diesem Fall führen Sie zum Katalog erneut aufzufüllen, **Sp_fulltext_catalog** mit der **Start_full** oder **Start_incremental** Aktion.|  
   
- [ **@path=**] **'***root_directory***'**  
- Ist das Stammverzeichnis (nicht der vollständige physische Pfad) für eine **erstellen** Aktion. *Root_directory* ist **nvarchar(100)** und hat den Standardwert NULL, womit die Verwendung der beim Setup angegebene Standardspeicherort. Dies ist das Unterverzeichnis Ftdata im Mssql-Verzeichnis. Beispiel: C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\FTData. Das angegebene Stammverzeichnis muss sich auf einem Laufwerk des gleichen Computers befinden, es darf nicht nur aus dem Laufwerkbuchstaben bestehen und darf kein relativer Pfad sein. Netzlaufwerke, austauschbare Laufwerke, Disketten und UNC-Pfade werden nicht unterstützt. Volltextkataloge müssen auf einer lokalen Festplatte des Computers erstellt werden, auf dem eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.  
+`[ @path = ] 'root_directory'` Ist das Stammverzeichnis (nicht der vollständige physische Pfad) für eine **erstellen** Aktion. *Root_directory* ist **nvarchar(100)** und hat den Standardwert NULL, womit die Verwendung der beim Setup angegebene Standardspeicherort. Dies ist das Unterverzeichnis Ftdata im Mssql-Verzeichnis. Beispiel: C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\FTData. Das angegebene Stammverzeichnis muss sich auf einem Laufwerk des gleichen Computers befinden, es darf nicht nur aus dem Laufwerkbuchstaben bestehen und darf kein relativer Pfad sein. Netzlaufwerke, austauschbare Laufwerke, Disketten und UNC-Pfade werden nicht unterstützt. Volltextkataloge müssen auf einer lokalen Festplatte des Computers erstellt werden, auf dem eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.  
   
  **@path** ist nur gültig, wenn *Aktion* ist **erstellen**. Für andere Aktionen als **erstellen** (**beenden**, **rebuild**und so weiter), **@path** muss NULL sein oder ausgelassen.  
   
@@ -141,7 +138,7 @@ GO
  [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
  [sp_fulltext_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql.md)   
  [sp_help_fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   
- [Sp_help_fulltext_catalogs_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
+ [sp_help_fulltext_catalogs_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Volltextsuche](../../relational-databases/search/full-text-search.md)  
   

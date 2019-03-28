@@ -16,12 +16,12 @@ ms.assetid: b52b37e6-4fec-40cf-abba-7dce4ff395fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a05845955116454ae23b2cd97e25250dbb1e6331
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0b8cda79919c318b6bee5817731e4ca83aea17aa
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124090"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529752"
 ---
 # <a name="spdroppublication-transact-sql"></a>sp_droppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_droppublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication=** ] **"**_Veröffentlichung_**"**  
- Der Name der zu löschenden Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert. Wenn **alle** angegeben ist, werden alle Veröffentlichungen aus der Veröffentlichungsdatenbank, die keine Abonnements gelöscht werden.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung gelöscht werden soll. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert. Wenn **alle** angegeben ist, werden alle Veröffentlichungen aus der Veröffentlichungsdatenbank, die keine Abonnements gelöscht werden.  
   
- [  **@ignore_distributor =** ] *Ignore_distributor*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @ignore_distributor = ] ignore_distributor` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

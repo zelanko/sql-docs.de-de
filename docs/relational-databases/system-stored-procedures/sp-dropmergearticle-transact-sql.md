@@ -16,12 +16,12 @@ ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78328463828b3c4a93b72ddc8790df13677dee81
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 13f48722b940c26cda8b29258f16f641f74d15e9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125370"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531892"
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,34 +44,27 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication=**] **"**_Veröffentlichung_**"**  
- Der Name der Veröffentlichung, aus der ein Artikel gelöscht werden soll. *Veröffentlichung*ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung, aus denen einen Artikel gelöscht werden. *Veröffentlichung*ist **Sysname**, hat keinen Standardwert.  
   
- [  **@article=**] **"**_Artikel_**"**  
- Der Name des Artikels, der aus der angegebenen Veröffentlichung gelöscht werden soll. *Artikel*ist **Sysname**, hat keinen Standardwert. Wenn **alle**, werden alle vorhandenen Artikel in der angegebenen Mergeveröffentlichung entfernt. Auch wenn *Artikel* ist **alle**, die Veröffentlichung noch muss gelöscht werden separat aus dem Artikel.  
+`[ @article = ] 'article'` Ist der Name des Artikels, der aus der angegebenen Veröffentlichung zu löschen. *Artikel*ist **Sysname**, hat keinen Standardwert. Wenn **alle**, werden alle vorhandenen Artikel in der angegebenen Mergeveröffentlichung entfernt. Auch wenn *Artikel* ist **alle**, die Veröffentlichung noch muss gelöscht werden separat aus dem Artikel.  
   
- [  **@ignore_distributor=**] *Ignore_distributor*  
- Gibt an, ob diese gespeicherte Prozedur ausgeführt wird, ohne eine Verbindung mit dem Verteiler herzustellen. *Ignore_distributor* ist **Bit**, hat den Standardwert **0**.  
+`[ @ignore_distributor = ] ignore_distributor` Gibt an, ob diese gespeicherte Prozedur ohne Herstellen einer Verbindung mit dem Verteiler ausgeführt wird. *Ignore_distributor* ist **Bit**, hat den Standardwert **0**.  
   
- [  **@reserved=**] *reserviert*  
- Ist für die zukünftige Verwendung reserviert. *reservierte* ist **nvarchar(20)**, hat den Standardwert NULL.  
+`[ @reserved = ] reserved` ist für die zukünftige Verwendung reserviert. *reservierte* ist **nvarchar(20)**, hat den Standardwert NULL.  
   
- [  **@force_invalidate_snapshot=**] *Force_invalidate_snapshot*  
- Aktiviert oder deaktiviert die Möglichkeit, eine Momentaufnahme für ungültig zu erklären. *Force_invalidate_snapshot* ist eine **Bit**, hat den Standardwert **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Aktiviert oder deaktiviert die Möglichkeit, eine Momentaufnahme für ungültig erklärt. *Force_invalidate_snapshot* ist eine **Bit**, hat den Standardwert **0**.  
   
  **0** gibt an, dass Änderungen am Mergeartikel bewirken nicht, die Momentaufnahme ungültig wird.  
   
  **1** bedeutet, dass am Mergeartikel Änderungen kann dazu führen, dass die Momentaufnahme ungültig wird. wenn dies zutrifft, wird ein Wert von **1** die Berechtigung für das Auftreten der neuen Momentaufnahme erteilt.  
   
- [  **@force_reinit_subscription =** ] *Force_reinit_subscription*  
- Bestätigt, dass durch das Löschen des Artikels eine erneute Initialisierung der vorhandenen Abonnements erforderlich wird. *Force_reinit_subscription* ist eine **Bit**, hat den Standardwert **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Bestätigt, dass das Löschen des Artikels erneute Initialisierung vorhandener Abonnements erfordert. *Force_reinit_subscription* ist eine **Bit**, hat den Standardwert **0**.  
   
  **0** gibt an, dass Löschen des Artikels nicht das Abonnement erneut initialisiert werden kann.  
   
  **1** bedeutet, dass dieser Artikel führt dazu, dass vorhandene Abonnements erneut initialisiert werden gelöscht und Berechtigung für den erneuten abonnementinitialisierung erteilt.  
   
- [  **@ignore_merge_metadata=** ] *Ignore_merge_metadata*  
- Nur interne Verwendung.  
+`[ @ignore_merge_metadata = ] ignore_merge_metadata` Nur interne Verwendung.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

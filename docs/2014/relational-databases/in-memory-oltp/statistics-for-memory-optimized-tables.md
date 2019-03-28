@@ -10,12 +10,12 @@ ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee7c3d44f3575fd1bf25a6e304a379ca6ca6391b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e47a8c6f5b0da31aea9168bbbc56bd9b28afb96
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136070"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530832"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>Statistiken für speicheroptimierte Tabellen
   Der Abfrageoptimierer verwendet Statistiken zu Spalten zum Erstellen von Abfrageplänen, die die Abfrageleistung verbessern. Die Statistiken werden aus den Tabellen in der Datenbank gesammelt und in den Datenbankmetadaten gespeichert.  
@@ -41,7 +41,7 @@ ms.locfileid: "48136070"
 ## <a name="guidelines-for-statistics-when-deploying-memory-optimized-tables"></a>Richtlinien für Statistiken beim Bereitstellen speicheroptimierter Tabellen  
  Um sicherzustellen, dass der Abfrageoptimierer beim Erstellen von Abfrageplänen über aktuelle Statistiken verfügt, führen Sie die folgenden fünf Schritte aus, um speicheroptimierte Tabellen bereitzustellen:  
   
-1.  Erstellen Sie Tabellen und Indizes. Indizes sind die Inline in der `CREATE TABLE` Anweisungen.  
+1.  Erstellen Sie Tabellen und Indizes. Indizes werden inline in den `CREATE TABLE`-Anweisungen angegeben.  
   
 2.  Laden Sie Daten in die Tabellen.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48136070"
   
 4.  Erstellen Sie gespeicherte Prozeduren, die auf die Tabellen zugreifen.  
   
-5.  Führen Sie die arbeitsauslastung, die eine Kombination aus systemintern kompilierten und interpretierten enthalten können [!INCLUDE[tsql](../../../includes/tsql-md.md)] gespeicherte Prozeduren als auch ad-hoc-Batches.  
+5.  Führen Sie die Arbeitsauslastung aus, die eine Kombination aus systemintern kompilierten und interpretierten gespeicherten [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Prozeduren sowie Ad-hoc-Batches enthalten kann.  
   
  Indem Sie systemintern kompilierte gespeicherten Prozeduren erstellen, nachdem die Daten geladen und Statistiken aktualisiert wurden, wird sichergestellt, dass der Abfrageoptimierer über die für die speicheroptimierten Tabellen erforderlichen Statistiken verfügt. Damit liegen effiziente Abfragepläne vor, wenn die Prozedur kompiliert wird.  
   
@@ -76,7 +76,7 @@ UPDATE STATISTICS myschema.Mytable WITH FULLSCAN, NORECOMPUTE
   
  Führen Sie zum Aktualisieren der Statistiken für alle speicheroptimierten Tabellen in der aktuellen Datenbank das folgende Skript aus:  
   
-```tsql  
+```sql  
 DECLARE @sql NVARCHAR(MAX) = N''  
   
 SELECT @sql += N'  
@@ -90,7 +90,7 @@ EXEC sp_executesql @sql
   
  Im folgenden Beispiel wird ausgegeben, wann die Statistiken für speicheroptimierte Tabellen zuletzt aktualisiert wurden. Anhand dieser Informationen können Sie entscheiden, ob die Statistiken aktualisiert werden müssen.  
   
-```tsql  
+```sql  
 select t.object_id, t.name, sp.last_updated as 'stats_last_updated'  
 from sys.tables t join sys.stats s on t.object_id=s.object_id cross apply sys.dm_db_stats_properties(t.object_id, s.stats_id) sp  
 where t.is_memory_optimized=1  

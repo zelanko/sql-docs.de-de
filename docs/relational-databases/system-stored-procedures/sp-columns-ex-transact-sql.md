@@ -18,12 +18,12 @@ ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aaf644b6a8795e9c68e0053eaed0023c4b9299b6
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 47a8665027ce251a391049aa71ba12b246c1c625
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588404"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528883"
 ---
 # <a name="spcolumnsex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,23 +45,17 @@ sp_columns_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@table_server =** ] **"**_Table_server_**"**  
- Der Name des Verbindungsservers, für den Spalteninformationen zurückgegeben werden sollen. *Table_server* ist **Sysname**, hat keinen Standardwert.  
+`[ @table_server = ] 'table_server'` Ist der Name des Verbindungsservers, für die Spalteninformationen zurückgegeben werden sollen. *Table_server* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@table_name =** ] **"**_Table_name_**"**  
- Der Name der Tabelle, für die Spalteninformationen zurückgegeben werden sollen. *TABLE_NAME* ist **Sysname**, hat den Standardwert NULL.  
+`[ @table_name = ] 'table_name'` Ist der Name der Tabelle, für die Spalteninformationen zurückgegeben werden sollen. *TABLE_NAME* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@table_schema =** ] **"**_Table_schema_**"**  
- Der Schemaname der Tabelle, für die Spalteninformationen zurückgegeben werden sollen. *TABLE_SCHEMA* ist **Sysname**, hat den Standardwert NULL.  
+`[ @table_schema = ] 'table_schema'` Ist der Schemaname der Tabelle, für die Spalteninformationen zurückgegeben werden sollen. *TABLE_SCHEMA* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@table_catalog =** ] **"**_Table_catalog_**"**  
- Der Katalogname der Tabelle, für die Spalteninformationen zurückgegeben werden sollen. *TABLE_CATALOG* ist **Sysname**, hat den Standardwert NULL.  
+`[ @table_catalog = ] 'table_catalog'` Ist der Katalogname der Tabelle, für die Spalteninformationen zurückgegeben werden sollen. *TABLE_CATALOG* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@column_name =** ] **"**_Spalte_**"**  
- Der Name der Datenbankspalte, für die Informationen bereitgestellt werden sollen. *Spalte* ist **Sysname**, hat den Standardwert NULL.  
+`[ @column_name = ] 'column'` Ist der Name der Datenbankspalte, für die Informationen bereitgestellt. *Spalte* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@ODBCVer =** ] **"**_ODBCVer_**"**  
- Ist die Version von ODBC, der verwendet wird. *ODBCVer* ist **Int**, hat den Standardwert von 2. Dieser gibt ODBC, Version 2, an. Gültige Werte sind 2 oder 3. Informationen zu den Verhaltensunterschieden zwischen den Versionen 2 und 3 finden Sie in der SQLColumns-Spezifikation von ODBC.  
+`[ @ODBCVer = ] 'ODBCVer'` Ist die Version von ODBC, der verwendet wird. *ODBCVer* ist **Int**, hat den Standardwert von 2. Dieser gibt ODBC, Version 2, an. Gültige Werte sind 2 oder 3. Informationen zu den Verhaltensunterschieden zwischen den Versionen 2 und 3 finden Sie in der SQLColumns-Spezifikation von ODBC.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  None  
@@ -71,7 +65,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CAT**|**sysname**|Der Name des Qualifizierers für die Tabelle oder Sicht. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (_Qualifizierer_**.** _Besitzer_**.** _Namen_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte dem Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar. Dieses Feld kann den Wert NULL annehmen.|  
-|**NACH "TABLE_SCHEM"**|**sysname**|Der Name des Besitzers der Tabelle oder Sicht. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Namen des Datenbankbenutzers dar, der die Tabelle erstellt hat. Dieses Feld gibt immer einen Wert zurück.|  
+|**TABLE_SCHEM**|**sysname**|Der Name des Besitzers der Tabelle oder Sicht. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Namen des Datenbankbenutzers dar, der die Tabelle erstellt hat. Dieses Feld gibt immer einen Wert zurück.|  
 |**TABLE_NAME**|**sysname**|Der Name der Tabelle oder Sicht. Dieses Feld gibt immer einen Wert zurück.|  
 |**COLUMN_NAME**|**sysname**|Name der Spalte für jede Spalte von der **TABLE_NAME** zurückgegeben. Dieses Feld gibt immer einen Wert zurück.|  
 |**DATA_TYPE**|**smallint**|Ein Wert für eine ganze Zahl, der den ODBC-Datentypbezeichnern entspricht. Bei einem Datentyp, der keinem ODBC-Datentyp zugeordnet werden kann, wird der Wert NULL zurückgegeben. Der Typname der systemeigenen Daten wird zurückgegeben, der **TYPE_NAME** Spalte.|  
@@ -80,7 +74,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
 |**BUFFER_LENGTH**|**int**|Die Übertragungsgröße der Daten.1|  
 |**DECIMAL_DIGITS**|**smallint**|Die Anzahl der Ziffern rechts vom Dezimalzeichen|  
 |**NUM_PREC_RADIX**|**smallint**|Ist die Basis für numerische Datentypen.|  
-|**NULL-WERTE ZULÄSST**|**smallint**|Gibt die NULL-Zulässigkeit an.<br /><br /> 1 = NULL ist möglich<br /><br /> 0 = NOT NULL|  
+|**NULLABLE**|**smallint**|Gibt die NULL-Zulässigkeit an.<br /><br /> 1 = NULL ist möglich<br /><br /> 0 = NOT NULL|  
 |**"HINWEISE"**|**Varchar (** 254 **)**|Dieses Feld gibt immer NULL zurück.|  
 |**COLUMN_DEF**|**Varchar (** 254 **)**|Standardwert der Spalte|  
 |**SQL_DATA_TYPE**|**smallint**|Der Wert des SQL-Datentyps, wie er im TYPE-Feld des Deskriptors angezeigt wird. Diese Spalte ist identisch mit der **DATA_TYPE** Spalte, mit Ausnahme der **"DateTime"** und SQL-92 **Intervall** -Datentypen. Diese Spalte gibt immer einen Wert zurück.|  
@@ -115,13 +109,13 @@ EXEC sp_columns_ex 'Seattle1',
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
- [Sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
- [Sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
+ [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
+ [sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
+ [sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
  [sp_linkedservers (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
- [Sp_primarykeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
- [Sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
- [Sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
+ [sp_primarykeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
+ [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
+ [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

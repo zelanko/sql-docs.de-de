@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d8d5493c63b48c627dbc2cb192d8e10f8bfc4a43
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fd0d493f71bd0a6ac0e2d81d1427027ccdb6496c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533991"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528802"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Angeben von Pfaden und Optimierungshinweisen für selektive XML-Indizes
   In diesem Thema wird beschrieben, wie Sie Knotenpfade zum Index angeben, und es werden Optimierungshinweise für die Indizierung aufgeführt, wenn Sie selektive XML-Indizes erstellen oder ändern.  
@@ -61,7 +61,7 @@ ms.locfileid: "52533991"
   
  Hier ist ein Beispiel für einen selektiven, mit Standardzuordnungen erstellten XML-Index. Für alle drei Pfade werden der Standardknotentyp (**xs:untypedAtomic**) und Kardinalität verwendet.  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_UX_default  
 ON Tbl(xmlcol)  
 FOR  
@@ -92,7 +92,7 @@ mypath03 = '/a/b/d'
   
  Sie können den selektiven XML-Index wie nachfolgend aufgeführt optimieren:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_UX_optimized  
 ON Tbl(xmlcol)  
 FOR  
@@ -116,7 +116,7 @@ pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON
   
  Betrachten Sie die folgende Abfrage:  
   
-```tsql  
+```sql  
 SELECT T.record,  
     T.xmldata.value('(/a/b/d)[1]', 'NVARCHAR(200)')  
 FROM myXMLTable T  
@@ -124,7 +124,7 @@ FROM myXMLTable T
   
  Die angegebene Abfrage gibt einen Wert des Pfads `/a/b/d` zurück, der in einen NVARCHAR(200)-Datentyp gepackt ist, sodass der für den Knoten anzugebende Datentyp offensichtlich ist. Es gibt jedoch kein Schema, um die Kardinalität des Knotens in nicht typisiertem XML anzugeben. Um diesen Knoten anzugeben ( `d` tritt höchstens einmal unter dem übergeordneten Knoten `b`auf), erstellen Sie einen selektiven XML-Index, der den Optimierungshinweis SINGLETON wie folgt verwendet:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_US  
 ON Tbl(xmlcol)  
 FOR  
@@ -223,7 +223,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
      Betrachten Sie die folgende einfache Abfrage des [Beispiel-XML-Dokuments](#sample) in diesem Thema:  
   
-    ```tsql  
+    ```sql  
     SELECT T.record FROM myXMLTable T  
     WHERE T.xmldata.exist('/a/b[./c = "43"]') = 1  
     ```  
@@ -238,7 +238,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
  Um die Leistung der oben aufgeführten SELECT-Anweisung zu verbessern, können Sie den folgenden selektiven XML-Index erstellen:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX simple_sxi  
 ON Tbl(xmlcol)  
 FOR  
@@ -251,7 +251,7 @@ FOR
 ### <a name="indexing-identical-paths"></a>Indizieren von identischen Pfaden  
  Sie können keine identischen Pfade als gleichen Datentyp unter verschiedenen Pfadnamen höher stufen. Die folgende Abfrage löst z. B. einen Fehler aus, da `pathOne` und `pathTwo` identisch sind:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE INDEX test_simple_sxi ON T1(xmlCol)  
 FOR  
 (  
@@ -262,7 +262,7 @@ FOR
   
  Sie können jedoch identische Pfade als andere Datentypen mit anderen Namen höher stufen. So ist die folgende Abfrage beispielsweise jetzt akzeptabel, da die Datentypen verschieden sind:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE INDEX test_simple_sxi ON T1(xmlCol)  
 FOR  
 (  
@@ -278,7 +278,7 @@ FOR
   
  Hier ist eine einfache XQuery aufgeführt, die die exist()-Methode verwendet:  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b/c/d/e/h') = 1  
 ```  
@@ -293,7 +293,7 @@ WHERE T.xmldata.exist('/a/b/c/d/e/h') = 1
   
  Hier ist eine komplexere Variante der vorherigen XQuery mit einem angewendeten Prädikat aufgeführt:  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b/c/d/e[./f = "SQL"]') = 1  
 ```  
@@ -309,7 +309,7 @@ WHERE T.xmldata.exist('/a/b/c/d/e[./f = "SQL"]') = 1
   
  Hier ist eine komplexe Abfrage mit einer value()-Klausel aufgeführt:  
   
-```tsql  
+```sql  
 SELECT T.record,  
     T.xmldata.value('(/a/b/c/d/e[./f = "SQL"]/g)[1]', 'nvarchar(100)')  
 FROM myXMLTable T  
@@ -327,7 +327,7 @@ FROM myXMLTable T
   
  Hier ist eine Abfrage aufgeführt, die eine FLWOR-Klausel innerhalb einer exist()-Klausel verwendet. (Der Name "FLWOR" leitet sich von den fünf Klauseln ab, aus denen sich ein FLWOR-Ausdruck von XQuery zusammensetzen kann: for, let, where, order by und return.)  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('  
   For $x in /a/b/c/d/e  
@@ -380,7 +380,7 @@ WHERE T.xmldata.exist('
   
  Betrachten Sie das folgende Beispiel:  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b[./c=5]') = 1  
 ```  

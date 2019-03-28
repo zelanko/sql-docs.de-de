@@ -10,15 +10,15 @@ ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc60d3491e4203db8f548dcbafd7c3b5373d266c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f3296d0162136a441d141d32089a674a67e7b5b0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123910"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526562"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Anwendungsmuster zur Partitionierung von speicheroptimierten Tabellen
-  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] unterstützt ein Muster, bei dem eine begrenzte Menge aktiver Daten in einer speicheroptimierten Tabelle gespeichert wird, während Daten, auf die seltener zugegriffen wird, auf dem Datenträger verarbeitet werden. In der Regel wäre dies ein Szenario, in dem Daten gespeichert werden, basierend auf einer `datetime` Schlüssel.  
+  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] unterstützt ein Muster, bei dem eine begrenzte Menge aktiver Daten in einer speicheroptimierten Tabelle gespeichert wird, während Daten, auf die seltener zugegriffen wird, auf dem Datenträger verarbeitet werden. In einem typischen Szenario würden Daten auf Grundlage eines `datetime`-Schlüssels gespeichert.  
   
  Sie können partitionierte Tabellen mit speicheroptimierten Tabellen emulieren, indem Sie eine partitionierte Tabelle und eine speicheroptimierte Tabelle mit einem gemeinsamen Schema verwalten. Aktuelle Daten würden in die speicheroptimierte Tabelle eingefügt und aktualisiert, während Daten, auf die weniger häufig zugegriffen wird, in der herkömmlichen partitionierten Tabelle verwaltet würden.  
   
@@ -46,7 +46,7 @@ Pflege aktiver Daten
   
  Im ersten Teil dieses Beispiels werden die Datenbank und die erforderlichen Objekte erstellt. Im zweiten Teil des Beispiels wird gezeigt, wie Daten aus einer speicheroptimierten Tabelle in eine partitionierte Tabelle verschoben werden.  
   
-```tsql  
+```sql  
 CREATE DATABASE partitionsample;  
 GO  
   

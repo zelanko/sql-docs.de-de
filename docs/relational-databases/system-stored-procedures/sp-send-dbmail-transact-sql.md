@@ -19,12 +19,12 @@ ms.assetid: f1d7a795-a3fd-4043-ac4b-c781e76dab47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 11b5d9c48c073d3a8208b9c8be1e73c5aa68e88e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0eed101b1b336997b7f90c17b3f1471d4ea526b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075776"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528300"
 ---
 # <a name="spsenddbmail-transact-sql"></a>sp_send_dbmail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,32 +64,23 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@profile_name=** ] **"***Profile_name***"**  
- Der Name des Profils, von dem die Nachricht gesendet werden soll. Die *Profile_name* ist vom Typ **Sysname**, hat den Standardwert NULL. Die *Profile_name* muss der Name eines vorhandenen Datenbank-Mail-Profils sein. Wenn kein *Profile_name* angegeben wird, **Sp_send_dbmail** als privates Standardprofil für den aktuellen Benutzer verwendet. Wenn der Benutzer nicht über ein privates Standardprofil verfügt **Sp_send_dbmail** verwendet das öffentliche Standardprofil für den **Msdb** Datenbank. Wenn der Benutzer verfügt nicht über ein privates Standardprofil und es kein öffentliches Standardprofil für die Datenbank ist **@profile_name** muss angegeben werden.  
+`[ @profile_name = ] 'profile_name'` Ist der Name des Profils, das Senden der Nachricht aus. Die *Profile_name* ist vom Typ **Sysname**, hat den Standardwert NULL. Die *Profile_name* muss der Name eines vorhandenen Datenbank-Mail-Profils sein. Wenn kein *Profile_name* angegeben wird, **Sp_send_dbmail** als privates Standardprofil für den aktuellen Benutzer verwendet. Wenn der Benutzer nicht über ein privates Standardprofil verfügt **Sp_send_dbmail** verwendet das öffentliche Standardprofil für den **Msdb** Datenbank. Wenn der Benutzer verfügt nicht über ein privates Standardprofil und es kein öffentliches Standardprofil für die Datenbank ist **@profile_name** muss angegeben werden.  
   
- [ **@recipients=** ] **'***recipients***'**  
- Eine durch Semikolons getrennte Liste der E-Mail-Adressen, an die die Nachricht gesendet werden soll. Die Empfängerliste ist vom Typ **varchar(max)**. Obwohl dieser Parameter optional ist, ist mindestens eine der **@recipients**, **@copy_recipients**, oder **@blind_copy_recipients** muss angegeben werden, oder **Sp_ Send_dbmail** gibt einen Fehler zurück.  
+`[ @recipients = ] 'recipients'` Ist eine durch Semikolons getrennte Liste der e-Mail-Adressen zum Senden der Nachricht auf. Die Empfängerliste ist vom Typ **varchar(max)**. Obwohl dieser Parameter optional ist, ist mindestens eine der **@recipients**, **@copy_recipients**, oder **@blind_copy_recipients** muss angegeben werden, oder **Sp_ Send_dbmail** gibt einen Fehler zurück.  
   
- [ **@copy_recipients=** ] **'***copy_recipients***'**  
- Eine durch Semikolons getrennte Liste der E-Mail-Adressen, an die eine Kopie der Nachricht gesendet werden soll. Liste der Kopieempfänger ist vom Typ **varchar(max)**. Obwohl dieser Parameter optional ist, ist mindestens eine der **@recipients**, **@copy_recipients**, oder **@blind_copy_recipients** muss angegeben werden, oder **Sp_ Send_dbmail** gibt einen Fehler zurück.  
+`[ @copy_recipients = ] 'copy_recipients'` Ist eine durch Semikolons getrennte Liste der e-Mail-Adressen, an eine Kopie der Nachricht an. Liste der Kopieempfänger ist vom Typ **varchar(max)**. Obwohl dieser Parameter optional ist, ist mindestens eine der **@recipients**, **@copy_recipients**, oder **@blind_copy_recipients** muss angegeben werden, oder **Sp_ Send_dbmail** gibt einen Fehler zurück.  
   
- [  **@blind_copy_recipients=** ] **"***Blind_copy_recipients***"**  
- Eine durch Semikolons getrennte Liste der E-Mail-Adressen, an die eine Kopie der Nachricht als BCC-Empfänger gesendet werden soll. Die Liste der Blindkopie-Empfänger ist vom Typ **varchar(max)**. Obwohl dieser Parameter optional ist, ist mindestens eine der **@recipients**, **@copy_recipients**, oder **@blind_copy_recipients** muss angegeben werden, oder **Sp_ Send_dbmail** gibt einen Fehler zurück.  
+`[ @blind_copy_recipients = ] 'blind_copy_recipients'` Ist eine durch Semikolons getrennte Liste der e-Mail-Adressen, an der Blindkopie der Nachricht an. Die Liste der Blindkopie-Empfänger ist vom Typ **varchar(max)**. Obwohl dieser Parameter optional ist, ist mindestens eine der **@recipients**, **@copy_recipients**, oder **@blind_copy_recipients** muss angegeben werden, oder **Sp_ Send_dbmail** gibt einen Fehler zurück.  
   
- [ **@from_address=** ] **'***from_address***'**  
- Der Wert der Absenderadresse der E-Mail-Nachricht. Dies ist ein optionaler Parameter, mit dem die Einstellungen im Mailprofil überschrieben werden. Dieser Parameter ist vom Typ **varchar(MAX)**. SMTP-Sicherheitseinstellungen stellen fest, ob diese Überschreibungen akzeptiert werden. Wenn kein Parameter angegeben ist, wird der Standardwert NULL verwendet.  
+`[ @from_address = ] 'from_address'` Ist der Wert der "von Adresse" die e-Mail-Nachricht. Dies ist ein optionaler Parameter, mit dem die Einstellungen im Mailprofil überschrieben werden. Dieser Parameter ist vom Typ **varchar(MAX)**. SMTP-Sicherheitseinstellungen stellen fest, ob diese Überschreibungen akzeptiert werden. Wenn kein Parameter angegeben ist, wird der Standardwert NULL verwendet.  
   
- [ **@reply_to=** ] **'***reply_to***'**  
- Der Wert der Antwortadresse der E-Mail-Nachricht. Er akzeptiert nur eine E-Mail-Adresse als gültigen Wert. Dies ist ein optionaler Parameter, mit dem die Einstellungen im Mailprofil überschrieben werden. Dieser Parameter ist vom Typ **varchar(MAX)**. SMTP-Sicherheitseinstellungen stellen fest, ob diese Überschreibungen akzeptiert werden. Wenn kein Parameter angegeben ist, wird der Standardwert NULL verwendet.  
+`[ @reply_to = ] 'reply_to'` Ist der Wert von "Antwortadresse" die e-Mail-Nachricht. Er akzeptiert nur eine E-Mail-Adresse als gültigen Wert. Dies ist ein optionaler Parameter, mit dem die Einstellungen im Mailprofil überschrieben werden. Dieser Parameter ist vom Typ **varchar(MAX)**. SMTP-Sicherheitseinstellungen stellen fest, ob diese Überschreibungen akzeptiert werden. Wenn kein Parameter angegeben ist, wird der Standardwert NULL verwendet.  
   
- [  **@subject=** ] **"***Betreff***"**  
- Ist der Betreff der e-Mail-Nachricht. Der Betreff ist vom Typ **nvarchar(255)**. Wenn Sie keinen Betreff angeben, wird standardmäßig 'SQL Server-Nachricht' verwendet.  
+`[ @subject = ] 'subject'` Ist der Betreff der e-Mail-Nachricht. Der Betreff ist vom Typ **nvarchar(255)**. Wenn Sie keinen Betreff angeben, wird standardmäßig 'SQL Server-Nachricht' verwendet.  
   
- [ **@body=** ] **'***body***'**  
- Ist der Text der e-Mail-Nachricht. Der Nachrichtentext ist vom Typ **nvarchar(max)**, hat den Standardwert NULL.  
+`[ @body = ] 'body'` Ist der Text der e-Mail-Nachricht. Der Nachrichtentext ist vom Typ **nvarchar(max)**, hat den Standardwert NULL.  
   
- [ **@body_format=** ] **'***body_format***'**  
- Das Format des Nachrichtentexts. Der Parameter ist vom Typ **varchar(20)**, hat den Standardwert NULL. Wenn der Parameter angegeben ist, wird in den Headern der ausgehenden Nachricht angezeigt, dass der Nachrichtentext das angegebene Format besitzt. Der Parameter kann einen der folgenden Werte enthalten:  
+`[ @body_format = ] 'body_format'` Ist das Format des Nachrichtentexts. Der Parameter ist vom Typ **varchar(20)**, hat den Standardwert NULL. Wenn der Parameter angegeben ist, wird in den Headern der ausgehenden Nachricht angezeigt, dass der Nachrichtentext das angegebene Format besitzt. Der Parameter kann einen der folgenden Werte enthalten:  
   
 -   TEXT  
   
@@ -97,8 +88,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
  Der Standardwert ist TEXT.  
   
- [  **@importance=** ] **"***Wichtigkeit***"**  
- Die Bedeutung der Nachricht. Der Parameter ist vom Typ **varchar(6)**. Der Parameter kann einen der folgenden Werte enthalten:  
+`[ @importance = ] 'importance'` Ist die Wichtigkeit der Meldung. Der Parameter ist vom Typ **varchar(6)**. Der Parameter kann einen der folgenden Werte enthalten:  
   
 -   Low  
   
@@ -108,8 +98,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
  Der Standardwert ist Normal.  
   
- [  **@sensitivity=** ] **"***Vertraulichkeit***"**  
- Die Vertraulichkeit der Nachricht. Der Parameter ist vom Typ **varchar(12)**. Der Parameter kann einen der folgenden Werte enthalten:  
+`[ @sensitivity = ] 'sensitivity'` Ist die Vertraulichkeit der Nachricht. Der Parameter ist vom Typ **varchar(12)**. Der Parameter kann einen der folgenden Werte enthalten:  
   
 -   Normal  
   
@@ -121,61 +110,48 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
  Der Standardwert ist Normal.  
   
- [ **@file_attachments=** ] **'***file_attachments***'**  
- Die durch Semikolons getrennte Liste der Dateinamen, die an die E-Mail-Nachricht angehängt werden sollen. Die Dateien in der Liste müssen als absolute Pfade angegeben sein. Die Anlagenliste ist vom Typ **nvarchar(max)**. Standardmäßig beschränkt Datenbank-E-Mail Dateianlagen auf 1 MB pro Datei.  
+`[ @file_attachments = ] 'file_attachments'` Ist eine durch Semikolons getrennte Liste der Dateinamen, die an die e-Mail-Nachricht anfügen. Die Dateien in der Liste müssen als absolute Pfade angegeben sein. Die Anlagenliste ist vom Typ **nvarchar(max)**. Standardmäßig beschränkt Datenbank-E-Mail Dateianlagen auf 1 MB pro Datei.  
   
- [ **@query=** ] **'***query***'**  
- Eine auszuführende Abfrage. Die Ergebnisse der Abfrage können als Datei angefügt oder in den Text der E-Mail-Nachricht eingeschlossen werden. Die Abfrage ist vom Typ **nvarchar(max)**, und kann eine beliebige gültige enthalten [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen. Beachten Sie, dass die Abfrage, in einer separaten Sitzung, lokale Variablen in der aufrufenden Skript ausgeführt wird **Sp_send_dbmail** sind für die Abfrage nicht verfügbar.  
+`[ @query = ] 'query'` Ist eine auszuführende Abfrage. Die Ergebnisse der Abfrage können als Datei angefügt oder in den Text der E-Mail-Nachricht eingeschlossen werden. Die Abfrage ist vom Typ **nvarchar(max)**, und kann eine beliebige gültige enthalten [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen. Beachten Sie, dass die Abfrage, in einer separaten Sitzung, lokale Variablen in der aufrufenden Skript ausgeführt wird **Sp_send_dbmail** sind für die Abfrage nicht verfügbar.  
   
- [  **@execute_query_database=** ] **"***Execute_query_database***"**  
- Der Datenbankkontext, in dem die gespeicherte Prozedur die Abfrage ausführt. Der Parameter ist vom Typ **Sysname**, hat den Standardwert der aktuellen Datenbank. Dieser Parameter gilt nur für Wenn **@query** angegeben ist.  
+`[ @execute_query_database = ] 'execute_query_database'` Wird der Datenbankkontext, in dem die gespeicherte Prozedur die Abfrage ausgeführt wird. Der Parameter ist vom Typ **Sysname**, hat den Standardwert der aktuellen Datenbank. Dieser Parameter gilt nur für Wenn **@query** angegeben ist.  
   
- [ **@attach_query_result_as_file=** ] *attach_query_result_as_file*  
- Gibt an, ob das Resultset der Abfrage als Anlage zurückgegeben wird. *Attach_query_result_as_file* ist vom Typ **Bit**, hat den Standardwert 0.  
+`[ @attach_query_result_as_file = ] attach_query_result_as_file` Gibt an, ob das Resultset der Abfrage als Anlage zurückgegeben wird. *Attach_query_result_as_file* ist vom Typ **Bit**, hat den Standardwert 0.  
   
  Wenn der Wert 0 ist, sind die Ergebnisse der Abfrage im Text der e-Mail-Nachricht, hinter dem Inhalt des enthalten die **@body** Parameter. Ist der Wert 1, werden die Ergebnisse als Anlage zurückgegeben. Dieser Parameter gilt nur für Wenn **@query** angegeben ist.  
   
- [  **@query_attachment_filename=** ] *Query_attachment_filename*  
- Gibt an, welcher Dateiname für das Resultset der Abfrageanlage verwendet wird. *Query_attachment_filename* ist vom Typ **nvarchar(255)**, hat den Standardwert NULL. Dieser Parameter wird ignoriert, wenn *Attach_query_result* ist 0. Wenn *Attach_query_result* ist 1, und dieser Parameter NULL ist, Datenbank-e-Mails erstellt einen beliebigen Dateinamen.  
+`[ @query_attachment_filename = ] query_attachment_filename` Gibt den Dateinamen an, die für das Resultset der abfrageanlage verwendet. *Query_attachment_filename* ist vom Typ **nvarchar(255)**, hat den Standardwert NULL. Dieser Parameter wird ignoriert, wenn *Attach_query_result* ist 0. Wenn *Attach_query_result* ist 1, und dieser Parameter NULL ist, Datenbank-e-Mails erstellt einen beliebigen Dateinamen.  
   
- [ **@query_result_header=** ] *query_result_header*  
- Gibt an, ob die Abfrageergebnisse Spaltenheader einschließen. Der Wert für query_result_header ist vom Typ **Bit**. Bei einem Wert von 1 enthalten die Abfrageergebnisse Spaltenheader. Bei einem Wert von 0 enthalten die Abfrageergebnisse keine Spaltenheader. Dieser Parameter ist standardmäßig **1**. Dieser Parameter gilt nur für Wenn **@query** angegeben ist.  
+`[ @query_result_header = ] query_result_header` Gibt an, ob die Abfrageergebnisse Spaltenheader einschließen. Der Wert für query_result_header ist vom Typ **Bit**. Bei einem Wert von 1 enthalten die Abfrageergebnisse Spaltenheader. Bei einem Wert von 0 enthalten die Abfrageergebnisse keine Spaltenheader. Dieser Parameter ist standardmäßig **1**. Dieser Parameter gilt nur für Wenn **@query** angegeben ist.  
  
    >[!NOTE]
    > Der folgende Fehler kann auftreten, wenn Sie festlegen @query_result_header auf 0 und Einstellung @query_no_truncate auf 1:
-   > <br> Msg 22050, Ebene 16, Status 1, Zeile 12: Fehler beim Initialisieren der Sqlcmd-Bibliothek mit Nummer des Betriebssystemfehlers-2147024809.
+   > <br> Msg 22050, Ebene 16, Status 1, Zeile 12: Fehler beim Initialisieren der Fehlernummer-2147024809 Sqlcmd-Bibliothek.
   
- [ **@query_result_width** = ] *query_result_width*  
- Die Linienstärke in Zeichen, die zum Formatieren der Ergebnisse der Abfrage verwendet wird. Die *Query_result_width* ist vom Typ **Int**, mit dem Standardwert 256. Der Wert muss zwischen 10 and 32767 liegen. Dieser Parameter gilt nur für Wenn **@query** angegeben ist.  
+`[ @query_result_width = ] query_result_width` Ist die Linienstärke in Zeichen zum Formatieren der Ergebnisse der Abfrage. Die *Query_result_width* ist vom Typ **Int**, mit dem Standardwert 256. Der Wert muss zwischen 10 and 32767 liegen. Dieser Parameter gilt nur für Wenn **@query** angegeben ist.  
   
- [  **@query_result_separator=** ] **"***Query_result_separator***"**  
- Das Zeichen, der zum Trennen der Spalten in der Ausgabe der Abfrage verwendet wird. Das Trennzeichen ist vom Typ **char(1)**. Der Standardwert ist ' ' (Leerzeichen).  
+`[ @query_result_separator = ] 'query_result_separator'` Das Zeichen, der zum Trennen der Spalten in der Ausgabe der Abfrage verwendet wird. Das Trennzeichen ist vom Typ **char(1)**. Der Standardwert ist ' ' (Leerzeichen).  
   
- [  **@exclude_query_output=** ] *Exclude_query_output*  
- Gibt an, ob die Ausgabe der Abfrageausführung in der E-Mail-Nachricht zurückgegeben werden soll. **Exclude_query_output** bit und hat den Standardwert 0. Wenn dieser Parameter gleich 0 ist, der die **Sp_send_dbmail** gespeicherte Prozedur gibt die Meldung, die als Ergebnis der Ausführung der Abfrage zurückgegeben werden, in der Konsole. Wenn dieser Parameter gleich 1, die Ausführung der **Sp_send_dbmail** gespeicherte Prozedur wird keine der abfrageausführungsnachrichten auf der Konsole gedruckt.  
+`[ @exclude_query_output = ] exclude_query_output` Gibt an, ob die Ausgabe der abfrageausführung in die e-Mail-Nachricht zurückgegeben werden soll. **Exclude_query_output** bit und hat den Standardwert 0. Wenn dieser Parameter gleich 0 ist, der die **Sp_send_dbmail** gespeicherte Prozedur gibt die Meldung, die als Ergebnis der Ausführung der Abfrage zurückgegeben werden, in der Konsole. Wenn dieser Parameter gleich 1, die Ausführung der **Sp_send_dbmail** gespeicherte Prozedur wird keine der abfrageausführungsnachrichten auf der Konsole gedruckt.  
   
- [  **@append_query_error=** ] *Append_query_error*  
- Gibt an, ob die E-mail zu senden, wenn einen Fehler, aus der Abfrage zurückgibt der **@query** Argument. **Append_query_error** ist **Bit**, hat den Standardwert 0. Ist dieser Parameter auf 1 festgelegt, sendet Datenbank-E-Mail die E-Mail-Nachricht und bezieht die Abfragefehlermeldung in den Text der E-Mail-Nachricht ein. Wenn dieser Parameter 0 ist, Datenbank-e-Mails sendet keine e-Mail-Nachricht, und **Sp_send_dbmail** endet mit dem Rückgabecode 1, um einen Fehler.  
+`[ @append_query_error = ] append_query_error` Gibt an, ob die E-mail zu senden, wenn einen Fehler, aus der Abfrage zurückgibt der **@query** Argument. **Append_query_error** ist **Bit**, hat den Standardwert 0. Ist dieser Parameter auf 1 festgelegt, sendet Datenbank-E-Mail die E-Mail-Nachricht und bezieht die Abfragefehlermeldung in den Text der E-Mail-Nachricht ein. Wenn dieser Parameter 0 ist, Datenbank-e-Mails sendet keine e-Mail-Nachricht, und **Sp_send_dbmail** endet mit dem Rückgabecode 1, um einen Fehler.  
   
- [  **@query_no_truncate=** ] *Query_no_truncate*  
- Gibt an, ob die Abfrage mit der Option ausgeführt, der vermeidet, Abschneiden von Datentypen für große variabler Länge (**varchar(max)**, **nvarchar(max)**, **'varbinary(max)'** **Xml**, **Text**, **Ntext**, **Image**, und eine benutzerdefinierte Datentypen). Wenn fetgelegt, enthalten die Abfrageergebnisse keine Spaltenheader. Die *Query_no_truncate* Wert ist vom Typ **Bit**. Bei einem Wert von 0 oder wenn kein Wert angegeben ist, werden die Spalten in der Abfrage auf 256 Zeichen abgeschnitten. Bei einem Wert von 1 werden die Spalten in der Abfrage nicht abgeschnitten. Dieser Parameter hat den Standardwert 0.  
+`[ @query_no_truncate = ] query_no_truncate` Gibt an, ob die Abfrage mit der Option ausgeführt, der vermeidet, Abschneiden von Datentypen für große variabler Länge (**varchar(max)**, **nvarchar(max)**, **'varbinary(max)'** **Xml**, **Text**, **Ntext**, **Image**, und eine benutzerdefinierte Datentypen). Wenn fetgelegt, enthalten die Abfrageergebnisse keine Spaltenheader. Die *Query_no_truncate* Wert ist vom Typ **Bit**. Bei einem Wert von 0 oder wenn kein Wert angegeben ist, werden die Spalten in der Abfrage auf 256 Zeichen abgeschnitten. Bei einem Wert von 1 werden die Spalten in der Abfrage nicht abgeschnitten. Dieser Parameter hat den Standardwert 0.  
   
 > [!NOTE]  
 >  Bei Verwendung mit großen Mengen von Daten, die @**Query_no_truncate** Option werden zusätzliche Ressourcen belegt, und kann die serverleistung beeinträchtigen.  
   
- [ **@query_result_no_padding** ] *@query_result_no_padding*  
- Der Typ ist Bit. Die Standardeinstellung ist 0. Wenn Sie auf 1 festlegen, werden die Ergebnisse der Abfrage reduziert sich die Dateigröße u. u. nicht aufgefüllt. Setzen Sie @query_result_no_padding auf 1 und Festlegen der @query_result_width -Parameter der @query_result_no_padding Parameter überschreibt die @query_result_width Parameter.  
+`[ @query_result_no_padding ] @query_result_no_padding` Der Typ ist bit. Die Standardeinstellung ist 0. Wenn Sie auf 1 festlegen, werden die Ergebnisse der Abfrage reduziert sich die Dateigröße u. u. nicht aufgefüllt. Setzen Sie @query_result_no_padding auf 1 und Festlegen der @query_result_width -Parameter der @query_result_no_padding Parameter überschreibt die @query_result_width Parameter.  
   
  In diesem Fall tritt kein Fehler auf.  
  
   >[!NOTE]
   > Der folgende Fehler kann auftreten, wenn Sie festlegen @query_result_no_padding 1 und einen Parameter für die Bereitstellung @query_no_truncate:
-  > <br> Msg 22050, Ebene 16, Status 1, Zeile 0: Fehler, um die Abfrage auszuführen, da die @query_result_no_append und @query_no_truncate Optionen schließen sich gegenseitig. 
+  > <br> Msg 22050, Ebene 16, Status 1, Zeile 0: Fehler beim Ausführen der Abfrage, da die @query_result_no_append und @query_no_truncate Optionen schließen sich gegenseitig. 
   
  Setzen Sie die @query_result_no_padding auf 1 und Festlegen der @query_no_truncate Parameter, ein Fehler ausgelöst wird.  
   
- [  **@mailitem_id=** ] *Mailitem_id* [Ausgabe]  
- Der optionale Ausgabeparameter gibt den *Mailitem_id* der Nachricht. Die *Mailitem_id* ist vom Typ **Int**.  
+`[ @mailitem_id = ] mailitem_id [ OUTPUT ]` Der optionale Ausgabeparameter gibt den *Mailitem_id* der Nachricht. Die *Mailitem_id* ist vom Typ **Int**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  Ein Rückgabecode von 0 steht für Erfolg. Ein beliebiger anderer Wert steht für Fehler. Der Fehlercode für die fehlgeschlagene Anweisung befindet sich in der @@ERROR Variable.  

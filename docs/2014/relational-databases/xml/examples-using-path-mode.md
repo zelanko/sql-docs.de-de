@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1384c2cd84505df59bc458274d0b33071e926f18
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c5a566d9684341b7aa20342147aab950ebd4047c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365732"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526663"
 ---
 # <a name="examples-using-path-mode"></a>Beispiele: Verwenden des PATH-Modus
   Diese Beispiele veranschaulichen die Verwendung des PATH-Modus beim Generieren von XML-Code aus einer SELECT-Abfrage. Viele dieser Abfragen beziehen sich auf die XML-Dokumente mit den Fahrradfertigungsanweisungen, die in der Instructions-Spalte der ProductModel-Tabelle gespeichert sind.  
@@ -200,7 +200,7 @@ FOR XML PATH ('ProductModelData'), root ('Root');
 GO  
 ```  
   
- Dies ist das Teilergebnis. Da die Abfrage als Spaltenname ManuInstr angibt, wird der von der `query()`-Methode zurückgegebene XML-Code in ein <`ManuInstr`>-Tag eingebunden, wie im Folgenden gezeigt:  
+ Dies ist das Teilergebnis. Da die Abfrage als Spaltenname ManuInstr angegeben wird, wird der XML-Code von zurückgegebenen der `query()` Methode umschlossen wird eine <`ManuInstr`> tag wie im folgenden gezeigt:  
   
  `<Root>`  
   

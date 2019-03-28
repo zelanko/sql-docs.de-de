@@ -16,12 +16,12 @@ ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4829928bbf1f8e13483de69a749e748bd9dd095
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2221762934011c2268a40d0162bde7e62dbcf256
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779062"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528222"
 ---
 # <a name="sphelpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publication=**] **'***publication***'**  
- Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@article=**] **"***Artikel***"**  
- Ist der Name einer Tabelle oder Sicht, die im Artikel zu dem Informationen abgerufen werden. *Artikel* ist **Sysname**, hat keinen Standardwert.  
+`[ @article = ] 'article'` Ist der Name einer Tabelle oder Sicht, die im Artikel zu dem Informationen abgerufen werden. *Artikel* ist **Sysname**, hat keinen Standardwert.  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -51,7 +49,7 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 |-----------------|---------------|-----------------|  
 |**column_id**|**sysname**|Identifiziert die Spalte.|  
 |**column_name**|**sysname**|Der Name der Spalte für eine Tabelle oder Sicht.|  
-|**Veröffentlicht**|**bit**|Gibt an, ob der Spaltenname veröffentlicht ist.<br /><br /> **1** gibt an, dass die Spalte veröffentlicht wird.<br /><br /> **0** gibt an, dass sie nicht veröffentlicht wird.|  
+|**published**|**bit**|Gibt an, ob der Spaltenname veröffentlicht ist.<br /><br /> **1** gibt an, dass die Spalte veröffentlicht wird.<br /><br /> **0** gibt an, dass sie nicht veröffentlicht wird.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

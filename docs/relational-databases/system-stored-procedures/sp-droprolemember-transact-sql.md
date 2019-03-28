@@ -18,12 +18,12 @@ ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a279a57e014675cc86f72f79ce602bec1bebb1f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d01ad425d42c45b1e265fe25345b2d34ca8b4d7f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756678"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526112"
 ---
 # <a name="spdroprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,11 +52,9 @@ sp_droprolemember 'role' ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@rolename =** ] **"***Rolle***"**  
- Der Name der Rolle, aus der das Element entfernt wird. *Rolle* ist **Sysname**, hat keinen Standardwert. *role* muss in der aktuellen Datenbank vorhanden sein.  
+`[ @rolename = ] 'role'` Ist der Name der Rolle aus der das Element entfernt wird. *Rolle* ist **Sysname**, hat keinen Standardwert. *role* muss in der aktuellen Datenbank vorhanden sein.  
   
- [  **@membername =** ] **"***Security_account***"**  
- Der Name des Sicherheitskontos, das aus der Rolle entfernt wird. *Security_account* ist **Sysname**, hat keinen Standardwert. *Security_account* kann ein Datenbankbenutzer, eine andere Datenbankrolle, ein Windows-Anmeldename oder eine Windows-Gruppe sein. *Security_account* muss in der aktuellen Datenbank vorhanden sein.  
+`[ @membername = ] 'security_account'` Ist der Name des Sicherheitskontos, das aus der Rolle entfernt wird. *Security_account* ist **Sysname**, hat keinen Standardwert. *Security_account* kann ein Datenbankbenutzer, eine andere Datenbankrolle, ein Windows-Anmeldename oder eine Windows-Gruppe sein. *Security_account* muss in der aktuellen Datenbank vorhanden sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -89,8 +87,8 @@ EXEC sp_droprolemember 'Sales', 'JonB'
  [Security Stored Procedures &#40;Transact-SQL&#41; (Gespeicherte Sicherheitsprozeduren (Transact-SQL))](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sp_droprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)   
- [Sp_dropsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
- [Sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
+ [sp_dropsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
+ [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

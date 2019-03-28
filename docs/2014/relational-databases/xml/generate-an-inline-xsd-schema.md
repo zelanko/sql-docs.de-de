@@ -15,15 +15,15 @@ helpviewer_keywords:
 - inline XSD schema generation [SQL Server]
 - XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad003060588215c0d5a218ade5103f5748e5ebfc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9b6c8233b95f3f95235bb4f618358d4680d3088f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369562"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529332"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Generieren eines XSD-Inlineschemas
   In einer FOR XML-Klausel können Sie anfordern, dass die Abfrage ein Inlineschema zusammen mit den Abfrageergebnissen zurückgibt. Wenn Sie ein XDR-Schema wünschen, verwenden Sie das XMLDATA-Schlüsselwort in der FOR XML-Klausel. Wenn Sie ein XSD-Schema wünschen, verwenden Sie das XMLSCHEMA-Schlüsselwort.  
@@ -221,7 +221,7 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
 ## <a name="element-name-clashes"></a>Elementnamenkollisionen  
  In FOR XML kann der gleiche Name zum Angeben von zwei Unterelementen verwendet werden. Die folgende Abfrage ruft z. B. die ListPrice- und DealerPrice-Werte von Produkten ab; die Abfrage gibt jedoch den gleichen Alias (Price) für diese beiden Spalten an. Aus diesem Grund besitzt das sich ergebende Rowset zwei Spalten mit dem gleichen Namen.  
   
-### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>Fall 1: Beide Unterelemente sind Nichtschlüsselspalten des gleichen Typs und können NULL sein  
+### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>Fall 1: Beide Unterelemente sind Nichtschlüsselspalten des gleichen Typs und können den Wert NULL besitzen  
  In der folgenden Abfrage sind beide Unterelemente Nichtschlüsselspalten des gleichen Typs und können den Wert NULL besitzen.  
   
 ```  
@@ -313,7 +313,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</row>`  
   
-### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>Fall 2: Ein Schlüssel und eine Nichtschlüsselspalte des gleichen Typs  
+### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>Fall 2: Eine Schlüssel- und eine Nichtschlüsselspalte des gleichen Typs  
  Die folgende Abfrage zeigt eine Schlüssel- und eine Nichtschlüsselspalte des gleichen Typs.  
   
 ```  
@@ -391,7 +391,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  Beachten Sie im XSD-Inlineschema, dass für das <`Col`>-Element, das Col2 entspricht, minOccurs auf 0 festgelegt wurde.  
   
-### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>Fall 3: Beide Elemente eines anderen Typs und entsprechender Spalten können NULL sein.  
+### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>Fall 3: Beide Elemente unterschiedlicher Typen und entsprechender Spalten dürfen NULL sein  
  Die folgende Abfrage wird für die gleiche Tabelle angegeben, die auch in Fall 2 gezeigt wurde:  
   
 ```  

@@ -10,12 +10,12 @@ ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40420db76ee8ce5b1fcf1d085a78d7b17690105d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 290aff0bfcb01e098ae87b48cf582cdf999314c4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538592"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528297"
 ---
 # <a name="cross-container-transactions"></a>Containerübergreifende Transaktionen
   Containerübergreifende Transaktionen sind entweder implizite oder explizite Benutzertransaktionen, die Aufrufe von systemintern kompilierten gespeicherten Prozeduren oder Vorgängen für speicheroptimierte Tabellen enthalten.  
@@ -32,7 +32,7 @@ ms.locfileid: "52538592"
 ### <a name="specifying-the-isolation-level-of-individual-operations"></a>Angeben der Isolationsstufe bei einzelnen Vorgängen  
  Um eine andere Isolationsstufe für eine Gruppe von Anweisungen in einer Transaktion festzulegen, können Sie `SET TRANSACTION ISOLATION LEVEL` verwenden. Im folgenden Beispiel einer Transaktion wird die Serializable-Isolationsstufe als Standard verwendet. Die Einfüge- und Auswahlvorgänge in t3, t2 und t1 werden in Repeatable Read-Isolation ausgeführt.  
   
-```tsql  
+```sql  
 set transaction isolation level serializable  
 go  
   
@@ -49,7 +49,7 @@ commit
   
  Um eine Isolationsstufe für einzelne Lesevorgänge festzulegen, die vom Transaktionsstandard abweicht, können Sie einen Tabellenhinweis verwenden (z. B. Serializable). Jede Auswahl entspricht einem Lesevorgang, und jedes Update und jede Löschung entsprechen einem Lesevorgang, da die Zeile immer gelesen werden muss, bevor sie aktualisiert oder gelöscht werden kann. Einfügevorgänge haben keine Isolationsstufe, da Schreibvorgänge in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] immer isoliert ausgeführt werden. Im folgenden Beispiel wird die Standardisolationsstufe Read Committed verwendet. Auf Tabelle t1 wird jedoch mit Serializable-Isolation und auf t2 mit Snapshot-Isolation zugegriffen.  
   
-```tsql  
+```sql  
 set transaction isolation level read committed  
 go  
   
@@ -103,7 +103,7 @@ commit
   
  Beachten Sie die folgende Transaktion:  
   
-```tsql  
+```sql  
 set transaction isolation level read committed  
 go  
   
@@ -149,7 +149,7 @@ commit
   
  Die speicheroptimierte Seite der Transaktion kann eine von zwei Stufen erreichen: Wenn condition1 wahr ist, wird "Serializable" erreicht, und wenn sie falsch ist, erreicht die speicheroptimierte Seite lediglich die Snapshot-Isolation.  
   
-```tsql  
+```sql  
 set transaction isolation level read committed  
 go  
   

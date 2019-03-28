@@ -16,12 +16,12 @@ ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: bfe5d9f7bc5c95055af06b0582f2ddcf88ae7cdf
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 6fa6606d7daf4a1b61ff986d1d7c5675b5ae5f1f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125710"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531812"
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,28 +41,24 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@login_type** =] *Login_type*  
- Der Authentifizierungstyp für die angegebenen Anmeldeinformationen. *LOGIN_TYPE* ist **Tinyint**, hat keinen Standardwert.  
+`[ @login_type = ] login_type` Ist der Typ der Authentifizierung für die angegebenen Anmeldeinformationen. *LOGIN_TYPE* ist **Tinyint**, hat keinen Standardwert.  
   
  **1** = integrierte Windows-Authentifizierung  
   
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung  
   
- [ **@login** =] **"**_Anmeldung_**"**  
- Der Name des Windows-Kontos oder der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung, das bzw. die geändert wird. *Anmeldung* ist **nvarchar(257)**, hat keinen Standardwert  
+`[ @login = ] 'login'` Der Name des Windows-Kontos oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung geändert werden. *Anmeldung* ist **nvarchar(257)**, hat keinen Standardwert  
   
- [ **@password** =] **"**_Kennwort_**"**  
- Das neue Kennwort gespeichert werden für den angegebenen *Anmeldung*. *Kennwort* ist **Sysname**, hat keinen Standardwert.  
+`[ @password = ] 'password'` Das neue Kennwort gespeichert werden für den angegebenen *Anmeldung*. *Kennwort* ist **Sysname**, hat keinen Standardwert.  
   
 > [!NOTE]  
 >  Nachdem Sie ein Replikationskennwort geändert haben, müssen Sie jeden Agent, der dieses Kennwort verwendet, beenden und neu starten, damit die Änderung für diesen Agent in Kraft tritt.  
   
- [ **@server** =] **"**_Server_**"**  
- Die Serververbindung, für die das gespeicherte Kennwort geändert wird. *Server* ist **Sysname**, und kann einen der folgenden Werte:  
+`[ @server = ] 'server'` Ist die Server-Verbindung, die für die das gespeicherte Kennwort geändert wird. *Server* ist **Sysname**, und kann einen der folgenden Werte:  
   
 |Wert|Description|  
 |-----------|-----------------|  
-|**Verteiler**|Alle Agentverbindungen zum Verteiler|  
+|**distributor**|Alle Agentverbindungen zum Verteiler|  
 |**publisher**|Alle Agentverbindungen zum Verleger|  
 |**subscriber**|Alle Agentverbindungen zum Abonnenten|  
 |**%** (Standard)|Alle Agentverbindungen zu allen Servern in einer Replikationstopologie|  

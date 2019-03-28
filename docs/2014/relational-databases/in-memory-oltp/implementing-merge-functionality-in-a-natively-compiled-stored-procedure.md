@@ -10,19 +10,19 @@ ms.assetid: d4bcdc36-3302-4abc-9b35-64ec2b920986
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: faf6112fa3f8ec588d00480d09ff072a71051a02
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e0e108f70f66aef1ed88ea202ddb326bd0757c10
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508158"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526292"
 ---
 # <a name="implementing-merge-functionality"></a>Implementieren von MERGE-Funktionalität
   Eine Datenbank muss u. U. einen Einfüge- oder einen Updatevorgang ausführen, je nachdem, ob eine bestimmte Zeile in der Datenbank bereits vorhanden ist.  
   
  Ohne Verwendung der `MERGE`-Anweisung kann der folgende Ansatz in [!INCLUDE[tsql](../../includes/tsql-md.md)] verwendet werden:  
   
-```tsql  
+```sql  
 UPDATE mytable SET col=@somevalue WHERE myPK = @parm  
 IF @@ROWCOUNT = 0  
     INSERT mytable (columns) VALUES (@parm, @other values)  
@@ -30,7 +30,7 @@ IF @@ROWCOUNT = 0
   
  Eine weitere [!INCLUDE[tsql](../../includes/tsql-md.md)] -Methode zum Implementieren eines Merge:  
   
-```tsql  
+```sql  
 IF EXISTS (SELECT 1 FROM mytable WHERE myPK = @parm)  
     UPDATE....  
 ELSE  
@@ -39,7 +39,7 @@ ELSE
   
  Für eine systemintern kompilierte gespeicherte Prozedur  
   
-```tsql  
+```sql  
 DECLARE @i  int  = 0  -- or whatever your PK data type is  
 UPDATE mytable SET @i=myPK, othercolums = other values WHERE myPK = @parm  
 IF @i = 0  

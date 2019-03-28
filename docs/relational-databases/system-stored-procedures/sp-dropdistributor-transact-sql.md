@@ -16,12 +16,12 @@ ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e2bde09ee15af5ebf6ef48cfd52222fe030a937
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8f1a1baec088af48cd18972c177463fbb3f574eb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783012"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530682"
 ---
 # <a name="spdropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,15 +39,13 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@no_checks=**] *No_checks*  
- Gibt an, ob vor dem Löschen des Verteilers auf abhängige Objekte überprüft werden soll. *No_checks* ist **Bit**, hat den Standardwert 0.  
+`[ @no_checks = ] no_checks` Gibt an, ob abhängige Objekte überprüft vor dem Löschen des Verteilers. *No_checks* ist **Bit**, hat den Standardwert 0.  
   
  Wenn **0**, **Sp_dropdistributor** überprüft, um sicherzustellen, dass alle Objekte von Veröffentlichungs- und Verteilungsobjekte zusätzlich zum Verteiler gelöscht wurden.  
   
  Wenn **1**, **Sp_dropdistributor** löscht alle Veröffentlichungs- und Verteilungsobjekte vor dem Deinstallieren des Verteilers.  
   
- [  **@ignore_distributor=**] *Ignore_distributor*  
- Gibt an, ob diese gespeicherte Prozedur ausgeführt wird, ohne eine Verbindung mit dem Verteiler herzustellen. *Ignore_distributor* ist **Bit**, hat den Standardwert **0**.  
+`[ @ignore_distributor = ] ignore_distributor` Gibt an, ob diese gespeicherte Prozedur ohne Herstellen einer Verbindung mit dem Verteiler ausgeführt wird. *Ignore_distributor* ist **Bit**, hat den Standardwert **0**.  
   
  Wenn **0**, **Sp_dropdistributor** eine Verbindung mit dem Verteiler her und entfernt alle Replikationsobjekte. Wenn **Sp_dropdistributor** kann keine Verbindung mit dem Verteiler, schlägt die gespeicherte Prozedur fehl.  
   
@@ -71,8 +69,8 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
   
 ## <a name="see-also"></a>Siehe auch  
  [Deaktivieren der Veröffentlichung und Verteilung](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [Sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
- [Sp_changedistributor_property &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
+ [sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
+ [sp_changedistributor_property &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
  [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
