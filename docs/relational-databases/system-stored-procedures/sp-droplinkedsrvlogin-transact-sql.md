@@ -18,12 +18,12 @@ ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6d5d2dbded8a1dff8a0445dbafd64b017640357f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 505e75dfab9ea4e2ba44d8ef12f0ba5c7eecbde2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843178"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533512"
 ---
 # <a name="spdroplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,9 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@rmtsrvname =** ] **"***Rmtsrvname***"**  
- Der Name eines Verbindungsservers, der die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -anmeldenamenzuordnung gilt. *Rmtsrvname* ist **Sysname**, hat keinen Standardwert. *Rmtsrvname* muss bereits vorhanden sein.  
+`[ @rmtsrvname = ] 'rmtsrvname'` Der Name eines Verbindungsservers, der die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -anmeldenamenzuordnung gilt. *Rmtsrvname* ist **Sysname**, hat keinen Standardwert. *Rmtsrvname* muss bereits vorhanden sein.  
   
- [  **@locallogin =** ] **"***Locallogin***"**  
- Ist die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldenamen auf dem lokalen Server, die eine Zuordnung mit dem Verbindungsserver *Rmtsrvname*. *Locallogin* ist **Sysname**, hat keinen Standardwert. Eine Zuordnung für *Locallogin* zu *Rmtsrvname* muss bereits vorhanden sein. Wenn der Wert NULL ist, erstellt die standardzuordnung von **Sp_addlinkedserver**, die alle Anmeldenamen auf dem lokalen Server Anmeldenamen auf dem Verbindungsserver zuordnet, gelöscht.  
+`[ @locallogin = ] 'locallogin'` Ist die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldenamen auf dem lokalen Server, die eine Zuordnung mit dem Verbindungsserver *Rmtsrvname*. *Locallogin* ist **Sysname**, hat keinen Standardwert. Eine Zuordnung für *Locallogin* zu *Rmtsrvname* muss bereits vorhanden sein. Wenn der Wert NULL ist, erstellt die standardzuordnung von **Sp_addlinkedserver**, die alle Anmeldenamen auf dem lokalen Server Anmeldenamen auf dem Verbindungsserver zuordnet, gelöscht.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

@@ -18,12 +18,12 @@ ms.assetid: 29e7a7d7-b9c1-414a-968a-fc247769750d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2a350cf6b7f37aca830f4c74c23ce214f86376f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b71e79f28abb5932fc9a7a644bf466f848c1e6e7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702388"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534802"
 ---
 # <a name="sptracesetstatus-transact-sql"></a>sp_trace_setstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@traceid=** ] *Trace_id*  
- Die ID der zu ändernden Ablaufverfolgung. *Trace_id* ist **Int**, hat keinen Standardwert. Der Benutzer verwendet diesen *Trace_id* Wert zu identifizieren, ändern und Steuern der Ablaufverfolgung. Informationen zum Abrufen von der *Trace_id*, finden Sie unter [Sys. fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
+`[ @traceid = ] trace_id` Ist die ID der Ablaufverfolgung, die geändert werden. *Trace_id* ist **Int**, hat keinen Standardwert. Der Benutzer verwendet diesen *Trace_id* Wert zu identifizieren, ändern und Steuern der Ablaufverfolgung. Informationen zum Abrufen von der *Trace_id*, finden Sie unter [Sys. fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
   
- [ **@status=** ] *status*  
- Gibt die Aktion an, die für die Ablaufverfolgung implementiert werden soll. *Status* ist **Int**, hat keinen Standardwert.  
+`[ @status = ] status` Gibt die Aktion, die für die Ablaufverfolgung implementiert. *Status* ist **Int**, hat keinen Standardwert.  
   
  In der folgenden Tabelle sind die Status aufgelistet, die möglicherweise angegeben werden.  
   

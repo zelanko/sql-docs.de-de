@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 374fab9dca601e7cc933143643bcc5055f47bda7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a32df85b1a2b7362a22c27d05f68c07cf32a3200
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803918"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534008"
 ---
 # <a name="spcreatestats-transact-sql"></a>sp_createstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,17 +49,13 @@ sp_createstats
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@indexonly=** ] **"Indexonly"**  
- Erstellt Statistiken nur für Spalten, die sich in einem vorhandenen Index befinden und nicht der ersten Spalte in einer beliebigen Indexdefinition entsprechen. **Indexonly** ist **char(9)**. Der Standardwert ist NO.  
+`[ @indexonly = ] 'indexonly'` Erstellt Statistiken nur für Spalten, die in einem vorhandenen Index und nicht die erste Spalte in einer beliebigen Indexdefinition entsprechen. **Indexonly** ist **char(9)**. Der Standardwert ist NO.  
   
- [  **@fullscan=** ] **"Fullscan"**  
- Verwendet die [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) -Anweisung mit der **Option "FULLSCAN"** Option. **Option "FULLSCAN"** ist **char(9)**.  Der Standardwert ist NO.  
+`[ @fullscan = ] 'fullscan'` Verwendet die [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) -Anweisung mit der **Option "FULLSCAN"** Option. **Option "FULLSCAN"** ist **char(9)**.  Der Standardwert ist NO.  
   
- [  **@norecompute=** ] **"Norecompute"**  
- Verwendet die [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) -Anweisung mit der **NORECOMPUTE** Option. **NoRecompute** ist **char(12)**.  Der Standardwert ist NO.  
+`[ @norecompute = ] 'norecompute'` Verwendet die [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) -Anweisung mit der **NORECOMPUTE** Option. **NoRecompute** ist **char(12)**.  Der Standardwert ist NO.  
   
- [  **@incremental=** ] **"inkrementell"**  
- Verwendet die [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) -Anweisung mit der **inkrementell = ON** Option. **Inkrementelle** ist **char(12)**.  Der Standardwert ist NO.  
+`[ @incremental = ] 'incremental'` Verwendet die [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) -Anweisung mit der **inkrementell = ON** Option. **Inkrementelle** ist **char(12)**.  Der Standardwert ist NO.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

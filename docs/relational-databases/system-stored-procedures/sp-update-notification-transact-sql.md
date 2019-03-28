@@ -18,12 +18,12 @@ ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a612506b4efa34e9f47511789d792e3116f8b91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea326db0d0e093e4d6371d0dda10a4b9faccc572
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817542"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536033"
 ---
 # <a name="spupdatenotification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +44,13 @@ sp_update_notification
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@alert_name =**] **'***alert***'**  
- Der Name der dieser Benachrichtigung zugeordneten Warnung. *Warnung* ist **Sysname**, hat keinen Standardwert.  
+`[ @alert_name = ] 'alert'` Der Name der dieser Benachrichtigung zugeordneten Warnung. *Warnung* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@operator_name =**]  **'***operator***'**  
- Der Operator, der bei Auftreten der Warnung benachrichtigt wird. *Operator* ist **Sysname**, hat keinen Standardwert.  
+`[ @operator_name = ] 'operator'` Der Operator, der beim Auftreten der Warnung benachrichtigt wird. *Operator* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@notification_method =**] *Benachrichtigung*  
- Die Methode, durch die der Operator benachrichtigt wird. *Benachrichtigung*ist **Tinyint**und hat keinen Standardwert und kann eine oder mehrere der folgenden Werte sein.  
+`[ @notification_method = ] notification` Die Methode, mit der der Operator benachrichtigt wird. *Benachrichtigung*ist **Tinyint**und hat keinen Standardwert und kann eine oder mehrere der folgenden Werte sein.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**1**|E-Mail|  
 |**2**|Pager|  

@@ -17,12 +17,12 @@ ms.assetid: 1fd8c0f5-03e1-449a-af45-b8cacb479d9c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d0abed3b23b563c6b2620ad93d3f59d58bebd67
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ffda3be2194b26b46f9633c3bdf76d60d36ce73c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789043"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538542"
 ---
 # <a name="delete-a-database"></a>Löschen einer Datenbank
   In diesem Thema wird beschrieben, wie eine benutzerdefinierte Datenbank unter [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]gelöscht wird.  
@@ -37,7 +37,7 @@ ms.locfileid: "52789043"
   
      [Empfehlungen](#Recommendations)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So löschen Sie eine Datenbank mit:**  
   
@@ -70,7 +70,7 @@ ms.locfileid: "52789043"
 ####  <a name="Permissions"></a> Berechtigungen  
  Für die Ausführung von DROP DATABASE benötigt ein Benutzer zumindest die CONTROL-Berechtigung für die Datenbank.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-delete-a-database"></a>So löschen Sie eine Datenbank  
   
@@ -90,14 +90,14 @@ ms.locfileid: "52789043"
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. Im Beispiel werden die Datenbanken `Sales` und `NewSales` entfernt.  
   
-```tsql  
+```sql  
 USE master ;  
 GO  
 DROP DATABASE Sales, NewSales ;  
 GO  
 ```  
   
-##  <a name="FollowUp"></a> Zur Nachverfolgung: Nach dem Löschen einer Datenbank  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Löschen einer Datenbank  
  Sichern Sie die **master** -Datenbank. Wenn die **master** -Datenbank wiederhergestellt werden muss, können Fehlermeldungen auftreten, falls in den Systemkatalogsichten weiterhin Verweise auf Datenbanken bestehen, die seit der letzten Sicherung der **master** -Datenbank gelöscht wurden.  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -19,12 +19,12 @@ ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 528881f91b39e2dd25ce76c63c5cbead33392265
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0cd447f6ad12ee12c96f6bcbb6af858aa32fdb06
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057487"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532892"
 ---
 # <a name="execute-a-stored-procedure"></a>Ausführen einer gespeicherten Prozedur
   In diesem Thema wird beschrieben, wie Sie eine gespeicherte Prozedur in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]ausführen.  
@@ -47,13 +47,13 @@ ms.locfileid: "48057487"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
 -   Die Sortierung der aufrufenden Datenbank wird beim Zuordnen von Systemprozedurnamen verwendet. Aus diesem Grund muss in Prozeduraufrufen immer die genaue Groß-/Kleinschreibung von Systemprozedurnamen verwendet werden. Der folgende Code schlägt z. B. fehl, wenn er im Kontext einer Datenbank ausgeführt wird, bei deren Sortierung die Groß-/Kleinschreibung beachtet wird:  
   
-    ```tsql  
+    ```sql  
     EXEC SP_heLP; -- Will fail to resolve because SP_heLP does not equal sp_help  
     ```  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48057487"
   
      Systemprozeduren beginnen mit dem Präfix **sp_**. Da sie in allen benutzer- und systemdefinierten Datenbanken logisch angezeigt werden, können sie in jeder Datenbank ausgeführt werden, ohne den Prozedurnamen voll zu qualifizieren. Es wird jedoch empfohlen, die Namen aller Systemprozeduren mit dem **sys** -Schemanamen für das Schema zu qualifizieren, um Namenskonflikte zu vermeiden. Das folgende Beispiel zeigt die empfohlene Methode für das Aufrufen einer Systemprozedur.  
   
-    ```tsql  
+    ```sql  
     EXEC sys.sp_who;  
     ```  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48057487"
   
      Das folgende Beispiel zeigt die empfohlene Methode für das Ausführen einer benutzerdefinierten Prozedur. Beachten Sie, dass die Prozedur einen Eingabeparameter akzeptiert. Informationen zum Angeben von Ein- und Ausgabeparametern finden Sie unter [Angeben von Parametern](specify-parameters.md).  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     EXEC dbo.uspGetEmployeeManagers @BusinessEntityID = 50;  
@@ -85,7 +85,7 @@ ms.locfileid: "48057487"
   
      -Oder-  
   
-    ```tsql  
+    ```sql  
     EXEC AdventureWorks2012.dbo.uspGetEmployeeManagers 50;  
     GO  
     ```  
@@ -164,7 +164,7 @@ ms.locfileid: "48057487"
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. Dieses Beispiel zeigt, wie eine gespeicherte Prozedur ausgeführt wird, die einen Parameter erwartet. Im Beispiel wird die gespeicherte Prozedur `uspGetEmployeeManagers` mit dem  `6` -Parameterwert `@EmployeeID` ausgeführt.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC dbo.uspGetEmployeeManagers 6;  
@@ -179,7 +179,7 @@ GO
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. Dieses Beispiel zeigt, wie [sp_procoption](/sql/relational-databases/system-stored-procedures/sp-procoption-transact-sql) verwendet wird, um die automatische Ausführung einer Prozedur festzulegen.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   
@@ -195,7 +195,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. Dieses Beispiel zeigt, wie [sp_procoption](/sql/relational-databases/system-stored-procedures/sp-procoption-transact-sql) verwendet wird, um die automatische Ausführung einer Prozedur zu beenden.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   

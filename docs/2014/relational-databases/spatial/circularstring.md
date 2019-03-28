@@ -10,12 +10,12 @@ ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 001c489d9abf887495ea83cee00cede1463514ca
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8afd466b6eceffcee25346f76903d172a96d532e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376662"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532612"
 ---
 # <a name="circularstring"></a>CircularString
   Ein `CircularString` ist eine Auflistung von 0 (null) oder mehr stetigen Kreisbogensegmenten. Ein Kreisbogensegment ist ein von drei Punkten in einer zweidimensionalen Ebene definierter gekrümmter Abschnitt; der erste Punkt darf nicht mit dem dritten Punkt identisch sein. Wenn alle drei Punkte eines Kreisbogensegments kollinear sind, wird das Bogensegment als Liniensegment behandelt.  
@@ -90,7 +90,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid();
 ### <a name="a-instantiating-a-geometry-instance-with-an-empty-circularstring"></a>A. Instanziieren einer Geometry-Instanz mit einem leeren CircularString  
  In diesem Beispiel wird veranschaulicht, wie eine leere `CircularString`-Instanz erstellt wird:  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CIRCULARSTRING EMPTY');  
 ```  
@@ -98,7 +98,7 @@ SET @g = geometry::Parse('CIRCULARSTRING EMPTY');
 ### <a name="b-instantiating-a-geometry-instance-using-a-circularstring-with-one-circular-arc-segment"></a>B. Instanziieren einer Geometry-Instanz, die einen CircularString mit einem Kreisbogensegment verwendet  
  Im folgenden Beispiel wird veranschaulicht, wie eine `CircularString`-Instanz mit einem einzelnen Kreisbogensegment (Halbkreis) erstellt wird:  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry:: STGeomFromText('CIRCULARSTRING(2 0, 1 1, 0 0)', 0);  
 SELECT @g.ToString();  
@@ -107,7 +107,7 @@ SELECT @g.ToString();
 ### <a name="c-instantiating-a-geometry-instance-using-a-circularstring-with-multiple-circular-arc-segments"></a>C. Instanziieren einer Geometry-Instanz, die einen CircularString mit mehreren Kreisbogensegmenten verwendet  
  Im folgenden Beispiel wird veranschaulicht, wie eine `CircularString`-Instanz mit mehreren Kreisbogensegmenten (vollständiger Kreis) erstellt wird:  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CIRCULARSTRING(2 1, 1 2, 0 1, 1 0, 2 1)');  
 SELECT 'Circumference = ' + CAST(@g.STLength() AS NVARCHAR(10));    
@@ -121,7 +121,7 @@ Circumference = 6.28319
   
  Vergleichen Sie die Ausgabe, wenn `LineString` anstelle von `CircularString` verwendet wird:  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(2 1, 1 2, 0 1, 1 0, 2 1)', 0);  
 SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));  
@@ -138,21 +138,21 @@ Perimeter = 5.65685
 ### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>D. Deklarieren und Instanziieren einer Geometry-Instanz mit einem CircularString in derselben Anweisung  
  In diesem Codeausschnitt wird veranschaulicht, wie eine `geometry`-Instanz mit einem `CircularString` in derselben Anweisung deklariert und instanziiert wird:  
   
-```tsql  
+```sql  
 DECLARE @g geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';  
 ```  
   
 ### <a name="e-instantiating-a-geography-instance-with-a-circularstring"></a>E. Instanziieren einer Geography-Instanz mit einem CircularString  
  Im folgenden Beispiel wird veranschaulicht, wie eine `geography`-Instanz mit einem `CircularString` deklariert und instanziiert wird:  
   
-```tsql  
+```sql  
 DECLARE @g geography = 'CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
 ```  
   
 ### <a name="f-instantiating-a-geometry-instance-with-a-circularstring-that-is-a-straight-line"></a>F. Instanziieren einer Geometry-Instanz mit einem CircularString, der eine Gerade darstellt  
  Im folgenden Beispiel wird veranschaulicht, wie eine `CircularString`-Instanz erstellt wird, die eine Gerade darstellt:  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);  
 ```  

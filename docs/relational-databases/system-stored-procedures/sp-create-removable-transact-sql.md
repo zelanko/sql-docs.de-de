@@ -18,12 +18,12 @@ ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a17ec458ffe1094691932fee6661e38551012b54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c2e25b51998d863809a57654b245b1cb63027b5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749449"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534672"
 ---
 # <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,37 +56,27 @@ sp_create_removable
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@dbname=** ] **'***dbname***'**  
- Der Name der Datenbank, die zur Verwendung auf austauschbaren Medien erstellt werden soll. *Dbname* ist **Sysname**.  
+`[ @dbname = ] 'dbname'` Ist der Name der Datenbank, die für die Verwendung auf austauschbaren Medien erstellen. *Dbname* ist **Sysname**.  
   
- [  **@syslogical=** ] **"***Syslogical***"**  
- Der logische Name der Datei, die die Systemkatalogtabellen enthält. *Syslogical* ist **Sysname**.  
+`[ @syslogical = ] 'syslogical'` Ist der logische Name der Datei, die die Systemkatalogtabellen enthält. *Syslogical* ist **Sysname**.  
   
- [  **@sysphysical=** ] **"***Sysphysical***"**  
- Der physische Name (einschließlich vollständiger Pfadangabe) der Datei, die die Datentabellen enthält. Enthält einen vollqualifizierten Pfad der Datei, die die Systemkatalogtabellen enthält. *Sysphysical* ist **nvarchar(260)**.  
+`[ @sysphysical = ] 'sysphysical'` Ist der physische Name. Enthält einen vollqualifizierten Pfad der Datei, die die Systemkatalogtabellen enthält. *Sysphysical* ist **nvarchar(260)**.  
   
- [ **@syssize=** ] *syssize*  
- Die in MB angegebene Größe der Datei, die die Systemkatalogtabellen enthält. *Syssize* ist **Int**. Die minimale *Syssize* ist 1.  
+`[ @syssize = ] syssize` Ist die Größe in Megabyte, der die Datei, die die Systemkatalogtabellen enthält. *Syssize* ist **Int**. Die minimale *Syssize* ist 1.  
   
- [  **@loglogical=** ] **"***Loglogical***"**  
- Der logische Name der Datei, die das Transaktionsprotokoll enthält. *Loglogical* ist **Sysname**.  
+`[ @loglogical = ] 'loglogical'` Ist der logische Name der Datei, die das Transaktionsprotokoll enthält. *Loglogical* ist **Sysname**.  
   
- [  **@logphysical=** ] **"***Logphysical***"**  
- Der physische Name (einschließlich vollständiger Pfadangabe) der Datei, die die Datentabellen enthält. Enthält einen vollqualifizierten Pfad der Datei, die die Transaktionsprotokolltabellen enthält. *Logphysical* ist **nvarchar(260)**.  
+`[ @logphysical = ] 'logphysical'` Ist der physische Name. Enthält einen vollqualifizierten Pfad der Datei, die die Transaktionsprotokolltabellen enthält. *Logphysical* ist **nvarchar(260)**.  
   
- [  **@logsize=** ] *Logsize*  
- Die in MB angegebene Größe der Datei, die das Transaktionsprotokoll enthält. *Logsize* ist **Int**. Die minimale *Logsize* ist 1.  
+`[ @logsize = ] logsize` Ist die Größe in Megabyte, der Datei, die das Transaktionsprotokoll enthält. *Logsize* ist **Int**. Die minimale *Logsize* ist 1.  
   
- [  **@datalogical1=** ] **"***Datalogical***"**  
- Der logische Name der Datei, die die Datentabellen enthält. *Datalogical* ist **Sysname**.  
+`[ @datalogical1 = ] 'datalogical'` Ist der logische Name einer Datei, die die Datentabellen enthält. *Datalogical* ist **Sysname**.  
   
  Die Anzahl von Datendateien muss zwischen 1 und 16 liegen. In der Regel wird mehr als eine Datendatei erstellt, wenn zu erwarten ist, dass die Datenbank umfangreich wird und auf mehrere Datenträger verteilt werden muss.  
   
- [  **@dataphysical1=** ] **"***Dataphysical***"**  
- Der physische Name (einschließlich vollständiger Pfadangabe) der Datei, die die Datentabellen enthält. Enthält einen vollqualifizierten Pfad der Datei, die die Datentabellen enthält. *Dataphysical* ist **nvarchar(260)**.  
+`[ @dataphysical1 = ] 'dataphysical'` Ist der physische Name. Enthält einen vollqualifizierten Pfad der Datei, die die Datentabellen enthält. *Dataphysical* ist **nvarchar(260)**.  
   
- [  **@datasize1=** ] **"***Datasize***"**  
- Die in MB angegebene Größe der Datei, die die Datentabellen enthält. *Datasize* ist **Int**. Die minimale *Datasize* ist 1.  
+`[ @datasize1 = ] 'datasize'` Ist die Größe in Megabyte, der eine Datei, die die Datentabellen enthält. *Datasize* ist **Int**. Die minimale *Datasize* ist 1.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

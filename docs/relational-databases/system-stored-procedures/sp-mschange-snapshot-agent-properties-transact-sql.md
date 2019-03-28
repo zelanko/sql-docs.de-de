@@ -16,12 +16,12 @@ ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4a4c8eb45ad7864466ccedc3de5b034325279322
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: f5c9091e3a949e5a358f5bd1305d096491782012
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589754"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537313"
 ---
 # <a name="spmschangesnapshotagentproperties-transact-sql"></a>sp_MSchange_snapshot_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,17 +57,13 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publisher** =] **"**_Verleger_**"**  
- Der Name des Verlegers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher = ] 'publisher'` Ist der Name des Verlegers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@publisher_db=** ] **"**_Publisher_db_**"**  
- Der Name der Veröffentlichungsdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher_db = ] 'publisher_db'` Ist der Name der Veröffentlichungsdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@publication =** ] **"**_Veröffentlichung_**"**  
- Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@frequency_type =** ] *Frequency_type*  
- Die Häufigkeit für die Ausführung des Momentaufnahme-Agents. *Frequency_type* ist **Int**, und kann einen der folgenden Werte sein.  
+`[ @frequency_type = ] frequency_type` Kann die Häufigkeit, mit der der Momentaufnahme-Agent ausgeführt wird. *Frequency_type* ist **Int**, und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -79,11 +75,9 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 |**20**|Monatlich, relativ zum Häufigkeitsintervall|  
 |**40**|Beim Starten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents|  
   
- [  **@frequency_interval =** ] *Frequency_interval*  
- Ist der Wert der Häufigkeit festgelegt, die durch Anwenden *Frequency_type*. *Frequency_interval* ist **Int**, hat keinen Standardwert.  
+`[ @frequency_interval = ] frequency_interval` Ist der Wert der Häufigkeit festgelegt, die durch Anwenden *Frequency_type*. *Frequency_interval* ist **Int**, hat keinen Standardwert.  
   
- [  **@frequency_subday =** ] *Frequency_subday*  
- Die Einheiten für *Freq_subday_interval*. *Frequency_subday* ist **Int**, und kann einen der folgenden Werte sein.  
+`[ @frequency_subday = ] frequency_subday` Die Einheiten für *Freq_subday_interval*. *Frequency_subday* ist **Int**, und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -92,53 +86,39 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 |**4**|Minute|  
 |**8**|Hour|  
   
- [  **@frequency_subday_interval=**] *Frequency_subday_interval*  
- Das Intervall für *Frequency_subday*. *Frequency_subday_interval* ist **Int**, hat keinen Standardwert.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Das Intervall für *Frequency_subday*. *Frequency_subday_interval* ist **Int**, hat keinen Standardwert.  
   
- [  **@frequency_relative_interval =** ] *Frequency_relative_interval*  
- Das Datum, an dem der Momentaufnahme-Agent ausgeführt wird. *Frequency_relative_interval* ist **Int**, hat keinen Standardwert.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Ist das Datum aus, denen, das der Momentaufnahme-Agent ausgeführt wird. *Frequency_relative_interval* ist **Int**, hat keinen Standardwert.  
   
- [  **@frequency_recurrence_factor =** ] *Frequency_recurrence_factor*  
- Wird von verwendete Wiederholungsfaktor *Frequency_type*. *Frequency_recurrence_factor* ist **Int**, hat keinen Standardwert.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Wird von verwendete Wiederholungsfaktor *Frequency_type*. *Frequency_recurrence_factor* ist **Int**, hat keinen Standardwert.  
   
- [ **@active_start_date =** ] *active_start_date*  
- Das Datum, an dem der Momentaufnahme-Agent zum ersten Mal geplant ist. Dabei wird das Format JJJJMMTT verwendet. *Active_start_date* ist **Int**, hat keinen Standardwert.  
+`[ @active_start_date = ] active_start_date` Das Datum, an der Momentaufnahme-Agent zuerst ist geplant Format: YYYYMMDD. *Active_start_date* ist **Int**, hat keinen Standardwert.  
   
- [ **@active_end_date =** ] *active_end_date*  
- Das Datum, ab dem der Momentaufnahme-Agent nicht mehr geplant ist. Dabei wird das Format JJJJMMTT verwendet. *Active_end_date* ist **Int**, hat keinen Standardwert.  
+`[ @active_end_date = ] active_end_date` Das Datum, ab der Momentaufnahme-Agent nicht mehr, ist geplant ist YYYYMMDD formatiert. *Active_end_date* ist **Int**, hat keinen Standardwert.  
   
- [  **@active_start_time_of_day=**] *Active_start_time_of_day*  
- Die Tageszeit, zu der der Momentaufnahme-Agent zum ersten Mal geplant ist. Dabei wird das Format HHMMSS verwendet. *das Format HHMMSS verwendet* ist **Int**, hat keinen Standardwert.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Die Tageszeit aus, wenn der erste der Momentaufnahme-Agent ist, erfolgt Format: HHMMSS. *das Format HHMMSS verwendet* ist **Int**, hat keinen Standardwert.  
   
- [  **@active_end_time_of_day=**] *Active_end_time_of_day*  
- Die Tageszeit, ab der der Momentaufnahme-Agent nicht mehr geplant ist. Dabei wird das Format HHMMSS verwendet. *das Format HHMMSS verwendet* ist **Int**, hat keinen Standardwert.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Die Tageszeit, ab der Momentaufnahme-Agent nicht mehr, wird geplant ist HHMMSS verwendet. *das Format HHMMSS verwendet* ist **Int**, hat keinen Standardwert.  
   
- [  **@snapshot_job_name =** ] **"**_Snapshot_agent_name_**"**  
- Der Name eines vorhandenen Auftrags des Momentaufnahme-Agents, wenn ein vorhandener Auftrag verwendet wird. *Snapshot_agent_name* ist **nvarchar(100)**, hat keinen Standardwert.  
+`[ @snapshot_job_name = ] 'snapshot_agent_name'` Ist der Name der Name eines vorhandenen Momentaufnahme-Agent-Auftrags an, wenn ein vorhandener Auftrag verwendet wird. *Snapshot_agent_name* ist **nvarchar(100)**, hat keinen Standardwert.  
   
- [ **@publisher_security_mode**=] *Publisher_security_mode*  
- Der vom Agent beim Herstellen der Verbindung mit dem Verleger verwendete Sicherheitsmodus. *Publisher_security_mode* ist **Int**, hat keinen Standardwert. **0** gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung und **1** gibt die Windows-Authentifizierung. Der Wert **0** muss angegeben werden, für nicht - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herausgeber. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode` Der Sicherheitsmodus wird vom Agent verwendet werden, Herstellen der Verbindung mit dem Verleger. *Publisher_security_mode* ist **Int**, hat keinen Standardwert. **0** gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung und **1** gibt die Windows-Authentifizierung. Der Wert **0** muss angegeben werden, für nicht - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herausgeber. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [ **@publisher_login**=] **"**_Publisher_login_**"**  
- Der Anmeldename, der beim Herstellen der Verbindung mit dem Verleger verwendet wird. *Publisher_login* ist **Sysname**, hat keinen Standardwert. *Publisher_login* muss angegeben werden, wenn *Publisher_security_mode* ist **0**. Wenn *Publisher_login* ist NULL und Herausgeber *_ ** Security_mode* ist **1**, und klicken Sie dann das angegebene Windows-Konto *Job_login* werden Beim Verbinden mit dem Verleger verwendet.  
+`[ @publisher_login = ] 'publisher_login'` Der Benutzername, der verwendet wird, Herstellen der Verbindung mit dem Verleger. *Publisher_login* ist **Sysname**, hat keinen Standardwert. *Publisher_login* muss angegeben werden, wenn *Publisher_security_mode* ist **0**. Wenn *Publisher_login* ist NULL und Herausgeber *_ ** Security_mode* ist **1**, und klicken Sie dann das angegebene Windows-Konto *Job_login* werden Beim Verbinden mit dem Verleger verwendet.  
   
- [ **@publisher_password**=] **"**_Publisher_password_**"**  
- Das Kennwort, das beim Herstellen der Verbindung mit dem Verleger verwendet wird. *Publisher_password* ist **nvarchar(524)**, hat keinen Standardwert.  
+`[ @publisher_password = ] 'publisher_password'` Das Kennwort wird verwendet werden, wenn eine Verbindung mit dem Verleger herstellen. *Publisher_password* ist **nvarchar(524)**, hat keinen Standardwert.  
   
 > [!IMPORTANT]  
 >  Speichern Sie keine Authentifizierungsinformationen in Skriptdateien. Es wird empfohlen, Anmeldenamen und Kennwörter zur Laufzeit bereitzustellen, um die Sicherheit zu verbessern.  
   
- [ **@job_login**=] **"**_Job_login_**"**  
- Der Anmeldename für das Windows-Konto, unter dem der Agent ausgeführt wird. *Job_login* ist **nvarchar(257)**, hat keinen Standardwert. Das Windows-Konto wird stets für Agent-Verbindungen mit dem Verteiler verwendet. Sie müssen diesen Parameter angeben, wenn Sie einen neuen Auftrag des Momentaufnahme-Agents erstellen. *Dies kann nicht geändert werden, für einen nicht-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Verleger.*  
+`[ @job_login = ] 'job_login'` Ist der Anmeldename für das Windows-Konto, unter dem der Agent ausgeführt wird. *Job_login* ist **nvarchar(257)**, hat keinen Standardwert. Das Windows-Konto wird stets für Agent-Verbindungen mit dem Verteiler verwendet. Sie müssen diesen Parameter angeben, wenn Sie einen neuen Auftrag des Momentaufnahme-Agents erstellen. *Dies kann nicht geändert werden, für einen nicht-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Verleger.*  
   
- [ **@job_password**=] **"**_Job_password_**"**  
- Das Kennwort für das Windows-Konto, unter dem der Agent ausgeführt wird. *Job_password* ist **Sysname**, hat keinen Standardwert. Sie müssen diesen Parameter angeben, wenn Sie einen neuen Auftrag des Momentaufnahme-Agents erstellen.  
+`[ @job_password = ] 'job_password'` Ist das Kennwort für das Windows-Konto, unter dem der Agent ausgeführt wird. *Job_password* ist **Sysname**, hat keinen Standardwert. Sie müssen diesen Parameter angeben, wenn Sie einen neuen Auftrag des Momentaufnahme-Agents erstellen.  
   
 > [!IMPORTANT]  
 >  Speichern Sie keine Authentifizierungsinformationen in Skriptdateien. Es wird empfohlen, Anmeldenamen und Kennwörter zur Laufzeit bereitzustellen, um die Sicherheit zu verbessern.  
   
- [ **@publisher_type**=] **"**_Publisher_type_**"**  
- Gibt den Verlegertyp an, wenn der Verleger nicht in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird. *Publisher_type* ist **Sysname**, und kann einen der folgenden Werte.  
+`[ @publisher_type = ] 'publisher_type'` Gibt den verlegertyp an, wenn der Verleger nicht, in einer Instanz von ausgeführt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Publisher_type* ist **Sysname**, und kann einen der folgenden Werte.  
   
 |Wert|Description|  
 |-----------|-----------------|  

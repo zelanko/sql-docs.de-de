@@ -18,12 +18,12 @@ ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 05e5ef298e9365b63b4e66b93c0f2aa637be8312
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69f65ee2e299197504c4bd970a835a28c2f89b21
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706998"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534142"
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,29 +43,25 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@class=**] **'***class***'**  
- Die Klasse, zu der Informationen angefordert werden. *Klasse* ist **varchar(8)**, hat den Standardwert des **Auftrag**. *Klasse* kann einen der folgenden Werte sein.  
+`[ @class = ] 'class'` Die Klasse, die Informationen angefordert wird. *Klasse* ist **varchar(8)**, hat den Standardwert des **Auftrag**. *Klasse* kann einen der folgenden Werte sein.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**JOB**|Stellt Informationen zu einer Auftragskategorie bereit.|  
-|**WARNUNG**|Stellt Informationen zu einer Warnungskategorie bereit.|  
+|**ALERT**|Stellt Informationen zu einer Warnungskategorie bereit.|  
 |**OPERATOR**|Stellt Informationen zu einer Operatorkategorie bereit.|  
   
- [ **@type=** ] **'***type***'**  
- Der Typ der Kategorie, für die Informationen angefordert werden. *Typ* ist **varchar(12)**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
+`[ @type = ] 'type'` Der Typ der Kategorie für die Informationen angefordert werden. *Typ* ist **varchar(12)**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**LOCAL**|Lokale Auftragskategorie|  
-|**MULTI-SERVER**|Multiserver-Auftragskategorie|  
+|**MULTI -SERVER**|Multiserver-Auftragskategorie|  
 |**NONE**|Kategorie für eine andere Klasse als **Auftrag**.|  
   
- [ **@name=** ] **'***name***'**  
- Der Name der Kategorie, für die Informationen angefordert werden. *name* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
+`[ @name = ] 'name'` Der Name der Kategorie für die Informationen angefordert werden. *name* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
- [ **@suffix=** ] *suffix*  
- Gibt an, ob die **Category_type** Spalte im Resultset ist eine ID oder einen Namen. *Suffix* ist **Bit**, hat den Standardwert **0**. **1** zeigt die **Category_type** als einen Namen ein, und **0** deckt das Diagramm als ID  
+`[ @suffix = ] suffix` Gibt an, ob die **Category_type** Spalte im Resultset ist eine ID oder einen Namen. *Suffix* ist **Bit**, hat den Standardwert **0**. **1** zeigt die **Category_type** als einen Namen ein, und **0** deckt das Diagramm als ID  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -76,7 +72,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|Kategorie-ID|  
-|**category_type**|**tinyint**|Der Typ der Kategorie:<br /><br /> **1** = lokal<br /><br /> **2** = Multiserver<br /><br /> **3** = keine|  
+|**category_type**|**tinyint**|Der Typ der Kategorie:<br /><br /> **1** = Local<br /><br /> **2** = Multiserver<br /><br /> **3** = keine|  
 |**name**|**sysname**|Kategoriename|  
   
  Wenn **@suffix** ist **1**, **Sp_help_category** gibt das folgende Resultset zurück:  

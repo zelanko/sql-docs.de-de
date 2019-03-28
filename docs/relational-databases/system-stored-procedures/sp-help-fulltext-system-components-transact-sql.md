@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0228a3f0719bd6a56142e571323fdf809e534337
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61301b0c6916ba11cb54cc0c8d8ab961cc3ae659
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635689"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534322"
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -46,10 +46,9 @@ sp_help_fulltext_system_components
  'all'  
  Gibt Informationen für alle Volltextkomponenten zurück.  
   
- [ **@component_type=** ] *component_type*  
- Gibt den Komponententyp an. *Component_type* kann einen der folgenden sein:  
+`[ @component_type = ] component_type` Gibt den Typ der Komponente. *Component_type* kann einen der folgenden sein:  
   
--   **wörtertrennung**  
+-   **wordbreaker**  
   
 -   **filter**  
   
@@ -59,8 +58,7 @@ sp_help_fulltext_system_components
   
  Wenn ein vollständiger Pfad angegeben wird, *Param* muss auch angegeben werden, durch den vollständigen Pfad zur Komponenten-DLL, oder es wird eine Fehlermeldung zurückgegeben.  
   
- [ **@param=** ] *param*  
- Abhängig vom Komponententyp kann dies Folgendes sein: ein Gebietsschemabezeichner (LCID), die Dateierweiterung mit "."-Präfix, der vollständige Komponentenname des Protokollhandlers oder der vollständige Pfad der Komponenten-DLL.  
+`[ @param = ] param` Abhängig vom Komponententyp kann dies ist eine der folgenden: ein Gebietsschemabezeichner (LCID), die Dateierweiterung mit "." Präfix, der vollständige Komponentenname des protokollhandlers oder der vollständige Pfad zur Komponenten-DLL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -75,7 +73,7 @@ sp_help_fulltext_system_components
 |**clsid**|**uniqueidentifier**|Klassenbezeichner der Komponente.|  
 |**fullpath**|**nvarchar(256)**|Pfad zum Speicherort der Komponente.<br /><br /> NULL = Aufrufer ist kein Mitglied der festen Serverrolle **serveradmin** .|  
 |**version**|**nvarchar(30)**|Version der Komponente.|  
-|**Hersteller**|**sysname**|Name des Herstellers der Komponente.|  
+|**manufacturer**|**sysname**|Name des Herstellers der Komponente.|  
   
  Das folgende Resultset wird nur zurückgegeben, wenn ein oder mehr als ein Volltextkatalog vorhanden ist, verwendet *Component_type*.  
   

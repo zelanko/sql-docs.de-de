@@ -10,12 +10,12 @@ ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d8afb24373cf62d4b9f8696d9c2d9370ad665796
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 983711f4ac679cdb12fa7c31509725f13fba8bb3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352298"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531352"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
   Eine `CompoundCurve` ist eine Auflistung von 0 (null) oder mehr fortlaufenden `CircularString`-Instanzen oder `LineString`-Instanzen von geometry- oder geography-Typen.  
@@ -97,7 +97,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
 ### <a name="a-instantiating-a-geometry-instance-with-an-empty-compooundcurve"></a>A. Instanziieren einer geometry-Instanz mit einer leeren CompoundCurve  
  Im folgenden Beispiel wird veranschaulicht, wie eine leere `CompoundCurve` -Instanz erstellt wird:  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('COMPOUNDCURVE EMPTY');  
 ```  
@@ -105,21 +105,21 @@ SET @g = geometry::Parse('COMPOUNDCURVE EMPTY');
 ### <a name="b-declaring-and-instantiating-a-geometry-instance-using-a-compoundcurve-in-the-same-statement"></a>B. Deklarieren und Instanziieren einer geometry-Instanz, die eine CompoundCurve in derselben Anweisung verwendet  
  Im folgenden Beispiel wird veranschaulicht, wie eine `geometry` -Instanz mit einer `CompoundCurve`in derselben Anweisung deklariert und instanziiert wird:  
   
-```tsql  
+```sql  
 DECLARE @g geometry = 'COMPOUNDCURVE ((2 2, 0 0),CIRCULARSTRING (0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0))';  
 ```  
   
 ### <a name="c-instantiating-a-geography-instance-with-a-compoundcurve"></a>C. Instanziieren einer geography-Instanz mit einer CompoundCurve  
  Im folgenden Beispiel wird veranschaulicht, wie eine `geography`-Instanz mit einer `CompoundCurve` deklariert und initialisiert wird:  
   
-```tsql  
+```sql  
 DECLARE @g geography = 'COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
 ```  
   
 ### <a name="d-storing-a-square-in-a-compoundcurve-instance"></a>D. Speichern eines Quadrats in einer CompoundCurve-Instanz  
  Im folgenden Beispiel werden zwei verschiedene Möglichkeiten gezeigt, wie mithilfe einer `CompoundCurve` -Instanz ein Quadrat gespeichert werden kann.  
   
-```tsql  
+```sql  
 DECLARE @g1 geometry, @g2 geometry;  
 SET @g1 = geometry::Parse('COMPOUNDCURVE((1 1, 1 3), (1 3, 3 3),(3 3, 3 1), (3 1, 1 1))');  
 SET @g2 = geometry::Parse('COMPOUNDCURVE((1 1, 1 3, 3 3, 3 1, 1 1))');  
@@ -131,7 +131,7 @@ SELECT @g1.STLength(), @g2.STLength();
 ### <a name="e-instantiating-a-geometry-instance-using-a-compoundcurve-with-multiple-circularstrings"></a>E. Instanziieren einer geometry-Instanz mithilfe einer CompoundCurve mit mehreren CircularStrings  
  Im folgenden Beispiel wird gezeigt, wie mithilfe von zwei verschiedenen `CircularString` -Instanzen eine `CompoundCurve`initialisiert werden kann.  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULARSTRING(4 2, 2 4, 0 2))');  
 SELECT @g.STLength();  
@@ -142,7 +142,7 @@ SELECT @g.STLength();
 ### <a name="f-using-a-compoundcurve-to-store-a-semicircle"></a>F. Speichern eines Halbkreises mithilfe einer CompoundCurve  
  Im folgenden Beispiel wird ein Halbkreis mithilfe einer `CompoundCurve` -Instanz gespeichert.  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), (4 2, 0 2))');  
 SELECT @g.STLength();  
@@ -151,7 +151,7 @@ SELECT @g.STLength();
 ### <a name="g-storing-multiple-circularstring-and-linestring-instances-in-a-compoundcurve"></a>G. Speichern mehrerer CircularString- und LineString-Instanzen in einer CompoundCurve  
  Im folgenden Beispiel wird gezeigt, wie mehrere `CircularString` -Instanzen und `LineString` -Instanzen mit einer `CompoundCurve`gespeichert werden können.  
   
-```tsql  
+```sql  
 DECLARE @g geometry  
 SET @g = geometry::Parse('COMPOUNDCURVE((3 5, 3 3), CIRCULARSTRING(3 3, 5 1, 7 3), (7 3, 7 5), CIRCULARSTRING(7 5, 5 7, 3 5))');  
 SELECT @g.STLength();  
@@ -160,14 +160,14 @@ SELECT @g.STLength();
 ### <a name="h-storing-instances-with-z-and-m-values"></a>H. Speichern von Instanzen mit Z- und M-Werten  
  Im folgenden Beispiel wird veranschaulicht, wie mithilfe einer `CompoundCurve` -Instanz eine Sequenz von `CircularString` -Instanzen und `LineString` -Instanzen mit Z- und M-Werten gespeichert wird.  
   
-```tsql  
+```sql  
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(7 5 4 2, 5 7 4 2, 3 5 4 2), (3 5 4 2, 8 7 4 2))');  
 ```  
   
 ### <a name="i-illustrating-why-circularstring-instances-must-be-explicitly-declared"></a>I. Gründe für die explizite Deklaration von CircularString-Instanzen  
  Im folgenden Beispiel wird erläutert, weshalb `CircularString` -Instanzen explizit deklariert werden müssen. Der Programmierer versucht, in einer `CompoundCurve` -Instanz einen Kreis zu speichern.  
   
-```tsql  
+```sql  
 DECLARE @g1 geometry;    
 DECLARE @g2 geometry;  
 SET @g1 = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), (4 2, 2 4, 0 2))');  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 64a1e4f2b1d7b31461cbcc23b21e996aea060b4a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c86bf467eb83e372b7c90375ae95d659c98532a4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791692"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534005"
 ---
 # <a name="spgrantpublicationaccess-transact-sql"></a>sp_grant_publication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,14 +38,11 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publication**=] **"***Veröffentlichung***"**  
- Der Name der Veröffentlichung, auf die zugegriffen werden soll. **"***Veröffentlichung***"** ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung, die Zugriff auf. **"***Veröffentlichung***"** ist **Sysname**, hat keinen Standardwert.  
   
- [ **@login**=] **"***Anmeldung***"**  
- Die Login-ID **"***Anmeldung***"** ist **Sysname**, hat keinen Standardwert.  
+`[ @login = ] 'login'` Die Login-ID **"***Anmeldung***"** ist **Sysname**, hat keinen Standardwert.  
   
- [  **@reserved =**] **"***reservierte***"**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -59,8 +56,8 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
  Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_grant_publication_access**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_help_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)   
- [Sp_revoke_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
+ [sp_help_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)   
+ [sp_revoke_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
  [Sichern des Verlegers](../../relational-databases/replication/security/secure-the-publisher.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

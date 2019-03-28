@@ -10,15 +10,15 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested AUTO mode
 - nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 883d66d07c776a7391b28f59c6f091c3f42ca3e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0db2a84b4be80fffec0f05aed11f39a3bcea7db
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164970"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534472"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>Generieren von gleichgeordneten Elementen mit einer geschachtelten AUTO-Modusabfrage
   Im folgenden Beispiel wird das Generieren von gleichgeordneten Elementen durch Verwenden einer geschachtelten Abfrage im AUTO-Modus dargestellt. Die einzige Möglichkeit zum Generieren von derartigem XML-Code besteht im Verwenden des EXPLICIT-Modus. Dies kann jedoch sehr aufwändig sein.  
@@ -144,7 +144,7 @@ FOR XML AUTO, TYPE
   
 -   Die vorherige Abfrage wird in der `FROM` -Klausel hinzugefügt. Das Abfrageergebnis wird als Tabelle zurückgegeben. Beachten Sie den hinzugefügten `XmlCol` -Alias.  
   
--   Die `SELECT` -Klausel gibt eine XQuery-Abfrage für `XmlCol` an, das in der `FROM` -Klausel zurückgegeben wird. Die `query()` Methode der `xml` -Datentyp angeben der XQuery verwendet. Weitere Informationen finden Sie unter [query&#40;&#41;-Methode &#40;xml-Datentyp&#41;](/sql/t-sql/xml/query-method-xml-data-type).  
+-   Die `SELECT` -Klausel gibt eine XQuery-Abfrage für `XmlCol` an, das in der `FROM` -Klausel zurückgegeben wird. Die XQuery-Abfrage wird mit der `query()`-Methode des `xml`-Datentyps angegeben. Weitere Informationen finden Sie unter [query&#40;&#41;-Methode &#40;xml-Datentyp&#41;](/sql/t-sql/xml/query-method-xml-data-type).  
   
     ```  
     SELECT XmlCol.query('<Root> { /* } </Root>')  

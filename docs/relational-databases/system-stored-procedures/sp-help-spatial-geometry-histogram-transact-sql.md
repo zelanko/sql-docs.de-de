@@ -18,12 +18,12 @@ ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c29562bbdaeff69084547c3505fc84def3a0c668
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 914c68d313d77d1cb363f44daee2935976161418
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663233"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534292"
 ---
 # <a name="sphelpspatialgeometryhistogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,31 +45,23 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@tabname =**] **"***Tabname***"**  
- Der qualifizierte oder nicht qualifizierte Name der Tabelle, für die der Räumlichkeitsindex angegeben wurde.  
+`[ @tabname = ] 'tabname'` Ist der qualifizierte oder nicht qualifizierte Name der Tabelle für die der räumlichkeitsindex angegeben wurde.  
   
  Anführungszeichen sind nur dann erforderlich, wenn eine qualifizierte Tabelle angegeben wird. Bei Angabe eines vollqualifizierten Namens, einschließlich eines Datenbanknamens, muss es sich bei dem Datenbanknamen um den Namen der aktuellen Datenbank handeln. *Tabname* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@colname =** ] **"***Colname***"**  
- Dies ist der Namen der angegebenen räumlichen Spalte. *Colname* ist eine **Sysname**, hat keinen Standardwert.  
+`[ @colname = ] 'colname'` Ist der Name der angegebenen räumlichen Spalte. *Colname* ist eine **Sysname**, hat keinen Standardwert.  
   
- [  **@resolution =** ] **"***Auflösung***"**  
- Ist die Auflösung des Begrenzungsrahmens. Werte zwischen 10 und 5000 sind gültig. *Auflösung* ist eine **Tinyint**, hat keinen Standardwert.  
+`[ @resolution = ] 'resolution'` Ist die Auflösung des Begrenzungsrahmens. Werte zwischen 10 und 5000 sind gültig. *Auflösung* ist eine **Tinyint**, hat keinen Standardwert.  
   
- [  **@xmin =** ] **"***" xmin "***"**  
- Dies ist die X-Minimum-Eigenschaft des Begrenzungsrahmens. *"xmin"* ist eine **"float"**, hat keinen Standardwert.  
+`[ @xmin = ] 'xmin'` Ist die X-Minimum-Eigenschaft des Begrenzungsrahmens an. *"xmin"* ist eine **"float"**, hat keinen Standardwert.  
   
- [  **@ymin =** ] **"***Ymin***"**  
- Dies ist die Y-Minimum-Eigenschaft des Begrenzungsrahmens. *Ymin* ist eine **"float"**, hat keinen Standardwert.  
+`[ @ymin = ] 'ymin'` Ist die Y-Minimum-Eigenschaft des Begrenzungsrahmens an. *Ymin* ist eine **"float"**, hat keinen Standardwert.  
   
- [  **@xmax =** ] **"***" xmax "***"**  
- Dies ist die X-Maximum-Eigenschaft des Begrenzungsrahmens. *"xmax"* ist eine **"float"**, hat keinen Standardwert.  
+`[ @xmax = ] 'xmax'` Ist die X-Maximum-Eigenschaft des Begrenzungsrahmens an. *"xmax"* ist eine **"float"**, hat keinen Standardwert.  
   
- [  **@ymax =** ] **"***Ymax***"**  
- Dies ist die Y-Maximum-Eigenschaft des Begrenzungsrahmens. *Ymax* ist eine **"float"**, hat keinen Standardwert.  
+`[ @ymax = ] 'ymax'` Ist die Y-Maximum-Eigenschaft des Begrenzungsrahmens an. *Ymax* ist eine **"float"**, hat keinen Standardwert.  
   
- [  **@sample =** ] **"***Beispiel***"**  
- Ist der verwendete Prozentsatz der Tabelle. Gültige Werte liegen zwischen 0 und 100. *Beispiel* ist eine **"float"**. Standardwert ist 100.  
+`[ @sample = ] 'sample'` Ist der Prozentsatz der Tabelle, die verwendet wird. Gültige Werte liegen zwischen 0 und 100. *Beispiel* ist eine **"float"**. Standardwert ist 100.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein Tabellenwert wird zurückgegeben. In der folgenden Tabelle wird der Spalteninhalt der Tabelle beschrieben.  
@@ -77,7 +69,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|Stellt die eindeutige ID jeder Zelle dar, beginnend mit 1.|  
-|**Zelle**|**Geometrie**|Ist ein rechteckiges Polygon, das die einzelnen Zellen darstellt. Die Zellenform ist mit der für die räumliche Indizierung verwendeten Zellenform identisch.|  
+|**cell**|**Geometrie**|Ist ein rechteckiges Polygon, das die einzelnen Zellen darstellt. Die Zellenform ist mit der für die räumliche Indizierung verwendeten Zellenform identisch.|  
 |**row_count**|**bigint**|Gibt die Anzahl räumlicher Objekte an, die die Zelle berühren oder enthalten.|  
   
 ## <a name="permissions"></a>Berechtigungen  

@@ -18,12 +18,12 @@ ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ec03794e60027ea578988dbe38855d8ad14cb09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c856e11b55040bf699eace2fb1f917f058c2fc9a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596798"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536372"
 ---
 # <a name="sphelpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@devname =** ] **'***name***'**  
- Der Name des Sicherungsmediums, für das Informationen gemeldet werden. Der Wert von *name* ist immer **sysname**.  
+`[ @devname = ] 'name'` Ist der Name des Sicherungsmediums, für die Informationen ausgegeben werden. Der Wert von *name* ist immer **sysname**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -69,7 +68,7 @@ sp_helpdevice [ [ @devname = ] 'name' ]
  Erfordert die Mitgliedschaft in der **public** -Rolle.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgende Beispiel werden Informationen zu allen Sicherungsmedien in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Im folgenden Beispiel werden Informationen zu allen Sicherungsmedien in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gemeldet.  
   
 ```  
 EXEC sp_helpdevice;  

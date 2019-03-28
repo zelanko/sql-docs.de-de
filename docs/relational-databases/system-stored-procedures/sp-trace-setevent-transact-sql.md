@@ -18,12 +18,12 @@ ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cae733bf78928ccd83550adc8a4b525f6a996189
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: 54f36b46f75bf943ecf08aafd93a6b861c2da90a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266101"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538582"
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +46,9 @@ sp_trace_setevent [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@traceid=** ] *Trace_id*  
- Die ID der zu ändernden Ablaufverfolgung. *Trace_id* ist **Int**, hat keinen Standardwert. Der Benutzer verwendet diesen *Trace_id* Wert zu identifizieren, ändern und Steuern der Ablaufverfolgung.  
+`[ @traceid = ] trace_id` Ist die ID der Ablaufverfolgung, die geändert werden. *Trace_id* ist **Int**, hat keinen Standardwert. Der Benutzer verwendet diesen *Trace_id* Wert zu identifizieren, ändern und Steuern der Ablaufverfolgung.  
   
- [ **@eventid=** ] *event_id*  
- Die ID des Ereignisses, das aktiviert werden soll. *event_id* ist vom Datentyp **int**und hat keinen Standardwert.  
+`[ @eventid = ] event_id` Ist die ID des Ereignisses zu aktivieren. *event_id* ist vom Datentyp **int**und hat keinen Standardwert.  
   
  Die folgende Tabelle führt die Ereignisse auf, die zu einer Ablaufverfolgung hinzugefügt bzw. aus ihr entfernt werden können.  
   
@@ -216,8 +214,8 @@ sp_trace_setevent [ @traceid = ] trace_id
 |186|TM: Commit Tran abgeschlossen|Tritt auf, wenn eine COMMIT TRANSACTION-Anforderung abgeschlossen wird.|  
 |187|TM: Rollback Tran starting-|Tritt auf, wenn eine ROLLBACK TRANSACTION-Anforderung gestartet wird.|  
 |188|TM: Rollback Tran abgeschlossen|Tritt auf, wenn eine ROLLBACK TRANSACTION-Anforderung abgeschlossen wird.|  
-|189|Lock:Timeout (timeout > 0)|Tritt auf bei einer Zeitüberschreitung für eine Anforderung einer Sperre auf eine Ressource, wie z. B. eine Seite.|  
-|190|Progress Report: Online-Indexvorgang|Meldet den Fortschritt einer Onlineindexerstellung, während der Erstellungsprozess ausgeführt wird.|  
+|189|Lock: Timeout (Timeout > 0)|Tritt auf bei einer Zeitüberschreitung für eine Anforderung einer Sperre auf eine Ressource, wie z. B. eine Seite.|  
+|190|Statusbericht: Online-Indexvorgang|Meldet den Fortschritt einer Onlineindexerstellung, während der Erstellungsprozess ausgeführt wird.|  
 |191|TM: Save Tran Beginn|Tritt auf, wenn eine SAVE TRANSACTION-Anforderung gestartet wird.|  
 |192|TM: Save Tran abgeschlossen|Tritt auf, wenn eine SAVE TRANSACTION-Anforderung abgeschlossen wird.|  
 |193|Background Job Error|Tritt auf, wenn ein Hintergrundauftrag fehlerbedingt beendet wurde.|  
@@ -239,8 +237,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |218|Plan Guide Unsuccessful|Zeigt an, dass SQL Server keinen Ausführungsplan für eine Abfrage oder einen Batch mit einer Planhinweisliste erzeugen konnte. SQL Server hat versucht, einen Ausführungsplan für diese Abfrage oder den Batch zu generieren, ohne die Planhinweisliste anzuwenden. Eine ungültige Planhinweisliste ist möglicherweise die Ursache dieses Problems. Die neue Systemfunktion "sys.fn_validate_plan_guide" kann zur Überprüfung einer Planhinweisliste verwendet werden.|  
 |235|Audit Fulltext||  
   
- [  **@columnid=** ] *Column_id*  
- Die ID der Spalte, die für das Ereignis hinzugefügt werden soll. *Column_id* ist **Int**, hat keinen Standardwert.  
+`[ @columnid = ] column_id` Ist die ID der Spalte für das Ereignis hinzugefügt werden. *Column_id* ist **Int**, hat keinen Standardwert.  
   
  In der folgenden Tabelle sind die Spalten aufgeführt, die für ein Ereignis hinzugefügt werden können.  
   
@@ -311,7 +308,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |63|**SqlHandle**|64-Bit-Hash, der auf dem Text einer Ad-hoc-Abfrage oder der Datenbank- und Objekt-ID eines SQL-Objekts basiert. Dieser Wert kann an **sys.dm_exec_sql_text()** übergeben werden, um den dazugehörigen SQL-Text abzurufen.|  
 |64|**SessionLoginName**|Anmeldename des Benutzers, der die Sitzung geöffnet hat. Wenn Sie beispielsweise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **verwenden, um eine Verbindung mit** herzustellen, und eine Anweisung als **Login2**ausführen, zeigt **SessionLoginName** den Wert **Login1**an und **LoginName** den Wert **Login2**. In dieser Datenspalte werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - und Windows-Anmeldenamen angezeigt.|  
   
- **[ @on=]** *auf*  
+ **[ @on=]** *on*  
  Gibt an, ob das Ereignis auf ON (1) oder OFF (0) festgelegt werden soll. *auf* ist **Bit**, hat keinen Standardwert.  
   
  Wenn *auf* nastaven NA hodnotu **1**, und *Column_id* NULL ist, und klicken Sie dann das Ereignis auf ON festgelegt ist und alle Spalten werden gelöscht. Wenn *Column_id* nicht null ist, und klicken Sie dann die Spalte für dieses Ereignis auf ON festgelegt ist.  

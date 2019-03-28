@@ -18,12 +18,12 @@ ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 436b4d5b9a4c0a539ccc4ff9ac7e62572883dfad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c296c668bf553569becb9b4cf2e30001021d47c1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758618"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535752"
 ---
 # <a name="sptracesetfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,31 +47,26 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@traceid=** ] *Trace_id*  
- Die ID der Ablaufverfolgung, auf die der Filter festgelegt wird. *Trace_id* ist **Int**, hat keinen Standardwert. Der Benutzer verwendet diesen *Trace_id* Wert zu identifizieren, ändern und Steuern der Ablaufverfolgung.  
+`[ @traceid = ] trace_id` Ist die ID der Ablaufverfolgung auf die der Filter festgelegt wird. *Trace_id* ist **Int**, hat keinen Standardwert. Der Benutzer verwendet diesen *Trace_id* Wert zu identifizieren, ändern und Steuern der Ablaufverfolgung.  
   
- [  **@columnid=** ] *Column_id*  
- Die ID der Spalte, auf die der Filter angewendet wird. *Column_id* ist **Int**, hat keinen Standardwert. Wenn *Column_id* NULL ist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] löscht alle Filter für die angegebene Ablaufverfolgung.  
+`[ @columnid = ] column_id` Ist die ID der Spalte auf der der Filter angewendet wird. *Column_id* ist **Int**, hat keinen Standardwert. Wenn *Column_id* NULL ist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] löscht alle Filter für die angegebene Ablaufverfolgung.  
   
- [ **@logical_operator** =] *Logical_operator*  
- Gibt an, ob das AND (**0**) oder OR (**1**) Operator angewendet wird. *Logical_operator* ist **Int**, hat keinen Standardwert.  
+`[ @logical_operator = ] logical_operator` Gibt an, ob das AND (**0**) oder OR (**1**) Operator angewendet wird. *Logical_operator* ist **Int**, hat keinen Standardwert.  
   
- [ **@comparison_operator=** ] *comparison_operator*  
- Gibt den Typ des vorzunehmenden Vergleichs an. *Comparison_operator* ist **Int**, hat keinen Standardwert. Die folgende Tabelle enthält die Vergleichsoperatoren und die sie darstellenden Werte.  
+`[ @comparison_operator = ] comparison_operator` Gibt den Typ des vorzunehmenden Vergleichs an. *Comparison_operator* ist **Int**, hat keinen Standardwert. Die folgende Tabelle enthält die Vergleichsoperatoren und die sie darstellenden Werte.  
   
-|value|Vergleichsoperator|  
+|Wert|Vergleichsoperator|  
 |-----------|-------------------------|  
 |**0**|= (Gleich)|  
-|**1**|<> (ungleich)|  
-|**2**|> (größer als)|  
-|**3**|< (kleiner als)|  
-|**4**|>= (größer oder gleich)|  
+|**1**|<> (Nicht gleich)|  
+|**2**|> (Größer als)|  
+|**3**|< (Kleiner als)|  
+|**4**|> = (größer als oder gleich)|  
 |**5**|< = (kleiner als oder gleich)|  
 |**6**|LIKE|  
 |**7**|Nicht wie|  
   
- [  **@value=** ] *Wert*  
- Gibt den Wert an, nach dem gefiltert werden soll. Der Datentyp des *Wert* muss den Datentyp der zu filternden Spalte entsprechen. Wenn der Filter für eine Objekt-ID-Spalte festgelegt ist, ist beispielsweise ein **Int** -Datentyp, *Wert* muss **Int**. Wenn *Wert* ist **Nvarchar** oder **Varbinary**, kann es eine maximale Länge von 8000 aufweisen.  
+`[ @value = ] value` Gibt den Wert nach dem gefiltert. Der Datentyp des *Wert* muss den Datentyp der zu filternden Spalte entsprechen. Wenn der Filter für eine Objekt-ID-Spalte festgelegt ist, ist beispielsweise ein **Int** -Datentyp, *Wert* muss **Int**. Wenn *Wert* ist **Nvarchar** oder **Varbinary**, kann es eine maximale Länge von 8000 aufweisen.  
   
  Wenn der Vergleichsoperator LIKE oder NOT LIKE ist, kann der logische Operator % oder einen anderen für die LIKE-Operation geeigneten Filter enthalten.  
   

@@ -16,12 +16,12 @@ ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a0e823731ff80c714bc31a54210dbcd0e0fea18
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d6f2760d225848503d93ea361a54a0069ce16c14
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205209"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532972"
 ---
 # <a name="sphelppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publication =** ] **'***publication***'**  
- Entspricht dem Namen der anzuzeigenden Veröffentlichung. *Veröffentlichung* ist vom Datentyp Sysname und hat den Standardwert **%**, womit Informationen zu allen Veröffentlichungen zurückgegeben.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung, die angezeigt werden. *Veröffentlichung* ist vom Datentyp Sysname und hat den Standardwert **%**, womit Informationen zu allen Veröffentlichungen zurückgegeben.  
   
- [  **@found =** ] **"***gefunden***"** Ausgabe  
- Ein Flag zur Angabe zurückgegebener Zeilen. *finden Sie*ist **Int** und ein OUTPUT-Parameter hat den Standardwert **23456**. **1** gibt an, die Veröffentlichung gefunden wurde. **0** gibt an, die Veröffentlichung wurde nicht gefunden.  
+`[ @found = ] 'found' OUTPUT` Ist ein Flag zur Angabe zurückgegebener Zeilen. *finden Sie*ist **Int** und ein OUTPUT-Parameter hat den Standardwert **23456**. **1** gibt an, die Veröffentlichung gefunden wurde. **0** gibt an, die Veröffentlichung wurde nicht gefunden.  
   
- [ **@publisher** = ] **'***publisher***'**  
- Gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist vom Datentyp Sysname und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist vom Datentyp Sysname und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  *Publisher* sollte nicht angegeben werden, beim Anfordern von Veröffentlichungsinformationen von einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger.  
@@ -73,7 +70,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |immediate_sync_ready|**bit**|Gibt an, ob der Momentaufnahme-Agent eine Momentaufnahme generiert, der zum Verwenden durch neue Abonnements bereitsteht. Dieser Parameter wird nur definiert, wenn die Veröffentlichung so festgelegt ist, dass sie immer eine Momentaufnahme für neue oder neu initialisierte Abonnements zur Verfügung hat.|  
 |allow_sync_tran|**bit**|Gibt an, ob sofort aktualisierbare Abonnements für die Veröffentlichung zulässig sind.|  
 |autogen_sync_procs|**bit**|Gibt an, ob gespeicherte Prozeduren automatisch generiert werden sollen, um sofort aktualisierbare Abonnements zu unterstützen.|  
-|snapshot_jobid|**'binary(16)'**|ID für geplanten Task.|  
+|snapshot_jobid|**binary(16)**|ID für geplanten Task.|  
 |retention|**int**|Der Änderungsumfang (in Stunden), der für die angegebene Veröffentlichung eingespart werden soll.|  
 |has subscription|**bit**|Gibt an, ob die Veröffentlichung über aktive Abonnements verfügt. **1** bedeutet, dass die Veröffentlichung über aktive Abonnements verfügt und **0** bedeutet, dass die Veröffentlichung keine Abonnements vorhanden sind.|  
 |allow_queued_tran|**bit**|Gibt an, ob das Hinzufügen von Änderungen beim Abonnenten zu Warteschlangen, bis diese beim Verleger zugeordnet werden können, aktiviert wurde. Wenn **0**, Änderungen am Abonnenten werden nicht in die Warteschlange eingereiht.|  
@@ -125,7 +122,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
  [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [Sp_droppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
+ [sp_droppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

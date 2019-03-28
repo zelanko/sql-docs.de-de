@@ -16,12 +16,12 @@ ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 128efbfb754508cf3ad395c89b2085f7f8b6297e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b7f1bfc868b34ac16e1c38aedc9193002d35d5b8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783033"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532730"
 ---
 # <a name="splookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,17 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@article_resolver =** ] **"***Article_resolver***"**  
- Gibt den Namen der benutzerdefinierten Geschäftslogik an, deren Registrierung aufgehoben wird. *Article_resolver* ist **nvarchar(255)**, hat keinen Standardwert. Wenn die Geschäftslogik, die entfernt wird, eine COM-Komponente ist, ist dieser Parameter der angezeigte Name der Komponente. Wenn die Geschäftslogik eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework-Assembly ist, ist dieser Parameter der Name der Assembly.  
+`[ @article_resolver = ] 'article_resolver'` Gibt den Namen der benutzerdefinierten Geschäftslogik an, deren Registrierung aufgehoben. *Article_resolver* ist **nvarchar(255)**, hat keinen Standardwert. Wenn die Geschäftslogik, die entfernt wird, eine COM-Komponente ist, ist dieser Parameter der angezeigte Name der Komponente. Wenn die Geschäftslogik eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework-Assembly ist, ist dieser Parameter der Name der Assembly.  
   
- [ **@resolver_clsid**=] **"***Resolver_clsid***"** Ausgabe  
- Ist der CLSID-Wert, der das COM-Objekt, das durch den Namen der benutzerdefinierten Geschäftslogik im Zusammenhang der *Article_resolver* Parameter. *Resolver_clsid* ist **nvarchar(50)**, hat den Standardwert NULL.  
+`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT` Ist der CLSID-Wert, der das COM-Objekt, das durch den Namen der benutzerdefinierten Geschäftslogik im Zusammenhang der *Article_resolver* Parameter. *Resolver_clsid* ist **nvarchar(50)**, hat den Standardwert NULL.  
   
- [  **@is_dotnet_assembly=** ] **"***Is_dotnet_assembly***"** Ausgabe  
- Gibt den Typ der benutzerdefinierten Geschäftslogik an, die registriert wird. *Is_dotnet_assembly* ist **Bit**, hat den Standardwert 0. **1** gibt an, dass die benutzerdefinierte Geschäftslogik registriert eine Geschäftslogikhandler-Assembly **0** gibt an, dass es sich um eine COM-Komponente ist.  
+`[ @is_dotnet_assembly = ] 'is_dotnet_assembly' OUTPUT` Gibt den Typ der benutzerdefinierten Geschäftslogik, der registriert wird. *Is_dotnet_assembly* ist **Bit**, hat den Standardwert 0. **1** gibt an, dass die benutzerdefinierte Geschäftslogik registriert eine Geschäftslogikhandler-Assembly **0** gibt an, dass es sich um eine COM-Komponente ist.  
   
- [  **@dotnet_assembly_name=** ] **"***Dotnet_assembly_name***"** Ausgabe  
- Der Name der Assembly, die den Geschäftslogikhandler implementiert. *Dotnet_assembly_name* ist **nvarchar(255)**, hat den Standardwert NULL.  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT` Ist der Name der Assembly, die den Geschäftslogikhandler implementiert. *Dotnet_assembly_name* ist **nvarchar(255)**, hat den Standardwert NULL.  
   
- [  **@dotnet_class_name=** ] **"***Dotnet_class_name***"** Ausgabe  
- Der Name der Klasse, die <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> überschreibt, um den Geschäftslogikhandler zu implementieren *Dotnet_class_name* ist **nvarchar(255)**, hat den Standardwert NULL.  
+`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT` Der Name der Klasse, die überschreibt <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> den Geschäftslogikhandler implementiert. *Dotnet_class_name* ist **nvarchar(255)**, hat den Standardwert NULL.  
   
- [  **@publisher=** ] **"***Verleger***"**  
- Der Name des Verlegers. *Publisher* ist **Sysname**, hat den Standardwert NULL. Verwenden Sie diesen Parameter, wenn die gespeicherte Prozedur nicht vom Verleger aufgerufen wird. Wenn keine Angabe erfolgt, wird davon ausgegangen, dass der lokale Server der Verleger ist.  
+`[ @publisher = ] 'publisher'` Ist der Name des Verlegers. *Publisher* ist **Sysname**, hat den Standardwert NULL. Verwenden Sie diesen Parameter, wenn die gespeicherte Prozedur nicht vom Verleger aufgerufen wird. Wenn keine Angabe erfolgt, wird davon ausgegangen, dass der lokale Server der Verleger ist.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -79,8 +73,8 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
  [Ausführen der Geschäftslogik während der Mergesynchronisierung](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)   
  [Implementieren eines Geschäftslogikhandlers für einen Mergeartikel](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [Angeben eines Mergeartikelkonfliktlösers](../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)   
- [Sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)   
- [Sp_unregistercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
+ [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)   
+ [sp_unregistercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -17,12 +17,12 @@ ms.assetid: cd6674a2-ca55-4b5a-a971-878ba001821e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cbfe09a2d8110a98885686e078146cfccc305c51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dfee2d0f32ffaaf73527effdeea13d43b83a39fb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051526"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537287"
 ---
 # <a name="view-the-contents-of-a-backup-tape-or-file-sql-server"></a>Anzeigen der Inhalte eines Sicherungsbands oder einer -datei (SQL Server)
   In diesem Thema wird beschrieben, wie Sie den Inhalt eines Sicherungsbands oder einer -datei in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]anzeigen können.  
@@ -42,7 +42,7 @@ ms.locfileid: "48051526"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Security"></a> Sicherheit  
  Weitere Informationen zur Sicherheit finden Sie unter [RESTORE HEADERONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-headeronly-transact-sql).  
@@ -78,7 +78,7 @@ ms.locfileid: "48051526"
   
 3.  Verwenden Sie die [RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)-Anweisung. In diesem Beispiel werden Informationen über die Datei `AdventureWorks2012-FullBackup.bak`zurückgegeben:  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 RESTORE HEADERONLY   
 FROM DISK = N'C:\AdventureWorks2012-FullBackup.bak' ;  

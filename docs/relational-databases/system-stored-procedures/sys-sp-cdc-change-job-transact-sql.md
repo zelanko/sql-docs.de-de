@@ -20,12 +20,12 @@ ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cfbf93fc858f52cd35401bd80fe5ede7dee86a3d
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 644873dd367705b02c3d14fcc7d95e0c9c81736e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591744"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536102"
 ---
 # <a name="sysspcdcchangejob-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,21 +48,17 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@job_type=** ] **"**_Job_type_**"**  
- Der Typ des zu ändernden Auftrags. *Der Standardwert ist* ist **nvarchar(20)** hat den Standardwert 'Capture'. Gültige Eingaben sind 'capture' und 'cleanup'.  
+`[ @job_type = ] 'job_type'` Der Typ des zu ändernden Auftrags. *Der Standardwert ist* ist **nvarchar(20)** hat den Standardwert 'Capture'. Gültige Eingaben sind 'capture' und 'cleanup'.  
   
- [ **@maxtrans** ] **=** _Max_trans_  
- Maximale Anzahl der in jedem Scanzyklus zu verarbeitenden Transaktionen. *Max_trans* ist **Int** hat den Standardwert NULL, womit für diesen Parameter keine Änderung vorliegt. Wenn dieser Wert angegeben ist, muss er eine positive ganze Zahl annehmen.  
+`[ @maxtrans ] = max_trans_` Maximale Anzahl der in jedem Scanzyklus zu verarbeitenden Transaktionen. *Max_trans* ist **Int** hat den Standardwert NULL, womit für diesen Parameter keine Änderung vorliegt. Wenn dieser Wert angegeben ist, muss er eine positive ganze Zahl annehmen.  
   
  *Max_trans* ist nur für aufzeichnungsaufträge gültig.  
   
- [ **@maxscans** ] **=** _Max_scans_  
- Maximale Anzahl der Scanzyklen, die ausgeführt werden sollen, um alle Zeilen aus dem Protokoll zu extrahieren. *Max_scans* ist **Int** hat den Standardwert NULL, womit für diesen Parameter keine Änderung vorliegt.  
+`[ @maxscans ] = max_scans_` Maximale Anzahl der scanzyklen, ausführen, um alle Zeilen aus dem Protokoll zu extrahieren. *Max_scans* ist **Int** hat den Standardwert NULL, womit für diesen Parameter keine Änderung vorliegt.  
   
  *Max_scan* ist nur für aufzeichnungsaufträge gültig.  
   
- [ **@continuous** ] **=** _continuous_  
- Gibt an, ob der Aufzeichnungsauftrag kontinuierlich (1) oder nur einmal (0) ausgeführt wird. *fortlaufende* ist **Bit** hat den Standardwert NULL, womit für diesen Parameter keine Änderung vorliegt.  
+`[ @continuous ] = continuous_` Gibt an, ob der aufzeichnungsauftrag fortlaufend (1), oder nur einmalig (0). *fortlaufende* ist **Bit** hat den Standardwert NULL, womit für diesen Parameter keine Änderung vorliegt.  
   
  Wenn *fortlaufende* = 1, die [Sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) Auftrag überprüft das Protokoll und verarbeitet bis zu (*Max_trans* \* *Max_scans*) Transaktionen. Er wartet dann die Anzahl der Sekunden, die im angegebenen *Polling_interval* vor Beginn des nächsten protokollscans.  
   
@@ -74,18 +70,15 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  *fortlaufende* ist nur für aufzeichnungsaufträge gültig.  
   
- [ **@pollinginterval** ] **=** _Polling_interval_  
- Anzahl von Sekunden zwischen den Scan des Replikationsprotokolls Prozessorzyklen. *Polling_interval* ist **Bigint** hat den Standardwert NULL, womit für diesen Parameter keine Änderung vorliegt.  
+`[ @pollinginterval ] = polling_interval_` Anzahl von Sekunden zwischen den Scan des Replikationsprotokolls Prozessorzyklen. *Polling_interval* ist **Bigint** hat den Standardwert NULL, womit für diesen Parameter keine Änderung vorliegt.  
   
  *Polling_interval* ist nur für aufzeichnungsaufträge gültig Aufträgen, wenn *fortlaufende* auf 1 festgelegt ist.  
   
- [ **@retention** ] **=** _Aufbewahrung_  
- Die Anzahl von Minuten, für die Änderungszeilen in Änderungstabellen beibehalten werden sollen. *Aufbewahrung* ist **Bigint** hat den Standardwert NULL, womit für diesen Parameter keine Änderung vorliegt. Der Maximalwert beträgt 52494800 (100 Jahre). Wenn dieser Wert angegeben ist, muss er eine positive ganze Zahl annehmen.  
+`[ @retention ] = retention_` Anzahl der Minuten, die änderungszeilen sind in Änderungstabellen beibehalten werden sollen. *Aufbewahrung* ist **Bigint** hat den Standardwert NULL, womit für diesen Parameter keine Änderung vorliegt. Der Maximalwert beträgt 52494800 (100 Jahre). Wenn dieser Wert angegeben ist, muss er eine positive ganze Zahl annehmen.  
   
  *Aufbewahrung* ist nur für cleanupaufträge gültig.  
   
- [  **@threshold=** ] **"**_Löschgrenzwert_**"**  
- Maximale Anzahl von Einträgen für Löschvorgänge, die mit einer einzelnen Anweisung beim Cleanup gelöscht werden können. *Löschgrenzwert* ist **Bigint** hat den Standardwert NULL, womit für diesen Parameter keine Änderung vorliegt. *Löschgrenzwert* ist nur für cleanupaufträge gültig.  
+`[ @threshold = ] 'delete threshold'` Maximale Anzahl von Einträgen für Löschvorgänge, die mit einer einzelnen Anweisung beim Cleanup gelöscht werden können. *Löschgrenzwert* ist **Bigint** hat den Standardwert NULL, womit für diesen Parameter keine Änderung vorliegt. *Löschgrenzwert* ist nur für cleanupaufträge gültig.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -131,7 +124,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [dbo.cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
  [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [sys.sp_cdc_add_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   

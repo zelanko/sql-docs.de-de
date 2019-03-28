@@ -1,5 +1,5 @@
 ---
-title: Sp_update_job (Transact-SQL) | Microsoft-Dokumentation
+title: sp_update_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5fd6986a245d960a96592c8c63c9744b741fa5ff
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: c12e078505c8049511e59973c26d6a1417c7eae0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119687"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537852"
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,65 +57,48 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@job_id =**] *job_id*  
- Die ID des Auftrags, der aktualisiert werden soll. *Job_id*ist **Uniqueidentifier**.  
+`[ @job_id = ] job_id` Die ID des Auftrags, der aktualisiert werden. *Job_id*ist **Uniqueidentifier**.  
   
- [ **@job_name =**] **'***job_name***'**  
- Der Name des Auftrags. *Job_name* ist **vom Datentyp nvarchar(128)**.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags. *Job_name* ist **vom Datentyp nvarchar(128)**.  
   
-> **Hinweis:** entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
+> **HINWEIS:** Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
- [ **@new_name =**] **'***new_name***'**  
- Der neue Name des Auftrags. *New_name* ist **vom Datentyp nvarchar(128)**.  
+`[ @new_name = ] 'new_name'` Der neue Name für den Auftrag. *New_name* ist **vom Datentyp nvarchar(128)**.  
   
- [ **@enabled =**] *enabled*  
- Gibt an, ob der Auftrag aktiviert ist (**1**) oder nicht aktiviert ist (**0**). *aktiviert* ist **Tinyint**.  
+`[ @enabled = ] enabled` Gibt an, ob der Auftrag aktiviert ist (**1**) oder nicht aktiviert ist (**0**). *aktiviert* ist **Tinyint**.  
   
- [ **@description =**] **'***description***'**  
- Die Beschreibung des Auftrags. *Beschreibung* ist **nvarchar(512)**.  
+`[ @description = ] 'description'` Die Beschreibung des Auftrags. *Beschreibung* ist **nvarchar(512)**.  
   
- [ **@start_step_id =**] *step_id*  
- Die ID des ersten Schritts zum Ausführen des Auftrags. *Step_id* ist **Int**.  
+`[ @start_step_id = ] step_id` Die ID des ersten Schritts zum Ausführen des Auftrags. *Step_id* ist **Int**.  
   
- [ **@category_name =**] **'***category***'**  
- Die Auftragskategorie. *Kategorie* ist **vom Datentyp nvarchar(128)**.  
+`[ @category_name = ] 'category'` Die Kategorie des Auftrags. *Kategorie* ist **vom Datentyp nvarchar(128)**.  
   
- [ **@owner_login_name =**] **'***login***'**  
- Der Name der Anmeldung, die im Besitz des Auftrags ist. *Anmeldung* ist **vom Datentyp nvarchar(128)** nur Mitglieder der der **Sysadmin** Serverrolle kann den Auftragsbesitz ändern.  
+`[ @owner_login_name = ] 'login'` Der Name der Anmeldung, die den Auftrag besitzt. *Anmeldung* ist **vom Datentyp nvarchar(128)** nur Mitglieder der der **Sysadmin** Serverrolle kann den Auftragsbesitz ändern.  
   
- [ **@notify_level_eventlog =**] *eventlog_level*  
- Gibt an, wann für diesen Auftrag ein Eintrag im Microsoft Windows-Anwendungsprotokoll eingefügt werden soll. *ist NULL*ist **Int**, und kann einen der folgenden Werte sein.  
+`[ @notify_level_eventlog = ] eventlog_level` Gibt an, wann einen Eintrag im Microsoft Windows-Anwendungsprotokoll für diesen Auftrag erfolgen. *ist NULL*ist **Int**, und kann einen der folgenden Werte sein.  
   
-|value|Beschreibung (Aktion)|  
+|Wert|Beschreibung (Aktion)|  
 |-----------|----------------------------|  
 |**0**|Never|  
 |**1**|Bei Erfolg|  
 |**2**|Bei einem Fehler|  
 |**3**|Always|  
   
- [ **@notify_level_email =**] *email_level*  
- Gibt an, wann nach dem Abschluss dieses Auftrags eine E-Mail gesendet werden soll. *Email_level*ist **Int**. *Email_level*verwendet die gleichen Werte wie *ist NULL*.  
+`[ @notify_level_email = ] email_level` Gibt an, wann nach Abschluss dieses Auftrags eine E-mail gesendet. *Email_level*ist **Int**. *Email_level*verwendet die gleichen Werte wie *ist NULL*.  
   
- [ **@notify_level_netsend =**] *netsend_level*  
- Gibt an, wann nach dem Abschluss dieses Auftrags eine Netzwerkmeldung gesendet werden soll. *Netsend_level*ist **Int**. *Netsend_level*verwendet die gleichen Werte wie *ist NULL*.  
+`[ @notify_level_netsend = ] netsend_level` Gibt an, wann eine Netzwerknachricht nach dem Abschluss des Auftrags gesendet. *Netsend_level*ist **Int**. *Netsend_level*verwendet die gleichen Werte wie *ist NULL*.  
   
- [ **@notify_level_page =**] *page_level*  
- Gibt an, wann nach dem Abschluss dieses Auftrags eine Seite gesendet werden soll. *Page_level* ist **Int**. *Page_level*verwendet die gleichen Werte wie *ist NULL*.  
+`[ @notify_level_page = ] page_level` Gibt an, wann eine Seite nach dem Abschluss des Auftrags gesendet. *Page_level* ist **Int**. *Page_level*verwendet die gleichen Werte wie *ist NULL*.  
   
- [  **@notify_email_operator_name =**] **"***Operatorname***"**  
- Der Name des Operators, an die e-Mail-Nachricht, wenn gesendet wird *Email_level* erreicht ist. *e-Mail-Name* ist **vom Datentyp nvarchar(128)**.  
+`[ @notify_email_operator_name = ] 'operator_name'` Der Name des Operators, an die e-Mail-Nachricht, wenn gesendet wird *Email_level* erreicht ist. *e-Mail-Name* ist **vom Datentyp nvarchar(128)**.  
   
- [ **@notify_netsend_operator_name =**] **'***netsend_operator***'**  
- Der Name des Operators, an den die Netzwerknachricht gesendet wird. *Netsend_operator* ist **vom Datentyp nvarchar(128)**.  
+`[ @notify_netsend_operator_name = ] 'netsend_operator'` Der Name des Operators, an den die Netzwerknachricht gesendet wird. *Netsend_operator* ist **vom Datentyp nvarchar(128)**.  
   
- [ **@notify_page_operator_name =**] **'***page_operator***'**  
- Der Name des Operators, an den eine Seite gesendet wird. *Page_operator* ist **vom Datentyp nvarchar(128)**.  
+`[ @notify_page_operator_name = ] 'page_operator'` Der Name des Operators, an eine Seite gesendet wird. *Page_operator* ist **vom Datentyp nvarchar(128)**.  
   
- [ **@delete_level =**] *delete_level*  
- Gibt an, wann der Auftrag gelöscht werden soll. *delete_level*ist **Int**. *Auftrag nie gelöscht*verwendet die gleichen Werte wie *ist NULL*.  
+`[ @delete_level = ] delete_level` Gibt an, wann den Auftrag gelöscht. *delete_level*ist **Int**. *Auftrag nie gelöscht*verwendet die gleichen Werte wie *ist NULL*.  
   
- [ **@automatic_post =**] *automatic_post*  
- Reserviert.  
+`[ @automatic_post = ] automatic_post` Reserviert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

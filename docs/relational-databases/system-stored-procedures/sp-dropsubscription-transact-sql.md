@@ -16,12 +16,12 @@ ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 08e25ee6f2de589c3d7367c140bd0ea63d4cec1e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 30640cac3b2d8d39ec06d5a05f49c38665b39683
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812968"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537142"
 ---
 # <a name="spdropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,17 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication=** ] **"**_Veröffentlichung_**"**  
- Der Name der zugeordneten Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert NULL. Wenn **alle**, alle Abonnements für alle Veröffentlichungen für den angegebenen Abonnenten gelöscht. *Veröffentlichung* ist ein erforderlicher Parameter.  
+`[ @publication = ] 'publication'` Ist der Name der zugeordneten Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert NULL. Wenn **alle**, alle Abonnements für alle Veröffentlichungen für den angegebenen Abonnenten gelöscht. *Veröffentlichung* ist ein erforderlicher Parameter.  
   
- [  **@article=** ] **"**_Artikel_**"**  
- Der Name des Artikels. *Artikel* ist **Sysname**, hat den Standardwert NULL. Wenn **alle**, Abonnements aller Artikel für die einzelnen angegebenen Veröffentlichungen und Abonnenten werden gelöscht. Verwendung **alle** für Veröffentlichungen, die ermöglichen, sofort zu aktualisieren.  
+`[ @article = ] 'article'` Ist der Name des Artikels. *Artikel* ist **Sysname**, hat den Standardwert NULL. Wenn **alle**, Abonnements aller Artikel für die einzelnen angegebenen Veröffentlichungen und Abonnenten werden gelöscht. Verwendung **alle** für Veröffentlichungen, die ermöglichen, sofort zu aktualisieren.  
   
- [  **@subscriber=** ] **"**_subscribe_r **"**  
- Der Name des Abonnenten, dessen Abonnements gelöscht werden. *Abonnenten* ist **Sysname**, hat keinen Standardwert. Wenn **alle**, alle Abonnements für alle Abonnenten werden gelöscht.  
+`[ @subscriber = ] 'subscribe_r'` Ist der Name des Abonnenten, dessen Abonnements gelöscht werden. *Abonnenten* ist **Sysname**, hat keinen Standardwert. Wenn **alle**, alle Abonnements für alle Abonnenten werden gelöscht.  
   
- [  **@destination_db=** ] **"**_Destination_db_**"**  
- Der Name der Zieldatenbank. *Destination_db* ist **Sysname**, hat den Standardwert NULL. Bei einem Wert von NULL werden alle Abonnements dieses Abonnenten gelöscht.  
+`[ @destination_db = ] 'destination_db'` Ist der Name der Zieldatenbank. *Destination_db* ist **Sysname**, hat den Standardwert NULL. Bei einem Wert von NULL werden alle Abonnements dieses Abonnenten gelöscht.  
   
- [  **@ignore_distributor =** ] *Ignore_distributor*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @ignore_distributor = ] ignore_distributor` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@reserved=** ] **"**_reservierte_**"**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -77,8 +71,8 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
   
 ## <a name="see-also"></a>Siehe auch  
  [Löschen eines Pushabonnements](../../relational-databases/replication/delete-a-push-subscription.md)   
- [Sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_changesubstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
- [Sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
+ [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

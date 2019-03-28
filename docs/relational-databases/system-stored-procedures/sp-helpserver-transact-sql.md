@@ -18,12 +18,12 @@ ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a543aa923d892e12bc3baea0e3aa9d1f9c3e7504
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31caafde6ea3cdd93355910f244ed5872b6990ff
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827678"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534392"
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,28 +42,25 @@ sp_helpserver [ [ @server = ] 'server' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@server =** ] **'***server***'**  
- Der Server, zu dem Informationen ausgegeben werden. Wenn *Server* nicht angegeben ist, Berichte zu allen Servern in **master.sys.servers**. *Server* ist **Sysname**, hat den Standardwert NULL.  
+`[ @server = ] 'server'` Ist der Server, auf welche Informationen ausgegeben werden. Wenn *Server* nicht angegeben ist, Berichte zu allen Servern in **master.sys.servers**. *Server* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@optname =** ] **"***Option***"**  
- Die Option, die den Server beschreibt. *Option* ist **Varchar (** 35 **)**, hat den Standardwert NULL und muss einen der folgenden Werte sein.  
+`[ @optname = ] 'option'` Die Option, die den Server beschreibt. *Option* ist **Varchar (** 35 **)**, hat den Standardwert NULL und muss einen der folgenden Werte sein.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**Sortierung kompatibel**|Betrifft die Ausführung verteilter Abfragen für Verbindungsserver. Wenn diese Option auf "true" festgelegt wird,|  
 |**Datenzugriff**|Aktiviert und deaktiviert den Zugriff auf verteilte Abfragen für Verbindungsserver.|  
 |**dist**|Der Verteiler.|  
 |**dpub**|Der Remoteverleger zu diesem Verteiler.|  
 |**Verzögerte schemaüberprüfung**|Lässt die Schemaüberprüfung von Remotetabellen zu Beginn der Abfrage aus.|  
-|**pub**|Herausgeber.|  
+|**pub**|Publisher.|  
 |**rpc**|Aktiviert RPC (Remote Procedure Call, Remoteprozeduraufruf) von dem angegebenen Server.|  
 |**RPC-Ausgabe**|Aktiviert RPC zu dem angegebenen Server.|  
 |**sub**|Der Abonnent ist.|  
-|**System**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**system**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**Remotesortierung verwenden**|Verwendet die Sortierung einer Remotespalte anstelle der des lokalen Servers.|  
   
- [  **@show_topology =** ] **"***Show_topology***"**  
- Die Beziehung des angegebenen Servers zu anderen Servern. *Show_topology* ist **Varchar (** 1 **)**, hat den Standardwert NULL. Wenn *Show_topology* ist nicht gleich **t** oder ist NULL, **Sp_helpserver** im Abschnitt Resultsets aufgelisteten Spalten zurück. Wenn *Show_topology* gleich **t**, zusätzlich zu den in den Resultsets aufgelisteten Spalten **Sp_helpserver** gibt auch **Topx** und **topy** Informationen.  
+`[ @show_topology = ] 'show_topology'` Ist die Beziehung des angegebenen Servers zu anderen Servern. *Show_topology* ist **Varchar (** 1 **)**, hat den Standardwert NULL. Wenn *Show_topology* ist nicht gleich **t** oder ist NULL, **Sp_helpserver** im Abschnitt Resultsets aufgelisteten Spalten zurück. Wenn *Show_topology* gleich **t**, zusätzlich zu den in den Resultsets aufgelisteten Spalten **Sp_helpserver** gibt auch **Topx** und **topy** Informationen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -73,9 +70,9 @@ sp_helpserver [ [ @server = ] 'server' ]
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Servername.|  
-|**lt; Netzwerkname**|**sysname**|Netzwerkname des Servers.|  
+|**network_name**|**sysname**|Netzwerkname des Servers.|  
 |**status**|**Varchar (** 70 **)**|Status des Servers.|  
-|**id**|**Char (** 4 **)**|ID des Servers.|  
+|**id**|**char(** 4 **)**|ID des Servers.|  
 |**collation_name**|**sysname**|Sortierung des Servers.|  
 |**connect_timeout**|**int**|Der Timeoutwert für die Verbindung mit dem Verbindungsserver.|  
 |**query_timeout**|**int**|Timeoutwert für Abfragen auf einem Verbindungsserver.|  
@@ -108,12 +105,12 @@ EXEC sp_helpserver 'SEATTLE2';
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
- [Sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
- [Sp_changesubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
+ [sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
+ [sp_changesubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
  [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
- [Sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
+ [sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
  [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [sp_helpremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
  [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   

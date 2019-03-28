@@ -16,12 +16,12 @@ ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec8d4086d1733d91692565d4d6ff112b8f264d35
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c791fedcd483024c2bc6d564ce3f774fa2fded77
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773712"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530192"
 ---
 # <a name="spresetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_resetsnapshotdeliveryprogress [ [ @verbose_level = ] verbose_level ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@verbose_level**=] *Verbose_level*  
- Gibt den Umfang der zurückgegebenen Informationen an. *Verbose_level*ist **Int**, hat den Standardwert **1**. Der Wert **1** bedeutet, dass ein Fehler zurückgegeben, wenn auf die erforderlichen Sperren abgerufen werden können die **MSsnapshotdeliveryprogress** Tabelle und **0** bedeutet, die kein Fehler zurückgegeben wird.  
+`[ @verbose_level = ] verbose_level` Gibt die Menge der zurückgegebenen Informationen. *Verbose_level*ist **Int**, hat den Standardwert **1**. Der Wert **1** bedeutet, dass ein Fehler zurückgegeben, wenn auf die erforderlichen Sperren abgerufen werden können die **MSsnapshotdeliveryprogress** Tabelle und **0** bedeutet, die kein Fehler zurückgegeben wird.  
   
- [ **@drop_table**=] **"***Drop_table***"**  
- Ist Sie, ob zu löschen oder Abschneiden der Tabelle, das Informationen über den Status der Momentaufnahme. *Drop_table* ist **nvarchar(5)**, hat den Standardwert **"false"**. Bei false wird die Tabelle abgeschnitten, und bei true wird die Tabelle gelöscht.  
+`[ @drop_table = ] 'drop_table'` Ist Sie, ob zu löschen oder Abschneiden der Tabelle, das Informationen über den Status der Momentaufnahme. *Drop_table* ist **nvarchar(5)**, hat den Standardwert **"false"**. Bei false wird die Tabelle abgeschnitten, und bei true wird die Tabelle gelöscht.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

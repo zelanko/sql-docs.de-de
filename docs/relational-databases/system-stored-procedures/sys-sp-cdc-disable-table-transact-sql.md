@@ -1,5 +1,5 @@
 ---
-title: sp_cdc_disable_table (Transact-SQL) | Microsoft-Dokumentation
+title: sys.sp_cdc_disable_table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b797301b5b778bea34ad1552152e7e3e147dde37
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 0b1c2f30758987c902e5610ef3fa9f8b26809889
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169170"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533742"
 ---
 # <a name="sysspcdcdisabletable-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,18 +47,15 @@ sys.sp_cdc_disable_table
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@source_schema=** ] **"**_Quelle\_Schema_**"**  
- Der Name des Schemas, in dem die Quelltabelle enthalten ist. *Source_schema* ist **Sysname**, hat keinen Standardwert und darf nicht NULL sein.  
+`[ @source_schema = ] 'source\_schema'` Ist der Name des Schemas, in dem die Quelltabelle enthalten ist. *Source_schema* ist **Sysname**, hat keinen Standardwert und darf nicht NULL sein.  
   
  *Source_schema* muss in der aktuellen Datenbank vorhanden sein.  
   
- [  **@source_name=** ] **"**_Quelle\_Namen_**"**  
- Ist der Name der Quelltabelle, von dem Change Data Capture deaktiviert werden sollte. *Source_name* ist **Sysname**, hat keinen Standardwert und darf nicht NULL sein.  
+`[ @source_name = ] 'source\_name'` Ist der Name der Quelltabelle, von dem Change Data Capture ist, deaktiviert werden soll. *Source_name* ist **Sysname**, hat keinen Standardwert und darf nicht NULL sein.  
   
  *Source_name* muss in der aktuellen Datenbank vorhanden sein.  
   
- [  **@capture_instance=** ] **"**_erfassen\_Instanz_**"** | **"** alle **"**  
- Ist der Name der Aufzeichnungsinstanz, der für die angegebene Quelltabelle deaktiviert werden muss. *Capture_instance* ist **Sysname** und darf nicht NULL sein.  
+`[ @capture_instance = ] 'capture\_instance' | 'all'` Ist der Name der Aufzeichnungsinstanz, die für die angegebene Quelltabelle deaktiviert. *Capture_instance* ist **Sysname** und darf nicht NULL sein.  
   
  Wenn 'all' angegeben ist, sind alle aufzeichnungsinstanzen für definierten *Source_name* sind deaktiviert.  
   
@@ -87,6 +84,6 @@ EXECUTE sys.sp_cdc_disable_table
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sys. sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)  
+ [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)  
   
   

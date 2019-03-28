@@ -18,12 +18,12 @@ ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c979104c30ec9b134f2d73acb2d85ecd22490371
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2b1616fdf7b690d61c6a2605cc15da2508a3fb9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854204"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534662"
 ---
 # <a name="sysmailupdateprofilesp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@profile_id** =] *Profile_id*  
- Die zu aktualisierende Profil-ID. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL. Mindestens eine der *Profile_id* oder *Profile_name* muss angegeben werden. Werden beide Werte angegeben, wird der Name des Profils geändert.  
+`[ @profile_id = ] profile_id` Die Profil-Id aktualisieren. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL. Mindestens eine der *Profile_id* oder *Profile_name* muss angegeben werden. Werden beide Werte angegeben, wird der Name des Profils geändert.  
   
- [ **@profile_name** =] **"***Profile_name***"**  
- Der Name des zu aktualisierenden Profils oder der neue Name für das Profil. *profile_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Mindestens eine der *Profile_id* oder *Profile_name* muss angegeben werden. Werden beide Werte angegeben, wird der Name des Profils geändert.  
+`[ @profile_name = ] 'profile_name'` Der Name des zu aktualisierenden Profils oder der neue Name für das Profil. *profile_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Mindestens eine der *Profile_id* oder *Profile_name* muss angegeben werden. Werden beide Werte angegeben, wird der Name des Profils geändert.  
   
- [ **@description** = ] **'***description***'**  
- Die neue Beschreibung für das Profil. *Beschreibung* ist **nvarchar(256)**, hat den Standardwert NULL.  
+`[ @description = ] 'description'` Die neue Beschreibung für das Profil. *Beschreibung* ist **nvarchar(256)**, hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

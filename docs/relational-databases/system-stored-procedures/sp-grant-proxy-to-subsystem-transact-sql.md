@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 883496e1a0f31e69b09c8e4f5eeebdb94e006e68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7eecd8743d24ab783e163ab10abc0441362b37a4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732738"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528132"
 ---
 # <a name="spgrantproxytosubsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,16 +41,13 @@ sp_grant_proxy_to_subsystem
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@proxy_id =** ] *id*  
- Die Proxy-ID des Proxys, dem der Zugriff gewährt werden soll. Die *Proxy_id* ist **Int**, hat den Standardwert NULL. Entweder *Proxy_id* oder *Proxy_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
+`[ @proxy_id = ] id` Die Proxy-ID des Proxys, für den Zugriff zu gewähren. Die *Proxy_id* ist **Int**, hat den Standardwert NULL. Entweder *Proxy_id* oder *Proxy_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
- [  **@proxy_name =** ] **"***Proxy_name***"**  
- Der Name des Proxys, für den der Zugriff erteilt werden soll. Die *Proxy_name* ist **Sysname**, hat den Standardwert NULL. Entweder *Proxy_id* oder *Proxy_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
+`[ @proxy_name = ] 'proxy_name'` Der Name des Proxys, für den Zugriff zu gewähren. Die *Proxy_name* ist **Sysname**, hat den Standardwert NULL. Entweder *Proxy_id* oder *Proxy_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
- [ **@subsystem_id =** ] *id*  
- Die ID des Subsystems, auf das der Zugriff gewährt werden soll. Die *Subsystem_id* ist **Int**, hat den Standardwert NULL. Entweder *Subsystem_id* oder *Subsystem_name* muss angegeben werden, aber beide Angaben sind nicht möglich. In der folgenden Tabelle werden die Werte für jedes Subsystem aufgelistet.  
+`[ @subsystem_id = ] id` Die ID des Subsystems, für den Zugriff zu gewähren. Die *Subsystem_id* ist **Int**, hat den Standardwert NULL. Entweder *Subsystem_id* oder *Subsystem_name* muss angegeben werden, aber beide Angaben sind nicht möglich. In der folgenden Tabelle werden die Werte für jedes Subsystem aufgelistet.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX-Skript<br /><br /> **\*\* Wichtige \* \***  das ActiveX-skriptsubsystem wird aufgehoben, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent in einer zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
 |**3**|Betriebssystem (**CmdExec**)|  
@@ -64,10 +61,9 @@ sp_grant_proxy_to_subsystem
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)]-Paketausführung|  
 |**12**|PowerShell-Skript|  
   
- [  **@subsystem_name =** ] **"***Subsystem_name***"**  
- Der Name des Subsystems, auf das der Zugriff gewährt werden soll. Die **Subsystem_name** ist **Sysname**, hat den Standardwert NULL. Entweder *Subsystem_id* oder *Subsystem_name* muss angegeben werden, aber beide Angaben sind nicht möglich. In der folgenden Tabelle werden die Werte für jedes Subsystem aufgelistet.  
+`[ @subsystem_name = ] 'subsystem_name'` Der Name des Subsystems, für den Zugriff zu gewähren. Die **Subsystem_name** ist **Sysname**, hat den Standardwert NULL. Entweder *Subsystem_id* oder *Subsystem_name* muss angegeben werden, aber beide Angaben sind nicht möglich. In der folgenden Tabelle werden die Werte für jedes Subsystem aufgelistet.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**ActiveScripting**|ActiveX-Skript|  
 |**CmdExec**|Betriebssystem (**CmdExec**)|  

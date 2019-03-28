@@ -18,12 +18,12 @@ ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0bef77291c0a719b9cdc96106d3c173dff652da1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1904b1549613e53c685d784628696e84b134a03
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644678"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534712"
 ---
 # <a name="sppassword-transact-sql"></a>sp_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,17 +45,14 @@ sp_password [ [ @old = ] 'old_password' , ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@old=** ] **"***Old_password***"**  
- Ist das alte Kennwort. *Old_password* ist **Sysname**, hat den Standardwert NULL.  
+`[ @old = ] 'old_password'` Ist das alte Kennwort. *Old_password* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@new=** ] **"***Neues_Kennwort***"**  
- Ist das neue Kennwort. *Neues_Kennwort* ist **Sysname**, hat keinen Standardwert. *Old_password* muss angegeben werden, wenn keine benannten Parameter verwendet werden.  
+`[ @new = ] 'new_password'` Ist das neue Kennwort. *Neues_Kennwort* ist **Sysname**, hat keinen Standardwert. *Old_password* muss angegeben werden, wenn keine benannten Parameter verwendet werden.  
   
 > [!IMPORTANT]  
 >  Verwenden Sie kein NULL-Kennwort. Verwenden Sie ein sicheres Kennwort. Weitere Informationen finden Sie unter [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
   
- [  **@loginame=** ] **"***Anmeldung***"**  
- Der Name der von der Kennwortänderung betroffenen Anmeldung. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL. *Anmeldung* muss bereits vorhanden und kann angegeben werden, nur von einem Mitglied der **Sysadmin** oder **Securityadmin** festen Serverrollen.  
+`[ @loginame = ] 'login'` Ist der Name der von der kennwortänderung betroffenen Anmeldung. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL. *Anmeldung* muss bereits vorhanden und kann angegeben werden, nur von einem Mitglied der **Sysadmin** oder **Securityadmin** festen Serverrollen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

@@ -16,12 +16,12 @@ ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aaeebd1aa2d6fe4ea443c7ed18ac157135ae4d64
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8aa102f134d262eb2342e3774c1960f33f8adffc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747747"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538232"
 ---
 # <a name="sprepldone-transact-sql"></a>sp_repldone (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,20 +45,15 @@ sp_repldone [ @xactid= ] xactid
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@xactid=**] *Xactid*  
- Ist die protokollfolgenummer (LSN) des ersten Datensatzes für die letzte verteilte Transaktion des Servers an. *Xactid* ist **Binary(10)-Wert**, hat keinen Standardwert.  
+`[ @xactid = ] xactid` Ist die protokollfolgenummer (LSN) des ersten Datensatzes für die letzte verteilte Transaktion des Servers an. *Xactid* ist **Binary(10)-Wert**, hat keinen Standardwert.  
   
- [  **@xact_seqno=**] *Xact_seqno*  
- Ist die LSN des letzten Datensatzes für die letzte verteilte Transaktion des Servers an. *Xact_seqno* ist **Binary(10)-Wert**, hat keinen Standardwert.  
+`[ @xact_seqno = ] xact_seqno` Ist die LSN des letzten Datensatzes für die letzte verteilte Transaktion des Servers an. *Xact_seqno* ist **Binary(10)-Wert**, hat keinen Standardwert.  
   
- [  **@numtrans=**] *Numtrans*  
- Ist die Anzahl der verteilten Transaktionen. *Numtrans* ist **Int**, hat keinen Standardwert.  
+`[ @numtrans = ] numtrans` Ist die Anzahl der verteilten Transaktionen. *Numtrans* ist **Int**, hat keinen Standardwert.  
   
- [  **@time=**] *Zeit*  
- Entspricht der Anzahl an Millisekunden (sofern angegeben), die für die Verteilung des letzten Transaktionsbatches erforderlich ist. *Zeit* ist **Int**, hat keinen Standardwert.  
+`[ @time = ] time` Die Anzahl der Millisekunden, ist Wenn angegeben, erforderlich, um die letzten Transaktionsbatches zu verteilen. *Zeit* ist **Int**, hat keinen Standardwert.  
   
- [  **@reset=**] *zurücksetzen*  
- Entspricht dem Rücksetzungsstatus. *Zurücksetzen* ist **Int**, hat keinen Standardwert. Wenn **1**, werden alle replizierten Transaktionen im Protokoll markiert werden als verteilt. Wenn **0**, das Transaktionsprotokoll wird auf die erste replizierte Transaktion zurückgesetzt und es werden keine replizierten Transaktionen gekennzeichnet. als verteilt. *Zurücksetzen* ist nur gültig, wenn beide *Xactid* und *Xact_seqno* NULL sind.  
+`[ @reset = ] reset` Entspricht dem rücksetzungsstatus. *Zurücksetzen* ist **Int**, hat keinen Standardwert. Wenn **1**, werden alle replizierten Transaktionen im Protokoll markiert werden als verteilt. Wenn **0**, das Transaktionsprotokoll wird auf die erste replizierte Transaktion zurückgesetzt und es werden keine replizierten Transaktionen gekennzeichnet. als verteilt. *Zurücksetzen* ist nur gültig, wenn beide *Xactid* und *Xact_seqno* NULL sind.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -87,8 +82,8 @@ EXEC sp_repldone @xactid = NULL, @xact_segno = NULL, @numtrans = 0,     @time = 
   
 ## <a name="see-also"></a>Siehe auch  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [Sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
- [Sp_repltrans &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
+ [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [sp_repltrans &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

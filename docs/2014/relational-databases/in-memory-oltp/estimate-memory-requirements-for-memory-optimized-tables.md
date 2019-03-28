@@ -10,12 +10,12 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 37931bd25b0a2024e555a7881397fd558d2f260a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 15b3b27f859b2ea2ed3008d33f19a682aeef833b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509226"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533472"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Schätzen der Arbeitsspeicheranforderungen speicheroptimierter Tabellen
   Gibt an, ob Sie ein neues erstellen [!INCLUDE[hek_2](../../includes/hek-2-md.md)] eine Speicheroptimierte Tabelle oder eine vorhandene datenträgerbasierte Tabelle zu einer speicheroptimierten Tabelle migrieren, ist es wichtig, dass der Arbeitsspeicherbedarf der einzelnen Tabellen realistisch einzuschätzen, damit Sie den Server mit ausreichend bereitstellen können Arbeitsspeicher. In diesem Abschnitt wird beschrieben, wie die Speichermenge geschätzt wird, die für die Daten einer speicheroptimierten Tabelle benötigt wird.  
@@ -39,7 +39,7 @@ ms.locfileid: "52509226"
 ##  <a name="bkmk_ExampleTable"></a> Beispiel für eine speicheroptimierte Tabelle  
  Betrachten Sie das folgende speicheroptimierte Tabellenschema:  
   
-```tsql  
+```sql  
   
 CREATE TABLE t_hk (  
 col1 int NOT NULL PRIMARY KEY NONCLUSTERED,  
@@ -86,7 +86,7 @@ GO
   
  Mit Hashindizes erzielen Sie sehr schnelle Übereinstimmungssuchen wie:  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE Col2 = 3  
@@ -95,7 +95,7 @@ SELECT * FROM t_hk
   
  Nicht gruppierte Indizes liefern schneller Ergebnisse bei Bereichssuchen wie:  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE Col2 >= 3  
@@ -104,7 +104,7 @@ SELECT * FROM t_hk
   
  Beim Migrieren einer datenträgerbasierten Tabelle können Sie die Anzahl der eindeutigen Werte für den Index "t1c2_index" wie folgt bestimmen.  
   
-```tsql  
+```sql  
   
 SELECT COUNT(DISTINCT [Col2])  
   FROM t_hk  
@@ -144,7 +144,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  Nicht gruppierte Indizes eignen sich am besten für Bereichssuchen, wie in der folgenden Abfrage veranschaulicht:  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE c2 > 5  

@@ -20,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9a24c843ed45a42fe4072b47c5642d81520a75e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f483c6fe53ab980893ba8e1104b46e073336b027
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214139"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533982"
 ---
-# <a name="sprefreshparameterencryption-transact-sql"></a>"sp_refresh_parameter_encryption" (Transact-SQL)
+# <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Aktualisiert die Always Encrypted-Metadaten für die Parameter, der der angegebene nicht schemagebundene gespeicherte Prozedur, User-defined Function, Sicht, DML-Trigger, DDL-Trigger auf Datenbankebene oder DDL-Trigger auf Serverebene in der aktuellen Datenbank. 
@@ -47,11 +47,9 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="arguments"></a>Argumente
 
-[  **@name =** ] **"***Module_name***"**   
-Der Name der gespeicherten Prozedur, der benutzerdefinierten Funktion, der Sicht, des DML-Triggers, des DDL-Triggers auf Datenbankebene oder des DDL-Triggers auf Serverebene. *MODULE_NAME* darf nicht sein, eine common Language Runtime (CLR) gespeicherte Prozedur oder eine CLR-Funktion. *MODULE_NAME* darf nicht schemagebunden sein. *MODULE_NAME* ist `nvarchar`, hat keinen Standardwert. *MODULE_NAME* kann ein mehrteiliger Bezeichner sein, aber nur auf Objekte in der aktuellen Datenbank verweisen kann.
+`[ @name = ] 'module_name'` Ist der Name, der die gespeicherte Prozedur, eine benutzerdefinierte Funktion, Sicht, DML-Trigger, DDL-Trigger auf Datenbankebene oder DDL-Trigger auf Serverebene. *MODULE_NAME* darf nicht sein, eine common Language Runtime (CLR) gespeicherte Prozedur oder eine CLR-Funktion. *MODULE_NAME* darf nicht schemagebunden sein. *MODULE_NAME* ist `nvarchar`, hat keinen Standardwert. *MODULE_NAME* kann ein mehrteiliger Bezeichner sein, aber nur auf Objekte in der aktuellen Datenbank verweisen kann.
 
-[  **@namespace =** ] **"** < Klasse > **"**   
-Klasse des angegebenen Moduls. Wenn *Module_name* ein DDL-Triggers ist `<class>` ist erforderlich. `<class>` ist `nvarchar(20)` Gültige Eingaben sind `DATABASE_DDL_TRIGGER` und `SERVER_DDL_TRIGGER`.    
+`[ @namespace = ] ' < class > '` Ist die Klasse des angegebenen Moduls. Wenn *Module_name* ein DDL-Triggers ist `<class>` ist erforderlich. `<class>` ist `nvarchar(20)` Gültige Eingaben sind `DATABASE_DDL_TRIGGER` und `SERVER_DDL_TRIGGER`.    
 
 ## <a name="return-code-values"></a>Rückgabecodewerte  
 

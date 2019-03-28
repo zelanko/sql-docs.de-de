@@ -10,12 +10,12 @@ ms.assetid: ad5385c5-5a50-40ca-a319-97d5606b8511
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2abd6a00944e862644b1d62019c24677e6c95d51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7df393f26523991abafded74ded242390cb0e3b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124470"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538393"
 ---
 # <a name="migrating-triggers"></a>Migrieren von Triggern
   In diesem Thema werden DDL- und DML-Trigger sowie speicheroptimierte Tabellen erläutert.  
@@ -34,13 +34,13 @@ ms.locfileid: "48124470"
   
  Je nach Triggerereignis (FOR/AFTER oder INSTEAD OF) können Sie den Inhalt des Triggers in die entsprechende gespeicherte Prozedur einschließen, von der INSERT, UPDATE oder DELETE für die Tabelle ausgeführt wird. Bei der Migration eines AFTER INSERT-Triggers können Sie beispielsweise die gespeicherte Prozedur ändern, die den Einfügevorgang ausführt. Dazu fügen Sie den Inhalt des Triggers nach der entsprechenden INSERT-Anweisung ein.  
   
- Sie können eine interpretierte gespeicherte Prozedur oder eine systemintern kompilierte gespeicherte Prozedur verwenden. Die meisten [!INCLUDE[tsql](../../includes/tsql-md.md)] Konstrukte in eine interpretierte gespeicherte Prozedur können für eine Speicheroptimierte Tabelle ausführen. In systemintern kompilierten gespeicherten Prozeduren wird jedoch nur eine Teilmenge der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Konstrukte unterstützt. Informationen zum [!INCLUDE[tsql](../../includes/tsql-md.md)] für Speicheroptimierte Tabellen unterstützen, finden Sie [zugreifen auf Speicheroptimierte Tabellen mit interpretiertem Transact-SQL](accessing-memory-optimized-tables-using-interpreted-transact-sql.md). Informationen zum [!INCLUDE[tsql](../../includes/tsql-md.md)] in systemintern kompilierten gespeicherten Prozeduren unterstützt, finden Sie unter [Transact-SQL durch In-Memory OLTP nicht unterstützte Konstrukte](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
+ Sie können eine interpretierte gespeicherte Prozedur oder eine systemintern kompilierte gespeicherte Prozedur verwenden. Die meisten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Konstrukte in einer interpretierten gespeicherten Prozedur können für eine speicheroptimierte Tabelle ausgeführt werden. In systemintern kompilierten gespeicherten Prozeduren wird jedoch nur eine Teilmenge der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Konstrukte unterstützt. Informationen zum [!INCLUDE[tsql](../../includes/tsql-md.md)] für Speicheroptimierte Tabellen unterstützen, finden Sie [zugreifen auf Speicheroptimierte Tabellen mit interpretiertem Transact-SQL](accessing-memory-optimized-tables-using-interpreted-transact-sql.md). Informationen zum [!INCLUDE[tsql](../../includes/tsql-md.md)] in systemintern kompilierten gespeicherten Prozeduren unterstützt, finden Sie unter [Transact-SQL durch In-Memory OLTP nicht unterstützte Konstrukte](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
  Im Folgenden finden Sie ein einfaches Beispiel dafür, wie Sie das Verhalten von DML-Triggern für eine speicheroptimierte Tabelle simulieren.  
   
  Die Datenbank enthält die folgenden Objekte, die in Form von CREATE TABLE-, CREATE TRIGGER- und CREATE PROCEDURE-Anweisungen in Skripts definiert sind:  
   
-```tsql  
+```sql  
 CREATE TABLE OrderDetails  
 (  
    OrderId int not null primary key,  
@@ -98,7 +98,7 @@ GO
   
  Die folgenden Objekte sind funktional äquivalent mit dem Zustand vor der Migration:  
   
-```tsql  
+```sql  
 CREATE TABLE OrderDetails  
 (  
    OrderId int not null PRIMARY KEY NONCLUSTERED HASH WITH (BUCKET_COUNT = 1048576),  

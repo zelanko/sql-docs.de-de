@@ -16,12 +16,12 @@ ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74aa782a7dcf6abdc71ca82dc104406948f21989
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 74b5ff58db964bff29e863eec39e76313220f556
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802302"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533092"
 ---
 # <a name="spdropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publication=**] **'***publication***'**  
- Der Name der Veröffentlichung, die gelöscht werden soll. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert. Wenn **alle**, alle vorhandenen mergeveröffentlichungen werden entfernt, und der Momentaufnahme-Agent-Auftrag zugeordnet werden. Wenn Sie einen bestimmten Wert für angeben *Veröffentlichung*, nur diese Veröffentlichung und die zugeordneten Momentaufnahme-Agent-Auftrag gelöscht werden.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung zu löschen. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert. Wenn **alle**, alle vorhandenen mergeveröffentlichungen werden entfernt, und der Momentaufnahme-Agent-Auftrag zugeordnet werden. Wenn Sie einen bestimmten Wert für angeben *Veröffentlichung*, nur diese Veröffentlichung und die zugeordneten Momentaufnahme-Agent-Auftrag gelöscht werden.  
   
- [  **@ignore_distributor =**] *Ignore_distributor*  
- Wird verwendet, um eine Veröffentlichung zu löschen, ohne beim Verteiler Cleanuptasks auszuführen. *Ignore_distributor* ist **Bit**, hat den Standardwert **0**. Dieser Parameter wird auch bei der Neuinstallation des Verteilers verwendet.  
+`[ @ignore_distributor = ] ignore_distributor` Verwendet, um eine Veröffentlichung zu löschen, ohne Cleanuptasks auf dem Verteiler. *Ignore_distributor* ist **Bit**, hat den Standardwert **0**. Dieser Parameter wird auch bei der Neuinstallation des Verteilers verwendet.  
   
- [  **@reserved=**] *reserviert*  
- Ist für die zukünftige Verwendung reserviert. *reservierte* ist **Bit**, hat den Standardwert **0**.  
+`[ @reserved = ] reserved` ist für die zukünftige Verwendung reserviert. *reservierte* ist **Bit**, hat den Standardwert **0**.  
   
- [  **@ignore_merge_metadata=** ] *Ignore_merge_metadata*  
- Nur interne Verwendung.  
+`[ @ignore_merge_metadata = ] ignore_merge_metadata` Nur interne Verwendung.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -71,7 +67,7 @@ sp_dropmergepublication [ @publication= ] 'publication'
   
 ## <a name="see-also"></a>Siehe auch  
  [Löschen einer Veröffentlichung](../../relational-databases/replication/publish/delete-a-publication.md)   
- [Sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
  [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

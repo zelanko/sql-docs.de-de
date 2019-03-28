@@ -10,12 +10,12 @@ ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 95b67c3db68d1641f6025ddacc1fd1370f26738b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b1bc12baf31a0e1d5edb344c538341cf2ad1be0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129830"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529618"
 ---
 # <a name="application-level-partitioning"></a>Partitionierung auf Anwendungsebene
   Dieses Beispiel veranschaulicht die Partitionierung auf Anwendungsebene zum Speichern von Daten in einer speicheroptimierten Tabelle oder einer datenträgerbasierten Tabelle abhängig davon, ob die Reihenfolge vor oder nach einem bestimmten Datum liegt. Alle Aufträge, die älter oder gleich der *HotDate* befinden sich in der speicheroptimierten Tabelle und alle Aufträge vor dem *HotDate* sind in der datenträgerbasierten Tabelle. Angenommen, es liegt eine extreme OLTP-Arbeitsauslastung mit einer Vielzahl gleichzeitiger Transaktionen vor. Diese Geschäftsregel (neue Aufträge in einer speicheroptimierten Tabelle) muss erzwungen werden, selbst wenn einige gleichzeitige Transaktionen versuchen, das *hotDate*zu ändern.  
@@ -26,7 +26,7 @@ ms.locfileid: "48129830"
   
 ## <a name="code-listing"></a>Codelisting  
   
-```tsql  
+```sql  
 USE MASTER  
 GO  
   

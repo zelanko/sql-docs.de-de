@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 758eadb1d5b3724bd829c556ca93ce8ae4a3bfa0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a00800150f5f100f97687df59bc4603f07d0fcc3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206240"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534582"
 ---
 # <a name="selective-xml-indexes-sxi"></a>Selektive XML-Indizes (SXI)
   Selektive XML-Indizes sind ein weiterer Typ von XML-Index, der Ihnen zusätzlich zu den herkömmlichen XML-Indizes zur Verfügung steht. Die Ziele der selektiven XML-Indexfunktion sind Folgende:  
@@ -78,7 +78,7 @@ ms.locfileid: "48206240"
   
  Wenn Sie diese Daten nur über den `/book/title` -Pfad und den `/book/subjects` -Pfad abfragen müssen, können Sie den folgenden selektiven XML-Index erstellen:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX SXI_index  
 ON Tbl(xmlcol)  
 FOR   
@@ -123,7 +123,7 @@ FOR
   
 -   Indizieren von Knoten mit binären XS-Typen: z. B. base64Binary und hexBinary.  
   
--   Angeben von Knoten, die mit XPath-Ausdrücken indiziert werden sollen und am Ende das Platzhalterzeichen `*` aufweisen: z. B.  `/a/b/c/*`, `/a//b/*`oder `/a/b/*:c`.  
+-   Angeben von Knoten mit XPath-Ausdrücken indiziert werden, die das Platzhalterzeichen enthalten `*` am Ende: Z. B. `/a/b/c/*`, `/a//b/*`, oder `/a/b/*:c`.  
   
 -   Indizieren einer anderen Achse als untergeordnetes Element, Attribut oder Nachfolger. Der `//<step>` -Fall ist als spezieller Fall zulässig.  
   

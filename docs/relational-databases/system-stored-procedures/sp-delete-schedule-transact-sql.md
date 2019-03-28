@@ -18,12 +18,12 @@ ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ec2fe4ba5ad90d044a9407be04acc850ae16b73
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 257e91babf98fcbd7a2a54e8b9d14134a7446d6b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591494"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537837"
 ---
 # <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,18 +41,15 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@schedule_id=** ] *Schedule_id*  
- Die Zeitplan-ID des zu löschenden Zeitplans. *Schedule_id* ist **Int**, hat den Standardwert NULL.  
+`[ @schedule_id = ] schedule_id` Die Zeitplan-ID des zu löschenden Zeitplans. *Schedule_id* ist **Int**, hat den Standardwert NULL.  
   
 > **HINWEIS:** Entweder *Schedule_id* oder *Schedule_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
- [  **@schedule_name=** ] **"**_Schedule_name_**"**  
- Der Name des zu löschenden Zeitplan. *Schedule_name* ist **Sysname**, hat den Standardwert NULL.  
+`[ @schedule_name = ] 'schedule_name'` Der Name des zu löschenden Zeitplans. *Schedule_name* ist **Sysname**, hat den Standardwert NULL.  
   
 > **HINWEIS:** Entweder *Schedule_id* oder *Schedule_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
- [ **@force_delete** = ] *force_delete*  
- Gibt an, ob die Prozedur einen Fehler verursachen soll, wenn der Zeitplan an einen Auftrag angefügt wird. *Force_delete* bit und hat den Standardwert **0**. Wenn *Force_delete* ist **0**, die gespeicherte Prozedur fehlschlägt, wenn der Zeitplan einem Auftrag angefügt ist. Wenn *Force_delete* ist **1**, der Zeitplan gelöscht, unabhängig davon, ob der Zeitplan einem Auftrag angefügt ist.  
+`[ @force_delete = ] force_delete` Gibt an, ob die Prozedur fehlschlagen soll, wenn der Zeitplan einem Auftrag angefügt ist. *Force_delete* bit und hat den Standardwert **0**. Wenn *Force_delete* ist **0**, die gespeicherte Prozedur fehlschlägt, wenn der Zeitplan einem Auftrag angefügt ist. Wenn *Force_delete* ist **1**, der Zeitplan gelöscht, unabhängig davon, ob der Zeitplan einem Auftrag angefügt ist.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

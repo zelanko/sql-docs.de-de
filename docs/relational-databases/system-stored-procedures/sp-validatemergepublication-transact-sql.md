@@ -16,12 +16,12 @@ ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 866df9e4ad124c031eab3068ac9156f0628dbca4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 5706ea4c1fab79735afe9f9ec4873f112c9114cd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135695"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531087"
 ---
 # <a name="spvalidatemergepublication-transact-sql"></a>sp_validatemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,10 @@ sp_validatemergepublication [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [**@publication=**] **"***Veröffentlichung***"**  
+ [**@publication=**] **'***publication***'**  
  Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@level=** ] *Ebene*  
- Entspricht dem Typ der auszuführenden Validierung. *Ebene* ist **Tinyint**, hat keinen Standardwert. Level kann einen der folgenden Werte haben.  
+`[ @level = ] level` Ist der Typ der auszuführenden Überprüfung. *Ebene* ist **Tinyint**, hat keinen Standardwert. Level kann einen der folgenden Werte haben.  
   
 |Level-Wert|Description|  
 |-----------------|-----------------|  
@@ -63,6 +62,6 @@ sp_validatemergepublication [@publication=] 'publication'
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Überprüfen von replizierten Daten](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [Sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)  
+ [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)  
   
   

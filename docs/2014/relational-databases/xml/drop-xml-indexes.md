@@ -11,23 +11,23 @@ helpviewer_keywords:
 - dropping indexes
 - XML indexes [SQL Server], dropping
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82fd8836bb4fda85a7fdadd6345826cf432485cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4b1706f81808d90e02df32df7e56828b054bd05
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194150"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535502"
 ---
 # <a name="drop-xml-indexes"></a>Löschen von XML-Indizes
   Die [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung kann zum Löschen vorhandener primärer oder sekundärer XML-Indizes und Nicht-XML-Indizes verwendet werden. Die DROP INDEX-Optionen gelten jedoch nicht für XML-Indizes. Wenn Sie den primären XML-Index löschen, werden sämtliche vorhandenen sekundären Indizes ebenfalls gelöscht.  
   
  Die DROP-Syntax mit *TableName.IndexName* ist veraltet und wird für XML-Indizes nicht unterstützt.  
   
-## <a name="example-creating-and-dropping-a-primary-xml-index"></a>Beispiel: Erstellen und Löschen eines primären XML-Index  
- Im folgenden Beispiel wird ein XML-Index erstellt, auf eine `xml` Type-Spalte.  
+## <a name="example-creating-and-dropping-a-primary-xml-index"></a>Beispiel: Erstellen und Löschen einen primären XML-Index  
+ Im folgenden Beispiel wird ein XML-Index für eine Spalte vom Typ `xml` erstellt:  
   
 ```  
 DROP TABLE T  
@@ -51,7 +51,7 @@ DROP INDEX PIdx_T_XmlCol ON T
   
  Beim Löschen einer Tabelle werden auch XML-Indizes für diese automatisch gelöscht. Eine XML-Spalte kann jedoch nicht aus einer Tabelle gelöscht werden, wenn ein XML-Index für die Spalte vorhanden ist.  
   
- Im folgenden Beispiel wird ein XML-Index erstellt, auf eine `xml` Type-Spalte. Weitere Informationen finden Sie unter [Vergleichen von typisiertem XML mit nicht typisiertem XML](../xml/compare-typed-xml-to-untyped-xml.md).  
+ Im folgenden Beispiel wird ein XML-Index für eine Spalte vom Typ `xml` erstellt: Weitere Informationen finden Sie unter [Vergleichen von typisiertem XML mit nicht typisiertem XML](../xml/compare-typed-xml-to-untyped-xml.md).  
   
 ```  
 CREATE TABLE TestTable(  
@@ -68,7 +68,7 @@ ON TestTable(Col2)
 GO  
 ```  
   
-## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>Beispiel: Erstellen eines XML-Index mithilfe der DROP_EXISTING-Indexoption  
+## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>Beispiel: Erstellen einen XML-Index mithilfe der DROP_EXISTING-Indexoption  
  Im folgenden Beispiel wird ein XML-Index für eine Spalte (`XmlColx`) erstellt. Anschließend wird ein weiterer XML-Index mit dem gleichen Namen für eine andere Spalte (`XmlColy`) erstellt. Da die Option `DROP_EXISTING` angegeben wird, wird der vorhandene XML-Index für (`XmlColx)` gelöscht und ein neuer XML-Index für (`XmlColy`) erstellt.  
   
 ```  

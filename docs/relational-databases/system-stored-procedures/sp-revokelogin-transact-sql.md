@@ -18,12 +18,12 @@ ms.assetid: cb1ab102-1ae0-4811-9144-9a8121ef2d7e
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 57c7ef9242b6c974c8043f8f6ab237b0fbe07941
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2763b573eff741575c1d496efb0e861472714823
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706653"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533002"
 ---
 # <a name="sprevokelogin-transact-sql"></a>sp_revokelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47706653"
   Entfernt die anmeldenameneinträge in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für eine Windows-Benutzer oder Gruppe, die mit CREATE LOGIN auf, erstellt **Sp_grantlogin**, oder **Sp_denylogin**.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwendung [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md) stattdessen.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md) .  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,8 +43,7 @@ sp_revokelogin [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@loginame=**] **"***Anmeldung***"**  
- Der Name des Windows-Benutzers oder der Windows-Gruppe. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. *Anmeldung* möglich, alle vorhandenen Windows-Benutzernamen oder die Gruppe im Format *Computername*\\*Benutzer- oder Domänenkonto*\\*Benutzer*.  
+`[ @loginame = ] 'login'` Ist der Name des Windows-Benutzers oder der Gruppe. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. *Anmeldung* möglich, alle vorhandenen Windows-Benutzernamen oder die Gruppe im Format *Computername*\\*Benutzer- oder Domänenkonto*\\*Benutzer*.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

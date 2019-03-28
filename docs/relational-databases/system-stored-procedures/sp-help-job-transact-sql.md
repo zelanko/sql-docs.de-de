@@ -18,12 +18,12 @@ ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18dde2c47f1da8c20457a9a0fbdd86c7adfe6e56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 509dd27a784fd14b5aefc811065b265f37c3f6c3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818081"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528142"
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,19 +53,16 @@ sp_help_job { [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@job_id =**] *job_id*  
- Die Auftrags-ID *Job_id* ist **Uniqueidentifier**, hat den Standardwert NULL.  
+`[ @job_id = ] job_id` ID des Auftrags. *Job_id* ist **Uniqueidentifier**, hat den Standardwert NULL.  
   
- [ **@job_name =**] **'***job_name***'**  
- Der Name des Auftrags. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Entweder an einen bestimmten Auftrag können *Job_id* oder *Job_name* muss angegeben werden.  Lassen Sie beide *Job_id* und *Job_name* zum Zurückgeben von Informationen zu allen Aufträgen.
   
- [ **@job_aspect =**] **'***job_aspect***'**  
- Das Auftragsattribut, das angezeigt werden soll. *Job_aspect* ist **varchar(9)**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
+`[ @job_aspect = ] 'job_aspect'` Das Auftragsattribut, angezeigt werden soll. *Job_aspect* ist **varchar(9)**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**ALL**|Auftragsaspektinformationen|  
 |**JOB**|Auftragsinformationen|  
@@ -73,25 +70,19 @@ sp_help_job { [ @job_id = ] job_id
 |**SCHRITTE**|Auftragsschrittinformationen|  
 |**ZIELE**|Zielinformationen|  
   
- [ **@job_type =**] **'***job_type***'**  
- Der Typ von Aufträgen, die im Bericht enthalten sein sollen. *Der Standardwert ist* ist **varchar(12)**, hat den Standardwert NULL. *Der Standardwert ist* kann **lokalen** oder **mit mehreren Servern**.  
+`[ @job_type = ] 'job_type'` Der Typ der Aufträge in den Bericht eingeschlossen werden sollen. *Der Standardwert ist* ist **varchar(12)**, hat den Standardwert NULL. *Der Standardwert ist* kann **lokalen** oder **mit mehreren Servern**.  
   
- [  **@owner_login_name =**] **"***Login_name***"**  
- Der Anmeldename für den Besitzer des Auftrags. *Login_name* ist **Sysname**, hat den Standardwert NULL.  
+`[ @owner_login_name = ] 'login_name'` Der Anmeldename des Besitzers des Auftrags. *Login_name* ist **Sysname**, hat den Standardwert NULL.  
   
- [ **@subsystem =**] **'***subsystem***'**  
- Der Name des Subsystems. *Subsystem* ist **nvarchar(40)**, hat den Standardwert NULL.  
+`[ @subsystem = ] 'subsystem'` Der Name des Subsystems. *Subsystem* ist **nvarchar(40)**, hat den Standardwert NULL.  
   
- [ **@category_name =**] **'***category***'**  
- Der Name der Kategorie. *Kategorie* ist **Sysname**, hat den Standardwert NULL.  
+`[ @category_name = ] 'category'` Der Name der Kategorie. *Kategorie* ist **Sysname**, hat den Standardwert NULL.  
   
- [ **@enabled =**] *enabled*  
- Eine Zahl, die angibt, ob Informationen für aktivierte oder deaktivierte Aufträge angezeigt werden. *aktiviert* ist **Tinyint**, hat den Standardwert NULL. **1** zeigt aktivierte Aufträge, und **0** zeigt deaktivierte Aufträge.  
+`[ @enabled = ] enabled` Eine Zahl, der angibt, ob Informationen für angezeigt wird, aktiviert oder deaktivierte Aufträge. *aktiviert* ist **Tinyint**, hat den Standardwert NULL. **1** zeigt aktivierte Aufträge, und **0** zeigt deaktivierte Aufträge.  
   
- [ **@execution_status =**] *status*  
- Der Ausführungsstatus der Aufträge. *Status* ist **Int**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
+`[ @execution_status = ] status` Der Ausführungsstatus für die Aufträge. *Status* ist **Int**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**0**|Nur die Aufträge werden zurückgegeben, die sich nicht im Leerlauf befinden oder unterbrochen sind.|  
 |**1**|Wird ausgeführt.|  
@@ -101,17 +92,13 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|Unterbrochen|  
 |**7**|Abschlussaktionen werden ausgeführt|  
   
- [ **@date_comparator =**] **'***date_comparison***'**  
- Der Vergleichsoperator, um Vergleiche von *Date_created* und *Date_modified*. *Date_comparison* ist **char(1)**, und kann =, \<, oder >.  
+`[ @date_comparator = ] 'date_comparison'` Der Vergleichsoperator, um Vergleiche von *Date_created* und *Date_modified*. *Date_comparison* ist **char(1)**, und kann =, \<, oder >.  
   
- [ **@date_created =**] *date_created*  
- Das Datum, an dem der Auftrag erstellt wurde. *Date_created*ist **"DateTime"**, hat den Standardwert NULL.  
+`[ @date_created = ] date_created` Das Datum, an der Auftrag erstellt wurde. *Date_created*ist **"DateTime"**, hat den Standardwert NULL.  
   
- [  **@date_last_modified =**] *Date_modified*  
- Das Datum, an dem der Auftrag zuletzt geändert wurde. *DATE_MODIFIED* ist **"DateTime"**, hat den Standardwert NULL.  
+`[ @date_last_modified = ] date_modified` Das Datum, an der letzten des Auftrags Änderung. *DATE_MODIFIED* ist **"DateTime"**, hat den Standardwert NULL.  
   
- [  **@description =**] **"***ist NULL***"**  
- Die Beschreibung des Auftrags. *ist NULL* ist **nvarchar(512)**, hat den Standardwert NULL. *ist NULL* kann die SQL Server-Platzhalterzeichen für den Mustervergleich enthalten.  
+`[ @description = ] 'description_pattern'` Die Beschreibung des Auftrags. *ist NULL* ist **nvarchar(512)**, hat den Standardwert NULL. *ist NULL* kann die SQL Server-Platzhalterzeichen für den Mustervergleich enthalten.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -124,11 +111,11 @@ sp_help_job { [ @job_id = ] job_id
 |**job_id**|**uniqueidentifier**|Die eindeutige ID des Auftrags.|  
 |**originating_server**|**nvarchar(30)**|Name des Servers, von dem der Auftrag stammt|  
 |**name**|**sysname**|Name des Auftrags.|  
-|**aktiviert**|**tinyint**|Zeigt an, ob der Auftrag für die Ausführung aktiviert ist.|  
+|**enabled**|**tinyint**|Zeigt an, ob der Auftrag für die Ausführung aktiviert ist.|  
 |**description**|**nvarchar(512)**|Beschreibung für den Auftrag.|  
 |**start_step_id**|**int**|ID des Schrittes in dem Auftrag, bei dem die Ausführung beginnen soll.|  
 |**category**|**sysname**|Auftragskategorie|  
-|**Besitzer**|**sysname**|Auftragsbesitzer|  
+|**owner**|**sysname**|Auftragsbesitzer|  
 |**notify_level_eventlog**|**int**|**Bitmaske** , der angibt, unter welchen Umständen ein Benachrichtigungsereignis im Microsoft Windows-Anwendungsprotokoll protokolliert werden sollen. Dabei kann es sich um einen der folgenden Werte sein:<br /><br /> **0** = Nie<br /><br /> **1** = bei erfolgreicher Ausführung des Auftrags<br /><br /> **2** = Bei Fehlschlagen des Auftrags<br /><br /> **3** = Immer, wenn der Auftrag abgeschlossen ist (unabhängig vom Ergebnis des Auftrags)|  
 |**notify_level_email**|**int**|**Bitmaske** , der angibt, unter welchen Umständen bei Abschluss eines Auftrags eine e-Mail-Benachrichtigung gesendet werden soll. Mögliche Werte sind dieselbe wie für **Notify_level_eventlog**.|  
 |**notify_level_netsend**|**int**|**Bitmaske** , der angibt, unter welchen Umständen bei Abschluss eines Auftrags eine Netzwerknachricht gesendet werden soll. Mögliche Werte sind dieselbe wie für **Notify_level_eventlog**.|  
@@ -190,7 +177,7 @@ sp_help_job { [ @job_id = ] job_id
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|Bezeichner des Zeitplans (eindeutig für alle Aufträge)|  
 |**schedule_name**|**sysname**|Name des Zeitplans (eindeutig nur für diesen Auftrag)|  
-|**aktiviert**|**int**|Gibt an, ob der Zeitplan aktiv ist (**1**) oder nicht (**0**).|  
+|**enabled**|**int**|Gibt an, ob der Zeitplan aktiv ist (**1**) oder nicht (**0**).|  
 |**freq_type**|**int**|Zeigt an, wann der Auftrag ausgeführt werden soll:<br /><br /> **1** = einmal<br /><br /> **4** = täglich<br /><br /> **8** = wöchentlich<br /><br /> **16** = monatlich<br /><br /> **32** = monatlich, relativ zu den **Freq_interval**<br /><br /> **64** = ausgeführt werden, wenn **SQLServerAgent** -Dienst gestartet wird.|  
 |**freq_interval**|**int**|Tage, wenn der Auftrag ausgeführt wird. Der Wert hängt vom Wert der **Freq_type**. Weitere Informationen finden Sie unter [Sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
 |**freq_subday_type**|**Int**|Einheiten für **Freq_subday_interval**. Weitere Informationen finden Sie unter [Sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  

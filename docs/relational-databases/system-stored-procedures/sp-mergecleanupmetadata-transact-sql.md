@@ -16,12 +16,12 @@ ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d3ae8edeff1792cf3a1c70d4e80dea638402e30d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6924ef36c57036cf6cad6e25a6dc5cebfa5fa5f2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210959"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529002"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publication =** ] **'***publication***'**  
- Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert **%**, die Metadaten für alle Veröffentlichungen bereinigt. Die Veröffentlichung muss bereits vorhanden sein, wenn sie explizit angegeben wird.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert **%**, die Metadaten für alle Veröffentlichungen bereinigt. Die Veröffentlichung muss bereits vorhanden sein, wenn sie explizit angegeben wird.  
   
- [  **@reinitialize_subscriber =** ] **"***Abonnenten***"**  
- Gibt an, ob der Abonnent erneut zu initialisieren ist. *Abonnenten* ist **nvarchar(5)**, kann **"true"** oder **"false"**, hat den Standardwert **"true"**. Wenn **"true"**, Abonnements für die erneute Initialisierung gekennzeichnet. Wenn **"false"**, die Abonnements werden nicht für die erneute Initialisierung markiert.  
+`[ @reinitialize_subscriber = ] 'subscriber'` Gibt an, ob der Abonnent erneut initialisiert werden soll. *Abonnenten* ist **nvarchar(5)**, kann **"true"** oder **"false"**, hat den Standardwert **"true"**. Wenn **"true"**, Abonnements für die erneute Initialisierung gekennzeichnet. Wenn **"false"**, die Abonnements werden nicht für die erneute Initialisierung markiert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

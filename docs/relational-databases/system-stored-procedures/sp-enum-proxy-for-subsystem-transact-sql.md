@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: cc983f79dfa1eafd0f0175448467c3a8d9a69aa0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5beab3dc255e5679191dd6ea5d05bfdd98bef6ba
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736864"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534922"
 ---
 # <a name="spenumproxyforsubsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +43,13 @@ sp_enum_proxy_for_subsystem
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@proxy_id** = ] *proxy_id*  
- Die ID des Proxys, für den Informationen aufgelistet werden sollen. Die *Proxy_id* ist **Int**, hat den Standardwert NULL. Entweder die *Id* oder *Proxy_name* kann angegeben werden.  
+`[ @proxy_id = ] proxy_id` Die ID des Proxys für den Informationen aufgelistet. Die *Proxy_id* ist **Int**, hat den Standardwert NULL. Entweder die *Id* oder *Proxy_name* kann angegeben werden.  
   
- [ **@proxy_name** =] **"***Proxy_name***"**  
- Der Name des Proxys, zu dem Informationen aufgelistet werden sollen. Die *Proxy_name* ist **Sysname**, hat den Standardwert NULL. Entweder die *Id* oder *Proxy_name* kann angegeben werden.  
+`[ @proxy_name = ] 'proxy_name'` Der Name des Proxys für den Informationen aufgelistet. Die *Proxy_name* ist **Sysname**, hat den Standardwert NULL. Entweder die *Id* oder *Proxy_name* kann angegeben werden.  
   
- [ **@subsystem_id** =] *Subsystem_id*  
- Die ID des Subsystems, für das Informationen aufgelistet werden sollen. Die *Subsystem_id* ist **Int**, hat den Standardwert NULL. Entweder die *Subsystem_id* oder *Subsystem_name* kann angegeben werden.  
+`[ @subsystem_id = ] subsystem_id` Die ID des Subsystems, für das Informationen aufgelistet. Die *Subsystem_id* ist **Int**, hat den Standardwert NULL. Entweder die *Subsystem_id* oder *Subsystem_name* kann angegeben werden.  
   
- [ **@subsystem_name** =] **"***Subsystem_name***"**  
- Der Name des Subsystems, für das Informationen aufgelistet werden sollen. Die *Subsystem_name* ist **Sysname**, hat den Standardwert NULL. Entweder die *Subsystem_id* oder *Subsystem_name* kann angegeben werden.  
+`[ @subsystem_name = ] 'subsystem_name'` Der Name des Subsystems, für das Informationen aufgelistet. Die *Subsystem_name* ist **Sysname**, hat den Standardwert NULL. Entweder die *Subsystem_id* oder *Subsystem_name* kann angegeben werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

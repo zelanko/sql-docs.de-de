@@ -18,12 +18,12 @@ ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e707eb96cd07f784e1089a5131a44eb0ce248b7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e41bcab4680d1e3bbaf08e2fbab112799fd5976
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640824"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533152"
 ---
 # <a name="sprefreshview-transact-sql"></a>sp_refreshview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_refreshview [ @viewname = ] 'viewname'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@viewname=** ] **"***Viewname***"**  
- Der Name der Sicht. *ViewName* ist **Nvarchar**, hat keinen Standardwert. *ViewName* kann ein mehrteiliger Bezeichner sein, jedoch können nur auf Sichten in der aktuellen Datenbank verweisen.  
+`[ @viewname = ] 'viewname'` Ist der Name der Ansicht. *ViewName* ist **Nvarchar**, hat keinen Standardwert. *ViewName* kann ein mehrteiliger Bezeichner sein, jedoch können nur auf Sichten in der aktuellen Datenbank verweisen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder eine Zahl ungleich Null (Fehler)  
@@ -80,6 +79,6 @@ WHERE so.type = 'V' AND sed.referenced_id = OBJECT_ID('Person.Person');
  [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
- [Sp_refreshsqlmodule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md)  
+ [sp_refreshsqlmodule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md)  
   
   

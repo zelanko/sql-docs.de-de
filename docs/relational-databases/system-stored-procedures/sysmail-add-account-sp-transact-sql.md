@@ -18,12 +18,12 @@ ms.assetid: 65e15e2e-107c-49c3-b12c-f4edf0eb1617
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a388fb39082ec936b473afd7fc96ff99e7d92350
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b41b0c0ae805923a10d0ee9c4fd066b1202fa94
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830018"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537892"
 ---
 # <a name="sysmailaddaccountsp-transact-sql"></a>sysmail_add_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,44 +52,31 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@account_name** =] **"***Account_name***"**  
- Der Name des hinzuzufügenden Kontos. *account_name* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @account_name = ] 'account_name'` Der Name des hinzuzufügenden Kontos. *account_name* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
- [ **@email_address** =] **"***Email_address***"**  
- Die E-Mail-Adresse, von der die Nachricht gesendet werden soll. Bei dieser Adresse muss es sich um eine Internet-E-Mail-Adresse handeln. *Email_address* ist **vom Datentyp nvarchar(128)**, hat keinen Standardwert. Z. B. ein Konto für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent könnte e-Mails von der Adresse **SqlAgent@Adventure-Works.com**.  
+`[ @email_address = ] 'email_address'` Die e-Mail-Adresse zum Senden der Nachricht aus. Bei dieser Adresse muss es sich um eine Internet-E-Mail-Adresse handeln. *Email_address* ist **vom Datentyp nvarchar(128)**, hat keinen Standardwert. Z. B. ein Konto für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent könnte e-Mails von der Adresse **SqlAgent@Adventure-Works.com**.  
   
- [ **@display_name** =] **"***Display_name***"**  
- Der Anzeigename, der in E-Mail-Nachrichten verwendet werden soll, die von diesem Konto gesendet werden. *Display_name* ist **vom Datentyp nvarchar(128)**, hat den Standardwert NULL. Z. B. ein Konto für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent kann den Anzeigename **SQL Server Agent Automated Mailer** e-Mail-Nachrichten.  
+`[ @display_name = ] 'display_name'` Der Anzeigename, e-Mail-Nachrichten von diesem Konto verwendet werden soll. *Display_name* ist **vom Datentyp nvarchar(128)**, hat den Standardwert NULL. Z. B. ein Konto für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent kann den Anzeigename **SQL Server Agent Automated Mailer** e-Mail-Nachrichten.  
   
- [ **@replyto_address** =] **"***Replyto_address***"**  
- Die Adresse, an die Antworten auf Nachrichten von diesem Konto gesendet werden. *Replyto_address* ist **vom Datentyp nvarchar(128)**, hat den Standardwert NULL. Beispielsweise Antworten auf ein Konto für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent kann an den Datenbankadministrator gehen **danw@Adventure-Works.com**.  
+`[ @replyto_address = ] 'replyto_address'` Die Adresse, der Antworten auf Nachrichten von diesem Konto gesendet werden. *Replyto_address* ist **vom Datentyp nvarchar(128)**, hat den Standardwert NULL. Beispielsweise Antworten auf ein Konto für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent kann an den Datenbankadministrator gehen **danw@Adventure-Works.com**.  
   
- [ **@description** = ] **'***description***'**  
- Eine Beschreibung des Kontos *Beschreibung* ist **nvarchar(256)**, hat den Standardwert NULL.  
+`[ @description = ] 'description'` Ist eine Beschreibung für das Konto. *Beschreibung* ist **nvarchar(256)**, hat den Standardwert NULL.  
   
- [ **@mailserver_name** =] **"***Server_name***"**  
- Der Name oder die IP-Adresse des SMTP-Mailservers, der für dieses Konto verwendet werden soll. Der Computer mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] müssen aufgelöst werden können die *Server_name* einer IP-Adresse. *Server_name* ist **Sysname**, hat keinen Standardwert.  
+`[ @mailserver_name = ] 'server_name'` Der Name oder IP-Adresse des SMTP-Mailservers, der für dieses Konto verwendet werden soll. Der Computer mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] müssen aufgelöst werden können die *Server_name* einer IP-Adresse. *Server_name* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@mailserver_type** =] '*Server_type*"  
- Der Typ des e-Mail-Server. *Server_type* ist **Sysname**, hat den Standardwert **'SMTP'**...  
+`[ @mailserver_type = ] 'server_type'` Der Typ des e-Mail-Server. *Server_type* ist **Sysname**, hat den Standardwert **'SMTP'**...  
   
- [ **@port** =] *Port_number*  
- Die Portnummer für den E-Mail-Server. *Port_number* ist **Int**, Standardwert ist 25.  
+`[ @port = ] port_number` Die Nummer des Ports für den e-Mail-Server. *Port_number* ist **Int**, Standardwert ist 25.  
   
- [ **@username** =] **"***Benutzername***"**  
- Der zum Anmelden beim E-Mail-Server zu verwendende Benutzername. *Benutzername* ist **vom Datentyp nvarchar(128)**, hat den Standardwert NULL. Wenn dieser Parameter NULL ist, verwendet Datenbank-E-Mail keine Authentifizierung für dieses Konto. Wenn für den Mailserver keine Authentifizierung erforderlich ist, verwenden Sie NULL als Wert für den Benutzernamen.  
+`[ @username = ] 'username'` Der Benutzername zum Anmelden beim e-Mail-Server verwenden. *Benutzername* ist **vom Datentyp nvarchar(128)**, hat den Standardwert NULL. Wenn dieser Parameter NULL ist, verwendet Datenbank-E-Mail keine Authentifizierung für dieses Konto. Wenn für den Mailserver keine Authentifizierung erforderlich ist, verwenden Sie NULL als Wert für den Benutzernamen.  
   
- [ **@password** =] **"***Kennwort***"**  
- Das Kennwort, das für die Anmeldung beim E-Mail-Server verwendet werden soll. *Kennwort* ist **vom Datentyp nvarchar(128)**, hat den Standardwert NULL. Ein Kennwort muss nur bereitgestellt werden, wenn ein Benutzername angegeben wird.  
+`[ @password = ] 'password'` Das Kennwort für die Anmeldung beim e-Mail-Server verwenden. *Kennwort* ist **vom Datentyp nvarchar(128)**, hat den Standardwert NULL. Ein Kennwort muss nur bereitgestellt werden, wenn ein Benutzername angegeben wird.  
   
- [ **@use_default_credentials** =] Use_default_credentials  
- Gibt an, ob E-Mail mithilfe der Anmeldeinformationen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] an den SMTP-Server gesendet wird. **Use_default_credentials** bit und hat den Standardwert 0. Wenn dieser Parameter 1 ist, verwendet Datenbank-E-Mail die Anmeldeinformationen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Wenn dieser Parameter 0 ist, sendet Datenbank-e-Mails der **@username** und **@password** Parameter, soweit vorhanden, andernfalls sendet e-Mail ohne **@username**und **@password** Parameter.  
+`[ @use_default_credentials = ] use_default_credentials` Gibt an, ob zum Senden der e-Mail mit den Anmeldeinformationen des SMTP-Server die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **Use_default_credentials** bit und hat den Standardwert 0. Wenn dieser Parameter 1 ist, verwendet Datenbank-E-Mail die Anmeldeinformationen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Wenn dieser Parameter 0 ist, sendet Datenbank-e-Mails der **@username** und **@password** Parameter, soweit vorhanden, andernfalls sendet e-Mail ohne **@username**und **@password** Parameter.  
   
- [ **@enable_ssl** =] Enable_ssl  
- Gibt an, ob Datenbank-e-Mails Kommunikation (Secure Sockets Layer) verschlüsselt. **Enable_ssl** bit und hat den Standardwert 0.  
+`[ @enable_ssl = ] enable_ssl` Gibt an, ob Datenbank-e-Mails Kommunikation (Secure Sockets Layer) verschlüsselt. **Enable_ssl** bit und hat den Standardwert 0.  
   
- [ **@account_id** =] *Account_id* Ausgabe  
- Gibt die Konto-ID für das neue Konto zurück. *account_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @account_id = ] account_id OUTPUT` Gibt die Konto-Id für das neue Konto zurück. *account_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

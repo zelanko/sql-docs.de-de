@@ -18,12 +18,12 @@ ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 522dcff230177b807299d1647e0333517f93d8bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bca9c53780bb3258f73a274240c0bb5e63e126c3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728968"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538462"
 ---
 # <a name="sphelpalert-transact-sql"></a>sp_help_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,20 +44,15 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@alert_name =**] **"***Warnungsname***"**  
- Name der Warnung. *Warnungsname* ist **vom Datentyp nvarchar(128)**. Wenn *Warnungsname* ist nicht angegeben wird, Informationen zu allen Warnungen zurückgegeben.  
+`[ @alert_name = ] 'alert_name'` Name der Warnung. *Warnungsname* ist **vom Datentyp nvarchar(128)**. Wenn *Warnungsname* ist nicht angegeben wird, Informationen zu allen Warnungen zurückgegeben.  
   
- [ **@order_by =**] **'***order_by***'**  
- Die Sortierreihenfolge, die zum Erzeugen der Ergebnisse verwendet werden soll. *Order_by*ist **Sysname**, hat den Standardwert N '*Namen*".  
+`[ @order_by = ] 'order_by'` Die Sortierreihenfolge, die zum Erzeugen der Ergebnisse verwendet werden soll. *Order_by*ist **Sysname**, hat den Standardwert N '*Namen*".  
   
- [ **@alert_id =**] *alert_id*  
- Die ID der Warnung, zu der Informationen gemeldet werden sollen. *Alert_id*ist **Int**, hat den Standardwert NULL.  
+`[ @alert_id = ] alert_id` Die ID der Warnung, die die Informationen zur. *Alert_id*ist **Int**, hat den Standardwert NULL.  
   
- [ **@category_name =**]  **'***category***'**  
- Die Kategorie für die Warnung. *Kategorie* ist **Sysname**, hat den Standardwert NULL.  
+`[ @category_name = ] 'category'` Die Kategorie der Warnung. *Kategorie* ist **Sysname**, hat den Standardwert NULL.  
   
- [ **@legacy_format**=] *Legacy_format*  
- Gibt an, ob ein Legacyresultset erzeugt werden soll. *Legacy_format* ist **Bit**, hat den Standardwert **0**. Wenn *Legacy_format* ist **1**, **Sp_help_alert** gibt zurück, der von zurückgegebene Resultset **Sp_help_alert** in Microsoft SQL Server 2000.  
+`[ @legacy_format = ] legacy_format` Gibt an, ob ein legacyresultset erzeugt. *Legacy_format* ist **Bit**, hat den Standardwert **0**. Wenn *Legacy_format* ist **1**, **Sp_help_alert** gibt zurück, der von zurückgegebene Resultset **Sp_help_alert** in Microsoft SQL Server 2000.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -68,13 +63,13 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Vom System zugewiesener eindeutiger, ganzzahliger Bezeichner.|  
-|**name**|**sysname**|Name der Warnung (z. B. Demo: Full **Msdb** Log).|  
+|**name**|**sysname**|Name der Warnung (z. B. Demo: Vollständige **Msdb** Log).|  
 |**event_source**|**nvarchar(100)**|Quelle des Ereignisses. Sie werden immer **MSSQLServer** für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7.0|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Fehlernummer der Meldung, die die Warnung definiert. (Entspricht normalerweise einer Fehlernummer in der **Sysmessages** Tabelle). Wenn der Schweregrad, zur Definition der Warnung verwendet wird **Message_id** ist **0** oder NULL.|  
 |**severity**|**int**|Schweregrad (von **9** über **25**, **110**, **120**, **130**, oder **140**) der die Warnung definiert.|  
-|**aktiviert**|**tinyint**|Status Gibt an, ob die Warnung derzeit aktiviert ist (**1**) oder nicht (**0**). Eine nicht aktivierte Warnung wird nicht gesendet.|  
+|**enabled**|**tinyint**|Status Gibt an, ob die Warnung derzeit aktiviert ist (**1**) oder nicht (**0**). Eine nicht aktivierte Warnung wird nicht gesendet.|  
 |**delay_between_responses**|**int**|Wartezeit in Sekunden zwischen Antworten auf die Warnung.|  
 |**last_occurrence_date**|**int**|Datum, an dem die Warnung zuletzt aufgetreten ist.|  
 |**last_occurrence_time**|**int**|Uhrzeit, zu der die Warnung zuletzt aufgetreten ist.|  
@@ -102,13 +97,13 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Vom System zugewiesener eindeutiger, ganzzahliger Bezeichner.|  
-|**name**|**sysname**|Name der Warnung (z. B. Demo: Full **Msdb** Log).|  
+|**name**|**sysname**|Name der Warnung (z. B. Demo: Vollständige **Msdb** Log).|  
 |**event_source**|**nvarchar(100)**|Quelle des Ereignisses. Sie werden immer **MSSQLServer** für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7.0|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Fehlernummer der Meldung, die die Warnung definiert. (Entspricht normalerweise einer Fehlernummer in der **Sysmessages** Tabelle). Wenn der Schweregrad, zur Definition der Warnung verwendet wird **Message_id** ist **0** oder NULL.|  
 |**severity**|**int**|Schweregrad (von **9** über **25**, **110**, **120**, **130**, oder 1**40**) der die Warnung definiert.|  
-|**aktiviert**|**tinyint**|Status Gibt an, ob die Warnung derzeit aktiviert ist (**1**) oder nicht (**0**). Eine nicht aktivierte Warnung wird nicht gesendet.|  
+|**enabled**|**tinyint**|Status Gibt an, ob die Warnung derzeit aktiviert ist (**1**) oder nicht (**0**). Eine nicht aktivierte Warnung wird nicht gesendet.|  
 |**delay_between_responses**|**int**|Wartezeit in Sekunden zwischen Antworten auf die Warnung.|  
 |**last_occurrence_date**|**int**|Datum, an dem die Warnung zuletzt aufgetreten ist.|  
 |**last_occurrence_time**|**int**|Uhrzeit, zu der die Warnung zuletzt aufgetreten ist.|  

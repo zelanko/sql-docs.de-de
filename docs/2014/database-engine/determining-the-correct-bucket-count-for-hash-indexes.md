@@ -10,12 +10,12 @@ ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 56999c5e74648ecd36adea3ee941627c1e2e607b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 42fe996b3521316279caf3fcf7adb3e155a83dbd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377900"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536692"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Bestimmen der korrekten Bucketanzahl für Hashindizes
   Beim Erstellen der speicheroptimierten Tabelle müssen Sie einen Wert für den `BUCKET_COUNT`-Parameter angeben. Dieses Thema enthält Empfehlungen zum Bestimmen des geeigneten Werts für den `BUCKET_COUNT`-Parameter. Wenn Sie die richtige Bucketanzahl nicht ermitteln können, verwenden Sie einen nicht gruppierten Index.  Ein ungültiger `BUCKET_COUNT`-Wert kann, insbesondere wenn er zu niedrig ist, die Arbeitsauslastungsleistung sowie die Wiederherstellungszeit der Datenbank erheblich beeinträchtigen. Es ist besser, die Bucketanzahl zu überschätzen.  
@@ -38,7 +38,7 @@ ms.locfileid: "53377900"
 ### <a name="primary-key-and-unique-indexes"></a>Primärschlüssel und eindeutige Indizes  
  Da der Primärschlüsselindex eindeutig ist, entspricht die Anzahl unterschiedlicher Werte im Schlüssel der Anzahl der Zeilen in der Tabelle. Geben Sie für einen Beispielprimärschlüssel für (SalesOrderID, SalesOrderDetailID) in der Tabelle "Sales.SalesOrderDetail" in der AdventureWorks-Datenbank die folgende Abfrage aus, um die Anzahl der unterschiedlichen Primärschlüsselwerte zu berechnen. Diese entspricht der Anzahl der Zeilen in der Tabelle.  
   
-```tsql  
+```sql  
 SELECT COUNT(*) AS [row count]   
 FROM Sales.SalesOrderDetail  
 ```  
@@ -48,7 +48,7 @@ FROM Sales.SalesOrderDetail
 ### <a name="non-unique-indexes"></a>Nicht eindeutige Indizes  
  Für andere Indizes, z. B. einen mehrspaltigen Index für (SpecialOfferID, ProductID), geben Sie die folgende Abfrage aus, um die Anzahl von eindeutigen Indexschlüsselwerten zu bestimmen:  
   
-```tsql  
+```sql  
 SELECT COUNT(*) AS [SpecialOfferID_ProductID index key count]  
 FROM   
    (SELECT DISTINCT SpecialOfferID, ProductID   
@@ -65,7 +65,7 @@ FROM
 ## <a name="troubleshooting-the-bucket-count"></a>Problembehandlung für die Bucketanzahl  
  Bucketanzahl in speicheroptimierten Tabellen verwenden um beheben, [Sys. dm_db_xtp_hash_index_stats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql) um Statistiken zu den leeren Buckets und die Länge der zeilenketten zu erhalten. Mit der folgenden Abfrage können Statistiken zu allen Hashindizes in der aktuellen Datenbank abgerufen werden. Die Abfrage kann einige Zeit in Anspruch nehmen, wenn die Datenbank große Tabellen enthält.  
   
-```tsql  
+```sql  
 SELECT   
    object_name(hs.object_id) AS 'object name',   
    i.name as 'index name',   
@@ -99,7 +99,7 @@ FROM sys.dm_db_xtp_hash_index_stats AS hs
   
  Betrachten Sie als Beispiel die folgende Tabelle und das Skript zum Einfügen von Beispielzeilen in der Tabelle:  
   
-```tsql  
+```sql  
 CREATE TABLE [Sales].[SalesOrderHeader_test]  
 (  
    [SalesOrderID] [uniqueidentifier] NOT NULL DEFAULT (newid()),  

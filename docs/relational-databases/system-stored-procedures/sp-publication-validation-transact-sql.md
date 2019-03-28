@@ -16,12 +16,12 @@ ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8612b3713113435461ca59845710b9f7284f1a78
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 124d5d14f810a32e32ce92cbb96afe4569804c67
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591404"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537172"
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [**@publication=**] **"**_Veröffentlichung"_  
+ [**@publication=**] **'**_publication'_  
  Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [**@rowcount_only=**] *Rowcount_only*  
+ [**@rowcount_only=**] *rowcount_only*  
  Gibt an, ob nur die Zeilenanzahl für die Tabelle zurückgegeben werden soll. *Rowcount_only* ist **Smallint** und kann einen der folgenden Werte.  
   
 |Wert|Description|  
@@ -54,7 +54,7 @@ sp_publication_validation [ @publication = ] 'publication'
 |**1** (Standard)|Führt nur eine Überprüfung der Zeilenanzahl aus.|  
 |**2**|Führt eine Überprüfung der Zeilenanzahl und der binären Prüfsumme aus.<br /><br /> Hinweis: Für Abonnenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Version 7.0, wird nur eine Überprüfung der Zeilenanzahl ausgeführt.|  
   
- [**@full_or_fast=**] *Full_or_fast*  
+ [**@full_or_fast=**] *full_or_fast*  
  Die Methode, mit der die Zeilenanzahl berechnet wird. *Full_or_fast* ist **Tinyint** und kann einen der folgenden Werte.  
   
 |Wert|Description|  
@@ -63,11 +63,9 @@ sp_publication_validation [ @publication = ] 'publication'
 |**1**|Führt eine schnelle Zählung von **sysindexes.rows**. Zählen der Zeilen im [sys.sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) ist wesentlich schneller als das Zählen von Zeilen in der eigentlichen Tabelle. Aber da [sys.sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) nur verzögert aktualisiert, die Zeilenanzahl möglicherweise nicht ganz genau.|  
 |**2** (Standardwert)|Führt eine bedingte schnelle Zählung durch, indem zunächst versucht wird, die schnelle Methode anzuwenden. Ergeben sich mit der schnellen Methode Unterschiede, wird die Methode für die vollständige Zählung verwendet. Wenn *Expected_rowcount* NULL ist und die gespeicherte Prozedur wird verwendet, um den Wert abzurufen, wird immer eine vollständige Zählung mit COUNT(*) verwendet.|  
   
- [  **@shutdown_agent=**] *Shutdown_agent*  
- Gibt an, ob der Verteilungs-Agent sofort nach dem Abschluss der Überprüfung beendet werden soll. *Shutdown_agent* ist **Bit**, hat den Standardwert **0**. Wenn **0**, Replikations-Agent nicht heruntergefahren. Wenn **1**, Replikations-Agent nach der Überprüfung des letzten Artikels beendet.  
+`[ @shutdown_agent = ] shutdown_agent` Ist, gibt an, ob der Verteilungs-Agent sofort nach dem Abschluss der Überprüfung heruntergefahren werden soll. *Shutdown_agent* ist **Bit**, hat den Standardwert **0**. Wenn **0**, Replikations-Agent nicht heruntergefahren. Wenn **1**, Replikations-Agent nach der Überprüfung des letzten Artikels beendet.  
   
- [ **@publisher** =] **"**_Verleger_**"**  
- Gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  *Publisher* sollte nicht verwendet werden, bei der Überprüfung auf Anforderung eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger.  
@@ -87,8 +85,8 @@ sp_publication_validation [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>Siehe auch  
  [Überprüfen der Daten am Abonnenten](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [Sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
- [Sp_table_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
+ [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
+ [sp_table_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

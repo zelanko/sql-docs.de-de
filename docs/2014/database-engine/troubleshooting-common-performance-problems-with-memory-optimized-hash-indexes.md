@@ -10,28 +10,28 @@ ms.assetid: 1954a997-7585-4713-81fd-76d429b8d095
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 79d986ed5f08c120113bd31ef9bb4f613cc56b66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d7ed4098feb8bfd2d156e3de2f81fbf7329915aa
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154970"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535542"
 ---
 # <a name="troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes"></a>Problembehandlung für häufige Leistungsprobleme bei speicheroptimierten Hashindizes
   Der Schwerpunkt dieses Themas liegt auf der Problembehandlung und dem Umgehen von häufigen Problemen mit Hashindizes.  
   
 ## <a name="search-requires-a-subset-of-hash-index-key-columns"></a>Suche erfordert eine Teilmenge von Hashindex-Schlüsselspalten  
- **Problem:** Bei Hashindizes sind Werte für alle Indexschlüsselspalten erforderlich, um den Hashwert zu berechnen und die entsprechenden Zeilen in der Hashtabelle zu suchen. Wenn eine Abfrage nur Gleichheitsprädikate für eine Teilmenge der Indexschlüssel in der WHERE-Klausel enthält, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] daher nicht mithilfe einer Indexsuche die Zeilen suchen, die den Prädikaten in der WHERE-Klausel entsprechen.  
+ **Problem:** Hash-Indizes werden Werte für alle Indexschlüsselspalten erforderlich, um den Hashwert zu berechnen, und die entsprechenden Zeilen in der Hashtabelle suchen. Wenn eine Abfrage nur Gleichheitsprädikate für eine Teilmenge der Indexschlüssel in der WHERE-Klausel enthält, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] daher nicht mithilfe einer Indexsuche die Zeilen suchen, die den Prädikaten in der WHERE-Klausel entsprechen.  
   
  Im Gegensatz dazu unterstützen geordnete Indizes wie datenträgerbasierte nicht gruppierte Indizes und speicheroptimierte nicht gruppierte Indizes die Indexsuche mit einer Teilmenge der Indexschlüsselspalten, sofern es sich um die führenden Spalten im Index handelt.  
   
- **Symptom:** Dies führt zu einer Leistungsverringerung, da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vollständige Tabellenscans anstelle einer Indexsuche ausführen muss, die normalerweise schneller ist.  
+ **Symptom:** Dies führt zu einer leistungsverringerung, da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] muss vollständige Tabellenscans anstelle einer Indexsuche ausführen, die in der Regel schneller ist.  
   
- **Problembehandlung:** Neben der Leistungsverringerung zeigt die Überprüfung der Abfragepläne einen Scan anstelle einer Indexsuche. Bei einer relativ einfachen Abfrage zeigt die Überprüfung des Abfragetexts und der Indexdefinition auch, ob für die Suche eine Teilmenge der Indexschlüsselspalten erforderlich ist.  
+ **So beheben Sie:** Neben der leistungsverringerung zeigt die Überprüfung der Abfragepläne einen Scan anstelle einer Indexsuche. Bei einer relativ einfachen Abfrage zeigt die Überprüfung des Abfragetexts und der Indexdefinition auch, ob für die Suche eine Teilmenge der Indexschlüsselspalten erforderlich ist.  
   
  Betrachten Sie die folgende Tabelle und Abfrage:  
   
-```tsql  
+```sql  
 CREATE TABLE [dbo].[od]  
 (  
      o_id INT NOT NULL,  
@@ -48,7 +48,7 @@ WITH (MEMORY_OPTIMIZED = ON)
   
  Die Tabelle verfügt über einen Hashindex für die beiden Spalten (o_id, od_id), während die Abfrage ein Gleichheitsprädikat für (o_id) enthält. Da die Abfrage nur Gleichheitsprädikate für eine Teilmenge der Indexschlüsselspalten enthält, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] keinen Indexsuchvorgang mit "PK_od" ausführen. Stattdessen muss [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf einen vollständigen Indexscan zurückgreifen.  
   
- **Problemumgehungen:** Es gibt eine Reihe von möglichen Problemumgehungen. Zum Beispiel:  
+ **Problemumgehungen:** Es gibt eine Reihe von möglichen problemumgehungen. Zum Beispiel:  
   
 -   Erstellen Sie den Index mit dem Typ eines nicht gruppierten Indexes anstelle eines nicht gruppierten Hash erneut. Der speicheroptimierte nicht gruppierte Index wird sortiert, und somit kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eine Indexsuche der führenden Indexschlüsselspalten ausführen. Die resultierende Primärschlüsseldefinition für das Beispiel lautet `constraint PK_od primary key nonclustered`.  
   
@@ -56,7 +56,7 @@ WITH (MEMORY_OPTIMIZED = ON)
   
 -   Fügen Sie einen neuen Hashindex hinzu, der den Spalten in der WHERE-Klausel der Abfrage entspricht. Im Beispiel würde dies zu folgender Tabellendefinition führen:  
   
-    ```tsql  
+    ```sql  
     CREATE TABLE dbo.od  
      ( o_id INT NOT NULL,  
      od_id INT NOT NULL,  

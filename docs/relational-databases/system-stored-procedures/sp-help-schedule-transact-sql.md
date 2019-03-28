@@ -18,12 +18,12 @@ ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 62a8246c6d694ae002a615e803c520127ab595c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fff543b074936f8bf1d69d841a1e81e402e9b0ae
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630180"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535432"
 ---
 # <a name="sphelpschedule-transact-sql"></a>sp_help_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,17 +44,13 @@ sp_help_schedule
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@schedule_id =** ] *id*  
- Der Bezeichner des Zeitplans, der aufgelistet werden soll. *Schedule_name* ist **Int**, hat keinen Standardwert. Entweder *Schedule_id* oder *Schedule_name* kann angegeben werden.  
+`[ @schedule_id = ] id` Der Bezeichner des Zeitplans, der aufgelistet. *Schedule_name* ist **Int**, hat keinen Standardwert. Entweder *Schedule_id* oder *Schedule_name* kann angegeben werden.  
   
- [ **@schedule_name =** ] **'***schedule_name***'**  
- Der Name des Zeitplans, der aufgelistet werden soll. *Schedule_name* ist **Sysname**, hat keinen Standardwert. Entweder *Schedule_id* oder *Schedule_name* kann angegeben werden.  
+`[ @schedule_name = ] 'schedule_name'` Der Name des Zeitplans, der aufgelistet. *Schedule_name* ist **Sysname**, hat keinen Standardwert. Entweder *Schedule_id* oder *Schedule_name* kann angegeben werden.  
   
- [ **@attached_schedules_only** =] *Attached_schedules_only* ]  
- Gibt an, ob nur Zeitpläne angezeigt werden sollen, denen ein Auftrag angefügt ist. *Attached_schedules_only* ist **Bit**, hat den Standardwert **0**. Wenn *Attached_schedules_only* ist **0**, alle Zeitpläne angezeigt. Wenn *Attached_schedules_only* ist **1**, das Resultset enthält nur Zeitpläne, die mit einem Auftrag angefügt sind.  
+`[ @attached_schedules_only = ] attached_schedules_only ]` Gibt an, ob nur Zeitpläne angezeigt werden, dass ein Auftrag angefügt ist. *Attached_schedules_only* ist **Bit**, hat den Standardwert **0**. Wenn *Attached_schedules_only* ist **0**, alle Zeitpläne angezeigt. Wenn *Attached_schedules_only* ist **1**, das Resultset enthält nur Zeitpläne, die mit einem Auftrag angefügt sind.  
   
- [ **@include_description** =] *Include_description*  
- Gibt an, ob das Resultset Beschreibungen enthalten soll. *Include_description* ist **Bit**, hat den Standardwert **0**. Wenn *Include_description* ist **0**, *Schedule_description* enthält einen Platzhalter für die Spalte des Resultsets. Wenn *Include_description* ist **1**, ist die Beschreibung des Zeitplans im Resultset enthalten.  
+`[ @include_description = ] include_description` Gibt an, ob das Resultset Beschreibungen enthalten soll. *Include_description* ist **Bit**, hat den Standardwert **0**. Wenn *Include_description* ist **0**, *Schedule_description* enthält einen Platzhalter für die Spalte des Resultsets. Wenn *Include_description* ist **1**, ist die Beschreibung des Zeitplans im Resultset enthalten.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -67,7 +63,7 @@ sp_help_schedule
 |**schedule_id**|**int**|ID des Zeitplans.|  
 |**schedule_uid**|**uniqueidentifier**|Bezeichner für den Zeitplan.|  
 |**schedule_name**|**sysname**|Name des Zeitplans.|  
-|**aktiviert**|**int**|Ob der Zeitplan aktiviert (**1**) oder nicht aktiviert ist (**0**).|  
+|**enabled**|**int**|Ob der Zeitplan aktiviert (**1**) oder nicht aktiviert ist (**0**).|  
 |**freq_type**|**int**|Der Wert, der angibt, wann der Auftrag ausgeführt werden.<br /><br /> **1** = einmal<br /><br /> **4** = täglich<br /><br /> **8** = wöchentlich<br /><br /> **16** = monatlich<br /><br /> **32** = monatlich, relativ zu den **Freq_interval**<br /><br /> **64** = ausführen, wenn der SQLServerAgent-Dienst gestartet wird.|  
 |**freq_interval**|**int**|Tage, wenn der Auftrag ausgeführt wird. Der Wert hängt vom Wert der **Freq_type**. Weitere Informationen finden Sie unter [Sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_subday_type**|**int**|Einheiten für **Freq_subday_interval**. Weitere Informationen finden Sie unter [Sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  

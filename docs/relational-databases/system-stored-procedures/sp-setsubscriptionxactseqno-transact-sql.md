@@ -16,12 +16,12 @@ ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 409f79007479fabe82b1c904f3bc0db943e3c116
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bfc49e712e75a862c9c43ce99cc35b56c014cebc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817862"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534652"
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,23 +44,19 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publisher=** ] **"***Verleger***"**  
- Der Name des Verlegers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher = ] 'publisher'` Ist der Name des Verlegers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@publisher_db=** ] **"***Publisher_db***"**  
- Der Name der Veröffentlichungsdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert. Für einen nicht - SQL Server-Verleger, *Publisher_db* ist der Name der Verteilungsdatenbank.  
+`[ @publisher_db = ] 'publisher_db'` Ist der Name der Veröffentlichungsdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert. Für einen nicht - SQL Server-Verleger, *Publisher_db* ist der Name der Verteilungsdatenbank.  
   
- [  **@publication=** ] **"***Veröffentlichung***"**  
- Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert. Wenn der Verteilungs-Agent von mehreren Veröffentlichungen gemeinsam verwendet wird, müssen Sie angeben, dass einen Wert, der alle für *Veröffentlichung*.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert. Wenn der Verteilungs-Agent von mehreren Veröffentlichungen gemeinsam verwendet wird, müssen Sie angeben, dass einen Wert, der alle für *Veröffentlichung*.  
   
- [  **@xact_seqno=** ] *Xact_seqno*  
- Die LSN der nächsten Transaktion auf dem Verteiler, die auf dem Abonnenten angewendet werden soll. *Xact_seqno* ist **varbinary(16)**, hat keinen Standardwert.  
+`[ @xact_seqno = ] xact_seqno` Ist die LSN der nächsten Transaktion auf dem Verteiler, auf dem Abonnenten angewendet werden. *Xact_seqno* ist **varbinary(16)**, hat keinen Standardwert.  
   
 ## <a name="result-set"></a>Resultset  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**URSPRÜNGLICHE XACT_SEQNO**|**varbinary(16)**|Die ursprüngliche LSN der nächsten Transaktion, die auf dem Abonnenten angewendet werden soll.|  
+|**ORIGINAL XACT_SEQNO**|**varbinary(16)**|Die ursprüngliche LSN der nächsten Transaktion, die auf dem Abonnenten angewendet werden soll.|  
 |**AKTUALISIERTE XACT_SEQNO**|**varbinary(16)**|Die aktualisierte LSN der nächsten Transaktion, die auf dem Abonnenten angewendet werden soll.|  
 |**STREAM-ANZAHL FÜR ABONNEMENT**|**int**|Die Anzahl der bei der letzten Synchronisierung verwendeten Abonnementdatenströme.|  
   

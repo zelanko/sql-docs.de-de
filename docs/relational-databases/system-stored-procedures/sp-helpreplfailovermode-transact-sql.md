@@ -16,12 +16,12 @@ ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 19fafb4b3ef3737018aaae21992f0b6a859c7ef3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f733740b062983f14379f71a48b77f73392aceae
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796430"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529532"
 ---
 # <a name="sphelpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,25 +42,21 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publisher=**] **'***publisher***'**  
- Der Name des Verlegers, der am Update dieses Abonnenten teilnimmt. *Publisher* ist **Sysname**, hat keinen Standardwert. Der Verleger muss bereits für das Veröffentlichen konfiguriert sein.  
+`[ @publisher = ] 'publisher'` Ist der Name des Verlegers, der am Update dieses Abonnenten teilnimmt. *Publisher* ist **Sysname**, hat keinen Standardwert. Der Verleger muss bereits für das Veröffentlichen konfiguriert sein.  
   
- [  **@publisher_db =**] **"***Publisher_db***"**  
- Der Name der Veröffentlichungsdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher_db = ] 'publisher_db'` Ist der Name der Veröffentlichungsdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@publication=**] **'***publication***'**  
- Der Name der Veröffentlichung, die in das Update dieses Abonnenten einbezogen wird. *Veröffentlichung*ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung, die das Update dieses Abonnenten teilnimmt. *Veröffentlichung*ist **Sysname**, hat keinen Standardwert.  
   
- [  **@failover_mode_id=**] **"***Failover_mode_id***' Ausgabe**  
- Gibt den Ganzzahlwert des Failovermodus zurück und ist ein **Ausgabe** Parameter. *Failover_mode_id* ist eine **Tinyint** hat den Standardwert **0**. Es gibt **0** für sofortige Updates und **1** Aktualisierung in der Warteschlange.  
+`[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` Gibt den Ganzzahlwert des Failovermodus zurück und ist ein **Ausgabe** Parameter. *Failover_mode_id* ist eine **Tinyint** hat den Standardwert **0**. Es gibt **0** für sofortige Updates und **1** Aktualisierung in der Warteschlange.  
   
  [**@failover_mode=**] **"***Failover_mode***' Ausgabe**  
  Gibt den Modus zurück, in dem Datenänderungen auf dem Abonnenten vorgenommen werden. *Failover_mode* ist eine **nvarchar(10)** hat den Standardwert NULL. Ist ein **Ausgabe** Parameter.  
   
 |Wert|Description|  
 |-----------|-----------------|  
-|**Sofortige**|Sofortiges Update: Auf dem Abonnenten durchgeführte Updates werden sofort an den Verleger weitergegeben, indem ein Zweiphasencommitprotokoll (2PC) verwendet wird.|  
-|**In der Warteschlange**|Verzögertes Update: Auf dem Abonnenten durchgeführte Updates werden in einer Warteschlange gespeichert.|  
+|**immediate**|Sofortiges Update: Auf dem Abonnenten durchgeführte Updates werden sofort an den Verleger weitergegeben, indem ein Zweiphasencommitprotokoll (2PC) verwendet wird.|  
+|**queued**|Verzögertes Update: Auf dem Abonnenten durchgeführte Updates werden in einer Warteschlange gespeichert.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -72,6 +68,6 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
  Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_helpreplfailovermode**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_setreplfailovermode &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
+ [sp_setreplfailovermode &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
   
   

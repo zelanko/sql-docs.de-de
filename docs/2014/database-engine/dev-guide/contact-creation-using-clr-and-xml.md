@@ -12,12 +12,12 @@ ms.assetid: b5185c1e-56de-41a8-a9c3-eec663750cde
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 20a59cf2ac94b060c917a4cea2bbbb69dd877120
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c96b5b5f7ae92dd85f2c93dcb0423dcc342c5152
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371352"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534612"
 ---
 # <a name="contact-creation-using-clr-and-xml"></a>Erstellung von Kontakten mit CLR und XML
   Das Kontakterstellungsbeispiel für SQL Server stellt nützliche Hilfsprogramme bereit, die eine zusätzliche Funktionalitätsebene auf der einfachen AdventureWorks2012-Beispieldatenbank bilden. Das erste Hilfsprogramm erstellt Kontaktdatensätze für die verschiedenen Personen, die mit der AdventureWorks2012-Datenbank in Verbindung stehen. Die Kontaktinformationen werden mit XML angegeben und an eine C#- oder VB-basierte gespeicherte Prozedur übergeben, um das XML zu erstellen und es in die ordnungsgemäßen Tabellen für die Datenbank einzufügen.  
@@ -1386,7 +1386,7 @@ End Class
   
  Dies ist das [!INCLUDE[tsql](../../includes/tsql-md.md)]-Installationsskript (`Install.sql`), das die Assembly bereitstellt und die gespeicherte Prozedur in der Datenbank erstellt.  
   
-```tsql  
+```sql  
 use AdventureWorks  
 GO  
   

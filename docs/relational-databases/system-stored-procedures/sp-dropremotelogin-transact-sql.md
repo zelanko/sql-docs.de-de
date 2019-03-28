@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fa52c7e66a690b54c33330e09fe4373962ea2f9b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 910f4f02c17ba0f6524648b9ac1eb201d735b238
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589314"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527922"
 ---
 # <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +44,11 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@remoteserver =** ] **"**_Remoteserver_**"**  
- Der Name des Remoteservers, der dem zu entfernenden Remoteanmeldenamen zugeordnet ist. *remoteserver* ist vom Datentyp **sysname**und hat keinen Standardwert. Der*remoteserver* muss bereits vorhanden sein.  
+`[ @remoteserver = ] 'remoteserver'` Ist der Name des Remoteservers zugeordnet, die der Remoteanmeldung, die entfernt werden soll. *remoteserver* ist vom Datentyp **sysname**und hat keinen Standardwert. Der*remoteserver* muss bereits vorhanden sein.  
   
- [  **@loginame =** ] **"**_Anmeldung_**"**  
- Der optionale Anmeldename für den lokalen Server, der dem Remoteserver zugeordnet ist. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL. *login* muss ggf. bereits vorhanden sein.  
+`[ @loginame = ] 'login'` Ist der optionale Anmeldename auf dem lokalen Server, der mit dem Remoteserver zugeordnet ist. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL. *login* muss ggf. bereits vorhanden sein.  
   
- [  **@remotename =** ] **"**_Remote_name_**"**  
- Der optionale Name der Remoteanmeldung, die beim Anmelden vom Remoteserver *login* zugeordnet wird. *remote_name* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
+`[ @remotename = ] 'remote_name'` Der optionale Name der Remoteanmeldung, die zugeordnet wird *Anmeldung* beim Anmelden vom Remoteserver. *remote_name* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -95,7 +92,7 @@ EXEC sp_dropremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';
  [Security Stored Procedures &#40;Transact-SQL&#41; (Gespeicherte Sicherheitsprozeduren (Transact-SQL))](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
- [Sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
+ [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
  [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [sp_droplinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
  [sp_droplogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   

@@ -18,12 +18,12 @@ ms.assetid: 8a9c4a3a-91e8-435e-b721-e0293c92be3e
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2705451273849e6eb3e7158c410590b6c9031c41
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9993591bf1073ef5c72636571e9127496f3d3ee
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733698"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535532"
 ---
 # <a name="spsyspolicyrenamepolicycategory-transact-sql"></a>sp_syspolicy_rename_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ sp_syspolicy_rename_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@name =** ] **'***name***'**  
- Der Name der Richtlinienkategorie, die Sie umbenennen möchten. *Namen* ist **Sysname**, und muss angegeben werden, wenn *Policy_category_id* ist NULL.  
+`[ @name = ] 'name'` Ist der Name der Richtlinienkategorie, die Sie umbenennen möchten. *Namen* ist **Sysname**, und muss angegeben werden, wenn *Policy_category_id* ist NULL.  
   
- [ **@policy_category_id=** ] *policy_category_id*  
- Der Bezeichner für die Richtlinienkategorie, die Sie umbenennen möchten. *Policy_category_id* ist **Int**, und muss angegeben werden, wenn *Namen* ist NULL.  
+`[ @policy_category_id = ] policy_category_id` Ist der Bezeichner für die Richtlinienkategorie, die Sie umbenennen möchten. *Policy_category_id* ist **Int**, und muss angegeben werden, wenn *Namen* ist NULL.  
   
- [  **@new_name=** ] **"***New_name***"**  
- Ist der neue Name für die Richtlinienkategorie. *New_name* ist **Sysname**, und es ist erforderlich. Darf nicht NULL und keine leere Zeichenfolge sein.  
+`[ @new_name = ] 'new_name'` Ist der neue Name für die Richtlinienkategorie. *New_name* ist **Sysname**, und es ist erforderlich. Darf nicht NULL und keine leere Zeichenfolge sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -62,7 +59,7 @@ sp_syspolicy_rename_policy_category { [ @name = ] 'name' | [ @policy_category_id
  Erfordert die Mitgliedschaft in der festen Datenbankrolle PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Mögliche Erweiterung der Anmeldeinformationen: Benutzer mit der Rolle PolicyAdministratorRole können Servertrigger erstellen und die Ausführung von Richtlinien planen. Dies kann sich auf die Arbeitsweise der [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz auswirken. Ein Benutzer mit der Rolle PolicyAdministratorRole kann beispielsweise eine Richtlinie erstellen, durch die das Erstellen der meisten Objekte in [!INCLUDE[ssDE](../../includes/ssde-md.md)] verhindert wird. Aufgrund dieser möglichen Erweiterung der Anmeldeinformationen, sollte die PolicyAdministratorRole-Rolle gewährt werden nur für Benutzer, die mit der Kontrolle der Konfiguration von vertrauenswürdigen sind die [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Mögliche Erweiterung der Anmeldeinformationen: Benutzer der Rolle PolicyAdministratorRole können Servertrigger erstellen und Ausführung von Richtlinien planen, die den Betrieb der Instanz von beeinflussen, können die [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Ein Benutzer mit der Rolle PolicyAdministratorRole kann beispielsweise eine Richtlinie erstellen, durch die das Erstellen der meisten Objekte in [!INCLUDE[ssDE](../../includes/ssde-md.md)] verhindert wird. Aufgrund dieser möglichen Erweiterung der Anmeldeinformationen, sollte die PolicyAdministratorRole-Rolle gewährt werden nur für Benutzer, die mit der Kontrolle der Konfiguration von vertrauenswürdigen sind die [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine Richtlinienkategorie "Test Category 1" in "Test Category 2" umbenannt.  
@@ -76,8 +73,8 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Prozeduren für Richtlinie der richtlinienbasierten Verwaltung &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [Sp_syspolicy_add_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-transact-sql.md)   
- [Sp_syspolicy_delete_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-transact-sql.md)   
- [Sp_syspolicy_update_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-transact-sql.md)  
+ [sp_syspolicy_add_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-transact-sql.md)   
+ [sp_syspolicy_delete_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-transact-sql.md)   
+ [sp_syspolicy_update_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-transact-sql.md)  
   
   

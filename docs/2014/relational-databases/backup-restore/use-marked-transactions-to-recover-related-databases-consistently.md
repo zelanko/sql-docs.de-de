@@ -20,15 +20,15 @@ ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 345584f406830689c4f0bec2a563314d798595a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37b4a53461b2ebd485941ecad89e3672e7c31b62
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073130"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532582"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently-full-recovery-model"></a>Wiederherstellen von verwandten Datenbanken mithilfe von markierten Transaktionen (vollständiges Wiederherstellungsmodell)
-  Dieses Thema ist nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken relevant, die das vollständige oder das massenprotokollierte Wiederherstellungsmodell verwenden.  
+  Dieses Thema ist nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken relevant, die das vollständige oder das massenprotokollierte Wiederherstellungsmodell verwenden.  
   
  Wenn Sie Updates für zwei oder mehr Datenbanken, ( *zugehörige Datenbanken*), ausführen, können Sie diese mithilfe von Transaktionsmarkierungen bis zu einem logisch konsistenten Punkt wiederherstellen. Bei dieser Wiederherstellung gehen jedoch alle Transaktionen verloren, für die nach der Markierung, die als Wiederherstellungspunkt verwendet wird, ein Commit ausgeführt wird. Das Markieren von Transaktionen empfiehlt sich nur, wenn Sie verbundene Datenbanken prüfen oder wenn Sie in Kauf nehmen, dass Transaktionen, für die kürzlich ein Commit ausgeführt wurde, verloren gehen.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48073130"
 ### <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird das Transaktionsprotokoll bis zur Markierung in der markierten Transaktion mit dem Namen `ListPriceUpdate`wiederhergestellt.  
   
-```tsql  
+```sql  
 USE AdventureWorks  
 GO  
 BEGIN TRANSACTION ListPriceUpdate  
@@ -127,7 +127,7 @@ RESTORE LOG AdventureWorks
   
  Angenommen, eine partitionierte Datenbank ist in mehreren Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vorhanden. In jeder Instanz gibt es eine Datenbank namens `coyote`. Erstellen Sie zuerst in allen Datenbanken eine gespeicherte Prozedur, z. B. `sp_SetMark`.  
   
-```tsql  
+```sql  
 CREATE PROCEDURE sp_SetMark  
 @name nvarchar (128)  
 AS  
@@ -139,7 +139,7 @@ GO
   
  Erstellen Sie anschließend die gespeicherte Prozedur `sp_MarkAll` , in der eine Transaktion enthalten ist, mit der in jeder Datenbank eine Markierung platziert wird. `sp_MarkAll` kann von jeder Instanz aus ausgeführt werden.  
   
-```tsql  
+```sql  
 CREATE PROCEDURE sp_MarkAll  
 @name nvarchar (128)  
 AS  

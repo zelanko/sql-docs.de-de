@@ -18,12 +18,12 @@ ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bbecf5d57ae6e11f3a29aca64b7ce8c52a6f6b76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48d70126d071879754011fed7342d03dd72185a5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733830"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534382"
 ---
 # <a name="sphelpoperator-transact-sql"></a>sp_help_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_help_operator
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@operator_name=** ] **"***Operatorname***"**  
- Der Name des Operators. *Operatorname* ist **Sysname**. Wenn *Operatorname* ist nicht angegeben ist, werden Informationen zu allen Operatoren zurückgegeben.  
+`[ @operator_name = ] 'operator_name'` Der Name des Operators. *Operatorname* ist **Sysname**. Wenn *Operatorname* ist nicht angegeben ist, werden Informationen zu allen Operatoren zurückgegeben.  
   
- [ **@operator_id=** ] *operator_id*  
- Die ID des Operators, für den Informationen angefordert werden. *Operator_id*ist **Int**, hat den Standardwert NULL.  
+`[ @operator_id = ] operator_id` Die ID des Operators für die Informationen angefordert werden. *Operator_id*ist **Int**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Entweder *Operator_id* oder *Operatorname* muss angegeben werden, aber beide Angaben sind nicht möglich.  
@@ -61,7 +59,7 @@ sp_help_operator
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Operator-ID.|  
 |**name**|**sysname**|Name des Operators.|  
-|**aktiviert**|**tinyint**|Operator steht für den Empfang von Benachrichtigungen zur Verfügung:<br /><br /> **1** = Ja<br /><br /> **0** = Nein|  
+|**enabled**|**tinyint**|Operator steht für den Empfang von Benachrichtigungen zur Verfügung:<br /><br /> **1** = Ja<br /><br /> **0** = Nein|  
 |**email_address**|**nvarchar(100)**|E-Mail-Adresse des Operators.|  
 |**last_email_date**|**int**|Datum, an dem der Operator zuletzt per E-Mail benachrichtigt wurde.|  
 |**last_email_time**|**int**|Uhrzeit, zu der der Operator zuletzt per E-Mail benachrichtigt wurde.|  

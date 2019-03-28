@@ -18,12 +18,12 @@ ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3eae9eeceec6d32ca616244f2ebd77f96d23e614
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: b36c576fb5bb3bb3cc168430902223802ca937a3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124150"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535172"
 ---
 # <a name="spdropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,9 @@ sp_dropmessage [ @msgnum = ] message_number
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@msgnum =** ] *Message_number*  
- Die zu löschende Nachrichtennummer. *message_number* muss eine benutzerdefinierte Nachricht mit einer Nachrichtennummer größer als 50000 sein. *message_number* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @msgnum = ] message_number` Ist die zu löschende Nachrichtennummer. *message_number* muss eine benutzerdefinierte Nachricht mit einer Nachrichtennummer größer als 50000 sein. *message_number* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
- [  **@lang =** ] **"**_Sprache_**"**  
- Die Sprache der zu löschenden Fehlermeldung. Wenn **all** angegeben wird, werden alle Sprachversionen von *message_number* gelöscht. *language* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
+`[ @lang = ] 'language'` Ist die Sprache der zu löschenden Fehlermeldung. Wenn **all** angegeben wird, werden alle Sprachversionen von *message_number* gelöscht. *language* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

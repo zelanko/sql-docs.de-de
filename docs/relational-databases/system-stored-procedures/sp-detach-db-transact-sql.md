@@ -19,12 +19,12 @@ ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bf38282332f1cf8c3a5d3dd7716f9adc21e7bd8f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1b5dfd9cf062e5767606d83c3beb8a25b36387f1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201909"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538222"
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +46,13 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@dbname =** ] **'***database_name***'**  
- Der Name der Datenbank, die getrennt werden soll. *Database_name* ist eine **Sysname** Wert hat den Standardwert NULL.  
+`[ @dbname = ] 'database_name'` Ist der Name der Datenbank getrennt werden. *Database_name* ist eine **Sysname** Wert hat den Standardwert NULL.  
   
- [ **@skipchecks =** ] **'***skipchecks***'**  
- Gibt an, ob UPDATE STATISTIC übersprungen oder ausgeführt werden soll. *Skipchecks* ist eine **nvarchar(10)** Wert hat den Standardwert NULL. Geben Sie zum Aktualisieren von Statistiken auslassen, **"true"**. Um UPDATE STATISTICS explizit auszuführen zu können, geben **"false"**.  
+`[ @skipchecks = ] 'skipchecks'` Gibt an, ob bzw. Führen Sie UPDATE STATISTIC übersprungen werden soll. *Skipchecks* ist eine **nvarchar(10)** Wert hat den Standardwert NULL. Geben Sie zum Aktualisieren von Statistiken auslassen, **"true"**. Um UPDATE STATISTICS explizit auszuführen zu können, geben **"false"**.  
   
  UPDATE STATISTICS wird standardmäßig ausgeführt, um Informationen zu den Daten in den Tabellen und Indizes zu aktualisieren. Das Ausführen von UPDATE STATISTICS ist nützlich für Datenbanken, die auf Nur-Lese-Medien verschoben werden sollen.  
   
- [  **@keepfulltextindexfile=** ] **"***KeepFulltextIndexFile***"**  
- Gibt an, dass die Volltextindex-Datei, die der zu trennenden Datenbank zugeordnet ist, während des Trennvorgangs der Datenbank nicht gelöscht wird. *KeepFulltextIndexFile* ist eine **nvarchar(10)** hat den Standardwert des **"true"**. Wenn *KeepFulltextIndexFile* ist **"false"**, wird die Volltext-Indexdateien der Datenbank zugeordnet, und die Metadaten der der Volltextindex gelöscht, es sei denn, die Datenbank schreibgeschützt ist. Wenn der Wert NULL oder **"true"**, volltextbezogene Metadaten beibehalten werden.  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` Gibt an, dass die Volltextindex-Datei mit der Datenbank, die getrennt wird, nicht während der der Datenbank gelöscht wird Trennvorgang. *KeepFulltextIndexFile* ist eine **nvarchar(10)** hat den Standardwert des **"true"**. Wenn *KeepFulltextIndexFile* ist **"false"**, wird die Volltext-Indexdateien der Datenbank zugeordnet, und die Metadaten der der Volltextindex gelöscht, es sei denn, die Datenbank schreibgeschützt ist. Wenn der Wert NULL oder **"true"**, volltextbezogene Metadaten beibehalten werden.  
   
 > [!IMPORTANT]
 >  Die**@keepfulltextindexfile** Parameter wird in einer zukünftigen Version entfernt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Verwenden Sie diesen Parameter beim Entwickeln neuer Anwendungen nicht, und planen Sie so bald wie möglich das Ändern von Anwendungen, in denen er zurzeit verwendet wird.  

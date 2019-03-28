@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73526621bcd2925b863feb45566ed652484a6d57
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 74837390afe358d4f9a12d4f98ea9d2e4166e146
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131740"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536092"
 ---
 # <a name="spdropmergepartition-transact-sql"></a>sp_dropmergepartition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,14 +41,11 @@ sp_dropmergepartition [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publication**] = **"**_Veröffentlichung_**"**  
- Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication] = 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@suser_sname**=] **"**_Suser_sname_**"**  
- Ist der Wert der [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) -Funktion auf dem Abonnenten verwendet wird, um die Partition zu definieren. *SUSER_SNAME* ist **Sysname**, hat keinen Standardwert.  
+`[ @suser_sname = ] 'suser_sname'` Ist der Wert der [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) -Funktion auf dem Abonnenten verwendet wird, um die Partition zu definieren. *SUSER_SNAME* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@host_name** =] **"**_Host_name_**"**  
- Ist der Wert der [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) -Funktion auf dem Abonnenten verwendet wird, um die Partition zu definieren. *HOST_NAME* ist **Sysname**, hat keinen Standardwert.  
+`[ @host_name = ] 'host_name'` Ist der Wert der [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) -Funktion auf dem Abonnenten verwendet wird, um die Partition zu definieren. *HOST_NAME* ist **Sysname**, hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

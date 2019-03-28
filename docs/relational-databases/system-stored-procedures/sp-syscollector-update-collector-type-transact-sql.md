@@ -19,12 +19,12 @@ ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ed8c11a7d5f333a086482d2882a6aef7a97370e3
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 9d3529d01966c7f9780183d663823d8f4033f47a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256975"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535782"
 ---
 # <a name="spsyscollectorupdatecollectortype-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,20 +45,15 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@collector_type_uid =** ] **'***collector_type_uid***'**  
- Ist die GUID für den sammlertyp. *Collector_type_uid* ist **Uniqueidentifier**, und wenn es NULL ist, es wird automatisch erstellt und als Ausgabe zurückgegeben.  
+`[ @collector_type_uid = ] 'collector_type_uid'` Ist die GUID für den sammlertyp. *Collector_type_uid* ist **Uniqueidentifier**, und wenn es NULL ist, es wird automatisch erstellt und als Ausgabe zurückgegeben.  
   
- [ **@name =** ] **'***name***'**  
- Der Name des Sammlertyps. *Namen* ist **Sysname** und muss angegeben werden.  
+`[ @name = ] 'name'` Ist der Name des sammlertyps. *Namen* ist **Sysname** und muss angegeben werden.  
   
- [ **@parameter_schema =** ] **'***parameter_schema***'**  
- Das XML-Schema für diesen Sammlertyp. *Parameter_schema* ist **Xml** und möglicherweise bestimmte sammlertypen erforderlich sein. Wenn nicht erforderlich, kann dieses Argument NULL sein.  
+`[ @parameter_schema = ] 'parameter_schema'` Ist das XML-Schema für diesen sammlertyp. *Parameter_schema* ist **Xml** und möglicherweise bestimmte sammlertypen erforderlich sein. Wenn nicht erforderlich, kann dieses Argument NULL sein.  
   
- [ **@collection_package_id =** ] *collection_package_id*  
- Ein eindeutiger lokaler Bezeichner, der auf das [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Sammlungspaket verweist, das vom Sammlungssatz verwendet wird. *collection_package_id* is **uniqueidentifer** and is required. Zum Abrufen des Werts für *Collection_package_id*, Fragen Sie die syscollector_collector_types-Systemsicht in der Msdb-Datenbank.  
+`[ @collection_package_id = ] collection_package_id` Ist ein eindeutiger lokaler Bezeichner, der auf zeigt die [!INCLUDE[ssIS](../../includes/ssis-md.md)] Auflistung, das vom Sammlungssatz verwendet. *collection_package_id* is **uniqueidentifer** and is required. Zum Abrufen des Werts für *Collection_package_id*, Fragen Sie die syscollector_collector_types-Systemsicht in der Msdb-Datenbank.  
   
- [ **@upload_package_id =** ] *upload_package_id*  
- Ein eindeutiger lokaler Bezeichner, der auf das [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Uploadpaket verweist, das vom Sammlungssatz verwendet wird. *Upload_package_id* ist **Uniqueidentifier** und ist erforderlich. Zum Abrufen des Werts für *Upload_package_id*, Fragen Sie die syscollector_collector_types-Systemsicht in der Msdb-Datenbank.  
+`[ @upload_package_id = ] upload_package_id` Ist ein eindeutiger lokaler Bezeichner, der auf zeigt die [!INCLUDE[ssIS](../../includes/ssis-md.md)] hochladen, das vom Sammlungssatz verwendet. *Upload_package_id* ist **Uniqueidentifier** und ist erforderlich. Zum Abrufen des Werts für *Upload_package_id*, Fragen Sie die syscollector_collector_types-Systemsicht in der Msdb-Datenbank.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

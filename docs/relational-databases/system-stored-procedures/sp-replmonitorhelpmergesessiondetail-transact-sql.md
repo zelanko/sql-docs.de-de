@@ -16,12 +16,12 @@ ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8e661ed27a586b45bbcfd812e6e47d169daa70b8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: dbafa8dd407269fa23ca37574f18a12be519c448
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813052"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534633"
 ---
 # <a name="spreplmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@session_id** =] *Sitzungs-ID*  
- Gibt eine Agentsitzung an. *Sitzungs-ID* ist **Int** hat keinen Standardwert.  
+`[ @session_id = ] session_id` Gibt eine agentsitzung an. *Sitzungs-ID* ist **Int** hat keinen Standardwert.  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -54,7 +53,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 |**Updates**|**int**|Anzahl von Updates in einer Sitzung|  
 |**Löschvorgang**|**int**|Anzahl von Löschvorgängen in einer Sitzung|  
 |**Konflikte**|**int**|Anzahl der in einer Sitzung aufgetretenen Konflikte|  
-|**Fehler-ID**|**int**|ID eines Sitzungsfehlers|  
+|**ErrorID**|**int**|ID eines Sitzungsfehlers|  
 |**SeqNo**|**int**|Reihenfolge von Sitzungen im Resultset|  
 |**RowType**|**int**|Gibt an, welchen Informationstyp jede Zeile im Resultset repräsentiert.<br /><br /> **0** = Initialisierung<br /><br /> **1** = uploadzusammenfassung<br /><br /> **2** = artikeluploaddetail<br /><br /> **3** = downloadzusammenfassung<br /><br /> **4** = artikeldownloaddetail|  
 |**SchemaChanges**|**int**|Anzahl von Schemaänderungen in einer Sitzung|  

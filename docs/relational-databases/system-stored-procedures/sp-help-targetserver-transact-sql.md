@@ -18,12 +18,12 @@ ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aacb30e4c809f965635b9d8640d8fcd690cd340f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c809679694811d23b01dee426aa1afdd7d5cf06
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747428"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529692"
 ---
 # <a name="sphelptargetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_help_targetserver
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@server_name=** ] **"***Server_name***"**  
- Der Name des Servers, für den Informationen zurückgegeben werden. *Server_name* ist **nvarchar(30)**, hat den Standardwert NULL.  
+`[ @server_name = ] 'server_name'` Der Name des Servers, für den Informationen zurückgegeben werden sollen. *Server_name* ist **nvarchar(30)**, hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

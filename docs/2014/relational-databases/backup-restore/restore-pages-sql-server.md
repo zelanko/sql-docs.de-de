@@ -19,12 +19,12 @@ ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d30c8adfc19daa58f4aa3782072c6a9b08f11d83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f45fe94756ffa30a458aabbb078f6b01c9821918
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108730"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536392"
 ---
 # <a name="restore-pages-sql-server"></a>Wiederherstellung von Seiten (SQL Server)
   In diesem Thema wird beschrieben, wie Seiten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]wiederhergestellt werden. Das Ziel einer Seitenwiederherstellung besteht darin, eine oder mehrere beschädigte Seiten wiederherzustellen, ohne dazu die gesamte Datenbank wiederherstellen zu müssen. In der Regel wurden Seiten, die wiederhergestellt werden sollen, aufgrund eines Fehlers beim Zugriff auf die Seite als fehlerverdächtig gekennzeichnet. Fehlerverdächtige Seiten werden in der [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) -Tabelle in der **msdb** -Datenbank identifiziert.  
@@ -62,7 +62,7 @@ ms.locfileid: "48108730"
   
     -   Transaktionsprotokoll  
   
-    -   Zuordnungsseiten: GAM-Seiten (Global Allocation Map), SGAM-Seiten (Shared Global Allocation Map) und PFS-Seiten (Page Free Space).  
+    -   Zuordnungsseiten: GAM (Global Allocation Map)-Seiten, SGAM (Shared Global Allocation Map)-Seiten und PFS (Page Free Space)-Seiten.  
   
     -   Seite 0 von allen Datendateien (die Startseite der Datei)  
   
@@ -134,7 +134,7 @@ ms.locfileid: "48108730"
     |------------|------------|  
     |**Name**|Name des Sicherungssatzes.|  
     |**Komponente**|Die gesicherte Komponente: **Datenbank**, **Datei** oder **\<leer>** (bei Transaktionsprotokollen).|  
-    |**Typ**|Der Typ der ausgeführten Sicherung: **Vollständig**, **Differenziell**oder **Transaktionsprotokoll**.|  
+    |**Typ**|Der Typ des ausgeführten Sicherungsvorgangs: **Vollständig**, **Differenziell** oder **Transaktionsprotokoll**.|  
     |**Server**|Der Name der Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)] s, von der der Sicherungsvorgang ausgeführt wurde.|  
     |**Datenbank**|Name der an der Sicherungsoperation beteiligten Datenbank.|  
     |**Position**|Position des Sicherungssatzes auf dem Volume.|  
@@ -204,7 +204,7 @@ ms.locfileid: "48108730"
 ###  <a name="TsqlExample"></a> Beispiel (Transact-SQL)  
  Im folgenden Beispiel werden vier beschädigte Seiten der Datei `B` mit `NORECOVERY`wiederhergestellt. Anschließend werden zwei Protokollsicherungen mit `NORECOVERY`angewendet, gefolgt von der Sicherung des Protokollfragments, die mit `RECOVERY`wiederhergestellt wird. Im folgenden Beispiel wird eine Onlinewiederherstellung ausgeführt. In diesem Beispiel lautet die Datei-ID der Datei `B` : `1`. Die Seiten-IDs der beschädigten Seiten lauten `57`, `202`, `916`und `1016`.  
   
-```tsql  
+```sql  
 RESTORE DATABASE <database> PAGE='1:57, 1:202, 1:916, 1:1016'  
    FROM <file_backup_of_file_B>   
    WITH NORECOVERY;  

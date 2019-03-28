@@ -16,12 +16,12 @@ ms.assetid: 64450e4d-844d-4176-874e-f3845536f7d2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec9d53433d0b06cfc017fde9d312e943a6a3c6d7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3056c5c298fc1987e7c6f25e4a28220d3e033115
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816153"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535202"
 ---
 # <a name="spgetmergedeletetype-transact-sql"></a>sp_getmergedeletetype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,14 +38,11 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@source_object =**] **"***Source_object***"**  
- Der Name des Quellobjekts. *Source_object* ist **nvarchar(386)**, hat keinen Standardwert.  
+`[ @source_object = ] 'source_object'` Ist der Name des Quellobjekts. *Source_object* ist **nvarchar(386)**, hat keinen Standardwert.  
   
- [  **@rowguid=**] **"***Rowguid***"**  
- Die Zeilen-ID für den Typ der Löschung. *ROWGUID* ist **Uniqueidentifier**, hat keinen Standardwert.  
+`[ @rowguid = ] 'rowguid'` Ist der Zeilenbezeichner für den Typ der Löschung. *ROWGUID* ist **Uniqueidentifier**, hat keinen Standardwert.  
   
- [  **@delete_type=**] *Delete_type* **Ausgabe**  
- Der Code, der den Typ der Löschung angibt. *Delete_type* ist **Int**, hat keinen Standardwert. *Delete_type* ist auch ein OUTPUT-Parameter und kann einen der folgenden Werte sein.  
+`[ @delete_type = ] delete_type OUTPUT` Ist der Code den Typ der Löschung angibt. *Delete_type* ist **Int**, hat keinen Standardwert. *Delete_type* ist auch ein OUTPUT-Parameter und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  

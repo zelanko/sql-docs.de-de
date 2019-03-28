@@ -9,18 +9,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc9d79c82df85e680ccf298f3d7f7997be87610b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 75f04b8dfb6cfec70c6fc141178dfb56c9ffd94c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075820"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537352"
 ---
-# <a name="example-specifying-the-xmltext-directive"></a>Beispiel: Angeben der XMLTEXT-Direktive
-  In diesem Beispiel wird veranschaulicht, wie Daten in der Überlaufspalte mithilfe der `XMLTEXT` -Direktive in einer `SELECT` -Anweisung im EXPLICIT-Modus.  
+# <a name="example-specifying-the-xmltext-directive"></a>Beispiel: Angeben der XMLTEXT-Anweisung
+  Dieses Beispiel veranschaulicht, wie Daten in der Überlaufspalte mithilfe der `XMLTEXT`-Direktive in einer `SELECT`-Anweisung im EXPLICIT-Modus verarbeitet werden.  
   
  Sie sehen hier die `Person` -Tabelle. In dieser Tabelle speichert die `Overflow` -Spalte den unverbrauchten Teil des XML-Dokuments.  
   

@@ -18,12 +18,12 @@ ms.assetid: 86e24a5f-a869-43f6-b83e-c52b7b01b5ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cfd733d24d36b733dcefed3eea89b7be9342cd93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09cbcf4fca5fefa14dd435e5e91b27c8460194db
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608819"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537062"
 ---
 # <a name="sphelpfulltexttables-transact-sql"></a>sp_help_fulltext_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_help_fulltext_tables [ [ @fulltext_catalog_name = ] 'fulltext_catalog_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@fulltext_catalog_name=**] **"***Fulltext_catalog_name***"**  
- Der Name des Volltextkatalogs. *fulltext_catalog_name* ist vom Datentyp **sysname**. Der Standardwert ist NULL. Wenn *Fulltext_catalog_name* ausgelassen wird, oder NULL ist, alle vollständige volltextindizierten Tabellen der Datenbank zugeordnet werden zurückgegeben. Wenn *Fulltext_catalog_name* angegeben ist, aber *Table_name* ausgelassen wird, oder NULL ist, wird die Volltextindex-Informationen für alle indizierten Volltexttabelle diesem Katalog zugeordnet abgerufen. Wenn beide *Fulltext_catalog_name* und *Table_name* angegeben sind, wird eine Zeile zurückgegeben, wenn *Table_name* zugeordnet ist *Fulltext_catalog_name*; Andernfalls wird ein Fehler ausgelöst.  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` Ist der Name der Volltext-Katalog. *fulltext_catalog_name* ist vom Datentyp **sysname**. Der Standardwert ist NULL. Wenn *Fulltext_catalog_name* ausgelassen wird, oder NULL ist, alle vollständige volltextindizierten Tabellen der Datenbank zugeordnet werden zurückgegeben. Wenn *Fulltext_catalog_name* angegeben ist, aber *Table_name* ausgelassen wird, oder NULL ist, wird die Volltextindex-Informationen für alle indizierten Volltexttabelle diesem Katalog zugeordnet abgerufen. Wenn beide *Fulltext_catalog_name* und *Table_name* angegeben sind, wird eine Zeile zurückgegeben, wenn *Table_name* zugeordnet ist *Fulltext_catalog_name*; Andernfalls wird ein Fehler ausgelöst.  
   
- [ **@table_name=**] **'***table_name***'**  
- Der aus einem oder zwei Teilen bestehende Tabellenname, für den die Volltextmetadaten angefordert werden. *table_name* ist vom Datentyp **nvarchar(517)**. Der Standardwert ist NULL. Wenn nur *Table_name* angegeben wird, nur die Zeile, die relevant für *Table_name* zurückgegeben wird.  
+`[ @table_name = ] 'table_name'` Ist der ein- oder zweiteilige Tabellenname, der für den die Volltextmetadaten angefordert wird. *table_name* ist vom Datentyp **nvarchar(517)**. Der Standardwert ist NULL. Wenn nur *Table_name* angegeben wird, nur die Zeile, die relevant für *Table_name* zurückgegeben wird.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -81,7 +79,7 @@ GO
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
  [sp_fulltext_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-table-transact-sql.md)   
- [Sp_help_fulltext_tables_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
+ [sp_help_fulltext_tables_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

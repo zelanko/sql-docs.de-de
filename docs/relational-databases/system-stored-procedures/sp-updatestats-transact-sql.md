@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5eb82ba893b39da389640f7b139279f8caf70da6
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: 51fd5471ac678a1d61986aaa9219eec923c38485
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586243"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535762"
 ---
 # <a name="spupdatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,8 +45,7 @@ sp_updatestats [ [ @resample = ] 'resample']
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="arguments"></a>Argumente  
- [ **@resample** =] **'resample'**  
- Gibt an, dass **sp_updatestats** die RESAMPLE-Option der [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) -Anweisung verwendet. Wird **'resample'** nicht angegeben, aktualisiert **sp_updatestats** Statistiken mithilfe der Standardstichprobe. **resample** ist vom Datentyp **varchar(8)** . Der Standardwert ist NO.  
+`[ @resample = ] 'resample'` Gibt an, dass **Sp_updatestats** die RESAMPLE-Option von der [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) Anweisung. Wird **'resample'** nicht angegeben, aktualisiert **sp_updatestats** Statistiken mithilfe der Standardstichprobe. **resample** ist vom Datentyp **varchar(8)** . Der Standardwert ist NO.  
   
 ## <a name="remarks"></a>Hinweise  
  **Sp_updatestats** führt `UPDATE STATISTICS`, durch Angabe der `ALL` -Schlüsselwort, für alle benutzerdefinierten und internen Tabellen in der Datenbank. Sp_updatestats zeigt Meldungen über den Fortschritt an. Nach Abschluss des Updates wird gemeldet, dass die Statistiken für alle Tabellen aktualisiert wurden.  

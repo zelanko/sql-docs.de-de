@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b421d32e8c8ac3d4f56ecaf95448ecafc92c8e17
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab2f2fcb07fb181fd32d5a60f9fd2d8f25725f96
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663394"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535682"
 ---
 # <a name="sppurgejobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,17 +44,14 @@ sp_purge_jobhistory
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@job_name=** ] **"***Job_name***"**  
- Der Name des Auftrags, für den die Verlaufsdatensätze gelöscht werden sollen. *Job_name*ist **Sysname**, hat den Standardwert NULL. Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags für den die Verlaufsdatensätze gelöscht werden soll. *Job_name*ist **Sysname**, hat den Standardwert NULL. Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
 > [!NOTE]  
 >  Mitglied der **Sysadmin** -Serverrolle oder Mitglied der **SQLAgentOperatorRole** festen Datenbankrolle ausführen kann **Sp_purge_jobhistory** ohne Angabe einer *Job_name* oder *Job_id*. Wenn **Sysadmin** -Benutzer diese Argumente nicht angeben, wird der Auftragsverlauf für alle lokalen und Multiserveraufträge innerhalb der angegebenen Zeit gelöscht *Oldest_date*. Wenn **SQLAgentOperatorRole** -Benutzer diese Argumente nicht angeben, wird der Auftragsverlauf für alle lokalen Aufträge innerhalb der angegebenen Zeit gelöscht *Oldest_date*.  
   
- [ **@job_id=** ] *job_id*  
- Die ID des Auftrags für die zu löschenden Datensätze. *Job_id*ist **Uniqueidentifier**, hat den Standardwert NULL. Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich. Siehe Hinweis in der Beschreibung des **@job_name** Informationen **Sysadmin** oder **SQLAgentOperatorRole** Benutzer können dieses Argument verwenden.  
+`[ @job_id = ] job_id` Die Auftrags-ID des Auftrags, für die Datensätze gelöscht werden soll. *Job_id*ist **Uniqueidentifier**, hat den Standardwert NULL. Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich. Siehe Hinweis in der Beschreibung des **@job_name** Informationen **Sysadmin** oder **SQLAgentOperatorRole** Benutzer können dieses Argument verwenden.  
   
- [ **@oldest_date** =] *Oldest_date*  
- Der älteste Datensatz, der im Verlauf beibehalten werden soll. *Oldest_date* ist **"DateTime"**, hat den Standardwert NULL. Wenn *Oldest_date* angegeben wird, **Sp_purge_jobhistory** entfernt nur die Datensätze, die älter als der angegebene Wert sind.  
+`[ @oldest_date = ] oldest_date` Der älteste Eintrag im Verlauf beibehalten werden sollen. *Oldest_date* ist **"DateTime"**, hat den Standardwert NULL. Wenn *Oldest_date* angegeben wird, **Sp_purge_jobhistory** entfernt nur die Datensätze, die älter als der angegebene Wert sind.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

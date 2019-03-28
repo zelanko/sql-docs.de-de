@@ -18,12 +18,12 @@ ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d6df698f13298bf290ad1a0cb9e94ccac0bfce3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15e30a28a816b8105762e9f4cbfc4a0892cae1be
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596418"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538572"
 ---
 # <a name="spindexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,21 +47,18 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@IndexNamePattern=**] **"***Table_or_index_name***"**  
- Der qualifizierte oder nicht qualifizierte Name einer benutzerdefinierten Tabelle oder eines benutzerdefinierten Indexes. *Table_or_index_name* ist **nvarchar(1035)**, hat keinen Standardwert. Anführungszeichen sind nur erforderlich, wenn ein qualifizierter Index- oder Tabellenname angegeben wird. Bei Angabe eines voll gekennzeichneten Tabellennamens (einschließlich eines Datenbanknamens) muss der Datenbankname der Name der aktuellen Datenbank sein. Wenn ein Tabellenname ohne Index angegeben wird, wird der angegebene Optionswert für alle Indizes dieser Tabelle und für die Tabelle selbst, falls kein gruppierter Index vorhanden ist, festgelegt.  
+`[ @IndexNamePattern = ] 'table_or_index_name'` Ist der qualifizierte oder nicht qualifizierte Name einer benutzerdefinierten Tabelle oder eines Indexes. *Table_or_index_name* ist **nvarchar(1035)**, hat keinen Standardwert. Anführungszeichen sind nur erforderlich, wenn ein qualifizierter Index- oder Tabellenname angegeben wird. Bei Angabe eines voll gekennzeichneten Tabellennamens (einschließlich eines Datenbanknamens) muss der Datenbankname der Name der aktuellen Datenbank sein. Wenn ein Tabellenname ohne Index angegeben wird, wird der angegebene Optionswert für alle Indizes dieser Tabelle und für die Tabelle selbst, falls kein gruppierter Index vorhanden ist, festgelegt.  
   
- [  **@OptionName =**] **"***Optionsname***"**  
- Ein Indexoptionsname. *Option_name* ist **varchar(35)**, hat keinen Standardwert. *Option_name* kann einen der folgenden Werte aufweisen.  
+`[ @OptionName = ] 'option_name'` Ist ein indexoptionsname. *Option_name* ist **varchar(35)**, hat keinen Standardwert. *Option_name* kann einen der folgenden Werte aufweisen.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**AllowRowLocks**|Mit TRUE sind Zeilensperren beim Zugriff auf den Index zulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] bestimmt, wann Zeilensperren verwendet werden. Mit FALSE werden keine Zeilensperren verwendet. Der Standardwert ist TRUE.|  
 |**AllowPageLocks**|Mit TRUE sind Seitensperren beim Zugriff auf den Index zulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] bestimmt, wann Seitensperren verwendet werden. Mit FALSE werden keine Seitensperren verwendet. Der Standardwert ist TRUE.|  
 |**DisAllowRowLocks**|Mit TRUE werden keine Zeilensperren verwendet. Mit FALSE sind Zeilensperren beim Zugriff auf den Index zulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] bestimmt, wann Zeilensperren verwendet werden.|  
 |**DisAllowPageLocks**|Mit TRUE werden keine Seitensperren verwendet. Mit FALSE sind Seitensperren beim Zugriff auf den Index zulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] bestimmt, wann Seitensperren verwendet werden.|  
   
- [  **@OptionValue =**] **"***Wert***"**  
- Gibt an, ob die *Optionsname* Einstellung ist aktiviert (TRUE, ON, Ja oder 1) oder deaktiviert (FALSE, OFF, No oder 0). *Wert* ist **varchar(12)**, hat keinen Standardwert.  
+`[ @OptionValue = ] 'value'` Gibt an, ob die *Optionsname* Einstellung ist aktiviert (TRUE, ON, Ja oder 1) oder deaktiviert (FALSE, OFF, No oder 0). *Wert* ist **varchar(12)**, hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder größer als 0 (Fehler)  

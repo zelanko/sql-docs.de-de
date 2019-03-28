@@ -16,12 +16,12 @@ ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0ebb3f1e81fbace678d281116643e1fcd97c3dc1
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 43eada100fb1de531c0d16082bdf0977e479ccfb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212504"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536149"
 ---
 # <a name="sphelparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,23 +42,18 @@ sp_helparticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication =**] **"***Veröffentlichung***"**  
- Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@article=**] **"***Artikel***"**  
- Der Name eines Artikels in der Veröffentlichung. *Artikel* ist **Sysname**, hat den Standardwert **%**. Wenn *Artikel* ist nicht angegeben wird, werden Informationen zu allen Artikeln für die angegebene Veröffentlichung zurückgegeben.  
+`[ @article = ] 'article'` Ist der Name eines Artikels in der Veröffentlichung. *Artikel* ist **Sysname**, hat den Standardwert **%**. Wenn *Artikel* ist nicht angegeben wird, werden Informationen zu allen Artikeln für die angegebene Veröffentlichung zurückgegeben.  
   
- [  **@returnfilter=**] *Returnfilter*  
- Gibt an, ob die Filterklausel zurückgegeben werden soll. *Returnfilter* ist **Bit**, hat den Standardwert **1**, die die Filterklausel zurückgegeben.  
+`[ @returnfilter = ] returnfilter` Gibt an, ob die Filterklausel zurückgegeben werden sollen. *Returnfilter* ist **Bit**, hat den Standardwert **1**, die die Filterklausel zurückgegeben.  
   
- [ **@publisher**=] **"***Verleger***"**  
- Gibt einen nicht- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Gibt einen nicht- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  *Publisher* sollte nicht beim Anfordern von Informationen zu einem Artikel Veröffentlichen von angegeben werden eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger.  
   
- [  **@found=** ] *gefunden* Ausgabe  
- Nur interne Verwendung.  
+`[ @found = ] found OUTPUT` Nur interne Verwendung.  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -84,15 +79,15 @@ sp_helparticle [ @publication = ] 'publication'
 |**dest_owner**|**sysname**|Name des Besitzers des Zielobjekts.|  
 |**source_owner**|**sysname**|Besitzer des Quellobjekts.|  
 |**unqua_source_object**|**sysname**|Name des Quellobjekts, ohne den Namen des Besitzers.|  
-|**Der Standardwert**|**sysname**|Besitzer der Sicht, die den veröffentlichten Artikel definiert. .|  
+|**sync_object_owner**|**sysname**|Besitzer der Sicht, die den veröffentlichten Artikel definiert. .|  
 |**unqualified_sync_object**|**sysname**|Name der Sicht, die den veröffentlichten Artikel definiert, ohne den Namen des Besitzers.|  
-|**Der Standardwert**|**sysname**|Besitzer des Filters.|  
+|**filter_owner**|**sysname**|Besitzer des Filters.|  
 |**unqua_filter**|**sysname**|Name des Filters, ohne den Namen des Besitzers.|  
 |**auto_identity_range**|**int**|Flag, das anzeigt, ob die automatische Behandlung von Identitätsbereichen für die Veröffentlichung bei ihrer Erstellung aktiviert wurde. **1** bedeutet, dass der automatische Identitätsbereich aktiviert ist; **0** bedeutet, dass er deaktiviert ist.|  
 |**publisher_identity_range**|**int**|Bereichsgröße des Identitätsbereichs auf dem Verleger, wenn der Artikel enthält *Identityrangemanagementoption* festgelegt **automatisch** oder **Auto_identity_range** festgelegt  **"true"**.|  
 |**identity_range**|**bigint**|Bereichsgröße des Identitätsbereichs auf dem Abonnenten, wenn der Artikel enthält *Identityrangemanagementoption* festgelegt **automatisch** oder **Auto_identity_range** festgelegt  **"true"**.|  
 |**threshold**|**bigint**|Prozentwert, der anzeigt, wann der Verteilungs-Agent einen neuen Identitätsbereich zuweist.|  
-|**' identityrangemanagementoption '**|**int**|Gibt die für den Artikel behandelte Identitätsbereichsverwaltung an.|  
+|**identityrangemanagementoption**|**int**|Gibt die für den Artikel behandelte Identitätsbereichsverwaltung an.|  
 |**fire_triggers_on_snapshot**|**bit**|Gibt an, ob replizierte Benutzertrigger beim Anwenden der Anfangsmomentaufnahme ausgeführt werden.<br /><br /> **1** = Benutzertrigger werden ausgeführt.<br /><br /> **0** = Benutzertrigger werden nicht ausgeführt.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

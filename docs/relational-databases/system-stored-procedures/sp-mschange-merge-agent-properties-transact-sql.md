@@ -16,12 +16,12 @@ ms.assetid: f775fa0f-28c7-4863-89ce-7bcfa1ab8b5e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ad4b46cbf4c19b637bdc836e5c311321273de63
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6f682400bc827d66878499b6e625671d5b9061da
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769782"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535643"
 ---
 # <a name="spmschangemergeagentproperties-transact-sql"></a>sp_MSchange_merge_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,26 +44,19 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publisher** = ] **'***publisher***'**  
- Der Name des Verlegers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher = ] 'publisher'` Ist der Name des Verlegers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@publisher_db=** ] **"***Publisher_db***"**  
- Der Name der Veröffentlichungsdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher_db = ] 'publisher_db'` Ist der Name der Veröffentlichungsdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@publication =** ] **'***publication***'**  
- Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@subscriber=** ] **"***Abonnenten***"**  
- Der Name des Abonnenten. *Abonnenten* ist **Sysname**, hat keinen Standardwert.  
+`[ @subscriber = ] 'subscriber'` Ist der Name des Abonnenten. *Abonnenten* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@subscriber_db=** ] **"***Subscriber_db***"**  
- Ist der Name der Abonnementdatenbank. *Subscriber_db* ist **Sysname**, hat keinen Standardwert.  
+`[ @subscriber_db = ] 'subscriber_db'` Ist der Name der Abonnementdatenbank. *Subscriber_db* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@property =** ] **"***Eigenschaft***"**  
- Der Name der zu ändernden Veröffentlichungseigenschaft. *Eigenschaft* ist **Sysname**, hat keinen Standardwert.  
+`[ @property = ] 'property'` Ist der zu ändernden veröffentlichungseigenschaft. *Eigenschaft* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@value =** ] **"***Wert***"**  
- Der neue Eigenschaftswert. *Wert* ist **nvarchar(524)**, hat den Standardwert NULL.  
+`[ @value = ] 'value'` Ist der neue Eigenschaftswert. *Wert* ist **nvarchar(524)**, hat den Standardwert NULL.  
   
  Diese Tabelle beschreibt die änderbaren Eigenschaften des Merge-Agent-Auftrags sowie die Einschränkungen für die Werte dieser Eigenschaften.  
   
@@ -96,7 +89,7 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
  Nur Mitglieder der **Sysadmin** feste Serverrolle auf dem Verteiler **Sp_MSchange_merge_agent_properties**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)   
- [Sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)  
+ [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)   
+ [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)  
   
   

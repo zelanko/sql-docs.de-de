@@ -14,12 +14,12 @@ ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 560fab599098d1f9e5fae76d42c274ad9a5fb144
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 04f32e1f1d0bc67e567a2a4d30779f13af6c68a6
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507798"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536024"
 ---
 # <a name="load-files-into-filetables"></a>Laden von Dateien in FileTables
   Beschreibt, wie Dateien in FileTables geladen und migriert werden.  
@@ -30,7 +30,7 @@ ms.locfileid: "52507798"
 |Aktueller Speicherort von Dateien|Optionen für die Migration|  
 |-------------------------------|---------------------------|  
 |Dateien sind derzeit im Dateisystem gespeichert.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat keine Informationen über die Dateien.|Da eine FileTable im Windows-Dateisystem als Ordner angezeigt wird, können Sie Dateien mithilfe einer der verfügbaren Methoden zum Verschieben oder Kopieren von Dateien ganz einfach in eine neue FileTable laden. Zu diesen Methoden gehören Windows-Explorer, Befehlszeilenoptionen, einschließlich xcopy und robocopy, sowie benutzerdefinierte Skripts oder Anwendungen.<br /><br /> Sie können einen vorhandenen Ordner nicht in eine FileTable konvertieren.|  
-|Dateien sind derzeit im Dateisystem gespeichert.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält eine Tabelle von Metadaten, die Zeiger auf die Dateien enthält.|Der erste Schritt besteht darin, die Dateien mithilfe einer der oben erwähnten Methoden zu verschieben oder zu kopieren.<br /><br /> Der zweite Schritt besteht darin, die vorhandene Tabelle von Metadaten so zu aktualisieren, dass diese auf den neuen Speicherort der Dateien zeigt.<br /><br /> Weitere Informationen finden Sie unter [Beispiel: Migrieren von Dateien aus dem Dateisystem in eine FileTable](#HowToMigrateFiles) in diesem Thema.|  
+|Dateien sind derzeit im Dateisystem gespeichert.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält eine Tabelle von Metadaten, die Zeiger auf die Dateien enthält.|Der erste Schritt besteht darin, die Dateien mithilfe einer der oben erwähnten Methoden zu verschieben oder zu kopieren.<br /><br /> Der zweite Schritt besteht darin, die vorhandene Tabelle von Metadaten so zu aktualisieren, dass diese auf den neuen Speicherort der Dateien zeigt.<br /><br /> Weitere Informationen finden Sie unter [Example: Migrieren von Dateien aus dem Dateisystem in eine FileTable](#HowToMigrateFiles) in diesem Thema.|  
   
 ###  <a name="HowToLoadNew"></a> So wird es gemacht: Laden von Dateien in einer FileTable  
  Zu den Methoden, über die Sie Dateien in eine FileTable laden können, gehören die folgenden:  
@@ -54,7 +54,7 @@ ms.locfileid: "52507798"
   
 3.  Korrigieren Sie die Metadaten in der Tabelle `PhotoMetadata` mithilfe von Code, der folgendermaßen aussieht:  
   
-```tsql  
+```sql  
 --  Add a path locator column to the PhotoMetadata table.  
 ALTER TABLE PhotoMetadata ADD pathlocator hierarchyid;  
   

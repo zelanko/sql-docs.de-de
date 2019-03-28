@@ -18,12 +18,12 @@ ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c355fb36e5bc0562b4e20b48ab2a3f33e182c22c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b2ee476694098f4734c31439b48a7ec9efdc892
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742198"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534432"
 ---
 # <a name="sphelpjobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,40 +54,29 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@job_id=** ] *job_id*  
- Die Auftrags-ID *Job_id* ist **Uniqueidentifier**, hat den Standardwert NULL.  
+`[ @job_id = ] job_id` ID des Auftrags. *Job_id* ist **Uniqueidentifier**, hat den Standardwert NULL.  
   
- [  **@job_name=** ] **"***Job_name***"**  
- Der Name des Auftrags. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@step_id=** ] *Step_id*  
- Die Schritt-ID. *Step_id* ist **Int**, hat den Standardwert NULL.  
+`[ @step_id = ] step_id` Die Schritt-ID. *Step_id* ist **Int**, hat den Standardwert NULL.  
   
- [ **@sql_message_id=** ] *sql_message_id*  
- Die ID der Fehlermeldung, die von Microsoft SQL Server beim Ausführen des Auftrags zurückgegeben wurde. *Sql_message_id* ist **Int**, hat den Standardwert NULL.  
+`[ @sql_message_id = ] sql_message_id` Die ID der Fehlermeldung, die von Microsoft SQL Server beim Ausführen des Auftrags zurückgegeben werden soll. *Sql_message_id* ist **Int**, hat den Standardwert NULL.  
   
- [ **@sql_severity=** ] *sql_severity*  
- Der Schweregrad der Fehlermeldung, die von SQL Server beim Ausführen des Auftrags zurückgegeben wurde. *Sql_severity* ist **Int**, hat den Standardwert NULL.  
+`[ @sql_severity = ] sql_severity` Der Schweregrad der Fehlermeldung, die von SQL Server beim Ausführen des Auftrags zurückgegeben werden soll. *Sql_severity* ist **Int**, hat den Standardwert NULL.  
   
- [ **@start_run_date=** ] *start_run_date*  
- Das Datum, an dem der Auftrag gestartet wurde. *Start_run_date*ist **Int**, hat den Standardwert NULL. *Start_run_date* muss, werden die im Formular eingegebenen YYYYMMDD, wobei YYYY ein vier Zeichen bestehende Jahreszahl ist, MM ein zwei Zeichen bestehenden Monatsnamen und DD ein zwei Zeichen bestehenden-Tagesname ist.  
+`[ @start_run_date = ] start_run_date` Das Datum, an der Auftrag gestartet wurde. *Start_run_date*ist **Int**, hat den Standardwert NULL. *Start_run_date* muss, werden die im Formular eingegebenen YYYYMMDD, wobei YYYY ein vier Zeichen bestehende Jahreszahl ist, MM ein zwei Zeichen bestehenden Monatsnamen und DD ein zwei Zeichen bestehenden-Tagesname ist.  
   
- [  **@end_run_date=** ] *End_run_date*  
- Das Datum, an dem der Auftrag abgeschlossen wurde. *End_run_date* ist **Int**, hat den Standardwert NULL. *End_run_date*muss, werden im Formular eingegebenen YYYYMMDD, wobei YYYY eine vierstellige Jahresangabe ist, MM ein zwei Zeichen bestehenden Monatsnamen und DD ein zwei Zeichen bestehenden-Tagesname ist.  
+`[ @end_run_date = ] end_run_date` Das Datum, an das der Auftrag abgeschlossen wurde. *End_run_date* ist **Int**, hat den Standardwert NULL. *End_run_date*muss, werden im Formular eingegebenen YYYYMMDD, wobei YYYY eine vierstellige Jahresangabe ist, MM ein zwei Zeichen bestehenden Monatsnamen und DD ein zwei Zeichen bestehenden-Tagesname ist.  
   
- [  **@start_run_time=** ] *Start_run_time*  
- Die Uhrzeit, zu der der Auftrag gestartet wurde. *Start_run_time* ist **Int**, hat den Standardwert NULL. *Start_run_time*muss, werden im Formular eingegebenen HHMMSS, wobei HH eine zwei Zeichen bestehenden Stunde des Tages ist, MM ein zwei Zeichen des Tages, und SS eine zwei Zeichen bestehenden Sekunde des Tages handelt es sich.  
+`[ @start_run_time = ] start_run_time` Die Zeit, die der Auftrag gestartet wurde. *Start_run_time* ist **Int**, hat den Standardwert NULL. *Start_run_time*muss, werden im Formular eingegebenen HHMMSS, wobei HH eine zwei Zeichen bestehenden Stunde des Tages ist, MM ein zwei Zeichen des Tages, und SS eine zwei Zeichen bestehenden Sekunde des Tages handelt es sich.  
   
- [  **@end_run_time=** ] *End_run_time*  
- Die Uhrzeit, zu der die Ausführung des Auftrags abgeschlossen wurde. *End_run_time* ist **Int**, hat den Standardwert NULL. *End_run_time*muss, werden im Formular eingegebenen HHMMSS, wobei HH eine zwei Zeichen bestehenden Stunde des Tages ist, MM ein zwei Zeichen des Tages, und SS eine zwei Zeichen bestehenden Sekunde des Tages handelt es sich.  
+`[ @end_run_time = ] end_run_time` Der Zeitpunkt, an der der Auftrag beendet wurde. *End_run_time* ist **Int**, hat den Standardwert NULL. *End_run_time*muss, werden im Formular eingegebenen HHMMSS, wobei HH eine zwei Zeichen bestehenden Stunde des Tages ist, MM ein zwei Zeichen des Tages, und SS eine zwei Zeichen bestehenden Sekunde des Tages handelt es sich.  
   
- [  **@minimum_run_duration=** ] *Minimum_run_duration*  
- Die minimale Zeit für den Abschluss des Auftrags. *Minimum_run_duration* ist **Int**, hat den Standardwert NULL. *Minimum_run_duration*muss, werden im Formular eingegebenen HHMMSS, wobei HH eine zwei Zeichen bestehenden Stunde des Tages ist, MM ein zwei Zeichen des Tages, und SS eine zwei Zeichen bestehenden Sekunde des Tages handelt es sich.  
+`[ @minimum_run_duration = ] minimum_run_duration` Die minimale Länge der Zeit für den Abschluss des Auftrags. *Minimum_run_duration* ist **Int**, hat den Standardwert NULL. *Minimum_run_duration*muss, werden im Formular eingegebenen HHMMSS, wobei HH eine zwei Zeichen bestehenden Stunde des Tages ist, MM ein zwei Zeichen des Tages, und SS eine zwei Zeichen bestehenden Sekunde des Tages handelt es sich.  
   
- [ **@run_status=** ] *run_status*  
- Der Ausführungsstatus des Auftrags. *Run_status* ist **Int**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
+`[ @run_status = ] run_status` Der Ausführungsstatus des Auftrags. *Run_status* ist **Int**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**0**|Fehler|  
 |**1**|Erfolgreich|  
@@ -96,17 +85,13 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**4**|In Bearbeitung befindlichen Nachrichten|  
 |**5**|Unknown|  
   
- [  **@minimum_retries=** ] *Minimum_retries*  
- Die Mindestanzahl von Wiederholungsversuchen für die Ausführung eines Auftrags. *Minimum_retries* ist **Int**, hat den Standardwert NULL.  
+`[ @minimum_retries = ] minimum_retries` Die Mindestanzahl an, wie oft, die Wiederholen eines Auftrags ausführen soll. *Minimum_retries* ist **Int**, hat den Standardwert NULL.  
   
- [  **@oldest_first=** ] *Oldest_first*  
- Gibt an, ob bei der Ausgabe die ältesten Aufträge zuerst angezeigt werden sollen. *Oldest_first* ist **Int**, hat den Standardwert **0**, der die neuesten Aufträge zuerst dargestellt. **1** die ältesten Aufträge zuerst präsentiert.  
+`[ @oldest_first = ] oldest_first` Gibt an, ob die Ausgabe die ältesten Aufträge zuerst angezeigt. *Oldest_first* ist **Int**, hat den Standardwert **0**, der die neuesten Aufträge zuerst dargestellt. **1** die ältesten Aufträge zuerst präsentiert.  
   
- [  **@server=** ] **"***Server***"**  
- Der Name des Servers, auf dem der Auftrag ausgeführt wurde. *Server* ist **nvarchar(30)**, hat den Standardwert NULL.  
+`[ @server = ] 'server'` Der Name des Servers, auf dem der Auftrag ausgeführt wurde. *Server* ist **nvarchar(30)**, hat den Standardwert NULL.  
   
- [ **@mode=** ] **'***mode***'**  
- Gibt, ob SQL Server alle Spalten im Resultset ausgibt (**vollständige**) oder eine Zusammenfassung der Spalten. *Modus* ist **vom Datentyp varchar(7)**, hat den Standardwert **Zusammenfassung**.  
+`[ @mode = ] 'mode'` Gibt, ob SQL Server alle Spalten im Resultset ausgibt (**vollständige**) oder eine Zusammenfassung der Spalten. *Modus* ist **vom Datentyp varchar(7)**, hat den Standardwert **Zusammenfassung**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

@@ -18,12 +18,12 @@ ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 719038f8ce72bdb05ad9dbf3c3585c377abb3a75
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f3a3140c154f5d4eb224259001333747ce410e67
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526232"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533871"
 ---
 # <a name="spdeletejobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,27 +44,21 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@job_id =**] **"**_Job_id_**"**  
- Die ID des Auftrags, der das zu entfernende Auftragsschrittprotokoll enthält. *Job_id* ist **Int**, hat den Standardwert NULL.  
+`[ @job_id = ] 'job_id'` Die Auftrags-ID für den Auftrag, der die zu entfernende auftragsschrittprotokoll enthält. *Job_id* ist **Int**, hat den Standardwert NULL.  
   
- [  **@job_name =**] **"**_Job_name_**"**  
- Der Name des Auftrags. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
   
 > **HINWEIS:** Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
- [ **@step_id =**] *step_id*  
- Die ID des Schritts im Auftrag, für den das Auftragsschrittprotokoll gelöscht werden soll. Wenn keine Angabe erfolgt, werden alle Auftragsschrittprotokolle im Auftrag gelöscht, es sei denn, **@older_than** oder **@larger_than** angegeben sind. *Step_id* ist **Int**, hat den Standardwert NULL.  
+`[ @step_id = ] step_id` Die ID des Schritts im Auftrag, für den das auftragsschrittprotokoll gelöscht werden. Wenn keine Angabe erfolgt, werden alle Auftragsschrittprotokolle im Auftrag gelöscht, es sei denn, **@older_than** oder **@larger_than** angegeben sind. *Step_id* ist **Int**, hat den Standardwert NULL.  
   
- [  **@step_name =**] **"**_Step_name_**"**  
- Der Name des Schritts im Auftrag, für den das Auftragsschrittprotokoll gelöscht werden soll. *Step_name* ist **Sysname**, hat den Standardwert NULL.  
+`[ @step_name = ] 'step_name'` Der Name des Schritts im Auftrag, für den das auftragsschrittprotokoll gelöscht werden. *Step_name* ist **Sysname**, hat den Standardwert NULL.  
   
 > **HINWEIS:** Entweder *Step_id* oder *Step_name* kann angegeben werden, aber beide Angaben sind nicht möglich.  
   
- [  **@older_than =**] **"**_Datum_**"**  
- Das Datum und die Uhrzeit des ältesten Auftragsschrittprotokolls, das beibehalten werden soll. Alle Auftragsschrittprotokolle vor diesem Datum und dieser Uhrzeit werden entfernt. *Datum* ist **"DateTime"**, hat den Standardwert NULL. Beide **@older_than** und **@larger_than** kann angegeben werden.  
+`[ @older_than = ] 'date'` Das Datum und Uhrzeit des ältesten auftragsschrittprotokolls, die Sie beibehalten möchten. Alle Auftragsschrittprotokolle vor diesem Datum und dieser Uhrzeit werden entfernt. *Datum* ist **"DateTime"**, hat den Standardwert NULL. Beide **@older_than** und **@larger_than** kann angegeben werden.  
   
- [  **@larger_than =**] **"**_Size_in_bytes_**"**  
- Die maximale Größe in Byte für das Auftragsschrittprotokoll, das beibehalten werden soll. Alle Auftragsschrittprotokolle, die diese Größe überschreiten, werden entfernt. Beide **@larger_than** und **@older_than** kann angegeben werden.  
+`[ @larger_than = ] 'size_in_bytes'` Die Größe in Bytes, der das auftragsschrittprotokoll, die Sie beibehalten möchten. Alle Auftragsschrittprotokolle, die diese Größe überschreiten, werden entfernt. Beide **@larger_than** und **@older_than** kann angegeben werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

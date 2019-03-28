@@ -18,12 +18,12 @@ ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ccc926844f6d3c054a69cb51f3156dc8e186a98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d003b1f15500b1f6d0b8490d9e712a6a34b100a3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833578"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538632"
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,33 +45,28 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@object_type =**] **'***object_type***'**  
- Der Typ der Informationen, die zurückgegeben werden sollen. *Object_type*ist **char(9)**, hat keinen Standardwert. *Object_type* sind ALERTS, womit die dem angegebenen Operator zugewiesenen Warnungen aufgelistet *,* oder OPERATORS, womit die für die angegebene Warnung verantwortlichen Operatoren aufgelistet *.*  
+`[ @object_type = ] 'object_type'` Der Typ der zurückzugebenden Informationen. *Object_type*ist **char(9)**, hat keinen Standardwert. *Object_type* sind ALERTS, womit die dem angegebenen Operator zugewiesenen Warnungen aufgelistet *,* oder OPERATORS, womit die für die angegebene Warnung verantwortlichen Operatoren aufgelistet *.*  
   
- [ **@name =**]  **'***name***'**  
- Ein Operatorname (Wenn *Object_type* is-OPERATOREN) oder ein Warnungsname (Wenn *Object_type* gleich ALERTS ist). *Namen* ist **Sysname**, hat keinen Standardwert.  
+`[ @name = ] 'name'` Ein Operatorname (Wenn *Object_type* is-OPERATOREN) oder ein Warnungsname (Wenn *Object_type* gleich ALERTS ist). *Namen* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@enum_type =**] **'***enum_type***'**  
- Die *Object_type*Informationen, die zurückgegeben wird. *Enum_type* tatsächlich in den meisten Fällen ist. *Enum_type*ist **char(10)** und hat keinen Standardwert und kann einen der folgenden Werte sein.  
+`[ @enum_type = ] 'enum_type'` Die *Object_type*Informationen, die zurückgegeben wird. *Enum_type* tatsächlich in den meisten Fällen ist. *Enum_type*ist **char(10)** und hat keinen Standardwert und kann einen der folgenden Werte sein.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |ACTUAL|Listet nur die *object_types auf* zugeordneten *Namen*.|  
 |ALL|Listet alle die*object_types auf* einschließlich derer, die nicht zugeordnet sind *Namen*.|  
 |TARGET|Listet nur die *object_types auf* Übereinstimmung den angegebenen *Target_name*, unabhängig von der Zuordnung mit*Namen*.|  
   
- [  **@notification_method =**] *Notification_method*  
- Ein numerischer Wert, der die Spalten der Benachrichtigungsmethode bestimmt, die zurückgegeben werden sollen. *Notification_method* ist **Tinyint**, und kann einen der folgenden Werte.  
+`[ @notification_method = ] notification_method` Ein numerischer Wert, der die zurückzugebenden Spalten der Benachrichtigungsmethode bestimmt. *Notification_method* ist **Tinyint**, und kann einen der folgenden Werte.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**1**|E-Mail-Adresse: Gibt nur die **Use_email** Spalte.|  
 |**2**|Pager: Gibt nur die **Use_pager** Spalte.|  
 |**4**|NetSend: Gibt nur die **Use_netsend** Spalte.|  
 |**7**|Alle: Alle Spalten werden zurückgegeben.|  
   
- [ **@target_name =**] **'***target_name***'**  
- Der Name einer Warnung zu suchende (Wenn *Object_type* gleich ALERTS ist) oder ein Operatorname, nach suchen (Wenn *Object_type* is-OPERATOREN). *Target_name* ist nur erforderlich, wenn *Enum_type* Ziel. *Target_name* ist **Sysname**, hat den Standardwert NULL.  
+`[ @target_name = ] 'target_name'` Der Name einer Warnung zu suchende (Wenn *Object_type* gleich ALERTS ist) oder ein Operatorname, nach suchen (Wenn *Object_type* is-OPERATOREN). *Target_name* ist nur erforderlich, wenn *Enum_type* Ziel. *Target_name* ist **Sysname**, hat den Standardwert NULL.  
   
 ## <a name="return-code-valves"></a>Rückgabecode Ventilen  
  0 (Erfolg) oder 1 (Fehler)  

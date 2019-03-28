@@ -16,17 +16,17 @@ ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d557fccc94c6502bb664f8345d1d7a6bd982124
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 587c66322a7d40f42f81bceb48e1c0d422322d46
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789332"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538472"
 ---
 # <a name="spreplmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Ändert die Schwellenwertmetrik für die Überwachung einer Veröffentlichung. Diese gespeicherte Prozedur, die zum Überwachen der Replikation verwendet wird, wird auf dem Verteiler für die Verteilungsdatenbank ausgeführt.  
+  Ändert die Schwellenwertmetrik für die Überwachung einer Veröffentlichung. Diese gespeicherte Prozedur, die zur Überwachung der Replikation verwendet wird, wird auf dem Verteiler für die Verteilungsdatenbank ausgeführt.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,17 +46,13 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publisher** = ] **'***publisher***'**  
- Der Name des Verlegers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher = ] 'publisher'` Ist der Name des Verlegers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
- Der Name der veröffentlichten Datenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher_db = ] 'publisher_db'` Ist der Name der veröffentlichten Datenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@publication** =] **"***Veröffentlichung***"**  
- Der Name der Veröffentlichung, deren Attribute für den Überwachungsschwellenwert geändert werden. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung, für die Überwachung die schwellenwertattribute geändert werden. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@publication_type** =] *Publication_type*  
- Der Typ der Veröffentlichung. *Publication_type* ist **Int**, und kann einen der folgenden Werte sein.  
+`[ @publication_type = ] publication_type` Wenn der Typ der Veröffentlichung. *Publication_type* ist **Int**, und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -65,8 +61,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 |**2**|Mergeveröffentlichung.|  
 |NULL (Standard)|Replikationsversuche zum Bestimmen des Veröffentlichungstyps.|  
   
- [ **@metric_id** =] *Metric_id*  
- Die ID der Schwellenwertmetrik für die Veröffentlichung, die geändert wird. *Metric_id* ist **Int**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
+`[ @metric_id = ] metric_id` Wird die ID der schwellenwertmetrik für die Veröffentlichung geändert. *Metric_id* ist **Int**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
   
 |Wert|Metrikname|  
 |-----------|-----------------|  
@@ -80,17 +75,13 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
  Geben Sie *Metric_id* oder *Thresholdmetricname*. Wenn *Thresholdmetricname* angegeben ist, klicken Sie dann *Metric_id* sollte NULL sein.  
   
- [ **@thresholdmetricname** =] **"***Thresholdmetricname***"**  
- Der Name der Schwellenwertmetrik für die Veröffentlichung, die geändert wird. *Thresholdmetricname* ist **Sysname**, hat den Standardwert NULL. Geben Sie *Thresholdmetricname* oder *Metric_id*. Wenn *Metric_id* angegeben ist, klicken Sie dann *Thresholdmetricname* sollte NULL sein.  
+`[ @thresholdmetricname = ] 'thresholdmetricname'` Wird der Name der schwellenwertmetrik für die Veröffentlichung geändert. *Thresholdmetricname* ist **Sysname**, hat den Standardwert NULL. Geben Sie *Thresholdmetricname* oder *Metric_id*. Wenn *Metric_id* angegeben ist, klicken Sie dann *Thresholdmetricname* sollte NULL sein.  
   
- [ **@value** =] *Wert*  
- Der neue Wert der Schwellenwertmetrik für die Veröffentlichung. *Wert* ist **Int**, hat den Standardwert NULL. Wenn **null**, und klicken Sie dann der Metrikwert nicht aktualisiert wird.  
+`[ @value = ] value` Ist der neue Wert der schwellenwertmetrik für die Veröffentlichung. *Wert* ist **Int**, hat den Standardwert NULL. Wenn **null**, und klicken Sie dann der Metrikwert nicht aktualisiert wird.  
   
- [ **@shouldalert** =] *Shouldalert*  
- Gibt an, ob eine Warnung generiert wird, wenn die Schwellenwertmetrik für die Veröffentlichung erreicht wird. *Shouldalert* ist **Bit**, hat den Standardwert NULL. Der Wert **1** bedeutet, dass eine Warnung generiert wird, und den Wert **0** bedeutet, dass keine Warnung generiert wird.  
+`[ @shouldalert = ] shouldalert` Ist, wenn eine Warnung generiert wird, wenn die schwellenwertmetrik für eine Veröffentlichung erreicht wird. *Shouldalert* ist **Bit**, hat den Standardwert NULL. Der Wert **1** bedeutet, dass eine Warnung generiert wird, und den Wert **0** bedeutet, dass keine Warnung generiert wird.  
   
- [ **@mode** =] *Modus*  
- Gibt an, ob die Schwellenwertmetrik für die Veröffentlichung aktiviert ist. *Modus* ist **Tinyint**, hat den Standardwert **1**. Der Wert **1** bedeutet, dass die Überwachung dieser Metrik aktiviert ist, und den Wert **2** bedeutet, dass die Überwachung dieser Metrik deaktiviert ist.  
+`[ @mode = ] mode` Ist, wenn die schwellenwertmetrik für die Veröffentlichung aktiviert ist. *Modus* ist **Tinyint**, hat den Standardwert **1**. Der Wert **1** bedeutet, dass die Überwachung dieser Metrik aktiviert ist, und den Wert **2** bedeutet, dass die Überwachung dieser Metrik deaktiviert ist.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

@@ -16,12 +16,12 @@ ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1b11096a9f1ac9f8c5f5c04f3afc36f2776e988e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5bef3e4902562edde0adb2a4f495c51e6a82b091
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782952"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535282"
 ---
 # <a name="spdeletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,15 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@conflict_table=**] **"**_Conflict_table_**"**  
- Der Name der Konflikttabelle. *Conflict_table* ist **Sysname**, hat den Standardwert **%**. Wenn die *Conflict_table* als NULL angegeben wird oder **%**, des Konflikts wird davon ausgegangen, dass ein Delete-Konflikt und die übereinstimmt *Rowguid* und *Origin_datasource* und *Source_object* gelöscht wird, aus der [MSmerge_conflicts_info &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) Tabelle.  
+`[ @conflict_table = ] 'conflict_table'` Ist der Name der Konflikttabelle. *Conflict_table* ist **Sysname**, hat den Standardwert **%**. Wenn die *Conflict_table* als NULL angegeben wird oder **%**, des Konflikts wird davon ausgegangen, dass ein Delete-Konflikt und die übereinstimmt *Rowguid* und *Origin_datasource* und *Source_object* gelöscht wird, aus der [MSmerge_conflicts_info &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) Tabelle.  
   
- [  **@source_object=**] **"**_Source_object_**"**  
- Der Name der Quelltabelle. *Source_object* ist **nvarchar(386)**, hat den Standardwert NULL.  
+`[ @source_object = ] 'source_object'` Ist der Name der Quelltabelle. *Source_object* ist **nvarchar(386)**, hat den Standardwert NULL.  
   
- [  **@rowguid =**] **"**_Rowguid_**"**  
- Die Zeilen-ID für den Löschkonflikt. *ROWGUID* ist **Uniqueidentifier**, hat keinen Standardwert.  
+`[ @rowguid = ] 'rowguid'` Ist der Zeilenbezeichner für den Löschkonflikt. *ROWGUID* ist **Uniqueidentifier**, hat keinen Standardwert.  
   
- [  **@origin_datasource=**] **"**_Origin_datasource_**"**  
- Der Ursprung des Konflikts. *Origin_datasource* ist **varchar(255)**, hat keinen Standardwert.  
+`[ @origin_datasource = ] 'origin_datasource'` Ist der Ursprung des Konflikts. *Origin_datasource* ist **varchar(255)**, hat keinen Standardwert.  
   
- [  **@drop_table_if_empty=**] **"**_Drop_table_if_empty_**"**  
- Ein Flag gibt an, dass die *Conflict_table* soll, wenn gelöscht werden, ist leer. *Drop_table_if_empty* ist **varchar(10)**, hat den Standardwert "false".  
+`[ @drop_table_if_empty = ] 'drop_table_if_empty'` Ein Flag gibt an, dass die *Conflict_table* soll, wenn gelöscht werden, ist leer. *Drop_table_if_empty* ist **varchar(10)**, hat den Standardwert "false".  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

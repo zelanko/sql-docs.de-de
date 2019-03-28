@@ -18,19 +18,19 @@ ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9fac8fd56139b340df2a2c4cdcfc7376de02dcab
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 3f842060c6ca621fc52fa34f08838541dc65e993
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168850"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535632"
 ---
 # <a name="sphelpmaintenanceplan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt Informationen zum angegebenen Wartungsplan zurück. Wenn kein Plan angegeben ist, gibt die gespeicherte Prozedur Informationen zu allen Wartungsplänen zurück.  
   
-> **Hinweis:** diese gespeicherte Prozedur wird mit Datenbankwartungsplänen verwendet. Diese Funktion wurde durch Wartungspläne ersetzt, die nicht diese gespeicherte Prozedur verwenden. Verwenden Sie diese Prozedur, um Datenbankwartungspläne für Installationen bereitzustellen, die von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aktualisiert wurden.  
+> **HINWEIS:** Diese gespeicherte Prozedur wird mit Datenbankwartungsplänen verwendet. Diese Funktion wurde durch Wartungspläne ersetzt, die nicht diese gespeicherte Prozedur verwenden. Verwenden Sie diese Prozedur, um Datenbankwartungspläne für Installationen bereitzustellen, die von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aktualisiert wurden.  
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
@@ -45,8 +45,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@plan_id =**] **"**_Plan\_Id_**"**  
- Gibt die Plan-ID des Wartungsplans an. *Plan_id* ist **UNIQUEIDENTIFIER**. Die Standardeinstellung ist NULL.  
+`[ @plan_id = ] 'plan\_id'` Gibt die Plan-ID des Wartungsplans an. *Plan_id* ist **UNIQUEIDENTIFIER**. Die Standardeinstellung ist NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  None  
@@ -61,7 +60,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |**plan_id**|**uniqueidentifier**|ID des Wartungsplans.|  
 |**plan_name**|**sysname**|Name des Wartungsplans.|  
 |**date_created**|**datetime**|Erstellungsdatum des Wartungsplans.|  
-|**Besitzer**|**sysname**|Besitzer des Wartungsplans.|  
+|**owner**|**sysname**|Besitzer des Wartungsplans.|  
 |**max_history_rows**|**int**|Maximale Anzahl von Zeilen, die für das Aufzeichnen des Wartungsplanverlaufs in der Systemtabelle zugeordnet werden.|  
 |**remote_history_server**|**int**|Der Name des Remoteservers, zu dem der Verlaufsbericht geschrieben werden konnte.|  
 |**max_remote_history_rows**|**int**|Maximale Anzahl von Zeilen, die in der Systemtabelle auf einem Remoteserver zugeordnet wurden und in die der Verlaufsbericht geschrieben werden konnte.|  

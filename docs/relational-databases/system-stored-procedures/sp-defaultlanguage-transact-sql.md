@@ -18,12 +18,12 @@ ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46b99e16505cf6f7a08503a98f37ced7bedcdb12
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9fa56614c65dfc14982c62fb71ce117f8872805c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520812"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527992"
 ---
 # <a name="spdefaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@loginame =** ] **"**_Anmeldung_**"**  
- Der Anmeldename. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. *Anmeldung* kann sein, eine vorhandene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung oder einen Windows-Benutzer oder eine Gruppe.  
+`[ @loginame = ] 'login'` Ist der Anmeldename. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. *Anmeldung* kann sein, eine vorhandene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung oder einen Windows-Benutzer oder eine Gruppe.  
   
- [  **@language =** ] **"**_Sprache_**"**  
- Die Standardsprache der Anmeldung. *language* ist vom Datentyp **sysname**und hat den Standardwert NULL. *Sprache* muss eine gültige Sprache auf dem Server sein. Wenn *Sprache* nicht angegeben ist, *Sprache* festgelegt ist, um die Standardsprache des Servers; Standardsprache wird definiert, indem die **Sp_configure** Konfigurationsvariable **Standardsprache**. Wird die Standardsprache des Servers geändert, ändert sich dadurch nicht die Standardsprache der vorhandenen Anmeldenamen.  
+`[ @language = ] 'language'` Ist die Standardsprache des Anmeldenamens an. *language* ist vom Datentyp **sysname**und hat den Standardwert NULL. *Sprache* muss eine gültige Sprache auf dem Server sein. Wenn *Sprache* nicht angegeben ist, *Sprache* festgelegt ist, um die Standardsprache des Servers; Standardsprache wird definiert, indem die **Sp_configure** Konfigurationsvariable **Standardsprache**. Wird die Standardsprache des Servers geändert, ändert sich dadurch nicht die Standardsprache der vorhandenen Anmeldenamen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -78,7 +76,7 @@ GO
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [@@LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/functions/language-transact-sql.md)   
  [SET-Anweisungen (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [Sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)   
+ [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

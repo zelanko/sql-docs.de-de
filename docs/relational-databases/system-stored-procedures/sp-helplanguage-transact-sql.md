@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c70e32de4ad1c44f5d38262573a075e81417ec5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1b567b7d20f4d588fe0ca70f68be4318ce24398
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756538"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531672"
 ---
 # <a name="sphelplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,8 +42,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@language=** ] **"***Sprache***"**  
- Der Name der alternativen Sprache, für die Informationen angezeigt werden sollen. *language* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *Sprache* wird angegeben, werden Informationen zu der angegebenen Sprache zurückgegeben. Wenn Language nicht angegeben ist, Informationen zu allen Sprachen in der **sys.syslanguages** -kompatibilitätssicht zurückgegeben.  
+`[ @language = ] 'language'` Ist der Name der alternativen Sprache, für die Anzeige von Informationen. *language* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *Sprache* wird angegeben, werden Informationen zu der angegebenen Sprache zurückgegeben. Wenn Language nicht angegeben ist, Informationen zu allen Sprachen in der **sys.syslanguages** -kompatibilitätssicht zurückgegeben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -53,15 +52,15 @@ sp_helplanguage [ [ @language = ] 'language' ]
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**langid**|**smallint**|Sprachen-ID|  
-|**DateFormat-Einstellung**|**NCHAR(3)**|Datumsformat.|  
-|**DATEFIRST**|**tinyint**|Erster Tag der Woche: 1 für Montag, 2 für Dienstag usw., bis 7 für Sonntag.|  
-|**Aktualisieren**|**int**|Version des letzten Upgrades von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für diese Sprache.|  
+|**dateformat**|**nchar(3)**|Datumsformat.|  
+|**datefirst**|**tinyint**|Erster Tag der Woche: 1 für Montag, 2 für Dienstag und so weiter, bis 7 für Sonntag.|  
+|**upgrade**|**int**|Version des letzten Upgrades von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für diese Sprache.|  
 |**name**|**sysname**|Name der Sprache.|  
 |**alias**|**sysname**|Alternativer Name der Sprache|  
-|**Monate**|**nvarchar(372)**|Monatsnamen|  
-|**ShortMonths**|**nvarchar(132)**|Kurznamen für die Monate|  
-|**Tage**|**nvarchar(217)**|Tagesnamen|  
-|**LCID**|**int**|Windows-Gebietsschema-ID für die Sprache.|  
+|**months**|**nvarchar(372)**|Monatsnamen|  
+|**shortmonths**|**nvarchar(132)**|Kurznamen für die Monate|  
+|**days**|**nvarchar(217)**|Tagesnamen|  
+|**lcid**|**int**|Windows-Gebietsschema-ID für die Sprache.|  
 |**msglangid**|**smallint**|ID der Meldungsgruppe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
   
 ## <a name="permissions"></a>Berechtigungen  

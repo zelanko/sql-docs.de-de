@@ -13,12 +13,12 @@ ms.assetid: 9fe6454e-8c0e-4b50-937b-d9871b20fd13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1bcaade651e2e63bb2cabf6f0a8fc016781ba45b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9f3e7c74fcaebb0aaaf246cba94e32c6b602b6e5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748973"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534563"
 ---
 # <a name="add-a-collection-item-to-a-collection-set-transact-sql"></a>Hinzufügen eines Sammelelements zu einem Sammlungssatz (Transact-SQL)
   Sie können einem vorhandenen Sammlungssatz mithilfe der mit dem Datensammler bereitgestellten gespeicherten Prozeduren ein Sammlungselement hinzufügen.  
@@ -29,7 +29,7 @@ ms.locfileid: "52748973"
   
 1.  Beenden Sie den Sammlungssatz, dem Sie das Element hinzufügen möchten, in dem Sie die gespeicherte Prozedur **sp_syscollector_stop_collection_set** ausführen. Um beispielsweise einen Sammlungssatz mit dem Namen "Test Collection Set" zu beenden, führen Sie die folgenden Anweisungen aus.  
   
-    ```tsql  
+    ```sql  
     USE msdb  
     DECLARE @csid int  
     SELECT @csid = collection_set_id  
@@ -44,7 +44,7 @@ ms.locfileid: "52748973"
   
 2.  Deklarieren Sie den Sammlungssatz, dem Sie das Sammelelement hinzufügen möchten. Der folgende Code bietet ein Beispiel für das Deklarieren der Sammlungssatz-ID.  
   
-    ```tsql  
+    ```sql  
     DECLARE @collection_set_id_1 int  
     SELECT @collection_set_id_1 = collection_set_id FROM [msdb].[dbo].[syscollector_collection_sets]  
     WHERE name = N'Test Collection Set'; -- name of collection set  
@@ -52,7 +52,7 @@ ms.locfileid: "52748973"
   
 3.  Deklarieren Sie den Sammlertyp. Der folgende Code bietet ein Beispiel für das Deklarieren des generischen T-SQL-Abfragesammlertyps.  
   
-    ```tsql  
+    ```sql  
     DECLARE @collector_type_uid_1 uniqueidentifier  
     SELECT @collector_type_uid_1 = collector_type_uid FROM [msdb].[dbo].[syscollector_collector_types]   
        WHERE name = N'Generic T-SQL Query Collector Type';  
@@ -60,7 +60,7 @@ ms.locfileid: "52748973"
   
      Führen Sie den folgenden Code aus, um eine Liste der installierten Sammlertypen abzurufen:  
   
-    ```tsql  
+    ```sql  
     USE msdb  
     SELECT * from syscollector_collector_types  
     GO  
@@ -68,7 +68,7 @@ ms.locfileid: "52748973"
   
 4.  Führen Sie die gespeicherte Prozedur **sp_syscollector_create_collection_item** aus, um das Sammlungselement zu erstellen. Das Schema für das Sammelelement muss so deklariert werden, dass es dem erforderlichen Schema für den gewünschten Sammlertyp zugeordnet wird. Im folgenden Beispiel wird das Eingabeschema der generischen T-SQL-Abfrage verwendet.  
   
-    ```tsql  
+    ```sql  
     DECLARE @collection_item_id int;  
     EXEC [msdb].[dbo].[sp_syscollector_create_collection_item]   
     @name=N'OS Wait Stats', --name of collection item  

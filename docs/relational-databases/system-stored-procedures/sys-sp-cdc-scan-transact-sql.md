@@ -20,12 +20,12 @@ ms.assetid: 46e4294c-97b8-47d6-9ed9-b436a9929353
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7eaa167c46937d48bd760d29bd17828a2d555538
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e7651c6df4a277d72a71c0cdb8a5910ae19ba76
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763075"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536782"
 ---
 # <a name="sysspcdcscan-transact-sql"></a>sys.sp_cdc_scan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,17 +45,13 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@maxtrans=** ] *Max_trans*  
- Maximale Anzahl der in jedem Scanzyklus zu verarbeitenden Transaktionen. *Max_trans* ist **Int** hat den Standardwert von 500.  
+`[ @maxtrans = ] max_trans` Maximale Anzahl der in jedem Scanzyklus zu verarbeitenden Transaktionen. *Max_trans* ist **Int** hat den Standardwert von 500.  
   
- [  **@maxscans=** ] *Max_scans*  
- Maximale Anzahl der Scanzyklen, die ausgeführt werden sollen, um alle Zeilen aus dem Protokoll zu extrahieren. *Max_scans* ist **Int** hat den Standardwert 10.  
+`[ @maxscans = ] max_scans` Maximale Anzahl der scanzyklen, ausführen, um alle Zeilen aus dem Protokoll zu extrahieren. *Max_scans* ist **Int** hat den Standardwert 10.  
   
- [  **@continuous=** ] *continuous*  
- Gibt an, ob die gespeicherte Prozedur sollte nach dem Ausführen eines einzelnen Scanzyklus (0) oder kontinuierlich, für die angegebene Zeit anhalten *Polling_interval* vor reexecuting der Überprüfungszyklus (1). *fortlaufende* ist **Tinyint** hat den Standardwert 0.  
+`[ @continuous = ] continuous` Gibt an, ob die gespeicherte Prozedur sollte nach dem Ausführen eines einzelnen Scanzyklus (0) oder kontinuierlich, für die angegebene Zeit anhalten *Polling_interval* vor reexecuting der Überprüfungszyklus (1). *fortlaufende* ist **Tinyint** hat den Standardwert 0.  
   
- [  **@pollinginterval=** ] *Polling_interval*  
- Anzahl von Sekunden zwischen den Scan des Replikationsprotokolls Prozessorzyklen. *Polling_interval* ist **Bigint** hat den Standardwert 0.  
+`[ @pollinginterval = ] polling_interval` Anzahl von Sekunden zwischen den Scan des Replikationsprotokolls Prozessorzyklen. *Polling_interval* ist **Bigint** hat den Standardwert 0.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -70,6 +66,6 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
  Erfordert die Mitgliedschaft in der festen Datenbankrolle "db_owner".  
   
 ## <a name="see-also"></a>Siehe auch  
- [cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
+ [dbo.cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
   
   

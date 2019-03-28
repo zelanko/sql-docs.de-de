@@ -18,12 +18,12 @@ ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2fa398eade8b3cac1497c1168882dbacbc6e9817
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a6fa55cd5359c64f2a124ff85429745c995fae96
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659486"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538162"
 ---
 # <a name="sphelpspatialgeographyhistogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,19 +41,15 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@tabname =**] **"***Tabname***"**  
- Der qualifizierte oder nicht qualifizierte Name der Tabelle, für die der Räumlichkeitsindex angegeben wurde.  
+`[ @tabname = ] 'tabname'` Ist der qualifizierte oder nicht qualifizierte Name der Tabelle für die der räumlichkeitsindex angegeben wurde.  
   
  Anführungszeichen sind nur dann erforderlich, wenn eine qualifizierte Tabelle angegeben wird. Bei Angabe eines vollqualifizierten Namens, einschließlich eines Datenbanknamens, muss es sich bei dem Datenbanknamen um den Namen der aktuellen Datenbank handeln. *Tabname* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@colname =** ] **"***Columnname***"**  
- Dies ist der Namen der angegebenen räumlichen Spalte. *ColumnName* ist eine **Sysname**, hat keinen Standardwert.  
+`[ @colname = ] 'columnname'` Ist der Name der angegebenen räumlichen Spalte. *ColumnName* ist eine **Sysname**, hat keinen Standardwert.  
   
- [  **@resolution =** ] **"***Auflösung***"**  
- Ist die Auflösung des Begrenzungsrahmens. Werte zwischen 10 und 5000 sind gültig. *Auflösung* ist eine **Tinyint**, hat keinen Standardwert.  
+`[ @resolution = ] 'resolution'` Ist die Auflösung des Begrenzungsrahmens. Werte zwischen 10 und 5000 sind gültig. *Auflösung* ist eine **Tinyint**, hat keinen Standardwert.  
   
- [  **@sample =** ] **"***Beispiel***"**  
- Ist der verwendete Prozentsatz der Tabelle. Gültige Werte liegen zwischen 0 und 100. *TABLESAMPLE* ist eine **"float"**. Standardwert ist 100.  
+`[ @sample = ] 'sample'` Ist der Prozentsatz der Tabelle, die verwendet wird. Gültige Werte liegen zwischen 0 und 100. *TABLESAMPLE* ist eine **"float"**. Standardwert ist 100.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein Tabellenwert wird zurückgegeben. In der folgenden Tabelle wird der Spalteninhalt der Tabelle beschrieben.  
@@ -61,7 +57,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|Stellt die eindeutige ID jeder Zelle, mit der Anzahl von 1 ab.|  
-|**Zelle**|**geography**|Ist ein rechteckiges Polygon, das die einzelnen Zellen darstellt. Die Zellenform ist mit der für die räumliche Indizierung verwendeten Zellenform identisch.|  
+|**cell**|**geography**|Ist ein rechteckiges Polygon, das die einzelnen Zellen darstellt. Die Zellenform ist mit der für die räumliche Indizierung verwendeten Zellenform identisch.|  
 |**row_count**|**bigint**|Gibt die Anzahl räumlicher Objekte an, die die Zelle berühren oder enthalten.|  
   
 ## <a name="permissions"></a>Berechtigungen  

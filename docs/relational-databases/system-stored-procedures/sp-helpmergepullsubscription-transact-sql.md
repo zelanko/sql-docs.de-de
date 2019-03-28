@@ -16,12 +16,12 @@ ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e037842d6be6ae08bc35ac9827ebd6931503f89e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 899846e0868b6381c019281c432c014144e6354c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802022"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535332"
 ---
 # <a name="sphelpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,41 +41,37 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="argument"></a>Argument  
- [ **@publication=**] **'***publication***'**  
- Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert **%**. Wenn *Veröffentlichung* ist **%**, Informationen zu allen mergeveröffentlichungen und Mergeabonnements in der aktuellen Datenbank zurückgegeben.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert **%**. Wenn *Veröffentlichung* ist **%**, Informationen zu allen mergeveröffentlichungen und Mergeabonnements in der aktuellen Datenbank zurückgegeben.  
   
- [ **@publisher=**] **'***publisher***'**  
- Der Name des Verlegers. *Publisher*ist **Sysname**, hat den Standardwert **%**.  
+`[ @publisher = ] 'publisher'` Ist der Name des Verlegers. *Publisher*ist **Sysname**, hat den Standardwert **%**.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
- Der Name der Verlegerdatenbank. *Publisher_db*ist **Sysname**, hat den Standardwert **%**.  
+`[ @publisher_db = ] 'publisher_db'` Ist der Name der Verlegerdatenbank. *Publisher_db*ist **Sysname**, hat den Standardwert **%**.  
   
- [  **@subscription_type=**] **"***Subscription_type***"**  
- Gibt an, ob Pullabonnements angezeigt werden. *Subscription_type*ist **nvarchar(10)**, hat den Standardwert **'Pull'**. Gültige Werte sind **'Push'**, **'Pull'**, oder **'both'**.  
+`[ @subscription_type = ] 'subscription_type'` Ist Sie, ob Pullabonnements angezeigt werden soll. *Subscription_type*ist **nvarchar(10)**, hat den Standardwert **'Pull'**. Gültige Werte sind **'Push'**, **'Pull'**, oder **'both'**.  
   
 ## <a name="result-sets"></a>Resultsets  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**subscription_name**|**nvarchar(1000)**|Name des Abonnements.|  
-|**Veröffentlichung**|**sysname**|Name der Veröffentlichung.|  
+|**publication**|**sysname**|Name der Veröffentlichung.|  
 |**publisher**|**sysname**|Name des Verlegers.|  
 |**publisher_db**|**sysname**|Name der Verlegerdatenbank.|  
 |**subscriber**|**sysname**|Der Name des Abonnenten.|  
 |**subscription_db**|**sysname**|Name der Abonnementdatenbank.|  
 |**status**|**int**|Abonnementstatus:<br /><br /> **0** = inaktives Abonnement<br /><br /> **1** = aktives Abonnement<br /><br /> **2** = gelöschtes Abonnement<br /><br /> **3** = getrenntes Abonnement<br /><br /> **4** = angefügtes Abonnement<br /><br /> **5** = Abonnement wurde für die erneute Initialisierung mit Upload markiert<br /><br /> **6** = Fehler bei der das Abonnement Anfügen<br /><br /> **7** =-Abonnement aus einer Sicherung wiederhergestellt|  
-|**subscriber_type kann**|**int**|Typ des Abonnenten:<br /><br /> **1** = global<br /><br /> **2** = lokal<br /><br /> **3** = anonym|  
-|**subscription_type**|**int**|Typ des Abonnements:<br /><br /> **0** = Push<br /><br /> **1** = Pullabonnement<br /><br /> **2** = anonym|  
+|**subscriber_type**|**int**|Typ des Abonnenten:<br /><br /> **1** = Global<br /><br /> **2** = lokal<br /><br /> **3** = anonym|  
+|**subscription_type**|**int**|Typ des Abonnements:<br /><br /> **0** = Push<br /><br /> **1** = Pull<br /><br /> **2** = anonym|  
 |**priority**|**float(8)**|Abonnementpriorität. Der Wert muss kleiner als **100,00**.|  
 |**sync_type**|**tinyint**|Synchronisierungsart des Abonnements:<br /><br /> **1** = automatisch<br /><br /> **2** = Momentaufnahme wird nicht verwendet.|  
 |**description**|**nvarchar(255)**|Kurze Beschreibung des Pullabonnements.|  
-|**der Standard**|**'binary(16)'**|Auftrags-ID des Merge-Agents.|  
+|**merge_jobid**|**binary(16)**|Auftrags-ID des Merge-Agents.|  
 |**enabled_for_syncmgr**|**int**|Zeigt an, ob das Abonnement über die Synchronisierungsverwaltung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] synchronisiert werden kann.|  
 |**last_updated**|**nvarchar(26)**|Zeitpunkt, zu dem der Merge-Agent das Abonnement zuletzt erfolgreich synchronisiert hat.|  
 |**publisher_login**|**sysname**|Anmeldename des Verlegers.|  
 |**publisher_password**|**sysname**|Kennwort des Verlegers.|  
 |**publisher_security_mode**|**int**|Gibt den Sicherheitsmodus des Verlegers an:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung<br /><br /> **1** = Windows-Authentifizierung|  
-|**Verteiler**|**sysname**|Name des Verteilers.|  
+|**distributor**|**sysname**|Name des Verteilers.|  
 |**distributor_login**|**sysname**|Anmeldename des Verteilers.|  
 |**distributor_password**|**sysname**|Das Verteilerkennwort.|  
 |**distributor_security_mode**|**int**|Gibt den Sicherheitsmodus des Verteilers an:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung<br /><br /> **1** = Windows-Authentifizierung|  
@@ -95,12 +91,12 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**last_sync_summary**|**sysname**|Beschreibung der letzten Synchronisierungsergebnisse.|  
 |**use_web_sync**|**bit**|Gibt an, ob das Abonnement über HTTPS synchronisiert werden kann ein Wert von **1** bedeutet, dass dieses Feature aktiviert ist.|  
 |**internet_url**|**nvarchar(260)**|URL, die den Speicherort der replikationsüberwachung für die websynchronisierung darstellt.|  
-|**sich**|**nvarchar(128)**|Der Anmeldename, der vom Merge-Agent zum Herstellen einer Verbindung mit dem Webserver verwendet wird, der die Websynchronisierung mithilfe der Standardauthentifizierung hostet.|  
+|**internet_login**|**nvarchar(128)**|Der Anmeldename, der vom Merge-Agent zum Herstellen einer Verbindung mit dem Webserver verwendet wird, der die Websynchronisierung mithilfe der Standardauthentifizierung hostet.|  
 |**internet_password**|**nvarchar(524)**|Das Kennwort für den Anmeldenamen, der vom Merge-Agent zum Herstellen einer Verbindung mit dem Webserver verwendet wird, der die Websynchronisierung mithilfe der Standardauthentifizierung hostet.|  
 |**internet_security_mode**|**int**|Der verwendete Authentifizierungsmodus beim Herstellen einer Verbindung mit dem Webserver, der die Websynchronisierung hostet. Der Wert **1** bedeutet, dass Windows-Authentifizierung und einen Wert von **0** bedeutet, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung.|  
 |**internet_timeout**|**int**|Zeit in Sekunden, bevor eine Anforderung für eine Websynchronisierung abläuft.|  
-|**Hostname**|**nvarchar(128)**|Gibt einen überladenen Wert für [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) Wenn diese Funktion in der WHERE-Klausel eines parametrisierten Zeilenfilters verwendet wird.|  
-|**job_login-Wert**|**nvarchar(512)**|Ist das Windows-Konto unter dem der Merge-Agent ausgeführt wird, der zurückgegeben wird, im Format *Domäne*\\*Benutzername*.|  
+|**hostname**|**nvarchar(128)**|Gibt einen überladenen Wert für [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) Wenn diese Funktion in der WHERE-Klausel eines parametrisierten Zeilenfilters verwendet wird.|  
+|**job_login**|**nvarchar(512)**|Ist das Windows-Konto unter dem der Merge-Agent ausgeführt wird, der zurückgegeben wird, im Format *Domäne*\\*Benutzername*.|  
 |**job_password**|**sysname**|Aus Sicherheitsgründen den Wert "**\*\*\*\*\*\*\*\*\*\***" ist immer zurückgegeben.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -113,9 +109,9 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
  Nur Mitglieder der der **Sysadmin** Serverrolle und die **Db_owner** feste Datenbankrolle können ausführen **Sp_helpmergepullsubscription**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [Sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
- [Sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
+ [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
+ [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

@@ -18,12 +18,12 @@ ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4382dc4de4010944e60cb37640759e91a0fc2727
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be900d6b8295aae5871e9162c5e07ae5bed6516c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851558"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528975"
 ---
 # <a name="sprefreshlogshippingmonitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_refresh_log_shipping_monitor
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@agent_id=** ] **'***agent_id***'**  
- Die primäre ID für Sicherungsvorgänge oder die sekundäre ID für Kopier- oder Wiederherstellungsvorgänge. *agent_id* ist vom Datentyp **uniqueidentifier** und darf nicht NULL sein.  
+`[ @agent_id = ] 'agent_id'` Die primäre ID für die Sicherung oder die sekundäre ID für Kopier- oder Wiederherstellungsvorgänge. *agent_id* ist vom Datentyp **uniqueidentifier** und darf nicht NULL sein.  
   
- [ **@agent_type=** ] **'***agent_type***'**  
- Der Typ des Protokollversandauftrags.  
+`[ @agent_type = ] 'agent_type'` Der Typ des protokollversandauftrags.  
   
  0 = Sicherungsauftrag  
   
@@ -58,11 +56,9 @@ sp_refresh_log_shipping_monitor
   
  *agent_type* ist vom Datentyp **tinyint** und kann nicht NULL sein.  
   
- [  **@database=** ] **"***Datenbank***"**  
- Die primäre oder sekundäre Datenbank, die von der Protokollierung oder von Sicherungs- oder Wiederherstellungs-Agents verwendet wird.  
+`[ @database = ] 'database'` Die primären oder sekundären Datenbank, die von der Protokollierung von Backup- oder Restore-Agents verwendet.  
   
- [ **@mode** ] *n*  
- Gibt an, ob die Überwachungsdaten aktualisiert oder geleert werden. Der Datentyp des *m* ist "Tinyint" und die unterstützten Werte sind:  
+`[ @mode ] n` Gibt an, ob die Überwachungsdaten aktualisiert oder geleert werden. Der Datentyp des *m* ist "Tinyint" und die unterstützten Werte sind:  
   
  1 = aktualisieren (Dies ist der Standardwert.)  
   

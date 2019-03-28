@@ -18,12 +18,12 @@ ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c136a58e8d23f67a5c703d6f840858757661686b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b5fdea72621ef18cc032fbf806ec0cb7faad4739
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769558"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537872"
 ---
 # <a name="sprevokeloginfromproxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +43,11 @@ sp_revoke_login_from_proxy
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@name=** ] **'***name***'**  
- Der Name des der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung, Serverrolle oder **Msdb** -Datenbankrolle, für den Zugriff entfernen. *Namen* ist **nvarchar(256)** hat keinen Standardwert.  
+`[ @name = ] 'name'` Der Name des der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung, Serverrolle oder **Msdb** -Datenbankrolle, für den Zugriff entfernen. *Namen* ist **nvarchar(256)** hat keinen Standardwert.  
   
- [ **@proxy_id=** ] *id*  
- Die ID des Proxys, für den der Zugriff entfernt werden soll. Entweder *Id* oder *Proxy_name* muss angegeben werden, aber beide Angaben sind nicht möglich. *id* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @proxy_id = ] id` Die Id des Proxys, für der Zugriff entfernt werden soll. Entweder *Id* oder *Proxy_name* muss angegeben werden, aber beide Angaben sind nicht möglich. *id* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
- [ **@proxy_name=** ] **'***proxy_name***'**  
- Der Name des Proxys, für den der Zugriff entfernt werden soll. Entweder *Id* oder *Proxy_name* muss angegeben werden, aber beide Angaben sind nicht möglich. Die *Proxy_name* ist **Sysname**, hat den Standardwert NULL.  
+`[ @proxy_name = ] 'proxy_name'` Der Name des Proxys, für der Zugriff entfernt werden soll. Entweder *Id* oder *Proxy_name* muss angegeben werden, aber beide Angaben sind nicht möglich. Die *Proxy_name* ist **Sysname**, hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

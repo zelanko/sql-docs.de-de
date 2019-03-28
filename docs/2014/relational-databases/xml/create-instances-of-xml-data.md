@@ -16,15 +16,15 @@ helpviewer_keywords:
 - XML [SQL Server], generating instances
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dea24689dc1dad9836c6ef2a53cf5e40f078c47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ae842748d2d510c5c00f329f5e28cd49a0c86ef3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077130"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538622"
 ---
 # <a name="create-instances-of-xml-data"></a>Erstellen von Instanzen der XML-Daten
   In diesem Thema wird beschrieben, wie XML-Instanzen generiert werden.  
@@ -93,7 +93,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
   
  Wenn der *style* -Parameter nicht verwendet oder sein Wert auf 0 festgelegt wird, werden insignifikante Leerzeichen für die Konvertierung der xml DT-Instanz nicht beibehalten. Weitere Informationen zum Verwenden des CONVERT-Operators und seines *style*-Parameters beim Konvertieren von Zeichenfolgendaten in XML DT-Instanzen finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
-### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Beispiel: Umwandeln eines Zeichenfolgenwertes in typisiertes XML und Zuweisen des Wertes zu einer Spalte  
+### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Beispiel: Umwandeln eines Zeichenfolgenwertes in typisiertes Xml und weisen sie einer Spalteninhalts  
  Das folgende Beispiel wandelt eine Zeichenfolgenvariable, die eine XML-Fragment enthält den `xml` -Datentyp um und speichert Sie dann in der `xml` Spalte vom Typ:  
   
 ```  
@@ -121,7 +121,7 @@ INSERT INTO T VALUES (3, cast (@s as xml))
 INSERT INTO T VALUES (3, convert (xml, @s))   
 ```  
   
-### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Beispiel: Konvertieren einer Zeichenfolge in typisiertes XML und Zuweisen der Zeichenfolge zu einer Spalte  
+### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Beispiel: Konvertieren einer Zeichenfolge in typisierte XML-Daten, und weisen sie Sie einer Variablenverweis  
  Im folgenden Beispiel wird in eine Zeichenfolge konvertiert `xml` geben, einer Variablen zugewiesen, und wählen Sie die `xml` -Datentyp:  
   
 ```  
@@ -180,7 +180,7 @@ go
  Weitere Informationen zu FOR XML finden Sie unter [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md).  
   
 > [!NOTE]  
->  Von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden `xml`-Datentypinstanzen an den Client zurückgegeben, die das Ergebnis unterschiedlicher Serverkonstrukte sind (z. B. FOR XML-Abfragen, für die die TYPE-Direktive verwendet wird, oder bei denen der `xml`-Datentyp verwendet wird, um XML aus SQL-Spalten, -Variablen und -Ausgabeparametern zurückzugeben). Im Clientanwendungscode wird vom ADO.NET-Anbieter angefordert, die dies `xml` Datentypinformationen-Datentypinformationen als Binärcode vom Server gesendet werden. Wenn Sie FOR XML jedoch ohne die TYPE-Direktive verwenden, werden die XML-Daten als Zeichenfolgentyp zurückgegeben. Der Clientanbieter ist in jedem Fall fähig, beide XML-Formate zu verarbeiten.  
+>  Von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden `xml`-Datentypinstanzen an den Client zurückgegeben, die das Ergebnis unterschiedlicher Serverkonstrukte sind (z. B. FOR XML-Abfragen, für die die TYPE-Direktive verwendet wird, oder bei denen der `xml`-Datentyp verwendet wird, um XML aus SQL-Spalten, -Variablen und -Ausgabeparametern zurückzugeben). Im Clientanwendungscode wird vom ADO.NET-Anbieter angefordert, dass diese `xml`-Datentypinformationen als Binärcode vom Server gesendet werden. Wenn Sie FOR XML jedoch ohne die TYPE-Direktive verwenden, werden die XML-Daten als Zeichenfolgentyp zurückgegeben. Der Clientanbieter ist in jedem Fall fähig, beide XML-Formate zu verarbeiten.  
   
 ## <a name="using-constant-assignments"></a>Verwenden von Konstantenzuweisungen  
  Eine Zeichenfolgenkonstante kann verwendet werden, wo eine Instanz des der `xml` -Datentyps erwartet wird. Dies entspricht einer impliziten CAST-Anweisung für die Zeichenfolge in XML. Zum Beispiel:  

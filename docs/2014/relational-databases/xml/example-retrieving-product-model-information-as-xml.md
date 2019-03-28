@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, retrieving XML information example
 ms.assetid: 3828b4ca-3ab2-444f-9c58-8be6e7f064a6
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ec7ed358ab8c6c5f42e378a23dd4ba911800ae3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b48b333a5619aaad7f7f6af1c6e8cf908ba35bb1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219880"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537762"
 ---
 # <a name="example-retrieving-product-model-information-as-xml"></a>Beispiel: Abrufen von Produktmodellinformationen als XML
   Die folgende Abfrage gibt Produktmodellinformationen zurück. `RAW` -Modus wird in der `FOR XML` -Klausel angegeben.  
@@ -65,7 +65,7 @@ GO
 </row>  
 ```  
   
- Sie können optional angeben, die `TYPE` Richtlinie zum Abrufen der Ergebnisse als `xml` Typ. Die `TYPE` -Direktive ändert nicht den Inhalt der Ergebnisse. Nur der Datentyp der Ergebnisse wird geändert.  
+ Optional können Sie die `TYPE`-Direktive angeben, um die Ergebnisse als `xml`-Datentyp abzurufen. Die `TYPE` -Direktive ändert nicht den Inhalt der Ergebnisse. Nur der Datentyp der Ergebnisse wird geändert.  
   
 ```  
 USE AdventureWorks2012;  

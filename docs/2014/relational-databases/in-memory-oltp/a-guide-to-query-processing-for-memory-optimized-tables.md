@@ -10,12 +10,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2393792341fdbc28bbc0f74657aa2f3cf54ee4d1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 3a610c41fd9e3126bb0f5833dcacfe27ce969a72
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374822"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535272"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Anleitung zur Abfrageverarbeitung für speicheroptimierte Tabellen
   Mit In-Memory OLTP werden speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]eingeführt. Dieser Artikel gibt eine Übersicht über die Abfrageverarbeitung für speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren.  
@@ -41,7 +41,7 @@ ms.locfileid: "53374822"
   
  Wir gehen von zwei Tabellen aus: "Customer" und "Order". Das folgende [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Skript enthält die Definitionen für diese beiden Tabellen und zugehörige Indizes in ihrer (herkömmlichen) datenträgerbasierten Form:  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.[Customer] (  
   CustomerID nchar (5) NOT NULL PRIMARY KEY,  
   ContactName nvarchar (30) NOT NULL   
@@ -64,7 +64,7 @@ GO
   
  Betrachten wir die folgende Abfrage, in der die Tabellen "Customer" und "Order" verknüpft sind und die die Bestell-ID und die zugehörigen Kundeninformationen zurückgibt:  
   
-```tsql  
+```sql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -83,7 +83,7 @@ Abfrageplan für einen Join datenträgerbasierter Tabellen.
   
  Betrachten wir eine leichte Abwandlung dieser Abfrage, die alle Zeilen aus der Order-Tabelle zurückgibt, nicht nur OrderID:  
   
-```tsql  
+```sql  
 SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -136,7 +136,7 @@ Abfrageverarbeitungspipeline für interpretierten Transact-SQL-Zugriff auf speic
   
  Das folgende [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Skript enthält speicheroptimierte Versionen der Order- und Customer-Tabellen, wobei Hashindizes verwendet werden:  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.[Customer] (  
   CustomerID nchar (5) NOT NULL PRIMARY KEY NONCLUSTERED,  
   ContactName nvarchar (30) NOT NULL   
@@ -153,7 +153,7 @@ GO
   
  Betrachten wir die gleiche Abfrage bei der Ausführung mit speicheroptimierten Tabellen:  
   
-```tsql  
+```sql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -175,7 +175,7 @@ Abfrageplan für den Join speicheroptimierter Tabellen.
 ## <a name="natively-compiled-stored-procedures"></a>Systemintern kompilierte gespeicherte Prozeduren  
  Systemintern kompilierte gespeicherte Prozeduren sind gespeicherte [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Prozeduren, die in Computercode kompiliert werden, statt durch die Abfrageausführungs-Engine interpretiert zu werden. Das folgende Skript erstellt eine systemintern kompilierte gespeicherte Prozedur, die die Beispielabfrage ausführt (aus dem Abschnitt Beispielabfrage).  
   
-```tsql  
+```sql  
 CREATE PROCEDURE usp_SampleJoin  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH   
@@ -241,7 +241,7 @@ Ausführung systemintern kompilierter gespeicherten Prozeduren.
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>Abrufen eines Abfrageausführungsplans für systemintern kompilierte gespeicherte Prozeduren  
  Der Abfrageausführungsplan für eine nativ kompilierte gespeicherte Prozedur kann mithilfe des **geschätzten Ausführungsplans** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]oder mithilfe der Option SHOWPLAN_XML in [!INCLUDE[tsql](../../../includes/tsql-md.md)]abgerufen werden. Zum Beispiel:  
   
-```tsql  
+```sql  
 SET SHOWPLAN_XML ON  
 GO  
 EXEC dbo.usp_myproc  
@@ -269,7 +269,7 @@ GO
 |Stream Aggregate|Beachten Sie, dass der Hash Match-Operator keine Aggregationen unterstützt. Daher verwenden alle Aggregationen in den systemintern kompilierten gespeicherten Prozeduren den Stream Aggregate-Operator, selbst wenn der Plan für die gleiche Abfrage in interpretiertem [!INCLUDE[tsql](../../../includes/tsql-md.md)] den Hash Match-Operator verwendet.<br /><br /> `SELECT count(CustomerID) FROM dbo.Customer`|  
   
 ## <a name="column-statistics-and-joins"></a>Spaltenstatistiken und Joins  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden Statistiken für Werte in den Indexschlüsselspalten beibehalten, damit die Kosten für bestimmte Vorgänge wie Indexscans und Indexsuchen geschätzt werden können. ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auch Statistiken zu nicht-Indexschlüsselspalten erstellt, wenn Sie explizit erstellen, oder wenn die Abfrageoptimierer in Reaktion auf eine Abfrage mit einem Prädikat erstellt.) Das wesentliche Maß für die Kostenschätzung ist die Anzahl der Zeilen, die von einem einzelnen Operator verarbeitet werden. Beachten Sie, dass für datenträgerbasierte Tabellen die Anzahl der Seiten, auf die von einem bestimmten Operator zugegriffen wird, für die Kostenschätzung maßgeblich ist. Da die Seitenanzahl bei speicheroptimierten Tabellen jedoch nicht von Bedeutung ist (da sie immer 0 ist), steht hier die Zeilenanzahl im Vordergrund. Die Schätzung beginnt mit den Index Seek- und Index Scan-Operatoren im Plan und schließt danach die anderen Operatoren wie den Join-Operator ein. Die geschätzte Anzahl der von einem Joinoperator zu verarbeitenden Zeilen basiert auf der Schätzung für den zugrunde liegenden Index-, Seek- und Scan-Operator. Beim interpretierten [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Zugriff auf speicheroptimierte Tabellen können Sie den tatsächlichen Ausführungsplan beobachten, um den Unterschied zwischen der geschätzten und der tatsächlichen Zeilenanzahl für die Operatoren im Plan herauszufinden.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden Statistiken für Werte in den Indexschlüsselspalten beibehalten, damit die Kosten für bestimmte Vorgänge wie Indexscans und Indexsuchen geschätzt werden können. (Von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden auch Statistiken zu Nicht-Indexschlüsselspalten erstellt, wenn Sie sie explizit erstellen oder wenn sie vom Abfrageoptimierer in Reaktion auf eine Abfrage mit einem Prädikat erstellt werden.) Das wesentliche Maß für die Kostenschätzung ist die Anzahl der Zeilen, die von einem einzelnen Operator verarbeitet werden. Beachten Sie, dass für datenträgerbasierte Tabellen die Anzahl der Seiten, auf die von einem bestimmten Operator zugegriffen wird, für die Kostenschätzung maßgeblich ist. Da die Seitenanzahl bei speicheroptimierten Tabellen jedoch nicht von Bedeutung ist (da sie immer 0 ist), steht hier die Zeilenanzahl im Vordergrund. Die Schätzung beginnt mit den Index Seek- und Index Scan-Operatoren im Plan und schließt danach die anderen Operatoren wie den Join-Operator ein. Die geschätzte Anzahl der von einem Joinoperator zu verarbeitenden Zeilen basiert auf der Schätzung für den zugrunde liegenden Index-, Seek- und Scan-Operator. Beim interpretierten [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Zugriff auf speicheroptimierte Tabellen können Sie den tatsächlichen Ausführungsplan beobachten, um den Unterschied zwischen der geschätzten und der tatsächlichen Zeilenanzahl für die Operatoren im Plan herauszufinden.  
   
  Für das Beispiel in Abbildung 1 gilt:  
   

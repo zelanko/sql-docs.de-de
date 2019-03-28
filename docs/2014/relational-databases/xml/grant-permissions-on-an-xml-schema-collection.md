@@ -10,15 +10,15 @@ helpviewer_keywords:
 - granting permissions [SQL Server], XML schema collections
 - ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 365a47a47abd0e74c1716971998f145501a3cae4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e009f0fe22156f9a652dd19fceddf02bbc48c247
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150957"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530182"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>Erteilen von Berechtigungen für eine XML-Schemaauflistung
   Sie können Berechtigungen zum Erstellen von XML-Schemaauflistungen sowie Berechtigungen für ein XML-Schemaauflistungsobjekt erteilen.  
@@ -57,11 +57,11 @@ ms.locfileid: "48150957"
   
 -   Die TAKE OWNERSHIP-Berechtigung ist zum Übertragen des Besitzes der XML-Schemaauflistung von einem Prinzipal an einen anderen erforderlich.  
   
--   Die REFERENCES-Berechtigung autorisiert den Prinzipal zum Verwenden der XML-schemaauflistung zum typisieren oder einschränken `xml` Spalten in Tabellen und Sichten sowie Parametern vom Typ. Die REFERENCES-Berechtigung ist auch erforderlich, wenn eine XML-Schemaauflistung auf eine andere verweist.  
+-   Mit der REFERENCES-Berechtigung wird der Prinzipal dazu autorisiert, mithilfe der XML-Schemaauflistung Spalten des `xml`-Typs in Tabellen und Sichten sowie Parametern zu typisieren oder einzuschränken. Die REFERENCES-Berechtigung ist auch erforderlich, wenn eine XML-Schemaauflistung auf eine andere verweist.  
   
 -   Die VIEW DEFINITION-Berechtigung ermöglicht dem Prinzipal das Abfragen des Inhalts einer XML-Schemaauflistung mithilfe von XML_SCHEMA_NAMESPACE oder Katalogsichten, wenn dieser Prinzipal auch eine der ALTER-, REFERENCES- oder CONTROL-Berechtigungen für die Auflistung besitzt.  
   
--   Die EXECUTE-Berechtigung ist erforderlich, um das Überprüfen von Werten, einfügen oder Aktualisieren der Prinzipal für die XML-schemaauflistung, die typisiert oder einschränkt der `xml` typisieren von Spalten, Variablen und Parameter. Sie benötigen diese Berechtigung auch, wenn Sie das in diesen Spalten und Variablen gespeicherte XML abfragen.  
+-   Die EXECUTE-Berechtigung ist zum Überprüfen von Werten erforderlich, die vom Prinzipal für die XML-Schemaauflistung eingefügt oder aktualisiert werden, durch die Spalten, Variablen und Parameter vom Typ `xml` typisiert oder einschränkt werden. Sie benötigen diese Berechtigung auch, wenn Sie das in diesen Spalten und Variablen gespeicherte XML abfragen.  
   
 ## <a name="examples"></a>Beispiele  
  Die Szenarien in den folgenden Beispielen veranschaulichen, wie XML-Schemaberechtigungen funktionieren. Jedes dieser Beispiele erstellt die erforderliche Testdatenbank, die relationalen Schemas und Anmeldungen. Diesen Anmeldenamen werden die erforderlichen Berechtigungen für XML-Schemaauflistungen erteilt. Jedes der Beispiele führt am Ende den erforderlichen Cleanup aus.  

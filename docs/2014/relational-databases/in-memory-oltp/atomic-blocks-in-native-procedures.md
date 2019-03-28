@@ -10,12 +10,12 @@ ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4bad6da6de694d9b835a6d3fe23fbc68d8642f50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83ec721d214633df7daf9ace5ae45c3cdb51ca97
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124100"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532848"
 ---
 # <a name="atomic-blocks"></a>ATOMIC-Blöcke
   `BEGIN ATOMIC` ist Teil des ANSI SQL-Standards. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt ATOMIC-Blöcke nur auf der obersten Ebene systemintern kompilierter gespeicherter Prozeduren.  
@@ -29,13 +29,13 @@ ms.locfileid: "48124100"
 ## <a name="transactions-and-error-handling"></a>Transaktionen und Fehlerbehandlung  
  Wenn in einer Sitzung bereits eine Transaktion vorhanden ist (da von einem Batch eine `BEGIN TRANSACTION`-Anweisung ausgeführt wurde und die Transaktion aktiv bleibt), wird durch das Starten eines ATOMIC-Blocks in der Transaktion ein Sicherungspunkt erstellt. Wenn der Block ohne Ausnahme beendet wird, wird der erstellte Sicherungspunkt für den Block festgeschrieben. Für die Transaktion wird jedoch erst ein Commit ausgeführt, wenn für die Transaktion auf Sitzungsebene ein Commit erfolgt. Wenn der Block eine Ausnahme auslöst, wird für den ausgeführten Teil des Blocks ein Rollback ausgeführt, die Transaktion auf Sitzungsebene wird jedoch weiterhin ausgeführt, sofern die Ausnahme nicht zum Fehlschlagen der Transaktion führt. Beispielsweise kann ein Schreibkonflikt zum Fehlschlagen einer Transaktion führen, ein Typumwandlungsfehler jedoch nicht.  
   
- Wenn eine Sitzung keine aktive Transaktion enthält, wird durch `BEGIN ATOMIC` eine neue Transaktion gestartet. Wenn außerhalb des Blockbereichs keine Ausnahme ausgelöst wird, wird für die Transaktion am Ende des Blocks ein Commit ausgeführt. Wenn der Block eine Ausnahme auslöst (d. h., die Ausnahme wird nicht innerhalb des Blocks abgefangen und behandelt), wird ein Rollback für die Transaktion ausgeführt. Für Transaktionen, die einen einzelnen atomic-Block umfassen (eine einzelne systemintern kompilierte gespeicherte Prozedur), Sie müssen nicht schreiben explizite `BEGIN TRANSACTION` und `COMMIT` oder `ROLLBACK` Anweisungen.  
+ Wenn eine Sitzung keine aktive Transaktion enthält, wird durch `BEGIN ATOMIC` eine neue Transaktion gestartet. Wenn außerhalb des Blockbereichs keine Ausnahme ausgelöst wird, wird für die Transaktion am Ende des Blocks ein Commit ausgeführt. Wenn der Block eine Ausnahme auslöst (d. h., die Ausnahme wird nicht innerhalb des Blocks abgefangen und behandelt), wird ein Rollback für die Transaktion ausgeführt. Bei Transaktionen, die einen einzelnen ATOMIC-Block (eine einzelne systemintern kompilierte gespeicherte Prozedur) umfassen, ist es nicht notwendig, explizite `BEGIN TRANSACTION`- und `COMMIT`- oder `ROLLBACK`-Anweisungen zu schreiben.  
   
- Systemintern kompilierte gespeicherte Prozeduren unterstützen die `TRY`, `CATCH`, und `THROW` Konstrukte zur Fehlerbehandlung. `RAISERROR` wird nicht unterstützt.  
+ Systemintern kompilierte gespeicherte Prozeduren unterstützen `TRY`-, `CATCH`- und `THROW`-Konstrukte zur Fehlerbehandlung. `RAISERROR` wird nicht unterstützt.  
   
  Das folgende Beispiel veranschaulicht das Fehlerbehandlungsverhalten bei ATOMIC-Blöcken und systemintern kompilierten gespeicherten Prozeduren:  
   
-```tsql  
+```sql  
 -- sample table  
 CREATE TABLE dbo.t1 (  
   c1 int not null primary key nonclustered  
@@ -126,20 +126,20 @@ GO
  Bei folgenden, für speicheroptimierte Tabellen spezifischen Fehlern schlägt eine Transaktion fehl. Wenn sie im Bereich eines ATOMIC-Blocks auftreten, wird die Transaktion abgebrochen: 10772, 41301, 41302, 41305, 41325, 41332 und 41333.  
   
 ## <a name="session-settings"></a>Sitzungseinstellungen  
- Die Sitzungseinstellungen in ATOMIC-Blöcken werden bei der Kompilierung der gespeicherte Prozedur fest definiert. Einige Einstellungen können angegeben werden, mit `BEGIN ATOMIC` während andere immer denselben festen sind.  
+ Die Sitzungseinstellungen in ATOMIC-Blöcken werden bei der Kompilierung der gespeicherte Prozedur fest definiert. Einige Einstellungen können mit `BEGIN ATOMIC` angegeben werden, während andere immer denselben festen Wert aufweisen.  
   
  Die folgenden Optionen sind für `BEGIN ATOMIC` erforderlich:  
   
 |Erforderliche Einstellung|Description|  
 |----------------------|-----------------|  
-|`TRANSACTION ISOLATION LEVEL`|Unterstützte Werte sind `SNAPSHOT`, `REPEATABLEREAD`, und `SERIALIZABLE`.|  
+|`TRANSACTION ISOLATION LEVEL`|Unterstützte Werte sind `SNAPSHOT`, `REPEATABLEREAD` und `SERIALIZABLE`.|  
 |`LANGUAGE`|Bestimmt Datums- und Uhrzeitformate sowie Systemmeldungen. Alle Sprachen und Aliase in [sys.syslanguages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql) werden unterstützt.|  
   
  Die folgenden Einstellungen sind optional:  
   
 |Optionale Einstellung|Description|  
 |----------------------|-----------------|  
-|`DATEFORMAT`|Alle Datumsformate von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden unterstützt. Wenn angegeben, `DATEFORMAT` überschreibt das Standarddatumsformat zugeordneten `LANGUAGE`.|  
+|`DATEFORMAT`|Alle Datumsformate von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden unterstützt. Falls angegeben, überschreibt `DATEFORMAT` das Standarddatumsformat, das `LANGUAGE` zugeordnet ist.|  
 |`DATEFIRST`|Falls angegeben, überschreibt `DATEFIRST` den Standardwert, der `LANGUAGE` zugeordnet ist.|  
 |`DELAYED_DURABILITY`|Unterstützte Werte sind `OFF` und `ON`.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Transaktionscommits können entweder vollständig dauerhaft (Standardeinstellung) oder verzögert dauerhaft sein. Weitere Informationen finden Sie unter [Steuern der Transaktionsdauerhaftigkeit](../logs/control-transaction-durability.md).|  
   

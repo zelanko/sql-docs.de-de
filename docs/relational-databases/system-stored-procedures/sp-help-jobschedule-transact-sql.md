@@ -18,12 +18,12 @@ ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 36e00cf0e5d39722fee1c60fc86f0e6f81fd7e43
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 982596981c6c363abcad57b94427fcb4178c2c65
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100355"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532882"
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,22 +44,18 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@job_id=** ] *job_id*  
- Die Auftrags-ID *Job_id*ist **Uniqueidentifier**, hat den Standardwert NULL.  
+`[ @job_id = ] job_id` ID des Auftrags. *Job_id*ist **Uniqueidentifier**, hat den Standardwert NULL.  
   
- [  **@job_name=** ] **"**_Job_name_**"**  
- Der Name des Auftrags. *Job_name*ist **Sysname**, hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags. *Job_name*ist **Sysname**, hat den Standardwert NULL.  
   
-> **HINWEIS:** Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
+> [!NOTE]
+> Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.
+
+`[ @schedule_name = ] 'schedule_name'` Der Name des Zeitplanelements für den Auftrag. *Schedule_name*ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@schedule_name=** ] **"**_Schedule_name_**"**  
- Der Name des Zeitplanelements für den Auftrag. *Schedule_name*ist **Sysname**, hat den Standardwert NULL.  
+`[ @schedule_id = ] schedule_id` Die ID des Zeitplanelements für den Auftrag. *Schedule_id*ist **Int**, hat den Standardwert NULL.  
   
- [  **@schedule_id=** ] *Schedule_id*  
- Die Identifikationsnummer des Zeitplanelements für den Auftrag. *Schedule_id*ist **Int**, hat den Standardwert NULL.  
-  
- [ **@include_description=** ] *include_description*  
- Gibt an, ob die Beschreibung des Zeitplans in das Resultset eingeschlossen werden soll. *Include_description* ist **Bit**, hat den Standardwert **0**. Wenn *Include_description* ist **0**, die Beschreibung des Zeitplans ist nicht im Resultset enthalten. Wenn *Include_description* ist **1**, ist die Beschreibung des Zeitplans im Resultset enthalten.  
+`[ @include_description = ] include_description` Gibt an, ob die Beschreibung des Zeitplans im Resultset eingeschlossen werden soll. *Include_description* ist **Bit**, hat den Standardwert **0**. Wenn *Include_description* ist **0**, die Beschreibung des Zeitplans ist nicht im Resultset enthalten. Wenn *Include_description* ist **1**, ist die Beschreibung des Zeitplans im Resultset enthalten.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -70,7 +66,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|ID des Zeitplans.|  
 |**schedule_name**|**sysname**|Name des Zeitplans.|  
-|**aktiviert**|**int**|Ob der Zeitplan aktiviert (**1**) oder nicht aktiviert ist (**0**).|  
+|**enabled**|**int**|Ob der Zeitplan aktiviert (**1**) oder nicht aktiviert ist (**0**).|  
 |**freq_type**|**int**|Der Wert, der angibt, wann der Auftrag ausgeführt werden.<br /><br /> **1** = einmal<br /><br /> **4** = täglich<br /><br /> **8** = wöchentlich<br /><br /> **16** = monatlich<br /><br /> **32** = monatlich, relativ zu den **Freq_interval**<br /><br /> **64** = ausgeführt werden, wenn **SQLServerAgent** -Dienst gestartet wird.|  
 |**freq_interval**|**int**|Tage, wenn der Auftrag ausgeführt wird. Der Wert hängt vom Wert der **Freq_type**. Weitere Informationen finden Sie unter [Sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_subday_type**|**int**|Einheiten für **Freq_subday_interval**. Weitere Informationen finden Sie unter [Sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
@@ -152,5 +148,3 @@ GO
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
-  

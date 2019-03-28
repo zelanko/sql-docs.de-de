@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b35e2baef80dbacf039b9c767f7798ddba0d90a9
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: cb77f5d8bda6b05794499faa6e6e04d1fafa53ea
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591554"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534882"
 ---
 # <a name="spgrantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@loginame =** ] **"**_Anmeldung_ **"**  
- Der Name der Windows-Gruppe, Windows-Anmeldung oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung, die dem neuen Datenbankbenutzer zugeordnet ist. Namen von Windows-Gruppen und Windows-Anmeldungen müssen mit einem Windows-Domänennamen im Format *Domain*\\*login*gekennzeichnet werden, wie z. B. **LONDON\Joeb**. Der Anmeldename darf noch keinem Benutzer in der Datenbank zugewiesen sein. *login* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @loginame = ] 'login_ '` Der Name der Windows-Gruppe und Windows-Anmeldung oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] melden Sie sich auf dem neuen Datenbankbenutzer zugeordnet werden. Namen von Windows-Gruppen und Windows-Anmeldungen müssen mit einem Windows-Domänennamen im Format *Domain*\\*login*gekennzeichnet werden, wie z. B. **LONDON\Joeb**. Der Anmeldename darf noch keinem Benutzer in der Datenbank zugewiesen sein. *login* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
- [  **@name_in_db=**] **"**_Name_in_db_**"** [ **Ausgabe**]  
- Der Name für den neuen Datenbankbenutzer. *name_in_db* ist eine OUTPUT-Variable vom Datentyp **sysname**. Der Standardwert ist NULL. Wenn dieses Argument nicht angegeben ist, wird *login* verwendet. Bei Angabe als OUTPUT-Variable mit dem Wert NULL, **@name_in_db** nastaven NA hodnotu *Anmeldung*. *name_in_db* darf in der aktuellen Datenbank noch nicht vorhanden sein.  
+``[ @name_in_db = ] 'name_in_db' [ OUTPUT]`` Ist der Name für den neuen Datenbankbenutzer. *name_in_db* ist eine OUTPUT-Variable vom Datentyp **sysname**. Der Standardwert ist NULL. Wenn dieses Argument nicht angegeben ist, wird *login* verwendet. Bei Angabe als OUTPUT-Variable mit dem Wert NULL, **@name_in_db** nastaven NA hodnotu *Anmeldung*. *name_in_db* darf in der aktuellen Datenbank noch nicht vorhanden sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

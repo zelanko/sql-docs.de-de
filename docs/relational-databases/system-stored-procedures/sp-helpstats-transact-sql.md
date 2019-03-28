@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae3b5a2d826fbafc5bc9f5bfc265794e7898a0d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a78ec7a666c40c1c1bd742545139aa2e9ea0aec
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640780"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534892"
 ---
 # <a name="sphelpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,11 +45,9 @@ sp_helpstats[ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@objname=**] **"***Object_name***"**  
- Gibt die Tabelle an, in der Statistikinformationen bereitgestellt werden sollen. *Object_name* ist **nvarchar(520)** und darf nicht null sein. Es kann ein ein- oder zweiteiliger Name angegeben werden.  
+`[ @objname = ] 'object_name'` Gibt die Tabelle für die statistische Informationen bereitgestellt. *Object_name* ist **nvarchar(520)** und darf nicht null sein. Es kann ein ein- oder zweiteiliger Name angegeben werden.  
   
- [  **@results=**] **"***Wert***"**  
- Gibt an, wie viele Informationen bereitgestellt werden. Gültige Einträge sind **alle** und **Statistiken**. **ALLE** Listet die Statistiken aller Indizes und Spalten mit Statistiken erstellt wurden; **Statistiken** Listet nur Statistiken, die nicht mit einem Index zugeordnet. *Wert* ist **nvarchar(5)** hat den Standardwert STATS.  
+`[ @results = ] 'value'` Gibt an, wie viele Informationen bereitstellen. Gültige Einträge sind **alle** und **Statistiken**. **ALLE** Listet die Statistiken aller Indizes und Spalten mit Statistiken erstellt wurden; **Statistiken** Listet nur Statistiken, die nicht mit einem Index zugeordnet. *Wert* ist **nvarchar(5)** hat den Standardwert STATS.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

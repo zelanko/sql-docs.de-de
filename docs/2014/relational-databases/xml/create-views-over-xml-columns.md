@@ -9,18 +9,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - views [XML in SQL Server]
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 767844d7b195ece286b8f19cc34855bf50185a0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d1e37f341c0606947b37eb10e8e3123ad410204
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049830"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538366"
 ---
 # <a name="create-views-over-xml-columns"></a>Erstellen von Sichten über XML-Spalten
-  Sie können eine `xml` Spalte vom Typ zum Erstellen von Sichten. Das folgende Beispiel erstellt eine Sicht, in dem den Wert aus einer `xml` Typspalte wird abgerufen, mit der `value()` -Methode der der `xml` -Datentyp.  
+  Sie können eine Spalte vom Typ `xml` zum Erstellen von Sichten verwenden. Im folgenden Beispiel wird eine Sicht erstellt, in der mithilfe der `value()`-Methode des `xml`-Datentyps der Wert aus einer Spalte vom Typ `xml` abgerufen wird.  
   
 ```  
 -- Create the table.  
@@ -55,11 +55,11 @@ ProductID   PName
 1           SomeName   
 ```  
   
- Beachten Sie folgende Punkte zur Verwendung der `xml` -Datentyp, um Ansichten zu erstellen:  
+ Beachten Sie die folgenden Punkte in Bezug auf das Erstellen von Sichten mit dem `xml`-Datentyp:  
   
 -   Der XML-Datentyp kann in einer materialisierten Sicht erstellt werden. Die materialisierte Sicht kann nicht auf einer xml-Datentypmethode basieren. Er kann jedoch in eine XML-Schemaauflistung umgewandelt werden, die sich von der XML-Typspalte der Basistabelle unterscheidet.  
   
--   Die `xml` -Datentyp kann nicht in verteilten partitionierten Sichten verwendet werden.  
+-   Der `xml`-Datentyp kann nicht in verteilten partitionierten Sichten verwendet werden.  
   
 -   SQL-Prädikate, die für die Sicht ausgeführt werden, werden nicht in die XQuery der Sichtdefinition verschoben.  
   

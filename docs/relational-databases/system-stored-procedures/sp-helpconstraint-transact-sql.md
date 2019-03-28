@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb4742d65ca25ecf656e442d03e1925cbe1bb518
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: bacf8f0c891e595a775a5e279c5341f3ca0944b1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591781"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535252"
 ---
 # <a name="sphelpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_helpconstraint [ @objname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@objname=** ] **"**_Tabelle_**"**  
- Die Tabelle, zu der Einschränkungsinformationen zurückgegeben werden. Die angegebene Tabelle muss für die aktuelle Datenbank lokal sein. *Tabelle* ist **nvarchar(776)**, hat keinen Standardwert.  
+`[ @objname = ] 'table'` Ist die Tabelle, zu der, die Einschränkungsinformationen zurückgegeben werden. Die angegebene Tabelle muss für die aktuelle Datenbank lokal sein. *Tabelle* ist **nvarchar(776)**, hat keinen Standardwert.  
   
- [  **@nomsg=**] **"**_No_message_**"**  
- Ein optionaler Parameter, der den Tabellennamen ausgibt. *No_message* ist **varchar(5)**, hat den Standardwert **msg**. **Nomsg** unterdrückt die Ausgabe.  
+`[ @nomsg = ] 'no_message'` Ist ein optionaler Parameter, der den Tabellennamen ausgibt. *No_message* ist **varchar(5)**, hat den Standardwert **msg**. **Nomsg** unterdrückt die Ausgabe.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -76,7 +74,7 @@ EXEC sp_helpconstraint 'Production.Product';
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.key_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
- [Sys. check_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
- [Sys. default_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md)  
+ [sys.check_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
+ [sys.default_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md)  
   
   

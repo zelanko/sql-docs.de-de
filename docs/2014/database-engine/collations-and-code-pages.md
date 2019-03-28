@@ -10,12 +10,12 @@ ms.assetid: c626dcac-0474-432d-acc0-cfa643345372
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4238e512975d2f333ac066e6b0183c60ead7d97d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1969a3e30b31a21c380559a3e8898f87eb8848b1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118170"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536532"
 ---
 # <a name="collations-and-code-pages"></a>Sortierungen und Codepages
   [!INCLUDE[hek_2](../includes/hek-2-md.md)] weist Einschränkungen bei unterstützten Codepages für (var)char-Spalten in speicheroptimierten Tabellen und unterstützten Sortierungen auf, die in Indizes und in systemintern kompilierten gespeicherten Prozeduren verwendet werden.  
@@ -31,7 +31,7 @@ ms.locfileid: "48118170"
 > [!IMPORTANT]  
 >  ORDER BY oder GROUP BY kann nicht für Spalten mit Indexzeichenfolgen verwendet werden, die keine BIN2-Sortierung aufweisen.  
   
-```tsql  
+```sql  
 CREATE DATABASE IMOLTP  
   
 ALTER DATABASE IMOLTP ADD FILEGROUP IMOLTP_mod CONTAINS MEMORY_OPTIMIZED_DATA  
@@ -60,7 +60,7 @@ GO
   
 -   (var)char-Spalten in speicheroptimierten Tabellen müssen die Sortierung der Codepage 1252 verwenden. Diese Einschränkung gilt nicht für n(var)char-Spalten. Der folgende Code ruft alle 1252-Sortierungen ab:  
   
-    ```tsql  
+    ```sql  
     -- all supported collations for (var)char columns in memory-optimized tables  
     select * from sys.fn_helpcollations()  
     where collationproperty(name, 'codepage') = 1252;  
@@ -70,7 +70,7 @@ GO
   
 -   Indizes für (n)(var)char-Spalten können nur mit BIN2-Sortierungen angegeben werden (siehe erstes Beispiel). Die folgende Abfrage ruft alle unterstützten BIN2-Sortierungen ab:  
   
-    ```tsql  
+    ```sql  
     -- all supported collations for indexes on memory-optimized tables and   
     -- comparison/sorting in natively compiled stored procedures  
     select * from sys.fn_helpcollations() where name like '%BIN2'  
@@ -84,7 +84,7 @@ GO
   
 -   Abschneiden von UTF-16-Daten wird in systemintern kompilierten gespeicherten Prozeduren nicht unterstützt. Dies bedeutet, n (Var) Char (*n*) Werte können nicht konvertiert werden, n (Var) Char-Typ (*ich*), wenn *ich* < *n*, wenn die Sortierung hat _SC-Eigenschaft. Beispielsweise wird Folgendes nicht unterstützt:  
   
-    ```tsql  
+    ```sql  
     -- column definition using an _SC collation  
      c2 nvarchar(200) collate Latin1_General_100_CS_AS_SC not null   
     -- assignment to a smaller variable, requiring truncation  
@@ -98,7 +98,7 @@ GO
   
  Im folgenden Beispiel werden einige der Auswirkungen und Problemumgehungen zu Sortierungseinschränkungen in In-Memory OLTP gezeigt. Im Beispiel wird die oben angegebene Mitarbeitertabelle verwendet. In diesem Beispiel werden alle Mitarbeiter aufgeführt. Beachten Sie, dass aufgrund der binären Sortierung bei LastName die groß geschriebenen Namen vor die klein geschriebenen sortiert werden. Daher kommt "Thomas" vor "nolan", da Großbuchstaben niedrigere Codepunkte haben. FirstName hat eine Sortierung, bei der die Groß-/Kleinschreibung beachtet wird. Daher erfolgt die Sortierung nach Buchstabe des Alphabets, nicht nach Codepunkt der Zeichen.  
   
-```tsql  
+```sql  
 -- insert a number of values  
 INSERT Employees VALUES (1,'thomas', 'john')  
 INSERT Employees VALUES (2,'Thomas', 'rupert')  

@@ -1,5 +1,5 @@
 ---
-title: Sp_fulltext_column (Transact-SQL) | Microsoft-Dokumentation
+title: sp_fulltext_column (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0173c89273d208824bd945fa7c073ddd7940067e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 782f480ad0ae9f2342180ae1f2a44e32c44b9022
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615007"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537266"
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47615007"
   Gibt an, ob eine bestimmte Spalte einer Tabelle bei der Volltextindizierung berücksichtigt werden soll.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwendung [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) stattdessen.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) .  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,31 +48,26 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@tabname=** ] **"***Qualified_table_name***"**  
- Ein ein- oder zweiteiliger Tabellenname. Die Tabelle muss in der aktuellen Datenbank vorhanden sein. Die Tabelle muss über einen Volltextindex verfügen. *qualified_table_name* ist vom Datentyp **nvarchar(517)** und hat keinen Standardwert.  
+`[ @tabname = ] 'qualified_table_name'` Ist eine ein- oder zweiteilige Tabellenname. Die Tabelle muss in der aktuellen Datenbank vorhanden sein. Die Tabelle muss über einen Volltextindex verfügen. *qualified_table_name* ist vom Datentyp **nvarchar(517)** und hat keinen Standardwert.  
   
- [  **@colname=** ] **"***Column_name***"**  
- Der Name einer Spalte in *qualified_table_name*. Die Spalte muss eine Zeichen-, eine **varbinary(max)** - oder eine **image** -Spalte sein und darf keine berechnete Spalte sein. *column_name* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @colname = ] 'column_name'` Der Name einer Spalte in *Qualified_table_name*. Die Spalte muss eine Zeichen-, eine **varbinary(max)** - oder eine **image** -Spalte sein und darf keine berechnete Spalte sein. *column_name* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann Volltextindizes von Textdaten, die in Spalten vom gespeicherten erstellen **'varbinary(max)'** oder **Image** -Datentyp. Bilder und Abbildungen werden nicht indiziert.  
   
- [  **@action=** ] **"***Aktion***"**  
- Die Aktion, die ausgeführt werden soll. *action* ist vom Datentyp **varchar(20)** und hat keinen Standardwert. Die folgenden Werte sind möglich:  
+`[ @action = ] 'action'` Ist die Aktion ausgeführt werden. *action* ist vom Datentyp **varchar(20)** und hat keinen Standardwert. Die folgenden Werte sind möglich:  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**add**|Fügt dem inaktiven Volltextindex der Tabelle den *column_name* von *qualified_table_name* hinzu. Durch diese Aktion wird die Volltextindizierung für die Spalte aktiviert.|  
-|**Löschen**|Entfernt *column_name* aus dem inaktiven Volltextindex von *qualified_table_name* .|  
+|**drop**|Entfernt *column_name* aus dem inaktiven Volltextindex von *qualified_table_name* .|  
   
- [ **@language=** ] **'***language_term***'**  
- Die Sprache der in der Spalte gespeicherten Daten. Eine Liste der Sprachen, die in enthaltenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [Sys. fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
+`[ @language = ] 'language_term'` Ist die Sprache der in der Spalte gespeicherten Daten. Eine Liste der Sprachen, die in enthaltenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [Sys. fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
   
 > [!NOTE]  
 >  Verwenden Sie 'Neutral', wenn eine Spalte Daten in mehreren Sprachen oder in einer nicht unterstützten Sprache enthält. Die Standardsprache wird mithilfe der Konfigurationsoption 'default full-text language' angegeben.  
   
- [  **@type_colname =** ] **"***Type_column_name***"**  
- Der Name einer Spalte in *qualified_table_name* , die den Dokumenttyp von *column_name*enthält. Diese Spalte muss vom Typ **char**, **nchar**, **varchar**oder **nvarchar**sein. Wird nur verwendet, wenn der Datentyp von *column_name* **varbinary(max)** oder **image**ist. *type_column_name* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @type_colname = ] 'type_column_name'` Der Name einer Spalte in *Qualified_table_name* , die den Dokumenttyp enthält *Column_name*. Diese Spalte muss vom Typ **char**, **nchar**, **varchar**oder **nvarchar**sein. Wird nur verwendet, wenn der Datentyp von *column_name* **varbinary(max)** oder **image**ist. *type_column_name* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -121,9 +116,9 @@ WHERE CONTAINS(spanishCol, 'formsof(inflectional, trabajar)')
 ## <a name="see-also"></a>Siehe auch  
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
  [sp_help_fulltext_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-transact-sql.md)   
- [Sp_help_fulltext_columns_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   
+ [sp_help_fulltext_columns_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   
  [sp_help_fulltext_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
- [Sp_help_fulltext_tables_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
+ [sp_help_fulltext_tables_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Volltextsuche und semantische Suche von gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   

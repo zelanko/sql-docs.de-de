@@ -16,12 +16,12 @@ ms.assetid: 48464bc9-60aa-4886-b526-163f010102b8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1dc9bdb903b6aaa7bf3ee22c1f70a36dd7b3ba5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: edda5c400ebc9158fbc18e4c8ad8c9a118d9e476
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782992"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534132"
 ---
 # <a name="spreinitmergepullsubscription-transact-sql"></a>sp_reinitmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publisher** = ] **'***publisher***'**  
- Der Name des Verlegers. *Publisher* ist **Sysname**, hat den Standardwert all.  
+`[ @publisher = ] 'publisher'` Ist der Name des Verlegers. *Publisher* ist **Sysname**, hat den Standardwert all.  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
- Der Name der Verlegerdatenbank. *Publisher_db* ist **Sysname**, hat den Standardwert all.  
+`[ @publisher_db = ] 'publisher_db'` Ist der Name der Verlegerdatenbank. *Publisher_db* ist **Sysname**, hat den Standardwert all.  
   
- [ **@publication** =] **"***Veröffentlichung***"**  
- Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert all.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert all.  
   
- [ **@upload_first** =] **"***Upload_first***"**  
- Gibt an, ob Änderungen auf dem Abonnenten hochgeladen werden, bevor das Abonnement erneut initialisiert wird. *Upload_first* ist **nvarchar(5)**, hat den Standardwert "false". Wenn **"true"**, Änderungen werden vor der erneuten Initialisierung des Abonnements hochgeladen. Wenn **"false"**, Änderungen nicht hochgeladen.  
+`[ @upload_first = ] 'upload_first'` Ist, gibt an, ob die Änderungen auf dem Abonnenten hochgeladen werden, bevor das Abonnement erneut initialisiert wird. *Upload_first* ist **nvarchar(5)**, hat den Standardwert "false". Wenn **"true"**, Änderungen werden vor der erneuten Initialisierung des Abonnements hochgeladen. Wenn **"false"**, Änderungen nicht hochgeladen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

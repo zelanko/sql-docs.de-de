@@ -18,12 +18,12 @@ ms.assetid: dd9920e1-7064-4c05-93d8-9303103fa1d6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9075b653b6cdb9baec70a182b560201efcb6c965
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4409b44a04411357d0109fb643fd13fcff6451b9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724268"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538192"
 ---
 # <a name="spinvalidatetextptr-transact-sql"></a>sp_invalidate_textptr (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@TextPtrValue=** ] *Textptr_value*  
- Der Textzeiger in Zeilen, der für ungültig erklärt werden soll. *Textptr_value* ist **Varbinary (** 16 **)**, hat den Standardwert NULL. Wenn der Wert NULL, **Sp_invalidate_textptr** erklärt alle Textzeiger für in Zeilen in der Transaktion.  
+`[ @TextPtrValue = ] textptr_value` Wird der Textzeiger in Zeilen, die für ungültig erklärt werden. *Textptr_value* ist **Varbinary (** 16 **)**, hat den Standardwert NULL. Wenn der Wert NULL, **Sp_invalidate_textptr** erklärt alle Textzeiger für in Zeilen in der Transaktion.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

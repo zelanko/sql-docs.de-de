@@ -18,12 +18,12 @@ ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 076e38b453320db831d2d7536d587921920c3924
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d34b13931151e5b4490cd64292d66ae38756c125
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758748"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534942"
 ---
 # <a name="spunbindefault-transact-sql"></a>sp_unbindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +44,14 @@ sp_unbindefault [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@objname=** ] **"***Object_name***"**  
- Der Name der Tabelle und Spalte, oder der Aliasdatentyp, dessen Standardwertbindung aufgehoben werden soll. *Object_name* ist **nvarchar(776)**, hat keinen Standardwert. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht zuerst, zweiteilige Bezeichner für Spaltennamen aufzulösen, und versucht dann, zweiteilige Bezeichner für Aliasdatentypen aufzulösen.  
+`[ @objname = ] 'object_name'` Ist der Name der Tabelle und Spalte oder der Aliasdatentyp, von dem der Standardwert ist, entfernt werden soll. *Object_name* ist **nvarchar(776)**, hat keinen Standardwert. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht zuerst, zweiteilige Bezeichner für Spaltennamen aufzulösen, und versucht dann, zweiteilige Bezeichner für Aliasdatentypen aufzulösen.  
   
  Beim Aufheben der Bindung eines Standardwerts an einen Aliasdatentyp wird auch die Bindung für alle Spalten dieses Datentyps, die denselben Standardwert aufweisen, aufgehoben. Spalten dieses Datentyps mit Standardwerten, die direkt an diese gebunden sind, sind nicht betroffen.  
   
 > [!NOTE]  
 >  *Object_name* können Klammern enthalten **[]** als begrenzungsbezeichnerzeichen. Weitere Informationen finden Sie unter [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md).  
   
- [ **@futureonly=** ] **'***futureonly_flag***'**  
- Wird nur beim Aufheben der Bindung eines Standardwerts an einen Aliasdatentyp verwendet. *Futureonly_flag* ist **varchar(15)**, hat den Standardwert NULL. Wenn *Futureonly_flag* ist **Futureonly**, verlieren vorhandene Spalten des Datentyps nicht der angegebene Standardwert.  
+`[ @futureonly = ] 'futureonly_flag'` Wird nur beim Aufheben der Bindung eines Standardwerts an einen Aliasdatentyp verwendet. *Futureonly_flag* ist **varchar(15)**, hat den Standardwert NULL. Wenn *Futureonly_flag* ist **Futureonly**, verlieren vorhandene Spalten des Datentyps nicht der angegebene Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

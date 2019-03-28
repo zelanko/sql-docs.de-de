@@ -18,15 +18,15 @@ helpviewer_keywords:
 - XML schema collections [SQL Server]
 - schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a86a39aa3473495b5eed6bc2eff92376a5a68cc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 45f3dfbf7a4caa2744ef57a352b0434e7eb1bf37
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362782"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533712"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML-Schemaauflistungen (SQL Server)
   Im Thema beschriebene [Xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), SQL Server bietet systemeigene Speicherung von XML-Daten mithilfe der `xml` -Datentyp. Sie können optional XSD-Schemas zuordnen, mit der eine Variable oder eine Spalte mit `xml` Typ über eine XML-schemaauflistung. Die XML-Schemaauflistung speichert die importierten XML-Schemas und wird dann für folgende Zwecke verwendet:  
@@ -171,7 +171,7 @@ ms.locfileid: "53362782"
   
  Diese Möglichkeiten werden in den folgenden Beispielen veranschaulicht.  
   
-### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Beispiel: Auflisten der XML-Schemanamespaces in einer XML-Schemaauflistung  
+### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Beispiel: Enumeration der XML-Namespaces in einer XML-Schemaauflistung  
  Verwenden Sie die folgende Abfrage für die XML-Schemaauflistung "myCollection":  
   
 ```  
@@ -181,7 +181,7 @@ FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN
 WHERE    XSC.name = 'myCollection'     
 ```  
   
-### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>Beispiel: Auflisten der Inhalte einer XML-Schemaauflistung  
+### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>Beispiel: Enumeration des Inhalts einer XML-Schemaauflistung  
  Mit der folgenden Anweisung wird der Inhalt der XML-Schemaauflistung "myCollection" innerhalb des relationalen Schemas dbo aufgeführt.  
   
 ```  
@@ -190,7 +190,7 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
   
  Einzelne XML-Schemas in der Auflistung abgerufen werden können, als `xml` -datentypinstanzen durch Angabe des Zielnamespaces als drittes Argument für **XML_SCHEMA_NAMESPACE()**. Dies wird im folgenden Beispiel gezeigt.  
   
-### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Beispiel: Ausgeben eines angegebenen Schemas aus einer XML-Schemaauflistung  
+### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Beispiel: Ausgeben eines angegebenen Schemas für eine XML-Schemaauflistung  
  Mit der folgenden Anweisung wird das XML-Schema mit dem Zielnamespace <https://www.microsoft.com/books> aus der XML-Schemaauflistung „myCollection“ innerhalb des relationalen Schemas „dbo“ ausgegeben.  
   
 ```  

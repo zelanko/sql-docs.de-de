@@ -16,12 +16,12 @@ ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c713b4efcfd37c245f340769a4725b0792d7528b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 94d074985848bb510c15907f6b17dc492904f5c0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210053"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537836"
 ---
 # <a name="splinkpublication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,17 +50,13 @@ sp_link_publication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publisher**=] **"***Verleger***"**  
- Der Name des Verlegers, mit dem eine Verbindung hergestellt werden soll. *Publisher* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher = ] 'publisher'` Ist der Name des Verlegers, zu verknüpfen. *Publisher* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@publisher_db**=] **"***Publisher_db***"**  
- Der Name der Verlegerdatenbank, mit der eine Verbindung hergestellt werden soll. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher_db = ] 'publisher_db'` Ist der Name der Verlegerdatenbank zu verknüpfen. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@publication**=] **"***Veröffentlichung***"**  
- Der Name der Veröffentlichung, mit der eine Verbindung hergestellt werden soll. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung, zu verknüpfen. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@security_mode**=] *Security_mode*  
- Der Sicherheitsmodus, der vom Abonnenten verwendet wird, um für das unmittelbare Update eine Verbindung mit einem Remoteverleger herzustellen. *Security_mode* ist **Int**, und kann einen der folgenden Werte sein. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @security_mode = ] security_mode` Der Sicherheitsmodus wird des Abonnenten für sofortige Updates eine Verbindung mit einem Remoteverleger verwendet werden. *Security_mode* ist **Int**, und kann einen der folgenden Werte sein. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -68,14 +64,11 @@ sp_link_publication [ @publisher = ] 'publisher'
 |**1**|Verwendet den Sicherheitskontext ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung oder Windows-Authentifizierung) des Benutzers, der die Änderung auf dem Abonnenten ausführt.<br /><br /> Hinweis: Dieses Konto muss auch auf dem Verleger mit entsprechenden Privilegien vorhanden sein. Bei Verwendung der Windows-Authentifizierung muss die Delegierung von Sicherheitskonten unterstützt werden.|  
 |**2**|Verwendet eine vorhandene, benutzerdefinierte verbindungsserveranmeldung mit erstellt **Sp_link_publication**.|  
   
- [ **@login**=] **"***Anmeldung***"**  
- Ist die Anmeldung. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL. Dieser Parameter muss angegeben, wenn *Security_mode* ist **0**.  
+`[ @login = ] 'login'` Ist die Anmeldung. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL. Dieser Parameter muss angegeben, wenn *Security_mode* ist **0**.  
   
- [ **@password**=] **"***Kennwort***"**  
- Ist das Kennwort. *Kennwort* ist **Sysname**, hat den Standardwert NULL. Dieser Parameter muss angegeben, wenn *Security_mode* ist **0**.  
+`[ @password = ] 'password'` Ist das Kennwort. *Kennwort* ist **Sysname**, hat den Standardwert NULL. Dieser Parameter muss angegeben, wenn *Security_mode* ist **0**.  
   
- [  **@distributor=** ] **"***Verteiler***"**  
- Entspricht dem Namen des Verteilers. *Verteiler* ist **Sysname**, hat den Standardwert NULL.  
+`[ @distributor = ] 'distributor'` Ist der Name des Verteilers. *Verteiler* ist **Sysname**, hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -96,9 +89,9 @@ sp_link_publication [ @publisher = ] 'publisher'
  Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_link_publication**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
- [Sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
- [Sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
+ [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+ [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
+ [sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

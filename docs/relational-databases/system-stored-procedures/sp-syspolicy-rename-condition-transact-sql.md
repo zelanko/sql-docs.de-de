@@ -18,12 +18,12 @@ ms.assetid: d9f3f9b1-701b-4fce-9b42-c282656caf84
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6b625a1992411946703afb2583109f9e74518d5f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0305e7bc2daa087483fce0472d32df0887271ba3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850449"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534602"
 ---
 # <a name="spsyspolicyrenamecondition-transact-sql"></a>sp_syspolicy_rename_condition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@name=** ] **'***name***'**  
- Der Name der Bedingung, die Sie umbenennen möchten. *Namen* ist **Sysname**, und muss angegeben werden, wenn *Condition_id* ist NULL.  
+`[ @name = ] 'name'` Ist der Name der Bedingung, die Sie umbenennen möchten. *Namen* ist **Sysname**, und muss angegeben werden, wenn *Condition_id* ist NULL.  
   
- [ **@condition_id=** ] *condition_id*  
- Ist der Bezeichner für die Bedingung, die Sie umbenennen möchten. *Condition_id* ist **Int**, und muss angegeben werden, wenn *Namen* ist NULL.  
+`[ @condition_id = ] condition_id` Ist der Bezeichner für die Bedingung, die Sie umbenennen möchten. *Condition_id* ist **Int**, und muss angegeben werden, wenn *Namen* ist NULL.  
   
- [  **@new_name=** ] **"***New_name***"**  
- Ist der neue Name der Bedingung. *New_name* ist **Sysname**, und es ist erforderlich. Darf nicht NULL und keine leere Zeichenfolge sein.  
+`[ @new_name = ] 'new_name'` Ist der neue Name der Bedingung. *New_name* ist **Sysname**, und es ist erforderlich. Darf nicht NULL und keine leere Zeichenfolge sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -62,7 +59,7 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
  Erfordert die Mitgliedschaft in der festen Datenbankrolle PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Mögliche Erweiterung der Anmeldeinformationen: Benutzer mit der Rolle PolicyAdministratorRole können Servertrigger erstellen und die Ausführung von Richtlinien planen. Dies kann sich auf die Arbeitsweise der [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz auswirken. Ein Benutzer mit der Rolle PolicyAdministratorRole kann beispielsweise eine Richtlinie erstellen, durch die das Erstellen der meisten Objekte in [!INCLUDE[ssDE](../../includes/ssde-md.md)] verhindert wird. Aufgrund dieser möglichen Erweiterung der Anmeldeinformationen, sollte die PolicyAdministratorRole-Rolle gewährt werden nur für Benutzer, die mit der Kontrolle der Konfiguration von vertrauenswürdigen sind die [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Mögliche Erweiterung der Anmeldeinformationen: Benutzer der Rolle PolicyAdministratorRole können Servertrigger erstellen und Ausführung von Richtlinien planen, die den Betrieb der Instanz von beeinflussen, können die [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Ein Benutzer mit der Rolle PolicyAdministratorRole kann beispielsweise eine Richtlinie erstellen, durch die das Erstellen der meisten Objekte in [!INCLUDE[ssDE](../../includes/ssde-md.md)] verhindert wird. Aufgrund dieser möglichen Erweiterung der Anmeldeinformationen, sollte die PolicyAdministratorRole-Rolle gewährt werden nur für Benutzer, die mit der Kontrolle der Konfiguration von vertrauenswürdigen sind die [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die Bedingung "Change Tracking Enabled" umbenannt.  

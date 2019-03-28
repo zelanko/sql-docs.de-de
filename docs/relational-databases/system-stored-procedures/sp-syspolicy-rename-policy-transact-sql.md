@@ -18,12 +18,12 @@ ms.assetid: ce2b07f5-23b1-4f49-8e7b-c18cf3f3d45b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 297f0040f127ae210f8507374f940e4439cdf0d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2262bf4d05e10ef20a531794cd342a5ee903fe3a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855618"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536732"
 ---
 # <a name="spsyspolicyrenamepolicy-transact-sql"></a>sp_syspolicy_rename_policy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@name=** ] **'***name***'**  
- Der Name der Richtlinie, die Sie umbenennen möchten. *Namen* ist **Sysname**, und muss angegeben werden, wenn *Policy_id* ist NULL.  
+`[ @name = ] 'name'` Ist der Name der Richtlinie, die Sie umbenennen möchten. *Namen* ist **Sysname**, und muss angegeben werden, wenn *Policy_id* ist NULL.  
   
- [ **@policy_id=** ] *policy_id*  
- Der Bezeichner für die Richtlinie, die Sie umbenennen möchten. *Policy_id* ist **Int**, und muss angegeben werden, wenn *Namen* ist NULL.  
+`[ @policy_id = ] policy_id` Ist der Bezeichner für die Richtlinie, die Sie umbenennen möchten. *Policy_id* ist **Int**, und muss angegeben werden, wenn *Namen* ist NULL.  
   
- [  **@new_name=** ] **"***New_name***"**  
- Ist der neue Name für die Richtlinie. *New_name* ist **Sysname**, und es ist erforderlich. Darf nicht NULL und keine leere Zeichenfolge sein.  
+`[ @new_name = ] 'new_name'` Ist der neue Name für die Richtlinie. *New_name* ist **Sysname**, und es ist erforderlich. Darf nicht NULL und keine leere Zeichenfolge sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -63,7 +60,7 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
  Erfordert die Mitgliedschaft in der festen Datenbankrolle PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Mögliche Erweiterung der Anmeldeinformationen: Benutzer mit der Rolle PolicyAdministratorRole können Servertrigger erstellen und die Ausführung von Richtlinien planen. Dies kann sich auf die Arbeitsweise der [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz auswirken. Ein Benutzer mit der Rolle PolicyAdministratorRole kann beispielsweise eine Richtlinie erstellen, durch die das Erstellen der meisten Objekte in [!INCLUDE[ssDE](../../includes/ssde-md.md)] verhindert wird. Aufgrund dieser möglichen Erweiterung der Anmeldeinformationen, sollte die PolicyAdministratorRole-Rolle gewährt werden nur für Benutzer, die mit der Kontrolle der Konfiguration von vertrauenswürdigen sind die [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Mögliche Erweiterung der Anmeldeinformationen: Benutzer der Rolle PolicyAdministratorRole können Servertrigger erstellen und Ausführung von Richtlinien planen, die den Betrieb der Instanz von beeinflussen, können die [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Ein Benutzer mit der Rolle PolicyAdministratorRole kann beispielsweise eine Richtlinie erstellen, durch die das Erstellen der meisten Objekte in [!INCLUDE[ssDE](../../includes/ssde-md.md)] verhindert wird. Aufgrund dieser möglichen Erweiterung der Anmeldeinformationen, sollte die PolicyAdministratorRole-Rolle gewährt werden nur für Benutzer, die mit der Kontrolle der Konfiguration von vertrauenswürdigen sind die [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die Richtlinie "Test Policy 1" in "Test Policy 2" umbenannt.  

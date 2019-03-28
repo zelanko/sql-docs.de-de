@@ -19,17 +19,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 95316400d336a13304f1da0850ecdcc9565fe5bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b518c7b79ca6a054b5d6435ea7cb2fe10e419b7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707328"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536322"
 ---
 # <a name="sphelptext-transact-sql"></a>sp_helptext (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Zeigt die Definition einer benutzerdefinierten Regel, standardmäßig unverschlüsselt [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur, benutzerdefinierte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Funktion, Trigger, berechnete Spalte, CHECK-Einschränkung, Sicht oder System-Objekt, z. B. bei einer gespeicherten Prozedur.  
+  Zeigt die Definition einer benutzerdefinierten Regel, einer standardmäßigen, nicht verschlüsselten gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur, einer benutzerdefinierten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Funktion, eines Triggers, einer berechneten Spalte, einer CHECK-Einschränkung, einer Sicht oder eines Systemobjekts an, wie z. B. einer gespeicherten Systemprozedur.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,11 +41,9 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@objname =** ] **'***name***'**  
- Der qualifizierte oder nicht qualifizierte Name eines Objekts mit Schemabereich. Anführungszeichen sind nur dann erforderlich, wenn ein qualifiziertes Objekt angegeben wird. Bei Angabe eines vollqualifizierten Namens, einschließlich eines Datenbanknamens, muss es sich bei dem Datenbanknamen um den Namen der aktuellen Datenbank handeln. Das Objekt muss in der aktuellen Datenbank vorhanden sein. *name* ist vom Datentyp **nvarchar(776)** und hat keinen Standardwert.  
+`[ @objname = ] 'name'` Ist der qualifizierte oder nicht qualifizierte Name eines Objekts eine benutzerdefinierte, mit Schemabereich. Anführungszeichen sind nur dann erforderlich, wenn ein qualifiziertes Objekt angegeben wird. Bei Angabe eines vollqualifizierten Namens, einschließlich eines Datenbanknamens, muss es sich bei dem Datenbanknamen um den Namen der aktuellen Datenbank handeln. Das Objekt muss in der aktuellen Datenbank vorhanden sein. *name* ist vom Datentyp **nvarchar(776)** und hat keinen Standardwert.  
   
- [  **@columnname =** ] **"***Computed_column_name***"**  
- Der Name der berechneten Spalte, für die Definitionsinformationen angezeigt werden sollen. Die Tabelle, welche die Spalte beinhaltet, muss als *name*angegeben werden. *column_name* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @columnname = ] 'computed_column_name'` Ist der Name der berechneten Spalte für die Definitionsinformationen angezeigt werden sollen. Die Tabelle, welche die Spalte beinhaltet, muss als *name*angegeben werden. *column_name* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -57,7 +55,7 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
 |**Text**|**nvarchar(255)**|Objektdefinition|  
   
 ## <a name="remarks"></a>Hinweise  
- sp_helptext zeigt die Definition an, die verwendet wird, um ein Objekt in mehreren Zeilen zu erstellen. Jede Zeile umfasst 255 Zeichen von der [!INCLUDE[tsql](../../includes/tsql-md.md)] Definition. Die Definition befindet sich in der **Definition** -Spalte in der [Sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) -Katalogsicht angezeigt.  
+ sp_helptext zeigt die Definition an, die verwendet wird, um ein Objekt in mehreren Zeilen zu erstellen. Jede Zeile umfasst 255 Zeichen der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Definition. Die Definition befindet sich in der Spalte **definition** in der Katalogsicht [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) .  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der Rolle **public** . Definitionen von Systemobjekten sind öffentlich sichtbar. Die Definition von Benutzerobjekten ist für den Objektbesitzer sichtbar oder für Berechtigte, die über eine der folgenden Berechtigungen verfügen: ALTER, CONTROL, TAKE OWNERSHIP oder VIEW DEFINITION.  
@@ -65,7 +63,7 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-displaying-the-definition-of-a-trigger"></a>A. Anzeigen der Definition eines Triggers  
- Das folgende Beispiel zeigt die Definition des Triggers `dEmployee` in die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]Datenbank.  
+ Im folgenden Beispiel wird die Definition des Triggers `dEmployee` in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank angezeigt.  
   
 ```  
 USE AdventureWorks2012;  
@@ -75,7 +73,7 @@ GO
 ```  
   
 ### <a name="b-displaying-the-definition-of-a-computed-column"></a>B. Anzeigen der Definition einer berechneten Spalte  
- Das folgende Beispiel zeigt die Definition der berechneten Spalte `TotalDue` auf die `SalesOrderHeader` -Tabelle in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Datenbank.  
+ Im folgenden Beispiel wird die Definition der berechneten Spalte `TotalDue` in der Tabelle `SalesOrderHeader` der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank angezeigt.  
   
 ```  
 USE AdventureWorks2012;  

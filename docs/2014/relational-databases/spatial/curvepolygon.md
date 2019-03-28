@@ -9,12 +9,12 @@ ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 435786ca85904cc2164ae2a3983163265465d9d1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 21b3e52c39cb2e1412a7bba468ffc1017a2438ed
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350558"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536712"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
   Ein `CurvePolygon` ist eine von einem äußeren Begrenzungsring und null oder mehr inneren Ringe definierte topologisch geschlossene Fläche.  
@@ -125,7 +125,7 @@ SELECT @g.STIsValid();
 ### <a name="a-instantiating-a-geometry-instance-with-an-empty-curvepolygon"></a>A. Instanziieren einer geometry-Instanz mit einem leeren CurvePolygon  
  In diesem Beispiel wird veranschaulicht, wie eine leere `CurvePolygon`-Instanz erstellt wird:  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CURVEPOLYGON EMPTY');  
 ```  
@@ -133,21 +133,21 @@ SET @g = geometry::Parse('CURVEPOLYGON EMPTY');
 ### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>B. Deklarieren und Instanziieren einer geometry-Instanz mit einem CurvePolygon in derselben Anweisung  
  In diesem Codeausschnitt wird veranschaulicht, wie eine geometry-Instanz und ein `CurvePolygon` in derselben Anweisung deklariert und initialisiert werden:  
   
-```tsql  
+```sql  
 DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'  
 ```  
   
 ### <a name="c-instantiating-a-geography-instance-with-a-curvepolygon"></a>C. Instanziieren einer geography-Instanz mit einem CurvePolygon  
  In diesem Codeausschnitt wird veranschaulicht, wie eine `geography`-Instanz mit einem `CurvePolygon` deklariert und initialisiert wird:  
   
-```tsql  
+```sql  
 DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
 ```  
   
 ### <a name="d-storing-a-curvepolygon-with-only-an-exterior-bounding-ring"></a>D. Speichern eines CurvePolygon mit nur einem äußeren Begrenzungsring  
  In diesem Beispiel wird veranschaulicht, wie ein einfacher Kreis in einer `CurvePolygon`-Instanz gespeichert wird (wobei der Kreis lediglich durch einen äußeren Begrenzungsring definiert wird):  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))');  
 SELECT @g.STArea() AS Area;  
@@ -156,7 +156,7 @@ SELECT @g.STArea() AS Area;
 ### <a name="e-storing-a-curvepolygon-containing-interior-rings"></a>E. Speichern eines CurvePolygon mit inneren Ringen  
  In diesem Beispiel wird ein Rad in einer `CurvePolygon`-Instanz erstellt (das Rad wird durch einen äußeren Begrenzungsring und einen inneren Ring definiert):  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(0 4, 4 0, 8 4, 4 8, 0 4), CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))');  
 SELECT @g.STArea() AS Area;  
@@ -164,7 +164,7 @@ SELECT @g.STArea() AS Area;
   
  In diesem Beispiel werden eine gültige `CurvePolygon`-Instanz und eine ungültige Instanz für die Verwendung von inneren Ringen veranschaulicht:  
   
-```tsql  
+```sql  
 DECLARE @g1 geometry, @g2 geometry;  
 SET @g1 = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(0 5, 5 0, 0 -5, -5 0, 0 5), (-2 2, 2 2, 2 -2, -2 -2, -2 2))');  
 IF @g1.STIsValid() = 1  

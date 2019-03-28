@@ -16,12 +16,12 @@ ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 772dc410690a4a29811e2a1bd84ec1ac6d12b3fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f40856b20a76abdb7a3788f2564c02fe2e090619
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779652"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529342"
 ---
 # <a name="sphelpqreaderagent-transact-sql"></a>sp_helpqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@frompublisher=** ] *Frompublisher*  
- Gibt an, ob die gespeicherte Prozedur auf dem Verleger oder auf dem Verteiler aufgerufen wird. *Frompublisher* bit und hat den Standardwert 0. **1** bedeutet, dass die gespeicherte Prozedur vom Verleger aufgerufen wird und **0** bedeutet, dass die gespeicherte Prozedur vom Verteiler aufgerufen wird.  
+`[ @frompublisher = ] frompublisher` Gibt an, ob die gespeicherte Prozedur auf dem Verleger oder auf dem Verteiler aufgerufen wird. *Frompublisher* bit und hat den Standardwert 0. **1** bedeutet, dass die gespeicherte Prozedur vom Verleger aufgerufen wird und **0** bedeutet, dass die gespeicherte Prozedur vom Verteiler aufgerufen wird.  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -48,7 +47,7 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 |**id**|**int**|Die ID des Agents.|  
 |**name**|**nvarchar(100)**|Der Name des Agents.|  
 |**job_id**|**uniqueidentifier**|Eindeutige ID des Agentauftrags.|  
-|**job_login-Wert**|**nvarchar(512)**|Ist das Windows-Konto unter dem der Verteilungs-Agent ausgeführt wird, der zurückgegeben wird, im Format *Domäne*\\*Benutzername*.|  
+|**job_login**|**nvarchar(512)**|Ist das Windows-Konto unter dem der Verteilungs-Agent ausgeführt wird, der zurückgegeben wird, im Format *Domäne*\\*Benutzername*.|  
 |**job_password**|**sysname**|Aus Sicherheitsgründen Wert **\* \* \* \* \* \* \* \* \* \*** ist immer zurückgegeben.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

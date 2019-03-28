@@ -18,12 +18,12 @@ ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b953f619ab422eba81a925375d9ae8b0cd60e82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b2bd1919210f08dc0323400ceddeb47f74d21cc9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836458"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536452"
 ---
 # <a name="sysmailhelpprofilesp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@profile_id** =] *Profile_id*  
- Die Profil-ID, zu der Informationen zurückgegeben werden sollen. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @profile_id = ] profile_id` Die Profil-Id, Informationen zurückgegeben werden soll. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
- [ **@profile_name** =] **"***Profile_name***"**  
- Der Profilname, zu dem Informationen zurückgegeben werden sollen. *profile_name* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
+`[ @profile_name = ] 'profile_name'` Der Profilname Informationen zurückgegeben werden soll. *profile_name* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -60,7 +58,7 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 |**description**|**nvarchar(256)**|Die Beschreibung des Profils.|  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn ein Profilname oder eine Profil-ID angegeben ist, gibt **sysmail_help_profile_sp** Informationen zu diesem Profil zurück. Andernfalls **Sysmail_help_profile_sp** gibt Informationen zu jedem Profil in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz.  
+ Wenn ein Profilname oder eine Profil-ID angegeben ist, gibt **sysmail_help_profile_sp** Informationen zu diesem Profil zurück. Andernfalls gibt **sysmail_help_profile_sp** Informationen zu jedem Profil in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz zurück.  
   
  Die gespeicherte Prozedur **sysmail_help_profile_sp** befindet sich in der **msdb** -Datenbank und im Besitz des **dbo** -Schemas. Handelt es sich bei der aktuellen Datenbank nicht um **msdb**, muss die Prozedur mit einem dreiteiligen Namen ausgeführt werden.  
   

@@ -18,12 +18,12 @@ ms.assetid: b55d3898-596d-47a5-a4f0-d65dc736223b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b2c202ae0336884b801160569c62ad469d22aa1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e4a71411fca869d3562481c3e15f6faa5895df22
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758518"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537792"
 ---
 # <a name="spdeletenotification-transact-sql"></a>sp_delete_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_delete_notification
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@alert_name=** ] **'***alert***'**  
- Der Name der Warnung. *Warnung* ist **Sysname**, hat keinen Standardwert.  
+`[ @alert_name = ] 'alert'` Der Name der Warnung. *Warnung* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@operator_name=** ] **'***operator***'**  
- Der Name des Operators. *Operator* ist **Sysname**, hat keinen Standardwert.  
+`[ @operator_name = ] 'operator'` Der Name des Operators. *Operator* ist **Sysname**, hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

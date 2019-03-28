@@ -18,12 +18,12 @@ ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 258a9e6002fccd27b4980140c49679b26c78f64b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb4dc6bce6ae10c040123b4a00c29e5ad0f57506
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791998"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535962"
 ---
 # <a name="sphelpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@name_in_db =** ] **"***Security_account***"**  
- Der Name des Datenbankbenutzers oder der Datenbankrolle in der aktuellen Datenbank. *Security_account* muss in der aktuellen Datenbank vorhanden sein. *Security_account* ist **Sysname**, hat den Standardwert NULL. Wenn *Security_account* nicht angegeben ist, **Sp_helpuser** gibt Informationen zu allen datenbankprinzipalen zurück.  
+`[ @name_in_db = ] 'security_account'` Ist der Name des Datenbankbenutzers oder der Datenbankrolle in der aktuellen Datenbank. *Security_account* muss in der aktuellen Datenbank vorhanden sein. *Security_account* ist **Sysname**, hat den Standardwert NULL. Wenn *Security_account* nicht angegeben ist, **Sp_helpuser** gibt Informationen zu allen datenbankprinzipalen zurück.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -73,10 +72,10 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**Rollenname**|**sysname**|Name der Rolle in der aktuellen Datenbank.|  
+|**Role_name**|**sysname**|Name der Rolle in der aktuellen Datenbank.|  
 |**Role_id**|**smallint**|Rollen-ID für die Rolle in der aktuellen Datenbank.|  
 |**Users_in_role**|**sysname**|Mitglied der Rolle in der aktuellen Datenbank.|  
-|**Benutzer-ID**|**smallint**|Benutzer-ID für das Rollenmitglied.|  
+|**Userid**|**smallint**|Benutzer-ID für das Rollenmitglied.|  
   
 ## <a name="remarks"></a>Hinweise  
  Um Informationen zur Mitgliedschaft von Datenbankrollen anzuzeigen, verwenden Sie [database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md). Um Informationen zur Mitgliedschaft in Serverrollen anzuzeigen, verwenden [Sys. server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md), und verwenden, um Informationen auf Serverebene anzuzeigen [Sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
@@ -112,7 +111,8 @@ EXEC sp_helpuser 'db_securityadmin';
 ## <a name="see-also"></a>Siehe auch  
  [Security Stored Procedures &#40;Transact-SQL&#41; (Gespeicherte Sicherheitsprozeduren (Transact-SQL))](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Prinzipale &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ 
+  [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [sys.database_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   

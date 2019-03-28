@@ -12,12 +12,12 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5949bbc7d448c60c5ffbdc028f880a09181c986e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 46d9b46698e4416f2ad9ab15b2fb8a223ab7b7c7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528388"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529582"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Aktivieren der semantischen Suche in Tabellen und Spalten
   Beschreibt, wie die statistische semantische Indizierung für ausgewählte Spalten, die Dokumente oder Text enthalten, aktiviert bzw. deaktiviert wird.  
@@ -42,7 +42,7 @@ ms.locfileid: "52528388"
   
 -   Sie können einen semantischen Index für Spalten erstellen, die einen der für Volltextindizierung unterstützten Datentypen aufweisen. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Volltextindizes](create-and-manage-full-text-indexes.md).  
   
--   Sie können einen beliebigen Dokumenttyp angeben, der für Volltextindizierung für `varbinary(max)`-Spalten unterstützt wird. Weitere Informationen finden Sie unter [so wird's gemacht: Bestimmen Sie das Dokument indiziert werden können](#doctypes) in diesem Thema.  
+-   Sie können einen beliebigen Dokumenttyp angeben, der für Volltextindizierung für `varbinary(max)`-Spalten unterstützt wird. Weitere Informationen finden Sie weiter unten in diesem Thema im Abschnitt [Ermitteln, welche Dokumenttypen indiziert werden können](#doctypes).  
   
 -   Bei der semantischen Indizierung werden zwei Typen von Indizes für die ausgewählten Spalten erstellt: ein Index mit Schlüsselausdrücken und ein Index für Dokumentähnlichkeit. Wenn Sie die semantische Indizierung aktivieren, können Sie nur einen Indextyp auswählen. Sie können diese beiden Indizes jedoch unabhängig voneinander abfragen. Weitere Informationen finden Sie unter [Suchen von Schlüsselausdrücken in Dokumenten mit der semantischen Suche](find-key-phrases-in-documents-with-semantic-search.md) und [Suchen von ähnlichen und verwandten Dokumenten mit semantischer Suche](find-similar-and-related-documents-with-semantic-search.md).  
   
@@ -56,11 +56,11 @@ ms.locfileid: "52528388"
  **Erstellen eines neuen semantischen Indexes mit Transact-SQL**  
  Rufen Sie die **CREATE FULLTEXT INDEX**-Anweisung auf, und geben Sie **STATISTICAL_SEMANTICS** für jede Spalte an, in der Sie einen semantischen Index erstellen möchten. Weitere Informationen zu allen Optionen für diese Anweisung finden Sie unter [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql).  
   
- **Beispiel 1: Erstellen Sie einen eindeutigen Index, Volltextindex und semantischen Indexes**  
+ **Beispiel 1: Erstellen eines eindeutigen Indexes, eines Volltextindexes und eines semantischen Indexes**  
   
  Im folgenden Beispiel wird der Standardvolltextkatalog **ft** erstellt. Im folgenden Beispiel wird ein eindeutiger Index für die **JobCandidateID**-Spalte der **HumanResources.JobCandidate**-Tabelle der AdventureWorks2012-Beispieldatenbank erstellt. Dieser eindeutige Index ist als Schlüsselspalte für einen Volltextindex erforderlich. Im Beispiel werden dann ein Volltextindex und ein semantischer Index in der **Resume** -Spalte erstellt.  
   
-```tsql  
+```sql  
 CREATE FULLTEXT CATALOG ft AS DEFAULT  
 GO  
   
@@ -78,13 +78,13 @@ CREATE FULLTEXT INDEX ON HumanResources.JobCandidate
 GO  
 ```  
   
- **Beispiel 2: Erstellen Sie eine Volltext- und eines semantischen Indexes in mehreren Spalten mit verzögerter indexauffüllung**  
+ **Beispiel 2: Erstellen eines Volltextindexes und eines semantischen Indexes in mehreren Spalten mit verzögerter Indexauffüllung**  
   
  Im folgenden Beispiel wird ein Volltextkatalog **documents_catalog**in der AdventureWorks2012-Beispieldatenbank erstellt. Im Beispiel wird dann ein Volltextindex erstellt, der diesen neuen Katalog verwendet. Der Volltextindex wird in den Spalten **Title**, **DocumentSummary**und **Document** der Tabelle **Production.Document** erstellt, wohingegen der semantische Index nur in der Spalte **Document** erstellt wird. Dieser Volltextindex verwendet den neu erstellten Volltextkatalog und den vorhandenen eindeutigen Schlüsselindex **PK_Document_DocumentID**. Wie empfohlen, wird dieser Indexschlüssel in der ganzzahligen Spalte **DocumentID**erstellt. Im Beispiel ist die LCID für Englisch, 1033, angegeben. Dies entspricht der Sprache der Daten in den Spalten.  
   
  In diesem Beispiel wird auch angegeben, dass die Änderungsnachverfolgung ohne Auffüllung deaktiviert ist. Im Beispiel wird eine **ALTER FULLTEXT INDEX** -Anweisung verwendet, um außerhalb der Spitzenbetriebszeiten eine vollständige Auffüllung mit dem neuen Index zu beginnen und die automatische Änderungsnachverfolgung zu aktivieren.  
   
-```tsql  
+```sql  
 CREATE FULLTEXT CATALOG documents_catalog  
 GO  
   
@@ -107,7 +107,7 @@ GO
   
  Der Index wird später zu einem Zeitpunkt mit wenig Datenverkehr aufgefüllt:  
   
-```tsql  
+```sql  
 ALTER FULLTEXT INDEX ON Production.Document SET CHANGE_TRACKING AUTO  
 GO  
 ```  
@@ -129,11 +129,11 @@ GO
   
 -   Um einer Spalte, die bereits für Volltextindizierung aktiviert wurde, eine semantische Indizierung hinzuzufügen, verwenden Sie die **ADD STATISTICAL_SEMANTICS** -Option. In einer einzigen **ALTER** -Anweisung können Sie einer Spalte nur semantische Indizierung hinzufügen.  
   
- **Beispiel: Hinzufügen von semantischer Indizierung zu einer Spalte, die bereits der Volltextindizierung**  
+ **Beispiel: Hinzufügen von semantischer Indizierung zu einer Spalte, die bereits eine Volltextindizierung aufweist**  
   
  Im folgenden Beispiel wird ein vorhandener Volltextindex für die **Production.Document** -Tabelle in der AdventureWorks2012-Beispieldatenbank geändert. Im Beispiel wird ein semantischer Index in der Spalte **Document** der Tabelle **Production.Document** hinzugefügt, die bereits einen Volltextindex hat. Das Beispiel gibt an, dass der Index nicht automatisch erneut aufgefüllt wird.  
   
-```tsql  
+```sql  
 ALTER FULLTEXT INDEX ON Production.Document  
     ALTER COLUMN Document  
         ADD Statistical_Semantics  
@@ -158,7 +158,7 @@ GO
  **Löschen eines semantischen Indexes mit Transact-SQL**  
  -   Rufen Sie zum ausschließlichen Löschen der semantischen Indizierung aus Spalten die **ALTER FULLTEXT INDEX**-Anweisung mit der Option **ALTER COLUMN***Spaltenname***DROP STATISTICAL_SEMANTICS** auf. Sie können die Indizierung in einer einzigen **ALTER** -Anweisung aus mehreren Spalten löschen.  
   
-    ```tsql  
+    ```sql  
     USE database_name  
     GO  
   
@@ -170,7 +170,7 @@ GO
   
 -   Rufen Sie zum Löschen der Volltextindizierung und der semantischen Indizierung aus einer Spalte die **ALTER FULLTEXT INDEX**-Anweisung mit der Option **ALTER COLUMN***Spaltenname***DROP** auf.  
   
-    ```tsql  
+    ```sql  
     USE database_name  
     GO  
   
@@ -197,7 +197,7 @@ GO
   
  Der Rückgabewert 1 gibt an, dass die Volltextsuche und die semantische Suche für die Datenbank aktiviert sind; der Rückgabewert 0 gibt an, dass sie nicht aktiviert sind.  
   
-```tsql  
+```sql  
 SELECT DATABASEPROPERTYEX('database_name', 'IsFullTextEnabled')  
 GO  
 ```  
@@ -219,7 +219,7 @@ GO
   
      Der Rückgabewert 1 gibt an, dass die semantische Suche für die Spalte aktiviert ist; der Rückgabewert 0 gibt an, dass sie nicht aktiviert ist.  
   
-    ```tsql  
+    ```sql  
     SELECT COLUMNPROPERTY(OBJECT_ID('table_name'), 'column_name', 'StatisticalSemantics')  
     GO  
     ```  
@@ -228,7 +228,7 @@ GO
   
      Der Wert 1 in der **statistical_semantics**-Spalte gibt an, dass die angegebene Spalte zusätzlich zur Volltextindizierung für die semantische Indizierung aktiviert ist.  
   
-    ```tsql  
+    ```sql  
     SELECT * FROM sys.fulltext_index_columns WHERE object_id = OBJECT_ID('table_name')  
     GO  
     ```  
@@ -246,7 +246,7 @@ GO
   
  Fragen Sie die Katalogsicht [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql) ab.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.fulltext_semantic_languages  
 GO  
 ```  

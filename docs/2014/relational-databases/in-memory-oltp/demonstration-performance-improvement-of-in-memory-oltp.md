@@ -1,5 +1,5 @@
 ---
-title: 'Demo: Leistungsverbesserungen von In-Memory OLTP | Microsoft-Dokumentation'
+title: 'Dmeo: Leistungsverbesserungen von In-Memory-OLTP | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,14 +10,14 @@ ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2ee9f530580d9c3aaff2d10a260be20a1970e8a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8c9477a318d2cb4f9886d67da8a4f8b5967cc180
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127990"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537286"
 ---
-# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Demo: Leistungsverbesserungen von In-Memory OLTP
+# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Dmeo: Leistungsverbesserungen von In-Memory OLTP
   Dieses Beispiel zeigt Leistungsverbesserungen bei Verwendung von In-Memory OLTP, indem die Unterschiede bei der Antwortzeit bei Ausführung einer identischen Transact-SQL-Abfrage für speicheroptimierte und herkömmliche datenträgerbasierte Tabellen verglichen werden. Darüber hinaus wird eine systemintern kompilierte gespeicherte Prozedur erstellt (basierend auf der gleichen Abfrage) und dann ausgeführt, um zu veranschaulichen, dass die besten Antwortzeiten in der Regel beim Abfragen einer speicheroptimierten Tabelle mit einer systemintern kompilierten gespeicherten Prozedur erzielt werden. Dieses Beispiel zeigt nur einen Aspekt der Leistungsverbesserungen beim Zugriff auf Daten in speicheroptimierten Tabellen; Effizienz beim Datenzugriff bei der Durchführung von Einfügungen. Dieses Beispiel verwendet nur einen einzelnen Thread und nutzt nicht die Parallelitätsvorteile von In-Memory OLTP. Eine Arbeitsauslastung, die Parallelität verwendet, bietet noch größere Leistungsvorteile.  
   
 > [!NOTE]  
@@ -33,7 +33,7 @@ ms.locfileid: "48127990"
   
  Mit der Einrichtung der **Imoltp** in unserem Beispiel-Datenbank, erstellen Sie zunächst einen leeren Ordner: **c:\imoltp_data**, und führen Sie dann den folgenden Code:  
   
-```tsql  
+```sql  
 USE master  
 GO  
   
@@ -55,7 +55,7 @@ GO
   
  Führen Sie als Nächstes den folgenden Code aus, um die datenträgerbasierte Tabelle, zwei (2) speicheroptimierte Tabellen und die systemintern kompilierte gespeicherte Prozedur zu erstellen, die zur Veranschaulichung der verschiedenen Datenzugriffsmethoden verwendet werden:  
   
-```tsql  
+```sql  
 USE imoltp  
 GO  
   
@@ -120,7 +120,7 @@ GO
   
  Führen Sie zum Abschließen des Beispiels den folgenden Code mehrmals aus. Ignorieren Sie die Ergebnisse der ersten Ausführung, da diese durch die anfängliche Speicherbelegung beeinträchtigt wird.  
   
-```tsql  
+```sql  
 SET STATISTICS TIME OFF;  
 SET NOCOUNT ON;  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - RAW mode
 - XMLDATA option
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d074ad6fe9dcd3a26a9c9be84a326291df9f5aed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aec0ec20c9bd46a06560f5ce6ebd374e937f0343
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084235"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537042"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>Verwenden des RAW-Modus mit FOR XML
   Der RAW-Modus wandelt jede Zeile im Resultset der Abfrage in ein XML-Element um, das den allgemeinen Bezeichner \<row> besitzt, oder in den optional bereitgestellten Elementnamen. Standardmäßig wird jeder Spaltenwert im Rowset, der nicht NULL ist, einem Attribut des \<row>-Elements zugeordnet. Wenn der FOR XML-Klausel die ELEMENTS-Direktive hinzugefügt wird, wird jeder Spaltenwert einem Unterelement des \<row>-Elements zugeordnet. Zusammen mit der ELEMENTS-Direktive können Sie optional die Option XSINIL angeben, um NULL-Spaltenwerte im Resultset einem Element zuzuordnen, das das Attribut xsi:nil=`"`true`"`besitzt.  
@@ -43,11 +43,11 @@ ms.locfileid: "48084235"
   
 -   [Beispiel: Abrufen von Binärdaten](example-retrieving-binary-data.md)  
   
--   [Beispiel: Umbenennen des &#60;row&#62;-Elements](example-renaming-the-row-element.md)  
+-   [Beispiel: Umbenennen der &#60;Zeile&#62; Element](example-renaming-the-row-element.md)  
   
 -   [Beispiel: Angeben eines Stammelements für das durch FOR XML generierte XML](example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
   
--   [Beispiel: Abfragen von Spalten des Typs XML](example-querying-xmltype-columns.md)  
+-   [Beispiel: Abfragen von Spalten](example-querying-xmltype-columns.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hinzufügen von Namespaces zu Abfragen mit WITH XMLNAMESPACES](add-namespaces-to-queries-with-with-xmlnamespaces.md)   

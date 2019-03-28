@@ -18,12 +18,12 @@ ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14702941897ebfec4b8646f8015a659f370e31ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1c02660752e2b461a24eed6df8aa31416b5c4bfd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856978"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538172"
 ---
 # <a name="spresynctargetserver-transact-sql"></a>sp_resync_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_resync_targetserver
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@server_name =**] **'***server***'**  
- Der Name des erneut zu synchronisierenden Serverobjekts. *server* ist vom Datentyp **sysname**und hat keinen Standardwert. Mit **ALL** werden alle Zielserver neu synchronisiert.  
+`[ @server_name = ] 'server'` Der Name der zu synchronisierenden Serverobjekts. *server* ist vom Datentyp **sysname**und hat keinen Standardwert. Mit **ALL** werden alle Zielserver neu synchronisiert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -70,7 +69,7 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
  [sp_help_downloadlist &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql.md)   
- [Sp_post_msx_operation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md)   
+ [sp_post_msx_operation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

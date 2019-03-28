@@ -16,12 +16,12 @@ ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d28c8da014a3922a9dbd1cba533b4cbf1d7a9215
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: d2cb929ffc3506d6dcb4a0745c53b47a45fdb469
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590074"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538612"
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,33 +44,26 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication =**] **"**_Veröffentlichung_**"**  
- Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@article =**] **"**_Artikel_**"**  
- Der Name des Artikels in der Veröffentlichung. *Artikel* ist **Sysname**, hat keinen Standardwert.  
+`[ @article = ] 'article'` Ist der Name des Artikels in der Veröffentlichung. *Artikel* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@column =**] **"**_Spalte_**"**  
- Identifiziert die Spalten, für die die vertikale Partition erstellt werden soll. *Spalte* ist **Sysname**, hat den Standardwert NULL. Bei den Werten NULL und `@operation = N'add'` werden dem Artikel standardmäßig alle Spalten in der Quelltabelle hinzugefügt. *Spalte* darf nicht NULL sein, wenn *Vorgang* nastaven NA hodnotu **löschen**. Führen Sie zum Ausschließen von Spalten aus einem Artikel **Sp_mergearticlecolumn** , und geben Sie *Spalte* und `@operation = N'drop'` für jede Spalte, die entfernt werden aus dem angegebenen *Artikel*.  
+`[ @column = ] 'column'` Gibt die Spalten für die die vertikale Partition erstellt. *Spalte* ist **Sysname**, hat den Standardwert NULL. Bei den Werten NULL und `@operation = N'add'` werden dem Artikel standardmäßig alle Spalten in der Quelltabelle hinzugefügt. *Spalte* darf nicht NULL sein, wenn *Vorgang* nastaven NA hodnotu **löschen**. Führen Sie zum Ausschließen von Spalten aus einem Artikel **Sp_mergearticlecolumn** , und geben Sie *Spalte* und `@operation = N'drop'` für jede Spalte, die entfernt werden aus dem angegebenen *Artikel*.  
   
- [  **@operation =**] **"**_Vorgang_**"**  
- Der Replikationsstatus. *Vorgang* ist **nvarchar(4)**, hat den Standardwert ADD. **Hinzufügen** markiert die Spalte für die Replikation. **Drop** wird die Spalte gelöscht.  
+`[ @operation = ] 'operation'` Ist der Replikationsstatus. *Vorgang* ist **nvarchar(4)**, hat den Standardwert ADD. **Hinzufügen** markiert die Spalte für die Replikation. **Drop** wird die Spalte gelöscht.  
   
- [  **@schema_replication=**] **"**_Schema_replication_**"**  
- Gibt an, dass eine Schemaänderung weitergegeben wird, wenn der Merge-Agent ausgeführt wird. *Schema_replication* ist **nvarchar(5)**, hat den Standardwert "false".  
+`[ @schema_replication = ] 'schema_replication'` Gibt an, dass eine schemaänderung weitergegeben wird, wenn der Merge-Agent ausgeführt wird. *Schema_replication* ist **nvarchar(5)**, hat den Standardwert "false".  
   
 > [!NOTE]  
 >  Nur **"false"** wird für unterstützt *Schema_replication*.  
   
- [ **@force_invalidate_snapshot =** ] *Force_invalidate_snapshot*  
- Aktiviert oder deaktiviert die Möglichkeit, eine Momentaufnahme für ungültig zu erklären. *Force_invalidate_snapshot* ist eine **Bit**, hat den Standardwert **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Aktiviert oder deaktiviert die Möglichkeit, eine Momentaufnahme für ungültig erklärt. *Force_invalidate_snapshot* ist eine **Bit**, hat den Standardwert **0**.  
   
  **0** gibt an, dass Änderungen am Mergeartikel nicht die Momentaufnahme ungültig werden.  
   
  **1** gibt an, dass Änderungen am Mergeartikel die Momentaufnahme ungültig ist, wird möglicherweise Wenn dies zutrifft, wird ein Wert von **1** die Berechtigung für das Auftreten der neuen Momentaufnahme erteilt.  
   
- [  **@force_reinit_subscription =]**_Force_reinit_subscription_  
- Aktiviert oder deaktiviert die Möglichkeit, das Abonnement erneut zu initialisieren. *Force_reinit_subscription* ähnelt ein wenig mit dem Standardwert **0**.  
+`[ @force_reinit_subscription = ]force_reinit_subscription_` Aktiviert oder deaktiviert die Möglichkeit, die das Abonnement erneut zu initialisieren. *Force_reinit_subscription* ähnelt ein wenig mit dem Standardwert **0**.  
   
  **0** gibt an, dass Änderungen am Mergeartikel nicht werden dazu, dass das Abonnement erneut initialisiert werden.  
   

@@ -10,19 +10,19 @@ ms.assetid: c0a704a3-3a31-4c2c-b967-addacda62ef8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c774e0b69565c21a7ba794712212e3b79bcc66e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 591d86011ee769d054c069db98a40e2765b1ec27
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204040"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538132"
 ---
 # <a name="implementing-identity-in-a-memory-optimized-table"></a>Implementieren von IDENTITY in einer speicheroptimierten Tabelle
   IDENTITY(1, 1) wird in einer speicheroptimierten Tabelle unterstützt. Identitätsspalten mit der Definition IDENTITY(x, y), wobei x != 1 oder y != 1 ist, werden in speicheroptimierten Tabellen jedoch nicht unterstützt. Die problemumgehung für IDENTITY-Werte verwendet, das Sequenzobjekt ([Sequenznummern](../sequence-numbers/sequence-numbers.md)).  
   
  Entfernen Sie zuerst die IDENTITY-Eigenschaft aus der Tabelle, die in In-Memory OLTP konvertiert wird. Definieren Sie anschließend ein neues SEQUENCE-Objekt für die Spalte in der Tabelle. SEQUENCE-Objekte als Identitätsspalten stützen sich auf die Möglichkeit, DEFAULT-Werte für Spalten zu erstellen, die mithilfe der NEXT VALUE FOR-Syntax einen neuen Identitätswert abrufen. Da DEFAULT-Werte von In-Memory OLTP nicht unterstützt werden, müssen Sie den neu generierten SEQUENCE-Wert entweder an die INSERT-Anweisung oder an eine systemintern kompilierte gespeicherte Prozedur übergeben, die den Einfügevorgang ausführt. Dieses Muster wird im folgenden Beispiel veranschaulicht.  
   
-```tsql  
+```sql  
 -- Create a new In-Memory OLTP table to simulate IDENTITY insert  
 -- Here the column C1 was the identity column in the original table  
 --  

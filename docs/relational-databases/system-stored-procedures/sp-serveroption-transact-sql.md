@@ -19,12 +19,12 @@ ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d947f319c56c29c0d3dbe4ce88c38055c59dfc5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 2b2594ca16f3cd7378dbd8632af448471b8f1654
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124110"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529262"
 ---
 # <a name="spserveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_serveroption [@server = ] 'server'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@server =** ] **"**_Server_**"**  
- Der Name des Servers für den die Option festgelegt werden soll. *server* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @server = ] 'server'` Ist der Name des Servers für die Option "" festlegen. *server* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
- [  **@optname =** ] **"**_Optionsname_**"**  
- Die Option, die für den angegebenen Server festgelegt werden soll. *Option_name* ist **Varchar (** 35 **)**, hat keinen Standardwert. *Option_name* kann eines der folgenden Werte sein.  
+`[ @optname = ] 'option_name'` Ist die Option für den angegebenen Server festgelegt. *Option_name* ist **Varchar (** 35 **)**, hat keinen Standardwert. *Option_name* kann eines der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -57,17 +55,16 @@ sp_serveroption [@server = ] 'server'
 |**Datenzugriff**|Aktiviert und deaktiviert den Zugriff auf verteilte Abfragen für Verbindungsserver. Kann verwendet werden, nur für **sys.server** Einträge hinzugefügt, die über **Sp_addlinkedserver**.|  
 |**dist**|Der Verteiler.|  
 |**Verzögerte schemaüberprüfung**|Bestimmt, ob das Schema von Remotetabellen überprüft wird.<br /><br /> Wenn **"true"**, überspringen Sie die schemaüberprüfung von Remotetabellen zu Beginn der Abfrage.|  
-|**pub**|Herausgeber.|  
+|**pub**|Publisher.|  
 |**Abfragetimeout**|Der Timeoutwert für Abfragen auf einem Verbindungsserver.<br /><br /> Wenn **0**, verwenden Sie die **Sp_configure** Standard.|  
 |**rpc**|Aktiviert RPC von dem betreffenden Server.|  
 |**RPC-Ausgabe**|Aktiviert RPC zu dem betreffenden Server.|  
 |**sub**|Der Abonnent ist.|  
-|**System**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**system**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**Remotesortierung verwenden**|Bestimmt, ob die Sortierung einer Remotespalte oder eines lokalen Servers verwendet wird.<br /><br /> Wenn **"true"**, die Sortierung der Remotespalten wird zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenquellen und der im angegebenen Sortierung **Sortierungsname** dient für nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenquellen.<br /><br /> Wenn **"false"**, verwenden verteilte Abfragen immer die standardsortierung des lokalen Servers, während **Sortierungsname** und die Sortierung der Remotespalten werden ignoriert. Der Standardwert ist **false**. (Die **"false"** Wert ist mit der im verwendeten sortierungssemantik kompatibel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.)|  
 |**Remote Proc Transaction promotion**|Verwenden Sie diese Option, um die Aktionen einer Server-zu-Server-Prozedur durch eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator-Transaktion (MS DTC) zu schützen. Wenn diese Option auf true festgelegt ist (oder ON) Aufruf einer remote gespeicherten Prozedur wird eine verteilte Transaktion gestartet und bei MS DTC eingetragen. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz, die die remote gespeicherte Prozedur aufruft, wird als Transaktionsurheber bezeichnet und steuert die Beendigung der Transaktion. Wenn im Anschluss eine COMMIT TRANSACTION- oder ROLLBACK TRANSACTION-Anweisung für die Verbindung ausgegeben wird, fordert die steuernde Instanz MS DTC auf, die Beendigung der verteilten Transaktion auf den beteiligten Computern zu verwalten.<br /><br /> Nachdem eine verteilte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Transaktion gestartet wurde, können Aufrufe remote gespeicherter Prozeduren für weitere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen erfolgen, die als Verbindungsserver definiert wurden. Alle Verbindungsserver werden in der verteilten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Transaktion eingetragen, und MS DTC stellt sicher, dass die Transaktion für jeden Verbindungsserver abgeschlossen wird.<br /><br /> Wenn diese Option auf FALSE (oder OFF) festgelegt ist, wird eine lokale Transaktion beim Aufruf einer remote gespeicherten Prozedur für einen Verbindungsserver nicht zu einer verteilten Transaktion höher gestuft.<br /><br /> Falls die Transaktion vor dem Server-zu-Server-Prozeduraufruf bereits eine verteilte Transaktion ist, hat diese Option keine Auswirkung. Der Prozeduraufruf für einen Verbindungsserver wird unter der gleichen verteilten Transaktion ausgeführt.<br /><br /> Falls vor dem Server-zu-Server-Prozeduraufruf keine Transaktion in der Verbindung aktiv ist, hat diese Option keine Auswirkung. Die Prozedur wird dann für einen Verbindungsserver ohne aktive Transaktionen ausgeführt.<br /><br /> Der Standardwert für diese Option ist TRUE (oder ON).|  
   
- [  **@optvalue =**] **"**_Option_value_**"**  
- Gibt an, ob die *Optionsname* aktiviert werden soll (**"true"** oder **auf**) oder deaktiviert (**"false"** oder **aus**). *Option_value* ist **Varchar (** 10 **)**, hat keinen Standardwert.  
+`[ @optvalue = ] 'option_value'` Gibt an, ob die *Optionsname* aktiviert werden soll (**"true"** oder **auf**) oder deaktiviert (**"false"** oder **aus**). *Option_value* ist **Varchar (** 10 **)**, hat keinen Standardwert.  
   
  *Option_value* möglicherweise eine nicht negative ganze Zahl, für die **Verbindungstimeout** und **Abfragetimeout** Optionen. Für die **Sortierungsname** Option *Option_value* kann eine Name-Sortierung oder NULL sein.  
   
@@ -90,9 +87,9 @@ EXEC sp_serveroption 'SEATTLE3', 'collation compatible', 'true';
   
 ## <a name="see-also"></a>Siehe auch  
  [Verteilte Abfragen, gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
- [Sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [Sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
+ [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

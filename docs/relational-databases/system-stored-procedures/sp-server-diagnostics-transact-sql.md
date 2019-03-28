@@ -18,19 +18,19 @@ ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a15e965cef7109d42383d1a4dc4750c5dfef7374
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: fb0923c57006041c8d01fd0beecbc7cef08c1135
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213769"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535262"
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 Erfasst Diagnosedaten und Zustandsinformationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um potenzielle Fehler zu erkennen. Die Prozedur im Wiederholungsmodus ausgeführt und sendet regelmäßig Ergebnisse. Sie kann über eine reguläre oder eine DAC-Verbindung aufgerufen werden.  
   
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,8 +41,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@repeat_interval** =] **"***Repeat_interval_in_seconds***"**  
- Gibt das Zeitintervall an, in dem die gespeicherte Prozedur ausgeführt wird, um erneut Zustandsinformationen zu senden.  
+`[ @repeat_interval = ] 'repeat_interval_in_seconds'` Gibt das Zeitintervall, in dem die gespeicherte Prozedur wiederholt ausgeführt wird, um Zustandsinformationen zu senden.  
   
  *Repeat_interval_in_seconds* ist **Int** hat den Standardwert 0. Die gültigen Parameterwerte sind 0 sowie alle Werte größer oder gleich 5. Die gespeicherte Prozedur muss mindestens 5 Sekunden lang ausgeführt werden, um vollständige Daten zurückzugeben. Der minimale Wert für die Ausführung der gespeicherten Prozedur im Wiederholungsmodus beträgt 5 Sekunden.  
   
@@ -62,20 +61,20 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|Gibt den Zeitstempel der Zeilenerstellung an. Jede Zeile in einem einzelnen Rowset weist denselben Zeitstempel auf.|  
 |**component_type**|**sysname**|Gibt an, ob die Zeile Informationen für enthält die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzebene Komponente, oder für eine Always On-verfügbarkeitsgruppe:<br /><br /> Instanz<br /><br /> AlwaysOn: AvailabilityGroup|  
-|**Komponentenname**|**sysname**|Gibt den Namen der Komponente oder den Namen der Verfügbarkeitsgruppe an:<br /><br /> System<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> -Ereignisse<br /><br /> *\<Name der verfügbarkeitsgruppe >*|  
+|**component_name**|**sysname**|Gibt den Namen der Komponente oder den Namen der Verfügbarkeitsgruppe an:<br /><br /> System<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> -Ereignisse<br /><br /> *\<Name der verfügbarkeitsgruppe >*|  
 |**state**|**int**|Gibt den Integritätsstatus der Komponente an:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
-|**state_desc**|**sysname**|Beschreibt die Zustandsspalte. Folgende Beschreibungen entsprechen den Werten in der Statusspalte:<br /><br /> 0: Unknown<br /><br /> 1: Bereinigen<br /><br /> 2: Warnung<br /><br /> 3: Fehler|  
-|**data**|**Varchar (Max.)**|Gibt Daten an, die für die Komponente spezifisch sind.|  
+|**state_desc**|**sysname**|Beschreibt die Zustandsspalte. Folgende Beschreibungen entsprechen den Werten in der Statusspalte:<br /><br /> 0: Unknown<br /><br /> 1: clean<br /><br /> 2: Warnung<br /><br /> 3: Fehler|  
+|**data**|**varchar (max)**|Gibt Daten an, die für die Komponente spezifisch sind.|  
   
  Im Folgenden finden Sie die Beschreibungen der fünf Komponenten:  
   
--   **System**: Erfasst Daten von einer Systemperspektive Spinlocks, verarbeitungsbedingungen, offenbar keine Tasks, Seitenfehlern und CPU-Auslastung. Diese Informationen ergeben eine allgemeine Empfehlung zum Integritätsstatus.  
+-   **system**: Erfasst Daten von einer Systemperspektive Spinlocks, verarbeitungsbedingungen, offenbar keine Tasks, Seitenfehlern und CPU-Auslastung. Diese Informationen ergeben eine allgemeine Empfehlung zum Integritätsstatus.  
   
--   **Ressource**:  Sammelt Daten aus ressourcenperspektive auf physischen und virtuellen Arbeitsspeichers, Pufferpools, Seiten, Cache und anderen Arbeitsspeicherobjekten. Diese Informationen erzeugt eine allgemeine Empfehlung zum Integritätsstatus.  
+-   **resource**:  Sammelt Daten aus ressourcenperspektive auf physischen und virtuellen Arbeitsspeichers, Pufferpools, Seiten, Cache und anderen Arbeitsspeicherobjekten. Diese Informationen erzeugt eine allgemeine Empfehlung zum Integritätsstatus.  
   
 -   **Query_processing**: Sammelt Daten hinsichtlich der Verarbeitung von Abfragen auf die Anzahl der Arbeitsthreads, Tasks, Wartetypen, CPU-intensiven Sitzungen und blockierenden Tasks an. Diese Informationen erzeugt eine allgemeine Empfehlung zum Integritätsstatus.  
   
--   **Io_subsystem**: Erfasst Daten zu EA. Zusätzlich zu den Diagnosedaten erzeugt diese Komponente nur für ein EA-Subsystem einen komplett fehlerfreien oder einen Warnzustand.  
+-   **io_subsystem**: Erfasst Daten zu EA. Zusätzlich zu den Diagnosedaten erzeugt diese Komponente nur für ein EA-Subsystem einen komplett fehlerfreien oder einen Warnzustand.  
   
 -   **Ereignisse**: Sammelt Daten und Oberflächen, die über die gespeicherte Prozedur, auf die Fehler und Ereignisse von Interesse, die von dem Server, einschließlich Details zu ringpufferausnahmen, speicherbroker, ungenügender Arbeitsspeicher, Zeitplanungsmodul-Überwachung, Pufferpool, Spinlocks Ring Buffer Ereignisse aufgezeichnet wurden, Sicherheit und Konnektivität. Ereignisse zeigen als Status immer 0 an.  
   

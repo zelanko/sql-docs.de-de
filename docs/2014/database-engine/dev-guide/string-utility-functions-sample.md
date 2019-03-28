@@ -12,12 +12,12 @@ ms.assetid: 9623013f-15f1-4614-8dac-1155e57c880c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fe1a3a45ce60ae4678b1b146ff41714db33bf69d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 83a9816afeae77036616bec4e850c09f613f0f74
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368872"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531312"
 ---
 # <a name="string-utility-functions-sample"></a>Beispiel für Zeichenfolgenhilfsprogramm-Funktionen
   Das Beispiel für Zeichenfolgenhilfsprogramme enthält eine Streaming-Tabellenwertfunktion in Visual C# und Visual Basic, die eine durch Trennzeichen getrennte Zeichenfolge in eine Tabelle mit einer Spalte unterteilt. Es enthält zudem eine Aggregatfunktion, die eine Zeichenfolgenspalte in eine durch Trennzeichen getrennte Zeichenfolge konvertiert.  Außerdem sind eine Skalarfunktion und eine Tabellenwertfunktion implementiert, die Ersetzungs- und Suchfunktionen für reguläre Ausdrücke bereitstellen.  
@@ -885,7 +885,7 @@ GO
   
  Dies ist die Datei `test.sql`, die das Beispiel durch das Ausführen der Funktionen testet.  
   
-```tsql  
+```sql  
 USE AdventureWorks  
 GO  
   

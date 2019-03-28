@@ -11,12 +11,12 @@ ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d88e1fa7853c1207f1a8c95da2f96bb77dd7d49c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 45004f8544efc0f0cc02292dbe28fdd75d6dc1de
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355335"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534072"
 ---
 # <a name="lesson-7-move-your-data-files-to-windows-azure-storage"></a>Lektion 7: Verschieben von Datendateien in den Windows Azure-Speicher
   In dieser Lektion erfahren Sie, wie Sie die Datendateien in den Windows Azure-Speicher verschieben (nicht jedoch die SQL Server-Instanz). Für diese Lektion müssen Sie Lektion 4, 5 und 6 nicht abschließen.  
@@ -37,7 +37,7 @@ ms.locfileid: "53355335"
   
 1.  Erstellen Sie zunächst eine Testdatenbank auf dem Quellcomputer, und fügen Sie einige Daten hinzu.  
   
-    ```tsql  
+    ```sql  
   
     USE master;   
     CREATE DATABASE TestDB1Alter;   
@@ -53,7 +53,7 @@ ms.locfileid: "53355335"
   
 2.  Führen Sie den folgenden Code aus:  
   
-    ```tsql  
+    ```sql  
   
     -- In the following statement, modify the path specified in FILENAME to   
     -- the new location of the file in Windows Azure Storage container.   
@@ -68,7 +68,7 @@ ms.locfileid: "53355335"
   
 4.  Schalten Sie dann die Datenbank offline.  
   
-    ```tsql  
+    ```sql  
   
     ALTER DATABASE TestDB1Alter SET OFFLINE;   
     GO  
@@ -81,7 +81,7 @@ ms.locfileid: "53355335"
   
 6.  Schalten Sie dann die Datenbank online.  
   
-    ```tsql  
+    ```sql  
   
     ALTER DATABASE TestDB1Alter SET ONLINE;   
     GO  

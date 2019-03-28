@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 87566a816638e38e9adbf4e2dd6ebfef1f741e3c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d43903af7a4626c7d9645e1b750696b15cc692ec
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851998"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534572"
 ---
 # <a name="sphelpfulltexttablescursor-transact-sql"></a>sp_help_fulltext_tables_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -46,14 +46,11 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@cursor_return=** ] *@cursor_variable* AUSGABE  
- Bezeichnet die Ausgabevariable vom Typ **cursor**. Bei dem Cursor handelt es sich um einen schreibgeschützten, bildlauffähigen, dynamischen Cursor.  
+`[ @cursor_return = ] @cursor_variable OUTPUT` Bezeichnet die Ausgabevariable vom Typ **Cursor**. Bei dem Cursor handelt es sich um einen schreibgeschützten, bildlauffähigen, dynamischen Cursor.  
   
- [  **@fulltext_catalog_name=** ] **"***Fulltext_catalog_name***"**  
- Der Name des Volltextkatalogs. *fulltext_catalog_name* ist vom Datentyp **sysname**. Der Standardwert ist NULL. Wenn *Fulltext_catalog_name* ausgelassen wird, oder NULL ist, alle vollständige volltextindizierten Tabellen der Datenbank zugeordnet werden zurückgegeben. Wenn *Fulltext_catalog_name* angegeben ist, aber *Table_name* ausgelassen wird, oder NULL ist, wird die Volltextindex-Informationen für alle indizierten Volltexttabelle diesem Katalog zugeordnet abgerufen. Wenn beide *Fulltext_catalog_name* und *Table_name* angegeben sind, wird eine Zeile zurückgegeben, wenn *Table_name* zugeordnet ist *Fulltext_catalog_name*; Andernfalls wird ein Fehler ausgelöst.  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` Ist der Name der Volltext-Katalog. *fulltext_catalog_name* ist vom Datentyp **sysname**. Der Standardwert ist NULL. Wenn *Fulltext_catalog_name* ausgelassen wird, oder NULL ist, alle vollständige volltextindizierten Tabellen der Datenbank zugeordnet werden zurückgegeben. Wenn *Fulltext_catalog_name* angegeben ist, aber *Table_name* ausgelassen wird, oder NULL ist, wird die Volltextindex-Informationen für alle indizierten Volltexttabelle diesem Katalog zugeordnet abgerufen. Wenn beide *Fulltext_catalog_name* und *Table_name* angegeben sind, wird eine Zeile zurückgegeben, wenn *Table_name* zugeordnet ist *Fulltext_catalog_name*; Andernfalls wird ein Fehler ausgelöst.  
   
- [ **@table_name=**] **'***table_name***'**  
- Der aus einem oder zwei Teilen bestehende Tabellenname, für den die Volltextmetadaten angefordert werden. *table_name* ist vom Datentyp **nvarchar(517)**. Der Standardwert ist NULL. Wenn nur *Table_name* angegeben wird, nur die Zeile, die relevant für *Table_name* zurückgegeben wird.  
+`[ @table_name = ] 'table_name'` Ist der ein- oder zweiteilige Tabellenname, der für den die Volltextmetadaten angefordert wird. *table_name* ist vom Datentyp **nvarchar(517)**. Der Standardwert ist NULL. Wenn nur *Table_name* angegeben wird, nur die Zeile, die relevant für *Table_name* zurückgegeben wird.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

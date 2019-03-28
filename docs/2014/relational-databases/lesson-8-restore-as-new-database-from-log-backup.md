@@ -11,12 +11,12 @@ ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b25bd1ad06b92aa3d9e1ba9cb4be4caa5d587d1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 38d807fae60099022e847e4799196305ccfbadf8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207920"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534442"
 ---
 # <a name="lesson-9-restore-a-database-from-windows-azure-storage"></a>Lektion 9: Wiederherstellen einer Datenbank aus dem Windows Azure-Speicher
   In dieser Lektion erfahren Sie, wie Sie eine Datenbanksicherungsdatei vom Windows Azure-Speicher in einer Datenbank wiederherstellen, die sich entweder in einer lokalen Umgebung oder auf einem virtuellen Computer in Windows Azure befindet. Für diese Lektion müssen Sie Lektion 4, 5, 6, 7 und 8 nicht abschließen.  
@@ -43,9 +43,9 @@ ms.locfileid: "48207920"
   
 3.  Kopieren Sie das folgenden komplette Skript, und fügen Sie es in das Abfrage-Fenster ein. Ändern Sie das Skript aus, je nach Bedarf.  
   
-     **Hinweis:** Ausführen der `RESTORE` Anweisung, um die datenbanksicherung (bak) im Windows Azure-Speicher auf einer Datenbankinstanz auf einem anderen Computer wiederherstellen.  
+     **Hinweis**: Sie führen die `RESTORE` Anweisung, um die datenbanksicherung (bak) im Windows Azure-Speicher auf einer Datenbankinstanz auf einem anderen Computer wiederherstellen.  
   
-    ```tsql  
+    ```sql  
   
     USE master   
     GO   

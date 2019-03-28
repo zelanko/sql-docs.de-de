@@ -1,5 +1,5 @@
 ---
-title: Sp_syspolicy_delete_policy_execution_history (Transact-SQL) | Microsoft-Dokumentation
+title: sp_syspolicy_delete_policy_execution_history (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: fe651af9-267e-45ec-b4e7-4b0698fb1be3
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f5ffa31a27809412e2882b410e6745ba475fcb69
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6660eba76675fbe261af33f647d60456ced839d2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658848"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536962"
 ---
 # <a name="spsyspolicydeletepolicyexecutionhistory-transact-sql"></a>sp_syspolicy_delete_policy_execution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,9 @@ sp_syspolicy_delete_policy_execution_history [ @policy_id = ] policy_id ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@policy_id=** ] *policy_id*  
- Der Bezeichner der Richtlinie, für die Sie den Ausführungsverlauf löschen möchten. *Policy_id* ist **Int**, und es ist erforderlich. Kann den Wert NULL haben.  
+`[ @policy_id = ] policy_id` Ist der Bezeichner der Richtlinie für die Sie den Ausführungsverlauf löschen möchten. *Policy_id* ist **Int**, und es ist erforderlich. Kann den Wert NULL haben.  
   
- [  **@oldest_date=** ] **"***Oldest_date***"**  
- Das am weitesten zurückliegende Datum, für das Sie den Richtlinienausführungsverlauf beibehalten möchten. Alle Ausführungsverläufe, die vor diesem Datum liegen, werden gelöscht. *Oldest_date* ist **"DateTime"**, und es ist erforderlich. Kann den Wert NULL haben.  
+`[ @oldest_date = ] 'oldest_date'` Ist der am weitesten zurückliegende Datum, die für den richtlinienausführungsverlauf beibehalten werden sollen. Alle Ausführungsverläufe, die vor diesem Datum liegen, werden gelöscht. *Oldest_date* ist **"DateTime"**, und es ist erforderlich. Kann den Wert NULL haben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -76,7 +74,7 @@ ON a.policy_id = b.policy_id
  Erfordert die Mitgliedschaft in der festen Datenbankrolle PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Mögliche Erweiterung der Anmeldeinformationen: Benutzer mit der Rolle PolicyAdministratorRole können Servertrigger erstellen und die Ausführung von Richtlinien planen. Dies kann sich auf die Arbeitsweise der [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz auswirken. Ein Benutzer mit der Rolle PolicyAdministratorRole kann beispielsweise eine Richtlinie erstellen, durch die das Erstellen der meisten Objekte in [!INCLUDE[ssDE](../../includes/ssde-md.md)] verhindert wird. Aufgrund dieser möglichen Erweiterung der Anmeldeinformationen, sollte die PolicyAdministratorRole-Rolle gewährt werden nur für Benutzer, die mit der Kontrolle der Konfiguration von vertrauenswürdigen sind die [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Mögliche Erweiterung der Anmeldeinformationen: Benutzer der Rolle PolicyAdministratorRole können Servertrigger erstellen und Ausführung von Richtlinien planen, die den Betrieb der Instanz von beeinflussen, können die [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Ein Benutzer mit der Rolle PolicyAdministratorRole kann beispielsweise eine Richtlinie erstellen, durch die das Erstellen der meisten Objekte in [!INCLUDE[ssDE](../../includes/ssde-md.md)] verhindert wird. Aufgrund dieser möglichen Erweiterung der Anmeldeinformationen, sollte die PolicyAdministratorRole-Rolle gewährt werden nur für Benutzer, die mit der Kontrolle der Konfiguration von vertrauenswürdigen sind die [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird der Richtlinienausführungsverlauf vor einem bestimmten Datum für eine Richtlinie mit der ID 7 gelöscht.  
@@ -90,7 +88,7 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Prozeduren für Richtlinie der richtlinienbasierten Verwaltung &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [Sp_syspolicy_set_config_history_retention &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
+ [sp_syspolicy_set_config_history_retention &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
  [sp_syspolicy_purge_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-purge-history-transact-sql.md)  
   
   

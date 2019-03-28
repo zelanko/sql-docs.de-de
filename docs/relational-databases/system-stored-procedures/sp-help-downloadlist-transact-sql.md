@@ -18,12 +18,12 @@ ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: caaeb391fabb112ed2a530148baf61e829e6b80a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f6bb56be8654b37eea250122068ef52e165a2d99
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857087"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538282"
 ---
 # <a name="sphelpdownloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,47 +47,38 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@job_id=** ] *job_id*  
- Die ID des Auftrags, zu dem Informationen zurückgegeben werden sollen. *Job_id* ist **Uniqueidentifier**, hat den Standardwert NULL.  
+`[ @job_id = ] job_id` Die Auftrags-ID für den Informationen zurückgegeben werden soll. *Job_id* ist **Uniqueidentifier**, hat den Standardwert NULL.  
   
- [  **@job_name=** ] **"***Job_name***"**  
- Der Name des Auftrags. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
- [ **@operation=** ] **'***operation***'**  
- Der gültige Vorgang für den angegebenen Auftrag. *Vorgang* ist **varchar(64)**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
+`[ @operation = ] 'operation'` Der gültige Vorgang für den angegebenen Auftrag. *Vorgang* ist **varchar(64)**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
-|**FEHLER**|Servervorgang, der den Zielserver vollziehen des Austritts aus dem Master-anfordert **SQLServerAgent** Service.|  
+|**DEFECT**|Servervorgang, der den Zielserver vollziehen des Austritts aus dem Master-anfordert **SQLServerAgent** Service.|  
 |**DELETE**|Auftragsvorgang, mit dem ein gesamter Auftrag entfernt wird|  
 |**INSERT**|Auftragsvorgang, der einen gesamten Auftrag einfügt oder einen vorhandenen Auftrag aktualisiert. Dieser Vorgang schließt ggf. alle Auftragsschritte und Zeitpläne ein.|  
 |**ERNEUT EINZUTRAGEN.**|Servervorgang, der bewirkt, dass der Zielserver die Eintragsinformationen, einschließlich des Abrufintervalls und der Zeitzone, erneut an die Multiserverdomäne sendet. Der Zielserver auch downloadet erneut die **MSXOperator** Details.|  
 |**SET-POLL**|Servervorgang, der festlegt, in welchem Intervall (in Sekunden) die Zielserver die Multiserverdomäne abfragen. Wenn angegeben, *Wert* wird als der erforderliche Intervallwert interpretiert, und kann ein Wert von **10** zu **28.800**.|  
 |**START**|Auftragsvorgang, der den Start der Auftragsausführung anfordert|  
 |**BEENDEN**|Auftragsvorgang, der das Beenden der Auftragsausführung anfordert|  
-|**ZEITPUNKT DER SYNCHRONISIERUNG**|Servervorgang, der bewirkt, dass der Zielserver die Systemuhr mit der Multiserverdomäne synchronisiert. Dies ist ein kostenaufwendiger Vorgang und sollte deshalb nur selten und in begrenztem Umfang durchgeführt werden.|  
+|**SYNC-TIME**|Servervorgang, der bewirkt, dass der Zielserver die Systemuhr mit der Multiserverdomäne synchronisiert. Dies ist ein kostenaufwendiger Vorgang und sollte deshalb nur selten und in begrenztem Umfang durchgeführt werden.|  
 |**UPDATE**|Auftragsvorgang, der aktualisiert nur die **Sysjobs** Informationen für einen Auftrag, nicht die Schritte eines Auftrags oder Zeitpläne. Aufruf erfolgt automatisch durch **Sp_update_job**.|  
   
- [  **@object_type=** ] **"***Object_type***"**  
- Der Typ des Objekts für den angegebenen Auftrag. *Object_type* ist **varchar(64)**, hat den Standardwert NULL. *Object_type* kann JOB oder SERVER sein. Weitere Informationen zu gültigen *Object_type*Werte finden Sie unter [Sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
+`[ @object_type = ] 'object_type'` Der Typ des Objekts für den angegebenen Auftrag. *Object_type* ist **varchar(64)**, hat den Standardwert NULL. *Object_type* kann JOB oder SERVER sein. Weitere Informationen zu gültigen *Object_type*Werte finden Sie unter [Sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
   
- [  **@object_name=** ] **"***Object_name***"**  
- Der Name des Objekts. *Object_name* ist **Sysname**, hat den Standardwert NULL. Wenn *Object_type* Wert JOB aufweist, *Object_name*ist der Name des Auftrags. Wenn *Object_type*Server und *Object_name*ist der Servername.  
+`[ @object_name = ] 'object_name'` Der Name des Objekts. *Object_name* ist **Sysname**, hat den Standardwert NULL. Wenn *Object_type* Wert JOB aufweist, *Object_name*ist der Name des Auftrags. Wenn *Object_type*Server und *Object_name*ist der Servername.  
   
- [ **@target_server=** ] **'***target_server***'**  
- Der Name des Zielservers. *Target_server* ist **vom Datentyp nvarchar(128)**, hat den Standardwert NULL.  
+`[ @target_server = ] 'target_server'` Der Name des Zielservers. *Target_server* ist **vom Datentyp nvarchar(128)**, hat den Standardwert NULL.  
   
- [  **@has_error=** ] *Has_error*  
- Gibt an, ob der Auftrag Fehler bestätigen soll. *Has_error* ist **Tinyint**, hat den Standardwert NULL, womit keine Fehler bestätigt werden sollen. **1** gibt an, dass alle Fehler bestätigt werden sollen.  
+`[ @has_error = ] has_error` Ist, gibt an, ob der Auftrag Fehler bestätigen soll. *Has_error* ist **Tinyint**, hat den Standardwert NULL, womit keine Fehler bestätigt werden sollen. **1** gibt an, dass alle Fehler bestätigt werden sollen.  
   
- [ **@status=** ] *status*  
- Der Status für den Auftrag. *Status* ist **Tinyint**, hat den Standardwert NULL.  
+`[ @status = ] status` Der Status des Auftrags. *Status* ist **Tinyint**, hat den Standardwert NULL.  
   
- [  **@date_posted=** ] *Date_posted*  
- Das Datum und die Uhrzeit des Zeitpunkts, zu dem alle Einträge, die zu oder nach dem angegebenen Datum und der angegebenen Uhrzeit erstellt wurden, im Resultset enthalten sein sollen. *Date_posted* ist **"DateTime"**, hat den Standardwert NULL.  
+`[ @date_posted = ] date_posted` Legen Sie Datum und Uhrzeit, zu dem alle Einträge, die am oder nach dem angegebenen Datum und Uhrzeit im Resultset enthalten sein soll. *Date_posted* ist **"DateTime"**, hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

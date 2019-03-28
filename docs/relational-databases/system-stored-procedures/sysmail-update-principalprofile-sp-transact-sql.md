@@ -18,12 +18,12 @@ ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 04a3fe5351b3c7fc3a6dd711e6e2d638b079c136
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2af55b8c5354dd90e80a0a2a9d149f56abdef27
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601818"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533863"
 ---
 # <a name="sysmailupdateprincipalprofilesp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,15 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@principal_id** =] *Principal_id*  
- Die ID des Datenbankbenutzers oder der Datenbankrolle in der **msdb** -Datenbank für die Zuordnung, die geändert werden soll. *principal_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *principal_id* oder *principal_name* angegeben werden.  
+`[ @principal_id = ] principal_id` Die ID des Datenbankbenutzers oder der Rolle in der **Msdb** -Datenbank für die Zuordnung zu ändern. *principal_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *principal_id* oder *principal_name* angegeben werden.  
   
- [ **@principal_name** =] **"***Principal_name***"**  
- Der Name des Datenbankbenutzers oder der Datenbankrolle in der **msdb** -Datenbank für die Zuordnung, die aktualisiert werden soll. *principal_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es kann entweder *principal_id* oder *principal_name* angegeben werden.  
+`[ @principal_name = ] 'principal_name'` Der Name des Datenbankbenutzers oder der Rolle in der **Msdb** -Datenbank für die Zuordnung zu aktualisieren. *principal_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es kann entweder *principal_id* oder *principal_name* angegeben werden.  
   
- [ **@profile_id** =] *Profile_id*  
- Die ID des Profils für die Zuordnung, die geändert werden soll. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
+`[ @profile_id = ] profile_id` Die Id des Profils für die Zuordnung, die geändert werden soll. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
   
- [ **@profile_name** =] **"***Profile_name***"**  
- Der Name des Profils für die Zuordnung, die geändert werden soll. *profile_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
+`[ @profile_name = ] 'profile_name'` Der Name des Profils für die Zuordnung, die geändert werden soll. *profile_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
   
- [ **@is_default** =] **"***Is_default***"**  
- Gibt an, ob dieses Profil das Standardprofil für den Datenbankbenutzer ist. Ein Datenbankbenutzer kann nur ein Standardprofil besitzen. *is_default* ist vom Datentyp **bit**und hat keinen Standardwert.  
+`[ @is_default = ] 'is_default'` Ist, gibt an, ob dieses Profil das Standardprofil für den Datenbankbenutzer ist. Ein Datenbankbenutzer kann nur ein Standardprofil besitzen. *is_default* ist vom Datentyp **bit**und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

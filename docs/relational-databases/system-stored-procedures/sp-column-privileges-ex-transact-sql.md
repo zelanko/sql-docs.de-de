@@ -18,12 +18,12 @@ ms.assetid: 98cb6e58-4007-40fc-b048-449fb2e7e6be
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b79fbbd504f7294835e92401a2210e6acac3c440
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 822b017c41c9d7fbd205f25a8694e6a3ccd8d19d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514022"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528002"
 ---
 # <a name="spcolumnprivilegesex-transact-sql"></a>sp_column_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,20 +44,15 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@table_server =** ] **"**_Table_server_**"**  
- Der Name des Verbindungsservers, für den Informationen zurückgegeben werden sollen. *Table_server* ist **Sysname**, hat keinen Standardwert.  
+`[ @table_server = ] 'table_server'` Ist der Name des Verbindungsservers, für die Informationen zurückgegeben werden sollen. *Table_server* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@table_name =** ] **"**_Table_name_**"**  
- Der Name der Tabelle, die die angegebene Spalte enthält. *TABLE_NAME* ist **Sysname**, hat den Standardwert NULL.  
+`[ @table_name = ] 'table_name'` Ist der Name der Tabelle, die die angegebene Spalte enthält. *TABLE_NAME* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@table_schema =** ] **"**_Table_schema_**"**  
- Das Tabellenschema. *TABLE_SCHEMA* ist **Sysname**, hat den Standardwert NULL.  
+`[ @table_schema = ] 'table_schema'` Ist das Tabellenschema. *TABLE_SCHEMA* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@table_catalog =** ] **"**_Table_catalog_**"**  
- Der Name der Datenbank, in der angegebenen *Table_name* befindet. *TABLE_CATALOG* ist **Sysname**, hat den Standardwert NULL.  
+`[ @table_catalog = ] 'table_catalog'` Der Name der Datenbank, in der angegebenen *Table_name* befindet. *TABLE_CATALOG* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@column_name =** ] **"**_Column_name_**"**  
- Der Name der Spalte, für die Privilegieninformationen bereitgestellt werden sollen. *Column_name* ist **Sysname**, hat den Standardwert NULL (alle häufigen Spalten).  
+`[ @column_name = ] 'column_name'` Ist der Name der Spalte, für die privilegieninformationen bereitgestellt. *Column_name* ist **Sysname**, hat den Standardwert NULL (alle häufigen Spalten).  
   
 ## <a name="result-sets"></a>Resultsets  
  In der folgenden Tabelle sind die Resultsetspalten aufgeführt. Die zurückgegebenen Ergebnisse sind sortiert nach **TABLE_QUALIFIER**, **TABLE_OWNER**, **TABLE_NAME**, **COLUMN_NAME**, und  **Berechtigung**.  
@@ -65,13 +60,13 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CAT**|**sysname**|Name des Qualifizierers Tabelle. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (_Qualifizierer_**.** _Besitzer_**.** _Namen_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar. Dieses Feld kann den Wert NULL annehmen.|  
-|**NACH "TABLE_SCHEM"**|**sysname**|Name des Tabellenbesitzers. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], diese Spalte dar, den Namen des Datenbankbenutzers, der die Tabelle erstellt hat. Dieses Feld gibt immer einen Wert zurück.|  
+|**TABLE_SCHEM**|**sysname**|Name des Tabellenbesitzers. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], diese Spalte dar, den Namen des Datenbankbenutzers, der die Tabelle erstellt hat. Dieses Feld gibt immer einen Wert zurück.|  
 |**TABLE_NAME**|**sysname**|Tabellenname. Dieses Feld gibt immer einen Wert zurück.|  
 |**COLUMN_NAME**|**sysname**|Name der Spalte für jede Spalte von der **TABLE_NAME** zurückgegeben. Dieses Feld gibt immer einen Wert zurück.|  
-|**BERECHTIGENDE (GRANTOR)**|**sysname**|Datenbank-Benutzername, der Berechtigungen für erteilt hat **COLUMN_NAME** aufgeführten **Empfänger**. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], diese Spalte ist immer identisch mit der **TABLE_OWNER**. Dieses Feld gibt immer einen Wert zurück.<br /><br /> Die **GRANTOR** Spalte kann entweder der Datenbankbesitzer sein (**TABLE_OWNER**) oder ein Benutzer, denen die vom Datenbankbesitzer erteilt wurden Berechtigungen mithilfe der WITH GRANT OPTION-Klausel in der GRANT-Anweisung.|  
+|**GRANTOR**|**sysname**|Datenbank-Benutzername, der Berechtigungen für erteilt hat **COLUMN_NAME** aufgeführten **Empfänger**. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], diese Spalte ist immer identisch mit der **TABLE_OWNER**. Dieses Feld gibt immer einen Wert zurück.<br /><br /> Die **GRANTOR** Spalte kann entweder der Datenbankbesitzer sein (**TABLE_OWNER**) oder ein Benutzer, denen die vom Datenbankbesitzer erteilt wurden Berechtigungen mithilfe der WITH GRANT OPTION-Klausel in der GRANT-Anweisung.|  
 |**EMPFÄNGER**|**sysname**|Datenbank-Benutzername, dem Berechtigungen für erteilt wurden **COLUMN_NAME** aufgeführte **GRANTOR**. Dieses Feld gibt immer einen Wert zurück.|  
 |**BERECHTIGUNGEN**|**Varchar (** 32 **)**|Eine der verfügbaren Spaltenberechtigungen. Spaltenberechtigungen können folgende Werte annehmen (oder auch andere Werte, die von der Datenquelle bei der Definition der Implementierung unterstützt werden):<br /><br /> Wählen Sie = **Empfänger** kann Daten für die Spalten abrufen.<br /><br /> INSERT = **Empfänger** können Daten für diese Spalten bereitstellen, wenn neue Zeilen eingefügt werden (durch die **Empfänger**) in die Tabelle.<br /><br /> UPDATE = **Empfänger** kann vorhandene Daten in der Spalte ändern.<br /><br /> REFERENCES = **Empfänger** können auf eine Spalte in einer Fremdschlüsseltabelle in einer Primärschlüssel/Fremdschlüssel-Beziehung verweisen. Primär-/Fremdschlüssel-Beziehungen werden über Tabelleneinschränkungen definiert.|  
-|**IS_GRANTABLE**|**Varchar (** 3 **)**|Gibt an, ob die **Empfänger** ist zulässig, erteilen Sie Berechtigungen für andere Benutzer (häufig als "Berechtigung mit Recht zum Erteilen" bezeichnet). Dieses Feld kann die Werte YES, NO oder NULL annehmen. Ein unbekannter Wert oder NULL-Wert verweist darauf, dass für die entsprechende Datenquelle die "Berechtigung mit Recht zum Erteilen" nicht zutreffend ist.|  
+|**IS_GRANTABLE**|**varchar(** 3 **)**|Gibt an, ob die **Empfänger** ist zulässig, erteilen Sie Berechtigungen für andere Benutzer (häufig als "Berechtigung mit Recht zum Erteilen" bezeichnet). Dieses Feld kann die Werte YES, NO oder NULL annehmen. Ein unbekannter Wert oder NULL-Wert verweist darauf, dass für die entsprechende Datenquelle die "Berechtigung mit Recht zum Erteilen" nicht zutreffend ist.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert SELECT-Berechtigung für das Schema.  
@@ -87,7 +82,7 @@ EXEC sp_column_privileges_ex @table_server = 'Seattle1',
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_table_privileges_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-ex-transact-sql.md)   
+ [sp_table_privileges_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-ex-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -16,12 +16,12 @@ ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3785eb45e8ecca7a573f499d8c48b184a22e6efc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 668233ad7ee79617caa60933a9eef33c5a810164
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779362"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534702"
 ---
 # <a name="sphelpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,23 +40,20 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publication=**] **'***publication***'**  
- Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@article=**] **"***Artikel***"**  
- Der Name des Artikels. *Artikel* ist **Sysname**, hat den Standardwert **%**, die Namen aller Artikel zurückgegeben.  
+`[ @article = ] 'article'` Ist der Name des Artikels. *Artikel* ist **Sysname**, hat den Standardwert **%**, die Namen aller Artikel zurückgegeben.  
   
- [  **@filtername=**] **"***Filtername***"**  
- Der Name des Filters, zu dem Informationen zurückgegeben werden sollen. *Filtername* ist **Sysname**, hat den Standardwert **%**, Informationen zu allen auf dem Artikel oder die Veröffentlichung definierten Filtern zurückgegeben.  
+`[ @filtername = ] 'filtername'` Ist der Name des Filters, zu dem Informationen zurückgegeben werden sollen. *Filtername* ist **Sysname**, hat den Standardwert **%**, Informationen zu allen auf dem Artikel oder die Veröffentlichung definierten Filtern zurückgegeben.  
   
 ## <a name="result-sets"></a>Resultsets  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**join_filterid**|**int**|ID des Joinfilters.|  
-|**Filtername**|**sysname**|Name des Filters.|  
+|**filtername**|**sysname**|Name des Filters.|  
 |**Name des Join-Artikels**|**sysname**|Name des Join-Artikels.|  
-|**join_filterclause**|**Datentyp nvarchar(2000)**|Filterklausel für den Join.|  
+|**join_filterclause**|**nvarchar(2000)**|Filterklausel für den Join.|  
 |**join_unique_key**|**int**|Gibt an, ob der Join einen eindeutigen Schlüssel betrifft.|  
 |**Besitzer der Basistabelle**|**sysname**|Name des Besitzers der Basistabelle.|  
 |**Name der Basistabelle**|**sysname**|Name der Basistabelle.|  

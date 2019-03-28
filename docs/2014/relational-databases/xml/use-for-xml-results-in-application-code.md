@@ -15,15 +15,15 @@ helpviewer_keywords:
 - XML data islands [SQL Server]
 - data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 43b7fb86b7529de3629d07d294f0fd663b93561d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368672"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532833"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Verwenden von FOR XML-Ergebnissen in Anwendungscode
   Mithilfe von FOR XML-Klauseln in SWL-Abfragen können Sie Abfrageergebnisse abrufen und sogar in XML-Daten umwandeln. Diese Funktionalität bietet Ihnen die folgenden Möglichkeiten, wenn FOR XML-Abfrageergebnisse in XML-Anwendungscode verwendet werden können:  
@@ -155,11 +155,11 @@ ms.locfileid: "53368672"
   
 -   **AnnualSales:** 1500000  
   
--   **AnnualRevenue:** 150000 fest  
+-   **AnnualRevenue:** 150000  
   
--   **Bankname erläutert:** Primäre International  
+-   **BankName:** Primäre International  
   
--   **BusinessType:** BETRIEBSSYSTEM  
+-   **BusinessType:** OS  
   
 -   **YearOpened:** 1974  
   

@@ -16,12 +16,12 @@ ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 466b2c0316cb5de9b38200fd643d0302c5b1ae93
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1f31a00e0c42bc56dffac191ff9a934bb77b95df
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203099"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534532"
 ---
 # <a name="spchangesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,29 +57,21 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@subscriber=**] **"***Abonnenten***"**  
- Der Name des Abonnenten, auf dem die Optionen geändert werden sollen. *Abonnenten* ist **Sysname**, hat keinen Standardwert.  
+`[ @subscriber = ] 'subscriber'` Ist der Name des Abonnenten, auf dem die Optionen ändern. *Abonnenten* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@type=**] *Typ*  
- Der Abonnententyp. *Typ* ist **Tinyint**, hat den Standardwert NULL. **0** gibt eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten. **1** gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder andere ODBC-Datenquellenserver Abonnenten.  
+`[ @type = ] type` Ist der Typ des Abonnenten. *Typ* ist **Tinyint**, hat den Standardwert NULL. **0** gibt eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten. **1** gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder andere ODBC-Datenquellenserver Abonnenten.  
   
- [  **@login=**] **"***Anmeldung***"**  
- Die Anmelde-ID für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
+`[ @login = ] 'login'` Ist die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung-Anmelde-ID. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
- [  **@password=**] **"***Kennwort***"**  
- Ist die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierungskennwort. *Kennwort* ist **Sysname**, hat den Standardwert **%**. **%** Gibt an, dass keine Änderung an der Password-Eigenschaft vorhanden ist.  
+`[ @password = ] 'password'` Ist die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierungskennwort. *Kennwort* ist **Sysname**, hat den Standardwert **%**. **%** Gibt an, dass keine Änderung an der Password-Eigenschaft vorhanden ist.  
   
- [  **@commit_batch_size=**] *Commit_batch_size*  
- Wird nur aus Gründen der Abwärtskompatibilität unterstützt.  
+`[ @commit_batch_size = ] commit_batch_size` Nur für Abwärtskompatibilität unterstützt.  
   
- [  **@status_batch_size=**] *Status_batch_size*  
- Wird nur aus Gründen der Abwärtskompatibilität unterstützt.  
+`[ @status_batch_size = ] status_batch_size` Nur für Abwärtskompatibilität unterstützt.  
   
- [  **@flush_frequency=**] *Flush_frequency*  
- Wird nur aus Gründen der Abwärtskompatibilität unterstützt.  
+`[ @flush_frequency = ] flush_frequency` Nur für Abwärtskompatibilität unterstützt.  
   
- [  **@frequency_type=**] *Frequency_type*  
- Die Häufigkeit für die Zeitplanung des Verteilungstasks. *Frequency_type* ist **Int**, und kann einen der folgenden Werte sein.  
+`[ @frequency_type = ] frequency_type` Kann die Häufigkeit, mit denen des Verteilungstasks. *Frequency_type* ist **Int**, und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -92,11 +84,9 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**64**|Autostart|  
 |**128**|Wiederholt|  
   
- [  **@frequency_interval=**] *Frequency_interval*  
- Das Intervall für *Frequency_type*. *Frequency_interval* ist **Int**, hat den Standardwert NULL.  
+`[ @frequency_interval = ] frequency_interval` Das Intervall für *Frequency_type*. *Frequency_interval* ist **Int**, hat den Standardwert NULL.  
   
- [  **@frequency_relative_interval=**] *Frequency_relative_interval*  
- Das Datum des Verteilungstasks. Dieser Parameter wird verwendet, wenn *Frequency_type* nastaven NA hodnotu **32** (mit relativem Monatsintervall). *Frequency_relative_interval* ist **Int**, und kann einen der folgenden Werte sein.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Ist das Datum des Verteilungstasks. Dieser Parameter wird verwendet, wenn *Frequency_type* nastaven NA hodnotu **32** (mit relativem Monatsintervall). *Frequency_relative_interval* ist **Int**, und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -106,11 +96,9 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**8**|Vierter|  
 |**16**|Letzter|  
   
- [  **@frequency_recurrence_factor=**] *Frequency_recurrence_factor*  
- Ist, wie oft der Verteilungstask während des definierten wiederholt werden soll *Frequency_type*. *Frequency_recurrence_factor* ist **Int**, hat den Standardwert NULL.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Ist, wie oft der Verteilungstask während des definierten wiederholt werden soll *Frequency_type*. *Frequency_recurrence_factor* ist **Int**, hat den Standardwert NULL.  
   
- [  **@frequency_subday=**] *Frequency_subday*  
- Die Häufigkeit für die erneute geplante Ausführung während des definierten Zeitraums. *Frequency_subday* ist **Int**, und kann einen der folgenden Werte sein.  
+`[ @frequency_subday = ] frequency_subday` Ist die Häufigkeit für die erneute geplante Ausführung während des definierten Zeitraums. *Frequency_subday* ist **Int**, und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -119,34 +107,26 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**4**|Minute|  
 |**8**|Hour|  
   
- [  **@frequency_subday_interval=**] *Frequency_subday_interval*  
- Das Intervall für *frequency_subday*. *Frequency_subday_interval* ist **Int**, hat den Standardwert NULL.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Das Intervall für *frequency_subday*. *Frequency_subday_interval* ist **Int**, hat den Standardwert NULL.  
   
- [  **@active_start_time_of_day=**] *Active_start_time_of_day*  
- Die Tageszeit, zu der der Verteilungstask zum ersten Mal geplant ist. Dabei wird das Format HHMMSS verwendet. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert NULL.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Die Tageszeit, die bei der der Verteilungstask erste ist wird geplant HHMMSS. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert NULL.  
   
- [  **@active_end_time_of_day=**] *Active_end_time_of_day*  
- Die Tageszeit, ab der der Verteilungstask nicht mehr geplant ist. Dabei wird das Format HHMMSS verwendet. *das Format HHMMSS verwendet*ist **Int**, hat den Standardwert NULL.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Die Tageszeit, ab der Verteilungstask nicht mehr, wird geplant ist HHMMSS verwendet. *das Format HHMMSS verwendet*ist **Int**, hat den Standardwert NULL.  
   
- [  **@active_start_date=**] *Active_start_date*  
- Das Datum, an dem der Verteilungstask zum ersten Mal geplant ist. Dabei wird das Format JJJJMMTT verwendet. *Active_start_date* ist **Int**, hat den Standardwert NULL.  
+`[ @active_start_date = ] active_start_date` Das Datum, an der Verteilungstask erste ist geplant Format: YYYYMMDD. *Active_start_date* ist **Int**, hat den Standardwert NULL.  
   
- [  **@active_end_date=**] *Active_end_date*  
- Das Datum, ab dem der Verteilungstask nicht mehr geplant ist. Dabei wird das Format JJJJMMTT verwendet. *Active_end_date*ist **Int**, hat den Standardwert NULL.  
+`[ @active_end_date = ] active_end_date` Ist das Datum, ab der Verteilungstask nicht mehr, geplant ist JJJJMMTT. *Active_end_date*ist **Int**, hat den Standardwert NULL.  
   
- [  **@description=**] **"***Beschreibung***"**  
- Eine optionale Textbeschreibung. *Beschreibung* ist **nvarchar(255)**, hat den Standardwert NULL.  
+`[ @description = ] 'description'` Ist eine optionale textbeschreibung. *Beschreibung* ist **nvarchar(255)**, hat den Standardwert NULL.  
   
- [  **@security_mode=**] *Security_mode*  
- Der implementierte Sicherheitsmodus. *Security_mode* ist **Int**, und kann einen der folgenden Werte sein.  
+`[ @security_mode = ] security_mode` Ist der implementierte Sicherheitsmodus. *Security_mode* ist **Int**, und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung|  
 |**1**|Windows-Authentifizierung|  
   
- [ **@publisher**=] **"***Verleger***"**  
- Gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  *Publisher* sollte nicht verwendet werden, beim Ändern von Artikeleigenschaften auf einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger.  
@@ -161,8 +141,8 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_changesubscriber**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
- [Sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
+ [sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
+ [sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
  [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
  [sp_helpserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   

@@ -12,12 +12,12 @@ ms.assetid: 83b5f368-f1a1-4a40-9bb6-c77e2dec690f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 60be94308520f93c76f28ef5e0d1bbbf474dfdbd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 991757d1bfeae8ecc0dec3a69d82c3dcab6415b1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063735"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531652"
 ---
 # <a name="mssqlserver33129"></a>MSSQLSERVER_33129
     
@@ -25,7 +25,7 @@ ms.locfileid: "48063735"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|33129|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
@@ -38,7 +38,7 @@ ms.locfileid: "48063735"
 ## <a name="user-action"></a>Benutzeraktion  
  Der Anmeldename einer Windows-Gruppe kann nicht deaktiviert werden. Um die Zugriffsberechtigung einer Windows-Gruppe vorübergehend zu entfernen, heben Sie die CONNECT-Berechtigung des Anmeldenamens für die Windows-Gruppe mit REVOKE auf. Windows-Benutzer haben möglicherweise weiterhin über ihren individuellen Anmeldenamen oder eine andere Windows-Gruppe Zugriff. Im folgenden Beispiel wird die Verbindungsberechtigung für die Gruppe "Accounting" der Domäne WESTCOAST aufgehoben.  
   
-```tsql  
+```sql  
 REVOKE CONNECT TO [WESTCOAST\Accounting];  
 ```  
   

@@ -19,12 +19,12 @@ ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ac8f9e32aac94d7e565b9166102702ba4b747a88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a0cfc68f78ae9ca4022abfb59a33d756e82a6f2f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189260"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535032"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Wiederherstellen einer Transaktionsprotokollsicherung (SQL Server)
   In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] eine Transaktionsprotokollsicherung mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]wiederherstellen.  
@@ -45,7 +45,7 @@ ms.locfileid: "48189260"
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
   
@@ -96,11 +96,11 @@ ms.locfileid: "48189260"
   
      In der folgenden Tabelle werden die Spaltenheader des Rasters aufgelistet und deren Werte beschrieben.  
   
-    |Header|value|  
+    |Header|Wert|  
     |------------|-----------|  
     |**Restore**|Aktivierte Kontrollkästchen zeigen die wiederherzustellenden Sicherungssätze an.|  
     |**Name**|Name des Sicherungssatzes.|  
-    |**Komponente**|Gesicherte Komponente: **Datenbank**, **Datei** oder \<leer> (bei Transaktionsprotokollen).|  
+    |**Komponente**|Gesicherte Komponente: **Datenbank**, **Datei**, oder \<leer > (bei Transaktionsprotokollen).|  
     |**Datenbank**|Name der an dem Sicherungsvorgang beteiligten Datenbank.|  
     |**Startdatum**|Datum und Uhrzeit des Sicherungsbeginns, entsprechend den Ländereinstellungen des Clients.|  
     |**Beendigungsdatum**|Datum und Uhrzeit des Sicherungsabschlusses, entsprechend den Ländereinstellungen des Clients.|  
@@ -128,7 +128,7 @@ ms.locfileid: "48189260"
   
          In der folgenden Tabelle werden die Spaltenheader des Rasters aufgelistet und deren Werte beschrieben.  
   
-        |Header|value|  
+        |Header|Wert|  
         |------------|-----------|  
         |\<leer>|Zeigt ein Kontrollkästchen zur Auswahl der Markierung an.|  
         |**Transaktionsmarkierung**|Name der markierten Transaktion, der vom Benutzer zugewiesen wurde, als für die Transaktion der Commit ausgeführt wurde.|  
@@ -160,7 +160,7 @@ ms.locfileid: "48189260"
   
     -   **Zugriff auf die wiederhergestellte Datenbank einschränken (WITH RESTRICTED_USER)**  
   
-         Macht die wiederhergestellte Datenbank nur Mitgliedern von **db_owner**, **dbcreator**oder **sysadmin**verfügbar.  
+         Macht die wiederhergestellte Datenbank nur Mitgliedern von **db_owner**, **dbcreator** oder **sysadmin**verfügbar.  
   
          Durch das Aktivieren dieser Option entspricht der `RESTRICTED_USER` option eine [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` Anweisung.  
   
@@ -237,14 +237,14 @@ ms.locfileid: "48189260"
 ###  <a name="TsqlExample"></a> Beispiele (Transact-SQL)  
  Standardmäßig verwendet die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank das einfache Wiederherstellungsmodell. Für die folgenden Beispiele ist es erforderlich, dass die Datenbank folgendermaßen für die Verwendung des vollständigen Wiederherstellungsmodells geändert wird:  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
 ```  
   
 #### <a name="a-applying-a-single-transaction-log-backup"></a>A. Anwenden einer einzelnen Transaktionsprotokollsicherung  
  Im folgenden Beispiel wird mit der Wiederherstellung der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank mithilfe einer vollständigen Datenbanksicherung begonnen, die sich auf einem Sicherungsmedium mit dem Namen `AdventureWorks2012_1`befindet. Dann wird die erste Transaktionsprotokollsicherung angewendet, die sich auf einem Sicherungsmedium mit dem Namen `AdventureWorks2012_log`befindet. Schließlich wird die Datenbank im Beispiel wiederhergestellt.  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012  
    FROM AdventureWorks2012_1  
    WITH NORECOVERY;  
@@ -262,7 +262,7 @@ GO
 #### <a name="b-applying-multiple-transaction-log-backups"></a>B. Anwenden mehrerer Transaktionsprotokollsicherungen  
  Im folgenden Beispiel wird mit der Wiederherstellung der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank mithilfe einer vollständigen Datenbanksicherung begonnen, die sich auf einem Sicherungsmedium mit dem Namen `AdventureWorks2012_1`befindet. Dann werden nacheinander die ersten drei Transaktionsprotokollsicherungen angewendet, die sich auf einem Sicherungsmedium mit dem Namen `AdventureWorks2012_log`befinden. Schließlich wird die Datenbank im Beispiel wiederhergestellt.  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012  
    FROM AdventureWorks2012_1  
    WITH NORECOVERY;  

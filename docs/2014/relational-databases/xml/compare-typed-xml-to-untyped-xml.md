@@ -22,18 +22,18 @@ helpviewer_keywords:
 - XML [SQL Server], untyped
 - xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a318e2729c6d03770b5d7c8e41412cef182f641a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 98cbaa59ea78e0033e9a534915987576347db604
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163060"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538437"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Vergleichen von typisiertem XML mit nicht typisiertem XML
-  Sie können Variablen, Parameter und Spalten des `xml`-Datentyps erstellen. Sie können optional eine Auflistung von XML-Schemas zuordnen, mit einer Variablen, Parameter oder Spalte `xml` Typ. In diesem Fall die `xml` -Datentypinstanz heißt *typisierte*. Anderenfalls wird die XML-Instanz als *nicht typisiert*bezeichnet.  
+  Sie können Variablen, Parameter und Spalten des `xml`-Datentyps erstellen. Optional können Sie eine Auflistung von XML-Schemas mit einer Variablen, einem Parameter oder einer Spalte vom Typ `xml` verknüpfen. In diesem Fall die `xml` -Datentypinstanz heißt *typisierte*. Anderenfalls wird die XML-Instanz als *nicht typisiert*bezeichnet.  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>Wohlgeformtes XML und der xml-Datentyp  
  Der `xml`-Datentyp implementiert den im ISO-Standard definierten `xml`-Datentyp. Deshalb ermöglicht er das Speichern sowohl von wohlgeformten XML-Dokumenten der Version 1.0 als auch von so genannten XML-Inhaltsfragmenten mit Textknoten und einer beliebigen Anzahl von Elementen auf der obersten Ebene in einer nicht typisierten XML-Spalte. Das System überprüft, ob die Daten wohlgeformt sind (wobei es nicht erforderlich ist, dass die Spalte an XML-Schemas gebunden ist) und weist alle Daten zurück, die in diesem erweiterten Sinne nicht wohlgeformt sind. Dies gilt auch für nicht typisierte XML-Variablen und -Parameter.  
@@ -46,7 +46,7 @@ ms.locfileid: "48163060"
 -   **Datentypinformationen.** Schemas stellen Informationen zu den Typen von Attributen und Elementen in der `xml`-Datentypinstanz bereit. Die Typinformationen stellen den in der Instanz enthaltenen Werten genauere operationale Semantik zur Verfügung als dies bei untypisiertem `xml` möglich ist. Dezimale arithmetische Operationen können z. B. für einen Dezimalwert, nicht jedoch für einen Zeichenfolgenwert ausgeführt werden. Aus diesem Grund ist die Speicherung typisierten XMLs erheblich kompakter als bei nicht typisiertem XML.  
   
 ## <a name="choosing-typed-or-untyped-xml"></a>Auswählen zwischen typisiertem oder nicht typisiertem XML  
- Verwenden, die nicht typisierte `xml` -Datentyp in den folgenden Situationen:  
+ Verwenden Sie den nicht typisierten `xml`-Datentyp in den folgenden Situationen:  
   
 -   Sie verfügen über kein Schema für Ihre XML-Daten.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48163060"
  Typisierte XML-Spalten, -Parameter und -Variablen können XML-Dokumente oder -Inhalte speichern. Allerdings müssen Sie zum Zeitpunkt der Deklaration durch ein Flag angeben, ob Sie ein Dokument oder einen Inhalt speichern. Außerdem müssen Sie die Auflistung der XML-Schemas bereitstellen. Geben Sie DOCUMENT an, wenn jede XML-Instanz genau ein Element auf der obersten Ebene aufweist. Verwenden Sie ansonsten CONTENT. Der Abfragecompiler verwendet das DOCUMENT-Flag bei den Typüberprüfungen während der Abfragekompilierung, um Singleton-Elemente auf der obersten Ebene abzuleiten.  
   
 ## <a name="creating-typed-xml"></a>Erstellen von typisiertem XML  
- Bevor Sie typisierte erstellen können `xml` Variablen, Parameter oder Spalten, Sie müssen die XML-schemaauflistung zuerst mithilfe von registrieren [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql). Sie können dann die XML-schemaauflistung Variablen, Parameter oder Spalten Zuordnen der `xml` -Datentyp.  
+ Bevor Sie typisierte erstellen können `xml` Variablen, Parameter oder Spalten, Sie müssen die XML-schemaauflistung zuerst mithilfe von registrieren [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql). Anschließend können Sie der XML-Schemaauflistung Variablen, Parameter oder Spalten des `xml`-Datentyps zuordnen.  
   
  Im folgenden Beispiel wird eine zweiteilige Benennungskonvention zum Angeben des Namens der XML-Schemaauflistung verwendet. Der erste Teil ist der Schemaname, der zweite Teil der Name der XML-Schemaauflistung.  
   
@@ -74,8 +74,8 @@ ms.locfileid: "48163060"
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
 ```  
   
-### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Beispiel: Angeben eines Schemas für eine Spalte vom Typ xml  
- Das folgende Beispiel erstellt eine Tabelle mit einer `xml` Spalte vom Typ und ein Schema für die Spalte angegeben:  
+### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Beispiel: Angeben eines Schemas für ein XML-Typspalte  
+ Im folgenden Beispiel wird eine Tabelle mit einer Spalte vom Typ `xml` erstellt und ein Schema für die Spalte angegeben:  
   
 ```  
 CREATE TABLE T1(  
@@ -83,8 +83,8 @@ CREATE TABLE T1(
  Col2 xml (Production.ProductDescriptionSchemaCollection)) ;  
 ```  
   
-### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>Beispiel: Übergeben eines Parameters vom Typ xml an eine gespeicherte Prozedur  
- Das folgende Beispiel übergibt eine `xml` Typparameter an eine gespeicherte Prozedur, und ein Schema für die Variable angegeben:  
+### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>Beispiel: Übergeben an eine gespeicherte Prozedur Parameter vom Typ xml  
+ Im folgenden Beispiel wird ein Parameter vom Typ `xml` an eine gespeicherte Prozedur übergeben und ein Schema für die Variable angegeben:  
   
 ```  
 CREATE PROCEDURE SampleProc   
@@ -97,16 +97,16 @@ AS
   
 -   Eine XML-Schemaauflistung ist nur in der Datenbank verfügbar, in der sie mit [Erstellen einer XML-Schemaauflistung](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)registriert wurde.  
   
--   Wenn die Umwandlung aus einer Zeichenfolge in einen typisierten `xml` -Datentyp, führt die Analyse außerdem die Überprüfung und Typisierung basierend auf den XML-Schemanamespaces in der angegebenen Auflistung.  
+-   Wenn Sie die Umwandlung aus einer Zeichenfolge in einen typisierten `xml`-Datentyp vornehmen, führt die Analyse außerdem die Überprüfung und Typisierung basierend auf den XML-Schemanamespaces in der angegebenen Auflistung aus.  
   
 -   Sie können einen typisierten `xml`-Datentyp in einen nicht typisierten `xml`-Datentyp umwandeln und umgekehrt.  
   
- Weitere Informationen zu anderen Methoden zum Generieren von XML in SQL Server finden Sie unter [Erstellen von Instanzen der XML-Daten](create-instances-of-xml-data.md). Nachdem das XML generiert wird, zugewiesen werden entweder auf eine `xml` -Datentyp, Variable oder in gespeicherten `xml` Spalten zur weiteren Verarbeitung vom Typ.  
+ Weitere Informationen zu anderen Methoden zum Generieren von XML in SQL Server finden Sie unter [Erstellen von Instanzen der XML-Daten](create-instances-of-xml-data.md). Nachdem das XML generiert wurde, kann es einer Variablen vom Datentyp `xml` zugewiesen oder in Spalten vom Typ `xml` für die weitere Verarbeitung gespeichert werden.  
   
- In der Datentyphierarchie nimmt der `xml` -Datentyp einen Platz unter `sql_variant` und benutzerdefinierte Typen, jedoch über allen integrierten Typen.  
+ In der Datentyphierarchie nimmt der `xml`-Datentyp einen Platz unter `sql_variant` und benutzerdefinierten Typen ein, steht jedoch über allen integrierten Typen.  
   
-### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Beispiel: Angeben von Facets zum Einschränken einer typisierten xml-Spalte  
- Für typisiertes `xml` Spalten, Sie können so eingeschränkt werden nur einzelne Elemente der obersten Ebene für jede darin gespeicherte Instanz zulässig. Sie geben zu diesem Zweck beim Erstellen der Tabelle den optionalen `DOCUMENT` -Facet an, wie das folgende Beispiel zeigt:  
+### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Beispiel: Angeben von Facets zum Einschränken einer typisierten XML-Spalte  
+ Typisierte `xml`-Spalten können so eingeschränkt werden, dass nur einzelne Elemente der obersten Ebene für jede darin gespeicherte Instanz zulässig sind. Sie geben zu diesem Zweck beim Erstellen der Tabelle den optionalen `DOCUMENT` -Facet an, wie das folgende Beispiel zeigt:  
   
 ```  
 CREATE TABLE T(Col1 xml   
@@ -116,7 +116,7 @@ DROP TABLE T;
 GO  
 ```  
   
- Standardmäßig werden Instanzen in der typisierten gespeichert `xml` Spalte werden als XML-Inhalt und nicht als XML-Dokumente gespeichert. Folgendes wird auf diese Weise ermöglicht:  
+ Standardmäßig werden Instanzen, die in der typisierten `xml`-Spalte gespeichert werden, als XML-Inhalt und nicht als XML-Dokumente gespeichert. Folgendes wird auf diese Weise ermöglicht:  
   
 -   Null oder zahlreiche Elemente der obersten Ebene  
   
@@ -129,7 +129,7 @@ CREATE TABLE T(Col1 xml(CONTENT Production.ProductDescriptionSchemaCollection));
 GO -- Default  
 ```  
   
- Beachten Sie, dass Sie die optionalen DOCUMENT/CONTENT-Facets immer angeben können, wenn Sie den `xml`-Typ definieren (typisiertes xml). Z. B. beim Erstellen eines typisierten `xml` Variablen, können Sie hinzufügen das DOCUMENT/CONTENT-Facet, wie im folgenden gezeigt:  
+ Beachten Sie, dass Sie die optionalen DOCUMENT/CONTENT-Facets immer angeben können, wenn Sie den `xml`-Typ definieren (typisiertes xml). Wenn Sie eine typisierte `xml`-Variable erstellen, können Sie z. B. das DOCUMENT/CONTENT-Facet, wie im folgenden Beispiel gezeigt, hinzufügen:  
   
 ```  
 declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);  

@@ -18,12 +18,12 @@ ms.assetid: c851c1ab-3b29-4b99-9902-78c2665a844b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 17fe4fd7edad9df6bccace9d301516ae7683edf3
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: c6a6e31b4dc36e0f280dfb03d8eadf09a7d4ff7c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255665"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534862"
 ---
 # <a name="xpgrantlogin-transact-sql"></a>xp_grantlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@loginame =** ] **'**_login_**'**  
- Der Name des Windows-Benutzers oder der Windows-Gruppe, der bzw. die hinzugefügt werden soll. Windows-Benutzers oder der Gruppe muss mit einem Windows-Domänennamen im Format qualifiziert werden *Domäne*\\*Benutzer*. *login* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @loginame = ] 'login'` Ist der Name des Windows-Benutzer oder der Gruppe hinzugefügt werden. Windows-Benutzers oder der Gruppe muss mit einem Windows-Domänennamen im Format qualifiziert werden *Domäne*\\*Benutzer*. *login* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
- [ **@logintype =** ] **'**_logintype_**'**  
- Der Sicherheitsstufe der Anmeldung, der Zugriff gewährt wird. *LoginType* ist **varchar(5)**, hat den Standardwert NULL. Nur **Admin** kann angegeben werden. Wenn **Admin** angegeben wird, *Anmeldung* erhält Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und als Mitglied hinzugefügt der **Sysadmin** -Serverrolle sein.  
+`[ @logintype = ] 'logintype'` Wird die Sicherheitsstufe der Anmeldung den Zugriff gewährt. *LoginType* ist **varchar(5)**, hat den Standardwert NULL. Nur **Admin** kann angegeben werden. Wenn **Admin** angegeben wird, *Anmeldung* erhält Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und als Mitglied hinzugefügt der **Sysadmin** -Serverrolle sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

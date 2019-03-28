@@ -1,5 +1,5 @@
 ---
-title: Sp_update_proxy (Transact-SQL) | Microsoft-Dokumentation
+title: sp_update_proxy (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 06520164758a50d604b2effbdae23f73dde7128c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29a95b506fbbfb5342410d8d393f0091dd98834b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763519"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534462"
 ---
 # <a name="spupdateproxy-transact-sql"></a>sp_update_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,26 +48,19 @@ sp_update_proxy
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@proxy_id**= ] *id*  
- Die Proxy-ID des Proxys, der geändert werden soll. Die *Proxy_id* ist **Int**, hat den Standardwert NULL.  
+`[ @proxy_id = ] id` Die Proxy-ID des Proxys, der geändert werden soll. Die *Proxy_id* ist **Int**, hat den Standardwert NULL.  
   
- [ **@proxy_name**=] **"***Proxy_name***"**  
- Der Name des Proxys, der geändert werden soll. Die *Proxy_name* ist **Sysname**, hat den Standardwert NULL.  
+`[ @proxy_name = ] 'proxy_name'` Der Name des Proxys, zu ändern. Die *Proxy_name* ist **Sysname**, hat den Standardwert NULL.  
   
- [ **@credential_name** =] **"***Credential_name***"**  
- Der Name der neuen Anmeldeinformationen für den Proxy. Die *Credential_name* ist **Sysname**, hat den Standardwert NULL. Entweder *Credential_name* oder *Credential_id* kann angegeben werden.  
+`[ @credential_name = ] 'credential_name'` Der Name der neuen Anmeldeinformationen für den Proxy. Die *Credential_name* ist **Sysname**, hat den Standardwert NULL. Entweder *Credential_name* oder *Credential_id* kann angegeben werden.  
   
- [ **@credential_id** = ] *credential_id*  
- Die ID der neuen Anmeldeinformationen für den Proxy. Die *Credential_id* ist **Int**, hat den Standardwert NULL. Entweder *Credential_name* oder *Credential_id* kann angegeben werden.  
+`[ @credential_id = ] credential_id` Die ID der neuen Anmeldeinformationen für den Proxy. Die *Credential_id* ist **Int**, hat den Standardwert NULL. Entweder *Credential_name* oder *Credential_id* kann angegeben werden.  
   
- [ **@new_name**=] **"***New_name***"**  
- Der neue Name des Proxys. Die *New_name* ist **Sysname**, hat den Standardwert NULL. Wenn angegeben, ändert die Prozedur den Namen des Proxys, *New_name*. Wenn für das Argument NULL festgelegt wird, bleibt der Name des Proxys unverändert.  
+`[ @new_name = ] 'new_name'` Der neue Name des Proxys. Die *New_name* ist **Sysname**, hat den Standardwert NULL. Wenn angegeben, ändert die Prozedur den Namen des Proxys, *New_name*. Wenn für das Argument NULL festgelegt wird, bleibt der Name des Proxys unverändert.  
   
- [ **@enabled** =] *Is_enabled*  
- Gibt an, ob der Proxy aktiviert ist: Die *Is_enabled* Flag **Tinyint**, hat den Standardwert NULL. Wenn *Is_enabled* ist **0**, der Proxy nicht aktiviert und kann nicht von einem Auftragsschritt verwendet werden. Wird für das Argument NULL festgelegt, bleibt der Status des Proxys unverändert.  
+`[ @enabled = ] is_enabled` Ist, gibt an, ob der Proxy aktiviert ist. Die *Is_enabled* Flag **Tinyint**, hat den Standardwert NULL. Wenn *Is_enabled* ist **0**, der Proxy nicht aktiviert und kann nicht von einem Auftragsschritt verwendet werden. Wird für das Argument NULL festgelegt, bleibt der Status des Proxys unverändert.  
   
- [ **@description**=] **"***Beschreibung***"**  
- Die neue Beschreibung des Proxys. Die *Beschreibung* ist **nvarchar(512)**, hat den Standardwert NULL. Wenn für das Argument NULL festgelegt wird, bleibt die Beschreibung des Proxys unverändert.  
+`[ @description = ] 'description'` Die neue Beschreibung des Proxys. Die *Beschreibung* ist **nvarchar(512)**, hat den Standardwert NULL. Wenn für das Argument NULL festgelegt wird, bleibt die Beschreibung des Proxys unverändert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

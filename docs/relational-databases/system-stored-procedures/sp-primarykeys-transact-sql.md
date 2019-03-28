@@ -18,12 +18,12 @@ ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 484890cfe30ace1c65ea45fe2d9e447a6396b52e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 91b3956f37830d66d6680452b452f2d928551beb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591454"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537122"
 ---
 # <a name="spprimarykeys-transact-sql"></a>sp_primarykeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +43,13 @@ sp_primarykeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@table_server =** ] **"**_Table_server"_  
- Der Name des Verbindungsservers, von dem Primärschlüsselinformationen zurückgegeben werden sollen. *Table_server* ist **Sysname**, hat keinen Standardwert.  
+`[ @table_server = ] 'table_server'_` Ist der Name des Verbindungsservers, von dem Primärschlüsselinformationen zurückgegeben. *Table_server* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@table_name =** ] **"**_Table_name_**"**  
- Der Name der Tabelle, für die Primärschlüsselinformationen bereitgestellt werden sollen. *TABLE_NAME*ist **Sysname**, hat den Standardwert NULL.  
+`[ @table_name = ] 'table_name'` Ist der Name der Tabelle, für die Primärschlüsselinformationen bereitgestellt werden. *TABLE_NAME*ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@table_schema =** ] **"**_Table_schema_**"**  
- Das Tabellenschema. *TABLE_SCHEMA* ist **Sysname**, hat den Standardwert NULL. In der Umgebung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entspricht dies dem Tabellenbesitzer.  
+`[ @table_schema = ] 'table_schema'` Ist das Tabellenschema. *TABLE_SCHEMA* ist **Sysname**, hat den Standardwert NULL. In der Umgebung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entspricht dies dem Tabellenbesitzer.  
   
- [  **@table_catalog =** ] **"**_Table_catalog_**"**  
- Der Name des Katalogs, zu dem das angegebene *Table_name* befindet. In der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Umgebung entspricht dies dem Datenbanknamen. *TABLE_CATALOG* ist **Sysname**, hat den Standardwert NULL.  
+`[ @table_catalog = ] 'table_catalog'` Der Name des Katalogs, zu dem das angegebene *Table_name* befindet. In der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Umgebung entspricht dies dem Datenbanknamen. *TABLE_CATALOG* ist **Sysname**, hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  None  
@@ -63,7 +59,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CAT**|**sysname**|Der Tabellenkatalog|  
-|**NACH "TABLE_SCHEM"**|**sysname**|Tabellenschema|  
+|**TABLE_SCHEM**|**sysname**|Tabellenschema|  
 |**TABLE_NAME**|**sysname**|Der Name der Tabelle.|  
 |**COLUMN_NAME**|**sysname**|Der Name der Spalte.|  
 |**KEY_SEQ**|**int**|Die Sequenznummer der Spalte in einem mehrspaltigen Primärschlüssel.|  
@@ -89,13 +85,13 @@ EXEC sp_primarykeys @table_server = N'LONDON1',
   
 ## <a name="see-also"></a>Siehe auch  
  [Verteilte Abfragen, gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
- [Sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
- [Sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
- [Sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
- [Sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
+ [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
+ [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
+ [sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
+ [sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
  [sp_linkedservers (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
- [Sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
- [Sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
+ [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
+ [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

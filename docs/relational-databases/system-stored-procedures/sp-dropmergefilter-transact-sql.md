@@ -16,12 +16,12 @@ ms.assetid: 798586d7-05f3-4a5e-bea8-a34b7b52d0fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7de6c03b133746156f414687fd661f70b40e842e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 76d83e2d36307280249ccd886c464e8cd484c296
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128117"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533222"
 ---
 # <a name="spdropmergefilter-transact-sql"></a>sp_dropmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,24 +40,19 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication=**] **"**_Veröffentlichung_**"**  
- Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@article=**] **"**_Artikel_**"**  
- Der Name des Artikels. *Artikel* ist **Sysname**, hat keinen Standardwert.  
+`[ @article = ] 'article'` Ist der Name des Artikels. *Artikel* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@filtername=**] **"**_Filtername_**"**  
- Der Name des zu löschenden Filters. *Filtername* ist **Sysname**, hat keinen Standardwert.  
+`[ @filtername = ] 'filtername'` Ist der Name des zu löschenden Filters. *Filtername* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@force_invalidate_snapshot=** ] *Force_invalidate_snapshot*  
- Aktiviert oder deaktiviert die Möglichkeit, eine Momentaufnahme für ungültig zu erklären. *Force_invalidate_snapshot* ist eine **Bit**, hat den Standardwert **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Aktiviert oder deaktiviert die Möglichkeit, eine Momentaufnahme für ungültig erklärt. *Force_invalidate_snapshot* ist eine **Bit**, hat den Standardwert **0**.  
   
  **0** gibt an, dass Änderungen am Mergeartikel bewirken nicht, die Momentaufnahme ungültig wird.  
   
  **1** bedeutet, dass am Mergeartikel Änderungen kann dazu führen, dass die Momentaufnahme ungültig wird. Wenn dies der Fall, der Wert ist **1** die Berechtigung für das Auftreten der neuen Momentaufnahme erteilt.  
   
- [ **@force_reinit_subscription**=] *Force_reinit_subscription*  
- Aktiviert oder deaktiviert die Möglichkeit, ein Abonnement als ungültig zu markieren. *Force_reinit_subscription* ist eine **Bit**, hat den Standardwert **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Aktiviert oder deaktiviert die Möglichkeit, ein Abonnement als ungültig zu markieren. *Force_reinit_subscription* ist eine **Bit**, hat den Standardwert **0**.  
   
  **0** gibt an, dass Änderungen der Artikel Mergefilter nicht Abonnements ungültig werden kann.  
   
@@ -76,7 +71,7 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
  [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_changemergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
- [Sp_helpmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
+ [sp_helpmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

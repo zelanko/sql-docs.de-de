@@ -10,15 +10,15 @@ helpviewer_keywords:
 - user-defined functions [SQL Server], XML
 - xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 118a828a35aaee1ded4e91f3e5ded53ef6135a6a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 015c52194ce17e70a25bfe627aaf6822acda3ce3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355344"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528952"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>FOR XML-Unterstützung für den xml-Datentyp
   Wenn eine FOR XML-Abfrage eine Spalte vom `xml`-Typ in der SELECT-Klausel angibt, werden die Spaltenwerte unabhängig davon, ob die ELEMENTS-Direktive angegeben wird, im zurückgegebenen XML als Elemente zugeordnet. XML-Deklarationen in einer Spalte des `xml`-Typs werden nicht serialisiert.  

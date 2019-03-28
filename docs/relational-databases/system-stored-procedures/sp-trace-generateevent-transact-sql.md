@@ -18,19 +18,19 @@ ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cce91def9566105550788a8a46ea6c2b6bb959aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a24bb05e8f10e2920bd206531723c228d6c1734
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826548"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529352"
 ---
 # <a name="sptracegenerateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Erstellt ein benutzerdefiniertes Ereignis in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
->**Hinweis:** diese gespeicherte Prozedur ist **nicht** als veraltet markiert. Alle anderen ablaufverfolgungsbezogenen gespeicherten Prozeduren sind veraltet.  
+>**HINWEIS:**  Diese gespeicherte Prozedur ist **nicht** als veraltet markiert. Alle anderen ablaufverfolgungsbezogenen gespeicherten Prozeduren sind veraltet.  
   
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -45,14 +45,11 @@ sp_trace_generateevent [ @eventid = ] event_id
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@eventid=**] *event_id*  
- Die ID des Ereignisses, das aktiviert werden soll. *event_id* ist vom Datentyp **int**und hat keinen Standardwert. Die ID muss eine der Ereignisnummern von 82 bis 91 sein, die Menge, die eine benutzerdefinierte Ereignisse darstellen [Sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
+`[ @eventid = ] event_id` Ist die ID des Ereignisses zu aktivieren. *event_id* ist vom Datentyp **int**und hat keinen Standardwert. Die ID muss eine der Ereignisnummern von 82 bis 91 sein, die mit [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)festgelegte benutzerdefinierte Ereignisse darstellen.  
   
- [ **@userinfo**=] **"***User_info***"**  
- Die optionale benutzerdefinierte Zeichenfolge, die den Grund des Ereignisses identifiziert. *user_info* ist vom Datentyp **nvarchar(128)** und hat den Standardwert NULL.  
+`[ @userinfo = ] 'user_info'` Die optionale benutzerdefinierte Zeichenfolge, die den Grund für das Ereignis identifiziert. *user_info* ist vom Datentyp **nvarchar(128)** und hat den Standardwert NULL.  
   
- [ **@userdata**=] *User_data*  
- Die optionalen benutzerdefinierten Daten für das Ereignis. *user_data* ist vom Datentyp **varbinary(8000)** und hat den Standardwert NULL.  
+`[ @userdata = ] user_data` Ist die optionalen benutzerdefinierten Daten für das Ereignis an. *user_data* ist vom Datentyp **varbinary(8000)** und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  In der folgenden Tabelle werden die Codewerte beschrieben, die die Benutzer nach Abschluss der gespeicherten Prozedur möglicherweise erhalten.  
