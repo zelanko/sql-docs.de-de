@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 68fe779dbdc99bd3eca1870a4e8ff1ee0fa7d95f
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: f8e5cc5b3da7bf8c571a1f4b3febd9ef45e44d9e
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017846"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566519"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-2019-big-data-cluster"></a>Tutorial: Laden Sie Beispieldaten in eine SQL Server-2019 big Data-cluster
 
@@ -115,4 +115,18 @@ Die folgenden Schritte beschreiben, wie Sie einen Linux-Client verwenden, um die
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Nachdem das bootstrap-Skript ausgeführt wurde, hat Ihre big Data-Cluster die Beispieldatenbanken und HDFS-Daten. Untersuchen diese Daten und big Data-Cluster finden Sie in der [Tutorials](tutorial-query-hdfs-storage-pool.md) in diesem Abschnitt.
+Nachdem das bootstrap-Skript ausgeführt wurde, hat Ihre big Data-Cluster die Beispieldatenbanken und HDFS-Daten. In den folgenden Tutorials werden die Beispieldaten verwenden, um big Data-Cluster-Funktionen zu veranschaulichen:
+
+Data Virtualization:
+
+- [Tutorial: HDFS-Abfrage in einer SQL Server-big Data-cluster](tutorial-query-hdfs-storage-pool.md)
+- [Tutorial: Abfragen von Oracle aus einer SQL Server-big Data-cluster](tutorial-query-oracle.md)
+
+Datenerfassung:
+
+- [Tutorial: Erfassen von Daten in einen Pool des SQL Server-Daten mit Transact-SQL](tutorial-data-pool-ingest-sql.md)
+- [Tutorial: Erfassen von Daten in einen Pool des SQL Server-Daten mit Spark-Aufträgen](tutorial-data-pool-ingest-spark.md)
+
+Notebooks:
+
+- [Tutorial: Führen Sie ein Beispiel-Notebook auf eine SQL Server-2019 big Data-cluster](tutorial-notebook-spark.md)
