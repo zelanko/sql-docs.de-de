@@ -5,17 +5,17 @@ description: Dieser Artikel beschreibt die neuesten Updates und bekannte Problem
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2502396dba4b88a9750aa3bfc62c4153711e1426
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: c7c80b69ac7120f2cd88500d3c276a313ef34390
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510337"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618307"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Anmerkungen zu dieser Version für big Data-Cluster in SQL Server
 
@@ -31,8 +31,11 @@ Die folgenden Abschnitte beschreiben die neuen Features und bekannten Probleme f
 
 | Neues Feature oder aktualisieren | Details |
 |:---|:---|
-| Anleitung zur GPU unterstützt für die Ausführung von deep learning mit TensorFlow in Spark. | [Bereitstellen eines big Data-Clusters mit GPU-Unterstützung, und führen Sie TensorFlow](spark-gpu-tensorflow.md) |
+| Anleitung zur GPU unterstützt für die Ausführung von deep learning mit TensorFlow in Spark. | [Bereitstellen einen big Data-Cluster mit GPU-Unterstützung, und führen Sie TensorFlow](spark-gpu-tensorflow.md). |
 | **SqlDataPool** und **SqlStoragePool** Datenquellen werden nicht mehr standardmäßig erstellt. | Erstellen Sie diese manuell nach Bedarf. Finden Sie unter den [bekannte Probleme](#externaltablesctp24). |
+| `INSERT INTO SELECT` Unterstützung für den Datenpool. | Ein Beispiel finden Sie unter [Lernprogramm: Erfassen von Daten in einen Pool des SQL Server-Daten mit Transact-SQL](tutorial-data-pool-ingest-sql.md). |
+| `FORCE SCALEOUTEXECUTION` und `DISABLE SCALEOUTEXECUTION` Option. | Erzwingt, dass aktiviert oder deaktiviert die Verwendung des Pools für Compute in externen Tabellen Abfragen. Beispiel: `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen. |
+| Aktualisierte Empfehlungen für die AKS-Bereitstellung. | Bei der Auswertung von big Data-Cluster in AKS nun empfohlen wird mit einem einzelnen Knoten der Größe **Standard_L8s**. |
 | Spark-Runtime-Upgrade für Spark 2.4. | |
 
 ### <a name="known-issues"></a>Bekannte Probleme

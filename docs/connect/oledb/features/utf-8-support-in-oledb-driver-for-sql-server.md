@@ -2,7 +2,7 @@
 title: UTF-8-Unterstützung im OLE DB-Treiber für SQL Server | Microsoft-Dokumentation
 description: UTF-8-Unterstützung im OLE DB-Treiber für SQL Server
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: v-kaywon
 ms.author: v-kaywon
-ms.openlocfilehash: f410ddf4e3843936da6f93f488f379feea863e59
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: b7f138438d522c9da1b7ef74acbaf963e17d6144
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744821"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492602"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>UTF-8-Unterstützung im OLE DB-Treiber für SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "56744821"
 
 Microsoft OLE DB-Treiber für SQL Server (Version 18.2.1) Fügt Unterstützung für die UTF-8-Codierung Server hinzu. Informationen über die SQL Server-UTF-8-Unterstützung finden Sie unter:
 - [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md)
-- [UTF-8-Unterstützung (CTP 2.2)](../../../sql-server/what-s-new-in-sql-server-ver15.md#utf-8-support-ctp-22)
+- [UTF-8-Unterstützung](../../../sql-server/what-s-new-in-sql-server-ver15.md#utf-8-support-ctp-23)
 
 ## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>Einfügen von Daten in eine UTF-8 codierte char- oder VARCHAR-Spalte
 Wenn Sie einen Puffer Eingabeparameter für das Einfügen zu erstellen, wird der Puffer mithilfe eines Arrays von beschrieben [DBBINDING-Strukturen](https://go.microsoft.com/fwlink/?linkid=2071182). Jede DBBINDING-Struktur einen einzelnen Parameter zu Puffer des Consumers zuordnet, und enthält Informationen wie z. B. Länge und Typ des Datenwerts. Für einen Puffer Eingabeparameter vom Typ char-Zeichen die *wType* von DBBINDING-Struktur sollte auf DBTYPE_STR festgelegt werden. Für einen Eingabeparameter Puffer des Typs WCHAR und die *wType* von DBBINDING-Struktur sollte auf DBTYPE_WSTR festgelegt werden.

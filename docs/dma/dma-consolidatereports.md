@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 35b90cec967f60f0adfc4d9720f3aec809006f8c
-ms.sourcegitcommit: f8fced37f3fe5c45b2b97219d378137afd68cf76
+ms.openlocfilehash: fac9636b336c2571e159c72c79d482768bf2fbe6
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58198199"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618177"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Ein Unternehmen zu bewerten und Konsolidieren von assessmentberichten mit DMA
 
@@ -72,7 +72,11 @@ Diese Inventur kann eine von zwei Formen aufweisen:
 
 ### <a name="if-using-a-csv-file"></a>Wenn Sie eine CSV-Datei verwenden.
 > [!IMPORTANT]
+>
 > Stellen Sie sicher, dass die Inventory-Datei als durch Trennzeichen getrennte Datei (CSV) gespeichert wird.
+>
+> Für Standardinstanzen müssen Sie den Namen der Instanz auf MSSQLServer festgelegt.
+>
 
 Verwendung von Csv-Datei zum Importieren der Daten sicherzustellen, dass nur zwei Spalten mit Daten per Push – **Instanzname** und **Datenbanknamen**, und dass die Spalten keine Kopfzeilen enthalten.
  

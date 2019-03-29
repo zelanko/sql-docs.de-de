@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: b89ec7cd24ed61f08cf44f934066a9b0fc619434
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 00810eb3f57fdaf8f87fc0db16744ab9e3334f70
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493553"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618147"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Schnellstart: Bereitstellen von SQL Server-big Data-Cluster in Azure Kubernetes Service (AKS)
 
@@ -78,14 +78,14 @@ Verwenden Sie die folgenden Schritte aus, um das Ausführen des Bereitstellungss
    | **Docker-Benutzername** | Der Docker-Benutzername, das Ihnen als Teil der begrenzten öffentlichen Vorschau bereitgestellt. |
    | **Docker-Kennwort** | Das Docker-Kennwort, das Ihnen als Teil der begrenzten öffentlichen Vorschau bereitgestellt. |
    | **Azure-region** | Der Azure-Region für den neuen AKS-Cluster (standardmäßig **Westus**). |
-   | **VM-Größe** | Die [VM-Größe](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) für Knoten im AKS-Cluster (standardmäßig **Standard_L4s**). |
-   | **Workerknoten** | Die Anzahl der Worker-Knoten im AKS-Cluster (standardmäßig **3**). |
+   | **VM-Größe** | Die [VM-Größe](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) für Knoten im AKS-Cluster (standardmäßig **Standard_L8s**). |
+   | **Workerknoten** | Die Anzahl der Worker-Knoten im AKS-Cluster (standardmäßig **1**). |
    | **Clustername** | Der Name des AKS-Clusters und der big Data-Cluster. Der Name Ihres Clusters muss nur alphanumerische Kleinbuchstaben und ohne Leerzeichen sein. (standardmäßig **Sqlbigdata**). |
    | **Kennwort** | Das Kennwort für den Controller, HDFS/Spark-Gateway und Masterinstanz (standardmäßig **MySQLBigData2019**). |
    | **Benutzerkonten** | Benutzername für den Controllerbenutzer (Standard: **Admin**). |
 
    > [!IMPORTANT]
-   > Der Standardwert **Standard_L4s** Größe für den Computer möglicherweise nicht verfügbar in jeder Azure-Region. Wenn Sie eine andere computergröße auswählen, stellen Sie sicher, dass die Gesamtzahl von Datenträgern, die auf die Knoten im Cluster angefügt werden, kann größer als oder gleich 24. Jeder Anspruch persistentes Volume im Cluster erfordert einen angeschlossenen Datenträger. Big Data-Cluster erfordert derzeit 24 persistentes Volume Ansprüche. Z. B. die [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) VM-Größe unterstützt 16 angefügte Datenträgern, damit die drei Knoten bedeutet, dass 48 Datenträger angefügt werden können.
+   > Der Standardwert **Standard_L8s** Größe für den Computer möglicherweise nicht verfügbar in jeder Azure-Region. Wenn Sie eine andere computergröße auswählen, stellen Sie sicher, dass die Gesamtzahl von Datenträgern, die auf die Knoten im Cluster angefügt werden, kann größer als oder gleich 24. Jeder Anspruch persistentes Volume im Cluster erfordert einen angeschlossenen Datenträger. Big Data-Cluster erfordert derzeit 24 persistentes Volume Ansprüche. Z. B. die [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) VM-Größe unterstützt 32 angefügte Datenträger aus, sodass Sie big Data-Cluster mit einem einzelnen Knoten der Größe des Computers bewerten können.
 
    > [!NOTE]
    > Die `sa` Konto ist ein Systemadministrator für die master SQL Server-Instanz, die während des Setups erstellt wird. Nach dem Erstellen der Bereitstellung der `MSSQL_SA_PASSWORD` Umgebungsvariable ist mit sichtbaren `echo $MSSQL_SA_PASSWORD` im Container Masterinstanz. Aus Sicherheitsgründen ändern Ihre `sa` Kennwort für die master-Instanz nach der Bereitstellung. Weitere Informationen finden Sie unter [Ändern des Systemadministratorkennworts](../linux/quickstart-install-connect-docker.md#sapassword).

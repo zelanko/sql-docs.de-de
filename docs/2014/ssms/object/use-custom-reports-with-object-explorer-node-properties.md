@@ -12,18 +12,16 @@ ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 09f3cf66d28a70eecd82adde490d02b521fd80ed
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5941b15c0aea7319d132e05b902133d3d8b986fa
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374402"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618227"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Verwenden benutzerdefinierter Berichte mit Eigenschaften von Objekt-Explorer-Knoten
   Benutzerdefinierte Berichte können im Kontext eines ausgewählten Objekt-Explorer-Knotens ausgeführt werden, wenn mit den benutzerdefinierten Berichten auf die Berichtsparameter dieses Knotens verwiesen wird. Dadurch kann für einen benutzerdefinierten Bericht der aktuelle Kontext verwendet werden, beispielsweise die aktuelle Datenbank oder ein Datenbank- bzw. Serverobjekt.  
   
-## <a name="report-samples"></a>Beispielberichte  
- [Beispielberichte](https://go.microsoft.com/fwlink/?LinkId=81792), einschließlich der durch [!INCLUDE[msCoName](../../includes/msconame-md.md)]erstellten Standardberichte, stehen zum Herunterladen zur Verfügung. Diese Beispiele können mithilfe von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]geändert werden.  
   
 ## <a name="object-explorer-node-report-parameters"></a>Berichtsparameter für Objekt-Explorer-Knoten  
   

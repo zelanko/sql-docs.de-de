@@ -13,7 +13,7 @@ items:
   items:
   - name: Microsoft ADO.NET for SQL Server
     href: ../connect/ado-net/microsoft-ado-net-for-sql-server.md
-  - name: 'Schritt 1: Konfigurieren der Entwicklungsumgebung für die ADO.NET-Entwicklung'
+  - name: 'Schritt 1: Konfigurieren der Entwicklungsumgebung für die ADO.NET-Entwicklung'
     href: ../connect/ado-net/step-1-configure-development-environment-for-ado-net-development.md
   - name: 'Schritt 2: Erstellen einer SQL-Datenbank für die ADO.NET-Entwicklung'
     href: ../connect/ado-net/step-2-create-a-sql-database-for-ado-net-development.md
@@ -2363,7 +2363,7 @@ items:
   - name: Erste Schritte mit dem JDBC-Treiber
     href: ../connect/jdbc/getting-started-with-the-jdbc-driver.md
     items:
-    - name: 'Schritt 1: Konfigurieren der Entwicklungsumgebung für die Java-Entwicklung'
+    - name: 'Schritt 1: Konfigurieren der Entwicklungsumgebung für die Java-Entwicklung'
       href: ../connect/jdbc/step-1-configure-development-environment-for-java-development.md
     - name: 'Schritt 2: Erstellen einer SQL-Datenbank für die Java-Entwicklung'
       href: ../connect/jdbc/step-2-create-a-sql-database-for-java-development.md
@@ -2523,6 +2523,8 @@ items:
         href: ../connect/jdbc/using-parameter-metadata.md
       - name: Verwenden von Standarddatentypen
         href: ../connect/jdbc/using-basic-data-types.md
+      - name: Verwenden des SQL_variant-Datentyps
+        href: ../connect/jdbc/using-sql-variant-datatype.md
       - name: Verwendung von räumlichen Datentypen
         href: ../connect/jdbc/use-spatial-datatypes.md
       - name: Grundlegendes zu Transaktionen
@@ -2557,7 +2559,7 @@ items:
         href: ../connect/jdbc/using-connection-pooling.md
       - name: Always Encrypted – API-Referenz für den JDBC-Treiber
         href: ../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md
-      - name: Verwenden der integrierten Kerberos-Authentifizierung für Verbindungen mit SQL Server
+      - name: Herstellen von Verbindungen mit SQL Server mit der integrierten Kerberos-Authentifizierung
         href: ../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md
       - name: Verwenden von gespeicherten Prozeduren mit einer Updatezählung
         href: ../connect/jdbc/using-a-stored-procedure-with-an-update-count.md
@@ -2617,15 +2619,18 @@ items:
         href: ../connect/jdbc/using-sql-escape-sequences.md
       - name: Verwenden von Anweisungen mit gespeicherten Prozeduren
         href: ../connect/jdbc/using-statements-with-stored-procedures.md
-      - name: Azure Key Vault-Beispielversion 6.0.0
-        href: ../connect/jdbc/azure-key-vault-sample-version-6.0.0.md
-      - name: Azure Key Vault-Beispielversion 6.2.2
-        href: ../connect/jdbc/azure-key-vault-sample-version-6.2.2.md
+      - name: Azure Key Vault-Beispiele für 7.0 und andere Versionen
+        href: ../connect/jdbc/azure-key-vault-sample-version-7.0.md
+        items:
+        - name: Azure Key Vault-Beispielversion 6.2.2
+          href: ../connect/jdbc/azure-key-vault-sample-version-6.2.2.md
+        - name: Azure Key Vault-Beispielversion 6.0.0
+          href: ../connect/jdbc/azure-key-vault-sample-version-6.0.0.md
 - name: Node.js
   items:
   - name: Node.js-Treiber für SQL Server
     href: ../connect/node-js/node-js-driver-for-sql-server.md
-  - name: 'Schritt 1:  Konfigurieren der Entwicklungsumgebung für die Node.js-Entwicklung'
+  - name: 'Schritt 1:  Konfigurieren der Entwicklungsumgebung für die Node.js-Entwicklung'
     href: ../connect/node-js/step-1-configure-development-environment-for-node-js-development.md
   - name: 'Schritt 2: Erstellen einer SQL-Datenbank für die Node.js-Entwicklung'
     href: ../connect/node-js/step-2-create-a-sql-database-for-node-js-development.md
@@ -2904,7 +2909,7 @@ items:
           - name: Grundlegende Schritte für die ODBC-Anwendung
             href: ../odbc/reference/develop-app/basic-odbc-application-steps.md
             items:
-            - name: 'Schritt 1: Herstellen einer Verbindung mit einer Datenquelle'
+            - name: 'Schritt 1: Herstellen einer Verbindung mit einer Datenquelle'
               href: ../odbc/reference/develop-app/step-1-connect-to-the-data-source.md
             - name: 'Schritt 2: Initialisieren der Anwendung'
               href: ../odbc/reference/develop-app/step-2-initialize-the-application.md
@@ -5318,7 +5323,7 @@ items:
   - name: Erste Schritte
     href: ../connect/php/getting-started-with-the-php-sql-driver.md
     items:
-    - name: 'Schritt 1: Konfigurieren der Entwicklungsumgebung für PHP-Entwicklung'
+    - name: 'Schritt 1: Konfigurieren der Entwicklungsumgebung für PHP-Entwicklung'
       href: ../connect/php/step-1-configure-development-environment-for-php-development.md
     - name: 'Schritt 2: Erstellen einer SQL-Datenbank für die PHP-Entwicklung'
       href: ../connect/php/step-2-create-a-sql-database-for-php-development.md
@@ -5598,7 +5603,7 @@ items:
   - name: Python-SQL-Treiber – pyodbc
     href: ../connect/python/pyodbc/python-sql-driver-pyodbc.md
     items:
-    - name: 'Schritt 1: Konfigurieren von Entwicklungsumgebung für pyodbc-Python'
+    - name: 'Schritt 1: Konfigurieren von Entwicklungsumgebung für pyodbc-Python'
       href: ../connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md
     - name: 'Schritt 2: Erstellen einer SQL-Datenbank für die pyodbc-Python-Entwicklung'
       href: ../connect/python/pyodbc/step-2-create-a-sql-database-for-pyodbc-python-development.md
@@ -5607,7 +5612,7 @@ items:
   - name: Python-SQL-Treiber – pymssql
     href: ../connect/python/pymssql/python-sql-driver-pymssql.md
     items:
-    - name: 'Schritt 1: Konfigurieren der Entwicklungsumgebung für die pymssql-Python-Entwicklung'
+    - name: 'Schritt 1: Konfigurieren der Entwicklungsumgebung für die pymssql-Python-Entwicklung'
       href: ../connect/python/pymssql/step-1-configure-development-environment-for-pymssql-python-development.md
     - name: 'Schritt 2: Erstellen einer SQL-Datenbank für die pymssql-Python-Entwicklung'
       href: ../connect/python/pymssql/step-2-create-a-sql-database-for-pymssql-python-development.md
@@ -5617,7 +5622,7 @@ items:
   items:
   - name: Ruby-Treiber für SQL Server
     href: ../connect/ruby/ruby-driver-for-sql-server.md
-  - name: 'Schritt 1: Konfigurieren der Entwicklungsumgebung für die Ruby-Entwicklung'
+  - name: 'Schritt 1: Konfigurieren der Entwicklungsumgebung für die Ruby-Entwicklung'
     href: ../connect/ruby/step-1-configure-development-environment-for-ruby-development.md
   - name: 'Schritt 2: Erstellen einer SQL-Datenbank für die Ruby-Entwicklung'
     href: ../connect/ruby/step-2-create-a-sql-database-for-ruby-development.md
@@ -5945,7 +5950,7 @@ items:
       - name: 'Szenario: Veröffentlichung im Internet'
         href: ../ado/guide/data/internet-publishing-scenario.md
         items:
-        - name: 'Schritt 1: Einrichten des Visual Basic-Projekts'
+        - name: 'Schritt 1: Einrichten des Visual Basic-Projekts'
           href: ../ado/guide/data/step-1-set-up-the-visual-basic-project.md
         - name: 'Schritt 2: Initialisieren des Listenfelds „Main“'
           href: ../ado/guide/data/step-2-initialize-the-main-list-box.md
@@ -6008,7 +6013,7 @@ items:
   - name: RDS-Tutorial
     href: ../ado/guide/remote-data-service/rds-tutorial.md
     items:
-    - name: 'Schritt 1: Angeben eines Serverprogramms (RDS-Tutorial)'
+    - name: 'Schritt 1: Angeben eines Serverprogramms (RDS-Tutorial)'
       href: ../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md
     - name: 'Schritt 2: Aufrufen eines Serverprogramms (RDS-Tutorial)'
       href: ../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md
@@ -7644,9 +7649,9 @@ items:
     href: ../ado/reference/ado-programmer-s-reference.md
   - name: ADO-Glossar
     href: ../ado/ado-glossary.md
-ms.openlocfilehash: 67cfc70b3bdd5744c91ace414dc04d4b9090f4d7
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: f55c9266746f452d2592d7d0ded5993ebb4fab80
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478305"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566639"

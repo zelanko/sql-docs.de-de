@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9d093983408502d391c4025e03ba0a590e8f77a
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 9330c41ccf23cdb03add4c15fc2160594c2ff7a7
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617875"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618297"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,21 +56,21 @@ sys.dm_db_index_physical_stats (
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Database_id* | NULL | 0 | STANDARDWERT  
+ *database_id* | NULL | 0 | DEFAULT  
  Ist die ID der Datenbank. *Database_id* ist **Smallint**. Gültige Eingaben sind die ID einer Datenbank, NULL, 0 oder DEFAULT. Die Standardeinstellung ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig.  
   
  Geben Sie NULL an, wenn Informationen zu allen Datenbanken in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben werden sollen. Bei Angabe von NULL für *Database_id*, müssen Sie auch angeben, NULL für *Object_id*, *Index_id*, und *Partition_number*.  
   
  Die integrierte Funktion [DB_ID](../../t-sql/functions/db-id-transact-sql.md) kann angegeben werden. Wenn DB_ID verwendet wird, ohne dass ein Datenbankname angegeben wird, muss der Kompatibilitätsgrad der aktuellen Datenbank 90 oder höher sein.  
   
- *Object_id* | NULL | 0 | STANDARDWERT  
+ *object_id* | NULL | 0 | DEFAULT  
  Die Objekt-ID der Tabelle oder Sicht mit dem Index. *object_id* ist **int**.  
   
  Gültige Eingaben sind die ID einer Tabelle und Sicht, NULL, 0 oder DEFAULT. Die Standardeinstellung ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig. Als [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], gültige Eingaben auch der Name der Service Broker-Warteschlange oder den Warteschlangennamen für die interne Tabelle enthalten. Wenn Standardparameter angewendet werden (d. h. alle Objekte, alle Indizes usw.), sind die Fragmentierungsinformationen für alle Warteschlangen im Resultset enthalten.  
   
  Geben Sie NULL an, wenn Informationen zu allen Tabellen und Sichten in der angegebenen Datenbank zurückgegeben werden sollen. Bei Angabe von NULL für *Object_id*, müssen Sie auch angeben, NULL für *Index_id* und *Partition_number*.  
   
- *Index_id* | 0 | NULL | -1 | STANDARDWERT  
+ *index_id* | 0 | NULL | -1 | DEFAULT  
  Die ID des Indexes. *Index_id* ist **Int**. Gültige Eingaben sind die ID-Nummer eines Indexes, 0, wenn *Object_id* ein Heap ist, NULL,-1 oder DEFAULT. Der Standardwert ist-1. NULL,-1 und DEFAULT sind in diesem Kontext gleichwertig.  
   
  Geben Sie NULL an, um Informationen zu allen Indizes für eine Basistabelle oder Sicht zurückgegeben werden sollen. Bei Angabe von NULL für *Index_id*, müssen Sie auch angeben, NULL für *Partition_number*.  
@@ -197,7 +197,7 @@ GO
   
 -   Verwenden Sie ALTER INDEX REBUILD (der Ersatz für DBCC DBREINDEX), um den Index im Online- oder Offlinemodus neu zu erstellen. Weitere Informationen finden Sie unter [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
- Die Fragmentierung alleine ist kein ausreichender Grund, um einen Index neu zu organisieren oder neu zu erstellen. Durch die Fragmentierung wird in erster Linie der Read-Ahead-Durchsatz von Seiten während Indexscans reduziert. Dies verursacht langsamere Antwortzeiten. Falls die Abfragearbeitsauslastung für eine fragmentierte Tabelle oder einen fragmentierten Index keine Scans enthält, weil es sich bei der Arbeitsauslastung in erster Linie um Singleton-Suchvorgänge handelt, hat das Beseitigen der Fragmentierung möglicherweise keine Auswirkungen. Weitere Informationen finden Sie in diesem [Microsoft-Website](https://go.microsoft.com/fwlink/?linkid=31012).  
+ Die Fragmentierung alleine ist kein ausreichender Grund, um einen Index neu zu organisieren oder neu zu erstellen. Durch die Fragmentierung wird in erster Linie der Read-Ahead-Durchsatz von Seiten während Indexscans reduziert. Dies verursacht langsamere Antwortzeiten. Falls die Abfragearbeitsauslastung für eine fragmentierte Tabelle oder einen fragmentierten Index keine Scans enthält, weil es sich bei der Arbeitsauslastung in erster Linie um Singleton-Suchvorgänge handelt, hat das Beseitigen der Fragmentierung möglicherweise keine Auswirkungen.
   
 > [!NOTE]  
 >  Ausführen von DBCC SHRINKFILE oder DBCC SHRINKDATABASE kann zur Fragmentierung führen, wenn ein Index während des Verkleinerungsvorgangs teilweise oder vollständig verschoben wird. Wenn ein Verkleinerungsvorgang ausgeführt werden muss, sollten Sie diesen deshalb vor dem Beseitigen der Fragmentierung vornehmen.  

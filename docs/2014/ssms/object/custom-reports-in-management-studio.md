@@ -14,12 +14,12 @@ ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3417b4905fd43734fb058d05db81f7318d87539d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e02e5f55032f7a5d4e11e1ee4c908e84a83e00f8
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354687"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618287"
 ---
 # <a name="custom-reports-in-management-studio"></a>Benutzerdefinierte Berichte in Management Studio
   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] wird von vielen Objekt-Explorer-Knoten ein Satz von Standardberichten angezeigt, die von [!INCLUDE[msCoName](../../includes/msconame-md.md)] erstellt werden. In diesen Berichten werden häufig angeforderte Serverinformationen zusammengefasst. Seit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 können in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]erstellte benutzerdefinierte Berichte von Administratoren ausgeführt werden.  
@@ -70,8 +70,7 @@ ms.locfileid: "53354687"
 > [!CAUTION]  
 >  Jede gültige [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung kann in einem Bericht eingebettet und von einem Bericht aus ausgeführt werden. Durch das Ausführen eines Berichts unter einem Benutzerkonto mit hohen Privilegien wird die problemlose Ausführung dieser eingebetteten Anweisungen ermöglicht.  
   
-## <a name="report-samples"></a>Beispielberichte  
- [Beispielberichte](https://go.microsoft.com/fwlink/?LinkId=81792), einschließlich der Standardberichte, die vom erstellten [!INCLUDE[msCoName](../../includes/msconame-md.md)], sind zum Download zur Verfügung. Diese Beispiele können mithilfe von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]geändert werden.  
+
   
 ## <a name="see-also"></a>Siehe auch  
  [Hinzufügen eines benutzerdefinierten Berichts zu Management Studio](add-a-custom-report-to-management-studio.md)   
