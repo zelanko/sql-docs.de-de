@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 0dd8b138c425adb47f0bb228848ca39361ffa87e
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: 0bef01ab6b4ecf1a9f05b1c7b40e2767aaae0db3
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618605"
+ms.locfileid: "58645352"
 ---
 # <a name="sysdmexecqueryplanstats-transact-sql"></a>sys.dm_exec_query_plan_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -80,7 +80,7 @@ Unter den folgenden Bedingungen wird eine **vereinfachte <sup>1</sup>**  Showpla
     **AND**    
 -   Die Abfrage ist recht einfach und in der Regel als Teil einer OLTP-Workload kategorisiert.
 
-<sup>1</sup> Dies bezieht sich auf einen Showplan erstellen, die nur den Stamm-Knoten-Operator (auswählen) enthält. 
+<sup>1</sup> Dies bezieht sich auf einen Showplan erstellen, die nur den Stamm-Knoten-Operator (auswählen) enthält. Für [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4 nur Dies bezieht sich auf den zwischengespeicherten Plan als dm_exec_cached_plans erhältlich.
 
 Unter den folgenden Bedingungen **wird keine Ausgabe zurückgegeben** aus **sys.dm_exec_query_plan_stats**:
 
@@ -135,5 +135,5 @@ GO
 ## <a name="see-also"></a>Siehe auch
   [Ablaufverfolgungsflags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Dynamische Verwaltungssichten in Verbindung mit Datenbank &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Dynamische Verwaltungssichten in Verbindung mit Ausführung &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 

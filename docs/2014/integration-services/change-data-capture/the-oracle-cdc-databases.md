@@ -10,12 +10,12 @@ ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 716aea984073d557e45dc30c1972b2151173fd58
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 35f07d23facba97288881d7ee3c011c368d4736a
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377118"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658394"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC-Datenbanken
   Eine Oracle CDC-Instanz wird einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank mit dem gleichen Namen auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zielinstanz zugeordnet. Diese Datenbank wird als Oracle CDC-Datenbank (oder kurz CDC-Datenbank) bezeichnet.  
@@ -73,7 +73,7 @@ ms.locfileid: "58377118"
   
 -   [cdc.xdbcdc_staged_transactions](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_staged_transactions)  
   
-###  <a name="BKMK_Change_Tables_CT"></a> Änderungstabellen (_CT)  
+###  <a name="bkmk_change_tables_ct"></a> Änderungstabellen (_CT)  
  Die Änderungstabellen werden aus den Spiegeltabellen erstellt. Sie enthalten die Änderungsdaten, die in der Oracle-Datenbank aufgezeichnet werden. Die Tabellen werden nach der folgenden Konvention benannt:  
   
  **[cdc].[\<Aufzeichnungsinstanz>_CT]**  
@@ -82,14 +82,14 @@ ms.locfileid: "58377118"
   
  In die Aufzeichnungstabellen wird von der Oracle CDC-Instanz geschrieben. Sie werden mit speziellen Tabellenwertfunktionen gelesen, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Erstellen der Aufzeichnungsinstanz generiert werden. Beispiel: `fn_cdc_get_all_changes_HR_EMPLOYEES`. Weitere Informationen zu diesen CDC-Funktionen finden Sie unter [Change Data Capture-Funktionen (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152).  
   
-###  <a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
+###  <a name="bkmk_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
  Die Tabelle **[cdc].[lsn_time_mapping]** wird von der SQL Server-CDC-Komponente generiert. Sie wird in Verbindung mit Oracle CDC anders als sonst verwendet.  
   
  Für Oracle CDC basieren die in dieser Tabelle gespeicherten LSN-Werte auf dem Oracle System Change Number (SCN)-Wert, der der Änderung zugeordnet ist. Die ersten 6 Bytes des LSN-Werts stehen für die ursprüngliche Oracle SCN-Nummer.  
   
  In den Zeitspalten (`tran_begin_time` und `tran_end_time`) wird auch bei Verwendung von Oracle CDC die UTC-Zeit der Änderung gespeichert, und nicht die Ortszeit, wie dies bei der normalen SQL Server CDC der Fall ist. Dadurch wird sichergestellt, dass sich Sommerzeitänderungen nicht auf die unter lsn_time_mapping gespeicherten Daten auswirken.  
   
-###  <a name="BKMK_cdcxdbcdc_config"></a> cdc.xdbcdc_config  
+###  <a name="bkmk_cdcxdbcdc_config"></a> cdc.xdbcdc_config  
  Diese Tabelle enthält die Konfigurationsdaten für die Oracle CDC-Instanz. Sie wird mit der CDC Designer Console aktualisiert. Diese Tabelle hat nur eine Zeile.  
   
  In der folgenden Tabelle werden die Spalten der Tabelle **cdc.xdbcdc_config** beschrieben.  
@@ -98,7 +98,7 @@ ms.locfileid: "58377118"
 |----------|-----------------|  
 |version|Hiermit wird die Version der CDC-Instanzkonfiguration verfolgt. Sie wird bei jeder Aktualisierung der Tabelle und bei jeder Hinzufügung einer neuen Aufzeichnungsinstanz oder Entfernung einer vorhandenen Aufzeichnungsinstanz aktualisiert.|  
 |connect_string|Eine Oracle-Verbindungszeichenfolge. Ein grundlegendes Beispiel ist:<br /><br /> `<server>:<port>/<instance>` (z. B. `erp.contoso.com:1521/orcl`).<br /><br /> In der Verbindungszeichenfolge kann auch ein Oracle Net-Verbindungsdeskriptor angegeben werden, z. B. `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`.<br /><br /> Wenn Sie einen Verzeichnisserver oder tnsnames verwenden, kann die Verbindungszeichenfolge der Name der Verbindung sein.<br /><br /> Weitere Informationen zu Oracle-Verbindungszeichenfolgen finden Sie unter [https://go.microsoft.com/fwlink/?LinkId=231153](https://go.microsoft.com/fwlink/?LinkId=231153). Sie erhalten dort ausführliche Informationen zu Verbindungszeichenfolgen der Oracle-Datenbank für den Oracle Instant Client, der von Oracle CDC Service verwendet wird.|  
-|use_windows_authentication|Ein boolescher Wert, der die folgenden Werte haben kann:<br /><br /> **0**: Eine Oracle-Benutzernamen und Kennwort werden für die Authentifizierung (Standard) bereitgestellt.<br /><br /> **1**: Windows-Authentifizierung wird verwendet, für die Verbindung zur Oracle-Datenbank. Sie können diese Option nur verwenden, wenn die Oracle-Datenbank für die Nutzung der Windows-Authentifizierung konfiguriert ist.|  
+|use_windows_authentication|Ein boolescher Wert, der die folgenden Werte haben kann:<br /><br /> **0**: Ein Oracle-Benutzername und dazugehöriges Kennwort werden zur Authentifizierung bereitgestellt (Standardeinstellung).<br /><br /> **1**: Zum Herstellen einer Verbindung mit der Oracle-Datenbank wird die Windows-Authentifizierung verwendet. Sie können diese Option nur verwenden, wenn die Oracle-Datenbank für die Nutzung der Windows-Authentifizierung konfiguriert ist.|  
 |username|Der Name des Oracle-Datenbankbenutzers mit Log Mining-Berechtigung. Diese Angabe ist nur obligatorisch, wenn Folgendes gilt: **use_windows_authentication = 0**.|  
 |Kennwort|Das Kennwort für den Oracle Datenbankbenutzer mit Log Mining-Berechtigung. Diese Angabe ist nur obligatorisch, wenn Folgendes gilt: **use_windows_authentication = 0**.|  
 |transaction_staging_timeout|Der Zeitraum in Sekunden, während dessen eine nicht mit Commit bestätigte Oracle-Transaktion im Arbeitsspeicher verbleibt, bevor sie in die Tabelle **cdc.xdbcdc_staged_transactions** geschrieben wird. Der Standardwert ist 120 Sekunden.|  
@@ -132,7 +132,7 @@ ms.locfileid: "58377118"
 |CDC_stop_on_breaking_schema_changes|False|-|-|False|Boolesch. **True** gibt an, dass der Vorgang beendet werden soll, wenn fehlerhafte Schemaänderungen erkannt werden.<br /><br /> **False** gibt an, dass die Spiegeltabelle und die Aufzeichnungsinstanz gelöscht werden sollen.|  
 |source_oracle_home||-|-|False|Kann auf einen bestimmten Oracle Home-Pfad oder einen Oracle Home-Namen festgelegt werden, der von der CDC-Instanz zum Herstellen einer Verbindung zu Oracle verwendet wird.|  
   
-###  <a name="BKMK_cdcxdbcdc_state"></a> cdc.xdbcdc_state  
+###  <a name="bkmk_cdcxdbcdc_state"></a> cdc.xdbcdc_state  
  Diese Tabelle enthält Informationen zum permanenten Status der Oracle CDC-Instanz. Der Aufzeichnungsstatus wird bei Wiederherstellungs- und Failoverszenarien sowie für die Systemüberwachung verwendet.  
   
  In der folgenden Tabelle werden die Spalten der Tabelle **cdc.xdbcdc_state** beschrieben.  
@@ -141,8 +141,8 @@ ms.locfileid: "58377118"
 |----------|-----------------|  
 |status|Der aktuelle Statuscode für die aktuelle Oracle CDC-Instanz. Der Status beschreibt den aktuellen Zustand für die CDC.|  
 |sub_status|Status der zweiten Ebene, der zusätzliche Informationen zum aktuellen Status liefert.|  
-|active|Ein boolescher Wert, der die folgenden Werte haben kann:<br /><br /> **0**: Der Oracle CDC-instanzprozess ist nicht aktiv.<br /><br /> **1**: Der Oracle CDC-instanzprozess ist aktiv.|  
-|Fehler|Ein boolescher Wert, der die folgenden Werte haben kann:<br /><br /> **0**: Der Oracle CDC-instanzprozess ist nicht in einem Fehlerzustand befindet.<br /><br /> **1**: Oracle CDC-Instanz ist in einem Fehlerzustand befindet.|  
+|active|Ein boolescher Wert, der die folgenden Werte haben kann:<br /><br /> **0**: Der Oracle CDC-Instanzprozess ist nicht aktiv.<br /><br /> **1**: Der Oracle CDC-Instanzprozess ist aktiv.|  
+|Fehler|Ein boolescher Wert, der die folgenden Werte haben kann:<br /><br /> **0**: Der Oracle CDC-Instanzprozess hat keinen Fehlerzustand.<br /><br /> **1**: Die Oracle CDC-Instanz hat einen Fehlerzustand.|  
 |status_message|Eine Zeichenfolge, die eine Beschreibung des Fehlers oder des Status darstellt.|  
 |timestamp|Der Zeitstempel mit der Uhrzeit (UTC), zu der der Aufzeichnungsstatus zuletzt aktualisiert wurde.|  
 |active_capture_node|Der Name des Hosts (der Host kann ein Knoten auf einem Cluster sein), auf dem momentan der Oracle CDC Service und die Oracle CDC-Instanz (auf der die Oracle-Transaktionsprotokolle verarbeitet werden) ausgeführt werden.|  
@@ -157,7 +157,7 @@ ms.locfileid: "58377118"
 |read_changes|Die Anzahl der Änderungsdatensätze, die aus dem Oracle-Quelltransaktionsprotokoll gelesen werden.|  
 |staged_transactions|Die Anzahl der momentan aktiven Transaktionen, die in der Tabelle **cdc.xdbcdc_staged_transactions** bereitgestellt werden.|  
   
-###  <a name="BKMK_cdcxdbcdc_trace"></a> cdc.xdbcdc_trace  
+###  <a name="bkmk_cdcxdbcdc_trace"></a> cdc.xdbcdc_trace  
  Diese Tabelle enthält Informationen zum Betrieb der CDC-Instanz. Zu den in dieser Tabelle gespeicherten Informationen zählen Fehlerdatensätze, wichtige Statusänderungen und Ablaufverfolgungsdatensätze. Fehlerinformationen werden auch in das Windows-Ereignisprotokoll geschrieben, um sicherzustellen, dass auf die Informationen zugegriffen werden kann, wenn die Tabelle **cdc.xcbcdc_trace** nicht verfügbar ist.  
   
  In der folgenden Tabelle werden die Spalten der Tabelle cdc.xdbcdc_trace beschrieben.  
@@ -172,7 +172,7 @@ ms.locfileid: "58377118"
 |status_message|Die Statusmeldung, die von der Statustabelle verwendet wird.|  
 |data|Zusätzliche Daten für Fälle, in denen der Fehler oder der Ablaufverfolgungsdatensatz eine Nutzlast enthält (z. B. einen beschädigten Protokolldatensatz).|  
   
-###  <a name="BKMK_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
+###  <a name="bkmk_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
  In dieser Tabelle werden Änderungsdatensätze für große Transaktionen oder Transaktionen mit langer Laufzeit gespeichert, bis der Transaktionscommit oder das Rollbackereignis aufgezeichnet wird. Der Oracle CDC Service sortiert aufgezeichnete Protokolldatensätze für jede Transaktion nach Transaktionscommit-Zeitpunkt und dann nach der chronologischen Reihenfolge. Protokolldatensätze für dieselbe Transaktion werden im Arbeitsspeicher gespeichert, bis die Transaktion endet, und dann in die Änderungszieltabelle geschrieben oder verworfen (bei einem Rollback). Da nur eine begrenzte Menge an Arbeitsspeicher vorhanden ist, werden große Transaktionen in die Tabelle **cdc.xdbcdc_staged_transactions** geschrieben, bis die Transaktion abgeschlossen ist. Transaktionen werden auch in die Stagingtabelle geschrieben, wenn die Ausführung lange dauert. Daher müssen die alten Änderungen beim Neustarten der Oracle CDC-Instanz nicht neu aus den Oracle-Transaktionsprotokollen gelesen werden.  
   
  In der folgenden Tabelle werden die Spalten der Tabelle **cdc.xdbcdc_staged_transactions** beschrieben.  
@@ -187,5 +187,3 @@ ms.locfileid: "58377118"
   
 ## <a name="see-also"></a>Siehe auch  
  [Change Data Capture Designer für Oracle von Attunity](change-data-capture-designer-for-oracle-by-attunity.md)  
-  
-  

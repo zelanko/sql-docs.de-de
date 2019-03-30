@@ -10,12 +10,12 @@ ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 823967123c459112c77fb460eb10b011895110e8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 07f438f86a22b866351a0b83ee7634338f3ad2cd
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374553"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657844"
 ---
 # <a name="install-sql-server-2014-servicing-updates"></a>Installieren von SQL Server 2014-Wartungsupdates
   Dieses Thema enthält Informationen zum Installieren von Updates für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. In diesem Abschnitt finden Sie Informationen zu den folgenden Themen:  
@@ -46,7 +46,7 @@ ms.locfileid: "53374553"
   
 ## <a name="see-also"></a>Siehe auch  
  [Installieren von SQLServer 2014 vom Installations-Assistenten &#40;Setup&#41;](install-sql-server-from-the-installation-wizard-setup.md)   
- [Hinzufügen von Funktionen zu einer Instanz von SQLServer 2014 &#40;Setup&#41;](add-features-to-an-instance-of-sql-server-setup.md)   
+ [Installieren von Updates an der Eingabeaufforderung](installing-updates-from-the-command-prompt.md) [Hinzufügen von Funktionen zu einer Instanz von SQL Server 2014 &#40;Setup&#41;](add-features-to-an-instance-of-sql-server-setup.md)   
  [Entfernen einer SQL Server 2014-Installation](repair-a-failed-sql-server-installation.md)  
   
   

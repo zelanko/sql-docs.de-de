@@ -2,17 +2,17 @@
 title: Leistung für SQL Server R Services - Ergebnisse und Ressourcen – SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4b71afb8f373eed4f49bc2cf0ea1c6086b6f121d
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 392a6da09827355e6bc9a901b0e4580e5eb72bf5
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510757"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645552"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Leistung von R Services: Ergebnisse und Ressourcen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -337,10 +337,8 @@ Viele Benutzer haben bereits erwähnt, dass es eine kleine Pause ist, wie die La
 
 Allen diesen Gründen ist keine einfache Lösung zum Beheben von diesem Zeitpunkt anfangsladevorgang da Auswirkungen auf die Leistung erheblich abhängig von der Aufgabe unterschiedlich ist. Beispielsweise wird das Zwischenspeichern für die einzelnen Zeile Bewertung in Batches durchgeführt; Daher aufeinander folgende Bewertung Operationen sind viel schneller, und weder für das Modell als auch für die R-Laufzeit wird erneut geladen. Sie können auch [nativen Bewertung](../sql-native-scoring.md) zu vermeiden, dass die R-Laufzeit vollständig geladen.
 
-Für große Modelle trainieren oder große Batches zu bewerten, kann der Aufwand im Vergleich zu der durch den Einsatz von um datenbewegungen zu vermeiden oder von streaming und die parallelverarbeitung minimal sein. Diese aktuelle Blogs und Beispiele für zusätzliche Leistung angezeigt:
+Für große Modelle trainieren oder große Batches zu bewerten, kann der Aufwand im Vergleich zu der durch den Einsatz von um datenbewegungen zu vermeiden oder von streaming und die parallelverarbeitung minimal sein. Lesen Sie diesen Blogbeitrag zusätzliche Leistung:
 
-+ [Loan Classification, die mit SQL Server 2016 R Services](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/09/27/loan-classification-using-sql-server-2016-r-services/)
-+ [Frühe kundenmeinungen mit R Services](https://blogs.msdn.microsoft.com/sqlcat/2016/06/16/early-customer-experiences-with-sql-server-r-services/)
 + [Verwenden von R zum Erkennen von Betrug an 1 Millionen Transaktionen pro Sekunde](https://blog.revolutionanalytics.com/2016/09/fraud-detection.html/)
 
 ## <a name="resources"></a>Ressourcen

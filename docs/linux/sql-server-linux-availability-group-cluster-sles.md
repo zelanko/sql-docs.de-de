@@ -11,12 +11,12 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: cab40f66976677fee78e79de2f2996653aee9446
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 72ca07a14495261d61601c4acd503790697ce6a4
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160628"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658094"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Konfigurieren Sie SLES-Cluster für SQL Server-Verfügbarkeitsgruppe
 
@@ -30,7 +30,7 @@ Weitere Informationen für die Clusterkonfiguration, Ressourcenoptionen-Agent, M
 >SQL Server Integration mit Pacemaker unter Linux ist an diesem Punkt nicht als gekoppelt als mit WSFC unter Windows. SQL Server Service unter Linux ist nicht clusterabhängig. Pacemaker steuert alle von der Orchestrierung der Clusterressourcen, einschließlich der Verfügbarkeitsgruppen-Ressource. Unter Linux sollten Sie nicht für immer auf Verfügbarkeit Gruppe Dynamic Management Views (DMVs) verlassen, die Clusterinformationen, z. B. sys. dm_hadr_cluster bereitstellen. Darüber hinaus Name des virtuellen Netzwerks ist spezifisch für die WSFC, es gibt keine Entsprechung desselben in Pacemaker. Sie können einen Listener für die Verwendung für transparente erneute Verbindung nach einem Failover weiterhin erstellen, aber müssen Sie manuell den verfügbarkeitsgruppenlistener-Namen in der DNS-Server registrieren, mit der IP-Adresse verwendet, um die virtuelle IP-Ressource (wie in den folgenden Abschnitten erläutert wird) zu erstellen.
 
 
-## <a name="roadmap"></a>Roadmap für die
+## <a name="roadmap"></a>Roadmap
 
 Das Verfahren zum Erstellen einer verfügbarkeitsgruppe für hochverfügbarkeit unterscheidet sich zwischen Linux-Servern und einem Windows Server-Failovercluster. Die folgende Liste beschreibt die allgemeinen Schritte: 
 
@@ -221,7 +221,7 @@ Ressource Ebene Umgrenzung hauptsächlich wird sichergestellt, dass es keine dat
 
 Ebene Umgrenzung Knoten wird sichergestellt, dass alle Ressourcen von ein Knoten nicht ausgeführt werden kann. Dies erfolgt durch das Zurücksetzen des Knotens, und die Implementierung dieser Pacemaker STONITH (das steht für "den anderen Knoten im Kopf dafür") aufgerufen. Pacemaker unterstützt eine Vielzahl von Geräten, z. B. eine unterbrechungsfreie bereitstellen oder die Verwaltung Netzwerkschnittstellenkarten für Server für das umgrenzen.
 
-Weitere Informationen finden Sie unter [Pacemaker-Cluster von Grund auf Neu](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [Umgrenzung und Stonith](https://clusterlabs.org/doc/crm_fencing.html) und [SUSE-HA-Dokumentation: Umgrenzung und STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
+Weitere Informationen finden Sie unter [Pacemaker-Cluster von Grund auf Neu](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/), [Umgrenzung und Stonith](https://clusterlabs.org/doc/crm_fencing.html) und [SUSE-HA-Dokumentation: Umgrenzung und STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
 
 STONITH wird zum Zeitpunkt der Initialisierung deaktiviert, wenn keine Konfiguration erkannt wird. Es kann mit dem folgenden Befehl später aktiviert werden:
 

@@ -20,12 +20,12 @@ ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 776b240f17d40c64c63648175b2c5c15a532fb48
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 8cce8a0acf2104689c1862518f9e78703a9d02f8
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294688"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658354"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtern, Gruppieren und Sortieren von Daten (Berichts-Generator und SSRS)
   In einem Bericht werden Ausdrücke zum Steuern, Organisieren und Sortieren von Berichtsdaten verwendet. Beim Erstellen von Datasets und Entwerfen des Berichtslayouts werden die Eigenschaften von Berichtselementen standardmäßig automatisch auf Ausdrücke festgelegt. Diese Einstellungen basieren auf den Datasetfeldern, Parametern und anderen Elementen, die im Berichtsdatenbereich angezeigt werden. Sie können einer Tabellen- oder Matrixzelle auch eine interaktive Sortierschaltfläche hinzufügen, um dem Benutzer das interaktive Ändern der Zeilensortierreihenfolge für Gruppen oder Zeilen innerhalb von Gruppen zu ermöglichen.  
@@ -66,10 +66,8 @@ ms.locfileid: "56294688"
   
  Sie können Parameter in Filterausdrücke einschließen, um Benutzern das Steuern der Daten in einem Bericht zu ermöglichen. Weitere Informationen finden Sie unter [Verweise auf Parametersammlungen &#40;Berichts-Generator und SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md).  
   
- Sie können einen Verweis auf das integrierte "UserID"-Feld in einen Filter einschließen, um eine Sicht für jeden Benutzer anzupassen. Weitere Informationen finden Sie unter [Integrierte globale Werte und Benutzerverweise &#40;Berichts-Generator und SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md).  
-  
- ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#BackToTop)  
-  
+ Sie können einen Verweis auf das integrierte "UserID"-Feld in einen Filter einschließen, um eine Sicht für jeden Benutzer anzupassen. Weitere Informationen finden Sie unter [Integrierte globale Werte und Benutzerverweise &#40;Berichts-Generator und SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md).
+
 ##  <a name="Grouping"></a> Gruppieren von Daten im Bericht  
  Durch Gruppen werden Daten in einem Bericht für die Anzeige oder zum Berechnen von Aggregatwerten organisiert. Kenntnisse im Definieren von Gruppen und Verwenden von Gruppenfunktionen sind für das Entwerfen präziserer Berichte hilfreich.  
   
@@ -103,16 +101,14 @@ ms.locfileid: "56294688"
 ### <a name="groups-and-scope-in-data-regions"></a>Gruppen und Bereiche in Datenbereichen  
  Geben Sie für jeden Datenbereich die gleichen Gruppierungsausdrücke an, um mehrere Sichten der Daten aus einem Dataset bereitzustellen. Sie können kategorisierte Daten z. B. zur Anzeige aller Detaildaten in einer Tabelle und zur Anzeige von Aggregaten in einem Kreisdiagramm anzeigen, um jede Kategorie in Bezug zum gesamten Dataset zu visualisieren. Weitere Informationen finden Sie unter [Verknüpfen mehrerer Datenbereiche mit einem Dataset &#40;Berichts-Generator und SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
   
- Wenn Sie einen Datenbereich in einer Zelle in einer Tabelle, Matrix oder Liste schachteln, legen Sie die Daten automatisch auf die innersten Gruppenmitgliedschaften der Zelle aus. Angenommen, Sie fügen einer Zelle, die sich in einer Zeilengruppe und in einer Spaltengruppe befindet, ein Diagramm hinzu. Die für dieses Diagramm verfügbaren Daten werden zur Laufzeit dem Bereich der innersten Zeilengruppeninstanz und innersten Spaltengruppeninstanz zugeordnet. Weitere Informationen finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)-Ausdruck dar.  
-  
- ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#BackToTop)  
-  
+ Wenn Sie einen Datenbereich in einer Zelle in einer Tabelle, Matrix oder Liste schachteln, legen Sie die Daten automatisch auf die innersten Gruppenmitgliedschaften der Zelle aus. Angenommen, Sie fügen einer Zelle, die sich in einer Zeilengruppe und in einer Spaltengruppe befindet, ein Diagramm hinzu. Die für dieses Diagramm verfügbaren Daten werden zur Laufzeit dem Bereich der innersten Zeilengruppeninstanz und innersten Spaltengruppeninstanz zugeordnet. Weitere Informationen finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+
 ##  <a name="Sorting"></a> Sortieren von Daten im Bericht  
  Wenn Sie die Sortierreihenfolge für Daten in einem Bericht steuern möchten, können Sie Daten in einer Datasetabfrage sortieren oder einen Sortierungsausdruck für einen Datenbereich oder eine Datengruppe definieren. Außerdem können Sie Tabellen und Matrizen interaktive Sortierschaltflächen hinzufügen, um es Benutzern zu ermöglichen, die Sortierreihenfolge für Zeilen zu ändern.  
   
  Alle drei Typen von Sortierungen können im gleichen Bericht kombiniert werden. Standardmäßig wird die Sortierreihenfolge durch die Reihenfolge bestimmt, in der Daten von der Datasetabfrage zurückgegeben werden. Sortierungsausdrücke werden im Datenbereich und in der Datenbereichsgruppe angewendet. Interaktive Sortierungen werden nach Sortierungsausdrücken angewendet.  
   
- Bei Ausdrücken, die Aggregatfunktionen enthalten, sind die meisten Ergebnisse nicht von der Sortierreihenfolge betroffen. Rückgabewerte für die folgenden Aggregatfunktionen, die von der Sortierreihenfolge betroffen sind: Ersten, letzten und vorherigen. Weitere Informationen finden Sie unter [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
+ Bei Ausdrücken, die Aggregatfunktionen enthalten, sind die meisten Ergebnisse nicht von der Sortierreihenfolge betroffen. Rückgabewerte für die folgenden Aggregatfunktionen sind von der Sortierreihenfolge betroffen: First, Last und Previous. Weitere Informationen finden Sie unter [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
   
 ### <a name="sorting-data-in-a-dataset-query"></a>Sortieren von Daten in einer Datasetabfrage  
  Schließen Sie Sortierreihenfolge in der Datasetabfrage ein, um diese vorzusortieren, bevor sie für einen Bericht abgerufen werden. Beim Sortieren von Daten in der Abfrage wird die Sortierung selbst von der Datenquelle und nicht vom Berichtsprozessor ausgeführt.  
@@ -168,9 +164,7 @@ FROM Production.Product
  Wenn Sie es dem Benutzer ermöglichen möchten, die Sortierreihenfolge der Berichtsdaten in einer Tabelle oder Matrix zu ändern, können Sie Spaltenheadern oder Gruppenköpfen interaktive Sortierschaltflächen hinzufügen. Benutzer können auf die Schaltfläche klicken, um die Sortierreihenfolge umzuschalten. Die interaktive Sortierung wird in Renderingformaten unterstützt, die Benutzeraktionen zulassen, z. B. HTML.  
   
  Sie fügen einem Textfeld in einer Tablix-Datenbereichszelle interaktive Sortierschaltflächen hinzu. Standardmäßig enthält jede Zelle ein Textfeld. In den Eigenschaften des Textfelds geben Sie den zu sortierenden Teil eines Tabellen- oder Matrixdatenbereichs an (die Werte der übergeordneten Gruppe, die Werte der untergeordneten Gruppe oder die Detailzeilen), außerdem das Element, nach dem die Sortierung erfolgen soll, und ob der Sortierungsausdruck auf weitere Berichtselemente angewendet werden soll, mit denen eine Peerbeziehung besteht. Wenn beispielsweise eine Tabelle und ein Diagramm, die Sichten desselben Datasets bereitstellen, in einem Rechteck eingeschlossen sind, handelt es sich bei diesen um Peerdatenbereiche. Wenn ein Benutzer die Sortierreihenfolge der Tabelle umschaltet, wird die Sortierreihenfolge des Diagramms ebenfalls umgeschaltet. Weitere Informationen finden Sie unter [Interaktive Sortierung &#40;Berichts-Generator und SSRS&#41;](interactive-sort-report-builder-and-ssrs.md).  
-  
- ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#BackToTop)  
-  
+
 ##  <a name="HowTo"></a> Themen zur Vorgehensweise  
  [Sichtbarhalten von Kopfzeilen beim Durchführen eines Bildlaufs durch einen Bericht &#40;Berichts-Generator und SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
@@ -218,5 +212,3 @@ FROM Production.Product
  [Sparklines und Datenbalken (Berichts-Generator und SSRS)](sparklines-and-data-bars-report-builder-and-ssrs.md)   
  [Messgeräte &#40;Berichts-Generator und SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [Indikatoren &#40;Berichts-Generator und SSRS&#41;](indicators-report-builder-and-ssrs.md)  
-  
-  

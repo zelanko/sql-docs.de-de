@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 85ea90343ebf1cac9ba04a4b9252a6dd9fb748bf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b93e48c20645da68ed53d98775a4cc57760abc77
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533069"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658405"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>SQL Server-Verfügbarkeitsgrundlagen für Linux-Bereitstellungen
 
@@ -58,7 +58,7 @@ Dieser Abschnitt enthält Aufgaben, die für alle Linux-basierten gelten [!INCLU
 Kopieren von Dateien von einem Server in eine andere ist eine Aufgabe, die alle mit [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] sollte unter Linux möglich sein. Diese Aufgabe ist sehr wichtig für die AG-Konfigurationen.
 
 Dinge wie Berechtigungsprobleme können sowohl für Linux als auch auf Windows-basierten Installationen vorhanden sein. Allerdings mit der Vorgehensweise beim Kopieren von Server zu Server für Windows vertraut sind möglicherweise nicht vertraut sind, mit der Vorgehensweise unter Linux. Eine gängige Methode ist, verwenden Sie das Befehlszeile-Hilfsprogramm `scp`, das steht für das sichere kopieren. Hinter den Kulissen `scp` OpenSSH verwendet. SSH ist die Abkürzung für secure Shell. OpenSSH selbst kann je nach Linux-Distribution nicht installiert werden. Wenn sie nicht der Fall ist, muss OpenSSH zuerst installiert werden. Weitere Informationen zum Konfigurieren von OpenSSH finden Sie die Informationen unter den folgenden Links für jede Verteilung:
--   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/ch-OpenSSH.html)
+-   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
 -   [SUSE Linux Enterprise Server (SLES)](https://en.opensuse.org/SDB:Configure_openSSH)
 -   [Ubuntu](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
 
@@ -86,7 +86,7 @@ Schließlich ist die Verwendung einer Dateifreigabe im Netzwerk-System (NFS) ein
 
 | Portnummer | Typ     | Description                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
-| 111         | TCP/UDP  | NFS- `rpcbind/sunrpc`                                                                                                    |
+| 111         | TCP/UDP  | NFS - `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba (sofern verwendet) - Endpunkt-Mapper                                                                                          |
 | 137         | UDP      | Samba (sofern verwendet) - NetBIOS-Namensdienst                                                                                      |
 | 138         | UDP      | Samba (sofern verwendet) - NetBIOS-Datagramm                                                                                          |
@@ -117,7 +117,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 ```
 
 **Dokumentation der Firewall:**
--   [RHEL](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
+-   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>Installieren Sie [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] -Pakete für Verfügbarkeit
@@ -200,7 +200,7 @@ Die `corosync.conf` Datei enthält die Konfiguration des Clusters. Befindet sich
 #### <a name="cluster-log-location"></a>Cluster-Protokollspeicherort
 Protokollspeicherorte für Pacemaker-Cluster unterscheiden sich je nach der Verteilung.
 -   RHEL und SLES- `/var/log/cluster/corosync.log`
--   Ubuntu: `/var/log/corosync/corosync.log`
+-   Ubuntu - `/var/log/corosync/corosync.log`
 
 Um den Standardspeicherort für die Protokollierung zu ändern, ändern `corosync.conf`.
 

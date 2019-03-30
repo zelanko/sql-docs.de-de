@@ -10,12 +10,12 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8ba3763c9ccf28286c61e87f4105c3d3293351dd
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 6470cd60eb3b5491b8941685dcae00a49b4e967c
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371052"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658338"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>Installieren von SQL Server 2014 mit SysPrep
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep können Sie über das Installationscenter zugreifen. Die Seite **Erweitert** des **Installationscenters** enthält zwei Optionen - **Vorbereiten eines Images von einer eigenständigen Instanz von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** und **Abschließen eines Images von einer vorbereiteten eigenständigen Instanz von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. In den Abschnitten zum [Vorbereiten](#prepare) und [Abschließen](#complete) wird der Installationsvorgang detailliert beschrieben. Weitere Informationen finden Sie unter [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md).  
@@ -48,9 +48,9 @@ ms.locfileid: "53371052"
   
 -   [Entfernen von Funktionen aus einer vorbereiteten Instanz von SQL Server](#RemoveFeatures)  
   
--   [Deinstallieren einer vorbereiteten Instanz](install-sql-server-using-sysprep.md#uninstall)  
+-   [Deinstallieren einer vorbereiteten Instanz](install-sql-server-using-sysprep.md#Uninstall)  
   
--   [Ändern oder Deinstallieren einer abgeschlossenen Instanz von SQL Server](install-sql-server-using-sysprep.md#bk_modifying_uninstalling)  
+-   [Ändern oder Deinstallieren einer abgeschlossenen Instanz von SQL Server](install-sql-server-using-sysprep.md#bk_Modifying_Uninstalling)  
   
 ##  <a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep  
  Ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]unterstützt SysPrep gruppierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen in Befehlszeileninstallationen. Weitere Informationen finden Sie unter [Erläuterungen zu SysPrep](https://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx).  
@@ -69,7 +69,7 @@ ms.locfileid: "53371052"
   
 3.  Erstellen Sie den Windows-Failovercluster.  
   
-4.  Führen Sie setup.exe`/ACTION=PrepareFailoverCluster` mit  für alle Knoten aus. Zum Beispiel:  
+4.  Führen Sie setup.exe mit `/ACTION=PrepareFailoverCluster` für alle Knoten aus. Zum Beispiel:  
   
     ```  
     setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
@@ -77,7 +77,7 @@ ms.locfileid: "53371052"
   
 #### <a name="complete-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>Abschließen eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusters (unbeaufsichtigt)  
   
-1.  Führen Sie setup.exe`/ACTION=CompleteFailoverCluster` mit  für den Knoten aus, der Besitzer der verfügbaren Speichergruppe ist:  
+1.  Führen Sie setup.exe mit `/ACTION=CompleteFailoverCluster` für den Knoten aus, der Besitzer der verfügbaren Speichergruppe ist:  
   
     ```  
     setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName=<InstanceName>  /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'>:" /FAILOVERCLUSTERNETWORKNAME="<Insert FOI Network Name>" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;Cluster Network;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="MSSQLSERVER" /INSTALLSQLDATADIR="<Drive>:\<Path>\MSSQLSERVER" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSYSADMINACCOUNTS="<DomainName\UserName>"  
@@ -89,7 +89,7 @@ ms.locfileid: "53371052"
   
 2.  Treten Sie dem Windows-Failovercluster bei.  
   
-3.  Führen Sie setup.exe`/ACTION=AddNode` mit  für alle Knoten aus:  
+3.  Führen Sie setup.exe mit `/ACTION=AddNode` für alle Knoten aus:  
   
     ```  
     setup.exe /q /ACTION=AddNode /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
@@ -325,5 +325,3 @@ ms.locfileid: "53371052"
 ## <a name="see-also"></a>Siehe auch  
  [Was ist Windows SysPrep?](https://go.microsoft.com/fwlink/?LinkId=143546)   
  [Wie funktioniert Windows SysPrep?](https://go.microsoft.com/fwlink/?LinkId=143547)  
-  
-  

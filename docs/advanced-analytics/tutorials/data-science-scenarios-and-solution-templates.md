@@ -2,17 +2,17 @@
 title: Szenarios für Data Science und Lösungsvorlagen – SQL Server-Machine Learning
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: c40d5d60d43739ccfa6fa326ba0ca1c2688543a6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 7511e630d88e23faa1f0141529e7425c3da882f1
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509847"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645492"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Szenarios für Data Science und Lösungsvorlagen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,8 +24,6 @@ Jede Lösung enthält Beispieldaten, R-Code oder Python-Code und SQL gespeichert
 > [!TIP]
 > 
 > Die meisten der Vorlagen gibt es mehrere Versionen unterstützen sowohl für lokale und cloud-Plattformen für Machine Learning. Beispielsweise können Sie die Projektmappe, die mit nur SQL Server erstellen, oder Sie können die Lösung in Microsoft R Server oder in Azure Machine Learning erstellen.
-
-+ Weitere Informationen und Updates finden Sie unter dieser Ankündigung: [Interessante neue Vorlagen in Azure ML](https://blogs.technet.microsoft.com/machinelearning/2015/04/09/exciting-new-templates-in-azure-ml/)
 
 + Für den Download und installationsanweisungen finden Sie unter [Gewusst wie: Verwenden Sie die Vorlagen](#bkmk_HowTo).
 
@@ -67,8 +65,6 @@ Jede Lösung enthält Beispieldaten, R-Code oder Python-Code und SQL gespeichert
 [Vorlage zur vorbeugenden Wartung (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/README.md)
 
 **Was:** Vorbeugende Wartung zielt darauf ab, erhöhen Sie die Effizienz von Wartungstasks, indem der Vergangenheit aufgetretene Fehler gesammelt, und verwenden diese Informationen, um vorherzusagen, wann oder wo bei einem Gerät möglicherweise Fehler auftreten. Die Möglichkeit Veraltung von Geräten vorherzusagen, ist besonders nützlich für Anwendungen, die auf verteilten Daten oder Sensoren basieren. Diese Methode kann auch zum Überwachen oder Vorhersagen Fehler in IoT (Internet of Things)-Geräte angewendet werden.
-
-Finden Sie unter dieser Ankündigung Weitere Informationen: [Neue Vorlage zur vorbeugenden Wartung](https://blogs.technet.microsoft.com/machinelearning/2015/04/09/exciting-new-templates-in-azure-ml/)
 
 **So geht's:** Diese Lösung konzentriert sich auf die Beantwortung der Frage "Wann wird ein in Betrieb genommener Computer einen Fehler?" Die Eingabedaten stellen simulierte Sensormessungen für Flugzeugtriebwerke dar. Daten aus der Überwachung der Engine aktuellen betriebsbedingungen, z. B. die aktuelle Arbeitszyklus, Einstellungen und sensormessungen, werden zum Erstellen von drei Typen von Vorhersagemodellen verwendet:
 

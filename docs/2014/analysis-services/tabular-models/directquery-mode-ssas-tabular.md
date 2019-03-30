@@ -13,12 +13,12 @@ ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e092962430895f5398560cdd8f758e24477c2388
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9226a15351e8c6fcc938543d04fc95b0237f702b
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511520"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657974"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>DirectQuery-Modus (SSAS – tabellarisch)
   Analysis Services können Sie die Daten abrufen und Erstellen von Berichten aus einem tabellarischen Modell durch das Abrufen von Daten und Aggregate direkt aus einem relationalen Datenbanksystem mithilfe *DirectQuery-Modus*. In diesem Thema werden die Unterschiede zwischen standardmäßigen Tabellenmodellen erläutert, die sich nur in Arbeitsspeicher- und Tabellenmodellen befinden, die eine relationale Datenquelle abfragen können. Zudem wird erklärt, wie Sie Modelle für die Verwendung im DirectQuery-Modus entwerfen und bereitstellen können.  
@@ -29,7 +29,7 @@ ms.locfileid: "52511520"
   
 -   [Erstellen von Modellen zur Verwendung mit DirectQuery-Modus](#bkmk_Design)  
   
-    -   [Datenquellen für DirectQuery-Modelle](directquery-mode-ssas-tabular.md#bkmk_datasources)  
+    -   [Datenquellen für DirectQuery-Modelle](directquery-mode-ssas-tabular.md#bkmk_DataSources)  
   
     -   [Validierungs- und Entwurfsbeschränkungen für den DirectQuery-Modus](#bkmk_Validation)  
   
@@ -71,7 +71,7 @@ ms.locfileid: "52511520"
   
  Wenn Sie diese Schritte ausführen, konfiguriert der Modell-Designer die Arbeitsbereichsdatenbank automatisch so, dass sie in einem Hybridmodus ausgeführt wird, in dem weiterhin mit den zwischengespeicherten Daten gearbeitet werden kann. Der Modell-Designer benachrichtigt Sie auch über Funktionen im Modell, die mit dem DirectQuery-Modus nicht kompatibel sind. Die folgende Liste fasst die Hauptanforderungen zusammen, die zu berücksichtigen sind:  
   
--   **Datenquellen:** DirectQuery-Modelle können nur Daten aus einer einzelnen SQL Server-Datenquelle verwenden. Wenn der DirectQuery-Modus für ein Modell aktiviert wurde, können Sie im Modell-Designer keine anderen Datentypen verwenden, einschließlich durch Kopie-/Einfügevorgänge hinzugefügter Tabellen. Alle anderen Importoptionen werden deaktiviert. Alle in einer Abfrage enthaltenen Tabellen müssen Teil der gleichen SQL Server-Datenquelle sein. Finden Sie unter [Datenquellen für DirectQuery-Modelle](directquery-mode-ssas-tabular.md#bkmk_datasources)für Weitere Informationen.  
+-   **Datenquellen:** DirectQuery-Modelle können nur Daten aus einer einzelnen SQL Server-Datenquelle verwenden. Wenn der DirectQuery-Modus für ein Modell aktiviert wurde, können Sie im Modell-Designer keine anderen Datentypen verwenden, einschließlich durch Kopie-/Einfügevorgänge hinzugefügter Tabellen. Alle anderen Importoptionen werden deaktiviert. Alle in einer Abfrage enthaltenen Tabellen müssen Teil der gleichen SQL Server-Datenquelle sein. Finden Sie unter [Datenquellen für DirectQuery-Modelle](directquery-mode-ssas-tabular.md#bkmk_DataSources)für Weitere Informationen.  
   
 -   **Unterstützung für berechnete Spalten:** Berechnete Spalten werden für DirectQuery-Modelle nicht unterstützt. Sie können jedoch Measures und KPIs erstellen, die für Datensätze verwendet werden können. Finden Sie im Abschnitt [Überprüfung](#bkmk_Validation) für Weitere Informationen.  
   
@@ -158,9 +158,9 @@ ms.locfileid: "52511520"
   
 |Eigenschaftenname|Description|  
 |-------------------|-----------------|  
-|**DirectQueryMode-Eigenschaft**|Diese Eigenschaft ermöglicht die Verwendung des DirectQuery-Modus im Modell-Designer. Sie müssen diese Eigenschaft auf `On` festlegen, um eine der anderen DirectQuery-Eigenschaften zu ändern.<br /><br /> Weitere Informationen finden Sie unter [DirectQuery-Entwurfsmodus aktivieren &#40;SSAS – tabellarisch&#41;](enable-directquery-mode-in-ssdt.md).|  
+|**DirectQueryMode property**|Diese Eigenschaft ermöglicht die Verwendung des DirectQuery-Modus im Modell-Designer. Sie müssen diese Eigenschaft auf `On` festlegen, um eine der anderen DirectQuery-Eigenschaften zu ändern.<br /><br /> Weitere Informationen finden Sie unter [DirectQuery-Entwurfsmodus aktivieren &#40;SSAS – tabellarisch&#41;](enable-directquery-mode-in-ssdt.md).|  
 |**QueryMode-Eigenschaft**|Diese Eigenschaft gibt die Standardabfragemethode für ein DirectQuery-Modell an. Diese Eigenschaft wird im Modell-Designer festgelegt, wenn das Modell bereitgestellt wird. Eine spätere Überschreibung ist jedoch möglich. Die Eigenschaft verfügt über die folgenden Werte:<br /><br /> **DirectQuery** -diese Einstellung gibt an, alle Abfragen für das Modell, nur die relationale Datenquelle verwendet werden soll.<br /><br /> **DirectQuery mit InMemory** – Diese Einstellung gibt an, dass Abfragen standardmäßig mit der relationalen Quelle beantwortet werden sollten, sofern in der Verbindungszeichenfolge vom Client nichts Gegenteiliges angegeben wurde.<br /><br /> **InMemory** – Diese Einstellung gibt an, dass Abfragen nur mithilfe des Caches beantwortet werden sollten.<br /><br /> **InMemory mit DirectQuery** – Diese Einstellung gibt an, dass standardmäßig für Abfragen der Cache verwendet wird, sofern in der Verbindungszeichenfolge vom Client nichts Gegenteiliges angegeben wurde.<br /><br /> <br /><br /> Weitere Informationen finden Sie unter [Festlegen oder Ändern der bevorzugten Verbindungsmethode für DirectQuery](../set-or-change-the-preferred-connection-method-for-directquery.md).|  
-|**DirectQueryMode-Eigenschaft**|Nachdem das Modell bereitgestellt wurde, können Sie die bevorzugte Abfragedatenquelle für ein DirectQuery-Modell durch Ändern dieser Eigenschaft in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ändern.<br /><br /> Ebenso wie die vorherige Eigenschaft gibt diese Eigenschaft die Standarddatenquelle für das Modell an. Sie besitzt die folgenden Werte:<br /><br /> **InMemory**: Für Abfragen kann nur der Cache verwendet werden.<br /><br /> **DirectQuerywithInMemory**: Bei Abfragen wird standardmäßig die relationale Datenquelle verwendet, sofern in der Verbindungszeichenfolge vom Client nichts Gegenteiliges angegeben wurde.<br /><br /> **InMemorywithDirectQuery**: Für Abfragen wird standardmäßig der Cache verwendet, sofern in der Verbindungszeichenfolge vom Client nichts Gegenteiliges angegeben wurde.<br /><br /> (**DirectQuery**: Für Abfragen wird nur die relationale Datenquelle verwendet.<br /><br /> <br /><br /> Weitere Informationen finden Sie unter [Festlegen oder Ändern der bevorzugten Verbindungsmethode für DirectQuery](../set-or-change-the-preferred-connection-method-for-directquery.md).|  
+|**DirectQueryMode property**|Nachdem das Modell bereitgestellt wurde, können Sie die bevorzugte Abfragedatenquelle für ein DirectQuery-Modell durch Ändern dieser Eigenschaft in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ändern.<br /><br /> Ebenso wie die vorherige Eigenschaft gibt diese Eigenschaft die Standarddatenquelle für das Modell an. Sie besitzt die folgenden Werte:<br /><br /> **InMemory**: Für Abfragen kann nur der Cache verwendet werden.<br /><br /> **DirectQuerywithInMemory**: Bei Abfragen wird standardmäßig die relationale Datenquelle verwendet, sofern in der Verbindungszeichenfolge vom Client nichts Gegenteiliges angegeben wurde.<br /><br /> **InMemorywithDirectQuery**: Für Abfragen wird standardmäßig der Cache verwendet, sofern in der Verbindungszeichenfolge vom Client nichts Gegenteiliges angegeben wurde.<br /><br /> (**DirectQuery**: Für Abfragen wird nur die relationale Datenquelle verwendet.<br /><br /> <br /><br /> Weitere Informationen finden Sie unter [Festlegen oder Ändern der bevorzugten Verbindungsmethode für DirectQuery](../set-or-change-the-preferred-connection-method-for-directquery.md).|  
 |**Eigenschaft "identitätswechseleinstellungen"**|Mit dieser Eigenschaft werden die Anmeldeinformationen definiert, die zum Herstellen einer Verbindung mit der SQL Server-Datenquelle zur Abfragezeit verwendet werden. Sie können diese Eigenschaft im Modell-Designer festlegen und den Wert später nach der Bereitstellung des Modells ändern.<br /><br /> Diese Anmeldeinformationen werden nur zum Beantworten von Abfragen des relationalen Datenspeichers verwendet. Sie sind nicht mit den Anmeldeinformationen für die Verarbeitung des Caches eines Hybridmodells identisch.<br /><br /> Identitätswechsel kann nicht verwendet werden, wenn das Modell nur innerhalb des Arbeitsspeichers verwendet wird. Die Einstellung `ImpersonateCurrentUser` ist ungültig, sofern das Modell nicht den DirectQuery-Modus verwendet.|  
   
  Wenn das Modell Partitionen enthält, müssen Sie zudem eine Partition auswählen, die im DirectQuery-Modus als Quelle für Abfragen verwendet werden soll. Weitere Informationen finden Sie unter [Partitionen und DirectQuery-Modus &#40;SSAS – tabellarisch&#41;](define-partitions-in-directquery-models-ssas-tabular.md).  
@@ -182,5 +182,3 @@ ms.locfileid: "52511520"
  [Partitionen &#40;SSAS – tabellarisch&#41;](partitions-ssas-tabular.md)   
  [Tabellenmodellprojekte &#40;SSAS – tabellarisch&#41;](tabular-model-projects-ssas-tabular.md)   
  [Analysieren in Excel &#40;SSAS – tabellarisch&#41;](analyze-in-excel-ssas-tabular.md)  
-  
-  

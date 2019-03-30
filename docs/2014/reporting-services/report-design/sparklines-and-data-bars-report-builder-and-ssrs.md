@@ -14,19 +14,19 @@ ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: dc26141bc33a991116f8bdca1316b4efe529dcfa
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 98e98c3908735d53777ed425b26c2f229c830f92
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293658"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658044"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>Sparklines und Datenbalken (Berichts-Generator und SSRS)
   Sparklines und Datenbalken sind einfache, kleine Diagramme, die zahlreiche Informationen auf wenig Raum vermitteln und häufig in den Fließtext eingebunden sind. Sparklines und Datenbalken werden oft in Tabellen und Matrizen verwendet. Sparklines bzw. Datenbalken sind am wirkungsvollsten, wenn sie in ihrer Gesamtheit übereinander betrachtet und schnell verglichen werden können, nicht wenn sie einzeln angezeigt werden. Auf diese Weise können schnell Ausreißer, d. h. Zeilen, deren Verhalten von dem der anderen Zeilen abweicht, ermittelt werden. Obwohl sie klein sind, stellt jede Sparkline häufig mehrere Datenpunkte dar, oft in einem Zeitverlauf. Datenbalken können mehrere Datenpunkte darstellen, stehen in der Regel jedoch nur für einen Datenpunkt. Normalerweise stellt jede Sparkline eine einzelne Reihe dar. Einer Detailgruppe in einer Tabelle können keine Sparklines hinzugefügt werden. Da Sparklines aggregierte Daten darstellen, müssen sie in eine Zelle eingefügt werden, die einer Gruppe zugeordnet ist. Sparklines und Datenbalken verfügen über die gleichen grundlegenden Diagrammelemente wie Kategorien, Reihen und Werte, weisen aber keine Legenden, Achsenlinien, Bezeichnungen oder Teilstriche auf.  
   
  ![RS_Sparkline-Beispiel](../media/rs-sparklineexample.gif "rs_SparklineExample")  
   
- Kurze Anweisungen zu Sparklines finden Sie unter [Lernprogramm: Hinzufügen einer Sparkline zum Bericht &#40;Berichts-Generator&#41;](../tutorial-add-a-sparkline-to-your-report-report-builder.md) die Videos und [wie: Erstellen einer Sparkline in einer Tabelle](https://go.microsoft.com/fwlink/?LinkId=197092) und [Sparklines, Balkendiagramme und Indikatoren im Berichts-Generator](https://technet.microsoft.com/bi/video/ff877165) .  
+ Kurze Anweisungen zu Sparklines finden Sie unter [Lernprogramm: Hinzufügen einer Sparkline zum Bericht &#40;Berichts-Generator&#41;](../tutorial-add-a-sparkline-to-your-report-report-builder.md) die Videos und [wie: Erstellen einer Sparkline in einer Tabelle](https://go.microsoft.com/fwlink/?LinkId=197092) und Sparklines[, Balkendiagramme und Indikatoren im Berichts-Generator](https://technet.microsoft.com/bi/video/ff877165).  
   
 > [!NOTE]  
 >  Sparklines und Datenbalken können mit ihrer übergeordneten Tabelle, Matrix oder Liste getrennt von einem Bericht als Berichtsteil veröffentlicht werden. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -59,9 +59,7 @@ ms.locfileid: "56293658"
 -   [Balkendiagramme &#40;Berichts-Generator und SSRS&#41;](bar-charts-report-builder-and-ssrs.md) Basis-, gestapelte Balkendiagramme und gestapelte Balkendiagramme (100%).  
   
 -   [Säulendiagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md) Basis-, gestapelte Säulendiagramme und gestapelte Säulendiagramme (100 %). Säulendiagramme können entweder Sparklines oder Datenbalken sein.  
-  
- ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#BackToTop)  
-  
+
 ##  <a name="AlignDatainTableMatrix"></a> Ausrichten von Sparklinedaten in einer Tabelle oder einer Matrix  
  Wenn Sie eine Sparkline in eine Tabelle oder eine Matrix einfügen, ist es normalerweise wichtig, dass die Datenpunkte in den einzelnen Sparklines mit den Datenpunkten der anderen Sparklines in dieser Spalte übereinstimmen. Andernfalls ist es schwierig, die Daten in den verschiedenen Zeilen zu vergleichen. Wenn Sie z. B. die Umsatzdaten verschiedener Vertriebsmitarbeiter im Unternehmen nach Monat vergleichen, müssen die Monate übereinstimmen. Wenn ein Mitarbeiter im Monat April abwesend war, gib es für diesen Mitarbeiter für diesen Monat keine Daten. Für diesen Monat sollte daher eine Lücke angezeigt werden, und die Daten für die folgenden Monate sollten an den Daten der anderen Mitarbeiter ausgerichtet sein. Sie erreichen dies durch die Ausrichtung der horizontalen Achse. Weitere Informationen finden Sie im Abschnitt über Sparklines unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen (Berichts-Generator und SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md) und [Ausrichten von Diagrammdaten in einer Tabelle oder einer Matrix (Berichts-Generator und SSRS)](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md).  
   
@@ -70,9 +68,7 @@ ms.locfileid: "56293658"
  ![RS_SparklineDaten ausrichten](../media/rs-sparklinealigndata.gif "rs_SparklineAlignData")  
   
  In diesem Bild wird das Säulendiagramm für die täglichen Verkäufe jedes Mitarbeiters dargestellt. Beachten Sie, dass Tage, an denen ein Mitarbeiter keine Verkäufe getätigt hat, leer gelassen werden und die nachfolgenden Tage ausgerichtet werden. Dies ist ein Beispiel für die horizontale Ausrichtung. Beachten Sie außerdem, dass für einige Mitarbeiter jeder Balken kurz ist und kein Balken den oberen Rand der Zelle erreicht. Dies ist ein Beispiel für die vertikale Ausrichtung. Ohne diese Ausrichtung würden sich die kurzen Balken in Zeilen ohne hohe Balken bis an den oberen Rand der Zelle erstrecken.  
-  
- ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#BackToTop)  
-  
+
 ##  <a name="UnderstandScope"></a> Grundlegendes zu den für eine Sparkline oder einen Datenbalken angegebenen Daten  
  Wenn Sie einer Tabelle oder einer Matrix eine Sparkline oder einen Datenbalken hinzufügen, wird dies als *schachteln* eines Datenbereichs in einem anderen bezeichnet. Schachteln bedeutet, dass die für eine Sparkline oder einen Datenbalken bereitgestellten Daten von dem Dataset gesteuert werden, auf dem die Tabelle oder Matrix basiert, sowie durch die Position in der Tabelle oder Matrix. Weitere Informationen finden Sie unter [Geschachtelte Datenbereiche &#40;Berichts-Generator und SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md).  
   
@@ -81,9 +77,7 @@ ms.locfileid: "56293658"
   
 > [!NOTE]  
 >  Sie können ein Volldiagramm nicht durch einen einfachen Klick in eine Sparkline oder einen Datenbalken konvertieren. Sie können jedoch eine Sparkline oder einen Datenbalken aus einem Volldiagramm erstellen, indem Sie alle Diagrammelemente löschen, die nicht Teil von Sparklines und Datenbalken sind.  
-  
- ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#BackToTop)  
-  
+
 ##  <a name="HowTo"></a> Themen zur Vorgehensweise  
  [Hinzufügen von Sparklines und Datenbalken &#40;Berichts-Generator und SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
@@ -115,5 +109,3 @@ ms.locfileid: "56293658"
  [Tutorial: Hinzufügen einer Sparkline zum Bericht &#40;Berichts-Generator&#41;](../tutorial-add-a-sparkline-to-your-report-report-builder.md)   
  [Sparklines, Balkendiagramme und Indikatoren im Berichts-Generator (Video)](https://technet.microsoft.com/bi/video/ff877165)   
  [Vorgehensweise: Erstellen einer Sparkline in einer Tabelle (Video)](https://go.microsoft.com/fwlink/?LinkId=197092)  
-  
-  

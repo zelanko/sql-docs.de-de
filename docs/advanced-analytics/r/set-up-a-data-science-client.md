@@ -3,17 +3,17 @@ title: 'Richten Sie eine Data Science-Client für R-Entwicklungstools: SQL Serve
 description: Installieren Sie die lokale R-Bibliotheken und Tools auf einer entwicklungsworkstation für Remoteverbindungen zur SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/17/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 12fefddcc01caeb9705c823a4e7283169dda1cc3
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: b46ce112af08fca4c8986be51ba11a15d277fb4f
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510437"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645532"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>Richten Sie eine Data Science-Client für die Entwicklung von R auf SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,9 +27,6 @@ Erfahren Sie in diesem Artikel, wie ein R-Clientarbeitsstation Entwicklung so ko
 ![Client / Server-Komponenten](media/sqlmls-r-client-revo.png "lokal und remote-R-Sitzungen und Bibliotheken")
 
 Um die Installation zu überprüfen, können Sie integrierte **RGUI** Tools wie in diesem Artikel beschriebenen oder [verknüpfen Sie die Bibliotheken](#install-ide) RStudio oder alle eine andere IDE, die Sie normalerweise verwenden.
-
-> [!Tip]
-> Eine Videodemo diesen Übungen Bezug finden Sie unter [führen Sie R- und Python Remote in SQL Server über Jupyter-Notebooks](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/).
 
 > [!Note]
 > Eine Alternative zur Installation des Client-Bibliothek ist die Verwendung einer [eigenständiger Server](../install/sql-machine-learning-standalone-windows-install.md) als rich-Clients, die für die Arbeit für umfangreichere Szenario einige Kunden bevorzugen. Ein eigenständiger Server wird von SQL Server vollständig entkoppelt, aber da sie die gleichen R-Bibliotheken verfügt, können Sie sie als Client für SQL Server in-Database-Analyse. Außerdem können Sie sie für nicht-SQL-bezogenen arbeiten, einschließlich der Fähigkeit zum Importieren und Modellieren von Daten von anderen Data-Plattformen. Wenn Sie einen eigenständigen Server installieren, finden Sie die R-ausführbare Datei an diesem Speicherort: `C:\Program Files\Microsoft SQL Server\140\R_SERVER`. So überprüfen Sie Ihre Installation, [öffnen Sie eine R-Konsolen-app](#R-tools) zum Ausführen von Befehlen, die mit der R.exe an diesem Speicherort.

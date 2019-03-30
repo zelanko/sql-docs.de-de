@@ -23,12 +23,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9ce37ee013e8424079e9d2e526ccdbeacfb5544b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: cc9657d8db84b67abe324aea9614dd27c2d9df83
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367142"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658228"
 ---
 # <a name="statistics"></a>Statistik
   Der Abfrageoptimierer verwendet Statistiken zum Erstellen von Abfrageplänen, die die Abfrageleistung verbessern. Bei den meisten Abfragen generiert der Abfrageoptimierer automatisch die notwendigen Statistiken für einen hochwertigen Abfrageplan. In einigen Fällen müssen Sie weitere Statistiken erstellen oder den Abfrageentwurf ändern, um optimale Ergebnisse zu erzielen. Dieses Thema enthält eine Erläuterung von Statistikkonzepten sowie Richtlinien zur effektiven Verwendung von Abfrageoptimierungsstatistiken.  
@@ -105,8 +105,6 @@ ORDER BY s.name;
 |-|  
 |**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
- ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#Top)  
-  
 ##  <a name="CreateStatistics"></a> Zeitpunkt der Erstellung von Statistiken  
  Der Abfrageoptimierer erstellt automatisch folgende Statistiken:  
   
@@ -154,7 +152,7 @@ GO
 ### <a name="query-selects-from-a-subset-of-data"></a>Bei der Abfrageausführung wird aus einer Teilmenge von Daten ausgewählt  
  Wenn der Abfrageoptimierer Statistiken für einzelne Spalten und Indizes erstellt, berechnet er Statistiken für die Werte sämtlicher Zeilen. Wenn bei Abfragen aus einer Teilmenge von Zeilen ausgewählt wird und diese Teilmenge über eine eindeutige Datenverteilung verfügt, können Abfragepläne durch gefilterte Statistiken verbessert werden. Sie können gefilterte Statistiken erstellen, indem Sie die CREATE STATISTICS-Anweisung mit der WHERE-Klausel verwenden, um den Filterprädikatausdruck zu definieren.  
   
- Verwenden Sie beispielsweise [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], jedes Produkt in der Production.Product-Tabelle gehört zu einer der vier Kategorien in der Production.ProductCategory-Tabelle: Fahrräder, Komponenten, Bekleidung und Zubehör. Jede Kategorie verfügt über eine andere Datenverteilung für das Gewicht: Die Gewichte der Fahrräder reichen von 13,77 bis 30,0, die Gewichte der Bauteile reichen von 2,12 bis 1050,00 mit einigen NULL-Werten, die Gewichte der Bekleidung sind alle NULL, und die Gewichte des Zubehörs sind ebenfalls NULL.  
+ Verwenden Sie beispielsweise [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], jedes Produkt in der Production.Product-Tabelle gehört zu einer der vier Kategorien in der Production.ProductCategory-Tabelle: Fahrräder, Bauteile, Bekleidung und Zubehör. Jede Kategorie verfügt über eine andere Datenverteilung für das Gewicht: Die Gewichte der Fahrräder reichen von 13,77 bis 30,0, die Gewichte der Bauteile reichen von 2,12 bis 1050,00 mit einigen NULL-Werten, die Gewichte der Bekleidung sind alle NULL, und die Gewichte des Zubehörs sind ebenfalls NULL.  
   
  Bei den Fahrrädern liefern gefilterte Statistiken dem Abfrageoptimierer zu allen Fahrradgewichten genauere Statistikdaten und können die Abfrageplanqualität im Vergleich zu Tabellenstatistiken oder nicht vorhandenen Statistiken für die Weight-Spalte verbessern. Die Spalte mit dem Fahrradgewicht eignet sich besonders für gefilterte Statistiken, jedoch weniger für einen gefilterten Index, wenn nur relativ wenige Suchen nach Gewichtsangaben ausgeführt werden. Die Leistungsvorteile, die gefilterte Indizes bei der Suche bieten, können die zusätzlichen Kosten für Wartung und Speicher, die mit der Implementierung eines gefilterten Indexes in der Datenbank verbunden sind, jedoch nicht aufwiegen.  
   
@@ -197,8 +195,6 @@ GO
   
  Da temporäre Statistiken in `tempdb` gespeichert werden, werden durch einen Neustart des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Diensts alle temporären Statistiken entfernt.  
   
- ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#Top)  
-  
 ##  <a name="UpdateStatistics"></a>Zeitpunkt der Statistikaktualisierung  
  Der Abfrageoptimierer stellt fest, wann Statistiken veraltet sein könnten, und aktualisiert sie, sobald sie für einen Abfrageplan benötigt werden. In einigen Fällen können Sie den Abfrageplan und damit die Abfrageleistung verbessern, indem Sie Statistiken häufiger aktualisieren, als dies bei Aktivierung von AUTO_UPDATE_STATISTICS der Fall ist. Sie können Statistiken mit der UPDATE STATISTICS-Anweisung oder der gespeicherten Prozedur sp_updatestats aktualisieren.  
   
@@ -228,8 +224,6 @@ GO
  Die Aktualisierung von Statistiken empfiehlt sich auch nach dem Durchführen von Wartungsvorgängen, durch die die Verteilung der Daten geändert wird; hierzu gehören z. B. das Abschneiden einer Tabelle oder das Ausführen einer Masseneinfügung für einen großen Prozentsatz von Zeilen. Dadurch lassen sich zukünftige Verzögerungen bei der Abfrageverarbeitung vermeiden, d. h., Abfragen müssen nicht auf automatische Statistikupdates warten.  
   
  Vorgänge wie das Neuerstellen, Defragmentieren oder Neuorganisieren eines Indexes wirken sich nicht auf die Verteilung von Daten aus. Folglich müssen Sie keine Statistiken aktualisieren, nachdem Sie die Vorgänge ALTER INDEX REBUILD, DBCC REINDEX, DBCC INDEXDEFRAG oder ALTER INDEX REORGANIZE ausgeführt haben. Der Abfrageoptimierer aktualisiert Statistiken, wenn mit ALTER INDEX REBUILD oder DBCC DBREINDEX ein Index für eine Tabelle oder Sicht erstellt wird. Dieses Statistikupdate tritt jedoch als Nebenprodukt der Indexneuerstellung auf. Der Abfrageoptimierer führt keine Statistikaktualisierung nach einem DBCC INDEXDEFRAG-Vorgang oder ALTER INDEX REORGANIZE-Vorgang aus.  
-  
- ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#Top)  
   
 ##  <a name="DesignStatistics"></a> Abfragen mit effektiver Verwendung von Statistiken  
  Bestimmte Abfrageimplementierungen, z. B. lokale Variablen und komplexe Ausdrücke im Abfrageprädikat, können zu suboptimalen Abfrageplänen führen. Sie können dies verhindern, indem Sie Abfrageentwurfsrichtlinien für die effektive Verwendung von Statistiken befolgen. Weitere Informationen zu Abfrageprädikaten finden Sie unter [Suchbedingung &#40;Transact-SQL&#41;](/sql/t-sql/queries/search-condition-transact-sql).  
@@ -328,8 +322,6 @@ GO
 ### <a name="improving-cardinality-estimates-with-plan-guides"></a>Verbessern von Kardinalitätsschätzungen mit Planhinweislisten  
  Für einige Anwendungen sind die Abfrageentwurfsrichtlinien möglicherweise nicht geeignet, weil Sie die Abfrage nicht ändern können oder die Verwendung des RECOMPILE-Abfragehinweises zu viele Neukompilierungen verursacht. Sie können mithilfe der Planhinweislisten weitere Hinweise (z. B. USE PLAN) angeben, um das Abfrageverhalten zu steuern. Zur gleichen Zeit können Sie mit dem Hersteller klären, ob die Anwendung geändert wurde. Weitere Informationen zu Planhinweislisten finden Sie unter [Planhinweislisten](../performance/plan-guides.md).  
   
- ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#Top)  
-  
 ## <a name="see-also"></a>Siehe auch  
  [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)   
@@ -340,5 +332,3 @@ GO
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
  [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
  [Erstellen gefilterter Indizes](../indexes/create-filtered-indexes.md)  
-  
-  

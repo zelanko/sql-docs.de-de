@@ -3,17 +3,17 @@ title: 'SQL Server R und Python-Tutorials: SQL Server-Machine Learning'
 description: Beispiele und Tutorials für R und Python-Skripts in SQL Server-Machine Learning-Dienste.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/18/2018
+ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 2b30daadd23cbea244576c461ec783e67b2189cf
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 6d68d7f36ea6539142bab0ea0e4b50ef6dca8444
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511047"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645402"
 ---
 # <a name="sql-server-machine-learning-tutorials-in-r-and-python"></a>SQL Server-Machine Learning-Tutorials, in R und Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -72,7 +72,6 @@ Markieren Sie diese Beispiele und Demos, die vom SQL Server und R Server-Entwick
 | [Ausführen von Kunden mithilfe von Python und SQL Server-clustering](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/) | Erfahren Sie, wie Sie mit der k-Means-Algorithmus zum Ausführen von nicht überwachten Gruppieren von Kunden. Dieses Beispiel verwendet die Python-Sprache in der Datenbank.| SQL Server 2017 |
 | [Erstellen eines Vorhersagemodells mit R und SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction) | Erfahren Sie, wie ein skiverleih Machine learning, um zukünftige verleihe vorherzusagen, wodurch die Business-Plan und die Mitarbeiter, von der zukünftigen Nachfrage zu begegnen verwenden kann. Dieses Beispiel verwendet die Microsoft-Algorithmen zum Erstellen von logistischen Regression und entscheidungsstrukturmodelle. | 
 | [Erstellen eines Vorhersagemodells mithilfe von Python und SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/) | Die Ski Mietwagen-Analyse-Anwendung mithilfe von Python, zur Unterstützung der Planung für die zukünftige Nachfrage zu erstellen. Dieses Beispiel verwendet die neue Python-Bibliothek **Revoscalepy**, um ein lineares Regressionsmodell zu erstellen. | 
-| [Verwenden von Tableau mit SQL Server Machine Learning Services](https://blogs.msdn.microsoft.com/mlserver/2017/12/14/how-to-use-tableau-with-sql-server-machine-learning-services-with-r-and-python/) | Soziale medienanalyse und Tableau Diagramme erstellen, mit SQL Server und R. | 
 
 <a name="bkmk_solutions"></a>
 
@@ -86,6 +85,4 @@ Der gesamte Code bereitgestellt sowie Anweisungen zum Trainieren und Bereitstell
 + [Vorhersage der Kundenabwanderung](https://gallery.cortanaanalytics.com/Tutorial/Customer-Churn-Prediction-Template-with-SQL-Server-R-Services-1)
 + [Vorbeugende Wartung](https://gallery.cortanaanalytics.com/Tutorial/Predictive-Maintenance-Template-with-SQL-Server-R-Services-1)
 + [Prognostizieren der Länge der Krankenhaus der Aufenthaltsdauer](https://gallery.cortanaintelligence.com/Solution/Predicting-Length-of-Stay-in-Hospitals-1)
-
-Weitere Informationen finden Sie unter [Machine Learning Templates with SQL Server 2016 R Services](https://blogs.technet.microsoft.com/machinelearning/2016/03/23/machine-learning-templates-with-sql-server-2016-r-services/) (Machine Learning-Vorlagen mit SQL Server 2016 R Services).
 

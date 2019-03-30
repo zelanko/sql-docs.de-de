@@ -13,12 +13,12 @@ ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: fa0d4ebee67de0f6665196839b099c840bf310b1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 771c43f8100dd5e9dc45172f6173e8fa32d2d74e
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286698"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657774"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Berichtsteile (Berichts-Generator und SSRS)
   Berichtselemente wie Tabellen, Matrizen, Diagramme und Bilder können als *Berichtsteile*veröffentlicht werden. Berichtsteile sind Berichtselemente, die separat auf einem Berichtsserver veröffentlicht wurden und die in anderen Berichten wieder verwendet werden können. Berichtsteile besitzen die Dateierweiterung ".rsc".  
@@ -45,9 +45,7 @@ ms.locfileid: "56286698"
 5.  Person C verfügt über die Berechtigung, das Diagramm auf dem Server zu überschreiben, und macht dies auch, wobei das Diagramm erneut auf dem Server veröffentlicht wird. Dadurch wird die veröffentlichte Kopie des Diagramms auf dem Server aktualisiert. Person C gibt das Dataset ebenfalls nicht frei, sodass es weiterhin in das Diagramm eingebettet ist.  
   
 6.  Person B akzeptiert das aktualisierte Diagramm vom Server. Dadurch werden die Änderungen, die Person B am Diagramm im Bericht von Person B vorgenommen hatte, überschrieben.  
-  
- ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#BackToTop)  
-  
+
 ##  <a name="PublishingComponents"></a> Veröffentlichen von Berichtsteilen  
  Wenn Sie einen Berichtsteil veröffentlichen, weist Berichts-Generator ihm eine eindeutige ID zu, die sich vom Berichtsteilnamen unterscheidet. Berichts-Generator behält diese ID bei, unabhängig davon, welche anderen Änderungen Sie an dem Berichtsteil vornehmen. Durch die ID wird das ursprüngliche Berichtselement im Bericht mit dem Berichtsteil verknüpft. Wird der Berichtsteil von anderen Berichtsautoren wiederverwendet, wird auch der Berichtsteil in deren Berichten durch die ID mit dem Berichtsteil auf dem Berichtsserver verknüpft.  
   
@@ -85,9 +83,7 @@ ms.locfileid: "56286698"
  Denken Sie auch darüber nach, freigegebene Datenquellen, freigegebene Datasets und die Berichtsteile, die davon abhängig sind, im gleichen Ordner zu speichern.  
   
  Sie können auch die Beschreibung im Eigenschaftenbereich bearbeiten.  
-  
- ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#BackToTop)  
-  
+
 ##  <a name="ReusingComponents"></a> Wiederverwenden von Berichtsteilen  
  Die einfachste Möglichkeit zum Erstellen eines Berichts besteht darin, einen vorhandenen Berichtsteil zum Bericht im Berichtsteilkatalog hinzuzufügen, beispielsweise eine Tabelle oder ein Diagramm. Nachdem Sie dem Bericht den Berichtsteil hinzugefügt haben, können Sie diesen nach Bedarf ändern oder Updates vom Server akzeptieren. Eine Änderung des Berichtselements in Ihrem Bericht wirkt sich nicht auf die Instanz des Berichtsteils aus, die auf der Website oder dem Server veröffentlicht wurde. Auch die Beziehung zwischen der Instanz im Bericht und der Instanz auf der Website oder dem Server bleibt bestehen. Wenn Sie über ausreichende Berechtigungen verfügen, können Sie die aktualisierte Kopie auf der Website oder auf dem Server erneut speichern. Wenn eine andere Person die Kopie auf der Website oder dem Server ändert, können Sie Ihre Kopie in ihrem momentanen Zustand beibehalten oder sie aktualisieren, damit sie der Kopie auf der Website oder dem Server entspricht.  
   
@@ -108,9 +104,7 @@ ms.locfileid: "56286698"
  Sie können dem Bericht eine unbegrenzte Anzahl von Berichtsteilen hinzufügen. Sie können jedoch immer nur jeweils einen Berichtsteil hinzufügen. Sie können dem gleichen Bericht sogar mehrere Instanzen desselben Berichtsteils hinzufügen. Diese verfügen alle über eindeutige Namen, sind jedoch Instanzen des gleichen Berichtsteils auf dem Server und haben die gleiche eindeutige ID.  
   
  Wenn Sie einen anderen Berichtsteil hinzufügen, der ein mit einem bereits im Bericht verwendeten Dataset identisch ist, fügt der Assistent dem Bericht keine andere Version dieses Datasets hinzu. Es leitet die Verweise im Berichtsteil um, sodass Sie auf das vorhandene Dataset verweisen. Weitere Informationen finden Sie unter [Berichtsteile und Datasets](report-data/report-parts-and-datasets-in-report-builder.md).  
-  
- ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#BackToTop)  
-  
+
 ##  <a name="UpdatingComponents"></a> Aktualisieren von Berichtsteilen mit Änderungen vom Server  
  Jedes Mal, wenn Sie einen Bericht öffnen, überprüft der Berichts-Generator, ob die Serverinstanzen der Berichtsteile in diesem Bericht auf dem Server aktualisiert wurden. Er überprüft auch Änderungen in den abhängigen Elementen des Berichtsteils, z. B. im Dataset und den Parametern. Wenn veröffentlichte Berichtsteile oder ihre Abhängigkeiten auf dem Server aktualisiert wurden, zeigt eine Informationsleiste im Bericht die Anzahl der aktualisierten Berichtsteile an. Sie können die Updates anzeigen und akzeptieren oder ablehnen oder die Informationsleiste schließen. Wenn Sie die Updates anzeigen, wird Ihnen eine Miniaturansicht des Berichtsteils mit den Angaben zur Person, die die letzten Änderungen daran vorgenommen hat, und das Änderungsdatum angezeigt. Danach können Sie beliebige oder alle aktualisierten Elemente akzeptieren.  
   
@@ -126,18 +120,14 @@ ms.locfileid: "56286698"
  Wenn Sie eine Version eines Berichtsteils im Bericht geändert haben und es durch die Version ersetzen möchten, die sich auf dem Server befindet, können Sie dazu nicht das Dialogfeld **Aktualisieren** verwenden. Updates sind nur für Berichtsteile möglich, die sich auf dem Server geändert haben, seit Sie sie heruntergeladen haben.  
   
  Um die Version auf dem Server wiederherzustellen, löschen Sie einfach die Version im Bericht, und fügen Sie sie erneut hinzu.  
-  
- ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#BackToTop)  
-  
+
 ##  <a name="RepublishingComponents"></a> Aktualisieren von Berichtsteilen, die sich bereits auf dem Server befinden  
  Sie können einen vorhandenen Berichtsteil auf dem Server aktualisieren oder ihn als neuen Berichtsteil veröffentlichen, ohne den vorhandenen Berichtsteil zu ersetzen. Wenn Sie den Berichtsteil auf dem Server aktualisieren, werden Kopien des Berichtsteils in anderen Berichten nicht automatisch ebenfalls geändert. Wenn andere Berichtsautoren diesen Berichtsteil einem Bericht hinzugefügt haben, werden Sie über die Änderung informiert, wenn sie diesen Bericht das nächste Mal öffnen. Sie können die Änderungen annehmen oder ablehnen.  
   
  Wenn Sie den Berichtsteil als neuen Berichtsteil veröffentlichen möchten, gibt Berichts-Generator ihm eine neue eindeutige ID, und es besteht kein Link zum ursprünglichen Berichtsteil mehr.  
   
  Wenn das Dataset in den Berichtsteil eingebettet wird, wird das Dataset jedes Mal, wenn Sie den Berichtsteil veröffentlichen, im Dialogfeld **Berichtselemente veröffentlichen** angezeigt. Freigegebene Datasets werden nicht im Dialogfeld **Berichtselemente veröffentlichen** angezeigt.  
-  
- ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#BackToTop)  
-  
+
 ##  <a name="RptPartsRptDesigner"></a> Arbeiten mit Berichtsteilen in Berichts-Designer  
  Die Funktion von Berichtsteilen unterscheidet sich in Berichts-Designer in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. In Berichts-Designer verläuft die Veröffentlichung in einer Richtung: Sie können zwar einen Berichtsteil aus Berichts-Designer veröffentlichen, jedoch keinen vorhandenen Berichtsteil in Berichts-Designer wiederverwenden. Weitere Informationen finden Sie unter [Berichtsteile im Berichts-Designer &#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md).  
   

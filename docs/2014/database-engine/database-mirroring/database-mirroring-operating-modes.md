@@ -12,12 +12,12 @@ ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: debec2f4cf7e62552d82ee7a0f87a2a359f4aa34
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5975008849ec4ef8a4d50aa559bb69554b65132a
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542932"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658364"
 ---
 # <a name="database-mirroring-operating-modes"></a>Betriebsmodi der Datenbankspiegelung
   In diesem Thema werden die synchronen und asynchronen Betriebsmodi für Datenbank-Spiegelungssitzungen beschrieben.  
@@ -193,7 +193,7 @@ ms.locfileid: "52542932"
   
 -   SAFETY OFF  
   
-     Durch das Deaktivieren der Transaktionssicherheit wird die Sitzung asynchron im Modus mit hoher Leistung betrieben. Wenn die SAFETY-Eigenschaft auf OFF festgelegt ist, sollte die WITNESS-Eigenschaft ebenfalls auf OFF festgelegt werden (Standardeinstellung). Informationen zur Auswirkung der Zeugenoption im Modus für hohe Leistung finden Sie im Abschnitt [Der Zeugenstatus](#WitnessState)weiter unten in diesem Thema. Weitere Informationen zum Ausführen mit deaktivierter Transaktionssicherheit finden Sie unter [Asynchrone Datenbankspiegelung (Modus für hohe Leistung)](#Async)(zuvor in diesem Thema beschrieben).  
+     Durch das Deaktivieren der Transaktionssicherheit wird die Sitzung asynchron im Modus mit hoher Leistung betrieben. Wenn die SAFETY-Eigenschaft auf OFF festgelegt ist, sollte die WITNESS-Eigenschaft ebenfalls auf OFF festgelegt werden (Standardeinstellung). Informationen zur Auswirkung der Zeugenoption im Modus für hohe Leistung finden Sie im Abschnitt [Der Zeugenstatus](#WitnessState)weiter unten in diesem Thema. Weitere Informationen zum Ausführen mit deaktivierter Transaktionssicherheit finden Sie unter [Asynchrone Datenbankspiegelung (Modus für hohe Leistung)](#VisualElement)(zuvor in diesem Thema beschrieben).  
   
  Die Transaktionssicherheitseinstellung der Datenbank wird auf jedem Partner in der **sys.database_mirroring**-Katalogsicht in der **mirroring_safety_level**-Spalte und der **mirroring_safety_level_desc**-Spalte aufgezeichnet. Weitere Informationen finden Sie unter [sys.database_mirroring &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql).  
   
@@ -266,5 +266,3 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
 ## <a name="see-also"></a>Siehe auch  
  [Überwachen der Datenbankspiegelung &#40;SQL Server&#41;](monitoring-database-mirroring-sql-server.md)   
  [Datenbank-Spiegelungszeuge](database-mirroring-witness.md)  
-  
-  

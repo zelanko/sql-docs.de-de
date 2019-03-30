@@ -20,12 +20,12 @@ ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: da5fb3c4c5dec240a9148772c95bb357f981db1e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3323683075b99ce2ab8cbcb456240bc24323762f
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291769"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658119"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services
   Um Daten in einen [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Bericht einzuschließen, müssen Sie zuerst *Datenquellen* und *Datasets*erstellen. In diesem Thema werden die Typen von Datenquellen und die Vorgehensweise bei der Erstellung von Datenquellen beschrieben. Zudem erhalten Sie wichtige Informationen zu Anmeldeinformationen für Datenquellen. Eine Datenquelle umfasst den Datenquellentyp, Verbindungsinformationen und den Typ der zu verwendenden Anmeldeinformationen. Es gibt zwei Typen von Datenquellen: eingebettet und freigegeben. Eine eingebettete Datenquelle wird im Bericht definiert und nur von diesem Bericht verwendet. Eine freigegebene Datenquelle wird unabhängig von einem Bericht definiert und kann von mehreren Berichten verwendet werden. Weitere Informationen finden Sie unter [Eingebettete und freigegebene Datenverbindungen oder Datenquellen &#40;Berichts-Generator und SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) und [Eingebettete und freigegebene Datasets &#40;Berichts-Generator und SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
@@ -86,7 +86,7 @@ ms.locfileid: "56291769"
   
 -   **Datenquellentyp** Der Verbindungstyp, zum Beispiel [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Wählen Sie diesen Wert aus der Dropdownliste von Verbindungstypen aus.  
   
--   **Verbindungsinformationen** Verbindungsinformationen umfassen den Namen und den Ort der Datenquelle sowie Verbindungseigenschaften, die jeweils speziell für die verschiedenen Datenanbieter gelten. Die *Verbindungszeichenfolge* ist die Darstellung der Verbindungsinformationen in Textform. Wenn zum Beispiel die Datenquelle eine SQL Server-Datenbank ist, können Sie den Namen der Datenbank angeben. Für eingebettete Datenquellen können Sie auch auf Ausdrücken beruhende Verbindungszeichenfolgen schreiben, die zur Laufzeit ausgewertet werden. Weitere Informationen finden Sie im vorliegenden Thema weiter unten unter [Auf Ausdrücken beruhende Verbindungszeichenfolgen](#Expressions) .  
+-   **Verbindungsinformationen** Verbindungsinformationen umfassen den Namen und den Ort der Datenquelle sowie Verbindungseigenschaften, die jeweils speziell für die verschiedenen Datenanbieter gelten. Die *Verbindungszeichenfolge* ist die Darstellung der Verbindungsinformationen in Textform. Wenn zum Beispiel die Datenquelle eine SQL Server-Datenbank ist, können Sie den Namen der Datenbank angeben. Für eingebettete Datenquellen können Sie auch auf Ausdrücken beruhende Verbindungszeichenfolgen schreiben, die zur Laufzeit ausgewertet werden. Weitere Informationen finden Sie im vorliegenden Thema weiter unten unter [Auf Ausdrücken beruhende Verbindungszeichenfolgen](#bkmk_Expressions_in_connection_strings) .  
   
 -   **Anmeldeinformationen** Sie geben die Anmeldeinformationen an, die zum Zugriff auf die Daten benötigt werden. Der Datenquellenbesitzer muss Ihnen die erforderlichen Berechtigungen erteilt haben, um sowohl auf die Datenquelle und die bestimmten Daten für die Datenquelle zugreifen zu können. Zum Herstellen einer Verbindung mit der auf einem Netzwerkserver installierten [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] -Beispieldatenbank müssen Sie über die Berechtigung zum Herstellen einer Verbindung mit dem Server sowie über die Leseberechtigung für den Zugriff auf die Datenbank verfügen.  
   
@@ -185,5 +185,3 @@ ms.locfileid: "56291769"
  [Festlegen von Bereitstellungseigenschaften &#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md)   
  [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Hinzufügen und Prüfen einer Datenverbindung oder Datenquelle &#40;Berichts-Generator und SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
-  
-  
