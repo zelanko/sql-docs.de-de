@@ -15,14 +15,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 19d870d64816dfea011bc0a5c245b5a18a8f5aa3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: be4d5d7e57d967a660eb822542c6fe167e89f690
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675819"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478064"
 ---
 # <a name="sql-server-extended-events-packages"></a>Pakete für erweiterte Ereignisse von SQL Server
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Ein Paket ist ein Container für Objekte für erweiterte Ereignisse von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Es gibt drei Arten von Paketen für erweiterte Ereignisse, dazu zählen die folgenden:  
@@ -217,9 +218,9 @@ where name = 'lock_mode'
   
  Ausgehend von dieser Tabelle wird als Beispiel eine Spalte mit dem Namen mode und dem Wert 5 angenommen. Die Tabelle gibt an, dass 5 zu X zugeordnet wird. Das bedeutet, dass der Sperrentyp Exclusive ist.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
-  [Engine für erweiterte Ereignisse von SQL Server](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
+   [Engine für erweiterte Ereignisse von SQL Server](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
  [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
   
   

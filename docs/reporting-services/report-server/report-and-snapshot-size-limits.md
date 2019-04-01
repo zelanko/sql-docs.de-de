@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 582359e25e0eaec775deb1abbcb64af211d68350
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+ms.openlocfilehash: 2803e8d4ed2e0246c27dae775e864e81e10d91eb
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021814"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658134"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Größenbeschränkungen für Berichte und Momentaufnahmen
   Mithilfe der Informationen in diesem Thema können Administratoren, die eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung verwalten, mehr zu Größenbeschränkungen für einen Bericht erfahren, der auf einem Berichtsserver veröffentlicht, zur Laufzeit gerendert und in einem Dateisystem gespeichert wird. In diesem Thema erhalten Sie zudem eine praktische Anleitung zum Ermitteln der Größe einer Berichtsserver-Datenbank und eine Beschreibung zur Auswirkung der Größe von Momentaufnahmen auf die Serverleistung.  
   
 ## <a name="maximum-size-for-published-reports"></a>Maximale Größe für veröffentlichte Berichte  
- Auf dem Berichtsserver basiert die Größe von Berichten und Modellen auf der Größe der Berichtsdefinitionsdateien (RDL) und Berichtsmodelldateien (SMD), die Sie auf einem Berichtsserver veröffentlichen. Die Größe eines von Ihnen veröffentlichten Berichts wird nicht vom Berichtsserver beschränkt. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] erzwingt jedoch eine maximale Größe für Elemente, die an den Server gesendet werden. Standardmäßig liegt dieser Höchstwert bei 4 MB. Wenn Sie auf einem Berichtsserver eine Datei hochladen oder veröffentlichen, die diesen Höchstwert überschreitet, wird ein HTTP-Ausnahmefehler gemeldet. In diesem Fall können Sie den Standardwert ändern, indem Sie den Wert des Elements **maxRequestLength** in der Datei Machine.config erhöhen.  
+ Auf dem Berichtsserver basiert die Größe von Berichten und Modellen auf der Größe der Berichtsdefinitionsdateien (RDL) und Berichtsmodelldateien (SMD), die Sie auf einem Berichtsserver veröffentlichen. Die Größe eines von Ihnen veröffentlichten Berichts wird nicht vom Berichtsserver beschränkt.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] erzwingt jedoch eine maximale Größe für Elemente, die an den Server gesendet werden. Standardmäßig liegt dieser Höchstwert bei 4 MB. Wenn Sie auf einem Berichtsserver eine Datei hochladen oder veröffentlichen, die diesen Höchstwert überschreitet, wird ein HTTP-Ausnahmefehler gemeldet. In diesem Fall können Sie den Standardwert ändern, indem Sie den Wert des Elements **maxRequestLength** in der Datei Machine.config erhöhen.  
   
  Obwohl ein Berichtsmodell sehr groß sein kann, wird für Berichtsdefinition die Größe von 4 MB nur selten überschritten. Die Größe von Berichten liegt in der Regel im Bereich von Kilobytes (KB). Wenn Sie jedoch eingebettete Bilder einbeziehen, kann die Codierung dieser Bilder zu umfangreichen Berichtsdefinitionen führen, die den 4 MB-Grenzwert übersteigen.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "50021814"
  Der einzige feste Grenzwert für die Größe von Berichten besteht beim Rendern in das Excel-Format. Arbeitsblätter dürfen maximal 65536 Zeilen oder 256 Spalten enthalten. Bei anderen Renderingformaten bestehen diese Beschränkungen nicht. Die Größe wird daher nur durch die Anzahl der Ressourcen auf dem Server beschränkt.  
   
 > [!NOTE]  
->  Die Verarbeitung und das Rendern von Berichten erfolgt nur im Arbeitsspeicher. Wenn Sie über umfangreiche Berichte oder eine große Anzahl von Benutzern verfügen, sollten Sie eine Kapazitätsplanung vornehmen, um sicherzustellen, dass die Berichtsserverbereitstellung auf einem für die Benutzer zufrieden stellenden Niveau ausgeführt wird. Weitere Informationen zu Tools und Richtlinien stehen in den folgenden Publikationen auf MSDN zur Verfügung: [Skalierbarkeits- und Leistungsplanung bei Reporting Services](https://go.microsoft.com/fwlink/?LinkID=70650) und [Verwenden von Visual Studio 2005 zum Ausführen von Ladetests für einen SQL Server 2005 Reporting Services-Berichtsserver](https://go.microsoft.com/fwlink/?LinkID=77519).  
+>  Die Verarbeitung und das Rendern von Berichten erfolgt nur im Arbeitsspeicher. Wenn Sie über umfangreiche Berichte oder eine große Anzahl von Benutzern verfügen, sollten Sie eine Kapazitätsplanung vornehmen, um sicherzustellen, dass die Berichtsserverbereitstellung auf einem für die Benutzer zufrieden stellenden Niveau ausgeführt wird. Weitere Informationen zu Tools und Richtlinien stehen in den folgenden Publikationen auf MSDN zur Verfügung: [Skalierbarkeits- und Leistungsplanung bei Reporting Services](/previous-versions/sql/sql-server-2005/administrator/cc966418(v=technet.10)) und [Verwenden von Visual Studio 2005 zum Ausführen von Ladetests für einen SQL Server 2005 Reporting Services-Berichtsserver](https://go.microsoft.com/fwlink/?LinkID=77519).  
   
 ## <a name="measuring-snapshot-storage"></a>Messen des Speichers für Momentaufnahmen  
  Die Größe einer Momentaufnahme ist direkt proportional zur Datenmenge im Bericht. Momentaufnahmen sind in der Regel viel größer als andere Elemente, die auf einem Berichtsserver gespeichert sind. Die Größe von Momentaufnahmen liegt in der Regel zwischen einigen Megabyte und mehreren zehn Megabyte. Wenn Sie über umfangreiche Berichte verfügen, können Sie davon ausgehen, dass die Momentaufnahmen noch größer sind. Je nachdem, wie häufig Sie Momentaufnahmen verwenden und wie Sie den Berichtsverlauf konfigurieren, kann sich der für die Berichtsserver-Datenbank erforderliche Speicherplatz innerhalb eines kurzen Zeitraums schnell erhöhen.  
@@ -77,7 +77,7 @@ EXEC sp_spaceused
   
  Die Menge der in einer Berichtsserver-Datenbank gespeicherten Momentaufnahmen stellt an sich keinen Leistungsfaktor dar. Sie können eine große Anzahl von Momentaufnahmen speichern, ohne die Serverleistung zu beeinträchtigen. Sie können Momentaufnahmen über einen unbegrenzten Zeitraum speichern. Beachten Sie jedoch, dass der Berichtsverlauf konfiguriert werden kann. Wenn ein Berichtsserveradministrator den Grenzwert für den Berichtsverlauf senkt, gehen Berichtsverläufe, die Sie aufbewahren möchten, möglicherweise verloren. Wenn Sie den Bericht löschen, wird auch der gesamte Berichtsverlauf gelöscht.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Festlegen von Berichtsverarbeitungseigenschaften](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Berichtsserver-Datenbank &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [Verarbeiten von großen Berichten](../../reporting-services/report-server/process-large-reports.md)  

@@ -31,7 +31,7 @@ Die statistische semantische Suche liefert einen tiefen Einblick in unstrukturie
   
  In den folgenden Beispielen sind die Funktionen der semantischen Suche dargestellt. Gleichzeitig veranschaulichen diese Beispiele die drei Transact-SQL-Rowsetfunktionen, die Sie zum Abfragen der semantischen Indizes und zum Abrufen der Ergebnisse als strukturierte Daten verwenden.  
   
-###  <a name="find1"></a> Find the key phrases in a document  
+###  <a name="find1"></a> Suchen der Schlüsselausdrücke in einem Dokument  
  Die folgende Abfrage ruft die Schlüsselausdrücke ab, die im Beispieldokument identifiziert wurden. Sie präsentiert die Ergebnisse in absteigender Reihenfolge nach dem Grad der statistischen Bedeutung der einzelnen Schlüsselausdrücke.
  
  Diese Abfrage ruft die Funktion [semantickeyphrasetable](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md) auf.  
@@ -69,7 +69,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
   
 ```  
   
-###  <a name="find3"></a> Find the key phrases that make documents similar or related  
+###  <a name="find3"></a> Suchen der Schlüsselausdrücke, die Dokumente ähnlich oder verwandt machen.  
  Die folgende Abfrage ruft die Schlüsselausdrücke ab, die zwei Beispieldokumente ähnlich oder verwandt machen. Sie präsentiert die Ergebnisse in absteigender Reihenfolge nach dem Grad, der die Gewichtung der einzelnen Schlüsselausdrücke angibt.
  
  Diese Abfrage ruft die Funktion [semanticsimilaritydetailstable](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md) auf.  

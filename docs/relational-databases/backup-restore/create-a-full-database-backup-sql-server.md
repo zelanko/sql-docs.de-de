@@ -167,7 +167,7 @@ In diesem Beispiel wird die `Sales` -Datenbank auf Datenträger unter `E:\MSSQL\
 
 2.  Erweitern Sie die **Datenbank**, klicken Sie mit der rechten Maustaste auf `Sales`,zeigen Sie auf **Tasks**, und klicken Sie anschließend auf **Sichern...**.
 
-3.  Wählen Sie auf der Seite **Allgemein** im Abschnitt **Ziel** in der Dropdownliste **Sichern auf:****Datenträger** aus.
+3.  Wählen Sie auf der Seite **Allgemein** im Abschnitt **Ziel** in der Dropdownliste **Sichern auf:** **Datenträger** aus.
 
 4.  Klicken Sie auf **Entfernen**, bis alle vorhandenen Sicherungsdateien entfernt wurden.
 

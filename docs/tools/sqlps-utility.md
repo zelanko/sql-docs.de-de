@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fe27d4c05978e39c6d8558fc273fc294a256b09f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f507e21cb04a479f6aa5e6905bd89b93f837d677
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666969"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657894"
 ---
 # <a name="sqlps-utility"></a>sqlps (Hilfsprogramm)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ sqlps
  **-**  
  **-Command-** gibt an, dass das Hilfsprogramm **sqlps** die Eingabe aus der Standardeingabe lesen soll.  
   
- *Script_block* [ **- Args**_Argument\_Array_ ]  
+ *script_block* [ **-args**_argument\_array_ ]  
  Gibt einen Block von PowerShell-Befehlen an, die ausgeführt werden sollen. Der Block muss in geschweifte Klammern ({}) eingeschlossen werden. *Script_block* kann nur angegeben werden, wenn das Hilfsprogramm **sqlps** über **PowerShell** oder über eine andere Sitzung des Hilfsprogramms **sqlps** aufgerufen wird. *Argument_array* ist ein Array von PowerShell-Variablen, das die Argumente für die PowerShell-Befehle in *script_block*enthält.  
   
  *string* [ *command_parameters* ]  
@@ -98,7 +98,7 @@ sqlps
   
 -   Verwenden Sie die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anbieterpfade, um durch die Hierarchie der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Objekte zu navigieren.  
   
- Standardmäßig ist für die Ausführung des Hilfsprogramms **sqlps** die Skriptausführungsrichtlinie auf **Restricted**festgelegt. Dadurch wird die Ausführung von PowerShell-Skripts verhindert. Mit dem Cmdlet **Set-ExecutionPolicy** können Sie die Ausführung signierter Skripts oder beliebiger anderer Skripts ermöglichen. Führen Sie nur Skripts aus vertrauenswürdigen Quellen aus, und sichern Sie alle Eingabe- und Ausgabedateien, indem Sie die geeigneten NTFS-Berechtigungen verwenden. Weitere Informationen zum Aktivieren von PowerShell-Skripts finden Sie unter [Ausführen der Windows PowerShell-Skripts](https://go.microsoft.com/fwlink/?LinkId=103166).  
+ Standardmäßig ist für die Ausführung des Hilfsprogramms **sqlps** die Skriptausführungsrichtlinie auf **Restricted**festgelegt. Dadurch wird die Ausführung von PowerShell-Skripts verhindert. Mit dem Cmdlet **Set-ExecutionPolicy** können Sie die Ausführung signierter Skripts oder beliebiger anderer Skripts ermöglichen. Führen Sie nur Skripts aus vertrauenswürdigen Quellen aus, und sichern Sie alle Eingabe- und Ausgabedateien, indem Sie die geeigneten NTFS-Berechtigungen verwenden. Weitere Informationen zum Aktivieren von PowerShell-Skripts finden Sie unter [Ausführen der Windows PowerShell-Skripts](/previous-versions/system-center/virtual-machine-manager-2008-r2/cc917925(v=technet.10)).  
   
  Die Version des Hilfsprogramms **sqlps** in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] wurde als Windows PowerShell 1.0-Mini-Shell implementiert. Mini-Shells weisen bestimmte Einschränkungen auf; Benutzer können beispielsweise keine anderen als die von der Mini-Shell geladenen Snap-Ins laden. Diese Einschränkungen gelten nicht für die [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] -Version und höhere Versionen des Hilfsprogramms, die dahingehend geändert wurden, dass sie das **sqlps** -Modul verwenden.  
   
@@ -121,7 +121,7 @@ sqlps -Command "&{.\MyFolder.MyScript.ps1}"
 sqlps -NoExit -Command "&{.\MyFolder.MyScript.ps1}"  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Aktivieren oder Deaktivieren eines Servernetzwerkprotokolls](../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [SQL Server-PowerShell](../relational-databases/scripting/sql-server-powershell.md)  
   
