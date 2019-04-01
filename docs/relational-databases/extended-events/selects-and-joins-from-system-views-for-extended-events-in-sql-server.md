@@ -6,20 +6,21 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: tutorial
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c4ed3aff940dd68614fd5534302fdfb65d3c59b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: dac049477fad134aa3cf8776c8ffa13f33e111ee
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666829"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478145"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SELECT- und JOIN-Anweisungen von Systemsichten für erweiterte Ereignisse in SQL Server
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
@@ -154,7 +155,7 @@ Dadurch ist die Perspektive der SSMS-Benutzeroberfläche mit der Definition der 
 
 Unabhängig davon, wie eine Definition für die Ereignissitzung erstellt wurde, kann die Sitzung der SSMS-Benutzeroberfläche in perfekter Übereinstimmung mit dem Transact-SQL-Skript zurückentwickelt werden. Sie können die vorhergehenden Screenshots von „New Session“ (Neue Sitzung) überprüfen und anschließend deren sichtbare Spezifikationen mit den Klauseln des folgenden generierten **CREATE EVENT SESSION** -Skript von T-SQL vergleichen.
 
-Sie können mit der rechten Maustaste im **Objekt-Explorer** auf den Sitzungsknoten klicken und anschließend **Script Session as** > **CREATE to** > **Clipboard**(Skript für Sitzung als &amp;gt; CREATE to &amp;gt; Zwischenablage) auswählen, um eine Ereignissitzung zurückzuentwickeln.
+Sie können mit der rechten Maustaste im **Objekt-Explorer** auf den Sitzungsknoten klicken und anschließend **Script Session as** > **CREATE to** > **Clipboard**(Skript für Sitzung als &gt; CREATE to &gt; Zwischenablage) auswählen, um eine Ereignissitzung zurückzuentwickeln.
 
 Das folgende T-SQL-Skript wurde durch Zurückentwickeln mit SSMS erstellt. Anschließend wurde das Skript manuell durch strategische Bearbeitung der Leerzeichen verschönert.
 

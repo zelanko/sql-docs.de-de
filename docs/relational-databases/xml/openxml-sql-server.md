@@ -21,15 +21,15 @@ helpviewer_keywords:
 - XML [SQL Server], OPENXML statement
 - element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3534d1772fcc13ebcd420bc845b004bf20b1d446
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2197039cd6517e27fef9711e56607418add0003e
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629859"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512347"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -143,7 +143,7 @@ EXEC sp_xml_removedocument @docHandle;
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|Die eindeutige ID des Dokumentknotens.<br /><br /> Das Stammelement weist den ID-Wert 0 auf. Die negativen ID-Werte sind reserviert.|  
 |**parentid**|**bigint**|Identifiziert das übergeordnete Element des Knotens. Bei dem über diese ID identifizierten übergeordneten Objekt muss es sich nicht unbedingt um das übergeordnete Element handeln. Dies hängt jedoch vom NodeType des Knotens ab, dessen übergeordnetes Objekt durch diese ID identifiziert wird. Wenn es sich bei dem Knoten beispielsweise um einen Textknoten handelt, kann das übergeordnete Objekt ein Attributknoten sein.<br /><br /> Wenn sich der Knoten auf der obersten Ebene im XML-Dokument befindet, ist **ParentID** gleich NULL.|  
-|**node type**|**int**|Identifiziert den Knotentyp. Eine ganze Zahl, die der Nummer des Knotentyps des XML-Objektmodells (DOM) entspricht.<br /><br /> In dieser Spalte können folgende Werte den Knotentyp angeben:<br /><br /> **1** = Elementknoten<br /><br /> **2** = Attributknoten<br /><br /> **3** = Textknoten<br /><br /> **4** = CDATA-Abschnittsknoten<br /><br /> **5** = Entitätsverweisknoten<br /><br /> **6** = Entitätsknoten<br /><br /> **7** = Verarbeitungsanweisungsknoten<br /><br /> **8** = Kommentarknoten<br /><br /> **9** = Dokumentknoten<br /><br /> **10** = Dokumenttypknoten<br /><br /> **11** = Dokumentfragmentknoten<br /><br /> **12** = Notationsknoten<br /><br /> Weitere Informationen finden Sie im Microsoft XML (MSXML) SDK im Abschnitt über die nodeType-Eigenschaft.|  
+|**node type**|**ssNoversion**|Identifiziert den Knotentyp. Eine ganze Zahl, die der Nummer des Knotentyps des XML-Objektmodells (DOM) entspricht.<br /><br /> In dieser Spalte können folgende Werte den Knotentyp angeben:<br /><br /> **1** = Elementknoten<br /><br /> **2** = Attributknoten<br /><br /> **3** = Textknoten<br /><br /> **4** = CDATA-Abschnittsknoten<br /><br /> **5** = Entitätsverweisknoten<br /><br /> **6** = Entitätsknoten<br /><br /> **7** = Verarbeitungsanweisungsknoten<br /><br /> **8** = Kommentarknoten<br /><br /> **9** = Dokumentknoten<br /><br /> **10** = Dokumenttypknoten<br /><br /> **11** = Dokumentfragmentknoten<br /><br /> **12** = Notationsknoten<br /><br /> Weitere Informationen finden Sie im Microsoft XML (MSXML) SDK im Abschnitt über die nodeType-Eigenschaft.|  
 |**localname**|**nvarchar(max)**|Gibt den lokalen Namen des Elements oder Attributs an. Ist NULL, wenn das DOM-Objekt keinen Namen hat.|  
 |**Präfix**|**nvarchar(max)**|Das Namespacepräfix des Knotennamens.|  
 |**namespaceuri**|**nvarchar(max)**|Der Namespace-URI (Universal Resource Identifier) des Knotens. Ist der Wert NULL, ist kein Namespace vorhanden.|  
@@ -198,7 +198,7 @@ EXEC sp_xml_removedocument @docHandle;
   
 -   Wenn mehrere Teilelemente denselben Namen besitzen, wird der erste Knoten zurückgeliefert.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [sp_xml_preparedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)   
  [sp_xml_removedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)   
  [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)   

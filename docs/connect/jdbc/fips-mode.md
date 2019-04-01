@@ -1,7 +1,7 @@
 ---
 title: FIPS-Modus auf JDBC | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/12/2018
+ms.date: 03/26/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: craigg
@@ -10,48 +10,39 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
 manager: kenvh
-ms.openlocfilehash: b99aa6be170402b0e8f18dddd578c1fb6c615dd6
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 8fb6ea7bf6abfb1f347d0541a01bae91aacf5f1c
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601870"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618277"
 ---
 # <a name="fips-mode"></a>FIPS-Modus
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Der Microsoft JDBC-Treiber für SQL Server unterstützt *FIPS 140-kompatiblen Modus*. Für Oracle / Sun-JVM finden Sie in der [FIPS 140-kompatiblen Modus für SunJSSE](https://docs.oracle.com/javase/7/docs/technotes/guides/security/jsse/FIPS.html) Abschnitt bereitgestellt, die von Oracle so konfigurieren Sie FIPS aktivierte JVM. 
+Der Microsoft JDBC-Treiber für SQL Server unterstützt die Ausführung in JVMs konfiguriert *FIPS 140-konformen*.
 
 #### <a name="prerequisites"></a>Voraussetzungen
 
 - FIPS konfiguriert JVM
-- Entsprechende SSL-Zertifikat.
-- Dateien der entsprechenden Richtlinie. 
-- Entsprechende Konfigurationsparameter. 
-
+- Entsprechende SSL-Zertifikat
+- Dateien der entsprechenden Richtlinie
+- Entsprechende Konfigurationsparameter
 
 ## <a name="fips-configured-jvm"></a>FIPS konfiguriert JVM
 
-Die genehmigten Module für die Konfiguration von FIPS, finden Sie in der [überprüft FIPS 140-1 und der kryptographischen Module FIPS 140-2](https://csrc.nist.gov/groups/STM/cmvp/documents/140-1/1401val2016.htm). 
+Anwendungen können konfigurieren, in der Regel die `java.security` Datei, die FIPS-konformen Crypto-Provider verwendet. Informieren Sie sich die Informationen zum Konfigurieren der FIPS 140-Kompatibilität JVM bereit.
 
-Anbieter müssen möglicherweise einige zusätzliche Schritte zum Konfigurieren von JVM mit FIPS.
+Die genehmigten Module für die Konfiguration von FIPS, finden Sie in [überprüft Module in der kryptografischen Modul-Validierungsprogramm](https://csrc.nist.gov/Projects/cryptographic-module-validation-program/Validated-Modules).
 
-### <a name="ensure-your-jvm-is-in-fips-mode"></a>Stellen Sie sicher, dass Ihre JVM im FIPS-Modus ist
-Um sicherzustellen, dass Ihre JVM FIPS aktiviert ist, führen Sie den folgenden Codeausschnitt ein: 
-
-```java
-public boolean isFIPS() throws Exception {
-    Provider jsse = Security.getProvider("SunJSSE");
-    return jsse != null && jsse.getInfo().contains("FIPS");
-}
-```
+Anbieter müssen möglicherweise einige zusätzliche Schritte zum Konfigurieren einer JVM mit FIPS.
 
 ## <a name="appropriate-ssl-certificate"></a>Entsprechende SSL-Zertifikat
-Um SQL Server im FIPS-Modus eine Verbindung herzustellen, ist ein gültiges SSL-Zertifikat erforderlich. Installieren Sie, oder importieren Sie es in den Store im Java-Schlüssel (JVM) auf dem Clientcomputer die, in denen FIPS aktiviert ist.
+Um die Verbindung mit SQL Server im FIPS-Modus ist ein gültiges SSL-Zertifikat erforderlich. Installieren Sie, oder importieren Sie es in den Store im Java-Schlüssel (JVM) auf dem Clientcomputer die, in denen FIPS aktiviert ist.
 
 ### <a name="importing-ssl-certificate-in-java-keystore"></a>SSL-Zertifikats in Java-KeyStore importieren
-Für FIPS müssen in den meisten Fällen importieren Sie das Zertifikat (Cert) entweder PKCS oder in einem anbieterspezifischen Format. Verwenden Sie den folgenden Codeausschnitt, importieren Sie das SSL-Zertifikat, und speichern Sie sie in einem Arbeitsverzeichnis im passenden Format für den KeyStore ein. _VERTRAUEN\_STORE\_Kennwort_ ist Ihr Kennwort für Java-KeyStore. 
-
+Für FIPS müssen in den meisten Fällen importieren Sie das Zertifikat (Cert) im PKCS oder einem anbieterspezifischen Format.
+Verwenden Sie den folgenden Codeausschnitt, importieren Sie das SSL-Zertifikat, und speichern Sie sie in einem Arbeitsverzeichnis im passenden Format für den KeyStore ein. _VERTRAUEN\_STORE\_Kennwort_ ist Ihr Kennwort für Java-KeyStore.
 
 ```java
 public void saveGenericKeyStore(
@@ -81,8 +72,7 @@ private Certificate getCertificate(String pathName)
 }
 ```
 
-
-Im folgende Beispiel wird ein Azure SSL-Zertifikat im PKCS12-Format mit BouncyCastle Anbieter importiert. Das Zertifikat wird importiert, in das Arbeitsverzeichnis, das mit dem Namen _MyTrustStore\_PKCS12_ mit den folgenden Codeausschnitt:
+Im folgende Beispiel wird ein Azure SSL-Zertifikat im PKCS12-Formats mit dem Anbieter BouncyCastle importieren. Das Zertifikat wird importiert, in das Arbeitsverzeichnis, das mit dem Namen _MyTrustStore\_PKCS12_ mit den folgenden Codeausschnitt:
 
 `saveGenericKeyStore(BCFIPS, PKCS12, "SQLAzure SSL Certificate Name", "SQLAzure.cer");`
 
@@ -104,4 +94,3 @@ Führen Sie den JDBC-Treiber im FIPS-kompatiblen Modus konfigurieren Sie Verbind
 |fipsProvider|Zeichenfolge|NULL|FIPS-Anbieter in JVM konfiguriert. Z. B. BCFIPS oder SunPKCS11-NSS |6.1.2 hinzugefügt (Stable release 6.2.2), ausführliche Informationen finden Sie in 6.4.0: als veraltet markiert [hier](https://github.com/Microsoft/mssql-jdbc/pull/460).|
 |trustStoreType|Zeichenfolge|JKS|FIPS-Modus Trust Store Mengentyp entweder PKCS12 Typ definiert, oder von FIPS-Anbieter |6.1.2 hinzugefügt (Stable release 6.2.2)||
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-

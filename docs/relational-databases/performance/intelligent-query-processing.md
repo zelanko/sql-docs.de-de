@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 78e818a535c31e60e1b73b4a48f301e8d90b7430
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 57d96068af7120ef4ccf4da8882093fa26908089
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579740"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493979"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Intelligente Abfrageverarbeitung in SQL-Datenbanken
 
@@ -28,7 +28,7 @@ Die Featurefamilie „Intelligente Abfrageverarbeitung“ umfasst Features mit w
 
 ![Intelligente Abfrageverarbeitung](./media/3_iqpfeaturefamily.png)
 
-Sie können Workloads automatisch für die intelligente Abfrageverarbeitung anpassen, indem Sie den geeigneten Datenbank-Kompatibilitätsgrad für die Datenbank aktivieren.  Diesen können Sie mit Transact-SQL festlegen. Zum Beispiel:  
+Sie können Workloads automatisch für die intelligente Abfrageverarbeitung anpassen, indem Sie den geeigneten Datenbank-Kompatibilitätsgrad für die Datenbank aktivieren.  Diesen können Sie mit Transact-SQL festlegen. Beispiel:  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -147,7 +147,7 @@ Um adaptive Joins für alle Abfrageausführungen wieder zu aktivieren, die aus d
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
 ```
 
-Sie können adaptive Joins auch für eine bestimmte Abfrage deaktivieren, indem Sie `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` als [USE HINT-Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md#use_hint) festlegen. Zum Beispiel:
+Sie können adaptive Joins auch für eine bestimmte Abfrage deaktivieren, indem Sie `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` als [USE HINT-Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md#use_hint) festlegen. Beispiel:
 
 ```sql
 SELECT s.CustomerID,
@@ -213,7 +213,7 @@ Um das Feedback zur Speicherzuweisung im Batchmodus für alle Abfrageausführung
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
 ```
 
-Sie können das Feedback zur Speicherzuweisung im Batchmodus auch für eine bestimmte Abfrage deaktivieren, indem Sie `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` als [USE HINT-Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md#use_hint) festlegen. Zum Beispiel:
+Sie können das Feedback zur Speicherzuweisung im Batchmodus auch für eine bestimmte Abfrage deaktivieren, indem Sie `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` als [USE HINT-Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md#use_hint) festlegen. Beispiel:
 
 ```sql
 SELECT * FROM Person.Address  
@@ -263,7 +263,7 @@ Um das Feedback zur Speicherzuweisung im Zeilenmodus für alle Abfrageausführun
 ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = ON;
 ```
 
-Sie können das Feedback zur Speicherzuweisung im Zeilenmodus auch für eine bestimmte Abfrage deaktivieren, indem Sie `DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK` als [USE HINT-Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md#use_hint) festlegen. Zum Beispiel:
+Sie können das Feedback zur Speicherzuweisung im Zeilenmodus auch für eine bestimmte Abfrage deaktivieren, indem Sie `DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK` als [USE HINT-Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md#use_hint) festlegen. Beispiel:
 
 ```sql
 SELECT * FROM Person.Address  
@@ -353,7 +353,7 @@ Um geschachtelte Ausführung für alle Abfrageausführungen wieder zu aktivieren
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
 ```
 
-Sie können adaptive Joins auch für eine verschachtelte Ausführung für eine bestimmte Abfrage deaktivieren, indem Sie `DISABLE_INTERLEAVED_EXECUTION_TVF` als [USE HINT-Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md#use_hint) festlegen. Zum Beispiel:
+Sie können adaptive Joins auch für eine verschachtelte Ausführung für eine bestimmte Abfrage deaktivieren, indem Sie `DISABLE_INTERLEAVED_EXECUTION_TVF` als [USE HINT-Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md#use_hint) festlegen. Beispiel:
 
 ```sql
 SELECT [fo].[Order Key], [fo].[Quantity], [foo].[OutlierEventQuantity]
@@ -505,4 +505,4 @@ OPTION(RECOMPILE, USE HINT('DISALLOW_BATCH_MODE'));
 [Referenz zu logischen und physischen Showplanoperatoren](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
 [Joins](../../relational-databases/performance/joins.md)    
 [Veranschaulichung der adaptiven Abfrageverarbeitung](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)       
-[Veranschaulichung intelligenter Abfrageverarbeitung](https://github.com/joesackmsft/Conferences/blob/master/IQPDemos/IQP_Demo_ReadMe.md)   
+[Veranschaulichung intelligenter Abfrageverarbeitung](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)   

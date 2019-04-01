@@ -13,12 +13,12 @@ ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2347dc6f1d18afb4f26dc137a1158ceb53663050
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: d53a3233d2e2af6aa9806cdea06b2a203e31bf89
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744510"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658413"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Systemanforderungen für Microsoft-Treiber für PHP für SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +45,7 @@ Weitere Informationen zum Herunterladen und Installieren von stabilen PHP-Binär
 
 -   Eine Version der Treiberdatei muss sich in Ihrem PHP-Erweiterungsverzeichnis befinden. Finden Sie unter [Treiberversionen](#driver-versions) Informationen zu den verschiedenen Treiberdateien.  Die Treiber können Sie unter [Download the Microsoft Drivers for PHP for SQL Server (Herunterladen der Microsoft-Treiber für PHP für SQL Server)](../../connect/php/download-drivers-php-sql-server.md) herunterladen. Unter [Loading the Microsoft Drivers for PHP for SQL Server (Laden der Microsoft-Treiber für PHP für SQL Server)](../../connect/php/loading-the-php-sql-driver.md) finden Sie weitere Informationen zur Konfiguration der Treiber für PHP.
 
--   Ein Webserver ist erforderlich. Ihr Webserver muss für die Ausführung von PHP konfiguriert sein. Informationen zum Hosten von PHP-Anwendungen mit IIS finden Sie unter den [Lernprogramm auf PHPs-Website](https://php.net/manual/fa/install.windows.iis.php).  
+-   Ein Webserver ist erforderlich. Ihr Webserver muss für die Ausführung von PHP konfiguriert sein. Informationen zum Hosten von PHP-Anwendungen mit IIS finden Sie unter den [Lernprogramm auf PHPs-Website](http://docs.php.net/manual/da/install.windows.iis7.php).
 
     [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] wurde auf IIS 10 mit FastCGI getestet.  
 
@@ -67,7 +67,7 @@ Wenn Sie die Windows-Version des Treibers auf einer 64-Bit-Version von Windows h
 
 Wenn Sie den SQLSRV-Treiber verwenden [Sqlsrv_client_info](../../connect/php/sqlsrv-client-info.md) sieht in Bezug auf die Version der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird von Microsoft ODBC-Treiber für SQL Server verwendet die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Fall Sie den PDO_SQLSRV-Treiber verwenden, können Sie die Version mithilfe von [PDO::getAttribute](../../connect/php/pdo-getattribute.md) abrufen.  
 
-## <a name="sql-server"></a>SQL Server
+## <a name="sql-server"></a>SQL Server
 
 Azure SQL-Datenbanken werden unterstützt. Weitere Informationen finden Sie unter [Connecting to Microsoft Azure SQL Database (Herstellen einer Verbindung mit Microsoft Azure SQL-Datenbank)](../../connect/php/connecting-to-microsoft-azure-sql-database.md).
 

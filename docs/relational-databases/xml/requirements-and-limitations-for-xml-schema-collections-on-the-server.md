@@ -22,15 +22,15 @@ helpviewer_keywords:
 - schema collections [SQL Server], guidelines
 - lexical representation
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b2090a18508801be077a1011034093047b738f94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 30b163359523771630c697acaa82e1171085db71
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788748"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58513322"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Anforderungen und Einschränkungen für XML-Schemaauflistungen auf dem Server
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "47788748"
 |[Große XML-Schemasammlungen und Bedingungen des Typs „Nicht genügend Arbeitsspeicher“](../../relational-databases/xml/large-xml-schema-collections-and-out-of-memory-conditions.md)|Stellt Lösungen für Situationen bereit, in denen nicht genügend Arbeitsspeicher verfügbar ist, was gelegentlich bei großen Schemaauflistungen vorkommt.|  
 |[Nicht deterministische Inhaltsmodelle](../../relational-databases/xml/non-deterministic-content-models.md)|Beschreibt die Einschränkungen hinsichtlich nicht deterministischer Inhaltsmodelle.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [XML-Daten &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Erteilen von Berechtigungen für eine XML-Schemaauflistung](../../relational-databases/xml/grant-permissions-on-an-xml-schema-collection.md)   
