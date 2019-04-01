@@ -170,7 +170,7 @@ Daten in einer Tabelle können mithilfe der SELECT-Anweisung gelesen werden. Die
   GO  
   ```  
   
-2.  Sie können alle Spalten in der Tabelle mithilfe eines Sternchens (*) auswählen. Dies wird häufig bei Ad-hoc-Abfragen verwendet. Sie sollten die Spaltenliste im dauerhaften Code bereitstellen, sodass die Anweisung die vorhergesagten Spalten zurückgibt, selbst wenn der Tabelle später eine neue Spalte hinzugefügt wird.  
+2.  Sie können alle Spalten in der Tabelle mithilfe eines Sternchens auswählen. Dies wird häufig bei Ad-hoc-Abfragen verwendet. Sie sollten die Spaltenliste im dauerhaften Code bereitstellen, sodass die Anweisung die vorhergesagten Spalten zurückgibt, selbst wenn der Tabelle später eine neue Spalte hinzugefügt wird.  
   
   ```sql  
   -- Returns all columns in the table  

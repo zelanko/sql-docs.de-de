@@ -56,7 +56,7 @@ DROP DATABASE database_name [;]
 ## <a name="arguments"></a>Argumente
 
 *IF EXISTS*
-**Gilt für **: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]bis [aktuelle Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]bis [aktuelle Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).
 
 Löscht die Datenbank nur, wenn diese bereits vorhanden ist.
 
