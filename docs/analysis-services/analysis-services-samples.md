@@ -1,6 +1,6 @@
 ---
 title: Analysis Services-Beispiele | Microsoft-Dokumentation
-ms.date: 05/08/2018
+ms.date: 03/29/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5d4ee07588e296fc9ce5a797c03eb174c586e7e9
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 08fb61eb8c6b928b3690396abfef21d6f92c7c67
+ms.sourcegitcommit: 00e0fa2c0b49a1ce94c17b74b4bd5210098f8367
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392753"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58788047"
 ---
 # <a name="analysis-services-samples"></a>Analysis Services-Beispiele
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -28,9 +28,9 @@ ms.locfileid: "40392753"
 
 ## <a name="sample-solutions-and-databases"></a>Vollständige, gepackte Anwendungen und Datenbanken  
 
-Während offiziell nicht mehr unterstützt oder aktualisiert werden, bleibt die Adventure Works eines der am besten inklusive und stabilste beispieldatasets zum Kennenlernen und Testen von Analysis Services. In Analysis Services-Projekten und Datenbanken sowie Beispiele in der Dokumentation, Blogbeiträge und Präsentationen Beispiel verwenden Sie die Adventure Works 2014-Beispieldaten.
+Während offiziell nicht mehr unterstützt wird, bleibt die Adventure Works eines der am besten inklusive und stabilste beispieldatasets zum Kennenlernen und Testen von Analysis Services. In Analysis Services-Projekten und Datenbanken sowie Beispiele in der Dokumentation, Blogbeiträge und Präsentationen Beispiel verwenden Sie die AdventureWorks-Beispieldaten.
 
-[Herunterladen der Adventure Works-Beispiel-Projekten und-Datenbanken auf Codeplex](https://msftdbprodsamples.codeplex.com/releases/view/125550).
+[Herunterladen der Adventure Works-Beispiel-Projekten und-Datenbanken auf GitHub](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks).
 
 Eine neue Auflistung von Beispieldaten, Wide World Importers, wurde für SQL Server 2016 eingeführt. Wide World Importers-Beispieldaten können Sie lernen und Testen von Analysis Services; jedoch werden keine Tutorials, Beispiele und Dokumentation bereitgestellt. Die Wide World Importers-Dataset und das Schema unterstützen nicht viele der Features in Analysis Services. Weitere Informationen finden Sie unter [Wide World Importers](../sample/world-wide-importers/wide-world-importers-documentation.md).
 
