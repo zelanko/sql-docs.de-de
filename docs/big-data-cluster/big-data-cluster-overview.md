@@ -1,6 +1,6 @@
 ---
 title: Was sind big Data-Cluster?
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Informationen Sie zu SQL Server-2019 big Data-Clustern (Vorschau), die auf Kubernetes ausgeführt, und geben Sie Optionen für horizontales Skalieren für relationale und HDFS-Daten.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 20ee32b445a7509967b18c51a8e661527585f291
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: e9e9cdcd63873ade4d9d828309f8b2d4b5b874e0
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477645"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860252"
 ---
-# <a name="what-are-sql-server-2019-big-data-clusters"></a>Was sind SQL Server-2019 big Data-Cluster?
+# <a name="what-are-sql-server-big-data-clusters"></a>Was sind SQL Server-Big Data-Cluster?
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Beginnend mit [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], SQL Server-big Data-Cluster können Sie skalierbare HDFS, Spark und SQL Server-Container unter Kubernetes-Cluster bereitstellen. Diese Komponenten werden parallel ausgeführt, lesen, schreiben und Verarbeiten von big Data aus Transact-SQL oder Spark, kombinieren und analysieren Sie Ihre wertvollen relationale Daten mit hohem Volumen, big Data leicht zu können.
 

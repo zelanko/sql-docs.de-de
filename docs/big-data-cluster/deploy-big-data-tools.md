@@ -1,6 +1,6 @@
 ---
 title: Installieren von Big Data-Tools
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Informationen Sie zum Installieren von Tools, die mit SQL Server-2019 big Data-Clustern (Vorschau) verwendet.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 0413da85b4f213eb75a1b9ed5d80852663870c74
-ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
+ms.openlocfilehash: dc53bdfb71efeafd55752686ff136355bc79bd34
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898956"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860481"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Installieren von SQL Server-2019 big datatools
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 In diesem Artikel wird beschrieben, die Clienttools, die zum Erstellen, verwalten, installiert werden soll, und Verwenden von SQL Server-2019 big Data-Cluster (Vorschau). Der folgende Abschnitt enthält eine Liste der Tools und Links zu Anweisungen zur Installation. Konfigurieren Sie vor der Bereitstellung von big Data-Cluster aus, die Tools, die gekennzeichnet werden, erforderlich für Windows oder Linux aus.
 

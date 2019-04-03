@@ -1,6 +1,6 @@
 ---
-title: Mssqlctl-Referenz
-titleSuffix: SQL Server 2019 big data clusters
+title: Referenz zu mssqlctl
+titleSuffix: SQL Server big data clusters
 description: Der Referenzartikel für die Mssqlctl Befehle.
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d15b4149fe336b173452030ec67fb7f229e6ae3d
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: b050638ee0ca600c5df0ecdbe5616b801f41e7a8
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527283"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860352"
 ---
 # <a name="mssqlctl"></a>mssqlctl
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Der folgende Artikel bietet Referenz für die **Mssqlctl** tool für [SQL Server-2019 big Data-Clustern (Vorschau)](big-data-cluster-overview.md). Weitere Informationen zum Installieren der **Mssqlctl** finden Sie unter [Mssqlctl zum Verwalten von SQL Server-2019 big Data-Cluster installieren](deploy-install-mssqlctl.md).
 
@@ -25,10 +27,10 @@ Der folgende Artikel bietet Referenz für die **Mssqlctl** tool für [SQL Server
 |||
 |---|---|
 | [app](reference-mssqlctl-app.md) | Erstellen, löschen, ausführen und Verwalten von Anwendungen. |
-| [cluster](reference-mssqlctl-cluster.md) | Wählen Sie, verwalten Sie und betreiben Sie Cluster. |
+| [Cluster](reference-mssqlctl-cluster.md) | Wählen Sie, verwalten Sie und betreiben Sie Cluster. |
 | [login](#login) | Melden Sie sich an den Cluster. |
-| [logout](#logout) | Melden Sie sich der Cluster. |
-| [storage](reference-mssqlctl-storage.md) | Verwalten von Clusterspeicher. |
+| [Abmelden](#logout) | Melden Sie sich der Cluster. |
+| [Speicher](reference-mssqlctl-storage.md) | Verwalten von Clusterspeicher. |
 
 ## <a id="login"></a> Mssqlctl-Anmeldung
 

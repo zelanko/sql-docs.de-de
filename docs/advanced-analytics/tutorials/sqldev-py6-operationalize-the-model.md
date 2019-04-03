@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: de46594a5de2bee6e50786de25826c96da01ae53
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 77d08db22ca7ff1b4b66620d277280f0c1ac314e
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513067"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860581"
 ---
 # <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>Führen Sie Vorhersagen mithilfe von Python in einer gespeicherten Prozedur eingebettet
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -172,8 +172,8 @@ In einigen Fällen-Batch-Bewertungen, empfiehlt für die Übergabe in einem einz
 
 In diesem Abschnitt erfahren Sie, wie Sie einzelne Vorhersagen zu erstellen, indem zwei gespeicherten Prozeduren aufrufen:
 
-+ [PredictTipSingleModeSciKitPy](#PredictTipSingleModeSciKitPy) dient für die einzelnen Zeile Bewertung Verwendung der Scikit-Modell zu erfahren.
-+ [PredictTipSingleModeRxPy](#PredictTipSingleModeRxPy) für die einzelnen Zeile Bewertung mit dem Revoscalepy-Modell dient.
++ [PredictTipSingleModeSciKitPy](#predicttipsinglemodescikitpy) dient für die einzelnen Zeile Bewertung Verwendung der Scikit-Modell zu erfahren.
++ [PredictTipSingleModeRxPy](#predicttipsinglemoderxpy) für die einzelnen Zeile Bewertung mit dem Revoscalepy-Modell dient.
 + Wenn Sie noch nicht getan haben ein Modell trainiert, wiederherstellen, [Schritt 5](sqldev-py5-train-and-save-a-model-using-t-sql.md)!
 
 Beide Modelle Take als Eingabe eine Reihe von einzelnen Werten, z. B. die Anzahl der Fahrgäste, Fahrtstrecke und So weiter. Eine Funktion mit Tabellenrückgabe `fnEngineerFeatures`, wird verwendet, um Werte für Breiten- und Längengrad zu konvertieren, aus den Eingaben ein neues Feature, die direkte Entfernung. [Lektion 4](sqldev-py4-create-data-features-using-t-sql.md) enthält eine Beschreibung dieser Funktion mit Tabellenrückgabe.

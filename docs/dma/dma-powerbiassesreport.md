@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 786e86fb6f0326e2f8ea568f4c069828ff1ff4c6
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: c00196468b846174bb73c8d82c691f482aa8b21e
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974119"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872071"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>Analysieren Sie konsolidierte Bewertungsberichte erstellt, die von Data Migration Assistant mit Power BI
 
@@ -34,23 +34,23 @@ Sie können Beispiele für Power BI-Berichte für konsolidierte Migration Bewert
 
 Die folgenden Berichte sind enthalten: 
 
-- [Dashboard](#dashboard--details)
+- [Dashboard](#dashboard-report)
 
   Enthält Statistiken der Momentaufnahme und einen Drilldown-Bericht.
 
-- [Lokale Upgradebereitschaft](#on-premises-upgrade-readiness--details)
+- [Lokale Upgradebereitschaft](#on-premises-upgrade-readiness-report)
 
   Die Datenquelle ist die UpgradeSuccessRanking-Ansicht in der Datenbank DMAReporting.  Dieser Bericht zeigt den Prozentsatz Upgrade erfolgreich für Ihre Datenbanken bewerteten.
 
-- [Lokale Featureparität](#on-premise-feature-parity--details)
+- [Lokale Featureparität](#on-premises-feature-parity-report)
 
   Zeigt die Vorschläge zu Features für die SQL Server-Zielversion.
 
-- [Azure SQL-Datenbank mit Upgrade readiness](#azure-sql-db-upgrade-readiness--details)
+- [Azure SQL-Datenbank mit Upgrade readiness](#azure-sql-db-upgrade-readiness-report)
 
   Die Datenquelle ist die UpgradeSuccessRanking-Ansicht in der Datenbank DMAReporting.  Dieser Bericht zeigt den Prozentsatz Upgrade Erfolg für Datenbanken, die für Migrationen von Azure SQL-Datenbank bewertet.
 
-- [Azure SQL-Datenbank nicht unterstützte Funktionen](#azure-sql-db-unsupported-features--details)
+- [Azure SQL-Datenbank nicht unterstützte Funktionen](#azure-sql-db-unsupported-features-report)
 
   Zeigt Funktionen in Ihre vorhandenen Datenbanken, die in Azure SQL-Datenbank (V12) nicht unterstützt werden.
 

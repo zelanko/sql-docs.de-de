@@ -1,6 +1,6 @@
 ---
 title: Was ist der Masterinstanz?
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Dieser Artikel beschreibt die SQL Server-Masterinstanz in einer SQL Server-2019 big Data-Cluster (Vorschau).
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 9c3809e481e00c94f01c1968a82638df3e37f80f
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 68d412e3d4b8147a2e451ff2932aa79e6dbeca5e
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477946"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860681"
 ---
-# <a name="what-is-the-master-instance-in-a-sql-server-2019-big-data-cluster"></a>Was ist die Masterinstanz in einer SQL Server-2019 big Data-Cluster?
+# <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>Was ist die Masterinstanz in einer SQL Server-big Data-Cluster?
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Dieser Artikel beschreibt die Rolle der *SQL Server-Masterinstanz* in einer SQL Server-2019 big Data-Cluster. Die master-Instanz ist eine SQL Server-Instanz, die in einer SQL Server-big Data-Cluster ausgeführt [Steuerungsebene](big-data-cluster-overview.md#controlplane).
 

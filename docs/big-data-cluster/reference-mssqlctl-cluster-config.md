@@ -1,6 +1,6 @@
 ---
 title: Referenz für Mssqlctl Cluster-Konfiguration
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Der Referenzartikel für die Mssqlctl Cluster-Befehle.
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 26e93151a1150bbbbd1798b38486ca5b01aaab1d
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: 57b77e83994f8471e677ba2ba367acc48a66cddd
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527203"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860021"
 ---
-# <a name="mssqlctl-cluster-config"></a>Mssqlctl Cluster-Konfiguration
+# <a name="mssqlctl-cluster-config"></a>Konfiguration des mssqlctl-Clusters
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Der folgende Artikel bietet Referenz für die **cluster Config** Befehle in der **Mssqlctl** Tool. Weitere Informationen zu anderen **Mssqlctl** Befehle finden Sie unter [Mssqlctl Verweis](reference-mssqlctl.md).
 
@@ -24,7 +26,7 @@ Der folgende Artikel bietet Referenz für die **cluster Config** Befehle in der 
 
 |||
 |---|---|
-| [get](#get) | Rufen Sie Cluster an. |
+| [Erhalten](#get) | Rufen Sie Cluster an. |
 
 ## <a id="get"></a> Mssqlctl Cluster-Konfiguration zu erhalten.
 
@@ -40,8 +42,8 @@ mssqlctl cluster config get
 
 | Parameter | Description |
 |---|---|
-| **--name -n** | Clustername für Kubernetes-Namespace verwendet. Erforderlich. |
-| **--output-file -f** | Die Ausgabedatei zum Speichern des Ergebnisses in. Erforderlich. |
+| **: Benennen von - n** | Clustername für Kubernetes-Namespace verwendet. Erforderlich. |
+| **--Ausgabedatei - f** | Die Ausgabedatei zum Speichern des Ergebnisses in. Erforderlich. |
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -1,6 +1,6 @@
 ---
 title: Konfigurieren Sie die HDFS-tiering
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: In diesem Artikel wird erläutert, wie HDFS, die Informationen zum Einbinden von eines externen Systems von Azure Data Lake Store-Datei in HDFS auf eine SQL Server-2019 big Data-Cluster (Vorschau) tiering konfiguriert.
 author: nelgson
 ms.author: negust
@@ -10,14 +10,16 @@ ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1199d8d522df83c626f04f30c8937b57a5359f5c
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 2542c7c05b222517ae9f4a4c05152f21a5ba293b
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493773"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58859642"
 ---
-# <a name="configure-hdfs-tiering-on-sql-server-2019-big-data-clusters"></a>Konfigurieren von HDFS cloudtiering auf SQL Server-2019 big Data-Cluster
+# <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>Konfigurieren von HDFS cloudtiering auf SQL Server-big Data-Cluster
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 HDFS-Tiering bietet die Möglichkeit zum Bereitstellen von externen, HDFS-kompatiblen Dateisystem in HDFS. In diesem Artikel wird erläutert, wie HDFS, die Staffelung für SQL Server-2019 big Data-Clustern (Vorschau) zu konfigurieren. Zu diesem Zeitpunkt unterstützt CTP 2.4 nur die Verbindung mit Azure Data Lake-Speicher Gen2, die den Schwerpunkt dieses Artikels ist.
 

@@ -1,6 +1,6 @@
 ---
 title: Mssqlctl Speicherreferenz
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Der Referenzartikel für die Speicherbefehle Mssqlctl.
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3d0eadd1d110b5a1b6c4f7a9b7a0321409999295
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: 47c4d331c2f1848265c1322bda88c358b61cf56a
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527193"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860616"
 ---
-# <a name="mssqlctl-storage"></a>Mssqlctl-Speicher
+# <a name="mssqlctl-storage"></a>mssqlctl-Speicher
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Der folgende Artikel bietet Referenz für die **Storage** Befehle in der **Mssqlctl** Tool. Weitere Informationen zu anderen **Mssqlctl** Befehle finden Sie unter [Mssqlctl Verweis](reference-mssqlctl.md).
 
@@ -24,7 +26,7 @@ Der folgende Artikel bietet Referenz für die **Storage** Befehle in der **Mssql
 
 |||
 |---|---|
-| [mount](reference-mssqlctl-storage-mount.md) | Bereitstellen von remote-speichern in HDFS zu verwalten. |
+| [Bereitstellungspunkt](reference-mssqlctl-storage-mount.md) | Bereitstellen von remote-speichern in HDFS zu verwalten. |
 
 ## <a name="next-steps"></a>Nächste Schritte
 

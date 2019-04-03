@@ -1,6 +1,6 @@
 ---
 title: Was sind Datenpools?
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Dieser Artikel beschreibt die Datenpool in einer SQL Server-2019 big Data-Cluster.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 906b27c186668518702c7ab3a757e6eeb4e5b278
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 8345ae06280458e7fa479ad95ffa20383e429267
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478225"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860121"
 ---
-# <a name="what-are-data-pools-in-a-sql-server-2019-big-data-cluster"></a>Was sind Datenpools in eine SQL Server-2019 big Data-Cluster?
+# <a name="what-are-data-pools-in-a-sql-server-big-data-cluster"></a>Was sind Datenpools in eine SQL Server-big Data-Cluster?
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Dieser Artikel beschreibt die Rolle des *Daten SQL Server-Ressourcenpools* in einer SQL Server-2019 big Data-Cluster (Vorschau). In den folgenden Abschnitten wird beschrieben, die Architektur und die Funktionalität von einem Pool der SQL-Daten.
 

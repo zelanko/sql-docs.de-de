@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4d13d200bf331771b0f2f8735bf2c76c1f227979
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 705d3b5230faf69ca9eb9de2f7f0cc21b42a8955
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241651"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860081"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>Daten-Wrangling mit PROSE Code Accelerator
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 PROSE Code Accelerator generiert lesbaren Python-Code für Ihre Data wrangling-Aufgaben. Sie können den generierten Code mit Ihrem handgeschriebenem Code auf nahtlose Weise kombinieren, bei der Arbeit in einem Notizbuch in Studio für Azure Data. Dieser Artikel enthält einen Überblick darüber, wie Sie den Code-Accelerator verwenden können.
 

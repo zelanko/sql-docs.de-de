@@ -13,12 +13,12 @@ author: HJToland3
 ms.author: ajaykar
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: f0ea70ded49d37d553f5de188a4a0735f521ee66
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7630aee7ab39f98f372af7c33f277e7272042f43
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "56987696"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872240"
 ---
 # <a name="get-started-with-database-experimentation-assistant"></a>Erste Schritte mit der Datenbank-experimentieren-Assistenten
 
@@ -81,7 +81,7 @@ Die Ablaufverfolgungsdatei wiedergegeben werden soll:
 
    - **Name der Wiedergabe**: Der Dateiname für die ablaufverfolgungswiedergabe.
    - **Der Name des Controllercomputers**: Der Name des dem Distributed Replay Controller-Computer.
-   - **Pfad zum Ablaufverfolgungs-Quelldatei auf Controller**: Der Dateipfad für die Ablaufverfolgungs-Quelldatei aus [erfassen](#Capture).
+   - **Pfad zum Ablaufverfolgungs-Quelldatei auf Controller**: Der Dateipfad für die Ablaufverfolgungs-Quelldatei aus [erfassen](#capture).
    - **SQL Server-Instanzname**: Der Name der SQL Server-Instanz auf dem die Quelle Ablaufverfolgung wiedergegeben werden soll.
    - **Pfad zum Speichern von Ziel-Ablaufverfolgungsdatei auf SQL Server-Computer**: Der Ordnerpfad für die Wiedergabe Ergebnisdatei der Ablaufverfolgung.
 

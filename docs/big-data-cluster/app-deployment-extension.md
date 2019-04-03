@@ -1,22 +1,25 @@
 ---
 title: App-Bereitstellung-Erweiterung
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Eine Python- oder R-Skript als eine Anwendung auf SQL Server-2019 big Data-Cluster (Vorschau) bereitstellen.
-author: TheBharath
-ms.author: bharaths
+author: jeroenterheerdt
+ms.author: jterh
+ms.reviewer: jroth
 manager: craigg
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 761818cd83df5db38b3877184b03b7e5d634aa63
-ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
+ms.openlocfilehash: 10fcc71c69ecc138f78cd19c4661f917067ead7e
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58222024"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860411"
 ---
 # <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>Gewusst wie: Verwenden Sie Visual Studio Code zum Bereitstellen von Anwendungen auf SQL Server-big Data-Cluster
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 In diesem Artikel wird beschrieben, wie Anwendungen auf einer SQL Server-big Data-Cluster mithilfe von Visual Studio-Code mit der Bereitstellung der App-Erweiterung bereitgestellt wird. Diese Funktion wurde in CTP 2.3 eingeführt. 
 
@@ -29,11 +32,11 @@ In diesem Artikel wird beschrieben, wie Anwendungen auf einer SQL Server-big Dat
 
 Diese Erweiterung unterstützt die folgenden Aufgaben in Visual Studio Code:
 
-- Authentifizieren Sie mit SQL Server-Big Data-Cluster.
+- Authentifizieren Sie mit SQL Server-big Data-Cluster.
 - Abrufen von Anwendungsvorlagen aus GitHub-Repository für die Bereitstellung mit allen unterstützten Runtimes.
 - Verwalten Sie aktuell geöffneten Anwendungsvorlagen, in dem Arbeitsbereich des Benutzers.
 - Stellen Sie eine Anwendung über eine Spezifikation in YAML-Format bereit.
-- Verwalten von bereitgestellten apps innerhalb von SQL Server-Cluster für Big Data.
+- Verwalten von bereitgestellten apps innerhalb von SQL Server-big Data-Cluster.
 - Zeigen Sie alle apps, die Sie bereitgestellt haben, in der Seitenleiste mit zusätzlichen Informationen.
 - Generieren Sie eine ausführen-Spezifikation zum Nutzen der app, oder löschen Sie die app aus dem Cluster.
 - Nutzen Sie die bereitgestellten apps durch eine Ausführung YAML-Spezifikation.
@@ -90,7 +93,7 @@ Die Vorlage ist eine einfache `Hello World` -app, die wie folgt angeordnet:
    - Weist dem Cluster wie zum Bereitstellen Ihrer app
 - **run-spec.yaml**
    - Weist dem Cluster, wie Sie Ihre app aufrufen möchten
-- **handler.py**
+- **Handler.py**
    - Dies ist der Quellcodedatei laut `src` in `spec.yaml`
    - Es wurde eine Funktion mit dem Namen `handler` , gilt die `entrypoint` der app Siehe `spec.yaml`. Er wird in eine Zeichenfolgeneingabe, die Namen `msg` und gibt die Zeichenfolgenausgabe eine mit dem Namen `out`. Diese werden angegeben `inputs` und `outputs` von der `spec.yaml`.
 

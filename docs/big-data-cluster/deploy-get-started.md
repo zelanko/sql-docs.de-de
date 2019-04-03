@@ -1,6 +1,6 @@
 ---
 title: Erste Schritte
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Erfahren Sie die Schritte und Ressourcen zum Bereitstellen von SQL Server-2019 big Data-Clustern (Vorschau).
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 05ba81fd45bc44db9c23530fb594c5d2e291e05d
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: 69b5d9b69536243d371cb45c1c46620f5194657d
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58567646"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860431"
 ---
-# <a name="get-started-with-sql-server-2019-big-data-clusters"></a>Erste Schritte mit SQL Server-2019 big Data-Cluster
+# <a name="get-started-with-sql-server-big-data-clusters"></a>Erste Schritte mit SQL Server-big Data-Cluster
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Dieser Artikel bietet einen Überblick über die Bereitstellung einer [SQL Server-2019 big Data-Cluster (Vorschau)](big-data-cluster-overview.md). Es soll Sie die Konzepte zu orientieren, und geben Sie ein Framework für das Verständnis der anderen bereitstellungsartikeln in diesem Abschnitt. Ihre spezifischen Bereitstellungsschritte hängen von Ihrer Plattform-Optionen für den Client und Server.
 
@@ -49,7 +51,7 @@ Bereitstellungsskripts können sowohl Kubernetes und big Data-Cluster in einem e
 
 Sie können jedes Bereitstellungsskript anpassen, erstellen Sie Ihre eigene Version, die die Umgebungsvariablen für big Data-Cluster anders konfiguriert.
 
-## <a name="deploy-a-big-data-cluster"></a>Bereitstellen eines big Data-Clusters
+## <a name="deploy-a-big-data-cluster"></a>Bereitstellen von Big Data-Clustern
 
 Zum Bereitstellen von Kubernetes-Clusters für eine big Data-Cluster in AKS mit einem einzigen Skript finden Sie im folgende Beispiel aus:
 

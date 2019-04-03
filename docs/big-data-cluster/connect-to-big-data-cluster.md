@@ -1,6 +1,6 @@
 ---
 title: Verbindung mit Master und HDFS
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Erfahren Sie, wie für die master SQL Server-Instanz und das HDFS/Spark-Gateway für eine SQL Server-2019 big Data-Cluster (Vorschau) eine Verbindung herstellen.
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cb205f387fb326b1717ec65512a911b2ae244495
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: ed563fe6d0bfd69ce5dfb7484d4213bc9a47dd54
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017706"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860171"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Verbinden Sie mit einer SQL Server-big Data-Cluster mit Azure Data Studio
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 In diesem Artikel wird beschrieben, wie aus Azure Data Studio eine Verbindung mit einer SQL Server-2019 big Data-Cluster (Vorschau) wird. Es gibt zwei Haupt-Endpunkte, die für die Interaktion mit einem big Data-Cluster verwendet werden:
 
@@ -67,7 +69,7 @@ Mit der Version Februar 2019 von Azure Data Studio kann mit der SQL Server-Maste
 
 - Die Objekt-Explorer enthält nun ein neues **Datendienste** Knoten mit der rechten Maustaste-Unterstützung für big Data-Cluster Aufgaben wie erstellen neue Notebooks oder Spark-Aufträge übermitteln. 
 - Die **Datendienste** Knoten enthält auch eine **HDFS** Ordner für das HDFS-durchsuchen und Ausführen von Aktionen wie z. B. Create External Table, oder Analysieren im Notebook.
-- Die **Serverdashboard** für die Verbindung auch Registerkarten für enthält **SQL Server-Cluster für Big Data** und **SQL Server-2019 (Vorschau)** beim Installieren der Erweiterung.
+- Die **Serverdashboard** für die Verbindung auch Registerkarten für enthält **SQL Server-big Data-Cluster** und **SQL Server-2019 (Vorschau)** beim Installieren der Erweiterung.
 
    ![Azure Data Services Studio Datenknoten](./media/connect-to-big-data-cluster/connect-data-services-node.png)
 

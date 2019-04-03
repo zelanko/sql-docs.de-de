@@ -1,6 +1,6 @@
 ---
 title: Diagnostizieren Sie/Debuggen von Spark-Anwendungen
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Verwenden von Spark-Verlaufsserver zum Debuggen und Diagnostizieren von Spark-Anwendungen, die unter SQL Server-2019 big Data-Cluster.
 author: jejiang
 ms.author: jejiang
@@ -11,14 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6b3cac808386d2341e1c22b18999009f7d72a43f
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: e7444a9f5bcdc480425ba02c8a068831c081b47a
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241786"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860332"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>Debuggen und Diagnostizieren von Spark-Anwendungen in Clustern von SQL Server big Data in Spark-Verlaufsserver
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Dieser Artikel enthält Anleitungen zur Verwendung von erweiterten Spark-Verlaufsserver zum Debuggen und Diagnostizieren von Spark-Anwendungen in einer big Data-Cluster mit SQL Server-2019 (Vorschau). Diese Funktionen zum Debuggen und Diagnose sind in Spark-Verlaufsserver integriert und unterstützt von Microsoft. Die Erweiterung enthält die Registerkarte "Daten" und die Registerkarte "Graph" und die Registerkarte "Diagnose". Registerkarte "Daten" können Benutzer die Eingabe- und Daten des Spark-Auftrags überprüfen. Benutzer können in der Registerkarte "Graph" den den Datenfluss überprüfen und das auftragsdiagramm wiedergeben. Registerkarte "Diagnose" kann Benutzer von datenschiefe zeitabweichung und-Executor-Verwendungsanalyse verweisen.
 
@@ -133,7 +135,7 @@ Wählen Sie die Auftrags-ID, und klicken Sie auf **Graph** im Menü des Tools, u
     ![datenschiefe Symbol "Diagramm"](./media/apache-azure-spark-history-server/sparkui-graph-skew-icon.png)
 
 + Der Auftrags-Graph-Knoten zeigt die folgende Informationen der einzelnen Phasen:
-    + -ID.
+    + ID.
     + Name oder Beschreibung.
     + Anzahl der Tasks gesamt.
     + Gelesene Daten: die Summe der Eingabegröße und Shuffle Lesegröße.

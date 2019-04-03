@@ -1,6 +1,6 @@
 ---
 title: Laden von Beispieldaten
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: In diesem Tutorial wird veranschaulicht, wie zum Laden von Beispieldaten in eine SQL Server-big Data-Cluster wird. Die Beispieldaten werden relationale Daten in der master-SQL Server-Instanz enthält. Darüber hinaus HDFS-Daten im Speicherpool. Diese Daten unterstützt andere Tutorials in diesem Abschnitt.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: f8e5cc5b3da7bf8c571a1f4b3febd9ef45e44d9e
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: faee29ed293c59752988760ea9ca27a4cf3e372a
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566519"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58859991"
 ---
-# <a name="tutorial-load-sample-data-into-a-sql-server-2019-big-data-cluster"></a>Tutorial: Laden Sie Beispieldaten in eine SQL Server-2019 big Data-cluster
+# <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Tutorial: Laden Sie Beispieldaten in eine SQL Server-big Data-cluster
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 In diesem Tutorial wird erläutert, wie Sie mithilfe eines Skripts zum Laden von Beispieldaten in eine SQL Server-2019 big Data-Cluster (Vorschau). Viele der anderen Lernprogramme in der Dokumentation verwenden diesen Beispieldaten.
 

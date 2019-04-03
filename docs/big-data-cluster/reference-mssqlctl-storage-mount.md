@@ -1,6 +1,6 @@
 ---
 title: Mssqlctl Storage Mount-Referenz
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Der Referenzartikel für die Speicherbefehle Mssqlctl.
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f8336c59ffc11ff1a2b7842c393f3387298b832a
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: 3ad8a97bac1f708dcf01612368c76d584fa39f5c
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527183"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860291"
 ---
-# <a name="mssqlctl-storage-mount"></a>Mssqlctl Speicher bereitstellen
+# <a name="mssqlctl-storage-mount"></a>mssqlctl-Speicherbereitstellung
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Der folgende Artikel bietet Referenz für die **Speicher bereitstellen** Befehle in der **Mssqlctl** Tool. Weitere Informationen zu anderen **Mssqlctl** Befehle finden Sie unter [Mssqlctl Verweis](reference-mssqlctl.md).
 
@@ -24,8 +26,8 @@ Der folgende Artikel bietet Referenz für die **Speicher bereitstellen** Befehle
 
 |||
 |---|---|
-| [create](#create) | Erstellen Sie Bereitstellungen von remote-speichern in HDFS. |
-| [delete](#delete) | Löschen Sie Bereitstellungen von remote-speichern in HDFS. |
+| [Erstellen](#create) | Erstellen Sie Bereitstellungen von remote-speichern in HDFS. |
+| [Löschen](#delete) | Löschen Sie Bereitstellungen von remote-speichern in HDFS. |
 | [status](#status) | Status des Mount(s). |
 
 ## <a id="create"></a> Erstellen Sie Mssqlctl Speicher bereitstellen
@@ -45,7 +47,7 @@ mssqlctl storage mount create
 |---|---|
 | **--local-path** | HDFS-Pfad, in dem Bereitstellungspunkt (Ziel der Bereitstellung) erstellt werden muss. Erforderlich. |
 | **--remote-uri** | Der URI der Remotespeicher, die bereitgestellte (Quelle Mount) verwendet werden soll. Erforderlich. |
-| **--credential-file** | Datei mit den Anmeldeinformationen für den Zugriff auf die remote-Speicher. Die Anmeldeinformationen als Schlüssel angegeben werden, müssen = Wert-Paaren mit einem Schlüssel = Wert pro Zeile. Alle entspricht, in dem Schlüssel oder Werte müssen mit Escapezeichen versehen werden. Standardmäßig sind keine Anmeldeinformationen erforderlich. Die erforderlichen Schlüssel hängt davon ab, den Typ des remote-Speicher bereitgestellt wird und den Typ der Autorisierung verwendet. |
+| **---Datei an.** | Datei mit den Anmeldeinformationen für den Zugriff auf die remote-Speicher. Die Anmeldeinformationen als Schlüssel angegeben werden, müssen = Wert-Paaren mit einem Schlüssel = Wert pro Zeile. Alle entspricht, in dem Schlüssel oder Werte müssen mit Escapezeichen versehen werden. Standardmäßig sind keine Anmeldeinformationen erforderlich. Die erforderlichen Schlüssel hängt davon ab, den Typ des remote-Speicher bereitgestellt wird und den Typ der Autorisierung verwendet. |
 
 ### <a name="examples"></a>Beispiele
 

@@ -1,6 +1,6 @@
 ---
 title: GPU-Unterstützung und TensorFlow
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Bereitstellen eines big Data-Clusters mit GPU-Unterstützung und TensorFlow in Azure Data Studio Notebooks verwenden.
 author: lgongmsft
 ms.author: shivprashant
@@ -10,14 +10,16 @@ ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f89568860fa656efbb93eb9b72eb647f88ce6089
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 0336c39a4afc235e29111dd78db128495a8b6e64
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494112"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860461"
 ---
 # <a name="deploy-a-big-data-cluster-with-gpu-support-and-run-tensorflow"></a>Bereitstellen eines big Data-Clusters mit GPU-Unterstützung, und führen Sie TensorFlow
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 In diesem Artikel wird veranschaulicht, wie einen big Data-Cluster in Azure Kubernetes Service (AKS) bereitstellen, die GPU-fähiger knotenpools für rechenintensive Workloads unterstützt wird. Anschließend führen Sie die Beispiel-Notebooks in Azure Data Studio, die bildklassifizierung mit TensorFlow für GPU ausgeführt wird.
 
@@ -28,7 +30,7 @@ In diesem Artikel wird veranschaulicht, wie einen big Data-Cluster in Azure Kube
   - **kubectl**
   - **Azure Data Studio**
   - **SQL Server-2019-Erweiterung**
-  - **Azure-Befehlszeilenschnittstelle**
+  - **Azure CLI**
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -142,7 +144,7 @@ Um eine SQL Server-2019 big Data-Cluster (Vorschau) bereitstellen, der GPUs unte
       SET MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
 
       SET DOCKER_REGISTRY=marinchcreus3.azurecr.io
-      SET DOCKER_REPOSITORY=ctp23-8-0-61-gpu
+      SET DOCKER_REPOSITORY=ctp24-8-0-61-gpu
       SET DOCKER_USERNAME=<your username, gpu-specific credentials provided by Microsoft>
       SET DOCKER_PASSWORD=<your password, gpu-specific credentials provided by Microsoft>
       SET DOCKER_EMAIL=<your email address>
@@ -170,7 +172,7 @@ Um eine SQL Server-2019 big Data-Cluster (Vorschau) bereitstellen, der GPUs unte
       export MSSQL_SA_PASSWORD="<sa_password_of_master_sql_instance, password complexity compliant>"
 
       export DOCKER_REGISTRY="marinchcreus3.azurecr.io"
-      export DOCKER_REPOSITORY="ctp23-8-0-61-gpu"
+      export DOCKER_REPOSITORY="ctp24-8-0-61-gpu"
       export DOCKER_USERNAME="<your username, gpu-specific credentials provided by Microsoft>"
       export DOCKER_PASSWORD="<your password, gpu-specific credentials provided by Microsoft>"
       export DOCKER_EMAIL="<your email address>"

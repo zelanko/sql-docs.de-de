@@ -1,6 +1,6 @@
 ---
 title: Referenz zu Mssqlctl app-Vorlagen
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Der Referenzartikel für die Befehle für Mssqlctl app-Vorlage.
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 16583ba970bfc13312864ea2e9d2571b04c20fcb
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: c67ed74750ac36d1a5c79503417414a9dd8ab6b5
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527223"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860101"
 ---
-# <a name="mssqlctl-app-template"></a>Mssqlctl-app-Vorlage
+# <a name="mssqlctl-app-template"></a>mssqlctl-App-Vorlage
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Der folgende Artikel bietet Referenz für die **-app-Vorlage** Befehle in der **Mssqlctl** Tool. Weitere Informationen zu anderen **Mssqlctl** Befehle finden Sie unter [Mssqlctl Verweis](reference-mssqlctl.md).
 
@@ -24,8 +26,8 @@ Der folgende Artikel bietet Referenz für die **-app-Vorlage** Befehle in der **
 
 |||
 |---|---|
-| [list](#list) | Rufen Sie die unterstützte Vorlagen. |
-| [pull](#pull) | Download unterstützt Vorlagen. |
+| [Auflisten](#list) | Rufen Sie die unterstützte Vorlagen. |
+| [Pullabonnement](#pull) | Download unterstützt Vorlagen. |
 
 ## <a id="list"></a> Liste der Mssqlctl app-Vorlage
 
@@ -72,7 +74,7 @@ mssqlctl app template pull
 | Parameter | Description |
 |---|---|
 | **--Destination -d.** | Position, an die Skelett-Anwendungsvorlage platzieren.  Standardwert:. / Vorlagen. |
-| **--name -n** | Name der Vorlage. Führen Sie eine vollständige Liste deaktiviert unterstützten Vorlagennamen `mssqlctl app template list`. |
+| **: Benennen von - n** | Name der Vorlage. Führen Sie eine vollständige Liste deaktiviert unterstützten Vorlagennamen `mssqlctl app template list`. |
 | **--url -u** | Geben Sie einen andere Vorlage Repository-Speicherort. Standard:
 https://github.com/Microsoft/sql-server-samples.git. installiert haben. |
 

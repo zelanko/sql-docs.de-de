@@ -1,6 +1,6 @@
 ---
 title: Abfragen von externen Daten in Oracle
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: In diesem Tutorial wird veranschaulicht, wie Oracle-Daten aus einer SQL Server-2019 big Data-Cluster (Vorschau) abgefragt werden. Sie erstellen eine externe Tabelle für Daten in Oracle und anschließend eine Abfrage ausführen.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 27956603d3627f1d4a78e62fbf9c7aeaa1e55974
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 139c5dd5ade04c3d1a71412060f823d492843ecb
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241911"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58859981"
 ---
-# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Lernprogramm: Abfragen von Oracle aus einer SQL Server-big Data-cluster
+# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Tutorial: Abfragen von Oracle aus einer SQL Server-big Data-cluster
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Dieses Tutorial veranschaulicht, wie Sie Oracle-Daten aus einer SQL Server-2019 big Data-Cluster Abfragen. Um dieses Tutorial ausführen zu können, müssen Sie auf einem Oracle-Server zugreifen. Wenn Sie keinen Zugriff haben, erhalten in diesem Tutorial Sie einen Überblick über die Funktionsweise der Datenvirtualisierung für externe Datenquellen in SQL Server-big Data-Cluster.
 
@@ -33,7 +35,7 @@ In diesem Tutorial erfahren Sie, wie Sie:
 ## <a id="prereqs"></a> Erforderliche Komponenten
 
 - [Big Data-tools](deploy-big-data-tools.md)
-   - **"kubectl"**
+   - **kubectl**
    - **Azure Data Studio**
    - **SQL Server-2019-Erweiterung**
 - [Laden Sie Beispieldaten in Ihre big Data-cluster](tutorial-load-sample-data.md)

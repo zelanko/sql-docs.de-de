@@ -1,45 +1,49 @@
 ---
-title: Ausführen von Spark-Aufträgen im Azure-Toolkit für IntelliJ auf SQL Server-Cluster für Big Data
-titleSuffix: SQL Server Big Data Clusters
-description: Übermitteln von Spark-Aufträgen in SQL Server-Clustern in Big Data im Azure-Toolkit für IntelliJ.
+title: Ausführen von Spark-Aufträgen im Azure-Toolkit für IntelliJ auf SQL Server-big Data-cluster
+titleSuffix: SQL Server big data clusters
+description: Übermitteln von Spark-Aufträgen in SQL Server-big Data-Clustern in Azure-Toolkit für IntelliJ.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
-ms.openlocfilehash: 672898e93331fdcf65b1fe978a5ebb47956fdb5b
-ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
+ms.prod: sql
+ms.technology: big-data-cluster
+ms.openlocfilehash: e48aebbb15b9bd684b2ed3f5d4d314191a55ba42
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57683620"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860322"
 ---
-# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-intellij"></a>Übermitteln von Spark-Aufträgen in SQL Server-Clustern in Big Data in IntelliJ
+# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-intellij"></a>Übermitteln von Spark-Aufträgen in SQL Server-big Data-Clustern in IntelliJ
 
-Einer der wichtigsten Szenarios für die SQL Server-Cluster für Big Data ist die Möglichkeit zum Übermitteln von Spark-Aufträgen. Die Spark Job Submission-Funktion können Sie eine lokale JAR- oder Py-Dateien mit Verweisen auf SQL Server-Cluster für Big Data zu übermitteln. Darüber hinaus können Sie zum Ausführen von einer JAR-Datei oder Py-Dateien, die sich bereits in das HDFS-Dateisystem befinden. 
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+Einer der wichtigsten Szenarios für die SQL Server-big Data-Cluster ist die Möglichkeit zum Übermitteln von Spark-Aufträgen. Die Spark Job Submission-Funktion können Sie eine lokale JAR- oder Py-Dateien mit Verweisen auf SQL Server-big Data-Cluster zu übermitteln. Darüber hinaus können Sie zum Ausführen von einer JAR-Datei oder Py-Dateien, die sich bereits in das HDFS-Dateisystem befinden. 
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-- SQL Server-Big Data-Cluster.
+- SQL Server-big Data-Cluster.
 - Oracle Java Development Kit. Sie können die Installation über die [Oracle-Website](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 - IntelliJ IDEA. Sie können die Installation über die [JetBrains-Website](https://www.jetbrains.com/idea/download/).
 - Azure-Toolkit für IntelliJ-Erweiterung. Installationsanweisungen finden Sie unter [Installieren des Azure-Toolkits für IntelliJ](https://docs.microsoft.com/azure/azure-toolkit-for-intellij-installation).
 
-## <a name="link-sql-server-big-data-cluster"></a>Link SQL Server-Big Data-Cluster
+## <a name="link-sql-server-big-data-cluster"></a>Link-SQL Server-big Data-cluster
 1. Öffnen Sie das IntelliJ IDEA-Tool.
 
 2. Wenn Sie selbst signiertes Zertifikat verwenden, deaktivieren Sie die Überprüfung des SSL-Zertifikat von **Tools** , wählen Sie im Menü **Azure**, **Spark-Cluster SSL-Zertifikat überprüfen**, dann  **Deaktivieren Sie**.
 
-    ![Verknüpfen von SQL Server-Cluster für Big Data – Deaktivieren von SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
+    ![SQL Server-big Data-Cluster verknüpfen – Deaktivieren von SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
 
 3. Öffnen Sie Azure-Explorer aus **Ansicht** , wählen Sie im Menü **Tool Windows**, und wählen Sie dann **Azure Explorer**.
-4. Klicken Sie mit der rechten Maustaste auf **SQL Server-Cluster für Big Data**Option **Link SQL Server-Cluster für Big Data**. Geben Sie die **Server**, **Benutzernamen**, und **Kennwort**, klicken Sie dann auf **OK**.
+4. Klicken Sie mit der rechten Maustaste auf **SQL Server-big Data-Cluster**Option **Link SQL Server-big Data-Cluster**. Geben Sie die **Server**, **Benutzernamen**, und **Kennwort**, klicken Sie dann auf **OK**.
 
     ![Verknüpfen von Big Data-Cluster - Dialogfeld](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-dialog.png)
 
 5. Wenn der nicht vertrauenswürdigen Server-Dialogfeld "Zertifikat" angezeigt wird, klicken Sie auf **Accept**. Sie können das Zertifikat später zu verwalten, finden Sie unter [Serverzertifikate](https://www.jetbrains.com/help/idea/settings-tools-server-certificates.html).
 
-6. Die verknüpfte Cluster listet unter **SQL Server-Cluster für Big Data**. Sie können Spark-Auftrag überwachen, indem Sie öffnen die Spark-verlaufsbenutzeroberfläche und die Yarn-Benutzeroberfläche, Sie können auch die Verknüpfung aufheben, indem Sie mit der rechten Maustaste auf dem Cluster.
+6. Die verknüpfte Cluster listet unter **SQL Server-big Data-Cluster**. Sie können Spark-Auftrag überwachen, indem Sie öffnen die Spark-verlaufsbenutzeroberfläche und die Yarn-Benutzeroberfläche, Sie können auch die Verknüpfung aufheben, indem Sie mit der rechten Maustaste auf dem Cluster.
 
     ![Verknüpfen von Big Data-Cluster - Kontextmenü](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-contextmenu.png)
 
@@ -87,8 +91,8 @@ Einer der wichtigsten Szenarios für die SQL Server-Cluster für Big Data ist di
       ![Informationen zum Artefakt im Dialogfeld](./media/spark-submit-job-intellij-tool-plugin/default-artifact.png)
       
 
-## <a name="submit-application-to-sql-server-big-data-cluster"></a>Übermitteln Sie für SQL Server-Cluster für Big Data-Anwendung
-Nach der Verknüpfung einer SQL Server für Big Data-Cluster können Sie die Anwendung übermitteln.
+## <a name="submit-application-to-sql-server-big-data-cluster"></a>Übermitteln der Anwendung in SQL Server-big Data-cluster
+Nach der Verknüpfung einer SQL Server-big Data-Cluster können Sie die Anwendung übermitteln.
 
 1. Richten Sie die Konfiguration in **Ausführungs-/Debugkonfigurationen** Fenster, klicken Sie auf und ->**Apache Spark für SQL Server**auf Registerkarte **im Cluster Remote ausführen**, legen Sie die Parameter als Befolgen Sie die, dann klicken Sie auf OK.
 
@@ -129,7 +133,7 @@ Stellen Sie sicher, dass Sie die WINUTILS erfüllt haben. Voraussetzung der EXE-
 
 1. Navigieren Sie in der Menüleiste zum **ausführen** > **Konfigurationen bearbeiten...** .
 
-2. Von der **Ausführungs-/Debugkonfigurationen** Fenster im linken Bereich navigieren Sie zu **Apache Spark für SQL Server-Cluster für Big Data** > **[Spark-SQL] "MyApp"**.
+2. Von der **Ausführungs-/Debugkonfigurationen** Fenster im linken Bereich navigieren Sie zu **Apache Spark für SQL Server-big Data-Cluster** > **[Spark-SQL] "MyApp"**.
 
 3. Wählen Sie im Hauptfenster der **lokal** Registerkarte.
 
@@ -163,7 +167,7 @@ Die interaktive Spark Livy-Sitzung Console(Scala) wird nur für IntelliJ 2018.2 
 
 1. Navigieren Sie in der Menüleiste zum **ausführen** > **Konfigurationen bearbeiten...** .
 
-2. Von der **Ausführungs-/Debugkonfigurationen** Fenster im linken Bereich navigieren Sie zu **Apache Spark für SQL Server-Cluster für Big Data** > **[Spark-SQL] "MyApp"**.
+2. Von der **Ausführungs-/Debugkonfigurationen** Fenster im linken Bereich navigieren Sie zu **Apache Spark für SQL Server-big Data-Cluster** > **[Spark-SQL] "MyApp"**.
 
 3. Wählen Sie im Hauptfenster der **im Cluster Remote ausführen** Registerkarte.
 
@@ -191,4 +195,4 @@ Der Einfachheit halber sehen Sie das skriptergebnis durch das Senden von Code an
    ![Auswahl an Spark-Konsole zu senden](./media/spark-submit-job-intellij-tool-plugin/send-selection-to-console.png)
 
 ## <a name="next-steps"></a>Nächste Schritte
-Weitere Informationen zu SQL Server-Cluster für Big Data und die zugehörigen Szenarien, finden Sie unter [was SQL Server-2019 big Data-Cluster sind](big-data-cluster-overview.md)?
+Weitere Informationen zu SQL Server-big Data-Cluster und die zugehörigen Szenarien, finden Sie unter [was SQL Server-2019 big Data-Cluster sind](big-data-cluster-overview.md)?

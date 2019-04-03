@@ -11,12 +11,12 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 9f88178450fb5ca19e52703ad02e29d107ca562a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 95e9ae2bd77bc3042a44b0322ac9a607be3725e8
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201959"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872200"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configure SQL Server AlwaysOn-Verfügbarkeitsgruppe für hochverfügbarkeit bei Linux
 
@@ -30,7 +30,7 @@ Konfigurationen, die hohe Verfügbarkeit und Datenschutz zu gewährleisten müss
 
 Alle Server müssen entweder physisch oder virtuell sein, und virtuelle Server muss auf die gleiche Virtualisierungsplattform. Diese Anforderung ist, da die Agents Umgrenzung plattformspezifisch sind. Finden Sie unter [Richtlinien für Gastcluster](https://access.redhat.com/articles/29440#guest_policies).
 
-## <a name="roadmap"></a>Roadmap für die
+## <a name="roadmap"></a>Roadmap
 
 Die Schritte zum Erstellen einer Verfügbarkeitsgruppe auf Linux-Servern für hochverfügbarkeit unterscheiden sich von den Schritten in einem Windows Server-Failovercluster. Die folgende Liste beschreibt die allgemeinen Schritte: 
 
@@ -72,7 +72,7 @@ In die Beispielen in diesem Abschnitt wird erläutert, wie die verfügbarkeitsgr
 
 Für eine Konfiguration mit hoher Verfügbarkeit, die automatische Failover wird sichergestellt, ist die Verfügbarkeitsgruppe über mindestens drei Replikate erforderlich. Eine der folgenden Konfigurationen kann es sich um hohe Verfügbarkeit unterstützen:
 
-- [Drei synchroner Replikate](sql-server-linux-availability-group-ha.md#threeSynch)
+- [Drei synchronen Replikaten](sql-server-linux-availability-group-ha.md#threeSynch)
 
 - [Zwei synchronen Replikaten sowie ein Replikat für die Konfiguration](sql-server-linux-availability-group-ha.md#twoSynch)
 
@@ -132,6 +132,7 @@ Führen Sie **nur eine** der folgenden Skripts aus:
    >[!IMPORTANT]
    >Führen Sie nach der Ausführung des vorherigen Skripts, um eine Verfügbarkeitsgruppe mit drei synchronen Replikaten erstellen nicht das folgende Skript aus:
 
+<a name="configOnly"></a>
 - Verfügbarkeitsgruppe mit zwei synchronen Replikaten und einem Replikat für die Konfiguration zu erstellen:
 
    >[!IMPORTANT]
