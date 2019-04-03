@@ -1,6 +1,6 @@
 ---
 title: 'Gewusst wie: Bereitstellen'
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Erfahren Sie, wie Sie SQL Server-2019 big Data-Clustern (Vorschau) in Kubernetes bereitstellen.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5efefd5bc94aa8d1842ee244c947e48e90604834
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: c991181fc79627aee1f2c2e397ad7d9b1aaf953f
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493732"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860592"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Wie Sie SQL Server-big Data-Cluster in Kubernetes bereitstellen
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 SQL Server-big Data-Cluster kann als Docker-Container in einem Kubernetes-Cluster bereitgestellt werden. Dies ist eine Übersicht über die Schritte für Einrichtung und Konfiguration:
 
@@ -42,9 +44,9 @@ Sie können zum Bereitstellen von Kubernetes stehen drei Möglichkeiten zur Verf
 
 | Bereitstellen von Kubernetes auf: | Description | Link |
 |---|---|---|
-| **Minikube** | Einen Einzelknoten-Kubernetes-Cluster auf einem virtuellen Computer. | [Anweisungen](deploy-on-minikube.md) |
-| **Azure Kubernetes-Dienste (AKS)** | Managed Kubernetes-Container-Dienst in Azure. | [Anweisungen](deploy-on-aks.md) |
-| **Mehrere Computer** | Ein Kubernetes-Cluster bereitgestellt, die auf physischen oder virtuellen Computern mit **Kubeadm** | [Anweisungen](deploy-with-kubeadm.md) |
+| **Minikube** | Einen Einzelknoten-Kubernetes-Cluster auf einem virtuellen Computer. | [Instructions](deploy-on-minikube.md) |
+| **Azure Kubernetes-Dienste (AKS)** | Managed Kubernetes-Container-Dienst in Azure. | [Instructions](deploy-on-aks.md) |
+| **Mehrere Computer** | Ein Kubernetes-Cluster bereitgestellt, die auf physischen oder virtuellen Computern mit **Kubeadm** | [Instructions](deploy-with-kubeadm.md) |
   
 > [!TIP]
 > Ein Beispiel-Python-Skript, das sowohl AKS und SQL Server-big Data-Cluster bereitgestellt wird, finden Sie unter [stellen Sie eine SQL-Server, die big Data-in Azure Kubernetes Service (AKS Cluster)](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).

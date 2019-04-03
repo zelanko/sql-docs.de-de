@@ -1,6 +1,6 @@
 ---
 title: Verwenden Sie "kubectl" für die Überwachung/Problembehandlung
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: In diesem Artikel bieten nützliche Kubectl-Befehle für die Überwachung und Problembehandlung für eine SQL Server-2019 big Data-Cluster (Vorschau).
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 624c4ad4f53c0ad78cf5b972c976aadc57fd35d3
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 8b9be0566725822e0241c65c7f8324b153cca072
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017906"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860371"
 ---
 # <a name="kubectl-commands-for-monitoring-and-troubleshooting-sql-server-big-data-clusters"></a>"Kubectl"-Befehle zur Überwachung und Problembehandlung von SQL Server-big Data-Cluster
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Dieser Artikel beschreibt verschiedene nützliche Kubernetes-Befehle, die Sie verwenden können, um die Überwachung und Problembehandlung für eine SQL Server-2019 big Data-Cluster (Vorschau). Dieser Artikel behandelt allgemeine Aufgaben, wie das Kopieren von Dateien zu oder von einem Container mit einem der SQL Server-Dienste für die big Data-Cluster. Es wird gezeigt, wie zeigen Sie ausführliche Details einen Pod oder andere Kubernetes-Artefakte, die in der big Data-Cluster befinden.
 

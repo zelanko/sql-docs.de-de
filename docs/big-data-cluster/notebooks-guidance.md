@@ -1,6 +1,6 @@
 ---
 title: Führen Sie Notebooks in Azure Data Studio
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: In diesem Artikel wird erläutert, wie zum Ausführen von Jupyter-Notebooks in Azure Data Studio, die mit einer SQL Server-2019 big Data-Cluster verbunden wird.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3bdd1a9de5e22a4577bcc8ac38ba1dde6c2ceb7c
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: a220b78fe93b286837e0e235b881ffd1a612e512
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566439"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58859971"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>Verwendung von Notebooks in der Vorschau von SQL Server-2019
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 In diesem Artikel wird beschrieben, wie Sie der Notebook-Umgebung in Azure Data Studio starten und zum Starten, erstellen Ihre eigenen Notebooks. Außerdem wird veranschaulicht, Notebooks verwenden unterschiedlicher Kernel zu schreiben.
 
