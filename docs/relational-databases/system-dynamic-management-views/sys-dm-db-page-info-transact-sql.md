@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_page_info (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_db_page_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/18/2018
 ms.prod: sql
@@ -20,39 +20,34 @@ author: ''
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 37c334f5c5107b2716601916517e888d90164226
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.openlocfilehash: 2246abe2343622f2aece785a31e1e31f7166822b
+ms.sourcegitcommit: fc1739be9b2735b2bb469979936e76ca2a3830f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53732077"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58899716"
 ---
-# <a name="sysdmdbpageinfo-transact-sql"></a>Sys.dm_db_page_info (Transact-SQL)
+# <a name="sysdmdbpageinfo-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Gibt Informationen zu einer Seite in einer Datenbank zurück.  Die Funktion gibt eine Zeile mit den Headerinformationen auf der Seite, einschließlich der `object_id`, `index_id`, und `partition_id`.  Dank dieser Funktion ist die Verwendung von `DBCC PAGE` in den meisten Fällen nicht mehr erforderlich.
 
-## <a name="syntax"></a>Syntax  
-  
+## <a name="syntax"></a>Syntax   
 ```  
 sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )  
 ``` 
 
 ## <a name="arguments"></a>Argumente  
- *DatabaseId* | NULL | STANDARDWERT  
-
- Ist die ID der Datenbank. *DatabaseId* ist **Smallint**. Gültige Eingabe ist die ID einer Datenbank. Der Standardwert ist NULL, senden jedoch, dass ein NULL-Wert für diesen Parameter zu einem Fehler führt.
+*DatabaseId* | NULL | STANDARDWERT     
+Ist die ID der Datenbank. *DatabaseId* ist **Smallint**. Gültige Eingabe ist die ID einer Datenbank. Der Standardwert ist NULL, senden jedoch, dass ein NULL-Wert für diesen Parameter zu einem Fehler führt.
  
-*FileId* | NULL | STANDARDWERT
-
+*FileId* | NULL | STANDARDWERT   
 Die ID der Datei. *FileId* ist **Int**.  Gültige Eingabe ist die ID einer Datei in der Datenbank durch *DatabaseId*. Der Standardwert ist NULL, senden jedoch, dass ein NULL-Wert für diesen Parameter zu einem Fehler führt.
 
-*PageId* | NULL | STANDARDWERT
-
+*PageId* | NULL | STANDARDWERT   
 Ist die ID der Seite.  *PageId* ist **Int**.  Gültige Eingabe ist die ID einer Seite in der angegebenen Datei *FileId*. Der Standardwert ist NULL, senden jedoch, dass ein NULL-Wert für diesen Parameter zu einem Fehler führt.
 
-*Modus* | NULL | STANDARDWERT
-
+*Modus* | NULL | STANDARDWERT   
 Bestimmt die Detailebene in der Ausgabe der Funktion. "Begrenzt" wird für alle Beschreibung Spalten NULL-Werte zurückgeben, "Detaillierte" füllt Beschreibung Spalten.  Der Standardwert ist "Eingeschränkt".
 
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
@@ -149,6 +144,7 @@ CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 'LIMITED') AS pag
 ## <a name="see-also"></a>Siehe auch  
 [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [Dynamische Verwaltungssichten in Verbindung mit Datenbank &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+[sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)     
+[sys.fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)
 
 
