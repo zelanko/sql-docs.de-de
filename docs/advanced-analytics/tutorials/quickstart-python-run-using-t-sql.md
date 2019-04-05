@@ -3,17 +3,17 @@ title: Schnellstart für eine einfache "Hello World"-Python-code der Ausführung
 description: Schnellstart für Python-Skript in SQL Server. Enthält die Grundlagen des Aufrufens von Python-Skript mit der gespeicherten Systemprozedur Sp_execute_external_script in einer Hallo-Welt-Übung.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/11/2019
+ms.date: 04/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: fb05e3b04fe9d6f33389e249d189baa7cc093016
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.openlocfilehash: f5e93ce5261d79acf5bf5a7419992c81c872d680
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513770"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042219"
 ---
 # <a name="quickstart-hello-world-python-script-in-sql-server"></a>Schnellstart: "Hello World"-Python-Skript in SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -44,7 +44,7 @@ In der folgenden Übung konzentriert sich auf das erste Interaktionsmodell: wie 
     b = 2
     c = a/b
     d = a*b
-    print(c, d)
+    print(c(c, d))
     '
     ```
 
@@ -98,4 +98,4 @@ Eingaben für diese gespeicherte Prozedur gehören:
 Nun, dass Sie eine Reihe von einfachen Python-Skripts ausgeführt haben, nehmen Sie einen genaueren Blick auf die Strukturierung von Eingaben und Ausgaben.
 
 > [!div class="nextstepaction"]
-> [Schnellstart: Verarbeiten von Eingaben und Ausgaben](quickstart-python-inputs-and-outputs.md)
+> [Schnellstart: Arbeiten mit Eingaben und Ausgaben](quickstart-python-inputs-and-outputs.md)

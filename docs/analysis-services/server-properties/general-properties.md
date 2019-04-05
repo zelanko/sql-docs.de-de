@@ -1,6 +1,6 @@
 ---
 title: Allgemeine Eigenschaften von Analysis Services | Microsoft-Dokumentation
-ms.date: 06/07/2018
+ms.date: 04/04/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 883df6b2562e7fa3b80fac6a0063bd6483d1119d
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 0683a8eb03cb0d5d17072825cfc90f8c9ba2500e
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072387"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042389"
 ---
 # <a name="general-properties"></a>Allgemeine Eigenschaften
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -34,6 +34,11 @@ ms.locfileid: "53072387"
   
  **BackupDir**  
  Eine Zeichenfolgeneigenschaft, die identifiziert den Namen des Verzeichnisses, in dem Sicherungsdateien standardmäßig gespeichert sind, im Ereignisprotokoll als Teil der Backup-Befehl kein Pfad angegeben ist.  
+ 
+**ClientCacheRefreshPolicy** von Azure Analysis Services nur angewendet wird. Überschreibt die **geplante cacheaktualisierung** für alle Power BI-Datasets festlegen. Alle Berichte mit Live Connect berücksichtigt die Einstellung auf Serverebene, unabhängig von der Dataset-Ebene festlegen, oder welcher Arbeitsbereich sie sich befinden.
+
+Der Standardwert für diese Eigenschaft ist 1. Dadurch wird ermöglicht, dass alle Hintergrund-Cache gemäß der Einstellung für das Dataset geplante cacheaktualisierung aktualisiert. Um alle Hintergrund-Cache davon abhalten, aktualisiert, geben Sie 0 (null).
+
   
  **CollationName**  
  Eine Zeichenfolge, die die Serversortierung identifiziert. Weitere Informationen finden Sie unter [Sprachen und Sortierungen &#40;Analysis Services&#41;](../../analysis-services/languages-and-collations-analysis-services.md).  
@@ -41,7 +46,7 @@ ms.locfileid: "53072387"
  **CommitTimeout**  
  Eine Ganzzahleigenschaft, die angibt, wie lange der Server wartet (in Millisekunden), um eine Schreibsperre für den Commit einer Transaktion abzurufen. Eine Wartezeit ist oftmals erforderlich, da der Server darauf warten muss, dass andere Sperren freigegeben werden, bevor eine Schreibsperre verwendet werden kann, die einen Commit für die Transaktion ausführt.  
   
- Der Standardwert für diese Eigenschaft ist 0 (null), d. h., der Server wartet unbegrenzt. Weitere Informationen zu sperrenbezogenen Eigenschaften finden Sie im [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539)(SQL Server 2008 R2 Analysis Services-Vorgangshandbuch).  
+ Der Standardwert für diese Eigenschaft ist 0 (null), d. h., der Server wartet unbegrenzt. Weitere Informationen zu sperrenbezogenen Eigenschaften finden Sie im [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539) (SQL Server 2008 R2 Analysis Services-Vorgangshandbuch).  
   
  **CoordinatorBuildMaxThreads**  
  Eine ganze 32-Bit-Zahl mit Vorzeichen, die die maximale Anzahl von Threads zum Erstellen von Partitionsindizes definiert. Durch Erhöhen dieses Werts kann die Partitionsindizierung auf Kosten der Speicherauslastung beschleunigt werden. Weitere Informationen zu dieser Eigenschaft finden Sie im [SQL Server 2008 R2 Analysis Services-Vorgangshandbuch](http://go.microsoft.com/fwlink/?LinkID=225539).  
@@ -80,12 +85,12 @@ ms.locfileid: "53072387"
  Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.  
   
  **ExternalCommandTimeout**  
- Eine Ganzzahleigenschaft, die den Timeoutwert (in Sekunden) für Befehle definiert, die an externe Server ausgegeben werden, einschließlich relationaler Datenquellen und externer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server.  
+ Eine Ganzzahleigenschaft, die den Timeoutwert (in Sekunden) für Befehle definiert, die an externe Server ausgegeben werden, einschließlich relationaler Datenquellen und externer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Server.  
   
  Der Standardwert für diese Eigenschaft ist 3.600 (Sekunden).  
   
  **ExternalConnectionTimeout**  
- Eine Ganzzahleigenschaft, die den Timeoutwert (in Sekunden) für das Erstellen von Verbindungen mit externen Servern definiert, einschließlich relationaler Datenquellen und externer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server. Diese Eigenschaft wird ignoriert, wenn ein Verbindungstimeout für die Verbindungszeichenfolge angegeben wird.  
+ Eine Ganzzahleigenschaft, die den Timeoutwert (in Sekunden) für das Erstellen von Verbindungen mit externen Servern definiert, einschließlich relationaler Datenquellen und externer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Server. Diese Eigenschaft wird ignoriert, wenn ein Verbindungstimeout für die Verbindungszeichenfolge angegeben wird.  
   
  Der Standardwert für diese Eigenschaft ist 60 Sekunden.  
   
@@ -139,7 +144,7 @@ ms.locfileid: "53072387"
  Eine Zeichenfolgeneigenschaft, die den Ort zum Speichern von temporären Dateien angibt, die während Verarbeitung, Wiederherstellung und anderer Vorgänge verwendet werden. Der Standardwert für diese Eigenschaft wird von Setup bestimmt. Wenn nichts angegeben wird, wird standardmäßig das Verzeichnis Data verwendet.  
   
 ## <a name="requestprioritization-category"></a>RequestPrioritization-Kategorie  
- **Enabled**  
+ **Aktiviert**  
  Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.  
   
  **StatisticsStoreSize**  

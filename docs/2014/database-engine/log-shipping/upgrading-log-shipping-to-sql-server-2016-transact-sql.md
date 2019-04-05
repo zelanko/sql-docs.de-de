@@ -12,12 +12,12 @@ ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4d346379cf0aeb945187b18f7eb1fd7a868b33e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 19eae2e3ace3859d61048536be9b70bf58ad66f5
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518103"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042429"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>Aktualisieren des Protokollversands auf SQL Server 2014 (Transact-SQL)
   Beim Aktualisieren von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ist es möglich, die Protokollversandkonfigurationen beizubehalten. In diesem Thema werden alternative Szenarien und bewährte Methoden zum Aktualisieren einer Protokollversandkonfiguration beschrieben.  
@@ -130,7 +130,7 @@ ms.locfileid: "52518103"
   
     5.  Sorgen Sie dafür, dass das Transaktionsprotokoll der zweiten Datenbank nicht gefüllt wird, während die Datenbank online ist. Um das Füllen des Transaktionsprotokolls zu verhindern, müssen Sie es sichern. Wenn Sie es sichern, wird die Verwendung eines gemeinsam genutzten Speicherorts, einer *Sicherungsfreigabe*, empfohlen, damit die Sicherungen zum Wiederherstellen auf der anderen Serverinstanz verfügbar sind.  
   
-#####  <a name="Procedure2 "></a> Schritt 2: Aktualisieren der ursprünglichen primären Serverinstanz auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#####  <a name="Procedure2"></a> Schritt 2: Aktualisieren der ursprünglichen primären Serverinstanz auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Auch nachdem Sie die ursprüngliche primäre Serverinstanz auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisiert haben, ist die Datenbank noch offline und hat dieses Format.  
   
 #####  <a name="Procedure3"></a> 3. Verfahren: Einrichten des Protokollversands auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -193,7 +193,7 @@ ms.locfileid: "52518103"
 > [!IMPORTANT]  
 >  Aktualisieren Sie stets sämtliche sekundäre Serverinstanzen vor der primären Serverinstanz.  
   
- **Um ein upgrade Sichern mithilfe eines Failovers und der anschließende Wechsel zum ursprünglichen primären server**  
+ **So aktualisieren Sie mit einem Failover und wechseln dann zum ursprünglichen primären Server zurück**  
   
 1.  Aktualisieren Sie alle sekundären Serverinstanzen (Server B und C).  
   
@@ -224,6 +224,4 @@ ms.locfileid: "52518103"
 ## <a name="see-also"></a>Siehe auch  
  [Transaktionsprotokollsicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [Anwenden von Transaktionsprotokollsicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [Protokollversandtabellen und gespeicherte Prozeduren](log-shipping-tables-and-stored-procedures.md)  
-  
-  
+ [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
